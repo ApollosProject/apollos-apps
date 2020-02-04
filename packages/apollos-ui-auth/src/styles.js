@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform, View, Text } from 'react-native';
+import { Platform, View } from 'react-native';
 import { compose, withProps } from 'recompose';
 import { SafeAreaView } from 'react-navigation';
 import {
@@ -9,6 +9,7 @@ import {
   withTheme,
   Icon,
   H2,
+  H4,
   H5,
   H6,
 } from '@apollosproject/ui-kit';
@@ -51,7 +52,6 @@ const LegalText = styled(
 const NextButton = styled(
   ({ theme }) => ({
     backgroundColor: theme.colors.action.primary,
-    color: theme.colors.text.invert,
   }),
   'ui-auth.NextButton'
 )((props) => <Button pill={false} {...props} />);
@@ -61,7 +61,7 @@ const NextButtonText = styled(
     color: theme.colors.text.invert,
   }),
   'ui-auth.NextButtonText'
-)(Text);
+)(H4);
 
 // Tab Login
 
