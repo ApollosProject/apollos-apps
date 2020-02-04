@@ -28,3 +28,5 @@ NativeModules.RNGestureHandlerModule = {
   State: {},
   Directions: {},
 };
+
+jest.mock('NativeAnimatedHelper');
