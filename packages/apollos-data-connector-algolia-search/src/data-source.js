@@ -48,7 +48,6 @@ query getItem {
       objectID: id
       __typename
       coverImage { sources { uri } }
-      likedCount
     }
   }
 }`,
