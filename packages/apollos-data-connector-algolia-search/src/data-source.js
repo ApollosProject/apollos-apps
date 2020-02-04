@@ -18,6 +18,7 @@ export default class Search {
 
   initialize({ context }) {
     this.context = context;
+    this.index.setSettings(ApollosConfig.ALGOLIA.CONFIGURATION);
   }
 
   async addObjects(args) {
@@ -47,6 +48,7 @@ query getItem {
       objectID: id
       __typename
       coverImage { sources { uri } }
+      likedCount
     }
   }
 }`,

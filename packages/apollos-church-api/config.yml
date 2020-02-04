@@ -35,6 +35,12 @@ ALGOLIA:
   API_KEY: ${ALGOLIA_API_KEY}
   # TODO: should we support multiple indices? how?
   SEARCH_INDEX: test_ContentItems
+  CONFIGURATION:
+    searchableAttributes:
+      - title
+      - unordered(summary)
+    customRankings:
+      - desc(likedCount)
 TWILIO:
   ACCOUNT_SID: ${TWILIO_ACCOUNT_SID}
   AUTH_TOKEN: ${TWILIO_AUTH_TOKEN}
