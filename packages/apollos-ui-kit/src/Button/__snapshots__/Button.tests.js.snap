@@ -42,7 +42,6 @@ exports[`The Button component should render 1`] = `
     <Text
       style={
         Object {
-          "backgroundColor": 0,
           "color": "#FFFFFF",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
@@ -98,7 +97,6 @@ exports[`The Button component should render a Tertiary button 1`] = `
     <Text
       style={
         Object {
-          "backgroundColor": 0,
           "color": "#FFFFFF",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
@@ -153,7 +151,6 @@ exports[`The Button component should render a bordered button 1`] = `
     <Text
       style={
         Object {
-          "backgroundColor": 0,
           "color": "#00676D",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
@@ -209,7 +206,6 @@ exports[`The Button component should render a disabled button 1`] = `
     <Text
       style={
         Object {
-          "backgroundColor": 0,
           "color": "#FFFFFF",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
@@ -264,7 +260,6 @@ exports[`The Button component should render a ghost button 1`] = `
     <Text
       style={
         Object {
-          "backgroundColor": 0,
           "color": "#303030",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
@@ -319,7 +314,6 @@ exports[`The Button component should render a ghost pill button 1`] = `
     <Text
       style={
         Object {
-          "backgroundColor": 0,
           "color": "#303030",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
@@ -424,7 +418,6 @@ exports[`The Button component should render a pill button 1`] = `
     <Text
       style={
         Object {
-          "backgroundColor": 0,
           "color": "#FFFFFF",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
@@ -480,7 +473,6 @@ exports[`The Button component should render a primary button 1`] = `
     <Text
       style={
         Object {
-          "backgroundColor": 0,
           "color": "#FFFFFF",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
@@ -536,7 +528,6 @@ exports[`The Button component should render a secondary button 1`] = `
     <Text
       style={
         Object {
-          "backgroundColor": 0,
           "color": "#FFFFFF",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
@@ -592,7 +583,6 @@ exports[`The Button component should render as default type 1`] = `
     <Text
       style={
         Object {
-          "backgroundColor": 0,
           "color": "#303030",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
