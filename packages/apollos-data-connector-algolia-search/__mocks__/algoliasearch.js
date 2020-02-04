@@ -23,6 +23,7 @@ function initIndex(indexName, props) {
       clearIndex: jest.fn((cb) => {
         cb();
       }),
+      setSettings: jest.fn(),
       search: jest.fn(() =>
         Promise.resolve({
           hits: [
