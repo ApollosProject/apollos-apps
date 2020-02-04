@@ -41,7 +41,7 @@ ALGOLIA:
     searchableAttributes:
       - title
       - unordered(summary)
-    customRankings:
+    #customRankings:
       # NOT CURRENTLY INCLUDED
       # This just demonstrates what's possible
       # To include likedCount (or any other field) override search package
