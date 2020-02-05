@@ -2,36 +2,38 @@
 import React from 'react';
 import { Formik } from 'formik';
 import PropTypes from 'prop-types';
+import * as Yup from 'yup';
 
 import { LoginConsumer } from '../LoginProvider';
-import ProfileEntry from './ProfileEntry';
+import ProfileEntry from './ProfileDetailsEntry';
 
-const ProfileEntryConnected = ({
-  handleForgotPassword,
-  screenProps,
-  navigation,
-}) => (
+const ProfileDetailsSchema = Yup.object().shape({
+  gender: Yup.string().required('Required'),
+  birthDate: Yup.date().required('Required'),
+});
+
+const ProfileDetailsEntryConnected = ({ screenProps, navigation }) => (
   <LoginConsumer>
-    {({ handleUpdateProfile }) => (
+    {({ handleProfileComplete }) => (
       <Formik
-        onSubmit={async ({ firstName, lastName }, { setSubmitting }) => {
+        onSubmit={async ({ gender, birthDate }, { setSubmitting }) => {
           setSubmitting(true);
-          await handleUpdateProfile({
-            userProfile: { FirstName: firstName, LastName: lastName },
+          await handleProfileComplete({
+            userProfile: { Gender: gender, BirthDate: birthDate },
           });
           setSubmitting(false);
         }}
+        validationSchema={ProfileDetailsSchema}
       >
         {(formikBag) => (
           <ProfileEntry
             {...screenProps}
             {...formikBag}
-            errors={formikBag.touched.password && formikBag.errors}
+            errors={formikBag.errors}
+            disabled={!formikBag.isValid}
             isLoading={formikBag.isSubmitting}
             onPressNext={formikBag.handleSubmit}
             onPressBack={navigation.goBack}
-            handleForgotPassword={handleForgotPassword}
-            passwordType="password"
           />
         )}
       </Formik>
@@ -39,15 +41,14 @@ const ProfileEntryConnected = ({
   </LoginConsumer>
 );
 
-ProfileEntryConnected.propTypes = {
+ProfileDetailsEntryConnected.propTypes = {
   navigation: PropTypes.shape({ goBack: PropTypes.func.isRequired }).isRequired,
   emailRequired: PropTypes.bool,
-  handleForgotPassword: PropTypes.func,
   screenProps: PropTypes.shape({}),
 };
 
-ProfileEntryConnected.defaultProps = {
+ProfileDetailsEntryConnected.defaultProps = {
   emailRequired: true,
 };
 
-export default ProfileEntryConnected;
+export default ProfileDetailsEntryConnected;

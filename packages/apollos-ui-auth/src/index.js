@@ -17,6 +17,10 @@ import {
   ProfileEntry as AuthProfileEntry,
   ProfileEntryConnected as AuthProfileEntryConnected,
 } from './Profile';
+import {
+  ProfileDetailsEntry as AuthProfileDetailsEntry,
+  ProfileDetailsEntryConnected as AuthProfileDetailsEntryConnected,
+} from './ProfileDetails';
 
 export LoginButton from './LoginButton';
 export ProtectedAction from './ProtectedAction';
@@ -39,6 +43,8 @@ export {
   AuthPasswordEntryConnected,
   AuthProfileEntry,
   AuthProfileEntryConnected,
+  AuthProfileDetailsEntry,
+  AuthProfileDetailsEntryConnected,
 };
 
 const AuthNavigator = createStackNavigator(
@@ -48,6 +54,7 @@ const AuthNavigator = createStackNavigator(
     AuthEmailEntryConnected,
     AuthPasswordEntryConnected,
     AuthProfileEntryConnected,
+    AuthProfileDetailsEntryConnected,
   },
   {
     initialRouteName: 'AuthSMSPhoneEntryConnected',
