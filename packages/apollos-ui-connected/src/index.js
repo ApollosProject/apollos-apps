@@ -8,6 +8,9 @@ export {
   HorizontalLikedContentFeed,
   HorizontalLikedContentFeedConnected,
 } from './HorizontalLikedContentFeedConnected';
+export ContentHTMLViewConnected, {
+  GET_CONTENT_ITEM_CONTENT,
+} from './ContentHTMLViewConnected';
 export LikeButtonConnected, {
   LikeButton,
   getLikedContentItem,

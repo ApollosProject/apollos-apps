@@ -13,16 +13,6 @@ export default class AuthDataSource extends RockApolloDataSource {
 
   userToken = null;
 
-  initialize(config) {
-    super.initialize(config);
-    if (config.context.rockCookie) {
-      // fetches the current person
-      // this method will try to cache the current person on the context
-      // removing the need to fetch each and every time
-      this.getCurrentPerson();
-    }
-  }
-
   getCurrentPerson = async ({ cookie = null } = { cookie: null }) => {
     const { rockCookie, currentPerson } = this.context;
     const userCookie = cookie || rockCookie;
@@ -110,10 +100,10 @@ export default class AuthDataSource extends RockApolloDataSource {
   createUserProfile = async ({ email, ...otherFields }) => {
     try {
       return await this.post('/People', {
+        Gender: 0, // Required by Rock. Listed first so it can be overridden by otherFields
         ...otherFields,
         Email: email,
         IsSystem: false, // Required by Rock
-        Gender: 0, // Required by Rock
       });
     } catch (err) {
       throw new Error('Unable to create profile!');
@@ -162,8 +152,15 @@ export default class AuthDataSource extends RockApolloDataSource {
     if (personExists) throw new Error('User already exists!');
 
     const profileFields = fieldsAsObject(userProfile || []);
+    const rockUpdateFields = this.context.dataSources.Person.mapApollosFieldsToRock(
+      profileFields
+    );
 
-    const personId = await this.createUserProfile({ email, ...profileFields });
+    const personId = await this.createUserProfile({
+      email,
+      ...rockUpdateFields,
+    });
+
     await this.createUserLogin({
       email,
       password,
