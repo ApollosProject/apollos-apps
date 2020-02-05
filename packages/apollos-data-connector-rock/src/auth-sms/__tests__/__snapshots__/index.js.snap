@@ -367,6 +367,82 @@ Array [
 ]
 `;
 
+exports[`AuthSms schema registers a new user via their phone number, pin, and gender 1`] = `
+Object {
+  "data": Object {
+    "registerWithSms": Object {
+      "token": "foo",
+    },
+  },
+}
+`;
+
+exports[`AuthSms schema registers a new user via their phone number, pin, and gender: create new phone number 1`] = `
+Array [
+  Array [
+    "/PhoneNumbers",
+    Object {
+      "CountryCode": 1,
+      "IsMessagingEnabled": true,
+      "IsSystem": false,
+      "Number": "5133061126",
+      "NumberTypeValueId": 12,
+      "PersonId": 123,
+    },
+  ],
+]
+`;
+
+exports[`AuthSms schema registers a new user via their phone number, pin, and gender: create user profile 1`] = `
+Array [
+  Array [
+    Object {
+      "FirstName": "Burke",
+      "Gender": 1,
+      "LastName": "Shartsis",
+      "email": null,
+    },
+  ],
+]
+`;
+
+exports[`AuthSms schema registers a new user via their phone number, pin, and gender: login user 1`] = `
+Array [
+  Array [
+    Object {
+      "identity": "5133061126",
+      "password": "5dd39e500e9806efbb8c0e92d61d78e5fd20efcd2788d0ef2c56ad5df3cd2649",
+    },
+  ],
+]
+`;
+
+exports[`AuthSms schema registers a new user via their phone number, pin, and gender: try and find phone number / find user login 1`] = `
+Array [
+  Array [
+    "/UserLogins?loadAttributes=expanded&%24filter=UserName%20eq%20%275133061126%27&%24top=1",
+    Object {},
+    Object {},
+  ],
+  Array [
+    "/PhoneNumbers?loadAttributes=expanded&%24filter=Number%20eq%20%275133061126%27",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`AuthSms schema registers a new user via their phone number, pin, and gender: update person id on login 1`] = `
+Array [
+  Array [
+    "/UserLogins/123",
+    Object {
+      "PersonId": 123,
+    },
+  ],
+]
+`;
+
 exports[`AuthSms schema requests an SMS pin with an existing user login 1`] = `
 Object {
   "data": Object {

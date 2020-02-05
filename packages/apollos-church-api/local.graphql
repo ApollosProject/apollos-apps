@@ -1,3 +1,5 @@
+directive @cacheControl(maxAge: Int, scope: CacheControlScope) on FIELD_DEFINITION | OBJECT | INTERFACE
+
 enum ACTION_FEATURE_ACTION {
   READ_CONTENT
   READ_EVENT

@@ -1,6 +1,6 @@
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
-import { Auth, Person } from '@apollosproject/data-connector-rock';
 import { fetch } from 'apollo-server-env';
+import { Auth, Person } from '../index';
 
 import Template from './data-source';
 

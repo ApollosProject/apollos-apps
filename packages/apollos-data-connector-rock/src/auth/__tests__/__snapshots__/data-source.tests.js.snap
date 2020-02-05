@@ -49,6 +49,26 @@ Array [
 ]
 `;
 
+exports[`Auth should post with userProfile fields when creating a new user and map gender/birthdate 1`] = `"some-cookie"`;
+
+exports[`Auth should post with userProfile fields when creating a new user and map gender/birthdate 2`] = `
+Array [
+  Array [
+    "/People",
+    Object {
+      "BirthDay": 22,
+      "BirthMonth": 2,
+      "BirthYear": 1996,
+      "Email": "bob-jones@example.com",
+      "FirstName": "Burke",
+      "Gender": 2,
+      "IsSystem": false,
+      "LastName": "Shartsis",
+    },
+  ],
+]
+`;
+
 exports[`Auth should throw an error when creating an invalid user 1`] = `
 Array [
   Array [

@@ -21,12 +21,9 @@ export default {
         ? moment.tz(birthDate, ApollosConfig.ROCK.TIMEZONE).toJSON()
         : null
     ),
-    gender: enforceCurrentUser(({ gender }) => gender),
+    gender: enforceCurrentUser(({ gender }, args, { dataSources }) =>
+      dataSources.Person.mapGender({ gender })
+    ),
     email: enforceCurrentUser(({ email }) => email),
-  },
-  GENDER: {
-    Unknown: 0,
-    Male: 1,
-    Female: 2,
   },
 };
