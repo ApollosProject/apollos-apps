@@ -1,5 +1,5 @@
 import HorizontalContentSeriesFeedConnected from './HorizontalContentSeriesFeedConnected';
 
-export getHorizontalContent from './getHorizontalContent';
+export GET_CONTENT_SERIES from './getContentSeries';
 
 export default HorizontalContentSeriesFeedConnected;

@@ -3,12 +3,12 @@ import { GET_CONTENT_CARD } from '@apollosproject/ui-connected';
 
 import { Providers, renderWithApolloData } from '../utils/testUtils';
 
-import GET_HORIZONTAL_CONTENT from './getHorizontalContent';
+import GET_CONTENT_SERIES from './getContentSeries';
 import HorizontalContentSeriesFeedConnected from '.';
 
 const mock = {
   request: {
-    query: GET_HORIZONTAL_CONTENT,
+    query: GET_CONTENT_SERIES,
     variables: { itemId: 'ContentSeriesContentItem:123' },
   },
   result: {

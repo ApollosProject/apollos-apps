@@ -8,7 +8,7 @@ import { HorizontalTileFeed, TouchableScale } from '@apollosproject/ui-kit';
 
 import { HorizontalContentCardConnected } from '@apollosproject/ui-connected';
 
-import GET_HORIZONTAL_CONTENT from './getHorizontalContent';
+import GET_CONTENT_SERIES from './getContentSeries';
 
 const loadingStateObject = {
   node: {
@@ -98,7 +98,7 @@ class HorizontalContentSeriesFeedConnected extends Component {
         onEndReached={() =>
           !this.allItemsLoaded &&
           fetchMore({
-            query: GET_HORIZONTAL_CONTENT,
+            query: GET_CONTENT_SERIES,
             variables: { cursor, itemId: this.props.contentId },
             updateQuery: (previousResult, { fetchMoreResult }) => {
               const connection = isParent
@@ -127,7 +127,7 @@ class HorizontalContentSeriesFeedConnected extends Component {
 
     return (
       <Query
-        query={GET_HORIZONTAL_CONTENT}
+        query={GET_CONTENT_SERIES}
         variables={{ itemId: this.props.contentId }}
         fetchPolicy="cache-and-network"
       >
