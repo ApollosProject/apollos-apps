@@ -110,10 +110,10 @@ export default class AuthDataSource extends RockApolloDataSource {
   createUserProfile = async ({ email, ...otherFields }) => {
     try {
       return await this.post('/People', {
+        Gender: 0, // Required by Rock. Listed first so it can be overridden by otherFields
         ...otherFields,
         Email: email,
         IsSystem: false, // Required by Rock
-        Gender: 0, // Required by Rock
       });
     } catch (err) {
       throw new Error('Unable to create profile!');
@@ -170,6 +170,7 @@ export default class AuthDataSource extends RockApolloDataSource {
       email,
       ...rockUpdateFields,
     });
+
     await this.createUserLogin({
       email,
       password,

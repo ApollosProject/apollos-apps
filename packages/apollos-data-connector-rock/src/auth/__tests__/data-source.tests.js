@@ -52,6 +52,25 @@ describe('Auth', () => {
     expect(Auth.post.mock.calls).toMatchSnapshot();
   });
 
+  it('should post with userProfile fields when creating a new user and map gender/birthdate', async () => {
+    Auth.post = jest.fn(() => Promise.resolve());
+    Auth.createUserLogin = jest.fn(() => Promise.resolve());
+    Auth.personExists = jest.fn(() => Promise.resolve(false));
+    Auth.authenticate = jest.fn(() => Promise.resolve('some-cookie'));
+
+    const result = await Auth.registerPerson({
+      email: 'bob-jones@example.com',
+      userProfile: [
+        { field: 'FirstName', value: 'Burke ' },
+        { field: 'LastName', value: 'Shartsis ' },
+        { field: 'Gender', value: 'Female' },
+        { field: 'BirthDate', value: '1996-02-22T05:00:00.000Z' },
+      ],
+    });
+    expect(result).toMatchSnapshot();
+    expect(Auth.post.mock.calls).toMatchSnapshot();
+  });
+
   it('should throw an error when creating an invalid user', async () => {
     Auth.post = jest.fn(() => {
       throw new Error('HTTP error');
