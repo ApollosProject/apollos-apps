@@ -4,7 +4,11 @@ import PropTypes from 'prop-types';
 import { withNavigation } from 'react-navigation';
 import { Query } from 'react-apollo';
 
-import { HorizontalTileFeed, TouchableScale } from '@apollosproject/ui-kit';
+import {
+  HorizontalTileFeed,
+  HorizontalHighlightCard,
+  TouchableScale,
+} from '@apollosproject/ui-kit';
 
 import { HorizontalContentCardConnected } from '@apollosproject/ui-connected';
 
@@ -14,9 +18,15 @@ const loadingStateObject = {
   node: {
     id: 'fakeId0',
     title: '',
+    coverImage: '',
     isLoading: true,
+    parentChannel: {
+      name: '',
+    },
   },
 };
+
+const ComingSoonCard = <HorizontalHighlightCard title={'Comming Soon!'} />;
 
 class HorizontalContentSeriesFeedConnected extends Component {
   static propTypes = {
@@ -26,17 +36,27 @@ class HorizontalContentSeriesFeedConnected extends Component {
     }),
   };
 
+  lastCursor = false;
+
+  allItemsLoaded = false;
+
   renderItem = ({ item }) => {
     const itemId = get(item, 'id', '');
     const disabled = get(item, 'id', '') === this.props.contentId;
+    const isLoading = get(item.node, 'isLoading');
+    const labelText = get(item.node, 'parentChannel.name', null);
+
     return (
       <TouchableScale
         onPress={() => this.handleOnPressItem(item)}
-        disabled={disabled}
+        disabled={isLoading || disabled}
       >
         <HorizontalContentCardConnected
+          labelText={labelText}
           contentId={itemId}
           disabled={disabled}
+          isLoading={isLoading}
+          __typename={isLoading ? 'MediaContentItem' : get(item, '__typename')}
         />
       </TouchableScale>
     );
@@ -50,7 +70,6 @@ class HorizontalContentSeriesFeedConnected extends Component {
 
   renderFeed = ({ data, loading, error, fetchMore }) => {
     if (error) return null;
-    if (loading) return null;
 
     const children = get(data, 'node.childContentItemsConnection.edges', []);
     const siblings = get(data, 'node.siblingContentItemsConnection.edges', []);
@@ -64,8 +83,14 @@ class HorizontalContentSeriesFeedConnected extends Component {
     );
     const initialScrollIndex = currentIndex === -1 ? 0 : currentIndex;
 
-    return content && content.length ? (
+    if (this.lastCursor === cursor) {
+      this.allItemsLoaded = true;
+    }
+    this.lastCursor = cursor;
+
+    return (
       <HorizontalTileFeed
+        isLoading={loading}
         content={content}
         loadingStateObject={loadingStateObject}
         renderItem={this.renderItem}
@@ -77,6 +102,7 @@ class HorizontalContentSeriesFeedConnected extends Component {
           index,
         })}
         onEndReached={() =>
+          !this.allItemsLoaded &&
           fetchMore({
             query: GET_HORIZONTAL_CONTENT,
             variables: { cursor, itemId: this.props.contentId },
@@ -99,7 +125,7 @@ class HorizontalContentSeriesFeedConnected extends Component {
           })
         }
       />
-    ) : null;
+    );
   };
 
   render() {
@@ -109,8 +135,11 @@ class HorizontalContentSeriesFeedConnected extends Component {
       <Query
         query={GET_HORIZONTAL_CONTENT}
         variables={{ itemId: this.props.contentId }}
+        fetchPolicy="cache-and-network"
       >
-        {this.renderFeed}
+        {({ data, error, fetchMore, loading }) =>
+          this.renderFeed({ data, error, fetchMore, loading })
+        }
       </Query>
     );
   }
