@@ -4,6 +4,9 @@ export ContentCardConnected, {
 } from './ContentCardConnected';
 export { fetchMoreResolver, share, uploadPhoto } from './utils';
 export HorizontalContentCardConnected from './HorizontalContentCardConnected';
+export HorizontalContentSeriesFeedConnected, {
+  getHorizontalContent,
+} from './HorizontalContentSeriesFeedConnected';
 export {
   HorizontalLikedContentFeed,
   HorizontalLikedContentFeedConnected,
