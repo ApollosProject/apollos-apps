@@ -18,7 +18,7 @@ const loadingStateObject = {
   },
 };
 
-class HorizontalContentFeed extends Component {
+class HorizontalContentSeriesFeedConnected extends Component {
   static propTypes = {
     contentId: PropTypes.string,
     navigation: PropTypes.shape({
@@ -116,4 +116,4 @@ class HorizontalContentFeed extends Component {
   }
 }
 
-export default withNavigation(HorizontalContentFeed);
+export default withNavigation(HorizontalContentSeriesFeedConnected);
