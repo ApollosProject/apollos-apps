@@ -62,11 +62,22 @@ export default class Person extends RockApolloDataSource {
       .get();
   };
 
+  mapGender = ({ gender }) => {
+    // If the gender is coming from Rock (an int) map into the string value.
+    if (typeof gender === 'number') {
+      return Object.keys(RockGenderMap).find(
+        (key) => RockGenderMap[key] === gender
+      );
+    }
+    // Otherwise return the string value.
+    return gender;
+  };
+
   mapApollosFieldsToRock = (fields) => {
     const profileFields = { ...fields };
 
     if (profileFields.Gender) {
-      if (!['Unknown', 'Male', 'Female'].includes(profileFields.Gender)) {
+      if (!Object.keys(RockGenderMap).includes(profileFields.Gender)) {
         throw new UserInputError(
           'Rock gender must be either Unknown, Male, or Female'
         );
