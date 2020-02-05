@@ -1,9 +1,10 @@
 import React from 'react';
 import { GET_CONTENT_CARD } from '@apollosproject/ui-connected';
-import Providers from '../../Providers';
-import { renderWithApolloData } from '../../utils/testUtils';
+
+import { Providers, renderWithApolloData } from '../utils/testUtils';
+
 import GET_HORIZONTAL_CONTENT from './getHorizontalContent';
-import HorizontalContentFeed from '.';
+import HorizontalContentSeriesFeedConnected from '.';
 
 const mock = {
   request: {
@@ -191,11 +192,11 @@ const additionalMocks = mock.result.data.node.childContentItemsConnection.edges.
 
 console.log(additionalMocks);
 
-describe('the HorizontalContentFeed component', () => {
-  it('renders a horizontal content feed', async () => {
+describe('the HorizontalContentSeriesFeedConnected component', () => {
+  it('should render', async () => {
     const tree = await renderWithApolloData(
       <Providers mocks={[mock, ...additionalMocks]}>
-        <HorizontalContentFeed
+        <HorizontalContentSeriesFeedConnected
           contentId={'ContentSeriesContentItem:123'}
           navigation={navigation}
         />
