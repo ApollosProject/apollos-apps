@@ -4,11 +4,7 @@ import PropTypes from 'prop-types';
 import { withNavigation } from 'react-navigation';
 import { Query } from 'react-apollo';
 
-import {
-  HorizontalTileFeed,
-  HorizontalHighlightCard,
-  TouchableScale,
-} from '@apollosproject/ui-kit';
+import { HorizontalTileFeed, TouchableScale } from '@apollosproject/ui-kit';
 
 import { HorizontalContentCardConnected } from '@apollosproject/ui-connected';
 
@@ -25,8 +21,6 @@ const loadingStateObject = {
     },
   },
 };
-
-const ComingSoonCard = <HorizontalHighlightCard title={'Comming Soon!'} />;
 
 class HorizontalContentSeriesFeedConnected extends Component {
   static propTypes = {
