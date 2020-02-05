@@ -24,18 +24,15 @@ const RockAuthedInAppBrowser = {
       ? url.toString().slice(0, -1)
       : url.toString();
 
-    const { authCookie, authToken } = await getRockAuthDetails(client);
     let headers = {};
-    if (auth.useRockCookie && authCookie) {
-      // eslint-disable-next-line no-console
-      console.warn(
-        "iOS doesn't support headers, you may want to use src/user-web-view"
-      );
-      headers = { Cookie: authCookie };
-    }
+    let creds = {};
 
-    if (auth.useRockToken && authToken) {
-      url.searchParams.append('rckipid', authToken);
+    // use auth cookie or query param
+    if (auth.useRockCookie || auth.useRockToken) {
+      creds = await getRockAuthDetails(client);
+      if (auth.useRockCookie) headers = { Cookie: creds.authCookie };
+      if (auth.useRockToken)
+        url.searchParams.append('rckipid', creds.authToken);
     }
     try {
       if (await InAppBrowser.isAvailable()) {
