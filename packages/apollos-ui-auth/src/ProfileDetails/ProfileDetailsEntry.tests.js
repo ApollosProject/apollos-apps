@@ -5,11 +5,24 @@ import { Providers } from '../testUtils';
 
 import ProfileDetailsEntry from './ProfileDetailsEntry';
 
-describe('ui-auth/Profile/ProfileEntry', () => {
+let realDateNow;
+
+describe('ui-auth/Profile/ProfileDetailsEntry', () => {
+  beforeAll(() => {
+    realDateNow = Date.now.bind(global.Date);
+    const dateNowStub = jest.fn(() => 1530518207007);
+    global.Date.now = dateNowStub;
+  });
+  afterAll(() => {
+    global.Date.now = realDateNow;
+  });
   it('should render', () => {
     const tree = renderer.create(
       <Providers>
-        <ProfileDetailsEntry setFieldValue={jest.fn()} />
+        <ProfileDetailsEntry
+          setFieldValue={jest.fn()}
+          defaultDate={'2019-02-14T05:00:00.000Z'}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ui-auth/Profile/ProfileEntryConnected should render 1`] = `
+exports[`ui-auth/Profile/ProfileDetailsEntryConnected should render 1`] = `
 <View
   onLayout={[Function]}
   style={
@@ -643,8 +643,8 @@ exports[`ui-auth/Profile/ProfileEntryConnected should render 1`] = `
                     >
                       <View>
                         <RCTDatePicker
-                          date={1580932165097}
-                          maximumDate={1580932165190}
+                          date={1550120400000}
+                          maximumDate={1530518207007}
                           minuteInterval={1}
                           mode="date"
                           onChange={[Function]}
