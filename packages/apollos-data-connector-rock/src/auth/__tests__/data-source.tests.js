@@ -6,11 +6,12 @@ describe('Auth', () => {
 
   Date.now = jest.fn(() => 1482363367071);
 
+  const PersonDataSource = Person.dataSource;
   class AuthWithContext extends AuthDataSource {
     context = {
       rockCookie: 'some cookie',
       dataSources: {
-        Person: new Person.dataSource(),
+        Person: new PersonDataSource(),
       },
     };
   }
