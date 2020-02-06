@@ -11,6 +11,8 @@ import {
   H2,
   H5,
   H6,
+  Radio,
+  DateInput,
 } from '@apollosproject/ui-kit';
 
 const FlexedSafeAreaView = compose(
@@ -113,6 +115,40 @@ const TabCard = styled(
   'ui-auth.TabCard'
 )(Card);
 
+const FieldLabel = styled(
+  ({ theme, padded }) => ({
+    color: 'gray',
+    opacity: 0.7,
+    ...(padded ? { marginTop: theme.sizing.baseUnit } : {}),
+  }),
+  'ui-auth.FieldLabel'
+)(H6);
+
+const DatePicker = styled(
+  ({ theme }) => ({
+    marginTop: 0,
+    marginBottom: theme.sizing.baseUnit,
+  }),
+  'ui-auth.DatePicker'
+)(DateInput);
+
+const RadioInput = styled(
+  ({ theme }) => ({
+    marginBottom: theme.sizing.baseUnit,
+    flexDirection: 'row',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+  }),
+  'ui-auth.RadioInput'
+)(Radio);
+
+const RadioLabel = styled(
+  ({ theme }) => ({
+    marginLeft: theme.sizing.baseUnit * 0.5,
+  }),
+  'ui-auth.RadioLabel'
+)(H5);
+
 export {
   FlexedSafeAreaView,
   BrandIcon,
@@ -125,4 +161,8 @@ export {
   TabContainer,
   TabButtonWrapper,
   TabWrapper,
+  FieldLabel,
+  DatePicker,
+  RadioInput,
+  RadioLabel,
 };

@@ -12,12 +12,7 @@ import moment from 'moment';
 import {
   PaddedView,
   BackgroundView,
-  H6,
-  H5,
-  DateInput,
   RadioButton,
-  Radio,
-  styled,
 } from '@apollosproject/ui-kit';
 
 import BackButton from '../BackButton';
@@ -27,29 +22,11 @@ import {
   TitleText,
   PromptText,
   LegalText,
+  FieldLabel,
+  RadioInput,
+  RadioLabel,
+  DatePicker,
 } from '../styles';
-
-const Label = styled(({ theme, padded }) => ({
-  color: 'gray',
-  opacity: 0.7,
-  ...(padded ? { marginTop: theme.sizing.baseUnit } : {}),
-}))(H6);
-
-const StyledDate = styled(({ theme }) => ({
-  marginTop: 0,
-  marginBottom: theme.sizing.baseUnit,
-}))(DateInput);
-
-const StyledRadio = styled(({ theme }) => ({
-  marginBottom: theme.sizing.baseUnit,
-  flexDirection: 'row',
-  alignItems: 'center',
-  flexWrap: 'wrap',
-}))(Radio);
-
-const RadioLabel = styled(({ theme }) => ({
-  marginLeft: theme.sizing.baseUnit * 0.5,
-}))(H5);
 
 const ProfileDetailsEntry = ({
   profileTitleText,
@@ -80,8 +57,8 @@ const ProfileDetailsEntry = ({
           <PaddedView>
             <TitleText>{profileTitleText}</TitleText>
             <PromptText padded>{profilePromptText}</PromptText>
-            <Label padded>Gender</Label>
-            <StyledRadio
+            <FieldLabel padded>Gender</FieldLabel>
+            <RadioInput
               label="Gender"
               type="radio"
               value={get(values, 'gender')}
@@ -96,9 +73,9 @@ const ProfileDetailsEntry = ({
                   underline={false}
                 />,
               ])}
-            </StyledRadio>
-            <Label>Birthday</Label>
-            <StyledDate
+            </RadioInput>
+            <FieldLabel>Birthday</FieldLabel>
+            <DatePicker
               type={'DateInput'}
               placeholder={'Select a date...'}
               value={moment(
