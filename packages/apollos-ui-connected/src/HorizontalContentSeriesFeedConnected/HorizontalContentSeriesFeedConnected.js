@@ -24,10 +24,19 @@ const loadingStateObject = {
 
 class HorizontalContentSeriesFeedConnected extends Component {
   static propTypes = {
+    Component: PropTypes.oneOfType([
+      PropTypes.node,
+      PropTypes.func,
+      PropTypes.object, // type check for React fragments
+    ]),
     contentId: PropTypes.string,
     navigation: PropTypes.shape({
       push: PropTypes.func,
     }),
+  };
+
+  static defaultProps = {
+    Component: HorizontalTileFeed,
   };
 
   renderItem = ({ item }) => {
@@ -75,7 +84,7 @@ class HorizontalContentSeriesFeedConnected extends Component {
     const initialScrollIndex = currentIndex === -1 ? 0 : currentIndex;
 
     return (
-      <HorizontalTileFeed
+      <this.props.Component
         isLoading={loading}
         content={content}
         loadingStateObject={loadingStateObject}
