@@ -88,10 +88,6 @@ describe('The Location "finder"', () => {
     latitudeDelta: 100,
     longitudeDelta: 10,
   };
-  const userLocation = {
-    latitude: 39.104797,
-    longitude: -84.511959,
-  };
   it('should render', async () => {
     const navigation = {
       navigate: jest.fn(),
