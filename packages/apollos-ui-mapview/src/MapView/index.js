@@ -180,13 +180,20 @@ class MapView extends Component {
     };
 
     const visibleCampuses = [
-      userLocation,
       ...(this.currentCampus ? [this.currentCampus] : this.sortedCampuses),
     ];
 
-    this.map.fitToCoordinates(visibleCampuses, {
-      edgePadding,
-    });
+    if (userLocation) {
+      // If we have a user location, we should include it in the current window
+      visibleCampuses.unshift(userLocation);
+    }
+
+    // Android will crash if you try to fit to a list of 0 points.
+    if (visibleCampuses.length) {
+      this.map.fitToCoordinates(visibleCampuses, {
+        edgePadding,
+      });
+    }
   };
 
   render() {

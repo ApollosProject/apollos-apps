@@ -48,10 +48,7 @@ class Location extends PureComponent {
   });
 
   state = {
-    userLocation: {
-      latitude: 39.104797,
-      longitude: -84.511959,
-    },
+    userLocation: null,
   };
 
   async componentDidMount() {
@@ -74,8 +71,8 @@ class Location extends PureComponent {
       <Query
         query={GET_CAMPUSES}
         variables={{
-          latitude: this.state.userLocation.latitude,
-          longitude: this.state.userLocation.longitude,
+          latitude: get(this.state, 'userLocation.latitude'),
+          longitude: get(this.state, 'userLocation.longitude'),
         }}
         fetchPolicy="cache-and-network"
       >

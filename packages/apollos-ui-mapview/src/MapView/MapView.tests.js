@@ -59,7 +59,7 @@ const navigation = {
 };
 
 describe('<MapView>', () => {
-  it('should render as a MapView', () => {
+  it('should render', () => {
     const tree = renderer.create(
       <Providers>
         <MapView

@@ -45,11 +45,11 @@ class LocationFinderConnected extends PureComponent {
 
               return (
                 <this.props.Component
-                  onPressButton={() => {
-                    requestLocation().then(() => {
-                      this.checkPermission();
-                    });
+                  onPressButton={async () => {
+                    await requestLocation();
+                    await this.checkPermission();
                     this.props.onNavigate();
+
                     track({ eventName: 'LocationFinder Opened MapView' });
                   }}
                   // next button
