@@ -30,10 +30,6 @@ class HorizontalContentSeriesFeedConnected extends Component {
     }),
   };
 
-  lastCursor = false;
-
-  allItemsLoaded = false;
-
   renderItem = ({ item }) => {
     const itemId = get(item, 'id', '');
     const disabled = get(item, 'id', '') === this.props.contentId;
@@ -50,6 +46,7 @@ class HorizontalContentSeriesFeedConnected extends Component {
           contentId={itemId}
           disabled={disabled}
           isLoading={isLoading}
+          // If we are loading we need to assume a typename so HorizontalContentCardConnected knows what "type" to render
           __typename={isLoading ? 'MediaContentItem' : get(item, '__typename')}
         />
       </TouchableScale>
@@ -77,11 +74,6 @@ class HorizontalContentSeriesFeedConnected extends Component {
     );
     const initialScrollIndex = currentIndex === -1 ? 0 : currentIndex;
 
-    if (this.lastCursor === cursor) {
-      this.allItemsLoaded = true;
-    }
-    this.lastCursor = cursor;
-
     return (
       <HorizontalTileFeed
         isLoading={loading}
@@ -96,7 +88,6 @@ class HorizontalContentSeriesFeedConnected extends Component {
           index,
         })}
         onEndReached={() =>
-          !this.allItemsLoaded &&
           fetchMore({
             query: GET_CONTENT_SERIES,
             variables: { cursor, itemId: this.props.contentId },
@@ -129,11 +120,8 @@ class HorizontalContentSeriesFeedConnected extends Component {
       <Query
         query={GET_CONTENT_SERIES}
         variables={{ itemId: this.props.contentId }}
-        fetchPolicy="cache-and-network"
       >
-        {({ data, error, fetchMore, loading }) =>
-          this.renderFeed({ data, error, fetchMore, loading })
-        }
+        {this.renderFeed}
       </Query>
     );
   }
