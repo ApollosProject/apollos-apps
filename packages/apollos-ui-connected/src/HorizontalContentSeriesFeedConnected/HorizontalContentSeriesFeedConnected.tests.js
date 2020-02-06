@@ -190,8 +190,6 @@ const additionalMocks = mock.result.data.node.childContentItemsConnection.edges.
   })
 );
 
-console.log(additionalMocks);
-
 describe('the HorizontalContentSeriesFeedConnected component', () => {
   it('should render', async () => {
     const tree = await renderWithApolloData(
