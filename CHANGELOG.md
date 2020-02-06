@@ -1,3 +1,27 @@
+v1.3.0-beta.5: February 6, 2020
+
+- Adds validation for firstName and lastName on the ui-auth screen (#1321) (41dd0596)
+- Adds support for the auth register endpoints to properly accept Gender/Birthdate (#1330) (468517c1)
+- Adds Algolia Custom Configuration (#1325) (0bf512e3)
+- Adds configurablity to Mapview button text (#1323) (6e854880)
+- Adds document detailing performance goals (#1320) (942db509)
+
+- Removes auth prefetch cache attempt (#1324) (de4a99dd)
+- Moves HtmlContent to ui-connected (#1310) (2b302304)
+- Increases default cache time to one hour (#1322) (d3a2e47d)
+- Moves UserAvatar to connected package (#1306) (1ebc0ded)
+- Moves SearchCard to ui-connected (#1309) (19f5b757)
+- Removes Polyfill and Adds UI Dependency (#1313) (51aed6e1)
+- Exports share function (#1311) (c00b15b8)
+
+- Fixes AuthedBrowser crashing without user (#1328) (58e562e2)
+- Fixes Videos on iOS (#1335) (18684ff8)
+- Fixes location finder preferring Cincinnati without a location (#1315) (d16c4826)
+- Fixes another animated test warning (#1327) (0f85c76d)
+- Fixes cache on the user exists query (#1314) (7294b200)
+- Fixes animated test warning (#1326) (c4d2598d)
+- Fixes crash caused by unnedeed theme ThemeMixin (#1316) (5be23dea)
+
 v1.3.0-beta.3: January 28, 2020
 
 - Improves android profile image quality (#1303) (b448a3ee)
