@@ -33,6 +33,7 @@ class HorizontalContentSeriesFeedConnected extends Component {
     navigation: PropTypes.shape({
       push: PropTypes.func,
     }),
+    renderItem: PropTypes.func,
   };
 
   static defaultProps = {
@@ -88,7 +89,7 @@ class HorizontalContentSeriesFeedConnected extends Component {
         isLoading={loading}
         content={content}
         loadingStateObject={loadingStateObject}
-        renderItem={this.renderItem}
+        renderItem={this.props.renderItem || this.renderItem}
         initialScrollIndex={initialScrollIndex}
         getItemLayout={(itemData, index) => ({
           // We need to pass this function so that initialScrollIndex will work.
