@@ -24,6 +24,7 @@ const loadingStateObject = {
 
 class HorizontalContentSeriesFeedConnected extends Component {
   static propTypes = {
+    // eslint-disable-next-line react/no-unused-prop-types
     Component: PropTypes.oneOfType([
       PropTypes.node,
       PropTypes.func,
