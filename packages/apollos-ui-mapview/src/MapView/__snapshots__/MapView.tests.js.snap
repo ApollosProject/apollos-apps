@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<MapView> should render as a MapView 1`] = `
+exports[`<MapView> should render 1`] = `
 <View
   style={
     Object {
