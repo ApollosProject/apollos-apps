@@ -10,6 +10,7 @@ import { loadStories as loadOnboardingStories } from '@apollosproject/ui-onboard
 import { loadStories as loadMapViewStories } from '@apollosproject/ui-mapview/storybook/storyLoader';
 import { loadStories as loadMediaPlayerStories } from '@apollosproject/ui-media-player/storybook/storyLoader';
 import { loadStories as loadScriptureStories } from '@apollosproject/ui-scripture/storybook/storyLoader';
+import { loadStories as loadConnectedStories } from '@apollosproject/ui-connected/storybook/storyLoader';
 
 import { Providers as UIKitProviders } from '@apollosproject/ui-kit';
 
@@ -29,6 +30,7 @@ export const loadApollosStories = () => {
   loadMapViewStories();
   loadMediaPlayerStories();
   loadScriptureStories();
+  loadConnectedStories();
 };
 
 // Refer to https://github.com/storybooks/storybook/tree/master/app/react-native#start-command-parameters
