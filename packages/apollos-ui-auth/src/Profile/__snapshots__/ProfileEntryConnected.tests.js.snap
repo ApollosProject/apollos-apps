@@ -315,6 +315,7 @@ exports[`ui-auth/Profile/ProfileEntryConnected should render 1`] = `
                         allowFontScaling={true}
                         editable={true}
                         enablesReturnKeyAutomatically={true}
+                        name="firstName"
                         onBlur={[Function]}
                         onChangeText={[Function]}
                         onFocus={[Function]}
@@ -475,6 +476,7 @@ exports[`ui-auth/Profile/ProfileEntryConnected should render 1`] = `
                         allowFontScaling={true}
                         editable={true}
                         enablesReturnKeyAutomatically={true}
+                        name="lastName"
                         onBlur={[Function]}
                         onChangeText={[Function]}
                         onFocus={[Function]}
@@ -621,7 +623,7 @@ exports[`ui-auth/Profile/ProfileEntryConnected should render 1`] = `
         >
           <View
             bordered={false}
-            disabled={false}
+            disabled={true}
             pill={false}
             style={
               Object {
@@ -635,7 +637,7 @@ exports[`ui-auth/Profile/ProfileEntryConnected should render 1`] = `
                 "flexDirection": "row",
                 "height": 48,
                 "justifyContent": "center",
-                "opacity": 1,
+                "opacity": 0.5,
                 "overflow": "hidden",
                 "paddingHorizontal": 16,
               }

@@ -47,8 +47,8 @@ const ProfileEntry = ({
             <PaddedView>
               <TitleText>{profileTitleText}</TitleText>
               <PromptText padded>{profilePromptText}</PromptText>
-
               <TextInput
+                name="firstName"
                 label={'First Name'}
                 type={'text'}
                 textContentType={'givenName'} // ios autofill
@@ -61,6 +61,7 @@ const ProfileEntry = ({
                 enablesReturnKeyAutomatically
               />
               <TextInput
+                name="lastName"
                 label={'Last Name'}
                 type={'text'}
                 textContentType={'familyName'} // ios autofill
