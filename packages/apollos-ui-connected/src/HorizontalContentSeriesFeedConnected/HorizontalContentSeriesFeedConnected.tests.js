@@ -21,6 +21,9 @@ const mock = {
               cursor: 'b487224762b030f470967f45d7205823',
               node: {
                 id: 'DevotionalContentItem:d395278cd4b68e074ca4e595c8feab6d',
+                videos: [],
+                theme: null,
+                summary: 'bla bla bla',
                 coverImage: {
                   name: 'Square Image',
                   sources: [
@@ -39,6 +42,7 @@ const mock = {
                   __typename: 'ContentChannel',
                 },
                 title: 'God sees who you can be not who you are',
+                hyphenatedTitle: 'God sees who you can be not who you are',
                 sharing: {
                   url:
                     'https://apollosrock.newspring.cc/devotional/god-sees-who-you-can-be-not-who-you-are',
@@ -55,6 +59,9 @@ const mock = {
               cursor: '4affc1122ad80d4edcf6c5bc9d88ae99',
               node: {
                 id: 'DevotionalContentItem:fbea6914a3e8877516cbd333d919075d',
+                videos: [],
+                theme: null,
+                summary: 'bla bla bla',
                 coverImage: {
                   name: 'Square Image',
                   sources: [
@@ -73,6 +80,8 @@ const mock = {
                   __typename: 'ContentChannel',
                 },
                 title: 'Thank God for the friends who will tell it like it is',
+                hyphenatedTitle:
+                  'Thank God for the friends who will tell it like it is',
                 sharing: {
                   url:
                     'https://apollosrock.newspring.cc/devotional/thank-god-for-the-friends-who-will-tell-it-like-it-is',
@@ -89,6 +98,9 @@ const mock = {
               cursor: '659a26257a49fb2bf1446bb747bf7dd3',
               node: {
                 id: 'DevotionalContentItem:5e18250f586ab8de4d3d6292c919dcc4',
+                videos: [],
+                theme: null,
+                summary: 'bla bla bla',
                 coverImage: {
                   name: 'Square Image',
                   sources: [
@@ -107,6 +119,7 @@ const mock = {
                   __typename: 'ContentChannel',
                 },
                 title: 'No sin is too bad',
+                hyphenatedTitle: 'No sin is too bad',
                 sharing: {
                   url:
                     'https://apollosrock.newspring.cc/devotional/no-sin-is-too-bad',
@@ -123,6 +136,9 @@ const mock = {
               cursor: 'c8d2fe738629909c33010432432f21c8',
               node: {
                 id: 'DevotionalContentItem:bdc2c29b85949e4ca8232b373a07953d',
+                videos: [],
+                theme: null,
+                summary: 'bla bla bla',
                 coverImage: {
                   name: 'Square Image',
                   sources: [
@@ -141,6 +157,7 @@ const mock = {
                   __typename: 'ContentChannel',
                 },
                 title: 'Change starts with a choice',
+                hyphenatedTitle: 'Change starts with a choice',
                 sharing: {
                   url:
                     'https://apollosrock.newspring.cc/devotional/change-starts-with-a-choice',
@@ -180,10 +197,6 @@ const additionalMocks = mock.result.data.node.childContentItemsConnection.edges.
       data: {
         node: {
           ...node,
-          summary: 'bla bla bla',
-          isLiked: false,
-          theme: null,
-          coverImage: null,
         },
       },
     },
@@ -200,6 +213,15 @@ describe('the HorizontalContentSeriesFeedConnected component', () => {
         />
       </Providers>
     );
-    expect(tree).toMatchSnapshot();
+    const finalTree = await renderWithApolloData(
+      <Providers mocks={[mock, ...additionalMocks]}>
+        <HorizontalContentSeriesFeedConnected
+          contentId={'ContentSeriesContentItem:123'}
+          navigation={navigation}
+        />
+      </Providers>,
+      tree
+    );
+    expect(finalTree).toMatchSnapshot();
   });
 });
