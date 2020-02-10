@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Display Native Map with Locations Render a native map view 1`] = `
+exports[`The Location "finder" should render 1`] = `
 <MapView
   campuses={
     Array [
@@ -109,11 +109,6 @@ exports[`Display Native Map with Locations Render a native map view 1`] = `
     }
   }
   onLocationSelect={[Function]}
-  userLocation={
-    Object {
-      "latitude": 39.104797,
-      "longitude": -84.511959,
-    }
-  }
+  userLocation={null}
 />
 `;

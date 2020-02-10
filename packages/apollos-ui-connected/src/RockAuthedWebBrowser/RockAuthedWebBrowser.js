@@ -4,11 +4,16 @@ import InAppBrowser from 'react-native-inappbrowser-reborn';
 import GET_ROCK_AUTH_DETAILS from './getRockAuthDetails';
 
 export const getRockAuthDetails = async (client) => {
-  const { data: { currentUser: { rock } = {} } = {} } = await client.query({
-    query: GET_ROCK_AUTH_DETAILS,
-    fetchPolicy: 'network-only',
-  });
-  return rock;
+  try {
+    const { data: { currentUser: { rock } = {} } = {} } = await client.query({
+      query: GET_ROCK_AUTH_DETAILS,
+      fetchPolicy: 'network-only',
+    });
+    return rock;
+  } catch (e) {
+    console.warn(e);
+    return { authCookie: null, authToken: null };
+  }
 };
 
 const RockAuthedInAppBrowser = {
@@ -17,36 +22,39 @@ const RockAuthedInAppBrowser = {
     { client, ...options },
     auth = { useRockCookie: false, useRockToken: false }
   ) => {
-    const url = new URL(baseURL);
-    // NOTE: RN adds a trailing slash
-    // https://github.com/facebook/react-native/issues/24428
-    url._url = url.toString().endsWith('/')
-      ? url.toString().slice(0, -1)
-      : url.toString();
-
-    const { authCookie, authToken } = await getRockAuthDetails(client);
-    let headers = {};
-    if (auth.useRockCookie && authCookie) {
-      // eslint-disable-next-line no-console
-      console.warn(
-        "iOS doesn't support headers, you may want to use src/user-web-view"
-      );
-      headers = { Cookie: authCookie };
-    }
-
-    if (auth.useRockToken && authToken) {
-      url.searchParams.append('rckipid', authToken);
-    }
     try {
-      if (await InAppBrowser.isAvailable()) {
+      const url = new URL(baseURL);
+      // NOTE: RN adds a trailing slash
+      // https://github.com/facebook/react-native/issues/24428
+      url._url = url.toString().endsWith('/')
+        ? url.toString().slice(0, -1)
+        : url.toString();
+
+      let headers = {};
+      let creds = {};
+
+      // use auth cookie or query param
+      if (auth.useRockCookie || auth.useRockToken) {
+        creds = await getRockAuthDetails(client);
+        if (auth.useRockCookie) headers = { Cookie: creds.authCookie };
+        if (auth.useRockToken)
+          url.searchParams.append('rckipid', creds.authToken);
+      }
+      const isValidUrl = ['http', 'https'].includes(
+        url
+          .toString()
+          .split(':')[0]
+          .toLowerCase()
+      );
+      if (isValidUrl && (await InAppBrowser.isAvailable())) {
         InAppBrowser.open(url.toString(), {
           headers,
           ...options,
         });
-      } else Linking.openURL(url.toString());
+      } else Linking.openURL(isValidUrl ? url.toString() : baseURL);
     } catch (e) {
       // eslint-disable-next-line no-console
-      console.error(e);
+      console.warn(e);
     }
   },
 };
