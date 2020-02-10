@@ -40,12 +40,18 @@ const RockAuthedInAppBrowser = {
         if (auth.useRockToken)
           url.searchParams.append('rckipid', creds.authToken);
       }
-      if (await InAppBrowser.isAvailable()) {
+      const isValidUrl = ['http', 'https'].includes(
+        url
+          .toString()
+          .split(':')[0]
+          .toLowerCase()
+      );
+      if (isValidUrl && (await InAppBrowser.isAvailable())) {
         InAppBrowser.open(url.toString(), {
           headers,
           ...options,
         });
-      } else Linking.openURL(url.toString());
+      } else Linking.openURL(isValidUrl ? url.toString() : baseURL);
     } catch (e) {
       // eslint-disable-next-line no-console
       console.warn(e);
