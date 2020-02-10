@@ -51,7 +51,7 @@ const RockAuthedInAppBrowser = {
           headers,
           ...options,
         });
-      } else Linking.openURL(url.toString());
+      } else Linking.openURL(isValidUrl ? url.toString() : baseURL);
     } catch (e) {
       // eslint-disable-next-line no-console
       console.warn(e);
