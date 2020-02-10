@@ -1,5 +1,13 @@
 import React from 'react';
-import { Platform, View } from 'react-native';
+import {
+  Platform,
+  View,
+  KeyboardAvoidingView,
+  StatusBar,
+  ScrollView,
+  StyleSheet,
+} from 'react-native';
+import PropTypes from 'prop-types';
 import { compose, withProps } from 'recompose';
 import { SafeAreaView } from 'react-navigation';
 import {
@@ -13,7 +21,10 @@ import {
   H6,
   Radio,
   DateInput,
+  PaddedView,
+  BackgroundView,
 } from '@apollosproject/ui-kit';
+import BackButton from './BackButton';
 
 const FlexedSafeAreaView = compose(
   styled({ height: '100%' }, 'ui-auth.FlexedSafeAreaView'),
@@ -149,6 +160,64 @@ const RadioLabel = styled(
   'ui-auth.RadioLabel'
 )(H5);
 
+const ProfileEntryFieldContainer = ({
+  BackgroundComponent,
+  onPressBack,
+  onPressNext,
+  disabled,
+  title,
+  prompt,
+  isLoading,
+  children,
+}) => (
+  <KeyboardAvoidingView
+    style={StyleSheet.absoluteFill}
+    behavior={'padding'}
+    keyboardVerticalOffset={
+      Platform.OS === 'android' ? StatusBar.currentHeight : 0
+    }
+  >
+    <BackgroundComponent>
+      <FlexedSafeAreaView>
+        <ScrollView>
+          <BackButton onPress={() => onPressBack()} />
+          <PaddedView>
+            <TitleText>{title}</TitleText>
+            <PromptText padded>{prompt}</PromptText>
+            {children}
+          </PaddedView>
+        </ScrollView>
+
+        {onPressNext ? (
+          <PaddedView>
+            <NextButton
+              title={'Next'}
+              onPress={onPressNext}
+              disabled={disabled}
+              loading={isLoading}
+            />
+          </PaddedView>
+        ) : null}
+      </FlexedSafeAreaView>
+    </BackgroundComponent>
+  </KeyboardAvoidingView>
+);
+
+ProfileEntryFieldContainer.propTypes = {
+  title: PropTypes.node,
+  prompt: PropTypes.string,
+  disabled: PropTypes.bool,
+  isLoading: PropTypes.bool,
+  onPressNext: PropTypes.func, // used to navigate and/or submit the form
+  BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+  onPressBack: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
+};
+
+ProfileEntryFieldContainer.defaultProps = {
+  BackgroundComponent: BackgroundView,
+};
+
 export {
   FlexedSafeAreaView,
   BrandIcon,
@@ -165,4 +234,5 @@ export {
   DatePicker,
   RadioInput,
   RadioLabel,
+  ProfileEntryFieldContainer,
 };

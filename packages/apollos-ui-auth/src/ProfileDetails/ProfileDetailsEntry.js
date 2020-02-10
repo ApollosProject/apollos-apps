@@ -1,26 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  KeyboardAvoidingView,
-  StyleSheet,
-  ScrollView,
-  Platform,
-  StatusBar,
-} from 'react-native';
 import { get } from 'lodash';
 import moment from 'moment';
-import {
-  PaddedView,
-  BackgroundView,
-  RadioButton,
-} from '@apollosproject/ui-kit';
+import { BackgroundView, RadioButton } from '@apollosproject/ui-kit';
 
-import BackButton from '../BackButton';
 import {
-  FlexedSafeAreaView,
-  NextButton,
-  TitleText,
-  PromptText,
+  ProfileEntryFieldContainer,
   LegalText,
   FieldLabel,
   RadioInput,
@@ -28,89 +13,47 @@ import {
   DatePicker,
 } from '../styles';
 
-const ProfileDetailsEntry = ({
-  profileTitleText,
-  profilePromptText,
-  disabled,
-  errors,
-  isLoading,
-  onPressNext,
-  setFieldValue,
-  values,
-  BackgroundComponent,
-  onPressBack,
-  genderList,
-  touched,
-  defaultDate,
-}) => (
-  <KeyboardAvoidingView
-    style={StyleSheet.absoluteFill}
-    behavior={'padding'}
-    keyboardVerticalOffset={
-      Platform.OS === 'android' ? StatusBar.currentHeight : 0
-    }
-  >
-    <BackgroundComponent>
-      <FlexedSafeAreaView>
-        <ScrollView>
-          <BackButton onPress={() => onPressBack()} />
-          <PaddedView>
-            <TitleText>{profileTitleText}</TitleText>
-            <PromptText padded>{profilePromptText}</PromptText>
-            <FieldLabel padded>Gender</FieldLabel>
-            <RadioInput
-              label="Gender"
-              type="radio"
-              value={get(values, 'gender')}
-              error={get(touched, 'gender') && get(errors, 'gender')}
-              onChange={(value) => setFieldValue('gender', value)}
-            >
-              {genderList.map((gender) => [
-                <RadioButton
-                  key={gender}
-                  value={gender}
-                  label={() => <RadioLabel>{gender}</RadioLabel>}
-                  underline={false}
-                />,
-              ])}
-            </RadioInput>
-            <FieldLabel>Birthday</FieldLabel>
-            <DatePicker
-              type={'DateInput'}
-              placeholder={'Select a date...'}
-              value={moment(
-                get(values, 'birthDate', defaultDate) || defaultDate
-              ).toDate()}
-              error={get(touched, 'birthDate') && get(errors, 'birthDate')}
-              displayValue={
-                // only show a birthday if we have one.
-                get(values, 'birthDate', '') // DatePicker shows displayValue > placeholder > label in that order
-                  ? moment(values.birthDate).format('MM/DD/YYYY')
-                  : '' // Pass an empty string if we don't have a birthday to show the placeholder.
-              }
-              onChange={(value) => setFieldValue('birthDate', value)}
-            />
-          </PaddedView>
-        </ScrollView>
-
-        {onPressNext ? (
-          <PaddedView>
-            <NextButton
-              title={'Next'}
-              onPress={onPressNext}
-              disabled={disabled}
-              loading={isLoading}
-            />
-          </PaddedView>
-        ) : null}
-      </FlexedSafeAreaView>
-    </BackgroundComponent>
-  </KeyboardAvoidingView>
+const ProfileDetailsEntry = (props) => (
+  <ProfileEntryFieldContainer {...props}>
+    <FieldLabel padded>Gender</FieldLabel>
+    <RadioInput
+      label="Gender"
+      type="radio"
+      value={get(props.values, 'gender')}
+      error={get(props.touched, 'gender') && get(props.errors, 'gender')}
+      onChange={(value) => props.setFieldValue('gender', value)}
+    >
+      {props.genderList.map((gender) => [
+        <RadioButton
+          key={gender}
+          value={gender}
+          label={() => <RadioLabel>{gender}</RadioLabel>}
+          underline={false}
+        />,
+      ])}
+    </RadioInput>
+    <FieldLabel>Birthday</FieldLabel>
+    <DatePicker
+      type={'DateInput'}
+      placeholder={'Select a date...'}
+      value={moment(
+        get(props.values, 'birthDate', props.defaultDate) || props.defaultDate
+      ).toDate()}
+      error={get(props.touched, 'birthDate') && get(props.errors, 'birthDate')}
+      displayValue={
+        // only show a birthday if we have one.
+        get(props.values, 'birthDate', '') // DatePicker shows displayValue > placeholder > label in that order
+          ? moment(props.values.birthDate).format('MM/DD/YYYY')
+          : '' // Pass an empty string if we don't have a birthday to show the placeholder.
+      }
+      onChange={(value) => props.setFieldValue('birthDate', value)}
+    />
+  </ProfileEntryFieldContainer>
 );
 
 ProfileDetailsEntry.propTypes = {
-  profileTitleText: PropTypes.node,
-  profilePromptText: PropTypes.string,
+  title: PropTypes.node,
+  prompt: PropTypes.string,
   disabled: PropTypes.bool,
   errors: PropTypes.shape({
     phone: PropTypes.string,
@@ -123,6 +66,7 @@ ProfileDetailsEntry.propTypes = {
   setFieldValue: PropTypes.func.isRequired,
   values: PropTypes.shape({
     phone: PropTypes.string,
+    birthDate: PropTypes.instanceOf(Date),
   }),
   BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   onPressBack: PropTypes.func.isRequired,
@@ -131,10 +75,9 @@ ProfileDetailsEntry.propTypes = {
 };
 
 ProfileDetailsEntry.defaultProps = {
-  profileTitleText: "This one's easy.",
-  profilePromptText:
+  title: "This one's easy.",
+  prompt:
     'Help us understand who you are so we can connect you with the best ministries and events.',
-  BackgroundComponent: BackgroundView,
   genderList: ['Male', 'Female', 'Prefer not to reply'],
   defaultDate: new Date(),
 };
