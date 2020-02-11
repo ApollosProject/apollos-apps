@@ -57,9 +57,11 @@ ProfileDetailsEntry.propTypes = {
   disabled: PropTypes.bool,
   errors: PropTypes.shape({
     phone: PropTypes.string,
+    birthDate: PropTypes.string,
   }),
   touched: PropTypes.shape({
     gender: PropTypes.bool,
+    birthDate: PropTypes.bool,
   }),
   isLoading: PropTypes.bool,
   onPressNext: PropTypes.func, // used to navigate and/or submit the form
