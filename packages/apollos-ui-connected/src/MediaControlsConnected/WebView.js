@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import RockAuthedWebBrowser from '../RockAuthedWebBrowser';
 
-import PlayButton from './PlayButton';
+import { PlayButton } from './PlayButtonConnected';
 
 const WebView = ({ webViewUrl, coverImageSources }) => (
   <RockAuthedWebBrowser>

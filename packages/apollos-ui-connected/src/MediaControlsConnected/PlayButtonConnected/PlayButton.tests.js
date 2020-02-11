@@ -2,7 +2,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { Providers } from '../utils/testUtils';
+import { Providers } from '../../utils/testUtils';
 
 import PlayButton from './PlayButton';
 
