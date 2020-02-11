@@ -50,7 +50,7 @@ exports[`The Auth Verification component should render 1`] = `
       pointerEvents="box-none"
       style={
         Object {
-          "flex": 1,
+          "height": "100%",
           "paddingBottom": 0,
           "paddingLeft": 0,
           "paddingRight": 0,
@@ -63,8 +63,7 @@ exports[`The Auth Verification component should render 1`] = `
           <View
             style={
               Object {
-                "paddingHorizontal": 16,
-                "paddingVertical": 16,
+                "flexDirection": "row",
               }
             }
           >
@@ -86,12 +85,12 @@ exports[`The Auth Verification component should render 1`] = `
               }
             >
               <View
-                borderRadius={48}
-                iconPadding={9.6}
                 style={
                   Object {
-                    "padding": 9.6,
-                    "paddingLeft": 0,
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                   }
                 }
               >
@@ -109,10 +108,10 @@ exports[`The Auth Verification component should render 1`] = `
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
-                      undefined,
                       Object {
-                        "opacity": 1,
+                        "paddingRight": 0,
                       },
+                      null,
                       Object {
                         "flex": 0,
                         "height": 24,
@@ -170,7 +169,7 @@ exports[`The Auth Verification component should render 1`] = `
                       fill={
                         Array [
                           0,
-                          4278216557,
+                          4279743874,
                         ]
                       }
                       fillOpacity={1}
@@ -212,124 +211,40 @@ exports[`The Auth Verification component should render 1`] = `
                     />
                   </RNSVGGroup>
                 </RNSVGSvgView>
+                <Text
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#17B582",
+                      }
+                    }
+                  >
+                    Back
+                  </Text>
+                </Text>
               </View>
             </View>
-            <RNSVGSvgView
-              align="xMidYMid"
-              bbHeight={48}
-              bbWidth={48}
-              height={48}
-              marginBottom={16}
-              meetOrSlice={0}
-              minX={0}
-              minY={0}
-              style={
-                Array [
-                  Object {
-                    "backgroundColor": "transparent",
-                    "borderWidth": 0,
-                  },
-                  undefined,
-                  null,
-                  Object {
-                    "flex": 0,
-                    "height": 48,
-                    "width": 48,
-                  },
-                ]
+          </View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 0,
               }
-              vbHeight={24}
-              vbWidth={24}
-              width={48}
-            >
-              <RNSVGGroup
-                fill={
-                  Array [
-                    0,
-                    4278190080,
-                  ]
-                }
-                fillOpacity={1}
-                fillRule={1}
-                font={Object {}}
-                matrix={
-                  Array [
-                    1,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                  ]
-                }
-                opacity={1}
-                originX={0}
-                originY={0}
-                propList={Array []}
-                rotation={0}
-                scaleX={1}
-                scaleY={1}
-                skewX={0}
-                skewY={0}
-                stroke={null}
-                strokeDasharray={null}
-                strokeDashoffset={null}
-                strokeLinecap={0}
-                strokeLinejoin={0}
-                strokeMiterlimit={4}
-                strokeOpacity={1}
-                strokeWidth={1}
-                vectorEffect={0}
-                x={0}
-                y={0}
-              >
-                <RNSVGPath
-                  d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
-                  fill={
-                    Array [
-                      0,
-                      4278216557,
-                    ]
-                  }
-                  fillOpacity={1}
-                  fillRule={1}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                    ]
-                  }
-                  rotation={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={null}
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={0}
-                  strokeLinejoin={0}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth={1}
-                  vectorEffect={0}
-                  x={0}
-                  y={0}
-                />
-              </RNSVGGroup>
-            </RNSVGSvgView>
+            }
+            vertical={false}
+          >
             <Text
               style={
                 Object {
@@ -347,12 +262,12 @@ Stand by…
               padded={true}
               style={
                 Object {
-                  "color": "#505050",
+                  "color": "#303030",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 24,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -386,36 +301,83 @@ Stand by…
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="password"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="numeric"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="numeric"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="password"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="numeric"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="numeric"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 18,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Verification Code
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -425,45 +387,6 @@ Stand by…
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Verification Code
-                  </Text>
                 </View>
                 <View
                   style={
@@ -569,7 +492,7 @@ exports[`The Auth Verification component should render as disabled 1`] = `
       pointerEvents="box-none"
       style={
         Object {
-          "flex": 1,
+          "height": "100%",
           "paddingBottom": 0,
           "paddingLeft": 0,
           "paddingRight": 0,
@@ -582,8 +505,7 @@ exports[`The Auth Verification component should render as disabled 1`] = `
           <View
             style={
               Object {
-                "paddingHorizontal": 16,
-                "paddingVertical": 16,
+                "flexDirection": "row",
               }
             }
           >
@@ -605,12 +527,12 @@ exports[`The Auth Verification component should render as disabled 1`] = `
               }
             >
               <View
-                borderRadius={48}
-                iconPadding={9.6}
                 style={
                   Object {
-                    "padding": 9.6,
-                    "paddingLeft": 0,
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                   }
                 }
               >
@@ -628,10 +550,10 @@ exports[`The Auth Verification component should render as disabled 1`] = `
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
-                      undefined,
                       Object {
-                        "opacity": 1,
+                        "paddingRight": 0,
                       },
+                      null,
                       Object {
                         "flex": 0,
                         "height": 24,
@@ -689,7 +611,7 @@ exports[`The Auth Verification component should render as disabled 1`] = `
                       fill={
                         Array [
                           0,
-                          4278216557,
+                          4279743874,
                         ]
                       }
                       fillOpacity={1}
@@ -731,124 +653,40 @@ exports[`The Auth Verification component should render as disabled 1`] = `
                     />
                   </RNSVGGroup>
                 </RNSVGSvgView>
+                <Text
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#17B582",
+                      }
+                    }
+                  >
+                    Back
+                  </Text>
+                </Text>
               </View>
             </View>
-            <RNSVGSvgView
-              align="xMidYMid"
-              bbHeight={48}
-              bbWidth={48}
-              height={48}
-              marginBottom={16}
-              meetOrSlice={0}
-              minX={0}
-              minY={0}
-              style={
-                Array [
-                  Object {
-                    "backgroundColor": "transparent",
-                    "borderWidth": 0,
-                  },
-                  undefined,
-                  null,
-                  Object {
-                    "flex": 0,
-                    "height": 48,
-                    "width": 48,
-                  },
-                ]
+          </View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 0,
               }
-              vbHeight={24}
-              vbWidth={24}
-              width={48}
-            >
-              <RNSVGGroup
-                fill={
-                  Array [
-                    0,
-                    4278190080,
-                  ]
-                }
-                fillOpacity={1}
-                fillRule={1}
-                font={Object {}}
-                matrix={
-                  Array [
-                    1,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                  ]
-                }
-                opacity={1}
-                originX={0}
-                originY={0}
-                propList={Array []}
-                rotation={0}
-                scaleX={1}
-                scaleY={1}
-                skewX={0}
-                skewY={0}
-                stroke={null}
-                strokeDasharray={null}
-                strokeDashoffset={null}
-                strokeLinecap={0}
-                strokeLinejoin={0}
-                strokeMiterlimit={4}
-                strokeOpacity={1}
-                strokeWidth={1}
-                vectorEffect={0}
-                x={0}
-                y={0}
-              >
-                <RNSVGPath
-                  d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
-                  fill={
-                    Array [
-                      0,
-                      4278216557,
-                    ]
-                  }
-                  fillOpacity={1}
-                  fillRule={1}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                    ]
-                  }
-                  rotation={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={null}
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={0}
-                  strokeLinejoin={0}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth={1}
-                  vectorEffect={0}
-                  x={0}
-                  y={0}
-                />
-              </RNSVGGroup>
-            </RNSVGSvgView>
+            }
+            vertical={false}
+          >
             <Text
               style={
                 Object {
@@ -866,12 +704,12 @@ Stand by…
               padded={true}
               style={
                 Object {
-                  "color": "#505050",
+                  "color": "#303030",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 24,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -905,37 +743,84 @@ Stand by…
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="password"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="numeric"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      onSubmitEditing={[MockFunction]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="numeric"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="password"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="numeric"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        onSubmitEditing={[MockFunction]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="numeric"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 18,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Verification Code
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -945,45 +830,6 @@ Stand by…
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Verification Code
-                  </Text>
                 </View>
                 <View
                   style={
@@ -1070,6 +916,7 @@ Stand by…
                 "borderColor": "#00676D",
                 "borderRadius": 16,
                 "borderWidth": 2,
+                "color": "#F8F7F4",
                 "elevation": 2,
                 "flexDirection": "row",
                 "height": 48,
@@ -1083,10 +930,11 @@ Stand by…
             <Text
               style={
                 Object {
-                  "color": "#FFFFFF",
+                  "backgroundColor": "#00676D",
+                  "color": "#F8F7F4",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
-                  "lineHeight": 23.04,
+                  "lineHeight": 24,
                 }
               }
             >
@@ -1150,7 +998,7 @@ exports[`The Auth Verification component should render in a loading state 1`] = 
       pointerEvents="box-none"
       style={
         Object {
-          "flex": 1,
+          "height": "100%",
           "paddingBottom": 0,
           "paddingLeft": 0,
           "paddingRight": 0,
@@ -1163,8 +1011,7 @@ exports[`The Auth Verification component should render in a loading state 1`] = 
           <View
             style={
               Object {
-                "paddingHorizontal": 16,
-                "paddingVertical": 16,
+                "flexDirection": "row",
               }
             }
           >
@@ -1186,12 +1033,12 @@ exports[`The Auth Verification component should render in a loading state 1`] = 
               }
             >
               <View
-                borderRadius={48}
-                iconPadding={9.6}
                 style={
                   Object {
-                    "padding": 9.6,
-                    "paddingLeft": 0,
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                   }
                 }
               >
@@ -1209,10 +1056,10 @@ exports[`The Auth Verification component should render in a loading state 1`] = 
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
-                      undefined,
                       Object {
-                        "opacity": 1,
+                        "paddingRight": 0,
                       },
+                      null,
                       Object {
                         "flex": 0,
                         "height": 24,
@@ -1270,7 +1117,7 @@ exports[`The Auth Verification component should render in a loading state 1`] = 
                       fill={
                         Array [
                           0,
-                          4278216557,
+                          4279743874,
                         ]
                       }
                       fillOpacity={1}
@@ -1312,124 +1159,40 @@ exports[`The Auth Verification component should render in a loading state 1`] = 
                     />
                   </RNSVGGroup>
                 </RNSVGSvgView>
+                <Text
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#17B582",
+                      }
+                    }
+                  >
+                    Back
+                  </Text>
+                </Text>
               </View>
             </View>
-            <RNSVGSvgView
-              align="xMidYMid"
-              bbHeight={48}
-              bbWidth={48}
-              height={48}
-              marginBottom={16}
-              meetOrSlice={0}
-              minX={0}
-              minY={0}
-              style={
-                Array [
-                  Object {
-                    "backgroundColor": "transparent",
-                    "borderWidth": 0,
-                  },
-                  undefined,
-                  null,
-                  Object {
-                    "flex": 0,
-                    "height": 48,
-                    "width": 48,
-                  },
-                ]
+          </View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 0,
               }
-              vbHeight={24}
-              vbWidth={24}
-              width={48}
-            >
-              <RNSVGGroup
-                fill={
-                  Array [
-                    0,
-                    4278190080,
-                  ]
-                }
-                fillOpacity={1}
-                fillRule={1}
-                font={Object {}}
-                matrix={
-                  Array [
-                    1,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                  ]
-                }
-                opacity={1}
-                originX={0}
-                originY={0}
-                propList={Array []}
-                rotation={0}
-                scaleX={1}
-                scaleY={1}
-                skewX={0}
-                skewY={0}
-                stroke={null}
-                strokeDasharray={null}
-                strokeDashoffset={null}
-                strokeLinecap={0}
-                strokeLinejoin={0}
-                strokeMiterlimit={4}
-                strokeOpacity={1}
-                strokeWidth={1}
-                vectorEffect={0}
-                x={0}
-                y={0}
-              >
-                <RNSVGPath
-                  d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
-                  fill={
-                    Array [
-                      0,
-                      4278216557,
-                    ]
-                  }
-                  fillOpacity={1}
-                  fillRule={1}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                    ]
-                  }
-                  rotation={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={null}
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={0}
-                  strokeLinejoin={0}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth={1}
-                  vectorEffect={0}
-                  x={0}
-                  y={0}
-                />
-              </RNSVGGroup>
-            </RNSVGSvgView>
+            }
+            vertical={false}
+          >
             <Text
               style={
                 Object {
@@ -1447,12 +1210,12 @@ Stand by…
               padded={true}
               style={
                 Object {
-                  "color": "#505050",
+                  "color": "#303030",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 24,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -1486,37 +1249,84 @@ Stand by…
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="password"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="numeric"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      onSubmitEditing={[MockFunction]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="numeric"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="password"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="numeric"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        onSubmitEditing={[MockFunction]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="numeric"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 18,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Verification Code
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -1526,45 +1336,6 @@ Stand by…
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Verification Code
-                  </Text>
                 </View>
                 <View
                   style={
@@ -1651,6 +1422,7 @@ Stand by…
                 "borderColor": "#00676D",
                 "borderRadius": 16,
                 "borderWidth": 2,
+                "color": "#F8F7F4",
                 "elevation": 2,
                 "flexDirection": "row",
                 "height": 48,
@@ -1725,7 +1497,7 @@ exports[`The Auth Verification component should render in a next button 1`] = `
       pointerEvents="box-none"
       style={
         Object {
-          "flex": 1,
+          "height": "100%",
           "paddingBottom": 0,
           "paddingLeft": 0,
           "paddingRight": 0,
@@ -1738,8 +1510,7 @@ exports[`The Auth Verification component should render in a next button 1`] = `
           <View
             style={
               Object {
-                "paddingHorizontal": 16,
-                "paddingVertical": 16,
+                "flexDirection": "row",
               }
             }
           >
@@ -1761,12 +1532,12 @@ exports[`The Auth Verification component should render in a next button 1`] = `
               }
             >
               <View
-                borderRadius={48}
-                iconPadding={9.6}
                 style={
                   Object {
-                    "padding": 9.6,
-                    "paddingLeft": 0,
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                   }
                 }
               >
@@ -1784,10 +1555,10 @@ exports[`The Auth Verification component should render in a next button 1`] = `
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
-                      undefined,
                       Object {
-                        "opacity": 1,
+                        "paddingRight": 0,
                       },
+                      null,
                       Object {
                         "flex": 0,
                         "height": 24,
@@ -1845,7 +1616,7 @@ exports[`The Auth Verification component should render in a next button 1`] = `
                       fill={
                         Array [
                           0,
-                          4278216557,
+                          4279743874,
                         ]
                       }
                       fillOpacity={1}
@@ -1887,124 +1658,40 @@ exports[`The Auth Verification component should render in a next button 1`] = `
                     />
                   </RNSVGGroup>
                 </RNSVGSvgView>
+                <Text
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#17B582",
+                      }
+                    }
+                  >
+                    Back
+                  </Text>
+                </Text>
               </View>
             </View>
-            <RNSVGSvgView
-              align="xMidYMid"
-              bbHeight={48}
-              bbWidth={48}
-              height={48}
-              marginBottom={16}
-              meetOrSlice={0}
-              minX={0}
-              minY={0}
-              style={
-                Array [
-                  Object {
-                    "backgroundColor": "transparent",
-                    "borderWidth": 0,
-                  },
-                  undefined,
-                  null,
-                  Object {
-                    "flex": 0,
-                    "height": 48,
-                    "width": 48,
-                  },
-                ]
+          </View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 0,
               }
-              vbHeight={24}
-              vbWidth={24}
-              width={48}
-            >
-              <RNSVGGroup
-                fill={
-                  Array [
-                    0,
-                    4278190080,
-                  ]
-                }
-                fillOpacity={1}
-                fillRule={1}
-                font={Object {}}
-                matrix={
-                  Array [
-                    1,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                  ]
-                }
-                opacity={1}
-                originX={0}
-                originY={0}
-                propList={Array []}
-                rotation={0}
-                scaleX={1}
-                scaleY={1}
-                skewX={0}
-                skewY={0}
-                stroke={null}
-                strokeDasharray={null}
-                strokeDashoffset={null}
-                strokeLinecap={0}
-                strokeLinejoin={0}
-                strokeMiterlimit={4}
-                strokeOpacity={1}
-                strokeWidth={1}
-                vectorEffect={0}
-                x={0}
-                y={0}
-              >
-                <RNSVGPath
-                  d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
-                  fill={
-                    Array [
-                      0,
-                      4278216557,
-                    ]
-                  }
-                  fillOpacity={1}
-                  fillRule={1}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                    ]
-                  }
-                  rotation={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={null}
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={0}
-                  strokeLinejoin={0}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth={1}
-                  vectorEffect={0}
-                  x={0}
-                  y={0}
-                />
-              </RNSVGGroup>
-            </RNSVGSvgView>
+            }
+            vertical={false}
+          >
             <Text
               style={
                 Object {
@@ -2022,12 +1709,12 @@ Stand by…
               padded={true}
               style={
                 Object {
-                  "color": "#505050",
+                  "color": "#303030",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 24,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -2061,37 +1748,84 @@ Stand by…
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="password"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="numeric"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      onSubmitEditing={[MockFunction]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="numeric"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="password"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="numeric"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        onSubmitEditing={[MockFunction]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="numeric"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 18,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Verification Code
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -2101,45 +1835,6 @@ Stand by…
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Verification Code
-                  </Text>
                 </View>
                 <View
                   style={
@@ -2226,6 +1921,7 @@ Stand by…
                 "borderColor": "#00676D",
                 "borderRadius": 16,
                 "borderWidth": 2,
+                "color": "#F8F7F4",
                 "elevation": 2,
                 "flexDirection": "row",
                 "height": 48,
@@ -2239,10 +1935,11 @@ Stand by…
             <Text
               style={
                 Object {
-                  "color": "#FFFFFF",
+                  "backgroundColor": "#00676D",
+                  "color": "#F8F7F4",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
-                  "lineHeight": 23.04,
+                  "lineHeight": 24,
                 }
               }
             >
@@ -2306,7 +2003,7 @@ exports[`The Auth Verification component should render in an error state 1`] = `
       pointerEvents="box-none"
       style={
         Object {
-          "flex": 1,
+          "height": "100%",
           "paddingBottom": 0,
           "paddingLeft": 0,
           "paddingRight": 0,
@@ -2319,8 +2016,7 @@ exports[`The Auth Verification component should render in an error state 1`] = `
           <View
             style={
               Object {
-                "paddingHorizontal": 16,
-                "paddingVertical": 16,
+                "flexDirection": "row",
               }
             }
           >
@@ -2342,12 +2038,12 @@ exports[`The Auth Verification component should render in an error state 1`] = `
               }
             >
               <View
-                borderRadius={48}
-                iconPadding={9.6}
                 style={
                   Object {
-                    "padding": 9.6,
-                    "paddingLeft": 0,
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                   }
                 }
               >
@@ -2365,10 +2061,10 @@ exports[`The Auth Verification component should render in an error state 1`] = `
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
-                      undefined,
                       Object {
-                        "opacity": 1,
+                        "paddingRight": 0,
                       },
+                      null,
                       Object {
                         "flex": 0,
                         "height": 24,
@@ -2426,7 +2122,7 @@ exports[`The Auth Verification component should render in an error state 1`] = `
                       fill={
                         Array [
                           0,
-                          4278216557,
+                          4279743874,
                         ]
                       }
                       fillOpacity={1}
@@ -2468,124 +2164,40 @@ exports[`The Auth Verification component should render in an error state 1`] = `
                     />
                   </RNSVGGroup>
                 </RNSVGSvgView>
+                <Text
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#17B582",
+                      }
+                    }
+                  >
+                    Back
+                  </Text>
+                </Text>
               </View>
             </View>
-            <RNSVGSvgView
-              align="xMidYMid"
-              bbHeight={48}
-              bbWidth={48}
-              height={48}
-              marginBottom={16}
-              meetOrSlice={0}
-              minX={0}
-              minY={0}
-              style={
-                Array [
-                  Object {
-                    "backgroundColor": "transparent",
-                    "borderWidth": 0,
-                  },
-                  undefined,
-                  null,
-                  Object {
-                    "flex": 0,
-                    "height": 48,
-                    "width": 48,
-                  },
-                ]
+          </View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 0,
               }
-              vbHeight={24}
-              vbWidth={24}
-              width={48}
-            >
-              <RNSVGGroup
-                fill={
-                  Array [
-                    0,
-                    4278190080,
-                  ]
-                }
-                fillOpacity={1}
-                fillRule={1}
-                font={Object {}}
-                matrix={
-                  Array [
-                    1,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                  ]
-                }
-                opacity={1}
-                originX={0}
-                originY={0}
-                propList={Array []}
-                rotation={0}
-                scaleX={1}
-                scaleY={1}
-                skewX={0}
-                skewY={0}
-                stroke={null}
-                strokeDasharray={null}
-                strokeDashoffset={null}
-                strokeLinecap={0}
-                strokeLinejoin={0}
-                strokeMiterlimit={4}
-                strokeOpacity={1}
-                strokeWidth={1}
-                vectorEffect={0}
-                x={0}
-                y={0}
-              >
-                <RNSVGPath
-                  d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
-                  fill={
-                    Array [
-                      0,
-                      4278216557,
-                    ]
-                  }
-                  fillOpacity={1}
-                  fillRule={1}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                    ]
-                  }
-                  rotation={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={null}
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={0}
-                  strokeLinejoin={0}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth={1}
-                  vectorEffect={0}
-                  x={0}
-                  y={0}
-                />
-              </RNSVGGroup>
-            </RNSVGSvgView>
+            }
+            vertical={false}
+          >
             <Text
               style={
                 Object {
@@ -2603,12 +2215,12 @@ Stand by…
               padded={true}
               style={
                 Object {
-                  "color": "#505050",
+                  "color": "#303030",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 24,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -2642,36 +2254,83 @@ Stand by…
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="password"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="numeric"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="numeric"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="password"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="numeric"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="numeric"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 18,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Verification Code
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -2681,45 +2340,6 @@ Stand by…
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Verification Code
-                  </Text>
                 </View>
                 <View
                   style={
@@ -2772,7 +2392,7 @@ Stand by…
                     "color": "#c64f55",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
-                    "lineHeight": 17.28,
+                    "lineHeight": 18,
                     "paddingTop": 8,
                   }
                 }
@@ -2838,7 +2458,7 @@ exports[`The Auth Verification component should render with a custom confirmatio
       pointerEvents="box-none"
       style={
         Object {
-          "flex": 1,
+          "height": "100%",
           "paddingBottom": 0,
           "paddingLeft": 0,
           "paddingRight": 0,
@@ -2851,8 +2471,7 @@ exports[`The Auth Verification component should render with a custom confirmatio
           <View
             style={
               Object {
-                "paddingHorizontal": 16,
-                "paddingVertical": 16,
+                "flexDirection": "row",
               }
             }
           >
@@ -2874,12 +2493,12 @@ exports[`The Auth Verification component should render with a custom confirmatio
               }
             >
               <View
-                borderRadius={48}
-                iconPadding={9.6}
                 style={
                   Object {
-                    "padding": 9.6,
-                    "paddingLeft": 0,
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                   }
                 }
               >
@@ -2897,10 +2516,10 @@ exports[`The Auth Verification component should render with a custom confirmatio
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
-                      undefined,
                       Object {
-                        "opacity": 1,
+                        "paddingRight": 0,
                       },
+                      null,
                       Object {
                         "flex": 0,
                         "height": 24,
@@ -2958,7 +2577,7 @@ exports[`The Auth Verification component should render with a custom confirmatio
                       fill={
                         Array [
                           0,
-                          4278216557,
+                          4279743874,
                         ]
                       }
                       fillOpacity={1}
@@ -3000,124 +2619,40 @@ exports[`The Auth Verification component should render with a custom confirmatio
                     />
                   </RNSVGGroup>
                 </RNSVGSvgView>
+                <Text
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#17B582",
+                      }
+                    }
+                  >
+                    Back
+                  </Text>
+                </Text>
               </View>
             </View>
-            <RNSVGSvgView
-              align="xMidYMid"
-              bbHeight={48}
-              bbWidth={48}
-              height={48}
-              marginBottom={16}
-              meetOrSlice={0}
-              minX={0}
-              minY={0}
-              style={
-                Array [
-                  Object {
-                    "backgroundColor": "transparent",
-                    "borderWidth": 0,
-                  },
-                  undefined,
-                  null,
-                  Object {
-                    "flex": 0,
-                    "height": 48,
-                    "width": 48,
-                  },
-                ]
+          </View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 0,
               }
-              vbHeight={24}
-              vbWidth={24}
-              width={48}
-            >
-              <RNSVGGroup
-                fill={
-                  Array [
-                    0,
-                    4278190080,
-                  ]
-                }
-                fillOpacity={1}
-                fillRule={1}
-                font={Object {}}
-                matrix={
-                  Array [
-                    1,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                  ]
-                }
-                opacity={1}
-                originX={0}
-                originY={0}
-                propList={Array []}
-                rotation={0}
-                scaleX={1}
-                scaleY={1}
-                skewX={0}
-                skewY={0}
-                stroke={null}
-                strokeDasharray={null}
-                strokeDashoffset={null}
-                strokeLinecap={0}
-                strokeLinejoin={0}
-                strokeMiterlimit={4}
-                strokeOpacity={1}
-                strokeWidth={1}
-                vectorEffect={0}
-                x={0}
-                y={0}
-              >
-                <RNSVGPath
-                  d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
-                  fill={
-                    Array [
-                      0,
-                      4278216557,
-                    ]
-                  }
-                  fillOpacity={1}
-                  fillRule={1}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                    ]
-                  }
-                  rotation={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={null}
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={0}
-                  strokeLinejoin={0}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth={1}
-                  vectorEffect={0}
-                  x={0}
-                  y={0}
-                />
-              </RNSVGGroup>
-            </RNSVGSvgView>
+            }
+            vertical={false}
+          >
             <Text
               style={
                 Object {
@@ -3135,12 +2670,12 @@ Stand by…
               padded={true}
               style={
                 Object {
-                  "color": "#505050",
+                  "color": "#303030",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 24,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -3174,36 +2709,83 @@ Stand by…
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="password"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="numeric"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="numeric"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="password"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="numeric"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="numeric"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 18,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Verification Code
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -3213,45 +2795,6 @@ Stand by…
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Verification Code
-                  </Text>
                 </View>
                 <View
                   style={
@@ -3357,7 +2900,7 @@ exports[`The Auth Verification component should render with a value 1`] = `
       pointerEvents="box-none"
       style={
         Object {
-          "flex": 1,
+          "height": "100%",
           "paddingBottom": 0,
           "paddingLeft": 0,
           "paddingRight": 0,
@@ -3370,8 +2913,7 @@ exports[`The Auth Verification component should render with a value 1`] = `
           <View
             style={
               Object {
-                "paddingHorizontal": 16,
-                "paddingVertical": 16,
+                "flexDirection": "row",
               }
             }
           >
@@ -3393,12 +2935,12 @@ exports[`The Auth Verification component should render with a value 1`] = `
               }
             >
               <View
-                borderRadius={48}
-                iconPadding={9.6}
                 style={
                   Object {
-                    "padding": 9.6,
-                    "paddingLeft": 0,
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                   }
                 }
               >
@@ -3416,10 +2958,10 @@ exports[`The Auth Verification component should render with a value 1`] = `
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
-                      undefined,
                       Object {
-                        "opacity": 1,
+                        "paddingRight": 0,
                       },
+                      null,
                       Object {
                         "flex": 0,
                         "height": 24,
@@ -3477,7 +3019,7 @@ exports[`The Auth Verification component should render with a value 1`] = `
                       fill={
                         Array [
                           0,
-                          4278216557,
+                          4279743874,
                         ]
                       }
                       fillOpacity={1}
@@ -3519,124 +3061,40 @@ exports[`The Auth Verification component should render with a value 1`] = `
                     />
                   </RNSVGGroup>
                 </RNSVGSvgView>
+                <Text
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#17B582",
+                      }
+                    }
+                  >
+                    Back
+                  </Text>
+                </Text>
               </View>
             </View>
-            <RNSVGSvgView
-              align="xMidYMid"
-              bbHeight={48}
-              bbWidth={48}
-              height={48}
-              marginBottom={16}
-              meetOrSlice={0}
-              minX={0}
-              minY={0}
-              style={
-                Array [
-                  Object {
-                    "backgroundColor": "transparent",
-                    "borderWidth": 0,
-                  },
-                  undefined,
-                  null,
-                  Object {
-                    "flex": 0,
-                    "height": 48,
-                    "width": 48,
-                  },
-                ]
+          </View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 0,
               }
-              vbHeight={24}
-              vbWidth={24}
-              width={48}
-            >
-              <RNSVGGroup
-                fill={
-                  Array [
-                    0,
-                    4278190080,
-                  ]
-                }
-                fillOpacity={1}
-                fillRule={1}
-                font={Object {}}
-                matrix={
-                  Array [
-                    1,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                  ]
-                }
-                opacity={1}
-                originX={0}
-                originY={0}
-                propList={Array []}
-                rotation={0}
-                scaleX={1}
-                scaleY={1}
-                skewX={0}
-                skewY={0}
-                stroke={null}
-                strokeDasharray={null}
-                strokeDashoffset={null}
-                strokeLinecap={0}
-                strokeLinejoin={0}
-                strokeMiterlimit={4}
-                strokeOpacity={1}
-                strokeWidth={1}
-                vectorEffect={0}
-                x={0}
-                y={0}
-              >
-                <RNSVGPath
-                  d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
-                  fill={
-                    Array [
-                      0,
-                      4278216557,
-                    ]
-                  }
-                  fillOpacity={1}
-                  fillRule={1}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                    ]
-                  }
-                  rotation={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={null}
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={0}
-                  strokeLinejoin={0}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth={1}
-                  vectorEffect={0}
-                  x={0}
-                  y={0}
-                />
-              </RNSVGGroup>
-            </RNSVGSvgView>
+            }
+            vertical={false}
+          >
             <Text
               style={
                 Object {
@@ -3654,12 +3112,12 @@ Stand by…
               padded={true}
               style={
                 Object {
-                  "color": "#505050",
+                  "color": "#303030",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 24,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -3693,37 +3151,84 @@ Stand by…
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 1,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="password"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="numeric"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 1,
                         }
                       }
-                      type="numeric"
-                      underlineColorAndroid="transparent"
-                      value="Boom values.code boom"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="password"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="numeric"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="numeric"
+                        underlineColorAndroid="transparent"
+                        value="Boom values.code boom"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 0.8,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 0.8,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 18,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Verification Code
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -3733,45 +3238,6 @@ Stand by…
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 0.8,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 0.8,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Verification Code
-                  </Text>
                 </View>
                 <View
                   style={
@@ -3877,7 +3343,7 @@ exports[`The Auth Verification component should render with custom confirmationT
       pointerEvents="box-none"
       style={
         Object {
-          "flex": 1,
+          "height": "100%",
           "paddingBottom": 0,
           "paddingLeft": 0,
           "paddingRight": 0,
@@ -3890,8 +3356,7 @@ exports[`The Auth Verification component should render with custom confirmationT
           <View
             style={
               Object {
-                "paddingHorizontal": 16,
-                "paddingVertical": 16,
+                "flexDirection": "row",
               }
             }
           >
@@ -3913,12 +3378,12 @@ exports[`The Auth Verification component should render with custom confirmationT
               }
             >
               <View
-                borderRadius={48}
-                iconPadding={9.6}
                 style={
                   Object {
-                    "padding": 9.6,
-                    "paddingLeft": 0,
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                   }
                 }
               >
@@ -3936,10 +3401,10 @@ exports[`The Auth Verification component should render with custom confirmationT
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
-                      undefined,
                       Object {
-                        "opacity": 1,
+                        "paddingRight": 0,
                       },
+                      null,
                       Object {
                         "flex": 0,
                         "height": 24,
@@ -3997,7 +3462,7 @@ exports[`The Auth Verification component should render with custom confirmationT
                       fill={
                         Array [
                           0,
-                          4278216557,
+                          4279743874,
                         ]
                       }
                       fillOpacity={1}
@@ -4039,124 +3504,40 @@ exports[`The Auth Verification component should render with custom confirmationT
                     />
                   </RNSVGGroup>
                 </RNSVGSvgView>
+                <Text
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": null,
+                      "fontWeight": null,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#17B582",
+                      }
+                    }
+                  >
+                    Back
+                  </Text>
+                </Text>
               </View>
             </View>
-            <RNSVGSvgView
-              align="xMidYMid"
-              bbHeight={48}
-              bbWidth={48}
-              height={48}
-              marginBottom={16}
-              meetOrSlice={0}
-              minX={0}
-              minY={0}
-              style={
-                Array [
-                  Object {
-                    "backgroundColor": "transparent",
-                    "borderWidth": 0,
-                  },
-                  undefined,
-                  null,
-                  Object {
-                    "flex": 0,
-                    "height": 48,
-                    "width": 48,
-                  },
-                ]
+          </View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 0,
               }
-              vbHeight={24}
-              vbWidth={24}
-              width={48}
-            >
-              <RNSVGGroup
-                fill={
-                  Array [
-                    0,
-                    4278190080,
-                  ]
-                }
-                fillOpacity={1}
-                fillRule={1}
-                font={Object {}}
-                matrix={
-                  Array [
-                    1,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                  ]
-                }
-                opacity={1}
-                originX={0}
-                originY={0}
-                propList={Array []}
-                rotation={0}
-                scaleX={1}
-                scaleY={1}
-                skewX={0}
-                skewY={0}
-                stroke={null}
-                strokeDasharray={null}
-                strokeDashoffset={null}
-                strokeLinecap={0}
-                strokeLinejoin={0}
-                strokeMiterlimit={4}
-                strokeOpacity={1}
-                strokeWidth={1}
-                vectorEffect={0}
-                x={0}
-                y={0}
-              >
-                <RNSVGPath
-                  d="M8.84799129,0 L13.7577354,0 L22.6057267,24 L0,24 L8.84799129,0 Z M6.52559608,19.4398694 L16.0921502,19.4398694 L11.4494502,5.83629831 L11.1682961,5.83629831 L6.52559608,19.4398694 Z"
-                  fill={
-                    Array [
-                      0,
-                      4278216557,
-                    ]
-                  }
-                  fillOpacity={1}
-                  fillRule={1}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                    ]
-                  }
-                  rotation={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={null}
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={0}
-                  strokeLinejoin={0}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth={1}
-                  vectorEffect={0}
-                  x={0}
-                  y={0}
-                />
-              </RNSVGGroup>
-            </RNSVGSvgView>
+            }
+            vertical={false}
+          >
             <Text
               style={
                 Object {
@@ -4173,12 +3554,12 @@ exports[`The Auth Verification component should render with custom confirmationT
               padded={true}
               style={
                 Object {
-                  "color": "#505050",
+                  "color": "#303030",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
-                  "paddingBottom": 10.08,
-                  "paddingTop": 13.31,
+                  "lineHeight": 21,
+                  "paddingBottom": 24,
+                  "paddingTop": 13.86,
                 }
               }
             >
@@ -4212,36 +3593,83 @@ exports[`The Auth Verification component should render with custom confirmationT
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      autoComplete="password"
-                      autoFocus={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      keyboardType="numeric"
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      type="numeric"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        autoComplete="password"
+                        autoFocus={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardType="numeric"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        type="numeric"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 18,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Verification Code
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -4251,45 +3679,6 @@ exports[`The Auth Verification component should render with custom confirmationT
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Verification Code
-                  </Text>
                 </View>
                 <View
                   style={

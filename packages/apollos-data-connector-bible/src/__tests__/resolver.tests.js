@@ -2,7 +2,18 @@ import { graphql } from 'graphql';
 import { fetch } from 'apollo-server-env';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
 import { createGlobalId } from '@apollosproject/server-core';
+import ApollosConfig from '@apollosproject/config';
 import * as Scripture from '../index';
+
+ApollosConfig.loadJs({
+  BIBLE_API: {
+    KEY: '9879dbb7cfe39e4d-01',
+    BIBLE_ID: {
+      WEB: '9879dbb7cfe39e4d-01',
+      KJV: 'de4e12af7f28f599-02',
+    },
+  },
+});
 
 const { getContext, getSchema } = createTestHelpers({ Scripture });
 
@@ -25,6 +36,7 @@ describe('Scripture', () => {
           html
           reference
           copyright
+          version
         }
       }
     `;
@@ -42,6 +54,7 @@ describe('Scripture', () => {
           html
           reference
           copyright
+          version
         }
       }
     `;
@@ -54,12 +67,16 @@ describe('Scripture', () => {
   it('returns a verse as by node', async () => {
     const query = `
       query {
-        node (id: "${createGlobalId('SNG.1.1', 'Scripture')}") {
+        node (id: "${createGlobalId(
+          JSON.stringify({ id: 'SNG.1.1', bibleId: '9879dbb7cfe39e4d-01' }),
+          'Scripture'
+        )}") {
           id
           ... on Scripture {
             html
             reference
             copyright
+            version
           }
         }
       }

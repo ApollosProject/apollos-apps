@@ -2,6 +2,7 @@ import crypto from 'crypto';
 import { AuthenticationError, UserInputError } from 'apollo-server';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import PhoneNumber from 'awesome-phonenumber';
+import { fieldsAsObject } from '../utils';
 
 import { secret } from '../auth/token';
 
@@ -28,6 +29,27 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
     };
   };
 
+  userExists = async ({ identity }) => {
+    const { valid, phoneNumber } = this.parsePhoneNumber({
+      phoneNumber: identity,
+    });
+
+    let parsedIdentity = identity;
+    if (valid) {
+      parsedIdentity = phoneNumber;
+    }
+
+    const userExists = await this.context.dataSources.Auth.personExists({
+      identity: parsedIdentity,
+    });
+
+    if (userExists) {
+      // We are a Rock user and have logged in via sms or username/password
+      return 'EXISTING_APP_USER';
+    }
+    return 'NONE';
+  };
+
   generateSmsPinAndPassword = () => {
     const pin = `${Math.floor(Math.random() * 1000000)}`.padStart(6, '0');
     const password = this.hashPassword({ pin });
@@ -35,7 +57,20 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
     return { pin, password };
   };
 
-  createOrFindSmsLoginUserId = async ({ phoneNumber: inputPhoneNumber }) => {
+  createPhoneNumber = ({ personId, phoneNumber, countryCode }) =>
+    this.post('/PhoneNumbers', {
+      PersonId: personId,
+      IsMessagingEnabled: true,
+      IsSystem: false,
+      Number: phoneNumber,
+      CountryCode: countryCode,
+      NumberTypeValueId: 12, // 12 is a Constant Set in Rock, means "Mobile"
+    });
+
+  createOrFindSmsLoginUserId = async ({
+    phoneNumber: inputPhoneNumber,
+    userProfile,
+  }) => {
     const { phoneNumber, countryCode } = this.parsePhoneNumber({
       phoneNumber: inputPhoneNumber,
     });
@@ -50,24 +85,26 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
     }
 
     // Otherwise, create a new user.
+    const profileFields = fieldsAsObject(userProfile || []);
+    const rockUpdateFields = this.context.dataSources.Person.mapApollosFieldsToRock(
+      profileFields
+    );
     const personId = await this.context.dataSources.Auth.createUserProfile({
       email: null,
+      ...rockUpdateFields,
     });
 
     // And create their phone number.
-    await this.post('/PhoneNumbers', {
-      PersonId: personId,
-      IsMessagingEnabled: true,
-      IsSystem: false,
-      Number: phoneNumber,
-      CountryCode: countryCode,
-      NumberTypeValueId: 12, // 12 is a Constant Set in Rock, means "Mobile"
-    });
+    await this.createPhoneNumber({ personId, phoneNumber, countryCode });
 
     return personId;
   };
 
-  authenticateWithSms = async ({ pin, phoneNumber: phoneNumberInput }) => {
+  authenticateWithSms = async ({
+    pin,
+    phoneNumber: phoneNumberInput,
+    userProfile,
+  }) => {
     const { phoneNumber } = this.parsePhoneNumber({
       phoneNumber: phoneNumberInput,
     });
@@ -83,7 +120,10 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
     // remember that Rock null values are often empty objects!
     if (!userLogin.personId || typeof userLogin.personId === 'object') {
       // We created a login for this user, but don't know who they are yet.
-      const personId = await this.createOrFindSmsLoginUserId({ phoneNumber });
+      const personId = await this.createOrFindSmsLoginUserId({
+        phoneNumber,
+        userProfile,
+      });
 
       // Update the user login to include the PersonId.
       await this.patch(`/UserLogins/${userLogin.id}`, { PersonId: personId });
@@ -137,6 +177,9 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
       body: `Your login code is ${pin}`,
     });
 
-    return { success: true };
+    return {
+      success: true,
+      userAuthStatus: existingUserLogin ? 'EXISTING_APP_USER' : 'NONE',
+    };
   };
 }

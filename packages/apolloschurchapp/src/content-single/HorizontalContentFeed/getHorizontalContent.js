@@ -1,4 +1,5 @@
 import gql from 'graphql-tag';
+import ApollosConfig from '@apollosproject/config';
 
 export default gql`
   query getHorizontalContent($itemId: ID!, $cursor: String) {
@@ -9,24 +10,7 @@ export default gql`
           edges {
             cursor
             node {
-              id
-              coverImage {
-                name
-                sources {
-                  uri
-                }
-              }
-              parentChannel {
-                id
-                name
-                iconName
-              }
-              title
-              sharing {
-                url
-                message
-                title
-              }
+              ...contentCardFragment
             }
           }
         }
@@ -34,28 +18,12 @@ export default gql`
           edges {
             cursor
             node {
-              id
-              coverImage {
-                name
-                sources {
-                  uri
-                }
-              }
-              parentChannel {
-                id
-                name
-                iconName
-              }
-              title
-              sharing {
-                url
-                message
-                title
-              }
+              ...contentCardFragment
             }
           }
         }
       }
     }
   }
+  ${ApollosConfig.FRAGMENTS.CONTENT_CARD_FRAGMENT}
 `;

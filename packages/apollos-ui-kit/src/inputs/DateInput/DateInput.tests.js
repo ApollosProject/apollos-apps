@@ -6,11 +6,24 @@ import Providers from '../../Providers';
 
 import DateInput from '.';
 
+let realDateNow;
+
 describe('The DateInput component', () => {
+  beforeAll(() => {
+    realDateNow = Date.now.bind(global.Date);
+    const dateNowStub = jest.fn(() => 1530518207007);
+    global.Date.now = dateNowStub;
+  });
+  afterAll(() => {
+    global.Date.now = realDateNow;
+  });
   it('should render', () => {
     const tree = renderer.create(
       <Providers>
-        <DateInput value={moment.utc('1/1/2015').toDate()} />
+        <DateInput
+          value={moment.utc('1/1/2015').toDate()}
+          maximumDate={moment.utc('1/1/2015').toDate()}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -21,6 +34,7 @@ describe('The DateInput component', () => {
         <DateInput
           value={moment.utc('1/1/2015').toDate()}
           displayValue={moment.utc('1/1/2015').format('YYYY/MM/DD')}
+          maximumDate={moment.utc('1/1/2015').toDate()}
         />
       </Providers>
     );
@@ -32,12 +46,26 @@ describe('The DateInput component', () => {
         <DateInput
           placeholder={'mm/dd/yyyy'}
           value={moment.utc('1/1/2015').toDate()}
+          maximumDate={moment.utc('1/1/2015').toDate()}
         />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
   it('should render with a label', () => {
+    const tree = renderer.create(
+      <Providers>
+        <DateInput
+          value={moment.utc('1/1/2015').toDate()}
+          displayValue={moment.utc('1/1/2015').format('YYYY/MM/DD')}
+          maximumDate={moment.utc('1/1/2015').toDate()}
+          label={'Date Label'}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render without a maximum date', () => {
     const tree = renderer.create(
       <Providers>
         <DateInput
@@ -54,6 +82,7 @@ describe('The DateInput component', () => {
       <Providers>
         <DateInput
           value={moment.utc('1/1/2015').toDate()}
+          maximumDate={moment.utc('1/1/2015').toDate()}
           error={'Danger Will Robinson'}
         />
       </Providers>

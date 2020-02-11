@@ -15,7 +15,9 @@ const ButtonStyles = styled(
   ({ theme, disabled, bordered, pill }) => ({
     paddingHorizontal: theme.sizing.baseUnit,
     overflow: 'hidden',
-    borderRadius: pill ? theme.sizing.baseUnit * 3 : theme.sizing.baseUnit,
+    borderRadius: pill
+      ? theme.sizing.baseBorderRadius * 3
+      : theme.sizing.baseBorderRadius,
     flexDirection: 'row',
     height: theme.sizing.baseUnit * 3,
     alignItems: 'center',
@@ -51,7 +53,9 @@ const enhance = compose(
   withTheme(({ theme, type = 'default', pill }) => ({
     fill: get(theme, `buttons.${type}.fill`, theme.colors.action.default),
     accent: get(theme, `buttons.${type}.accent`, theme.colors.text.primary),
-    borderRadius: pill ? theme.sizing.baseUnit * 3 : theme.sizing.baseUnit / 2,
+    borderRadius: pill
+      ? theme.sizing.baseBorderRadius * 3
+      : theme.sizing.baseBorderRadius / 2,
   })),
   // makes non-text children inherit button styles by default :-D
   withThemeMixin(({ fill, accent, bordered }) => {
@@ -103,7 +107,7 @@ const Button = enhance(
         {loading ? (
           <InlineActivityIndicator color={accent} />
         ) : (
-          children || <H4>{title}</H4>
+          children || <H4 style={style}>{title}</H4>
         )}
       </ButtonStyles>
     );

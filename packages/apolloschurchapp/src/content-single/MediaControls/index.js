@@ -13,7 +13,11 @@ import {
   MediaThumbnailItem,
   H6,
 } from '@apollosproject/ui-kit';
-import { WebBrowserConsumer } from 'apolloschurchapp/src/ui/WebBrowser';
+import {
+  LiveConsumer,
+  RockAuthedWebBrowser,
+} from '@apollosproject/ui-connected';
+
 import GET_CONTENT_MEDIA from './getContentMedia';
 
 const Container = styled(({ theme }) => ({
@@ -71,32 +75,26 @@ class MediaControls extends PureComponent {
   );
 
   renderWebView = ({ webViewUrl, coverImageSources }) => (
-    <WebBrowserConsumer>
+    <RockAuthedWebBrowser>
       {(openUrl) =>
         this.renderPlayButton({
           action: () => openUrl(webViewUrl),
           coverImageSources,
         })
       }
-    </WebBrowserConsumer>
+    </RockAuthedWebBrowser>
   );
 
   renderControls = ({
+    liveStream,
     loading,
     error,
     data: {
-      node: {
-        videos,
-        title,
-        parentChannel = {},
-        coverImage = {},
-        liveStream = {},
-      } = {},
+      node: { videos, title, parentChannel = {}, coverImage = {} } = {},
     } = {},
   }) => {
     if (loading || error) return null;
-
-    const isLive = get(liveStream, 'isLive', false);
+    const isLive = !!liveStream;
     const hasLiveStreamContent = !!(
       get(liveStream, 'webViewUrl') || get(liveStream, 'media.sources[0]')
     );
@@ -139,13 +137,19 @@ class MediaControls extends PureComponent {
   render() {
     if (!this.props.contentId) return null;
     return (
-      <Query
-        query={GET_CONTENT_MEDIA}
-        fetchPolicy="cache-and-network"
-        variables={{ contentId: this.props.contentId }}
-      >
-        {this.renderControls}
-      </Query>
+      <LiveConsumer contentId={this.props.contentId}>
+        {(liveStream) => (
+          <Query
+            query={GET_CONTENT_MEDIA}
+            fetchPolicy="cache-and-network"
+            variables={{ contentId: this.props.contentId }}
+          >
+            {({ data, loading, error }) =>
+              this.renderControls({ data, loading, error, liveStream })
+            }
+          </Query>
+        )}
+      </LiveConsumer>
     );
   }
 }

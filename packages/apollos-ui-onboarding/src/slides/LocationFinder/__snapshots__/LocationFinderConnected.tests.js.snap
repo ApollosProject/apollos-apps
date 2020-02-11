@@ -88,7 +88,7 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -148,7 +148,7 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
                   "color": "#FFFFFF",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
-                  "lineHeight": 23.04,
+                  "lineHeight": 24,
                 }
               }
             >
@@ -196,6 +196,7 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
       "navigate": [MockFunction],
     }
   }
+  onNavigate={[MockFunction]}
   overScrollMode="auto"
   style={
     Object {
@@ -248,7 +249,7 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -308,7 +309,7 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
                   "color": "#FFFFFF",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
-                  "lineHeight": 23.04,
+                  "lineHeight": 24,
                 }
               }
             >
@@ -404,7 +405,7 @@ exports[`The Onboarding LocationFinderConnected component should render with no 
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -464,7 +465,7 @@ exports[`The Onboarding LocationFinderConnected component should render with no 
                   "color": "#FFFFFF",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
-                  "lineHeight": 23.04,
+                  "lineHeight": 24,
                 }
               }
             >

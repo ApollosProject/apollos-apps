@@ -139,9 +139,9 @@ exports[`TabView Component renders 1`] = `
                       "color": "#303030",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 16,
-                      "lineHeight": 23.04,
-                      "paddingBottom": 11.52,
-                      "paddingTop": 15.21,
+                      "lineHeight": 24,
+                      "paddingBottom": 12,
+                      "paddingTop": 15.84,
                     }
                   }
                 >
@@ -195,9 +195,9 @@ exports[`TabView Component renders 1`] = `
                       "color": "#303030",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 16,
-                      "lineHeight": 23.04,
-                      "paddingBottom": 11.52,
-                      "paddingTop": 15.21,
+                      "lineHeight": 24,
+                      "paddingBottom": 12,
+                      "paddingTop": 15.84,
                     }
                   }
                 >
@@ -218,80 +218,65 @@ exports[`TabView Component renders 1`] = `
       }
     }
   >
-    <RCTScrollView
-      alwaysBounceHorizontal={false}
-      automaticallyAdjustContentInsets={false}
-      bounces={false}
-      contentContainerStyle={null}
-      contentOffset={
-        Object {
-          "x": 0,
-          "y": 0,
-        }
-      }
-      directionalLockEnabled={true}
-      horizontal={true}
-      keyboardDismissMode="on-drag"
-      keyboardShouldPersistTaps="always"
-      onMomentumScrollEnd={[Function]}
-      onScroll={[Function]}
-      overScrollMode="never"
-      pagingEnabled={true}
-      scrollEnabled={true}
-      scrollEventThrottle={1}
-      scrollsToTop={false}
-      showsHorizontalScrollIndicator={false}
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
       style={
         Object {
+          "alignItems": "stretch",
           "flex": 1,
+          "flexDirection": "row",
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
+          "width": 1500,
         }
       }
     >
-      <View>
-        <View
-          accessibilityElementsHidden={false}
-          importantForAccessibility="auto"
-          style={
-            Object {
-              "overflow": "hidden",
-              "width": 750,
-            }
+      <View
+        accessibilityElementsHidden={false}
+        importantForAccessibility="auto"
+        style={
+          Object {
+            "width": 750,
           }
-        >
-          <View
-            style={
-              Array [
-                Object {
-                  "backgroundColor": "#ff4081",
-                  "flex": 1,
-                },
-              ]
-            }
-          />
-        </View>
+        }
+      >
         <View
-          accessibilityElementsHidden={true}
-          importantForAccessibility="no-hide-descendants"
           style={
-            Object {
-              "overflow": "hidden",
-              "width": 750,
-            }
+            Array [
+              Object {
+                "backgroundColor": "#ff4081",
+                "flex": 1,
+              },
+            ]
           }
-        >
-          <View
-            style={
-              Array [
-                Object {
-                  "backgroundColor": "#673ab7",
-                  "flex": 1,
-                },
-              ]
-            }
-          />
-        </View>
+        />
       </View>
-    </RCTScrollView>
+      <View
+        accessibilityElementsHidden={true}
+        importantForAccessibility="no-hide-descendants"
+        style={
+          Object {
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#673ab7",
+                "flex": 1,
+              },
+            ]
+          }
+        />
+      </View>
+    </View>
   </View>
 </View>
 `;

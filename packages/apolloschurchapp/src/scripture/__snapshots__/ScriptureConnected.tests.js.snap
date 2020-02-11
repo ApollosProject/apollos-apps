@@ -8,7 +8,8 @@ exports[`ScriptureConnected component renders without errors 1`] = `
         "color": "#303030",
         "fontFamily": "InterUI-Bold",
         "fontSize": 16,
-        "lineHeight": 23.04,
+        "lineHeight": 24,
+        "paddingBottom": 12,
       }
     }
   >
@@ -18,19 +19,30 @@ exports[`ScriptureConnected component renders without errors 1`] = `
           "color": "#303030",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
-          "lineHeight": 23.04,
+          "lineHeight": 24,
         }
       }
     >
       Genesis 1:1
     </Text>
+    <Text
+      style={
+        Object {
+          "color": "#505050",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
+        }
+      }
+    >
+       
+      WEB
+    </Text>
   </Text>
   <View
-    lineNumber={8}
-    onReady={true}
     style={
       Object {
-        "paddingBottom": 17.28,
+        "paddingBottom": 18,
       }
     }
   >

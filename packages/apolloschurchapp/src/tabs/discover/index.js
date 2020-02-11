@@ -1,7 +1,7 @@
 import { createStackNavigator } from 'react-navigation';
 import { withTheme } from '@apollosproject/ui-kit';
 
-import ContentFeed from 'apolloschurchapp/src/content-feed';
+import ContentFeed from '../../content-feed';
 
 import tabBarIcon from '../tabBarIcon';
 
@@ -16,6 +16,7 @@ const DiscoverNavigator = createStackNavigator(
     initialRouteName: 'Discover',
     defaultNavigationOptions: ({ screenProps }) => ({
       headerTintColor: screenProps.headerTintColor,
+      headerTitleStyle: screenProps.headerTitleStyle,
     }),
     navigationOptions: { tabBarIcon: tabBarIcon('sections') },
   }
@@ -23,7 +24,12 @@ const DiscoverNavigator = createStackNavigator(
 
 const EnhancedDiscover = withTheme(({ theme, ...props }) => ({
   ...props,
-  screenProps: { headerTintColor: theme.colors.text.secondary },
+  screenProps: {
+    headerTintColor: theme.colors.action.secondary,
+    headerTitleStyle: {
+      color: theme.colors.text.primary,
+    },
+  },
 }))(DiscoverNavigator);
 
 export default EnhancedDiscover;

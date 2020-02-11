@@ -3,6 +3,4 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 
 import ErrorCard from '.';
 
-storiesOf('ui-kit/Card/ErrorCard', module).add('Example', () => (
-  <ErrorCard message={'Boom!'} error={'What?'} />
-));
+storiesOf('ui-kit/Card/ErrorCard', module).add('Example', () => <ErrorCard />);

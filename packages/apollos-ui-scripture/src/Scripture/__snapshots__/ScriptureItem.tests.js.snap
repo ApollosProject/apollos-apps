@@ -8,7 +8,8 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
         "color": "#303030",
         "fontFamily": "InterUI-Bold",
         "fontSize": 16,
-        "lineHeight": 23.04,
+        "lineHeight": 24,
+        "paddingBottom": 12,
       }
     }
   >
@@ -18,19 +19,30 @@ exports[`the ScriptureItem component renders Genesis 1:1-5 1`] = `
           "color": "#303030",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
-          "lineHeight": 23.04,
+          "lineHeight": 24,
         }
       }
     >
       Genesis 1:1-5
     </Text>
+    <Text
+      style={
+        Object {
+          "color": "#505050",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
+        }
+      }
+    >
+       
+      WEB
+    </Text>
   </Text>
   <View
-    lineNumber={8}
-    onReady={true}
     style={
       Object {
-        "paddingBottom": 17.28,
+        "paddingBottom": 18,
       }
     }
   >
@@ -260,7 +272,8 @@ exports[`the ScriptureItem component renders John 3:16-17 1`] = `
         "color": "#303030",
         "fontFamily": "InterUI-Bold",
         "fontSize": 16,
-        "lineHeight": 23.04,
+        "lineHeight": 24,
+        "paddingBottom": 12,
       }
     }
   >
@@ -270,7 +283,7 @@ exports[`the ScriptureItem component renders John 3:16-17 1`] = `
           "color": "#303030",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
-          "lineHeight": 23.04,
+          "lineHeight": 24,
         }
       }
     >
@@ -278,11 +291,9 @@ exports[`the ScriptureItem component renders John 3:16-17 1`] = `
     </Text>
   </Text>
   <View
-    lineNumber={8}
-    onReady={true}
     style={
       Object {
-        "paddingBottom": 17.28,
+        "paddingBottom": 18,
       }
     }
   >
@@ -376,7 +387,7 @@ exports[`the ScriptureItem component renders John 3:16-17 1`] = `
         "color": "#505050",
         "fontFamily": "InterUI-Regular",
         "fontSize": 9.6,
-        "lineHeight": 10.37,
+        "lineHeight": 10.8,
       }
     }
   />
@@ -391,7 +402,8 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
         "color": "#303030",
         "fontFamily": "InterUI-Bold",
         "fontSize": 16,
-        "lineHeight": 23.04,
+        "lineHeight": 24,
+        "paddingBottom": 12,
       }
     }
   >
@@ -401,7 +413,7 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
           "color": "#303030",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
-          "lineHeight": 23.04,
+          "lineHeight": 24,
         }
       }
     >
@@ -409,11 +421,9 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
     </Text>
   </Text>
   <View
-    lineNumber={8}
-    onReady={true}
     style={
       Object {
-        "paddingBottom": 17.28,
+        "paddingBottom": 18,
       }
     }
   >
@@ -696,7 +706,7 @@ exports[`the ScriptureItem component renders Mark 1:1-4 1`] = `
         "color": "#505050",
         "fontFamily": "InterUI-Regular",
         "fontSize": 9.6,
-        "lineHeight": 10.37,
+        "lineHeight": 10.8,
       }
     }
   />
@@ -711,7 +721,8 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
         "color": "#303030",
         "fontFamily": "InterUI-Bold",
         "fontSize": 16,
-        "lineHeight": 23.04,
+        "lineHeight": 24,
+        "paddingBottom": 12,
       }
     }
   >
@@ -721,19 +732,30 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
           "color": "#303030",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
-          "lineHeight": 23.04,
+          "lineHeight": 24,
         }
       }
     >
       Psalm 23
     </Text>
+    <Text
+      style={
+        Object {
+          "color": "#505050",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
+        }
+      }
+    >
+       
+      WEB
+    </Text>
   </Text>
   <View
-    lineNumber={8}
-    onReady={true}
     style={
       Object {
-        "paddingBottom": 17.28,
+        "paddingBottom": 18,
       }
     }
   >
@@ -745,9 +767,9 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
             "color": "#303030",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
-            "lineHeight": 23.04,
-            "paddingBottom": 11.52,
-            "paddingTop": 15.21,
+            "lineHeight": 24,
+            "paddingBottom": 12,
+            "paddingTop": 15.84,
           }
         }
       >
@@ -1145,7 +1167,7 @@ exports[`the ScriptureItem component renders Psalm 23 1`] = `
         "color": "#505050",
         "fontFamily": "InterUI-Regular",
         "fontSize": 9.6,
-        "lineHeight": 10.37,
+        "lineHeight": 10.8,
       }
     }
   >
@@ -1162,7 +1184,8 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
         "color": "#303030",
         "fontFamily": "InterUI-Bold",
         "fontSize": 16,
-        "lineHeight": 23.04,
+        "lineHeight": 24,
+        "paddingBottom": 12,
       }
     }
   >
@@ -1172,7 +1195,7 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
           "color": "#303030",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
-          "lineHeight": 23.04,
+          "lineHeight": 24,
         }
       }
     >
@@ -1180,11 +1203,9 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
     </Text>
   </Text>
   <View
-    lineNumber={8}
-    onReady={true}
     style={
       Object {
-        "paddingBottom": 17.28,
+        "paddingBottom": 18,
       }
     }
   >
@@ -1196,9 +1217,9 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
             "color": "#303030",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
-            "lineHeight": 23.04,
-            "paddingBottom": 11.52,
-            "paddingTop": 15.21,
+            "lineHeight": 24,
+            "paddingBottom": 12,
+            "paddingTop": 15.84,
           }
         }
       >
@@ -1885,7 +1906,7 @@ exports[`the ScriptureItem component renders Psalm 32 1`] = `
         "color": "#505050",
         "fontFamily": "InterUI-Regular",
         "fontSize": 9.6,
-        "lineHeight": 10.37,
+        "lineHeight": 10.8,
       }
     }
   />
@@ -1900,7 +1921,8 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
         "color": "#303030",
         "fontFamily": "InterUI-Bold",
         "fontSize": 16,
-        "lineHeight": 23.04,
+        "lineHeight": 24,
+        "paddingBottom": 12,
       }
     }
   >
@@ -1910,7 +1932,7 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
           "color": "#303030",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
-          "lineHeight": 23.04,
+          "lineHeight": 24,
         }
       }
     >
@@ -1918,11 +1940,9 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
     </Text>
   </Text>
   <View
-    lineNumber={8}
-    onReady={true}
     style={
       Object {
-        "paddingBottom": 17.28,
+        "paddingBottom": 18,
       }
     }
   >
@@ -1934,9 +1954,9 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
             "color": "#303030",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
-            "lineHeight": 23.04,
-            "paddingBottom": 11.52,
-            "paddingTop": 15.21,
+            "lineHeight": 24,
+            "paddingBottom": 12,
+            "paddingTop": 15.84,
           }
         }
       >
@@ -2367,9 +2387,9 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
             "color": "#303030",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
-            "lineHeight": 23.04,
-            "paddingBottom": 11.52,
-            "paddingTop": 15.21,
+            "lineHeight": 24,
+            "paddingBottom": 12,
+            "paddingTop": 15.84,
           }
         }
       >
@@ -2803,7 +2823,7 @@ exports[`the ScriptureItem component renders Psalm 119:129 - 144 1`] = `
         "color": "#505050",
         "fontFamily": "InterUI-Regular",
         "fontSize": 9.6,
-        "lineHeight": 10.37,
+        "lineHeight": 10.8,
       }
     }
   />
@@ -2818,7 +2838,8 @@ exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
         "color": "#303030",
         "fontFamily": "InterUI-Bold",
         "fontSize": 16,
-        "lineHeight": 23.04,
+        "lineHeight": 24,
+        "paddingBottom": 12,
       }
     }
   >
@@ -2828,7 +2849,7 @@ exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
           "color": "#303030",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
-          "lineHeight": 23.04,
+          "lineHeight": 24,
         }
       }
     >
@@ -2836,11 +2857,9 @@ exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
     </Text>
   </Text>
   <View
-    lineNumber={8}
-    onReady={true}
     style={
       Object {
-        "paddingBottom": 17.28,
+        "paddingBottom": 18,
       }
     }
   >
@@ -3013,7 +3032,7 @@ exports[`the ScriptureItem component renders Revelation 22:20-21 1`] = `
         "color": "#505050",
         "fontFamily": "InterUI-Regular",
         "fontSize": 9.6,
-        "lineHeight": 10.37,
+        "lineHeight": 10.8,
       }
     }
   />
@@ -3028,7 +3047,8 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
         "color": "#303030",
         "fontFamily": "InterUI-Bold",
         "fontSize": 16,
-        "lineHeight": 23.04,
+        "lineHeight": 24,
+        "paddingBottom": 12,
       }
     }
   >
@@ -3038,7 +3058,7 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
           "color": "#303030",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
-          "lineHeight": 23.04,
+          "lineHeight": 24,
         }
       }
     >
@@ -3046,11 +3066,9 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
     </Text>
   </Text>
   <View
-    lineNumber={8}
-    onReady={true}
     style={
       Object {
-        "paddingBottom": 17.28,
+        "paddingBottom": 18,
       }
     }
   >
@@ -3117,9 +3135,9 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
             "color": "#303030",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
-            "lineHeight": 23.04,
-            "paddingBottom": 11.52,
-            "paddingTop": 15.21,
+            "lineHeight": 24,
+            "paddingBottom": 12,
+            "paddingTop": 15.84,
           }
         }
       >
@@ -3324,9 +3342,9 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
             "color": "#303030",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
-            "lineHeight": 23.04,
-            "paddingBottom": 11.52,
-            "paddingTop": 15.21,
+            "lineHeight": 24,
+            "paddingBottom": 12,
+            "paddingTop": 15.84,
           }
         }
       >
@@ -3375,9 +3393,9 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
             "color": "#303030",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
-            "lineHeight": 23.04,
-            "paddingBottom": 11.52,
-            "paddingTop": 15.21,
+            "lineHeight": 24,
+            "paddingBottom": 12,
+            "paddingTop": 15.84,
           }
         }
       >
@@ -3412,7 +3430,7 @@ exports[`the ScriptureItem component renders Song of Solomon 1:1-4 1`] = `
         "color": "#505050",
         "fontFamily": "InterUI-Regular",
         "fontSize": 9.6,
-        "lineHeight": 10.37,
+        "lineHeight": 10.8,
       }
     }
   />
@@ -3427,7 +3445,8 @@ exports[`the ScriptureItem component renders a custom version name 1`] = `
         "color": "#303030",
         "fontFamily": "InterUI-Bold",
         "fontSize": 16,
-        "lineHeight": 23.04,
+        "lineHeight": 24,
+        "paddingBottom": 12,
       }
     }
   >
@@ -3437,7 +3456,7 @@ exports[`the ScriptureItem component renders a custom version name 1`] = `
           "color": "#303030",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
-          "lineHeight": 23.04,
+          "lineHeight": 24,
         }
       }
     >
@@ -3449,19 +3468,18 @@ exports[`the ScriptureItem component renders a custom version name 1`] = `
           "color": "#505050",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
-          "lineHeight": 17.28,
+          "lineHeight": 18,
         }
       }
     >
+       
       Custom Version Name
     </Text>
   </Text>
   <View
-    lineNumber={8}
-    onReady={true}
     style={
       Object {
-        "paddingBottom": 17.28,
+        "paddingBottom": 18,
       }
     }
   >
@@ -3634,7 +3652,7 @@ exports[`the ScriptureItem component renders a custom version name 1`] = `
         "color": "#505050",
         "fontFamily": "InterUI-Regular",
         "fontSize": 9.6,
-        "lineHeight": 10.37,
+        "lineHeight": 10.8,
       }
     }
   />

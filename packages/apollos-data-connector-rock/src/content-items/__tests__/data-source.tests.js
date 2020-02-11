@@ -15,6 +15,11 @@ ApollosConfig.loadJs({
   ROCK_MAPPINGS: {
     SERMON_CHANNEL_ID: 'TEST_ID',
   },
+  BIBLE_API: {
+    BIBLE_ID: {
+      ESV: 'some-bible-id',
+    },
+  },
 });
 
 const RealDate = Date;
@@ -356,6 +361,29 @@ describe('ContentItemsModel', () => {
     expect(createScriptureFeature.mock.calls).toMatchSnapshot();
   });
 
+  it('returns scripture features with translation when a contentItem has a Features field', async () => {
+    const dataSource = new ContentItemsDataSource();
+    const createScriptureFeature = jest.fn(() => ({
+      id: 'ScriptureFeature:123',
+      body: 'something',
+    }));
+    dataSource.context = {
+      dataSources: { Features: { createScriptureFeature } },
+    };
+    const result = dataSource.getFeatures({
+      attributeValues: {
+        features: {
+          id: 123,
+          value: 'scripture/esv^John 3:16|scripture^Mark 1:1',
+        },
+      },
+    });
+    expect(result).toMatchSnapshot('result mock');
+    expect(createScriptureFeature.mock.calls).toMatchSnapshot(
+      'createScriptureFeature mock'
+    );
+  });
+
   it('returns text features and when a contentItem has a TextFeatures and a TextFeature field', async () => {
     const dataSource = new ContentItemsDataSource();
     const createTextFeature = jest.fn(() => ({
@@ -465,6 +493,50 @@ describe('ContentItemsModel', () => {
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
+  it('returns active livestream content when the LiveStream is live and there is a sermon', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.context = {
+      dataSources: {
+        LiveStream: {
+          getLiveStream: () => ({
+            isLive: true,
+          }),
+        },
+      },
+    };
+
+    dataSource.getSermonFeed = jest.fn(() => ({
+      first: async () => Promise.resolve([{ id: '1' }]),
+    }));
+
+    const result = await dataSource.getActiveLiveStreamContent();
+
+    expect(result).toMatchSnapshot();
+    expect(dataSource.getSermonFeed.mock.calls).toMatchSnapshot();
+  });
+
+  it("returns an empty array LiveStream isn't live and there is a sermon", async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.context = {
+      dataSources: {
+        LiveStream: {
+          getLiveStream: () => ({
+            isLive: false,
+          }),
+        },
+      },
+    };
+
+    dataSource.getSermonFeed = jest.fn(() => ({
+      first: async () => Promise.resolve([{ id: '1' }]),
+    }));
+
+    const result = await dataSource.getActiveLiveStreamContent();
+
+    expect(result).toMatchSnapshot();
+    expect(dataSource.getSermonFeed.mock.calls).toMatchSnapshot();
+  });
+
   it("getPersonaFeed doesn't fetch if there aren't any persona ids", async () => {
     const dataSource = new ContentItemsDataSource();
 
@@ -518,11 +590,96 @@ describe('ContentItemsModel', () => {
       get: () => Promise.resolve([{ attributeValues: {}, attributes: {} }]),
     });
 
+    dataSource.context = {
+      dataSources: {
+        Cache: { get: () => Promise.resolve(null) },
+      },
+    };
+
     const image = await dataSource.getCoverImage({
       attributeValues: {},
       attributes: {},
     });
 
     expect(image).toBe(null);
+  });
+
+  it('stores cover image in the cache, when it exists', async () => {
+    const dataSource = new ContentItemsDataSource();
+
+    const setMock = jest.fn();
+    dataSource.context = {
+      dataSources: {
+        Cache: { get: () => Promise.resolve(null), set: setMock },
+      },
+    };
+
+    const image = await dataSource.getCoverImage({
+      id: 123,
+      attributeValues: {
+        image: {
+          attributeId: 1266,
+          entityId: 1,
+          value: 'https://some-domain.com/some/path/to/image.jpg',
+        },
+      },
+      attributes: {
+        image: {
+          fieldTypeId: 10,
+          entityTypeId: 208,
+          key: 'Image',
+          name: 'Image',
+          attributeValues: {},
+          id: 1266,
+          guid: 'ffdf621c-ecff-4199-ab90-d678c36dce38',
+        },
+      },
+    });
+
+    expect(image).toMatchSnapshot();
+    expect(setMock.mock.calls).toMatchSnapshot();
+  });
+
+  it('gets cover image from the cache, when it exists', async () => {
+    const dataSource = new ContentItemsDataSource();
+
+    const getMock = jest.fn(() =>
+      Promise.resolve({
+        __typename: 'ImageMedia',
+        key: 'image',
+        name: 'Image',
+        sources: [{ uri: 'https://some-domain.com/some/path/to/image.jpg' }],
+      })
+    );
+    dataSource.context = {
+      dataSources: {
+        Cache: { get: getMock },
+      },
+    };
+
+    const image = await dataSource.getCoverImage({
+      id: 123,
+      attributeValues: {
+        image: {
+          attributeId: 1266,
+          entityId: 1,
+          value: 'https://some-domain.com/some/path/to/image.jpg',
+        },
+      },
+      attributes: {
+        image: {
+          fieldTypeId: 10,
+          entityTypeId: 208,
+          key: 'Image',
+          name: 'Image',
+          attributeValues: {},
+          id: 1266,
+          guid: 'ffdf621c-ecff-4199-ab90-d678c36dce38',
+        },
+      },
+    });
+
+    expect(image).toMatchSnapshot('Image result');
+    expect(getMock.mock.calls).toMatchSnapshot('Get mock calls');
   });
 });

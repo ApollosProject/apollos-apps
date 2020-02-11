@@ -190,7 +190,7 @@ exports[`The Onboarding AskName component should accept a firstName 1`] = `
                 "color": "#505050",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -234,36 +234,83 @@ exports[`The Onboarding AskName component should accept a firstName 1`] = `
                 <View
                   style={
                     Object {
+                      "alignSelf": "flex-end",
                       "flex": 1,
-                      "opacity": 1,
                     }
                   }
                 >
-                  <TextInput
-                    allowFontScaling={true}
-                    editable={true}
-                    enablesReturnKeyAutomatically={true}
-                    onBlur={[Function]}
-                    onChangeText={[Function]}
-                    onFocus={[Function]}
-                    onSubmitEditing={[Function]}
-                    placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                    rejectResponderTermination={true}
-                    returnKeyType="next"
+                  <View
                     style={
                       Object {
-                        "color": "#303030",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 14,
-                        "height": 38,
-                        "paddingVertical": 0,
+                        "opacity": 1,
                       }
                     }
-                    textContentType="givenName"
-                    type="text"
-                    underlineColorAndroid="transparent"
-                    value="Marty"
-                  />
+                  >
+                    <TextInput
+                      allowFontScaling={true}
+                      editable={true}
+                      enablesReturnKeyAutomatically={true}
+                      onBlur={[Function]}
+                      onChangeText={[Function]}
+                      onFocus={[Function]}
+                      onSubmitEditing={[Function]}
+                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                      rejectResponderTermination={true}
+                      returnKeyType="next"
+                      style={
+                        Object {
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 14,
+                          "height": 38,
+                          "paddingVertical": 0,
+                        }
+                      }
+                      textContentType="givenName"
+                      type="text"
+                      underlineColorAndroid="transparent"
+                      value="Marty"
+                    />
+                  </View>
+                  <View
+                    onLayout={[Function]}
+                    pointerEvents="none"
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "justifyContent": "center",
+                        "opacity": 0.8,
+                        "position": "absolute",
+                        "top": 0,
+                        "transform": Array [
+                          Object {
+                            "scale": 0.8,
+                          },
+                          Object {
+                            "translateX": 0,
+                          },
+                          Object {
+                            "translateY": 0,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "color": "#505050",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 12,
+                          "lineHeight": 18,
+                          "paddingVertical": 4,
+                        }
+                      }
+                    >
+                      First Name
+                    </Text>
+                  </View>
                 </View>
                 <View
                   style={
@@ -273,45 +320,6 @@ exports[`The Onboarding AskName component should accept a firstName 1`] = `
                     }
                   }
                 />
-              </View>
-              <View
-                onLayout={[Function]}
-                pointerEvents="none"
-                style={
-                  Object {
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "opacity": 0.8,
-                    "position": "absolute",
-                    "top": 0,
-                    "transform": Array [
-                      Object {
-                        "scale": 0.8,
-                      },
-                      Object {
-                        "translateX": 0,
-                      },
-                      Object {
-                        "translateY": 0,
-                      },
-                    ],
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "backgroundColor": "transparent",
-                      "color": "#505050",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 12,
-                      "lineHeight": 17.28,
-                      "paddingVertical": 4,
-                    }
-                  }
-                >
-                  First Name
-                </Text>
               </View>
               <View
                 style={
@@ -387,34 +395,81 @@ exports[`The Onboarding AskName component should accept a firstName 1`] = `
                 <View
                   style={
                     Object {
+                      "alignSelf": "flex-end",
                       "flex": 1,
-                      "opacity": 0,
                     }
                   }
                 >
-                  <TextInput
-                    allowFontScaling={true}
-                    editable={true}
-                    enablesReturnKeyAutomatically={true}
-                    onBlur={[Function]}
-                    onChangeText={[Function]}
-                    onFocus={[Function]}
-                    placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                    rejectResponderTermination={true}
-                    returnKeyType="next"
+                  <View
                     style={
                       Object {
-                        "color": "#303030",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 14,
-                        "height": 38,
-                        "paddingVertical": 0,
+                        "opacity": 0,
                       }
                     }
-                    textContentType="familyName"
-                    type="text"
-                    underlineColorAndroid="transparent"
-                  />
+                  >
+                    <TextInput
+                      allowFontScaling={true}
+                      editable={true}
+                      enablesReturnKeyAutomatically={true}
+                      onBlur={[Function]}
+                      onChangeText={[Function]}
+                      onFocus={[Function]}
+                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                      rejectResponderTermination={true}
+                      returnKeyType="next"
+                      style={
+                        Object {
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 14,
+                          "height": 38,
+                          "paddingVertical": 0,
+                        }
+                      }
+                      textContentType="familyName"
+                      type="text"
+                      underlineColorAndroid="transparent"
+                    />
+                  </View>
+                  <View
+                    onLayout={[Function]}
+                    pointerEvents="none"
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "justifyContent": "center",
+                        "opacity": 1,
+                        "position": "absolute",
+                        "top": 0,
+                        "transform": Array [
+                          Object {
+                            "scale": 1,
+                          },
+                          Object {
+                            "translateX": 0,
+                          },
+                          Object {
+                            "translateY": 0,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "color": "#505050",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 12,
+                          "lineHeight": 18,
+                          "paddingVertical": 4,
+                        }
+                      }
+                    >
+                      Last Name
+                    </Text>
+                  </View>
                 </View>
                 <View
                   style={
@@ -424,45 +479,6 @@ exports[`The Onboarding AskName component should accept a firstName 1`] = `
                     }
                   }
                 />
-              </View>
-              <View
-                onLayout={[Function]}
-                pointerEvents="none"
-                style={
-                  Object {
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "opacity": 1,
-                    "position": "absolute",
-                    "top": 0,
-                    "transform": Array [
-                      Object {
-                        "scale": 1,
-                      },
-                      Object {
-                        "translateX": 0,
-                      },
-                      Object {
-                        "translateY": 0,
-                      },
-                    ],
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "backgroundColor": "transparent",
-                      "color": "#505050",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 12,
-                      "lineHeight": 17.28,
-                      "paddingVertical": 4,
-                    }
-                  }
-                >
-                  Last Name
-                </Text>
               </View>
               <View
                 style={
@@ -707,7 +723,7 @@ exports[`The Onboarding AskName component should accept a lastName 1`] = `
                 "color": "#505050",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -751,35 +767,82 @@ exports[`The Onboarding AskName component should accept a lastName 1`] = `
                 <View
                   style={
                     Object {
+                      "alignSelf": "flex-end",
                       "flex": 1,
-                      "opacity": 0,
                     }
                   }
                 >
-                  <TextInput
-                    allowFontScaling={true}
-                    editable={true}
-                    enablesReturnKeyAutomatically={true}
-                    onBlur={[Function]}
-                    onChangeText={[Function]}
-                    onFocus={[Function]}
-                    onSubmitEditing={[Function]}
-                    placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                    rejectResponderTermination={true}
-                    returnKeyType="next"
+                  <View
                     style={
                       Object {
-                        "color": "#303030",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 14,
-                        "height": 38,
-                        "paddingVertical": 0,
+                        "opacity": 0,
                       }
                     }
-                    textContentType="givenName"
-                    type="text"
-                    underlineColorAndroid="transparent"
-                  />
+                  >
+                    <TextInput
+                      allowFontScaling={true}
+                      editable={true}
+                      enablesReturnKeyAutomatically={true}
+                      onBlur={[Function]}
+                      onChangeText={[Function]}
+                      onFocus={[Function]}
+                      onSubmitEditing={[Function]}
+                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                      rejectResponderTermination={true}
+                      returnKeyType="next"
+                      style={
+                        Object {
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 14,
+                          "height": 38,
+                          "paddingVertical": 0,
+                        }
+                      }
+                      textContentType="givenName"
+                      type="text"
+                      underlineColorAndroid="transparent"
+                    />
+                  </View>
+                  <View
+                    onLayout={[Function]}
+                    pointerEvents="none"
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "justifyContent": "center",
+                        "opacity": 1,
+                        "position": "absolute",
+                        "top": 0,
+                        "transform": Array [
+                          Object {
+                            "scale": 1,
+                          },
+                          Object {
+                            "translateX": 0,
+                          },
+                          Object {
+                            "translateY": 0,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "color": "#505050",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 12,
+                          "lineHeight": 18,
+                          "paddingVertical": 4,
+                        }
+                      }
+                    >
+                      First Name
+                    </Text>
+                  </View>
                 </View>
                 <View
                   style={
@@ -789,45 +852,6 @@ exports[`The Onboarding AskName component should accept a lastName 1`] = `
                     }
                   }
                 />
-              </View>
-              <View
-                onLayout={[Function]}
-                pointerEvents="none"
-                style={
-                  Object {
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "opacity": 1,
-                    "position": "absolute",
-                    "top": 0,
-                    "transform": Array [
-                      Object {
-                        "scale": 1,
-                      },
-                      Object {
-                        "translateX": 0,
-                      },
-                      Object {
-                        "translateY": 0,
-                      },
-                    ],
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "backgroundColor": "transparent",
-                      "color": "#505050",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 12,
-                      "lineHeight": 17.28,
-                      "paddingVertical": 4,
-                    }
-                  }
-                >
-                  First Name
-                </Text>
               </View>
               <View
                 style={
@@ -903,35 +927,82 @@ exports[`The Onboarding AskName component should accept a lastName 1`] = `
                 <View
                   style={
                     Object {
+                      "alignSelf": "flex-end",
                       "flex": 1,
-                      "opacity": 1,
                     }
                   }
                 >
-                  <TextInput
-                    allowFontScaling={true}
-                    editable={true}
-                    enablesReturnKeyAutomatically={true}
-                    onBlur={[Function]}
-                    onChangeText={[Function]}
-                    onFocus={[Function]}
-                    placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                    rejectResponderTermination={true}
-                    returnKeyType="next"
+                  <View
                     style={
                       Object {
-                        "color": "#303030",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 14,
-                        "height": 38,
-                        "paddingVertical": 0,
+                        "opacity": 1,
                       }
                     }
-                    textContentType="familyName"
-                    type="text"
-                    underlineColorAndroid="transparent"
-                    value="McFly"
-                  />
+                  >
+                    <TextInput
+                      allowFontScaling={true}
+                      editable={true}
+                      enablesReturnKeyAutomatically={true}
+                      onBlur={[Function]}
+                      onChangeText={[Function]}
+                      onFocus={[Function]}
+                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                      rejectResponderTermination={true}
+                      returnKeyType="next"
+                      style={
+                        Object {
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 14,
+                          "height": 38,
+                          "paddingVertical": 0,
+                        }
+                      }
+                      textContentType="familyName"
+                      type="text"
+                      underlineColorAndroid="transparent"
+                      value="McFly"
+                    />
+                  </View>
+                  <View
+                    onLayout={[Function]}
+                    pointerEvents="none"
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "justifyContent": "center",
+                        "opacity": 0.8,
+                        "position": "absolute",
+                        "top": 0,
+                        "transform": Array [
+                          Object {
+                            "scale": 0.8,
+                          },
+                          Object {
+                            "translateX": 0,
+                          },
+                          Object {
+                            "translateY": 0,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "color": "#505050",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 12,
+                          "lineHeight": 18,
+                          "paddingVertical": 4,
+                        }
+                      }
+                    >
+                      Last Name
+                    </Text>
+                  </View>
                 </View>
                 <View
                   style={
@@ -941,45 +1012,6 @@ exports[`The Onboarding AskName component should accept a lastName 1`] = `
                     }
                   }
                 />
-              </View>
-              <View
-                onLayout={[Function]}
-                pointerEvents="none"
-                style={
-                  Object {
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "opacity": 0.8,
-                    "position": "absolute",
-                    "top": 0,
-                    "transform": Array [
-                      Object {
-                        "scale": 0.8,
-                      },
-                      Object {
-                        "translateX": 0,
-                      },
-                      Object {
-                        "translateY": 0,
-                      },
-                    ],
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "backgroundColor": "transparent",
-                      "color": "#505050",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 12,
-                      "lineHeight": 17.28,
-                      "paddingVertical": 4,
-                    }
-                  }
-                >
-                  Last Name
-                </Text>
               </View>
               <View
                 style={
@@ -1225,7 +1257,7 @@ Array [
                   "color": "#505050",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
+                  "lineHeight": 21,
                 }
               }
             >
@@ -1269,35 +1301,82 @@ Array [
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      onSubmitEditing={[Function]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      textContentType="givenName"
-                      type="text"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        onSubmitEditing={[Function]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        textContentType="givenName"
+                        type="text"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 18,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        First Name
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -1307,45 +1386,6 @@ Array [
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    First Name
-                  </Text>
                 </View>
                 <View
                   style={
@@ -1421,35 +1461,82 @@ Array [
                   <View
                     style={
                       Object {
+                        "alignSelf": "flex-end",
                         "flex": 1,
-                        "opacity": 0,
                       }
                     }
                   >
-                    <TextInput
-                      allowFontScaling={true}
-                      editable={true}
-                      enablesReturnKeyAutomatically={true}
-                      onBlur={[Function]}
-                      onChangeText={[Function]}
-                      onFocus={[Function]}
-                      onSubmitEditing={[MockFunction]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                      rejectResponderTermination={true}
-                      returnKeyType="next"
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 14,
-                          "height": 38,
-                          "paddingVertical": 0,
+                          "opacity": 0,
                         }
                       }
-                      textContentType="familyName"
-                      type="text"
-                      underlineColorAndroid="transparent"
-                    />
+                    >
+                      <TextInput
+                        allowFontScaling={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        onSubmitEditing={[MockFunction]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
+                          }
+                        }
+                        textContentType="familyName"
+                        type="text"
+                        underlineColorAndroid="transparent"
+                      />
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
+                      style={
+                        Object {
+                          "bottom": 0,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 18,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Last Name
+                      </Text>
+                    </View>
                   </View>
                   <View
                     style={
@@ -1459,45 +1546,6 @@ Array [
                       }
                     }
                   />
-                </View>
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="none"
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "justifyContent": "center",
-                      "opacity": 1,
-                      "position": "absolute",
-                      "top": 0,
-                      "transform": Array [
-                        Object {
-                          "scale": 1,
-                        },
-                        Object {
-                          "translateX": 0,
-                        },
-                        Object {
-                          "translateY": 0,
-                        },
-                      ],
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "backgroundColor": "transparent",
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 17.28,
-                        "paddingVertical": 4,
-                      }
-                    }
-                  >
-                    Last Name
-                  </Text>
                 </View>
                 <View
                   style={
@@ -1620,7 +1668,7 @@ Array [
                 "color": "#FFFFFF",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -1941,7 +1989,7 @@ exports[`The Onboarding AskName component should render 1`] = `
                 "color": "#505050",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -1985,35 +2033,82 @@ exports[`The Onboarding AskName component should render 1`] = `
                 <View
                   style={
                     Object {
+                      "alignSelf": "flex-end",
                       "flex": 1,
-                      "opacity": 0,
                     }
                   }
                 >
-                  <TextInput
-                    allowFontScaling={true}
-                    editable={true}
-                    enablesReturnKeyAutomatically={true}
-                    onBlur={[Function]}
-                    onChangeText={[Function]}
-                    onFocus={[Function]}
-                    onSubmitEditing={[Function]}
-                    placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                    rejectResponderTermination={true}
-                    returnKeyType="next"
+                  <View
                     style={
                       Object {
-                        "color": "#303030",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 14,
-                        "height": 38,
-                        "paddingVertical": 0,
+                        "opacity": 0,
                       }
                     }
-                    textContentType="givenName"
-                    type="text"
-                    underlineColorAndroid="transparent"
-                  />
+                  >
+                    <TextInput
+                      allowFontScaling={true}
+                      editable={true}
+                      enablesReturnKeyAutomatically={true}
+                      onBlur={[Function]}
+                      onChangeText={[Function]}
+                      onFocus={[Function]}
+                      onSubmitEditing={[Function]}
+                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                      rejectResponderTermination={true}
+                      returnKeyType="next"
+                      style={
+                        Object {
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 14,
+                          "height": 38,
+                          "paddingVertical": 0,
+                        }
+                      }
+                      textContentType="givenName"
+                      type="text"
+                      underlineColorAndroid="transparent"
+                    />
+                  </View>
+                  <View
+                    onLayout={[Function]}
+                    pointerEvents="none"
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "justifyContent": "center",
+                        "opacity": 1,
+                        "position": "absolute",
+                        "top": 0,
+                        "transform": Array [
+                          Object {
+                            "scale": 1,
+                          },
+                          Object {
+                            "translateX": 0,
+                          },
+                          Object {
+                            "translateY": 0,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "color": "#505050",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 12,
+                          "lineHeight": 18,
+                          "paddingVertical": 4,
+                        }
+                      }
+                    >
+                      First Name
+                    </Text>
+                  </View>
                 </View>
                 <View
                   style={
@@ -2023,45 +2118,6 @@ exports[`The Onboarding AskName component should render 1`] = `
                     }
                   }
                 />
-              </View>
-              <View
-                onLayout={[Function]}
-                pointerEvents="none"
-                style={
-                  Object {
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "opacity": 1,
-                    "position": "absolute",
-                    "top": 0,
-                    "transform": Array [
-                      Object {
-                        "scale": 1,
-                      },
-                      Object {
-                        "translateX": 0,
-                      },
-                      Object {
-                        "translateY": 0,
-                      },
-                    ],
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "backgroundColor": "transparent",
-                      "color": "#505050",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 12,
-                      "lineHeight": 17.28,
-                      "paddingVertical": 4,
-                    }
-                  }
-                >
-                  First Name
-                </Text>
               </View>
               <View
                 style={
@@ -2137,34 +2193,81 @@ exports[`The Onboarding AskName component should render 1`] = `
                 <View
                   style={
                     Object {
+                      "alignSelf": "flex-end",
                       "flex": 1,
-                      "opacity": 0,
                     }
                   }
                 >
-                  <TextInput
-                    allowFontScaling={true}
-                    editable={true}
-                    enablesReturnKeyAutomatically={true}
-                    onBlur={[Function]}
-                    onChangeText={[Function]}
-                    onFocus={[Function]}
-                    placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                    rejectResponderTermination={true}
-                    returnKeyType="next"
+                  <View
                     style={
                       Object {
-                        "color": "#303030",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 14,
-                        "height": 38,
-                        "paddingVertical": 0,
+                        "opacity": 0,
                       }
                     }
-                    textContentType="familyName"
-                    type="text"
-                    underlineColorAndroid="transparent"
-                  />
+                  >
+                    <TextInput
+                      allowFontScaling={true}
+                      editable={true}
+                      enablesReturnKeyAutomatically={true}
+                      onBlur={[Function]}
+                      onChangeText={[Function]}
+                      onFocus={[Function]}
+                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                      rejectResponderTermination={true}
+                      returnKeyType="next"
+                      style={
+                        Object {
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 14,
+                          "height": 38,
+                          "paddingVertical": 0,
+                        }
+                      }
+                      textContentType="familyName"
+                      type="text"
+                      underlineColorAndroid="transparent"
+                    />
+                  </View>
+                  <View
+                    onLayout={[Function]}
+                    pointerEvents="none"
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "justifyContent": "center",
+                        "opacity": 1,
+                        "position": "absolute",
+                        "top": 0,
+                        "transform": Array [
+                          Object {
+                            "scale": 1,
+                          },
+                          Object {
+                            "translateX": 0,
+                          },
+                          Object {
+                            "translateY": 0,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "color": "#505050",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 12,
+                          "lineHeight": 18,
+                          "paddingVertical": 4,
+                        }
+                      }
+                    >
+                      Last Name
+                    </Text>
+                  </View>
                 </View>
                 <View
                   style={
@@ -2174,45 +2277,6 @@ exports[`The Onboarding AskName component should render 1`] = `
                     }
                   }
                 />
-              </View>
-              <View
-                onLayout={[Function]}
-                pointerEvents="none"
-                style={
-                  Object {
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "opacity": 1,
-                    "position": "absolute",
-                    "top": 0,
-                    "transform": Array [
-                      Object {
-                        "scale": 1,
-                      },
-                      Object {
-                        "translateX": 0,
-                      },
-                      Object {
-                        "translateY": 0,
-                      },
-                    ],
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "backgroundColor": "transparent",
-                      "color": "#505050",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 12,
-                      "lineHeight": 17.28,
-                      "paddingVertical": 4,
-                    }
-                  }
-                >
-                  Last Name
-                </Text>
               </View>
               <View
                 style={
@@ -2457,7 +2521,7 @@ exports[`The Onboarding AskName component should render a custom description 1`]
                 "color": "#505050",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -2501,35 +2565,82 @@ exports[`The Onboarding AskName component should render a custom description 1`]
                 <View
                   style={
                     Object {
+                      "alignSelf": "flex-end",
                       "flex": 1,
-                      "opacity": 0,
                     }
                   }
                 >
-                  <TextInput
-                    allowFontScaling={true}
-                    editable={true}
-                    enablesReturnKeyAutomatically={true}
-                    onBlur={[Function]}
-                    onChangeText={[Function]}
-                    onFocus={[Function]}
-                    onSubmitEditing={[Function]}
-                    placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                    rejectResponderTermination={true}
-                    returnKeyType="next"
+                  <View
                     style={
                       Object {
-                        "color": "#303030",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 14,
-                        "height": 38,
-                        "paddingVertical": 0,
+                        "opacity": 0,
                       }
                     }
-                    textContentType="givenName"
-                    type="text"
-                    underlineColorAndroid="transparent"
-                  />
+                  >
+                    <TextInput
+                      allowFontScaling={true}
+                      editable={true}
+                      enablesReturnKeyAutomatically={true}
+                      onBlur={[Function]}
+                      onChangeText={[Function]}
+                      onFocus={[Function]}
+                      onSubmitEditing={[Function]}
+                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                      rejectResponderTermination={true}
+                      returnKeyType="next"
+                      style={
+                        Object {
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 14,
+                          "height": 38,
+                          "paddingVertical": 0,
+                        }
+                      }
+                      textContentType="givenName"
+                      type="text"
+                      underlineColorAndroid="transparent"
+                    />
+                  </View>
+                  <View
+                    onLayout={[Function]}
+                    pointerEvents="none"
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "justifyContent": "center",
+                        "opacity": 1,
+                        "position": "absolute",
+                        "top": 0,
+                        "transform": Array [
+                          Object {
+                            "scale": 1,
+                          },
+                          Object {
+                            "translateX": 0,
+                          },
+                          Object {
+                            "translateY": 0,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "color": "#505050",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 12,
+                          "lineHeight": 18,
+                          "paddingVertical": 4,
+                        }
+                      }
+                    >
+                      First Name
+                    </Text>
+                  </View>
                 </View>
                 <View
                   style={
@@ -2539,45 +2650,6 @@ exports[`The Onboarding AskName component should render a custom description 1`]
                     }
                   }
                 />
-              </View>
-              <View
-                onLayout={[Function]}
-                pointerEvents="none"
-                style={
-                  Object {
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "opacity": 1,
-                    "position": "absolute",
-                    "top": 0,
-                    "transform": Array [
-                      Object {
-                        "scale": 1,
-                      },
-                      Object {
-                        "translateX": 0,
-                      },
-                      Object {
-                        "translateY": 0,
-                      },
-                    ],
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "backgroundColor": "transparent",
-                      "color": "#505050",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 12,
-                      "lineHeight": 17.28,
-                      "paddingVertical": 4,
-                    }
-                  }
-                >
-                  First Name
-                </Text>
               </View>
               <View
                 style={
@@ -2653,34 +2725,81 @@ exports[`The Onboarding AskName component should render a custom description 1`]
                 <View
                   style={
                     Object {
+                      "alignSelf": "flex-end",
                       "flex": 1,
-                      "opacity": 0,
                     }
                   }
                 >
-                  <TextInput
-                    allowFontScaling={true}
-                    editable={true}
-                    enablesReturnKeyAutomatically={true}
-                    onBlur={[Function]}
-                    onChangeText={[Function]}
-                    onFocus={[Function]}
-                    placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                    rejectResponderTermination={true}
-                    returnKeyType="next"
+                  <View
                     style={
                       Object {
-                        "color": "#303030",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 14,
-                        "height": 38,
-                        "paddingVertical": 0,
+                        "opacity": 0,
                       }
                     }
-                    textContentType="familyName"
-                    type="text"
-                    underlineColorAndroid="transparent"
-                  />
+                  >
+                    <TextInput
+                      allowFontScaling={true}
+                      editable={true}
+                      enablesReturnKeyAutomatically={true}
+                      onBlur={[Function]}
+                      onChangeText={[Function]}
+                      onFocus={[Function]}
+                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                      rejectResponderTermination={true}
+                      returnKeyType="next"
+                      style={
+                        Object {
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 14,
+                          "height": 38,
+                          "paddingVertical": 0,
+                        }
+                      }
+                      textContentType="familyName"
+                      type="text"
+                      underlineColorAndroid="transparent"
+                    />
+                  </View>
+                  <View
+                    onLayout={[Function]}
+                    pointerEvents="none"
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "justifyContent": "center",
+                        "opacity": 1,
+                        "position": "absolute",
+                        "top": 0,
+                        "transform": Array [
+                          Object {
+                            "scale": 1,
+                          },
+                          Object {
+                            "translateX": 0,
+                          },
+                          Object {
+                            "translateY": 0,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "color": "#505050",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 12,
+                          "lineHeight": 18,
+                          "paddingVertical": 4,
+                        }
+                      }
+                    >
+                      Last Name
+                    </Text>
+                  </View>
                 </View>
                 <View
                   style={
@@ -2690,45 +2809,6 @@ exports[`The Onboarding AskName component should render a custom description 1`]
                     }
                   }
                 />
-              </View>
-              <View
-                onLayout={[Function]}
-                pointerEvents="none"
-                style={
-                  Object {
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "opacity": 1,
-                    "position": "absolute",
-                    "top": 0,
-                    "transform": Array [
-                      Object {
-                        "scale": 1,
-                      },
-                      Object {
-                        "translateX": 0,
-                      },
-                      Object {
-                        "translateY": 0,
-                      },
-                    ],
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "backgroundColor": "transparent",
-                      "color": "#505050",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 12,
-                      "lineHeight": 17.28,
-                      "paddingVertical": 4,
-                    }
-                  }
-                >
-                  Last Name
-                </Text>
               </View>
               <View
                 style={
@@ -2973,7 +3053,7 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
                 "color": "#505050",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -3017,35 +3097,82 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
                 <View
                   style={
                     Object {
+                      "alignSelf": "flex-end",
                       "flex": 1,
-                      "opacity": 0,
                     }
                   }
                 >
-                  <TextInput
-                    allowFontScaling={true}
-                    editable={true}
-                    enablesReturnKeyAutomatically={true}
-                    onBlur={[Function]}
-                    onChangeText={[Function]}
-                    onFocus={[Function]}
-                    onSubmitEditing={[Function]}
-                    placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                    rejectResponderTermination={true}
-                    returnKeyType="next"
+                  <View
                     style={
                       Object {
-                        "color": "#303030",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 14,
-                        "height": 38,
-                        "paddingVertical": 0,
+                        "opacity": 0,
                       }
                     }
-                    textContentType="givenName"
-                    type="text"
-                    underlineColorAndroid="transparent"
-                  />
+                  >
+                    <TextInput
+                      allowFontScaling={true}
+                      editable={true}
+                      enablesReturnKeyAutomatically={true}
+                      onBlur={[Function]}
+                      onChangeText={[Function]}
+                      onFocus={[Function]}
+                      onSubmitEditing={[Function]}
+                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                      rejectResponderTermination={true}
+                      returnKeyType="next"
+                      style={
+                        Object {
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 14,
+                          "height": 38,
+                          "paddingVertical": 0,
+                        }
+                      }
+                      textContentType="givenName"
+                      type="text"
+                      underlineColorAndroid="transparent"
+                    />
+                  </View>
+                  <View
+                    onLayout={[Function]}
+                    pointerEvents="none"
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "justifyContent": "center",
+                        "opacity": 1,
+                        "position": "absolute",
+                        "top": 0,
+                        "transform": Array [
+                          Object {
+                            "scale": 1,
+                          },
+                          Object {
+                            "translateX": 0,
+                          },
+                          Object {
+                            "translateY": 0,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "color": "#505050",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 12,
+                          "lineHeight": 18,
+                          "paddingVertical": 4,
+                        }
+                      }
+                    >
+                      First Name
+                    </Text>
+                  </View>
                 </View>
                 <View
                   style={
@@ -3055,45 +3182,6 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
                     }
                   }
                 />
-              </View>
-              <View
-                onLayout={[Function]}
-                pointerEvents="none"
-                style={
-                  Object {
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "opacity": 1,
-                    "position": "absolute",
-                    "top": 0,
-                    "transform": Array [
-                      Object {
-                        "scale": 1,
-                      },
-                      Object {
-                        "translateX": 0,
-                      },
-                      Object {
-                        "translateY": 0,
-                      },
-                    ],
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "backgroundColor": "transparent",
-                      "color": "#505050",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 12,
-                      "lineHeight": 17.28,
-                      "paddingVertical": 4,
-                    }
-                  }
-                >
-                  First Name
-                </Text>
               </View>
               <View
                 style={
@@ -3169,34 +3257,81 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
                 <View
                   style={
                     Object {
+                      "alignSelf": "flex-end",
                       "flex": 1,
-                      "opacity": 0,
                     }
                   }
                 >
-                  <TextInput
-                    allowFontScaling={true}
-                    editable={true}
-                    enablesReturnKeyAutomatically={true}
-                    onBlur={[Function]}
-                    onChangeText={[Function]}
-                    onFocus={[Function]}
-                    placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                    rejectResponderTermination={true}
-                    returnKeyType="next"
+                  <View
                     style={
                       Object {
-                        "color": "#303030",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 14,
-                        "height": 38,
-                        "paddingVertical": 0,
+                        "opacity": 0,
                       }
                     }
-                    textContentType="familyName"
-                    type="text"
-                    underlineColorAndroid="transparent"
-                  />
+                  >
+                    <TextInput
+                      allowFontScaling={true}
+                      editable={true}
+                      enablesReturnKeyAutomatically={true}
+                      onBlur={[Function]}
+                      onChangeText={[Function]}
+                      onFocus={[Function]}
+                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                      rejectResponderTermination={true}
+                      returnKeyType="next"
+                      style={
+                        Object {
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 14,
+                          "height": 38,
+                          "paddingVertical": 0,
+                        }
+                      }
+                      textContentType="familyName"
+                      type="text"
+                      underlineColorAndroid="transparent"
+                    />
+                  </View>
+                  <View
+                    onLayout={[Function]}
+                    pointerEvents="none"
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "justifyContent": "center",
+                        "opacity": 1,
+                        "position": "absolute",
+                        "top": 0,
+                        "transform": Array [
+                          Object {
+                            "scale": 1,
+                          },
+                          Object {
+                            "translateX": 0,
+                          },
+                          Object {
+                            "translateY": 0,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "color": "#505050",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 12,
+                          "lineHeight": 18,
+                          "paddingVertical": 4,
+                        }
+                      }
+                    >
+                      Last Name
+                    </Text>
+                  </View>
                 </View>
                 <View
                   style={
@@ -3206,45 +3341,6 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
                     }
                   }
                 />
-              </View>
-              <View
-                onLayout={[Function]}
-                pointerEvents="none"
-                style={
-                  Object {
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "opacity": 1,
-                    "position": "absolute",
-                    "top": 0,
-                    "transform": Array [
-                      Object {
-                        "scale": 1,
-                      },
-                      Object {
-                        "translateX": 0,
-                      },
-                      Object {
-                        "translateY": 0,
-                      },
-                    ],
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "backgroundColor": "transparent",
-                      "color": "#505050",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 12,
-                      "lineHeight": 17.28,
-                      "paddingVertical": 4,
-                    }
-                  }
-                >
-                  Last Name
-                </Text>
               </View>
               <View
                 style={
@@ -3489,7 +3585,7 @@ exports[`The Onboarding AskName component should render a loading state 1`] = `
                 "color": "#505050",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -3534,35 +3630,82 @@ exports[`The Onboarding AskName component should render a loading state 1`] = `
                 <View
                   style={
                     Object {
+                      "alignSelf": "flex-end",
                       "flex": 1,
-                      "opacity": 0,
                     }
                   }
                 >
-                  <TextInput
-                    allowFontScaling={true}
-                    editable={false}
-                    enablesReturnKeyAutomatically={true}
-                    onBlur={[Function]}
-                    onChangeText={[Function]}
-                    onFocus={[Function]}
-                    onSubmitEditing={[Function]}
-                    placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                    rejectResponderTermination={true}
-                    returnKeyType="next"
+                  <View
                     style={
                       Object {
-                        "color": "#303030",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 14,
-                        "height": 38,
-                        "paddingVertical": 0,
+                        "opacity": 0,
                       }
                     }
-                    textContentType="givenName"
-                    type="text"
-                    underlineColorAndroid="transparent"
-                  />
+                  >
+                    <TextInput
+                      allowFontScaling={true}
+                      editable={false}
+                      enablesReturnKeyAutomatically={true}
+                      onBlur={[Function]}
+                      onChangeText={[Function]}
+                      onFocus={[Function]}
+                      onSubmitEditing={[Function]}
+                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                      rejectResponderTermination={true}
+                      returnKeyType="next"
+                      style={
+                        Object {
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 14,
+                          "height": 38,
+                          "paddingVertical": 0,
+                        }
+                      }
+                      textContentType="givenName"
+                      type="text"
+                      underlineColorAndroid="transparent"
+                    />
+                  </View>
+                  <View
+                    onLayout={[Function]}
+                    pointerEvents="none"
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "justifyContent": "center",
+                        "opacity": 1,
+                        "position": "absolute",
+                        "top": 0,
+                        "transform": Array [
+                          Object {
+                            "scale": 1,
+                          },
+                          Object {
+                            "translateX": 0,
+                          },
+                          Object {
+                            "translateY": 0,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "color": "#505050",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 12,
+                          "lineHeight": 18,
+                          "paddingVertical": 4,
+                        }
+                      }
+                    >
+                      First Name
+                    </Text>
+                  </View>
                 </View>
                 <View
                   style={
@@ -3572,45 +3715,6 @@ exports[`The Onboarding AskName component should render a loading state 1`] = `
                     }
                   }
                 />
-              </View>
-              <View
-                onLayout={[Function]}
-                pointerEvents="none"
-                style={
-                  Object {
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "opacity": 1,
-                    "position": "absolute",
-                    "top": 0,
-                    "transform": Array [
-                      Object {
-                        "scale": 1,
-                      },
-                      Object {
-                        "translateX": 0,
-                      },
-                      Object {
-                        "translateY": 0,
-                      },
-                    ],
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "backgroundColor": "transparent",
-                      "color": "#505050",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 12,
-                      "lineHeight": 17.28,
-                      "paddingVertical": 4,
-                    }
-                  }
-                >
-                  First Name
-                </Text>
               </View>
               <View
                 style={
@@ -3687,34 +3791,81 @@ exports[`The Onboarding AskName component should render a loading state 1`] = `
                 <View
                   style={
                     Object {
+                      "alignSelf": "flex-end",
                       "flex": 1,
-                      "opacity": 0,
                     }
                   }
                 >
-                  <TextInput
-                    allowFontScaling={true}
-                    editable={false}
-                    enablesReturnKeyAutomatically={true}
-                    onBlur={[Function]}
-                    onChangeText={[Function]}
-                    onFocus={[Function]}
-                    placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                    rejectResponderTermination={true}
-                    returnKeyType="next"
+                  <View
                     style={
                       Object {
-                        "color": "#303030",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 14,
-                        "height": 38,
-                        "paddingVertical": 0,
+                        "opacity": 0,
                       }
                     }
-                    textContentType="familyName"
-                    type="text"
-                    underlineColorAndroid="transparent"
-                  />
+                  >
+                    <TextInput
+                      allowFontScaling={true}
+                      editable={false}
+                      enablesReturnKeyAutomatically={true}
+                      onBlur={[Function]}
+                      onChangeText={[Function]}
+                      onFocus={[Function]}
+                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                      rejectResponderTermination={true}
+                      returnKeyType="next"
+                      style={
+                        Object {
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 14,
+                          "height": 38,
+                          "paddingVertical": 0,
+                        }
+                      }
+                      textContentType="familyName"
+                      type="text"
+                      underlineColorAndroid="transparent"
+                    />
+                  </View>
+                  <View
+                    onLayout={[Function]}
+                    pointerEvents="none"
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "justifyContent": "center",
+                        "opacity": 1,
+                        "position": "absolute",
+                        "top": 0,
+                        "transform": Array [
+                          Object {
+                            "scale": 1,
+                          },
+                          Object {
+                            "translateX": 0,
+                          },
+                          Object {
+                            "translateY": 0,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "backgroundColor": "transparent",
+                          "color": "#505050",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 12,
+                          "lineHeight": 18,
+                          "paddingVertical": 4,
+                        }
+                      }
+                    >
+                      Last Name
+                    </Text>
+                  </View>
                 </View>
                 <View
                   style={
@@ -3724,45 +3875,6 @@ exports[`The Onboarding AskName component should render a loading state 1`] = `
                     }
                   }
                 />
-              </View>
-              <View
-                onLayout={[Function]}
-                pointerEvents="none"
-                style={
-                  Object {
-                    "bottom": 0,
-                    "justifyContent": "center",
-                    "opacity": 1,
-                    "position": "absolute",
-                    "top": 0,
-                    "transform": Array [
-                      Object {
-                        "scale": 1,
-                      },
-                      Object {
-                        "translateX": 0,
-                      },
-                      Object {
-                        "translateY": 0,
-                      },
-                    ],
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "backgroundColor": "transparent",
-                      "color": "#505050",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 12,
-                      "lineHeight": 17.28,
-                      "paddingVertical": 4,
-                    }
-                  }
-                >
-                  Last Name
-                </Text>
               </View>
               <View
                 style={

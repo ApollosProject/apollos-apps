@@ -41,7 +41,7 @@ describe('LiveStream', () => {
   it('returns', async () => {
     const query = `
       query {
-        liveStream {
+        liveStreams {
           isLive
           eventStartTime
           media {
@@ -52,6 +52,14 @@ describe('LiveStream', () => {
       }
     `;
     const rootValue = {};
+    context.dataSources = {
+      ...context.dataSources,
+      ContentItem: {
+        getActiveLiveStreamContent: jest.fn(() => [
+          { id: 1, title: 'this will not resolve or show up in the snap' },
+        ]),
+      },
+    };
 
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();

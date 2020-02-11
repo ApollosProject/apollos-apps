@@ -6,14 +6,24 @@ import { Providers } from '../../testUtils';
 
 import AboutYou from '.';
 
+let realDateNow;
+
 describe('The Onboarding AboutYou component', () => {
+  beforeAll(() => {
+    realDateNow = Date.now.bind(global.Date);
+    const dateNowStub = jest.fn(() => 1530518207007);
+    global.Date.now = dateNowStub;
+  });
+  afterAll(() => {
+    global.Date.now = realDateNow;
+  });
   it('should render', () => {
     /* we have to pass in a date via defaultDate or the DateInput component will create a current date
      * object and invalidate the snapshots every time. */
     const tree = renderer.create(
       <Providers>
         <AboutYou
-          defaultDate={'2019-02-14T05:00:00.000Z'}
+          defaultDate={new Date('2019-02-14T05:00:00.000Z')}
           setFieldValue={jest.fn()}
         />
       </Providers>
@@ -27,7 +37,7 @@ describe('The Onboarding AboutYou component', () => {
       <Providers>
         <AboutYou
           slideTitle={'Custom title text'}
-          defaultDate={'2019-02-14T05:00:00.000Z'}
+          defaultDate={new Date('2019-02-14T05:00:00.000Z')}
           setFieldValue={jest.fn()}
         />
       </Providers>
@@ -41,7 +51,7 @@ describe('The Onboarding AboutYou component', () => {
       <Providers>
         <AboutYou
           description={'Custom description text'}
-          defaultDate={'2019-02-14T05:00:00.000Z'}
+          defaultDate={new Date('2019-02-14T05:00:00.000Z')}
           setFieldValue={jest.fn()}
         />
       </Providers>
@@ -55,7 +65,7 @@ describe('The Onboarding AboutYou component', () => {
       <Providers>
         <AboutYou
           genderList={['M', 'F']}
-          defaultDate={'2019-02-14T05:00:00.000Z'}
+          defaultDate={new Date('2019-02-14T05:00:00.000Z')}
           setFieldValue={jest.fn()}
         />
       </Providers>
@@ -69,7 +79,7 @@ describe('The Onboarding AboutYou component', () => {
       <Providers>
         <AboutYou
           values={{ gender: 'Male' }}
-          defaultDate={'2019-02-14T05:00:00.000Z'}
+          defaultDate={new Date('2019-02-14T05:00:00.000Z')}
           setFieldValue={jest.fn()}
         />
       </Providers>
@@ -99,7 +109,7 @@ describe('The Onboarding AboutYou component', () => {
             gender: 'Gender errors',
             birthDate: 'BirthDate errors',
           }}
-          defaultDate={'2019-02-14T05:00:00.000Z'}
+          defaultDate={new Date('2019-02-14T05:00:00.000Z')}
           setFieldValue={jest.fn()}
         />
       </Providers>
@@ -117,7 +127,7 @@ describe('The Onboarding AboutYou component', () => {
               source={'https://picsum.photos/640/640/?random'}
             />
           }
-          defaultDate={'2019-02-14T05:00:00.000Z'}
+          defaultDate={new Date('2019-02-14T05:00:00.000Z')}
           setFieldValue={jest.fn()}
         />
       </Providers>
@@ -131,7 +141,7 @@ describe('The Onboarding AboutYou component', () => {
       <Providers>
         <AboutYou
           onPressPrimary={jest.fn()}
-          defaultDate={'2019-02-14T05:00:00.000Z'}
+          defaultDate={new Date('2019-02-14T05:00:00.000Z')}
           setFieldValue={jest.fn()}
         />
       </Providers>

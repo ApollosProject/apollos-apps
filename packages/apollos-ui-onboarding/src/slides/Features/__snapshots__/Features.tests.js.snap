@@ -58,7 +58,7 @@ Array [
                 "color": "#505050",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -138,7 +138,7 @@ Array [
                 "color": "#FFFFFF",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -326,7 +326,7 @@ exports[`The Onboarding Features component should render 1`] = `
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -439,7 +439,7 @@ exports[`The Onboarding Features component should render a BackgroundComponent 1
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -508,7 +508,7 @@ exports[`The Onboarding Features component should render a custom description 1`
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -577,7 +577,7 @@ exports[`The Onboarding Features component should render a custom first name 1`]
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -647,7 +647,7 @@ exports[`The Onboarding Features component should render a custom title 1`] = `
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >

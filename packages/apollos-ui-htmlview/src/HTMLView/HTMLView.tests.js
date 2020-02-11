@@ -78,10 +78,28 @@ describe('the HTMLView component', () => {
 
     expect(tree).toMatchSnapshot();
   });
+  it('should render italic text using <i>', () => {
+    const tree = renderer.create(
+      <Providers>
+        <HTMLView>{'<p><i>Testings</i></p>'}</HTMLView>
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
   it('should render bold text', () => {
     const tree = renderer.create(
       <Providers>
         <HTMLView>{'<p><strong>Testings</strong></p>'}</HTMLView>
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render bold text using <b>', () => {
+    const tree = renderer.create(
+      <Providers>
+        <HTMLView>{'<p><b>Testings</b></p>'}</HTMLView>
       </Providers>
     );
 
@@ -161,10 +179,46 @@ describe('the HTMLView component', () => {
 
     expect(tree).toMatchSnapshot();
   });
+  it('should render a div as a View', () => {
+    const tree = renderer.create(
+      <Providers>
+        <HTMLView>{'<div>Boom</div>'}</HTMLView>
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
   it('should render a line break (br)', () => {
     const tree = renderer.create(
       <Providers>
         <HTMLView>{'<p>Testings</p><br>'}</HTMLView>
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render a line break (br) without a parent', () => {
+    const tree = renderer.create(
+      <Providers>
+        <HTMLView>{'<p>Testings</p><br><p>Testings 2</p>'}</HTMLView>
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
+  it('should handle wierdly formatted nested line breaks in divs used to create poorly formatted html block spacing created by WYSIWYG editors', () => {
+    const tree = renderer.create(
+      <Providers>
+        <HTMLView>{'<div><br /></div>'}</HTMLView>
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
+  it('should handle wierdly formatted nested line breaks in divs used to create poorly formatted html inline spacing created by WYSIWYG editors', () => {
+    const tree = renderer.create(
+      <Providers>
+        <HTMLView>{'<span><br /></span>'}</HTMLView>
       </Providers>
     );
 

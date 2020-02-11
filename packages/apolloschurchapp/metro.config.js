@@ -12,27 +12,36 @@ const flatten = (array) =>
   array.reduce((accum, curr) => curr.concat(accum), []);
 
 const localDeps = [
-  path.resolve('..', 'apollos-ui-kit'),
-  path.resolve('..', 'apollos-ui-passes'),
-  path.resolve('..', 'apollos-ui-auth'),
-  path.resolve('..', 'apollos-ui-htmlview'),
+  path.resolve('..', 'apollos-config'),
   path.resolve('..', 'apollos-ui-analytics'),
-  path.resolve('..', 'apollos-ui-storybook'),
-  path.resolve('..', 'apollos-ui-onboarding'),
+  path.resolve('..', 'apollos-ui-auth'),
+  path.resolve('..', 'apollos-ui-connected'),
+  path.resolve('..', 'apollos-ui-fragments'),
+  path.resolve('..', 'apollos-ui-htmlview'),
+  path.resolve('..', 'apollos-ui-kit'),
+  path.resolve('..', 'apollos-ui-mapview'),
   path.resolve('..', 'apollos-ui-media-player'),
-  path.resolve('..', 'apollos-ui-scripture'),
   path.resolve('..', 'apollos-ui-notifications'),
+  path.resolve('..', 'apollos-ui-onboarding'),
+  path.resolve('..', 'apollos-ui-passes'),
+  path.resolve('..', 'apollos-ui-scripture'),
+  path.resolve('..', 'apollos-ui-storybook'),
 ];
 
 const sharedNativeModules = [
+  '@apollosproject/react-native-airplay-btn',
+  '@react-native-community/async-storage',
+  'react-native-config',
+  'react-native-gesture-handler',
   'react-native-linear-gradient',
+  'react-native-maps',
+  'react-native-modal-datetime-picker',
+  'react-native-music-control',
+  'react-native-onesignal',
   'react-native-safe-area-context',
   'react-native-svg',
-  'react-native-onesignal',
-  'react-native-music-control',
   'react-native-video',
   'react-native-video-controls',
-  '@apollosproject/react-native-airplay-btn',
   'react-navigation',
 ];
 

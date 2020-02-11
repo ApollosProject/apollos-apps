@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 import { ScrollView } from 'react-native';
-import { StackActions, NavigationActions } from 'react-navigation';
 import PropTypes from 'prop-types';
 import { Query, Mutation } from 'react-apollo';
+import { getVersion, getBuildNumber } from 'react-native-device-info';
 
 import {
   BackgroundView,
@@ -14,10 +14,13 @@ import {
   Touchable,
   ActivityIndicator,
 } from '@apollosproject/ui-kit';
-import { WebBrowserConsumer } from 'apolloschurchapp/src/ui/WebBrowser';
 
 import { GET_LOGIN_STATE, LOGOUT } from '@apollosproject/ui-auth';
-import ChangeAvatar from './ChangeAvatar';
+import {
+  RockAuthedWebBrowser,
+  UserAvatarUpdate,
+} from '@apollosproject/ui-connected';
+import NavigationService from '../NavigationService';
 
 class UserSettings extends PureComponent {
   static navigationOptions = () => ({
@@ -40,9 +43,9 @@ class UserSettings extends PureComponent {
           return (
             <BackgroundView>
               <ScrollView>
-                <ChangeAvatar />
+                <UserAvatarUpdate />
 
-                <WebBrowserConsumer>
+                <RockAuthedWebBrowser>
                   {(openUrl) => (
                     <>
                       <TableView>
@@ -126,21 +129,7 @@ class UserSettings extends PureComponent {
                                 await handleLogout();
                                 // This resets the navigation stack, and the navigates to the first auth screen.
                                 // This ensures that user isn't navigated to a subscreen of Auth, like the pin entry screen.
-                                await this.props.navigation.dispatch(
-                                  StackActions.reset({
-                                    index: 0,
-                                    key: null,
-                                    actions: [
-                                      NavigationActions.navigate({
-                                        routeName: 'Auth',
-                                        action: NavigationActions.navigate({
-                                          routeName:
-                                            'AuthSMSPhoneEntryConnected',
-                                        }),
-                                      }),
-                                    ],
-                                  })
-                                );
+                                await NavigationService.resetToAuth();
                               }}
                             >
                               <Cell>
@@ -151,9 +140,16 @@ class UserSettings extends PureComponent {
                           )}
                         </Mutation>
                       </TableView>
+                      <TableView>
+                        <Cell>
+                          <CellText>
+                            {`App Version: ${getVersion()}.${getBuildNumber()}`}
+                          </CellText>
+                        </Cell>
+                      </TableView>
                     </>
                   )}
-                </WebBrowserConsumer>
+                </RockAuthedWebBrowser>
               </ScrollView>
             </BackgroundView>
           );

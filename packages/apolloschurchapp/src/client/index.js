@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-client';
 import { ApolloLink } from 'apollo-link';
+import { getVersion, getApplicationName } from 'react-native-device-info';
 
 import { authLink, buildErrorLink } from '@apollosproject/ui-auth';
 import { resolvers, schema, defaults } from '../store';
@@ -10,12 +11,17 @@ import NavigationService from '../NavigationService';
 import httpLink from './httpLink';
 import cache, { ensureCacheHydration, MARK_CACHE_LOADED } from './cache';
 
-const goToAuth = () => NavigationService.navigate('Auth');
+const goToAuth = () => NavigationService.resetToAuth();
 const wipeData = () => cache.writeData({ data: defaults });
 
-let resetStore;
-const onAuthError = () => {
-  resetStore();
+let clearStore;
+let storeIsResetting = false;
+const onAuthError = async () => {
+  if (!storeIsResetting) {
+    storeIsResetting = true;
+    await clearStore();
+  }
+  storeIsResetting = false;
   goToAuth();
 };
 
@@ -30,15 +36,17 @@ export const client = new ApolloClient({
   shouldBatch: true,
   resolvers,
   typeDefs: schema,
+  name: getApplicationName(),
+  version: getVersion(),
 });
 
 // Hack to give auth link access to method on client;
 // eslint-disable-next-line prefer-destructuring
-resetStore = client.resetStore;
+clearStore = client.clearStore;
 
 wipeData();
 // Ensure that media player still works after logout.
-client.onResetStore(() => wipeData());
+client.onClearStore(() => wipeData());
 
 class ClientProvider extends PureComponent {
   static propTypes = {

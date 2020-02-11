@@ -58,7 +58,7 @@ Array [
                 "color": "#505050",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -72,10 +72,10 @@ Array [
               "color": "gray",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
-              "lineHeight": 17.28,
+              "lineHeight": 18,
               "marginTop": 16,
               "opacity": 0.7,
-              "paddingBottom": 8.64,
+              "paddingBottom": 9,
             }
           }
         >
@@ -118,7 +118,7 @@ Array [
                 Object {
                   "alignItems": "center",
                   "borderColor": "#A5A5A5",
-                  "borderRadius": 99,
+                  "borderRadius": 10,
                   "borderWidth": 2,
                   "height": 20,
                   "justifyContent": "center",
@@ -132,7 +132,7 @@ Array [
                   "color": "#303030",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
+                  "lineHeight": 21,
                   "marginLeft": 8,
                 }
               }
@@ -167,7 +167,7 @@ Array [
                 Object {
                   "alignItems": "center",
                   "borderColor": "#A5A5A5",
-                  "borderRadius": 99,
+                  "borderRadius": 10,
                   "borderWidth": 2,
                   "height": 20,
                   "justifyContent": "center",
@@ -181,12 +181,61 @@ Array [
                   "color": "#303030",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
-                  "lineHeight": 20.16,
+                  "lineHeight": 21,
                   "marginLeft": 8,
                 }
               }
             >
               Female
+            </Text>
+          </View>
+          <View
+            accessible={true}
+            clickable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "borderBottomColor": "rgba(165, 165, 165, 0.5)",
+                "borderBottomWidth": 0,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 8,
+              }
+            }
+            underline={false}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "#A5A5A5",
+                  "borderRadius": 10,
+                  "borderWidth": 2,
+                  "height": 20,
+                  "justifyContent": "center",
+                  "width": 20,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
+                  "marginLeft": 8,
+                }
+              }
+            >
+              Prefer not to reply
             </Text>
           </View>
         </View>
@@ -196,7 +245,7 @@ Array [
               "color": "gray",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
-              "lineHeight": 17.28,
+              "lineHeight": 18,
               "opacity": 0.7,
             }
           }
@@ -257,7 +306,7 @@ Array [
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "justifyContent": "center",
-                    "lineHeight": 17.28,
+                    "lineHeight": 18,
                     "paddingLeft": null,
                     "textAlign": "center",
                   }
@@ -272,7 +321,10 @@ Array [
             hardwareAccelerated={false}
             hideModalContentWhileAnimating={false}
             onModalHide={[Function]}
+            onModalWillHide={[Function]}
+            onModalWillShow={[Function]}
             onRequestClose={[Function]}
+            scrollHorizontal={false}
             scrollOffset={0}
             scrollOffsetMax={0}
             scrollTo={null}
@@ -313,7 +365,10 @@ Array [
             <View
               hideModalContentWhileAnimating={false}
               onModalHide={[Function]}
+              onModalWillHide={[Function]}
+              onModalWillShow={[Function]}
               pointerEvents="box-none"
+              scrollHorizontal={false}
               scrollOffset={0}
               scrollOffsetMax={0}
               scrollTo={null}
@@ -341,10 +396,12 @@ Array [
                 style={
                   Array [
                     Object {
-                      "backgroundColor": "white",
                       "borderRadius": 13,
                       "marginBottom": 8,
                       "overflow": "hidden",
+                    },
+                    Object {
+                      "backgroundColor": "white",
                     },
                     undefined,
                   ]
@@ -380,6 +437,8 @@ Array [
                 >
                   <DatePicker
                     date={2019-02-14T05:00:00.000Z}
+                    datePickerModeAndroid="spinner"
+                    maximumDate={2018-07-02T07:56:47.007Z}
                     minuteInterval={1}
                     mode="date"
                     onCancel={[Function]}
@@ -439,13 +498,18 @@ Array [
                 onResponderTerminationRequest={[Function]}
                 onStartShouldSetResponder={[Function]}
                 style={
-                  Object {
-                    "backgroundColor": "white",
-                    "borderRadius": 13,
-                    "height": 57,
-                    "justifyContent": "center",
-                    "marginBottom": 0,
-                  }
+                  Array [
+                    Object {
+                      "borderRadius": 13,
+                      "height": 57,
+                      "justifyContent": "center",
+                      "marginBottom": 0,
+                    },
+                    Object {
+                      "backgroundColor": "white",
+                    },
+                    undefined,
+                  ]
                 }
               >
                 <Text
@@ -499,7 +563,7 @@ Array [
                   "color": "#505050",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                   "paddingVertical": 4,
                 }
               }
@@ -579,7 +643,7 @@ Array [
                 "color": "#FFFFFF",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
               }
             }
           >
@@ -767,7 +831,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -781,10 +845,10 @@ exports[`The Onboarding AboutYou component should render 1`] = `
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "marginTop": 16,
             "opacity": 0.7,
-            "paddingBottom": 8.64,
+            "paddingBottom": 9,
           }
         }
       >
@@ -827,7 +891,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
               Object {
                 "alignItems": "center",
                 "borderColor": "#A5A5A5",
-                "borderRadius": 99,
+                "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
                 "justifyContent": "center",
@@ -841,7 +905,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -876,7 +940,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
               Object {
                 "alignItems": "center",
                 "borderColor": "#A5A5A5",
-                "borderRadius": 99,
+                "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
                 "justifyContent": "center",
@@ -890,12 +954,61 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
           >
             Female
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomColor": "rgba(165, 165, 165, 0.5)",
+              "borderBottomWidth": 0,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 8,
+            }
+          }
+          underline={false}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "borderColor": "#A5A5A5",
+                "borderRadius": 10,
+                "borderWidth": 2,
+                "height": 20,
+                "justifyContent": "center",
+                "width": 20,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+                "marginLeft": 8,
+              }
+            }
+          >
+            Prefer not to reply
           </Text>
         </View>
       </View>
@@ -905,7 +1018,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "opacity": 0.7,
           }
         }
@@ -966,7 +1079,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
                   "justifyContent": "center",
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                   "paddingLeft": null,
                   "textAlign": "center",
                 }
@@ -981,7 +1094,10 @@ exports[`The Onboarding AboutYou component should render 1`] = `
           hardwareAccelerated={false}
           hideModalContentWhileAnimating={false}
           onModalHide={[Function]}
+          onModalWillHide={[Function]}
+          onModalWillShow={[Function]}
           onRequestClose={[Function]}
+          scrollHorizontal={false}
           scrollOffset={0}
           scrollOffsetMax={0}
           scrollTo={null}
@@ -1022,7 +1138,10 @@ exports[`The Onboarding AboutYou component should render 1`] = `
           <View
             hideModalContentWhileAnimating={false}
             onModalHide={[Function]}
+            onModalWillHide={[Function]}
+            onModalWillShow={[Function]}
             pointerEvents="box-none"
+            scrollHorizontal={false}
             scrollOffset={0}
             scrollOffsetMax={0}
             scrollTo={null}
@@ -1050,10 +1169,12 @@ exports[`The Onboarding AboutYou component should render 1`] = `
               style={
                 Array [
                   Object {
-                    "backgroundColor": "white",
                     "borderRadius": 13,
                     "marginBottom": 8,
                     "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "white",
                   },
                   undefined,
                 ]
@@ -1089,6 +1210,8 @@ exports[`The Onboarding AboutYou component should render 1`] = `
               >
                 <DatePicker
                   date={2019-02-14T05:00:00.000Z}
+                  datePickerModeAndroid="spinner"
+                  maximumDate={2018-07-02T07:56:47.007Z}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}
@@ -1148,13 +1271,18 @@ exports[`The Onboarding AboutYou component should render 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 13,
-                  "height": 57,
-                  "justifyContent": "center",
-                  "marginBottom": 0,
-                }
+                Array [
+                  Object {
+                    "borderRadius": 13,
+                    "height": 57,
+                    "justifyContent": "center",
+                    "marginBottom": 0,
+                  },
+                  Object {
+                    "backgroundColor": "white",
+                  },
+                  undefined,
+                ]
               }
             >
               <Text
@@ -1208,7 +1336,7 @@ exports[`The Onboarding AboutYou component should render 1`] = `
                 "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingVertical": 4,
               }
             }
@@ -1321,7 +1449,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -1335,10 +1463,10 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "marginTop": 16,
             "opacity": 0.7,
-            "paddingBottom": 8.64,
+            "paddingBottom": 9,
           }
         }
       >
@@ -1381,7 +1509,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
               Object {
                 "alignItems": "center",
                 "borderColor": "#A5A5A5",
-                "borderRadius": 99,
+                "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
                 "justifyContent": "center",
@@ -1395,7 +1523,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -1430,7 +1558,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
               Object {
                 "alignItems": "center",
                 "borderColor": "#A5A5A5",
-                "borderRadius": 99,
+                "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
                 "justifyContent": "center",
@@ -1444,12 +1572,61 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
           >
             Female
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomColor": "rgba(165, 165, 165, 0.5)",
+              "borderBottomWidth": 0,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 8,
+            }
+          }
+          underline={false}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "borderColor": "#A5A5A5",
+                "borderRadius": 10,
+                "borderWidth": 2,
+                "height": 20,
+                "justifyContent": "center",
+                "width": 20,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+                "marginLeft": 8,
+              }
+            }
+          >
+            Prefer not to reply
           </Text>
         </View>
       </View>
@@ -1459,7 +1636,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "opacity": 0.7,
           }
         }
@@ -1520,7 +1697,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
                   "justifyContent": "center",
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                   "paddingLeft": null,
                   "textAlign": "center",
                 }
@@ -1535,7 +1712,10 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
           hardwareAccelerated={false}
           hideModalContentWhileAnimating={false}
           onModalHide={[Function]}
+          onModalWillHide={[Function]}
+          onModalWillShow={[Function]}
           onRequestClose={[Function]}
+          scrollHorizontal={false}
           scrollOffset={0}
           scrollOffsetMax={0}
           scrollTo={null}
@@ -1576,7 +1756,10 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
           <View
             hideModalContentWhileAnimating={false}
             onModalHide={[Function]}
+            onModalWillHide={[Function]}
+            onModalWillShow={[Function]}
             pointerEvents="box-none"
+            scrollHorizontal={false}
             scrollOffset={0}
             scrollOffsetMax={0}
             scrollTo={null}
@@ -1604,10 +1787,12 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
               style={
                 Array [
                   Object {
-                    "backgroundColor": "white",
                     "borderRadius": 13,
                     "marginBottom": 8,
                     "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "white",
                   },
                   undefined,
                 ]
@@ -1643,6 +1828,8 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
               >
                 <DatePicker
                   date={2019-02-14T05:00:00.000Z}
+                  datePickerModeAndroid="spinner"
+                  maximumDate={2018-07-02T07:56:47.007Z}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}
@@ -1702,13 +1889,18 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 13,
-                  "height": 57,
-                  "justifyContent": "center",
-                  "marginBottom": 0,
-                }
+                Array [
+                  Object {
+                    "borderRadius": 13,
+                    "height": 57,
+                    "justifyContent": "center",
+                    "marginBottom": 0,
+                  },
+                  Object {
+                    "backgroundColor": "white",
+                  },
+                  undefined,
+                ]
               }
             >
               <Text
@@ -1762,7 +1954,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
                 "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingVertical": 4,
               }
             }
@@ -1831,7 +2023,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -1845,10 +2037,10 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "marginTop": 16,
             "opacity": 0.7,
-            "paddingBottom": 8.64,
+            "paddingBottom": 9,
           }
         }
       >
@@ -1891,7 +2083,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
               Object {
                 "alignItems": "center",
                 "borderColor": "#A5A5A5",
-                "borderRadius": 99,
+                "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
                 "justifyContent": "center",
@@ -1905,7 +2097,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -1940,7 +2132,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
               Object {
                 "alignItems": "center",
                 "borderColor": "#A5A5A5",
-                "borderRadius": 99,
+                "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
                 "justifyContent": "center",
@@ -1954,12 +2146,61 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
           >
             Female
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomColor": "rgba(165, 165, 165, 0.5)",
+              "borderBottomWidth": 0,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 8,
+            }
+          }
+          underline={false}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "borderColor": "#A5A5A5",
+                "borderRadius": 10,
+                "borderWidth": 2,
+                "height": 20,
+                "justifyContent": "center",
+                "width": 20,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+                "marginLeft": 8,
+              }
+            }
+          >
+            Prefer not to reply
           </Text>
         </View>
       </View>
@@ -1969,7 +2210,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "opacity": 0.7,
           }
         }
@@ -2030,7 +2271,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
                   "justifyContent": "center",
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                   "paddingLeft": null,
                   "textAlign": "center",
                 }
@@ -2045,7 +2286,10 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
           hardwareAccelerated={false}
           hideModalContentWhileAnimating={false}
           onModalHide={[Function]}
+          onModalWillHide={[Function]}
+          onModalWillShow={[Function]}
           onRequestClose={[Function]}
+          scrollHorizontal={false}
           scrollOffset={0}
           scrollOffsetMax={0}
           scrollTo={null}
@@ -2086,7 +2330,10 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
           <View
             hideModalContentWhileAnimating={false}
             onModalHide={[Function]}
+            onModalWillHide={[Function]}
+            onModalWillShow={[Function]}
             pointerEvents="box-none"
+            scrollHorizontal={false}
             scrollOffset={0}
             scrollOffsetMax={0}
             scrollTo={null}
@@ -2114,10 +2361,12 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
               style={
                 Array [
                   Object {
-                    "backgroundColor": "white",
                     "borderRadius": 13,
                     "marginBottom": 8,
                     "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "white",
                   },
                   undefined,
                 ]
@@ -2153,6 +2402,8 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
               >
                 <DatePicker
                   date={2019-02-14T05:00:00.000Z}
+                  datePickerModeAndroid="spinner"
+                  maximumDate={2018-07-02T07:56:47.007Z}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}
@@ -2212,13 +2463,18 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 13,
-                  "height": 57,
-                  "justifyContent": "center",
-                  "marginBottom": 0,
-                }
+                Array [
+                  Object {
+                    "borderRadius": 13,
+                    "height": 57,
+                    "justifyContent": "center",
+                    "marginBottom": 0,
+                  },
+                  Object {
+                    "backgroundColor": "white",
+                  },
+                  undefined,
+                ]
               }
             >
               <Text
@@ -2272,7 +2528,7 @@ exports[`The Onboarding AboutYou component should render a custom description 1`
                 "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingVertical": 4,
               }
             }
@@ -2341,7 +2597,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -2355,10 +2611,10 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "marginTop": 16,
             "opacity": 0.7,
-            "paddingBottom": 8.64,
+            "paddingBottom": 9,
           }
         }
       >
@@ -2401,7 +2657,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
               Object {
                 "alignItems": "center",
                 "borderColor": "#A5A5A5",
-                "borderRadius": 99,
+                "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
                 "justifyContent": "center",
@@ -2415,7 +2671,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -2450,7 +2706,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
               Object {
                 "alignItems": "center",
                 "borderColor": "#A5A5A5",
-                "borderRadius": 99,
+                "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
                 "justifyContent": "center",
@@ -2464,7 +2720,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -2479,7 +2735,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "opacity": 0.7,
           }
         }
@@ -2540,7 +2796,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
                   "justifyContent": "center",
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                   "paddingLeft": null,
                   "textAlign": "center",
                 }
@@ -2555,7 +2811,10 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
           hardwareAccelerated={false}
           hideModalContentWhileAnimating={false}
           onModalHide={[Function]}
+          onModalWillHide={[Function]}
+          onModalWillShow={[Function]}
           onRequestClose={[Function]}
+          scrollHorizontal={false}
           scrollOffset={0}
           scrollOffsetMax={0}
           scrollTo={null}
@@ -2596,7 +2855,10 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
           <View
             hideModalContentWhileAnimating={false}
             onModalHide={[Function]}
+            onModalWillHide={[Function]}
+            onModalWillShow={[Function]}
             pointerEvents="box-none"
+            scrollHorizontal={false}
             scrollOffset={0}
             scrollOffsetMax={0}
             scrollTo={null}
@@ -2624,10 +2886,12 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
               style={
                 Array [
                   Object {
-                    "backgroundColor": "white",
                     "borderRadius": 13,
                     "marginBottom": 8,
                     "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "white",
                   },
                   undefined,
                 ]
@@ -2663,6 +2927,8 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
               >
                 <DatePicker
                   date={2019-02-14T05:00:00.000Z}
+                  datePickerModeAndroid="spinner"
+                  maximumDate={2018-07-02T07:56:47.007Z}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}
@@ -2722,13 +2988,18 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 13,
-                  "height": 57,
-                  "justifyContent": "center",
-                  "marginBottom": 0,
-                }
+                Array [
+                  Object {
+                    "borderRadius": 13,
+                    "height": 57,
+                    "justifyContent": "center",
+                    "marginBottom": 0,
+                  },
+                  Object {
+                    "backgroundColor": "white",
+                  },
+                  undefined,
+                ]
               }
             >
               <Text
@@ -2782,7 +3053,7 @@ exports[`The Onboarding AboutYou component should render a custom gender list 1`
                 "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingVertical": 4,
               }
             }
@@ -2851,7 +3122,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -2865,10 +3136,10 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "marginTop": 16,
             "opacity": 0.7,
-            "paddingBottom": 8.64,
+            "paddingBottom": 9,
           }
         }
       >
@@ -2911,7 +3182,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
               Object {
                 "alignItems": "center",
                 "borderColor": "#A5A5A5",
-                "borderRadius": 99,
+                "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
                 "justifyContent": "center",
@@ -2925,7 +3196,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -2960,7 +3231,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
               Object {
                 "alignItems": "center",
                 "borderColor": "#A5A5A5",
-                "borderRadius": 99,
+                "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
                 "justifyContent": "center",
@@ -2974,12 +3245,61 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
           >
             Female
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomColor": "rgba(165, 165, 165, 0.5)",
+              "borderBottomWidth": 0,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 8,
+            }
+          }
+          underline={false}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "borderColor": "#A5A5A5",
+                "borderRadius": 10,
+                "borderWidth": 2,
+                "height": 20,
+                "justifyContent": "center",
+                "width": 20,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+                "marginLeft": 8,
+              }
+            }
+          >
+            Prefer not to reply
           </Text>
         </View>
       </View>
@@ -2989,7 +3309,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "opacity": 0.7,
           }
         }
@@ -3050,7 +3370,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
                   "justifyContent": "center",
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                   "paddingLeft": null,
                   "textAlign": "center",
                 }
@@ -3065,7 +3385,10 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
           hardwareAccelerated={false}
           hideModalContentWhileAnimating={false}
           onModalHide={[Function]}
+          onModalWillHide={[Function]}
+          onModalWillShow={[Function]}
           onRequestClose={[Function]}
+          scrollHorizontal={false}
           scrollOffset={0}
           scrollOffsetMax={0}
           scrollTo={null}
@@ -3106,7 +3429,10 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
           <View
             hideModalContentWhileAnimating={false}
             onModalHide={[Function]}
+            onModalWillHide={[Function]}
+            onModalWillShow={[Function]}
             pointerEvents="box-none"
+            scrollHorizontal={false}
             scrollOffset={0}
             scrollOffsetMax={0}
             scrollTo={null}
@@ -3134,10 +3460,12 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
               style={
                 Array [
                   Object {
-                    "backgroundColor": "white",
                     "borderRadius": 13,
                     "marginBottom": 8,
                     "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "white",
                   },
                   undefined,
                 ]
@@ -3173,6 +3501,8 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
               >
                 <DatePicker
                   date={2019-02-14T05:00:00.000Z}
+                  datePickerModeAndroid="spinner"
+                  maximumDate={2018-07-02T07:56:47.007Z}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}
@@ -3232,13 +3562,18 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 13,
-                  "height": 57,
-                  "justifyContent": "center",
-                  "marginBottom": 0,
-                }
+                Array [
+                  Object {
+                    "borderRadius": 13,
+                    "height": 57,
+                    "justifyContent": "center",
+                    "marginBottom": 0,
+                  },
+                  Object {
+                    "backgroundColor": "white",
+                  },
+                  undefined,
+                ]
               }
             >
               <Text
@@ -3292,7 +3627,7 @@ exports[`The Onboarding AboutYou component should render a custom title 1`] = `
                 "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingVertical": 4,
               }
             }
@@ -3361,7 +3696,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -3375,10 +3710,10 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "marginTop": 16,
             "opacity": 0.7,
-            "paddingBottom": 8.64,
+            "paddingBottom": 9,
           }
         }
       >
@@ -3422,7 +3757,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
               Object {
                 "alignItems": "center",
                 "borderColor": "#00676D",
-                "borderRadius": 99,
+                "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
                 "justifyContent": "center",
@@ -3434,7 +3769,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
               style={
                 Object {
                   "backgroundColor": "#00676D",
-                  "borderRadius": 99,
+                  "borderRadius": 10,
                   "height": 12,
                   "width": 12,
                 }
@@ -3447,7 +3782,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -3482,7 +3817,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
               Object {
                 "alignItems": "center",
                 "borderColor": "#A5A5A5",
-                "borderRadius": 99,
+                "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
                 "justifyContent": "center",
@@ -3496,12 +3831,61 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
           >
             Female
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomColor": "rgba(165, 165, 165, 0.5)",
+              "borderBottomWidth": 0,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 8,
+            }
+          }
+          underline={false}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "borderColor": "#A5A5A5",
+                "borderRadius": 10,
+                "borderWidth": 2,
+                "height": 20,
+                "justifyContent": "center",
+                "width": 20,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+                "marginLeft": 8,
+              }
+            }
+          >
+            Prefer not to reply
           </Text>
         </View>
       </View>
@@ -3511,7 +3895,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "opacity": 0.7,
           }
         }
@@ -3572,7 +3956,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
                   "justifyContent": "center",
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                   "paddingLeft": null,
                   "textAlign": "center",
                 }
@@ -3587,7 +3971,10 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
           hardwareAccelerated={false}
           hideModalContentWhileAnimating={false}
           onModalHide={[Function]}
+          onModalWillHide={[Function]}
+          onModalWillShow={[Function]}
           onRequestClose={[Function]}
+          scrollHorizontal={false}
           scrollOffset={0}
           scrollOffsetMax={0}
           scrollTo={null}
@@ -3628,7 +4015,10 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
           <View
             hideModalContentWhileAnimating={false}
             onModalHide={[Function]}
+            onModalWillHide={[Function]}
+            onModalWillShow={[Function]}
             pointerEvents="box-none"
+            scrollHorizontal={false}
             scrollOffset={0}
             scrollOffsetMax={0}
             scrollTo={null}
@@ -3656,10 +4046,12 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
               style={
                 Array [
                   Object {
-                    "backgroundColor": "white",
                     "borderRadius": 13,
                     "marginBottom": 8,
                     "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "white",
                   },
                   undefined,
                 ]
@@ -3695,6 +4087,8 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
               >
                 <DatePicker
                   date={2019-02-14T05:00:00.000Z}
+                  datePickerModeAndroid="spinner"
+                  maximumDate={2018-07-02T07:56:47.007Z}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}
@@ -3754,13 +4148,18 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 13,
-                  "height": 57,
-                  "justifyContent": "center",
-                  "marginBottom": 0,
-                }
+                Array [
+                  Object {
+                    "borderRadius": 13,
+                    "height": 57,
+                    "justifyContent": "center",
+                    "marginBottom": 0,
+                  },
+                  Object {
+                    "backgroundColor": "white",
+                  },
+                  undefined,
+                ]
               }
             >
               <Text
@@ -3814,7 +4213,7 @@ exports[`The Onboarding AboutYou component should render the selected gender 1`]
                 "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingVertical": 4,
               }
             }
@@ -3883,7 +4282,7 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -3897,10 +4296,10 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "marginTop": 16,
             "opacity": 0.7,
-            "paddingBottom": 8.64,
+            "paddingBottom": 9,
           }
         }
       >
@@ -3943,7 +4342,7 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
               Object {
                 "alignItems": "center",
                 "borderColor": "#A5A5A5",
-                "borderRadius": 99,
+                "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
                 "justifyContent": "center",
@@ -3957,7 +4356,7 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -3992,7 +4391,7 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
               Object {
                 "alignItems": "center",
                 "borderColor": "#A5A5A5",
-                "borderRadius": 99,
+                "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
                 "justifyContent": "center",
@@ -4006,12 +4405,61 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
           >
             Female
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomColor": "rgba(165, 165, 165, 0.5)",
+              "borderBottomWidth": 0,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 8,
+            }
+          }
+          underline={false}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "borderColor": "#A5A5A5",
+                "borderRadius": 10,
+                "borderWidth": 2,
+                "height": 20,
+                "justifyContent": "center",
+                "width": 20,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+                "marginLeft": 8,
+              }
+            }
+          >
+            Prefer not to reply
           </Text>
         </View>
       </View>
@@ -4021,7 +4469,7 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "opacity": 0.7,
           }
         }
@@ -4082,7 +4530,7 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
                   "justifyContent": "center",
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                   "paddingLeft": null,
                   "textAlign": "center",
                 }
@@ -4097,7 +4545,10 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
           hardwareAccelerated={false}
           hideModalContentWhileAnimating={false}
           onModalHide={[Function]}
+          onModalWillHide={[Function]}
+          onModalWillShow={[Function]}
           onRequestClose={[Function]}
+          scrollHorizontal={false}
           scrollOffset={0}
           scrollOffsetMax={0}
           scrollTo={null}
@@ -4138,7 +4589,10 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
           <View
             hideModalContentWhileAnimating={false}
             onModalHide={[Function]}
+            onModalWillHide={[Function]}
+            onModalWillShow={[Function]}
             pointerEvents="box-none"
+            scrollHorizontal={false}
             scrollOffset={0}
             scrollOffsetMax={0}
             scrollTo={null}
@@ -4166,10 +4620,12 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
               style={
                 Array [
                   Object {
-                    "backgroundColor": "white",
                     "borderRadius": 13,
                     "marginBottom": 8,
                     "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "white",
                   },
                   undefined,
                 ]
@@ -4205,6 +4661,8 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
               >
                 <DatePicker
                   date={1989-02-14T05:00:00.000Z}
+                  datePickerModeAndroid="spinner"
+                  maximumDate={2018-07-02T07:56:47.007Z}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}
@@ -4264,13 +4722,18 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 13,
-                  "height": 57,
-                  "justifyContent": "center",
-                  "marginBottom": 0,
-                }
+                Array [
+                  Object {
+                    "borderRadius": 13,
+                    "height": 57,
+                    "justifyContent": "center",
+                    "marginBottom": 0,
+                  },
+                  Object {
+                    "backgroundColor": "white",
+                  },
+                  undefined,
+                ]
               }
             >
               <Text
@@ -4324,7 +4787,7 @@ exports[`The Onboarding AboutYou component should render with a selected birthda
                 "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingVertical": 4,
               }
             }
@@ -4393,7 +4856,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
               "color": "#505050",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
-              "lineHeight": 20.16,
+              "lineHeight": 21,
             }
           }
         >
@@ -4407,10 +4870,10 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "marginTop": 16,
             "opacity": 0.7,
-            "paddingBottom": 8.64,
+            "paddingBottom": 9,
           }
         }
       >
@@ -4453,7 +4916,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
               Object {
                 "alignItems": "center",
                 "borderColor": "#A5A5A5",
-                "borderRadius": 99,
+                "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
                 "justifyContent": "center",
@@ -4467,7 +4930,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
@@ -4502,7 +4965,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
               Object {
                 "alignItems": "center",
                 "borderColor": "#A5A5A5",
-                "borderRadius": 99,
+                "borderRadius": 10,
                 "borderWidth": 2,
                 "height": 20,
                 "justifyContent": "center",
@@ -4516,12 +4979,61 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
                 "color": "#303030",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
-                "lineHeight": 20.16,
+                "lineHeight": 21,
                 "marginLeft": 8,
               }
             }
           >
             Female
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomColor": "rgba(165, 165, 165, 0.5)",
+              "borderBottomWidth": 0,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 8,
+            }
+          }
+          underline={false}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "borderColor": "#A5A5A5",
+                "borderRadius": 10,
+                "borderWidth": 2,
+                "height": 20,
+                "justifyContent": "center",
+                "width": 20,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+                "marginLeft": 8,
+              }
+            }
+          >
+            Prefer not to reply
           </Text>
         </View>
         <View
@@ -4538,7 +5050,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
                 "color": "#c64f55",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingTop": 8,
               }
             }
@@ -4553,7 +5065,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
             "color": "gray",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
-            "lineHeight": 17.28,
+            "lineHeight": 18,
             "opacity": 0.7,
           }
         }
@@ -4614,7 +5126,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
                   "justifyContent": "center",
-                  "lineHeight": 17.28,
+                  "lineHeight": 18,
                   "paddingLeft": null,
                   "textAlign": "center",
                 }
@@ -4629,7 +5141,10 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
           hardwareAccelerated={false}
           hideModalContentWhileAnimating={false}
           onModalHide={[Function]}
+          onModalWillHide={[Function]}
+          onModalWillShow={[Function]}
           onRequestClose={[Function]}
+          scrollHorizontal={false}
           scrollOffset={0}
           scrollOffsetMax={0}
           scrollTo={null}
@@ -4670,7 +5185,10 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
           <View
             hideModalContentWhileAnimating={false}
             onModalHide={[Function]}
+            onModalWillHide={[Function]}
+            onModalWillShow={[Function]}
             pointerEvents="box-none"
+            scrollHorizontal={false}
             scrollOffset={0}
             scrollOffsetMax={0}
             scrollTo={null}
@@ -4698,10 +5216,12 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
               style={
                 Array [
                   Object {
-                    "backgroundColor": "white",
                     "borderRadius": 13,
                     "marginBottom": 8,
                     "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "white",
                   },
                   undefined,
                 ]
@@ -4737,6 +5257,8 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
               >
                 <DatePicker
                   date={2019-02-14T05:00:00.000Z}
+                  datePickerModeAndroid="spinner"
+                  maximumDate={2018-07-02T07:56:47.007Z}
                   minuteInterval={1}
                   mode="date"
                   onCancel={[Function]}
@@ -4796,13 +5318,18 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 13,
-                  "height": 57,
-                  "justifyContent": "center",
-                  "marginBottom": 0,
-                }
+                Array [
+                  Object {
+                    "borderRadius": 13,
+                    "height": 57,
+                    "justifyContent": "center",
+                    "marginBottom": 0,
+                  },
+                  Object {
+                    "backgroundColor": "white",
+                  },
+                  undefined,
+                ]
               }
             >
               <Text
@@ -4856,7 +5383,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
                 "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
-                "lineHeight": 17.28,
+                "lineHeight": 18,
                 "paddingVertical": 4,
               }
             }
@@ -4868,7 +5395,7 @@ exports[`The Onboarding AboutYou component should render with errors 1`] = `
               "color": "#c64f55",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
-              "lineHeight": 17.28,
+              "lineHeight": 18,
               "paddingTop": 8,
             }
           }

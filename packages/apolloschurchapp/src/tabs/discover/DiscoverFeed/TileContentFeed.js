@@ -1,6 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import { withNavigation } from 'react-navigation';
+import isEmpty from 'lodash/isEmpty';
 import PropTypes from 'prop-types';
 
 import {
@@ -15,7 +16,7 @@ import {
   withIsLoading,
 } from '@apollosproject/ui-kit';
 
-import HorizontalContentCardConnected from '../../../ui/HorizontalContentCardConnected';
+import { HorizontalContentCardConnected } from '@apollosproject/ui-connected';
 
 const RowHeader = styled(({ theme }) => ({
   flexDirection: 'row',
@@ -30,7 +31,7 @@ const Name = styled({
 })(View);
 
 const AndroidTouchableFix = withTheme(({ theme }) => ({
-  borderRadius: theme.sizing.baseUnit / 2,
+  borderRadius: theme.sizing.baseBorderRadius / 2,
 }))(Touchable);
 
 const ButtonLinkSpacing = styled(({ theme }) => ({
@@ -53,48 +54,49 @@ const loadingStateObject = {
   coverImage: [],
 };
 
-const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) => (
-  <>
-    <RowHeader>
-      <Name>
-        <H5>{name}</H5>
-      </Name>
-      <AndroidTouchableFix
-        onPress={() => {
-          navigation.navigate('ContentFeed', {
-            itemId: id,
-            itemTitle: name,
-          });
-        }}
-      >
-        <ButtonLinkSpacing>
-          <H6>
-            <ButtonLink>View All</ButtonLink>
-          </H6>
-        </ButtonLinkSpacing>
-      </AndroidTouchableFix>
-    </RowHeader>
-    <StyledHorizontalTileFeed
-      content={content}
-      renderItem={({ item }) => (
-        <TouchableScale
+const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) =>
+  (isLoading || !isEmpty(content)) && (
+    <>
+      <RowHeader>
+        <Name>
+          <H5>{name}</H5>
+        </Name>
+        <AndroidTouchableFix
           onPress={() => {
-            navigation.push('ContentSingle', {
-              itemId: item.id,
+            navigation.navigate('ContentFeed', {
+              itemId: id,
+              itemTitle: name,
             });
           }}
         >
-          <HorizontalContentCardConnected
-            contentId={item.id}
-            isLoading={isLoading}
-          />
-        </TouchableScale>
-      )}
-      loadingStateObject={loadingStateObject}
-      isLoading={isLoading}
-    />
-  </>
-);
+          <ButtonLinkSpacing>
+            <H6>
+              <ButtonLink>View All</ButtonLink>
+            </H6>
+          </ButtonLinkSpacing>
+        </AndroidTouchableFix>
+      </RowHeader>
+      <StyledHorizontalTileFeed
+        content={content}
+        renderItem={({ item }) => (
+          <TouchableScale
+            onPress={() => {
+              navigation.push('ContentSingle', {
+                itemId: item.id,
+              });
+            }}
+          >
+            <HorizontalContentCardConnected
+              contentId={item.id}
+              isLoading={isLoading}
+            />
+          </TouchableScale>
+        )}
+        loadingStateObject={loadingStateObject}
+        isLoading={isLoading}
+      />
+    </>
+  );
 
 TileContentFeed.propTypes = {
   navigation: PropTypes.shape({

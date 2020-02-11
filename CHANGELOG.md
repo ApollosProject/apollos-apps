@@ -1,3 +1,204 @@
+v1.3.0-beta.5: February 6, 2020
+
+- Adds validation for firstName and lastName on the ui-auth screen (#1321) (41dd0596)
+- Adds support for the auth register endpoints to properly accept Gender/Birthdate (#1330) (468517c1)
+- Adds Algolia Custom Configuration (#1325) (0bf512e3)
+- Adds configurablity to Mapview button text (#1323) (6e854880)
+- Adds document detailing performance goals (#1320) (942db509)
+
+- Removes auth prefetch cache attempt (#1324) (de4a99dd)
+- Moves HtmlContent to ui-connected (#1310) (2b302304)
+- Increases default cache time to one hour (#1322) (d3a2e47d)
+- Moves UserAvatar to connected package (#1306) (1ebc0ded)
+- Moves SearchCard to ui-connected (#1309) (19f5b757)
+- Removes Polyfill and Adds UI Dependency (#1313) (51aed6e1)
+- Exports share function (#1311) (c00b15b8)
+
+- Fixes AuthedBrowser crashing without user (#1328) (58e562e2)
+- Fixes Videos on iOS (#1335) (18684ff8)
+- Fixes location finder preferring Cincinnati without a location (#1315) (d16c4826)
+- Fixes another animated test warning (#1327) (0f85c76d)
+- Fixes cache on the user exists query (#1314) (7294b200)
+- Fixes animated test warning (#1326) (c4d2598d)
+- Fixes crash caused by unnedeed theme ThemeMixin (#1316) (5be23dea)
+
+v1.3.0-beta.3: January 28, 2020
+
+- Improves android profile image quality (#1303) (b448a3ee)
+- Compresses images from cloudinary using q_auto by default (#1299) (7d38807e)
+
+
+v1.3.0-beta.2: January 28, 2020
+
+- Adds Improvements from Willow's MapView (#1298) (9519169c)
+- Adds persisted cookies to core (#1302) (b8315a13)
+- Adds Rock Entity Mapper (#1277) (60521331)
+- Adds OrderBy RequestBuilder method (#1289) (3468f347)
+
+- Clears apollo store instead of reseting store (#1304) (e14932a5)
+- Simplifies Auth Function (#1301) (14e99d0b)
+- Removes inactive or archived groups from group list in api (#1297) (c6725634)
+- Changes Auth Error Message (#1294) (edbd7493)
+- Uses default import in root index (#1292) (9be9d4c2)
+
+- Moves WebBrowser into the ui-connected package (#1300) (48b9ca5e)
+- Moves ShareContentButtonConnected into the ui-connected package (#1296) (ea650f75)
+- Moves the `LikeContentButtonConnected` component into ui-connected (#1293) (5d3f3b66)
+- Moves HorizontalContentCardConnected into the ui-connected package (#1295) (484035c1)
+- Moves ContentCardConnected into the ui-connected package (#1291) (cb4f7360)
+- Moves liked content feeds to ui-connected (#1288) (05985765)
+
+- Fixes current campus not showing "distance to location" (#1286) (bb8709fe)
+
+
+v1.3.0-beta.1: January 16, 2020
+
+- Properly publishes the react-native part of the @apollosproject/config package.
+
+v1.3.0-beta.0: January 16, 2020
+
+- Adds Caching to requests made to api.bible (#1284) (21a54110)
+- Adds Fragments Package (#1279) (e38eb925)
+- Adds Auth api frontend (#1273) (84b43ffb)
+- Adds Caching documentation (#1281) (8aa4f95f)
+- Adds scaffolding for the apollos-ui-connected package (#1280) (d5a38ca0)
+- Adds Search field polish (#1272) (e292f910)
+- Adds ui config to apollos config package (#1275) (1f825f6c)
+- Adds New Auth Flow API (#1270) (e5cbc0aa)
+- Adds Push Provider/Consumer/Context (#1266) (9b4580f6)
+- Adds MapView component package (#1217) (556d9e03)
+
+- Upgrades handlebars from 4.1.2 to 4.5.3 (#1274) (76830168)
+- Simplify pod management with Bundler (#1283) (74a0e1a5)
+- Changes Imports to Relative Paths (#1257) (9f360559)
+- Updates typographic styles (#1267) (603bdc17)
+- Updates the design for ActionListItem (#1264) (a3604bea)
+- Changes BodySmall to use HorizontalDefaultCard (#1265) (38021e72)
+
+- Fixes redirecting to landing on auth error (#1282) (59fa276e)
+- Fixed issue causing stray BR's to crash the app (#1271) (7056c4ba)
+- Fixes StretchyView bug on overscroll effect (#1278) (fadf216c)
+- Fixes crash in the date picker input (#1268) (ce6b9dd9)
+- Fixes auth thrashing (#1269) (0730a7b3)
+- Fixes Featured Card Loading State (#1249) (63091c73)
+
+v1.2.5: December 10, 2019
+
+- Adds baseBorderRadius value to the defaultTheme (#1260) (c5a25dda)
+- Adds calendar spinner view on android by default (#1253) (d44ec6ea)
+- Allows During Onboarding the Skipping of Birthdate, Gender, or Both (#1255) (b7a6c952)
+
+- Upgrades Analytics Package (#1250) (356356c6)
+
+- Removes second give link. (#1252) (5433a986)
+- Removes willow specific field when creating new users (#1254) (7055e938)
+
+- Fixes auth android Back Button Width (#1251) (94747b3f)
+- Fixes Photo Permissions asking twice (#1259) (b9548974)
+- Fixes apollo server mismatched versions (#1261) (db32b636)
+- Fixes Campus Parts Error (#1258) (1cf8f0b6)
+- Fixes Profile Fields whitespace (#1256) (d45890da)
+- Fixes n+3 redis connections being created (#1248) (df8f4038)
+
+v1.2.4: November 20, 2019
+
+- Adds Optimistic Response for Location Selector (#1236) (bd2c2256)
+- Adds Scripture Selection to Content (#1178) (eaeb3824)
+- Adds Total Count to Paginated Queries (#1215) (f9422a1a)
+- Adds Algolia Delta Sync (#1210) (eabc622f)
+- Adds additional server analytics (#1225) (73552f21)
+
+- Renders Devotionals That Have No Scripture (#1242) (2f6982c9)
+- Removes Duplicate Copyright Info (#1230) (44fc2228)
+- Improves the Error Card (#1240) (963279d1)
+- Improves Content Schema Style (#1233) (21f1d6cf)
+- Improves Mergify (#1238) (762ed137)
+- Improves Caching of Content (#1170) (6ead92b4)
+- Improves Default Type (#1220) (1d6237c8)
+- Optimizes Scripture Version (#1219) (97bd8d6c)
+- Handles links using in app browser in the webview. (#1229) (bce16dde)
+- Checks for valid images when rendering campus cards. (#1222) (4d7d116c)
+
+- Fixes HTMLView placeholder/loading state (#1226) (620de3ab)
+- Fixes auth back button color (#1227) (561b54c3)
+- Fixes logging users with bad cookies out of the app (#1221) (c879eb14)
+
+
+v1.2.3: November 12, 2019
+
+- Adds Client Info in Request Headers (#1214) (a8a4d75e)
+- Adds Mergify (#1209) (90122723)
+- Optimizes Live Stream Query (#1202) (736faabf)
+- Optimizes Content Query (#1203) (a8acc502)
+- Updates Floating Input Label placement (#1019) (978de246)
+- Adds Live item polling (#1086) (ca61e557)
+- Improves Map Bounce (#1206) (bb7f6ef4)
+- Increases Miniplayer Button Size (#1205) (125d45d1)
+
+- Fixes tab view cant scroll devos android (#1212) (034c3783)
+- Fixes Mergify so that it will delete branch (#1211) (3795386b)
+
+v1.2.2: November 6, 2019
+
+- Ensures user feed is cachables (#1201) (3113ed97)
+- Fixes padding issue with close icon when image is not available (e863d223)
+- Only tries to get the current person if you have a rock cookie (#1199) (e5270df3)
+
+
+v1.2.1: November 5, 2019
+
+- Adds gif support on Android 💥 (#1194) (4f59534a)
+- Adds Forgot Password Functionality (#1152) (88132e41)
+- Updates load tests (#1190) (54466809)
+- Adds <b> and <i> tag support to HTMLView (#1185) (eee680e9)
+- Attempts to prefetch the result of getCurrentPerson. (#1186) (28aa0f1b)
+- Defaults to using ROCK for analytics ONLY if enabled in config.yml. (#1187) (fb111b52)
+- Secures Jobs Board (#1188) (c9a41000)
+- Cleans up front-end fragments and removes LikeIcon from FeedView (#1183) (1be5ac59)
+- Makes like icon optional on cards (#1182) (7b3d5798)
+
+- Fixes Map Zoom to Nothing (#1189) (b1f25774)
+- Fixes typename not being pulled from node and removes LikeIcon from feeds (#1180) (0aadebed)
+
+v1.2.0: October 31, 2019 🎃
+
+- Moves Picture Loading Indicator (#1177) (45aae728)
+- Clears Algolia Index Before Doing a Full Index. (#1172) (5646eb57)
+- Adjusts search feed UI to pull items only from Algolia (#1171) (207440df)
+- Adds Tests node shortcutting functionality (#1173) (ca31ecf2)
+- Updates Scripture (#1149) (bfd2af79)
+- Orders Content Channels based on Config.yml (#1166) (dba9f052)
+- Removes like-count from content tile (#1168) (bc0d260d)
+- Caches coverImages and don't fetch ContentChannels if not needed to reduce home feed query count (#1167) (74720df0)
+- Adds Autofocus back to SMS Login (#1151) (558950e7)
+- Sets maximum date for date picker (#1161) (cb9c40a1)
+- Adds the media player spacer around the selection button that appears on the location select screen. (#1163) (b267b831)
+- Adds additional eslint recommendation to readme (#1162) (3b1e9ed1)
+
+- Fixes twilio sid logged on every request (#1169) (5e38448d)
+- Fixes Trailing Slash Bug (#1165) (267d9a54)
+- Hides content feed item when sections are empty (#1154) (a5b626a9)
+- Fixes text theme colors in navigation headers (#1156) (a57333b0)
+
+v1.2.0-beta.7: October 23, 2019
+
+- Adds Version Number (#1148) (4cf5f0e8)
+- Adds "Soft" Hyphenation of HorizontalHighlightCard Item Titles (#1132) (6e46b4df)
+
+- Includes items from Channels that don't require approval (#1147) (5be303fb)
+- Makes markers tappable, campuses tappable, and always show current campus first (#1143) (0df5241e)
+- Improves consistency of tab view fix (#1146) (8e7cf7f5)
+
+- Fixes content item feature subtitles vanishing (#1145) (c349ae57)
+- Fixes for 'take image' option not uploading photo (#1144) (9bd4c003)
+- Fixes HTMLView content rendering bugs (#1112) (b3012901)
+
+v1.2.0-beta.6: October 21, 2019
+
+- Prevents Extra Space in Tab Bar (#1094) (0e645894)
+- Ensures that invalid nodes don't break search results (#1141) (c0b49a08)
+- Fixes Tappable Areas in Devotional Content Items (#1137) (e9cad8bb)
+
 v1.2.0-beta.5: October 18, 2019
 
 - Adds LOAD_TESTING documentation (#1133) (7e247438)

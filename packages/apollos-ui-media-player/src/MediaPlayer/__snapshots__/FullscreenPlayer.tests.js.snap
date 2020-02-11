@@ -364,7 +364,7 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
                         "color": "#F8F7F4",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 16,
-                        "lineHeight": 23.04,
+                        "lineHeight": 24,
                         "textAlign": "center",
                       }
                     }
@@ -375,7 +375,7 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
                         "color": "#DBDBD9",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
-                        "lineHeight": 17.28,
+                        "lineHeight": 18,
                         "textAlign": "center",
                       }
                     }
@@ -432,7 +432,7 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
                           "color": "#DBDBD9",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "textAlign": "center",
                           "width": 50,
                         }
@@ -541,7 +541,7 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
                           "color": "#DBDBD9",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "textAlign": "center",
                           "width": 50,
                         }
@@ -1355,7 +1355,7 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
                         "color": "#303030",
                         "fontFamily": "InterUI-Medium",
                         "fontSize": 14,
-                        "lineHeight": 20.16,
+                        "lineHeight": 21,
                       }
                     }
                   />
@@ -1380,7 +1380,7 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
               }
             >
               <View
-                borderRadius={24}
+                borderRadius={28}
                 iconPadding={12}
                 style={
                   Object {
@@ -1390,9 +1390,9 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
               >
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight={12}
-                  bbWidth={12}
-                  height={12}
+                  bbHeight={16}
+                  bbWidth={16}
+                  height={16}
                   meetOrSlice={0}
                   minX={0}
                   minY={0}
@@ -1408,14 +1408,14 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
                       },
                       Object {
                         "flex": 0,
-                        "height": 12,
-                        "width": 12,
+                        "height": 16,
+                        "width": 16,
                       },
                     ]
                   }
                   vbHeight={24}
                   vbWidth={24}
-                  width={12}
+                  width={16}
                 >
                   <RNSVGGroup
                     fill={
@@ -1525,7 +1525,7 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
               }
             >
               <View
-                borderRadius={24}
+                borderRadius={28}
                 iconPadding={12}
                 style={
                   Object {
@@ -1535,9 +1535,9 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
               >
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight={12}
-                  bbWidth={12}
-                  height={12}
+                  bbHeight={16}
+                  bbWidth={16}
+                  height={16}
                   meetOrSlice={0}
                   minX={0}
                   minY={0}
@@ -1553,14 +1553,14 @@ exports[`the FullscreenPlayer component should hide disabled controls 1`] = `
                       },
                       Object {
                         "flex": 0,
-                        "height": 12,
-                        "width": 12,
+                        "height": 16,
+                        "width": 16,
                       },
                     ]
                   }
                   vbHeight={24}
                   vbWidth={24}
-                  width={12}
+                  width={16}
                 >
                   <RNSVGGroup
                     fill={
@@ -2108,7 +2108,7 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
                         "color": "#F8F7F4",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 16,
-                        "lineHeight": 23.04,
+                        "lineHeight": 24,
                         "textAlign": "center",
                       }
                     }
@@ -2119,7 +2119,7 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
                         "color": "#DBDBD9",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
-                        "lineHeight": 17.28,
+                        "lineHeight": 18,
                         "textAlign": "center",
                       }
                     }
@@ -2176,7 +2176,7 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
                           "color": "#DBDBD9",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "textAlign": "center",
                           "width": 50,
                         }
@@ -2285,7 +2285,7 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
                           "color": "#DBDBD9",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "textAlign": "center",
                           "width": 50,
                         }
@@ -3395,7 +3395,7 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
                         "color": "#303030",
                         "fontFamily": "InterUI-Medium",
                         "fontSize": 14,
-                        "lineHeight": 20.16,
+                        "lineHeight": 21,
                       }
                     }
                   />
@@ -3420,7 +3420,7 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
               }
             >
               <View
-                borderRadius={24}
+                borderRadius={28}
                 iconPadding={12}
                 style={
                   Object {
@@ -3430,9 +3430,9 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
               >
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight={12}
-                  bbWidth={12}
-                  height={12}
+                  bbHeight={16}
+                  bbWidth={16}
+                  height={16}
                   meetOrSlice={0}
                   minX={0}
                   minY={0}
@@ -3448,14 +3448,14 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
                       },
                       Object {
                         "flex": 0,
-                        "height": 12,
-                        "width": 12,
+                        "height": 16,
+                        "width": 16,
                       },
                     ]
                   }
                   vbHeight={24}
                   vbWidth={24}
-                  width={12}
+                  width={16}
                 >
                   <RNSVGGroup
                     fill={
@@ -3565,7 +3565,7 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
               }
             >
               <View
-                borderRadius={24}
+                borderRadius={28}
                 iconPadding={12}
                 style={
                   Object {
@@ -3575,9 +3575,9 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
               >
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight={12}
-                  bbWidth={12}
-                  height={12}
+                  bbHeight={16}
+                  bbWidth={16}
+                  height={16}
                   meetOrSlice={0}
                   minX={0}
                   minY={0}
@@ -3593,14 +3593,14 @@ exports[`the FullscreenPlayer component should render a custom VideoWindow compo
                       },
                       Object {
                         "flex": 0,
-                        "height": 12,
-                        "width": 12,
+                        "height": 16,
+                        "width": 16,
                       },
                     ]
                   }
                   vbHeight={24}
                   vbWidth={24}
-                  width={12}
+                  width={16}
                 >
                   <RNSVGGroup
                     fill={
@@ -4148,7 +4148,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                         "color": "#F8F7F4",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 16,
-                        "lineHeight": 23.04,
+                        "lineHeight": 24,
                         "textAlign": "center",
                       }
                     }
@@ -4159,7 +4159,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                         "color": "#DBDBD9",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
-                        "lineHeight": 17.28,
+                        "lineHeight": 18,
                         "textAlign": "center",
                       }
                     }
@@ -4216,7 +4216,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                           "color": "#DBDBD9",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "textAlign": "center",
                           "width": 50,
                         }
@@ -4325,7 +4325,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                           "color": "#DBDBD9",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "textAlign": "center",
                           "width": 50,
                         }
@@ -5435,7 +5435,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                         "color": "#303030",
                         "fontFamily": "InterUI-Medium",
                         "fontSize": 14,
-                        "lineHeight": 20.16,
+                        "lineHeight": 21,
                       }
                     }
                   />
@@ -5460,7 +5460,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
               }
             >
               <View
-                borderRadius={24}
+                borderRadius={28}
                 iconPadding={12}
                 style={
                   Object {
@@ -5470,9 +5470,9 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
               >
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight={12}
-                  bbWidth={12}
-                  height={12}
+                  bbHeight={16}
+                  bbWidth={16}
+                  height={16}
                   meetOrSlice={0}
                   minX={0}
                   minY={0}
@@ -5488,14 +5488,14 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                       },
                       Object {
                         "flex": 0,
-                        "height": 12,
-                        "width": 12,
+                        "height": 16,
+                        "width": 16,
                       },
                     ]
                   }
                   vbHeight={24}
                   vbWidth={24}
-                  width={12}
+                  width={16}
                 >
                   <RNSVGGroup
                     fill={
@@ -5605,7 +5605,7 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
               }
             >
               <View
-                borderRadius={24}
+                borderRadius={28}
                 iconPadding={12}
                 style={
                   Object {
@@ -5615,9 +5615,9 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
               >
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight={12}
-                  bbWidth={12}
-                  height={12}
+                  bbHeight={16}
+                  bbWidth={16}
+                  height={16}
                   meetOrSlice={0}
                   minX={0}
                   minY={0}
@@ -5633,14 +5633,14 @@ exports[`the FullscreenPlayer component should render fullscreen 1`] = `
                       },
                       Object {
                         "flex": 0,
-                        "height": 12,
-                        "width": 12,
+                        "height": 16,
+                        "width": 16,
                       },
                     ]
                   }
                   vbHeight={24}
                   vbWidth={24}
-                  width={12}
+                  width={16}
                 >
                   <RNSVGGroup
                     fill={
@@ -6188,7 +6188,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                         "color": "#F8F7F4",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 16,
-                        "lineHeight": 23.04,
+                        "lineHeight": 24,
                         "textAlign": "center",
                       }
                     }
@@ -6199,7 +6199,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                         "color": "#DBDBD9",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
-                        "lineHeight": 17.28,
+                        "lineHeight": 18,
                         "textAlign": "center",
                       }
                     }
@@ -6256,7 +6256,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                           "color": "#DBDBD9",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "textAlign": "center",
                           "width": 50,
                         }
@@ -6365,7 +6365,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                           "color": "#DBDBD9",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "textAlign": "center",
                           "width": 50,
                         }
@@ -7475,7 +7475,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                         "color": "#303030",
                         "fontFamily": "InterUI-Medium",
                         "fontSize": 14,
-                        "lineHeight": 20.16,
+                        "lineHeight": 21,
                       }
                     }
                   />
@@ -7500,7 +7500,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
               }
             >
               <View
-                borderRadius={24}
+                borderRadius={28}
                 iconPadding={12}
                 style={
                   Object {
@@ -7510,9 +7510,9 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
               >
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight={12}
-                  bbWidth={12}
-                  height={12}
+                  bbHeight={16}
+                  bbWidth={16}
+                  height={16}
                   meetOrSlice={0}
                   minX={0}
                   minY={0}
@@ -7528,14 +7528,14 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                       },
                       Object {
                         "flex": 0,
-                        "height": 12,
-                        "width": 12,
+                        "height": 16,
+                        "width": 16,
                       },
                     ]
                   }
                   vbHeight={24}
                   vbWidth={24}
-                  width={12}
+                  width={16}
                 >
                   <RNSVGGroup
                     fill={
@@ -7645,7 +7645,7 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
               }
             >
               <View
-                borderRadius={24}
+                borderRadius={28}
                 iconPadding={12}
                 style={
                   Object {
@@ -7655,9 +7655,9 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
               >
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight={12}
-                  bbWidth={12}
-                  height={12}
+                  bbHeight={16}
+                  bbWidth={16}
+                  height={16}
                   meetOrSlice={0}
                   minX={0}
                   minY={0}
@@ -7673,14 +7673,14 @@ exports[`the FullscreenPlayer component should render miniplayer with audio 1`] 
                       },
                       Object {
                         "flex": 0,
-                        "height": 12,
-                        "width": 12,
+                        "height": 16,
+                        "width": 16,
                       },
                     ]
                   }
                   vbHeight={24}
                   vbWidth={24}
-                  width={12}
+                  width={16}
                 >
                   <RNSVGGroup
                     fill={
@@ -8228,7 +8228,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                         "color": "#F8F7F4",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 16,
-                        "lineHeight": 23.04,
+                        "lineHeight": 24,
                         "textAlign": "center",
                       }
                     }
@@ -8239,7 +8239,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                         "color": "#DBDBD9",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
-                        "lineHeight": 17.28,
+                        "lineHeight": 18,
                         "textAlign": "center",
                       }
                     }
@@ -8296,7 +8296,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                           "color": "#DBDBD9",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "textAlign": "center",
                           "width": 50,
                         }
@@ -8405,7 +8405,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                           "color": "#DBDBD9",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
-                          "lineHeight": 17.28,
+                          "lineHeight": 18,
                           "textAlign": "center",
                           "width": 50,
                         }
@@ -9515,7 +9515,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                         "color": "#303030",
                         "fontFamily": "InterUI-Medium",
                         "fontSize": 14,
-                        "lineHeight": 20.16,
+                        "lineHeight": 21,
                       }
                     }
                   />
@@ -9540,7 +9540,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
               }
             >
               <View
-                borderRadius={24}
+                borderRadius={28}
                 iconPadding={12}
                 style={
                   Object {
@@ -9550,9 +9550,9 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
               >
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight={12}
-                  bbWidth={12}
-                  height={12}
+                  bbHeight={16}
+                  bbWidth={16}
+                  height={16}
                   meetOrSlice={0}
                   minX={0}
                   minY={0}
@@ -9568,14 +9568,14 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                       },
                       Object {
                         "flex": 0,
-                        "height": 12,
-                        "width": 12,
+                        "height": 16,
+                        "width": 16,
                       },
                     ]
                   }
                   vbHeight={24}
                   vbWidth={24}
-                  width={12}
+                  width={16}
                 >
                   <RNSVGGroup
                     fill={
@@ -9685,7 +9685,7 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
               }
             >
               <View
-                borderRadius={24}
+                borderRadius={28}
                 iconPadding={12}
                 style={
                   Object {
@@ -9695,9 +9695,9 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
               >
                 <RNSVGSvgView
                   align="xMidYMid"
-                  bbHeight={12}
-                  bbWidth={12}
-                  height={12}
+                  bbHeight={16}
+                  bbWidth={16}
+                  height={16}
                   meetOrSlice={0}
                   minX={0}
                   minY={0}
@@ -9713,14 +9713,14 @@ exports[`the FullscreenPlayer component should render miniplayer with video 1`] 
                       },
                       Object {
                         "flex": 0,
-                        "height": 12,
-                        "width": 12,
+                        "height": 16,
+                        "width": 16,
                       },
                     ]
                   }
                   vbHeight={24}
                   vbWidth={24}
-                  width={12}
+                  width={16}
                 >
                   <RNSVGGroup
                     fill={

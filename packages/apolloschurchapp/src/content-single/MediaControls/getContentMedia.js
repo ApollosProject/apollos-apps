@@ -1,37 +1,13 @@
 import gql from 'graphql-tag';
+import ApollosConfig from '@apollosproject/config';
 
 export default gql`
   query getContentMedia($contentId: ID!) {
     node(id: $contentId) {
       ... on ContentItem {
-        id
-        title
-        parentChannel {
-          id
-          name
-        }
-        coverImage {
-          sources {
-            uri
-          }
-        }
-        videos {
-          sources {
-            uri
-          }
-        }
-      }
-      ... on WeekendContentItem {
-        liveStream {
-          isLive
-          media {
-            sources {
-              uri
-            }
-          }
-          webViewUrl
-        }
+        ...contentMediaFragment
       }
     }
   }
+  ${ApollosConfig.FRAGMENTS.CONTENT_MEDIA_FRAGMENT}
 `;

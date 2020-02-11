@@ -1,6 +1,6 @@
 import URL from 'url';
 import querystring from 'querystring';
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { Linking } from 'react-native';
 import PropTypes from 'prop-types';
 import gql from 'graphql-tag';
@@ -8,6 +8,7 @@ import { withApollo } from 'react-apollo';
 import { get } from 'lodash';
 import OneSignal from 'react-native-onesignal';
 import { resolvers, defaults } from './store';
+import PushProvider from './pushProvider';
 
 const UPDATE_DEVICE_PUSH_ID = gql`
   mutation updateDevicePushId($pushId: String!) {
@@ -27,7 +28,7 @@ class NotificationsInit extends Component {
       mutate: PropTypes.func,
       addResolvers: PropTypes.func,
       writeData: PropTypes.func,
-      onResetStore: PropTypes.func,
+      onClearStore: PropTypes.func,
     }).isRequired,
   };
 
@@ -38,7 +39,7 @@ class NotificationsInit extends Component {
     const { client } = props;
     client.addResolvers(resolvers);
     client.writeData({ data: defaults });
-    client.onResetStore(() => client.writeData({ data: defaults }));
+    client.onClearStore(() => client.writeData({ data: defaults }));
   }
 
   componentDidMount() {
@@ -48,6 +49,7 @@ class NotificationsInit extends Component {
     OneSignal.addEventListener('received', this.onReceived);
     OneSignal.addEventListener('opened', this.onOpened);
     OneSignal.addEventListener('ids', this.onIds);
+    OneSignal.setSubscription(true);
     Linking.getInitialURL().then((url) => {
       this.navigate(url);
     });
@@ -96,7 +98,7 @@ class NotificationsInit extends Component {
   };
 
   render() {
-    return this.props.children;
+    return <PushProvider>{this.props.children}</PushProvider>;
   }
 }
 

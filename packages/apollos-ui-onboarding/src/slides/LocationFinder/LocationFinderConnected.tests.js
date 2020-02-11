@@ -23,7 +23,10 @@ describe('The Onboarding LocationFinderConnected component', () => {
 
     const component = (
       <Providers mocks={mocks} addTypename={false}>
-        <LocationFinderConnected navigation={navigation} />
+        <LocationFinderConnected
+          navigation={navigation}
+          onNavigate={jest.fn()}
+        />
       </Providers>
     );
 
@@ -68,7 +71,10 @@ describe('The Onboarding LocationFinderConnected component', () => {
 
     const tree = await renderWithApolloData(
       <Providers mocks={mocks} addTypename={false}>
-        <LocationFinderConnected Component={CustomComponent} />
+        <LocationFinderConnected
+          Component={CustomComponent}
+          onNavigate={jest.fn()}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

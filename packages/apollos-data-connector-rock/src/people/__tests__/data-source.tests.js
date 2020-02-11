@@ -123,7 +123,7 @@ describe('Person', () => {
     dataSource.patch = buildGetMock({}, dataSource);
     const result = dataSource.updateProfile([
       {
-        field: 'FirstName',
+        field: '        FirstName',
         value: 'Nick',
       },
     ]);
@@ -146,9 +146,9 @@ describe('Person', () => {
         value: 'Male',
       },
     ]);
-    expect(result).resolves.toMatchSnapshot();
-    expect(Auth.getCurrentPerson.mock.calls).toMatchSnapshot();
-    expect(dataSource.patch.mock.calls).toMatchSnapshot();
+    expect(result).resolves.toMatchSnapshot('result');
+    expect(Auth.getCurrentPerson.mock.calls).toMatchSnapshot('current person');
+    expect(dataSource.patch.mock.calls).toMatchSnapshot('rock patch');
   });
 
   it("updates a user's birth date attributes", async () => {

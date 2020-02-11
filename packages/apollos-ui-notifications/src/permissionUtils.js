@@ -5,26 +5,16 @@ const getPushPermissions = async () =>
   new Promise((resolve) =>
     OneSignal.getPermissionSubscriptionState((status) =>
       // Ensure the client (notificationsEnabled) && OneSignal (subscriptionEnabled) are boolean values
-      resolve(!!(status.notificationsEnabled && status.subscriptionEnabled))
+      resolve(!!status.notificationsEnabled)
     )
   );
 
-const promptForPushNotificationsWithUserResponse = async () =>
+const getHasPrompted = async () =>
   new Promise((resolve) =>
-    OneSignal.promptForPushNotificationsWithUserResponse(resolve)
+    OneSignal.getPermissionSubscriptionState((status) =>
+      resolve(status.hasPrompted)
+    )
   );
-
-const SET_NOTIFCATIONS_ENABLED = gql`
-  mutation updatePushPermissions($enabled: Boolean!) {
-    updatePushPermissions(enabled: $enabled) @client
-  }
-`;
-
-const GET_NOTIFICATIONS_ENABLED = gql`
-  query getPushPermissions {
-    notificationsEnabled @client(always: true)
-  }
-`;
 
 const GET_PUSH_ID = gql`
   query getPushId {
@@ -32,19 +22,4 @@ const GET_PUSH_ID = gql`
   }
 `;
 
-const requestPushPermissions = async ({ client }) => {
-  const notificationsEnabled = await promptForPushNotificationsWithUserResponse();
-  await client.mutate({
-    mutation: SET_NOTIFCATIONS_ENABLED,
-    variables: { enabled: notificationsEnabled },
-  });
-
-  return notificationsEnabled;
-};
-
-export {
-  getPushPermissions,
-  requestPushPermissions,
-  GET_NOTIFICATIONS_ENABLED,
-  GET_PUSH_ID,
-};
+export { GET_PUSH_ID, getHasPrompted, getPushPermissions };

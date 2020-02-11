@@ -2,6 +2,7 @@
 
 exports[`The TileFeed component renders correctly 1`] = `
 <RCTScrollView
+  collapsable={false}
   contentContainerStyle={
     Object {
       "padding": 8,
@@ -43,6 +44,8 @@ exports[`The TileFeed component renders correctly 1`] = `
   numColumns={1}
   onContentSizeChange={[Function]}
   onEndReachedThreshold={2}
+  onGestureHandlerEvent={[Function]}
+  onGestureHandlerStateChange={[Function]}
   onLayout={[Function]}
   onMomentumScrollEnd={[Function]}
   onScroll={[Function]}
@@ -51,6 +54,7 @@ exports[`The TileFeed component renders correctly 1`] = `
   refreshing={false}
   removeClippedSubviews={false}
   renderItem={[Function]}
+  renderScrollComponent={[Function]}
   scrollEventThrottle={50}
   showsHorizontalScrollIndicator={false}
   snapToAlignment="start"
@@ -128,7 +132,7 @@ exports[`The TileFeed component renders correctly 1`] = `
                       "color": "#303030",
                       "fontFamily": "InterUI-Medium",
                       "fontSize": 14,
-                      "lineHeight": 20.16,
+                      "lineHeight": 21,
                     }
                   }
                 >
@@ -207,7 +211,7 @@ exports[`The TileFeed component renders correctly 1`] = `
                       "color": "#303030",
                       "fontFamily": "InterUI-Medium",
                       "fontSize": 14,
-                      "lineHeight": 20.16,
+                      "lineHeight": 21,
                     }
                   }
                 >
@@ -225,6 +229,7 @@ exports[`The TileFeed component renders correctly 1`] = `
 
 exports[`The TileFeed component renders empty state 1`] = `
 <RCTScrollView
+  collapsable={false}
   contentContainerStyle={
     Object {
       "padding": 8,
@@ -251,6 +256,8 @@ exports[`The TileFeed component renders empty state 1`] = `
   numColumns={1}
   onContentSizeChange={[Function]}
   onEndReachedThreshold={2}
+  onGestureHandlerEvent={[Function]}
+  onGestureHandlerStateChange={[Function]}
   onLayout={[Function]}
   onMomentumScrollEnd={[Function]}
   onScroll={[Function]}
@@ -259,6 +266,7 @@ exports[`The TileFeed component renders empty state 1`] = `
   refreshing={true}
   removeClippedSubviews={false}
   renderItem={[Function]}
+  renderScrollComponent={[Function]}
   scrollEventThrottle={50}
   showsHorizontalScrollIndicator={false}
   snapToAlignment="start"

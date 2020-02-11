@@ -18,8 +18,11 @@ export default {
     }),
   },
   ScriptureFeature: {
-    scriptures: ({ reference }, args, { dataSources: { Scripture } }) =>
-      Scripture.getScriptures(reference),
+    scriptures: (
+      { reference, version },
+      args,
+      { dataSources: { Scripture } }
+    ) => Scripture.getScriptures(reference, version),
     sharing: ({ reference }, args, { dataSources: { Features } }) => ({
       title: 'Share scripture via...',
       message: Features.getScriptureShareMessage(reference),

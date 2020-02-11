@@ -2,6 +2,7 @@ import { ApolloServer } from 'apollo-server-express';
 import ApollosConfig from '@apollosproject/config';
 import express from 'express';
 import { RockLoggingExtension } from '@apollosproject/rock-apollo-data-source';
+import { get } from 'lodash';
 
 import {
   resolvers,
@@ -26,7 +27,7 @@ const cacheOptions = isDev
       cacheControl: {
         stripFormattedExtensions: false,
         calculateHttpHeaders: true,
-        defaultMaxAge: 600,
+        defaultMaxAge: 3600,
       },
     };
 
@@ -40,7 +41,7 @@ const apolloServer = new ApolloServer({
   introspection: true,
   extensions,
   formatError: (error) => {
-    console.error(error.extensions.exception.stacktrace.join('\n'));
+    console.error(get(error, 'extensions.exception.stacktrace').join('\n'));
     return error;
   },
   playground: {

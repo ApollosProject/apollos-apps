@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { dataSource as Cache } from '../index';
 
 describe('Redis Cache', () => {

@@ -144,7 +144,6 @@ exports[`The Search Input component should render 1`] = `
       cancelButtonOffset={1000}
       editable={true}
       isFocused={false}
-      onBlur={[Function]}
       onChangeText={[Function]}
       onFocus={[Function]}
       placeholder="Search"
@@ -155,11 +154,12 @@ exports[`The Search Input component should render 1`] = `
       style={
         Object {
           "flexGrow": 1,
-          "fontFamily": "InterUI-Medium",
+          "fontFamily": "System",
           "fontSize": 14,
           "height": 40,
           "paddingLeft": 8,
           "paddingRight": 0,
+          "paddingTop": 1,
           "paddingVertical": 0,
         }
       }
@@ -195,6 +195,8 @@ exports[`The Search Input component should render 1`] = `
           Object {
             "backgroundColor": "#F8F7F4",
             "borderBottomRightRadius": 16,
+            "borderColor": "#F8F7F4",
+            "borderRightWidth": 1,
             "borderTopRightRadius": 16,
             "overflow": "hidden",
           }
@@ -357,7 +359,7 @@ exports[`The Search Input component should render 1`] = `
             "fontSize": 14,
             "fontStyle": null,
             "fontWeight": null,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
             "paddingLeft": 16,
           }
         }
@@ -514,7 +516,6 @@ exports[`The Search Input component should render as disabled 1`] = `
       cancelButtonOffset={1000}
       editable={false}
       isFocused={false}
-      onBlur={[Function]}
       onChangeText={[Function]}
       onFocus={[Function]}
       placeholder="Search"
@@ -525,11 +526,12 @@ exports[`The Search Input component should render as disabled 1`] = `
       style={
         Object {
           "flexGrow": 1,
-          "fontFamily": "InterUI-Medium",
+          "fontFamily": "System",
           "fontSize": 14,
           "height": 40,
           "paddingLeft": 8,
           "paddingRight": 0,
+          "paddingTop": 1,
           "paddingVertical": 0,
         }
       }
@@ -565,6 +567,8 @@ exports[`The Search Input component should render as disabled 1`] = `
           Object {
             "backgroundColor": "#F8F7F4",
             "borderBottomRightRadius": 16,
+            "borderColor": "#F8F7F4",
+            "borderRightWidth": 1,
             "borderTopRightRadius": 16,
             "overflow": "hidden",
           }
@@ -727,7 +731,7 @@ exports[`The Search Input component should render as disabled 1`] = `
             "fontSize": 14,
             "fontStyle": null,
             "fontWeight": null,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
             "paddingLeft": 16,
           }
         }
@@ -883,7 +887,6 @@ exports[`The Search Input component should render with a custom cancelButtonText
       cancelButtonOffset={1000}
       editable={true}
       isFocused={false}
-      onBlur={[Function]}
       onChangeText={[Function]}
       onFocus={[Function]}
       placeholder="Search"
@@ -894,11 +897,12 @@ exports[`The Search Input component should render with a custom cancelButtonText
       style={
         Object {
           "flexGrow": 1,
-          "fontFamily": "InterUI-Medium",
+          "fontFamily": "System",
           "fontSize": 14,
           "height": 40,
           "paddingLeft": 8,
           "paddingRight": 0,
+          "paddingTop": 1,
           "paddingVertical": 0,
         }
       }
@@ -934,6 +938,8 @@ exports[`The Search Input component should render with a custom cancelButtonText
           Object {
             "backgroundColor": "#F8F7F4",
             "borderBottomRightRadius": 16,
+            "borderColor": "#F8F7F4",
+            "borderRightWidth": 1,
             "borderTopRightRadius": 16,
             "overflow": "hidden",
           }
@@ -1096,7 +1102,7 @@ exports[`The Search Input component should render with a custom cancelButtonText
             "fontSize": 14,
             "fontStyle": null,
             "fontWeight": null,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
             "paddingLeft": 16,
           }
         }
@@ -1252,7 +1258,6 @@ exports[`The Search Input component should render with a custom placeholder 1`] 
       cancelButtonOffset={1000}
       editable={true}
       isFocused={false}
-      onBlur={[Function]}
       onChangeText={[Function]}
       onFocus={[Function]}
       placeholder="💥Custom Placeholder text💥"
@@ -1263,11 +1268,12 @@ exports[`The Search Input component should render with a custom placeholder 1`] 
       style={
         Object {
           "flexGrow": 1,
-          "fontFamily": "InterUI-Medium",
+          "fontFamily": "System",
           "fontSize": 14,
           "height": 40,
           "paddingLeft": 8,
           "paddingRight": 0,
+          "paddingTop": 1,
           "paddingVertical": 0,
         }
       }
@@ -1303,6 +1309,8 @@ exports[`The Search Input component should render with a custom placeholder 1`] 
           Object {
             "backgroundColor": "#F8F7F4",
             "borderBottomRightRadius": 16,
+            "borderColor": "#F8F7F4",
+            "borderRightWidth": 1,
             "borderTopRightRadius": 16,
             "overflow": "hidden",
           }
@@ -1465,7 +1473,7 @@ exports[`The Search Input component should render with a custom placeholder 1`] 
             "fontSize": 14,
             "fontStyle": null,
             "fontWeight": null,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
             "paddingLeft": 16,
           }
         }
@@ -1621,7 +1629,6 @@ exports[`The Search Input component should render with a custom screenBackground
       cancelButtonOffset={1000}
       editable={true}
       isFocused={false}
-      onBlur={[Function]}
       onChangeText={[Function]}
       onFocus={[Function]}
       placeholder="Search"
@@ -1632,11 +1639,12 @@ exports[`The Search Input component should render with a custom screenBackground
       style={
         Object {
           "flexGrow": 1,
-          "fontFamily": "InterUI-Medium",
+          "fontFamily": "System",
           "fontSize": 14,
           "height": 40,
           "paddingLeft": 8,
           "paddingRight": 0,
+          "paddingTop": 1,
           "paddingVertical": 0,
         }
       }
@@ -1672,6 +1680,8 @@ exports[`The Search Input component should render with a custom screenBackground
           Object {
             "backgroundColor": "#F8F7F4",
             "borderBottomRightRadius": 16,
+            "borderColor": "#F8F7F4",
+            "borderRightWidth": 1,
             "borderTopRightRadius": 16,
             "overflow": "hidden",
           }
@@ -1834,7 +1844,7 @@ exports[`The Search Input component should render with a custom screenBackground
             "fontSize": 14,
             "fontStyle": null,
             "fontWeight": null,
-            "lineHeight": 20.16,
+            "lineHeight": 21,
             "paddingLeft": 16,
           }
         }
