@@ -25,7 +25,6 @@ const mock = {
                 theme: null,
                 summary: 'bla bla bla',
                 coverImage: {
-                  name: 'Square Image',
                   sources: [
                     {
                       uri:
@@ -63,7 +62,6 @@ const mock = {
                 theme: null,
                 summary: 'bla bla bla',
                 coverImage: {
-                  name: 'Square Image',
                   sources: [
                     {
                       uri:
@@ -102,7 +100,6 @@ const mock = {
                 theme: null,
                 summary: 'bla bla bla',
                 coverImage: {
-                  name: 'Square Image',
                   sources: [
                     {
                       uri:
@@ -140,7 +137,6 @@ const mock = {
                 theme: null,
                 summary: 'bla bla bla',
                 coverImage: {
-                  name: 'Square Image',
                   sources: [
                     {
                       uri:
@@ -197,6 +193,10 @@ const additionalMocks = mock.result.data.node.childContentItemsConnection.edges.
       data: {
         node: {
           ...node,
+          coverImage: {
+            name: 'Boom',
+            ...node.coverImage,
+          },
         },
       },
     },
