@@ -8,7 +8,7 @@ import GET_CONTENT_MEDIA from './getContentMedia';
 
 import MediaControls from './MediaControls';
 
-const MediaControlsConnected = ({ contentId }) => {
+const MediaControlsConnected = ({ Component, contentId }) => {
   if (!contentId) return null;
   return (
     <LiveConsumer contentId={contentId}>
@@ -25,7 +25,7 @@ const MediaControlsConnected = ({ contentId }) => {
             loading,
             error,
           }) => (
-            <MediaControls
+            <Component
               loading={loading}
               error={error}
               liveStream={liveStream}
@@ -42,7 +42,16 @@ const MediaControlsConnected = ({ contentId }) => {
 };
 
 MediaControlsConnected.propTypes = {
+  Component: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.func,
+    PropTypes.object, // type check for React fragments
+  ]),
   contentId: PropTypes.string,
+};
+
+MediaControlsConnected.defaultProps = {
+  Component: MediaControls,
 };
 
 export default MediaControlsConnected;
