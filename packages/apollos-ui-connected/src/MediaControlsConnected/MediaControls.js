@@ -6,12 +6,13 @@ import WebView from './WebView';
 import PlayButtonConnected from './PlayButtonConnected';
 
 const MediaControls = ({
+  coverImage,
+  error,
   liveStream,
   loading,
-  error,
-  data: {
-    node: { videos, title, parentChannel = {}, coverImage = {} } = {},
-  } = {},
+  parentChannelName,
+  title,
+  videos,
 }) => {
   if (loading || error) return null;
   const isLive = !!liveStream;
@@ -32,7 +33,7 @@ const MediaControls = ({
       <PlayButtonConnected
         coverImageSources={coverImageSources}
         videoSource={liveStream.media.sources[0]}
-        parentChannelName={parentChannel.name}
+        parentChannelName={parentChannelName}
         title={title}
       />
     );
@@ -54,24 +55,20 @@ const MediaControls = ({
     <PlayButtonConnected
       coverImageSources={coverImageSources}
       videoSource={videoSource}
-      parentChannelName={parentChannel.name}
+      parentChannelName={parentChannelName}
       title={title}
     />
   );
 };
 
 MediaControls.propTypes = {
+  coverImage: PropTypes.shape({}),
+  error: PropTypes.string,
   liveStream: PropTypes.shape({}),
   loading: PropTypes.bool,
-  error: PropTypes.string,
-  data: PropTypes.shape({
-    node: PropTypes.shape({
-      videos: PropTypes.arrayOf(PropTypes.shape({})),
-      title: PropTypes.string,
-      parentChannel: PropTypes.shape({}),
-      coverImage: PropTypes.shape({}),
-    }),
-  }),
+  parentChannelName: PropTypes.string,
+  title: PropTypes.string,
+  videos: PropTypes.arrayOf(PropTypes.shape({})),
 };
 
 export default MediaControls;

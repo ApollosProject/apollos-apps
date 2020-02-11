@@ -18,12 +18,21 @@ const MediaControlsConnected = ({ contentId }) => {
           fetchPolicy="cache-and-network"
           variables={{ contentId }}
         >
-          {({ data, loading, error }) => (
+          {({
+            data: {
+              node: { videos, title, parentChannel = {}, coverImage = {} } = {},
+            } = {},
+            loading,
+            error,
+          }) => (
             <MediaControls
-              data={data}
               loading={loading}
               error={error}
               liveStream={liveStream}
+              parentChannelName={parentChannel.name}
+              title={title}
+              videos={videos}
+              coverImage={coverImage}
             />
           )}
         </Query>
