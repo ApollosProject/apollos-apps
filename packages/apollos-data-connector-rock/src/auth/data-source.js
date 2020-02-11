@@ -1,10 +1,10 @@
-import { AuthenticationError } from 'apollo-server';
+import { AuthenticationError, UserInputError } from 'apollo-server';
 import { fetch, Request } from 'apollo-server-env';
 import moment from 'moment';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import { fieldsAsObject } from '../utils';
 
-import { generateToken, registerToken } from './token';
+import { generateToken } from './token';
 
 export default class AuthDataSource extends RockApolloDataSource {
   resource = 'Auth';
@@ -12,16 +12,6 @@ export default class AuthDataSource extends RockApolloDataSource {
   rockCookie = null;
 
   userToken = null;
-
-  initialize(config) {
-    super.initialize(config);
-    if (config.context.rockCookie) {
-      // fetches the current person
-      // this method will try to cache the current person on the context
-      // removing the need to fetch each and every time
-      this.getCurrentPerson();
-    }
-  }
 
   getCurrentPerson = async ({ cookie = null } = { cookie: null }) => {
     const { rockCookie, currentPerson } = this.context;
@@ -57,6 +47,7 @@ export default class AuthDataSource extends RockApolloDataSource {
           body: JSON.stringify({
             Username,
             Password,
+            Persisted: true,
           }),
           headers: {
             'Content-Type': 'Application/Json',
@@ -83,12 +74,14 @@ export default class AuthDataSource extends RockApolloDataSource {
       const cookie = await this.fetchUserCookie(identity, password);
       const sessionId = await this.createSession({ cookie });
       const token = generateToken({ cookie, sessionId });
-      const { userToken, rockCookie } = registerToken(token);
-      this.context.rockCookie = rockCookie;
-      this.context.userToken = userToken;
+      this.context.rockCookie = cookie;
+      this.context.userToken = token;
       this.context.sessionId = sessionId;
-      return { token, rockCookie };
+      return { token, rockCookie: cookie };
     } catch (e) {
+      if (e instanceof AuthenticationError) {
+        throw new UserInputError('Username or Password incorrect');
+      }
       throw e;
     }
   };
@@ -107,10 +100,10 @@ export default class AuthDataSource extends RockApolloDataSource {
   createUserProfile = async ({ email, ...otherFields }) => {
     try {
       return await this.post('/People', {
+        Gender: 0, // Required by Rock. Listed first so it can be overridden by otherFields
         ...otherFields,
         Email: email,
         IsSystem: false, // Required by Rock
-        Gender: 0, // Required by Rock
       });
     } catch (err) {
       throw new Error('Unable to create profile!');
@@ -159,8 +152,15 @@ export default class AuthDataSource extends RockApolloDataSource {
     if (personExists) throw new Error('User already exists!');
 
     const profileFields = fieldsAsObject(userProfile || []);
+    const rockUpdateFields = this.context.dataSources.Person.mapApollosFieldsToRock(
+      profileFields
+    );
 
-    const personId = await this.createUserProfile({ email, ...profileFields });
+    const personId = await this.createUserProfile({
+      email,
+      ...rockUpdateFields,
+    });
+
     await this.createUserLogin({
       email,
       password,
@@ -173,7 +173,8 @@ export default class AuthDataSource extends RockApolloDataSource {
 
   getAuthToken = async () => {
     const { rockCookie } = this.context;
-    if (!rockCookie) throw new AuthenticationError('Must be logged in');
+    if (!rockCookie)
+      throw new AuthenticationError('Cannot get token, no cookie in context');
 
     // TODO remove this safety check and less secure implementation
     // once core Rock has the GetCurrentPersonImpersonationToken endpoint

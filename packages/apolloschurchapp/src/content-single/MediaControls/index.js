@@ -13,8 +13,11 @@ import {
   MediaThumbnailItem,
   H6,
 } from '@apollosproject/ui-kit';
-import { WebBrowserConsumer } from '../../ui/WebBrowser';
-import { LiveConsumer } from '../../live';
+import {
+  LiveConsumer,
+  RockAuthedWebBrowser,
+} from '@apollosproject/ui-connected';
+
 import GET_CONTENT_MEDIA from './getContentMedia';
 
 const Container = styled(({ theme }) => ({
@@ -72,14 +75,14 @@ class MediaControls extends PureComponent {
   );
 
   renderWebView = ({ webViewUrl, coverImageSources }) => (
-    <WebBrowserConsumer>
+    <RockAuthedWebBrowser>
       {(openUrl) =>
         this.renderPlayButton({
           action: () => openUrl(webViewUrl),
           coverImageSources,
         })
       }
-    </WebBrowserConsumer>
+    </RockAuthedWebBrowser>
   );
 
   renderControls = ({

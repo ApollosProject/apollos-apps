@@ -5,8 +5,8 @@ import { ApolloConsumer } from 'react-apollo';
 import gql from 'graphql-tag';
 import { track } from '@apollosproject/ui-analytics';
 import { GET_PUSH_ID, updatePushId } from '@apollosproject/ui-notifications';
-
-import getLoginState from './getLoginState';
+import { LoginProvider } from './LoginProvider';
+import { GET_LOGIN_STATE } from './queries';
 
 const defaultContext = {
   navigateToAuth: () => {},
@@ -36,8 +36,9 @@ export const resolvers = {
     },
   },
   Mutation: {
-    logout: (_root, _args, { client }) => {
-      client.resetStore();
+    logout: async (_root, _args, { client }) => {
+      client.clearStore();
+      AsyncStorage.removeItem('authToken');
       track({ eventName: 'UserLogout', client });
       return null;
     },
@@ -51,7 +52,7 @@ export const resolvers = {
           data: { authToken },
         });
         await cache.writeQuery({
-          query: getLoginState,
+          query: GET_LOGIN_STATE,
           data: { isLoggedIn: true },
         });
         await cache.writeData({
@@ -78,12 +79,14 @@ export const resolvers = {
 
 const Provider = ({ children, ...authContext }) => (
   <AuthContext.Provider value={{ ...defaultContext, ...authContext }}>
-    <ApolloConsumer>
-      {(client) => {
-        client.addResolvers(resolvers);
-        return children;
-      }}
-    </ApolloConsumer>
+    <LoginProvider {...defaultContext} {...authContext}>
+      <ApolloConsumer>
+        {(client) => {
+          client.addResolvers(resolvers);
+          return children;
+        }}
+      </ApolloConsumer>
+    </LoginProvider>
   </AuthContext.Provider>
 );
 

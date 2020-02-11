@@ -1,3 +1,86 @@
+v1.3.0-beta.5: February 6, 2020
+
+- Adds validation for firstName and lastName on the ui-auth screen (#1321) (41dd0596)
+- Adds support for the auth register endpoints to properly accept Gender/Birthdate (#1330) (468517c1)
+- Adds Algolia Custom Configuration (#1325) (0bf512e3)
+- Adds configurablity to Mapview button text (#1323) (6e854880)
+- Adds document detailing performance goals (#1320) (942db509)
+
+- Removes auth prefetch cache attempt (#1324) (de4a99dd)
+- Moves HtmlContent to ui-connected (#1310) (2b302304)
+- Increases default cache time to one hour (#1322) (d3a2e47d)
+- Moves UserAvatar to connected package (#1306) (1ebc0ded)
+- Moves SearchCard to ui-connected (#1309) (19f5b757)
+- Removes Polyfill and Adds UI Dependency (#1313) (51aed6e1)
+- Exports share function (#1311) (c00b15b8)
+
+- Fixes AuthedBrowser crashing without user (#1328) (58e562e2)
+- Fixes Videos on iOS (#1335) (18684ff8)
+- Fixes location finder preferring Cincinnati without a location (#1315) (d16c4826)
+- Fixes another animated test warning (#1327) (0f85c76d)
+- Fixes cache on the user exists query (#1314) (7294b200)
+- Fixes animated test warning (#1326) (c4d2598d)
+- Fixes crash caused by unnedeed theme ThemeMixin (#1316) (5be23dea)
+
+v1.3.0-beta.3: January 28, 2020
+
+- Improves android profile image quality (#1303) (b448a3ee)
+- Compresses images from cloudinary using q_auto by default (#1299) (7d38807e)
+
+
+v1.3.0-beta.2: January 28, 2020
+
+- Adds Improvements from Willow's MapView (#1298) (9519169c)
+- Adds persisted cookies to core (#1302) (b8315a13)
+- Adds Rock Entity Mapper (#1277) (60521331)
+- Adds OrderBy RequestBuilder method (#1289) (3468f347)
+
+- Clears apollo store instead of reseting store (#1304) (e14932a5)
+- Simplifies Auth Function (#1301) (14e99d0b)
+- Removes inactive or archived groups from group list in api (#1297) (c6725634)
+- Changes Auth Error Message (#1294) (edbd7493)
+- Uses default import in root index (#1292) (9be9d4c2)
+
+- Moves WebBrowser into the ui-connected package (#1300) (48b9ca5e)
+- Moves ShareContentButtonConnected into the ui-connected package (#1296) (ea650f75)
+- Moves the `LikeContentButtonConnected` component into ui-connected (#1293) (5d3f3b66)
+- Moves HorizontalContentCardConnected into the ui-connected package (#1295) (484035c1)
+- Moves ContentCardConnected into the ui-connected package (#1291) (cb4f7360)
+- Moves liked content feeds to ui-connected (#1288) (05985765)
+
+- Fixes current campus not showing "distance to location" (#1286) (bb8709fe)
+
+
+v1.3.0-beta.1: January 16, 2020
+
+- Properly publishes the react-native part of the @apollosproject/config package.
+
+v1.3.0-beta.0: January 16, 2020
+
+- Adds Caching to requests made to api.bible (#1284) (21a54110)
+- Adds Fragments Package (#1279) (e38eb925)
+- Adds Auth api frontend (#1273) (84b43ffb)
+- Adds Caching documentation (#1281) (8aa4f95f)
+- Adds scaffolding for the apollos-ui-connected package (#1280) (d5a38ca0)
+- Adds Search field polish (#1272) (e292f910)
+- Adds ui config to apollos config package (#1275) (1f825f6c)
+- Adds New Auth Flow API (#1270) (e5cbc0aa)
+- Adds Push Provider/Consumer/Context (#1266) (9b4580f6)
+- Adds MapView component package (#1217) (556d9e03)
+
+- Upgrades handlebars from 4.1.2 to 4.5.3 (#1274) (76830168)
+- Simplify pod management with Bundler (#1283) (74a0e1a5)
+- Changes Imports to Relative Paths (#1257) (9f360559)
+- Updates typographic styles (#1267) (603bdc17)
+- Updates the design for ActionListItem (#1264) (a3604bea)
+- Changes BodySmall to use HorizontalDefaultCard (#1265) (38021e72)
+
+- Fixes redirecting to landing on auth error (#1282) (59fa276e)
+- Fixed issue causing stray BR's to crash the app (#1271) (7056c4ba)
+- Fixes StretchyView bug on overscroll effect (#1278) (fadf216c)
+- Fixes crash in the date picker input (#1268) (ce6b9dd9)
+- Fixes auth thrashing (#1269) (0730a7b3)
+- Fixes Featured Card Loading State (#1249) (63091c73)
 
 v1.2.5: December 10, 2019
 

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { DataSource } from 'apollo-datasource';
 import Redis from 'ioredis';
 

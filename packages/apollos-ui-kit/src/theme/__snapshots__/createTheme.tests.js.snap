@@ -81,6 +81,7 @@ Object {
     },
     "tertiary": "#6EC5B8",
     "text": Object {
+      "invert": "#F8F7F4",
       "link": "#17B582",
       "primary": "#303030",
       "secondary": "#505050",
@@ -122,6 +123,14 @@ Object {
         },
         "shadowOpacity": 1,
         "shadowRadius": 6,
+      },
+    },
+    "none": Object {
+      "android": Object {
+        "elevation": 0,
+      },
+      "ios": Object {
+        "shadowOpacity": 0,
       },
     },
   },
@@ -179,6 +188,7 @@ Object {
           "default": "rgba(165, 165, 165, 0.6)",
         },
         "text": Object {
+          "invert": "#F8F7F4",
           "link": "#17B582",
           "primary": "#303030",
           "secondary": "#505050",
@@ -257,6 +267,7 @@ Object {
   },
   "tertiary": "#6EC5B8",
   "text": Object {
+    "invert": "#F8F7F4",
     "link": "#17B582",
     "primary": "#303030",
     "secondary": "#505050",
@@ -427,6 +438,14 @@ Object {
         "shadowRadius": 6,
       },
     },
+    "none": Object {
+      "android": Object {
+        "elevation": 0,
+      },
+      "ios": Object {
+        "shadowOpacity": 0,
+      },
+    },
   },
   "sizing": Object {
     "avatar": Object {
@@ -482,6 +501,7 @@ Object {
           "default": "rgba(165, 165, 165, 0.6)",
         },
         "text": Object {
+          "invert": "#F8F7F4",
           "link": "#17B582",
           "primary": "#303030",
           "secondary": "#505050",

@@ -93,6 +93,7 @@ export default class RockRequestBuilder {
 
   filterOneOf = (filters) => {
     if (filters.length === 0) {
+      // eslint-disable-next-line no-console
       console.warn(`
 You are filtering oneOf 0 filters.
 Normally this has the same effect as filtering with 0 filters.
@@ -126,12 +127,31 @@ you can return request.empty()
   };
 
   /**
+   * DEPRECATED - use this.sort()
    * Order resources by a given attribute and direction
    * @param {string} name The name of the attribute to order by
    * @param {string} direction The direction to order results by. Defaults to 'asc'
    */
   orderBy = (name, direction = 'asc') => {
+    delete this.query.$orderby;
     this.query.$orderby = `${name} ${direction}`;
+    return this;
+  };
+
+  /**
+   * Sorts resources by a list of fields with a priority by order
+   * @param {string} attributes - array of fields to sort by
+   *
+   * Example:
+   * sort([{field: "Name", direction: "asc"}, {field: "Date", direction: "desc"}])
+   * The above example will first sort by name in ascending order, then
+   * by date in descending order
+   */
+  sort = (fields = [{ field: 'Id', direction: 'desc' }]) => {
+    delete this.query.$orderby;
+    this.query.$orderby = fields
+      .map(({ field, direction }) => `${field} ${direction}`)
+      .join(', ');
     return this;
   };
 

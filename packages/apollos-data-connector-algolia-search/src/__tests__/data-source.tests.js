@@ -7,6 +7,7 @@ ApollosConfig.loadJs({
   ALGOLIA: {
     APPLICATION_ID: 'some-application-id',
     API_KEY: 'some-api-key',
+    CONFIGURATION: {},
   },
 });
 

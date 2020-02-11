@@ -33,8 +33,20 @@ CHURCH_ONLINE:
 ALGOLIA:
   APPLICATION_ID: ${ALGOLIA_APP_ID}
   API_KEY: ${ALGOLIA_API_KEY}
-  # TODO: should we support multiple indices? how?
-  SEARCH_INDEX: test_ContentItems
+  # TODO: should we support multiple indices? how
+  SEARCH_INDEX: test_ContentItem
+  # Configure Algolia custom settings here
+  # https://www.algolia.com/doc/api-reference/settings-api-parameters/
+  CONFIGURATION:
+    searchableAttributes:
+      - title
+      - unordered(summary)
+    #customRankings:
+      # NOT CURRENTLY INCLUDED
+      # This just demonstrates what's possible
+      # To include likedCount (or any other field) override search package
+      # and add field to config below
+      #- desc(likedCount)
 TWILIO:
   ACCOUNT_SID: ${TWILIO_ACCOUNT_SID}
   AUTH_TOKEN: ${TWILIO_AUTH_TOKEN}

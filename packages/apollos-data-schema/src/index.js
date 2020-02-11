@@ -28,7 +28,7 @@ export const authSmsSchema = gql`
   }
 
   extend type Query {
-    userExists(identity: String): USER_AUTH_STATUS
+    userExists(identity: String): USER_AUTH_STATUS @cacheControl(maxAge: 0)
   }
 `;
 
@@ -549,8 +549,8 @@ export const campusSchema = gql`
   }
 
   input CampusLocationInput {
-    latitude: Float!
-    longitude: Float!
+    latitude: Float
+    longitude: Float
   }
 
   extend type Person {

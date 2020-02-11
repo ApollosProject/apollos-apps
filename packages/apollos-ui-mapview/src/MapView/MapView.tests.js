@@ -59,7 +59,7 @@ const navigation = {
 };
 
 describe('<MapView>', () => {
-  it('should render as a MapView', () => {
+  it('should render', () => {
     const tree = renderer.create(
       <Providers>
         <MapView
@@ -69,6 +69,22 @@ describe('<MapView>', () => {
           userLocation={currentCampus}
           currentCampus={currentCampus}
           onLocationSelect={jest.fn()}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with a custom buttonTitle', () => {
+    const tree = renderer.create(
+      <Providers>
+        <MapView
+          navigation={navigation}
+          campuses={campuses}
+          initialRegion={initialRegion}
+          userLocation={currentCampus}
+          currentCampus={currentCampus}
+          onLocationSelect={jest.fn()}
+          buttonTitle={'Custtom buttonTitle'}
         />
       </Providers>
     );
