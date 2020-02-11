@@ -20,9 +20,9 @@ const Container = styled(({ theme }) => ({
 
 const StyledMediaThumbnail = styled({ marginVertical: 0 })(MediaThumbnail);
 
-const PlayButton = ({ action, coverImageSources }) => (
+const PlayButton = ({ onPress, coverImageSources }) => (
   <Container>
-    <TouchableScale onPress={action}>
+    <TouchableScale onPress={onPress}>
       <StyledMediaThumbnail image={coverImageSources}>
         <MediaThumbnailItem centered>
           <MediaThumbnailIcon name="play" />
@@ -36,7 +36,7 @@ const PlayButton = ({ action, coverImageSources }) => (
 );
 
 PlayButton.propTypes = {
-  action: PropTypes.func,
+  onPress: PropTypes.func,
   coverImageSources: PropTypes.arrayOf(PropTypes.shape({})),
 };
 

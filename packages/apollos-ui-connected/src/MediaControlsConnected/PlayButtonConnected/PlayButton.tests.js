@@ -7,11 +7,11 @@ import { Providers } from '../../utils/testUtils';
 import PlayButton from './PlayButton';
 
 describe('PlayButton', () => {
-  it('renders a PlayButton', () => {
+  it('should render', () => {
     const tree = renderer.create(
       <Providers>
         <PlayButton
-          action={jest.fn()}
+          onPress={jest.fn()}
           coverImageSources={[
             {
               uri:

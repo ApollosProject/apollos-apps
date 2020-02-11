@@ -15,7 +15,7 @@ const PlayButtonConnected = ({
   <Mutation mutation={PLAY_VIDEO}>
     {(play) => (
       <PlayButton
-        action={() =>
+        onPress={() =>
           play({
             variables: {
               mediaSource: videoSource,

@@ -9,7 +9,7 @@ const WebView = ({ webViewUrl, coverImageSources }) => (
   <RockAuthedWebBrowser>
     {(openUrl) => (
       <PlayButton
-        action={() => openUrl(webViewUrl)}
+        onPress={() => openUrl(webViewUrl)}
         coverImageSources={coverImageSources}
       />
     )}
