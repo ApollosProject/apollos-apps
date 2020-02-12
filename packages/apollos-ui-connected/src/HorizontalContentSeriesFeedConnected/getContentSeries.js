@@ -2,7 +2,7 @@ import gql from 'graphql-tag';
 import ApollosConfig from '@apollosproject/config';
 
 export default gql`
-  query getHorizontalContent($itemId: ID!, $cursor: String) {
+  query getContentSeries($itemId: ID!, $cursor: String) {
     node(id: $itemId) {
       ... on ContentItem {
         id
