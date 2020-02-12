@@ -11,6 +11,7 @@ import {
 import { get } from 'lodash';
 import {
   BackgroundView,
+  Button,
   PaddedView,
   TextInput,
   styled,
@@ -21,8 +22,6 @@ import {
 import {
   FlexedSafeAreaView,
   LegalText,
-  NextButton,
-  NextButtonText,
   PromptText,
   TabButton,
   TabButtonWrapper,
@@ -117,13 +116,14 @@ const Entry = ({
 
         {onPressNext ? (
           <PaddedView>
-            <NextButton
+            <Button
               onPress={onPressNext}
               disabled={disabled}
               loading={isLoading}
-            >
-              <NextButtonText>Next</NextButtonText>
-            </NextButton>
+              title={'Next'}
+              type={'primary'}
+              pill={false}
+            />
           </PaddedView>
         ) : null}
       </FlexedSafeAreaView>

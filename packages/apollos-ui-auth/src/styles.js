@@ -49,20 +49,6 @@ const LegalText = styled(
   'ui-auth.EmailEntry.LegalText'
 )(H6);
 
-const NextButton = styled(
-  ({ theme }) => ({
-    backgroundColor: theme.colors.action.primary,
-  }),
-  'ui-auth.NextButton'
-)((props) => <Button pill={false} {...props} />);
-
-const NextButtonText = styled(
-  ({ theme }) => ({
-    color: theme.colors.text.invert,
-  }),
-  'ui-auth.NextButtonText'
-)(H4);
-
 // Tab Login
 
 const TabWrapper = styled(
@@ -125,8 +111,6 @@ export {
   BrandIcon,
   TitleText,
   PromptText,
-  NextButton,
-  NextButtonText,
   LegalText,
   TabCard,
   TabButton,

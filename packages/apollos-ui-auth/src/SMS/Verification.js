@@ -9,15 +9,14 @@ import {
 } from 'react-native';
 import { get } from 'lodash';
 
-import { PaddedView, TextInput, BackgroundView } from '@apollosproject/ui-kit';
-
 import {
-  FlexedSafeAreaView,
-  NextButton,
-  NextButtonText,
-  TitleText,
-  PromptText,
-} from '../styles';
+  Button,
+  PaddedView,
+  TextInput,
+  BackgroundView,
+} from '@apollosproject/ui-kit';
+
+import { FlexedSafeAreaView, TitleText, PromptText } from '../styles';
 import BackButton from '../BackButton';
 
 const Verification = ({
@@ -64,13 +63,14 @@ const Verification = ({
 
         {onPressNext ? (
           <PaddedView>
-            <NextButton
+            <Button
               onPress={onPressNext}
               disabled={disabled}
               loading={isLoading}
-            >
-              <NextButtonText>Next</NextButtonText>
-            </NextButton>
+              title={'Next'}
+              type={'primary'}
+              pill={false}
+            />
           </PaddedView>
         ) : null}
       </FlexedSafeAreaView>
