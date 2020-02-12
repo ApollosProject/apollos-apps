@@ -16,6 +16,8 @@ function handleValue(value) {
       envVariableRegex,
       (match, p1) => process.env[p1]
     );
+    // set undefined variables to null so they eval falsy
+    if (envVariable === 'undefined') return null;
     try {
       // eslint-disable-next-line
       if (!isNaN(Number(envVariable))) {

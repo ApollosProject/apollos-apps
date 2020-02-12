@@ -7,23 +7,29 @@ const { ROCK } = ApollosConfig;
 
 const { REDIS_URL } = process.env;
 
-const client = new Redis(REDIS_URL);
-const subscriber = new Redis(REDIS_URL);
+let client;
+let subscriber;
+let queueOpts;
 
-// Used to ensure that N+3 redis connections are not created per queue.
-// https://github.com/OptimalBits/bull/blob/develop/PATTERNS.md#reusing-redis-connections
-const queueOpts = {
-  createClient(type) {
-    switch (type) {
-      case 'client':
-        return client;
-      case 'subscriber':
-        return subscriber;
-      default:
-        return new Redis(REDIS_URL);
-    }
-  },
-};
+if (REDIS_URL) {
+  client = new Redis(REDIS_URL);
+  subscriber = new Redis(REDIS_URL);
+
+  // Used to ensure that N+3 redis connections are not created per queue.
+  // https://github.com/OptimalBits/bull/blob/develop/PATTERNS.md#reusing-redis-connections
+  queueOpts = {
+    createClient(type) {
+      switch (type) {
+        case 'client':
+          return client;
+        case 'subscriber':
+          return subscriber;
+        default:
+          return new Redis(REDIS_URL);
+      }
+    },
+  };
+}
 
 const createJobs = ({ getContext, queues }) => {
   const FullIndexQueue = queues.add('algolia-full-index-queue', queueOpts);

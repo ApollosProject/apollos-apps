@@ -9,16 +9,28 @@ import {
 } from '@apollosproject/server-core';
 
 export default class Search {
-  client = algoliasearch(
-    ApollosConfig.ALGOLIA.APPLICATION_ID,
-    ApollosConfig.ALGOLIA.API_KEY
-  );
-
-  index = this.client.initIndex(ApollosConfig.ALGOLIA.SEARCH_INDEX);
+  constructor() {
+    if (ApollosConfig.ALGOLIA.APPLICATION_ID && ApollosConfig.ALGOLIA.API_KEY) {
+      this.client = algoliasearch(
+        ApollosConfig.ALGOLIA.APPLICATION_ID,
+        ApollosConfig.ALGOLIA.API_KEY
+      );
+      this.index = this.client.initIndex(ApollosConfig.ALGOLIA.SEARCH_INDEX);
+      this.index.setSettings(ApollosConfig.ALGOLIA.CONFIGURATION);
+    } else {
+      console.warn(
+        'You are using the Algolia Search datasource without Algolia credentials. To avoid issues, add Algolia credentials to your config.yml or remove the Algolia datasource'
+      );
+      this.index = {
+        addObjects: (_, cb) => cb(),
+        clearIndex: (cb) => cb(),
+        search: () => ({ hits: [] }),
+      };
+    }
+  }
 
   initialize({ context }) {
     this.context = context;
-    this.index.setSettings(ApollosConfig.ALGOLIA.CONFIGURATION);
   }
 
   async addObjects(args) {
