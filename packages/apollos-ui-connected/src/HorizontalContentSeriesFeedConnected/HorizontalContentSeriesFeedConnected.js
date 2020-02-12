@@ -19,6 +19,8 @@ const loadingStateObject = {
     parentChannel: {
       name: '',
     },
+    // We need to assume a typename so HorizontalContentCardConnected knows what "type" to render
+    __typename: 'MediaContentItem',
   },
 };
 
@@ -57,8 +59,7 @@ class HorizontalContentSeriesFeedConnected extends Component {
           contentId={itemId}
           disabled={disabled}
           isLoading={isLoading}
-          // If we are loading we need to assume a typename so HorizontalContentCardConnected knows what "type" to render
-          __typename={isLoading ? 'MediaContentItem' : get(item, '__typename')}
+          __typename={get(item, '__typename')}
         />
       </TouchableScale>
     );
