@@ -17,6 +17,9 @@
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
     ],
+    "setupFiles": [
+      "./jest.setup.js"
+    ],
     "testEnvironment": "node",
     "reporters": [
       "<rootDir>/../../scripts/fingers-crossed-reporter.js"

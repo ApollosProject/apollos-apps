@@ -137,7 +137,18 @@ export const createJobs = (data) => ({ app, context, dataSources }) => {
 
   const getContext = createContextGetter({ context, dataSources });
 
-  const queues = createQueues(process.env.REDIS_URL);
+  let queues = {
+    add: () => {
+      console.log(
+        `process.env.REDIS_URL is undefined. Working with job queues/bull is a no-op`
+      );
+      return { process: () => ({}), add: () => ({}) };
+    },
+  };
+
+  if (process.env.REDIS_URL) {
+    queues = createQueues(process.env.REDIS_URL);
+  }
 
   app.use(
     '/admin/queues',
