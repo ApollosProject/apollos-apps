@@ -44,10 +44,8 @@ class HorizontalContentSeriesFeedConnected extends Component {
   };
 
   renderItem = ({ item }) => {
-    const itemId = get(item, 'id', '');
     const disabled = get(item, 'id', '') === this.props.contentId;
     const isLoading = get(item.node, 'isLoading');
-    const labelText = get(item.node, 'parentChannel.name', null);
 
     return (
       <TouchableScale
@@ -55,8 +53,8 @@ class HorizontalContentSeriesFeedConnected extends Component {
         disabled={isLoading || disabled}
       >
         <HorizontalContentCardConnected
-          labelText={labelText}
-          contentId={itemId}
+          labelText={get(item.node, 'parentChannel.name', null)}
+          contentId={get(item, 'id', '')}
           disabled={disabled}
           isLoading={isLoading}
           __typename={get(item, '__typename')}
