@@ -8,7 +8,7 @@ else
   echo $*
   if [ "$*" = "--start-server" ]; then
     echo 'Server not running, starting server'
-    PORT=4000 TWILIO_ACCOUNT_SID=ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX npm run start:prod > /tmp/server-log.txt &
+    PORT=4000 npm run start:prod > /tmp/server-log.txt &
     SERVER_PID=$!
     echo "Server running... (PID $SERVER_PID)"
   fi
