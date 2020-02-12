@@ -117,6 +117,7 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
   loadingStateObject={
     Object {
       "node": Object {
+        "__typename": "MediaContentItem",
         "coverImage": "",
         "id": "fakeId0",
         "isLoading": true,
