@@ -13,6 +13,7 @@ const MediaControls = ({
   parentChannelName,
   title,
   videos,
+  ...props
 }) => {
   if (loading || error) return null;
   const isLive = !!liveStream;
@@ -27,14 +28,26 @@ const MediaControls = ({
 
   const coverImageSources = (coverImage && coverImage.sources) || [];
 
+  // Default case, normal media.
+  let Control = (
+    <PlayButtonConnected
+      coverImageSources={coverImageSources}
+      videoSource={videoSource}
+      parentChannelName={parentChannelName}
+      title={title}
+      {...props}
+    />
+  );
+
   // Content is live, and we have a livestream media
   if (isLive && get(liveStream, 'media.sources[0].uri')) {
-    return (
+    Control = (
       <PlayButtonConnected
         coverImageSources={coverImageSources}
         videoSource={liveStream.media.sources[0]}
         parentChannelName={parentChannelName}
         title={title}
+        {...props}
       />
     );
   }
@@ -42,23 +55,16 @@ const MediaControls = ({
   // Content is live, and we don't have a livestream media
   // but we do have a webview url
   if (isLive && get(liveStream, 'webViewUrl')) {
-    return (
+    Control = (
       <WebView
         webViewUrl={liveStream.webViewUrl}
         coverImageSources={coverImageSources}
+        {...props}
       />
     );
   }
 
-  // Default case, normal media.
-  return (
-    <PlayButtonConnected
-      coverImageSources={coverImageSources}
-      videoSource={videoSource}
-      parentChannelName={parentChannelName}
-      title={title}
-    />
-  );
+  return Control;
 };
 
 MediaControls.propTypes = {

@@ -8,7 +8,7 @@ import GET_CONTENT_MEDIA from './getContentMedia';
 
 import MediaControls from './MediaControls';
 
-const MediaControlsConnected = ({ Component, contentId }) => {
+const MediaControlsConnected = ({ Component, contentId, ...props }) => {
   if (!contentId) return null;
   return (
     <LiveConsumer contentId={contentId}>
@@ -33,6 +33,7 @@ const MediaControlsConnected = ({ Component, contentId }) => {
               title={title}
               videos={videos}
               coverImage={coverImage}
+              {...props}
             />
           )}
         </Query>

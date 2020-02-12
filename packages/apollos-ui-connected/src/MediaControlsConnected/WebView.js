@@ -5,12 +5,13 @@ import RockAuthedWebBrowser from '../RockAuthedWebBrowser';
 
 import { PlayButton } from './PlayButtonConnected';
 
-const WebView = ({ webViewUrl, coverImageSources }) => (
-  <RockAuthedWebBrowser>
+const WebView = ({ webViewUrl, coverImageSources, style, ...props }) => (
+  <RockAuthedWebBrowser {...props}>
     {(openUrl) => (
       <PlayButton
         onPress={() => openUrl(webViewUrl)}
         coverImageSources={coverImageSources}
+        style={style}
       />
     )}
   </RockAuthedWebBrowser>
@@ -19,6 +20,7 @@ const WebView = ({ webViewUrl, coverImageSources }) => (
 WebView.propTypes = {
   webViewUrl: PropTypes.string,
   coverImageSources: PropTypes.arrayOf(PropTypes.shape({})),
+  style: PropTypes.any, // eslint-disable-line
 };
 
 export default WebView;

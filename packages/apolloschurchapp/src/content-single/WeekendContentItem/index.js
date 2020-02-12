@@ -32,6 +32,10 @@ const Header = styled(({ hasMedia, theme }) => ({
   // backgroundColor: theme.colors.primary,
 }))(PaddedView);
 
+const StyledMediaControlsConnected = styled(({ theme }) => ({
+  marginTop: -(theme.sizing.baseUnit * 2.5),
+}))(MediaControlsConnected);
+
 const LiveAwareLabel = withTheme(({ isLive, title, theme }) => ({
   ...(isLive
     ? {
@@ -85,7 +89,7 @@ const WeekendContentItem = ({ content, loading }) => {
                     <ContentHTMLViewConnected contentId={content.id} />
                   </ThemeMixin>
                 </Header>
-                <MediaControlsConnected contentId={content.id} />
+                <StyledMediaControlsConnected contentId={content.id} />
                 <Features contentId={content.id} />
                 <HorizontalContentFeed contentId={content.id} />
               </FlexedScrollView>

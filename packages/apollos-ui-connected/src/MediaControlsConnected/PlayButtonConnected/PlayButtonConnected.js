@@ -6,43 +6,31 @@ import { PLAY_VIDEO } from '@apollosproject/ui-media-player';
 
 import PlayButton from './PlayButton';
 
-const handleOnPress = (
-  coverImageSources,
-  isVideo,
-  parentChannelName,
-  play,
-  title,
-  videoSource
-) =>
-  play({
-    variables: {
-      mediaSource: videoSource,
-      posterSources: coverImageSources,
-      title,
-      isVideo,
-      artist: parentChannelName,
-    },
-  });
-
 const PlayButtonConnected = ({
   coverImageSources,
   isVideo,
   parentChannelName,
   title,
   videoSource,
+  Component,
+  ...props
 }) => (
   <Mutation mutation={PLAY_VIDEO}>
     {(play) => (
-      <PlayButton
-        onPress={handleOnPress(
-          coverImageSources,
-          isVideo,
-          parentChannelName,
-          play,
-          title,
-          videoSource
-        )}
+      <Component
+        onPress={() =>
+          play({
+            variables: {
+              mediaSource: videoSource,
+              posterSources: coverImageSources,
+              title,
+              isVideo,
+              artist: parentChannelName,
+            },
+          })
+        }
         coverImageSources={coverImageSources}
+        {...props}
       />
     )}
   </Mutation>
@@ -54,10 +42,16 @@ PlayButtonConnected.propTypes = {
   parentChannelName: PropTypes.string,
   title: PropTypes.string,
   videoSource: PropTypes.shape({}),
+  Component: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.func,
+    PropTypes.object, // type check for React fragments
+  ]),
 };
 
 PlayButtonConnected.defaultProps = {
   isVideo: true,
+  Component: PlayButton,
 };
 
 export default PlayButtonConnected;

@@ -11,17 +11,16 @@ import {
   H6,
 } from '@apollosproject/ui-kit';
 
-const Container = styled(({ theme }) => ({
+const Container = styled({
   flexDirection: 'row',
   alignItems: 'flex-start',
   justifyContent: 'flex-start',
-  marginTop: -(theme.sizing.baseUnit * 2.5),
-}))(View);
+})(View);
 
 const StyledMediaThumbnail = styled({ marginVertical: 0 })(MediaThumbnail);
 
-const PlayButton = ({ coverImageSources, icon, onPress, title }) => (
-  <Container>
+const PlayButton = ({ coverImageSources, icon, onPress, title, ...props }) => (
+  <Container {...props}>
     <TouchableScale onPress={onPress}>
       <StyledMediaThumbnail image={coverImageSources}>
         <MediaThumbnailItem centered>
