@@ -1,13 +1,14 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import renderer from 'react-test-renderer';
+import wait from 'waait';
 
 import { Providers } from '../../utils/testUtils';
 
 import PlayButton from './PlayButton';
 
 describe('PlayButton', () => {
-  it('should render', () => {
+  it('should render', async () => {
     const tree = renderer.create(
       <Providers>
         <PlayButton
@@ -22,9 +23,10 @@ describe('PlayButton', () => {
         />
       </Providers>
     );
+    await wait(0); // wait for response from graphql
     expect(tree).toMatchSnapshot();
   });
-  it('should render with custom title', () => {
+  it('should render with custom title', async () => {
     const tree = renderer.create(
       <Providers>
         <PlayButton
@@ -40,9 +42,10 @@ describe('PlayButton', () => {
         />
       </Providers>
     );
+    await wait(0); // wait for response from graphql
     expect(tree).toMatchSnapshot();
   });
-  it('should render with custom play icon', () => {
+  it('should render with custom play icon', async () => {
     const tree = renderer.create(
       <Providers>
         <PlayButton
@@ -58,6 +61,7 @@ describe('PlayButton', () => {
         />
       </Providers>
     );
+    await wait(0); // wait for response from graphql
     expect(tree).toMatchSnapshot();
   });
 });
