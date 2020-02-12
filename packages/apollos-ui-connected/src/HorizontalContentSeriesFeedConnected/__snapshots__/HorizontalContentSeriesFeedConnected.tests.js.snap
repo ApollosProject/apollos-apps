@@ -18,7 +18,7 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
           "sources": Array [
             Object {
               "__typename": "ImageMediaSource",
-              "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+              "uri": "https://picsum.photos/600/400/?random",
             },
           ],
         },
@@ -41,7 +41,7 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
           "sources": Array [
             Object {
               "__typename": "ImageMediaSource",
-              "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+              "uri": "https://picsum.photos/600/400/?random",
             },
           ],
         },
@@ -64,7 +64,7 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
           "sources": Array [
             Object {
               "__typename": "ImageMediaSource",
-              "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+              "uri": "https://picsum.photos/600/400/?random",
             },
           ],
         },
@@ -87,7 +87,7 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
           "sources": Array [
             Object {
               "__typename": "ImageMediaSource",
-              "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+              "uri": "https://picsum.photos/600/400/?random",
             },
           ],
         },
@@ -246,7 +246,7 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
                       "__typename": "ImageMediaSource",
                       "cache": "force-cache",
                       "height": 240,
-                      "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                      "uri": "https://picsum.photos/600/400/?random",
                       "width": 320,
                     },
                   ]
@@ -441,7 +441,7 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
                       "__typename": "ImageMediaSource",
                       "cache": "force-cache",
                       "height": 240,
-                      "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                      "uri": "https://picsum.photos/600/400/?random",
                       "width": 320,
                     },
                   ]
@@ -636,7 +636,7 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
                       "__typename": "ImageMediaSource",
                       "cache": "force-cache",
                       "height": 240,
-                      "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                      "uri": "https://picsum.photos/600/400/?random",
                       "width": 320,
                     },
                   ]
@@ -831,7 +831,7 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
                       "__typename": "ImageMediaSource",
                       "cache": "force-cache",
                       "height": 240,
-                      "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                      "uri": "https://picsum.photos/600/400/?random",
                       "width": 320,
                     },
                   ]
