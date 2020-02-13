@@ -40,6 +40,7 @@
     "@apollosproject/ui-fragments": "*",
     "@apollosproject/ui-htmlview": "*",
     "@apollosproject/ui-kit": "*",
+    "@apollosproject/ui-media-player": "*",
     "@apollosproject/ui-storybook": "*",
     "@react-native-community/async-storage": "*",
     "react": "*",

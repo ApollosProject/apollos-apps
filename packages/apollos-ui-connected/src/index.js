@@ -24,6 +24,10 @@ export LikedContentFeedConnected, {
   GET_LIKED_CONTENT,
 } from './LikedContentFeedConnected';
 export { LiveConsumer, LiveProvider } from './live';
+export MediaControlsConnected, {
+  GET_CONTENT_MEDIA,
+  MediaControls,
+} from './MediaControlsConnected';
 export RockAuthedWebBrowser from './RockAuthedWebBrowser';
 export SearchCardConnected from './SearchCardConnected';
 export ShareButtonConnected, {

@@ -1,3 +1,4 @@
+import React from 'react';
 import { NativeModules } from 'react-native';
 import ApollosConfig from '@apollosproject/config';
 import FRAGMENTS from '@apollosproject/ui-fragments';
@@ -29,4 +30,12 @@ jest.mock('@apollosproject/ui-analytics', () => ({
   AnalyticsProvider: ({ children }) => children,
   TrackEventWhenLoaded: () => null,
   withTrackOnPress: (Component) => (props) => <Component {...props} />,
+}));
+
+jest.mock('@apollosproject/ui-media-player', () => ({
+  MediaPlayerSpacer: ({ children }) => children,
+  MediaPlayer: () => 'MediaPlayer',
+  MediaPlayerProvider: ({ children }) => children,
+  playVideoMutation: 'mutation { playVideo }',
+  withTabBarMediaSpacer: () => ({ children }) => children,
 }));
