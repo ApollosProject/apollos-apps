@@ -76,7 +76,7 @@ const Entry = ({
               <TabContainer alternateLogin={alternateLogin}>
                 <TabButtonWrapper>
                   <Touchable>
-                    <TabButton alternateLogin={alternateLogin} isActive>
+                    <TabButton isActive>
                       <TabButtonText isActive>{tabTitle}</TabButtonText>
                     </TabButton>
                   </Touchable>
@@ -85,7 +85,7 @@ const Entry = ({
                 {onPressAlternateLogin ? (
                   <TabButtonWrapper>
                     <Touchable onPress={onPressAlternateLogin}>
-                      <TabButton alternateLogin={alternateLogin}>
+                      <TabButton>
                         <TabButtonText>{alternateLoginText}</TabButtonText>
                       </TabButton>
                     </Touchable>
