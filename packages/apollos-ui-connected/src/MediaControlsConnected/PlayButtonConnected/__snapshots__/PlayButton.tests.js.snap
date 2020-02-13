@@ -7,7 +7,6 @@ exports[`PlayButton should render 1`] = `
       "alignItems": "flex-start",
       "flexDirection": "row",
       "justifyContent": "flex-start",
-      "marginTop": -40,
     }
   }
 >
@@ -272,7 +271,6 @@ exports[`PlayButton should render with custom play icon 1`] = `
       "alignItems": "flex-start",
       "flexDirection": "row",
       "justifyContent": "flex-start",
-      "marginTop": -40,
     }
   }
 >
@@ -537,7 +535,6 @@ exports[`PlayButton should render with custom title 1`] = `
       "alignItems": "flex-start",
       "flexDirection": "row",
       "justifyContent": "flex-start",
-      "marginTop": -40,
     }
   }
 >
