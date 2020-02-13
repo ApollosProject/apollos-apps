@@ -31,12 +31,8 @@ const MediaControlsConnected = ({ Component, contentId, ...props }) => {
             const videoSource = get(videos, '[0].sources[0]', null);
             const webViewUrl = get(liveStream, 'webViewUrl');
 
-            const isLive = !!liveStream;
-            const hasLiveStreamContent = !!(webViewUrl || liveStreamSources);
-            const shouldRender =
-              (isLive && hasLiveStreamContent) || videoSource;
-
-            if (!shouldRender) return null;
+            // if we don't have a media source don't render
+            if (!(webViewUrl || liveStreamSource || videoSource)) return null;
 
             return (
               <Component
