@@ -11,6 +11,7 @@ import {
   H2,
   H5,
   H6,
+  UIText,
 } from '@apollosproject/ui-kit';
 
 const FlexedSafeAreaView = compose(
@@ -97,6 +98,10 @@ const TabButton = styled(
   }),
   'ui-auth.TabButton'
 )(View);
+
+const TabButtonText = styled(({ theme, isActive }) => ({
+  color: isActive ? theme.colors.text.primary : theme.colors.text.tertiary,
+}))(UIText);
 
 const TabCard = styled(
   ({ theme }) => ({
