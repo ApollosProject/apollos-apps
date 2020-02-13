@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import {
   ContentHTMLViewConnected,
   HorizontalContentSeriesFeedConnected,
+  MediaControlsConnected,
 } from '@apollosproject/ui-connected';
 import {
   styled,
@@ -15,10 +16,13 @@ import {
   StretchyView,
 } from '@apollosproject/ui-kit';
 
-import MediaControls from '../MediaControls';
 import Features from '../Features';
 
 const FlexedScrollView = styled({ flex: 1 })(Animated.ScrollView);
+
+const StyledMediaControlsConnected = styled(({ theme }) => ({
+  marginTop: -(theme.sizing.baseUnit * 2.5),
+}))(MediaControlsConnected);
 
 const UniversalContentItem = ({ content, loading }) => {
   const coverImageSources = get(content, 'coverImage.sources', []);
@@ -35,7 +39,7 @@ const UniversalContentItem = ({ content, loading }) => {
                 />
               </Stretchy>
             ) : null}
-            <MediaControls contentId={content.id} />
+            <StyledMediaControlsConnected contentId={content.id} />
             {/* fixes text/navigation spacing by adding vertical padding if we dont have an image */}
             <PaddedView vertical={!coverImageSources.length}>
               <H2 padded isLoading={!content.title && loading}>

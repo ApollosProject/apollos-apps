@@ -23,6 +23,7 @@ describe('UserAvatarConnected component', () => {
               id: 'Person:123',
               photo: {
                 uri: 'https://www.placecage.com/300/300',
+                __typename: 'ImageMedia',
               },
             },
           },
