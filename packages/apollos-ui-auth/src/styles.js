@@ -76,6 +76,7 @@ const TabContainer = styled(
   'ui-auth.TabContainer'
 )(View);
 
+// We need a wrapping `View` because this style doesn't work when applied to a `Touchable` on android.
 const TabButtonWrapper = styled({ flex: 1 }, 'ui-auth.TabButtonWrapper')(View);
 
 const TabButton = styled(
