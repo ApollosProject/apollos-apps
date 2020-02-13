@@ -8,12 +8,16 @@ import {
   StatusBar,
 } from 'react-native';
 import { get } from 'lodash';
-import { PaddedView, TextInput, BackgroundView } from '@apollosproject/ui-kit';
+import {
+  Button,
+  PaddedView,
+  TextInput,
+  BackgroundView,
+} from '@apollosproject/ui-kit';
 
 import BackButton from '../BackButton';
 import {
   FlexedSafeAreaView,
-  NextButton,
   TitleText,
   PromptText,
   LegalText,
@@ -81,11 +85,13 @@ const ProfileEntry = ({
 
           {onPressNext ? (
             <PaddedView>
-              <NextButton
-                title={'Next'}
+              <Button
                 onPress={onPressNext}
                 disabled={disabled}
                 loading={isLoading}
+                title={'Next'}
+                type={'primary'}
+                pill={false}
               />
             </PaddedView>
           ) : null}
