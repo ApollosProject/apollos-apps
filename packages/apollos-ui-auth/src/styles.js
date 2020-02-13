@@ -1,11 +1,9 @@
-import React from 'react';
 import { Platform, View } from 'react-native';
 import { compose, withProps } from 'recompose';
 import { SafeAreaView } from 'react-navigation';
 import {
   styled,
   Card,
-  Button,
   withTheme,
   Icon,
   H2,
@@ -47,14 +45,6 @@ const LegalText = styled(
   }),
   'ui-auth.EmailEntry.LegalText'
 )(H6);
-
-const NextButton = styled(
-  ({ theme }) => ({
-    backgroundColor: theme.colors.action.primary,
-    color: theme.colors.text.invert,
-  }),
-  'ui-auth.NextButton'
-)((props) => <Button pill={false} {...props} />);
 
 // Tab Login
 
@@ -118,7 +108,6 @@ export {
   BrandIcon,
   TitleText,
   PromptText,
-  NextButton,
   LegalText,
   TabCard,
   TabButton,

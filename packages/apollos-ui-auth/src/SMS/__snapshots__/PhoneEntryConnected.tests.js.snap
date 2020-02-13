@@ -490,7 +490,6 @@ exports[`ui-auth/SMS/PhoneEntryConnected should render 1`] = `
               "borderColor": "#00676D",
               "borderRadius": 16,
               "borderWidth": 2,
-              "color": "#F8F7F4",
               "elevation": 2,
               "flexDirection": "row",
               "height": 48,
@@ -504,8 +503,7 @@ exports[`ui-auth/SMS/PhoneEntryConnected should render 1`] = `
           <Text
             style={
               Object {
-                "backgroundColor": "#00676D",
-                "color": "#F8F7F4",
+                "color": "#FFFFFF",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
                 "lineHeight": 24,
