@@ -6,7 +6,6 @@ import {
   ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
 } from 'react-native';
 import { get } from 'lodash';
 import {
@@ -24,6 +23,7 @@ import {
   NextButton,
   PromptText,
   TabButton,
+  TabButtonText,
   TabButtonWrapper,
   TabCard,
   TabContainer,
@@ -77,7 +77,7 @@ const Entry = ({
                 <TabButtonWrapper>
                   <Touchable>
                     <TabButton alternateLogin={alternateLogin} isActive>
-                      <Text>{tabTitle}</Text>
+                      <TabButtonText isActive>{tabTitle}</TabButtonText>
                     </TabButton>
                   </Touchable>
                 </TabButtonWrapper>
@@ -86,7 +86,7 @@ const Entry = ({
                   <TabButtonWrapper>
                     <Touchable onPress={onPressAlternateLogin}>
                       <TabButton alternateLogin={alternateLogin}>
-                        <Text>{alternateLoginText}</Text>
+                        <TabButtonText>{alternateLoginText}</TabButtonText>
                       </TabButton>
                     </Touchable>
                   </TabButtonWrapper>
