@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
+import { get } from 'lodash';
 
 import { LiveConsumer } from '../live';
 
@@ -24,18 +25,39 @@ const MediaControlsConnected = ({ Component, contentId, ...props }) => {
             } = {},
             loading,
             error,
-          }) => (
-            <Component
-              loading={loading}
-              error={error}
-              liveStream={liveStream}
-              parentChannelName={parentChannel.name}
-              title={title}
-              videos={videos}
-              coverImage={coverImage}
-              {...props}
-            />
-          )}
+          }) => {
+            const coverImageSources = (coverImage && coverImage.sources) || [];
+            const liveStreamSources = get(liveStream, 'media.sources[0]');
+            const liveStreamUri = get(liveStream, 'media.sources[0].uri');
+            const videoSource = get(videos, '[0].sources[0]', null);
+            const webViewUrl = get(liveStream, 'webViewUrl');
+
+            const isLive = !!liveStream;
+            const hasLiveStreamContent = !!(webViewUrl || liveStreamSources);
+            const shouldRender =
+              (isLive && hasLiveStreamContent) || videoSource;
+
+            if (!shouldRender) return null;
+
+            return (
+              <Component
+                coverImage={coverImage}
+                coverImageSources={coverImageSources}
+                error={error}
+                isLive={isLive}
+                liveStream={liveStream}
+                liveStreamSources={liveStreamSources}
+                liveStreamUri={liveStreamUri}
+                loading={loading}
+                parentChannelName={parentChannel.name}
+                title={title}
+                videoSource={videoSource}
+                videos={videos}
+                webViewUrl={webViewUrl}
+                {...props}
+              />
+            );
+          }}
         </Query>
       )}
     </LiveConsumer>
