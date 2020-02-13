@@ -24,15 +24,7 @@ const mock = {
                 videos: [],
                 theme: null,
                 summary: 'bla bla bla',
-                coverImage: {
-                  sources: [
-                    {
-                      uri: 'https://picsum.photos/600/400/?random',
-                      __typename: 'ImageMediaSource',
-                    },
-                  ],
-                  __typename: 'ImageMedia',
-                },
+                coverImage: null,
                 parentChannel: {
                   id: 'ContentChannel:559b23fd0aa90e81b1c023e72e230fa1',
                   name: 'Devotional',
@@ -60,15 +52,7 @@ const mock = {
                 videos: [],
                 theme: null,
                 summary: 'bla bla bla',
-                coverImage: {
-                  sources: [
-                    {
-                      uri: 'https://picsum.photos/600/400/?random',
-                      __typename: 'ImageMediaSource',
-                    },
-                  ],
-                  __typename: 'ImageMedia',
-                },
+                coverImage: null,
                 parentChannel: {
                   id: 'ContentChannel:559b23fd0aa90e81b1c023e72e230fa1',
                   name: 'Devotional',
@@ -97,15 +81,7 @@ const mock = {
                 videos: [],
                 theme: null,
                 summary: 'bla bla bla',
-                coverImage: {
-                  sources: [
-                    {
-                      uri: 'https://picsum.photos/600/400/?random',
-                      __typename: 'ImageMediaSource',
-                    },
-                  ],
-                  __typename: 'ImageMedia',
-                },
+                coverImage: null,
                 parentChannel: {
                   id: 'ContentChannel:559b23fd0aa90e81b1c023e72e230fa1',
                   name: 'Devotional',
@@ -133,15 +109,7 @@ const mock = {
                 videos: [],
                 theme: null,
                 summary: 'bla bla bla',
-                coverImage: {
-                  sources: [
-                    {
-                      uri: 'https://picsum.photos/600/400/?random',
-                      __typename: 'ImageMediaSource',
-                    },
-                  ],
-                  __typename: 'ImageMedia',
-                },
+                coverImage: null,
                 parentChannel: {
                   id: 'ContentChannel:559b23fd0aa90e81b1c023e72e230fa1',
                   name: 'Devotional',
