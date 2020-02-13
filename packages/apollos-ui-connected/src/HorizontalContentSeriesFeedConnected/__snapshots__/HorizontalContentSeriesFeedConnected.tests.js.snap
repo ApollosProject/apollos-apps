@@ -13,15 +13,7 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
     Array [
       Object {
         "__typename": "DevotionalContentItem",
-        "coverImage": Object {
-          "__typename": "ImageMedia",
-          "sources": Array [
-            Object {
-              "__typename": "ImageMediaSource",
-              "uri": "https://picsum.photos/600/400/?random",
-            },
-          ],
-        },
+        "coverImage": Object {},
         "hyphenatedTitle": "God sees who you can be not who you are",
         "id": "DevotionalContentItem:d395278cd4b68e074ca4e595c8feab6d",
         "parentChannel": Object {
@@ -36,15 +28,7 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
       },
       Object {
         "__typename": "DevotionalContentItem",
-        "coverImage": Object {
-          "__typename": "ImageMedia",
-          "sources": Array [
-            Object {
-              "__typename": "ImageMediaSource",
-              "uri": "https://picsum.photos/600/400/?random",
-            },
-          ],
-        },
+        "coverImage": Object {},
         "hyphenatedTitle": "Thank God for the friends who will tell it like it is",
         "id": "DevotionalContentItem:fbea6914a3e8877516cbd333d919075d",
         "parentChannel": Object {
@@ -59,15 +43,7 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
       },
       Object {
         "__typename": "DevotionalContentItem",
-        "coverImage": Object {
-          "__typename": "ImageMedia",
-          "sources": Array [
-            Object {
-              "__typename": "ImageMediaSource",
-              "uri": "https://picsum.photos/600/400/?random",
-            },
-          ],
-        },
+        "coverImage": Object {},
         "hyphenatedTitle": "No sin is too bad",
         "id": "DevotionalContentItem:5e18250f586ab8de4d3d6292c919dcc4",
         "parentChannel": Object {
@@ -82,15 +58,7 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
       },
       Object {
         "__typename": "DevotionalContentItem",
-        "coverImage": Object {
-          "__typename": "ImageMedia",
-          "sources": Array [
-            Object {
-              "__typename": "ImageMediaSource",
-              "uri": "https://picsum.photos/600/400/?random",
-            },
-          ],
-        },
+        "coverImage": Object {},
         "hyphenatedTitle": "Change starts with a choice",
         "id": "DevotionalContentItem:bdc2c29b85949e4ca8232b373a07953d",
         "parentChannel": Object {
@@ -234,29 +202,12 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
                 }
               }
             >
-              <Image
-                customTheme={null}
-                disabled={false}
-                maxAspectRatio={1}
-                minAspectRatio={1}
-                onLoad={[Function]}
-                source={
-                  Array [
-                    Object {
-                      "__typename": "ImageMediaSource",
-                      "cache": "force-cache",
-                      "height": 240,
-                      "uri": "https://picsum.photos/600/400/?random",
-                      "width": 320,
-                    },
-                  ]
-                }
+              <View
+                forceRatio={1}
                 style={
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
@@ -429,29 +380,12 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
                 }
               }
             >
-              <Image
-                customTheme={null}
-                disabled={false}
-                maxAspectRatio={1}
-                minAspectRatio={1}
-                onLoad={[Function]}
-                source={
-                  Array [
-                    Object {
-                      "__typename": "ImageMediaSource",
-                      "cache": "force-cache",
-                      "height": 240,
-                      "uri": "https://picsum.photos/600/400/?random",
-                      "width": 320,
-                    },
-                  ]
-                }
+              <View
+                forceRatio={1}
                 style={
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
@@ -624,29 +558,12 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
                 }
               }
             >
-              <Image
-                customTheme={null}
-                disabled={false}
-                maxAspectRatio={1}
-                minAspectRatio={1}
-                onLoad={[Function]}
-                source={
-                  Array [
-                    Object {
-                      "__typename": "ImageMediaSource",
-                      "cache": "force-cache",
-                      "height": 240,
-                      "uri": "https://picsum.photos/600/400/?random",
-                      "width": 320,
-                    },
-                  ]
-                }
+              <View
+                forceRatio={1}
                 style={
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
@@ -819,29 +736,12 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
                 }
               }
             >
-              <Image
-                customTheme={null}
-                disabled={false}
-                maxAspectRatio={1}
-                minAspectRatio={1}
-                onLoad={[Function]}
-                source={
-                  Array [
-                    Object {
-                      "__typename": "ImageMediaSource",
-                      "cache": "force-cache",
-                      "height": 240,
-                      "uri": "https://picsum.photos/600/400/?random",
-                      "width": 320,
-                    },
-                  ]
-                }
+              <View
+                forceRatio={1}
                 style={
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "opacity": 0,
-                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
