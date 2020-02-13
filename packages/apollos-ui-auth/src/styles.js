@@ -76,9 +76,7 @@ const TabContainer = styled(
   'ui-auth.TabContainer'
 )(View);
 
-const TabButtonWrapper = styled({ width: '50%' }, 'ui-auth.TabButtonWrapper')(
-  View
-);
+const TabButtonWrapper = styled({ flex: 1 }, 'ui-auth.TabButtonWrapper')(View);
 
 const TabButton = styled(
   ({ theme, isActive }) => ({
@@ -124,6 +122,7 @@ export {
   LegalText,
   TabCard,
   TabButton,
+  TabButtonText,
   TabContainer,
   TabButtonWrapper,
   TabWrapper,
