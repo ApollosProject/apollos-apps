@@ -4,6 +4,7 @@ import { get } from 'lodash';
 import PropTypes from 'prop-types';
 import {
   ContentHTMLViewConnected,
+  HorizontalContentSeriesFeedConnected,
   LiveConsumer,
   MediaControlsConnected,
 } from '@apollosproject/ui-connected';
@@ -20,7 +21,6 @@ import {
   withTheme,
 } from '@apollosproject/ui-kit';
 
-import HorizontalContentFeed from '../HorizontalContentFeed';
 import Features from '../Features';
 
 const FlexedScrollView = styled({ flex: 1 })(Animated.ScrollView);
@@ -91,7 +91,7 @@ const WeekendContentItem = ({ content, loading }) => {
                 </Header>
                 <StyledMediaControlsConnected contentId={content.id} />
                 <Features contentId={content.id} />
-                <HorizontalContentFeed contentId={content.id} />
+                <HorizontalContentSeriesFeedConnected contentId={content.id} />
               </FlexedScrollView>
             )}
           </StretchyView>
