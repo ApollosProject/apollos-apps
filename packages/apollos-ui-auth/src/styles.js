@@ -1,15 +1,12 @@
-import React from 'react';
 import { Platform, View } from 'react-native';
 import { compose, withProps } from 'recompose';
 import { SafeAreaView } from 'react-navigation';
 import {
   styled,
   Card,
-  Button,
   withTheme,
   Icon,
   H2,
-  H4,
   H5,
   H6,
 } from '@apollosproject/ui-kit';
