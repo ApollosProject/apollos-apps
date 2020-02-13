@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { get } from 'lodash';
 
 import WebView from './WebView';
 import PlayButtonConnected from './PlayButtonConnected';
@@ -7,15 +8,11 @@ import PlayButtonConnected from './PlayButtonConnected';
 const MediaControls = ({
   coverImageSources,
   error,
-  isLive,
-  liveStream,
-  liveStreamSources,
-  liveStreamUri,
+  liveStreamSource,
   loading,
   parentChannelName,
   title,
   videoSource,
-  videos,
   webViewUrl,
   ...props
 }) => {
@@ -23,25 +20,24 @@ const MediaControls = ({
 
   let Control = null;
 
-  // Content is live, and we have a livestream media
-  if (isLive && liveStreamUri) {
+  //  We have a `liveStreamSource` so content is live!
+  if (get(liveStreamSource, 'uri', false)) {
     Control = (
       <PlayButtonConnected
         coverImageSources={coverImageSources}
         parentChannelName={parentChannelName}
         title={title}
-        videoSource={liveStream.media.sources[0]}
+        videoSource={liveStreamSource}
         {...props}
       />
     );
   }
-  // Content is live, and we don't have a livestream media
-  // but we do have a webview url
-  else if (isLive && webViewUrl) {
+  // We don't have a `liveStreamSource` but we do have a `webviewUrl` so content is live!
+  else if (webViewUrl) {
     Control = (
       <WebView
         coverImageSources={coverImageSources}
-        webViewUrl={liveStream.webViewUrl}
+        webViewUrl={webViewUrl}
         {...props}
       />
     );
@@ -65,15 +61,11 @@ const MediaControls = ({
 MediaControls.propTypes = {
   coverImageSources: PropTypes.arrayOf(PropTypes.shape({})),
   error: PropTypes.string,
-  isLive: PropTypes.bool,
-  liveStream: PropTypes.shape({}),
-  liveStreamSources: PropTypes.string,
-  liveStreamUri: PropTypes.string,
+  liveStreamSource: PropTypes.string,
   loading: PropTypes.bool,
   parentChannelName: PropTypes.string,
   title: PropTypes.string,
   videoSource: PropTypes.shape({}),
-  videos: PropTypes.arrayOf(PropTypes.shape({})),
   webViewUrl: PropTypes.string,
 };
 
