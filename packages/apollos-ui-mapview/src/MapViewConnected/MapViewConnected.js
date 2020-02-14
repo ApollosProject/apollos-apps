@@ -3,15 +3,21 @@ import PropTypes from 'prop-types';
 import { Query, Mutation } from 'react-apollo';
 import { Dimensions } from 'react-native';
 import Geolocation from 'react-native-geolocation-service';
-import MapView from '@apollosproject/ui-mapview';
 import { PaddedView, ButtonLink } from '@apollosproject/ui-kit';
 import { get } from 'lodash';
+
+import MapView from '../MapView';
 
 import GET_CAMPUSES from './getCampusLocations';
 import CHANGE_CAMPUS from './campusChange';
 
 class Location extends PureComponent {
   static propTypes = {
+    Component: PropTypes.oneOfType([
+      PropTypes.node,
+      PropTypes.func,
+      PropTypes.object, // type check for React fragments
+    ]),
     navigation: PropTypes.shape({
       getParam: PropTypes.func,
       navigate: PropTypes.func,
@@ -26,6 +32,7 @@ class Location extends PureComponent {
   };
 
   static defaultProps = {
+    Component: MapView,
     initialRegion: {
       // roughly show the entire USA by default
       latitude: 39.809734,
@@ -67,6 +74,7 @@ class Location extends PureComponent {
   }
 
   render() {
+    const { Component } = this.props; // is just to appease the linter 😢
     return (
       <Query
         query={GET_CAMPUSES}
@@ -79,7 +87,7 @@ class Location extends PureComponent {
         {({ loading, error, data: { campuses, currentUser } = {} }) => (
           <Mutation mutation={CHANGE_CAMPUS}>
             {(handlePress) => (
-              <MapView
+              <Component
                 navigation={this.props.navigation}
                 isLoading={loading}
                 error={error}
