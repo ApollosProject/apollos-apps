@@ -79,7 +79,7 @@ const campuses = [
   },
 ];
 
-describe('The Location "finder"', () => {
+describe('The MapViewConnected component', () => {
   const initialRegion = {
     // roughly show the entire USA by default
     latitude: 39.809734,
