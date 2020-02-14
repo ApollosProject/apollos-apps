@@ -3,6 +3,9 @@ export ContentCardConnected, {
   GET_CONTENT_CARD,
 } from './ContentCardConnected';
 export { fetchMoreResolver, share, uploadPhoto } from './utils';
+export FeaturesConnected, {
+  GET_CONTENT_ITEM_FEATURES,
+} from './FeaturesConnected';
 export HorizontalContentCardConnected from './HorizontalContentCardConnected';
 export HorizontalContentSeriesFeedConnected, {
   GET_CONTENT_SERIES,

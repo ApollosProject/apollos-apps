@@ -13,7 +13,7 @@ const FEATURE_MAP = {
   ScriptureFeature,
 };
 
-const Features = ({ contentId }) => {
+const FeaturesConnected = ({ contentId }) => {
   if (!contentId) return null;
 
   return (
@@ -38,7 +38,12 @@ const Features = ({ contentId }) => {
               const Feature = FEATURE_MAP[__typename];
               if (!Feature) return null;
               return (
-                <Feature key={feature.id} {...feature} contentId={contentId} />
+                <Feature
+                  key={feature.id}
+                  {...feature}
+                  contentId={contentId}
+                  isLoading={loading}
+                />
               );
             })}
           </PaddedView>
@@ -48,8 +53,8 @@ const Features = ({ contentId }) => {
   );
 };
 
-Features.propTypes = {
+FeaturesConnected.propTypes = {
   contentId: PropTypes.string,
 };
 
-export default Features;
+export default FeaturesConnected;
