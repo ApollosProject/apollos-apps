@@ -11,17 +11,13 @@ import { get } from 'lodash';
 import {
   PaddedView,
   TextInput,
+  Button,
   ButtonLink,
   BackgroundView,
 } from '@apollosproject/ui-kit';
 
 import BackButton from '../BackButton';
-import {
-  FlexedSafeAreaView,
-  NextButton,
-  TitleText,
-  PromptText,
-} from '../styles';
+import { FlexedSafeAreaView, TitleText, PromptText } from '../styles';
 
 const PasswordEntry = ({
   passwordTitleText,
@@ -79,11 +75,13 @@ const PasswordEntry = ({
 
         {onPressNext ? (
           <PaddedView>
-            <NextButton
-              title={'Login'}
+            <Button
               onPress={onPressNext}
               disabled={disabled}
               loading={isLoading}
+              title={'Login'}
+              type={'primary'}
+              pill={false}
             />
           </PaddedView>
         ) : null}
