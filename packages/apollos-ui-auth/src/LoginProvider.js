@@ -42,6 +42,7 @@ class LoginProvider extends React.Component {
       handleSubmitLogin: this.handleSubmitLogin,
       handleCheckUserExists: this.handleCheckUserExists,
       handleProfileComplete: this.handleProfileComplete,
+      handleUpdateProfile: this.handleUpdateProfile,
       authType: this.state.authType,
       userProfile: this.state.userProfile,
       newUser: this.state.newUser,
@@ -151,10 +152,21 @@ class LoginProvider extends React.Component {
     }
   };
 
+  handleUpdateProfile = async ({ userProfile }) => {
+    const { navigate } = this.props;
+
+    this.setState((prevState) => ({
+      userProfile: { ...prevState.userProfile, ...userProfile },
+    }));
+    navigate('AuthProfileDetailsEntryConnected');
+  };
+
   handleProfileComplete = async ({ userProfile }) => {
     const { client, navigate } = this.props;
 
-    this.setState({ userProfile });
+    this.setState((prevState) => ({
+      userProfile: { ...prevState.userProfile, ...userProfile },
+    }));
     if (this.state.authType === 'sms') {
       await client.mutate({
         mutation: REQUEST_SMS_PIN,

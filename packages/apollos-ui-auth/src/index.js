@@ -17,6 +17,10 @@ import {
   ProfileEntry as AuthProfileEntry,
   ProfileEntryConnected as AuthProfileEntryConnected,
 } from './Profile';
+import {
+  ProfileDetailsEntry as AuthProfileDetailsEntry,
+  ProfileDetailsEntryConnected as AuthProfileDetailsEntryConnected,
+} from './ProfileDetails';
 
 export LoginButton from './LoginButton';
 export ProtectedAction from './ProtectedAction';
@@ -24,8 +28,16 @@ export ProtectedTouchable from './ProtectedTouchable';
 export AuthProvider, { AuthConsumer } from './Provider';
 export ProtectedRoute from './ProtectedRoute';
 
-export { LOGOUT } from './mutations';
-export { GET_LOGIN_STATE } from './queries';
+export {
+  AUTHENTICATE,
+  HANDLE_LOGIN,
+  LOGOUT,
+  REGISTER_WITH_SMS,
+  REGISTER_WITH_EMAIL,
+  REQUEST_SMS_PIN,
+  VERIFY_PIN,
+} from './mutations';
+export { GET_LOGIN_STATE, GET_USER_EXISTS } from './queries';
 export authLink from './authLink';
 export buildErrorLink from './buildErrorLink';
 export Entry from './Entry';
@@ -39,6 +51,8 @@ export {
   AuthPasswordEntryConnected,
   AuthProfileEntry,
   AuthProfileEntryConnected,
+  AuthProfileDetailsEntry,
+  AuthProfileDetailsEntryConnected,
 };
 
 const AuthNavigator = createStackNavigator(
@@ -48,6 +62,7 @@ const AuthNavigator = createStackNavigator(
     AuthEmailEntryConnected,
     AuthPasswordEntryConnected,
     AuthProfileEntryConnected,
+    AuthProfileDetailsEntryConnected,
   },
   {
     initialRouteName: 'AuthSMSPhoneEntryConnected',
