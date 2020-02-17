@@ -265,17 +265,19 @@ exports[`HorizontalLikedContentFeed renders a HorizontalLikedContentFeed 1`] = `
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     hasTitleAndSummary={false}
                     maxAspectRatio={1.5}
                     minAspectRatio={1.5}
                     onLoad={[Function]}
+                    resizeMode="cover"
                     source={Array []}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -416,17 +418,19 @@ exports[`HorizontalLikedContentFeed renders a HorizontalLikedContentFeed 1`] = `
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     hasTitleAndSummary={false}
                     maxAspectRatio={1.5}
                     minAspectRatio={1.5}
                     onLoad={[Function]}
+                    resizeMode="cover"
                     source={Array []}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -745,17 +749,19 @@ exports[`HorizontalLikedContentFeed renders a loading state 1`] = `
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     hasTitleAndSummary={false}
                     maxAspectRatio={1.5}
                     minAspectRatio={1.5}
                     onLoad={[Function]}
+                    resizeMode="cover"
                     source={Array []}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -896,17 +902,19 @@ exports[`HorizontalLikedContentFeed renders a loading state 1`] = `
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     hasTitleAndSummary={false}
                     maxAspectRatio={1.5}
                     minAspectRatio={1.5}
                     onLoad={[Function]}
+                    resizeMode="cover"
                     source={Array []}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }

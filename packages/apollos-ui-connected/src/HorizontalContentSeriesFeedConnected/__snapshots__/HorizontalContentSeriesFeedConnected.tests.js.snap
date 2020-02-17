@@ -13,7 +13,15 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
     Array [
       Object {
         "__typename": "DevotionalContentItem",
-        "coverImage": Object {},
+        "coverImage": Object {
+          "__typename": "ImageMedia",
+          "sources": Array [
+            Object {
+              "__typename": "ImageMediaSource",
+              "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+            },
+          ],
+        },
         "hyphenatedTitle": "God sees who you can be not who you are",
         "id": "DevotionalContentItem:d395278cd4b68e074ca4e595c8feab6d",
         "parentChannel": Object {
@@ -28,7 +36,15 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
       },
       Object {
         "__typename": "DevotionalContentItem",
-        "coverImage": Object {},
+        "coverImage": Object {
+          "__typename": "ImageMedia",
+          "sources": Array [
+            Object {
+              "__typename": "ImageMediaSource",
+              "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+            },
+          ],
+        },
         "hyphenatedTitle": "Thank God for the friends who will tell it like it is",
         "id": "DevotionalContentItem:fbea6914a3e8877516cbd333d919075d",
         "parentChannel": Object {
@@ -43,7 +59,15 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
       },
       Object {
         "__typename": "DevotionalContentItem",
-        "coverImage": Object {},
+        "coverImage": Object {
+          "__typename": "ImageMedia",
+          "sources": Array [
+            Object {
+              "__typename": "ImageMediaSource",
+              "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+            },
+          ],
+        },
         "hyphenatedTitle": "No sin is too bad",
         "id": "DevotionalContentItem:5e18250f586ab8de4d3d6292c919dcc4",
         "parentChannel": Object {
@@ -58,7 +82,15 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
       },
       Object {
         "__typename": "DevotionalContentItem",
-        "coverImage": Object {},
+        "coverImage": Object {
+          "__typename": "ImageMedia",
+          "sources": Array [
+            Object {
+              "__typename": "ImageMediaSource",
+              "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+            },
+          ],
+        },
         "hyphenatedTitle": "Change starts with a choice",
         "id": "DevotionalContentItem:bdc2c29b85949e4ca8232b373a07953d",
         "parentChannel": Object {
@@ -202,12 +234,31 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
                 }
               }
             >
-              <View
-                forceRatio={1}
+              <RCTImageView
+                customTheme={null}
+                disabled={false}
+                maxAspectRatio={1}
+                minAspectRatio={1}
+                onLoad={[Function]}
+                resizeMode="cover"
+                source={
+                  Array [
+                    Object {
+                      "__typename": "ImageMediaSource",
+                      "cache": "force-cache",
+                      "height": 600,
+                      "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                      "width": 500,
+                    },
+                  ]
+                }
                 style={
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
+                    "opacity": 0,
+                    "overflow": "hidden",
+                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
@@ -380,12 +431,31 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
                 }
               }
             >
-              <View
-                forceRatio={1}
+              <RCTImageView
+                customTheme={null}
+                disabled={false}
+                maxAspectRatio={1}
+                minAspectRatio={1}
+                onLoad={[Function]}
+                resizeMode="cover"
+                source={
+                  Array [
+                    Object {
+                      "__typename": "ImageMediaSource",
+                      "cache": "force-cache",
+                      "height": 600,
+                      "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                      "width": 500,
+                    },
+                  ]
+                }
                 style={
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
+                    "opacity": 0,
+                    "overflow": "hidden",
+                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
@@ -558,12 +628,31 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
                 }
               }
             >
-              <View
-                forceRatio={1}
+              <RCTImageView
+                customTheme={null}
+                disabled={false}
+                maxAspectRatio={1}
+                minAspectRatio={1}
+                onLoad={[Function]}
+                resizeMode="cover"
+                source={
+                  Array [
+                    Object {
+                      "__typename": "ImageMediaSource",
+                      "cache": "force-cache",
+                      "height": 600,
+                      "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                      "width": 500,
+                    },
+                  ]
+                }
                 style={
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
+                    "opacity": 0,
+                    "overflow": "hidden",
+                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }
@@ -736,12 +825,31 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
                 }
               }
             >
-              <View
-                forceRatio={1}
+              <RCTImageView
+                customTheme={null}
+                disabled={false}
+                maxAspectRatio={1}
+                minAspectRatio={1}
+                onLoad={[Function]}
+                resizeMode="cover"
+                source={
+                  Array [
+                    Object {
+                      "__typename": "ImageMediaSource",
+                      "cache": "force-cache",
+                      "height": 600,
+                      "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                      "width": 500,
+                    },
+                  ]
+                }
                 style={
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
+                    "opacity": 0,
+                    "overflow": "hidden",
+                    "resizeMode": "cover",
                     "width": "100%",
                   }
                 }

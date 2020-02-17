@@ -49,11 +49,12 @@ exports[`The SearchCardConnected component should render 1`] = `
           }
         }
       >
-        <Image
+        <RCTImageView
           customTheme={null}
           maxAspectRatio={1.2}
           minAspectRatio={0.75}
           onLoad={[Function]}
+          resizeMode="cover"
           source={
             Array [
               Object {
@@ -74,6 +75,7 @@ exports[`The SearchCardConnected component should render 1`] = `
             Object {
               "backgroundColor": "#A5A5A5",
               "opacity": 0,
+              "overflow": "hidden",
               "resizeMode": "cover",
               "width": "100%",
             }
