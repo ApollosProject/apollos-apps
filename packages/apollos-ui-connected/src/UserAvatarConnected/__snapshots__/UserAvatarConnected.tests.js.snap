@@ -21,7 +21,7 @@ exports[`UserAvatarConnected component renders UserAvatarConnected 1`] = `
           "__typename": "ImageMedia",
           "cache": "force-cache",
           "height": 600,
-          "uri": "https://www.placecage.com/300/300",
+          "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
           "width": 500,
         },
       ]
