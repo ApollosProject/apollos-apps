@@ -39,7 +39,7 @@
     "@apollosproject/ui-fragments": "*",
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-media-player": "*",
-    "@react-native-community/geolocation": "*",
+    "react-native-geolocation-service": "*",
     "react": "*",
     "react-native": "*",
     "react-native-maps": "*",
@@ -50,7 +50,7 @@
     "react-apollo": "2.5.5"
   },
   "devDependencies": {
-    "@react-native-community/geolocation": "^2.0.2",
+    "react-native-geolocation-service": "^3.0.0",
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
