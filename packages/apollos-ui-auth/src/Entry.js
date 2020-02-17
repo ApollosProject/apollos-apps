@@ -68,7 +68,7 @@ const Entry = ({
     >
       <BackgroundComponent />
       <FlexedSafeAreaView>
-        <ScrollView keyboardShouldPersistTaps>
+        <ScrollView keyboardShouldPersistTaps="always">
           <PaddedView>
             <TitleText>{authTitleText}</TitleText>
             <PromptText padded>{promptText}</PromptText>
