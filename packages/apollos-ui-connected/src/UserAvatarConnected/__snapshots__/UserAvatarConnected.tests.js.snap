@@ -12,16 +12,17 @@ exports[`UserAvatarConnected component renders UserAvatarConnected 1`] = `
   }
   themeSize={40}
 >
-  <Image
+  <RCTImageView
     onLoad={[Function]}
+    resizeMode="cover"
     source={
       Array [
         Object {
           "__typename": "ImageMedia",
           "cache": "force-cache",
-          "height": 240,
+          "height": 600,
           "uri": "https://www.placecage.com/300/300",
-          "width": 320,
+          "width": 500,
         },
       ]
     }
@@ -33,6 +34,7 @@ exports[`UserAvatarConnected component renders UserAvatarConnected 1`] = `
         "height": "100%",
         "left": 0,
         "opacity": 0,
+        "overflow": "hidden",
         "position": "absolute",
         "right": 0,
         "top": 0,

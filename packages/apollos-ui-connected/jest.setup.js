@@ -15,6 +15,11 @@ jest.mock(
   })
 );
 
+jest.mock('Image', () => ({
+  ...require.requireActual('Image'),
+  getSize: (_, cb) => cb(500, 600),
+}));
+
 jest.mock('Animated', () => {
   const ActualAnimated = require.requireActual('Animated');
   return {

@@ -1,8 +1,6 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import wait from 'waait';
+import { Providers, renderWithApolloData } from '../utils/testUtils';
 
-import { Providers } from '../utils/testUtils';
 import GET_USER_PHOTO from './getUserPhoto';
 
 import UserAvatarConnected from '.';
@@ -31,12 +29,12 @@ describe('UserAvatarConnected component', () => {
       },
     };
     const navigation = { navigate: jest.fn(), getParam: jest.fn() };
-    const tree = renderer.create(
+    const tree = await renderWithApolloData(
       <Providers mocks={[mock]}>
         <UserAvatarConnected navigation={navigation} />
       </Providers>
     );
-    await wait(0); // wait for response from graphql
+
     expect(tree).toMatchSnapshot();
   });
 });
