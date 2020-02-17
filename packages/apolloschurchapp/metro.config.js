@@ -31,7 +31,7 @@ const localDeps = [
 const sharedNativeModules = [
   '@apollosproject/react-native-airplay-btn',
   '@react-native-community/async-storage',
-  '@react-native-community/geolocation',
+  'react-native-geolocation-service',
   'react-native-config',
   'react-native-gesture-handler',
   'react-native-linear-gradient',
