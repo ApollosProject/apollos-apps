@@ -6,6 +6,7 @@ import {
   ContentHTMLViewConnected,
   HorizontalContentSeriesFeedConnected,
   LiveConsumer,
+  MediaControlsConnected,
 } from '@apollosproject/ui-connected';
 import {
   styled,
@@ -20,7 +21,6 @@ import {
   withTheme,
 } from '@apollosproject/ui-kit';
 
-import MediaControls from '../MediaControls';
 import Features from '../Features';
 
 const FlexedScrollView = styled({ flex: 1 })(Animated.ScrollView);
@@ -31,6 +31,10 @@ const Header = styled(({ hasMedia, theme }) => ({
   paddingBottom: hasMedia ? theme.sizing.baseUnit : theme.sizing.baseUnit * 2,
   // backgroundColor: theme.colors.primary,
 }))(PaddedView);
+
+const StyledMediaControlsConnected = styled(({ theme }) => ({
+  marginTop: -(theme.sizing.baseUnit * 2.5),
+}))(MediaControlsConnected);
 
 const LiveAwareLabel = withTheme(({ isLive, title, theme }) => ({
   ...(isLive
@@ -85,7 +89,7 @@ const WeekendContentItem = ({ content, loading }) => {
                     <ContentHTMLViewConnected contentId={content.id} />
                   </ThemeMixin>
                 </Header>
-                <MediaControls contentId={content.id} />
+                <StyledMediaControlsConnected contentId={content.id} />
                 <Features contentId={content.id} />
                 <HorizontalContentSeriesFeedConnected contentId={content.id} />
               </FlexedScrollView>

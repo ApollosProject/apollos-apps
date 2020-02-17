@@ -1,103 +1,50 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  KeyboardAvoidingView,
-  StyleSheet,
-  ScrollView,
-  Platform,
-  StatusBar,
-} from 'react-native';
 import { get } from 'lodash';
-import { PaddedView, TextInput, BackgroundView } from '@apollosproject/ui-kit';
+import { TextInput } from '@apollosproject/ui-kit';
 
-import BackButton from '../BackButton';
-import {
-  FlexedSafeAreaView,
-  NextButton,
-  TitleText,
-  PromptText,
-  LegalText,
-} from '../styles';
+import { LegalText, ProfileEntryFieldContainer } from '../styles';
 
-const ProfileEntry = ({
-  profileTitleText,
-  profilePromptText,
-  disabled,
-  errors,
-  isLoading,
-  onPressNext,
-  setFieldValue,
-  values,
-  BackgroundComponent,
-  onPressBack,
-}) => {
+const ProfileEntry = (props) => {
   let LastNameInput = null;
   return (
-    <KeyboardAvoidingView
-      style={StyleSheet.absoluteFill}
-      behavior={'padding'}
-      keyboardVerticalOffset={
-        Platform.OS === 'android' ? StatusBar.currentHeight : 0
-      }
-    >
-      <BackgroundComponent>
-        <FlexedSafeAreaView>
-          <ScrollView>
-            <BackButton onPress={() => onPressBack()} />
-            <PaddedView>
-              <TitleText>{profileTitleText}</TitleText>
-              <PromptText padded>{profilePromptText}</PromptText>
-              <TextInput
-                name="firstName"
-                label={'First Name'}
-                type={'text'}
-                textContentType={'givenName'} // ios autofill
-                returnKeyType={'next'}
-                value={get(values, 'firstName')}
-                error={get(errors, 'firstName', null)}
-                onChangeText={(text) => setFieldValue('firstName', text)}
-                onSubmitEditing={() => LastNameInput.focus()}
-                disabled={isLoading}
-                enablesReturnKeyAutomatically
-              />
-              <TextInput
-                name="lastName"
-                label={'Last Name'}
-                type={'text'}
-                textContentType={'familyName'} // ios autofill
-                returnKeyType={'next'}
-                value={get(values, 'lastName')}
-                error={get(errors, 'lastName', null)}
-                onChangeText={(text) => setFieldValue('lastName', text)}
-                onSubmitEditing={onPressNext}
-                disabled={isLoading}
-                enablesReturnKeyAutomatically
-                inputRef={(r) => {
-                  LastNameInput = r;
-                }}
-              />
-            </PaddedView>
-          </ScrollView>
-
-          {onPressNext ? (
-            <PaddedView>
-              <NextButton
-                title={'Next'}
-                onPress={onPressNext}
-                disabled={disabled}
-                loading={isLoading}
-              />
-            </PaddedView>
-          ) : null}
-        </FlexedSafeAreaView>
-      </BackgroundComponent>
-    </KeyboardAvoidingView>
+    <ProfileEntryFieldContainer {...props}>
+      <TextInput
+        name="firstName"
+        label={'First Name'}
+        type={'text'}
+        textContentType={'givenName'} // ios autofill
+        returnKeyType={'next'}
+        value={get(props.values, 'firstName')}
+        error={get(props.errors, 'firstName', null)}
+        onChangeText={(text) => props.setFieldValue('firstName', text)}
+        onSubmitEditing={() => LastNameInput.focus()}
+        disabled={props.isLoading}
+        enablesReturnKeyAutomatically
+      />
+      <TextInput
+        name="lastName"
+        label={'Last Name'}
+        type={'text'}
+        textContentType={'familyName'} // ios autofill
+        returnKeyType={'next'}
+        value={get(props.values, 'lastName')}
+        error={get(props.errors, 'lastName', null)}
+        onChangeText={(text) => props.setFieldValue('lastName', text)}
+        onSubmitEditing={props.onPressNext}
+        disabled={props.isLoading}
+        enablesReturnKeyAutomatically
+        inputRef={(r) => {
+          LastNameInput = r;
+        }}
+      />
+    </ProfileEntryFieldContainer>
   );
 };
 
 ProfileEntry.propTypes = {
-  profileTitleText: PropTypes.node,
-  profilePromptText: PropTypes.string,
+  title: PropTypes.node,
+  prompt: PropTypes.string,
   disabled: PropTypes.bool,
   errors: PropTypes.shape({
     phone: PropTypes.string,
@@ -113,10 +60,9 @@ ProfileEntry.propTypes = {
 };
 
 ProfileEntry.defaultProps = {
-  profileTitleText: 'Welcome!',
-  profilePromptText:
+  title: 'Welcome!',
+  prompt:
     'Every relationship starts with a name. Complete your profile to help us connect with you.',
-  BackgroundComponent: BackgroundView,
 };
 
 ProfileEntry.LegalText = LegalText;
