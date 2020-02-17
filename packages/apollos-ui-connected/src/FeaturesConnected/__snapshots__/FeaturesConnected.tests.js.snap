@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FeaturesConnected should render 1`] = `
+exports[`FeaturesConnected should renderss 1`] = `
 <View
   horizontal={false}
   style={
@@ -287,7 +287,7 @@ exports[`FeaturesConnected should render 1`] = `
                 }
               }
             >
-              John 3:16
+              Mark 1:12
             </Text>
             <Text
               style={
@@ -663,7 +663,7 @@ exports[`FeaturesConnected should render 1`] = `
                     }
                   >
                     <Text>
-                      Son, that whoever believes in him should not perish, but have eternal life. 
+                      Son, that whoever believes in him should not perish, but have eternal life, forever. 
                     </Text>
                   </Text>
                 </Text>
