@@ -29,6 +29,10 @@ class Location extends PureComponent {
       latitudeDelta: PropTypes.number,
       longitudeDelta: PropTypes.number,
     }),
+    changeCampusOptions: PropTypes.shape({
+      refetchQueries: PropTypes.arrayOf(PropTypes.shape()),
+    }),
+    onChangeCampus: PropTypes.func,
   };
 
   static defaultProps = {
@@ -56,6 +60,7 @@ class Location extends PureComponent {
 
   state = {
     userLocation: null,
+    loadingNewCampus: false,
   };
 
   async componentDidMount() {
@@ -74,7 +79,7 @@ class Location extends PureComponent {
   }
 
   render() {
-    const { Component } = this.props; // is just to appease the linter 😢
+    const { Component, changeCampusOptions } = this.props; // is just to appease the linter 😢
     return (
       <Query
         query={GET_CAMPUSES}
@@ -96,7 +101,8 @@ class Location extends PureComponent {
                 userLocation={this.state.userLocation}
                 currentCampus={get(currentUser, 'profile.campus')}
                 onLocationSelect={async (campus) => {
-                  handlePress({
+                  this.setState({ loadingNewCampus: true });
+                  await handlePress({
                     variables: {
                       campusId: campus.id,
                     },
@@ -107,7 +113,10 @@ class Location extends PureComponent {
                         campus,
                       },
                     },
+                    ...changeCampusOptions,
                   });
+                  // eslint-disable-next-line no-unused-expressions
+                  this.onChangeCampus && this.onChangeCampus({ campus });
                   this.props.navigation.goBack();
                 }}
               />
