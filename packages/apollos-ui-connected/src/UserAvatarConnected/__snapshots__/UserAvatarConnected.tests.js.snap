@@ -12,52 +12,36 @@ exports[`UserAvatarConnected component renders UserAvatarConnected 1`] = `
   }
   themeSize={40}
 >
-  <View
-    animate={null}
-    customAnimate={null}
-    onReady={false}
+  <RCTImageView
+    onLoad={[Function]}
+    resizeMode="cover"
+    source={
+      Array [
+        Object {
+          "__typename": "ImageMedia",
+          "cache": "force-cache",
+          "height": 600,
+          "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+          "width": 500,
+        },
+      ]
+    }
     style={
       Object {
-        "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
         "borderRadius": 20,
         "bottom": 0,
         "height": "100%",
         "left": 0,
+        "opacity": 0,
+        "overflow": "hidden",
         "position": "absolute",
         "right": 0,
         "top": 0,
         "width": "100%",
       }
     }
-  >
-    <Image
-      onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "__typename": "ImageMedia",
-            "cache": "force-cache",
-            "uri": "https://www.placecage.com/300/300",
-          },
-        ]
-      }
-      style={
-        Object {
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 20,
-          "bottom": 0,
-          "height": "100%",
-          "left": 0,
-          "opacity": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-          "width": "100%",
-        }
-      }
-      themeSize={40}
-    />
-  </View>
+    themeSize={40}
+  />
 </View>
 `;

@@ -5,37 +5,36 @@ import PropTypes from 'prop-types';
 import * as Yup from 'yup';
 
 import { LoginConsumer } from '../LoginProvider';
-import ProfileEntry from './ProfileEntry';
+import ProfileEntry from './ProfileDetailsEntry';
 
-const ProfileSchema = Yup.object().shape({
-  firstName: Yup.string().required('Required'),
-  lastName: Yup.string().required('Required'),
+const ProfileDetailsSchema = Yup.object().shape({
+  gender: Yup.string().required('Required'),
+  birthDate: Yup.date().required('Required'),
 });
 
-const ProfileEntryConnected = ({
+const ProfileDetailsEntryConnected = ({
   screenProps,
   navigation,
-  profileSchema,
   Component,
 }) => (
   <LoginConsumer>
-    {({ handleUpdateProfile }) => (
+    {({ handleProfileComplete }) => (
       <Formik
-        onSubmit={async ({ firstName, lastName }, { setSubmitting }) => {
+        onSubmit={async ({ gender, birthDate }, { setSubmitting }) => {
           setSubmitting(true);
-          await handleUpdateProfile({
-            userProfile: { FirstName: firstName, LastName: lastName },
+          await handleProfileComplete({
+            userProfile: { Gender: gender, BirthDate: birthDate },
           });
           setSubmitting(false);
         }}
-        validationSchema={profileSchema}
+        validationSchema={ProfileDetailsSchema}
       >
         {(formikBag) => (
           <Component
             {...screenProps}
             {...formikBag}
-            disabled={!formikBag.isValid}
             errors={formikBag.errors}
+            disabled={!formikBag.isValid}
             isLoading={formikBag.isSubmitting}
             onPressNext={formikBag.handleSubmit}
             onPressBack={navigation.goBack}
@@ -46,18 +45,16 @@ const ProfileEntryConnected = ({
   </LoginConsumer>
 );
 
-ProfileEntryConnected.propTypes = {
+ProfileDetailsEntryConnected.propTypes = {
   navigation: PropTypes.shape({ goBack: PropTypes.func.isRequired }).isRequired,
   emailRequired: PropTypes.bool,
   screenProps: PropTypes.shape({}),
-  profileSchema: PropTypes.shape({}),
   Component: PropTypes.node,
 };
 
-ProfileEntryConnected.defaultProps = {
+ProfileDetailsEntryConnected.defaultProps = {
   emailRequired: true,
-  profileSchema: ProfileSchema,
   Component: ProfileEntry,
 };
 
-export default ProfileEntryConnected;
+export default ProfileDetailsEntryConnected;
