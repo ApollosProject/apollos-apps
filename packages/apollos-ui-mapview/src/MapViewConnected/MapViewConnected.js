@@ -117,7 +117,8 @@ class Location extends PureComponent {
                     ...changeCampusOptions,
                   });
                   // eslint-disable-next-line no-unused-expressions
-                  this.onChangeCampus && this.onChangeCampus({ campus });
+                  this.props.onChangeCampus &&
+                    this.props.onChangeCampus({ campus });
                   this.props.navigation.goBack();
                 }}
               />
