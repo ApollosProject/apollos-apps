@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "react-native": "react-native/index.js",
   "files": [
-    "src/**",
+    "lib/**",
     "react-native/**"
   ],
   "scripts": {
