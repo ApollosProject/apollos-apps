@@ -5,7 +5,6 @@ import {
   requestNotifications,
   RESULTS,
 } from 'react-native-permissions';
-
 import {
   GradientOverlayImage,
   styled,
@@ -19,6 +18,7 @@ import {
   LocationFinderConnected,
   OnboardingSwiper,
 } from '@apollosproject/ui-onboarding';
+import { resetAction } from '../../NavigationService';
 
 const FullscreenBackgroundView = styled({
   position: 'absolute',
@@ -79,7 +79,14 @@ function Onboarding({ navigation }) {
                   }
                 });
               }}
-              onPressPrimary={() => navigation.replace('Tabs')}
+              onPressPrimary={() =>
+                navigation.dispatch(
+                  resetAction({
+                    navigatorName: 'Tabs',
+                    routeName: 'Home',
+                  })
+                )
+              }
               primaryNavText={'Finish'}
               BackgroundComponent={
                 <StyledGradient
