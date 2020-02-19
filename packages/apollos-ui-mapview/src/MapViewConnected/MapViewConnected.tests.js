@@ -1,9 +1,8 @@
 import React from 'react';
-import { renderWithApolloData } from '../../utils/testUtils';
+import { Providers, renderWithApolloData } from '../utils/testUtils';
 
-import Providers from '../../Providers';
 import GET_CAMPUS_LOCATIONS from './getCampusLocations';
-import Location from './index';
+import MapViewConnected from './MapViewConnected';
 
 const campuses = [
   {
@@ -80,7 +79,7 @@ const campuses = [
   },
 ];
 
-describe('The Location "finder"', () => {
+describe('The MapViewConnected component', () => {
   const initialRegion = {
     // roughly show the entire USA by default
     latitude: 39.809734,
@@ -121,7 +120,10 @@ describe('The Location "finder"', () => {
 
     const tree = await renderWithApolloData(
       <Providers mocks={[mock]}>
-        <Location navigation={navigation} initialRegion={initialRegion} />
+        <MapViewConnected
+          navigation={navigation}
+          initialRegion={initialRegion}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
