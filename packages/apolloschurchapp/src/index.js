@@ -6,6 +6,7 @@ import SplashScreen from 'react-native-splash-screen';
 
 import { BackgroundView, withTheme } from '@apollosproject/ui-kit';
 import Passes from '@apollosproject/ui-passes';
+import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
 import { MediaPlayer } from '@apollosproject/ui-media-player';
 import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
 
@@ -16,7 +17,6 @@ import Event from './event';
 import Tabs from './tabs';
 import PersonalDetails from './user-settings/PersonalDetails';
 import ChangePassword from './user-settings/ChangePassword';
-import Location from './user-settings/Locations';
 import LandingScreen from './LandingScreen';
 import UserWebBrowser from './user-web-browser';
 import Onboarding from './ui/Onboarding';
