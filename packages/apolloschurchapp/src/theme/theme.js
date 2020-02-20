@@ -42,5 +42,17 @@
  * }
  */
 // const overrides = {};
+/*
+ * Browser Options. These options correspond to the In-app browser options.
+ * https://github.com/proyecto26/react-native-inappbrowser
+ * Must be separated by OS, ios or android
+ *
+ * Example:
+ *
+ * const browserOptions = {
+ *   ios: { dismissButtonStyle: 'close' },
+ *   android: { showTitle: true },
+ * }
+ */
 
 export default {};
