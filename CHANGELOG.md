@@ -1,3 +1,18 @@
+v1.3.0-beta.6: February 19, 2020
+
+- Adds Gender and BirthDate slide to Auth (#1331) (9b2af8c0)
+- Adds mailto link support for InAppWebBrowser(#1338) (3712e153)
+- Sets Missing ENV Variables to null (#1119) (c308a6cb)
+- Moves the "Location Finder" to ui-mapview as `MapViewConnected` (#1344) (02917dd6)
+- Moves and refactor MediaControls (#1317) (e8d2380c)
+- Moves HorizontalContentSeriesFeedConnected to the ui-connected package (#1334) (91738ec3)
+
+- Removes images from the mocks to fix inconsistent tests (#1341) (444b0786)
+
+- Fixes being able to swipe down to auth (#1339) (e34754ec)
+- Fixes ui-connected tests (#1346) (1255281b)
+- Fixes Android background button issue (#1305) (e998ee7d)
+
 v1.3.0-beta.5: February 6, 2020
 
 - Adds validation for firstName and lastName on the ui-auth screen (#1321) (41dd0596)
