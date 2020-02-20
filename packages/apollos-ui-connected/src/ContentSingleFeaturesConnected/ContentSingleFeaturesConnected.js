@@ -13,7 +13,7 @@ const FEATURE_MAP = {
   ScriptureFeature,
 };
 
-const FeaturesConnected = ({ contentId }) => {
+const ContentSingleFeaturesConnected = ({ contentId }) => {
   if (!contentId) return null;
 
   return (
@@ -53,8 +53,8 @@ const FeaturesConnected = ({ contentId }) => {
   );
 };
 
-FeaturesConnected.propTypes = {
+ContentSingleFeaturesConnected.propTypes = {
   contentId: PropTypes.string,
 };
 
-export default FeaturesConnected;
+export default ContentSingleFeaturesConnected;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FeaturesConnected should renderss 1`] = `
+exports[`ContentSingleFeaturesConnected should render 1`] = `
 <View
   horizontal={false}
   style={

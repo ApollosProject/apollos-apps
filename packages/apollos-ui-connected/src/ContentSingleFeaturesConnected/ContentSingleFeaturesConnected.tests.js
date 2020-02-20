@@ -9,14 +9,14 @@ import { Providers, renderWithApolloData } from '../utils/testUtils';
 
 import GET_CONTENT_ITEM_FEATURES from './getContentItemFeatures';
 
-import FeaturesConnected from './FeaturesConnected';
+import ContentSingleFeaturesConnected from './ContentSingleFeaturesConnected';
 
 const fragmentMatcher = new IntrospectionFragmentMatcher({
   introspectionQueryResultData,
 });
 
-describe('FeaturesConnected', () => {
-  it('should renderss', async () => {
+describe('ContentSingleFeaturesConnected', () => {
+  it('should render', async () => {
     const mock = {
       request: {
         query: GET_CONTENT_ITEM_FEATURES,
@@ -108,7 +108,7 @@ describe('FeaturesConnected', () => {
           })
         }
       >
-        <FeaturesConnected contentId={'WeekendContentItem:1'} />
+        <ContentSingleFeaturesConnected contentId={'WeekendContentItem:1'} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
