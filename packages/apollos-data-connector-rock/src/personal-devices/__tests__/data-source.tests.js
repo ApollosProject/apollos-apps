@@ -9,6 +9,9 @@ ApollosConfig.loadJs({
     API_TOKEN: 'some-rock-token',
     IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
   },
+  ROCK_MAPPINGS: {
+    MOBILE_DEVICE_TYPE_ID: 671,
+  },
 });
 
 const buildDataSource = (Auth) => {
