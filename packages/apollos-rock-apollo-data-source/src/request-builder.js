@@ -77,6 +77,9 @@ export default class RockRequestBuilder {
    * Filter resources by an odata string
    */
   filter = (filter, { operator } = { operator: 'or' }) => {
+    if (!filter) {
+      return this;
+    }
     const key = '$filter';
     if (this.query[key]) {
       this.query[key] = `(${this.query[key]}) ${operator} (${filter})`;
@@ -90,6 +93,7 @@ export default class RockRequestBuilder {
 
   filterOneOf = (filters) => {
     if (filters.length === 0) {
+      // eslint-disable-next-line no-console
       console.warn(`
 You are filtering oneOf 0 filters.
 Normally this has the same effect as filtering with 0 filters.
@@ -123,12 +127,31 @@ you can return request.empty()
   };
 
   /**
+   * DEPRECATED - use this.sort()
    * Order resources by a given attribute and direction
    * @param {string} name The name of the attribute to order by
    * @param {string} direction The direction to order results by. Defaults to 'asc'
    */
   orderBy = (name, direction = 'asc') => {
+    delete this.query.$orderby;
     this.query.$orderby = `${name} ${direction}`;
+    return this;
+  };
+
+  /**
+   * Sorts resources by a list of fields with a priority by order
+   * @param {string} attributes - array of fields to sort by
+   *
+   * Example:
+   * sort([{field: "Name", direction: "asc"}, {field: "Date", direction: "desc"}])
+   * The above example will first sort by name in ascending order, then
+   * by date in descending order
+   */
+  sort = (fields = [{ field: 'Id', direction: 'desc' }]) => {
+    delete this.query.$orderby;
+    this.query.$orderby = fields
+      .map(({ field, direction }) => `${field} ${direction}`)
+      .join(', ');
     return this;
   };
 
@@ -137,6 +160,10 @@ you can return request.empty()
    * @param {number} top
    */
   top = (top) => {
+    if (!top) {
+      delete this.query.$top;
+      return this;
+    }
     this.query.$top = top;
     return this;
   };
@@ -157,6 +184,28 @@ you can return request.empty()
   select = (select) => {
     this.query.$select = select;
     return this;
+  };
+
+  /**
+   * Fetches a count of all items that would be returned by the current cursor.
+   * Warning: As of right now this could be computationally expensive.
+   */
+  count = async () => {
+    // clone the cursor itself
+    const cursor = new RockRequestBuilder({
+      connector: this.connector,
+      resource: this.resource,
+    });
+    // make sure to clone this.query, which gets mutated by top/skip
+    cursor.query = Object.assign({}, this.query);
+
+    const result = await cursor
+      .select('Id')
+      .top(null)
+      .skip(0)
+      .get();
+
+    return result.length;
   };
 
   /**

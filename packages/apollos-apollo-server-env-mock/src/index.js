@@ -31,6 +31,15 @@ const createApolloServerEnvMock = (apolloServerEnv) => {
         if (request.url.includes('passages')) {
           return resolveWith(apolloDatasourceMocks.Scripture()[2], request.url);
         }
+        if (
+          request.url ===
+          'https://api.scripture.api.bible/v1/bibles/9879dbb7cfe39e4d-01'
+        ) {
+          return resolveWith(
+            { data: { abbreviationLocal: 'WEB' } },
+            request.url
+          );
+        }
         return resolveWith(apolloDatasourceMocks.Scripture()[0], request.url);
       }
       return Promise.reject();
@@ -195,7 +204,6 @@ const createApolloServerEnvMock = (apolloServerEnv) => {
           return Promise.resolve(response);
         }
         if (request.method === 'DELETE') {
-          console.log('Deleting following');
           const response = new Response(null, {
             status: 204,
             headers: new apolloServerEnv.Headers({

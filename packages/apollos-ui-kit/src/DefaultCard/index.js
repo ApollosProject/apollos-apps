@@ -84,9 +84,11 @@ const DefaultCard = withIsLoading(
         {title ? <H3 numberOfLines={2}>{title}</H3> : null}
         {summary ? <Summary numberOfLines={2}>{summary}</Summary> : null}
       </Content>
-      <LikeIconPositioning>
-        <LikeIcon isLiked={isLiked} />
-      </LikeIconPositioning>
+      {isLiked != null ? (
+        <LikeIconPositioning>
+          <LikeIcon isLiked={isLiked} />
+        </LikeIconPositioning>
+      ) : null}
     </Card>
   )
 );
@@ -95,7 +97,7 @@ DefaultCard.propTypes = {
   coverImage: PropTypes.oneOfType([
     PropTypes.arrayOf(ImageSourceType),
     ImageSourceType,
-  ]).isRequired,
+  ]),
   title: PropTypes.string.isRequired,
   isLiked: PropTypes.bool,
   isLive: PropTypes.bool,

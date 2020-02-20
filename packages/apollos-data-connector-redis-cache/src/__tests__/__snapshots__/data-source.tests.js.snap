@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Redis Cache constructs with Redis env url 1`] = `
+Cache {
+  "DEFAULT_TIMEOUT": 86400,
+  "redis": Redis {
+    "_events": Object {},
+    "_eventsCount": 0,
+    "_maxListeners": undefined,
+    "commandQueue": Denque {
+      "_capacityMask": 3,
+      "_head": 0,
+      "_list": Array [
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+      ],
+      "_tail": 0,
+    },
+    "condition": Object {
+      "auth": null,
+      "select": 0,
+      "subscriber": false,
+    },
+    "connectionEpoch": 1,
+    "connector": StandaloneConnector {
+      "connecting": true,
+      "options": Object {
+        "autoResendUnfulfilledCommands": true,
+        "autoResubscribe": true,
+        "connectTimeout": 10000,
+        "connectionName": null,
+        "db": 0,
+        "dropBufferSupport": false,
+        "enableOfflineQueue": true,
+        "enableReadyCheck": true,
+        "enableTLSForSentinelMode": false,
+        "family": 4,
+        "host": "localhost",
+        "keepAlive": 0,
+        "keyPrefix": "apollos-cache-test",
+        "lazyConnect": false,
+        "maxLoadingRetryTime": 10000,
+        "maxRetriesPerRequest": 20,
+        "name": null,
+        "natMap": null,
+        "noDelay": true,
+        "password": null,
+        "port": 6379,
+        "readOnly": false,
+        "reconnectOnError": null,
+        "retryStrategy": [Function],
+        "role": "master",
+        "sentinelRetryStrategy": [Function],
+        "sentinels": null,
+        "showFriendlyErrorStack": false,
+        "stringNumbers": false,
+        "updateSentinels": true,
+      },
+    },
+    "domain": null,
+    "offlineQueue": Denque {
+      "_capacityMask": 3,
+      "_head": 0,
+      "_list": Array [
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+      ],
+      "_tail": 0,
+    },
+    "options": Object {
+      "autoResendUnfulfilledCommands": true,
+      "autoResubscribe": true,
+      "connectTimeout": 10000,
+      "connectionName": null,
+      "db": 0,
+      "dropBufferSupport": false,
+      "enableOfflineQueue": true,
+      "enableReadyCheck": true,
+      "enableTLSForSentinelMode": false,
+      "family": 4,
+      "host": "localhost",
+      "keepAlive": 0,
+      "keyPrefix": "apollos-cache-test",
+      "lazyConnect": false,
+      "maxLoadingRetryTime": 10000,
+      "maxRetriesPerRequest": 20,
+      "name": null,
+      "natMap": null,
+      "noDelay": true,
+      "password": null,
+      "port": 6379,
+      "readOnly": false,
+      "reconnectOnError": null,
+      "retryStrategy": [Function],
+      "role": "master",
+      "sentinelRetryStrategy": [Function],
+      "sentinels": null,
+      "showFriendlyErrorStack": false,
+      "stringNumbers": false,
+      "updateSentinels": true,
+    },
+    "retryAttempts": 0,
+    "scriptsSet": Object {},
+    "status": "connecting",
+  },
+  "safely": [Function],
+}
+`;
+
+exports[`Redis Cache decrements integers in redis 1`] = `2`;
+
+exports[`Redis Cache decrements integers in redis 2`] = `
+Array [
+  Array [
+    Object {
+      "key": "someKey",
+    },
+  ],
+]
+`;
+
+exports[`Redis Cache doesn't constructs with Redis env url 1`] = `
+Cache {
+  "DEFAULT_TIMEOUT": 86400,
+  "redis": undefined,
+  "safely": [Function],
+}
+`;
+
+exports[`Redis Cache gets data from redis 1`] = `
+Object {
+  "foo": "bar",
+}
+`;
+
+exports[`Redis Cache gets data from redis 2`] = `
+Array [
+  Array [
+    "someKey",
+  ],
+]
+`;
+
+exports[`Redis Cache increments integers in redis 1`] = `2`;
+
+exports[`Redis Cache increments integers in redis 2`] = `
+Array [
+  Array [
+    Object {
+      "key": "someKey",
+    },
+  ],
+]
+`;
+
+exports[`Redis Cache safely handle thrown errors in get 1`] = `null`;
+
+exports[`Redis Cache safely handle thrown errors in set 1`] = `null`;
+
+exports[`Redis Cache safely handles no redis instance 1`] = `null`;
+
+exports[`Redis Cache safely handles no redis instance 2`] = `
+Array [
+  Array [
+    "Redis is not running. Cache dataSource methods will only return null",
+  ],
+]
+`;
+
+exports[`Redis Cache safely swallows errors when decrementing 1`] = `null`;
+
+exports[`Redis Cache safely swallows errors when incrementing 1`] = `null`;
+
+exports[`Redis Cache sets data in redis 1`] = `undefined`;
+
+exports[`Redis Cache sets data in redis 2`] = `
+Array [
+  Array [
+    "someKey",
+    "true",
+    "EX",
+    86400,
+  ],
+]
+`;
+
+exports[`Redis Cache sets data in redis using an array key 1`] = `undefined`;
+
+exports[`Redis Cache sets data in redis using an array key 2`] = `
+Array [
+  Array [
+    "someKey:some specific-id",
+    "true",
+    "EX",
+    86400,
+  ],
+]
+`;

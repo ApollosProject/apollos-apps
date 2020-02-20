@@ -5,6 +5,8 @@ import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
 import { peopleSchema, mediaSchema } from '@apollosproject/data-schema';
 
 import * as Auth from '../index';
+import * as Person from '../../people/index';
+
 import { generateToken, registerToken } from '../token';
 
 ApollosConfig.loadJs({
@@ -14,7 +16,7 @@ ApollosConfig.loadJs({
   },
 });
 
-const { getContext, getSchema } = createTestHelpers({ Auth });
+const { getContext, getSchema } = createTestHelpers({ Auth, Person });
 
 describe('Auth', () => {
   let schema;
@@ -36,12 +38,17 @@ describe('Auth', () => {
               email
             }
             rockToken
+            rock {
+              authCookie
+              authToken
+            }
           }
         }
       }
     `;
     const rootValue = {};
 
+    context.dataSources.Auth.getAuthToken = jest.fn(() => 'some token');
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
   });

@@ -11,7 +11,7 @@ import TouchableScale from '../TouchableScale';
 
 const CardView = styled(
   ({ theme }) => ({
-    borderRadius: theme.sizing.baseUnit,
+    borderRadius: theme.sizing.baseBorderRadius,
     overflow: 'hidden',
     width: '100%',
     height: '100%',

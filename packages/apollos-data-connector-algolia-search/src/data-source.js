@@ -9,12 +9,25 @@ import {
 } from '@apollosproject/server-core';
 
 export default class Search {
-  client = algoliasearch(
-    ApollosConfig.ALGOLIA.APPLICATION_ID,
-    ApollosConfig.ALGOLIA.API_KEY
-  );
-
-  index = this.client.initIndex(ApollosConfig.ALGOLIA.SEARCH_INDEX);
+  constructor() {
+    if (ApollosConfig.ALGOLIA.APPLICATION_ID && ApollosConfig.ALGOLIA.API_KEY) {
+      this.client = algoliasearch(
+        ApollosConfig.ALGOLIA.APPLICATION_ID,
+        ApollosConfig.ALGOLIA.API_KEY
+      );
+      this.index = this.client.initIndex(ApollosConfig.ALGOLIA.SEARCH_INDEX);
+      this.index.setSettings(ApollosConfig.ALGOLIA.CONFIGURATION);
+    } else {
+      console.warn(
+        'You are using the Algolia Search datasource without Algolia credentials. To avoid issues, add Algolia credentials to your config.yml or remove the Algolia datasource'
+      );
+      this.index = {
+        addObjects: (_, cb) => cb(),
+        clearIndex: (cb) => cb(),
+        search: () => ({ hits: [] }),
+      };
+    }
+  }
 
   initialize({ context }) {
     this.context = context;
@@ -56,7 +69,39 @@ query getItem {
     return data.node;
   }
 
+  async deltaIndex({ datetime }) {
+    const { ContentItem } = this.context.dataSources;
+    let itemsLeft = true;
+    const args = { after: null, first: 100 };
+
+    while (itemsLeft) {
+      const { edges } = await ContentItem.paginate({
+        cursor: await ContentItem.byDateAndActive({ datetime }),
+        args,
+      });
+
+      const result = await edges;
+      const items = result.map(({ node }) => node);
+      itemsLeft = items.length === 100;
+
+      if (itemsLeft) args.after = result[result.length - 1].cursor;
+      const indexableItems = await Promise.all(
+        items.map((item) => this.mapItemToAlgolia(item))
+      );
+
+      await this.addObjects(indexableItems);
+    }
+  }
+
   async indexAll() {
+    await new Promise((resolve, reject) =>
+      this.index.clearIndex((err, result) => {
+        if (err) {
+          reject(err);
+        }
+        resolve(result);
+      })
+    );
     const { ContentItem } = this.context.dataSources;
     let itemsLeft = true;
     const args = { after: null, first: 100 };

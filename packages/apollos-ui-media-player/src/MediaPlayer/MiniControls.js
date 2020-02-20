@@ -21,7 +21,7 @@ import { GO_FULLSCREEN, DISMISS, PLAY, PAUSE } from './mutations';
 const MINI_PLAYER_HEIGHT = 50;
 
 const Shadow = styled(({ theme }) => ({
-  borderRadius: theme.sizing.baseUnit / 2,
+  borderRadius: theme.sizing.baseBorderRadius / 2,
   ...Platform.select(theme.shadows.default),
 }))(View);
 
@@ -30,7 +30,7 @@ const Container = styled(({ theme }) => ({
   flexDirection: 'row',
   justifyContent: 'flex-start',
   overflow: 'hidden',
-  borderRadius: theme.sizing.baseUnit / 2,
+  borderRadius: theme.sizing.baseBorderRadius / 2,
 }))(View);
 
 // ThumbnailSpacer is used to offset the text in MiniPlayer to make room for the video/music
@@ -47,7 +47,7 @@ const DismissBackground = withTheme(({ theme }) => ({
 
 const IconStyles = withTheme(({ theme }) => ({
   fill: theme.colors.darkTertiary,
-  size: theme.sizing.baseUnit * 0.75,
+  size: theme.sizing.baseUnit,
   iconPadding: theme.sizing.baseUnit * 0.75,
 }));
 
@@ -139,10 +139,7 @@ class MiniControls extends Component {
                 )}
                 <Mutation mutation={DISMISS}>
                   {(dismiss) => (
-                    <StyledButtonIcon
-                      name="close"
-                      onPress={() => (isPlaying ? goFullscreen() : dismiss())}
-                    />
+                    <StyledButtonIcon name="close" onPress={() => dismiss()} />
                   )}
                 </Mutation>
               </Controls>

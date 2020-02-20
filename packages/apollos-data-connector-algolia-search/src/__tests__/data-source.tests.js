@@ -7,6 +7,7 @@ ApollosConfig.loadJs({
   ALGOLIA: {
     APPLICATION_ID: 'some-application-id',
     API_KEY: 'some-api-key',
+    CONFIGURATION: {},
   },
 });
 
@@ -44,6 +45,7 @@ describe('The algolia search dataSource', () => {
     expect(ContentItem.byActive.mock.calls).toMatchSnapshot();
     expect(ContentItem.paginate.mock.calls).toMatchSnapshot();
     expect(search.mapItemToAlgolia.mock.calls).toMatchSnapshot();
+    expect(search.index.clearIndex.mock.calls).toMatchSnapshot();
   });
 
   it('must raise an error if the indexing fails', () => {

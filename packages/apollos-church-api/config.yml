@@ -12,6 +12,8 @@ APP:
   # It should match whatver is in your Info.plist `CFBundleURLTypes`
   DEEP_LINK_HOST: apolloschurchapp
   ROOT_API_URL: ${ROOT_URL}
+  JOBS_USERNAME: ${JOBS_USERNAME}
+  JOBS_PASSWORD: ${JOBS_PASSWORD}
 ROCK:
   API_URL: https://apollosrock.newspring.cc/api
   API_TOKEN: ${ROCK_TOKEN}
@@ -20,6 +22,7 @@ ROCK:
   # This should match the timezone of the Rock server
   TIMEZONE: 'America/New_York'
   USE_PLUGIN: true
+  SHOW_INACTIVE_CONTENT: ${ROCK_SHOW_INACTIVE_CONTENT}
 ONE_SIGNAL:
   APP_ID: b6e75a77-003f-4466-95ca-82cc5cdc407b
   REST_KEY: ${ONE_SIGNAL_REST_KEY}
@@ -30,8 +33,20 @@ CHURCH_ONLINE:
 ALGOLIA:
   APPLICATION_ID: ${ALGOLIA_APP_ID}
   API_KEY: ${ALGOLIA_API_KEY}
-  # TODO: should we support multiple indices? how?
-  SEARCH_INDEX: test_ContentItems
+  # TODO: should we support multiple indices? how
+  SEARCH_INDEX: test_ContentItem
+  # Configure Algolia custom settings here
+  # https://www.algolia.com/doc/api-reference/settings-api-parameters/
+  CONFIGURATION:
+    searchableAttributes:
+      - title
+      - unordered(summary)
+    #customRankings:
+      # NOT CURRENTLY INCLUDED
+      # This just demonstrates what's possible
+      # To include likedCount (or any other field) override search package
+      # and add field to config below
+      #- desc(likedCount)
 TWILIO:
   ACCOUNT_SID: ${TWILIO_ACCOUNT_SID}
   AUTH_TOKEN: ${TWILIO_AUTH_TOKEN}
@@ -49,9 +64,12 @@ ANALYTICS:
   # on the accompanying service
   SEGMENT_KEY:
   GA_ID:
+  USE_ROCK: true
 BIBLE_API:
   KEY: ${BIBLE_API_KEY}
-  BIBLE_ID: '9879dbb7cfe39e4d-01'
+  BIBLE_ID:
+    WEB: '9879dbb7cfe39e4d-01'
+    KJV: 'de4e12af7f28f599-02'
 CLOUDINARY:
   # Cloudinary is used to improve image loading
   # value should look something like

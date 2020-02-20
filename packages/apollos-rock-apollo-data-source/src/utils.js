@@ -7,7 +7,7 @@ export const parseKeyValueAttribute = (text = '') => {
   const entries = text.split('|');
   return entries.map((e) => {
     const [key, value] = e.split('^');
-    return { key, value };
+    return { key, value: decodeURIComponent(value) };
   });
 };
 
@@ -36,6 +36,7 @@ export class RockLoggingExtension {
       .map((callPath) => `${decodeURI(callPath)}: ${calls[callPath]}`)
       .join('\n');
     if (calls && data) {
+      // eslint-disable-next-line no-console
       console.log(
         `While running query: ${Object.keys(data)[0]}
       Total Network Calls: ${totalNetworkCalls}

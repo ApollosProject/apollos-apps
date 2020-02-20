@@ -7,7 +7,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import { MockedProvider } from 'react-apollo/test-utils';
 import AuthProvider, { GET_AUTH_TOKEN } from '../Provider';
 
-import GET_LOGIN_STATE from '../getLoginState';
+import { GET_LOGIN_STATE } from '../queries';
 import LoginButton from '.';
 
 const cache = new InMemoryCache();

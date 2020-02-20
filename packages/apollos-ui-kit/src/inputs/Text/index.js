@@ -12,7 +12,7 @@ import InputUnderline from '../InputUnderline';
 import InputWrapper from '../InputWrapper';
 import ErrorText from '../ErrorText';
 import withFocusAnimation from '../withFocusAnimation';
-import InputAddon, { AddonRow } from '../InputAddon';
+import InputAddon, { AddonRow, TextInputWrapper } from '../InputAddon';
 import { textStyle } from '../withInputControlStyles';
 
 const propsForInputType = {
@@ -61,6 +61,7 @@ const enhance = compose(
 const Text = enhance(
   ({
     label,
+    labelColor,
     prefix,
     suffix,
     value,
@@ -76,29 +77,32 @@ const Text = enhance(
     const focusAnimation =
       value || !label ? new Animated.Value(1) : focusAnimationInput;
 
-    const animatedStyle = { opacity: focusAnimation, flex: 1 };
+    const animatedStyle = { opacity: focusAnimation };
 
     return (
       <InputWrapper style={wrapperStyle} disabled={disabled}>
         <View>
           <AddonRow>
             <InputAddon>{prefix}</InputAddon>
-            <Animated.View style={animatedStyle}>
-              <TextInput
-                style={textStyle({ theme })}
-                ref={inputRef}
-                placeholderTextColor={Color(theme.colors.text.primary)
-                  .fade(theme.alpha.low)
-                  .string()}
-                {...textInputProps}
-                editable={!disabled}
-                value={value}
-              />
-            </Animated.View>
+            <TextInputWrapper>
+              <Animated.View style={animatedStyle}>
+                <TextInput
+                  style={textStyle({ theme })}
+                  ref={inputRef}
+                  placeholderTextColor={Color(theme.colors.text.primary)
+                    .fade(theme.alpha.low)
+                    .string()}
+                  {...textInputProps}
+                  editable={!disabled}
+                  value={value}
+                />
+              </Animated.View>
+              <FloatingLabel color={labelColor} animation={focusAnimation}>
+                {label}
+              </FloatingLabel>
+            </TextInputWrapper>
             <InputAddon>{suffix}</InputAddon>
           </AddonRow>
-
-          <FloatingLabel animation={focusAnimation}>{label}</FloatingLabel>
           {underline ? (
             <InputUnderline
               animation={focusAnimation}
@@ -126,6 +130,7 @@ Text.propTypes = {
   prefix: PropTypes.node,
   suffix: PropTypes.node,
   label: PropTypes.string,
+  labelColor: PropTypes.string,
   value: PropTypes.any, // eslint-disable-line
   wrapperStyle: PropTypes.any, // eslint-disable-line
   returnKeyType: PropTypes.string,

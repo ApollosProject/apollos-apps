@@ -6,6 +6,7 @@ import { peopleSchema } from '@apollosproject/data-schema';
 
 import * as AuthSms from '../index';
 import * as Auth from '../../auth/index';
+import * as Person from '../../people/index';
 
 ApollosConfig.loadJs({
   ROCK: {
@@ -29,7 +30,12 @@ const Sms = {
   dataSource: SmsDataSource,
 };
 
-const { getContext, getSchema } = createTestHelpers({ Auth, AuthSms, Sms });
+const { getContext, getSchema } = createTestHelpers({
+  Auth,
+  AuthSms,
+  Sms,
+  Person,
+});
 
 describe('AuthSms schema', () => {
   let schema;
@@ -42,10 +48,61 @@ describe('AuthSms schema', () => {
     sendSms.mockClear();
   });
 
+  it('checks to see if a user exists via phone number', async () => {
+    const query = `
+      query {
+        userExists(identity: "5133061126")
+      }
+    `;
+    const rootValue = {};
+
+    const userExistsMock = jest.fn(() => Promise.resolve(true));
+
+    context.dataSources.Auth.personExists = userExistsMock;
+
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+    expect(userExistsMock).toMatchSnapshot();
+  });
+
+  it("checks to see if a user exists via phone number and returns differently if they don't", async () => {
+    const query = `
+      query {
+        userExists(identity: "5133061126")
+      }
+    `;
+    const rootValue = {};
+
+    const userExistsMock = jest.fn(() => Promise.resolve(false));
+
+    context.dataSources.Auth.personExists = userExistsMock;
+
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+    expect(userExistsMock).toMatchSnapshot();
+  });
+
+  it('checks to see if a user exists via email', async () => {
+    const query = `
+      query {
+        userExists(phoneNumber: "vincent.wilson@differential.com")
+      }
+    `;
+    const rootValue = {};
+
+    const userExistsMock = jest.fn(() => Promise.resolve(true));
+
+    context.dataSources.Auth.personExists = userExistsMock;
+
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+    expect(userExistsMock).toMatchSnapshot();
+  });
+
   it('requests an SMS pin without an existing user login', async () => {
     const query = `
       mutation {
-        requestSmsLoginPin(phoneNumber: "5133061126") { success }
+        requestSmsLoginPin(phoneNumber: "5133061126") { success, userAuthStatus }
       }
     `;
     const rootValue = {};
@@ -72,7 +129,7 @@ describe('AuthSms schema', () => {
   it('requests an SMS pin with an existing user login', async () => {
     const query = `
       mutation {
-        requestSmsLoginPin(phoneNumber: "5133061126") { success }
+        requestSmsLoginPin(phoneNumber: "5133061126") { success, userAuthStatus }
       }
     `;
     const rootValue = {};
@@ -341,5 +398,97 @@ describe('AuthSms schema', () => {
     );
     expect(patchMock.mock.calls).toMatchSnapshot('update person id on login');
     expect(authenticateMock.mock.calls).toMatchSnapshot('login user');
+  });
+
+  it('registers a new user via their phone number and pin', async () => {
+    const query = `
+      mutation {
+        registerWithSms(phoneNumber: "5133061126", pin: "123456", userProfile: [{ field: FirstName, value: "Burke" }, { field: LastName, value: "Shartsis" }]) {
+          token
+        }
+      }
+    `;
+    const rootValue = {};
+
+    const getMock = jest.fn((path) => {
+      if (path.includes('/PhoneNumbers')) {
+        return Promise.resolve([]);
+      }
+      return Promise.resolve([{ id: 123 }]);
+    });
+    const patchMock = jest.fn();
+    const authenticateMock = jest.fn(() =>
+      Promise.resolve({ token: 'foo', rockCookie: 'bar' })
+    );
+    const postMock = jest.fn();
+    const createUserProfileMock = jest.fn(() => Promise.resolve(123));
+
+    context.dataSources.AuthSms.get = getMock;
+    context.dataSources.AuthSms.patch = patchMock;
+    context.dataSources.AuthSms.post = postMock;
+    context.dataSources.Auth.authenticate = authenticateMock;
+    context.dataSources.Auth.createUserProfile = createUserProfileMock;
+
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+    expect(getMock.mock.calls).toMatchSnapshot(
+      'try and find phone number / find user login'
+    );
+    expect(patchMock.mock.calls).toMatchSnapshot('update person id on login');
+    expect(authenticateMock.mock.calls).toMatchSnapshot('login user');
+    expect(postMock.mock.calls).toMatchSnapshot('create new phone number');
+    expect(createUserProfileMock.mock.calls).toMatchSnapshot(
+      'create user profile'
+    );
+  });
+
+  it('registers a new user via their phone number, pin, and gender', async () => {
+    const query = `
+      mutation {
+        registerWithSms(
+          phoneNumber: "5133061126",
+          pin: "123456",
+          userProfile: [
+            { field: FirstName, value: "Burke" },
+            { field: LastName, value: "Shartsis" },
+            { field: Gender, value: "Male" }
+          ]
+         ) {
+          token
+        }
+      }
+    `;
+    const rootValue = {};
+
+    const getMock = jest.fn((path) => {
+      if (path.includes('/PhoneNumbers')) {
+        return Promise.resolve([]);
+      }
+      return Promise.resolve([{ id: 123 }]);
+    });
+    const patchMock = jest.fn();
+    const authenticateMock = jest.fn(() =>
+      Promise.resolve({ token: 'foo', rockCookie: 'bar' })
+    );
+    const postMock = jest.fn();
+    const createUserProfileMock = jest.fn(() => Promise.resolve(123));
+
+    context.dataSources.AuthSms.get = getMock;
+    context.dataSources.AuthSms.patch = patchMock;
+    context.dataSources.AuthSms.post = postMock;
+    context.dataSources.Auth.authenticate = authenticateMock;
+    context.dataSources.Auth.createUserProfile = createUserProfileMock;
+
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+    expect(getMock.mock.calls).toMatchSnapshot(
+      'try and find phone number / find user login'
+    );
+    expect(patchMock.mock.calls).toMatchSnapshot('update person id on login');
+    expect(authenticateMock.mock.calls).toMatchSnapshot('login user');
+    expect(postMock.mock.calls).toMatchSnapshot('create new phone number');
+    expect(createUserProfileMock.mock.calls).toMatchSnapshot(
+      'create user profile'
+    );
   });
 });

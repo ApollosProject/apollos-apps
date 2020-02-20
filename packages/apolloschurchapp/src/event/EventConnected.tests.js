@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Providers from 'apolloschurchapp/src/Providers';
-
 import moment from 'moment';
+import Providers from '../Providers';
+
 import { renderWithApolloData } from '../utils/testUtils';
 import getEvent from './getEvent';
 import EventConnected from './EventConnected';
@@ -25,6 +25,7 @@ const mocks = {
           .toJSON(),
         location: 'Willow Creek, Chicago',
         name: 'Cookout',
+        description: 'Some detailed description',
         image: {
           __typename: 'ImageMedia',
           sources: [

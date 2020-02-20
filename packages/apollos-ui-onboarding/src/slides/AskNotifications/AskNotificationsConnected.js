@@ -1,10 +1,19 @@
 import React, { memo } from 'react';
-import { Query } from 'react-apollo';
 import PropTypes from 'prop-types';
-// This query is also found in core/permissionUtils. We should refactor into a notifications module.
-import { GET_NOTIFICATIONS_ENABLED } from '@apollosproject/ui-notifications';
+import { NotificationsConsumer } from '@apollosproject/ui-notifications';
 
 import AskNotifications from './AskNotifications';
+
+function defaultGetButtonText({ hasPushPermission, hasPrompted }) {
+  if (hasPushPermission) {
+    return 'Notifications Enabled!';
+  }
+  if (hasPrompted) {
+    return 'Enable Notifications in Settings';
+  }
+  return 'Yes, enable notifications';
+}
+
 // eslint-disable-next-line react/display-name
 const AskNotificationsConnected = memo(
   ({
@@ -12,41 +21,48 @@ const AskNotificationsConnected = memo(
     onPressPrimary,
     onPressSecondary,
     onRequestPushPermissions,
+    getButtonText,
     ...props
   }) => (
-    <Query query={GET_NOTIFICATIONS_ENABLED}>
-      {({ data: { notificationsEnabled = false } = {} }) => (
+    <NotificationsConsumer>
+      {(value) => (
         <Component
-          onPressButton={() => onRequestPushPermissions()}
-          buttonDisabled={notificationsEnabled}
-          buttonText={
-            notificationsEnabled
-              ? 'Notifications Enabled!'
-              : 'Yes, enable notifications'
-          }
-          onPressPrimary={notificationsEnabled ? onPressPrimary : null} // if notifications are enabled show the primary nav button (next/finish)
+          isLoading={value.loading}
+          onPressButton={() => onRequestPushPermissions(value.checkPermissions)}
+          buttonDisabled={value.hasPushPermission}
+          buttonText={getButtonText({
+            hasPrompted: value.hasPrompted,
+            hasPushPermission: value.hasPushPermission,
+          })}
+          onPressPrimary={value.hasPrompted ? onPressPrimary : null} // if notifications are enabled show the primary nav button (next/finish)
           onPressSecondary={
             // if notifications are not enabled show the secondary nav button (skip)
-            notificationsEnabled ? null : onPressSecondary || onPressPrimary // if onPressSecondary exists use it else default onPressPrimary
+            !value.hasPrompted ? onPressSecondary || onPressPrimary : null // if onPressSecondary exists use it else default onPressPrimary
           }
           pressPrimaryEventName={'Ask Notifications Completed'}
           pressSecondaryEventName={'Ask Notifications Skipped'}
           {...props}
         />
       )}
-    </Query>
+    </NotificationsConsumer>
   )
 );
 
 AskNotificationsConnected.propTypes = {
-  Component: PropTypes.shape({}),
+  Component: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.func,
+    PropTypes.object, // type check for React fragments
+  ]),
   onPressPrimary: PropTypes.func,
   onPressSecondary: PropTypes.func,
   onRequestPushPermissions: PropTypes.func.isRequired,
+  getButtonText: PropTypes.func,
 };
 
 AskNotificationsConnected.defaultProps = {
   Component: AskNotifications,
+  getButtonText: defaultGetButtonText,
 };
 
 AskNotificationsConnected.displayName = 'AskNotificationsConnected';

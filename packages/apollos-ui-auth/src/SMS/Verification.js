@@ -8,15 +8,16 @@ import {
   StatusBar,
 } from 'react-native';
 import { get } from 'lodash';
-import { PaddedView, TextInput, BackgroundView } from '@apollosproject/ui-kit';
 
 import {
-  FlexedSafeAreaView,
-  NextButton,
-  TitleText,
-  PromptText,
-  BrandIcon,
-} from '../styles';
+  Button,
+  PaddedView,
+  TextInput,
+  BackgroundView,
+} from '@apollosproject/ui-kit';
+
+import { FlexedSafeAreaView, TitleText, PromptText } from '../styles';
+import BackButton from '../BackButton';
 
 const Verification = ({
   confirmationTitleText,
@@ -25,6 +26,7 @@ const Verification = ({
   errors,
   isLoading,
   onPressNext,
+  onPressBack,
   setFieldValue,
   values,
   BackgroundComponent,
@@ -39,8 +41,8 @@ const Verification = ({
     <BackgroundComponent>
       <FlexedSafeAreaView>
         <ScrollView>
-          <PaddedView>
-            <BrandIcon />
+          <BackButton onPress={() => onPressBack()} />
+          <PaddedView vertical={false}>
             <TitleText>{confirmationTitleText}</TitleText>
             <PromptText padded>{confirmationPromptText}</PromptText>
 
@@ -61,11 +63,13 @@ const Verification = ({
 
         {onPressNext ? (
           <PaddedView>
-            <NextButton
-              title={'Next'}
+            <Button
               onPress={onPressNext}
               disabled={disabled}
               loading={isLoading}
+              title={'Next'}
+              type={'primary'}
+              pill={false}
             />
           </PaddedView>
         ) : null}
@@ -83,6 +87,7 @@ Verification.propTypes = {
   }),
   isLoading: PropTypes.bool,
   onPressNext: PropTypes.func,
+  onPressBack: PropTypes.func,
   setFieldValue: PropTypes.func.isRequired,
   values: PropTypes.shape({
     code: PropTypes.string,

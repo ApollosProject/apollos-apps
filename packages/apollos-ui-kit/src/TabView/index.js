@@ -1,8 +1,14 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Dimensions, Platform } from 'react-native';
-import { TabView as RNTabView, SceneMap } from 'react-native-tab-view';
+import {
+  TabView as RNTabView,
+  SceneMap,
+  PagerExperimental,
+} from 'react-native-tab-view';
 import { branch, compose, withProps, withState } from 'recompose';
 import isFunction from 'lodash/isFunction';
+import * as GestureHandler from 'react-native-gesture-handler';
 
 import styled from '../styled';
 
@@ -40,6 +46,9 @@ const TabView = compose(
       },
       initialLayout,
       renderTabBar: props.renderTabBar ? props.renderTabBar : TabBar,
+      renderPager: props.renderPager
+        ? props.renderPager
+        : (pagerProps) => <PagerExperimental {...pagerProps} GestureHandler={GestureHandler} useNativeDriver/>, //eslint-disable-line
       onIndexChange,
     };
   })

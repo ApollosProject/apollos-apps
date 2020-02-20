@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-auth",
-  "version": "1.2.0-beta.1",
+  "version": "1.3.0-beta.6",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -38,6 +38,7 @@
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-notifications": "*",
     "@apollosproject/ui-storybook": "*",
+    "@react-native-community/async-storage": "*",
     "apollo-client": "*",
     "react": "*",
     "react-apollo": "*",
@@ -46,7 +47,6 @@
     "react-navigation": "*"
   },
   "dependencies": {
-    "@react-native-community/async-storage": "^1.5.1",
     "apollo-cache-inmemory": "^1.5.1",
     "apollo-link-context": "1.0.14",
     "apollo-link-error": "^1.1.11",
@@ -56,7 +56,8 @@
     "yup": "^0.27.0"
   },
   "devDependencies": {
-    "apollo-client": "2.5.1",
+    "@react-native-community/async-storage": "^1.5.1",
+    "apollo-client": "2.6.8",
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",

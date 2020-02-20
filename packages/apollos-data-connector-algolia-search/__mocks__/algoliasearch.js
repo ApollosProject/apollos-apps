@@ -20,6 +20,10 @@ function initIndex(indexName, props) {
         records.forEach((record) => (_props.records[record.objectID] = record));
         cb();
       },
+      clearIndex: jest.fn((cb) => {
+        cb();
+      }),
+      setSettings: jest.fn(),
       search: jest.fn(() =>
         Promise.resolve({
           hits: [

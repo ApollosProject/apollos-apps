@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/data-connector-passes",
-  "version": "1.2.0-beta.1",
+  "version": "1.3.0-beta.6",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
   "scripts": {
@@ -23,22 +23,22 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@apollosproject/data-connector-rock": "^1.2.0-beta.1",
-    "@apollosproject/data-schema": "^1.2.0-beta.1",
-    "@apollosproject/server-core": "^1.2.0-beta.1",
+    "@apollosproject/data-connector-rock": "^1.3.0-beta.6",
+    "@apollosproject/data-schema": "^1.3.0-beta.6",
+    "@apollosproject/server-core": "^1.3.0-beta.6",
     "apollo-datasource": "^0.4.0",
-    "apollo-server": "^2.5.0",
     "datauri": "^1.1.0",
     "lodash": "^4.17.11",
     "passkit-generator": "1.5.9",
     "qrcode": "^1.3.3"
   },
   "peerDependencies": {
-    "@apollosproject/config": "*"
+    "@apollosproject/config": "*",
+    "apollo-server": "^2.5.0"
   },
   "devDependencies": {
-    "@apollosproject/apollo-server-env-mock": "^1.2.0-beta.1",
-    "@apollosproject/babel-preset-apollos": "^1.2.0-beta.1",
+    "@apollosproject/apollo-server-env-mock": "^1.3.0-beta.6",
+    "@apollosproject/babel-preset-apollos": "^1.3.0-beta.6",
     "apollo-server-env": "^2.3.0",
     "graphql": "^0.13.2",
     "graphql-tag": "^2.10.1",

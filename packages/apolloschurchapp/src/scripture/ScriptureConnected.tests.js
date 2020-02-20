@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Providers from 'apolloschurchapp/src/Providers';
+import Providers from '../Providers';
 
 import { renderWithApolloData } from '../utils/testUtils';
 import getScripture from './getScripture';
@@ -18,6 +18,7 @@ const mocks = {
         id: 'GEN.1.1',
         reference: 'Genesis 1:1',
         copyright: 'PUBLIC DOMAIN',
+        version: 'WEB',
         html:
           '<p class="p"><span data-number="1" class="v">1</span>In the beginning, God created the heavens and the earth. </p>',
       },

@@ -103,6 +103,10 @@ Object {
         "profile": Object {
           "email": "isaac.hardy@newspring.cc",
         },
+        "rock": Object {
+          "authCookie": "some cookie",
+          "authToken": "some token",
+        },
         "rockToken": "some cookie",
       },
     },
@@ -135,7 +139,7 @@ Object {
     "authenticate": null,
   },
   "errors": Array [
-    [GraphQLError: Invalid Credentials],
+    [GraphQLError: Username or Password incorrect],
   ],
 }
 `;

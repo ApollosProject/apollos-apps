@@ -126,7 +126,7 @@ const renderer = (node, { children, ...other }) => {
     return (
       <StyledParagraph>
         <ScriptureText>
-          {wrapTextChildren(children, ScriptureText)}
+          {wrapTextChildren({ children, Component: ScriptureText })}
         </ScriptureText>
       </StyledParagraph>
     );

@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Auth should get a person token 1`] = `"some token"`;
+
+exports[`Auth should get a person token 2`] = `
+Array [
+  Array [
+    "People/GetCurrentPersonImpersonationToken?expireDateTime=2016-12-28T23:36:07.071Z",
+    Object {},
+    Object {
+      "headers": Object {
+        "Authorization-Token": null,
+        "cookie": "some cookie",
+      },
+    },
+  ],
+]
+`;
+
+exports[`Auth should post when creating a new user 1`] = `undefined`;
+
+exports[`Auth should post when creating a new user 2`] = `
+Array [
+  Array [
+    "/People",
+    Object {
+      "Email": "bob-jones@example.com",
+      "Gender": 0,
+      "IsSystem": false,
+    },
+  ],
+]
+`;
+
+exports[`Auth should post with userProfile fields when creating a new user 1`] = `"some-cookie"`;
+
+exports[`Auth should post with userProfile fields when creating a new user 2`] = `
+Array [
+  Array [
+    "/People",
+    Object {
+      "Email": "bob-jones@example.com",
+      "FirstName": "Burke",
+      "Gender": 0,
+      "IsSystem": false,
+      "LastName": "Shartsis",
+    },
+  ],
+]
+`;
+
+exports[`Auth should post with userProfile fields when creating a new user and map gender/birthdate 1`] = `"some-cookie"`;
+
+exports[`Auth should post with userProfile fields when creating a new user and map gender/birthdate 2`] = `
+Array [
+  Array [
+    "/People",
+    Object {
+      "BirthDay": 22,
+      "BirthMonth": 2,
+      "BirthYear": 1996,
+      "Email": "bob-jones@example.com",
+      "FirstName": "Burke",
+      "Gender": 2,
+      "IsSystem": false,
+      "LastName": "Shartsis",
+    },
+  ],
+]
+`;
+
+exports[`Auth should throw an error when creating an invalid user 1`] = `
+Array [
+  Array [
+    "/People",
+    Object {
+      "Email": "bob-jones@example.com",
+      "Gender": 0,
+      "IsSystem": false,
+    },
+  ],
+]
+`;
+
+exports[`Auth should throw an error when creating an invalid user 2`] = `[Error: Unable to create profile!]`;

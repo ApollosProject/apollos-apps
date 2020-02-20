@@ -2,10 +2,10 @@ import React from 'react';
 import { ActionBar, ActionBarItem } from '@apollosproject/ui-kit';
 import { withNavigation } from 'react-navigation';
 import PropTypes from 'prop-types';
-import { WebBrowserConsumer } from 'apolloschurchapp/src/ui/WebBrowser';
+import { RockAuthedWebBrowser } from '@apollosproject/ui-connected';
 
 const Toolbar = ({ navigation }) => (
-  <WebBrowserConsumer>
+  <RockAuthedWebBrowser>
     {(openUrl) => (
       <ActionBar>
         <ActionBarItem
@@ -25,7 +25,7 @@ const Toolbar = ({ navigation }) => (
         />
       </ActionBar>
     )}
-  </WebBrowserConsumer>
+  </RockAuthedWebBrowser>
 );
 
 Toolbar.propTypes = {

@@ -2,153 +2,39 @@
 
 exports[`The Media placeholder accepts custom styles 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "backgroundColor": "salmon",
+      "borderRadius": 16,
+      "height": "100%",
+      "width": "100%",
     }
   }
->
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "salmon",
-          "borderRadius": 16,
-          "height": "100%",
-          "width": "100%",
-        }
-      }
-    />
-  </View>
-</View>
+/>
 `;
 
 exports[`The Media placeholder accepts size 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "backgroundColor": "#A5A5A5",
+      "borderRadius": 16,
+      "height": "50%",
+      "width": "50%",
     }
   }
->
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 16,
-          "height": "50%",
-          "width": "50%",
-        }
-      }
-    />
-  </View>
-</View>
+/>
 `;
 
 exports[`The Media placeholder renders correctly 1`] = `
 <View
-  onLayout={[Function]}
-  pointerEvents="box-none"
   style={
     Object {
-      "bottom": 0,
-      "left": 0,
-      "paddingBottom": 0,
-      "paddingLeft": 0,
-      "paddingRight": 0,
-      "paddingTop": 20,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
+      "backgroundColor": "#A5A5A5",
+      "borderRadius": 16,
+      "height": "100%",
+      "width": "100%",
     }
   }
->
-  <View
-    onLayout={[Function]}
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 16,
-          "height": "100%",
-          "width": "100%",
-        }
-      }
-    />
-  </View>
-</View>
+/>
 `;

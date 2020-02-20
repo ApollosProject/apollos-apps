@@ -13,7 +13,7 @@ import {
   IDENTIFY as IDENTIFY_CLIENT,
 } from './clientMutations';
 
-const anonymousId = DeviceInfo.getUniqueID();
+const anonymousId = DeviceInfo.getUniqueId();
 
 const deviceInfo = {
   platform: Platform.OS === 'ios' ? 'iOS' : 'Android',
@@ -47,13 +47,19 @@ export const track = ({ client, eventName, properties }) =>
     },
   });
 
+export const identify = ({ client }) =>
+  client.mutate({ mutation: IDENTIFY_CLIENT });
+
 const createTrack = ({ client }) => ({ eventName, properties }) =>
   track({ eventName, properties, client });
 
-const createIdentify = ({ client }) => () =>
-  client.mutate({ mutation: IDENTIFY_CLIENT });
+const createIdentify = ({ client }) => () => identify({ client });
 
-export const createResolvers = ({ trackFunctions, identifyFunctions }) => ({
+export const createResolvers = ({
+  trackFunctions,
+  identifyFunctions,
+  useServerAnalytics = true,
+}) => ({
   Mutation: {
     track: async (root, { properties, eventName }, { client }) => {
       trackFunctions.forEach((func) => {
@@ -65,17 +71,19 @@ export const createResolvers = ({ trackFunctions, identifyFunctions }) => ({
           func({ eventName, properties: gqlInputToObject(properties) });
         }
       });
-      await client.mutate({
-        mutation: TRACK_SERVER,
-        variables: {
-          input: {
-            anonymousId,
-            deviceInfo,
-            eventName,
-            properties,
+      if (useServerAnalytics) {
+        await client.mutate({
+          mutation: TRACK_SERVER,
+          variables: {
+            input: {
+              anonymousId,
+              deviceInfo,
+              eventName,
+              properties,
+            },
           },
-        },
-      });
+        });
+      }
       return null;
     },
 
@@ -89,25 +97,36 @@ export const createResolvers = ({ trackFunctions, identifyFunctions }) => ({
           func();
         }
       });
-      await client.mutate({
-        mutation: IDENTIFY_SERVER,
-        variables: {
-          input: {
-            anonymousId,
-            deviceInfo,
+      if (useServerAnalytics) {
+        await client.mutate({
+          mutation: IDENTIFY_SERVER,
+          variables: {
+            input: {
+              anonymousId,
+              deviceInfo,
+            },
           },
-        },
-      });
+        });
+      }
       return null;
     },
   },
 });
 
-const Provider = ({ children, trackFunctions, identifyFunctions }) => (
+const Provider = ({
+  children,
+  trackFunctions,
+  identifyFunctions,
+  useServerAnalytics,
+}) => (
   <ApolloConsumer>
     {(client) => {
       client.addResolvers(
-        createResolvers({ trackFunctions, identifyFunctions })
+        createResolvers({
+          trackFunctions,
+          identifyFunctions,
+          useServerAnalytics,
+        })
       );
       return (
         <AnalyticsContext.Provider
@@ -127,11 +146,13 @@ Provider.propTypes = {
   children: PropTypes.node,
   trackFunctions: PropTypes.arrayOf(PropTypes.func),
   identifyFunctions: PropTypes.arrayOf(PropTypes.func),
+  useServerAnalytics: PropTypes.bool,
 };
 
 Provider.defaultProps = {
   trackFunctions: [],
   identifyFunctions: [],
+  useServerAnalytics: true,
 };
 
 export const AnalyticsConsumer = AnalyticsContext.Consumer;

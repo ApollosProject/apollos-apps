@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { View, TextInput } from 'react-native';
+import { View, TextInput, Platform } from 'react-native';
 
 import styled from '../../styled';
 import { withTheme } from '../../theme';
@@ -20,7 +20,7 @@ const TextInputWrapper = styled(
     flexDirection: 'row',
     flexGrow: 1,
     alignItems: 'center',
-    borderRadius: theme.sizing.baseUnit,
+    borderRadius: theme.sizing.baseBorderRadius,
     backgroundColor: theme.colors.background.screen,
     overflow: 'hidden',
   }),
@@ -48,7 +48,13 @@ const Input = withTheme(({ theme, isFocused, cancelButtonOffset }) => ({
       ? cancelButtonOffset + theme.sizing.baseUnit * 5
       : 0, // `CancelButton` + padding + `ClearSearchButton` + a 🧙‍24px 🤷‍
     fontSize: theme.helpers.rem(0.875),
-    fontFamily: theme.typography.sans.medium.default,
+    fontFamily: theme.typography.ui.regular,
+    ...Platform.select({
+      // aligns text with icon on ios
+      ios: {
+        paddingTop: 1,
+      },
+    }),
   },
 }))(({ forwardedRef, ...props }) => (
   <TextInput ref={forwardedRef} {...props} />
@@ -69,7 +75,14 @@ const ClearSearchButtonBackground = styled(
     borderTopRightRadius: theme.sizing.baseUnit,
     borderBottomRightRadius: theme.sizing.baseUnit,
     backgroundColor: theme.colors.background.screen,
-    overflow: 'hidden', // fixes ios border radius bug
+    ...Platform.select({
+      // fixes ios border radius bug
+      ios: {
+        overflow: 'hidden',
+        borderRightWidth: 1,
+        borderColor: theme.colors.background.screen,
+      },
+    }),
   }),
   'ui-kit.inputs.Search.ClearSearchButtonBackground'
 )(View);

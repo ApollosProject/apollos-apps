@@ -1,5 +1,6 @@
 import React from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, SafeAreaView } from 'react-native';
+
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { PaddedView, ActionCard } from '@apollosproject/ui-kit';
 
@@ -12,6 +13,7 @@ const genesis1 = {
       '<p class="p"><span data-number="1" class="v">1</span>In the beginning, God created the heavens and the earth. <span data-number="2" class="v">2</span>The earth was formless and empty. Darkness was on the surface of the deep and God’s Spirit was hovering over the surface of the waters.</p><p class="p"><span data-number="3" class="v">3</span>God said, “Let there be light,” and there was light. <span data-number="4" class="v">4</span>God saw the light, and saw that it was good. God divided the light from the darkness. <span data-number="5" class="v">5</span>God called the light “day”, and the darkness he called “night”. There was evening and there was morning, the first day.</p>',
     isLoading: false,
     copyright: 'PUBLIC DOMAIN',
+    version: 'WEB',
   },
 };
 
@@ -23,6 +25,7 @@ const john1 = {
     isLoading: false,
     copyright:
       'PUBLIC DOMAIN except in the United Kingdom, where a Crown Copyright applies to printing the KJV. See http://www.cambridge.org/about-us/who-we-are/queens-printers-patent',
+    version: 'WEB',
   },
 };
 
@@ -96,127 +99,102 @@ const revelation22Loading = {
 };
 
 storiesOf('ui-scripture/Scripture', module)
-  .add('Genesis 1:1-5', () => (
+  .addDecorator((story) => (
     <ScrollView>
-      <PaddedView>
-        <ScriptureItem
-          reference={genesis1.scripture.reference}
-          html={genesis1.scripture.html}
-          isLoading={genesis1.scripture.isLoading}
-          copyright={genesis1.scripture.copyright}
-        />
-      </PaddedView>
+      <SafeAreaView>
+        <PaddedView>{story()}</PaddedView>
+      </SafeAreaView>
     </ScrollView>
+  ))
+  .add('Genesis 1:1-5', () => (
+    <ScriptureItem
+      reference={genesis1.scripture.reference}
+      html={genesis1.scripture.html}
+      isLoading={genesis1.scripture.isLoading}
+      copyright={genesis1.scripture.copyright}
+      version={genesis1.scripture.version}
+    />
   ))
   .add('John 1:1', () => (
-    <ScrollView>
-      <PaddedView>
-        <ScriptureItem
-          reference={john1.scripture.reference}
-          html={john1.scripture.html}
-          isLoading={john1.scripture.isLoading}
-          copyright={john1.scripture.copyright}
-        />
-      </PaddedView>
-    </ScrollView>
+    <ScriptureItem
+      reference={john1.scripture.reference}
+      html={john1.scripture.html}
+      isLoading={john1.scripture.isLoading}
+      copyright={john1.scripture.copyright}
+      version={john1.scripture.version}
+    />
   ))
   .add('Psalm 23', () => (
-    <ScrollView>
-      <PaddedView>
-        <ScriptureItem
-          reference={psalm23.scripture.reference}
-          html={psalm23.scripture.html}
-          isLoading={psalm23.scripture.isLoading}
-        />
-      </PaddedView>
-    </ScrollView>
+    <ScriptureItem
+      reference={psalm23.scripture.reference}
+      html={psalm23.scripture.html}
+      isLoading={psalm23.scripture.isLoading}
+    />
   ))
   .add('Psalm 32', () => (
-    <ScrollView>
-      <PaddedView>
-        <ScriptureItem
-          reference={psalm32.scripture.reference}
-          html={psalm32.scripture.html}
-          isLoading={psalm32.scripture.isLoading}
-        />
-      </PaddedView>
-    </ScrollView>
+    <ScriptureItem
+      reference={psalm32.scripture.reference}
+      html={psalm32.scripture.html}
+      isLoading={psalm32.scripture.isLoading}
+    />
   ))
   .add('Psalm 119:129 - 144', () => (
-    <ScrollView>
-      <PaddedView>
-        <ScriptureItem
-          reference={psalm119.scripture.reference}
-          html={psalm119.scripture.html}
-          isLoading={psalm119.scripture.isLoading}
-        />
-      </PaddedView>
-    </ScrollView>
+    <ScriptureItem
+      reference={psalm119.scripture.reference}
+      html={psalm119.scripture.html}
+      isLoading={psalm119.scripture.isLoading}
+    />
   ))
   .add('Song of Solomon 1:1-4', () => (
-    <ScrollView>
-      <PaddedView>
-        <ScriptureItem
-          reference={songOfSolomon1.scripture.reference}
-          html={songOfSolomon1.scripture.html}
-          isLoading={songOfSolomon1.scripture.isLoading}
-        />
-      </PaddedView>
-    </ScrollView>
+    <ScriptureItem
+      reference={songOfSolomon1.scripture.reference}
+      html={songOfSolomon1.scripture.html}
+      isLoading={songOfSolomon1.scripture.isLoading}
+    />
   ))
   .add('Mark 1: 1-4', () => (
-    <ScrollView>
-      <PaddedView>
-        <ScriptureItem
-          reference={mark1.scripture.reference}
-          html={mark1.scripture.html}
-          isLoading={mark1.scripture.isLoading}
-        />
-      </PaddedView>
-    </ScrollView>
+    <ScriptureItem
+      reference={mark1.scripture.reference}
+      html={mark1.scripture.html}
+      isLoading={mark1.scripture.isLoading}
+    />
   ))
   .add('John 3:16-17', () => (
-    <ScrollView>
-      <PaddedView>
-        <ScriptureItem
-          reference={john3.scripture.reference}
-          html={john3.scripture.html}
-          isLoading={john3.scripture.isLoading}
-        />
-      </PaddedView>
-    </ScrollView>
+    <ScriptureItem
+      reference={john3.scripture.reference}
+      html={john3.scripture.html}
+      isLoading={john3.scripture.isLoading}
+    />
   ))
   .add('Revelation 22:20-21', () => (
-    <ScrollView>
-      <PaddedView>
-        <ScriptureItem
-          reference={revelation22.scripture.reference}
-          html={revelation22.scripture.html}
-          isLoading={revelation22.scripture.isLoading}
-        />
-      </PaddedView>
-    </ScrollView>
+    <ScriptureItem
+      reference={revelation22.scripture.reference}
+      html={revelation22.scripture.html}
+      isLoading={revelation22.scripture.isLoading}
+    />
   ))
   .add('Loading State', () => (
-    <ScrollView>
-      <PaddedView>
-        <ScriptureItem
-          reference={revelation22Loading.scripture.reference}
-          html={revelation22Loading.scripture.html}
-          isLoading={revelation22Loading.scripture.isLoading}
-        />
-      </PaddedView>
-    </ScrollView>
+    <ScriptureItem
+      reference={revelation22Loading.scripture.reference}
+      html={revelation22Loading.scripture.html}
+      isLoading={revelation22Loading.scripture.isLoading}
+    />
+  ))
+  .add('version', () => (
+    <ScriptureItem
+      reference={revelation22Loading.scripture.reference}
+      html={revelation22Loading.scripture.html}
+      version={'Boom'}
+    />
   ))
   .add('Example Usage in ActionCard', () => (
-    <PaddedView>
-      <ActionCard icon={'text'} label={'Featured Scripture'}>
-        <ScriptureItem
-          reference={john1.scripture.reference}
-          html={john1.scripture.html}
-          isLoading={john1.scripture.isLoading}
-          copyright={john1.scripture.copyright}
-        />
-      </ActionCard>
-    </PaddedView>
+    <ActionCard icon={'text'} label={'Featured Scripture'}>
+      <ScriptureItem
+        reference={john1.scripture.reference}
+        html={john1.scripture.html}
+        isLoading={john1.scripture.isLoading}
+        copyright={john1.scripture.copyright}
+        version={john1.scripture.version}
+      />
+    </ActionCard>
   ));

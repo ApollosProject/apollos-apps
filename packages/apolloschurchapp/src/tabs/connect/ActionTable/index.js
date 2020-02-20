@@ -12,8 +12,8 @@ import {
   PaddedView,
   H4,
 } from '@apollosproject/ui-kit';
-import { WebBrowserConsumer } from 'apolloschurchapp/src/ui/WebBrowser';
-import NavigationActions from 'apolloschurchapp/src/NavigationService';
+import { RockAuthedWebBrowser } from '@apollosproject/ui-connected';
+import NavigationActions from '../../../NavigationService';
 
 const RowHeader = styled(({ theme }) => ({
   flexDirection: 'row',
@@ -27,7 +27,7 @@ const Name = styled({
 })(View);
 
 const ActionTable = () => (
-  <WebBrowserConsumer>
+  <RockAuthedWebBrowser>
     {(openUrl) => (
       <View>
         <RowHeader>
@@ -62,15 +62,6 @@ const ActionTable = () => (
               <CellIcon name="arrow-next" />
             </Cell>
           </Touchable>
-          <Divider />
-          <Touchable
-            onPress={() => openUrl('https://apollosrock.newspring.cc/page/186')}
-          >
-            <Cell>
-              <CellText>I would like to give</CellText>
-              <CellIcon name="arrow-next" />
-            </Cell>
-          </Touchable>
         </TableView>
         <TableView>
           <Touchable
@@ -85,7 +76,7 @@ const ActionTable = () => (
         </TableView>
       </View>
     )}
-  </WebBrowserConsumer>
+  </RockAuthedWebBrowser>
 );
 
 const StyledActionTable = styled(({ theme }) => ({

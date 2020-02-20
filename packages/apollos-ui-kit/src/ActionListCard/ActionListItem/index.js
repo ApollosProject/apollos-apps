@@ -2,15 +2,15 @@ import React from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { H6, H4 } from '../../typography';
+import { H5, BodySmall } from '../../typography';
 import styled from '../../styled';
 import TouchableScale from '../../TouchableScale';
 import ConnectedImage, { ImageSourceType } from '../../ConnectedImage';
 import FlexedView from '../../FlexedView';
 
-const StyledH6 = styled(({ theme }) => ({
+const StyledBodySmall = styled(({ theme }) => ({
   color: theme.colors.text.tertiary,
-}))(H6);
+}))(BodySmall);
 
 const TextContainer = styled(({ theme }) => ({
   justifyContent: 'center',
@@ -32,7 +32,7 @@ const Cell = styled(({ theme }) => ({
 const CellImage = styled(({ theme }) => ({
   width: theme.sizing.baseUnit * 4,
   height: theme.sizing.baseUnit * 4,
-  borderRadius: theme.sizing.baseUnit,
+  borderRadius: theme.sizing.baseBorderRadius,
   marginRight: theme.sizing.baseUnit,
 }))(ConnectedImage);
 
@@ -48,10 +48,10 @@ const ActionListItem = ({
     <Cell>
       <CellImage source={imageSource} />
       <TextContainer>
-        {label ? <StyledH6 numberOfLines={1}>{label}</StyledH6> : null}
-        <H4 numberOfLines={2} ellipsizeMode="tail">
-          {title}
-        </H4>
+        {title ? <H5 numberOfLines={1}>{title}</H5> : null}
+        <StyledBodySmall numberOfLines={2} ellipsizeMode="tail">
+          {label}
+        </StyledBodySmall>
       </TextContainer>
     </Cell>
   </TouchableScale>

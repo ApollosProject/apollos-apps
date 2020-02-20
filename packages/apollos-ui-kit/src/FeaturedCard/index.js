@@ -29,8 +29,8 @@ const LikeIcon = withTheme(({ theme, isLiked }) => ({
   iconPadding: theme.sizing.baseUnit * 1.5,
 }))(Icon);
 
-const Image = withTheme(({ theme }) => ({
-  overlayColor: theme.colors.primary,
+const Image = withTheme(({ theme, isLoading }) => ({
+  overlayColor: isLoading ? theme.colors.lightSecondary : theme.colors.primary,
   minAspectRatio: 1,
   maxAspectRatio: 1,
 }))(CardImage);
@@ -141,7 +141,11 @@ const FeaturedCard = withIsLoading(
       }}
     >
       <StyledCard isLoading={isLoading}>
-        <Image source={coverImage} overlayType={'featured'} />
+        <Image
+          source={coverImage}
+          overlayType={'featured'}
+          isLoading={isLoading}
+        />
 
         <Content>
           {renderLabel(summary, LabelComponent, labelText, isLive, theme)}
@@ -149,20 +153,47 @@ const FeaturedCard = withIsLoading(
             ? renderWithSummary(title, actionIcon, summary, hasAction)
             : renderOnlyTitle(title, actionIcon, hasAction)}
         </Content>
-        <LikeIconPositioning>
-          <LikeIcon isLiked={isLiked} />
-        </LikeIconPositioning>
+        {isLiked != null ? (
+          <LikeIconPositioning>
+            <LikeIcon isLiked={isLiked} />
+          </LikeIconPositioning>
+        ) : null}
       </StyledCard>
     </ThemeMixin>
   )
 );
 
-FeaturedCard.propTypes = {
+const loadingPropsTypes = {
+  coverImage: PropTypes.oneOfType([
+    PropTypes.arrayOf(ImageSourceType),
+    ImageSourceType,
+  ]),
+  title: PropTypes.string,
+};
+
+const completedPropTypes = {
   coverImage: PropTypes.oneOfType([
     PropTypes.arrayOf(ImageSourceType),
     ImageSourceType,
   ]).isRequired,
   title: PropTypes.string.isRequired,
+};
+
+FeaturedCard.propTypes = {
+  coverImage: (props, propName, componentName) =>
+    PropTypes.checkPropTypes(
+      props.isLoading ? loadingPropsTypes : completedPropTypes,
+      props,
+      propName,
+      componentName
+    ),
+  title: (props, propName, componentName) =>
+    PropTypes.checkPropTypes(
+      props.isLoading ? loadingPropsTypes : completedPropTypes,
+      props,
+      propName,
+      componentName
+    ),
   actionIcon: PropTypes.string,
   hasAction: PropTypes.bool,
   isLiked: PropTypes.bool,
