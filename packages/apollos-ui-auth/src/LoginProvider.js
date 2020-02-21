@@ -134,6 +134,7 @@ class LoginProvider extends React.Component {
     } = await client.query({
       query: GET_USER_EXISTS,
       variables: { identity },
+      fetchPolicy: 'network-only',
     });
 
     const newUser = userExists === 'NONE';
