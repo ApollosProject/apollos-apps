@@ -98,6 +98,7 @@ class HorizontalContentSeriesFeedConnected extends Component {
           index,
         })}
         onEndReached={() =>
+          !loading &&
           fetchMore({
             query: GET_CONTENT_SERIES,
             variables: { cursor, itemId: this.props.contentId },
