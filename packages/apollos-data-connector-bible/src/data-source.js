@@ -3,6 +3,7 @@ import { RESTDataSource } from 'apollo-datasource-rest';
 import ApollosConfig from '@apollosproject/config';
 
 const { BIBLE_API } = ApollosConfig;
+const ONE_DAY = 60 * 60 * 24;
 
 export default class Scripture extends RESTDataSource {
   resource = 'Scripture';
@@ -23,7 +24,9 @@ export default class Scripture extends RESTDataSource {
     const version = Object.keys(BIBLE_API.BIBLE_ID).find(
       (key) => BIBLE_API.BIBLE_ID[key] === bibleId
     );
-    const { data } = await this.get(`${bibleId}/passages/${parsedID}`);
+    const { data } = await this.get(`${bibleId}/passages/${parsedID}`, null, {
+      cacheOptions: { ttl: ONE_DAY },
+    });
     return { ...data, version };
   }
 
@@ -48,7 +51,13 @@ export default class Scripture extends RESTDataSource {
       [safeVersion] = this.availableVersions;
     }
     const bibleId = BIBLE_API.BIBLE_ID[safeVersion];
-    const scriptures = await this.get(`${bibleId}/search?query=${query}`);
+    const scriptures = await this.get(
+      `${bibleId}/search?query=${query}`,
+      null,
+      {
+        cacheOptions: { ttl: ONE_DAY },
+      }
+    );
     // Bible.api has a history of making unexpected API changes.
     // At one point scriptures had a sub field, "passages"
     // At another point, they returned the passage data on the `data` key directly.

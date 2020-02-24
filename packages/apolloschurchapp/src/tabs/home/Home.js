@@ -6,15 +6,16 @@ import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
 import {
+  ContentCardConnected,
+  fetchMoreResolver,
+} from '@apollosproject/ui-connected';
+import {
   styled,
   FeedView,
   BackgroundView,
   TouchableScale,
   FeaturedCard,
 } from '@apollosproject/ui-kit';
-
-import fetchMoreResolver from '../../utils/fetchMoreResolver';
-import ContentCardConnected from '../../ui/ContentCardConnected';
 
 import Features from './Features';
 import GET_USER_FEED from './getUserFeed';

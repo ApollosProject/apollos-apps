@@ -4,9 +4,9 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import renderer from 'react-test-renderer';
 
+import { GET_CONTENT_CARD } from '@apollosproject/ui-connected';
 import Providers from '../../../Providers';
 import { renderWithApolloData } from '../../../utils/testUtils';
-import GET_CONTENT_CARD from '../../../ui/ContentCardConnected/query';
 
 import GET_CONTENT_CHANNELS from './getContentChannels';
 import DiscoverFeed from '.';

@@ -107,7 +107,7 @@ const Button = enhance(
         {loading ? (
           <InlineActivityIndicator color={accent} />
         ) : (
-          children || <H4 style={style}>{title}</H4>
+          children || <H4>{title}</H4>
         )}
       </ButtonStyles>
     );

@@ -1,6 +1,9 @@
 import React from 'react';
 import { NativeModules } from 'react-native';
 import ApollosConfig from '@apollosproject/config';
+import FRAGMENTS from '@apollosproject/ui-fragments';
+
+ApollosConfig.loadJs({ FRAGMENTS });
 
 // We ran into an issue where SafeAreaView would break jest tests.
 jest.mock(
@@ -54,6 +57,8 @@ jest.mock('Animated', () => {
   };
 });
 
+jest.mock('NativeAnimatedHelper');
+
 jest.mock('react-native-safari-view', () => ({
   isAvailable: jest.fn().mockImplementation(() => Promise.resolve(true)),
   show: jest.fn(),
@@ -85,7 +90,9 @@ jest.mock('@apollosproject/ui-notifications', () => ({
   NotificationsProvider: ({ children }) => children,
 }));
 
-jest.mock('@apollosproject/ui-mapview', () => 'MapView');
+jest.mock('@apollosproject/ui-mapview', () => ({
+  MapViewConnected: 'MapViewConnected',
+}));
 
 jest.mock('@apollosproject/ui-media-player', () => ({
   MediaPlayerSpacer: ({ children }) => children,

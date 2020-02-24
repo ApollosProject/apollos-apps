@@ -3,10 +3,10 @@ import { flatMap } from 'lodash';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
+import { GET_CONTENT_CARD } from '@apollosproject/ui-connected';
 import Providers from '../../Providers';
 
 import { renderWithApolloData } from '../../utils/testUtils';
-import GET_CONTENT_CARD from '../../ui/ContentCardConnected/query';
 
 import Discover from './Discover';
 import GET_CONTENT_CHANNELS from './DiscoverFeed/getContentChannels';

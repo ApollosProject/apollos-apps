@@ -28,7 +28,7 @@ class NotificationsInit extends Component {
       mutate: PropTypes.func,
       addResolvers: PropTypes.func,
       writeData: PropTypes.func,
-      onResetStore: PropTypes.func,
+      onClearStore: PropTypes.func,
     }).isRequired,
   };
 
@@ -39,7 +39,7 @@ class NotificationsInit extends Component {
     const { client } = props;
     client.addResolvers(resolvers);
     client.writeData({ data: defaults });
-    client.onResetStore(() => client.writeData({ data: defaults }));
+    client.onClearStore(() => client.writeData({ data: defaults }));
   }
 
   componentDidMount() {

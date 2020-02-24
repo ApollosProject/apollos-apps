@@ -2,36 +2,43 @@
 import React from 'react';
 import { Formik } from 'formik';
 import PropTypes from 'prop-types';
+import * as Yup from 'yup';
 
 import { LoginConsumer } from '../LoginProvider';
 import ProfileEntry from './ProfileEntry';
 
+const ProfileSchema = Yup.object().shape({
+  firstName: Yup.string().required('Required'),
+  lastName: Yup.string().required('Required'),
+});
+
 const ProfileEntryConnected = ({
-  handleForgotPassword,
   screenProps,
   navigation,
+  profileSchema,
+  Component,
 }) => (
   <LoginConsumer>
-    {({ handleProfileComplete }) => (
+    {({ handleUpdateProfile }) => (
       <Formik
         onSubmit={async ({ firstName, lastName }, { setSubmitting }) => {
           setSubmitting(true);
-          await handleProfileComplete({
+          await handleUpdateProfile({
             userProfile: { FirstName: firstName, LastName: lastName },
           });
           setSubmitting(false);
         }}
+        validationSchema={profileSchema}
       >
         {(formikBag) => (
-          <ProfileEntry
+          <Component
             {...screenProps}
             {...formikBag}
-            errors={formikBag.touched.password && formikBag.errors}
+            disabled={!formikBag.isValid}
+            errors={formikBag.errors}
             isLoading={formikBag.isSubmitting}
             onPressNext={formikBag.handleSubmit}
             onPressBack={navigation.goBack}
-            handleForgotPassword={handleForgotPassword}
-            passwordType="password"
           />
         )}
       </Formik>
@@ -42,12 +49,15 @@ const ProfileEntryConnected = ({
 ProfileEntryConnected.propTypes = {
   navigation: PropTypes.shape({ goBack: PropTypes.func.isRequired }).isRequired,
   emailRequired: PropTypes.bool,
-  handleForgotPassword: PropTypes.func,
   screenProps: PropTypes.shape({}),
+  profileSchema: PropTypes.shape({}),
+  Component: PropTypes.node,
 };
 
 ProfileEntryConnected.defaultProps = {
   emailRequired: true,
+  profileSchema: ProfileSchema,
+  Component: ProfileEntry,
 };
 
 export default ProfileEntryConnected;

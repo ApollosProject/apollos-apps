@@ -41,7 +41,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 0,
     'import/no-named-as-default': 0,
     'import/no-named-as-default-member': 2,
-    'import/prefer-default-export': 2,
+    'import/prefer-default-export': 1,
     'import/order': [
       'error',
       {
