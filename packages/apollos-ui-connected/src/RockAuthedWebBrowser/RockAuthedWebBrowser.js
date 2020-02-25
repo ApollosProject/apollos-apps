@@ -46,7 +46,11 @@ const RockAuthedInAppBrowser = {
           .split(':')[0]
           .toLowerCase()
       );
-      if (isValidUrl && (await InAppBrowser.isAvailable())) {
+      if (
+        !options.externalBrowser &&
+        isValidUrl &&
+        (await InAppBrowser.isAvailable())
+      ) {
         InAppBrowser.open(url.toString(), {
           headers,
           ...options,
