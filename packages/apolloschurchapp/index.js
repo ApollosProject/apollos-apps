@@ -9,7 +9,7 @@ const useStorybook = ApollosConfig.STORYBOOK === 'true';
 const MainApp = require('./src').default;
 
 let App = MainApp;
-if (useStorybook) {
+if (false) {
   App = Storybook;
 }
 
