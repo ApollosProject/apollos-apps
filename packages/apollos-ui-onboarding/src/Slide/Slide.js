@@ -76,6 +76,7 @@ const Slide = memo(
     onPressSecondary,
     primaryNavText,
     primaryNavIcon,
+    primaryButtonProps,
     secondaryNavText,
     isLoading,
     pressPrimaryEventName,
@@ -98,6 +99,7 @@ const Slide = memo(
                 trackEventName={pressPrimaryEventName}
                 onPress={onPressPrimary}
                 loading={isLoading}
+                {...primaryButtonProps}
               >
                 <>
                   <H5>{primaryNavText}</H5>
@@ -135,6 +137,7 @@ Slide.propTypes = {
   primaryNavIcon: PropTypes.string, // optional custom icon name or empty string for no icon at all
   secondaryNavText: PropTypes.string, // text link
   isLoading: PropTypes.bool,
+  primaryButtonProps: PropTypes.shape({}), // can be anything
 };
 
 Slide.defaultProps = {
