@@ -65,4 +65,31 @@ describe('the styled HOC', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('merges nested styles from withTheme and an overide', () => {
+    const StyledView = withTheme(
+      ({ theme }) => ({
+        style: {
+          backgroundColor: theme.colors.primary,
+          color: 'blue',
+        },
+        clickable: false,
+      }),
+      'StyledView'
+    )(View);
+    const overrides = {
+      StyledView: {
+        style: {
+          backgroundColor: 'active-color',
+          borderRadius: 7,
+        },
+        clickable: false,
+      },
+    };
+    const tree = renderer.create(
+      <Providers themeInput={{ overrides }}>
+        <StyledView />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });
