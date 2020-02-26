@@ -108,4 +108,17 @@ describe('The Onboarding Slide component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should add a test ID', () => {
+    const tree = renderer.create(
+      <Providers>
+        <Slide
+          onPressPrimary={jest.fn()}
+          primaryButtonProps={{ testID: 'primary-button' }}
+        >
+          <Text>Boom</Text>
+        </Slide>
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });
