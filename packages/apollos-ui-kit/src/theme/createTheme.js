@@ -60,7 +60,7 @@ const createTheme = ({
 
   // mixin other theme inputs (that might depend on base theme)
   merge(theme, getDynamicThemePart(other, theme));
-  console.count('create theme');
+
   return theme;
 };
 
