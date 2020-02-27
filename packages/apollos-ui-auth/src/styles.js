@@ -19,6 +19,7 @@ import {
   H2,
   H5,
   H6,
+  UIText,
   Radio,
   DateInput,
   PaddedView,
@@ -80,9 +81,8 @@ const TabContainer = styled(
   'ui-auth.TabContainer'
 )(View);
 
-const TabButtonWrapper = styled({ width: '50%' }, 'ui-auth.TabButtonWrapper')(
-  View
-);
+// We need a wrapping `View` because this style doesn't work when applied to a `Touchable` on android.
+const TabButtonWrapper = styled({ flex: 1 }, 'ui-auth.TabButtonWrapper')(View);
 
 const TabButton = styled(
   ({ theme, isActive }) => ({
@@ -92,10 +92,7 @@ const TabButton = styled(
       : theme.colors.background.screen,
     borderRadius: 0,
     borderWidth: 0,
-    color: isActive ? theme.colors.text.primary : theme.colors.text.tertiary,
     flexDirection: 'row',
-    fontSize: theme.helpers.rem(0.75),
-    fontWeight: 'normal',
     height: theme.sizing.baseUnit * 3,
     justifyContent: 'center',
     overflow: 'hidden',
@@ -105,6 +102,10 @@ const TabButton = styled(
   }),
   'ui-auth.TabButton'
 )(View);
+
+const TabButtonText = styled(({ theme, isActive }) => ({
+  color: isActive ? theme.colors.text.primary : theme.colors.text.tertiary,
+}))(UIText);
 
 const TabCard = styled(
   ({ theme }) => ({
@@ -220,6 +221,7 @@ export {
   LegalText,
   TabCard,
   TabButton,
+  TabButtonText,
   TabContainer,
   TabButtonWrapper,
   TabWrapper,

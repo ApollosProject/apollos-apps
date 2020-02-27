@@ -49,7 +49,11 @@ ProfileDetailsEntryConnected.propTypes = {
   navigation: PropTypes.shape({ goBack: PropTypes.func.isRequired }).isRequired,
   emailRequired: PropTypes.bool,
   screenProps: PropTypes.shape({}),
-  Component: PropTypes.node,
+  Component: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.func,
+    PropTypes.object, // type check for React fragments
+  ]),
 };
 
 ProfileDetailsEntryConnected.defaultProps = {

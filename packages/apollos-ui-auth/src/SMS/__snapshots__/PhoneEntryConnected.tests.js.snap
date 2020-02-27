@@ -60,7 +60,9 @@ exports[`ui-auth/SMS/PhoneEntryConnected should render 1`] = `
       }
     }
   >
-    <RCTScrollView>
+    <RCTScrollView
+      keyboardShouldPersistTaps="always"
+    >
       <View>
         <View
           style={
@@ -134,7 +136,7 @@ exports[`ui-auth/SMS/PhoneEntryConnected should render 1`] = `
                 <View
                   style={
                     Object {
-                      "width": "50%",
+                      "flex": 1,
                     }
                   }
                 >
@@ -156,7 +158,6 @@ exports[`ui-auth/SMS/PhoneEntryConnected should render 1`] = `
                     }
                   >
                     <View
-                      alternateLogin={false}
                       isActive={true}
                       style={
                         Object {
@@ -164,10 +165,7 @@ exports[`ui-auth/SMS/PhoneEntryConnected should render 1`] = `
                           "backgroundColor": "#FFFFFF",
                           "borderRadius": 0,
                           "borderWidth": 0,
-                          "color": "#303030",
                           "flexDirection": "row",
-                          "fontSize": 12,
-                          "fontWeight": "normal",
                           "height": 48,
                           "justifyContent": "center",
                           "overflow": "hidden",
@@ -176,7 +174,19 @@ exports[`ui-auth/SMS/PhoneEntryConnected should render 1`] = `
                         }
                       }
                     >
-                      <Text>
+                      <Text
+                        isActive={true}
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "System",
+                            "fontSize": 14,
+                            "fontStyle": null,
+                            "fontWeight": null,
+                            "lineHeight": 21,
+                          }
+                        }
+                      >
                         Phone
                       </Text>
                     </View>
@@ -185,7 +195,7 @@ exports[`ui-auth/SMS/PhoneEntryConnected should render 1`] = `
                 <View
                   style={
                     Object {
-                      "width": "50%",
+                      "flex": 1,
                     }
                   }
                 >
@@ -207,17 +217,13 @@ exports[`ui-auth/SMS/PhoneEntryConnected should render 1`] = `
                     }
                   >
                     <View
-                      alternateLogin={false}
                       style={
                         Object {
                           "alignItems": "center",
                           "backgroundColor": "#F8F7F4",
                           "borderRadius": 0,
                           "borderWidth": 0,
-                          "color": "#A5A5A5",
                           "flexDirection": "row",
-                          "fontSize": 12,
-                          "fontWeight": "normal",
                           "height": 48,
                           "justifyContent": "center",
                           "overflow": "hidden",
@@ -226,7 +232,18 @@ exports[`ui-auth/SMS/PhoneEntryConnected should render 1`] = `
                         }
                       }
                     >
-                      <Text>
+                      <Text
+                        style={
+                          Object {
+                            "color": "#A5A5A5",
+                            "fontFamily": "System",
+                            "fontSize": 14,
+                            "fontStyle": null,
+                            "fontWeight": null,
+                            "lineHeight": 21,
+                          }
+                        }
+                      >
                         Email
                       </Text>
                     </View>
