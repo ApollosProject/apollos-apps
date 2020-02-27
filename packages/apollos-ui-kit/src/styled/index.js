@@ -59,7 +59,15 @@ const styled = (styleInput, fqn) =>
           theme,
         });
 
-        const themeOverrides = fqn ? get(theme, `overrides['${fqn}']`, {}) : {};
+        const themeOverridesValue = fqn
+          ? get(theme, `overrides['${fqn}']`, {})
+          : {};
+
+        const themeOverrides =
+          typeof themeOverridesValue === 'function'
+            ? themeOverridesValue(ownProps)
+            : themeOverridesValue;
+
         const { style: ownPropsStyle = {} } = ownProps;
 
         style = mergeStyles(style, themeOverrides, ownPropsStyle);

@@ -54,4 +54,22 @@ describe('the styled HOC', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+
+  it('allows a theme to supply overrides that depend on props', () => {
+    const StyledView = styled(() => ({ backgroundColor: 'red' }), 'StyledView')(
+      View
+    );
+    const overrides = {
+      StyledView: () => ({ active }) => ({
+        backgroundColor: active ? 'green' : 'blue',
+      }),
+    };
+    const tree = renderer.create(
+      <Providers themeInput={{ overrides }}>
+        <StyledView active />
+        <StyledView />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });
