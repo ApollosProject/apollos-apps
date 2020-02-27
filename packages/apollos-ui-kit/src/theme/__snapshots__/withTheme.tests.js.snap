@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the styled HOC allows a theme to supply override functions 1`] = `
+Array [
+  <View
+    active={true}
+    clickable={true}
+    style={
+      Object {
+        "backgroundColor": "active-color",
+      }
+    }
+  />,
+  <View
+    style={
+      Object {
+        "backgroundColor": "in-active-color",
+      }
+    }
+  />,
+]
+`;
+
+exports[`the styled HOC allows a theme to supply overrides 1`] = `
+<View
+  clickable={true}
+  style={
+    Object {
+      "backgroundColor": "green",
+    }
+  }
+/>
+`;
+
+exports[`the styled HOC merges nested styles from withTheme and an overide 1`] = `
+<View
+  clickable={false}
+  style={
+    Object {
+      "backgroundColor": "active-color",
+      "borderRadius": 7,
+      "color": "blue",
+    }
+  }
+/>
+`;
+
+exports[`the styled HOC provides a theme 1`] = `
+<View
+  clickable={false}
+  style={
+    Object {
+      "backgroundColor": "#00676D",
+    }
+  }
+/>
+`;
