@@ -1,4 +1,10 @@
-import { getContext, compose, mapProps, withContext } from 'recompose';
+import {
+  getContext,
+  compose,
+  mapProps,
+  withContext,
+  withPropsOnChange,
+} from 'recompose';
 import PropTypes from 'prop-types';
 import { merge } from 'lodash';
 
@@ -11,11 +17,10 @@ const withThemeMixin = (themeInput) =>
       theme: PropTypes.shape(THEME_PROPS),
       themeInput: PropTypes.shape(THEME_PROPS),
     }),
-    withContext(
-      {
-        theme: PropTypes.shape(THEME_PROPS),
-        themeInput: PropTypes.shape(THEME_PROPS),
-      },
+    withPropsOnChange(
+      (props, nextProps) =>
+        props.theme !== nextProps.theme ||
+        props.themeInput !== nextProps.themeInput,
       ({ theme, themeInput: originalThemeInput, ownProps }) => {
         let themeInputAsObject = themeInput;
         if (typeof themeInput === 'function') {
@@ -30,6 +35,16 @@ const withThemeMixin = (themeInput) =>
           themeInput: themeInputAsObject,
         };
       }
+    ),
+    withContext(
+      {
+        theme: PropTypes.shape(THEME_PROPS),
+        themeInput: PropTypes.shape(THEME_PROPS),
+      },
+      ({ theme, themeInput: newThemeInput }) => ({
+        theme,
+        themeInput: newThemeInput,
+      })
     ),
     mapProps(({ ownProps }) => ownProps)
   );
