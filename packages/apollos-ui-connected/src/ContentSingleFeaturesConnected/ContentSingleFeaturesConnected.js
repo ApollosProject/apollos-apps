@@ -18,6 +18,7 @@ const ContentSingleFeaturesConnected = ({ Component, contentId, ...props }) => {
     >
       {({ data: { node } = {}, loading, error }) => {
         if (error) return <ErrorCard error={error} />;
+        // TODO: set an optimistic response for this query to return a visually appeallying empty query so we can enable loading states
         if (loading) return null;
 
         const features = get(node, 'features', []);
