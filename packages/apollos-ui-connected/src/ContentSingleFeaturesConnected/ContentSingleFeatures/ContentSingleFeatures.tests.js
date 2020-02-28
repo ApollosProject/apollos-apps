@@ -85,4 +85,17 @@ describe('ContentSingleFeatures', () => {
 
     expect(tree).toMatchSnapshot();
   });
+  it('should take a custom title', async () => {
+    const tree = renderer.create(
+      <Providers>
+        <ContentSingleFeatures
+          contentId={'WeekendContentItem:1'}
+          features={mockFeaturesData}
+          title={'Custom Title'}
+        />
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
 });
