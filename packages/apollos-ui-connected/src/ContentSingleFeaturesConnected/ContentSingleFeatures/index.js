@@ -36,9 +36,9 @@ const ContentSingleFeatures = memo(
 ContentSingleFeatures.propTypes = {
   contentId: PropTypes.string,
   features: PropTypes.shape({
-    id: PropTypes.string().isRequired,
-    order: PropTypes.string(),
-    __typename: PropTypes.string().isRequired,
+    id: PropTypes.string.isRequired,
+    order: PropTypes.string,
+    __typename: PropTypes.string.isRequired,
   }),
   isLoading: PropTypes.bool,
   title: PropTypes.string,

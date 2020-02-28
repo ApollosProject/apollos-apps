@@ -36,7 +36,7 @@ ContentSingleFeaturesConnected.propTypes = {
   contentId: PropTypes.string,
 };
 
-ContentSingleFeatures.defaultProps = {
+ContentSingleFeaturesConnected.defaultProps = {
   Component: ContentSingleFeatures,
 };
 
