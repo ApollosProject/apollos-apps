@@ -6,7 +6,7 @@ import {
   ContentHTMLViewConnected,
   HorizontalContentSeriesFeedConnected,
   MediaControlsConnected,
-  FeaturesConnected,
+  ContentSingleFeaturesConnected,
 } from '@apollosproject/ui-connected';
 import {
   styled,
@@ -46,7 +46,7 @@ const UniversalContentItem = ({ content, loading }) => {
               </H2>
               <ContentHTMLViewConnected contentId={content.id} />
             </PaddedView>
-            <FeaturesConnected contentId={content.id} />
+            <ContentSingleFeaturesConnected contentId={content.id} />
             <HorizontalContentSeriesFeedConnected contentId={content.id} />
           </FlexedScrollView>
         )}

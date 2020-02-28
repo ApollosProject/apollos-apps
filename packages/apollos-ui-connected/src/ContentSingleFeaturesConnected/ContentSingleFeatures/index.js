@@ -17,16 +17,14 @@ const ContentSingleFeatures = memo(
       </PaddedView>
       {features.map(({ __typename, ...feature }) => {
         const Feature = featureMap[__typename];
-        // if (!Feature) return null;
+        if (!Feature) return null;
         return (
-          (
-            <Feature
-              key={feature.id}
-              {...feature}
-              contentId={contentId}
-              isLoading={isLoading}
-            />
-          ) || null
+          <Feature
+            key={feature.id}
+            {...feature}
+            contentId={contentId}
+            isLoading={isLoading}
+          />
         );
       })}
     </PaddedView>
