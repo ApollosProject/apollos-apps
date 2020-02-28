@@ -9,7 +9,7 @@ const FEATURE_MAP = {
   ScriptureFeature,
 };
 
-const ContentSingleFeatures = ({ contentId }) => (
+const ContentSingleFeatures = ({ contentId, isLoading }) => (
   <PaddedView horizontal={false}>
     <PaddedView vertical={false}>
       <H3 padded>Engage</H3>
@@ -22,7 +22,7 @@ const ContentSingleFeatures = ({ contentId }) => (
           key={feature.id}
           {...feature}
           contentId={contentId}
-          isLoading={loading}
+          isLoading={isLoading}
         />
       );
     })}
@@ -31,6 +31,7 @@ const ContentSingleFeatures = ({ contentId }) => (
 
 ContentSingleFeatures.propTypes = {
   contentId: PropTypes.string,
+  isLoading: PropTypes.bool,
 };
 
 export default ContentSingleFeatures;
