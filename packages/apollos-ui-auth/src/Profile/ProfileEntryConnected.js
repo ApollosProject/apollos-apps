@@ -51,7 +51,11 @@ ProfileEntryConnected.propTypes = {
   emailRequired: PropTypes.bool,
   screenProps: PropTypes.shape({}),
   profileSchema: PropTypes.shape({}),
-  Component: PropTypes.node,
+  Component: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.func,
+    PropTypes.object, // type check for React fragments
+  ]),
 };
 
 ProfileEntryConnected.defaultProps = {
