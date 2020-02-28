@@ -98,4 +98,17 @@ describe('ContentSingleFeatures', () => {
 
     expect(tree).toMatchSnapshot();
   });
+  it('should render a loading state', async () => {
+    const tree = renderer.create(
+      <Providers>
+        <ContentSingleFeatures
+          contentId={'WeekendContentItem:1'}
+          features={mockFeaturesData}
+          isLoading
+        />
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
 });

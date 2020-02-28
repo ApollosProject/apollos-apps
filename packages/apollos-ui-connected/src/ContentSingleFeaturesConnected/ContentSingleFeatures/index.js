@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import { H3, PaddedView } from '@apollosproject/ui-kit';
+import { H3, PaddedView, withIsLoading } from '@apollosproject/ui-kit';
 import TextFeature from '../TextFeature';
 import ScriptureFeature from '../ScriptureFeature';
 
@@ -50,4 +50,4 @@ ContentSingleFeatures.defaultProps = {
 
 ContentSingleFeatures.displayName = 'ContentSingleFeatures';
 
-export default ContentSingleFeatures;
+export default withIsLoading(ContentSingleFeatures);
