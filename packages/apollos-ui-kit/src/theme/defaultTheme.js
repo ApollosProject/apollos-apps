@@ -300,6 +300,7 @@ helpers.verticalRhythm = (theme) => (units, customRatio) => {
  *       margin: 5,
  *       padding: 15,
  *     },
+ *     // #protip: you even have access 👇to component props! This applies to style overrides too 💥
  *     PropsComponent: () => ({ theme, isActive }) => ({
  *       fill: isActive ? theme.colors.secondary : theme.colors.primary,
  *     }),
