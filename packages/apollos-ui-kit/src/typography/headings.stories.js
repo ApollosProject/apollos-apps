@@ -11,7 +11,7 @@ const SetLoading = withIsLoading(CenteredView);
 
 storiesOf('ui-kit/typography', module)
   .addDecorator((story) => (
-    <CenteredView style={{ alignItems: 'stretch' }}>{story()}</CenteredView>
+    <CenteredView style={{ alignItems: 'stretch' }}>{story()}</CenteredView> // eslint-disable-line react-native/no-inline-styles
   ))
   .add('headings', () => (
     <View>
