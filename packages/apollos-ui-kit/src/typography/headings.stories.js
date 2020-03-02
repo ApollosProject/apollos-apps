@@ -3,12 +3,16 @@ import { View } from 'react-native';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
 import { withIsLoading } from '../isLoading';
+import CenteredView from '../CenteredView';
 
 import { H1, H2, H3, H4, H5, H6 } from '.';
 
-const SetLoading = withIsLoading(View);
+const SetLoading = withIsLoading(CenteredView);
 
 storiesOf('ui-kit/typography', module)
+  .addDecorator((story) => (
+    <CenteredView style={{ alignItems: 'stretch' }}>{story()}</CenteredView>
+  ))
   .add('headings', () => (
     <View>
       <H1>Heading 1</H1>
