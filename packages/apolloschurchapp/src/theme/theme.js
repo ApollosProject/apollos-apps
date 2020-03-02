@@ -1,3 +1,6 @@
+// import styleOverrides from './styleOverrides';
+// import propOverrides from './propOverrides';
+
 /* Add your custom theme definitions below. Anything that is supported in UI-Kit Theme can be
  overridden and/or customized here! */
 
@@ -34,7 +37,7 @@
  *    const PropsComponent = withTheme(({ theme }) => ({ fill: theme.colors.primary }), 'PropsComponent');
  * ```
  * These componnents can have their styles/props overriden by including the following overrides:
- * {
+ * ```{
  *   overides: {
  *     StyledComponent: {
  *       margin: 5,
@@ -46,7 +49,11 @@
  *     }),
  *   },
  * }
+ * ```
  */
-// const overrides = {};
+// const overrides = {
+//   ...styleOverrides,
+//   ...propOverrides,
+// };
 
 export default {};

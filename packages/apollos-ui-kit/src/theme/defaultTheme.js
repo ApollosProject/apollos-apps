@@ -294,7 +294,7 @@ helpers.verticalRhythm = (theme) => (units, customRatio) => {
  *    const PropsComponent = withTheme(({ theme }) => ({ fill: theme.colors.primary }), 'PropsComponent');
  * ```
  * These componnents can have their styles/props overriden by including the following overrides:
- * {
+ * ```{
  *   overides: {
  *     StyledComponent: {
  *       margin: 5,
@@ -306,5 +306,6 @@ helpers.verticalRhythm = (theme) => (units, customRatio) => {
  *     }),
  *   },
  * }
+ * ```
  */
 export const overrides = {};
