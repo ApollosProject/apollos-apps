@@ -186,8 +186,9 @@ export default class ContentItem extends RockApolloDataSource {
     const tokenizer = new natural.SentenceTokenizer();
     const tokens = tokenizer.tokenize(
       sanitizeHtmlNode(content, {
-        allowedTags: [],
+        allowedTags: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
         allowedAttributes: [],
+        exclusiveFilter: (frame) => frame.tag.match(/^(h1|h2|h3|h4|h5|h6)$/),
       })
     );
     // protects from starting with up to a three digit number and period
