@@ -15,15 +15,12 @@ chokidar
   )
   .on('change', (fullPath) => {
     const pkg = fullPath.split('/')[1].replace('apollos-', '@apollosproject/');
-    exec(
-      `yarn lerna run build --scope apollos-church-api --scope ${pkg}`,
-      (err, stdout, stderr) => {
-        if (err) {
-          console.log(`Error building ${pkg}`);
-          console.error(err);
-        }
-        console.log(stdout);
-        console.log(stderr);
+    exec(`yarn lerna run build --scope ${pkg}`, (err, stdout, stderr) => {
+      if (err) {
+        console.log(`Error building ${pkg}`);
+        console.error(err);
       }
-    );
+      console.log(stdout);
+      console.log(stderr);
+    });
   });
