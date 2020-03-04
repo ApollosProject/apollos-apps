@@ -1,19 +1,9 @@
 import React from 'react';
-import {
-  IntrospectionFragmentMatcher,
-  InMemoryCache,
-} from 'apollo-cache-inmemory';
-import introspectionQueryResultData from 'apolloschurchapp/src/client/fragmentTypes.json';
-
 import { Providers, renderWithApolloData } from '../utils/testUtils';
 
 import GET_CONTENT_ITEM_FEATURES from './getContentItemFeatures';
 
 import ContentSingleFeaturesConnected from './ContentSingleFeaturesConnected';
-
-const fragmentMatcher = new IntrospectionFragmentMatcher({
-  introspectionQueryResultData,
-});
 
 describe('ContentSingleFeaturesConnected', () => {
   it('should render', async () => {
@@ -100,14 +90,7 @@ describe('ContentSingleFeaturesConnected', () => {
       },
     };
     const tree = await renderWithApolloData(
-      <Providers
-        mocks={[mock]}
-        cache={
-          new InMemoryCache({
-            fragmentMatcher,
-          })
-        }
-      >
+      <Providers mocks={[mock]}>
         <ContentSingleFeaturesConnected contentId={'WeekendContentItem:1'} />
       </Providers>
     );
