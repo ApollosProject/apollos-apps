@@ -6,13 +6,7 @@ import { withTheme } from '@apollosproject/ui-kit';
 
 import RockAuthedInAppBrowser from './RockAuthedWebBrowser';
 
-const RockAuthedWebBrowserWithClient = ({
-  children,
-  client,
-  paper,
-  primary,
-  browserOptions,
-}) =>
+const RockAuthedWebBrowserWithClient = ({ children, client, themeColors }) =>
   children((url, iABOptions = {}, authOptions = {}) =>
     RockAuthedInAppBrowser.open(
       url,
@@ -34,7 +28,6 @@ const RockAuthedWebBrowserWithClient = ({
             forceCloseOnRedirection: false,
           },
         }),
-        ...Platform.select(browserOptions),
         ...iABOptions,
       },
       authOptions
@@ -43,13 +36,11 @@ const RockAuthedWebBrowserWithClient = ({
 
 const RockAuthedWebBrowser = withApollo(
   withTheme(
-    ({
-      theme: { colors: { paper, primary } = {}, browserOptions = {} } = {},
-    }) => ({
-      paper,
-      primary,
-      browserOptions,
-    })
+    withTheme(
+    ({ theme: { colors: themeColors = {} } = {} }) => ({
+      themeColors,
+    }),
+    'ui-connected.RockAuthedWebBrowser'
   )(RockAuthedWebBrowserWithClient)
 );
 
