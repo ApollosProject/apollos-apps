@@ -288,16 +288,24 @@ helpers.verticalRhythm = (theme) => (units, customRatio) => {
   return helpers.rem(theme)(verticalRatio * units);
 };
 
-// Overrides allow you to override the styles of any component styled using the `styled` HOC.
-// For example, this component:
-// const SomeComponent = styled({ margin: 10, padding: 20 }, 'SomeComponent');
-// can have its styles overriden by including in overrides:
-// {
-//   overides: {
-//     SomeComponent: {
-//       margin: 5,
-//       padding: 15,
-//     },
-//   },
-// }
+/* Overrides allow you to override the styles of any component styled using the `styled` HOC. You
+ * can also override the props of any component using the `withTheme` HOC. See examples below:
+ * ```const StyledComponent = styled({ margin: 10, padding: 20 }, 'StyledComponent');
+ *    const PropsComponent = withTheme(({ theme }) => ({ fill: theme.colors.primary }), 'PropsComponent');
+ * ```
+ * These componnents can have their styles/props overriden by including the following overrides:
+ * ```{
+ *   overides: {
+ *     StyledComponent: {
+ *       margin: 5,
+ *       padding: 15,
+ *     },
+ *     // #protip: you even have access 👇to component props! This applies to style overrides too 💥
+ *     PropsComponent: () => ({ theme, isActive }) => ({
+ *       fill: isActive ? theme.colors.secondary : theme.colors.primary,
+ *     }),
+ *   },
+ * }
+ * ```
+ */
 export const overrides = {};

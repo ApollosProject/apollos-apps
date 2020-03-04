@@ -25,4 +25,32 @@ const SCRIPTURE_FEATURE_FRAGMENT = gql`
   }
 `;
 
-export { TEXT_FEATURE_FRAGMENT, SCRIPTURE_FEATURE_FRAGMENT };
+const FEATURES_FRAGMENT = gql`
+  fragment FeaturesFragment on Feature {
+    id
+    ...TextFeatureFragment
+    ...ScriptureFeatureFragment
+  }
+`;
+
+const CARD_FEATURES_FRAGMENT = gql`
+  fragment CardFeaturesFragment on ContentItem {
+    ... on ContentSeriesContentItem {
+      features {
+        ...FeaturesFragment
+      }
+    }
+    ... on WeekendContentItem {
+      features {
+        ...FeaturesFragment
+      }
+    }
+  }
+`;
+
+export {
+  TEXT_FEATURE_FRAGMENT,
+  SCRIPTURE_FEATURE_FRAGMENT,
+  CARD_FEATURES_FRAGMENT,
+  FEATURES_FRAGMENT,
+};
