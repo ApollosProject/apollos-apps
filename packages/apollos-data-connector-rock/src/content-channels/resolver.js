@@ -8,9 +8,9 @@ const resolver = {
   ContentChannel: {
     id: ({ id }, args, context, { parentType }) =>
       createGlobalId(id, parentType.name),
-    childContentItemsConnection: ({ id }, args, { dataSources }) =>
+    childContentItemsConnection: async ({ id }, args, { dataSources }) =>
       dataSources.ContentItem.paginate({
-        cursor: dataSources.ContentItem.byContentChannelId(id),
+        cursor: await dataSources.ContentItem.byContentChannelId(id),
         args,
       }),
     iconName: () => 'text', // TODO

@@ -110,11 +110,14 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
     }
 
     const { ContentItem } = this.context.dataSources;
-    const cursor = ContentItem.byContentChannelId(contentChannelId).expand(
-      'ContentChannel'
-    );
+    const cursor = await ContentItem.byContentChannelIdAsync(contentChannelId);
 
-    const items = limit ? await cursor.top(limit).get() : await cursor.get();
+    const items = limit
+      ? await cursor
+          .expand('ContentChannel')
+          .top(limit)
+          .get()
+      : await cursor.expand('ContentChannel').get();
 
     return items.map((item, i) => ({
       id: createGlobalId(`${item.id}${i}`, 'ActionListAction'),
@@ -129,7 +132,8 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
   async sermonChildrenAlgorithm({ limit = null } = {}) {
     const { ContentItem } = this.context.dataSources;
 
-    const sermon = await ContentItem.getSermonFeed().first();
+    const sermonCursor = await ContentItem.getSermonFeedAsync();
+    const sermon = await sermonCursor.first();
     if (!sermon) {
       return [];
     }

@@ -215,10 +215,16 @@ export default class ContentItem extends RockApolloDataSource {
     ].join('/');
   };
 
+  // deprecated
   getSermonFeed() {
+    console.warn('getSermonFeed is deprecated. Use getSermonFeedAsync.');
     return this.byContentChannelId(ROCK_MAPPINGS.SERMON_CHANNEL_ID).andFilter(
-      this.LIVE_CONTENT()
+      this.getLiveContentFilter()
     );
+  }
+
+  async getSermonFeedAsync() {
+    return this.byContentChannelIdAsync(ROCK_MAPPINGS.SERMON_CHANNEL_ID);
   }
 
   async isContentActiveLiveStream({ id }) {
@@ -234,7 +240,8 @@ export default class ContentItem extends RockApolloDataSource {
     // if there is no live stream, then there is no live content. Easy enough!
     if (!isLive) return [];
 
-    const mostRecentSermon = await this.getSermonFeed().first();
+    const sermonCursor = await this.getSermonFeedAsync();
+    const mostRecentSermon = await sermonCursor.first();
     return [mostRecentSermon];
   };
 
@@ -293,7 +300,21 @@ export default class ContentItem extends RockApolloDataSource {
     return image;
   }
 
+  // deprecated
   LIVE_CONTENT = () => {
+    console.warn('LIVE_CONTENT is deprecated. Use getLiveContentFilter.');
+    // get a date in the local timezone of the rock instance.
+    // will create a timezone formatted string and then strip off the offset
+    // should output something like 2019-03-27T12:27:20 which means 12:27pm in New York
+    const date = moment()
+      .tz(ROCK.TIMEZONE)
+      .format()
+      .split(/[-+]\d+:\d+/)[0];
+    const filter = `(((StartDateTime lt datetime'${date}') or (StartDateTime eq null)) and ((ExpireDateTime gt datetime'${date}') or (ExpireDateTime eq null))) and (((Status eq 'Approved') or (ContentChannel/RequiresApproval eq false)))`;
+    return get(ROCK, 'SHOW_INACTIVE_CONTENT', false) ? null : filter;
+  };
+
+  getLiveContentFilter = async () => {
     // get a date in the local timezone of the rock instance.
     // will create a timezone formatted string and then strip off the offset
     // should output something like 2019-03-27T12:27:20 which means 12:27pm in New York
@@ -315,11 +336,12 @@ export default class ContentItem extends RockApolloDataSource {
 
     if (!associations || !associations.length) return this.request().empty();
 
-    return this.getFromIds(
+    const cursor = await this.getFromIdsAsync(
       associations.map(
         ({ childContentChannelItemId }) => childContentChannelItemId
       )
-    ).orderBy('Order');
+    );
+    return cursor.orderBy('Order');
   };
 
   getCursorByChildContentItemId = async (id) => {
@@ -330,9 +352,10 @@ export default class ContentItem extends RockApolloDataSource {
 
     if (!associations || !associations.length) return this.request().empty();
 
-    return this.getFromIds(
+    const cursor = await this.getFromIdsAsync(
       associations.map(({ contentChannelItemId }) => contentChannelItemId)
-    ).orderBy('Order');
+    );
+    return cursor.orderBy('Order');
   };
 
   getCursorBySiblingContentItemId = async (id) => {
@@ -362,7 +385,7 @@ export default class ContentItem extends RockApolloDataSource {
     if (!siblingAssociations || !siblingAssociations.length)
       return this.request().empty();
 
-    return this.getFromIds(
+    return this.getFromIdsAsync(
       siblingAssociations.map(
         ({ childContentChannelItemId }) => childContentChannelItemId
       )
@@ -397,17 +420,26 @@ export default class ContentItem extends RockApolloDataSource {
         .map((obj) => obj.guid)
         .join()}`
     )
-      .andFilter(this.LIVE_CONTENT())
+      .andFilter(await this.getLiveContentFilter())
       .top(first)
       .orderBy('StartDateTime', 'desc');
   };
 
+  // deprecated
   byUserFeed = () =>
+    console.warn('byUserFeed is deprecated. Use byUserFeedAsync.') ||
     this.byActive()
       .orderBy('StartDateTime', 'desc')
       .expand('ContentChannel');
 
+  byUserFeedAsync = async () => {
+    const cursor = await this.byActiveAsync();
+    return cursor.orderBy('StartDateTime', 'desc').expand('ContentChannel');
+  };
+
+  // deprecated
   byActive = () =>
+    console.warn('byActive is deprecated. Use byActiveAsync.') ||
     this.request()
       .filterOneOf(
         ROCK_MAPPINGS.FEED_CONTENT_CHANNEL_IDS.map(
@@ -416,6 +448,16 @@ export default class ContentItem extends RockApolloDataSource {
       )
       .cache({ ttl: 60 })
       .andFilter(this.LIVE_CONTENT());
+
+  byActiveAsync = async () =>
+    this.request()
+      .filterOneOf(
+        ROCK_MAPPINGS.FEED_CONTENT_CHANNEL_IDS.map(
+          (id) => `ContentChannelId eq ${id}`
+        )
+      )
+      .cache({ ttl: 60 })
+      .andFilter(await this.getLiveContentFilter());
 
   byDateAndActive = async ({ datetime }) =>
     this.request()
@@ -428,23 +470,47 @@ export default class ContentItem extends RockApolloDataSource {
       .andFilter(
         `(CreatedDateTime gt datetime'${datetime}') or (ModifiedDateTime gt datetime'${datetime}')`
       )
-      .andFilter(this.LIVE_CONTENT());
+      .andFilter(await this.getLiveContentFilter());
 
+  // deprecated
   byContentChannelId = (id) =>
+    console.warn(
+      'byContentChannelId is deprecated. Use byContentChannelIdAsync.'
+    ) ||
     this.request()
       .filter(`ContentChannelId eq ${id}`)
       .andFilter(this.LIVE_CONTENT())
       .cache({ ttl: 60 })
       .orderBy('StartDateTime', 'desc');
 
+  byContentChannelIdAsync = async (id) =>
+    this.request()
+      .filter(`ContentChannelId eq ${id}`)
+      .andFilter(await this.getLiveContentFilter())
+      .cache({ ttl: 60 })
+      .orderBy('StartDateTime', 'desc');
+
+  // deprecated
   byContentChannelIds = (ids = []) =>
+    console.warn(
+      'byContentChannelIds is deprecated. Use byContentChannelIdsAsync.'
+    ) ||
     this.request()
       .filterOneOf(ids.map((id) => `ContentChannelId eq ${id}`))
       .andFilter(this.LIVE_CONTENT())
       .cache({ ttl: 60 })
       .orderBy('StartDateTime', 'desc');
 
+  byContentChannelIdsAsync = async (ids = []) =>
+    this.request()
+      .filterOneOf(ids.map((id) => `ContentChannelId eq ${id}`))
+      .andFilter(await this.getLiveContentFilter())
+      .cache({ ttl: 60 })
+      .orderBy('StartDateTime', 'desc');
+
+  // deprecated
   getFromIds = (ids = []) => {
+    console.warn('getFromIds is deprecated. Use getFromIdsAsync');
     if (ids.length === 0) return this.request().empty();
     if (get(ApollosConfig, 'ROCK.USE_PLUGIN', false)) {
       // Avoids issue when fetching more than ~10 items
@@ -456,6 +522,20 @@ export default class ContentItem extends RockApolloDataSource {
     return this.request()
       .filterOneOf(ids.map((id) => `Id eq ${id}`))
       .andFilter(this.LIVE_CONTENT());
+  };
+
+  getFromIdsAsync = async (ids = []) => {
+    if (ids.length === 0) return this.request().empty();
+    if (get(ApollosConfig, 'ROCK.USE_PLUGIN', false)) {
+      // Avoids issue when fetching more than ~10 items
+      // Caused by an Odata node limit.
+      return this.request(
+        `Apollos/GetContentChannelItemsByIds?ids=${ids.join(',')}`
+      ).andFilter(await this.getLiveContentFilter());
+    }
+    return this.request()
+      .filterOneOf(ids.map((id) => `Id eq ${id}`))
+      .andFilter(await this.getLiveContentFilter());
   };
 
   getFromId = (id) =>

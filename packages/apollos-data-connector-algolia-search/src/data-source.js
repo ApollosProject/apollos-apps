@@ -108,7 +108,7 @@ query getItem {
 
     while (itemsLeft) {
       const { edges } = await ContentItem.paginate({
-        cursor: ContentItem.byActive(),
+        cursor: await ContentItem.byActiveAsync(),
         args,
       });
 

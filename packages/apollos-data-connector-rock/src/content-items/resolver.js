@@ -106,16 +106,16 @@ export const defaultContentItemResolvers = {
 
 const resolver = {
   Query: {
-    campaigns: (root, args, { dataSources }) =>
+    campaigns: async (root, args, { dataSources }) =>
       dataSources.ContentItem.paginate({
-        cursor: dataSources.ContentItem.byContentChannelIds(
+        cursor: await dataSources.ContentItem.byContentChannelIdsAsync(
           ROCK_MAPPINGS.CAMPAIGN_CHANNEL_IDS
         ),
         args,
       }),
-    userFeed: (root, args, { dataSources }) =>
+    userFeed: async (root, args, { dataSources }) =>
       dataSources.ContentItem.paginate({
-        cursor: dataSources.ContentItem.byUserFeed(),
+        cursor: await dataSources.ContentItem.byUserFeedAsync(),
         args,
       }),
     personaFeed: async (root, args, { dataSources }) => {

@@ -6,11 +6,12 @@ export default {
       dataSources.LiveStream.getLiveStreams(),
   },
   LiveStream: {
-    contentItem: (root, args, { dataSources }) => {
+    contentItem: async (root, args, { dataSources }) => {
       if (root.contentItem) {
         return root.contentItem;
       }
-      return dataSources.ContentItem.getSermonFeed().first();
+      const sermonCursor = await dataSources.ContentItem.getSermonFeedAsync();
+      return sermonCursor.first();
     },
   },
 };
