@@ -4,13 +4,13 @@ import { H3, PaddedView, withIsLoading } from '@apollosproject/ui-kit';
 import TextFeature from '../TextFeature';
 import ScriptureFeature from '../ScriptureFeature';
 
-const featureMap = {
+const FEATURE_MAP = {
   TextFeature,
   ScriptureFeature,
 };
 
 const ContentSingleFeatures = memo(
-  ({ contentId, features, isLoading, title }) => (
+  ({ contentId, features, isLoading, title, featureMap }) => (
     <PaddedView horizontal={false}>
       <PaddedView vertical={false}>
         <H3 padded>{title}</H3>
@@ -38,12 +38,14 @@ ContentSingleFeatures.propTypes = {
     order: PropTypes.string,
     __typename: PropTypes.string.isRequired,
   }),
+  featureMap: PropTypes.shape({}),
   isLoading: PropTypes.bool,
   title: PropTypes.string,
 };
 
 ContentSingleFeatures.defaultProps = {
   title: 'Engage',
+  featureMap: FEATURE_MAP,
 };
 
 ContentSingleFeatures.displayName = 'ContentSingleFeatures';
