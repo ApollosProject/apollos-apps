@@ -31,10 +31,6 @@ jobs:
     - script:
         - travis_wait yarn ci-test
         - travis_wait yarn codecov
-    - stage: Schema Diff
-      script:
-        - cd packages/apollos-church-api
-        - yarn schema-diff
     - stage: Deploy Api
       script: skip
       deploy:
