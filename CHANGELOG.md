@@ -1,3 +1,26 @@
+v1.3.0: March 5, 2020
+
+- Splits Apolloschurchapp and apollos-church-api into separate repo (#1368) (8c6842f3)
+- Adds more structure to theme overrides (#1367) (bfa91e8d)
+- Adds ui-kit documentation (#1369) (d4507c9e)
+- Adds Style overides can be a function of component props (#1359) (3d52b639)
+- Adds background audio playback (#1362) (9658b946)
+- Adds Auth to External Browser (#1353) (1057b88f)
+
+- Moves features to ui-connected (#1345) (e9d0f150)
+- Remove header tags from contnet summary (#1370) (ab597683)
+- Abstracts Device Type ID (#1351) (92ee0678)
+- Updates to version 7 of react-native-webview (#1364) (93fcfc2a)
+- Polishes auth tab (#1342) (34a18b7c)
+- With theme works with overrides (#1360) (74adae91)
+- Reduces create theme calls (#1361) (e3dd611f)
+- Bumps codecov from 3.0.2 to 3.6.5 (#1350) (bcc48cd2)
+- Don't try and run the onEndReached method when loading (#1355) (f00ae032)
+
+- Fixes isLoading story not showing up in storybook (#1366) (73beed48)
+- Fixes being forced through register after you have already registered (#1356) (ad528492)
+
+
 v1.3.0-beta.6: February 19, 2020
 
 - Adds Gender and BirthDate slide to Auth (#1331) (9b2af8c0)
