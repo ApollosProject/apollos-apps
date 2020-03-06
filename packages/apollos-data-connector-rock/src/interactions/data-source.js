@@ -34,4 +34,31 @@ export default class Interactions extends RockApolloDataSource {
 
     return this.get(`/Interactions/${interactionId}`);
   }
+
+  async createNodeInteraction({ nodeId, action }) {
+    const {
+      dataSources: { RockConstants, Auth },
+    } = this.context;
+    const { id, __typename } = parseGlobalId(nodeId);
+
+    const entityType = await RockConstants.contentType(__typename);
+
+    const interactionComponent = await RockConstants.interactionComponent({
+      entityId: id,
+      entityTypeId: entityType.id,
+      entityTypeName: __typename,
+    });
+
+    const currentUser = await Auth.getCurrentPerson();
+    const interactionId = await this.post('/Interactions', {
+      PersonAliasId: currentUser.primaryAliasId,
+      InteractionComponentId: interactionComponent.id,
+      InteractionSessionId: this.context.sessionId,
+      Operation: action,
+      InteractionDateTime: new Date().toJSON(),
+      InteractionSummary: `${action} - ${entityType}/${id}`,
+    });
+
+    return this.get(`/Interactions/${interactionId}`);
+  }
 }

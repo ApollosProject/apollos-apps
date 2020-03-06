@@ -49,7 +49,7 @@ class RockConstants extends RockApolloDataSource {
       model: 'InteractionChannels',
       objectAttributes: {
         Name: channelName,
-        UsesSession: true,
+        UsesSession: false,
         IsActive: true,
         ComponentEntityTypeId: entityTypeId,
         ChannelTypeMediumValueId:
@@ -69,11 +69,34 @@ class RockConstants extends RockApolloDataSource {
     });
   }
 
+  async interactionComponent({ entityId, entityTypeId, entityTypeName }) {
+    const channel = await this.interactionChannel({
+      entityTypeId,
+      entityTypeName,
+    });
+    return this.createOrFindInteractionComponent({
+      componentName: `${
+        ROCK_MAPPINGS.INTERACTIONS.COMPONENT_NAME
+      } - ${entityId}`,
+      channelId: channel.id,
+      entityId: parseInt(entityId, 10),
+    });
+  }
+
   async contentItemInteractionChannel() {
     const { id } = await this.modelType('ContentItem');
     return this.createOrFindInteractionChannel({
       channelName: ROCK_MAPPINGS.INTERACTIONS.CHANNEL_NAME,
       entityTypeId: id,
+    });
+  }
+
+  async interactionChannel({ entityTypeId, entityTypeName }) {
+    return this.createOrFindInteractionChannel({
+      channelName: `${
+        ROCK_MAPPINGS.INTERACTIONS.CHANNEL_NAME
+      } - ${entityTypeName}`,
+      entityTypeId,
     });
   }
 
