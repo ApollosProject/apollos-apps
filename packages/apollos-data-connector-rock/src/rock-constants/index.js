@@ -16,12 +16,13 @@ class RockConstants extends RockApolloDataSource {
       })
       .join(' and ');
 
-    const objects = await this.request(model)
+    const object = await this.request(model)
       .filter(filter)
       .cache({ ttl: 86400 })
-      .get();
-    if (objects.length) {
-      return objects[0];
+      .first();
+
+    if (object) {
+      return object;
     }
     const objectId = await this.post(`/${model}`, objectAttributes);
     const ret = await this.get(`/${model}/${objectId}`);
@@ -110,12 +111,13 @@ class RockConstants extends RockApolloDataSource {
   async modelType(nameInput) {
     const name = this.mapApollosNameToRockName(nameInput);
 
-    const types = await this.request('EntityTypes')
+    const type = await this.request('EntityTypes')
       .filter(`Name eq 'Rock.Model.${name}'`)
       .cache({ ttl: 86400 })
-      .get();
-    if (types.length) {
-      return types[0];
+      .first();
+
+    if (type) {
+      return type;
     }
 
     return null;

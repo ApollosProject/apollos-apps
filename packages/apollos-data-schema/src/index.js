@@ -268,9 +268,12 @@ export const interactionsSchema = gql`
     node: Node
   }
 
-
   extend type Mutation {
-    interactWithNode(action: InteractionAction!, nodeId: ID!, data: [InteractionDataField]): InteractionResult
+    interactWithNode(
+      action: InteractionAction!
+      nodeId: ID!
+      data: [InteractionDataField]
+    ): InteractionResult
   }
 `;
 
