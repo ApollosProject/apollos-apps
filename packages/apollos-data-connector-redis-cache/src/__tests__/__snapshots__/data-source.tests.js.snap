@@ -59,7 +59,6 @@ Cache {
         "updateSentinels": true,
       },
     },
-    "domain": null,
     "offlineQueue": Denque {
       "_capacityMask": 3,
       "_head": 0,
@@ -106,6 +105,7 @@ Cache {
     "retryAttempts": 0,
     "scriptsSet": Object {},
     "status": "connecting",
+    Symbol(kCapture): false,
   },
   "safely": [Function],
 }
