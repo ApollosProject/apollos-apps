@@ -17,10 +17,20 @@ chokidar
     const pkg = fullPath.split('/')[1].replace('apollos-', '@apollosproject/');
     exec(`yarn lerna run build --scope ${pkg}`, (err, stdout, stderr) => {
       if (err) {
-        console.log(`Error building ${pkg}`);
-        console.error(err);
+        console.log(`Error building ${pkg}`, err);
+      } else {
+        console.log(stdout, stderr);
+        console.log(`yarn lerna --scope ${pkg} exec -- yalc push`);
+        exec(
+          `./node_modules/lerna/cli.js --scope @apollosproject/data-connector-twilio exec -- yalc push --changed`,
+          (err, stdout, stderr) => {
+            if (err) {
+              console.log(`Error building ${pkg}`, err);
+            } else {
+              console.log(stdout, stderr);
+            }
+          }
+        );
       }
-      console.log(stdout);
-      console.log(stderr);
     });
   });

@@ -19,8 +19,8 @@
   "scripts": {
     "start": "yarn build:api-watch",
     "build:api-watch": "node ./scripts/watch.js",
-    "link-packages": "lerna exec -- yarn link",
-    "unlink-packages": "lerna exec -- yarn unlink",
+    "link-packages": "lerna exec -- yarn yalc publish",
+    "unlink-packages": "lerna exec -- yarn yalc installations clean",
     "lint": "lerna run lint",
     "test": "lerna run test",
     "ci-test": "lerna run test  --stream -- --maxWorkers=2",
@@ -48,6 +48,8 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.1",
     "babel-jest": "^24.8.0",
+    "chokidar": "^3.0.1",
+    "codecov": "3.6.5",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-prettier": "^2.9.0",
@@ -64,7 +66,6 @@
     "prettier": "^1.14.2",
     "react-apollo": "2.5.5",
     "react-native-storybook-loader": "^1.8.0",
-    "chokidar": "^3.0.1",
-    "codecov": "3.6.5"
+    "yalc": "^1.0.0-pre.35"
   }
 }
