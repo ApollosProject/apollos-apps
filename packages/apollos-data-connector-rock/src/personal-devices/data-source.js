@@ -1,4 +1,5 @@
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
+import ApollosConfig from '@apollosproject/config';
 
 export default class PersonalDevices extends RockApolloDataSource {
   resource = 'PersonalDevices';
@@ -11,16 +12,17 @@ export default class PersonalDevices extends RockApolloDataSource {
     }
     const existing = await this.request()
       .filter(`DeviceRegistrationId eq '${pushId}'`)
-      .get();
+      .first();
 
-    const currentUser = await this.context.dataSources.Auth.getCurrentPerson();
     // if we already have a device, shortcut the function;
-    if (existing.length) return currentUser;
+    const currentUser = await this.context.dataSources.Auth.getCurrentPerson();
+    if (existing) return currentUser;
 
     await this.post('/PersonalDevices', {
       PersonAliasId: currentUser.primaryAliasId,
       DeviceRegistrationId: pushId,
-      PersonalDeviceTypeValueId: 671, // `mobile` device type
+      PersonalDeviceTypeValueId:
+        ApollosConfig.ROCK_MAPPINGS.MOBILE_DEVICE_TYPE_ID,
       NotificationsEnabled: 1,
       IsActive: 1,
     });
