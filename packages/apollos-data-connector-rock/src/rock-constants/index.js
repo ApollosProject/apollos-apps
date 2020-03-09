@@ -59,17 +59,6 @@ class RockConstants extends RockApolloDataSource {
     });
   }
 
-  async contentItemInteractionComponent({ contentItemId, contentName = null }) {
-    const channel = await this.contentItemInteractionChannel();
-    return this.createOrFindInteractionComponent({
-      componentName: `${
-        ROCK_MAPPINGS.INTERACTIONS.COMPONENT_NAME
-      } - ${contentName || contentItemId}`,
-      channelId: channel.id,
-      entityId: parseInt(contentItemId, 10),
-    });
-  }
-
   async interactionComponent({ entityId, entityTypeId, entityTypeName }) {
     const channel = await this.interactionChannel({
       entityTypeId,
@@ -84,20 +73,31 @@ class RockConstants extends RockApolloDataSource {
     });
   }
 
-  async contentItemInteractionChannel() {
-    const { id } = await this.modelType('ContentItem');
-    return this.createOrFindInteractionChannel({
-      channelName: ROCK_MAPPINGS.INTERACTIONS.CHANNEL_NAME,
-      entityTypeId: id,
-    });
-  }
-
   async interactionChannel({ entityTypeId, entityTypeName }) {
     return this.createOrFindInteractionChannel({
       channelName: `${
         ROCK_MAPPINGS.INTERACTIONS.CHANNEL_NAME
       } - ${entityTypeName}`,
       entityTypeId,
+    });
+  }
+
+  // Deprecated. Use the interactionComponent method directly.
+  async contentItemInteractionComponent({ contentItemId }) {
+    const { id, friendlyName } = await this.modelType('ContentItem');
+    return this.interactionComponent({
+      entityId: contentItemId,
+      entityTypeId: id,
+      entityTypeName: friendlyName,
+    });
+  }
+
+  // Deprecated. Use the interactionChannel method directly.
+  async contentItemInteractionChannel() {
+    const { id, friendlyName } = await this.modelType('ContentItem');
+    return this.interactionChannel({
+      entityTypeId: id,
+      entityTypeName: friendlyName,
     });
   }
 

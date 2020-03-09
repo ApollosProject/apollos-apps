@@ -17,7 +17,7 @@ Array [
 exports[`RockConstants creates a content item Channel if it doesn't exist 3`] = `
 Array [
   Array [
-    "InteractionChannels?%24filter=%28Name%20eq%20%27Apollos%20App%27%29%20and%20%28UsesSession%20eq%20false%29%20and%20%28IsActive%20eq%20true%29%20and%20%28ComponentEntityTypeId%20eq%20101%29%20and%20%28ChannelTypeMediumValueId%20eq%20512%29&%24top=1",
+    "InteractionChannels?%24filter=%28Name%20eq%20%27Apollos%20App%20-%20Content%20Channel%20Item%27%29%20and%20%28UsesSession%20eq%20false%29%20and%20%28IsActive%20eq%20true%29%20and%20%28ComponentEntityTypeId%20eq%20101%29%20and%20%28ChannelTypeMediumValueId%20eq%20512%29&%24top=1",
     Object {},
     Object {
       "cacheOptions": Object {
@@ -39,7 +39,7 @@ Array [
       "ChannelTypeMediumValueId": 512,
       "ComponentEntityTypeId": 101,
       "IsActive": true,
-      "Name": "Apollos App",
+      "Name": "Apollos App - Content Channel Item",
       "UsesSession": false,
     },
   ],
@@ -59,7 +59,7 @@ Array [
 exports[`RockConstants creates a content item Component if it doesn't exist 3`] = `
 Array [
   Array [
-    "InteractionChannels?%24filter=%28Name%20eq%20%27Apollos%20App%27%29%20and%20%28UsesSession%20eq%20false%29%20and%20%28IsActive%20eq%20true%29%20and%20%28ComponentEntityTypeId%20eq%20101%29%20and%20%28ChannelTypeMediumValueId%20eq%20512%29&%24top=1",
+    "InteractionChannels?%24filter=%28Name%20eq%20%27Apollos%20App%20-%20Content%20Channel%20Item%27%29%20and%20%28UsesSession%20eq%20false%29%20and%20%28IsActive%20eq%20true%29%20and%20%28ComponentEntityTypeId%20eq%20101%29%20and%20%28ChannelTypeMediumValueId%20eq%20512%29&%24top=1",
     Object {},
     Object {
       "cacheOptions": Object {
@@ -90,7 +90,7 @@ Array [
       "ChannelTypeMediumValueId": 512,
       "ComponentEntityTypeId": 101,
       "IsActive": true,
-      "Name": "Apollos App",
+      "Name": "Apollos App - Content Channel Item",
       "UsesSession": false,
     },
   ],
@@ -186,16 +186,7 @@ Object {
 exports[`RockConstants finds the content item Channel if it exists 2`] = `
 Array [
   Array [
-    "EntityTypes?%24filter=Name%20eq%20%27Rock.Model.ContentChannelItem%27&%24top=1",
-    Object {},
-    Object {
-      "cacheOptions": Object {
-        "ttl": 86400,
-      },
-    },
-  ],
-  Array [
-    "InteractionChannels?%24filter=%28Name%20eq%20%27Apollos%20App%27%29%20and%20%28UsesSession%20eq%20false%29%20and%20%28IsActive%20eq%20true%29%20and%20%28ComponentEntityTypeId%20eq%201%29%20and%20%28ChannelTypeMediumValueId%20eq%20512%29&%24top=1",
+    "InteractionChannels?%24filter=%28Name%20eq%20%27Apollos%20App%20-%20Content%20Channel%20Item%27%29%20and%20%28UsesSession%20eq%20false%29%20and%20%28IsActive%20eq%20true%29%20and%20%28ComponentEntityTypeId%20eq%20101%29%20and%20%28ChannelTypeMediumValueId%20eq%20512%29&%24top=1",
     Object {},
     Object {
       "cacheOptions": Object {
@@ -215,16 +206,7 @@ Object {
 exports[`RockConstants finds the content item Component if it exists 2`] = `
 Array [
   Array [
-    "EntityTypes?%24filter=Name%20eq%20%27Rock.Model.ContentChannelItem%27&%24top=1",
-    Object {},
-    Object {
-      "cacheOptions": Object {
-        "ttl": 86400,
-      },
-    },
-  ],
-  Array [
-    "InteractionChannels?%24filter=%28Name%20eq%20%27Apollos%20App%27%29%20and%20%28UsesSession%20eq%20false%29%20and%20%28IsActive%20eq%20true%29%20and%20%28ComponentEntityTypeId%20eq%201%29%20and%20%28ChannelTypeMediumValueId%20eq%20512%29&%24top=1",
+    "InteractionChannels?%24filter=%28Name%20eq%20%27Apollos%20App%20-%20Content%20Channel%20Item%27%29%20and%20%28UsesSession%20eq%20false%29%20and%20%28IsActive%20eq%20true%29%20and%20%28ComponentEntityTypeId%20eq%20101%29%20and%20%28ChannelTypeMediumValueId%20eq%20512%29&%24top=1",
     Object {},
     Object {
       "cacheOptions": Object {
