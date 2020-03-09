@@ -426,11 +426,11 @@ describe('ContentItemsModel', () => {
     dataSource.context = {
       dataSources: { LiveStream: { getLiveStream: () => ({ isLive: false }) } },
     };
-    dataSource.getSermonFeed = jest.fn();
+    dataSource.getSermonFeedAsync = jest.fn();
 
     const result = await dataSource.isContentActiveLiveStream({ id: '1' });
     expect(result).toBe(false);
-    expect(dataSource.getSermonFeed.mock.calls).toMatchSnapshot();
+    expect(dataSource.getSermonFeedAsync.mock.calls).toMatchSnapshot();
   });
 
   it('isContentActiveLiveStream returns false if the livestream is not the most recent sermon', async () => {
@@ -438,13 +438,13 @@ describe('ContentItemsModel', () => {
     dataSource.context = {
       dataSources: { LiveStream: { getLiveStream: () => ({ isLive: true }) } },
     };
-    dataSource.getSermonFeed = jest.fn(() => ({
+    dataSource.getSermonFeedAsync = jest.fn(() => ({
       first: () => Promise.resolve({ id: '2' }),
     }));
 
     const result = await dataSource.isContentActiveLiveStream({ id: '1' });
     expect(result).toBe(false);
-    expect(dataSource.getSermonFeed.mock.calls).toMatchSnapshot();
+    expect(dataSource.getSermonFeedAsync.mock.calls).toMatchSnapshot();
   });
 
   it('isContentActiveLiveStream returns true if the livestream is the most recent sermon', async () => {
@@ -452,13 +452,13 @@ describe('ContentItemsModel', () => {
     dataSource.context = {
       dataSources: { LiveStream: { getLiveStream: () => ({ isLive: true }) } },
     };
-    dataSource.getSermonFeed = jest.fn(() => ({
+    dataSource.getSermonFeedAsync = jest.fn(() => ({
       first: () => Promise.resolve({ id: '1' }),
     }));
 
     const result = await dataSource.isContentActiveLiveStream({ id: '1' });
     expect(result).toBe(true);
-    expect(dataSource.getSermonFeed.mock.calls).toMatchSnapshot();
+    expect(dataSource.getSermonFeedAsync.mock.calls).toMatchSnapshot();
   });
 
   it('getSermonFeed fetches items from a specific content channel', () => {
@@ -505,14 +505,14 @@ describe('ContentItemsModel', () => {
       },
     };
 
-    dataSource.getSermonFeed = jest.fn(() => ({
+    dataSource.getSermonFeedAsync = jest.fn(() => ({
       first: async () => Promise.resolve([{ id: '1' }]),
     }));
 
     const result = await dataSource.getActiveLiveStreamContent();
 
     expect(result).toMatchSnapshot();
-    expect(dataSource.getSermonFeed.mock.calls).toMatchSnapshot();
+    expect(dataSource.getSermonFeedAsync.mock.calls).toMatchSnapshot();
   });
 
   it("returns an empty array LiveStream isn't live and there is a sermon", async () => {

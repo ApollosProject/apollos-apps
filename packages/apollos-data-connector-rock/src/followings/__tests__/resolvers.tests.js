@@ -26,7 +26,7 @@ class ContentItemDataSource {
   }
 
   // eslint-disable-next-line class-methods-use-this
-  getFromIds(ids) {
+  getFromIdsAsync(ids) {
     return { get: () => ids.map((id) => ({ id })) };
   }
 }

@@ -386,11 +386,12 @@ export default class ContentItem extends RockApolloDataSource {
     if (!siblingAssociations || !siblingAssociations.length)
       return this.request().empty();
 
-    return this.getFromIdsAsync(
+    const cursor = await this.getFromIdsAsync(
       siblingAssociations.map(
         ({ childContentChannelItemId }) => childContentChannelItemId
       )
-    ).orderBy('Order');
+    );
+    return cursor.orderBy('Order');
   };
 
   // Generates feed based on persons dataview membership

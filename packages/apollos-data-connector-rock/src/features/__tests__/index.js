@@ -46,7 +46,7 @@ describe('features', () => {
       }),
     }));
     first = jest.fn(() => Promise.resolve(itemMock));
-    const byContentChannelId = () => ({
+    const byContentChannelIdAsync = () => ({
       expand: () => ({
         get: () => Promise.resolve(itemMock),
         top: () => ({ get: () => Promise.resolve(itemMock) }),
@@ -59,16 +59,16 @@ describe('features', () => {
       }),
       first,
     });
-    const getSermonFeed = () => ({
+    const getSermonFeedAsync = () => ({
       first,
     });
     context = {
       dataSources: {
         ContentItem: {
           byPersonaFeed,
-          byContentChannelId,
+          byContentChannelIdAsync,
           getCursorByParentContentItemId,
-          getSermonFeed,
+          getSermonFeedAsync,
           getCoverImage: () => null,
           resolveType: () => 'UniversalContentItem',
         },
