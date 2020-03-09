@@ -22,6 +22,7 @@ const context = {
     RockConstants: {
       modelType: buildGetMock({ Id: 123 }, ds),
       contentItemInteractionComponent: buildGetMock({ Id: 789 }, ds),
+      interactionComponent: buildGetMock({ Id: 321 }, ds),
     },
     Auth: {
       getCurrentPerson: buildGetMock({ Id: 456, PrimaryAliasId: 456 }, ds),
@@ -34,7 +35,7 @@ describe('Interactions', () => {
     fetch.resetMocks();
   });
 
-  it('creates a new interaction', async () => {
+  it('creates a new content item interaction', async () => {
     const dataSource = new Interactions();
     dataSource.initialize({ context });
     dataSource.get = buildGetMock({ Id: 1 }, ds);
@@ -44,6 +45,22 @@ describe('Interactions', () => {
       itemId: createGlobalId(1, 'UniversalContentItem'),
       operationName: 'Like',
       itemTitle: 'Super Cool Content',
+    });
+    delete dataSource.post.mock.calls[0][1].InteractionDateTime;
+    expect(result).toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+    expect(dataSource.post.mock.calls).toMatchSnapshot();
+  });
+
+  it('creates a new content interaction from a content item', async () => {
+    const dataSource = new Interactions();
+    dataSource.initialize({ context });
+    dataSource.get = buildGetMock({ Id: 1 }, ds);
+    dataSource.post = buildGetMock('1', ds);
+
+    const result = await dataSource.createNodeInteraction({
+      nodeId: createGlobalId(1, 'UniversalContentItem'),
+      action: 'VIEW',
     });
     delete dataSource.post.mock.calls[0][1].InteractionDateTime;
     expect(result).toMatchSnapshot();

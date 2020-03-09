@@ -1,12 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Interactions creates a new interaction 1`] = `
+exports[`Interactions creates a new content interaction from a content item 1`] = `
+Object {
+  "nodeId": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+  "success": true,
+}
+`;
+
+exports[`Interactions creates a new content interaction from a content item 2`] = `Array []`;
+
+exports[`Interactions creates a new content interaction from a content item 3`] = `
+Array [
+  Array [
+    "/Interactions",
+    Object {
+      "InteractionComponentId": 321,
+      "InteractionSessionId": undefined,
+      "InteractionSummary": "VIEW",
+      "Operation": "VIEW",
+      "PersonAliasId": 456,
+    },
+  ],
+]
+`;
+
+exports[`Interactions creates a new content item interaction 1`] = `
 Object {
   "id": 1,
 }
 `;
 
-exports[`Interactions creates a new interaction 2`] = `
+exports[`Interactions creates a new content item interaction 2`] = `
 Array [
   Array [
     "/Interactions/1",
@@ -14,7 +38,7 @@ Array [
 ]
 `;
 
-exports[`Interactions creates a new interaction 3`] = `
+exports[`Interactions creates a new content item interaction 3`] = `
 Array [
   Array [
     "/Interactions",

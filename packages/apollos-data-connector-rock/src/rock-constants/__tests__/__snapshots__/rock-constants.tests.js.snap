@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RockConstants creates a Channel if it doesn't exist 1`] = `
+exports[`RockConstants creates a content item Channel if it doesn't exist 1`] = `
 Object {
   "id": 1,
 }
 `;
 
-exports[`RockConstants creates a Channel if it doesn't exist 2`] = `
+exports[`RockConstants creates a content item Channel if it doesn't exist 2`] = `
 Array [
   Array [
     "ContentItem",
@@ -14,7 +14,7 @@ Array [
 ]
 `;
 
-exports[`RockConstants creates a Channel if it doesn't exist 3`] = `
+exports[`RockConstants creates a content item Channel if it doesn't exist 3`] = `
 Array [
   Array [
     "InteractionChannels?%24filter=%28Name%20eq%20%27Apollos%20App%27%29%20and%20%28UsesSession%20eq%20false%29%20and%20%28IsActive%20eq%20true%29%20and%20%28ComponentEntityTypeId%20eq%20101%29%20and%20%28ChannelTypeMediumValueId%20eq%20512%29&%24top=1",
@@ -31,7 +31,7 @@ Array [
 ]
 `;
 
-exports[`RockConstants creates a Channel if it doesn't exist 4`] = `
+exports[`RockConstants creates a content item Channel if it doesn't exist 4`] = `
 Array [
   Array [
     "/InteractionChannels",
@@ -46,9 +46,9 @@ Array [
 ]
 `;
 
-exports[`RockConstants creates a Component if it doesn't exist 1`] = `Array []`;
+exports[`RockConstants creates a content item Component if it doesn't exist 1`] = `Array []`;
 
-exports[`RockConstants creates a Component if it doesn't exist 2`] = `
+exports[`RockConstants creates a content item Component if it doesn't exist 2`] = `
 Array [
   Array [
     "ContentItem",
@@ -56,7 +56,7 @@ Array [
 ]
 `;
 
-exports[`RockConstants creates a Component if it doesn't exist 3`] = `
+exports[`RockConstants creates a content item Component if it doesn't exist 3`] = `
 Array [
   Array [
     "InteractionChannels?%24filter=%28Name%20eq%20%27Apollos%20App%27%29%20and%20%28UsesSession%20eq%20false%29%20and%20%28IsActive%20eq%20true%29%20and%20%28ComponentEntityTypeId%20eq%20101%29%20and%20%28ChannelTypeMediumValueId%20eq%20512%29&%24top=1",
@@ -82,7 +82,7 @@ Array [
 ]
 `;
 
-exports[`RockConstants creates a Component if it doesn't exist 4`] = `
+exports[`RockConstants creates a content item Component if it doesn't exist 4`] = `
 Array [
   Array [
     "/InteractionChannels",
@@ -177,13 +177,13 @@ Array [
 ]
 `;
 
-exports[`RockConstants finds the Channel if it exists 1`] = `
+exports[`RockConstants finds the content item Channel if it exists 1`] = `
 Object {
   "id": 1,
 }
 `;
 
-exports[`RockConstants finds the Channel if it exists 2`] = `
+exports[`RockConstants finds the content item Channel if it exists 2`] = `
 Array [
   Array [
     "EntityTypes?%24filter=Name%20eq%20%27Rock.Model.ContentChannelItem%27&%24top=1",
@@ -206,13 +206,13 @@ Array [
 ]
 `;
 
-exports[`RockConstants finds the Component if it exists 1`] = `
+exports[`RockConstants finds the content item Component if it exists 1`] = `
 Object {
   "id": 1,
 }
 `;
 
-exports[`RockConstants finds the Component if it exists 2`] = `
+exports[`RockConstants finds the content item Component if it exists 2`] = `
 Array [
   Array [
     "EntityTypes?%24filter=Name%20eq%20%27Rock.Model.ContentChannelItem%27&%24top=1",

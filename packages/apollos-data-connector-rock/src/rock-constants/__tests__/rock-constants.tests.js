@@ -20,7 +20,7 @@ describe('RockConstants', () => {
   beforeEach(() => {
     fetch.resetMocks();
   });
-  it("creates a Channel if it doesn't exist", async () => {
+  it("creates a content item Channel if it doesn't exist", async () => {
     const dataSource = new RockConstants();
     dataSource.modelType = buildGetMock({ id: 101 }, dataSource);
     dataSource.get = buildGetMock([[], { Id: 1 }], dataSource);
@@ -31,7 +31,7 @@ describe('RockConstants', () => {
     expect(dataSource.get.mock.calls).toMatchSnapshot();
     expect(dataSource.post.mock.calls).toMatchSnapshot();
   });
-  it('finds the Channel if it exists', async () => {
+  it('finds the content item Channel if it exists', async () => {
     const dataSource = new RockConstants();
     dataSource.get = buildGetMock([{ Id: 1 }], dataSource);
     dataSource.post = jest.fn();
@@ -40,7 +40,7 @@ describe('RockConstants', () => {
     expect(dataSource.get.mock.calls).toMatchSnapshot();
     expect(dataSource.post.mock.calls.length).toBe(0);
   });
-  it("creates a Component if it doesn't exist", async () => {
+  it("creates a content item Component if it doesn't exist", async () => {
     const dataSource = new RockConstants();
     dataSource.modelType = buildGetMock({ id: 101 }, dataSource);
     dataSource.get = buildGetMock([[], { Id: 1 }], dataSource);
@@ -54,7 +54,7 @@ describe('RockConstants', () => {
     expect(dataSource.get.mock.calls).toMatchSnapshot();
     expect(dataSource.post.mock.calls).toMatchSnapshot();
   });
-  it('finds the Component if it exists', async () => {
+  it('finds the content item Component if it exists', async () => {
     const dataSource = new RockConstants();
     dataSource.get = buildGetMock([{ Id: 1 }], dataSource);
     dataSource.post = jest.fn();
