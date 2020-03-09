@@ -15,12 +15,12 @@ const RockAuthedWebBrowserWithClient = ({ children, client, themeColors }) =>
         ...Platform.select({
           ios: {
             dismissButtonStyle: 'cancel',
-            preferredBarTintColor: paper,
-            preferredControlTintColor: primary,
+            preferredBarTintColor: themeColors.paper,
+            preferredControlTintColor: themeColors.primary,
             readerMode: false,
           },
           android: {
-            toolbarColor: paper,
+            toolbarColor: themeColors.paper,
             enableDefaultShare: true,
             showTitle: true,
             secondaryToolbarColor: 'black',
@@ -36,7 +36,6 @@ const RockAuthedWebBrowserWithClient = ({ children, client, themeColors }) =>
 
 const RockAuthedWebBrowser = withApollo(
   withTheme(
-    withTheme(
     ({ theme: { colors: themeColors = {} } = {} }) => ({
       themeColors,
     }),
