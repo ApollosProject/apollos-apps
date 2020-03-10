@@ -64,8 +64,7 @@ export default class Interactions extends RockApolloDataSource {
       Operation: action,
       InteractionDateTime: new Date().toJSON(),
       InteractionSummary: `${action}`,
-      ForeignGuid: nodeId,
-      ForeignKey: 'ApollosId',
+      ForeignKey: nodeId,
     });
 
     return {
