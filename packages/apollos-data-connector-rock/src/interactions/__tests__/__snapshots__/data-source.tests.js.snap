@@ -44,6 +44,8 @@ Array [
   Array [
     "/Interactions",
     Object {
+      "ForeignGuid": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+      "ForeignKey": "ApollosId",
       "InteractionComponentId": 321,
       "InteractionSessionId": undefined,
       "InteractionSummary": "VIEW",
