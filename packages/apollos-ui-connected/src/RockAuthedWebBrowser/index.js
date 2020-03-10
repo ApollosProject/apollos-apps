@@ -35,10 +35,13 @@ const RockAuthedWebBrowserWithClient = ({ children, client, paper, primary }) =>
   );
 
 const RockAuthedWebBrowser = withApollo(
-  withTheme(({ theme: { colors: { paper, primary } = {} } = {} }) => ({
-    paper,
-    primary,
-  }))(RockAuthedWebBrowserWithClient)
+  withTheme(
+    ({ theme: { colors: { paper, primary } = {} } = {} }) => ({
+      paper,
+      primary,
+    }),
+    'ui-connected.RockAuthedWebBrowser'
+  )(RockAuthedWebBrowserWithClient)
 );
 
 export default RockAuthedWebBrowser;
