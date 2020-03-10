@@ -6,7 +6,7 @@ import { withTheme } from '@apollosproject/ui-kit';
 
 import RockAuthedInAppBrowser from './RockAuthedWebBrowser';
 
-const RockAuthedWebBrowserWithClient = ({ children, client, themeColors }) =>
+const RockAuthedWebBrowserWithClient = ({ children, client, paper, primary }) =>
   children((url, iABOptions = {}, authOptions = {}) =>
     RockAuthedInAppBrowser.open(
       url,
@@ -15,12 +15,12 @@ const RockAuthedWebBrowserWithClient = ({ children, client, themeColors }) =>
         ...Platform.select({
           ios: {
             dismissButtonStyle: 'cancel',
-            preferredBarTintColor: themeColors.paper,
-            preferredControlTintColor: themeColors.primary,
+            preferredBarTintColor: paper,
+            preferredControlTintColor: primary,
             readerMode: false,
           },
           android: {
-            toolbarColor: themeColors.paper,
+            toolbarColor: paper,
             enableDefaultShare: true,
             showTitle: true,
             secondaryToolbarColor: 'black',
@@ -36,8 +36,9 @@ const RockAuthedWebBrowserWithClient = ({ children, client, themeColors }) =>
 
 const RockAuthedWebBrowser = withApollo(
   withTheme(
-    ({ theme: { colors: themeColors = {} } = {} }) => ({
-      themeColors,
+    ({ theme: { colors: { paper, primary } = {} } = {} }) => ({
+      paper,
+      primary,
     }),
     'ui-connected.RockAuthedWebBrowser'
   )(RockAuthedWebBrowserWithClient)
