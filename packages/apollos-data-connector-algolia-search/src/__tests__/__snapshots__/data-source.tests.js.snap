@@ -792,5 +792,3 @@ Array [
   ],
 ]
 `;
-
-exports[`The algolia search dataSource must raise an error if the indexing fails 1`] = `[Error: Indexing error]`;
