@@ -34,4 +34,42 @@ export default class Interactions extends RockApolloDataSource {
 
     return this.get(`/Interactions/${interactionId}`);
   }
+
+  async createNodeInteraction({ nodeId, action }) {
+    const {
+      dataSources: { RockConstants, Auth },
+    } = this.context;
+    const { id, __type } = parseGlobalId(nodeId);
+
+    const entityType = await RockConstants.modelType(__type);
+
+    if (!entityType) {
+      console.error(
+        'nodeId is an invalid (non-rock) entity type. This is not yet supported.'
+      );
+      return { success: false };
+    }
+
+    const interactionComponent = await RockConstants.interactionComponent({
+      entityId: id,
+      entityTypeId: entityType.id,
+      entityTypeName: entityType.friendlyName,
+    });
+
+    const currentUser = await Auth.getCurrentPerson();
+    await this.post('/Interactions', {
+      PersonAliasId: currentUser.primaryAliasId,
+      InteractionComponentId: interactionComponent.id,
+      InteractionSessionId: this.context.sessionId,
+      Operation: action,
+      InteractionDateTime: new Date().toJSON(),
+      InteractionSummary: `${action}`,
+      ForeignKey: nodeId,
+    });
+
+    return {
+      success: true,
+      nodeId,
+    };
+  }
 }

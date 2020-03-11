@@ -17,10 +17,11 @@
     ]
   },
   "scripts": {
-    "start": "yarn build:api-watch",
+    "start": "lerna run build && yarn push-all && yarn build:api-watch",
     "build:api-watch": "node ./scripts/watch.js",
     "link-packages": "lerna exec -- yarn yalc publish",
     "unlink-packages": "lerna exec -- yarn yalc installations clean",
+    "push-all": "lerna exec -- yarn yalc push",
     "lint": "lerna run lint",
     "test": "lerna run test",
     "ci-test": "lerna run test  --stream -- --maxWorkers=2",
