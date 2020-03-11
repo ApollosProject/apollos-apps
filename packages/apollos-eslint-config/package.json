@@ -1,0 +1,26 @@
+{
+  "name": "@apollosproject/eslint-config",
+  "version": "1.3.0",
+  "main": "./index.js",
+  "peerDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-import-resolver-babel-module": "^5.0.0-beta.0",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-graphql": "^3.0.3",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jest": "^21.15.2",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.10.0",
+    "eslint-plugin-react-native": "^3.2.1",
+    "babel-eslint": "10.0.1"    
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"
+}
