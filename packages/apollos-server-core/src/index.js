@@ -89,7 +89,20 @@ export const createContext = (data) => ({ req = {} } = {}) => {
   // You probally should avoid using this.
   try {
     const schema = makeExecutableSchema({
-      typeDefs: [...createSchema(data), `scalar Upload`],
+      typeDefs: [
+        ...createSchema(data),
+        `
+      scalar Upload
+      enum CacheControlScope {
+        PUBLIC
+        PRIVATE
+      }
+      directive @cacheControl(
+        maxAge: Int
+        scope: CacheControlScope
+      ) on FIELD_DEFINITION | OBJECT | INTERFACE
+      `,
+      ],
       resolvers: createResolvers(data),
     });
     context.schema = schema;
