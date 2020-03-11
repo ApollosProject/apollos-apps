@@ -17,10 +17,11 @@
     ]
   },
   "scripts": {
-    "start": "yarn build:api-watch",
+    "start": "lerna run build && yarn push-all && yarn build:api-watch",
     "build:api-watch": "node ./scripts/watch.js",
     "link-packages": "lerna exec -- yarn yalc publish",
     "unlink-packages": "lerna exec -- yarn yalc installations clean",
+    "push-all": "lerna exec -- yarn yalc push",
     "lint": "lerna run lint",
     "test": "lerna run test",
     "ci-test": "lerna run test  --stream -- --maxWorkers=2",
@@ -62,6 +63,7 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.10.0",
     "eslint-plugin-react-native": "^3.2.1",
+    "@apollosproject/eslint-config": "^1.3.0",
     "lerna": "^3.14.0",
     "prettier": "^1.14.2",
     "react-apollo": "2.5.5",

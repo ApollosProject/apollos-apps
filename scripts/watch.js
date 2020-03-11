@@ -22,7 +22,7 @@ chokidar
         console.log(stdout, stderr);
         console.log(`yarn lerna --scope ${pkg} exec -- yalc push`);
         exec(
-          `./node_modules/lerna/cli.js --scope @apollosproject/data-connector-twilio exec -- yalc push --changed`,
+          `./node_modules/lerna/cli.js --scope ${pkg} exec -- yalc push --changed`,
           (err, stdout, stderr) => {
             if (err) {
               console.log(`Error building ${pkg}`, err);
