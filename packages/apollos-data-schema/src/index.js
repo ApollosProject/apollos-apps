@@ -255,7 +255,7 @@ export const interactionsSchema = gql`
 
   enum InteractionAction {
     VIEW
-    COMPETE
+    COMPLETE
   }
 
   input InteractionDataField {
