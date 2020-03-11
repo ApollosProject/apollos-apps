@@ -250,6 +250,33 @@ export const analyticsSchema = gql`
   }
 `;
 
+export const interactionsSchema = gql`
+  scalar InteractionValue
+
+  enum InteractionAction {
+    VIEW
+    COMPLETE
+  }
+
+  input InteractionDataField {
+    field: String!
+    value: InteractionValue
+  }
+
+  type InteractionResult {
+    success: Boolean
+    node: Node
+  }
+
+  extend type Mutation {
+    interactWithNode(
+      action: InteractionAction!
+      nodeId: ID!
+      data: [InteractionDataField]
+    ): InteractionResult
+  }
+`;
+
 export const contentItemSchema = gql`
   interface ContentItem {
     id: ID!

@@ -16,12 +16,13 @@ class RockConstants extends RockApolloDataSource {
       })
       .join(' and ');
 
-    const objects = await this.request(model)
+    const object = await this.request(model)
       .filter(filter)
       .cache({ ttl: 86400 })
-      .get();
-    if (objects.length) {
-      return objects[0];
+      .first();
+
+    if (object) {
+      return object;
     }
     const objectId = await this.post(`/${model}`, objectAttributes);
     const ret = await this.get(`/${model}/${objectId}`);
@@ -49,7 +50,7 @@ class RockConstants extends RockApolloDataSource {
       model: 'InteractionChannels',
       objectAttributes: {
         Name: channelName,
-        UsesSession: true,
+        UsesSession: false,
         IsActive: true,
         ComponentEntityTypeId: entityTypeId,
         ChannelTypeMediumValueId:
@@ -58,22 +59,45 @@ class RockConstants extends RockApolloDataSource {
     });
   }
 
-  async contentItemInteractionComponent({ contentItemId, contentName = null }) {
-    const channel = await this.contentItemInteractionChannel();
+  async interactionComponent({ entityId, entityTypeId, entityTypeName }) {
+    const channel = await this.interactionChannel({
+      entityTypeId,
+      entityTypeName,
+    });
     return this.createOrFindInteractionComponent({
       componentName: `${
         ROCK_MAPPINGS.INTERACTIONS.COMPONENT_NAME
-      } - ${contentName || contentItemId}`,
+      } - ${entityId}`,
       channelId: channel.id,
-      entityId: parseInt(contentItemId, 10),
+      entityId: parseInt(entityId, 10),
     });
   }
 
-  async contentItemInteractionChannel() {
-    const { id } = await this.modelType('ContentItem');
+  async interactionChannel({ entityTypeId, entityTypeName }) {
     return this.createOrFindInteractionChannel({
-      channelName: ROCK_MAPPINGS.INTERACTIONS.CHANNEL_NAME,
+      channelName: `${
+        ROCK_MAPPINGS.INTERACTIONS.CHANNEL_NAME
+      } - ${entityTypeName}`,
+      entityTypeId,
+    });
+  }
+
+  // Deprecated. Use the interactionComponent method directly.
+  async contentItemInteractionComponent({ contentItemId }) {
+    const { id, friendlyName } = await this.modelType('ContentItem');
+    return this.interactionComponent({
+      entityId: contentItemId,
       entityTypeId: id,
+      entityTypeName: friendlyName,
+    });
+  }
+
+  // Deprecated. Use the interactionChannel method directly.
+  async contentItemInteractionChannel() {
+    const { id, friendlyName } = await this.modelType('ContentItem');
+    return this.interactionChannel({
+      entityTypeId: id,
+      entityTypeName: friendlyName,
     });
   }
 
@@ -87,12 +111,13 @@ class RockConstants extends RockApolloDataSource {
   async modelType(nameInput) {
     const name = this.mapApollosNameToRockName(nameInput);
 
-    const types = await this.request('EntityTypes')
+    const type = await this.request('EntityTypes')
       .filter(`Name eq 'Rock.Model.${name}'`)
       .cache({ ttl: 86400 })
-      .get();
-    if (types.length) {
-      return types[0];
+      .first();
+
+    if (type) {
+      return type;
     }
 
     return null;
