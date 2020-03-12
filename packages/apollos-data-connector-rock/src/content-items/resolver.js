@@ -143,6 +143,7 @@ const resolver = {
   },
   ContentSeriesContentItem: {
     ...defaultContentItemResolvers,
+    upNext: (root, args, { dataSources }) => dataSources.ContentItem.getUpNext(root),
   },
   MediaContentItem: {
     ...defaultContentItemResolvers,

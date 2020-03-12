@@ -372,7 +372,7 @@ export const contentItemSchema = gql`
     parentChannel: ContentChannel
     theme: Theme
 
-    scriptures: [Scripture]
+    scripturees: [Scripture]
   }
 
   type ContentSeriesContentItem implements ContentItem & Node {
@@ -395,6 +395,8 @@ export const contentItemSchema = gql`
     parentChannel: ContentChannel
     theme: Theme
 
+    percentComplete: Int
+    upNext: ContentItem
     scriptures: [Scripture]
   }
 
