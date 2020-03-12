@@ -59,7 +59,6 @@ Cache {
         "updateSentinels": true,
       },
     },
-    "domain": null,
     "offlineQueue": Denque {
       "_capacityMask": 3,
       "_head": 0,
