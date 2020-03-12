@@ -24,11 +24,13 @@ Browser.propTypes = {
   modal: PropTypes.bool.isRequired,
 };
 
-export const WITH_USER_COOKIE = gql`
-  query currentUserCookie {
+export const GET_USER_COOKIE = gql`
+  query UserToken {
     currentUser {
       id
-      rockToken
+      rock {
+        authCookie
+      }
     }
   }
 `;
@@ -36,14 +38,14 @@ export const WITH_USER_COOKIE = gql`
 const UserWebView = ({ url, navigation }) => {
   // get the url from the navigation param or default to the url prop;
   const uri = navigation.getParam('url', url);
-  const modal = navigation.getParam('modal', false); // TODO make this dynamic, based on navigationOptions.header
+  const modal = navigation.getParam('modal', false);
   return (
-    <Query query={WITH_USER_COOKIE}>
+    <Query query={GET_USER_COOKIE}>
       {({ data, loading }) => {
         if (loading) {
           return null;
         }
-        const cookie = get(data, 'currentUser.rockToken', '');
+        const cookie = get(data, 'currentUser.rock.authCookie', '');
         return (
           <Browser
             cookie={cookie}
@@ -66,7 +68,7 @@ UserWebView.navigationOptions = ({ navigation, navigationOptions }) => ({
 });
 
 const OpenUserWebView = ({ url, navigation }) =>
-  navigation.navigate('UserWebBrowser', { url });
+  navigation.navigate('UserWebView', { url });
 
 const UserWebViewContext = createContext(OpenUserWebView);
 

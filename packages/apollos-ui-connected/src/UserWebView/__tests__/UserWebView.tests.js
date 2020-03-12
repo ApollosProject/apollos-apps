@@ -1,17 +1,20 @@
 import React from 'react';
 import { renderWithApolloData, Providers } from '../../utils/testUtils';
-import UserWebView, { WITH_USER_COOKIE, OpenUserWebView } from '../index';
+import UserWebView, { GET_USER_COOKIE, OpenUserWebView } from '../index';
 
 const mocks = [
   {
-    request: { query: WITH_USER_COOKIE },
+    request: { query: GET_USER_COOKIE },
     result: {
       data: {
         __typename: 'AuthenticatedUser',
         currentUser: {
           __typename: 'Person',
           id: 'Person:123',
-          rockToken: 'ABC',
+          rock: {
+            __typename: 'RockPersonDetails',
+            authCookie: 'ABC',
+          },
         },
       },
     },
@@ -38,12 +41,10 @@ describe('the UserWebView component', () => {
   });
 });
 describe('the OpenUserWebView', () => {
-  jest.mock('NavigationService');
-  it('navigtes', () => {
+  it('navigates', () => {
     OpenUserWebView({ url: 'fake.com', navigation });
     expect(navigation.navigate).toBeCalledWith('UserWebView', {
       url: 'fake.com',
-      navigation,
     });
   });
 });
