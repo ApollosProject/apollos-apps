@@ -1,6 +1,6 @@
 import React from 'react';
-import { renderWithApolloData, Providers } from '../../utils/testUtils';
-import UserWebView, { GET_USER_COOKIE, OpenUserWebView } from '../index';
+import { renderWithApolloData, Providers } from '../utils/testUtils';
+import RockAuthedWebView, { GET_USER_COOKIE, OpenWebView } from '.';
 
 const mocks = [
   {
@@ -22,11 +22,11 @@ const mocks = [
 ];
 const navigation = { navigate: jest.fn(), getParam: jest.fn() };
 
-describe('the UserWebView component', () => {
+describe('the RockAuthedWebView component', () => {
   it('renders with a user', async () => {
     const tree = await renderWithApolloData(
       <Providers mocks={mocks}>
-        <UserWebView navigation={navigation} />
+        <RockAuthedWebView navigation={navigation} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -34,7 +34,7 @@ describe('the UserWebView component', () => {
   it('renders with modal false', async () => {
     const tree = await renderWithApolloData(
       <Providers mocks={mocks}>
-        <UserWebView modal={false} navigation={navigation} />
+        <RockAuthedWebView modal={false} navigation={navigation} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -42,8 +42,8 @@ describe('the UserWebView component', () => {
 });
 describe('the OpenUserWebView', () => {
   it('navigates', () => {
-    OpenUserWebView({ url: 'fake.com', navigation });
-    expect(navigation.navigate).toBeCalledWith('UserWebView', {
+    OpenWebView({ url: 'fake.com', navigation });
+    expect(navigation.navigate).toBeCalledWith('RockAuthedWebView', {
       url: 'fake.com',
     });
   });

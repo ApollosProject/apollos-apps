@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`the UserWebView component renders with a user 1`] = `
+exports[`the RockAuthedWebView component renders with a user 1`] = `
 <View
   style={
     Array [
@@ -49,7 +49,7 @@ exports[`the UserWebView component renders with a user 1`] = `
 </View>
 `;
 
-exports[`the UserWebView component renders with modal false 1`] = `
+exports[`the RockAuthedWebView component renders with modal false 1`] = `
 <View
   style={
     Array [
