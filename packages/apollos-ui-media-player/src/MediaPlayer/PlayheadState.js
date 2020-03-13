@@ -42,9 +42,7 @@ class ProviderWithoutApollo extends Component {
   }
 
   handleOnLoad = ({ duration }) => {
-    const state = { isLoading: false };
-    if (duration > 0) state.duration = duration;
-    this.setState(state);
+    if (duration > 0) this.setState({ duration, isLoading: false });
     
     this.state.currentTime.setValue(0);
     this.state.playableDuration.setValue(0);
