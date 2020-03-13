@@ -3,6 +3,15 @@ import { extendForEachContentItemType } from './utils';
 
 export const testSchema = gql`
   scalar Upload
+
+  enum CacheControlScope {
+    PUBLIC
+    PRIVATE
+  }
+  directive @cacheControl(
+    maxAge: Int
+    scope: CacheControlScope
+  ) on FIELD_DEFINITION | OBJECT | INTERFACE
 `;
 
 export const authSmsSchema = gql`
