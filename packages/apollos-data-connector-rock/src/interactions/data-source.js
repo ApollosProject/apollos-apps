@@ -35,21 +35,30 @@ export default class Interactions extends RockApolloDataSource {
     return this.get(`/Interactions/${interactionId}`);
   }
 
-  async getNodeInteractionsForCurrentUser({ nodeId, actions = [] }){
+  async getNodeInteractionsForCurrentUser({ nodeId, actions = [] }) {
     let currentUser;
     try {
       currentUser = await this.context.dataSources.Auth.getCurrentPerson();
     } catch (e) {
       return [];
     }
-    if (actions.length){
+    if (actions.length) {
       return this.request()
-        .filterOneOf(actions.map(a => `Operation eq '${a}'`))
-        .andFilter(`(ForeignKey eq '${nodeId}') and (PersonAliasId eq ${currentUser.primaryAliasId})`).get();
+        .filterOneOf(actions.map((a) => `Operation eq '${a}'`))
+        .andFilter(
+          `(ForeignKey eq '${nodeId}') and (PersonAliasId eq ${
+            currentUser.primaryAliasId
+          })`
+        )
+        .get();
     }
     return this.request()
-      .filter(`(ForeignKey eq '${nodeId}') and (PersonAliasId eq ${currentUser.primaryAliasId})`).get();
-
+      .filter(
+        `(ForeignKey eq '${nodeId}') and (PersonAliasId eq ${
+          currentUser.primaryAliasId
+        })`
+      )
+      .get();
   }
 
   async createNodeInteraction({ nodeId, action }) {
