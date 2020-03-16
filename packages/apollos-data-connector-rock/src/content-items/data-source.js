@@ -531,6 +531,7 @@ export default class ContentItem extends RockApolloDataSource {
         if (interaction.length > 0) {
           return item;
         }
+        return null;
       })
     )).filter((item) => item);
     return (itemsWithInteractions.length / childItems.length) * 100;
