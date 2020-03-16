@@ -106,7 +106,7 @@ class HorizontalContentSeriesFeedConnected extends Component {
               const connection = isParent
                 ? 'childContentItemsConnection'
                 : 'siblingContentItemsConnection';
-              const newEdges = get(fetchMoreResult.node, connection, []).edges;
+              const newEdges = get(fetchMoreResult, `node.${connection}.edges`) || []);
 
               return {
                 node: {
