@@ -58,6 +58,11 @@ class HorizontalLikedContentFeed extends Component {
     content: PropTypes.arrayOf(
       PropTypes.any // this component doesn't care about the shape of `node`, just that it exists
     ),
+    Component: PropTypes.node,
+  };
+
+  static defaultProps = {
+    Component: HorizontalContentCardConnected,
   };
 
   loadingStateObject = {
@@ -66,7 +71,7 @@ class HorizontalLikedContentFeed extends Component {
     coverImage: [],
   };
 
-  titleImageItem = ({ item }) => (
+  titleImageItem = (TileComponent) => ({ item }) => (
     <TouchableScale
       onPress={() => {
         this.props.navigation.push('ContentSingle', {
@@ -74,10 +79,7 @@ class HorizontalLikedContentFeed extends Component {
         });
       }}
     >
-      <HorizontalContentCardConnected
-        isLoading={item.isLoading}
-        contentId={item.id}
-      />
+      <TileComponent isLoading={item.isLoading} contentId={item.id} />
     </TouchableScale>
   );
 
@@ -106,7 +108,7 @@ class HorizontalLikedContentFeed extends Component {
         </RowHeader>
         <StyledHorizontalTileFeed
           content={content}
-          renderItem={this.titleImageItem}
+          renderItem={this.titleImageItem(this.props.Component)}
           loadingStateObject={this.loadingStateObject}
           isLoading={isLoading}
         />
