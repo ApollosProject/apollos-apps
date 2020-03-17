@@ -1,10 +1,22 @@
 import React from 'react';
+import gql from 'graphql-tag';
 import { renderWithApolloData, Providers } from '../utils/testUtils';
-import RockAuthedWebView, { GET_USER_COOKIE, OpenWebView } from '.';
+import RockAuthedWebView from '.';
 
 const mocks = [
   {
-    request: { query: GET_USER_COOKIE },
+    request: {
+      query: gql`
+        query UserToken {
+          currentUser {
+            id
+            rock {
+              authCookie
+            }
+          }
+        }
+      `,
+    },
     result: {
       data: {
         __typename: 'AuthenticatedUser',
@@ -38,13 +50,5 @@ describe('the RockAuthedWebView component', () => {
       </Providers>
     );
     expect(tree).toMatchSnapshot();
-  });
-});
-describe('the OpenUserWebView', () => {
-  it('navigates', () => {
-    OpenWebView({ url: 'fake.com', navigation });
-    expect(navigation.navigate).toBeCalledWith('RockAuthedWebView', {
-      url: 'fake.com',
-    });
   });
 });
