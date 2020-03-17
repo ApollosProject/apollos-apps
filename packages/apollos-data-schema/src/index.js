@@ -528,7 +528,7 @@ export const liveSchema = gql`
   extend type Query {
     liveStream: LiveStream
       @deprecated(reason: "Use liveStreams, there may be multiple.")
-    liveStreams: [LiveStream]
+    liveStreams: [LiveStream] @cacheControl(maxAge: 10)
   }
 
   extend type WeekendContentItem {
