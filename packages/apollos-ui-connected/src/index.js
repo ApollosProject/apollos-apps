@@ -35,11 +35,7 @@ export MediaControlsConnected, {
   MediaControls,
 } from './MediaControlsConnected';
 export RockAuthedWebBrowser from './RockAuthedWebBrowser';
-export RockAuthedWebView, {
-  GET_USER_COOKIE,
-  WebViewContext,
-  openWebView,
-} from './RockAuthedWebView';
+export RockAuthedWebView from './RockAuthedWebView';
 export SearchCardConnected from './SearchCardConnected';
 export ShareButtonConnected, {
   GET_SHARE_CONTENT,

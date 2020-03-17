@@ -67,10 +67,4 @@ RockAuthedWebView.navigationOptions = ({ navigation, navigationOptions }) => ({
   header: navigation.getParam('modal', false) ? null : navigationOptions.header,
 });
 
-const openWebView = ({ url, navigation }) =>
-  navigation.navigate('RockAuthedWebView', { url });
-
-const WebViewContext = createContext(openWebView);
-
 export default RockAuthedWebView;
-export { GET_USER_COOKIE, WebViewContext, openWebView };
