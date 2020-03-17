@@ -1,4 +1,5 @@
 import React from 'react';
+import { Text } from 'react-native';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
 import CenteredView from '../CenteredView';
@@ -37,4 +38,9 @@ storiesOf('ui-kit/Chip', module)
       <Chip title="📍💨?" chipList />
       <Chip selected title="¯\_(ツ)_/¯" chipList />
     </ChipList>
+  ))
+  .add('Custom children', () => (
+    <Chip onPress={() => {}}>
+      <Text>Custom children</Text>
+    </Chip>
   ));

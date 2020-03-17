@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 /* touchable native feedback currently is having flex layout issues on react-native android, so we
  * fall back to TouchableOpacity
  */
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 
 import { H6 } from '../typography';
 import Button from '../Button';
@@ -47,6 +47,7 @@ const StyledButton = styled(
 
 const Chip = enhance(
   ({
+    children,
     icon,
     iconStyles = {},
     iconSize,
@@ -62,10 +63,14 @@ const Chip = enhance(
       chipList={chipList}
       {...buttonProps}
     >
-      <>
-        {icon ? <Icon name={icon} style={iconStyles} size={iconSize} /> : null}
-        {title ? <TitleText withIcon={icon}>{title}</TitleText> : null}
-      </>
+      {children || (
+        <>
+          {icon ? (
+            <Icon name={icon} style={iconStyles} size={iconSize} />
+          ) : null}
+          {title ? <TitleText withIcon={icon}>{title}</TitleText> : null}
+        </>
+      )}
     </StyledButton>
   )
 );
