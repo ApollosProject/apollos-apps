@@ -1,7 +1,8 @@
 import { fetch } from 'apollo-server-env';
 import ApollosConfig from '@apollosproject/config';
+import { createGlobalId } from '@apollosproject/server-core';
+import { AuthenticationError } from 'apollo-server';
 import { buildGetMock } from '../../test-utils';
-
 import ContentItemsDataSource from '../data-source';
 
 ApollosConfig.loadJs({
@@ -681,5 +682,89 @@ describe('ContentItemsModel', () => {
 
     expect(image).toMatchSnapshot('Image result');
     expect(getMock.mock.calls).toMatchSnapshot('Get mock calls');
+  });
+  it('gets the next item for a content series, based on past interactions', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = jest.fn(() =>
+      Promise.resolve([{ id: 3 }, { id: 2 }, { id: 1 }])
+    );
+    dataSource.context = {
+      dataSources: {
+        Auth: { getCurrentPerson: () => ({ id: '1' }) },
+        Interactions: {
+          getNodeInteractionsForCurrentUser: jest.fn(() => [{ id: '1' }]),
+        },
+      },
+    };
+    dataSource.resolveType = () => 'UniversalContentItem';
+
+    const result = await dataSource.getUpNext({ id: 'parent-channel-1' });
+
+    expect(result).toEqual(null);
+    expect(dataSource.get).toMatchSnapshot();
+    expect(
+      dataSource.context.dataSources.Interactions
+        .getNodeInteractionsForCurrentUser
+    ).toMatchSnapshot();
+  });
+  it('gets the next item for a content series, based on different past interactions', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = jest.fn(() =>
+      Promise.resolve([{ id: 3 }, { id: 2 }, { id: 1 }])
+    );
+    dataSource.context = {
+      dataSources: {
+        Auth: { getCurrentPerson: () => ({ id: '1' }) },
+        Interactions: {
+          getNodeInteractionsForCurrentUser: jest.fn(({ nodeId }) =>
+            nodeId === createGlobalId(1, 'UniversalContentItem')
+              ? [{ id: '1' }]
+              : []
+          ),
+        },
+      },
+    };
+    dataSource.resolveType = () => 'UniversalContentItem';
+
+    const result = await dataSource.getUpNext({ id: 'parent-channel-1' });
+
+    expect(result).toEqual({ id: 2 });
+    expect(dataSource.get).toMatchSnapshot();
+    expect(
+      dataSource.context.dataSources.Interactions
+        .getNodeInteractionsForCurrentUser
+    ).toMatchSnapshot();
+  });
+  it('returns null when getting the next item based on past interactions without a user', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = jest.fn(() =>
+      Promise.resolve([{ id: 3 }, { id: 2 }, { id: 1 }])
+    );
+    dataSource.context = {
+      dataSources: {
+        Auth: {
+          getCurrentPerson: () => {
+            throw new AuthenticationError();
+          },
+        },
+        Interactions: {
+          getNodeInteractionsForCurrentUser: jest.fn(({ nodeId }) =>
+            nodeId === createGlobalId(1, 'UniversalContentItem')
+              ? [{ id: '1' }]
+              : []
+          ),
+        },
+      },
+    };
+    dataSource.resolveType = () => 'UniversalContentItem';
+
+    const result = await dataSource.getUpNext({ id: 'parent-channel-1' });
+
+    expect(result).toEqual(null);
+    expect(dataSource.get).toMatchSnapshot();
+    expect(
+      dataSource.context.dataSources.Interactions
+        .getNodeInteractionsForCurrentUser
+    ).toMatchSnapshot();
   });
 });
