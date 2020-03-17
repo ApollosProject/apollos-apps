@@ -111,7 +111,7 @@ class HorizontalLikedContentFeed extends Component {
         </RowHeader>
         <StyledHorizontalTileFeed
           content={content}
-          renderItem={this.titleImageItem(this.props.Component)}
+          renderItem={this.titleImageItem}
           loadingStateObject={this.loadingStateObject}
           isLoading={isLoading}
         />
