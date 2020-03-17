@@ -23,12 +23,15 @@ const enhance = compose(
   }))
 );
 
-const TitleText = styled(({ hasNeighbors }) => ({
+const IconView = styled(({ hasTitle }) => ({
+  paddingRight: hasTitle ? 8 : null,
+}))(View);
+
+const TitleText = styled({
   textAlign: 'center',
   alignItems: 'center',
   justifyContent: 'center',
-  paddingLeft: hasNeighbors ? 8 : null,
-}))(H6);
+})(H6);
 
 const StyledButton = styled(
   ({ theme, chipList }) => ({
@@ -56,22 +59,31 @@ const Chip = enhance(
     pill = false,
     chipList = false,
     ...buttonProps
-  }) => (
-    <StyledButton
-      TouchableComponent={TouchableOpacity}
-      pill={pill}
-      chipList={chipList}
-      {...buttonProps}
-    >
-      <>
-        {children}
-        {icon ? <Icon name={icon} style={iconStyles} size={iconSize} /> : null}
-        {title ? (
-          <TitleText hasNeighbors={children || icon}>{title}</TitleText>
-        ) : null}
-      </>
-    </StyledButton>
-  )
+  }) => {
+    // TODO remove deprecated props
+    if (icon)
+      console.warn(
+        'icon prop deprecated. Passing a custom Icon through children is recommended.'
+      );
+    return (
+      <StyledButton
+        TouchableComponent={TouchableOpacity}
+        pill={pill}
+        chipList={chipList}
+        {...buttonProps}
+      >
+        <>
+          {children}
+          {icon ? (
+            <IconView hasTitle={!!title}>
+              <Icon name={icon} style={iconStyles} size={iconSize} />
+            </IconView>
+          ) : null}
+          {title ? <TitleText>{title}</TitleText> : null}
+        </>
+      </StyledButton>
+    );
+  }
 );
 
 Chip.propTypes = {

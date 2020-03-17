@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
 import CenteredView from '../CenteredView';
@@ -47,6 +47,9 @@ storiesOf('ui-kit/Chip', module)
   ))
   .add('Custom icon', () => (
     <Chip onPress={() => {}} title="Custom Icon">
-      <Icon name="live-dot" size={16} fill={'red'} />
+      {/* eslint-disable-next-line */}
+      <View style={{ paddingRight: 8 }}>
+        <Icon name="live-dot" size={16} fill={'red'} />
+      </View>
     </Chip>
   ));
