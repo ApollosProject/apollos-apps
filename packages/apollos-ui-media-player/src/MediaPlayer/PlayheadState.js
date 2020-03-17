@@ -42,7 +42,13 @@ class ProviderWithoutApollo extends Component {
   }
 
   handleOnLoad = ({ duration }) => {
-    this.setState({ duration, isLoading: false });
+    // Only call setState if `duration > 0` to prevent division by zero in other places (`Seeker`, etc.)
+    if (duration > 0) {
+      this.setState({ duration, isLoading: false });
+    } else {
+      this.setState({ isLoading: false });
+    }
+
     this.state.currentTime.setValue(0);
     this.state.playableDuration.setValue(0);
     this.state.seekableDuration.setValue(0);
