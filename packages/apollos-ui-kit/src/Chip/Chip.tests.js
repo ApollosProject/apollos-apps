@@ -25,7 +25,7 @@ describe('The Chip component', () => {
   it('should render a red icon', () => {
     const tree = renderer.create(
       <Providers>
-        <Chip icon="like" iconColor="red" title="Heart!!!" />
+        <Chip icon="like" iconFill="red" title="Heart!!!" />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

@@ -50,39 +50,40 @@ const Chip = enhance(
     icon,
     iconStyles = {},
     iconSize,
-    iconColor,
+    iconFill,
     selected,
     title,
     pill = false,
     chipList = false,
     ...buttonProps
-  }) => (
-    <StyledButton
-      TouchableComponent={TouchableOpacity}
-      pill={pill}
-      chipList={chipList}
-      {...buttonProps}
-    >
-      <>
-        {icon ? (
-          <Icon
-            name={icon}
-            style={iconStyles}
-            size={iconSize}
-            fill={iconColor}
-          />
-        ) : null}
-        {title ? <TitleText withIcon={icon}>{title}</TitleText> : null}
-      </>
-    </StyledButton>
-  )
+  }) =>
+    console.log(iconFill) || (
+      <StyledButton
+        TouchableComponent={TouchableOpacity}
+        pill={pill}
+        chipList={chipList}
+        {...buttonProps}
+      >
+        <>
+          {icon ? (
+            <Icon
+              name={icon}
+              style={iconStyles}
+              size={iconSize}
+              fill={iconFill}
+            />
+          ) : null}
+          {title ? <TitleText withIcon={icon}>{title}</TitleText> : null}
+        </>
+      </StyledButton>
+    )
 );
 
 Chip.propTypes = {
   icon: PropTypes.string,
   iconStyles: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   iconSize: PropTypes.number,
-  iconColor: PropTypes.string,
+  iconFill: PropTypes.string,
   selected: PropTypes.bool,
   title: PropTypes.string,
   pill: PropTypes.bool,
