@@ -1,6 +1,7 @@
 import { fetch } from 'apollo-server-env';
 import ApollosConfig from '@apollosproject/config';
 import { createGlobalId } from '@apollosproject/server-core';
+import { AuthenticationError } from 'apollo-server';
 import { dataSource as Interactions } from '../index';
 import { buildGetMock } from '../../test-utils';
 
@@ -83,5 +84,46 @@ describe('Interactions', () => {
     expect(result).toMatchSnapshot();
     expect(dataSource.get.mock.calls).toMatchSnapshot();
     expect(dataSource.post.mock.calls).toMatchSnapshot();
+  });
+  it('fetches interactions for a logged in user and nodeId', async () => {
+    const dataSource = new Interactions();
+    dataSource.initialize({ context });
+    dataSource.get = buildGetMock([{ Id: 1 }], ds);
+
+    const result = await dataSource.getNodeInteractionsForCurrentUser({
+      nodeId: createGlobalId(1, 'UniversalContentItem'),
+    });
+
+    expect(result).toEqual([{ id: 1 }]);
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+  });
+  it('fetches interactions for a logged in user, nodeId, and actions', async () => {
+    const dataSource = new Interactions();
+    dataSource.initialize({ context });
+    dataSource.get = buildGetMock([{ Id: 1 }], ds);
+
+    const result = await dataSource.getNodeInteractionsForCurrentUser({
+      nodeId: createGlobalId(1, 'UniversalContentItem'),
+      actions: ['READ', 'COMPLETE'],
+    });
+
+    expect(result).toEqual([{ id: 1 }]);
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+  });
+  it('fetches interactions without throwing an error for a logged out user', async () => {
+    const dataSource = new Interactions();
+    dataSource.initialize({ context });
+    dataSource.get = buildGetMock([{ Id: 1 }], ds);
+    dataSource.context.dataSources.Auth.getCurrentPerson = () => {
+      throw new AuthenticationError();
+    };
+
+    const result = await dataSource.getNodeInteractionsForCurrentUser({
+      nodeId: createGlobalId(1, 'UniversalContentItem'),
+      actions: ['READ', 'COMPLETE'],
+    });
+
+    expect(result).toEqual([]);
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 });
