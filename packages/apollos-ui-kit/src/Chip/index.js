@@ -23,11 +23,11 @@ const enhance = compose(
   }))
 );
 
-const TitleText = styled(({ withIcon }) => ({
+const TitleText = styled(({ hasNeighbors }) => ({
   textAlign: 'center',
   alignItems: 'center',
   justifyContent: 'center',
-  paddingLeft: withIcon ? 8 : null,
+  paddingLeft: hasNeighbors ? 8 : null,
 }))(H6);
 
 const StyledButton = styled(
@@ -63,14 +63,13 @@ const Chip = enhance(
       chipList={chipList}
       {...buttonProps}
     >
-      {children || (
-        <>
-          {icon ? (
-            <Icon name={icon} style={iconStyles} size={iconSize} />
-          ) : null}
-          {title ? <TitleText withIcon={icon}>{title}</TitleText> : null}
-        </>
-      )}
+      <>
+        {children}
+        {icon ? <Icon name={icon} style={iconStyles} size={iconSize} /> : null}
+        {title ? (
+          <TitleText hasNeighbors={children || icon}>{title}</TitleText>
+        ) : null}
+      </>
     </StyledButton>
   )
 );
