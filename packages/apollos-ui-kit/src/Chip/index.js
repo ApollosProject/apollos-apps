@@ -50,6 +50,7 @@ const Chip = enhance(
     icon,
     iconStyles = {},
     iconSize,
+    iconColor,
     selected,
     title,
     pill = false,
@@ -63,7 +64,14 @@ const Chip = enhance(
       {...buttonProps}
     >
       <>
-        {icon ? <Icon name={icon} style={iconStyles} size={iconSize} /> : null}
+        {icon ? (
+          <Icon
+            name={icon}
+            style={iconStyles}
+            size={iconSize}
+            fill={iconColor}
+          />
+        ) : null}
         {title ? <TitleText withIcon={icon}>{title}</TitleText> : null}
       </>
     </StyledButton>
@@ -74,6 +82,7 @@ Chip.propTypes = {
   icon: PropTypes.string,
   iconStyles: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   iconSize: PropTypes.number,
+  iconColor: PropTypes.string,
   selected: PropTypes.bool,
   title: PropTypes.string,
   pill: PropTypes.bool,

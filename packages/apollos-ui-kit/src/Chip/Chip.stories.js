@@ -26,6 +26,14 @@ storiesOf('ui-kit/Chip', module)
       />
       <Chip onPress={() => {}} selected title="Easy come" chipList />
       <Chip onPress={() => {}} icon="close" selected title="Easy go" chipList />
+      <Chip
+        onPress={() => {}}
+        icon="close"
+        iconColor="red"
+        selected
+        title="Easy go red"
+        chipList
+      />
       <Chip onPress={() => {}} icon="arrow-up" title="Litte high" chipList />
       <Chip
         onPress={() => {}}

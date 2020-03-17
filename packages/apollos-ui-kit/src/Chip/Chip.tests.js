@@ -22,6 +22,14 @@ describe('The Chip component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render a red icon', () => {
+    const tree = renderer.create(
+      <Providers>
+        <Chip icon="like" iconColor="red" title="Heart!!!" />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should be selected', () => {
     const tree = renderer.create(
       <Providers>
