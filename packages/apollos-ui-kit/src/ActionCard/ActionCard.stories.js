@@ -35,7 +35,7 @@ storiesOf('ui-kit/ActionCard', module)
   .add('action', () => (
     <ActionCard
       action={
-        <Chip icon={'share'} title={'Share'}>
+        <Chip title={'Share'}>
           <Icon name="share" />
         </Chip>
       }
