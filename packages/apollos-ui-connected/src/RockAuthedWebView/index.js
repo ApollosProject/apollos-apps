@@ -48,7 +48,6 @@ const RockAuthedWebView = ({ url, navigation }) => {
         const cookie = get(data, 'currentUser.rock.authCookie', '');
         return (
           <Browser
-            testID="browser"
             cookie={cookie}
             url={uri}
             modal={modal}
