@@ -820,6 +820,7 @@ Array [
 ]
 `;
 
+
 exports[`ContentItemsModel returns null when getting a percentage for a content series without a user 1`] = `[MockFunction]`;
 
 exports[`ContentItemsModel returns null when getting a percentage for a content series without a user 2`] = `[MockFunction]`;

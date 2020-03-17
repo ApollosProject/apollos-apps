@@ -767,6 +767,7 @@ describe('ContentItemsModel', () => {
         .getNodeInteractionsForCurrentUser
     ).toMatchSnapshot();
   });
+
   it('gets a percentage for a content series, based on past interactions', async () => {
     const dataSource = new ContentItemsDataSource();
     dataSource.get = jest.fn(() =>
