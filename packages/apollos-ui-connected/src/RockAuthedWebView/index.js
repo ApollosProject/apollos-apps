@@ -48,6 +48,7 @@ const RockAuthedWebView = ({ url, navigation }) => {
         const cookie = get(data, 'currentUser.rock.authCookie', '');
         return (
           <Browser
+            testID="browser"
             cookie={cookie}
             url={uri}
             modal={modal}
@@ -67,10 +68,10 @@ RockAuthedWebView.navigationOptions = ({ navigation, navigationOptions }) => ({
   header: navigation.getParam('modal', false) ? null : navigationOptions.header,
 });
 
-const OpenWebView = ({ url, navigation }) =>
+const openWebView = ({ url, navigation }) =>
   navigation.navigate('RockAuthedWebView', { url });
 
-const WebViewContext = createContext(OpenWebView);
+const WebViewContext = createContext(openWebView);
 
 export default RockAuthedWebView;
-export { GET_USER_COOKIE, WebViewContext, OpenWebView };
+export { GET_USER_COOKIE, WebViewContext, openWebView };
