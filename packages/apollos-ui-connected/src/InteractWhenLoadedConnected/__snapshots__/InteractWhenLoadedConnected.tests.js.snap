@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The InteractWhenLoadedConnected component should render with loaded=true 1`] = `null`;
+
+exports[`The InteractWhenLoadedConnected component should render with loading=false 1`] = `null`;
