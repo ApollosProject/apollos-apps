@@ -516,7 +516,7 @@ export default class ContentItem extends RockApolloDataSource {
     const childItems = await childItemsCursor.get();
 
     if (childItems.length === 0) {
-      return 0;
+      return 100.0;
     }
 
     const itemsWithInteractions = (await Promise.all(
