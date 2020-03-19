@@ -695,6 +695,28 @@ export const featuresSchema = gql`
     actions: [ActionListAction]
   }
 
+  type CardListItem {
+    id: ID!
+
+    hasAction: Boolean
+    actionIcon: String
+    labelText: String
+    summary: String
+    coverImage: ImageMedia
+
+    relatedNode: Node
+    action: ACTION_FEATURE_ACTION
+  }
+
+  type VerticalCardListFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    title: String
+    subtitle: String
+    cards: [CardListItem]
+  }
+
   type TextFeature implements Feature & Node {
     id: ID!
     order: Int

@@ -17,6 +17,10 @@ export default {
       message: body,
     }),
   },
+  CardListItem: {
+    coverImage: ({ image }) => image,
+    summary: ({ subtitle }) => subtitle,
+  },
   ScriptureFeature: {
     scriptures: (
       { reference, version },
