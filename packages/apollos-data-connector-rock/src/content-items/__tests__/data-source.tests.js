@@ -767,4 +767,117 @@ describe('ContentItemsModel', () => {
         .getNodeInteractionsForCurrentUser
     ).toMatchSnapshot();
   });
+
+  it('gets a percentage for a content series, based on past interactions', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = jest.fn(() =>
+      Promise.resolve([{ id: 3 }, { id: 2 }, { id: 1 }])
+    );
+    dataSource.context = {
+      dataSources: {
+        Auth: { getCurrentPerson: () => ({ id: '1' }) },
+        Interactions: {
+          getNodeInteractionsForCurrentUser: jest.fn(({ nodeId }) =>
+            nodeId === createGlobalId(1, 'UniversalContentItem') ||
+            nodeId === createGlobalId(2, 'UniversalContentItem')
+              ? [{ id: '1' }]
+              : []
+          ),
+        },
+      },
+    };
+    dataSource.resolveType = () => 'UniversalContentItem';
+
+    const result = await dataSource.getPercentComplete({
+      id: 'parent-channel-1',
+    });
+
+    const twoThirdsPercent = (2 / 3) * 100;
+    expect(result).toEqual(twoThirdsPercent);
+    expect(dataSource.get).toMatchSnapshot();
+    expect(
+      dataSource.context.dataSources.Interactions
+        .getNodeInteractionsForCurrentUser
+    ).toMatchSnapshot();
+  });
+  it('gets a percentage for a content series, based on different past interactions', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = jest.fn(() =>
+      Promise.resolve([{ id: 3 }, { id: 2 }, { id: 1 }])
+    );
+    dataSource.context = {
+      dataSources: {
+        Auth: { getCurrentPerson: () => ({ id: '1' }) },
+        Interactions: {
+          getNodeInteractionsForCurrentUser: jest.fn(() => Promise.resolve([])),
+        },
+      },
+    };
+    dataSource.resolveType = () => 'UniversalContentItem';
+
+    const result = await dataSource.getPercentComplete({
+      id: 'parent-channel-1',
+    });
+
+    expect(result).toEqual(0.0);
+    expect(dataSource.get).toMatchSnapshot();
+    expect(
+      dataSource.context.dataSources.Interactions
+        .getNodeInteractionsForCurrentUser
+    ).toMatchSnapshot();
+  });
+  it('gets a percentage for a content series, even if a series has no children', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = jest.fn(() => Promise.resolve([]));
+    dataSource.context = {
+      dataSources: {
+        Auth: { getCurrentPerson: () => ({ id: '1' }) },
+        Interactions: {
+          getNodeInteractionsForCurrentUser: jest.fn(() => Promise.resolve([])),
+        },
+      },
+    };
+    dataSource.resolveType = () => 'UniversalContentItem';
+
+    const result = await dataSource.getPercentComplete({
+      id: 'parent-channel-1',
+    });
+
+    expect(result).toEqual(0);
+    expect(dataSource.get).toMatchSnapshot();
+    expect(
+      dataSource.context.dataSources.Interactions
+        .getNodeInteractionsForCurrentUser
+    ).toMatchSnapshot();
+  });
+  it('returns null when getting a percentage for a content series without a user', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = jest.fn(() =>
+      Promise.resolve([{ id: 3 }, { id: 2 }, { id: 1 }])
+    );
+    dataSource.context = {
+      dataSources: {
+        Auth: {
+          getCurrentPerson: () => {
+            throw new AuthenticationError();
+          },
+        },
+        Interactions: {
+          getNodeInteractionsForCurrentUser: jest.fn(() => Promise.resolve([])),
+        },
+      },
+    };
+    dataSource.resolveType = () => 'UniversalContentItem';
+
+    const result = await dataSource.getPercentComplete({
+      id: 'parent-channel-1',
+    });
+
+    expect(result).toEqual(null);
+    expect(dataSource.get).toMatchSnapshot();
+    expect(
+      dataSource.context.dataSources.Interactions
+        .getNodeInteractionsForCurrentUser
+    ).toMatchSnapshot();
+  });
 });

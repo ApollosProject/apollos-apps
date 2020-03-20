@@ -395,6 +395,7 @@ export const contentItemSchema = gql`
     parentChannel: ContentChannel
     theme: Theme
 
+    percentComplete: Float
     upNext: ContentItem
     scriptures: [Scripture]
   }
