@@ -843,7 +843,7 @@ describe('ContentItemsModel', () => {
       id: 'parent-channel-1',
     });
 
-    expect(result).toEqual(100.0);
+    expect(result).toEqual(0);
     expect(dataSource.get).toMatchSnapshot();
     expect(
       dataSource.context.dataSources.Interactions
