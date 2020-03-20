@@ -13,6 +13,7 @@ export default class Features extends RockApolloDataSource {
     CONTENT_CHANNEL: this.contentChannelAlgorithm.bind(this),
     SERMON_CHILDREN: this.sermonChildrenAlgorithm.bind(this),
     UPCOMING_EVENTS: this.upcomingEventsAlgorithm.bind(this),
+    CAMPAIGN_ITEMS: this.campaignItemsAlgorithm.bind(this),
   };
 
   async createActionListFeature({ algorithms = [], title, subtitle }) {
@@ -65,6 +66,7 @@ export default class Features extends RockApolloDataSource {
     };
   }
 
+  // Gets the first 3 upcoming events
   async upcomingEventsAlgorithm() {
     const { Event } = this.context.dataSources;
 
@@ -83,6 +85,7 @@ export default class Features extends RockApolloDataSource {
     }));
   }
 
+  // Gets the first 3 items for a user, based on their personas.
   async personaFeedAlgorithm() {
     const { ContentItem } = this.context.dataSources;
 
@@ -101,6 +104,7 @@ export default class Features extends RockApolloDataSource {
     }));
   }
 
+  // Gets a configurable amount of content items from a specific content channel.
   async contentChannelAlgorithm({ contentChannelId, limit = null } = {}) {
     if (contentChannelId == null) {
       throw new Error(
@@ -126,6 +130,7 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
     }));
   }
 
+  // Gets a configurable amount of content items that are a child of the most recent sermon.
   async sermonChildrenAlgorithm({ limit = null } = {}) {
     const { ContentItem } = this.context.dataSources;
 
@@ -143,6 +148,41 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
       id: createGlobalId(`${item.id}${i}`, 'ActionListAction'),
       title: item.title,
       subtitle: get(item, 'contentChannel.name'),
+      relatedNode: { ...item, __type: ContentItem.resolveType(item) },
+      image: ContentItem.getCoverImage(item),
+      action: 'READ_CONTENT',
+    }));
+  }
+
+  // Gets a configurable amount of content items from each of the configured campaigns
+  async campaignItemsAlgorithm({ limit = 1 } = {}) {
+    const { ContentItem } = this.context.dataSources;
+
+    const channels = await ContentItem.byContentChannelIds(
+      ApollosConfig.ROCK_MAPPINGS.CAMPAIGN_CHANNEL_IDS
+    ).get();
+
+    const items = flatten(
+      await Promise.all(
+        channels.map(async ({ id, title }) => {
+          const childItemsCursor = await ContentItem.getCursorByParentContentItemId(
+            id
+          );
+
+          const childItems = await childItemsCursor.top(limit).get();
+
+          return childItems.map((item) => ({
+            ...item,
+            channelSubtitle: title,
+          }));
+        })
+      )
+    );
+
+    return items.map((item, i) => ({
+      id: createGlobalId(`${item.id}${i}`, 'ActionListAction'),
+      title: item.title,
+      subtitle: get(item, 'channelSubtitle'),
       relatedNode: { ...item, __type: ContentItem.resolveType(item) },
       image: ContentItem.getCoverImage(item),
       action: 'READ_CONTENT',

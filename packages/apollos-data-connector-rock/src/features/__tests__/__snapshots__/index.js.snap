@@ -17,6 +17,65 @@ Object {
 }
 `;
 
+exports[`features dataSource should create an ActionListFeature from a CAMPAIGN_ITEMS algorithm 1`] = `
+Object {
+  "__typename": "ActionListFeature",
+  "actions": Array [
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "channelSubtitle": "Featured Things",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 1,
+        "title": "first item by content channel id",
+      },
+      "subtitle": "Featured Things",
+      "title": "first item by content channel id",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "channelSubtitle": "Featured Things",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 2,
+        "title": "second item by content channel id",
+      },
+      "subtitle": "Featured Things",
+      "title": "second item by content channel id",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "channelSubtitle": "Featured Things",
+        "contentChannel": null,
+        "id": 3,
+        "title": "third item by content channel id",
+      },
+      "subtitle": "Featured Things",
+      "title": "third item by content channel id",
+    },
+  ],
+  "id": "ActionListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+  "subtitle": "It's featured!",
+  "title": "Test Featured Item",
+}
+`;
+
+exports[`features dataSource should create an ActionListFeature from a CAMPAIGN_ITEMS algorithm 2`] = `Array []`;
+
 exports[`features dataSource should create an ActionListFeature from a CONTENT_CHANNEL algorithm 1`] = `
 Object {
   "__typename": "ActionListFeature",
