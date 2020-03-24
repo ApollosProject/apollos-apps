@@ -121,6 +121,21 @@ describe('features', () => {
       expect(result).toMatchSnapshot();
     });
 
+    it('should create an VerticalCardListFeature from a PERSONA_FEED', async () => {
+      const features = new Features();
+      features.initialize({
+        context,
+      });
+
+      const result = await features.createVerticalCardListFeature({
+        algorithms: ['PERSONA_FEED'],
+        title: 'Test Action List',
+        subtitle: "It's great!",
+      });
+
+      expect(result).toMatchSnapshot();
+    });
+
     it('should create an ActionListFeature from multiple PERSONA_FEED algorithms', async () => {
       const features = new Features();
       features.initialize({
@@ -315,7 +330,7 @@ describe('features', () => {
       expect(result).toMatchSnapshot();
     });
 
-    it.only('should create an ActionListFeature from a CAMPAIGN_ITEMS algorithm', async () => {
+    it('should create an ActionListFeature from a CAMPAIGN_ITEMS algorithm', async () => {
       const features = new Features();
       features.initialize({
         context,
