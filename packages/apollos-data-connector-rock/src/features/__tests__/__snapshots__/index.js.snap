@@ -35,6 +35,7 @@ Object {
         "title": "first item by content channel id",
       },
       "subtitle": "Featured Things",
+      "summary": "summary data",
       "title": "first item by content channel id",
     },
     Object {
@@ -51,6 +52,7 @@ Object {
         "title": "second item by content channel id",
       },
       "subtitle": "Featured Things",
+      "summary": "summary data",
       "title": "second item by content channel id",
     },
     Object {
@@ -65,6 +67,7 @@ Object {
         "title": "third item by content channel id",
       },
       "subtitle": "Featured Things",
+      "summary": "summary data",
       "title": "third item by content channel id",
     },
   ],

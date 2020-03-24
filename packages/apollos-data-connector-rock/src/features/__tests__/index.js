@@ -76,6 +76,7 @@ describe('features', () => {
           getSermonFeed,
           getCoverImage: () => null,
           resolveType: () => 'UniversalContentItem',
+          createSummary: () => 'summary data',
         },
         Scripture: {},
         Event: {
