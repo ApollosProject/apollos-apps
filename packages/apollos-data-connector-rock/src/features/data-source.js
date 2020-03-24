@@ -232,7 +232,6 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
   async getHomeFeedFeatures() {
     return Promise.all(
       get(ApollosConfig, 'HOME_FEATURES', []).map((featureConfig) => {
-        console.log(featureConfig.type);
         switch (featureConfig.type) {
           case 'VerticalCardList':
             return this.createVerticalCardListFeature(featureConfig);
