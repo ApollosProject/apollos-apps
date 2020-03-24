@@ -704,6 +704,7 @@ export const featuresSchema = gql`
     labelText: String
     summary: String
     coverImage: ImageMedia
+    title: String
 
     relatedNode: Node
     action: ACTION_FEATURE_ACTION

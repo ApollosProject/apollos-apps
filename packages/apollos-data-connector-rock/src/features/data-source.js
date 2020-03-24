@@ -17,6 +17,7 @@ export default class Features extends RockApolloDataSource {
   };
 
   async runAlgorithms({ algorithms }) {
+    // We should flatten just in case a single algorithm generates multiple actions
     return flatten(
       await Promise.all(
         algorithms.map(async (algorithm) => {
@@ -32,7 +33,6 @@ export default class Features extends RockApolloDataSource {
 
   async createActionListFeature({ algorithms = [], title, subtitle }) {
     // Generate a list of actions.
-    // We should flatten just in case a single algorithm generates multiple actions
     const actions = await this.runAlgorithms({ algorithms });
     return {
       // The Feature ID is based on all of the action ids, added together.
@@ -52,8 +52,7 @@ export default class Features extends RockApolloDataSource {
   }
 
   async createVerticalCardListFeature({ algorithms = [], title, subtitle }) {
-    // Generate a list of actions.
-    // We should flatten just in case a single algorithm generates multiple actions
+    // Generate a list of cards.
     const cards = await this.runAlgorithms({ algorithms });
     return {
       // The Feature ID is based on all of the action ids, added together.
@@ -67,7 +66,7 @@ export default class Features extends RockApolloDataSource {
       cards,
       title,
       subtitle,
-      // Typanme is required so GQL knows specifically what Feature is being created
+      // Typename is required so GQL knows specifically what Feature is being created
       __typename: 'VerticalCardListFeature',
     };
   }
@@ -107,6 +106,7 @@ export default class Features extends RockApolloDataSource {
       relatedNode: { ...event, __type: 'Event' },
       image: Event.getImage(event),
       action: 'READ_EVENT',
+      summary: '',
     }));
   }
 
@@ -126,6 +126,7 @@ export default class Features extends RockApolloDataSource {
       relatedNode: { ...item, __type: ContentItem.resolveType(item) },
       image: ContentItem.getCoverImage(item),
       action: 'READ_CONTENT',
+      summary: ContentItem.createSummary(item),
     }));
   }
 
@@ -152,6 +153,7 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
       relatedNode: { ...item, __type: ContentItem.resolveType(item) },
       image: ContentItem.getCoverImage(item),
       action: 'READ_CONTENT',
+      summary: ContentItem.createSummary(item),
     }));
   }
 
@@ -176,6 +178,7 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
       relatedNode: { ...item, __type: ContentItem.resolveType(item) },
       image: ContentItem.getCoverImage(item),
       action: 'READ_CONTENT',
+      summary: ContentItem.createSummary(item),
     }));
   }
 
@@ -211,6 +214,7 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
       relatedNode: { ...item, __type: ContentItem.resolveType(item) },
       image: ContentItem.getCoverImage(item),
       action: 'READ_CONTENT',
+      summary: ContentItem.createSummary(item),
     }));
   }
 

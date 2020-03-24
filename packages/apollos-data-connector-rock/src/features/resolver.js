@@ -19,7 +19,6 @@ export default {
   },
   CardListItem: {
     coverImage: ({ image }) => image,
-    summary: ({ subtitle }) => subtitle,
   },
   ScriptureFeature: {
     scriptures: (
