@@ -1,5 +1,5 @@
 // Provider API for WebBrowser that injects theme values and defaults to the web browser:
-import React, { createContext } from 'react';
+import React from 'react';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import { ModalView } from '@apollosproject/ui-kit';
@@ -67,10 +67,4 @@ RockAuthedWebView.navigationOptions = ({ navigation, navigationOptions }) => ({
   header: navigation.getParam('modal', false) ? null : navigationOptions.header,
 });
 
-const OpenWebView = ({ url, navigation }) =>
-  navigation.navigate('RockAuthedWebView', { url });
-
-const WebViewContext = createContext(OpenWebView);
-
 export default RockAuthedWebView;
-export { GET_USER_COOKIE, WebViewContext, OpenWebView };
