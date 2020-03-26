@@ -502,6 +502,41 @@ export default class ContentItem extends RockApolloDataSource {
     return lastItem;
   }
 
+  async getPercentComplete({ id }) {
+    const { Auth, Interactions } = this.context.dataSources;
+
+    // Safely exit if we don't have a current user.
+    try {
+      await Auth.getCurrentPerson();
+    } catch (e) {
+      return null;
+    }
+
+    const childItemsCursor = await this.getCursorByParentContentItemId(id);
+    const childItems = await childItemsCursor.get();
+
+    if (childItems.length === 0) {
+      return 0;
+    }
+
+    const itemsWithInteractions = (await Promise.all(
+      childItems.map(async (item) => {
+        const interaction = await Interactions.getNodeInteractionsForCurrentUser(
+          {
+            nodeId: createGlobalId(item.id, this.resolveType(item)),
+            actions: ['COMPLETE'],
+          }
+        );
+
+        if (interaction.length > 0) {
+          return item;
+        }
+        return null;
+      })
+    )).filter((item) => item);
+    return (itemsWithInteractions.length / childItems.length) * 100;
+  }
+
   getFromId = (id) =>
     this.request()
       .find(id)
