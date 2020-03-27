@@ -17,6 +17,9 @@ export default {
       message: body,
     }),
   },
+  CardListItem: {
+    coverImage: ({ image }) => image,
+  },
   ScriptureFeature: {
     scriptures: (
       { reference, version },
