@@ -43,3 +43,4 @@ export ShareButtonConnected, {
 } from './ShareButtonConnected';
 export UserAvatarConnected, { UserAvatarUpdate } from './UserAvatarConnected';
 export InteractWhenLoadedConnected from './InteractWhenLoadedConnected';
+export UpNextButtonConnected from './UpNextButtonConnected';
