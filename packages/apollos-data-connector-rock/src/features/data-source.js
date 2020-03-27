@@ -71,7 +71,12 @@ export default class Features extends RockApolloDataSource {
     };
   }
 
-  async createHorizontalCardListFeature({ algorithms = [], title, subtitle }) {
+  async createHorizontalCardListFeature({
+    algorithms = [],
+    hyphenatedTitle,
+    title,
+    subtitle,
+  }) {
     // Generate a list of horizontal cards.
     const cards = await this.runAlgorithms({ algorithms });
     return {
@@ -84,6 +89,7 @@ export default class Features extends RockApolloDataSource {
         'HorizontalCardListFeature'
       ),
       cards,
+      hyphenatedTitle,
       title,
       subtitle,
       // Typename is required so GQL knows specifically what Feature is being created
