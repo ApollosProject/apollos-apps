@@ -261,6 +261,8 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
         switch (featureConfig.type) {
           case 'VerticalCardList':
             return this.createVerticalCardListFeature(featureConfig);
+          case 'HorizontalCardList':
+            return this.createHorizontalCardListFeature(featureConfig);
           case 'ActionList':
           default:
             // Action list was the default in 1.3.0 and prior.
