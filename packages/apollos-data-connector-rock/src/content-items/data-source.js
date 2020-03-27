@@ -307,6 +307,11 @@ export default class ContentItem extends RockApolloDataSource {
     return get(ROCK, 'SHOW_INACTIVE_CONTENT', false) ? null : filter;
   };
 
+  DEFAULT_SORT = () => [
+    { field: 'Order', direction: 'asc' },
+    { field: 'StartDateTime', direction: 'asc' },
+  ];
+
   expanded = true;
 
   getCursorByParentContentItemId = async (id) => {
@@ -321,7 +326,7 @@ export default class ContentItem extends RockApolloDataSource {
       associations.map(
         ({ childContentChannelItemId }) => childContentChannelItemId
       )
-    ).orderBy('Order');
+    ).sort(this.DEFAULT_SORT());
   };
 
   getCursorByChildContentItemId = async (id) => {
@@ -334,7 +339,7 @@ export default class ContentItem extends RockApolloDataSource {
 
     return this.getFromIds(
       associations.map(({ contentChannelItemId }) => contentChannelItemId)
-    ).orderBy('Order');
+    ).sort(this.DEFAULT_SORT());
   };
 
   getCursorBySiblingContentItemId = async (id) => {
@@ -368,7 +373,7 @@ export default class ContentItem extends RockApolloDataSource {
       siblingAssociations.map(
         ({ childContentChannelItemId }) => childContentChannelItemId
       )
-    ).orderBy('Order');
+    ).sort(this.DEFAULT_SORT());
   };
 
   // Generates feed based on persons dataview membership
@@ -471,18 +476,17 @@ export default class ContentItem extends RockApolloDataSource {
     }
 
     const childItemsCursor = await this.getCursorByParentContentItemId(id);
-    const childItems = await childItemsCursor
+    const childItemsOldestFirst = await childItemsCursor
       .orderBy()
-      .sort([
-        { field: 'Order', direction: 'desc' },
-        { field: 'StartDateTime', direction: 'desc' },
-      ])
+      .sort(this.DEFAULT_SORT())
       .get();
 
+    const childItems = childItemsOldestFirst.reverse();
     // Returns the item _after_ the most recent item you have interacted with.
+
     let lastItem = null;
     for (let i = 0; i < childItems.length; i += 1) {
-      const item = childItems[i];
+      const item = childItems.reverse()[i];
       // This implementation is extremly niave.
       // The non niave version of this implementation, however, has an extremly likelyhood to breakdown
       // and throw errors when working with more than 25 items. Further solutions will need to be done

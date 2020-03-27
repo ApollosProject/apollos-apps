@@ -33,7 +33,6 @@ const Icon = enhance(
   ({ name, size, iconInput, isLoading = false, ...otherProps }) => {
     const Icons = { ...uikitIcons, ...iconInput };
     const IconComponent = Icons[pascalCase(name)];
-
     return (
       <Placeholder.Media size={size} hasRadius onReady={!isLoading}>
         <IconComponent size={size} {...otherProps} />
