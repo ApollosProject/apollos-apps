@@ -1,18 +1,15 @@
 /* eslint-disable prefer-template */
 
 import { get } from 'lodash';
-import Hypher from 'hypher';
-import english from 'hyphenation.en-us';
 import {
   createGlobalId,
   withEdgePagination,
 } from '@apollosproject/server-core';
-
 import ApollosConfig from '@apollosproject/config';
+
 import sanitizeHtml from '../sanitize-html';
 
 const { ROCK_MAPPINGS } = ApollosConfig;
-const hypher = new Hypher(english);
 
 export const defaultContentItemResolvers = {
   id: ({ id }, args, context, { parentType }) =>
@@ -25,7 +22,9 @@ export const defaultContentItemResolvers = {
     }),
 
   title: ({ title }, { hyphenated }, { dataSources }) =>
-    hyphenated ? dataSources.ContentItem.createHyphenatedString({ title }) : title,
+    hyphenated
+      ? dataSources.ContentItem.createHyphenatedString({ title })
+      : title,
 
   parentChannel: (
     { contentChannel, contentChannelId },
