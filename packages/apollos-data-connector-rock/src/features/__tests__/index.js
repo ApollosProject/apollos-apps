@@ -136,6 +136,21 @@ describe('features', () => {
       expect(result).toMatchSnapshot();
     });
 
+    it('should create an HorizontalCardListFeature from a PERSONA_FEED', async () => {
+      const features = new Features();
+      features.initialize({
+        context,
+      });
+
+      const result = await features.createHorizontalCardListFeature({
+        algorithms: ['PERSONA_FEED'],
+        title: 'Test Horizontal List of Cards',
+        subtitle: 'Boom',
+      });
+
+      expect(result).toMatchSnapshot();
+    });
+
     it('should create an ActionListFeature from multiple PERSONA_FEED algorithms', async () => {
       const features = new Features();
       features.initialize({
