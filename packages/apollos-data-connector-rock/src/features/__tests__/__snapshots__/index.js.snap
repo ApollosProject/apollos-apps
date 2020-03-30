@@ -35,6 +35,7 @@ Object {
         "title": "first item by content channel id",
       },
       "subtitle": "Featured Things",
+      "summary": "summary data",
       "title": "first item by content channel id",
     },
     Object {
@@ -51,6 +52,7 @@ Object {
         "title": "second item by content channel id",
       },
       "subtitle": "Featured Things",
+      "summary": "summary data",
       "title": "second item by content channel id",
     },
     Object {
@@ -65,6 +67,7 @@ Object {
         "title": "third item by content channel id",
       },
       "subtitle": "Featured Things",
+      "summary": "summary data",
       "title": "third item by content channel id",
     },
   ],
@@ -93,6 +96,7 @@ Object {
         "title": "first item by content channel id",
       },
       "subtitle": "content channel",
+      "summary": "summary data",
       "title": "first item by content channel id",
     },
     Object {
@@ -108,6 +112,7 @@ Object {
         "title": "second item by content channel id",
       },
       "subtitle": "content channel",
+      "summary": "summary data",
       "title": "second item by content channel id",
     },
     Object {
@@ -121,6 +126,7 @@ Object {
         "title": "third item by content channel id",
       },
       "subtitle": undefined,
+      "summary": "summary data",
       "title": "third item by content channel id",
     },
   ],
@@ -149,6 +155,7 @@ Object {
         "title": "first item by content channel id",
       },
       "subtitle": "content channel",
+      "summary": "summary data",
       "title": "first item by content channel id",
     },
     Object {
@@ -164,6 +171,7 @@ Object {
         "title": "second item by content channel id",
       },
       "subtitle": "content channel",
+      "summary": "summary data",
       "title": "second item by content channel id",
     },
     Object {
@@ -177,6 +185,7 @@ Object {
         "title": "third item by content channel id",
       },
       "subtitle": undefined,
+      "summary": "summary data",
       "title": "third item by content channel id",
     },
   ],
@@ -205,6 +214,7 @@ Object {
         "title": "first item",
       },
       "subtitle": "content channel",
+      "summary": "summary data",
       "title": "first item",
     },
     Object {
@@ -220,6 +230,7 @@ Object {
         "title": "second item",
       },
       "subtitle": "content channel",
+      "summary": "summary data",
       "title": "second item",
     },
     Object {
@@ -235,6 +246,7 @@ Object {
         "title": "third item",
       },
       "subtitle": "content channel",
+      "summary": "summary data",
       "title": "third item",
     },
   ],
@@ -261,6 +273,7 @@ Object {
         "title": "first item by content channel id",
       },
       "subtitle": "content channel",
+      "summary": "summary data",
       "title": "first item by content channel id",
     },
     Object {
@@ -276,6 +289,7 @@ Object {
         "title": "second item by content channel id",
       },
       "subtitle": "content channel",
+      "summary": "summary data",
       "title": "second item by content channel id",
     },
     Object {
@@ -289,6 +303,7 @@ Object {
         "title": "third item by content channel id",
       },
       "subtitle": undefined,
+      "summary": "summary data",
       "title": "third item by content channel id",
     },
   ],
@@ -321,6 +336,7 @@ Object {
         },
       },
       "subtitle": undefined,
+      "summary": "",
       "title": Promise {},
     },
   ],
@@ -347,6 +363,7 @@ Object {
         "title": "first item",
       },
       "subtitle": "content channel",
+      "summary": "summary data",
       "title": "first item",
     },
     Object {
@@ -362,6 +379,7 @@ Object {
         "title": "second item",
       },
       "subtitle": "content channel",
+      "summary": "summary data",
       "title": "second item",
     },
     Object {
@@ -377,6 +395,7 @@ Object {
         "title": "third item",
       },
       "subtitle": "content channel",
+      "summary": "summary data",
       "title": "third item",
     },
     Object {
@@ -392,6 +411,7 @@ Object {
         "title": "first item",
       },
       "subtitle": "content channel",
+      "summary": "summary data",
       "title": "first item",
     },
     Object {
@@ -407,6 +427,7 @@ Object {
         "title": "second item",
       },
       "subtitle": "content channel",
+      "summary": "summary data",
       "title": "second item",
     },
     Object {
@@ -422,6 +443,7 @@ Object {
         "title": "third item",
       },
       "subtitle": "content channel",
+      "summary": "summary data",
       "title": "third item",
     },
   ],
@@ -458,6 +480,7 @@ Object {
         "title": "first item by content channel id",
       },
       "subtitle": "content channel",
+      "summary": "summary data",
       "title": "first item by content channel id",
     },
     Object {
@@ -473,6 +496,7 @@ Object {
         "title": "second item by content channel id",
       },
       "subtitle": "content channel",
+      "summary": "summary data",
       "title": "second item by content channel id",
     },
     Object {
@@ -486,6 +510,7 @@ Object {
         "title": "third item by content channel id",
       },
       "subtitle": undefined,
+      "summary": "summary data",
       "title": "third item by content channel id",
     },
     Object {
@@ -501,6 +526,7 @@ Object {
         "title": "first item",
       },
       "subtitle": "content channel",
+      "summary": "summary data",
       "title": "first item",
     },
     Object {
@@ -516,6 +542,7 @@ Object {
         "title": "second item",
       },
       "subtitle": "content channel",
+      "summary": "summary data",
       "title": "second item",
     },
     Object {
@@ -531,10 +558,70 @@ Object {
         "title": "third item",
       },
       "subtitle": "content channel",
+      "summary": "summary data",
       "title": "third item",
     },
   ],
   "id": "ActionListFeature:f3b62441ac984046bda132a1606d0a37",
+  "subtitle": "It's great!",
+  "title": "Test Action List",
+}
+`;
+
+exports[`features dataSource should create an VerticalCardListFeature from a PERSONA_FEED 1`] = `
+Object {
+  "__typename": "VerticalCardListFeature",
+  "cards": Array [
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 1,
+        "title": "first item",
+      },
+      "subtitle": "content channel",
+      "summary": "summary data",
+      "title": "first item",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 2,
+        "title": "second item",
+      },
+      "subtitle": "content channel",
+      "summary": "summary data",
+      "title": "second item",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 3,
+        "title": "third item",
+      },
+      "subtitle": "content channel",
+      "summary": "summary data",
+      "title": "third item",
+    },
+  ],
+  "id": "VerticalCardListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
   "subtitle": "It's great!",
   "title": "Test Action List",
 }
@@ -565,6 +652,7 @@ Array [
           "title": "first item by content channel id",
         },
         "subtitle": "content channel",
+        "summary": "summary data",
         "title": "first item by content channel id",
       },
       Object {
@@ -580,6 +668,7 @@ Array [
           "title": "second item by content channel id",
         },
         "subtitle": "content channel",
+        "summary": "summary data",
         "title": "second item by content channel id",
       },
       Object {
@@ -593,6 +682,7 @@ Array [
           "title": "third item by content channel id",
         },
         "subtitle": undefined,
+        "summary": "summary data",
         "title": "third item by content channel id",
       },
       Object {
@@ -608,6 +698,7 @@ Array [
           "title": "first item",
         },
         "subtitle": "content channel",
+        "summary": "summary data",
         "title": "first item",
       },
       Object {
@@ -623,6 +714,7 @@ Array [
           "title": "second item",
         },
         "subtitle": "content channel",
+        "summary": "summary data",
         "title": "second item",
       },
       Object {
@@ -638,6 +730,7 @@ Array [
           "title": "third item",
         },
         "subtitle": "content channel",
+        "summary": "summary data",
         "title": "third item",
       },
     ],
@@ -661,6 +754,7 @@ Array [
           "title": "first item by content channel id",
         },
         "subtitle": "content channel",
+        "summary": "summary data",
         "title": "first item by content channel id",
       },
       Object {
@@ -676,6 +770,7 @@ Array [
           "title": "second item by content channel id",
         },
         "subtitle": "content channel",
+        "summary": "summary data",
         "title": "second item by content channel id",
       },
       Object {
@@ -689,6 +784,7 @@ Array [
           "title": "third item by content channel id",
         },
         "subtitle": undefined,
+        "summary": "summary data",
         "title": "third item by content channel id",
       },
     ],

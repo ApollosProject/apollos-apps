@@ -42,3 +42,4 @@ export ShareButtonConnected, {
   ShareButton,
 } from './ShareButtonConnected';
 export UserAvatarConnected, { UserAvatarUpdate } from './UserAvatarConnected';
+export UpNextButtonConnected from './UpNextButtonConnected';
