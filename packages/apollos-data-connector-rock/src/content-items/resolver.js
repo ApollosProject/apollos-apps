@@ -23,7 +23,7 @@ export const defaultContentItemResolvers = {
 
   title: ({ title }, { hyphenated }, { dataSources }) =>
     hyphenated
-      ? dataSources.ContentItem.createHyphenatedString({ title })
+      ? dataSources.ContentItem.createHyphenatedString({ text: title })
       : title,
 
   parentChannel: (
