@@ -595,9 +595,9 @@ export default class ContentItem extends RockApolloDataSource {
   }
 
   // eslint-disable-next-line class-methods-use-this
-  getHyphenatedTitle({ title }) {
+  createHyphenatedString({ text }) {
     const hypher = new Hypher(english);
-    const words = title.split(' ');
+    const words = text.split(' ');
 
     /* We only want to hyphenate the end of words because Hyper uses a language dictionary to add
      * "soft" hyphens at the appropriate places. By only adding "soft" hyphens to the end of we
