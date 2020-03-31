@@ -407,6 +407,27 @@ describe('features', () => {
 
       expect(result).toMatchSnapshot();
     });
+    it('should render the HorizontalCardList type from getHomeFeedFeatures', async () => {
+      const features = new Features();
+      features.initialize({
+        context,
+      });
+
+      ApollosConfig.loadJs({
+        HOME_FEATURES: [
+          {
+            algorithms: ['PERSONA_FEED'],
+            subtitle: 'Explore what God calls you to today',
+            title: 'FOR YOU',
+            type: 'HorizontalCardList',
+          },
+        ],
+      });
+
+      const result = await features.getHomeFeedFeatures();
+
+      expect(result).toMatchSnapshot();
+    });
   });
 
   describe('resolver', () => {
