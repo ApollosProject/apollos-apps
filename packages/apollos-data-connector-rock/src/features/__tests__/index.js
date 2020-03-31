@@ -1,3 +1,5 @@
+import ApollosConfig from '@apollosproject/config';
+
 import Features from '../data-source';
 import resolver from '../resolver';
 
@@ -363,6 +365,26 @@ describe('features', () => {
 
       expect(result).toMatchSnapshot();
       expect(first.mock.calls).toMatchSnapshot();
+    });
+    it('should render the default case from getHomeFeedFeatures', async () => {
+      const features = new Features();
+      features.initialize({
+        context,
+      });
+
+      ApollosConfig.loadJs({
+        HOME_FEATURES: [
+          {
+            algorithms: ['SERMON_CHILDREN', 'PERSONA_FEED'],
+            subtitle: 'Explore what God calls you to today',
+            title: 'FOR YOU',
+          },
+        ],
+      });
+
+      const result = await features.getHomeFeedFeatures();
+
+      expect(result).toMatchSnapshot();
     });
   });
 
