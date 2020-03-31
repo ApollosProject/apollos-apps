@@ -375,9 +375,30 @@ describe('features', () => {
       ApollosConfig.loadJs({
         HOME_FEATURES: [
           {
-            algorithms: ['SERMON_CHILDREN', 'PERSONA_FEED'],
+            algorithms: ['PERSONA_FEED'],
             subtitle: 'Explore what God calls you to today',
             title: 'FOR YOU',
+          },
+        ],
+      });
+
+      const result = await features.getHomeFeedFeatures();
+
+      expect(result).toMatchSnapshot();
+    });
+    it('should render the VerticalCardList type from getHomeFeedFeatures', async () => {
+      const features = new Features();
+      features.initialize({
+        context,
+      });
+
+      ApollosConfig.loadJs({
+        HOME_FEATURES: [
+          {
+            algorithms: ['PERSONA_FEED'],
+            subtitle: 'Explore what God calls you to today',
+            title: 'FOR YOU',
+            type: 'VerticalCardList',
           },
         ],
       });
