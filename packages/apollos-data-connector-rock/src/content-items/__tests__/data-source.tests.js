@@ -883,7 +883,8 @@ describe('ContentItemsModel', () => {
   it('returns a hyphonated titled if any words are longer than 7 characters', async () => {
     const dataSource = new ContentItemsDataSource();
     const result = dataSource.createHyphenatedString({
-      text: 'Antidisestablishmentarianism is useful when center justifying a text.',
+      text:
+        'Antidisestablishmentarianism is useful when center justifying a text.',
     });
 
     // This may look identical but it has a bunch of hidden `\u00AD` hyphens in it.
