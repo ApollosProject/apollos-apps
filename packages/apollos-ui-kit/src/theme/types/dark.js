@@ -17,9 +17,7 @@ const dark = ({ colors, alpha }) => ({
       inactive: colors.darkTertiary,
     },
     shadows: {
-      default: Color(colors.darkTertiary)
-        .fade(alpha.low)
-        .string(),
+      default: colors.transparent,
     },
     action: {
       default: colors.darkTertiary,
