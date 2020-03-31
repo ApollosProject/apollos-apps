@@ -39,7 +39,10 @@ ActionBarItem.propTypes = {
 };
 
 export default withTheme(({ theme, ...props }) => ({
-  tint: theme.colors.action.primary,
+  tint:
+    theme.type === 'light'
+      ? theme.colors.action.primary
+      : theme.colors.action.secondary,
   size: theme.sizing.baseUnit * 1.5,
   ...props,
 }))(ActionBarItem);
