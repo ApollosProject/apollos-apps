@@ -9,8 +9,8 @@ import { GET_MEDIA_PLAYER_VISIBILITY } from './MediaPlayer/queries';
 
 const TabBarWrapper = styled(({ theme, mediaPlayerIsVisible }) => ({
   backgroundColor: mediaPlayerIsVisible
-    ? theme.colors.screen
-    : theme.colors.paper,
+    ? theme.colors.background.screen
+    : theme.colors.background.paper,
   ...Platform.select(theme.shadows.default),
 }))(View);
 
