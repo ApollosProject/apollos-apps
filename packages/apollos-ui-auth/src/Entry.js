@@ -32,12 +32,8 @@ import {
 } from './styles';
 
 const FullScreenGradientBackground = styled({
-  bottom: 0,
-  left: 0,
-  position: 'absolute',
+  ...StyleSheet.absoluteFillObject,
   resizeMode: 'cover',
-  right: 0,
-  top: 0,
 })(BackgroundView);
 
 const Entry = ({
