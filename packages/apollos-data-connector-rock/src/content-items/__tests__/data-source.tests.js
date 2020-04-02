@@ -838,6 +838,7 @@ describe('ContentItemsModel', () => {
         .getInteractionsForCurrentUserAndNodes
     ).toMatchSnapshot();
   });
+
   it('gets a percentage for a content series, even if a series has no children', async () => {
     const dataSource = new ContentItemsDataSource();
     dataSource.get = jest.fn(() => Promise.resolve([]));
@@ -864,6 +865,7 @@ describe('ContentItemsModel', () => {
         .getInteractionsForCurrentUserAndNodes
     ).toMatchSnapshot();
   });
+
   it('returns null when getting a percentage for a content series without a user', async () => {
     const dataSource = new ContentItemsDataSource();
     dataSource.get = jest.fn(() =>

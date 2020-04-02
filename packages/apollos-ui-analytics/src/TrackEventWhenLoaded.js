@@ -4,13 +4,16 @@ import { AnalyticsConsumer } from './Provider';
 
 class TrackEventWhenLoaded extends PureComponent {
   componentDidMount() {
-    if (this.props.loaded) {
+    if (this.props.loaded || this.props.isLoading === false) {
       this.track();
     }
   }
 
   componentDidUpdate(prevProps) {
-    if (!prevProps.loaded && this.props.loaded) {
+    if (
+      (!prevProps.loaded && this.props.loaded) ||
+      (prevProps.isLoading && !this.props.isLoading)
+    ) {
       this.track();
     }
   }
@@ -31,6 +34,7 @@ class TrackEventWhenLoaded extends PureComponent {
 
 TrackEventWhenLoaded.propTypes = {
   loaded: PropTypes.bool.isRequired,
+  isLoading: PropTypes.bool.isRequired,
   eventName: PropTypes.string.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   properties: PropTypes.any,
