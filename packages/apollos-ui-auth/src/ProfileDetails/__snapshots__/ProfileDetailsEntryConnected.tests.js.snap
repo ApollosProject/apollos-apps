@@ -513,7 +513,6 @@ exports[`ui-auth/Profile/ProfileDetailsEntryConnected should render 1`] = `
                         "fontSize": 12,
                         "justifyContent": "center",
                         "lineHeight": 18,
-                        "paddingLeft": null,
                         "textAlign": "center",
                       }
                     }

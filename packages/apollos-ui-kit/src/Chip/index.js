@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 /* touchable native feedback currently is having flex layout issues on react-native android, so we
  * fall back to TouchableOpacity
  */
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 
 import { H6 } from '../typography';
 import Button from '../Button';
@@ -23,12 +23,15 @@ const enhance = compose(
   }))
 );
 
-const TitleText = styled(({ withIcon }) => ({
+const IconView = styled(({ hasTitle }) => ({
+  paddingRight: hasTitle ? 8 : null,
+}))(View);
+
+const TitleText = styled({
   textAlign: 'center',
   alignItems: 'center',
   justifyContent: 'center',
-  paddingLeft: withIcon ? 8 : null,
-}))(H6);
+})(H6);
 
 const StyledButton = styled(
   ({ theme, chipList }) => ({
@@ -47,6 +50,7 @@ const StyledButton = styled(
 
 const Chip = enhance(
   ({
+    children,
     icon,
     iconStyles = {},
     iconSize,
@@ -55,19 +59,31 @@ const Chip = enhance(
     pill = false,
     chipList = false,
     ...buttonProps
-  }) => (
-    <StyledButton
-      TouchableComponent={TouchableOpacity}
-      pill={pill}
-      chipList={chipList}
-      {...buttonProps}
-    >
-      <>
-        {icon ? <Icon name={icon} style={iconStyles} size={iconSize} /> : null}
-        {title ? <TitleText withIcon={icon}>{title}</TitleText> : null}
-      </>
-    </StyledButton>
-  )
+  }) => {
+    // TODO remove deprecated props
+    if (icon)
+      console.warn(
+        'icon prop deprecated. Passing a custom Icon through children is recommended.'
+      );
+    return (
+      <StyledButton
+        TouchableComponent={TouchableOpacity}
+        pill={pill}
+        chipList={chipList}
+        {...buttonProps}
+      >
+        <>
+          {children}
+          {icon ? (
+            <IconView hasTitle={!!title}>
+              <Icon name={icon} style={iconStyles} size={iconSize} />
+            </IconView>
+          ) : null}
+          {title ? <TitleText>{title}</TitleText> : null}
+        </>
+      </StyledButton>
+    );
+  }
 );
 
 Chip.propTypes = {

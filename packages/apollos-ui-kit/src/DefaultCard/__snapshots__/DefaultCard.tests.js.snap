@@ -888,7 +888,6 @@ exports[`DefaultCard should render with custom LabelComponent 1`] = `
                 "fontSize": 12,
                 "justifyContent": "center",
                 "lineHeight": 18,
-                "paddingLeft": null,
                 "textAlign": "center",
               }
             }
@@ -1071,7 +1070,6 @@ exports[`DefaultCard should render with custom labelText 1`] = `
                 "fontSize": 12,
                 "justifyContent": "center",
                 "lineHeight": 18,
-                "paddingLeft": null,
                 "textAlign": "center",
               }
             }
