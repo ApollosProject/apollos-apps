@@ -880,4 +880,16 @@ describe('ContentItemsModel', () => {
         .getNodeInteractionsForCurrentUser
     ).toMatchSnapshot();
   });
+  it('returns a hyphonated titled if any words are longer than 7 characters', async () => {
+    const dataSource = new ContentItemsDataSource();
+    const result = dataSource.createHyphenatedString({
+      text:
+        'Antidisestablishmentarianism is useful when center justifying a text.',
+    });
+
+    // This may look identical but it has a bunch of hidden `\u00AD` hyphens in it.
+    expect(result).toEqual(
+      'Antidises­tab­lish­men­tar­i­an­ism is useful when center justifying a text.'
+    );
+  });
 });
