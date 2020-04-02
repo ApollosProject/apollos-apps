@@ -3,11 +3,11 @@ import { Providers, renderWithApolloData } from '../utils/testUtils';
 import InteractWhenLoadedConnected from '.';
 
 describe('The InteractWhenLoadedConnected component', () => {
-  it('should render with loaded=true', async () => {
+  it('should render with isLoading=false', async () => {
     const tree = await renderWithApolloData(
       <Providers>
         <InteractWhenLoadedConnected
-          loaded
+          isLoading={false}
           action="COMPLETE"
           nodeId="UniversalContentItem:123"
         />
@@ -16,11 +16,11 @@ describe('The InteractWhenLoadedConnected component', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('should render with loading=false', async () => {
+  it('should render with isLoading=true', async () => {
     const tree = await renderWithApolloData(
       <Providers>
         <InteractWhenLoadedConnected
-          loaded={false}
+          isLoading
           action="COMPLETE"
           nodeId="UniversalContentItem:123"
         />

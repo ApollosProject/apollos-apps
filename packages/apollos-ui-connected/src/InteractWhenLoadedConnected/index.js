@@ -5,13 +5,13 @@ import INTERACT_WITH_NODE from './interactWithNode';
 
 class InteractWhenLoaded extends PureComponent {
   componentDidMount() {
-    if (this.props.loaded) {
+    if (!this.props.isLoading) {
       this.interact();
     }
   }
 
   componentDidUpdate(prevProps) {
-    if (!prevProps.loaded && this.props.loaded) {
+    if (prevProps.isLoading && !this.props.isLoading) {
       this.interact();
     }
   }
@@ -26,7 +26,7 @@ class InteractWhenLoaded extends PureComponent {
 }
 
 InteractWhenLoaded.propTypes = {
-  loaded: PropTypes.bool.isRequired,
+  isLoading: PropTypes.bool.isRequired,
   // properties: PropTypes.any,
   mutate: PropTypes.func.isRequired,
 };
