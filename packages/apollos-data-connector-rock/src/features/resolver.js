@@ -17,6 +17,13 @@ export default {
       message: body,
     }),
   },
+  CardListItem: {
+    coverImage: ({ image }) => image,
+    title: ({ title }, { hyphenated }, { dataSources }) =>
+      hyphenated
+        ? dataSources.ContentItem.createHyphenatedString({ text: title })
+        : title,
+  },
   ScriptureFeature: {
     scriptures: (
       { reference, version },

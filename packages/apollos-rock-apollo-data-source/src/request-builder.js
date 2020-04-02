@@ -48,6 +48,7 @@ export default class RockRequestBuilder {
    */
   empty = () => {
     this.get = () => Promise.resolve([]);
+    this.count = () => Promise.resolve(0);
     return this;
   };
 
