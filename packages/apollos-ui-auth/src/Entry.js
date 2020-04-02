@@ -66,7 +66,11 @@ const Entry = ({
         Platform.OS === 'android' ? StatusBar.currentHeight : 0
       }
     >
-      {BackgroundComponent}
+      {React.isValidElement(BackgroundComponent) ? (
+        BackgroundComponent
+      ) : (
+        <BackgroundComponent />
+      )}
       <FlexedSafeAreaView>
         <ScrollView keyboardShouldPersistTaps="always">
           <PaddedView>
