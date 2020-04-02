@@ -1,7 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
+import { View } from 'react-native';
 import Providers from '../Providers';
+
+import Icon from '../Icon';
 
 import Chip from '.';
 
@@ -18,6 +21,19 @@ describe('The Chip component', () => {
     const tree = renderer.create(
       <Providers>
         <Chip icon="like" title="Heart!!!" />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render a custom icon', () => {
+    const tree = renderer.create(
+      <Providers>
+        <Chip onPress={() => {}} title="Custom Icon">
+          {/* eslint-disable-next-line */}
+          <View style={{ paddingRight: 8 }}>
+            <Icon name="live-dot" size={16} fill={'red'} />
+          </View>
+        </Chip>
       </Providers>
     );
     expect(tree).toMatchSnapshot();

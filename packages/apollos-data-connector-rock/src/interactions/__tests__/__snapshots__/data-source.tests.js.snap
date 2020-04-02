@@ -58,7 +58,7 @@ Array [
 exports[`Interactions fetches interactions for a logged in user and nodeId 1`] = `
 Array [
   Array [
-    "Interactions?%24filter=%28ForeignKey%20eq%20%27UniversalContentItem%3A559b23fd0aa90e81b1c023e72e230fa1%27%29%20and%20%28PersonAliasId%20eq%20456%29",
+    "/Apollos/GetInteractionsByForeignKeys?keys=UniversalContentItem%3A559b23fd0aa90e81b1c023e72e230fa1&%24filter=PersonAliasId%20eq%20456",
     Object {},
     Object {},
   ],
@@ -68,7 +68,17 @@ Array [
 exports[`Interactions fetches interactions for a logged in user, nodeId, and actions 1`] = `
 Array [
   Array [
-    "Interactions?%24filter=%28%28Operation%20eq%20%27READ%27%29%20or%20%28Operation%20eq%20%27COMPLETE%27%29%29%20and%20%28%28ForeignKey%20eq%20%27UniversalContentItem%3A559b23fd0aa90e81b1c023e72e230fa1%27%29%20and%20%28PersonAliasId%20eq%20456%29%29",
+    "/Apollos/GetInteractionsByForeignKeys?keys=UniversalContentItem%3A559b23fd0aa90e81b1c023e72e230fa1&%24filter=%28%28Operation%20eq%20%27READ%27%29%20or%20%28Operation%20eq%20%27COMPLETE%27%29%29%20and%20%28PersonAliasId%20eq%20456%29",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Interactions fetches interactions for multiple nodeIds 1`] = `
+Array [
+  Array [
+    "/Apollos/GetInteractionsByForeignKeys?keys=UniversalContentItem%3A559b23fd0aa90e81b1c023e72e230fa1%2CUniversalContentItem%3A965b6e6d7046a885bea4e300b5c0400d%2CUniversalContentItem%3A4f68015ba18662a7409d1219a4ce013e&%24filter=%28%28Operation%20eq%20%27READ%27%29%20or%20%28Operation%20eq%20%27COMPLETE%27%29%29%20and%20%28PersonAliasId%20eq%20456%29",
     Object {},
     Object {},
   ],
@@ -76,6 +86,16 @@ Array [
 `;
 
 exports[`Interactions fetches interactions without throwing an error for a logged out user 1`] = `Array []`;
+
+exports[`Interactions it calls different endpoints if USE_PLUGIN is false 1`] = `
+Array [
+  Array [
+    "Interactions?%24filter=%28%28Operation%20eq%20%27READ%27%29%20or%20%28Operation%20eq%20%27COMPLETE%27%29%29%20and%20%28%28ForeignKey%20eq%20%27UniversalContentItem%3A559b23fd0aa90e81b1c023e72e230fa1%27%29%20and%20%28PersonAliasId%20eq%20456%29%29",
+    Object {},
+    Object {},
+  ],
+]
+`;
 
 exports[`Interactions returns a success: false from an invalid nodeId 1`] = `
 Object {
