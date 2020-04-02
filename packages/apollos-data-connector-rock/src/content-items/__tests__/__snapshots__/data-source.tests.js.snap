@@ -129,7 +129,7 @@ Array [
     },
   ],
   Array [
-    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%20101%29%20or%20%28Id%20eq%20201%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29%29&%24orderby=Order%20asc",
+    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%20101%29%20or%20%28Id%20eq%20201%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29%29&%24orderby=Order%20asc%2C%20StartDateTime%20asc",
     Object {},
     Object {},
   ],
@@ -159,7 +159,7 @@ Array [
     },
   ],
   Array [
-    "Apollos/GetContentChannelItemsByIds?ids=101%2C201&loadAttributes=expanded&%24filter=%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29&%24orderby=Order%20asc",
+    "Apollos/GetContentChannelItemsByIds?ids=101%2C201&loadAttributes=expanded&%24filter=%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29&%24orderby=Order%20asc%2C%20StartDateTime%20asc",
     Object {},
     Object {},
   ],
@@ -189,7 +189,7 @@ Array [
     },
   ],
   Array [
-    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%20101%29%20or%20%28Id%20eq%20201%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29%29&%24orderby=Order%20asc",
+    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%20101%29%20or%20%28Id%20eq%20201%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29%29&%24orderby=Order%20asc%2C%20StartDateTime%20asc",
     Object {},
     Object {},
   ],
@@ -219,7 +219,7 @@ Array [
     },
   ],
   Array [
-    "Apollos/GetContentChannelItemsByIds?ids=101%2C201&loadAttributes=expanded&%24filter=%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29&%24orderby=Order%20asc",
+    "Apollos/GetContentChannelItemsByIds?ids=101%2C201&loadAttributes=expanded&%24filter=%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29&%24orderby=Order%20asc%2C%20StartDateTime%20asc",
     Object {},
     Object {},
   ],
@@ -254,7 +254,7 @@ Array [
     Object {},
   ],
   Array [
-    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%201%29%20or%20%28Id%20eq%202%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29%29&%24orderby=Order%20asc",
+    "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%201%29%20or%20%28Id%20eq%202%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29%29&%24orderby=Order%20asc%2C%20StartDateTime%20asc",
     Object {},
     Object {},
   ],
@@ -289,7 +289,7 @@ Array [
     Object {},
   ],
   Array [
-    "Apollos/GetContentChannelItemsByIds?ids=1%2C2&loadAttributes=expanded&%24filter=%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29&%24orderby=Order%20asc",
+    "Apollos/GetContentChannelItemsByIds?ids=1%2C2&loadAttributes=expanded&%24filter=%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29&%24orderby=Order%20asc%2C%20StartDateTime%20asc",
     Object {},
     Object {},
   ],
@@ -320,7 +320,7 @@ exports[`ContentItemsModel gets a percentage for a content series, based on diff
       },
     ],
     Array [
-      "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%20undefined%29%20or%20%28Id%20eq%20undefined%29%20or%20%28Id%20eq%20undefined%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29%29&%24orderby=Order%20asc",
+      "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%20undefined%29%20or%20%28Id%20eq%20undefined%29%20or%20%28Id%20eq%20undefined%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29%29&%24orderby=Order%20asc%2C%20StartDateTime%20asc",
       Object {},
       Object {},
     ],
@@ -346,35 +346,15 @@ exports[`ContentItemsModel gets a percentage for a content series, based on diff
         "actions": Array [
           "COMPLETE",
         ],
-        "nodeId": "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
-      },
-    ],
-    Array [
-      Object {
-        "actions": Array [
-          "COMPLETE",
+        "nodeIds": Array [
+          "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
+          "UniversalContentItem:965b6e6d7046a885bea4e300b5c0400d",
+          "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
         ],
-        "nodeId": "UniversalContentItem:965b6e6d7046a885bea4e300b5c0400d",
-      },
-    ],
-    Array [
-      Object {
-        "actions": Array [
-          "COMPLETE",
-        ],
-        "nodeId": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
       },
     ],
   ],
   "results": Array [
-    Object {
-      "isThrow": false,
-      "value": Promise {},
-    },
-    Object {
-      "isThrow": false,
-      "value": Promise {},
-    },
     Object {
       "isThrow": false,
       "value": Promise {},
@@ -396,7 +376,7 @@ exports[`ContentItemsModel gets a percentage for a content series, based on past
       },
     ],
     Array [
-      "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%20undefined%29%20or%20%28Id%20eq%20undefined%29%20or%20%28Id%20eq%20undefined%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29%29&%24orderby=Order%20asc",
+      "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%20undefined%29%20or%20%28Id%20eq%20undefined%29%20or%20%28Id%20eq%20undefined%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29%29&%24orderby=Order%20asc%2C%20StartDateTime%20asc",
       Object {},
       Object {},
     ],
@@ -422,46 +402,18 @@ exports[`ContentItemsModel gets a percentage for a content series, based on past
         "actions": Array [
           "COMPLETE",
         ],
-        "nodeId": "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
-      },
-    ],
-    Array [
-      Object {
-        "actions": Array [
-          "COMPLETE",
+        "nodeIds": Array [
+          "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
+          "UniversalContentItem:965b6e6d7046a885bea4e300b5c0400d",
+          "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
         ],
-        "nodeId": "UniversalContentItem:965b6e6d7046a885bea4e300b5c0400d",
-      },
-    ],
-    Array [
-      Object {
-        "actions": Array [
-          "COMPLETE",
-        ],
-        "nodeId": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
       },
     ],
   ],
   "results": Array [
     Object {
       "isThrow": false,
-      "value": Array [],
-    },
-    Object {
-      "isThrow": false,
-      "value": Array [
-        Object {
-          "id": "1",
-        },
-      ],
-    },
-    Object {
-      "isThrow": false,
-      "value": Array [
-        Object {
-          "id": "1",
-        },
-      ],
+      "value": Promise {},
     },
   ],
 }
@@ -585,7 +537,7 @@ exports[`ContentItemsModel gets the next item for a content series, based on dif
       },
     ],
     Array [
-      "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%20undefined%29%20or%20%28Id%20eq%20undefined%29%20or%20%28Id%20eq%20undefined%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29%29&%24orderby=Order%20desc%2C%20StartDateTime%20desc",
+      "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%20undefined%29%20or%20%28Id%20eq%20undefined%29%20or%20%28Id%20eq%20undefined%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29%29&%24orderby=Order%20asc%2C%20StartDateTime%20asc",
       Object {},
       Object {},
     ],
@@ -611,42 +563,18 @@ exports[`ContentItemsModel gets the next item for a content series, based on dif
         "actions": Array [
           "COMPLETE",
         ],
-        "nodeId": "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
-      },
-    ],
-    Array [
-      Object {
-        "actions": Array [
-          "COMPLETE",
+        "nodeIds": Array [
+          "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
+          "UniversalContentItem:965b6e6d7046a885bea4e300b5c0400d",
+          "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
         ],
-        "nodeId": "UniversalContentItem:965b6e6d7046a885bea4e300b5c0400d",
-      },
-    ],
-    Array [
-      Object {
-        "actions": Array [
-          "COMPLETE",
-        ],
-        "nodeId": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
       },
     ],
   ],
   "results": Array [
     Object {
       "isThrow": false,
-      "value": Array [],
-    },
-    Object {
-      "isThrow": false,
-      "value": Array [],
-    },
-    Object {
-      "isThrow": false,
-      "value": Array [
-        Object {
-          "id": "1",
-        },
-      ],
+      "value": Promise {},
     },
   ],
 }
@@ -665,7 +593,7 @@ exports[`ContentItemsModel gets the next item for a content series, based on pas
       },
     ],
     Array [
-      "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%20undefined%29%20or%20%28Id%20eq%20undefined%29%20or%20%28Id%20eq%20undefined%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29%29&%24orderby=Order%20desc%2C%20StartDateTime%20desc",
+      "ContentChannelItems?loadAttributes=expanded&%24filter=%28%28Id%20eq%20undefined%29%20or%20%28Id%20eq%20undefined%29%20or%20%28Id%20eq%20undefined%29%29%20and%20%28%28%28%28StartDateTime%20lt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28StartDateTime%20eq%20null%29%29%20and%20%28%28ExpireDateTime%20gt%20datetime%272017-11-25T07%3A34%3A56%27%29%20or%20%28ExpireDateTime%20eq%20null%29%29%29%20and%20%28%28%28Status%20eq%20%27Approved%27%29%20or%20%28ContentChannel%2FRequiresApproval%20eq%20false%29%29%29%29&%24orderby=Order%20asc%2C%20StartDateTime%20asc",
       Object {},
       Object {},
     ],
@@ -691,18 +619,18 @@ exports[`ContentItemsModel gets the next item for a content series, based on pas
         "actions": Array [
           "COMPLETE",
         ],
-        "nodeId": "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
+        "nodeIds": Array [
+          "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
+          "UniversalContentItem:965b6e6d7046a885bea4e300b5c0400d",
+          "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+        ],
       },
     ],
   ],
   "results": Array [
     Object {
       "isThrow": false,
-      "value": Array [
-        Object {
-          "id": "1",
-        },
-      ],
+      "value": Promise {},
     },
   ],
 }

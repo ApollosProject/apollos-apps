@@ -1,6 +1,7 @@
 import { parseGlobalId } from '@apollosproject/server-core';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import ApollosConfig from '@apollosproject/config';
+import { flatten } from 'lodash';
 
 export default class Interactions extends RockApolloDataSource {
   resource = 'Interactions';
@@ -35,30 +36,50 @@ export default class Interactions extends RockApolloDataSource {
     return this.get(`/Interactions/${interactionId}`);
   }
 
-  async getNodeInteractionsForCurrentUser({ nodeId, actions = [] }) {
+  async getInteractionsForCurrentUserAndNodes({ nodeIds, actions = [] }) {
     let currentUser;
     try {
       currentUser = await this.context.dataSources.Auth.getCurrentPerson();
     } catch (e) {
       return [];
     }
-    if (actions.length) {
-      return this.request()
+
+    if (nodeIds.length === 0) {
+      return [];
+    }
+
+    if (ApollosConfig.ROCK.USE_PLUGIN) {
+      return this.request(
+        `/Apollos/GetInteractionsByForeignKeys?keys=${nodeIds.join(',')}`
+      )
         .filterOneOf(actions.map((a) => `Operation eq '${a}'`))
-        .andFilter(
-          `(ForeignKey eq '${nodeId}') and (PersonAliasId eq ${
-            currentUser.primaryAliasId
-          })`
-        )
+        .andFilter(`PersonAliasId eq ${currentUser.primaryAliasId}`)
         .get();
     }
-    return this.request()
-      .filter(
-        `(ForeignKey eq '${nodeId}') and (PersonAliasId eq ${
-          currentUser.primaryAliasId
-        })`
+    console.warn(
+      'Fetching interactions without the Rock plugin is extremly inefficient\n\nWe highly recommend using plugin version 1.6.0 or higher'
+    );
+    return flatten(
+      await Promise.all(
+        nodeIds.map(async (nodeId) =>
+          this.request()
+            .filterOneOf(actions.map((a) => `Operation eq '${a}'`))
+            .andFilter(
+              `(ForeignKey eq '${nodeId}') and (PersonAliasId eq ${
+                currentUser.primaryAliasId
+              })`
+            )
+            .get()
+        )
       )
-      .get();
+    );
+  }
+
+  getNodeInteractionsForCurrentUser({ nodeId, actions = [] }) {
+    return this.getInteractionsForCurrentUserAndNodes({
+      nodeIds: [nodeId],
+      actions,
+    });
   }
 
   async createNodeInteraction({ nodeId, action }) {

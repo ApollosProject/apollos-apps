@@ -9,7 +9,9 @@ export ContentSingleFeaturesConnected, {
   ScriptureFeature,
   TextFeature,
 } from './ContentSingleFeaturesConnected';
-export HorizontalContentCardConnected from './HorizontalContentCardConnected';
+export HorizontalContentCardConnected, {
+  horizontalContentCardComponentMapper,
+} from './HorizontalContentCardConnected';
 export HorizontalContentSeriesFeedConnected, {
   GET_CONTENT_SERIES,
 } from './HorizontalContentSeriesFeedConnected';
@@ -35,6 +37,7 @@ export MediaControlsConnected, {
   MediaControls,
 } from './MediaControlsConnected';
 export RockAuthedWebBrowser from './RockAuthedWebBrowser';
+export RockAuthedWebView from './RockAuthedWebView';
 export SearchCardConnected from './SearchCardConnected';
 export ShareButtonConnected, {
   GET_SHARE_CONTENT,
@@ -42,3 +45,4 @@ export ShareButtonConnected, {
 } from './ShareButtonConnected';
 export UserAvatarConnected, { UserAvatarUpdate } from './UserAvatarConnected';
 export InteractWhenLoadedConnected from './InteractWhenLoadedConnected';
+export UpNextButtonConnected from './UpNextButtonConnected';

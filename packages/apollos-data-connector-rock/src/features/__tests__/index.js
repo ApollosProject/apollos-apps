@@ -1,3 +1,5 @@
+import ApollosConfig from '@apollosproject/config';
+
 import Features from '../data-source';
 import resolver from '../resolver';
 
@@ -76,6 +78,7 @@ describe('features', () => {
           getSermonFeed,
           getCoverImage: () => null,
           resolveType: () => 'UniversalContentItem',
+          createSummary: () => 'summary data',
         },
         Scripture: {},
         Event: {
@@ -115,6 +118,36 @@ describe('features', () => {
         algorithms: ['PERSONA_FEED'],
         title: 'Test Action List',
         subtitle: "It's great!",
+      });
+
+      expect(result).toMatchSnapshot();
+    });
+
+    it('should create an VerticalCardListFeature from a PERSONA_FEED', async () => {
+      const features = new Features();
+      features.initialize({
+        context,
+      });
+
+      const result = await features.createVerticalCardListFeature({
+        algorithms: ['PERSONA_FEED'],
+        title: 'Test Action List',
+        subtitle: "It's great!",
+      });
+
+      expect(result).toMatchSnapshot();
+    });
+
+    it('should create an HorizontalCardListFeature from a PERSONA_FEED', async () => {
+      const features = new Features();
+      features.initialize({
+        context,
+      });
+
+      const result = await features.createHorizontalCardListFeature({
+        algorithms: ['PERSONA_FEED'],
+        title: 'Test Horizontal List of Cards',
+        subtitle: 'Boom',
       });
 
       expect(result).toMatchSnapshot();
@@ -314,7 +347,7 @@ describe('features', () => {
       expect(result).toMatchSnapshot();
     });
 
-    it.only('should create an ActionListFeature from a CAMPAIGN_ITEMS algorithm', async () => {
+    it('should create an ActionListFeature from a CAMPAIGN_ITEMS algorithm', async () => {
       const features = new Features();
       features.initialize({
         context,
@@ -332,6 +365,68 @@ describe('features', () => {
 
       expect(result).toMatchSnapshot();
       expect(first.mock.calls).toMatchSnapshot();
+    });
+    it('should render the default case from getHomeFeedFeatures', async () => {
+      const features = new Features();
+      features.initialize({
+        context,
+      });
+
+      ApollosConfig.loadJs({
+        HOME_FEATURES: [
+          {
+            algorithms: ['PERSONA_FEED'],
+            subtitle: 'Explore what God calls you to today',
+            title: 'FOR YOU',
+          },
+        ],
+      });
+
+      const result = await features.getHomeFeedFeatures();
+
+      expect(result).toMatchSnapshot();
+    });
+    it('should render the VerticalCardList type from getHomeFeedFeatures', async () => {
+      const features = new Features();
+      features.initialize({
+        context,
+      });
+
+      ApollosConfig.loadJs({
+        HOME_FEATURES: [
+          {
+            algorithms: ['PERSONA_FEED'],
+            subtitle: 'Explore what God calls you to today',
+            title: 'FOR YOU',
+            type: 'VerticalCardList',
+          },
+        ],
+      });
+
+      const result = await features.getHomeFeedFeatures();
+
+      expect(result).toMatchSnapshot();
+    });
+    it('should render the HorizontalCardList type from getHomeFeedFeatures', async () => {
+      const features = new Features();
+      features.initialize({
+        context,
+      });
+
+      ApollosConfig.loadJs({
+        HOME_FEATURES: [
+          {
+            algorithms: ['PERSONA_FEED'],
+            subtitle: 'Explore what God calls you to today',
+            title: 'FOR YOU',
+            type: 'HorizontalCardList',
+          },
+        ],
+      });
+
+      const result = await features.getHomeFeedFeatures();
+
+      expect(result).toMatchSnapshot();
     });
   });
 

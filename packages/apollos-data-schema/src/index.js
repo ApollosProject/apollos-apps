@@ -395,8 +395,8 @@ export const contentItemSchema = gql`
     parentChannel: ContentChannel
     theme: Theme
 
-    percentComplete: Float
-    upNext: ContentItem
+    percentComplete: Float @cacheControl(maxAge: 0)
+    upNext: ContentItem @cacheControl(maxAge: 0)
     scriptures: [Scripture]
   }
 
@@ -694,6 +694,38 @@ export const featuresSchema = gql`
     title: String
     subtitle: String
     actions: [ActionListAction]
+  }
+
+  type CardListItem {
+    id: ID!
+
+    hasAction: Boolean
+    actionIcon: String
+    labelText: String
+    summary: String
+    coverImage: ImageMedia
+    title(hyphenated: Boolean): String
+
+    relatedNode: Node
+    action: ACTION_FEATURE_ACTION
+  }
+
+  type VerticalCardListFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    title: String
+    subtitle: String
+    cards: [CardListItem]
+  }
+
+  type HorizontalCardListFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    title: String
+    subtitle: String
+    cards: [CardListItem]
   }
 
   type TextFeature implements Feature & Node {
