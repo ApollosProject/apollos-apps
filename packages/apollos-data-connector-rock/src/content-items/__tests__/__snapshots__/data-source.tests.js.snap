@@ -346,35 +346,15 @@ exports[`ContentItemsModel gets a percentage for a content series, based on diff
         "actions": Array [
           "COMPLETE",
         ],
-        "nodeId": "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
-      },
-    ],
-    Array [
-      Object {
-        "actions": Array [
-          "COMPLETE",
+        "nodeIds": Array [
+          "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
+          "UniversalContentItem:965b6e6d7046a885bea4e300b5c0400d",
+          "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
         ],
-        "nodeId": "UniversalContentItem:965b6e6d7046a885bea4e300b5c0400d",
-      },
-    ],
-    Array [
-      Object {
-        "actions": Array [
-          "COMPLETE",
-        ],
-        "nodeId": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
       },
     ],
   ],
   "results": Array [
-    Object {
-      "isThrow": false,
-      "value": Promise {},
-    },
-    Object {
-      "isThrow": false,
-      "value": Promise {},
-    },
     Object {
       "isThrow": false,
       "value": Promise {},
@@ -422,46 +402,18 @@ exports[`ContentItemsModel gets a percentage for a content series, based on past
         "actions": Array [
           "COMPLETE",
         ],
-        "nodeId": "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
-      },
-    ],
-    Array [
-      Object {
-        "actions": Array [
-          "COMPLETE",
+        "nodeIds": Array [
+          "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
+          "UniversalContentItem:965b6e6d7046a885bea4e300b5c0400d",
+          "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
         ],
-        "nodeId": "UniversalContentItem:965b6e6d7046a885bea4e300b5c0400d",
-      },
-    ],
-    Array [
-      Object {
-        "actions": Array [
-          "COMPLETE",
-        ],
-        "nodeId": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
       },
     ],
   ],
   "results": Array [
     Object {
       "isThrow": false,
-      "value": Array [],
-    },
-    Object {
-      "isThrow": false,
-      "value": Array [
-        Object {
-          "id": "1",
-        },
-      ],
-    },
-    Object {
-      "isThrow": false,
-      "value": Array [
-        Object {
-          "id": "1",
-        },
-      ],
+      "value": Promise {},
     },
   ],
 }
@@ -611,42 +563,18 @@ exports[`ContentItemsModel gets the next item for a content series, based on dif
         "actions": Array [
           "COMPLETE",
         ],
-        "nodeId": "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
-      },
-    ],
-    Array [
-      Object {
-        "actions": Array [
-          "COMPLETE",
+        "nodeIds": Array [
+          "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
+          "UniversalContentItem:965b6e6d7046a885bea4e300b5c0400d",
+          "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
         ],
-        "nodeId": "UniversalContentItem:965b6e6d7046a885bea4e300b5c0400d",
-      },
-    ],
-    Array [
-      Object {
-        "actions": Array [
-          "COMPLETE",
-        ],
-        "nodeId": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
       },
     ],
   ],
   "results": Array [
     Object {
       "isThrow": false,
-      "value": Array [],
-    },
-    Object {
-      "isThrow": false,
-      "value": Array [],
-    },
-    Object {
-      "isThrow": false,
-      "value": Array [
-        Object {
-          "id": "1",
-        },
-      ],
+      "value": Promise {},
     },
   ],
 }
@@ -691,18 +619,18 @@ exports[`ContentItemsModel gets the next item for a content series, based on pas
         "actions": Array [
           "COMPLETE",
         ],
-        "nodeId": "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
+        "nodeIds": Array [
+          "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
+          "UniversalContentItem:965b6e6d7046a885bea4e300b5c0400d",
+          "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+        ],
       },
     ],
   ],
   "results": Array [
     Object {
       "isThrow": false,
-      "value": Array [
-        Object {
-          "id": "1",
-        },
-      ],
+      "value": Promise {},
     },
   ],
 }

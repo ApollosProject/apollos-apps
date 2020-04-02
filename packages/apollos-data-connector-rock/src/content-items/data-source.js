@@ -485,28 +485,35 @@ export default class ContentItem extends RockApolloDataSource {
       .get();
 
     const childItems = childItemsOldestFirst.reverse();
-    // Returns the item _after_ the most recent item you have interacted with.
+    const childItemsWithApollosIds = childItems.map((childItem) => ({
+      ...childItem,
+      apollosId: createGlobalId(childItem.id, this.resolveType(childItem)),
+    }));
 
-    let lastItem = null;
-    for (let i = 0; i < childItems.length; i += 1) {
-      const item = childItems.reverse()[i];
-      // This implementation is extremly niave.
-      // The non niave version of this implementation, however, has an extremly likelyhood to breakdown
-      // and throw errors when working with more than 25 items. Further solutions will need to be done
-      // on the rock level.
-      // eslint-disable-next-line no-await-in-loop
-      const interactions = await Interactions.getNodeInteractionsForCurrentUser(
-        {
-          nodeId: createGlobalId(item.id, this.resolveType(item)),
-          actions: ['COMPLETE'],
-        }
-      );
-      if (interactions.length !== 0) {
-        return lastItem;
+    const interactions = await Interactions.getInteractionsForCurrentUserAndNodes(
+      {
+        nodeIds: childItemsWithApollosIds.map(({ apollosId }) => apollosId),
+        actions: ['COMPLETE'],
       }
-      lastItem = item;
+    );
+    const apollosIdsWithInteractions = interactions.map(
+      ({ foreignKey }) => foreignKey
+    );
+
+    const firstInteractedIndex = childItemsWithApollosIds.findIndex(
+      ({ apollosId }) => apollosIdsWithInteractions.includes(apollosId)
+    );
+
+    if (firstInteractedIndex === -1) {
+      // If you haven't completede anything, return the first (last in reversed array) item;
+      return childItemsWithApollosIds[childItemsWithApollosIds.length - 1];
     }
-    return lastItem;
+    if (firstInteractedIndex === 0) {
+      // If you have completed the last item, return null (no items left to read)
+      return null;
+    }
+    // otherwise, return the item immediately following (before) the item you have already read
+    return childItemsWithApollosIds[firstInteractedIndex - 1];
   }
 
   async getPercentComplete({ id }) {
@@ -526,22 +533,27 @@ export default class ContentItem extends RockApolloDataSource {
       return 0;
     }
 
-    const itemsWithInteractions = (await Promise.all(
-      childItems.map(async (item) => {
-        const interaction = await Interactions.getNodeInteractionsForCurrentUser(
-          {
-            nodeId: createGlobalId(item.id, this.resolveType(item)),
-            actions: ['COMPLETE'],
-          }
-        );
+    const childItemsWithApollosIds = childItems.map((childItem) => ({
+      ...childItem,
+      apollosId: createGlobalId(childItem.id, this.resolveType(childItem)),
+    }));
 
-        if (interaction.length > 0) {
-          return item;
-        }
-        return null;
-      })
-    )).filter((item) => item);
-    return (itemsWithInteractions.length / childItems.length) * 100;
+    const interactions = await Interactions.getInteractionsForCurrentUserAndNodes(
+      {
+        nodeIds: childItemsWithApollosIds.map(({ apollosId }) => apollosId),
+        actions: ['COMPLETE'],
+      }
+    );
+
+    const apollosIdsWithInteractions = interactions.map(
+      ({ foreignKey }) => foreignKey
+    );
+
+    const totalItemsWithInteractions = childItemsWithApollosIds.filter(
+      ({ apollosId }) => apollosIdsWithInteractions.includes(apollosId)
+    ).length;
+
+    return (totalItemsWithInteractions / childItems.length) * 100;
   }
 
   getFromId = (id) =>

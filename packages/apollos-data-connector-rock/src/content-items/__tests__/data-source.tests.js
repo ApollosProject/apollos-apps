@@ -12,6 +12,7 @@ ApollosConfig.loadJs({
     IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
     SHARE_URL: 'https://apollosrock.newspring.cc',
     TIMEZONE: 'America/New_York',
+    USE_PLUGIN: true,
   },
   ROCK_MAPPINGS: {
     SERMON_CHANNEL_ID: 'TEST_ID',
@@ -686,13 +687,19 @@ describe('ContentItemsModel', () => {
   it('gets the next item for a content series, based on past interactions', async () => {
     const dataSource = new ContentItemsDataSource();
     dataSource.get = jest.fn(() =>
-      Promise.resolve([{ id: 3 }, { id: 2 }, { id: 1 }])
+      Promise.resolve([{ id: 1 }, { id: 2 }, { id: 3 }])
     );
     dataSource.context = {
       dataSources: {
         Auth: { getCurrentPerson: () => ({ id: '1' }) },
         Interactions: {
-          getNodeInteractionsForCurrentUser: jest.fn(() => [{ id: '1' }]),
+          getInteractionsForCurrentUserAndNodes: jest.fn(() =>
+            Promise.resolve([
+              { foreignKey: createGlobalId(1, 'UniversalContentItem') },
+              { foreignKey: createGlobalId(2, 'UniversalContentItem') },
+              { foreignKey: createGlobalId(3, 'UniversalContentItem') },
+            ])
+          ),
         },
       },
     };
@@ -704,22 +711,22 @@ describe('ContentItemsModel', () => {
     expect(dataSource.get).toMatchSnapshot();
     expect(
       dataSource.context.dataSources.Interactions
-        .getNodeInteractionsForCurrentUser
+        .getInteractionsForCurrentUserAndNodes
     ).toMatchSnapshot();
   });
   it('gets the next item for a content series, based on different past interactions', async () => {
     const dataSource = new ContentItemsDataSource();
     dataSource.get = jest.fn(() =>
-      Promise.resolve([{ id: 3 }, { id: 2 }, { id: 1 }])
+      Promise.resolve([{ id: 1 }, { id: 2 }, { id: 3 }])
     );
     dataSource.context = {
       dataSources: {
         Auth: { getCurrentPerson: () => ({ id: '1' }) },
         Interactions: {
-          getNodeInteractionsForCurrentUser: jest.fn(({ nodeId }) =>
-            nodeId === createGlobalId(1, 'UniversalContentItem')
-              ? [{ id: '1' }]
-              : []
+          getInteractionsForCurrentUserAndNodes: jest.fn(() =>
+            Promise.resolve([
+              { foreignKey: createGlobalId(1, 'UniversalContentItem') },
+            ])
           ),
         },
       },
@@ -728,17 +735,20 @@ describe('ContentItemsModel', () => {
 
     const result = await dataSource.getUpNext({ id: 'parent-channel-1' });
 
-    expect(result).toEqual({ id: 2 });
+    expect(result).toEqual({
+      id: 2,
+      apollosId: createGlobalId(2, 'UniversalContentItem'),
+    });
     expect(dataSource.get).toMatchSnapshot();
     expect(
       dataSource.context.dataSources.Interactions
-        .getNodeInteractionsForCurrentUser
+        .getInteractionsForCurrentUserAndNodes
     ).toMatchSnapshot();
   });
   it('returns null when getting the next item based on past interactions without a user', async () => {
     const dataSource = new ContentItemsDataSource();
     dataSource.get = jest.fn(() =>
-      Promise.resolve([{ id: 3 }, { id: 2 }, { id: 1 }])
+      Promise.resolve([{ id: 1 }, { id: 2 }, { id: 3 }])
     );
     dataSource.context = {
       dataSources: {
@@ -748,10 +758,10 @@ describe('ContentItemsModel', () => {
           },
         },
         Interactions: {
-          getNodeInteractionsForCurrentUser: jest.fn(({ nodeId }) =>
-            nodeId === createGlobalId(1, 'UniversalContentItem')
-              ? [{ id: '1' }]
-              : []
+          getInteractionsForCurrentUserAndNodes: jest.fn(() =>
+            Promise.resolve([
+              { foreignKey: createGlobalId(1, 'UniversalContentItem') },
+            ])
           ),
         },
       },
@@ -764,7 +774,7 @@ describe('ContentItemsModel', () => {
     expect(dataSource.get).toMatchSnapshot();
     expect(
       dataSource.context.dataSources.Interactions
-        .getNodeInteractionsForCurrentUser
+        .getInteractionsForCurrentUserAndNodes
     ).toMatchSnapshot();
   });
 
@@ -777,11 +787,11 @@ describe('ContentItemsModel', () => {
       dataSources: {
         Auth: { getCurrentPerson: () => ({ id: '1' }) },
         Interactions: {
-          getNodeInteractionsForCurrentUser: jest.fn(({ nodeId }) =>
-            nodeId === createGlobalId(1, 'UniversalContentItem') ||
-            nodeId === createGlobalId(2, 'UniversalContentItem')
-              ? [{ id: '1' }]
-              : []
+          getInteractionsForCurrentUserAndNodes: jest.fn(() =>
+            Promise.resolve([
+              { foreignKey: createGlobalId(1, 'UniversalContentItem') },
+              { foreignKey: createGlobalId(2, 'UniversalContentItem') },
+            ])
           ),
         },
       },
@@ -797,7 +807,7 @@ describe('ContentItemsModel', () => {
     expect(dataSource.get).toMatchSnapshot();
     expect(
       dataSource.context.dataSources.Interactions
-        .getNodeInteractionsForCurrentUser
+        .getInteractionsForCurrentUserAndNodes
     ).toMatchSnapshot();
   });
   it('gets a percentage for a content series, based on different past interactions', async () => {
@@ -809,7 +819,9 @@ describe('ContentItemsModel', () => {
       dataSources: {
         Auth: { getCurrentPerson: () => ({ id: '1' }) },
         Interactions: {
-          getNodeInteractionsForCurrentUser: jest.fn(() => Promise.resolve([])),
+          getInteractionsForCurrentUserAndNodes: jest.fn(() =>
+            Promise.resolve([])
+          ),
         },
       },
     };
@@ -823,7 +835,7 @@ describe('ContentItemsModel', () => {
     expect(dataSource.get).toMatchSnapshot();
     expect(
       dataSource.context.dataSources.Interactions
-        .getNodeInteractionsForCurrentUser
+        .getInteractionsForCurrentUserAndNodes
     ).toMatchSnapshot();
   });
   it('gets a percentage for a content series, even if a series has no children', async () => {
@@ -833,7 +845,9 @@ describe('ContentItemsModel', () => {
       dataSources: {
         Auth: { getCurrentPerson: () => ({ id: '1' }) },
         Interactions: {
-          getNodeInteractionsForCurrentUser: jest.fn(() => Promise.resolve([])),
+          getInteractionsForCurrentUserAndNodes: jest.fn(() =>
+            Promise.resolve([])
+          ),
         },
       },
     };
@@ -847,7 +861,7 @@ describe('ContentItemsModel', () => {
     expect(dataSource.get).toMatchSnapshot();
     expect(
       dataSource.context.dataSources.Interactions
-        .getNodeInteractionsForCurrentUser
+        .getInteractionsForCurrentUserAndNodes
     ).toMatchSnapshot();
   });
   it('returns null when getting a percentage for a content series without a user', async () => {
@@ -863,7 +877,9 @@ describe('ContentItemsModel', () => {
           },
         },
         Interactions: {
-          getNodeInteractionsForCurrentUser: jest.fn(() => Promise.resolve([])),
+          getInteractionsForCurrentUserAndNodes: jest.fn(() =>
+            Promise.resolve([])
+          ),
         },
       },
     };
@@ -877,7 +893,7 @@ describe('ContentItemsModel', () => {
     expect(dataSource.get).toMatchSnapshot();
     expect(
       dataSource.context.dataSources.Interactions
-        .getNodeInteractionsForCurrentUser
+        .getInteractionsForCurrentUserAndNodes
     ).toMatchSnapshot();
   });
   it('returns a hyphonated titled if any words are longer than 7 characters', async () => {

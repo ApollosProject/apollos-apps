@@ -10,6 +10,7 @@ ApollosConfig.loadJs({
     API_URL: 'https://apollosrock.newspring.cc/api',
     API_TOKEN: 'some-rock-token',
     IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
+    USE_PLUGIN: true,
   },
   APP: {
     DEEP_LINK_HOST: 'apolloschurch',
@@ -109,6 +110,53 @@ describe('Interactions', () => {
 
     expect(result).toEqual([{ id: 1 }]);
     expect(dataSource.get.mock.calls).toMatchSnapshot();
+  });
+  it('fetches interactions for multiple nodeIds', async () => {
+    const dataSource = new Interactions();
+    dataSource.initialize({ context });
+    dataSource.get = buildGetMock([{ Id: 1 }], ds);
+
+    const result = await dataSource.getInteractionsForCurrentUserAndNodes({
+      nodeIds: [
+        createGlobalId(1, 'UniversalContentItem'),
+        createGlobalId(2, 'UniversalContentItem'),
+        createGlobalId(3, 'UniversalContentItem'),
+      ],
+      actions: ['READ', 'COMPLETE'],
+    });
+
+    expect(result).toEqual([{ id: 1 }]);
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+  });
+  it('it calls different endpoints if USE_PLUGIN is false', async () => {
+    const dataSource = new Interactions();
+    ApollosConfig.loadJs({
+      ROCK: {
+        API_URL: 'https://apollosrock.newspring.cc/api',
+        API_TOKEN: 'some-rock-token',
+        IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
+        USE_PLUGIN: false,
+      },
+    });
+    dataSource.initialize({ context });
+    dataSource.get = buildGetMock([{ Id: 1 }], ds);
+
+    const result = await dataSource.getNodeInteractionsForCurrentUser({
+      nodeId: createGlobalId(1, 'UniversalContentItem'),
+      actions: ['READ', 'COMPLETE'],
+    });
+
+    expect(result).toEqual([{ id: 1 }]);
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+
+    ApollosConfig.loadJs({
+      ROCK: {
+        API_URL: 'https://apollosrock.newspring.cc/api',
+        API_TOKEN: 'some-rock-token',
+        IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
+        USE_PLUGIN: true,
+      },
+    });
   });
   it('fetches interactions without throwing an error for a logged out user', async () => {
     const dataSource = new Interactions();
