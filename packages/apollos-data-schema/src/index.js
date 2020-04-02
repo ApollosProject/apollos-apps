@@ -395,8 +395,8 @@ export const contentItemSchema = gql`
     parentChannel: ContentChannel
     theme: Theme
 
-    percentComplete: Float
-    upNext: ContentItem
+    percentComplete: Float @cacheControl(maxAge: 0)
+    upNext: ContentItem @cacheControl(maxAge: 0)
     scriptures: [Scripture]
   }
 
