@@ -16,14 +16,16 @@ const StyledChip = styled(
   'ui-kit.CardLabel'
 )(Chip);
 
-const Label = ({ title, icon, type, theme, ...props }) => (
+const Label = ({ title, icon, type, theme, IconComponent, ...props }) => (
   <ThemeMixin
     mixin={{
       type: get(theme, 'type', 'light').toLowerCase(), // not sure why we need toLowerCase
       colors: get(theme, 'colors', {}),
     }}
   >
-    <StyledChip title={title} icon={icon} type={type} {...props} />
+    <StyledChip title={title} type={type} {...props}>
+      {icon ? <IconComponent name={icon} /> : null}
+    </StyledChip>
   </ThemeMixin>
 );
 
@@ -35,11 +37,13 @@ Label.propTypes = {
     colors: PropTypes.shape({}),
   }),
   type: PropTypes.string,
+  IconComponent: PropTypes.func,
   ...Chip.propTypes,
 };
 
 Label.defaultProps = {
   type: 'overlay',
+  IconComponent: Icon,
 };
 
 Label.displayName = 'CardLabel';
