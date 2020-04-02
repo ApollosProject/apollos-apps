@@ -9,7 +9,9 @@ export ContentSingleFeaturesConnected, {
   ScriptureFeature,
   TextFeature,
 } from './ContentSingleFeaturesConnected';
-export HorizontalContentCardConnected from './HorizontalContentCardConnected';
+export HorizontalContentCardConnected, {
+  horizontalContentCardComponentMapper,
+} from './HorizontalContentCardConnected';
 export HorizontalContentSeriesFeedConnected, {
   GET_CONTENT_SERIES,
 } from './HorizontalContentSeriesFeedConnected';
