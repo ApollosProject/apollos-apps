@@ -1,6 +1,6 @@
 import Color from 'color';
 
-const light = ({ colors, alpha }) => ({
+const light = ({ barStyle, colors, alpha }) => ({
   colors: {
     text: {
       primary: colors.darkPrimary,
@@ -28,6 +28,7 @@ const light = ({ colors, alpha }) => ({
       tertiary: colors.tertiary,
     },
   },
+  barStyle,
 });
 
 export default light;

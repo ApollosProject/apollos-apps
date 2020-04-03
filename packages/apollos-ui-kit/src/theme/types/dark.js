@@ -26,6 +26,7 @@ const dark = ({ colors, alpha }) => ({
       tertiary: colors.tertiary,
     },
   },
+  barStyle: 'dark-content',
 });
 
 export default dark;
