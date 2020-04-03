@@ -328,7 +328,6 @@ exports[`The DateInput component should render with a displayValue 1`] = `
             "fontSize": 12,
             "justifyContent": "center",
             "lineHeight": 18,
-            "paddingLeft": null,
             "textAlign": "center",
           }
         }
@@ -654,7 +653,6 @@ exports[`The DateInput component should render with a label 1`] = `
             "fontSize": 12,
             "justifyContent": "center",
             "lineHeight": 18,
-            "paddingLeft": null,
             "textAlign": "center",
           }
         }
@@ -982,7 +980,6 @@ exports[`The DateInput component should render with a placeholder 1`] = `
             "fontSize": 12,
             "justifyContent": "center",
             "lineHeight": 18,
-            "paddingLeft": null,
             "textAlign": "center",
           }
         }
@@ -1593,7 +1590,6 @@ exports[`The DateInput component should render without a maximum date 1`] = `
             "fontSize": 12,
             "justifyContent": "center",
             "lineHeight": 18,
-            "paddingLeft": null,
             "textAlign": "center",
           }
         }
