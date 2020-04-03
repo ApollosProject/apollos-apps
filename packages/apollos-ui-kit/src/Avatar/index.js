@@ -121,8 +121,5 @@ Avatar.propTypes = {
 
 export default withTheme(({ theme, size }) => ({
   themeSize: get(theme.sizing.avatar, size, theme.sizing.avatar.small),
-  iconFill:
-    theme.type === 'light'
-      ? theme.colors.action.primary
-      : theme.colors.action.secondary,
+  iconFill: theme.colors.action.primary,
 }))(Avatar);
