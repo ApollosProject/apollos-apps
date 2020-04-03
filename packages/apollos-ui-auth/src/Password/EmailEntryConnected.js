@@ -10,7 +10,10 @@ import Entry from '../Entry';
 class EmailEntryConnected extends Component {
   static propTypes = {
     alternateLoginText: PropTypes.string,
-    BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+    BackgroundComponent: PropTypes.oneOfType([
+      PropTypes.element,
+      PropTypes.elementType,
+    ]),
     // Custom component to be rendered. Defaults to Entry
     Component: PropTypes.oneOfType([
       PropTypes.node,
