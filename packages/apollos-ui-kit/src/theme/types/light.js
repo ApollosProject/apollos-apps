@@ -11,6 +11,7 @@ const light = ({ barStyle, colors, alpha }) => ({
     background: {
       screen: colors.screen,
       paper: colors.paper,
+      secondary: colors.paper,
       accent: Color(colors.lightTertiary)
         .fade(alpha.medium)
         .string(),

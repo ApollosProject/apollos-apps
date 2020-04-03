@@ -11,6 +11,9 @@ const dark = ({ colors, alpha }) => ({
     background: {
       screen: colors.black,
       paper: colors.darkPrimary,
+      secondary: Color(colors.darkTertiary)
+        .fade(alpha.medium)
+        .string(),
       accent: Color(colors.darkTertiary)
         .fade(alpha.medium)
         .string(),
