@@ -23,8 +23,10 @@ const Label = ({ title, icon, type, theme, IconComponent, ...props }) => (
       colors: get(theme, 'colors', {}),
     }}
   >
-    <StyledChip title={title} type={type} {...props}>
-      {IconComponent || icon ? <Icon name={icon} /> : null}
+    <StyledChip title={title} type={type} icon={icon} {...props}>
+      {
+        IconComponent // || icon ? <Icon name={icon} /> : null}
+      }
     </StyledChip>
   </ThemeMixin>
 );
