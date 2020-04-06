@@ -24,7 +24,7 @@ const Label = ({ title, icon, type, theme, IconComponent, ...props }) => (
     }}
   >
     <StyledChip title={title} type={type} icon={icon} {...props}>
-      {IconComponent}
+      {IconComponent ? <IconComponent /> : null}
     </StyledChip>
   </ThemeMixin>
 );
