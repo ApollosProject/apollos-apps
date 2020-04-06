@@ -13,8 +13,9 @@ import GET_LIKED_CONTENT from './getLikedContent';
 /** A FeedView wrapped in a query to pull content data. */
 class LikedContentFeedConnected extends PureComponent {
   /** Function for React Navigation to set information in the header. */
-  static navigationOptions = () => ({
+  static navigationOptions = (props) => ({
     title: 'Your Likes',
+    headerStyle: [{ backgroundColor: props.screenProps.headerBackgroundColor }],
   });
 
   static propTypes = {

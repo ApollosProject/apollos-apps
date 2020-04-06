@@ -10,6 +10,10 @@ import Entry from '../Entry';
 class PhoneEntryConnected extends Component {
   static propTypes = {
     alternateLoginText: PropTypes.string,
+    BackgroundComponent: PropTypes.oneOfType([
+      PropTypes.element,
+      PropTypes.elementType,
+    ]),
     // Custom component to be rendered. Defaults to Entry
     Component: PropTypes.oneOfType([
       PropTypes.node,
@@ -78,6 +82,7 @@ class PhoneEntryConnected extends Component {
             onSubmit={this.handleOnSubmit(handleCheckUserExists)}
           >
             {({
+              BackgroundComponent,
               setFieldValue,
               handleSubmit,
               values,
@@ -87,6 +92,7 @@ class PhoneEntryConnected extends Component {
               errors,
             }) => (
               <this.props.Component
+                BackgroundComponent={BackgroundComponent}
                 disabled={isSubmitting || !isValid}
                 errors={touched.phone && errors}
                 isLoading={isSubmitting}

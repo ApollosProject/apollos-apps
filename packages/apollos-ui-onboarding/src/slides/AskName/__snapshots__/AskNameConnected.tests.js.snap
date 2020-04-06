@@ -358,7 +358,7 @@ Array [
                       hasError={false}
                       style={
                         Object {
-                          "backgroundColor": "#00676D",
+                          "backgroundColor": "#17B582",
                           "bottom": 0,
                           "height": 0.5,
                         }
@@ -519,7 +519,7 @@ Array [
                       hasError={false}
                       style={
                         Object {
-                          "backgroundColor": "#00676D",
+                          "backgroundColor": "#17B582",
                           "bottom": 0,
                           "height": 0.5,
                         }
@@ -1093,7 +1093,7 @@ Array [
                       hasError={false}
                       style={
                         Object {
-                          "backgroundColor": "#00676D",
+                          "backgroundColor": "#17B582",
                           "bottom": 0,
                           "height": 0.5,
                         }
@@ -1254,7 +1254,7 @@ Array [
                       hasError={false}
                       style={
                         Object {
-                          "backgroundColor": "#00676D",
+                          "backgroundColor": "#17B582",
                           "bottom": 0,
                           "height": 0.5,
                         }
@@ -1718,7 +1718,7 @@ Array [
                       hasError={false}
                       style={
                         Object {
-                          "backgroundColor": "#00676D",
+                          "backgroundColor": "#17B582",
                           "bottom": 0,
                           "height": 0.5,
                         }
@@ -1879,7 +1879,7 @@ Array [
                       hasError={false}
                       style={
                         Object {
-                          "backgroundColor": "#00676D",
+                          "backgroundColor": "#17B582",
                           "bottom": 0,
                           "height": 0.5,
                         }

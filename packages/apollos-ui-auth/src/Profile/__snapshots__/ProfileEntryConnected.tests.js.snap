@@ -422,7 +422,7 @@ exports[`ui-auth/Profile/ProfileEntryConnected should render 1`] = `
                       hasError={false}
                       style={
                         Object {
-                          "backgroundColor": "#00676D",
+                          "backgroundColor": "#17B582",
                           "bottom": 0,
                           "height": 0.5,
                         }
@@ -583,7 +583,7 @@ exports[`ui-auth/Profile/ProfileEntryConnected should render 1`] = `
                       hasError={false}
                       style={
                         Object {
-                          "backgroundColor": "#00676D",
+                          "backgroundColor": "#17B582",
                           "bottom": 0,
                           "height": 0.5,
                         }

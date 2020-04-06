@@ -56,6 +56,12 @@ class Location extends PureComponent {
         <ButtonLink onPress={() => navigation.goBack()}>Back</ButtonLink>
       </PaddedView>
     ),
+    headerStyle: {
+      backgroundColor: navigation.getParam('backgroundColor', []),
+    },
+    headerTitleStyle: {
+      color: navigation.getParam('headerTitleColor', []),
+    },
   });
 
   state = {

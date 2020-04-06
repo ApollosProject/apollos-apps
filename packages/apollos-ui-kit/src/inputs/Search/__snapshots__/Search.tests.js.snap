@@ -142,6 +142,7 @@ exports[`The Search Input component should render 1`] = `
     <TextInput
       allowFontScaling={true}
       cancelButtonOffset={1000}
+      color="#303030"
       editable={true}
       isFocused={false}
       onChangeText={[Function]}
@@ -514,6 +515,7 @@ exports[`The Search Input component should render as disabled 1`] = `
     <TextInput
       allowFontScaling={true}
       cancelButtonOffset={1000}
+      color="#303030"
       editable={false}
       isFocused={false}
       onChangeText={[Function]}
@@ -885,6 +887,7 @@ exports[`The Search Input component should render with a custom cancelButtonText
     <TextInput
       allowFontScaling={true}
       cancelButtonOffset={1000}
+      color="#303030"
       editable={true}
       isFocused={false}
       onChangeText={[Function]}
@@ -1256,6 +1259,7 @@ exports[`The Search Input component should render with a custom placeholder 1`] 
     <TextInput
       allowFontScaling={true}
       cancelButtonOffset={1000}
+      color="#303030"
       editable={true}
       isFocused={false}
       onChangeText={[Function]}
@@ -1627,6 +1631,7 @@ exports[`The Search Input component should render with a custom screenBackground
     <TextInput
       allowFontScaling={true}
       cancelButtonOffset={1000}
+      color="#303030"
       editable={true}
       isFocused={false}
       onChangeText={[Function]}

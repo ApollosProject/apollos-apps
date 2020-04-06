@@ -40,10 +40,14 @@ exports[`ui-auth/Password/EmailEntryConnected should render 1`] = `
     }
     style={
       Object {
+        "bottom": 0,
         "flex": 1,
         "height": "100%",
+        "left": 0,
         "position": "absolute",
         "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
       }
     }
   />
@@ -442,7 +446,7 @@ exports[`ui-auth/Password/EmailEntryConnected should render 1`] = `
                               hasError={false}
                               style={
                                 Object {
-                                  "backgroundColor": "#00676D",
+                                  "backgroundColor": "#17B582",
                                   "bottom": 0,
                                   "height": 0.5,
                                 }

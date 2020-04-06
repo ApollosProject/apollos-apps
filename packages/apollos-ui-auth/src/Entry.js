@@ -31,9 +31,9 @@ import {
   TitleText,
 } from './styles';
 
-const FullScreenImage = styled({
+const FullScreenGradientBackground = styled({
+  ...StyleSheet.absoluteFillObject,
   resizeMode: 'cover',
-  position: 'absolute',
 })(BackgroundView);
 
 const Entry = ({
@@ -66,7 +66,11 @@ const Entry = ({
         Platform.OS === 'android' ? StatusBar.currentHeight : 0
       }
     >
-      <BackgroundComponent />
+      {React.isValidElement(BackgroundComponent) ? (
+        BackgroundComponent
+      ) : (
+        <BackgroundComponent />
+      )}
       <FlexedSafeAreaView>
         <ScrollView keyboardShouldPersistTaps="always">
           <PaddedView>
@@ -162,7 +166,7 @@ Entry.defaultProps = {
   authTitleText: 'Have we met?',
   promptText:
     'Sign in for a personalized experience that helps you grow and connect with God.',
-  BackgroundComponent: FullScreenImage,
+  BackgroundComponent: <FullScreenGradientBackground />,
   alternateLogin: false,
 };
 

@@ -21,6 +21,10 @@ import * as types from './types';
  * For more detail on how to customize a theme, see (TODO: should be on storybook)
  */
 
+// Bar Style
+// Control the status bar appearance
+export const barStyle = 'light-content';
+
 // Base colors.
 // These get used by theme types (see /types directory) to color
 // specific parts of the interface. For more control on how certain

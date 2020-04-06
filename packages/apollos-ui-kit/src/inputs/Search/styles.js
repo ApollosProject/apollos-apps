@@ -39,6 +39,7 @@ const LoopIcon = withTheme(({ theme, isFocused }) => ({
 const Input = withTheme(({ theme, isFocused, cancelButtonOffset }) => ({
   placeholderTextColor: theme.colors.text.tertiary,
   selectionColor: theme.colors.action.secondary,
+  color: theme.colors.text.primary,
   style: {
     flexGrow: 1, // fixes weird text behind icon (ios) and placeholder clipping (android) bugs
     height: theme.helpers.rem(2.5), // we have to have a height to make this display correctly. using typographic unit to scale with text size.
