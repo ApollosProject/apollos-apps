@@ -24,7 +24,11 @@ const Label = ({ title, icon, type, theme, IconComponent, ...props }) => (
     }}
   >
     <StyledChip title={title} type={type} icon={icon} {...props}>
-      {IconComponent ? <IconComponent /> : null}
+      {React.isValidElement(IconComponent) || !IconComponent ? (
+        IconComponent
+      ) : (
+        <IconComponent />
+      )}
     </StyledChip>
   </ThemeMixin>
 );
