@@ -40,10 +40,14 @@ exports[`The Auth Entry component should render 1`] = `
     }
     style={
       Object {
+        "bottom": 0,
         "flex": 1,
         "height": "100%",
+        "left": 0,
         "position": "absolute",
         "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
       }
     }
   />
@@ -359,7 +363,7 @@ exports[`The Auth Entry component should render 1`] = `
                               hasError={false}
                               style={
                                 Object {
-                                  "backgroundColor": "#00676D",
+                                  "backgroundColor": "#17B582",
                                   "bottom": 0,
                                   "height": 0.5,
                                 }
@@ -432,10 +436,14 @@ exports[`The Auth Entry component should render a custom policyInfo text 1`] = `
     }
     style={
       Object {
+        "bottom": 0,
         "flex": 1,
         "height": "100%",
+        "left": 0,
         "position": "absolute",
         "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
       }
     }
   />
@@ -751,7 +759,7 @@ exports[`The Auth Entry component should render a custom policyInfo text 1`] = `
                               hasError={false}
                               style={
                                 Object {
-                                  "backgroundColor": "#00676D",
+                                  "backgroundColor": "#17B582",
                                   "bottom": 0,
                                   "height": 0.5,
                                 }
@@ -826,10 +834,14 @@ exports[`The Auth Entry component should render as disabled 1`] = `
     }
     style={
       Object {
+        "bottom": 0,
         "flex": 1,
         "height": "100%",
+        "left": 0,
         "position": "absolute",
         "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
       }
     }
   />
@@ -1146,7 +1158,7 @@ exports[`The Auth Entry component should render as disabled 1`] = `
                               hasError={false}
                               style={
                                 Object {
-                                  "backgroundColor": "#00676D",
+                                  "backgroundColor": "#17B582",
                                   "bottom": 0,
                                   "height": 0.5,
                                 }
@@ -1280,10 +1292,14 @@ exports[`The Auth Entry component should render in a loading state 1`] = `
     }
     style={
       Object {
+        "bottom": 0,
         "flex": 1,
         "height": "100%",
+        "left": 0,
         "position": "absolute",
         "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
       }
     }
   />
@@ -1600,7 +1616,7 @@ exports[`The Auth Entry component should render in a loading state 1`] = `
                               hasError={false}
                               style={
                                 Object {
-                                  "backgroundColor": "#00676D",
+                                  "backgroundColor": "#17B582",
                                   "bottom": 0,
                                   "height": 0.5,
                                 }
@@ -1728,10 +1744,14 @@ exports[`The Auth Entry component should render in a next button 1`] = `
     }
     style={
       Object {
+        "bottom": 0,
         "flex": 1,
         "height": "100%",
+        "left": 0,
         "position": "absolute",
         "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
       }
     }
   />
@@ -2048,7 +2068,7 @@ exports[`The Auth Entry component should render in a next button 1`] = `
                               hasError={false}
                               style={
                                 Object {
-                                  "backgroundColor": "#00676D",
+                                  "backgroundColor": "#17B582",
                                   "bottom": 0,
                                   "height": 0.5,
                                 }
@@ -2182,10 +2202,14 @@ exports[`The Auth Entry component should render in an error state 1`] = `
     }
     style={
       Object {
+        "bottom": 0,
         "flex": 1,
         "height": "100%",
+        "left": 0,
         "position": "absolute",
         "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
       }
     }
   />
@@ -2501,7 +2525,7 @@ exports[`The Auth Entry component should render in an error state 1`] = `
                               hasError={false}
                               style={
                                 Object {
-                                  "backgroundColor": "#00676D",
+                                  "backgroundColor": "#17B582",
                                   "bottom": 0,
                                   "height": 0.5,
                                 }
@@ -2574,10 +2598,14 @@ exports[`The Auth Entry component should render with a custom alternateLoginText
     }
     style={
       Object {
+        "bottom": 0,
         "flex": 1,
         "height": "100%",
+        "left": 0,
         "position": "absolute",
         "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
       }
     }
   />
@@ -2949,7 +2977,7 @@ exports[`The Auth Entry component should render with a custom alternateLoginText
                               hasError={false}
                               style={
                                 Object {
-                                  "backgroundColor": "#00676D",
+                                  "backgroundColor": "#17B582",
                                   "bottom": 0,
                                   "height": 0.5,
                                 }
@@ -3022,10 +3050,14 @@ exports[`The Auth Entry component should render with a custom authTitleText 1`] 
     }
     style={
       Object {
+        "bottom": 0,
         "flex": 1,
         "height": "100%",
+        "left": 0,
         "position": "absolute",
         "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
       }
     }
   />
@@ -3341,7 +3373,7 @@ exports[`The Auth Entry component should render with a custom authTitleText 1`] 
                               hasError={false}
                               style={
                                 Object {
-                                  "backgroundColor": "#00676D",
+                                  "backgroundColor": "#17B582",
                                   "bottom": 0,
                                   "height": 0.5,
                                 }
@@ -3414,10 +3446,14 @@ exports[`The Auth Entry component should render with a custom promptText 1`] = `
     }
     style={
       Object {
+        "bottom": 0,
         "flex": 1,
         "height": "100%",
+        "left": 0,
         "position": "absolute",
         "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
       }
     }
   />
@@ -3733,7 +3769,7 @@ exports[`The Auth Entry component should render with a custom promptText 1`] = `
                               hasError={false}
                               style={
                                 Object {
-                                  "backgroundColor": "#00676D",
+                                  "backgroundColor": "#17B582",
                                   "bottom": 0,
                                   "height": 0.5,
                                 }
@@ -3806,10 +3842,14 @@ exports[`The Auth Entry component should render with a custom tabTitle 1`] = `
     }
     style={
       Object {
+        "bottom": 0,
         "flex": 1,
         "height": "100%",
+        "left": 0,
         "position": "absolute",
         "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
       }
     }
   />
@@ -4127,7 +4167,7 @@ exports[`The Auth Entry component should render with a custom tabTitle 1`] = `
                               hasError={false}
                               style={
                                 Object {
-                                  "backgroundColor": "#00676D",
+                                  "backgroundColor": "#17B582",
                                   "bottom": 0,
                                   "height": 0.5,
                                 }
@@ -4200,10 +4240,14 @@ exports[`The Auth Entry component should render with a inputAutoComplete as tel 
     }
     style={
       Object {
+        "bottom": 0,
         "flex": 1,
         "height": "100%",
+        "left": 0,
         "position": "absolute",
         "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
       }
     }
   />
@@ -4521,7 +4565,7 @@ exports[`The Auth Entry component should render with a inputAutoComplete as tel 
                               hasError={false}
                               style={
                                 Object {
-                                  "backgroundColor": "#00676D",
+                                  "backgroundColor": "#17B582",
                                   "bottom": 0,
                                   "height": 0.5,
                                 }
@@ -4594,10 +4638,14 @@ exports[`The Auth Entry component should render with a inputLabel Phone Number 1
     }
     style={
       Object {
+        "bottom": 0,
         "flex": 1,
         "height": "100%",
+        "left": 0,
         "position": "absolute",
         "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
       }
     }
   />
@@ -4915,7 +4963,7 @@ exports[`The Auth Entry component should render with a inputLabel Phone Number 1
                               hasError={false}
                               style={
                                 Object {
-                                  "backgroundColor": "#00676D",
+                                  "backgroundColor": "#17B582",
                                   "bottom": 0,
                                   "height": 0.5,
                                 }
@@ -4988,10 +5036,14 @@ exports[`The Auth Entry component should render with a inputType phone 1`] = `
     }
     style={
       Object {
+        "bottom": 0,
         "flex": 1,
         "height": "100%",
+        "left": 0,
         "position": "absolute",
         "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
       }
     }
   />
@@ -5309,7 +5361,7 @@ exports[`The Auth Entry component should render with a inputType phone 1`] = `
                               hasError={false}
                               style={
                                 Object {
-                                  "backgroundColor": "#00676D",
+                                  "backgroundColor": "#17B582",
                                   "bottom": 0,
                                   "height": 0.5,
                                 }
@@ -5382,10 +5434,14 @@ exports[`The Auth Entry component should render with a value 1`] = `
     }
     style={
       Object {
+        "bottom": 0,
         "flex": 1,
         "height": "100%",
+        "left": 0,
         "position": "absolute",
         "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
       }
     }
   />
@@ -5701,7 +5757,7 @@ exports[`The Auth Entry component should render with a value 1`] = `
                               hasError={false}
                               style={
                                 Object {
-                                  "backgroundColor": "#00676D",
+                                  "backgroundColor": "#17B582",
                                   "bottom": 0,
                                   "height": 0.5,
                                 }
@@ -5774,10 +5830,14 @@ exports[`The Auth Entry component should render with an alternate login option w
     }
     style={
       Object {
+        "bottom": 0,
         "flex": 1,
         "height": "100%",
+        "left": 0,
         "position": "absolute",
         "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
       }
     }
   />
@@ -6147,7 +6207,7 @@ exports[`The Auth Entry component should render with an alternate login option w
                               hasError={false}
                               style={
                                 Object {
-                                  "backgroundColor": "#00676D",
+                                  "backgroundColor": "#17B582",
                                   "bottom": 0,
                                   "height": 0.5,
                                 }
@@ -6220,10 +6280,14 @@ exports[`The Auth Entry component should render with keyboard vertical offset fo
     }
     style={
       Object {
+        "bottom": 0,
         "flex": 1,
         "height": "100%",
+        "left": 0,
         "position": "absolute",
         "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
       }
     }
   />
@@ -6551,7 +6615,7 @@ exports[`The Auth Entry component should render with keyboard vertical offset fo
                               hasError={false}
                               style={
                                 Object {
-                                  "backgroundColor": "#00676D",
+                                  "backgroundColor": "#17B582",
                                   "bottom": 0,
                                   "height": 0.5,
                                 }

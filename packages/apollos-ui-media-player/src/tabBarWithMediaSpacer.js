@@ -7,10 +7,8 @@ import { styled } from '@apollosproject/ui-kit';
 import MediaPlayerSpacer from './MediaPlayer/MediaPlayerSpacer';
 import { GET_MEDIA_PLAYER_VISIBILITY } from './MediaPlayer/queries';
 
-const TabBarWrapper = styled(({ theme, mediaPlayerIsVisible }) => ({
-  backgroundColor: mediaPlayerIsVisible
-    ? theme.colors.screen
-    : theme.colors.paper,
+const TabBarWrapper = styled(({ theme }) => ({
+  backgroundColor: theme.colors.background.paper,
   ...Platform.select(theme.shadows.default),
 }))(View);
 

@@ -68,7 +68,9 @@ const enhance = compose(
           secondary: textColor,
           tertiary: textColor,
         },
-        screen: fill,
+        background: {
+          screen: fill,
+        },
       },
     };
   }),

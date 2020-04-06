@@ -58,7 +58,7 @@ const Controls = styled(({ theme }) => ({
   justifyContent: 'space-between',
   alignItems: 'center',
   paddingRight: theme.sizing.baseUnit * 0.75,
-  backgroundColor: theme.colors.white,
+  backgroundColor: theme.colors.background.secondary,
 }))(FlexedView);
 
 const TrackInfo = styled(({ theme }) => ({
