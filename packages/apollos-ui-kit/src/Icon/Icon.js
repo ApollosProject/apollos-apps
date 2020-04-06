@@ -33,11 +33,11 @@ const Icon = enhance(
   ({ name, size, iconInput, isLoading = false, ...otherProps }) => {
     const Icons = { ...uikitIcons, ...iconInput };
     const IconComponent = Icons[pascalCase(name)];
-    return (
+    return name ? (
       <Placeholder.Media size={size} hasRadius onReady={!isLoading}>
         <IconComponent size={size} {...otherProps} />
       </Placeholder.Media>
-    );
+    ) : null;
   }
 );
 
@@ -47,7 +47,7 @@ const namePropValidator = (props, propName, componentName) => {
     kebabCase
   );
 
-  if (!icons.includes(props.name)) {
+  if (!props.name || !icons.includes(props.name)) {
     // eslint-disable-next-line no-console
     return new Error(
       `Invalid prop \`${propName}\` of value \`${

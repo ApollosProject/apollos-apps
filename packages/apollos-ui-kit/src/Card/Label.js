@@ -24,7 +24,7 @@ const Label = ({ title, icon, type, theme, IconComponent, ...props }) => (
     }}
   >
     <StyledChip title={title} type={type} {...props}>
-      {icon ? <IconComponent name={icon} /> : null}
+      {IconComponent || icon ? <Icon name={icon} /> : null}
     </StyledChip>
   </ThemeMixin>
 );
@@ -37,13 +37,15 @@ Label.propTypes = {
     colors: PropTypes.shape({}),
   }),
   type: PropTypes.string,
-  IconComponent: PropTypes.func,
+  IconComponent: PropTypes.oneOfType([
+    PropTypes.elementType,
+    PropTypes.element,
+  ]),
   ...Chip.propTypes,
 };
 
 Label.defaultProps = {
   type: 'overlay',
-  IconComponent: Icon,
 };
 
 Label.displayName = 'CardLabel';
