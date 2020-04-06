@@ -1,3 +1,33 @@
+v1.3.1-beta.0: April 6, 2020
+
+- Adds Interact when Loaded Component (#1395) (51826317)
+- Adds export for card mapper function (#1404) (21f28c56)
+- Adds horizontal card list feature (#1401) (ab942980)
+- Adds Connected "Up Next" button (#1398) (79085b6f)
+- Adds VerticalCardListFeature (#1396) (b75278a3)
+- Adds percentCompleted to ContentSeriesContentItem (#1389) (412bdb6e)
+- Adds CampaignItems Algorithm (#1377) (84fcaeca)
+- Adds Safer handling of getting horizontal content item fetch more results (#1390) (85bc5afe)
+- Adds 'up next' support to GraphQL API (#1386) (01e03f38)
+- Adds Interactions schema (#1374) (1fc1478d)
+- Adds @apollosproject/eslint-config package (#1380) (a0762fab)
+- Adds yalc for api linking (#1375) (7e7bdbc4)
+
+- Allows Passing Custom Chip Children (#1394) (3adf7024)
+- Improves interaction performance using Apollos Plugin (#1399) (6d37e012)
+- Removes upNext and percentComplete from cache. (#1400) (bab4733f)
+- Exports RockAuthedWebView (#1393) (7f0b8ec1)
+- Allows Custom Liked Feed (#1391) (6b284611)
+- Moves User Web View to Packages (#1383) (21d8f6bf)
+- Decreases the cache time for the livestreams query (#1388) (ed1579e6)
+- Upgrades to Node 10 (#1384) (d114e1c5)
+- Updates apollo-server-core so that we can use graphql 14.0.0 (#1381) (36aeb123)
+- Allows Configurable Browser (#1354) (c09650e6)
+
+- Fixes Dark theme (#1403) (739df1d8)
+- Fixes Empty Cursor not having count of zero (#1402) (5d677c31)
+- Fixes issue with live video when duration is detected as 0 on the live player (#1387) (ad91c7ad)
+
 v1.3.0: March 5, 2020
 
 - Splits Apolloschurchapp and apollos-church-api into separate repo (#1368) (8c6842f3)
