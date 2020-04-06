@@ -1,3 +1,5 @@
+import { get } from 'lodash';
+
 export default {
   WeekendContentItem: {
     features: (root, args, { dataSources: { ContentItem } }) =>
@@ -19,10 +21,11 @@ export default {
   },
   CardListItem: {
     coverImage: ({ image }) => image,
-    title: ({ title }, { hyphenated }, { dataSources }) =>
-      hyphenated
-        ? dataSources.ContentItem.createHyphenatedString({ text: title })
-        : title,
+    title: ({ title }, { hyphenated }, { dataSources: { ContentItem } }) =>
+      hyphenated ? ContentItem.createHyphenatedString({ text: title }) : title,
+    hasAction: (root, args, { dataSources: { ContentItem } }) =>
+      !!get(ContentItem.getVideos(root.relatedNode), '[0].sources[0]', null),
+    labelText: ({ subtitle }) => subtitle,
   },
   ScriptureFeature: {
     scriptures: (
