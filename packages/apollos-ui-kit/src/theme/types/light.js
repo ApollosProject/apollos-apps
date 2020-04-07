@@ -18,8 +18,8 @@ const light = ({ barStyle, colors, alpha }) => ({
       inactive: colors.lightTertiary,
     },
     shadows: {
-      default: Color(colors.darkTertiary)
-        .fade(alpha.low)
+      default: Color(colors.black)
+        .fade(0.06)
         .string(),
     },
     action: {
