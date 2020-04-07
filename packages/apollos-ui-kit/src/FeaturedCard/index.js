@@ -66,8 +66,6 @@ const Label = withTheme(
       ? {
           title: labelText || 'Live',
           type: 'secondary',
-          icon: 'live-dot',
-          iconSize: theme.helpers.rem(0.4375), // using our typographic size unit based on fontSize so that the icon scales correctly with font size changes.
         }
       : {
           title: labelText,
@@ -79,6 +77,12 @@ const Label = withTheme(
     },
   })
 )(CardLabel);
+
+const LiveIcon = withTheme(({ theme }) => ({
+  name: 'live-dot',
+  size: theme.helpers.rem(0.4375),
+  style: { marginRight: theme.sizing.baseUnit * 0.5 },
+}))(Icon);
 
 const renderLabel = (summary, LabelComponent, labelText, isLive, theme) => {
   let ComponentToRender = null;
@@ -92,6 +96,7 @@ const renderLabel = (summary, LabelComponent, labelText, isLive, theme) => {
         hasSummary={summary}
         isLive={isLive}
         labelText={labelText}
+        IconComponent={isLive ? LiveIcon : null}
       />
     );
   }

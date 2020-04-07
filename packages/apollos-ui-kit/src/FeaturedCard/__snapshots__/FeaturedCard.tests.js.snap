@@ -2090,51 +2090,87 @@ exports[`FeaturedCard should should render as isLive 1`] = `
           }
         }
       >
-        <View
-          hasTitle={true}
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight={7}
+          bbWidth={7}
+          height={7}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
           style={
-            Object {
-              "paddingRight": 8,
-            }
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {
+                "marginRight": 8,
+              },
+              null,
+              Object {
+                "flex": 0,
+                "height": 7,
+                "width": 7,
+              },
+            ]
           }
+          vbHeight={24}
+          vbWidth={24}
+          width={7}
         >
-          <RNSVGSvgView
-            align="xMidYMid"
-            bbHeight={7}
-            bbWidth={7}
-            height={7}
-            meetOrSlice={0}
-            minX={0}
-            minY={0}
-            style={
+          <RNSVGGroup
+            fill={
               Array [
-                Object {
-                  "backgroundColor": "transparent",
-                  "borderWidth": 0,
-                },
-                Object {},
-                null,
-                Object {
-                  "flex": 0,
-                  "height": 7,
-                  "width": 7,
-                },
+                0,
+                4278190080,
               ]
             }
-            vbHeight={24}
-            vbWidth={24}
-            width={7}
+            fillOpacity={1}
+            fillRule={1}
+            font={Object {}}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            originX={0}
+            originY={0}
+            propList={Array []}
+            rotation={0}
+            scaleX={1}
+            scaleY={1}
+            skewX={0}
+            skewY={0}
+            stroke={null}
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+            vectorEffect={0}
+            x={0}
+            y={0}
           >
-            <RNSVGGroup
+            <RNSVGCircle
+              cx="12"
+              cy="12"
               fill={
                 Array [
                   0,
-                  4278190080,
+                  4294967295,
                 ]
               }
               fillOpacity={1}
               fillRule={1}
-              font={Object {}}
               matrix={
                 Array [
                   1,
@@ -2148,7 +2184,12 @@ exports[`FeaturedCard should should render as isLive 1`] = `
               opacity={1}
               originX={0}
               originY={0}
-              propList={Array []}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              r="12"
               rotation={0}
               scaleX={1}
               scaleY={1}
@@ -2165,57 +2206,9 @@ exports[`FeaturedCard should should render as isLive 1`] = `
               vectorEffect={0}
               x={0}
               y={0}
-            >
-              <RNSVGCircle
-                cx="12"
-                cy="12"
-                fill={
-                  Array [
-                    0,
-                    4294967295,
-                  ]
-                }
-                fillOpacity={1}
-                fillRule={1}
-                matrix={
-                  Array [
-                    1,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                  ]
-                }
-                opacity={1}
-                originX={0}
-                originY={0}
-                propList={
-                  Array [
-                    "fill",
-                  ]
-                }
-                r="12"
-                rotation={0}
-                scaleX={1}
-                scaleY={1}
-                skewX={0}
-                skewY={0}
-                stroke={null}
-                strokeDasharray={null}
-                strokeDashoffset={null}
-                strokeLinecap={0}
-                strokeLinejoin={0}
-                strokeMiterlimit={4}
-                strokeOpacity={1}
-                strokeWidth={1}
-                vectorEffect={0}
-                x={0}
-                y={0}
-              />
-            </RNSVGGroup>
-          </RNSVGSvgView>
-        </View>
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
         <Text
           style={
             Object {
