@@ -682,6 +682,7 @@ Object {
     },
   ],
   "id": "VerticalCardListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+  "isFeatured": false,
   "subtitle": "It's great!",
   "title": "Test Action List",
 }
@@ -860,6 +861,7 @@ Array [
       },
     ],
     "id": "VerticalCardListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+    "isFeatured": false,
     "subtitle": "Explore what God calls you to today",
     "title": "FOR YOU",
   },

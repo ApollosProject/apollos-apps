@@ -716,6 +716,7 @@ export const featuresSchema = gql`
 
     title: String
     subtitle: String
+    isFeatured: Boolean
     cards: [CardListItem]
   }
 
