@@ -19,7 +19,7 @@ const light = ({ barStyle, colors, alpha }) => ({
     },
     shadows: {
       default: Color(colors.black)
-        .fade(0.06)
+        .fade(alpha.high)
         .string(),
     },
     action: {
