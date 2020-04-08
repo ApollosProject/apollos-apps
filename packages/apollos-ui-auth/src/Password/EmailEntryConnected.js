@@ -71,6 +71,8 @@ class EmailEntryConnected extends Component {
   };
 
   render() {
+    const EmailEntryComponent = this.props.Component;
+
     return (
       <LoginConsumer>
         {({ handleCheckUserExists }) => (
@@ -89,7 +91,7 @@ class EmailEntryConnected extends Component {
               touched,
               errors,
             }) => (
-              <this.props.Component
+              <EmailEntryComponent
                 BackgroundComponent={BackgroundComponent}
                 disabled={isSubmitting || !isValid}
                 errors={touched.email && errors}
