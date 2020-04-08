@@ -43,8 +43,10 @@ class LocationFinderConnected extends PureComponent {
               const { onPressPrimary, ...otherProps } = this.props;
               const showNextBtn = !!(campus && this.state.locationPermission);
 
+              const { Component: MapViewComponent } = this.props;
+
               return (
-                <this.props.Component
+                <MapViewComponent
                   onPressButton={async () => {
                     await requestLocation();
                     await this.checkPermission();

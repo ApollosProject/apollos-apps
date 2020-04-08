@@ -48,6 +48,8 @@ class VerificationConnected extends Component {
   };
 
   render() {
+    const VerificationComponent = this.props.Component;
+
     return (
       <LoginConsumer>
         {({ handleSubmitLogin }) => (
@@ -65,7 +67,7 @@ class VerificationConnected extends Component {
               touched,
               errors,
             }) => (
-              <this.props.Component
+              <VerificationComponent
                 errors={touched.code && errors}
                 disabled={isSubmitting || !isValid}
                 isLoading={isSubmitting}
