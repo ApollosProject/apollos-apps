@@ -16,6 +16,7 @@ const StyledCard = compose(
       ? {
           // provides spacing between cards also fixes android shadow needing "space" to render into
           margin: theme.sizing.baseUnit / 2,
+          marginBottom: theme.sizing.baseUnit * 0.75,
         }
       : {
           marginHorizontal: theme.sizing.baseUnit,
