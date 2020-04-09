@@ -73,6 +73,8 @@ class PhoneEntryConnected extends Component {
   };
 
   render() {
+    const PhoneEntryComponent = this.props.Component;
+
     return (
       <LoginConsumer>
         {({ handleCheckUserExists }) => (
@@ -91,7 +93,7 @@ class PhoneEntryConnected extends Component {
               touched,
               errors,
             }) => (
-              <this.props.Component
+              <PhoneEntryComponent
                 BackgroundComponent={BackgroundComponent}
                 disabled={isSubmitting || !isValid}
                 errors={touched.phone && errors}
