@@ -8,13 +8,13 @@ exports[`ContentCard renders Basic card, with Image 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -312,13 +312,13 @@ exports[`ContentCard renders a Default Placeholder 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -500,13 +500,13 @@ exports[`ContentCard renders as Tile/Image only 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
       "width": 495,
     }
   }
@@ -807,13 +807,13 @@ exports[`ContentCard renders as Tile/No image 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
       "width": 495,
     }
   }
@@ -1082,13 +1082,13 @@ exports[`ContentCard renders basic tile card, with Image 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
       "width": 495,
     }
   }
@@ -1393,13 +1393,13 @@ exports[`ContentCard renders with Default Placeholder 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
       "width": 495,
     }
   }
@@ -1584,13 +1584,13 @@ exports[`ContentCard renders with No image 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -1853,13 +1853,13 @@ exports[`ContentCard renders with an Image only 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
