@@ -204,6 +204,7 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
               "borderRadius": 16,
               "height": 240,
               "margin": 8,
+              "marginBottom": 12,
               "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
               "shadowOffset": Object {
                 "height": 2,
@@ -401,6 +402,7 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
               "borderRadius": 16,
               "height": 240,
               "margin": 8,
+              "marginBottom": 12,
               "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
               "shadowOffset": Object {
                 "height": 2,
@@ -598,6 +600,7 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
               "borderRadius": 16,
               "height": 240,
               "margin": 8,
+              "marginBottom": 12,
               "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
               "shadowOffset": Object {
                 "height": 2,
@@ -795,6 +798,7 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
               "borderRadius": 16,
               "height": 240,
               "margin": 8,
+              "marginBottom": 12,
               "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
               "shadowOffset": Object {
                 "height": 2,
