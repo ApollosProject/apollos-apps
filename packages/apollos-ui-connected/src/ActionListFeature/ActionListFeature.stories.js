@@ -71,7 +71,7 @@ const actions = [
   },
 ];
 
-storiesOf('ActionListFeature', module)
+storiesOf('ui-connected/ActionListFeature', module)
   .addDecorator((story) => (
     <BackgroundView>
       {/* eslint-disable-next-line react-native/no-inline-styles */}
