@@ -115,75 +115,9 @@ describe('The ActionListFeatures component', () => {
     expect(tree).toMatchSnapshot();
   });
   it('should render a loading state for isLoading', () => {
-    const loadingStateData = [
-      {
-        id: 'fakeId1',
-        title: '',
-        subtitle: '',
-        parentChannel: {
-          id: '',
-          name: '',
-        },
-        image: {
-          sources: [
-            {
-              uri: '',
-            },
-          ],
-        },
-      },
-      {
-        id: 'fakeId2',
-        title: '',
-        subtitle: '',
-        parentChannel: {
-          id: '',
-          name: '',
-        },
-        image: {
-          sources: [
-            {
-              uri: '',
-            },
-          ],
-        },
-      },
-      {
-        id: 'fakeId3',
-        title: '',
-        subtitle: '',
-        parentChannel: {
-          id: '',
-          name: '',
-        },
-        image: {
-          sources: [
-            {
-              uri: '',
-            },
-          ],
-        },
-      },
-      {
-        id: 'fakeId4',
-        title: '',
-        subtitle: '',
-        parentChannel: {
-          id: '',
-          name: '',
-        },
-        image: {
-          sources: [
-            {
-              uri: '',
-            },
-          ],
-        },
-      },
-    ];
     const tree = renderer.create(
       <Providers>
-        <ActionListFeature actions={loadingStateData} isLoading />
+        <ActionListFeature actions={[]} isLoading />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
