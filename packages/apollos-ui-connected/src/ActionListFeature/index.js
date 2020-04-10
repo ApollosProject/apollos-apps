@@ -101,7 +101,7 @@ const ActionListFeature = memo(
           {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
         </>
       }
-      actions={actions || isLoading ? loadingStateObject : actions}
+      actions={isLoading && !actions.length ? loadingStateObject : actions}
       onPressActionItem={onPressActionItem}
       onPressActionListButton={onPressActionListButton}
     />
