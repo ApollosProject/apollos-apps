@@ -87,82 +87,13 @@ storiesOf('ui-connected/ActionListFeature', module)
     />
   ))
   .add('default', () => <ActionListFeature actions={actions} />)
-  .add('isLoading', () => {
-    const loadingStateData = [
-      {
-        id: 'fakeId1',
-        title: '',
-        subtitle: '',
-        parentChannel: {
-          id: '',
-          name: '',
-        },
-        image: {
-          sources: [
-            {
-              uri: '',
-            },
-          ],
-        },
-      },
-      {
-        id: 'fakeId2',
-        title: '',
-        subtitle: '',
-        parentChannel: {
-          id: '',
-          name: '',
-        },
-        image: {
-          sources: [
-            {
-              uri: '',
-            },
-          ],
-        },
-      },
-      {
-        id: 'fakeId3',
-        title: '',
-        subtitle: '',
-        parentChannel: {
-          id: '',
-          name: '',
-        },
-        image: {
-          sources: [
-            {
-              uri: '',
-            },
-          ],
-        },
-      },
-      {
-        id: 'fakeId4',
-        title: '',
-        subtitle: '',
-        parentChannel: {
-          id: '',
-          name: '',
-        },
-        image: {
-          sources: [
-            {
-              uri: '',
-            },
-          ],
-        },
-      },
-    ];
-
-    return (
-      <ActionListFeature
-        actions={loadingStateData}
-        onPressActionListButton={() => {}}
-        isLoading
-      />
-    );
-  })
+  .add('isLoading', () => (
+    <ActionListFeature
+      actions={[]}
+      onPressActionListButton={() => {}}
+      isLoading
+    />
+  ))
   .add('onPressActionListButton', () => (
     <ActionListFeature actions={actions} onPressActionListButton={() => {}} />
   ))

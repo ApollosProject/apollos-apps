@@ -12,11 +12,79 @@ const Title = styled(
 
 const Subtitle = styled({}, 'ActionListFeature.Subtitle')(H3);
 
+const loadingStateArray = [
+  {
+    id: 'fakeId1',
+    title: '',
+    subtitle: '',
+    parentChannel: {
+      id: '',
+      name: '',
+    },
+    image: {
+      sources: [
+        {
+          uri: '',
+        },
+      ],
+    },
+  },
+  {
+    id: 'fakeId2',
+    title: '',
+    subtitle: '',
+    parentChannel: {
+      id: '',
+      name: '',
+    },
+    image: {
+      sources: [
+        {
+          uri: '',
+        },
+      ],
+    },
+  },
+  {
+    id: 'fakeId3',
+    title: '',
+    subtitle: '',
+    parentChannel: {
+      id: '',
+      name: '',
+    },
+    image: {
+      sources: [
+        {
+          uri: '',
+        },
+      ],
+    },
+  },
+  {
+    id: 'fakeId4',
+    title: '',
+    subtitle: '',
+    parentChannel: {
+      id: '',
+      name: '',
+    },
+    image: {
+      sources: [
+        {
+          uri: '',
+        },
+      ],
+    },
+  },
+];
+
 const ActionListFeature = memo(
   ({
     actions,
     id,
     isLoading,
+    loadingStateData,
     onPressActionListButton,
     onPressActionItem,
     subtitle,
@@ -33,7 +101,7 @@ const ActionListFeature = memo(
           {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
         </>
       }
-      actions={actions}
+      actions={isLoading ? loadingStateData : actions}
       onPressActionItem={onPressActionItem}
       onPressActionListButton={onPressActionListButton}
     />
@@ -47,10 +115,15 @@ ActionListFeature.propTypes = {
   actions: PropTypes.arrayOf(PropTypes.shape({})).isRequired, // at least for the time being this is required
   id: PropTypes.number,
   isLoading: PropTypes.bool,
+  loadingStateData: PropTypes.arrayOf(PropTypes.shape({})),
   onPressActionListButton: PropTypes.func,
   onPressActionItem: PropTypes.func,
   subtitle: PropTypes.string,
   title: PropTypes.string,
+};
+
+ActionListFeature.defaultProps = {
+  loadingStateData: loadingStateArray,
 };
 
 export default ActionListFeature;
