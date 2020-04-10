@@ -54,8 +54,36 @@ const Header = styled(({ theme }) => ({
 //   return content;
 // };
 
+const loadingStateData = {
+  action: '',
+  title: '',
+  hasAction: true,
+  actionIcon: 'umbrella',
+  isLoading: true,
+  labelText: '',
+  summary: 'boom',
+  coverImage: [
+    {
+      uri: '',
+    },
+  ],
+  relatedNode: {
+    id: '',
+    __typename: '',
+  },
+  __typename: '',
+};
+
 const CampaignItemListFeature = memo(
-  ({ cards, isLoading, listKey, onPressItem, subtitle, title }) => (
+  ({
+    cards,
+    isLoading,
+    listKey,
+    loadingStateObject,
+    onPressItem,
+    subtitle,
+    title,
+  }) => (
     <View>
       {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
         <Header vertical={false}>
@@ -68,6 +96,7 @@ const CampaignItemListFeature = memo(
       <FeedView
         onPressItem={onPressItem}
         ListItemComponent={FeaturedCard}
+        loadingStateObject={loadingStateObject}
         content={cards} // {getContent({ cards, isLoading })}
         isLoading={isLoading}
         listKey={listKey}
@@ -82,9 +111,14 @@ CampaignItemListFeature.propTypes = {
   cards: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   isLoading: PropTypes.bool,
   listKey: PropTypes.string,
+  loadingStateObject: PropTypes.shape({}),
   onPressItem: PropTypes.func,
   subtitle: PropTypes.string,
   title: PropTypes.string,
+};
+
+CampaignItemListFeature.defaultProps = {
+  loadingStateObject: loadingStateData,
 };
 
 export default withIsLoading(CampaignItemListFeature);

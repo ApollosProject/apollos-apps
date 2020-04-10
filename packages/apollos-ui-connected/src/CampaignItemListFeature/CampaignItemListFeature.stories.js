@@ -26,7 +26,7 @@ const cards = [
   },
 ];
 
-storiesOf('CampaignItemListFeature', module)
+storiesOf('ui-connected/CampaignItemListFeature', module)
   .addDecorator((story) => (
     <BackgroundView>
       {/* eslint-disable-next-line react-native/no-inline-styles */}
@@ -38,13 +38,17 @@ storiesOf('CampaignItemListFeature', module)
       cards={cards}
       title={'Title'}
       subtitle={'Subtitle'}
+      hasAction
     />
   ))
   .add('default', () => <CampaignItemListFeature cards={cards} />)
-  .add('isLoading', () => <CampaignItemListFeature cards={[]} isLoading />)
   .add('subtitle', () => (
     <CampaignItemListFeature cards={cards} subtitle={'subtitle'} />
   ))
   .add('title', () => (
     <CampaignItemListFeature cards={cards} title={'Title'} />
   ));
+storiesOf('ui-connected/CampaignItemListFeature', module).add(
+  'isLoading',
+  () => <CampaignItemListFeature cards={[]} isLoading />
+);
