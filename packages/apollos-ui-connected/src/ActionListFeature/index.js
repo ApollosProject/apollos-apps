@@ -84,7 +84,7 @@ const ActionListFeature = memo(
     actions,
     id,
     isLoading,
-    loadingStateData,
+    loadingStateObject,
     onPressActionListButton,
     onPressActionItem,
     subtitle,
@@ -101,7 +101,7 @@ const ActionListFeature = memo(
           {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
         </>
       }
-      actions={isLoading ? loadingStateData : actions}
+      actions={actions || isLoading ? loadingStateObject : actions}
       onPressActionItem={onPressActionItem}
       onPressActionListButton={onPressActionListButton}
     />
@@ -115,7 +115,7 @@ ActionListFeature.propTypes = {
   actions: PropTypes.arrayOf(PropTypes.shape({})).isRequired, // at least for the time being this is required
   id: PropTypes.number,
   isLoading: PropTypes.bool,
-  loadingStateData: PropTypes.arrayOf(PropTypes.shape({})),
+  loadingStateObject: PropTypes.arrayOf(PropTypes.shape({})),
   onPressActionListButton: PropTypes.func,
   onPressActionItem: PropTypes.func,
   subtitle: PropTypes.string,
@@ -123,7 +123,7 @@ ActionListFeature.propTypes = {
 };
 
 ActionListFeature.defaultProps = {
-  loadingStateData: loadingStateArray,
+  loadingStateObject: loadingStateArray,
 };
 
 export default ActionListFeature;
