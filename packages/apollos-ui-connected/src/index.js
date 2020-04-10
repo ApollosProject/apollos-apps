@@ -3,6 +3,7 @@ export ContentCardConnected, {
   GET_CONTENT_CARD,
 } from './ContentCardConnected';
 export { fetchMoreResolver, share, uploadPhoto } from './utils';
+export CampaignItemListFeature from './CampaignItemListFeature';
 export ContentSingleFeaturesConnected, {
   ContentSingleFeatures,
   GET_CONTENT_ITEM_FEATURES,
