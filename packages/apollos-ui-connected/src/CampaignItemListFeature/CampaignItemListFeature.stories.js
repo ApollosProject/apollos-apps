@@ -8,8 +8,8 @@ const cards = [
   {
     action: 'READ_CONTENT',
     title: 'Live for Freedom Toolkit',
-    hasAction: null,
-    actionIcon: null,
+    hasAction: true,
+    actionIcon: 'umbrella',
     labelText: null,
     summary:
       "Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.",
