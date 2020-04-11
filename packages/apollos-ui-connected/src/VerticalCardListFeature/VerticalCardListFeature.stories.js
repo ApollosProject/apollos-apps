@@ -26,7 +26,7 @@ const cards = [
   },
 ];
 
-storiesOf('VerticalCardListFeature', module)
+storiesOf('ui-connected/VerticalCardListFeature', module)
   .addDecorator((story) => (
     <BackgroundView>
       {/* eslint-disable-next-line react-native/no-inline-styles */}
