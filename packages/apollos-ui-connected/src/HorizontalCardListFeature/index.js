@@ -28,6 +28,20 @@ const Header = styled(({ theme }) => ({
 }))(PaddedView);
 
 class HorizontalCardListFeature extends PureComponent {
+  static defaultProps = {
+    loadingStateObject: {
+      id: 'fakeId0',
+      isLoading: true,
+      title: 'Boom',
+      hasAction: true,
+      actionIcon: 'umbrella',
+      channelType: '',
+      coverImage: [],
+      // We need to assume a typename so horizontalContentCardComponentMapper knows what "type" to render
+      __typename: 'MediaContentItem',
+    },
+  };
+
   static propTypes = {
     cards: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
     isLoading: PropTypes.bool,
@@ -36,22 +50,6 @@ class HorizontalCardListFeature extends PureComponent {
     onPressItem: PropTypes.func,
     subtitle: PropTypes.string,
     title: PropTypes.string,
-  };
-
-  static defaultProps = {
-    loadingStateObject: this.loadingStateObject,
-  };
-
-  loadingStateObject = {
-    id: 'fakeId0',
-    isLoading: true,
-    title: 'Boom',
-    hasAction: true,
-    actionIcon: 'umbrella',
-    channelType: '',
-    coverImage: [],
-    // We need to assume a typename so horizontalContentCardComponentMapper knows what "type" to render
-    __typename: 'MediaContentItem',
   };
 
   keyExtractor = (item) => item && item.id;
