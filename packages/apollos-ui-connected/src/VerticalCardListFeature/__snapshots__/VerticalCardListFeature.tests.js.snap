@@ -2,17 +2,6 @@
 
 exports[`The VerticalCardListFeature component should render 1`] = `
 <View>
-  <View
-    style={
-      Object {
-        "paddingBottom": 8,
-        "paddingHorizontal": 16,
-        "paddingTop": 48,
-        "paddingVertical": 0,
-      }
-    }
-    vertical={false}
-  />
   <RCTScrollView
     data={
       Array [
@@ -42,6 +31,27 @@ exports[`The VerticalCardListFeature component should render 1`] = `
     horizontal={false}
     initialNumToRender={10}
     keyExtractor={[Function]}
+    loadingStateObject={
+      Object {
+        "__typename": "",
+        "action": "",
+        "actionIcon": "umbrella",
+        "coverImage": Array [
+          Object {
+            "uri": "",
+          },
+        ],
+        "hasAction": true,
+        "isLoading": true,
+        "labelText": "",
+        "relatedNode": Object {
+          "__typename": "",
+          "id": "",
+        },
+        "summary": "boom",
+        "title": "",
+      }
+    }
     maxToRenderPerBatch={10}
     numColumns={1}
     onContentSizeChange={[Function]}
@@ -132,10 +142,11 @@ exports[`The VerticalCardListFeature component should render 1`] = `
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1.78}
                     minAspectRatio={1.2}
                     onLoad={[Function]}
+                    resizeMode="cover"
                     source={
                       Array [
                         Object {
@@ -148,6 +159,7 @@ exports[`The VerticalCardListFeature component should render 1`] = `
                       Object {
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -283,113 +295,203 @@ exports[`The VerticalCardListFeature component should render a loading state for
     data={
       Array [
         Object {
-          "channelType": "",
-          "coverImage": Array [],
+          "__typename": "",
+          "action": "",
+          "actionIcon": "umbrella",
+          "coverImage": Array [
+            Object {
+              "uri": "",
+            },
+          ],
+          "hasAction": true,
           "id": "fakeId0",
           "isLoading": true,
-          "parentChannel": Object {
+          "labelText": "",
+          "relatedNode": Object {
+            "__typename": "",
             "id": "",
-            "name": "",
           },
+          "summary": "boom",
           "title": "",
         },
         Object {
-          "channelType": "",
-          "coverImage": Array [],
+          "__typename": "",
+          "action": "",
+          "actionIcon": "umbrella",
+          "coverImage": Array [
+            Object {
+              "uri": "",
+            },
+          ],
+          "hasAction": true,
           "id": "fakeId1",
           "isLoading": true,
-          "parentChannel": Object {
+          "labelText": "",
+          "relatedNode": Object {
+            "__typename": "",
             "id": "",
-            "name": "",
           },
+          "summary": "boom",
           "title": "",
         },
         Object {
-          "channelType": "",
-          "coverImage": Array [],
+          "__typename": "",
+          "action": "",
+          "actionIcon": "umbrella",
+          "coverImage": Array [
+            Object {
+              "uri": "",
+            },
+          ],
+          "hasAction": true,
           "id": "fakeId2",
           "isLoading": true,
-          "parentChannel": Object {
+          "labelText": "",
+          "relatedNode": Object {
+            "__typename": "",
             "id": "",
-            "name": "",
           },
+          "summary": "boom",
           "title": "",
         },
         Object {
-          "channelType": "",
-          "coverImage": Array [],
+          "__typename": "",
+          "action": "",
+          "actionIcon": "umbrella",
+          "coverImage": Array [
+            Object {
+              "uri": "",
+            },
+          ],
+          "hasAction": true,
           "id": "fakeId3",
           "isLoading": true,
-          "parentChannel": Object {
+          "labelText": "",
+          "relatedNode": Object {
+            "__typename": "",
             "id": "",
-            "name": "",
           },
+          "summary": "boom",
           "title": "",
         },
         Object {
-          "channelType": "",
-          "coverImage": Array [],
+          "__typename": "",
+          "action": "",
+          "actionIcon": "umbrella",
+          "coverImage": Array [
+            Object {
+              "uri": "",
+            },
+          ],
+          "hasAction": true,
           "id": "fakeId4",
           "isLoading": true,
-          "parentChannel": Object {
+          "labelText": "",
+          "relatedNode": Object {
+            "__typename": "",
             "id": "",
-            "name": "",
           },
+          "summary": "boom",
           "title": "",
         },
         Object {
-          "channelType": "",
-          "coverImage": Array [],
+          "__typename": "",
+          "action": "",
+          "actionIcon": "umbrella",
+          "coverImage": Array [
+            Object {
+              "uri": "",
+            },
+          ],
+          "hasAction": true,
           "id": "fakeId5",
           "isLoading": true,
-          "parentChannel": Object {
+          "labelText": "",
+          "relatedNode": Object {
+            "__typename": "",
             "id": "",
-            "name": "",
           },
+          "summary": "boom",
           "title": "",
         },
         Object {
-          "channelType": "",
-          "coverImage": Array [],
+          "__typename": "",
+          "action": "",
+          "actionIcon": "umbrella",
+          "coverImage": Array [
+            Object {
+              "uri": "",
+            },
+          ],
+          "hasAction": true,
           "id": "fakeId6",
           "isLoading": true,
-          "parentChannel": Object {
+          "labelText": "",
+          "relatedNode": Object {
+            "__typename": "",
             "id": "",
-            "name": "",
           },
+          "summary": "boom",
           "title": "",
         },
         Object {
-          "channelType": "",
-          "coverImage": Array [],
+          "__typename": "",
+          "action": "",
+          "actionIcon": "umbrella",
+          "coverImage": Array [
+            Object {
+              "uri": "",
+            },
+          ],
+          "hasAction": true,
           "id": "fakeId7",
           "isLoading": true,
-          "parentChannel": Object {
+          "labelText": "",
+          "relatedNode": Object {
+            "__typename": "",
             "id": "",
-            "name": "",
           },
+          "summary": "boom",
           "title": "",
         },
         Object {
-          "channelType": "",
-          "coverImage": Array [],
+          "__typename": "",
+          "action": "",
+          "actionIcon": "umbrella",
+          "coverImage": Array [
+            Object {
+              "uri": "",
+            },
+          ],
+          "hasAction": true,
           "id": "fakeId8",
           "isLoading": true,
-          "parentChannel": Object {
+          "labelText": "",
+          "relatedNode": Object {
+            "__typename": "",
             "id": "",
-            "name": "",
           },
+          "summary": "boom",
           "title": "",
         },
         Object {
-          "channelType": "",
-          "coverImage": Array [],
+          "__typename": "",
+          "action": "",
+          "actionIcon": "umbrella",
+          "coverImage": Array [
+            Object {
+              "uri": "",
+            },
+          ],
+          "hasAction": true,
           "id": "fakeId9",
           "isLoading": true,
-          "parentChannel": Object {
+          "labelText": "",
+          "relatedNode": Object {
+            "__typename": "",
             "id": "",
-            "name": "",
           },
+          "summary": "boom",
           "title": "",
         },
       ]
@@ -400,6 +502,27 @@ exports[`The VerticalCardListFeature component should render a loading state for
     horizontal={false}
     initialNumToRender={10}
     keyExtractor={[Function]}
+    loadingStateObject={
+      Object {
+        "__typename": "",
+        "action": "",
+        "actionIcon": "umbrella",
+        "coverImage": Array [
+          Object {
+            "uri": "",
+          },
+        ],
+        "hasAction": true,
+        "isLoading": true,
+        "labelText": "",
+        "relatedNode": Object {
+          "__typename": "",
+          "id": "",
+        },
+        "summary": "boom",
+        "title": "",
+      }
+    }
     maxToRenderPerBatch={10}
     numColumns={1}
     onContentSizeChange={[Function]}
@@ -492,16 +615,25 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1.78}
                     minAspectRatio={1.2}
                     onLoad={[Function]}
-                    source={Array []}
+                    resizeMode="cover"
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "",
+                        },
+                      ]
+                    }
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -578,6 +710,19 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   />
                 </View>
+                <View
+                  style={
+                    Object {
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 16,
+                      "marginTop": 16,
+                      "marginVertical": 5,
+                      "width": "100%",
+                    }
+                  }
+                />
               </View>
             </View>
           </View>
@@ -655,16 +800,25 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1.78}
                     minAspectRatio={1.2}
                     onLoad={[Function]}
-                    source={Array []}
+                    resizeMode="cover"
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "",
+                        },
+                      ]
+                    }
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -741,6 +895,19 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   />
                 </View>
+                <View
+                  style={
+                    Object {
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 16,
+                      "marginTop": 16,
+                      "marginVertical": 5,
+                      "width": "100%",
+                    }
+                  }
+                />
               </View>
             </View>
           </View>
@@ -818,16 +985,25 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1.78}
                     minAspectRatio={1.2}
                     onLoad={[Function]}
-                    source={Array []}
+                    resizeMode="cover"
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "",
+                        },
+                      ]
+                    }
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -904,6 +1080,19 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   />
                 </View>
+                <View
+                  style={
+                    Object {
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 16,
+                      "marginTop": 16,
+                      "marginVertical": 5,
+                      "width": "100%",
+                    }
+                  }
+                />
               </View>
             </View>
           </View>
@@ -981,16 +1170,25 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1.78}
                     minAspectRatio={1.2}
                     onLoad={[Function]}
-                    source={Array []}
+                    resizeMode="cover"
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "",
+                        },
+                      ]
+                    }
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -1067,6 +1265,19 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   />
                 </View>
+                <View
+                  style={
+                    Object {
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 16,
+                      "marginTop": 16,
+                      "marginVertical": 5,
+                      "width": "100%",
+                    }
+                  }
+                />
               </View>
             </View>
           </View>
@@ -1144,16 +1355,25 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1.78}
                     minAspectRatio={1.2}
                     onLoad={[Function]}
-                    source={Array []}
+                    resizeMode="cover"
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "",
+                        },
+                      ]
+                    }
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -1230,6 +1450,19 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   />
                 </View>
+                <View
+                  style={
+                    Object {
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 16,
+                      "marginTop": 16,
+                      "marginVertical": 5,
+                      "width": "100%",
+                    }
+                  }
+                />
               </View>
             </View>
           </View>
@@ -1307,16 +1540,25 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1.78}
                     minAspectRatio={1.2}
                     onLoad={[Function]}
-                    source={Array []}
+                    resizeMode="cover"
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "",
+                        },
+                      ]
+                    }
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -1393,6 +1635,19 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   />
                 </View>
+                <View
+                  style={
+                    Object {
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 16,
+                      "marginTop": 16,
+                      "marginVertical": 5,
+                      "width": "100%",
+                    }
+                  }
+                />
               </View>
             </View>
           </View>
@@ -1470,16 +1725,25 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1.78}
                     minAspectRatio={1.2}
                     onLoad={[Function]}
-                    source={Array []}
+                    resizeMode="cover"
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "",
+                        },
+                      ]
+                    }
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -1556,6 +1820,19 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   />
                 </View>
+                <View
+                  style={
+                    Object {
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 16,
+                      "marginTop": 16,
+                      "marginVertical": 5,
+                      "width": "100%",
+                    }
+                  }
+                />
               </View>
             </View>
           </View>
@@ -1633,16 +1910,25 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1.78}
                     minAspectRatio={1.2}
                     onLoad={[Function]}
-                    source={Array []}
+                    resizeMode="cover"
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "",
+                        },
+                      ]
+                    }
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -1719,6 +2005,19 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   />
                 </View>
+                <View
+                  style={
+                    Object {
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 16,
+                      "marginTop": 16,
+                      "marginVertical": 5,
+                      "width": "100%",
+                    }
+                  }
+                />
               </View>
             </View>
           </View>
@@ -1796,16 +2095,25 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1.78}
                     minAspectRatio={1.2}
                     onLoad={[Function]}
-                    source={Array []}
+                    resizeMode="cover"
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "",
+                        },
+                      ]
+                    }
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -1882,6 +2190,19 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   />
                 </View>
+                <View
+                  style={
+                    Object {
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 16,
+                      "marginTop": 16,
+                      "marginVertical": 5,
+                      "width": "100%",
+                    }
+                  }
+                />
               </View>
             </View>
           </View>
@@ -1959,16 +2280,25 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1.78}
                     minAspectRatio={1.2}
                     onLoad={[Function]}
-                    source={Array []}
+                    resizeMode="cover"
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "",
+                        },
+                      ]
+                    }
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -2045,6 +2375,19 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   />
                 </View>
+                <View
+                  style={
+                    Object {
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 16,
+                      "marginTop": 16,
+                      "marginVertical": 5,
+                      "width": "100%",
+                    }
+                  }
+                />
               </View>
             </View>
           </View>
@@ -2111,6 +2454,27 @@ exports[`The VerticalCardListFeature component should render a section title 1`]
     horizontal={false}
     initialNumToRender={10}
     keyExtractor={[Function]}
+    loadingStateObject={
+      Object {
+        "__typename": "",
+        "action": "",
+        "actionIcon": "umbrella",
+        "coverImage": Array [
+          Object {
+            "uri": "",
+          },
+        ],
+        "hasAction": true,
+        "isLoading": true,
+        "labelText": "",
+        "relatedNode": Object {
+          "__typename": "",
+          "id": "",
+        },
+        "summary": "boom",
+        "title": "",
+      }
+    }
     maxToRenderPerBatch={10}
     numColumns={1}
     onContentSizeChange={[Function]}
@@ -2201,10 +2565,11 @@ exports[`The VerticalCardListFeature component should render a section title 1`]
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1.78}
                     minAspectRatio={1.2}
                     onLoad={[Function]}
+                    resizeMode="cover"
                     source={
                       Array [
                         Object {
@@ -2217,6 +2582,7 @@ exports[`The VerticalCardListFeature component should render a section title 1`]
                       Object {
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -2365,6 +2731,27 @@ exports[`The VerticalCardListFeature component should render with a subtitle 1`]
     horizontal={false}
     initialNumToRender={10}
     keyExtractor={[Function]}
+    loadingStateObject={
+      Object {
+        "__typename": "",
+        "action": "",
+        "actionIcon": "umbrella",
+        "coverImage": Array [
+          Object {
+            "uri": "",
+          },
+        ],
+        "hasAction": true,
+        "isLoading": true,
+        "labelText": "",
+        "relatedNode": Object {
+          "__typename": "",
+          "id": "",
+        },
+        "summary": "boom",
+        "title": "",
+      }
+    }
     maxToRenderPerBatch={10}
     numColumns={1}
     onContentSizeChange={[Function]}
@@ -2455,10 +2842,11 @@ exports[`The VerticalCardListFeature component should render with a subtitle 1`]
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1.78}
                     minAspectRatio={1.2}
                     onLoad={[Function]}
+                    resizeMode="cover"
                     source={
                       Array [
                         Object {
@@ -2471,6 +2859,7 @@ exports[`The VerticalCardListFeature component should render with a subtitle 1`]
                       Object {
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }

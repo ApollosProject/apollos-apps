@@ -96,7 +96,7 @@ const VerticalCardListFeature = memo(
       <FeedView
         onPressItem={onPressItem}
         ListItemComponent={contentCardComponentMapper}
-        oadingStateObject={loadingStateObject}
+        loadingStateObject={loadingStateObject}
         content={cards} // {getContent({ cards, isLoading })}
         isLoading={isLoading}
         listKey={listKey}
