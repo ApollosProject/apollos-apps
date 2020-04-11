@@ -41,10 +41,13 @@ storiesOf('ui-connected/VerticalCardListFeature', module)
     />
   ))
   .add('default', () => <VerticalCardListFeature cards={cards} />)
-  .add('isLoading', () => <VerticalCardListFeature cards={[]} isLoading />)
   .add('subtitle', () => (
     <VerticalCardListFeature cards={cards} subtitle={'subtitle'} />
   ))
   .add('title', () => (
     <VerticalCardListFeature cards={cards} title={'Title'} />
   ));
+storiesOf('ui-connected/VerticalCardListFeature', module).add(
+  'isLoading',
+  () => <VerticalCardListFeature cards={[]} isLoading />
+);
