@@ -17,7 +17,7 @@
     ]
   },
   "scripts": {
-    "start": "lerna run build && yarn push-all && yarn build:api-watch",
+    "start": "lerna run generate-stories && lerna run build && yarn push-all && yarn build:api-watch",
     "build:api-watch": "node ./scripts/watch.js",
     "link-packages": "lerna exec -- yarn yalc publish",
     "unlink-packages": "lerna exec -- yarn yalc installations clean",
@@ -33,7 +33,8 @@
     "nuke:node": "rm -rdf ./node_modules packages/*/node_modules && yarn cache clean && yarn",
     "nuke:cache": "watchman watch-del-all",
     "postinstall": "lerna run build --parallel",
-    "generate-docs": "lerna run generate-docs"
+    "generate-docs": "lerna run generate-docs",
+    "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js"
   },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"
