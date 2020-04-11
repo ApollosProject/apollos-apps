@@ -54,8 +54,36 @@ const Header = styled(({ theme }) => ({
 //   return content;
 // };
 
+const loadingStateData = {
+  action: '',
+  title: '',
+  hasAction: true,
+  actionIcon: 'umbrella',
+  isLoading: true,
+  labelText: '',
+  summary: 'boom',
+  coverImage: [
+    {
+      uri: '',
+    },
+  ],
+  relatedNode: {
+    id: '',
+    __typename: '',
+  },
+  __typename: '',
+};
+
 const VerticalCardListFeature = memo(
-  ({ cards, isLoading, listKey, onPressItem, subtitle, title }) => (
+  ({
+    cards,
+    isLoading,
+    listKey,
+    loadingStateObject,
+    onPressItem,
+    subtitle,
+    title,
+  }) => (
     <View>
       <Header vertical={false}>
         {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
@@ -66,6 +94,7 @@ const VerticalCardListFeature = memo(
       <FeedView
         onPressItem={onPressItem}
         ListItemComponent={contentCardComponentMapper}
+        oadingStateObject={loadingStateObject}
         content={cards} // {getContent({ cards, isLoading })}
         isLoading={isLoading}
         listKey={listKey}
@@ -80,9 +109,14 @@ VerticalCardListFeature.propTypes = {
   cards: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   isLoading: PropTypes.bool,
   listKey: PropTypes.string,
+  loadingStateObject: PropTypes.shape({}),
   onPressItem: PropTypes.func,
   subtitle: PropTypes.string,
   title: PropTypes.string,
+};
+
+VerticalCardListFeature.defaultProps = {
+  loadingStateObject: loadingStateData,
 };
 
 export default withIsLoading(VerticalCardListFeature);
