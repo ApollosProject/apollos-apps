@@ -58,7 +58,7 @@ const cards = [
   },
 ];
 
-storiesOf('HorizontalCardListFeature', module)
+storiesOf('ui-connected/HorizontalCardListFeature', module)
   .addDecorator((story) => (
     <BackgroundView>
       {/* eslint-disable-next-line react-native/no-inline-styles */}
