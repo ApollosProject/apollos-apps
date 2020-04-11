@@ -28,6 +28,20 @@ const Header = styled(({ theme }) => ({
 }))(PaddedView);
 
 class HorizontalCardListFeature extends PureComponent {
+  static propTypes = {
+    cards: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+    isLoading: PropTypes.bool,
+    listKey: PropTypes.string, // needed if multiple lists/feeds are displayed as siblings
+    loadingStateObject: PropTypes.shape({}),
+    onPressItem: PropTypes.func,
+    subtitle: PropTypes.string,
+    title: PropTypes.string,
+  };
+
+  static defaultProps = {
+    loadingStateObject: this.loadingStateObject,
+  };
+
   loadingStateObject = {
     id: 'fakeId0',
     isLoading: true,
@@ -38,15 +52,6 @@ class HorizontalCardListFeature extends PureComponent {
     coverImage: [],
     // We need to assume a typename so horizontalContentCardComponentMapper knows what "type" to render
     __typename: 'MediaContentItem',
-  };
-
-  static propTypes = {
-    cards: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-    isLoading: PropTypes.bool,
-    listKey: PropTypes.string, // needed if multiple lists/feeds are displayed as siblings
-    onPressItem: PropTypes.func,
-    subtitle: PropTypes.string,
-    title: PropTypes.string,
   };
 
   keyExtractor = (item) => item && item.id;
@@ -73,7 +78,7 @@ class HorizontalCardListFeature extends PureComponent {
           isLoading={this.props.isLoading}
           listKey={this.props.listKey}
           keyExtractor={this.keyExtractor}
-          loadingStateObject={this.loadingStateObject}
+          loadingStateObject={this.props.loadingStateObject}
           renderItem={this.renderItem}
         />
       </View>
