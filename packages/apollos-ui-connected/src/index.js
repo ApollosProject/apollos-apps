@@ -1,3 +1,4 @@
+export ActionListFeature from './ActionListFeature';
 export ContentCardConnected, {
   contentCardComponentMapper,
   GET_CONTENT_CARD,
