@@ -2,17 +2,6 @@
 
 exports[`The HorizontalCardListFeature component should render 1`] = `
 <View>
-  <View
-    style={
-      Object {
-        "paddingBottom": 8,
-        "paddingHorizontal": 16,
-        "paddingTop": 48,
-        "paddingVertical": 0,
-      }
-    }
-    vertical={false}
-  />
   <RCTScrollView
     collapsable={false}
     contentContainerStyle={
@@ -203,10 +192,11 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1}
                     minAspectRatio={1}
                     onLoad={[Function]}
+                    resizeMode="cover"
                     source={
                       Array [
                         Object {
@@ -219,6 +209,7 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                       Object {
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -365,7 +356,6 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                     align="xMidYMid"
                     bbHeight={32}
                     bbWidth={32}
-                    focusable={false}
                     height={32}
                     meetOrSlice={0}
                     minX={0}
@@ -377,9 +367,7 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                           "borderWidth": 0,
                         },
                         undefined,
-                        Object {
-                          "opacity": 1,
-                        },
+                        null,
                         Object {
                           "flex": 0,
                           "height": 32,
@@ -566,11 +554,12 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     hasTitleAndSummary={true}
                     maxAspectRatio={2}
                     minAspectRatio={2}
                     onLoad={[Function]}
+                    resizeMode="cover"
                     source={
                       Array [
                         Object {
@@ -583,6 +572,7 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                       Object {
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -757,10 +747,11 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1}
                     minAspectRatio={1}
                     onLoad={[Function]}
+                    resizeMode="cover"
                     source={
                       Array [
                         Object {
@@ -773,6 +764,7 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                       Object {
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -1103,16 +1095,18 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1}
                     minAspectRatio={1}
                     onLoad={[Function]}
+                    resizeMode="cover"
                     source={Array []}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -1302,16 +1296,18 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1}
                     minAspectRatio={1}
                     onLoad={[Function]}
+                    resizeMode="cover"
                     source={Array []}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -1501,16 +1497,18 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1}
                     minAspectRatio={1}
                     onLoad={[Function]}
+                    resizeMode="cover"
                     source={Array []}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -1700,16 +1698,18 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1}
                     minAspectRatio={1}
                     onLoad={[Function]}
+                    resizeMode="cover"
                     source={Array []}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -1899,16 +1899,18 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1}
                     minAspectRatio={1}
                     onLoad={[Function]}
+                    resizeMode="cover"
                     source={Array []}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -2235,10 +2237,11 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1}
                     minAspectRatio={1}
                     onLoad={[Function]}
+                    resizeMode="cover"
                     source={
                       Array [
                         Object {
@@ -2251,6 +2254,7 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                       Object {
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -2397,7 +2401,6 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                     align="xMidYMid"
                     bbHeight={32}
                     bbWidth={32}
-                    focusable={false}
                     height={32}
                     meetOrSlice={0}
                     minX={0}
@@ -2409,9 +2412,7 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                           "borderWidth": 0,
                         },
                         undefined,
-                        Object {
-                          "opacity": 1,
-                        },
+                        null,
                         Object {
                           "flex": 0,
                           "height": 32,
@@ -2598,11 +2599,12 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     hasTitleAndSummary={true}
                     maxAspectRatio={2}
                     minAspectRatio={2}
                     onLoad={[Function]}
+                    resizeMode="cover"
                     source={
                       Array [
                         Object {
@@ -2615,6 +2617,7 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                       Object {
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -2789,10 +2792,11 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1}
                     minAspectRatio={1}
                     onLoad={[Function]}
+                    resizeMode="cover"
                     source={
                       Array [
                         Object {
@@ -2805,6 +2809,7 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                       Object {
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -3120,10 +3125,11 @@ exports[`The HorizontalCardListFeature component should render with a section su
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1}
                     minAspectRatio={1}
                     onLoad={[Function]}
+                    resizeMode="cover"
                     source={
                       Array [
                         Object {
@@ -3136,6 +3142,7 @@ exports[`The HorizontalCardListFeature component should render with a section su
                       Object {
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -3282,7 +3289,6 @@ exports[`The HorizontalCardListFeature component should render with a section su
                     align="xMidYMid"
                     bbHeight={32}
                     bbWidth={32}
-                    focusable={false}
                     height={32}
                     meetOrSlice={0}
                     minX={0}
@@ -3294,9 +3300,7 @@ exports[`The HorizontalCardListFeature component should render with a section su
                           "borderWidth": 0,
                         },
                         undefined,
-                        Object {
-                          "opacity": 1,
-                        },
+                        null,
                         Object {
                           "flex": 0,
                           "height": 32,
@@ -3483,11 +3487,12 @@ exports[`The HorizontalCardListFeature component should render with a section su
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     hasTitleAndSummary={true}
                     maxAspectRatio={2}
                     minAspectRatio={2}
                     onLoad={[Function]}
+                    resizeMode="cover"
                     source={
                       Array [
                         Object {
@@ -3500,6 +3505,7 @@ exports[`The HorizontalCardListFeature component should render with a section su
                       Object {
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
@@ -3674,10 +3680,11 @@ exports[`The HorizontalCardListFeature component should render with a section su
                     }
                   }
                 >
-                  <Image
+                  <RCTImageView
                     maxAspectRatio={1}
                     minAspectRatio={1}
                     onLoad={[Function]}
+                    resizeMode="cover"
                     source={
                       Array [
                         Object {
@@ -3690,6 +3697,7 @@ exports[`The HorizontalCardListFeature component should render with a section su
                       Object {
                         "backgroundColor": "#A5A5A5",
                         "opacity": 0,
+                        "overflow": "hidden",
                         "resizeMode": "cover",
                         "width": "100%",
                       }
