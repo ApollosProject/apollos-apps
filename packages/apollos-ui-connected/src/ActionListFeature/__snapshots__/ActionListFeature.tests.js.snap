@@ -94,8 +94,9 @@ exports[`The ActionListFeatures component should render 1`] = `
               }
             }
           >
-            <Image
+            <RCTImageView
               onLoad={[Function]}
+              resizeMode="cover"
               source={
                 Array [
                   Object {
@@ -111,6 +112,7 @@ exports[`The ActionListFeatures component should render 1`] = `
                   "height": 64,
                   "marginRight": 16,
                   "opacity": 0,
+                  "overflow": "hidden",
                   "width": 64,
                 }
               }
@@ -207,8 +209,9 @@ exports[`The ActionListFeatures component should render 1`] = `
               }
             }
           >
-            <Image
+            <RCTImageView
               onLoad={[Function]}
+              resizeMode="cover"
               source={
                 Array [
                   Object {
@@ -224,6 +227,7 @@ exports[`The ActionListFeatures component should render 1`] = `
                   "height": 64,
                   "marginRight": 16,
                   "opacity": 0,
+                  "overflow": "hidden",
                   "width": 64,
                 }
               }
@@ -320,8 +324,9 @@ exports[`The ActionListFeatures component should render 1`] = `
               }
             }
           >
-            <Image
+            <RCTImageView
               onLoad={[Function]}
+              resizeMode="cover"
               source={
                 Array [
                   Object {
@@ -337,6 +342,7 @@ exports[`The ActionListFeatures component should render 1`] = `
                   "height": 64,
                   "marginRight": 16,
                   "opacity": 0,
+                  "overflow": "hidden",
                   "width": 64,
                 }
               }
@@ -433,8 +439,9 @@ exports[`The ActionListFeatures component should render 1`] = `
               }
             }
           >
-            <Image
+            <RCTImageView
               onLoad={[Function]}
+              resizeMode="cover"
               source={
                 Array [
                   Object {
@@ -450,6 +457,7 @@ exports[`The ActionListFeatures component should render 1`] = `
                   "height": 64,
                   "marginRight": 16,
                   "opacity": 0,
+                  "overflow": "hidden",
                   "width": 64,
                 }
               }
@@ -598,8 +606,9 @@ exports[`The ActionListFeatures component should render a button for onPressActi
               }
             }
           >
-            <Image
+            <RCTImageView
               onLoad={[Function]}
+              resizeMode="cover"
               source={
                 Array [
                   Object {
@@ -615,6 +624,7 @@ exports[`The ActionListFeatures component should render a button for onPressActi
                   "height": 64,
                   "marginRight": 16,
                   "opacity": 0,
+                  "overflow": "hidden",
                   "width": 64,
                 }
               }
@@ -711,8 +721,9 @@ exports[`The ActionListFeatures component should render a button for onPressActi
               }
             }
           >
-            <Image
+            <RCTImageView
               onLoad={[Function]}
+              resizeMode="cover"
               source={
                 Array [
                   Object {
@@ -728,6 +739,7 @@ exports[`The ActionListFeatures component should render a button for onPressActi
                   "height": 64,
                   "marginRight": 16,
                   "opacity": 0,
+                  "overflow": "hidden",
                   "width": 64,
                 }
               }
@@ -824,8 +836,9 @@ exports[`The ActionListFeatures component should render a button for onPressActi
               }
             }
           >
-            <Image
+            <RCTImageView
               onLoad={[Function]}
+              resizeMode="cover"
               source={
                 Array [
                   Object {
@@ -841,6 +854,7 @@ exports[`The ActionListFeatures component should render a button for onPressActi
                   "height": 64,
                   "marginRight": 16,
                   "opacity": 0,
+                  "overflow": "hidden",
                   "width": 64,
                 }
               }
@@ -937,8 +951,9 @@ exports[`The ActionListFeatures component should render a button for onPressActi
               }
             }
           >
-            <Image
+            <RCTImageView
               onLoad={[Function]}
+              resizeMode="cover"
               source={
                 Array [
                   Object {
@@ -954,6 +969,7 @@ exports[`The ActionListFeatures component should render a button for onPressActi
                   "height": 64,
                   "marginRight": 16,
                   "opacity": 0,
+                  "overflow": "hidden",
                   "width": 64,
                 }
               }
@@ -1193,8 +1209,9 @@ exports[`The ActionListFeatures component should render a loading state for isLo
               }
             }
           >
-            <Image
+            <RCTImageView
               onLoad={[Function]}
+              resizeMode="cover"
               source={
                 Array [
                   Object {
@@ -1210,6 +1227,7 @@ exports[`The ActionListFeatures component should render a loading state for isLo
                   "height": 64,
                   "marginRight": 16,
                   "opacity": 0,
+                  "overflow": "hidden",
                   "width": 64,
                 }
               }
@@ -1289,8 +1307,9 @@ exports[`The ActionListFeatures component should render a loading state for isLo
               }
             }
           >
-            <Image
+            <RCTImageView
               onLoad={[Function]}
+              resizeMode="cover"
               source={
                 Array [
                   Object {
@@ -1306,6 +1325,7 @@ exports[`The ActionListFeatures component should render a loading state for isLo
                   "height": 64,
                   "marginRight": 16,
                   "opacity": 0,
+                  "overflow": "hidden",
                   "width": 64,
                 }
               }
@@ -1385,8 +1405,9 @@ exports[`The ActionListFeatures component should render a loading state for isLo
               }
             }
           >
-            <Image
+            <RCTImageView
               onLoad={[Function]}
+              resizeMode="cover"
               source={
                 Array [
                   Object {
@@ -1402,6 +1423,7 @@ exports[`The ActionListFeatures component should render a loading state for isLo
                   "height": 64,
                   "marginRight": 16,
                   "opacity": 0,
+                  "overflow": "hidden",
                   "width": 64,
                 }
               }
@@ -1481,8 +1503,9 @@ exports[`The ActionListFeatures component should render a loading state for isLo
               }
             }
           >
-            <Image
+            <RCTImageView
               onLoad={[Function]}
+              resizeMode="cover"
               source={
                 Array [
                   Object {
@@ -1498,6 +1521,7 @@ exports[`The ActionListFeatures component should render a loading state for isLo
                   "height": 64,
                   "marginRight": 16,
                   "opacity": 0,
+                  "overflow": "hidden",
                   "width": 64,
                 }
               }
@@ -1642,8 +1666,9 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
               }
             }
           >
-            <Image
+            <RCTImageView
               onLoad={[Function]}
+              resizeMode="cover"
               source={
                 Array [
                   Object {
@@ -1659,6 +1684,7 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
                   "height": 64,
                   "marginRight": 16,
                   "opacity": 0,
+                  "overflow": "hidden",
                   "width": 64,
                 }
               }
@@ -1755,8 +1781,9 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
               }
             }
           >
-            <Image
+            <RCTImageView
               onLoad={[Function]}
+              resizeMode="cover"
               source={
                 Array [
                   Object {
@@ -1772,6 +1799,7 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
                   "height": 64,
                   "marginRight": 16,
                   "opacity": 0,
+                  "overflow": "hidden",
                   "width": 64,
                 }
               }
@@ -1868,8 +1896,9 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
               }
             }
           >
-            <Image
+            <RCTImageView
               onLoad={[Function]}
+              resizeMode="cover"
               source={
                 Array [
                   Object {
@@ -1885,6 +1914,7 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
                   "height": 64,
                   "marginRight": 16,
                   "opacity": 0,
+                  "overflow": "hidden",
                   "width": 64,
                 }
               }
@@ -1981,8 +2011,9 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
               }
             }
           >
-            <Image
+            <RCTImageView
               onLoad={[Function]}
+              resizeMode="cover"
               source={
                 Array [
                   Object {
@@ -1998,6 +2029,7 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
                   "height": 64,
                   "marginRight": 16,
                   "opacity": 0,
+                  "overflow": "hidden",
                   "width": 64,
                 }
               }
@@ -2160,8 +2192,9 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
               }
             }
           >
-            <Image
+            <RCTImageView
               onLoad={[Function]}
+              resizeMode="cover"
               source={
                 Array [
                   Object {
@@ -2177,6 +2210,7 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
                   "height": 64,
                   "marginRight": 16,
                   "opacity": 0,
+                  "overflow": "hidden",
                   "width": 64,
                 }
               }
@@ -2273,8 +2307,9 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
               }
             }
           >
-            <Image
+            <RCTImageView
               onLoad={[Function]}
+              resizeMode="cover"
               source={
                 Array [
                   Object {
@@ -2290,6 +2325,7 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
                   "height": 64,
                   "marginRight": 16,
                   "opacity": 0,
+                  "overflow": "hidden",
                   "width": 64,
                 }
               }
@@ -2386,8 +2422,9 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
               }
             }
           >
-            <Image
+            <RCTImageView
               onLoad={[Function]}
+              resizeMode="cover"
               source={
                 Array [
                   Object {
@@ -2403,6 +2440,7 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
                   "height": 64,
                   "marginRight": 16,
                   "opacity": 0,
+                  "overflow": "hidden",
                   "width": 64,
                 }
               }
@@ -2499,8 +2537,9 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
               }
             }
           >
-            <Image
+            <RCTImageView
               onLoad={[Function]}
+              resizeMode="cover"
               source={
                 Array [
                   Object {
@@ -2516,6 +2555,7 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
                   "height": 64,
                   "marginRight": 16,
                   "opacity": 0,
+                  "overflow": "hidden",
                   "width": 64,
                 }
               }
