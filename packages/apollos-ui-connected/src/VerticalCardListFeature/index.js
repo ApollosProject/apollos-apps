@@ -10,7 +10,7 @@ import {
   styled,
   withIsLoading,
 } from '@apollosproject/ui-kit';
-import { contentCardComponentMapper } from '@apollosproject/ui-connected';
+import { contentCardComponentMapper, LiveConsumer } from '..';
 
 const Title = styled(
   ({ theme }) => ({
@@ -25,6 +25,20 @@ const Header = styled(({ theme }) => ({
   paddingTop: theme.sizing.baseUnit * 3,
   paddingBottom: theme.sizing.baseUnit * 0.5,
 }))(PaddedView);
+
+const ListItemComponent = ({ contentId, ...item }) => (
+  <LiveConsumer contentId={contentId}>
+    {(liveStream) => {
+      const isLive = !!(liveStream && liveStream.isLive);
+      const labelText = isLive ? 'Live' : item.labelText;
+      return contentCardComponentMapper({ isLive, ...item, labelText });
+    }}
+  </LiveConsumer>
+);
+
+ListItemComponent.propTypes = {
+  contentId: PropTypes.string,
+};
 
 // const getContent = ({ cards, isLoading }) => {
 //   let content = [];
@@ -95,7 +109,7 @@ const VerticalCardListFeature = memo(
       ) : null}
       <FeedView
         onPressItem={onPressItem}
-        ListItemComponent={contentCardComponentMapper}
+        ListItemComponent={ListItemComponent}
         loadingStateObject={loadingStateObject}
         content={cards} // {getContent({ cards, isLoading })}
         isLoading={isLoading}
