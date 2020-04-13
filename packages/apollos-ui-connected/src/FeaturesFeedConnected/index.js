@@ -33,73 +33,6 @@ const handleOnPressActionItem = ({ action, navigation, relatedNode }) => {
 //     itemTitle: title,
 //   });
 
-const actionListLoadingStateData = [
-  {
-    id: 'fakeId1',
-    title: '',
-    subtitle: '',
-    parentChannel: {
-      id: '',
-      name: '',
-    },
-    image: {
-      sources: [
-        {
-          uri: '',
-        },
-      ],
-    },
-  },
-  {
-    id: 'fakeId2',
-    title: '',
-    subtitle: '',
-    parentChannel: {
-      id: '',
-      name: '',
-    },
-    image: {
-      sources: [
-        {
-          uri: '',
-        },
-      ],
-    },
-  },
-  {
-    id: 'fakeId3',
-    title: '',
-    subtitle: '',
-    parentChannel: {
-      id: '',
-      name: '',
-    },
-    image: {
-      sources: [
-        {
-          uri: '',
-        },
-      ],
-    },
-  },
-  {
-    id: 'fakeId4',
-    title: '',
-    subtitle: '',
-    parentChannel: {
-      id: '',
-      name: '',
-    },
-    image: {
-      sources: [
-        {
-          uri: '',
-        },
-      ],
-    },
-  },
-];
-
 const FeaturesFeedConnected = memo(({ navigation }) => (
   <Query query={GET_FEED_FEATURES} fetchPolicy="cache-and-network">
     {({ data: features, loading }) =>
@@ -119,7 +52,7 @@ const FeaturesFeedConnected = memo(({ navigation }) => (
               return (
                 <ActionListFeature
                   // TODO: How can we better handle generating a loading state.
-                  actions={loading ? actionListLoadingStateData : actions}
+                  actions={actions}
                   isLoading={loading}
                   onPressActionItem={({ action, relatedNode }) =>
                     handleOnPressActionItem({
