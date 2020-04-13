@@ -3,6 +3,7 @@ export ContentCardConnected, {
   contentCardComponentMapper,
   GET_CONTENT_CARD,
 } from './ContentCardConnected';
+export CampaignItemListFeature from './CampaignItemListFeature';
 export ContentHTMLViewConnected, {
   GET_CONTENT_ITEM_CONTENT,
 } from './ContentHTMLViewConnected';
