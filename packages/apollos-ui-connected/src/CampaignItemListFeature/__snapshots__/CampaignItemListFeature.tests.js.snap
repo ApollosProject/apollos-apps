@@ -103,13 +103,13 @@ exports[`The CampaignItemListFeature component should render 1`] = `
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
-                "shadowColor": "transparent",
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "shadowOffset": Object {
-                  "height": 1,
+                  "height": 2,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 6,
+                "shadowRadius": 8,
               }
             }
           >
@@ -597,13 +597,13 @@ exports[`The CampaignItemListFeature component should render a loading state for
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
-                "shadowColor": "transparent",
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "shadowOffset": Object {
-                  "height": 1,
+                  "height": 2,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 6,
+                "shadowRadius": 8,
               }
             }
           >
@@ -803,13 +803,13 @@ exports[`The CampaignItemListFeature component should render a loading state for
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
-                "shadowColor": "transparent",
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "shadowOffset": Object {
-                  "height": 1,
+                  "height": 2,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 6,
+                "shadowRadius": 8,
               }
             }
           >
@@ -1009,13 +1009,13 @@ exports[`The CampaignItemListFeature component should render a loading state for
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
-                "shadowColor": "transparent",
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "shadowOffset": Object {
-                  "height": 1,
+                  "height": 2,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 6,
+                "shadowRadius": 8,
               }
             }
           >
@@ -1215,13 +1215,13 @@ exports[`The CampaignItemListFeature component should render a loading state for
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
-                "shadowColor": "transparent",
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "shadowOffset": Object {
-                  "height": 1,
+                  "height": 2,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 6,
+                "shadowRadius": 8,
               }
             }
           >
@@ -1421,13 +1421,13 @@ exports[`The CampaignItemListFeature component should render a loading state for
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
-                "shadowColor": "transparent",
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "shadowOffset": Object {
-                  "height": 1,
+                  "height": 2,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 6,
+                "shadowRadius": 8,
               }
             }
           >
@@ -1627,13 +1627,13 @@ exports[`The CampaignItemListFeature component should render a loading state for
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
-                "shadowColor": "transparent",
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "shadowOffset": Object {
-                  "height": 1,
+                  "height": 2,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 6,
+                "shadowRadius": 8,
               }
             }
           >
@@ -1833,13 +1833,13 @@ exports[`The CampaignItemListFeature component should render a loading state for
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
-                "shadowColor": "transparent",
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "shadowOffset": Object {
-                  "height": 1,
+                  "height": 2,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 6,
+                "shadowRadius": 8,
               }
             }
           >
@@ -2039,13 +2039,13 @@ exports[`The CampaignItemListFeature component should render a loading state for
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
-                "shadowColor": "transparent",
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "shadowOffset": Object {
-                  "height": 1,
+                  "height": 2,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 6,
+                "shadowRadius": 8,
               }
             }
           >
@@ -2245,13 +2245,13 @@ exports[`The CampaignItemListFeature component should render a loading state for
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
-                "shadowColor": "transparent",
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "shadowOffset": Object {
-                  "height": 1,
+                  "height": 2,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 6,
+                "shadowRadius": 8,
               }
             }
           >
@@ -2451,13 +2451,13 @@ exports[`The CampaignItemListFeature component should render a loading state for
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
-                "shadowColor": "transparent",
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "shadowOffset": Object {
-                  "height": 1,
+                  "height": 2,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 6,
+                "shadowRadius": 8,
               }
             }
           >
@@ -2757,13 +2757,13 @@ exports[`The CampaignItemListFeature component should render a section title 1`]
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
-                "shadowColor": "transparent",
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "shadowOffset": Object {
-                  "height": 1,
+                  "height": 2,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 6,
+                "shadowRadius": 8,
               }
             }
           >
@@ -3055,13 +3055,13 @@ exports[`The CampaignItemListFeature component should render with a subtitle 1`]
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
-                "shadowColor": "transparent",
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "shadowOffset": Object {
-                  "height": 1,
+                  "height": 2,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 6,
+                "shadowRadius": 8,
               }
             }
           >
