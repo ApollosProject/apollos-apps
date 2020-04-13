@@ -1,7 +1,8 @@
 import React, { memo } from 'react';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
+
 import {
   ActionListFeature,
   CampaignItemListFeature,
@@ -192,5 +193,11 @@ const FeaturesFeedConnected = memo(({ navigation }) => (
 ));
 
 FeaturesFeedConnected.displayName = 'Features';
+
+FeaturesFeedConnected.proptypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func,
+  }),
+};
 
 export default FeaturesFeedConnected;
