@@ -1,3 +1,18 @@
+v1.3.1: April 13, 2020
+
+- Adds CampaignItemListFeature to ui-connected package (#1412) (7fd68e0b)
+- Adds Feature fragments (#1411) (046b50d1)
+
+- Moves horizontal card list feature to core (#1415) (520bb8ed)
+- Moves ActionListFeature to ui-connected (#1413) (1745010d)
+- Moves VerticalCardListFeature component to ui-connected packages (#1416) (72eae667)
+- Updates theme Shadow Value (#1408) (abf1778d)
+- Updates stories on start (#1414) (8b026a4f)
+- Updates CardListItem Features Resolver (#1407) (c1e3de9b)
+- Refactors Card Labels with Custom Icons (#1405) (10ff83f2)
+
+- Removes object syntax from JSX (#1409) (47c39362)
+
 v1.3.1-beta.0: April 6, 2020
 
 - Adds Interact when Loaded Component (#1395) (51826317)
