@@ -99,7 +99,7 @@ const actionListLoadingStateData = [
   },
 ];
 
-const Features = memo(({ navigation }) => (
+const FeaturesFeedConnected = memo(({ navigation }) => (
   <Query query={GET_FEED_FEATURES} fetchPolicy="cache-and-network">
     {({ data: features, loading }) =>
       get(features, 'userFeedFeatures', []).map(
@@ -191,6 +191,6 @@ const Features = memo(({ navigation }) => (
   </Query>
 ));
 
-Features.displayName = 'Features';
+FeaturesFeedConnected.displayName = 'Features';
 
-export default Features;
+export default FeaturesFeedConnected;
