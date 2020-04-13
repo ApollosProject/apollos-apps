@@ -72,7 +72,7 @@ class HorizontalCardListFeature extends PureComponent {
               <Subtitle>{this.props.subtitle}</Subtitle>
             ) : null}
           </Header>
-      ) : null }
+        ) : null}
         <HorizontalTileFeed
           content={this.props.cards}
           isLoading={this.props.isLoading}
