@@ -12,6 +12,7 @@ export ContentSingleFeaturesConnected, {
   ScriptureFeature,
   TextFeature,
 } from './ContentSingleFeaturesConnected';
+export HorizontalCardListFeature from './HorizontalCardListFeature';
 export HorizontalContentCardConnected, {
   horizontalContentCardComponentMapper,
 } from './HorizontalContentCardConnected';
