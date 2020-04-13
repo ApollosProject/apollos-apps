@@ -114,10 +114,10 @@ export const shadows = ({ colors: themeColors }) => ({
       shadowColor: themeColors.shadows.default,
       shadowOffset: {
         width: 0,
-        height: 1,
+        height: 2,
       },
       shadowOpacity: 1,
-      shadowRadius: 6,
+      shadowRadius: 8,
     },
     android: {
       elevation: 5,

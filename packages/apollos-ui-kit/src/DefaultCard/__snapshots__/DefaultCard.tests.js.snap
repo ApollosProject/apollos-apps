@@ -9,13 +9,13 @@ exports[`DefaultCard should render a loading state with isLoading 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -180,13 +180,13 @@ exports[`DefaultCard should render at the images natural aspect ratio (between m
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -316,13 +316,13 @@ exports[`DefaultCard should render at the maxAspectRatio bound (wider than tall)
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -452,13 +452,13 @@ exports[`DefaultCard should render at the minAspectRatio bound (tall-ish) 1`] = 
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -588,13 +588,13 @@ exports[`DefaultCard should render with a summary 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -740,13 +740,13 @@ exports[`DefaultCard should render with custom LabelComponent 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -922,13 +922,13 @@ exports[`DefaultCard should render with custom labelText 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -1104,13 +1104,13 @@ exports[`DefaultCard should should render a like icon 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -1366,13 +1366,13 @@ exports[`DefaultCard should should render as isLiked 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >

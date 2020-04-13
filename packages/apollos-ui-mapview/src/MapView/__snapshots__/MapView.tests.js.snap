@@ -64,14 +64,15 @@ exports[`<MapView> should render 1`] = `
                 "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "margin": 8,
+                "marginBottom": 12,
                 "marginHorizontal": 4,
-                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "shadowOffset": Object {
-                  "height": 1,
+                  "height": 2,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 6,
+                "shadowRadius": 8,
                 "width": 714,
               }
             }
@@ -207,14 +208,15 @@ Richardson, TX 75080-5525
                 "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "margin": 8,
+                "marginBottom": 12,
                 "marginHorizontal": 4,
-                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "shadowOffset": Object {
-                  "height": 1,
+                  "height": 2,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 6,
+                "shadowRadius": 8,
                 "width": 714,
               }
             }
@@ -479,14 +481,15 @@ exports[`<MapView> should render with a custom buttonTitle 1`] = `
                 "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "margin": 8,
+                "marginBottom": 12,
                 "marginHorizontal": 4,
-                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "shadowOffset": Object {
-                  "height": 1,
+                  "height": 2,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 6,
+                "shadowRadius": 8,
                 "width": 714,
               }
             }
@@ -622,14 +625,15 @@ Richardson, TX 75080-5525
                 "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "margin": 8,
+                "marginBottom": 12,
                 "marginHorizontal": 4,
-                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "shadowOffset": Object {
-                  "height": 1,
+                  "height": 2,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 6,
+                "shadowRadius": 8,
                 "width": 714,
               }
             }

@@ -10,13 +10,13 @@ exports[`HighlightCard should render a loading state with isLoading 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "transparent",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -192,13 +192,13 @@ exports[`HighlightCard should render in a "tall" aspect ratio (maxAspectRatio) 1
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "transparent",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -352,13 +352,13 @@ exports[`HighlightCard should render in a "wide" aspect ratio 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "transparent",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -512,13 +512,13 @@ exports[`HighlightCard should render with a custom actionIcon 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "transparent",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -787,13 +787,13 @@ exports[`HighlightCard should render with a custom theme 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "transparent",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -954,13 +954,13 @@ exports[`HighlightCard should render with a summary 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "transparent",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -1129,13 +1129,13 @@ exports[`HighlightCard should render with custom LabelComponent 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "transparent",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -1342,13 +1342,13 @@ exports[`HighlightCard should render with custom labelText 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "transparent",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -1555,13 +1555,13 @@ exports[`HighlightCard should should render a like icon 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "transparent",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -1842,13 +1842,13 @@ exports[`HighlightCard should should render as isLiked 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "transparent",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -2129,13 +2129,13 @@ exports[`HighlightCard should should render as isLive 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "transparent",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -2289,13 +2289,13 @@ exports[`HighlightCard should should render with an action "button" 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "transparent",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >

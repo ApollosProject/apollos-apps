@@ -42,13 +42,13 @@ exports[`ContentSingleFeatures should render 1`] = `
         "borderRadius": 16,
         "marginHorizontal": 16,
         "marginVertical": 12,
-        "shadowColor": "rgba(165, 165, 165, 0.6)",
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
         "shadowOffset": Object {
-          "height": 1,
+          "height": 2,
           "width": 0,
         },
         "shadowOpacity": 1,
-        "shadowRadius": 6,
+        "shadowRadius": 8,
       }
     }
   >
@@ -239,13 +239,13 @@ exports[`ContentSingleFeatures should render 1`] = `
         "borderRadius": 16,
         "marginHorizontal": 16,
         "marginVertical": 12,
-        "shadowColor": "rgba(165, 165, 165, 0.6)",
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
         "shadowOffset": Object {
-          "height": 1,
+          "height": 2,
           "width": 0,
         },
         "shadowOpacity": 1,
-        "shadowRadius": 6,
+        "shadowRadius": 8,
       }
     }
   >
@@ -535,13 +535,13 @@ exports[`ContentSingleFeatures should render 1`] = `
         "borderRadius": 16,
         "marginHorizontal": 16,
         "marginVertical": 12,
-        "shadowColor": "rgba(165, 165, 165, 0.6)",
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
         "shadowOffset": Object {
-          "height": 1,
+          "height": 2,
           "width": 0,
         },
         "shadowOpacity": 1,
-        "shadowRadius": 6,
+        "shadowRadius": 8,
       }
     }
   >
@@ -865,13 +865,13 @@ exports[`ContentSingleFeatures should render a loading state 1`] = `
         "borderRadius": 16,
         "marginHorizontal": 16,
         "marginVertical": 12,
-        "shadowColor": "rgba(165, 165, 165, 0.6)",
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
         "shadowOffset": Object {
-          "height": 1,
+          "height": 2,
           "width": 0,
         },
         "shadowOpacity": 1,
-        "shadowRadius": 6,
+        "shadowRadius": 8,
       }
     }
   >
@@ -1062,13 +1062,13 @@ exports[`ContentSingleFeatures should render a loading state 1`] = `
         "borderRadius": 16,
         "marginHorizontal": 16,
         "marginVertical": 12,
-        "shadowColor": "rgba(165, 165, 165, 0.6)",
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
         "shadowOffset": Object {
-          "height": 1,
+          "height": 2,
           "width": 0,
         },
         "shadowOpacity": 1,
-        "shadowRadius": 6,
+        "shadowRadius": 8,
       }
     }
   >
@@ -1307,13 +1307,13 @@ exports[`ContentSingleFeatures should render a loading state 1`] = `
         "borderRadius": 16,
         "marginHorizontal": 16,
         "marginVertical": 12,
-        "shadowColor": "rgba(165, 165, 165, 0.6)",
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
         "shadowOffset": Object {
-          "height": 1,
+          "height": 2,
           "width": 0,
         },
         "shadowOpacity": 1,
-        "shadowRadius": 6,
+        "shadowRadius": 8,
       }
     }
   >
@@ -1590,13 +1590,13 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
         "borderRadius": 16,
         "marginHorizontal": 16,
         "marginVertical": 12,
-        "shadowColor": "rgba(165, 165, 165, 0.6)",
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
         "shadowOffset": Object {
-          "height": 1,
+          "height": 2,
           "width": 0,
         },
         "shadowOpacity": 1,
-        "shadowRadius": 6,
+        "shadowRadius": 8,
       }
     }
   >
@@ -1787,13 +1787,13 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
         "borderRadius": 16,
         "marginHorizontal": 16,
         "marginVertical": 12,
-        "shadowColor": "rgba(165, 165, 165, 0.6)",
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
         "shadowOffset": Object {
-          "height": 1,
+          "height": 2,
           "width": 0,
         },
         "shadowOpacity": 1,
-        "shadowRadius": 6,
+        "shadowRadius": 8,
       }
     }
   >
@@ -2083,13 +2083,13 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
         "borderRadius": 16,
         "marginHorizontal": 16,
         "marginVertical": 12,
-        "shadowColor": "rgba(165, 165, 165, 0.6)",
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
         "shadowOffset": Object {
-          "height": 1,
+          "height": 2,
           "width": 0,
         },
         "shadowOpacity": 1,
-        "shadowRadius": 6,
+        "shadowRadius": 8,
       }
     }
   >

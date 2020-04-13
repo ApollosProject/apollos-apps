@@ -65,14 +65,15 @@ exports[`The MapViewConnected component should render 1`] = `
                 "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "margin": 8,
+                "marginBottom": 12,
                 "marginHorizontal": 4,
-                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "shadowOffset": Object {
-                  "height": 1,
+                  "height": 2,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 6,
+                "shadowRadius": 8,
                 "width": 714,
               }
             }
@@ -232,14 +233,15 @@ South Barrington, IL 60010-6143
                 "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "margin": 8,
+                "marginBottom": 12,
                 "marginHorizontal": 4,
-                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "shadowOffset": Object {
-                  "height": 1,
+                  "height": 2,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 6,
+                "shadowRadius": 8,
                 "width": 714,
               }
             }
@@ -399,14 +401,15 @@ Anderson, SC 29621-3619
                 "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "margin": 8,
+                "marginBottom": 12,
                 "marginHorizontal": 4,
-                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "shadowOffset": Object {
-                  "height": 1,
+                  "height": 2,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 6,
+                "shadowRadius": 8,
                 "width": 714,
               }
             }
@@ -566,14 +569,15 @@ Richardson, TX 75080-5525
                 "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "margin": 8,
+                "marginBottom": 12,
                 "marginHorizontal": 4,
-                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "shadowOffset": Object {
-                  "height": 1,
+                  "height": 2,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 6,
+                "shadowRadius": 8,
                 "width": 714,
               }
             }
