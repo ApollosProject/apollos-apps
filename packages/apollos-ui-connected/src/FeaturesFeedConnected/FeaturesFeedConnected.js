@@ -9,13 +9,16 @@ const FeaturesFeedConnected = memo(
   ({ Component, onPressActionItem, onPressCardActionButton }) => (
     <Query query={GET_FEED_FEATURES} fetchPolicy="cache-and-network">
       {({ data: features, loading }) => (
-        <Component features={features} isLoading={loading} />
+        <Component
+          features={features}
+          isLoading={loading}
+          onPressActionItem={onPressActionItem}
+          onPressCardActionButton={onPressCardActionButton}
+        />
       )}
     </Query>
   )
 );
-
-FeaturesFeedConnected.displayName = 'Features';
 
 FeaturesFeedConnected.proptypes = {
   Component: PropTypes.oneOfType([
@@ -30,5 +33,7 @@ FeaturesFeedConnected.proptypes = {
 FeaturesFeedConnected.defaultProps = {
   Component: FeaturesFeed,
 };
+
+FeaturesFeedConnected.displayName = 'FeaturesFeedConnected';
 
 export default FeaturesFeedConnected;
