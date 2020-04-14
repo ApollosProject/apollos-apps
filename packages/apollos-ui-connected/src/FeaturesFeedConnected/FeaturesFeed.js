@@ -79,8 +79,6 @@ const FeaturesFeed = ({
     }
   );
 
-FeaturesFeed.displayName = 'FeaturesFeed';
-
 FeaturesFeed.proptypes = {
   features: PropTypes.arrayOf(PropTypes.shapes()),
   isLoading: PropTypes.bool,
