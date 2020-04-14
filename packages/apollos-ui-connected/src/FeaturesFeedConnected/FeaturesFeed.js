@@ -49,6 +49,7 @@ const FeaturesFeed = ({ features, isLoading, onPressActionItem }) =>
                 ...(actionIcon != null ? { actionIcon: card.actionIcon } : {}),
                 coverImage: get(card, 'coverImage.sources', undefined),
                 __typename: card.relatedNode.__typename,
+                id: card.relatedNode.id,
               }))}
               isLoading={isLoading}
               listKey={id}

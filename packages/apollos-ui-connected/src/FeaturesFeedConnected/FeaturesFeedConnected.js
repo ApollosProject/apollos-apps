@@ -17,7 +17,7 @@ const FeaturesFeedConnected = memo(({ Component, onPressActionItem }) => (
   </Query>
 ));
 
-FeaturesFeedConnected.proptypes = {
+FeaturesFeedConnected.propTypes = {
   Component: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.func,
