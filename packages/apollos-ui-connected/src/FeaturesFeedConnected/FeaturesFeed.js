@@ -7,12 +7,7 @@ import CampaignItemListFeature from '../CampaignItemListFeature';
 import HorizontalCardListFeature from '../HorizontalCardListFeature';
 import VerticalCardListFeature from '../VerticalCardListFeature';
 
-const FeaturesFeed = ({
-  features,
-  isLoading,
-  onPressActionItem,
-  onPressCardActionButton,
-}) =>
+const FeaturesFeed = ({ features, isLoading, onPressActionItem }) =>
   get(features, 'userFeedFeatures', []).map(
     ({ actions, cards, id, isFeatured, subtitle, title, __typename }) => {
       switch (__typename) {
@@ -23,7 +18,6 @@ const FeaturesFeed = ({
               actions={actions}
               isLoading={isLoading}
               onPressActionItem={onPressActionItem}
-              onPressActionListButton={onPressCardActionButton}
               subtitle={subtitle}
               title={title}
             />
@@ -75,7 +69,6 @@ FeaturesFeed.proptypes = {
   }).isRequired,
   isLoading: PropTypes.bool,
   onPressActionItem: PropTypes.func,
-  onPressCardActionButton: PropTypes.func,
 };
 
 export default FeaturesFeed;
