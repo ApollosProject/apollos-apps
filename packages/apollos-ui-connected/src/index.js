@@ -13,6 +13,10 @@ export ContentSingleFeaturesConnected, {
   ScriptureFeature,
   TextFeature,
 } from './ContentSingleFeaturesConnected';
+export FeaturesFeedConnected, {
+  FeaturesFeed,
+  GET_FEED_FEATURES,
+} from './FeaturesFeedConnected';
 export HorizontalCardListFeature from './HorizontalCardListFeature';
 export HorizontalContentCardConnected, {
   horizontalContentCardComponentMapper,
