@@ -80,7 +80,9 @@ const FeaturesFeed = ({
   );
 
 FeaturesFeed.proptypes = {
-  features: PropTypes.arrayOf(PropTypes.shapes()),
+  features: PropTypes.shape({
+    userFeedFeatures: PropTypes.arrayOf(PropTypes.shape({})),
+  }).isRequired,
   isLoading: PropTypes.bool,
   onPressActionItem: PropTypes.func,
   onPressCardActionButton: PropTypes.func,
