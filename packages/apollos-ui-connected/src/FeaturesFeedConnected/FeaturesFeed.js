@@ -14,16 +14,7 @@ const FeaturesFeed = ({
   onPressCardActionButton,
 }) =>
   get(features, 'userFeedFeatures', []).map(
-    ({
-      actions,
-      cards,
-      id,
-      isFeatured,
-      subtitle,
-      title,
-      __typename,
-      ...props
-    }) => {
+    ({ actions, cards, id, isFeatured, subtitle, title, __typename }) => {
       switch (__typename) {
         case 'ActionListFeature':
           return (
@@ -35,7 +26,6 @@ const FeaturesFeed = ({
               onPressActionListButton={onPressCardActionButton}
               subtitle={subtitle}
               title={title}
-              {...props}
             />
           );
         case 'HorizontalCardListFeature':
