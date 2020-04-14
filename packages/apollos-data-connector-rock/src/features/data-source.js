@@ -14,6 +14,7 @@ export default class Features extends RockApolloDataSource {
     SERMON_CHILDREN: this.sermonChildrenAlgorithm.bind(this),
     UPCOMING_EVENTS: this.upcomingEventsAlgorithm.bind(this),
     CAMPAIGN_ITEMS: this.campaignItemsAlgorithm.bind(this),
+    USER_FEED: this.userFeedAlgorithm.bind(this),
   };
 
   async runAlgorithms({ algorithms }) {
@@ -243,6 +244,24 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
       id: createGlobalId(`${item.id}${i}`, 'ActionListAction'),
       title: item.title,
       subtitle: get(item, 'channelSubtitle'),
+      relatedNode: { ...item, __type: ContentItem.resolveType(item) },
+      image: ContentItem.getCoverImage(item),
+      action: 'READ_CONTENT',
+      summary: ContentItem.createSummary(item),
+    }));
+  }
+
+  async userFeedAlgorithm({ limit = 20 } = {}) {
+    const { ContentItem } = this.context.dataSources;
+
+    const items = await ContentItem.byUserFeed()
+      .top(limit)
+      .get();
+
+    return items.map((item, i) => ({
+      id: createGlobalId(`${item.id}${i}`, 'ActionListAction'),
+      title: item.title,
+      subtitle: get(item, 'contentChannel.name'),
       relatedNode: { ...item, __type: ContentItem.resolveType(item) },
       image: ContentItem.getCoverImage(item),
       action: 'READ_CONTENT',

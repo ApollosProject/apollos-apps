@@ -68,12 +68,16 @@ describe('features', () => {
     const getSermonFeed = () => ({
       first,
     });
+    const byUserFeed = () => ({
+      top: () => ({ get: () => Promise.resolve(itemMock) }),
+    });
     context = {
       dataSources: {
         ContentItem: {
           byPersonaFeed,
           byContentChannelIds,
           byContentChannelId,
+          byUserFeed,
           getCursorByParentContentItemId,
           getSermonFeed,
           getCoverImage: () => null,
@@ -357,6 +361,26 @@ describe('features', () => {
         algorithms: [
           {
             type: 'CAMPAIGN_ITEMS',
+          },
+        ],
+        title: 'Test Featured Item',
+        subtitle: "It's featured!",
+      });
+
+      expect(result).toMatchSnapshot();
+      expect(first.mock.calls).toMatchSnapshot();
+    });
+
+    it('should create an ActionListFeature from a USER_FEED algorithm', async () => {
+      const features = new Features();
+      features.initialize({
+        context,
+      });
+
+      const result = await features.createActionListFeature({
+        algorithms: [
+          {
+            type: 'USER_FEED',
           },
         ],
         title: 'Test Featured Item',
