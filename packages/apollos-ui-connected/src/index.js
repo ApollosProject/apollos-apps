@@ -14,7 +14,7 @@ export ContentSingleFeaturesConnected, {
   TextFeature,
 } from './ContentSingleFeaturesConnected';
 export FeaturesFeedConnected, {
-  FeaturesFeed,
+  featuresFeedComponentMapper,
   GET_FEED_FEATURES,
 } from './FeaturesFeedConnected';
 export HorizontalCardListFeature from './HorizontalCardListFeature';
