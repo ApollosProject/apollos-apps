@@ -1,6 +1,6 @@
 import ApollosConfig from '@apollosproject/config';
 
-import Features from '../data-source';
+import Feature from '../data-source';
 import resolver from '../resolver';
 
 const itemMock = [
@@ -118,12 +118,12 @@ describe('features', () => {
   });
   describe('dataSource', () => {
     it('should create an ActionListFeature from a PERSONA_FEED', async () => {
-      const features = new Features();
-      features.initialize({
+      const feature = new Feature();
+      feature.initialize({
         context,
       });
 
-      const result = await features.createActionListFeature({
+      const result = await feature.createActionListFeature({
         algorithms: ['PERSONA_FEED'],
         title: 'Test Action List',
         subtitle: "It's great!",
@@ -133,12 +133,12 @@ describe('features', () => {
     });
 
     it('should create an VerticalCardListFeature from a PERSONA_FEED', async () => {
-      const features = new Features();
-      features.initialize({
+      const feature = new Feature();
+      feature.initialize({
         context,
       });
 
-      const result = await features.createVerticalCardListFeature({
+      const result = await feature.createVerticalCardListFeature({
         algorithms: ['PERSONA_FEED'],
         title: 'Test Action List',
         subtitle: "It's great!",
@@ -148,12 +148,12 @@ describe('features', () => {
     });
 
     it('should create an HorizontalCardListFeature from a PERSONA_FEED', async () => {
-      const features = new Features();
-      features.initialize({
+      const feature = new Feature();
+      feature.initialize({
         context,
       });
 
-      const result = await features.createHorizontalCardListFeature({
+      const result = await feature.createHorizontalCardListFeature({
         algorithms: ['PERSONA_FEED'],
         title: 'Test Horizontal List of Cards',
         subtitle: 'Boom',
@@ -163,12 +163,12 @@ describe('features', () => {
     });
 
     it('should create an ActionListFeature from multiple PERSONA_FEED algorithms', async () => {
-      const features = new Features();
-      features.initialize({
+      const feature = new Feature();
+      feature.initialize({
         context,
       });
 
-      const result = await features.createActionListFeature({
+      const result = await feature.createActionListFeature({
         algorithms: ['PERSONA_FEED', 'PERSONA_FEED'],
         title: 'Test Action List',
         subtitle: "It's great!",
@@ -178,12 +178,12 @@ describe('features', () => {
     });
 
     it('should create an ActionListFeature from a UPCOMING_EVENTS', async () => {
-      const features = new Features();
-      features.initialize({
+      const feature = new Feature();
+      feature.initialize({
         context,
       });
 
-      const result = await features.createActionListFeature({
+      const result = await feature.createActionListFeature({
         algorithms: ['UPCOMING_EVENTS'],
         title: 'Test Action List',
         subtitle: "It's great!",
@@ -193,12 +193,12 @@ describe('features', () => {
     });
 
     it('should create an ActionListFeature from a CONTENT_CHANNEL algorithm', async () => {
-      const features = new Features();
-      features.initialize({
+      const feature = new Feature();
+      feature.initialize({
         context,
       });
 
-      const result = await features.createActionListFeature({
+      const result = await feature.createActionListFeature({
         algorithms: [
           {
             type: 'CONTENT_CHANNEL',
@@ -214,12 +214,12 @@ describe('features', () => {
     });
 
     it('should create an ActionListFeature from a SERMON_CHILDREN algorithm', async () => {
-      const features = new Features();
-      features.initialize({
+      const feature = new Feature();
+      feature.initialize({
         context,
       });
 
-      const result = await features.createActionListFeature({
+      const result = await feature.createActionListFeature({
         algorithms: ['SERMON_CHILDREN'],
         title: 'Test Action List',
         subtitle: "It's great!",
@@ -230,12 +230,12 @@ describe('features', () => {
     });
 
     it('should create an ActionListFeature from a CONTENT_CHANNEL algorithm with limit', async () => {
-      const features = new Features();
-      features.initialize({
+      const feature = new Feature();
+      feature.initialize({
         context,
       });
 
-      const result = await features.createActionListFeature({
+      const result = await feature.createActionListFeature({
         algorithms: [
           {
             type: 'CONTENT_CHANNEL',
@@ -251,12 +251,12 @@ describe('features', () => {
     });
 
     it('should throw an error when creating a ActionListFeature from a CONTENT_CHANNEL with no contentChannelId', async () => {
-      const features = new Features();
-      features.initialize({
+      const feature = new Feature();
+      feature.initialize({
         context,
       });
 
-      const result = features.createActionListFeature({
+      const result = feature.createActionListFeature({
         algorithms: [
           {
             type: 'CONTENT_CHANNEL',
@@ -271,12 +271,12 @@ describe('features', () => {
     });
 
     it('should create an ActionListFeature from no algorithms', async () => {
-      const features = new Features();
-      features.initialize({
+      const feature = new Feature();
+      feature.initialize({
         context,
       });
 
-      const result = await features.createActionListFeature({
+      const result = await feature.createActionListFeature({
         algorithms: [],
         title: 'Test Action List',
         subtitle: "It's great!",
@@ -286,12 +286,12 @@ describe('features', () => {
     });
 
     it('should create an ActionListFeature from two different algorithms', async () => {
-      const features = new Features();
-      features.initialize({
+      const feature = new Feature();
+      feature.initialize({
         context,
       });
 
-      const result = await features.createActionListFeature({
+      const result = await feature.createActionListFeature({
         algorithms: [
           {
             type: 'CONTENT_CHANNEL',
@@ -307,12 +307,12 @@ describe('features', () => {
     });
 
     it('createTextFeature should create a Text feature', async () => {
-      const features = new Features();
-      features.initialize({
+      const feature = new Feature();
+      feature.initialize({
         context,
       });
 
-      const result = await features.createTextFeature({
+      const result = await feature.createTextFeature({
         text: 'Hello World',
         id: 123,
       });
@@ -321,12 +321,12 @@ describe('features', () => {
     });
 
     it('createScriptureFeature should create a Scriptre feature', async () => {
-      const features = new Features();
-      features.initialize({
+      const feature = new Feature();
+      feature.initialize({
         context,
       });
 
-      const result = await features.createScriptureFeature({
+      const result = await feature.createScriptureFeature({
         reference: 'John 3:16',
         id: 123,
       });
@@ -335,19 +335,19 @@ describe('features', () => {
     });
 
     it('should generate scripture shares', async () => {
-      const features = new Features();
-      features.initialize({
+      const feature = new Feature();
+      feature.initialize({
         context,
       });
 
-      const { Scripture } = features.context.dataSources;
+      const { Scripture } = feature.context.dataSources;
       Scripture.getScriptures = jest.fn(() => [
         {
           reference: 'John 3:16',
           content: '<p>Not the real verse</p>',
         },
       ]);
-      const result = await features.getScriptureShareMessage([
+      const result = await feature.getScriptureShareMessage([
         {
           reference: 'John 3:16',
         },
@@ -357,12 +357,12 @@ describe('features', () => {
     });
 
     it('should create an ActionListFeature from a CAMPAIGN_ITEMS algorithm', async () => {
-      const features = new Features();
-      features.initialize({
+      const feature = new Feature();
+      feature.initialize({
         context,
       });
 
-      const result = await features.createActionListFeature({
+      const result = await feature.createActionListFeature({
         algorithms: [
           {
             type: 'CAMPAIGN_ITEMS',
@@ -377,12 +377,12 @@ describe('features', () => {
     });
 
     it('should create an ActionListFeature from a USER_FEED algorithm', async () => {
-      const features = new Features();
-      features.initialize({
+      const feature = new Feature();
+      feature.initialize({
         context,
       });
 
-      const result = await features.createActionListFeature({
+      const result = await feature.createActionListFeature({
         algorithms: [
           {
             type: 'USER_FEED',
@@ -396,8 +396,8 @@ describe('features', () => {
       expect(first.mock.calls).toMatchSnapshot();
     });
     it('should render the default case from getHomeFeedFeatures', async () => {
-      const features = new Features();
-      features.initialize({
+      const feature = new Feature();
+      feature.initialize({
         context,
       });
 
@@ -411,13 +411,13 @@ describe('features', () => {
         ],
       });
 
-      const result = await features.getHomeFeedFeatures();
+      const result = await feature.getHomeFeedFeature();
 
       expect(result).toMatchSnapshot();
     });
     it('should render the VerticalCardList type from getHomeFeedFeatures', async () => {
-      const features = new Features();
-      features.initialize({
+      const feature = new Feature();
+      feature.initialize({
         context,
       });
 
@@ -432,13 +432,13 @@ describe('features', () => {
         ],
       });
 
-      const result = await features.getHomeFeedFeatures();
+      const result = await feature.getHomeFeedFeature();
 
       expect(result).toMatchSnapshot();
     });
     it('should render the HorizontalCardList type from getHomeFeedFeatures', async () => {
-      const features = new Features();
-      features.initialize({
+      const feature = new Feature();
+      feature.initialize({
         context,
       });
 
@@ -453,7 +453,7 @@ describe('features', () => {
         ],
       });
 
-      const result = await features.getHomeFeedFeatures();
+      const result = await feature.getHomeFeedFeature();
 
       expect(result).toMatchSnapshot();
     });
@@ -461,8 +461,8 @@ describe('features', () => {
 
   describe('resolver', () => {
     it('must return a personaFeed, a sermonChildrenFeed, and a contentChannelFeed for the userFeedFeatures', async () => {
-      const features = new Features();
-      features.initialize({
+      const feature = new Feature();
+      feature.initialize({
         context,
       });
       const result = await resolver.Query.userFeedFeatures(null, null, {

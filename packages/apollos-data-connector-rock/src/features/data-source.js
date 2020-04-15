@@ -3,7 +3,7 @@ import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import { createGlobalId } from '@apollosproject/server-core';
 import ApollosConfig from '@apollosproject/config';
 
-export default class Features extends RockApolloDataSource {
+export default class Feature extends RockApolloDataSource {
   resource = '';
 
   // Names of Action Algoritms mapping to the functions that create the actions.
@@ -16,6 +16,11 @@ export default class Features extends RockApolloDataSource {
     CAMPAIGN_ITEMS: this.campaignItemsAlgorithm.bind(this),
     USER_FEED: this.userFeedAlgorithm.bind(this),
   };
+
+  getFromId(...args) {
+    console.log(args);
+    return null;
+  }
 
   async runAlgorithms({ algorithms }) {
     // We should flatten just in case a single algorithm generates multiple actions
