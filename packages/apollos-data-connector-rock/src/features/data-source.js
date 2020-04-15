@@ -1,6 +1,6 @@
 import { flatten, get } from 'lodash';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
-import { createGlobalId } from '@apollosproject/server-core';
+import { createGlobalId, parseGlobalId } from '@apollosproject/server-core';
 import ApollosConfig from '@apollosproject/config';
 
 export default class Feature extends RockApolloDataSource {
@@ -17,9 +17,15 @@ export default class Feature extends RockApolloDataSource {
     USER_FEED: this.userFeedAlgorithm.bind(this),
   };
 
-  getFromId(...args) {
-    console.log(args);
-    return null;
+  getFromId(args, id) {
+    const type = id.split(':')[0];
+    const funcArgs = JSON.parse(args);
+    const method = this[`create${type}`].bind(this);
+    return method(funcArgs);
+  }
+
+  createFeatureId({ args, type }) {
+    return createGlobalId(JSON.stringify(args), type);
   }
 
   async runAlgorithms({ algorithms }) {
@@ -39,16 +45,18 @@ export default class Feature extends RockApolloDataSource {
 
   async createActionListFeature({ algorithms = [], title, subtitle }) {
     // Generate a list of actions.
-    const actions = await this.runAlgorithms({ algorithms });
+    const actions = () => this.runAlgorithms({ algorithms });
     return {
       // The Feature ID is based on all of the action ids, added together.
       // This is naive, and could be improved.
-      id: createGlobalId(
-        actions
-          .map(({ relatedNode: { id } }) => id)
-          .reduce((acc, sum) => acc + sum, 0),
-        'ActionListFeature'
-      ),
+      id: this.createFeatureId({
+        type: 'ActionListFeature',
+        args: {
+          algorithms,
+          title,
+          subtitle,
+        },
+      }),
       actions,
       title,
       subtitle,
@@ -64,16 +72,19 @@ export default class Feature extends RockApolloDataSource {
     isFeatured = false,
   }) {
     // Generate a list of cards.
-    const cards = await this.runAlgorithms({ algorithms });
+    const cards = () => this.runAlgorithms({ algorithms });
     return {
       // The Feature ID is based on all of the action ids, added together.
       // This is naive, and could be improved.
-      id: createGlobalId(
-        cards
-          .map(({ relatedNode: { id } }) => id)
-          .reduce((acc, sum) => acc + sum, 0),
-        'VerticalCardListFeature'
-      ),
+      id: this.createFeatureId({
+        type: 'VerticalCardListFeature',
+        args: {
+          algorithms,
+          title,
+          subtitle,
+          isFeatured,
+        },
+      }),
       cards,
       isFeatured,
       title,
@@ -90,16 +101,18 @@ export default class Feature extends RockApolloDataSource {
     subtitle,
   }) {
     // Generate a list of horizontal cards.
-    const cards = await this.runAlgorithms({ algorithms });
+    const cards = () => this.runAlgorithms({ algorithms });
     return {
       // The Feature ID is based on all of the action ids, added together.
       // This is naive, and could be improved.
-      id: createGlobalId(
-        cards
-          .map(({ relatedNode: { id } }) => id)
-          .reduce((acc, sum) => acc + sum, 0),
-        'HorizontalCardListFeature'
-      ),
+      id: this.createFeatureId({
+        type: 'HorizontalCardListFeature',
+        args: {
+          algorithms,
+          title,
+          subtitle,
+        },
+      }),
       cards,
       hyphenatedTitle,
       title,
