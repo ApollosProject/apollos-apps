@@ -11,6 +11,7 @@ import {
   styled,
   withIsLoading,
 } from '@apollosproject/ui-kit';
+import { LiveConsumer } from '..';
 
 const Title = styled(
   ({ theme }) => ({
@@ -25,6 +26,20 @@ const Header = styled(({ theme }) => ({
   paddingTop: theme.sizing.baseUnit * 3,
   paddingBottom: theme.sizing.baseUnit * 0.5,
 }))(PaddedView);
+
+const ListItemComponent = ({ contentId, ...item }) => (
+  <LiveConsumer contentId={contentId}>
+    {(liveStream) => {
+      const isLive = !!(liveStream && liveStream.isLive);
+      const labelText = isLive ? 'Live' : item.labelText;
+      return <FeaturedCard isLive={isLive} {...item} labelText={labelText} />;
+    }}
+  </LiveConsumer>
+);
+
+ListItemComponent.propTypes = {
+  contentId: PropTypes.string,
+};
 
 // const getContent = ({ cards, isLoading }) => {
 //   let content = [];
@@ -95,7 +110,7 @@ const CampaignItemListFeature = memo(
       ) : null}
       <FeedView
         onPressItem={onPressItem}
-        ListItemComponent={FeaturedCard}
+        ListItemComponent={ListItemComponent}
         loadingStateObject={loadingStateObject}
         content={cards} // {getContent({ cards, isLoading })}
         isLoading={isLoading}

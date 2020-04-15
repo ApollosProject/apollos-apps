@@ -230,7 +230,10 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
             id
           );
 
-          const childItems = await childItemsCursor.top(limit).get();
+          const childItems = await childItemsCursor
+            .top(limit)
+            .expand('ContentChannel')
+            .get();
 
           return childItems.map((item) => ({
             ...item,
@@ -243,7 +246,7 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
     return items.map((item, i) => ({
       id: createGlobalId(`${item.id}${i}`, 'ActionListAction'),
       title: item.title,
-      subtitle: get(item, 'channelSubtitle'),
+      subtitle: get(item, 'contentChannel.name'),
       relatedNode: { ...item, __type: ContentItem.resolveType(item) },
       image: ContentItem.getCoverImage(item),
       action: 'READ_CONTENT',

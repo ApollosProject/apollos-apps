@@ -59,7 +59,12 @@ describe('features', () => {
       expand: () => ({
         get: () => Promise.resolve(itemMock),
       }),
-      top: () => ({ get: () => Promise.resolve(itemMock) }),
+      top: () => ({
+        get: () => Promise.resolve(itemMock),
+        expand: () => ({
+          get: () => Promise.resolve(itemMock),
+        }),
+      }),
       first,
     });
     const byContentChannelIds = () => ({
