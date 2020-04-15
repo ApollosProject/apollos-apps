@@ -1,4 +1,5 @@
 import ApollosConfig from '@apollosproject/config';
+import { parseGlobalId } from '@apollosproject/server-core';
 
 import Feature from '../data-source';
 import resolver from '../resolver';
@@ -465,6 +466,48 @@ describe('features', () => {
       const result = await feature.getHomeFeedFeatures();
 
       expect(await Promise.all(result.map(expandResult))).toMatchSnapshot();
+    });
+
+    it("should recontruct a feature from it's id", async () => {
+      const feature = new Feature();
+      feature.initialize({
+        context,
+      });
+
+      const builtFeature = await feature.createActionListFeature({
+        algorithms: [
+          {
+            type: 'CAMPAIGN_ITEMS',
+          },
+        ],
+        title: 'Test Featured Item',
+        subtitle: "It's featured!",
+      });
+
+      const { id } = parseGlobalId(builtFeature.id);
+      const result = await feature.getFromId(id, builtFeature.id);
+
+      expect(await expandResult(result)).toMatchSnapshot();
+    });
+
+    it('should lazy load running of attached algoritms', async () => {
+      const feature = new Feature();
+      feature.initialize({
+        context,
+      });
+
+      const result = await feature.createActionListFeature({
+        algorithms: [
+          {
+            type: 'CAMPAIGN_ITEMS',
+          },
+        ],
+        title: 'Test Featured Item',
+        subtitle: "It's featured!",
+      });
+
+      expect(result).toMatchSnapshot('default (cards not loaded)');
+      expect(await expandResult(result)).toMatchSnapshot('with cards loaded');
     });
   });
 
