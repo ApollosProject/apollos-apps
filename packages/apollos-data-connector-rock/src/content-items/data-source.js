@@ -110,7 +110,7 @@ export default class ContentItem extends RockApolloDataSource {
   };
 
   getFeatures({ attributeValues }) {
-    const { Features } = this.context.dataSources;
+    const { Feature } = this.context.dataSources;
     const features = [];
 
     // TODO this should replace all other methods

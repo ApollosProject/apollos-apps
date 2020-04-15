@@ -3,6 +3,15 @@ import ApollosConfig from '@apollosproject/config';
 import Feature from '../data-source';
 import resolver from '../resolver';
 
+const expandResult = async (result) => {
+  if (result.cards) {
+    return { ...result, cards: await result.cards() };
+  }
+  if (result.actions) {
+    return { ...result, actions: await result.actions() };
+  }
+};
+
 const itemMock = [
   {
     id: 1,
@@ -129,7 +138,7 @@ describe('features', () => {
         subtitle: "It's great!",
       });
 
-      expect(result).toMatchSnapshot();
+      expect(await expandResult(result)).toMatchSnapshot();
     });
 
     it('should create an VerticalCardListFeature from a PERSONA_FEED', async () => {
@@ -144,7 +153,7 @@ describe('features', () => {
         subtitle: "It's great!",
       });
 
-      expect(result).toMatchSnapshot();
+      expect(await expandResult(result)).toMatchSnapshot();
     });
 
     it('should create an HorizontalCardListFeature from a PERSONA_FEED', async () => {
@@ -159,7 +168,7 @@ describe('features', () => {
         subtitle: 'Boom',
       });
 
-      expect(result).toMatchSnapshot();
+      expect(await expandResult(result)).toMatchSnapshot();
     });
 
     it('should create an ActionListFeature from multiple PERSONA_FEED algorithms', async () => {
@@ -174,7 +183,7 @@ describe('features', () => {
         subtitle: "It's great!",
       });
 
-      expect(result).toMatchSnapshot();
+      expect(await expandResult(result)).toMatchSnapshot();
     });
 
     it('should create an ActionListFeature from a UPCOMING_EVENTS', async () => {
@@ -189,7 +198,7 @@ describe('features', () => {
         subtitle: "It's great!",
       });
 
-      expect(result).toMatchSnapshot();
+      expect(await expandResult(result)).toMatchSnapshot();
     });
 
     it('should create an ActionListFeature from a CONTENT_CHANNEL algorithm', async () => {
@@ -209,7 +218,7 @@ describe('features', () => {
         subtitle: "It's great!",
       });
 
-      expect(result).toMatchSnapshot();
+      expect(await expandResult(result)).toMatchSnapshot();
       expect(first.mock.calls).toMatchSnapshot();
     });
 
@@ -225,7 +234,7 @@ describe('features', () => {
         subtitle: "It's great!",
       });
 
-      expect(result).toMatchSnapshot();
+      expect(await expandResult(result)).toMatchSnapshot();
       expect(first.mock.calls).toMatchSnapshot();
     });
 
@@ -246,7 +255,7 @@ describe('features', () => {
         subtitle: "It's great!",
       });
 
-      expect(result).toMatchSnapshot();
+      expect(await expandResult(result)).toMatchSnapshot();
       expect(first.mock.calls).toMatchSnapshot();
     });
 
@@ -282,7 +291,7 @@ describe('features', () => {
         subtitle: "It's great!",
       });
 
-      expect(result).toMatchSnapshot();
+      expect(await expandResult(result)).toMatchSnapshot();
     });
 
     it('should create an ActionListFeature from two different algorithms', async () => {
@@ -303,7 +312,7 @@ describe('features', () => {
         subtitle: "It's great!",
       });
 
-      expect(result).toMatchSnapshot();
+      expect(await expandResult(result)).toMatchSnapshot();
     });
 
     it('createTextFeature should create a Text feature', async () => {
@@ -372,7 +381,7 @@ describe('features', () => {
         subtitle: "It's featured!",
       });
 
-      expect(result).toMatchSnapshot();
+      expect(await expandResult(result)).toMatchSnapshot();
       expect(first.mock.calls).toMatchSnapshot();
     });
 
@@ -392,7 +401,7 @@ describe('features', () => {
         subtitle: "It's featured!",
       });
 
-      expect(result).toMatchSnapshot();
+      expect(await expandResult(result)).toMatchSnapshot();
       expect(first.mock.calls).toMatchSnapshot();
     });
     it('should render the default case from getHomeFeedFeatures', async () => {
@@ -411,9 +420,9 @@ describe('features', () => {
         ],
       });
 
-      const result = await feature.getHomeFeedFeature();
+      const result = await feature.getHomeFeedFeatures();
 
-      expect(result).toMatchSnapshot();
+      expect(await Promise.all(result.map(expandResult))).toMatchSnapshot();
     });
     it('should render the VerticalCardList type from getHomeFeedFeatures', async () => {
       const feature = new Feature();
@@ -432,9 +441,9 @@ describe('features', () => {
         ],
       });
 
-      const result = await feature.getHomeFeedFeature();
+      const result = await feature.getHomeFeedFeatures();
 
-      expect(result).toMatchSnapshot();
+      expect(await Promise.all(result.map(expandResult))).toMatchSnapshot();
     });
     it('should render the HorizontalCardList type from getHomeFeedFeatures', async () => {
       const feature = new Feature();
@@ -453,9 +462,9 @@ describe('features', () => {
         ],
       });
 
-      const result = await feature.getHomeFeedFeature();
+      const result = await feature.getHomeFeedFeatures();
 
-      expect(result).toMatchSnapshot();
+      expect(await Promise.all(result.map(expandResult))).toMatchSnapshot();
     });
   });
 
@@ -466,9 +475,9 @@ describe('features', () => {
         context,
       });
       const result = await resolver.Query.userFeedFeatures(null, null, {
-        dataSources: { Features: features },
+        dataSources: { Feature: feature },
       });
-      expect(result).toMatchSnapshot();
+      expect(await Promise.all(result.map(expandResult))).toMatchSnapshot();
     });
   });
 });
