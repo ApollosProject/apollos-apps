@@ -1,6 +1,6 @@
 import { flatten, get } from 'lodash';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
-import { createGlobalId, parseGlobalId } from '@apollosproject/server-core';
+import { createGlobalId } from '@apollosproject/server-core';
 import ApollosConfig from '@apollosproject/config';
 
 export default class Feature extends RockApolloDataSource {
@@ -24,6 +24,7 @@ export default class Feature extends RockApolloDataSource {
     return method(funcArgs);
   }
 
+  // eslint-disable-next-line class-methods-use-this
   createFeatureId({ args, type }) {
     return createGlobalId(JSON.stringify(args), type);
   }

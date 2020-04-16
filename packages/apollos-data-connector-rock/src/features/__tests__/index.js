@@ -11,6 +11,7 @@ const expandResult = async (result) => {
   if (result.actions) {
     return { ...result, actions: await result.actions() };
   }
+  return null;
 };
 
 const itemMock = [
