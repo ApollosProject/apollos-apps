@@ -34,9 +34,9 @@ class FeaturesFeedConnected extends PureComponent {
       <Query query={GET_FEED_FEATURES} fetchPolicy="cache-and-network">
         {({ data: features, loading }) => (
           <FeedView
-            content={get(features, 'userFeedFeatures')}
+            content={get(features, 'userFeedFeatures', [])}
             renderItem={this.renderFeatures}
-            isLoading={loading && !features.length}
+            isLoading={loading && !get(features, 'userFeedFeatures', []).length}
             loadingStateObject={this.loadingStateObject}
             {...props}
           />
