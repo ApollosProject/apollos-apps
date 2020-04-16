@@ -1,3 +1,9 @@
+v1.4.0-beta.0: April 15, 2020
+
+- Adds live consumer wrapping feed features (#1418) (6119b6e0)
+- Adds User feed algorithm (#1419) (4c3738af)
+- Adds FeaturesFeedConnected component (#1420) (f8e6827f)
+
 v1.3.1: April 13, 2020
 
 - Adds CampaignItemListFeature to ui-connected package (#1412) (7fd68e0b)
