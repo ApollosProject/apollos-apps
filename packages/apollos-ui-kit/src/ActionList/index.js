@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
 import styled from '../styled';
-import TableView from '../TableView';
 import { ImageSourceType } from '../ConnectedImage';
 import Card, { CardContent } from '../Card';
 import { withIsLoading } from '../isLoading';
@@ -11,17 +10,22 @@ import Button from '../Button';
 
 import ActionListItem from './ActionListItem';
 
-const Content = styled(() => ({
-  borderBottomWidth: 0,
-  borderTopWidth: 0,
-}))(TableView);
+const Content = styled(({ theme, cardPadding }) => ({
+  paddingHorizontal: cardPadding
+    ? theme.sizing.baseUnit * 1.5
+    : theme.sizing.baseUnit,
+  paddingVertical: cardPadding
+    ? theme.sizing.baseUnit * 1.5
+    : theme.sizing.baseUnit,
+}))(CardContent);
 
-const CardAction = styled(
-  {
-    paddingTop: 0,
-  },
-  'ui-kit.ActionList.CardAction'
-)(CardContent);
+const FullWidthButton = styled(
+  ({ theme }) => ({
+    width: '100%', // fixes loading state not showing up at 100% width
+    marginTop: theme.sizing.baseUnit * 0.5,
+  }),
+  'ui-kit.ActionList.FullWidthButton'
+)(Button);
 
 class ActionList extends PureComponent {
   static propTypes = {
@@ -42,6 +46,7 @@ class ActionList extends PureComponent {
 
   static defaultProps = {
     isCard: true,
+    onPressActionListButton: () => {},
   };
 
   RenderAsCard = ({ children }) =>
@@ -53,41 +58,43 @@ class ActionList extends PureComponent {
 
   render() {
     const {
-      onPressActionListButton,
       onPressActionItem,
+      onPressActionListButton,
       actions,
-      header: headerContent,
+      header,
     } = this.props;
 
-    const RenderAsCard = this.RenderAsCard;
+    const RenderAsCard = this.RenderAsCard; // eslint-disable-line prefer-destructuring
 
     return (
       <RenderAsCard>
-        <CardContent>{headerContent}</CardContent>
-        <Content>
+        {header || null}
+        <Content cardPadding={this.props.isCard}>
           {actions.map((item) => (
             <ActionListItem
               action={item.action || ''}
               key={item.id}
-              relatedNode={get(item, 'relatedNode')}
-              onPressActionItem={onPressActionItem}
               label={item.subtitle || ''}
+              onPressActionItem={() =>
+                onPressActionItem({
+                  action: item.action,
+                  relatedNode: item.relatedNode,
+                })
+              }
               title={item.title || ''}
               imageSource={get(item, 'image.sources[0]', '')}
             />
           ))}
-        </Content>
-        {onPressActionListButton ? (
-          <CardAction>
-            <Button
+          {onPressActionListButton ? (
+            <FullWidthButton
               title={'View More'}
               type={'default'}
               pill={false}
               bordered
               onPress={onPressActionListButton}
             />
-          </CardAction>
-        ) : null}
+          ) : null}
+        </Content>
       </RenderAsCard>
     );
   }
