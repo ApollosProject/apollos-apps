@@ -110,7 +110,7 @@ export default class ContentItem extends RockApolloDataSource {
   };
 
   getFeatures({ attributeValues }) {
-    const { Features } = this.context.dataSources;
+    const { Feature } = this.context.dataSources;
     const features = [];
 
     // TODO this should replace all other methods
@@ -122,7 +122,7 @@ export default class ContentItem extends RockApolloDataSource {
       switch (type) {
         case 'scripture':
           features.push(
-            Features.createScriptureFeature({
+            Feature.createScriptureFeature({
               reference: value,
               version: modifier,
               id: `${attributeValues.features.id}-${i}`,
@@ -131,7 +131,7 @@ export default class ContentItem extends RockApolloDataSource {
           break;
         case 'text':
           features.push(
-            Features.createTextFeature({
+            Feature.createTextFeature({
               text: value,
               id: `${attributeValues.features.id}-${i}`,
             })
@@ -146,7 +146,7 @@ export default class ContentItem extends RockApolloDataSource {
     const text = get(attributeValues, 'textFeature.value', '');
     if (text !== '') {
       features.push(
-        Features.createTextFeature({ text, id: attributeValues.textFeature.id })
+        Feature.createTextFeature({ text, id: attributeValues.textFeature.id })
       );
     }
 
@@ -156,7 +156,7 @@ export default class ContentItem extends RockApolloDataSource {
       const keyValueTextFeatures = parseKeyValueAttribute(texts);
       keyValueTextFeatures.forEach(({ value }, i) => {
         features.push(
-          Features.createTextFeature({
+          Feature.createTextFeature({
             text: value,
             id: `${attributeValues.textFeatures.id}-${i}`,
           })
@@ -169,7 +169,7 @@ export default class ContentItem extends RockApolloDataSource {
       const keyValueTextFeatures = parseKeyValueAttribute(scriptures);
       keyValueTextFeatures.forEach(({ value }, i) => {
         features.push(
-          Features.createScriptureFeature({
+          Feature.createScriptureFeature({
             reference: value,
             id: `${attributeValues.scriptureFeatures.id}-${i}`,
           })
