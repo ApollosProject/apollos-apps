@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 
 import { Providers } from '../utils/testUtils';
 
-import HorizontalCardListFeature from '.';
+import HorizontalCardListFeature from './HorizontalCardListFeature';
 
 const cards = [
   {

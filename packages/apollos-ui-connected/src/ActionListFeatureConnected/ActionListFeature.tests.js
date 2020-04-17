@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 
 import { Providers } from '../utils/testUtils';
 
-import ActionListFeature from '.';
+import ActionListFeature from './ActionListFeature';
 
 const actions = [
   {
