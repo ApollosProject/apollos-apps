@@ -3,7 +3,8 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 
 import CenteredView from '../CenteredView';
 import BackgroundView from '../BackgroundView';
-import { H3 } from '../typography';
+import { H3, H6 } from '../typography';
+import styled from '../styled';
 
 import ActionList from '.';
 
@@ -26,8 +27,9 @@ const actions = [
   },
   {
     id: 'fakeId2',
-    title: 'Hello 2',
-    subtitle: 'Boom',
+    title:
+      'Hello 2 Hello 2 Hello 2 Hello 2 Hello 2 Hello 2 Hello 2 Hello 2 Hello 2 Hello 2 Hello 2 Hello 2',
+    subtitle: '',
     parentChannel: {
       id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
       name: 'NewSpring - Articles',
@@ -42,8 +44,9 @@ const actions = [
   },
   {
     id: 'fakeId3',
-    title: 'Hello 3',
-    subtitle: 'Boom',
+    title: '',
+    subtitle:
+      'Hello Boom Hello Boom Hello Boom Hello Boom Hello Boom Hello Boom Hello Boom Hello Boom Hello Boom Hello Boom Hello Boom ',
     parentChannel: {
       id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
       name: 'NewSpring - Articles',
@@ -58,8 +61,9 @@ const actions = [
   },
   {
     id: 'fakeId4',
-    title: 'Hello 4',
-    subtitle: 'Boom',
+    title: 'Hello 4 Hello 4 Hello 4 Hello 4 Hello 4 Hello 4',
+    subtitle:
+      'Boom Boom Boom Boom Boom Boom Boom Boom Boom Boom Boom Boom Boom Boom Boom Boom Boom ',
     parentChannel: {
       id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
       name: 'NewSpring - Articles',
@@ -74,6 +78,13 @@ const actions = [
   },
 ];
 
+const Title = styled(
+  ({ theme }) => ({
+    color: theme.colors.text.tertiary,
+  }),
+  'ActionListFeature.Title'
+)(H6);
+
 storiesOf('ActionList', module)
   .addDecorator((story) => (
     <BackgroundView>
@@ -86,9 +97,12 @@ storiesOf('ActionList', module)
     <ActionList
       actions={actions}
       header={
-        <H3 numberOfLines={3} ellipsizeMode="tail">
-          Some random text that encourages you
-        </H3>
+        <>
+          <Title>Boom</Title>
+          <H3 numberOfLines={3} ellipsizeMode="tail">
+            Some random text that encourages you
+          </H3>
+        </>
       }
     />
   ))
@@ -96,9 +110,12 @@ storiesOf('ActionList', module)
     <ActionList
       actions={actions}
       header={
-        <H3 numberOfLines={3} ellipsizeMode="tail">
-          Some random text that encourages you
-        </H3>
+        <>
+          <Title>Boom</Title>
+          <H3 numberOfLines={3} ellipsizeMode="tail">
+            Some random text that encourages you
+          </H3>
+        </>
       }
       onPressActionListButton={() => {}}
     />
