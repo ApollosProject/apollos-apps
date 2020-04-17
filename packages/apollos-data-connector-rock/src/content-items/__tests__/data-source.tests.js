@@ -294,7 +294,7 @@ describe('ContentItemsModel', () => {
       reference: 'john 3',
     }));
     dataSource.context = {
-      dataSources: { Features: { createTextFeature, createScriptureFeature } },
+      dataSources: { Feature: { createTextFeature, createScriptureFeature } },
     };
     const result = dataSource.getFeatures({
       attributeValues: {
@@ -315,7 +315,7 @@ describe('ContentItemsModel', () => {
       id: 'TextFeature:123',
       body: 'something',
     }));
-    dataSource.context = { dataSources: { Features: { createTextFeature } } };
+    dataSource.context = { dataSources: { Feature: { createTextFeature } } };
     const result = dataSource.getFeatures({
       attributeValues: { textFeature: { id: 123, value: 'something' } },
     });
@@ -329,7 +329,7 @@ describe('ContentItemsModel', () => {
       id: 'TextFeature:123',
       body: 'something',
     }));
-    dataSource.context = { dataSources: { Features: { createTextFeature } } };
+    dataSource.context = { dataSources: { Feature: { createTextFeature } } };
     const result = dataSource.getFeatures({
       attributeValues: {
         textFeatures: {
@@ -349,7 +349,7 @@ describe('ContentItemsModel', () => {
       body: 'something',
     }));
     dataSource.context = {
-      dataSources: { Features: { createScriptureFeature } },
+      dataSources: { Feature: { createScriptureFeature } },
     };
     const result = dataSource.getFeatures({
       attributeValues: {
@@ -370,7 +370,7 @@ describe('ContentItemsModel', () => {
       body: 'something',
     }));
     dataSource.context = {
-      dataSources: { Features: { createScriptureFeature } },
+      dataSources: { Feature: { createScriptureFeature } },
     };
     const result = dataSource.getFeatures({
       attributeValues: {
@@ -392,7 +392,7 @@ describe('ContentItemsModel', () => {
       id: 'TextFeature:123',
       body: 'something',
     }));
-    dataSource.context = { dataSources: { Features: { createTextFeature } } };
+    dataSource.context = { dataSources: { Feature: { createTextFeature } } };
     const result = dataSource.getFeatures({
       attributeValues: {
         textFeatures: {
@@ -415,7 +415,7 @@ describe('ContentItemsModel', () => {
       id: 'TextFeature:123',
       body: 'something',
     }));
-    dataSource.context = { dataSources: { Features: { createTextFeature } } };
+    dataSource.context = { dataSources: { Feature: { createTextFeature } } };
     const result = dataSource.getFeatures({
       attributeValues: { textFeature: { id: 123, value: '' } },
     });

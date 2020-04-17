@@ -33,13 +33,13 @@ export default {
       args,
       { dataSources: { Scripture } }
     ) => Scripture.getScriptures(reference, version),
-    sharing: ({ reference }, args, { dataSources: { Features } }) => ({
+    sharing: ({ reference }, args, { dataSources: { Feature } }) => ({
       title: 'Share scripture via...',
-      message: Features.getScriptureShareMessage(reference),
+      message: Feature.getScriptureShareMessage(reference),
     }),
   },
   Query: {
-    userFeedFeatures: async (root, args, { dataSources: { Features } }) =>
-      Features.getHomeFeedFeatures(),
+    userFeedFeatures: async (root, args, { dataSources: { Feature } }) =>
+      Feature.getHomeFeedFeatures(),
   },
 };

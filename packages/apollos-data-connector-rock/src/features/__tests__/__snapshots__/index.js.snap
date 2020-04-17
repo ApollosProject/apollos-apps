@@ -71,7 +71,7 @@ Object {
       "title": "third item by content channel id",
     },
   ],
-  "id": "ActionListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+  "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05e721bf197aa8e9b6ec68f4656048955afd1acf3539dffd80d68ba9da75380877e0800a46060ec5c3147deb359e677332e2be95e0a7de8e2cc7f6b04609c169f788e4daa8be2f6520244bd53df6cbcce3fcb5e3a714765eca41c857c49e0b0562",
   "subtitle": "It's featured!",
   "title": "Test Featured Item",
 }
@@ -130,7 +130,7 @@ Object {
       "title": "third item by content channel id",
     },
   ],
-  "id": "ActionListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+  "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05bed66de665564bd0c5e37f069267679550e6d23b01e068694595ba074cd0d145c3508d6249fc0adc58f325fa1e4621dfa28d6be47ee5711bc3110dd8c31d1e04eea144d658590a0e9a2dbf8264823d3d5340139f7d32528cfcc1588f3bd73d219c8d9b5e307116281963cb5d72a9a0eb67c158fed1721f00408a9d7bf5570280",
   "subtitle": "It's great!",
   "title": "Test Action List",
 }
@@ -189,7 +189,7 @@ Object {
       "title": "third item by content channel id",
     },
   ],
-  "id": "ActionListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+  "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05bed66de665564bd0c5e37f069267679550e6d23b01e068694595ba074cd0d145c3508d6249fc0adc58f325fa1e4621df4497cfad170322c1cd6dfbf929d91a41b3cb785288292d6ae4c2fd93d0bdce3c5c9a49192068fc16ef114e30cedac7050dff446fa64384d34958fc7fdd9453a65ff92251b358e4eb56ef546142104278",
   "subtitle": "It's great!",
   "title": "Test Action List",
 }
@@ -250,7 +250,7 @@ Object {
       "title": "third item",
     },
   ],
-  "id": "ActionListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+  "id": "ActionListFeature:9724110384a5109532f35a4980ea9b7732b56327ff3959d32d21ba892a0dc560bb26357a01aac9434d87a0703551598c92b2c412fdf37259605f1b041a7dc607d6ff24a8c05ec94df7df90a1ec5e3b908eaff956c6310680e33f2814dae370f7",
   "subtitle": "It's great!",
   "title": "Test Action List",
 }
@@ -307,7 +307,7 @@ Object {
       "title": "third item by content channel id",
     },
   ],
-  "id": "ActionListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+  "id": "ActionListFeature:9724110384a5109532f35a4980ea9b77b7a918389784452bc4e113adf105f3ea8e8e801d95d0b4436951f9d33599379a3300274c4af3063094e4732138995b97ff744e92de1baa09ce74b190e06aa2f9163416e3079e2242d99cf00c22b31f43",
   "subtitle": "It's great!",
   "title": "Test Action List",
 }
@@ -340,7 +340,7 @@ Object {
       "title": Promise {},
     },
   ],
-  "id": "ActionListFeature:f8fb1b8cbc6cf6322049961109dec2ce",
+  "id": "ActionListFeature:9724110384a5109532f35a4980ea9b7767740cad433b90efb9823feae3605ac245723957f27ac07935a1da416098d24d7971daf9d8c8c6b180927b1b0a5d5ce96643e859a7df94370cdfed5cfb18e63d4febb6c4838930044d4ecc7fb80cf2a1",
   "subtitle": "It's great!",
   "title": "Test Action List",
 }
@@ -397,7 +397,7 @@ Object {
       "title": "third item by content channel id",
     },
   ],
-  "id": "ActionListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+  "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e0554b53dd31034539ff6489a39d15a8d3eeca5582fc0bd33166d8d8ae16b9455607f6fbd7b7850a7ddf4e396cdb326e93edead20d2b9d727fedc9d46e046689d479fdb5013fa2f329bf20e1ed73fcf498a",
   "subtitle": "It's featured!",
   "title": "Test Featured Item",
 }
@@ -506,7 +506,7 @@ Object {
       "title": "third item",
     },
   ],
-  "id": "ActionListFeature:f3b62441ac984046bda132a1606d0a37",
+  "id": "ActionListFeature:9724110384a5109532f35a4980ea9b7775239711bdf3f25b5d6d3270ecc4acf06797e2f283bdca9ac8cd75b7fa3bcdb715c97b9c060052efe93a6b698f7f3a59b4e73f81ae3ccdb1b07bc83c78b127200f56ce7a6abfae5d9f87bd4897613ca7a33a6f0a80b43e32d5d1bb39b906021e",
   "subtitle": "It's great!",
   "title": "Test Action List",
 }
@@ -516,7 +516,7 @@ exports[`features dataSource should create an ActionListFeature from no algorith
 Object {
   "__typename": "ActionListFeature",
   "actions": Array [],
-  "id": "ActionListFeature:3488e26db0f447696713d54c3174653b",
+  "id": "ActionListFeature:a7725529a395bf26a3952b239e6d3ac0df38feb15c03653c57d25fa5651c5f5c6295553055256523c35095de4cbdca1bc7a52592232b2eeaf76f656a678ce0d0da37ae86a3a5ae8febc6172c3a875401",
   "subtitle": "It's great!",
   "title": "Test Action List",
 }
@@ -621,7 +621,7 @@ Object {
       "title": "third item",
     },
   ],
-  "id": "ActionListFeature:f3b62441ac984046bda132a1606d0a37",
+  "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05bed66de665564bd0c5e37f069267679550e6d23b01e068694595ba074cd0d145c3508d6249fc0adc58f325fa1e4621df7a11fa10715441e591dd5b00bdc2df32da56c9b53212292e694e188e164f1d79b050d45c5b35b73ea2a1e9f3a145bae74600135ca037ad7eb1a5e3528ecb306ce3ba3849e40023e0fec04b0ded4bdde99656d619dc359e0c5cda1478a6f083ab",
   "subtitle": "It's great!",
   "title": "Test Action List",
 }
@@ -681,7 +681,7 @@ Object {
     },
   ],
   "hyphenatedTitle": undefined,
-  "id": "HorizontalCardListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+  "id": "HorizontalCardListFeature:9724110384a5109532f35a4980ea9b7732b56327ff3959d32d21ba892a0dc56034391ae157e441e7d9f2b096fd4c5a3116822ad021c371a32a561ed552d97b7817b1d768f0b41e5f3c39a7ad5d9f139015433585e9fc1f44c96682cc680c306b",
   "subtitle": "Boom",
   "title": "Test Horizontal List of Cards",
 }
@@ -740,7 +740,7 @@ Object {
       "title": "third item",
     },
   ],
-  "id": "VerticalCardListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+  "id": "VerticalCardListFeature:9724110384a5109532f35a4980ea9b7732b56327ff3959d32d21ba892a0dc560bb26357a01aac9434d87a0703551598c92b2c412fdf37259605f1b041a7dc607d6ff24a8c05ec94df7df90a1ec5e3b90127f4c553710ba94eece31c967288eb12a0b19f151af6ff26222d2345a975900",
   "isFeatured": false,
   "subtitle": "It's great!",
   "title": "Test Action List",
@@ -748,6 +748,136 @@ Object {
 `;
 
 exports[`features dataSource should generate scripture shares 1`] = `"Not the real verse John 3:16"`;
+
+exports[`features dataSource should lazy load running of attached algoritms: default (cards not loaded) 1`] = `
+Object {
+  "__typename": "ActionListFeature",
+  "actions": [Function],
+  "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05e721bf197aa8e9b6ec68f4656048955afd1acf3539dffd80d68ba9da75380877e0800a46060ec5c3147deb359e677332e2be95e0a7de8e2cc7f6b04609c169f788e4daa8be2f6520244bd53df6cbcce3fcb5e3a714765eca41c857c49e0b0562",
+  "subtitle": "It's featured!",
+  "title": "Test Featured Item",
+}
+`;
+
+exports[`features dataSource should lazy load running of attached algoritms: with cards loaded 1`] = `
+Object {
+  "__typename": "ActionListFeature",
+  "actions": Array [
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "channelSubtitle": "Featured Things",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 1,
+        "title": "first item by content channel id",
+      },
+      "subtitle": "content channel",
+      "summary": "summary data",
+      "title": "first item by content channel id",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "channelSubtitle": "Featured Things",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 2,
+        "title": "second item by content channel id",
+      },
+      "subtitle": "content channel",
+      "summary": "summary data",
+      "title": "second item by content channel id",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "channelSubtitle": "Featured Things",
+        "contentChannel": null,
+        "id": 3,
+        "title": "third item by content channel id",
+      },
+      "subtitle": undefined,
+      "summary": "summary data",
+      "title": "third item by content channel id",
+    },
+  ],
+  "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05e721bf197aa8e9b6ec68f4656048955afd1acf3539dffd80d68ba9da75380877e0800a46060ec5c3147deb359e677332e2be95e0a7de8e2cc7f6b04609c169f788e4daa8be2f6520244bd53df6cbcce3fcb5e3a714765eca41c857c49e0b0562",
+  "subtitle": "It's featured!",
+  "title": "Test Featured Item",
+}
+`;
+
+exports[`features dataSource should recontruct a feature from it's id 1`] = `
+Object {
+  "__typename": "ActionListFeature",
+  "actions": Array [
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "channelSubtitle": "Featured Things",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 1,
+        "title": "first item by content channel id",
+      },
+      "subtitle": "content channel",
+      "summary": "summary data",
+      "title": "first item by content channel id",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "channelSubtitle": "Featured Things",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 2,
+        "title": "second item by content channel id",
+      },
+      "subtitle": "content channel",
+      "summary": "summary data",
+      "title": "second item by content channel id",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "channelSubtitle": "Featured Things",
+        "contentChannel": null,
+        "id": 3,
+        "title": "third item by content channel id",
+      },
+      "subtitle": undefined,
+      "summary": "summary data",
+      "title": "third item by content channel id",
+    },
+  ],
+  "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05e721bf197aa8e9b6ec68f4656048955afd1acf3539dffd80d68ba9da75380877e0800a46060ec5c3147deb359e677332e2be95e0a7de8e2cc7f6b04609c169f788e4daa8be2f6520244bd53df6cbcce3fcb5e3a714765eca41c857c49e0b0562",
+  "subtitle": "It's featured!",
+  "title": "Test Featured Item",
+}
+`;
 
 exports[`features dataSource should render the HorizontalCardList type from getHomeFeedFeatures 1`] = `
 Array [
@@ -804,7 +934,7 @@ Array [
       },
     ],
     "hyphenatedTitle": undefined,
-    "id": "HorizontalCardListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+    "id": "HorizontalCardListFeature:9724110384a5109532f35a4980ea9b7732b56327ff3959d32d21ba892a0dc56083e6e9fbc0eb9c30e70418ef51dbf0a0a206c0039dd9ab293a5df0c1f07cdf27809952c976cf9886f157a1265307677bc875f2abdcfce4136c7ce952bc293761e816c7f3829d43e2b54a3297a1add52b",
     "subtitle": "Explore what God calls you to today",
     "title": "FOR YOU",
   },
@@ -858,7 +988,7 @@ Array [
         "title": "third item by content channel id",
       },
     ],
-    "id": "ActionListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+    "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05bed66de665564bd0c5e37f069267679550e6d23b01e068694595ba074cd0d145c3508d6249fc0adc58f325fa1e4621dfa28d6be47ee5711bc3110dd8c31d1e045c223357732b6f15ebde1237763d712279d3ab620bf416ae9a035a0ba171e5c4fecb9bfcb5ea92ea44148d7bd6731a9158ce9af2e56cb4be9ee86a3d8638a111",
     "subtitle": "What's happening at apollos?",
     "title": "BULLETIN",
   },
@@ -919,7 +1049,7 @@ Array [
         "title": "third item",
       },
     ],
-    "id": "VerticalCardListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+    "id": "VerticalCardListFeature:9724110384a5109532f35a4980ea9b7732b56327ff3959d32d21ba892a0dc56083e6e9fbc0eb9c30e70418ef51dbf0a0a206c0039dd9ab293a5df0c1f07cdf27809952c976cf9886f157a1265307677bc875f2abdcfce4136c7ce952bc293761595fe0eca48636b58cd90cec39ba56bb6234007fbefcccc10aeddf96551f89d1",
     "isFeatured": false,
     "subtitle": "Explore what God calls you to today",
     "title": "FOR YOU",
@@ -974,7 +1104,7 @@ Array [
         "title": "third item by content channel id",
       },
     ],
-    "id": "ActionListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+    "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05bed66de665564bd0c5e37f069267679550e6d23b01e068694595ba074cd0d145c3508d6249fc0adc58f325fa1e4621dfa28d6be47ee5711bc3110dd8c31d1e045c223357732b6f15ebde1237763d712279d3ab620bf416ae9a035a0ba171e5c4fecb9bfcb5ea92ea44148d7bd6731a9158ce9af2e56cb4be9ee86a3d8638a111",
     "subtitle": "What's happening at apollos?",
     "title": "BULLETIN",
   },
@@ -1035,7 +1165,7 @@ Array [
         "title": "third item",
       },
     ],
-    "id": "ActionListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+    "id": "ActionListFeature:9724110384a5109532f35a4980ea9b7732b56327ff3959d32d21ba892a0dc56083e6e9fbc0eb9c30e70418ef51dbf0a0a206c0039dd9ab293a5df0c1f07cdf27809952c976cf9886f157a1265307677bc875f2abdcfce4136c7ce952bc293761e816c7f3829d43e2b54a3297a1add52b",
     "subtitle": "Explore what God calls you to today",
     "title": "FOR YOU",
   },
@@ -1089,16 +1219,11 @@ Array [
         "title": "third item by content channel id",
       },
     ],
-    "id": "ActionListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+    "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05bed66de665564bd0c5e37f069267679550e6d23b01e068694595ba074cd0d145c3508d6249fc0adc58f325fa1e4621dfa28d6be47ee5711bc3110dd8c31d1e045c223357732b6f15ebde1237763d712279d3ab620bf416ae9a035a0ba171e5c4fecb9bfcb5ea92ea44148d7bd6731a9158ce9af2e56cb4be9ee86a3d8638a111",
     "subtitle": "What's happening at apollos?",
     "title": "BULLETIN",
   },
 ]
-`;
-
-exports[`features dataSource should throw an error when creating a ActionListFeature from a CONTENT_CHANNEL with no contentChannelId 1`] = `
-"contentChannelId is a required argument for the CONTENT_CHANNEL ActionList algorithm.
-Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aruments: { contentChannelId: 13 } }\`"
 `;
 
 exports[`features resolver must return a personaFeed, a sermonChildrenFeed, and a contentChannelFeed for the userFeedFeatures 1`] = `
@@ -1156,7 +1281,7 @@ Array [
       },
     ],
     "hyphenatedTitle": undefined,
-    "id": "HorizontalCardListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+    "id": "HorizontalCardListFeature:9724110384a5109532f35a4980ea9b7732b56327ff3959d32d21ba892a0dc56083e6e9fbc0eb9c30e70418ef51dbf0a0a206c0039dd9ab293a5df0c1f07cdf27809952c976cf9886f157a1265307677bc875f2abdcfce4136c7ce952bc293761e816c7f3829d43e2b54a3297a1add52b",
     "subtitle": "Explore what God calls you to today",
     "title": "FOR YOU",
   },
@@ -1210,7 +1335,7 @@ Array [
         "title": "third item by content channel id",
       },
     ],
-    "id": "ActionListFeature:7fba1b1ee253e0fd5f0795b4b8b1175e",
+    "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05bed66de665564bd0c5e37f069267679550e6d23b01e068694595ba074cd0d145c3508d6249fc0adc58f325fa1e4621dfa28d6be47ee5711bc3110dd8c31d1e045c223357732b6f15ebde1237763d712279d3ab620bf416ae9a035a0ba171e5c4fecb9bfcb5ea92ea44148d7bd6731a9158ce9af2e56cb4be9ee86a3d8638a111",
     "subtitle": "What's happening at apollos?",
     "title": "BULLETIN",
   },
