@@ -8,15 +8,19 @@ import TouchableScale from '../../TouchableScale';
 import ConnectedImage, { ImageSourceType } from '../../ConnectedImage';
 import FlexedView from '../../FlexedView';
 
-const StyledBodySmall = styled(({ theme }) => ({
-  color: theme.colors.text.tertiary,
-}))(BodySmall);
+const Label = styled(
+  ({ theme }) => ({
+    color: theme.colors.text.tertiary,
+  }),
+  'ui-kit.ActionListItem.Label'
+)(BodySmall);
 
-const TextContainer = styled(({ theme }) => ({
-  justifyContent: 'center',
-  borderBottomWidth: 0.5,
-  borderColor: theme.colors.shadows.default,
-}))(FlexedView);
+const TextContainer = styled(
+  {
+    justifyContent: 'center',
+  },
+  'ui-kit.ActionListItem.TextContainer'
+)(FlexedView);
 
 const Cell = styled(({ theme }) => ({
   paddingBottom: theme.sizing.baseUnit * 0.5,
@@ -31,32 +35,35 @@ const CellImage = styled(({ theme }) => ({
   marginRight: theme.sizing.baseUnit,
 }))(ConnectedImage);
 
-const ActionListItem = ({
-  imageSource,
-  title,
-  action,
-  relatedNode,
-  label,
-  onPressActionItem,
-}) => (
-  <TouchableScale onPress={() => onPressActionItem({ action, relatedNode })}>
+// eslint-disable-next-line react/prop-types
+const RenderAsTouchable = ({ children, onPressActionItem }) =>
+  onPressActionItem ? (
+    <TouchableScale onPress={() => onPressActionItem}>
+      {children}
+    </TouchableScale>
+  ) : (
+    children
+  );
+
+const ActionListItem = ({ imageSource, title, label, onPressActionItem }) => (
+  <RenderAsTouchable onPressActionItem={onPressActionItem}>
     <Cell>
       <CellImage source={imageSource} />
       <TextContainer>
-        {title ? <H5 numberOfLines={1}>{title}</H5> : null}
-        <StyledBodySmall numberOfLines={2} ellipsizeMode="tail">
-          {label}
-        </StyledBodySmall>
+        {title ? <H5 numberOfLines={!label ? 2 : 1}>{title}</H5> : null}
+        {label ? (
+          <Label numberOfLines={!title ? 3 : 2} ellipsizeMode="tail">
+            {label}
+          </Label>
+        ) : null}
       </TextContainer>
     </Cell>
-  </TouchableScale>
+  </RenderAsTouchable>
 );
 
 ActionListItem.propTypes = {
   imageSource: ImageSourceType.isRequired,
-  title: PropTypes.string.isRequired,
-  action: PropTypes.string,
-  relatedNode: PropTypes.any, // eslint-disable-line
+  title: PropTypes.string,
   label: PropTypes.string,
   onPressActionItem: PropTypes.func,
 };
