@@ -1,3 +1,9 @@
+v1.4.0-beta.1: April 17, 2020
+
+- Refactors FeaturedFeedConnected to be a feed of feeds using FlatList (#1423) (5143cd80)
+- Adds support for Features to be fetched via their ID (#1422) (60d52095)
+- Bumps https-proxy-agent from 2.2.1 to 2.2.4 (#1424) (df6b51f6)
+
 v1.4.0-beta.0: April 15, 2020
 
 - Adds live consumer wrapping feed features (#1418) (6119b6e0)
