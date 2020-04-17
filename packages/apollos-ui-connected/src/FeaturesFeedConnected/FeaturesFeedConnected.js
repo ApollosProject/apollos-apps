@@ -1,35 +1,50 @@
-import React, { memo } from 'react';
-import { Query } from 'react-apollo';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { Query } from 'react-apollo';
+import { get } from 'lodash';
 
+import { FeedView } from '@apollosproject/ui-kit';
+
+import featuresFeedComponentMapper from './featuresFeedComponentMapper';
 import GET_FEED_FEATURES from './getFeedFeatures';
-import FeaturesFeed from './FeaturesFeed';
 
-const FeaturesFeedConnected = memo(({ Component, onPressActionItem }) => (
-  <Query query={GET_FEED_FEATURES} fetchPolicy="cache-and-network">
-    {({ data: features, loading }) => (
-      <Component
-        features={features}
-        isLoading={loading}
-        onPressActionItem={onPressActionItem}
-      />
-    )}
-  </Query>
-));
+class FeaturesFeedConnected extends PureComponent {
+  propTypes = {
+    Component: PropTypes.oneOfType([
+      PropTypes.node,
+      PropTypes.func,
+      PropTypes.object, // type check for React fragments
+    ]),
+    onPressActionItem: PropTypes.func,
+  };
 
-FeaturesFeedConnected.propTypes = {
-  Component: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.func,
-    PropTypes.object, // type check for React fragments
-  ]),
-  onPressActionItem: PropTypes.func,
-};
+  loadingStateObject = {
+    isLoading: true,
+  };
 
-FeaturesFeedConnected.defaultProps = {
-  Component: FeaturesFeed,
-};
+  renderFeatures = ({ item }) =>
+    featuresFeedComponentMapper({
+      feature: item,
+      onPressActionItem: this.props.onPressActionItem,
+    });
 
-FeaturesFeedConnected.displayName = 'FeaturesFeedConnected';
+  render() {
+    const { Component, onPressActionItem, ...props } = this.props;
+    return (
+      <Query query={GET_FEED_FEATURES} fetchPolicy="cache-and-network">
+        {({ error, data: features, loading }) => (
+          <FeedView
+            error={error}
+            content={get(features, 'userFeedFeatures', [])}
+            renderItem={this.renderFeatures}
+            isLoading={loading && !get(features, 'userFeedFeatures', []).length}
+            loadingStateObject={this.loadingStateObject}
+            {...props}
+          />
+        )}
+      </Query>
+    );
+  }
+}
 
 export default FeaturesFeedConnected;
