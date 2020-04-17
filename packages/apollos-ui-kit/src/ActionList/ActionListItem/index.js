@@ -14,19 +14,14 @@ const StyledBodySmall = styled(({ theme }) => ({
 
 const TextContainer = styled(({ theme }) => ({
   justifyContent: 'center',
-  marginTop: theme.sizing.baseUnit / 2.5,
   borderBottomWidth: 0.5,
-  height: theme.sizing.baseUnit * 4.25,
   borderColor: theme.colors.shadows.default,
 }))(FlexedView);
 
 const Cell = styled(({ theme }) => ({
-  paddingHorizontal: theme.sizing.baseUnit,
-  paddingVertical: theme.sizing.baseUnit / 4,
-  backgroundColor: theme.colors.background.paper,
+  paddingBottom: theme.sizing.baseUnit * 0.5,
   flexDirection: 'row',
   justifyContent: 'flex-start',
-  alignItems: 'center',
 }))(View);
 
 const CellImage = styled(({ theme }) => ({
