@@ -5,7 +5,7 @@ import { get } from 'lodash';
 import styled from '../styled';
 import TableView from '../TableView';
 import { ImageSourceType } from '../ConnectedImage';
-import Card, { CardContent, CardActions } from '../Card';
+import Card, { CardContent } from '../Card';
 import { withIsLoading } from '../isLoading';
 import Button from '../Button';
 
@@ -18,14 +18,10 @@ const Content = styled(() => ({
 
 const CardAction = styled(
   {
-    alignItems: 'stretch',
-    flexDirection: 'column',
+    paddingTop: 0,
   },
   'ui-kit.ActionList.CardAction'
-)(CardActions);
-
-// const IsCard = ({ children, isCard, isLoading }) =>
-//   isCard ? <Card isLoading={isLoading}>{children}</Card> : <>{children}</>;
+)(CardContent);
 
 class ActionList extends PureComponent {
   static propTypes = {
@@ -48,7 +44,7 @@ class ActionList extends PureComponent {
     isCard: true,
   };
 
-  IsCard = ({ children }) =>
+  RenderAsCard = ({ children }) =>
     this.props.isCard ? (
       <Card isLoading={this.props.isLoading}>{children}</Card>
     ) : (
@@ -59,13 +55,14 @@ class ActionList extends PureComponent {
     const {
       onPressActionListButton,
       onPressActionItem,
-      isLoading,
       actions,
       header: headerContent,
     } = this.props;
 
+    const RenderAsCard = this.RenderAsCard;
+
     return (
-      <this.IsCard>
+      <RenderAsCard>
         <CardContent>{headerContent}</CardContent>
         <Content>
           {actions.map((item) => (
@@ -91,7 +88,7 @@ class ActionList extends PureComponent {
             />
           </CardAction>
         ) : null}
-      </this.IsCard>
+      </RenderAsCard>
     );
   }
 }
