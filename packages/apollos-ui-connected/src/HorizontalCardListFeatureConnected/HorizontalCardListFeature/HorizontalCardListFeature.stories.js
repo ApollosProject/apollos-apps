@@ -1,7 +1,7 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 
-import { Providers } from '../utils/testUtils';
+import { storiesOf } from '@apollosproject/ui-storybook';
+import { BackgroundView, CenteredView } from '@apollosproject/ui-kit';
 
 import HorizontalCardListFeature from '.';
 
@@ -59,43 +59,25 @@ const cards = [
   },
 ];
 
-describe('The HorizontalCardListFeature component', () => {
-  it('should render', () => {
-    const tree = renderer.create(
-      <Providers>
-        <HorizontalCardListFeature cards={cards} />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
-  it('should render a section title', () => {
-    const tree = renderer.create(
-      <Providers>
-        <HorizontalCardListFeature
-          cards={cards}
-          title={'This renders smaller than its name would suggest'}
-        />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
-  it('should render with a section subtitle', () => {
-    const tree = renderer.create(
-      <Providers>
-        <HorizontalCardListFeature
-          cards={cards}
-          subtitle={'This renders larger than you might expect'}
-        />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
-  it('should render a loading state for isLoading', () => {
-    const tree = renderer.create(
-      <Providers>
-        <HorizontalCardListFeature cards={[]} isLoading />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
-});
+storiesOf('ui-connected/HorizontalCardListFeature', module)
+  .addDecorator((story) => (
+    <BackgroundView>
+      {/* eslint-disable-next-line react-native/no-inline-styles */}
+      <CenteredView style={{ alignItems: 'stretch' }}>{story()}</CenteredView>
+    </BackgroundView>
+  ))
+  .add('example', () => (
+    <HorizontalCardListFeature
+      cards={cards}
+      title={'Title'}
+      subtitle={'Subtitle'}
+    />
+  ))
+  .add('default', () => <HorizontalCardListFeature cards={cards} />)
+  .add('isLoading', () => <HorizontalCardListFeature cards={[]} isLoading />)
+  .add('subtitle', () => (
+    <HorizontalCardListFeature cards={cards} subtitle={'subtitle'} />
+  ))
+  .add('title', () => (
+    <HorizontalCardListFeature cards={cards} title={'Title'} />
+  ));

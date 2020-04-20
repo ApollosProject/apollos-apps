@@ -11,7 +11,8 @@ import {
   TouchableScale,
   withIsLoading,
 } from '@apollosproject/ui-kit';
-import { horizontalContentCardComponentMapper, LiveConsumer } from '..';
+
+import { horizontalContentCardComponentMapper, LiveConsumer } from '../..';
 
 const Title = styled(
   ({ theme }) => ({
