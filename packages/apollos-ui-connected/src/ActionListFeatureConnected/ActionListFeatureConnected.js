@@ -25,7 +25,7 @@ function ActionListFeatureConnected({
 }
 
 ActionListFeatureConnected.propTypes = {
-  Component: PropTypes.node,
+  Component: PropTypes.elementType,
   featureId: PropTypes.string.isRequired,
   isLoading: PropTypes.bool,
 };

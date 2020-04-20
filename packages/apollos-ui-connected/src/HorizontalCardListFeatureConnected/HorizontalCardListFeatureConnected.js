@@ -31,7 +31,7 @@ const HorizontalCardListFeatureConnected = ({
 );
 
 HorizontalCardListFeatureConnected.propTypes = {
-  Component: PropTypes.node,
+  Component: PropTypes.elementType,
   featureId: PropTypes.string.isRequired,
   isLoading: PropTypes.bool,
 };
