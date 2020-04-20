@@ -41,34 +41,6 @@ ListItemComponent.propTypes = {
   contentId: PropTypes.string,
 };
 
-// const getContent = ({ cards, isLoading }) => {
-//   let content = [];
-//   if (isLoading && !cards.length) {
-//     content = [
-//       {
-//         id: 'fakeId0',
-//         isLoading: true,
-//         title: 'Test',
-//         summary: 'Boom',
-//         channelType: '',
-//         coverImage: [],
-//         parentChannel: {
-//           id: '',
-//           name: '',
-//         },
-//       },
-//     ];
-//   } else {
-//     content = cards.map((card) => ({
-//       ...card,
-//       coverImage: get(card, 'coverImage.sources', undefined),
-//       __typename: card.relatedNode.__typename,
-//     }));
-//   }
-//
-//   return content;
-// };
-
 const loadingStateData = {
   action: '',
   title: '',
@@ -103,7 +75,7 @@ const CampaignItemListFeature = memo(
       <FeedView
         onPressItem={onPressItem}
         ListItemComponent={ListItemComponent}
-        content={isLoading ? [loadingStateData] : cards} // {getContent({ cards, isLoading })}
+        content={isLoading ? [loadingStateData] : cards}
         isLoading={isLoading}
         listKey={listKey}
       />
