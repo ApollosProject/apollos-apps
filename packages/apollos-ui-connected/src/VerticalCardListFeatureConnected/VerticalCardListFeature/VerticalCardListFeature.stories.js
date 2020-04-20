@@ -1,8 +1,9 @@
 import React from 'react';
-import { storiesOf } from '@apollosproject/ui-storybook';
 
+import { storiesOf } from '@apollosproject/ui-storybook';
 import { BackgroundView, CenteredView } from '@apollosproject/ui-kit';
-import VerticalCardListFeature from './VerticalCardListFeature';
+
+import VerticalCardListFeature from '.';
 
 const cards = [
   {
