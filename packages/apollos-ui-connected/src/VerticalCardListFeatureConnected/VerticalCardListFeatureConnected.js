@@ -54,8 +54,4 @@ VerticalCardListFeatureConnected.defaultProps = {
   isFeatured: false,
 };
 
-export {
-  VerticalCardListFeatureConnected as default,
-  GET_VERTICAL_CARD_LIST_FEATURE,
-  VerticalCardListFeature,
-};
+export default VerticalCardListFeatureConnected;
