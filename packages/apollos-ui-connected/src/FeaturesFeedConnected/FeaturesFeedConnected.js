@@ -19,7 +19,7 @@ class FeaturesFeedConnected extends PureComponent {
     additionalFeatures: PropTypes.shape({}),
   };
 
-  loadingContent = [
+  loadingStateObject = [
     {
       isLoading: true,
       __typename: 'VerticalCardListFeature',
@@ -52,9 +52,8 @@ class FeaturesFeedConnected extends PureComponent {
           return (
             <FeedView
               error={error}
-              content={isLoading ? this.loadingContent : features}
+              content={isLoading ? this. loadingStateObject : features}
               renderItem={this.renderFeatures}
-              loadingStateObject={this.loadingStateObject}
               {...props}
             />
           );
