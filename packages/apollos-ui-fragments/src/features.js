@@ -10,6 +10,26 @@ const TEXT_FEATURE_FRAGMENT = gql`
   }
 `;
 
+const FEED_FEATURES_FRAGMENT = gql`
+  fragment FeedFeaturesFragment on Feature {
+    id
+    __typename
+    ... on VerticalCardListFeature {
+      isFeatured
+      title
+      subtitle
+    }
+    ... on HorizontalCardListFeature {
+      title
+      subtitle
+    }
+    ... on ActionListFeature {
+      title
+      subtitle
+    }
+  }
+`;
+
 const SCRIPTURE_FEATURE_FRAGMENT = gql`
   fragment ScriptureFeatureFragment on ScriptureFeature {
     sharing {
@@ -128,4 +148,5 @@ export {
   ACTION_LIST_FEATURE_FRAGMENT,
   HORIZONTAL_CARD_LIST_FEATURE_FRAGMENT,
   VERTICAL_CARD_LIST_FEATURE_FRAGMENT,
+  FEED_FEATURES_FRAGMENT,
 };

@@ -41,34 +41,6 @@ ListItemComponent.propTypes = {
   contentId: PropTypes.string,
 };
 
-// const getContent = ({ cards, isLoading }) => {
-//   let content = [];
-//   if (isLoading && !cards.length) {
-//     content = [
-//       {
-//         id: 'fakeId0',
-//         isLoading: true,
-//         title: 'Test',
-//         summary: 'Boom',
-//         channelType: '',
-//         coverImage: [],
-//         parentChannel: {
-//           id: '',
-//           name: '',
-//         },
-//       },
-//     ];
-//   } else {
-//     content = cards.map((card) => ({
-//       ...card,
-//       coverImage: get(card, 'coverImage.sources', undefined),
-//       __typename: card.relatedNode.__typename,
-//     }));
-//   }
-//
-//   return content;
-// };
-
 const loadingStateData = {
   action: '',
   title: '',
@@ -90,15 +62,7 @@ const loadingStateData = {
 };
 
 const CampaignItemListFeature = memo(
-  ({
-    cards,
-    isLoading,
-    listKey,
-    loadingStateObject,
-    onPressItem,
-    subtitle,
-    title,
-  }) => (
+  ({ cards, isLoading, listKey, onPressItem, subtitle, title }) => (
     <View>
       {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
         <Header vertical={false}>
@@ -111,8 +75,7 @@ const CampaignItemListFeature = memo(
       <FeedView
         onPressItem={onPressItem}
         ListItemComponent={ListItemComponent}
-        loadingStateObject={loadingStateObject}
-        content={cards} // {getContent({ cards, isLoading })}
+        content={isLoading ? [loadingStateData] : cards}
         isLoading={isLoading}
         listKey={listKey}
       />

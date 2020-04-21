@@ -10,7 +10,8 @@ import {
   styled,
   withIsLoading,
 } from '@apollosproject/ui-kit';
-import { contentCardComponentMapper, LiveConsumer } from '..';
+
+import { contentCardComponentMapper, LiveConsumer } from '../..';
 
 const Title = styled(
   ({ theme }) => ({
