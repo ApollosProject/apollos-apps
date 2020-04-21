@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 
 import { Providers } from '../utils/testUtils';
 
-import ActionListFeature from '.';
+import HeroListFeature from '.';
 
 const actions = [
   {
@@ -72,11 +72,11 @@ const actions = [
   },
 ];
 
-describe('The ActionListFeatures component', () => {
+describe('The HeroListFeatures component', () => {
   it('should render', () => {
     const tree = renderer.create(
       <Providers>
-        <ActionListFeature actions={actions} />
+        <HeroListFeature actions={actions} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -84,7 +84,7 @@ describe('The ActionListFeatures component', () => {
   it('should render with a title', () => {
     const tree = renderer.create(
       <Providers>
-        <ActionListFeature
+        <HeroListFeature
           actions={actions}
           title={'This renders smaller than its name would suggest'}
         />
@@ -95,7 +95,7 @@ describe('The ActionListFeatures component', () => {
   it('should render with a subtitle', () => {
     const tree = renderer.create(
       <Providers>
-        <ActionListFeature
+        <HeroListFeature
           actions={actions}
           subtitle={'This renders larger than you might expect'}
         />
@@ -106,7 +106,7 @@ describe('The ActionListFeatures component', () => {
   it('should render a button for onPressActionListButton', () => {
     const tree = renderer.create(
       <Providers>
-        <ActionListFeature
+        <HeroListFeature
           actions={actions}
           onPressActionListButton={jest.fn()}
         />
@@ -117,7 +117,7 @@ describe('The ActionListFeatures component', () => {
   it('should render a loading state for isLoading', () => {
     const tree = renderer.create(
       <Providers>
-        <ActionListFeature actions={[]} isLoading />
+        <HeroListFeature actions={[]} isLoading />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
