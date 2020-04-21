@@ -8,6 +8,7 @@ import {
   H6,
   PaddedView,
   styled,
+  TouchableScale,
 } from '@apollosproject/ui-kit';
 
 const Header = styled(({ theme }) => ({
@@ -19,10 +20,10 @@ const Title = styled(
   ({ theme }) => ({
     color: theme.colors.text.tertiary,
   }),
-  'ActionListFeature.Title'
+  'HeroListFeature.Title'
 )(H6);
 
-const Subtitle = styled({}, 'ActionListFeature.Subtitle')(H3);
+const Subtitle = styled({}, 'HeroListFeature.Subtitle')(H3);
 
 const loadingStateArray = [
   {
@@ -91,14 +92,16 @@ const loadingStateArray = [
   },
 ];
 
-const ActionListFeature = memo(
+const HeroListFeature = memo(
   ({
     actions,
     id,
     isLoading,
+    HeroComponent,
     loadingStateObject,
-    onPressActionListButton,
-    onPressActionItem,
+    onPressHero,
+    onPressHeroListButton,
+    onPressItem,
     subtitle,
     title,
   }) => (
@@ -116,32 +119,41 @@ const ActionListFeature = memo(
               {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
             </Header>
           ) : null}
-          <HighlightCard />
+          <TouchableScale onPress={onPressHero}>
+            <HeroComponent />
+          </TouchableScale>
         </>
       }
       actions={isLoading && !actions.length ? loadingStateObject : actions}
-      onPressActionItem={onPressActionItem}
-      onPressActionListButton={onPressActionListButton}
+      onPressActionItem={onPressItem}
+      onPressActionListButton={onPressHeroListButton}
     />
   )
 );
 
-ActionListFeature.displayName = 'Features';
+HeroListFeature.displayName = 'Features';
 
-ActionListFeature.propTypes = {
+HeroListFeature.propTypes = {
   // TODO: refactor ActionListCard to safely render without an actions array.
   actions: PropTypes.arrayOf(PropTypes.shape({})).isRequired, // at least for the time being this is required
   id: PropTypes.number,
   isLoading: PropTypes.bool,
+  HeroComponent: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.node,
+    PropTypes.object,
+  ]),
   loadingStateObject: PropTypes.arrayOf(PropTypes.shape({})),
-  onPressActionListButton: PropTypes.func,
-  onPressActionItem: PropTypes.func,
+  onPressHero: PropTypes.func,
+  onPressHeroListButton: PropTypes.func,
+  onPressItem: PropTypes.func,
   subtitle: PropTypes.string,
   title: PropTypes.string,
 };
 
-ActionListFeature.defaultProps = {
+HeroListFeature.defaultProps = {
+  HeroComponent: HighlightCard,
   loadingStateObject: loadingStateArray,
 };
 
-export default ActionListFeature;
+export default HeroListFeature;
