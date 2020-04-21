@@ -36,17 +36,15 @@ const CellImage = styled(({ theme }) => ({
 }))(ConnectedImage);
 
 // eslint-disable-next-line react/prop-types
-const RenderAsTouchable = ({ children, onPressActionItem }) =>
-  onPressActionItem ? (
-    <TouchableScale onPress={() => onPressActionItem}>
-      {children}
-    </TouchableScale>
+const RenderAsTouchable = ({ children, onPress }) =>
+  onPress ? (
+    <TouchableScale onPress={() => onPress}>{children}</TouchableScale>
   ) : (
     children
   );
 
-const ActionListItem = ({ imageSource, title, label, onPressActionItem }) => (
-  <RenderAsTouchable onPressActionItem={onPressActionItem}>
+const ActionListItem = ({ imageSource, title, label, onPress }) => (
+  <RenderAsTouchable onPress={onPress}>
     <Cell>
       <CellImage source={imageSource} />
       <TextContainer>
@@ -65,7 +63,7 @@ ActionListItem.propTypes = {
   imageSource: ImageSourceType.isRequired,
   title: PropTypes.string,
   label: PropTypes.string,
-  onPressActionItem: PropTypes.func,
+  onPress: PropTypes.func,
 };
 
 export default ActionListItem;

@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 import Providers from '../Providers';
 import { H3 } from '../typography';
 
-import ActionListCard from '.';
+import ActionList from '.';
 
 const actions = [
   {
@@ -77,11 +77,19 @@ const actions = [
   },
 ];
 
-describe('ActionListCard', () => {
+describe('ActionList', () => {
   it('should render 5 items', () => {
     const tree = renderer.create(
       <Providers>
-        <ActionListCard onPress={() => {}} actions={actions} />
+        <ActionList onPress={() => {}} actions={actions} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render without a "card border"', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ActionList onPress={jest.fn()} actions={actions} isCard />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -89,7 +97,7 @@ describe('ActionListCard', () => {
   it('should render with a header', () => {
     const tree = renderer.create(
       <Providers>
-        <ActionListCard
+        <ActionList
           onPress={jest.fn()}
           actions={actions}
           header={
@@ -105,7 +113,7 @@ describe('ActionListCard', () => {
   it('should render with onPressActionListButton', () => {
     const tree = renderer.create(
       <Providers>
-        <ActionListCard
+        <ActionList
           onPress={() => {}}
           actions={actions}
           onPressActionListButton={jest.fn()}
@@ -117,7 +125,7 @@ describe('ActionListCard', () => {
   it('should render a loading state', () => {
     const tree = renderer.create(
       <Providers>
-        <ActionListCard
+        <ActionList
           onPress={jest.fn()}
           isLoading
           actions={actions}

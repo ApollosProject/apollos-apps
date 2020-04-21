@@ -78,13 +78,6 @@ const actions = [
   },
 ];
 
-const Title = styled(
-  ({ theme }) => ({
-    color: theme.colors.text.tertiary,
-  }),
-  'ActionListFeature.Title'
-)(H6);
-
 storiesOf('ActionList', module)
   .addDecorator((story) => (
     <BackgroundView>
@@ -93,32 +86,27 @@ storiesOf('ActionList', module)
     </BackgroundView>
   ))
   .add('default', () => <ActionList actions={actions} />)
-  .add('header', () => (
-    <ActionList
-      actions={actions}
-      header={
-        <>
-          <Title>Boom</Title>
-          <H3 numberOfLines={3} ellipsizeMode="tail">
-            Some random text that encourages you
-          </H3>
-        </>
-      }
-    />
-  ))
+  .add('header', () => {
+    const Title = styled(({ theme }) => ({
+      color: theme.colors.text.tertiary,
+    }))(H6);
+
+    return (
+      <ActionList
+        actions={actions}
+        header={
+          <>
+            <Title>Boom</Title>
+            <H3 numberOfLines={3} ellipsizeMode="tail">
+              Some random text that encourages you
+            </H3>
+          </>
+        }
+      />
+    );
+  })
   .add('onPressActionListButton', () => (
-    <ActionList
-      actions={actions}
-      header={
-        <>
-          <Title>Boom</Title>
-          <H3 numberOfLines={3} ellipsizeMode="tail">
-            Some random text that encourages you
-          </H3>
-        </>
-      }
-      onPressActionListButton={() => {}}
-    />
+    <ActionList actions={actions} onPressActionListButton={() => {}} />
   ))
   .add('isCard (false)', () => <ActionList actions={actions} isCard={false} />)
   .add('isLoading', () => (

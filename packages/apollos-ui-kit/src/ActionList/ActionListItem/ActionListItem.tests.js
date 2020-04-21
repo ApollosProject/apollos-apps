@@ -10,12 +10,17 @@ describe('ActionListItem', () => {
   it('should render', () => {
     const tree = renderer.create(
       <Providers>
+        <ActionListItem imageSource={'https://picsum.photos/600/400/?random'} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with a title', () => {
+    const tree = renderer.create(
+      <Providers>
         <ActionListItem
-          onPress={() => {}}
           imageSource={'https://picsum.photos/600/400/?random'}
           title={'Boom'}
-          relatedNodeId={'fakeID'}
-          action={'fakeAction'}
         />
       </Providers>
     );
@@ -25,12 +30,19 @@ describe('ActionListItem', () => {
     const tree = renderer.create(
       <Providers>
         <ActionListItem
-          onPress={() => {}}
           imageSource={'https://picsum.photos/600/400/?random'}
-          title={'Boom'}
           label={'What'}
-          relatedNodeId={'fakeID'}
-          action={'fakeAction'}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should handle an onPress function', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ActionListItem
+          imageSource={'https://picsum.photos/600/400/?random'}
+          onPress={() => {}}
         />
       </Providers>
     );
@@ -46,8 +58,6 @@ describe('ActionListItem', () => {
             imageSource={'https://picsum.photos/600/400/?random'}
             title={'Boom'}
             label={'What'}
-            relatedNodeId={'fakeID'}
-            action={'fakeAction'}
           />
         </SetIsLoading>
       </Providers>

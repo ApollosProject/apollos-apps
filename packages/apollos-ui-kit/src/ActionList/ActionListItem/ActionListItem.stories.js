@@ -7,7 +7,7 @@ import BackgroundView from '../../BackgroundView';
 
 import ActionListItem from '.';
 
-storiesOf('ActionListItem', module)
+storiesOf('ActionList/ActionListItem', module)
   .addDecorator((story) => (
     <BackgroundView>
       {/* eslint-disable-next-line react-native/no-inline-styles */}
@@ -18,11 +18,14 @@ storiesOf('ActionListItem', module)
   ))
   .add('example', () => (
     <ActionListItem
-      onPress={() => {}}
       imageSource={'https://picsum.photos/600/400/?random'}
+      label={'Boom'}
+      onPress={() => {}}
       title={'Hello 1'}
-      relatedNodeId={'fakeID'}
     />
+  ))
+  .add('default', () => (
+    <ActionListItem imageSource={'https://picsum.photos/600/400/?random'} />
   ))
   .add('label', () => (
     <ActionListItem
@@ -31,5 +34,17 @@ storiesOf('ActionListItem', module)
       label={'Boom'}
       title={'Hello 1'}
       relatedNodeId={'fakeID'}
+    />
+  ))
+  .add('title', () => (
+    <ActionListItem
+      imageSource={'https://picsum.photos/600/400/?random'}
+      title={'Hello 1'}
+    />
+  ))
+  .add('onPress', () => (
+    <ActionListItem
+      imageSource={'https://picsum.photos/600/400/?random'}
+      onPress={() => {}}
     />
   ));
