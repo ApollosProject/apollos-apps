@@ -86,7 +86,7 @@ const ActionListFeature = memo(
     isLoading,
     loadingStateObject,
     onPressActionListButton,
-    onPressActionItem,
+    onPressItem,
     subtitle,
     title,
   }) => (
@@ -102,7 +102,7 @@ const ActionListFeature = memo(
         </>
       }
       actions={isLoading && !actions.length ? loadingStateObject : actions}
-      onPressActionItem={onPressActionItem}
+      onPressActionItem={onPressItem}
       onPressActionListButton={onPressActionListButton}
     />
   )
@@ -112,18 +112,19 @@ ActionListFeature.displayName = 'Features';
 
 ActionListFeature.propTypes = {
   // TODO: refactor ActionListCard to safely render without an actions array.
-  actions: PropTypes.arrayOf(PropTypes.shape({})).isRequired, // at least for the time being this is required
-  id: PropTypes.number,
+  actions: PropTypes.arrayOf(PropTypes.shape({})),
+  id: PropTypes.string.isRequired,
   isLoading: PropTypes.bool,
   loadingStateObject: PropTypes.arrayOf(PropTypes.shape({})),
   onPressActionListButton: PropTypes.func,
-  onPressActionItem: PropTypes.func,
+  onPressItem: PropTypes.func,
   subtitle: PropTypes.string,
   title: PropTypes.string,
 };
 
 ActionListFeature.defaultProps = {
   loadingStateObject: loadingStateArray,
+  actions: [],
 };
 
 export default ActionListFeature;

@@ -75,7 +75,7 @@ class ActionList extends PureComponent {
               action={item.action || ''}
               key={item.id}
               label={item.subtitle || ''}
-              onPressActionItem={() =>
+              onPress={() =>
                 onPressActionItem({
                   action: item.action,
                   relatedNode: item.relatedNode,
