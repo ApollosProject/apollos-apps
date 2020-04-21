@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ActionListCard should render 5 items 1`] = `
+exports[`ActionList should render 5 items 1`] = `
 <View
   style={
     Object {
@@ -598,7 +598,7 @@ exports[`ActionListCard should render 5 items 1`] = `
 </View>
 `;
 
-exports[`ActionListCard should render a loading state 1`] = `
+exports[`ActionList should render a loading state 1`] = `
 <View
   isLoading={true}
   style={
@@ -1136,7 +1136,7 @@ exports[`ActionListCard should render a loading state 1`] = `
 </View>
 `;
 
-exports[`ActionListCard should render with a header 1`] = `
+exports[`ActionList should render with a header 1`] = `
 <View
   style={
     Object {
@@ -1748,7 +1748,7 @@ exports[`ActionListCard should render with a header 1`] = `
 </View>
 `;
 
-exports[`ActionListCard should render with onPressActionListButton 1`] = `
+exports[`ActionList should render with onPressActionListButton 1`] = `
 <View
   style={
     Object {
@@ -2346,7 +2346,7 @@ exports[`ActionListCard should render with onPressActionListButton 1`] = `
 </View>
 `;
 
-exports[`ActionListCard should render without a "card border" 1`] = `
+exports[`ActionList should render without a "card border" 1`] = `
 <View
   style={
     Object {
