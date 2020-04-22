@@ -23,4 +23,4 @@ export const registerToken = (token) => {
 };
 
 export const generateToken = (params) =>
-  jwt.sign({ ...params }, secret, { expiresIn: '60d' });
+  jwt.sign({ ...params }, secret, { expiresIn: '400d' });
