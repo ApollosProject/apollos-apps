@@ -4,6 +4,30 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 
 import HTMLView from '.';
 
+class MagicChangingHtml extends React.Component {
+  state = { count: 1 };
+
+  componentDidMount() {
+    this.timer = setInterval(() => {
+      this.setState(({ count }) => ({
+        count: count + 1,
+      }));
+    }, 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
+
+  render() {
+    return this.props.children(
+      `<div><p>This content should not repeat </p><p>The Latest Bit of Content - ${
+        this.state.count
+      } </p></div>`
+    );
+  }
+}
+
 storiesOf('ui-htmlview/HTMLView', module)
   .add('Example', () => (
     <ScrollView>
@@ -30,5 +54,12 @@ storiesOf('ui-htmlview/HTMLView', module)
   .add('isLoading', () => (
     <ScrollView>
       <HTMLView isLoading />
+    </ScrollView>
+  ))
+  .add('Changing Content', () => (
+    <ScrollView>
+      <MagicChangingHtml>
+        {(content) => <HTMLView>{content}</HTMLView>}
+      </MagicChangingHtml>
     </ScrollView>
   ));
