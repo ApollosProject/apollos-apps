@@ -1,5 +1,6 @@
 export ActionListFeatureConnected, {
   ActionListFeature,
+  GET_ACTION_LIST_FEATURE,
 } from './ActionListFeatureConnected';
 export ContentCardConnected, {
   contentCardComponentMapper,
@@ -21,6 +22,7 @@ export FeaturesFeedConnected, {
 } from './FeaturesFeedConnected';
 export HorizontalCardListFeatureConnected, {
   HorizontalCardListFeature,
+  GET_HORIZONTAL_CARD_LIST_FEATURE,
 } from './HorizontalCardListFeatureConnected';
 export HorizontalContentCardConnected, {
   horizontalContentCardComponentMapper,
@@ -59,4 +61,5 @@ export UserAvatarConnected, { UserAvatarUpdate } from './UserAvatarConnected';
 export { fetchMoreResolver, share, uploadPhoto } from './utils';
 export VerticalCardListFeatureConnected, {
   VerticalCardListFeature,
+  GET_VERTICAL_CARD_LIST_FEATURE,
 } from './VerticalCardListFeatureConnected';

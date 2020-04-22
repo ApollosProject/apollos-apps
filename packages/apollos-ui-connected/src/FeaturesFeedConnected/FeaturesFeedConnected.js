@@ -9,7 +9,7 @@ import featuresFeedComponentMapper from './featuresFeedComponentMapper';
 import GET_FEED_FEATURES from './getFeedFeatures';
 
 class FeaturesFeedConnected extends PureComponent {
-  propTypes = {
+  static propTypes = {
     Component: PropTypes.oneOfType([
       PropTypes.node,
       PropTypes.func,
@@ -52,7 +52,7 @@ class FeaturesFeedConnected extends PureComponent {
           return (
             <FeedView
               error={error}
-              content={isLoading ? this. loadingStateObject : features}
+              content={isLoading ? this.loadingStateObject : features}
               renderItem={this.renderFeatures}
               {...props}
             />

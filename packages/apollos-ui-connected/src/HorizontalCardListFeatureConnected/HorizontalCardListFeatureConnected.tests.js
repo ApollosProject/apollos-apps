@@ -18,7 +18,7 @@ const mock = {
         __typename: 'ActionListFeature',
         title: 'Some cool list',
         subtitle: 'Check it out',
-        actions: [
+        cards: [
           {
             __typename: 'ActionListCard',
             id: 'ActionListCard:123',
