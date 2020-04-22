@@ -1,10 +1,15 @@
 import React from 'react';
 import { ScrollView, SafeAreaView } from 'react-native';
 import { storiesOf } from '@apollosproject/ui-storybook';
+import PropTypes from 'prop-types';
 
 import HTMLView from '.';
 
 class MagicChangingHtml extends React.Component {
+  static propTypes = {
+    children: PropTypes.func.isRequired,
+  };
+
   state = { count: 1 };
 
   componentDidMount() {
