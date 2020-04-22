@@ -19,7 +19,7 @@ const mock = {
         title: '',
         subtitle: 'Check it out',
         isFeatured: false,
-        actions: [
+        cards: [
           {
             __typename: 'ActionListCard',
             id: 'ActionListCard:123',

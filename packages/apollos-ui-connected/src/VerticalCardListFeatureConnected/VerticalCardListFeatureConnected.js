@@ -37,8 +37,16 @@ const VerticalCardListFeatureConnected = ({
 );
 
 VerticalCardListFeatureConnected.propTypes = {
-  Component: PropTypes.node,
-  FeaturedComponent: PropTypes.node,
+  Component: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.func,
+    PropTypes.object,
+  ]),
+  FeaturedComponent: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.func,
+    PropTypes.object,
+  ]),
   featureId: PropTypes.string.isRequired,
   isFeatured: PropTypes.bool,
   isLoading: PropTypes.bool,
