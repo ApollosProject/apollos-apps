@@ -56,6 +56,7 @@ class HTMLView extends PureComponent {
   parse(html = '') {
     this.parser.write(html);
     this.parser.done();
+    this.parser.reset();
   }
 
   renderDom(dom) {

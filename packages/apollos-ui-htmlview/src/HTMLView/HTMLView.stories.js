@@ -1,8 +1,37 @@
 import React from 'react';
 import { ScrollView, SafeAreaView } from 'react-native';
 import { storiesOf } from '@apollosproject/ui-storybook';
+import PropTypes from 'prop-types';
 
 import HTMLView from '.';
+
+class MagicChangingHtml extends React.Component {
+  static propTypes = {
+    children: PropTypes.func.isRequired,
+  };
+
+  state = { count: 1 };
+
+  componentDidMount() {
+    this.timer = setInterval(() => {
+      this.setState(({ count }) => ({
+        count: count + 1,
+      }));
+    }, 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
+
+  render() {
+    return this.props.children(
+      `<div><p>This content should not repeat </p><p>The Latest Bit of Content - ${
+        this.state.count
+      } </p></div>`
+    );
+  }
+}
 
 storiesOf('ui-htmlview/HTMLView', module)
   .add('Example', () => (
@@ -30,5 +59,12 @@ storiesOf('ui-htmlview/HTMLView', module)
   .add('isLoading', () => (
     <ScrollView>
       <HTMLView isLoading />
+    </ScrollView>
+  ))
+  .add('Changing Content', () => (
+    <ScrollView>
+      <MagicChangingHtml>
+        {(content) => <HTMLView>{content}</HTMLView>}
+      </MagicChangingHtml>
     </ScrollView>
   ));
