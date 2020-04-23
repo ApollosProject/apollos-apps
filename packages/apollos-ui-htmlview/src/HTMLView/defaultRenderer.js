@@ -115,10 +115,6 @@ const defaultRenderer = (node, { children }, handlePressAnchor) => {
       if (url && url.startsWith('//')) {
         url = `http:${url}`;
       }
-      if (!url.startsWith('http')) {
-        // we can't currently handle non web-links, so just return regular text instead:
-        return children;
-      }
       const onPress = () => handlePressAnchor(url);
       if (url) {
         return (
