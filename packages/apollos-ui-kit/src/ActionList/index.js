@@ -53,7 +53,7 @@ class ActionList extends PureComponent {
     this.props.isCard ? (
       <Card isLoading={this.props.isLoading}>{children}</Card>
     ) : (
-      <>{children}</>
+      children
     );
 
   render() {
