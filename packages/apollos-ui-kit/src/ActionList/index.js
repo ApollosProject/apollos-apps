@@ -64,7 +64,7 @@ class ActionList extends PureComponent {
       header,
     } = this.props;
 
-    const { RenderAsCard } = this.RenderAsCard;
+    const RenderAsCard = this.RenderAsCard; // eslint-disable-line prefer-destructuring
 
     return (
       <RenderAsCard>
