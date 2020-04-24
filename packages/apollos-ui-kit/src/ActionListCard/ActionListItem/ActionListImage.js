@@ -11,31 +11,43 @@ import { getIsLoading, withIsLoading } from '../../isLoading';
 import ConnectedImage, { ImageSourceType } from '../../ConnectedImage';
 import { H3, H6 } from '../../typography';
 
-const CellImage = styled(({ theme }) => ({
-  width: theme.sizing.baseUnit * 4,
-  height: theme.sizing.baseUnit * 4,
-  borderRadius: theme.sizing.baseUnit,
-  marginRight: theme.sizing.baseUnit,
-}))(ConnectedImage);
+const CellImage = styled(
+  ({ theme }) => ({
+    width: theme.sizing.baseUnit * 4,
+    height: theme.sizing.baseUnit * 4,
+    borderRadius: theme.sizing.baseUnit,
+    marginRight: theme.sizing.baseUnit,
+  }),
+  'ui-kit.ActionListImage.CellImage'
+)(ConnectedImage);
 
-const CellView = styled(({ theme }) => ({
-  width: theme.sizing.baseUnit * 4,
-  height: theme.sizing.baseUnit * 4,
-  borderRadius: theme.sizing.baseUnit,
-  marginRight: theme.sizing.baseUnit,
-  backgroundColor: '#F4F4F5',
-  alignItems: 'center',
-  justifyContent: 'center',
-}))(View);
+const CellView = styled(
+  ({ theme }) => ({
+    width: theme.sizing.baseUnit * 4,
+    height: theme.sizing.baseUnit * 4,
+    borderRadius: theme.sizing.baseUnit,
+    marginRight: theme.sizing.baseUnit,
+    backgroundColor: '#F4F4F5',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }),
+  'ui-kit.ActionListImage.CellImage'
+)(View);
 
-const CellDate = styled(({ theme }) => ({
-  color: theme.colors.darkSecondary,
-  marginBottom: -theme.sizing.baseUnit / 2,
-}))(H3);
+const CellDate = styled(
+  ({ theme }) => ({
+    color: theme.colors.darkSecondary,
+    marginBottom: -theme.sizing.baseUnit / 2,
+  }),
+  'ui-kit.ActionListImage.CellDate'
+)(H3);
 
-const CellMonth = styled(({ theme }) => ({
-  color: theme.colors.darkSecondary,
-}))(H6);
+const CellMonth = styled(
+  ({ theme }) => ({
+    color: theme.colors.darkSecondary,
+  }),
+  'ui-kit.ActionListImage.CellMonth'
+)(H6);
 
 const hasNoImage = (source) => isNull(source) || source === '';
 
