@@ -7,8 +7,8 @@ import safeOpenUrl from './index';
 storiesOf('ui-connected/safeOpenUrl', module)
   .addDecorator((story) => (
     <BackgroundView>
-      {/* eslint-disable-next-line react-native/no-inline-styles */}
       <CenteredView
+        {/* eslint-disable-next-line react-native/no-inline-styles */}
         style={{ alignItems: 'stretch', justifyContent: 'space-around' }}
       >
         {story()}
