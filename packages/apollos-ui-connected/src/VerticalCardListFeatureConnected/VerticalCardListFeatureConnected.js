@@ -14,7 +14,11 @@ const VerticalCardListFeatureConnected = ({
   isLoading,
   ...props
 }) => (
-  <Query query={GET_VERTICAL_CARD_LIST_FEATURE} variables={{ featureId }}>
+  <Query
+    query={GET_VERTICAL_CARD_LIST_FEATURE}
+    variables={{ featureId }}
+    fetchPolicy="cache-and-network"
+  >
     {({ data, loading }) => {
       const featured = get(data, 'node.isFeatured') || isFeatured;
       const ComponentToRender = featured ? FeaturedComponent : Component;
