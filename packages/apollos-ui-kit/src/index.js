@@ -1,4 +1,5 @@
 export ActionCard from './ActionCard';
+export ActionList from './ActionList';
 export ActionListCard from './ActionListCard';
 export ActivityIndicator, {
   InlineActivityIndicator,

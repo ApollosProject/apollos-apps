@@ -122,4 +122,12 @@ describe('The ActionListFeatures component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should not render with no actions', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ActionListFeature actions={[]} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });
