@@ -56,7 +56,6 @@ const ActionListImage = ({ isLoading, source, relatedNode }) => {
     return <CellImage />;
   }
   const start = get(relatedNode, 'start', null);
-  console.warn(start, source);
   if (hasNoImage(source) && !!start) {
     const date = moment(start);
     return (
