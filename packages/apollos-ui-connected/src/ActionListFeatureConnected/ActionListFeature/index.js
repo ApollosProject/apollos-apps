@@ -89,23 +89,25 @@ const ActionListFeature = memo(
     onPressItem,
     subtitle,
     title,
-  }) => (
-    <ActionListCard
-      isLoading={isLoading}
-      key={id}
-      header={
-        <>
-          {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
-            <Title numberOfLines={1}>{title}</Title>
-          ) : null}
-          {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
-        </>
-      }
-      actions={isLoading && !actions.length ? loadingStateObject : actions}
-      onPressActionItem={onPressItem}
-      onPressActionListButton={onPressActionListButton}
-    />
-  )
+  }) =>
+    // Only render if loading or if you have actions
+    !!(isLoading || actions.length) && (
+      <ActionListCard
+        isLoading={isLoading}
+        key={id}
+        header={
+          <>
+            {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
+              <Title numberOfLines={1}>{title}</Title>
+            ) : null}
+            {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
+          </>
+        }
+        actions={isLoading && !actions.length ? loadingStateObject : actions}
+        onPressActionItem={onPressItem}
+        onPressActionListButton={onPressActionListButton}
+      />
+    )
 );
 
 ActionListFeature.displayName = 'Features';
