@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`The ActionListFeatures component should not render with no actions 1`] = `null`;
+
 exports[`The ActionListFeatures component should render 1`] = `
 <View
   style={
