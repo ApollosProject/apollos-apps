@@ -41,7 +41,11 @@ const ActionListItem = ({
 }) => (
   <TouchableScale onPress={() => onPressActionItem({ action, relatedNode })}>
     <Cell>
-      <ActionListImage source={imageSource} isLoading={isLoading} />
+      <ActionListImage
+        relatedNode={relatedNode}
+        source={imageSource}
+        isLoading={isLoading}
+      />
       <TextContainer>
         {title ? <H5 numberOfLines={1}>{title}</H5> : null}
         <StyledBodySmall numberOfLines={2} ellipsizeMode="tail">

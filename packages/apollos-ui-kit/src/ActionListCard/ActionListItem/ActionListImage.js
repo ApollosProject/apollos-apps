@@ -4,15 +4,12 @@ import { View } from 'react-native';
 import moment from 'moment';
 import { get, isNull } from 'lodash';
 
-import {
-  H3,
-  H6,
-  styled,
-  ConnectedImage,
-  ImageSourceType,
-  getIsLoading,
-  withIsLoading,
-} from '@apollosproject/ui-kit';
+import styled from '../../styled';
+
+import { getIsLoading, withIsLoading } from '../../isLoading';
+
+import ConnectedImage, { ImageSourceType } from '../../ConnectedImage';
+import { H3, H6 } from '../../typography';
 
 const CellImage = styled(({ theme }) => ({
   width: theme.sizing.baseUnit * 4,
@@ -47,6 +44,7 @@ const ActionListImage = ({ isLoading, source, relatedNode }) => {
     return <CellImage />;
   }
   const start = get(relatedNode, 'start', null);
+  console.warn(start, source);
   if (hasNoImage(source) && !!start) {
     const date = moment(start);
     return (
