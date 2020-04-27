@@ -1,3 +1,4 @@
+// eslint-disable react-native/no-inline-styles
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
@@ -8,7 +9,6 @@ storiesOf('ui-connected/safeOpenUrl', module)
   .addDecorator((story) => (
     <BackgroundView>
       <CenteredView
-        {/* eslint-disable-next-line react-native/no-inline-styles */}
         style={{ alignItems: 'stretch', justifyContent: 'space-around' }}
       >
         {story()}
