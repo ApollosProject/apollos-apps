@@ -49,7 +49,10 @@ describe('The ActionListFeatureConnected component', () => {
   it('should render', async () => {
     const tree = await renderWithApolloData(
       <Providers mocks={[mock]}>
-        <ActionListFeatureConnected featureId={'ActionListFeature:123'} />
+        <ActionListFeatureConnected
+          refetchRef={jest.fn()}
+          featureId={'ActionListFeature:123'}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -57,7 +60,10 @@ describe('The ActionListFeatureConnected component', () => {
   it('should render a loading state when isLoading', async () => {
     const tree = renderer.create(
       <Providers>
-        <ActionListFeatureConnected featureId={'ActionListFeature:123'} />
+        <ActionListFeatureConnected
+          refetchRef={jest.fn()}
+          featureId={'ActionListFeature:123'}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

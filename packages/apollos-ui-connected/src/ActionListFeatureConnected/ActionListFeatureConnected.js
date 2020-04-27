@@ -19,9 +19,7 @@ function ActionListFeatureConnected({
       fetchPolicy="cache-and-network"
     >
       {({ data, loading, refetch }) => {
-        if (get(data, 'node.id')) {
-          refetchRef({ refetch, id: data.node.id });
-        }
+        if (featureId && refetch) refetchRef({ refetch, id: featureId });
         return (
           <Component
             {...get(data, 'node')}
