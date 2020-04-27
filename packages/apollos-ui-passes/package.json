@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
-    "test": "jest",
+    "test": "jest --no-watchman",
     "lint": "eslint ./src --ext .js"
   },
   "keywords": [

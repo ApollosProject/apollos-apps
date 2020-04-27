@@ -7,7 +7,7 @@ Object {
     "low": 0.4,
     "medium": 0.5,
   },
-  "barStyle": "light-content",
+  "barStyle": "dark-content",
   "breakpoints": Object {
     "lg": 1200,
     "md": 800,
@@ -147,7 +147,7 @@ Object {
   "type": "light",
   "types": Object {
     "dark": Object {
-      "barStyle": "dark-content",
+      "barStyle": "light-content",
       "colors": Object {
         "action": Object {
           "default": "#A5A5A5",
@@ -329,7 +329,7 @@ Object {
     "low": 0.4,
     "medium": 0.5,
   },
-  "barStyle": "light-content",
+  "barStyle": "dark-content",
   "breakpoints": Object {
     "lg": 1200,
     "md": 800,
@@ -465,7 +465,7 @@ Object {
   "type": "dark",
   "types": Object {
     "dark": Object {
-      "barStyle": "dark-content",
+      "barStyle": "light-content",
       "colors": Object {
         "action": Object {
           "default": "#A5A5A5",
