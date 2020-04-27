@@ -63,3 +63,4 @@ export VerticalCardListFeatureConnected, {
   VerticalCardListFeature,
   GET_VERTICAL_CARD_LIST_FEATURE,
 } from './VerticalCardListFeatureConnected';
+export safeHandleUrl from './safeOpenUrl';

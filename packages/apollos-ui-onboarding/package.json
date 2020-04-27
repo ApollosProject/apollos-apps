@@ -8,7 +8,7 @@
     "storybook/**"
   ],
   "scripts": {
-    "test": "TZ=UTC jest",
+    "test": "TZ=UTC jest --no-watchman",
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "lint": "eslint ./src --ext .js"
   },
