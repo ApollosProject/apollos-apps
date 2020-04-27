@@ -137,9 +137,10 @@ const enhance = compose(
   pure,
   branch(
     ({ isLoading, content }) => isLoading && !content.length,
-    withProps(({ loadingStateObject }) => ({
+    withProps(({ loadingStateObject, loadingStateData }) => ({
       isLoading: true,
-      content: generateLoadingStateData(10, loadingStateObject),
+      content:
+        loadingStateData || generateLoadingStateData(10, loadingStateObject),
       fetchMore: () => {},
     }))
   ),

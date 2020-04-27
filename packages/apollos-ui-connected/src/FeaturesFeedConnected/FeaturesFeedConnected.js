@@ -19,6 +19,8 @@ class FeaturesFeedConnected extends PureComponent {
     additionalFeatures: PropTypes.shape({}),
   };
 
+  refetchFunctions = {};
+
   loadingStateObject = [
     {
       isLoading: true,
@@ -38,22 +40,33 @@ class FeaturesFeedConnected extends PureComponent {
   renderFeatures = ({ item }) =>
     featuresFeedComponentMapper({
       feature: item,
+      refetchRef: this.refetchRef,
       onPressActionItem: this.props.onPressActionItem,
       additionalFeatures: this.props.additionalFeatures,
     });
+
+  // eslint-disable-next-line
+  refetchRef = ({ refetch, id }) => (this.refetchFunctions[id] = refetch);
+
+  refetch = () => {
+    Promise.all(Object.values(this.refetchFunctions).map((rf) => rf()));
+  };
 
   render() {
     const { Component, onPressActionItem, ...props } = this.props;
     return (
       <Query query={GET_FEED_FEATURES} fetchPolicy="cache-and-network">
-        {({ error, data, loading }) => {
+        {({ error, data, loading, refetch }) => {
           const features = get(data, 'userFeedFeatures', []);
-          const isLoading = loading && features.length === 0;
+          this.refetchRef({ refetch, id: 'feed' });
           return (
             <FeedView
               error={error}
-              content={isLoading ? this.loadingStateObject : features}
+              content={features}
+              loadingStateData={this.loadingStateData}
               renderItem={this.renderFeatures}
+              loading={loading}
+              refetch={this.refetch}
               {...props}
             />
           );
