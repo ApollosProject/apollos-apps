@@ -15,7 +15,8 @@ const HorizontalCardListFeatureConnected = ({
 }) => (
   <Query query={GET_HORIZONTAL_CARD_LIST_FEATURE} variables={{ featureId }}>
     {({ data, loading, refetch }) => {
-      if (featureId && refetch) refetchRef({ refetch, id: featureId });
+      if (featureId && refetch && refetchRef)
+        refetchRef({ refetch, id: featureId });
       return (
         <Component
           {...get(data, 'node')}
@@ -42,7 +43,7 @@ HorizontalCardListFeatureConnected.propTypes = {
   ]),
   featureId: PropTypes.string.isRequired,
   isLoading: PropTypes.bool,
-  refetchRef: PropTypes.func.isRequired,
+  refetchRef: PropTypes.func,
 };
 
 HorizontalCardListFeatureConnected.defaultProps = {
