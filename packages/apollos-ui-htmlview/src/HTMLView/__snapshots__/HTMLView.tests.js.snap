@@ -2980,7 +2980,7 @@ exports[`the HTMLView component should render italic text using <i> 1`] = `
 </View>
 `;
 
-exports[`the HTMLView component strips out badly formatted links 1`] = `
+exports[`the HTMLView component strips keeps badly formatted links 1`] = `
 <View
   style={
     Object {
@@ -3008,8 +3008,19 @@ exports[`the HTMLView component strips out badly formatted links 1`] = `
           }
         }
       >
-        <Text>
-          Bad link
+        <Text
+          onPress={[Function]}
+          style={
+            Object {
+              "color": "#17B582",
+            }
+          }
+        >
+          <Text>
+            <Text>
+              Bad link
+            </Text>
+          </Text>
         </Text>
       </Text>
     </View>

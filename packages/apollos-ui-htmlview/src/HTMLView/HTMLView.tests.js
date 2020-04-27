@@ -147,7 +147,7 @@ describe('the HTMLView component', () => {
 
     expect(tree).toMatchSnapshot();
   });
-  it('strips out badly formatted links', () => {
+  it('strips keeps badly formatted links', () => {
     const tree = renderer.create(
       <Providers>
         <HTMLView>{"<p><a href='{page_536525}'>Bad link</a></p>"}</HTMLView>
