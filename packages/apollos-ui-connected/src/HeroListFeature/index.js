@@ -28,8 +28,8 @@ const Subtitle = styled({}, 'HeroListFeature.Subtitle')(H3);
 const loadingStateArray = [
   {
     id: 'fakeId1',
-    title: '',
-    subtitle: '',
+    title: 'Boom',
+    subtitle: 'What',
     parentChannel: {
       id: '',
       name: '',
@@ -44,8 +44,8 @@ const loadingStateArray = [
   },
   {
     id: 'fakeId2',
-    title: '',
-    subtitle: '',
+    title: 'Boom',
+    subtitle: 'What',
     parentChannel: {
       id: '',
       name: '',
@@ -60,8 +60,8 @@ const loadingStateArray = [
   },
   {
     id: 'fakeId3',
-    title: '',
-    subtitle: '',
+    title: 'Boom',
+    subtitle: 'What',
     parentChannel: {
       id: '',
       name: '',
@@ -76,8 +76,8 @@ const loadingStateArray = [
   },
   {
     id: 'fakeId4',
-    title: '',
-    subtitle: '',
+    title: 'Boom',
+    subtitle: 'What',
     parentChannel: {
       id: '',
       name: '',
