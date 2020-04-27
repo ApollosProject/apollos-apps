@@ -12,7 +12,11 @@ function ActionListFeatureConnected({
   ...props
 }) {
   return (
-    <Query query={GET_ACTION_LIST_FEATURE} variables={{ featureId }}>
+    <Query
+      query={GET_ACTION_LIST_FEATURE}
+      variables={{ featureId }}
+      fetchPolicy="cache-and-network"
+    >
       {({ data, loading }) => (
         <Component
           {...get(data, 'node')}

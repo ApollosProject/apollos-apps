@@ -5,8 +5,9 @@ import PropTypes from 'prop-types';
 import { H5, BodySmall } from '../../typography';
 import styled from '../../styled';
 import TouchableScale from '../../TouchableScale';
-import ConnectedImage, { ImageSourceType } from '../../ConnectedImage';
+import { ImageSourceType } from '../../ConnectedImage';
 import FlexedView from '../../FlexedView';
+import ActionListImage from './ActionListImage';
 
 const StyledBodySmall = styled(({ theme }) => ({
   color: theme.colors.text.tertiary,
@@ -29,13 +30,6 @@ const Cell = styled(({ theme }) => ({
   alignItems: 'center',
 }))(View);
 
-const CellImage = styled(({ theme }) => ({
-  width: theme.sizing.baseUnit * 4,
-  height: theme.sizing.baseUnit * 4,
-  borderRadius: theme.sizing.baseBorderRadius,
-  marginRight: theme.sizing.baseUnit,
-}))(ConnectedImage);
-
 const ActionListItem = ({
   imageSource,
   title,
@@ -43,10 +37,15 @@ const ActionListItem = ({
   relatedNode,
   label,
   onPressActionItem,
+  isLoading,
 }) => (
   <TouchableScale onPress={() => onPressActionItem({ action, relatedNode })}>
     <Cell>
-      <CellImage source={imageSource} />
+      <ActionListImage
+        relatedNode={relatedNode}
+        source={imageSource}
+        isLoading={isLoading}
+      />
       <TextContainer>
         {title ? <H5 numberOfLines={1}>{title}</H5> : null}
         <StyledBodySmall numberOfLines={2} ellipsizeMode="tail">
@@ -58,12 +57,13 @@ const ActionListItem = ({
 );
 
 ActionListItem.propTypes = {
-  imageSource: ImageSourceType.isRequired,
+  imageSource: ImageSourceType,
   title: PropTypes.string.isRequired,
   action: PropTypes.string,
   relatedNode: PropTypes.any, // eslint-disable-line
   label: PropTypes.string,
   onPressActionItem: PropTypes.func,
+  isLoading: PropTypes.func,
 };
 
 export default ActionListItem;
