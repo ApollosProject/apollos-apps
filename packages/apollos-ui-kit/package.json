@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-kit",
-  "version": "1.4.0-beta.1",
+  "version": "1.4.0-beta.2",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -8,7 +8,7 @@
     "storybook/**"
   ],
   "scripts": {
-    "test": "jest",
+    "test": "jest --no-watchman",
     "lint": "eslint ./src --ext .js",
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "generate-docs": "node_modules/.bin/react-docgen src | ./docs/buildDocs.sh"

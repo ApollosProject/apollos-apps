@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-passes",
-  "version": "1.4.0-beta.1",
+  "version": "1.4.0-beta.2",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
-    "test": "jest",
+    "test": "jest --no-watchman",
     "lint": "eslint ./src --ext .js"
   },
   "keywords": [
@@ -45,7 +45,7 @@
     "rn-fetch-blob": "*"
   },
   "dependencies": {
-    "@apollosproject/ui-kit": "^1.4.0-beta.1",
+    "@apollosproject/ui-kit": "^1.4.0-beta.2",
     "graphql-tag": "^2.10.1",
     "react-apollo": "2.5.5"
   },

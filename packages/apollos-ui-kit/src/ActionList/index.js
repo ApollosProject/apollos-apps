@@ -53,7 +53,7 @@ class ActionList extends PureComponent {
     this.props.isCard ? (
       <Card isLoading={this.props.isLoading}>{children}</Card>
     ) : (
-      <>{children}</>
+      children
     );
 
   render() {
@@ -64,7 +64,7 @@ class ActionList extends PureComponent {
       header,
     } = this.props;
 
-    const RenderAsCard = this.RenderAsCard; // eslint-disable-line prefer-destructuring
+    const { RenderAsCard } = this;
 
     return (
       <RenderAsCard>
@@ -75,14 +75,16 @@ class ActionList extends PureComponent {
               action={item.action || ''}
               key={item.id}
               label={item.subtitle || ''}
-              onPress={() =>
-                onPressActionItem({
-                  action: item.action,
-                  relatedNode: item.relatedNode,
-                })
-              }
               title={item.title || ''}
               imageSource={get(item, 'image.sources[0]', '')}
+              {...(onPressActionItem // fixes bug where items appear touchable even when there is no handler
+                ? {
+                    onPress: onPressActionItem({
+                      action: item.action,
+                      relatedNode: item.relatedNode,
+                    }),
+                  }
+                : {})}
             />
           ))}
           {onPressActionListButton ? (

@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
+import moment from 'moment';
 import CenteredView from '../CenteredView';
 import BackgroundView from '../BackgroundView';
 import { H3 } from '../typography';
@@ -74,6 +75,14 @@ const actions = [
   },
 ];
 
+const eventActions = actions.map((action) => ({
+  ...action,
+  relatedNode: {
+    start: moment('11/11/2011').toJSON(),
+  },
+  image: null,
+}));
+
 storiesOf('ActionListCard', module)
   .addDecorator((story) => (
     <BackgroundView>
@@ -82,6 +91,7 @@ storiesOf('ActionListCard', module)
     </BackgroundView>
   ))
   .add('default', () => <ActionListCard actions={actions} />)
+  .add('event actions', () => <ActionListCard actions={eventActions} />)
   .add('header', () => (
     <ActionListCard
       actions={actions}

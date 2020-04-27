@@ -81,7 +81,7 @@ describe('ActionList', () => {
   it('should render 5 items', () => {
     const tree = renderer.create(
       <Providers>
-        <ActionList onPress={() => {}} actions={actions} />
+        <ActionList actions={actions} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -89,7 +89,7 @@ describe('ActionList', () => {
   it('should render without a "card border"', () => {
     const tree = renderer.create(
       <Providers>
-        <ActionList onPress={jest.fn()} actions={actions} isCard />
+        <ActionList actions={actions} isCard={false} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -98,7 +98,6 @@ describe('ActionList', () => {
     const tree = renderer.create(
       <Providers>
         <ActionList
-          onPress={jest.fn()}
           actions={actions}
           header={
             <H3 numberOfLines={3} ellipsizeMode="tail">
@@ -110,14 +109,18 @@ describe('ActionList', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render items as "touchable via onPressActionItem', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ActionList actions={actions} onPressActionItem={jest.fn()} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should render with onPressActionListButton', () => {
     const tree = renderer.create(
       <Providers>
-        <ActionList
-          onPress={() => {}}
-          actions={actions}
-          onPressActionListButton={jest.fn()}
-        />
+        <ActionList actions={actions} onPressActionListButton={jest.fn()} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
