@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-notifications",
-  "version": "1.4.0-beta.1",
+  "version": "1.4.0-beta.2",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -8,7 +8,6 @@
     "storybook/**"
   ],
   "scripts": {
-    "test": "jest",
     "test": "jest --no-watchman",
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "lint": "eslint ./src --ext .js"
