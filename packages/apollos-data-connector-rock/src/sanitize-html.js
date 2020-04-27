@@ -24,7 +24,7 @@ const allowedTags = [
 ];
 
 const allowedAttributes = {
-  a: ['href'],
+  a: ['href', 'target'],
   img: ['src'],
 };
 
