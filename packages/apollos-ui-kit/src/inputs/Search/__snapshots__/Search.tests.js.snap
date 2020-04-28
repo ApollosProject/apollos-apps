@@ -142,7 +142,6 @@ exports[`The Search Input component should render 1`] = `
     <TextInput
       allowFontScaling={true}
       cancelButtonOffset={1000}
-      color="#303030"
       editable={true}
       isFocused={false}
       onChangeText={[Function]}
@@ -154,6 +153,7 @@ exports[`The Search Input component should render 1`] = `
       selectionColor="#17B582"
       style={
         Object {
+          "color": "#303030",
           "flexGrow": 1,
           "fontFamily": "System",
           "fontSize": 14,
@@ -515,7 +515,6 @@ exports[`The Search Input component should render as disabled 1`] = `
     <TextInput
       allowFontScaling={true}
       cancelButtonOffset={1000}
-      color="#303030"
       editable={false}
       isFocused={false}
       onChangeText={[Function]}
@@ -527,6 +526,7 @@ exports[`The Search Input component should render as disabled 1`] = `
       selectionColor="#17B582"
       style={
         Object {
+          "color": "#303030",
           "flexGrow": 1,
           "fontFamily": "System",
           "fontSize": 14,
@@ -887,7 +887,6 @@ exports[`The Search Input component should render with a custom cancelButtonText
     <TextInput
       allowFontScaling={true}
       cancelButtonOffset={1000}
-      color="#303030"
       editable={true}
       isFocused={false}
       onChangeText={[Function]}
@@ -899,6 +898,7 @@ exports[`The Search Input component should render with a custom cancelButtonText
       selectionColor="#17B582"
       style={
         Object {
+          "color": "#303030",
           "flexGrow": 1,
           "fontFamily": "System",
           "fontSize": 14,
@@ -1259,7 +1259,6 @@ exports[`The Search Input component should render with a custom placeholder 1`] 
     <TextInput
       allowFontScaling={true}
       cancelButtonOffset={1000}
-      color="#303030"
       editable={true}
       isFocused={false}
       onChangeText={[Function]}
@@ -1271,6 +1270,7 @@ exports[`The Search Input component should render with a custom placeholder 1`] 
       selectionColor="#17B582"
       style={
         Object {
+          "color": "#303030",
           "flexGrow": 1,
           "fontFamily": "System",
           "fontSize": 14,
@@ -1631,7 +1631,6 @@ exports[`The Search Input component should render with a custom screenBackground
     <TextInput
       allowFontScaling={true}
       cancelButtonOffset={1000}
-      color="#303030"
       editable={true}
       isFocused={false}
       onChangeText={[Function]}
@@ -1643,6 +1642,7 @@ exports[`The Search Input component should render with a custom screenBackground
       selectionColor="#17B582"
       style={
         Object {
+          "color": "#303030",
           "flexGrow": 1,
           "fontFamily": "System",
           "fontSize": 14,
