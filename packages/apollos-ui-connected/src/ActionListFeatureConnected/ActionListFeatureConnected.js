@@ -9,6 +9,7 @@ function ActionListFeatureConnected({
   featureId,
   Component,
   isLoading,
+  refetchRef,
   ...props
 }) {
   return (
@@ -17,13 +18,17 @@ function ActionListFeatureConnected({
       variables={{ featureId }}
       fetchPolicy="cache-and-network"
     >
-      {({ data, loading }) => (
-        <Component
-          {...get(data, 'node')}
-          {...props}
-          isLoading={loading || isLoading}
-        />
-      )}
+      {({ data, loading, refetch }) => {
+        if (featureId && refetch && refetchRef)
+          refetchRef({ refetch, id: featureId });
+        return (
+          <Component
+            {...get(data, 'node')}
+            {...props}
+            isLoading={loading || isLoading}
+          />
+        );
+      }}
     </Query>
   );
 }
@@ -36,6 +41,7 @@ ActionListFeatureConnected.propTypes = {
   ]),
   featureId: PropTypes.string.isRequired,
   isLoading: PropTypes.bool,
+  refetchRef: PropTypes.func,
 };
 
 ActionListFeatureConnected.defaultProps = {

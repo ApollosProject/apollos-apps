@@ -56,6 +56,7 @@ describe('The VerticalCardListFeatureConnected component', () => {
       <Providers mocks={[mock]}>
         <VerticalCardListFeatureConnected
           featureId={'VerticalCardListFeature:123'}
+          refetchRef={jest.fn()}
         />
       </Providers>
     );
@@ -67,6 +68,7 @@ describe('The VerticalCardListFeatureConnected component', () => {
       <Providers mocks={[mock]}>
         <VerticalCardListFeatureConnected
           featureId={'VerticalCardListFeature:123'}
+          refetchRef={jest.fn()}
         />
       </Providers>
     );
@@ -78,6 +80,7 @@ describe('The VerticalCardListFeatureConnected component', () => {
       <Providers>
         <VerticalCardListFeatureConnected
           featureId={'VerticalCardListFeature:123'}
+          refetchRef={jest.fn()}
         />
       </Providers>
     );
@@ -88,6 +91,7 @@ describe('The VerticalCardListFeatureConnected component', () => {
       <Providers>
         <VerticalCardListFeatureConnected
           featureId={'VerticalCardListFeature:123'}
+          refetchRef={jest.fn()}
           isFeatured
         />
       </Providers>

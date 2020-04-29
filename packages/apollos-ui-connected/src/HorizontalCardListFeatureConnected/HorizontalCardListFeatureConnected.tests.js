@@ -55,6 +55,7 @@ describe('The HorizontalCardListFeatureConnected component', () => {
       <Providers mocks={[mock]}>
         <HorizontalCardListFeatureConnected
           featureId={'HorizontalCardListFeature:123'}
+          refetchRef={jest.fn()}
         />
       </Providers>
     );
@@ -65,6 +66,7 @@ describe('The HorizontalCardListFeatureConnected component', () => {
       <Providers>
         <HorizontalCardListFeatureConnected
           featureId={'HorizontalCardListFeature:123'}
+          refetchRef={jest.fn()}
         />
       </Providers>
     );

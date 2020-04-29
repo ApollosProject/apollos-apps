@@ -64,6 +64,20 @@ describe('The FeedView component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('renders custom loading data', () => {
+    const tree = renderer.create(
+      <Providers>
+        <FeedView
+          isLoading
+          loadingStateData={[
+            { id: 'customFakeData', content: 'really custom' },
+          ]}
+          content={[]}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('handles a renderItem prop', () => {
     const renderItem = (item) => {
       const theItem = get(item, 'item', {});
