@@ -18,7 +18,7 @@ function ActionListFeatureConnected({
       variables={{ featureId }}
       fetchPolicy="cache-and-network"
     >
-      {({ data, loading, refetch, error }) => {
+      {({ data, loading, refetch }) => {
         if (featureId && refetch && refetchRef)
           refetchRef({ refetch, id: featureId });
         return (

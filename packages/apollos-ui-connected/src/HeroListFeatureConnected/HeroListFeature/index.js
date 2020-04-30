@@ -134,18 +134,23 @@ const HeroListFeature = memo(
                 {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
               </Header>
             ) : null}
-            <TouchableScale onPress={() => onPressHero(hero)}>
-              <HeroItemComponent
-                {...hero}
-                actionIcon={
-                  get(hero, 'actionIcon') ? get(hero, 'actionIcon') : undefined
-                }
-                coverImage={get(hero, 'coverImage.sources', undefined)}
-                __typename={get(hero, 'relatedNode.__typename')}
-                id={get(hero, 'relatedNode.id')}
-                Component={HeroComponent}
-              />
-            </TouchableScale>
+            {isLoading || hero ? (
+              <TouchableScale onPress={() => onPressHero(hero)}>
+                <HeroItemComponent
+                  {...hero}
+                  actionIcon={
+                    get(hero, 'actionIcon')
+                      ? get(hero, 'actionIcon')
+                      : undefined
+                  }
+                  coverImage={get(hero, 'coverImage.sources', undefined)}
+                  __typename={get(hero, 'relatedNode.__typename')}
+                  id={get(hero, 'relatedNode.id')}
+                  Component={HeroComponent}
+                  isLoading={isLoading}
+                />
+              </TouchableScale>
+            ) : null}
           </>
         }
         actions={isLoading && !actions.length ? loadingStateObject : actions}
