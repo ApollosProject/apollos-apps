@@ -1,48 +1,27 @@
 import React, { memo } from 'react';
+import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
-import { ImageSourceType } from '@apollosproject/ui-kit';
-
-import { LiveConsumer } from '../live';
+import { DefaultCard, HighlightCard } from '@apollosproject/ui-kit';
 
 import listItemCardMapper from './listItemCardMapper';
 
-const ListItemCard = memo(
-  ({ Component, contentId, labelText, ...cardProps }) => (
-    <LiveConsumer contentId={contentId}>
-      {(liveStream) => {
-        const isLive = !!(liveStream && liveStream.isLive);
+const ListItemCard = memo(({ Component, ...props }) => {
+  if (Component) return <Component {...props} />;
 
-        return (
-          <Component
-            isLive={isLive}
-            labelText={isLive ? 'Live' : labelText} // while `FeaturedCard` supports `isLive` by default other card types will now show "Live" in the label if that item is Live.
-            {...cardProps}
-          />
-        );
-      }}
-    </LiveConsumer>
-  )
-);
+  switch (get(props, '__typename')) {
+    case 'MediaContentItem':
+    case 'WeekendContentItem':
+    case 'ContentSeriesContentItem':
+    case 'DevotionalContentItem':
+      return <HighlightCard {...props} />;
+    default:
+      return <DefaultCard {...props} />;
+  }
+});
 
 ListItemCard.propTypes = {
   Component: PropTypes.func,
-  contentId: PropTypes.string,
-  // card props
-  actionIcon: PropTypes.string,
-  coverImage: PropTypes.oneOfType([
-    PropTypes.arrayOf(ImageSourceType),
-    ImageSourceType,
-  ]).isRequired,
-  hasAction: PropTypes.bool,
-  isLiked: PropTypes.bool,
-  LabelComponent: PropTypes.element,
-  labelText: PropTypes.string,
-  summary: PropTypes.string,
-  theme: PropTypes.shape({
-    type: PropTypes.string,
-    colors: PropTypes.shape({}),
-  }),
 };
 
 ListItemCard.defaultProps = {
