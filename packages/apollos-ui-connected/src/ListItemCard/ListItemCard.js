@@ -1,6 +1,5 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import { Query } from 'react-apollo';
 import { get } from 'lodash';
 
 import { ErrorCard } from '@apollosproject/ui-kit';
@@ -8,7 +7,6 @@ import { ErrorCard } from '@apollosproject/ui-kit';
 import { LiveConsumer } from '../live';
 
 import listItemCardMapper from './listItemCardMapper';
-import GET_CONTENT_CARD from './getContentCard';
 
 const ListItemCard = memo(
   ({ Component, contentId, isLoading, tile, ...otherProps }) => {
@@ -17,30 +15,26 @@ const ListItemCard = memo(
 
     return (
       <LiveConsumer contentId={contentId}>
-        {(liveStream) => (
-          <Query query={GET_CONTENT_CARD} variables={{ contentId }}>
-            {({ data: { node = {} } = {}, loading, error }) => {
-              if (error) return <ErrorCard error={error} />;
+        {(liveStream) => {
+          if (error) return <ErrorCard error={error} />;
 
-              const coverImage = get(node, 'coverImage.sources', undefined);
-              const hasMedia = !!get(node, 'videos.[0].sources[0]', null);
-              const isLive = !!(liveStream && liveStream.isLive);
-              const labelText = get(node, 'parentChannel.name', '');
+          const coverImage = get(node, 'coverImage.sources', undefined);
+          const hasMedia = !!get(node, 'videos.[0].sources[0]', null);
+          const isLive = !!(liveStream && liveStream.isLive);
+          const labelText = get(node, 'parentChannel.name', '');
 
-              return (
-                <Component
-                  {...node}
-                  hasAction={hasMedia}
-                  isLive={isLive}
-                  labelText={isLive ? 'Live' : labelText}
-                  {...otherProps}
-                  coverImage={coverImage}
-                  isLoading={loading}
-                />
-              );
-            }}
-          </Query>
-        )}
+          return (
+            <Component
+              {...node}
+              hasAction={hasMedia}
+              isLive={isLive}
+              labelText={isLive ? 'Live' : labelText}
+              {...otherProps}
+              coverImage={coverImage}
+              isLoading={loading}
+            />
+          );
+        }}
       </LiveConsumer>
     );
   }
