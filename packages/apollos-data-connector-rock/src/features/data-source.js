@@ -133,6 +133,15 @@ export default class Feature extends RockApolloDataSource {
   }
 
   // eslint-disable-next-line class-methods-use-this
+  createWebviewFeature({ url, id }) {
+    return {
+      url,
+      id: createGlobalId(id, 'WebviewFeature'),
+      __typename: 'WebviewFeature',
+    };
+  }
+
+  // eslint-disable-next-line class-methods-use-this
   createScriptureFeature({ reference, version, id }) {
     return {
       reference,

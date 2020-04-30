@@ -37,6 +37,49 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
   </View>
   <View
     style={
+      Array [
+        Object {
+          "flex": 1,
+          "overflow": "hidden",
+        },
+        undefined,
+      ]
+    }
+  >
+    <RNCWebView
+      cacheEnabled={true}
+      javaScriptEnabled={true}
+      messagingEnabled={false}
+      onContentProcessDidTerminate={[Function]}
+      onHttpError={[Function]}
+      onLoadingError={[Function]}
+      onLoadingFinish={[Function]}
+      onLoadingProgress={[Function]}
+      onLoadingStart={[Function]}
+      onMessage={[Function]}
+      onShouldStartLoadWithRequest={[Function]}
+      source={
+        Object {
+          "uri": "https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWWvHBEQLnV1N",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "overflow": "hidden",
+          },
+          Object {
+            "backgroundColor": "#ffffff",
+          },
+          undefined,
+        ]
+      }
+      useSharedProcessPool={true}
+    />
+  </View>
+  <View
+    style={
       Object {
         "backgroundColor": "#FFFFFF",
         "borderRadius": 16,

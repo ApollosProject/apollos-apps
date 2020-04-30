@@ -50,6 +50,7 @@ const FEATURES_FRAGMENT = gql`
     id
     ...TextFeatureFragment
     ...ScriptureFeatureFragment
+    ...WebviewFeatureFragment
   }
 `;
 
@@ -140,6 +141,12 @@ const HORIZONTAL_CARD_LIST_FEATURE_FRAGMENT = gql`
   }
 `;
 
+const WEBVIEW_FEATURE_FRAGMENT = gql`
+  fragment WebviewFeatureFragment on WebviewFeature {
+    url
+  }
+`;
+
 export {
   TEXT_FEATURE_FRAGMENT,
   SCRIPTURE_FEATURE_FRAGMENT,
@@ -149,4 +156,5 @@ export {
   HORIZONTAL_CARD_LIST_FEATURE_FRAGMENT,
   VERTICAL_CARD_LIST_FEATURE_FRAGMENT,
   FEED_FEATURES_FRAGMENT,
+  WEBVIEW_FEATURE_FRAGMENT,
 };
