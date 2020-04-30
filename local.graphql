@@ -288,6 +288,7 @@ type LiveStream {
 }
 
 type WebviewFeature {
+  order: Int
   url: String
 }
 
