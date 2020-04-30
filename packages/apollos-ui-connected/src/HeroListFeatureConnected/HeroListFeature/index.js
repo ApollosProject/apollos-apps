@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-
+import { get } from 'lodash';
 import {
   ActionList,
   HighlightCard,
@@ -10,6 +10,7 @@ import {
   styled,
   TouchableScale,
 } from '@apollosproject/ui-kit';
+import { LiveConsumer } from '../..';
 
 const Header = styled(({ theme }) => ({
   paddingTop: theme.sizing.baseUnit * 3,
@@ -92,43 +93,68 @@ const loadingStateArray = [
   },
 ];
 
+// TODO: Conrad is making this reusuable.
+const HeroItemComponent = ({ Component, ...item }) => (
+  <LiveConsumer contentId={item.id}>
+    {(liveStream) => {
+      const isLive = !!(liveStream && liveStream.isLive);
+      const labelText = isLive ? 'Live' : item.labelText;
+      return <Component isLive={isLive} {...item} labelText={labelText} />;
+    }}
+  </LiveConsumer>
+);
+
 const HeroListFeature = memo(
   ({
-    actions,
+    actions = [],
+    hero,
     id,
     isLoading,
     HeroComponent,
     loadingStateObject,
-    onPressHero,
+    onPressHero: onPressHeroProp,
     onPressHeroListButton,
     onPressItem,
     subtitle,
     title,
-  }) => (
-    <ActionList
-      isCard={false}
-      isLoading={isLoading}
-      key={id}
-      header={
-        <>
-          {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
-            <Header>
-              {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
-                <Title numberOfLines={1}>{title}</Title>
-              ) : null}
-              {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
-            </Header>
-          ) : null}
-          <TouchableScale onPress={onPressHero}>
-            <HeroComponent />
-          </TouchableScale>
-        </>
-      }
-      actions={isLoading && !actions.length ? loadingStateObject : actions}
-      onPressActionItem={onPressItem}
-      onPressActionListButton={onPressHeroListButton}
-    />
-  )
+  }) => {
+    const onPressHero = onPressHeroProp || onPressItem;
+    return (
+      <ActionList
+        isCard={false}
+        isLoading={isLoading}
+        key={id}
+        header={
+          <>
+            {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
+              <Header>
+                {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
+                  <Title numberOfLines={1}>{title}</Title>
+                ) : null}
+                {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
+              </Header>
+            ) : null}
+            <TouchableScale onPress={() => onPressHero(hero)}>
+              <HeroItemComponent
+                {...hero}
+                actionIcon={
+                  get(hero, 'actionIcon') ? get(hero, 'actionIcon') : undefined
+                }
+                coverImage={get(hero, 'coverImage.sources', undefined)}
+                __typename={get(hero, 'relatedNode.__typename')}
+                id={get(hero, 'relatedNode.id')}
+                Component={HeroComponent}
+              />
+            </TouchableScale>
+          </>
+        }
+        actions={isLoading && !actions.length ? loadingStateObject : actions}
+        onPressActionItem={onPressItem}
+        // Disabled until we support
+        onPressActionListButton={onPressItem || onPressHeroListButton}
+      />
+    );
+  }
 );
 
 HeroListFeature.displayName = 'Features';
@@ -136,6 +162,7 @@ HeroListFeature.displayName = 'Features';
 HeroListFeature.propTypes = {
   // TODO: refactor ActionListCard to safely render without an actions array.
   actions: PropTypes.arrayOf(PropTypes.shape({})).isRequired, // at least for the time being this is required
+  hero: PropTypes.shape({}).isRequired, // at least for the time being this is required
   id: PropTypes.number,
   isLoading: PropTypes.bool,
   HeroComponent: PropTypes.oneOfType([
