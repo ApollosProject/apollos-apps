@@ -104,6 +104,14 @@ const HeroItemComponent = ({ Component, ...item }) => (
   </LiveConsumer>
 );
 
+HeroItemComponent.propTypes = {
+  Component: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.node,
+    PropTypes.object,
+  ]).isRequired,
+};
+
 const HeroListFeature = memo(
   ({
     actions = [],
