@@ -11,7 +11,7 @@ import listItemCardMapper from './listItemCardMapper';
 import GET_CONTENT_CARD from './getContentCard';
 
 const ListItemCard = memo(
-  ({ Component, contentId, isLoading, tile, mapProps, ...otherProps }) => {
+  ({ Component, contentId, isLoading, tile, ...otherProps }) => {
     if (!contentId || isLoading)
       return <Component {...otherProps} isLoading tile={tile} />;
 
@@ -48,7 +48,6 @@ const ListItemCard = memo(
 
 ListItemCard.propTypes = {
   Component: PropTypes.func,
-  mapProps: PropTypes.func,
   contentId: PropTypes.string,
   isLoading: PropTypes.bool,
   tile: PropTypes.bool,
