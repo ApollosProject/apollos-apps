@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import HeroListFeature from './HeroListFeature';
 import GET_HERO_LIST_FEATURE from './getHeroListFeature';
 
-function ActionListFeatureConnected({
+function HeroListFeatureConnected({
   featureId,
   Component,
   isLoading,
@@ -33,7 +33,7 @@ function ActionListFeatureConnected({
   );
 }
 
-ActionListFeatureConnected.propTypes = {
+HeroListFeatureConnected.propTypes = {
   Component: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.func,
@@ -44,8 +44,8 @@ ActionListFeatureConnected.propTypes = {
   refetchRef: PropTypes.func,
 };
 
-ActionListFeatureConnected.defaultProps = {
+HeroListFeatureConnected.defaultProps = {
   Component: HeroListFeature,
 };
 
-export default ActionListFeatureConnected;
+export default HeroListFeatureConnected;
