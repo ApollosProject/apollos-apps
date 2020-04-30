@@ -16,7 +16,7 @@ const ListItemCard = memo(
         return (
           <Component
             isLive={isLive}
-            labelText={isLive ? 'Live' : labelText}
+            labelText={isLive ? 'Live' : labelText} // while `FeaturedCard` supports `isLive` by default other card types will now show "Live" in the label if that item is Live.
             {...cardProps}
           />
         );
