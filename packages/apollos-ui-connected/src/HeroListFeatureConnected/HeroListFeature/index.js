@@ -150,8 +150,7 @@ const HeroListFeature = memo(
         }
         actions={isLoading && !actions.length ? loadingStateObject : actions}
         onPressActionItem={onPressItem}
-        // Disabled until we support
-        onPressActionListButton={onPressItem || onPressHeroListButton}
+        onPressActionListButton={onPressHeroListButton}
       />
     );
   }

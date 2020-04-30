@@ -46,7 +46,6 @@ class ActionList extends PureComponent {
 
   static defaultProps = {
     isCard: true,
-    onPressActionListButton: () => {},
   };
 
   RenderAsCard = ({ children }) =>
