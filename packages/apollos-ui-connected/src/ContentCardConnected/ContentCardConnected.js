@@ -5,6 +5,7 @@ import { get } from 'lodash';
 
 import { ErrorCard } from '@apollosproject/ui-kit';
 
+import { LiveConsumer } from '../live';
 import ListItemCard from '../ListItemCard';
 
 import GET_CONTENT_CARD from './getContentCard';
@@ -15,27 +16,34 @@ const ContentCardConnected = memo(
       return <Component {...otherProps} isLoading tile={tile} />;
 
     return (
-      <Query query={GET_CONTENT_CARD} variables={{ contentId }}>
-        {({ data: { node = {} } = {}, loading, error }) => {
-          if (error) return <ErrorCard error={error} />;
+      <LiveConsumer contentId={contentId}>
+        {(liveStream) => (
+          <Query query={GET_CONTENT_CARD} variables={{ contentId }}>
+            {({ data: { node = {} } = {}, loading, error }) => {
+              if (error) return <ErrorCard error={error} />;
 
-          const coverImage = get(node, 'coverImage.sources', undefined);
-          const hasMedia = !!get(node, 'videos.[0].sources[0]', null);
-          const labelText = get(node, 'parentChannel.name', '');
+              const coverImage = get(node, 'coverImage.sources', undefined);
+              const hasMedia = !!get(node, 'videos.[0].sources[0]', null);
+              const isLive = !!(liveStream && liveStream.isLive);
+              const labelText = get(node, 'parentChannel.name', '');
 
-          return (
+              return (
+                <Component
+                  {...node}
+                  hasAction={hasMedia}
+                  isLive={isLive}
+                  labelText={isLive ? 'Live' : labelText}
+                  {...otherProps}
+                  coverImage={coverImage}
+                  isLoading={loading}
+                />
+              );
+            }}
+          </Query>
+        )}
+      </LiveConsumer>
             <ListItemCard
               Component={Component}
-              {...node}
-              hasAction={hasMedia}
-              labelText={labelText}
-              {...otherProps}
-              coverImage={coverImage}
-              isLoading={loading}
-            />
-          );
-        }}
-      </Query>
     );
   }
 );
