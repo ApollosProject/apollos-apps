@@ -42,8 +42,6 @@ const ContentCardConnected = memo(
           </Query>
         )}
       </LiveConsumer>
-            <ListItemCard
-              Component={Component}
     );
   }
 );
@@ -54,6 +52,10 @@ ContentCardConnected.propTypes = {
   contentId: PropTypes.string,
   isLoading: PropTypes.bool,
   tile: PropTypes.bool,
+};
+
+ContentCardConnected.defaultProps = {
+  Component: ListItemCard,
 };
 
 ContentCardConnected.displayName = 'ContentCardConnected';
