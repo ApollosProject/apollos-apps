@@ -6,8 +6,8 @@ import { get } from 'lodash';
 import { ErrorCard } from '@apollosproject/ui-kit';
 
 import { LiveConsumer } from '../live';
+import ListItemCard from '../ListItemCard';
 
-import contentCardComponentMapper from './contentCardComponentMapper';
 import GET_CONTENT_CARD from './getContentCard';
 
 const ContentCardConnected = memo(
@@ -42,6 +42,8 @@ const ContentCardConnected = memo(
           </Query>
         )}
       </LiveConsumer>
+            <ListItemCard
+              Component={Component}
     );
   }
 );
@@ -52,10 +54,6 @@ ContentCardConnected.propTypes = {
   contentId: PropTypes.string,
   isLoading: PropTypes.bool,
   tile: PropTypes.bool,
-};
-
-ContentCardConnected.defaultProps = {
-  Component: contentCardComponentMapper,
 };
 
 ContentCardConnected.displayName = 'ContentCardConnected';
