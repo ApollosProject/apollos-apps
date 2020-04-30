@@ -1,50 +1,48 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import { get } from 'lodash';
 
-import { ErrorCard } from '@apollosproject/ui-kit';
+import { ImageSourceType } from '@apollosproject/ui-kit';
 
 import { LiveConsumer } from '../live';
 
 import listItemCardMapper from './listItemCardMapper';
 
 const ListItemCard = memo(
-  ({ Component, contentId, isLoading, tile, ...otherProps }) => {
-    if (!contentId || isLoading)
-      return <Component {...otherProps} isLoading tile={tile} />;
+  ({ Component, contentId, labelText, ...cardProps }) => (
+    <LiveConsumer contentId={contentId}>
+      {(liveStream) => {
+        const isLive = !!(liveStream && liveStream.isLive);
 
-    return (
-      <LiveConsumer contentId={contentId}>
-        {(liveStream) => {
-          if (error) return <ErrorCard error={error} />;
-
-          const coverImage = get(node, 'coverImage.sources', undefined);
-          const hasMedia = !!get(node, 'videos.[0].sources[0]', null);
-          const isLive = !!(liveStream && liveStream.isLive);
-          const labelText = get(node, 'parentChannel.name', '');
-
-          return (
-            <Component
-              {...node}
-              hasAction={hasMedia}
-              isLive={isLive}
-              labelText={isLive ? 'Live' : labelText}
-              {...otherProps}
-              coverImage={coverImage}
-              isLoading={loading}
-            />
-          );
-        }}
-      </LiveConsumer>
-    );
-  }
+        return (
+          <Component
+            isLive={isLive}
+            labelText={isLive ? 'Live' : labelText}
+            {...cardProps}
+          />
+        );
+      }}
+    </LiveConsumer>
+  )
 );
 
 ListItemCard.propTypes = {
   Component: PropTypes.func,
   contentId: PropTypes.string,
-  isLoading: PropTypes.bool,
-  tile: PropTypes.bool,
+  // card props
+  actionIcon: PropTypes.string,
+  coverImage: PropTypes.oneOfType([
+    PropTypes.arrayOf(ImageSourceType),
+    ImageSourceType,
+  ]).isRequired,
+  hasAction: PropTypes.bool,
+  isLiked: PropTypes.bool,
+  LabelComponent: PropTypes.element,
+  labelText: PropTypes.string,
+  summary: PropTypes.string,
+  theme: PropTypes.shape({
+    type: PropTypes.string,
+    colors: PropTypes.shape({}),
+  }),
 };
 
 ListItemCard.defaultProps = {
