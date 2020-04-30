@@ -1,10 +1,61 @@
-import { parseGlobalId } from '@apollosproject/server-core';
+import { parseGlobalId, createGlobalId } from '@apollosproject/server-core';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import ApollosConfig from '@apollosproject/config';
-import { flatten } from 'lodash';
+import { flatten, get } from 'lodash';
 
 export default class Interactions extends RockApolloDataSource {
   resource = 'Interactions';
+
+  ADDITIONAL_INTERACTIONS_MAP = {
+    ContentItem: {
+      COMPLETE: this.updateSeriesStarted.bind(this),
+    },
+  };
+
+  async updateSeriesStarted({ id, __type }) {
+    const { ContentItem } = this.context.dataSources;
+    const seriesParents = await (await ContentItem.getCursorByChildContentItemId(
+      id
+    )).get();
+    await Promise.all(
+      seriesParents.map(async (seriesParent) => {
+        const percentComplete = await ContentItem.getPercentComplete(
+          seriesParent
+        );
+        console.log({ percentComplete });
+        if (percentComplete === 0) {
+          await this.createNodeInteraction({
+            nodeId: createGlobalId(id, __type),
+            action: 'SERIES_START',
+            additional: false,
+          });
+        } else if (percentComplete === 100) {
+          await this.createNodeInteraction({
+            nodeId: createGlobalId(id, __type),
+            action: 'SERIES_CAUGHT_UP',
+            additional: false,
+          });
+        }
+      })
+    );
+  }
+
+  async createAdditionalInteractions({ id, __type, action, schema }) {
+    const normalizedTypeNames = this.context.models.Node.getPossibleDataModels({
+      schema,
+      __type,
+    });
+    normalizedTypeNames.forEach((normalizedType) => {
+      const possibleFunction = get(
+        this.ADDITIONAL_INTERACTIONS_MAP,
+        `${normalizedType}.${action}`
+      );
+      console.log(normalizedType, action, possibleFunction);
+      if (possibleFunction) {
+        possibleFunction({ id, __type, action });
+      }
+    });
+  }
 
   async createContentItemInteraction({ itemId, operationName, itemTitle }) {
     const {
@@ -75,6 +126,19 @@ export default class Interactions extends RockApolloDataSource {
     );
   }
 
+  async getInteractionsForCurrentUserAndActions({ actions = [] }) {
+    let currentUser;
+    try {
+      currentUser = await this.context.dataSources.Auth.getCurrentPerson();
+    } catch (e) {
+      return [];
+    }
+    return this.request()
+      .filterOneOf(actions.map((a) => `Operation eq '${a}'`))
+      .andFilter(`PersonAliasId eq ${currentUser.primaryAliasId}`)
+      .get();
+  }
+
   getNodeInteractionsForCurrentUser({ nodeId, actions = [] }) {
     return this.getInteractionsForCurrentUserAndNodes({
       nodeIds: [nodeId],
@@ -82,7 +146,7 @@ export default class Interactions extends RockApolloDataSource {
     });
   }
 
-  async createNodeInteraction({ nodeId, action }) {
+  async createNodeInteraction({ nodeId, action, schema, additional = true }) {
     const {
       dataSources: { RockConstants, Auth },
     } = this.context;
@@ -113,6 +177,10 @@ export default class Interactions extends RockApolloDataSource {
       InteractionSummary: `${action}`,
       ForeignKey: nodeId,
     });
+
+    if (additional) {
+      this.createAdditionalInteractions({ id, __type, action, schema });
+    }
 
     return {
       success: true,

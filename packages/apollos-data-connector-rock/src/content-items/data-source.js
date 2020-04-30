@@ -9,7 +9,7 @@ import RockApolloDataSource, {
   parseKeyValueAttribute,
 } from '@apollosproject/rock-apollo-data-source';
 import ApollosConfig from '@apollosproject/config';
-import { createGlobalId } from '@apollosproject/server-core';
+import { createGlobalId, parseGlobalId } from '@apollosproject/server-core';
 
 import { createImageUrlFromGuid } from '../utils';
 
@@ -514,6 +514,30 @@ export default class ContentItem extends RockApolloDataSource {
     }
     // otherwise, return the item immediately following (before) the item you have already read
     return childItemsWithApollosIds[firstInteractedIndex - 1];
+  }
+
+  async getSeriesWithProgress() {
+    const { Auth, Interactions } = this.context.dataSources;
+
+    // Safely exit if we don't have a current user.
+    try {
+      await Auth.getCurrentPerson();
+    } catch (e) {
+      return null;
+    }
+
+    const interactions = await Interactions.getInteractionsForCurrentUserAndActions(
+      {
+        actions: ['COMPLETE'],
+      }
+    );
+
+    const rockIds = interactions.map(({ foreignKey }) => {
+      const { id, __typename } = parseGlobalId(foreignKey);
+      return id;
+    });
+
+    return [];
   }
 
   async getPercentComplete({ id }) {
