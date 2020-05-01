@@ -46,7 +46,6 @@ class ActionList extends PureComponent {
 
   static defaultProps = {
     isCard: true,
-    onPressActionListButton: () => {},
   };
 
   RenderAsCard = ({ children }) =>
@@ -79,10 +78,11 @@ class ActionList extends PureComponent {
               imageSource={get(item, 'image.sources[0]', '')}
               {...(onPressActionItem // fixes bug where items appear touchable even when there is no handler
                 ? {
-                    onPress: onPressActionItem({
-                      action: item.action,
-                      relatedNode: item.relatedNode,
-                    }),
+                    onPress: () =>
+                      onPressActionItem({
+                        action: item.action,
+                        relatedNode: item.relatedNode,
+                      }),
                   }
                 : {})}
             />

@@ -27,6 +27,10 @@ const FEED_FEATURES_FRAGMENT = gql`
       title
       subtitle
     }
+    ... on HeroListFeature {
+      title
+      subtitle
+    }
   }
 `;
 
@@ -79,6 +83,44 @@ const ACTION_LIST_FEATURE_FRAGMENT = gql`
       subtitle
       action
       image {
+        sources {
+          uri
+        }
+      }
+      relatedNode {
+        id
+      }
+    }
+  }
+`;
+
+const HERO_LIST_FEATURE_FRAGMENT = gql`
+  fragment HeroListFeatureFragment on HeroListFeature {
+    id
+    title
+    subtitle
+    actions {
+      id
+      title
+      subtitle
+      action
+      image {
+        sources {
+          uri
+        }
+      }
+      relatedNode {
+        id
+      }
+    }
+    heroCard {
+      action
+      title
+      hasAction
+      actionIcon
+      labelText
+      summary
+      coverImage {
         sources {
           uri
         }
@@ -146,6 +188,7 @@ export {
   CARD_FEATURES_FRAGMENT,
   FEATURES_FRAGMENT,
   ACTION_LIST_FEATURE_FRAGMENT,
+  HERO_LIST_FEATURE_FRAGMENT,
   HORIZONTAL_CARD_LIST_FEATURE_FRAGMENT,
   VERTICAL_CARD_LIST_FEATURE_FRAGMENT,
   FEED_FEATURES_FRAGMENT,

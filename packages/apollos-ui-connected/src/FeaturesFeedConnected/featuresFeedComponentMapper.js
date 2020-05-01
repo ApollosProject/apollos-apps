@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 import ActionListFeatureConnected from '../ActionListFeatureConnected';
 import HorizontalCardListFeatureConnected from '../HorizontalCardListFeatureConnected';
 import VerticalCardListFeatureConnected from '../VerticalCardListFeatureConnected';
+import HeroListFeatureConnected from '../HeroListFeatureConnected';
 
 const MAPPINGS = {
   ActionListFeature: ActionListFeatureConnected,
+  HeroListFeature: HeroListFeatureConnected,
   HorizontalCardListFeature: HorizontalCardListFeatureConnected,
   VerticalCardListFeature: VerticalCardListFeatureConnected,
 };

@@ -66,6 +66,55 @@ export default class Feature extends RockApolloDataSource {
     };
   }
 
+  async createHeroListFeature({
+    algorithms = [],
+    heroAlgorithms = [],
+    title,
+    subtitle,
+  }) {
+    // Generate a list of actions.
+    let actions;
+    let heroCard;
+    // If we have a strategy for selecting the hero card.
+    if (heroAlgorithms && heroAlgorithms.length) {
+      // The actions come from the action algorithms
+      actions = () => this.runAlgorithms({ algorithms });
+      // and the hero comes from the hero algorithms
+      heroCard = async () => {
+        const cards = await this.runAlgorithms({ algorithms: heroAlgorithms });
+        return cards.length ? cards[0] : null;
+      };
+      // Otherwise, if we don't have a strategy
+    } else {
+      // Get all the cards (sorry, no lazy loading here)
+      const allActions = await this.runAlgorithms({ algorithms });
+      // The actions are all actions after the first
+      actions = allActions.slice(1);
+      // And the hero is the first action.
+      heroCard = allActions.length ? allActions[0] : null;
+    }
+
+    return {
+      // The Feature ID is based on all of the action ids, added together.
+      // This is naive, and could be improved.
+      id: this.createFeatureId({
+        type: 'HeroListFeature',
+        args: {
+          algorithms,
+          heroAlgorithms,
+          title,
+          subtitle,
+        },
+      }),
+      actions,
+      heroCard,
+      title,
+      subtitle,
+      // Typanme is required so GQL knows specifically what Feature is being created
+      __typename: 'HeroListFeature',
+    };
+  }
+
   async createVerticalCardListFeature({
     algorithms = [],
     title,
@@ -310,6 +359,8 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
             return this.createVerticalCardListFeature(featureConfig);
           case 'HorizontalCardList':
             return this.createHorizontalCardListFeature(featureConfig);
+          case 'HeroListFeature':
+            return this.createHeroListFeature(featureConfig);
           case 'ActionList':
           default:
             // Action list was the default in 1.3.0 and prior.

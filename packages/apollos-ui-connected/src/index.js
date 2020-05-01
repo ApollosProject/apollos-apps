@@ -20,6 +20,10 @@ export FeaturesFeedConnected, {
   featuresFeedComponentMapper,
   GET_FEED_FEATURES,
 } from './FeaturesFeedConnected';
+export HeroListFeatureConnected, {
+  HeroListFeature,
+  GET_HERO_LIST_FEATURE,
+} from './HeroListFeatureConnected';
 export HorizontalCardListFeatureConnected, {
   HorizontalCardListFeature,
   GET_HORIZONTAL_CARD_LIST_FEATURE,
