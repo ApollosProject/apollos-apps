@@ -523,7 +523,7 @@ export default class ContentItem extends RockApolloDataSource {
     try {
       await Auth.getCurrentPerson();
     } catch (e) {
-      return null;
+      return this.request().empty();
     }
 
     const interactions = await Interactions.getInteractionsForCurrentUser({
