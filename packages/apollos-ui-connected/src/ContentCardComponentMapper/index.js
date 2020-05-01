@@ -1,20 +1,24 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
+import { withTheme } from '@apollosproject/ui-kit';
+
 import cardMapper from './cardMapper';
 
-const ContentCardComponentMapper = memo(({ Component, ...props }) => (
-  <Component {...props} />
-));
+const contentCardComponentMapper = memo(
+  withTheme({}, 'contentCardComponentMapper')(({ Component, ...props }) => (
+    <Component {...props} />
+  ))
+);
 
-ContentCardComponentMapper.propTypes = {
+contentCardComponentMapper.propTypes = {
   Component: PropTypes.func,
 };
 
-ContentCardComponentMapper.defaultProps = {
+contentCardComponentMapper.defaultProps = {
   Component: cardMapper,
 };
 
-ContentCardComponentMapper.displayName = 'ListItemCard';
+contentCardComponentMapper.displayName = 'ListItemCard';
 
-export default ContentCardComponentMapper;
+export default contentCardComponentMapper;

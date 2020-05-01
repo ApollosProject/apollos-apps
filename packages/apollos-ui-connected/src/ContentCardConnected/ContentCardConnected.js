@@ -6,7 +6,7 @@ import { get } from 'lodash';
 import { ErrorCard } from '@apollosproject/ui-kit';
 
 import { LiveConsumer } from '../live';
-import ListItemCard from '../ListItemCard';
+import contentCardComponentMapper from '../contentCardComponentMapper';
 
 import GET_CONTENT_CARD from './getContentCard';
 
@@ -55,7 +55,7 @@ ContentCardConnected.propTypes = {
 };
 
 ContentCardConnected.defaultProps = {
-  Component: ListItemCard,
+  Component: contentCardComponentMapper,
 };
 
 ContentCardConnected.displayName = 'ContentCardConnected';
