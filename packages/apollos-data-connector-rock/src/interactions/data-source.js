@@ -18,7 +18,7 @@ export default class Interactions extends RockApolloDataSource {
     const seriesParents = await (await ContentItem.getCursorByChildContentItemId(
       id
     )).get();
-    await Promise.all(
+    return Promise.all(
       seriesParents.map(async (seriesParent) => {
         // Check to see if we have started the series before
         const parentType = ContentItem.resolveType(seriesParent);
@@ -49,17 +49,19 @@ export default class Interactions extends RockApolloDataSource {
       __type,
     });
     // For each of this types
-    normalizedTypeNames.forEach((normalizedType) => {
-      // do we have a function to call?
-      const possibleFunction = get(
-        this.ADDITIONAL_INTERACTIONS_MAP,
-        `${normalizedType}.${action}`
-      );
-      // if so, call it.
-      if (possibleFunction) {
-        possibleFunction({ id, __type, action });
-      }
-    });
+    return Promise.all(
+      normalizedTypeNames.map(async (normalizedType) => {
+        // do we have a function to call?
+        const possibleFunction = get(
+          this.ADDITIONAL_INTERACTIONS_MAP,
+          `${normalizedType}.${action}`
+        );
+        // if so, call it.
+        if (possibleFunction) {
+          return possibleFunction({ id, __type, action });
+        }
+      })
+    );
   }
 
   async createContentItemInteraction({ itemId, operationName, itemTitle }) {
