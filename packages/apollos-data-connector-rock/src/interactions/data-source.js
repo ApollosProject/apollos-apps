@@ -12,8 +12,9 @@ export default class Interactions extends RockApolloDataSource {
     },
   };
 
-  async updateSeriesStarted({ id, __type }) {
+  async updateSeriesStarted({ id }) {
     const { ContentItem } = this.context.dataSources;
+    // Get all the parents
     const seriesParents = await (await ContentItem.getCursorByChildContentItemId(
       id
     )).get();
@@ -33,7 +34,7 @@ export default class Interactions extends RockApolloDataSource {
           await this.createNodeInteraction({
             nodeId,
             action: 'SERIES_START',
-            additional: false,
+            additional: false, // we pass this prop to avoid recursive interaction creation
           });
         }
       })
@@ -41,15 +42,20 @@ export default class Interactions extends RockApolloDataSource {
   }
 
   async createAdditionalInteractions({ id, __type, action }) {
+    // Get all the typenames for an entity.
+    // This will likely be something like, [UniversalContentItem, ContentItem]
     const normalizedTypeNames = this.context.models.Node.getPossibleDataModels({
       schema: this.context.schema,
       __type,
     });
+    // For each of this types
     normalizedTypeNames.forEach((normalizedType) => {
+      // do we have a function to call?
       const possibleFunction = get(
         this.ADDITIONAL_INTERACTIONS_MAP,
         `${normalizedType}.${action}`
       );
+      // if so, call it.
       if (possibleFunction) {
         possibleFunction({ id, __type, action });
       }
@@ -125,7 +131,14 @@ export default class Interactions extends RockApolloDataSource {
     );
   }
 
-  async getInteractionsForCurrentUserAndActions({ actions = [] }) {
+  getNodeInteractionsForCurrentUser({ nodeId, actions = [] }) {
+    return this.getInteractionsForCurrentUserAndNodes({
+      nodeIds: [nodeId],
+      actions,
+    });
+  }
+
+  async getInteractionsForCurrentUser({ actions = [] }) {
     let currentUser;
     try {
       currentUser = await this.context.dataSources.Auth.getCurrentPerson();
@@ -136,13 +149,6 @@ export default class Interactions extends RockApolloDataSource {
       .filterOneOf(actions.map((a) => `Operation eq '${a}'`))
       .andFilter(`PersonAliasId eq ${currentUser.primaryAliasId}`)
       .get();
-  }
-
-  getNodeInteractionsForCurrentUser({ nodeId, actions = [] }) {
-    return this.getInteractionsForCurrentUserAndNodes({
-      nodeIds: [nodeId],
-      actions,
-    });
   }
 
   async createNodeInteraction({ nodeId, action, additional = true }) {

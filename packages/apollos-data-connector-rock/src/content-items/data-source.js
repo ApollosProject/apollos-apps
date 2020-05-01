@@ -526,11 +526,9 @@ export default class ContentItem extends RockApolloDataSource {
       return null;
     }
 
-    const interactions = await Interactions.getInteractionsForCurrentUserAndActions(
-      {
-        actions: ['SERIES_START'],
-      }
-    );
+    const interactions = await Interactions.getInteractionsForCurrentUser({
+      actions: ['SERIES_START'],
+    });
 
     const ids = interactions.map(({ foreignKey }) => {
       const { id } = parseGlobalId(foreignKey);
@@ -538,7 +536,8 @@ export default class ContentItem extends RockApolloDataSource {
     });
 
     // We need to make sure we don't include the campaign channels.
-
+    // We could also consider doing this using a whitelist.
+    // This also may be part of a broader conversation about how we identify the true parent of a content item
     const blacklistedIds = await this.byContentChannelIds(
       ROCK_MAPPINGS.CAMPAIGN_CHANNEL_IDS
     ).get();
