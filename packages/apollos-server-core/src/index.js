@@ -65,7 +65,7 @@ export const createDataSources = (data) => {
   };
 };
 
-export const createContext = (data) => ({ req = {} } = {}) => {
+export const createContext = (data, schema) => ({ req = {} } = {}) => {
   const initiatedModels = {};
 
   // For all non-datasource connectors. Right now only `Node`.
@@ -181,7 +181,7 @@ export const createApolloServerConfig = (data) => {
   const dataSources = createDataSources(data);
   const schema = createSchema(data);
   const resolvers = createResolvers(data);
-  const context = createContext(data);
+  const context = createContext(data, schema);
   const applyServerMiddleware = createMiddleware(data);
   const setupJobs = createJobs(data);
   return {

@@ -1,4 +1,4 @@
-import { get } from 'lodash';
+import { get, uniq } from 'lodash';
 import moment from 'moment-timezone';
 import natural from 'natural';
 import sanitizeHtmlNode from 'sanitize-html';
@@ -516,7 +516,7 @@ export default class ContentItem extends RockApolloDataSource {
     return childItemsWithApollosIds[firstInteractedIndex - 1];
   }
 
-  async getSeriesWithProgress() {
+  async getSeriesWithUserProgress() {
     const { Auth, Interactions } = this.context.dataSources;
 
     // Safely exit if we don't have a current user.
@@ -528,20 +528,29 @@ export default class ContentItem extends RockApolloDataSource {
 
     const interactions = await Interactions.getInteractionsForCurrentUserAndActions(
       {
-        actions: ['COMPLETE'],
+        actions: ['SERIES_START'],
       }
     );
 
-    const rockIds = interactions.map(({ foreignKey }) => {
-      const { id, __typename } = parseGlobalId(foreignKey);
+    const ids = interactions.map(({ foreignKey }) => {
+      const { id } = parseGlobalId(foreignKey);
       return id;
     });
 
-    return [];
+    // We need to make sure we don't include the campaign channels.
+
+    const blacklistedIds = await this.byContentChannelIds(
+      ROCK_MAPPINGS.CAMPAIGN_CHANNEL_IDS
+    ).get();
+
+    const finalIds = uniq(ids).filter((id) => !blacklistedIds.includes(id));
+
+    return this.getFromIds(finalIds);
   }
 
   async getPercentComplete({ id }) {
     const { Auth, Interactions } = this.context.dataSources;
+    // This can, and should, be cached in redis or some other system at some point
 
     // Safely exit if we don't have a current user.
     try {

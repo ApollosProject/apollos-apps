@@ -297,10 +297,13 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
     }));
   }
 
-  async seriesInProgressAlgorithm({ limit = 3, contentChannelIds = [] } = {}) {
+  async seriesInProgressAlgorithm({ limit = 3 } = {}) {
     const { ContentItem } = this.context.dataSources;
 
-    const items = await ContentItem.getSeriesWithProgress();
+    const items = await (await ContentItem.getSeriesWithUserProgress())
+      .expand('ContentChannel')
+      .top(limit)
+      .get();
 
     return items.map((item, i) => ({
       id: createGlobalId(`${item.id}${i}`, 'ActionListAction'),

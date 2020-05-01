@@ -1,7 +1,7 @@
 export default {
   Mutation: {
-    interactWithNode: (root, args, { dataSources }, { schema }) =>
-      dataSources.Interactions.createNodeInteraction({ ...args, schema }),
+    interactWithNode: (root, args, { dataSources }) =>
+      dataSources.Interactions.createNodeInteraction(args),
   },
   InteractionResult: {
     node: ({ nodeId }, args, { dataSources, models }, info) =>

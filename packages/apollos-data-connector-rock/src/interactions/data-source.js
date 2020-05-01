@@ -19,20 +19,20 @@ export default class Interactions extends RockApolloDataSource {
     )).get();
     await Promise.all(
       seriesParents.map(async (seriesParent) => {
-        const percentComplete = await ContentItem.getPercentComplete(
-          seriesParent
+        // Check to see if we have started the series before
+        const parentType = ContentItem.resolveType(seriesParent);
+        const nodeId = createGlobalId(seriesParent.id, parentType);
+        const otherInteractions = await this.getInteractionsForCurrentUserAndNodes(
+          {
+            nodeIds: [nodeId],
+            actions: ['SERIES_START'],
+          }
         );
-        console.log({ percentComplete });
-        if (percentComplete === 0) {
+        // If we haven't, mark it as started
+        if (!otherInteractions.length) {
           await this.createNodeInteraction({
-            nodeId: createGlobalId(id, __type),
+            nodeId,
             action: 'SERIES_START',
-            additional: false,
-          });
-        } else if (percentComplete === 100) {
-          await this.createNodeInteraction({
-            nodeId: createGlobalId(id, __type),
-            action: 'SERIES_CAUGHT_UP',
             additional: false,
           });
         }
@@ -40,9 +40,9 @@ export default class Interactions extends RockApolloDataSource {
     );
   }
 
-  async createAdditionalInteractions({ id, __type, action, schema }) {
+  async createAdditionalInteractions({ id, __type, action }) {
     const normalizedTypeNames = this.context.models.Node.getPossibleDataModels({
-      schema,
+      schema: this.context.schema,
       __type,
     });
     normalizedTypeNames.forEach((normalizedType) => {
@@ -50,7 +50,6 @@ export default class Interactions extends RockApolloDataSource {
         this.ADDITIONAL_INTERACTIONS_MAP,
         `${normalizedType}.${action}`
       );
-      console.log(normalizedType, action, possibleFunction);
       if (possibleFunction) {
         possibleFunction({ id, __type, action });
       }
@@ -146,7 +145,7 @@ export default class Interactions extends RockApolloDataSource {
     });
   }
 
-  async createNodeInteraction({ nodeId, action, schema, additional = true }) {
+  async createNodeInteraction({ nodeId, action, additional = true }) {
     const {
       dataSources: { RockConstants, Auth },
     } = this.context;
@@ -179,7 +178,7 @@ export default class Interactions extends RockApolloDataSource {
     });
 
     if (additional) {
-      this.createAdditionalInteractions({ id, __type, action, schema });
+      this.createAdditionalInteractions({ id, __type, action });
     }
 
     return {
