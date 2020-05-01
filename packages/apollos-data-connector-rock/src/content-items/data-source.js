@@ -530,19 +530,32 @@ export default class ContentItem extends RockApolloDataSource {
       actions: ['SERIES_START'],
     });
 
-    const ids = interactions.map(({ foreignKey }) => {
-      const { id } = parseGlobalId(foreignKey);
-      return id;
-    });
+    const ids = uniq(
+      interactions.map(({ foreignKey }) => {
+        const { id } = parseGlobalId(foreignKey);
+        return id;
+      })
+    );
 
     // We need to make sure we don't include the campaign channels.
     // We could also consider doing this using a whitelist.
     // This also may be part of a broader conversation about how we identify the true parent of a content item
-    const blacklistedIds = await this.byContentChannelIds(
+    const blacklistedIds = (await this.byContentChannelIds(
       ROCK_MAPPINGS.CAMPAIGN_CHANNEL_IDS
-    ).get();
+    ).get()).map(({ id }) => `${id}`);
 
-    const finalIds = uniq(ids).filter((id) => !blacklistedIds.includes(id));
+    const completedIds = (await Promise.all(
+      ids.map(async (id) => ({
+        id,
+        percent: await this.getPercentComplete({ id }),
+      }))
+    ))
+      .filter(({ percent }) => percent === 100)
+      .map(({ id }) => id);
+
+    const finalIds = ids.filter(
+      (id) => ![...blacklistedIds, ...completedIds].includes(id)
+    );
 
     return this.getFromIds(finalIds);
   }
