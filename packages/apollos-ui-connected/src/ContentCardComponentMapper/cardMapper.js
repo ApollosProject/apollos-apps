@@ -3,7 +3,7 @@ import { get } from 'lodash';
 
 import { DefaultCard, HighlightCard } from '@apollosproject/ui-kit';
 
-const listItemCardMapper = (props) => {
+const cardMapper = (props) => {
   // map typename to the the card we want to render.
   switch (get(props, '__typename')) {
     case 'MediaContentItem':
@@ -16,4 +16,4 @@ const listItemCardMapper = (props) => {
   }
 };
 
-export default listItemCardMapper;
+export default cardMapper;

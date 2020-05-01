@@ -1,5 +1,20 @@
-import ListItemCard from './ListItemCard';
+import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 
-export listItemCardMapper from './listItemCardMapper';
+import cardMapper from './cardMapper';
 
-export default ListItemCard;
+const ContentCardComponentMapper = memo(({ Component, ...props }) => (
+  <Component {...props} />
+));
+
+ContentCardComponentMapper.propTypes = {
+  Component: PropTypes.func,
+};
+
+ContentCardComponentMapper.defaultProps = {
+  Component: cardMapper,
+};
+
+ContentCardComponentMapper.displayName = 'ListItemCard';
+
+export default ContentCardComponentMapper;
