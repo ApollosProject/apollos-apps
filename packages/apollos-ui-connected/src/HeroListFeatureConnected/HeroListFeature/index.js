@@ -115,7 +115,7 @@ HeroItemComponent.propTypes = {
 const HeroListFeature = memo(
   ({
     actions = [],
-    hero,
+    heroCard,
     id,
     isLoading,
     HeroComponent,
@@ -142,18 +142,18 @@ const HeroListFeature = memo(
                 {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
               </Header>
             ) : null}
-            {isLoading || hero ? (
-              <TouchableScale onPress={() => onPressHero(hero)}>
+            {isLoading || heroCard ? (
+              <TouchableScale onPress={() => onPressHero(heroCard)}>
                 <HeroItemComponent
-                  {...hero}
+                  {...heroCard}
                   actionIcon={
-                    get(hero, 'actionIcon')
-                      ? get(hero, 'actionIcon')
+                    get(heroCard, 'actionIcon')
+                      ? get(heroCard, 'actionIcon')
                       : undefined
                   }
-                  coverImage={get(hero, 'coverImage.sources', undefined)}
-                  __typename={get(hero, 'relatedNode.__typename')}
-                  id={get(hero, 'relatedNode.id')}
+                  coverImage={get(heroCard, 'coverImage.sources', undefined)}
+                  __typename={get(heroCard, 'relatedNode.__typename')}
+                  id={get(heroCard, 'relatedNode.id')}
                   Component={HeroComponent}
                   isLoading={isLoading}
                 />
@@ -174,7 +174,7 @@ HeroListFeature.displayName = 'Features';
 HeroListFeature.propTypes = {
   // TODO: refactor ActionListCard to safely render without an actions array.
   actions: PropTypes.arrayOf(PropTypes.shape({})).isRequired, // at least for the time being this is required
-  hero: PropTypes.shape({}).isRequired, // at least for the time being this is required
+  heroCard: PropTypes.shape({}).isRequired, // at least for the time being this is required
   id: PropTypes.number,
   isLoading: PropTypes.bool,
   HeroComponent: PropTypes.oneOfType([

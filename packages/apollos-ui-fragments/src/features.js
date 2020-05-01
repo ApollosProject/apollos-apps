@@ -113,7 +113,7 @@ const HERO_LIST_FEATURE_FRAGMENT = gql`
         id
       }
     }
-    hero {
+    heroCard {
       action
       title
       hasAction
