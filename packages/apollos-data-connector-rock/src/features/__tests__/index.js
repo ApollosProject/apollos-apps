@@ -12,8 +12,8 @@ const expandResult = async (result) => {
   if (result.actions && typeof result.actions === 'function') {
     expandedResult = { ...expandedResult, actions: await result.actions() };
   }
-  if (result.hero && typeof result.hero === 'function') {
-    expandedResult = { ...expandedResult, hero: await result.hero() };
+  if (result.heroCard && typeof result.heroCard === 'function') {
+    expandedResult = { ...expandedResult, heroCard: await result.heroCard() };
   }
 
   return expandedResult;

@@ -662,7 +662,7 @@ Object {
       "title": "third item by content channel id",
     },
   ],
-  "hero": Object {
+  "heroCard": Object {
     "action": "READ_CONTENT",
     "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
     "image": null,
@@ -735,7 +735,7 @@ Object {
       "title": "third item by content channel id",
     },
   ],
-  "hero": Object {
+  "heroCard": Object {
     "action": "READ_CONTENT",
     "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
     "image": null,
@@ -1047,7 +1047,7 @@ Array [
         "title": "third item",
       },
     ],
-    "hero": Object {
+    "heroCard": Object {
       "action": "READ_CONTENT",
       "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
       "image": null,

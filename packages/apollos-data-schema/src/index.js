@@ -703,7 +703,7 @@ export const featuresSchema = gql`
     title: String
     subtitle: String
     actions: [ActionListAction]
-    hero: CardListItem
+    heroCard: CardListItem
   }
 
   type CardListItem {

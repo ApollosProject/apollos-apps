@@ -74,13 +74,13 @@ export default class Feature extends RockApolloDataSource {
   }) {
     // Generate a list of actions.
     let actions;
-    let hero;
+    let heroCard;
     // If we have a strategy for selecting the hero card.
     if (heroAlgorithms && heroAlgorithms.length) {
       // The actions come from the action algorithms
       actions = () => this.runAlgorithms({ algorithms });
       // and the hero comes from the hero algorithms
-      hero = async () => {
+      heroCard = async () => {
         const cards = await this.runAlgorithms({ algorithms: heroAlgorithms });
         return cards.length ? cards[0] : null;
       };
@@ -91,7 +91,7 @@ export default class Feature extends RockApolloDataSource {
       // The actions are all actions after the first
       actions = allActions.slice(1);
       // And the hero is the first action.
-      hero = allActions.length ? allActions[0] : null;
+      heroCard = allActions.length ? allActions[0] : null;
     }
 
     return {
@@ -107,7 +107,7 @@ export default class Feature extends RockApolloDataSource {
         },
       }),
       actions,
-      hero,
+      heroCard,
       title,
       subtitle,
       // Typanme is required so GQL knows specifically what Feature is being created
