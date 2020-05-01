@@ -696,6 +696,16 @@ export const featuresSchema = gql`
     actions: [ActionListAction]
   }
 
+  type HeroListFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    title: String
+    subtitle: String
+    actions: [ActionListAction]
+    heroCard: CardListItem
+  }
+
   type CardListItem {
     id: ID!
 
