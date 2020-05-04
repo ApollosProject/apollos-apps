@@ -4,6 +4,7 @@ export ActionListFeatureConnected, {
 } from './ActionListFeatureConnected';
 export ContentCardConnected, {
   ContentCardComponentMapper,
+  contentCardComponentMapper, // TODO: Update to `ContentCardComponentMapper` export below is for temporary backwards compatibility.
   GET_CONTENT_CARD,
 } from './ContentCardConnected';
 export CampaignItemListFeature from './CampaignItemListFeature';
