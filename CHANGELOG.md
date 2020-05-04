@@ -1,3 +1,12 @@
+v1.4.0: May 4, 2020
+
+- Adds backwards compatibility for contentCardComponentMapper (#1445) (f334e76b)
+- Adds Up Next Feature + Interactions Enhancements (#1444) (44b0ab28)
+- Adds Hero list feature API and ConnectedComponent (#1441) (7e23a3c8)
+- Adds Pull to refetch on Features feed (#1437) (2c2fb437)
+- Adds HeroListFeature component to ui-connected package (#1428) (e7ede76f)
+- Exposes Component prop on ContentCardComponentMapper (#1443) (f900e7c7)
+- Fixes crash in search on android (#1440) (83f9abf1)\
 
 v1.4.0-beta.2: April 27, 2020
 
