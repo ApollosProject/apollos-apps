@@ -60,6 +60,7 @@ export default class Interactions extends RockApolloDataSource {
         if (possibleFunction) {
           return possibleFunction({ id, __type, action });
         }
+        return null;
       })
     );
   }
