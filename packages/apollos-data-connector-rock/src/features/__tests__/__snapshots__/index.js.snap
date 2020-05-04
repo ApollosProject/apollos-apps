@@ -256,6 +256,63 @@ Object {
 }
 `;
 
+exports[`features dataSource should create an ActionListFeature from a SERIES_IN_PROGRESS algorithm 1`] = `
+Object {
+  "__typename": "ActionListFeature",
+  "actions": Array [
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 1,
+        "title": "first item by content channel id",
+      },
+      "subtitle": "content channel",
+      "summary": "summary data",
+      "title": "first item by content channel id",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 2,
+        "title": "second item by content channel id",
+      },
+      "subtitle": "content channel",
+      "summary": "summary data",
+      "title": "second item by content channel id",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": null,
+        "id": 3,
+        "title": "third item by content channel id",
+      },
+      "subtitle": undefined,
+      "summary": "summary data",
+      "title": "third item by content channel id",
+    },
+  ],
+  "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e056fd5308dc560293be9d519308fe80fa29d2a14e411c8374c668c86c0c39ce98d0f134d35066f1dfb14f5f3aa227c870d661b1d28f790e3c9e2fa1d8db2779fc7c449245b23ad9318bd30a604fa2520788d62edf4fd540cbf07ec7e78eb2f3644",
+  "subtitle": "It's featured!",
+  "title": "Test Featured Item",
+}
+`;
+
 exports[`features dataSource should create an ActionListFeature from a SERMON_CHILDREN algorithm 1`] = `
 Object {
   "__typename": "ActionListFeature",
@@ -627,6 +684,136 @@ Object {
 }
 `;
 
+exports[`features dataSource should create an HeroListFeature from a USER_FEED algorithm 1`] = `
+Object {
+  "__typename": "HeroListFeature",
+  "actions": Array [
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 2,
+        "title": "second item by content channel id",
+      },
+      "subtitle": "content channel",
+      "summary": "summary data",
+      "title": "second item by content channel id",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": null,
+        "id": 3,
+        "title": "third item by content channel id",
+      },
+      "subtitle": undefined,
+      "summary": "summary data",
+      "title": "third item by content channel id",
+    },
+  ],
+  "heroCard": Object {
+    "action": "READ_CONTENT",
+    "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+    "image": null,
+    "relatedNode": Object {
+      "__type": "UniversalContentItem",
+      "contentChannel": Object {
+        "name": "content channel",
+      },
+      "id": 1,
+      "title": "first item by content channel id",
+    },
+    "subtitle": "content channel",
+    "summary": "summary data",
+    "title": "first item by content channel id",
+  },
+  "id": "HeroListFeature:f6b30a38eb547f1f75676ce0557a7e0554b53dd31034539ff6489a39d15a8d3e5ead8197b46239df34aebbab9cb2e3d59a926dfbeb645d0e930d986ab6d4c7fb18f5c785737e5cea5187623d9840aabd1126239e969aee45865cafd569d9bdd51ff4a0f3c557d01c6fc4d38223e85d6100a047461ee52531f53a38a6f3ac5b17",
+  "subtitle": "It's a hero list feature!",
+  "title": "Test HeroListFeature",
+}
+`;
+
+exports[`features dataSource should create an HeroListFeature from a feed algorithm and a different hero algorithm  1`] = `
+Object {
+  "__typename": "HeroListFeature",
+  "actions": Array [
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 1,
+        "title": "first item by content channel id",
+      },
+      "subtitle": "content channel",
+      "summary": "summary data",
+      "title": "first item by content channel id",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 2,
+        "title": "second item by content channel id",
+      },
+      "subtitle": "content channel",
+      "summary": "summary data",
+      "title": "second item by content channel id",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": null,
+        "id": 3,
+        "title": "third item by content channel id",
+      },
+      "subtitle": undefined,
+      "summary": "summary data",
+      "title": "third item by content channel id",
+    },
+  ],
+  "heroCard": Object {
+    "action": "READ_CONTENT",
+    "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+    "image": null,
+    "relatedNode": Object {
+      "__type": "UniversalContentItem",
+      "contentChannel": Object {
+        "name": "content channel",
+      },
+      "id": 1,
+      "title": "first item",
+    },
+    "subtitle": "content channel",
+    "summary": "summary data",
+    "title": "first item",
+  },
+  "id": "HeroListFeature:f6b30a38eb547f1f75676ce0557a7e0554b53dd31034539ff6489a39d15a8d3e5ead8197b46239df34aebbab9cb2e3d5ddebb04ae86620d62cba8ceb533fd7472c208099d0c73069d746c038d5ce5eb550c12e2c78643656350723d075488962ab02b17c4512b72f32f9b3bcca1de67da5c2b4255f923095ff467dc60e482286b29329d189fc52ffe1ed566803a45b9e07552290b8fc97da1650eb43a726be6f",
+  "subtitle": "It's a hero list feature!",
+  "title": "Test HeroListFeature",
+}
+`;
+
 exports[`features dataSource should create an HorizontalCardListFeature from a PERSONA_FEED 1`] = `
 Object {
   "__typename": "HorizontalCardListFeature",
@@ -877,6 +1064,121 @@ Object {
   "subtitle": "It's featured!",
   "title": "Test Featured Item",
 }
+`;
+
+exports[`features dataSource should render the HeroListFeature type from getHomeFeedFeatures 1`] = `
+Array [
+  Object {
+    "__typename": "HeroListFeature",
+    "actions": Array [
+      Object {
+        "action": "READ_CONTENT",
+        "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+        "image": null,
+        "relatedNode": Object {
+          "__type": "UniversalContentItem",
+          "contentChannel": Object {
+            "name": "content channel",
+          },
+          "id": 2,
+          "title": "second item",
+        },
+        "subtitle": "content channel",
+        "summary": "summary data",
+        "title": "second item",
+      },
+      Object {
+        "action": "READ_CONTENT",
+        "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+        "image": null,
+        "relatedNode": Object {
+          "__type": "UniversalContentItem",
+          "contentChannel": Object {
+            "name": "content channel",
+          },
+          "id": 3,
+          "title": "third item",
+        },
+        "subtitle": "content channel",
+        "summary": "summary data",
+        "title": "third item",
+      },
+    ],
+    "heroCard": Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 1,
+        "title": "first item",
+      },
+      "subtitle": "content channel",
+      "summary": "summary data",
+      "title": "first item",
+    },
+    "id": "HeroListFeature:9724110384a5109532f35a4980ea9b7732b56327ff3959d32d21ba892a0dc560f1b1cb7bc6590887f4896be8d098d564163098c6045ffbc379606756cbef966a2a78ff90ec110e63238e04ba9fe1e8337425d9f1bb6457dd618f66aa48392f7a63472ed6f7d90c5783fb0e161c7e7d43291e4b638c9d3ec1039fad492681c640",
+    "subtitle": "Explore what God calls you to today",
+    "title": "FOR YOU",
+  },
+  Object {
+    "__typename": "ActionListFeature",
+    "actions": Array [
+      Object {
+        "action": "READ_CONTENT",
+        "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+        "image": null,
+        "relatedNode": Object {
+          "__type": "UniversalContentItem",
+          "contentChannel": Object {
+            "name": "content channel",
+          },
+          "id": 1,
+          "title": "first item by content channel id",
+        },
+        "subtitle": "content channel",
+        "summary": "summary data",
+        "title": "first item by content channel id",
+      },
+      Object {
+        "action": "READ_CONTENT",
+        "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+        "image": null,
+        "relatedNode": Object {
+          "__type": "UniversalContentItem",
+          "contentChannel": Object {
+            "name": "content channel",
+          },
+          "id": 2,
+          "title": "second item by content channel id",
+        },
+        "subtitle": "content channel",
+        "summary": "summary data",
+        "title": "second item by content channel id",
+      },
+      Object {
+        "action": "READ_CONTENT",
+        "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+        "image": null,
+        "relatedNode": Object {
+          "__type": "UniversalContentItem",
+          "contentChannel": null,
+          "id": 3,
+          "title": "third item by content channel id",
+        },
+        "subtitle": undefined,
+        "summary": "summary data",
+        "title": "third item by content channel id",
+      },
+    ],
+    "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05bed66de665564bd0c5e37f069267679550e6d23b01e068694595ba074cd0d145c3508d6249fc0adc58f325fa1e4621dfa28d6be47ee5711bc3110dd8c31d1e045c223357732b6f15ebde1237763d712279d3ab620bf416ae9a035a0ba171e5c4fecb9bfcb5ea92ea44148d7bd6731a9158ce9af2e56cb4be9ee86a3d8638a111",
+    "subtitle": "What's happening at apollos?",
+    "title": "BULLETIN",
+  },
+]
 `;
 
 exports[`features dataSource should render the HorizontalCardList type from getHomeFeedFeatures 1`] = `
@@ -1229,8 +1531,54 @@ Array [
 exports[`features resolver must return a personaFeed, a sermonChildrenFeed, and a contentChannelFeed for the userFeedFeatures 1`] = `
 Array [
   Object {
-    "__typename": "HorizontalCardListFeature",
-    "cards": Array [
+    "__typename": "ActionListFeature",
+    "actions": Array [
+      Object {
+        "action": "READ_CONTENT",
+        "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+        "image": null,
+        "relatedNode": Object {
+          "__type": "UniversalContentItem",
+          "contentChannel": Object {
+            "name": "content channel",
+          },
+          "id": 1,
+          "title": "first item by content channel id",
+        },
+        "subtitle": "content channel",
+        "summary": "summary data",
+        "title": "first item by content channel id",
+      },
+      Object {
+        "action": "READ_CONTENT",
+        "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+        "image": null,
+        "relatedNode": Object {
+          "__type": "UniversalContentItem",
+          "contentChannel": Object {
+            "name": "content channel",
+          },
+          "id": 2,
+          "title": "second item by content channel id",
+        },
+        "subtitle": "content channel",
+        "summary": "summary data",
+        "title": "second item by content channel id",
+      },
+      Object {
+        "action": "READ_CONTENT",
+        "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+        "image": null,
+        "relatedNode": Object {
+          "__type": "UniversalContentItem",
+          "contentChannel": null,
+          "id": 3,
+          "title": "third item by content channel id",
+        },
+        "subtitle": undefined,
+        "summary": "summary data",
+        "title": "third item by content channel id",
+      },
       Object {
         "action": "READ_CONTENT",
         "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
@@ -1280,8 +1628,7 @@ Array [
         "title": "third item",
       },
     ],
-    "hyphenatedTitle": undefined,
-    "id": "HorizontalCardListFeature:9724110384a5109532f35a4980ea9b7732b56327ff3959d32d21ba892a0dc56083e6e9fbc0eb9c30e70418ef51dbf0a0a206c0039dd9ab293a5df0c1f07cdf27809952c976cf9886f157a1265307677bc875f2abdcfce4136c7ce952bc293761e816c7f3829d43e2b54a3297a1add52b",
+    "id": "ActionListFeature:9724110384a5109532f35a4980ea9b77b7a918389784452bc4e113adf105f3ea127f90f017f69aaf559572dcd95650eee53524e81615ffc32c33db72a2f5c60dea0a0ee24fb5c2e58fd4f7fdce093a379fbff37611ab309b2d2653ed759cb0783eb02fe34123322890197bce3345eb4d991dd64a7c1b34d60b205f17f03262fa",
     "subtitle": "Explore what God calls you to today",
     "title": "FOR YOU",
   },

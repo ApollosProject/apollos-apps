@@ -5,13 +5,18 @@ import Feature from '../data-source';
 import resolver from '../resolver';
 
 const expandResult = async (result) => {
-  if (result.cards) {
-    return { ...result, cards: await result.cards() };
+  let expandedResult = { ...result };
+  if (result.cards && typeof result.cards === 'function') {
+    expandedResult = { ...expandedResult, cards: await result.cards() };
   }
-  if (result.actions) {
-    return { ...result, actions: await result.actions() };
+  if (result.actions && typeof result.actions === 'function') {
+    expandedResult = { ...expandedResult, actions: await result.actions() };
   }
-  return null;
+  if (result.heroCard && typeof result.heroCard === 'function') {
+    expandedResult = { ...expandedResult, heroCard: await result.heroCard() };
+  }
+
+  return expandedResult;
 };
 
 const itemMock = [
@@ -78,6 +83,13 @@ describe('features', () => {
       }),
       first,
     });
+    const getSeriesWithUserProgress = () => ({
+      expand: () => ({
+        top: () => ({
+          get: () => Promise.resolve(itemMock),
+        }),
+      }),
+    });
     const byContentChannelIds = () => ({
       get: () => Promise.resolve([{ id: 123, title: 'Featured Things' }]),
     });
@@ -96,6 +108,7 @@ describe('features', () => {
           byUserFeed,
           getCursorByParentContentItemId,
           getSermonFeed,
+          getSeriesWithUserProgress,
           getCoverImage: () => null,
           resolveType: () => 'UniversalContentItem',
           createSummary: () => 'summary data',
@@ -126,6 +139,18 @@ describe('features', () => {
         },
       },
     };
+  });
+  describe('resolver', () => {
+    it('must return a personaFeed, a sermonChildrenFeed, and a contentChannelFeed for the userFeedFeatures', async () => {
+      const feature = new Feature();
+      feature.initialize({
+        context,
+      });
+      const result = await resolver.Query.userFeedFeatures(null, null, {
+        dataSources: { Feature: feature },
+      });
+      expect(await Promise.all(result.map(expandResult))).toMatchSnapshot();
+    });
   });
   describe('dataSource', () => {
     it('should create an ActionListFeature from a PERSONA_FEED', async () => {
@@ -406,6 +431,66 @@ describe('features', () => {
       expect(await expandResult(result)).toMatchSnapshot();
       expect(first.mock.calls).toMatchSnapshot();
     });
+
+    it('should create an ActionListFeature from a SERIES_IN_PROGRESS algorithm', async () => {
+      const feature = new Feature();
+      feature.initialize({
+        context,
+      });
+
+      const result = await feature.createActionListFeature({
+        algorithms: [
+          {
+            type: 'SERIES_IN_PROGRESS',
+          },
+        ],
+        title: 'Test Featured Item',
+        subtitle: "It's featured!",
+      });
+
+      expect(await expandResult(result)).toMatchSnapshot();
+    });
+    it('should create an HeroListFeature from a USER_FEED algorithm', async () => {
+      const feature = new Feature();
+      feature.initialize({
+        context,
+      });
+
+      const result = await feature.createHeroListFeature({
+        algorithms: [
+          {
+            type: 'USER_FEED',
+          },
+        ],
+        title: 'Test HeroListFeature',
+        subtitle: "It's a hero list feature!",
+      });
+
+      expect(await expandResult(result)).toMatchSnapshot();
+    });
+    it('should create an HeroListFeature from a feed algorithm and a different hero algorithm ', async () => {
+      const feature = new Feature();
+      feature.initialize({
+        context,
+      });
+
+      const result = await feature.createHeroListFeature({
+        algorithms: [
+          {
+            type: 'USER_FEED',
+          },
+        ],
+        heroAlgorithms: [
+          {
+            type: 'PERSONA_FEED',
+          },
+        ],
+        title: 'Test HeroListFeature',
+        subtitle: "It's a hero list feature!",
+      });
+
+      expect(await expandResult(result)).toMatchSnapshot();
+    });
     it('should render the default case from getHomeFeedFeatures', async () => {
       const feature = new Feature();
       feature.initialize({
@@ -469,6 +554,28 @@ describe('features', () => {
       expect(await Promise.all(result.map(expandResult))).toMatchSnapshot();
     });
 
+    it('should render the HeroListFeature type from getHomeFeedFeatures', async () => {
+      const feature = new Feature();
+      feature.initialize({
+        context,
+      });
+
+      ApollosConfig.loadJs({
+        HOME_FEATURES: [
+          {
+            algorithms: ['PERSONA_FEED'],
+            subtitle: 'Explore what God calls you to today',
+            title: 'FOR YOU',
+            type: 'HeroListFeature',
+          },
+        ],
+      });
+
+      const result = await feature.getHomeFeedFeatures();
+
+      expect(await Promise.all(result.map(expandResult))).toMatchSnapshot();
+    });
+
     it("should recontruct a feature from it's id", async () => {
       const feature = new Feature();
       feature.initialize({
@@ -509,19 +616,6 @@ describe('features', () => {
 
       expect(result).toMatchSnapshot('default (cards not loaded)');
       expect(await expandResult(result)).toMatchSnapshot('with cards loaded');
-    });
-  });
-
-  describe('resolver', () => {
-    it('must return a personaFeed, a sermonChildrenFeed, and a contentChannelFeed for the userFeedFeatures', async () => {
-      const feature = new Feature();
-      feature.initialize({
-        context,
-      });
-      const result = await resolver.Query.userFeedFeatures(null, null, {
-        dataSources: { Feature: feature },
-      });
-      expect(await Promise.all(result.map(expandResult))).toMatchSnapshot();
     });
   });
 });

@@ -2,10 +2,10 @@ import React from 'react';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
-import ActionListFeature from './ActionListFeature';
-import GET_ACTION_LIST_FEATURE from './getActionListFeature';
+import HeroListFeature from './HeroListFeature';
+import GET_HERO_LIST_FEATURE from './getHeroListFeature';
 
-function ActionListFeatureConnected({
+function HeroListFeatureConnected({
   featureId,
   Component,
   isLoading,
@@ -14,7 +14,7 @@ function ActionListFeatureConnected({
 }) {
   return (
     <Query
-      query={GET_ACTION_LIST_FEATURE}
+      query={GET_HERO_LIST_FEATURE}
       variables={{ featureId }}
       fetchPolicy="cache-and-network"
     >
@@ -33,7 +33,7 @@ function ActionListFeatureConnected({
   );
 }
 
-ActionListFeatureConnected.propTypes = {
+HeroListFeatureConnected.propTypes = {
   Component: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.func,
@@ -44,8 +44,8 @@ ActionListFeatureConnected.propTypes = {
   refetchRef: PropTypes.func,
 };
 
-ActionListFeatureConnected.defaultProps = {
-  Component: ActionListFeature,
+HeroListFeatureConnected.defaultProps = {
+  Component: HeroListFeature,
 };
 
-export default ActionListFeatureConnected;
+export default HeroListFeatureConnected;

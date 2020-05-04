@@ -443,6 +443,12 @@ exports[`ContentItemsModel gets a percentage for a content series, even if a ser
 
 exports[`ContentItemsModel gets a percentage for a content series, even if a series has no children 2`] = `[MockFunction]`;
 
+exports[`ContentItemsModel gets an empty array fpr series a user has viewed without a user: get from ids 1`] = `Array []`;
+
+exports[`ContentItemsModel gets an empty array fpr series a user has viewed without a user: get percent complete 1`] = `Array []`;
+
+exports[`ContentItemsModel gets an empty array fpr series a user has viewed without a user: result 1`] = `Array []`;
+
 exports[`ContentItemsModel gets by id 1`] = `
 Array [
   Array [
@@ -522,6 +528,36 @@ Object {
     },
   ],
 }
+`;
+
+exports[`ContentItemsModel gets series a user has viewed: get from ids 1`] = `
+Array [
+  Array [
+    Array [
+      "2",
+    ],
+  ],
+]
+`;
+
+exports[`ContentItemsModel gets series a user has viewed: get percent complete 1`] = `
+Array [
+  Array [
+    Object {
+      "id": "1",
+    },
+  ],
+  Array [
+    Object {
+      "id": "2",
+    },
+  ],
+  Array [
+    Object {
+      "id": "3",
+    },
+  ],
+]
 `;
 
 exports[`ContentItemsModel gets the next item for a content series, based on different past interactions 1`] = `

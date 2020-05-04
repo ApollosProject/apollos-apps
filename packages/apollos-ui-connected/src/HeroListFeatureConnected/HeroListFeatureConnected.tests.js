@@ -1,23 +1,47 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-
 import { Providers, renderWithApolloData } from '../utils/testUtils';
 
-import GET_ACTION_LIST_FEATURE from './getActionListFeature';
-import ActionListFeatureConnected from './index';
+import GET_HERO_LIST_FEATURE from './getHeroListFeature';
+
+import HeroListFeatureConnected from './HeroListFeatureConnected';
 
 const mock = {
   request: {
-    query: GET_ACTION_LIST_FEATURE,
-    variables: { featureId: 'ActionListFeature:123' },
+    query: GET_HERO_LIST_FEATURE,
+    variables: { featureId: 'HeroListFeature:123' },
   },
   result: {
     data: {
       node: {
-        id: 'ActionListFeature:123',
-        __typename: 'ActionListFeature',
+        id: 'HeroListFeature:123',
+        __typename: 'HeroListFeature',
         title: 'Some cool list',
         subtitle: 'Check it out',
+        heroCard: {
+          __typename: 'CardListCard',
+          id: 'CardListCard:123',
+          title: 'Boom',
+          hyphenatedTitle: 'Boom',
+          hasAction: false,
+          actionIcon: null,
+          labelText: 'What',
+          action: 'READ_CONTENT',
+          summary: 'Read',
+          coverImage: {
+            __typename: 'ImageMedia',
+            sources: [
+              {
+                __typename: 'ImageMediaSource',
+                uri: 'https://picsum.photos/200/200',
+              },
+            ],
+          },
+          relatedNode: {
+            __typename: 'UniversalContentItem',
+            id: 'UniversalContentItem:123',
+          },
+        },
         actions: [
           {
             __typename: 'ActionListFeatureAction',
@@ -45,13 +69,13 @@ const mock = {
   },
 };
 
-describe('The ActionListFeatureConnected component', () => {
+describe('The HeroListFeatureConnected component', () => {
   it('should render', async () => {
     const tree = await renderWithApolloData(
       <Providers mocks={[mock]}>
-        <ActionListFeatureConnected
+        <HeroListFeatureConnected
           refetchRef={jest.fn()}
-          featureId={'ActionListFeature:123'}
+          featureId={'HeroListFeature:123'}
         />
       </Providers>
     );
@@ -60,9 +84,9 @@ describe('The ActionListFeatureConnected component', () => {
   it('should render a loading state when isLoading', async () => {
     const tree = renderer.create(
       <Providers>
-        <ActionListFeatureConnected
+        <HeroListFeatureConnected
           refetchRef={jest.fn()}
-          featureId={'ActionListFeature:123'}
+          featureId={'HeroListFeature:123'}
         />
       </Providers>
     );
