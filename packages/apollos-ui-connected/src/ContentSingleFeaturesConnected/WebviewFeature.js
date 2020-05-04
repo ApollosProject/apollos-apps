@@ -1,30 +1,48 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ModalView, styled } from '@apollosproject/ui-kit';
+import { H3, styled, PaddedView } from '@apollosproject/ui-kit';
 import { WebView } from 'react-native-webview';
-import { SafeAreaView } from 'react-navigation';
+import { Platform, View } from 'react-native';
+// import { SafeAreaView } from 'react-navigation';
 
-const FlexedSafeAreaView = styled(({ theme }) => ({
-  flex: 1,
+const FlexedActionCard = styled(({ theme, inHorizontalList = false }) => ({
   backgroundColor: theme.colors.black,
-}))(SafeAreaView);
+  height: 400,
+  borderRadius: theme.sizing.baseBorderRadius,
+  marginHorizontal: theme.sizing.baseUnit,
+  marginVertical: theme.sizing.baseUnit * 0.75,
+  overflow: 'hidden',
+  ...(inHorizontalList
+    ? {
+        // provides spacing between cards also fixes android shadow needing "space" to render into
+        margin: theme.sizing.baseUnit / 2,
+        marginBottom: theme.sizing.baseUnit * 0.75,
+      }
+    : {
+        marginHorizontal: theme.sizing.baseUnit,
+        marginVertical: theme.sizing.baseUnit * 0.75,
+      }),
+  ...Platform.select(theme.shadows.default),
+}))(View);
 
-const WebviewFeature = ({ url, modal, navigation }) => {
-  if (modal) {
-    return (
-      <ModalView navigation={navigation} onClose={() => navigation.pop()}>
-        <FlexedSafeAreaView>
-          <WebView source={{ uri: url }} />
-        </FlexedSafeAreaView>
-      </ModalView>
-    );
-  }
-  return <WebView source={{ uri: url }} />;
-};
+const FlexedWebView = styled(() => ({
+  flex: 1,
+}))(WebView);
+
+const StyledH3 = styled(({ theme }) => ({
+  paddingHorizontal: theme.sizing.baseUnit,
+  color: theme.colors.screen,
+}))(H3);
+
+const WebviewFeature = ({ url }) => (
+  <FlexedActionCard>
+    <StyledH3 padded>{'Setlist'}</StyledH3>
+    <FlexedWebView source={{ uri: url }} />
+  </FlexedActionCard>
+);
 
 WebviewFeature.propTypes = {
   url: PropTypes.string.isRequired,
-  modal: PropTypes.bool.isRequired,
 };
 
 export default WebviewFeature;
