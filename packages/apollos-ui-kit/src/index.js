@@ -20,7 +20,7 @@ export CardTile from './CardTile';
 export CenteredView from './CenteredView';
 export ChannelLabel from './ChannelLabel';
 export Chip, { ChipList } from './Chip';
-export ConnectedImage from './ConnectedImage';
+export ConnectedImage, { ImageSourceType } from './ConnectedImage';
 export ContentCard from './ContentCard';
 export DefaultCard from './DefaultCard';
 export FeaturedCard from './FeaturedCard';

@@ -3,7 +3,7 @@ export ActionListFeatureConnected, {
   GET_ACTION_LIST_FEATURE,
 } from './ActionListFeatureConnected';
 export ContentCardConnected, {
-  contentCardComponentMapper,
+  ContentCardComponentMapper,
   GET_CONTENT_CARD,
 } from './ContentCardConnected';
 export CampaignItemListFeature from './CampaignItemListFeature';

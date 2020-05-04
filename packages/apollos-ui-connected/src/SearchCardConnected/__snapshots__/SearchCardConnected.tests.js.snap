@@ -50,7 +50,6 @@ exports[`The SearchCardConnected component should render 1`] = `
         }
       >
         <RCTImageView
-          customTheme={null}
           maxAspectRatio={1.2}
           minAspectRatio={0.75}
           onLoad={[Function]}
