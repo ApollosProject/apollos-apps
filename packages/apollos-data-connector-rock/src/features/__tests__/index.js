@@ -83,6 +83,13 @@ describe('features', () => {
       }),
       first,
     });
+    const getSeriesWithUserProgress = () => ({
+      expand: () => ({
+        top: () => ({
+          get: () => Promise.resolve(itemMock),
+        }),
+      }),
+    });
     const byContentChannelIds = () => ({
       get: () => Promise.resolve([{ id: 123, title: 'Featured Things' }]),
     });
@@ -101,6 +108,7 @@ describe('features', () => {
           byUserFeed,
           getCursorByParentContentItemId,
           getSermonFeed,
+          getSeriesWithUserProgress,
           getCoverImage: () => null,
           resolveType: () => 'UniversalContentItem',
           createSummary: () => 'summary data',
@@ -422,6 +430,25 @@ describe('features', () => {
 
       expect(await expandResult(result)).toMatchSnapshot();
       expect(first.mock.calls).toMatchSnapshot();
+    });
+
+    it('should create an ActionListFeature from a SERIES_IN_PROGRESS algorithm', async () => {
+      const feature = new Feature();
+      feature.initialize({
+        context,
+      });
+
+      const result = await feature.createActionListFeature({
+        algorithms: [
+          {
+            type: 'SERIES_IN_PROGRESS',
+          },
+        ],
+        title: 'Test Featured Item',
+        subtitle: "It's featured!",
+      });
+
+      expect(await expandResult(result)).toMatchSnapshot();
     });
     it('should create an HeroListFeature from a USER_FEED algorithm', async () => {
       const feature = new Feature();

@@ -7,15 +7,21 @@ export default class Feature extends RockApolloDataSource {
   resource = '';
 
   // Names of Action Algoritms mapping to the functions that create the actions.
-  ACTION_ALGORITHIMS = {
+  ACTION_ALGORITHIMS = Object.entries({
     // We need to make sure `this` refers to the class, not the `ACTION_ALGORITHIMS` object.
-    PERSONA_FEED: this.personaFeedAlgorithm.bind(this),
-    CONTENT_CHANNEL: this.contentChannelAlgorithm.bind(this),
-    SERMON_CHILDREN: this.sermonChildrenAlgorithm.bind(this),
-    UPCOMING_EVENTS: this.upcomingEventsAlgorithm.bind(this),
-    CAMPAIGN_ITEMS: this.campaignItemsAlgorithm.bind(this),
-    USER_FEED: this.userFeedAlgorithm.bind(this),
-  };
+    PERSONA_FEED: this.personaFeedAlgorithm,
+    CONTENT_CHANNEL: this.contentChannelAlgorithm,
+    SERMON_CHILDREN: this.sermonChildrenAlgorithm,
+    UPCOMING_EVENTS: this.upcomingEventsAlgorithm,
+    CAMPAIGN_ITEMS: this.campaignItemsAlgorithm,
+    SERIES_IN_PROGRESS: this.seriesInProgressAlgorithm,
+    USER_FEED: this.userFeedAlgorithm,
+  }).reduce((accum, [key, value]) => {
+    // convenciance code to make sure all methods are bound to the Features dataSource
+    // eslint-disable-next-line
+    accum[key] = value.bind(this);
+    return accum;
+  }, {});
 
   getFromId(args, id) {
     const type = id.split(':')[0];
@@ -326,6 +332,25 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
     const { ContentItem } = this.context.dataSources;
 
     const items = await ContentItem.byUserFeed()
+      .top(limit)
+      .get();
+
+    return items.map((item, i) => ({
+      id: createGlobalId(`${item.id}${i}`, 'ActionListAction'),
+      title: item.title,
+      subtitle: get(item, 'contentChannel.name'),
+      relatedNode: { ...item, __type: ContentItem.resolveType(item) },
+      image: ContentItem.getCoverImage(item),
+      action: 'READ_CONTENT',
+      summary: ContentItem.createSummary(item),
+    }));
+  }
+
+  async seriesInProgressAlgorithm({ limit = 3 } = {}) {
+    const { ContentItem } = this.context.dataSources;
+
+    const items = await (await ContentItem.getSeriesWithUserProgress())
+      .expand('ContentChannel')
       .top(limit)
       .get();
 

@@ -29,6 +29,15 @@ const context = {
     Auth: {
       getCurrentPerson: buildGetMock({ Id: 456, PrimaryAliasId: 456 }, ds),
     },
+    ContentItem: {
+      getCursorByChildContentItemId: () => ({ get: () => [{ id: '1' }] }),
+      resolveType: () => ['UniversalContentItem'],
+    },
+  },
+  models: {
+    Node: {
+      getPossibleDataModels: () => ['UniversalContentItem', 'ContentItem'],
+    },
   },
 };
 
@@ -85,14 +94,87 @@ describe('Interactions', () => {
     expect(result).toMatchSnapshot();
     expect(dataSource.get.mock.calls).toMatchSnapshot();
     expect(dataSource.post.mock.calls).toMatchSnapshot();
+    context.dataSources.RockConstants.modelType = buildGetMock({ Id: 123 }, ds);
+  });
+  it('creates additional interactions from a content item', async () => {
+    const dataSource = new Interactions();
+    dataSource.initialize({ context });
+    dataSource.get = buildGetMock({ Id: 1 }, ds);
+    dataSource.post = buildGetMock('1', ds);
+    dataSource.createAdditionalInteractions = jest.fn();
+
+    await dataSource.createNodeInteraction({
+      nodeId: createGlobalId(1, 'UniversalContentItem'),
+      action: 'COMPLETE',
+    });
+
+    expect(
+      dataSource.createAdditionalInteractions.mock.calls
+    ).toMatchSnapshot();
+  });
+  it('use a lookup map to find additional interactions to fire', async () => {
+    const dataSource = new Interactions();
+    dataSource.initialize({ context });
+    dataSource.updateSeriesStarted = jest.fn();
+    dataSource.ADDITIONAL_INTERACTIONS_MAP.ContentItem.COMPLETE = jest.fn();
+
+    await dataSource.createAdditionalInteractions({
+      id: 1,
+      action: 'COMPLETE',
+      __type: 'UniversalContentItem',
+    });
+
+    expect(
+      dataSource.ADDITIONAL_INTERACTIONS_MAP.ContentItem.COMPLETE
+    ).toMatchSnapshot();
+  });
+  it('creates a SERIES_START interaction when completing a series item', async () => {
+    const dataSource = new Interactions();
+    dataSource.initialize({ context });
+    dataSource.get = buildGetMock([], ds);
+    dataSource.createNodeInteraction = jest.fn();
+
+    await dataSource.updateSeriesStarted({
+      id: 1,
+    });
+
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+    expect(dataSource.createNodeInteraction.mock.calls).toMatchSnapshot();
+  });
+  it('does not create a SERIES_START interaction when completing a series item when you have completed other items ', async () => {
+    const dataSource = new Interactions();
+    dataSource.initialize({ context });
+    dataSource.get = buildGetMock([{ id: 2 }], ds);
+    dataSource.createNodeInteraction = jest.fn();
+
+    await dataSource.updateSeriesStarted({
+      id: 1,
+    });
+
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+    expect(dataSource.createNodeInteraction.mock.calls).toMatchSnapshot();
   });
   it('fetches interactions for a logged in user and nodeId', async () => {
+    const dataSource = new Interactions();
+    dataSource.initialize({ context });
+    dataSource.get = buildGetMock([{ Id: 1 }], ds);
+    dataSource.post = buildGetMock('1', ds);
+
+    const result = await dataSource.getNodeInteractionsForCurrentUser({
+      nodeId: createGlobalId(2, 'UniversalContentItem'),
+    });
+
+    expect(result).toEqual([{ id: 1 }]);
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+  });
+  it('fetches interactions for a logged in user, nodeId, and actions', async () => {
     const dataSource = new Interactions();
     dataSource.initialize({ context });
     dataSource.get = buildGetMock([{ Id: 1 }], ds);
 
     const result = await dataSource.getNodeInteractionsForCurrentUser({
       nodeId: createGlobalId(1, 'UniversalContentItem'),
+      actions: ['READ', 'COMPLETE'],
     });
 
     expect(result).toEqual([{ id: 1 }]);
