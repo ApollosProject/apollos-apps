@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 
 import { DefaultCard } from '@apollosproject/ui-kit';
 
-import { Providers } from '../utils/testUtils';
+import { Providers } from '../../utils/testUtils';
 
 import ContentCardComponentMapper from '.';
 
