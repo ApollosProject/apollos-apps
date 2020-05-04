@@ -6,7 +6,7 @@ import { DefaultCard, HighlightCard } from '@apollosproject/ui-kit';
 const contentCardComponentMapper = (props) => {
   // TODO: Update to `ContentCardComponentMapper` and remove this backwards compatibility function
   console.warn(
-    'Depreication Notice: This function is depricated and will be removed in a future release. Please migrate to using `ContentCardComponentMapper`'
+    'Deprecation Notice: This function is depricated and will be removed in a future release. Please migrate to using `ContentCardComponentMapper`'
   );
 
   // map typename to the the card we want to render.
