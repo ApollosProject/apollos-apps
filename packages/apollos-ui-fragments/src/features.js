@@ -144,6 +144,8 @@ const HORIZONTAL_CARD_LIST_FEATURE_FRAGMENT = gql`
 const WEBVIEW_FEATURE_FRAGMENT = gql`
   fragment WebviewFeatureFragment on WebviewFeature {
     url
+    title
+    linkText
   }
 `;
 
