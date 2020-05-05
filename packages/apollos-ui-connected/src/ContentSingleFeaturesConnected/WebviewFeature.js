@@ -6,23 +6,13 @@ import { Platform, View, TouchableOpacity, Linking } from 'react-native';
 // import { SafeAreaView } from 'react-navigation';
 
 const StyledCard = styled(
-  ({ theme, inHorizontalList = false }) => ({
+  ({ theme }) => ({
     backgroundColor: theme.colors.black,
     height: 400,
     borderRadius: theme.sizing.baseBorderRadius,
     marginHorizontal: theme.sizing.baseUnit,
     marginVertical: theme.sizing.baseUnit * 0.75,
     overflow: 'hidden',
-    ...(inHorizontalList
-      ? {
-          // provides spacing between cards also fixes android shadow needing "space" to render into
-          margin: theme.sizing.baseUnit / 2,
-          marginBottom: theme.sizing.baseUnit * 0.75,
-        }
-      : {
-          marginHorizontal: theme.sizing.baseUnit,
-          marginVertical: theme.sizing.baseUnit * 0.75,
-        }),
     ...Platform.select(theme.shadows.default),
   }),
   'ui-connected.WebviewFeature.StyledCard'
