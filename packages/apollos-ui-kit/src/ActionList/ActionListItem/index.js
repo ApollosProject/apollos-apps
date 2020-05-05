@@ -38,7 +38,7 @@ const CellImage = styled(({ theme }) => ({
 // eslint-disable-next-line react/prop-types
 const RenderAsTouchable = ({ children, onPress }) =>
   onPress ? (
-    <TouchableScale onPress={() => onPress}>{children}</TouchableScale>
+    <TouchableScale onPress={onPress}>{children}</TouchableScale>
   ) : (
     children
   );
