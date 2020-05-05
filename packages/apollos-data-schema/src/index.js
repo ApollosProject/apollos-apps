@@ -748,6 +748,8 @@ export const featuresSchema = gql`
     order: Int
 
     url: String
+    title: String
+    linkText: String
   }
 
   extend type WeekendContentItem {
