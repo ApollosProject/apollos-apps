@@ -137,14 +137,6 @@ export default class ContentItem extends RockApolloDataSource {
             })
           );
           break;
-        case 'webview':
-          features.push(
-            Feature.createWebviewFeature({
-              url: value,
-              id: `${attributeValues.features.id}-${i}`,
-            })
-          );
-          break;
         default:
           console.warn(`Received invalid feature key: ${key}`);
       }
@@ -183,16 +175,6 @@ export default class ContentItem extends RockApolloDataSource {
           })
         );
       });
-    }
-
-    const url = get(attributeValues, 'webviewFeature.value', '');
-    if (url !== '') {
-      features.push(
-        Feature.createWebviewFeature({
-          url,
-          id: attributeValues.webviewFeature.id,
-        })
-      );
     }
 
     return features;

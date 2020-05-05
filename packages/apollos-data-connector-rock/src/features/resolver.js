@@ -19,9 +19,6 @@ export default {
       message: body,
     }),
   },
-  WebviewFeature: {
-    url: ({ url }) => url,
-  },
   CardListItem: {
     coverImage: ({ image }) => image,
     title: ({ title }, { hyphenated }, { dataSources: { ContentItem } }) =>
