@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, Dimensions } from 'react-native';
 import PropTypes from 'prop-types';
 import * as ReactIs from 'react-is';
+import Color from 'color';
 
 import Swiper from 'react-native-swiper';
-import { styled } from '@apollosproject/ui-kit';
+import { styled, withTheme } from '@apollosproject/ui-kit';
 
 import { SafeAreaView } from 'react-navigation';
 
 const dotStyles = ({ theme }) => ({
-  width: theme.sizing.baseUnit / 2,
-  height: theme.sizing.baseUnit / 2,
-  borderRadius: theme.sizing.baseUnit / 4,
-  margin: theme.sizing.baseUnit / 4,
+  width: theme.sizing.baseUnit * 1.5,
+  height: theme.sizing.baseUnit * 0.125,
+  borderRadius: theme.sizing.baseUnit * 0.125,
+  marginHorizontal: theme.sizing.baseUnit * 0.0625,
 });
 
 const forceInset = {
@@ -21,7 +22,7 @@ const forceInset = {
 
 const PaginationDot = styled(
   ({ theme }) => ({
-    backgroundColor: theme.colors.background.inactive,
+    backgroundColor: Color(theme.colors.text.primary).fade(theme.alpha.high),
     ...dotStyles({ theme }),
   }),
   'ui-prayer.PrayerSwiper.PaginationDot'
@@ -35,6 +36,16 @@ const PaginationDotActive = styled(
   'ui-prayer.PrayerSwiper.PaginationDot.Active'
 )(View);
 
+const StyledPrayerSwiper = withTheme(({ theme, orientation }) => ({
+  paginationStyle: {
+    ...(orientation === 'landscape' ? { top: theme.sizing.baseUnit } : {}), // fixes pagination placement in landscape mode
+    bottom: null, // pagination by default is rendered absolute bottom. This "overrides" that style declaration.
+    left: theme.sizing.baseUnit,
+    justifyContent: 'flex-start',
+    alignItem: 'flex-start',
+  },
+}))(Swiper);
+
 class PrayerSwiper extends Component {
   static navigationOptions = () => ({
     title: 'Prayer',
@@ -47,6 +58,13 @@ class PrayerSwiper extends Component {
   };
 
   swiper = null;
+
+  getOrientation = () => {
+    if (Dimensions.get('window').width > Dimensions.get('window').height) {
+      return 'landscape';
+    }
+    return 'portrait';
+  };
 
   // Creates ref to Swiper to be passed as a prop to children.
   setSwiperRef = (r) => {
@@ -75,7 +93,7 @@ class PrayerSwiper extends Component {
     }
 
     return (
-      <Swiper
+      <StyledPrayerSwiper
         loadMinimal
         loop={false}
         /* Disables swipe gestures. We currently dont display a back button so this is our
@@ -95,9 +113,10 @@ class PrayerSwiper extends Component {
           </SafeAreaView>
         }
         {...this.props}
+        orientation={this.getOrientation()}
       >
         {slides}
-      </Swiper>
+      </StyledPrayerSwiper>
     );
   }
 }
