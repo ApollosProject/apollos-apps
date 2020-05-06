@@ -153,8 +153,7 @@ class MapView extends Component {
 
   get mappableCampuses() {
     return this.sortedCampuses.filter(
-      ({ latitude, longitude, distanceFromLocation }) =>
-        !isNil(latitude) && !isNil(longitude)
+      ({ latitude, longitude }) => !isNil(latitude) && !isNil(longitude)
     );
   }
 
@@ -194,8 +193,7 @@ class MapView extends Component {
     const visibleCampuses = [
       ...(this.currentCampus ? [this.currentCampus] : this.sortedCampuses),
     ].filter(
-      ({ latitude, longitude, distanceFromLocation }) =>
-        !isNil(latitude) && !isNil(longitude)
+      ({ latitude, longitude }) => !isNil(latitude) && !isNil(longitude)
     );
 
     if (userLocation) {
