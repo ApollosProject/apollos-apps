@@ -7,7 +7,9 @@ import PrayerSwiper from '.';
 
 storiesOf('ui-prayer/PrayerSwiper', module).add('example', () => (
   <PrayerSwiper>
-    {({ swipeForward }) => (
+    {(
+      { swipeForward } //eslint-disable-line
+    ) => (
       <>
         <CenteredView>
           <H1>Hello?</H1>
