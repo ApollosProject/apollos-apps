@@ -16,6 +16,7 @@ export ContentSingleFeaturesConnected, {
   GET_CONTENT_ITEM_FEATURES,
   ScriptureFeature,
   TextFeature,
+  WebviewFeature,
 } from './ContentSingleFeaturesConnected';
 export FeaturesFeedConnected, {
   featuresFeedComponentMapper,

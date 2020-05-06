@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import { H3, PaddedView, withIsLoading } from '@apollosproject/ui-kit';
 import TextFeature from '../TextFeature';
 import ScriptureFeature from '../ScriptureFeature';
+import WebviewFeature from '../WebviewFeature';
 
 const FEATURE_MAP = {
   TextFeature,
   ScriptureFeature,
+  WebviewFeature,
 };
 
 const ContentSingleFeatures = memo(
