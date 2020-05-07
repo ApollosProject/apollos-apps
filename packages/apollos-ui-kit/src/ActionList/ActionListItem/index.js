@@ -35,11 +35,10 @@ const CellImage = styled(({ theme }) => ({
   marginRight: theme.sizing.baseUnit,
 }))(ConnectedImage);
 
-// TODO: fix TouchableScale so that it doesn't animate if not passed an `onPress` handler. Then Remove lines 40-45.
 // eslint-disable-next-line react/prop-types
 const RenderAsTouchable = ({ children, onPress }) =>
   onPress ? (
-    <TouchableScale onPress={() => onPress}>{children}</TouchableScale>
+    <TouchableScale onPress={onPress}>{children}</TouchableScale>
   ) : (
     children
   );

@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 import ActionListFeatureConnected from '../ActionListFeatureConnected';
 import HorizontalCardListFeatureConnected from '../HorizontalCardListFeatureConnected';
 import VerticalCardListFeatureConnected from '../VerticalCardListFeatureConnected';
+import HeroListFeatureConnected from '../HeroListFeatureConnected';
 
 const MAPPINGS = {
   ActionListFeature: ActionListFeatureConnected,
+  HeroListFeature: HeroListFeatureConnected,
   HorizontalCardListFeature: HorizontalCardListFeatureConnected,
   VerticalCardListFeature: VerticalCardListFeatureConnected,
 };
@@ -15,6 +17,7 @@ const featuresFeedComponentMapper = ({
   feature,
   onPressActionItem,
   additionalFeatures = {},
+  refetchRef,
 }) => {
   const { id, __typename, ...featureData } = feature;
   const map = { ...MAPPINGS, ...additionalFeatures };
@@ -26,6 +29,7 @@ const featuresFeedComponentMapper = ({
         featureId={id}
         onPressItem={onPressActionItem}
         listKey={id}
+        refetchRef={refetchRef}
         {...featureData}
       />
     );
@@ -43,6 +47,7 @@ featuresFeedComponentMapper.propTypes = {
   }).isRequired,
   onPressActionItem: PropTypes.func,
   additionalFeatures: PropTypes.shape({}),
+  refetchRef: PropTypes.func.isRequired,
 };
 
 export default featuresFeedComponentMapper;

@@ -3,7 +3,8 @@ export ActionListFeatureConnected, {
   GET_ACTION_LIST_FEATURE,
 } from './ActionListFeatureConnected';
 export ContentCardConnected, {
-  contentCardComponentMapper,
+  ContentCardComponentMapper,
+  contentCardComponentMapper, // TODO: Update to `ContentCardComponentMapper` export below is for temporary backwards compatibility.
   GET_CONTENT_CARD,
 } from './ContentCardConnected';
 export CampaignItemListFeature from './CampaignItemListFeature';
@@ -15,11 +16,16 @@ export ContentSingleFeaturesConnected, {
   GET_CONTENT_ITEM_FEATURES,
   ScriptureFeature,
   TextFeature,
+  WebviewFeature,
 } from './ContentSingleFeaturesConnected';
 export FeaturesFeedConnected, {
   featuresFeedComponentMapper,
   GET_FEED_FEATURES,
 } from './FeaturesFeedConnected';
+export HeroListFeatureConnected, {
+  HeroListFeature,
+  GET_HERO_LIST_FEATURE,
+} from './HeroListFeatureConnected';
 export HorizontalCardListFeatureConnected, {
   HorizontalCardListFeature,
   GET_HORIZONTAL_CARD_LIST_FEATURE,

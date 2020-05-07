@@ -11,7 +11,9 @@ import {
   styled,
   withIsLoading,
 } from '@apollosproject/ui-kit';
-import { LiveConsumer } from '..';
+
+import { ContentCardComponentMapper } from '../ContentCardConnected';
+import { LiveConsumer } from '../live';
 
 const Title = styled(
   ({ theme }) => ({
@@ -31,8 +33,13 @@ const ListItemComponent = ({ contentId, ...item }) => (
   <LiveConsumer contentId={contentId}>
     {(liveStream) => {
       const isLive = !!(liveStream && liveStream.isLive);
-      const labelText = isLive ? 'Live' : item.labelText;
-      return <FeaturedCard isLive={isLive} {...item} labelText={labelText} />;
+      return (
+        <ContentCardComponentMapper
+          Component={FeaturedCard}
+          isLive={isLive}
+          {...item}
+        />
+      );
     }}
   </LiveConsumer>
 );
