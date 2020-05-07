@@ -833,3 +833,564 @@ Cincinnati, OH 45202-2118
   </View>
 </View>
 `;
+
+exports[`<MapView> should render with a digital campus 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 20,
+        "position": "absolute",
+        "right": 0,
+      }
+    }
+  >
+    <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "paddingHorizontal": 12,
+        }
+      }
+      decelerationRate="fast"
+      horizontal={true}
+      onScroll={[Function]}
+      scrollEventThrottle={16}
+      showsHorizontalScrollIndicator={false}
+      snapToAlignment="start"
+      snapToInterval={722}
+    >
+      <View>
+        <View
+          accessible={true}
+          clickable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            cardWidth={714}
+            inHorizontalList={true}
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "margin": 8,
+                "marginBottom": 12,
+                "marginHorizontal": 4,
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 8,
+                "width": 714,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "flexWrap": "nowrap",
+                    "height": 96,
+                    "justifyContent": "space-between",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "height": "100%",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "https://www.placecage.com/c/250/250",
+                          "url": "https://www.placecage.com/c/250/250",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "height": "100%",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "stretch",
+                        "flexDirection": "row",
+                        "flexWrap": "nowrap",
+                        "height": 21,
+                        "justifyContent": "space-between",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Medium",
+                          "fontSize": 14,
+                          "lineHeight": 21,
+                        }
+                      }
+                    >
+                      Dallas Campus
+                    </Text>
+                  </View>
+                  <Text
+                    style={
+                      Object {
+                        "color": "#505050",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 12,
+                        "lineHeight": 18,
+                      }
+                    }
+                  >
+                    102 N Weatherred Dr
+Richardson, TX 75080-5525
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          accessible={true}
+          clickable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            cardWidth={714}
+            inHorizontalList={true}
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "margin": 8,
+                "marginBottom": 12,
+                "marginHorizontal": 4,
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 8,
+                "width": 714,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "flexWrap": "nowrap",
+                    "height": 96,
+                    "justifyContent": "space-between",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "height": "100%",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "https://www.placecage.com/c/250/250",
+                          "url": "https://www.placecage.com/c/250/250",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "height": "100%",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "stretch",
+                        "flexDirection": "row",
+                        "flexWrap": "nowrap",
+                        "height": 21,
+                        "justifyContent": "space-between",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Medium",
+                          "fontSize": 14,
+                          "lineHeight": 21,
+                        }
+                      }
+                    >
+                      Cincinnati Campus
+                    </Text>
+                    <View
+                      style={
+                        Object {
+                          "flex": 1,
+                          "flexDirection": "row",
+                          "justifyContent": "flex-end",
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 18,
+                          }
+                        }
+                      >
+                        2038
+                        mi
+                      </Text>
+                    </View>
+                  </View>
+                  <Text
+                    style={
+                      Object {
+                        "color": "#505050",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 12,
+                        "lineHeight": 18,
+                      }
+                    }
+                  >
+                    120 E 8th St
+Cincinnati, OH 45202-2118
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          accessible={true}
+          clickable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            cardWidth={714}
+            inHorizontalList={true}
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "margin": 8,
+                "marginBottom": 12,
+                "marginHorizontal": 4,
+                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 8,
+                "width": 714,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "flexWrap": "nowrap",
+                    "height": 96,
+                    "justifyContent": "space-between",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "height": "100%",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "https://www.placecage.com/c/250/250",
+                          "url": "https://www.placecage.com/c/250/250",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "height": "100%",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "stretch",
+                        "flexDirection": "row",
+                        "flexWrap": "nowrap",
+                        "height": 21,
+                        "justifyContent": "space-between",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#303030",
+                          "fontFamily": "InterUI-Medium",
+                          "fontSize": 14,
+                          "lineHeight": 21,
+                        }
+                      }
+                    >
+                      Online
+                    </Text>
+                  </View>
+                  <Text
+                    style={
+                      Object {
+                        "color": "#505050",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 12,
+                        "lineHeight": 18,
+                      }
+                    }
+                  >
+                    
+Digital Campus,  
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 16,
+          "paddingVertical": 16,
+        }
+      }
+    >
+      <View
+        accessible={true}
+        clickable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <View
+          bordered={false}
+          disabled={false}
+          pill={false}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#17B582",
+              "borderColor": "#17B582",
+              "borderRadius": 16,
+              "borderWidth": 2,
+              "elevation": 2,
+              "flexDirection": "row",
+              "height": 48,
+              "justifyContent": "center",
+              "opacity": 1,
+              "overflow": "hidden",
+              "paddingHorizontal": 16,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#FFFFFF",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 16,
+                "lineHeight": 24,
+              }
+            }
+          >
+            Confirm Selection
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
