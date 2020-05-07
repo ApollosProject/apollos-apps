@@ -19,11 +19,23 @@ class TouchableScale extends Component {
     },
   };
 
-  scale = new Animated.Value(this.props.active ? this.props.minScale : 1);
+  constructor(props) {
+    super();
 
-  animatedStyle = {
-    transform: [{ scale: this.scale }],
-  };
+    this.scale = new Animated.Value(props.active ? props.minScale : 1);
+
+    this.animatedStyle = {
+      transform: [{ scale: this.scale }],
+    };
+
+    this.animationHandlers = props.onPress // fixes animation firing when there is no onPress function
+      ? {
+          onPress: props.onPress,
+          onPressIn: this.handlePressIn,
+          onPressOut: this.handlePressOut,
+        }
+      : {};
+  }
 
   handlePressIn = () => {
     Animated.spring(this.scale, {
@@ -52,16 +64,7 @@ class TouchableScale extends Component {
       ...touchableProps
     } = this.props;
     return (
-      <TouchableWithoutFeedback
-        {...touchableProps}
-        {...(onPress // fixes animation firing when there is no onPress function
-          ? {
-              onPress,
-              onPressIn: this.handlePressIn,
-              onPressOut: this.handlePressOut,
-            }
-          : {})}
-      >
+      <TouchableWithoutFeedback {...touchableProps} {...this.animationHandlers}>
         <Animated.View style={[this.animatedStyle, style]}>
           {children}
         </Animated.View>
