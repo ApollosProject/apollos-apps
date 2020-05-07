@@ -45,6 +45,7 @@ exports[`The PrayerSwiper component should render with a fragment as a child 1`]
       }
     }
     disableNextButton={false}
+    disablePrevButton={false}
     dot={
       <withOrientation
         forceInset={
@@ -350,6 +351,7 @@ exports[`The PrayerSwiper component should render with an array as a child 1`] =
       }
     }
     disableNextButton={false}
+    disablePrevButton={false}
     dot={
       <withOrientation
         forceInset={
