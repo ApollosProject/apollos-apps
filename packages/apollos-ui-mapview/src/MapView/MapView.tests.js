@@ -45,6 +45,19 @@ const currentCampus = {
   street1: '102 N Weatherred Dr',
 };
 
+const digitalCampus = {
+  city: 'Digital Campus',
+  distanceFromLocation: null,
+  id: 'Campus:575b6e6d7046a885bea4e300b5c04067',
+  image: 'https://www.placecage.com/c/250/250',
+  latitude: null,
+  longitude: null,
+  name: 'Online',
+  postalCode: '',
+  state: '',
+  street1: '',
+};
+
 const initialRegion = {
   latitude: 39.809734,
   latitudeDelta: 100,
@@ -65,6 +78,21 @@ describe('<MapView>', () => {
         <MapView
           navigation={navigation}
           campuses={campuses}
+          initialRegion={initialRegion}
+          userLocation={currentCampus}
+          currentCampus={currentCampus}
+          onLocationSelect={jest.fn()}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with a digital campus', () => {
+    const tree = renderer.create(
+      <Providers>
+        <MapView
+          navigation={navigation}
+          campuses={[...campuses, digitalCampus]}
           initialRegion={initialRegion}
           userLocation={currentCampus}
           currentCampus={currentCampus}
