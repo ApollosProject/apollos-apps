@@ -84,9 +84,9 @@ class PrayerSwiper extends Component {
       scrollBy: this.scrollBy,
     });
 
-    // The user can pass either a set of components in a fragment, or an array of components.
-    // If the uses a fragment, we need to remove the fragment and render the components directly.
-    // Otherwise the slider will treat the fragment as a single slide.
+    /* The user can pass either a set of components in a fragment, or an array of components.
+     * If the uses a fragment, we need to remove the fragment and render the components directly
+     * otherwise the slider will treat the fragment as a single slide. */
     let slides = children;
     if (ReactIs.typeOf(children) === ReactIs.Fragment) {
       slides = children.props.children;
