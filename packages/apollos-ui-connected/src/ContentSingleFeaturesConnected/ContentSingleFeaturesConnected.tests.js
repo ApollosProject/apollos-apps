@@ -20,6 +20,14 @@ describe('ContentSingleFeaturesConnected', () => {
             id: 'WeekendContentItem:1',
             features: [
               {
+                id: 'WebviewFeature:6',
+                url:
+                  'https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWWvHBEQLnV1N',
+                title: 'Test Title',
+                linkText: 'Text Link Text',
+                __typename: 'WebviewFeature',
+              },
+              {
                 id: 'TextFeature:1',
                 body: 'this is another, text feature',
                 sharing: {
