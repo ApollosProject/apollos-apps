@@ -385,7 +385,9 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
           case 'HorizontalCardList':
             return this.createHorizontalCardListFeature(featureConfig);
           case 'HeroListFeature':
-            console.warn('Deprecated: Please use the name "HeroList" instead. You used "HeroListFeature"');
+            console.warn(
+              'Deprecated: Please use the name "HeroList" instead. You used "HeroListFeature"'
+            );
             return this.createHeroListFeature(featureConfig);
           case 'HeroList':
             return this.createHeroListFeature(featureConfig);
