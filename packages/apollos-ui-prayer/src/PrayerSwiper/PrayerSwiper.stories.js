@@ -12,7 +12,9 @@ storiesOf('ui-prayer/PrayerSwiper', module).add('example', () => (
       { swipeForward } //eslint-disable-line
     ) => (
       <>
-        <CenteredView>
+        <CenteredView
+          style={{ backgroundColor: 'salmon' }} // eslint-disable-line
+        >
           <PrayerCard
             avatar={{
               uri: 'https://picsum.photos/400/400',
@@ -23,7 +25,9 @@ storiesOf('ui-prayer/PrayerSwiper', module).add('example', () => (
             title={'Pray for Peter'}
           />
         </CenteredView>
-        <CenteredView>
+        <CenteredView
+          style={{ backgroundColor: 'teal' }} // eslint-disable-line
+        >
           <PrayerCard
             avatar={{
               uri: 'https://picsum.photos/400/400',
@@ -34,7 +38,9 @@ storiesOf('ui-prayer/PrayerSwiper', module).add('example', () => (
             title={'Pray for Peter'}
           />
         </CenteredView>
-        <CenteredView>
+        <CenteredView
+          style={{ backgroundColor: 'goldenrod' }} // eslint-disable-line
+        >
           <PrayerCard
             avatar={{
               uri: 'https://picsum.photos/400/400',
