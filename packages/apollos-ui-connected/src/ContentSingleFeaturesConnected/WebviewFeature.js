@@ -6,9 +6,9 @@ import { Platform, View, TouchableOpacity, Linking } from 'react-native';
 // import { SafeAreaView } from 'react-navigation';
 
 const StyledCard = styled(
-  ({ theme }) => ({
+  ({ theme, height }) => ({
     backgroundColor: theme.colors.black,
-    height: 400,
+    height,
     borderRadius: theme.sizing.baseBorderRadius,
     marginHorizontal: theme.sizing.baseUnit,
     marginVertical: theme.sizing.baseUnit * 0.75,
@@ -48,8 +48,8 @@ const StyledSideBySideView = styled(
   'ui-connected.WebviewFeature.StyledSideBySideView'
 )(SideBySideView);
 
-const WebviewFeature = ({ url, title, linkText }) => (
-  <StyledCard>
+const WebviewFeature = ({ url, title, linkText, height }) => (
+  <StyledCard height={height}>
     {title && (
       <StyledSideBySideView>
         <StyledH3 padded>{title}</StyledH3>
@@ -62,10 +62,15 @@ const WebviewFeature = ({ url, title, linkText }) => (
   </StyledCard>
 );
 
+WebviewFeature.defaultProps = {
+  height: 400,
+};
+
 WebviewFeature.propTypes = {
   url: PropTypes.string.isRequired,
   title: PropTypes.string,
   linkText: PropTypes.string,
+  height: PropTypes.number,
 };
 
 export default WebviewFeature;

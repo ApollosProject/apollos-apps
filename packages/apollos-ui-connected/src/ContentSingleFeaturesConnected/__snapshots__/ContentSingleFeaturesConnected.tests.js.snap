@@ -36,6 +36,7 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
     </Text>
   </View>
   <View
+    height={400}
     style={
       Object {
         "backgroundColor": "#000000",
