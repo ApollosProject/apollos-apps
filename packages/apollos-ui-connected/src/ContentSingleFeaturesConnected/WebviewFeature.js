@@ -35,7 +35,7 @@ const StyledH3 = styled(
 
 const StyledText = styled(
   ({ theme }) => ({
-    color: theme.colors.screen,
+    color: theme.colors.secondary,
     paddingHorizontal: theme.sizing.baseUnit,
   }),
   'ui-connected.WebviewFeature.StyledText'

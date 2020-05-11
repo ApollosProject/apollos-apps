@@ -100,7 +100,7 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
         <Text
           style={
             Object {
-              "color": "#F8F7F4",
+              "color": "#17B582",
               "fontFamily": "System",
               "fontSize": 14,
               "fontStyle": null,
