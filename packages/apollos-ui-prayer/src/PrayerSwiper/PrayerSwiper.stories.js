@@ -1,8 +1,9 @@
 import React from 'react';
 
 import { storiesOf } from '@apollosproject/ui-storybook';
-import { CenteredView, H1 } from '@apollosproject/ui-kit';
+import { CenteredView } from '@apollosproject/ui-kit';
 
+import PrayerCard from '../PrayerCard';
 import PrayerSwiper from '.';
 
 storiesOf('ui-prayer/PrayerSwiper', module).add('example', () => (
@@ -12,13 +13,37 @@ storiesOf('ui-prayer/PrayerSwiper', module).add('example', () => (
     ) => (
       <>
         <CenteredView>
-          <H1>Hello?</H1>
+          <PrayerCard
+            avatar={{
+              uri: 'https://picsum.photos/400/400',
+            }}
+            prayer={
+              'For my 15+ year old dog as she makes her journey from this life. she has been a joy and a blessing to us since we adopted her 12 years ago. Thank you Lord for giving us such a sweet and loving companion.'
+            }
+            title={'Pray for Peter'}
+          />
         </CenteredView>
         <CenteredView>
-          <H1>Hi!</H1>
+          <PrayerCard
+            avatar={{
+              uri: 'https://picsum.photos/400/400',
+            }}
+            prayer={
+              'For my 15+ year old dog as she makes her journey from this life. she has been a joy and a blessing to us since we adopted her 12 years ago. Thank you Lord for giving us such a sweet and loving companion.'
+            }
+            title={'Pray for Peter'}
+          />
         </CenteredView>
         <CenteredView>
-          <H1>{`Well isn't this awkward.`}</H1>
+          <PrayerCard
+            avatar={{
+              uri: 'https://picsum.photos/400/400',
+            }}
+            prayer={
+              'For my 15+ year old dog as she makes her journey from this life. she has been a joy and a blessing to us since we adopted her 12 years ago. Thank you Lord for giving us such a sweet and loving companion.'
+            }
+            title={'Pray for Peter'}
+          />
         </CenteredView>
       </>
     )}
