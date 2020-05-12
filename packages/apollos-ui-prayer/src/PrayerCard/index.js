@@ -13,17 +13,24 @@ import {
   withTheme,
 } from '@apollosproject/ui-kit';
 
-const AvatarWrapper = styled(({ theme }) => ({
-  alignItems: 'center',
-  paddingBottom: theme.sizing.baseUnit,
-}))(View);
 
-const StyledCard = withTheme(({ theme }) => ({
-  cardColor: Color(theme.colors.white)
-    .fade(theme.alpha.high)
-    .rgb()
-    .string(),
-}))(Card);
+const AvatarWrapper = styled(
+  ({ theme }) => ({
+    alignItems: 'center',
+    paddingBottom: theme.sizing.baseUnit,
+  }),
+  'ui-prayer.PrayerCard.AvatarWrapper'
+)(View);
+
+const StyledCard = withTheme(
+  ({ theme }) => ({
+    cardColor: Color(theme.colors.white)
+      .fade(theme.alpha.high)
+      .rgb()
+      .string(),
+  }),
+  'ui-prayer.PrayerCard.StyledCard'
+)(Card);
 
 const Content = styled(({ theme }) => ({
   paddingVertical: theme.sizing.baseUnit * 1.5, // TODO: move this style into `CardContent`
