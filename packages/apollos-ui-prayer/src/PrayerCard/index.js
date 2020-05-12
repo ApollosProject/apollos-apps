@@ -15,16 +15,20 @@ import {
 import PrayerContent from './PrayerContent';
 
 const AvatarWrapper = styled(
-  ({ theme }) => ({
+  ({ hasAvatar, theme }) => ({
     alignItems: 'center',
-    paddingBottom: theme.sizing.baseUnit,
+    /* `DefaultAvatar` has some padding built into the icon so we don't need this if we don't have a
+     * users `avatar` */
+    paddingBottom: hasAvatar ? theme.sizing.baseUnit : 0,
   }),
   'ui-prayer.PrayerCard.AvatarWrapper'
 )(View);
 
 const DefaultAvatar = withTheme(
   ({ theme }) => ({
-    size: theme.sizing.avatar.medium,
+    /* the icon sits in a containter with padding making it's size a touch smaller than it's
+     * container size. This adjusts it to be roughly the same as `avatar.medium` */
+    size: theme.sizing.avatar.medium * 1.25,
     name: 'avatar',
   }),
   'ui-prayer.PrayerCard.DefaultAvatar'
@@ -48,7 +52,7 @@ const Content = styled(({ theme }) => ({
 const PrayerCard = ({ avatar, prayer, title }) => (
   <StyledCard>
     <Content>
-      <AvatarWrapper>
+      <AvatarWrapper hasAvatar={!!avatar}>
         {avatar ? (
           <Avatar source={avatar} size={'medium'} />
         ) : (
