@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import RNMapView from 'react-native-maps';
 import { Animated, Dimensions, Platform, PixelRatio } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
-import { debounce } from 'lodash';
+import { debounce, isNil } from 'lodash';
 
 import {
   Button,
@@ -40,6 +40,11 @@ const StyledCampusCard = styled(
   }),
   'ui-mapview.MapView.StyledCampusCard'
 )(CampusCard);
+
+const ConfirmButton = withTheme(
+  () => ({}),
+  'ui-mapview.MapView.StyledConfirmButton'
+)(Button);
 
 class MapView extends Component {
   static propTypes = {
@@ -146,6 +151,12 @@ class MapView extends Component {
     ];
   }
 
+  get mappableCampuses() {
+    return this.sortedCampuses.filter(
+      ({ latitude, longitude }) => !isNil(latitude) && !isNil(longitude)
+    );
+  }
+
   getCampusAddress = (campus) =>
     `${campus.street1}\n${campus.city}, ${campus.state} ${campus.postalCode}`;
 
@@ -181,7 +192,9 @@ class MapView extends Component {
 
     const visibleCampuses = [
       ...(this.currentCampus ? [this.currentCampus] : this.sortedCampuses),
-    ];
+    ].filter(
+      ({ latitude, longitude }) => !isNil(latitude) && !isNil(longitude)
+    );
 
     if (userLocation) {
       // If we have a user location, we should include it in the current window
@@ -220,7 +233,7 @@ class MapView extends Component {
             this.map = map;
           }}
         >
-          {this.sortedCampuses.map((campus, index) => {
+          {this.mappableCampuses.map((campus, index) => {
             const campusOpacity = {
               opacity: interpolations[index].opacity,
             };
@@ -278,7 +291,7 @@ class MapView extends Component {
           </Animated.ScrollView>
           <MediaPlayerSpacer>
             <PaddedView>
-              <Button
+              <ConfirmButton
                 title={this.props.buttonTitle}
                 pill={false}
                 type={'secondary'}

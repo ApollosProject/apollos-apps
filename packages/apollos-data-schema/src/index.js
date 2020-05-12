@@ -753,6 +753,15 @@ export const featuresSchema = gql`
     scriptures: [Scripture]
   }
 
+  type WebviewFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    linkText: String
+    title: String
+    url: String
+  }
+
   extend type WeekendContentItem {
     features: [Feature]
   }
