@@ -5,14 +5,13 @@ import PropTypes from 'prop-types';
 
 import {
   Avatar,
-  BodyText,
   Card,
   CardContent,
-  H4,
   styled,
   withTheme,
 } from '@apollosproject/ui-kit';
 
+import PrayerContent from './PrayerContent';
 
 const AvatarWrapper = styled(
   ({ theme }) => ({
@@ -43,8 +42,7 @@ const PrayerCard = ({ avatar, prayer, title }) => (
       <AvatarWrapper>
         <Avatar source={avatar} size={'medium'} />
       </AvatarWrapper>
-      <H4 padded>{title}</H4>
-      <BodyText>{prayer}</BodyText>
+      <PrayerContent title={title} prayer={prayer} />
     </Content>
   </StyledCard>
 );
