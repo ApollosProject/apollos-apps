@@ -5,14 +5,16 @@ import PropTypes from 'prop-types';
 
 import {
   Avatar,
+  BodyText,
   Card,
   CardContent,
+  H4,
   Icon,
   styled,
   withTheme,
 } from '@apollosproject/ui-kit';
 
-import PrayerContent from './PrayerContent';
+// import PrayerContent from './PrayerContent';
 
 const AvatarWrapper = styled(
   ({ hasAvatar, theme }) => ({
@@ -26,10 +28,10 @@ const AvatarWrapper = styled(
 
 const DefaultAvatar = withTheme(
   ({ theme }) => ({
+    name: 'avatar',
     /* the icon sits in a containter with padding making it's size a touch smaller than it's
      * container size. This adjusts it to be roughly the same as `avatar.medium` */
     size: theme.sizing.avatar.medium * 1.25,
-    name: 'avatar',
   }),
   'ui-prayer.PrayerCard.DefaultAvatar'
 )(Icon);
@@ -45,9 +47,25 @@ const StyledCard = withTheme(
 )(Card);
 
 const Content = styled(({ theme }) => ({
-  paddingVertical: theme.sizing.baseUnit * 1.5, // TODO: move this style into `CardContent`
   paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: move this style into `CardContent`
+  paddingVertical: theme.sizing.baseUnit * 1.5, // TODO: move this style into `CardContent`
 }))(CardContent);
+
+const PrayerPrompt = styled({
+  alignItems: 'center',
+  flexDirection: 'row',
+})(View);
+
+const PlusIcon = withTheme(
+  ({ theme }) => ({
+    name: 'plus',
+    size: theme.sizing.baseUnit * 1.5,
+    style: {
+      marginRight: theme.sizing.baseUnit * 0.5,
+    },
+  }),
+  'ui-prayer.PrayerCard.PlusIcon'
+)(Icon);
 
 const PrayerCard = ({ avatar, prayer, title }) => (
   <StyledCard>
@@ -59,7 +77,17 @@ const PrayerCard = ({ avatar, prayer, title }) => (
           <DefaultAvatar />
         )}
       </AvatarWrapper>
-      <PrayerContent title={title} prayer={prayer} />
+
+      <H4 padded>{title}</H4>
+      {prayer ? (
+        <BodyText>{prayer}</BodyText>
+      ) : (
+        <PrayerPrompt>
+          <PlusIcon />
+          <BodyText>{`I'm thankful for...`}</BodyText>
+        </PrayerPrompt>
+      )}
+      {/* <PrayerContent title={title} prayer={prayer} /> */}
     </Content>
   </StyledCard>
 );
@@ -68,6 +96,10 @@ PrayerCard.propTypes = {
   avatar: PropTypes.shape({}),
   title: PropTypes.string,
   prayer: PropTypes.string,
+};
+
+PrayerCard.defaultProps = {
+  title: 'Add your prayer',
 };
 
 export default PrayerCard;

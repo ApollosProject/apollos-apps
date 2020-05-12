@@ -13,15 +13,7 @@ storiesOf('ui-prayer/PrayerCard', module)
       {story()}
     </CenteredView>
   ))
-  .add('default', () => (
-    <PrayerCard
-      prayer={
-        'For my 15+ year old dog as she makes her journey from this life. she has been a joy and a blessing to us since we adopted her 12 years ago. Thank you Lord for giving us such a sweet and loving companion.'
-      }
-      title={'Pray for Peter'}
-    />
-  ))
-  .add('avatar', () => (
+  .add('example – prayer', () => (
     <PrayerCard
       avatar={{
         uri: 'https://picsum.photos/400/400',
@@ -31,4 +23,27 @@ storiesOf('ui-prayer/PrayerCard', module)
       }
       title={'Pray for Peter'}
     />
-  ));
+  ))
+  .add('example – prayer input', () => (
+    <PrayerCard
+      avatar={{
+        uri: 'https://picsum.photos/400/400',
+      }}
+    />
+  ))
+  .add('default', () => <PrayerCard />)
+  .add('avatar', () => (
+    <PrayerCard
+      avatar={{
+        uri: 'https://picsum.photos/400/400',
+      }}
+    />
+  ))
+  .add('prayer', () => (
+    <PrayerCard
+      prayer={
+        'For my 15+ year old dog as she makes her journey from this life. she has been a joy and a blessing to us since we adopted her 12 years ago. Thank you Lord for giving us such a sweet and loving companion.'
+      }
+    />
+  ))
+  .add('title', () => <PrayerCard title={'Custom title'} />);
