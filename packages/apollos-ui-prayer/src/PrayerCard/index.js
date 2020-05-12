@@ -7,6 +7,7 @@ import {
   Avatar,
   Card,
   CardContent,
+  Icon,
   styled,
   withTheme,
 } from '@apollosproject/ui-kit';
@@ -20,6 +21,14 @@ const AvatarWrapper = styled(
   }),
   'ui-prayer.PrayerCard.AvatarWrapper'
 )(View);
+
+const DefaultAvatar = withTheme(
+  ({ theme }) => ({
+    size: theme.sizing.avatar.medium,
+    name: 'avatar',
+  }),
+  'ui-prayer.PrayerCard.DefaultAvatar'
+)(Icon);
 
 const StyledCard = withTheme(
   ({ theme }) => ({
@@ -40,7 +49,11 @@ const PrayerCard = ({ avatar, prayer, title }) => (
   <StyledCard>
     <Content>
       <AvatarWrapper>
-        <Avatar source={avatar} size={'medium'} />
+        {avatar ? (
+          <Avatar source={avatar} size={'medium'} />
+        ) : (
+          <DefaultAvatar />
+        )}
       </AvatarWrapper>
       <PrayerContent title={title} prayer={prayer} />
     </Content>
