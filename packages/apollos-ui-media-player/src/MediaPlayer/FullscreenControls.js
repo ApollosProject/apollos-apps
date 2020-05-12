@@ -313,7 +313,9 @@ class FullscreenControls extends PureComponent {
               </UpperControls>
               <LowerControls horizontal={false}>
                 <CastButtons>
-                  {Platform.OS === 'ios' && this.props.airPlayEnabled ? (
+                  {Platform.OS === 'ios' &&
+                  this.props.airPlayEnabled &&
+                  !this.props.isCasting ? (
                     <AirPlayButton />
                   ) : null}
                   {this.props.googleCastEnabled ? <GoogleCastButton /> : null}
