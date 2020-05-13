@@ -1,5 +1,5 @@
-import React from 'react';
-import { View } from 'react-native';
+import React, { useState } from 'react';
+import { TextInput, View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import {
@@ -26,14 +26,28 @@ const PlusIcon = withTheme(
   'ui-prayer.PrayerCard.PlusIcon'
 )(Icon);
 
-const PrayerInput = ({ prompt }) => (
-  <Touchable>
-    <PrayerPrompt>
-      <PlusIcon />
-      <BodyText>{prompt}</BodyText>
-    </PrayerPrompt>
-  </Touchable>
-);
+const PrayerInput = ({ prompt }) => {
+  const [state, setState] = useState({
+    isEditing: false,
+    value: '',
+  });
+
+  return !state.isEditing ? (
+    <Touchable onPress={() => setState({ isEditing: !state.isEditing })}>
+      <PrayerPrompt>
+        <PlusIcon />
+        <BodyText>{prompt}</BodyText>
+      </PrayerPrompt>
+    </Touchable>
+  ) : (
+    <TextInput
+      autoFocus
+      multiline
+      // onChangeText={(value) => setState({ value })}
+      // value={state.value}
+    />
+  );
+};
 
 PrayerInput.propTypes = {
   prompt: PropTypes.string,
