@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { TextInput, View } from 'react-native';
 import PropTypes from 'prop-types';
 
