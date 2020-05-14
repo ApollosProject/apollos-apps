@@ -29,11 +29,16 @@ const PlusIcon = withTheme(
 const PrayerInput = ({ prompt }) => {
   const [state, setState] = useState({
     isEditing: false,
-    value: '',
   });
 
+  const handleOnBlur = () => {
+    if (!state.value && state.isEditing) {
+      setState({ isEditing: false });
+    }
+  };
+
   return !state.isEditing ? (
-    <Touchable onPress={() => setState({ isEditing: !state.isEditing })}>
+    <Touchable onPress={() => setState({ isEditing: true })}>
       <PrayerPrompt>
         <PlusIcon />
         <BodyText>{prompt}</BodyText>
@@ -43,8 +48,10 @@ const PrayerInput = ({ prompt }) => {
     <TextInput
       autoFocus
       multiline
-      // onChangeText={(value) => setState({ value })}
-      // value={state.value}
+      onBlur={handleOnBlur}
+      onChangeText={(value) =>
+        setState((prevState) => ({ ...prevState, value }))
+      }
     />
   );
 };
