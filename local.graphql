@@ -287,8 +287,11 @@ type LiveStream {
   contentItem: ContentItem
 }
 
-type WebviewFeature {
+type WebviewFeature implements Feature & Node {
+  id: ID!
   order: Int
+  linkText: String
+  title: String
   url: String
 }
 
