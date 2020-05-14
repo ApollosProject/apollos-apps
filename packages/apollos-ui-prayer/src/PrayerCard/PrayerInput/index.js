@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TextInput, View } from 'react-native';
 import PropTypes from 'prop-types';
 
@@ -26,19 +26,27 @@ const PlusIcon = withTheme(
   'ui-prayer.PrayerCard.PlusIcon'
 )(Icon);
 
-const PrayerInput = ({ prompt }) => {
-  const [state, setState] = useState({
-    isEditing: false,
-  });
+const PrayerInput = ({ onBlur, onPress, prompt }) => {
+  const [isEditing, setIsEditing] = useState(false);
+  const [value, setValue] = useState('');
 
+  // eslint-disable-next-line consistent-return
   const handleOnBlur = () => {
-    if (!state.value && state.isEditing) {
-      setState({ isEditing: false });
+    if (!value && isEditing) {
+      setIsEditing(false);
+
+      return onBlur && onBlur({ isEditing: false, value });
     }
   };
 
-  return !state.isEditing ? (
-    <Touchable onPress={() => setState({ isEditing: true })}>
+  const handleOnPress = () => {
+    setIsEditing(true);
+
+    return onPress && onPress({ isEditing: true, value });
+  };
+
+  return !isEditing ? (
+    <Touchable onPress={handleOnPress}>
       <PrayerPrompt>
         <PlusIcon />
         <BodyText>{prompt}</BodyText>
@@ -49,14 +57,14 @@ const PrayerInput = ({ prompt }) => {
       autoFocus
       multiline
       onBlur={handleOnBlur}
-      onChangeText={(value) =>
-        setState((prevState) => ({ ...prevState, value }))
-      }
+      onChangeText={(text) => setValue(text)}
     />
   );
 };
 
 PrayerInput.propTypes = {
+  onBlur: PropTypes.func,
+  onPress: PropTypes.func,
   prompt: PropTypes.string,
 };
 
