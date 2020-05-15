@@ -5,13 +5,21 @@ export default {
     addPrayer: (root, args, { dataSources }) =>
       dataSources.Prayer.addPrayer(args),
   },
-  Prayer: {
+  PrayerRequest: {
     id: ({ id }, args, context, { parentType }) =>
       createGlobalId(id, parentType.name),
     isAnonymous: ({ isPublic }) => !isPublic,
     requestor: ({ requestedByPersonAliasId }, args, { dataSources }) =>
       dataSources.Person.getFromAliasId(requestedByPersonAliasId),
-    isPrayedBy: () => false, // todo
+    isPrayed: async ({ id }, args, { dataSources }, { parentType }) => {
+      const interactions = await dataSources.Interactions.getInteractionsForCurrentUserAndNodes(
+        {
+          nodeIds: [createGlobalId(id, parentType.name)],
+          actions: ['PRAY'],
+        }
+      );
+      return interactions.length;
+    },
   },
   PrayerListFeature: {
     // id: ID!

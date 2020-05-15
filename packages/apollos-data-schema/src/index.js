@@ -792,12 +792,12 @@ export const eventSchema = gql`
 `;
 
 export const prayerSchema = gql`
-  type Prayer implements Node {
+  type PrayerRequest implements Node {
     id: ID!
     text: String!
     requestor: Person
     isAnonymous: Boolean
-    isPrayedBy(userId: ID): Boolean
+    isPrayed: Boolean
   }
 
   type PrayerListFeature implements Feature & Node {
@@ -806,11 +806,15 @@ export const prayerSchema = gql`
 
     title: String
     subtitle: String
-    prayers: [Prayer]
+    prayers: [PrayerRequest]
   }
 
   extend type Mutation {
-    addPrayer(text: String!, isAnonymous: Boolean): Prayer
+    addPrayer(text: String!, isAnonymous: Boolean): PrayerRequest
+  }
+
+  extend enum InteractionAction {
+    PRAY
   }
 `;
 
