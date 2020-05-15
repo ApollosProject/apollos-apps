@@ -3,6 +3,7 @@ import { TextInput, View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import {
+  BodySmall,
   BodyText,
   Icon,
   styled,
@@ -10,10 +11,20 @@ import {
   withTheme,
 } from '@apollosproject/ui-kit';
 
-const PrayerPrompt = styled({
-  alignItems: 'center',
-  flexDirection: 'row',
-})(View);
+const TextLimit = withTheme(({ length, maxLength, maxLengthWarning }) => ({
+  ...(length >= maxLength - maxLengthWarning / 2
+    ? {
+        bold: true,
+      }
+    : {}),
+}))(BodySmall);
+
+const TextLimitWrapper = styled(({ theme }) => ({
+  // position: 'absolute',
+  // bottom: theme.sizing.baseUnit * 0.5,
+  // right: theme.sizing.baseUnit,
+  alignSelf: 'flex-end',
+}))(View);
 
 const PlusIcon = withTheme(
   ({ theme }) => ({
@@ -25,6 +36,11 @@ const PlusIcon = withTheme(
   }),
   'ui-prayer.PrayerCard.PlusIcon'
 )(Icon);
+
+const PrayerPrompt = styled({
+  alignItems: 'center',
+  flexDirection: 'row',
+})(View);
 
 const PrayerInput = ({
   onBlur,
@@ -59,12 +75,27 @@ const PrayerInput = ({
       </PrayerPrompt>
     </Touchable>
   ) : (
-    <TextInput
-      autoFocus
-      multiline
-      onBlur={handleOnBlur}
-      onChangeText={(text) => setValue(text)}
-    />
+    <>
+      <TextInput
+        autoFocus
+        maxLength={maxLength}
+        multiline
+        onBlur={handleOnBlur}
+        onChangeText={(text) => setPrayer(text)}
+        scrollEnabled={false}
+      />
+      {prayer.length >= maxLength - maxLengthWarning ? (
+        <TextLimitWrapper>
+          <TextLimit
+            length={prayer.length}
+            maxLength={maxLength}
+            maxLengthWarning={maxLengthWarning}
+          >
+            {`${prayer.length}/${maxLength}`}
+          </TextLimit>
+        </TextLimitWrapper>
+      ) : null}
+    </>
   );
 };
 
