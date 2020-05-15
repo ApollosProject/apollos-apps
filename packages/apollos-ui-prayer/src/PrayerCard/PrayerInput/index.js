@@ -26,7 +26,7 @@ const PlusIcon = withTheme(
   'ui-prayer.PrayerCard.PlusIcon'
 )(Icon);
 
-const PrayerInput = ({ onBlur, onPress, prompt }) => {
+const PrayerInput = ({ onBlur, onPress, prayerLimit, prompt }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [prayer, setPrayer] = useState('');
 
@@ -65,11 +65,13 @@ const PrayerInput = ({ onBlur, onPress, prompt }) => {
 PrayerInput.propTypes = {
   onBlur: PropTypes.func,
   onPress: PropTypes.func,
+  prayerLimit: PropTypes.number,
   prompt: PropTypes.string,
 };
 
 PrayerInput.defaultProps = {
   prompt: "I'm thankful for...",
+  prayerLimit: 280,
 };
 
 export default PrayerInput;
