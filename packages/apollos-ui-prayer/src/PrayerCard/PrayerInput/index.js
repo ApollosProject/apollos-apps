@@ -28,21 +28,21 @@ const PlusIcon = withTheme(
 
 const PrayerInput = ({ onBlur, onPress, prompt }) => {
   const [isEditing, setIsEditing] = useState(false);
-  const [value, setValue] = useState('');
+  const [prayer, setPrayer] = useState('');
 
   // eslint-disable-next-line consistent-return
   const handleOnBlur = () => {
-    if (!value && isEditing) {
+    if (!prayer && isEditing) {
       setIsEditing(false);
 
-      return onBlur && onBlur({ isEditing: false, value });
+      return onBlur && onBlur({ isEditing: false, prayer });
     }
   };
 
   const handleOnPress = () => {
     setIsEditing(true);
 
-    return onPress && onPress({ isEditing: true, value });
+    return onPress && onPress({ isEditing: true, prayer });
   };
 
   return !isEditing ? (
