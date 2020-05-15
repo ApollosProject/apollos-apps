@@ -791,4 +791,27 @@ export const eventSchema = gql`
   }
 `;
 
+export const prayerSchema = gql`
+  type Prayer implements Node {
+    id: ID!
+    text: String!
+    requestor: Person
+    isAnonymous: Boolean
+    isPrayedBy(userId: ID): Boolean
+  }
+
+  type PrayerListFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    title: String
+    subtitle: String
+    prayers: [Prayer]
+  }
+
+  extend type Mutation {
+    addPrayer(text: String!, isAnonymous: Boolean): Prayer
+  }
+`;
+
 export { extendForEachContentItemType };
