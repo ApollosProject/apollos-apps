@@ -14,7 +14,7 @@ import {
   withTheme,
 } from '@apollosproject/ui-kit';
 
-import PrayerInput from './PrayerInput';
+import PrayerInput from '../PrayerInput';
 
 const AvatarWrapper = styled(
   ({ hasAvatar, theme }) => ({
@@ -37,11 +37,23 @@ const DefaultAvatar = withTheme(
 )(Icon);
 
 const StyledCard = withTheme(
-  ({ theme }) => ({
-    cardColor: Color(theme.colors.white)
-      .fade(theme.alpha.high)
-      .rgb()
-      .string(),
+  ({ theme, cardColor }) => ({
+    /* Unfortunately we have to jump through hoops and use a `cardColor` rather than just use
+     * transparency due to a bug in android with the shadows 😭 We take `cardColor` and mix it with
+     * `white` using the same level of `alpha` we would have used if transparency was an option. If
+     * no cardColor is passed it uses the default color from the `Card` component.
+     *
+     * Additionally this component is exposes an override via `ui-prayer.PrayerCard.StyledCard` so
+     * that, should you wish, you can change how these colors are mixed.
+     */
+    ...(cardColor
+      ? {
+          cardColor: Color(theme.colors.white)
+            .mix(Color(cardColor), theme.alpha.high)
+            .rgb()
+            .string(),
+        }
+      : {}),
   }),
   'ui-prayer.PrayerCard.StyledCard'
 )(Card);
@@ -51,8 +63,8 @@ const Content = styled(({ theme }) => ({
   paddingVertical: theme.sizing.baseUnit * 1.5, // TODO: move this style into `CardContent`
 }))(CardContent);
 
-const PrayerCard = ({ avatar, prayer, title }) => (
-  <StyledCard>
+const PrayerCard = ({ avatar, cardColor, prayer, title }) => (
+  <StyledCard cardColor={cardColor}>
     <Content>
       <AvatarWrapper hasAvatar={!!avatar}>
         {avatar ? (
@@ -70,6 +82,7 @@ const PrayerCard = ({ avatar, prayer, title }) => (
 
 PrayerCard.propTypes = {
   avatar: PropTypes.shape({}),
+  cardColor: PropTypes.string,
   title: PropTypes.string,
   prayer: PropTypes.string,
 };
