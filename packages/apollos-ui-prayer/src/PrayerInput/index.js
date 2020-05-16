@@ -118,7 +118,7 @@ PrayerInput.propTypes = {
 PrayerInput.defaultProps = {
   prompt: "I'm thankful for...",
   maxLength: 280,
-  maxLengthWarning: 20,
+  maxLengthWarning: 20, // triggers the "warning" to the user based on the number of characters remaining. `maxLength - maxLengthWarning = visual ui warning`
 };
 
 export default PrayerInput;
