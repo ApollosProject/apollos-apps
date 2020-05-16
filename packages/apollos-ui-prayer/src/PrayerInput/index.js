@@ -11,6 +11,11 @@ import {
   withTheme,
 } from '@apollosproject/ui-kit';
 
+const Input = styled(({ theme }) => ({
+  minHeight: theme.sizing.baseUnit * 2.25, // 🧙‍This magic numbers fixes jitter when you begin typing
+  paddingVertical: 0, // fixes jitter when you begin typing on Android
+}))(TextInput);
+
 const TextLimit = withTheme(
   ({ length, maxLength, maxLengthWarning }) => ({
     ...(length >= maxLength - maxLengthWarning / 2
@@ -41,10 +46,11 @@ const PromptIcon = withTheme(
 )(Icon);
 
 const Prompt = styled(
-  {
+  ({ theme }) => ({
     alignItems: 'center',
     flexDirection: 'row',
-  },
+    paddingBottom: theme.sizing.baseUnit * 0.625, // 🧙‍This magic numbers fixes jitter when you begin typing
+  }),
   'ui-prayer.PrayerInput.Prompt'
 )(View);
 
@@ -83,7 +89,7 @@ const PrayerInput = ({
     </Touchable>
   ) : (
     <>
-      <TextInput
+      <Input
         autoFocus
         maxLength={maxLength}
         multiline
@@ -91,7 +97,9 @@ const PrayerInput = ({
         onChangeText={(text) => setPrayer(text)}
         scrollEnabled={false}
         {...TextInputProps}
-      />
+      >
+        <BodyText>{prayer}</BodyText>
+      </Input>
       {prayer.length >= maxLength - maxLengthWarning ? (
         <TextLimitPosition>
           <TextLimit
