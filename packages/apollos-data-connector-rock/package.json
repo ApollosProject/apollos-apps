@@ -17,6 +17,7 @@
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
     ],
+    "setupFiles": ["jest-date-mock"],
     "testEnvironment": "node"
   },
   "dependencies": {
@@ -44,7 +45,8 @@
     "apollo-server": "^2.11.0",
     "apollo-server-env": "^2.3.0",
     "graphql": "14.6.0",
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "jest-date-mock": "^1.0.8"
   },
   "publishConfig": {
     "access": "public"

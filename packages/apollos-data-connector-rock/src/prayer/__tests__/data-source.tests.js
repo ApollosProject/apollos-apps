@@ -1,4 +1,5 @@
 import ApollosConfig from '@apollosproject/config';
+import { advanceTo } from 'jest-date-mock';
 import Prayer from '../data-source';
 import { buildGetMock } from '../../test-utils';
 
@@ -70,7 +71,8 @@ describe('Prayer', () => {
     expect(new Prayer()).toBeTruthy();
   });
 
-  it('gets prayer feed', async () => {
+  it('gets daily prayer feed', async () => {
+    advanceTo(new Date(2020, 1, 20, 0, 0, 0));
     const dataSource = new Prayer();
     const Auth = auth(dataSource);
 
@@ -110,6 +112,7 @@ describe('Prayer', () => {
   });
 
   describe('adding prayer', () => {
+    beforeEach(() => advanceTo(new Date(2020, 1, 20, 0, 0, 0)));
     it('adds prayer', async () => {
       const dataSource = new Prayer();
       const Auth = auth(dataSource);
