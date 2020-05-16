@@ -54,6 +54,7 @@ const PrayerInput = ({
   maxLength,
   maxLengthWarning,
   prompt,
+  ...TextInputProps
 }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [prayer, setPrayer] = useState('');
@@ -89,6 +90,7 @@ const PrayerInput = ({
         onBlur={handleOnBlur}
         onChangeText={(text) => setPrayer(text)}
         scrollEnabled={false}
+        {...TextInputProps}
       />
       {prayer.length >= maxLength - maxLengthWarning ? (
         <TextLimitPosition>
