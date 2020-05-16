@@ -13,4 +13,7 @@ storiesOf('ui-prayer/PrayerInput', module)
       <PaddedView>{story()}</PaddedView>
     </CenteredView>
   ))
-  .add('default', () => <PrayerInput />);
+  .add('default', () => <PrayerInput />)
+  .add('maxLength: 12', () => <PrayerInput maxLength={12} />)
+  .add('maxLengthWarning: 12', () => <PrayerInput maxLengthWarning={270} />)
+  .add('prompt', () => <PrayerInput prompt={'Boom'} />);
