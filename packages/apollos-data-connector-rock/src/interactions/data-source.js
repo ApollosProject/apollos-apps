@@ -11,13 +11,13 @@ export default class Interactions extends RockApolloDataSource {
       COMPLETE: this.updateSeriesStarted.bind(this),
     },
     PrayerRequest: {
-      PRAY: this.incrementPrayer.bind(this);
+      PRAY: this.incrementPrayer.bind(this),
     },
   };
 
   async incrementPrayer({ id }) {
-    const { PrayerRequest } = this.context.dataSources;
-    return PrayerRequest.incrementPrayed(id);
+    const { Prayer } = this.context.dataSources;
+    return Prayer.incrementPrayed(id);
   }
 
   async updateSeriesStarted({ id }) {
