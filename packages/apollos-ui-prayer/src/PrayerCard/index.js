@@ -73,9 +73,17 @@ const PrayerCard = ({ avatar, cardColor, prayer, title }) => (
           <DefaultAvatar />
         )}
       </AvatarWrapper>
-
-      <H4 padded>{title}</H4>
-      {prayer ? <BodyText>{prayer}</BodyText> : <PrayerInput />}
+      {prayer ? (
+        <>
+          <H4 padded>{title}</H4>
+          <BodyText>{prayer}</BodyText>
+        </>
+      ) : (
+        </* we render this without `padded` so that the input text can be aligned correctly */>
+          <H4>{title}</H4>
+          <PrayerInput />
+        </>
+      )}
     </Content>
   </StyledCard>
 );

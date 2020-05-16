@@ -12,7 +12,7 @@ import {
 } from '@apollosproject/ui-kit';
 
 const Input = styled(({ theme }) => ({
-  minHeight: theme.sizing.baseUnit * 2.25, // 🧙‍This magic numbers fixes jitter when you begin typing
+  minHeight: theme.sizing.baseUnit * 3.25, // 🧙‍This magic numbers fixes jitter when you begin typing. At least one `baseUnit` is to ofset `paddingTop` on `Prompt`
   paddingVertical: 0, // fixes jitter when you begin typing on Android
 }))(TextInput);
 
@@ -49,6 +49,7 @@ const Prompt = styled(
   ({ theme }) => ({
     alignItems: 'center',
     flexDirection: 'row',
+    paddingTop: theme.sizing.baseUnit,
     paddingBottom: theme.sizing.baseUnit * 0.625, // 🧙‍This magic numbers fixes jitter when you begin typing
   }),
   'ui-prayer.PrayerInput.Prompt'
