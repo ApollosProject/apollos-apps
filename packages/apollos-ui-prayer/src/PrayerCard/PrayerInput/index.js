@@ -11,20 +11,23 @@ import {
   withTheme,
 } from '@apollosproject/ui-kit';
 
-const TextLimit = withTheme(({ length, maxLength, maxLengthWarning }) => ({
-  ...(length >= maxLength - maxLengthWarning / 2
-    ? {
-        bold: true,
-      }
-    : {}),
-}))(BodySmall);
+const TextLimit = withTheme(
+  ({ length, maxLength, maxLengthWarning }) => ({
+    ...(length >= maxLength - maxLengthWarning / 2
+      ? {
+          bold: true,
+        }
+      : {}),
+  }),
+  'ui-prayer.PrayerInput.TextLimit'
+)(BodySmall);
 
-const TextLimitWrapper = styled(({ theme }) => ({
-  // position: 'absolute',
-  // bottom: theme.sizing.baseUnit * 0.5,
-  // right: theme.sizing.baseUnit,
-  alignSelf: 'flex-end',
-}))(View);
+const TextLimitPosition = styled(
+  {
+    alignSelf: 'flex-end',
+  },
+  'ui-prayer.PrayerInput.TextLimitPosition'
+)(View);
 
 const PlusIcon = withTheme(
   ({ theme }) => ({
@@ -34,13 +37,16 @@ const PlusIcon = withTheme(
       marginRight: theme.sizing.baseUnit * 0.5,
     },
   }),
-  'ui-prayer.PrayerCard.PlusIcon'
+  'ui-prayer.PrayerInput.PlusIcon'
 )(Icon);
 
-const PrayerPrompt = styled({
-  alignItems: 'center',
-  flexDirection: 'row',
-})(View);
+const Prompt = styled(
+  {
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+  'ui-prayer.PrayerInput.Prompt'
+)(View);
 
 const PrayerInput = ({
   onBlur,
@@ -69,10 +75,10 @@ const PrayerInput = ({
 
   return !isEditing ? (
     <Touchable onPress={handleOnPress}>
-      <PrayerPrompt>
+      <Prompt>
         <PlusIcon />
         <BodyText>{prompt}</BodyText>
-      </PrayerPrompt>
+      </Prompt>
     </Touchable>
   ) : (
     <>
@@ -85,7 +91,7 @@ const PrayerInput = ({
         scrollEnabled={false}
       />
       {prayer.length >= maxLength - maxLengthWarning ? (
-        <TextLimitWrapper>
+        <TextLimitPosition>
           <TextLimit
             length={prayer.length}
             maxLength={maxLength}
@@ -93,7 +99,7 @@ const PrayerInput = ({
           >
             {`${prayer.length}/${maxLength}`}
           </TextLimit>
-        </TextLimitWrapper>
+        </TextLimitPosition>
       ) : null}
     </>
   );
