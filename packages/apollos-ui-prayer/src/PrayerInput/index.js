@@ -29,7 +29,7 @@ const TextLimitPosition = styled(
   'ui-prayer.PrayerInput.TextLimitPosition'
 )(View);
 
-const PlusIcon = withTheme(
+const PromptIcon = withTheme(
   ({ theme }) => ({
     name: 'plus',
     size: theme.sizing.baseUnit * 1.5,
@@ -37,7 +37,7 @@ const PlusIcon = withTheme(
       marginRight: theme.sizing.baseUnit * 0.5,
     },
   }),
-  'ui-prayer.PrayerInput.PlusIcon'
+  'ui-prayer.PrayerInput.PromptIcon'
 )(Icon);
 
 const Prompt = styled(
@@ -77,7 +77,7 @@ const PrayerInput = ({
   return !isEditing ? (
     <Touchable onPress={handleOnPress}>
       <Prompt>
-        <PlusIcon />
+        <PromptIcon />
         <BodyText>{prompt}</BodyText>
       </Prompt>
     </Touchable>
