@@ -38,7 +38,7 @@ describe('The PrayerCard component', () => {
   it('should render a custom title', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerCard title={'Custom title text'} />
+        <PrayerCard title={'Custom title text. Boom.'} />
       </Providers>
     );
 
@@ -47,11 +47,7 @@ describe('The PrayerCard component', () => {
   it('should render a prayer', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerCard
-          prayer={
-            'For my 15+ year old dog as she makes her journey from this life. she has been a joy and a blessing to us since we adopted her 12 years ago. Thank you Lord for giving us such a sweet and loving companion.'
-          }
-        />
+        <PrayerCard prayer={'Test prayer. Boom.'} />
       </Providers>
     );
 
