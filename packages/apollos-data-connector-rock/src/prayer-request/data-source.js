@@ -3,7 +3,7 @@ import ApollosConfig from '@apollosproject/config';
 import moment from 'moment-timezone';
 
 const { ROCK, ROCK_MAPPINGS } = ApollosConfig;
-export default class Prayer extends RockApolloDataSource {
+export default class PrayerRequest extends RockApolloDataSource {
   resource = 'PrayerRequests';
 
   expanded = true;

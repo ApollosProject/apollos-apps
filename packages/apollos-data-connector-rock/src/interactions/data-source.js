@@ -16,8 +16,8 @@ export default class Interactions extends RockApolloDataSource {
   };
 
   async incrementPrayer({ id }) {
-    const { Prayer } = this.context.dataSources;
-    return Prayer.incrementPrayed(id);
+    const { PrayerRequest } = this.context.dataSources;
+    return PrayerRequest.incrementPrayed(id);
   }
 
   async updateSeriesStarted({ id }) {
