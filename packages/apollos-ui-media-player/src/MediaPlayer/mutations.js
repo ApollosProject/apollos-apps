@@ -79,6 +79,18 @@ const HIDE_VIDEO = gql`
   }
 `;
 
+const CAST_CONNECTED = gql`
+  mutation {
+    mediaPlayerUpdateState(isCasting: true) @client
+  }
+`;
+
+const CAST_DISCONNECTED = gql`
+  mutation {
+    mediaPlayerUpdateState(isCasting: false) @client
+  }
+`;
+
 const UPDATE_PLAYHEAD = gql`
   mutation mediaPlayerSetPlayhead($currentTime: Float) {
     mediaPlayerSetPlayhead(currentTime: $currentTime) @client
@@ -98,4 +110,6 @@ export {
   UNMUTE,
   SHOW_VIDEO,
   HIDE_VIDEO,
+  CAST_CONNECTED,
+  CAST_DISCONNECTED,
 };

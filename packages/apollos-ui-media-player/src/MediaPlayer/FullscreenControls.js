@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import { Query, withApollo } from 'react-apollo';
 import LinearGradient from 'react-native-linear-gradient';
+import GoogleCast from 'react-native-google-cast';
 import { SafeAreaView } from 'react-navigation';
 import { get } from 'lodash';
 import { compose } from 'recompose';
@@ -37,6 +38,7 @@ import {
 import { ControlsConsumer } from './PlayheadState';
 import Seeker from './Seeker';
 import AirPlayButton from './AirPlayButton';
+import GoogleCastButton from './GoogleCastButton';
 
 const Background = withTheme(({ theme }) => ({
   style: StyleSheet.absoluteFill,
@@ -59,6 +61,12 @@ const LowerControls = styled({
   bottom: 0,
   left: 0,
   right: 0,
+})(PaddedView);
+
+const CastButtons = styled({
+  flexDirection: 'row',
+  justifyContent: 'space-around',
+  alignItems: 'center',
 })(PaddedView);
 
 const PlayControls = styled(({ theme }) => ({
@@ -104,11 +112,17 @@ class FullscreenControls extends PureComponent {
     }),
     showAudioToggleControl: PropTypes.bool,
     showVideoToggleControl: PropTypes.bool,
+    airPlayEnabled: PropTypes.bool,
+    googleCastEnabled: PropTypes.bool,
+    isCasting: PropTypes.bool,
   };
 
   static defaultProps = {
     showAudioToggleControl: true,
     showVideoToggleControl: true,
+    airPlayEnabled: true,
+    googleCastEnabled: true,
+    isCasting: false,
   };
 
   state = {};
@@ -161,10 +175,12 @@ class FullscreenControls extends PureComponent {
 
   handlePlay = () => {
     this.props.client.mutate({ mutation: PLAY });
+    if (this.props.isCasting) GoogleCast.play();
   };
 
   handlePause = () => {
     this.props.client.mutate({ mutation: PAUSE });
+    if (this.props.isCasting) GoogleCast.pause();
   };
 
   handleShowVideo = () => {
@@ -212,7 +228,7 @@ class FullscreenControls extends PureComponent {
 
   renderPlayerControls = ({ isLoading, skip }) => (
     <PlayControls>
-      {this.props.showAudioToggleControl ? (
+      {this.props.showAudioToggleControl && !this.props.isCasting ? (
         <IconSm
           onPress={this.isMuted ? this.handleUnMute : this.handleMute}
           name={this.isMuted ? 'mute' : 'volume'}
@@ -221,22 +237,36 @@ class FullscreenControls extends PureComponent {
       ) : (
         <IconSm name="empty" />
       )}
-      <IconMd
-        onPress={() => skip(-30)}
-        name={'skip-back-thirty'}
-        disabled={isLoading}
-      />
-      <IconLg
-        onPress={this.isPlaying ? this.handlePause : this.handlePlay}
-        name={this.isPlaying ? 'pause' : 'play'}
-        disabled={isLoading}
-      />
-      <IconMd
-        onPress={() => skip(30)}
-        name={'skip-forward-thirty'}
-        disabled={isLoading}
-      />
-      {this.props.showVideoToggleControl ? (
+      {!this.props.isCasting ? (
+        <IconMd
+          onPress={() => skip(-30)}
+          name={'skip-back-thirty'}
+          disabled={isLoading}
+        />
+      ) : (
+        <IconSm name="empty" />
+      )}
+      {// TODO can be enabled once this bug is fixed
+      // https://github.com/react-native-google-cast/react-native-google-cast/issues/151
+      !this.props.isCasting ? (
+        <IconLg
+          onPress={this.isPlaying ? this.handlePause : this.handlePlay}
+          name={this.isPlaying ? 'pause' : 'play'}
+          disabled={isLoading}
+        />
+      ) : (
+        <IconSm name="empty" />
+      )}
+      {!this.props.isCasting ? (
+        <IconMd
+          onPress={() => skip(30)}
+          name={'skip-forward-thirty'}
+          disabled={isLoading}
+        />
+      ) : (
+        <IconSm name="empty" />
+      )}
+      {this.props.showVideoToggleControl && !this.props.isCasting ? (
         <IconSm
           onPress={this.isVideo ? this.handleHideVideo : this.handleShowVideo}
           name={this.isVideo ? 'video' : 'video-off'}
@@ -279,15 +309,26 @@ class FullscreenControls extends PureComponent {
                   <Title>{get(mediaPlayer, 'currentTrack.title')}</Title>
                   <Artist>{get(mediaPlayer, 'currentTrack.artist')}</Artist>
                 </Titles>
-                {Platform.OS === 'ios' ? (
-                  <AirPlayButton />
-                ) : (
-                  <IconSm name="empty" disabled />
-                )}
+                <IconSm name="empty" disabled />
               </UpperControls>
               <LowerControls horizontal={false}>
+                <CastButtons>
+                  {Platform.OS === 'ios' &&
+                  this.props.airPlayEnabled &&
+                  !this.props.isCasting ? (
+                    <AirPlayButton />
+                  ) : null}
+                  {this.props.googleCastEnabled ? <GoogleCastButton /> : null}
+                </CastButtons>
                 <PlayHead>
-                  <Seeker onScrubbing={this.handleOnScrubbing} />
+                  {// TODO can be enabled once this bug is fixed
+                  // https://github.com/react-native-google-cast/react-native-google-cast/issues/151
+                  !this.props.isCasting ? (
+                    <Seeker
+                      onScrubbing={this.handleOnScrubbing}
+                      isCasting={this.props.isCasting}
+                    />
+                  ) : null}
                 </PlayHead>
                 <ControlsConsumer>{this.renderPlayerControls}</ControlsConsumer>
               </LowerControls>
