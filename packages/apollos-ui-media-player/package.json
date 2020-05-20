@@ -68,7 +68,7 @@
     "react-native-video": "5.0.0",
     "react-native-video-controls": "2.2.3",
     "react-navigation": "^3.11.0",
-    "react-test-renderer": "16.6.1"
+    "react-test-renderer": "16.8.6"
   },
   "publishConfig": {
     "access": "public"

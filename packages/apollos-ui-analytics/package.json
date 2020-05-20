@@ -56,7 +56,7 @@
     "react": "16.8.6",
     "react-apollo": "2.5.5",
     "react-native": "0.60.5",
-    "react-test-renderer": "16.6.1"
+    "react-test-renderer": "16.8.6"
   },
   "publishConfig": {
     "access": "public"
