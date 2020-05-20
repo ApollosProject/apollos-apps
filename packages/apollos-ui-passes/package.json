@@ -56,7 +56,7 @@
     "react": "16.8.6",
     "react-native": "0.60.5",
     "react-native-passkit-wallet": "^0.1.4",
-    "react-test-renderer": "16.6.1",
+    "react-test-renderer": "16.8.6",
     "rn-fetch-blob": "^0.10.15"
   },
   "publishConfig": {
