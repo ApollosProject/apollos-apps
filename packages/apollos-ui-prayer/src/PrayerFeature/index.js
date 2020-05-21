@@ -10,6 +10,13 @@ import {
   withIsLoading,
 } from '@apollosproject/ui-kit';
 
+const AvatarWrapper = styled(
+  {
+    paddingRight: 0,
+  },
+  'ui-prayer.PrayerFeature.AvatarWrapper'
+)(PaddedView);
+
 const Header = styled(
   ({ isCard, theme }) => ({
     ...(!isCard
@@ -49,6 +56,7 @@ const PrayerFeature = ({ isCard, isLoading, title, subtitle }) => (
         {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
       </Header>
     ) : null}
+    <AvatarWrapper />
   </RenderAsCard>
 );
 
