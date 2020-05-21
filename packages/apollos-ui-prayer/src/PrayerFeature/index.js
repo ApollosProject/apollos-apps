@@ -3,28 +3,53 @@ import PropTypes from 'prop-types';
 
 import {
   Card,
+  CardContent,
   H3,
   H6,
-  PaddedView,
+  Icon,
   styled,
   withIsLoading,
+  withTheme,
 } from '@apollosproject/ui-kit';
 
 const AvatarWrapper = styled(
-  {
+  ({ theme }) => ({
+    paddingBottom: theme.sizing.baseUnit * 2, // TODO: refactor CardContent to have this be the default
+    paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
     paddingRight: 0,
-  },
+    /* Because `CardContent` is passing `paddingVertical` to `PaddedView` we can't set
+     * `PaddedView`'s `vertical` prop to false. So we have to define out own padding value here. */
+    paddingTop: theme.sizing.baseUnit,
+  }),
   'ui-prayer.PrayerFeature.AvatarWrapper'
-)(PaddedView);
+)(CardContent);
 
 const Header = styled(
   ({ isCard, theme }) => ({
     ...(!isCard
-      ? { paddingTop: theme.sizing.baseUnit * 3, paddingBottom: 0 }
-      : {}),
+      ? {
+          paddingTop: theme.sizing.baseUnit * 3, //
+        }
+      : {
+          paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
+        }),
+    /* Because `CardContent` is passing `paddingVertical` to `PaddedView` we can't set
+     * `PaddedView`'s `vertical` prop to false. So we have to define out own padding value here. */
+    paddingBottom: 0,
   }),
   'ui-prayer.PrayerFeature.Header'
-)(PaddedView);
+)(CardContent);
+
+const AddPrayerIcon = withTheme(
+  ({ theme }) => ({
+    name: 'plus',
+    size: theme.sizing.baseUnit * 1.5,
+    style: {
+      marginRight: theme.sizing.baseUnit * 0.5,
+    },
+  }),
+  'ui-prayer.PrayerInput.PromptIcon'
+)(Icon);
 
 /* TODO: Change to H5 and add appropriate padding. We are using H6 here to be consistant with other
  * "card titles" (`ActionListFeature`). */
@@ -56,7 +81,9 @@ const PrayerFeature = ({ isCard, isLoading, title, subtitle }) => (
         {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
       </Header>
     ) : null}
-    <AvatarWrapper />
+    <AvatarWrapper>
+      <AddPrayerIcon />
+    </AvatarWrapper>
   </RenderAsCard>
 );
 
