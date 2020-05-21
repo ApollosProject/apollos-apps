@@ -3,10 +3,14 @@ import PropTypes from 'prop-types';
 
 import { Card, H3, H6, PaddedView, styled } from '@apollosproject/ui-kit';
 
-const Header = styled(({ theme }) => ({
-  paddingTop: theme.sizing.baseUnit * 3,
-  paddingBottom: 0,
-}))(PaddedView);
+const Header = styled(
+  ({ isCard, theme }) => ({
+    ...(!isCard
+      ? { paddingTop: theme.sizing.baseUnit * 3, paddingBottom: 0 }
+      : {}),
+  }),
+  'ui-prayer.PrayerFeature.Header'
+)(PaddedView);
 
 /* TODO: Change to H5 and add appropriate padding. We are using H6 here to be consistant with other
  * "card titles" (`ActionListFeature`). */
@@ -31,7 +35,7 @@ RenderAsCard.propTypes = {
 const PrayerFeature = ({ isCard, isLoading, title, subtitle }) => (
   <RenderAsCard isCard={isCard} isLoading={isLoading}>
     {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
-      <Header>
+      <Header isCard={isCard}>
         {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
           <Title numberOfLines={1}>{title}</Title>
         ) : null}
