@@ -42,4 +42,22 @@ describe('The PrayerFeature component', () => {
 
     expect(tree).toMatchSnapshot();
   });
+  it('should render a loading state', () => {
+    const tree = renderer.create(
+      <Providers>
+        <PrayerFeature isLoading title={'Example title'} />
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render a loading state without a `Card` border', () => {
+    const tree = renderer.create(
+      <Providers>
+        <PrayerFeature isLoading title={'Example title'} isCard={false} />
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
 });

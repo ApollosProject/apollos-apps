@@ -1,7 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Card, H3, H6, PaddedView, styled } from '@apollosproject/ui-kit';
+import {
+  Card,
+  H3,
+  H6,
+  PaddedView,
+  styled,
+  withIsLoading,
+} from '@apollosproject/ui-kit';
 
 const Header = styled(
   ({ isCard, theme }) => ({
@@ -57,4 +64,4 @@ PrayerFeature.defaultProps = {
   subtitle: 'Prayer',
 };
 
-export default PrayerFeature;
+export default withIsLoading(PrayerFeature);

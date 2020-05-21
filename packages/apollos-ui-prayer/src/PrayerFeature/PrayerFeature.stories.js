@@ -16,5 +16,8 @@ storiesOf('ui-prayer/PrayerFeature', module)
   ))
   .add('default', () => <PrayerFeature />)
   .add('isCard (false)', () => <PrayerFeature isCard={false} />)
+  .add('isLoading', () => (
+    <PrayerFeature isLoading title={'Example title'} isCard={false} />
+  ))
   .add('title', () => <PrayerFeature title={'Example title'} />)
   .add('subtitle', () => <PrayerFeature subtitle={'Custom Subtitle'} />);
