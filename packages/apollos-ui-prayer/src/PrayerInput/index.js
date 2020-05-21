@@ -36,7 +36,7 @@ const TextLimitPosition = styled(
 
 const PromptIcon = withTheme(
   ({ theme }) => ({
-    name: 'plus',
+    name: 'circle-outline-plus',
     size: theme.sizing.baseUnit * 1.5,
     style: {
       marginRight: theme.sizing.baseUnit * 0.5,
