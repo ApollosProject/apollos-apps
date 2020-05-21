@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { H3, H6, PaddedView, styled } from '@apollosproject/ui-kit';
+import { Card, H3, H6, PaddedView, styled } from '@apollosproject/ui-kit';
 
 const Header = styled(({ theme }) => ({
   paddingTop: theme.sizing.baseUnit * 3,
@@ -19,8 +19,17 @@ const Title = styled(
 
 const Subtitle = styled({}, 'ui-prayer.PrayerFeature.Subtitle')(H3);
 
-const PrayerFeature = ({ isLoading, title, subtitle }) => (
-  <>
+const RenderAsCard = ({ children, isCard, isLoading }) =>
+  isCard ? <Card isLoading={isLoading}>{children}</Card> : children;
+
+RenderAsCard.propTypes = {
+  isCard: PropTypes.bool,
+  isLoading: PropTypes.bool,
+  children: PropTypes.node,
+};
+
+const PrayerFeature = ({ isCard, isLoading, title, subtitle }) => (
+  <RenderAsCard isCard={isCard} isLoading={isLoading}>
     {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
       <Header>
         {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
@@ -29,16 +38,18 @@ const PrayerFeature = ({ isLoading, title, subtitle }) => (
         {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
       </Header>
     ) : null}
-  </>
+  </RenderAsCard>
 );
 
 PrayerFeature.propTypes = {
+  isCard: PropTypes.bool,
   isLoading: PropTypes.bool,
   title: PropTypes.string,
   subtitle: PropTypes.string,
 };
 
 PrayerFeature.defaultProps = {
+  isCard: true,
   subtitle: 'Prayer',
 };
 
