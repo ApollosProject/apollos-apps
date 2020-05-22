@@ -1,0 +1,85 @@
+import React from 'react';
+import { FlatList, View } from 'react-native';
+import PropTypes from 'prop-types';
+
+import {
+  ConnectedImage,
+  Icon,
+  ImageSourceType,
+  styled,
+  Touchable,
+  withTheme,
+} from '@apollosproject/ui-kit';
+
+const AddIcon = withTheme(
+  ({ theme }) => ({
+    fill: theme.colors.white,
+    name: 'plus',
+    size: theme.sizing.avatar.medium * 0.475,
+  }),
+  'ui-prayer.PrayerFeature.AddIcon'
+)(Icon);
+
+const AddIconBackground = styled(({ theme }) => ({
+  backgroundColor: theme.colors.action.primary,
+  borderRadius: theme.sizing.avatar.medium * 0.4,
+  padding: theme.sizing.avatar.medium * 0.1625,
+  marginRight: theme.sizing.baseUnit * 0.5,
+}))(View);
+
+const Avatar = styled(({ theme }) => ({
+  aspectRatio: 1,
+  borderRadius: theme.sizing.avatar.medium * 0.4,
+  height: theme.sizing.avatar.medium * 0.8,
+  marginRight: theme.sizing.baseUnit * 0.5,
+}))(ConnectedImage);
+
+const AvatarFeed = withTheme(({ theme }) => ({
+  contentContainterStyle: { alignItems: 'center' },
+  decelerationRate: 'fast', // passed down to rendered ScrollView
+  horizontal: true,
+  getItemLayout: (itemData, index) => ({
+    length: theme.sizing.avatar.medium + theme.sizing.baseUnit * 0.5,
+    offset: (theme.sizing.avatar.medium + theme.sizing.baseUnit * 0.5) * index,
+    index,
+  }),
+  showsHorizontalScrollIndicator: false,
+}))(FlatList);
+
+const keyExtractor = (item) => item && item.id;
+
+const renderListHeader = ({ onPressAdd }) => (
+  <Touchable onPress={() => onPressAdd()}>
+    <AddIconBackground>
+      <AddIcon />
+    </AddIconBackground>
+  </Touchable>
+);
+
+renderListHeader.propTypes = {
+  onPressAdd: PropTypes.func,
+};
+
+// eslint-disable-next-line react/display-name, react/prop-types
+const renderItem = (onPressAvatar) => ({ item }) => (
+  <Touchable onPress={() => onPressAvatar()}>
+    <Avatar source={item} />
+  </Touchable>
+);
+
+const AvatarList = ({ avatars, onPressAdd, onPressAvatar }) => (
+  <AvatarFeed
+    data={avatars}
+    keyExtractor={keyExtractor}
+    ListHeaderComponent={renderListHeader({ onPressAdd })}
+    renderItem={renderItem(onPressAvatar)}
+  />
+);
+
+AvatarList.propTypes = {
+  avatars: PropTypes.arrayOf(ImageSourceType),
+  onPressAdd: PropTypes.func,
+  onPressAvatar: PropTypes.func,
+};
+
+export default AvatarList;
