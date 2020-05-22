@@ -6,14 +6,15 @@ import {
   CardContent,
   H3,
   H6,
-  Icon,
   styled,
   withIsLoading,
-  withTheme,
 } from '@apollosproject/ui-kit';
+
+import AvatarList from './AvatarList';
 
 const AvatarWrapper = styled(
   ({ theme }) => ({
+    flexDirection: 'row',
     paddingBottom: theme.sizing.baseUnit * 2, // TODO: refactor CardContent to have this be the default
     paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
     paddingRight: 0,
@@ -39,17 +40,6 @@ const Header = styled(
   }),
   'ui-prayer.PrayerFeature.Header'
 )(CardContent);
-
-const AddPrayerIcon = withTheme(
-  ({ theme }) => ({
-    name: 'plus',
-    size: theme.sizing.baseUnit * 1.5,
-    style: {
-      marginRight: theme.sizing.baseUnit * 0.5,
-    },
-  }),
-  'ui-prayer.PrayerInput.PromptIcon'
-)(Icon);
 
 /* TODO: Change to H5 and add appropriate padding. We are using H6 here to be consistant with other
  * "card titles" (`ActionListFeature`). */
@@ -82,7 +72,16 @@ const PrayerFeature = ({ isCard, isLoading, title, subtitle }) => (
       </Header>
     ) : null}
     <AvatarWrapper>
-      <AddPrayerIcon />
+      <AvatarList
+        avatars={[
+          'https://picsum.photos/200',
+          'https://picsum.photos/200',
+          'https://picsum.photos/200',
+          'https://picsum.photos/200',
+          'https://picsum.photos/200',
+          'https://picsum.photos/200',
+        ]}
+      />
     </AvatarWrapper>
   </RenderAsCard>
 );
