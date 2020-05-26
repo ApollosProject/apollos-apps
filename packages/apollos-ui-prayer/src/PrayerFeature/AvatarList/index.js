@@ -17,22 +17,28 @@ const AddIcon = withTheme(
     name: 'plus',
     size: theme.sizing.avatar.medium * 0.475,
   }),
-  'ui-prayer.PrayerFeature.AddIcon'
+  'ui-prayer.PrayerFeature.AvatarList.AddIcon'
 )(Icon);
 
-const AddIconBackground = styled(({ theme }) => ({
-  backgroundColor: theme.colors.action.primary,
-  borderRadius: theme.sizing.avatar.medium * 0.4,
-  padding: theme.sizing.avatar.medium * 0.1625,
-  marginRight: theme.sizing.baseUnit * 0.5,
-}))(View);
+const AddIconBackground = styled(
+  ({ theme }) => ({
+    backgroundColor: theme.colors.action.primary,
+    borderRadius: theme.sizing.avatar.medium * 0.4,
+    padding: theme.sizing.avatar.medium * 0.1625,
+    marginRight: theme.sizing.baseUnit * 0.5,
+  }),
+  'ui-prayer.PrayerFeature.AvatarList.AddIconBackground'
+)(View);
 
-const Avatar = styled(({ theme }) => ({
-  aspectRatio: 1,
-  borderRadius: theme.sizing.avatar.medium * 0.4,
-  height: theme.sizing.avatar.medium * 0.8,
-  marginRight: theme.sizing.baseUnit * 0.5,
-}))(ConnectedImage);
+const Avatar = styled(
+  ({ theme }) => ({
+    aspectRatio: 1,
+    borderRadius: theme.sizing.avatar.medium * 0.4,
+    height: theme.sizing.avatar.medium * 0.8,
+    marginRight: theme.sizing.baseUnit * 0.5,
+  }),
+  'ui-prayer.PrayerFeature.AvatarList.Avatar'
+)(ConnectedImage);
 
 const AvatarFeed = withTheme(
   ({ theme }) => ({
