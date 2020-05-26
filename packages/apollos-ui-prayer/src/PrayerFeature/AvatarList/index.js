@@ -52,13 +52,14 @@ const AvatarFeed = withTheme(
 
 const keyExtractor = (item) => item && item.id;
 
-const renderListHeader = ({ onPressAdd }) => (
-  <Touchable onPress={() => onPressAdd()}>
-    <AddIconBackground>
-      <AddIcon />
-    </AddIconBackground>
-  </Touchable>
-);
+const renderListHeader = ({ onPressAdd }) =>
+  onPressAdd ? (
+    <Touchable onPress={() => onPressAdd()}>
+      <AddIconBackground>
+        <AddIcon />
+      </AddIconBackground>
+    </Touchable>
+  ) : null;
 
 renderListHeader.propTypes = {
   onPressAdd: PropTypes.func,
