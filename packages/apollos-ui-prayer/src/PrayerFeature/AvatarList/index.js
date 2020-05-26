@@ -34,17 +34,21 @@ const Avatar = styled(({ theme }) => ({
   marginRight: theme.sizing.baseUnit * 0.5,
 }))(ConnectedImage);
 
-const AvatarFeed = withTheme(({ theme }) => ({
-  contentContainterStyle: { alignItems: 'center' },
-  decelerationRate: 'fast', // passed down to rendered ScrollView
-  horizontal: true,
-  getItemLayout: (itemData, index) => ({
-    length: theme.sizing.avatar.medium + theme.sizing.baseUnit * 0.5,
-    offset: (theme.sizing.avatar.medium + theme.sizing.baseUnit * 0.5) * index,
-    index,
+const AvatarFeed = withTheme(
+  ({ theme }) => ({
+    decelerationRate: 'fast', // passed down to rendered ScrollView
+    horizontal: true,
+    getItemLayout: (itemData, index) => ({
+      length: theme.sizing.avatar.medium * 0.8 + theme.sizing.baseUnit * 0.5,
+      offset:
+        (theme.sizing.avatar.medium * 0.8 + theme.sizing.baseUnit * 0.5) *
+        index,
+      index,
+    }),
+    showsHorizontalScrollIndicator: false,
   }),
-  showsHorizontalScrollIndicator: false,
-}))(FlatList);
+  'ui-prayer.PrayerFeature.AvatarList.AvatarFeed'
+)(FlatList);
 
 const keyExtractor = (item) => item && item.id;
 
@@ -67,12 +71,13 @@ const renderItem = (onPressAvatar) => ({ item }) => (
   </Touchable>
 );
 
-const AvatarList = ({ avatars, onPressAdd, onPressAvatar }) => (
+const AvatarList = ({ avatars, onPressAdd, onPressAvatar, ...props }) => (
   <AvatarFeed
     data={avatars}
     keyExtractor={keyExtractor}
     ListHeaderComponent={renderListHeader({ onPressAdd })}
     renderItem={renderItem(onPressAvatar)}
+    {...props}
   />
 );
 
