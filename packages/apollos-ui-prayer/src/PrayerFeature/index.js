@@ -75,7 +75,14 @@ RenderAsCard.propTypes = {
   children: PropTypes.node,
 };
 
-const PrayerFeature = ({ isCard, isLoading, title, subtitle }) => (
+const PrayerFeature = ({
+  isCard,
+  isLoading,
+  onPressAdd,
+  onPressAvatar,
+  title,
+  subtitle,
+}) => (
   <RenderAsCard isCard={isCard} isLoading={isLoading}>
     {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
       <Header isCard={isCard}>
@@ -97,6 +104,8 @@ const PrayerFeature = ({ isCard, isLoading, title, subtitle }) => (
           'https://picsum.photos/200',
           'https://picsum.photos/200',
         ]}
+        onPressAdd={onPressAdd}
+        onPressAvatar={onPressAvatar}
         isCard={isCard}
       />
     </AvatarWrapper>
@@ -106,6 +115,8 @@ const PrayerFeature = ({ isCard, isLoading, title, subtitle }) => (
 PrayerFeature.propTypes = {
   isCard: PropTypes.bool,
   isLoading: PropTypes.bool,
+  onPressAdd: PropTypes.func,
+  onPressAvatar: PropTypes.func,
   title: PropTypes.string,
   subtitle: PropTypes.string,
 };
