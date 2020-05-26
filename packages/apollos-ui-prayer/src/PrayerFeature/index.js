@@ -8,6 +8,7 @@ import {
   H6,
   styled,
   withIsLoading,
+  withTheme,
 } from '@apollosproject/ui-kit';
 
 import AvatarList from './AvatarList';
@@ -16,8 +17,8 @@ const AvatarWrapper = styled(
   ({ theme }) => ({
     flexDirection: 'row',
     paddingBottom: theme.sizing.baseUnit * 2, // TODO: refactor CardContent to have this be the default
-    paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
-    paddingRight: 0,
+    // paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
+    paddingHorizontal: 0,
     /* Because `CardContent` is passing `paddingVertical` to `PaddedView` we can't set
      * `PaddedView`'s `vertical` prop to false. So we have to define out own padding value here. */
     paddingTop: theme.sizing.baseUnit,
@@ -27,12 +28,12 @@ const AvatarWrapper = styled(
 
 const Header = styled(
   ({ isCard, theme }) => ({
-    ...(!isCard
+    ...(isCard
       ? {
-          paddingTop: theme.sizing.baseUnit * 3, //
+          paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
         }
       : {
-          paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
+          paddingTop: theme.sizing.baseUnit * 3, // // TODO: refactor CardContent to have this be the default
         }),
     /* Because `CardContent` is passing `paddingVertical` to `PaddedView` we can't set
      * `PaddedView`'s `vertical` prop to false. So we have to define out own padding value here. */
@@ -40,6 +41,19 @@ const Header = styled(
   }),
   'ui-prayer.PrayerFeature.Header'
 )(CardContent);
+
+const StyledAvatarList = withTheme(
+  ({ isCard, theme }) => ({
+    contentContainerStyle: {
+      flexGrow: 1,
+      paddingLeft: isCard ? theme.sizing.baseUnit * 1.5 : theme.sizing.baseUnit, // if this is a card render padding we would expect from `CardContent`
+      paddingRight: isCard
+        ? theme.sizing.baseUnit // equivalent `CardContent` padding the remaining `0.5 baseUnit` is the `padding` between `the renderItem`s. Total `1.5 baseUnit`
+        : theme.sizing.baseUnit * 0.5, // the remaining `baseUnit * 0.5` is the `padding` between `the renderItem`s Total `1 baseUnit`
+    },
+  }),
+  'ui-prayer.PrayerFeature.StyledAvatarList'
+)(AvatarList);
 
 /* TODO: Change to H5 and add appropriate padding. We are using H6 here to be consistant with other
  * "card titles" (`ActionListFeature`). */
@@ -72,7 +86,7 @@ const PrayerFeature = ({ isCard, isLoading, title, subtitle }) => (
       </Header>
     ) : null}
     <AvatarWrapper>
-      <AvatarList
+      <StyledAvatarList
         avatars={[
           'https://picsum.photos/200',
           'https://picsum.photos/200',
@@ -80,7 +94,10 @@ const PrayerFeature = ({ isCard, isLoading, title, subtitle }) => (
           'https://picsum.photos/200',
           'https://picsum.photos/200',
           'https://picsum.photos/200',
+          'https://picsum.photos/200',
+          'https://picsum.photos/200',
         ]}
+        isCard={isCard}
       />
     </AvatarWrapper>
   </RenderAsCard>
