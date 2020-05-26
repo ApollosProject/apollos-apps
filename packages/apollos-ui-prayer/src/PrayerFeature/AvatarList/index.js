@@ -52,6 +52,13 @@ const AvatarFeed = withTheme(
 
 const keyExtractor = (item) => item && item.id;
 
+// eslint-disable-next-line react/display-name, react/prop-types
+const renderItem = (onPressAvatar) => ({ item }) => (
+  <Touchable onPress={() => onPressAvatar()}>
+    <Avatar source={item} />
+  </Touchable>
+);
+
 const renderListHeader = ({ onPressAdd }) =>
   onPressAdd ? (
     <Touchable onPress={() => onPressAdd()}>
@@ -64,13 +71,6 @@ const renderListHeader = ({ onPressAdd }) =>
 renderListHeader.propTypes = {
   onPressAdd: PropTypes.func,
 };
-
-// eslint-disable-next-line react/display-name, react/prop-types
-const renderItem = (onPressAvatar) => ({ item }) => (
-  <Touchable onPress={() => onPressAvatar()}>
-    <Avatar source={item} />
-  </Touchable>
-);
 
 const AvatarList = ({ avatars, onPressAdd, onPressAvatar, ...props }) => (
   <AvatarFeed
