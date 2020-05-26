@@ -12,12 +12,19 @@ storiesOf('ui-prayer/PrayerFeature', module)
     </CenteredView>
   ))
   .add('example', () => (
-    <PrayerFeature title={'Example title'} subtitle={'Custom Subtitle'} />
+    <PrayerFeature
+      onPressAdd={() => {}}
+      title={'Example title'}
+      subtitle={'Custom Subtitle'}
+    />
   ))
   .add('default', () => <PrayerFeature />)
-  .add('isCard (false)', () => <PrayerFeature isCard={false} />)
+  .add('isCard (false)', () => (
+    <PrayerFeature isCard={false} title={'Example title'} />
+  ))
   .add('isLoading', () => (
     <PrayerFeature isLoading title={'Example title'} isCard={false} />
   ))
-  .add('title', () => <PrayerFeature title={'Example title'} />)
+  .add('onPressAdd', () => <PrayerFeature onPressAdd={() => {}} />)
+  .add('title', () => <PrayerFeature />)
   .add('subtitle', () => <PrayerFeature subtitle={'Custom Subtitle'} />);
