@@ -5,11 +5,22 @@ import { Providers } from '../testUtils';
 
 import PrayerFeature from '.';
 
+const avatars = [
+  'https://picsum.photos/200',
+  'https://picsum.photos/200',
+  'https://picsum.photos/200',
+  'https://picsum.photos/200',
+  'https://picsum.photos/200',
+  'https://picsum.photos/200',
+  'https://picsum.photos/200',
+  'https://picsum.photos/200',
+];
+
 describe('The PrayerFeature component', () => {
   it('should render', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerFeature />
+        <PrayerFeature avatars={avatars} />
       </Providers>
     );
 
@@ -18,7 +29,7 @@ describe('The PrayerFeature component', () => {
   it('should render without a `Card` border', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerFeature isCard={false} />
+        <PrayerFeature avatars={avatars} isCard={false} />
       </Providers>
     );
 
@@ -27,7 +38,7 @@ describe('The PrayerFeature component', () => {
   it('should render a loading state', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerFeature isLoading title={'Example title'} />
+        <PrayerFeature avatars={avatars} isLoading title={'Example title'} />
       </Providers>
     );
 
@@ -36,7 +47,12 @@ describe('The PrayerFeature component', () => {
   it('should render a loading state without a `Card` border', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerFeature isCard={false} isLoading title={'Example title'} />
+        <PrayerFeature
+          avatars={avatars}
+          isCard={false}
+          isLoading
+          title={'Example title'}
+        />
       </Providers>
     );
 
@@ -45,7 +61,7 @@ describe('The PrayerFeature component', () => {
   it('accept an onPressAdd function', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerFeature onPressAdd={jest.fn()} />
+        <PrayerFeature avatars={avatars} onPressAdd={jest.fn()} />
       </Providers>
     );
 
@@ -54,7 +70,7 @@ describe('The PrayerFeature component', () => {
   it('should accept an onPressAdd function', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerFeature onPressAdd={jest.fn()} />
+        <PrayerFeature avatars={avatars} onPressAdd={jest.fn()} />
       </Providers>
     );
 
@@ -63,7 +79,7 @@ describe('The PrayerFeature component', () => {
   it('should accept an onPressAvatar function', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerFeature onPressAvatar={jest.fn()} />
+        <PrayerFeature avatars={avatars} onPressAvatar={jest.fn()} />
       </Providers>
     );
 
@@ -72,7 +88,7 @@ describe('The PrayerFeature component', () => {
   it('should render with a title', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerFeature title={'Example title'} />
+        <PrayerFeature avatars={avatars} title={'Example title'} />
       </Providers>
     );
 
@@ -81,7 +97,7 @@ describe('The PrayerFeature component', () => {
   it('should render with a custom subtitle', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerFeature subtitle={'Custom subtitle'} />
+        <PrayerFeature avatars={avatars} subtitle={'Custom subtitle'} />
       </Providers>
     );
 
