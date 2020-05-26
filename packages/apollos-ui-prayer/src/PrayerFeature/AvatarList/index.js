@@ -83,7 +83,7 @@ const AvatarList = ({ avatars, onPressAdd, onPressAvatar, ...props }) => (
 );
 
 AvatarList.propTypes = {
-  avatars: PropTypes.arrayOf(ImageSourceType),
+  avatars: PropTypes.arrayOf(ImageSourceType).isRequired,
   onPressAdd: PropTypes.func,
   onPressAvatar: PropTypes.func,
 };

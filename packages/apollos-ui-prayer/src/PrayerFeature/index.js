@@ -6,6 +6,7 @@ import {
   CardContent,
   H3,
   H6,
+  ImageSourceType,
   styled,
   withIsLoading,
   withTheme,
@@ -76,6 +77,7 @@ RenderAsCard.propTypes = {
 };
 
 const PrayerFeature = ({
+  avatars,
   isCard,
   isLoading,
   onPressAdd,
@@ -94,16 +96,7 @@ const PrayerFeature = ({
     ) : null}
     <AvatarWrapper>
       <StyledAvatarList
-        avatars={[
-          'https://picsum.photos/200',
-          'https://picsum.photos/200',
-          'https://picsum.photos/200',
-          'https://picsum.photos/200',
-          'https://picsum.photos/200',
-          'https://picsum.photos/200',
-          'https://picsum.photos/200',
-          'https://picsum.photos/200',
-        ]}
+        avatars={avatars}
         onPressAdd={onPressAdd}
         onPressAvatar={onPressAvatar}
         isCard={isCard}
@@ -113,6 +106,7 @@ const PrayerFeature = ({
 );
 
 PrayerFeature.propTypes = {
+  avatars: PropTypes.arrayOf(ImageSourceType).isRequired,
   isCard: PropTypes.bool,
   isLoading: PropTypes.bool,
   onPressAdd: PropTypes.func,
