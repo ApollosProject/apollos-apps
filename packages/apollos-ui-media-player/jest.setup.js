@@ -46,6 +46,14 @@ jest.mock('Animated', () => {
   };
 });
 
+jest.mock('react-native-google-cast', () => ({
+  CastButton: () => 'GoogleCastButton',
+  play: () => null,
+  pause: () => null,
+  getCastState: () => Promise.resolve('Connected'),
+  EventEmitter: { addListener: () => null },
+}));
+
 NativeModules.RNGestureHandlerModule = {
   attachGestureHandler: jest.fn(),
   createGestureHandler: jest.fn(),

@@ -13,9 +13,13 @@ const Wrapper = styled(({ theme }) => ({
   alignItems: 'center',
 }))(View);
 
+const StyledAirplayButton = styled(({ theme }) => ({
+  tintColor: theme.colors.paper,
+}))(AirPlayBtn);
+
 const AirPlayButton = () => (
   <Wrapper>
-    <AirPlayBtn />
+    <StyledAirplayButton />
   </Wrapper>
 );
 export default AirPlayButton;
