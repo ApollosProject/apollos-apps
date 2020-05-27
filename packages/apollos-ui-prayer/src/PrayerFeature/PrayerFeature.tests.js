@@ -58,15 +58,6 @@ describe('The PrayerFeature component', () => {
 
     expect(tree).toMatchSnapshot();
   });
-  it('accept an onPressAdd function', () => {
-    const tree = renderer.create(
-      <Providers>
-        <PrayerFeature avatars={avatars} onPressAdd={jest.fn()} />
-      </Providers>
-    );
-
-    expect(tree).toMatchSnapshot();
-  });
   it('should accept an onPressAdd function', () => {
     const tree = renderer.create(
       <Providers>
