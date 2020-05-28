@@ -2,21 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Keyboard, TouchableWithoutFeedback } from 'react-native';
 
-import { CenteredView } from '@apollosproject/ui-kit';
+import { CenteredView, styled } from '@apollosproject/ui-kit';
+
+const FlexedTouchable = styled({ flex: 1 })(TouchableWithoutFeedback);
+
+const Wrapper = styled({
+  alignItem: 'stretch',
+  backgroundColor: 'salmon',
+})(CenteredView);
 
 const PrayerScreen = (
   { children } // eslint-disable-line react/prop-types
 ) => (
-  <TouchableWithoutFeedback
-    onPress={() => Keyboard.dismiss()}
-    style={{ flex: 1 }} // eslint-disable-line react-native/no-inline-styles
-  >
-    <CenteredView
-      style={{ alignItems: 'stretch', backgroundColor: 'salmon' }} // eslint-disable-line
-    >
-      {children}
-    </CenteredView>
-  </TouchableWithoutFeedback>
+  <FlexedTouchable onPress={() => Keyboard.dismiss()}>
+    <Wrapper>{children}</Wrapper>
+  </FlexedTouchable>
 );
 
 PrayerScreen.propTypes = {
