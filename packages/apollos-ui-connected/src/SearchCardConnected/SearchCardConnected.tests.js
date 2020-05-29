@@ -66,5 +66,5 @@ describe('The SearchCardConnected component', () => {
       </Providers>
     );
     expect(tree).toMatchSnapshot();
-  });  
+  });
 });
