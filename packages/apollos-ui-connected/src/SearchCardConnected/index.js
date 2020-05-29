@@ -27,7 +27,7 @@ const SearchCardConnected = memo(
 
     return (
       <Component
-        coverImage={get(coverImage, 'sources', [])}
+        coverImage={get(coverImage, 'sources', undefined)}
         hasAction={hasAction}
         isLoading={isLoading}
         summary={summary}
