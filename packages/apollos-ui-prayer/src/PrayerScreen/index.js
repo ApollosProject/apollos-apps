@@ -32,7 +32,7 @@ const Content = styled(
   'ui-prayer.PrayerScreen.Content'
 )(View);
 
-const PrayerScreen = ({ children, onPressButton }) => (
+const PrayerScreen = ({ buttonText, children, onPressButton }) => (
   <FlexedKeyboardAvoidingView behavior={'padding'}>
     <FlexedScrollView>
       <FlexedSafeAreaView>
@@ -40,7 +40,7 @@ const PrayerScreen = ({ children, onPressButton }) => (
           <Content>{children}</Content>
         </FlexedTouchable>
         <PaddedView>
-          <Button onPress={() => onPressButton()} title={'Pray'} />
+          <Button onPress={() => onPressButton()} title={buttonText} />
         </PaddedView>
       </FlexedSafeAreaView>
     </FlexedScrollView>
@@ -48,8 +48,13 @@ const PrayerScreen = ({ children, onPressButton }) => (
 );
 
 PrayerScreen.propTypes = {
+  buttonText: PropTypes.string,
   children: PropTypes.node,
   onPressButton: PropTypes.func,
+};
+
+PrayerScreen.defaultProps = {
+  buttonText: 'Pray',
 };
 
 export default PrayerScreen;
