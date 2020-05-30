@@ -1,30 +1,48 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {
   Keyboard,
   KeyboardAvoidingView,
+  SafeAreaView,
   ScrollView,
   TouchableWithoutFeedback,
+  View,
 } from 'react-native';
+import PropTypes from 'prop-types';
 
-import { styled, withTheme } from '@apollosproject/ui-kit';
+import { Button, PaddedView, styled, withTheme } from '@apollosproject/ui-kit';
 
-const FlexedKeyboardAvoidingView = styled({
-  flex: 1,
-})(KeyboardAvoidingView);
+const flexer = styled({ flex: 1 }); // 💪flex 💪all 💪the 💪things 💪bro
 
-const FlexedScrollView = withTheme(() => ({
-  contentContainerStyle: { flexGrow: 1, justifyContent: 'center' },
-}))(ScrollView);
+const FlexedKeyboardAvoidingView = flexer(KeyboardAvoidingView); // 💪💥
+const FlexedSafeAreaView = flexer(SafeAreaView); // 💪💥
+const FlexedTouchable = flexer(TouchableWithoutFeedback); // 💪💥
 
-const FlexedTouchable = styled({ flex: 1 })(TouchableWithoutFeedback);
+const FlexedScrollView = withTheme(
+  () => ({
+    contentContainerStyle: { flexGrow: 1 }, // using flexGrow here keeps the PrayerCard input above the keyboard as the input grows.
+  }),
+  'ui-prayer.PrayerScreen.FlexedScrollView'
+)(ScrollView);
+
+const Content = styled(
+  {
+    flexGrow: 1,
+    justifyContent: 'center',
+  },
+  'ui-prayer.PrayerScreen.Content'
+)(View);
 
 const PrayerScreen = ({ children }) => (
   <FlexedKeyboardAvoidingView behavior={'padding'}>
     <FlexedScrollView>
-      <FlexedTouchable onPress={() => Keyboard.dismiss()}>
-        {children}
-      </FlexedTouchable>
+      <FlexedSafeAreaView>
+        <FlexedTouchable onPress={() => Keyboard.dismiss()}>
+          <Content>{children}</Content>
+        </FlexedTouchable>
+        <PaddedView>
+          <Button title={'Pray'} />
+        </PaddedView>
+      </FlexedSafeAreaView>
     </FlexedScrollView>
   </FlexedKeyboardAvoidingView>
 );
