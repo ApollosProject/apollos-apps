@@ -2,14 +2,11 @@ import React from 'react';
 import { FlatList, View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import {
-  ConnectedImage,
-  Icon,
-  ImageSourceType,
-  styled,
-  Touchable,
-  withTheme,
-} from '@apollosproject/ui-kit';
+import ConnectedImage, { ImageSourceType } from '../../ConnectedImage';
+import Icon from '../../Icon';
+import styled from '../../styled';
+import Touchable from '../../Touchable';
+import { withTheme } from '../../theme';
 
 const AddIcon = withTheme(
   ({ theme }) => ({
@@ -17,7 +14,7 @@ const AddIcon = withTheme(
     name: 'plus',
     size: theme.sizing.avatar.medium * 0.475,
   }),
-  'ui-prayer.PrayerFeature.AvatarList.AddIcon'
+  'ui-kit.AvatarList.AddIcon'
 )(Icon);
 
 const AddIconBackground = styled(
@@ -27,7 +24,7 @@ const AddIconBackground = styled(
     padding: theme.sizing.avatar.medium * 0.1625,
     marginRight: theme.sizing.baseUnit * 0.5,
   }),
-  'ui-prayer.PrayerFeature.AvatarList.AddIconBackground'
+  'ui-kit.AvatarList.AddIconBackground'
 )(View);
 
 const Avatar = styled(
@@ -37,7 +34,7 @@ const Avatar = styled(
     height: theme.sizing.avatar.medium * 0.8,
     marginRight: theme.sizing.baseUnit * 0.5,
   }),
-  'ui-prayer.PrayerFeature.AvatarList.Avatar'
+  'ui-kit.AvatarList.Avatar'
 )(ConnectedImage);
 
 const AvatarFeed = withTheme(
@@ -53,7 +50,7 @@ const AvatarFeed = withTheme(
     }),
     showsHorizontalScrollIndicator: false,
   }),
-  'ui-prayer.PrayerFeature.AvatarList.AvatarFeed'
+  'ui-kit.AvatarList.AvatarFeed'
 )(FlatList);
 
 const keyExtractor = (item) => item && item.id;
