@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
-import { Animated } from 'react-native';
+import { Animated, useColorScheme } from 'react-native';
 import DateTimePicker from 'react-native-modal-datetime-picker';
 
 import Chip from '../../Chip';
@@ -46,6 +46,8 @@ class DateInput extends PureComponent {
   };
 
   render() {
+    const colorScheme = useColorScheme();
+
     return (
       <InputWrapper>
         <StyledChip
@@ -72,6 +74,7 @@ class DateInput extends PureComponent {
           mode={'date'}
           onConfirm={this.handleConfirm}
           onCancel={this.handleClose}
+          isDarkModeEnabled={colorScheme === 'dark'}
         />
         {this.props.displayValue || this.props.placeholder ? (
           <FloatingLabel animation={new Animated.Value(1)}>
