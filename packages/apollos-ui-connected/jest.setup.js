@@ -41,6 +41,11 @@ jest.mock('Animated', () => {
   };
 });
 
+jest.mock(
+  '../apollos-ui-kit/node_modules/@react-native-community/datetimepicker',
+  () => 'DatePicker'
+);
+
 NativeModules.RNGestureHandlerModule = {
   attachGestureHandler: jest.fn(),
   createGestureHandler: jest.fn(),
