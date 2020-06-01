@@ -9,7 +9,26 @@ import {
 } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { Button, PaddedView, styled, withTheme } from '@apollosproject/ui-kit';
+import {
+  Button,
+  PaddedView,
+  styled,
+  withIsLoading,
+  withTheme,
+} from '@apollosproject/ui-kit';
+
+const ButtonWithProps = withTheme(
+  () => ({}),
+  'ui-prayer.PrayerScreen.ButtonWithProps'
+)(Button);
+
+const Content = styled(
+  {
+    flexGrow: 1,
+    justifyContent: 'center',
+  },
+  'ui-prayer.PrayerScreen.Content'
+)(View);
 
 const flexer = styled({ flex: 1 }); // 💪flex 💪all 💪the 💪things 💪bro
 
@@ -24,15 +43,7 @@ const FlexedScrollView = withTheme(
   'ui-prayer.PrayerScreen.FlexedScrollView'
 )(ScrollView);
 
-const Content = styled(
-  {
-    flexGrow: 1,
-    justifyContent: 'center',
-  },
-  'ui-prayer.PrayerScreen.Content'
-)(View);
-
-const PrayerScreen = ({ buttonText, children, onPressButton }) => (
+const PrayerScreen = ({ buttonText, children, isLoading, onPressButton }) => (
   <FlexedKeyboardAvoidingView behavior={'padding'}>
     <FlexedScrollView>
       <FlexedSafeAreaView>
@@ -40,7 +51,11 @@ const PrayerScreen = ({ buttonText, children, onPressButton }) => (
           <Content>{children}</Content>
         </FlexedTouchable>
         <PaddedView>
-          <Button onPress={onPressButton} title={buttonText} />
+          <ButtonWithProps
+            onPress={onPressButton}
+            title={buttonText}
+            isLoading={isLoading}
+          />
         </PaddedView>
       </FlexedSafeAreaView>
     </FlexedScrollView>
@@ -50,6 +65,7 @@ const PrayerScreen = ({ buttonText, children, onPressButton }) => (
 PrayerScreen.propTypes = {
   buttonText: PropTypes.string,
   children: PropTypes.node,
+  isLoading: PropTypes.bool,
   onPressButton: PropTypes.func,
 };
 
@@ -57,4 +73,4 @@ PrayerScreen.defaultProps = {
   buttonText: 'Pray',
 };
 
-export default PrayerScreen;
+export default withIsLoading(PrayerScreen);
