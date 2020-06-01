@@ -16,7 +16,7 @@ const avatars = [
   'https://picsum.photos/200',
 ];
 
-storiesOf('ui-prayer/PrayerFeature/AvatarList', module)
+storiesOf('ui-kit/AvatarList', module)
   .addDecorator((story) => (
     <CenteredView style={{ alignItems: 'stretch' /* eslint-disable-line */ }}>
       {story()}
