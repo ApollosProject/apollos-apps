@@ -222,7 +222,7 @@ export default class Feature extends RockApolloDataSource {
     const { ContentItem } = this.context.dataSources;
 
     // Get the first three persona items.
-  const personaFeed = await ContentItem.byPersonaFeed(3);
+    const personaFeed = await ContentItem.byPersonaFeed(3);
     const items = await personaFeed.expand('ContentChannel').get();
 
     // Map them into specific actions.
