@@ -22,7 +22,7 @@
     "preset": "react-native",
     "collectCoverage": true,
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation))"
+      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@react-native-community))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -74,7 +74,8 @@
     "react-native-linear-gradient": "2.5.4",
     "react-native-svg": "9.4.0",
     "react-navigation": "^3.11.0",
-    "react-test-renderer": "16.8.6"
+    "react-test-renderer": "16.8.6",
+    "@react-native-community/datetimepicker": "2.4.0"
   },
   "license": "SEE LICENSE IN LICENSE.md",
   "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"
