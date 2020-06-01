@@ -40,7 +40,7 @@ const PrayerScreen = ({ buttonText, children, onPressButton }) => (
           <Content>{children}</Content>
         </FlexedTouchable>
         <PaddedView>
-          <Button onPress={() => onPressButton()} title={buttonText} />
+          <Button onPress={onPressButton} title={buttonText} />
         </PaddedView>
       </FlexedSafeAreaView>
     </FlexedScrollView>
