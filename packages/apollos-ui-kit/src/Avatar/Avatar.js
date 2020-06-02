@@ -4,13 +4,13 @@ import { View, Platform } from 'react-native';
 import { get } from 'lodash';
 import { compose } from 'recompose';
 
-import ConnectedImage from '../../ConnectedImage';
-import styled from '../../styled';
-import { withTheme } from '../../theme';
-import ActivityIndicator from '../../ActivityIndicator';
-import { ButtonIcon } from '../../Button';
-import Icon from '../../Icon';
-import TouchableScale from '../../TouchableScale';
+import ConnectedImage from '../ConnectedImage';
+import styled from '../styled';
+import { withTheme } from '../theme';
+import ActivityIndicator from '../ActivityIndicator';
+import { ButtonIcon } from '../Button';
+import Icon from '../Icon';
+import TouchableScale from '../TouchableScale';
 
 const enhance = withTheme(({ theme, size }) => ({
   themeSize: get(theme.sizing.avatar, size, theme.sizing.avatar.small),
