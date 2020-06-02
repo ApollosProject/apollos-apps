@@ -13,9 +13,16 @@ import ErrorText from '../ErrorText';
 import { withTheme } from '../../theme';
 
 const StyledChip = styled({ marginTop: 5 }, 'DateInput.Chip')(Chip);
-const StyledDateTimePicker = withTheme(({ theme: { colors: { text } } }) => ({
-  textColor: text.primary,
-}), 'DateInput.DateTimePicker')(DateTimePicker);
+const StyledDateTimePicker = withTheme(
+  ({
+    theme: {
+      colors: { text },
+    },
+  }) => ({
+    textColor: text.primary,
+  }),
+  'DateInput.DateTimePicker'
+)(DateTimePicker);
 
 class DateInput extends PureComponent {
   static propTypes = {
