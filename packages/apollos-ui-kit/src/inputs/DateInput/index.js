@@ -10,8 +10,19 @@ import styled from '../../styled';
 import InputWrapper from '../InputWrapper';
 import FloatingLabel from '../FloatingLabel';
 import ErrorText from '../ErrorText';
+import { withTheme } from '../../theme';
 
 const StyledChip = styled({ marginTop: 5 }, 'DateInput.Chip')(Chip);
+const StyledDateTimePicker = withTheme(
+  ({
+    theme: {
+      colors: { text },
+    },
+  }) => ({
+    textColor: text.primary,
+  }),
+  'DateInput.DateTimePicker'
+)(DateTimePicker);
 
 class DateInput extends PureComponent {
   static propTypes = {
@@ -56,7 +67,7 @@ class DateInput extends PureComponent {
           }
           onPress={this.handleOpen}
         />
-        <DateTimePicker
+        <StyledDateTimePicker
           date={
             this.props.value
               ? moment(this.props.value).toDate()

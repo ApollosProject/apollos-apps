@@ -9,6 +9,11 @@ jest.mock(
   })
 );
 
+jest.mock(
+  '../apollos-ui-kit/node_modules/@react-native-community/datetimepicker',
+  () => 'DatePicker'
+);
+
 jest.mock('react-native-device-info', () => ({
   getUniqueId: () => 'id-123',
   getSystemVersion: () => 'sys-version-123',

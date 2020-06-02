@@ -22,7 +22,7 @@
     "preset": "react-native",
     "collectCoverage": true,
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation))"
+      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@react-native-community))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -50,6 +50,7 @@
     "react-native-gesture-handler": "*",
     "react-native-linear-gradient": "*",
     "react-native-modal-datetime-picker": "*",
+    "@react-native-community/datetimepicker": "*",
     "react-native-svg": "*"
   },
   "dependencies": {
@@ -57,7 +58,7 @@
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "numeral": "^2.0.6",
-    "react-native-modal-datetime-picker": "7.6.0",
+    "react-native-modal-datetime-picker": "8.7.1",
     "react-native-safe-area-context": "^0.3.6",
     "react-native-tab-view": "1.0.2",
     "recompose": "^0.30.0",
@@ -73,7 +74,8 @@
     "react-native-linear-gradient": "2.5.4",
     "react-native-svg": "9.4.0",
     "react-navigation": "^3.11.0",
-    "react-test-renderer": "16.8.6"
+    "react-test-renderer": "16.8.6",
+    "@react-native-community/datetimepicker": "2.4.0"
   },
   "license": "SEE LICENSE IN LICENSE.md",
   "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"
