@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/data-connector-bible",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
   "scripts": {
@@ -20,8 +20,8 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@apollosproject/data-schema": "^1.4.0",
-    "@apollosproject/server-core": "^1.4.0",
+    "@apollosproject/data-schema": "^1.4.1",
+    "@apollosproject/server-core": "^1.4.1",
     "apollo-datasource-rest": "^0.6.4",
     "lodash": "^4.17.11"
   },
@@ -29,8 +29,8 @@
     "@apollosproject/config": "*"
   },
   "devDependencies": {
-    "@apollosproject/apollo-server-env-mock": "^1.4.0",
-    "@apollosproject/babel-preset-apollos": "^1.4.0",
+    "@apollosproject/apollo-server-env-mock": "^1.4.1",
+    "@apollosproject/babel-preset-apollos": "^1.4.1",
     "apollo-server-env": "^2.3.0",
     "graphql": "^14.6.0",
     "jest": "^23.6.0"

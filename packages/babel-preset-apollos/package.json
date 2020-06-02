@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/babel-preset-apollos",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "main": "./index.js",
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "7.4.0",
