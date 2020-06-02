@@ -1,75 +1,97 @@
 import React from 'react';
 import { Dimensions } from 'react-native';
-import { sample } from 'lodash';
 import PropTypes from 'prop-types';
 
 import CenteredView from '../../CenteredView';
 import ConnectedImage, { ImageSourceType } from '../../ConnectedImage';
 import styled from '../../styled';
 
-const getRandomHeightWidth = ({ avatarSizes }) => {
-  const sizesWithoutLarge = Object.keys(avatarSizes).filter(
-    (size) => size !== 'large'
+const getRandomPercentageSize = ({ maxAvatarSize, minAvatarSize }) =>
+  Math.floor(
+    Math.random() * (maxAvatarSize - minAvatarSize + 1) + minAvatarSize
   );
 
-  const randomSize = sample(sizesWithoutLarge);
-
-  return {
-    borderRadius: avatarSizes[randomSize] / 2,
-    width: avatarSizes[randomSize],
-    height: avatarSizes[randomSize],
-  };
-};
-
 const getRandomXYPosition = ({ imageHeight, imageWidth }) => {
-  const positionX = Dimensions.get('window').width - imageWidth;
-  const positionY = Dimensions.get('window').height - imageHeight;
+  const positionX = 100 - imageWidth;
+  const positionY = 100 - imageHeight;
 
   return {
-    left: Math.round(Math.random() * positionX),
-    top: Math.round(Math.random() * positionY),
+    left: `${Math.round(Math.random() * positionX)}%`,
+    top: `${Math.round(Math.random() * positionY)}%`,
   };
 };
 
-const CenteredAvatar = styled(
-  ({ theme }) => ({
-    borderRadius: theme.sizing.avatar.large / 2,
-    height: theme.sizing.avatar.large,
-    width: theme.sizing.avatar.large,
+const getOrientation = () => {
+  if (Dimensions.get('window').width > Dimensions.get('window').height) {
+    return 'landscape';
+  }
+  return 'portrait';
+};
+
+const CenteredAvatar = styled(({ size }) => {
+  const orientation = getOrientation();
+  return {
+    aspectRatio: 1,
+    borderRadius: 1000, // for simplicity we are just going to use a very large magic number 🙃
     zIndex: 100,
-  }),
-  'ui-kit.AvatarList.UserAvatar'
-)(ConnectedImage);
+    ...(orientation === 'landscape' // sizes avatar based on the smallest device dimension
+      ? { height: `${size}%` }
+      : { width: `${size}%` }),
+  };
+}, 'ui-kit.AvatarList.UserAvatar')(ConnectedImage);
 
-const RandomAvatar = styled(
-  ({ theme }) => ({
+const RandomAvatar = styled(({ size }) => {
+  const orientation = getOrientation();
+  return {
+    aspectRatio: 1,
+    borderRadius: 1000, // for simplicity we are just going to use a very large magic number 🙃
     position: 'absolute',
-    ...getRandomHeightWidth({ avatarSizes: theme.sizing.avatar }),
     ...getRandomXYPosition({
-      imageHeight: theme.sizing.avatar.large,
-      imageWidth: theme.sizing.avatar.large,
+      imageHeight: size,
+      imageWidth: size,
     }),
-  }),
-  'ui-kit.AvatarList.RandomAvatar'
-)(ConnectedImage);
+    ...(orientation === 'landscape' // sizes avatar based on the smallest device dimension
+      ? { height: `${size}%` }
+      : { width: `${size}%` }),
+  };
+}, 'ui-kit.AvatarList.RandomAvatar')(ConnectedImage);
 
-const renderAvatars = (avatars) =>
+const renderAvatars = ({ avatars, maxAvatarSize, minAvatarSize }) =>
   avatars.map((avatar, i) => (
-    <RandomAvatar key={JSON.stringify(avatar + i)} source={avatar} />
+    <RandomAvatar
+      key={JSON.stringify(avatar + i)}
+      size={getRandomPercentageSize({ maxAvatarSize, minAvatarSize })}
+      source={avatar}
+    />
   ));
 
-const AvatarCloud = ({ avatars, primaryAvatar }) => (
+const AvatarCloud = ({
+  avatars,
+  maxAvatarSize,
+  minAvatarSize,
+  primaryAvatar,
+  primaryAvatarSize,
+}) => (
   <CenteredView>
     {primaryAvatar ? (
-      <CenteredAvatar source={'https://picsum.photos/200'} />
+      <CenteredAvatar size={primaryAvatarSize} source={primaryAvatar} />
     ) : null}
-    {avatars ? renderAvatars(avatars) : null}
+    {avatars ? renderAvatars({ avatars, maxAvatarSize, minAvatarSize }) : null}
   </CenteredView>
 );
 
 AvatarCloud.propTypes = {
   avatars: PropTypes.arrayOf(ImageSourceType),
+  maxAvatarSize: PropTypes.number, // a percentage represented as a whole number
+  minAvatarSize: PropTypes.number, // a percentage represented as a whole number
   primaryAvatar: ImageSourceType,
+  primaryAvatarSize: PropTypes.number,
+};
+
+AvatarCloud.defaultProps = {
+  primaryAvatarSize: 50,
+  maxAvatarSize: 40,
+  minAvatarSize: 10,
 };
 
 export default AvatarCloud;
