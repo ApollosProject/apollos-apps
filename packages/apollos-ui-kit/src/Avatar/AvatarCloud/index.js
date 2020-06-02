@@ -22,6 +22,9 @@ const getRandomXYPosition = ({ imageHeight, imageWidth }) => {
   };
 };
 
+const getRandomAvatarMaxSize = ({ maxAvatarSize, primaryAvatar }) =>
+  primaryAvatar ? maxAvatarSize - 10 : maxAvatarSize;
+
 const getOrientation = () => {
   if (Dimensions.get('window').width > Dimensions.get('window').height) {
     return 'landscape';
@@ -57,11 +60,19 @@ const RandomAvatar = styled(({ size }) => {
   };
 }, 'ui-kit.AvatarList.RandomAvatar')(ConnectedImage);
 
-const renderAvatars = ({ avatars, maxAvatarSize, minAvatarSize }) =>
+const renderRandomAvatars = ({
+  avatars,
+  maxAvatarSize,
+  minAvatarSize,
+  primaryAvatar,
+}) =>
   avatars.map((avatar, i) => (
     <RandomAvatar
       key={JSON.stringify(avatar + i)}
-      size={getRandomPercentageSize({ maxAvatarSize, minAvatarSize })}
+      size={getRandomPercentageSize({
+        maxAvatarSize: getRandomAvatarMaxSize({ maxAvatarSize, primaryAvatar }),
+        minAvatarSize,
+      })}
       source={avatar}
     />
   ));
@@ -71,14 +82,20 @@ const AvatarCloud = ({
   maxAvatarSize,
   minAvatarSize,
   primaryAvatar,
-  primaryAvatarSize,
   ...props
 }) => (
   <CenteredView {...props}>
     {primaryAvatar ? (
-      <CenteredAvatar size={primaryAvatarSize} source={primaryAvatar} />
+      <CenteredAvatar size={maxAvatarSize} source={primaryAvatar} />
     ) : null}
-    {avatars ? renderAvatars({ avatars, maxAvatarSize, minAvatarSize }) : null}
+    {avatars
+      ? renderRandomAvatars({
+          avatars,
+          maxAvatarSize,
+          minAvatarSize,
+          primaryAvatar,
+        })
+      : null}
   </CenteredView>
 );
 
@@ -87,12 +104,10 @@ AvatarCloud.propTypes = {
   maxAvatarSize: PropTypes.number, // a percentage represented as a whole number
   minAvatarSize: PropTypes.number, // a percentage represented as a whole number
   primaryAvatar: ImageSourceType,
-  primaryAvatarSize: PropTypes.number,
 };
 
 AvatarCloud.defaultProps = {
-  primaryAvatarSize: 50,
-  maxAvatarSize: 40,
+  maxAvatarSize: 50,
   minAvatarSize: 10,
 };
 
