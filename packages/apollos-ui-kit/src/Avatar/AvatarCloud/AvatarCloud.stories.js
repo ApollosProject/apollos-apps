@@ -2,9 +2,15 @@ import React from 'react';
 
 import { storiesOf } from '@apollosproject/ui-storybook';
 
-import CenteredView from '../../CenteredView';
+// import CenteredView from '../../CenteredView';
 
 import AvatarCloud from '.';
+
+const avatars = [
+  'https://picsum.photos/200',
+  'https://picsum.photos/200',
+  'https://picsum.photos/200',
+];
 
 storiesOf('ui-kit/Avatar/AvatarCloud', module)
   // .addDecorator((story) => (
@@ -12,4 +18,13 @@ storiesOf('ui-kit/Avatar/AvatarCloud', module)
   //     {story()}
   //   </CenteredView>
   // ))
-  .add('default', () => <AvatarCloud />);
+  .add('example', () => (
+    <AvatarCloud
+      avatars={avatars}
+      primaryAvatar={'https://picsum.photos/200'}
+    />
+  ))
+  .add('avatars', () => <AvatarCloud avatars={avatars} />)
+  .add('primaryAvatar', () => (
+    <AvatarCloud primaryAvatar={'https://picsum.photos/200'} />
+  ));
