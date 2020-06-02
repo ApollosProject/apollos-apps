@@ -101,7 +101,7 @@ AvatarCloud.propTypes = {
   avatars: PropTypes.arrayOf(ImageSourceType).isRequired,
   maxAvatarSize: PropTypes.number, // a percentage represented as a whole number
   minAvatarSize: PropTypes.number, // a percentage represented as a whole number
-  primaryAvatar: ImageSourceType, // source to render a larger avatar at the center of the cloud
+  primaryAvatar: ImageSourceType, // The source to render a larger avatar at the center of the cloud
 };
 
 AvatarCloud.defaultProps = {
