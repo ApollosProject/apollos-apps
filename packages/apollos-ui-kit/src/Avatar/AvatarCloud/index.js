@@ -88,22 +88,20 @@ const AvatarCloud = ({
     {primaryAvatar ? (
       <CenteredAvatar size={maxAvatarSize} source={primaryAvatar} />
     ) : null}
-    {avatars
-      ? renderRandomAvatars({
-          avatars,
-          maxAvatarSize,
-          minAvatarSize,
-          primaryAvatar,
-        })
-      : null}
+    {renderRandomAvatars({
+      avatars,
+      maxAvatarSize,
+      minAvatarSize,
+      primaryAvatar,
+    })}
   </CenteredView>
 );
 
 AvatarCloud.propTypes = {
-  avatars: PropTypes.arrayOf(ImageSourceType),
+  avatars: PropTypes.arrayOf(ImageSourceType).isRequired,
   maxAvatarSize: PropTypes.number, // a percentage represented as a whole number
   minAvatarSize: PropTypes.number, // a percentage represented as a whole number
-  primaryAvatar: ImageSourceType,
+  primaryAvatar: ImageSourceType, // source to render a larger avatar at the center of the cloud
 };
 
 AvatarCloud.defaultProps = {
