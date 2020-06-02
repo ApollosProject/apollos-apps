@@ -12,6 +12,7 @@ const getRandomPercentageSize = ({ maxAvatarSize, minAvatarSize }) =>
   );
 
 const getRandomXYPosition = ({ imageHeight, imageWidth }) => {
+  // `positionX` and `positionY` represent viewable space for a given image based on its size.
   const positionX = 100 - imageWidth;
   const positionY = 100 - imageHeight;
 
@@ -32,9 +33,9 @@ const CenteredAvatar = styled(({ size }) => {
   const orientation = getOrientation();
   return {
     aspectRatio: 1,
-    borderRadius: 1000, // for simplicity we are just going to use a very large magic number 🙃
+    borderRadius: 1000, // For simplicity we are just going to use a very large magic number 🙃🧙
     zIndex: 100,
-    ...(orientation === 'landscape' // sizes avatar based on the smallest device dimension
+    ...(orientation === 'landscape' // Avatar size is based on the smallest device dimension
       ? { height: `${size}%` }
       : { width: `${size}%` }),
   };
@@ -44,13 +45,13 @@ const RandomAvatar = styled(({ size }) => {
   const orientation = getOrientation();
   return {
     aspectRatio: 1,
-    borderRadius: 1000, // for simplicity we are just going to use a very large magic number 🙃
+    borderRadius: 1000, // For simplicity we are just going to use a very large magic number 🙃🧙
     position: 'absolute',
     ...getRandomXYPosition({
       imageHeight: size,
       imageWidth: size,
     }),
-    ...(orientation === 'landscape' // sizes avatar based on the smallest device dimension
+    ...(orientation === 'landscape' // Avatar size is based on the smallest device dimension
       ? { height: `${size}%` }
       : { width: `${size}%` }),
   };
@@ -71,8 +72,9 @@ const AvatarCloud = ({
   minAvatarSize,
   primaryAvatar,
   primaryAvatarSize,
+  ...props
 }) => (
-  <CenteredView>
+  <CenteredView {...props}>
     {primaryAvatar ? (
       <CenteredAvatar size={primaryAvatarSize} source={primaryAvatar} />
     ) : null}
