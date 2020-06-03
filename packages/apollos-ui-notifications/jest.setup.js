@@ -18,3 +18,8 @@ jest.mock('react-native-onesignal', () => ({
 }));
 
 NativeModules.RNGestureHandlerModule = {};
+
+jest.mock(
+  '../apollos-ui-kit/node_modules/@react-native-community/datetimepicker',
+  () => 'DatePicker'
+);

@@ -1,3 +1,24 @@
+v1.4.1: June 2, 2020
+
+- Adds Google Cast (#1397) (c9e60b7e)
+- Adds eslint plugin for react hooks (#1463) (51b0a6fa)
+- Adds webview feature height as a prop (#1453) (cbe1c5b4)
+- Adds ui-prayer package (#1451) (1d4c418e)
+- Adds Rookout Debug Information (#1456) (0151e368)
+- Adds withTheme to mapview confirm button so it can be overriden (#1452) (d85d8892)
+- Adds Webview feature (#1442) (2995f6dd)
+
+- Defaults link text color to secondary on Webview feature (#1459) (4cbcf103)
+- Ensures the mapview renders fine with campuses with a null lat/long (#1454) (02d0b8e5)
+- Ensures SearchCards without images still render (#1468) (b87c738e)
+- Deprecates HeroListFeature naming to HeroList (#1450) (abb4ab29)
+- Update yarn.lock (#1455) (2fccc03c)
+
+- Fixes DatePicker text invisible in dark mode (#1470) (35321e18)
+- Fixes TouchableScale animating when there is no "action/handler" (#1438) (5c78c5ab)\
+- Fixes schema and triggers canary build (#1460) (21438437)
+
+
 v1.4.0: May 4, 2020
 
 - Adds backwards compatibility for contentCardComponentMapper (#1445) (f334e76b)
