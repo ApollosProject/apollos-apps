@@ -19,10 +19,11 @@ const CenteredAvatar = styled(
 )(ConnectedImage);
 
 const RandomAvatar = styled(
-  ({ orientation, size, getXYPositions }) => ({
+  ({ order, orientation, size, getXYPositions }) => ({
     aspectRatio: 1,
     borderRadius: 1000, // For simplicity we are just going to use a very large magic number 🙃🧙
     position: 'absolute',
+    zIndex: order,
     ...getXYPositions(size),
     ...(orientation === 'landscape' // Avatar size is based on the smallest device dimension
       ? { height: `${size}%` }
@@ -57,12 +58,16 @@ class AvatarCloud extends PureComponent {
       : this.props.maxAvatarSize;
   }
 
-  getRandomPercentageSize() {
-    return Math.floor(
-      Math.random() *
-        (this.getRandomAvatarMaxSize() - this.props.minAvatarSize + 1) +
-        this.props.minAvatarSize
+  getRandomAvatarSizes() {
+    const sizes = this.props.avatars.map(() =>
+      Math.floor(
+        Math.random() *
+          (this.getRandomAvatarMaxSize() - this.props.minAvatarSize + 1) +
+          this.props.minAvatarSize
+      )
     );
+
+    return sizes.sort((a, b) => a - b);
   }
 
   getRandomXYPositions = (avatarSize) => {
@@ -76,12 +81,13 @@ class AvatarCloud extends PureComponent {
   };
 
   renderRandomAvatars() {
-    return this.props.avatars.map((avatar, i) => (
+    return this.getRandomAvatarSizes().map((size, i) => (
       <RandomAvatar
-        key={JSON.stringify(avatar + i)}
-        size={this.getRandomPercentageSize()}
+        key={size}
+        size={size}
+        order={i}
         orientation={this.getOrientation()}
-        source={avatar}
+        source={this.props.avatars[i]}
         getXYPositions={this.getRandomXYPositions}
       />
     ));
