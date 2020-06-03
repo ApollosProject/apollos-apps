@@ -1,0 +1,620 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The AvatarCloud component should accept a maxAvatarSize 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    animate={null}
+    customAnimate={null}
+    onReady={false}
+    style={
+      Object {
+        "aspectRatio": 1,
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 1000,
+        "left": "59%",
+        "position": "absolute",
+        "top": "13%",
+        "width": "10%",
+      }
+    }
+  >
+    <Image
+      getXYPositions={[Function]}
+      onLoad={[Function]}
+      orientation="portrait"
+      size={10}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://picsum.photos/200",
+            "url": "https://picsum.photos/200",
+          },
+        ]
+      }
+      style={
+        Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
+          "left": "59%",
+          "opacity": 0,
+          "position": "absolute",
+          "top": "13%",
+          "width": "10%",
+        }
+      }
+    />
+  </View>
+  <View
+    animate={null}
+    customAnimate={null}
+    onReady={false}
+    style={
+      Object {
+        "aspectRatio": 1,
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 1000,
+        "left": "85%",
+        "position": "absolute",
+        "top": "9%",
+        "width": "10%",
+      }
+    }
+  >
+    <Image
+      getXYPositions={[Function]}
+      onLoad={[Function]}
+      orientation="portrait"
+      size={10}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://picsum.photos/200",
+            "url": "https://picsum.photos/200",
+          },
+        ]
+      }
+      style={
+        Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
+          "left": "85%",
+          "opacity": 0,
+          "position": "absolute",
+          "top": "9%",
+          "width": "10%",
+        }
+      }
+    />
+  </View>
+  <View
+    animate={null}
+    customAnimate={null}
+    onReady={false}
+    style={
+      Object {
+        "aspectRatio": 1,
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 1000,
+        "left": "62%",
+        "position": "absolute",
+        "top": "51%",
+        "width": "10%",
+      }
+    }
+  >
+    <Image
+      getXYPositions={[Function]}
+      onLoad={[Function]}
+      orientation="portrait"
+      size={10}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://picsum.photos/200",
+            "url": "https://picsum.photos/200",
+          },
+        ]
+      }
+      style={
+        Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
+          "left": "62%",
+          "opacity": 0,
+          "position": "absolute",
+          "top": "51%",
+          "width": "10%",
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`The AvatarCloud component should accept a minAvatarSize 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    animate={null}
+    customAnimate={null}
+    onReady={false}
+    style={
+      Object {
+        "aspectRatio": 1,
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 1000,
+        "left": "23%",
+        "position": "absolute",
+        "top": "57%",
+        "width": "31%",
+      }
+    }
+  >
+    <Image
+      getXYPositions={[Function]}
+      onLoad={[Function]}
+      orientation="portrait"
+      size={31}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://picsum.photos/200",
+            "url": "https://picsum.photos/200",
+          },
+        ]
+      }
+      style={
+        Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
+          "left": "23%",
+          "opacity": 0,
+          "position": "absolute",
+          "top": "57%",
+          "width": "31%",
+        }
+      }
+    />
+  </View>
+  <View
+    animate={null}
+    customAnimate={null}
+    onReady={false}
+    style={
+      Object {
+        "aspectRatio": 1,
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 1000,
+        "left": "7%",
+        "position": "absolute",
+        "top": "5%",
+        "width": "91%",
+      }
+    }
+  >
+    <Image
+      getXYPositions={[Function]}
+      onLoad={[Function]}
+      orientation="portrait"
+      size={91}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://picsum.photos/200",
+            "url": "https://picsum.photos/200",
+          },
+        ]
+      }
+      style={
+        Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
+          "left": "7%",
+          "opacity": 0,
+          "position": "absolute",
+          "top": "5%",
+          "width": "91%",
+        }
+      }
+    />
+  </View>
+  <View
+    animate={null}
+    customAnimate={null}
+    onReady={false}
+    style={
+      Object {
+        "aspectRatio": 1,
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 1000,
+        "left": "62%",
+        "position": "absolute",
+        "top": "24%",
+        "width": "36%",
+      }
+    }
+  >
+    <Image
+      getXYPositions={[Function]}
+      onLoad={[Function]}
+      orientation="portrait"
+      size={36}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://picsum.photos/200",
+            "url": "https://picsum.photos/200",
+          },
+        ]
+      }
+      style={
+        Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
+          "left": "62%",
+          "opacity": 0,
+          "position": "absolute",
+          "top": "24%",
+          "width": "36%",
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`The AvatarCloud component should accept a primaryAvatar 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    animate={null}
+    customAnimate={null}
+    onReady={false}
+    style={
+      Object {
+        "aspectRatio": 1,
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 1000,
+        "width": "50%",
+        "zIndex": 100,
+      }
+    }
+  >
+    <Image
+      onLoad={[Function]}
+      orientation="portrait"
+      size={50}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://picsum.photos/200",
+            "url": "https://picsum.photos/200",
+          },
+        ]
+      }
+      style={
+        Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
+          "opacity": 0,
+          "width": "50%",
+          "zIndex": 100,
+        }
+      }
+    />
+  </View>
+  <View
+    animate={null}
+    customAnimate={null}
+    onReady={false}
+    style={
+      Object {
+        "aspectRatio": 1,
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 1000,
+        "left": "21%",
+        "position": "absolute",
+        "top": "5%",
+        "width": "16%",
+      }
+    }
+  >
+    <Image
+      getXYPositions={[Function]}
+      onLoad={[Function]}
+      orientation="portrait"
+      size={16}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://picsum.photos/200",
+            "url": "https://picsum.photos/200",
+          },
+        ]
+      }
+      style={
+        Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
+          "left": "21%",
+          "opacity": 0,
+          "position": "absolute",
+          "top": "5%",
+          "width": "16%",
+        }
+      }
+    />
+  </View>
+  <View
+    animate={null}
+    customAnimate={null}
+    onReady={false}
+    style={
+      Object {
+        "aspectRatio": 1,
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 1000,
+        "left": "8%",
+        "position": "absolute",
+        "top": "14%",
+        "width": "39%",
+      }
+    }
+  >
+    <Image
+      getXYPositions={[Function]}
+      onLoad={[Function]}
+      orientation="portrait"
+      size={39}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://picsum.photos/200",
+            "url": "https://picsum.photos/200",
+          },
+        ]
+      }
+      style={
+        Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
+          "left": "8%",
+          "opacity": 0,
+          "position": "absolute",
+          "top": "14%",
+          "width": "39%",
+        }
+      }
+    />
+  </View>
+  <View
+    animate={null}
+    customAnimate={null}
+    onReady={false}
+    style={
+      Object {
+        "aspectRatio": 1,
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 1000,
+        "left": "1%",
+        "position": "absolute",
+        "top": "16%",
+        "width": "38%",
+      }
+    }
+  >
+    <Image
+      getXYPositions={[Function]}
+      onLoad={[Function]}
+      orientation="portrait"
+      size={38}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://picsum.photos/200",
+            "url": "https://picsum.photos/200",
+          },
+        ]
+      }
+      style={
+        Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
+          "left": "1%",
+          "opacity": 0,
+          "position": "absolute",
+          "top": "16%",
+          "width": "38%",
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`The AvatarCloud component should render 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    animate={null}
+    customAnimate={null}
+    onReady={false}
+    style={
+      Object {
+        "aspectRatio": 1,
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 1000,
+        "left": "54%",
+        "position": "absolute",
+        "top": "4%",
+        "width": "41%",
+      }
+    }
+  >
+    <Image
+      getXYPositions={[Function]}
+      onLoad={[Function]}
+      orientation="portrait"
+      size={41}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://picsum.photos/200",
+            "url": "https://picsum.photos/200",
+          },
+        ]
+      }
+      style={
+        Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
+          "left": "54%",
+          "opacity": 0,
+          "position": "absolute",
+          "top": "4%",
+          "width": "41%",
+        }
+      }
+    />
+  </View>
+  <View
+    animate={null}
+    customAnimate={null}
+    onReady={false}
+    style={
+      Object {
+        "aspectRatio": 1,
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 1000,
+        "left": "18%",
+        "position": "absolute",
+        "top": "8%",
+        "width": "26%",
+      }
+    }
+  >
+    <Image
+      getXYPositions={[Function]}
+      onLoad={[Function]}
+      orientation="portrait"
+      size={26}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://picsum.photos/200",
+            "url": "https://picsum.photos/200",
+          },
+        ]
+      }
+      style={
+        Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
+          "left": "18%",
+          "opacity": 0,
+          "position": "absolute",
+          "top": "8%",
+          "width": "26%",
+        }
+      }
+    />
+  </View>
+  <View
+    animate={null}
+    customAnimate={null}
+    onReady={false}
+    style={
+      Object {
+        "aspectRatio": 1,
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 1000,
+        "left": "57%",
+        "position": "absolute",
+        "top": "30%",
+        "width": "36%",
+      }
+    }
+  >
+    <Image
+      getXYPositions={[Function]}
+      onLoad={[Function]}
+      orientation="portrait"
+      size={36}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://picsum.photos/200",
+            "url": "https://picsum.photos/200",
+          },
+        ]
+      }
+      style={
+        Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
+          "left": "57%",
+          "opacity": 0,
+          "position": "absolute",
+          "top": "30%",
+          "width": "36%",
+        }
+      }
+    />
+  </View>
+</View>
+`;
