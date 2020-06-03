@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-media-player",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -62,8 +62,8 @@
     "react": "16.8.6",
     "react-apollo": "2.5.5",
     "react-native": "0.60.5",
-    "react-native-linear-gradient": "2.5.3",
     "react-native-google-cast": "^3.3.0",
+    "react-native-linear-gradient": "2.5.3",
     "react-native-music-control": "0.10.8",
     "react-native-svg": "9.4.0",
     "react-native-video": "5.0.0",
