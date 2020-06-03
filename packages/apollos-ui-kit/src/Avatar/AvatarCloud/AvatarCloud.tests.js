@@ -12,6 +12,12 @@ const avatars = [
 ];
 
 describe('The AvatarCloud component', () => {
+  beforeEach(() => {
+    jest.spyOn(global.Math, 'random').mockReturnValue(0.123456789);
+  });
+  afterEach(() => {
+    global.Math.random.mockRestore();
+  });
   it('should render', () => {
     const tree = renderer.create(
       <Providers>

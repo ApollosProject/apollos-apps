@@ -19,16 +19,18 @@ exports[`The AvatarCloud component should accept a maxAvatarSize 1`] = `
         "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
         "borderRadius": 1000,
-        "left": "59%",
+        "left": "11%",
         "position": "absolute",
-        "top": "13%",
+        "top": "11%",
         "width": "10%",
+        "zIndex": 0,
       }
     }
   >
     <Image
       getXYPositions={[Function]}
       onLoad={[Function]}
+      order={0}
       orientation="portrait"
       size={10}
       source={
@@ -45,11 +47,12 @@ exports[`The AvatarCloud component should accept a maxAvatarSize 1`] = `
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 1000,
-          "left": "59%",
+          "left": "11%",
           "opacity": 0,
           "position": "absolute",
-          "top": "13%",
+          "top": "11%",
           "width": "10%",
+          "zIndex": 0,
         }
       }
     />
@@ -63,16 +66,18 @@ exports[`The AvatarCloud component should accept a maxAvatarSize 1`] = `
         "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
         "borderRadius": 1000,
-        "left": "85%",
+        "left": "11%",
         "position": "absolute",
-        "top": "9%",
+        "top": "11%",
         "width": "10%",
+        "zIndex": 1,
       }
     }
   >
     <Image
       getXYPositions={[Function]}
       onLoad={[Function]}
+      order={1}
       orientation="portrait"
       size={10}
       source={
@@ -89,11 +94,12 @@ exports[`The AvatarCloud component should accept a maxAvatarSize 1`] = `
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 1000,
-          "left": "85%",
+          "left": "11%",
           "opacity": 0,
           "position": "absolute",
-          "top": "9%",
+          "top": "11%",
           "width": "10%",
+          "zIndex": 1,
         }
       }
     />
@@ -107,16 +113,18 @@ exports[`The AvatarCloud component should accept a maxAvatarSize 1`] = `
         "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
         "borderRadius": 1000,
-        "left": "62%",
+        "left": "11%",
         "position": "absolute",
-        "top": "51%",
+        "top": "11%",
         "width": "10%",
+        "zIndex": 2,
       }
     }
   >
     <Image
       getXYPositions={[Function]}
       onLoad={[Function]}
+      order={2}
       orientation="portrait"
       size={10}
       source={
@@ -133,11 +141,12 @@ exports[`The AvatarCloud component should accept a maxAvatarSize 1`] = `
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 1000,
-          "left": "62%",
+          "left": "11%",
           "opacity": 0,
           "position": "absolute",
-          "top": "51%",
+          "top": "11%",
           "width": "10%",
+          "zIndex": 2,
         }
       }
     />
@@ -164,18 +173,20 @@ exports[`The AvatarCloud component should accept a minAvatarSize 1`] = `
         "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
         "borderRadius": 1000,
-        "left": "23%",
+        "left": "10%",
         "position": "absolute",
-        "top": "57%",
-        "width": "31%",
+        "top": "10%",
+        "width": "21%",
+        "zIndex": 0,
       }
     }
   >
     <Image
       getXYPositions={[Function]}
       onLoad={[Function]}
+      order={0}
       orientation="portrait"
-      size={31}
+      size={21}
       source={
         Array [
           Object {
@@ -190,11 +201,12 @@ exports[`The AvatarCloud component should accept a minAvatarSize 1`] = `
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 1000,
-          "left": "23%",
+          "left": "10%",
           "opacity": 0,
           "position": "absolute",
-          "top": "57%",
-          "width": "31%",
+          "top": "10%",
+          "width": "21%",
+          "zIndex": 0,
         }
       }
     />
@@ -208,18 +220,20 @@ exports[`The AvatarCloud component should accept a minAvatarSize 1`] = `
         "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
         "borderRadius": 1000,
-        "left": "7%",
+        "left": "10%",
         "position": "absolute",
-        "top": "5%",
-        "width": "91%",
+        "top": "10%",
+        "width": "21%",
+        "zIndex": 1,
       }
     }
   >
     <Image
       getXYPositions={[Function]}
       onLoad={[Function]}
+      order={1}
       orientation="portrait"
-      size={91}
+      size={21}
       source={
         Array [
           Object {
@@ -234,11 +248,12 @@ exports[`The AvatarCloud component should accept a minAvatarSize 1`] = `
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 1000,
-          "left": "7%",
+          "left": "10%",
           "opacity": 0,
           "position": "absolute",
-          "top": "5%",
-          "width": "91%",
+          "top": "10%",
+          "width": "21%",
+          "zIndex": 1,
         }
       }
     />
@@ -252,18 +267,20 @@ exports[`The AvatarCloud component should accept a minAvatarSize 1`] = `
         "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
         "borderRadius": 1000,
-        "left": "62%",
+        "left": "10%",
         "position": "absolute",
-        "top": "24%",
-        "width": "36%",
+        "top": "10%",
+        "width": "21%",
+        "zIndex": 2,
       }
     }
   >
     <Image
       getXYPositions={[Function]}
       onLoad={[Function]}
+      order={2}
       orientation="portrait"
-      size={36}
+      size={21}
       source={
         Array [
           Object {
@@ -278,11 +295,12 @@ exports[`The AvatarCloud component should accept a minAvatarSize 1`] = `
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 1000,
-          "left": "62%",
+          "left": "10%",
           "opacity": 0,
           "position": "absolute",
-          "top": "24%",
-          "width": "36%",
+          "top": "10%",
+          "width": "21%",
+          "zIndex": 2,
         }
       }
     />
@@ -348,18 +366,20 @@ exports[`The AvatarCloud component should accept a primaryAvatar 1`] = `
         "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
         "borderRadius": 1000,
-        "left": "21%",
+        "left": "11%",
         "position": "absolute",
-        "top": "5%",
-        "width": "16%",
+        "top": "11%",
+        "width": "13%",
+        "zIndex": 0,
       }
     }
   >
     <Image
       getXYPositions={[Function]}
       onLoad={[Function]}
+      order={0}
       orientation="portrait"
-      size={16}
+      size={13}
       source={
         Array [
           Object {
@@ -374,11 +394,12 @@ exports[`The AvatarCloud component should accept a primaryAvatar 1`] = `
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 1000,
-          "left": "21%",
+          "left": "11%",
           "opacity": 0,
           "position": "absolute",
-          "top": "5%",
-          "width": "16%",
+          "top": "11%",
+          "width": "13%",
+          "zIndex": 0,
         }
       }
     />
@@ -392,18 +413,20 @@ exports[`The AvatarCloud component should accept a primaryAvatar 1`] = `
         "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
         "borderRadius": 1000,
-        "left": "8%",
+        "left": "11%",
         "position": "absolute",
-        "top": "14%",
-        "width": "39%",
+        "top": "11%",
+        "width": "13%",
+        "zIndex": 1,
       }
     }
   >
     <Image
       getXYPositions={[Function]}
       onLoad={[Function]}
+      order={1}
       orientation="portrait"
-      size={39}
+      size={13}
       source={
         Array [
           Object {
@@ -418,11 +441,12 @@ exports[`The AvatarCloud component should accept a primaryAvatar 1`] = `
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 1000,
-          "left": "8%",
+          "left": "11%",
           "opacity": 0,
           "position": "absolute",
-          "top": "14%",
-          "width": "39%",
+          "top": "11%",
+          "width": "13%",
+          "zIndex": 1,
         }
       }
     />
@@ -436,18 +460,20 @@ exports[`The AvatarCloud component should accept a primaryAvatar 1`] = `
         "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
         "borderRadius": 1000,
-        "left": "1%",
+        "left": "11%",
         "position": "absolute",
-        "top": "16%",
-        "width": "38%",
+        "top": "11%",
+        "width": "13%",
+        "zIndex": 2,
       }
     }
   >
     <Image
       getXYPositions={[Function]}
       onLoad={[Function]}
+      order={2}
       orientation="portrait"
-      size={38}
+      size={13}
       source={
         Array [
           Object {
@@ -462,11 +488,12 @@ exports[`The AvatarCloud component should accept a primaryAvatar 1`] = `
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 1000,
-          "left": "1%",
+          "left": "11%",
           "opacity": 0,
           "position": "absolute",
-          "top": "16%",
-          "width": "38%",
+          "top": "11%",
+          "width": "13%",
+          "zIndex": 2,
         }
       }
     />
@@ -493,18 +520,20 @@ exports[`The AvatarCloud component should render 1`] = `
         "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
         "borderRadius": 1000,
-        "left": "54%",
+        "left": "10%",
         "position": "absolute",
-        "top": "4%",
-        "width": "41%",
+        "top": "10%",
+        "width": "15%",
+        "zIndex": 0,
       }
     }
   >
     <Image
       getXYPositions={[Function]}
       onLoad={[Function]}
+      order={0}
       orientation="portrait"
-      size={41}
+      size={15}
       source={
         Array [
           Object {
@@ -519,11 +548,12 @@ exports[`The AvatarCloud component should render 1`] = `
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 1000,
-          "left": "54%",
+          "left": "10%",
           "opacity": 0,
           "position": "absolute",
-          "top": "4%",
-          "width": "41%",
+          "top": "10%",
+          "width": "15%",
+          "zIndex": 0,
         }
       }
     />
@@ -537,18 +567,20 @@ exports[`The AvatarCloud component should render 1`] = `
         "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
         "borderRadius": 1000,
-        "left": "18%",
+        "left": "10%",
         "position": "absolute",
-        "top": "8%",
-        "width": "26%",
+        "top": "10%",
+        "width": "15%",
+        "zIndex": 1,
       }
     }
   >
     <Image
       getXYPositions={[Function]}
       onLoad={[Function]}
+      order={1}
       orientation="portrait"
-      size={26}
+      size={15}
       source={
         Array [
           Object {
@@ -563,11 +595,12 @@ exports[`The AvatarCloud component should render 1`] = `
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 1000,
-          "left": "18%",
+          "left": "10%",
           "opacity": 0,
           "position": "absolute",
-          "top": "8%",
-          "width": "26%",
+          "top": "10%",
+          "width": "15%",
+          "zIndex": 1,
         }
       }
     />
@@ -581,18 +614,20 @@ exports[`The AvatarCloud component should render 1`] = `
         "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
         "borderRadius": 1000,
-        "left": "57%",
+        "left": "10%",
         "position": "absolute",
-        "top": "30%",
-        "width": "36%",
+        "top": "10%",
+        "width": "15%",
+        "zIndex": 2,
       }
     }
   >
     <Image
       getXYPositions={[Function]}
       onLoad={[Function]}
+      order={2}
       orientation="portrait"
-      size={36}
+      size={15}
       source={
         Array [
           Object {
@@ -607,11 +642,12 @@ exports[`The AvatarCloud component should render 1`] = `
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 1000,
-          "left": "57%",
+          "left": "10%",
           "opacity": 0,
           "position": "absolute",
-          "top": "30%",
-          "width": "36%",
+          "top": "10%",
+          "width": "15%",
+          "zIndex": 2,
         }
       }
     />
