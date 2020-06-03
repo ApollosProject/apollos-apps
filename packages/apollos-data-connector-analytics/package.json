@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/data-connector-analytics",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
   "scripts": {
@@ -23,7 +23,7 @@
     ]
   },
   "dependencies": {
-    "@apollosproject/data-schema": "^1.4.0",
+    "@apollosproject/data-schema": "^1.4.1",
     "analytics-node": "^3.4.0-beta.1",
     "apollo-datasource": "^0.2.0",
     "universal-analytics": "^0.4.20"
@@ -34,7 +34,7 @@
     "apollo-server": "^2.11.0"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^1.4.0"
+    "@apollosproject/babel-preset-apollos": "^1.4.1"
   },
   "publishConfig": {
     "access": "public"

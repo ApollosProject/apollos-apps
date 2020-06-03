@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-prayer",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -51,8 +51,8 @@
     "formik": "1.5.1",
     "graphql-tag": "2.9.2",
     "lodash": "4.17.13",
-    "react-native-swiper": "^1.6.0",
     "react-is": "^16.8.6",
+    "react-native-swiper": "^1.6.0",
     "yup": "0.26.6"
   },
   "devDependencies": {
@@ -64,7 +64,7 @@
     "react-apollo": "2.5.5",
     "react-native": "0.60.5",
     "react-navigation": "^3.11.0",
-    "react-test-renderer": "16.6.1",
+    "react-test-renderer": "16.8.6",
     "waait": "1.0.2"
   },
   "publishConfig": {
