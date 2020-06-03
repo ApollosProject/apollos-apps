@@ -67,7 +67,7 @@ class AvatarCloud extends PureComponent {
       )
     );
 
-    return sizes.sort((a, b) => a - b);
+    return sizes.sort((a, b) => a - b); // sort by decending order e.g. 1, 2, 3, 4
   }
 
   getRandomXYPositions = (avatarSize) => {
