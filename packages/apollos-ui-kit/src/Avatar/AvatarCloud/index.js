@@ -54,7 +54,9 @@ class AvatarCloud extends PureComponent {
 
   getRandomAvatarMaxSize() {
     return this.props.primaryAvatar
-      ? this.props.maxAvatarSize - 10
+      ? /* we need some way to differentiate the largest possible `RandomAvatar`s from the
+         * `primaryAvatar` so we subtract by a magic number that looks nice 🧙‍♂️ */
+        this.props.maxAvatarSize - 10
       : this.props.maxAvatarSize;
   }
 
