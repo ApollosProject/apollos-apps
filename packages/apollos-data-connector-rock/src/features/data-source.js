@@ -221,7 +221,7 @@ export default class Feature extends RockApolloDataSource {
 
   async dailyPrayerAlgorithm({ limit = 15 } = {}) {
     const { PrayerRequest } = this.context.dataSources;
-    const cursor = await Prayer.byDailyPrayerFeed();
+    const cursor = await PrayerRequest.byDailyPrayerFeed();
     return cursor.top(limit).get();
   }
 
