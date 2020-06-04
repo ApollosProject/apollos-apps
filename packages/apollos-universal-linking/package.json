@@ -1,5 +1,5 @@
 {
-  "name": "@apollosproject/config",
+  "name": "@apollosproject/universal-links",
   "version": "1.4.1",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
@@ -33,8 +33,12 @@
   },
   "devDependencies": {
     "@apollosproject/babel-preset-apollos": "^1.4.1",
+    "@apollosproject/config": "^1.4.1"
   },
   "dependencies": {
+  },
+  "peerDependencies":{
+    "@apollosproject/config": "*"
   },
   "license": "SEE LICENSE IN LICENSE.md",
   "publishConfig": {

@@ -47,10 +47,7 @@ const resetToAuth = performWhenReady(() => {
   );
 });
 
-// This action gets exported via it's name since it
-// doesn't do anything by itself, it's a helper to build
-// a commonly used action.
-export const resetAction = ({ navigatorName, routeName }) =>
+const resetAction = ({ navigatorName, routeName }) =>
   StackActions.reset({
     index: 0,
     key: null,
