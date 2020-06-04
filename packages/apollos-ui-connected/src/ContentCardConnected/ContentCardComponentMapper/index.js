@@ -5,10 +5,9 @@ import { withTheme } from '@apollosproject/ui-kit';
 
 import cardMapper from './cardMapper';
 
-const ContentCardComponentMapper = withTheme(
-  () => ({}),
-  'ContentCardComponentMapper'
-)(({ Component, ...props }) => <Component {...props} />);
+const ContentCardComponentMapper = ({ Component, ...props }) => (
+  <Component {...props} />
+);
 
 ContentCardComponentMapper.propTypes = {
   Component: PropTypes.func,
@@ -20,4 +19,9 @@ ContentCardComponentMapper.defaultProps = {
 
 ContentCardComponentMapper.displayName = 'ListItemCard';
 
-export default ContentCardComponentMapper;
+const ContentCardComponentMapperWithTheme = withTheme(
+  () => ({}),
+  'ui-connected.ContentCardComponentMapper'
+)(ContentCardComponentMapper);
+
+export default ContentCardComponentMapperWithTheme;
