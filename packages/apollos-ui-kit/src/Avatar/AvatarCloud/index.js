@@ -1,33 +1,27 @@
 import React, { PureComponent } from 'react';
-import { Dimensions } from 'react-native';
 import PropTypes from 'prop-types';
-
 import CenteredView from '../../CenteredView';
 import ConnectedImage, { ImageSourceType } from '../../ConnectedImage';
 import styled from '../../styled';
 
 const CenteredAvatar = styled(
-  ({ orientation, size }) => ({
+  ({ size }) => ({
     aspectRatio: 1,
     borderRadius: 1000, // For simplicity we are just going to use a very large magic number 🙃🧙
+    width: `${size}%`,
     zIndex: 100,
-    ...(orientation === 'landscape' // Avatar size is based on the smallest device dimension
-      ? { height: `${size}%` }
-      : { width: `${size}%` }),
   }),
   'ui-kit.AvatarList.UserAvatar'
 )(ConnectedImage);
 
 const RandomAvatar = styled(
-  ({ order, orientation, size, getXYPositions }) => ({
+  ({ order, size, getXYPositions }) => ({
     aspectRatio: 1,
     borderRadius: 1000, // For simplicity we are just going to use a very large magic number 🙃🧙
     position: 'absolute',
+    width: `${size}%`,
     zIndex: order,
     ...getXYPositions(size),
-    ...(orientation === 'landscape' // Avatar size is based on the smallest device dimension
-      ? { height: `${size}%` }
-      : { width: `${size}%` }),
   }),
   'ui-kit.AvatarList.RandomAvatar'
 )(ConnectedImage);
@@ -43,13 +37,6 @@ class AvatarCloud extends PureComponent {
   static defaultProps = {
     maxAvatarSize: 50,
     minAvatarSize: 10,
-  };
-
-  getOrientation = () => {
-    if (Dimensions.get('window').width > Dimensions.get('window').height) {
-      return 'landscape';
-    }
-    return 'portrait';
   };
 
   getRandomAvatarMaxSize() {
@@ -88,7 +75,6 @@ class AvatarCloud extends PureComponent {
         key={size}
         size={size}
         order={i}
-        orientation={this.getOrientation()}
         source={this.props.avatars[i]}
         getXYPositions={this.getRandomXYPositions}
       />
@@ -106,11 +92,7 @@ class AvatarCloud extends PureComponent {
     return (
       <CenteredView {...props}>
         {primaryAvatar ? (
-          <CenteredAvatar
-            orientation={this.getOrientation()}
-            size={maxAvatarSize}
-            source={primaryAvatar}
-          />
+          <CenteredAvatar size={maxAvatarSize} source={primaryAvatar} />
         ) : null}
         {this.renderRandomAvatars()}
       </CenteredView>
