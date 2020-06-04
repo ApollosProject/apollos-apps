@@ -3,9 +3,9 @@ import ApollosConfig from '@apollosproject/config';
 
 const defaultCreateRedirectLink = ({ platform }) => {
   if (platform === 'android') {
-    return ApollosConfig.PLAY_STORE_LINK;
+    return ApollosConfig.UNIVERSAL_LINKS.PLAY_STORE_LINK;
   }
-  return ApollosConfig.APP_STORE_LINK;
+  return ApollosConfig.UNIVERSAL_LINKS.APP_STORE_LINK;
 };
 
 export function setupUniversalLinks({
