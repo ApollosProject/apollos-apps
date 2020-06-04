@@ -29,22 +29,22 @@ const RandomAvatar = styled(
 class AvatarCloud extends PureComponent {
   static propTypes = {
     avatars: PropTypes.arrayOf(ImageSourceType).isRequired,
-    maxAvatarSize: PropTypes.number, // a percentage represented as a whole number
     minAvatarSize: PropTypes.number, // a percentage represented as a whole number
+    maxAvatarWidth: PropTypes.number, // a percentage represented as a whole number
     primaryAvatar: ImageSourceType, // The source to render a larger avatar at the center of the cloud
   };
 
   static defaultProps = {
-    maxAvatarSize: 50,
     minAvatarSize: 10,
+    maxAvatarWidth: 50,
   };
 
   getRandomAvatarMaxSize() {
     return this.props.primaryAvatar
       ? /* we need some way to differentiate the largest possible `RandomAvatar`s from the
          * `primaryAvatar` so we subtract by a magic number that looks nice 🧙‍♂️ */
-        this.props.maxAvatarSize - 10
-      : this.props.maxAvatarSize;
+        this.props.maxAvatarWidth - 10
+      : this.props.maxAvatarWidth;
   }
 
   getRandomAvatarSizes() {
@@ -84,15 +84,15 @@ class AvatarCloud extends PureComponent {
   render() {
     const {
       avatars,
-      maxAvatarSize,
       minAvatarSize,
+      maxAvatarWidth,
       primaryAvatar,
       ...props
     } = this.props;
     return (
       <CenteredView {...props}>
         {primaryAvatar ? (
-          <CenteredAvatar size={maxAvatarSize} source={primaryAvatar} />
+          <CenteredAvatar size={maxAvatarWidth} source={primaryAvatar} />
         ) : null}
         {this.renderRandomAvatars()}
       </CenteredView>

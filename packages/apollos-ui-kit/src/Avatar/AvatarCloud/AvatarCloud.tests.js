@@ -27,10 +27,10 @@ describe('The AvatarCloud component', () => {
 
     expect(tree).toMatchSnapshot();
   });
-  it('should accept a maxAvatarSize', () => {
+  it('should accept a maxAvatarWidth', () => {
     const tree = renderer.create(
       <Providers>
-        <AvatarCloud avatars={avatars} maxAvatarSize={10} />
+        <AvatarCloud avatars={avatars} maxAvatarWidth={10} />
       </Providers>
     );
 
