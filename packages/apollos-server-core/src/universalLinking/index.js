@@ -1,13 +1,26 @@
+/* eslint-disable import/prefer-default-export */
 import ApollosConfig from '@apollosproject/config';
 
-export function setupUniversalLinks({ app, assetLinks = {}, appleAppSiteAssociation = {} }) {
+const defaultCreateRedirectLink = ({ platform }) => {
+  if (platform === 'android') {
+    return ApollosConfig.PLAY_STORE_LINK;
+  }
+  return ApollosConfig.APP_STORE_LINK;
+};
+
+export function setupUniversalLinks({
+  app,
+  assetLinks = {},
+  appleAppSiteAssociation = {},
+  // Rather than redirecting to the app store, clients can override this function
+  // to redirect to their content on the web.
+  createRedirectLink = defaultCreateRedirectLink,
+}) {
   const {
     APPLE_TEAM_ID,
     APPLE_APP_ID,
     GOOGLE_APP_ID,
     GOOGLE_KEYSTORE_SHA256,
-    PLAY_STORE_LINK,
-    APP_STORE_LINK,
   } = ApollosConfig.UNIVERSAL_LINKS;
 
   app.get('/.well-known/apple-app-site-association', (req, res) => {
@@ -47,9 +60,9 @@ export function setupUniversalLinks({ app, assetLinks = {}, appleAppSiteAssociat
 
   app.get('/app-link/*', (req, res) => {
     if (/Android/.test(req.headers['user-agent'])) {
-      res.redirect(PLAY_STORE_LINK);
+      res.redirect(createRedirectLink({ platform: 'android', req }));
     } else {
-      res.redirect(APP_STORE_LINK);
+      res.redirect(createRedirectLink({ platform: 'ios', req }));
     }
   });
 }
