@@ -29,14 +29,14 @@ const RandomAvatar = styled(
 class AvatarCloud extends PureComponent {
   static propTypes = {
     avatars: PropTypes.arrayOf(ImageSourceType).isRequired,
-    minAvatarSize: PropTypes.number, // a percentage represented as a whole number
     maxAvatarWidth: PropTypes.number, // a percentage represented as a whole number
+    minAvatarWidth: PropTypes.number, // a percentage represented as a whole number
     primaryAvatar: ImageSourceType, // The source to render a larger avatar at the center of the cloud
   };
 
   static defaultProps = {
-    minAvatarSize: 10,
     maxAvatarWidth: 50,
+    minAvatarWidth: 10,
   };
 
   getRandomAvatarMaxSize() {
@@ -51,8 +51,8 @@ class AvatarCloud extends PureComponent {
     const sizes = this.props.avatars.map(() =>
       Math.floor(
         Math.random() *
-          (this.getRandomAvatarMaxSize() - this.props.minAvatarSize + 1) +
-          this.props.minAvatarSize
+          (this.getRandomAvatarMaxSize() - this.props.minAvatarWidth + 1) +
+          this.props.minAvatarWidth
       )
     );
 
@@ -84,8 +84,8 @@ class AvatarCloud extends PureComponent {
   render() {
     const {
       avatars,
-      minAvatarSize,
       maxAvatarWidth,
+      minAvatarWidth,
       primaryAvatar,
       ...props
     } = this.props;
