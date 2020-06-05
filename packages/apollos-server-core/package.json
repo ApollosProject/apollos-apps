@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/server-core",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@apollosproject/data-schema": "^1.4.1",
+    "@apollosproject/data-schema": "^1.4.2",
     "apollo-server-caching": "^0.4.0",
     "bull": "^3.11.0",
     "bull-board": "^0.1.1",
@@ -33,7 +33,7 @@
     "apollo-server": "^2.11.0"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^1.4.1",
+    "@apollosproject/babel-preset-apollos": "^1.4.2",
     "casual": "^1.5.19"
   },
   "license": "SEE LICENSE IN LICENSE.md",

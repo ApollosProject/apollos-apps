@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/data-connector-twilio",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
   "scripts": {
@@ -30,8 +30,8 @@
     "@apollosproject/config": "*"
   },
   "devDependencies": {
-    "@apollosproject/apollo-server-env-mock": "^1.4.1",
-    "@apollosproject/babel-preset-apollos": "^1.4.1",
+    "@apollosproject/apollo-server-env-mock": "^1.4.2",
+    "@apollosproject/babel-preset-apollos": "^1.4.2",
     "jest": "^23.6.0"
   },
   "publishConfig": {
