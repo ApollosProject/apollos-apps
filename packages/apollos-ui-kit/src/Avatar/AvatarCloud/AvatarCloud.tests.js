@@ -6,9 +6,9 @@ import Providers from '../../Providers';
 import AvatarCloud from '.';
 
 const avatars = [
-  'https://picsum.photos/200',
-  'https://picsum.photos/200',
-  'https://picsum.photos/200',
+  'https://picsum.photos/200?1',
+  'https://picsum.photos/200?2',
+  'https://picsum.photos/200?3',
 ];
 
 describe('The AvatarCloud component', () => {
