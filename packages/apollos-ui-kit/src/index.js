@@ -93,3 +93,4 @@ export {
 } from './typography';
 export { getIsLoading, withIsLoading } from './isLoading';
 export Providers from './Providers';
+export NavigationService from './NavigationService';

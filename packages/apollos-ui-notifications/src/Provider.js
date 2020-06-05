@@ -67,8 +67,11 @@ class NotificationsInit extends Component {
     if (!rawUrl) return;
     const url = URL.parse(rawUrl);
     const route = url.pathname.substring(1);
+    const cleanedRoute = route.includes('/app-link/')
+      ? route
+      : route.split('app-link/')[1];
     const args = querystring.parse(url.query);
-    this.props.navigate(route, args);
+    this.props.navigate(cleanedRoute, args);
   };
 
   onReceived = (notification) => {

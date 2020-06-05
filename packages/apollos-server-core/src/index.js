@@ -17,6 +17,7 @@ export {
   withEdgePagination,
 } from './pagination/utils';
 export { resolverMerge, schemaMerge } from './utils';
+export { setupUniversalLinks } from './universalLinking';
 
 // Types that all apollos-church servers will use.
 const builtInData = { Node, Pagination, Media };
