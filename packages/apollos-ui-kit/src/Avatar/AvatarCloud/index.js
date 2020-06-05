@@ -39,6 +39,12 @@ class AvatarCloud extends PureComponent {
     minAvatarWidth: 0.1,
   };
 
+  constructor(props) {
+    super();
+
+    this.randomSeeds = props.avatars.map(() => Math.random());
+  }
+
   getAvatarPercentageWidth = (width) => `${width * 100}%`;
 
   getRandomAvatarMaxWidth() {
@@ -50,9 +56,9 @@ class AvatarCloud extends PureComponent {
   }
 
   getRandomAvatarSizes() {
-    const sizes = this.props.avatars.map(() => {
+    const sizes = this.props.avatars.map((avatar, i) => {
       const randomNumberInRange =
-        Math.random() *
+        this.randomSeeds[i] *
           (this.getRandomAvatarMaxWidth() - this.props.minAvatarWidth) +
         this.props.minAvatarWidth;
 
@@ -62,14 +68,20 @@ class AvatarCloud extends PureComponent {
     return sizes.sort((a, b) => a - b); // sort by decending order e.g. 1, 2, 3, 4
   }
 
-  getRandomXYPositions = (avatarSize) => {
+  getRandomXYPositions(avatarSize, index) {
     // positionBoundry represents the viewable space for a given Avatar based on its size.
     const positionBoundry = 1 - avatarSize;
-    return {
-      left: this.getAvatarPercentageWidth(Math.random() * positionBoundry),
-      top: this.getAvatarPercentageWidth(0.123456789 * positionBoundry),
+    const xyPositions = {
+      left: this.getAvatarPercentageWidth(
+        this.randomSeeds[index] * positionBoundry
+      ),
+      top: this.getAvatarPercentageWidth(
+        this.randomSeeds[index] * positionBoundry
+      ),
     };
-  };
+
+    return xyPositions;
+  }
 
   renderRandomAvatars() {
     return this.getRandomAvatarSizes().map((size, i) => (
@@ -78,7 +90,7 @@ class AvatarCloud extends PureComponent {
         key={this.props.avatars[i]}
         order={i}
         source={this.props.avatars[i]}
-        getXYPositions={this.getRandomXYPositions(size)}
+        getXYPositions={this.getRandomXYPositions(size, i)}
       />
     ));
   }
