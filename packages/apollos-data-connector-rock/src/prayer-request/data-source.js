@@ -50,7 +50,7 @@ export default class PrayerRequest extends RockApolloDataSource {
     // now see if we need to send a push notification informing author
     // that someone prayed for them
     const prayer = await this.getFromId(id);
-    if (prayer.prayerCount <= 1) this.sendPrayingNotification();
+    if (prayer.prayerCount <= 1) this.sendPrayingNotification(prayer);
   };
 
   sendPrayingNotification = ({ primaryAliasId }) => {
