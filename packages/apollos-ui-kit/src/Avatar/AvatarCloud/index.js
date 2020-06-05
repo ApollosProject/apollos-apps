@@ -15,7 +15,7 @@ const CenteredAvatar = styled(
 )(ConnectedImage);
 
 const RandomAvatar = styled(
-  ({ order, getXYPositions, avatarWidth }) => ({
+  ({ avatarWidth, order, getXYPositions }) => ({
     aspectRatio: 1,
     borderRadius: 1000, // For simplicity we are just going to use a very large magic number 🙃🧙
     position: 'absolute',
@@ -67,15 +67,15 @@ class AvatarCloud extends PureComponent {
     const positionBoundry = 1 - avatarSize;
     return {
       left: this.getAvatarPercentageWidth(Math.random() * positionBoundry),
-      top: this.getAvatarPercentageWidth(Math.random() * positionBoundry),
+      top: this.getAvatarPercentageWidth(0.123456789 * positionBoundry),
     };
   };
 
   renderRandomAvatars() {
     return this.getRandomAvatarSizes().map((size, i) => (
       <RandomAvatar
-        key={this.props.avatars[i]}
         avatarWidth={this.getAvatarPercentageWidth(size)}
+        key={this.props.avatars[i]}
         order={i}
         source={this.props.avatars[i]}
         getXYPositions={this.getRandomXYPositions(size)}
