@@ -30,7 +30,7 @@ describe('The AvatarCloud component', () => {
   it('should accept a maxAvatarWidth', () => {
     const tree = renderer.create(
       <Providers>
-        <AvatarCloud avatars={avatars} maxAvatarWidth={10} />
+        <AvatarCloud avatars={avatars} maxAvatarWidth={0.1} />
       </Providers>
     );
 
@@ -39,7 +39,7 @@ describe('The AvatarCloud component', () => {
   it('should accept a minAvatarWidth', () => {
     const tree = renderer.create(
       <Providers>
-        <AvatarCloud avatars={avatars} minAvatarWidth={100} />
+        <AvatarCloud avatars={avatars} minAvatarWidth={1} />
       </Providers>
     );
 
