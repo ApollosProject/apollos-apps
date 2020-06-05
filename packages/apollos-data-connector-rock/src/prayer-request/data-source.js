@@ -1,6 +1,7 @@
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import ApollosConfig from '@apollosproject/config';
 import moment from 'moment-timezone';
+import { get } from 'lodash';
 
 const { ROCK, ROCK_MAPPINGS } = ApollosConfig;
 export default class PrayerRequest extends RockApolloDataSource {
@@ -43,7 +44,28 @@ export default class PrayerRequest extends RockApolloDataSource {
       ]);
   };
 
-  incrementPrayed = async (id) => this.put(`PrayerRequests/Prayed/${id}`, {});
+  incrementPrayed = async (id) => {
+    this.put(`PrayerRequests/Prayed/${id}`, {});
+
+    // now see if we need to send a push notification informing author
+    // that someone prayed for them
+    const prayer = await this.getFromId(id);
+    if (prayer.prayerCount <= 1) this.sendPrayingNotification();
+  };
+
+  sendPrayingNotification = ({ primaryAliasId }) => {
+    const notificationText = get(
+      ApollosConfig,
+      'NOTIFICATIONS.PRAYING',
+      'The community is praying for you right now.'
+    );
+    const { OneSignal } = this.context.dataSources;
+    if (!OneSignal) return; // todo: support other push providers
+    OneSignal.createNotification({
+      toUserIds: [primaryAliasId],
+      content: notificationText,
+    });
+  };
 
   flag = async (id) => this.put(`PrayerRequests/Flag/${id}`, {});
 
