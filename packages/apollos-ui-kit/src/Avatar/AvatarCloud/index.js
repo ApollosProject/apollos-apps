@@ -5,21 +5,21 @@ import ConnectedImage, { ImageSourceType } from '../../ConnectedImage';
 import styled from '../../styled';
 
 const CenteredAvatar = styled(
-  ({ size }) => ({
+  ({ avatarWidth }) => ({
     aspectRatio: 1,
     borderRadius: 1000, // For simplicity we are just going to use a very large magic number 🙃🧙
-    width: size,
+    width: avatarWidth,
     zIndex: 100,
   }),
   'ui-kit.AvatarList.UserAvatar'
 )(ConnectedImage);
 
 const RandomAvatar = styled(
-  ({ order, size, getXYPositions }) => ({
+  ({ order, getXYPositions, avatarWidth }) => ({
     aspectRatio: 1,
     borderRadius: 1000, // For simplicity we are just going to use a very large magic number 🙃🧙
     position: 'absolute',
-    width: size,
+    width: avatarWidth,
     zIndex: order,
     ...getXYPositions,
   }),
@@ -41,7 +41,7 @@ class AvatarCloud extends PureComponent {
 
   getAvatarPercentageWidth = (width) => `${width * 100}%`;
 
-  getRandomAvatarMaxSize() {
+  getRandomAvatarMaxWidth() {
     return this.props.primaryAvatar
       ? /* we need some way to differentiate the largest possible `RandomAvatar`s from the
          * `primaryAvatar` so we subtract by a magic number that looks nice 🧙‍♂️ */
@@ -53,7 +53,7 @@ class AvatarCloud extends PureComponent {
     const sizes = this.props.avatars.map(() => {
       const randomNumberInRange =
         Math.random() *
-          (this.getRandomAvatarMaxSize() - this.props.minAvatarWidth) +
+          (this.getRandomAvatarMaxWidth() - this.props.minAvatarWidth) +
         this.props.minAvatarWidth;
 
       return Math.floor(randomNumberInRange * 10 + 1) / 10;
@@ -74,8 +74,8 @@ class AvatarCloud extends PureComponent {
   renderRandomAvatars() {
     return this.getRandomAvatarSizes().map((size, i) => (
       <RandomAvatar
-        key={i * size} // eslint-disable-line react/no-array-index-key
-        size={this.getAvatarPercentageWidth(size)}
+        key={this.props.avatars[i]}
+        avatarWidth={this.getAvatarPercentageWidth(size)}
         order={i}
         source={this.props.avatars[i]}
         getXYPositions={this.getRandomXYPositions(size)}
@@ -95,7 +95,7 @@ class AvatarCloud extends PureComponent {
       <CenteredView {...props}>
         {primaryAvatar ? (
           <CenteredAvatar
-            size={this.getAvatarPercentageWidth(maxAvatarWidth)}
+            avatarWidth={this.getAvatarPercentageWidth(maxAvatarWidth)}
             source={primaryAvatar}
           />
         ) : null}
