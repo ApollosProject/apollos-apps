@@ -1,8 +1,33 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { View, StyleSheet } from 'react-native';
+import { BlurView } from '@react-native-community/blur';
+
 import CenteredView from '../../CenteredView';
 import ConnectedImage, { ImageSourceType } from '../../ConnectedImage';
 import styled from '../../styled';
+import { withTheme } from '../../theme';
+
+const Blur = withTheme(
+  () => ({
+    blurType: 'light',
+    style: StyleSheet.absoluteFill,
+  }),
+  'ui-kit-AvatarList.Blur'
+)(BlurView);
+
+const BlurWrapper = styled(
+  ({ avatarWidth, order, getXYPositions }) => ({
+    aspectRatio: 1,
+    borderRadius: 1000, // For simplicity we are just going to use a very large magic number 🙃🧙
+    position: 'absolute',
+    overflow: 'hidden',
+    width: avatarWidth,
+    zIndex: order,
+    ...getXYPositions,
+  }),
+  'ui-kit.AvatarList.BlurWrapper'
+)(View);
 
 const CenteredAvatar = styled(
   ({ avatarWidth }) => ({
@@ -15,14 +40,10 @@ const CenteredAvatar = styled(
 )(ConnectedImage);
 
 const RandomAvatar = styled(
-  ({ avatarWidth, order, getXYPositions }) => ({
+  {
     aspectRatio: 1,
-    borderRadius: 1000, // For simplicity we are just going to use a very large magic number 🙃🧙
-    position: 'absolute',
-    width: avatarWidth,
-    zIndex: order,
-    ...getXYPositions,
-  }),
+    width: '100%',
+  },
   'ui-kit.AvatarList.RandomAvatar'
 )(ConnectedImage);
 
@@ -30,7 +51,7 @@ class AvatarCloud extends PureComponent {
   static propTypes = {
     avatars: PropTypes.arrayOf(ImageSourceType).isRequired,
     maxAvatarWidth: PropTypes.number, // A percentage represented as a whole number (e.g. `0.5`) but pixel values will work too.
-    minAvatarWidth: PropTypes.number, // A percentage represented as a whole number (e.g. `0.1`)
+    minAvatarWidth: PropTypes.number, // A percentage represented as a whole number (e.g. `0.1`). It is not recommeded to go smaller than 0.1 (default)
     primaryAvatar: ImageSourceType, // The source to render a larger avatar at the center of the cloud
   };
 
@@ -61,8 +82,7 @@ class AvatarCloud extends PureComponent {
         this.randomSeeds[i] *
           (this.getRandomAvatarMaxWidth() - this.props.minAvatarWidth) +
         this.props.minAvatarWidth;
-
-      return Math.floor(randomNumberInRange * 10 + 1) / 10;
+      return Math.floor(randomNumberInRange * 10) / 10;
     });
 
     return sizes.sort((a, b) => a - b); // sort by decending order e.g. 1, 2, 3, 4
@@ -84,14 +104,18 @@ class AvatarCloud extends PureComponent {
   }
 
   renderRandomAvatars() {
-    return this.getRandomAvatarSizes().map((size, i) => (
-      <RandomAvatar
+    return this.getRandomAvatarSizes().map((size, i, sizes) => (
+      <BlurWrapper
         avatarWidth={this.getAvatarPercentageWidth(size)}
-        key={this.props.avatars[i]}
-        order={i}
-        source={this.props.avatars[i]}
         getXYPositions={this.getRandomXYPositions(size, i)}
-      />
+        key={this.props.avatars[i]}
+        order={i} // order = zIndex == higher index === closer two the viewer/higher layer
+      >
+        <RandomAvatar source={this.props.avatars[i]} />
+        <Blur
+          blurAmount={sizes.length - i} // blur uses a reverse index = lower index == lower blur level === closer to the user
+        />
+      </BlurWrapper>
     ));
   }
 
