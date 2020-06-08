@@ -50,12 +50,14 @@ const RandomAvatar = styled(
 class AvatarCloud extends PureComponent {
   static propTypes = {
     avatars: PropTypes.arrayOf(ImageSourceType).isRequired,
+    blur: PropTypes.bool, // Weather or not to blur the "background" avatars. Defaults to true,
     maxAvatarWidth: PropTypes.number, // A percentage represented as a whole number (e.g. `0.5`) but pixel values will work too.
     minAvatarWidth: PropTypes.number, // A percentage represented as a whole number (e.g. `0.1`). It is not recommeded to go smaller than 0.1 (default)
     primaryAvatar: ImageSourceType, // The source to render a larger avatar at the center of the cloud
   };
 
   static defaultProps = {
+    blur: true,
     maxAvatarWidth: 0.5,
     minAvatarWidth: 0.1,
   };
@@ -103,18 +105,29 @@ class AvatarCloud extends PureComponent {
     return xyPositions;
   }
 
+  /* `blurAmount` uses a reverse value == lower blur level === "closer to the user." We also have to
+   * account for if we are rendering a `primaryAvatar`. If so, we don't want to blur the
+   * "closest/largest" avatar. */
+  renderBlurEffect(blurAmount) {
+    const blurValue = this.props.primaryAvatar ? blurAmount : blurAmount - 1;
+
+    return this.props.blur && blurValue !== 0 ? (
+      <Blur blurAmount={blurValue} />
+    ) : null;
+  }
+
   renderRandomAvatars() {
     return this.getRandomAvatarSizes().map((size, i, sizes) => (
       <BlurWrapper
         avatarWidth={this.getAvatarPercentageWidth(size)}
         getXYPositions={this.getRandomXYPositions(size, i)}
         key={this.props.avatars[i]}
-        order={i} // order = zIndex == higher index === closer two the viewer/higher layer
+        order={i} // order = zIndex == higher index === "closer two the viewer/higher layer"
       >
         <RandomAvatar source={this.props.avatars[i]} />
-        <Blur
-          blurAmount={sizes.length - i} // blur uses a reverse index = lower index == lower blur level === closer to the user
-        />
+        {this.renderBlurEffect(
+          sizes.length - i
+        ) /* blur uses a reverse index = lower index == lower blur level === "closer to the user" */}
       </BlurWrapper>
     ));
   }
@@ -122,6 +135,7 @@ class AvatarCloud extends PureComponent {
   render() {
     const {
       avatars,
+      blur,
       maxAvatarWidth,
       minAvatarWidth,
       primaryAvatar,
