@@ -51,6 +51,7 @@ class AvatarCloud extends PureComponent {
   static propTypes = {
     avatars: PropTypes.arrayOf(ImageSourceType).isRequired,
     blur: PropTypes.bool, // Weather or not to blur the "background" avatars. Defaults to true,
+    isLoading: PropTypes.bool,
     maxAvatarWidth: PropTypes.number, // A percentage represented as a whole number (e.g. `0.5`) but pixel values will work too.
     minAvatarWidth: PropTypes.number, // A percentage represented as a whole number (e.g. `0.1`). It is not recommeded to go smaller than 0.1 (default)
     primaryAvatar: ImageSourceType, // The source to render a larger avatar at the center of the cloud
@@ -124,7 +125,10 @@ class AvatarCloud extends PureComponent {
         key={this.props.avatars[i]}
         order={i} // order = zIndex == higher index === "closer two the viewer/higher layer"
       >
-        <RandomAvatar source={this.props.avatars[i]} />
+        <RandomAvatar
+          source={this.props.avatars[i]}
+          isLoading={this.props.isLoading}
+        />
         {this.renderBlurEffect(
           sizes.length - i
         ) /* blur uses a reverse index = lower index == lower blur level === "closer to the user" */}
@@ -136,6 +140,7 @@ class AvatarCloud extends PureComponent {
     const {
       avatars,
       blur,
+      isLoading,
       maxAvatarWidth,
       minAvatarWidth,
       primaryAvatar,
@@ -143,10 +148,11 @@ class AvatarCloud extends PureComponent {
     } = this.props;
     return (
       <CenteredView {...props}>
-        {primaryAvatar ? (
+        {isLoading || primaryAvatar ? (
           <CenteredAvatar
             avatarWidth={this.getAvatarPercentageWidth(maxAvatarWidth)}
             source={primaryAvatar}
+            isLoading={isLoading}
           />
         ) : null}
         {this.renderRandomAvatars()}

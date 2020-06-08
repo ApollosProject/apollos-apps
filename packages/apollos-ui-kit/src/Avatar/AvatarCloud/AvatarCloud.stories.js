@@ -12,6 +12,10 @@ const avatars = [
 
 storiesOf('ui-kit/Avatar/AvatarCloud', module)
   .add('default', () => <AvatarCloud avatars={avatars} />)
+  .add('blur (false)', () => <AvatarCloud avatars={avatars} blur={false} />)
+  .add('isLoading', () => (
+    <AvatarCloud avatars={['', '', '']} primaryAvatar={''} isLoading />
+  ))
   .add('maxAvatarWidth', () => (
     <AvatarCloud avatars={avatars} maxAvatarWidth={0.1} />
   ))
