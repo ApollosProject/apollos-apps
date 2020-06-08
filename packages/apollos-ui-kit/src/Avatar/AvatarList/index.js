@@ -57,7 +57,7 @@ const keyExtractor = (item) => item && item.id;
 
 // eslint-disable-next-line react/display-name, react/prop-types
 const renderItem = (onPressAvatar) => ({ item }) => (
-  <Touchable onPress={() => onPressAvatar()}>
+  <Touchable onPress={() => onPressAvatar({ item })}>
     <Avatar source={item} />
   </Touchable>
 );
