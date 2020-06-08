@@ -6,10 +6,7 @@ jest.mock('react-native-safe-area-context', () => ({
   SafeAreaProvider: ({ children }) => children,
 }));
 
-jest.mock(
-  '../apollos-ui-kit/node_modules/@react-native-community/datetimepicker',
-  () => 'DatePicker'
-);
+jest.mock('@react-native-community/datetimepicker', () => 'DatePicker');
 
 jest.mock('react-native-device-info', () => ({
   getUniqueId: () => 'id-123',

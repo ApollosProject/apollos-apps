@@ -29,7 +29,4 @@ NativeModules.RNGestureHandlerModule = {
   Directions: {},
 };
 
-jest.mock(
-  '../apollos-ui-kit/node_modules/@react-native-community/datetimepicker',
-  () => 'DatePicker'
-);
+jest.mock('@react-native-community/datetimepicker', () => 'DatePicker');
