@@ -1,26 +1,11 @@
 import React from 'react';
-import { Keyboard, TouchableWithoutFeedback } from 'react-native';
 
 import { storiesOf } from '@apollosproject/ui-storybook';
-import { CenteredView } from '@apollosproject/ui-kit';
 
 import PrayerCard from '../PrayerCard';
-import PrayerSwiper from '.';
+import PrayerScreen from '../PrayerScreen';
 
-const PrayerScreen = (
-  { children } // eslint-disable-line react/prop-types
-) => (
-  <TouchableWithoutFeedback
-    onPress={() => Keyboard.dismiss()}
-    style={{ flex: 1 }} // eslint-disable-line react-native/no-inline-styles
-  >
-    <CenteredView
-      style={{ alignItems: 'stretch', backgroundColor: 'salmon' }} // eslint-disable-line
-    >
-      {children}
-    </CenteredView>
-  </TouchableWithoutFeedback>
-);
+import PrayerSwiper from '.';
 
 storiesOf('ui-prayer/PrayerSwiper', module).add('example', () => (
   <PrayerSwiper>
