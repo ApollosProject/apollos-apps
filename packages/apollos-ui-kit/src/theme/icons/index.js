@@ -38,6 +38,7 @@ export Pin from './Pin';
 export Play from './Play';
 export PlayOpaque from './PlayOpaque';
 export PlaySolid from './PlaySolid';
+export Plus from './Plus';
 export Pray from './Pray';
 export Print from './Print';
 export Profile from './Profile';
