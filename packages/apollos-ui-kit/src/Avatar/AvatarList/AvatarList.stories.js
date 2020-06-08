@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { storiesOf } from '@apollosproject/ui-storybook';
-import { CenteredView } from '@apollosproject/ui-kit';
+
+import CenteredView from '../../CenteredView';
 
 import AvatarList from '.';
 
@@ -16,7 +17,7 @@ const avatars = [
   'https://picsum.photos/200',
 ];
 
-storiesOf('ui-prayer/PrayerFeature/AvatarList', module)
+storiesOf('ui-kit/Avatar/AvatarList', module)
   .addDecorator((story) => (
     <CenteredView style={{ alignItems: 'stretch' /* eslint-disable-line */ }}>
       {story()}
@@ -25,7 +26,7 @@ storiesOf('ui-prayer/PrayerFeature/AvatarList', module)
   .add('default', () => <AvatarList avatars={avatars} />)
   .add('isLoading', () => (
     <AvatarList
-      avatars={avatars}
+      avatars={['', '', '', '', '', '', '', '']}
       isLoading
       title={'Example title'}
       isCard={false}

@@ -2837,14 +2837,14 @@ Array [
       }
       data={
         Array [
-          "https://picsum.photos/200",
-          "https://picsum.photos/200",
-          "https://picsum.photos/200",
-          "https://picsum.photos/200",
-          "https://picsum.photos/200",
-          "https://picsum.photos/200",
-          "https://picsum.photos/200",
-          "https://picsum.photos/200",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
         ]
       }
       decelerationRate="fast"
@@ -2923,8 +2923,8 @@ Array [
                   Array [
                     Object {
                       "cache": "force-cache",
-                      "uri": "https://picsum.photos/200",
-                      "url": "https://picsum.photos/200",
+                      "uri": "",
+                      "url": "",
                     },
                   ]
                 }
@@ -2990,8 +2990,8 @@ Array [
                   Array [
                     Object {
                       "cache": "force-cache",
-                      "uri": "https://picsum.photos/200",
-                      "url": "https://picsum.photos/200",
+                      "uri": "",
+                      "url": "",
                     },
                   ]
                 }
@@ -3057,8 +3057,8 @@ Array [
                   Array [
                     Object {
                       "cache": "force-cache",
-                      "uri": "https://picsum.photos/200",
-                      "url": "https://picsum.photos/200",
+                      "uri": "",
+                      "url": "",
                     },
                   ]
                 }
@@ -3124,8 +3124,8 @@ Array [
                   Array [
                     Object {
                       "cache": "force-cache",
-                      "uri": "https://picsum.photos/200",
-                      "url": "https://picsum.photos/200",
+                      "uri": "",
+                      "url": "",
                     },
                   ]
                 }
@@ -3191,8 +3191,8 @@ Array [
                   Array [
                     Object {
                       "cache": "force-cache",
-                      "uri": "https://picsum.photos/200",
-                      "url": "https://picsum.photos/200",
+                      "uri": "",
+                      "url": "",
                     },
                   ]
                 }
@@ -3258,8 +3258,8 @@ Array [
                   Array [
                     Object {
                       "cache": "force-cache",
-                      "uri": "https://picsum.photos/200",
-                      "url": "https://picsum.photos/200",
+                      "uri": "",
+                      "url": "",
                     },
                   ]
                 }
@@ -3325,8 +3325,8 @@ Array [
                   Array [
                     Object {
                       "cache": "force-cache",
-                      "uri": "https://picsum.photos/200",
-                      "url": "https://picsum.photos/200",
+                      "uri": "",
+                      "url": "",
                     },
                   ]
                 }
@@ -3392,8 +3392,8 @@ Array [
                   Array [
                     Object {
                       "cache": "force-cache",
-                      "uri": "https://picsum.photos/200",
-                      "url": "https://picsum.photos/200",
+                      "uri": "",
+                      "url": "",
                     },
                   ]
                 }

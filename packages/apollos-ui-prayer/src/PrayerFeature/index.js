@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
+  AvatarList,
   Card,
   CardContent,
   H3,
@@ -11,8 +12,6 @@ import {
   withIsLoading,
   withTheme,
 } from '@apollosproject/ui-kit';
-
-import AvatarList from './AvatarList';
 
 const AvatarWrapper = styled(
   ({ theme }) => ({
