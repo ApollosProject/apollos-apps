@@ -53,12 +53,10 @@ const AvatarFeed = withTheme(
   'ui-kit.AvatarList.AvatarFeed'
 )(FlatList);
 
-const keyExtractor = (item) => item && item.id;
-
 // eslint-disable-next-line react/display-name, react/prop-types
-const renderItem = (onPressAvatar) => ({ item }) => (
-  <Touchable onPress={() => onPressAvatar({ item })}>
-    <Avatar source={item} />
+const renderItem = (onPressAvatar, isLoading) => ({ item }) => (
+  <Touchable onPress={onPressAvatar ? () => onPressAvatar({ item }) : null}>
+    <Avatar source={item} isLoading={isLoading} />
   </Touchable>
 );
 
@@ -75,20 +73,33 @@ renderListHeader.propTypes = {
   onPressAdd: PropTypes.func,
 };
 
-const AvatarList = ({ avatars, onPressAdd, onPressAvatar, ...props }) => (
+const AvatarList = ({
+  avatars,
+  isLoading,
+  keyExtractor,
+  onPressAdd,
+  onPressAvatar,
+  ...props
+}) => (
   <AvatarFeed
     data={avatars}
     keyExtractor={keyExtractor}
     ListHeaderComponent={renderListHeader({ onPressAdd })}
-    renderItem={renderItem(onPressAvatar)}
+    renderItem={renderItem(onPressAvatar, isLoading)}
     {...props}
   />
 );
 
 AvatarList.propTypes = {
   avatars: PropTypes.arrayOf(ImageSourceType).isRequired,
+  isLoading: PropTypes.bool,
+  keyExtractor: PropTypes.func,
   onPressAdd: PropTypes.func,
   onPressAvatar: PropTypes.func,
+};
+
+AvatarList.defaultProps = {
+  keyExtractor: (item) => item && item.id,
 };
 
 export default AvatarList;

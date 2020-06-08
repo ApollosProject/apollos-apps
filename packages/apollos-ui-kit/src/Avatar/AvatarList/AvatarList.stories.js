@@ -26,7 +26,7 @@ storiesOf('ui-kit/Avatar/AvatarList', module)
   .add('default', () => <AvatarList avatars={avatars} />)
   .add('isLoading', () => (
     <AvatarList
-      avatars={avatars}
+      avatars={['', '', '', '', '', '', '', '']}
       isLoading
       title={'Example title'}
       isCard={false}
