@@ -18,3 +18,5 @@ jest.mock('react-native-onesignal', () => ({
 }));
 
 NativeModules.RNGestureHandlerModule = {};
+
+jest.mock('@react-native-community/datetimepicker', () => 'DatePicker');
