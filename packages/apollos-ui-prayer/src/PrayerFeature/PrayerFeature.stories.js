@@ -36,7 +36,7 @@ storiesOf('ui-prayer/PrayerFeature', module)
   ))
   .add('isLoading', () => (
     <PrayerFeature
-      avatars={avatars}
+      avatars={['', '', '', '', '', '', '', '']}
       isLoading
       title={'Example title'}
       isCard={false}

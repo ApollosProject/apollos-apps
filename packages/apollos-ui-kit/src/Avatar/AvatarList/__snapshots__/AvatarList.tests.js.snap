@@ -2645,14 +2645,14 @@ exports[`The AvatarList component should render a loading state 1`] = `
   ListHeaderComponent={null}
   data={
     Array [
-      "https://picsum.photos/200",
-      "https://picsum.photos/200",
-      "https://picsum.photos/200",
-      "https://picsum.photos/200",
-      "https://picsum.photos/200",
-      "https://picsum.photos/200",
-      "https://picsum.photos/200",
-      "https://picsum.photos/200",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
     ]
   }
   decelerationRate="fast"
@@ -2662,7 +2662,6 @@ exports[`The AvatarList component should render a loading state 1`] = `
   getItemLayout={[Function]}
   horizontal={true}
   initialNumToRender={10}
-  isLoading={true}
   keyExtractor={[Function]}
   maxToRenderPerBatch={10}
   numColumns={1}
@@ -2731,8 +2730,8 @@ exports[`The AvatarList component should render a loading state 1`] = `
               Array [
                 Object {
                   "cache": "force-cache",
-                  "uri": "https://picsum.photos/200",
-                  "url": "https://picsum.photos/200",
+                  "uri": "",
+                  "url": "",
                 },
               ]
             }
@@ -2798,8 +2797,8 @@ exports[`The AvatarList component should render a loading state 1`] = `
               Array [
                 Object {
                   "cache": "force-cache",
-                  "uri": "https://picsum.photos/200",
-                  "url": "https://picsum.photos/200",
+                  "uri": "",
+                  "url": "",
                 },
               ]
             }
@@ -2865,8 +2864,8 @@ exports[`The AvatarList component should render a loading state 1`] = `
               Array [
                 Object {
                   "cache": "force-cache",
-                  "uri": "https://picsum.photos/200",
-                  "url": "https://picsum.photos/200",
+                  "uri": "",
+                  "url": "",
                 },
               ]
             }
@@ -2932,8 +2931,8 @@ exports[`The AvatarList component should render a loading state 1`] = `
               Array [
                 Object {
                   "cache": "force-cache",
-                  "uri": "https://picsum.photos/200",
-                  "url": "https://picsum.photos/200",
+                  "uri": "",
+                  "url": "",
                 },
               ]
             }
@@ -2999,8 +2998,8 @@ exports[`The AvatarList component should render a loading state 1`] = `
               Array [
                 Object {
                   "cache": "force-cache",
-                  "uri": "https://picsum.photos/200",
-                  "url": "https://picsum.photos/200",
+                  "uri": "",
+                  "url": "",
                 },
               ]
             }
@@ -3066,8 +3065,8 @@ exports[`The AvatarList component should render a loading state 1`] = `
               Array [
                 Object {
                   "cache": "force-cache",
-                  "uri": "https://picsum.photos/200",
-                  "url": "https://picsum.photos/200",
+                  "uri": "",
+                  "url": "",
                 },
               ]
             }
@@ -3133,8 +3132,8 @@ exports[`The AvatarList component should render a loading state 1`] = `
               Array [
                 Object {
                   "cache": "force-cache",
-                  "uri": "https://picsum.photos/200",
-                  "url": "https://picsum.photos/200",
+                  "uri": "",
+                  "url": "",
                 },
               ]
             }
@@ -3200,8 +3199,8 @@ exports[`The AvatarList component should render a loading state 1`] = `
               Array [
                 Object {
                   "cache": "force-cache",
-                  "uri": "https://picsum.photos/200",
-                  "url": "https://picsum.photos/200",
+                  "uri": "",
+                  "url": "",
                 },
               ]
             }
