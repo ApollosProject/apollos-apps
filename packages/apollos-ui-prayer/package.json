@@ -17,6 +17,17 @@
     "react-component",
     "react-native"
   ],
+  "peerDependencies": {
+    "@apollosproject/storybook": "*",
+    "@apollosproject/ui-analytics": "*",
+    "@apollosproject/ui-fragments": "*",
+    "@apollosproject/ui-kit": "*",
+    "@apollosproject/ui-notifications": "*",
+    "react": "*",
+    "react-apollo": "*",
+    "react-native": "*",
+    "react-navigation": "*"
+  },
   "jest": {
     "preset": "react-native",
     "collectCoverage": true,
@@ -35,18 +46,7 @@
     "setupFiles": [
       "./jest.setup.js"
     ]
-  },
-  "peerDependencies": {
-    "@apollosproject/storybook": "*",
-    "@apollosproject/ui-analytics": "*",
-    "@apollosproject/ui-fragments": "*",
-    "@apollosproject/ui-kit": "*",
-    "@apollosproject/ui-notifications": "*",
-    "react": "*",
-    "react-apollo": "*",
-    "react-native": "*",
-    "react-navigation": "*"
-  },
+  },  
   "dependencies": {
     "formik": "1.5.1",
     "graphql-tag": "2.9.2",

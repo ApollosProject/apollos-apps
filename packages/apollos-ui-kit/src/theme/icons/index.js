@@ -14,6 +14,7 @@ export CheckboxChecked from './CheckboxChecked';
 export CheckboxUnchecked from './CheckboxUnchecked';
 export CircleOutlineCheckMark from './CircleOutlineCheckMark';
 export CircleOutlineXMark from './CircleOutlineXMark';
+export CircleOutlinePlus from './CircleOutlinePlus';
 export Close from './Close';
 export Credit from './Credit';
 export Chromecast from './Chromecast';
