@@ -48,7 +48,7 @@ describe('The PrayerFeature component', () => {
     const tree = renderer.create(
       <Providers>
         <PrayerFeature
-          avatars={avatars}
+          avatars={['', '', '', '', '', '', '', '']}
           isCard={false}
           isLoading
           title={'Example title'}
