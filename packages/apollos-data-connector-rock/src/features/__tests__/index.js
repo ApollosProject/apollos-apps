@@ -342,6 +342,26 @@ describe('features', () => {
       expect(await expandResult(result)).toMatchSnapshot();
     });
 
+    it('should create a PrayerListFeature from a DAILY_PRAYER algorithm', async () => {
+      const feature = new Feature();
+      feature.initialize({
+        context,
+      });
+
+      const result = await feature.createPrayerListFeature({
+        algorithms: [
+          {
+            type: 'DAILY_PRAYER',
+          },
+        ],
+        title: 'Test Action List',
+        subtitle: "It's great!",
+      });
+
+      expect(await expandResult(result)).toMatchSnapshot();
+      expect(first.mock.calls).toMatchSnapshot();
+    });
+
     it('createTextFeature should create a Text feature', async () => {
       const feature = new Feature();
       feature.initialize({

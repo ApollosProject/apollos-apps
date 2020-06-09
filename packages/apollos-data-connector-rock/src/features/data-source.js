@@ -16,6 +16,7 @@ export default class Feature extends RockApolloDataSource {
     CAMPAIGN_ITEMS: this.campaignItemsAlgorithm,
     SERIES_IN_PROGRESS: this.seriesInProgressAlgorithm,
     USER_FEED: this.userFeedAlgorithm,
+    DAILY_PRAYER: this.dailyPrayerAlgorithm,
   }).reduce((accum, [key, value]) => {
     // convenciance code to make sure all methods are bound to the Features dataSource
     // eslint-disable-next-line
@@ -195,6 +196,33 @@ export default class Feature extends RockApolloDataSource {
       id: createGlobalId(id, 'ScriptureFeature'),
       __typename: 'ScriptureFeature',
     };
+  }
+
+  createPrayerListFeature({ algorithms = [], title, subtitle }) {
+    const prayers = () => this.runAlgorithms({ algorithms });
+    return {
+      // The Feature ID is based on all of the action ids, added together.
+      // This is naive, and could be improved.
+      id: this.createFeatureId({
+        type: 'PrayerListFeature',
+        args: {
+          algorithms,
+          title,
+          subtitle,
+        },
+      }),
+      prayers,
+      title,
+      subtitle,
+      // Typename is required so GQL knows specifically what Feature is being created
+      __typename: 'PrayerListFeature',
+    };
+  }
+
+  async dailyPrayerAlgorithm({ limit = 15 } = {}) {
+    const { PrayerRequest } = this.context.dataSources;
+    const cursor = await PrayerRequest.byDailyPrayerFeed();
+    return cursor.top(limit).get();
   }
 
   // Gets the first 3 upcoming events
@@ -391,6 +419,8 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
             return this.createHeroListFeature(featureConfig);
           case 'HeroList':
             return this.createHeroListFeature(featureConfig);
+          case 'PrayerList':
+            return this.createPrayerListFeature(featureConfig);
           case 'ActionList':
           default:
             // Action list was the default in 1.3.0 and prior.

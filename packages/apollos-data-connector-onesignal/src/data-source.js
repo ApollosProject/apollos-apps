@@ -13,6 +13,20 @@ export default class OneSignal extends RESTDataSource {
     });
   }
 
+  async createNotification({
+    toUserIds = [],
+    content = '',
+    heading,
+    subtitle,
+  }) {
+    return this.post('notifications', {
+      include_external_user_ids: toUserIds,
+      contents: { en: content },
+      headings: { en: heading },
+      subtitle: { en: subtitle },
+    });
+  }
+
   async updatePushSettings({ enabled, pushProviderUserId }) {
     const currentUser = await this.context.dataSources.Auth.getCurrentPerson();
     if (enabled != null) {

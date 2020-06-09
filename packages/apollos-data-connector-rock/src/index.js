@@ -15,6 +15,7 @@ import * as Utils from './utils';
 import * as BinaryFiles from './binary-files';
 import * as Feature from './features';
 import * as Event from './events';
+import * as PrayerRequest from './prayer-request';
 
 export {
   Followings,
@@ -34,4 +35,5 @@ export {
   BinaryFiles,
   Feature,
   Event,
+  PrayerRequest,
 };
