@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+this.getRandomPositionValue(i)import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { View, StyleSheet } from 'react-native';
 import { BlurView } from '@react-native-community/blur';
@@ -63,10 +63,10 @@ class AvatarCloud extends PureComponent {
     minAvatarWidth: 0.1,
   };
 
-  constructor(props) {
+  constructor() {
     super();
 
-    this.randomSeeds = props.avatars.map(() => Math.random());
+    this.randomSeeds = {};
   }
 
   getAvatarPercentageWidth = (width) => `${width * 100}%`;
@@ -79,10 +79,15 @@ class AvatarCloud extends PureComponent {
       : this.props.maxAvatarWidth;
   }
 
+  getRandomPositionValue(seed) {
+    if (!this.randomSeeds[seed]) this.randomSeeds[seed] = Math.random();
+    return this.randomSeeds[seed];
+  }
+
   getRandomAvatarSizes() {
     const sizes = this.props.avatars.map((avatar, i) => {
       const randomNumberInRange =
-        this.randomSeeds[i] *
+        this.getRandomPositionValue(i) *
           (this.getRandomAvatarMaxWidth() - this.props.minAvatarWidth) +
         this.props.minAvatarWidth;
       return Math.floor(randomNumberInRange * 10) / 10;
@@ -96,10 +101,10 @@ class AvatarCloud extends PureComponent {
     const positionBoundry = 1 - avatarSize;
     const xyPositions = {
       left: this.getAvatarPercentageWidth(
-        this.randomSeeds[index] * positionBoundry
+        this.getRandomPositionValue(index) * positionBoundry
       ),
       top: this.getAvatarPercentageWidth(
-        this.randomSeeds[index] * positionBoundry
+        this.getRandomPositionValue(index) * positionBoundry
       ),
     };
 
