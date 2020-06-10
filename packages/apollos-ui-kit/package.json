@@ -45,6 +45,7 @@
   "peerDependencies": {
     "@apollosproject/storybook": "*",
     "@apollosproject/ui-media-player": "*",
+    "@react-native-community/blur": "*",
     "@react-native-community/datetimepicker": "*",
     "react": "*",
     "react-native": "*",
@@ -54,6 +55,7 @@
     "react-native-svg": "*"
   },
   "dependencies": {
+    "@react-native-community/blur": "^3.6.0",
     "color": "^3.1.0",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
