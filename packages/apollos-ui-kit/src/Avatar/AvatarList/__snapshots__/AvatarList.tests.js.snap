@@ -2662,7 +2662,6 @@ exports[`The AvatarList component should render a loading state 1`] = `
   getItemLayout={[Function]}
   horizontal={true}
   initialNumToRender={10}
-  isLoading={true}
   keyExtractor={[Function]}
   maxToRenderPerBatch={10}
   numColumns={1}
