@@ -1,4 +1,4 @@
-this.getRandomPositionValue(i)import React, { PureComponent } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { View, StyleSheet } from 'react-native';
 import { BlurView } from '@react-native-community/blur';
