@@ -12,6 +12,7 @@ import PropTypes from 'prop-types';
 import {
   Button,
   ButtonText,
+  Icon,
   PaddedView,
   styled,
   withIsLoading,
