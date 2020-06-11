@@ -27,4 +27,6 @@ storiesOf('ui-prayer/PrayerScreen', module)
       <Text>Hello World</Text>
     </PrayerScreen>
   ))
-  .add('buttonText', () => <PrayerScreen buttonText={'Custom buttonText'} />);
+  .add('primaryActionText', () => (
+    <PrayerScreen primaryActionText={'Custom primaryActionText'} />
+  ));

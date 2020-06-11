@@ -27,10 +27,10 @@ describe('The PrayerScreen component', () => {
 
     expect(tree).toMatchSnapshot();
   });
-  it('should render with custom buttonText', () => {
+  it('should render with custom primaryActionText', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerScreen buttonText={'Custom buttonText'} />
+        <PrayerScreen primaryActionText={'Custom primaryActionText'} />
       </Providers>
     );
 
