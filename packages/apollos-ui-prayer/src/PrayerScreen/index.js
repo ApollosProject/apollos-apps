@@ -11,16 +11,12 @@ import PropTypes from 'prop-types';
 
 import {
   Button,
+  ButtonText,
   PaddedView,
   styled,
   withIsLoading,
   withTheme,
 } from '@apollosproject/ui-kit';
-
-const ButtonWithProps = withTheme(
-  () => ({}),
-  'ui-prayer.PrayerScreen.ButtonWithProps'
-)(Button);
 
 const Content = styled(
   {
@@ -43,13 +39,37 @@ const FlexedScrollView = withTheme(
   'ui-prayer.PrayerScreen.FlexedScrollView'
 )(ScrollView);
 
+const PrimaryButton = withTheme(
+  () => ({}),
+  'ui-prayer.PrayerScreen.PrimaryButton'
+)(Button);
+
+const SecondaryAction = styled({})(ButtonText);
+
+const SecondaryActionWrapper = styled(
+  {
+    flexDirection: 'row',
+  },
+  'ui-prayer.PrayerScreen.SecondaryActionWrapper'
+)(PaddedView);
+
+const SecondaryActionIcon = withTheme(
+  ({ theme }) => ({
+    name: 'info',
+    fill: theme.colors.text.secondary,
+  }),
+  'ui-prayer.PrayerScreen.SecondaryActionIcon'
+)(Icon);
+
 const PrayerScreen = ({
   buttonDisabled,
-  primaryActionText,
   children,
   isLoading,
   onPressBackground,
   onPressPrimary,
+  onPressSecondary,
+  primaryActionText,
+  secondaryActionText,
 }) => (
   <FlexedKeyboardAvoidingView behavior={'padding'}>
     <FlexedScrollView>
@@ -58,7 +78,15 @@ const PrayerScreen = ({
           <Content>{children}</Content>
         </FlexedTouchable>
         <PaddedView>
-          <ButtonWithProps
+          {onPressSecondary ? (
+            <SecondaryActionWrapper>
+              <SecondaryAction onPress={onPressSecondary}>
+                <SecondaryActionIcon />
+                {secondaryActionText}
+              </SecondaryAction>
+            </SecondaryActionWrapper>
+          ) : null}
+          <PrimaryButton
             onPress={onPressPrimary}
             title={primaryActionText}
             isLoading={isLoading}
@@ -71,17 +99,20 @@ const PrayerScreen = ({
 );
 
 PrayerScreen.propTypes = {
-  primaryActionText: PropTypes.string,
   buttonDisabled: PropTypes.bool,
   children: PropTypes.node,
   isLoading: PropTypes.bool,
   onPressBackground: PropTypes.func,
   onPressPrimary: PropTypes.func,
+  onPressSecondary: PropTypes.func,
+  primaryActionText: PropTypes.string,
+  secondaryActionText: PropTypes.string,
 };
 
 PrayerScreen.defaultProps = {
-  primaryActionText: 'Pray',
   onPressBackground: () => Keyboard.dismiss(),
+  primaryActionText: 'Pray',
+  secondaryActionText: 'How to Pray',
 };
 
 export default withIsLoading(PrayerScreen);
