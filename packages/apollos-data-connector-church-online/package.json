@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/data-connector-church-online",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
   "scripts": {
@@ -23,16 +23,16 @@
     ]
   },
   "dependencies": {
-    "@apollosproject/data-schema": "^1.4.1",
-    "@apollosproject/server-core": "^1.4.1",
+    "@apollosproject/data-schema": "^1.4.2",
+    "@apollosproject/server-core": "^1.4.2",
     "apollo-datasource-rest": "^0.6.4"
   },
   "peerDependencies": {
     "@apollosproject/config": "*"
   },
   "devDependencies": {
-    "@apollosproject/apollo-server-env-mock": "^1.4.1",
-    "@apollosproject/babel-preset-apollos": "^1.4.1",
+    "@apollosproject/apollo-server-env-mock": "^1.4.2",
+    "@apollosproject/babel-preset-apollos": "^1.4.2",
     "apollo-server-env": "^2.3.0",
     "graphql": "^14.6.0",
     "jest": "^23.6.0"
