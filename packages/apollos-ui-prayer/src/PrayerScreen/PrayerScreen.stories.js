@@ -29,4 +29,5 @@ storiesOf('ui-prayer/PrayerScreen', module)
   ))
   .add('primaryActionText', () => (
     <PrayerScreen primaryActionText={'Custom primaryActionText'} />
-  ));
+  ))
+  .add('onPressSecondary', () => <PrayerScreen onPressSecondary={() => {}} />);

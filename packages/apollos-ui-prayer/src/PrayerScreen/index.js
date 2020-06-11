@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Keyboard,
   KeyboardAvoidingView,
   SafeAreaView,
   ScrollView,
@@ -11,7 +10,7 @@ import PropTypes from 'prop-types';
 
 import {
   Button,
-  ButtonText,
+  H5,
   Icon,
   PaddedView,
   styled,
@@ -31,7 +30,6 @@ const flexer = styled({ flex: 1 }); // 💪flex 💪all 💪the 💪things 💪b
 
 const FlexedKeyboardAvoidingView = flexer(KeyboardAvoidingView); // 💪💥
 const FlexedSafeAreaView = flexer(SafeAreaView); // 💪💥
-const FlexedTouchable = flexer(TouchableWithoutFeedback); // 💪💥
 
 const FlexedScrollView = withTheme(
   () => ({
@@ -45,19 +43,20 @@ const PrimaryButton = withTheme(
   'ui-prayer.PrayerScreen.PrimaryButton'
 )(Button);
 
-const SecondaryAction = styled({})(ButtonText);
-
-const SecondaryActionWrapper = styled(
-  {
-    flexDirection: 'row',
-  },
-  'ui-prayer.PrayerScreen.SecondaryActionWrapper'
-)(PaddedView);
+const SecondaryActionButton = withTheme(
+  () => ({
+    type: 'default',
+    bordered: true,
+    style: { borderWidth: 0 },
+  }),
+  'ui-prayer.PrayerScreen.SecondaryActionButton'
+)(Button);
 
 const SecondaryActionIcon = withTheme(
   ({ theme }) => ({
-    name: 'info',
+    name: 'information',
     fill: theme.colors.text.secondary,
+    size: theme.sizing.baseUnit * 1.5,
   }),
   'ui-prayer.PrayerScreen.SecondaryActionIcon'
 )(Icon);
@@ -66,26 +65,24 @@ const PrayerScreen = ({
   buttonDisabled,
   children,
   isLoading,
-  onPressBackground,
   onPressPrimary,
   onPressSecondary,
   primaryActionText,
   secondaryActionText,
 }) => (
   <FlexedKeyboardAvoidingView behavior={'padding'}>
-    <FlexedScrollView>
+    <FlexedScrollView
+      keyboardShouldPersistTaps="never"
+      keyboardDismissMode="on-drag"
+    >
       <FlexedSafeAreaView>
-        <FlexedTouchable onPress={onPressBackground}>
-          <Content>{children}</Content>
-        </FlexedTouchable>
+        <Content>{children}</Content>
         <PaddedView>
           {onPressSecondary ? (
-            <SecondaryActionWrapper>
-              <SecondaryAction onPress={onPressSecondary}>
-                <SecondaryActionIcon />
-                {secondaryActionText}
-              </SecondaryAction>
-            </SecondaryActionWrapper>
+            <SecondaryActionButton onPress={onPressSecondary}>
+              <SecondaryActionIcon />
+              <H5> {secondaryActionText}</H5>
+            </SecondaryActionButton>
           ) : null}
           <PrimaryButton
             onPress={onPressPrimary}
@@ -103,7 +100,6 @@ PrayerScreen.propTypes = {
   buttonDisabled: PropTypes.bool,
   children: PropTypes.node,
   isLoading: PropTypes.bool,
-  onPressBackground: PropTypes.func,
   onPressPrimary: PropTypes.func,
   onPressSecondary: PropTypes.func,
   primaryActionText: PropTypes.string,
@@ -111,7 +107,6 @@ PrayerScreen.propTypes = {
 };
 
 PrayerScreen.defaultProps = {
-  onPressBackground: () => Keyboard.dismiss(),
   primaryActionText: 'Pray',
   secondaryActionText: 'How to Pray',
 };
