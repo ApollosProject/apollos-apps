@@ -63,7 +63,13 @@ const Content = styled(({ theme }) => ({
   paddingVertical: theme.sizing.baseUnit * 1.5, // TODO: move this style into `CardContent`
 }))(CardContent);
 
-const PrayerCard = ({ avatar, cardColor, prayer, title }) => (
+const PrayerCard = ({
+  avatar,
+  cardColor,
+  prayer,
+  title,
+  onPrayerChangeText,
+}) => (
   <StyledCard cardColor={cardColor}>
     <Content>
       <AvatarWrapper hasAvatar={!!avatar}>
@@ -81,7 +87,7 @@ const PrayerCard = ({ avatar, cardColor, prayer, title }) => (
       ) : (
         </* we render this without `padded` so that the input text can be aligned correctly */>
           <H4>{title}</H4>
-          <PrayerInput />
+          <PrayerInput onChangeText={onPrayerChangeText} />
         </>
       )}
     </Content>
@@ -93,6 +99,7 @@ PrayerCard.propTypes = {
   cardColor: PropTypes.string,
   title: PropTypes.string,
   prayer: PropTypes.string,
+  onPrayerChangeText: PropTypes.func,
 };
 
 PrayerCard.defaultProps = {

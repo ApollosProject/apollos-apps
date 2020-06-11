@@ -61,6 +61,7 @@ const PrayerInput = ({
   maxLength,
   maxLengthWarning,
   prompt,
+  onChangeText,
   ...TextInputProps
 }) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -81,6 +82,11 @@ const PrayerInput = ({
     return onPress && onPress({ isEditing: true, prayer });
   };
 
+  const handleOnChangeText = (text) => {
+    setPrayer(text);
+    return onChangeText && onChangeText(text);
+  };
+
   return !isEditing ? (
     <Touchable onPress={handleOnPress}>
       <Prompt>
@@ -95,7 +101,7 @@ const PrayerInput = ({
         maxLength={maxLength}
         multiline
         onBlur={handleOnBlur}
-        onChangeText={(text) => setPrayer(text)}
+        onChangeText={handleOnChangeText}
         scrollEnabled={false}
         {...TextInputProps}
       >
@@ -117,6 +123,7 @@ const PrayerInput = ({
 };
 
 PrayerInput.propTypes = {
+  onChangeText: PropTypes.func,
   onBlur: PropTypes.func,
   onPress: PropTypes.func,
   maxLength: PropTypes.number,

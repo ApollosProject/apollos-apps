@@ -18,6 +18,7 @@
     "react-native"
   ],
   "peerDependencies": {
+    "@apollo/react-hooks": "*",
     "@apollosproject/storybook": "*",
     "@apollosproject/ui-analytics": "*",
     "@apollosproject/ui-fragments": "*",
@@ -46,7 +47,7 @@
     "setupFiles": [
       "./jest.setup.js"
     ]
-  },  
+  },
   "dependencies": {
     "formik": "1.5.1",
     "graphql-tag": "2.9.2",
@@ -56,6 +57,7 @@
     "yup": "0.26.6"
   },
   "devDependencies": {
+    "@apollo/react-hooks": "^3.1.5",
     "@storybook/react-native": "5.2.4",
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
