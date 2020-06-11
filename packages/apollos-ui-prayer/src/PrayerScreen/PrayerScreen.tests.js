@@ -45,10 +45,10 @@ describe('The PrayerScreen component', () => {
 
     expect(tree).toMatchSnapshot();
   });
-  it('should accept an onPressButton function', () => {
+  it('should accept an onPressPrimary function', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerScreen onPressButton={jest.fn()} />
+        <PrayerScreen onPressPrimary={jest.fn()} />
       </Providers>
     );
 
