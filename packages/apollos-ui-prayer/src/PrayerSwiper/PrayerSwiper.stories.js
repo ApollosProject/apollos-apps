@@ -1,7 +1,9 @@
 import React from 'react';
 
 import { storiesOf } from '@apollosproject/ui-storybook';
-import { CenteredView, H1 } from '@apollosproject/ui-kit';
+
+import PrayerCard from '../PrayerCard';
+import PrayerScreen from '../PrayerScreen';
 
 import PrayerSwiper from '.';
 
@@ -11,15 +13,43 @@ storiesOf('ui-prayer/PrayerSwiper', module).add('example', () => (
       { swipeForward } //eslint-disable-line
     ) => (
       <>
-        <CenteredView>
-          <H1>Hello?</H1>
-        </CenteredView>
-        <CenteredView>
-          <H1>Hi!</H1>
-        </CenteredView>
-        <CenteredView>
-          <H1>{`Well isn't this awkward.`}</H1>
-        </CenteredView>
+        <PrayerScreen>
+          <PrayerCard
+            avatar={{
+              uri: 'https://picsum.photos/400/400',
+            }}
+            prayer={
+              'For my 15+ year old dog as she makes her journey from this life. she has been a joy and a blessing to us since we adopted her 12 years ago. Thank you Lord for giving us such a sweet and loving companion.'
+            }
+            title={'Pray for Peter'}
+          />
+        </PrayerScreen>
+        <PrayerScreen>
+          <PrayerCard
+            prayer={
+              'For my 15+ year old dog as she makes her journey from this life. she has been a joy and a blessing to us since we adopted her 12 years ago. Thank you Lord for giving us such a sweet and loving companion.'
+            }
+            title={'Pray for Peter'}
+          />
+        </PrayerScreen>
+        <PrayerScreen>
+          <PrayerCard
+            avatar={{
+              uri: 'https://picsum.photos/400/400',
+            }}
+            prayer={
+              'For my 15+ year old dog as she makes her journey from this life. she has been a joy and a blessing to us since we adopted her 12 years ago. Thank you Lord for giving us such a sweet and loving companion.'
+            }
+            title={'Pray for Peter'}
+          />
+        </PrayerScreen>
+        <PrayerScreen>
+          <PrayerCard
+            avatar={{
+              uri: 'https://picsum.photos/400/400',
+            }}
+          />
+        </PrayerScreen>
       </>
     )}
   </PrayerSwiper>
