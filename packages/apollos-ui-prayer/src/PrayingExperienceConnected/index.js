@@ -9,19 +9,29 @@ import PrayerSwiper from '../PrayerSwiper';
 
 const GET_PRAYER_FEATURE = gql`
   query($id: ID!) {
-    node(id: $id) {
+    feature: node(id: $id) {
       # todo - this needs to be broken up into fragments
       ... on PrayerListFeature {
         prayers {
           id
           text
           requestor {
+            id
             nickName
             firstName
             photo {
               uri
             }
           }
+        }
+      }
+    }
+    currentUser {
+      id
+      profile {
+        id
+        photo {
+          uri
         }
       }
     }
@@ -36,21 +46,31 @@ const PrayingExperienceConnected = ({ id }) => (
     fetchPolicy={'cache-and-network'}
   >
     {({ data = {} }) => {
-      const { prayers = [] } = data?.node || {};
+      const { prayers = [] } = data?.feature || {};
+      const { currentUser = {} } = data;
+
       return (
         <PrayerSwiper>
-          {() =>
-            prayers.map((prayer) => (
-              <PrayerScreen key={prayer.id}>
+          {() => (
+            <React.Fragment>
+              {prayers.map((prayer) => (
+                <PrayerScreen key={prayer.id}>
+                  <PrayerCard
+                    prayer={prayer.text}
+                    avatar={prayer.requestor?.photo || null}
+                    title={`Pray for ${prayer.requestor?.nickName ||
+                      prayer.requestor?.firstName}`}
+                  />
+                </PrayerScreen>
+              ))}
+              <PrayerScreen>
                 <PrayerCard
-                  prayer={prayer.text}
-                  avatar={prayer.requestor?.photo?.uri || null}
-                  title={`Pray for ${prayer.requestor?.nickName ||
-                    prayer.requestor?.firstName}`}
+                  avatar={currentUser.profile?.photo || null}
+                  title="Add your prayer"
                 />
               </PrayerScreen>
-            ))
-          }
+            </React.Fragment>
+          )}
         </PrayerSwiper>
       );
     }}
