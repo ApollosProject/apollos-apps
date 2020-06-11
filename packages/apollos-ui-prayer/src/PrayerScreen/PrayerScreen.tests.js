@@ -45,4 +45,13 @@ describe('The PrayerScreen component', () => {
 
     expect(tree).toMatchSnapshot();
   });
+  it('should accept an onPressSecondary function', () => {
+    const tree = renderer.create(
+      <Providers>
+        <PrayerScreen onPressSecondary={jest.fn()} />
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
 });
