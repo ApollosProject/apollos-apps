@@ -48,7 +48,7 @@ const AddPrayerConnected = ({ title = 'Add your prayer' }) => {
 
   return (
     <PrayerScreen
-      onPressButton={() => addPrayer({ variables: { prayer } })}
+      onPressPrimary={() => addPrayer({ variables: { prayer } })}
       buttonDisabled={loading || !prayer.length}
       isLoading={loading}
     >

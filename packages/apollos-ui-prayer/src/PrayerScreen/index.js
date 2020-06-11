@@ -72,8 +72,8 @@ const PrayerScreen = ({
 }) => (
   <FlexedKeyboardAvoidingView behavior={'padding'}>
     <FlexedScrollView
-      keyboardShouldPersistTaps="never"
-      keyboardDismissMode="on-drag"
+      keyboardShouldPersistTaps={'never'}
+      keyboardDismissMode={'on-drag'}
     >
       <FlexedSafeAreaView>
         <Content>{children}</Content>
