@@ -45,7 +45,7 @@ const PrayerOnboardingScreen = ({
         <AvatarCloud
           maxAvatarWidth={0.4}
           primaryAvatar={primaryAvatar}
-          avatars={avatars}
+          avatars={avatars.slice(0, 4)}
         />
         <PaddedView style={{ flexGrow: 1, alignItems: 'center' }}>
           <H3 style={{ textAlign: 'center' }}>{title}</H3>
