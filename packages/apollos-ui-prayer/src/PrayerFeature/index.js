@@ -76,7 +76,7 @@ RenderAsCard.propTypes = {
 };
 
 const PrayerFeature = ({
-  prayers,
+  prayers = [],
   isCard,
   isLoading,
   onPressAdd,
