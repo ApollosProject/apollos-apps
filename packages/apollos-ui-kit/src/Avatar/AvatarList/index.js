@@ -2,11 +2,11 @@ import React from 'react';
 import { FlatList, View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import ConnectedImage, { ImageSourceType } from '../../ConnectedImage';
 import Icon from '../../Icon';
 import styled from '../../styled';
 import Touchable from '../../Touchable';
 import { withTheme } from '../../theme';
+import CoreAvatar from '../Avatar';
 
 const AddIcon = withTheme(
   ({ theme }) => ({
@@ -29,15 +29,15 @@ const AddIconBackground = styled(
   'ui-kit.AvatarList.AddIconBackground'
 )(View);
 
-const Avatar = styled(
+const Avatar = withTheme(
   ({ theme }) => ({
-    aspectRatio: 1,
-    borderRadius: theme.sizing.avatar.medium * 0.4,
-    height: theme.sizing.avatar.medium * 0.8,
-    marginRight: theme.sizing.baseUnit * 0.5,
+    themeSize: theme.sizing.avatar.medium * 0.8,
+    containerStyle: {
+      marginRight: theme.sizing.baseUnit * 0.5,
+    },
   }),
   'ui-kit.AvatarList.Avatar'
-)(ConnectedImage);
+)(CoreAvatar);
 
 const AvatarFeed = withTheme(
   ({ theme }) => ({
@@ -61,7 +61,7 @@ const renderItem = (onPressAvatar, isLoading) => ({ item }) => (
     onPress={() => onPressAvatar({ item })}
     disabled={isLoading || !onPressAvatar}
   >
-    <Avatar source={item} isLoading={isLoading} />
+    <Avatar source={item} isLoading={isLoading} unread={item.unread} />
   </Touchable>
 );
 
@@ -92,7 +92,13 @@ const AvatarList = ({
 );
 
 AvatarList.propTypes = {
-  avatars: PropTypes.arrayOf(ImageSourceType).isRequired,
+  avatars: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      uri: PropTypes.string,
+      unread: PropTypes.bool,
+    })
+  ).isRequired,
   isLoading: PropTypes.bool,
   keyExtractor: PropTypes.func,
   onPressAdd: PropTypes.func,

@@ -86,6 +86,7 @@ const PrayerFeature = ({
 }) => {
   const avatars = prayers.map((prayer) => ({
     id: prayer.id,
+    unread: !prayer.isPrayed,
     ...(typeof prayer.requestor?.photo === 'string'
       ? { uri: prayer.requestor?.photo }
       : prayer.requestor?.photo),

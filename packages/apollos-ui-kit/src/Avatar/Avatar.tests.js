@@ -47,4 +47,14 @@ describe('The Avatar component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render unread orbs', () => {
+    const tree = renderer.create(
+      <ThemeProvider>
+        <Avatar source={source} size="small" unread onPressIcon={() => null} />
+        <Avatar source={source} size="medium" unread onPressIcon={() => null} />
+        <Avatar source={source} size="large" unread onPressIcon={() => null} />
+      </ThemeProvider>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });

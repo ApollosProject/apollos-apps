@@ -39,4 +39,11 @@ storiesOf('ui-kit/Avatar', module)
         onPressIcon={() => null}
       />
     </FlexedView>
+  ))
+  .add('w/ Unread Orb', () => (
+    <FlexedView style={{ flexWrap: 'wrap', flexDirection: 'row' }}>
+      <Avatar source={source} size="small" unread onPressIcon={() => null} />
+      <Avatar source={source} size="medium" unread onPressIcon={() => null} />
+      <Avatar source={source} size="large" unread onPressIcon={() => null} />
+    </FlexedView>
   ));

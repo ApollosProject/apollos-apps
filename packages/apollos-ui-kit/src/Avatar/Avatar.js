@@ -12,10 +12,6 @@ import { ButtonIcon } from '../Button';
 import Icon from '../Icon';
 import TouchableScale from '../TouchableScale';
 
-const enhance = withTheme(({ theme, size }) => ({
-  themeSize: get(theme.sizing.avatar, size, theme.sizing.avatar.small),
-}));
-
 const Container = styled(
   ({ themeSize }) => ({
     width: themeSize,
@@ -48,6 +44,15 @@ const StyledButtonIcon = styled(({ theme }) => ({
   ...Platform.select(theme.shadows.default),
 }))(ButtonIcon);
 
+const UnreadOrb = styled(({ theme, avatarSize }) => ({
+  backgroundColor: theme.colors.secondary,
+  width: avatarSize / 4,
+  aspectRatio: 1,
+  borderRadius: avatarSize / 4,
+  marginBottom: avatarSize / 32,
+  marginRight: avatarSize / 32,
+}))(View);
+
 const ButtonIconPositioner = styled({
   position: 'absolute',
   bottom: 0,
@@ -66,58 +71,65 @@ const LoadingSpinnerContainer = styled(({ theme }) => ({
   ...Platform.select(theme.shadows.default),
 }))(View);
 
-const Avatar = enhance(
-  ({
-    themeSize,
-    containerStyle,
-    source,
-    isLoading,
-    buttonIcon,
-    iconFill,
-    onPressIcon,
-    ...imageProps
-  }) => (
-    <Container style={containerStyle} themeSize={themeSize}>
-      {source && source.uri ? (
-        <Image
-          source={source}
-          {...imageProps}
-          themeSize={themeSize}
-          isLoading={isLoading}
-        />
-      ) : (
-        <PlaceholderIcon name="avatar" size={themeSize} />
-      )}
-      {buttonIcon ? (
-        <ButtonIconPositioner>
-          {isLoading ? (
-            <LoadingSpinnerContainer>
-              <ActivityIndicator size={themeSize / 5} />
-            </LoadingSpinnerContainer>
-          ) : (
-            <StyledButtonIcon
-              onPress={onPressIcon}
-              name={buttonIcon}
-              size={themeSize / 5}
-              fill={iconFill}
-              TouchableComponent={TouchableScale}
-            />
-          )}
-        </ButtonIconPositioner>
-      ) : null}
-    </Container>
-  )
+const Avatar = ({
+  themeSize,
+  containerStyle,
+  source,
+  isLoading,
+  buttonIcon,
+  iconFill,
+  onPressIcon,
+  unread,
+  ...imageProps
+}) => (
+  <Container style={containerStyle} themeSize={themeSize}>
+    {source && source.uri ? (
+      <Image
+        source={source}
+        {...imageProps}
+        themeSize={themeSize}
+        isLoading={isLoading}
+      />
+    ) : (
+      <PlaceholderIcon name="avatar" size={themeSize} />
+    )}
+    {unread ? (
+      <ButtonIconPositioner>
+        <UnreadOrb avatarSize={themeSize} />
+      </ButtonIconPositioner>
+    ) : null}
+    {buttonIcon ? (
+      <ButtonIconPositioner>
+        {isLoading ? (
+          <LoadingSpinnerContainer>
+            <ActivityIndicator size={themeSize / 5} />
+          </LoadingSpinnerContainer>
+        ) : (
+          <StyledButtonIcon
+            onPress={onPressIcon}
+            name={buttonIcon}
+            size={themeSize / 5}
+            fill={iconFill}
+            TouchableComponent={TouchableScale}
+          />
+        )}
+      </ButtonIconPositioner>
+    ) : null}
+  </Container>
 );
 
 Avatar.propTypes = {
+  themeSize: PropTypes.number,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   containerStyle: PropTypes.any, // eslint-disable-line
   buttonIcon: PropTypes.string,
   onPressIcon: PropTypes.func,
+  unread: PropTypes.bool,
   ...ConnectedImage.propTypes,
 };
 
-export default withTheme(({ theme, size }) => ({
-  themeSize: get(theme.sizing.avatar, size, theme.sizing.avatar.small),
+export default withTheme(({ theme, size, themeSize }) => ({
+  themeSize:
+    themeSize || get(theme.sizing.avatar, size, theme.sizing.avatar.small),
   iconFill: theme.colors.action.primary,
 }))(Avatar);
