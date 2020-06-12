@@ -1,27 +1,15 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { View, StyleSheet } from 'react-native';
-import { BlurView } from '@react-native-community/blur';
+import { View } from 'react-native';
 
 import CenteredView from '../../CenteredView';
 import ConnectedImage, { ImageSourceType } from '../../ConnectedImage';
 import styled from '../../styled';
-import { withTheme } from '../../theme';
-
-const Blur = withTheme(
-  () => ({
-    blurType: 'light',
-    style: StyleSheet.absoluteFill,
-  }),
-  'ui-kit-AvatarList.Blur'
-)(BlurView);
 
 const BlurWrapper = styled(
   ({ avatarWidth, order, getXYPositions }) => ({
     aspectRatio: 1,
-    borderRadius: 1000, // For simplicity we are just going to use a very large magic number 🙃🧙
     position: 'absolute',
-    overflow: 'hidden',
     width: avatarWidth,
     zIndex: order,
     ...getXYPositions,
@@ -41,6 +29,7 @@ const CenteredAvatar = styled(
 
 const RandomAvatar = styled(
   {
+    borderRadius: 1000, // For simplicity we are just going to use a very large magic number 🙃🧙
     aspectRatio: 1,
     width: '100%',
   },
@@ -111,17 +100,6 @@ class AvatarCloud extends PureComponent {
     return xyPositions;
   }
 
-  /* `blurAmount` uses a reverse value == lower blur level === "closer to the user." We also have to
-   * account for if we are rendering a `primaryAvatar`. If so, we don't want to blur the
-   * "closest/largest" avatar. */
-  renderBlurEffect(blurAmount) {
-    const blurValue = this.props.primaryAvatar ? blurAmount : blurAmount - 1;
-
-    return this.props.blur && blurValue !== 0 ? (
-      <Blur blurAmount={blurValue} />
-    ) : null;
-  }
-
   renderRandomAvatars() {
     return this.getRandomAvatarSizes().map((size, i, sizes) => (
       <BlurWrapper
@@ -133,10 +111,8 @@ class AvatarCloud extends PureComponent {
         <RandomAvatar
           source={this.props.avatars[i]}
           isLoading={this.props.isLoading}
+          blurRadius={this.props.blur ? sizes.length - i : 0}
         />
-        {this.renderBlurEffect(
-          sizes.length - i
-        ) /* blur uses a reverse index = lower index == lower blur level === "closer to the user" */}
       </BlurWrapper>
     ));
   }
