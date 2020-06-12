@@ -36,7 +36,7 @@ const PaginationDotActive = styled(
   'ui-prayer.PrayerSwiper.PaginationDot.Active'
 )(View);
 
-const StyledPrayerSwiper = withTheme(({ theme, orientation }) => ({
+const StyledPrayerSwiper = withTheme(({ theme, orientation, ref }) => ({
   paginationStyle: {
     ...(orientation === 'landscape' ? { top: theme.sizing.baseUnit } : {}), // fixes pagination placement in landscape mode
     bottom: null, // pagination by default is rendered absolute bottom. This "overrides" that style declaration.
@@ -44,6 +44,7 @@ const StyledPrayerSwiper = withTheme(({ theme, orientation }) => ({
     justifyContent: 'flex-start',
     alignItem: 'flex-start',
   },
+  ref,
 }))(Swiper);
 
 class PrayerSwiper extends Component {

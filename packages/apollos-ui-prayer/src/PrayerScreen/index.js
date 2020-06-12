@@ -3,15 +3,14 @@ import {
   KeyboardAvoidingView,
   SafeAreaView,
   ScrollView,
-  TouchableWithoutFeedback,
   View,
+  StyleSheet,
 } from 'react-native';
 import PropTypes from 'prop-types';
 
 import {
   Button,
   H5,
-  Icon,
   PaddedView,
   styled,
   withIsLoading,
@@ -52,17 +51,9 @@ const SecondaryActionButton = withTheme(
   'ui-prayer.PrayerScreen.SecondaryActionButton'
 )(Button);
 
-const SecondaryActionIcon = withTheme(
-  ({ theme }) => ({
-    name: 'information',
-    fill: theme.colors.text.secondary,
-    size: theme.sizing.baseUnit * 1.5,
-  }),
-  'ui-prayer.PrayerScreen.SecondaryActionIcon'
-)(Icon);
-
 const PrayerScreen = ({
   buttonDisabled,
+  background,
   children,
   isLoading,
   onPressPrimary,
@@ -71,7 +62,9 @@ const PrayerScreen = ({
   secondaryActionText,
 }) => (
   <FlexedKeyboardAvoidingView behavior={'padding'}>
+    {background}
     <FlexedScrollView
+      style={StyleSheet.absoluteFill}
       keyboardShouldPersistTaps={'never'}
       keyboardDismissMode={'on-drag'}
     >
@@ -80,8 +73,7 @@ const PrayerScreen = ({
         <PaddedView>
           {onPressSecondary ? (
             <SecondaryActionButton onPress={onPressSecondary}>
-              <SecondaryActionIcon />
-              <H5> {secondaryActionText}</H5>
+              <H5>{secondaryActionText}</H5>
             </SecondaryActionButton>
           ) : null}
           <PrimaryButton
@@ -104,10 +96,11 @@ PrayerScreen.propTypes = {
   onPressSecondary: PropTypes.func,
   primaryActionText: PropTypes.string,
   secondaryActionText: PropTypes.string,
+  background: PropTypes.element,
 };
 
 PrayerScreen.defaultProps = {
-  primaryActionText: 'Pray',
+  primaryActionText: '🙏 Pray',
   secondaryActionText: 'How to Pray',
 };
 

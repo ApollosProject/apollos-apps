@@ -1,22 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
 import { Animated, StyleSheet } from 'react-native';
 
-import {
-  AvatarCloud,
-  H3,
-  BodyText,
-  PaddedView,
-  BackgroundView,
-} from '@apollosproject/ui-kit';
-
 import PrayerCard from '../PrayerCard';
 import PrayerScreen from '../PrayerScreen';
 import PrayerSwiper from '../PrayerSwiper';
-
 import AddPrayerConnected from '../AddPrayerConnected';
+import PrayerOnboardingScreen from '../PrayerOnboardingScreen';
+import BackgroundImage from '../PrayerBlurBackground';
 
 const GET_PRAYER_FEATURE = gql`
   query($id: ID!) {
@@ -52,6 +45,7 @@ const GET_PRAYER_FEATURE = gql`
 const PrayingExperienceConnected = ({
   id,
   AddPrayerComponent = AddPrayerConnected,
+  OnboardingComponent = PrayerOnboardingScreen,
   showOnboarding = true,
 }) => {
   const { loading, error, data } = useQuery(GET_PRAYER_FEATURE, {
@@ -67,18 +61,25 @@ const PrayingExperienceConnected = ({
     currentUser: { profile: { photo = null } = {} },
   } = data || {};
 
+  const [isOnboarding, setIsOnboarding] = useState(true);
+
   return (
     <>
       <PrayerSwiper>
-        {() => (
+        {({ swipeForward }) => (
           <React.Fragment>
-            {React.isValidElement(AddPrayerComponent) ? (
-              AddPrayerComponent
-            ) : (
-              <AddPrayerComponent />
-            )}
+            <AddPrayerComponent
+              swipeForward={swipeForward}
+              avatars={prayers.map((prayer) => prayer.requestor?.photo) || []}
+              primaryAvatar={photo}
+            />
             {prayers.map((prayer) => (
-              <PrayerScreen key={prayer.id}>
+              <PrayerScreen
+                key={prayer.id}
+                background={
+                  <BackgroundImage source={prayer.requestor?.photo || null} />
+                }
+              >
                 <PrayerCard
                   prayer={prayer.text}
                   avatar={prayer.requestor?.photo || null}
@@ -90,32 +91,14 @@ const PrayingExperienceConnected = ({
           </React.Fragment>
         )}
       </PrayerSwiper>
-      {showOnboarding ? (
-        <Animated.View style={[StyleSheet.absoluteFill]}>
-          <BackgroundView>
-            <PrayerScreen primaryActionText="Next" onPressSecondary={() => {}}>
-              <AvatarCloud
-                maxAvatarWidth={0.4}
-                primaryAvatar={photo}
-                avatars={prayers.map(
-                  (prayer) => prayer.requestor?.photo || null
-                )}
-              />
-              <PaddedView style={{ flexGrow: 1, alignItems: 'center' }}>
-                <H3 style={{ textAlign: 'center' }}>Join us today in prayer</H3>
-                <PaddedView>
-                  <BodyText style={{ textAlign: 'center' }}>
-                    This is the confidence we have in approaching God: that if
-                    we ask anything according to his will, he hears us.
-                  </BodyText>
-                  <BodyText style={{ textAlign: 'center' }}>
-                    1 John 5:14
-                  </BodyText>
-                </PaddedView>
-              </PaddedView>
-            </PrayerScreen>
-          </BackgroundView>
-        </Animated.View>
+      {showOnboarding ? ( // eslint-disable-line
+        <OnboardingComponent
+          avatars={prayers.map((prayer) => prayer.requestor?.photo) || []}
+          primaryAvatar={photo}
+          onPressPrimary={() => setIsOnboarding(false)}
+          visibleOnMount
+          visible={isOnboarding}
+        />
       ) : null}
     </>
   );
@@ -123,7 +106,8 @@ const PrayingExperienceConnected = ({
 
 PrayingExperienceConnected.propTypes = {
   id: PropTypes.string.isRequired,
-  AddPrayerComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+  AddPrayerComponent: PropTypes.oneOfType([PropTypes.func]),
+  OnboardingComponent: PropTypes.oneOfType([PropTypes.func]),
   showOnboarding: PropTypes.bool,
 };
 
