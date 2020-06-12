@@ -90,10 +90,10 @@ class AvatarCloud extends PureComponent {
     const positionBoundry = 1 - avatarSize;
     const xyPositions = {
       left: this.getAvatarPercentageWidth(
-        this.getRandomPositionValue(index) * positionBoundry
+        this.getRandomPositionValue(`${index}-x`) * positionBoundry
       ),
       top: this.getAvatarPercentageWidth(
-        this.getRandomPositionValue(index) * positionBoundry
+        this.getRandomPositionValue(`${index}-y`) * positionBoundry
       ),
     };
 
