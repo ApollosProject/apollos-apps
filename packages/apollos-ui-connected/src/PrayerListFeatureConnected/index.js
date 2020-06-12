@@ -53,13 +53,11 @@ function PrayerFeatureConnected({
                 handleOpenTo(
                   1 + // first item in list is add prayer
                     data?.node?.prayers?.findIndex(
-                      (prayer) => prayer?.requestor?.photo?.uri === item?.uri
+                      (prayer) => prayer.id === item.id
                     )
                 )
               }
-              avatars={data?.node?.prayers?.map(
-                (prayer) => prayer.requestor.photo
-              )}
+              prayers={data?.node?.prayers}
               subtitle={data?.node?.subtitle}
               title={data?.node?.title}
               isCard={data?.node?.isCard}

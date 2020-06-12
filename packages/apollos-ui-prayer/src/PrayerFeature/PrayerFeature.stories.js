@@ -16,6 +16,13 @@ const avatars = [
   'https://picsum.photos/200',
 ];
 
+const prayers = avatars.map((avatar, i) => ({
+  id: `prayer-${i}`,
+  requestor: {
+    photo: avatar,
+  },
+}));
+
 storiesOf('ui-prayer/PrayerFeature', module)
   .addDecorator((story) => (
     <CenteredView style={{ alignItems: 'stretch' /* eslint-disable-line */ }}>
@@ -24,30 +31,30 @@ storiesOf('ui-prayer/PrayerFeature', module)
   ))
   .add('example', () => (
     <PrayerFeature
-      avatars={avatars}
+      prayers={prayers}
       onPressAdd={() => {}}
       title={'Example title'}
       subtitle={'Custom Subtitle'}
     />
   ))
-  .add('default', () => <PrayerFeature avatars={avatars} />)
+  .add('default', () => <PrayerFeature prayers={prayers} />)
   .add('isCard (false)', () => (
-    <PrayerFeature avatars={avatars} isCard={false} title={'Example title'} />
+    <PrayerFeature prayers={prayers} isCard={false} title={'Example title'} />
   ))
   .add('isLoading', () => (
     <PrayerFeature
-      avatars={['', '', '', '', '', '', '', '']}
+      prayers={[{}, {}, {}, {}, {}, {}]}
       isLoading
       title={'Example title'}
       isCard={false}
     />
   ))
   .add('onPressAdd', () => (
-    <PrayerFeature avatars={avatars} onPressAdd={() => {}} />
+    <PrayerFeature prayers={prayers} onPressAdd={() => {}} />
   ))
   .add('title', () => (
-    <PrayerFeature avatars={avatars} title={'Example title'} />
+    <PrayerFeature prayers={prayers} title={'Example title'} />
   ))
   .add('subtitle', () => (
-    <PrayerFeature avatars={avatars} subtitle={'Custom Subtitle'} />
+    <PrayerFeature prayers={prayers} subtitle={'Custom Subtitle'} />
   ));
