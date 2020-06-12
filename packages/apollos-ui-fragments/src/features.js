@@ -15,6 +15,7 @@ const PRAYER_LIST_FEATURE_FRAGMENT = gql`
     id
     title
     subtitle
+    isCard
     prayers {
       id
       text
@@ -55,6 +56,7 @@ const FEED_FEATURES_FRAGMENT = gql`
     ... on PrayerListFeature {
       title
       subtitle
+      isCard
     }
   }
 `;

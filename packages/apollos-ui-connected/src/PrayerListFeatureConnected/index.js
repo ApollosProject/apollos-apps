@@ -62,6 +62,7 @@ function PrayerFeatureConnected({
               )}
               subtitle={data?.node?.subtitle}
               title={data?.node?.title}
+              isCard={data?.node?.isCard}
               {...props}
               isLoading={loading || isLoading}
             />
