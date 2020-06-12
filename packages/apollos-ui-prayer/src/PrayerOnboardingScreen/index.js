@@ -49,7 +49,7 @@ const PrayerOnboardingScreen = ({
         />
         <PaddedView style={{ flexGrow: 1, alignItems: 'center' }}>
           <H3 style={{ textAlign: 'center' }}>{title}</H3>
-          <PaddedView style={{ paddingHorizontal: '15%' }}>
+          <PaddedView style={{ paddingHorizontal: '10%' }}>
             <BodyText style={{ textAlign: 'center' }}>{body}</BodyText>
           </PaddedView>
         </PaddedView>
@@ -80,13 +80,8 @@ PrayerOnboardingScreen.defaultProps = {
   visible: true,
   primaryActionText: 'Next',
   title: 'Join us today in prayer',
-  body: (
-    <ScriptureText>
-      This is the confidence we have in approaching God: that if we ask anything
-      according to his will, he hears us.{'\n'}
-      <VerseNumber>1 John 5:14</VerseNumber>
-    </ScriptureText>
-  ),
+  body:
+    'Each day we ask the community for prayer. These prayers last for only 24 hours so that you can reach out to our community and ask for what you need today, and every day.',
 };
 
 export default PrayerOnboardingScreen;
