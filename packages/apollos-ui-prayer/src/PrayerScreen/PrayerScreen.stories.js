@@ -9,7 +9,7 @@ import PrayerScreen from '.';
 
 storiesOf('ui-prayer/PrayerScreen', module)
   .add('example', () => (
-    <PrayerScreen>
+    <PrayerScreen onPressSecondary={() => {}}>
       <PrayerCard
         avatar={{
           uri: 'https://picsum.photos/400/400',
@@ -27,7 +27,18 @@ storiesOf('ui-prayer/PrayerScreen', module)
       <Text>Hello World</Text>
     </PrayerScreen>
   ))
+  .add('isLoading', () => (
+    <PrayerScreen onPressSecondary={() => {}} isLoading>
+      <PrayerCard />
+    </PrayerScreen>
+  ))
+  .add('onPressSecondary', () => <PrayerScreen onPressSecondary={() => {}} />)
   .add('primaryActionText', () => (
     <PrayerScreen primaryActionText={'Custom primaryActionText'} />
   ))
-  .add('onPressSecondary', () => <PrayerScreen onPressSecondary={() => {}} />);
+  .add('secondaryActionText', () => (
+    <PrayerScreen
+      onPressSecondary={() => {}}
+      secondaryActionText={'Custom secondaryActionText'}
+    />
+  ));

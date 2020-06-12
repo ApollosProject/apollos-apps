@@ -3,6 +3,7 @@ import { Text } from 'react-native';
 import renderer from 'react-test-renderer';
 
 import { Providers } from '../testUtils';
+import PrayerCard from '../PrayerCard';
 
 import PrayerScreen from '.';
 
@@ -27,10 +28,12 @@ describe('The PrayerScreen component', () => {
 
     expect(tree).toMatchSnapshot();
   });
-  it('should render with custom primaryActionText', () => {
+  it('should render a loading state (isLoading)', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerScreen primaryActionText={'Custom primaryActionText'} />
+        <PrayerScreen onPressSecondary={jest.fn()}>
+          <PrayerCard />
+        </PrayerScreen>
       </Providers>
     );
 
@@ -49,6 +52,24 @@ describe('The PrayerScreen component', () => {
     const tree = renderer.create(
       <Providers>
         <PrayerScreen onPressSecondary={jest.fn()} />
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with custom primaryActionText', () => {
+    const tree = renderer.create(
+      <Providers>
+        <PrayerScreen primaryActionText={'Custom primaryActionText'} />
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with custom secondaryActionText', () => {
+    const tree = renderer.create(
+      <Providers>
+        <PrayerScreen secondaryActionText={'Custom secondaryActionText'} />
       </Providers>
     );
 

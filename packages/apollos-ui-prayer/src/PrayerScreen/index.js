@@ -37,16 +37,20 @@ const FlexedScrollView = withTheme(
   'ui-prayer.PrayerScreen.FlexedScrollView'
 )(ScrollView);
 
-const PrimaryButton = withTheme(
+const PrimaryActionButton = withTheme(
   () => ({}),
-  'ui-prayer.PrayerScreen.PrimaryButton'
+  'ui-prayer.PrayerScreen.PrimaryActionButton'
 )(Button);
 
 const SecondaryActionButton = withTheme(
-  () => ({
+  ({ isLoading, theme }) => ({
     type: 'default',
     bordered: true,
-    style: { borderWidth: 0 },
+    style: {
+      borderWidth: 0,
+      alignSelf: 'center',
+      ...(isLoading ? { marginBottom: theme.sizing.baseUnit * 0.5 } : {}),
+    },
   }),
   'ui-prayer.PrayerScreen.SecondaryActionButton'
 )(Button);
@@ -72,14 +76,18 @@ const PrayerScreen = ({
         <Content>{children}</Content>
         <PaddedView>
           {onPressSecondary ? (
-            <SecondaryActionButton onPress={onPressSecondary}>
+            <SecondaryActionButton
+              isLoading={isLoading}
+              onPress={onPressSecondary}
+            >
               <H5>{secondaryActionText}</H5>
             </SecondaryActionButton>
           ) : null}
-          <PrimaryButton
+          <PrimaryActionButton
             onPress={onPressPrimary}
             title={primaryActionText}
-            isLoading={isLoading}
+            loading={isLoading}
+            isLoading={false}
             disabled={buttonDisabled}
           />
         </PaddedView>
