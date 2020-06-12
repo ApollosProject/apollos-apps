@@ -29,7 +29,11 @@ describe('The AvatarList component', () => {
   it('should render a loading state', () => {
     const tree = renderer.create(
       <Providers>
-        <AvatarList avatars={['', '', '', '', '', '', '', '']} isLoading />
+        <AvatarList
+          avatars={['', '', '', '', '', '', '', '']}
+          isLoading
+          onPressAdd={jest.fn()}
+        />
       </Providers>
     );
 

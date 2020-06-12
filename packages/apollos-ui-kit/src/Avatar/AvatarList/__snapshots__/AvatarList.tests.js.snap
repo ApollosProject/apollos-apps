@@ -2642,7 +2642,20 @@ exports[`The AvatarList component should render 1`] = `
 
 exports[`The AvatarList component should render a loading state 1`] = `
 <RCTScrollView
-  ListHeaderComponent={null}
+  ListHeaderComponent={
+    <Touchable
+      disabled={true}
+      onPress={[Function]}
+    >
+      <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))
+        isLoading={true}
+      >
+        <getContext(mapProps(Icon))
+          isLoading={true}
+        />
+      </mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))>
+    </Touchable>
+  }
   data={
     Array [
       "",
@@ -2682,6 +2695,50 @@ exports[`The AvatarList component should render a loading state 1`] = `
   windowSize={21}
 >
   <View>
+    <View
+      onLayout={[Function]}
+    >
+      <View
+        accessible={true}
+        clickable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <View
+          isLoading={true}
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 32,
+              "marginRight": 8,
+              "padding": 13,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 16,
+                "height": 38,
+                "width": 38,
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
     <View
       style={
         Array [

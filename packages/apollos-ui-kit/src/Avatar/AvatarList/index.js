@@ -18,8 +18,10 @@ const AddIcon = withTheme(
 )(Icon);
 
 const AddIconBackground = styled(
-  ({ theme }) => ({
-    backgroundColor: theme.colors.action.primary,
+  ({ isLoading, theme }) => ({
+    backgroundColor: isLoading
+      ? theme.colors.background.inactive
+      : theme.colors.action.primary,
     borderRadius: theme.sizing.avatar.medium * 0.4,
     padding: theme.sizing.avatar.medium * 0.1625,
     marginRight: theme.sizing.baseUnit * 0.5,
@@ -55,23 +57,22 @@ const AvatarFeed = withTheme(
 
 // eslint-disable-next-line react/display-name, react/prop-types
 const renderItem = (onPressAvatar, isLoading) => ({ item }) => (
-  <Touchable onPress={onPressAvatar ? () => onPressAvatar({ item }) : null}>
+  <Touchable
+    onPress={() => onPressAvatar({ item })}
+    disabled={isLoading || !onPressAvatar}
+  >
     <Avatar source={item} isLoading={isLoading} />
   </Touchable>
 );
 
-const renderListHeader = ({ onPressAdd }) =>
+const renderListHeader = (onPressAdd, isLoading) =>
   onPressAdd ? (
-    <Touchable onPress={() => onPressAdd()}>
-      <AddIconBackground>
-        <AddIcon />
+    <Touchable onPress={() => onPressAdd()} disabled={isLoading}>
+      <AddIconBackground isLoading={isLoading}>
+        <AddIcon isLoading={isLoading} />
       </AddIconBackground>
     </Touchable>
   ) : null;
-
-renderListHeader.propTypes = {
-  onPressAdd: PropTypes.func,
-};
 
 const AvatarList = ({
   avatars,
@@ -84,7 +85,7 @@ const AvatarList = ({
   <AvatarFeed
     data={avatars}
     keyExtractor={keyExtractor}
-    ListHeaderComponent={renderListHeader({ onPressAdd })}
+    ListHeaderComponent={renderListHeader(onPressAdd, isLoading)}
     renderItem={renderItem(onPressAvatar, isLoading)}
     {...props}
   />

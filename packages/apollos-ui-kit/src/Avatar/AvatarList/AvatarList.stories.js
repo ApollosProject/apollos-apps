@@ -28,8 +28,8 @@ storiesOf('ui-kit/Avatar/AvatarList', module)
     <AvatarList
       avatars={['', '', '', '', '', '', '', '']}
       isLoading
+      onPressAdd={() => {}}
       title={'Example title'}
-      isCard={false}
     />
   ))
   .add('onPressAdd', () => (
