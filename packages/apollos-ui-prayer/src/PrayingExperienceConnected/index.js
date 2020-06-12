@@ -40,7 +40,6 @@ const PrayingExperienceConnected = ({
 }) => {
   const { data } = useQuery(GET_PRAYER_FEATURE, {
     variables: { id },
-    // fetchPolicy: 'cache-and-network',
   });
 
   // if (loading) return 'Loading...';

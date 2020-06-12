@@ -45,6 +45,8 @@ export default class PrayerRequest extends RockApolloDataSource {
   };
 
   incrementPrayed = async (id) => {
+    // TODO: this seems to be failing some of the times. Don't merge this please
+    // until we investigate why.
     this.put(`PrayerRequests/Prayed/${id}`, {});
 
     // now see if we need to send a push notification informing author

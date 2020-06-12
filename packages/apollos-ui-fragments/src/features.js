@@ -18,6 +18,7 @@ const PRAYER_LIST_FEATURE_FRAGMENT = gql`
     prayers {
       id
       text
+      isPrayed
       requestor {
         id
         nickName

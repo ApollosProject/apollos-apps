@@ -14,9 +14,22 @@ const PRAY = gql`
   }
 `;
 
+const PRAYER_FRAGMENT = gql`
+  fragment prayed on PrayerRequest {
+    isPrayed
+  }
+`;
+
 const PrayingScreen = ({ prayer, onPressPrimary }) => {
   const [pray, { loading, data }] = useMutation(PRAY, {
     variables: { prayerId: prayer.id },
+    update(cache) {
+      cache.writeFragment({
+        id: prayer.id,
+        fragment: PRAYER_FRAGMENT,
+        data: { isPrayed: true, __typename: 'PrayerRequest' },
+      });
+    },
   });
 
   const handleOnPressPrimary = () => {
@@ -24,12 +37,14 @@ const PrayingScreen = ({ prayer, onPressPrimary }) => {
     pray();
   };
 
+  const hasPrayed = data?.prayed?.success || prayer.isPrayed;
+
   return (
     <PrayerScreen
       background={<BackgroundImage source={prayer.requestor?.photo || null} />}
       onPressPrimary={handleOnPressPrimary}
-      primaryActionText={data?.prayed?.success ? 'Prayed!' : '🙏 Pray'}
-      buttonDisabled={loading || data?.prayed?.success}
+      primaryActionText={hasPrayed ? 'Prayed!' : '🙏 Pray'}
+      buttonDisabled={loading || hasPrayed}
     >
       <PrayerCard
         prayer={prayer.text}
@@ -44,6 +59,7 @@ const PrayingScreen = ({ prayer, onPressPrimary }) => {
 PrayingScreen.propTypes = {
   prayer: PropTypes.shape({
     id: PropTypes.string,
+    isPrayed: PropTypes.bool,
     requestor: PropTypes.shape({
       photo: PropTypes.any, // eslint-disable-line,
       nickName: PropTypes.string,

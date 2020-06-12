@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 import { useQuery, useMutation } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
@@ -39,9 +38,7 @@ const AddPrayerConnected = ({
   AddedPrayerComponent = AddedPrayerScreen,
 }) => {
   const { data: userData } = useQuery(GET_USER_PHOTO);
-  const {
-    currentUser: { profile: { photo = null } = {} },
-  } = userData || {};
+  const photo = userData?.currentUser?.profile?.photo;
 
   const [addPrayer, { loading, data }] = useMutation(ADD_PRAYER);
   const [prayer, setPrayer] = useState('');
