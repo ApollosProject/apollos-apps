@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
-import { Text, Animated, Dimensions, StyleSheet } from 'react-native';
+import { Animated, Dimensions, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 import { AvatarCloud, H3, BodyText, PaddedView } from '@apollosproject/ui-kit';
+import { ScriptureText, VerseNumber } from '@apollosproject/ui-scripture';
 
 import PrayerScreen from '../PrayerScreen';
 
@@ -80,11 +81,11 @@ PrayerOnboardingScreen.defaultProps = {
   primaryActionText: 'Next',
   title: 'Join us today in prayer',
   body: (
-    <Text>
+    <ScriptureText>
       This is the confidence we have in approaching God: that if we ask anything
       according to his will, he hears us.{'\n'}
-      <Text style={{ opacity: 0.5 }}>1 John 5:14</Text>
-    </Text>
+      <VerseNumber>1 John 5:14</VerseNumber>
+    </ScriptureText>
   ),
 };
 

@@ -24,6 +24,7 @@
     "@apollosproject/ui-fragments": "*",
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-notifications": "*",
+    "@apollosproject/ui-scripture": "*",
     "react": "*",
     "react-apollo": "*",
     "react-native": "*",

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text } from 'react-native';
+import { ScriptureText, VerseNumber } from '@apollosproject/ui-scripture';
 import PrayerOnboardingScreen from '../PrayerOnboardingScreen';
 
 const AddedPrayerScreen = (props) => (
@@ -8,9 +9,11 @@ const AddedPrayerScreen = (props) => (
     title={'Thank you for sharing.'}
     body={
       <Text>
-        And if we know that he hears us—whatever we ask—we know that we have
-        what we asked of him.{'\n'}
-        <Text style={{ opacity: 0.5 }}>1 John 5:15</Text>
+        <ScriptureText>
+          And if we know that he hears us—whatever we ask—we know that we have
+          what we asked of him.{'\n'}
+          <VerseNumber>1 John 5:15</VerseNumber>
+        </ScriptureText>
         {'\n\n'}
         We’re praying with you{'\n'}and believe in you.
       </Text>
