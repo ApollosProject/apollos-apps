@@ -5,12 +5,14 @@ import ActionListFeatureConnected from '../ActionListFeatureConnected';
 import HorizontalCardListFeatureConnected from '../HorizontalCardListFeatureConnected';
 import VerticalCardListFeatureConnected from '../VerticalCardListFeatureConnected';
 import HeroListFeatureConnected from '../HeroListFeatureConnected';
+import PrayerListFeatureConnected from '../PrayerListFeatureConnected';
 
 const MAPPINGS = {
   ActionListFeature: ActionListFeatureConnected,
   HeroListFeature: HeroListFeatureConnected,
   HorizontalCardListFeature: HorizontalCardListFeatureConnected,
   VerticalCardListFeature: VerticalCardListFeatureConnected,
+  PrayerListFeature: PrayerListFeatureConnected,
 };
 
 const featuresFeedComponentMapper = ({

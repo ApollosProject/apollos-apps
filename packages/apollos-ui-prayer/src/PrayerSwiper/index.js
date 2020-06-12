@@ -57,6 +57,7 @@ class PrayerSwiper extends Component {
 
   static propTypes = {
     children: PropTypes.func.isRequired,
+    index: PropTypes.number,
   };
 
   swiper = null;
@@ -71,7 +72,6 @@ class PrayerSwiper extends Component {
   // Creates ref to Swiper to be passed as a prop to children.
   setSwiperRef = (r) => {
     this.swiper = r;
-
     return this.swiper;
   };
 
@@ -96,6 +96,7 @@ class PrayerSwiper extends Component {
 
     return (
       <StyledPrayerSwiper
+        index={this.props.index}
         loadMinimal
         loop={false}
         /* Disables swipe gestures. We currently dont display a back button so this is our

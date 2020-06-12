@@ -10,6 +10,26 @@ const TEXT_FEATURE_FRAGMENT = gql`
   }
 `;
 
+const PRAYER_LIST_FEATURE_FRAGMENT = gql`
+  fragment PrayerListFeatureFragment on PrayerListFeature {
+    id
+    title
+    subtitle
+    prayers {
+      id
+      text
+      requestor {
+        id
+        nickName
+        firstName
+        photo {
+          uri
+        }
+      }
+    }
+  }
+`;
+
 const FEED_FEATURES_FRAGMENT = gql`
   fragment FeedFeaturesFragment on Feature {
     id
@@ -28,6 +48,10 @@ const FEED_FEATURES_FRAGMENT = gql`
       subtitle
     }
     ... on HeroListFeature {
+      title
+      subtitle
+    }
+    ... on PrayerListFeature {
       title
       subtitle
     }
@@ -202,4 +226,5 @@ export {
   VERTICAL_CARD_LIST_FEATURE_FRAGMENT,
   FEED_FEATURES_FRAGMENT,
   WEBVIEW_FEATURE_FRAGMENT,
+  PRAYER_LIST_FEATURE_FRAGMENT,
 };

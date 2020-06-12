@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import gql from 'graphql-tag';
-import { useQuery, useMutation } from '@apollo/react-hooks';
+import { useQuery } from '@apollo/react-hooks';
+import ApollosConfig from '@apollosproject/config';
+import { withTheme, ThemeMixin, ModalView } from '@apollosproject/ui-kit';
 
 import PrayerSwiper from '../PrayerSwiper';
 import AddPrayerConnected from '../AddPrayerConnected';
@@ -20,31 +22,10 @@ const GET_PRAYER_FEATURE = gql`
       }
     }
     feature: node(id: $id) {
-      # todo - this needs to be broken up into fragments
-      ... on PrayerListFeature {
-        prayers {
-          id
-          text
-          requestor {
-            id
-            nickName
-            firstName
-            photo {
-              uri
-            }
-          }
-        }
-      }
+      ...PrayerListFeatureFragment
     }
   }
-`;
-
-const PRAY = gql`
-  mutation($prayerId: ID!) {
-    interactWithNode(action: PRAY, nodeId: $prayerId) {
-      success
-    }
-  }
+  ${ApollosConfig.FRAGMENTS.PRAYER_LIST_FEATURE_FRAGMENT}
 `;
 
 const PrayingExperienceConnected = ({
@@ -53,33 +34,37 @@ const PrayingExperienceConnected = ({
   OnboardingComponent = PrayerOnboardingScreen,
   showOnboarding = true,
   onFinish,
+  asModal,
+  index,
+  themeType = 'dark',
 }) => {
-  const { loading, error, data } = useQuery(GET_PRAYER_FEATURE, {
+  const { data } = useQuery(GET_PRAYER_FEATURE, {
     variables: { id },
-    fetchPolicy: 'cache-and-network',
+    // fetchPolicy: 'cache-and-network',
   });
 
   // if (loading) return 'Loading...';
   // if (error) return `Error! ${error.message}`;
 
   const { prayers = [] } = data?.feature || {};
-  const {
-    currentUser: { profile: { photo = null } = {} },
-  } = data || {};
+  const photo = data?.currentUser?.profile?.photo;
 
   const [isOnboarding, setIsOnboarding] = useState(true);
 
+  const Wrapper = asModal ? ModalView : React.Fragment;
+
   return (
-    <>
-      <PrayerSwiper>
-        {({ swipeForward }) => (
-          <React.Fragment>
+    <ThemeMixin mixin={{ type: themeType }}>
+      <Wrapper onClose={onFinish}>
+        <PrayerSwiper index={index}>
+          {({ swipeForward }) => [
             <AddPrayerComponent
+              key={'add-prayer'}
               swipeForward={swipeForward}
               avatars={prayers.map((prayer) => prayer.requestor?.photo) || []}
               primaryAvatar={photo}
-            />
-            {prayers.map((prayer, prayerIndex) => (
+            />,
+            ...prayers.map((prayer, prayerIndex) => (
               <PrayingScreen
                 key={prayer.id}
                 prayer={prayer}
@@ -87,20 +72,20 @@ const PrayingExperienceConnected = ({
                   prayerIndex < prayers.length - 1 ? swipeForward : onFinish
                 }
               />
-            ))}
-          </React.Fragment>
-        )}
-      </PrayerSwiper>
+            )),
+          ]}
+        </PrayerSwiper>
       {showOnboarding ? ( // eslint-disable-line
-        <OnboardingComponent
-          avatars={prayers.map((prayer) => prayer.requestor?.photo) || []}
-          primaryAvatar={photo}
-          onPressPrimary={() => setIsOnboarding(false)}
-          visibleOnMount
-          visible={isOnboarding}
-        />
-      ) : null}
-    </>
+          <OnboardingComponent
+            avatars={prayers.map((prayer) => prayer.requestor?.photo) || []}
+            primaryAvatar={photo}
+            onPressPrimary={() => setIsOnboarding(false)}
+            visibleOnMount
+            visible={isOnboarding}
+          />
+        ) : null}
+      </Wrapper>
+    </ThemeMixin>
   );
 };
 
@@ -110,6 +95,11 @@ PrayingExperienceConnected.propTypes = {
   OnboardingComponent: PropTypes.oneOfType([PropTypes.func]),
   showOnboarding: PropTypes.bool,
   onFinish: PropTypes.func,
+  themeType: PropTypes.string,
+  asModal: PropTypes.bool,
+  index: PropTypes.number,
 };
 
-export default PrayingExperienceConnected;
+export default withTheme(() => ({}), 'ui-prayer.PrayingExperienceConnected')(
+  PrayingExperienceConnected
+);
