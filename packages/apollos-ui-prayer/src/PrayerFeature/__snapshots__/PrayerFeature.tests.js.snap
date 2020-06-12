@@ -79,14 +79,38 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
         }
         data={
           Array [
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
+            Object {
+              "id": "prayer-0",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-1",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-2",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-3",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-4",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-5",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-6",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-7",
+              "uri": "https://picsum.photos/200",
+            },
           ]
         }
         decelerationRate="fast"
@@ -313,8 +337,8 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-0",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -380,8 +404,8 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-1",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -447,8 +471,8 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-2",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -514,8 +538,8 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-3",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -581,8 +605,8 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-4",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -648,8 +672,8 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-5",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -715,8 +739,8 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-6",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -782,8 +806,8 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-7",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -879,14 +903,38 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
         }
         data={
           Array [
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
+            Object {
+              "id": "prayer-0",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-1",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-2",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-3",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-4",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-5",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-6",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-7",
+              "uri": "https://picsum.photos/200",
+            },
           ]
         }
         decelerationRate="fast"
@@ -965,8 +1013,8 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-0",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -1032,8 +1080,8 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-1",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -1099,8 +1147,8 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-2",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -1166,8 +1214,8 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-3",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -1233,8 +1281,8 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-4",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -1300,8 +1348,8 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-5",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -1367,8 +1415,8 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-6",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -1434,8 +1482,8 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-7",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -1531,14 +1579,38 @@ exports[`The PrayerFeature component should render 1`] = `
         }
         data={
           Array [
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
+            Object {
+              "id": "prayer-0",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-1",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-2",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-3",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-4",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-5",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-6",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-7",
+              "uri": "https://picsum.photos/200",
+            },
           ]
         }
         decelerationRate="fast"
@@ -1617,8 +1689,8 @@ exports[`The PrayerFeature component should render 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-0",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -1684,8 +1756,8 @@ exports[`The PrayerFeature component should render 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-1",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -1751,8 +1823,8 @@ exports[`The PrayerFeature component should render 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-2",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -1818,8 +1890,8 @@ exports[`The PrayerFeature component should render 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-3",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -1885,8 +1957,8 @@ exports[`The PrayerFeature component should render 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-4",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -1952,8 +2024,8 @@ exports[`The PrayerFeature component should render 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-5",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -2019,8 +2091,8 @@ exports[`The PrayerFeature component should render 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-6",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -2086,8 +2158,8 @@ exports[`The PrayerFeature component should render 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-7",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -2196,14 +2268,38 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
         }
         data={
           Array [
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
+            Object {
+              "id": "prayer-0",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-1",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-2",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-3",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-4",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-5",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-6",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-7",
+              "uri": "https://picsum.photos/200",
+            },
           ]
         }
         decelerationRate="fast"
@@ -2282,8 +2378,8 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-0",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -2349,8 +2445,8 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-1",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -2416,8 +2512,8 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-2",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -2483,8 +2579,8 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-3",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -2550,8 +2646,8 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-4",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -2617,8 +2713,8 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-5",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -2684,8 +2780,8 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-6",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -2751,8 +2847,8 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-7",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -2837,14 +2933,24 @@ Array [
       }
       data={
         Array [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
+          Object {
+            "id": undefined,
+          },
+          Object {
+            "id": undefined,
+          },
+          Object {
+            "id": undefined,
+          },
+          Object {
+            "id": undefined,
+          },
+          Object {
+            "id": undefined,
+          },
+          Object {
+            "id": undefined,
+          },
         ]
       }
       decelerationRate="fast"
@@ -2923,8 +3029,8 @@ Array [
                   Array [
                     Object {
                       "cache": "force-cache",
+                      "id": undefined,
                       "uri": "",
-                      "url": "",
                     },
                   ]
                 }
@@ -2990,8 +3096,8 @@ Array [
                   Array [
                     Object {
                       "cache": "force-cache",
+                      "id": undefined,
                       "uri": "",
-                      "url": "",
                     },
                   ]
                 }
@@ -3057,8 +3163,8 @@ Array [
                   Array [
                     Object {
                       "cache": "force-cache",
+                      "id": undefined,
                       "uri": "",
-                      "url": "",
                     },
                   ]
                 }
@@ -3124,8 +3230,8 @@ Array [
                   Array [
                     Object {
                       "cache": "force-cache",
+                      "id": undefined,
                       "uri": "",
-                      "url": "",
                     },
                   ]
                 }
@@ -3191,8 +3297,8 @@ Array [
                   Array [
                     Object {
                       "cache": "force-cache",
+                      "id": undefined,
                       "uri": "",
-                      "url": "",
                     },
                   ]
                 }
@@ -3258,142 +3364,8 @@ Array [
                   Array [
                     Object {
                       "cache": "force-cache",
+                      "id": undefined,
                       "uri": "",
-                      "url": "",
-                    },
-                  ]
-                }
-                style={
-                  Object {
-                    "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 32,
-                    "height": 64,
-                    "marginRight": 8,
-                    "opacity": 0,
-                  }
-                }
-              />
-            </View>
-          </View>
-        </View>
-        <View
-          style={
-            Array [
-              Object {
-                "flexDirection": "row",
-              },
-              null,
-            ]
-          }
-        >
-          <View
-            accessible={true}
-            clickable={true}
-            isTVSelectable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "opacity": 1,
-              }
-            }
-          >
-            <View
-              animate={null}
-              customAnimate={null}
-              onReady={false}
-              style={
-                Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "height": 64,
-                  "marginRight": 8,
-                  "width": "100%",
-                }
-              }
-            >
-              <Image
-                onLoad={[Function]}
-                source={
-                  Array [
-                    Object {
-                      "cache": "force-cache",
-                      "uri": "",
-                      "url": "",
-                    },
-                  ]
-                }
-                style={
-                  Object {
-                    "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 32,
-                    "height": 64,
-                    "marginRight": 8,
-                    "opacity": 0,
-                  }
-                }
-              />
-            </View>
-          </View>
-        </View>
-        <View
-          style={
-            Array [
-              Object {
-                "flexDirection": "row",
-              },
-              null,
-            ]
-          }
-        >
-          <View
-            accessible={true}
-            clickable={true}
-            isTVSelectable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "opacity": 1,
-              }
-            }
-          >
-            <View
-              animate={null}
-              customAnimate={null}
-              onReady={false}
-              style={
-                Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "height": 64,
-                  "marginRight": 8,
-                  "width": "100%",
-                }
-              }
-            >
-              <Image
-                onLoad={[Function]}
-                source={
-                  Array [
-                    Object {
-                      "cache": "force-cache",
-                      "uri": "",
-                      "url": "",
                     },
                   ]
                 }
@@ -3488,14 +3460,38 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
         }
         data={
           Array [
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
+            Object {
+              "id": "prayer-0",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-1",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-2",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-3",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-4",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-5",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-6",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-7",
+              "uri": "https://picsum.photos/200",
+            },
           ]
         }
         decelerationRate="fast"
@@ -3574,8 +3570,8 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-0",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -3641,8 +3637,8 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-1",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -3708,8 +3704,8 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-2",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -3775,8 +3771,8 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-3",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -3842,8 +3838,8 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-4",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -3909,8 +3905,8 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-5",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -3976,8 +3972,8 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-6",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -4043,8 +4039,8 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-7",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -4153,14 +4149,38 @@ exports[`The PrayerFeature component should render with a title 1`] = `
         }
         data={
           Array [
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
-            "https://picsum.photos/200",
+            Object {
+              "id": "prayer-0",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-1",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-2",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-3",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-4",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-5",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-6",
+              "uri": "https://picsum.photos/200",
+            },
+            Object {
+              "id": "prayer-7",
+              "uri": "https://picsum.photos/200",
+            },
           ]
         }
         decelerationRate="fast"
@@ -4239,8 +4259,8 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-0",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -4306,8 +4326,8 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-1",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -4373,8 +4393,8 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-2",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -4440,8 +4460,8 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-3",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -4507,8 +4527,8 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-4",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -4574,8 +4594,8 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-5",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -4641,8 +4661,8 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-6",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -4708,8 +4728,8 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                     Array [
                       Object {
                         "cache": "force-cache",
+                        "id": "prayer-7",
                         "uri": "https://picsum.photos/200",
-                        "url": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -4782,14 +4802,38 @@ Array [
       }
       data={
         Array [
-          "https://picsum.photos/200",
-          "https://picsum.photos/200",
-          "https://picsum.photos/200",
-          "https://picsum.photos/200",
-          "https://picsum.photos/200",
-          "https://picsum.photos/200",
-          "https://picsum.photos/200",
-          "https://picsum.photos/200",
+          Object {
+            "id": "prayer-0",
+            "uri": "https://picsum.photos/200",
+          },
+          Object {
+            "id": "prayer-1",
+            "uri": "https://picsum.photos/200",
+          },
+          Object {
+            "id": "prayer-2",
+            "uri": "https://picsum.photos/200",
+          },
+          Object {
+            "id": "prayer-3",
+            "uri": "https://picsum.photos/200",
+          },
+          Object {
+            "id": "prayer-4",
+            "uri": "https://picsum.photos/200",
+          },
+          Object {
+            "id": "prayer-5",
+            "uri": "https://picsum.photos/200",
+          },
+          Object {
+            "id": "prayer-6",
+            "uri": "https://picsum.photos/200",
+          },
+          Object {
+            "id": "prayer-7",
+            "uri": "https://picsum.photos/200",
+          },
         ]
       }
       decelerationRate="fast"
@@ -4868,8 +4912,8 @@ Array [
                   Array [
                     Object {
                       "cache": "force-cache",
+                      "id": "prayer-0",
                       "uri": "https://picsum.photos/200",
-                      "url": "https://picsum.photos/200",
                     },
                   ]
                 }
@@ -4935,8 +4979,8 @@ Array [
                   Array [
                     Object {
                       "cache": "force-cache",
+                      "id": "prayer-1",
                       "uri": "https://picsum.photos/200",
-                      "url": "https://picsum.photos/200",
                     },
                   ]
                 }
@@ -5002,8 +5046,8 @@ Array [
                   Array [
                     Object {
                       "cache": "force-cache",
+                      "id": "prayer-2",
                       "uri": "https://picsum.photos/200",
-                      "url": "https://picsum.photos/200",
                     },
                   ]
                 }
@@ -5069,8 +5113,8 @@ Array [
                   Array [
                     Object {
                       "cache": "force-cache",
+                      "id": "prayer-3",
                       "uri": "https://picsum.photos/200",
-                      "url": "https://picsum.photos/200",
                     },
                   ]
                 }
@@ -5136,8 +5180,8 @@ Array [
                   Array [
                     Object {
                       "cache": "force-cache",
+                      "id": "prayer-4",
                       "uri": "https://picsum.photos/200",
-                      "url": "https://picsum.photos/200",
                     },
                   ]
                 }
@@ -5203,8 +5247,8 @@ Array [
                   Array [
                     Object {
                       "cache": "force-cache",
+                      "id": "prayer-5",
                       "uri": "https://picsum.photos/200",
-                      "url": "https://picsum.photos/200",
                     },
                   ]
                 }
@@ -5270,8 +5314,8 @@ Array [
                   Array [
                     Object {
                       "cache": "force-cache",
+                      "id": "prayer-6",
                       "uri": "https://picsum.photos/200",
-                      "url": "https://picsum.photos/200",
                     },
                   ]
                 }
@@ -5337,8 +5381,8 @@ Array [
                   Array [
                     Object {
                       "cache": "force-cache",
+                      "id": "prayer-7",
                       "uri": "https://picsum.photos/200",
-                      "url": "https://picsum.photos/200",
                     },
                   ]
                 }

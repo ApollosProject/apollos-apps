@@ -35,7 +35,7 @@ export default class PrayerRequest extends RockApolloDataSource {
         `EnteredDateTime gt datetime'${moment
           .tz(ROCK.TIMEZONE)
           .subtract(1, 'day')
-          .format()}' or ExpirationDate eq null`
+          .format()}'`
       )
       .andFilter(`Answer eq null or Answer eq ''`)
       .sort([

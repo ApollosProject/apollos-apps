@@ -76,36 +76,51 @@ RenderAsCard.propTypes = {
 };
 
 const PrayerFeature = ({
-  avatars,
+  prayers,
   isCard,
   isLoading,
   onPressAdd,
   onPressAvatar,
   title,
   subtitle,
-}) => (
-  <RenderAsCard isCard={isCard} isLoading={isLoading}>
-    {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
-      <Header isCard={isCard}>
-        {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
-          <Title numberOfLines={1}>{title}</Title>
-        ) : null}
-        {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
-      </Header>
-    ) : null}
-    <AvatarWrapper>
-      <StyledAvatarList
-        avatars={avatars}
-        onPressAdd={onPressAdd}
-        onPressAvatar={onPressAvatar}
-        isCard={isCard}
-      />
-    </AvatarWrapper>
-  </RenderAsCard>
-);
+}) => {
+  const avatars = prayers.map((prayer) => ({
+    id: prayer.id,
+    ...(typeof prayer.requestor?.photo === 'string'
+      ? { uri: prayer.requestor?.photo }
+      : prayer.requestor?.photo),
+  }));
+  return (
+    <RenderAsCard isCard={isCard} isLoading={isLoading}>
+      {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
+        <Header isCard={isCard}>
+          {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
+            <Title numberOfLines={1}>{title}</Title>
+          ) : null}
+          {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
+        </Header>
+      ) : null}
+      <AvatarWrapper>
+        <StyledAvatarList
+          avatars={avatars}
+          keyExtractor={(item) => item.id}
+          onPressAdd={onPressAdd}
+          onPressAvatar={onPressAvatar}
+          isCard={isCard}
+        />
+      </AvatarWrapper>
+    </RenderAsCard>
+  );
+};
 
 PrayerFeature.propTypes = {
-  avatars: PropTypes.arrayOf(ImageSourceType).isRequired,
+  prayers: PropTypes.arrayOf(
+    PropTypes.shape({
+      requestor: PropTypes.shape({
+        photo: ImageSourceType,
+      }),
+    })
+  ).isRequired,
   isCard: PropTypes.bool,
   isLoading: PropTypes.bool,
   onPressAdd: PropTypes.func,
