@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import gql from 'graphql-tag';
-import { useQuery } from '@apollo/react-hooks';
-import { Animated, StyleSheet } from 'react-native';
+import { useQuery, useMutation } from '@apollo/react-hooks';
 
-import PrayerCard from '../PrayerCard';
-import PrayerScreen from '../PrayerScreen';
 import PrayerSwiper from '../PrayerSwiper';
 import AddPrayerConnected from '../AddPrayerConnected';
 import PrayerOnboardingScreen from '../PrayerOnboardingScreen';
-import BackgroundImage from '../PrayerBlurBackground';
+import PrayingScreen from './PrayingScreen';
 
 const GET_PRAYER_FEATURE = gql`
   query($id: ID!) {
@@ -42,11 +39,20 @@ const GET_PRAYER_FEATURE = gql`
   }
 `;
 
+const PRAY = gql`
+  mutation($prayerId: ID!) {
+    interactWithNode(action: PRAY, nodeId: $prayerId) {
+      success
+    }
+  }
+`;
+
 const PrayingExperienceConnected = ({
   id,
   AddPrayerComponent = AddPrayerConnected,
   OnboardingComponent = PrayerOnboardingScreen,
   showOnboarding = true,
+  onFinish,
 }) => {
   const { loading, error, data } = useQuery(GET_PRAYER_FEATURE, {
     variables: { id },
@@ -73,20 +79,14 @@ const PrayingExperienceConnected = ({
               avatars={prayers.map((prayer) => prayer.requestor?.photo) || []}
               primaryAvatar={photo}
             />
-            {prayers.map((prayer) => (
-              <PrayerScreen
+            {prayers.map((prayer, prayerIndex) => (
+              <PrayingScreen
                 key={prayer.id}
-                background={
-                  <BackgroundImage source={prayer.requestor?.photo || null} />
+                prayer={prayer}
+                onPressPrimary={
+                  prayerIndex < prayers.length - 1 ? swipeForward : onFinish
                 }
-              >
-                <PrayerCard
-                  prayer={prayer.text}
-                  avatar={prayer.requestor?.photo || null}
-                  title={`Pray for ${prayer.requestor?.nickName ||
-                    prayer.requestor?.firstName}`}
-                />
-              </PrayerScreen>
+              />
             ))}
           </React.Fragment>
         )}
@@ -109,6 +109,7 @@ PrayingExperienceConnected.propTypes = {
   AddPrayerComponent: PropTypes.oneOfType([PropTypes.func]),
   OnboardingComponent: PropTypes.oneOfType([PropTypes.func]),
   showOnboarding: PropTypes.bool,
+  onFinish: PropTypes.func,
 };
 
 export default PrayingExperienceConnected;
