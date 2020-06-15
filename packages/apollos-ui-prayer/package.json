@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-prayer",
-  "version": "1.4.0",
+  "version": "1.4.2",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -17,6 +17,17 @@
     "react-component",
     "react-native"
   ],
+  "peerDependencies": {
+    "@apollosproject/storybook": "*",
+    "@apollosproject/ui-analytics": "*",
+    "@apollosproject/ui-fragments": "*",
+    "@apollosproject/ui-kit": "*",
+    "@apollosproject/ui-notifications": "*",
+    "react": "*",
+    "react-apollo": "*",
+    "react-native": "*",
+    "react-navigation": "*"
+  },
   "jest": {
     "preset": "react-native",
     "collectCoverage": true,
@@ -35,24 +46,13 @@
     "setupFiles": [
       "./jest.setup.js"
     ]
-  },
-  "peerDependencies": {
-    "@apollosproject/storybook": "*",
-    "@apollosproject/ui-analytics": "*",
-    "@apollosproject/ui-fragments": "*",
-    "@apollosproject/ui-kit": "*",
-    "@apollosproject/ui-notifications": "*",
-    "react": "*",
-    "react-apollo": "*",
-    "react-native": "*",
-    "react-navigation": "*"
-  },
+  },  
   "dependencies": {
     "formik": "1.5.1",
     "graphql-tag": "2.9.2",
     "lodash": "4.17.13",
-    "react-native-swiper": "^1.6.0",
     "react-is": "^16.8.6",
+    "react-native-swiper": "^1.6.0",
     "yup": "0.26.6"
   },
   "devDependencies": {
@@ -64,7 +64,7 @@
     "react-apollo": "2.5.5",
     "react-native": "0.60.5",
     "react-navigation": "^3.11.0",
-    "react-test-renderer": "16.6.1",
+    "react-test-renderer": "16.8.6",
     "waait": "1.0.2"
   },
   "publishConfig": {

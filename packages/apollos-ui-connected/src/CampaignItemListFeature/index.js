@@ -29,14 +29,18 @@ const Header = styled(({ theme }) => ({
   paddingBottom: theme.sizing.baseUnit * 0.5,
 }))(PaddedView);
 
-const ListItemComponent = ({ contentId, ...item }) => (
+const ListItemComponent = ({ contentId, labelText, ...item }) => (
   <LiveConsumer contentId={contentId}>
     {(liveStream) => {
       const isLive = !!(liveStream && liveStream.isLive);
       return (
         <ContentCardComponentMapper
           Component={FeaturedCard}
-          isLive={isLive}
+          {...(isLive
+            ? {
+                isLive,
+              }
+            : { isLive, labelText })} // we only want to pass `labelText` if we are NOT live. If we do we will override the default logic in the FeaturedCard
           {...item}
         />
       );
@@ -46,6 +50,7 @@ const ListItemComponent = ({ contentId, ...item }) => (
 
 ListItemComponent.propTypes = {
   contentId: PropTypes.string,
+  labelText: PropTypes.string,
 };
 
 const loadingStateData = {
