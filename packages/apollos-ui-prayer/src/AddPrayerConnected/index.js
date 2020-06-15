@@ -31,12 +31,14 @@ const GET_USER_PHOTO = gql`
 `;
 
 const AddPrayerConnected = ({
+  PrayerCardComponent = PrayerCard,
   title = 'Add your prayer',
   skipText = 'No thanks',
   primaryButtonText = 'Share prayer',
   swipeForward,
   avatars = [],
   AddedPrayerComponent = AddedPrayerScreen,
+  ...screenProps
 }) => {
   const { data: userData } = useQuery(GET_USER_PHOTO);
   const photo = userData?.currentUser?.profile?.photo;
@@ -62,8 +64,9 @@ const AddPrayerConnected = ({
         buttonDisabled={loading || !prayer.length}
         isLoading={loading}
         background={<BackgroundImage source={photo || null} />}
+        {...screenProps}
       >
-        <PrayerCard
+        <PrayerCardComponent
           avatar={photo || null}
           title={title}
           onPrayerChangeText={setPrayer}
@@ -82,6 +85,7 @@ const AddPrayerConnected = ({
 };
 
 AddPrayerConnected.propTypes = {
+  PrayerCardComponent: PropTypes.func,
   title: PropTypes.string,
   swipeForward: PropTypes.func,
   skipText: PropTypes.string,
