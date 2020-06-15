@@ -3,7 +3,12 @@ import PropTypes from 'prop-types';
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
 import ApollosConfig from '@apollosproject/config';
-import { withTheme, ThemeMixin, ModalView } from '@apollosproject/ui-kit';
+import {
+  ActivityIndicator,
+  withTheme,
+  ThemeMixin,
+  ModalView,
+} from '@apollosproject/ui-kit';
 
 import PrayerSwiper from '../PrayerSwiper';
 import AddPrayerConnected from '../AddPrayerConnected';
@@ -38,8 +43,10 @@ const PrayingExperienceConnected = ({
   index,
   themeType = 'dark',
 }) => {
-  const { data } = useQuery(GET_PRAYER_FEATURE, {
+  const { data, loading } = useQuery(GET_PRAYER_FEATURE, {
     variables: { id },
+    partialRefetch: true,
+    returnPartialData: true,
   });
 
   // if (loading) return 'Loading...';
@@ -55,25 +62,29 @@ const PrayingExperienceConnected = ({
   return (
     <ThemeMixin mixin={{ type: themeType }}>
       <Wrapper onClose={onFinish}>
-        <PrayerSwiper index={index}>
-          {({ swipeForward }) => [
-            <AddPrayerComponent
-              key={'add-prayer'}
-              swipeForward={!prayers.length ? onFinish : swipeForward}
-              avatars={prayers.map((prayer) => prayer.requestor?.photo) || []}
-              primaryAvatar={photo}
-            />,
-            ...prayers.map((prayer, prayerIndex) => (
-              <PrayingScreen
-                key={prayer.id}
-                prayer={prayer}
-                onPressPrimary={
-                  prayerIndex < prayers.length - 1 ? swipeForward : onFinish
-                }
-              />
-            )),
-          ]}
-        </PrayerSwiper>
+        {loading && !prayers.length ? (
+          <ActivityIndicator />
+        ) : (
+          <PrayerSwiper index={index}>
+            {({ swipeForward }) => [
+              <AddPrayerComponent
+                key={'add-prayer'}
+                swipeForward={!prayers.length ? onFinish : swipeForward}
+                avatars={prayers.map((prayer) => prayer.requestor?.photo) || []}
+                primaryAvatar={photo}
+              />,
+              ...prayers.map((prayer, prayerIndex) => (
+                <PrayingScreen
+                  key={prayer.id}
+                  prayer={prayer}
+                  onPressPrimary={
+                    prayerIndex < prayers.length - 1 ? swipeForward : onFinish
+                  }
+                />
+              )),
+            ]}
+          </PrayerSwiper>
+        )}
       {showOnboarding ? ( // eslint-disable-line
           <OnboardingComponent
             avatars={prayers.map((prayer) => prayer.requestor?.photo) || []}
