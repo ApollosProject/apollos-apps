@@ -1,5 +1,3 @@
-import ApollosConfig from '@apollosproject/config';
-
 import { times } from 'lodash';
 import Search from '../data-source';
 
