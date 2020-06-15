@@ -44,13 +44,13 @@ const PrimaryActionButton = withTheme(
 )(Button);
 
 const SecondaryActionButton = withTheme(
-  ({ isLoading, theme }) => ({
+  () => ({
     type: 'default',
     bordered: true,
     style: {
       borderWidth: 0,
-      alignSelf: 'center',
-      ...(isLoading ? { marginBottom: theme.sizing.baseUnit * 0.5 } : {}),
+      // alignSelf: 'center', // these styles are unused but needed if you wanted to render the buttons loading state correctly. leaving these for reference.
+      // ...(isLoading ? { marginBottom: theme.sizing.baseUnit * 0.5 } : {}),
     },
   }),
   'ui-prayer.PrayerScreen.SecondaryActionButton'
