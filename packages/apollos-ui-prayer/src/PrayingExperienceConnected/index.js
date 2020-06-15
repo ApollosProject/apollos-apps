@@ -3,18 +3,10 @@ import PropTypes from 'prop-types';
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
 import ApollosConfig from '@apollosproject/config';
-import {
-  ActivityIndicator,
-  withTheme,
-  ThemeMixin,
-  ModalView,
-} from '@apollosproject/ui-kit';
+import { withTheme, ThemeMixin, ModalView } from '@apollosproject/ui-kit';
 import { AnalyticsContext } from '@apollosproject/ui-analytics';
 
-import PrayerSwiper from '../PrayerSwiper';
-import AddPrayerConnected from '../AddPrayerConnected';
-import PrayerOnboardingScreen from '../PrayerOnboardingScreen';
-import PrayingScreen from './PrayingScreen';
+import PrayingExperience from './PrayingExperience';
 
 const GET_PRAYER_FEATURE = gql`
   query($id: ID!) {
@@ -36,8 +28,9 @@ const GET_PRAYER_FEATURE = gql`
 
 const PrayingExperienceConnected = ({
   id,
-  AddPrayerComponent = AddPrayerConnected,
-  OnboardingComponent = PrayerOnboardingScreen,
+  AddPrayerComponent,
+  OnboardingComponent,
+  PrayingScreenComponent,
   showOnboarding = true,
   onFinish,
   asModal,
@@ -69,50 +62,20 @@ const PrayingExperienceConnected = ({
   return (
     <ThemeMixin mixin={{ type: themeType }}>
       <Wrapper onClose={handleFinish}>
-        {loading && !prayers.length ? (
-          <ActivityIndicator />
-        ) : (
-          <PrayerSwiper index={index}>
-            {({ swipeForward }) => {
-              const handleSwipeForward = () => {
-                track({ eventName: 'PrayerSwipeForward' });
-                swipeForward();
-              };
-              return [
-                <AddPrayerComponent
-                  key={'add-prayer'}
-                  swipeForward={
-                    !prayers.length ? handleFinish : handleSwipeForward
-                  }
-                  avatars={
-                    prayers.map((prayer) => prayer.requestor?.photo) || []
-                  }
-                  primaryAvatar={photo}
-                />,
-                ...prayers.map((prayer, prayerIndex) => (
-                  <PrayingScreen
-                    key={prayer.id}
-                    prayer={prayer}
-                    onPressPrimary={
-                      prayerIndex < prayers.length - 1
-                        ? handleSwipeForward
-                        : handleFinish
-                    }
-                  />
-                )),
-              ];
-            }}
-          </PrayerSwiper>
-        )}
-      {showOnboarding ? ( // eslint-disable-line
-          <OnboardingComponent
-            avatars={prayers.map((prayer) => prayer.requestor?.photo) || []}
-            primaryAvatar={photo}
-            onPressPrimary={() => setIsOnboarding(false)}
-            visibleOnMount
-            visible={isOnboarding}
-          />
-        ) : null}
+        <PrayingExperience
+          index={index}
+          loading={loading}
+          prayers={prayers}
+          track={track}
+          AddPrayerComponent={AddPrayerComponent}
+          PrayingScreenComponent={PrayingScreenComponent}
+          OnboardingComponent={OnboardingComponent}
+          primaryAvatar={photo}
+          willShowOnboarding={showOnboarding}
+          isOnboarding={isOnboarding}
+          setIsOnboarding={setIsOnboarding}
+          onFinish={onFinish}
+        />
       </Wrapper>
     </ThemeMixin>
   );
@@ -120,8 +83,9 @@ const PrayingExperienceConnected = ({
 
 PrayingExperienceConnected.propTypes = {
   id: PropTypes.string.isRequired,
-  AddPrayerComponent: PropTypes.oneOfType([PropTypes.func]),
-  OnboardingComponent: PropTypes.oneOfType([PropTypes.func]),
+  AddPrayerComponent: PropTypes.func,
+  OnboardingComponent: PropTypes.func,
+  PrayingScreenComponent: PropTypes.func,
   showOnboarding: PropTypes.bool,
   onFinish: PropTypes.func,
   themeType: PropTypes.string,
