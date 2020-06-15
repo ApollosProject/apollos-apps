@@ -26,8 +26,6 @@ const Content = styled(
 
 const flexer = styled({ flex: 1 }); // 💪flex 💪all 💪the 💪things 💪bro
 
-const Wrapper = styled({ height: '100%' })(View);
-
 const FlexedKeyboardAvoidingView = flexer(KeyboardAvoidingView); // 💪💥
 const FlexedSafeAreaView = flexer(SafeAreaView); // 💪💥
 
@@ -66,34 +64,32 @@ const PrayerScreen = ({
   primaryActionText,
   secondaryActionText,
 }) => (
-  <Wrapper>
-    <FlexedKeyboardAvoidingView behavior={'padding'}>
-      {background}
-      <FlexedScrollView
-        style={StyleSheet.absoluteFill}
-        keyboardShouldPersistTaps={'never'}
-        keyboardDismissMode={'on-drag'}
-      >
-        <FlexedSafeAreaView>
-          <Content>{children}</Content>
-          <PaddedView>
-            {onPressSecondary ? (
-              <SecondaryActionButton onPress={onPressSecondary}>
-                <H5>{secondaryActionText}</H5>
-              </SecondaryActionButton>
-            ) : null}
-            <PrimaryActionButton
-              onPress={onPressPrimary}
-              title={primaryActionText}
-              loading={isLoading}
-              isLoading={false}
-              disabled={buttonDisabled}
-            />
-          </PaddedView>
-        </FlexedSafeAreaView>
-      </FlexedScrollView>
-    </FlexedKeyboardAvoidingView>
-  </Wrapper>
+  <FlexedKeyboardAvoidingView behavior={'padding'}>
+    {background}
+    <FlexedScrollView
+      style={StyleSheet.absoluteFill}
+      keyboardShouldPersistTaps={'never'}
+      keyboardDismissMode={'on-drag'}
+    >
+      <FlexedSafeAreaView>
+        <Content>{children}</Content>
+        <PaddedView>
+          {onPressSecondary ? (
+            <SecondaryActionButton onPress={onPressSecondary}>
+              <H5>{secondaryActionText}</H5>
+            </SecondaryActionButton>
+          ) : null}
+          <PrimaryActionButton
+            onPress={onPressPrimary}
+            title={primaryActionText}
+            loading={isLoading}
+            isLoading={false}
+            disabled={buttonDisabled}
+          />
+        </PaddedView>
+      </FlexedSafeAreaView>
+    </FlexedScrollView>
+  </FlexedKeyboardAvoidingView>
 );
 
 PrayerScreen.propTypes = {
