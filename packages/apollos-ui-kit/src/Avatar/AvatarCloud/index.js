@@ -101,7 +101,6 @@ class AvatarCloud extends PureComponent {
   }
 
   renderRandomAvatars() {
-    console.log(this.props.avatars);
     return this.getRandomAvatarSizes().map((size, i, sizes) => (
       <BlurWrapper
         avatarWidth={this.getAvatarPercentageWidth(size)}
