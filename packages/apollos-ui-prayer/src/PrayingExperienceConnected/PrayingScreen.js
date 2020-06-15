@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { useMutation } from '@apollo/react-hooks';
+import { AnalyticsContext } from '@apollosproject/ui-analytics';
 import gql from 'graphql-tag';
-import ApollosConfig from '@apollosproject/config';
 import PrayerCard from '../PrayerCard';
 import PrayerScreen from '../PrayerScreen';
 import BackgroundImage from '../PrayerBlurBackground';
@@ -22,6 +22,8 @@ const PRAYER_FRAGMENT = gql`
 `;
 
 const PrayingScreen = ({ onPressPrimary, prayer }) => {
+  const { track } = useContext(AnalyticsContext);
+
   const [pray, { loading, data }] = useMutation(PRAY, {
     variables: { prayerId: prayer.id },
     update(cache) {
@@ -31,6 +33,9 @@ const PrayingScreen = ({ onPressPrimary, prayer }) => {
         fragmentName: 'PrayedFragment',
         data: { ...prayer, isPrayed: true },
       });
+    },
+    onCompleted: () => {
+      track({ eventName: 'PrayerPrayed', properties: { prayer } });
     },
   });
 
