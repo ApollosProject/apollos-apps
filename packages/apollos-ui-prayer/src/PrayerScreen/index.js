@@ -13,7 +13,6 @@ import {
   H5,
   PaddedView,
   styled,
-  withIsLoading,
   withTheme,
 } from '@apollosproject/ui-kit';
 
@@ -79,10 +78,7 @@ const PrayerScreen = ({
           <Content>{children}</Content>
           <PaddedView>
             {onPressSecondary ? (
-              <SecondaryActionButton
-                isLoading={isLoading}
-                onPress={onPressSecondary}
-              >
+              <SecondaryActionButton onPress={onPressSecondary}>
                 <H5>{secondaryActionText}</H5>
               </SecondaryActionButton>
             ) : null}
@@ -116,4 +112,4 @@ PrayerScreen.defaultProps = {
   secondaryActionText: 'How to Pray',
 };
 
-export default withIsLoading(PrayerScreen);
+export default PrayerScreen;

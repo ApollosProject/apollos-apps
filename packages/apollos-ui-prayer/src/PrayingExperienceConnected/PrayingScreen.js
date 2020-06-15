@@ -20,7 +20,7 @@ const PRAYER_FRAGMENT = gql`
   }
 `;
 
-const PrayingScreen = ({ prayer, onPressPrimary }) => {
+const PrayingScreen = ({ onPressPrimary, prayer }) => {
   const [pray, { loading, data }] = useMutation(PRAY, {
     variables: { prayerId: prayer.id },
     update(cache) {
@@ -42,6 +42,7 @@ const PrayingScreen = ({ prayer, onPressPrimary }) => {
   return (
     <PrayerScreen
       background={<BackgroundImage source={prayer.requestor?.photo || null} />}
+      isLoding={loading}
       onPressPrimary={handleOnPressPrimary}
       primaryActionText={hasPrayed ? 'Prayed!' : '🙏 Pray'}
       buttonDisabled={loading || hasPrayed}
@@ -59,6 +60,7 @@ const PrayingScreen = ({ prayer, onPressPrimary }) => {
 PrayingScreen.propTypes = {
   prayer: PropTypes.shape({
     id: PropTypes.string,
+    isLoading: PropTypes.bool,
     isPrayed: PropTypes.bool,
     requestor: PropTypes.shape({
       photo: PropTypes.any, // eslint-disable-line,
