@@ -101,11 +101,16 @@ class AvatarCloud extends PureComponent {
   }
 
   renderRandomAvatars() {
+    console.log(this.props.avatars);
     return this.getRandomAvatarSizes().map((size, i, sizes) => (
       <BlurWrapper
         avatarWidth={this.getAvatarPercentageWidth(size)}
         getXYPositions={this.getRandomXYPositions(size, i)}
-        key={this.props.avatars[i]}
+        key={`${
+          typeof this.props.avatars[i] === 'string'
+            ? this.props.avatars[i]
+            : this.props.avatars[i].uri
+        }${this.props.avatars[i].id ? this.props.avatars[i].id : i}`}
         order={i} // order = zIndex == higher index === "closer two the viewer/higher layer"
       >
         <RandomAvatar
