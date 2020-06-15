@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useMutation } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
+import ApollosConfig from '@apollosproject/config';
 import PrayerCard from '../PrayerCard';
 import PrayerScreen from '../PrayerScreen';
 import BackgroundImage from '../PrayerBlurBackground';
@@ -15,7 +16,7 @@ const PRAY = gql`
 `;
 
 const PRAYER_FRAGMENT = gql`
-  fragment prayed on PrayerRequest {
+  fragment PrayedFragment on PrayerRequest {
     isPrayed
   }
 `;
@@ -25,9 +26,10 @@ const PrayingScreen = ({ onPressPrimary, prayer }) => {
     variables: { prayerId: prayer.id },
     update(cache) {
       cache.writeFragment({
-        id: prayer.id,
+        id: `${prayer.__typename}:${prayer.id}`,
         fragment: PRAYER_FRAGMENT,
-        data: { isPrayed: true, __typename: 'PrayerRequest' },
+        fragmentName: 'PrayedFragment',
+        data: { ...prayer, isPrayed: true },
       });
     },
   });
