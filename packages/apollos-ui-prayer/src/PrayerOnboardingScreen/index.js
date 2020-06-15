@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import { Animated, Dimensions, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 import { AvatarCloud, H3, BodyText, PaddedView } from '@apollosproject/ui-kit';
-import { ScriptureText, VerseNumber } from '@apollosproject/ui-scripture';
 
 import PrayerScreen from '../PrayerScreen';
 
