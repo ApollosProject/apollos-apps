@@ -59,7 +59,7 @@ const PrayingExperienceConnected = ({
           {({ swipeForward }) => [
             <AddPrayerComponent
               key={'add-prayer'}
-              swipeForward={swipeForward}
+              swipeForward={!prayers.length ? onFinish : swipeForward}
               avatars={prayers.map((prayer) => prayer.requestor?.photo) || []}
               primaryAvatar={photo}
             />,
