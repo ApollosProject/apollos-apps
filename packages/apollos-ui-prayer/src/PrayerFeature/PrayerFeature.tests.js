@@ -6,14 +6,14 @@ import { Providers } from '../testUtils';
 import PrayerFeature from '.';
 
 const avatars = [
-  'https://picsum.photos/200',
-  'https://picsum.photos/200',
-  'https://picsum.photos/200',
-  'https://picsum.photos/200',
-  'https://picsum.photos/200',
-  'https://picsum.photos/200',
-  'https://picsum.photos/200',
-  'https://picsum.photos/200',
+  { requestor: { photo: 'https://picsum.photos/200' } },
+  { requestor: { photo: 'https://picsum.photos/200' } },
+  { requestor: { photo: 'https://picsum.photos/200' } },
+  { requestor: { photo: 'https://picsum.photos/200' } },
+  { requestor: { photo: 'https://picsum.photos/200' } },
+  { requestor: { photo: 'https://picsum.photos/200' } },
+  { requestor: { photo: 'https://picsum.photos/200' } },
+  { requestor: { photo: 'https://picsum.photos/200' } },
 ];
 
 const prayers = avatars.map((avatar, i) => ({

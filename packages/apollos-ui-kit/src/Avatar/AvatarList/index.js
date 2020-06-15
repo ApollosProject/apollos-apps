@@ -61,7 +61,11 @@ const renderItem = (onPressAvatar, isLoading) => ({ item }) => (
     onPress={() => onPressAvatar({ item })}
     disabled={isLoading || !onPressAvatar}
   >
-    <Avatar source={item} isLoading={isLoading} unread={item.unread} />
+    <Avatar
+      source={item}
+      isLoading={isLoading}
+      notification={item.notification}
+    />
   </Touchable>
 );
 
@@ -96,7 +100,7 @@ AvatarList.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       uri: PropTypes.string,
-      unread: PropTypes.bool,
+      notification: PropTypes.bool,
     })
   ).isRequired,
   isLoading: PropTypes.bool,

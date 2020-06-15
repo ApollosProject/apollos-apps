@@ -26,6 +26,15 @@ const AvatarWrapper = styled(
   'ui-prayer.PrayerFeature.AvatarWrapper'
 )(CardContent);
 
+const getAvatars = (prayers) =>
+  prayers.map((prayer) => ({
+    id: prayer.id,
+    notification: !prayer.isPrayed,
+    ...(typeof prayer.requestor?.photo === 'string'
+      ? { uri: prayer.requestor?.photo }
+      : prayer.requestor?.photo),
+  }));
+
 const Header = styled(
   ({ isCard, theme }) => ({
     ...(isCard
@@ -83,37 +92,27 @@ const PrayerFeature = ({
   onPressAvatar,
   title,
   subtitle,
-}) => {
-  const avatars = prayers.map((prayer) => ({
-    id: prayer.id,
-    unread: !prayer.isPrayed,
-    ...(typeof prayer.requestor?.photo === 'string'
-      ? { uri: prayer.requestor?.photo }
-      : prayer.requestor?.photo),
-  }));
-  return (
-    <RenderAsCard isCard={isCard} isLoading={isLoading}>
-      {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
-        <Header isCard={isCard}>
-          {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
-            <Title numberOfLines={1}>{title}</Title>
-          ) : null}
-          {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
-        </Header>
-      ) : null}
-      <AvatarWrapper>
-        <StyledAvatarList
-          avatars={avatars}
-          isCard={isCard}
-          isLoading={isLoading}
-          keyExtractor={(item) => item.id}
-          onPressAdd={onPressAdd}
-          onPressAvatar={onPressAvatar}
-        />
-      </AvatarWrapper>
-    </RenderAsCard>
-  );
-};
+}) => (
+  <RenderAsCard isCard={isCard} isLoading={isLoading}>
+    {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
+      <Header isCard={isCard}>
+        {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
+          <Title numberOfLines={1}>{title}</Title>
+        ) : null}
+        {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
+      </Header>
+    ) : null}
+    <AvatarWrapper>
+      <StyledAvatarList
+        avatars={getAvatars(prayers)}
+        isCard={isCard}
+        isLoading={isLoading}
+        onPressAdd={onPressAdd}
+        onPressAvatar={onPressAvatar}
+      />
+    </AvatarWrapper>
+  </RenderAsCard>
+);
 
 PrayerFeature.propTypes = {
   prayers: PropTypes.arrayOf(

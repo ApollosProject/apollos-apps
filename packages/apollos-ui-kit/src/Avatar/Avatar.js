@@ -44,7 +44,7 @@ const StyledButtonIcon = styled(({ theme }) => ({
   ...Platform.select(theme.shadows.default),
 }))(ButtonIcon);
 
-const UnreadOrb = styled(({ theme, avatarSize }) => ({
+const NotificationDot = styled(({ theme, avatarSize }) => ({
   backgroundColor: theme.colors.secondary,
   width: avatarSize / 4,
   aspectRatio: 1,
@@ -79,7 +79,7 @@ const Avatar = ({
   buttonIcon,
   iconFill,
   onPressIcon,
-  unread,
+  notification,
   ...imageProps
 }) => (
   <Container style={containerStyle} themeSize={themeSize}>
@@ -93,9 +93,9 @@ const Avatar = ({
     ) : (
       <PlaceholderIcon name="avatar" size={themeSize} />
     )}
-    {unread ? (
+    {notification ? (
       <ButtonIconPositioner>
-        <UnreadOrb avatarSize={themeSize} />
+        <NotificationDot avatarSize={themeSize} />
       </ButtonIconPositioner>
     ) : null}
     {buttonIcon ? (
@@ -124,7 +124,7 @@ Avatar.propTypes = {
   containerStyle: PropTypes.any, // eslint-disable-line
   buttonIcon: PropTypes.string,
   onPressIcon: PropTypes.func,
-  unread: PropTypes.bool,
+  notification: PropTypes.bool,
   ...ConnectedImage.propTypes,
 };
 
