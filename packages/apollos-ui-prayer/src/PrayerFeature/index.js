@@ -104,10 +104,11 @@ const PrayerFeature = ({
       <AvatarWrapper>
         <StyledAvatarList
           avatars={avatars}
+          isCard={isCard}
+          isLoading={isLoading}
           keyExtractor={(item) => item.id}
           onPressAdd={onPressAdd}
           onPressAvatar={onPressAvatar}
-          isCard={isCard}
         />
       </AvatarWrapper>
     </RenderAsCard>
