@@ -23,8 +23,10 @@ const Container = styled(
 )(View);
 
 const PlaceholderIcon = compose(
-  withTheme(({ theme: { colors } = {} }) => ({
+  withTheme(({ theme: { colors } = {}, themeSize }) => ({
     fill: colors.background.inactive,
+    name: 'avatar',
+    size: themeSize * 1.09375, // this is a magic number 🧙‍♂️ of 35/33 and might be related to the default size of an icon being 32 🤷‍♂️
   }))
 )(Icon);
 
@@ -44,13 +46,16 @@ const StyledButtonIcon = styled(({ theme }) => ({
   ...Platform.select(theme.shadows.default),
 }))(ButtonIcon);
 
-const NotificationDot = styled(({ theme, avatarSize }) => ({
-  backgroundColor: theme.colors.secondary,
-  width: avatarSize / 4,
+const NotificationDot = styled(({ avatarSize, theme }) => ({
   aspectRatio: 1,
+  backgroundColor: theme.colors.secondary,
   borderRadius: avatarSize / 4,
-  marginBottom: avatarSize / 32,
+  marginTop: avatarSize / 32,
   marginRight: avatarSize / 32,
+  position: 'absolute',
+  right: 0,
+  top: 0,
+  width: avatarSize / 4,
 }))(View);
 
 const ButtonIconPositioner = styled({
@@ -84,19 +89,12 @@ const Avatar = ({
 }) => (
   <Container style={containerStyle} themeSize={themeSize}>
     {source && source.uri ? (
-      <Image
-        source={source}
-        {...imageProps}
-        themeSize={themeSize}
-        isLoading={isLoading}
-      />
+      <Image source={source} {...imageProps} themeSize={themeSize} />
     ) : (
-      <PlaceholderIcon name="avatar" size={themeSize} />
+      <PlaceholderIcon themeSize={themeSize} />
     )}
-    {notification ? (
-      <ButtonIconPositioner>
-        <NotificationDot avatarSize={themeSize} />
-      </ButtonIconPositioner>
+    {!isLoading && notification ? (
+      <NotificationDot avatarSize={themeSize} />
     ) : null}
     {buttonIcon ? (
       <ButtonIconPositioner>
@@ -119,12 +117,13 @@ const Avatar = ({
 );
 
 Avatar.propTypes = {
-  themeSize: PropTypes.number,
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
-  containerStyle: PropTypes.any, // eslint-disable-line
   buttonIcon: PropTypes.string,
+  containerStyle: PropTypes.any, // eslint-disable-line
+  isLoading: PropTypes.bool,
   onPressIcon: PropTypes.func,
+  themeSize: PropTypes.number,
   notification: PropTypes.bool,
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
   ...ConnectedImage.propTypes,
 };
 

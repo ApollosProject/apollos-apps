@@ -1,5 +1,190 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`The Avatar component should render correctly sized notification dots 1`] = `
+Array [
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 40,
+        "justifyContent": "flex-end",
+        "width": 40,
+      }
+    }
+    themeSize={40}
+  >
+    <View
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+      style={
+        Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 20,
+          "bottom": 0,
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+        }
+      }
+    >
+      <Image
+        onLoad={[Function]}
+        size="small"
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
+            },
+          ]
+        }
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 20,
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "opacity": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+        themeSize={40}
+        unread={true}
+      />
+    </View>
+  </View>,
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 80,
+        "justifyContent": "flex-end",
+        "width": 80,
+      }
+    }
+    themeSize={80}
+  >
+    <View
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+      style={
+        Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 40,
+          "bottom": 0,
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+        }
+      }
+    >
+      <Image
+        onLoad={[Function]}
+        size="medium"
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
+            },
+          ]
+        }
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 40,
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "opacity": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+        themeSize={80}
+        unread={true}
+      />
+    </View>
+  </View>,
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 120,
+        "justifyContent": "flex-end",
+        "width": 120,
+      }
+    }
+    themeSize={120}
+  >
+    <View
+      animate={null}
+      customAnimate={null}
+      onReady={false}
+      style={
+        Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 60,
+          "bottom": 0,
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+        }
+      }
+    >
+      <Image
+        onLoad={[Function]}
+        size="large"
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
+            },
+          ]
+        }
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 60,
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "opacity": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+        themeSize={120}
+        unread={true}
+      />
+    </View>
+  </View>,
+]
+`;
+
 exports[`The Avatar component should render icon button 1`] = `
 <View
   style={
@@ -227,6 +412,115 @@ exports[`The Avatar component should render icon button 1`] = `
 </View>
 `;
 
+exports[`The Avatar component should render icon button 2`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "height": 40,
+      "justifyContent": "flex-end",
+      "width": 40,
+    }
+  }
+  themeSize={40}
+>
+  <View
+    animate={null}
+    customAnimate={null}
+    onReady={false}
+    style={
+      Object {
+        "aspectRatio": 1,
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 20,
+        "bottom": 0,
+        "height": "100%",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": "100%",
+      }
+    }
+  >
+    <Image
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
+          },
+        ]
+      }
+      style={
+        Object {
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 20,
+          "bottom": 0,
+          "height": "100%",
+          "left": 0,
+          "opacity": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+        }
+      }
+      themeSize={40}
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "position": "absolute",
+        "right": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "white",
+          "borderRadius": 50,
+          "height": 43,
+          "justifyContent": "center",
+          "padding": 9.6,
+          "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
+          "width": 43,
+        }
+      }
+    >
+      <ActivityIndicator
+        animating={true}
+        color="#999999"
+        hidesWhenStopped={true}
+        size={8}
+        style={
+          Object {
+            "alignSelf": "center",
+            "bottom": 0,
+            "flex": 1,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
 exports[`The Avatar component should render large 1`] = `
 <View
   style={
@@ -408,6 +702,67 @@ exports[`The Avatar component should render small 1`] = `
         }
       }
       themeSize={40}
+    />
+  </View>
+</View>
+`;
+
+exports[`The Avatar component should render with a themeSize 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "height": 80,
+      "justifyContent": "flex-end",
+      "width": 80,
+    }
+  }
+  themeSize={80}
+>
+  <View
+    animate={null}
+    customAnimate={null}
+    onReady={false}
+    style={
+      Object {
+        "aspectRatio": 1,
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 40,
+        "bottom": 0,
+        "height": "100%",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": "100%",
+      }
+    }
+  >
+    <Image
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
+          },
+        ]
+      }
+      style={
+        Object {
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 40,
+          "bottom": 0,
+          "height": "100%",
+          "left": 0,
+          "opacity": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+        }
+      }
+      themeSize={80}
     />
   </View>
 </View>
