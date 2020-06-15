@@ -28,6 +28,7 @@ const GET_PRAYER_FEATURE = gql`
 
 const PrayingExperienceConnected = ({
   id,
+  Component = PrayingExperience,
   AddPrayerComponent,
   OnboardingComponent,
   PrayingScreenComponent,
@@ -36,6 +37,7 @@ const PrayingExperienceConnected = ({
   asModal,
   index,
   themeType = 'dark',
+  ...otherProps
 }) => {
   const { data, loading } = useQuery(GET_PRAYER_FEATURE, {
     variables: { id },
@@ -62,7 +64,7 @@ const PrayingExperienceConnected = ({
   return (
     <ThemeMixin mixin={{ type: themeType }}>
       <Wrapper onClose={handleFinish}>
-        <PrayingExperience
+        <Component
           index={index}
           loading={loading}
           prayers={prayers}
@@ -75,6 +77,7 @@ const PrayingExperienceConnected = ({
           isOnboarding={isOnboarding}
           setIsOnboarding={setIsOnboarding}
           onFinish={onFinish}
+          {...otherProps}
         />
       </Wrapper>
     </ThemeMixin>
@@ -83,6 +86,7 @@ const PrayingExperienceConnected = ({
 
 PrayingExperienceConnected.propTypes = {
   id: PropTypes.string.isRequired,
+  Component: PropTypes.func,
   AddPrayerComponent: PropTypes.func,
   OnboardingComponent: PropTypes.func,
   PrayingScreenComponent: PropTypes.func,
