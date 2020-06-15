@@ -21,7 +21,12 @@ const PRAYER_FRAGMENT = gql`
   }
 `;
 
-const PrayingScreen = ({ onPressPrimary, prayer }) => {
+const PrayingScreen = ({
+  PrayerCardComponent = PrayerCard,
+  onPressPrimary,
+  prayer,
+  ...screenProps
+}) => {
   const { track } = useContext(AnalyticsContext);
 
   const [pray, { loading, data }] = useMutation(PRAY, {
@@ -53,8 +58,9 @@ const PrayingScreen = ({ onPressPrimary, prayer }) => {
       onPressPrimary={handleOnPressPrimary}
       primaryActionText={hasPrayed ? 'Prayed!' : '🙏 Pray'}
       buttonDisabled={loading || hasPrayed}
+      {...screenProps}
     >
-      <PrayerCard
+      <PrayerCardComponent
         prayer={prayer.text}
         avatar={prayer.requestor?.photo || null}
         title={`Pray for ${prayer.requestor?.nickName ||
@@ -65,6 +71,7 @@ const PrayingScreen = ({ onPressPrimary, prayer }) => {
 };
 
 PrayingScreen.propTypes = {
+  PrayerCardComponent: PropTypes.func,
   prayer: PropTypes.shape({
     id: PropTypes.string,
     isLoading: PropTypes.bool,
