@@ -239,9 +239,9 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -255,14 +255,15 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -396,9 +397,9 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -412,14 +413,15 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -553,9 +555,9 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -569,14 +571,15 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -710,9 +713,9 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -726,14 +729,15 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -867,9 +871,9 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -883,14 +887,15 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -1024,9 +1029,9 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -1040,14 +1045,15 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -1181,9 +1187,9 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -1197,14 +1203,15 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -1338,9 +1345,9 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -1354,14 +1361,15 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -1697,9 +1705,9 @@ exports[`The AvatarList component should accept an onPressAdd function 2`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -1713,14 +1721,15 @@ exports[`The AvatarList component should accept an onPressAdd function 2`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -1854,9 +1863,9 @@ exports[`The AvatarList component should accept an onPressAdd function 2`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -1870,14 +1879,15 @@ exports[`The AvatarList component should accept an onPressAdd function 2`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -2011,9 +2021,9 @@ exports[`The AvatarList component should accept an onPressAdd function 2`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -2027,14 +2037,15 @@ exports[`The AvatarList component should accept an onPressAdd function 2`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -2168,9 +2179,9 @@ exports[`The AvatarList component should accept an onPressAdd function 2`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -2184,14 +2195,15 @@ exports[`The AvatarList component should accept an onPressAdd function 2`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -2325,9 +2337,9 @@ exports[`The AvatarList component should accept an onPressAdd function 2`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -2341,14 +2353,15 @@ exports[`The AvatarList component should accept an onPressAdd function 2`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -2482,9 +2495,9 @@ exports[`The AvatarList component should accept an onPressAdd function 2`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -2498,14 +2511,15 @@ exports[`The AvatarList component should accept an onPressAdd function 2`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -2639,9 +2653,9 @@ exports[`The AvatarList component should accept an onPressAdd function 2`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -2655,14 +2669,15 @@ exports[`The AvatarList component should accept an onPressAdd function 2`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -2796,9 +2811,9 @@ exports[`The AvatarList component should accept an onPressAdd function 2`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -2812,14 +2827,15 @@ exports[`The AvatarList component should accept an onPressAdd function 2`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -2999,9 +3015,9 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -3015,14 +3031,15 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -3156,9 +3173,9 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -3172,14 +3189,15 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -3313,9 +3331,9 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -3329,14 +3347,15 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -3470,9 +3489,9 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -3486,14 +3505,15 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -3627,9 +3647,9 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -3643,14 +3663,15 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -3784,9 +3805,9 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -3800,14 +3821,15 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -3941,9 +3963,9 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -3957,14 +3979,15 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -4098,9 +4121,9 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -4114,14 +4137,15 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -4301,9 +4325,9 @@ exports[`The AvatarList component should render 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -4317,14 +4341,15 @@ exports[`The AvatarList component should render 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -4458,9 +4483,9 @@ exports[`The AvatarList component should render 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -4474,14 +4499,15 @@ exports[`The AvatarList component should render 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -4615,9 +4641,9 @@ exports[`The AvatarList component should render 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -4631,14 +4657,15 @@ exports[`The AvatarList component should render 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -4772,9 +4799,9 @@ exports[`The AvatarList component should render 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -4788,14 +4815,15 @@ exports[`The AvatarList component should render 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -4929,9 +4957,9 @@ exports[`The AvatarList component should render 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -4945,14 +4973,15 @@ exports[`The AvatarList component should render 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -5086,9 +5115,9 @@ exports[`The AvatarList component should render 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -5102,14 +5131,15 @@ exports[`The AvatarList component should render 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -5243,9 +5273,9 @@ exports[`The AvatarList component should render 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -5259,14 +5289,15 @@ exports[`The AvatarList component should render 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -5400,9 +5431,9 @@ exports[`The AvatarList component should render 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -5416,14 +5447,15 @@ exports[`The AvatarList component should render 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -5660,9 +5692,9 @@ exports[`The AvatarList component should render a loading state 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -5676,14 +5708,15 @@ exports[`The AvatarList component should render a loading state 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -5817,9 +5850,9 @@ exports[`The AvatarList component should render a loading state 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -5833,14 +5866,15 @@ exports[`The AvatarList component should render a loading state 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -5974,9 +6008,9 @@ exports[`The AvatarList component should render a loading state 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -5990,14 +6024,15 @@ exports[`The AvatarList component should render a loading state 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -6131,9 +6166,9 @@ exports[`The AvatarList component should render a loading state 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -6147,14 +6182,15 @@ exports[`The AvatarList component should render a loading state 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -6288,9 +6324,9 @@ exports[`The AvatarList component should render a loading state 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -6304,14 +6340,15 @@ exports[`The AvatarList component should render a loading state 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -6445,9 +6482,9 @@ exports[`The AvatarList component should render a loading state 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -6461,14 +6498,15 @@ exports[`The AvatarList component should render a loading state 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -6602,9 +6640,9 @@ exports[`The AvatarList component should render a loading state 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -6618,14 +6656,15 @@ exports[`The AvatarList component should render a loading state 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={
@@ -6759,9 +6798,9 @@ exports[`The AvatarList component should render a loading state 1`] = `
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={64}
-            bbWidth={64}
-            height={64}
+            bbHeight={70}
+            bbWidth={70}
+            height={70}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -6775,14 +6814,15 @@ exports[`The AvatarList component should render a loading state 1`] = `
                 null,
                 Object {
                   "flex": 0,
-                  "height": 64,
-                  "width": 64,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
+            themeSize={64}
             vbHeight={24}
             vbWidth={24}
-            width={64}
+            width={70}
           >
             <RNSVGGroup
               fill={

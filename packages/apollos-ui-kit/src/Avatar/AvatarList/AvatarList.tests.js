@@ -27,13 +27,43 @@ describe('The AvatarList component', () => {
     expect(tree).toMatchSnapshot();
   });
   it('should render a loading state', () => {
+    const emptyData = [
+      {
+        id: '1',
+        source: { uri: '' },
+      },
+      {
+        id: '2',
+        source: { uri: '' },
+      },
+      {
+        id: '3',
+        source: { uri: '' },
+      },
+      {
+        id: '4',
+        source: { uri: '' },
+      },
+      {
+        id: '5',
+        source: { uri: '' },
+      },
+      {
+        id: '6',
+        source: { uri: '' },
+      },
+      {
+        id: '7',
+        source: { uri: '' },
+      },
+      {
+        id: '8',
+        source: { uri: '' },
+      },
+    ];
     const tree = renderer.create(
       <Providers>
-        <AvatarList
-          avatars={['', '', '', '', '', '', '', '']}
-          isLoading
-          onPressAdd={jest.fn()}
-        />
+        <AvatarList avatars={emptyData} isLoading onPressAdd={jest.fn()} />
       </Providers>
     );
 

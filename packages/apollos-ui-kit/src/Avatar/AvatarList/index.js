@@ -2,11 +2,12 @@ import React from 'react';
 import { FlatList, View } from 'react-native';
 import PropTypes from 'prop-types';
 
+import Avatar from '../Avatar';
+import { ImageSourceType } from '../../ConnectedImage';
 import Icon from '../../Icon';
 import styled from '../../styled';
 import Touchable from '../../Touchable';
 import { withTheme } from '../../theme';
-import CoreAvatar from '../Avatar';
 
 const AddIcon = withTheme(
   ({ theme }) => ({
@@ -29,18 +30,19 @@ const AddIconBackground = styled(
   'ui-kit.AvatarList.AddIconBackground'
 )(View);
 
-const Avatar = withTheme(
+const StyledAvatar = withTheme(
   ({ theme }) => ({
     themeSize: theme.sizing.avatar.medium * 0.8,
     containerStyle: {
       marginRight: theme.sizing.baseUnit * 0.5,
     },
   }),
-  'ui-kit.AvatarList.Avatar'
-)(CoreAvatar);
+  'ui-kit.AvatarList.StyledAvatar'
+)(Avatar);
 
 const AvatarFeed = withTheme(
   ({ theme }) => ({
+    // contentContainerStyle: { alignItems: 'center' },
     decelerationRate: 'fast', // passed down to rendered ScrollView
     horizontal: true,
     getItemLayout: (itemData, index) => ({
@@ -61,11 +63,7 @@ const renderItem = (onPressAvatar, isLoading) => ({ item }) => (
     onPress={() => onPressAvatar({ item })}
     disabled={isLoading || !onPressAvatar}
   >
-    <Avatar
-      source={item}
-      isLoading={isLoading}
-      notification={item.notification}
-    />
+    <StyledAvatar source={item?.source} notification={item.notification} />
   </Touchable>
 );
 
@@ -99,7 +97,7 @@ AvatarList.propTypes = {
   avatars: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
-      uri: PropTypes.string,
+      source: ImageSourceType,
       notification: PropTypes.bool,
     })
   ).isRequired,
