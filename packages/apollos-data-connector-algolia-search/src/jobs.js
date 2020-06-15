@@ -69,7 +69,7 @@ const createJobs = ({ getContext, queues }) => {
   DeltaIndexQueue.add(null, { repeat: { cron: '15 3 * * *' } });
   // Uncomment this to trigger an index right now.
   // FullIndexQueue.add(null);
-  // DeltaIndexQueue.add(null);
+  DeltaIndexQueue.add(null);
 };
 
 export default createJobs;
