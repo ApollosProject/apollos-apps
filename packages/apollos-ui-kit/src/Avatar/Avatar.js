@@ -88,12 +88,12 @@ const Avatar = ({
   ...imageProps
 }) => (
   <Container style={containerStyle} themeSize={themeSize}>
-    {source && source.uri ? (
+    {!isLoading && source && source.uri ? (
       <Image source={source} {...imageProps} themeSize={themeSize} />
     ) : (
-      <PlaceholderIcon themeSize={themeSize} />
+      <PlaceholderIcon themeSize={themeSize} isLoading={false} />
     )}
-    {!isLoading && notification ? (
+    {notification && !!isLoading ? ( // sometimes isLoading can be infered by context. This forces it to hide.
       <NotificationDot avatarSize={themeSize} />
     ) : null}
     {buttonIcon ? (
