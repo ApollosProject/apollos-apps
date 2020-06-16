@@ -1,11 +1,37 @@
 import React, { useRef } from 'react';
 import { Animated, Dimensions, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
-import { AvatarCloud, H3, BodyText, PaddedView } from '@apollosproject/ui-kit';
+import {
+  AvatarCloud,
+  H3,
+  BodyText,
+  PaddedView,
+  styled,
+} from '@apollosproject/ui-kit';
 
 import PrayerScreen from '../PrayerScreen';
 
 import BackgroundImage from '../PrayerBlurBackground';
+
+const Container = styled(
+  { flexGrow: 1, alignItems: 'center' },
+  'ui-prayer.PrayerOnboardingScreen.Container'
+)(PaddedView);
+
+const HeadingText = styled(
+  { textAlign: 'center' },
+  'ui-prayer.PrayerOnboardingScreen.HeadingText'
+)(H3);
+
+const BodyContainer = styled(
+  { paddingHorizontal: '10%' },
+  'ui-prayer.PrayerOnboardingScreen.BodyContainer'
+)(PaddedView);
+
+const ScreenBodyText = styled(
+  { textAlign: 'center' },
+  'ui-prayer.PrayerOnboardingScreen.ScreenBodyText'
+)(BodyText);
 
 const PrayerOnboardingScreen = ({
   avatars,
@@ -46,12 +72,12 @@ const PrayerOnboardingScreen = ({
           primaryAvatar={primaryAvatar}
           avatars={avatars.slice(0, 4)}
         />
-        <PaddedView style={{ flexGrow: 1, alignItems: 'center' }}>
-          <H3 style={{ textAlign: 'center' }}>{title}</H3>
-          <PaddedView style={{ paddingHorizontal: '10%' }}>
-            <BodyText style={{ textAlign: 'center' }}>{body}</BodyText>
-          </PaddedView>
-        </PaddedView>
+        <Container>
+          <HeadingText>{title}</HeadingText>
+          <BodyContainer>
+            <ScreenBodyText>{body}</ScreenBodyText>
+          </BodyContainer>
+        </Container>
       </PrayerScreen>
     </Animated.View>
   );
