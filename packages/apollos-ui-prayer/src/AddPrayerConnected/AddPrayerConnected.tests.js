@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import wait from 'waait';
 
 import { Providers, renderWithApolloData } from '../testUtils';
@@ -53,7 +52,7 @@ const mocks = [
 
 describe('The AddPrayerCard component', () => {
   it('should render', async () => {
-    const tree = renderWithApolloData(
+    const tree = await renderWithApolloData(
       <Providers mocks={mocks}>
         <AddPrayerCard />
       </Providers>
@@ -63,7 +62,7 @@ describe('The AddPrayerCard component', () => {
   });
 
   it('should accept a title', async () => {
-    const tree = renderWithApolloData(
+    const tree = await renderWithApolloData(
       <Providers mocks={mocks}>
         <AddPrayerCard title="Custom" />
       </Providers>
@@ -73,7 +72,7 @@ describe('The AddPrayerCard component', () => {
   });
 
   it('should render a custom component', async () => {
-    const tree = renderWithApolloData(
+    const tree = await renderWithApolloData(
       <Providers mocks={mocks}>
         <AddPrayerCard PrayerCardComponent={(props) => JSON.stringify(props)} />
       </Providers>
@@ -83,7 +82,7 @@ describe('The AddPrayerCard component', () => {
   });
 
   it('should render a custom skipText', async () => {
-    const tree = renderWithApolloData(
+    const tree = await renderWithApolloData(
       <Providers mocks={mocks}>
         <AddPrayerCard skipText="💣" />
       </Providers>
@@ -93,7 +92,7 @@ describe('The AddPrayerCard component', () => {
   });
 
   it('should render avatars', async () => {
-    const tree = renderWithApolloData(
+    const tree = await renderWithApolloData(
       <Providers mocks={mocks}>
         <AddPrayerCard avatars={[{ uri: 'my-image.jpg' }]} />
       </Providers>
@@ -103,7 +102,7 @@ describe('The AddPrayerCard component', () => {
   });
 
   it('should render a custom post-add component', async () => {
-    const tree = renderWithApolloData(
+    const tree = await renderWithApolloData(
       <Providers mocks={mocks}>
         <AddPrayerCard
           AddedPrayerComponent={(props) => JSON.stringify(props)}
@@ -115,7 +114,7 @@ describe('The AddPrayerCard component', () => {
   });
 
   it('should create a prayer', async () => {
-    const tree = renderer.create(
+    const tree = await renderWithApolloData(
       <Providers mocks={mocks}>
         <AddPrayerCard />
       </Providers>
