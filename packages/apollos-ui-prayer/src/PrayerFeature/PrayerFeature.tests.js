@@ -5,23 +5,64 @@ import { Providers } from '../testUtils';
 
 import PrayerFeature from '.';
 
-const avatars = [
-  { requestor: { photo: 'https://picsum.photos/200' } },
-  { requestor: { photo: 'https://picsum.photos/200' } },
-  { requestor: { photo: 'https://picsum.photos/200' } },
-  { requestor: { photo: 'https://picsum.photos/200' } },
-  { requestor: { photo: 'https://picsum.photos/200' } },
-  { requestor: { photo: 'https://picsum.photos/200' } },
-  { requestor: { photo: 'https://picsum.photos/200' } },
-  { requestor: { photo: 'https://picsum.photos/200' } },
-];
-
-const prayers = avatars.map((avatar, i) => ({
-  id: `prayer-${i}`,
-  requestor: {
-    photo: { uri: avatar },
+const prayers = [
+  {
+    id: '1',
+    isPrayed: false,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
   },
-}));
+  {
+    id: '2',
+    isPrayed: false,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '3',
+    isPrayed: false,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '4',
+    isPrayed: true,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '5',
+    isPrayed: true,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '6',
+    isPrayed: true,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '7',
+    isPrayed: true,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '8',
+    isPrayed: true,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+];
 
 describe('The PrayerFeature component', () => {
   it('should render', () => {

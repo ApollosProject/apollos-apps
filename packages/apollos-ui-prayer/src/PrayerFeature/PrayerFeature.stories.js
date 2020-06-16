@@ -5,23 +5,64 @@ import { CenteredView } from '@apollosproject/ui-kit';
 
 import PrayerFeature from '.';
 
-const avatars = [
-  { requestor: { photo: 'https://picsum.photos/200' } },
-  { requestor: { photo: 'https://picsum.photos/200' } },
-  { requestor: { photo: 'https://picsum.photos/200' } },
-  { requestor: { photo: 'https://picsum.photos/200' } },
-  { requestor: { photo: 'https://picsum.photos/200' } },
-  { requestor: { photo: 'https://picsum.photos/200' } },
-  { requestor: { photo: 'https://picsum.photos/200' } },
-  { requestor: { photo: 'https://picsum.photos/200' } },
-];
-
-const prayers = avatars.map((avatar, i) => ({
-  id: `prayer-${i}`,
-  requestor: {
-    photo: avatar,
+const prayers = [
+  {
+    id: '1',
+    isPrayed: false,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
   },
-}));
+  {
+    id: '2',
+    isPrayed: false,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '3',
+    isPrayed: false,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '4',
+    isPrayed: true,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '5',
+    isPrayed: true,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '6',
+    isPrayed: true,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '7',
+    isPrayed: true,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '8',
+    isPrayed: true,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+];
 
 storiesOf('ui-prayer/PrayerFeature', module)
   .addDecorator((story) => (
@@ -41,14 +82,50 @@ storiesOf('ui-prayer/PrayerFeature', module)
   .add('isCard (false)', () => (
     <PrayerFeature prayers={prayers} isCard={false} title={'Example title'} />
   ))
-  .add('isLoading', () => (
-    <PrayerFeature
-      prayers={[{}, {}, {}, {}, {}, {}, {}, {}]}
-      isLoading
-      title={'Example title'}
-      isCard={false}
-    />
-  ))
+  .add('isLoading', () => {
+    const emptyData = [
+      {
+        id: '1',
+        source: { uri: '' },
+      },
+      {
+        id: '2',
+        source: { uri: '' },
+      },
+      {
+        id: '3',
+        source: { uri: '' },
+      },
+      {
+        id: '4',
+        source: { uri: '' },
+      },
+      {
+        id: '5',
+        source: { uri: '' },
+      },
+      {
+        id: '6',
+        source: { uri: '' },
+      },
+      {
+        id: '7',
+        source: { uri: '' },
+      },
+      {
+        id: '8',
+        source: { uri: '' },
+      },
+    ];
+    return (
+      <PrayerFeature
+        prayers={emptyData}
+        isLoading
+        title={'Example title'}
+        isCard={false}
+      />
+    );
+  })
   .add('onPressAdd', () => (
     <PrayerFeature prayers={prayers} onPressAdd={() => {}} />
   ))

@@ -30,9 +30,7 @@ const getAvatars = (prayers) =>
   prayers.map((prayer) => ({
     id: prayer.id,
     notification: !prayer.isPrayed,
-    ...(typeof prayer.requestor?.photo === 'string'
-      ? { uri: prayer.requestor?.photo }
-      : prayer.requestor?.photo),
+    source: prayer.requestor?.photo,
   }));
 
 const Header = styled(
@@ -117,6 +115,8 @@ const PrayerFeature = ({
 PrayerFeature.propTypes = {
   prayers: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.string,
+      isPrayed: PropTypes.bool,
       requestor: PropTypes.shape({
         photo: ImageSourceType,
       }),

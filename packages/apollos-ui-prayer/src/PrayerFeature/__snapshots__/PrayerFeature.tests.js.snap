@@ -80,75 +80,59 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
         data={
           Array [
             Object {
-              "id": "prayer-0",
+              "id": "1",
               "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-1",
+              "id": "2",
               "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-2",
+              "id": "3",
               "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-3",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "4",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-4",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "5",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-5",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "6",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-6",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "7",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-7",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "8",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
           ]
@@ -393,13 +377,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-0",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -418,29 +396,6 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -510,13 +465,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-1",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -535,29 +484,6 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -627,13 +553,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-2",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -652,29 +572,6 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -744,13 +641,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-3",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -769,29 +660,6 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -861,13 +729,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-4",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -886,29 +748,6 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -978,13 +817,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-5",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -1003,29 +836,6 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -1095,13 +905,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-6",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -1120,29 +924,6 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -1212,13 +993,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-7",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -1237,29 +1012,6 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -1344,75 +1096,59 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
         data={
           Array [
             Object {
-              "id": "prayer-0",
+              "id": "1",
               "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-1",
+              "id": "2",
               "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-2",
+              "id": "3",
               "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-3",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "4",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-4",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "5",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-5",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "6",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-6",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "7",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-7",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "8",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
           ]
@@ -1509,13 +1245,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-0",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -1534,29 +1264,6 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -1626,13 +1333,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-1",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -1651,29 +1352,6 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -1743,13 +1421,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-2",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -1768,29 +1440,6 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -1860,13 +1509,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-3",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -1885,29 +1528,6 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -1977,13 +1597,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-4",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -2002,29 +1616,6 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -2094,13 +1685,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-5",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -2119,29 +1704,6 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -2211,13 +1773,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-6",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -2236,29 +1792,6 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -2328,13 +1861,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-7",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -2353,29 +1880,6 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -2460,75 +1964,59 @@ exports[`The PrayerFeature component should render 1`] = `
         data={
           Array [
             Object {
-              "id": "prayer-0",
+              "id": "1",
               "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-1",
+              "id": "2",
               "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-2",
+              "id": "3",
               "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-3",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "4",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-4",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "5",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-5",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "6",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-6",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "7",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-7",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "8",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
           ]
@@ -2625,13 +2113,7 @@ exports[`The PrayerFeature component should render 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-0",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -2650,29 +2132,6 @@ exports[`The PrayerFeature component should render 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -2742,13 +2201,7 @@ exports[`The PrayerFeature component should render 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-1",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -2767,29 +2220,6 @@ exports[`The PrayerFeature component should render 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -2859,13 +2289,7 @@ exports[`The PrayerFeature component should render 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-2",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -2884,29 +2308,6 @@ exports[`The PrayerFeature component should render 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -2976,13 +2377,7 @@ exports[`The PrayerFeature component should render 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-3",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -3001,29 +2396,6 @@ exports[`The PrayerFeature component should render 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -3093,13 +2465,7 @@ exports[`The PrayerFeature component should render 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-4",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -3118,29 +2484,6 @@ exports[`The PrayerFeature component should render 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -3210,13 +2553,7 @@ exports[`The PrayerFeature component should render 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-5",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -3235,29 +2572,6 @@ exports[`The PrayerFeature component should render 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -3327,13 +2641,7 @@ exports[`The PrayerFeature component should render 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-6",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -3352,29 +2660,6 @@ exports[`The PrayerFeature component should render 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -3444,13 +2729,7 @@ exports[`The PrayerFeature component should render 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-7",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -3469,29 +2748,6 @@ exports[`The PrayerFeature component should render 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -3589,75 +2845,59 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
         data={
           Array [
             Object {
-              "id": "prayer-0",
+              "id": "1",
               "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-1",
+              "id": "2",
               "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-2",
+              "id": "3",
               "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-3",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "4",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-4",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "5",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-5",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "6",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-6",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "7",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-7",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "8",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
           ]
@@ -3754,19 +2994,12 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-0",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
                     style={
                       Object {
-                        "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "borderRadius": 32,
                         "bottom": 0,
@@ -3780,29 +3013,6 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -3872,19 +3082,12 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-1",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
                     style={
                       Object {
-                        "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "borderRadius": 32,
                         "bottom": 0,
@@ -3898,29 +3101,6 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -3990,19 +3170,12 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-2",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
                     style={
                       Object {
-                        "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "borderRadius": 32,
                         "bottom": 0,
@@ -4016,29 +3189,6 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -4108,19 +3258,12 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-3",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
                     style={
                       Object {
-                        "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "borderRadius": 32,
                         "bottom": 0,
@@ -4134,29 +3277,6 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -4226,19 +3346,12 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-4",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
                     style={
                       Object {
-                        "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "borderRadius": 32,
                         "bottom": 0,
@@ -4252,29 +3365,6 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -4344,19 +3434,12 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-5",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
                     style={
                       Object {
-                        "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "borderRadius": 32,
                         "bottom": 0,
@@ -4370,29 +3453,6 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -4462,19 +3522,12 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-6",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
                     style={
                       Object {
-                        "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "borderRadius": 32,
                         "bottom": 0,
@@ -4488,29 +3541,6 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -4580,19 +3610,12 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-7",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
                     style={
                       Object {
-                        "aspectRatio": 1,
                         "backgroundColor": "#A5A5A5",
                         "borderRadius": 32,
                         "bottom": 0,
@@ -4606,29 +3629,6 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -4704,26 +3704,32 @@ Array [
           Object {
             "id": undefined,
             "notification": true,
+            "source": undefined,
           },
           Object {
             "id": undefined,
             "notification": true,
+            "source": undefined,
           },
           Object {
             "id": undefined,
             "notification": true,
+            "source": undefined,
           },
           Object {
             "id": undefined,
             "notification": true,
+            "source": undefined,
           },
           Object {
             "id": undefined,
             "notification": true,
+            "source": undefined,
           },
           Object {
             "id": undefined,
             "notification": true,
+            "source": undefined,
           },
         ]
       }
@@ -4794,39 +3800,122 @@ Array [
               }
               themeSize={64}
             >
-              <View
+              <RNSVGSvgView
+                align="xMidYMid"
+                bbHeight={70}
+                bbWidth={70}
+                height={70}
+                meetOrSlice={0}
+                minX={0}
+                minY={0}
                 style={
-                  Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 16,
-                    "height": 64,
-                    "width": 64,
-                  }
-                }
-              />
-              <View
-                style={
-                  Object {
-                    "bottom": 0,
-                    "position": "absolute",
-                    "right": 0,
-                  }
-                }
-              >
-                <View
-                  avatarSize={64}
-                  style={
+                  Array [
                     Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#17B582",
-                      "borderRadius": 16,
-                      "marginBottom": 2,
-                      "marginRight": 2,
-                      "width": 16,
-                    }
+                      "backgroundColor": "transparent",
+                      "borderWidth": 0,
+                    },
+                    undefined,
+                    null,
+                    Object {
+                      "flex": 0,
+                      "height": 70,
+                      "width": 70,
+                    },
+                  ]
+                }
+                themeSize={64}
+                vbHeight={24}
+                vbWidth={24}
+                width={70}
+              >
+                <RNSVGGroup
+                  fill={
+                    Array [
+                      0,
+                      4278190080,
+                    ]
                   }
-                />
-              </View>
+                  fillOpacity={1}
+                  fillRule={1}
+                  font={Object {}}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={Array []}
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                >
+                  <RNSVGPath
+                    d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-3.33 8.33C8.67 8.5 10.2 7 12 7s3.33 1.5 3.33 3.33v.84c0 1.84-1.53 3.33-3.33 3.33S8.67 13 8.67 11.17v-.84zm3.33 10c-2.03 0-3.9-.73-5.33-1.93.7-1.32 2.07-2.23 3.66-2.23h3.34c1.6 0 2.97.9 3.66 2.22-1.44 1.2-3.3 1.92-5.33 1.92z"
+                    fill={
+                      Array [
+                        0,
+                        4289045925,
+                      ]
+                    }
+                    fillOpacity={1}
+                    fillRule={1}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={
+                      Array [
+                        "fill",
+                      ]
+                    }
+                    rotation={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={null}
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={0}
+                    strokeLinejoin={0}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth={1}
+                    vectorEffect={0}
+                    x={0}
+                    y={0}
+                  />
+                </RNSVGGroup>
+              </RNSVGSvgView>
             </View>
           </View>
         </View>
@@ -4869,39 +3958,122 @@ Array [
               }
               themeSize={64}
             >
-              <View
+              <RNSVGSvgView
+                align="xMidYMid"
+                bbHeight={70}
+                bbWidth={70}
+                height={70}
+                meetOrSlice={0}
+                minX={0}
+                minY={0}
                 style={
-                  Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 16,
-                    "height": 64,
-                    "width": 64,
-                  }
-                }
-              />
-              <View
-                style={
-                  Object {
-                    "bottom": 0,
-                    "position": "absolute",
-                    "right": 0,
-                  }
-                }
-              >
-                <View
-                  avatarSize={64}
-                  style={
+                  Array [
                     Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#17B582",
-                      "borderRadius": 16,
-                      "marginBottom": 2,
-                      "marginRight": 2,
-                      "width": 16,
-                    }
+                      "backgroundColor": "transparent",
+                      "borderWidth": 0,
+                    },
+                    undefined,
+                    null,
+                    Object {
+                      "flex": 0,
+                      "height": 70,
+                      "width": 70,
+                    },
+                  ]
+                }
+                themeSize={64}
+                vbHeight={24}
+                vbWidth={24}
+                width={70}
+              >
+                <RNSVGGroup
+                  fill={
+                    Array [
+                      0,
+                      4278190080,
+                    ]
                   }
-                />
-              </View>
+                  fillOpacity={1}
+                  fillRule={1}
+                  font={Object {}}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={Array []}
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                >
+                  <RNSVGPath
+                    d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-3.33 8.33C8.67 8.5 10.2 7 12 7s3.33 1.5 3.33 3.33v.84c0 1.84-1.53 3.33-3.33 3.33S8.67 13 8.67 11.17v-.84zm3.33 10c-2.03 0-3.9-.73-5.33-1.93.7-1.32 2.07-2.23 3.66-2.23h3.34c1.6 0 2.97.9 3.66 2.22-1.44 1.2-3.3 1.92-5.33 1.92z"
+                    fill={
+                      Array [
+                        0,
+                        4289045925,
+                      ]
+                    }
+                    fillOpacity={1}
+                    fillRule={1}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={
+                      Array [
+                        "fill",
+                      ]
+                    }
+                    rotation={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={null}
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={0}
+                    strokeLinejoin={0}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth={1}
+                    vectorEffect={0}
+                    x={0}
+                    y={0}
+                  />
+                </RNSVGGroup>
+              </RNSVGSvgView>
             </View>
           </View>
         </View>
@@ -4944,39 +4116,122 @@ Array [
               }
               themeSize={64}
             >
-              <View
+              <RNSVGSvgView
+                align="xMidYMid"
+                bbHeight={70}
+                bbWidth={70}
+                height={70}
+                meetOrSlice={0}
+                minX={0}
+                minY={0}
                 style={
-                  Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 16,
-                    "height": 64,
-                    "width": 64,
-                  }
-                }
-              />
-              <View
-                style={
-                  Object {
-                    "bottom": 0,
-                    "position": "absolute",
-                    "right": 0,
-                  }
-                }
-              >
-                <View
-                  avatarSize={64}
-                  style={
+                  Array [
                     Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#17B582",
-                      "borderRadius": 16,
-                      "marginBottom": 2,
-                      "marginRight": 2,
-                      "width": 16,
-                    }
+                      "backgroundColor": "transparent",
+                      "borderWidth": 0,
+                    },
+                    undefined,
+                    null,
+                    Object {
+                      "flex": 0,
+                      "height": 70,
+                      "width": 70,
+                    },
+                  ]
+                }
+                themeSize={64}
+                vbHeight={24}
+                vbWidth={24}
+                width={70}
+              >
+                <RNSVGGroup
+                  fill={
+                    Array [
+                      0,
+                      4278190080,
+                    ]
                   }
-                />
-              </View>
+                  fillOpacity={1}
+                  fillRule={1}
+                  font={Object {}}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={Array []}
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                >
+                  <RNSVGPath
+                    d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-3.33 8.33C8.67 8.5 10.2 7 12 7s3.33 1.5 3.33 3.33v.84c0 1.84-1.53 3.33-3.33 3.33S8.67 13 8.67 11.17v-.84zm3.33 10c-2.03 0-3.9-.73-5.33-1.93.7-1.32 2.07-2.23 3.66-2.23h3.34c1.6 0 2.97.9 3.66 2.22-1.44 1.2-3.3 1.92-5.33 1.92z"
+                    fill={
+                      Array [
+                        0,
+                        4289045925,
+                      ]
+                    }
+                    fillOpacity={1}
+                    fillRule={1}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={
+                      Array [
+                        "fill",
+                      ]
+                    }
+                    rotation={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={null}
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={0}
+                    strokeLinejoin={0}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth={1}
+                    vectorEffect={0}
+                    x={0}
+                    y={0}
+                  />
+                </RNSVGGroup>
+              </RNSVGSvgView>
             </View>
           </View>
         </View>
@@ -5019,39 +4274,122 @@ Array [
               }
               themeSize={64}
             >
-              <View
+              <RNSVGSvgView
+                align="xMidYMid"
+                bbHeight={70}
+                bbWidth={70}
+                height={70}
+                meetOrSlice={0}
+                minX={0}
+                minY={0}
                 style={
-                  Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 16,
-                    "height": 64,
-                    "width": 64,
-                  }
-                }
-              />
-              <View
-                style={
-                  Object {
-                    "bottom": 0,
-                    "position": "absolute",
-                    "right": 0,
-                  }
-                }
-              >
-                <View
-                  avatarSize={64}
-                  style={
+                  Array [
                     Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#17B582",
-                      "borderRadius": 16,
-                      "marginBottom": 2,
-                      "marginRight": 2,
-                      "width": 16,
-                    }
+                      "backgroundColor": "transparent",
+                      "borderWidth": 0,
+                    },
+                    undefined,
+                    null,
+                    Object {
+                      "flex": 0,
+                      "height": 70,
+                      "width": 70,
+                    },
+                  ]
+                }
+                themeSize={64}
+                vbHeight={24}
+                vbWidth={24}
+                width={70}
+              >
+                <RNSVGGroup
+                  fill={
+                    Array [
+                      0,
+                      4278190080,
+                    ]
                   }
-                />
-              </View>
+                  fillOpacity={1}
+                  fillRule={1}
+                  font={Object {}}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={Array []}
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                >
+                  <RNSVGPath
+                    d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-3.33 8.33C8.67 8.5 10.2 7 12 7s3.33 1.5 3.33 3.33v.84c0 1.84-1.53 3.33-3.33 3.33S8.67 13 8.67 11.17v-.84zm3.33 10c-2.03 0-3.9-.73-5.33-1.93.7-1.32 2.07-2.23 3.66-2.23h3.34c1.6 0 2.97.9 3.66 2.22-1.44 1.2-3.3 1.92-5.33 1.92z"
+                    fill={
+                      Array [
+                        0,
+                        4289045925,
+                      ]
+                    }
+                    fillOpacity={1}
+                    fillRule={1}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={
+                      Array [
+                        "fill",
+                      ]
+                    }
+                    rotation={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={null}
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={0}
+                    strokeLinejoin={0}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth={1}
+                    vectorEffect={0}
+                    x={0}
+                    y={0}
+                  />
+                </RNSVGGroup>
+              </RNSVGSvgView>
             </View>
           </View>
         </View>
@@ -5094,39 +4432,122 @@ Array [
               }
               themeSize={64}
             >
-              <View
+              <RNSVGSvgView
+                align="xMidYMid"
+                bbHeight={70}
+                bbWidth={70}
+                height={70}
+                meetOrSlice={0}
+                minX={0}
+                minY={0}
                 style={
-                  Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 16,
-                    "height": 64,
-                    "width": 64,
-                  }
-                }
-              />
-              <View
-                style={
-                  Object {
-                    "bottom": 0,
-                    "position": "absolute",
-                    "right": 0,
-                  }
-                }
-              >
-                <View
-                  avatarSize={64}
-                  style={
+                  Array [
                     Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#17B582",
-                      "borderRadius": 16,
-                      "marginBottom": 2,
-                      "marginRight": 2,
-                      "width": 16,
-                    }
+                      "backgroundColor": "transparent",
+                      "borderWidth": 0,
+                    },
+                    undefined,
+                    null,
+                    Object {
+                      "flex": 0,
+                      "height": 70,
+                      "width": 70,
+                    },
+                  ]
+                }
+                themeSize={64}
+                vbHeight={24}
+                vbWidth={24}
+                width={70}
+              >
+                <RNSVGGroup
+                  fill={
+                    Array [
+                      0,
+                      4278190080,
+                    ]
                   }
-                />
-              </View>
+                  fillOpacity={1}
+                  fillRule={1}
+                  font={Object {}}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={Array []}
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                >
+                  <RNSVGPath
+                    d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-3.33 8.33C8.67 8.5 10.2 7 12 7s3.33 1.5 3.33 3.33v.84c0 1.84-1.53 3.33-3.33 3.33S8.67 13 8.67 11.17v-.84zm3.33 10c-2.03 0-3.9-.73-5.33-1.93.7-1.32 2.07-2.23 3.66-2.23h3.34c1.6 0 2.97.9 3.66 2.22-1.44 1.2-3.3 1.92-5.33 1.92z"
+                    fill={
+                      Array [
+                        0,
+                        4289045925,
+                      ]
+                    }
+                    fillOpacity={1}
+                    fillRule={1}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={
+                      Array [
+                        "fill",
+                      ]
+                    }
+                    rotation={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={null}
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={0}
+                    strokeLinejoin={0}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth={1}
+                    vectorEffect={0}
+                    x={0}
+                    y={0}
+                  />
+                </RNSVGGroup>
+              </RNSVGSvgView>
             </View>
           </View>
         </View>
@@ -5169,39 +4590,122 @@ Array [
               }
               themeSize={64}
             >
-              <View
+              <RNSVGSvgView
+                align="xMidYMid"
+                bbHeight={70}
+                bbWidth={70}
+                height={70}
+                meetOrSlice={0}
+                minX={0}
+                minY={0}
                 style={
-                  Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 16,
-                    "height": 64,
-                    "width": 64,
-                  }
-                }
-              />
-              <View
-                style={
-                  Object {
-                    "bottom": 0,
-                    "position": "absolute",
-                    "right": 0,
-                  }
-                }
-              >
-                <View
-                  avatarSize={64}
-                  style={
+                  Array [
                     Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#17B582",
-                      "borderRadius": 16,
-                      "marginBottom": 2,
-                      "marginRight": 2,
-                      "width": 16,
-                    }
+                      "backgroundColor": "transparent",
+                      "borderWidth": 0,
+                    },
+                    undefined,
+                    null,
+                    Object {
+                      "flex": 0,
+                      "height": 70,
+                      "width": 70,
+                    },
+                  ]
+                }
+                themeSize={64}
+                vbHeight={24}
+                vbWidth={24}
+                width={70}
+              >
+                <RNSVGGroup
+                  fill={
+                    Array [
+                      0,
+                      4278190080,
+                    ]
                   }
-                />
-              </View>
+                  fillOpacity={1}
+                  fillRule={1}
+                  font={Object {}}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={Array []}
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                >
+                  <RNSVGPath
+                    d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-3.33 8.33C8.67 8.5 10.2 7 12 7s3.33 1.5 3.33 3.33v.84c0 1.84-1.53 3.33-3.33 3.33S8.67 13 8.67 11.17v-.84zm3.33 10c-2.03 0-3.9-.73-5.33-1.93.7-1.32 2.07-2.23 3.66-2.23h3.34c1.6 0 2.97.9 3.66 2.22-1.44 1.2-3.3 1.92-5.33 1.92z"
+                    fill={
+                      Array [
+                        0,
+                        4289045925,
+                      ]
+                    }
+                    fillOpacity={1}
+                    fillRule={1}
+                    matrix={
+                      Array [
+                        1,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                      ]
+                    }
+                    opacity={1}
+                    originX={0}
+                    originY={0}
+                    propList={
+                      Array [
+                        "fill",
+                      ]
+                    }
+                    rotation={0}
+                    scaleX={1}
+                    scaleY={1}
+                    skewX={0}
+                    skewY={0}
+                    stroke={null}
+                    strokeDasharray={null}
+                    strokeDashoffset={null}
+                    strokeLinecap={0}
+                    strokeLinejoin={0}
+                    strokeMiterlimit={4}
+                    strokeOpacity={1}
+                    strokeWidth={1}
+                    vectorEffect={0}
+                    x={0}
+                    y={0}
+                  />
+                </RNSVGGroup>
+              </RNSVGSvgView>
             </View>
           </View>
         </View>
@@ -5283,75 +4787,59 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
         data={
           Array [
             Object {
-              "id": "prayer-0",
+              "id": "1",
               "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-1",
+              "id": "2",
               "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-2",
+              "id": "3",
               "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-3",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "4",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-4",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "5",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-5",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "6",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-6",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "7",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-7",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "8",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
           ]
@@ -5448,13 +4936,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-0",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -5473,29 +4955,6 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -5565,13 +5024,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-1",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -5590,29 +5043,6 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -5682,13 +5112,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-2",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -5707,29 +5131,6 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -5799,13 +5200,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-3",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -5824,29 +5219,6 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -5916,13 +5288,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-4",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -5941,29 +5307,6 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -6033,13 +5376,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-5",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -6058,29 +5395,6 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -6150,13 +5464,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-6",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -6175,29 +5483,6 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -6267,13 +5552,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-7",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -6292,29 +5571,6 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -6412,75 +5668,59 @@ exports[`The PrayerFeature component should render with a title 1`] = `
         data={
           Array [
             Object {
-              "id": "prayer-0",
+              "id": "1",
               "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-1",
+              "id": "2",
               "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-2",
+              "id": "3",
               "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-3",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "4",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-4",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "5",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-5",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "6",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-6",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "7",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
             Object {
-              "id": "prayer-7",
-              "notification": true,
-              "uri": Object {
-                "requestor": Object {
-                  "photo": "https://picsum.photos/200",
-                },
+              "id": "8",
+              "notification": false,
+              "source": Object {
+                "uri": "https://picsum.photos/200",
               },
             },
           ]
@@ -6577,13 +5817,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-0",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -6602,29 +5836,6 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -6694,13 +5905,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-1",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -6719,29 +5924,6 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -6811,13 +5993,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-2",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -6836,29 +6012,6 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -6928,13 +6081,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-3",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -6953,29 +6100,6 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -7045,13 +6169,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-4",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -7070,29 +6188,6 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -7162,13 +6257,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-5",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -7187,29 +6276,6 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -7279,13 +6345,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-6",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -7304,29 +6364,6 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -7396,13 +6433,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                       Array [
                         Object {
                           "cache": "force-cache",
-                          "id": "prayer-7",
-                          "notification": true,
-                          "uri": Object {
-                            "requestor": Object {
-                              "photo": "https://picsum.photos/200",
-                            },
-                          },
+                          "uri": "https://picsum.photos/200",
                         },
                       ]
                     }
@@ -7421,29 +6452,6 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                       }
                     }
                     themeSize={64}
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "position": "absolute",
-                      "right": 0,
-                    }
-                  }
-                >
-                  <View
-                    avatarSize={64}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginBottom": 2,
-                        "marginRight": 2,
-                        "width": 16,
-                      }
-                    }
                   />
                 </View>
               </View>
@@ -7505,75 +6513,59 @@ Array [
       data={
         Array [
           Object {
-            "id": "prayer-0",
+            "id": "1",
             "notification": true,
-            "uri": Object {
-              "requestor": Object {
-                "photo": "https://picsum.photos/200",
-              },
+            "source": Object {
+              "uri": "https://picsum.photos/200",
             },
           },
           Object {
-            "id": "prayer-1",
+            "id": "2",
             "notification": true,
-            "uri": Object {
-              "requestor": Object {
-                "photo": "https://picsum.photos/200",
-              },
+            "source": Object {
+              "uri": "https://picsum.photos/200",
             },
           },
           Object {
-            "id": "prayer-2",
+            "id": "3",
             "notification": true,
-            "uri": Object {
-              "requestor": Object {
-                "photo": "https://picsum.photos/200",
-              },
+            "source": Object {
+              "uri": "https://picsum.photos/200",
             },
           },
           Object {
-            "id": "prayer-3",
-            "notification": true,
-            "uri": Object {
-              "requestor": Object {
-                "photo": "https://picsum.photos/200",
-              },
+            "id": "4",
+            "notification": false,
+            "source": Object {
+              "uri": "https://picsum.photos/200",
             },
           },
           Object {
-            "id": "prayer-4",
-            "notification": true,
-            "uri": Object {
-              "requestor": Object {
-                "photo": "https://picsum.photos/200",
-              },
+            "id": "5",
+            "notification": false,
+            "source": Object {
+              "uri": "https://picsum.photos/200",
             },
           },
           Object {
-            "id": "prayer-5",
-            "notification": true,
-            "uri": Object {
-              "requestor": Object {
-                "photo": "https://picsum.photos/200",
-              },
+            "id": "6",
+            "notification": false,
+            "source": Object {
+              "uri": "https://picsum.photos/200",
             },
           },
           Object {
-            "id": "prayer-6",
-            "notification": true,
-            "uri": Object {
-              "requestor": Object {
-                "photo": "https://picsum.photos/200",
-              },
+            "id": "7",
+            "notification": false,
+            "source": Object {
+              "uri": "https://picsum.photos/200",
             },
           },
           Object {
-            "id": "prayer-7",
-            "notification": true,
-            "uri": Object {
-              "requestor": Object {
-                "photo": "https://picsum.photos/200",
-              },
+            "id": "8",
+            "notification": false,
+            "source": Object {
+              "uri": "https://picsum.photos/200",
             },
           },
         ]
@@ -7670,13 +6662,7 @@ Array [
                     Array [
                       Object {
                         "cache": "force-cache",
-                        "id": "prayer-0",
-                        "notification": true,
-                        "uri": Object {
-                          "requestor": Object {
-                            "photo": "https://picsum.photos/200",
-                          },
-                        },
+                        "uri": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -7695,29 +6681,6 @@ Array [
                     }
                   }
                   themeSize={64}
-                />
-              </View>
-              <View
-                style={
-                  Object {
-                    "bottom": 0,
-                    "position": "absolute",
-                    "right": 0,
-                  }
-                }
-              >
-                <View
-                  avatarSize={64}
-                  style={
-                    Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#17B582",
-                      "borderRadius": 16,
-                      "marginBottom": 2,
-                      "marginRight": 2,
-                      "width": 16,
-                    }
-                  }
                 />
               </View>
             </View>
@@ -7787,13 +6750,7 @@ Array [
                     Array [
                       Object {
                         "cache": "force-cache",
-                        "id": "prayer-1",
-                        "notification": true,
-                        "uri": Object {
-                          "requestor": Object {
-                            "photo": "https://picsum.photos/200",
-                          },
-                        },
+                        "uri": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -7812,29 +6769,6 @@ Array [
                     }
                   }
                   themeSize={64}
-                />
-              </View>
-              <View
-                style={
-                  Object {
-                    "bottom": 0,
-                    "position": "absolute",
-                    "right": 0,
-                  }
-                }
-              >
-                <View
-                  avatarSize={64}
-                  style={
-                    Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#17B582",
-                      "borderRadius": 16,
-                      "marginBottom": 2,
-                      "marginRight": 2,
-                      "width": 16,
-                    }
-                  }
                 />
               </View>
             </View>
@@ -7904,13 +6838,7 @@ Array [
                     Array [
                       Object {
                         "cache": "force-cache",
-                        "id": "prayer-2",
-                        "notification": true,
-                        "uri": Object {
-                          "requestor": Object {
-                            "photo": "https://picsum.photos/200",
-                          },
-                        },
+                        "uri": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -7929,29 +6857,6 @@ Array [
                     }
                   }
                   themeSize={64}
-                />
-              </View>
-              <View
-                style={
-                  Object {
-                    "bottom": 0,
-                    "position": "absolute",
-                    "right": 0,
-                  }
-                }
-              >
-                <View
-                  avatarSize={64}
-                  style={
-                    Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#17B582",
-                      "borderRadius": 16,
-                      "marginBottom": 2,
-                      "marginRight": 2,
-                      "width": 16,
-                    }
-                  }
                 />
               </View>
             </View>
@@ -8021,13 +6926,7 @@ Array [
                     Array [
                       Object {
                         "cache": "force-cache",
-                        "id": "prayer-3",
-                        "notification": true,
-                        "uri": Object {
-                          "requestor": Object {
-                            "photo": "https://picsum.photos/200",
-                          },
-                        },
+                        "uri": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -8046,29 +6945,6 @@ Array [
                     }
                   }
                   themeSize={64}
-                />
-              </View>
-              <View
-                style={
-                  Object {
-                    "bottom": 0,
-                    "position": "absolute",
-                    "right": 0,
-                  }
-                }
-              >
-                <View
-                  avatarSize={64}
-                  style={
-                    Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#17B582",
-                      "borderRadius": 16,
-                      "marginBottom": 2,
-                      "marginRight": 2,
-                      "width": 16,
-                    }
-                  }
                 />
               </View>
             </View>
@@ -8138,13 +7014,7 @@ Array [
                     Array [
                       Object {
                         "cache": "force-cache",
-                        "id": "prayer-4",
-                        "notification": true,
-                        "uri": Object {
-                          "requestor": Object {
-                            "photo": "https://picsum.photos/200",
-                          },
-                        },
+                        "uri": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -8163,29 +7033,6 @@ Array [
                     }
                   }
                   themeSize={64}
-                />
-              </View>
-              <View
-                style={
-                  Object {
-                    "bottom": 0,
-                    "position": "absolute",
-                    "right": 0,
-                  }
-                }
-              >
-                <View
-                  avatarSize={64}
-                  style={
-                    Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#17B582",
-                      "borderRadius": 16,
-                      "marginBottom": 2,
-                      "marginRight": 2,
-                      "width": 16,
-                    }
-                  }
                 />
               </View>
             </View>
@@ -8255,13 +7102,7 @@ Array [
                     Array [
                       Object {
                         "cache": "force-cache",
-                        "id": "prayer-5",
-                        "notification": true,
-                        "uri": Object {
-                          "requestor": Object {
-                            "photo": "https://picsum.photos/200",
-                          },
-                        },
+                        "uri": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -8280,29 +7121,6 @@ Array [
                     }
                   }
                   themeSize={64}
-                />
-              </View>
-              <View
-                style={
-                  Object {
-                    "bottom": 0,
-                    "position": "absolute",
-                    "right": 0,
-                  }
-                }
-              >
-                <View
-                  avatarSize={64}
-                  style={
-                    Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#17B582",
-                      "borderRadius": 16,
-                      "marginBottom": 2,
-                      "marginRight": 2,
-                      "width": 16,
-                    }
-                  }
                 />
               </View>
             </View>
@@ -8372,13 +7190,7 @@ Array [
                     Array [
                       Object {
                         "cache": "force-cache",
-                        "id": "prayer-6",
-                        "notification": true,
-                        "uri": Object {
-                          "requestor": Object {
-                            "photo": "https://picsum.photos/200",
-                          },
-                        },
+                        "uri": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -8397,29 +7209,6 @@ Array [
                     }
                   }
                   themeSize={64}
-                />
-              </View>
-              <View
-                style={
-                  Object {
-                    "bottom": 0,
-                    "position": "absolute",
-                    "right": 0,
-                  }
-                }
-              >
-                <View
-                  avatarSize={64}
-                  style={
-                    Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#17B582",
-                      "borderRadius": 16,
-                      "marginBottom": 2,
-                      "marginRight": 2,
-                      "width": 16,
-                    }
-                  }
                 />
               </View>
             </View>
@@ -8489,13 +7278,7 @@ Array [
                     Array [
                       Object {
                         "cache": "force-cache",
-                        "id": "prayer-7",
-                        "notification": true,
-                        "uri": Object {
-                          "requestor": Object {
-                            "photo": "https://picsum.photos/200",
-                          },
-                        },
+                        "uri": "https://picsum.photos/200",
                       },
                     ]
                   }
@@ -8514,29 +7297,6 @@ Array [
                     }
                   }
                   themeSize={64}
-                />
-              </View>
-              <View
-                style={
-                  Object {
-                    "bottom": 0,
-                    "position": "absolute",
-                    "right": 0,
-                  }
-                }
-              >
-                <View
-                  avatarSize={64}
-                  style={
-                    Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#17B582",
-                      "borderRadius": 16,
-                      "marginBottom": 2,
-                      "marginRight": 2,
-                      "width": 16,
-                    }
-                  }
                 />
               </View>
             </View>
