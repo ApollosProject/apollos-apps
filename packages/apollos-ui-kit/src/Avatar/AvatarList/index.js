@@ -63,7 +63,9 @@ const renderItem = (onPressAvatar, isLoading) => ({ item }) => (
     onPress={() => onPressAvatar({ item })}
     disabled={isLoading || !onPressAvatar}
   >
-    <StyledAvatar source={item?.source} notification={item.notification} />
+    <View>
+      <StyledAvatar source={item?.source} notification={item.notification} />
+    </View>
   </Touchable>
 );
 

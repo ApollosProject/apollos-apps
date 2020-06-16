@@ -8,42 +8,42 @@ import AvatarList from '.';
 
 const avatars = [
   {
-    id: 1,
+    id: '1',
     source: { uri: 'https://picsum.photos/200' },
     notification: true,
   },
   {
-    id: 2,
+    id: '2',
     source: { uri: 'https://picsum.photos/200' },
     notification: true,
   },
   {
-    id: 3,
+    id: '3',
     source: { uri: 'https://picsum.photos/200' },
     notification: true,
   },
   {
-    id: 4,
+    id: '4',
     source: { uri: 'https://picsum.photos/200' },
     notification: false,
   },
   {
-    id: 5,
+    id: '5',
     source: { uri: 'https://picsum.photos/200' },
     notification: false,
   },
   {
-    id: 6,
+    id: '6',
     source: { uri: 'https://picsum.photos/200' },
     notification: false,
   },
   {
-    id: 7,
+    id: '7',
     source: { uri: 'https://picsum.photos/200' },
     notification: false,
   },
   {
-    id: 8,
+    id: '8',
     source: { uri: 'https://picsum.photos/200' },
     notification: false,
   },
@@ -102,4 +102,7 @@ storiesOf('ui-kit/Avatar/AvatarList', module)
   })
   .add('onPressAdd', () => (
     <AvatarList avatars={avatars} onPressAdd={() => {}} />
+  ))
+  .add('onPressAvatar', () => (
+    <AvatarList avatars={avatars} onPressAvatar={() => {}} />
   ));
