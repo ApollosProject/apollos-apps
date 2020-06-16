@@ -684,6 +684,12 @@ export const featuresSchema = gql`
     id: ID!
   }
 
+  type FeatureAction {
+    relatedNode: Node
+    action: ACTION_FEATURE_ACTION
+    title: String
+  }
+
   type ActionListAction {
     id: ID!
 
@@ -711,6 +717,7 @@ export const featuresSchema = gql`
     subtitle: String
     actions: [ActionListAction]
     heroCard: CardListItem
+    primaryAction: FeatureAction
   }
 
   type CardListItem {

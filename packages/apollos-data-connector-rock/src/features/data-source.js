@@ -1,4 +1,4 @@
-import { flatten, get } from 'lodash';
+import { flatten, get, camelCase } from 'lodash';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import { createGlobalId } from '@apollosproject/server-core';
 import ApollosConfig from '@apollosproject/config';
@@ -78,10 +78,12 @@ export default class Feature extends RockApolloDataSource {
     heroAlgorithms = [],
     title,
     subtitle,
+    primaryAction,
   }) {
     // Generate a list of actions.
     let actions;
     let heroCard;
+
     // If we have a strategy for selecting the hero card.
     if (heroAlgorithms && heroAlgorithms.length) {
       // The actions come from the action algorithms
@@ -101,6 +103,19 @@ export default class Feature extends RockApolloDataSource {
       heroCard = allActions.length ? allActions[0] : null;
     }
 
+    // Ensures that we have a generated ID for the Primary Action related node, if not provided.
+    if (
+      primaryAction &&
+      primaryAction.relatedNode &&
+      !primaryAction.relatedNode.id
+    ) {
+      console.log('setting an ID');
+      primaryAction.relatedNode.id = createGlobalId( // eslint-disable-line
+        JSON.stringify(primaryAction.relatedNode),
+        primaryAction.relatedNode.__typename
+      );
+    }
+
     return {
       // The Feature ID is based on all of the action ids, added together.
       // This is naive, and could be improved.
@@ -111,12 +126,14 @@ export default class Feature extends RockApolloDataSource {
           heroAlgorithms,
           title,
           subtitle,
+          primaryAction,
         },
       }),
       actions,
       heroCard,
       title,
       subtitle,
+      primaryAction,
       // Typanme is required so GQL knows specifically what Feature is being created
       __typename: 'HeroListFeature',
     };
