@@ -8,7 +8,7 @@ import PrayerScreen from '../PrayerScreen';
 import BackgroundImage from '../PrayerBlurBackground';
 import AddedPrayerScreen from './AddedPrayerScreen';
 
-const ADD_PRAYER = gql`
+export const ADD_PRAYER = gql`
   mutation($prayer: String!) {
     addPrayer(text: $prayer) {
       id
@@ -16,7 +16,7 @@ const ADD_PRAYER = gql`
   }
 `;
 
-const GET_USER_PHOTO = gql`
+export const GET_USER_PHOTO = gql`
   query {
     currentUser {
       id

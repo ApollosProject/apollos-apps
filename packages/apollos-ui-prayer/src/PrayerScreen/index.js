@@ -36,7 +36,7 @@ const FlexedScrollView = withTheme(
   'ui-prayer.PrayerScreen.FlexedScrollView'
 )(ScrollView);
 
-const PrimaryActionButton = withTheme(
+export const PrimaryActionButton = withTheme(
   () => ({}),
   'ui-prayer.PrayerScreen.PrimaryActionButton'
 )(Button);
