@@ -91,7 +91,6 @@ export default class Interactions extends RockApolloDataSource {
     const interactionId = await this.post('/Interactions', {
       PersonAliasId: currentUser.primaryAliasId,
       InteractionComponentId: interactionComponent.id,
-      InteractionSessionId: this.context.sessionId,
       Operation: operationName,
       InteractionDateTime: new Date().toJSON(),
       InteractionSummary: `${operationName} - ${itemTitle}`,
@@ -187,7 +186,6 @@ export default class Interactions extends RockApolloDataSource {
     await this.post('/Interactions', {
       PersonAliasId: currentUser.primaryAliasId,
       InteractionComponentId: interactionComponent.id,
-      InteractionSessionId: this.context.sessionId,
       Operation: action,
       InteractionDateTime: new Date().toJSON(),
       InteractionSummary: `${action}`,
