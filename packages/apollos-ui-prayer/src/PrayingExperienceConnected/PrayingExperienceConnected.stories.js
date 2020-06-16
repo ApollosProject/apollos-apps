@@ -2,7 +2,6 @@ import React from 'react';
 import { Alert } from 'react-native';
 
 import { storiesOf } from '@apollosproject/ui-storybook';
-import { ThemeMixin } from '@apollosproject/ui-kit';
 
 import PrayerExperienceConnected from '.';
 

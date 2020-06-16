@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { useMutation } from '@apollo/react-hooks';
+import { AnalyticsContext } from '@apollosproject/ui-analytics';
 import gql from 'graphql-tag';
 import PrayerCard from '../PrayerCard';
 import PrayerScreen from '../PrayerScreen';
@@ -15,20 +16,31 @@ const PRAY = gql`
 `;
 
 const PRAYER_FRAGMENT = gql`
-  fragment prayed on PrayerRequest {
+  fragment PrayedFragment on PrayerRequest {
     isPrayed
   }
 `;
 
-const PrayingScreen = ({ onPressPrimary, prayer }) => {
+const PrayingScreen = ({
+  PrayerCardComponent = PrayerCard,
+  onPressPrimary,
+  prayer,
+  ...screenProps
+}) => {
+  const { track } = useContext(AnalyticsContext);
+
   const [pray, { loading, data }] = useMutation(PRAY, {
     variables: { prayerId: prayer.id },
     update(cache) {
       cache.writeFragment({
-        id: prayer.id,
+        id: `${prayer.__typename}:${prayer.id}`,
         fragment: PRAYER_FRAGMENT,
-        data: { isPrayed: true, __typename: 'PrayerRequest' },
+        fragmentName: 'PrayedFragment',
+        data: { ...prayer, isPrayed: true },
       });
+    },
+    onCompleted: () => {
+      track({ eventName: 'PrayerPrayed', properties: { prayer } });
     },
   });
 
@@ -46,8 +58,9 @@ const PrayingScreen = ({ onPressPrimary, prayer }) => {
       onPressPrimary={handleOnPressPrimary}
       primaryActionText={hasPrayed ? 'Prayed!' : '🙏 Pray'}
       buttonDisabled={loading || hasPrayed}
+      {...screenProps}
     >
-      <PrayerCard
+      <PrayerCardComponent
         prayer={prayer.text}
         avatar={prayer.requestor?.photo || null}
         title={`Pray for ${prayer.requestor?.nickName ||
@@ -58,6 +71,7 @@ const PrayingScreen = ({ onPressPrimary, prayer }) => {
 };
 
 PrayingScreen.propTypes = {
+  PrayerCardComponent: PropTypes.func,
   prayer: PropTypes.shape({
     id: PropTypes.string,
     isLoading: PropTypes.bool,

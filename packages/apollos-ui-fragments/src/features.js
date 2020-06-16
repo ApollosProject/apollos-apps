@@ -17,6 +17,7 @@ const PRAYER_LIST_FEATURE_FRAGMENT = gql`
     subtitle
     isCard
     prayers {
+      __typename
       id
       text
       isPrayed
