@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import wait from 'waait';
 
-import { Providers } from '../testUtils';
+import { Providers, renderWithApolloData } from '../testUtils';
 
 import { PrimaryActionButton } from '../PrayerScreen';
 import AddPrayerCard, { GET_USER_PHOTO, ADD_PRAYER } from '.';
@@ -53,55 +53,47 @@ const mocks = [
 
 describe('The AddPrayerCard component', () => {
   it('should render', async () => {
-    const tree = renderer.create(
+    const tree = renderWithApolloData(
       <Providers mocks={mocks}>
         <AddPrayerCard />
       </Providers>
     );
 
-    await wait(0);
-
     expect(tree).toMatchSnapshot();
   });
 
   it('should accept a title', async () => {
-    const tree = renderer.create(
+    const tree = renderWithApolloData(
       <Providers mocks={mocks}>
         <AddPrayerCard title="Custom" />
       </Providers>
     );
 
-    await wait(0);
-
     expect(tree).toMatchSnapshot();
   });
 
   it('should render a custom component', async () => {
-    const tree = renderer.create(
+    const tree = renderWithApolloData(
       <Providers mocks={mocks}>
         <AddPrayerCard PrayerCardComponent={(props) => JSON.stringify(props)} />
       </Providers>
     );
 
-    await wait(0);
-
     expect(tree).toMatchSnapshot();
   });
 
   it('should render a custom skipText', async () => {
-    const tree = renderer.create(
+    const tree = renderWithApolloData(
       <Providers mocks={mocks}>
         <AddPrayerCard skipText="💣" />
       </Providers>
     );
 
-    await wait(0);
-
     expect(tree).toMatchSnapshot();
   });
 
   it('should render avatars', async () => {
-    const tree = renderer.create(
+    const tree = renderWithApolloData(
       <Providers mocks={mocks}>
         <AddPrayerCard avatars={[{ uri: 'my-image.jpg' }]} />
       </Providers>
@@ -111,15 +103,13 @@ describe('The AddPrayerCard component', () => {
   });
 
   it('should render a custom post-add component', async () => {
-    const tree = renderer.create(
+    const tree = renderWithApolloData(
       <Providers mocks={mocks}>
         <AddPrayerCard
           AddedPrayerComponent={(props) => JSON.stringify(props)}
         />
       </Providers>
     );
-
-    await wait(0);
 
     expect(tree).toMatchSnapshot();
   });
@@ -134,7 +124,7 @@ describe('The AddPrayerCard component', () => {
     const button = tree.root.findByType(PrimaryActionButton);
     button.props.onPress();
 
-    await wait(0);
+    await wait(1);
 
     expect(tree).toMatchSnapshot();
   });
