@@ -104,5 +104,9 @@ storiesOf('ui-kit/Avatar/AvatarList', module)
     <AvatarList avatars={avatars} onPressAdd={() => {}} />
   ))
   .add('onPressAvatar', () => (
-    <AvatarList avatars={avatars} onPressAvatar={() => {}} />
+    <AvatarList
+      avatars={avatars}
+      onPressAvatar={() => {}}
+      onPressAdd={() => {}}
+    />
   ));

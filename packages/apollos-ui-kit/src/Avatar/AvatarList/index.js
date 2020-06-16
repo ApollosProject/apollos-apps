@@ -23,19 +23,23 @@ const AddIconBackground = styled(
     backgroundColor: isLoading
       ? theme.colors.background.inactive
       : theme.colors.action.primary,
-    borderRadius: theme.sizing.avatar.medium * 0.4,
     padding: theme.sizing.avatar.medium * 0.1625,
-    marginRight: theme.sizing.baseUnit * 0.5,
   }),
   'ui-kit.AvatarList.AddIconBackground'
+)(View);
+
+const AndroidTouchableRippleFix = styled(
+  ({ theme }) => ({
+    borderRadius: theme.sizing.avatar.medium * 0.4,
+    marginRight: theme.sizing.baseUnit * 0.5,
+    overflow: 'hidden',
+  }),
+  'ui-kit.AvatarList.AndroidTouchableRippleFix'
 )(View);
 
 const StyledAvatar = withTheme(
   ({ theme }) => ({
     themeSize: theme.sizing.avatar.medium * 0.8,
-    containerStyle: {
-      marginRight: theme.sizing.baseUnit * 0.5,
-    },
   }),
   'ui-kit.AvatarList.StyledAvatar'
 )(Avatar);
@@ -59,23 +63,29 @@ const AvatarFeed = withTheme(
 
 // eslint-disable-next-line react/display-name, react/prop-types
 const renderItem = (onPressAvatar, isLoading) => ({ item }) => (
-  <Touchable
-    onPress={() => onPressAvatar({ item })}
-    disabled={isLoading || !onPressAvatar}
-  >
-    <View>
-      <StyledAvatar source={item?.source} notification={item.notification} />
-    </View>
-  </Touchable>
+  <AndroidTouchableRippleFix>
+    <Touchable
+      disabled={isLoading || !onPressAvatar}
+      onPress={() => onPressAvatar({ item })}
+      useForeground
+    >
+      <View /* Fixes Android throwing an error about the child of a Touchable 🙃 */
+      >
+        <StyledAvatar source={item?.source} notification={item.notification} />
+      </View>
+    </Touchable>
+  </AndroidTouchableRippleFix>
 );
 
 const renderListHeader = (onPressAdd, isLoading) =>
   onPressAdd ? (
-    <Touchable onPress={() => onPressAdd()} disabled={isLoading}>
-      <AddIconBackground isLoading={isLoading}>
-        <AddIcon isLoading={isLoading} />
-      </AddIconBackground>
-    </Touchable>
+    <AndroidTouchableRippleFix>
+      <Touchable onPress={() => onPressAdd()} disabled={isLoading}>
+        <AddIconBackground isLoading={isLoading}>
+          <AddIcon isLoading={isLoading} />
+        </AddIconBackground>
+      </Touchable>
+    </AndroidTouchableRippleFix>
   ) : null;
 
 const AvatarList = ({
