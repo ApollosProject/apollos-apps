@@ -24,7 +24,7 @@ const prayers = [
     id: '3',
     isPrayed: false,
     requestor: {
-      photo: { uri: 'https://picsum.photos/200' },
+      photo: { uri: '' },
     },
   },
   {
