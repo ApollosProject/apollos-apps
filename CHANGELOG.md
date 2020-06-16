@@ -1,3 +1,7 @@
+v1.4.1: June 5, 2020
+
+- Adds integrated universal links (#1474) (27a8fad4)
+
 v1.4.1: June 2, 2020
 
 - Adds Google Cast (#1397) (c9e60b7e)

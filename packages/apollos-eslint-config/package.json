@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/eslint-config",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "main": "./index.js",
   "peerDependencies": {
     "babel-eslint": "10.0.1",
