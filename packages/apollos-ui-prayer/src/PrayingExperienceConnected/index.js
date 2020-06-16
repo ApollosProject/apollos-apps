@@ -8,7 +8,7 @@ import { AnalyticsContext } from '@apollosproject/ui-analytics';
 
 import PrayingExperience from './PrayingExperience';
 
-const GET_PRAYER_FEATURE = gql`
+export const GET_PRAYER_FEATURE = gql`
   query($id: ID!) {
     currentUser {
       id

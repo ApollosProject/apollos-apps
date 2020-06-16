@@ -7,7 +7,7 @@ import PrayerCard from '../PrayerCard';
 import PrayerScreen from '../PrayerScreen';
 import BackgroundImage from '../PrayerBlurBackground';
 
-const PRAY = gql`
+export const PRAY = gql`
   mutation($prayerId: ID!) {
     prayed: interactWithNode(action: PRAY, nodeId: $prayerId) {
       success

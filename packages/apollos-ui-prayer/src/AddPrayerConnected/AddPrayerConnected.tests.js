@@ -17,6 +17,7 @@ const mocks = [
   {
     request: {
       query: ADD_PRAYER,
+      variables: { prayer: '' },
     },
     result: () => ({
       data: {
