@@ -675,6 +675,13 @@ export const featuresSchema = gql`
   enum ACTION_FEATURE_ACTION {
     READ_CONTENT
     READ_EVENT
+    OPEN_URL
+    OPEN_ROUTE
+  }
+
+  type Url implements Node {
+    url: String
+    id: ID!
   }
 
   type ActionListAction {
