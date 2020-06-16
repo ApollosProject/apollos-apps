@@ -5570,14 +5570,54 @@ exports[`The AvatarList component should render a loading state 1`] = `
   }
   data={
     Array [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
+      Object {
+        "id": "1",
+        "source": Object {
+          "uri": "",
+        },
+      },
+      Object {
+        "id": "2",
+        "source": Object {
+          "uri": "",
+        },
+      },
+      Object {
+        "id": "3",
+        "source": Object {
+          "uri": "",
+        },
+      },
+      Object {
+        "id": "4",
+        "source": Object {
+          "uri": "",
+        },
+      },
+      Object {
+        "id": "5",
+        "source": Object {
+          "uri": "",
+        },
+      },
+      Object {
+        "id": "6",
+        "source": Object {
+          "uri": "",
+        },
+      },
+      Object {
+        "id": "7",
+        "source": Object {
+          "uri": "",
+        },
+      },
+      Object {
+        "id": "8",
+        "source": Object {
+          "uri": "",
+        },
+      },
     ]
   }
   decelerationRate="fast"
