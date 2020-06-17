@@ -8,4 +8,6 @@ export default gql`
     }
   }
   ${ApollosConfig.FRAGMENTS.VERTICAL_CARD_LIST_FEATURE_FRAGMENT}
+  # Following fragment nested inside the VerticalCardList
+  ${ApollosConfig.FRAGMENTS.RELATED_NODE_FRAGMENT}
 `;

@@ -8,4 +8,6 @@ export default gql`
     }
   }
   ${ApollosConfig.FRAGMENTS.HERO_LIST_FEATURE_FRAGMENT}
+  # Following fragment nested inside the HeroList
+  ${ApollosConfig.FRAGMENTS.RELATED_NODE_FRAGMENT}
 `;
