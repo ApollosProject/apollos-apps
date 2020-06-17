@@ -55,7 +55,6 @@ const SecondaryActionButton = withTheme(
 )(Button);
 
 const PrayerScreen = ({
-  buttonDisabled,
   children,
   isLoading,
   onPressPrimary,
@@ -82,7 +81,7 @@ const PrayerScreen = ({
             title={primaryActionText}
             loading={isLoading}
             isLoading={false}
-            disabled={buttonDisabled}
+            disabled={!!onPressPrimary}
           />
         </PaddedView>
       </FlexedSafeAreaView>
@@ -91,7 +90,6 @@ const PrayerScreen = ({
 );
 
 PrayerScreen.propTypes = {
-  buttonDisabled: PropTypes.bool,
   children: PropTypes.node,
   isLoading: PropTypes.bool,
   onPressPrimary: PropTypes.func,

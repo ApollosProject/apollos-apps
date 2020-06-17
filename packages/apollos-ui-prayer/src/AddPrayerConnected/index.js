@@ -63,8 +63,11 @@ const AddPrayerConnected = ({
           secondaryActionText={skipText}
           onPressSecondary={swipeForward}
           primaryActionText={primaryButtonText}
-          onPressPrimary={() => addPrayer({ variables: { prayer } })}
-          buttonDisabled={loading || !prayer.length}
+          onPressPrimary={
+            loading || !prayer.length
+              ? null
+              : () => addPrayer({ variables: { prayer } })
+          }
           isLoading={loading}
           {...screenProps}
         >

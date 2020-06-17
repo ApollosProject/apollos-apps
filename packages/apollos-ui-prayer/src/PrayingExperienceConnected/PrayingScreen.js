@@ -57,9 +57,8 @@ const PrayingScreen = ({
     <BackgroundImageBlur source={prayer.requestor?.photo || null}>
       <PrayerScreen
         isLoding={loading}
-        onPressPrimary={handleOnPressPrimary}
+        onPressPrimary={loading || hasPrayed ? null : handleOnPressPrimary}
         primaryActionText={hasPrayed ? 'Prayed!' : '🙏 Pray'}
-        buttonDisabled={loading || hasPrayed}
         {...screenProps}
       >
         <PrayerCardComponent
