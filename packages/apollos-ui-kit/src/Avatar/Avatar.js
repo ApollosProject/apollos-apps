@@ -17,7 +17,7 @@ const Container = styled(
     width: themeSize,
     height: themeSize,
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
   }),
   'Avatar'
 )(View);

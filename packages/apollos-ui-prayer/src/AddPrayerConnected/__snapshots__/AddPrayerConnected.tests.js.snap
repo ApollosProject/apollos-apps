@@ -152,7 +152,7 @@ exports[`The AddPrayerCard component should accept a title 1`] = `
                           Object {
                             "alignItems": "center",
                             "height": 80,
-                            "justifyContent": "flex-end",
+                            "justifyContent": "center",
                             "width": 80,
                           }
                         }
@@ -633,7 +633,7 @@ exports[`The AddPrayerCard component should create a prayer 1`] = `
                           Object {
                             "alignItems": "center",
                             "height": 80,
-                            "justifyContent": "flex-end",
+                            "justifyContent": "center",
                             "width": 80,
                           }
                         }
@@ -1108,7 +1108,7 @@ exports[`The AddPrayerCard component should render 1`] = `
                           Object {
                             "alignItems": "center",
                             "height": 80,
-                            "justifyContent": "flex-end",
+                            "justifyContent": "center",
                             "width": 80,
                           }
                         }
@@ -1774,7 +1774,7 @@ exports[`The AddPrayerCard component should render a custom post-add component 1
                           Object {
                             "alignItems": "center",
                             "height": 80,
-                            "justifyContent": "flex-end",
+                            "justifyContent": "center",
                             "width": 80,
                           }
                         }
@@ -2255,7 +2255,7 @@ exports[`The AddPrayerCard component should render a custom skipText 1`] = `
                           Object {
                             "alignItems": "center",
                             "height": 80,
-                            "justifyContent": "flex-end",
+                            "justifyContent": "center",
                             "width": 80,
                           }
                         }
@@ -2736,7 +2736,7 @@ exports[`The AddPrayerCard component should render avatars 1`] = `
                           Object {
                             "alignItems": "center",
                             "height": 80,
-                            "justifyContent": "flex-end",
+                            "justifyContent": "center",
                             "width": 80,
                           }
                         }

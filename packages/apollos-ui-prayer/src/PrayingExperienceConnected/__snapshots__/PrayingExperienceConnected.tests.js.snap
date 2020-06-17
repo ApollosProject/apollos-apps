@@ -256,7 +256,7 @@ exports[`The PrayingExperienceConnected component hides onboarding 1`] = `
                                   Object {
                                     "alignItems": "center",
                                     "height": 80,
-                                    "justifyContent": "flex-end",
+                                    "justifyContent": "center",
                                     "width": 80,
                                   }
                                 }
@@ -799,7 +799,7 @@ exports[`The PrayingExperienceConnected component hides onboarding 1`] = `
                                   Object {
                                     "alignItems": "center",
                                     "height": 80,
-                                    "justifyContent": "flex-end",
+                                    "justifyContent": "center",
                                     "width": 80,
                                   }
                                 }

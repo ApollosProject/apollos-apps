@@ -355,7 +355,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -459,7 +459,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -563,7 +563,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -667,7 +667,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -755,7 +755,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -843,7 +843,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -931,7 +931,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -1019,7 +1019,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -1271,7 +1271,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -1375,7 +1375,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -1479,7 +1479,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -1583,7 +1583,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -1671,7 +1671,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -1759,7 +1759,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -1847,7 +1847,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -1935,7 +1935,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -2187,7 +2187,7 @@ exports[`The PrayerFeature component should render 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -2291,7 +2291,7 @@ exports[`The PrayerFeature component should render 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -2395,7 +2395,7 @@ exports[`The PrayerFeature component should render 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -2499,7 +2499,7 @@ exports[`The PrayerFeature component should render 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -2587,7 +2587,7 @@ exports[`The PrayerFeature component should render 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -2675,7 +2675,7 @@ exports[`The PrayerFeature component should render 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -2763,7 +2763,7 @@ exports[`The PrayerFeature component should render 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -2851,7 +2851,7 @@ exports[`The PrayerFeature component should render 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -3116,7 +3116,7 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -3220,7 +3220,7 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -3324,7 +3324,7 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -3428,7 +3428,7 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -3516,7 +3516,7 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -3604,7 +3604,7 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -3692,7 +3692,7 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -3780,7 +3780,7 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -3995,7 +3995,7 @@ Array [
                 Object {
                   "alignItems": "center",
                   "height": 64,
-                  "justifyContent": "flex-end",
+                  "justifyContent": "center",
                   "marginRight": 8,
                   "width": 64,
                 }
@@ -4169,7 +4169,7 @@ Array [
                 Object {
                   "alignItems": "center",
                   "height": 64,
-                  "justifyContent": "flex-end",
+                  "justifyContent": "center",
                   "marginRight": 8,
                   "width": 64,
                 }
@@ -4343,7 +4343,7 @@ Array [
                 Object {
                   "alignItems": "center",
                   "height": 64,
-                  "justifyContent": "flex-end",
+                  "justifyContent": "center",
                   "marginRight": 8,
                   "width": 64,
                 }
@@ -4517,7 +4517,7 @@ Array [
                 Object {
                   "alignItems": "center",
                   "height": 64,
-                  "justifyContent": "flex-end",
+                  "justifyContent": "center",
                   "marginRight": 8,
                   "width": 64,
                 }
@@ -4691,7 +4691,7 @@ Array [
                 Object {
                   "alignItems": "center",
                   "height": 64,
-                  "justifyContent": "flex-end",
+                  "justifyContent": "center",
                   "marginRight": 8,
                   "width": 64,
                 }
@@ -4865,7 +4865,7 @@ Array [
                 Object {
                   "alignItems": "center",
                   "height": 64,
-                  "justifyContent": "flex-end",
+                  "justifyContent": "center",
                   "marginRight": 8,
                   "width": 64,
                 }
@@ -5202,7 +5202,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -5306,7 +5306,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -5410,7 +5410,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -5514,7 +5514,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -5602,7 +5602,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -5690,7 +5690,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -5778,7 +5778,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -5866,7 +5866,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -6131,7 +6131,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -6235,7 +6235,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -6339,7 +6339,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -6443,7 +6443,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -6531,7 +6531,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -6619,7 +6619,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -6707,7 +6707,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -6795,7 +6795,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
                   Object {
                     "alignItems": "center",
                     "height": 64,
-                    "justifyContent": "flex-end",
+                    "justifyContent": "center",
                     "marginRight": 8,
                     "width": 64,
                   }
@@ -7024,7 +7024,7 @@ Array [
                 Object {
                   "alignItems": "center",
                   "height": 64,
-                  "justifyContent": "flex-end",
+                  "justifyContent": "center",
                   "marginRight": 8,
                   "width": 64,
                 }
@@ -7128,7 +7128,7 @@ Array [
                 Object {
                   "alignItems": "center",
                   "height": 64,
-                  "justifyContent": "flex-end",
+                  "justifyContent": "center",
                   "marginRight": 8,
                   "width": 64,
                 }
@@ -7232,7 +7232,7 @@ Array [
                 Object {
                   "alignItems": "center",
                   "height": 64,
-                  "justifyContent": "flex-end",
+                  "justifyContent": "center",
                   "marginRight": 8,
                   "width": 64,
                 }
@@ -7336,7 +7336,7 @@ Array [
                 Object {
                   "alignItems": "center",
                   "height": 64,
-                  "justifyContent": "flex-end",
+                  "justifyContent": "center",
                   "marginRight": 8,
                   "width": 64,
                 }
@@ -7424,7 +7424,7 @@ Array [
                 Object {
                   "alignItems": "center",
                   "height": 64,
-                  "justifyContent": "flex-end",
+                  "justifyContent": "center",
                   "marginRight": 8,
                   "width": 64,
                 }
@@ -7512,7 +7512,7 @@ Array [
                 Object {
                   "alignItems": "center",
                   "height": 64,
-                  "justifyContent": "flex-end",
+                  "justifyContent": "center",
                   "marginRight": 8,
                   "width": 64,
                 }
@@ -7600,7 +7600,7 @@ Array [
                 Object {
                   "alignItems": "center",
                   "height": 64,
-                  "justifyContent": "flex-end",
+                  "justifyContent": "center",
                   "marginRight": 8,
                   "width": 64,
                 }
@@ -7688,7 +7688,7 @@ Array [
                 Object {
                   "alignItems": "center",
                   "height": 64,
-                  "justifyContent": "flex-end",
+                  "justifyContent": "center",
                   "marginRight": 8,
                   "width": 64,
                 }
