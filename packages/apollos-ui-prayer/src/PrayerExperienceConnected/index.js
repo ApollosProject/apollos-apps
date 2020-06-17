@@ -53,8 +53,6 @@ const PrayerExperienceConnected = ({
   const { prayers = [] } = data?.feature || {};
   const photo = data?.currentUser?.profile?.photo;
 
-  const [isOnboarding, setIsOnboarding] = useState(true);
-
   const Wrapper = asModal ? ModalView : React.Fragment;
 
   const handleFinish = () => {
@@ -75,8 +73,6 @@ const PrayerExperienceConnected = ({
           OnboardingComponent={OnboardingComponent}
           primaryAvatar={photo}
           willShowOnboarding={showOnboarding}
-          isOnboarding={isOnboarding}
-          setIsOnboarding={setIsOnboarding}
           onFinish={onFinish}
           {...otherProps}
         />
