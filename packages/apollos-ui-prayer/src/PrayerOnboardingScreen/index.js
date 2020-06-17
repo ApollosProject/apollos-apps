@@ -3,15 +3,14 @@ import { Animated, Dimensions, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 import {
   AvatarCloud,
-  H3,
+  BackgroundImageBlur,
   BodyText,
+  H3,
   PaddedView,
   styled,
 } from '@apollosproject/ui-kit';
 
 import PrayerScreen from '../PrayerScreen';
-
-import BackgroundImage from '../PrayerBlurBackground';
 
 const Container = styled(
   { flexGrow: 1, alignItems: 'center' },
@@ -63,22 +62,21 @@ const PrayerOnboardingScreen = ({
         },
       ]}
     >
-      <PrayerScreen
-        {...props}
-        background={<BackgroundImage source={primaryAvatar} />}
-      >
-        <AvatarCloud
-          maxAvatarWidth={0.4}
-          primaryAvatar={primaryAvatar}
-          avatars={avatars.slice(0, 4)}
-        />
-        <Container>
-          <HeadingText>{title}</HeadingText>
-          <BodyContainer>
-            <ScreenBodyText>{body}</ScreenBodyText>
-          </BodyContainer>
-        </Container>
-      </PrayerScreen>
+      <BackgroundImageBlur source={primaryAvatar}>
+        <PrayerScreen {...props}>
+          <AvatarCloud
+            maxAvatarWidth={0.4}
+            primaryAvatar={primaryAvatar}
+            avatars={avatars.slice(0, 4)}
+          />
+          <Container>
+            <HeadingText>{title}</HeadingText>
+            <BodyContainer>
+              <ScreenBodyText>{body}</ScreenBodyText>
+            </BodyContainer>
+          </Container>
+        </PrayerScreen>
+      </BackgroundImageBlur>
     </Animated.View>
   );
 };

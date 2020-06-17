@@ -56,7 +56,6 @@ const SecondaryActionButton = withTheme(
 
 const PrayerScreen = ({
   buttonDisabled,
-  background,
   children,
   isLoading,
   onPressPrimary,
@@ -65,7 +64,6 @@ const PrayerScreen = ({
   secondaryActionText,
 }) => (
   <FlexedKeyboardAvoidingView behavior={'padding'}>
-    {background}
     <FlexedScrollView
       style={StyleSheet.absoluteFill}
       keyboardShouldPersistTaps={'never'}
@@ -100,7 +98,6 @@ PrayerScreen.propTypes = {
   onPressSecondary: PropTypes.func,
   primaryActionText: PropTypes.string,
   secondaryActionText: PropTypes.string,
-  background: PropTypes.element,
 };
 
 PrayerScreen.defaultProps = {

@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
+import gql from 'graphql-tag';
 import PropTypes from 'prop-types';
 import { useMutation } from '@apollo/react-hooks';
+
+import { BackgroundImageBlur } from '@apollosproject/ui-kit';
 import { AnalyticsContext } from '@apollosproject/ui-analytics';
-import gql from 'graphql-tag';
+
 import PrayerCard from '../PrayerCard';
 import PrayerScreen from '../PrayerScreen';
-import BackgroundImage from '../PrayerBlurBackground';
 
 export const PRAY = gql`
   mutation($prayerId: ID!) {
@@ -52,21 +54,22 @@ const PrayingScreen = ({
   const hasPrayed = data?.prayed?.success || prayer.isPrayed;
 
   return (
-    <PrayerScreen
-      background={<BackgroundImage source={prayer.requestor?.photo || null} />}
-      isLoding={loading}
-      onPressPrimary={handleOnPressPrimary}
-      primaryActionText={hasPrayed ? 'Prayed!' : '🙏 Pray'}
-      buttonDisabled={loading || hasPrayed}
-      {...screenProps}
-    >
-      <PrayerCardComponent
-        prayer={prayer.text}
-        avatar={prayer.requestor?.photo || null}
-        title={`Pray for ${prayer.requestor?.nickName ||
-          prayer.requestor?.firstName}`}
-      />
-    </PrayerScreen>
+    <BackgroundImageBlur source={prayer.requestor?.photo || null}>
+      <PrayerScreen
+        isLoding={loading}
+        onPressPrimary={handleOnPressPrimary}
+        primaryActionText={hasPrayed ? 'Prayed!' : '🙏 Pray'}
+        buttonDisabled={loading || hasPrayed}
+        {...screenProps}
+      >
+        <PrayerCardComponent
+          prayer={prayer.text}
+          avatar={prayer.requestor?.photo || null}
+          title={`Pray for ${prayer.requestor?.nickName ||
+            prayer.requestor?.firstName}`}
+        />
+      </PrayerScreen>
+    </BackgroundImageBlur>
   );
 };
 

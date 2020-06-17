@@ -1,11 +1,13 @@
 import React, { useState, useContext } from 'react';
-import PropTypes from 'prop-types';
-import { useQuery, useMutation } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
+import { useQuery, useMutation } from '@apollo/react-hooks';
+import PropTypes from 'prop-types';
+
+import { BackgroundImageBlur } from '@apollosproject/ui-kit';
 import { AnalyticsContext } from '@apollosproject/ui-analytics';
+
 import PrayerCard from '../PrayerCard';
 import PrayerScreen from '../PrayerScreen';
-import BackgroundImage from '../PrayerBlurBackground';
 import AddedPrayerScreen from './AddedPrayerScreen';
 
 export const ADD_PRAYER = gql`
@@ -56,22 +58,23 @@ const AddPrayerConnected = ({
 
   return (
     <>
-      <PrayerScreen
-        secondaryActionText={skipText}
-        onPressSecondary={swipeForward}
-        primaryActionText={primaryButtonText}
-        onPressPrimary={() => addPrayer({ variables: { prayer } })}
-        buttonDisabled={loading || !prayer.length}
-        isLoading={loading}
-        background={<BackgroundImage source={photo || null} />}
-        {...screenProps}
-      >
-        <PrayerCardComponent
-          avatar={photo || null}
-          title={title}
-          onPrayerChangeText={setPrayer}
-        />
-      </PrayerScreen>
+      <BackgroundImageBlur source={photo || null}>
+        <PrayerScreen
+          secondaryActionText={skipText}
+          onPressSecondary={swipeForward}
+          primaryActionText={primaryButtonText}
+          onPressPrimary={() => addPrayer({ variables: { prayer } })}
+          buttonDisabled={loading || !prayer.length}
+          isLoading={loading}
+          {...screenProps}
+        >
+          <PrayerCardComponent
+            avatar={photo || null}
+            title={title}
+            onPrayerChangeText={setPrayer}
+          />
+        </PrayerScreen>
+      </BackgroundImageBlur>
       {completed ? (
         <AddedPrayerComponent
           avatars={avatars}

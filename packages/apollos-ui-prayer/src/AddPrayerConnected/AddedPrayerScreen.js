@@ -1,6 +1,9 @@
 import React from 'react';
 import { Text } from 'react-native';
+
 import { ScriptureText, VerseNumber } from '@apollosproject/ui-scripture';
+import { BodyText } from '@apollosproject/ui-kit';
+
 import PrayerOnboardingScreen from '../PrayerOnboardingScreen';
 
 const AddedPrayerScreen = (props) => (
@@ -15,7 +18,7 @@ const AddedPrayerScreen = (props) => (
           <VerseNumber>1 John 5:14</VerseNumber>
         </ScriptureText>
         {'\n\n'}
-        We’re praying with you{'\n'}and believe in you.
+        <BodyText>We’re praying with you{'\n'}and believe in you.</BodyText>
       </Text>
     }
     {...props}
