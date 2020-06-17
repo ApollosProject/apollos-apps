@@ -3,7 +3,7 @@ import wait from 'waait';
 import { Providers, renderWithApolloData } from '../testUtils';
 
 import { PrayerDialogScreen } from '../screens';
-import { PRAY } from './PrayingScreen';
+import { PRAY } from '../screens/PrayerScreen';
 import PrayingExperienceConnected, { GET_PRAYER_FEATURE } from '.';
 
 jest.mock('react-native-device-info', () => ({

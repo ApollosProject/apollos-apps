@@ -6,8 +6,8 @@ import { useMutation } from '@apollo/react-hooks';
 import { BackgroundImageBlur } from '@apollosproject/ui-kit';
 import { AnalyticsContext } from '@apollosproject/ui-analytics';
 
-import PrayerCard from '../PrayerCard';
-import PrayerView from '../PrayerView';
+import PrayerCard from '../../PrayerCard';
+import PrayerView from '../../PrayerView';
 
 export const PRAY = gql`
   mutation($prayerId: ID!) {
@@ -23,7 +23,7 @@ const PRAYER_FRAGMENT = gql`
   }
 `;
 
-const PrayingScreen = ({
+const PrayerScreen = ({
   PrayerCardComponent = PrayerCard,
   onPressPrimary,
   prayer,
@@ -72,7 +72,7 @@ const PrayingScreen = ({
   );
 };
 
-PrayingScreen.propTypes = {
+PrayerScreen.propTypes = {
   PrayerCardComponent: PropTypes.func,
   prayer: PropTypes.shape({
     id: PropTypes.string,
@@ -87,4 +87,4 @@ PrayingScreen.propTypes = {
   onPressPrimary: PropTypes.func,
 };
 
-export default PrayingScreen;
+export default PrayerScreen;
