@@ -81,7 +81,7 @@ const PrayerScreen = ({
             title={primaryActionText}
             loading={isLoading}
             isLoading={false}
-            disabled={!!onPressPrimary}
+            disabled={!onPressPrimary}
           />
         </PaddedView>
       </FlexedSafeAreaView>
