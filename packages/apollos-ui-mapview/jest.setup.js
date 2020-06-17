@@ -1,4 +1,8 @@
 import { NativeModules } from 'react-native';
+import ApollosConfig from '@apollosproject/config';
+import FRAGMENTS from '@apollosproject/ui-fragments';
+
+ApollosConfig.loadJs({ FRAGMENTS });
 
 jest.mock('@apollosproject/ui-media-player', () => ({
   MediaPlayerSpacer: ({ children }) => children,
@@ -10,14 +14,11 @@ jest.mock('@apollosproject/ui-media-player', () => ({
 
 jest.mock('react-native-maps');
 
-jest.mock(
-  '../apollos-ui-kit/node_modules/react-native-safe-area-context/',
-  () => ({
-    SafeAreaConsumer: ({ children }) =>
-      children({ top: 0, bottom: 0, left: 0, right: 0 }),
-    SafeAreaProvider: ({ children }) => children,
-  })
-);
+jest.mock('react-native-safe-area-context', () => ({
+  SafeAreaConsumer: ({ children }) =>
+    children({ top: 0, bottom: 0, left: 0, right: 0 }),
+  SafeAreaProvider: ({ children }) => children,
+}));
 
 NativeModules.RNGestureHandlerModule = {
   attachGestureHandler: jest.fn(),
@@ -30,3 +31,5 @@ NativeModules.RNGestureHandlerModule = {
 };
 
 jest.mock('NativeAnimatedHelper');
+
+jest.mock('@react-native-community/datetimepicker', () => 'DatePicker');

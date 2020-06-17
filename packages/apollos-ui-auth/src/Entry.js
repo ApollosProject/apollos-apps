@@ -6,7 +6,6 @@ import {
   ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
 } from 'react-native';
 import { get } from 'lodash';
 import {
@@ -24,6 +23,7 @@ import {
   LegalText,
   PromptText,
   TabButton,
+  TabButtonText,
   TabButtonWrapper,
   TabCard,
   TabContainer,
@@ -31,9 +31,9 @@ import {
   TitleText,
 } from './styles';
 
-const FullScreenImage = styled({
+const FullScreenGradientBackground = styled({
+  ...StyleSheet.absoluteFillObject,
   resizeMode: 'cover',
-  position: 'absolute',
 })(BackgroundView);
 
 const Entry = ({
@@ -66,9 +66,13 @@ const Entry = ({
         Platform.OS === 'android' ? StatusBar.currentHeight : 0
       }
     >
-      <BackgroundComponent />
+      {React.isValidElement(BackgroundComponent) ? (
+        BackgroundComponent
+      ) : (
+        <BackgroundComponent />
+      )}
       <FlexedSafeAreaView>
-        <ScrollView>
+        <ScrollView keyboardShouldPersistTaps="always">
           <PaddedView>
             <TitleText>{authTitleText}</TitleText>
             <PromptText padded>{promptText}</PromptText>
@@ -76,8 +80,8 @@ const Entry = ({
               <TabContainer alternateLogin={alternateLogin}>
                 <TabButtonWrapper>
                   <Touchable>
-                    <TabButton alternateLogin={alternateLogin} isActive>
-                      <Text>{tabTitle}</Text>
+                    <TabButton isActive>
+                      <TabButtonText isActive>{tabTitle}</TabButtonText>
                     </TabButton>
                   </Touchable>
                 </TabButtonWrapper>
@@ -85,8 +89,8 @@ const Entry = ({
                 {onPressAlternateLogin ? (
                   <TabButtonWrapper>
                     <Touchable onPress={onPressAlternateLogin}>
-                      <TabButton alternateLogin={alternateLogin}>
-                        <Text>{alternateLoginText}</Text>
+                      <TabButton>
+                        <TabButtonText>{alternateLoginText}</TabButtonText>
                       </TabButton>
                     </Touchable>
                   </TabButtonWrapper>
@@ -162,7 +166,7 @@ Entry.defaultProps = {
   authTitleText: 'Have we met?',
   promptText:
     'Sign in for a personalized experience that helps you grow and connect with God.',
-  BackgroundComponent: FullScreenImage,
+  BackgroundComponent: <FullScreenGradientBackground />,
   alternateLogin: false,
 };
 

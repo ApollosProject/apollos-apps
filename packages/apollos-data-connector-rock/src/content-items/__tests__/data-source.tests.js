@@ -1,7 +1,8 @@
 import { fetch } from 'apollo-server-env';
 import ApollosConfig from '@apollosproject/config';
+import { createGlobalId } from '@apollosproject/server-core';
+import { AuthenticationError } from 'apollo-server';
 import { buildGetMock } from '../../test-utils';
-
 import ContentItemsDataSource from '../data-source';
 
 ApollosConfig.loadJs({
@@ -11,6 +12,7 @@ ApollosConfig.loadJs({
     IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
     SHARE_URL: 'https://apollosrock.newspring.cc',
     TIMEZONE: 'America/New_York',
+    USE_PLUGIN: true,
   },
   ROCK_MAPPINGS: {
     SERMON_CHANNEL_ID: 'TEST_ID',
@@ -292,7 +294,7 @@ describe('ContentItemsModel', () => {
       reference: 'john 3',
     }));
     dataSource.context = {
-      dataSources: { Features: { createTextFeature, createScriptureFeature } },
+      dataSources: { Feature: { createTextFeature, createScriptureFeature } },
     };
     const result = dataSource.getFeatures({
       attributeValues: {
@@ -313,7 +315,7 @@ describe('ContentItemsModel', () => {
       id: 'TextFeature:123',
       body: 'something',
     }));
-    dataSource.context = { dataSources: { Features: { createTextFeature } } };
+    dataSource.context = { dataSources: { Feature: { createTextFeature } } };
     const result = dataSource.getFeatures({
       attributeValues: { textFeature: { id: 123, value: 'something' } },
     });
@@ -327,7 +329,7 @@ describe('ContentItemsModel', () => {
       id: 'TextFeature:123',
       body: 'something',
     }));
-    dataSource.context = { dataSources: { Features: { createTextFeature } } };
+    dataSource.context = { dataSources: { Feature: { createTextFeature } } };
     const result = dataSource.getFeatures({
       attributeValues: {
         textFeatures: {
@@ -347,7 +349,7 @@ describe('ContentItemsModel', () => {
       body: 'something',
     }));
     dataSource.context = {
-      dataSources: { Features: { createScriptureFeature } },
+      dataSources: { Feature: { createScriptureFeature } },
     };
     const result = dataSource.getFeatures({
       attributeValues: {
@@ -368,7 +370,7 @@ describe('ContentItemsModel', () => {
       body: 'something',
     }));
     dataSource.context = {
-      dataSources: { Features: { createScriptureFeature } },
+      dataSources: { Feature: { createScriptureFeature } },
     };
     const result = dataSource.getFeatures({
       attributeValues: {
@@ -390,7 +392,7 @@ describe('ContentItemsModel', () => {
       id: 'TextFeature:123',
       body: 'something',
     }));
-    dataSource.context = { dataSources: { Features: { createTextFeature } } };
+    dataSource.context = { dataSources: { Feature: { createTextFeature } } };
     const result = dataSource.getFeatures({
       attributeValues: {
         textFeatures: {
@@ -413,7 +415,7 @@ describe('ContentItemsModel', () => {
       id: 'TextFeature:123',
       body: 'something',
     }));
-    dataSource.context = { dataSources: { Features: { createTextFeature } } };
+    dataSource.context = { dataSources: { Feature: { createTextFeature } } };
     const result = dataSource.getFeatures({
       attributeValues: { textFeature: { id: 123, value: '' } },
     });
@@ -681,5 +683,288 @@ describe('ContentItemsModel', () => {
 
     expect(image).toMatchSnapshot('Image result');
     expect(getMock.mock.calls).toMatchSnapshot('Get mock calls');
+  });
+  it('gets the next item for a content series, based on past interactions', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = jest.fn(() =>
+      Promise.resolve([{ id: 1 }, { id: 2 }, { id: 3 }])
+    );
+    dataSource.context = {
+      dataSources: {
+        Auth: { getCurrentPerson: () => ({ id: '1' }) },
+        Interactions: {
+          getInteractionsForCurrentUserAndNodes: jest.fn(() =>
+            Promise.resolve([
+              { foreignKey: createGlobalId(1, 'UniversalContentItem') },
+              { foreignKey: createGlobalId(2, 'UniversalContentItem') },
+              { foreignKey: createGlobalId(3, 'UniversalContentItem') },
+            ])
+          ),
+        },
+      },
+    };
+    dataSource.resolveType = () => 'UniversalContentItem';
+
+    const result = await dataSource.getUpNext({ id: 'parent-channel-1' });
+
+    expect(result).toEqual(null);
+    expect(dataSource.get).toMatchSnapshot();
+    expect(
+      dataSource.context.dataSources.Interactions
+        .getInteractionsForCurrentUserAndNodes
+    ).toMatchSnapshot();
+  });
+  it('gets the next item for a content series, based on different past interactions', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = jest.fn(() =>
+      Promise.resolve([{ id: 1 }, { id: 2 }, { id: 3 }])
+    );
+    dataSource.context = {
+      dataSources: {
+        Auth: { getCurrentPerson: () => ({ id: '1' }) },
+        Interactions: {
+          getInteractionsForCurrentUserAndNodes: jest.fn(() =>
+            Promise.resolve([
+              { foreignKey: createGlobalId(1, 'UniversalContentItem') },
+            ])
+          ),
+        },
+      },
+    };
+    dataSource.resolveType = () => 'UniversalContentItem';
+
+    const result = await dataSource.getUpNext({ id: 'parent-channel-1' });
+
+    expect(result).toEqual({
+      id: 2,
+      apollosId: createGlobalId(2, 'UniversalContentItem'),
+    });
+    expect(dataSource.get).toMatchSnapshot();
+    expect(
+      dataSource.context.dataSources.Interactions
+        .getInteractionsForCurrentUserAndNodes
+    ).toMatchSnapshot();
+  });
+  it('returns null when getting the next item based on past interactions without a user', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = jest.fn(() =>
+      Promise.resolve([{ id: 1 }, { id: 2 }, { id: 3 }])
+    );
+    dataSource.context = {
+      dataSources: {
+        Auth: {
+          getCurrentPerson: () => {
+            throw new AuthenticationError();
+          },
+        },
+        Interactions: {
+          getInteractionsForCurrentUserAndNodes: jest.fn(() =>
+            Promise.resolve([
+              { foreignKey: createGlobalId(1, 'UniversalContentItem') },
+            ])
+          ),
+        },
+      },
+    };
+    dataSource.resolveType = () => 'UniversalContentItem';
+
+    const result = await dataSource.getUpNext({ id: 'parent-channel-1' });
+
+    expect(result).toEqual(null);
+    expect(dataSource.get).toMatchSnapshot();
+    expect(
+      dataSource.context.dataSources.Interactions
+        .getInteractionsForCurrentUserAndNodes
+    ).toMatchSnapshot();
+  });
+
+  it('gets a percentage for a content series, based on past interactions', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = jest.fn(() =>
+      Promise.resolve([{ id: 3 }, { id: 2 }, { id: 1 }])
+    );
+    dataSource.context = {
+      dataSources: {
+        Auth: { getCurrentPerson: () => ({ id: '1' }) },
+        Interactions: {
+          getInteractionsForCurrentUserAndNodes: jest.fn(() =>
+            Promise.resolve([
+              { foreignKey: createGlobalId(1, 'UniversalContentItem') },
+              { foreignKey: createGlobalId(2, 'UniversalContentItem') },
+            ])
+          ),
+        },
+      },
+    };
+    dataSource.resolveType = () => 'UniversalContentItem';
+
+    const result = await dataSource.getPercentComplete({
+      id: 'parent-channel-1',
+    });
+
+    const twoThirdsPercent = (2 / 3) * 100;
+    expect(result).toEqual(twoThirdsPercent);
+    expect(dataSource.get).toMatchSnapshot();
+    expect(
+      dataSource.context.dataSources.Interactions
+        .getInteractionsForCurrentUserAndNodes
+    ).toMatchSnapshot();
+  });
+  it('gets a percentage for a content series, based on different past interactions', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = jest.fn(() =>
+      Promise.resolve([{ id: 3 }, { id: 2 }, { id: 1 }])
+    );
+    dataSource.context = {
+      dataSources: {
+        Auth: { getCurrentPerson: () => ({ id: '1' }) },
+        Interactions: {
+          getInteractionsForCurrentUserAndNodes: jest.fn(() =>
+            Promise.resolve([])
+          ),
+        },
+      },
+    };
+    dataSource.resolveType = () => 'UniversalContentItem';
+
+    const result = await dataSource.getPercentComplete({
+      id: 'parent-channel-1',
+    });
+
+    expect(result).toEqual(0.0);
+    expect(dataSource.get).toMatchSnapshot();
+    expect(
+      dataSource.context.dataSources.Interactions
+        .getInteractionsForCurrentUserAndNodes
+    ).toMatchSnapshot();
+  });
+
+  it('gets a percentage for a content series, even if a series has no children', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = jest.fn(() => Promise.resolve([]));
+    dataSource.context = {
+      dataSources: {
+        Auth: { getCurrentPerson: () => ({ id: '1' }) },
+        Interactions: {
+          getInteractionsForCurrentUserAndNodes: jest.fn(() =>
+            Promise.resolve([])
+          ),
+        },
+      },
+    };
+    dataSource.resolveType = () => 'UniversalContentItem';
+
+    const result = await dataSource.getPercentComplete({
+      id: 'parent-channel-1',
+    });
+
+    expect(result).toEqual(0);
+    expect(dataSource.get).toMatchSnapshot();
+    expect(
+      dataSource.context.dataSources.Interactions
+        .getInteractionsForCurrentUserAndNodes
+    ).toMatchSnapshot();
+  });
+
+  it('returns null when getting a percentage for a content series without a user', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = jest.fn(() =>
+      Promise.resolve([{ id: 3 }, { id: 2 }, { id: 1 }])
+    );
+    dataSource.context = {
+      dataSources: {
+        Auth: {
+          getCurrentPerson: () => {
+            throw new AuthenticationError();
+          },
+        },
+        Interactions: {
+          getInteractionsForCurrentUserAndNodes: jest.fn(() =>
+            Promise.resolve([])
+          ),
+        },
+      },
+    };
+    dataSource.resolveType = () => 'UniversalContentItem';
+
+    const result = await dataSource.getPercentComplete({
+      id: 'parent-channel-1',
+    });
+
+    expect(result).toEqual(null);
+    expect(dataSource.get).toMatchSnapshot();
+    expect(
+      dataSource.context.dataSources.Interactions
+        .getInteractionsForCurrentUserAndNodes
+    ).toMatchSnapshot();
+  });
+  it('gets series a user has viewed', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = jest.fn(() => Promise.resolve([{ id: 3 }]));
+    dataSource.getPercentComplete = jest.fn(({ id }) => (id === '1' ? 100 : 0));
+    dataSource.getFromIds = jest.fn();
+    dataSource.context = {
+      dataSources: {
+        Auth: { getCurrentPerson: () => ({ id: '1' }) },
+        Interactions: {
+          getInteractionsForCurrentUser: jest.fn(() =>
+            Promise.resolve([
+              { foreignKey: createGlobalId('1', 'UniversalContentItem') },
+              { foreignKey: createGlobalId('2', 'UniversalContentItem') },
+              { foreignKey: createGlobalId('2', 'UniversalContentItem') },
+              { foreignKey: createGlobalId('3', 'UniversalContentItem') },
+            ])
+          ),
+        },
+      },
+    };
+
+    await dataSource.getSeriesWithUserProgress();
+    expect(dataSource.getFromIds.mock.calls).toMatchSnapshot('get from ids');
+    expect(dataSource.getPercentComplete.mock.calls).toMatchSnapshot(
+      'get percent complete'
+    );
+  });
+  it('gets an empty array fpr series a user has viewed without a user', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = jest.fn(() => Promise.resolve([{ id: 3 }]));
+    dataSource.getPercentComplete = jest.fn(({ id }) => (id === '1' ? 100 : 0));
+    dataSource.getFromIds = jest.fn();
+    dataSource.context = {
+      dataSources: {
+        getCurrentPerson: () => {
+          throw new AuthenticationError();
+        },
+        Interactions: {
+          getInteractionsForCurrentUser: jest.fn(() =>
+            Promise.resolve([
+              { foreignKey: createGlobalId('1', 'UniversalContentItem') },
+              { foreignKey: createGlobalId('2', 'UniversalContentItem') },
+              { foreignKey: createGlobalId('2', 'UniversalContentItem') },
+              { foreignKey: createGlobalId('3', 'UniversalContentItem') },
+            ])
+          ),
+        },
+      },
+    };
+
+    const result = await dataSource.getSeriesWithUserProgress();
+    expect(dataSource.getFromIds.mock.calls).toMatchSnapshot('get from ids');
+    expect(dataSource.getPercentComplete.mock.calls).toMatchSnapshot(
+      'get percent complete'
+    );
+    expect(await result.get()).toMatchSnapshot('result');
+  });
+  it('returns a hyphonated titled if any words are longer than 7 characters', async () => {
+    const dataSource = new ContentItemsDataSource();
+    const result = dataSource.createHyphenatedString({
+      text:
+        'Antidisestablishmentarianism is useful when center justifying a text.',
+    });
+
+    // This may look identical but it has a bunch of hidden `\u00AD` hyphens in it.
+    expect(result).toEqual(
+      'Antidises­tab­lish­men­tar­i­an­ism is useful when center justifying a text.'
+    );
   });
 });

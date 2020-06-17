@@ -1,3 +1,146 @@
+v1.4.1: June 5, 2020
+
+- Adds integrated universal links (#1474) (27a8fad4)
+
+v1.4.1: June 2, 2020
+
+- Adds Google Cast (#1397) (c9e60b7e)
+- Adds eslint plugin for react hooks (#1463) (51b0a6fa)
+- Adds webview feature height as a prop (#1453) (cbe1c5b4)
+- Adds ui-prayer package (#1451) (1d4c418e)
+- Adds Rookout Debug Information (#1456) (0151e368)
+- Adds withTheme to mapview confirm button so it can be overriden (#1452) (d85d8892)
+- Adds Webview feature (#1442) (2995f6dd)
+
+- Defaults link text color to secondary on Webview feature (#1459) (4cbcf103)
+- Ensures the mapview renders fine with campuses with a null lat/long (#1454) (02d0b8e5)
+- Ensures SearchCards without images still render (#1468) (b87c738e)
+- Deprecates HeroListFeature naming to HeroList (#1450) (abb4ab29)
+- Update yarn.lock (#1455) (2fccc03c)
+
+- Fixes DatePicker text invisible in dark mode (#1470) (35321e18)
+- Fixes TouchableScale animating when there is no "action/handler" (#1438) (5c78c5ab)\
+- Fixes schema and triggers canary build (#1460) (21438437)
+
+
+v1.4.0: May 4, 2020
+
+- Adds backwards compatibility for contentCardComponentMapper (#1445) (f334e76b)
+- Adds Up Next Feature + Interactions Enhancements (#1444) (44b0ab28)
+- Adds Hero list feature API and ConnectedComponent (#1441) (7e23a3c8)
+- Adds Pull to refetch on Features feed (#1437) (2c2fb437)
+- Adds HeroListFeature component to ui-connected package (#1428) (e7ede76f)
+- Exposes Component prop on ContentCardComponentMapper (#1443) (f900e7c7)
+- Fixes crash in search on android (#1440) (83f9abf1)\
+
+v1.4.0-beta.2: April 27, 2020
+
+- Adds CalendarActionImages from Willow and for Willow (#1434) (e5538c45)
+- Adds ability for HTMLView to handle non-http links (#1432) (8e5478fa)
+- Adds Features feed incremental loading (#1425) (8db9fbbf)
+
+- Refactors ActionListCard to be ActionList component (#1427) (255d7778)
+- Pulls new content items when opening content single (#1431) (d4bd596b)
+- Updates token.js for longer auth expiration (#1429) (dc5501d9)
+
+- Fixes barStyle to be correct for light and dark theme types (#1433) (e1dc6df1)
+- Fixes Html content doubling issue (#1430) (67d59a91)
+
+v1.4.0-beta.1: April 17, 2020
+
+- Refactors FeaturedFeedConnected to be a feed of feeds using FlatList (#1423) (5143cd80)
+- Adds support for Features to be fetched via their ID (#1422) (60d52095)
+- Bumps https-proxy-agent from 2.2.1 to 2.2.4 (#1424) (df6b51f6)
+
+v1.4.0-beta.0: April 15, 2020
+
+- Adds live consumer wrapping feed features (#1418) (6119b6e0)
+- Adds User feed algorithm (#1419) (4c3738af)
+- Adds FeaturesFeedConnected component (#1420) (f8e6827f)
+
+v1.3.1: April 13, 2020
+
+- Adds CampaignItemListFeature to ui-connected package (#1412) (7fd68e0b)
+- Adds Feature fragments (#1411) (046b50d1)
+
+- Moves horizontal card list feature to core (#1415) (520bb8ed)
+- Moves ActionListFeature to ui-connected (#1413) (1745010d)
+- Moves VerticalCardListFeature component to ui-connected packages (#1416) (72eae667)
+- Updates theme Shadow Value (#1408) (abf1778d)
+- Updates stories on start (#1414) (8b026a4f)
+- Updates CardListItem Features Resolver (#1407) (c1e3de9b)
+- Refactors Card Labels with Custom Icons (#1405) (10ff83f2)
+
+- Removes object syntax from JSX (#1409) (47c39362)
+
+v1.3.1-beta.0: April 6, 2020
+
+- Adds Interact when Loaded Component (#1395) (51826317)
+- Adds export for card mapper function (#1404) (21f28c56)
+- Adds horizontal card list feature (#1401) (ab942980)
+- Adds Connected "Up Next" button (#1398) (79085b6f)
+- Adds VerticalCardListFeature (#1396) (b75278a3)
+- Adds percentCompleted to ContentSeriesContentItem (#1389) (412bdb6e)
+- Adds CampaignItems Algorithm (#1377) (84fcaeca)
+- Adds Safer handling of getting horizontal content item fetch more results (#1390) (85bc5afe)
+- Adds 'up next' support to GraphQL API (#1386) (01e03f38)
+- Adds Interactions schema (#1374) (1fc1478d)
+- Adds @apollosproject/eslint-config package (#1380) (a0762fab)
+- Adds yalc for api linking (#1375) (7e7bdbc4)
+
+- Allows Passing Custom Chip Children (#1394) (3adf7024)
+- Improves interaction performance using Apollos Plugin (#1399) (6d37e012)
+- Removes upNext and percentComplete from cache. (#1400) (bab4733f)
+- Exports RockAuthedWebView (#1393) (7f0b8ec1)
+- Allows Custom Liked Feed (#1391) (6b284611)
+- Moves User Web View to Packages (#1383) (21d8f6bf)
+- Decreases the cache time for the livestreams query (#1388) (ed1579e6)
+- Upgrades to Node 10 (#1384) (d114e1c5)
+- Updates apollo-server-core so that we can use graphql 14.0.0 (#1381) (36aeb123)
+- Allows Configurable Browser (#1354) (c09650e6)
+
+- Fixes Dark theme (#1403) (739df1d8)
+- Fixes Empty Cursor not having count of zero (#1402) (5d677c31)
+- Fixes issue with live video when duration is detected as 0 on the live player (#1387) (ad91c7ad)
+
+v1.3.0: March 5, 2020
+
+- Splits Apolloschurchapp and apollos-church-api into separate repo (#1368) (8c6842f3)
+- Adds more structure to theme overrides (#1367) (bfa91e8d)
+- Adds ui-kit documentation (#1369) (d4507c9e)
+- Adds Style overides can be a function of component props (#1359) (3d52b639)
+- Adds background audio playback (#1362) (9658b946)
+- Adds Auth to External Browser (#1353) (1057b88f)
+
+- Moves features to ui-connected (#1345) (e9d0f150)
+- Remove header tags from contnet summary (#1370) (ab597683)
+- Abstracts Device Type ID (#1351) (92ee0678)
+- Updates to version 7 of react-native-webview (#1364) (93fcfc2a)
+- Polishes auth tab (#1342) (34a18b7c)
+- With theme works with overrides (#1360) (74adae91)
+- Reduces create theme calls (#1361) (e3dd611f)
+- Bumps codecov from 3.0.2 to 3.6.5 (#1350) (bcc48cd2)
+- Don't try and run the onEndReached method when loading (#1355) (f00ae032)
+
+- Fixes isLoading story not showing up in storybook (#1366) (73beed48)
+- Fixes being forced through register after you have already registered (#1356) (ad528492)
+
+
+v1.3.0-beta.6: February 19, 2020
+
+- Adds Gender and BirthDate slide to Auth (#1331) (9b2af8c0)
+- Adds mailto link support for InAppWebBrowser(#1338) (3712e153)
+- Sets Missing ENV Variables to null (#1119) (c308a6cb)
+- Moves the "Location Finder" to ui-mapview as `MapViewConnected` (#1344) (02917dd6)
+- Moves and refactor MediaControls (#1317) (e8d2380c)
+- Moves HorizontalContentSeriesFeedConnected to the ui-connected package (#1334) (91738ec3)
+
+- Removes images from the mocks to fix inconsistent tests (#1341) (444b0786)
+
+- Fixes being able to swipe down to auth (#1339) (e34754ec)
+- Fixes ui-connected tests (#1346) (1255281b)
+- Fixes Android background button issue (#1305) (e998ee7d)
+
 v1.3.0-beta.5: February 6, 2020
 
 - Adds validation for firstName and lastName on the ui-auth screen (#1321) (41dd0596)

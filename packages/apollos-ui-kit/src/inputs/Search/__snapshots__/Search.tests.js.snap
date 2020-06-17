@@ -153,6 +153,7 @@ exports[`The Search Input component should render 1`] = `
       selectionColor="#17B582"
       style={
         Object {
+          "color": "#303030",
           "flexGrow": 1,
           "fontFamily": "System",
           "fontSize": 14,
@@ -525,6 +526,7 @@ exports[`The Search Input component should render as disabled 1`] = `
       selectionColor="#17B582"
       style={
         Object {
+          "color": "#303030",
           "flexGrow": 1,
           "fontFamily": "System",
           "fontSize": 14,
@@ -896,6 +898,7 @@ exports[`The Search Input component should render with a custom cancelButtonText
       selectionColor="#17B582"
       style={
         Object {
+          "color": "#303030",
           "flexGrow": 1,
           "fontFamily": "System",
           "fontSize": 14,
@@ -1267,6 +1270,7 @@ exports[`The Search Input component should render with a custom placeholder 1`] 
       selectionColor="#17B582"
       style={
         Object {
+          "color": "#303030",
           "flexGrow": 1,
           "fontFamily": "System",
           "fontSize": 14,
@@ -1638,6 +1642,7 @@ exports[`The Search Input component should render with a custom screenBackground
       selectionColor="#17B582"
       style={
         Object {
+          "color": "#303030",
           "flexGrow": 1,
           "fontFamily": "System",
           "fontSize": 14,

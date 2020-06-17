@@ -7,7 +7,7 @@ import { ErrorCard } from '@apollosproject/ui-kit';
 
 import { LiveConsumer } from '../live';
 
-import contentCardComponentMapper from './contentCardComponentMapper';
+import ContentCardComponentMapper from './ContentCardComponentMapper';
 import GET_CONTENT_CARD from './getContentCard';
 
 const ContentCardConnected = memo(
@@ -24,7 +24,7 @@ const ContentCardConnected = memo(
 
               const coverImage = get(node, 'coverImage.sources', undefined);
               const hasMedia = !!get(node, 'videos.[0].sources[0]', null);
-              const isLive = !!liveStream;
+              const isLive = !!(liveStream && liveStream.isLive);
               const labelText = get(node, 'parentChannel.name', '');
 
               return (
@@ -55,7 +55,7 @@ ContentCardConnected.propTypes = {
 };
 
 ContentCardConnected.defaultProps = {
-  Component: contentCardComponentMapper,
+  Component: ContentCardComponentMapper,
 };
 
 ContentCardConnected.displayName = 'ContentCardConnected';

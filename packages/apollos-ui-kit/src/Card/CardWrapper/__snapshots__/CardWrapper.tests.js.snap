@@ -9,13 +9,13 @@ exports[`the CardWrapper component should accept a backgroundColor 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -43,13 +43,13 @@ exports[`the CardWrapper component should accept additional props 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -73,13 +73,13 @@ exports[`the CardWrapper component should accept and render passed in styles 1`]
       "height": 400,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
       "width": "92%",
     }
   }
@@ -103,13 +103,13 @@ exports[`the CardWrapper component should render 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -132,13 +132,13 @@ exports[`the CardWrapper component should render children 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >

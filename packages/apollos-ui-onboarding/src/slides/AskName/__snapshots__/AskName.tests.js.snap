@@ -357,7 +357,7 @@ exports[`The Onboarding AskName component should accept a firstName 1`] = `
                     hasError={false}
                     style={
                       Object {
-                        "backgroundColor": "#00676D",
+                        "backgroundColor": "#17B582",
                         "bottom": 0,
                         "height": 0.5,
                       }
@@ -516,7 +516,7 @@ exports[`The Onboarding AskName component should accept a firstName 1`] = `
                     hasError={false}
                     style={
                       Object {
-                        "backgroundColor": "#00676D",
+                        "backgroundColor": "#17B582",
                         "bottom": 0,
                         "height": 0.5,
                       }
@@ -889,7 +889,7 @@ exports[`The Onboarding AskName component should accept a lastName 1`] = `
                     hasError={false}
                     style={
                       Object {
-                        "backgroundColor": "#00676D",
+                        "backgroundColor": "#17B582",
                         "bottom": 0,
                         "height": 0.5,
                       }
@@ -1049,7 +1049,7 @@ exports[`The Onboarding AskName component should accept a lastName 1`] = `
                     hasError={false}
                     style={
                       Object {
-                        "backgroundColor": "#00676D",
+                        "backgroundColor": "#17B582",
                         "bottom": 0,
                         "height": 0.5,
                       }
@@ -1423,7 +1423,7 @@ Array [
                       hasError={false}
                       style={
                         Object {
-                          "backgroundColor": "#00676D",
+                          "backgroundColor": "#17B582",
                           "bottom": 0,
                           "height": 0.5,
                         }
@@ -1583,7 +1583,7 @@ Array [
                       hasError={false}
                       style={
                         Object {
-                          "backgroundColor": "#00676D",
+                          "backgroundColor": "#17B582",
                           "bottom": 0,
                           "height": 0.5,
                         }
@@ -2155,7 +2155,7 @@ exports[`The Onboarding AskName component should render 1`] = `
                     hasError={false}
                     style={
                       Object {
-                        "backgroundColor": "#00676D",
+                        "backgroundColor": "#17B582",
                         "bottom": 0,
                         "height": 0.5,
                       }
@@ -2314,7 +2314,7 @@ exports[`The Onboarding AskName component should render 1`] = `
                     hasError={false}
                     style={
                       Object {
-                        "backgroundColor": "#00676D",
+                        "backgroundColor": "#17B582",
                         "bottom": 0,
                         "height": 0.5,
                       }
@@ -2687,7 +2687,7 @@ exports[`The Onboarding AskName component should render a custom description 1`]
                     hasError={false}
                     style={
                       Object {
-                        "backgroundColor": "#00676D",
+                        "backgroundColor": "#17B582",
                         "bottom": 0,
                         "height": 0.5,
                       }
@@ -2846,7 +2846,7 @@ exports[`The Onboarding AskName component should render a custom description 1`]
                     hasError={false}
                     style={
                       Object {
-                        "backgroundColor": "#00676D",
+                        "backgroundColor": "#17B582",
                         "bottom": 0,
                         "height": 0.5,
                       }
@@ -3219,7 +3219,7 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
                     hasError={false}
                     style={
                       Object {
-                        "backgroundColor": "#00676D",
+                        "backgroundColor": "#17B582",
                         "bottom": 0,
                         "height": 0.5,
                       }
@@ -3378,7 +3378,7 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
                     hasError={false}
                     style={
                       Object {
-                        "backgroundColor": "#00676D",
+                        "backgroundColor": "#17B582",
                         "bottom": 0,
                         "height": 0.5,
                       }
@@ -3752,7 +3752,7 @@ exports[`The Onboarding AskName component should render a loading state 1`] = `
                     hasError={false}
                     style={
                       Object {
-                        "backgroundColor": "#00676D",
+                        "backgroundColor": "#17B582",
                         "bottom": 0,
                         "height": 0.5,
                       }
@@ -3912,7 +3912,7 @@ exports[`The Onboarding AskName component should render a loading state 1`] = `
                     hasError={false}
                     style={
                       Object {
-                        "backgroundColor": "#00676D",
+                        "backgroundColor": "#17B582",
                         "bottom": 0,
                         "height": 0.5,
                       }

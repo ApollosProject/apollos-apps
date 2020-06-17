@@ -15,15 +15,22 @@ chokidar
   )
   .on('change', (fullPath) => {
     const pkg = fullPath.split('/')[1].replace('apollos-', '@apollosproject/');
-    exec(
-      `yarn lerna run build --scope apollos-church-api --scope ${pkg}`,
-      (err, stdout, stderr) => {
-        if (err) {
-          console.log(`Error building ${pkg}`);
-          console.error(err);
-        }
-        console.log(stdout);
-        console.log(stderr);
+    exec(`yarn lerna run build --scope ${pkg}`, (err, stdout, stderr) => {
+      if (err) {
+        console.log(`Error building ${pkg}`, err);
+      } else {
+        console.log(stdout, stderr);
+        console.log(`yarn lerna --scope ${pkg} exec -- yalc push`);
+        exec(
+          `./node_modules/lerna/cli.js --scope ${pkg} exec -- yalc push --changed`,
+          (err, stdout, stderr) => {
+            if (err) {
+              console.log(`Error building ${pkg}`, err);
+            } else {
+              console.log(stdout, stderr);
+            }
+          }
+        );
       }
-    );
+    });
   });

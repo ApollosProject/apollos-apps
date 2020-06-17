@@ -1,11 +1,15 @@
-import { get } from 'lodash';
+import { get, uniq } from 'lodash';
+import moment from 'moment-timezone';
+import natural from 'natural';
+import sanitizeHtmlNode from 'sanitize-html';
+import Hypher from 'hypher';
+import english from 'hyphenation.en-us';
+
 import RockApolloDataSource, {
   parseKeyValueAttribute,
 } from '@apollosproject/rock-apollo-data-source';
 import ApollosConfig from '@apollosproject/config';
-import moment from 'moment-timezone';
-import natural from 'natural';
-import sanitizeHtmlNode from 'sanitize-html';
+import { createGlobalId, parseGlobalId } from '@apollosproject/server-core';
 
 import { createImageUrlFromGuid } from '../utils';
 
@@ -106,7 +110,7 @@ export default class ContentItem extends RockApolloDataSource {
   };
 
   getFeatures({ attributeValues }) {
-    const { Features } = this.context.dataSources;
+    const { Feature } = this.context.dataSources;
     const features = [];
 
     // TODO this should replace all other methods
@@ -118,7 +122,7 @@ export default class ContentItem extends RockApolloDataSource {
       switch (type) {
         case 'scripture':
           features.push(
-            Features.createScriptureFeature({
+            Feature.createScriptureFeature({
               reference: value,
               version: modifier,
               id: `${attributeValues.features.id}-${i}`,
@@ -127,7 +131,7 @@ export default class ContentItem extends RockApolloDataSource {
           break;
         case 'text':
           features.push(
-            Features.createTextFeature({
+            Feature.createTextFeature({
               text: value,
               id: `${attributeValues.features.id}-${i}`,
             })
@@ -142,7 +146,7 @@ export default class ContentItem extends RockApolloDataSource {
     const text = get(attributeValues, 'textFeature.value', '');
     if (text !== '') {
       features.push(
-        Features.createTextFeature({ text, id: attributeValues.textFeature.id })
+        Feature.createTextFeature({ text, id: attributeValues.textFeature.id })
       );
     }
 
@@ -152,7 +156,7 @@ export default class ContentItem extends RockApolloDataSource {
       const keyValueTextFeatures = parseKeyValueAttribute(texts);
       keyValueTextFeatures.forEach(({ value }, i) => {
         features.push(
-          Features.createTextFeature({
+          Feature.createTextFeature({
             text: value,
             id: `${attributeValues.textFeatures.id}-${i}`,
           })
@@ -165,7 +169,7 @@ export default class ContentItem extends RockApolloDataSource {
       const keyValueTextFeatures = parseKeyValueAttribute(scriptures);
       keyValueTextFeatures.forEach(({ value }, i) => {
         features.push(
-          Features.createScriptureFeature({
+          Feature.createScriptureFeature({
             reference: value,
             id: `${attributeValues.scriptureFeatures.id}-${i}`,
           })
@@ -186,8 +190,9 @@ export default class ContentItem extends RockApolloDataSource {
     const tokenizer = new natural.SentenceTokenizer();
     const tokens = tokenizer.tokenize(
       sanitizeHtmlNode(content, {
-        allowedTags: [],
+        allowedTags: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
         allowedAttributes: [],
+        exclusiveFilter: (frame) => frame.tag.match(/^(h1|h2|h3|h4|h5|h6)$/),
       })
     );
     // protects from starting with up to a three digit number and period
@@ -305,6 +310,11 @@ export default class ContentItem extends RockApolloDataSource {
     return get(ROCK, 'SHOW_INACTIVE_CONTENT', false) ? null : filter;
   };
 
+  DEFAULT_SORT = () => [
+    { field: 'Order', direction: 'asc' },
+    { field: 'StartDateTime', direction: 'asc' },
+  ];
+
   expanded = true;
 
   getCursorByParentContentItemId = async (id) => {
@@ -319,7 +329,7 @@ export default class ContentItem extends RockApolloDataSource {
       associations.map(
         ({ childContentChannelItemId }) => childContentChannelItemId
       )
-    ).orderBy('Order');
+    ).sort(this.DEFAULT_SORT());
   };
 
   getCursorByChildContentItemId = async (id) => {
@@ -332,7 +342,7 @@ export default class ContentItem extends RockApolloDataSource {
 
     return this.getFromIds(
       associations.map(({ contentChannelItemId }) => contentChannelItemId)
-    ).orderBy('Order');
+    ).sort(this.DEFAULT_SORT());
   };
 
   getCursorBySiblingContentItemId = async (id) => {
@@ -366,7 +376,7 @@ export default class ContentItem extends RockApolloDataSource {
       siblingAssociations.map(
         ({ childContentChannelItemId }) => childContentChannelItemId
       )
-    ).orderBy('Order');
+    ).sort(this.DEFAULT_SORT());
   };
 
   // Generates feed based on persons dataview membership
@@ -458,6 +468,139 @@ export default class ContentItem extends RockApolloDataSource {
       .andFilter(this.LIVE_CONTENT());
   };
 
+  async getUpNext({ id }) {
+    const { Auth, Interactions } = this.context.dataSources;
+
+    // Safely exit if we don't have a current user.
+    try {
+      await Auth.getCurrentPerson();
+    } catch (e) {
+      return null;
+    }
+
+    const childItemsCursor = await this.getCursorByParentContentItemId(id);
+    const childItemsOldestFirst = await childItemsCursor
+      .orderBy()
+      .sort(this.DEFAULT_SORT())
+      .get();
+
+    const childItems = childItemsOldestFirst.reverse();
+    const childItemsWithApollosIds = childItems.map((childItem) => ({
+      ...childItem,
+      apollosId: createGlobalId(childItem.id, this.resolveType(childItem)),
+    }));
+
+    const interactions = await Interactions.getInteractionsForCurrentUserAndNodes(
+      {
+        nodeIds: childItemsWithApollosIds.map(({ apollosId }) => apollosId),
+        actions: ['COMPLETE'],
+      }
+    );
+    const apollosIdsWithInteractions = interactions.map(
+      ({ foreignKey }) => foreignKey
+    );
+
+    const firstInteractedIndex = childItemsWithApollosIds.findIndex(
+      ({ apollosId }) => apollosIdsWithInteractions.includes(apollosId)
+    );
+
+    if (firstInteractedIndex === -1) {
+      // If you haven't completede anything, return the first (last in reversed array) item;
+      return childItemsWithApollosIds[childItemsWithApollosIds.length - 1];
+    }
+    if (firstInteractedIndex === 0) {
+      // If you have completed the last item, return null (no items left to read)
+      return null;
+    }
+    // otherwise, return the item immediately following (before) the item you have already read
+    return childItemsWithApollosIds[firstInteractedIndex - 1];
+  }
+
+  async getSeriesWithUserProgress() {
+    const { Auth, Interactions } = this.context.dataSources;
+
+    // Safely exit if we don't have a current user.
+    try {
+      await Auth.getCurrentPerson();
+    } catch (e) {
+      return this.request().empty();
+    }
+
+    const interactions = await Interactions.getInteractionsForCurrentUser({
+      actions: ['SERIES_START'],
+    });
+
+    const ids = uniq(
+      interactions.map(({ foreignKey }) => {
+        const { id } = parseGlobalId(foreignKey);
+        return id;
+      })
+    );
+
+    // We need to make sure we don't include the campaign channels.
+    // We could also consider doing this using a whitelist.
+    // This also may be part of a broader conversation about how we identify the true parent of a content item
+    const blacklistedIds = (await this.byContentChannelIds(
+      ROCK_MAPPINGS.CAMPAIGN_CHANNEL_IDS
+    ).get()).map(({ id }) => `${id}`);
+
+    const completedIds = (await Promise.all(
+      ids.map(async (id) => ({
+        id,
+        percent: await this.getPercentComplete({ id }),
+      }))
+    ))
+      .filter(({ percent }) => percent === 100)
+      .map(({ id }) => id);
+
+    const finalIds = ids.filter(
+      (id) => ![...blacklistedIds, ...completedIds].includes(id)
+    );
+
+    return this.getFromIds(finalIds);
+  }
+
+  async getPercentComplete({ id }) {
+    const { Auth, Interactions } = this.context.dataSources;
+    // This can, and should, be cached in redis or some other system at some point
+
+    // Safely exit if we don't have a current user.
+    try {
+      await Auth.getCurrentPerson();
+    } catch (e) {
+      return null;
+    }
+
+    const childItemsCursor = await this.getCursorByParentContentItemId(id);
+    const childItems = await childItemsCursor.get();
+
+    if (childItems.length === 0) {
+      return 0;
+    }
+
+    const childItemsWithApollosIds = childItems.map((childItem) => ({
+      ...childItem,
+      apollosId: createGlobalId(childItem.id, this.resolveType(childItem)),
+    }));
+
+    const interactions = await Interactions.getInteractionsForCurrentUserAndNodes(
+      {
+        nodeIds: childItemsWithApollosIds.map(({ apollosId }) => apollosId),
+        actions: ['COMPLETE'],
+      }
+    );
+
+    const apollosIdsWithInteractions = interactions.map(
+      ({ foreignKey }) => foreignKey
+    );
+
+    const totalItemsWithInteractions = childItemsWithApollosIds.filter(
+      ({ apollosId }) => apollosIdsWithInteractions.includes(apollosId)
+    ).length;
+
+    return (totalItemsWithInteractions / childItems.length) * 100;
+  }
+
   getFromId = (id) =>
     this.request()
       .find(id)
@@ -506,5 +649,45 @@ export default class ContentItem extends RockApolloDataSource {
     }
 
     return 'UniversalContentItem';
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  createHyphenatedString({ text }) {
+    const hypher = new Hypher(english);
+    const words = text.split(' ');
+
+    /* We only want to hyphenate the end of words because Hyper uses a language dictionary to add
+     * "soft" hyphens at the appropriate places. By only adding "soft" hyphens to the end of we
+     * guarantee that words that can fit will and that words that can't fit don't wrap prematurely.
+     * Essentially, meaning words will always take up the maximum amount of space they can and only
+     * very very long words will wrap after the 7th character.
+     *
+     * Example:
+     * Devotional can be hyphenated as "de-vo-tion-al." However, we hyphenate this word as
+     * "devotion-al." This means that the word can always fit but usually return to a new line as
+     * "devotional" rather than wrapping mid-word as "devo-tional". There are situations your mind
+     * can create where this might a wrap at `devotion-al` but this is a worst worst case scenario
+     * and in our tests was exceedingly rare in the English language.
+     *
+     * Additionally, The magic number below (7) is used here because our current
+     * `HorizontalHighlighCard`s have a fixed width of 240px and 7 is the maximum number of capital
+     * "W" characters that will fit with a hyphen in our current typography. While this is an
+     * unlikely occurrence it represents the worst case scenario for word length.
+     *
+     * TODO: Expose the hyphenation point to make this more flexible in the future.
+     */
+    const hyphenateEndOfWord = (word, segment) =>
+      word.length > 7 ? `${word}\u00AD${segment}` : word + segment;
+
+    const hyphenateLongWords = (word, hyphenateFunction) =>
+      word.length > 7 ? hyphenateFunction(word) : word;
+
+    return words
+      .map((w) =>
+        hyphenateLongWords(w, () =>
+          hypher.hyphenate(w).reduce(hyphenateEndOfWord)
+        )
+      )
+      .join(' ');
   }
 }

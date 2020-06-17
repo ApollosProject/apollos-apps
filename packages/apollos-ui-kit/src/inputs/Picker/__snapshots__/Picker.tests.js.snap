@@ -214,7 +214,7 @@ exports[`The Picker Input component focuses and blurs 1`] = `
       style={
         Object {
           "backgroundColor": "#FFFFFF",
-          "borderTopColor": "rgba(165, 165, 165, 0.6)",
+          "borderTopColor": "rgba(0, 0, 0, 0.09999999999999998)",
           "borderTopWidth": 0.5,
           "bottom": 0,
           "left": 0,
@@ -342,7 +342,7 @@ exports[`The Picker Input component focuses and blurs 1`] = `
         hasError={false}
         style={
           Object {
-            "backgroundColor": "#00676D",
+            "backgroundColor": "#17B582",
             "bottom": 0,
             "height": 0.5,
           }
@@ -567,7 +567,7 @@ exports[`The Picker Input component focuses and blurs 2`] = `
       style={
         Object {
           "backgroundColor": "#FFFFFF",
-          "borderTopColor": "rgba(165, 165, 165, 0.6)",
+          "borderTopColor": "rgba(0, 0, 0, 0.09999999999999998)",
           "borderTopWidth": 0.5,
           "bottom": 0,
           "left": 0,
@@ -695,7 +695,7 @@ exports[`The Picker Input component focuses and blurs 2`] = `
         hasError={false}
         style={
           Object {
-            "backgroundColor": "#00676D",
+            "backgroundColor": "#17B582",
             "bottom": 0,
             "height": 0.5,
           }
@@ -920,7 +920,7 @@ exports[`The Picker Input component focuses and blurs 3`] = `
       style={
         Object {
           "backgroundColor": "#FFFFFF",
-          "borderTopColor": "rgba(165, 165, 165, 0.6)",
+          "borderTopColor": "rgba(0, 0, 0, 0.09999999999999998)",
           "borderTopWidth": 0.5,
           "bottom": 0,
           "left": 0,
@@ -1048,7 +1048,7 @@ exports[`The Picker Input component focuses and blurs 3`] = `
         hasError={false}
         style={
           Object {
-            "backgroundColor": "#00676D",
+            "backgroundColor": "#17B582",
             "bottom": 0,
             "height": 0.5,
           }
@@ -1264,7 +1264,7 @@ exports[`The Picker Input component should render correctly 1`] = `
       style={
         Object {
           "backgroundColor": "#FFFFFF",
-          "borderTopColor": "rgba(165, 165, 165, 0.6)",
+          "borderTopColor": "rgba(0, 0, 0, 0.09999999999999998)",
           "borderTopWidth": 0.5,
           "bottom": 0,
           "left": 0,
@@ -1407,7 +1407,7 @@ exports[`The Picker Input component should render correctly 1`] = `
         hasError={false}
         style={
           Object {
-            "backgroundColor": "#00676D",
+            "backgroundColor": "#17B582",
             "bottom": 0,
             "height": 0.5,
           }

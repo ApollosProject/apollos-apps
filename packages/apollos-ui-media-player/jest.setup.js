@@ -9,14 +9,11 @@ jest.mock('@apollosproject/react-native-airplay-btn', () => ({
   AirPlayButton: () => 'AirPlayButton',
 }));
 
-jest.mock(
-  '../apollos-ui-kit/node_modules/react-native-safe-area-context/',
-  () => ({
-    SafeAreaConsumer: ({ children }) =>
-      children({ top: 0, bottom: 0, left: 0, right: 0 }),
-    SafeAreaProvider: ({ children }) => children,
-  })
-);
+jest.mock('react-native-safe-area-context', () => ({
+  SafeAreaConsumer: ({ children }) =>
+    children({ top: 0, bottom: 0, left: 0, right: 0 }),
+  SafeAreaProvider: ({ children }) => children,
+}));
 
 jest.mock('react-native-music-control', () => ({
   enableBackgroundMode: jest.fn(),
@@ -46,6 +43,14 @@ jest.mock('Animated', () => {
   };
 });
 
+jest.mock('react-native-google-cast', () => ({
+  CastButton: () => 'GoogleCastButton',
+  play: () => null,
+  pause: () => null,
+  getCastState: () => Promise.resolve('Connected'),
+  EventEmitter: { addListener: () => null },
+}));
+
 NativeModules.RNGestureHandlerModule = {
   attachGestureHandler: jest.fn(),
   createGestureHandler: jest.fn(),
@@ -55,3 +60,5 @@ NativeModules.RNGestureHandlerModule = {
   State: {},
   Directions: {},
 };
+
+jest.mock('@react-native-community/datetimepicker', () => 'DatePicker');

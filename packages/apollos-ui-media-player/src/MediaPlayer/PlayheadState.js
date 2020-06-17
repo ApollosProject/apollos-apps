@@ -36,13 +36,20 @@ class ProviderWithoutApollo extends Component {
       // onBuffer: this.handleOnBuffer,
       onProgress: this.handleOnProgress,
       skip: this.skip,
+      skipTo: this.skipTo,
       isLoading: this.state.isLoading,
       // isBuffering: this.state.isBuffering,
     };
   }
 
   handleOnLoad = ({ duration }) => {
-    this.setState({ duration, isLoading: false });
+    // Only call setState if `duration > 0` to prevent division by zero in other places (`Seeker`, etc.)
+    if (duration > 0) {
+      this.setState({ duration, isLoading: false });
+    } else {
+      this.setState({ isLoading: false });
+    }
+
     this.state.currentTime.setValue(0);
     this.state.playableDuration.setValue(0);
     this.state.seekableDuration.setValue(0);
@@ -76,6 +83,18 @@ class ProviderWithoutApollo extends Component {
     });
   };
 
+  skipTo = async (time) => {
+    await this.props.client.mutate({
+      mutation: UPDATE_PLAYHEAD,
+      variables: {
+        currentTime: time,
+      },
+    });
+
+    this.seekingTo = time;
+    this.state.currentTime.setValue(time); // immediately set the playhead value so progress bar doesn't jump around
+  };
+
   skip = async (secondsToSkip) => {
     if (this.lastCurrentTime === undefined) return;
     const currentTime = Math.min(
@@ -83,15 +102,7 @@ class ProviderWithoutApollo extends Component {
       this.state.duration
     );
 
-    await this.props.client.mutate({
-      mutation: UPDATE_PLAYHEAD,
-      variables: {
-        currentTime,
-      },
-    });
-
-    this.seekingTo = currentTime;
-    this.state.currentTime.setValue(currentTime); // immediately set the playhead value so progress bar doesn't jump around
+    await this.skipTo(currentTime);
   };
 
   renderProviders = ({

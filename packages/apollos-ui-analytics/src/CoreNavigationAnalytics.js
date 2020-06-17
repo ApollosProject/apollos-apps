@@ -38,7 +38,7 @@ const onNavigationStateChange = (prevState, currentState) => {
   }
 };
 
-analytics.setup('a27aHBJqZgkDDfvZ4Q3Zr', {
+analytics.setup(ApollosConfig.ASTRONOMER_KEY || 'a27aHBJqZgkDDfvZ4Q3Zr', {
   // Record screen views automatically!
   recordScreenViews: false,
   // Record certain application events automatically!

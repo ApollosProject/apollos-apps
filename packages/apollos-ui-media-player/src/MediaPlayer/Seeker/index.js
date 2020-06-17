@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { PanResponder, Animated, View, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
+import GoogleCast from 'react-native-google-cast';
 
 import { styled, withTheme } from '@apollosproject/ui-kit';
 
@@ -60,6 +61,7 @@ class Seeker extends PureComponent {
     onScrubbing: PropTypes.func,
     skip: PropTypes.func,
     knobSize: PropTypes.number, // defaults to theme.sizing.baseBorderRadius * 0.75 (12px, see line 210)
+    isCasting: PropTypes.bool,
   };
 
   isSeeking = false;
@@ -104,6 +106,9 @@ class Seeker extends PureComponent {
       const moveAmount = dx / this.state.width;
       const moveAmountInTime = moveAmount * this.props.duration;
       await this.props.skip(moveAmountInTime);
+
+      if (this.props.isCasting)
+        GoogleCast.seek(this.timeAtSeekingStart + moveAmountInTime);
 
       // Reset state
       this.offsetDriver.setValue(0);

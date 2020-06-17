@@ -17,6 +17,7 @@ export {
   withEdgePagination,
 } from './pagination/utils';
 export { resolverMerge, schemaMerge } from './utils';
+export { setupUniversalLinks } from './universalLinking';
 
 // Types that all apollos-church servers will use.
 const builtInData = { Node, Pagination, Media };
@@ -89,7 +90,20 @@ export const createContext = (data) => ({ req = {} } = {}) => {
   // You probally should avoid using this.
   try {
     const schema = makeExecutableSchema({
-      typeDefs: [...createSchema(data), `scalar Upload`],
+      typeDefs: [
+        ...createSchema(data),
+        `
+      scalar Upload
+      enum CacheControlScope {
+        PUBLIC
+        PRIVATE
+      }
+      directive @cacheControl(
+        maxAge: Int
+        scope: CacheControlScope
+      ) on FIELD_DEFINITION | OBJECT | INTERFACE
+      `,
+      ],
       resolvers: createResolvers(data),
     });
     context.schema = schema;

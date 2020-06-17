@@ -3,6 +3,15 @@ import { extendForEachContentItemType } from './utils';
 
 export const testSchema = gql`
   scalar Upload
+
+  enum CacheControlScope {
+    PUBLIC
+    PRIVATE
+  }
+  directive @cacheControl(
+    maxAge: Int
+    scope: CacheControlScope
+  ) on FIELD_DEFINITION | OBJECT | INTERFACE
 `;
 
 export const authSmsSchema = gql`
@@ -250,6 +259,33 @@ export const analyticsSchema = gql`
   }
 `;
 
+export const interactionsSchema = gql`
+  scalar InteractionValue
+
+  enum InteractionAction {
+    VIEW
+    COMPLETE
+  }
+
+  input InteractionDataField {
+    field: String!
+    value: InteractionValue
+  }
+
+  type InteractionResult {
+    success: Boolean
+    node: Node
+  }
+
+  extend type Mutation {
+    interactWithNode(
+      action: InteractionAction!
+      nodeId: ID!
+      data: [InteractionDataField]
+    ): InteractionResult
+  }
+`;
+
 export const contentItemSchema = gql`
   interface ContentItem {
     id: ID!
@@ -359,6 +395,8 @@ export const contentItemSchema = gql`
     parentChannel: ContentChannel
     theme: Theme
 
+    percentComplete: Float @cacheControl(maxAge: 0)
+    upNext: ContentItem @cacheControl(maxAge: 0)
     scriptures: [Scripture]
   }
 
@@ -490,7 +528,7 @@ export const liveSchema = gql`
   extend type Query {
     liveStream: LiveStream
       @deprecated(reason: "Use liveStreams, there may be multiple.")
-    liveStreams: [LiveStream]
+    liveStreams: [LiveStream] @cacheControl(maxAge: 10)
   }
 
   extend type WeekendContentItem {
@@ -658,6 +696,49 @@ export const featuresSchema = gql`
     actions: [ActionListAction]
   }
 
+  type HeroListFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    title: String
+    subtitle: String
+    actions: [ActionListAction]
+    heroCard: CardListItem
+  }
+
+  type CardListItem {
+    id: ID!
+
+    hasAction: Boolean
+    actionIcon: String
+    labelText: String
+    summary: String
+    coverImage: ImageMedia
+    title(hyphenated: Boolean): String
+
+    relatedNode: Node
+    action: ACTION_FEATURE_ACTION
+  }
+
+  type VerticalCardListFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    title: String
+    subtitle: String
+    isFeatured: Boolean
+    cards: [CardListItem]
+  }
+
+  type HorizontalCardListFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    title: String
+    subtitle: String
+    cards: [CardListItem]
+  }
+
   type TextFeature implements Feature & Node {
     id: ID!
     order: Int
@@ -670,6 +751,15 @@ export const featuresSchema = gql`
     order: Int
 
     scriptures: [Scripture]
+  }
+
+  type WebviewFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    linkText: String
+    title: String
+    url: String
   }
 
   extend type WeekendContentItem {
@@ -698,6 +788,33 @@ export const eventSchema = gql`
 
   extend type Campus {
     events: [Event]
+  }
+`;
+
+export const prayerSchema = gql`
+  type PrayerRequest implements Node {
+    id: ID!
+    text: String!
+    requestor: Person
+    isAnonymous: Boolean
+    isPrayed: Boolean
+  }
+
+  type PrayerListFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    title: String
+    subtitle: String
+    prayers: [PrayerRequest]
+  }
+
+  extend type Mutation {
+    addPrayer(text: String!, isAnonymous: Boolean): PrayerRequest
+  }
+
+  extend enum InteractionAction {
+    PRAY
   }
 `;
 

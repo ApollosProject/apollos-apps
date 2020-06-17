@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
-import { View, Dimensions } from 'react-native';
+import { View } from 'react-native';
 
 import BackgroundView from '../BackgroundView';
 import CenteredView from '../CenteredView';
@@ -85,7 +85,6 @@ storiesOf('ui-kit/HorizontalDefaultCard', module)
           content={HorizontalHighlightCardData}
           renderItem={renderHorizontalHighlightCard}
           loadingStateObject={loadingStateObject}
-          style={{ height: Dimensions.get('window').width * 0.66 + 32 }} // kind of a random math to just make this story work
         />
       </View>
     );
