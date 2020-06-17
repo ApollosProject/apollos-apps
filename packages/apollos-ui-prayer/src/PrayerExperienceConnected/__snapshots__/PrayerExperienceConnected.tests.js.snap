@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The PrayingExperienceConnected component closes onboarding when button is pressed 1`] = `null`;
+exports[`The PrayerExperienceConnected component closes onboarding when button is pressed 1`] = `null`;
 
-exports[`The PrayingExperienceConnected component hides onboarding 1`] = `
+exports[`The PrayerExperienceConnected component hides onboarding 1`] = `
 <View
   onLayout={[Function]}
   style={
@@ -1194,9 +1194,9 @@ exports[`The PrayingExperienceConnected component hides onboarding 1`] = `
 </View>
 `;
 
-exports[`The PrayingExperienceConnected component prays 1`] = `null`;
+exports[`The PrayerExperienceConnected component prays 1`] = `null`;
 
-exports[`The PrayingExperienceConnected component should render 1`] = `
+exports[`The PrayerExperienceConnected component should render 1`] = `
 Array [
   <ActivityIndicator
     animating={true}

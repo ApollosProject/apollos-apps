@@ -10,7 +10,7 @@ import {
   PrayerScreen,
 } from '../screens';
 
-const PrayingExperience = ({
+const PrayerExperience = ({
   index,
   loading,
   prayers,
@@ -68,7 +68,7 @@ const PrayingExperience = ({
   </>
 );
 
-PrayingExperience.propTypes = {
+PrayerExperience.propTypes = {
   index: PropTypes.number,
   loading: PropTypes.bool,
   prayers: PropTypes.arrayOf(PropTypes.shape({})),
@@ -84,6 +84,6 @@ PrayingExperience.propTypes = {
   onFinish: PropTypes.func,
 };
 
-export default withTheme(() => ({}), 'ui-prayer.PrayingExperience')(
-  PrayingExperience
+export default withTheme(() => ({}), 'ui-prayer.PrayerExperience')(
+  PrayerExperience
 );

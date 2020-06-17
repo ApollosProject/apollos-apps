@@ -4,7 +4,7 @@ import { Providers, renderWithApolloData } from '../testUtils';
 
 import { PrayerDialogScreen } from '../screens';
 import { PRAY } from '../screens/PrayerScreen';
-import PrayingExperienceConnected, { GET_PRAYER_FEATURE } from '.';
+import PrayerExperienceConnected, { GET_PRAYER_FEATURE } from '.';
 
 jest.mock('react-native-device-info', () => ({
   getModel: jest.fn(),
@@ -179,11 +179,11 @@ const mocks = [
   },
 ];
 
-describe('The PrayingExperienceConnected component', () => {
+describe('The PrayerExperienceConnected component', () => {
   it('should render', async () => {
     const tree = await renderWithApolloData(
       <Providers mocks={mocks}>
-        <PrayingExperienceConnected id="PrayerListFeature:123" />
+        <PrayerExperienceConnected id="PrayerListFeature:123" />
       </Providers>
     );
 
@@ -193,7 +193,7 @@ describe('The PrayingExperienceConnected component', () => {
   it('hides onboarding', async () => {
     const tree = await renderWithApolloData(
       <Providers mocks={mocks}>
-        <PrayingExperienceConnected
+        <PrayerExperienceConnected
           id="PrayerListFeature:123"
           showOnboarding={false}
         />
@@ -206,7 +206,7 @@ describe('The PrayingExperienceConnected component', () => {
   it('closes onboarding when button is pressed', async () => {
     const tree = await renderWithApolloData(
       <Providers mocks={mocks}>
-        <PrayingExperienceConnected id="PrayerListFeature:123" />
+        <PrayerExperienceConnected id="PrayerListFeature:123" />
       </Providers>
     );
 
@@ -221,7 +221,7 @@ describe('The PrayingExperienceConnected component', () => {
   it('prays', async () => {
     const tree = await renderWithApolloData(
       <Providers mocks={mocks}>
-        <PrayingExperienceConnected id="PrayerListFeature:123" />
+        <PrayerExperienceConnected id="PrayerListFeature:123" />
       </Providers>
     );
 

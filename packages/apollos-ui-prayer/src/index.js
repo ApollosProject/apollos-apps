@@ -3,4 +3,4 @@ export PrayerFeature from './PrayerFeature';
 export PrayerInput from './PrayerInput';
 export PrayerSwiper from './PrayerSwiper';
 
-export PrayingExperienceConnected from './PrayingExperienceConnected';
+export PrayerExperienceConnected from './PrayerExperienceConnected';

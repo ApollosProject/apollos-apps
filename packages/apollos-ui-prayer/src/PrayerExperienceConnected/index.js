@@ -7,7 +7,7 @@ import ApollosConfig from '@apollosproject/config';
 import { withTheme, ThemeMixin, ModalView } from '@apollosproject/ui-kit';
 import { AnalyticsContext } from '@apollosproject/ui-analytics';
 
-import PrayingExperience from './PrayingExperience';
+import PrayerExperience from './PrayerExperience';
 
 export const GET_PRAYER_FEATURE = gql`
   query($id: ID!) {
@@ -27,9 +27,9 @@ export const GET_PRAYER_FEATURE = gql`
   ${ApollosConfig.FRAGMENTS.PRAYER_LIST_FEATURE_FRAGMENT}
 `;
 
-const PrayingExperienceConnected = ({
+const PrayerExperienceConnected = ({
   id,
-  Component = PrayingExperience,
+  Component = PrayerExperience,
   AddPrayerComponent,
   OnboardingComponent,
   PrayingScreenComponent,
@@ -86,7 +86,7 @@ const PrayingExperienceConnected = ({
   );
 };
 
-PrayingExperienceConnected.propTypes = {
+PrayerExperienceConnected.propTypes = {
   id: PropTypes.string.isRequired,
   Component: PropTypes.func,
   AddPrayerComponent: PropTypes.func,
@@ -99,6 +99,6 @@ PrayingExperienceConnected.propTypes = {
   index: PropTypes.number,
 };
 
-export default withTheme(() => ({}), 'ui-prayer.PrayingExperienceConnected')(
-  PrayingExperienceConnected
+export default withTheme(() => ({}), 'ui-prayer.PrayerExperienceConnected')(
+  PrayerExperienceConnected
 );

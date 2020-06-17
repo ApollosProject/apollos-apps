@@ -3,7 +3,7 @@ import { Query } from 'react-apollo';
 import PropTypes from 'prop-types';
 import {
   PrayerFeature,
-  PrayingExperienceConnected,
+  PrayerExperienceConnected,
 } from '@apollosproject/ui-prayer';
 import { Modal, AsyncStorage } from 'react-native';
 import GET_PRAYER_FEATURE from './getPrayerFeature';
@@ -68,7 +68,7 @@ function PrayerFeatureConnected({
               onRequestClose={() => setModalOpened(false)}
               visible={modalOpened}
             >
-              <PrayingExperienceConnected
+              <PrayerExperienceConnected
                 index={swiperIndex}
                 asModal
                 onFinish={() => setModalOpened(false)}
