@@ -4,10 +4,10 @@ import { Text } from 'react-native';
 import { ScriptureText, VerseNumber } from '@apollosproject/ui-scripture';
 import { BodyText } from '@apollosproject/ui-kit';
 
-import PrayerOnboardingScreen from '../PrayerOnboardingScreen';
+import PrayerDialog from '../screens/PrayerDialog';
 
 const AddedPrayerScreen = (props) => (
-  <PrayerOnboardingScreen
+  <PrayerDialog
     primaryActionText={'Pray for others'}
     title={'Thank you for sharing.'}
     body={

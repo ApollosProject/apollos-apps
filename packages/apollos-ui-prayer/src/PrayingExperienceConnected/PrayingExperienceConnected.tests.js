@@ -2,7 +2,7 @@ import React from 'react';
 import wait from 'waait';
 import { Providers, renderWithApolloData } from '../testUtils';
 
-import PrayerOnboardingScreen from '../PrayerOnboardingScreen';
+import PrayerDialog from '../screens/PrayerDialog';
 import { PRAY } from './PrayingScreen';
 import PrayingExperienceConnected, { GET_PRAYER_FEATURE } from '.';
 
@@ -210,7 +210,7 @@ describe('The PrayingExperienceConnected component', () => {
       </Providers>
     );
 
-    const screen = tree.root.findByType(PrayerOnboardingScreen);
+    const screen = tree.root.findByType(PrayerDialog);
     screen.props.onPressPrimary();
 
     await wait(1);

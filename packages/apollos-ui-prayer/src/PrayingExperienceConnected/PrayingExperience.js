@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { ActivityIndicator, withTheme } from '@apollosproject/ui-kit';
 import PrayerSwiper from '../PrayerSwiper';
 import AddPrayerConnected from '../AddPrayerConnected';
-import PrayerOnboardingScreen from '../PrayerOnboardingScreen';
+import PrayerDialog from '../screens/PrayerDialog';
 import PrayingScreen from './PrayingScreen';
 
 const PrayingExperience = ({
@@ -14,7 +14,7 @@ const PrayingExperience = ({
   track,
   AddPrayerComponent = AddPrayerConnected,
   PrayingScreenComponent = PrayingScreen,
-  OnboardingComponent = PrayerOnboardingScreen,
+  OnboardingComponent = PrayerDialog,
   primaryAvatar,
   willShowOnboarding,
   isOnboarding,
@@ -81,4 +81,6 @@ PrayingExperience.propTypes = {
   onFinish: PropTypes.func,
 };
 
-export default withTheme(() => ({}), 'ui-prayer.PrayingExperience')(PrayingExperience);
+export default withTheme(() => ({}), 'ui-prayer.PrayingExperience')(
+  PrayingExperience
+);

@@ -10,29 +10,29 @@ import {
   styled,
 } from '@apollosproject/ui-kit';
 
-import PrayerScreen from '../PrayerScreen';
+import PrayerScreen from '../../PrayerScreen';
 
 const Container = styled(
   { flexGrow: 1, alignItems: 'center' },
-  'ui-prayer.PrayerOnboardingScreen.Container'
+  'ui-prayer.PrayerDialog.Container'
 )(PaddedView);
 
 const HeadingText = styled(
   { textAlign: 'center' },
-  'ui-prayer.PrayerOnboardingScreen.HeadingText'
+  'ui-prayer.PrayerDialog.HeadingText'
 )(H3);
 
 const BodyContainer = styled(
   { paddingHorizontal: '10%' },
-  'ui-prayer.PrayerOnboardingScreen.BodyContainer'
+  'ui-prayer.PrayerDialog.BodyContainer'
 )(PaddedView);
 
 const ScreenBodyText = styled(
   { textAlign: 'center' },
-  'ui-prayer.PrayerOnboardingScreen.ScreenBodyText'
+  'ui-prayer.PrayerDialog.ScreenBodyText'
 )(BodyText);
 
-const PrayerOnboardingScreen = ({
+const PrayerDialog = ({
   avatars,
   primaryAvatar,
   title,
@@ -81,7 +81,7 @@ const PrayerOnboardingScreen = ({
   );
 };
 
-PrayerOnboardingScreen.propTypes = {
+PrayerDialog.propTypes = {
   avatars: PropTypes.arrayOf(PropTypes.shape({})),
   primaryAvatar: PropTypes.shape({}),
   title: PropTypes.oneOfType([
@@ -99,7 +99,7 @@ PrayerOnboardingScreen.propTypes = {
   primaryActionText: PropTypes.string,
 };
 
-PrayerOnboardingScreen.defaultProps = {
+PrayerDialog.defaultProps = {
   visible: true,
   primaryActionText: 'Next',
   title: 'Join us today in prayer',
@@ -107,4 +107,4 @@ PrayerOnboardingScreen.defaultProps = {
     'Each day we ask the community for prayer. These prayers last for only 24 hours so that you can reach out to our community and ask for what you need today, and every day.',
 };
 
-export default PrayerOnboardingScreen;
+export default PrayerDialog;
