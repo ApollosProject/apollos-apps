@@ -109,7 +109,6 @@ export default class Feature extends RockApolloDataSource {
       primaryAction.relatedNode &&
       !primaryAction.relatedNode.id
     ) {
-      console.log('setting an ID');
       primaryAction.relatedNode.id = createGlobalId( // eslint-disable-line
         JSON.stringify(primaryAction.relatedNode),
         primaryAction.relatedNode.__typename
