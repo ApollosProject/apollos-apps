@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import { StatusBar } from 'react-native';
 import PropTypes from 'prop-types';
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
@@ -79,6 +80,7 @@ const PrayingExperienceConnected = ({
           onFinish={onFinish}
           {...otherProps}
         />
+        <StatusBar hidden />
       </Wrapper>
     </ThemeMixin>
   );
