@@ -8,7 +8,7 @@ import { AnalyticsContext } from '@apollosproject/ui-analytics';
 
 import PrayerCard from '../PrayerCard';
 import PrayerScreen from '../PrayerScreen';
-import AddedPrayerScreen from './AddedPrayerScreen';
+import { ConfirmationDialogScreen } from '../screens';
 
 export const ADD_PRAYER = gql`
   mutation($prayer: String!) {
@@ -39,7 +39,7 @@ const AddPrayerConnected = ({
   primaryButtonText = 'Share prayer',
   swipeForward,
   avatars = [],
-  AddedPrayerComponent = AddedPrayerScreen,
+  AddedPrayerComponent = ConfirmationDialogScreen,
   ...screenProps
 }) => {
   const { data: userData } = useQuery(GET_USER_PHOTO);

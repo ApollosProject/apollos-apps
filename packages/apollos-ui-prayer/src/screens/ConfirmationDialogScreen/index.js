@@ -4,9 +4,9 @@ import { Text } from 'react-native';
 import { ScriptureText, VerseNumber } from '@apollosproject/ui-scripture';
 import { BodyText } from '@apollosproject/ui-kit';
 
-import PrayerDialog from '../screens/PrayerDialog';
+import PrayerDialog from '../PrayerDialog';
 
-const AddedPrayerScreen = (props) => (
+const ConfirmationDialogScreen = (props) => (
   <PrayerDialog
     primaryActionText={'Pray for others'}
     title={'Thank you for sharing.'}
@@ -25,4 +25,4 @@ const AddedPrayerScreen = (props) => (
   />
 );
 
-export default AddedPrayerScreen;
+export default ConfirmationDialogScreen;
