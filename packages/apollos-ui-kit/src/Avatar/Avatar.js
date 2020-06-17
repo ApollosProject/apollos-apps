@@ -17,7 +17,7 @@ const Container = styled(
     width: themeSize,
     height: themeSize,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
   }),
   'Avatar'
 )(View);
@@ -93,7 +93,7 @@ const Avatar = ({
     ) : (
       <PlaceholderIcon themeSize={themeSize} isLoading={false} />
     )}
-    {notification && !!isLoading ? ( // sometimes isLoading can be infered by context. This forces it to hide.
+    {!isLoading && notification ? ( // sometimes isLoading can be infered by context. This forces it to hide.
       <NotificationDot avatarSize={themeSize} />
     ) : null}
     {buttonIcon ? (
