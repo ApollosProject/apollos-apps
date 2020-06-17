@@ -43,7 +43,6 @@ Array [
     Object {
       "InteractionComponentId": 789,
       "InteractionData": "apolloschurch://Interactions/ContentSingle?itemId=UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
-      "InteractionSessionId": undefined,
       "InteractionSummary": "Like - Super Cool Content",
       "Operation": "Like",
       "PersonAliasId": 456,
@@ -68,7 +67,6 @@ Array [
     Object {
       "ForeignKey": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
       "InteractionComponentId": 321,
-      "InteractionSessionId": undefined,
       "InteractionSummary": "VIEW",
       "Operation": "VIEW",
       "PersonAliasId": 456,
