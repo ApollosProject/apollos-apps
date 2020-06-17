@@ -2,12 +2,13 @@ import React from 'react';
 import { FlatList, View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import Avatar from '../Avatar';
 import { ImageSourceType } from '../../ConnectedImage';
 import Icon from '../../Icon';
 import styled from '../../styled';
 import Touchable from '../../Touchable';
 import { withTheme } from '../../theme';
+
+import TouchableAvatar from './TouchableAvatar';
 
 const AddIcon = withTheme(
   ({ theme }) => ({
@@ -37,16 +38,8 @@ const AndroidTouchableRippleFix = styled(
   'ui-kit.AvatarList.AndroidTouchableRippleFix'
 )(View);
 
-const StyledAvatar = withTheme(
-  ({ theme }) => ({
-    themeSize: theme.sizing.avatar.medium * 0.8,
-  }),
-  'ui-kit.AvatarList.StyledAvatar'
-)(Avatar);
-
 const AvatarFeed = withTheme(
   ({ theme }) => ({
-    // contentContainerStyle: { alignItems: 'center' },
     decelerationRate: 'fast', // passed down to rendered ScrollView
     horizontal: true,
     getItemLayout: (itemData, index) => ({
@@ -63,18 +56,12 @@ const AvatarFeed = withTheme(
 
 // eslint-disable-next-line react/display-name, react/prop-types
 const renderItem = (onPressAvatar, isLoading) => ({ item }) => (
-  <AndroidTouchableRippleFix>
-    <Touchable
-      disabled={isLoading || !onPressAvatar}
-      onPress={() => onPressAvatar({ item })}
-      useForeground
-    >
-      <View /* Fixes Android throwing an error about the child of a Touchable 🙃 */
-      >
-        <StyledAvatar source={item?.source} notification={item.notification} />
-      </View>
-    </Touchable>
-  </AndroidTouchableRippleFix>
+  <TouchableAvatar
+    disabled={isLoading || !onPressAvatar}
+    notification={item.notification}
+    onPress={() => onPressAvatar({ item })}
+    source={item?.source}
+  />
 );
 
 const renderListHeader = (onPressAdd, isLoading) =>
