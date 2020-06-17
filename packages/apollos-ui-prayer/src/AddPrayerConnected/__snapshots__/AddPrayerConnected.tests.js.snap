@@ -163,7 +163,7 @@ exports[`The AddPrayerCard component should accept a title 1`] = `
                         Object {
                           "alignItems": "center",
                           "height": 80,
-                          "justifyContent": "flex-end",
+                          "justifyContent": "center",
                           "width": 80,
                         }
                       }
@@ -654,7 +654,7 @@ exports[`The AddPrayerCard component should create a prayer 1`] = `
                         Object {
                           "alignItems": "center",
                           "height": 80,
-                          "justifyContent": "flex-end",
+                          "justifyContent": "center",
                           "width": 80,
                         }
                       }
@@ -1022,22 +1022,13 @@ exports[`The AddPrayerCard component should render 1`] = `
       }
     }
   >
-    <Image
-      blurRadius={250}
-      onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "__typename": "ImageMediaSource",
-            "cache": "force-cache",
-            "height": 240,
-            "uri": "https://1234.image.com",
-            "width": 320,
-          },
-        ]
-      }
+    <View
+      animate={null}
+      customAnimate={null}
+      onReady={false}
       style={
         Object {
+          "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "bottom": 0,
           "left": 0,
@@ -1045,9 +1036,34 @@ exports[`The AddPrayerCard component should render 1`] = `
           "position": "absolute",
           "right": 0,
           "top": 0,
+          "width": "100%",
         }
       }
-    />
+    >
+      <Image
+        blurRadius={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "",
+            },
+          ]
+        }
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "bottom": 0,
+            "left": 0,
+            "opacity": 0.25,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      />
+    </View>
   </BVLinearGradient>
   <RCTScrollView
     contentContainerStyle={
@@ -1139,42 +1155,60 @@ exports[`The AddPrayerCard component should render 1`] = `
                         Object {
                           "alignItems": "center",
                           "height": 80,
-                          "justifyContent": "flex-end",
+                          "justifyContent": "center",
                           "width": 80,
                         }
                       }
                       themeSize={80}
                     >
-                      <Image
-                        onLoad={[Function]}
-                        size="medium"
-                        source={
-                          Array [
-                            Object {
-                              "__typename": "ImageMediaSource",
-                              "cache": "force-cache",
-                              "height": 240,
-                              "uri": "https://1234.image.com",
-                              "width": 320,
-                            },
-                          ]
-                        }
+                      <View
+                        animate={null}
+                        customAnimate={null}
+                        onReady={false}
                         style={
                           Object {
+                            "aspectRatio": 1,
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 40,
                             "bottom": 0,
                             "height": "100%",
                             "left": 0,
-                            "opacity": 0,
                             "position": "absolute",
                             "right": 0,
                             "top": 0,
                             "width": "100%",
                           }
                         }
-                        themeSize={80}
-                      />
+                      >
+                        <Image
+                          onLoad={[Function]}
+                          size="medium"
+                          source={
+                            Array [
+                              Object {
+                                "__typename": "ImageMediaSource",
+                                "cache": "force-cache",
+                                "uri": "https://1234.image.com",
+                              },
+                            ]
+                          }
+                          style={
+                            Object {
+                              "backgroundColor": "#A5A5A5",
+                              "borderRadius": 40,
+                              "bottom": 0,
+                              "height": "100%",
+                              "left": 0,
+                              "opacity": 0,
+                              "position": "absolute",
+                              "right": 0,
+                              "top": 0,
+                              "width": "100%",
+                            }
+                          }
+                          themeSize={80}
+                        />
+                      </View>
                     </View>
                   </View>
                 </View>
@@ -1807,7 +1841,7 @@ exports[`The AddPrayerCard component should render a custom post-add component 1
                         Object {
                           "alignItems": "center",
                           "height": 80,
-                          "justifyContent": "flex-end",
+                          "justifyContent": "center",
                           "width": 80,
                         }
                       }
@@ -2298,7 +2332,7 @@ exports[`The AddPrayerCard component should render a custom skipText 1`] = `
                         Object {
                           "alignItems": "center",
                           "height": 80,
-                          "justifyContent": "flex-end",
+                          "justifyContent": "center",
                           "width": 80,
                         }
                       }
@@ -2789,7 +2823,7 @@ exports[`The AddPrayerCard component should render avatars 1`] = `
                         Object {
                           "alignItems": "center",
                           "height": 80,
-                          "justifyContent": "flex-end",
+                          "justifyContent": "center",
                           "width": 80,
                         }
                       }
