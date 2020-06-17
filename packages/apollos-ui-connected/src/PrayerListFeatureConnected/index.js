@@ -61,7 +61,6 @@ function PrayerFeatureConnected({
               subtitle={data?.node?.subtitle}
               title={data?.node?.title}
               isCard={data?.node?.isCard}
-              {...props}
               isLoading={loading || isLoading}
             />
             <Modal
@@ -75,6 +74,7 @@ function PrayerFeatureConnected({
                 onFinish={() => setModalOpened(false)}
                 showOnboarding={shouldShowOnboarding}
                 id={featureId}
+                {...props}
               />
             </Modal>
           </>
