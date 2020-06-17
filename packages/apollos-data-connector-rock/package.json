@@ -4,7 +4,7 @@
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
   "scripts": {
-    "test": "jest",
+    "test": "TZ=UTC jest",
     "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib -s",
     "lint": "eslint ./src --ext .js"
   },

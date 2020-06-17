@@ -488,6 +488,59 @@ describe('features', () => {
 
       expect(await expandResult(result)).toMatchSnapshot();
     });
+    it('should create an HeroListFeature from a USER_FEED algorithm and a primary action', async () => {
+      const feature = new Feature();
+      feature.initialize({
+        context,
+      });
+
+      const result = await feature.createHeroListFeature({
+        algorithms: [
+          {
+            type: 'USER_FEED',
+          },
+        ],
+        title: 'Test HeroListFeature',
+        subtitle: "It's a hero list feature!",
+        primaryAction: {
+          action: 'OPEN_URL',
+          title: 'Open this url',
+          relatedNode: {
+            __typename: 'Url',
+            url: 'https://www.google.com',
+          },
+        },
+      });
+
+      expect(await expandResult(result)).toMatchSnapshot();
+    });
+    it('should create an HeroListFeature from a USER_FEED algorithm and a primary action with an id', async () => {
+      const feature = new Feature();
+      feature.initialize({
+        context,
+      });
+
+      const result = await feature.createHeroListFeature({
+        algorithms: [
+          {
+            type: 'USER_FEED',
+          },
+        ],
+        title: 'Test HeroListFeature',
+        subtitle: "It's a hero list feature!",
+        primaryAction: {
+          action: 'OPEN_URL',
+          title: 'Open this url',
+          relatedNode: {
+            __typename: 'Url',
+            id: 'Url:123',
+            url: 'https://www.google.com',
+          },
+        },
+      });
+
+      expect(await expandResult(result)).toMatchSnapshot();
+    });
     it('should create an HeroListFeature from a feed algorithm and a different hero algorithm ', async () => {
       const feature = new Feature();
       feature.initialize({
