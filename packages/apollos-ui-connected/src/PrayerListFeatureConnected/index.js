@@ -13,6 +13,7 @@ function PrayerFeatureConnected({
   Component,
   isLoading,
   refetchRef,
+  experienceProps,
   ...props
 }) {
   const [modalOpened, setModalOpened] = useState(false);
@@ -75,6 +76,7 @@ function PrayerFeatureConnected({
                 onFinish={() => setModalOpened(false)}
                 showOnboarding={shouldShowOnboarding}
                 id={featureId}
+                {...experienceProps}
               />
             </Modal>
           </>
@@ -93,6 +95,7 @@ PrayerFeatureConnected.propTypes = {
   featureId: PropTypes.string.isRequired,
   isLoading: PropTypes.bool,
   refetchRef: PropTypes.func,
+  experienceProps: PropTypes.shape({}),
 };
 
 PrayerFeatureConnected.defaultProps = {
