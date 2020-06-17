@@ -2,7 +2,7 @@ import React from 'react';
 import wait from 'waait';
 
 import { Providers, renderWithApolloData } from '../../testUtils';
-import { PrimaryActionButton } from '../../PrayerScreen';
+import { PrimaryActionButton } from '../../PrayerView';
 
 import AddPrayerCard, { GET_USER_PHOTO, ADD_PRAYER } from '.';
 

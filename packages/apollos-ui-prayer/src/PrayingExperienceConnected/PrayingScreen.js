@@ -7,7 +7,7 @@ import { BackgroundImageBlur } from '@apollosproject/ui-kit';
 import { AnalyticsContext } from '@apollosproject/ui-analytics';
 
 import PrayerCard from '../PrayerCard';
-import PrayerScreen from '../PrayerScreen';
+import PrayerView from '../PrayerView';
 
 export const PRAY = gql`
   mutation($prayerId: ID!) {
@@ -55,7 +55,7 @@ const PrayingScreen = ({
 
   return (
     <BackgroundImageBlur source={prayer.requestor?.photo || null}>
-      <PrayerScreen
+      <PrayerView
         isLoding={loading}
         onPressPrimary={loading || hasPrayed ? null : handleOnPressPrimary}
         primaryActionText={hasPrayed ? 'Prayed!' : '🙏 Pray'}
@@ -67,7 +67,7 @@ const PrayingScreen = ({
           title={`Pray for ${prayer.requestor?.nickName ||
             prayer.requestor?.firstName}`}
         />
-      </PrayerScreen>
+      </PrayerView>
     </BackgroundImageBlur>
   );
 };

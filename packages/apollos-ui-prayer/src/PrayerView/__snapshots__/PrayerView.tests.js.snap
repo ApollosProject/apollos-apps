@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The PrayerScreen component should accept an onPressPrimary function 1`] = `
+exports[`The PrayerView component should accept an onPressPrimary function 1`] = `
 <View
   onLayout={[Function]}
   style={
@@ -116,7 +116,7 @@ exports[`The PrayerScreen component should accept an onPressPrimary function 1`]
 </View>
 `;
 
-exports[`The PrayerScreen component should accept an onPressSecondary function 1`] = `
+exports[`The PrayerView component should accept an onPressSecondary function 1`] = `
 <View
   onLayout={[Function]}
   style={
@@ -265,7 +265,7 @@ exports[`The PrayerScreen component should accept an onPressSecondary function 1
 </View>
 `;
 
-exports[`The PrayerScreen component should render 1`] = `
+exports[`The PrayerView component should render 1`] = `
 <View
   onLayout={[Function]}
   style={
@@ -363,7 +363,7 @@ exports[`The PrayerScreen component should render 1`] = `
 </View>
 `;
 
-exports[`The PrayerScreen component should render a loading state (isLoading) 1`] = `
+exports[`The PrayerView component should render a loading state (isLoading) 1`] = `
 <View
   onLayout={[Function]}
   style={
@@ -901,7 +901,7 @@ exports[`The PrayerScreen component should render a loading state (isLoading) 1`
 </View>
 `;
 
-exports[`The PrayerScreen component should render with children 1`] = `
+exports[`The PrayerView component should render with children 1`] = `
 <View
   onLayout={[Function]}
   style={
@@ -1003,7 +1003,7 @@ exports[`The PrayerScreen component should render with children 1`] = `
 </View>
 `;
 
-exports[`The PrayerScreen component should render with custom primaryActionText 1`] = `
+exports[`The PrayerView component should render with custom primaryActionText 1`] = `
 <View
   onLayout={[Function]}
   style={
@@ -1101,7 +1101,7 @@ exports[`The PrayerScreen component should render with custom primaryActionText 
 </View>
 `;
 
-exports[`The PrayerScreen component should render with custom secondaryActionText 1`] = `
+exports[`The PrayerView component should render with custom secondaryActionText 1`] = `
 <View
   onLayout={[Function]}
   style={

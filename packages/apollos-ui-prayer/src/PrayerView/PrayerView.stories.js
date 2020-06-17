@@ -5,11 +5,11 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 
 import PrayerCard from '../PrayerCard';
 
-import PrayerScreen from '.';
+import PrayerView from '.';
 
-storiesOf('ui-prayer/PrayerScreen', module)
+storiesOf('ui-prayer/PrayerView', module)
   .add('example', () => (
-    <PrayerScreen onPressSecondary={() => {}}>
+    <PrayerView onPressSecondary={() => {}}>
       <PrayerCard
         avatar={{
           uri: 'https://picsum.photos/400/400',
@@ -19,25 +19,25 @@ storiesOf('ui-prayer/PrayerScreen', module)
         }
         title={'Pray for Peter'}
       />
-    </PrayerScreen>
+    </PrayerView>
   ))
-  .add('default', () => <PrayerScreen />)
+  .add('default', () => <PrayerView />)
   .add('children', () => (
-    <PrayerScreen>
+    <PrayerView>
       <Text>Hello World</Text>
-    </PrayerScreen>
+    </PrayerView>
   ))
   .add('isLoading', () => (
-    <PrayerScreen onPressSecondary={() => {}} isLoading>
+    <PrayerView onPressSecondary={() => {}} isLoading>
       <PrayerCard />
-    </PrayerScreen>
+    </PrayerView>
   ))
-  .add('onPressSecondary', () => <PrayerScreen onPressSecondary={() => {}} />)
+  .add('onPressSecondary', () => <PrayerView onPressSecondary={() => {}} />)
   .add('primaryActionText', () => (
-    <PrayerScreen primaryActionText={'Custom primaryActionText'} />
+    <PrayerView primaryActionText={'Custom primaryActionText'} />
   ))
   .add('secondaryActionText', () => (
-    <PrayerScreen
+    <PrayerView
       onPressSecondary={() => {}}
       secondaryActionText={'Custom secondaryActionText'}
     />

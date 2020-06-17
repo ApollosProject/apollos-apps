@@ -5,13 +5,13 @@ import renderer from 'react-test-renderer';
 import { Providers } from '../testUtils';
 import PrayerCard from '../PrayerCard';
 
-import PrayerScreen from '.';
+import PrayerView from '.';
 
-describe('The PrayerScreen component', () => {
+describe('The PrayerView component', () => {
   it('should render', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerScreen />
+        <PrayerView />
       </Providers>
     );
 
@@ -20,9 +20,9 @@ describe('The PrayerScreen component', () => {
   it('should render with children', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerScreen>
+        <PrayerView>
           <Text>Boom</Text>
-        </PrayerScreen>
+        </PrayerView>
       </Providers>
     );
 
@@ -31,9 +31,9 @@ describe('The PrayerScreen component', () => {
   it('should render a loading state (isLoading)', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerScreen onPressSecondary={jest.fn()}>
+        <PrayerView onPressSecondary={jest.fn()}>
           <PrayerCard />
-        </PrayerScreen>
+        </PrayerView>
       </Providers>
     );
 
@@ -42,7 +42,7 @@ describe('The PrayerScreen component', () => {
   it('should accept an onPressPrimary function', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerScreen onPressPrimary={jest.fn()} />
+        <PrayerView onPressPrimary={jest.fn()} />
       </Providers>
     );
 
@@ -51,7 +51,7 @@ describe('The PrayerScreen component', () => {
   it('should accept an onPressSecondary function', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerScreen onPressSecondary={jest.fn()} />
+        <PrayerView onPressSecondary={jest.fn()} />
       </Providers>
     );
 
@@ -60,7 +60,7 @@ describe('The PrayerScreen component', () => {
   it('should render with custom primaryActionText', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerScreen primaryActionText={'Custom primaryActionText'} />
+        <PrayerView primaryActionText={'Custom primaryActionText'} />
       </Providers>
     );
 
@@ -69,7 +69,7 @@ describe('The PrayerScreen component', () => {
   it('should render with custom secondaryActionText', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerScreen secondaryActionText={'Custom secondaryActionText'} />
+        <PrayerView secondaryActionText={'Custom secondaryActionText'} />
       </Providers>
     );
 

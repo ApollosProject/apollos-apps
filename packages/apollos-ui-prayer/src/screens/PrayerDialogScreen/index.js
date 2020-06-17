@@ -10,7 +10,7 @@ import {
   styled,
 } from '@apollosproject/ui-kit';
 
-import PrayerScreen from '../../PrayerScreen';
+import PrayerView from '../../PrayerView';
 
 const Container = styled(
   { flexGrow: 1, alignItems: 'center' },
@@ -63,7 +63,7 @@ const PrayerDialogScreen = ({
       ]}
     >
       <BackgroundImageBlur source={primaryAvatar}>
-        <PrayerScreen {...props}>
+        <PrayerView {...props}>
           <AvatarCloud
             maxAvatarWidth={0.4}
             primaryAvatar={primaryAvatar}
@@ -75,7 +75,7 @@ const PrayerDialogScreen = ({
               <ScreenBodyText>{body}</ScreenBodyText>
             </BodyContainer>
           </Container>
-        </PrayerScreen>
+        </PrayerView>
       </BackgroundImageBlur>
     </Animated.View>
   );

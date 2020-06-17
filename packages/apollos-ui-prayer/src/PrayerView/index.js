@@ -21,7 +21,7 @@ const Content = styled(
     flexGrow: 1,
     justifyContent: 'center',
   },
-  'ui-prayer.PrayerScreen.Content'
+  'ui-prayer.PrayerView.Content'
 )(View);
 
 const flexer = styled({ flex: 1 }); // 💪flex 💪all 💪the 💪things 💪bro
@@ -33,12 +33,12 @@ const FlexedScrollView = withTheme(
   () => ({
     contentContainerStyle: { flexGrow: 1 }, // using flexGrow here keeps the PrayerCard input above the keyboard as the input grows.
   }),
-  'ui-prayer.PrayerScreen.FlexedScrollView'
+  'ui-prayer.PrayerView.FlexedScrollView'
 )(ScrollView);
 
 export const PrimaryActionButton = withTheme(
   () => ({}),
-  'ui-prayer.PrayerScreen.PrimaryActionButton'
+  'ui-prayer.PrayerView.PrimaryActionButton'
 )(Button);
 
 const SecondaryActionButton = withTheme(
@@ -51,10 +51,10 @@ const SecondaryActionButton = withTheme(
       // ...(isLoading ? { marginBottom: theme.sizing.baseUnit * 0.5 } : {}),
     },
   }),
-  'ui-prayer.PrayerScreen.SecondaryActionButton'
+  'ui-prayer.PrayerView.SecondaryActionButton'
 )(Button);
 
-const PrayerScreen = ({
+const PrayerView = ({
   children,
   isLoading,
   onPressPrimary,
@@ -89,7 +89,7 @@ const PrayerScreen = ({
   </FlexedKeyboardAvoidingView>
 );
 
-PrayerScreen.propTypes = {
+PrayerView.propTypes = {
   children: PropTypes.node,
   isLoading: PropTypes.bool,
   onPressPrimary: PropTypes.func,
@@ -98,9 +98,9 @@ PrayerScreen.propTypes = {
   secondaryActionText: PropTypes.string,
 };
 
-PrayerScreen.defaultProps = {
+PrayerView.defaultProps = {
   primaryActionText: '🙏 Pray',
   secondaryActionText: 'How to Pray',
 };
 
-export default PrayerScreen;
+export default PrayerView;

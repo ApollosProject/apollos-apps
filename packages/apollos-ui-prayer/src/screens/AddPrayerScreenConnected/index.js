@@ -7,7 +7,7 @@ import { BackgroundImageBlur } from '@apollosproject/ui-kit';
 import { AnalyticsContext } from '@apollosproject/ui-analytics';
 
 import PrayerCard from '../../PrayerCard';
-import PrayerScreen from '../../PrayerScreen';
+import PrayerView from '../../PrayerView';
 
 import { ConfirmationDialogScreen } from '..';
 
@@ -60,7 +60,7 @@ const AddPrayerScreenConnected = ({
   return (
     <>
       <BackgroundImageBlur source={photo || null}>
-        <PrayerScreen
+        <PrayerView
           secondaryActionText={skipText}
           onPressSecondary={swipeForward}
           primaryActionText={primaryButtonText}
@@ -77,7 +77,7 @@ const AddPrayerScreenConnected = ({
             title={title}
             onPrayerChangeText={setPrayer}
           />
-        </PrayerScreen>
+        </PrayerView>
       </BackgroundImageBlur>
       {completed ? (
         <AddedPrayerComponent
