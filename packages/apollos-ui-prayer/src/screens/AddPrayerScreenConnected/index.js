@@ -6,9 +6,10 @@ import PropTypes from 'prop-types';
 import { BackgroundImageBlur } from '@apollosproject/ui-kit';
 import { AnalyticsContext } from '@apollosproject/ui-analytics';
 
-import PrayerCard from '../PrayerCard';
-import PrayerScreen from '../PrayerScreen';
-import { ConfirmationDialogScreen } from '../screens';
+import PrayerCard from '../../PrayerCard';
+import PrayerScreen from '../../PrayerScreen';
+
+import { ConfirmationDialogScreen } from '..';
 
 export const ADD_PRAYER = gql`
   mutation($prayer: String!) {
@@ -32,7 +33,7 @@ export const GET_USER_PHOTO = gql`
   }
 `;
 
-const AddPrayerConnected = ({
+const AddPrayerScreenConnected = ({
   PrayerCardComponent = PrayerCard,
   title = 'Add your prayer',
   skipText = 'No thanks',
@@ -90,7 +91,7 @@ const AddPrayerConnected = ({
   );
 };
 
-AddPrayerConnected.propTypes = {
+AddPrayerScreenConnected.propTypes = {
   PrayerCardComponent: PropTypes.func,
   title: PropTypes.string,
   swipeForward: PropTypes.func,
@@ -100,4 +101,4 @@ AddPrayerConnected.propTypes = {
   AddedPrayerComponent: PropTypes.func,
 };
 
-export default AddPrayerConnected;
+export default AddPrayerScreenConnected;

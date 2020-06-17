@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The AddPrayerCard component should accept a title 1`] = `
+exports[`The AddPrayerScreenConnected component should accept a title 1`] = `
 <BVLinearGradient
   colors={
     Array [
@@ -34,9 +34,19 @@ exports[`The AddPrayerCard component should accept a title 1`] = `
   }
 >
   <Image
-    blurRadius={250}
+    blurRadius={200}
     onLoad={[Function]}
-    source={Array []}
+    source={
+      Array [
+        Object {
+          "__typename": "ImageMediaSource",
+          "cache": "force-cache",
+          "height": 240,
+          "uri": "https://1234.image.com",
+          "width": 320,
+        },
+      ]
+    }
     style={
       Object {
         "backgroundColor": "#A5A5A5",
@@ -422,56 +432,38 @@ exports[`The AddPrayerCard component should accept a title 1`] = `
             }
           >
             <View
-              accessible={true}
-              clickable={true}
-              isTVSelectable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
+              bordered={false}
+              disabled={true}
+              pill={true}
               style={
                 Object {
-                  "opacity": 1,
+                  "alignItems": "center",
+                  "backgroundColor": "#00676D",
+                  "borderColor": "#00676D",
+                  "borderRadius": 48,
+                  "borderWidth": 2,
+                  "elevation": 2,
+                  "flexDirection": "row",
+                  "height": 48,
+                  "justifyContent": "center",
+                  "opacity": 0.5,
+                  "overflow": "hidden",
+                  "paddingHorizontal": 16,
                 }
               }
             >
-              <View
-                bordered={false}
-                disabled={true}
-                pill={true}
+              <Text
                 style={
                   Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#00676D",
-                    "borderColor": "#00676D",
-                    "borderRadius": 48,
-                    "borderWidth": 2,
-                    "elevation": 2,
-                    "flexDirection": "row",
-                    "height": 48,
-                    "justifyContent": "center",
-                    "opacity": 0.5,
-                    "overflow": "hidden",
-                    "paddingHorizontal": 16,
+                    "color": "#FFFFFF",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "lineHeight": 24,
                   }
                 }
               >
-                <Text
-                  style={
-                    Object {
-                      "color": "#FFFFFF",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 16,
-                      "lineHeight": 24,
-                    }
-                  }
-                >
-                  Share prayer
-                </Text>
-              </View>
+                Share prayer
+              </Text>
             </View>
           </View>
         </RCTSafeAreaView>
@@ -481,7 +473,7 @@ exports[`The AddPrayerCard component should accept a title 1`] = `
 </BVLinearGradient>
 `;
 
-exports[`The AddPrayerCard component should create a prayer 1`] = `
+exports[`The AddPrayerScreenConnected component should create a prayer 1`] = `
 <BVLinearGradient
   colors={
     Array [
@@ -956,7 +948,7 @@ exports[`The AddPrayerCard component should create a prayer 1`] = `
 </BVLinearGradient>
 `;
 
-exports[`The AddPrayerCard component should render 1`] = `
+exports[`The AddPrayerScreenConnected component should render 1`] = `
 <BVLinearGradient
   colors={
     Array [
@@ -989,12 +981,13 @@ exports[`The AddPrayerCard component should render 1`] = `
     }
   }
 >
-  <Image
-    blurRadius={250}
-    onLoad={[Function]}
-    source={Array []}
+  <View
+    animate={null}
+    customAnimate={null}
+    onReady={false}
     style={
       Object {
+        "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
         "bottom": 0,
         "left": 0,
@@ -1002,9 +995,34 @@ exports[`The AddPrayerCard component should render 1`] = `
         "position": "absolute",
         "right": 0,
         "top": 0,
+        "width": "100%",
       }
     }
-  />
+  >
+    <Image
+      blurRadius={200}
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "",
+          },
+        ]
+      }
+      style={
+        Object {
+          "backgroundColor": "#A5A5A5",
+          "bottom": 0,
+          "left": 0,
+          "opacity": 0.5,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    />
+  </View>
   <View
     onLayout={[Function]}
     style={
@@ -1396,56 +1414,38 @@ exports[`The AddPrayerCard component should render 1`] = `
             }
           >
             <View
-              accessible={true}
-              clickable={true}
-              isTVSelectable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
+              bordered={false}
+              disabled={true}
+              pill={true}
               style={
                 Object {
-                  "opacity": 1,
+                  "alignItems": "center",
+                  "backgroundColor": "#00676D",
+                  "borderColor": "#00676D",
+                  "borderRadius": 48,
+                  "borderWidth": 2,
+                  "elevation": 2,
+                  "flexDirection": "row",
+                  "height": 48,
+                  "justifyContent": "center",
+                  "opacity": 0.5,
+                  "overflow": "hidden",
+                  "paddingHorizontal": 16,
                 }
               }
             >
-              <View
-                bordered={false}
-                disabled={true}
-                pill={true}
+              <Text
                 style={
                   Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#00676D",
-                    "borderColor": "#00676D",
-                    "borderRadius": 48,
-                    "borderWidth": 2,
-                    "elevation": 2,
-                    "flexDirection": "row",
-                    "height": 48,
-                    "justifyContent": "center",
-                    "opacity": 0.5,
-                    "overflow": "hidden",
-                    "paddingHorizontal": 16,
+                    "color": "#FFFFFF",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "lineHeight": 24,
                   }
                 }
               >
-                <Text
-                  style={
-                    Object {
-                      "color": "#FFFFFF",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 16,
-                      "lineHeight": 24,
-                    }
-                  }
-                >
-                  Share prayer
-                </Text>
-              </View>
+                Share prayer
+              </Text>
             </View>
           </View>
         </RCTSafeAreaView>
@@ -1455,7 +1455,7 @@ exports[`The AddPrayerCard component should render 1`] = `
 </BVLinearGradient>
 `;
 
-exports[`The AddPrayerCard component should render a custom component 1`] = `
+exports[`The AddPrayerScreenConnected component should render a custom component 1`] = `
 <BVLinearGradient
   colors={
     Array [
@@ -1489,9 +1489,19 @@ exports[`The AddPrayerCard component should render a custom component 1`] = `
   }
 >
   <Image
-    blurRadius={250}
+    blurRadius={200}
     onLoad={[Function]}
-    source={Array []}
+    source={
+      Array [
+        Object {
+          "__typename": "ImageMediaSource",
+          "cache": "force-cache",
+          "height": 240,
+          "uri": "https://1234.image.com",
+          "width": 320,
+        },
+      ]
+    }
     style={
       Object {
         "backgroundColor": "#A5A5A5",
@@ -1563,56 +1573,38 @@ exports[`The AddPrayerCard component should render a custom component 1`] = `
             }
           >
             <View
-              accessible={true}
-              clickable={true}
-              isTVSelectable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
+              bordered={false}
+              disabled={true}
+              pill={true}
               style={
                 Object {
-                  "opacity": 1,
+                  "alignItems": "center",
+                  "backgroundColor": "#00676D",
+                  "borderColor": "#00676D",
+                  "borderRadius": 48,
+                  "borderWidth": 2,
+                  "elevation": 2,
+                  "flexDirection": "row",
+                  "height": 48,
+                  "justifyContent": "center",
+                  "opacity": 0.5,
+                  "overflow": "hidden",
+                  "paddingHorizontal": 16,
                 }
               }
             >
-              <View
-                bordered={false}
-                disabled={true}
-                pill={true}
+              <Text
                 style={
                   Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#00676D",
-                    "borderColor": "#00676D",
-                    "borderRadius": 48,
-                    "borderWidth": 2,
-                    "elevation": 2,
-                    "flexDirection": "row",
-                    "height": 48,
-                    "justifyContent": "center",
-                    "opacity": 0.5,
-                    "overflow": "hidden",
-                    "paddingHorizontal": 16,
+                    "color": "#FFFFFF",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "lineHeight": 24,
                   }
                 }
               >
-                <Text
-                  style={
-                    Object {
-                      "color": "#FFFFFF",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 16,
-                      "lineHeight": 24,
-                    }
-                  }
-                >
-                  Share prayer
-                </Text>
-              </View>
+                Share prayer
+              </Text>
             </View>
           </View>
         </RCTSafeAreaView>
@@ -1622,7 +1614,7 @@ exports[`The AddPrayerCard component should render a custom component 1`] = `
 </BVLinearGradient>
 `;
 
-exports[`The AddPrayerCard component should render a custom post-add component 1`] = `
+exports[`The AddPrayerScreenConnected component should render a custom post-add component 1`] = `
 <BVLinearGradient
   colors={
     Array [
@@ -1656,9 +1648,19 @@ exports[`The AddPrayerCard component should render a custom post-add component 1
   }
 >
   <Image
-    blurRadius={250}
+    blurRadius={200}
     onLoad={[Function]}
-    source={Array []}
+    source={
+      Array [
+        Object {
+          "__typename": "ImageMediaSource",
+          "cache": "force-cache",
+          "height": 240,
+          "uri": "https://1234.image.com",
+          "width": 320,
+        },
+      ]
+    }
     style={
       Object {
         "backgroundColor": "#A5A5A5",
@@ -2044,56 +2046,38 @@ exports[`The AddPrayerCard component should render a custom post-add component 1
             }
           >
             <View
-              accessible={true}
-              clickable={true}
-              isTVSelectable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
+              bordered={false}
+              disabled={true}
+              pill={true}
               style={
                 Object {
-                  "opacity": 1,
+                  "alignItems": "center",
+                  "backgroundColor": "#00676D",
+                  "borderColor": "#00676D",
+                  "borderRadius": 48,
+                  "borderWidth": 2,
+                  "elevation": 2,
+                  "flexDirection": "row",
+                  "height": 48,
+                  "justifyContent": "center",
+                  "opacity": 0.5,
+                  "overflow": "hidden",
+                  "paddingHorizontal": 16,
                 }
               }
             >
-              <View
-                bordered={false}
-                disabled={true}
-                pill={true}
+              <Text
                 style={
                   Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#00676D",
-                    "borderColor": "#00676D",
-                    "borderRadius": 48,
-                    "borderWidth": 2,
-                    "elevation": 2,
-                    "flexDirection": "row",
-                    "height": 48,
-                    "justifyContent": "center",
-                    "opacity": 0.5,
-                    "overflow": "hidden",
-                    "paddingHorizontal": 16,
+                    "color": "#FFFFFF",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "lineHeight": 24,
                   }
                 }
               >
-                <Text
-                  style={
-                    Object {
-                      "color": "#FFFFFF",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 16,
-                      "lineHeight": 24,
-                    }
-                  }
-                >
-                  Share prayer
-                </Text>
-              </View>
+                Share prayer
+              </Text>
             </View>
           </View>
         </RCTSafeAreaView>
@@ -2103,7 +2087,7 @@ exports[`The AddPrayerCard component should render a custom post-add component 1
 </BVLinearGradient>
 `;
 
-exports[`The AddPrayerCard component should render a custom skipText 1`] = `
+exports[`The AddPrayerScreenConnected component should render a custom skipText 1`] = `
 <BVLinearGradient
   colors={
     Array [
@@ -2137,9 +2121,19 @@ exports[`The AddPrayerCard component should render a custom skipText 1`] = `
   }
 >
   <Image
-    blurRadius={250}
+    blurRadius={200}
     onLoad={[Function]}
-    source={Array []}
+    source={
+      Array [
+        Object {
+          "__typename": "ImageMediaSource",
+          "cache": "force-cache",
+          "height": 240,
+          "uri": "https://1234.image.com",
+          "width": 320,
+        },
+      ]
+    }
     style={
       Object {
         "backgroundColor": "#A5A5A5",
@@ -2525,56 +2519,38 @@ exports[`The AddPrayerCard component should render a custom skipText 1`] = `
             }
           >
             <View
-              accessible={true}
-              clickable={true}
-              isTVSelectable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
+              bordered={false}
+              disabled={true}
+              pill={true}
               style={
                 Object {
-                  "opacity": 1,
+                  "alignItems": "center",
+                  "backgroundColor": "#00676D",
+                  "borderColor": "#00676D",
+                  "borderRadius": 48,
+                  "borderWidth": 2,
+                  "elevation": 2,
+                  "flexDirection": "row",
+                  "height": 48,
+                  "justifyContent": "center",
+                  "opacity": 0.5,
+                  "overflow": "hidden",
+                  "paddingHorizontal": 16,
                 }
               }
             >
-              <View
-                bordered={false}
-                disabled={true}
-                pill={true}
+              <Text
                 style={
                   Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#00676D",
-                    "borderColor": "#00676D",
-                    "borderRadius": 48,
-                    "borderWidth": 2,
-                    "elevation": 2,
-                    "flexDirection": "row",
-                    "height": 48,
-                    "justifyContent": "center",
-                    "opacity": 0.5,
-                    "overflow": "hidden",
-                    "paddingHorizontal": 16,
+                    "color": "#FFFFFF",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "lineHeight": 24,
                   }
                 }
               >
-                <Text
-                  style={
-                    Object {
-                      "color": "#FFFFFF",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 16,
-                      "lineHeight": 24,
-                    }
-                  }
-                >
-                  Share prayer
-                </Text>
-              </View>
+                Share prayer
+              </Text>
             </View>
           </View>
         </RCTSafeAreaView>
@@ -2584,7 +2560,7 @@ exports[`The AddPrayerCard component should render a custom skipText 1`] = `
 </BVLinearGradient>
 `;
 
-exports[`The AddPrayerCard component should render avatars 1`] = `
+exports[`The AddPrayerScreenConnected component should render avatars 1`] = `
 <BVLinearGradient
   colors={
     Array [
@@ -2618,9 +2594,19 @@ exports[`The AddPrayerCard component should render avatars 1`] = `
   }
 >
   <Image
-    blurRadius={250}
+    blurRadius={200}
     onLoad={[Function]}
-    source={Array []}
+    source={
+      Array [
+        Object {
+          "__typename": "ImageMediaSource",
+          "cache": "force-cache",
+          "height": 240,
+          "uri": "https://1234.image.com",
+          "width": 320,
+        },
+      ]
+    }
     style={
       Object {
         "backgroundColor": "#A5A5A5",
@@ -3006,56 +2992,38 @@ exports[`The AddPrayerCard component should render avatars 1`] = `
             }
           >
             <View
-              accessible={true}
-              clickable={true}
-              isTVSelectable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
+              bordered={false}
+              disabled={true}
+              pill={true}
               style={
                 Object {
-                  "opacity": 1,
+                  "alignItems": "center",
+                  "backgroundColor": "#00676D",
+                  "borderColor": "#00676D",
+                  "borderRadius": 48,
+                  "borderWidth": 2,
+                  "elevation": 2,
+                  "flexDirection": "row",
+                  "height": 48,
+                  "justifyContent": "center",
+                  "opacity": 0.5,
+                  "overflow": "hidden",
+                  "paddingHorizontal": 16,
                 }
               }
             >
-              <View
-                bordered={false}
-                disabled={true}
-                pill={true}
+              <Text
                 style={
                   Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#00676D",
-                    "borderColor": "#00676D",
-                    "borderRadius": 48,
-                    "borderWidth": 2,
-                    "elevation": 2,
-                    "flexDirection": "row",
-                    "height": 48,
-                    "justifyContent": "center",
-                    "opacity": 0.5,
-                    "overflow": "hidden",
-                    "paddingHorizontal": 16,
+                    "color": "#FFFFFF",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "lineHeight": 24,
                   }
                 }
               >
-                <Text
-                  style={
-                    Object {
-                      "color": "#FFFFFF",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 16,
-                      "lineHeight": 24,
-                    }
-                  }
-                >
-                  Share prayer
-                </Text>
-              </View>
+                Share prayer
+              </Text>
             </View>
           </View>
         </RCTSafeAreaView>

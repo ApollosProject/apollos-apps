@@ -138,9 +138,19 @@ exports[`The PrayingExperienceConnected component hides onboarding 1`] = `
           }
         >
           <Image
-            blurRadius={250}
+            blurRadius={200}
             onLoad={[Function]}
-            source={Array []}
+            source={
+              Array [
+                Object {
+                  "__typename": "ImageMediaSource",
+                  "cache": "force-cache",
+                  "height": 240,
+                  "uri": "https://1234.image.com",
+                  "width": 320,
+                },
+              ]
+            }
             style={
               Object {
                 "backgroundColor": "#A5A5A5",
@@ -577,56 +587,38 @@ exports[`The PrayingExperienceConnected component hides onboarding 1`] = `
                       </View>
                     </View>
                     <View
-                      accessible={true}
-                      clickable={true}
-                      isTVSelectable={true}
-                      onClick={[Function]}
-                      onResponderGrant={[Function]}
-                      onResponderMove={[Function]}
-                      onResponderRelease={[Function]}
-                      onResponderTerminate={[Function]}
-                      onResponderTerminationRequest={[Function]}
-                      onStartShouldSetResponder={[Function]}
+                      bordered={false}
+                      disabled={true}
+                      pill={true}
                       style={
                         Object {
-                          "opacity": 1,
+                          "alignItems": "center",
+                          "backgroundColor": "#00676D",
+                          "borderColor": "#00676D",
+                          "borderRadius": 48,
+                          "borderWidth": 2,
+                          "elevation": 2,
+                          "flexDirection": "row",
+                          "height": 48,
+                          "justifyContent": "center",
+                          "opacity": 0.5,
+                          "overflow": "hidden",
+                          "paddingHorizontal": 16,
                         }
                       }
                     >
-                      <View
-                        bordered={false}
-                        disabled={true}
-                        pill={true}
+                      <Text
                         style={
                           Object {
-                            "alignItems": "center",
-                            "backgroundColor": "#00676D",
-                            "borderColor": "#00676D",
-                            "borderRadius": 48,
-                            "borderWidth": 2,
-                            "elevation": 2,
-                            "flexDirection": "row",
-                            "height": 48,
-                            "justifyContent": "center",
-                            "opacity": 0.5,
-                            "overflow": "hidden",
-                            "paddingHorizontal": 16,
+                            "color": "#FFFFFF",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 16,
+                            "lineHeight": 24,
                           }
                         }
                       >
-                        <Text
-                          style={
-                            Object {
-                              "color": "#FFFFFF",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 16,
-                              "lineHeight": 24,
-                            }
-                          }
-                        >
-                          Share prayer
-                        </Text>
-                      </View>
+                        Share prayer
+                      </Text>
                     </View>
                   </View>
                 </RCTSafeAreaView>
@@ -681,9 +673,18 @@ exports[`The PrayingExperienceConnected component hides onboarding 1`] = `
           }
         >
           <Image
-            blurRadius={250}
+            blurRadius={200}
             onLoad={[Function]}
-            source={Array []}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "height": 240,
+                  "uri": "https://123.image-url.com",
+                  "width": 320,
+                },
+              ]
+            }
             style={
               Object {
                 "backgroundColor": "#A5A5A5",
@@ -1263,7 +1264,7 @@ Array [
       }
     >
       <Image
-        blurRadius={250}
+        blurRadius={200}
         onLoad={[Function]}
         source={Array []}
         style={

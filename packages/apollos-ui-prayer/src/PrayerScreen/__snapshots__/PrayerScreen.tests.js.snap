@@ -226,7 +226,7 @@ exports[`The PrayerScreen component should accept an onPressSecondary function 1
           </View>
           <View
             bordered={false}
-            disabled={false}
+            disabled={true}
             pill={true}
             style={
               Object {
@@ -239,7 +239,7 @@ exports[`The PrayerScreen component should accept an onPressSecondary function 1
                 "flexDirection": "row",
                 "height": 48,
                 "justifyContent": "center",
-                "opacity": 1,
+                "opacity": 0.5,
                 "overflow": "hidden",
                 "paddingHorizontal": 16,
               }
@@ -324,7 +324,7 @@ exports[`The PrayerScreen component should render 1`] = `
         >
           <View
             bordered={false}
-            disabled={false}
+            disabled={true}
             pill={true}
             style={
               Object {
@@ -337,7 +337,7 @@ exports[`The PrayerScreen component should render 1`] = `
                 "flexDirection": "row",
                 "height": 48,
                 "justifyContent": "center",
-                "opacity": 1,
+                "opacity": 0.5,
                 "overflow": "hidden",
                 "paddingHorizontal": 16,
               }
@@ -862,7 +862,7 @@ exports[`The PrayerScreen component should render a loading state (isLoading) 1`
           </View>
           <View
             bordered={false}
-            disabled={false}
+            disabled={true}
             pill={true}
             style={
               Object {
@@ -875,7 +875,7 @@ exports[`The PrayerScreen component should render a loading state (isLoading) 1`
                 "flexDirection": "row",
                 "height": 48,
                 "justifyContent": "center",
-                "opacity": 1,
+                "opacity": 0.5,
                 "overflow": "hidden",
                 "paddingHorizontal": 16,
               }
@@ -964,7 +964,7 @@ exports[`The PrayerScreen component should render with children 1`] = `
         >
           <View
             bordered={false}
-            disabled={false}
+            disabled={true}
             pill={true}
             style={
               Object {
@@ -977,7 +977,7 @@ exports[`The PrayerScreen component should render with children 1`] = `
                 "flexDirection": "row",
                 "height": 48,
                 "justifyContent": "center",
-                "opacity": 1,
+                "opacity": 0.5,
                 "overflow": "hidden",
                 "paddingHorizontal": 16,
               }
@@ -1062,7 +1062,7 @@ exports[`The PrayerScreen component should render with custom primaryActionText 
         >
           <View
             bordered={false}
-            disabled={false}
+            disabled={true}
             pill={true}
             style={
               Object {
@@ -1075,7 +1075,7 @@ exports[`The PrayerScreen component should render with custom primaryActionText 
                 "flexDirection": "row",
                 "height": 48,
                 "justifyContent": "center",
-                "opacity": 1,
+                "opacity": 0.5,
                 "overflow": "hidden",
                 "paddingHorizontal": 16,
               }
@@ -1160,7 +1160,7 @@ exports[`The PrayerScreen component should render with custom secondaryActionTex
         >
           <View
             bordered={false}
-            disabled={false}
+            disabled={true}
             pill={true}
             style={
               Object {
@@ -1173,7 +1173,7 @@ exports[`The PrayerScreen component should render with custom secondaryActionTex
                 "flexDirection": "row",
                 "height": 48,
                 "justifyContent": "center",
-                "opacity": 1,
+                "opacity": 0.5,
                 "overflow": "hidden",
                 "paddingHorizontal": 16,
               }

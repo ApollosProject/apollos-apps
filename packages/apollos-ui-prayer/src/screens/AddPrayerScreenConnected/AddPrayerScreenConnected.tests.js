@@ -1,9 +1,9 @@
 import React from 'react';
 import wait from 'waait';
 
-import { Providers, renderWithApolloData } from '../testUtils';
+import { Providers, renderWithApolloData } from '../../testUtils';
+import { PrimaryActionButton } from '../../PrayerScreen';
 
-import { PrimaryActionButton } from '../PrayerScreen';
 import AddPrayerCard, { GET_USER_PHOTO, ADD_PRAYER } from '.';
 
 jest.mock('react-native-device-info', () => ({
@@ -51,7 +51,7 @@ const mocks = [
   },
 ];
 
-describe('The AddPrayerCard component', () => {
+describe('The AddPrayerScreenConnected component', () => {
   it('should render', async () => {
     const tree = await renderWithApolloData(
       <Providers mocks={mocks}>
