@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { ActivityIndicator } from '@apollosproject/ui-kit';
+import { ActivityIndicator, withTheme } from '@apollosproject/ui-kit';
 import PrayerSwiper from '../PrayerSwiper';
 import AddPrayerConnected from '../AddPrayerConnected';
 import PrayerOnboardingScreen from '../PrayerOnboardingScreen';
@@ -81,4 +81,4 @@ PrayingExperience.propTypes = {
   onFinish: PropTypes.func,
 };
 
-export default PrayingExperience;
+export default withTheme(() => ({}), 'ui-prayer.PrayingExperience')(PrayingExperience);
