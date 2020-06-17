@@ -1,2 +1,2 @@
 export ConfirmationDialogScreen from './ConfirmationDialogScreen';
-export PrayerDialogScreen from './PrayerDialog';
+export PrayerDialogScreen from './PrayerDialogScreen';

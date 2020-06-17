@@ -14,25 +14,25 @@ import PrayerScreen from '../../PrayerScreen';
 
 const Container = styled(
   { flexGrow: 1, alignItems: 'center' },
-  'ui-prayer.PrayerDialog.Container'
+  'ui-prayer.PrayerDialogScreen.Container'
 )(PaddedView);
 
 const HeadingText = styled(
   { textAlign: 'center' },
-  'ui-prayer.PrayerDialog.HeadingText'
+  'ui-prayer.PrayerDialogScreen.HeadingText'
 )(H3);
 
 const BodyContainer = styled(
   { paddingHorizontal: '10%' },
-  'ui-prayer.PrayerDialog.BodyContainer'
+  'ui-prayer.PrayerDialogScreen.BodyContainer'
 )(PaddedView);
 
 const ScreenBodyText = styled(
   { textAlign: 'center' },
-  'ui-prayer.PrayerDialog.ScreenBodyText'
+  'ui-prayer.PrayerDialogScreen.ScreenBodyText'
 )(BodyText);
 
-const PrayerDialog = ({
+const PrayerDialogScreen = ({
   avatars,
   primaryAvatar,
   title,
@@ -81,7 +81,7 @@ const PrayerDialog = ({
   );
 };
 
-PrayerDialog.propTypes = {
+PrayerDialogScreen.propTypes = {
   avatars: PropTypes.arrayOf(PropTypes.shape({})),
   primaryAvatar: PropTypes.shape({}),
   title: PropTypes.oneOfType([
@@ -99,7 +99,7 @@ PrayerDialog.propTypes = {
   primaryActionText: PropTypes.string,
 };
 
-PrayerDialog.defaultProps = {
+PrayerDialogScreen.defaultProps = {
   visible: true,
   primaryActionText: 'Next',
   title: 'Join us today in prayer',
@@ -107,4 +107,4 @@ PrayerDialog.defaultProps = {
     'Each day we ask the community for prayer. These prayers last for only 24 hours so that you can reach out to our community and ask for what you need today, and every day.',
 };
 
-export default PrayerDialog;
+export default PrayerDialogScreen;

@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { ActivityIndicator, withTheme } from '@apollosproject/ui-kit';
+
 import PrayerSwiper from '../PrayerSwiper';
 import AddPrayerConnected from '../AddPrayerConnected';
-import PrayerDialog from '../screens/PrayerDialog';
+import { PrayerDialogScreen } from '../screens';
+
 import PrayingScreen from './PrayingScreen';
 
 const PrayingExperience = ({
@@ -14,7 +16,7 @@ const PrayingExperience = ({
   track,
   AddPrayerComponent = AddPrayerConnected,
   PrayingScreenComponent = PrayingScreen,
-  OnboardingComponent = PrayerDialog,
+  OnboardingComponent = PrayerDialogScreen,
   primaryAvatar,
   willShowOnboarding,
   isOnboarding,
