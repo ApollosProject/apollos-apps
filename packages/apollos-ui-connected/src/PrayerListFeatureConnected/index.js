@@ -22,10 +22,8 @@ function PrayerFeatureConnected({
 
   useEffect(() => {
     (async () => {
-      // TODO: we can un-comment this to enable onboarding being shown only once
-      // const hasSeenOnboarding = await AsyncStorage.getItem(onboardingKey);
-      // setShouldShowOnboarding(!hasSeenOnboarding);
-      setShouldShowOnboarding(true);
+      const hasSeenOnboarding = await AsyncStorage.getItem(onboardingKey);
+      setShouldShowOnboarding(!hasSeenOnboarding);
     })();
   });
 
