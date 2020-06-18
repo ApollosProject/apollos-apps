@@ -2,7 +2,7 @@ import React from 'react';
 import wait from 'waait';
 
 import { Providers, renderWithApolloData } from '../../testUtils';
-import { PrimaryActionButton } from '../../PrayerView';
+import PrayerCard from '../../PrayerCard';
 
 import AddPrayerCard, { GET_USER_PHOTO, ADD_PRAYER } from '.';
 
@@ -17,7 +17,7 @@ const mocks = [
   {
     request: {
       query: ADD_PRAYER,
-      variables: { prayer: '' },
+      variables: { prayer: 'my prayer' },
     },
     result: () => ({
       data: {
@@ -114,18 +114,26 @@ describe('The AddPrayerScreenConnected component', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  // it('should create a prayer', async () => {
-  //   const tree = await renderWithApolloData(
-  //     <Providers mocks={mocks}>
-  //       <AddPrayerCard />
-  //     </Providers>
-  //   );
+  it('should create a prayer', async () => {
+    const tree = await renderWithApolloData(
+      <Providers mocks={mocks}>
+        <AddPrayerCard />
+      </Providers>
+    );
 
-  //   const button = tree.root.findByType(PrimaryActionButton);
-  //   button.props.onPress();
+    const prayerCard = tree.root.findByType(PrayerCard);
+    prayerCard.props.onPrayerChangeText('my prayer');
 
-  //   await wait(1);
+    await wait(1);
 
-  //   expect(tree).toMatchSnapshot();
-  // });
+    const button = tree.root.findByProps({
+      primaryActionText: 'Share prayer',
+    });
+
+    button.props.onPressPrimary();
+
+    await wait(1);
+
+    expect(tree).toMatchSnapshot();
+  });
 });
