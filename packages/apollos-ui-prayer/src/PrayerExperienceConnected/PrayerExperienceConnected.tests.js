@@ -4,7 +4,8 @@ import { Providers, renderWithApolloData } from '../testUtils';
 
 import { PrayerDialogScreen } from '../screens';
 import { PRAY } from '../screens/PrayerScreen';
-import PrayerExperienceConnected, { GET_PRAYER_FEATURE } from '.';
+import GET_PRAYER_FEATURE from './getPrayerFeature';
+import PrayerExperienceConnected from '.';
 
 jest.mock('react-native-device-info', () => ({
   getModel: jest.fn(),
