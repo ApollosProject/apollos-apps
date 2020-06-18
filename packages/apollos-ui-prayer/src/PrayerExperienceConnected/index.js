@@ -1,31 +1,13 @@
 import React, { useContext } from 'react';
 import { StatusBar } from 'react-native';
 import PropTypes from 'prop-types';
-import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
-import ApollosConfig from '@apollosproject/config';
 import { withTheme, ThemeMixin, ModalView } from '@apollosproject/ui-kit';
 import { AnalyticsContext } from '@apollosproject/ui-analytics';
 
 import PrayerExperience from './PrayerExperience';
 
-export const GET_PRAYER_FEATURE = gql`
-  query($id: ID!) {
-    currentUser {
-      id
-      profile {
-        id
-        photo {
-          uri
-        }
-      }
-    }
-    feature: node(id: $id) {
-      ...PrayerListFeatureFragment
-    }
-  }
-  ${ApollosConfig.FRAGMENTS.PRAYER_LIST_FEATURE_FRAGMENT}
-`;
+import GET_PRAYER_FEATURE from './getPrayerFeature';
 
 const PrayerExperienceConnected = ({
   id,
