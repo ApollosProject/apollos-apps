@@ -1,4 +1,5 @@
 const fs = require('fs');
+const cp = require('child_process');
 const { Command, flags: Flags } = require('@oclif/command');
 // const { cli } = require('cli-ux');
 const fetch = require('node-fetch');
@@ -31,6 +32,15 @@ module.exports = class CreateApollosAppCommand extends Command {
       char: 'r',
       description: 'The release you want to use for your project',
       default: 'latest',
+    }),
+    appName: Flags.string({
+      char: 'n',
+      description: 'The name to use for your app, this will be displayed',
+      default: '$name',
+    }),
+    bundleIdentifier: Flags.string({
+      char: 'b',
+      description: 'The bundle identifier to use for your iOS app',
     }),
   };
 
@@ -89,6 +99,42 @@ module.exports = class CreateApollosAppCommand extends Command {
 
       // Clean up
       rm.sync(this.config.dataDir);
+
+      // Rename Project
+      const appName = flags.appName === '$name' ? args.name : flags.appName;
+      // eslint-disable-next-line
+      cp.execSync(`cd ${projectPath}/apolloschurchapp && npx react-native-rename "${appName}" -b ${flags.bundleIdentifier || `org.church.${appName}`}`, { stdio: 'inherit' });
+
+      // Install Dependencies
+      cp.execSync(`cd ${projectPath} && yarn`, { stdio: 'inherit' });
+      cp.execSync(`cd ${projectPath} && yarn pods`, { stdio: 'inherit' });
+
+      const defaultAppEnv = `
+APP_DATA_URL='http://0.0.0.0:4000'
+# ONE_SIGNAL_KEY=''
+# GOOGLE_MAPS_API_KEY=''
+# STORYBOOK=''
+# SCHEMA_VERSION=''`;
+      const defaultApiEnv = `
+ROOT_URL='http://localhost:4000'
+PORT=4000
+ROCK_API=''
+ROCK_TOKEN=''
+BIBLE_API_KEY=''
+TWILIO_ACCOUNT_SID=''
+TWILIO_AUTH_TOKEN=''
+TWILIO_FROM_NUMBER=''
+# ENGINE_API_KEY=''
+# CLOUDINARY_URL=''
+# ONE_SIGNAL_REST_KEY=''
+# PASS_WWDR_CERT=''
+# PASS_SIGNER_CERT=''
+# PASS_SIGNER_KEY=''
+# PASS_SIGNER_PASSPHRASE=''`;
+
+      // Stub out environment
+      fs.writeFileSync(`${projectPath}/apolloschurchapp/.env`, defaultAppEnv);
+      fs.writeFileSync(`${projectPath}/apollos-church-api/.env`, defaultApiEnv);
     } catch (err) {
       this.error(err.message);
     }
