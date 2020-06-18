@@ -22,25 +22,27 @@ export default class PrayerRequest extends RockApolloDataSource {
     const { primaryAliasId } = await Auth.getCurrentPerson();
 
     return this.request()
-      .filter(`RequestedByPersonAliasId ${'ne'} ${primaryAliasId}`)
-      .andFilter(`IsActive eq true`)
-      .andFilter(`IsApproved eq true`)
-      .andFilter('IsPublic eq true')
+      .filter(`RequestedByPersonAliasId ${'ne'} ${primaryAliasId}`) // don't show your own prayers
+      .andFilter(`IsActive eq true`) // prayers can be marked as "in-active" in Rock
+      .andFilter(`IsApproved eq true`) // prayers can be moderated in Rock
+      .andFilter('IsPublic eq true') // prayers can be set to private in Rock
       .andFilter(
+        // prayers that aren't expired
         `ExpirationDate gt datetime'${moment
           .tz(ROCK.TIMEZONE)
           .format()}' or ExpirationDate eq null`
       )
       .andFilter(
+        // prayers that were entered less then 24 hours ago
         `EnteredDateTime gt datetime'${moment
           .tz(ROCK.TIMEZONE)
           .subtract(1, 'day')
-          .format()}'`
+          .format()}' or PrayerCount eq null` // include prayers that haven't prayed yet >24 hours old
       )
-      .andFilter(`Answer eq null or Answer eq ''`)
+      .andFilter(`Answer eq null or Answer eq ''`) // prayers that aren't answered
       .sort([
-        { field: 'PrayerCount', direction: 'asc' },
-        { field: 'EnteredDateTime', direction: 'asc' },
+        { field: 'PrayerCount', direction: 'asc' }, // # of times prayed, ascending
+        { field: 'EnteredDateTime', direction: 'asc' }, // oldest prayer first
       ]);
   };
 
