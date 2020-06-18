@@ -14,6 +14,7 @@ function PrayerFeatureConnected({
   Component,
   isLoading,
   refetchRef,
+  PrayerExperienceComponent,
   ...props
 }) {
   const [modalOpened, setModalOpened] = useState(false);
@@ -68,19 +69,19 @@ function PrayerFeatureConnected({
               title={data?.node?.title}
               isCard={data?.node?.isCard}
               isLoading={loading || isLoading}
+              {...props}
             />
             <Modal
               animationType={'slide'}
               onRequestClose={() => setModalOpened(false)}
               visible={modalOpened}
             >
-              <PrayerExperienceConnected
+              <PrayerExperienceComponent
                 index={swiperIndex}
                 asModal
                 onFinish={handleOnFinish}
                 showOnboarding={shouldShowOnboarding}
                 id={featureId}
-                {...props}
               />
             </Modal>
           </>
@@ -96,6 +97,7 @@ PrayerFeatureConnected.propTypes = {
     PropTypes.func,
     PropTypes.object,
   ]),
+  PrayerExperienceComponent: PropTypes.func,
   featureId: PropTypes.string.isRequired,
   isLoading: PropTypes.bool,
   refetchRef: PropTypes.func,
@@ -103,6 +105,7 @@ PrayerFeatureConnected.propTypes = {
 
 PrayerFeatureConnected.defaultProps = {
   Component: PrayerFeature,
+  PrayerExperienceComponent: PrayerExperienceConnected,
 };
 
 export default PrayerFeatureConnected;
