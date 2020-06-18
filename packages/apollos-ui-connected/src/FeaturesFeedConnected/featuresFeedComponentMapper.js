@@ -12,6 +12,9 @@ const MAPPINGS = {
   HeroListFeature: HeroListFeatureConnected,
   HorizontalCardListFeature: HorizontalCardListFeatureConnected,
   VerticalCardListFeature: VerticalCardListFeatureConnected,
+  // TODO: HMW set this up so that features that depend on other packages,
+  // like Prayer, don't all get stuck here, forcing all church apps to have
+  // them all installed?
   PrayerListFeature: PrayerListFeatureConnected,
 };
 
