@@ -5,6 +5,8 @@ import { Animated, StyleSheet } from 'react-native';
 
 import { BackgroundImageBlur } from '@apollosproject/ui-kit';
 
+// TODO: Let's consider moving this to ui-kit when
+// we're more comfortable with this API.
 const AnimatedBackgrounds = ({
   animatedIndex,
   backgrounds,

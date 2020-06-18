@@ -44,7 +44,10 @@ const PrayerExperience = ({
           <PrayerSwiper
             index={index}
             onIndexChanged={(i) =>
-              Animated.spring(animatedIndex, { toValue: i }).start()
+              Animated.spring(animatedIndex, {
+                toValue: i,
+                useNativeDriver: true,
+              }).start()
             }
           >
             {({ swipeForward }) => {
