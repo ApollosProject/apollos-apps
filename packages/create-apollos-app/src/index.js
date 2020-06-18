@@ -1,9 +1,9 @@
 const fs = require('fs');
-const cp = require('child_process');
 const { Command, flags: Flags } = require('@oclif/command');
 // const { cli } = require('cli-ux');
 const fetch = require('node-fetch');
 const Zip = require('adm-zip');
+const rm = require('rimraf');
 
 module.exports = class CreateApollosAppCommand extends Command {
   static description = 'Create an apollos app';
@@ -44,7 +44,7 @@ module.exports = class CreateApollosAppCommand extends Command {
       }
 
       // eslint-disable-next-line
-      this.log(`Creating apollos app at ${flags.dir}/${args.name} (Version: ${flags.release})`);
+      this.log(`Creating apollos app at ${projectPath} (Version: ${flags.release})`);
 
       // Identify version
       let url = '';
@@ -63,25 +63,32 @@ module.exports = class CreateApollosAppCommand extends Command {
         url = `https://api.github.com/repos/ApollosProject/apollos-templates/zipball/${flags.release}`;
       }
 
+      // Set up hidden directory
+      if (!fs.existsSync(this.config.dataDir)) {
+        fs.mkdirSync(this.config.dataDir);
+      }
+
       // Download zip
-      const zipPath = `${flags.dir}/${args.name}.zip`;
-      if (fs.existsSync(zipPath)) {
-        fs.unlinkSync(zipPath);
+      const downloadPath = `${this.config.dataDir}/${args.name}.zip`;
+      if (fs.existsSync(downloadPath)) {
+        fs.unlinkSync(downloadPath);
       }
       const zipFile = await fetch(url);
-      const file = fs.createWriteStream(zipPath);
+      const file = fs.createWriteStream(downloadPath);
       await new Promise((resolve) => {
         zipFile.body.pipe(file).on('finish', resolve);
       });
 
       // Extract zip
-      const zip = new Zip(zipPath);
+      const zip = new Zip(downloadPath);
       const zipRootDirectory = zip.getEntries()[0].entryName;
-      zip.extractAllTo(`${flags.dir}/.tmp`, true);
-      fs.unlinkSync(zipPath);
+      zip.extractAllTo(`${this.config.dataDir}/.tmp`, true);
+      fs.unlinkSync(downloadPath);
       // eslint-disable-next-line
-      fs.renameSync(`${flags.dir}/.tmp/${zipRootDirectory}`, projectPath);
-      cp.execSync(`rm -rf ${flags.dir}/.tmp`);
+      fs.renameSync(`${this.config.dataDir}/.tmp/${zipRootDirectory}`, projectPath);
+
+      // Clean up
+      rm.sync(this.config.dataDir);
     } catch (err) {
       this.error(err.message);
     }
