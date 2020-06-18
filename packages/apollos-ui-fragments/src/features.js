@@ -117,7 +117,7 @@ const ACTION_LIST_FEATURE_FRAGMENT = gql`
         }
       }
       relatedNode {
-        id
+        ...RelatedFeatureNodeFragment
       }
     }
   }
@@ -139,7 +139,7 @@ const HERO_LIST_FEATURE_FRAGMENT = gql`
         }
       }
       relatedNode {
-        id
+        ...RelatedFeatureNodeFragment
       }
     }
     heroCard {
@@ -155,7 +155,7 @@ const HERO_LIST_FEATURE_FRAGMENT = gql`
         }
       }
       relatedNode {
-        id
+        ...RelatedFeatureNodeFragment
       }
     }
   }
@@ -180,7 +180,7 @@ const VERTICAL_CARD_LIST_FEATURE_FRAGMENT = gql`
         }
       }
       relatedNode {
-        id
+        ...RelatedFeatureNodeFragment
       }
     }
   }
@@ -205,7 +205,7 @@ const HORIZONTAL_CARD_LIST_FEATURE_FRAGMENT = gql`
         }
       }
       relatedNode {
-        id
+        ...RelatedFeatureNodeFragment
       }
     }
   }
@@ -216,6 +216,15 @@ const WEBVIEW_FEATURE_FRAGMENT = gql`
     linkText
     title
     url
+  }
+`;
+
+const RELATED_NODE_FRAGMENT = gql`
+  fragment RelatedFeatureNodeFragment on Node {
+    id
+    ... on Url {
+      url
+    }
   }
 `;
 
@@ -231,4 +240,5 @@ export {
   FEED_FEATURES_FRAGMENT,
   WEBVIEW_FEATURE_FRAGMENT,
   PRAYER_LIST_FEATURE_FRAGMENT,
+  RELATED_NODE_FRAGMENT,
 };
