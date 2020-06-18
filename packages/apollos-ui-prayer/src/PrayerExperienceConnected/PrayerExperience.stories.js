@@ -2,6 +2,7 @@ import React from 'react';
 import { Alert } from 'react-native';
 
 import { storiesOf } from '@apollosproject/ui-storybook';
+import { ThemeMixin } from '@apollosproject/ui-kit';
 
 import PrayerExperience from './PrayerExperience';
 
@@ -51,13 +52,37 @@ const prayers = [
   },
 ];
 
-storiesOf('ui-prayer/PrayerExperience', module).add('example', () => (
-  <PrayerExperience
-    onFinish={() => Alert.alert('Finished!')}
-    primaryAvatar={{
-      uri: 'https://picsum.photos/id/158/400/400',
-    }}
-    prayers={prayers}
-    track={() => {}}
-  />
-));
+storiesOf('ui-prayer/PrayerExperience', module)
+  .add('example', () => (
+    <PrayerExperience
+      onFinish={() => Alert.alert('Finished!')}
+      primaryAvatar={{
+        uri: 'https://picsum.photos/id/158/400/400',
+      }}
+      prayers={prayers}
+      track={() => {}}
+    />
+  ))
+  .add('dark theme', () => (
+    <ThemeMixin mixin={{ type: 'dark' }}>
+      <PrayerExperience
+        onFinish={() => Alert.alert('Finished!')}
+        primaryAvatar={{
+          uri: 'https://picsum.photos/id/158/400/400',
+        }}
+        prayers={prayers}
+        track={() => {}}
+      />
+    </ThemeMixin>
+  ))
+  .add('willShowOnboarding', () => (
+    <PrayerExperience
+      onFinish={() => Alert.alert('Finished!')}
+      primaryAvatar={{
+        uri: 'https://picsum.photos/id/158/400/400',
+      }}
+      prayers={prayers}
+      track={() => {}}
+      willShowOnboarding
+    />
+  ));
