@@ -12,6 +12,7 @@
     "@oclif/config": "^1.15.1",
     "@oclif/plugin-help": "^3.1.0",
     "@oclif/plugin-not-found": "^1.2.4",
+    "adm-zip": "^0.4.14",
     "cli-ux": "^5.4.6",
     "node-fetch": "^2.6.0"
   },
