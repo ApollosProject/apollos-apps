@@ -43,6 +43,13 @@ function PrayerFeatureConnected({
         if (featureId && refetch && refetchRef)
           refetchRef({ refetch, id: featureId });
 
+        const handleOnFinish = () => {
+          const prayers = data?.node?.prayers || [];
+          const allPrayed = !prayers.find((prayer) => !prayer.isPrayed);
+          if (allPrayed) refetch();
+          setModalOpened(false);
+        };
+
         return (
           <>
             <Component
@@ -69,7 +76,7 @@ function PrayerFeatureConnected({
               <PrayerExperienceConnected
                 index={swiperIndex}
                 asModal
-                onFinish={() => setModalOpened(false)}
+                onFinish={handleOnFinish}
                 showOnboarding={shouldShowOnboarding}
                 id={featureId}
                 {...props}
