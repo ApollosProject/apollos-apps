@@ -1,0 +1,45 @@
+{
+  "name": "create-apollos-app",
+  "description": "Easily create an apollos project",
+  "version": "0.0.0",
+  "author": "Marcelo Reyna @Lepozepo",
+  "bin": {
+    "create-apollos-app": "./bin/run"
+  },
+  "bugs": "https://github.com/ApollosProject/apollos-apps/issues",
+  "dependencies": {
+    "@oclif/command": "^1.6.1",
+    "@oclif/config": "^1.15.1",
+    "@oclif/plugin-help": "^3.1.0",
+    "@oclif/plugin-not-found": "^1.2.4",
+    "cli-ux": "^5.4.6",
+    "node-fetch": "^2.6.0"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "files": [
+    "/bin",
+    "/src"
+  ],
+  "homepage": "https://github.com/ApollosProject/apollos-apps",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "bin": "create-apollos-app"
+  },
+  "repository": "ApollosProject/apollos-apps",
+  "scripts": {
+    "posttest": "eslint .",
+    "prepack": "oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.22.2",
+    "@oclif/test": "^1.2.6"
+  }
+}
