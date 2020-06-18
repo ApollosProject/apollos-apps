@@ -1,3 +1,4 @@
+const fs = require('fs');
 const { Command, flags: Flags } = require('@oclif/command');
 const { cli } = require('cli-ux');
 const fetch = require('node-fetch');
@@ -38,8 +39,8 @@ module.exports = class CreateApollosAppCommand extends Command {
     // eslint-disable-next-line
     cli.action.start(`Creating apollos app at ${flags.dir}/${args.name} (Version: ${flags.release})`);
 
+    // Identify version
     let url = '';
-
     if (flags.release === 'edge') {
       // eslint-disable-next-line
       url = 'https://github.com/ApollosProject/apollos-templates/archive/master.zip';
@@ -55,7 +56,18 @@ module.exports = class CreateApollosAppCommand extends Command {
       url = `https://api.github.com/repos/ApollosProject/apollos-templates/zipball/${flags.release}`;
     }
 
-    this.log(`use ${url}`);
+    // Download zip
+    const zipPath = `${flags.dir}/${args.name}.zip`;
+    if (fs.existsSync(zipPath)) {
+      fs.unlinkSync(zipPath);
+    }
+    const zipFile = await fetch(url);
+    const file = fs.createWriteStream(zipPath);
+    await new Promise((resolve) => {
+      zipFile.body.pipe(file).on('finish', resolve);
+    });
+
+    // Extract zip
 
     cli.action.stop('done');
   }
