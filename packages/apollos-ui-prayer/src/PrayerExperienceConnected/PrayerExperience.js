@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
+
+import { Animated } from 'react-native';
 
 import { ActivityIndicator, withTheme } from '@apollosproject/ui-kit';
 
@@ -9,6 +11,8 @@ import {
   PrayerDialogScreen,
   PrayerScreen,
 } from '../screens';
+
+import AnimatedBackgrounds from './AnimatedBackgrounds';
 
 const PrayerExperience = ({
   index,
@@ -23,38 +27,55 @@ const PrayerExperience = ({
   onFinish,
 }) => {
   const [isOnboarding, setIsOnboarding] = useState(true);
+  const animatedIndex = useRef(new Animated.Value(index || 0)).current;
   return (
     <>
       {loading && !prayers.length ? (
         <ActivityIndicator />
       ) : (
-        <PrayerSwiper index={index}>
-          {({ swipeForward }) => {
-            const handleSwipeForward = () => {
-              track({ eventName: 'PrayerSwipeForward' });
-              swipeForward();
-            };
-            return [
-              <AddPrayerComponent
-                key={'add-prayer'}
-                swipeForward={!prayers.length ? onFinish : handleSwipeForward}
-                avatars={prayers.map((prayer) => prayer.requestor?.photo) || []}
-                primaryAvatar={primaryAvatar}
-              />,
-              ...prayers.map((prayer, prayerIndex) => (
-                <PrayingScreenComponent
-                  key={prayer.id}
-                  prayer={prayer}
-                  onPressPrimary={
-                    prayerIndex < prayers.length - 1
-                      ? handleSwipeForward
-                      : onFinish
+        <>
+          <AnimatedBackgrounds
+            animatedIndex={animatedIndex}
+            backgrounds={[
+              primaryAvatar,
+              ...prayers.map((prayer) => prayer.requestor?.photo || null),
+            ]}
+          />
+          <PrayerSwiper
+            index={index}
+            onIndexChanged={(i) =>
+              Animated.spring(animatedIndex, { toValue: i }).start()
+            }
+          >
+            {({ swipeForward }) => {
+              const handleSwipeForward = () => {
+                track({ eventName: 'PrayerSwipeForward' });
+                swipeForward();
+              };
+              return [
+                <AddPrayerComponent
+                  key={'add-prayer'}
+                  swipeForward={!prayers.length ? onFinish : handleSwipeForward}
+                  avatars={
+                    prayers.map((prayer) => prayer.requestor?.photo) || []
                   }
-                />
-              )),
-            ];
-          }}
-        </PrayerSwiper>
+                  primaryAvatar={primaryAvatar}
+                />,
+                ...prayers.map((prayer, prayerIndex) => (
+                  <PrayingScreenComponent
+                    key={prayer.id}
+                    prayer={prayer}
+                    onPressPrimary={
+                      prayerIndex < prayers.length - 1
+                        ? handleSwipeForward
+                        : onFinish
+                    }
+                  />
+                )),
+              ];
+            }}
+          </PrayerSwiper>
+        </>
       )}
     {willShowOnboarding ? ( // eslint-disable-line
         <OnboardingComponent

@@ -3,7 +3,6 @@ import gql from 'graphql-tag';
 import { useQuery, useMutation } from '@apollo/react-hooks';
 import PropTypes from 'prop-types';
 
-import { BackgroundImageBlur } from '@apollosproject/ui-kit';
 import { AnalyticsContext } from '@apollosproject/ui-analytics';
 
 import PrayerCard from '../../PrayerCard';
@@ -59,26 +58,24 @@ const AddPrayerScreenConnected = ({
 
   return (
     <>
-      <BackgroundImageBlur source={photo || null}>
-        <PrayerView
-          secondaryActionText={skipText}
-          onPressSecondary={swipeForward}
-          primaryActionText={primaryButtonText}
-          onPressPrimary={
-            loading || !prayer.length
-              ? null
-              : () => addPrayer({ variables: { prayer } })
-          }
-          isLoading={loading}
-          {...screenProps}
-        >
-          <PrayerCardComponent
-            avatar={photo || null}
-            title={title}
-            onPrayerChangeText={setPrayer}
-          />
-        </PrayerView>
-      </BackgroundImageBlur>
+      <PrayerView
+        secondaryActionText={skipText}
+        onPressSecondary={swipeForward}
+        primaryActionText={primaryButtonText}
+        onPressPrimary={
+          loading || !prayer.length
+            ? null
+            : () => addPrayer({ variables: { prayer } })
+        }
+        isLoading={loading}
+        {...screenProps}
+      >
+        <PrayerCardComponent
+          avatar={photo || null}
+          title={title}
+          onPrayerChangeText={setPrayer}
+        />
+      </PrayerView>
       {completed ? (
         <AddedPrayerComponent
           avatars={avatars}
