@@ -5,7 +5,8 @@ import {
   PrayerFeature,
   PrayerExperienceConnected,
 } from '@apollosproject/ui-prayer';
-import { Modal, AsyncStorage } from 'react-native';
+import { Modal } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 import GET_PRAYER_FEATURE from './getPrayerFeature';
 
 function PrayerFeatureConnected({
