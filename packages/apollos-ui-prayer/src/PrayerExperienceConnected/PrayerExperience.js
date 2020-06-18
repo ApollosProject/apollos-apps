@@ -20,7 +20,7 @@ const PrayerExperience = ({
   prayers,
   track,
   AddPrayerComponent = AddPrayerScreenConnected,
-  PrayingScreenComponent = PrayerScreen,
+  PrayerScreenComponent = PrayerScreen,
   OnboardingComponent = PrayerDialogScreen,
   primaryAvatar,
   willShowOnboarding,
@@ -62,7 +62,7 @@ const PrayerExperience = ({
                   primaryAvatar={primaryAvatar}
                 />,
                 ...prayers.map((prayer, prayerIndex) => (
-                  <PrayingScreenComponent
+                  <PrayerScreenComponent
                     key={prayer.id}
                     prayer={prayer}
                     onPressPrimary={
@@ -77,7 +77,7 @@ const PrayerExperience = ({
           </PrayerSwiper>
         </>
       )}
-    {willShowOnboarding ? ( // eslint-disable-line
+      {willShowOnboarding ? ( // eslint-disable-line
         <OnboardingComponent
           avatars={prayers.map((prayer) => prayer.requestor?.photo) || []}
           primaryAvatar={primaryAvatar}
@@ -96,7 +96,7 @@ PrayerExperience.propTypes = {
   prayers: PropTypes.arrayOf(PropTypes.shape({})),
   track: PropTypes.func,
   AddPrayerComponent: PropTypes.func,
-  PrayingScreenComponent: PropTypes.func,
+  PrayerScreenComponent: PropTypes.func,
   OnboardingComponent: PropTypes.func,
   // we just pass this prop to children components, so we don't care about its shape:
   primaryAvatar: PropTypes.any, // eslint-disable-line

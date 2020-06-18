@@ -32,7 +32,7 @@ const PrayerExperienceConnected = ({
   Component = PrayerExperience,
   AddPrayerComponent,
   OnboardingComponent,
-  PrayingScreenComponent,
+  PrayerScreenComponent,
   showOnboarding = true,
   onFinish,
   asModal,
@@ -69,7 +69,7 @@ const PrayerExperienceConnected = ({
           prayers={prayers}
           track={track}
           AddPrayerComponent={AddPrayerComponent}
-          PrayingScreenComponent={PrayingScreenComponent}
+          PrayerScreenComponent={PrayerScreenComponent}
           OnboardingComponent={OnboardingComponent}
           primaryAvatar={photo}
           willShowOnboarding={showOnboarding}
@@ -87,7 +87,7 @@ PrayerExperienceConnected.propTypes = {
   Component: PropTypes.func,
   AddPrayerComponent: PropTypes.func,
   OnboardingComponent: PropTypes.func,
-  PrayingScreenComponent: PropTypes.func,
+  PrayerScreenComponent: PropTypes.func,
   showOnboarding: PropTypes.bool,
   onFinish: PropTypes.func,
   themeType: PropTypes.string,
