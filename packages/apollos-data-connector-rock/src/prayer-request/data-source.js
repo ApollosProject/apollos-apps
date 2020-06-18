@@ -55,7 +55,7 @@ export default class PrayerRequest extends RockApolloDataSource {
     if (prayer.prayerCount <= 1) this.sendPrayingNotification(prayer);
   };
 
-  sendPrayingNotification = ({ primaryAliasId }) => {
+  sendPrayingNotification = async ({ requestedByPersonAliasId }) => {
     const notificationText = get(
       ApollosConfig,
       'NOTIFICATIONS.PRAYING',
@@ -64,7 +64,7 @@ export default class PrayerRequest extends RockApolloDataSource {
     const { OneSignal } = this.context.dataSources;
     if (!OneSignal) return; // todo: support other push providers
     OneSignal.createNotification({
-      toUserIds: [primaryAliasId],
+      toUserIds: [requestedByPersonAliasId],
       content: notificationText,
     });
   };
