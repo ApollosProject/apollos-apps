@@ -3,166 +3,482 @@
 exports[`The PrayerExperienceConnected component closes onboarding when button is pressed 1`] = `null`;
 
 exports[`The PrayerExperienceConnected component hides onboarding 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
+Array [
+  <View
+    style={
       Object {
-        "backgroundColor": "transparent",
-        "flex": 1,
-        "position": "relative",
-      },
-      undefined,
-    ]
-  }
->
-  <RCTScrollView
-    activeDot={
-      <withOrientation
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
-      >
-        <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
-      </withOrientation>
-    }
-    automaticallyAdjustContentInsets={false}
-    autoplay={false}
-    autoplayDirection={true}
-    autoplayTimeout={2.5}
-    bounces={false}
-    contentContainerStyle={
-      Array [
-        Object {
-          "backgroundColor": "transparent",
-        },
-        undefined,
-      ]
-    }
-    contentOffset={
-      Object {
-        "x": 0,
+        "bottom": 0,
+        "left": 0,
+        "opacity": 1,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
       }
     }
-    disableNextButton={false}
-    disablePrevButton={false}
-    dot={
-      <withOrientation
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
-      >
-        <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
-        />
-      </withOrientation>
-    }
-    horizontal={true}
-    index={0}
-    loadMinimal={true}
-    loadMinimalSize={1}
-    loop={false}
-    onIndexChanged={[Function]}
-    onMomentumScrollEnd={[Function]}
-    onScrollBeginDrag={[Function]}
-    onScrollEndDrag={[Function]}
-    orientation="portrait"
-    paginationStyle={
-      Object {
-        "alignItem": "flex-start",
-        "bottom": null,
-        "justifyContent": "flex-start",
-        "left": 16,
-      }
-    }
-    pagingEnabled={true}
-    removeClippedSubviews={true}
-    scrollsToTop={false}
-    showsButtons={false}
-    showsHorizontalScrollIndicator={false}
-    showsPagination={true}
-    showsVerticalScrollIndicator={false}
   >
-    <View>
-      <View
-        style={
+    <BVLinearGradient
+      colors={
+        Array [
+          4281348144,
+          4278190080,
+        ]
+      }
+      endPoint={
+        Object {
+          "x": 0.5,
+          "y": 1,
+        }
+      }
+      locations={null}
+      startPoint={
+        Object {
+          "x": 0.5,
+          "y": 0,
+        }
+      }
+      style={
+        Object {
+          "bottom": 0,
+          "flex": 1,
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <Image
+        blurRadius={200}
+        onLoad={[Function]}
+        source={
           Array [
             Object {
-              "height": 1334,
-              "width": 750,
-            },
-            Object {
-              "backgroundColor": "transparent",
+              "__typename": "ImageMediaSource",
+              "cache": "force-cache",
+              "height": 240,
+              "uri": "https://1234.image.com",
+              "width": 320,
             },
           ]
         }
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "bottom": 0,
+            "left": 0,
+            "opacity": 0.5,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      />
+    </BVLinearGradient>
+  </View>,
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <BVLinearGradient
+      colors={
+        Array [
+          4281348144,
+          4278190080,
+        ]
+      }
+      endPoint={
+        Object {
+          "x": 0.5,
+          "y": 1,
+        }
+      }
+      locations={null}
+      startPoint={
+        Object {
+          "x": 0.5,
+          "y": 0,
+        }
+      }
+      style={
+        Object {
+          "bottom": 0,
+          "flex": 1,
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <Image
+        blurRadius={200}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "height": 240,
+              "uri": "https://123.image-url.com",
+              "width": 320,
+            },
+          ]
+        }
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "bottom": 0,
+            "left": 0,
+            "opacity": 0.5,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      />
+    </BVLinearGradient>
+  </View>,
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "opacity": -1,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <BVLinearGradient
+      colors={
+        Array [
+          4281348144,
+          4278190080,
+        ]
+      }
+      endPoint={
+        Object {
+          "x": 0.5,
+          "y": 1,
+        }
+      }
+      locations={null}
+      startPoint={
+        Object {
+          "x": 0.5,
+          "y": 0,
+        }
+      }
+      style={
+        Object {
+          "bottom": 0,
+          "flex": 1,
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <Image
+        blurRadius={200}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "height": 240,
+              "uri": "https://123.image-url.com",
+              "width": 320,
+            },
+          ]
+        }
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "bottom": 0,
+            "left": 0,
+            "opacity": 0.5,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      />
+    </BVLinearGradient>
+  </View>,
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "opacity": -2,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <BVLinearGradient
+      colors={
+        Array [
+          4281348144,
+          4278190080,
+        ]
+      }
+      endPoint={
+        Object {
+          "x": 0.5,
+          "y": 1,
+        }
+      }
+      locations={null}
+      startPoint={
+        Object {
+          "x": 0.5,
+          "y": 0,
+        }
+      }
+      style={
+        Object {
+          "bottom": 0,
+          "flex": 1,
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <Image
+        blurRadius={200}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "height": 240,
+              "uri": "https://123.image-url.com",
+              "width": 320,
+            },
+          ]
+        }
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "bottom": 0,
+            "left": 0,
+            "opacity": 0.5,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      />
+    </BVLinearGradient>
+  </View>,
+  <View
+    style={
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "opacity": -3,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <BVLinearGradient
+      colors={
+        Array [
+          4281348144,
+          4278190080,
+        ]
+      }
+      endPoint={
+        Object {
+          "x": 0.5,
+          "y": 1,
+        }
+      }
+      locations={null}
+      startPoint={
+        Object {
+          "x": 0.5,
+          "y": 0,
+        }
+      }
+      style={
+        Object {
+          "bottom": 0,
+          "flex": 1,
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <View
+        animate={null}
+        customAnimate={null}
+        onReady={false}
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "bottom": 0,
+            "left": 0,
+            "opacity": 0.5,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
       >
-        <BVLinearGradient
-          colors={
+        <Image
+          blurRadius={200}
+          onLoad={[Function]}
+          source={
             Array [
-              4281348144,
-              4278190080,
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+              },
             ]
-          }
-          endPoint={
-            Object {
-              "x": 0.5,
-              "y": 1,
-            }
-          }
-          locations={null}
-          startPoint={
-            Object {
-              "x": 0.5,
-              "y": 0,
-            }
           }
           style={
             Object {
+              "backgroundColor": "#A5A5A5",
               "bottom": 0,
-              "flex": 1,
-              "height": "100%",
               "left": 0,
+              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
-        >
-          <Image
-            blurRadius={200}
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "__typename": "ImageMediaSource",
-                  "cache": "force-cache",
-                  "height": 240,
-                  "uri": "https://1234.image.com",
-                  "width": 320,
-                },
-              ]
+        />
+      </View>
+    </BVLinearGradient>
+  </View>,
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "flex": 1,
+          "position": "relative",
+        },
+        undefined,
+      ]
+    }
+  >
+    <RCTScrollView
+      activeDot={
+        <withOrientation
+          forceInset={
+            Object {
+              "bottom": "always",
             }
-            style={
+          }
+        >
+          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+        </withOrientation>
+      }
+      automaticallyAdjustContentInsets={false}
+      autoplay={false}
+      autoplayDirection={true}
+      autoplayTimeout={2.5}
+      bounces={false}
+      contentContainerStyle={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          undefined,
+        ]
+      }
+      contentOffset={
+        Object {
+          "x": 0,
+        }
+      }
+      disableNextButton={false}
+      disablePrevButton={false}
+      dot={
+        <withOrientation
+          forceInset={
+            Object {
+              "bottom": "always",
+            }
+          }
+        >
+          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))
+            forceInset={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "bottom": 0,
-                "left": 0,
-                "opacity": 0.5,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
+                "bottom": "always",
               }
             }
           />
+        </withOrientation>
+      }
+      horizontal={true}
+      index={0}
+      loadMinimal={true}
+      loadMinimalSize={1}
+      loop={false}
+      onIndexChanged={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      orientation="portrait"
+      paginationStyle={
+        Object {
+          "alignItem": "flex-start",
+          "bottom": null,
+          "justifyContent": "flex-start",
+          "left": 16,
+        }
+      }
+      pagingEnabled={true}
+      removeClippedSubviews={true}
+      scrollsToTop={false}
+      showsButtons={false}
+      showsHorizontalScrollIndicator={false}
+      showsPagination={true}
+      showsVerticalScrollIndicator={false}
+    >
+      <View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 1334,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+            ]
+          }
+        >
           <View
             onLayout={[Function]}
             style={
@@ -625,78 +941,20 @@ exports[`The PrayerExperienceConnected component hides onboarding 1`] = `
               </View>
             </RCTScrollView>
           </View>
-        </BVLinearGradient>
-      </View>
-      <View
-        style={
-          Array [
-            Object {
-              "height": 1334,
-              "width": 750,
-            },
-            Object {
-              "backgroundColor": "transparent",
-            },
-          ]
-        }
-      >
-        <BVLinearGradient
-          colors={
+        </View>
+        <View
+          style={
             Array [
-              4281348144,
-              4278190080,
+              Object {
+                "height": 1334,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
             ]
           }
-          endPoint={
-            Object {
-              "x": 0.5,
-              "y": 1,
-            }
-          }
-          locations={null}
-          startPoint={
-            Object {
-              "x": 0.5,
-              "y": 0,
-            }
-          }
-          style={
-            Object {
-              "bottom": 0,
-              "flex": 1,
-              "height": "100%",
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            }
-          }
         >
-          <Image
-            blurRadius={200}
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "height": 240,
-                  "uri": "https://123.image-url.com",
-                  "width": 320,
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "bottom": 0,
-                "left": 0,
-                "opacity": 0.5,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-              }
-            }
-          />
           <View
             onLayout={[Function]}
             style={
@@ -936,262 +1194,262 @@ exports[`The PrayerExperienceConnected component hides onboarding 1`] = `
               </View>
             </RCTScrollView>
           </View>
-        </BVLinearGradient>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "height": 1334,
+              "justifyContent": "center",
+              "width": 750,
+            }
+          }
+        >
+          <ActivityIndicator
+            animating={true}
+            color="#999999"
+            hidesWhenStopped={true}
+            size="small"
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "height": 1334,
+              "justifyContent": "center",
+              "width": 750,
+            }
+          }
+        >
+          <ActivityIndicator
+            animating={true}
+            color="#999999"
+            hidesWhenStopped={true}
+            size="small"
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "height": 1334,
+              "justifyContent": "center",
+              "width": 750,
+            }
+          }
+        >
+          <ActivityIndicator
+            animating={true}
+            color="#999999"
+            hidesWhenStopped={true}
+            size="small"
+          />
+        </View>
       </View>
-      <View
-        style={
+    </RCTScrollView>
+    <View
+      pointerEvents="none"
+      style={
+        Array [
           Object {
             "alignItems": "center",
+            "backgroundColor": "transparent",
+            "bottom": 25,
             "flex": 1,
-            "height": 1334,
+            "flexDirection": "row",
             "justifyContent": "center",
-            "width": 750,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+          },
+          Object {
+            "alignItem": "flex-start",
+            "bottom": null,
+            "justifyContent": "flex-start",
+            "left": 16,
+          },
+        ]
+      }
+    >
+      <View
+        onLayout={[Function]}
+        pointerEvents="box-none"
+        style={
+          Object {
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 20,
           }
         }
       >
-        <ActivityIndicator
-          animating={true}
-          color="#999999"
-          hidesWhenStopped={true}
-          size="small"
+        <View
+          style={
+            Object {
+              "backgroundColor": "#00676D",
+              "borderRadius": 2,
+              "height": 2,
+              "marginHorizontal": 1,
+              "width": 24,
+            }
+          }
         />
       </View>
       <View
+        onLayout={[Function]}
+        pointerEvents="box-none"
         style={
           Object {
-            "alignItems": "center",
-            "flex": 1,
-            "height": 1334,
-            "justifyContent": "center",
-            "width": 750,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 20,
           }
         }
       >
-        <ActivityIndicator
-          animating={true}
-          color="#999999"
-          hidesWhenStopped={true}
-          size="small"
+        <View
+          forceInset={
+            Object {
+              "bottom": "always",
+            }
+          }
+          style={
+            Object {
+              "backgroundColor": Object {
+                "color": Array [
+                  248,
+                  247,
+                  244,
+                ],
+                "model": "rgb",
+                "valpha": 0.09999999999999998,
+              },
+              "borderRadius": 2,
+              "height": 2,
+              "marginHorizontal": 1,
+              "width": 24,
+            }
+          }
         />
       </View>
       <View
+        onLayout={[Function]}
+        pointerEvents="box-none"
         style={
           Object {
-            "alignItems": "center",
-            "flex": 1,
-            "height": 1334,
-            "justifyContent": "center",
-            "width": 750,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 20,
           }
         }
       >
-        <ActivityIndicator
-          animating={true}
-          color="#999999"
-          hidesWhenStopped={true}
-          size="small"
+        <View
+          forceInset={
+            Object {
+              "bottom": "always",
+            }
+          }
+          style={
+            Object {
+              "backgroundColor": Object {
+                "color": Array [
+                  248,
+                  247,
+                  244,
+                ],
+                "model": "rgb",
+                "valpha": 0.09999999999999998,
+              },
+              "borderRadius": 2,
+              "height": 2,
+              "marginHorizontal": 1,
+              "width": 24,
+            }
+          }
+        />
+      </View>
+      <View
+        onLayout={[Function]}
+        pointerEvents="box-none"
+        style={
+          Object {
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 20,
+          }
+        }
+      >
+        <View
+          forceInset={
+            Object {
+              "bottom": "always",
+            }
+          }
+          style={
+            Object {
+              "backgroundColor": Object {
+                "color": Array [
+                  248,
+                  247,
+                  244,
+                ],
+                "model": "rgb",
+                "valpha": 0.09999999999999998,
+              },
+              "borderRadius": 2,
+              "height": 2,
+              "marginHorizontal": 1,
+              "width": 24,
+            }
+          }
+        />
+      </View>
+      <View
+        onLayout={[Function]}
+        pointerEvents="box-none"
+        style={
+          Object {
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 20,
+          }
+        }
+      >
+        <View
+          forceInset={
+            Object {
+              "bottom": "always",
+            }
+          }
+          style={
+            Object {
+              "backgroundColor": Object {
+                "color": Array [
+                  248,
+                  247,
+                  244,
+                ],
+                "model": "rgb",
+                "valpha": 0.09999999999999998,
+              },
+              "borderRadius": 2,
+              "height": 2,
+              "marginHorizontal": 1,
+              "width": 24,
+            }
+          }
         />
       </View>
     </View>
-  </RCTScrollView>
-  <View
-    pointerEvents="none"
-    style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "transparent",
-          "bottom": 25,
-          "flex": 1,
-          "flexDirection": "row",
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-        },
-        Object {
-          "alignItem": "flex-start",
-          "bottom": null,
-          "justifyContent": "flex-start",
-          "left": 16,
-        },
-      ]
-    }
-  >
-    <View
-      onLayout={[Function]}
-      pointerEvents="box-none"
-      style={
-        Object {
-          "paddingBottom": 0,
-          "paddingLeft": 0,
-          "paddingRight": 0,
-          "paddingTop": 20,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "backgroundColor": "#00676D",
-            "borderRadius": 2,
-            "height": 2,
-            "marginHorizontal": 1,
-            "width": 24,
-          }
-        }
-      />
-    </View>
-    <View
-      onLayout={[Function]}
-      pointerEvents="box-none"
-      style={
-        Object {
-          "paddingBottom": 0,
-          "paddingLeft": 0,
-          "paddingRight": 0,
-          "paddingTop": 20,
-        }
-      }
-    >
-      <View
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
-        style={
-          Object {
-            "backgroundColor": Object {
-              "color": Array [
-                248,
-                247,
-                244,
-              ],
-              "model": "rgb",
-              "valpha": 0.09999999999999998,
-            },
-            "borderRadius": 2,
-            "height": 2,
-            "marginHorizontal": 1,
-            "width": 24,
-          }
-        }
-      />
-    </View>
-    <View
-      onLayout={[Function]}
-      pointerEvents="box-none"
-      style={
-        Object {
-          "paddingBottom": 0,
-          "paddingLeft": 0,
-          "paddingRight": 0,
-          "paddingTop": 20,
-        }
-      }
-    >
-      <View
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
-        style={
-          Object {
-            "backgroundColor": Object {
-              "color": Array [
-                248,
-                247,
-                244,
-              ],
-              "model": "rgb",
-              "valpha": 0.09999999999999998,
-            },
-            "borderRadius": 2,
-            "height": 2,
-            "marginHorizontal": 1,
-            "width": 24,
-          }
-        }
-      />
-    </View>
-    <View
-      onLayout={[Function]}
-      pointerEvents="box-none"
-      style={
-        Object {
-          "paddingBottom": 0,
-          "paddingLeft": 0,
-          "paddingRight": 0,
-          "paddingTop": 20,
-        }
-      }
-    >
-      <View
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
-        style={
-          Object {
-            "backgroundColor": Object {
-              "color": Array [
-                248,
-                247,
-                244,
-              ],
-              "model": "rgb",
-              "valpha": 0.09999999999999998,
-            },
-            "borderRadius": 2,
-            "height": 2,
-            "marginHorizontal": 1,
-            "width": 24,
-          }
-        }
-      />
-    </View>
-    <View
-      onLayout={[Function]}
-      pointerEvents="box-none"
-      style={
-        Object {
-          "paddingBottom": 0,
-          "paddingLeft": 0,
-          "paddingRight": 0,
-          "paddingTop": 20,
-        }
-      }
-    >
-      <View
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
-        style={
-          Object {
-            "backgroundColor": Object {
-              "color": Array [
-                248,
-                247,
-                244,
-              ],
-              "model": "rgb",
-              "valpha": 0.09999999999999998,
-            },
-            "borderRadius": 2,
-            "height": 2,
-            "marginHorizontal": 1,
-            "width": 24,
-          }
-        }
-      />
-    </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`The PrayerExperienceConnected component prays 1`] = `null`;

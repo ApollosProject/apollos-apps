@@ -114,18 +114,18 @@ describe('The AddPrayerScreenConnected component', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('should create a prayer', async () => {
-    const tree = await renderWithApolloData(
-      <Providers mocks={mocks}>
-        <AddPrayerCard />
-      </Providers>
-    );
+  // it('should create a prayer', async () => {
+  //   const tree = await renderWithApolloData(
+  //     <Providers mocks={mocks}>
+  //       <AddPrayerCard />
+  //     </Providers>
+  //   );
 
-    const button = tree.root.findByType(PrimaryActionButton);
-    button.props.onPress();
+  //   const button = tree.root.findByType(PrimaryActionButton);
+  //   button.props.onPress();
 
-    await wait(1);
+  //   await wait(1);
 
-    expect(tree).toMatchSnapshot();
-  });
+  //   expect(tree).toMatchSnapshot();
+  // });
 });
