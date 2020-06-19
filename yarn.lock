@@ -5275,6 +5275,14 @@ chalk@^3.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
+chalk@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.0.tgz#4e14870a618d9e2edd97dd8345fd9d9dc315646a"
+  integrity sha512-qwx12AxXe2Q5xQ43Ac//I6v5aXTipYrSESdOgzrN+9XjgEpyjpKuvSGaN4qE93f7TQTlerQQ8S+EQ0EyDoVL1A==
+  dependencies:
+    ansi-styles "^4.1.0"
+    supports-color "^7.1.0"
+
 change-case@^3.0.1:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/change-case/-/change-case-3.1.0.tgz#0e611b7edc9952df2e8513b27b42de72647dd17e"
@@ -5464,7 +5472,7 @@ cli-ux@^4.3.0, cli-ux@^4.9.0:
     treeify "^1.1.0"
     tslib "^1.9.3"
 
-cli-ux@^5.2.1, cli-ux@^5.4.6:
+cli-ux@^5.2.1:
   version "5.4.6"
   resolved "https://registry.yarnpkg.com/cli-ux/-/cli-ux-5.4.6.tgz#26bbe7d1fb20402ce362240ea5dc434168ddbd46"
   integrity sha512-EeiS2TzEndRVknCqE+8Ri8g0bsP617a1nq6n+3Trwft1JCDzyUNlX2J1fl7fwTgRPWtmBmiF6xIyueL5YGs65g==

@@ -2,7 +2,7 @@ const fs = require('fs');
 const cp = require('child_process');
 const path = require('path');
 const { Command, flags: Flags } = require('@oclif/command');
-// const { cli } = require('cli-ux');
+const chalk = require('chalk');
 const fetch = require('node-fetch');
 const Zip = require('adm-zip');
 const rm = require('rimraf');
@@ -11,7 +11,7 @@ class CreateApollosAppCommand extends Command {
   async run() {
     try {
       const { flags, args } = this.parse(CreateApollosAppCommand);
-      const stdio = args.debug ? 'inherit' : undefined;
+      const stdio = args.debug ? 'inherit' : 'ignore';
 
       const projectPath = `${flags.dir}/${args.name}`;
       if (fs.existsSync(projectPath)) {
@@ -19,7 +19,8 @@ class CreateApollosAppCommand extends Command {
       }
 
       // eslint-disable-next-line
-      this.log(`Creating apollos app at ${projectPath} (Version: ${flags.release})`);
+      this.log(chalk.green(`Creating apollos app at ${projectPath} (Version: ${flags.release})`));
+      this.log(chalk.green('Downloading...'));
 
       // Identify version
       let url = '';
@@ -69,17 +70,23 @@ class CreateApollosAppCommand extends Command {
       const appName = flags.appName === '$name' ? args.name : flags.appName;
       // eslint-disable-next-line
       cp.execSync(`cd ${projectPath}/apolloschurchapp && npx react-native-rename "${appName}" -b ${flags.bundleIdentifier || `org.church.${appName}`}`, { stdio });
+      this.log(chalk.green('Download complete'));
 
       // Install Dependencies
-      cp.execSync(`cd ${projectPath} && yarn`, { stdio });
-      cp.execSync(`cd ${projectPath} && yarn pods`, { stdio });
+      this.log(chalk.green('Installing dependencies'));
+      cp.execSync(`cd ${projectPath} && yarn`, { stdio: 'inherit' });
+      cp.execSync(`cd ${projectPath} && yarn pods`, { stdio: 'inherit' });
+      this.log(chalk.green('Dependencies installed'));
 
       // Core developer setup
       if (flags.core && !fs.existsSync(flags.coreComponentsLocation)) {
+        this.log(chalk.green('Cloning apollos-apps'));
         // eslint-disable-next-line
         cp.execSync(`git clone https://github.com/ApollosProject/apollos-apps ${flags.coreComponentsLocation}`, { stdio });
+        this.log(chalk.green('apollos-apps cloned'));
       }
 
+      this.log(chalk.green('Setting up environment...'));
       // eslint-disable-next-line
       const defaultAppEnv = `${flags.core ? `APOLLOS_APPS_LOCATION='${path.resolve(flags.coreComponentsLocation)}'` : ''}
 APP_DATA_URL='http://0.0.0.0:4000'
@@ -107,6 +114,15 @@ TWILIO_FROM_NUMBER=''
       // Stub out environment
       fs.writeFileSync(`${projectPath}/apolloschurchapp/.env`, defaultAppEnv);
       fs.writeFileSync(`${projectPath}/apollos-church-api/.env`, defaultApiEnv);
+      this.log(chalk.green('Environment set up'));
+
+      /* eslint-disable */
+      this.log(chalk.green(`Created apollos app at ${projectPath} (Version: ${flags.release})`));
+      this.log(chalk.green(`Run the project locally with this command: cd ${projectPath} && yarn start`));
+      this.log(chalk.green('[View the project locally]'));
+      this.log(chalk.green(`iOS simulator: cd ${projectPath} && yarn ios`));
+      this.log(chalk.green(`Android simulator: cd ${projectPath} && yarn android`));
+      /* eslint-enable */
     } catch (err) {
       this.error(err.message);
     }
@@ -128,7 +144,7 @@ CreateApollosAppCommand.flags = {
   version: Flags.version({ char: 'v' }),
   // add --help flag to show CLI version
   help: Flags.help({ char: 'h' }),
-  debug: Flags.boolean({ char: 'de' }),
+  debug: Flags.boolean({ char: 'g' }),
   dir: Flags.string({
     char: 'd',
     description:
