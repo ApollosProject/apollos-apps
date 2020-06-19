@@ -39,6 +39,8 @@ yarn android
 -h, --help                                           show CLI help
 -l, --coreComponentsLocation=coreComponentsLocation  The location for your components (the apollos-apps repo). If you already cloned apollos-apps make sure to point this at your clone
 -n, --appName=appName                                [default: $name] The name to use for your app, this will be displayed
+-o, --cloned                                         Set to true if the project is already cloned locally
+-r, --noRemoveGit                                    Set to true if the project git should be removed
 -r, --release=release                                [default: latest] The release you want to use for your project
 -v, --version                                        show CLI version
 ```
