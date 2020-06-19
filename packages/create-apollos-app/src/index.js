@@ -6,44 +6,7 @@ const fetch = require('node-fetch');
 const Zip = require('adm-zip');
 const rm = require('rimraf');
 
-module.exports = class CreateApollosAppCommand extends Command {
-  static description = 'Create an apollos app';
-
-  static args = [
-    {
-      name: 'name',
-      required: true,
-      description: 'The name of your project',
-    },
-  ];
-
-  static flags = {
-    // add --version flag to show CLI version
-    version: Flags.version({ char: 'v' }),
-    // add --help flag to show CLI version
-    help: Flags.help({ char: 'h' }),
-    dir: Flags.string({
-      char: 'd',
-      description:
-        'The directory where you want your project relative to your current working directory',
-      default: '.',
-    }),
-    release: Flags.string({
-      char: 'r',
-      description: 'The release you want to use for your project',
-      default: 'latest',
-    }),
-    appName: Flags.string({
-      char: 'n',
-      description: 'The name to use for your app, this will be displayed',
-      default: '$name',
-    }),
-    bundleIdentifier: Flags.string({
-      char: 'b',
-      description: 'The bundle identifier to use for your iOS app',
-    }),
-  };
-
+class CreateApollosAppCommand extends Command {
   async run() {
     try {
       const { flags, args } = this.parse(CreateApollosAppCommand);
@@ -139,4 +102,43 @@ TWILIO_FROM_NUMBER=''
       this.error(err.message);
     }
   }
+}
+
+CreateApollosAppCommand.description = 'Create an apollos app';
+
+CreateApollosAppCommand.args = [
+  {
+    name: 'name',
+    required: true,
+    description: 'The name of your project',
+  },
+];
+
+CreateApollosAppCommand.flags = {
+  // add --version flag to show CLI version
+  version: Flags.version({ char: 'v' }),
+  // add --help flag to show CLI version
+  help: Flags.help({ char: 'h' }),
+  dir: Flags.string({
+    char: 'd',
+    description:
+      'The directory where you want your project relative to your current working directory',
+    default: '.',
+  }),
+  release: Flags.string({
+    char: 'r',
+    description: 'The release you want to use for your project',
+    default: 'latest',
+  }),
+  appName: Flags.string({
+    char: 'n',
+    description: 'The name to use for your app, this will be displayed',
+    default: '$name',
+  }),
+  bundleIdentifier: Flags.string({
+    char: 'b',
+    description: 'The bundle identifier to use for your iOS app',
+  }),
 };
+
+module.exports = CreateApollosAppCommand;
