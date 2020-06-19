@@ -90,7 +90,7 @@ class CreateApollosAppCommand extends Command {
 
       this.log(chalk.green('Setting up environment...'));
       // eslint-disable-next-line
-      const defaultAppEnv = `${flags.core ? `APOLLOS_APPS_LOCATION='${path.resolve(flags.coreComponentsLocation)}'` : ''}
+      const defaultAppEnv = `${flags.core ? `APOLLOS_APPS_LOCATION='${path.resolve(coreComponentsLocation)}'` : ''}
 APP_DATA_URL='http://0.0.0.0:4000'
 # ONE_SIGNAL_KEY=''
 # GOOGLE_MAPS_API_KEY=''
