@@ -79,10 +79,12 @@ class CreateApollosAppCommand extends Command {
       this.log(chalk.green('Dependencies installed'));
 
       // Core developer setup
-      if (flags.core && !fs.existsSync(flags.coreComponentsLocation)) {
+      // eslint-disable-next-line
+      const coreComponentsLocation = flags.coreComponentsLocation || './apollos-apps';
+      if (flags.core && !fs.existsSync(coreComponentsLocation)) {
         this.log(chalk.green('Cloning apollos-apps'));
         // eslint-disable-next-line
-        cp.execSync(`git clone https://github.com/ApollosProject/apollos-apps ${flags.coreComponentsLocation}`, { stdio });
+        cp.execSync(`git clone https://github.com/ApollosProject/apollos-apps ${coreComponentsLocation}`, { stdio });
         this.log(chalk.green('apollos-apps cloned'));
       }
 
@@ -118,6 +120,7 @@ TWILIO_FROM_NUMBER=''
 
       /* eslint-disable */
       this.log(chalk.green(`Created apollos app at ${projectPath} (Version: ${flags.release})`));
+      this.log(chalk.yellow('The project is missing some environment variables for configuring some data sources like Rock, Bible, and Twilio'));
       this.log(chalk.green(`Run the project locally with this command: cd ${projectPath} && yarn start`));
       this.log(chalk.green('[View the project locally]'));
       this.log(chalk.green(`iOS simulator: cd ${projectPath} && yarn ios`));
@@ -176,7 +179,6 @@ CreateApollosAppCommand.flags = {
     dependsOn: ['core'],
     // eslint-disable-next-line
     description: 'The location for your components (the apollos-apps repo). If you already cloned apollos-apps make sure to point this at your clone',
-    default: './apollos-apps',
   }),
 };
 
