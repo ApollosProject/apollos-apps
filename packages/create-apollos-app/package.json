@@ -28,7 +28,7 @@
   "keywords": [
     "oclif"
   ],
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE.md",
   "main": "src/index.js",
   "oclif": {
     "bin": "create-apollos-app"
