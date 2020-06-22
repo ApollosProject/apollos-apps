@@ -108,7 +108,9 @@ describe('The ActionListFeatures component', () => {
       <Providers>
         <ActionListFeature
           actions={actions}
+          primaryAction={{ title: 'Foo ' }}
           onPressActionListButton={jest.fn()}
+          actionListTitle
         />
       </Providers>
     );

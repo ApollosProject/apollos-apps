@@ -706,6 +706,7 @@ export const featuresSchema = gql`
     title: String
     subtitle: String
     actions: [ActionListAction]
+    primaryAction: FeatureAction
   }
 
   type HeroListFeature implements Feature & Node {
