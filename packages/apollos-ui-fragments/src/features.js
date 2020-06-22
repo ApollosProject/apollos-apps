@@ -142,6 +142,13 @@ const HERO_LIST_FEATURE_FRAGMENT = gql`
         ...RelatedFeatureNodeFragment
       }
     }
+    primaryAction {
+      title
+      action
+      relatedNode {
+        ...RelatedFeatureNodeFragment
+      }
+    }
     heroCard {
       action
       title

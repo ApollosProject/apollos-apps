@@ -106,7 +106,11 @@ storiesOf('ActionList', module)
     );
   })
   .add('onPressActionListButton', () => (
-    <ActionList actions={actions} onPressActionListButton={() => {}} />
+    <ActionList
+      actions={actions}
+      onPressActionListButton={() => {}}
+      actionListButtonTitle="Press Me!"
+    />
   ))
   .add('isCard (false)', () => <ActionList actions={actions} isCard={false} />)
   .add('isLoading', () => (

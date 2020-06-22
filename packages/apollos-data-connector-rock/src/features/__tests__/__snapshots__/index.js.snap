@@ -749,6 +749,139 @@ Object {
     "title": "first item by content channel id",
   },
   "id": "HeroListFeature:f6b30a38eb547f1f75676ce0557a7e0554b53dd31034539ff6489a39d15a8d3e5ead8197b46239df34aebbab9cb2e3d59a926dfbeb645d0e930d986ab6d4c7fb18f5c785737e5cea5187623d9840aabd1126239e969aee45865cafd569d9bdd51ff4a0f3c557d01c6fc4d38223e85d6100a047461ee52531f53a38a6f3ac5b17",
+  "primaryAction": undefined,
+  "subtitle": "It's a hero list feature!",
+  "title": "Test HeroListFeature",
+}
+`;
+
+exports[`features dataSource should create an HeroListFeature from a USER_FEED algorithm and a primary action 1`] = `
+Object {
+  "__typename": "HeroListFeature",
+  "actions": Array [
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 2,
+        "title": "second item by content channel id",
+      },
+      "subtitle": "content channel",
+      "summary": "summary data",
+      "title": "second item by content channel id",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": null,
+        "id": 3,
+        "title": "third item by content channel id",
+      },
+      "subtitle": undefined,
+      "summary": "summary data",
+      "title": "third item by content channel id",
+    },
+  ],
+  "heroCard": Object {
+    "action": "READ_CONTENT",
+    "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+    "image": null,
+    "relatedNode": Object {
+      "__type": "UniversalContentItem",
+      "contentChannel": Object {
+        "name": "content channel",
+      },
+      "id": 1,
+      "title": "first item by content channel id",
+    },
+    "subtitle": "content channel",
+    "summary": "summary data",
+    "title": "first item by content channel id",
+  },
+  "id": "HeroListFeature:f6b30a38eb547f1f75676ce0557a7e0554b53dd31034539ff6489a39d15a8d3e5ead8197b46239df34aebbab9cb2e3d59a926dfbeb645d0e930d986ab6d4c7fb18f5c785737e5cea5187623d9840aabd1126239e969aee45865cafd569d9bdd51ff4a0f3c557d01c6fc4d38223e85d613b26a3ab652fc3462da10b90aa52e6a21a73373f542af86553e600c878e2052851db8020ec64ecfae9f0a5eef136e9f6806c1217b50ec22b58b401860119b8eb92f512fe413f11d166859a8423153ee117bd56284eee68563180e57e2156275ebb2f934964630df55329349c435045b0350ef06d71465c90112a97cf7521b69d7f3941af8a13cd8fa8209e2705c2caa2e018a027cbc00032e74915cd41afe68c0cbf214f9c92a541173cce951e650f926490b5b838a7bfdf34decad8963b07ff7510ff110fbeef9ae3fd12b88d63837f0f6f38922ce0dfcdf4efb650f6daaa22d896b46f624349cddd83960f7cd3e5295ff258767ae3311e535b599e1e107e0d40c6ebfe9cdb5f4bf36287d4f905225d47f6db55bb9307dbc0fda9fbe3f8691c",
+  "primaryAction": Object {
+    "action": "OPEN_URL",
+    "relatedNode": Object {
+      "__typename": "Url",
+      "id": "Url:f4974a223763b3a06ea2cd73ff30952be89d6281e05bc41f7ee423cd227a2b00721f5531d36e54dd64bc05eda4a94cbf1fbaf45384b4e924ae0fe47ee8d4e792",
+      "url": "https://www.google.com",
+    },
+    "title": "Open this url",
+  },
+  "subtitle": "It's a hero list feature!",
+  "title": "Test HeroListFeature",
+}
+`;
+
+exports[`features dataSource should create an HeroListFeature from a USER_FEED algorithm and a primary action with an id 1`] = `
+Object {
+  "__typename": "HeroListFeature",
+  "actions": Array [
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": Object {
+          "name": "content channel",
+        },
+        "id": 2,
+        "title": "second item by content channel id",
+      },
+      "subtitle": "content channel",
+      "summary": "summary data",
+      "title": "second item by content channel id",
+    },
+    Object {
+      "action": "READ_CONTENT",
+      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "image": null,
+      "relatedNode": Object {
+        "__type": "UniversalContentItem",
+        "contentChannel": null,
+        "id": 3,
+        "title": "third item by content channel id",
+      },
+      "subtitle": undefined,
+      "summary": "summary data",
+      "title": "third item by content channel id",
+    },
+  ],
+  "heroCard": Object {
+    "action": "READ_CONTENT",
+    "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+    "image": null,
+    "relatedNode": Object {
+      "__type": "UniversalContentItem",
+      "contentChannel": Object {
+        "name": "content channel",
+      },
+      "id": 1,
+      "title": "first item by content channel id",
+    },
+    "subtitle": "content channel",
+    "summary": "summary data",
+    "title": "first item by content channel id",
+  },
+  "id": "HeroListFeature:f6b30a38eb547f1f75676ce0557a7e0554b53dd31034539ff6489a39d15a8d3e5ead8197b46239df34aebbab9cb2e3d59a926dfbeb645d0e930d986ab6d4c7fb18f5c785737e5cea5187623d9840aabd1126239e969aee45865cafd569d9bdd51ff4a0f3c557d01c6fc4d38223e85d613b26a3ab652fc3462da10b90aa52e6a21a73373f542af86553e600c878e2052851db8020ec64ecfae9f0a5eef136e9f6806c1217b50ec22b58b401860119b8eb92f512fe413f11d166859a8423153ee117bd56284eee68563180e57e2156275e5e3e260367edbcc9e24b79c12143ceb160b7ba7775c0d83de04a0ab321f989e771bb90ce932340a5c3ce04839bc1f0ded932eb0ddc82a598b20c36c81d24b0d0",
+  "primaryAction": Object {
+    "action": "OPEN_URL",
+    "relatedNode": Object {
+      "__typename": "Url",
+      "id": "Url:123",
+      "url": "https://www.google.com",
+    },
+    "title": "Open this url",
+  },
   "subtitle": "It's a hero list feature!",
   "title": "Test HeroListFeature",
 }
@@ -822,6 +955,7 @@ Object {
     "title": "first item",
   },
   "id": "HeroListFeature:f6b30a38eb547f1f75676ce0557a7e0554b53dd31034539ff6489a39d15a8d3e5ead8197b46239df34aebbab9cb2e3d5ddebb04ae86620d62cba8ceb533fd7472c208099d0c73069d746c038d5ce5eb550c12e2c78643656350723d075488962ab02b17c4512b72f32f9b3bcca1de67da5c2b4255f923095ff467dc60e482286b29329d189fc52ffe1ed566803a45b9e07552290b8fc97da1650eb43a726be6f",
+  "primaryAction": undefined,
   "subtitle": "It's a hero list feature!",
   "title": "Test HeroListFeature",
 }
@@ -1134,6 +1268,7 @@ Array [
       "title": "first item",
     },
     "id": "HeroListFeature:9724110384a5109532f35a4980ea9b7732b56327ff3959d32d21ba892a0dc560f1b1cb7bc6590887f4896be8d098d564163098c6045ffbc379606756cbef966a2a78ff90ec110e63238e04ba9fe1e8337425d9f1bb6457dd618f66aa48392f7a63472ed6f7d90c5783fb0e161c7e7d43291e4b638c9d3ec1039fad492681c640",
+    "primaryAction": undefined,
     "subtitle": "Explore what God calls you to today",
     "title": "FOR YOU",
   },

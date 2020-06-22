@@ -120,7 +120,11 @@ describe('ActionList', () => {
   it('should render with onPressActionListButton', () => {
     const tree = renderer.create(
       <Providers>
-        <ActionList actions={actions} onPressActionListButton={jest.fn()} />
+        <ActionList
+          actions={actions}
+          actionListButtonTitle="Press Me!"
+          onPressActionListButton={jest.fn()}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

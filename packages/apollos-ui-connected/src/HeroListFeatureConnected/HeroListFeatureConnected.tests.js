@@ -42,6 +42,16 @@ const mock = {
             id: 'UniversalContentItem:123',
           },
         },
+        primaryAction: {
+          __typename: 'ActionFeatureAction',
+          action: 'OPEN_URL',
+          title: 'Check this out',
+          relatedNode: {
+            __typename: 'Url',
+            id: 'Url:123',
+            url: 'https://www.google.com',
+          },
+        },
         actions: [
           {
             __typename: 'ActionListFeatureAction',

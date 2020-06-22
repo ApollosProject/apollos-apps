@@ -360,6 +360,59 @@ Array [
         </Text>
       </View>
     </View>
+    <View
+      accessible={true}
+      clickable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        bordered={true}
+        disabled={false}
+        pill={false}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "borderColor": "#A5A5A5",
+            "borderRadius": 16,
+            "borderWidth": 2,
+            "flexDirection": "row",
+            "height": 48,
+            "justifyContent": "center",
+            "marginTop": 8,
+            "opacity": 1,
+            "overflow": "hidden",
+            "paddingHorizontal": 16,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#A5A5A5",
+              "fontFamily": "InterUI-Bold",
+              "fontSize": 16,
+              "lineHeight": 24,
+            }
+          }
+        >
+          Check this out
+        </Text>
+      </View>
+    </View>
   </View>,
 ]
 `;
