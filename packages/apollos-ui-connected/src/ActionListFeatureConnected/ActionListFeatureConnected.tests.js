@@ -18,6 +18,16 @@ const mock = {
         __typename: 'ActionListFeature',
         title: 'Some cool list',
         subtitle: 'Check it out',
+        primaryAction: {
+          __typename: 'ActionFeatureAction',
+          action: 'OPEN_URL',
+          title: 'Check this out',
+          relatedNode: {
+            __typename: 'Url',
+            id: 'Url:123',
+            url: 'https://www.google.com',
+          },
+        },
         actions: [
           {
             __typename: 'ActionListFeatureAction',
