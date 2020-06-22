@@ -15,7 +15,7 @@ export default {
   Person: {
     id: ({ id }, args, context, { parentType }) =>
       createGlobalId(id, parentType.name),
-    photo: ({ photo: { url } }) => ({ uri: url }),
+    photo: ({ photo: { url } }) => (url ? { uri: url } : null),
     birthDate: enforceCurrentUser(({ birthDate }) =>
       birthDate
         ? moment.tz(birthDate, ApollosConfig.ROCK.TIMEZONE).toJSON()

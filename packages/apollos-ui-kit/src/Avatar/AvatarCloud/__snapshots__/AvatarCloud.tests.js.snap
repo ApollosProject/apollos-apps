@@ -22,9 +22,7 @@ exports[`The AvatarCloud component should accept a maxAvatarWidth 1`] = `
     style={
       Object {
         "aspectRatio": 1,
-        "borderRadius": 1000,
         "left": "11.11111101%",
-        "overflow": "hidden",
         "position": "absolute",
         "top": "11.11111101%",
         "width": "10%",
@@ -40,11 +38,13 @@ exports[`The AvatarCloud component should accept a maxAvatarWidth 1`] = `
         Object {
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
           "width": "100%",
         }
       }
     >
       <Image
+        blurRadius={3}
         onLoad={[Function]}
         source={
           Array [
@@ -59,30 +59,13 @@ exports[`The AvatarCloud component should accept a maxAvatarWidth 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
             "opacity": 0,
             "width": "100%",
           }
         }
       />
     </View>
-    <BlurView
-      blurAmount={2}
-      blurType="light"
-      style={
-        Array [
-          Object {
-            "backgroundColor": "transparent",
-          },
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-        ]
-      }
-    />
   </View>
   <View
     avatarWidth="10%"
@@ -96,9 +79,7 @@ exports[`The AvatarCloud component should accept a maxAvatarWidth 1`] = `
     style={
       Object {
         "aspectRatio": 1,
-        "borderRadius": 1000,
         "left": "11.11111101%",
-        "overflow": "hidden",
         "position": "absolute",
         "top": "11.11111101%",
         "width": "10%",
@@ -114,11 +95,13 @@ exports[`The AvatarCloud component should accept a maxAvatarWidth 1`] = `
         Object {
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
           "width": "100%",
         }
       }
     >
       <Image
+        blurRadius={2}
         onLoad={[Function]}
         source={
           Array [
@@ -133,30 +116,13 @@ exports[`The AvatarCloud component should accept a maxAvatarWidth 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
             "opacity": 0,
             "width": "100%",
           }
         }
       />
     </View>
-    <BlurView
-      blurAmount={1}
-      blurType="light"
-      style={
-        Array [
-          Object {
-            "backgroundColor": "transparent",
-          },
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-        ]
-      }
-    />
   </View>
   <View
     avatarWidth="10%"
@@ -170,9 +136,7 @@ exports[`The AvatarCloud component should accept a maxAvatarWidth 1`] = `
     style={
       Object {
         "aspectRatio": 1,
-        "borderRadius": 1000,
         "left": "11.11111101%",
-        "overflow": "hidden",
         "position": "absolute",
         "top": "11.11111101%",
         "width": "10%",
@@ -188,11 +152,13 @@ exports[`The AvatarCloud component should accept a maxAvatarWidth 1`] = `
         Object {
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
           "width": "100%",
         }
       }
     >
       <Image
+        blurRadius={1}
         onLoad={[Function]}
         source={
           Array [
@@ -207,6 +173,7 @@ exports[`The AvatarCloud component should accept a maxAvatarWidth 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
             "opacity": 0,
             "width": "100%",
           }
@@ -239,9 +206,7 @@ exports[`The AvatarCloud component should accept a minAvatarWidth 1`] = `
     style={
       Object {
         "aspectRatio": 1,
-        "borderRadius": 1000,
         "left": "1.2345678899999997%",
-        "overflow": "hidden",
         "position": "absolute",
         "top": "1.2345678899999997%",
         "width": "90%",
@@ -257,11 +222,13 @@ exports[`The AvatarCloud component should accept a minAvatarWidth 1`] = `
         Object {
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
           "width": "100%",
         }
       }
     >
       <Image
+        blurRadius={3}
         onLoad={[Function]}
         source={
           Array [
@@ -276,30 +243,13 @@ exports[`The AvatarCloud component should accept a minAvatarWidth 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
             "opacity": 0,
             "width": "100%",
           }
         }
       />
     </View>
-    <BlurView
-      blurAmount={2}
-      blurType="light"
-      style={
-        Array [
-          Object {
-            "backgroundColor": "transparent",
-          },
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-        ]
-      }
-    />
   </View>
   <View
     avatarWidth="90%"
@@ -313,9 +263,7 @@ exports[`The AvatarCloud component should accept a minAvatarWidth 1`] = `
     style={
       Object {
         "aspectRatio": 1,
-        "borderRadius": 1000,
         "left": "1.2345678899999997%",
-        "overflow": "hidden",
         "position": "absolute",
         "top": "1.2345678899999997%",
         "width": "90%",
@@ -331,11 +279,13 @@ exports[`The AvatarCloud component should accept a minAvatarWidth 1`] = `
         Object {
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
           "width": "100%",
         }
       }
     >
       <Image
+        blurRadius={2}
         onLoad={[Function]}
         source={
           Array [
@@ -350,30 +300,13 @@ exports[`The AvatarCloud component should accept a minAvatarWidth 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
             "opacity": 0,
             "width": "100%",
           }
         }
       />
     </View>
-    <BlurView
-      blurAmount={1}
-      blurType="light"
-      style={
-        Array [
-          Object {
-            "backgroundColor": "transparent",
-          },
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-        ]
-      }
-    />
   </View>
   <View
     avatarWidth="90%"
@@ -387,9 +320,7 @@ exports[`The AvatarCloud component should accept a minAvatarWidth 1`] = `
     style={
       Object {
         "aspectRatio": 1,
-        "borderRadius": 1000,
         "left": "1.2345678899999997%",
-        "overflow": "hidden",
         "position": "absolute",
         "top": "1.2345678899999997%",
         "width": "90%",
@@ -405,11 +336,13 @@ exports[`The AvatarCloud component should accept a minAvatarWidth 1`] = `
         Object {
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
           "width": "100%",
         }
       }
     >
       <Image
+        blurRadius={1}
         onLoad={[Function]}
         source={
           Array [
@@ -424,6 +357,7 @@ exports[`The AvatarCloud component should accept a minAvatarWidth 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
             "opacity": 0,
             "width": "100%",
           }
@@ -494,9 +428,7 @@ exports[`The AvatarCloud component should accept a primaryAvatar 1`] = `
     style={
       Object {
         "aspectRatio": 1,
-        "borderRadius": 1000,
         "left": "11.11111101%",
-        "overflow": "hidden",
         "position": "absolute",
         "top": "11.11111101%",
         "width": "10%",
@@ -512,11 +444,13 @@ exports[`The AvatarCloud component should accept a primaryAvatar 1`] = `
         Object {
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
           "width": "100%",
         }
       }
     >
       <Image
+        blurRadius={3}
         onLoad={[Function]}
         source={
           Array [
@@ -531,30 +465,13 @@ exports[`The AvatarCloud component should accept a primaryAvatar 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
             "opacity": 0,
             "width": "100%",
           }
         }
       />
     </View>
-    <BlurView
-      blurAmount={3}
-      blurType="light"
-      style={
-        Array [
-          Object {
-            "backgroundColor": "transparent",
-          },
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-        ]
-      }
-    />
   </View>
   <View
     avatarWidth="10%"
@@ -568,9 +485,7 @@ exports[`The AvatarCloud component should accept a primaryAvatar 1`] = `
     style={
       Object {
         "aspectRatio": 1,
-        "borderRadius": 1000,
         "left": "11.11111101%",
-        "overflow": "hidden",
         "position": "absolute",
         "top": "11.11111101%",
         "width": "10%",
@@ -586,11 +501,13 @@ exports[`The AvatarCloud component should accept a primaryAvatar 1`] = `
         Object {
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
           "width": "100%",
         }
       }
     >
       <Image
+        blurRadius={2}
         onLoad={[Function]}
         source={
           Array [
@@ -605,30 +522,13 @@ exports[`The AvatarCloud component should accept a primaryAvatar 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
             "opacity": 0,
             "width": "100%",
           }
         }
       />
     </View>
-    <BlurView
-      blurAmount={2}
-      blurType="light"
-      style={
-        Array [
-          Object {
-            "backgroundColor": "transparent",
-          },
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-        ]
-      }
-    />
   </View>
   <View
     avatarWidth="10%"
@@ -642,9 +542,7 @@ exports[`The AvatarCloud component should accept a primaryAvatar 1`] = `
     style={
       Object {
         "aspectRatio": 1,
-        "borderRadius": 1000,
         "left": "11.11111101%",
-        "overflow": "hidden",
         "position": "absolute",
         "top": "11.11111101%",
         "width": "10%",
@@ -660,11 +558,13 @@ exports[`The AvatarCloud component should accept a primaryAvatar 1`] = `
         Object {
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
           "width": "100%",
         }
       }
     >
       <Image
+        blurRadius={1}
         onLoad={[Function]}
         source={
           Array [
@@ -679,30 +579,13 @@ exports[`The AvatarCloud component should accept a primaryAvatar 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
             "opacity": 0,
             "width": "100%",
           }
         }
       />
     </View>
-    <BlurView
-      blurAmount={1}
-      blurType="light"
-      style={
-        Array [
-          Object {
-            "backgroundColor": "transparent",
-          },
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-        ]
-      }
-    />
   </View>
 </View>
 `;
@@ -729,9 +612,7 @@ exports[`The AvatarCloud component should render 1`] = `
     style={
       Object {
         "aspectRatio": 1,
-        "borderRadius": 1000,
         "left": "11.11111101%",
-        "overflow": "hidden",
         "position": "absolute",
         "top": "11.11111101%",
         "width": "10%",
@@ -747,11 +628,13 @@ exports[`The AvatarCloud component should render 1`] = `
         Object {
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
           "width": "100%",
         }
       }
     >
       <Image
+        blurRadius={3}
         onLoad={[Function]}
         source={
           Array [
@@ -766,30 +649,13 @@ exports[`The AvatarCloud component should render 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
             "opacity": 0,
             "width": "100%",
           }
         }
       />
     </View>
-    <BlurView
-      blurAmount={2}
-      blurType="light"
-      style={
-        Array [
-          Object {
-            "backgroundColor": "transparent",
-          },
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-        ]
-      }
-    />
   </View>
   <View
     avatarWidth="10%"
@@ -803,9 +669,7 @@ exports[`The AvatarCloud component should render 1`] = `
     style={
       Object {
         "aspectRatio": 1,
-        "borderRadius": 1000,
         "left": "11.11111101%",
-        "overflow": "hidden",
         "position": "absolute",
         "top": "11.11111101%",
         "width": "10%",
@@ -821,11 +685,13 @@ exports[`The AvatarCloud component should render 1`] = `
         Object {
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
           "width": "100%",
         }
       }
     >
       <Image
+        blurRadius={2}
         onLoad={[Function]}
         source={
           Array [
@@ -840,30 +706,13 @@ exports[`The AvatarCloud component should render 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
             "opacity": 0,
             "width": "100%",
           }
         }
       />
     </View>
-    <BlurView
-      blurAmount={1}
-      blurType="light"
-      style={
-        Array [
-          Object {
-            "backgroundColor": "transparent",
-          },
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-        ]
-      }
-    />
   </View>
   <View
     avatarWidth="10%"
@@ -877,9 +726,7 @@ exports[`The AvatarCloud component should render 1`] = `
     style={
       Object {
         "aspectRatio": 1,
-        "borderRadius": 1000,
         "left": "11.11111101%",
-        "overflow": "hidden",
         "position": "absolute",
         "top": "11.11111101%",
         "width": "10%",
@@ -895,11 +742,13 @@ exports[`The AvatarCloud component should render 1`] = `
         Object {
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
           "width": "100%",
         }
       }
     >
       <Image
+        blurRadius={1}
         onLoad={[Function]}
         source={
           Array [
@@ -914,6 +763,7 @@ exports[`The AvatarCloud component should render 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
             "opacity": 0,
             "width": "100%",
           }
@@ -984,9 +834,7 @@ exports[`The AvatarCloud component should render as isLoading 1`] = `
     style={
       Object {
         "aspectRatio": 1,
-        "borderRadius": 1000,
         "left": "11.11111101%",
-        "overflow": "hidden",
         "position": "absolute",
         "top": "11.11111101%",
         "width": "10%",
@@ -1002,11 +850,13 @@ exports[`The AvatarCloud component should render as isLoading 1`] = `
         Object {
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
           "width": "100%",
         }
       }
     >
       <Image
+        blurRadius={3}
         onLoad={[Function]}
         source={
           Array [
@@ -1021,30 +871,13 @@ exports[`The AvatarCloud component should render as isLoading 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
             "opacity": 0,
             "width": "100%",
           }
         }
       />
     </View>
-    <BlurView
-      blurAmount={2}
-      blurType="light"
-      style={
-        Array [
-          Object {
-            "backgroundColor": "transparent",
-          },
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-        ]
-      }
-    />
   </View>
   <View
     avatarWidth="10%"
@@ -1058,9 +891,7 @@ exports[`The AvatarCloud component should render as isLoading 1`] = `
     style={
       Object {
         "aspectRatio": 1,
-        "borderRadius": 1000,
         "left": "11.11111101%",
-        "overflow": "hidden",
         "position": "absolute",
         "top": "11.11111101%",
         "width": "10%",
@@ -1076,11 +907,13 @@ exports[`The AvatarCloud component should render as isLoading 1`] = `
         Object {
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
           "width": "100%",
         }
       }
     >
       <Image
+        blurRadius={2}
         onLoad={[Function]}
         source={
           Array [
@@ -1095,30 +928,13 @@ exports[`The AvatarCloud component should render as isLoading 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
             "opacity": 0,
             "width": "100%",
           }
         }
       />
     </View>
-    <BlurView
-      blurAmount={1}
-      blurType="light"
-      style={
-        Array [
-          Object {
-            "backgroundColor": "transparent",
-          },
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          },
-        ]
-      }
-    />
   </View>
   <View
     avatarWidth="10%"
@@ -1132,9 +948,7 @@ exports[`The AvatarCloud component should render as isLoading 1`] = `
     style={
       Object {
         "aspectRatio": 1,
-        "borderRadius": 1000,
         "left": "11.11111101%",
-        "overflow": "hidden",
         "position": "absolute",
         "top": "11.11111101%",
         "width": "10%",
@@ -1150,11 +964,13 @@ exports[`The AvatarCloud component should render as isLoading 1`] = `
         Object {
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
           "width": "100%",
         }
       }
     >
       <Image
+        blurRadius={1}
         onLoad={[Function]}
         source={
           Array [
@@ -1169,6 +985,7 @@ exports[`The AvatarCloud component should render as isLoading 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
             "opacity": 0,
             "width": "100%",
           }
@@ -1201,9 +1018,7 @@ exports[`The AvatarCloud component should render without blur effect 1`] = `
     style={
       Object {
         "aspectRatio": 1,
-        "borderRadius": 1000,
         "left": "11.11111101%",
-        "overflow": "hidden",
         "position": "absolute",
         "top": "11.11111101%",
         "width": "10%",
@@ -1219,11 +1034,13 @@ exports[`The AvatarCloud component should render without blur effect 1`] = `
         Object {
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
           "width": "100%",
         }
       }
     >
       <Image
+        blurRadius={0}
         onLoad={[Function]}
         source={
           Array [
@@ -1238,6 +1055,7 @@ exports[`The AvatarCloud component should render without blur effect 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
             "opacity": 0,
             "width": "100%",
           }
@@ -1257,9 +1075,7 @@ exports[`The AvatarCloud component should render without blur effect 1`] = `
     style={
       Object {
         "aspectRatio": 1,
-        "borderRadius": 1000,
         "left": "11.11111101%",
-        "overflow": "hidden",
         "position": "absolute",
         "top": "11.11111101%",
         "width": "10%",
@@ -1275,11 +1091,13 @@ exports[`The AvatarCloud component should render without blur effect 1`] = `
         Object {
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
           "width": "100%",
         }
       }
     >
       <Image
+        blurRadius={0}
         onLoad={[Function]}
         source={
           Array [
@@ -1294,6 +1112,7 @@ exports[`The AvatarCloud component should render without blur effect 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
             "opacity": 0,
             "width": "100%",
           }
@@ -1313,9 +1132,7 @@ exports[`The AvatarCloud component should render without blur effect 1`] = `
     style={
       Object {
         "aspectRatio": 1,
-        "borderRadius": 1000,
         "left": "11.11111101%",
-        "overflow": "hidden",
         "position": "absolute",
         "top": "11.11111101%",
         "width": "10%",
@@ -1331,11 +1148,13 @@ exports[`The AvatarCloud component should render without blur effect 1`] = `
         Object {
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
+          "borderRadius": 1000,
           "width": "100%",
         }
       }
     >
       <Image
+        blurRadius={0}
         onLoad={[Function]}
         source={
           Array [
@@ -1350,6 +1169,7 @@ exports[`The AvatarCloud component should render without blur effect 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
             "opacity": 0,
             "width": "100%",
           }

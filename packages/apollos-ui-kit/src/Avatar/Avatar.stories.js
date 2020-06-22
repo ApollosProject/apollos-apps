@@ -1,42 +1,83 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
-import FlexedView from '../FlexedView';
+import CenteredView from '../CenteredView';
 
 import Avatar from '.';
 
-const source = {
-  uri:
-    'https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg',
-};
 /* eslint-disable react-native/no-inline-styles */
 storiesOf('ui-kit/Avatar', module)
+  .addDecorator((story) => <CenteredView>{story()}</CenteredView>)
   .add('default', () => (
-    <FlexedView style={{ flexWrap: 'wrap', flexDirection: 'row' }}>
-      <Avatar source={source} size="small" />
-      <Avatar source={source} size="medium" />
-      <Avatar source={source} size="large" />
-    </FlexedView>
+    <>
+      <Avatar size={'small'} />
+      <Avatar size={'medium'} />
+      <Avatar size={'large'} />
+    </>
   ))
-  .add('w/ Button Icon', () => (
-    <FlexedView style={{ flexWrap: 'wrap', flexDirection: 'row' }}>
+  .add('buttonIcon', () => (
+    <>
       <Avatar
-        source={source}
-        size="small"
-        buttonIcon="settings"
-        onPressIcon={() => null}
+        source={{ uri: 'https://picsum.photos/200' }}
+        size={'small'}
+        buttonIcon={'settings'}
+        onPressIcon={() => {}}
       />
       <Avatar
-        source={source}
-        size="medium"
-        buttonIcon="settings"
-        onPressIcon={() => null}
+        source={{ uri: 'https://picsum.photos/200' }}
+        size={'medium'}
+        buttonIcon={'settings'}
+        onPressIcon={() => {}}
       />
       <Avatar
-        source={source}
-        size="large"
-        buttonIcon="settings"
-        onPressIcon={() => null}
+        source={{ uri: 'https://picsum.photos/200' }}
+        size={'large'}
+        buttonIcon={'settings'}
+        onPressIcon={() => {}}
       />
-    </FlexedView>
+    </>
+  ))
+  .add('buttonIcon && isLoading', () => (
+    <>
+      <Avatar
+        isLoading
+        source={{ uri: 'https://picsum.photos/200' }}
+        size={'small'}
+        buttonIcon={'settings'}
+        onPressIcon={() => {}}
+      />
+      <Avatar
+        isLoading
+        source={{ uri: 'https://picsum.photos/200' }}
+        size={'medium'}
+        buttonIcon={'settings'}
+        onPressIcon={() => {}}
+      />
+      <Avatar
+        isLoading
+        source={{ uri: 'https://picsum.photos/200' }}
+        size={'large'}
+        buttonIcon={'settings'}
+        onPressIcon={() => {}}
+      />
+    </>
+  ))
+  .add('notification', () => (
+    <>
+      <Avatar
+        source={{ uri: 'https://picsum.photos/200' }}
+        size={'small'}
+        notification
+      />
+      <Avatar
+        source={{ uri: 'https://picsum.photos/200' }}
+        size={'medium'}
+        notification
+      />
+      <Avatar
+        source={{ uri: 'https://picsum.photos/200' }}
+        size={'large'}
+        notification
+      />
+    </>
   ));

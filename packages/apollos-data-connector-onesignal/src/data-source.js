@@ -6,6 +6,10 @@ const { ONE_SIGNAL } = ApollosConfig;
 export default class OneSignal extends RESTDataSource {
   baseURL = 'https://onesignal.com/api/v1/';
 
+  willSendRequest = (request) => {
+    request.headers.set('Authorization', `Basic ${ONE_SIGNAL.REST_KEY}`);
+  };
+
   async updateExternalUserId({ playerId, userId }) {
     return this.put(`players/${playerId}`, {
       app_id: ONE_SIGNAL.APP_ID,
@@ -20,6 +24,7 @@ export default class OneSignal extends RESTDataSource {
     subtitle,
   }) {
     return this.post('notifications', {
+      app_id: ONE_SIGNAL.APP_ID,
       include_external_user_ids: toUserIds,
       contents: { en: content },
       headings: { en: heading },

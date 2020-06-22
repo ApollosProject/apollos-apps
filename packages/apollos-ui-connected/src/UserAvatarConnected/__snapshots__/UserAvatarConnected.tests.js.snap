@@ -6,7 +6,7 @@ exports[`UserAvatarConnected component renders UserAvatarConnected 1`] = `
     Object {
       "alignItems": "center",
       "height": 40,
-      "justifyContent": "flex-end",
+      "justifyContent": "center",
       "width": 40,
     }
   }

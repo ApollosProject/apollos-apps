@@ -1,5 +1,6 @@
 import AnalyticsProvider, {
   AnalyticsConsumer,
+  AnalyticsContext,
   identify,
   track,
 } from './Provider';
@@ -8,6 +9,7 @@ import withTrackOnPress from './withTrackOnPress';
 
 export {
   AnalyticsConsumer,
+  AnalyticsContext,
   AnalyticsProvider,
   identify,
   track,

@@ -40,6 +40,7 @@ storiesOf('ui-prayer/PrayerCard', module)
     />
   ))
   .add('cardColor', () => <PrayerCard cardColor={'salmon'} />)
+  .add('isLoading', () => <PrayerCard isLoading />)
   .add('prayer', () => (
     <PrayerCard
       prayer={

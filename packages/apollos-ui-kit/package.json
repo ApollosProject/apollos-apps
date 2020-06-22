@@ -45,7 +45,6 @@
   "peerDependencies": {
     "@apollosproject/storybook": "*",
     "@apollosproject/ui-media-player": "*",
-    "@react-native-community/blur": "*",
     "@react-native-community/datetimepicker": "*",
     "react": "*",
     "react-native": "*",

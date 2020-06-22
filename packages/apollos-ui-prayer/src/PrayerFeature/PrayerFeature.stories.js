@@ -5,15 +5,63 @@ import { CenteredView } from '@apollosproject/ui-kit';
 
 import PrayerFeature from '.';
 
-const avatars = [
-  'https://picsum.photos/200',
-  'https://picsum.photos/200',
-  'https://picsum.photos/200',
-  'https://picsum.photos/200',
-  'https://picsum.photos/200',
-  'https://picsum.photos/200',
-  'https://picsum.photos/200',
-  'https://picsum.photos/200',
+const prayers = [
+  {
+    id: '1',
+    isPrayed: false,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '2',
+    isPrayed: false,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '3',
+    isPrayed: false,
+    requestor: {
+      photo: { uri: '' },
+    },
+  },
+  {
+    id: '4',
+    isPrayed: true,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '5',
+    isPrayed: true,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '6',
+    isPrayed: true,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '7',
+    isPrayed: true,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '8',
+    isPrayed: true,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
 ];
 
 storiesOf('ui-prayer/PrayerFeature', module)
@@ -24,30 +72,66 @@ storiesOf('ui-prayer/PrayerFeature', module)
   ))
   .add('example', () => (
     <PrayerFeature
-      avatars={avatars}
+      prayers={prayers}
       onPressAdd={() => {}}
       title={'Example title'}
       subtitle={'Custom Subtitle'}
     />
   ))
-  .add('default', () => <PrayerFeature avatars={avatars} />)
+  .add('default', () => <PrayerFeature prayers={prayers} />)
   .add('isCard (false)', () => (
-    <PrayerFeature avatars={avatars} isCard={false} title={'Example title'} />
+    <PrayerFeature prayers={prayers} isCard={false} title={'Example title'} />
   ))
-  .add('isLoading', () => (
-    <PrayerFeature
-      avatars={['', '', '', '', '', '', '', '']}
-      isLoading
-      title={'Example title'}
-      isCard={false}
-    />
-  ))
+  .add('isLoading', () => {
+    const emptyData = [
+      {
+        id: '1',
+        source: { uri: '' },
+      },
+      {
+        id: '2',
+        source: { uri: '' },
+      },
+      {
+        id: '3',
+        source: { uri: '' },
+      },
+      {
+        id: '4',
+        source: { uri: '' },
+      },
+      {
+        id: '5',
+        source: { uri: '' },
+      },
+      {
+        id: '6',
+        source: { uri: '' },
+      },
+      {
+        id: '7',
+        source: { uri: '' },
+      },
+      {
+        id: '8',
+        source: { uri: '' },
+      },
+    ];
+    return (
+      <PrayerFeature
+        prayers={emptyData}
+        isLoading
+        title={'Example title'}
+        isCard={false}
+      />
+    );
+  })
   .add('onPressAdd', () => (
-    <PrayerFeature avatars={avatars} onPressAdd={() => {}} />
+    <PrayerFeature prayers={prayers} onPressAdd={() => {}} />
   ))
   .add('title', () => (
-    <PrayerFeature avatars={avatars} title={'Example title'} />
+    <PrayerFeature prayers={prayers} title={'Example title'} />
   ))
   .add('subtitle', () => (
-    <PrayerFeature avatars={avatars} subtitle={'Custom Subtitle'} />
+    <PrayerFeature prayers={prayers} subtitle={'Custom Subtitle'} />
   ));

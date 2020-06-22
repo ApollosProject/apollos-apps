@@ -258,7 +258,7 @@ but deliver us from evil. Amen.",
 exports[`Prayer gets daily prayer feed 2`] = `
 Array [
   Array [
-    "PrayerRequests?loadAttributes=expanded&%24filter=%28%28%28%28%28%28RequestedByPersonAliasId%20ne%2051%29%20and%20%28IsActive%20eq%20true%29%29%20and%20%28IsApproved%20eq%20true%29%29%20and%20%28IsPublic%20eq%20true%29%29%20and%20%28ExpirationDate%20gt%20datetime%272020-02-19T19%3A00%3A00-05%3A00%27%20or%20ExpirationDate%20eq%20null%29%29%20and%20%28EnteredDateTime%20gt%20datetime%272020-02-18T19%3A00%3A00-05%3A00%27%20or%20ExpirationDate%20eq%20null%29%29%20and%20%28Answer%20eq%20null%20or%20Answer%20eq%20%27%27%29&%24orderby=PrayerCount%20asc%2C%20EnteredDateTime%20asc",
+    "PrayerRequests?loadAttributes=expanded&%24filter=%28%28%28%28%28%28RequestedByPersonAliasId%20ne%2051%29%20and%20%28IsActive%20eq%20true%29%29%20and%20%28IsApproved%20eq%20true%29%29%20and%20%28IsPublic%20eq%20true%29%29%20and%20%28ExpirationDate%20gt%20datetime%272020-02-19T19%3A00%3A00-05%3A00%27%20or%20ExpirationDate%20eq%20null%29%29%20and%20%28EnteredDateTime%20gt%20datetime%272020-02-18T19%3A00%3A00-05%3A00%27%20or%20PrayerCount%20eq%20null%29%29%20and%20%28Answer%20eq%20null%20or%20Answer%20eq%20%27%27%29&%24orderby=PrayerCount%20asc%2C%20EnteredDateTime%20asc",
     Object {},
     Object {},
   ],

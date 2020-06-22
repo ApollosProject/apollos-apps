@@ -26,6 +26,13 @@ const AvatarWrapper = styled(
   'ui-prayer.PrayerFeature.AvatarWrapper'
 )(CardContent);
 
+const getAvatars = (prayers) =>
+  prayers.map((prayer) => ({
+    id: prayer.id,
+    notification: !prayer.isPrayed,
+    source: prayer.requestor?.photo,
+  }));
+
 const Header = styled(
   ({ isCard, theme }) => ({
     ...(isCard
@@ -76,7 +83,7 @@ RenderAsCard.propTypes = {
 };
 
 const PrayerFeature = ({
-  avatars,
+  prayers = [],
   isCard,
   isLoading,
   onPressAdd,
@@ -95,17 +102,26 @@ const PrayerFeature = ({
     ) : null}
     <AvatarWrapper>
       <StyledAvatarList
-        avatars={avatars}
+        avatars={getAvatars(prayers)}
+        isCard={isCard}
+        isLoading={isLoading}
         onPressAdd={onPressAdd}
         onPressAvatar={onPressAvatar}
-        isCard={isCard}
       />
     </AvatarWrapper>
   </RenderAsCard>
 );
 
 PrayerFeature.propTypes = {
-  avatars: PropTypes.arrayOf(ImageSourceType).isRequired,
+  prayers: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      isPrayed: PropTypes.bool,
+      requestor: PropTypes.shape({
+        photo: ImageSourceType,
+      }),
+    })
+  ).isRequired,
   isCard: PropTypes.bool,
   isLoading: PropTypes.bool,
   onPressAdd: PropTypes.func,

@@ -3,7 +3,7 @@ import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
 import PrayerCard from '../PrayerCard';
-import PrayerScreen from '../PrayerScreen';
+import PrayerView from '../PrayerView';
 
 import PrayerSwiper from '.';
 
@@ -13,7 +13,7 @@ storiesOf('ui-prayer/PrayerSwiper', module).add('example', () => (
       { swipeForward } //eslint-disable-line
     ) => (
       <>
-        <PrayerScreen>
+        <PrayerView>
           <PrayerCard
             avatar={{
               uri: 'https://picsum.photos/400/400',
@@ -23,16 +23,16 @@ storiesOf('ui-prayer/PrayerSwiper', module).add('example', () => (
             }
             title={'Pray for Peter'}
           />
-        </PrayerScreen>
-        <PrayerScreen>
+        </PrayerView>
+        <PrayerView>
           <PrayerCard
             prayer={
               'For my 15+ year old dog as she makes her journey from this life. she has been a joy and a blessing to us since we adopted her 12 years ago. Thank you Lord for giving us such a sweet and loving companion.'
             }
             title={'Pray for Peter'}
           />
-        </PrayerScreen>
-        <PrayerScreen>
+        </PrayerView>
+        <PrayerView>
           <PrayerCard
             avatar={{
               uri: 'https://picsum.photos/400/400',
@@ -42,14 +42,14 @@ storiesOf('ui-prayer/PrayerSwiper', module).add('example', () => (
             }
             title={'Pray for Peter'}
           />
-        </PrayerScreen>
-        <PrayerScreen>
+        </PrayerView>
+        <PrayerView>
           <PrayerCard
             avatar={{
               uri: 'https://picsum.photos/400/400',
             }}
           />
-        </PrayerScreen>
+        </PrayerView>
       </>
     )}
   </PrayerSwiper>

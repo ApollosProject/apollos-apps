@@ -2,11 +2,13 @@ import React from 'react';
 import { FlatList, View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import ConnectedImage, { ImageSourceType } from '../../ConnectedImage';
+import { ImageSourceType } from '../../ConnectedImage';
 import Icon from '../../Icon';
 import styled from '../../styled';
 import Touchable from '../../Touchable';
 import { withTheme } from '../../theme';
+
+import TouchableAvatar from './TouchableAvatar';
 
 const AddIcon = withTheme(
   ({ theme }) => ({
@@ -18,24 +20,23 @@ const AddIcon = withTheme(
 )(Icon);
 
 const AddIconBackground = styled(
-  ({ theme }) => ({
-    backgroundColor: theme.colors.action.primary,
-    borderRadius: theme.sizing.avatar.medium * 0.4,
+  ({ isLoading, theme }) => ({
+    backgroundColor: isLoading
+      ? theme.colors.background.inactive
+      : theme.colors.action.primary,
     padding: theme.sizing.avatar.medium * 0.1625,
-    marginRight: theme.sizing.baseUnit * 0.5,
   }),
   'ui-kit.AvatarList.AddIconBackground'
 )(View);
 
-const Avatar = styled(
+const AndroidTouchableRippleFix = styled(
   ({ theme }) => ({
-    aspectRatio: 1,
     borderRadius: theme.sizing.avatar.medium * 0.4,
-    height: theme.sizing.avatar.medium * 0.8,
     marginRight: theme.sizing.baseUnit * 0.5,
+    overflow: 'hidden',
   }),
-  'ui-kit.AvatarList.Avatar'
-)(ConnectedImage);
+  'ui-kit.AvatarList.AndroidTouchableRippleFix'
+)(View);
 
 const AvatarFeed = withTheme(
   ({ theme }) => ({
@@ -55,23 +56,24 @@ const AvatarFeed = withTheme(
 
 // eslint-disable-next-line react/display-name, react/prop-types
 const renderItem = (onPressAvatar, isLoading) => ({ item }) => (
-  <Touchable onPress={onPressAvatar ? () => onPressAvatar({ item }) : null}>
-    <Avatar source={item} isLoading={isLoading} />
-  </Touchable>
+  <TouchableAvatar
+    disabled={isLoading || !onPressAvatar}
+    notification={item.notification}
+    onPress={() => onPressAvatar({ item })}
+    source={item?.source}
+  />
 );
 
-const renderListHeader = ({ onPressAdd }) =>
+const renderListHeader = (onPressAdd, isLoading) =>
   onPressAdd ? (
-    <Touchable onPress={() => onPressAdd()}>
-      <AddIconBackground>
-        <AddIcon />
-      </AddIconBackground>
-    </Touchable>
+    <AndroidTouchableRippleFix>
+      <Touchable onPress={() => onPressAdd()} disabled={isLoading}>
+        <AddIconBackground isLoading={isLoading}>
+          <AddIcon isLoading={isLoading} />
+        </AddIconBackground>
+      </Touchable>
+    </AndroidTouchableRippleFix>
   ) : null;
-
-renderListHeader.propTypes = {
-  onPressAdd: PropTypes.func,
-};
 
 const AvatarList = ({
   avatars,
@@ -84,14 +86,20 @@ const AvatarList = ({
   <AvatarFeed
     data={avatars}
     keyExtractor={keyExtractor}
-    ListHeaderComponent={renderListHeader({ onPressAdd })}
+    ListHeaderComponent={renderListHeader(onPressAdd, isLoading)}
     renderItem={renderItem(onPressAvatar, isLoading)}
     {...props}
   />
 );
 
 AvatarList.propTypes = {
-  avatars: PropTypes.arrayOf(ImageSourceType).isRequired,
+  avatars: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      source: ImageSourceType,
+      notification: PropTypes.bool,
+    })
+  ).isRequired,
   isLoading: PropTypes.bool,
   keyExtractor: PropTypes.func,
   onPressAdd: PropTypes.func,

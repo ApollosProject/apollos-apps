@@ -5,22 +5,70 @@ import { Providers } from '../testUtils';
 
 import PrayerFeature from '.';
 
-const avatars = [
-  'https://picsum.photos/200',
-  'https://picsum.photos/200',
-  'https://picsum.photos/200',
-  'https://picsum.photos/200',
-  'https://picsum.photos/200',
-  'https://picsum.photos/200',
-  'https://picsum.photos/200',
-  'https://picsum.photos/200',
+const prayers = [
+  {
+    id: '1',
+    isPrayed: false,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '2',
+    isPrayed: false,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '3',
+    isPrayed: false,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '4',
+    isPrayed: true,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '5',
+    isPrayed: true,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '6',
+    isPrayed: true,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '7',
+    isPrayed: true,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
+  {
+    id: '8',
+    isPrayed: true,
+    requestor: {
+      photo: { uri: 'https://picsum.photos/200' },
+    },
+  },
 ];
 
 describe('The PrayerFeature component', () => {
   it('should render', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerFeature avatars={avatars} />
+        <PrayerFeature prayers={prayers} />
       </Providers>
     );
 
@@ -29,7 +77,7 @@ describe('The PrayerFeature component', () => {
   it('should render without a `Card` border', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerFeature avatars={avatars} isCard={false} />
+        <PrayerFeature prayers={prayers} isCard={false} />
       </Providers>
     );
 
@@ -38,7 +86,7 @@ describe('The PrayerFeature component', () => {
   it('should render a loading state', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerFeature avatars={avatars} isLoading title={'Example title'} />
+        <PrayerFeature prayers={prayers} isLoading title={'Example title'} />
       </Providers>
     );
 
@@ -48,7 +96,7 @@ describe('The PrayerFeature component', () => {
     const tree = renderer.create(
       <Providers>
         <PrayerFeature
-          avatars={['', '', '', '', '', '', '', '']}
+          prayers={[{}, {}, {}, {}, {}, {}]}
           isCard={false}
           isLoading
           title={'Example title'}
@@ -61,7 +109,7 @@ describe('The PrayerFeature component', () => {
   it('should accept an onPressAdd function', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerFeature avatars={avatars} onPressAdd={jest.fn()} />
+        <PrayerFeature prayers={prayers} onPressAdd={jest.fn()} />
       </Providers>
     );
 
@@ -70,7 +118,7 @@ describe('The PrayerFeature component', () => {
   it('should accept an onPressAvatar function', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerFeature avatars={avatars} onPressAvatar={jest.fn()} />
+        <PrayerFeature prayers={prayers} onPressAvatar={jest.fn()} />
       </Providers>
     );
 
@@ -79,7 +127,7 @@ describe('The PrayerFeature component', () => {
   it('should render with a title', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerFeature avatars={avatars} title={'Example title'} />
+        <PrayerFeature prayers={prayers} title={'Example title'} />
       </Providers>
     );
 
@@ -88,7 +136,7 @@ describe('The PrayerFeature component', () => {
   it('should render with a custom subtitle', () => {
     const tree = renderer.create(
       <Providers>
-        <PrayerFeature avatars={avatars} subtitle={'Custom subtitle'} />
+        <PrayerFeature prayers={prayers} subtitle={'Custom subtitle'} />
       </Providers>
     );
 
