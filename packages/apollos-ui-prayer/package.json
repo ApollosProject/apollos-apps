@@ -18,11 +18,13 @@
     "react-native"
   ],
   "peerDependencies": {
+    "@apollo/react-hooks": "*",
     "@apollosproject/storybook": "*",
     "@apollosproject/ui-analytics": "*",
     "@apollosproject/ui-fragments": "*",
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-notifications": "*",
+    "@apollosproject/ui-scripture": "*",
     "react": "*",
     "react-apollo": "*",
     "react-native": "*",
@@ -46,7 +48,7 @@
     "setupFiles": [
       "./jest.setup.js"
     ]
-  },  
+  },
   "dependencies": {
     "formik": "1.5.1",
     "graphql-tag": "2.9.2",
@@ -56,12 +58,14 @@
     "yup": "0.26.6"
   },
   "devDependencies": {
+    "apollo-client": "2.6.10",
+    "@apollo/react-testing": "3.1.4",
+    "@apollo/react-hooks": "3.1.5",
     "@storybook/react-native": "5.2.4",
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
     "react": "16.8.6",
-    "react-apollo": "2.5.5",
     "react-native": "0.60.5",
     "react-navigation": "^3.11.0",
     "react-test-renderer": "16.8.6",

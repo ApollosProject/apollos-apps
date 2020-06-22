@@ -37,6 +37,15 @@ describe('The PrayerCard component', () => {
 
     expect(tree).toMatchSnapshot();
   });
+  it('should render a loading state (isLoading)', () => {
+    const tree = renderer.create(
+      <Providers>
+        <PrayerCard isLoading />
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
   it('should render a custom title', () => {
     const tree = renderer.create(
       <Providers>

@@ -20,7 +20,8 @@ Object {
 exports[`features dataSource should create a PrayerListFeature from a DAILY_PRAYER algorithm 1`] = `
 Object {
   "__typename": "PrayerListFeature",
-  "id": "PrayerListFeature:f6b30a38eb547f1f75676ce0557a7e05769494e337dda60d9df12742802847cd863a32149911c6600a81adc72aefc4abe2a7f3d76eb6b4beb5913f5f1f9061101a8444f8a4f8320ff0b853ff9b92b4b83bee40809d46c72936ab90d813a2c54a",
+  "id": "PrayerListFeature:f6b30a38eb547f1f75676ce0557a7e05769494e337dda60d9df12742802847cd863a32149911c6600a81adc72aefc4abe2a7f3d76eb6b4beb5913f5f1f9061101a8444f8a4f8320ff0b853ff9b92b4b82cb29986eea2756a26fe31bb9cb49114ca355123f0be79354b35c44c7830856e",
+  "isCard": true,
   "prayers": [Function],
   "subtitle": "It's great!",
   "title": "Test Action List",

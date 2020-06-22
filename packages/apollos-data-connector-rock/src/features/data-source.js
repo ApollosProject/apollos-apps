@@ -214,7 +214,7 @@ export default class Feature extends RockApolloDataSource {
     };
   }
 
-  createPrayerListFeature({ algorithms = [], title, subtitle }) {
+  createPrayerListFeature({ algorithms = [], title, subtitle, isCard = true }) {
     const prayers = () => this.runAlgorithms({ algorithms });
     return {
       // The Feature ID is based on all of the action ids, added together.
@@ -225,17 +225,19 @@ export default class Feature extends RockApolloDataSource {
           algorithms,
           title,
           subtitle,
+          isCard,
         },
       }),
       prayers,
       title,
       subtitle,
+      isCard,
       // Typename is required so GQL knows specifically what Feature is being created
       __typename: 'PrayerListFeature',
     };
   }
 
-  async dailyPrayerAlgorithm({ limit = 15 } = {}) {
+  async dailyPrayerAlgorithm({ limit = 10 } = {}) {
     const { PrayerRequest } = this.context.dataSources;
     const cursor = await PrayerRequest.byDailyPrayerFeed();
     return cursor.top(limit).get();
