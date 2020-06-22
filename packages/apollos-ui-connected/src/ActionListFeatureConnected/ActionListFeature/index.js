@@ -99,7 +99,6 @@ const ActionListFeature = memo(
     title,
     primaryAction,
   }) => {
-    console.warn(primaryAction);
     const onPressActionListButton = onPressActionListButtonProp || onPressItem;
     const HeaderWrapper =
       isLoading || title || subtitle ? ActionListHeader : View;
