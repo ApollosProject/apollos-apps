@@ -5,12 +5,17 @@ import ActionListFeatureConnected from '../ActionListFeatureConnected';
 import HorizontalCardListFeatureConnected from '../HorizontalCardListFeatureConnected';
 import VerticalCardListFeatureConnected from '../VerticalCardListFeatureConnected';
 import HeroListFeatureConnected from '../HeroListFeatureConnected';
+import PrayerListFeatureConnected from '../PrayerListFeatureConnected';
 
 const MAPPINGS = {
   ActionListFeature: ActionListFeatureConnected,
   HeroListFeature: HeroListFeatureConnected,
   HorizontalCardListFeature: HorizontalCardListFeatureConnected,
   VerticalCardListFeature: VerticalCardListFeatureConnected,
+  // TODO: HMW set this up so that features that depend on other packages,
+  // like Prayer, don't all get stuck here, forcing all church apps to have
+  // them all installed?
+  PrayerListFeature: PrayerListFeatureConnected,
 };
 
 const featuresFeedComponentMapper = ({

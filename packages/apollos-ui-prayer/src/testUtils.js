@@ -3,7 +3,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import wait from 'waait';
 import { Providers as UIProviders } from '@apollosproject/ui-kit';
-import { MockedProvider } from 'react-apollo/test-utils';
+import { MockedProvider as HookedMockedProvider } from '@apollo/react-testing';
 
 export const renderWithApolloData = async (component) => {
   const tree = renderer.create(component);
@@ -15,6 +15,6 @@ export const renderWithApolloData = async (component) => {
 // eslint-disable-next-line
 export const Providers = ({ children, ...props }) => (
   <UIProviders {...props}>
-    <MockedProvider {...props}>{children}</MockedProvider>
+    <HookedMockedProvider {...props}>{children}</HookedMockedProvider>
   </UIProviders>
 );
