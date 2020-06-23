@@ -1,4 +1,19 @@
-v1.4.1: June 5, 2020
+v1.4.3: June 22, 2020
+
+- Adds action list primary action support (a nice wide button) (#1492) (6f49b4db)
+- Hero list primary action (#1488) (96e475ae)
+- Connected prayer (#1483) (a2c24aee)
+- Adds core support for URL type and opening URLs Actions in w/ Features (#1487) (24023003)
+- Removes interaction sessions (#1486) (f03d4888)
+- Reduces Algolia calls (#1484) (59a28818)
+- Adds an AvatarCloud component to ui-kit (#1472) (9fab5dbf)
+- Prayer api (#1462) (1e51418d)
+- Move AvatarList component to ui-kit package (#1471) (210f85a1)
+- Adds PrayerFeature ui (#1464) (10e904f4)
+- Adds PrayerScreen component (#1466) (bcfa0fd7)
+- Adds PrayerCard and PrayerInput component (#1457) (75b62c0d)
+
+v1.4.2 June 5, 2020
 
 - Adds integrated universal links (#1474) (27a8fad4)
 
