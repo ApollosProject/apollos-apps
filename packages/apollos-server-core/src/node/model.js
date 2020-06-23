@@ -68,7 +68,9 @@ export default class Node {
       throw new Error(`No dataSource found using ${__type}`);
     }
 
-    const data = await dataSources[modelName].getFromId(id, encodedId);
+    const data = await dataSources[modelName].getFromId(id, encodedId, {
+      info: resolveInfo,
+    });
     if (data) data.__type = __type;
     return data;
   }
