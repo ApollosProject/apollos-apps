@@ -23,7 +23,7 @@ const deviceInfo = {
   appVersion: DeviceInfo.getVersion(),
 };
 
-const AnalyticsContext = React.createContext({
+export const AnalyticsContext = React.createContext({
   track: () => {},
   identify: () => {},
 });

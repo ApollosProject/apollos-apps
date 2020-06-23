@@ -14,7 +14,7 @@ describe('The Avatar component', () => {
   it('should render small', () => {
     const tree = renderer.create(
       <ThemeProvider>
-        <Avatar source={source} size="small" />
+        <Avatar source={source} size={'small'} />
       </ThemeProvider>
     );
     expect(tree).toMatchSnapshot();
@@ -22,7 +22,7 @@ describe('The Avatar component', () => {
   it('should render medium', () => {
     const tree = renderer.create(
       <ThemeProvider>
-        <Avatar source={source} size="medium" />
+        <Avatar source={source} size={'medium'} />
       </ThemeProvider>
     );
     expect(tree).toMatchSnapshot();
@@ -30,7 +30,16 @@ describe('The Avatar component', () => {
   it('should render large', () => {
     const tree = renderer.create(
       <ThemeProvider>
-        <Avatar source={source} size="large" />
+        <Avatar source={source} size={'large'} />
+      </ThemeProvider>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with a themeSize', () => {
+    // I don't really understand the themeSize prop still
+    const tree = renderer.create(
+      <ThemeProvider>
+        <Avatar source={source} themeSize={80} />
       </ThemeProvider>
     );
     expect(tree).toMatchSnapshot();
@@ -40,9 +49,49 @@ describe('The Avatar component', () => {
       <ThemeProvider>
         <Avatar
           source={source}
-          buttonIcon="settings"
-          onPressIcon={() => null}
+          buttonIcon={'settings'}
+          onPressIcon={jest.fn()}
         />
+      </ThemeProvider>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render icon button', () => {
+    const tree = renderer.create(
+      <ThemeProvider>
+        <Avatar
+          source={source}
+          buttonIcon={'settings'}
+          isLoading
+          onPressIcon={jest.fn()}
+        />
+      </ThemeProvider>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render correctly sized notification dots', () => {
+    const tree = renderer.create(
+      <ThemeProvider>
+        <>
+          <Avatar
+            source={source}
+            size={'small'}
+            unread
+            onPressIcon={jest.fn()}
+          />
+          <Avatar
+            source={source}
+            size={'medium'}
+            unread
+            onPressIcon={jest.fn()}
+          />
+          <Avatar
+            source={source}
+            size={'large'}
+            unread
+            onPressIcon={jest.fn()}
+          />
+        </>
       </ThemeProvider>
     );
     expect(tree).toMatchSnapshot();

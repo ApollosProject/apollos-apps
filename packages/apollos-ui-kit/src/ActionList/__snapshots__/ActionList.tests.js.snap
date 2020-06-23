@@ -856,18 +856,6 @@ exports[`ActionList should render a loading state 1`] = `
           }
         />
       </View>
-      <View
-        style={
-          Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 32,
-            "marginTop": 8,
-            "width": "100%",
-          }
-        }
-      />
     </View>
   </View>
 </View>
@@ -2356,7 +2344,7 @@ exports[`ActionList should render with onPressActionListButton 1`] = `
               }
             }
           >
-            View More
+            Press Me!
           </Text>
         </View>
       </View>

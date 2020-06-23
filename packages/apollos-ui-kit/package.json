@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-kit",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -45,7 +45,6 @@
   "peerDependencies": {
     "@apollosproject/storybook": "*",
     "@apollosproject/ui-media-player": "*",
-    "@react-native-community/blur": "*",
     "@react-native-community/datetimepicker": "*",
     "react": "*",
     "react-native": "*",

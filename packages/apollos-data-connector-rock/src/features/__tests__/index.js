@@ -248,6 +248,65 @@ describe('features', () => {
       expect(await expandResult(result)).toMatchSnapshot();
       expect(first.mock.calls).toMatchSnapshot();
     });
+    it('should create an ActionListFeature from a CONTENT_CHANNEL algorithm with a primary action', async () => {
+      const feature = new Feature();
+      feature.initialize({
+        context,
+      });
+
+      const result = await feature.createActionListFeature({
+        algorithms: [
+          {
+            type: 'CONTENT_CHANNEL',
+            arguments: { contentChannelId: 13 },
+          },
+        ],
+        title: 'Test Action List',
+        subtitle: "It's great!",
+
+        primaryAction: {
+          action: 'OPEN_URL',
+          title: 'Open this url',
+          relatedNode: {
+            __typename: 'Url',
+            url: 'https://www.google.com',
+          },
+        },
+      });
+
+      expect(await expandResult(result)).toMatchSnapshot();
+      expect(first.mock.calls).toMatchSnapshot();
+    });
+    it('should create an ActionListFeature from a CONTENT_CHANNEL algorithm with a primary action with an id', async () => {
+      const feature = new Feature();
+      feature.initialize({
+        context,
+      });
+
+      const result = await feature.createActionListFeature({
+        algorithms: [
+          {
+            type: 'CONTENT_CHANNEL',
+            arguments: { contentChannelId: 13 },
+          },
+        ],
+        title: 'Test Action List',
+        subtitle: "It's great!",
+
+        primaryAction: {
+          action: 'OPEN_URL',
+          title: 'Open this url',
+          relatedNode: {
+            id: 'Url123',
+            __typename: 'Url',
+            url: 'https://www.google.com',
+          },
+        },
+      });
+
+      expect(await expandResult(result)).toMatchSnapshot();
+      expect(first.mock.calls).toMatchSnapshot();
+    });
 
     it('should create an ActionListFeature from a SERMON_CHILDREN algorithm', async () => {
       const feature = new Feature();
@@ -484,6 +543,59 @@ describe('features', () => {
         ],
         title: 'Test HeroListFeature',
         subtitle: "It's a hero list feature!",
+      });
+
+      expect(await expandResult(result)).toMatchSnapshot();
+    });
+    it('should create an HeroListFeature from a USER_FEED algorithm and a primary action', async () => {
+      const feature = new Feature();
+      feature.initialize({
+        context,
+      });
+
+      const result = await feature.createHeroListFeature({
+        algorithms: [
+          {
+            type: 'USER_FEED',
+          },
+        ],
+        title: 'Test HeroListFeature',
+        subtitle: "It's a hero list feature!",
+        primaryAction: {
+          action: 'OPEN_URL',
+          title: 'Open this url',
+          relatedNode: {
+            __typename: 'Url',
+            url: 'https://www.google.com',
+          },
+        },
+      });
+
+      expect(await expandResult(result)).toMatchSnapshot();
+    });
+    it('should create an HeroListFeature from a USER_FEED algorithm and a primary action with an id', async () => {
+      const feature = new Feature();
+      feature.initialize({
+        context,
+      });
+
+      const result = await feature.createHeroListFeature({
+        algorithms: [
+          {
+            type: 'USER_FEED',
+          },
+        ],
+        title: 'Test HeroListFeature',
+        subtitle: "It's a hero list feature!",
+        primaryAction: {
+          action: 'OPEN_URL',
+          title: 'Open this url',
+          relatedNode: {
+            __typename: 'Url',
+            id: 'Url:123',
+            url: 'https://www.google.com',
+          },
+        },
       });
 
       expect(await expandResult(result)).toMatchSnapshot();
