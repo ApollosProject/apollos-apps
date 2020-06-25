@@ -73,6 +73,7 @@ class ActionList extends PureComponent {
         <Content cardPadding={this.props.isCard}>
           {actions.map((item) => (
             <ActionListItem
+              {...get(item, 'relatedNode', {})}
               action={item.action || ''}
               key={item.id}
               label={item.subtitle || ''}
