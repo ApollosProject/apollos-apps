@@ -5,8 +5,9 @@ import PropTypes from 'prop-types';
 import { H5, BodySmall } from '../../typography';
 import styled from '../../styled';
 import TouchableScale from '../../TouchableScale';
-import ConnectedImage, { ImageSourceType } from '../../ConnectedImage';
+import { ImageSourceType } from '../../ConnectedImage';
 import FlexedView from '../../FlexedView';
+import ActionListImage from './ActionListImage';
 
 const Label = styled(
   ({ theme }) => ({
@@ -28,13 +29,6 @@ const Cell = styled(({ theme }) => ({
   justifyContent: 'flex-start',
 }))(View);
 
-const CellImage = styled(({ theme }) => ({
-  width: theme.sizing.baseUnit * 4,
-  height: theme.sizing.baseUnit * 4,
-  borderRadius: theme.sizing.baseBorderRadius,
-  marginRight: theme.sizing.baseUnit,
-}))(ConnectedImage);
-
 // eslint-disable-next-line react/prop-types
 const RenderAsTouchable = ({ children, onPress }) =>
   onPress ? (
@@ -43,10 +37,10 @@ const RenderAsTouchable = ({ children, onPress }) =>
     children
   );
 
-const ActionListItem = ({ imageSource, title, label, onPress }) => (
+const ActionListItem = ({ imageSource, title, label, onPress, start }) => (
   <RenderAsTouchable onPress={onPress}>
     <Cell>
-      <CellImage source={imageSource} />
+      <ActionListImage source={imageSource} start={start} />
       <TextContainer>
         {title ? <H5 numberOfLines={!label ? 2 : 1}>{title}</H5> : null}
         {label ? (
@@ -64,6 +58,7 @@ ActionListItem.propTypes = {
   title: PropTypes.string,
   label: PropTypes.string,
   onPress: PropTypes.func,
+  start: PropTypes.string,
 };
 
 export default ActionListItem;

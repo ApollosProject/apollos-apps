@@ -37,6 +37,18 @@ describe('ActionListItem', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render with an event', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ActionListItem
+          imageSource={null}
+          label={'What'}
+          start={'11/02/1996'}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should handle an onPress function', () => {
     const tree = renderer.create(
       <Providers>

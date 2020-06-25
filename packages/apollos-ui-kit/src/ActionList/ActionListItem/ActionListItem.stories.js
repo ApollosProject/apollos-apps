@@ -42,6 +42,9 @@ storiesOf('ActionList/ActionListItem', module)
       title={'Hello 1'}
     />
   ))
+  .add('event', () => (
+    <ActionListItem imageSource={null} title={'Hello 1'} start={'11/02/1996'} />
+  ))
   .add('onPress', () => (
     <ActionListItem
       imageSource={'https://picsum.photos/600/400/?random'}
