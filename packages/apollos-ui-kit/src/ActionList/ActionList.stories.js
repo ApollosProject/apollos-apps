@@ -122,7 +122,7 @@ storiesOf('ActionList', module)
     />
   ))
   .add('isCard (false)', () => <ActionList actions={actions} isCard={false} />)
-  .add('with events', () => <ActionList actions={eventActions} isCard={false} />)
+  .add('with events', () => <ActionList actions={eventActions} />)
   .add('isLoading', () => (
     <ActionList
       isLoading
