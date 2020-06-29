@@ -120,6 +120,13 @@ const ACTION_LIST_FEATURE_FRAGMENT = gql`
         ...RelatedFeatureNodeFragment
       }
     }
+    primaryAction {
+      title
+      action
+      relatedNode {
+        ...RelatedFeatureNodeFragment
+      }
+    }
   }
 `;
 
@@ -138,6 +145,13 @@ const HERO_LIST_FEATURE_FRAGMENT = gql`
           uri
         }
       }
+      relatedNode {
+        ...RelatedFeatureNodeFragment
+      }
+    }
+    primaryAction {
+      title
+      action
       relatedNode {
         ...RelatedFeatureNodeFragment
       }

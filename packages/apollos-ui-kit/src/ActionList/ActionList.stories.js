@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
+import moment from 'moment';
 
 import CenteredView from '../CenteredView';
 import BackgroundView from '../BackgroundView';
@@ -78,6 +79,14 @@ const actions = [
   },
 ];
 
+const eventActions = actions.map((action, i) => ({
+  ...action,
+  image: null,
+  relatedNode: {
+    start: moment(`November ${i + 1}, 2020`).toJSON(),
+  },
+}));
+
 storiesOf('ActionList', module)
   .addDecorator((story) => (
     <BackgroundView>
@@ -106,9 +115,14 @@ storiesOf('ActionList', module)
     );
   })
   .add('onPressActionListButton', () => (
-    <ActionList actions={actions} onPressActionListButton={() => {}} />
+    <ActionList
+      actions={actions}
+      onPressActionListButton={() => {}}
+      actionListButtonTitle="Press Me!"
+    />
   ))
   .add('isCard (false)', () => <ActionList actions={actions} isCard={false} />)
+  .add('with events', () => <ActionList actions={eventActions} />)
   .add('isLoading', () => (
     <ActionList
       isLoading

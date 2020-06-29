@@ -125,8 +125,10 @@ const HeroListFeature = memo(
     onPressItem,
     subtitle,
     title,
+    primaryAction,
   }) => {
     const onPressHero = onPressHeroProp || onPressItem;
+    const onPressActionListButton = onPressHeroListButton || onPressItem;
     return (
       <ActionList
         isCard={false}
@@ -163,7 +165,8 @@ const HeroListFeature = memo(
         }
         actions={isLoading && !actions.length ? loadingStateObject : actions}
         onPressActionItem={onPressItem}
-        onPressActionListButton={onPressHeroListButton}
+        onPressActionListButton={() => onPressActionListButton(primaryAction)}
+        actionListButtonTitle={get(primaryAction, 'title')}
       />
     );
   }
@@ -182,6 +185,10 @@ HeroListFeature.propTypes = {
     PropTypes.node,
     PropTypes.object,
   ]),
+  primaryAction: PropTypes.shape({
+    title: PropTypes.string,
+    relatedNode: PropTypes.shape({}),
+  }),
   loadingStateObject: PropTypes.arrayOf(PropTypes.shape({})),
   onPressHero: PropTypes.func,
   onPressHeroListButton: PropTypes.func,
