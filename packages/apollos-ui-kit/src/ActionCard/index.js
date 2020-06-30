@@ -9,13 +9,16 @@ const ActionCardActions = styled(
   {
     justifyContent: 'flex-end',
   },
-  'ActionCard.Actions'
+  'ui-kit.ActionCard.ActionCardActions'
 )(CardActions);
 
-const StyledChannelLabel = withTheme(({ theme }) => ({
-  tint: theme.colors.primary,
-  style: { paddingBottom: theme.sizing.baseUnit },
-}))(ChannelLabel);
+const StyledChannelLabel = withTheme(
+  ({ theme }) => ({
+    tint: theme.colors.primary,
+    style: { paddingBottom: theme.sizing.baseUnit },
+  }),
+  'ui-kit.ActionCard.StyledChannelLabel'
+)(ChannelLabel);
 
 const ActionCard = ({ label, icon, children, action, ...otherProps }) => (
   <Card {...otherProps}>

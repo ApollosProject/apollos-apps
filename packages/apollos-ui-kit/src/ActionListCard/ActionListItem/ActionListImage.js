@@ -31,7 +31,7 @@ const CellView = styled(
     alignItems: 'center',
     justifyContent: 'center',
   }),
-  'ui-kit.ActionListImage.CellImage'
+  'ui-kit.ActionListImage.CellView'
 )(View);
 
 const CellDate = styled(

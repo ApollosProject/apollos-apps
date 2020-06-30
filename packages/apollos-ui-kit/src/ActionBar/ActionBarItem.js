@@ -8,11 +8,14 @@ import { UIText } from '../typography';
 import Icon from '../Icon';
 import { withTheme } from '../theme';
 
-const ActionBarItemWrapper = styled(({ theme }) => ({
-  padding: theme.sizing.baseUnit,
-  alignItems: 'center',
-  justifyContent: 'center',
-}))(View);
+const ActionBarItemWrapper = styled(
+  ({ theme }) => ({
+    padding: theme.sizing.baseUnit,
+    alignItems: 'center',
+    justifyContent: 'center',
+  }),
+  'ui-kit.ActionBarItem.ActionBarItemWrapper'
+)(View);
 
 const ActionBarItem = ({
   icon = 'empty',

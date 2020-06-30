@@ -31,10 +31,13 @@ const AndroidTouchableRippleFix = styled(
 )(View);
 
 // This is just a filler so there is something to tap on.
-const TouchableChild = styled({
-  height: '100%',
-  width: '100%',
-})(View);
+const TouchableChild = styled(
+  {
+    height: '100%',
+    width: '100%',
+  },
+  'ui-kit.AvatarList.TouchableAvatar.TouchableChild'
+)(View);
 
 /*
  * Due to the fact that `StyledAvatar` has a notification dot that partially renders outside it's

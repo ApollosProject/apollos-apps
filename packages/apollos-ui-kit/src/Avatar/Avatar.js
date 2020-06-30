@@ -19,62 +19,80 @@ const Container = styled(
     alignItems: 'center',
     justifyContent: 'center',
   }),
-  'Avatar'
+  'ui-kit.Avatar.Container' // named override was 'Avatar'
 )(View);
 
 const PlaceholderIcon = compose(
-  withTheme(({ theme: { colors } = {}, themeSize }) => ({
-    fill: colors.background.inactive,
-    name: 'avatar',
-    size: themeSize * 1.09375, // this is a magic number 🧙‍♂️ of 35/33 and might be related to the default size of an icon being 32 🤷‍♂️
-  }))
+  withTheme(
+    ({ theme: { colors } = {}, themeSize }) => ({
+      fill: colors.background.inactive,
+      name: 'avatar',
+      size: themeSize * 1.09375, // this is a magic number 🧙‍♂️ of 35/33 and might be related to the default size of an icon being 32 🤷‍♂️
+    }),
+    'ui-kit.Avatar.PlaceholderIcon'
+  )
 )(Icon);
 
-const Image = styled(({ themeSize }) => ({
-  width: '100%',
-  height: '100%',
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  right: 0,
-  bottom: 0,
-  borderRadius: themeSize / 2,
-}))(ConnectedImage);
+const Image = styled(
+  ({ themeSize }) => ({
+    width: '100%',
+    height: '100%',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    borderRadius: themeSize / 2,
+  }),
+  'ui-kit.Avatar.Image'
+)(ConnectedImage);
 
-const StyledButtonIcon = styled(({ theme }) => ({
-  backgroundColor: theme.colors.background.paper,
-  ...Platform.select(theme.shadows.default),
-}))(ButtonIcon);
+const StyledButtonIcon = styled(
+  ({ theme }) => ({
+    backgroundColor: theme.colors.background.paper,
+    ...Platform.select(theme.shadows.default),
+  }),
+  'ui-kit.Avatar.StyledButtonIcon'
+)(ButtonIcon);
 
-const NotificationDot = styled(({ avatarSize, theme }) => ({
-  aspectRatio: 1,
-  backgroundColor: theme.colors.secondary,
-  borderRadius: avatarSize / 4,
-  marginTop: avatarSize / 32,
-  marginRight: avatarSize / 32,
-  position: 'absolute',
-  right: 0,
-  top: 0,
-  width: avatarSize / 4,
-}))(View);
+const NotificationDot = styled(
+  ({ avatarSize, theme }) => ({
+    aspectRatio: 1,
+    backgroundColor: theme.colors.secondary,
+    borderRadius: avatarSize / 4,
+    marginTop: avatarSize / 32,
+    marginRight: avatarSize / 32,
+    position: 'absolute',
+    right: 0,
+    top: 0,
+    width: avatarSize / 4,
+  }),
+  'ui-kit.Avatar.NotificationDot'
+)(View);
 
-const ButtonIconPositioner = styled({
-  position: 'absolute',
-  bottom: 0,
-  right: 0,
-})(View);
+const ButtonIconPositioner = styled(
+  {
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+  },
+  'ui-kit.Avatar.ButtonIconPositioner'
+)(View);
 
-const LoadingSpinnerContainer = styled(({ theme }) => ({
-  backgroundColor: 'white',
-  // The following three measurements are used to match those of the ButtonIcon container
-  width: 43,
-  height: 43,
-  padding: 9.6,
-  borderRadius: 50,
-  justifyContent: 'center',
-  alignItems: 'center',
-  ...Platform.select(theme.shadows.default),
-}))(View);
+const LoadingSpinnerContainer = styled(
+  ({ theme }) => ({
+    backgroundColor: 'white',
+    // The following three measurements are used to match those of the ButtonIcon container
+    width: 43,
+    height: 43,
+    padding: 9.6,
+    borderRadius: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    ...Platform.select(theme.shadows.default),
+  }),
+  'ui-kit.Avatar.LoadingSpinnerContainer'
+)(View);
 
 const Avatar = ({
   themeSize,
