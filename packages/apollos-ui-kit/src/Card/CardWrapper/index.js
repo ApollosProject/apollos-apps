@@ -8,34 +8,40 @@ import styled from '../../styled';
 
 const StyledCard = compose(
   withIsLoading,
-  styled(({ theme, cardColor, inHorizontalList = false, forceRatio }) => ({
-    // card styles
-    backgroundColor: cardColor || theme.colors.background.paper || undefined, // bail out if no bg color
-    borderRadius: theme.sizing.baseBorderRadius,
-    ...(inHorizontalList
-      ? {
-          // provides spacing between cards also fixes android shadow needing "space" to render into
-          margin: theme.sizing.baseUnit / 2,
-          marginBottom: theme.sizing.baseUnit * 0.75,
-        }
-      : {
-          marginHorizontal: theme.sizing.baseUnit,
-          marginVertical: theme.sizing.baseUnit * 0.75,
-        }),
-    ...Platform.select(theme.shadows.default),
-    ...(forceRatio ? { aspectRatio: forceRatio } : {}),
-  }))
+  styled(
+    ({ theme, cardColor, inHorizontalList = false, forceRatio }) => ({
+      // card styles
+      backgroundColor: cardColor || theme.colors.background.paper || undefined, // bail out if no bg color
+      borderRadius: theme.sizing.baseBorderRadius,
+      ...(inHorizontalList
+        ? {
+            // provides spacing between cards also fixes android shadow needing "space" to render into
+            margin: theme.sizing.baseUnit / 2,
+            marginBottom: theme.sizing.baseUnit * 0.75,
+          }
+        : {
+            marginHorizontal: theme.sizing.baseUnit,
+            marginVertical: theme.sizing.baseUnit * 0.75,
+          }),
+      ...Platform.select(theme.shadows.default),
+      ...(forceRatio ? { aspectRatio: forceRatio } : {}),
+    }),
+    'ui-ki.CardWrapper.StyledCard'
+  )
 )(View);
 
 /*
  * Overflow on iOS, when declared on the same element as a shadow, clips the shadow so overflow must
  * live on a child wrapper. https://github.com/facebook/react-native/issues/449
  */
-const OverflowFix = styled(({ theme, forceRatio }) => ({
-  borderRadius: theme.sizing.baseBorderRadius,
-  overflow: 'hidden',
-  ...(forceRatio ? { aspectRatio: forceRatio } : {}),
-}))(View);
+const OverflowFix = styled(
+  ({ theme, forceRatio }) => ({
+    borderRadius: theme.sizing.baseBorderRadius,
+    overflow: 'hidden',
+    ...(forceRatio ? { aspectRatio: forceRatio } : {}),
+  }),
+  'ui-kit.CardWrapper.OverflowFix'
+)(View);
 
 const Card = pure(({ children, forceRatio, ...otherProps }) => (
   <StyledCard forceRatio={forceRatio} {...otherProps}>

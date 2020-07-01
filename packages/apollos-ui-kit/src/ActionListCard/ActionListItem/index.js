@@ -13,7 +13,7 @@ const StyledBodySmall = styled(
   ({ theme }) => ({
     color: theme.colors.text.tertiary,
   }),
-  'ui-kit.ActionListItem.StyledBodySmall'
+  'ui-kit.ActionListCard.ActionListItem.StyledBodySmall'
 )(BodySmall);
 
 const TextContainer = styled(
@@ -24,7 +24,7 @@ const TextContainer = styled(
     height: theme.sizing.baseUnit * 4.25,
     borderColor: theme.colors.shadows.default,
   }),
-  'ui-kit.ActionListItem.TextContainer'
+  'ui-kit.ActionListCard.ActionListItem.TextContainer'
 )(FlexedView);
 
 const Cell = styled(
@@ -36,7 +36,7 @@ const Cell = styled(
     justifyContent: 'flex-start',
     alignItems: 'center',
   }),
-  'ui-kit.ActionListItem.Cell'
+  'ui-kit.ActionListCard.ActionListItem.Cell'
 )(View);
 
 const ActionListItem = ({

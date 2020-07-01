@@ -23,11 +23,14 @@ const TextContainer = styled(
   'ui-kit.ActionListItem.TextContainer'
 )(FlexedView);
 
-const Cell = styled(({ theme }) => ({
-  paddingBottom: theme.sizing.baseUnit * 0.5,
-  flexDirection: 'row',
-  justifyContent: 'flex-start',
-}))(View);
+const Cell = styled(
+  ({ theme }) => ({
+    paddingBottom: theme.sizing.baseUnit * 0.5,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+  }),
+  'ui-kit.ActionListItem.Cell'
+)(View);
 
 // eslint-disable-next-line react/prop-types
 const RenderAsTouchable = ({ children, onPress }) =>

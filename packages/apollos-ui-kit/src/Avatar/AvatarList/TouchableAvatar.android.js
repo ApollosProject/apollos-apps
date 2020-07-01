@@ -15,7 +15,7 @@ const StyledAvatar = withTheme(
     },
     themeSize: theme.sizing.avatar.medium * 0.8,
   }),
-  'ui-kit.AvatarList.TouchableAvatar.StyledAvatar'
+  'ui-kit.TouchableAvatarAndroid.StyledAvatar'
 )(Avatar);
 
 // This clips the Touchable ripple effect on android.
@@ -27,7 +27,7 @@ const AndroidTouchableRippleFix = styled(
     position: 'absolute',
     width: theme.sizing.avatar.medium * 0.8,
   }),
-  'ui-kit.AvatarList.TouchableAvatar.AndroidTouchableRippleFix'
+  'ui-kit.TouchableAvatarAndroid.AndroidTouchableRippleFix'
 )(View);
 
 // This is just a filler so there is something to tap on.
@@ -36,7 +36,7 @@ const TouchableChild = styled(
     height: '100%',
     width: '100%',
   },
-  'ui-kit.AvatarList.TouchableAvatar.TouchableChild'
+  'ui-kit.TouchableAvatarAndroid.TouchableChild'
 )(View);
 
 /*

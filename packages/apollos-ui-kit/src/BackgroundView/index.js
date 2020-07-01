@@ -11,7 +11,8 @@ const BackgroundView = compose(
     ...overlays['background-gradient']({ colors }),
     ...props,
   })),
-  styled({ flex: 1, height: '100%' })
+  styled({ flex: 1, height: '100%' }),
+  'ui-kit.BackgroudView.BackgroudView'
 )(LinearGradient);
 
 export default BackgroundView;
