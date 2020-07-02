@@ -59,6 +59,7 @@ const ConnectedImage = ({
   style,
   minAspectRatio,
   maxAspectRatio,
+  forceRatio,
   fadeDuration = 250,
   ...imageProps
 }) => {
@@ -89,10 +90,10 @@ const ConnectedImage = ({
     }
   }
 
-  // Image Fade In
-  const shouldFadeIn =
-    !imageInCache || (maintainAspectRatio && (!width || !height));
-  const opacity = useRef(new Animated.Value(shouldFadeIn ? 0 : 1)).current;
+  if (forceRatio) {
+    aspectRatioStyle.aspectRatio = forceRatio;
+  }
+
   const handleOnLoad = useRef((e) => {
     if (!imageInCache) {
       const {
@@ -101,12 +102,6 @@ const ConnectedImage = ({
       updateCache(loadedSource);
       setImageSize([loadedSource.newWidth, loadedSource.newHeight]);
     }
-
-    Animated.timing(opacity, {
-      toValue: 1,
-      duration: fadeDuration,
-    }).start();
-    if (onLoad) onLoad(e);
   }).current;
 
   return (
@@ -114,7 +109,8 @@ const ConnectedImage = ({
       {...imageProps}
       source={cachedSource || source}
       onLoad={handleOnLoad}
-      style={[aspectRatioStyle, { opacity }, style]}
+      fadeDuration={fadeDuration}
+      style={[aspectRatioStyle, style]}
     />
   );
 };
