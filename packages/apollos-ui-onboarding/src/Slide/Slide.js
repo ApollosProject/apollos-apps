@@ -2,8 +2,6 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, ScrollView } from 'react-native';
 
-import { SafeAreaView } from 'react-navigation';
-
 import {
   styled,
   withTheme,
@@ -12,6 +10,7 @@ import {
   ButtonLink,
   Button,
   Icon,
+  SafeAreaView,
 } from '@apollosproject/ui-kit';
 
 import { withTrackOnPress } from '@apollosproject/ui-analytics';

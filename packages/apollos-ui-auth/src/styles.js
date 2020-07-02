@@ -6,10 +6,10 @@ import {
   StatusBar,
   ScrollView,
   StyleSheet,
+  SafeAreaView,
 } from 'react-native';
 import PropTypes from 'prop-types';
-import { compose, withProps } from 'recompose';
-import { SafeAreaView } from 'react-navigation';
+import { compose } from 'recompose';
 import {
   styled,
   Card,
@@ -27,9 +27,9 @@ import {
 } from '@apollosproject/ui-kit';
 import BackButton from './BackButton';
 
-const FlexedSafeAreaView = compose(
-  styled({ height: '100%' }, 'ui-auth.FlexedSafeAreaView'),
-  withProps({ forceInset: { top: 'always' } })
+const FlexedSafeAreaView = styled(
+  { height: '100%' },
+  'ui-auth.FlexedSafeAreaView'
 )(SafeAreaView);
 
 const BrandIcon = withTheme(({ theme }) => ({

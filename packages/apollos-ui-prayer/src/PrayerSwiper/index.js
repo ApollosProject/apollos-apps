@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Dimensions } from 'react-native';
+import { View, Dimensions, SafeAreaView } from 'react-native';
 import PropTypes from 'prop-types';
 import * as ReactIs from 'react-is';
 import Color from 'color';
@@ -7,18 +7,12 @@ import Color from 'color';
 import Swiper from 'react-native-swiper';
 import { styled, withTheme } from '@apollosproject/ui-kit';
 
-import { SafeAreaView } from 'react-navigation';
-
 const dotStyles = ({ theme }) => ({
   width: theme.sizing.baseUnit * 1.5,
   height: theme.sizing.baseUnit * 0.125,
   borderRadius: theme.sizing.baseUnit * 0.125,
   marginHorizontal: theme.sizing.baseUnit * 0.0625,
 });
-
-const forceInset = {
-  bottom: 'always',
-};
 
 const PaginationDot = styled(
   ({ theme }) => ({
@@ -106,13 +100,13 @@ class PrayerSwiper extends Component {
         swiperRef={this.setSwiperRef}
         renderPagination={this.renderPagination}
         activeDot={
-          <SafeAreaView forceInset={forceInset}>
+          <SafeAreaView>
             <PaginationDotActive />
           </SafeAreaView>
         }
         dot={
-          <SafeAreaView forceInset={forceInset}>
-            <PaginationDot forceInset={forceInset} />
+          <SafeAreaView>
+            <PaginationDot />
           </SafeAreaView>
         }
         {...this.props}

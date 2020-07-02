@@ -41,7 +41,6 @@
     "react": "*",
     "react-native": "*",
     "react-native-passkit-wallet": "*",
-    "react-navigation": "*",
     "rn-fetch-blob": "*"
   },
   "dependencies": {

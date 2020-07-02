@@ -51,7 +51,8 @@
     "react-native-gesture-handler": "*",
     "react-native-linear-gradient": "*",
     "react-native-modal-datetime-picker": "*",
-    "react-native-svg": "*"
+    "react-native-svg": "*",
+    "react-navigation": "*"
   },
   "dependencies": {
     "@react-native-community/blur": "^3.6.0",

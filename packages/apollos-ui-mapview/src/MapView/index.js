@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import RNMapView from 'react-native-maps';
-import { Animated, Dimensions, Platform, PixelRatio } from 'react-native';
-import { SafeAreaView } from 'react-navigation';
+import {
+  Animated,
+  Dimensions,
+  Platform,
+  PixelRatio,
+  SafeAreaView,
+} from 'react-native';
 import { debounce, isNil } from 'lodash';
 
 import {

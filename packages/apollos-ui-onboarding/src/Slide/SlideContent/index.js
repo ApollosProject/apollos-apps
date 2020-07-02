@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, SafeAreaView } from 'react-native';
 import {
   styled,
   withTheme,
@@ -9,8 +9,6 @@ import {
   withIsLoading,
 } from '@apollosproject/ui-kit';
 import PropTypes from 'prop-types';
-
-import { SafeAreaView } from 'react-navigation';
 
 const IconWrapper = styled(({ theme }) => ({
   paddingBottom: theme.sizing.baseUnit, // wrapper is used to padd placeholder as well.
@@ -58,7 +56,7 @@ const SlideContent = withIsLoading(
     }
 
     return (
-      <Wrapper forceInset={{ bottom: 'always' }} {...props}>
+      <Wrapper {...props}>
         <View>
           {icon ? (
             <IconWrapper>

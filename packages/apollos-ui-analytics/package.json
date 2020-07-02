@@ -38,8 +38,7 @@
     "apollo-client": "*",
     "react": "*",
     "react-apollo": "*",
-    "react-native": "*",
-    "react-navigation": "*"
+    "react-native": "*"
   },
   "dependencies": {
     "graphql-tag": "2.9.2",

@@ -46,8 +46,7 @@
     "react-native-linear-gradient": "*",
     "react-native-music-control": "*",
     "react-native-video": "*",
-    "react-native-video-controls": "*",
-    "react-navigation": "*"
+    "react-native-video-controls": "*"
   },
   "dependencies": {
     "graphql-tag": "^2.10.1"
@@ -68,7 +67,6 @@
     "react-native-svg": "9.4.0",
     "react-native-video": "5.0.0",
     "react-native-video-controls": "2.2.3",
-    "react-navigation": "^3.11.0",
     "react-test-renderer": "16.8.6"
   },
   "publishConfig": {

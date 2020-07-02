@@ -7,11 +7,11 @@ import {
   TouchableWithoutFeedback,
   View,
   Platform,
+  SafeAreaView,
 } from 'react-native';
 import { Query, withApollo } from 'react-apollo';
 import LinearGradient from 'react-native-linear-gradient';
 import GoogleCast from 'react-native-google-cast';
-import { SafeAreaView } from 'react-navigation';
 import { get } from 'lodash';
 import { compose } from 'recompose';
 
@@ -299,10 +299,7 @@ class FullscreenControls extends PureComponent {
           style={[StyleSheet.absoluteFill, { opacity: this.fader }]}
         >
           <Background>
-            <SafeAreaView
-              style={StyleSheet.absoluteFill}
-              forceInset={{ top: 'always', bottom: 'always' }}
-            >
+            <SafeAreaView style={StyleSheet.absoluteFill}>
               <UpperControls>
                 <IconSm name="arrow-down" onPress={this.handleClose} />
                 <Titles>
