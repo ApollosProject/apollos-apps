@@ -1,8 +1,23 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, useEffect } from 'react';
 import { View, StyleSheet, Animated, Dimensions } from 'react-native';
 import PropTypes from 'prop-types';
 
 import Stretchy from './Stretchy';
+
+// https://mzl.la/2LP6mjP
+// Comparison function to JSON.stringify that can handle
+// circular references and ignores internal React properties.
+const circular = () => {
+  const seen = new WeakSet();
+  return (key, value) => {
+    if (key.startsWith('_')) return undefined; // Don't compare React's internal props.
+    if (typeof value === 'object' && value !== null) {
+      if (seen.has(value)) return undefined;
+      seen.add(value);
+    }
+    return value;
+  };
+};
 
 class StretchyView extends PureComponent {
   static propTypes = {
@@ -31,7 +46,10 @@ class StretchyView extends PureComponent {
 
   handleStretchyLayout = ({ stretchyKey, ...props }) => {
     this.setState(({ stretchies }) => ({
-      stretchies: { ...stretchies, [stretchyKey]: props },
+      stretchies: {
+        ...stretchies,
+        [stretchyKey]: { ...(stretchies[stretchyKey] || {}), ...props },
+      },
     }));
   };
 
@@ -42,27 +60,43 @@ class StretchyView extends PureComponent {
     background = false,
     style,
     ...otherProps
-  }) => (
-    <Animated.View
-      onLayout={({ nativeEvent: { layout } }) =>
+  }) => {
+    const childrenAsComparableString = JSON.stringify(children, circular());
+
+    // our linter isn't smart enough to detect that this is a functional component
+    useEffect(() => { // eslint-disable-line
+      if (this.state.stretchies[stretchyKey])
         this.handleStretchyLayout({
           stretchyKey,
           stretchOn,
           children,
           style,
           ...otherProps,
-          ...layout,
-        })
-      }
-      style={[
-        { opacity: this.getStretchyPortalOpacity(stretchyKey) },
-        background ? StyleSheet.absoluteFill : null,
-        style,
-      ]}
-    >
-      {children}
-    </Animated.View>
-  );
+        });
+    }, [childrenAsComparableString]);
+
+    return (
+      <Animated.View
+        onLayout={({ nativeEvent: { layout } }) =>
+          this.handleStretchyLayout({
+            stretchyKey,
+            stretchOn,
+            children,
+            style,
+            ...otherProps,
+            ...layout,
+          })
+        }
+        style={[
+          { opacity: this.getStretchyPortalOpacity(stretchyKey) },
+          background ? StyleSheet.absoluteFill : null,
+          style,
+        ]}
+      >
+        {children}
+      </Animated.View>
+    );
+  };
 
   getStretchyPortalOpacity = (key) => {
     if (!this.state.stretchies[key]) return 1;
