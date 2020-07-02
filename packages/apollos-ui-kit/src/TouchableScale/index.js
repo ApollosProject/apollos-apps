@@ -57,9 +57,9 @@ class TouchableScale extends Component {
     } = this.props;
     
 
-    const animationHandlers = props.onPress // fixes animation firing when there is no onPress function
+    const animationHandlers = onPress // fixes animation firing when there is no onPress function
       ? {
-          onPress: props.onPress,
+          onPress,
           onPressIn: this.handlePressIn,
           onPressOut: this.handlePressOut,
         }
