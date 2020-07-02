@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, ScrollView } from 'react-native';
+import { StyleSheet, ScrollView, SafeAreaView } from 'react-native';
 
 import {
   styled,
@@ -10,7 +10,6 @@ import {
   ButtonLink,
   Button,
   Icon,
-  SafeAreaView,
 } from '@apollosproject/ui-kit';
 
 import { withTrackOnPress } from '@apollosproject/ui-analytics';
@@ -22,11 +21,6 @@ const PrimaryButton = styled({}, 'Onboarding.Slide.PrimaryButton')(
 const styles = StyleSheet.create({
   contentContainer: { minHeight: '100%' },
 });
-
-const forceInset = {
-  top: 'never',
-  bottom: 'always',
-};
 
 const NavWrapper = styled(
   ({ theme }) => ({
@@ -91,7 +85,7 @@ const Slide = memo(
       </FlexedScrollView>
       {onPressPrimary || onPressSecondary ? (
         <NavWrapper vertical={false}>
-          <SafeAreaView forceInset={forceInset}>
+          <SafeAreaView>
             {onPressPrimary ? (
               <PrimaryButton
                 trackEventName={pressPrimaryEventName}
