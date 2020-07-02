@@ -55,7 +55,6 @@ class TouchableScale extends Component {
       onPress,
       ...touchableProps
     } = this.props;
-    
 
     const animationHandlers = onPress // fixes animation firing when there is no onPress function
       ? {
@@ -64,7 +63,7 @@ class TouchableScale extends Component {
           onPressOut: this.handlePressOut,
         }
       : {};
-    
+
     return (
       <TouchableWithoutFeedback {...touchableProps} {...animationHandlers}>
         <Animated.View style={[this.animatedStyle, style]}>
