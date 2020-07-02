@@ -3,7 +3,6 @@ import { ScrollView, FlatList, SafeAreaView } from 'react-native';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import ActionListItem from '../ActionList/ActionListItem';
 
-import { Item } from '../inputs/Picker';
 import ConnectedImage from '.';
 
 storiesOf('ui-kit/ConnectedImage', module)

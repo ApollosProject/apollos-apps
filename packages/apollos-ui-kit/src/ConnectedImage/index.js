@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { Animated } from 'react-native';
 import PropTypes from 'prop-types';
 import { every } from 'lodash';
