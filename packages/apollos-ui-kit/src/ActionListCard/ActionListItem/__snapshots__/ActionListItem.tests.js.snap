@@ -34,6 +34,7 @@ exports[`ActionListItem should render 1`] = `
     }
   >
     <Image
+      fadeDuration={250}
       onLoad={[Function]}
       source={
         Array [
@@ -50,7 +51,6 @@ exports[`ActionListItem should render 1`] = `
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
-          "opacity": 0,
           "width": 64,
         }
       }
@@ -133,6 +133,7 @@ exports[`ActionListItem should render a loading state 1`] = `
     }
   >
     <Image
+      fadeDuration={250}
       onLoad={[Function]}
       source={
         Array [
@@ -149,7 +150,6 @@ exports[`ActionListItem should render a loading state 1`] = `
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
-          "opacity": 0,
           "width": 64,
         }
       }
@@ -229,6 +229,7 @@ exports[`ActionListItem should render with a label 1`] = `
     }
   >
     <Image
+      fadeDuration={250}
       onLoad={[Function]}
       source={
         Array [
@@ -245,7 +246,6 @@ exports[`ActionListItem should render with a label 1`] = `
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
-          "opacity": 0,
           "width": 64,
         }
       }

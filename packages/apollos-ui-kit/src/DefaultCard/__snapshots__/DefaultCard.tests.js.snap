@@ -37,6 +37,7 @@ exports[`DefaultCard should render a loading state with isLoading 1`] = `
       }
     >
       <Image
+        fadeDuration={250}
         onLoad={[Function]}
         source={
           Array [
@@ -50,7 +51,6 @@ exports[`DefaultCard should render a loading state with isLoading 1`] = `
           Object {
             "aspectRatio": 1.2,
             "backgroundColor": "#A5A5A5",
-            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
@@ -192,6 +192,7 @@ exports[`DefaultCard should render at the images natural aspect ratio (between m
       }
     >
       <Image
+        fadeDuration={250}
         onLoad={[Function]}
         source={
           Array [
@@ -205,7 +206,6 @@ exports[`DefaultCard should render at the images natural aspect ratio (between m
           Object {
             "aspectRatio": 1.2,
             "backgroundColor": "#A5A5A5",
-            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
@@ -313,6 +313,7 @@ exports[`DefaultCard should render at the maxAspectRatio bound (wider than tall)
       }
     >
       <Image
+        fadeDuration={250}
         onLoad={[Function]}
         source={
           Array [
@@ -326,7 +327,6 @@ exports[`DefaultCard should render at the maxAspectRatio bound (wider than tall)
           Object {
             "aspectRatio": 1.2,
             "backgroundColor": "#A5A5A5",
-            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
@@ -434,6 +434,7 @@ exports[`DefaultCard should render at the minAspectRatio bound (tall-ish) 1`] = 
       }
     >
       <Image
+        fadeDuration={250}
         onLoad={[Function]}
         source={
           Array [
@@ -447,7 +448,6 @@ exports[`DefaultCard should render at the minAspectRatio bound (tall-ish) 1`] = 
           Object {
             "aspectRatio": 1.2,
             "backgroundColor": "#A5A5A5",
-            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
@@ -555,6 +555,7 @@ exports[`DefaultCard should render with a summary 1`] = `
       }
     >
       <Image
+        fadeDuration={250}
         onLoad={[Function]}
         source={
           Array [
@@ -568,7 +569,6 @@ exports[`DefaultCard should render with a summary 1`] = `
           Object {
             "aspectRatio": 1.2,
             "backgroundColor": "#A5A5A5",
-            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
@@ -692,6 +692,7 @@ exports[`DefaultCard should render with custom LabelComponent 1`] = `
       }
     >
       <Image
+        fadeDuration={250}
         onLoad={[Function]}
         source={
           Array [
@@ -705,7 +706,6 @@ exports[`DefaultCard should render with custom LabelComponent 1`] = `
           Object {
             "aspectRatio": 1.2,
             "backgroundColor": "#A5A5A5",
-            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
@@ -859,6 +859,7 @@ exports[`DefaultCard should render with custom labelText 1`] = `
       }
     >
       <Image
+        fadeDuration={250}
         onLoad={[Function]}
         source={
           Array [
@@ -872,7 +873,6 @@ exports[`DefaultCard should render with custom labelText 1`] = `
           Object {
             "aspectRatio": 1.2,
             "backgroundColor": "#A5A5A5",
-            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
@@ -1026,6 +1026,7 @@ exports[`DefaultCard should should render a like icon 1`] = `
       }
     >
       <Image
+        fadeDuration={250}
         onLoad={[Function]}
         source={
           Array [
@@ -1039,7 +1040,6 @@ exports[`DefaultCard should should render a like icon 1`] = `
           Object {
             "aspectRatio": 1.2,
             "backgroundColor": "#A5A5A5",
-            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
@@ -1273,6 +1273,7 @@ exports[`DefaultCard should should render as isLiked 1`] = `
       }
     >
       <Image
+        fadeDuration={250}
         onLoad={[Function]}
         source={
           Array [
@@ -1286,7 +1287,6 @@ exports[`DefaultCard should should render as isLiked 1`] = `
           Object {
             "aspectRatio": 1.2,
             "backgroundColor": "#A5A5A5",
-            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }

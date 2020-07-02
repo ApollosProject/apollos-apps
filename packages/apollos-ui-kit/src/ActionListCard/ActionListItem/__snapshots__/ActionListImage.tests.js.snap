@@ -2,6 +2,7 @@
 
 exports[`ActionListImage should not render with a date if it has an image 1`] = `
 <Image
+  fadeDuration={250}
   onLoad={[Function]}
   source={
     Array [
@@ -18,7 +19,6 @@ exports[`ActionListImage should not render with a date if it has an image 1`] = 
       "borderRadius": 16,
       "height": 64,
       "marginRight": 16,
-      "opacity": 0,
       "width": 64,
     }
   }
@@ -27,6 +27,7 @@ exports[`ActionListImage should not render with a date if it has an image 1`] = 
 
 exports[`ActionListImage should render 1`] = `
 <Image
+  fadeDuration={250}
   onLoad={[Function]}
   source={
     Array [
@@ -43,7 +44,6 @@ exports[`ActionListImage should render 1`] = `
       "borderRadius": 16,
       "height": 64,
       "marginRight": 16,
-      "opacity": 0,
       "width": 64,
     }
   }
@@ -52,6 +52,7 @@ exports[`ActionListImage should render 1`] = `
 
 exports[`ActionListImage should render a loading state 1`] = `
 <Image
+  fadeDuration={250}
   onLoad={[Function]}
   source={Array []}
   style={
@@ -60,7 +61,6 @@ exports[`ActionListImage should render a loading state 1`] = `
       "borderRadius": 16,
       "height": 64,
       "marginRight": 16,
-      "opacity": 1,
       "width": 64,
     }
   }

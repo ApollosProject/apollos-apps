@@ -52,6 +52,7 @@ exports[`the OverlayBackgroundImage component should render 1`] = `
         }
       >
         <Image
+          fadeDuration={250}
           onLoad={[Function]}
           source={
             Array [
@@ -67,7 +68,6 @@ exports[`the OverlayBackgroundImage component should render 1`] = `
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0,
               "position": "absolute",
               "resizeMode": "cover",
               "right": 0,
@@ -171,6 +171,7 @@ exports[`the OverlayBackgroundImage component should render with custom overlay 
         }
       >
         <Image
+          fadeDuration={250}
           onLoad={[Function]}
           source={
             Array [
@@ -186,7 +187,6 @@ exports[`the OverlayBackgroundImage component should render with custom overlay 
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0,
               "position": "absolute",
               "resizeMode": "cover",
               "right": 0,
@@ -291,6 +291,7 @@ exports[`the OverlayBackgroundImage component should render with custom size 1`]
         }
       >
         <Image
+          fadeDuration={250}
           onLoad={[Function]}
           source={
             Array [
@@ -306,7 +307,6 @@ exports[`the OverlayBackgroundImage component should render with custom size 1`]
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0,
               "position": "absolute",
               "resizeMode": "cover",
               "right": 0,

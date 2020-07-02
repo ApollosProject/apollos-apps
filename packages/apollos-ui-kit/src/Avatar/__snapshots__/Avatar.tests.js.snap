@@ -14,6 +14,7 @@ Array [
     themeSize={40}
   >
     <Image
+      fadeDuration={250}
       onLoad={[Function]}
       size="small"
       source={
@@ -31,7 +32,6 @@ Array [
           "bottom": 0,
           "height": "100%",
           "left": 0,
-          "opacity": 0,
           "position": "absolute",
           "right": 0,
           "top": 0,
@@ -54,6 +54,7 @@ Array [
     themeSize={80}
   >
     <Image
+      fadeDuration={250}
       onLoad={[Function]}
       size="medium"
       source={
@@ -71,7 +72,6 @@ Array [
           "bottom": 0,
           "height": "100%",
           "left": 0,
-          "opacity": 0,
           "position": "absolute",
           "right": 0,
           "top": 0,
@@ -94,6 +94,7 @@ Array [
     themeSize={120}
   >
     <Image
+      fadeDuration={250}
       onLoad={[Function]}
       size="large"
       source={
@@ -111,7 +112,6 @@ Array [
           "bottom": 0,
           "height": "100%",
           "left": 0,
-          "opacity": 0,
           "position": "absolute",
           "right": 0,
           "top": 0,
@@ -138,6 +138,7 @@ exports[`The Avatar component should render icon button 1`] = `
   themeSize={40}
 >
   <Image
+    fadeDuration={250}
     onLoad={[Function]}
     source={
       Array [
@@ -154,7 +155,6 @@ exports[`The Avatar component should render icon button 1`] = `
         "bottom": 0,
         "height": "100%",
         "left": 0,
-        "opacity": 0,
         "position": "absolute",
         "right": 0,
         "top": 0,
@@ -524,6 +524,7 @@ exports[`The Avatar component should render large 1`] = `
   themeSize={120}
 >
   <Image
+    fadeDuration={250}
     onLoad={[Function]}
     size="large"
     source={
@@ -541,7 +542,6 @@ exports[`The Avatar component should render large 1`] = `
         "bottom": 0,
         "height": "100%",
         "left": 0,
-        "opacity": 0,
         "position": "absolute",
         "right": 0,
         "top": 0,
@@ -566,6 +566,7 @@ exports[`The Avatar component should render medium 1`] = `
   themeSize={80}
 >
   <Image
+    fadeDuration={250}
     onLoad={[Function]}
     size="medium"
     source={
@@ -583,7 +584,6 @@ exports[`The Avatar component should render medium 1`] = `
         "bottom": 0,
         "height": "100%",
         "left": 0,
-        "opacity": 0,
         "position": "absolute",
         "right": 0,
         "top": 0,
@@ -608,6 +608,7 @@ exports[`The Avatar component should render small 1`] = `
   themeSize={40}
 >
   <Image
+    fadeDuration={250}
     onLoad={[Function]}
     size="small"
     source={
@@ -625,7 +626,6 @@ exports[`The Avatar component should render small 1`] = `
         "bottom": 0,
         "height": "100%",
         "left": 0,
-        "opacity": 0,
         "position": "absolute",
         "right": 0,
         "top": 0,
@@ -650,6 +650,7 @@ exports[`The Avatar component should render with a themeSize 1`] = `
   themeSize={80}
 >
   <Image
+    fadeDuration={250}
     onLoad={[Function]}
     source={
       Array [
@@ -666,7 +667,6 @@ exports[`The Avatar component should render with a themeSize 1`] = `
         "bottom": 0,
         "height": "100%",
         "left": 0,
-        "opacity": 0,
         "position": "absolute",
         "right": 0,
         "top": 0,

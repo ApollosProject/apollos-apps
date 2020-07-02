@@ -178,6 +178,7 @@ exports[`the Card component should render 1`] = `
       }
     >
       <Image
+        fadeDuration={250}
         onLoad={[Function]}
         source={
           Array [
@@ -192,7 +193,6 @@ exports[`the Card component should render 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }

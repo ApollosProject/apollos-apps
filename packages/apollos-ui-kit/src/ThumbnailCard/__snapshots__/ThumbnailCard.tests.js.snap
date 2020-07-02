@@ -201,6 +201,7 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
           }
         >
           <Image
+            fadeDuration={250}
             onLoad={[Function]}
             source={
               Array [
@@ -214,7 +215,6 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
             style={
               Object {
                 "backgroundColor": "#A5A5A5",
-                "opacity": 0,
                 "resizeMode": "cover",
                 "width": "100%",
               }
@@ -460,6 +460,7 @@ exports[`the ThumbnailCard component should render with a category and images 1`
           }
         >
           <Image
+            fadeDuration={250}
             onLoad={[Function]}
             source={
               Array [
@@ -473,7 +474,6 @@ exports[`the ThumbnailCard component should render with a category and images 1`
             style={
               Object {
                 "backgroundColor": "#A5A5A5",
-                "opacity": 0,
                 "resizeMode": "cover",
                 "width": "100%",
               }
@@ -677,6 +677,7 @@ exports[`the ThumbnailCard component should render with an images 1`] = `
           }
         >
           <Image
+            fadeDuration={250}
             onLoad={[Function]}
             source={
               Array [
@@ -690,7 +691,6 @@ exports[`the ThumbnailCard component should render with an images 1`] = `
             style={
               Object {
                 "backgroundColor": "#A5A5A5",
-                "opacity": 0,
                 "resizeMode": "cover",
                 "width": "100%",
               }

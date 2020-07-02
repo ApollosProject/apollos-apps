@@ -11,6 +11,7 @@ exports[`the ProgressiveImage component should render 1`] = `
 >
   <Image
     blurRadius={2}
+    fadeDuration={250}
     onLoad={[Function]}
     source={
       Array [
@@ -25,13 +26,13 @@ exports[`the ProgressiveImage component should render 1`] = `
     style={
       Object {
         "backgroundColor": "#A5A5A5",
-        "opacity": 1,
         "resizeMode": "cover",
         "width": "100%",
       }
     }
   />
   <Image
+    fadeDuration={250}
     onLoad={[Function]}
     source={
       Array [
@@ -46,7 +47,6 @@ exports[`the ProgressiveImage component should render 1`] = `
     style={
       Object {
         "backgroundColor": "#A5A5A5",
-        "opacity": 1,
         "resizeMode": "cover",
         "width": "100%",
       }

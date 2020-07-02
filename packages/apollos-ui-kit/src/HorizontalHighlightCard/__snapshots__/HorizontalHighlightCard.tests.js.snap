@@ -39,7 +39,7 @@ exports[`HorizontalHighlightCard should render 1`] = `
       }
     >
       <Image
-        forceRatio={1}
+        fadeDuration={250}
         onLoad={[Function]}
         source={
           Array [
@@ -53,7 +53,6 @@ exports[`HorizontalHighlightCard should render 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
@@ -186,7 +185,7 @@ exports[`HorizontalHighlightCard should render a loading state with isLoading 1`
       }
     >
       <Image
-        forceRatio={1}
+        fadeDuration={250}
         onLoad={[Function]}
         source={
           Array [
@@ -200,7 +199,6 @@ exports[`HorizontalHighlightCard should render a loading state with isLoading 1`
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
@@ -357,7 +355,7 @@ exports[`HorizontalHighlightCard should render with a custom actionIcon 1`] = `
       }
     >
       <Image
-        forceRatio={1}
+        fadeDuration={250}
         onLoad={[Function]}
         source={
           Array [
@@ -371,7 +369,6 @@ exports[`HorizontalHighlightCard should render with a custom actionIcon 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
@@ -627,7 +624,7 @@ exports[`HorizontalHighlightCard should render with a custom theme 1`] = `
             },
           }
         }
-        forceRatio={1}
+        fadeDuration={250}
         onLoad={[Function]}
         source={
           Array [
@@ -641,7 +638,6 @@ exports[`HorizontalHighlightCard should render with a custom theme 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
@@ -773,7 +769,7 @@ exports[`HorizontalHighlightCard should render with an action "button" 1`] = `
       }
     >
       <Image
-        forceRatio={1}
+        fadeDuration={250}
         onLoad={[Function]}
         source={
           Array [
@@ -787,7 +783,6 @@ exports[`HorizontalHighlightCard should render with an action "button" 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
@@ -1082,7 +1077,7 @@ exports[`HorizontalHighlightCard should render with custom LabelComponent 1`] = 
       }
     >
       <Image
-        forceRatio={1}
+        fadeDuration={250}
         onLoad={[Function]}
         source={
           Array [
@@ -1096,7 +1091,6 @@ exports[`HorizontalHighlightCard should render with custom LabelComponent 1`] = 
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
@@ -1281,7 +1275,7 @@ exports[`HorizontalHighlightCard should render with custom labelText 1`] = `
       }
     >
       <Image
-        forceRatio={1}
+        fadeDuration={250}
         onLoad={[Function]}
         source={
           Array [
@@ -1295,7 +1289,6 @@ exports[`HorizontalHighlightCard should render with custom labelText 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
@@ -1480,7 +1473,7 @@ exports[`HorizontalHighlightCard should should render as a like icon 1`] = `
       }
     >
       <Image
-        forceRatio={1}
+        fadeDuration={250}
         onLoad={[Function]}
         source={
           Array [
@@ -1494,7 +1487,6 @@ exports[`HorizontalHighlightCard should should render as a like icon 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
@@ -1754,7 +1746,7 @@ exports[`HorizontalHighlightCard should should render as disabled 1`] = `
     >
       <Image
         disabled={true}
-        forceRatio={1}
+        fadeDuration={250}
         onLoad={[Function]}
         source={
           Array [
@@ -1768,7 +1760,6 @@ exports[`HorizontalHighlightCard should should render as disabled 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
@@ -1900,7 +1891,7 @@ exports[`HorizontalHighlightCard should should render as isLiked 1`] = `
       }
     >
       <Image
-        forceRatio={1}
+        fadeDuration={250}
         onLoad={[Function]}
         source={
           Array [
@@ -1914,7 +1905,6 @@ exports[`HorizontalHighlightCard should should render as isLiked 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
