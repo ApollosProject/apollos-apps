@@ -38,43 +38,28 @@ exports[`HorizontalDefaultCard should render 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
+      <Image
         forceRatio={1.5}
-        onReady={false}
+        hasTitleAndSummary={false}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1.5,
             "backgroundColor": "#A5A5A5",
+            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
         }
-      >
-        <Image
-          hasTitleAndSummary={false}
-          maxAspectRatio={1.5}
-          minAspectRatio={1.5}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
       <BVLinearGradient
         colors={
           Array [
@@ -166,44 +151,28 @@ exports[`HorizontalDefaultCard should render a loading state with isLoading 1`] 
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
+      <Image
         forceRatio={2}
-        onReady={false}
+        hasTitleAndSummary={true}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 2,
             "backgroundColor": "#A5A5A5",
+            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
         }
-      >
-        <Image
-          hasTitleAndSummary={true}
-          maxAspectRatio={2}
-          minAspectRatio={2}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
       <BVLinearGradient
         colors={
           Array [
@@ -320,43 +289,28 @@ exports[`HorizontalDefaultCard should render with a summary 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
+      <Image
         forceRatio={2}
-        onReady={false}
+        hasTitleAndSummary={true}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 2,
             "backgroundColor": "#A5A5A5",
+            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
         }
-      >
-        <Image
-          hasTitleAndSummary={true}
-          maxAspectRatio={2}
-          minAspectRatio={2}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
       <BVLinearGradient
         colors={
           Array [
@@ -479,44 +433,28 @@ exports[`HorizontalDefaultCard should render with a title 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
+      <Image
         forceRatio={1.5}
-        onReady={false}
+        hasTitleAndSummary={false}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1.5,
             "backgroundColor": "#A5A5A5",
+            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
         }
-      >
-        <Image
-          hasTitleAndSummary={false}
-          maxAspectRatio={1.5}
-          minAspectRatio={1.5}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
       <BVLinearGradient
         colors={
           Array [
@@ -620,43 +558,28 @@ exports[`HorizontalDefaultCard should should render a like icon 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
+      <Image
         forceRatio={1.5}
-        onReady={false}
+        hasTitleAndSummary={false}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1.5,
             "backgroundColor": "#A5A5A5",
+            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
         }
-      >
-        <Image
-          hasTitleAndSummary={false}
-          maxAspectRatio={1.5}
-          minAspectRatio={1.5}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
       <BVLinearGradient
         colors={
           Array [
@@ -887,43 +810,28 @@ exports[`HorizontalDefaultCard should should render as isLiked 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
+      <Image
         forceRatio={1.5}
-        onReady={false}
+        hasTitleAndSummary={false}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1.5,
             "backgroundColor": "#A5A5A5",
+            "opacity": 0,
             "resizeMode": "cover",
             "width": "100%",
           }
         }
-      >
-        <Image
-          hasTitleAndSummary={false}
-          maxAspectRatio={1.5}
-          minAspectRatio={1.5}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
       <BVLinearGradient
         colors={
           Array [

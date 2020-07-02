@@ -24,9 +24,9 @@ exports[`the GradientOverlayImage component should render 1`] = `
     }
     style={
       Object {
-        "aspectRatio": 1.5,
+        "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
-        "opacity": 1,
+        "opacity": 0,
         "resizeMode": "cover",
         "width": "100%",
       }
@@ -59,9 +59,9 @@ exports[`the GradientOverlayImage component should render with an overlayColor 1
     }
     style={
       Object {
-        "aspectRatio": 1.5,
+        "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
-        "opacity": 1,
+        "opacity": 0,
         "resizeMode": "cover",
         "width": "100%",
       }
@@ -131,9 +131,9 @@ exports[`the GradientOverlayImage component should render with overlayType.featu
     }
     style={
       Object {
-        "aspectRatio": 1.5,
+        "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
-        "opacity": 1,
+        "opacity": 0,
         "resizeMode": "cover",
         "width": "100%",
       }
@@ -203,9 +203,9 @@ exports[`the GradientOverlayImage component should render with overlayType.gradi
     }
     style={
       Object {
-        "aspectRatio": 1.5,
+        "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
-        "opacity": 1,
+        "opacity": 0,
         "resizeMode": "cover",
         "width": "100%",
       }
@@ -275,9 +275,9 @@ exports[`the GradientOverlayImage component should render with overlayType.gradi
     }
     style={
       Object {
-        "aspectRatio": 1.5,
+        "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
-        "opacity": 1,
+        "opacity": 0,
         "resizeMode": "cover",
         "width": "100%",
       }
@@ -347,9 +347,9 @@ exports[`the GradientOverlayImage component should render with overlayType.high 
     }
     style={
       Object {
-        "aspectRatio": 1.5,
+        "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
-        "opacity": 1,
+        "opacity": 0,
         "resizeMode": "cover",
         "width": "100%",
       }
@@ -419,9 +419,9 @@ exports[`the GradientOverlayImage component should render with overlayType.low 1
     }
     style={
       Object {
-        "aspectRatio": 1.5,
+        "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
-        "opacity": 1,
+        "opacity": 0,
         "resizeMode": "cover",
         "width": "100%",
       }
@@ -491,9 +491,9 @@ exports[`the GradientOverlayImage component should render with overlayType.mediu
     }
     style={
       Object {
-        "aspectRatio": 1.5,
+        "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
-        "opacity": 1,
+        "opacity": 0,
         "resizeMode": "cover",
         "width": "100%",
       }

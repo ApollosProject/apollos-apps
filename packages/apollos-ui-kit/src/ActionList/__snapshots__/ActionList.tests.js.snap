@@ -44,44 +44,28 @@ exports[`ActionList should render 5 items 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -130,44 +114,28 @@ exports[`ActionList should render 5 items 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -216,44 +184,28 @@ exports[`ActionList should render 5 items 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -302,44 +254,28 @@ exports[`ActionList should render 5 items 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -388,44 +324,28 @@ exports[`ActionList should render 5 items 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -485,44 +405,28 @@ exports[`ActionList should render a loading state 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -566,44 +470,28 @@ exports[`ActionList should render a loading state 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -647,44 +535,28 @@ exports[`ActionList should render a loading state 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -728,44 +600,28 @@ exports[`ActionList should render a loading state 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -809,44 +665,28 @@ exports[`ActionList should render a loading state 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -925,44 +765,28 @@ exports[`ActionList should render items as "touchable via onPressActionItem 1`] 
             }
           }
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "",
+                  "url": "",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 16,
                 "height": 64,
                 "marginRight": 16,
+                "opacity": 0,
                 "width": 64,
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "",
-                    "url": "",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 64,
-                  "marginRight": 16,
-                  "opacity": 0,
-                  "width": 64,
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -1032,44 +856,28 @@ exports[`ActionList should render items as "touchable via onPressActionItem 1`] 
             }
           }
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "",
+                  "url": "",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 16,
                 "height": 64,
                 "marginRight": 16,
+                "opacity": 0,
                 "width": 64,
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "",
-                    "url": "",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 64,
-                  "marginRight": 16,
-                  "opacity": 0,
-                  "width": 64,
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -1139,44 +947,28 @@ exports[`ActionList should render items as "touchable via onPressActionItem 1`] 
             }
           }
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "",
+                  "url": "",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 16,
                 "height": 64,
                 "marginRight": 16,
+                "opacity": 0,
                 "width": 64,
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "",
-                    "url": "",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 64,
-                  "marginRight": 16,
-                  "opacity": 0,
-                  "width": 64,
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -1246,44 +1038,28 @@ exports[`ActionList should render items as "touchable via onPressActionItem 1`] 
             }
           }
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "",
+                  "url": "",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 16,
                 "height": 64,
                 "marginRight": 16,
+                "opacity": 0,
                 "width": 64,
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "",
-                    "url": "",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 64,
-                  "marginRight": 16,
-                  "opacity": 0,
-                  "width": 64,
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -1353,44 +1129,28 @@ exports[`ActionList should render items as "touchable via onPressActionItem 1`] 
             }
           }
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "",
+                  "url": "",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 16,
                 "height": 64,
                 "marginRight": 16,
+                "opacity": 0,
                 "width": 64,
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "",
-                    "url": "",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 64,
-                  "marginRight": 16,
-                  "opacity": 0,
-                  "width": 64,
-                }
-              }
-            />
-          </View>
+          />
           <View
             style={
               Object {
@@ -1464,44 +1224,28 @@ exports[`ActionList should render with a header 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -1550,44 +1294,28 @@ exports[`ActionList should render with a header 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -1636,44 +1364,28 @@ exports[`ActionList should render with a header 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -1722,44 +1434,28 @@ exports[`ActionList should render with a header 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -1808,44 +1504,28 @@ exports[`ActionList should render with a header 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -1904,44 +1584,28 @@ exports[`ActionList should render with events 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -1990,44 +1654,28 @@ exports[`ActionList should render with events 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -2076,44 +1724,28 @@ exports[`ActionList should render with events 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -2162,44 +1794,28 @@ exports[`ActionList should render with events 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -2248,44 +1864,28 @@ exports[`ActionList should render with events 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -2397,44 +1997,28 @@ exports[`ActionList should render with onPressActionListButton 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -2483,44 +2067,28 @@ exports[`ActionList should render with onPressActionListButton 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -2569,44 +2137,28 @@ exports[`ActionList should render with onPressActionListButton 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -2655,44 +2207,28 @@ exports[`ActionList should render with onPressActionListButton 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -2741,44 +2277,28 @@ exports[`ActionList should render with onPressActionListButton 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+                "url": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "opacity": 0,
               "width": 64,
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                  "url": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -2865,44 +2385,28 @@ exports[`ActionList should render without a "card border" 1`] = `
       }
     }
   >
-    <View
-      animate={null}
-      customAnimate={null}
-      onReady={false}
+    <Image
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "",
+            "url": "",
+          },
+        ]
+      }
       style={
         Object {
-          "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
+          "opacity": 0,
           "width": 64,
         }
       }
-    >
-      <Image
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "",
-              "url": "",
-            },
-          ]
-        }
-        style={
-          Object {
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 64,
-            "marginRight": 16,
-            "opacity": 0,
-            "width": 64,
-          }
-        }
-      />
-    </View>
+    />
     <View
       style={
         Object {
@@ -2951,44 +2455,28 @@ exports[`ActionList should render without a "card border" 1`] = `
       }
     }
   >
-    <View
-      animate={null}
-      customAnimate={null}
-      onReady={false}
+    <Image
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "",
+            "url": "",
+          },
+        ]
+      }
       style={
         Object {
-          "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
+          "opacity": 0,
           "width": 64,
         }
       }
-    >
-      <Image
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "",
-              "url": "",
-            },
-          ]
-        }
-        style={
-          Object {
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 64,
-            "marginRight": 16,
-            "opacity": 0,
-            "width": 64,
-          }
-        }
-      />
-    </View>
+    />
     <View
       style={
         Object {
@@ -3037,44 +2525,28 @@ exports[`ActionList should render without a "card border" 1`] = `
       }
     }
   >
-    <View
-      animate={null}
-      customAnimate={null}
-      onReady={false}
+    <Image
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "",
+            "url": "",
+          },
+        ]
+      }
       style={
         Object {
-          "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
+          "opacity": 0,
           "width": 64,
         }
       }
-    >
-      <Image
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "",
-              "url": "",
-            },
-          ]
-        }
-        style={
-          Object {
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 64,
-            "marginRight": 16,
-            "opacity": 0,
-            "width": 64,
-          }
-        }
-      />
-    </View>
+    />
     <View
       style={
         Object {
@@ -3123,44 +2595,28 @@ exports[`ActionList should render without a "card border" 1`] = `
       }
     }
   >
-    <View
-      animate={null}
-      customAnimate={null}
-      onReady={false}
+    <Image
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "",
+            "url": "",
+          },
+        ]
+      }
       style={
         Object {
-          "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
+          "opacity": 0,
           "width": 64,
         }
       }
-    >
-      <Image
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "",
-              "url": "",
-            },
-          ]
-        }
-        style={
-          Object {
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 64,
-            "marginRight": 16,
-            "opacity": 0,
-            "width": 64,
-          }
-        }
-      />
-    </View>
+    />
     <View
       style={
         Object {
@@ -3209,44 +2665,28 @@ exports[`ActionList should render without a "card border" 1`] = `
       }
     }
   >
-    <View
-      animate={null}
-      customAnimate={null}
-      onReady={false}
+    <Image
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "",
+            "url": "",
+          },
+        ]
+      }
       style={
         Object {
-          "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
+          "opacity": 0,
           "width": 64,
         }
       }
-    >
-      <Image
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "",
-              "url": "",
-            },
-          ]
-        }
-        style={
-          Object {
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 64,
-            "marginRight": 16,
-            "opacity": 0,
-            "width": 64,
-          }
-        }
-      />
-    </View>
+    />
     <View
       style={
         Object {
