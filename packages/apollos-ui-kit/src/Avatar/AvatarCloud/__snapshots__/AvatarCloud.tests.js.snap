@@ -604,6 +604,7 @@ exports[`The AvatarCloud component should render as isLoading 1`] = `
   <Image
     avatarWidth="50%"
     fadeDuration={250}
+    isLoading={true}
     onLoad={[Function]}
     source={
       Array [
@@ -647,6 +648,7 @@ exports[`The AvatarCloud component should render as isLoading 1`] = `
     <Image
       blurRadius={3}
       fadeDuration={250}
+      isLoading={true}
       onLoad={[Function]}
       source={
         Array [
@@ -690,6 +692,7 @@ exports[`The AvatarCloud component should render as isLoading 1`] = `
     <Image
       blurRadius={2}
       fadeDuration={250}
+      isLoading={true}
       onLoad={[Function]}
       source={
         Array [
@@ -733,6 +736,7 @@ exports[`The AvatarCloud component should render as isLoading 1`] = `
     <Image
       blurRadius={1}
       fadeDuration={250}
+      isLoading={true}
       onLoad={[Function]}
       source={
         Array [

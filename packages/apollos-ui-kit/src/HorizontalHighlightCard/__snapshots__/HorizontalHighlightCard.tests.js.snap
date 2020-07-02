@@ -186,6 +186,7 @@ exports[`HorizontalHighlightCard should render a loading state with isLoading 1`
     >
       <Image
         fadeDuration={250}
+        isLoading={true}
         onLoad={[Function]}
         source={
           Array [

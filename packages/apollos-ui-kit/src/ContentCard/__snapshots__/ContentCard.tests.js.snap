@@ -329,6 +329,7 @@ exports[`ContentCard renders a Default Placeholder 1`] = `
     >
       <Image
         fadeDuration={250}
+        isLoading={true}
         onLoad={[Function]}
         source={Array []}
         style={
@@ -1372,6 +1373,7 @@ exports[`ContentCard renders with Default Placeholder 1`] = `
     >
       <Image
         fadeDuration={250}
+        isLoading={true}
         onLoad={[Function]}
         source={Array []}
         style={

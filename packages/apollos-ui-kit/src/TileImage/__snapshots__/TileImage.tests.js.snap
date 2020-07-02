@@ -249,6 +249,7 @@ exports[`the TileImage component should render a loading state 1`] = `
     >
       <Image
         fadeDuration={250}
+        isLoading={true}
         onLoad={[Function]}
         source={
           Array [

@@ -366,6 +366,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             >
               <Image
                 fadeDuration={250}
+                isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
@@ -571,6 +572,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             >
               <Image
                 fadeDuration={250}
+                isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
@@ -776,6 +778,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             >
               <Image
                 fadeDuration={250}
+                isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
@@ -981,6 +984,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             >
               <Image
                 fadeDuration={250}
+                isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
@@ -1186,6 +1190,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             >
               <Image
                 fadeDuration={250}
+                isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
@@ -1391,6 +1396,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             >
               <Image
                 fadeDuration={250}
+                isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
@@ -1596,6 +1602,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             >
               <Image
                 fadeDuration={250}
+                isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
@@ -1801,6 +1808,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             >
               <Image
                 fadeDuration={250}
+                isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
@@ -2006,6 +2014,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             >
               <Image
                 fadeDuration={250}
+                isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
@@ -2211,6 +2220,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
             >
               <Image
                 fadeDuration={250}
+                isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
@@ -2946,6 +2956,7 @@ exports[`The FeedView component renders empty state 1`] = `
             >
               <Image
                 fadeDuration={250}
+                isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
@@ -3151,6 +3162,7 @@ exports[`The FeedView component renders empty state 1`] = `
             >
               <Image
                 fadeDuration={250}
+                isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
@@ -3356,6 +3368,7 @@ exports[`The FeedView component renders empty state 1`] = `
             >
               <Image
                 fadeDuration={250}
+                isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
@@ -3561,6 +3574,7 @@ exports[`The FeedView component renders empty state 1`] = `
             >
               <Image
                 fadeDuration={250}
+                isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
@@ -3766,6 +3780,7 @@ exports[`The FeedView component renders empty state 1`] = `
             >
               <Image
                 fadeDuration={250}
+                isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
@@ -3971,6 +3986,7 @@ exports[`The FeedView component renders empty state 1`] = `
             >
               <Image
                 fadeDuration={250}
+                isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
@@ -4176,6 +4192,7 @@ exports[`The FeedView component renders empty state 1`] = `
             >
               <Image
                 fadeDuration={250}
+                isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
@@ -4381,6 +4398,7 @@ exports[`The FeedView component renders empty state 1`] = `
             >
               <Image
                 fadeDuration={250}
+                isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
@@ -4586,6 +4604,7 @@ exports[`The FeedView component renders empty state 1`] = `
             >
               <Image
                 fadeDuration={250}
+                isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
@@ -4791,6 +4810,7 @@ exports[`The FeedView component renders empty state 1`] = `
             >
               <Image
                 fadeDuration={250}
+                isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
