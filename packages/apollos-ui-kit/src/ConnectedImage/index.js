@@ -54,7 +54,6 @@ const ConnectedImage = ({
   source,
   ImageComponent = Animated.Image,
   maintainAspectRatio = false,
-  isLoading,
   onLoad,
   style,
   minAspectRatio,
@@ -94,7 +93,8 @@ const ConnectedImage = ({
     aspectRatioStyle.aspectRatio = forceRatio;
   }
 
-  const handleOnLoad = useRef((e) => {
+  const handleOnLoad = (e) => {
+    if (onLoad) onLoad(e);
     if (!imageInCache) {
       const {
         nativeEvent: { source: loadedSource },
@@ -102,7 +102,7 @@ const ConnectedImage = ({
       updateCache(loadedSource);
       setImageSize([loadedSource.newWidth, loadedSource.newHeight]);
     }
-  }).current;
+  };
 
   return (
     <ImageComponent
@@ -142,7 +142,6 @@ ConnectedImage.propTypes = {
   ]),
   ImageComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
   maintainAspectRatio: PropTypes.bool,
-  isLoading: PropTypes.bool,
   onLoad: PropTypes.func,
   style: PropTypes.any, // eslint-disable-line
   minAspectRatio: aspectRatioPropValidator,
