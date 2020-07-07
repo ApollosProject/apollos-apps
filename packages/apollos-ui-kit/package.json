@@ -36,6 +36,7 @@
     "modulePathIgnorePatterns": [
       "<rootDir>/node_modules/react-native-svg",
       "<rootDir>/node_modules/@storybook/react-native",
+      "<rootDir>/node_modules/apollos-ui-htmlview/react-native",
       "<rootDir>/node_modules/react-navigation"
     ],
     "setupFiles": [

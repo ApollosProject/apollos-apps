@@ -357,7 +357,7 @@ exports[`The AddPrayerScreenConnected component should accept a title 1`] = `
                         }
                       }
                     >
-                      I'm thankful for...
+                      I need prayer for...
                     </Text>
                   </View>
                 </View>
@@ -771,7 +771,7 @@ exports[`The AddPrayerScreenConnected component should create a prayer 1`] = `
                         }
                       }
                     >
-                      I'm thankful for...
+                      I need prayer for...
                     </Text>
                   </View>
                 </View>
@@ -932,54 +932,36 @@ exports[`The AddPrayerScreenConnected component should render 1`] = `
                       }
                       themeSize={80}
                     >
-                      <View
-                        animate={null}
-                        customAnimate={null}
-                        onReady={false}
+                      <Image
+                        onLoad={[Function]}
+                        size="medium"
+                        source={
+                          Array [
+                            Object {
+                              "__typename": "ImageMediaSource",
+                              "cache": "force-cache",
+                              "height": 240,
+                              "uri": "https://1234.image.com",
+                              "width": 320,
+                            },
+                          ]
+                        }
                         style={
                           Object {
-                            "aspectRatio": 1,
                             "backgroundColor": "#A5A5A5",
                             "borderRadius": 40,
                             "bottom": 0,
                             "height": "100%",
                             "left": 0,
+                            "opacity": 0,
                             "position": "absolute",
                             "right": 0,
                             "top": 0,
                             "width": "100%",
                           }
                         }
-                      >
-                        <Image
-                          onLoad={[Function]}
-                          size="medium"
-                          source={
-                            Array [
-                              Object {
-                                "__typename": "ImageMediaSource",
-                                "cache": "force-cache",
-                                "uri": "https://1234.image.com",
-                              },
-                            ]
-                          }
-                          style={
-                            Object {
-                              "backgroundColor": "#A5A5A5",
-                              "borderRadius": 40,
-                              "bottom": 0,
-                              "height": "100%",
-                              "left": 0,
-                              "opacity": 0,
-                              "position": "absolute",
-                              "right": 0,
-                              "top": 0,
-                              "width": "100%",
-                            }
-                          }
-                          themeSize={80}
-                        />
-                      </View>
+                        themeSize={80}
+                      />
                     </View>
                   </View>
                 </View>
@@ -1197,7 +1179,7 @@ exports[`The AddPrayerScreenConnected component should render 1`] = `
                         }
                       }
                     >
-                      I'm thankful for...
+                      I need prayer for...
                     </Text>
                   </View>
                 </View>
@@ -1711,7 +1693,7 @@ exports[`The AddPrayerScreenConnected component should render a custom post-add 
                         }
                       }
                     >
-                      I'm thankful for...
+                      I need prayer for...
                     </Text>
                   </View>
                 </View>
@@ -2125,7 +2107,7 @@ exports[`The AddPrayerScreenConnected component should render a custom skipText 
                         }
                       }
                     >
-                      I'm thankful for...
+                      I need prayer for...
                     </Text>
                   </View>
                 </View>
@@ -2539,7 +2521,7 @@ exports[`The AddPrayerScreenConnected component should render avatars 1`] = `
                         }
                       }
                     >
-                      I'm thankful for...
+                      I need prayer for...
                     </Text>
                   </View>
                 </View>
