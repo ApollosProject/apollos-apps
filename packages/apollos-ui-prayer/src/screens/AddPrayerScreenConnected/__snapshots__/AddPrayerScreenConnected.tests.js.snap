@@ -357,7 +357,7 @@ exports[`The AddPrayerScreenConnected component should accept a title 1`] = `
                         }
                       }
                     >
-                      I'm thankful for...
+                      I need prayer for...
                     </Text>
                   </View>
                 </View>
@@ -771,7 +771,7 @@ exports[`The AddPrayerScreenConnected component should create a prayer 1`] = `
                         }
                       }
                     >
-                      I'm thankful for...
+                      I need prayer for...
                     </Text>
                   </View>
                 </View>
@@ -1197,7 +1197,7 @@ exports[`The AddPrayerScreenConnected component should render 1`] = `
                         }
                       }
                     >
-                      I'm thankful for...
+                      I need prayer for...
                     </Text>
                   </View>
                 </View>
@@ -1711,7 +1711,7 @@ exports[`The AddPrayerScreenConnected component should render a custom post-add 
                         }
                       }
                     >
-                      I'm thankful for...
+                      I need prayer for...
                     </Text>
                   </View>
                 </View>
@@ -2125,7 +2125,7 @@ exports[`The AddPrayerScreenConnected component should render a custom skipText 
                         }
                       }
                     >
-                      I'm thankful for...
+                      I need prayer for...
                     </Text>
                   </View>
                 </View>
@@ -2539,7 +2539,7 @@ exports[`The AddPrayerScreenConnected component should render avatars 1`] = `
                         }
                       }
                     >
-                      I'm thankful for...
+                      I need prayer for...
                     </Text>
                   </View>
                 </View>

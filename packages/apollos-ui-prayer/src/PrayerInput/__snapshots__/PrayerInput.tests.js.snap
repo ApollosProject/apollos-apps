@@ -203,7 +203,7 @@ exports[`The PrayerInput component should render 1`] = `
         }
       }
     >
-      I'm thankful for...
+      I need prayer for...
     </Text>
   </View>
 </View>

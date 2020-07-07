@@ -793,7 +793,7 @@ exports[`The PrayerView component should render a loading state (isLoading) 1`] 
                         }
                       }
                     >
-                      I'm thankful for...
+                      I need prayer for...
                     </Text>
                   </View>
                 </View>

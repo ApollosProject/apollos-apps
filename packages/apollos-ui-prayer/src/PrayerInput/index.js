@@ -132,7 +132,7 @@ PrayerInput.propTypes = {
 };
 
 PrayerInput.defaultProps = {
-  prompt: "I'm thankful for...",
+  prompt: 'I need prayer for...',
   maxLength: 280,
   maxLengthWarning: 20,
 };
