@@ -60,12 +60,13 @@ export default class PrayerRequest extends RockApolloDataSource {
 
     const prayer = await this.getFromId(id);
     if (prayer.prayerCount <= 1) {
-      await Cache.set({
-        key: `prayer:hasPrayed:${id}`,
-        data: true,
-      });
       this.sendPrayingNotification(prayer);
     }
+
+    await Cache.set({
+      key: `prayer:hasPrayed:${id}`,
+      data: true,
+    });
   };
 
   sendPrayingNotification = async ({ requestedByPersonAliasId }) => {
