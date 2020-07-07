@@ -51,6 +51,7 @@
     "react-native-gesture-handler": "*",
     "react-native-linear-gradient": "*",
     "react-native-modal-datetime-picker": "*",
+    "react-native-safe-area-context": "*",
     "react-native-svg": "*"
   },
   "dependencies": {
@@ -60,7 +61,6 @@
     "moment": "^2.24.0",
     "numeral": "^2.0.6",
     "react-native-modal-datetime-picker": "8.7.1",
-    "react-native-safe-area-context": "^0.3.6",
     "react-native-tab-view": "1.0.2",
     "recompose": "^0.30.0",
     "rn-placeholder": "1.2.0"
@@ -73,6 +73,7 @@
     "react": "16.8.6",
     "react-docgen": "^4.1.0",
     "react-native": "0.60.5",
+    "react-native-safe-area-context": "^0.3.6",
     "react-native-linear-gradient": "2.5.4",
     "react-native-svg": "9.4.0",
     "react-navigation": "^3.11.0",
