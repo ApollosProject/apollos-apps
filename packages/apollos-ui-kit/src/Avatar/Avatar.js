@@ -19,18 +19,15 @@ const Container = styled(
     alignItems: 'center',
     justifyContent: 'center',
   }),
-  'ui-kit.Avatar.Container' // named override was 'Avatar'
+  'ui-kit.Avatar.Container'
 )(View);
 
 const PlaceholderIcon = compose(
-  withTheme(
-    ({ theme: { colors } = {}, themeSize }) => ({
-      fill: colors.background.inactive,
-      name: 'avatar',
-      size: themeSize * 1.09375, // this is a magic number 🧙‍♂️ of 35/33 and might be related to the default size of an icon being 32 🤷‍♂️
-    }),
-    'ui-kit.Avatar.PlaceholderIcon'
-  )
+  withTheme(({ theme: { colors } = {}, themeSize }) => ({
+    fill: colors.background.inactive,
+    name: 'avatar',
+    size: themeSize * 1.09375, // this is a magic number 🧙‍♂️ of 35/33 and might be related to the default size of an icon being 32 🤷‍♂️
+  }))
 )(Icon);
 
 const Image = styled(

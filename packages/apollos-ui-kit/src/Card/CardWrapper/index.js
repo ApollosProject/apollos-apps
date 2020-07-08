@@ -8,26 +8,23 @@ import styled from '../../styled';
 
 const StyledCard = compose(
   withIsLoading,
-  styled(
-    ({ theme, cardColor, inHorizontalList = false, forceRatio }) => ({
-      // card styles
-      backgroundColor: cardColor || theme.colors.background.paper || undefined, // bail out if no bg color
-      borderRadius: theme.sizing.baseBorderRadius,
-      ...(inHorizontalList
-        ? {
-            // provides spacing between cards also fixes android shadow needing "space" to render into
-            margin: theme.sizing.baseUnit / 2,
-            marginBottom: theme.sizing.baseUnit * 0.75,
-          }
-        : {
-            marginHorizontal: theme.sizing.baseUnit,
-            marginVertical: theme.sizing.baseUnit * 0.75,
-          }),
-      ...Platform.select(theme.shadows.default),
-      ...(forceRatio ? { aspectRatio: forceRatio } : {}),
-    }),
-    'ui-ki.CardWrapper.StyledCard'
-  )
+  styled(({ theme, cardColor, inHorizontalList = false, forceRatio }) => ({
+    // card styles
+    backgroundColor: cardColor || theme.colors.background.paper || undefined, // bail out if no bg color
+    borderRadius: theme.sizing.baseBorderRadius,
+    ...(inHorizontalList
+      ? {
+          // provides spacing between cards also fixes android shadow needing "space" to render into
+          margin: theme.sizing.baseUnit / 2,
+          marginBottom: theme.sizing.baseUnit * 0.75,
+        }
+      : {
+          marginHorizontal: theme.sizing.baseUnit,
+          marginVertical: theme.sizing.baseUnit * 0.75,
+        }),
+    ...Platform.select(theme.shadows.default),
+    ...(forceRatio ? { aspectRatio: forceRatio } : {}),
+  }))
 )(View);
 
 /*

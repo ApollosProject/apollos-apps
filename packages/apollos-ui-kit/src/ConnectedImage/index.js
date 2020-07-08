@@ -71,7 +71,7 @@ const withBackgroundColor = styled(
     backgroundColor: theme.colors.background.inactive,
   }),
   'ui-kit.ConnectedImage.withBackgroundColor'
-); // reivew
+);
 
 const aspectRatioPropValidator = (props, propName, componentName) => {
   if (props[propName] === undefined) return;
