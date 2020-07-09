@@ -6,16 +6,22 @@ import { getIsLoading } from '../isLoading';
 import styled from '../styled';
 import ConnectedImage from '../ConnectedImage';
 
-const Wrapper = styled(({ theme }) => ({
-  width: '100%',
-  backgroundColor: theme.colors.background.inactive,
-}))(View);
+const Wrapper = styled(
+  ({ theme }) => ({
+    width: '100%',
+    backgroundColor: theme.colors.background.inactive,
+  }),
+  'ui.kit.ProgressiveImage.Wrapper'
+)(View);
 
-const NoImagePlaceholder = styled(({ theme }) => ({
-  width: '100%',
-  aspectRatio: 1,
-  backgroundColor: theme.colors.background.inactive,
-}))(View);
+const NoImagePlaceholder = styled(
+  ({ theme }) => ({
+    width: '100%',
+    aspectRatio: 1,
+    backgroundColor: theme.colors.background.inactive,
+  }),
+  'ui-kit.ProgressiveImage.NoImagePlaceholder'
+)(View);
 
 const styles = StyleSheet.create({
   imageStyles: {

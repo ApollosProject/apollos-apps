@@ -13,7 +13,7 @@ export default compose(
         height: '100%',
         overflow: 'hidden',
       },
-      'SideBySideView.Right'
+      'ui-kit.SideBySideView.Right'
     )
   )
 )(View);

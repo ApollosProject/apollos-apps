@@ -14,7 +14,7 @@ const ParagraphLine = styled(
     marginVertical:
       (theme.helpers.verticalRhythm(1, 1.625) - theme.helpers.rem(1)) / 2,
   }),
-  'Placeholder.Paragraph.line'
+  'ui-kit.Placeholder.Paragraph.ParagraphLine'
 )(Line);
 
 export const Paragraph = ({

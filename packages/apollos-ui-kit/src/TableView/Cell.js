@@ -19,7 +19,7 @@ const Container = styled(
     alignItems: 'center',
     minHeight: theme.sizing.baseUnit * 2.5,
   }),
-  'TableView.Cell.Container'
+  'ui-kit.TableView.Cell.Container'
 )(View);
 
 const Cell = ({ children, ...otherProps }) => (

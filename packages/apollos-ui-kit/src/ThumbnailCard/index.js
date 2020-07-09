@@ -20,13 +20,21 @@ const enhance = compose(
   pure
 );
 
-const HorizontalLayout = styled({
-  alignItems: 'center',
-  minHeight: 110, // kind of the best middle ground for various title lengths.
-})(SideBySideView);
+const HorizontalLayout = styled(
+  {
+    alignItems: 'center',
+    minHeight: 110, // kind of the best middle ground for various title lengths.
+  },
+  'ui-kit.ThumbnailCard.HorizontalLayout'
+)(SideBySideView);
 
 const LeftColumn = compose(
-  styled({ flex: 1.66 }),
+  styled(
+    {
+      flex: 1.66,
+    },
+    'ui-kit.ThumbnailCard.LeftColumn'
+  ),
   mediaQuery(
     ({ md }) => ({ maxWidth: md }),
     styled(({ theme }) => ({
@@ -39,9 +47,12 @@ const LeftColumn = compose(
   )
 )(CardContent);
 
-const RightColumn = styled({
-  alignSelf: 'stretch',
-})(FlexedView);
+const RightColumn = styled(
+  {
+    alignSelf: 'stretch',
+  },
+  'ui-kit.ThumbnailCard.RightColumn'
+)(FlexedView);
 
 const ThumbnailCard = enhance(
   ({

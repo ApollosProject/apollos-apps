@@ -19,7 +19,7 @@ const initialLayout = {
   width: Dimensions.get('window').width,
 };
 
-const withStyles = styled({ flex: 1 }, 'TabView');
+const withStyles = styled({ flex: 1 }, 'ui-kit.TabView.withStyles');
 
 const TabView = compose(
   withStyles,

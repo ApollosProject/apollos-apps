@@ -17,7 +17,7 @@ const CardView = styled(
     height: '100%',
     aspectRatio: 1,
   }),
-  'TileImage'
+  'ui-kit.TileImage.CardView'
 )(View);
 
 const Title = styled(
@@ -29,12 +29,15 @@ const Title = styled(
     backgroundColor: theme.colors.transparent,
     color: theme.colors.lightPrimary,
   }),
-  'TileImage.Text'
+  'ui-kit.TileImage.Title'
 )(H4);
 
-const SquareGradientOverlayImage = styled({
-  aspectRatio: 1,
-})(GradientOverlayImage);
+const SquareGradientOverlayImage = styled(
+  {
+    aspectRatio: 1,
+  },
+  'ui-kit.TitleImage.SquareGradientOverlayImage'
+)(GradientOverlayImage);
 
 const enhance = compose(
   withTheme(({ theme: { colors } = {} } = {}) => ({ theme: { colors } })),
