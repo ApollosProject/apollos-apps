@@ -10,9 +10,12 @@ import styled from '../../styled';
 
 const Paragraph = compose(
   setDisplayName('Paragraph'),
-  styled(({ theme }) => ({
-    paddingBottom: theme.helpers.verticalRhythm(0.75),
-  })),
+  styled(
+    ({ theme }) => ({
+      paddingBottom: theme.helpers.verticalRhythm(0.75),
+    }),
+    'ui-kit.Typography.Paragraph'
+  ),
   withPlaceholder(ParagraphPlaceholder)
 )(View);
 
