@@ -1,12 +1,11 @@
 import { Text } from 'react-native';
 import PropTypes from 'prop-types';
-import { compose, setDisplayName, pure } from 'recompose';
+import { compose, pure } from 'recompose';
 
 import styled from '../../styled';
 import { withPlaceholder, Typography } from '../../Placeholder';
 
 const UIText = compose(
-  setDisplayName('UIText'),
   styled(
     ({ theme, bold, italic }) => ({
       fontSize: theme.helpers.rem(0.875),
@@ -16,7 +15,7 @@ const UIText = compose(
       fontWeight: bold ? '700' : null,
       color: theme.colors.text.primary,
     }),
-    'UIText'
+    'ui-kit.UIText'
   ),
   withPlaceholder(Typography, { width: '40%' }),
   pure

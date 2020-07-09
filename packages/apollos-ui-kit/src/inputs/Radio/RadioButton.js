@@ -9,14 +9,17 @@ import styled from '../../styled';
 
 import RadioButtonIndicator from './RadioButtonIndicator';
 
-const Row = styled(({ theme, underline }) => ({
-  padding: theme.sizing.baseUnit / 2,
-  borderBottomWidth: underline ? 1 : 0,
-  borderBottomColor: theme.colors.background.accent,
-  flexDirection: 'row',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-}))(View);
+const Row = styled(
+  ({ theme, underline }) => ({
+    padding: theme.sizing.baseUnit / 2,
+    borderBottomWidth: underline ? 1 : 0,
+    borderBottomColor: theme.colors.background.accent,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  }),
+  'ui-kit.inputs.Radio.RadioButton.Row'
+)(View);
 
 class RadioButton extends PureComponent {
   static propTypes = {

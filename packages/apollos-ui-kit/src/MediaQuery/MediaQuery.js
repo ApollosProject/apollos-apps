@@ -62,6 +62,9 @@ class MediaQuery extends Component {
 }
 
 export default compose(
-  withTheme(({ theme: { breakpoints } = {} } = {}) => ({ breakpoints })),
+  withTheme(
+    ({ theme: { breakpoints } = {} } = {}) => ({ breakpoints }),
+    'ui-kit.MediaQuery'
+  ),
   withWindow
 )(MediaQuery);

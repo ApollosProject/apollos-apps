@@ -7,7 +7,7 @@ const InputWrapper = styled(
     marginVertical: theme.sizing.baseUnit,
     ...(disabled ? { opacity: 0.5 } : {}),
   }),
-  'InputWrapper'
+  'ui-kit.inputs.InputWrapper'
 )(View);
 
 export default InputWrapper;

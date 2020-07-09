@@ -40,7 +40,10 @@ const SquareGradientOverlayImage = styled(
 )(GradientOverlayImage);
 
 const enhance = compose(
-  withTheme(({ theme: { colors } = {} } = {}) => ({ theme: { colors } })),
+  withTheme(
+    ({ theme: { colors } = {} } = {}) => ({ theme: { colors } }),
+    'ui-kit.TileImage.enhance'
+  ),
   pure
 );
 

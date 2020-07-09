@@ -43,7 +43,7 @@ const getStyleLiteralFromStyledInput = (
 const styled = (styleInput, fqn) =>
   compose(
     mapProps((props) => ({ ownProps: props })),
-    withTheme(({ theme }) => ({ theme })),
+    withTheme(({ theme }) => ({ theme }), 'ui-kit.styled.styled'),
     withPropsOnChange(
       // Only re-eval styles if style prop changes, or the generated style from
       // styleInput is different. Both of these checks should be exteremely cheap.

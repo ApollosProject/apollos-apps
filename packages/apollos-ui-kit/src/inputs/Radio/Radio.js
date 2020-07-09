@@ -7,10 +7,13 @@ import ErrorText from '../ErrorText';
 
 import RadioButton from './RadioButton';
 
-const ErrorWrapper = styled({
-  alignSelf: 'stretch',
-  width: '100%',
-})(View);
+const ErrorWrapper = styled(
+  {
+    alignSelf: 'stretch',
+    width: '100%',
+  },
+  'ui-kit.inputs.Radio.Radio.ErrorWrapper'
+)(View);
 
 class Radio extends Component {
   static Button = RadioButton;

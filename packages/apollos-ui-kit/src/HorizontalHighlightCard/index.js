@@ -39,10 +39,13 @@ const LikeIconPositioning = styled(
   'ui-kit.HorizontalHighlightCard.LikeIconPositioning'
 )(View);
 
-const LikeIcon = withTheme(({ theme, isLiked }) => ({
-  name: isLiked ? 'like-solid' : 'like',
-  size: theme.sizing.baseUnit * 1.5,
-}))(Icon);
+const LikeIcon = withTheme(
+  ({ theme, isLiked }) => ({
+    name: isLiked ? 'like-solid' : 'like',
+    size: theme.sizing.baseUnit * 1.5,
+  }),
+  'ui-kit.HorizontalHighlightCard.LikeIcon'
+)(Icon);
 
 const Image = withTheme(({ customTheme, theme, disabled }) => ({
   minAspectRatio: 1,

@@ -16,7 +16,10 @@ import queryMatcher from './queryMatcher';
 // ): HigherOrderComponent
 const enhancer = (getMediaQuery, ...args) =>
   compose(
-    withTheme(({ theme: { breakpoints = {} } = {} }) => ({ breakpoints })),
+    withTheme(
+      ({ theme: { breakpoints = {} } = {} }) => ({ breakpoints }),
+      'ui-kit.MediaQuery.enhancer'
+    ),
     withWindow,
     branch(({ breakpoints, window: { width, height }, ...ownProps }) => {
       const mediaQuery = getMediaQuery(

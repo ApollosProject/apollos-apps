@@ -6,12 +6,15 @@ import styled from '../styled';
 
 import ModalViewHeader from './ModalViewHeader';
 
-const Container = styled({
-  flex: null,
-  width: '100%',
-  height: '100%',
-  borderRadius: 0,
-})(BackgroundView);
+const Container = styled(
+  {
+    flex: null,
+    width: '100%',
+    height: '100%',
+    borderRadius: 0,
+  },
+  'ui-kit.ModalView.Container'
+)(BackgroundView);
 
 const ModalView = withNavigation(
   ({ children, onClose, onBack, navigation, navigationHeader, ...props }) => (
