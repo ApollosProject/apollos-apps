@@ -12,25 +12,35 @@ const Overlay = styled(StyleSheet.absoluteFillObject)(LinearGradient);
 
 const ThemedOverlay = withTheme(
   ({ theme: { overlays }, overlayColor, overlayType }) =>
-    overlays[overlayType]({ overlayColor })
+    overlays[overlayType]({ overlayColor }),
+  'ui-kit.GradientOverlayImage.ThemedOverlay'
 )(Overlay);
 
-const Container = styled(({ theme }) => ({
-  width: '100%',
-  overflow: 'hidden',
-  backgroundColor: theme.colors.background.inactive,
-}))(View);
+const Container = styled(
+  ({ theme }) => ({
+    width: '100%',
+    overflow: 'hidden',
+    backgroundColor: theme.colors.background.inactive,
+  }),
+  'ui-kit.GradientOverlayImage.Container'
+)(View);
 
-const DefaultImageComponent = styled(({ resizeMode = 'cover' }) => ({
-  width: '100%',
-  resizeMode,
-}))(ConnectedImage);
+const DefaultImageComponent = styled(
+  ({ resizeMode = 'cover' }) => ({
+    width: '100%',
+    resizeMode,
+  }),
+  'ui-kit.GradientOverlayImage.DefaultImageComponent'
+)(ConnectedImage);
 
-const NoImagePlaceholder = styled(({ theme, forceRatio }) => ({
-  width: '100%',
-  aspectRatio: forceRatio || 1,
-  backgroundColor: theme.colors.background.inactive,
-}))(View);
+const NoImagePlaceholder = styled(
+  ({ theme, forceRatio }) => ({
+    width: '100%',
+    aspectRatio: forceRatio || 1,
+    backgroundColor: theme.colors.background.inactive,
+  }),
+  'ui-kit.GradientOverlayImage.NoImagePlaceholder'
+)(View);
 
 const GradientOverlayImage = pure(
   ({

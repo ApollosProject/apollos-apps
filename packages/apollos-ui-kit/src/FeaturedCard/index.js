@@ -12,53 +12,79 @@ import Icon from '../Icon';
 import { withIsLoading } from '../isLoading';
 import { ImageSourceType } from '../ConnectedImage';
 
-const StyledCard = withTheme(({ theme }) => ({
-  cardColor: theme.colors.primary,
-}))(Card);
+const StyledCard = withTheme(
+  ({ theme }) => ({
+    cardColor: theme.colors.primary,
+  }),
+  'ui-kit.FeaturedCard.StyledCard'
+)(Card);
 
 // We have to position `LikeIcon` in a `View` rather than `LikeIcon` directly so `LikeIcon`'s loading state is positioned correctly 💥
-const LikeIconPositioning = styled(({ theme }) => ({
-  position: 'absolute',
-  top: theme.sizing.baseUnit * 1.5,
-  right: theme.sizing.baseUnit * 1.5,
-}))(View);
+const LikeIconPositioning = styled(
+  ({ theme }) => ({
+    position: 'absolute',
+    top: theme.sizing.baseUnit * 1.5,
+    right: theme.sizing.baseUnit * 1.5,
+  }),
+  'ui-kit.FeaturedCard.LikeIconPositioning'
+)(View);
 
-const LikeIcon = withTheme(({ theme, isLiked }) => ({
-  name: isLiked ? 'like-solid' : 'like',
-  size: theme.sizing.baseUnit * 1.5,
-  iconPadding: theme.sizing.baseUnit * 1.5,
-}))(Icon);
+const LikeIcon = withTheme(
+  ({ theme, isLiked }) => ({
+    name: isLiked ? 'like-solid' : 'like',
+    size: theme.sizing.baseUnit * 1.5,
+    iconPadding: theme.sizing.baseUnit * 1.5,
+  }),
+  'ui-kit.FeaturedCard.LikeIcon'
+)(Icon);
 
-const Image = withTheme(({ theme, isLoading }) => ({
-  overlayColor: isLoading ? theme.colors.lightSecondary : theme.colors.primary,
-  minAspectRatio: 1,
-  maxAspectRatio: 1,
-}))(CardImage);
+const Image = withTheme(
+  ({ theme, isLoading }) => ({
+    overlayColor: isLoading
+      ? theme.colors.lightSecondary
+      : theme.colors.primary,
+    minAspectRatio: 1,
+    maxAspectRatio: 1,
+  }),
+  'ui-kit.FeaturedCard.Image'
+)(CardImage);
 
-const Content = styled(({ theme }) => ({
-  alignItems: 'flex-start', // needed to make `Label` display as an "inline" element
-  marginTop: '-40%',
-  paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
-  paddingBottom: theme.sizing.baseUnit * 2, // TODO: refactor CardContent to have this be the default
-}))(CardContent);
+const Content = styled(
+  ({ theme }) => ({
+    alignItems: 'flex-start', // needed to make `Label` display as an "inline" element
+    marginTop: '-40%',
+    paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
+    paddingBottom: theme.sizing.baseUnit * 2, // TODO: refactor CardContent to have this be the default
+  }),
+  'ui-kit.FeaturedCard.Content'
+)(CardContent);
 
-const ActionLayout = styled(({ theme, hasSummary }) => ({
-  flexDirection: 'row',
-  /* - `center` works in all situations including 1 line summaries
-   * - `flex-end` is needed only for when we have no summary
-   */
-  alignItems: hasSummary ? 'center' : 'flex-end',
-  paddingTop: theme.sizing.baseUnit,
-}))(View);
+const ActionLayout = styled(
+  ({ theme, hasSummary }) => ({
+    flexDirection: 'row',
+    /* - `center` works in all situations including 1 line summaries
+     * - `flex-end` is needed only for when we have no summary
+     */
+    alignItems: hasSummary ? 'center' : 'flex-end',
+    paddingTop: theme.sizing.baseUnit,
+  }),
+  'ui-kit.FeaturedCard.ActionLayout'
+)(View);
 
-const FlexedActionLayoutText = styled(({ theme }) => ({
-  marginRight: theme.sizing.baseUnit, // spaces out text from `ActionIcon`. This has to live here for ActionIcon's loading state
-}))(FlexedView);
+const FlexedActionLayoutText = styled(
+  ({ theme }) => ({
+    marginRight: theme.sizing.baseUnit, // spaces out text from `ActionIcon`. This has to live here for ActionIcon's loading state
+  }),
+  'ui-kit.FeaturedCard.FlexedActionLayoutText'
+)(FlexedView);
 
-const ActionIcon = withTheme(({ theme }) => ({
-  fill: theme.colors.text.primary,
-  size: theme.sizing.baseUnit * 3,
-}))(Icon);
+const ActionIcon = withTheme(
+  ({ theme }) => ({
+    fill: theme.colors.text.primary,
+    size: theme.sizing.baseUnit * 3,
+  }),
+  'ui-kit.FeaturedCard.ActionIcon'
+)(Icon);
 
 const Label = withTheme(
   ({ customTheme, hasSummary, isLive, labelText, theme }) => ({
@@ -75,14 +101,18 @@ const Label = withTheme(
     style: {
       ...(hasSummary ? { marginBottom: theme.sizing.baseUnit } : {}),
     },
-  })
+  }),
+  'ui-kit.FeaturedCard.Label'
 )(CardLabel);
 
-const LiveIcon = withTheme(({ theme }) => ({
-  name: 'live-dot',
-  size: theme.helpers.rem(0.4375),
-  style: { marginRight: theme.sizing.baseUnit * 0.5 },
-}))(Icon);
+const LiveIcon = withTheme(
+  ({ theme }) => ({
+    name: 'live-dot',
+    size: theme.helpers.rem(0.4375),
+    style: { marginRight: theme.sizing.baseUnit * 0.5 },
+  }),
+  'ui-kit.FeaturedCard.LiveIcon'
+)(Icon);
 
 const renderLabel = (summary, LabelComponent, labelText, isLive, theme) => {
   let ComponentToRender = null;
