@@ -12,6 +12,7 @@ exports[`The ModalView/ModalViewHeader component should accept an onBack functio
       "position": "absolute",
       "top": 0,
       "width": "100%",
+      "zIndex": 999,
     }
   }
 >
@@ -258,6 +259,7 @@ exports[`The ModalView/ModalViewHeader component should accept an onClose functi
       "position": "absolute",
       "top": 0,
       "width": "100%",
+      "zIndex": 999,
     }
   }
 >
@@ -504,6 +506,7 @@ exports[`The ModalView/ModalViewHeader component should render 1`] = `
       "position": "absolute",
       "top": 0,
       "width": "100%",
+      "zIndex": 999,
     }
   }
 >
@@ -740,7 +743,6 @@ exports[`The ModalView/ModalViewHeader component should render 1`] = `
 
 exports[`The ModalView/ModalViewHeader component should render as a navigationHeader 1`] = `
 <View
-  navigationHeader={true}
   pointerEvents="box-none"
   style={
     Object {
@@ -748,9 +750,10 @@ exports[`The ModalView/ModalViewHeader component should render as a navigationHe
       "justifyContent": "space-between",
       "paddingHorizontal": 16,
       "paddingVertical": 16,
-      "position": "relative",
+      "position": "absolute",
       "top": 0,
       "width": "100%",
+      "zIndex": 999,
     }
   }
 >

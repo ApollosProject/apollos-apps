@@ -174,7 +174,7 @@ Object {
       },
     },
     "light": Object {
-      "barStyle": undefined,
+      "barStyle": "dark-content",
       "colors": Object {
         "action": Object {
           "default": "#A5A5A5",
@@ -329,7 +329,7 @@ Object {
     "low": 0.4,
     "medium": 0.5,
   },
-  "barStyle": "dark-content",
+  "barStyle": "light-content",
   "breakpoints": Object {
     "lg": 1200,
     "md": 800,
@@ -492,7 +492,7 @@ Object {
       },
     },
     "light": Object {
-      "barStyle": undefined,
+      "barStyle": "dark-content",
       "colors": Object {
         "action": Object {
           "default": "#A5A5A5",
