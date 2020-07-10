@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar } from 'react-native';
+import { StatusBar, Platform } from 'react-native';
 import Color from 'color';
 import PropTypes from 'prop-types';
 
@@ -18,26 +18,32 @@ const StyledButtonIcon = withTheme(({ theme }) => ({
   },
 }))(ButtonIcon);
 
-const HeaderWrapper = styled(({ navigationHeader }) => ({
-  position: navigationHeader ? 'relative' : 'absolute',
+const HeaderWrapper = styled({
+  position: 'absolute',
+  zIndex: 999,
   top: 0,
   width: '100%',
   flexDirection: 'row',
   justifyContent: 'space-between',
-}))(PaddedView);
+})(PaddedView);
 
-const ModalViewHeader = ({ onClose, onBack, navigationHeader }) => (
-  <HeaderWrapper pointerEvents={'box-none'} navigationHeader={navigationHeader}>
+const ModalViewHeader = ({ onClose, onBack }) => (
+  <HeaderWrapper pointerEvents={'box-none'}>
     <StatusBar hidden />
-    {onBack ? (
-      <StyledButtonIcon name={'arrow-back'} onPress={onBack} />
-    ) : (
-      <Icon name="empty" />
-    )}
-    {onClose ? (
-      <StyledButtonIcon name={'close'} onPress={onClose} />
-    ) : (
-      <Icon name="empty" />
+    {// android isn't working currently, hardware back button more reliable
+    Platform.OS === 'android' ? null : (
+      <>
+        {onBack ? (
+          <StyledButtonIcon name={'arrow-back'} onPress={onBack} />
+        ) : (
+          <Icon name="empty" />
+        )}
+        {onClose ? (
+          <StyledButtonIcon name={'close'} onPress={onClose} />
+        ) : (
+          <Icon name="empty" />
+        )}
+      </>
     )}
   </HeaderWrapper>
 );
@@ -45,7 +51,6 @@ const ModalViewHeader = ({ onClose, onBack, navigationHeader }) => (
 ModalViewHeader.propTypes = {
   onClose: PropTypes.func,
   onBack: PropTypes.func,
-  navigationHeader: PropTypes.bool,
 };
 
 export default ModalViewHeader;
