@@ -45,7 +45,6 @@ HorizontalLikedContentFeedConnected.propTypes = {
     PropTypes.object, // type check for React fragments
   ]),
   navigation: PropTypes.shape({
-    getParam: PropTypes.func,
     navigate: PropTypes.func,
   }),
 };

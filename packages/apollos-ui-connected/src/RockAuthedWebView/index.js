@@ -35,10 +35,10 @@ const GET_USER_COOKIE = gql`
   }
 `;
 
-const RockAuthedWebView = ({ url, navigation }) => {
+const RockAuthedWebView = ({ url, navigation, route }) => {
   // get the url from the navigation param or default to the url prop;
-  const uri = navigation.getParam('url', url);
-  const modal = navigation.getParam('modal', false);
+  const uri = route.params.url || url;
+  const modal = route.params.modal || false;
   return (
     <Query query={GET_USER_COOKIE}>
       {({ data, loading }) => {
@@ -62,9 +62,5 @@ const RockAuthedWebView = ({ url, navigation }) => {
 RockAuthedWebView.propTypes = {
   url: PropTypes.string,
 };
-
-RockAuthedWebView.navigationOptions = ({ navigation, navigationOptions }) => ({
-  header: navigation.getParam('modal', false) ? null : navigationOptions.header,
-});
 
 export default RockAuthedWebView;

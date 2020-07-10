@@ -116,7 +116,6 @@ static propTypes = {
    * items in the feed.
    */
   navigation: PropTypes.shape({
-    getParam: PropTypes.func,
     navigate: PropTypes.func,
   }),
 };
