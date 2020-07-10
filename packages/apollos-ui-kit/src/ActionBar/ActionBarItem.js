@@ -14,7 +14,7 @@ const ActionBarItemWrapper = styled(
     alignItems: 'center',
     justifyContent: 'center',
   }),
-  'ui-kit.ActionBarItem.ActionBarItemWrapper'
+  'ui-kit.ActionBar.ActionBarItem.ActionBarItemWrapper'
 )(View);
 
 const ActionBarItem = ({
@@ -41,8 +41,11 @@ ActionBarItem.propTypes = {
   tint: PropTypes.string,
 };
 
-export default withTheme(({ theme, ...props }) => ({
-  tint: theme.colors.action.primary,
-  size: theme.sizing.baseUnit * 1.5,
-  ...props,
-}))(ActionBarItem);
+export default withTheme(
+  ({ theme, ...props }) => ({
+    tint: theme.colors.action.primary,
+    size: theme.sizing.baseUnit * 1.5,
+    ...props,
+  }),
+  'ui-kit.ActionBar.ActionBarItem.ActionBarItem'
+)(ActionBarItem);

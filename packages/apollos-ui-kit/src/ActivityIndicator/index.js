@@ -11,7 +11,7 @@ const ActivityIndicator = styled(
     ...StyleSheet.absoluteFillObject,
     alignSelf: 'center',
   },
-  'ui-kit.ActivityIndicator.ActivityIndicator'
+  'ui-kit.ActivityIndicator'
 )(NativeActivityIndicator);
 
 export {

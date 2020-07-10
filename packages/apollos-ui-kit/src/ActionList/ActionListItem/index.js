@@ -13,14 +13,14 @@ const Label = styled(
   ({ theme }) => ({
     color: theme.colors.text.tertiary,
   }),
-  'ui-kit.ActionListItem.Label'
+  'ui-kit.ActionList.ActionListItem.Label'
 )(BodySmall);
 
 const TextContainer = styled(
   {
     justifyContent: 'center',
   },
-  'ui-kit.ActionListItem.TextContainer'
+  'ui-kit.ActionList.ActionListItem.TextContainer'
 )(FlexedView);
 
 const Cell = styled(
@@ -29,7 +29,7 @@ const Cell = styled(
     flexDirection: 'row',
     justifyContent: 'flex-start',
   }),
-  'ui-kit.ActionListItem.Cell'
+  'ui-kit.ActionList.ActionListItem.Cell'
 )(View);
 
 // eslint-disable-next-line react/prop-types

@@ -19,15 +19,18 @@ const Container = styled(
     alignItems: 'center',
     justifyContent: 'center',
   }),
-  'ui-kit.Avatar.Container'
+  'ui-kit.Avatar.Avatar.Container'
 )(View);
 
 const PlaceholderIcon = compose(
-  withTheme(({ theme: { colors } = {}, themeSize }) => ({
-    fill: colors.background.inactive,
-    name: 'avatar',
-    size: themeSize * 1.09375, // this is a magic number 🧙‍♂️ of 35/33 and might be related to the default size of an icon being 32 🤷‍♂️
-  }))
+  withTheme(
+      ({ theme: { colors } = {}, themeSize }) => ({
+      fill: colors.background.inactive,
+      name: 'avatar',
+      size: themeSize * 1.09375, // this is a magic number 🧙‍♂️ of 35/33 and might be related to the default size of an icon being 32 🤷‍♂️
+    }),
+    'ui-kit.Avatar.Avatar.PlaceholderIcon'
+  )
 )(Icon);
 
 const Image = styled(
@@ -41,7 +44,7 @@ const Image = styled(
     bottom: 0,
     borderRadius: themeSize / 2,
   }),
-  'ui-kit.Avatar.Image'
+  'ui-kit.Avatar.Avatar.Image'
 )(ConnectedImage);
 
 const StyledButtonIcon = styled(
@@ -49,7 +52,7 @@ const StyledButtonIcon = styled(
     backgroundColor: theme.colors.background.paper,
     ...Platform.select(theme.shadows.default),
   }),
-  'ui-kit.Avatar.StyledButtonIcon'
+  'ui-kit.Avatar.Avatar.StyledButtonIcon'
 )(ButtonIcon);
 
 const NotificationDot = styled(
@@ -64,7 +67,7 @@ const NotificationDot = styled(
     top: 0,
     width: avatarSize / 4,
   }),
-  'ui-kit.Avatar.NotificationDot'
+  'ui-kit.Avatar.Avatar.NotificationDot'
 )(View);
 
 const ButtonIconPositioner = styled(
@@ -73,7 +76,7 @@ const ButtonIconPositioner = styled(
     bottom: 0,
     right: 0,
   },
-  'ui-kit.Avatar.ButtonIconPositioner'
+  'ui-kit.Avatar.Avatar.ButtonIconPositioner'
 )(View);
 
 const LoadingSpinnerContainer = styled(
@@ -88,7 +91,7 @@ const LoadingSpinnerContainer = styled(
     alignItems: 'center',
     ...Platform.select(theme.shadows.default),
   }),
-  'ui-kit.Avatar.LoadingSpinnerContainer'
+  'ui-kit.Avatar.Avatar.LoadingSpinnerContainer'
 )(View);
 
 const Avatar = ({
@@ -142,8 +145,11 @@ Avatar.propTypes = {
   ...ConnectedImage.propTypes,
 };
 
-export default withTheme(({ theme, size, themeSize }) => ({
-  themeSize:
-    themeSize || get(theme.sizing.avatar, size, theme.sizing.avatar.small),
-  iconFill: theme.colors.action.primary,
-}))(Avatar);
+export default withTheme(
+  ({ theme, size, themeSize }) => ({
+    themeSize:
+      themeSize || get(theme.sizing.avatar, size, theme.sizing.avatar.small),
+    iconFill: theme.colors.action.primary,
+  }),
+  'ui.kit.Avatar.Avatar'
+)(Avatar);
