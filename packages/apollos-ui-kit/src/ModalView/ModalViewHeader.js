@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar, Platform } from 'react-native';
+import { Platform } from 'react-native';
 import Color from 'color';
 import PropTypes from 'prop-types';
 
@@ -29,7 +29,6 @@ const HeaderWrapper = styled({
 
 const ModalViewHeader = ({ onClose, onBack }) => (
   <HeaderWrapper pointerEvents={'box-none'}>
-    <StatusBar hidden />
     {// android isn't working currently, hardware back button more reliable
     Platform.OS === 'android' ? null : (
       <>
