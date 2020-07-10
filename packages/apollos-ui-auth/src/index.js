@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStackNavigator } from 'react-navigation-stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import PropTypes from 'prop-types';
 import hoistNonReactStatic from 'hoist-non-react-statics';
 
@@ -55,20 +55,40 @@ export {
   AuthProfileDetailsEntryConnected,
 };
 
-const AuthNavigator = createStackNavigator(
-  {
-    AuthSMSPhoneEntryConnected,
-    AuthSMSVerificationConnected,
-    AuthEmailEntryConnected,
-    AuthPasswordEntryConnected,
-    AuthProfileEntryConnected,
-    AuthProfileDetailsEntryConnected,
-  },
-  {
-    initialRouteName: 'AuthSMSPhoneEntryConnected',
-    headerMode: 'none',
-    navigationOptions: { header: null },
-  }
+const AuthStack = createStackNavigator();
+
+const AuthNavigator = (props) => (
+  <AuthStack.Navigator
+    initialRouteName="AuthSMSPhoneEntryConnected"
+    headerMode="none"
+    navigationOptions={{ header: null }}
+    {...props}
+  >
+    <AuthStack.Screen
+      name="AuthSMSPhoneEntryConnected"
+      component={AuthSMSPhoneEntryConnected}
+    />
+    <AuthStack.Screen
+      name="AuthSMSVerificationConnected"
+      component={AuthSMSVerificationConnected}
+    />
+    <AuthStack.Screen
+      name="AuthEmailEntryConnected"
+      component={AuthEmailEntryConnected}
+    />
+    <AuthStack.Screen
+      name="AuthPasswordEntryConnected"
+      component={AuthPasswordEntryConnected}
+    />
+    <AuthStack.Screen
+      name="AuthProfileEntryConnected"
+      component={AuthProfileEntryConnected}
+    />
+    <AuthStack.Screen
+      name="AuthProfileDetailsEntryConnected"
+      component={AuthProfileDetailsEntryConnected}
+    />
+  </AuthStack.Navigator>
 );
 
 AuthNavigator.propTypes = {

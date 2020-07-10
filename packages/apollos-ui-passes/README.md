@@ -22,7 +22,7 @@ yarn run react-native link
 
 This package exports two components:
 
-1. A plug-and-play data-connected "route" that you can add right to your `react-navigation` router:
+1. A plug-and-play data-connected "route" that you can add right to your `@react-navigation/native` router:
 
 ```
 import Passes from '@apollosproject/apollos-ui-passes`;

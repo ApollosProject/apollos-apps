@@ -11,8 +11,8 @@ jest.mock('react-native-safe-area-context', () => ({
   SafeAreaProvider: ({ children }) => children,
 }));
 
-// jest.mock('react-navigation', () => {
-//   const ActualNavigation = require.requireActual('react-navigation');
+// jest.mock('@react-navigation/native', () => {
+//   const ActualNavigation = require.requireActual('@react-navigation/native');
 //   return {
 //     ...ActualNavigation,
 //     SafeAreaView: require.requireActual('SafeAreaView'),

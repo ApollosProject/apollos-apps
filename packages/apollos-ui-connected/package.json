@@ -21,7 +21,7 @@
     "preset": "react-native",
     "collectCoverage": true,
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@apollosproject|@react-navigation|@react-native-community/async-storage))"
+      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|@react-navigation/native|@apollosproject|@@react-navigation/native|@react-native-community/async-storage))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -48,7 +48,8 @@
     "react-native-image-picker": "*",
     "react-native-inappbrowser-reborn": "*",
     "react-native-permissions": "*",
-    "react-navigation": "*"
+    "@react-navigation/native": "*",
+    "@react-navigation/compat": "*"
   },
   "dependencies": {
     "apollo-upload-client": "9.0.0",
@@ -67,7 +68,8 @@
     "react-native-inappbrowser-reborn": "3.3.4",
     "react-native-permissions": "2.0.5",
     "react-native-webview": "^7.0.0",
-    "react-navigation": "^3.11.0",
+    "@react-navigation/native": "^5.6.1",
+    "@react-navigation/compat": "^5.1.28",
     "react-test-renderer": "16.6.3",
     "waait": "1.0.2"
   },

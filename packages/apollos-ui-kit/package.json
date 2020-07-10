@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-kit",
-  "version": "1.4.3",
+  "version": "1.4.4-alpha.6",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -22,7 +22,7 @@
     "preset": "react-native",
     "collectCoverage": true,
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@react-native-community))"
+      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|@react-navigation/native|@react-native-community))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -36,7 +36,7 @@
     "modulePathIgnorePatterns": [
       "<rootDir>/node_modules/react-native-svg",
       "<rootDir>/node_modules/@storybook/react-native",
-      "<rootDir>/node_modules/react-navigation"
+      "<rootDir>/node_modules/@react-navigation/native"
     ],
     "setupFiles": [
       "./jest.setup.js"
@@ -52,7 +52,8 @@
     "react-native-linear-gradient": "*",
     "react-native-modal-datetime-picker": "*",
     "react-native-svg": "*",
-    "react-navigation": "*"
+    "@react-navigation/native": "*",
+    "react-native-safe-area-context": "*"
   },
   "dependencies": {
     "@react-native-community/blur": "^3.6.0",
@@ -61,7 +62,6 @@
     "moment": "^2.24.0",
     "numeral": "^2.0.6",
     "react-native-modal-datetime-picker": "8.7.1",
-    "react-native-safe-area-context": "^0.3.6",
     "react-native-tab-view": "1.0.2",
     "recompose": "^0.30.0",
     "rn-placeholder": "1.2.0"
@@ -74,9 +74,10 @@
     "react": "16.8.6",
     "react-docgen": "^4.1.0",
     "react-native": "0.60.5",
+    "react-native-safe-area-context": "^3.0.7",
     "react-native-linear-gradient": "2.5.4",
     "react-native-svg": "9.4.0",
-    "react-navigation": "^3.11.0",
+    "@react-navigation/native": "^5.6.1",
     "react-test-renderer": "16.8.6"
   },
   "license": "SEE LICENSE IN LICENSE.md",

@@ -7,8 +7,9 @@ import {
   TouchableWithoutFeedback,
   View,
   Platform,
-  SafeAreaView,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 import { Query, withApollo } from 'react-apollo';
 import LinearGradient from 'react-native-linear-gradient';
 import GoogleCast from 'react-native-google-cast';

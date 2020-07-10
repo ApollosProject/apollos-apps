@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import RNMapView from 'react-native-maps';
-import {
-  Animated,
-  Dimensions,
-  Platform,
-  PixelRatio,
-  SafeAreaView,
-} from 'react-native';
+import { Animated, Dimensions, Platform, PixelRatio } from 'react-native';
 import { debounce, isNil } from 'lodash';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import {
   Button,

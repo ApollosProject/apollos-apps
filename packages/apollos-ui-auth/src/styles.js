@@ -6,10 +6,10 @@ import {
   StatusBar,
   ScrollView,
   StyleSheet,
-  SafeAreaView,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 import PropTypes from 'prop-types';
-import { compose } from 'recompose';
 import {
   styled,
   Card,

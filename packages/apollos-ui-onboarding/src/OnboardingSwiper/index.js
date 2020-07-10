@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { View, SafeAreaView } from 'react-native';
+import { View } from 'react-native';
 import PropTypes from 'prop-types';
 import * as ReactIs from 'react-is';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import Swiper from 'react-native-swiper';
 import { styled } from '@apollosproject/ui-kit';

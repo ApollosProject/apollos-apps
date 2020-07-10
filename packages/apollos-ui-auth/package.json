@@ -21,7 +21,7 @@
     "preset": "react-native",
     "collectCoverage": true,
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@apollosproject|@react-navigation))"
+      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|@react-navigation/native|@apollosproject|@@react-navigation/native))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -44,8 +44,8 @@
     "react-apollo": "*",
     "react-native": "*",
     "react-native-gesture-handler": "*",
-    "react-navigation": "*",
-    "react-navigation-stack": "*"
+    "@react-navigation/native": "*",
+    "@react-navigation/stack": "*"
   },
   "dependencies": {
     "apollo-cache-inmemory": "^1.5.1",
@@ -66,8 +66,8 @@
     "react-apollo": "2.5.5",
     "react-native": "0.60.5",
     "react-native-gesture-handler": "^1.3.0",
-    "react-navigation": "^3.11.0",
-    "react-navigation-stack": "^2.8.2",
+    "@react-navigation/native": "^5.6.1",
+    "@react-navigation/stack": "^5.6.2",
     "react-test-renderer": "16.8.6",
     "waait": "^1.0.4"
   },

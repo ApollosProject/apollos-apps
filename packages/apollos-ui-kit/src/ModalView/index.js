@@ -1,5 +1,6 @@
 import React from 'react';
-import { withNavigation } from 'react-navigation';
+import { useNavigation } from '@react-navigation/native';
+import PropTypes from 'prop-types';
 
 import BackgroundView from '../BackgroundView';
 import styled from '../styled';
@@ -13,8 +14,15 @@ const Container = styled({
   borderRadius: 0,
 })(BackgroundView);
 
-const ModalView = withNavigation(
-  ({ children, onClose, onBack, navigation, navigationHeader, ...props }) => (
+const ModalView = ({
+  children,
+  onClose,
+  onBack,
+  navigationHeader,
+  ...props
+}) => {
+  const navigation = useNavigation();
+  return (
     <Container {...props}>
       {children}
       <ModalViewHeader
@@ -23,7 +31,14 @@ const ModalView = withNavigation(
         navigationHeader={navigationHeader}
       />
     </Container>
-  )
-);
+  );
+};
+
+ModalView.propTypes = {
+  children: PropTypes.any, // eslint-disable-line
+  onClose: PropTypes.func,
+  onBack: PropTypes.func,
+  navigationHeader: PropTypes.any, // eslint-disable-line
+};
 
 export { ModalView as default, ModalViewHeader };
