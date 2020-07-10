@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import { withNavigation } from '@react-navigation/compat';
 import PropTypes from 'prop-types';
 
 import {
@@ -52,6 +51,7 @@ class HorizontalLikedContentFeed extends Component {
   static propTypes = {
     navigation: PropTypes.shape({
       navigate: PropTypes.func,
+      push: PropTypes.func,
     }),
     isLoading: PropTypes.bool,
     name: PropTypes.string,
@@ -88,7 +88,7 @@ class HorizontalLikedContentFeed extends Component {
 
   render() {
     const { isLoading, name, navigation, content = [] } = this.props;
-
+    console.log({ navigation });
     return (
       <PaddedView horizontal={false}>
         <RowHeader>
@@ -120,4 +120,4 @@ class HorizontalLikedContentFeed extends Component {
   }
 }
 
-export default withNavigation(withIsLoading(HorizontalLikedContentFeed));
+export default withIsLoading(HorizontalLikedContentFeed);

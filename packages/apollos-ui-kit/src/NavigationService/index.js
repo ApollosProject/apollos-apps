@@ -1,4 +1,4 @@
-import { StackActions, NavigationActions } from '@react-navigation/native';
+import { CommonActions } from '@react-navigation/native';
 
 let _navigator;
 let _pendingActions = [];
@@ -21,44 +21,23 @@ const setTopLevelNavigator = (navigatorRef) => {
   _pendingActions = [];
 };
 
-const navigate = performWhenReady((routeName, params) => {
-  _navigator.dispatch(
-    NavigationActions.navigate({
-      routeName,
-      params,
-    })
-  );
+const navigate = performWhenReady((...args) => {
+  _navigator.navigate(...args);
 });
 
 const resetToAuth = performWhenReady(() => {
-  _navigator.dispatch(
-    StackActions.reset({
-      index: 0,
-      key: null,
-      actions: [
-        NavigationActions.navigate({
-          routeName: 'Auth',
-          action: NavigationActions.navigate({
-            routeName: 'AuthSMSPhoneEntryConnected',
-          }),
-        }),
-      ],
-    })
-  );
+  _navigator.reset({
+    index: 0,
+    routes: [
+      { name: 'Auth', params: { screen: 'AuthSMSPhoneEntryConnected' } },
+    ],
+  });
 });
 
 const resetAction = ({ navigatorName, routeName }) =>
-  StackActions.reset({
+  CommonActions.reset({
     index: 0,
-    key: null,
-    actions: [
-      NavigationActions.navigate({
-        routeName: navigatorName,
-        action: NavigationActions.navigate({
-          routeName,
-        }),
-      }),
-    ],
+    routes: [{ name: navigatorName, params: { screen: routeName } }],
   });
 
 const goBack = performWhenReady((from) => {
@@ -67,7 +46,7 @@ const goBack = performWhenReady((from) => {
     const route = _navigator.state.nav.routes.find((r) => r.routeName === from);
     if (route) ({ key } = route);
   }
-  _navigator.dispatch(NavigationActions.back({ key }));
+  _navigator.dispatch(CommonActions.back({ key }));
 });
 
 export default {
