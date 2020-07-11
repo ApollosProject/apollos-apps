@@ -7,6 +7,8 @@ import styled from '../styled';
 
 import ModalViewHeader from './ModalViewHeader';
 
+export { ModalCloseButton, ModalBackButton } from './ModalViewHeader';
+
 const Container = styled({
   flex: null,
   width: '100%',

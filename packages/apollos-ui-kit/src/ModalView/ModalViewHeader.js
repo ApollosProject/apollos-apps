@@ -1,22 +1,13 @@
 import React from 'react';
 import { Platform } from 'react-native';
-import Color from 'color';
 import PropTypes from 'prop-types';
 
-import { withTheme } from '../theme';
-import { ButtonIcon } from '../Button';
 import styled from '../styled';
 import PaddedView from '../PaddedView';
 import Icon from '../Icon';
+import { ModalBackButton, ModalCloseButton } from './ModalButtons';
 
-const StyledButtonIcon = withTheme(({ theme }) => ({
-  fill: theme.colors.white,
-  size: theme.sizing.baseUnit,
-  iconPadding: theme.sizing.baseUnit * 0.5, // TODO: decreases button tappability but gives us the desired "smaller button" look
-  style: {
-    backgroundColor: Color(theme.colors.text.primary).fade(0.3),
-  },
-}))(ButtonIcon);
+export { ModalBackButton, ModalCloseButton };
 
 const HeaderWrapper = styled({
   position: 'absolute',
@@ -32,13 +23,9 @@ const ModalViewHeader = ({ onClose, onBack }) => (
     {// android isn't working currently, hardware back button more reliable
     Platform.OS === 'android' ? null : (
       <>
-        {onBack ? (
-          <StyledButtonIcon name={'arrow-back'} onPress={onBack} />
-        ) : (
-          <Icon name="empty" />
-        )}
+        {onBack ? <ModalBackButton onPress={onBack} /> : <Icon name="empty" />}
         {onClose ? (
-          <StyledButtonIcon name={'close'} onPress={onClose} />
+          <ModalCloseButton name={'close'} onPress={onClose} />
         ) : (
           <Icon name="empty" />
         )}
