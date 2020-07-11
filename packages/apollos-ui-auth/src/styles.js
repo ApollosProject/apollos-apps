@@ -25,7 +25,6 @@ import {
   PaddedView,
   BackgroundView,
 } from '@apollosproject/ui-kit';
-import BackButton from './BackButton';
 
 const FlexedSafeAreaView = styled(
   { height: '100%' },
@@ -155,7 +154,6 @@ const RadioLabel = styled(
 
 const ProfileEntryFieldContainer = ({
   BackgroundComponent,
-  onPressBack,
   onPressNext,
   disabled,
   title,
@@ -173,7 +171,6 @@ const ProfileEntryFieldContainer = ({
     <BackgroundComponent>
       <FlexedSafeAreaView>
         <ScrollView>
-          <BackButton onPress={() => onPressBack()} />
           <PaddedView>
             <TitleText>{title}</TitleText>
             <PromptText padded>{prompt}</PromptText>
@@ -205,7 +202,6 @@ ProfileEntryFieldContainer.propTypes = {
   isLoading: PropTypes.bool,
   onPressNext: PropTypes.func, // used to navigate and/or submit the form
   BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-  onPressBack: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
 };
 

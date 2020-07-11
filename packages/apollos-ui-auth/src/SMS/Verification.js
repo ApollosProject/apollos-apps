@@ -17,7 +17,6 @@ import {
 } from '@apollosproject/ui-kit';
 
 import { FlexedSafeAreaView, TitleText, PromptText } from '../styles';
-import BackButton from '../BackButton';
 
 const Verification = ({
   confirmationTitleText,
@@ -26,7 +25,6 @@ const Verification = ({
   errors,
   isLoading,
   onPressNext,
-  onPressBack,
   setFieldValue,
   values,
   BackgroundComponent,
@@ -41,7 +39,6 @@ const Verification = ({
     <BackgroundComponent>
       <FlexedSafeAreaView>
         <ScrollView>
-          <BackButton onPress={() => onPressBack()} />
           <PaddedView vertical={false}>
             <TitleText>{confirmationTitleText}</TitleText>
             <PromptText padded>{confirmationPromptText}</PromptText>
