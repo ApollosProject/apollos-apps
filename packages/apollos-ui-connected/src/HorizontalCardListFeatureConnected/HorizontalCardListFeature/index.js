@@ -18,15 +18,21 @@ const Title = styled(
   ({ theme }) => ({
     color: theme.colors.text.tertiary,
   }),
-  'HorizontalCardListFeature.Title'
+  'ui-connected.HorizontalCardListFeatureConnected.HorizontalCardListFeature.Title'
 )(H5);
 
-const Subtitle = styled({}, 'HorizontalCardListFeature.Subtitle')(H2);
+const Subtitle = styled(
+  {},
+  'ui-connected.HorizontalCardListFeatureConnected.HorizontalCardListFeature.Subtitle'
+)(H2);
 
-const Header = styled(({ theme }) => ({
-  paddingTop: theme.sizing.baseUnit * 3,
-  paddingBottom: theme.sizing.baseUnit * 0.5,
-}))(PaddedView);
+const Header = styled(
+  ({ theme }) => ({
+    paddingTop: theme.sizing.baseUnit * 3,
+    paddingBottom: theme.sizing.baseUnit * 0.5,
+  }),
+  'ui-connected.HorizontalCardListFeatureConnected.HorizontalCardListFeature.Header'
+)(PaddedView);
 
 class HorizontalCardListFeature extends PureComponent {
   static defaultProps = {
