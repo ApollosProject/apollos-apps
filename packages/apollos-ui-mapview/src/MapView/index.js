@@ -19,9 +19,10 @@ import { MediaPlayerSpacer } from '@apollosproject/ui-media-player';
 
 import Marker from '../Marker';
 
-export const FlexedMapView = styled({ flex: 1 })(({ mapRef, ...props }) => (
-  <RNMapView ref={mapRef} {...props} />
-));
+export const FlexedMapView = styled(
+  { flex: 1 },
+  'ui-mapview.MapView.FlexedMapView'
+)(({ mapRef, ...props }) => <RNMapView ref={mapRef} {...props} />);
 
 const Footer = styled(
   {
