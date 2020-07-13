@@ -50,7 +50,7 @@ const Background = withTheme(
     ],
     locations: [0, 0.4, 0.95],
   }),
-  'ui-media.MediaPlayer.FullScreenControls.Background'
+  'ui-media.MediaPlayer.FullscreenControls.Background'
 )(LinearGradient);
 
 const UpperControls = styled(
@@ -59,7 +59,7 @@ const UpperControls = styled(
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  'ui-media.MediaPlayer.FullScreenControls.UpperControls'
+  'ui-media.MediaPlayer.FullscreenControls.UpperControls'
 )(View);
 
 const LowerControls = styled(
@@ -69,7 +69,7 @@ const LowerControls = styled(
     left: 0,
     right: 0,
   },
-  'ui-media.MediaPlayer.FullScreenControls.LowerControls'
+  'ui-media.MediaPlayer.FullscreenControls.LowerControls'
 )(PaddedView);
 
 const CastButtons = styled(
@@ -78,7 +78,7 @@ const CastButtons = styled(
     justifyContent: 'space-around',
     alignItems: 'center',
   },
-  'ui-media.MediaPlayer.FullScreenControls.CastButtons'
+  'ui-media.MediaPlayer.FullscreenControls.CastButtons'
 )(PaddedView);
 
 const PlayControls = styled(
@@ -88,12 +88,12 @@ const PlayControls = styled(
     alignItems: 'center',
     paddingBottom: theme.sizing.baseUnit * 1.5,
   }),
-  'ui-media.MediaPlayer.FullScreenControls.PlayControls'
+  'ui-media.MediaPlayer.FullscreenControls.PlayControls'
 )(PaddedView);
 
 const PlayHead = styled(
   { paddingVertical: 0 },
-  'ui-media.MediaPlayer.FullScreenControls.PlayHead'
+  'ui-media.MediaPlayer.FullscreenControls.PlayHead'
 )(PaddedView);
 
 const Titles = styled(
@@ -102,17 +102,17 @@ const Titles = styled(
     alignItems: 'center',
     paddingVertical: 0,
   },
-  'ui-media.MediaPlayer.FullScreenControls.Titles'
+  'ui-media.MediaPlayer.FullscreenControls.Titles'
 )(PaddedView);
 
 const Title = styled(
   { textAlign: 'center' },
-  'ui-media.MediaPlayer.FullScreenControls.Title'
+  'ui-media.MediaPlayer.FullscreenControls.Title'
 )(H4);
 
 const Artist = styled(
   { textAlign: 'center' },
-  'ui-media.MediaPlayer.FullScreenControls.Artist'
+  'ui-media.MediaPlayer.FullscreenControls.Artist'
 )(H6);
 
 const IconSm = withTheme(
@@ -120,7 +120,7 @@ const IconSm = withTheme(
     size: theme.sizing.baseUnit * 1.25,
     iconPadding: theme.sizing.baseUnit * 1.25,
   }),
-  'ui-media.MediaPlayer.FullScreenControls.IconSm'
+  'ui-media.MediaPlayer.FullscreenControls.IconSm'
 )(ButtonIcon);
 
 const IconMd = withTheme(
@@ -128,7 +128,7 @@ const IconMd = withTheme(
     size: theme.sizing.baseUnit * 1.875,
     iconPadding: theme.sizing.baseUnit * 0.9375,
   }),
-  'ui-media.MediaPlayer.FullScreenControls.IconMd'
+  'ui-media.MediaPlayer.FullscreenControls.IconMd'
 )(ButtonIcon);
 
 const IconLg = withTheme(
@@ -136,7 +136,7 @@ const IconLg = withTheme(
     size: theme.sizing.baseUnit * 3.125,
     iconPadding: theme.sizing.baseUnit * 0.3125,
   }),
-  'ui-media.MediaPlayer.FullScreenControls.IconLg'
+  'ui-media.MediaPlayer.FullscreenControls.IconLg'
 )(ButtonIcon);
 
 /**
