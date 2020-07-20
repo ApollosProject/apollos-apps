@@ -17,6 +17,7 @@ import { compose } from 'recompose';
 
 import {
   PaddedView,
+  FlexedView,
   withTheme,
   withThemeMixin,
   styled,
@@ -294,48 +295,47 @@ class FullscreenControls extends PureComponent {
     this.wasPlaying = mediaPlayer.isPlaying;
 
     return (
-      <TouchableWithoutFeedback onPress={this.handleControlVisibility}>
-        <Animated.View
-          style={[StyleSheet.absoluteFill, { opacity: this.fader }]}
-        >
-          <Background>
-            <SafeAreaView
-              style={StyleSheet.absoluteFill}
-              forceInset={{ top: 'always', bottom: 'always' }}
-            >
-              <UpperControls>
-                <IconSm name="arrow-down" onPress={this.handleClose} />
-                <Titles>
-                  <Title>{get(mediaPlayer, 'currentTrack.title')}</Title>
-                  <Artist>{get(mediaPlayer, 'currentTrack.artist')}</Artist>
-                </Titles>
-                <IconSm name="empty" disabled />
-              </UpperControls>
-              <LowerControls horizontal={false}>
-                <CastButtons>
-                  {Platform.OS === 'ios' &&
-                  this.props.airPlayEnabled &&
-                  !this.props.isCasting ? (
-                    <AirPlayButton />
-                  ) : null}
-                  {this.props.googleCastEnabled ? <GoogleCastButton /> : null}
-                </CastButtons>
-                <PlayHead>
-                  {// TODO can be enabled once this bug is fixed
-                  // https://github.com/react-native-google-cast/react-native-google-cast/issues/151
-                  !this.props.isCasting ? (
-                    <Seeker
-                      onScrubbing={this.handleOnScrubbing}
-                      isCasting={this.props.isCasting}
-                    />
-                  ) : null}
-                </PlayHead>
-                <ControlsConsumer>{this.renderPlayerControls}</ControlsConsumer>
-              </LowerControls>
-            </SafeAreaView>
-          </Background>
-        </Animated.View>
-      </TouchableWithoutFeedback>
+      <Animated.View style={[StyleSheet.absoluteFill, { opacity: this.fader }]}>
+        <Background>
+          <SafeAreaView
+            style={StyleSheet.absoluteFill}
+            forceInset={{ top: 'always', bottom: 'always' }}
+          >
+            <UpperControls>
+              <IconSm name="arrow-down" onPress={this.handleClose} />
+              <Titles>
+                <Title>{get(mediaPlayer, 'currentTrack.title')}</Title>
+                <Artist>{get(mediaPlayer, 'currentTrack.artist')}</Artist>
+              </Titles>
+              <IconSm name="empty" disabled />
+            </UpperControls>
+            <TouchableWithoutFeedback onPress={this.handleControlVisibility}>
+              <FlexedView />
+            </TouchableWithoutFeedback>
+            <LowerControls horizontal={false}>
+              <CastButtons>
+                {Platform.OS === 'ios' &&
+                this.props.airPlayEnabled &&
+                !this.props.isCasting ? (
+                  <AirPlayButton />
+                ) : null}
+                {this.props.googleCastEnabled ? <GoogleCastButton /> : null}
+              </CastButtons>
+              <PlayHead>
+                {// TODO can be enabled once this bug is fixed
+                // https://github.com/react-native-google-cast/react-native-google-cast/issues/151
+                !this.props.isCasting ? (
+                  <Seeker
+                    onScrubbing={this.handleOnScrubbing}
+                    isCasting={this.props.isCasting}
+                  />
+                ) : null}
+              </PlayHead>
+              <ControlsConsumer>{this.renderPlayerControls}</ControlsConsumer>
+            </LowerControls>
+          </SafeAreaView>
+        </Background>
+      </Animated.View>
     );
   };
 
