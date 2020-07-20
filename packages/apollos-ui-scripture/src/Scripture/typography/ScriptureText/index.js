@@ -23,7 +23,7 @@ const styles = styled(({ theme, bold, italic }) => {
     fontFamily: fontStack,
     color: theme.colors.text.primary,
   };
-}, 'ui-scripture.Scripture.ScriptureText.styles');
+});
 
 const ScriptureText = compose(
   setDisplayName('ScriptureText'),
