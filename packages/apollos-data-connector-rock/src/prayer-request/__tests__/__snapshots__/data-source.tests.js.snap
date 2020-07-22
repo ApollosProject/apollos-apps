@@ -1,0 +1,275 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prayer adding prayer adds anonymous prayer 1`] = `
+Object {
+  "id": 15,
+}
+`;
+
+exports[`Prayer adding prayer adds anonymous prayer 2`] = `
+Array [
+  Array [
+    "/PrayerRequests",
+    Object {
+      "AllowComments": false,
+      "Answer": "",
+      "ApprovedOnDateTime": "2020-02-19T19:00:00-05:00",
+      "CampusId": undefined,
+      "CategoryId": undefined,
+      "CreatedByPersonAliasId": 51,
+      "Email": "Email@Email.com",
+      "EnteredDateTime": "2020-02-19T19:00:00-05:00",
+      "ExpirationDate": "2020-03-04T19:00:00-05:00",
+      "FirstName": "Vincent",
+      "IsActive": true,
+      "IsApproved": true,
+      "IsPublic": false,
+      "IsUrgent": false,
+      "LastName": "Wilson",
+      "RequestedByPersonAliasId": 51,
+      "Text": "My prayer",
+    },
+  ],
+]
+`;
+
+exports[`Prayer adding prayer adds anonymous prayer 3`] = `
+Array [
+  Array [
+    "PrayerRequests/[object Object]?loadAttributes=expanded",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Prayer adding prayer adds prayer 1`] = `
+Object {
+  "id": 15,
+}
+`;
+
+exports[`Prayer adding prayer adds prayer 2`] = `
+Array [
+  Array [
+    "/PrayerRequests",
+    Object {
+      "AllowComments": false,
+      "Answer": "",
+      "ApprovedOnDateTime": "2020-02-19T19:00:00-05:00",
+      "CampusId": undefined,
+      "CategoryId": undefined,
+      "CreatedByPersonAliasId": 51,
+      "Email": "Email@Email.com",
+      "EnteredDateTime": "2020-02-19T19:00:00-05:00",
+      "ExpirationDate": "2020-03-04T19:00:00-05:00",
+      "FirstName": "Vincent",
+      "IsActive": true,
+      "IsApproved": true,
+      "IsPublic": true,
+      "IsUrgent": false,
+      "LastName": "Wilson",
+      "RequestedByPersonAliasId": 51,
+      "Text": "My prayer",
+    },
+  ],
+]
+`;
+
+exports[`Prayer adding prayer adds prayer 3`] = `
+Array [
+  Array [
+    "PrayerRequests/[object Object]?loadAttributes=expanded",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Prayer adding prayer uses nickname 1`] = `
+Object {
+  "id": 15,
+}
+`;
+
+exports[`Prayer adding prayer uses nickname 2`] = `
+Array [
+  Array [
+    "/PrayerRequests",
+    Object {
+      "AllowComments": false,
+      "Answer": "",
+      "ApprovedOnDateTime": "2020-02-19T19:00:00-05:00",
+      "CampusId": undefined,
+      "CategoryId": undefined,
+      "CreatedByPersonAliasId": 51,
+      "Email": "Email@Email.com",
+      "EnteredDateTime": "2020-02-19T19:00:00-05:00",
+      "ExpirationDate": "2020-03-04T19:00:00-05:00",
+      "FirstName": "Vinny",
+      "IsActive": true,
+      "IsApproved": true,
+      "IsPublic": false,
+      "IsUrgent": false,
+      "LastName": "Wilson",
+      "RequestedByPersonAliasId": 51,
+      "Text": "My prayer",
+    },
+  ],
+]
+`;
+
+exports[`Prayer adding prayer uses nickname 3`] = `
+Array [
+  Array [
+    "PrayerRequests/[object Object]?loadAttributes=expanded",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Prayer adding prayer uses user campus 1`] = `
+Object {
+  "id": 15,
+}
+`;
+
+exports[`Prayer adding prayer uses user campus 2`] = `
+Array [
+  Array [
+    "/PrayerRequests",
+    Object {
+      "AllowComments": false,
+      "Answer": "",
+      "ApprovedOnDateTime": "2020-02-19T19:00:00-05:00",
+      "CampusId": 1,
+      "CategoryId": undefined,
+      "CreatedByPersonAliasId": 51,
+      "Email": "Email@Email.com",
+      "EnteredDateTime": "2020-02-19T19:00:00-05:00",
+      "ExpirationDate": "2020-03-04T19:00:00-05:00",
+      "FirstName": "Vincent",
+      "IsActive": true,
+      "IsApproved": true,
+      "IsPublic": false,
+      "IsUrgent": false,
+      "LastName": "Wilson",
+      "RequestedByPersonAliasId": 51,
+      "Text": "My prayer",
+    },
+  ],
+]
+`;
+
+exports[`Prayer adding prayer uses user campus 3`] = `
+Array [
+  Array [
+    "PrayerRequests/[object Object]?loadAttributes=expanded",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Prayer flags by id 1`] = `
+Array [
+  Array [
+    "PrayerRequests/Flag/1",
+    Object {},
+  ],
+]
+`;
+
+exports[`Prayer flags by id 2`] = `
+Object {
+  "id": 1,
+}
+`;
+
+exports[`Prayer gets by id 1`] = `
+Array [
+  Array [
+    "PrayerRequests/1?loadAttributes=expanded",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Prayer gets by id 2`] = `
+Object {
+  "id": 1,
+}
+`;
+
+exports[`Prayer gets daily prayer feed 1`] = `
+Array [
+  Object {
+    "allowComments": true,
+    "answer": "",
+    "approvedByPersonAlias": null,
+    "approvedByPersonAliasId": 62,
+    "approvedOnDateTime": "2020-05-15T12:42:29.227",
+    "attributeValues": null,
+    "attributes": null,
+    "campusId": 2,
+    "category": null,
+    "categoryId": 2,
+    "createdByPersonAliasId": 62,
+    "createdDateTime": "2020-05-15T12:42:29.243",
+    "email": "hi@convan.me",
+    "enteredDateTime": "2020-05-15T12:42:29.227",
+    "expirationDate": "2020-05-29T00:00:00",
+    "firstName": "Conrad",
+    "flagCount": null,
+    "foreignGuid": null,
+    "foreignId": null,
+    "foreignKey": null,
+    "groupId": null,
+    "guid": "eb90493d-0e41-4a35-b085-3b48ac78cadf",
+    "id": 13,
+    "isActive": true,
+    "isApproved": true,
+    "isPublic": true,
+    "isUrgent": false,
+    "lastName": "VanLandingham",
+    "modifiedAuditValuesAlreadyUpdated": false,
+    "modifiedByPersonAliasId": 62,
+    "modifiedDateTime": "2020-05-15T12:42:29.243",
+    "prayerCount": null,
+    "requestedByPersonAlias": null,
+    "requestedByPersonAliasId": null,
+    "text": "Our Father, Who art in heaven, 
+Hallowed be Thy Name. 
+Thy Kingdom come. 
+Thy Will be done, 
+on earth as it is in Heaven.
+
+Give us this day our daily bread. 
+And forgive us our trespasses, 
+as we forgive those who trespass against us. 
+And lead us not into temptation, 
+but deliver us from evil. Amen.",
+  },
+]
+`;
+
+exports[`Prayer gets daily prayer feed 2`] = `
+Array [
+  Array [
+    "PrayerRequests?loadAttributes=expanded&%24filter=%28%28%28%28%28%28RequestedByPersonAliasId%20ne%2051%29%20and%20%28IsActive%20eq%20true%29%29%20and%20%28IsApproved%20eq%20true%29%29%20and%20%28IsPublic%20eq%20true%29%29%20and%20%28ExpirationDate%20gt%20datetime%272020-02-19T19%3A00%3A00-05%3A00%27%20or%20ExpirationDate%20eq%20null%29%29%20and%20%28EnteredDateTime%20gt%20datetime%272020-02-18T19%3A00%3A00-05%3A00%27%20or%20PrayerCount%20eq%20null%29%29%20and%20%28Answer%20eq%20null%20or%20Answer%20eq%20%27%27%29&%24orderby=PrayerCount%20asc%2C%20EnteredDateTime%20asc",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Prayer incremenet prayed by id 1`] = `
+Array [
+  Array [
+    "PrayerRequests/Prayed/1",
+    Object {},
+  ],
+]
+`;

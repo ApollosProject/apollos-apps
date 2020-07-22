@@ -20,8 +20,9 @@ import VideoWindow from './VideoWindow';
 import MusicControls from './MusicControls';
 import { GET_FULL_VISIBILITY_STATE } from './queries';
 import { EXIT_FULLSCREEN, GO_FULLSCREEN } from './mutations';
-import { Provider, ControlsConsumer } from './PlayheadState';
+import { Provider, ControlsConsumer, PlayheadConsumer } from './PlayheadState';
 import MediaPlayerSafeLayout from './MediaPlayerSafeLayout';
+import GoogleCastController from './GoogleCastController';
 
 const VideoSizer = styled(({ isFullscreen, isVideo, theme }) =>
   isFullscreen
@@ -53,8 +54,15 @@ class FullscreenPlayer extends PureComponent {
       PropTypes.string,
       PropTypes.func,
     ]),
+    airPlayEnabled: PropTypes.bool,
+    googleCastEnabled: PropTypes.bool,
     showAudioToggleControl: PropTypes.bool,
     showVideoToggleControl: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    airPlayEnabled: true,
+    googleCastEnabled: true,
   };
 
   // Tracks the fullscreen animation
@@ -174,7 +182,7 @@ class FullscreenPlayer extends PureComponent {
   ]);
 
   renderCover = ({ data: { mediaPlayer = {} } = {} }) => {
-    const { isFullscreen = false } = mediaPlayer;
+    const { isFullscreen = false, isCasting = false } = mediaPlayer;
 
     Animated.spring(this.fullscreen, {
       toValue: isFullscreen ? 1 : 0,
@@ -191,23 +199,38 @@ class FullscreenPlayer extends PureComponent {
           ? this.panResponder.panHandlers
           : {})}
       >
-        <VideoSizer
-          isFullscreen={isFullscreen}
-          isVideo={get(mediaPlayer, 'currentTrack.isVideo')}
-        >
-          <ControlsConsumer>
-            {(controlHandlers) => (
-              <VideoWindow
-                VideoComponent={this.props.VideoWindowComponent}
-                {...controlHandlers}
+        {this.props.googleCastEnabled ? (
+          <PlayheadConsumer>
+            {({ currentTime }) => (
+              <GoogleCastController
+                client={this.props.client}
+                playerPositionAnimation={currentTime}
               />
             )}
-          </ControlsConsumer>
-        </VideoSizer>
+          </PlayheadConsumer>
+        ) : null}
+        {!isCasting ? (
+          <VideoSizer
+            isFullscreen={isFullscreen}
+            isVideo={get(mediaPlayer, 'currentTrack.isVideo')}
+          >
+            <ControlsConsumer>
+              {(controlHandlers) => (
+                <VideoWindow
+                  VideoComponent={this.props.VideoWindowComponent}
+                  {...controlHandlers}
+                />
+              )}
+            </ControlsConsumer>
+          </VideoSizer>
+        ) : null}
         <Animated.View style={this.fullscreenControlsAnimation}>
           <FullscreenControls
             showAudioToggleControl={this.props.showAudioToggleControl}
             showVideoToggleControl={this.props.showVideoToggleControl}
+            airPlayEnabled={this.props.airPlayEnabled}
+            googleCastEnabled={this.props.googleCastEnabled}
+            isCasting={isCasting}
           />
         </Animated.View>
       </Animated.View>,

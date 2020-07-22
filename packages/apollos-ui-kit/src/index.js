@@ -1,10 +1,12 @@
 export ActionCard from './ActionCard';
+export ActionList from './ActionList';
 export ActionListCard from './ActionListCard';
 export ActivityIndicator, {
   InlineActivityIndicator,
 } from './ActivityIndicator';
 export ActionBar, { ActionBarItem } from './ActionBar';
-export Avatar, { AvatarList } from './Avatar';
+export Avatar, { AvatarList, AvatarCloud } from './Avatar';
+export BackgroundImageBlur from './BackgroundImageBlur';
 export BackgroundView from './BackgroundView';
 export Button, { ButtonLink, ButtonIcon } from './Button';
 export CampusCard from './CampusCard';
@@ -19,7 +21,7 @@ export CardTile from './CardTile';
 export CenteredView from './CenteredView';
 export ChannelLabel from './ChannelLabel';
 export Chip, { ChipList } from './Chip';
-export ConnectedImage from './ConnectedImage';
+export ConnectedImage, { ImageSourceType } from './ConnectedImage';
 export ContentCard from './ContentCard';
 export DefaultCard from './DefaultCard';
 export FeaturedCard from './FeaturedCard';
@@ -92,3 +94,4 @@ export {
 } from './typography';
 export { getIsLoading, withIsLoading } from './isLoading';
 export Providers from './Providers';
+export NavigationService from './NavigationService';

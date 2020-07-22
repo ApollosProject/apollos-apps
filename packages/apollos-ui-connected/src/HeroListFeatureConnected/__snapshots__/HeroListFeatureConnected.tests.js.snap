@@ -1,0 +1,970 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The HeroListFeatureConnected component should render 1`] = `
+Array [
+  <View
+    style={
+      Object {
+        "paddingBottom": 0,
+        "paddingHorizontal": 16,
+        "paddingTop": 48,
+        "paddingVertical": 16,
+      }
+    }
+  >
+    <Text
+      numberOfLines={1}
+      style={
+        Object {
+          "color": "#A5A5A5",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
+        }
+      }
+    >
+      Some cool list
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Black",
+          "fontSize": 24,
+          "lineHeight": 27.6,
+        }
+      }
+    >
+      Check it out
+    </Text>
+  </View>,
+  <View
+    accessible={true}
+    clickable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "transform": Array [
+          Object {
+            "scale": 1,
+          },
+        ],
+      }
+    }
+  >
+    <View
+      cardColor="#00676D"
+      style={
+        Object {
+          "backgroundColor": "#00676D",
+          "borderRadius": 16,
+          "marginHorizontal": 16,
+          "marginVertical": 12,
+          "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "borderRadius": 16,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "overflow": "hidden",
+              "width": "100%",
+            }
+          }
+        >
+          <RCTImageView
+            maxAspectRatio={1.2}
+            minAspectRatio={0.75}
+            onLoad={[Function]}
+            resizeMode="cover"
+            source={
+              Array [
+                Object {
+                  "__typename": "ImageMediaSource",
+                  "cache": "force-cache",
+                  "height": 600,
+                  "uri": "https://picsum.photos/200/200",
+                  "width": 500,
+                },
+              ]
+            }
+            style={
+              Object {
+                "aspectRatio": 0.8333333333333334,
+                "backgroundColor": "#A5A5A5",
+                "opacity": 0,
+                "overflow": "hidden",
+                "resizeMode": "cover",
+                "width": "100%",
+              }
+            }
+          />
+          <BVLinearGradient
+            colors={
+              Array [
+                1711276032,
+                2147483648,
+              ]
+            }
+            endPoint={
+              Object {
+                "x": 0,
+                "y": 1,
+              }
+            }
+            locations={
+              Array [
+                0,
+                1,
+              ]
+            }
+            overlayColor="#000000"
+            overlayType="gradient-bottom"
+            startPoint={
+              Object {
+                "x": 0,
+                "y": 0,
+              }
+            }
+            style={
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "bottom": 0,
+              "paddingBottom": 32,
+              "paddingHorizontal": 24,
+              "paddingVertical": 16,
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            bordered={false}
+            disabled={false}
+            pill={false}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": Object {
+                  "color": Array [
+                    255,
+                    255,
+                    255,
+                  ],
+                  "model": "rgb",
+                  "valpha": 0.4,
+                },
+                "borderColor": Object {
+                  "color": Array [
+                    255,
+                    255,
+                    255,
+                  ],
+                  "model": "rgb",
+                  "valpha": 0.4,
+                },
+                "borderRadius": 16,
+                "borderWidth": 0,
+                "elevation": 2,
+                "flexDirection": "row",
+                "height": 32,
+                "justifyContent": "center",
+                "marginBottom": 16,
+                "opacity": 1,
+                "overflow": "hidden",
+                "paddingHorizontal": 12,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "alignItems": "center",
+                  "color": "#FFFFFF",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "justifyContent": "center",
+                  "lineHeight": 18,
+                  "textAlign": "center",
+                }
+              }
+            >
+              What
+            </Text>
+          </View>
+          <Text
+            numberOfLines={3}
+            style={
+              Object {
+                "color": "#F8F7F4",
+                "fontFamily": "InterUI-Black",
+                "fontSize": 24,
+                "lineHeight": 27.6,
+              }
+            }
+          >
+            Boom
+          </Text>
+          <View
+            hasSummary={true}
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "paddingTop": 16,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "marginRight": 16,
+                }
+              }
+            >
+              <Text
+                bold={false}
+                italic={false}
+                numberOfLines={2}
+                style={
+                  Object {
+                    "color": "#F8F7F4",
+                    "fontFamily": "InterUI-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 26,
+                  }
+                }
+              >
+                Read
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>,
+  <View
+    cardPadding={false}
+    style={
+      Object {
+        "paddingHorizontal": 16,
+        "paddingVertical": 16,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "paddingBottom": 8,
+        }
+      }
+    >
+      <RCTImageView
+        onLoad={[Function]}
+        resizeMode="cover"
+        source={
+          Array [
+            Object {
+              "__typename": "ImageMediaSource",
+              "cache": "force-cache",
+              "height": 600,
+              "uri": "https://picsum.photos/200/200",
+              "width": 500,
+            },
+          ]
+        }
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 16,
+            "height": 64,
+            "marginRight": 16,
+            "opacity": 0,
+            "overflow": "hidden",
+            "width": 64,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Text
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Medium",
+              "fontSize": 14,
+              "lineHeight": 21,
+            }
+          }
+        >
+          Boom
+        </Text>
+        <Text
+          bold={false}
+          ellipsizeMode="tail"
+          italic={false}
+          numberOfLines={2}
+          style={
+            Object {
+              "color": "#A5A5A5",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 12,
+              "lineHeight": 18,
+            }
+          }
+        >
+          What
+        </Text>
+      </View>
+    </View>
+    <View
+      accessible={true}
+      clickable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        bordered={true}
+        disabled={false}
+        pill={false}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "borderColor": "#A5A5A5",
+            "borderRadius": 16,
+            "borderWidth": 2,
+            "flexDirection": "row",
+            "height": 48,
+            "justifyContent": "center",
+            "marginTop": 8,
+            "opacity": 1,
+            "overflow": "hidden",
+            "paddingHorizontal": 16,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#A5A5A5",
+              "fontFamily": "InterUI-Bold",
+              "fontSize": 16,
+              "lineHeight": 24,
+            }
+          }
+        >
+          Check this out
+        </Text>
+      </View>
+    </View>
+  </View>,
+]
+`;
+
+exports[`The HeroListFeatureConnected component should render a loading state when isLoading 1`] = `
+Array [
+  <View
+    style={
+      Object {
+        "paddingBottom": 0,
+        "paddingHorizontal": 16,
+        "paddingTop": 48,
+        "paddingVertical": 16,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 12,
+          "marginVertical": 3,
+          "width": "50%",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 24,
+          "marginVertical": 1.8000000000000007,
+          "width": "100%",
+        }
+      }
+    />
+  </View>,
+  <View
+    accessible={true}
+    clickable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "transform": Array [
+          Object {
+            "scale": 1,
+          },
+        ],
+      }
+    }
+  >
+    <View
+      cardColor="#00676D"
+      isLoading={true}
+      style={
+        Object {
+          "backgroundColor": "#00676D",
+          "borderRadius": 16,
+          "marginHorizontal": 16,
+          "marginVertical": 12,
+          "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "borderRadius": 16,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "overflow": "hidden",
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            animate={null}
+            customAnimate={null}
+            onReady={false}
+            style={
+              Object {
+                "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
+                "resizeMode": "cover",
+                "width": "100%",
+              }
+            }
+          >
+            <RCTImageView
+              maxAspectRatio={1.2}
+              minAspectRatio={0.75}
+              onLoad={[Function]}
+              resizeMode="cover"
+              source={Array []}
+              style={
+                Object {
+                  "aspectRatio": 1,
+                  "backgroundColor": "#A5A5A5",
+                  "opacity": 0,
+                  "overflow": "hidden",
+                  "resizeMode": "cover",
+                  "width": "100%",
+                }
+              }
+            />
+          </View>
+          <BVLinearGradient
+            colors={
+              Array [
+                1711276032,
+                2147483648,
+              ]
+            }
+            endPoint={
+              Object {
+                "x": 0,
+                "y": 1,
+              }
+            }
+            locations={
+              Array [
+                0,
+                1,
+              ]
+            }
+            overlayColor="#000000"
+            overlayType="gradient-bottom"
+            startPoint={
+              Object {
+                "x": 0,
+                "y": 0,
+              }
+            }
+            style={
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "bottom": 0,
+              "paddingBottom": 32,
+              "paddingHorizontal": 24,
+              "paddingVertical": 16,
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            hasSummary={false}
+            style={
+              Object {
+                "alignItems": "flex-end",
+                "flexDirection": "row",
+                "paddingTop": 16,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "marginRight": 16,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignSelf": "stretch",
+                    "backgroundColor": "#A5A5A5",
+                    "borderRadius": 16,
+                    "height": 24,
+                    "marginVertical": 1.8000000000000007,
+                    "width": "100%",
+                  }
+                }
+              />
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>,
+  <View
+    cardPadding={false}
+    style={
+      Object {
+        "paddingHorizontal": 16,
+        "paddingVertical": 16,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "paddingBottom": 8,
+        }
+      }
+    >
+      <View
+        animate={null}
+        customAnimate={null}
+        onReady={false}
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 16,
+            "height": 64,
+            "marginRight": 16,
+            "width": 64,
+          }
+        }
+      >
+        <RCTImageView
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+              },
+            ]
+          }
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 64,
+              "marginRight": 16,
+              "opacity": 0,
+              "overflow": "hidden",
+              "width": 64,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 14,
+              "marginVertical": 3.5,
+              "width": "60%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 12,
+              "marginVertical": 3,
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "paddingBottom": 8,
+        }
+      }
+    >
+      <View
+        animate={null}
+        customAnimate={null}
+        onReady={false}
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 16,
+            "height": 64,
+            "marginRight": 16,
+            "width": 64,
+          }
+        }
+      >
+        <RCTImageView
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+              },
+            ]
+          }
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 64,
+              "marginRight": 16,
+              "opacity": 0,
+              "overflow": "hidden",
+              "width": 64,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 14,
+              "marginVertical": 3.5,
+              "width": "60%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 12,
+              "marginVertical": 3,
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "paddingBottom": 8,
+        }
+      }
+    >
+      <View
+        animate={null}
+        customAnimate={null}
+        onReady={false}
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 16,
+            "height": 64,
+            "marginRight": 16,
+            "width": 64,
+          }
+        }
+      >
+        <RCTImageView
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+              },
+            ]
+          }
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 64,
+              "marginRight": 16,
+              "opacity": 0,
+              "overflow": "hidden",
+              "width": 64,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 14,
+              "marginVertical": 3.5,
+              "width": "60%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 12,
+              "marginVertical": 3,
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "paddingBottom": 8,
+        }
+      }
+    >
+      <View
+        animate={null}
+        customAnimate={null}
+        onReady={false}
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 16,
+            "height": 64,
+            "marginRight": 16,
+            "width": 64,
+          }
+        }
+      >
+        <RCTImageView
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+              },
+            ]
+          }
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 64,
+              "marginRight": 16,
+              "opacity": 0,
+              "overflow": "hidden",
+              "width": 64,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 14,
+              "marginVertical": 3.5,
+              "width": "60%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 12,
+              "marginVertical": 3,
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>,
+]
+`;

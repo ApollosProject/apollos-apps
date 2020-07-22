@@ -346,35 +346,15 @@ exports[`ContentItemsModel gets a percentage for a content series, based on diff
         "actions": Array [
           "COMPLETE",
         ],
-        "nodeId": "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
-      },
-    ],
-    Array [
-      Object {
-        "actions": Array [
-          "COMPLETE",
+        "nodeIds": Array [
+          "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
+          "UniversalContentItem:965b6e6d7046a885bea4e300b5c0400d",
+          "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
         ],
-        "nodeId": "UniversalContentItem:965b6e6d7046a885bea4e300b5c0400d",
-      },
-    ],
-    Array [
-      Object {
-        "actions": Array [
-          "COMPLETE",
-        ],
-        "nodeId": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
       },
     ],
   ],
   "results": Array [
-    Object {
-      "isThrow": false,
-      "value": Promise {},
-    },
-    Object {
-      "isThrow": false,
-      "value": Promise {},
-    },
     Object {
       "isThrow": false,
       "value": Promise {},
@@ -422,46 +402,18 @@ exports[`ContentItemsModel gets a percentage for a content series, based on past
         "actions": Array [
           "COMPLETE",
         ],
-        "nodeId": "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
-      },
-    ],
-    Array [
-      Object {
-        "actions": Array [
-          "COMPLETE",
+        "nodeIds": Array [
+          "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
+          "UniversalContentItem:965b6e6d7046a885bea4e300b5c0400d",
+          "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
         ],
-        "nodeId": "UniversalContentItem:965b6e6d7046a885bea4e300b5c0400d",
-      },
-    ],
-    Array [
-      Object {
-        "actions": Array [
-          "COMPLETE",
-        ],
-        "nodeId": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
       },
     ],
   ],
   "results": Array [
     Object {
       "isThrow": false,
-      "value": Array [],
-    },
-    Object {
-      "isThrow": false,
-      "value": Array [
-        Object {
-          "id": "1",
-        },
-      ],
-    },
-    Object {
-      "isThrow": false,
-      "value": Array [
-        Object {
-          "id": "1",
-        },
-      ],
+      "value": Promise {},
     },
   ],
 }
@@ -490,6 +442,12 @@ exports[`ContentItemsModel gets a percentage for a content series, even if a ser
 `;
 
 exports[`ContentItemsModel gets a percentage for a content series, even if a series has no children 2`] = `[MockFunction]`;
+
+exports[`ContentItemsModel gets an empty array fpr series a user has viewed without a user: get from ids 1`] = `Array []`;
+
+exports[`ContentItemsModel gets an empty array fpr series a user has viewed without a user: get percent complete 1`] = `Array []`;
+
+exports[`ContentItemsModel gets an empty array fpr series a user has viewed without a user: result 1`] = `Array []`;
 
 exports[`ContentItemsModel gets by id 1`] = `
 Array [
@@ -572,6 +530,36 @@ Object {
 }
 `;
 
+exports[`ContentItemsModel gets series a user has viewed: get from ids 1`] = `
+Array [
+  Array [
+    Array [
+      "2",
+    ],
+  ],
+]
+`;
+
+exports[`ContentItemsModel gets series a user has viewed: get percent complete 1`] = `
+Array [
+  Array [
+    Object {
+      "id": "1",
+    },
+  ],
+  Array [
+    Object {
+      "id": "2",
+    },
+  ],
+  Array [
+    Object {
+      "id": "3",
+    },
+  ],
+]
+`;
+
 exports[`ContentItemsModel gets the next item for a content series, based on different past interactions 1`] = `
 [MockFunction] {
   "calls": Array [
@@ -611,42 +599,18 @@ exports[`ContentItemsModel gets the next item for a content series, based on dif
         "actions": Array [
           "COMPLETE",
         ],
-        "nodeId": "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
-      },
-    ],
-    Array [
-      Object {
-        "actions": Array [
-          "COMPLETE",
+        "nodeIds": Array [
+          "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
+          "UniversalContentItem:965b6e6d7046a885bea4e300b5c0400d",
+          "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
         ],
-        "nodeId": "UniversalContentItem:965b6e6d7046a885bea4e300b5c0400d",
-      },
-    ],
-    Array [
-      Object {
-        "actions": Array [
-          "COMPLETE",
-        ],
-        "nodeId": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
       },
     ],
   ],
   "results": Array [
     Object {
       "isThrow": false,
-      "value": Array [],
-    },
-    Object {
-      "isThrow": false,
-      "value": Array [],
-    },
-    Object {
-      "isThrow": false,
-      "value": Array [
-        Object {
-          "id": "1",
-        },
-      ],
+      "value": Promise {},
     },
   ],
 }
@@ -691,18 +655,18 @@ exports[`ContentItemsModel gets the next item for a content series, based on pas
         "actions": Array [
           "COMPLETE",
         ],
-        "nodeId": "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
+        "nodeIds": Array [
+          "UniversalContentItem:4f68015ba18662a7409d1219a4ce013e",
+          "UniversalContentItem:965b6e6d7046a885bea4e300b5c0400d",
+          "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+        ],
       },
     ],
   ],
   "results": Array [
     Object {
       "isThrow": false,
-      "value": Array [
-        Object {
-          "id": "1",
-        },
-      ],
+      "value": Promise {},
     },
   ],
 }

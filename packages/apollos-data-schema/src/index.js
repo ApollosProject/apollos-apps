@@ -404,8 +404,8 @@ export const contentItemSchema = gql`
     parentChannel: ContentChannel
     theme: Theme
 
-    percentComplete: Float
-    upNext: ContentItem
+    percentComplete: Float @cacheControl(maxAge: 0)
+    upNext: ContentItem @cacheControl(maxAge: 0)
     scriptures: [Scripture]
   }
 
@@ -684,6 +684,18 @@ export const featuresSchema = gql`
   enum ACTION_FEATURE_ACTION {
     READ_CONTENT
     READ_EVENT
+    OPEN_URL
+  }
+
+  type Url implements Node {
+    url: String
+    id: ID!
+  }
+
+  type FeatureAction {
+    relatedNode: Node
+    action: ACTION_FEATURE_ACTION
+    title: String
   }
 
   type ActionListAction {
@@ -703,6 +715,18 @@ export const featuresSchema = gql`
     title: String
     subtitle: String
     actions: [ActionListAction]
+    primaryAction: FeatureAction
+  }
+
+  type HeroListFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    title: String
+    subtitle: String
+    actions: [ActionListAction]
+    heroCard: CardListItem
+    primaryAction: FeatureAction
   }
 
   type CardListItem {
@@ -713,13 +737,23 @@ export const featuresSchema = gql`
     labelText: String
     summary: String
     coverImage: ImageMedia
-    title: String
+    title(hyphenated: Boolean): String
 
     relatedNode: Node
     action: ACTION_FEATURE_ACTION
   }
 
   type VerticalCardListFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    title: String
+    subtitle: String
+    isFeatured: Boolean
+    cards: [CardListItem]
+  }
+
+  type HorizontalCardListFeature implements Feature & Node {
     id: ID!
     order: Int
 
@@ -740,6 +774,15 @@ export const featuresSchema = gql`
     order: Int
 
     scriptures: [Scripture]
+  }
+
+  type WebviewFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    linkText: String
+    title: String
+    url: String
   }
 
   extend type WeekendContentItem {
@@ -768,6 +811,33 @@ export const eventSchema = gql`
 
   extend type Campus {
     events: [Event]
+  }
+`;
+
+export const prayerSchema = gql`
+  type PrayerRequest implements Node {
+    id: ID!
+    text: String!
+    requestor: Person
+    isAnonymous: Boolean
+    isPrayed: Boolean
+  }
+
+  type PrayerListFeature implements Feature & Node {
+    id: ID!
+    order: Int
+    isCard: Boolean
+    title: String
+    subtitle: String
+    prayers: [PrayerRequest]
+  }
+
+  extend type Mutation {
+    addPrayer(text: String!, isAnonymous: Boolean): PrayerRequest
+  }
+
+  extend enum InteractionAction {
+    PRAY
   }
 `;
 

@@ -21,6 +21,10 @@ import * as types from './types';
  * For more detail on how to customize a theme, see (TODO: should be on storybook)
  */
 
+// Bar Style
+// Control the status bar appearance
+export const barStyle = 'dark-content';
+
 // Base colors.
 // These get used by theme types (see /types directory) to color
 // specific parts of the interface. For more control on how certain
@@ -110,10 +114,10 @@ export const shadows = ({ colors: themeColors }) => ({
       shadowColor: themeColors.shadows.default,
       shadowOffset: {
         width: 0,
-        height: 1,
+        height: 2,
       },
       shadowOpacity: 1,
-      shadowRadius: 6,
+      shadowRadius: 8,
     },
     android: {
       elevation: 5,

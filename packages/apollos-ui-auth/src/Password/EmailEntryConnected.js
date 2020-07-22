@@ -10,6 +10,10 @@ import Entry from '../Entry';
 class EmailEntryConnected extends Component {
   static propTypes = {
     alternateLoginText: PropTypes.string,
+    BackgroundComponent: PropTypes.oneOfType([
+      PropTypes.element,
+      PropTypes.elementType,
+    ]),
     // Custom component to be rendered. Defaults to Entry
     Component: PropTypes.oneOfType([
       PropTypes.node,
@@ -67,6 +71,8 @@ class EmailEntryConnected extends Component {
   };
 
   render() {
+    const EmailEntryComponent = this.props.Component;
+
     return (
       <LoginConsumer>
         {({ handleCheckUserExists }) => (
@@ -76,6 +82,7 @@ class EmailEntryConnected extends Component {
             onSubmit={this.handleOnSubmit(handleCheckUserExists)}
           >
             {({
+              BackgroundComponent,
               setFieldValue,
               handleSubmit,
               values,
@@ -84,7 +91,8 @@ class EmailEntryConnected extends Component {
               touched,
               errors,
             }) => (
-              <this.props.Component
+              <EmailEntryComponent
+                BackgroundComponent={BackgroundComponent}
                 disabled={isSubmitting || !isValid}
                 errors={touched.email && errors}
                 isLoading={isSubmitting}

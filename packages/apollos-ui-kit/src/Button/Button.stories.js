@@ -51,6 +51,30 @@ storiesOf('ui-kit/Buttons/Pill (default)', module)
   .add('Bordered', () => (
     <FlexedView>
       <ButtonWithMargin onPress={() => {}} title="Bordered Button" bordered />
+      <ButtonWithMargin
+        onPress={() => {}}
+        title="Default Type Bordered"
+        type="default"
+        bordered
+      />
+      <ButtonWithMargin
+        onPress={() => {}}
+        title="Primary Action Type Bordered"
+        type="primary"
+        bordered
+      />
+      <ButtonWithMargin
+        onPress={() => {}}
+        title="Secondary Action Type Bordered"
+        type="secondary"
+        bordered
+      />
+      <ButtonWithMargin
+        onPress={() => {}}
+        title="Tertiary Action Type Bordered"
+        type="tertiary"
+        bordered
+      />
     </FlexedView>
   ))
   .add('Ghost', () => (

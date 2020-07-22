@@ -4,11 +4,12 @@ import { Animated, TouchableWithoutFeedback } from 'react-native';
 
 class TouchableScale extends Component {
   static propTypes = {
-    minScale: PropTypes.number,
-    springConfig: PropTypes.shape({}),
     active: PropTypes.bool,
-    style: PropTypes.any, // eslint-disable-line
     children: PropTypes.any, // eslint-disable-line
+    minScale: PropTypes.number,
+    onPress: PropTypes.func,
+    springConfig: PropTypes.shape({}),
+    style: PropTypes.any, // eslint-disable-line
   };
 
   static defaultProps = {
@@ -18,11 +19,15 @@ class TouchableScale extends Component {
     },
   };
 
-  scale = new Animated.Value(this.props.active ? this.props.minScale : 1);
+  constructor(props) {
+    super();
 
-  animatedStyle = {
-    transform: [{ scale: this.scale }],
-  };
+    this.scale = new Animated.Value(props.active ? props.minScale : 1);
+
+    this.animatedStyle = {
+      transform: [{ scale: this.scale }],
+    };
+  }
 
   handlePressIn = () => {
     Animated.spring(this.scale, {
@@ -43,13 +48,24 @@ class TouchableScale extends Component {
   };
 
   render() {
-    const { minScale, style, children, ...touchableProps } = this.props;
+    const {
+      minScale,
+      style,
+      children,
+      onPress,
+      ...touchableProps
+    } = this.props;
+
+    const animationHandlers = onPress // fixes animation firing when there is no onPress function
+      ? {
+          onPress,
+          onPressIn: this.handlePressIn,
+          onPressOut: this.handlePressOut,
+        }
+      : {};
+
     return (
-      <TouchableWithoutFeedback
-        {...touchableProps}
-        onPressIn={this.handlePressIn}
-        onPressOut={this.handlePressOut}
-      >
+      <TouchableWithoutFeedback {...touchableProps} {...animationHandlers}>
         <Animated.View style={[this.animatedStyle, style]}>
           {children}
         </Animated.View>
