@@ -18,35 +18,50 @@ import {
 
 import HorizontalContentCardConnected from '../../HorizontalContentCardConnected';
 
-const RowHeader = styled(({ theme }) => ({
-  flexDirection: 'row',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  zIndex: 2, // UX hack to improve tapability. Positions RowHeader above StyledHorizontalTileFeed
-  paddingTop: theme.sizing.baseUnit * 0.5,
-  paddingLeft: theme.sizing.baseUnit,
-}))(View);
+const RowHeader = styled(
+  ({ theme }) => ({
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    zIndex: 2, // UX hack to improve tapability. Positions RowHeader above StyledHorizontalTileFeed
+    paddingTop: theme.sizing.baseUnit * 0.5,
+    paddingLeft: theme.sizing.baseUnit,
+  }),
+  'ui-connected.HorizontalLikedContentFeedConnected.HorizontalLikedContentFeed.RowHeader'
+)(View);
 
-const Name = styled({
-  flexGrow: 2,
-})(View);
+const Name = styled(
+  {
+    flexGrow: 2,
+  },
+  'ui-connected.HorizontalLikedContentFeedConnected.HorizontalLikedContentFeed.Name'
+)(View);
 
-const ButtonLinkSpacing = styled(({ theme }) => ({
-  flexDirection: 'row', // correctly positions the loading state
-  justifyContent: 'flex-end', // correctly positions the loading state
-  padding: theme.sizing.baseUnit, // UX hack to improve tapability.
-}))(View);
+const ButtonLinkSpacing = styled(
+  ({ theme }) => ({
+    flexDirection: 'row', // correctly positions the loading state
+    justifyContent: 'flex-end', // correctly positions the loading state
+    padding: theme.sizing.baseUnit, // UX hack to improve tapability.
+  }),
+  'ui-connected.HorizontalLikedContentFeedConnected.HorizontalLikedContentFeed.ButtonLinkSpacing'
+)(View);
 
-const AndroidTouchableFix = withTheme(({ theme }) => ({
-  borderRadius: theme.sizing.baseBorderRadius / 2,
-}))(Touchable);
+const AndroidTouchableFix = withTheme(
+  ({ theme }) => ({
+    borderRadius: theme.sizing.baseBorderRadius / 2,
+  }),
+  'ui-connected.HorizontalLikedContentFeedConnected.HorizontalLikedContentFeed.AndroidTouchableFix'
+)(Touchable);
 
-const StyledHorizontalTileFeed = styled(({ theme }) => ({
-  /* UX hack to improve tapability. The magic number below happens to be the number of pixels that
-   * aligns everything in the same place as if none of the UX hacks were there. */
-  marginTop: theme.sizing.baseUnit * -1.25,
-  zIndex: 1,
-}))(HorizontalTileFeed);
+const StyledHorizontalTileFeed = styled(
+  ({ theme }) => ({
+    /* UX hack to improve tapability. The magic number below happens to be the number of pixels that
+     * aligns everything in the same place as if none of the UX hacks were there. */
+    marginTop: theme.sizing.baseUnit * -1.25,
+    zIndex: 1,
+  }),
+  'ui-connected.HorizontalLikedContentFeedConnected.HorizontalLikedContentFeed.StyledHorizontalTileFeed'
+)(HorizontalTileFeed);
 
 class HorizontalLikedContentFeed extends Component {
   static propTypes = {
