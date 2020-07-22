@@ -1,7 +1,7 @@
 import { graphql } from 'graphql';
 import { fetch } from 'apollo-server-env';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
-import { authSchema, deviceSchema } from '@apollosproject/data-schema';
+import { authSchema } from '@apollosproject/data-schema';
 import { Person } from '@apollosproject/data-connector-rock';
 import { createGlobalId } from '@apollosproject/server-core';
 import gql from 'graphql-tag';
@@ -48,7 +48,7 @@ describe('Passes', () => {
   let schema;
   let context;
   beforeEach(() => {
-    schema = getSchema([deviceSchema]);
+    schema = getSchema();
     context = getContext();
 
     fetch.resetMocks();

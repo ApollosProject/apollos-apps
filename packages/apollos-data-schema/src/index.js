@@ -103,7 +103,6 @@ export const peopleSchema = gql`
     gender: GENDER
     birthDate: String
     photo: ImageMediaSource
-    devices: [Device]
   }
 
   extend type Mutation {
@@ -118,6 +117,10 @@ export const deviceSchema = gql`
     id: ID!
     pushId: String!
     notificationsEnabled: Boolean!
+  }
+
+  extend type Person {
+    devices: [Device]
   }
 `;
 

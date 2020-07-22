@@ -2,11 +2,7 @@ import { graphql } from 'graphql';
 import { fetch } from 'apollo-server-env';
 import ApollosConfig from '@apollosproject/config';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
-import {
-  peopleSchema,
-  mediaSchema,
-  deviceSchema,
-} from '@apollosproject/data-schema';
+import { peopleSchema, mediaSchema } from '@apollosproject/data-schema';
 
 import * as Auth from '../index';
 import * as Person from '../../people/index';
@@ -28,7 +24,7 @@ describe('Auth', () => {
   beforeEach(() => {
     fetch.resetMocks();
     fetch.mockRockDataSourceAPI();
-    schema = getSchema([peopleSchema, mediaSchema, deviceSchema]);
+    schema = getSchema([peopleSchema, mediaSchema]);
     context = getContext();
   });
 

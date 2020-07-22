@@ -3,11 +3,7 @@ import { fetch } from 'apollo-server-env';
 import ApollosConfig from '@apollosproject/config';
 import { createGlobalId } from '@apollosproject/server-core';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
-import {
-  campusSchema,
-  authSchema,
-  deviceSchema,
-} from '@apollosproject/data-schema';
+import { campusSchema, authSchema } from '@apollosproject/data-schema';
 
 // we import the root-level schema and resolver so we test the entire integration:
 import * as Campus from '../index';
@@ -53,7 +49,7 @@ describe('Campus', () => {
   beforeEach(() => {
     fetch.resetMocks();
     fetch.mockRockDataSourceAPI();
-    schema = getSchema([campusSchema, deviceSchema]);
+    schema = getSchema([campusSchema]);
     context = getContext();
   });
 
