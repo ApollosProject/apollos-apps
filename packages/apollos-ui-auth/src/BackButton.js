@@ -19,9 +19,12 @@ const SuppressingView = styled(
   'ui-auth.BackButton.SuppressingView'
 )(View);
 
-const Button = withTheme(({ theme }) => ({
-  borderRadius: theme.sizing.baseBorderRadius,
-}))(Touchable);
+const Button = withTheme(
+  ({ theme }) => ({
+    borderRadius: theme.sizing.baseBorderRadius,
+  }),
+  'ui-auth.BackButton.Button'
+)(Touchable);
 
 const ButtonWrapper = styled(
   {
@@ -31,13 +34,16 @@ const ButtonWrapper = styled(
   'ui-auth.BackButton.ButtonWrapper'
 )(PaddedView);
 
-const BackButtonIcon = withTheme(({ theme }) => ({
-  fill: theme.colors.action.secondary,
-  size: theme.sizing.baseUnit * 1.5,
-  style: {
-    paddingRight: 0,
-  },
-}))(Icon);
+const BackButtonIcon = withTheme(
+  ({ theme }) => ({
+    fill: theme.colors.action.secondary,
+    size: theme.sizing.baseUnit * 1.5,
+    style: {
+      paddingRight: 0,
+    },
+  }),
+  'ui-auth.BackButton.BackButtonIcon'
+)(Icon);
 
 const BackButton = ({ onPress }) => (
   <SuppressingView>
