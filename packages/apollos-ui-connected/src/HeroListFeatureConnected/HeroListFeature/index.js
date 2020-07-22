@@ -12,19 +12,25 @@ import {
 } from '@apollosproject/ui-kit';
 import { LiveConsumer } from '../..';
 
-const Header = styled(({ theme }) => ({
-  paddingTop: theme.sizing.baseUnit * 3,
-  paddingBottom: 0,
-}))(PaddedView);
+const Header = styled(
+  ({ theme }) => ({
+    paddingTop: theme.sizing.baseUnit * 3,
+    paddingBottom: 0,
+  }),
+  'ui-connected.HeroListFeatureConnected.HeroListFeature.Header'
+)(PaddedView);
 
 const Title = styled(
   ({ theme }) => ({
     color: theme.colors.text.tertiary,
   }),
-  'HeroListFeature.Title'
+  'ui-connected.HeroListFeatureConnected.HeroListFeature.Title'
 )(H6);
 
-const Subtitle = styled({}, 'HeroListFeature.Subtitle')(H3);
+const Subtitle = styled(
+  {},
+  'ui-connected.HeroListFeatureConnected.HeroListFeature.Subtitle'
+)(H3);
 
 const loadingStateArray = [
   {

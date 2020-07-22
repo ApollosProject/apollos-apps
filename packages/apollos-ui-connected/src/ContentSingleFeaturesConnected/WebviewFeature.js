@@ -15,14 +15,14 @@ const StyledCard = styled(
     overflow: 'hidden',
     ...Platform.select(theme.shadows.default),
   }),
-  'ui-connected.WebviewFeature.StyledCard'
+  'ui-connected.ContentSingleFeaturesConnected.WebviewFeature.StyledCard'
 )(View);
 
 const StyledWebView = styled(
   () => ({
     flex: 1,
   }),
-  'ui-connected.WebviewFeature.StyledWebView'
+  'ui-connected.ContentSingleFeaturesConnected.WebviewFeature.StyledWebView'
 )(WebView);
 
 const StyledH3 = styled(
@@ -30,7 +30,7 @@ const StyledH3 = styled(
     paddingHorizontal: theme.sizing.baseUnit,
     color: theme.colors.screen,
   }),
-  'ui-connected.WebviewFeature.StyledH3'
+  'ui-connected.ContentSingleFeaturesConnected.WebviewFeature.StyledH3'
 )(H3);
 
 const StyledText = styled(
@@ -38,14 +38,14 @@ const StyledText = styled(
     color: theme.colors.secondary,
     paddingHorizontal: theme.sizing.baseUnit,
   }),
-  'ui-connected.WebviewFeature.StyledText'
+  'ui-connected.ContentSingleFeaturesConnected.WebviewFeature.StyledText'
 )(UIText);
 
 const StyledSideBySideView = styled(
   () => ({
     alignItems: 'center',
   }),
-  'ui-connected.WebviewFeature.StyledSideBySideView'
+  'ui-connected.ContentSingleFeaturesConnected.WebviewFeature.StyledSideBySideView'
 )(SideBySideView);
 
 const WebviewFeature = ({ url, title, linkText, height }) => (

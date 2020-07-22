@@ -9,10 +9,13 @@ import UserAvatarConnected from '../UserAvatarConnected';
 
 import uploadPhoto from '../../utils/uploadPhoto';
 
-const Wrapper = styled({
-  justifyContent: 'center',
-  alignItems: 'center',
-})(View);
+const Wrapper = styled(
+  {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  'ui-connected.UserAvatarConnected.UserAvatarUpdate.UserAvatarUpdate.Wrapper'
+)(View);
 
 class UserAvatarUpdate extends PureComponent {
   static propTypes = {

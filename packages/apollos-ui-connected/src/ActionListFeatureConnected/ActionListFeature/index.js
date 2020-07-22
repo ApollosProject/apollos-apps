@@ -9,16 +9,26 @@ const Title = styled(
   ({ theme }) => ({
     color: theme.colors.text.tertiary,
   }),
-  'ActionListFeature.Title'
+  'ui-connected.ActionListFeatureConnected.ActionListFeature.Title'
 )(H6);
 
-const Subtitle = styled({}, 'ActionListFeature.Subtitle')(H3);
+const Subtitle = styled(
+  {},
+  'ui-connected.ActionListFeatureConnected.ActionListFeature.Subtitle'
+)(H3);
 
-const ActionListHeader = styled(({ theme: { sizing: { baseUnit } } }) => ({
-  paddingHorizontal: baseUnit,
-  paddingTop: baseUnit,
-  // Padding Bottom is baked into the card content
-}))(View);
+const ActionListHeader = styled(
+  ({
+    theme: {
+      sizing: { baseUnit },
+    },
+  }) => ({
+    paddingHorizontal: baseUnit,
+    paddingTop: baseUnit,
+    // Padding Bottom is baked into the card content
+  }),
+  'ui-connected.ActionListFeatureConnected.ActionListFeature.ActionListHeader'
+)(View);
 
 const loadingStateArray = [
   {

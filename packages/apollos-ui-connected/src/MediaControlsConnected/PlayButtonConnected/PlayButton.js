@@ -11,13 +11,19 @@ import {
   H6,
 } from '@apollosproject/ui-kit';
 
-const Container = styled({
-  flexDirection: 'row',
-  alignItems: 'flex-start',
-  justifyContent: 'flex-start',
-})(View);
+const Container = styled(
+  {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+  },
+  'ui-connected.MediaControlsConnected.PlayButtonConnected.PlayButton.Container'
+)(View);
 
-const StyledMediaThumbnail = styled({ marginVertical: 0 })(MediaThumbnail);
+const StyledMediaThumbnail = styled(
+  { marginVertical: 0 },
+  'ui-connected.MediaControlsConnected.PlayButtonConnected.PlayButton.StyledMediaThumbnail'
+)(MediaThumbnail);
 
 const PlayButton = ({ coverImageSources, icon, onPress, title, ...props }) => (
   <Container {...props}>

@@ -7,7 +7,7 @@ import cardMapper from './cardMapper';
 
 const ContentCardComponentMapper = withTheme(
   () => ({}),
-  'ContentCardComponentMapper'
+  'ui-connected.ContentCardConnected.ContentCardComponentMapper'
 )(({ Component, ...props }) => <Component {...props} />);
 
 ContentCardComponentMapper.propTypes = {
