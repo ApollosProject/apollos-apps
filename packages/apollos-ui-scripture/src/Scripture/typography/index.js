@@ -9,21 +9,21 @@ const VerseNumber = styled(
     fontSize: theme.helpers.rem(0.6),
     color: theme.colors.text.secondary,
   }),
-  'ui-scripture.Scipture.typography.VerseNumber'
+  'ui-scripture.Scripture.typography.VerseNumber'
 )(ScriptureText);
 
 const RedLetters = styled(
   ({ theme }) => ({
     color: theme.colors.wordOfChrist,
   }),
-  'ui-scripture.Scipture.typography.RedLetters'
+  'ui-scripture.Scripture.typography.RedLetters'
 )(Text);
 
 const PoeticPause = styled(
   {
     textAlign: 'right',
   },
-  'ui-scripture.Scipture.typography.PoeticPause'
+  'ui-scripture.Scripture.typography.PoeticPause'
 )(ScriptureText);
 
 const LegalText = styled(
@@ -33,7 +33,7 @@ const LegalText = styled(
     fontFamily: theme.typography.sans.regular.default,
     color: theme.colors.text.secondary,
   }),
-  'ui-scripture.Scipture.typography.LegalText'
+  'ui-scripture.Scripture.typography.LegalText'
 )(ScriptureText);
 
 export { ScriptureText, VerseNumber, RedLetters, PoeticPause, LegalText };
