@@ -6,7 +6,6 @@ import Bugsnag from '@bugsnag/js';
 const isDev =
   process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test';
 
-
 if (ApollosConfig.BUGSNAG && ApollosConfig.BUGSNAG.API_KEY) {
   Bugsnag.start({
     apiKey: ApollosConfig.BUGSNAG.API_KEY,
@@ -21,7 +20,7 @@ BUGSNAG:
   API_KEY: (api key here)
   OPTIONS: {}
 \`\`\`
-`)
+`);
 }
 
 export const report = (error, metaData, beforeSend) => {
@@ -54,9 +53,7 @@ export class BugsnagPlugin {
             },
             (err) => {
               const ip = get(headers, 'fastly-client-ip', 'unknown');
-              err.setUser({
-                id: ip,
-              });
+              err.setUser(ip);
               err.addMetadata(
                 'user',
                 'appVersion',
@@ -69,5 +66,3 @@ export class BugsnagPlugin {
     };
   }
 }
-
-export { BugsnagPlugin };
