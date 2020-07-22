@@ -1,4 +1,5 @@
-/* eslint-disable import/prefer-default-export */
+import resolver from './resolver';
 import dataSource from './data-source';
 
-export { dataSource };
+export { deviceSchema as schema } from '@apollosproject/data-schema';
+export { resolver, dataSource };

@@ -8,15 +8,21 @@ import {
   peopleSchema,
   mediaSchema,
   authSchema,
+  deviceSchema,
 } from '@apollosproject/data-schema';
 import { generateToken, registerToken } from '../../auth';
 // we import the root-level schema and resolver so we test the entire integration:
 import * as Person from '../index';
+import { PersonalDevice } from '../../index';
 import authMock from '../../authMock';
 import { enforceCurrentUser } from '../../utils';
 
 const Auth = { schema: authSchema, dataSource: authMock };
-const { getContext, getSchema } = createTestHelpers({ Person, Auth });
+const { getContext, getSchema } = createTestHelpers({
+  Person,
+  Auth,
+  PersonalDevice,
+});
 
 ApollosConfig.loadJs({
   ROCK: {
@@ -32,7 +38,7 @@ describe('Person', () => {
   beforeEach(() => {
     fetch.resetMocks();
     fetch.mockRockDataSourceAPI();
-    schema = getSchema([peopleSchema, mediaSchema]);
+    schema = getSchema([peopleSchema, mediaSchema, deviceSchema]);
     context = getContext();
   });
 
@@ -128,10 +134,30 @@ describe('Person', () => {
             photo {
               uri
             }
+            devices {
+              id
+              pushId
+              notificationsEnabled
+            }
           }
         }
       }
     `;
+
+    context.dataSources.PersonalDevice.request = jest.fn(() => ({
+      filter: jest.fn(() => ({
+        get: jest.fn(() =>
+          Promise.resolve([
+            {
+              id: '1',
+              deviceRegistrationId: 'abc-123',
+              notificationsEnabled: true,
+            },
+          ])
+        ),
+      })),
+    }));
+
     const rootValue = {};
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();

@@ -61,4 +61,17 @@ describe('Personal device data source', () => {
       })
     ).rejects.toThrow();
   });
+  it('disable notifications', async () => {
+    const dataSource = buildDataSource(AuthMock);
+    dataSource.get = buildGetMock([{ id: 123 }], dataSource);
+    dataSource.patch = buildGetMock('123', dataSource);
+
+    const result = await dataSource.updateNotificationsEnabled(
+      'somepushid',
+      false
+    );
+    expect(result).toMatchSnapshot();
+    expect(dataSource.get).toMatchSnapshot();
+    expect(dataSource.patch).toMatchSnapshot();
+  });
 });

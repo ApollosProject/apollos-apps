@@ -1,5 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Personal device data source disable notifications 1`] = `"123"`;
+
+exports[`Personal device data source disable notifications 2`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "PersonalDevices?%24filter=%28PersonAliasId%20eq%20123%29%20and%20%28DeviceRegistrationId%20eq%20%27somepushid%27%29&%24top=1",
+      Object {},
+      Object {},
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": Promise {},
+    },
+  ],
+}
+`;
+
+exports[`Personal device data source disable notifications 3`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "/PersonalDevices/123",
+      Object {
+        "NotificationsEnabled": false,
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": Promise {},
+    },
+  ],
+}
+`;
+
 exports[`Personal device data source must exit early if a device is found 1`] = `
 Object {
   "primaryAliasId": 123,

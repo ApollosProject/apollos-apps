@@ -29,3 +29,20 @@ exports[`OneSignal updates an external push id with a valid user 2`] = `
   ],
 }
 `;
+
+exports[`OneSignal updates an external push id with a valid user 3`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "some-push-id",
+      false,
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;

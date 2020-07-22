@@ -112,6 +112,18 @@ export const peopleSchema = gql`
   }
 `;
 
+export const deviceSchema = gql`
+  type Device implements Node {
+    id: ID!
+    pushId: String!
+    notificationsEnabled: Boolean!
+  }
+
+  extend type Person {
+    devices: [Device]
+  }
+`;
+
 export const mediaSchema = gql`
   interface Media {
     name: String
