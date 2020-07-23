@@ -30,6 +30,10 @@ const navigate = performWhenReady((routeName, params) => {
   );
 });
 
+const dispatch = (...args) => {
+  _navigator.dispatch(...args);
+};
+
 const resetToAuth = performWhenReady(() => {
   _navigator.dispatch(
     StackActions.reset({
@@ -73,6 +77,7 @@ const goBack = performWhenReady((from) => {
 export default {
   setTopLevelNavigator,
   navigate,
+  dispatch,
   goBack,
   resetToAuth,
   resetAction,

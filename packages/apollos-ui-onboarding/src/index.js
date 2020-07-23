@@ -13,3 +13,9 @@ export {
 } from './slides';
 
 export Slide, { SlideContent } from './Slide';
+
+export {
+  WITH_USER_ID,
+  onboardingComplete,
+  checkOnboardingStatusAndNavigate,
+} from './onboardingStatus';
