@@ -17,11 +17,14 @@ const FieldTextAlignment = styled(({ textAlignment = 'LEFT' }) => {
   let textAlign = textAlignment.toLowerCase();
   if (textAlign === 'natural') textAlign = 'left';
   return { textAlign };
-})(Text);
+}, 'ui-passes.PassView.Fields.Field.FieldTextAlignment')(Text);
 
-const FieldColumn = styled({
-  flex: 1,
-})(View);
+const FieldColumn = styled(
+  {
+    flex: 1,
+  },
+  'ui-passes.PassView.Fields.Field.FieldColumn'
+)(View);
 
 const Field = ({
   label,
