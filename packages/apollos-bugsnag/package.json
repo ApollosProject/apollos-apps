@@ -9,7 +9,7 @@
     "react-native/**"
   ],
   "scripts": {
-    "test": "jest",
+    "test": "echo \"No tests in bugsnag package yet!\"",
     "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
     "lint": "eslint ./src --ext .js"
   },
