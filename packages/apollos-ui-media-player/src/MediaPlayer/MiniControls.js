@@ -20,60 +20,84 @@ import { GO_FULLSCREEN, DISMISS, PLAY, PAUSE } from './mutations';
 
 const MINI_PLAYER_HEIGHT = 50;
 
-const Shadow = styled(({ theme }) => ({
-  borderRadius: theme.sizing.baseBorderRadius / 2,
-  ...Platform.select(theme.shadows.default),
-}))(View);
+const Shadow = styled(
+  ({ theme }) => ({
+    borderRadius: theme.sizing.baseBorderRadius / 2,
+    ...Platform.select(theme.shadows.default),
+  }),
+  'ui-media.MediaPlayer.MiniControls.Shadow'
+)(View);
 
-const Container = styled(({ theme }) => ({
-  height: MINI_PLAYER_HEIGHT,
-  flexDirection: 'row',
-  justifyContent: 'flex-start',
-  overflow: 'hidden',
-  borderRadius: theme.sizing.baseBorderRadius / 2,
-}))(View);
+const Container = styled(
+  ({ theme }) => ({
+    height: MINI_PLAYER_HEIGHT,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    overflow: 'hidden',
+    borderRadius: theme.sizing.baseBorderRadius / 2,
+  }),
+  'ui-media.MediaPlayer.MiniControls.Container'
+)(View);
 
 // ThumbnailSpacer is used to offset the text in MiniPlayer to make room for the video/music
 // thumbnail in a way that is dynamic to the MINI_PLAYER_HEIGHT
-const ThumbnailSpacer = styled(({ isVideo }) => ({
-  height: MINI_PLAYER_HEIGHT,
-  aspectRatio: isVideo ? 16 / 9 : 1,
-}))(View);
+const ThumbnailSpacer = styled(
+  ({ isVideo }) => ({
+    height: MINI_PLAYER_HEIGHT,
+    aspectRatio: isVideo ? 16 / 9 : 1,
+  }),
+  'ui-media.MediaPlayer.MiniControls.ThumbnailSpacer'
+)(View);
 
-const DismissBackground = withTheme(({ theme }) => ({
-  style: StyleSheet.absoluteFill,
-  ...theme.overlays.low({ overlayColor: theme.colors.black }),
-}))(LinearGradient);
+const DismissBackground = withTheme(
+  ({ theme }) => ({
+    style: StyleSheet.absoluteFill,
+    ...theme.overlays.low({ overlayColor: theme.colors.black }),
+  }),
+  'ui-media.MediaPlayer.MiniControls.DismissBackground'
+)(LinearGradient);
 
-const IconStyles = withTheme(({ theme }) => ({
-  fill: theme.colors.darkTertiary,
-  size: theme.sizing.baseUnit,
-  iconPadding: theme.sizing.baseUnit * 0.75,
-}));
+const IconStyles = withTheme(
+  ({ theme }) => ({
+    fill: theme.colors.darkTertiary,
+    size: theme.sizing.baseUnit,
+    iconPadding: theme.sizing.baseUnit * 0.75,
+  }),
+  'ui-media.MediaPlayer.MiniControls.IconStyles'
+);
 
 const StyledButtonIcon = IconStyles(ButtonIcon);
 
-const Controls = styled(({ theme }) => ({
-  flexDirection: 'row',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  paddingRight: theme.sizing.baseUnit * 0.75,
-  backgroundColor: theme.colors.background.secondary,
-}))(FlexedView);
+const Controls = styled(
+  ({ theme }) => ({
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingRight: theme.sizing.baseUnit * 0.75,
+    backgroundColor: theme.colors.background.secondary,
+  }),
+  'ui-media.MediaPlayer.MiniControls.Controls'
+)(FlexedView);
 
-const TrackInfo = styled(({ theme }) => ({
-  paddingLeft: theme.sizing.baseUnit / 2,
-  height: '100%',
-  justifyContent: 'center',
-  width: '100%',
-}))(View);
+const TrackInfo = styled(
+  ({ theme }) => ({
+    paddingLeft: theme.sizing.baseUnit / 2,
+    height: '100%',
+    justifyContent: 'center',
+    width: '100%',
+  }),
+  'ui-media.MediaPlayer.MiniControls.TrackInfo'
+)(View);
 
-const MiniSeeker = styled({
-  position: 'absolute',
-  left: 0,
-  right: 0,
-  bottom: 0,
-})(Seeker);
+const MiniSeeker = styled(
+  {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
+  'ui-media.MediaPlayer.MiniControls.MiniSeeker'
+)(Seeker);
 
 /**
  * The MiniControls renders basic track info and a play/pause button.

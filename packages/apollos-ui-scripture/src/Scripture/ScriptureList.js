@@ -2,12 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { H4, styled, ButtonLink } from '@apollosproject/ui-kit';
 
-const StyledH4 = styled(({ theme }) => ({
-  color: theme.colors.primary,
-  textAlign: 'center',
-  textDecorationLine: 'underline',
-  paddingBottom: theme.sizing.baseUnit * 1.5,
-}))(H4);
+const StyledH4 = styled(
+  ({ theme }) => ({
+    color: theme.colors.primary,
+    textAlign: 'center',
+    textDecorationLine: 'underline',
+    paddingBottom: theme.sizing.baseUnit * 1.5,
+  }),
+  'ui-scripture.Scripture.ScriptureList.StyledH4'
+)(H4);
 
 const ScriptureList = ({
   references,

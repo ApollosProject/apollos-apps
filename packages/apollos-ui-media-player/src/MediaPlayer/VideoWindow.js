@@ -17,10 +17,13 @@ const styles = StyleSheet.create({
   },
 });
 
-const Background = styled(({ theme }) => ({
-  ...StyleSheet.absoluteFillObject,
-  backgroundColor: theme.colors.black,
-}))(View);
+const Background = styled(
+  ({ theme }) => ({
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: theme.colors.black,
+  }),
+  'ui-media.MediaPlayer.VideoWindow.Background'
+)(View);
 
 /**
  * The VideoWindow displays the actual react-native-video component.

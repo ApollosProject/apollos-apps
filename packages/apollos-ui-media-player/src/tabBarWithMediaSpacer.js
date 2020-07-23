@@ -7,10 +7,13 @@ import { styled } from '@apollosproject/ui-kit';
 import MediaPlayerSpacer from './MediaPlayer/MediaPlayerSpacer';
 import { GET_MEDIA_PLAYER_VISIBILITY } from './MediaPlayer/queries';
 
-const TabBarWrapper = styled(({ theme }) => ({
-  backgroundColor: theme.colors.background.paper,
-  ...Platform.select(theme.shadows.default),
-}))(View);
+const TabBarWrapper = styled(
+  ({ theme }) => ({
+    backgroundColor: theme.colors.background.paper,
+    ...Platform.select(theme.shadows.default),
+  }),
+  'ui-media.tabBarWithMediaSpacer.TabBarWrapper'
+)(View);
 
 // eslint-disable-next-line react/display-name
 const withMediaSpacer = (TabBar) => (props) => (

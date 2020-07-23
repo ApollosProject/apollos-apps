@@ -16,23 +16,32 @@ import {
 import FieldList, { FieldSet, fieldProps } from './Fields';
 import Barcode from './Barcode';
 
-const PassViewFlex = styled({
-  minHeight: Dimensions.get('window').height * 0.55,
-  flexDirection: 'column',
-  justifyContent: 'space-between',
-})(View);
+const PassViewFlex = styled(
+  {
+    minHeight: Dimensions.get('window').height * 0.55,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  },
+  'ui-passes.PassView.PassViewFlex'
+)(View);
 
-const Description = styled({
-  textAlign: 'center',
-})(H6);
+const Description = styled(
+  {
+    textAlign: 'center',
+  },
+  'ui-passes.PassView.Description'
+)(H6);
 
-const Thumbnail = styled(({ theme }) => ({
-  resizeMode: 'cover',
-  flex: 1,
-  aspectRatio: 0.75,
-  alignSelf: 'flex-end',
-  backgroundColor: theme.colors.transparent,
-}))(ConnectedImage);
+const Thumbnail = styled(
+  ({ theme }) => ({
+    resizeMode: 'cover',
+    flex: 1,
+    aspectRatio: 0.75,
+    alignSelf: 'flex-end',
+    backgroundColor: theme.colors.transparent,
+  }),
+  'ui-passes.PassView.Thumbnail'
+)(ConnectedImage);
 
 const PassView = ({
   description = null,

@@ -14,27 +14,39 @@ import {
 
 import Slide, { SlideContent } from '../../Slide';
 
-const Label = styled(({ theme, padded }) => ({
-  color: 'gray',
-  opacity: 0.7,
-  ...(padded ? { marginTop: theme.sizing.baseUnit } : {}),
-}))(H6);
+const Label = styled(
+  ({ theme, padded }) => ({
+    color: 'gray',
+    opacity: 0.7,
+    ...(padded ? { marginTop: theme.sizing.baseUnit } : {}),
+  }),
+  'ui-onboarding.slides.AboutYou.AboutYou.Label'
+)(H6);
 
-const StyledDate = styled(({ theme }) => ({
-  marginTop: 0,
-  marginBottom: theme.sizing.baseUnit,
-}))(DateInput);
+const StyledDate = styled(
+  ({ theme }) => ({
+    marginTop: 0,
+    marginBottom: theme.sizing.baseUnit,
+  }),
+  'ui-onboarding.slides.AboutYou.AboutYou.StyledDate'
+)(DateInput);
 
-const StyledRadio = styled(({ theme }) => ({
-  marginBottom: theme.sizing.baseUnit,
-  flexDirection: 'row',
-  alignItems: 'center',
-  flexWrap: 'wrap',
-}))(Radio);
+const StyledRadio = styled(
+  ({ theme }) => ({
+    marginBottom: theme.sizing.baseUnit,
+    flexDirection: 'row',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+  }),
+  'ui-onboarding.slides.AboutYou.AboutYou.StyledRadio'
+)(Radio);
 
-const RadioLabel = styled(({ theme }) => ({
-  marginLeft: theme.sizing.baseUnit * 0.5,
-}))(H5);
+const RadioLabel = styled(
+  ({ theme }) => ({
+    marginLeft: theme.sizing.baseUnit * 0.5,
+  }),
+  'ui-onboarding.slides.AboutYou.AboutYou.RadioLabel'
+)(H5);
 
 const AboutYou = memo(
   ({

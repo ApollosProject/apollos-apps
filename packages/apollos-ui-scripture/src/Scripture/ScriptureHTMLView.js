@@ -15,9 +15,12 @@ import {
   PoeticPause,
 } from './typography';
 
-const StyledParagraph = styled({
-  paddingBottom: 0,
-})(Paragraph);
+const StyledParagraph = styled(
+  {
+    paddingBottom: 0,
+  },
+  'ui-scripture.Scripture.ScriptureHTMLView.StyledParagraph'
+)(Paragraph);
 
 const renderer = (node, { children, ...other }) => {
   // the defaultRenderer support several basic elements out of the box,

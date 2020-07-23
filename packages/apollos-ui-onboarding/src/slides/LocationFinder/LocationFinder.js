@@ -14,14 +14,20 @@ import Slide, { SlideContent } from '../../Slide';
 const getCampusAddress = (campus) =>
   `${campus.street1}\n${campus.city}, ${campus.state} ${campus.postalCode}`;
 
-const StyledCampusCard = styled(({ theme }) => ({
-  marginBottom: theme.sizing.baseUnit,
-}))(CampusCard);
+const StyledCampusCard = styled(
+  ({ theme }) => ({
+    marginBottom: theme.sizing.baseUnit,
+  }),
+  'ui-onboarding.slides.LocationFinder.LocationFinder.StyledCampusCard'
+)(CampusCard);
 
-const StyledSlideContent = styled({
-  flex: 1,
-  justifyContent: 'space-between',
-})(SlideContent);
+const StyledSlideContent = styled(
+  {
+    flex: 1,
+    justifyContent: 'space-between',
+  },
+  'ui-onboarding.slides.LocationFinder.LocationFinder.StyledSlideContent'
+)(SlideContent);
 
 // memo = sfc PureComponent 💥
 const LocationFinder = memo(

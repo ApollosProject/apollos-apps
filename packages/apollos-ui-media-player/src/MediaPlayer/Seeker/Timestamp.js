@@ -4,11 +4,14 @@ import PropTypes from 'prop-types';
 
 import { H6, styled } from '@apollosproject/ui-kit';
 
-const TimeText = styled({
-  width: 50,
-  textAlign: 'center',
-  alignItems: 'center',
-})(H6);
+const TimeText = styled(
+  {
+    width: 50,
+    textAlign: 'center',
+    alignItems: 'center',
+  },
+  'ui-media.MediaPlayer.Seeker.Timestamp.TimeText'
+)(H6);
 
 /**
  * Displays a MM:SS formatted timestamp from either a number or Animate.Value in seconds

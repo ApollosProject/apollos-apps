@@ -9,9 +9,12 @@ import { MINI_PLAYER_HEIGHT } from './MiniControls';
 import MediaPlayerSafeLayout from './MediaPlayerSafeLayout';
 import { GET_MEDIA_PLAYER_VISIBILITY } from './queries';
 
-const MediaPlayerSafeLayoutWithSpacing = styled({
-  paddingBottom: MINI_PLAYER_HEIGHT,
-})(MediaPlayerSafeLayout);
+const MediaPlayerSafeLayoutWithSpacing = styled(
+  {
+    paddingBottom: MINI_PLAYER_HEIGHT,
+  },
+  'ui-media.MediaPlayer.MediaPlayerSpacer.MediaPlayerSafeLayoutWithSpacing'
+)(MediaPlayerSafeLayout);
 
 const MediaPlayerSpacer = (props) => (
   <Query query={GET_MEDIA_PLAYER_VISIBILITY}>

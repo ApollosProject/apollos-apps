@@ -24,22 +24,27 @@ import { Provider, ControlsConsumer, PlayheadConsumer } from './PlayheadState';
 import MediaPlayerSafeLayout from './MediaPlayerSafeLayout';
 import GoogleCastController from './GoogleCastController';
 
-const VideoSizer = styled(({ isFullscreen, isVideo, theme }) =>
-  isFullscreen
-    ? StyleSheet.absoluteFill
-    : {
-        height: MINI_PLAYER_HEIGHT,
-        borderTopLeftRadius: theme.sizing.baseUnit / 2,
-        borderBottomLeftRadius: theme.sizing.baseUnit / 2,
-        overflow: 'hidden',
-        aspectRatio: isVideo ? 16 / 9 : 1,
-      }
+const VideoSizer = styled(
+  ({ isFullscreen, isVideo, theme }) =>
+    isFullscreen
+      ? StyleSheet.absoluteFill
+      : {
+          height: MINI_PLAYER_HEIGHT,
+          borderTopLeftRadius: theme.sizing.baseUnit / 2,
+          borderBottomLeftRadius: theme.sizing.baseUnit / 2,
+          overflow: 'hidden',
+          aspectRatio: isVideo ? 16 / 9 : 1,
+        },
+  'ui-media.MediaPlayer.FullscreenPlayer.VideoSizer'
 )(View);
 
-const FullscreenMediaPlayerSafeLayout = styled(({ isFullscreen, theme }) => ({
-  ...StyleSheet.absoluteFillObject,
-  margin: isFullscreen ? 0 : theme.sizing.baseUnit,
-}))(MediaPlayerSafeLayout);
+const FullscreenMediaPlayerSafeLayout = styled(
+  ({ isFullscreen, theme }) => ({
+    ...StyleSheet.absoluteFillObject,
+    margin: isFullscreen ? 0 : theme.sizing.baseUnit,
+  }),
+  'ui-media.MediaPlayer.FullscreenPlayer.FullscreenMediaPlayerSafeLayout'
+)(MediaPlayerSafeLayout);
 
 /**
  * FullscreenPlayer is a animating media player that transitions between
