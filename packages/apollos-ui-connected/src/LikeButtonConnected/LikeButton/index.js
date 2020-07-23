@@ -10,7 +10,8 @@ const LikeIcon = withTheme(
   ({ theme: { colors: { secondary } = {} } = {}, isLiked } = {}) => ({
     name: isLiked ? 'like-solid' : 'like',
     fill: secondary,
-  })
+  }),
+  'ui-connected.LikeButtonConnected.LikeButton.LikeIcon'
 )(Icon);
 
 LikeIcon.propTypes = {

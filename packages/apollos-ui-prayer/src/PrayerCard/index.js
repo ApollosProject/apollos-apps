@@ -74,10 +74,13 @@ const UserAvatar = withTheme(
   'ui-prayer.PrayerCard.UserAvatar'
 )(Avatar);
 
-const Content = styled(({ theme }) => ({
-  paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: move this style into `CardContent`
-  paddingVertical: theme.sizing.baseUnit * 1.5, // TODO: move this style into `CardContent`
-}))(CardContent);
+const Content = styled(
+  ({ theme }) => ({
+    paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: move this style into `CardContent`
+    paddingVertical: theme.sizing.baseUnit * 1.5, // TODO: move this style into `CardContent`
+  }),
+  'ui-prayer.PrayerCard.Content'
+)(CardContent);
 
 const PrayerCard = ({
   avatar,
