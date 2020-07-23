@@ -31,6 +31,7 @@ module.exports = {
     'react/jsx-filename-extension': 0,
     'react/jsx-handler-names': 2,
     'react/jsx-curly-brace-presence': 0,
+    'react/jsx-props-no-spreading': 0,
     'react/prefer-stateless-function': [2, { ignorePureComponents: true }],
     'react/require-default-props': 0,
     'react/prop-types': ['error', { ignore: ['navigation'] }],
