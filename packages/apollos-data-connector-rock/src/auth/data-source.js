@@ -46,7 +46,7 @@ export default class AuthDataSource extends RockApolloDataSource {
   lookupUserFromCache = async ({ userCookie }) => {
     const { Cache } = this.context.dataSources;
     const cachedUserName = await Cache.get({
-      key: `userLogins:${crypto
+      key: `:userLogins:${crypto
         .createHash('sha1')
         .update(userCookie)
         .digest('hex')}`,
@@ -111,11 +111,12 @@ export default class AuthDataSource extends RockApolloDataSource {
       this.context.userToken = token;
       this.context.sessionId = sessionId;
       Cache.set({
-        key: `userLogins:${crypto
+        key: `:userLogins:${crypto
           .createHash('sha1')
           .update(cookie)
           .digest('hex')}`,
         data: identity,
+        expiresIn: 31556952, // one year
       });
       return { token, rockCookie: cookie };
     } catch (e) {
