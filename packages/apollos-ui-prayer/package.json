@@ -52,7 +52,7 @@
   "dependencies": {
     "formik": "1.5.1",
     "graphql-tag": "2.9.2",
-    "lodash": "4.17.13",
+    "lodash": "4.17.19",
     "react-is": "^16.8.6",
     "react-native-swiper": "^1.6.0",
     "yup": "0.26.6"
