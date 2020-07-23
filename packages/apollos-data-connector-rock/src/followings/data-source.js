@@ -203,7 +203,7 @@ export default class Followings extends RockApolloDataSource {
         .orderBy('CreatedDateTime', 'desc');
     } catch (e) {
       if (e instanceof AuthenticationError) {
-        return [];
+        return this.request.empty();
       }
       throw e;
     }
