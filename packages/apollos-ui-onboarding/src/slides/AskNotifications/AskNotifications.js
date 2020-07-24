@@ -4,10 +4,13 @@ import { styled, PaddedView, Button } from '@apollosproject/ui-kit';
 
 import Slide, { SlideContent } from '../../Slide';
 
-const StyledSlideContent = styled({
-  flex: 1,
-  justifyContent: 'space-between',
-})(SlideContent);
+const StyledSlideContent = styled(
+  {
+    flex: 1,
+    justifyContent: 'space-between',
+  },
+  'ui-onboarding.slides.AskNotifications.AskNotifications.StyledSlideContent'
+)(SlideContent);
 
 // memo = sfc PureComponent 💥
 // eslint-disable-next-line react/display-name

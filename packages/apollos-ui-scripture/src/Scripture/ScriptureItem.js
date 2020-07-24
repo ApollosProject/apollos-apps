@@ -7,9 +7,12 @@ import { styled, Placeholder, H4, H6 } from '@apollosproject/ui-kit';
 import { LegalText } from './typography';
 import ScriptureHTMLView from './ScriptureHTMLView';
 
-const Reference = styled(({ theme }) => ({
-  paddingBottom: theme.helpers.verticalRhythm(0.5),
-}))(H4);
+const Reference = styled(
+  ({ theme }) => ({
+    paddingBottom: theme.helpers.verticalRhythm(0.5),
+  }),
+  'ui-scripture.Scripture.ScriptureItem.Reference'
+)(H4);
 
 const ScriptureItem = ({ reference, html, copyright, isLoading, version }) => (
   <Placeholder.Paragraph

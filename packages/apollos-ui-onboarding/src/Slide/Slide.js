@@ -16,7 +16,7 @@ import {
 
 import { withTrackOnPress } from '@apollosproject/ui-analytics';
 
-const PrimaryButton = styled({}, 'Onboarding.Slide.PrimaryButton')(
+const PrimaryButton = styled({}, 'ui-onboarding.Slide.Slide.PrimaryButton')(
   withTrackOnPress(Button)
 );
 
@@ -40,7 +40,7 @@ const NavWrapper = styled(
     justifyContent: 'space-between',
     marginVertical: theme.sizing.baseUnit * 0.5, // centers nav/button with pager dots
   }),
-  'Onboarding.Slide.NavWrapper'
+  'ui-onboarding.Slide.Slide.NavWrapper'
 )(PaddedView);
 
 const PrimaryNavIcon = withTheme(
@@ -51,7 +51,7 @@ const PrimaryNavIcon = withTheme(
       marginRight: theme.sizing.baseUnit * -0.5,
     },
   }),
-  'Onboarding.Slide.PrimaryNavIcon'
+  'ui-onboarding.Slide.Slide.PrimaryNavIcon'
 )(Icon);
 
 const SkipButton = styled(
@@ -61,10 +61,13 @@ const SkipButton = styled(
     paddingHorizontal: theme.sizing.baseUnit, // improves tappability
     marginLeft: theme.sizing.baseUnit * -1, // adjusts for paddingHorizontal
   }),
-  'Onboarding.Slide.SkipButton'
+  'ui-onboarding.Slide.Slide.SkipButton'
 )(withTrackOnPress(ButtonLink));
 
-const FlexedScrollView = styled({ flex: 1 })(ScrollView);
+const FlexedScrollView = styled(
+  { flex: 1 },
+  'ui-onboarding.Slide.Slide.FlexedScrollView'
+)(ScrollView);
 
 /* Slide uses memo = sfc PureComponent 💥 Additionally, this component when rendered in a `Slider`
  * is automatically rendered in a `View` */
