@@ -17,6 +17,7 @@ import { compose } from 'recompose';
 
 import {
   PaddedView,
+  FlexedView,
   withTheme,
   withThemeMixin,
   styled,
@@ -40,67 +41,104 @@ import Seeker from './Seeker';
 import AirPlayButton from './AirPlayButton';
 import GoogleCastButton from './GoogleCastButton';
 
-const Background = withTheme(({ theme }) => ({
-  style: StyleSheet.absoluteFill,
-  colors: [
-    theme.colors.darkPrimary,
-    theme.colors.transparent,
-    theme.colors.darkPrimary,
-  ],
-  locations: [0, 0.4, 0.95],
-}))(LinearGradient);
+const Background = withTheme(
+  ({ theme }) => ({
+    style: StyleSheet.absoluteFill,
+    colors: [
+      theme.colors.darkPrimary,
+      theme.colors.transparent,
+      theme.colors.darkPrimary,
+    ],
+    locations: [0, 0.4, 0.95],
+  }),
+  'ui-media.MediaPlayer.FullscreenControls.Background'
+)(LinearGradient);
 
-const UpperControls = styled({
-  flexDirection: 'row',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-})(View);
+const UpperControls = styled(
+  {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  'ui-media.MediaPlayer.FullscreenControls.UpperControls'
+)(View);
 
-const LowerControls = styled({
-  position: 'absolute',
-  bottom: 0,
-  left: 0,
-  right: 0,
-})(PaddedView);
+const LowerControls = styled(
+  {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+  },
+  'ui-media.MediaPlayer.FullscreenControls.LowerControls'
+)(PaddedView);
 
-const CastButtons = styled({
-  flexDirection: 'row',
-  justifyContent: 'space-around',
-  alignItems: 'center',
-})(PaddedView);
+const CastButtons = styled(
+  {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+  },
+  'ui-media.MediaPlayer.FullscreenControls.CastButtons'
+)(PaddedView);
 
-const PlayControls = styled(({ theme }) => ({
-  flexDirection: 'row',
-  justifyContent: 'space-around',
-  alignItems: 'center',
-  paddingBottom: theme.sizing.baseUnit * 1.5,
-}))(PaddedView);
+const PlayControls = styled(
+  ({ theme }) => ({
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    paddingBottom: theme.sizing.baseUnit * 1.5,
+  }),
+  'ui-media.MediaPlayer.FullscreenControls.PlayControls'
+)(PaddedView);
 
-const PlayHead = styled({ paddingVertical: 0 })(PaddedView);
+const PlayHead = styled(
+  { paddingVertical: 0 },
+  'ui-media.MediaPlayer.FullscreenControls.PlayHead'
+)(PaddedView);
 
-const Titles = styled({
-  flex: 1,
-  alignItems: 'center',
-  paddingVertical: 0,
-})(PaddedView);
+const Titles = styled(
+  {
+    flex: 1,
+    alignItems: 'center',
+    paddingVertical: 0,
+  },
+  'ui-media.MediaPlayer.FullscreenControls.Titles'
+)(PaddedView);
 
-const Title = styled({ textAlign: 'center' })(H4);
-const Artist = styled({ textAlign: 'center' })(H6);
+const Title = styled(
+  { textAlign: 'center' },
+  'ui-media.MediaPlayer.FullscreenControls.Title'
+)(H4);
 
-const IconSm = withTheme(({ theme }) => ({
-  size: theme.sizing.baseUnit * 1.25,
-  iconPadding: theme.sizing.baseUnit * 1.25,
-}))(ButtonIcon);
+const Artist = styled(
+  { textAlign: 'center' },
+  'ui-media.MediaPlayer.FullscreenControls.Artist'
+)(H6);
 
-const IconMd = withTheme(({ theme }) => ({
-  size: theme.sizing.baseUnit * 1.875,
-  iconPadding: theme.sizing.baseUnit * 0.9375,
-}))(ButtonIcon);
+const IconSm = withTheme(
+  ({ theme }) => ({
+    size: theme.sizing.baseUnit * 1.25,
+    iconPadding: theme.sizing.baseUnit * 1.25,
+  }),
+  'ui-media.MediaPlayer.FullscreenControls.IconSm'
+)(ButtonIcon);
 
-const IconLg = withTheme(({ theme }) => ({
-  size: theme.sizing.baseUnit * 3.125,
-  iconPadding: theme.sizing.baseUnit * 0.3125,
-}))(ButtonIcon);
+const IconMd = withTheme(
+  ({ theme }) => ({
+    size: theme.sizing.baseUnit * 1.875,
+    iconPadding: theme.sizing.baseUnit * 0.9375,
+  }),
+  'ui-media.MediaPlayer.FullscreenControls.IconMd'
+)(ButtonIcon);
+
+const IconLg = withTheme(
+  ({ theme }) => ({
+    size: theme.sizing.baseUnit * 3.125,
+    iconPadding: theme.sizing.baseUnit * 0.3125,
+  }),
+  'ui-media.MediaPlayer.FullscreenControls.IconLg'
+)(ButtonIcon);
 
 /**
  * FullscreenControls displays fading player controls
@@ -294,48 +332,47 @@ class FullscreenControls extends PureComponent {
     this.wasPlaying = mediaPlayer.isPlaying;
 
     return (
-      <TouchableWithoutFeedback onPress={this.handleControlVisibility}>
-        <Animated.View
-          style={[StyleSheet.absoluteFill, { opacity: this.fader }]}
-        >
-          <Background>
-            <SafeAreaView
-              style={StyleSheet.absoluteFill}
-              forceInset={{ top: 'always', bottom: 'always' }}
-            >
-              <UpperControls>
-                <IconSm name="arrow-down" onPress={this.handleClose} />
-                <Titles>
-                  <Title>{get(mediaPlayer, 'currentTrack.title')}</Title>
-                  <Artist>{get(mediaPlayer, 'currentTrack.artist')}</Artist>
-                </Titles>
-                <IconSm name="empty" disabled />
-              </UpperControls>
-              <LowerControls horizontal={false}>
-                <CastButtons>
-                  {Platform.OS === 'ios' &&
-                  this.props.airPlayEnabled &&
-                  !this.props.isCasting ? (
-                    <AirPlayButton />
-                  ) : null}
-                  {this.props.googleCastEnabled ? <GoogleCastButton /> : null}
-                </CastButtons>
-                <PlayHead>
-                  {// TODO can be enabled once this bug is fixed
-                  // https://github.com/react-native-google-cast/react-native-google-cast/issues/151
-                  !this.props.isCasting ? (
-                    <Seeker
-                      onScrubbing={this.handleOnScrubbing}
-                      isCasting={this.props.isCasting}
-                    />
-                  ) : null}
-                </PlayHead>
-                <ControlsConsumer>{this.renderPlayerControls}</ControlsConsumer>
-              </LowerControls>
-            </SafeAreaView>
-          </Background>
-        </Animated.View>
-      </TouchableWithoutFeedback>
+      <Animated.View style={[StyleSheet.absoluteFill, { opacity: this.fader }]}>
+        <Background>
+          <SafeAreaView
+            style={StyleSheet.absoluteFill}
+            forceInset={{ top: 'always', bottom: 'always' }}
+          >
+            <UpperControls>
+              <IconSm name="arrow-down" onPress={this.handleClose} />
+              <Titles>
+                <Title>{get(mediaPlayer, 'currentTrack.title')}</Title>
+                <Artist>{get(mediaPlayer, 'currentTrack.artist')}</Artist>
+              </Titles>
+              <IconSm name="empty" disabled />
+            </UpperControls>
+            <TouchableWithoutFeedback onPress={this.handleControlVisibility}>
+              <FlexedView />
+            </TouchableWithoutFeedback>
+            <LowerControls horizontal={false}>
+              <CastButtons>
+                {Platform.OS === 'ios' &&
+                this.props.airPlayEnabled &&
+                !this.props.isCasting ? (
+                  <AirPlayButton />
+                ) : null}
+                {this.props.googleCastEnabled ? <GoogleCastButton /> : null}
+              </CastButtons>
+              <PlayHead>
+                {// TODO can be enabled once this bug is fixed
+                // https://github.com/react-native-google-cast/react-native-google-cast/issues/151
+                !this.props.isCasting ? (
+                  <Seeker
+                    onScrubbing={this.handleOnScrubbing}
+                    isCasting={this.props.isCasting}
+                  />
+                ) : null}
+              </PlayHead>
+              <ControlsConsumer>{this.renderPlayerControls}</ControlsConsumer>
+            </LowerControls>
+          </SafeAreaView>
+        </Background>
+      </Animated.View>
     );
   };
 
