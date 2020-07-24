@@ -33,6 +33,7 @@ export default class AuthDataSource extends RockApolloDataSource {
         return request;
       } catch (e) {
         const person = await this.lookupUserFromCache({ userCookie });
+
         if (!person) {
           throw new AuthenticationError('Invalid user cookie; no person found');
         }
@@ -64,7 +65,7 @@ export default class AuthDataSource extends RockApolloDataSource {
     if (!login || !login.personId) {
       throw new AuthenticationError('Invalid user cookie; no user login found');
     }
-    return this.get('/People')
+    return this.request('/People')
       .filter(`Id eq ${login.personId}`)
       .first();
   };
