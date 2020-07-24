@@ -47,6 +47,7 @@ const ListItemComponent = ({ contentId, labelText, ...item }) => (
               }
             : { isLive, labelText })} // we only want to pass `labelText` if we are NOT live. If we do we will override the default logic in the FeaturedCard
           {...item}
+          isFeatured
         />
       );
     }}
