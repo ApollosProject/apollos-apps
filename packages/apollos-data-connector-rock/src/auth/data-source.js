@@ -100,6 +100,7 @@ export default class AuthDataSource extends RockApolloDataSource {
       const cookie = await this.fetchUserCookie(identity, password);
       const sessionId = await this.createSession({ cookie });
       const token = generateToken({ cookie, sessionId });
+      const currentPerson = await this.getCurrentPerson({ cookie });
       this.context.rockCookie = cookie;
       this.context.userToken = token;
       this.context.sessionId = sessionId;
@@ -108,7 +109,7 @@ export default class AuthDataSource extends RockApolloDataSource {
           .createHash('sha1')
           .update(cookie)
           .digest('hex')}`,
-        data: identity,
+        data: currentPerson.id,
         expiresIn: 31556952, // one year
       });
       return { token, rockCookie: cookie };
