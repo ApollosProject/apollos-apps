@@ -61,68 +61,40 @@ describe('Auth', () => {
     expect(Auth.post.mock.calls).toMatchSnapshot();
   });
 
-  it('should try and find an auth token from redis when curent cookie is invalid', async () => {
+  it('should try and find an auth token from redis before testing rock', async () => {
     Auth.get = jest.fn(() => {
       throw new Error();
     });
     Auth.context.rockCookie = 'invalid-cookie';
 
-    expect(Auth.getCurrentPerson()).rejects.toThrowErrorMatchingSnapshot();
-    expect(Auth.context.dataSources.Cache.get.mock.calls).toMatchSnapshot();
-  });
-
-  it("should throw an error when looking up a user login that doesn't exist while retrying getCurrentPerson", async () => {
-    const originalGet = Auth.get;
-    Auth.get = jest.fn(async (path) => {
-      if (path.includes('UserLogins')) {
-        return [];
-      }
-      throw new Error();
-    });
-    Auth.context.dataSources.Cache.get = jest.fn(() => 'username@example.com');
     await expect(
       Auth.getCurrentPerson()
     ).rejects.toThrowErrorMatchingSnapshot();
     expect(Auth.context.dataSources.Cache.get.mock.calls).toMatchSnapshot();
-    expect(Auth.get.mock.calls).toMatchSnapshot();
-    Auth.get = originalGet;
   });
 
-  it("should throw an error when looking up a user that doesn't exist while retrying getCurrentPerson", async () => {
-    const originalGet = Auth.get;
-    Auth.get = jest.fn(async (path) => {
-      if (path.includes('UserLogins')) {
-        return [{ personId: 123 }];
-      }
-      if (path.includes('Id%20eq%20123')) {
-        return [];
-      }
-      throw new Error();
-    });
-    Auth.context.dataSources.Cache.get = jest.fn(() => 'username@example.com');
-    await expect(
-      Auth.getCurrentPerson()
-    ).rejects.toThrowErrorMatchingSnapshot();
-    expect(Auth.context.dataSources.Cache.get.mock.calls).toMatchSnapshot();
-    expect(Auth.get.mock.calls).toMatchSnapshot();
-    Auth.get = originalGet;
-  });
+  it('should return early when finding a person in Rock', async () => {
+    Auth.get = jest.fn(async () => [{ id: 123 }]);
+    Auth.context.rockCookie = 'invalid-cookie';
+    Auth.context.dataSources.Cache.get = jest.fn(() => ({ personId: 123 }));
 
-  it('should return a person while retrying getCurrentPerson', async () => {
-    const originalGet = Auth.get;
-    Auth.get = jest.fn(async (path) => {
-      if (path.includes('UserLogins')) {
-        return [{ personId: 123 }];
-      }
-      if (path.includes('Id%20eq%20123')) {
-        return [{ id: 123 }];
-      }
-      throw new Error();
-    });
-    Auth.context.dataSources.Cache.get = jest.fn(() => 'username@example.com');
     await expect(Auth.getCurrentPerson()).resolves.toMatchSnapshot();
     expect(Auth.context.dataSources.Cache.get.mock.calls).toMatchSnapshot();
-    expect(Auth.get.mock.calls).toMatchSnapshot();
+  });
+
+  it('should return a user from rock if one exists', async () => {
+    const originalGet = Auth.get;
+    Auth.get = jest.fn(async (path) => {
+      if (path.includes('GetCurrentPerson')) {
+        return { id: 123 };
+      }
+      return [];
+    });
+    Auth.context.rockCookie = 'invalid-cookie';
+    Auth.context.dataSources.Cache.get = jest.fn(() => ({ personId: 123 }));
+
+    await expect(Auth.getCurrentPerson()).resolves.toMatchSnapshot();
+    expect(Auth.context.dataSources.Cache.get.mock.calls).toMatchSnapshot();
     Auth.get = originalGet;
   });
 

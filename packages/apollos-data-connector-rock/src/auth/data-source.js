@@ -24,6 +24,12 @@ export default class AuthDataSource extends RockApolloDataSource {
 
     if (userCookie) {
       try {
+        const person = await this.lookupUserFromCache({ userCookie });
+        if (person) {
+          return person;
+        }
+
+        // No person in the cache, let's try their cookie.
         const request = await this.request('People/GetCurrentPerson').get({
           options: {
             headers: { cookie: userCookie, 'Authorization-Token': null },
@@ -32,13 +38,9 @@ export default class AuthDataSource extends RockApolloDataSource {
         this.context.currentPerson = request;
         return request;
       } catch (e) {
-        const person = await this.lookupUserFromCache({ userCookie });
-
-        if (!person) {
-          throw new AuthenticationError('Invalid user cookie; no person found');
-        }
-        // TODO: Send over a new cookie to be stored in the `set-cookie` header.
-        return person;
+        throw new AuthenticationError(
+          `Invalid user cookie; Rock returned error ${e}`
+        );
       }
     }
     throw new AuthenticationError('Must be logged in');
@@ -46,27 +48,17 @@ export default class AuthDataSource extends RockApolloDataSource {
 
   lookupUserFromCache = async ({ userCookie }) => {
     const { Cache } = this.context.dataSources;
-    const cachedUserName = await Cache.get({
+    const cachedPersonId = await Cache.get({
       key: `:userLogins:${crypto
         .createHash('sha1')
         .update(userCookie)
         .digest('hex')}`,
     });
-    if (!cachedUserName) {
-      throw new AuthenticationError(
-        'Invalid user cookie; no eligble user login found'
-      );
-    }
-    const login = await this.request('/UserLogins')
-      .filter(`UserName eq '${cachedUserName}'`)
-      .expand('Person')
-      .first();
-
-    if (!login || !login.personId) {
-      throw new AuthenticationError('Invalid user cookie; no user login found');
+    if (!cachedPersonId) {
+      return null;
     }
     return this.request('/People')
-      .filter(`Id eq ${login.personId}`)
+      .filter(`Id eq ${cachedPersonId}`)
       .first();
   };
 
