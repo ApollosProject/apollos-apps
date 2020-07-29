@@ -37,7 +37,7 @@ const onNavigationStateChange = (track) => (prevState, currentState) => {
 
   if (prevScreen !== currentScreen || !isEqual(currentParams, prevParams)) {
     analytics.track(`Viewed Screen ${currentScreen}`);
-    track(`Viewed Screen ${currentScreen}`);
+    track({ eventName: `Viewed Screen ${currentScreen}` });
     // Not tracking for now.
     // analytics.screen(currentScreen);
   }
