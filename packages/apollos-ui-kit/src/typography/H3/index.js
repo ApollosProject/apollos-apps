@@ -1,11 +1,12 @@
 import { Text } from 'react-native';
 import PropTypes from 'prop-types';
-import { compose, pure } from 'recompose';
+import { compose, setDisplayName, pure } from 'recompose';
 
 import styled from '../../styled';
 import { withPlaceholder, Typography } from '../../Placeholder';
 
 const H3 = compose(
+  setDisplayName('ui-kit.Typography.H3'),
   styled(
     ({ theme, padded }) => ({
       fontSize: theme.helpers.rem(1.5),

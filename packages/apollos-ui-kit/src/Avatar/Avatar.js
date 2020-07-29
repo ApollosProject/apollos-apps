@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { View, Platform } from 'react-native';
 import { get } from 'lodash';
-import { compose } from 'recompose';
+import { compose, setDisplayName } from 'recompose';
 
 import ConnectedImage from '../ConnectedImage';
 import styled from '../styled';
@@ -23,8 +23,9 @@ const Container = styled(
 )(View);
 
 const PlaceholderIcon = compose(
+  setDisplayName('ui-kit.Avatar.Avatar.PlaceholderIcon'),
   withTheme(
-      ({ theme: { colors } = {}, themeSize }) => ({
+    ({ theme: { colors } = {}, themeSize }) => ({
       fill: colors.background.inactive,
       name: 'avatar',
       size: themeSize * 1.09375, // this is a magic number 🧙‍♂️ of 35/33 and might be related to the default size of an icon being 32 🤷‍♂️

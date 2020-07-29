@@ -18,17 +18,14 @@ const ControlWrapper = withInputControlViewStyles(View);
 
 const enhance = compose(
   pure,
-  withTheme(
-    ({ theme }) => ({
-      trackColor: {
-        true: theme.colors.primary,
-        false: theme.colors.background.inactive,
-      },
-      thumbColor: theme.colors.background.paper,
-      ios_backgroundColor: theme.colors.background.inactive,
-    }),
-    'ui-kit.inputs.Swtich.enhance'
-  )
+  withTheme(({ theme }) => ({
+    trackColor: {
+      true: theme.colors.primary,
+      false: theme.colors.background.inactive,
+    },
+    thumbColor: theme.colors.background.paper,
+    ios_backgroundColor: theme.colors.background.inactive,
+  }))
 );
 
 const LabelContainer = styled({

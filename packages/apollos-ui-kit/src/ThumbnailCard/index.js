@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { TouchableWithoutFeedback } from 'react-native';
-import { compose, pure } from 'recompose';
+import { compose, setDisplayName, pure } from 'recompose';
 import { startCase, toLower } from 'lodash';
 
 import { withIsLoading } from '../isLoading';
@@ -29,6 +29,7 @@ const HorizontalLayout = styled(
 )(SideBySideView);
 
 const LeftColumn = compose(
+  setDisplayName('ui-kit.ThumbnailCard.LeftColumn'),
   styled(
     {
       flex: 1.66,

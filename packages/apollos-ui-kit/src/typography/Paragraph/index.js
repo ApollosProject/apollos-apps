@@ -9,7 +9,7 @@ import {
 import styled from '../../styled';
 
 const Paragraph = compose(
-  setDisplayName('Paragraph'),
+  setDisplayName('ui-kit.Typography.Paragraph'),
   styled(
     ({ theme }) => ({
       paddingBottom: theme.helpers.verticalRhythm(0.75),
