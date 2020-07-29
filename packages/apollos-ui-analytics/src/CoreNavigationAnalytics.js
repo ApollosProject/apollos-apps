@@ -1,5 +1,9 @@
+import React from 'react';
+import ApollosConfig from '@apollosproject/config';
+import PropTypes from 'prop-types';
 import analytics from '@metarouter/analytics-react-native';
 import { isEqual, last } from 'lodash';
+import { AnalyticsConsumer } from './Provider';
 
 function getActiveRouteName(navigationState, routeNames = []) {
   if (!navigationState) {
@@ -22,7 +26,7 @@ function getActiveRouteName(navigationState, routeNames = []) {
   };
 }
 
-const onNavigationStateChange = (prevState, currentState) => {
+const onNavigationStateChange = (track) => (prevState, currentState) => {
   const {
     routeName: currentScreen,
     params: currentParams,
@@ -33,6 +37,7 @@ const onNavigationStateChange = (prevState, currentState) => {
 
   if (prevScreen !== currentScreen || !isEqual(currentParams, prevParams)) {
     analytics.track(`Viewed Screen ${currentScreen}`);
+    track(`Viewed Screen ${currentScreen}`);
     // Not tracking for now.
     // analytics.screen(currentScreen);
   }
@@ -45,7 +50,16 @@ analytics.setup(ApollosConfig.ASTRONOMER_KEY || 'a27aHBJqZgkDDfvZ4Q3Zr', {
   trackAppLifecycleEvents: true,
 });
 
-const CoreNavigationAnalytics = ({ children }) =>
-  children({ onNavigationStateChange });
+const CoreNavigationAnalytics = ({ children }) => (
+  <AnalyticsConsumer>
+    {({ track }) =>
+      children({ onNavigationStateChange: onNavigationStateChange(track) })
+    }
+  </AnalyticsConsumer>
+);
 
-export default CoreNavigationAnalytics;
+CoreNavigationAnalytics.propTypes = {
+  children: PropTypes.node,
+};
+
+export { CoreNavigationAnalytics as default, analytics as coreAnalytics };
