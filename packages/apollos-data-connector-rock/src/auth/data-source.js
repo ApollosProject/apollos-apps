@@ -24,12 +24,6 @@ export default class AuthDataSource extends RockApolloDataSource {
 
     if (userCookie) {
       try {
-        const person = await this.lookupUserFromCache({ userCookie });
-        if (person) {
-          return person;
-        }
-
-        // No person in the cache, let's try their cookie.
         const request = await this.request('People/GetCurrentPerson').get({
           options: {
             headers: { cookie: userCookie, 'Authorization-Token': null },
@@ -38,9 +32,13 @@ export default class AuthDataSource extends RockApolloDataSource {
         this.context.currentPerson = request;
         return request;
       } catch (e) {
-        throw new AuthenticationError(
-          `Invalid user cookie; Rock returned error ${e}`
-        );
+        const person = await this.lookupUserFromCache({ userCookie });
+
+        if (!person) {
+          throw new AuthenticationError('Invalid user cookie; no person found');
+        }
+        // TODO: Send over a new cookie to be stored in the `set-cookie` header.
+        return person;
       }
     }
     throw new AuthenticationError('Must be logged in');
@@ -48,17 +46,27 @@ export default class AuthDataSource extends RockApolloDataSource {
 
   lookupUserFromCache = async ({ userCookie }) => {
     const { Cache } = this.context.dataSources;
-    const cachedPersonId = await Cache.get({
+    const cachedUserName = await Cache.get({
       key: `:userLogins:${crypto
         .createHash('sha1')
         .update(userCookie)
         .digest('hex')}`,
     });
-    if (!cachedPersonId) {
-      return null;
+    if (!cachedUserName) {
+      throw new AuthenticationError(
+        'Invalid user cookie; no eligble user login found'
+      );
+    }
+    const login = await this.request('/UserLogins')
+      .filter(`UserName eq '${cachedUserName}'`)
+      .expand('Person')
+      .first();
+
+    if (!login || !login.personId) {
+      throw new AuthenticationError('Invalid user cookie; no user login found');
     }
     return this.request('/People')
-      .filter(`Id eq ${cachedPersonId}`)
+      .filter(`Id eq ${login.personId}`)
       .first();
   };
 
@@ -100,7 +108,6 @@ export default class AuthDataSource extends RockApolloDataSource {
       const cookie = await this.fetchUserCookie(identity, password);
       const sessionId = await this.createSession({ cookie });
       const token = generateToken({ cookie, sessionId });
-      const currentPerson = await this.getCurrentPerson({ cookie });
       this.context.rockCookie = cookie;
       this.context.userToken = token;
       this.context.sessionId = sessionId;
@@ -109,7 +116,7 @@ export default class AuthDataSource extends RockApolloDataSource {
           .createHash('sha1')
           .update(cookie)
           .digest('hex')}`,
-        data: currentPerson.id,
+        data: identity,
         expiresIn: 31556952, // one year
       });
       return { token, rockCookie: cookie };

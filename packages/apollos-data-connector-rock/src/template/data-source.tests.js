@@ -4,15 +4,10 @@ import { Auth, Person } from '../index';
 
 import Template from './data-source';
 
-class Cache {
-  get = jest.fn();
-}
-
 const { getContext } = createTestHelpers({
   Person,
   Auth,
   Template: { dataSource: Template },
-  Cache: { dataSource: Cache },
 });
 
 describe('Template (Lava) Data Source', () => {
