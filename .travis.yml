@@ -1,3 +1,4 @@
+
 language: node_js
 node_js: '10.19.0'
 cache:
@@ -29,8 +30,8 @@ jobs:
       script:
         - yarn lint
     - script:
-        - travis_wait yarn ci-test
-        - travis_wait yarn codecov
+        - yarn ci-test
+        - yarn codecov
     - stage: Deploy Api
       script: skip
       deploy:

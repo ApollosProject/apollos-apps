@@ -1,17 +1,25 @@
 import AuthDataSource from '../data-source';
 import * as Person from '../../people';
 
+class CacheDataSource {
+  set = jest.fn();
+
+  get = jest.fn();
+}
+
 describe('Auth', () => {
   const tokenMock = Promise.resolve('some token');
 
   Date.now = jest.fn(() => 1482363367071);
 
   const PersonDataSource = Person.dataSource;
+
   class AuthWithContext extends AuthDataSource {
     context = {
       rockCookie: 'some cookie',
       dataSources: {
         Person: new PersonDataSource(),
+        Cache: new CacheDataSource(),
       },
     };
   }
@@ -51,6 +59,71 @@ describe('Auth', () => {
     });
     expect(result).toMatchSnapshot();
     expect(Auth.post.mock.calls).toMatchSnapshot();
+  });
+
+  it('should try and find an auth token from redis when curent cookie is invalid', async () => {
+    Auth.get = jest.fn(() => {
+      throw new Error();
+    });
+    Auth.context.rockCookie = 'invalid-cookie';
+
+    expect(Auth.getCurrentPerson()).rejects.toThrowErrorMatchingSnapshot();
+    expect(Auth.context.dataSources.Cache.get.mock.calls).toMatchSnapshot();
+  });
+
+  it("should throw an error when looking up a user login that doesn't exist while retrying getCurrentPerson", async () => {
+    const originalGet = Auth.get;
+    Auth.get = jest.fn(async (path) => {
+      if (path.includes('UserLogins')) {
+        return [];
+      }
+      throw new Error();
+    });
+    Auth.context.dataSources.Cache.get = jest.fn(() => 'username@example.com');
+    await expect(
+      Auth.getCurrentPerson()
+    ).rejects.toThrowErrorMatchingSnapshot();
+    expect(Auth.context.dataSources.Cache.get.mock.calls).toMatchSnapshot();
+    expect(Auth.get.mock.calls).toMatchSnapshot();
+    Auth.get = originalGet;
+  });
+
+  it("should throw an error when looking up a user that doesn't exist while retrying getCurrentPerson", async () => {
+    const originalGet = Auth.get;
+    Auth.get = jest.fn(async (path) => {
+      if (path.includes('UserLogins')) {
+        return [{ personId: 123 }];
+      }
+      if (path.includes('Id%20eq%20123')) {
+        return [];
+      }
+      throw new Error();
+    });
+    Auth.context.dataSources.Cache.get = jest.fn(() => 'username@example.com');
+    await expect(
+      Auth.getCurrentPerson()
+    ).rejects.toThrowErrorMatchingSnapshot();
+    expect(Auth.context.dataSources.Cache.get.mock.calls).toMatchSnapshot();
+    expect(Auth.get.mock.calls).toMatchSnapshot();
+    Auth.get = originalGet;
+  });
+
+  it('should return a person while retrying getCurrentPerson', async () => {
+    const originalGet = Auth.get;
+    Auth.get = jest.fn(async (path) => {
+      if (path.includes('UserLogins')) {
+        return [{ personId: 123 }];
+      }
+      if (path.includes('Id%20eq%20123')) {
+        return [{ id: 123 }];
+      }
+      throw new Error();
+    });
+    Auth.context.dataSources.Cache.get = jest.fn(() => 'username@example.com');
+    await expect(Auth.getCurrentPerson()).resolves.toMatchSnapshot();
+    expect(Auth.context.dataSources.Cache.get.mock.calls).toMatchSnapshot();
+    expect(Auth.get.mock.calls).toMatchSnapshot();
+    Auth.get = originalGet;
   });
 
   it('should post with userProfile fields when creating a new user and map gender/birthdate', async () => {

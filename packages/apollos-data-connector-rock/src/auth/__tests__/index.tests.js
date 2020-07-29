@@ -16,7 +16,15 @@ ApollosConfig.loadJs({
   },
 });
 
-const { getContext, getSchema } = createTestHelpers({ Auth, Person });
+class CacheMock {
+  get = jest.fn();
+
+  set = jest.fn();
+}
+
+const Cache = { dataSource: CacheMock };
+
+const { getContext, getSchema } = createTestHelpers({ Auth, Person, Cache });
 
 describe('Auth', () => {
   let schema;
@@ -51,6 +59,7 @@ describe('Auth', () => {
     context.dataSources.Auth.getAuthToken = jest.fn(() => 'some token');
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
+    expect(context.dataSources.Cache.set.mock.calls).toMatchSnapshot();
   });
 
   it('throws invalid credentials error on bad password', async () => {
