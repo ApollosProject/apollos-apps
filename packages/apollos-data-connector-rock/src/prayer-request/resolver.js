@@ -3,7 +3,7 @@ import { createGlobalId } from '@apollosproject/server-core';
 export default {
   Mutation: {
     addPrayer: (root, args, { dataSources }) =>
-      dataSources.Prayer.addPrayer(args),
+      dataSources.PrayerRequest.addPrayer(args),
   },
   PrayerRequest: {
     id: ({ id }, args, context, { parentType }) =>

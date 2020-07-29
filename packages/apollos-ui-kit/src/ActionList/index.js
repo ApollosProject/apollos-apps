@@ -37,6 +37,7 @@ class ActionList extends PureComponent {
         image: ImageSourceType,
       })
     ),
+    actionListButtonTitle: PropTypes.string,
     isCard: PropTypes.bool,
     header: PropTypes.element,
     isLoading: PropTypes.bool,
@@ -59,6 +60,7 @@ class ActionList extends PureComponent {
     const {
       onPressActionItem,
       onPressActionListButton,
+      actionListButtonTitle,
       actions,
       header,
     } = this.props;
@@ -71,6 +73,7 @@ class ActionList extends PureComponent {
         <Content cardPadding={this.props.isCard}>
           {actions.map((item) => (
             <ActionListItem
+              {...get(item, 'relatedNode', {})}
               action={item.action || ''}
               key={item.id}
               label={item.subtitle || ''}
@@ -87,9 +90,9 @@ class ActionList extends PureComponent {
                 : {})}
             />
           ))}
-          {onPressActionListButton ? (
+          {onPressActionListButton && actionListButtonTitle ? (
             <FullWidthButton
-              title={'View More'}
+              title={actionListButtonTitle}
               type={'default'}
               pill={false}
               bordered

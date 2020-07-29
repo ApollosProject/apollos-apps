@@ -36,15 +36,18 @@ const PaginationDotActive = styled(
   'ui-prayer.PrayerSwiper.PaginationDot.Active'
 )(View);
 
-const StyledPrayerSwiper = withTheme(({ theme, orientation }) => ({
-  paginationStyle: {
-    ...(orientation === 'landscape' ? { top: theme.sizing.baseUnit } : {}), // fixes pagination placement in landscape mode
-    bottom: null, // pagination by default is rendered absolute bottom. This "overrides" that style declaration.
-    left: theme.sizing.baseUnit,
-    justifyContent: 'flex-start',
-    alignItem: 'flex-start',
-  },
-}))(Swiper);
+const StyledPrayerSwiper = withTheme(
+  ({ theme, orientation }) => ({
+    paginationStyle: {
+      ...(orientation === 'landscape' ? { top: theme.sizing.baseUnit } : {}), // fixes pagination placement in landscape mode
+      bottom: null, // pagination by default is rendered absolute bottom. This "overrides" that style declaration.
+      left: theme.sizing.baseUnit,
+      justifyContent: 'flex-start',
+      alignItem: 'flex-start',
+    },
+  }),
+  'ui-prayer.PrayerSwiper.StyledPrayerSwiper'
+)(({ swiperRef, ...otherProps }) => <Swiper ref={swiperRef} {...otherProps} />);
 
 class PrayerSwiper extends Component {
   static navigationOptions = () => ({
@@ -55,6 +58,7 @@ class PrayerSwiper extends Component {
 
   static propTypes = {
     children: PropTypes.func.isRequired,
+    index: PropTypes.number,
   };
 
   swiper = null;
@@ -69,7 +73,6 @@ class PrayerSwiper extends Component {
   // Creates ref to Swiper to be passed as a prop to children.
   setSwiperRef = (r) => {
     this.swiper = r;
-
     return this.swiper;
   };
 
@@ -94,13 +97,14 @@ class PrayerSwiper extends Component {
 
     return (
       <StyledPrayerSwiper
+        index={this.props.index}
         loadMinimal
         loop={false}
         /* Disables swipe gestures. We currently dont display a back button so this is our
          * only back navigation option. */
         // scrollEnabled={false}
         showsButtons={false}
-        ref={this.setSwiperRef}
+        swiperRef={this.setSwiperRef}
         renderPagination={this.renderPagination}
         activeDot={
           <SafeAreaView forceInset={forceInset}>

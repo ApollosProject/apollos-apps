@@ -8,4 +8,6 @@ export default gql`
     }
   }
   ${ApollosConfig.FRAGMENTS.ACTION_LIST_FEATURE_FRAGMENT}
+  # Following fragment nested inside the ActionlistFeature
+  ${ApollosConfig.FRAGMENTS.RELATED_NODE_FRAGMENT}
 `;

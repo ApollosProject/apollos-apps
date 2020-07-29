@@ -12,19 +12,25 @@ import {
 } from '@apollosproject/ui-kit';
 import { LiveConsumer } from '../..';
 
-const Header = styled(({ theme }) => ({
-  paddingTop: theme.sizing.baseUnit * 3,
-  paddingBottom: 0,
-}))(PaddedView);
+const Header = styled(
+  ({ theme }) => ({
+    paddingTop: theme.sizing.baseUnit * 3,
+    paddingBottom: 0,
+  }),
+  'ui-connected.HeroListFeatureConnected.HeroListFeature.Header'
+)(PaddedView);
 
 const Title = styled(
   ({ theme }) => ({
     color: theme.colors.text.tertiary,
   }),
-  'HeroListFeature.Title'
+  'ui-connected.HeroListFeatureConnected.HeroListFeature.Title'
 )(H6);
 
-const Subtitle = styled({}, 'HeroListFeature.Subtitle')(H3);
+const Subtitle = styled(
+  {},
+  'ui-connected.HeroListFeatureConnected.HeroListFeature.Subtitle'
+)(H3);
 
 const loadingStateArray = [
   {
@@ -125,8 +131,10 @@ const HeroListFeature = memo(
     onPressItem,
     subtitle,
     title,
+    primaryAction,
   }) => {
     const onPressHero = onPressHeroProp || onPressItem;
+    const onPressActionListButton = onPressHeroListButton || onPressItem;
     return (
       <ActionList
         isCard={false}
@@ -163,7 +171,8 @@ const HeroListFeature = memo(
         }
         actions={isLoading && !actions.length ? loadingStateObject : actions}
         onPressActionItem={onPressItem}
-        onPressActionListButton={onPressHeroListButton}
+        onPressActionListButton={() => onPressActionListButton(primaryAction)}
+        actionListButtonTitle={get(primaryAction, 'title')}
       />
     );
   }
@@ -182,6 +191,10 @@ HeroListFeature.propTypes = {
     PropTypes.node,
     PropTypes.object,
   ]),
+  primaryAction: PropTypes.shape({
+    title: PropTypes.string,
+    relatedNode: PropTypes.shape({}),
+  }),
   loadingStateObject: PropTypes.arrayOf(PropTypes.shape({})),
   onPressHero: PropTypes.func,
   onPressHeroListButton: PropTypes.func,

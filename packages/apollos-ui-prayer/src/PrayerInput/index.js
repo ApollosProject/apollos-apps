@@ -11,10 +11,13 @@ import {
   withTheme,
 } from '@apollosproject/ui-kit';
 
-const Input = styled(({ theme }) => ({
-  minHeight: theme.sizing.baseUnit * 3.25, // 🧙‍This magic numbers fixes jitter when you begin typing. At least one `baseUnit` is to ofset `paddingTop` on `Prompt`
-  paddingVertical: 0, // fixes jitter when you begin typing on Android
-}))(TextInput);
+const Input = styled(
+  ({ theme }) => ({
+    minHeight: theme.sizing.baseUnit * 3.25, // 🧙‍This magic numbers fixes jitter when you begin typing. At least one `baseUnit` is to ofset `paddingTop` on `Prompt`
+    paddingVertical: 0, // fixes jitter when you begin typing on Android
+  }),
+  'ui-prayer.PrayerInput.Input'
+)(TextInput);
 
 const TextLimit = withTheme(
   ({ length, maxLength, maxLengthWarning }) => ({
@@ -61,6 +64,7 @@ const PrayerInput = ({
   maxLength,
   maxLengthWarning,
   prompt,
+  onChangeText,
   ...TextInputProps
 }) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -81,6 +85,11 @@ const PrayerInput = ({
     return onPress && onPress({ isEditing: true, prayer });
   };
 
+  const handleOnChangeText = (text) => {
+    setPrayer(text);
+    return onChangeText && onChangeText(text);
+  };
+
   return !isEditing ? (
     <Touchable onPress={handleOnPress}>
       <Prompt>
@@ -95,7 +104,7 @@ const PrayerInput = ({
         maxLength={maxLength}
         multiline
         onBlur={handleOnBlur}
-        onChangeText={(text) => setPrayer(text)}
+        onChangeText={handleOnChangeText}
         scrollEnabled={false}
         {...TextInputProps}
       >
@@ -117,6 +126,7 @@ const PrayerInput = ({
 };
 
 PrayerInput.propTypes = {
+  onChangeText: PropTypes.func,
   onBlur: PropTypes.func,
   onPress: PropTypes.func,
   maxLength: PropTypes.number,
@@ -125,7 +135,7 @@ PrayerInput.propTypes = {
 };
 
 PrayerInput.defaultProps = {
-  prompt: "I'm thankful for...",
+  prompt: 'I need prayer for...',
   maxLength: 280,
   maxLengthWarning: 20,
 };

@@ -21,6 +21,7 @@ export const ImageSourceType = PropTypes.oneOfType([
 const sizeCache = {};
 
 const getCacheKey = (source) => {
+  if (!source) return undefined;
   if (source.size && source.fileLabel)
     return `${source.size}-${source.fileLabel}`;
   if (source.url) return source.url;
@@ -37,7 +38,7 @@ const getCachedSources = (_sources = []) => {
   });
 
   return sources.map((source) => ({
-    uri: (source.url || '').replace(/^http:\/\/|^\/\//i, 'https://'),
+    uri: (source?.url || '').replace(/^http:\/\/|^\/\//i, 'https://'),
     cache: 'force-cache',
     ...source,
     ...(sizeCache[getCacheKey(source)] || {}),

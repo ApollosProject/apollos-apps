@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/ui-onboarding",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "src/index.js",
   "files": [
@@ -52,7 +52,7 @@
     "@react-native-community/async-storage": "^1.5.1",
     "formik": "1.5.1",
     "graphql-tag": "2.9.2",
-    "lodash": "4.17.13",
+    "lodash": "4.17.19",
     "moment": "2.22.2",
     "react-is": "^16.8.6",
     "react-native-geolocation-service": "^3.0.0",

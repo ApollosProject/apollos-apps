@@ -20,6 +20,7 @@ jest.mock('react-native-music-control', () => ({
   enableControl: jest.fn(),
   on: jest.fn(),
   setNowPlaying: jest.fn(),
+  updatePlayback: jest.fn(),
 }));
 
 jest.mock('Animated', () => {
