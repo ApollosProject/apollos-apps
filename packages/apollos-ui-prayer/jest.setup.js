@@ -11,6 +11,12 @@ jest.mock('react-native-safe-area-context', () => ({
   SafeAreaProvider: ({ children }) => children,
 }));
 
+// jest.mock('../../node_modules/@metarouter/analytics-react-native', () => ({
+jest.mock('@metarouter/analytics-react-native', () => ({
+  track: jest.fn(),
+  setup: jest.fn(),
+}));
+
 // jest.mock('react-navigation', () => {
 //   const ActualNavigation = require.requireActual('react-navigation');
 //   return {
