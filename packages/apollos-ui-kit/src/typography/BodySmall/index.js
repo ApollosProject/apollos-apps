@@ -22,7 +22,7 @@ const styles = styled(({ theme, bold, italic }) => {
     fontFamily: fontStack,
     color: theme.colors.text.primary,
   };
-}, 'ui-kit.Typography.BodySmall');
+}, 'BodySmall');
 
 const BodySmall = compose(
   setDisplayName('BodySmall'),

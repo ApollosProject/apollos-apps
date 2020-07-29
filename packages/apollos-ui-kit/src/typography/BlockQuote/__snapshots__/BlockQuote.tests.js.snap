@@ -49,9 +49,10 @@ exports[`the BlockQuote component should render a string 1`] = `
     style={
       Object {
         "color": "#303030",
-        "fontFamily": "InterUI-Regular",
+        "fontFamily": "InterUI-Italic",
         "fontSize": 16,
         "lineHeight": 26,
+        "textAlign": "center",
       }
     }
   >
