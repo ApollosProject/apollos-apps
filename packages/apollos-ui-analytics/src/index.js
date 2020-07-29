@@ -1,5 +1,6 @@
 import AnalyticsProvider, {
   AnalyticsConsumer,
+  AnalyticsContext,
   identify,
   track,
 } from './Provider';
@@ -9,6 +10,7 @@ import CoreNavigationAnalytics from './CoreNavigationAnalytics';
 
 export {
   AnalyticsConsumer,
+  AnalyticsContext,
   AnalyticsProvider,
   CoreNavigationAnalytics,
   identify,

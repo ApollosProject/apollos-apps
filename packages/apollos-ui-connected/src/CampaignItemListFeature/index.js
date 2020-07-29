@@ -19,15 +19,20 @@ const Title = styled(
   ({ theme }) => ({
     color: theme.colors.text.tertiary,
   }),
-  'CampaignItemListFeature.Title'
+  'ui-connected.CampaignListFeature.Title'
 )(H5);
 
-const Subtitle = styled({}, 'CampaignItemListFeature.Subtitle')(H2);
+const Subtitle = styled({}, 'ui-connected.CampaignItemListFeature.Subtitle')(
+  H2
+);
 
-const Header = styled(({ theme }) => ({
-  paddingTop: theme.sizing.baseUnit * 3,
-  paddingBottom: theme.sizing.baseUnit * 0.5,
-}))(PaddedView);
+const Header = styled(
+  ({ theme }) => ({
+    paddingTop: theme.sizing.baseUnit * 3,
+    paddingBottom: theme.sizing.baseUnit * 0.5,
+  }),
+  'ui-connected.CampaignItemListFeature.Header'
+)(PaddedView);
 
 const ListItemComponent = ({ contentId, labelText, ...item }) => (
   <LiveConsumer contentId={contentId}>
@@ -42,6 +47,7 @@ const ListItemComponent = ({ contentId, labelText, ...item }) => (
               }
             : { isLive, labelText })} // we only want to pass `labelText` if we are NOT live. If we do we will override the default logic in the FeaturedCard
           {...item}
+          isFeatured
         />
       );
     }}

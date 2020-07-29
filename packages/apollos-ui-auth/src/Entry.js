@@ -31,10 +31,13 @@ import {
   TitleText,
 } from './styles';
 
-const FullScreenGradientBackground = styled({
-  ...StyleSheet.absoluteFillObject,
-  resizeMode: 'cover',
-})(BackgroundView);
+const FullScreenGradientBackground = styled(
+  {
+    ...StyleSheet.absoluteFillObject,
+    resizeMode: 'cover',
+  },
+  'ui-auth.Entry.FullScreenGradientBackground'
+)(BackgroundView);
 
 const Entry = ({
   BackgroundComponent,

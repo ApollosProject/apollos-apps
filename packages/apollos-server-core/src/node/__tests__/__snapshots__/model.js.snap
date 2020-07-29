@@ -7,6 +7,13 @@ Array [
   Array [
     "456",
     "Test:fb344cb78f7b3f41416ffcbdc457e30c",
+    Object {
+      "info": Object {
+        "schema": Object {
+          "getTypeMap": [Function],
+        },
+      },
+    },
   ],
 ]
 `;

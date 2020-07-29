@@ -51,9 +51,27 @@ export default class Feature extends RockApolloDataSource {
     );
   }
 
-  async createActionListFeature({ algorithms = [], title, subtitle }) {
+  async createActionListFeature({
+    algorithms = [],
+    title,
+    subtitle,
+    primaryAction,
+  }) {
     // Generate a list of actions.
     const actions = () => this.runAlgorithms({ algorithms });
+
+    // Ensures that we have a generated ID for the Primary Action related node, if not provided.
+    if (
+      primaryAction &&
+      primaryAction.relatedNode &&
+      !primaryAction.relatedNode.id
+    ) {
+      primaryAction.relatedNode.id = createGlobalId( // eslint-disable-line
+        JSON.stringify(primaryAction.relatedNode),
+        primaryAction.relatedNode.__typename
+      );
+    }
+
     return {
       // The Feature ID is based on all of the action ids, added together.
       // This is naive, and could be improved.
@@ -63,11 +81,13 @@ export default class Feature extends RockApolloDataSource {
           algorithms,
           title,
           subtitle,
+          primaryAction,
         },
       }),
       actions,
       title,
       subtitle,
+      primaryAction,
       // Typanme is required so GQL knows specifically what Feature is being created
       __typename: 'ActionListFeature',
     };
@@ -78,10 +98,12 @@ export default class Feature extends RockApolloDataSource {
     heroAlgorithms = [],
     title,
     subtitle,
+    primaryAction,
   }) {
     // Generate a list of actions.
     let actions;
     let heroCard;
+
     // If we have a strategy for selecting the hero card.
     if (heroAlgorithms && heroAlgorithms.length) {
       // The actions come from the action algorithms
@@ -101,6 +123,18 @@ export default class Feature extends RockApolloDataSource {
       heroCard = allActions.length ? allActions[0] : null;
     }
 
+    // Ensures that we have a generated ID for the Primary Action related node, if not provided.
+    if (
+      primaryAction &&
+      primaryAction.relatedNode &&
+      !primaryAction.relatedNode.id
+    ) {
+      primaryAction.relatedNode.id = createGlobalId( // eslint-disable-line
+        JSON.stringify(primaryAction.relatedNode),
+        primaryAction.relatedNode.__typename
+      );
+    }
+
     return {
       // The Feature ID is based on all of the action ids, added together.
       // This is naive, and could be improved.
@@ -111,12 +145,14 @@ export default class Feature extends RockApolloDataSource {
           heroAlgorithms,
           title,
           subtitle,
+          primaryAction,
         },
       }),
       actions,
       heroCard,
       title,
       subtitle,
+      primaryAction,
       // Typanme is required so GQL knows specifically what Feature is being created
       __typename: 'HeroListFeature',
     };
@@ -198,7 +234,7 @@ export default class Feature extends RockApolloDataSource {
     };
   }
 
-  createPrayerListFeature({ algorithms = [], title, subtitle }) {
+  createPrayerListFeature({ algorithms = [], title, subtitle, isCard = true }) {
     const prayers = () => this.runAlgorithms({ algorithms });
     return {
       // The Feature ID is based on all of the action ids, added together.
@@ -209,17 +245,19 @@ export default class Feature extends RockApolloDataSource {
           algorithms,
           title,
           subtitle,
+          isCard,
         },
       }),
       prayers,
       title,
       subtitle,
+      isCard,
       // Typename is required so GQL knows specifically what Feature is being created
       __typename: 'PrayerListFeature',
     };
   }
 
-  async dailyPrayerAlgorithm({ limit = 15 } = {}) {
+  async dailyPrayerAlgorithm({ limit = 10 } = {}) {
     const { PrayerRequest } = this.context.dataSources;
     const cursor = await PrayerRequest.byDailyPrayerFeed();
     return cursor.top(limit).get();

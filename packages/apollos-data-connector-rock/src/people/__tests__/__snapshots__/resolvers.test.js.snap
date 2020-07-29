@@ -15,6 +15,13 @@ exports[`Person gets a single person when querying by root node 1`] = `
 Object {
   "data": Object {
     "node": Object {
+      "devices": Array [
+        Object {
+          "id": "Device:559b23fd0aa90e81b1c023e72e230fa1",
+          "notificationsEnabled": true,
+          "pushId": "abc-123",
+        },
+      ],
       "email": "isaac.hardy@newspring.cc",
       "firstName": "Isaac",
       "id": "Person:057b0758543270d1cb21784cac4d3f5c",

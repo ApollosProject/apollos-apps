@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import moment from 'moment';
 
 import Providers from '../Providers';
 import { H3 } from '../typography';
@@ -77,6 +78,12 @@ const actions = [
   },
 ];
 
+const eventActions = actions.map((action, i) => ({
+  ...action,
+  image: null,
+  start: moment(`November ${i + 1}, 2020`).toJSON(),
+}));
+
 describe('ActionList', () => {
   it('should render 5 items', () => {
     const tree = renderer.create(
@@ -120,7 +127,23 @@ describe('ActionList', () => {
   it('should render with onPressActionListButton', () => {
     const tree = renderer.create(
       <Providers>
-        <ActionList actions={actions} onPressActionListButton={jest.fn()} />
+        <ActionList
+          actions={actions}
+          actionListButtonTitle="Press Me!"
+          onPressActionListButton={jest.fn()}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with events', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ActionList
+          actions={eventActions}
+          actionListButtonTitle="Press Me!"
+          onPressActionListButton={jest.fn()}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
