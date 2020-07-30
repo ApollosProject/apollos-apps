@@ -81,6 +81,34 @@ describe('Campus', () => {
     expect(result).toMatchSnapshot();
   });
 
+  it('gets a campus by id', async () => {
+    const query = `
+      query {
+        node(id: "${createGlobalId(5, 'Campus')}") {
+          ...on Campus {
+            id
+            name
+            street1
+            street2
+            city
+            state
+            postalCode
+            latitude
+            longitude
+            image {
+              uri
+            }
+            distanceFromLocation
+          }
+        }
+      }
+    `;
+    const rootValue = {};
+
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+  });
+
   it('gets a campus by id with location', async () => {
     const query = `
       query {
@@ -184,6 +212,42 @@ describe('Campus', () => {
         {
           campus: {
             id: 1,
+            name: 'the best campus',
+            location: { latitude: 1.1, longitude: 2.2 },
+          },
+        },
+      ])
+    );
+
+    context.dataSources.Campus.get = getMock;
+
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+    expect(getMock.mock.calls).toMatchSnapshot();
+  });
+
+  it("gets current user's campus", async () => {
+    const query = `
+      query {
+        currentUser {
+          profile {
+            campus {
+              id
+              name
+              latitude
+              longitude
+            }
+          }
+        }
+      }
+    `;
+    const rootValue = {};
+
+    const getMock = jest.fn(() =>
+      Promise.resolve([
+        {
+          campus: {
+            id: 5,
             name: 'the best campus',
             location: { latitude: 1.1, longitude: 2.2 },
           },

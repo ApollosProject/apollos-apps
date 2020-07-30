@@ -22,6 +22,28 @@ Object {
 }
 `;
 
+exports[`Campus gets a campus by id 2`] = `
+Object {
+  "data": Object {
+    "node": Object {
+      "city": "Anderson",
+      "distanceFromLocation": null,
+      "id": "Campus:559b23fd0aa90e81b1c023e72e230fa1",
+      "image": Object {
+        "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=a47e8e69-9542-42de-9ed3-ff42fdc82417",
+      },
+      "latitude": 34.59814,
+      "longitude": -82.62045,
+      "name": "Anderson Campus",
+      "postalCode": "29621-3619",
+      "state": "SC",
+      "street1": "2940 Concord Rd",
+      "street2": "",
+    },
+  },
+}
+`;
+
 exports[`Campus gets a campus by id with location 1`] = `
 Object {
   "data": Object {
@@ -108,6 +130,19 @@ Object {
         "street1": "67 Algonquin Rd",
         "street2": "",
       },
+      Object {
+        "city": "Anderson",
+        "distanceFromLocation": null,
+        "id": "Campus:772fcb6087247ebad630814e2ce0cd16",
+        "image": null,
+        "latitude": 34.59814,
+        "longitude": -82.62045,
+        "name": "Anderson Campus",
+        "postalCode": "29621-3619",
+        "state": "SC",
+        "street1": "2940 Concord Rd",
+        "street2": "",
+      },
     ],
   },
 }
@@ -185,6 +220,19 @@ Object {
         "street2": "",
       },
       Object {
+        "city": "Anderson",
+        "distanceFromLocation": 0,
+        "id": "Campus:772fcb6087247ebad630814e2ce0cd16",
+        "image": null,
+        "latitude": 34.59814,
+        "longitude": -82.62045,
+        "name": "Anderson Campus",
+        "postalCode": "29621-3619",
+        "state": "SC",
+        "street1": "2940 Concord Rd",
+        "street2": "",
+      },
+      Object {
         "city": "Cincinnati",
         "distanceFromLocation": 328.43647347848844,
         "id": "Campus:4f68015ba18662a7409d1219a4ce013e",
@@ -252,6 +300,33 @@ Object {
 `;
 
 exports[`Campus gets current user's campus 2`] = `
+Array [
+  Array [
+    "/Groups/GetFamilies/51?loadAttributes=expanded&%24expand=Campus%2CCampus%2FLocation%2CCampus%2FLocation%2FImage&%24top=1",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Campus gets current user's campus 3`] = `
+Object {
+  "data": Object {
+    "currentUser": Object {
+      "profile": Object {
+        "campus": Object {
+          "id": "Campus:772fcb6087247ebad630814e2ce0cd16",
+          "latitude": 1.1,
+          "longitude": 2.2,
+          "name": "the best campus",
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`Campus gets current user's campus 4`] = `
 Array [
   Array [
     "/Groups/GetFamilies/51?loadAttributes=expanded&%24expand=Campus%2CCampus%2FLocation%2CCampus%2FLocation%2FImage&%24top=1",
