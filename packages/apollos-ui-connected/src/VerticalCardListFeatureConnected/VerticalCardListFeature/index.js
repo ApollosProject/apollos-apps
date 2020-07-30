@@ -17,15 +17,21 @@ const Title = styled(
   ({ theme }) => ({
     color: theme.colors.text.tertiary,
   }),
-  'VerticalCardListFeature.Title'
+  'ui-connected.VerticalCardListFeatureConnected.VerticalCardListFeature.Title'
 )(H5);
 
-const Subtitle = styled({}, 'VerticalCardListFeature.Subtitle')(H2);
+const Subtitle = styled(
+  {},
+  'ui-connected.VerticalCardListFeatureConnected.VerticalCardListFeature.Subtitle'
+)(H2);
 
-const Header = styled(({ theme }) => ({
-  paddingTop: theme.sizing.baseUnit * 3,
-  paddingBottom: theme.sizing.baseUnit * 0.5,
-}))(PaddedView);
+const Header = styled(
+  ({ theme }) => ({
+    paddingTop: theme.sizing.baseUnit * 3,
+    paddingBottom: theme.sizing.baseUnit * 0.5,
+  }),
+  'ui-connected.VerticalCardListFeatureConnected.VerticalCardListFeature.Header'
+)(PaddedView);
 
 // const getContent = ({ cards, isLoading }) => {
 //   let content = [];

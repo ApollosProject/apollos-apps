@@ -382,7 +382,7 @@ exports[`The PrayerCard component should render 1`] = `
               }
             }
           >
-            I'm thankful for...
+            I need prayer for...
           </Text>
         </View>
       </View>
@@ -773,7 +773,7 @@ exports[`The PrayerCard component should render a custom title 1`] = `
               }
             }
           >
-            I'm thankful for...
+            I need prayer for...
           </Text>
         </View>
       </View>
@@ -1385,7 +1385,7 @@ exports[`The PrayerCard component should render an avatar 1`] = `
               }
             }
           >
-            I'm thankful for...
+            I need prayer for...
           </Text>
         </View>
       </View>
@@ -1777,7 +1777,7 @@ exports[`The PrayerCard component should render with a cardColor 1`] = `
               }
             }
           >
-            I'm thankful for...
+            I need prayer for...
           </Text>
         </View>
       </View>
