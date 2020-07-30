@@ -20,11 +20,14 @@ export default {
     state: ({ location }) => location.state,
     street1: ({ location }) => location.street1,
     street2: ({ location }) => location.street2,
-    image: ({ location }) => ({
-      uri: createImageUrlFromGuid(location.image.guid),
-      width: location.image.width,
-      height: location.image.height,
-    }),
+    image: ({ location }) =>
+      location.image
+        ? {
+            uri: createImageUrlFromGuid(location.image.guid),
+            width: location.image.width,
+            height: location.image.height,
+          }
+        : null,
     distanceFromLocation: (campus, { location } = {}) => {
       if (location) {
         return latLonDistance(
