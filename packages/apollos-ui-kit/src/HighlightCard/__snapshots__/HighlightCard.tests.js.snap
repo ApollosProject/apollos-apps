@@ -127,6 +127,20 @@ exports[`HighlightCard should render a loading state with isLoading 1`] = `
       <View
         style={
           Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 16,
+            "height": 32,
+            "marginBottom": 16,
+            "paddingHorizontal": 12,
+            "width": 64,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
             "alignSelf": "stretch",
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
@@ -1546,6 +1560,322 @@ exports[`HighlightCard should render with custom labelText 1`] = `
 </View>
 `;
 
+exports[`HighlightCard should render with isLive 1`] = `
+<View
+  cardColor="#00676D"
+  style={
+    Object {
+      "backgroundColor": "#00676D",
+      "borderRadius": 16,
+      "marginHorizontal": 16,
+      "marginVertical": 12,
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+      "shadowOffset": Object {
+        "height": 2,
+        "width": 0,
+      },
+      "shadowOpacity": 1,
+      "shadowRadius": 8,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "borderRadius": 16,
+        "overflow": "hidden",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#A5A5A5",
+          "overflow": "hidden",
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        animate={null}
+        customAnimate={null}
+        onReady={false}
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "resizeMode": "cover",
+            "width": "100%",
+          }
+        }
+      >
+        <Image
+          maxAspectRatio={1.2}
+          minAspectRatio={0.75}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/800/1600/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "opacity": 0,
+              "resizeMode": "cover",
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <BVLinearGradient
+        colors={
+          Array [
+            1711276032,
+            2147483648,
+          ]
+        }
+        endPoint={
+          Object {
+            "x": 0,
+            "y": 1,
+          }
+        }
+        locations={
+          Array [
+            0,
+            1,
+          ]
+        }
+        overlayColor="#000000"
+        overlayType="gradient-bottom"
+        startPoint={
+          Object {
+            "x": 0,
+            "y": 0,
+          }
+        }
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "bottom": 0,
+          "paddingBottom": 32,
+          "paddingHorizontal": 24,
+          "paddingVertical": 16,
+          "position": "absolute",
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        bordered={false}
+        disabled={false}
+        pill={false}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#17B582",
+            "borderColor": "#17B582",
+            "borderRadius": 16,
+            "borderWidth": 2,
+            "elevation": 2,
+            "flexDirection": "row",
+            "height": 32,
+            "justifyContent": "center",
+            "opacity": 1,
+            "overflow": "hidden",
+            "paddingHorizontal": 12,
+          }
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight={7}
+          bbWidth={7}
+          height={7}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {
+                "marginRight": 8,
+              },
+              null,
+              Object {
+                "flex": 0,
+                "height": 7,
+                "width": 7,
+              },
+            ]
+          }
+          vbHeight={24}
+          vbWidth={24}
+          width={7}
+        >
+          <RNSVGGroup
+            fill={
+              Array [
+                0,
+                4278190080,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            font={Object {}}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            originX={0}
+            originY={0}
+            propList={Array []}
+            rotation={0}
+            scaleX={1}
+            scaleY={1}
+            skewX={0}
+            skewY={0}
+            stroke={null}
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+            vectorEffect={0}
+            x={0}
+            y={0}
+          >
+            <RNSVGCircle
+              cx="12"
+              cy="12"
+              fill={
+                Array [
+                  0,
+                  4294967295,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              r="12"
+              rotation={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+              vectorEffect={0}
+              x={0}
+              y={0}
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+        <Text
+          style={
+            Object {
+              "alignItems": "center",
+              "color": "#FFFFFF",
+              "fontFamily": "InterUI-Bold",
+              "fontSize": 12,
+              "justifyContent": "center",
+              "lineHeight": 18,
+              "textAlign": "center",
+            }
+          }
+        >
+          Live
+        </Text>
+      </View>
+      <View
+        hasSummary={false}
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "flexDirection": "row",
+            "paddingTop": 16,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "marginRight": 16,
+            }
+          }
+        >
+          <Text
+            numberOfLines={4}
+            style={
+              Object {
+                "color": "#F8F7F4",
+                "fontFamily": "InterUI-Black",
+                "fontSize": 24,
+                "lineHeight": 27.6,
+              }
+            }
+          >
+            Are you telling me that you built a time machine out of a DeLorean?
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
 exports[`HighlightCard should should render a like icon 1`] = `
 <View
   cardColor="#00676D"
@@ -2242,6 +2572,162 @@ exports[`HighlightCard should should render as isLive 1`] = `
         }
       }
     >
+      <View
+        bordered={false}
+        disabled={false}
+        pill={false}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#17B582",
+            "borderColor": "#17B582",
+            "borderRadius": 16,
+            "borderWidth": 2,
+            "elevation": 2,
+            "flexDirection": "row",
+            "height": 32,
+            "justifyContent": "center",
+            "opacity": 1,
+            "overflow": "hidden",
+            "paddingHorizontal": 12,
+          }
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight={7}
+          bbWidth={7}
+          height={7}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {
+                "marginRight": 8,
+              },
+              null,
+              Object {
+                "flex": 0,
+                "height": 7,
+                "width": 7,
+              },
+            ]
+          }
+          vbHeight={24}
+          vbWidth={24}
+          width={7}
+        >
+          <RNSVGGroup
+            fill={
+              Array [
+                0,
+                4278190080,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            font={Object {}}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            originX={0}
+            originY={0}
+            propList={Array []}
+            rotation={0}
+            scaleX={1}
+            scaleY={1}
+            skewX={0}
+            skewY={0}
+            stroke={null}
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+            vectorEffect={0}
+            x={0}
+            y={0}
+          >
+            <RNSVGCircle
+              cx="12"
+              cy="12"
+              fill={
+                Array [
+                  0,
+                  4294967295,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              r="12"
+              rotation={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+              vectorEffect={0}
+              x={0}
+              y={0}
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+        <Text
+          style={
+            Object {
+              "alignItems": "center",
+              "color": "#FFFFFF",
+              "fontFamily": "InterUI-Bold",
+              "fontSize": 12,
+              "justifyContent": "center",
+              "lineHeight": 18,
+              "textAlign": "center",
+            }
+          }
+        >
+          Live
+        </Text>
+      </View>
       <View
         hasSummary={false}
         style={
