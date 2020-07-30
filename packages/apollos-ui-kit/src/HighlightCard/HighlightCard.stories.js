@@ -190,6 +190,19 @@ storiesOf('ui-kit/HighlightCard', module)
       labelText={'Quote'}
     />
   ))
+  .add('isLive', () => (
+    <HighlightCard
+      title={
+        'Are you telling me that you built a time machine out of a DeLorean?'
+      }
+      coverImage={[
+        {
+          uri: 'https://picsum.photos/800/1600/?random',
+        },
+      ]}
+      isLive
+    />
+  ))
   .add('theme', () => (
     <HighlightCard
       title={

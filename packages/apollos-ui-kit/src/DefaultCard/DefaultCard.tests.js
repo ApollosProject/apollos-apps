@@ -174,4 +174,22 @@ describe('DefaultCard', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render with isLive support', () => {
+    const tree = renderer.create(
+      <Providers>
+        <DefaultCard
+          title={
+            'Are you telling me that you built a time machine out of a DeLorean?'
+          }
+          coverImage={[
+            {
+              uri: 'https://picsum.photos/800/1600/?random',
+            },
+          ]}
+          isLive
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });

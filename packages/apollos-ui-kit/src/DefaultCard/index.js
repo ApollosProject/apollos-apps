@@ -48,17 +48,29 @@ const LabelPositioning = styled(({ theme }) => ({
   marginBottom: theme.sizing.baseUnit,
 }))(View);
 
-const renderLabel = (isLoading, LabelComponent, labelText, summary) => {
+const LiveIcon = withTheme(({ theme }) => ({
+  name: 'live-dot',
+  size: theme.helpers.rem(0.4375),
+  style: { marginRight: theme.sizing.baseUnit * 0.5 },
+}))(Icon);
+
+const renderLabel = (isLoading, LabelComponent, labelText, summary, isLive) => {
   let ComponentToRender = null;
 
   if (LabelComponent) {
     ComponentToRender = <LabelPositioning>{LabelComponent}</LabelPositioning>;
 
     // this always shows a loading state for labels
-  } else if (labelText || isLoading) {
+  } else if (labelText || isLoading || isLive) {
     ComponentToRender = (
       <LabelPositioning>
-        <CardLabel hasSummary={summary} title={labelText} type={'secondary'} />
+        <CardLabel
+          isLive={isLive}
+          hasSummary={summary}
+          title={labelText || (isLive ? 'Live' : null)}
+          type={'secondary'}
+          IconComponent={isLive ? LiveIcon : null}
+        />
       </LabelPositioning>
     );
   }
@@ -75,12 +87,13 @@ const DefaultCard = withIsLoading(
     LabelComponent,
     labelText,
     summary,
+    isLive,
   }) => (
     <Card isLoading={isLoading}>
       <Image source={coverImage} />
 
       <Content>
-        {renderLabel(isLoading, LabelComponent, labelText, summary)}
+        {renderLabel(isLoading, LabelComponent, labelText, summary, isLive)}
         {title ? <H3 numberOfLines={2}>{title}</H3> : null}
         {summary ? <Summary numberOfLines={2}>{summary}</Summary> : null}
       </Content>
