@@ -211,6 +211,24 @@ describe('HighlightCard', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render with isLive', () => {
+    const tree = renderer.create(
+      <Providers>
+        <HighlightCard
+          title={
+            'Are you telling me that you built a time machine out of a DeLorean?'
+          }
+          coverImage={[
+            {
+              uri: 'https://picsum.photos/800/1600/?random',
+            },
+          ]}
+          isLive
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should render with a custom theme', () => {
     const tree = renderer.create(
       <Providers>
