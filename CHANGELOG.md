@@ -1,3 +1,93 @@
+v1.4.3: June 22, 2020
+
+- Adds action list primary action support (a nice wide button) (#1492) (6f49b4db)
+- Hero list primary action (#1488) (96e475ae)
+- Connected prayer (#1483) (a2c24aee)
+- Adds core support for URL type and opening URLs Actions in w/ Features (#1487) (24023003)
+- Removes interaction sessions (#1486) (f03d4888)
+- Reduces Algolia calls (#1484) (59a28818)
+- Adds an AvatarCloud component to ui-kit (#1472) (9fab5dbf)
+- Prayer api (#1462) (1e51418d)
+- Move AvatarList component to ui-kit package (#1471) (210f85a1)
+- Adds PrayerFeature ui (#1464) (10e904f4)
+- Adds PrayerScreen component (#1466) (bcfa0fd7)
+- Adds PrayerCard and PrayerInput component (#1457) (75b62c0d)
+
+v1.4.2 June 5, 2020
+
+- Adds integrated universal links (#1474) (27a8fad4)
+
+v1.4.1: June 2, 2020
+
+- Adds Google Cast (#1397) (c9e60b7e)
+- Adds eslint plugin for react hooks (#1463) (51b0a6fa)
+- Adds webview feature height as a prop (#1453) (cbe1c5b4)
+- Adds ui-prayer package (#1451) (1d4c418e)
+- Adds Rookout Debug Information (#1456) (0151e368)
+- Adds withTheme to mapview confirm button so it can be overriden (#1452) (d85d8892)
+- Adds Webview feature (#1442) (2995f6dd)
+
+- Defaults link text color to secondary on Webview feature (#1459) (4cbcf103)
+- Ensures the mapview renders fine with campuses with a null lat/long (#1454) (02d0b8e5)
+- Ensures SearchCards without images still render (#1468) (b87c738e)
+- Deprecates HeroListFeature naming to HeroList (#1450) (abb4ab29)
+- Update yarn.lock (#1455) (2fccc03c)
+
+- Fixes DatePicker text invisible in dark mode (#1470) (35321e18)
+- Fixes TouchableScale animating when there is no "action/handler" (#1438) (5c78c5ab)\
+- Fixes schema and triggers canary build (#1460) (21438437)
+
+
+v1.4.0: May 4, 2020
+
+- Adds backwards compatibility for contentCardComponentMapper (#1445) (f334e76b)
+- Adds Up Next Feature + Interactions Enhancements (#1444) (44b0ab28)
+- Adds Hero list feature API and ConnectedComponent (#1441) (7e23a3c8)
+- Adds Pull to refetch on Features feed (#1437) (2c2fb437)
+- Adds HeroListFeature component to ui-connected package (#1428) (e7ede76f)
+- Exposes Component prop on ContentCardComponentMapper (#1443) (f900e7c7)
+- Fixes crash in search on android (#1440) (83f9abf1)\
+
+v1.4.0-beta.2: April 27, 2020
+
+- Adds CalendarActionImages from Willow and for Willow (#1434) (e5538c45)
+- Adds ability for HTMLView to handle non-http links (#1432) (8e5478fa)
+- Adds Features feed incremental loading (#1425) (8db9fbbf)
+
+- Refactors ActionListCard to be ActionList component (#1427) (255d7778)
+- Pulls new content items when opening content single (#1431) (d4bd596b)
+- Updates token.js for longer auth expiration (#1429) (dc5501d9)
+
+- Fixes barStyle to be correct for light and dark theme types (#1433) (e1dc6df1)
+- Fixes Html content doubling issue (#1430) (67d59a91)
+
+v1.4.0-beta.1: April 17, 2020
+
+- Refactors FeaturedFeedConnected to be a feed of feeds using FlatList (#1423) (5143cd80)
+- Adds support for Features to be fetched via their ID (#1422) (60d52095)
+- Bumps https-proxy-agent from 2.2.1 to 2.2.4 (#1424) (df6b51f6)
+
+v1.4.0-beta.0: April 15, 2020
+
+- Adds live consumer wrapping feed features (#1418) (6119b6e0)
+- Adds User feed algorithm (#1419) (4c3738af)
+- Adds FeaturesFeedConnected component (#1420) (f8e6827f)
+
+v1.3.1: April 13, 2020
+
+- Adds CampaignItemListFeature to ui-connected package (#1412) (7fd68e0b)
+- Adds Feature fragments (#1411) (046b50d1)
+
+- Moves horizontal card list feature to core (#1415) (520bb8ed)
+- Moves ActionListFeature to ui-connected (#1413) (1745010d)
+- Moves VerticalCardListFeature component to ui-connected packages (#1416) (72eae667)
+- Updates theme Shadow Value (#1408) (abf1778d)
+- Updates stories on start (#1414) (8b026a4f)
+- Updates CardListItem Features Resolver (#1407) (c1e3de9b)
+- Refactors Card Labels with Custom Icons (#1405) (10ff83f2)
+
+- Removes object syntax from JSX (#1409) (47c39362)
+
 v1.3.1-beta.0: April 6, 2020
 
 - Adds Interact when Loaded Component (#1395) (51826317)

@@ -1,11 +1,11 @@
 {
   "name": "@apollosproject/data-connector-rock",
-  "version": "1.3.1-beta.0",
+  "version": "1.4.3",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
   "scripts": {
-    "test": "jest",
-    "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
+    "test": "TZ=UTC jest",
+    "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib -s",
     "lint": "eslint ./src --ext .js"
   },
   "jest": {
@@ -17,11 +17,14 @@
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
     ],
+    "setupFiles": [
+      "jest-date-mock"
+    ],
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@apollosproject/data-schema": "^1.3.1-beta.0",
-    "@apollosproject/server-core": "^1.3.1-beta.0",
+    "@apollosproject/data-schema": "^1.4.3",
+    "@apollosproject/server-core": "^1.4.3",
     "awesome-phonenumber": "^2.4.2",
     "form-data": "^2.3.3",
     "hyphenation.en-us": "^0.2.1",
@@ -39,12 +42,13 @@
     "@apollosproject/rock-apollo-data-source": "*"
   },
   "devDependencies": {
-    "@apollosproject/apollo-server-env-mock": "^1.3.1-beta.0",
-    "@apollosproject/babel-preset-apollos": "^1.3.1-beta.0",
+    "@apollosproject/apollo-server-env-mock": "^1.4.3",
+    "@apollosproject/babel-preset-apollos": "^1.4.3",
     "apollo-server": "^2.11.0",
     "apollo-server-env": "^2.3.0",
     "graphql": "14.6.0",
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "jest-date-mock": "^1.0.8"
   },
   "publishConfig": {
     "access": "public"

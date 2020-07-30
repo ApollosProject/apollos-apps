@@ -1,14 +1,35 @@
+export ActionListFeatureConnected, {
+  ActionListFeature,
+  GET_ACTION_LIST_FEATURE,
+} from './ActionListFeatureConnected';
 export ContentCardConnected, {
-  contentCardComponentMapper,
+  ContentCardComponentMapper,
+  contentCardComponentMapper, // TODO: Update to `ContentCardComponentMapper` export below is for temporary backwards compatibility.
   GET_CONTENT_CARD,
 } from './ContentCardConnected';
-export { fetchMoreResolver, share, uploadPhoto } from './utils';
+export CampaignItemListFeature from './CampaignItemListFeature';
+export ContentHTMLViewConnected, {
+  GET_CONTENT_ITEM_CONTENT,
+} from './ContentHTMLViewConnected';
 export ContentSingleFeaturesConnected, {
   ContentSingleFeatures,
   GET_CONTENT_ITEM_FEATURES,
   ScriptureFeature,
   TextFeature,
+  WebviewFeature,
 } from './ContentSingleFeaturesConnected';
+export FeaturesFeedConnected, {
+  featuresFeedComponentMapper,
+  GET_FEED_FEATURES,
+} from './FeaturesFeedConnected';
+export HeroListFeatureConnected, {
+  HeroListFeature,
+  GET_HERO_LIST_FEATURE,
+} from './HeroListFeatureConnected';
+export HorizontalCardListFeatureConnected, {
+  HorizontalCardListFeature,
+  GET_HORIZONTAL_CARD_LIST_FEATURE,
+} from './HorizontalCardListFeatureConnected';
 export HorizontalContentCardConnected, {
   horizontalContentCardComponentMapper,
 } from './HorizontalContentCardConnected';
@@ -19,9 +40,7 @@ export {
   HorizontalLikedContentFeed,
   HorizontalLikedContentFeedConnected,
 } from './HorizontalLikedContentFeedConnected';
-export ContentHTMLViewConnected, {
-  GET_CONTENT_ITEM_CONTENT,
-} from './ContentHTMLViewConnected';
+export InteractWhenLoadedConnected from './InteractWhenLoadedConnected';
 export LikeButtonConnected, {
   LikeButton,
   getLikedContentItem,
@@ -43,6 +62,11 @@ export ShareButtonConnected, {
   GET_SHARE_CONTENT,
   ShareButton,
 } from './ShareButtonConnected';
-export UserAvatarConnected, { UserAvatarUpdate } from './UserAvatarConnected';
-export InteractWhenLoadedConnected from './InteractWhenLoadedConnected';
 export UpNextButtonConnected from './UpNextButtonConnected';
+export UserAvatarConnected, { UserAvatarUpdate } from './UserAvatarConnected';
+export { fetchMoreResolver, share, uploadPhoto } from './utils';
+export VerticalCardListFeatureConnected, {
+  VerticalCardListFeature,
+  GET_VERTICAL_CARD_LIST_FEATURE,
+} from './VerticalCardListFeatureConnected';
+export safeHandleUrl from './safeOpenUrl';

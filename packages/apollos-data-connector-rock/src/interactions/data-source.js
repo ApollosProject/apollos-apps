@@ -1,10 +1,77 @@
-import { parseGlobalId } from '@apollosproject/server-core';
+import { parseGlobalId, createGlobalId } from '@apollosproject/server-core';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import ApollosConfig from '@apollosproject/config';
-import { flatten } from 'lodash';
+import { flatten, get } from 'lodash';
 
 export default class Interactions extends RockApolloDataSource {
   resource = 'Interactions';
+
+  ADDITIONAL_INTERACTIONS_MAP = {
+    ContentItem: {
+      COMPLETE: this.updateSeriesStarted.bind(this),
+    },
+    PrayerRequest: {
+      PRAY: this.incrementPrayer.bind(this),
+    },
+  };
+
+  async incrementPrayer({ id }) {
+    const { PrayerRequest } = this.context.dataSources;
+    return PrayerRequest.incrementPrayed(id);
+  }
+
+  async updateSeriesStarted({ id }) {
+    const { ContentItem } = this.context.dataSources;
+    // Get all the parents
+    const seriesParents = await (await ContentItem.getCursorByChildContentItemId(
+      id
+    )).get();
+    return Promise.all(
+      seriesParents.map(async (seriesParent) => {
+        // Check to see if we have started the series before
+        const parentType = ContentItem.resolveType(seriesParent);
+        const nodeId = createGlobalId(seriesParent.id, parentType);
+        const otherInteractions = await this.getInteractionsForCurrentUserAndNodes(
+          {
+            nodeIds: [nodeId],
+            actions: ['SERIES_START'],
+          }
+        );
+        // If we haven't, mark it as started
+        if (!otherInteractions.length) {
+          await this.createNodeInteraction({
+            nodeId,
+            action: 'SERIES_START',
+            additional: false, // we pass this prop to avoid recursive interaction creation
+          });
+        }
+      })
+    );
+  }
+
+  async createAdditionalInteractions({ id, __type, action }) {
+    // Get all the typenames for an entity.
+    // This will likely be something like, [UniversalContentItem, ContentItem]
+    const normalizedTypeNames = this.context.models.Node.getPossibleDataModels({
+      schema: this.context.schema,
+      __type,
+    });
+    // For each of this types
+    return Promise.all(
+      normalizedTypeNames.map(async (normalizedType) => {
+        // do we have a function to call?
+        const possibleFunction = get(
+          this.ADDITIONAL_INTERACTIONS_MAP,
+          `${normalizedType}.${action}`
+        );
+        // if so, call it.
+        if (possibleFunction) {
+          return possibleFunction({ id, __type, action });
+        }
+        return null;
+      })
+    );
+  }
 
   async createContentItemInteraction({ itemId, operationName, itemTitle }) {
     const {
@@ -24,7 +91,6 @@ export default class Interactions extends RockApolloDataSource {
     const interactionId = await this.post('/Interactions', {
       PersonAliasId: currentUser.primaryAliasId,
       InteractionComponentId: interactionComponent.id,
-      InteractionSessionId: this.context.sessionId,
       Operation: operationName,
       InteractionDateTime: new Date().toJSON(),
       InteractionSummary: `${operationName} - ${itemTitle}`,
@@ -82,7 +148,20 @@ export default class Interactions extends RockApolloDataSource {
     });
   }
 
-  async createNodeInteraction({ nodeId, action }) {
+  async getInteractionsForCurrentUser({ actions = [] }) {
+    let currentUser;
+    try {
+      currentUser = await this.context.dataSources.Auth.getCurrentPerson();
+    } catch (e) {
+      return [];
+    }
+    return this.request()
+      .filterOneOf(actions.map((a) => `Operation eq '${a}'`))
+      .andFilter(`PersonAliasId eq ${currentUser.primaryAliasId}`)
+      .get();
+  }
+
+  async createNodeInteraction({ nodeId, action, additional = true }) {
     const {
       dataSources: { RockConstants, Auth },
     } = this.context;
@@ -107,12 +186,15 @@ export default class Interactions extends RockApolloDataSource {
     await this.post('/Interactions', {
       PersonAliasId: currentUser.primaryAliasId,
       InteractionComponentId: interactionComponent.id,
-      InteractionSessionId: this.context.sessionId,
       Operation: action,
       InteractionDateTime: new Date().toJSON(),
       InteractionSummary: `${action}`,
       ForeignKey: nodeId,
     });
+
+    if (additional) {
+      this.createAdditionalInteractions({ id, __type, action });
+    }
 
     return {
       success: true,

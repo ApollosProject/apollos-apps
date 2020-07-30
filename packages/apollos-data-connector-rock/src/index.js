@@ -13,8 +13,9 @@ import * as Campus from './campuses';
 import * as Group from './groups';
 import * as Utils from './utils';
 import * as BinaryFiles from './binary-files';
-import * as Features from './features';
+import * as Feature from './features';
 import * as Event from './events';
+import * as PrayerRequest from './prayer-request';
 
 export {
   Followings,
@@ -32,6 +33,7 @@ export {
   Group,
   Utils,
   BinaryFiles,
-  Features,
+  Feature,
   Event,
+  PrayerRequest,
 };

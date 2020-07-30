@@ -23,7 +23,7 @@ import * as types from './types';
 
 // Bar Style
 // Control the status bar appearance
-export const barStyle = 'light-content';
+export const barStyle = 'dark-content';
 
 // Base colors.
 // These get used by theme types (see /types directory) to color
@@ -114,10 +114,10 @@ export const shadows = ({ colors: themeColors }) => ({
       shadowColor: themeColors.shadows.default,
       shadowOffset: {
         width: 0,
-        height: 1,
+        height: 2,
       },
       shadowOpacity: 1,
-      shadowRadius: 6,
+      shadowRadius: 8,
     },
     android: {
       elevation: 5,

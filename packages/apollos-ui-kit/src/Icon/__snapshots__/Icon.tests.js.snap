@@ -1933,6 +1933,170 @@ exports[`The CircleOutlineCheckMark icon renders correctly 1`] = `
 </RNSVGSvgView>
 `;
 
+exports[`The CircleOutlinePlus icon renders correctly 1`] = `
+<RNSVGSvgView
+  align="xMidYMid"
+  bbHeight={32}
+  bbWidth={32}
+  height={32}
+  meetOrSlice={0}
+  minX={0}
+  minY={0}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "borderWidth": 0,
+      },
+      undefined,
+      null,
+      Object {
+        "flex": 0,
+        "height": 32,
+        "width": 32,
+      },
+    ]
+  }
+  vbHeight={24}
+  vbWidth={24}
+  width={32}
+>
+  <RNSVGGroup
+    fill={
+      Array [
+        0,
+        4278190080,
+      ]
+    }
+    fillOpacity={1}
+    fillRule={1}
+    font={Object {}}
+    matrix={
+      Array [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ]
+    }
+    opacity={1}
+    originX={0}
+    originY={0}
+    propList={Array []}
+    rotation={0}
+    scaleX={1}
+    scaleY={1}
+    skewX={0}
+    skewY={0}
+    stroke={null}
+    strokeDasharray={null}
+    strokeDashoffset={null}
+    strokeLinecap={0}
+    strokeLinejoin={0}
+    strokeMiterlimit={4}
+    strokeOpacity={1}
+    strokeWidth={1}
+    vectorEffect={0}
+    x={0}
+    y={0}
+  >
+    <RNSVGPath
+      d="M12 23.5a11.5 11.5 0 100-23 11.5 11.5 0 000 23zm0 .5a12 12 0 100-24 12 12 0 000 24z"
+      fill={
+        Array [
+          0,
+          4281348144,
+        ]
+      }
+      fillOpacity={1}
+      fillRule={0}
+      matrix={
+        Array [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+        ]
+      }
+      opacity={1}
+      originX={0}
+      originY={0}
+      propList={
+        Array [
+          "fill",
+          "fillRule",
+        ]
+      }
+      rotation={0}
+      scaleX={1}
+      scaleY={1}
+      skewX={0}
+      skewY={0}
+      stroke={null}
+      strokeDasharray={null}
+      strokeDashoffset={null}
+      strokeLinecap={0}
+      strokeLinejoin={0}
+      strokeMiterlimit={4}
+      strokeOpacity={1}
+      strokeWidth={1}
+      vectorEffect={0}
+      x={0}
+      y={0}
+    />
+    <RNSVGPath
+      d="M17.7 11.7h-5.4V6.3a.3.3 0 00-.6 0v5.4H6.3a.3.3 0 000 .6h5.4v5.4a.3.3 0 00.6 0v-5.4h5.4a.3.3 0 000-.6z"
+      fill={
+        Array [
+          0,
+          4281348144,
+        ]
+      }
+      fillOpacity={1}
+      fillRule={1}
+      matrix={
+        Array [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+        ]
+      }
+      opacity={1}
+      originX={0}
+      originY={0}
+      propList={
+        Array [
+          "fill",
+        ]
+      }
+      rotation={0}
+      scaleX={1}
+      scaleY={1}
+      skewX={0}
+      skewY={0}
+      stroke={null}
+      strokeDasharray={null}
+      strokeDashoffset={null}
+      strokeLinecap={0}
+      strokeLinejoin={0}
+      strokeMiterlimit={4}
+      strokeOpacity={1}
+      strokeWidth={1}
+      vectorEffect={0}
+      x={0}
+      y={0}
+    />
+  </RNSVGGroup>
+</RNSVGSvgView>
+`;
+
 exports[`The CircleOutlineXMark icon renders correctly 1`] = `
 <RNSVGSvgView
   align="xMidYMid"
@@ -4982,6 +5146,124 @@ exports[`The PlaySolid icon renders correctly 1`] = `
   >
     <RNSVGPath
       d="M24 0a24 24 0 1 1 0 48 24 24 0 0 1 0-48zm9.2 25.5c.5-.4.8-.9.8-1.4 0-.7-.3-1.2-.8-1.5l-12-8.3c-.5-.2-1.1-.2-1.7 0-.5.3-.8.9-.8 1.5v16.4a1.7 1.7 0 0 0 1.7 1.7c.3 0 .6 0 1-.2l11.8-8.2z"
+      fill={
+        Array [
+          0,
+          4281348144,
+        ]
+      }
+      fillOpacity={1}
+      fillRule={1}
+      matrix={
+        Array [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+        ]
+      }
+      opacity={1}
+      originX={0}
+      originY={0}
+      propList={
+        Array [
+          "fill",
+        ]
+      }
+      rotation={0}
+      scaleX={1}
+      scaleY={1}
+      skewX={0}
+      skewY={0}
+      stroke={null}
+      strokeDasharray={null}
+      strokeDashoffset={null}
+      strokeLinecap={0}
+      strokeLinejoin={0}
+      strokeMiterlimit={4}
+      strokeOpacity={1}
+      strokeWidth={1}
+      vectorEffect={0}
+      x={0}
+      y={0}
+    />
+  </RNSVGGroup>
+</RNSVGSvgView>
+`;
+
+exports[`The Plus icon renders correctly 1`] = `
+<RNSVGSvgView
+  align="xMidYMid"
+  bbHeight={32}
+  bbWidth={32}
+  height={32}
+  meetOrSlice={0}
+  minX={0}
+  minY={0}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "borderWidth": 0,
+      },
+      undefined,
+      null,
+      Object {
+        "flex": 0,
+        "height": 32,
+        "width": 32,
+      },
+    ]
+  }
+  vbHeight={26}
+  vbWidth={24}
+  width={32}
+>
+  <RNSVGGroup
+    fill={
+      Array [
+        0,
+        4278190080,
+      ]
+    }
+    fillOpacity={1}
+    fillRule={1}
+    font={Object {}}
+    matrix={
+      Array [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ]
+    }
+    opacity={1}
+    originX={0}
+    originY={0}
+    propList={Array []}
+    rotation={0}
+    scaleX={1}
+    scaleY={1}
+    skewX={0}
+    skewY={0}
+    stroke={null}
+    strokeDasharray={null}
+    strokeDashoffset={null}
+    strokeLinecap={0}
+    strokeLinejoin={0}
+    strokeMiterlimit={4}
+    strokeOpacity={1}
+    strokeWidth={1}
+    vectorEffect={0}
+    x={0}
+    y={0}
+  >
+    <RNSVGPath
+      d="M19.3 12.5h-6.8V5.7a.4.4 0 00-.8 0v6.8H4.9a.4.4 0 000 .8h6.8v6.8a.4.4 0 00.8 0v-6.8h6.8a.4.4 0 000-.8z"
       fill={
         Array [
           0,

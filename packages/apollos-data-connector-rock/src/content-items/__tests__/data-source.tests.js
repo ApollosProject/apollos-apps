@@ -294,7 +294,7 @@ describe('ContentItemsModel', () => {
       reference: 'john 3',
     }));
     dataSource.context = {
-      dataSources: { Features: { createTextFeature, createScriptureFeature } },
+      dataSources: { Feature: { createTextFeature, createScriptureFeature } },
     };
     const result = dataSource.getFeatures({
       attributeValues: {
@@ -315,7 +315,7 @@ describe('ContentItemsModel', () => {
       id: 'TextFeature:123',
       body: 'something',
     }));
-    dataSource.context = { dataSources: { Features: { createTextFeature } } };
+    dataSource.context = { dataSources: { Feature: { createTextFeature } } };
     const result = dataSource.getFeatures({
       attributeValues: { textFeature: { id: 123, value: 'something' } },
     });
@@ -329,7 +329,7 @@ describe('ContentItemsModel', () => {
       id: 'TextFeature:123',
       body: 'something',
     }));
-    dataSource.context = { dataSources: { Features: { createTextFeature } } };
+    dataSource.context = { dataSources: { Feature: { createTextFeature } } };
     const result = dataSource.getFeatures({
       attributeValues: {
         textFeatures: {
@@ -349,7 +349,7 @@ describe('ContentItemsModel', () => {
       body: 'something',
     }));
     dataSource.context = {
-      dataSources: { Features: { createScriptureFeature } },
+      dataSources: { Feature: { createScriptureFeature } },
     };
     const result = dataSource.getFeatures({
       attributeValues: {
@@ -370,7 +370,7 @@ describe('ContentItemsModel', () => {
       body: 'something',
     }));
     dataSource.context = {
-      dataSources: { Features: { createScriptureFeature } },
+      dataSources: { Feature: { createScriptureFeature } },
     };
     const result = dataSource.getFeatures({
       attributeValues: {
@@ -392,7 +392,7 @@ describe('ContentItemsModel', () => {
       id: 'TextFeature:123',
       body: 'something',
     }));
-    dataSource.context = { dataSources: { Features: { createTextFeature } } };
+    dataSource.context = { dataSources: { Feature: { createTextFeature } } };
     const result = dataSource.getFeatures({
       attributeValues: {
         textFeatures: {
@@ -415,7 +415,7 @@ describe('ContentItemsModel', () => {
       id: 'TextFeature:123',
       body: 'something',
     }));
-    dataSource.context = { dataSources: { Features: { createTextFeature } } };
+    dataSource.context = { dataSources: { Feature: { createTextFeature } } };
     const result = dataSource.getFeatures({
       attributeValues: { textFeature: { id: 123, value: '' } },
     });
@@ -897,6 +897,63 @@ describe('ContentItemsModel', () => {
       dataSource.context.dataSources.Interactions
         .getInteractionsForCurrentUserAndNodes
     ).toMatchSnapshot();
+  });
+  it('gets series a user has viewed', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = jest.fn(() => Promise.resolve([{ id: 3 }]));
+    dataSource.getPercentComplete = jest.fn(({ id }) => (id === '1' ? 100 : 0));
+    dataSource.getFromIds = jest.fn();
+    dataSource.context = {
+      dataSources: {
+        Auth: { getCurrentPerson: () => ({ id: '1' }) },
+        Interactions: {
+          getInteractionsForCurrentUser: jest.fn(() =>
+            Promise.resolve([
+              { foreignKey: createGlobalId('1', 'UniversalContentItem') },
+              { foreignKey: createGlobalId('2', 'UniversalContentItem') },
+              { foreignKey: createGlobalId('2', 'UniversalContentItem') },
+              { foreignKey: createGlobalId('3', 'UniversalContentItem') },
+            ])
+          ),
+        },
+      },
+    };
+
+    await dataSource.getSeriesWithUserProgress();
+    expect(dataSource.getFromIds.mock.calls).toMatchSnapshot('get from ids');
+    expect(dataSource.getPercentComplete.mock.calls).toMatchSnapshot(
+      'get percent complete'
+    );
+  });
+  it('gets an empty array fpr series a user has viewed without a user', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = jest.fn(() => Promise.resolve([{ id: 3 }]));
+    dataSource.getPercentComplete = jest.fn(({ id }) => (id === '1' ? 100 : 0));
+    dataSource.getFromIds = jest.fn();
+    dataSource.context = {
+      dataSources: {
+        getCurrentPerson: () => {
+          throw new AuthenticationError();
+        },
+        Interactions: {
+          getInteractionsForCurrentUser: jest.fn(() =>
+            Promise.resolve([
+              { foreignKey: createGlobalId('1', 'UniversalContentItem') },
+              { foreignKey: createGlobalId('2', 'UniversalContentItem') },
+              { foreignKey: createGlobalId('2', 'UniversalContentItem') },
+              { foreignKey: createGlobalId('3', 'UniversalContentItem') },
+            ])
+          ),
+        },
+      },
+    };
+
+    const result = await dataSource.getSeriesWithUserProgress();
+    expect(dataSource.getFromIds.mock.calls).toMatchSnapshot('get from ids');
+    expect(dataSource.getPercentComplete.mock.calls).toMatchSnapshot(
+      'get percent complete'
+    );
+    expect(await result.get()).toMatchSnapshot('result');
   });
   it('returns a hyphonated titled if any words are longer than 7 characters', async () => {
     const dataSource = new ContentItemsDataSource();

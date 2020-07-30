@@ -1,50 +1,66 @@
 import React, { PureComponent } from 'react';
 import { PanResponder, Animated, View, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
+import GoogleCast from 'react-native-google-cast';
 
 import { styled, withTheme } from '@apollosproject/ui-kit';
 
 import { PlayheadConsumer, ControlsConsumer } from '../PlayheadState';
 import Timestamp from './Timestamp';
 
-const Container = styled({
-  width: '100%',
-  flexDirection: 'row',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-})(View);
+const Container = styled(
+  {
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  'ui-media.MediaPlayer.Seeker.Container'
+)(View);
 
-const TrackContainer = styled(({ minimal, knobSize }) => ({
-  height: knobSize / 2,
-  flexGrow: 1,
-  justifyContent: 'center',
-  paddingTop: minimal ? 20 : knobSize / 2,
-  paddingBottom: minimal ? 0 : knobSize / 2,
-}))(View);
+const TrackContainer = styled(
+  ({ minimal, knobSize }) => ({
+    height: knobSize / 2,
+    flexGrow: 1,
+    justifyContent: 'center',
+    paddingTop: minimal ? 20 : knobSize / 2,
+    paddingBottom: minimal ? 0 : knobSize / 2,
+  }),
+  'ui-media.MediaPlayer.Seeker.TrackContainer'
+)(View);
 
-const Track = styled(({ theme, minimal, knobSize }) => ({
-  height: knobSize / 2,
-  overflow: 'hidden',
-  borderRadius: minimal ? 0 : knobSize / 2,
-  backgroundColor: minimal
-    ? theme.colors.transparent
-    : theme.colors.darkSecondary,
-}))(View);
+const Track = styled(
+  ({ theme, minimal, knobSize }) => ({
+    height: knobSize / 2,
+    overflow: 'hidden',
+    borderRadius: minimal ? 0 : knobSize / 2,
+    backgroundColor: minimal
+      ? theme.colors.transparent
+      : theme.colors.darkSecondary,
+  }),
+  'ui-media.MediaPlayer.Seeker.Track'
+)(View);
 
-const ProgressBar = styled(({ theme }) => ({
-  height: theme.sizing.baseUnit,
-  backgroundColor: theme.colors.secondary,
-}))(View);
+const ProgressBar = styled(
+  ({ theme }) => ({
+    height: theme.sizing.baseUnit,
+    backgroundColor: theme.colors.secondary,
+  }),
+  'ui-media.MediaPlayer.Seeker.ProgressBar'
+)(View);
 
-const Knob = styled(({ theme, knobSize }) => ({
-  height: knobSize,
-  width: knobSize,
-  position: 'absolute',
-  right: 0,
-  elevation: 2,
-  borderRadius: knobSize,
-  backgroundColor: theme.colors.text.primary,
-}))(View);
+const Knob = styled(
+  ({ theme, knobSize }) => ({
+    height: knobSize,
+    width: knobSize,
+    position: 'absolute',
+    right: 0,
+    elevation: 2,
+    borderRadius: knobSize,
+    backgroundColor: theme.colors.text.primary,
+  }),
+  'ui-media.MediaPlayer.Seeker.Knob'
+)(View);
 
 /**
  * Animated Seeker component.
@@ -60,6 +76,7 @@ class Seeker extends PureComponent {
     onScrubbing: PropTypes.func,
     skip: PropTypes.func,
     knobSize: PropTypes.number, // defaults to theme.sizing.baseBorderRadius * 0.75 (12px, see line 210)
+    isCasting: PropTypes.bool,
   };
 
   isSeeking = false;
@@ -104,6 +121,9 @@ class Seeker extends PureComponent {
       const moveAmount = dx / this.state.width;
       const moveAmountInTime = moveAmount * this.props.duration;
       await this.props.skip(moveAmountInTime);
+
+      if (this.props.isCasting)
+        GoogleCast.seek(this.timeAtSeekingStart + moveAmountInTime);
 
       // Reset state
       this.offsetDriver.setValue(0);
@@ -208,7 +228,8 @@ const SeekerWithState = withTheme(
     },
   }) => ({
     knobSize: Math.floor(baseBorderRadius * 0.75),
-  })
+  }),
+  'ui-media.MediaPlayer.Seeker.SeekerWithState'
 )((props) => (
   <ControlsConsumer>
     {(controls) => (

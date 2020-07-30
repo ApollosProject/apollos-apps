@@ -1,15 +1,5 @@
-import ApollosConfig from '@apollosproject/config';
-
 import { times } from 'lodash';
 import Search from '../data-source';
-
-ApollosConfig.loadJs({
-  ALGOLIA: {
-    APPLICATION_ID: 'some-application-id',
-    API_KEY: 'some-api-key',
-    CONFIGURATION: {},
-  },
-});
 
 describe('The algolia search dataSource', () => {
   it('must be able to perform a full index of data from the ContentItem dataSource', async () => {

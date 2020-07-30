@@ -204,13 +204,14 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
               "borderRadius": 16,
               "height": 240,
               "margin": 8,
-              "shadowColor": "transparent",
+              "marginBottom": 12,
+              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
               "shadowOffset": Object {
-                "height": 1,
+                "height": 2,
                 "width": 0,
               },
               "shadowOpacity": 1,
-              "shadowRadius": 6,
+              "shadowRadius": 8,
               "width": 240,
             }
           }
@@ -401,13 +402,14 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
               "borderRadius": 16,
               "height": 240,
               "margin": 8,
-              "shadowColor": "transparent",
+              "marginBottom": 12,
+              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
               "shadowOffset": Object {
-                "height": 1,
+                "height": 2,
                 "width": 0,
               },
               "shadowOpacity": 1,
-              "shadowRadius": 6,
+              "shadowRadius": 8,
               "width": 240,
             }
           }
@@ -598,13 +600,14 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
               "borderRadius": 16,
               "height": 240,
               "margin": 8,
-              "shadowColor": "transparent",
+              "marginBottom": 12,
+              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
               "shadowOffset": Object {
-                "height": 1,
+                "height": 2,
                 "width": 0,
               },
               "shadowOpacity": 1,
-              "shadowRadius": 6,
+              "shadowRadius": 8,
               "width": 240,
             }
           }
@@ -795,13 +798,14 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
               "borderRadius": 16,
               "height": 240,
               "margin": 8,
-              "shadowColor": "transparent",
+              "marginBottom": 12,
+              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
               "shadowOffset": Object {
-                "height": 1,
+                "height": 2,
                 "width": 0,
               },
               "shadowOpacity": 1,
-              "shadowRadius": 6,
+              "shadowRadius": 8,
               "width": 240,
             }
           }

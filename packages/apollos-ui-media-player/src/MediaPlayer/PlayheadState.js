@@ -36,6 +36,7 @@ class ProviderWithoutApollo extends Component {
       // onBuffer: this.handleOnBuffer,
       onProgress: this.handleOnProgress,
       skip: this.skip,
+      skipTo: this.skipTo,
       isLoading: this.state.isLoading,
       // isBuffering: this.state.isBuffering,
     };
@@ -82,6 +83,18 @@ class ProviderWithoutApollo extends Component {
     });
   };
 
+  skipTo = async (time) => {
+    await this.props.client.mutate({
+      mutation: UPDATE_PLAYHEAD,
+      variables: {
+        currentTime: time,
+      },
+    });
+
+    this.seekingTo = time;
+    this.state.currentTime.setValue(time); // immediately set the playhead value so progress bar doesn't jump around
+  };
+
   skip = async (secondsToSkip) => {
     if (this.lastCurrentTime === undefined) return;
     const currentTime = Math.min(
@@ -89,15 +102,7 @@ class ProviderWithoutApollo extends Component {
       this.state.duration
     );
 
-    await this.props.client.mutate({
-      mutation: UPDATE_PLAYHEAD,
-      variables: {
-        currentTime,
-      },
-    });
-
-    this.seekingTo = currentTime;
-    this.state.currentTime.setValue(currentTime); // immediately set the playhead value so progress bar doesn't jump around
+    await this.skipTo(currentTime);
   };
 
   renderProviders = ({

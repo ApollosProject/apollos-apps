@@ -20,7 +20,9 @@ const dark = ({ colors, alpha }) => ({
       inactive: colors.darkTertiary,
     },
     shadows: {
-      default: colors.transparent,
+      default: Color(colors.black)
+        .fade(alpha.high)
+        .string(),
     },
     action: {
       default: colors.darkTertiary,
@@ -29,7 +31,7 @@ const dark = ({ colors, alpha }) => ({
       tertiary: colors.tertiary,
     },
   },
-  barStyle: 'dark-content',
+  barStyle: 'light-content',
 });
 
 export default dark;

@@ -1,4 +1,4 @@
-import { get } from 'lodash';
+import { get, uniq } from 'lodash';
 import moment from 'moment-timezone';
 import natural from 'natural';
 import sanitizeHtmlNode from 'sanitize-html';
@@ -9,7 +9,7 @@ import RockApolloDataSource, {
   parseKeyValueAttribute,
 } from '@apollosproject/rock-apollo-data-source';
 import ApollosConfig from '@apollosproject/config';
-import { createGlobalId } from '@apollosproject/server-core';
+import { createGlobalId, parseGlobalId } from '@apollosproject/server-core';
 
 import { createImageUrlFromGuid } from '../utils';
 
@@ -110,7 +110,7 @@ export default class ContentItem extends RockApolloDataSource {
   };
 
   getFeatures({ attributeValues }) {
-    const { Features } = this.context.dataSources;
+    const { Feature } = this.context.dataSources;
     const features = [];
 
     // TODO this should replace all other methods
@@ -122,7 +122,7 @@ export default class ContentItem extends RockApolloDataSource {
       switch (type) {
         case 'scripture':
           features.push(
-            Features.createScriptureFeature({
+            Feature.createScriptureFeature({
               reference: value,
               version: modifier,
               id: `${attributeValues.features.id}-${i}`,
@@ -131,7 +131,7 @@ export default class ContentItem extends RockApolloDataSource {
           break;
         case 'text':
           features.push(
-            Features.createTextFeature({
+            Feature.createTextFeature({
               text: value,
               id: `${attributeValues.features.id}-${i}`,
             })
@@ -146,7 +146,7 @@ export default class ContentItem extends RockApolloDataSource {
     const text = get(attributeValues, 'textFeature.value', '');
     if (text !== '') {
       features.push(
-        Features.createTextFeature({ text, id: attributeValues.textFeature.id })
+        Feature.createTextFeature({ text, id: attributeValues.textFeature.id })
       );
     }
 
@@ -156,7 +156,7 @@ export default class ContentItem extends RockApolloDataSource {
       const keyValueTextFeatures = parseKeyValueAttribute(texts);
       keyValueTextFeatures.forEach(({ value }, i) => {
         features.push(
-          Features.createTextFeature({
+          Feature.createTextFeature({
             text: value,
             id: `${attributeValues.textFeatures.id}-${i}`,
           })
@@ -169,7 +169,7 @@ export default class ContentItem extends RockApolloDataSource {
       const keyValueTextFeatures = parseKeyValueAttribute(scriptures);
       keyValueTextFeatures.forEach(({ value }, i) => {
         features.push(
-          Features.createScriptureFeature({
+          Feature.createScriptureFeature({
             reference: value,
             id: `${attributeValues.scriptureFeatures.id}-${i}`,
           })
@@ -516,8 +516,53 @@ export default class ContentItem extends RockApolloDataSource {
     return childItemsWithApollosIds[firstInteractedIndex - 1];
   }
 
+  async getSeriesWithUserProgress() {
+    const { Auth, Interactions } = this.context.dataSources;
+
+    // Safely exit if we don't have a current user.
+    try {
+      await Auth.getCurrentPerson();
+    } catch (e) {
+      return this.request().empty();
+    }
+
+    const interactions = await Interactions.getInteractionsForCurrentUser({
+      actions: ['SERIES_START'],
+    });
+
+    const ids = uniq(
+      interactions.map(({ foreignKey }) => {
+        const { id } = parseGlobalId(foreignKey);
+        return id;
+      })
+    );
+
+    // We need to make sure we don't include the campaign channels.
+    // We could also consider doing this using a whitelist.
+    // This also may be part of a broader conversation about how we identify the true parent of a content item
+    const blacklistedIds = (await this.byContentChannelIds(
+      ROCK_MAPPINGS.CAMPAIGN_CHANNEL_IDS
+    ).get()).map(({ id }) => `${id}`);
+
+    const completedIds = (await Promise.all(
+      ids.map(async (id) => ({
+        id,
+        percent: await this.getPercentComplete({ id }),
+      }))
+    ))
+      .filter(({ percent }) => percent === 100)
+      .map(({ id }) => id);
+
+    const finalIds = ids.filter(
+      (id) => ![...blacklistedIds, ...completedIds].includes(id)
+    );
+
+    return this.getFromIds(finalIds);
+  }
+
   async getPercentComplete({ id }) {
     const { Auth, Interactions } = this.context.dataSources;
+    // This can, and should, be cached in redis or some other system at some point
 
     // Safely exit if we don't have a current user.
     try {

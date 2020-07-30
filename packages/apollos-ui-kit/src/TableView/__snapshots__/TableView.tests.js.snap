@@ -13,7 +13,7 @@ exports[`the TableView Component should render 1`] = `
       Object {
         "backgroundColor": "#FFFFFF",
         "borderBottomWidth": 0.5,
-        "borderColor": "rgba(165, 165, 165, 0.6)",
+        "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
         "borderLeftWidth": 0,
         "borderRightWidth": 0,
         "borderTopWidth": 0.5,
@@ -173,7 +173,7 @@ exports[`the TableView Component should render 1`] = `
     <View
       style={
         Object {
-          "backgroundColor": "rgba(165, 165, 165, 0.6)",
+          "backgroundColor": "rgba(0, 0, 0, 0.09999999999999998)",
           "height": 0.5,
           "marginLeft": 10.666666666666666,
           "width": "100%",
@@ -436,7 +436,7 @@ exports[`the TableView Component should render 1`] = `
     <View
       style={
         Object {
-          "backgroundColor": "rgba(165, 165, 165, 0.6)",
+          "backgroundColor": "rgba(0, 0, 0, 0.09999999999999998)",
           "height": 0.5,
           "marginLeft": 10.666666666666666,
           "width": "100%",
@@ -478,7 +478,7 @@ exports[`the TableView Component should render 1`] = `
     <View
       style={
         Object {
-          "backgroundColor": "rgba(165, 165, 165, 0.6)",
+          "backgroundColor": "rgba(0, 0, 0, 0.09999999999999998)",
           "height": 0.5,
           "marginLeft": 10.666666666666666,
           "width": "100%",

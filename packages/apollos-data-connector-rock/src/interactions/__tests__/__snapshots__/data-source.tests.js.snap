@@ -1,5 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Interactions creates a SERIES_START interaction when completing a series item 1`] = `
+Array [
+  Array [
+    "/Apollos/GetInteractionsByForeignKeys?keys=UniversalContentItem%3A559b23fd0aa90e81b1c023e72e230fa1&%24filter=%28%28Operation%20eq%20%27SERIES_START%27%29%29%20and%20%28PersonAliasId%20eq%20456%29",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Interactions creates a SERIES_START interaction when completing a series item 2`] = `
+Array [
+  Array [
+    Object {
+      "action": "SERIES_START",
+      "additional": false,
+      "nodeId": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+    },
+  ],
+]
+`;
+
 exports[`Interactions creates a new content item interaction 1`] = `
 Object {
   "id": 1,
@@ -21,7 +43,6 @@ Array [
     Object {
       "InteractionComponentId": 789,
       "InteractionData": "apolloschurch://Interactions/ContentSingle?itemId=UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
-      "InteractionSessionId": undefined,
       "InteractionSummary": "Like - Super Cool Content",
       "Operation": "Like",
       "PersonAliasId": 456,
@@ -46,7 +67,6 @@ Array [
     Object {
       "ForeignKey": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
       "InteractionComponentId": 321,
-      "InteractionSessionId": undefined,
       "InteractionSummary": "VIEW",
       "Operation": "VIEW",
       "PersonAliasId": 456,
@@ -55,10 +75,34 @@ Array [
 ]
 `;
 
+exports[`Interactions creates additional interactions from a content item 1`] = `
+Array [
+  Array [
+    Object {
+      "__type": "UniversalContentItem",
+      "action": "COMPLETE",
+      "id": "1",
+    },
+  ],
+]
+`;
+
+exports[`Interactions does not create a SERIES_START interaction when completing a series item when you have completed other items  1`] = `
+Array [
+  Array [
+    "/Apollos/GetInteractionsByForeignKeys?keys=UniversalContentItem%3A559b23fd0aa90e81b1c023e72e230fa1&%24filter=%28%28Operation%20eq%20%27SERIES_START%27%29%29%20and%20%28PersonAliasId%20eq%20456%29",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Interactions does not create a SERIES_START interaction when completing a series item when you have completed other items  2`] = `Array []`;
+
 exports[`Interactions fetches interactions for a logged in user and nodeId 1`] = `
 Array [
   Array [
-    "/Apollos/GetInteractionsByForeignKeys?keys=UniversalContentItem%3A559b23fd0aa90e81b1c023e72e230fa1&%24filter=PersonAliasId%20eq%20456",
+    "/Apollos/GetInteractionsByForeignKeys?keys=UniversalContentItem%3A965b6e6d7046a885bea4e300b5c0400d&%24filter=PersonAliasId%20eq%20456",
     Object {},
     Object {},
   ],
@@ -66,6 +110,16 @@ Array [
 `;
 
 exports[`Interactions fetches interactions for a logged in user, nodeId, and actions 1`] = `
+Array [
+  Array [
+    "/Apollos/GetInteractionsByForeignKeys?keys=UniversalContentItem%3A559b23fd0aa90e81b1c023e72e230fa1&%24filter=%28%28Operation%20eq%20%27READ%27%29%20or%20%28Operation%20eq%20%27COMPLETE%27%29%29%20and%20%28PersonAliasId%20eq%20456%29",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Interactions fetches interactions for a logged in user, nodeId, and actions 2`] = `
 Array [
   Array [
     "/Apollos/GetInteractionsByForeignKeys?keys=UniversalContentItem%3A559b23fd0aa90e81b1c023e72e230fa1&%24filter=%28%28Operation%20eq%20%27READ%27%29%20or%20%28Operation%20eq%20%27COMPLETE%27%29%29%20and%20%28PersonAliasId%20eq%20456%29",
@@ -106,3 +160,23 @@ Object {
 exports[`Interactions returns a success: false from an invalid nodeId 2`] = `Array []`;
 
 exports[`Interactions returns a success: false from an invalid nodeId 3`] = `Array []`;
+
+exports[`Interactions use a lookup map to find additional interactions to fire 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "__type": "UniversalContentItem",
+        "action": "COMPLETE",
+        "id": 1,
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
