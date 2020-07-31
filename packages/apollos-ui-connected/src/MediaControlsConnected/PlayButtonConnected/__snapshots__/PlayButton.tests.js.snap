@@ -61,6 +61,7 @@ exports[`PlayButton should render 1`] = `
         }
       >
         <RCTImageView
+          fadeDuration={250}
           onLoad={[Function]}
           resizeMode="cover"
           source={
@@ -68,9 +69,7 @@ exports[`PlayButton should render 1`] = `
               Object {
                 "__typename": "ImageMediaSource",
                 "cache": "force-cache",
-                "height": 600,
                 "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,q_auto:eco,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dfe44d493-b69f-4721-83f7-7942c4f99125",
-                "width": 500,
               },
             ]
           }
@@ -79,7 +78,6 @@ exports[`PlayButton should render 1`] = `
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0,
               "overflow": "hidden",
               "position": "absolute",
               "right": 0,
@@ -327,6 +325,7 @@ exports[`PlayButton should render with custom play icon 1`] = `
         }
       >
         <RCTImageView
+          fadeDuration={250}
           onLoad={[Function]}
           resizeMode="cover"
           source={
@@ -334,9 +333,7 @@ exports[`PlayButton should render with custom play icon 1`] = `
               Object {
                 "__typename": "ImageMediaSource",
                 "cache": "force-cache",
-                "height": 600,
                 "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,q_auto:eco,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dfe44d493-b69f-4721-83f7-7942c4f99125",
-                "width": 500,
               },
             ]
           }
@@ -345,7 +342,6 @@ exports[`PlayButton should render with custom play icon 1`] = `
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 1,
               "overflow": "hidden",
               "position": "absolute",
               "right": 0,
@@ -593,6 +589,7 @@ exports[`PlayButton should render with custom title 1`] = `
         }
       >
         <RCTImageView
+          fadeDuration={250}
           onLoad={[Function]}
           resizeMode="cover"
           source={
@@ -600,9 +597,7 @@ exports[`PlayButton should render with custom title 1`] = `
               Object {
                 "__typename": "ImageMediaSource",
                 "cache": "force-cache",
-                "height": 600,
                 "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,q_auto:eco,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dfe44d493-b69f-4721-83f7-7942c4f99125",
-                "width": 500,
               },
             ]
           }
@@ -611,7 +606,6 @@ exports[`PlayButton should render with custom title 1`] = `
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 1,
               "overflow": "hidden",
               "position": "absolute",
               "right": 0,

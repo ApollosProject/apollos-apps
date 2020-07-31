@@ -297,10 +297,18 @@ exports[`The Onboarding LocationFinder component should render a BackgroundCompo
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/640/640/?random",
+              "url": "https://picsum.photos/640/640/?random",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1,
@@ -309,28 +317,7 @@ exports[`The Onboarding LocationFinder component should render a BackgroundCompo
             "width": "100%",
           }
         }
-      >
-        <Image
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/640/640/?random",
-                "url": "https://picsum.photos/640/640/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
     </View>
     <RCTSafeAreaView
       emulateUnlessSupported={true}
@@ -917,41 +904,26 @@ Array [
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  onReady={false}
+                <Image
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/300/300/?random",
+                      },
+                    ]
+                  }
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
                       "height": "100%",
                       "resizeMode": "cover",
-                      "width": "100%",
                     }
                   }
-                >
-                  <Image
-                    onLoad={[Function]}
-                    source={
-                      Array [
-                        Object {
-                          "cache": "force-cache",
-                          "uri": "https://picsum.photos/300/300/?random",
-                        },
-                      ]
-                    }
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "height": "100%",
-                        "opacity": 0,
-                        "resizeMode": "cover",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <View
                   style={
                     Object {

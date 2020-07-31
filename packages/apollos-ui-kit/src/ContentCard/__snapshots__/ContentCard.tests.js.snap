@@ -35,10 +35,17 @@ exports[`ContentCard renders Basic card, with Image 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/600/400/?random",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1,
@@ -47,27 +54,7 @@ exports[`ContentCard renders Basic card, with Image 1`] = `
             "width": "100%",
           }
         }
-      >
-        <Image
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/600/400/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
     </View>
     <View
       style={
@@ -340,10 +327,11 @@ exports[`ContentCard renders a Default Placeholder 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        isLoading={true}
+        onLoad={[Function]}
+        source={Array []}
         style={
           Object {
             "aspectRatio": 2,
@@ -352,21 +340,7 @@ exports[`ContentCard renders a Default Placeholder 1`] = `
             "width": "100%",
           }
         }
-      >
-        <Image
-          onLoad={[Function]}
-          source={Array []}
-          style={
-            Object {
-              "aspectRatio": 2,
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
     </View>
     <View
       style={
@@ -532,10 +506,17 @@ exports[`ContentCard renders as Tile/Image only 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/600/400/?random",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1,
@@ -544,28 +525,7 @@ exports[`ContentCard renders as Tile/Image only 1`] = `
             "width": "100%",
           }
         }
-      >
-        <Image
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/600/400/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
       <BVLinearGradient
         colors={
           Array [
@@ -1114,10 +1074,17 @@ exports[`ContentCard renders basic tile card, with Image 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/600/400/?random",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 2,
@@ -1126,28 +1093,7 @@ exports[`ContentCard renders basic tile card, with Image 1`] = `
             "width": "100%",
           }
         }
-      >
-        <Image
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/600/400/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "aspectRatio": 2,
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
     </View>
     <View
       style={
@@ -1425,10 +1371,11 @@ exports[`ContentCard renders with Default Placeholder 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        isLoading={true}
+        onLoad={[Function]}
+        source={Array []}
         style={
           Object {
             "aspectRatio": 2,
@@ -1437,21 +1384,7 @@ exports[`ContentCard renders with Default Placeholder 1`] = `
             "width": "100%",
           }
         }
-      >
-        <Image
-          onLoad={[Function]}
-          source={Array []}
-          style={
-            Object {
-              "aspectRatio": 2,
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
     </View>
     <View
       style={
@@ -1880,10 +1813,17 @@ exports[`ContentCard renders with an Image only 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/600/400/?random",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1,
@@ -1892,27 +1832,7 @@ exports[`ContentCard renders with an Image only 1`] = `
             "width": "100%",
           }
         }
-      >
-        <Image
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/600/400/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
       <BVLinearGradient
         colors={
           Array [

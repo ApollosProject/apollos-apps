@@ -33,13 +33,20 @@ exports[`ActionListItem should render 1`] = `
       }
     }
   >
-    <View
-      animate={null}
-      customAnimate={null}
-      onReady={false}
+    <Image
+      fadeDuration={250}
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://picsum.photos/600/400/?random",
+            "url": "https://picsum.photos/600/400/?random",
+          },
+        ]
+      }
       style={
         Object {
-          "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 16,
           "height": 64,
@@ -47,30 +54,7 @@ exports[`ActionListItem should render 1`] = `
           "width": 64,
         }
       }
-    >
-      <Image
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://picsum.photos/600/400/?random",
-              "url": "https://picsum.photos/600/400/?random",
-            },
-          ]
-        }
-        style={
-          Object {
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 64,
-            "marginRight": 16,
-            "opacity": 0,
-            "width": 64,
-          }
-        }
-      />
-    </View>
+    />
     <View
       style={
         Object {
@@ -148,13 +132,20 @@ exports[`ActionListItem should render a loading state 1`] = `
       }
     }
   >
-    <View
-      animate={null}
-      customAnimate={null}
-      onReady={false}
+    <Image
+      fadeDuration={250}
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://picsum.photos/600/400/?random",
+            "url": "https://picsum.photos/600/400/?random",
+          },
+        ]
+      }
       style={
         Object {
-          "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 16,
           "height": 64,
@@ -162,30 +153,7 @@ exports[`ActionListItem should render a loading state 1`] = `
           "width": 64,
         }
       }
-    >
-      <Image
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://picsum.photos/600/400/?random",
-              "url": "https://picsum.photos/600/400/?random",
-            },
-          ]
-        }
-        style={
-          Object {
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 64,
-            "marginRight": 16,
-            "opacity": 0,
-            "width": 64,
-          }
-        }
-      />
-    </View>
+    />
     <View
       style={
         Object {
@@ -260,13 +228,20 @@ exports[`ActionListItem should render with a label 1`] = `
       }
     }
   >
-    <View
-      animate={null}
-      customAnimate={null}
-      onReady={false}
+    <Image
+      fadeDuration={250}
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://picsum.photos/600/400/?random",
+            "url": "https://picsum.photos/600/400/?random",
+          },
+        ]
+      }
       style={
         Object {
-          "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 16,
           "height": 64,
@@ -274,30 +249,7 @@ exports[`ActionListItem should render with a label 1`] = `
           "width": 64,
         }
       }
-    >
-      <Image
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://picsum.photos/600/400/?random",
-              "url": "https://picsum.photos/600/400/?random",
-            },
-          ]
-        }
-        style={
-          Object {
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 64,
-            "marginRight": 16,
-            "opacity": 0,
-            "width": 64,
-          }
-        }
-      />
-    </View>
+    />
     <View
       style={
         Object {

@@ -155,8 +155,7 @@ exports[`The VerticalCardListFeatureConnected component should render 1`] = `
                 }
               >
                 <RCTImageView
-                  maxAspectRatio={1.78}
-                  minAspectRatio={1.2}
+                  fadeDuration={250}
                   onLoad={[Function]}
                   resizeMode="cover"
                   source={
@@ -164,9 +163,7 @@ exports[`The VerticalCardListFeatureConnected component should render 1`] = `
                       Object {
                         "__typename": "ImageMediaSource",
                         "cache": "force-cache",
-                        "height": 600,
                         "uri": "https://picsum.photos/200/200",
-                        "width": 500,
                       },
                     ]
                   }
@@ -174,7 +171,6 @@ exports[`The VerticalCardListFeatureConnected component should render 1`] = `
                     Object {
                       "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
-                      "opacity": 0,
                       "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
@@ -461,44 +457,29 @@ exports[`The VerticalCardListFeatureConnected component should render a featured
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  isLoading={true}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "",
+                      },
+                    ]
+                  }
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    maxAspectRatio={1}
-                    minAspectRatio={1}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={
-                      Array [
-                        Object {
-                          "cache": "force-cache",
-                          "uri": "",
-                        },
-                      ]
-                    }
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -961,44 +942,29 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  isLoading={true}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "",
+                      },
+                    ]
+                  }
                   style={
                     Object {
-                      "aspectRatio": 1,
+                      "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    maxAspectRatio={1.78}
-                    minAspectRatio={1.2}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={
-                      Array [
-                        Object {
-                          "cache": "force-cache",
-                          "uri": "",
-                        },
-                      ]
-                    }
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -1146,44 +1112,29 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  isLoading={true}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "",
+                      },
+                    ]
+                  }
                   style={
                     Object {
-                      "aspectRatio": 1,
+                      "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    maxAspectRatio={1.78}
-                    minAspectRatio={1.2}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={
-                      Array [
-                        Object {
-                          "cache": "force-cache",
-                          "uri": "",
-                        },
-                      ]
-                    }
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -1331,44 +1282,29 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  isLoading={true}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "",
+                      },
+                    ]
+                  }
                   style={
                     Object {
-                      "aspectRatio": 1,
+                      "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    maxAspectRatio={1.78}
-                    minAspectRatio={1.2}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={
-                      Array [
-                        Object {
-                          "cache": "force-cache",
-                          "uri": "",
-                        },
-                      ]
-                    }
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -1516,44 +1452,29 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  isLoading={true}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "",
+                      },
+                    ]
+                  }
                   style={
                     Object {
-                      "aspectRatio": 1,
+                      "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    maxAspectRatio={1.78}
-                    minAspectRatio={1.2}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={
-                      Array [
-                        Object {
-                          "cache": "force-cache",
-                          "uri": "",
-                        },
-                      ]
-                    }
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -1701,44 +1622,29 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  isLoading={true}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "",
+                      },
+                    ]
+                  }
                   style={
                     Object {
-                      "aspectRatio": 1,
+                      "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    maxAspectRatio={1.78}
-                    minAspectRatio={1.2}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={
-                      Array [
-                        Object {
-                          "cache": "force-cache",
-                          "uri": "",
-                        },
-                      ]
-                    }
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -1886,44 +1792,29 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  isLoading={true}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "",
+                      },
+                    ]
+                  }
                   style={
                     Object {
-                      "aspectRatio": 1,
+                      "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    maxAspectRatio={1.78}
-                    minAspectRatio={1.2}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={
-                      Array [
-                        Object {
-                          "cache": "force-cache",
-                          "uri": "",
-                        },
-                      ]
-                    }
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -2071,44 +1962,29 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  isLoading={true}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "",
+                      },
+                    ]
+                  }
                   style={
                     Object {
-                      "aspectRatio": 1,
+                      "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    maxAspectRatio={1.78}
-                    minAspectRatio={1.2}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={
-                      Array [
-                        Object {
-                          "cache": "force-cache",
-                          "uri": "",
-                        },
-                      ]
-                    }
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -2256,44 +2132,29 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  isLoading={true}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "",
+                      },
+                    ]
+                  }
                   style={
                     Object {
-                      "aspectRatio": 1,
+                      "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    maxAspectRatio={1.78}
-                    minAspectRatio={1.2}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={
-                      Array [
-                        Object {
-                          "cache": "force-cache",
-                          "uri": "",
-                        },
-                      ]
-                    }
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -2441,44 +2302,29 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  isLoading={true}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "",
+                      },
+                    ]
+                  }
                   style={
                     Object {
-                      "aspectRatio": 1,
+                      "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    maxAspectRatio={1.78}
-                    minAspectRatio={1.2}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={
-                      Array [
-                        Object {
-                          "cache": "force-cache",
-                          "uri": "",
-                        },
-                      ]
-                    }
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -2626,44 +2472,29 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  isLoading={true}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "",
+                      },
+                    ]
+                  }
                   style={
                     Object {
-                      "aspectRatio": 1,
+                      "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    maxAspectRatio={1.78}
-                    minAspectRatio={1.2}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={
-                      Array [
-                        Object {
-                          "cache": "force-cache",
-                          "uri": "",
-                        },
-                      ]
-                    }
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -2892,8 +2723,7 @@ exports[`The VerticalCardListFeatureConnected component should render as a featu
                 }
               >
                 <RCTImageView
-                  maxAspectRatio={1}
-                  minAspectRatio={1}
+                  fadeDuration={250}
                   onLoad={[Function]}
                   resizeMode="cover"
                   source={
@@ -2901,9 +2731,7 @@ exports[`The VerticalCardListFeatureConnected component should render as a featu
                       Object {
                         "__typename": "ImageMediaSource",
                         "cache": "force-cache",
-                        "height": 600,
                         "uri": "https://picsum.photos/200/200",
-                        "width": 500,
                       },
                     ]
                   }
@@ -2911,7 +2739,6 @@ exports[`The VerticalCardListFeatureConnected component should render as a featu
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "opacity": 1,
                       "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",

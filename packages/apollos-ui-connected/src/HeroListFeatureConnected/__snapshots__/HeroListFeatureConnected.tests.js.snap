@@ -94,8 +94,7 @@ Array [
           }
         >
           <RCTImageView
-            maxAspectRatio={1.2}
-            minAspectRatio={0.75}
+            fadeDuration={250}
             onLoad={[Function]}
             resizeMode="cover"
             source={
@@ -103,17 +102,14 @@ Array [
                 Object {
                   "__typename": "ImageMediaSource",
                   "cache": "force-cache",
-                  "height": 600,
                   "uri": "https://picsum.photos/200/200",
-                  "width": 500,
                 },
               ]
             }
             style={
               Object {
-                "aspectRatio": 0.8333333333333334,
+                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
-                "opacity": 0,
                 "overflow": "hidden",
                 "resizeMode": "cover",
                 "width": "100%",
@@ -296,6 +292,7 @@ Array [
       }
     >
       <RCTImageView
+        fadeDuration={250}
         onLoad={[Function]}
         resizeMode="cover"
         source={
@@ -303,9 +300,7 @@ Array [
             Object {
               "__typename": "ImageMediaSource",
               "cache": "force-cache",
-              "height": 600,
               "uri": "https://picsum.photos/200/200",
-              "width": 500,
             },
           ]
         }
@@ -315,7 +310,6 @@ Array [
             "borderRadius": 16,
             "height": 64,
             "marginRight": 16,
-            "opacity": 0,
             "overflow": "hidden",
             "width": 64,
           }
@@ -510,37 +504,22 @@ Array [
             }
           }
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <RCTImageView
+            fadeDuration={250}
+            isLoading={true}
+            onLoad={[Function]}
+            resizeMode="cover"
+            source={Array []}
             style={
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
+                "overflow": "hidden",
                 "resizeMode": "cover",
                 "width": "100%",
               }
             }
-          >
-            <RCTImageView
-              maxAspectRatio={1.2}
-              minAspectRatio={0.75}
-              onLoad={[Function]}
-              resizeMode="cover"
-              source={Array []}
-              style={
-                Object {
-                  "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
-                  "opacity": 0,
-                  "overflow": "hidden",
-                  "resizeMode": "cover",
-                  "width": "100%",
-                }
-              }
-            />
-          </View>
+          />
           <BVLinearGradient
             colors={
               Array [
@@ -646,45 +625,29 @@ Array [
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <RCTImageView
+        fadeDuration={250}
+        onLoad={[Function]}
+        resizeMode="cover"
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "",
+            },
+          ]
+        }
         style={
           Object {
-            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
             "height": 64,
             "marginRight": 16,
+            "overflow": "hidden",
             "width": 64,
           }
         }
-      >
-        <RCTImageView
-          onLoad={[Function]}
-          resizeMode="cover"
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "height": 64,
-              "marginRight": 16,
-              "opacity": 0,
-              "overflow": "hidden",
-              "width": 64,
-            }
-          }
-        />
-      </View>
+      />
       <View
         style={
           Object {
@@ -728,45 +691,29 @@ Array [
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <RCTImageView
+        fadeDuration={250}
+        onLoad={[Function]}
+        resizeMode="cover"
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "",
+            },
+          ]
+        }
         style={
           Object {
-            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
             "height": 64,
             "marginRight": 16,
+            "overflow": "hidden",
             "width": 64,
           }
         }
-      >
-        <RCTImageView
-          onLoad={[Function]}
-          resizeMode="cover"
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "height": 64,
-              "marginRight": 16,
-              "opacity": 0,
-              "overflow": "hidden",
-              "width": 64,
-            }
-          }
-        />
-      </View>
+      />
       <View
         style={
           Object {
@@ -810,45 +757,29 @@ Array [
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <RCTImageView
+        fadeDuration={250}
+        onLoad={[Function]}
+        resizeMode="cover"
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "",
+            },
+          ]
+        }
         style={
           Object {
-            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
             "height": 64,
             "marginRight": 16,
+            "overflow": "hidden",
             "width": 64,
           }
         }
-      >
-        <RCTImageView
-          onLoad={[Function]}
-          resizeMode="cover"
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "height": 64,
-              "marginRight": 16,
-              "opacity": 0,
-              "overflow": "hidden",
-              "width": 64,
-            }
-          }
-        />
-      </View>
+      />
       <View
         style={
           Object {
@@ -892,45 +823,29 @@ Array [
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <RCTImageView
+        fadeDuration={250}
+        onLoad={[Function]}
+        resizeMode="cover"
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "",
+            },
+          ]
+        }
         style={
           Object {
-            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
             "height": 64,
             "marginRight": 16,
+            "overflow": "hidden",
             "width": 64,
           }
         }
-      >
-        <RCTImageView
-          onLoad={[Function]}
-          resizeMode="cover"
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "height": 64,
-              "marginRight": 16,
-              "opacity": 0,
-              "overflow": "hidden",
-              "width": 64,
-            }
-          }
-        />
-      </View>
+      />
       <View
         style={
           Object {

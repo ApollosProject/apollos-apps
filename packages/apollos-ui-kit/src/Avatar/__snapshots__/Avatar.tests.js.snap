@@ -13,13 +13,20 @@ Array [
     }
     themeSize={40}
   >
-    <View
-      animate={null}
-      customAnimate={null}
-      onReady={false}
+    <Image
+      fadeDuration={250}
+      onLoad={[Function]}
+      size="small"
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
+          },
+        ]
+      }
       style={
         Object {
-          "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 20,
           "bottom": 0,
@@ -31,36 +38,9 @@ Array [
           "width": "100%",
         }
       }
-    >
-      <Image
-        onLoad={[Function]}
-        size="small"
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
-            },
-          ]
-        }
-        style={
-          Object {
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 20,
-            "bottom": 0,
-            "height": "100%",
-            "left": 0,
-            "opacity": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "width": "100%",
-          }
-        }
-        themeSize={40}
-        unread={true}
-      />
-    </View>
+      themeSize={40}
+      unread={true}
+    />
   </View>,
   <View
     style={
@@ -73,13 +53,20 @@ Array [
     }
     themeSize={80}
   >
-    <View
-      animate={null}
-      customAnimate={null}
-      onReady={false}
+    <Image
+      fadeDuration={250}
+      onLoad={[Function]}
+      size="medium"
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
+          },
+        ]
+      }
       style={
         Object {
-          "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 40,
           "bottom": 0,
@@ -91,36 +78,9 @@ Array [
           "width": "100%",
         }
       }
-    >
-      <Image
-        onLoad={[Function]}
-        size="medium"
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
-            },
-          ]
-        }
-        style={
-          Object {
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 40,
-            "bottom": 0,
-            "height": "100%",
-            "left": 0,
-            "opacity": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "width": "100%",
-          }
-        }
-        themeSize={80}
-        unread={true}
-      />
-    </View>
+      themeSize={80}
+      unread={true}
+    />
   </View>,
   <View
     style={
@@ -133,13 +93,20 @@ Array [
     }
     themeSize={120}
   >
-    <View
-      animate={null}
-      customAnimate={null}
-      onReady={false}
+    <Image
+      fadeDuration={250}
+      onLoad={[Function]}
+      size="large"
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
+          },
+        ]
+      }
       style={
         Object {
-          "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 60,
           "bottom": 0,
@@ -151,36 +118,9 @@ Array [
           "width": "100%",
         }
       }
-    >
-      <Image
-        onLoad={[Function]}
-        size="large"
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
-            },
-          ]
-        }
-        style={
-          Object {
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 60,
-            "bottom": 0,
-            "height": "100%",
-            "left": 0,
-            "opacity": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "width": "100%",
-          }
-        }
-        themeSize={120}
-        unread={true}
-      />
-    </View>
+      themeSize={120}
+      unread={true}
+    />
   </View>,
 ]
 `;
@@ -197,13 +137,19 @@ exports[`The Avatar component should render icon button 1`] = `
   }
   themeSize={40}
 >
-  <View
-    animate={null}
-    customAnimate={null}
-    onReady={false}
+  <Image
+    fadeDuration={250}
+    onLoad={[Function]}
+    source={
+      Array [
+        Object {
+          "cache": "force-cache",
+          "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
+        },
+      ]
+    }
     style={
       Object {
-        "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
         "borderRadius": 20,
         "bottom": 0,
@@ -215,34 +161,8 @@ exports[`The Avatar component should render icon button 1`] = `
         "width": "100%",
       }
     }
-  >
-    <Image
-      onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
-          },
-        ]
-      }
-      style={
-        Object {
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 20,
-          "bottom": 0,
-          "height": "100%",
-          "left": 0,
-          "opacity": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-          "width": "100%",
-        }
-      }
-      themeSize={40}
-    />
-  </View>
+    themeSize={40}
+  />
   <View
     style={
       Object {
@@ -603,13 +523,20 @@ exports[`The Avatar component should render large 1`] = `
   }
   themeSize={120}
 >
-  <View
-    animate={null}
-    customAnimate={null}
-    onReady={false}
+  <Image
+    fadeDuration={250}
+    onLoad={[Function]}
+    size="large"
+    source={
+      Array [
+        Object {
+          "cache": "force-cache",
+          "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
+        },
+      ]
+    }
     style={
       Object {
-        "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
         "borderRadius": 60,
         "bottom": 0,
@@ -621,35 +548,8 @@ exports[`The Avatar component should render large 1`] = `
         "width": "100%",
       }
     }
-  >
-    <Image
-      onLoad={[Function]}
-      size="large"
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
-          },
-        ]
-      }
-      style={
-        Object {
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 60,
-          "bottom": 0,
-          "height": "100%",
-          "left": 0,
-          "opacity": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-          "width": "100%",
-        }
-      }
-      themeSize={120}
-    />
-  </View>
+    themeSize={120}
+  />
 </View>
 `;
 
@@ -665,13 +565,20 @@ exports[`The Avatar component should render medium 1`] = `
   }
   themeSize={80}
 >
-  <View
-    animate={null}
-    customAnimate={null}
-    onReady={false}
+  <Image
+    fadeDuration={250}
+    onLoad={[Function]}
+    size="medium"
+    source={
+      Array [
+        Object {
+          "cache": "force-cache",
+          "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
+        },
+      ]
+    }
     style={
       Object {
-        "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
         "borderRadius": 40,
         "bottom": 0,
@@ -683,35 +590,8 @@ exports[`The Avatar component should render medium 1`] = `
         "width": "100%",
       }
     }
-  >
-    <Image
-      onLoad={[Function]}
-      size="medium"
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
-          },
-        ]
-      }
-      style={
-        Object {
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 40,
-          "bottom": 0,
-          "height": "100%",
-          "left": 0,
-          "opacity": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-          "width": "100%",
-        }
-      }
-      themeSize={80}
-    />
-  </View>
+    themeSize={80}
+  />
 </View>
 `;
 
@@ -727,13 +607,20 @@ exports[`The Avatar component should render small 1`] = `
   }
   themeSize={40}
 >
-  <View
-    animate={null}
-    customAnimate={null}
-    onReady={false}
+  <Image
+    fadeDuration={250}
+    onLoad={[Function]}
+    size="small"
+    source={
+      Array [
+        Object {
+          "cache": "force-cache",
+          "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
+        },
+      ]
+    }
     style={
       Object {
-        "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
         "borderRadius": 20,
         "bottom": 0,
@@ -745,35 +632,8 @@ exports[`The Avatar component should render small 1`] = `
         "width": "100%",
       }
     }
-  >
-    <Image
-      onLoad={[Function]}
-      size="small"
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
-          },
-        ]
-      }
-      style={
-        Object {
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 20,
-          "bottom": 0,
-          "height": "100%",
-          "left": 0,
-          "opacity": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-          "width": "100%",
-        }
-      }
-      themeSize={40}
-    />
-  </View>
+    themeSize={40}
+  />
 </View>
 `;
 
@@ -789,13 +649,19 @@ exports[`The Avatar component should render with a themeSize 1`] = `
   }
   themeSize={80}
 >
-  <View
-    animate={null}
-    customAnimate={null}
-    onReady={false}
+  <Image
+    fadeDuration={250}
+    onLoad={[Function]}
+    source={
+      Array [
+        Object {
+          "cache": "force-cache",
+          "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
+        },
+      ]
+    }
     style={
       Object {
-        "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
         "borderRadius": 40,
         "bottom": 0,
@@ -807,33 +673,7 @@ exports[`The Avatar component should render with a themeSize 1`] = `
         "width": "100%",
       }
     }
-  >
-    <Image
-      onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/all/member_images/members.nophoto_1000_1000_90_c1.jpg",
-          },
-        ]
-      }
-      style={
-        Object {
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 40,
-          "bottom": 0,
-          "height": "100%",
-          "left": 0,
-          "opacity": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-          "width": "100%",
-        }
-      }
-      themeSize={80}
-    />
-  </View>
+    themeSize={80}
+  />
 </View>
 `;

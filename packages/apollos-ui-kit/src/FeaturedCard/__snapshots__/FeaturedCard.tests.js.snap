@@ -36,10 +36,17 @@ exports[`FeaturedCard should render 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1,
@@ -48,29 +55,7 @@ exports[`FeaturedCard should render 1`] = `
             "width": "100%",
           }
         }
-      >
-        <Image
-          maxAspectRatio={1}
-          minAspectRatio={1}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
       <BVLinearGradient
         colors={
           Array [
@@ -195,10 +180,18 @@ exports[`FeaturedCard should render a loading state with isLoading 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        isLoading={true}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1,
@@ -207,30 +200,7 @@ exports[`FeaturedCard should render a loading state with isLoading 1`] = `
             "width": "100%",
           }
         }
-      >
-        <Image
-          maxAspectRatio={1}
-          minAspectRatio={1}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
       <BVLinearGradient
         colors={
           Array [
@@ -389,10 +359,17 @@ exports[`FeaturedCard should render with a custom actionIcon 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1,
@@ -401,29 +378,7 @@ exports[`FeaturedCard should render with a custom actionIcon 1`] = `
             "width": "100%",
           }
         }
-      >
-        <Image
-          maxAspectRatio={1}
-          minAspectRatio={1}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
       <BVLinearGradient
         colors={
           Array [
@@ -662,10 +617,17 @@ exports[`FeaturedCard should render with a custom theme 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1,
@@ -674,29 +636,7 @@ exports[`FeaturedCard should render with a custom theme 1`] = `
             "width": "100%",
           }
         }
-      >
-        <Image
-          maxAspectRatio={1}
-          minAspectRatio={1}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
       <BVLinearGradient
         colors={
           Array [
@@ -820,10 +760,17 @@ exports[`FeaturedCard should render with a summary 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1,
@@ -832,29 +779,7 @@ exports[`FeaturedCard should render with a summary 1`] = `
             "width": "100%",
           }
         }
-      >
-        <Image
-          maxAspectRatio={1}
-          minAspectRatio={1}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
       <BVLinearGradient
         colors={
           Array [
@@ -993,10 +918,17 @@ exports[`FeaturedCard should render with custom LabelComponent 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1,
@@ -1005,29 +937,7 @@ exports[`FeaturedCard should render with custom LabelComponent 1`] = `
             "width": "100%",
           }
         }
-      >
-        <Image
-          maxAspectRatio={1}
-          minAspectRatio={1}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
       <BVLinearGradient
         colors={
           Array [
@@ -1204,10 +1114,17 @@ exports[`FeaturedCard should render with custom labelText 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1,
@@ -1216,29 +1133,7 @@ exports[`FeaturedCard should render with custom labelText 1`] = `
             "width": "100%",
           }
         }
-      >
-        <Image
-          maxAspectRatio={1}
-          minAspectRatio={1}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
       <BVLinearGradient
         colors={
           Array [
@@ -1415,10 +1310,17 @@ exports[`FeaturedCard should should render a like icon 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1,
@@ -1427,29 +1329,7 @@ exports[`FeaturedCard should should render a like icon 1`] = `
             "width": "100%",
           }
         }
-      >
-        <Image
-          maxAspectRatio={1}
-          minAspectRatio={1}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
       <BVLinearGradient
         colors={
           Array [
@@ -1700,10 +1580,17 @@ exports[`FeaturedCard should should render as isLiked 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1,
@@ -1712,29 +1599,7 @@ exports[`FeaturedCard should should render as isLiked 1`] = `
             "width": "100%",
           }
         }
-      >
-        <Image
-          maxAspectRatio={1}
-          minAspectRatio={1}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
       <BVLinearGradient
         colors={
           Array [
@@ -1985,10 +1850,17 @@ exports[`FeaturedCard should should render as isLive 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1,
@@ -1997,29 +1869,7 @@ exports[`FeaturedCard should should render as isLive 1`] = `
             "width": "100%",
           }
         }
-      >
-        <Image
-          maxAspectRatio={1}
-          minAspectRatio={1}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
       <BVLinearGradient
         colors={
           Array [
@@ -2299,10 +2149,17 @@ exports[`FeaturedCard should should render with an action "button" 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1,
@@ -2311,29 +2168,7 @@ exports[`FeaturedCard should should render with an action "button" 1`] = `
             "width": "100%",
           }
         }
-      >
-        <Image
-          maxAspectRatio={1}
-          minAspectRatio={1}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
       <BVLinearGradient
         colors={
           Array [

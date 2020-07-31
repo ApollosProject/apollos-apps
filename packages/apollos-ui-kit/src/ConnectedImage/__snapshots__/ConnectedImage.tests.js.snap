@@ -2,6 +2,7 @@
 
 exports[`the ConnectedImage component should maintain aspect ratio 1`] = `
 <Image
+  fadeDuration={250}
   onLoad={[Function]}
   source={
     Array [
@@ -17,7 +18,6 @@ exports[`the ConnectedImage component should maintain aspect ratio 1`] = `
     Object {
       "aspectRatio": 1,
       "backgroundColor": "#A5A5A5",
-      "opacity": 1,
     }
   }
 />
@@ -25,8 +25,7 @@ exports[`the ConnectedImage component should maintain aspect ratio 1`] = `
 
 exports[`the ConnectedImage component should render between minAspectRatio and maxAspectRatio 1`] = `
 <Image
-  maxAspectRatio={1.5}
-  minAspectRatio={0.5}
+  fadeDuration={250}
   onLoad={[Function]}
   source={
     Array [
@@ -42,7 +41,6 @@ exports[`the ConnectedImage component should render between minAspectRatio and m
     Object {
       "aspectRatio": 1,
       "backgroundColor": "#A5A5A5",
-      "opacity": 1,
     }
   }
 />
@@ -50,6 +48,7 @@ exports[`the ConnectedImage component should render between minAspectRatio and m
 
 exports[`the ConnectedImage component should render immediately with a network image with a known width and height 1`] = `
 <Image
+  fadeDuration={250}
   onLoad={[Function]}
   source={
     Array [
@@ -64,7 +63,6 @@ exports[`the ConnectedImage component should render immediately with a network i
   style={
     Object {
       "backgroundColor": "#A5A5A5",
-      "opacity": 1,
     }
   }
 />
@@ -72,7 +70,7 @@ exports[`the ConnectedImage component should render immediately with a network i
 
 exports[`the ConnectedImage component should render with a maxAspectRatio 1`] = `
 <Image
-  maxAspectRatio={0.5}
+  fadeDuration={250}
   onLoad={[Function]}
   source={
     Array [
@@ -88,7 +86,6 @@ exports[`the ConnectedImage component should render with a maxAspectRatio 1`] = 
     Object {
       "aspectRatio": 0.5,
       "backgroundColor": "#A5A5A5",
-      "opacity": 1,
     }
   }
 />
@@ -96,7 +93,7 @@ exports[`the ConnectedImage component should render with a maxAspectRatio 1`] = 
 
 exports[`the ConnectedImage component should render with a minAspectRatio 1`] = `
 <Image
-  minAspectRatio={2}
+  fadeDuration={250}
   onLoad={[Function]}
   source={
     Array [
@@ -112,7 +109,6 @@ exports[`the ConnectedImage component should render with a minAspectRatio 1`] = 
     Object {
       "aspectRatio": 2,
       "backgroundColor": "#A5A5A5",
-      "opacity": 1,
     }
   }
 />

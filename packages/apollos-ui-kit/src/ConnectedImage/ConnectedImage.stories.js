@@ -1,6 +1,7 @@
 import React from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, FlatList, SafeAreaView } from 'react-native';
 import { storiesOf } from '@apollosproject/ui-storybook';
+import ActionListItem from '../ActionList/ActionListItem';
 
 import ConnectedImage from '.';
 
@@ -57,4 +58,34 @@ storiesOf('ui-kit/ConnectedImage', module)
         maxAspectRatio={1.2}
       />
     </ScrollView>
-  ));
+  ))
+  .add('flat list, 100 same images', () => {
+    const flex = { flex: 1 };
+    const images = [];
+    let i = 0;
+    while (i <= 100) {
+      images.push({
+        id: i,
+        uri:
+          'https://d170ij4dxqgjgp.cloudfront.net/assets/20200527/608b2f92-fa3d-4742-93ac-47f23a141d0a/Seven-Deadly-Sins-SM-1024-1024.jpg',
+      });
+      i += 1;
+    }
+    return (
+      <SafeAreaView style={flex}>
+        <FlatList
+          style={flex}
+          data={images}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => (
+            <ActionListItem
+              imageSource={item}
+              title={''}
+              label={''}
+              onPress={() => {}}
+            />
+          )}
+        />
+      </SafeAreaView>
+    );
+  });

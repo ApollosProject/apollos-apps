@@ -13,6 +13,7 @@ exports[`UserAvatarConnected component renders UserAvatarConnected 1`] = `
   themeSize={40}
 >
   <RCTImageView
+    fadeDuration={250}
     onLoad={[Function]}
     resizeMode="cover"
     source={
@@ -20,9 +21,7 @@ exports[`UserAvatarConnected component renders UserAvatarConnected 1`] = `
         Object {
           "__typename": "ImageMedia",
           "cache": "force-cache",
-          "height": 600,
           "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
-          "width": 500,
         },
       ]
     }
@@ -33,7 +32,6 @@ exports[`UserAvatarConnected component renders UserAvatarConnected 1`] = `
         "bottom": 0,
         "height": "100%",
         "left": 0,
-        "opacity": 0,
         "overflow": "hidden",
         "position": "absolute",
         "right": 0,

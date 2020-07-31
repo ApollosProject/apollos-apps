@@ -37,8 +37,7 @@ exports[`The SearchCardConnected component should render 1`] = `
       }
     >
       <RCTImageView
-        maxAspectRatio={1.2}
-        minAspectRatio={0.75}
+        fadeDuration={250}
         onLoad={[Function]}
         resizeMode="cover"
         source={
@@ -46,17 +45,14 @@ exports[`The SearchCardConnected component should render 1`] = `
             Object {
               "__typename": "ImageMediaSource",
               "cache": "force-cache",
-              "height": 600,
               "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dd3a96243-2558-4c04-bf41-3aadcf41771f",
-              "width": 500,
             },
           ]
         }
         style={
           Object {
-            "aspectRatio": 0.8333333333333334,
+            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "opacity": 0,
             "overflow": "hidden",
             "resizeMode": "cover",
             "width": "100%",

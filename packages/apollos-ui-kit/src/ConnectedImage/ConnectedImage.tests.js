@@ -118,15 +118,16 @@ describe('the ConnectedImage component', () => {
 
     expect(console.error.mock.calls).toMatchSnapshot(); // eslint-disable-line no-console
   });
-  it('should update the cache with image uri and sizes', async () => {
+  it('should update the cache with image uri and sizes', () => {
     const source = {
       url: '//via.placeholder.com/320x240',
+      width: 320,
+      height: 240,
     };
-    await updateCache(source);
+    updateCache(source);
 
     expect(getCachedSources(source)).toContainEqual(
       expect.objectContaining({
-        uri: 'https://via.placeholder.com/320x240',
         url: '//via.placeholder.com/320x240',
         width: 320,
         height: 240,

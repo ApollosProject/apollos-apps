@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 import { compose } from 'recompose';
 
 import styled from '../styled';
-import ProgressiveImage from '../ProgressiveImage';
+import ConnectedImage from '../ConnectedImage';
 import { getIsLoading } from '../isLoading';
 
 const Image = compose(
@@ -17,8 +17,8 @@ const Image = compose(
     },
     'Card.Image'
   )
-)(ProgressiveImage);
+)(ConnectedImage);
 
-Image.propTypes = ProgressiveImage.propTypes;
+Image.propTypes = ConnectedImage.propTypes;
 
 export default Image;
