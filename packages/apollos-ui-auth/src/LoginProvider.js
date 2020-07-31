@@ -46,6 +46,7 @@ class LoginProvider extends React.Component {
       authType: this.state.authType,
       userProfile: this.state.userProfile,
       newUser: this.state.newUser,
+      identity: this.state.identity,
     };
   }
 
