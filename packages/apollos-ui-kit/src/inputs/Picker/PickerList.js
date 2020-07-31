@@ -10,7 +10,7 @@ const StyledPicker = styled(
     borderTopWidth: StyleSheet.hairlineWidth,
     borderTopColor: theme.colors.background.inactive,
   }),
-  'Inputs.Picker.List'
+  'ui-kit.inputs.Picker.PickerList.StyledPicker'
 )(NativePicker);
 
 const PickerKeyboardView = styled(
@@ -23,7 +23,7 @@ const PickerKeyboardView = styled(
     borderTopColor: theme.colors.shadows.default,
     borderTopWidth: StyleSheet.hairlineWidth,
   }),
-  'Inputs.Picker.List.Keyboard'
+  'ui-kit.inputs.Picker.PickerList.PickerKeyboardView'
 )(View);
 
 const Toolbar = styled(
@@ -32,7 +32,7 @@ const Toolbar = styled(
     padding: theme.sizing.baseUnit / 2,
     backgroundColor: theme.colors.background.accent,
   }),
-  'Inputs.Picker.List.Toolbar'
+  'ui-kit.inputs.Picker.PickerList.Toolbar'
 )(View);
 
 const PickerList = ({ focused, onRequestClose, value, ...pickerProps }) => (

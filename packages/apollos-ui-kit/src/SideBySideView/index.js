@@ -9,12 +9,15 @@ import Left from './Left';
 export { default as Right } from './Right';
 export { default as Left } from './Left';
 
-const SideBySideView = styled(({ reversed = false, stretched = true }) => ({
-  flexDirection: reversed ? 'row-reverse' : 'row',
-  flexWrap: 'nowrap',
-  justifyContent: 'space-between',
-  alignItems: stretched ? 'stretch' : 'center',
-}))(View);
+const SideBySideView = styled(
+  ({ reversed = false, stretched = true }) => ({
+    flexDirection: reversed ? 'row-reverse' : 'row',
+    flexWrap: 'nowrap',
+    justifyContent: 'space-between',
+    alignItems: stretched ? 'stretch' : 'center',
+  }),
+  'ui-kit.SideBySideView'
+)(View);
 
 const ResponsiveSideBySideView = compose(
   mediaQuery(({ md }) => ({ minWidth: md }), renderComponent(SideBySideView))

@@ -13,7 +13,13 @@ export const textStyle = ({ theme }) => ({
   color: theme.colors.text.primary,
 });
 
-const withInputControlTextStyles = styled(textStyle, 'Input.Control');
-const withInputControlViewStyles = styled(baseStyle);
+const withInputControlTextStyles = styled(
+  textStyle,
+  'ui-kit.inputs.withInputControlStyles.withInputControlTextStyles'
+);
+const withInputControlViewStyles = styled(
+  baseStyle,
+  'ui-kit.inputs.withInputControlStyles.withInputControlViewStyles'
+);
 
 export { withInputControlTextStyles as default, withInputControlViewStyles };

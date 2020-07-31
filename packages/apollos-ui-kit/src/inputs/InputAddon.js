@@ -7,7 +7,7 @@ const InputAddon = styled(
     justifyContent: 'center',
     alignItems: 'center',
   },
-  'InputAddon'
+  'ui-kit.inputs.InputAddOn.InputAddon'
 )(View);
 
 const AddonRow = styled(
@@ -15,7 +15,7 @@ const AddonRow = styled(
     flexDirection: 'row',
     justifyContent: 'center',
   },
-  'InputWrapper.Row'
+  'ui-kit.inputs.InputAddOn.AddonRow'
 )(View);
 
 const TextInputWrapper = styled(
@@ -23,7 +23,7 @@ const TextInputWrapper = styled(
     flex: 1,
     alignSelf: 'flex-end',
   },
-  'InputWrapper.TextInput'
+  'ui-kit.inputs.InputAddOn.TextInputWrapper'
 )(View);
 
 export { InputAddon as default, AddonRow, TextInputWrapper };

@@ -20,21 +20,30 @@ const enhance = compose(
   }))
 );
 
-const Wrapper = styled(({ flexed }) => ({
-  flex: flexed ? 1 : null,
-  flexDirection: 'row',
-  alignItems: 'center',
-}))(View);
+const Wrapper = styled(
+  ({ flexed }) => ({
+    flex: flexed ? 1 : null,
+    flexDirection: 'row',
+    alignItems: 'center',
+  }),
+  'ui-kit.ChannelLabel.Wrapper'
+)(View);
 
-const PlaceholderWrapper = styled(({ theme, withIcon }) => ({
-  ...(withIcon
-    ? { paddingHorizontal: theme.sizing.baseUnit / 4 }
-    : { paddingRight: theme.sizing.baseUnit / 4 }),
-}))(View);
+const PlaceholderWrapper = styled(
+  ({ theme, withIcon }) => ({
+    ...(withIcon
+      ? { paddingHorizontal: theme.sizing.baseUnit / 4 }
+      : { paddingRight: theme.sizing.baseUnit / 4 }),
+  }),
+  'ui-kit.ChannelLabel.PlaceholderWrapper'
+)(View);
 
-const StyledH6 = styled(({ tint }) => ({
-  color: tint,
-}))(H6);
+const StyledH6 = styled(
+  ({ tint }) => ({
+    color: tint,
+  }),
+  'ui-kit.ChannelLabel.StyledH6'
+)(H6);
 
 const ChannelLabel = enhance(
   ({ label, tint, icon, withFlex, isLoading, iconSize, ...wrapperProps }) => (

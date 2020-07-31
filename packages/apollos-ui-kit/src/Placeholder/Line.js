@@ -12,7 +12,7 @@ export const Line = styled(
     width,
     alignSelf: 'stretch',
   }),
-  'Placeholder.Line'
+  'ui-kit.Placeholder.Line'
 )(({ style }) => <View style={style} />);
 
 export default Placeholder.connect(Line);

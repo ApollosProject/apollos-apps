@@ -24,7 +24,7 @@ const TableView = compose(
       borderLeftWidth: 0,
       borderRightWidth: 0,
     }),
-    'TableView'
+    'ui-kit.TableView'
   ),
   mediaQuery(
     ({ md, width }, { responsive = true }) => responsive && width > md,

@@ -12,7 +12,7 @@ const FocusedUnderline = styled(
       : theme.colors.action.secondary,
     bottom: 0,
   }),
-  'InputUnderline.focused'
+  'ui-kit.inputs.InputUnderline.FocusedUnderline'
 )(View);
 
 const BluredUnderline = styled(
@@ -21,7 +21,7 @@ const BluredUnderline = styled(
     backgroundColor: theme.colors.background.inactive,
     bottom: -StyleSheet.hairlineWidth,
   }),
-  'InputUnderline.blurred'
+  'ui-kit.inputs.InputUnderline.BlurredUnderline'
 )(View);
 
 const styles = StyleSheet.create({

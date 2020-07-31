@@ -31,11 +31,14 @@ const StyledCard = compose(
  * Overflow on iOS, when declared on the same element as a shadow, clips the shadow so overflow must
  * live on a child wrapper. https://github.com/facebook/react-native/issues/449
  */
-const OverflowFix = styled(({ theme, forceRatio }) => ({
-  borderRadius: theme.sizing.baseBorderRadius,
-  overflow: 'hidden',
-  ...(forceRatio ? { aspectRatio: forceRatio } : {}),
-}))(View);
+const OverflowFix = styled(
+  ({ theme, forceRatio }) => ({
+    borderRadius: theme.sizing.baseBorderRadius,
+    overflow: 'hidden',
+    ...(forceRatio ? { aspectRatio: forceRatio } : {}),
+  }),
+  'ui-kit.CardWrapper.OverflowFix'
+)(View);
 
 const Card = pure(({ children, forceRatio, ...otherProps }) => (
   <StyledCard forceRatio={forceRatio} {...otherProps}>

@@ -16,7 +16,7 @@ const AddIcon = withTheme(
     name: 'plus',
     size: theme.sizing.avatar.medium * 0.475,
   }),
-  'ui-kit.AvatarList.AddIcon'
+  'ui-kit.Avatar.AvatarList.AddIcon'
 )(Icon);
 
 const AddIconBackground = styled(
@@ -26,7 +26,7 @@ const AddIconBackground = styled(
       : theme.colors.action.primary,
     padding: theme.sizing.avatar.medium * 0.1625,
   }),
-  'ui-kit.AvatarList.AddIconBackground'
+  'ui-kit.Avatar.AvatarList.AddIconBackground'
 )(View);
 
 const AndroidTouchableRippleFix = styled(
@@ -35,7 +35,7 @@ const AndroidTouchableRippleFix = styled(
     marginRight: theme.sizing.baseUnit * 0.5,
     overflow: 'hidden',
   }),
-  'ui-kit.AvatarList.AndroidTouchableRippleFix'
+  'ui-kit.Avatar.AvatarList.AndroidTouchableRippleFix'
 )(View);
 
 const AvatarFeed = withTheme(
@@ -51,7 +51,7 @@ const AvatarFeed = withTheme(
     }),
     showsHorizontalScrollIndicator: false,
   }),
-  'ui-kit.AvatarList.AvatarFeed'
+  'ui-kit.Avatar.AvatarList.AvatarFeed'
 )(FlatList);
 
 // eslint-disable-next-line react/display-name, react/prop-types

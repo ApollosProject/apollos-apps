@@ -14,7 +14,7 @@ const OutlinedCircle = styled(
     alignItems: 'center',
     justifyContent: 'center',
   }),
-  'RadioButton.OutlinedCircle'
+  'ui-kit.inputs.Radio.RadioButtonIndicator.OutlinedCircle'
 )(View);
 
 const FilledCircle = styled(
@@ -24,7 +24,7 @@ const FilledCircle = styled(
     borderRadius: theme.sizing.baseUnit * 0.625,
     backgroundColor: theme.colors.primary,
   }),
-  'RadioButton.FilledCircle'
+  'ui-kit.inputs.Radio.RadioButtonIndicator.FilledCircle'
 )(View);
 
 class RadioButtonIndicator extends PureComponent {

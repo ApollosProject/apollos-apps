@@ -12,7 +12,7 @@ const withStyles = compose(
     ({ theme }) => ({
       backgroundColor: theme.colors.background.paper,
     }),
-    'TabBar'
+    'ui-kit.TabView.TabBar.withStyles'
   ),
   withTheme(({ theme, indicatorColor }) => ({
     indicatorColor: indicatorColor || theme.colors.tertiary,

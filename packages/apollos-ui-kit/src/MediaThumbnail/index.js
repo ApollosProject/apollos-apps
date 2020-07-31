@@ -10,15 +10,21 @@ import styled from '../styled';
 export MediaThumbnailItem from './Item';
 export MediaThumbnailIcon from './Icon';
 
-const StyledCard = styled(({ theme }) => ({
-  height: theme.sizing.baseUnit * 5,
-}))(Card);
+const StyledCard = styled(
+  ({ theme }) => ({
+    height: theme.sizing.baseUnit * 5,
+  }),
+  'ui-kit.MediaThumbnail.StyledCard'
+)(Card);
 
-const Overlay = styled(({ theme }) => ({
-  ...StyleSheet.absoluteFillObject,
-  backgroundColor: theme.colors.background.screen,
-  opacity: theme.alpha.low,
-}))(View);
+const Overlay = styled(
+  ({ theme }) => ({
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: theme.colors.background.screen,
+    opacity: theme.alpha.low,
+  }),
+  'ui-kit.MediaThumbnail.Overlay'
+)(View);
 
 const MediaThumbnail = ({
   image,

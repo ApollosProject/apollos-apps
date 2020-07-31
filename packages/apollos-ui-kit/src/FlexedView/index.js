@@ -6,7 +6,7 @@ const FlexedView = styled(
   {
     flex: 1,
   },
-  'FlexedView'
+  'ui-kit.FlexedView'
 )(View);
 
 export default FlexedView;

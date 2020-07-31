@@ -7,13 +7,10 @@ import styled from '../styled';
 export default compose(
   mediaQuery(
     ({ md }) => ({ minWidth: md }),
-    styled(
-      {
-        width: '41.6666666%',
-        height: '100%',
-        overflow: 'hidden',
-      },
-      'SideBySideView.Right'
-    )
+    styled({
+      width: '41.6666666%',
+      height: '100%',
+      overflow: 'hidden',
+    })
   )
 )(View);

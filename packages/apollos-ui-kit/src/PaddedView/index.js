@@ -7,7 +7,7 @@ const PaddedView = styled(
     paddingHorizontal: horizontal ? theme.sizing.baseUnit : 0,
     paddingVertical: vertical ? theme.sizing.baseUnit : 0,
   }),
-  'PaddedView'
+  'ui-kit.PaddedView'
 )(View);
 
 export default PaddedView;

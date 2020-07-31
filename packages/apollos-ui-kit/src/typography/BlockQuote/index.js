@@ -8,16 +8,19 @@ import { withThemeMixin } from '../../theme';
 import BodyText from '../BodyText';
 
 const Block = compose(
-  setDisplayName('BlockQuote'),
-  styled(({ theme }) => ({
-    alignSelf: 'stretch',
-    marginVertical: theme.helpers.verticalRhythm(2),
-    paddingVertical: theme.helpers.verticalRhythm(1.5),
-    paddingHorizontal: theme.sizing.baseUnit,
-    borderTopWidth: StyleSheet.hairlineWidth,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: theme.colors.text.tertiary,
-  })),
+  setDisplayName('ui-kit.Typography.BlockQuote.Block'),
+  styled(
+    ({ theme }) => ({
+      alignSelf: 'stretch',
+      marginVertical: theme.helpers.verticalRhythm(2),
+      paddingVertical: theme.helpers.verticalRhythm(1.5),
+      paddingHorizontal: theme.sizing.baseUnit,
+      borderTopWidth: StyleSheet.hairlineWidth,
+      borderBottomWidth: StyleSheet.hairlineWidth,
+      borderColor: theme.colors.text.tertiary,
+    }),
+    'ui-kit.Typography.BlockQuote.Block'
+  ),
   // Forced <BodyText> to inherit QuoteText styles.
   // This is necessary for HTMLView to properly style <blockquote>'s 😥
   withThemeMixin(({ theme }) => ({

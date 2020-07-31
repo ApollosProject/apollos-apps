@@ -11,7 +11,7 @@ export const Media = styled(
     borderRadius: borderRadius || theme.sizing.baseBorderRadius,
     backgroundColor: theme.colors.background.inactive,
   }),
-  'Placeholder.Media'
+  'ui-kit.Placeholder.Media'
 )(({ style }) => <View style={style} />);
 
 export default Placeholder.connect(Media);

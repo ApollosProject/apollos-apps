@@ -148,9 +148,12 @@ ConnectedImage.propTypes = {
   maxAspectRatio: aspectRatioPropValidator,
 };
 
-const enhanced = styled(({ theme }) => ({
-  backgroundColor: theme.colors.background.inactive,
-}))(ConnectedImage);
+const enhanced = styled(
+  ({ theme }) => ({
+    backgroundColor: theme.colors.background.inactive,
+  }),
+  'ui-kit.ConnectedImage.enhanced'
+)(ConnectedImage);
 
 enhanced.propTypes = ConnectedImage.propTypes;
 

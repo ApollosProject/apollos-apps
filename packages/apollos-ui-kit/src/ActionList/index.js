@@ -10,14 +10,17 @@ import Button from '../Button';
 
 import ActionListItem from './ActionListItem';
 
-const Content = styled(({ theme, cardPadding }) => ({
-  paddingHorizontal: cardPadding
-    ? theme.sizing.baseUnit * 1.5
-    : theme.sizing.baseUnit,
-  paddingVertical: cardPadding
-    ? theme.sizing.baseUnit * 1.5
-    : theme.sizing.baseUnit,
-}))(CardContent);
+const Content = styled(
+  ({ theme, cardPadding }) => ({
+    paddingHorizontal: cardPadding
+      ? theme.sizing.baseUnit * 1.5
+      : theme.sizing.baseUnit,
+    paddingVertical: cardPadding
+      ? theme.sizing.baseUnit * 1.5
+      : theme.sizing.baseUnit,
+  }),
+  'ui-kit.ActionList.Content'
+)(CardContent);
 
 const FullWidthButton = styled(
   ({ theme }) => ({

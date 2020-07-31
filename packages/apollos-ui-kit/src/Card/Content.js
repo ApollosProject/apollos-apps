@@ -5,7 +5,7 @@ const Content = styled(
   ({ theme }) => ({
     paddingVertical: theme.sizing.baseUnit,
   }),
-  'Card.Content'
+  'ui-kit.Card.Content.Content'
 )(PaddedView);
 
 export default Content;

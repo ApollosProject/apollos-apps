@@ -11,10 +11,13 @@ import { defaultProps } from 'recompose';
 import { withTheme } from '../theme';
 import styled from '../styled';
 
-const AndroidRippleWrapper = styled(({ borderRadius }) => ({
-  borderRadius,
-  overflow: 'hidden',
-}))(View);
+const AndroidRippleWrapper = styled(
+  ({ borderRadius }) => ({
+    borderRadius,
+    overflow: 'hidden',
+  }),
+  'ui-kit.Touchable.AndroidRippleWrapper'
+)(View);
 
 const AndroidWrapper = (
   { borderRadius, children } // eslint-disable-line react/prop-types

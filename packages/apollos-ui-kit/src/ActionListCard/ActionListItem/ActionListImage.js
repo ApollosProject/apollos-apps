@@ -18,7 +18,7 @@ const CellImage = styled(
     borderRadius: theme.sizing.baseUnit,
     marginRight: theme.sizing.baseUnit,
   }),
-  'ui-kit.ActionListImage.CellImage'
+  'ui-kit.ActionListCard.ActionListItem.ActionListImage.CellImage'
 )(ConnectedImage);
 
 const CellView = styled(
@@ -31,7 +31,7 @@ const CellView = styled(
     alignItems: 'center',
     justifyContent: 'center',
   }),
-  'ui-kit.ActionListImage.CellImage'
+  'ui-kit.ActionListCard.ActionListItem.ActionListImage.CellView'
 )(View);
 
 const CellDate = styled(
@@ -39,14 +39,14 @@ const CellDate = styled(
     color: theme.colors.darkSecondary,
     marginBottom: -theme.sizing.baseUnit / 2,
   }),
-  'ui-kit.ActionListImage.CellDate'
+  'ui-kit.ActionListCard.ActionListItem.ActionListImage.CellDate'
 )(H3);
 
 const CellMonth = styled(
   ({ theme }) => ({
     color: theme.colors.darkSecondary,
   }),
-  'ui-kit.ActionListImage.CellMonth'
+  'ui-kit.ActionListCard.ActionListItem.ActionListImage.CellMonth'
 )(H6);
 
 const hasNoImage = (source) => isNull(source) || source === '';

@@ -18,7 +18,7 @@ const Image = compose(
         },
       }),
     }),
-    'Card.Image'
+    'ui-kit.Card.Image.Image'
   )
 )(GradientOverlayImage);
 

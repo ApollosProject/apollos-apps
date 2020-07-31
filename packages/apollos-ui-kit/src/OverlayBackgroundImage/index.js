@@ -10,46 +10,61 @@ import {
 
 const DeviceWindow = Dimensions.get('window');
 
-const StyledGradientOverlayImage = styled({
-  backgroundColor: 'red',
-  ...StyleSheet.absoluteFillObject,
-})(GradientOverlayImage);
+const StyledGradientOverlayImage = styled(
+  {
+    backgroundColor: 'red',
+    ...StyleSheet.absoluteFillObject,
+  },
+  'ui-kit.OverlayBackgroundImage.StyledGradientOverlayImage'
+)(GradientOverlayImage);
 
-const Image = withTheme(({ theme, ...ownProps }) => ({
-  overlayColor: theme.colors.primary,
-  overlayType: 'featured',
-  ...ownProps, // allown ownProps to override defaults above
-}))(StyledGradientOverlayImage);
+const Image = withTheme(
+  ({ theme, ...ownProps }) => ({
+    overlayColor: theme.colors.primary,
+    overlayType: 'featured',
+    ...ownProps, // allown ownProps to override defaults above
+  }),
+  'ui-kit.OverlayBackgroundImage.Image'
+)(StyledGradientOverlayImage);
 
-const ImageContainer = styled({
-  position: 'absolute',
-  bottom: 0,
-  overflow: 'hidden',
+const ImageContainer = styled(
+  {
+    position: 'absolute',
+    bottom: 0,
+    overflow: 'hidden',
 
-  // the following values were determined by the precise & scientific
-  // method of guess and check.
-  height: '20%',
-  left: '40%',
-  right: '40%',
-})(View);
+    // the following values were determined by the precise & scientific
+    // method of guess and check.
+    height: '20%',
+    left: '40%',
+    right: '40%',
+  },
+  'ui-kit.OverlayBackgroundImage.ImageContainer'
+)(View);
 
-const ClippingMask = styled(({ rounded, containerWidth }) => ({
-  overflow: 'hidden',
-  position: 'absolute',
+const ClippingMask = styled(
+  ({ rounded, containerWidth }) => ({
+    overflow: 'hidden',
+    position: 'absolute',
 
-  // the following values were determined by the precise & scientific
-  // method of guess and check.
-  borderRadius: rounded ? containerWidth * 4 : null,
-  top: '-400%',
-  left: '-200%',
-  right: '-200%',
-  bottom: 0,
-}))(View);
+    // the following values were determined by the precise & scientific
+    // method of guess and check.
+    borderRadius: rounded ? containerWidth * 4 : null,
+    top: '-400%',
+    left: '-200%',
+    right: '-200%',
+    bottom: 0,
+  }),
+  'ui-kit.OverlayBackgroundImage.ClippingMask'
+)(View);
 
-const SizingContainer = styled({
-  width: '100%',
-  aspectRatio: 1,
-})(View);
+const SizingContainer = styled(
+  {
+    width: '100%',
+    aspectRatio: 1,
+  },
+  'ui-kit.OverlayBackgroundImage.SizingContainer'
+)(View);
 
 class OverlayBackgroundImage extends Component {
   static propTypes = {

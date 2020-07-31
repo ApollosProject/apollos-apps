@@ -11,10 +11,13 @@ import Button from '../Button';
 
 import ActionListItem from './ActionListItem';
 
-const Content = styled(() => ({
-  borderBottomWidth: 0,
-  borderTopWidth: 0,
-}))(TableView);
+const Content = styled(
+  () => ({
+    borderBottomWidth: 0,
+    borderTopWidth: 0,
+  }),
+  'ui-kit.ActionListCard.Content'
+)(TableView);
 
 const CardAction = styled(
   {

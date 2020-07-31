@@ -11,20 +11,29 @@ const enhance = compose(
   pure
 );
 
-const Wrapper = styled(({ theme }) => ({
-  flexDirection: 'row',
-  paddingBottom: theme.helpers.verticalRhythm(0.375),
-}))(View);
+const Wrapper = styled(
+  ({ theme }) => ({
+    flexDirection: 'row',
+    paddingBottom: theme.helpers.verticalRhythm(0.375),
+  }),
+  'ui-kit.Typography.BulletListItem.Wrapper'
+)(View);
 
-const Bullet = styled(({ theme }) => ({
-  // Set in a typographic unit to reflect changes in the default type size.
-  paddingRight: theme.helpers.rem(1) / 2,
-}))(View);
+const Bullet = styled(
+  ({ theme }) => ({
+    // Set in a typographic unit to reflect changes in the default type size.
+    paddingRight: theme.helpers.rem(1) / 2,
+  }),
+  'ui-kit.Typography.BulletListItem.Bullet'
+)(View);
 
-const IosTextWrapFix = styled({
-  // 😢
-  flexShrink: 1,
-})(View);
+const IosTextWrapFix = styled(
+  {
+    // 😢
+    flexShrink: 1,
+  },
+  'ui-kit.Typography.BulletListItem.IosTextWrapFix'
+)(View);
 
 const BulletListItem = enhance(({ children }) => (
   <Wrapper>

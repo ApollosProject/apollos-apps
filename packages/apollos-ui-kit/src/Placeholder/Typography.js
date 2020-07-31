@@ -37,7 +37,7 @@ export const Typography = compose(
       }
       return styles;
     },
-    'Placeholder.Typography'
+    'ui-kit.Placeholder.Typography'
   )
 )(Line);
 

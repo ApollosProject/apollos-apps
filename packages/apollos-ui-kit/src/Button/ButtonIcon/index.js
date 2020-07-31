@@ -6,9 +6,12 @@ import styled from '../../styled';
 import Icon from '../../Icon';
 import Touchable from '../../Touchable';
 
-const ControlPadding = styled(({ iconPadding }) => ({
-  padding: iconPadding, // maximize vertical space for tappability.
-}))(View);
+const ControlPadding = styled(
+  ({ iconPadding }) => ({
+    padding: iconPadding, // maximize vertical space for tappability.
+  }),
+  'ui-kit.ButtonIcon.ControlPadding'
+)(View);
 
 class ButtonIcon extends PureComponent {
   static propTypes = {

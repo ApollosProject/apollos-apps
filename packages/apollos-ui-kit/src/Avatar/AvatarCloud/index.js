@@ -14,7 +14,7 @@ const BlurWrapper = styled(
     zIndex: order,
     ...getXYPositions,
   }),
-  'ui-kit.AvatarList.BlurWrapper'
+  'ui-kit.Avatar.AvatarCloud.BlurWrapper'
 )(View);
 
 const CenteredAvatar = styled(
@@ -24,7 +24,7 @@ const CenteredAvatar = styled(
     width: avatarWidth,
     zIndex: 100,
   }),
-  'ui-kit.AvatarList.UserAvatar'
+  'ui-kit.Avatar.AvatarCloud.CenteredAvatar'
 )(ConnectedImage);
 
 const RandomAvatar = styled(
@@ -33,7 +33,7 @@ const RandomAvatar = styled(
     aspectRatio: 1,
     width: '100%',
   },
-  'ui-kit.AvatarList.RandomAvatar'
+  'ui-kit.Avatar.AvatarCloud.RandomAvatar'
 )(ConnectedImage);
 
 class AvatarCloud extends PureComponent {

@@ -4,9 +4,12 @@ import styled from '../styled';
 import { CardContent } from '../Card';
 import { H3 } from '../typography';
 
-const Container = styled(({ theme }) => ({
-  backgroundColor: theme.colors.background.accent,
-}))(CardContent);
+const Container = styled(
+  ({ theme }) => ({
+    backgroundColor: theme.colors.background.accent,
+  }),
+  'ui-kit.ContentCard.TextHeader.Container'
+)(CardContent);
 
 const TextHeader = ({ title }) => (
   <Container>

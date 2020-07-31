@@ -12,7 +12,10 @@ import FloatingLabel from '../FloatingLabel';
 import ErrorText from '../ErrorText';
 import { withTheme } from '../../theme';
 
-const StyledChip = styled({ marginTop: 5 }, 'DateInput.Chip')(Chip);
+const StyledChip = styled(
+  { marginTop: 5 },
+  'ui-kit.inputs.DateInput.StyledChip'
+)(Chip);
 const StyledDateTimePicker = withTheme(
   ({
     theme: {
@@ -21,7 +24,7 @@ const StyledDateTimePicker = withTheme(
   }) => ({
     textColor: text.primary,
   }),
-  'DateInput.DateTimePicker'
+  'ui-kit.inputs.DateInput.StyledDateTimePicker'
 )(DateTimePicker);
 
 class DateInput extends PureComponent {

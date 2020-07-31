@@ -24,7 +24,7 @@ const Placeholder = styled(
   ({ theme }) => ({
     color: theme.colors.text.tertiary,
   }),
-  'Inputs.Picker.Placeholder'
+  'ui-kit.inputs.Picker.Placeholder'
 )(H6);
 
 export class Picker extends PureComponent {

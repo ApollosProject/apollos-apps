@@ -35,7 +35,7 @@ const ButtonStyles = styled(
           elevation: 2,
         }),
   }),
-  'Button'
+  'ui-kit.Button.ButtonStyles'
 )(View);
 
 const ButtonPlaceholder = styled(
@@ -43,7 +43,7 @@ const ButtonPlaceholder = styled(
     width: theme.sizing.baseUnit * 4,
     height: theme.sizing.baseUnit + theme.helpers.rem(1),
   }),
-  'Button.Placeholder'
+  'ui-kit.Button.ButtonPlaceholder'
 )(Line);
 
 export const withButtonPlaceholder = withPlaceholder(ButtonPlaceholder);

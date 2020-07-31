@@ -13,7 +13,7 @@ const StyledChip = styled(
      * moving this change to `Chip` or `Button` */
     ...(type === 'overlay' ? { borderWidth: 0 } : {}),
   }),
-  'ui-kit.CardLabel'
+  'ui-kit.Card.Label.StyledChip'
 )(Chip);
 
 const Label = ({ title, icon, type, theme, IconComponent, ...props }) => (
