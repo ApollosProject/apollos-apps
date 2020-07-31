@@ -1026,41 +1026,26 @@ exports[`DefaultCard should render with isLive support 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
-            "aspectRatio": 1,
+            "aspectRatio": 1.2,
             "backgroundColor": "#A5A5A5",
             "resizeMode": "cover",
             "width": "100%",
           }
         }
-      >
-        <Image
-          maxAspectRatio={1.78}
-          minAspectRatio={1.2}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
       <BVLinearGradient
         colors={
           Array [
