@@ -1,5 +1,7 @@
+import { get } from 'lodash';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import { parseGlobalId } from '@apollosproject/server-core';
+import ApollosConfig from '@apollosproject/config';
 import { latLonDistance } from '../utils';
 
 export default class Campus extends RockApolloDataSource {
@@ -33,10 +35,12 @@ export default class Campus extends RockApolloDataSource {
         ...campus,
         location: {
           ...campus.location,
-          street1: 'No locations near you. ',
-          city: "When there's one",
-          state: "we'll let you know!",
-          postalCode: '',
+          ...get(ApollosConfig, 'REMOTE_CAMPUS.FIELDS', {
+            street1: 'No locations near you. ',
+            city: "When there's one",
+            state: "we'll let you know!",
+            postalCode: '',
+          }),
         },
       }));
     campuses = campuses.filter(

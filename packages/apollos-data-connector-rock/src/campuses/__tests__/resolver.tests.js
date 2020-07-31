@@ -286,4 +286,41 @@ describe('Campus', () => {
     expect(getMock.mock.calls).toMatchSnapshot();
     expect(patchMock.mock.calls).toMatchSnapshot();
   });
+
+  it('supports overriding the remote campus fields', async () => {
+    const query = `
+      query {
+        campuses(location: { latitude: 35.8617, longitude: 104.1954 }) {
+            id
+            name
+            street1
+            street2
+            city
+            state
+            postalCode
+            latitude
+            longitude
+            image {
+              uri
+            }
+            distanceFromLocation
+        }
+      }
+    `;
+    const rootValue = {};
+
+    ApollosConfig.loadJs({
+      REMOTE_CAMPUS: {
+        FIELDS: {
+          street1: 'Test street',
+          city: 'Test city',
+          state: 'A state of being',
+        },
+      },
+    });
+
+    const result = await graphql(schema, query, rootValue, context);
+
+    expect(result).toMatchSnapshot();
+  });
 });
