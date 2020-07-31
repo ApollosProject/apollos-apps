@@ -1785,10 +1785,18 @@ exports[`the HTMLView component should render an image 1`] = `
   }
 >
   <View>
-    <View
-      animate={null}
-      customAnimate={null}
-      onReady={false}
+    <Image
+      fadeDuration={250}
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://placeholdit.co/i/150x150?bg=eeeeee&fc=577084",
+            "url": "https://placeholdit.co/i/150x150?bg=eeeeee&fc=577084",
+          },
+        ]
+      }
       style={
         Object {
           "aspectRatio": 1,
@@ -1797,28 +1805,7 @@ exports[`the HTMLView component should render an image 1`] = `
           "width": "100%",
         }
       }
-    >
-      <Image
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://placeholdit.co/i/150x150?bg=eeeeee&fc=577084",
-              "url": "https://placeholdit.co/i/150x150?bg=eeeeee&fc=577084",
-            },
-          ]
-        }
-        style={
-          Object {
-            "backgroundColor": "#A5A5A5",
-            "opacity": 0,
-            "resizeMode": "contain",
-            "width": "100%",
-          }
-        }
-      />
-    </View>
+    />
   </View>
 </View>
 `;

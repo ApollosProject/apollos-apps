@@ -114,6 +114,18 @@ Object {
 }
 `;
 
+exports[`Auth logs in a user 2`] = `
+Array [
+  Array [
+    Object {
+      "data": "some-identity",
+      "expiresIn": 31556952,
+      "key": ":userLogins:234d7a42b877ed9b07eec6880c3576deac311057",
+    },
+  ],
+]
+`;
+
 exports[`Auth registers an auth token and passes the cookie on requests to rock 1`] = `
 Headers {
   Symbol(map): Object {

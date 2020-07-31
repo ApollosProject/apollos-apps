@@ -40,42 +40,27 @@ exports[`CampusCard should render 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://www.placecage.com/c/250/250",
+              "url": "https://www.placecage.com/c/250/250",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "height": "100%",
             "resizeMode": "cover",
-            "width": "100%",
           }
         }
-      >
-        <Image
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://www.placecage.com/c/250/250",
-                "url": "https://www.placecage.com/c/250/250",
-              },
-            ]
-          }
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "height": "100%",
-              "opacity": 0,
-              "resizeMode": "cover",
-            }
-          }
-        />
-      </View>
+      />
       <View
         style={
           Object {
@@ -190,42 +175,27 @@ exports[`CampusCard should render a loading 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://www.placecage.com/c/250/250",
+              "url": "https://www.placecage.com/c/250/250",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "height": "100%",
             "resizeMode": "cover",
-            "width": "100%",
           }
         }
-      >
-        <Image
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://www.placecage.com/c/250/250",
-                "url": "https://www.placecage.com/c/250/250",
-              },
-            ]
-          }
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "height": "100%",
-              "opacity": 0,
-              "resizeMode": "cover",
-            }
-          }
-        />
-      </View>
+      />
       <View
         style={
           Object {
@@ -529,42 +499,27 @@ exports[`CampusCard should render with a title and image 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://www.placecage.com/c/250/250",
+              "url": "https://www.placecage.com/c/250/250",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "height": "100%",
             "resizeMode": "cover",
-            "width": "100%",
           }
         }
-      >
-        <Image
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://www.placecage.com/c/250/250",
-                "url": "https://www.placecage.com/c/250/250",
-              },
-            ]
-          }
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "height": "100%",
-              "opacity": 0,
-              "resizeMode": "cover",
-            }
-          }
-        />
-      </View>
+      />
       <View
         style={
           Object {
@@ -722,42 +677,27 @@ exports[`CampusCard should render without a description 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://www.placecage.com/c/250/250",
+              "url": "https://www.placecage.com/c/250/250",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "height": "100%",
             "resizeMode": "cover",
-            "width": "100%",
           }
         }
-      >
-        <Image
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://www.placecage.com/c/250/250",
-                "url": "https://www.placecage.com/c/250/250",
-              },
-            ]
-          }
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "height": "100%",
-              "opacity": 0,
-              "resizeMode": "cover",
-            }
-          }
-        />
-      </View>
+      />
       <View
         style={
           Object {
@@ -860,42 +800,27 @@ exports[`CampusCard should render without a distance 1`] = `
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://www.placecage.com/c/250/250",
+              "url": "https://www.placecage.com/c/250/250",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
             "height": "100%",
             "resizeMode": "cover",
-            "width": "100%",
           }
         }
-      >
-        <Image
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://www.placecage.com/c/250/250",
-                "url": "https://www.placecage.com/c/250/250",
-              },
-            ]
-          }
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "height": "100%",
-              "opacity": 0,
-              "resizeMode": "cover",
-            }
-          }
-        />
-      </View>
+      />
       <View
         style={
           Object {

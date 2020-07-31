@@ -1004,10 +1004,18 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
         }
       }
     >
-      <View
-        animate={null}
-        customAnimate={null}
-        onReady={false}
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/640/640/?random",
+              "url": "https://picsum.photos/640/640/?random",
+            },
+          ]
+        }
         style={
           Object {
             "aspectRatio": 1,
@@ -1016,28 +1024,7 @@ exports[`The Onboarding AboutYou component should render a BackgroundComponent 1
             "width": "100%",
           }
         }
-      >
-        <Image
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/640/640/?random",
-                "url": "https://picsum.photos/640/640/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "opacity": 0,
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-      </View>
+      />
     </View>
     <RCTSafeAreaView
       emulateUnlessSupported={true}

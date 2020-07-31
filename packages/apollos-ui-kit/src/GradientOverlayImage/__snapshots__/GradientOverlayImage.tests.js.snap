@@ -11,6 +11,7 @@ exports[`the GradientOverlayImage component should render 1`] = `
   }
 >
   <Image
+    fadeDuration={250}
     onLoad={[Function]}
     source={
       Array [
@@ -24,9 +25,8 @@ exports[`the GradientOverlayImage component should render 1`] = `
     }
     style={
       Object {
-        "aspectRatio": 1.5,
+        "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
-        "opacity": 1,
         "resizeMode": "cover",
         "width": "100%",
       }
@@ -46,6 +46,7 @@ exports[`the GradientOverlayImage component should render with an overlayColor 1
   }
 >
   <Image
+    fadeDuration={250}
     onLoad={[Function]}
     source={
       Array [
@@ -59,9 +60,8 @@ exports[`the GradientOverlayImage component should render with an overlayColor 1
     }
     style={
       Object {
-        "aspectRatio": 1.5,
+        "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
-        "opacity": 1,
         "resizeMode": "cover",
         "width": "100%",
       }
@@ -118,6 +118,7 @@ exports[`the GradientOverlayImage component should render with overlayType.featu
   }
 >
   <Image
+    fadeDuration={250}
     onLoad={[Function]}
     source={
       Array [
@@ -131,9 +132,8 @@ exports[`the GradientOverlayImage component should render with overlayType.featu
     }
     style={
       Object {
-        "aspectRatio": 1.5,
+        "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
-        "opacity": 1,
         "resizeMode": "cover",
         "width": "100%",
       }
@@ -190,6 +190,7 @@ exports[`the GradientOverlayImage component should render with overlayType.gradi
   }
 >
   <Image
+    fadeDuration={250}
     onLoad={[Function]}
     source={
       Array [
@@ -203,9 +204,8 @@ exports[`the GradientOverlayImage component should render with overlayType.gradi
     }
     style={
       Object {
-        "aspectRatio": 1.5,
+        "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
-        "opacity": 1,
         "resizeMode": "cover",
         "width": "100%",
       }
@@ -262,6 +262,7 @@ exports[`the GradientOverlayImage component should render with overlayType.gradi
   }
 >
   <Image
+    fadeDuration={250}
     onLoad={[Function]}
     source={
       Array [
@@ -275,9 +276,8 @@ exports[`the GradientOverlayImage component should render with overlayType.gradi
     }
     style={
       Object {
-        "aspectRatio": 1.5,
+        "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
-        "opacity": 1,
         "resizeMode": "cover",
         "width": "100%",
       }
@@ -334,6 +334,7 @@ exports[`the GradientOverlayImage component should render with overlayType.high 
   }
 >
   <Image
+    fadeDuration={250}
     onLoad={[Function]}
     source={
       Array [
@@ -347,9 +348,8 @@ exports[`the GradientOverlayImage component should render with overlayType.high 
     }
     style={
       Object {
-        "aspectRatio": 1.5,
+        "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
-        "opacity": 1,
         "resizeMode": "cover",
         "width": "100%",
       }
@@ -406,6 +406,7 @@ exports[`the GradientOverlayImage component should render with overlayType.low 1
   }
 >
   <Image
+    fadeDuration={250}
     onLoad={[Function]}
     source={
       Array [
@@ -419,9 +420,8 @@ exports[`the GradientOverlayImage component should render with overlayType.low 1
     }
     style={
       Object {
-        "aspectRatio": 1.5,
+        "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
-        "opacity": 1,
         "resizeMode": "cover",
         "width": "100%",
       }
@@ -478,6 +478,7 @@ exports[`the GradientOverlayImage component should render with overlayType.mediu
   }
 >
   <Image
+    fadeDuration={250}
     onLoad={[Function]}
     source={
       Array [
@@ -491,9 +492,8 @@ exports[`the GradientOverlayImage component should render with overlayType.mediu
     }
     style={
       Object {
-        "aspectRatio": 1.5,
+        "aspectRatio": 1,
         "backgroundColor": "#A5A5A5",
-        "opacity": 1,
         "resizeMode": "cover",
         "width": "100%",
       }

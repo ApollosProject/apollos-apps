@@ -47,45 +47,29 @@ exports[`The ActionListFeatures component should render 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <RCTImageView
+          fadeDuration={250}
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/200/200",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "overflow": "hidden",
               "width": 64,
             }
           }
-        >
-          <RCTImageView
-            onLoad={[Function]}
-            resizeMode="cover"
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "https://picsum.photos/200/200",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "overflow": "hidden",
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -134,45 +118,29 @@ exports[`The ActionListFeatures component should render 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <RCTImageView
+          fadeDuration={250}
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/200",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "overflow": "hidden",
               "width": 64,
             }
           }
-        >
-          <RCTImageView
-            onLoad={[Function]}
-            resizeMode="cover"
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "https://picsum.photos/200",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "overflow": "hidden",
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -221,45 +189,29 @@ exports[`The ActionListFeatures component should render 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <RCTImageView
+          fadeDuration={250}
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/200",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "overflow": "hidden",
               "width": 64,
             }
           }
-        >
-          <RCTImageView
-            onLoad={[Function]}
-            resizeMode="cover"
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "https://picsum.photos/200",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "overflow": "hidden",
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -308,45 +260,29 @@ exports[`The ActionListFeatures component should render 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <RCTImageView
+          fadeDuration={250}
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/200",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "overflow": "hidden",
               "width": 64,
             }
           }
-        >
-          <RCTImageView
-            onLoad={[Function]}
-            resizeMode="cover"
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "https://picsum.photos/200",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "overflow": "hidden",
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -436,45 +372,29 @@ exports[`The ActionListFeatures component should render a button for onPressActi
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <RCTImageView
+          fadeDuration={250}
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/200/200",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "overflow": "hidden",
               "width": 64,
             }
           }
-        >
-          <RCTImageView
-            onLoad={[Function]}
-            resizeMode="cover"
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "https://picsum.photos/200/200",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "overflow": "hidden",
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -523,45 +443,29 @@ exports[`The ActionListFeatures component should render a button for onPressActi
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <RCTImageView
+          fadeDuration={250}
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/200",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "overflow": "hidden",
               "width": 64,
             }
           }
-        >
-          <RCTImageView
-            onLoad={[Function]}
-            resizeMode="cover"
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "https://picsum.photos/200",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "overflow": "hidden",
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -610,45 +514,29 @@ exports[`The ActionListFeatures component should render a button for onPressActi
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <RCTImageView
+          fadeDuration={250}
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/200",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "overflow": "hidden",
               "width": 64,
             }
           }
-        >
-          <RCTImageView
-            onLoad={[Function]}
-            resizeMode="cover"
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "https://picsum.photos/200",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "overflow": "hidden",
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -697,45 +585,29 @@ exports[`The ActionListFeatures component should render a button for onPressActi
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <RCTImageView
+          fadeDuration={250}
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/200",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "overflow": "hidden",
               "width": 64,
             }
           }
-        >
-          <RCTImageView
-            onLoad={[Function]}
-            resizeMode="cover"
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "https://picsum.photos/200",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "overflow": "hidden",
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -911,45 +783,29 @@ exports[`The ActionListFeatures component should render a loading state for isLo
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <RCTImageView
+          fadeDuration={250}
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "overflow": "hidden",
               "width": 64,
             }
           }
-        >
-          <RCTImageView
-            onLoad={[Function]}
-            resizeMode="cover"
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "overflow": "hidden",
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -968,45 +824,29 @@ exports[`The ActionListFeatures component should render a loading state for isLo
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <RCTImageView
+          fadeDuration={250}
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "overflow": "hidden",
               "width": 64,
             }
           }
-        >
-          <RCTImageView
-            onLoad={[Function]}
-            resizeMode="cover"
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "overflow": "hidden",
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -1025,45 +865,29 @@ exports[`The ActionListFeatures component should render a loading state for isLo
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <RCTImageView
+          fadeDuration={250}
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "overflow": "hidden",
               "width": 64,
             }
           }
-        >
-          <RCTImageView
-            onLoad={[Function]}
-            resizeMode="cover"
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "overflow": "hidden",
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -1082,45 +906,29 @@ exports[`The ActionListFeatures component should render a loading state for isLo
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <RCTImageView
+          fadeDuration={250}
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "overflow": "hidden",
               "width": 64,
             }
           }
-        >
-          <RCTImageView
-            onLoad={[Function]}
-            resizeMode="cover"
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "overflow": "hidden",
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -1200,45 +1008,29 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <RCTImageView
+          fadeDuration={250}
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/200/200",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "overflow": "hidden",
               "width": 64,
             }
           }
-        >
-          <RCTImageView
-            onLoad={[Function]}
-            resizeMode="cover"
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "https://picsum.photos/200/200",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "overflow": "hidden",
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -1287,45 +1079,29 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <RCTImageView
+          fadeDuration={250}
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/200",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "overflow": "hidden",
               "width": 64,
             }
           }
-        >
-          <RCTImageView
-            onLoad={[Function]}
-            resizeMode="cover"
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "https://picsum.photos/200",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "overflow": "hidden",
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -1374,45 +1150,29 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <RCTImageView
+          fadeDuration={250}
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/200",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "overflow": "hidden",
               "width": 64,
             }
           }
-        >
-          <RCTImageView
-            onLoad={[Function]}
-            resizeMode="cover"
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "https://picsum.photos/200",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "overflow": "hidden",
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -1461,45 +1221,29 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <RCTImageView
+          fadeDuration={250}
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/200",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "overflow": "hidden",
               "width": 64,
             }
           }
-        >
-          <RCTImageView
-            onLoad={[Function]}
-            resizeMode="cover"
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "https://picsum.photos/200",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "overflow": "hidden",
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -1610,45 +1354,29 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <RCTImageView
+          fadeDuration={250}
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/200/200",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "overflow": "hidden",
               "width": 64,
             }
           }
-        >
-          <RCTImageView
-            onLoad={[Function]}
-            resizeMode="cover"
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "https://picsum.photos/200/200",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "overflow": "hidden",
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -1697,45 +1425,29 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <RCTImageView
+          fadeDuration={250}
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/200",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "overflow": "hidden",
               "width": 64,
             }
           }
-        >
-          <RCTImageView
-            onLoad={[Function]}
-            resizeMode="cover"
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "https://picsum.photos/200",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "overflow": "hidden",
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -1784,45 +1496,29 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <RCTImageView
+          fadeDuration={250}
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/200",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "overflow": "hidden",
               "width": 64,
             }
           }
-        >
-          <RCTImageView
-            onLoad={[Function]}
-            resizeMode="cover"
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "https://picsum.photos/200",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "overflow": "hidden",
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {
@@ -1871,45 +1567,29 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <RCTImageView
+          fadeDuration={250}
+          onLoad={[Function]}
+          resizeMode="cover"
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/200",
+              },
+            ]
+          }
           style={
             Object {
-              "aspectRatio": 1,
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
+              "overflow": "hidden",
               "width": 64,
             }
           }
-        >
-          <RCTImageView
-            onLoad={[Function]}
-            resizeMode="cover"
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "https://picsum.photos/200",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 64,
-                "marginRight": 16,
-                "opacity": 0,
-                "overflow": "hidden",
-                "width": 64,
-              }
-            }
-          />
-        </View>
+        />
         <View
           style={
             Object {

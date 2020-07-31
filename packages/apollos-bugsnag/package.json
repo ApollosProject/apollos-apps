@@ -1,0 +1,45 @@
+{
+  "name": "@apollosproject/bugsnag",
+  "version": "1.4.3",
+  "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
+  "main": "lib/index.js",
+  "react-native": "react-native/index.js",
+  "files": [
+    "lib/**",
+    "react-native/**"
+  ],
+  "scripts": {
+    "test": "echo \"No tests in bugsnag package yet!\"",
+    "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
+    "lint": "eslint ./src --ext .js"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "react-native/**/*.{js,jsx}"
+    ],
+    "testMatch": [
+      "<rootDir>/{src,react-native}/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/src/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
+    ],
+    "testEnvironment": "node",
+    "setupFiles": [
+      "./jest.setup.js"
+    ],
+    "reporters": [
+      "<rootDir>/../../scripts/fingers-crossed-reporter.js"
+    ]
+  },
+  "devDependencies": {
+    "@apollosproject/babel-preset-apollos": "^1.4.3"
+  },
+  "dependencies": {
+    "@bugsnag/js": "7.2.1"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"
+}

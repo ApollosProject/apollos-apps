@@ -256,10 +256,6 @@ const createApolloServerEnvMock = (apolloServerEnv) => {
         return resolveWith([]);
       }
 
-      if (url.match('api/Campuses/\\d')) {
-        return resolveWith(rockMocks.campuses()[0]);
-      }
-
       if (url.match('api/Campuses')) {
         return resolveWith(rockMocks.campuses());
       }
