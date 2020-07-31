@@ -72,26 +72,45 @@ const ActionIcon = withTheme(({ theme }) => ({
   size: theme.sizing.baseUnit * 3,
 }))(Icon);
 
-const Label = withTheme(({ customTheme, hasSummary, labelText, theme }) => ({
-  title: labelText,
-  theme: { colors: get(customTheme, 'colors', {}) },
-  type: 'overlay',
-  style: {
-    ...(hasSummary ? { marginBottom: theme.sizing.baseUnit } : {}),
-  },
-}))(CardLabel);
+const Label = withTheme(
+  ({ customTheme, hasSummary, labelText, theme, isLive }) => ({
+    ...(isLive
+      ? {
+          title: labelText || 'Live',
+          type: 'secondary',
+        }
+      : {
+          title: labelText,
+          theme: { colors: get(customTheme, 'colors', {}) },
+          type: 'overlay',
+        }),
+    style: {
+      ...(hasSummary ? { marginBottom: theme.sizing.baseUnit } : {}),
+    },
+  })
+)(CardLabel);
 
-const renderLabel = (summary, LabelComponent, labelText, theme) => {
+const LiveIcon = withTheme(({ theme }) => ({
+  name: 'live-dot',
+  size: theme.helpers.rem(0.4375),
+  style: { marginRight: theme.sizing.baseUnit * 0.5 },
+}))(Icon);
+
+const renderLabel = (summary, LabelComponent, labelText, theme, isLive) => {
   let ComponentToRender = null;
-
   if (LabelComponent) {
     ComponentToRender = LabelComponent;
-  } else if (labelText) {
+  } else if (labelText || isLive) {
     ComponentToRender = (
-      <Label customTheme={theme} hasSummary={summary} labelText={labelText} />
+      <Label
+        customTheme={theme}
+        hasSummary={summary}
+        labelText={labelText}
+        isLive={isLive}
+        IconComponent={isLive ? LiveIcon : null}
+      />
     );
   }
-
   return ComponentToRender;
 };
 
@@ -127,6 +146,7 @@ const HighlightCard = withIsLoading(
     LabelComponent,
     labelText,
     summary,
+    isLive,
     theme,
   }) => (
     <ThemeMixin
@@ -142,7 +162,7 @@ const HighlightCard = withIsLoading(
           source={coverImage}
         />
         <Content>
-          {renderLabel(summary, LabelComponent, labelText, theme)}
+          {renderLabel(summary, LabelComponent, labelText, theme, isLive)}
           {summary
             ? renderWithSummary(title, actionIcon, summary, hasAction)
             : renderOnlyTitle(title, actionIcon, hasAction)}

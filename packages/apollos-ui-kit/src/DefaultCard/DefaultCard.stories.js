@@ -168,4 +168,17 @@ storiesOf('ui-kit/DefaultCard', module)
       ]}
       labelText={'Quote'}
     />
+  ))
+  .add('isLive', () => (
+    <DefaultCard
+      title={
+        'Are you telling me that you built a time machine out of a DeLorean?'
+      }
+      coverImage={[
+        {
+          uri: 'https://picsum.photos/1400/800/?random',
+        },
+      ]}
+      isLive
+    />
   ));
