@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/data-schema",
-  "version": "1.4.3",
+  "version": "1.5.0-beta.0",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "main": "lib/index.js",
   "scripts": {
@@ -23,7 +23,7 @@
     "graphql-tag": "^2.10.0"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^1.4.3",
+    "@apollosproject/babel-preset-apollos": "^1.5.0-beta.0",
     "jest": "^23.6.0"
   },
   "peerDependencies": {

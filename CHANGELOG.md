@@ -1,3 +1,36 @@
+v1.5.0: August 3, 2020
+
+- Adds Ui-auth override names (#1509) (1c3108fe)
+- Adds Ui-connected override names (#1510) (d39fdc0c)
+- Adds Ui-kit override names (#1497) (7c56e267)
+- Adds Ui packages override names (#1511) (cfdef207)
+- Adds Device Schema (#1234) (b1636a25)
+- Adds Remote campus support (#1520) (06ed0975)
+- Adds additional functionality to Auth Consumer (#1461) (21f58eda)
+- Adds Bugsnag Package (#1515) (694863fb)
+- Adds Core Navigation Analytics (#1343) (94b52584)
+- Adds MVP of Auth Refresh (instead of error) (#1517) (992f2158)
+- Adds isFeatured prop to cardMapper (#1518) (b4219708)
+- Adds local storage and a user id to only onboard once (#1501) (a8b8c880)
+- Adds eslint web config and bump deps (#1504) (ba3637a3)
+- Adds action list event icons, ported from ActionListCard event icons (#1495) (d64afbae)
+
+- Passes schema info to resolving methods (#1494) (c742b40d)
+- Enables isLive on Highlight and Default cards (#1519) (8ede83a2)
+- Refactors connected image (#1500) (13eee074)
+- Removes ESLint Prop spreading rule (#1507) (786c0c2c)
+- Makes `react-native-safe-area-context` a peer dep (#1503) (e9f3085f)
+- Bumps codecov from 3.6.5 to 3.7.1 (#1514) (c6afec0e)
+- Bumps apollo-server-express from 2.11.0 to 2.15.1 (#1505) (b1b4aaad)
+- Bumps lodash from 4.17.13 to 4.17.19 (#1513) (1fdc1346)
+
+- Fixes an error from being thrown if a campus doesn't have an image (#1382) (7a6b0715)
+- Fixes Type safes followings return type (#1516) (fad044aa)
+- Fixes Chromecast for Android (#1496) (0a1d9a89)
+- Fixes two prayer issues (#1502) (dc1077c9)
+- Fixes issue when changing "onPress" prop on TouchableScale (#1498) (bded69a3)
+- Fixes issue where re-renders aren't picked up in StretchyView (#1499) (fb4b6cf1)
+
 v1.4.3: June 22, 2020
 
 - Adds action list primary action support (a nice wide button) (#1492) (6f49b4db)
