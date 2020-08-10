@@ -35,6 +35,7 @@
   },
   "peerDependencies": {
     "@apollosproject/ui-kit": "*",
+    "@metarouter/analytics-react-native": "*",
     "apollo-client": "*",
     "react": "*",
     "react-apollo": "*",
@@ -42,11 +43,11 @@
     "react-navigation": "*"
   },
   "dependencies": {
-    "@metarouter/analytics-react-native": "^1.1.5",
     "graphql-tag": "2.9.2",
     "react-native-device-info": "^4.0.1"
   },
   "devDependencies": {
+    "@metarouter/analytics-react-native": "^1.1.5",
     "apollo-cache-inmemory": "^1.5.1",
     "apollo-client": "2.6.8",
     "apollo-link-http": "^1.5.14",
