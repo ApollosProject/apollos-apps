@@ -18,15 +18,10 @@ const HorizontalCardListFeatureConnected = ({
       if (featureId && refetch && refetchRef)
         refetchRef({ refetch, id: featureId });
 
-      const cards = get(data, 'node.cards', []);
-      if (!loading && !cards.length) {
-        return null;
-      }
-
       return (
         <Component
           {...get(data, 'node')}
-          cards={cards.map(({ actionIcon, ...card }) => ({
+          cards={get(data, 'node.cards', []).map(({ actionIcon, ...card }) => ({
             ...card,
             ...(actionIcon != null ? { actionIcon: card.actionIcon } : {}), // temp hack because ContentCard doesn't handle null action icon well
             coverImage: get(card, 'coverImage.sources', undefined),
