@@ -89,7 +89,7 @@ class HorizontalCardListFeature extends PureComponent {
       loadingStateObject,
     } = this.props;
     return (
-      !!(!isLoading || cards.length) && (
+      !!(isLoading || cards.length) && (
         <View>
           {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
             <Header vertical={false}>

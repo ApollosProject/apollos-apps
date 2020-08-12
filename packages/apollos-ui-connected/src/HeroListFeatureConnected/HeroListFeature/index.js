@@ -136,7 +136,7 @@ const HeroListFeature = memo(
     const onPressHero = onPressHeroProp || onPressItem;
     const onPressActionListButton = onPressHeroListButton || onPressItem;
     return (
-      !!(!actions || actions.length || heroCard) && (
+      !!(isLoading || actions.length || heroCard) && (
         <ActionList
           isCard={false}
           isLoading={isLoading}
