@@ -108,7 +108,7 @@ class AvatarCloud extends PureComponent {
         key={`${
           typeof this.props.avatars[i] === 'string'
             ? this.props.avatars[i]
-            : this.props.avatars[i].uri
+            : this.props.avatars[i]?.uri
         }${this.props.avatars[i].id ? this.props.avatars[i].id : i}`}
         order={i} // order = zIndex == higher index === "closer two the viewer/higher layer"
       >
