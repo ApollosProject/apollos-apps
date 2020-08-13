@@ -1,4 +1,4 @@
-# Updating from 1.4.3 to 1.5.0-beta.0
+# Updating from 1.4.3 to 1.5.0
 
 Override names have been added (or changed) to all instances of `styled` and `withTheme`. This will require updating.
 
