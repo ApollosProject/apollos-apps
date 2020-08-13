@@ -10,6 +10,22 @@ import { merge } from 'lodash';
 
 import createTheme, { THEME_PROPS } from './createTheme';
 
+function stripNullLeaves(obj, cb) {
+  const out = {};
+
+  Object.keys(obj).forEach((k) => {
+    let val;
+
+    if (obj[k] !== null && typeof obj[k] === 'object') {
+      out[k] = stripNullLeaves(obj[k], cb);
+    } else if (val != null) {
+      out[k] = val;
+    }
+  });
+
+  return out;
+}
+
 const withThemeMixin = (themeInput) =>
   compose(
     mapProps((props) => ({ ownProps: props })),
@@ -26,7 +42,10 @@ const withThemeMixin = (themeInput) =>
         if (typeof themeInput === 'function') {
           themeInputAsObject = themeInput({ ...ownProps, theme });
         }
-        themeInputAsObject = merge({}, originalThemeInput, themeInputAsObject);
+
+        themeInputAsObject = stripNullLeaves(
+          merge({}, originalThemeInput, themeInputAsObject)
+        );
 
         const themeWithMixin = createTheme(themeInputAsObject);
 
