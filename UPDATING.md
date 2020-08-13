@@ -1,87 +1,17 @@
-# Updating from 1.4.1 to 1.4.2
+# Updating from 1.4.3 to 1.5.0
 
-These override names have changed and will need to be updated in order to work.
+Override names have been added (or changed) to all instances of `styled` and `withTheme`. This will require updating.
 
-1. In ActionCard/index.js - `ActionCard.Actions` has been changed to `ui-kit.ActionCard.ActionCardActions`
+How are they named?
 
-2. In ActionList/.../ActionListImage.js
+- The namming convention is `package-name.File/ComponentName.StyledComponentName`.
+- For example, `H1` has been changed to `ui-kit.Typography.H1`.
 
-- `ui-kit.ActionListImage.CellImage` has been changed to `ui-kit.ActionList.ActionListItem.ActionListImage.CellImage`
-- `ui-kit.ActionListImage.CellView'` has been changed to `ui-kit.ActionList.ActionListItem.ActionListImage.CellView`
-- `ui-kit.ActionListImage.CellDate` has been changed to `ui-kit.ActionList.ActionListItem.ActionListImage.CellDate`
-- `ui-kit.ActionListImage.CellMonth` has been changed to `ui-kit.ActionList.ActionListItem.ActionListImage.CellMonth`
+Action required
 
-3. In ActionListItem/index.js
-
-- `ui-kit.ActionListItem.Label` has been changed to `ui-kit.ActionList.ActionListItem.Label`
-- `ui-kit.ActionListItem.TextContainer` has been changed to `ui-kit.ActionList.ActionListItem.TextContainer`
-
-4. In ActionListCard/.../ActionListImage.js
-
-- `ui-kit.ActionListImage.CellImage` has been changed to `ui-kit.ActionListCard.ActionListItem.ActionListImage.CellImage`
-- `ui-kit.ActionListImage.CellImage` has been changed to `ui-kit.ActionListCard.ActionListItem.ActionListImage.CellView`
-- `ui-kit.ActionListImage.CellDate` has been changed to `ui-kit.ActionListCard.ActionListItem.ActionListImage.CellDate`
-- `ui-kit.ActionListImage.CellMonth` has been changed to `ui-kit.ActionListCard.ActionListItem.ActionListImage.CellMonth`
-
-5. In ActivityIndicator/index.js - `ActivityIndicator` has been changed to `ui-kit.ActivityIndicator`
-
-6. In Avatar.js - `Avatar` has been changed to `ui-kit.Avatar.Avatar.Container`
-
-7. In AvatarCloud/index.js
-
-- `ui-kit.AvatarList.BlurWrapper` has been changed to `ui-kit.Avatar.AvatarCloud.BlurWrapper`
-- `ui-kit.AvatarList.UserAvatar` has been changed to `ui-kit.Avatar.AvatarCloud.CenteredAvatar`
-- `ui-kit.AvatarList.RandomAvatar` has been changed to `ui-kit.Avatar.AvatarCloud.RandomAvatar`
-- `U` has been changed to `u`
-
-8. In TouchableAvatar.android.js
-
-- `ui-kit.AvatarList.TouchableAvatar.StyledAvatar` has been changed to `ui-kit.Avatar.AvatarList.TouchableAvatarAndroid.StyledAvatar`
-- `ui-kit.AvatarList.TouchableAvatar.AndroidTouchableRippleFix` has been changed to `ui-kit.Avatar.AvatarList.TouchableAvatarAndroid.AndroidTouchableRippleFix`
-
-9. In TouchableAvatar.ios.js - `ui-kit.AvatarList.TouchableAvatar.StyledAvatar` has been changed to `ui-kit.Avatar.AvatarList.TouchableAvatarIos.StyledAvatar`
-
-10. In AvatarList/index.js
-
-- `ui-kit.AvatarList.AddIcon` has been changed to `ui-kit.Avatar.AvatarList.AddIcon`
-- `ui-kit.AvatarList.AddIconBackground` has been changed to `ui-kit.Avatar.AvatarList.AddIconBackground`
-- `ui-kit.AvatarList.AndroidTouchableRippleFix` has been changed to `ui-kit.Avatar.AvatarList.AndroidTouchableRippleFix`
-- `ui-kit.AvatarList.AvatarFeed` has been changed to `ui-kit.Avatar.AvatarList.AvatarFeed`
-
-11. In Avatar/List.js - `Avatar.List` has been changed to `ui-kit.Avatar.List.AvatarList`
-
-12. In Button/Button.js
-
-- `Button` has been changed to `ui-kit.Button.ButtonStyles`
-- `Button.Placeholder` has been changed to `ui-kit.Button.ButtonPlaceholder`
-
-13. In Button/ButtonLink.js - `Button.Link` has been changed to `ui-kit.ButtonLink.ButtonLink`
-
-14. In Card/Actions.js - `Card.Actions` has been changed to `ui-kit.Card.Actions.Actions`
-
-15. In Card/Content.js - `Card.Content` has been changed to `ui-kit.Card.Content.Content`
-
-16. In Card/Image.js - `Card.Image` has been changed to `ui-kit.Card.Image.Image`
-
-17. In Card/Label.js - `ui-kit.CardLabel` has been changed to `ui-kit.Card.Label.StyledChip`
-
-18. In Chip/List.js - `Chip.List` has been changed to `ui-kit.Chip.ChipList`
-
-19. In Chip/index.js - `Chip` has been changed to `ui-kit.Chip.StyledButton`
-
-20. In FlexedView/index.js - `FlexedView` has been changed to `ui-kit.FlexedView`
-
-21. In PaddedView/index.js -`PaddedView` has been changed to `ui-kit.PaddedView`
-
-22. In Placeholder/Line.js - `Placeholder.Line` has been changed to `ui-kit.Placeholder.Line`
-
-23. In Placeholder/Media.js - `Placeholder.Media` has been changed to `ui-kit.Placeholder.Media`
-
-24. In Placeholder/Paragraph.js - `Placeholder.Paragraph.line` has been changed to `ui-kit.Placeholder.Paragraph.ParagraphLine`
-
-25. In Placeholder/Typography.js - `Placeholder.Typography` has been changed to `ui-kit.Placeholder.Typography`
-
-26. In UIText/index.js - `UIText` has been changed to `ui-kit.UIText`
+1. Open the theme overrides
+2. Search for an identifiable part of each override name from theme overrides (ex: `H1`) in this search within github: (https://github.com/ApollosProject/apollos-apps/search?p=1&q=H1&type=Code&unscoped_q=H1)
+3. Easily see where changes were made and update names accordingly (ex: `ui-kit.Typography.H1`)
 
 ## Updating from 0.8.7 to 1.0.0
 
