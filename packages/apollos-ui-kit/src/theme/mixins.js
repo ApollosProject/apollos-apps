@@ -6,7 +6,7 @@ import {
   withPropsOnChange,
 } from 'recompose';
 import PropTypes from 'prop-types';
-import { merge } from 'lodash';
+import { merge, isPlainObject } from 'lodash';
 
 import createTheme, { THEME_PROPS } from './createTheme';
 
@@ -14,11 +14,11 @@ function stripNullLeaves(obj, cb) {
   const out = {};
 
   Object.keys(obj).forEach((k) => {
-    let val;
+    const val = obj[k];
 
-    if (obj[k] !== null && typeof obj[k] === 'object') {
-      out[k] = stripNullLeaves(obj[k], cb);
-    } else if (val != null) {
+    if (val !== null && typeof val === 'object' && isPlainObject(val)) {
+      out[k] = stripNullLeaves(val, cb);
+    } else if (obj[k] != null) {
       out[k] = val;
     }
   });
