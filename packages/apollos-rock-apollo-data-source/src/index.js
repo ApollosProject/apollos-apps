@@ -1,4 +1,5 @@
 /* eslint-disable class-methods-use-this */
+import https from 'https';
 import { RESTDataSource } from 'apollo-datasource-rest';
 import ApollosConfig from '@apollosproject/config';
 
@@ -11,6 +12,12 @@ import RequestBuilder from './request-builder';
 export { RockLoggingExtension, parseKeyValueAttribute } from './utils';
 
 const { ROCK } = ApollosConfig;
+
+class RandomClass {
+  constructor() {
+    console.log('I WAS CONSTRUCTED');
+  }
+}
 
 export default class RockApolloDataSource extends RESTDataSource {
   // Subclasses can set this to true to force all requests to turn extended responses.
@@ -25,6 +32,14 @@ export default class RockApolloDataSource extends RESTDataSource {
   rockToken = ROCK.API_TOKEN;
 
   nodeFetch = fetch;
+
+  agent = new https.Agent({
+    keepAlive: true,
+    keepAliveMsecs: 1500,
+    maxSockets: 70,
+  });
+
+  RandomClass = new RandomClass();
 
   didReceiveResponse(response, request) {
     // Can't use await b/c of `super` keyword
