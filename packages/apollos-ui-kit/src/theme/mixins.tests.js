@@ -67,7 +67,7 @@ describe('withThemeMixin', () => {
     const tree = renderer.create(
       <ThemeProvider>
         <FlexedView>
-          <TypeExample />
+          <TypeExampleWithNullInputs />
         </FlexedView>
       </ThemeProvider>
     );
