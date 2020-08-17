@@ -27,7 +27,7 @@ const DarkTypeExample = withThemeMixin({
 const TypeExampleWithNullInputs = withThemeMixin({
   type: 'light',
   colors: {
-    primary: "red",
+    primary: null,
     secondary: null,
   },
 })(TypeExample);
