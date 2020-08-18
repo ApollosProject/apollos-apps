@@ -1,8 +1,9 @@
 /* eslint-disable class-methods-use-this */
+import https from 'https';
 import { RESTDataSource } from 'apollo-datasource-rest';
 import ApollosConfig from '@apollosproject/config';
 
-import { mapKeys, mapValues, camelCase } from 'lodash';
+import { get, mapKeys, mapValues, camelCase } from 'lodash';
 import { fetch } from 'apollo-server-env';
 import { createCursor, parseCursor } from './cursor';
 
@@ -11,6 +12,15 @@ import RequestBuilder from './request-builder';
 export { RockLoggingExtension, parseKeyValueAttribute } from './utils';
 
 const { ROCK } = ApollosConfig;
+
+let ROCK_AGENT;
+if (get(ROCK, 'USE_AGENT', true)) {
+  ROCK_AGENT = new https.Agent({
+    keepAlive: true,
+    keepAliveMsecs: 1500,
+    maxSockets: 70,
+  });
+}
 
 export default class RockApolloDataSource extends RESTDataSource {
   // Subclasses can set this to true to force all requests to turn extended responses.
@@ -25,6 +35,8 @@ export default class RockApolloDataSource extends RESTDataSource {
   rockToken = ROCK.API_TOKEN;
 
   nodeFetch = fetch;
+
+  agent = ROCK_AGENT;
 
   didReceiveResponse(response, request) {
     // Can't use await b/c of `super` keyword
@@ -45,6 +57,10 @@ export default class RockApolloDataSource extends RESTDataSource {
     }
     request.headers.set('user-agent', 'Apollos');
     request.headers.set('Content-Type', 'application/json');
+    // Use an HTTP agent for keepAlive
+    if (get(ROCK, 'USE_AGENT', true)) {
+      request.agent = ROCK_AGENT;
+    }
   }
 
   normalize = (data) => {
