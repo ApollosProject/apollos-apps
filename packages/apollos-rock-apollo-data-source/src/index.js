@@ -3,7 +3,7 @@ import https from 'https';
 import { RESTDataSource } from 'apollo-datasource-rest';
 import ApollosConfig from '@apollosproject/config';
 
-import { mapKeys, mapValues, camelCase } from 'lodash';
+import { get, mapKeys, mapValues, camelCase } from 'lodash';
 import { fetch } from 'apollo-server-env';
 import { createCursor, parseCursor } from './cursor';
 
@@ -14,7 +14,7 @@ export { RockLoggingExtension, parseKeyValueAttribute } from './utils';
 const { ROCK } = ApollosConfig;
 
 let ROCK_AGENT;
-if (ROCK.USE_AGENT) {
+if (get(ROCK, 'USE_AGENT', true)) {
   ROCK_AGENT = new https.Agent({
     keepAlive: true,
     keepAliveMsecs: 1500,
@@ -57,7 +57,8 @@ export default class RockApolloDataSource extends RESTDataSource {
     }
     request.headers.set('user-agent', 'Apollos');
     request.headers.set('Content-Type', 'application/json');
-    if (ROCK.USE_AGENT) {
+    // Use an HTTP agent for keepAlive
+    if (get(ROCK, 'USE_AGENT', true)) {
       request.agent = ROCK_AGENT;
     }
   }
