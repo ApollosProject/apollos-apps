@@ -24,6 +24,14 @@ const DarkTypeExample = withThemeMixin({
   type: 'dark',
 })(TypeExample);
 
+const TypeExampleWithNullInputs = withThemeMixin({
+  type: 'light',
+  colors: {
+    primary: null,
+    secondary: null,
+  },
+})(TypeExample);
+
 const TypeExampleWithProps = withThemeMixin(({ color, isLight = true }) => ({
   type: isLight ? 'light' : 'dark',
   colors: {
@@ -50,6 +58,16 @@ describe('withThemeMixin', () => {
         <FlexedView>
           <TypeExampleWithProps isLight color="red" />
           <TypeExampleWithProps isLight={false} color="blue" />
+        </FlexedView>
+      </ThemeProvider>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('prunes null inputs', () => {
+    const tree = renderer.create(
+      <ThemeProvider>
+        <FlexedView>
+          <TypeExampleWithNullInputs />
         </FlexedView>
       </ThemeProvider>
     );
