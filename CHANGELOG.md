@@ -1,4 +1,13 @@
-v1.5.0: August 3, 2020
+v1.5.0: August 18, 2020
+
+- Adds Github Actions CI (#1529) (9ac7cb55)
+
+- Fixes null avatar image case (#1525) (d67af4e0)
+- Fixes metarouter analytics not being a peerDependency (#1523) (a7d4c425)
+- Fixes features rendering if they have no content (#1526) (b966080e)
+- Fixes the theme mixin so it ignores null values (#1528) (83593a8c)
+
+v1.5.0-beta.0: August 3, 2020
 
 - Adds Ui-auth override names (#1509) (1c3108fe)
 - Adds Ui-connected override names (#1510) (d39fdc0c)
