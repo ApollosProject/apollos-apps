@@ -200,7 +200,7 @@ exports[`the PassView component should render 1`] = `
             color="rgb(248, 247, 244)"
             style={
               Object {
-                "color": null,
+                "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
                 "lineHeight": 18,
@@ -310,7 +310,7 @@ exports[`the PassView component should render 1`] = `
               <Text
                 style={
                   Object {
-                    "color": null,
+                    "color": "#505050",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 18,
@@ -360,7 +360,7 @@ exports[`the PassView component should render 1`] = `
               <Text
                 style={
                   Object {
-                    "color": null,
+                    "color": "#505050",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 18,
