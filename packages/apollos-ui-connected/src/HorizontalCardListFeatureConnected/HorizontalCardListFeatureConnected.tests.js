@@ -49,10 +49,33 @@ const mock = {
   },
 };
 
+const noCardsMock = {
+  ...mock,
+  result: {
+    data: {
+      node: {
+        ...mock.result.data.node,
+        cards: [],
+      },
+    },
+  },
+};
+
 describe('The HorizontalCardListFeatureConnected component', () => {
   it('should render', async () => {
     const tree = await renderWithApolloData(
       <Providers mocks={[mock]}>
+        <HorizontalCardListFeatureConnected
+          featureId={'HorizontalCardListFeature:123'}
+          refetchRef={jest.fn()}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should not render without cards', async () => {
+    const tree = await renderWithApolloData(
+      <Providers mocks={[noCardsMock]}>
         <HorizontalCardListFeatureConnected
           featureId={'HorizontalCardListFeature:123'}
           refetchRef={jest.fn()}

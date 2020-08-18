@@ -90,26 +90,27 @@ const VerticalCardListFeature = memo(
     onPressItem,
     subtitle,
     title,
-  }) => (
-    <View>
-      {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
-        <Header vertical={false}>
-          {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
-            <Title numberOfLines={1}>{title}</Title>
-          ) : null}
-          {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
-        </Header>
-      ) : null}
-      <FeedView
-        onPressItem={onPressItem}
-        ListItemComponent={ContentCardComponentMapper}
-        loadingStateObject={loadingStateObject}
-        content={cards} // {getContent({ cards, isLoading })}
-        isLoading={isLoading}
-        listKey={listKey}
-      />
-    </View>
-  )
+  }) =>
+    !!(isLoading || cards.length) && (
+      <View>
+        {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
+          <Header vertical={false}>
+            {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
+              <Title numberOfLines={1}>{title}</Title>
+            ) : null}
+            {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
+          </Header>
+        ) : null}
+        <FeedView
+          onPressItem={onPressItem}
+          ListItemComponent={ContentCardComponentMapper}
+          loadingStateObject={loadingStateObject}
+          content={cards} // {getContent({ cards, isLoading })}
+          isLoading={isLoading}
+          listKey={listKey}
+        />
+      </View>
+    )
 );
 
 VerticalCardListFeature.displayName = 'Features';

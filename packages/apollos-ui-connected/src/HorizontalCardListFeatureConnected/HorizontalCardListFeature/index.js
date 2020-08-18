@@ -80,27 +80,37 @@ class HorizontalCardListFeature extends PureComponent {
   );
 
   render() {
+    const {
+      isLoading,
+      cards,
+      subtitle,
+      title,
+      listKey,
+      loadingStateObject,
+    } = this.props;
     return (
-      <View>
-        {this.props.isLoading || this.props.title || this.props.subtitle ? ( // only display the Header if we are loading or have a title/subtitle
-          <Header vertical={false}>
-            {this.props.isLoading || this.props.title ? ( // we check for isloading here so that they are included in the loading state
-              <Title numberOfLines={1}>{this.props.title}</Title>
-            ) : null}
-            {this.props.isLoading || this.props.subtitle ? (
-              <Subtitle>{this.props.subtitle}</Subtitle>
-            ) : null}
-          </Header>
-        ) : null}
-        <HorizontalTileFeed
-          content={this.props.cards}
-          isLoading={this.props.isLoading}
-          listKey={this.props.listKey}
-          keyExtractor={this.keyExtractor}
-          loadingStateObject={this.props.loadingStateObject}
-          renderItem={this.renderItem}
-        />
-      </View>
+      !!(isLoading || cards.length) && (
+        <View>
+          {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
+            <Header vertical={false}>
+              {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
+                <Title numberOfLines={1}>{title}</Title>
+              ) : null}
+              {isLoading || this.props.subtitle ? (
+                <Subtitle>{this.props.subtitle}</Subtitle>
+              ) : null}
+            </Header>
+          ) : null}
+          <HorizontalTileFeed
+            content={cards}
+            isLoading={isLoading}
+            listKey={listKey}
+            keyExtractor={this.keyExtractor}
+            loadingStateObject={loadingStateObject}
+            renderItem={this.renderItem}
+          />
+        </View>
+      )
     );
   }
 }

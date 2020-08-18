@@ -80,25 +80,26 @@ const loadingStateData = {
 };
 
 const CampaignItemListFeature = memo(
-  ({ cards, isLoading, listKey, onPressItem, subtitle, title }) => (
-    <View>
-      {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
-        <Header vertical={false}>
-          {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
-            <Title numberOfLines={1}>{title}</Title>
-          ) : null}
-          {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
-        </Header>
-      ) : null}
-      <FeedView
-        onPressItem={onPressItem}
-        ListItemComponent={ListItemComponent}
-        content={isLoading ? [loadingStateData] : cards}
-        isLoading={isLoading}
-        listKey={listKey}
-      />
-    </View>
-  )
+  ({ cards, isLoading, listKey, onPressItem, subtitle, title }) =>
+    !!(isLoading || cards.length) && (
+      <View>
+        {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
+          <Header vertical={false}>
+            {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
+              <Title numberOfLines={1}>{title}</Title>
+            ) : null}
+            {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
+          </Header>
+        ) : null}
+        <FeedView
+          onPressItem={onPressItem}
+          ListItemComponent={ListItemComponent}
+          content={isLoading ? [loadingStateData] : cards}
+          isLoading={isLoading}
+          listKey={listKey}
+        />
+      </View>
+    )
 );
 
 CampaignItemListFeature.displayName = 'Features';
