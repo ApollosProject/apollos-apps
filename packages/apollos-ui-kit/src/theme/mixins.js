@@ -10,7 +10,7 @@ import { merge, isPlainObject } from 'lodash';
 
 import createTheme, { THEME_PROPS } from './createTheme';
 
-// This function deeply strips out values in an object that are null or undefined. 
+// This function deeply strips out values in an object that are null or undefined.
 // In other words, turns { bla: { foo: 'orange', bar: null }, baz: null }
 // into { bla: { foo: 'orange' } }
 function stripNullLeaves(obj, cb) {
@@ -49,7 +49,7 @@ const withThemeMixin = (themeInput) =>
         }
         // Now, merge together the input, and strip out all the null leaves.
         // This is important. Null leaves will override default values from the base theme, without providing a replacement.
-        // This causes the app to crash if you're not careful to provide values for the entire theme. 
+        // This causes the app to crash if you're not careful to provide values for the entire theme.
         // Very common when sending GQL data over the wire.
         themeInputAsObject = stripNullLeaves(
           merge({}, originalThemeInput, themeInputAsObject)
