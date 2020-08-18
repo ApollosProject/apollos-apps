@@ -13,10 +13,13 @@ export { RockLoggingExtension, parseKeyValueAttribute } from './utils';
 
 const { ROCK } = ApollosConfig;
 
-class RandomClass {
-  constructor() {
-    console.log('I WAS CONSTRUCTED');
-  }
+let ROCK_AGENT;
+if (ROCK.USE_AGENT) {
+  ROCK_AGENT = new https.Agent({
+    keepAlive: true,
+    keepAliveMsecs: 1500,
+    maxSockets: 70,
+  });
 }
 
 export default class RockApolloDataSource extends RESTDataSource {
@@ -33,13 +36,7 @@ export default class RockApolloDataSource extends RESTDataSource {
 
   nodeFetch = fetch;
 
-  agent = new https.Agent({
-    keepAlive: true,
-    keepAliveMsecs: 1500,
-    maxSockets: 70,
-  });
-
-  RandomClass = new RandomClass();
+  agent = ROCK_AGENT;
 
   didReceiveResponse(response, request) {
     // Can't use await b/c of `super` keyword
@@ -60,6 +57,9 @@ export default class RockApolloDataSource extends RESTDataSource {
     }
     request.headers.set('user-agent', 'Apollos');
     request.headers.set('Content-Type', 'application/json');
+    if (ROCK.USE_AGENT) {
+      request.agent = ROCK_AGENT;
+    }
   }
 
   normalize = (data) => {
