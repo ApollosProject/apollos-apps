@@ -32,6 +32,7 @@ ApolloServer.loadJs({
     API_URL: 'https://apollosrock.newspring.cc/api',
     API_TOKEN: 'some-rock-token',
     IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
+    USE_AGENT: false,
   },
   HOME_FEATURES: [
     {
