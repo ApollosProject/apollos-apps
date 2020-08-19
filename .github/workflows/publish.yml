@@ -26,5 +26,5 @@ jobs:
 
     - name: Canary Release
       run:
-        - echo "//registry.npmjs.org/:_authToken=\${{ secrets.NPM_TOKEN }}" >> $HOME/.npmrc 2> /dev/null
+        - echo "registry=https://npm.pkg.github.com/apollosproject" >> .npmrc
         - yarn release:canary
