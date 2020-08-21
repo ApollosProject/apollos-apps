@@ -443,7 +443,27 @@ export const contentItemSchema = gql`
   }
 
   type ContentSeriesContentItem implements ContentItem & Node {
-f
+    id: ID!
+    title(hyphenated: Boolean): String
+    coverImage: ImageMedia
+    images: [ImageMedia]
+    videos: [VideoMedia]
+    audios: [AudioMedia]
+    htmlContent: String
+    summary: String
+    childContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    siblingContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    parentChannel: ContentChannel
+    theme: Theme
+    percentComplete: Float @cacheControl(maxAge: 0)
+    upNext: ContentItem @cacheControl(maxAge: 0)
+    scriptures: [Scripture]
   }
 
   type WeekendContentItem implements ContentItem & Node {
