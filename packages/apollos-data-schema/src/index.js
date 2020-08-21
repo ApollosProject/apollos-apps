@@ -1,6 +1,61 @@
 import gql from 'graphql-tag';
 import { extendForEachContentItemType } from './utils';
 
+export const interfacesSchema = gql`
+  interface Card {
+    title(hyphenated: Boolean): String
+    coverImage: ImageMedia
+    summary: String
+  }
+
+  interface VideoNode {
+    videos: [VideoMedia]
+  }
+
+  interface AudioNode {
+    audios: [AudioMedia]
+  }
+
+  interface ContentNode {
+    htmlContent: String
+  }
+
+  interface FeaturesNode {
+    features: [Feature]
+  }
+
+  interface ParentNode {
+    childConnection(first: Int, after: String): NodeConnection
+  }
+
+  interface ThemedNode {
+    theme: Theme
+  }
+
+  interface ProgressNode {
+    percentComplete: Float @cacheControl(maxAge: 0)
+    upNext: ContentItem @cacheControl(maxAge: 0)
+  }
+
+  interface ScriptureNode {
+    scriptures: [Scripture]
+  }
+
+  interface LikeableNode {
+    isLiked: Boolean
+    likedCount: Int
+  }
+
+  interface ShareableNode {
+    sharing: SharingFields
+  }
+
+  interface ChildNode {
+    parentNode: Node
+    siblingConnection(first: Int, after: String): NodeConnection
+  }
+`;
+
 export const testSchema = gql`
   scalar Upload
 
@@ -388,28 +443,7 @@ export const contentItemSchema = gql`
   }
 
   type ContentSeriesContentItem implements ContentItem & Node {
-    id: ID!
-    title(hyphenated: Boolean): String
-    coverImage: ImageMedia
-    images: [ImageMedia]
-    videos: [VideoMedia]
-    audios: [AudioMedia]
-    htmlContent: String
-    summary: String
-    childContentItemsConnection(
-      first: Int
-      after: String
-    ): ContentItemsConnection
-    siblingContentItemsConnection(
-      first: Int
-      after: String
-    ): ContentItemsConnection
-    parentChannel: ContentChannel
-    theme: Theme
-
-    percentComplete: Float @cacheControl(maxAge: 0)
-    upNext: ContentItem @cacheControl(maxAge: 0)
-    scriptures: [Scripture]
+f
   }
 
   type WeekendContentItem implements ContentItem & Node {
