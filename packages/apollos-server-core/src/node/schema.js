@@ -1,4 +1,5 @@
 import gql from 'graphql-tag';
+import { interfacesSchema } from '@apollosproject/data-schema';
 
 export default gql`
   extend type Query {
@@ -8,4 +9,6 @@ export default gql`
   interface Node {
     id: ID!
   }
+
+  ${interfacesSchema}
 `;

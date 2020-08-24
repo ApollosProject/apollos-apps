@@ -1,5 +1,10 @@
 import gql from 'graphql-tag';
-import { extendForEachContentItemType } from './utils';
+import {
+  extendForEachContentItemType,
+  addInterfaceForEachContentItemType,
+} from './utils';
+
+export const foo = 'fart';
 
 export const interfacesSchema = gql`
   interface ContentNode {
@@ -47,15 +52,6 @@ export const interfacesSchema = gql`
 
   interface ScriptureNode {
     scriptures: [Scripture]
-  }
-
-  interface LikableNode {
-    isLiked: Boolean
-    likedCount: Int
-  }
-
-  interface ShareableNode {
-    sharing: SharingFields
   }
 `;
 
@@ -378,7 +374,7 @@ export const contentItemSchema = gql`
     theme: Theme
   }
 
-  type UniversalContentItem implements ContentItem & Node {
+  type UniversalContentItem implements ContentItem & Node & ContentNode & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode {
     id: ID!
     title(hyphenated: Boolean): String
     coverImage: ImageMedia
@@ -399,30 +395,7 @@ export const contentItemSchema = gql`
     theme: Theme
   }
 
-  type DevotionalContentItem implements ContentItem & Node {
-    id: ID!
-    title(hyphenated: Boolean): String
-    coverImage: ImageMedia
-    images: [ImageMedia]
-    videos: [VideoMedia]
-    audios: [AudioMedia]
-    htmlContent: String
-    summary: String
-    childContentItemsConnection(
-      first: Int
-      after: String
-    ): ContentItemsConnection
-    siblingContentItemsConnection(
-      first: Int
-      after: String
-    ): ContentItemsConnection
-    parentChannel: ContentChannel
-    theme: Theme
-
-    scriptures: [Scripture]
-  }
-
-  type MediaContentItem implements ContentItem & Node {
+  type DevotionalContentItem implements ContentItem & Node & ContentNode & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode {
     id: ID!
     title(hyphenated: Boolean): String
     coverImage: ImageMedia
@@ -445,7 +418,30 @@ export const contentItemSchema = gql`
     scriptures: [Scripture]
   }
 
-  type ContentSeriesContentItem implements ContentItem & Node {
+  type MediaContentItem implements ContentItem & Node & ContentNode & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode {
+    id: ID!
+    title(hyphenated: Boolean): String
+    coverImage: ImageMedia
+    images: [ImageMedia]
+    videos: [VideoMedia]
+    audios: [AudioMedia]
+    htmlContent: String
+    summary: String
+    childContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    siblingContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    parentChannel: ContentChannel
+    theme: Theme
+
+    scriptures: [Scripture]
+  }
+
+  type ContentSeriesContentItem implements ContentItem & Node & ContentNode & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode {
     id: ID!
     title(hyphenated: Boolean): String
     coverImage: ImageMedia
@@ -469,7 +465,7 @@ export const contentItemSchema = gql`
     scriptures: [Scripture]
   }
 
-  type WeekendContentItem implements ContentItem & Node {
+  type WeekendContentItem implements ContentItem & Node & ContentNode & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode {
     id: ID!
     title(hyphenated: Boolean): String
     coverImage: ImageMedia
@@ -570,6 +566,12 @@ export const sharableSchema = gql`
     sharing: SharableContentItem
 `)}
 
+  interface ShareableNode {
+    sharing: SharableContentItem
+  }
+
+  ${addInterfaceForEachContentItemType('ShareableNode')}
+
   type SharableFeature implements Sharable {
     message: String
     title: String
@@ -603,6 +605,12 @@ export const liveSchema = gql`
   extend type WeekendContentItem {
     liveStream: LiveStream
   }
+
+  interface LiveNode {
+    liveStream: LiveStream
+  }
+
+  extend type WeekendContentItem implements LiveNode
 `;
 
 export const pushSchema = gql`
@@ -688,6 +696,13 @@ export const followingsSchema = gql`
     isLiked: Boolean @cacheControl(maxAge: 0)
     likedCount: Int @cacheControl(maxAge: 0)
 `)}
+
+  interface LikableNode {
+    isLiked: Boolean
+    likedCount: Int
+  }
+
+  ${addInterfaceForEachContentItemType(`LikableNode`)}
 
   extend type Query {
     likedContent(first: Int, after: String): ContentItemsConnection

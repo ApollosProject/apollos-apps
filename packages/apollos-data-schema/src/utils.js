@@ -17,4 +17,11 @@ const extendForEachContentItemType = (schema) =>
 }`,
   ].join('\n');
 
-export { extendForEachContentItemType };
+const addInterfaceForEachContentItemType = (gqlInterface) =>
+  [
+    ...Object.keys(ROCK_MAPPINGS.CONTENT_ITEM)
+      .filter((type) => type !== 'ContentItem')
+      .map((type) => `extend type ${type} implements ${gqlInterface}`),
+  ].join('\n');
+
+export { extendForEachContentItemType, addInterfaceForEachContentItemType };
