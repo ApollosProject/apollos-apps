@@ -2,10 +2,11 @@ import gql from 'graphql-tag';
 import { extendForEachContentItemType } from './utils';
 
 export const interfacesSchema = gql`
-  interface Card {
+  interface ContentNode {
     title(hyphenated: Boolean): String
     coverImage: ImageMedia
     summary: String
+    htmlContent: String
   }
 
   interface VideoNode {
@@ -14,10 +15,6 @@ export const interfacesSchema = gql`
 
   interface AudioNode {
     audios: [AudioMedia]
-  }
-
-  interface ContentNode {
-    htmlContent: String
   }
 
   interface FeaturesNode {
