@@ -41,7 +41,7 @@ export const interfacesSchema = gql`
     scriptures: [Scripture]
   }
 
-  interface LikeableNode {
+  interface LikableNode {
     isLiked: Boolean
     likedCount: Int
   }
