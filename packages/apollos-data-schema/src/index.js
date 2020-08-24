@@ -24,8 +24,19 @@ export const interfacesSchema = gql`
     features: [Feature]
   }
 
-  interface ParentNode {
-    childConnection(first: Int, after: String): NodeConnection
+  interface ContentParentNode {
+    childContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+  }
+
+  interface ContentChildNode {
+    parentChannel: ContentChannel
+    siblingContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
   }
 
   interface ThemedNode {
@@ -48,11 +59,6 @@ export const interfacesSchema = gql`
 
   interface ShareableNode {
     sharing: SharingFields
-  }
-
-  interface ChildNode {
-    parentNode: Node
-    siblingConnection(first: Int, after: String): NodeConnection
   }
 `;
 
