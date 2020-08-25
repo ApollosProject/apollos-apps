@@ -1,10 +1,8 @@
 import gql from 'graphql-tag';
 import {
   extendForEachContentItemType,
-  addInterfaceForEachContentItemType,
+  addInterfacesForEachContentItemType,
 } from './utils';
-
-export const foo = 'fart';
 
 export const interfacesSchema = gql`
   interface ContentNode {
@@ -54,12 +52,25 @@ export const interfacesSchema = gql`
     scriptures: [Scripture]
   }
 
-  ${addInterfaceForEachContentItemType('ContentNode')}
-  ${addInterfaceForEachContentItemType('VideoNode')}
-  ${addInterfaceForEachContentItemType('AudioNode')}
-  ${addInterfaceForEachContentItemType('ContentChildNode')}
-  ${addInterfaceForEachContentItemType('ContentParentNode')}
-  ${addInterfaceForEachContentItemType('ThemedNode')}
+  # Maps to each type implementing each interface.
+  # Reduces visual fluff in this file. No magic.
+  ${addInterfacesForEachContentItemType(
+    [
+      'ContentNode',
+      'VideoNode',
+      'AudioNode',
+      'ContentChildNode',
+      'ContentParentNode',
+      'ThemedNode',
+    ],
+    [
+      'UniversalContentItem',
+      'WeekendContentItem',
+      'MediaContentItem',
+      'ContentSeriesContentItem',
+      'DevotionalContentItem',
+    ]
+  )}
 
   extend type MediaContentItem implements ScriptureNode
   extend type DevotionalContentItem implements ScriptureNode
@@ -582,7 +593,16 @@ export const sharableSchema = gql`
     sharing: SharableContentItem
   }
 
-  ${addInterfaceForEachContentItemType('ShareableNode')}
+  ${addInterfacesForEachContentItemType(
+    ['ShareableNode'],
+    [
+      'UniversalContentItem',
+      'WeekendContentItem',
+      'MediaContentItem',
+      'ContentSeriesContentItem',
+      'DevotionalContentItem',
+    ]
+  )}
 
   type SharableFeature implements Sharable {
     message: String
@@ -714,7 +734,16 @@ export const followingsSchema = gql`
     likedCount: Int
   }
 
-  ${addInterfaceForEachContentItemType(`LikableNode`)}
+  ${addInterfacesForEachContentItemType(
+    ['LikableNode'],
+    [
+      'UniversalContentItem',
+      'WeekendContentItem',
+      'MediaContentItem',
+      'ContentSeriesContentItem',
+      'DevotionalContentItem',
+    ]
+  )}
 
   extend type Query {
     likedContent(first: Int, after: String): ContentItemsConnection
