@@ -25,6 +25,6 @@ jobs:
       run: yarn
 
     - name: Canary Release
-      run:
-        - echo "registry=https://npm.pkg.github.com/apollosproject" >> .npmrc
-        - yarn release:canary
+      run: |
+        echo "registry=https://npm.pkg.github.com/apollosproject" >> .npmrc
+        yarn release:canary
