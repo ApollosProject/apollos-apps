@@ -53,6 +53,18 @@ export const interfacesSchema = gql`
   interface ScriptureNode {
     scriptures: [Scripture]
   }
+
+  ${addInterfaceForEachContentItemType('ContentNode')}
+  ${addInterfaceForEachContentItemType('VideoNode')}
+  ${addInterfaceForEachContentItemType('AudioNode')}
+  ${addInterfaceForEachContentItemType('ContentChildNode')}
+  ${addInterfaceForEachContentItemType('ContentParentNode')}
+  ${addInterfaceForEachContentItemType('ThemedNode')}
+
+  extend type MediaContentItem implements ScriptureNode
+  extend type DevotionalContentItem implements ScriptureNode
+
+  extend type ContentSeriesContentItem implements ProgressNode
 `;
 
 export const testSchema = gql`
@@ -374,7 +386,7 @@ export const contentItemSchema = gql`
     theme: Theme
   }
 
-  type UniversalContentItem implements ContentItem & Node & ContentNode & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode {
+  type UniversalContentItem implements ContentItem & Node {
     id: ID!
     title(hyphenated: Boolean): String
     coverImage: ImageMedia
@@ -395,30 +407,7 @@ export const contentItemSchema = gql`
     theme: Theme
   }
 
-  type DevotionalContentItem implements ContentItem & Node & ContentNode & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode {
-    id: ID!
-    title(hyphenated: Boolean): String
-    coverImage: ImageMedia
-    images: [ImageMedia]
-    videos: [VideoMedia]
-    audios: [AudioMedia]
-    htmlContent: String
-    summary: String
-    childContentItemsConnection(
-      first: Int
-      after: String
-    ): ContentItemsConnection
-    siblingContentItemsConnection(
-      first: Int
-      after: String
-    ): ContentItemsConnection
-    parentChannel: ContentChannel
-    theme: Theme
-
-    scriptures: [Scripture]
-  }
-
-  type MediaContentItem implements ContentItem & Node & ContentNode & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode {
+  type DevotionalContentItem implements ContentItem & Node {
     id: ID!
     title(hyphenated: Boolean): String
     coverImage: ImageMedia
@@ -441,7 +430,30 @@ export const contentItemSchema = gql`
     scriptures: [Scripture]
   }
 
-  type ContentSeriesContentItem implements ContentItem & Node & ContentNode & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode {
+  type MediaContentItem implements ContentItem & Node {
+    id: ID!
+    title(hyphenated: Boolean): String
+    coverImage: ImageMedia
+    images: [ImageMedia]
+    videos: [VideoMedia]
+    audios: [AudioMedia]
+    htmlContent: String
+    summary: String
+    childContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    siblingContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+    parentChannel: ContentChannel
+    theme: Theme
+
+    scriptures: [Scripture]
+  }
+
+  type ContentSeriesContentItem implements ContentItem & Node {
     id: ID!
     title(hyphenated: Boolean): String
     coverImage: ImageMedia
@@ -465,7 +477,7 @@ export const contentItemSchema = gql`
     scriptures: [Scripture]
   }
 
-  type WeekendContentItem implements ContentItem & Node & ContentNode & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode {
+  type WeekendContentItem implements ContentItem & Node {
     id: ID!
     title(hyphenated: Boolean): String
     coverImage: ImageMedia
