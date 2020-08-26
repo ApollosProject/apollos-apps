@@ -59,7 +59,6 @@ export default class AuthDataSource extends RockApolloDataSource {
     }
     const login = await this.request('/UserLogins')
       .filter(`UserName eq '${cachedUserName}'`)
-      .expand('Person')
       .first();
 
     if (!login || !login.personId) {
