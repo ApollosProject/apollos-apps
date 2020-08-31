@@ -1,5 +1,88 @@
 import gql from 'graphql-tag';
-import { extendForEachContentItemType } from './utils';
+import {
+  extendForEachContentItemType,
+  addInterfacesForEachContentItemType,
+} from './utils';
+
+export const interfacesSchema = gql`
+  interface ContentNode {
+    title(hyphenated: Boolean): String
+    coverImage: ImageMedia
+    htmlContent: String
+  }
+
+  interface Card {
+    title(hyphenated: Boolean): String
+    coverImage: ImageMedia
+    summary: String
+  }
+
+  interface VideoNode {
+    videos: [VideoMedia]
+  }
+
+  interface AudioNode {
+    audios: [AudioMedia]
+  }
+
+  interface FeaturesNode {
+    features: [Feature]
+  }
+
+  interface ContentParentNode {
+    childContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+  }
+
+  interface ContentChildNode {
+    parentChannel: ContentChannel
+    siblingContentItemsConnection(
+      first: Int
+      after: String
+    ): ContentItemsConnection
+  }
+
+  interface ThemedNode {
+    theme: Theme
+  }
+
+  interface ProgressNode {
+    percentComplete: Float @cacheControl(maxAge: 0)
+    upNext: ContentItem @cacheControl(maxAge: 0)
+  }
+
+  interface ScriptureNode {
+    scriptures: [Scripture]
+  }
+
+  # Maps to each type implementing each interface.
+  # Reduces visual fluff in this file. No magic.
+  ${addInterfacesForEachContentItemType(
+    [
+      'ContentNode',
+      'Card',
+      'VideoNode',
+      'AudioNode',
+      'ContentChildNode',
+      'ContentParentNode',
+      'ThemedNode',
+    ],
+    [
+      'UniversalContentItem',
+      'WeekendContentItem',
+      'MediaContentItem',
+      'ContentSeriesContentItem',
+      'DevotionalContentItem',
+    ]
+  )}
+
+  extend type MediaContentItem implements ScriptureNode
+  extend type DevotionalContentItem implements ScriptureNode
+
+  extend type ContentSeriesContentItem implements ProgressNode
+`;
 
 export const testSchema = gql`
   scalar Upload
@@ -406,7 +489,6 @@ export const contentItemSchema = gql`
     ): ContentItemsConnection
     parentChannel: ContentChannel
     theme: Theme
-
     percentComplete: Float @cacheControl(maxAge: 0)
     upNext: ContentItem @cacheControl(maxAge: 0)
     scriptures: [Scripture]
@@ -513,6 +595,21 @@ export const sharableSchema = gql`
     sharing: SharableContentItem
 `)}
 
+  interface ShareableNode {
+    sharing: SharableContentItem
+  }
+
+  ${addInterfacesForEachContentItemType(
+    ['ShareableNode'],
+    [
+      'UniversalContentItem',
+      'WeekendContentItem',
+      'MediaContentItem',
+      'ContentSeriesContentItem',
+      'DevotionalContentItem',
+    ]
+  )}
+
   type SharableFeature implements Sharable {
     message: String
     title: String
@@ -546,6 +643,12 @@ export const liveSchema = gql`
   extend type WeekendContentItem {
     liveStream: LiveStream
   }
+
+  interface LiveNode {
+    liveStream: LiveStream
+  }
+
+  extend type WeekendContentItem implements LiveNode
 `;
 
 export const pushSchema = gql`
@@ -631,6 +734,22 @@ export const followingsSchema = gql`
     isLiked: Boolean @cacheControl(maxAge: 0)
     likedCount: Int @cacheControl(maxAge: 0)
 `)}
+
+  interface LikableNode {
+    isLiked: Boolean
+    likedCount: Int
+  }
+
+  ${addInterfacesForEachContentItemType(
+    ['LikableNode'],
+    [
+      'UniversalContentItem',
+      'WeekendContentItem',
+      'MediaContentItem',
+      'ContentSeriesContentItem',
+      'DevotionalContentItem',
+    ]
+  )}
 
   extend type Query {
     likedContent(first: Int, after: String): ContentItemsConnection

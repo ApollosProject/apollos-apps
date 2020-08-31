@@ -4,10 +4,10 @@ import { graphql } from 'graphql';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
 import ApollosConfig from '@apollosproject/config';
 import {
-  themeSchema,
-  contentChannelSchema,
   contentItemSchema,
+  themeSchema,
   scriptureSchema,
+  contentChannelSchema,
 } from '@apollosproject/data-schema';
 import * as LiveStream from '../index';
 
@@ -27,10 +27,10 @@ describe('LiveStream', () => {
   let context;
   beforeEach(() => {
     schema = getSchema([
-      themeSchema,
-      contentChannelSchema,
       contentItemSchema,
+      themeSchema,
       scriptureSchema,
+      contentChannelSchema,
     ]);
     context = getContext();
 

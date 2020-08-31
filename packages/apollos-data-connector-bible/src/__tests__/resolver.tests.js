@@ -3,6 +3,12 @@ import { fetch } from 'apollo-server-env';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
 import { createGlobalId } from '@apollosproject/server-core';
 import ApollosConfig from '@apollosproject/config';
+import {
+  themeSchema,
+  contentChannelSchema,
+  contentItemSchema,
+  featuresSchema,
+} from '@apollosproject/data-schema';
 import * as Scripture from '../index';
 
 ApollosConfig.loadJs({
@@ -21,7 +27,12 @@ describe('Scripture', () => {
   let schema;
   let context;
   beforeEach(() => {
-    schema = getSchema();
+    schema = getSchema([
+      themeSchema,
+      contentChannelSchema,
+      contentItemSchema,
+      featuresSchema,
+    ]);
     context = getContext();
 
     fetch.resetMocks();

@@ -17,4 +17,13 @@ const extendForEachContentItemType = (schema) =>
 }`,
   ].join('\n');
 
-export { extendForEachContentItemType };
+const addInterfacesForEachContentItemType = (gqlInterfaces, types) =>
+  types
+    .flatMap((type) =>
+      gqlInterfaces.map(
+        (gqlInterface) => `extend type ${type} implements ${gqlInterface}`
+      )
+    )
+    .join('\n');
+
+export { extendForEachContentItemType, addInterfacesForEachContentItemType };
