@@ -62,6 +62,7 @@ export const interfacesSchema = gql`
   ${addInterfacesForEachContentItemType(
     [
       'ContentNode',
+      'Card',
       'VideoNode',
       'AudioNode',
       'ContentChildNode',
