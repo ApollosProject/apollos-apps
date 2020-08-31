@@ -8,8 +8,13 @@ export const interfacesSchema = gql`
   interface ContentNode {
     title(hyphenated: Boolean): String
     coverImage: ImageMedia
-    summary: String
     htmlContent: String
+  }
+
+  interface Card {
+    title(hyphenated: Boolean): String
+    coverImage: ImageMedia
+    summary: String
   }
 
   interface VideoNode {
