@@ -54,7 +54,8 @@
     "apollo-upload-client": "9.0.0",
     "graphql-tag": "2.9.2",
     "lodash": "^4.17.11",
-    "react-apollo": "2.5.5"
+    "react-apollo": "2.5.5",
+    "apollo-storybook-react-native": "0.2.12"
   },
   "devDependencies": {
     "@react-native-community/async-storage": "^1.5.1",

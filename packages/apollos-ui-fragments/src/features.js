@@ -102,11 +102,9 @@ const CARD_FEATURES_FRAGMENT = gql`
 `;
 
 const NODE_FEATURES_FRAGMENT = gql`
-  fragment NodeFeaturesFragment on ContentItem {
-    ... on FeatureNode {
-      features {
-        ...FeaturesFragment
-      }
+  fragment NodeFeaturesFragment on FeaturesNode {
+    features {
+      ...FeaturesFragment
     }
   }
 `;
