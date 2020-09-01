@@ -101,6 +101,16 @@ const CARD_FEATURES_FRAGMENT = gql`
   }
 `;
 
+const NODE_FEATURES_FRAGMENT = gql`
+  fragment NodeFeaturesFragment on ContentItem {
+    ... on FeatureNode {
+      features {
+        ...FeaturesFragment
+      }
+    }
+  }
+`;
+
 const ACTION_LIST_FEATURE_FRAGMENT = gql`
   fragment ActionListFeatureFragment on ActionListFeature {
     id
@@ -255,4 +265,5 @@ export {
   WEBVIEW_FEATURE_FRAGMENT,
   PRAYER_LIST_FEATURE_FRAGMENT,
   RELATED_NODE_FRAGMENT,
+  NODE_FEATURES_FRAGMENT,
 };

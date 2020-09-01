@@ -1,53 +1,35 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import { H3, PaddedView, withIsLoading } from '@apollosproject/ui-kit';
-import TextFeature from '../../features/TextFeature';
-import ScriptureFeature from '../../features/ScriptureFeature';
-import WebviewFeature from '../../features/WebviewFeature';
-
-const FEATURE_MAP = {
-  TextFeature,
-  ScriptureFeature,
-  WebviewFeature,
-};
+import nodeFeaturesComponentMapper from '../nodeFeaturesComponentMapper';
 
 const ContentSingleFeatures = memo(
-  ({ contentId, features, isLoading, title, featureMap }) => (
+  ({ features, title, additionalFeatures }) => (
     <PaddedView horizontal={false}>
       <PaddedView vertical={false}>
         <H3 padded>{title}</H3>
       </PaddedView>
-      {features.map(({ __typename, ...feature }) => {
-        const Feature = featureMap[__typename];
-        if (!Feature) return null;
-        return (
-          <Feature
-            key={feature.id}
-            {...feature}
-            contentId={contentId}
-            isLoading={isLoading}
-          />
-        );
-      })}
+      {features.map((feature) =>
+        nodeFeaturesComponentMapper({ feature, additionalFeatures })
+      )}
     </PaddedView>
   )
 );
 
 ContentSingleFeatures.propTypes = {
-  contentId: PropTypes.string,
   features: PropTypes.shape({
     id: PropTypes.string.isRequired,
     order: PropTypes.string,
     __typename: PropTypes.string.isRequired,
   }),
   featureMap: PropTypes.shape({}),
-  isLoading: PropTypes.bool,
+  additionalFeatures: PropTypes.shape({}),
   title: PropTypes.string,
 };
 
 ContentSingleFeatures.defaultProps = {
   title: 'Engage',
-  featureMap: FEATURE_MAP,
+  additionalFeatures: {},
 };
 
 ContentSingleFeatures.displayName = 'ContentSingleFeatures';
