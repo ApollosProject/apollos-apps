@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { Providers } from '../../utils/testUtils';
+import { Providers } from '../../testUtils';
 
 import ContentSingleFeatures from '.';
 
@@ -92,6 +92,19 @@ describe('ContentSingleFeatures', () => {
           contentId={'WeekendContentItem:1'}
           features={mockFeaturesData}
           title={'Custom Title'}
+        />
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
+  it('should take a null title', async () => {
+    const tree = renderer.create(
+      <Providers>
+        <ContentSingleFeatures
+          contentId={'WeekendContentItem:1'}
+          features={mockFeaturesData}
+          title={null}
         />
       </Providers>
     );

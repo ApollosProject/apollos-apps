@@ -911,9 +911,13 @@ export const featuresSchema = gql`
     features: [Feature]
   }
 
+  extend type WeekendContentItem implements FeaturesNode
+
   extend type ContentSeriesContentItem {
     features: [Feature]
   }
+
+  extend type ContentSeriesContentItem implements FeaturesNode
 
   extend type Query {
     userFeedFeatures: [Feature] @cacheControl(maxAge: 0)

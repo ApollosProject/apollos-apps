@@ -214,7 +214,7 @@ export default gql`
     ): ContentItemsConnection
   }
 
-  type ContentSeriesContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ProgressNode & LikableNode & ShareableNode {
+  type ContentSeriesContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ProgressNode & LikableNode & ShareableNode & FeaturesNode {
     id: ID!
     title(hyphenated: Boolean): String
     coverImage: ImageMedia
@@ -754,7 +754,7 @@ export default gql`
     url: String
   }
 
-  type WeekendContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & LikableNode & LiveNode & ShareableNode {
+  type WeekendContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & LikableNode & LiveNode & ShareableNode & FeaturesNode {
     id: ID!
     title(hyphenated: Boolean): String
     coverImage: ImageMedia

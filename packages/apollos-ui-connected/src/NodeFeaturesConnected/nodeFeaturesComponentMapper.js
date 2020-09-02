@@ -15,7 +15,6 @@ const featuresFeedComponentMapper = ({
   feature,
   onPressActionItem,
   additionalFeatures = {},
-  refetchRef,
 }) => {
   const { id, __typename, ...featureData } = feature;
   const map = { ...MAPPINGS, ...additionalFeatures };
@@ -27,7 +26,7 @@ const featuresFeedComponentMapper = ({
         featureId={id}
         onPressItem={onPressActionItem}
         listKey={id}
-        refetchRef={refetchRef}
+        nodeId={id}
         {...featureData}
       />
     );
@@ -44,8 +43,8 @@ featuresFeedComponentMapper.propTypes = {
     userFeedFeatures: PropTypes.arrayOf(PropTypes.shape({})),
   }).isRequired,
   onPressActionItem: PropTypes.func,
+  loading: PropTypes.bool,
   additionalFeatures: PropTypes.shape({}),
-  refetchRef: PropTypes.func.isRequired,
 };
 
 export default featuresFeedComponentMapper;

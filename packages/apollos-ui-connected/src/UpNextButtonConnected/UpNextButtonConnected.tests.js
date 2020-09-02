@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { View } from 'react-native';
-import { Providers, renderWithApolloData } from '../utils/testUtils';
+import { Providers, renderWithApolloData } from '../testUtils';
 
 import getContentUpNext from './getContentUpNext';
 

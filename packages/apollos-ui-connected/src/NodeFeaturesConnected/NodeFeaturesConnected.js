@@ -17,7 +17,6 @@ const NodeFeaturesConnected = ({ Component, nodeId, ...props }) => {
       variables={{ nodeId }}
     >
       {({ data: { node } = {}, loading, error }) => {
-        console.warn(node, loading, error);
         if (error) return <ErrorCard error={error} />;
         // TODO: set an optimistic response for this query to return a visually appeallying empty query so we can enable loading states
         if (loading) return null;
@@ -32,7 +31,7 @@ const NodeFeaturesConnected = ({ Component, nodeId, ...props }) => {
 };
 
 NodeFeaturesConnected.propTypes = {
-  Component: PropTypes.node,
+  Component: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   nodeId: PropTypes.string,
 };
 

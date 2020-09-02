@@ -4,26 +4,35 @@ import { H3, PaddedView, withIsLoading } from '@apollosproject/ui-kit';
 import nodeFeaturesComponentMapper from '../nodeFeaturesComponentMapper';
 
 const ContentSingleFeatures = memo(
-  ({ features, title, additionalFeatures }) => (
+  ({ features, title, additionalFeatures, nodeId }) => (
     <PaddedView horizontal={false}>
-      <PaddedView vertical={false}>
-        <H3 padded>{title}</H3>
-      </PaddedView>
+      {title && (
+        <PaddedView vertical={false}>
+          <H3 padded>{title}</H3>
+        </PaddedView>
+      )}
       {features.map((feature) =>
-        nodeFeaturesComponentMapper({ feature, additionalFeatures })
+        nodeFeaturesComponentMapper({
+          feature,
+          additionalFeatures,
+          nodeId,
+        })
       )}
     </PaddedView>
   )
 );
 
 ContentSingleFeatures.propTypes = {
-  features: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    order: PropTypes.string,
-    __typename: PropTypes.string.isRequired,
-  }),
+  features: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      order: PropTypes.string,
+      __typename: PropTypes.string.isRequired,
+    })
+  ),
   featureMap: PropTypes.shape({}),
   additionalFeatures: PropTypes.shape({}),
+  nodeId: PropTypes.string,
   title: PropTypes.string,
 };
 
