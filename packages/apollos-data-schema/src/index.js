@@ -25,10 +25,6 @@ export const interfacesSchema = gql`
     audios: [AudioMedia]
   }
 
-  interface FeaturesNode {
-    features: [Feature]
-  }
-
   interface ContentParentNode {
     childContentItemsConnection(
       first: Int
@@ -908,6 +904,10 @@ export const featuresSchema = gql`
   }
 
   extend type WeekendContentItem {
+    features: [Feature]
+  }
+
+  interface FeaturesNode {
     features: [Feature]
   }
 

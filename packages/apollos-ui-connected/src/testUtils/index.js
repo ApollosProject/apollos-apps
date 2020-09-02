@@ -6,7 +6,7 @@ import renderer from 'react-test-renderer';
 import wait from 'waait';
 import { Providers as UIProviders } from '@apollosproject/ui-kit';
 import { MockedProvider } from 'react-apollo/test-utils';
-import possibleTypes from './fragmentTypes';
+import possibleTypes from './fragmentTypes.json';
 import typeDefs from './typeDefsMock';
 
 const renderWithApolloData = async (component, existingTree) => {

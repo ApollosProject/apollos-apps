@@ -1,10 +1,6 @@
-import ContentSingleFeaturesConnected from './ContentSingleFeaturesConnected';
+import NodeFeaturesConnected from './NodeFeaturesConnected';
 
 export NodeFeatures from './NodeFeatures';
-export GET_CONTENT_ITEM_FEATURES from './getContentItemFeatures';
+export GET_NODE_FEATURES from './getNodeFeatures';
 
-export ScriptureFeature from './ScriptureFeature';
-export TextFeature from './TextFeature';
-export WebviewFeature from './WebviewFeature';
-
-export default ContentSingleFeaturesConnected;
+export default NodeFeaturesConnected;
