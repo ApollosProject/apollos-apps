@@ -1,5 +1,5 @@
-import ContentHTMLViewConnected from './ContentHTMLViewConnected';
+import ContentNodeConnected from './ContentNodeConnected';
 
-export GET_CONTENT_ITEM_CONTENT from './getContentItemContent';
+export GET_CONTENT_NODE from './getContentNode';
 
-export default ContentHTMLViewConnected;
+export default ContentNodeConnected;
