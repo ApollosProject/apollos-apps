@@ -4,9 +4,16 @@ import PropTypes from 'prop-types';
 import { ActionCard, BodyText } from '@apollosproject/ui-kit';
 import { ShareButtonConnected } from '@apollosproject/ui-connected';
 
-const TextFeature = ({ body, sharing: { message } = {}, contentId }) => (
+const TextFeature = ({
+  body,
+  sharing: { message } = {},
+  contentId,
+  nodeId,
+}) => (
   <ActionCard
-    action={<ShareButtonConnected message={message} itemId={contentId} />}
+    action={
+      <ShareButtonConnected message={message} itemId={nodeId || contentId} />
+    }
   >
     <BodyText>{body}</BodyText>
   </ActionCard>
@@ -15,7 +22,8 @@ const TextFeature = ({ body, sharing: { message } = {}, contentId }) => (
 TextFeature.propTypes = {
   body: PropTypes.string.isRequired,
   sharing: PropTypes.shape({ message: PropTypes.string }),
-  contentId: PropTypes.string.isRequired,
+  contentId: PropTypes.string,
+  nodeId: PropTypes.string,
 };
 
 export default TextFeature;

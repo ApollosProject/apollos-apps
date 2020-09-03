@@ -1,7 +1,7 @@
 import React from 'react';
 import { GET_LIKED_CONTENT } from '@apollosproject/ui-connected';
 
-import { Providers, renderWithApolloData } from '../utils/testUtils';
+import { Providers, renderWithApolloData } from '../testUtils';
 
 import HorizontalContentCardConnected from '../HorizontalContentCardConnected';
 import HorizontalLikedContentFeedConnected from './HorizontalLikedContentFeedConnected';

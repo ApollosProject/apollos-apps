@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Providers, renderWithApolloData } from '../utils/testUtils';
+import { Providers, renderWithApolloData } from '../testUtils';
 
 import GET_HERO_LIST_FEATURE from './getHeroListFeature';
 

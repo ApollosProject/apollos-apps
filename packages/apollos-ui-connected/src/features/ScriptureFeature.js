@@ -10,10 +10,13 @@ const ScriptureFeature = ({
   sharing: { message } = {},
   isLoading,
   contentId,
+  nodeId,
 }) => (
   <ActionCard
     icon={'text'}
-    action={<ShareButtonConnected message={message} itemId={contentId} />}
+    action={
+      <ShareButtonConnected message={message} itemId={nodeId || contentId} />
+    }
   >
     {scriptures.map(({ copyright, reference, html, id, version }) => (
       <ScriptureItem
@@ -29,7 +32,7 @@ const ScriptureFeature = ({
 );
 
 ScriptureFeature.propTypes = {
-  isLoading: PropTypes.bool.isRequired,
+  isLoading: PropTypes.bool,
   scriptures: PropTypes.arrayOf(
     PropTypes.shape({
       html: PropTypes.string.isRequired,
@@ -40,7 +43,8 @@ ScriptureFeature.propTypes = {
     })
   ),
   sharing: PropTypes.shape({ message: PropTypes.string }),
-  contentId: PropTypes.string.isRequired,
+  contentId: PropTypes.string,
+  nodeId: PropTypes.string,
 };
 
 export default ScriptureFeature;

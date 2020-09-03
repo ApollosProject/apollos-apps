@@ -4,7 +4,7 @@ import { Platform } from 'react-native';
 
 import { Touchable } from '@apollosproject/ui-kit';
 
-import { Providers } from '../utils/testUtils';
+import { Providers } from '../testUtils';
 
 import RockAuthedWebBrowser from '.';
 

@@ -14,9 +14,6 @@ export ContentHTMLViewConnected, {
 export ContentSingleFeaturesConnected, {
   ContentSingleFeatures,
   GET_CONTENT_ITEM_FEATURES,
-  ScriptureFeature,
-  TextFeature,
-  WebviewFeature,
 } from './ContentSingleFeaturesConnected';
 export FeaturesFeedConnected, {
   featuresFeedComponentMapper,
@@ -70,3 +67,4 @@ export VerticalCardListFeatureConnected, {
   GET_VERTICAL_CARD_LIST_FEATURE,
 } from './VerticalCardListFeatureConnected';
 export safeHandleUrl from './safeOpenUrl';
+export { ScriptureFeature, TextFeature, WebviewFeature } from './features';

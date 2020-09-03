@@ -1,17 +1,17 @@
 import React from 'react';
 import { Providers, renderWithApolloData } from '../testUtils';
 
-import GET_CONTENT_ITEM_FEATURES from './getContentItemFeatures';
+import GET_NODE_FEATURES from './getNodeFeatures';
 
-import ContentSingleFeaturesConnected from './ContentSingleFeaturesConnected';
+import NodeFeaturesConnected from './NodeFeaturesConnected';
 
 describe('ContentSingleFeaturesConnected', () => {
   it('should render', async () => {
     const mock = {
       request: {
-        query: GET_CONTENT_ITEM_FEATURES,
+        query: GET_NODE_FEATURES,
         variables: {
-          contentId: 'WeekendContentItem:1',
+          nodeId: 'WeekendContentItem:1',
         },
       },
       result: {
@@ -99,7 +99,7 @@ describe('ContentSingleFeaturesConnected', () => {
     };
     const tree = await renderWithApolloData(
       <Providers mocks={[mock]}>
-        <ContentSingleFeaturesConnected contentId={'WeekendContentItem:1'} />
+        <NodeFeaturesConnected nodeId={'WeekendContentItem:1'} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

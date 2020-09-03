@@ -3,7 +3,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import wait from 'waait';
 
-import { Providers } from '../../utils/testUtils';
+import { Providers } from '../../testUtils';
 
 import PlayButton from './PlayButton';
 

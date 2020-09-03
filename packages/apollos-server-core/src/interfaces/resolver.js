@@ -11,7 +11,7 @@ export default {
   LiveNode: {
     __resolveType,
   },
-  CardNode: {
+  Card: {
     __resolveType,
   },
   ContentNode: {

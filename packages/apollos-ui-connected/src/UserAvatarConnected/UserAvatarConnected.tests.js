@@ -1,5 +1,5 @@
 import React from 'react';
-import { Providers, renderWithApolloData } from '../utils/testUtils';
+import { Providers, renderWithApolloData } from '../testUtils';
 
 import GET_USER_PHOTO from './getUserPhoto';
 

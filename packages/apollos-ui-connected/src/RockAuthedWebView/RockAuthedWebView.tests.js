@@ -1,6 +1,6 @@
 import React from 'react';
 import gql from 'graphql-tag';
-import { renderWithApolloData, Providers } from '../utils/testUtils';
+import { renderWithApolloData, Providers } from '../testUtils';
 import RockAuthedWebView from '.';
 
 const mocks = [

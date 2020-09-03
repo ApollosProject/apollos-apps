@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { Providers, renderWithApolloData } from '../utils/testUtils';
+import { Providers, renderWithApolloData } from '../testUtils';
 
 import GET_VERTICAL_CARD_LIST_FEATURE from './getVerticalCardListFeature';
 import VerticalCardListFeatureConnected from './index';
