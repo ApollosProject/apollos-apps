@@ -59,7 +59,7 @@ const ContentNodeConnected = ({
                 />
               </ImageWrapperComponent>
             ) : null}
-            <MediaControlsComponent nodeId={nodeId} />
+            <MediaControlsComponent useVideoNodeFragment nodeId={nodeId} />
             {/* fixes text/navigation spacing by adding vertical padding if we dont have an image */}
             <PaddedView vertical={!coverImageSources.length}>
               <H2 padded isLoading={!title && loading}>
