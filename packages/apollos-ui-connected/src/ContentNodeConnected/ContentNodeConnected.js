@@ -28,7 +28,7 @@ const ComponentPropType = PropTypes.oneOfType([
   PropTypes.object, // type check for React fragments
 ]);
 
-const ContentHTMLViewConnected = ({
+const ContentNodeConnected = ({
   HtmlComponent,
   nodeId,
   onPressAnchor,
@@ -79,7 +79,7 @@ const ContentHTMLViewConnected = ({
   );
 };
 
-ContentHTMLViewConnected.propTypes = {
+ContentNodeConnected.propTypes = {
   nodeId: PropTypes.string.isRequired,
   HtmlComponent: ComponentPropType,
   ImageWrapperComponent: ComponentPropType,
@@ -87,11 +87,11 @@ ContentHTMLViewConnected.propTypes = {
   onPressAnchor: PropTypes.func,
 };
 
-ContentHTMLViewConnected.defaultProps = {
+ContentNodeConnected.defaultProps = {
   HtmlComponent: HTMLView,
   ImageWrapperComponent: View,
   MediaControlsComponent: StyledMediaControlsConnected,
   onPressAnchor: safeOpenUrl,
 };
 
-export default ContentHTMLViewConnected;
+export default ContentNodeConnected;

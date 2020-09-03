@@ -10,4 +10,16 @@ const VIDEO_NODE_FRAGMENT = gql`
   }
 `;
 
-export { VIDEO_NODE_FRAGMENT };
+const CONTENT_NODE_FRAGMENT = gql`
+  fragment ContentNodeFragment on ContentNode {
+    title
+    htmlContent
+    coverImage {
+      sources {
+        uri
+      }
+    }
+  }
+`;
+
+export { VIDEO_NODE_FRAGMENT, CONTENT_NODE_FRAGMENT };
