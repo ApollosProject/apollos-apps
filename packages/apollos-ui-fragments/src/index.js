@@ -5,6 +5,7 @@ import * as live from './live';
 import * as pass from './pass';
 import * as scripture from './scripture';
 import * as user from './user';
+import * as interfaces from './interfaces';
 
 const FRAGMENTS = {
   ...campus,
@@ -14,6 +15,7 @@ const FRAGMENTS = {
   ...scripture,
   ...pass,
   ...user,
+  ...interfaces,
 };
 
 export default FRAGMENTS;

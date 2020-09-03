@@ -8,10 +8,19 @@ import {
   PaddedView,
   H2,
   GradientOverlayImage,
+  styled,
 } from '@apollosproject/ui-kit';
 
+import MediaControlsConnected from '../MediaControlsConnected';
 import safeOpenUrl from '../safeOpenUrl';
 import GET_CONTENT_ITEM_CONTENT from './getContentNode';
+
+const StyledMediaControlsConnected = styled(
+  ({ theme }) => ({
+    marginTop: -(theme.sizing.baseUnit * 2.5),
+  }),
+  'ui-connected.ContentNodeConnected.MediaControlsConnected'
+)(MediaControlsConnected);
 
 const ComponentPropType = PropTypes.oneOfType([
   PropTypes.node,
@@ -24,9 +33,10 @@ const ContentHTMLViewConnected = ({
   nodeId,
   onPressAnchor,
   ImageWrapperComponent,
+  MediaControlsComponent,
 }) => {
   if (!nodeId) return <HTMLView isLoading />;
-
+  console.log(ImageWrapperComponent);
   return (
     <Query
       query={GET_CONTENT_ITEM_CONTENT}
@@ -51,7 +61,7 @@ const ContentHTMLViewConnected = ({
                 />
               </ImageWrapperComponent>
             ) : null}
-            <StyledMediaControlsConnected contentId={nodeId} />
+            <MediaControlsComponent nodeId={nodeId} />
             {/* fixes text/navigation spacing by adding vertical padding if we dont have an image */}
             <PaddedView vertical={!coverImageSources.length}>
               <H2 padded isLoading={!title && loading}>
@@ -75,12 +85,14 @@ ContentHTMLViewConnected.propTypes = {
   nodeId: PropTypes.string.isRequired,
   HtmlComponent: ComponentPropType,
   ImageWrapperComponent: ComponentPropType,
+  MediaControlsComponent: ComponentPropType,
   onPressAnchor: PropTypes.func,
 };
 
 ContentHTMLViewConnected.defaultProps = {
   HtmlComponent: HTMLView,
   ImageWrapperComponent: View,
+  MediaControlsComponent: StyledMediaControlsConnected,
   onPressAnchor: safeOpenUrl,
 };
 
