@@ -36,7 +36,6 @@ const ContentHTMLViewConnected = ({
   MediaControlsComponent,
 }) => {
   if (!nodeId) return <HTMLView isLoading />;
-  console.log(ImageWrapperComponent);
   return (
     <Query
       query={GET_CONTENT_ITEM_CONTENT}
@@ -49,7 +48,6 @@ const ContentHTMLViewConnected = ({
         error,
       }) => {
         if (!htmlContent && error) return <ErrorCard error={error} />;
-
         const coverImageSources = coverImage?.sources || [];
         return (
           <>
