@@ -6,23 +6,16 @@ import { get } from 'lodash';
 import { LiveConsumer } from '../live';
 
 import GET_MEDIA from './getMedia';
-import GET_CONTENT_MEDIA from './getContentMedia';
 
 import MediaControls from './MediaControls';
 
-const MediaControlsConnected = ({
-  useVideoNodeFragment,
-  Component,
-  contentId,
-  nodeId,
-  ...props
-}) => {
+const MediaControlsConnected = ({ Component, contentId, nodeId, ...props }) => {
   if (!contentId && !nodeId) return null;
   return (
     <LiveConsumer contentId={contentId}>
       {(liveStream) => (
         <Query
-          query={useVideoNodeFragment ? GET_MEDIA : GET_CONTENT_MEDIA}
+          query={GET_MEDIA}
           fetchPolicy="cache-and-network"
           variables={{ nodeId: nodeId || contentId }}
         >
@@ -63,7 +56,6 @@ const MediaControlsConnected = ({
 };
 
 MediaControlsConnected.propTypes = {
-  useVideoNodeFragment: PropTypes.bool,
   Component: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.func,
@@ -75,7 +67,6 @@ MediaControlsConnected.propTypes = {
 
 MediaControlsConnected.defaultProps = {
   Component: MediaControls,
-  useVideoNodeFragment: false,
 };
 
 export default MediaControlsConnected;

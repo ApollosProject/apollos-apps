@@ -6,7 +6,9 @@ export default gql`
     node(id: $nodeId) {
       id
       ...ContentNodeFragment
+      ...ContentSingleFragment
     }
   }
   ${ApollosConfig.FRAGMENTS.CONTENT_NODE_FRAGMENT}
+  ${ApollosConfig.FRAGMENTS.CONTENT_SINGLE_FRAGMENT}
 `;
