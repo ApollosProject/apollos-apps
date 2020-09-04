@@ -13,8 +13,8 @@ const Image = compose(
       ...Platform.select({
         android: {
           // fixes android borderRadius overflow display issue
-          borderTopRightRadius: theme.sizing.baseUnit,
-          borderTopLeftRadius: theme.sizing.baseUnit,
+          borderTopRightRadius: theme.sizing.baseBorderRadius,
+          borderTopLeftRadius: theme.sizing.baseBorderRadius,
         },
       }),
     }),
