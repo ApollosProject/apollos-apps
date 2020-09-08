@@ -7,6 +7,7 @@ export ContentCardConnected, {
   contentCardComponentMapper, // TODO: Update to `ContentCardComponentMapper` export below is for temporary backwards compatibility.
   GET_CONTENT_CARD,
 } from './ContentCardConnected';
+export ContentNodeConnected, { GET_CONTENT_NODE } from './ContentNodeConnected';
 export CampaignItemListFeature from './CampaignItemListFeature';
 export ContentHTMLViewConnected, {
   GET_CONTENT_ITEM_CONTENT,
@@ -52,6 +53,10 @@ export MediaControlsConnected, {
   GET_CONTENT_MEDIA,
   MediaControls,
 } from './MediaControlsConnected';
+export NodeFeaturesConnected, {
+  NodeFeatures,
+  GET_NODE_FEATURES,
+} from './NodeFeaturesConnected';
 export RockAuthedWebBrowser from './RockAuthedWebBrowser';
 export RockAuthedWebView from './RockAuthedWebView';
 export SearchCardConnected from './SearchCardConnected';

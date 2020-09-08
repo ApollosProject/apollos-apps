@@ -56,6 +56,18 @@ const CONTENT_ITEM_FRAGMENT = gql`
   }
 `;
 
+const CONTENT_SINGLE_FRAGMENT = gql`
+  fragment ContentSingleFragment on ContentItem {
+    title
+    htmlContent
+    coverImage {
+      sources {
+        uri
+      }
+    }
+  }
+`;
+
 const CONTENT_CARD_FRAGMENT = gql`
   fragment contentCardFragment on ContentItem {
     id
@@ -131,6 +143,7 @@ const CONTENT_MEDIA_FRAGMENT = gql`
 
 export {
   CONTENT_ITEM_FRAGMENT,
+  CONTENT_SINGLE_FRAGMENT,
   CONTENT_CARD_FRAGMENT,
   CONTENT_MEDIA_FRAGMENT,
   CONTENT_UP_NEXT_FRAGMENT,
