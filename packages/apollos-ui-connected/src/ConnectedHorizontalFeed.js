@@ -36,6 +36,7 @@ class ContentFeed extends Component {
     query: PropTypes.shape({}),
     renderItem: PropTypes.func,
     variables: PropTypes.shape({}),
+    loadingStateObject: PropTypes.shape({}),
     isItemDisabled: PropTypes.func,
     mapContentFromData: PropTypes.func,
     updateQuery: PropTypes.func,
@@ -77,6 +78,7 @@ class ContentFeed extends Component {
   };
 
   renderFeed = ({ data, loading, error, fetchMore }) => {
+    console.log(error);
     if (error) return null;
 
     const { content, nextCursor, currentIndex } = this.props.mapContentFromData(
@@ -92,7 +94,7 @@ class ContentFeed extends Component {
       <FeedComponent
         isLoading={loading}
         content={content}
-        loadingStateObject={loadingStateObject}
+        loadingStateObject={this.props.loadingStateObject || loadingStateObject}
         renderItem={this.props.renderItem || this.renderItem}
         initialScrollIndex={initialScrollIndex}
         getItemLayout={(itemData, index) => ({

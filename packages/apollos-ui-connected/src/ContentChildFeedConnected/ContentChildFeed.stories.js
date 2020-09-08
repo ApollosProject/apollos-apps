@@ -5,12 +5,12 @@ import { times } from 'lodash';
 import { BackgroundView, CenteredView } from '@apollosproject/ui-kit';
 import { ApolloStorybookDecorator } from '../testUtils';
 
-import ContentParentSeriesConnected from './ContentParentSeriesConnected';
+import ContentChildFeedConnected from './ContentChildFeedConnected';
 
-const seriesMock = (root, args) => ({
+const seriesMock = (_root, args) => ({
   id: args.id,
   __typename: 'ContentSeriesContentItem',
-  childContentItemsConnection: (root, { after = 0 }) => ({
+  siblingContentItemsConnection: (root, { after = 0 }) => ({
     edges: times(10, (index) => ({
       node: {
         id: `DevotionalContentItem:${index + Number(after)}`,
@@ -95,7 +95,7 @@ const mocks = {
   }),
 };
 
-storiesOf('ui-connected/ContentParentSeries', module)
+storiesOf('ui-connected/ContentChildFeed', module)
   .addDecorator((story) => (
     <BackgroundView>
       {/* eslint-disable-next-line react-native/no-inline-styles */}
@@ -104,7 +104,7 @@ storiesOf('ui-connected/ContentParentSeries', module)
   ))
   .addDecorator(ApolloStorybookDecorator({ mocks }))
   .add('example', () => (
-    <ContentParentSeriesConnected
+    <ContentChildFeedConnected
       nodeId={'ContentSeriesContentItem:123'}
       navigation={{ push: console.warn, navigate: () => ({}) }}
     />
