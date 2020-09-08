@@ -13,7 +13,7 @@ const ContentChildNodeConnected = ({ nodeId, ...props }) => (
     isItemDisabled={({ id }) => id === nodeId}
     isLoading={!nodeId}
     mapContentFromData={({ data }) => {
-      const edges = get(data, 'node.siblingContentItemsConnected.edges', []);
+      const edges = get(data, 'node.siblingContentItemsConnection.edges', []);
       const content = edges.map((edge) => edge.node);
       const { cursor } = edges.length && edges[edges.length - 1];
       const currentIndex = content.findIndex(({ id }) => id === nodeId);
@@ -23,16 +23,16 @@ const ContentChildNodeConnected = ({ nodeId, ...props }) => (
     updateQuery={(previousResult, { fetchMoreResult }) => {
       const newEdges = get(
         fetchMoreResult,
-        'node.siblingContentItemsConnected.edges',
+        'node.siblingContentItemsConnection.edges',
         []
       );
       return {
         node: {
           ...previousResult.node,
           siblingContentItemsConnected: {
-            ...previousResult.node.siblingContentItemsConnected,
+            ...previousResult.node.siblingContentItemsConnection,
             edges: [
-              ...previousResult.node.siblingContentItemsConnected.edges,
+              ...previousResult.node.siblingContentItemsConnection.edges,
               ...newEdges,
             ],
           },

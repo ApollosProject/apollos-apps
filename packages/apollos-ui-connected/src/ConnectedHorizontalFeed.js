@@ -78,7 +78,6 @@ class ContentFeed extends Component {
   };
 
   renderFeed = ({ data, loading, error, fetchMore }) => {
-    console.log(error);
     if (error) return null;
 
     const { content, nextCursor, currentIndex } = this.props.mapContentFromData(
