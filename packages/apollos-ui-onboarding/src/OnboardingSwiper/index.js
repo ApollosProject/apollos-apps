@@ -19,7 +19,7 @@ const PaginationDot = styled(
     backgroundColor: theme.colors.background.inactive,
     ...dotStyles({ theme }),
   }),
-  'Onboarding.Swiper.PaginationDot'
+  'ui-onboarding.OnboardingSwiper.PaginationDot'
 )(View);
 
 const PaginationDotActive = styled(
@@ -27,7 +27,7 @@ const PaginationDotActive = styled(
     backgroundColor: theme.colors.action.primary,
     ...dotStyles({ theme }),
   }),
-  'Onboarding.Swiper.PaginationDot.Active'
+  'ui-onboarding.OnboardingSwiper.PaginationDotActive'
 )(View);
 
 class OnboardingSwiper extends Component {

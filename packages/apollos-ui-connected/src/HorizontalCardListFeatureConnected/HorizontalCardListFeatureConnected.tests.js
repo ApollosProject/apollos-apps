@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { Providers, renderWithApolloData } from '../utils/testUtils';
+import { Providers, renderWithApolloData } from '../testUtils';
 
 import GET_HORIZONTAL_CARD_LIST_FEATURE from './getHorizontalCardListFeature';
 import HorizontalCardListFeatureConnected from './index';
@@ -49,10 +49,33 @@ const mock = {
   },
 };
 
+const noCardsMock = {
+  ...mock,
+  result: {
+    data: {
+      node: {
+        ...mock.result.data.node,
+        cards: [],
+      },
+    },
+  },
+};
+
 describe('The HorizontalCardListFeatureConnected component', () => {
   it('should render', async () => {
     const tree = await renderWithApolloData(
       <Providers mocks={[mock]}>
+        <HorizontalCardListFeatureConnected
+          featureId={'HorizontalCardListFeature:123'}
+          refetchRef={jest.fn()}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should not render without cards', async () => {
+    const tree = await renderWithApolloData(
+      <Providers mocks={[noCardsMock]}>
         <HorizontalCardListFeatureConnected
           featureId={'HorizontalCardListFeature:123'}
           refetchRef={jest.fn()}

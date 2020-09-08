@@ -13,21 +13,24 @@ const Label = styled(
   ({ theme }) => ({
     color: theme.colors.text.tertiary,
   }),
-  'ui-kit.ActionListItem.Label'
+  'ui-kit.ActionList.ActionListItem.Label'
 )(BodySmall);
 
 const TextContainer = styled(
   {
     justifyContent: 'center',
   },
-  'ui-kit.ActionListItem.TextContainer'
+  'ui-kit.ActionList.ActionListItem.TextContainer'
 )(FlexedView);
 
-const Cell = styled(({ theme }) => ({
-  paddingBottom: theme.sizing.baseUnit * 0.5,
-  flexDirection: 'row',
-  justifyContent: 'flex-start',
-}))(View);
+const Cell = styled(
+  ({ theme }) => ({
+    paddingBottom: theme.sizing.baseUnit * 0.5,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+  }),
+  'ui-kit.ActionList.ActionListItem.Cell'
+)(View);
 
 // eslint-disable-next-line react/prop-types
 const RenderAsTouchable = ({ children, onPress }) =>

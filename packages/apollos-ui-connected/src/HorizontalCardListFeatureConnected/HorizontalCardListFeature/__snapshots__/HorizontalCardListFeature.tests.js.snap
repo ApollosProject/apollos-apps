@@ -180,44 +180,28 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  forceRatio={1}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/800",
+                      },
+                    ]
+                  }
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    maxAspectRatio={1}
-                    minAspectRatio={1}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={
-                      Array [
-                        Object {
-                          "cache": "force-cache",
-                          "uri": "https://picsum.photos/800",
-                        },
-                      ]
-                    }
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -543,45 +527,29 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  forceRatio={2}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  hasTitleAndSummary={true}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/800",
+                      },
+                    ]
+                  }
                   style={
                     Object {
                       "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    hasTitleAndSummary={true}
-                    maxAspectRatio={2}
-                    minAspectRatio={2}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={
-                      Array [
-                        Object {
-                          "cache": "force-cache",
-                          "uri": "https://picsum.photos/800",
-                        },
-                      ]
-                    }
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -738,44 +706,28 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  forceRatio={1}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/800",
+                      },
+                    ]
+                  }
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    maxAspectRatio={1}
-                    minAspectRatio={1}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={
-                      Array [
-                        Object {
-                          "cache": "force-cache",
-                          "uri": "https://picsum.photos/800",
-                        },
-                      ]
-                    }
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -1088,38 +1040,22 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  forceRatio={1}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  isLoading={true}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={Array []}
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    maxAspectRatio={1}
-                    minAspectRatio={1}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={Array []}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -1291,38 +1227,22 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  forceRatio={1}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  isLoading={true}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={Array []}
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    maxAspectRatio={1}
-                    minAspectRatio={1}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={Array []}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -1494,38 +1414,22 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  forceRatio={1}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  isLoading={true}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={Array []}
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    maxAspectRatio={1}
-                    minAspectRatio={1}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={Array []}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -1697,38 +1601,22 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  forceRatio={1}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  isLoading={true}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={Array []}
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    maxAspectRatio={1}
-                    minAspectRatio={1}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={Array []}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -1900,38 +1788,22 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  forceRatio={1}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  isLoading={true}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={Array []}
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    maxAspectRatio={1}
-                    minAspectRatio={1}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={Array []}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -2240,44 +2112,28 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  forceRatio={1}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/800",
+                      },
+                    ]
+                  }
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    maxAspectRatio={1}
-                    minAspectRatio={1}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={
-                      Array [
-                        Object {
-                          "cache": "force-cache",
-                          "uri": "https://picsum.photos/800",
-                        },
-                      ]
-                    }
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -2603,45 +2459,29 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  forceRatio={2}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  hasTitleAndSummary={true}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/800",
+                      },
+                    ]
+                  }
                   style={
                     Object {
                       "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    hasTitleAndSummary={true}
-                    maxAspectRatio={2}
-                    minAspectRatio={2}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={
-                      Array [
-                        Object {
-                          "cache": "force-cache",
-                          "uri": "https://picsum.photos/800",
-                        },
-                      ]
-                    }
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -2798,44 +2638,28 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  forceRatio={1}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/800",
+                      },
+                    ]
+                  }
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    maxAspectRatio={1}
-                    minAspectRatio={1}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={
-                      Array [
-                        Object {
-                          "cache": "force-cache",
-                          "uri": "https://picsum.photos/800",
-                        },
-                      ]
-                    }
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -3133,44 +2957,28 @@ exports[`The HorizontalCardListFeature component should render with a section su
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  forceRatio={1}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/800",
+                      },
+                    ]
+                  }
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    maxAspectRatio={1}
-                    minAspectRatio={1}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={
-                      Array [
-                        Object {
-                          "cache": "force-cache",
-                          "uri": "https://picsum.photos/800",
-                        },
-                      ]
-                    }
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -3496,45 +3304,29 @@ exports[`The HorizontalCardListFeature component should render with a section su
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  forceRatio={2}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  hasTitleAndSummary={true}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/800",
+                      },
+                    ]
+                  }
                   style={
                     Object {
                       "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    hasTitleAndSummary={true}
-                    maxAspectRatio={2}
-                    minAspectRatio={2}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={
-                      Array [
-                        Object {
-                          "cache": "force-cache",
-                          "uri": "https://picsum.photos/800",
-                        },
-                      ]
-                    }
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -3691,44 +3483,28 @@ exports[`The HorizontalCardListFeature component should render with a section su
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  forceRatio={1}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/800",
+                      },
+                    ]
+                  }
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    maxAspectRatio={1}
-                    minAspectRatio={1}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={
-                      Array [
-                        Object {
-                          "cache": "force-cache",
-                          "uri": "https://picsum.photos/800",
-                        },
-                      ]
-                    }
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [

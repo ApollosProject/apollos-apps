@@ -8,30 +8,45 @@ import styled from '../styled';
 import { H5, H6 } from '../typography';
 import FlexedView from '../FlexedView';
 
-const HorizontalLayout = styled(({ theme }) => ({
-  alignItems: 'center',
-  height: theme.sizing.baseUnit * 6,
-}))(SideBySideView);
+const HorizontalLayout = styled(
+  ({ theme }) => ({
+    alignItems: 'center',
+    height: theme.sizing.baseUnit * 6,
+  }),
+  'ui-kit.CampusCard.HorizontalLayout'
+)(SideBySideView);
 
-const Header = styled(({ theme }) => ({
-  height: theme.helpers.verticalRhythm(0.875),
-}))(SideBySideView);
+const Header = styled(
+  ({ theme }) => ({
+    height: theme.helpers.verticalRhythm(0.875),
+  }),
+  'ui-kit.CampusCard.Header'
+)(SideBySideView);
 
-const FlexedCardContent = styled({
-  flex: 1,
-})(CardContent);
+const FlexedCardContent = styled(
+  {
+    flex: 1,
+  },
+  'ui-kit.CampusCard.FlexedCardContent'
+)(CardContent);
 
-const CampusImage = styled({
-  aspectRatio: 1,
-  height: '100%',
-  resizeMode: 'cover',
-})(ConnectedImage);
+const CampusImage = styled(
+  {
+    aspectRatio: 1,
+    height: '100%',
+    resizeMode: 'cover',
+  },
+  'ui-kit.CampusCard.CampusImage'
+)(ConnectedImage);
 
 // Fixes placeholder
-const DistanceWrapper = styled({
-  flexDirection: 'row',
-  justifyContent: 'flex-end',
-})(FlexedView);
+const DistanceWrapper = styled(
+  {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+  },
+  'ui-kit.CampusCard.DistanceWrapper'
+)(FlexedView);
 
 const hasValidImages = (images) =>
   images && !images.includes(null) && !images.map((o) => o.uri).includes(null);

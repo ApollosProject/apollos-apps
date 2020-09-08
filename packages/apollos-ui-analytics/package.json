@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/ui-analytics",
-  "version": "1.4.3",
-  "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
+  "repository": "git://github.com/apollosproject/apollos-apps.git",
+  "version": "1.5.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -35,6 +35,7 @@
   },
   "peerDependencies": {
     "@apollosproject/ui-kit": "*",
+    "@metarouter/analytics-react-native": "*",
     "apollo-client": "*",
     "react": "*",
     "react-apollo": "*",
@@ -45,6 +46,7 @@
     "react-native-device-info": "^4.0.1"
   },
   "devDependencies": {
+    "@metarouter/analytics-react-native": "^1.1.5",
     "apollo-cache-inmemory": "^1.5.1",
     "apollo-client": "2.6.8",
     "apollo-link-http": "^1.5.14",

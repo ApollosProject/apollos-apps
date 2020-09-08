@@ -295,13 +295,19 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -313,34 +319,8 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
           <View
             avatarSize={64}
             style={
@@ -399,13 +379,19 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -417,34 +403,8 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
           <View
             avatarSize={64}
             style={
@@ -503,13 +463,19 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -521,34 +487,8 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
           <View
             avatarSize={64}
             style={
@@ -607,13 +547,19 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -625,34 +571,8 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
         </View>
       </View>
     </View>
@@ -695,13 +615,19 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -713,34 +639,8 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
         </View>
       </View>
     </View>
@@ -783,13 +683,19 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -801,34 +707,8 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
         </View>
       </View>
     </View>
@@ -871,13 +751,19 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -889,34 +775,8 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
         </View>
       </View>
     </View>
@@ -959,13 +819,19 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -977,34 +843,8 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
         </View>
       </View>
     </View>
@@ -1141,13 +981,19 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -1159,34 +1005,8 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
           <View
             avatarSize={64}
             style={
@@ -1245,13 +1065,19 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -1263,34 +1089,8 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
           <View
             avatarSize={64}
             style={
@@ -1349,13 +1149,19 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -1367,34 +1173,8 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
           <View
             avatarSize={64}
             style={
@@ -1453,13 +1233,19 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -1471,34 +1257,8 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
         </View>
       </View>
     </View>
@@ -1541,13 +1301,19 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -1559,34 +1325,8 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
         </View>
       </View>
     </View>
@@ -1629,13 +1369,19 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -1647,34 +1393,8 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
         </View>
       </View>
     </View>
@@ -1717,13 +1437,19 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -1735,34 +1461,8 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
         </View>
       </View>
     </View>
@@ -1805,13 +1505,19 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -1823,34 +1529,8 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
         </View>
       </View>
     </View>
@@ -1987,13 +1667,19 @@ exports[`The AvatarList component should render 1`] = `
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -2005,34 +1691,8 @@ exports[`The AvatarList component should render 1`] = `
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
           <View
             avatarSize={64}
             style={
@@ -2091,13 +1751,19 @@ exports[`The AvatarList component should render 1`] = `
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -2109,34 +1775,8 @@ exports[`The AvatarList component should render 1`] = `
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
           <View
             avatarSize={64}
             style={
@@ -2195,13 +1835,19 @@ exports[`The AvatarList component should render 1`] = `
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -2213,34 +1859,8 @@ exports[`The AvatarList component should render 1`] = `
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
           <View
             avatarSize={64}
             style={
@@ -2299,13 +1919,19 @@ exports[`The AvatarList component should render 1`] = `
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -2317,34 +1943,8 @@ exports[`The AvatarList component should render 1`] = `
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
         </View>
       </View>
     </View>
@@ -2387,13 +1987,19 @@ exports[`The AvatarList component should render 1`] = `
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -2405,34 +2011,8 @@ exports[`The AvatarList component should render 1`] = `
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
         </View>
       </View>
     </View>
@@ -2475,13 +2055,19 @@ exports[`The AvatarList component should render 1`] = `
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -2493,34 +2079,8 @@ exports[`The AvatarList component should render 1`] = `
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
         </View>
       </View>
     </View>
@@ -2563,13 +2123,19 @@ exports[`The AvatarList component should render 1`] = `
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -2581,34 +2147,8 @@ exports[`The AvatarList component should render 1`] = `
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
         </View>
       </View>
     </View>
@@ -2651,13 +2191,19 @@ exports[`The AvatarList component should render 1`] = `
           }
           themeSize={64}
         >
-          <View
-            animate={null}
-            customAnimate={null}
-            onReady={false}
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200",
+                },
+              ]
+            }
             style={
               Object {
-                "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
                 "borderRadius": 32,
                 "bottom": 0,
@@ -2669,34 +2215,8 @@ exports[`The AvatarList component should render 1`] = `
                 "width": "100%",
               }
             }
-          >
-            <Image
-              onLoad={[Function]}
-              source={
-                Array [
-                  Object {
-                    "cache": "force-cache",
-                    "uri": "https://picsum.photos/200",
-                  },
-                ]
-              }
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 32,
-                  "bottom": 0,
-                  "height": "100%",
-                  "left": 0,
-                  "opacity": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                  "width": "100%",
-                }
-              }
-              themeSize={64}
-            />
-          </View>
+            themeSize={64}
+          />
         </View>
       </View>
     </View>

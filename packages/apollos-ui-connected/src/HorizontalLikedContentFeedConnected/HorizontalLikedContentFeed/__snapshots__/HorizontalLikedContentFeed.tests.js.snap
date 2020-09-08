@@ -252,39 +252,23 @@ exports[`HorizontalLikedContentFeed renders a HorizontalLikedContentFeed 1`] = `
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  forceRatio={1.5}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  hasTitleAndSummary={false}
+                  isLoading={true}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={Array []}
                   style={
                     Object {
                       "aspectRatio": 1.5,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    hasTitleAndSummary={false}
-                    maxAspectRatio={1.5}
-                    minAspectRatio={1.5}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={Array []}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -406,39 +390,23 @@ exports[`HorizontalLikedContentFeed renders a HorizontalLikedContentFeed 1`] = `
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  forceRatio={1.5}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  hasTitleAndSummary={false}
+                  isLoading={true}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={Array []}
                   style={
                     Object {
                       "aspectRatio": 1.5,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    hasTitleAndSummary={false}
-                    maxAspectRatio={1.5}
-                    minAspectRatio={1.5}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={Array []}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -738,39 +706,23 @@ exports[`HorizontalLikedContentFeed renders a loading state 1`] = `
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  forceRatio={1.5}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  hasTitleAndSummary={false}
+                  isLoading={true}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={Array []}
                   style={
                     Object {
                       "aspectRatio": 1.5,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    hasTitleAndSummary={false}
-                    maxAspectRatio={1.5}
-                    minAspectRatio={1.5}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={Array []}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [
@@ -892,39 +844,23 @@ exports[`HorizontalLikedContentFeed renders a loading state 1`] = `
                   }
                 }
               >
-                <View
-                  animate={null}
-                  customAnimate={null}
-                  forceRatio={1.5}
-                  onReady={false}
+                <RCTImageView
+                  fadeDuration={250}
+                  hasTitleAndSummary={false}
+                  isLoading={true}
+                  onLoad={[Function]}
+                  resizeMode="cover"
+                  source={Array []}
                   style={
                     Object {
                       "aspectRatio": 1.5,
                       "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
                   }
-                >
-                  <RCTImageView
-                    hasTitleAndSummary={false}
-                    maxAspectRatio={1.5}
-                    minAspectRatio={1.5}
-                    onLoad={[Function]}
-                    resizeMode="cover"
-                    source={Array []}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
-                        "opacity": 0,
-                        "overflow": "hidden",
-                        "resizeMode": "cover",
-                        "width": "100%",
-                      }
-                    }
-                  />
-                </View>
+                />
                 <BVLinearGradient
                   colors={
                     Array [

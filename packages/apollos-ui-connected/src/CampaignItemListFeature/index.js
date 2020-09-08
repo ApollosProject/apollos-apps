@@ -19,15 +19,20 @@ const Title = styled(
   ({ theme }) => ({
     color: theme.colors.text.tertiary,
   }),
-  'CampaignItemListFeature.Title'
+  'ui-connected.CampaignListFeature.Title'
 )(H5);
 
-const Subtitle = styled({}, 'CampaignItemListFeature.Subtitle')(H2);
+const Subtitle = styled({}, 'ui-connected.CampaignItemListFeature.Subtitle')(
+  H2
+);
 
-const Header = styled(({ theme }) => ({
-  paddingTop: theme.sizing.baseUnit * 3,
-  paddingBottom: theme.sizing.baseUnit * 0.5,
-}))(PaddedView);
+const Header = styled(
+  ({ theme }) => ({
+    paddingTop: theme.sizing.baseUnit * 3,
+    paddingBottom: theme.sizing.baseUnit * 0.5,
+  }),
+  'ui-connected.CampaignItemListFeature.Header'
+)(PaddedView);
 
 const ListItemComponent = ({ contentId, labelText, ...item }) => (
   <LiveConsumer contentId={contentId}>
@@ -42,6 +47,7 @@ const ListItemComponent = ({ contentId, labelText, ...item }) => (
               }
             : { isLive, labelText })} // we only want to pass `labelText` if we are NOT live. If we do we will override the default logic in the FeaturedCard
           {...item}
+          isFeatured
         />
       );
     }}
@@ -74,25 +80,26 @@ const loadingStateData = {
 };
 
 const CampaignItemListFeature = memo(
-  ({ cards, isLoading, listKey, onPressItem, subtitle, title }) => (
-    <View>
-      {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
-        <Header vertical={false}>
-          {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
-            <Title numberOfLines={1}>{title}</Title>
-          ) : null}
-          {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
-        </Header>
-      ) : null}
-      <FeedView
-        onPressItem={onPressItem}
-        ListItemComponent={ListItemComponent}
-        content={isLoading ? [loadingStateData] : cards}
-        isLoading={isLoading}
-        listKey={listKey}
-      />
-    </View>
-  )
+  ({ cards, isLoading, listKey, onPressItem, subtitle, title }) =>
+    !!(isLoading || cards.length) && (
+      <View>
+        {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
+          <Header vertical={false}>
+            {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
+              <Title numberOfLines={1}>{title}</Title>
+            ) : null}
+            {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
+          </Header>
+        ) : null}
+        <FeedView
+          onPressItem={onPressItem}
+          ListItemComponent={ListItemComponent}
+          content={isLoading ? [loadingStateData] : cards}
+          isLoading={isLoading}
+          listKey={listKey}
+        />
+      </View>
+    )
 );
 
 CampaignItemListFeature.displayName = 'Features';

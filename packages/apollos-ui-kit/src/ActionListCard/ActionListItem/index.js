@@ -9,26 +9,35 @@ import { ImageSourceType } from '../../ConnectedImage';
 import FlexedView from '../../FlexedView';
 import ActionListImage from './ActionListImage';
 
-const StyledBodySmall = styled(({ theme }) => ({
-  color: theme.colors.text.tertiary,
-}))(BodySmall);
+const StyledBodySmall = styled(
+  ({ theme }) => ({
+    color: theme.colors.text.tertiary,
+  }),
+  'ui-kit.ActionListCard.ActionListItem.StyledBodySmall'
+)(BodySmall);
 
-const TextContainer = styled(({ theme }) => ({
-  justifyContent: 'center',
-  marginTop: theme.sizing.baseUnit / 2.5,
-  borderBottomWidth: 0.5,
-  height: theme.sizing.baseUnit * 4.25,
-  borderColor: theme.colors.shadows.default,
-}))(FlexedView);
+const TextContainer = styled(
+  ({ theme }) => ({
+    justifyContent: 'center',
+    marginTop: theme.sizing.baseUnit / 2.5,
+    borderBottomWidth: 0.5,
+    height: theme.sizing.baseUnit * 4.25,
+    borderColor: theme.colors.shadows.default,
+  }),
+  'ui-kit.ActionListCard.ActionListItem.TextContainer'
+)(FlexedView);
 
-const Cell = styled(({ theme }) => ({
-  paddingHorizontal: theme.sizing.baseUnit,
-  paddingVertical: theme.sizing.baseUnit / 4,
-  backgroundColor: theme.colors.background.paper,
-  flexDirection: 'row',
-  justifyContent: 'flex-start',
-  alignItems: 'center',
-}))(View);
+const Cell = styled(
+  ({ theme }) => ({
+    paddingHorizontal: theme.sizing.baseUnit,
+    paddingVertical: theme.sizing.baseUnit / 4,
+    backgroundColor: theme.colors.background.paper,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+  }),
+  'ui-kit.ActionListCard.ActionListItem.Cell'
+)(View);
 
 const ActionListItem = ({
   imageSource,

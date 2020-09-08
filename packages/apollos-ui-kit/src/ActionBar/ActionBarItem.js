@@ -8,11 +8,14 @@ import { UIText } from '../typography';
 import Icon from '../Icon';
 import { withTheme } from '../theme';
 
-const ActionBarItemWrapper = styled(({ theme }) => ({
-  padding: theme.sizing.baseUnit,
-  alignItems: 'center',
-  justifyContent: 'center',
-}))(View);
+const ActionBarItemWrapper = styled(
+  ({ theme }) => ({
+    padding: theme.sizing.baseUnit,
+    alignItems: 'center',
+    justifyContent: 'center',
+  }),
+  'ui-kit.ActionBar.ActionBarItem.ActionBarItemWrapper'
+)(View);
 
 const ActionBarItem = ({
   icon = 'empty',
@@ -38,8 +41,11 @@ ActionBarItem.propTypes = {
   tint: PropTypes.string,
 };
 
-export default withTheme(({ theme, ...props }) => ({
-  tint: theme.colors.action.primary,
-  size: theme.sizing.baseUnit * 1.5,
-  ...props,
-}))(ActionBarItem);
+export default withTheme(
+  ({ theme, ...props }) => ({
+    tint: theme.colors.action.primary,
+    size: theme.sizing.baseUnit * 1.5,
+    ...props,
+  }),
+  'ui-kit.ActionBar.ActionBarItem.ActionBarItem'
+)(ActionBarItem);

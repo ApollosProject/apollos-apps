@@ -1,3 +1,4 @@
+import crypto from 'crypto';
 import { AuthenticationError, UserInputError } from 'apollo-server';
 import { fetch, Request } from 'apollo-server-env';
 import moment from 'moment';
@@ -31,10 +32,41 @@ export default class AuthDataSource extends RockApolloDataSource {
         this.context.currentPerson = request;
         return request;
       } catch (e) {
-        throw new AuthenticationError('Invalid user cookie');
+        const person = await this.lookupUserFromCache({ userCookie });
+
+        if (!person) {
+          throw new AuthenticationError('Invalid user cookie; no person found');
+        }
+        // TODO: Send over a new cookie to be stored in the `set-cookie` header.
+        return person;
       }
     }
     throw new AuthenticationError('Must be logged in');
+  };
+
+  lookupUserFromCache = async ({ userCookie }) => {
+    const { Cache } = this.context.dataSources;
+    const cachedUserName = await Cache.get({
+      key: `:userLogins:${crypto
+        .createHash('sha1')
+        .update(userCookie)
+        .digest('hex')}`,
+    });
+    if (!cachedUserName) {
+      throw new AuthenticationError(
+        'Invalid user cookie; no eligble user login found'
+      );
+    }
+    const login = await this.request('/UserLogins')
+      .filter(`UserName eq '${cachedUserName}'`)
+      .first();
+
+    if (!login || !login.personId) {
+      throw new AuthenticationError('Invalid user cookie; no user login found');
+    }
+    return this.request('/People')
+      .filter(`Id eq ${login.personId}`)
+      .first();
   };
 
   fetchUserCookie = async (Username, Password) => {
@@ -70,6 +102,7 @@ export default class AuthDataSource extends RockApolloDataSource {
   };
 
   authenticate = async ({ identity, password }) => {
+    const { Cache } = this.context.dataSources;
     try {
       const cookie = await this.fetchUserCookie(identity, password);
       const sessionId = await this.createSession({ cookie });
@@ -77,6 +110,14 @@ export default class AuthDataSource extends RockApolloDataSource {
       this.context.rockCookie = cookie;
       this.context.userToken = token;
       this.context.sessionId = sessionId;
+      Cache.set({
+        key: `:userLogins:${crypto
+          .createHash('sha1')
+          .update(cookie)
+          .digest('hex')}`,
+        data: identity,
+        expiresIn: 31556952, // one year
+      });
       return { token, rockCookie: cookie };
     } catch (e) {
       if (e instanceof AuthenticationError) {

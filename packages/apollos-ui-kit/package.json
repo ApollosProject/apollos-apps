@@ -1,8 +1,8 @@
 {
   "name": "@apollosproject/ui-kit",
-  "version": "1.4.4-alpha.6",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
-  "main": "src/index.js",
+  "repository": "git://github.com/apollosproject/apollos-apps.git",
+  "version": "1.5.0",
   "files": [
     "src/**",
     "storybook/**"
@@ -36,7 +36,8 @@
     "modulePathIgnorePatterns": [
       "<rootDir>/node_modules/react-native-svg",
       "<rootDir>/node_modules/@storybook/react-native",
-      "<rootDir>/node_modules/@react-navigation/native"
+      "<rootDir>/node_modules/@react-navigation/native",
+      "<rootDir>/node_modules/apollos-ui-htmlview/react-native"
     ],
     "setupFiles": [
       "./jest.setup.js"

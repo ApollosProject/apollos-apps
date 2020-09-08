@@ -12,19 +12,25 @@ import {
 } from '@apollosproject/ui-kit';
 import { LiveConsumer } from '../..';
 
-const Header = styled(({ theme }) => ({
-  paddingTop: theme.sizing.baseUnit * 3,
-  paddingBottom: 0,
-}))(PaddedView);
+const Header = styled(
+  ({ theme }) => ({
+    paddingTop: theme.sizing.baseUnit * 3,
+    paddingBottom: 0,
+  }),
+  'ui-connected.HeroListFeatureConnected.HeroListFeature.Header'
+)(PaddedView);
 
 const Title = styled(
   ({ theme }) => ({
     color: theme.colors.text.tertiary,
   }),
-  'HeroListFeature.Title'
+  'ui-connected.HeroListFeatureConnected.HeroListFeature.Title'
 )(H6);
 
-const Subtitle = styled({}, 'HeroListFeature.Subtitle')(H3);
+const Subtitle = styled(
+  {},
+  'ui-connected.HeroListFeatureConnected.HeroListFeature.Subtitle'
+)(H3);
 
 const loadingStateArray = [
   {
@@ -130,44 +136,48 @@ const HeroListFeature = memo(
     const onPressHero = onPressHeroProp || onPressItem;
     const onPressActionListButton = onPressHeroListButton || onPressItem;
     return (
-      <ActionList
-        isCard={false}
-        isLoading={isLoading}
-        key={id}
-        header={
-          <>
-            {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
-              <Header>
-                {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
-                  <Title numberOfLines={1}>{title}</Title>
-                ) : null}
-                {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
-              </Header>
-            ) : null}
-            {isLoading || heroCard ? (
-              <TouchableScale onPress={() => onPressHero(heroCard)}>
-                <HeroItemComponent
-                  {...heroCard}
-                  actionIcon={
-                    get(heroCard, 'actionIcon')
-                      ? get(heroCard, 'actionIcon')
-                      : undefined
-                  }
-                  coverImage={get(heroCard, 'coverImage.sources', undefined)}
-                  __typename={get(heroCard, 'relatedNode.__typename')}
-                  id={get(heroCard, 'relatedNode.id')}
-                  Component={HeroComponent}
-                  isLoading={isLoading}
-                />
-              </TouchableScale>
-            ) : null}
-          </>
-        }
-        actions={isLoading && !actions.length ? loadingStateObject : actions}
-        onPressActionItem={onPressItem}
-        onPressActionListButton={() => onPressActionListButton(primaryAction)}
-        actionListButtonTitle={get(primaryAction, 'title')}
-      />
+      !!(isLoading || actions.length || heroCard) && (
+        <ActionList
+          isCard={false}
+          isLoading={isLoading}
+          key={id}
+          header={
+            <>
+              {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
+                <Header>
+                  {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
+                    <Title numberOfLines={1}>{title}</Title>
+                  ) : null}
+                  {isLoading || subtitle ? (
+                    <Subtitle>{subtitle}</Subtitle>
+                  ) : null}
+                </Header>
+              ) : null}
+              {isLoading || heroCard ? (
+                <TouchableScale onPress={() => onPressHero(heroCard)}>
+                  <HeroItemComponent
+                    {...heroCard}
+                    actionIcon={
+                      get(heroCard, 'actionIcon')
+                        ? get(heroCard, 'actionIcon')
+                        : undefined
+                    }
+                    coverImage={get(heroCard, 'coverImage.sources', undefined)}
+                    __typename={get(heroCard, 'relatedNode.__typename')}
+                    id={get(heroCard, 'relatedNode.id')}
+                    Component={HeroComponent}
+                    isLoading={isLoading}
+                  />
+                </TouchableScale>
+              ) : null}
+            </>
+          }
+          actions={isLoading && !actions.length ? loadingStateObject : actions}
+          onPressActionItem={onPressItem}
+          onPressActionListButton={() => onPressActionListButton(primaryAction)}
+          actionListButtonTitle={get(primaryAction, 'title')}
+        />
+      )
     );
   }
 );

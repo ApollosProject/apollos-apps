@@ -33,10 +33,15 @@ export default class OneSignal extends RESTDataSource {
   }
 
   async updatePushSettings({ enabled, pushProviderUserId }) {
-    const currentUser = await this.context.dataSources.Auth.getCurrentPerson();
-    if (enabled != null) {
-      // TODO: Allow a user to disable push notifications
-    }
+    const { Auth, PersonalDevice } = this.context.dataSources;
+    const currentUser = await Auth.getCurrentPerson();
+
+    if (enabled != null && pushProviderUserId != null)
+      await PersonalDevice.updateNotificationsEnabled(
+        pushProviderUserId,
+        enabled
+      );
+
     if (pushProviderUserId != null) {
       await this.updateExternalUserId({
         playerId: pushProviderUserId,

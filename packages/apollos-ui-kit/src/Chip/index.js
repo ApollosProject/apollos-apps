@@ -23,15 +23,21 @@ const enhance = compose(
   }))
 );
 
-const IconView = styled(({ hasTitle }) => ({
-  paddingRight: hasTitle ? 8 : null,
-}))(View);
+const IconView = styled(
+  ({ hasTitle }) => ({
+    paddingRight: hasTitle ? 8 : null,
+  }),
+  'ui-kit.Chip.IconView'
+)(View);
 
-const TitleText = styled({
-  textAlign: 'center',
-  alignItems: 'center',
-  justifyContent: 'center',
-})(H6);
+const TitleText = styled(
+  {
+    textAlign: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  'ui-kit.Chip.TitleText'
+)(H6);
 
 const StyledButton = styled(
   ({ theme, chipList }) => ({
@@ -45,7 +51,7 @@ const StyledButton = styled(
         }
       : {}),
   }),
-  'Chip'
+  'ui-kit.Chip.StyledButton'
 )(Button);
 
 const Chip = enhance(

@@ -8,7 +8,7 @@ const AvatarList = styled(
     flexWrap: 'wrap',
     maxWidth: '100%',
   },
-  'Avatar.List'
+  'ui-kit.Avatar.List.AvatarList'
 )(View);
 
 export default AvatarList;

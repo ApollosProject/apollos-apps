@@ -12,7 +12,7 @@ export const LabelText = styled(
     backgroundColor: 'transparent',
     paddingVertical: theme.sizing.baseUnit / 4,
   }),
-  'FloatingLabel.LabelText'
+  'ui-kit.inputs.FloatingLabel.LabelText'
 )(H6);
 
 const styles = StyleSheet.create({

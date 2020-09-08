@@ -69,6 +69,47 @@ Array [
 ]
 `;
 
+exports[`Auth should return a person while retrying getCurrentPerson 1`] = `
+Object {
+  "id": 123,
+}
+`;
+
+exports[`Auth should return a person while retrying getCurrentPerson 2`] = `
+Array [
+  Array [
+    Object {
+      "key": ":userLogins:234d7a42b877ed9b07eec6880c3576deac311057",
+    },
+  ],
+]
+`;
+
+exports[`Auth should return a person while retrying getCurrentPerson 3`] = `
+Array [
+  Array [
+    "People/GetCurrentPerson",
+    Object {},
+    Object {
+      "headers": Object {
+        "Authorization-Token": null,
+        "cookie": "some cookie",
+      },
+    },
+  ],
+  Array [
+    "/UserLogins?%24filter=UserName%20eq%20%27username%40example.com%27&%24top=1",
+    Object {},
+    Object {},
+  ],
+  Array [
+    "/People?%24filter=Id%20eq%20123&%24top=1",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
 exports[`Auth should throw an error when creating an invalid user 1`] = `
 Array [
   Array [
@@ -83,3 +124,84 @@ Array [
 `;
 
 exports[`Auth should throw an error when creating an invalid user 2`] = `[Error: Unable to create profile!]`;
+
+exports[`Auth should throw an error when looking up a user login that doesn't exist while retrying getCurrentPerson 1`] = `"Invalid user cookie; no user login found"`;
+
+exports[`Auth should throw an error when looking up a user login that doesn't exist while retrying getCurrentPerson 2`] = `
+Array [
+  Array [
+    Object {
+      "key": ":userLogins:234d7a42b877ed9b07eec6880c3576deac311057",
+    },
+  ],
+]
+`;
+
+exports[`Auth should throw an error when looking up a user login that doesn't exist while retrying getCurrentPerson 3`] = `
+Array [
+  Array [
+    "People/GetCurrentPerson",
+    Object {},
+    Object {
+      "headers": Object {
+        "Authorization-Token": null,
+        "cookie": "some cookie",
+      },
+    },
+  ],
+  Array [
+    "/UserLogins?%24filter=UserName%20eq%20%27username%40example.com%27&%24top=1",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Auth should throw an error when looking up a user that doesn't exist while retrying getCurrentPerson 1`] = `"Invalid user cookie; no person found"`;
+
+exports[`Auth should throw an error when looking up a user that doesn't exist while retrying getCurrentPerson 2`] = `
+Array [
+  Array [
+    Object {
+      "key": ":userLogins:234d7a42b877ed9b07eec6880c3576deac311057",
+    },
+  ],
+]
+`;
+
+exports[`Auth should throw an error when looking up a user that doesn't exist while retrying getCurrentPerson 3`] = `
+Array [
+  Array [
+    "People/GetCurrentPerson",
+    Object {},
+    Object {
+      "headers": Object {
+        "Authorization-Token": null,
+        "cookie": "some cookie",
+      },
+    },
+  ],
+  Array [
+    "/UserLogins?%24filter=UserName%20eq%20%27username%40example.com%27&%24top=1",
+    Object {},
+    Object {},
+  ],
+  Array [
+    "/People?%24filter=Id%20eq%20123&%24top=1",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`Auth should try and find an auth token from redis when curent cookie is invalid 1`] = `
+Array [
+  Array [
+    Object {
+      "key": ":userLogins:9f17761cf14414d78cdeb6992c4217b7093292ac",
+    },
+  ],
+]
+`;
+
+exports[`Auth should try and find an auth token from redis when curent cookie is invalid 2`] = `"Invalid user cookie; no eligble user login found"`;

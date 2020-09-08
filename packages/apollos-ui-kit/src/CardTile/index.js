@@ -26,36 +26,48 @@ const enhance = compose(
   pure
 );
 
-const TileSpacer = styled(({ theme }) => ({
-  padding: theme.sizing.baseUnit / 2,
-}))(View);
+const TileSpacer = styled(
+  ({ theme }) => ({
+    padding: theme.sizing.baseUnit / 2,
+  }),
+  'ui-kit.CardTitle.TitleSpacer'
+)(View);
 
-const Tile = styled(({ theme }) => ({
-  width: Dimensions.get('window').width * 0.66,
-  aspectRatio: 1,
-  borderRadius: theme.sizing.baseBorderRadius,
-  backgroundColor: theme.colors.lightTertiary,
-}))(View);
+const Tile = styled(
+  ({ theme }) => ({
+    width: Dimensions.get('window').width * 0.66,
+    aspectRatio: 1,
+    borderRadius: theme.sizing.baseBorderRadius,
+    backgroundColor: theme.colors.lightTertiary,
+  }),
+  'ui-kit.CardTitle.Title'
+)(View);
 
-const PlaceholderOverflowFix = styled(({ theme }) => ({
-  ...StyleSheet.absoluteFillObject,
-  justifyContent: 'center',
-  borderRadius: theme.sizing.baseBorderRadius,
-  overflow: 'hidden',
-}))(View);
+const PlaceholderOverflowFix = styled(
+  ({ theme }) => ({
+    ...StyleSheet.absoluteFillObject,
+    justifyContent: 'center',
+    borderRadius: theme.sizing.baseBorderRadius,
+    overflow: 'hidden',
+  }),
+  'ui-kit.CardTitle.PlaceholderOverflowFix'
+)(View);
 
-const TileNumber = styled(({ theme, size }) => ({
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  width: theme.helpers.rem(1 * (size < 2 ? 2 : size)),
-  height: theme.helpers.rem(1 * (size < 2 ? 2 : size)),
-  justifyContent: 'center',
-  alignItems: 'center',
-  borderTopLeftRadius: theme.sizing.baseUnit,
-  borderBottomRightRadius: theme.sizing.baseUnit,
-  backgroundColor: theme.colors.white,
-}))(View);
+const TileNumber = styled(
+  ({ theme, size }) => ({
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: theme.helpers.rem(1 * (size < 2 ? 2 : size)),
+    height: theme.helpers.rem(1 * (size < 2 ? 2 : size)),
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderTopLeftRadius: theme.sizing.baseUnit,
+    borderBottomRightRadius: theme.sizing.baseUnit,
+    backgroundColor: theme.colors.white,
+  }),
+  'ui-kit.CardTitle.TitleNumber'
+)(View);
 
 const relativeTime = (date) => {
   if (moment.updateLocale) {

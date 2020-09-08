@@ -24,7 +24,7 @@ const Content = styled(
   'ui-prayer.PrayerView.Content'
 )(View);
 
-const flexer = styled({ flex: 1 }); // 💪flex 💪all 💪the 💪things 💪bro
+const flexer = styled({ flex: 1 }, 'ui-prayer.PrayerView.flexer'); // 💪flex 💪all 💪the 💪things 💪bro
 
 const FlexedKeyboardAvoidingView = flexer(KeyboardAvoidingView); // 💪💥
 const FlexedSafeAreaView = flexer(SafeAreaView); // 💪💥

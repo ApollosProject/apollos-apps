@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/ui-mapview",
-  "version": "1.4.3",
-  "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
+  "repository": "git://github.com/apollosproject/apollos-apps.git",
+  "version": "1.5.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -58,7 +58,7 @@
     "react-native": "0.60.5",
     "react-native-geolocation-service": "^3.0.0",
     "react-native-maps": "0.26.1",
-    "react-test-renderer": "16.6.3",
+    "react-test-renderer": "16.8.6",
     "waait": "1.0.2"
   },
   "publishConfig": {

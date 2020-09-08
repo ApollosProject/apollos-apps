@@ -200,7 +200,7 @@ exports[`the PassView component should render 1`] = `
             color="rgb(248, 247, 244)"
             style={
               Object {
-                "color": null,
+                "color": "#505050",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 12,
                 "lineHeight": 18,
@@ -258,10 +258,17 @@ exports[`the PassView component should render 1`] = `
               }
             }
           >
-            <View
-              animate={null}
-              customAnimate={null}
-              onReady={false}
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Ddd2aa592-80ac-4d7a-8bdc-47aeb25ce158%26format%3Dpng%26height%3D200",
+                  },
+                ]
+              }
               style={
                 Object {
                   "alignSelf": "flex-end",
@@ -269,32 +276,9 @@ exports[`the PassView component should render 1`] = `
                   "backgroundColor": "transparent",
                   "flex": 1,
                   "resizeMode": "cover",
-                  "width": "100%",
                 }
               }
-            >
-              <Image
-                onLoad={[Function]}
-                source={
-                  Array [
-                    Object {
-                      "cache": "force-cache",
-                      "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Ddd2aa592-80ac-4d7a-8bdc-47aeb25ce158%26format%3Dpng%26height%3D200",
-                    },
-                  ]
-                }
-                style={
-                  Object {
-                    "alignSelf": "flex-end",
-                    "aspectRatio": 0.75,
-                    "backgroundColor": "transparent",
-                    "flex": 1,
-                    "opacity": 0,
-                    "resizeMode": "cover",
-                  }
-                }
-              />
-            </View>
+            />
           </View>
         </View>
         <View
@@ -326,7 +310,7 @@ exports[`the PassView component should render 1`] = `
               <Text
                 style={
                   Object {
-                    "color": null,
+                    "color": "#505050",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 18,
@@ -376,7 +360,7 @@ exports[`the PassView component should render 1`] = `
               <Text
                 style={
                   Object {
-                    "color": null,
+                    "color": "#505050",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 18,

@@ -51,8 +51,22 @@ export default class PrayerRequest extends RockApolloDataSource {
 
     // now see if we need to send a push notification informing author
     // that someone prayed for them
+    const { Cache } = this.context.dataSources;
+    const hasPrayed = await Cache.get({
+      key: `prayer:hasPrayed:${id}`,
+    });
+
+    if (hasPrayed) return;
+
     const prayer = await this.getFromId(id);
-    if (prayer.prayerCount <= 1) this.sendPrayingNotification(prayer);
+    if (prayer.prayerCount <= 1) {
+      this.sendPrayingNotification(prayer);
+    }
+
+    await Cache.set({
+      key: `prayer:hasPrayed:${id}`,
+      data: true,
+    });
   };
 
   sendPrayingNotification = async ({ requestedByPersonAliasId }) => {

@@ -2,12 +2,11 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
-
-
 import FlexedView from '../FlexedView';
 import { H3, H6, BodyText } from '../typography';
 
 import { ThemeProvider, ThemeMixin, withThemeMixin } from './';
+import styled from '../styled'
 
 const TypeExample = () => (
   <FlexedView>
@@ -20,6 +19,9 @@ const TypeExample = () => (
     </BodyText>
   </FlexedView>
 );
+
+const MixinPrimaryText = styled(({ theme: { colors: { primary } } }) => ({ backgroundColor: primary }))(H3);
+const MixinSecondaryText = styled(({ theme: { colors: { secondary } } }) => ({ backgroundColor: secondary }))(H3);
 
 const DarkTypeExample = withThemeMixin({
   type: 'dark',
@@ -72,4 +74,15 @@ storiesOf('ui-kit/Theming', module)
         <TypeExampleWithProps isLight={false} color="blue" />
       </FlexedView>
     </ThemeProvider>
-  ));
+  ))
+  .add('ThemeMixin stripping null values', () => (
+    <ThemeProvider>
+      <FlexedView>
+        <ThemeMixin mixin={{ colors: { primary: 'red', secondary: null } }}>
+          <MixinPrimaryText>I am red!</MixinPrimaryText>
+          <MixinSecondaryText>I am secondary!</MixinSecondaryText>
+        </ThemeMixin>
+      </FlexedView>
+    </ThemeProvider>
+  ));;
+

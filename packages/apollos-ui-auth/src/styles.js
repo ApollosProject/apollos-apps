@@ -31,18 +31,21 @@ const FlexedSafeAreaView = styled(
   'ui-auth.FlexedSafeAreaView'
 )(SafeAreaView);
 
-const BrandIcon = withTheme(({ theme }) => ({
-  name: 'brand-icon',
-  size: theme.sizing.baseUnit * 3.0,
-  fill: theme.colors.text.primary,
-  marginBottom: theme.sizing.baseUnit,
-}))(Icon);
+const BrandIcon = withTheme(
+  ({ theme }) => ({
+    name: 'brand-icon',
+    size: theme.sizing.baseUnit * 3.0,
+    fill: theme.colors.text.primary,
+    marginBottom: theme.sizing.baseUnit,
+  }),
+  'ui-auth.styles.BrandIcon'
+)(Icon);
 
 const TitleText = styled(
   ({ theme }) => ({
     color: theme.colors.action.primary,
   }),
-  'ui-auth.TitleText'
+  'ui-auth.styles.TitleText'
 )(H2);
 
 const PromptText = styled(
@@ -50,7 +53,7 @@ const PromptText = styled(
     color: theme.colors.text.primary,
     paddingBottom: theme.sizing.baseUnit * 1.5,
   }),
-  'ui-auth.PromptText'
+  'ui-auth.styles.PromptText'
 )(H5);
 
 const LegalText = styled(
@@ -58,7 +61,7 @@ const LegalText = styled(
     color: theme.colors.text.tertiary,
     fontWeight: 'normal',
   }),
-  'ui-auth.EmailEntry.LegalText'
+  'ui-auth.styles.LegalText'
 )(H6);
 
 // Tab Login
@@ -69,7 +72,7 @@ const TabWrapper = styled(
     marginVertical: 0,
     ...Platform.select(theme.shadows.default),
   }),
-  'ui-auth.TabWrapper'
+  'ui-auth.styles.TabWrapper'
 )(Card);
 
 const TabContainer = styled(
@@ -77,11 +80,13 @@ const TabContainer = styled(
     flexDirection: alternateLogin ? 'row-reverse' : 'row',
     flex: 1,
   }),
-  'ui-auth.TabContainer'
+  'ui-auth.styles.TabContainer'
 )(View);
 
 // We need a wrapping `View` because this style doesn't work when applied to a `Touchable` on android.
-const TabButtonWrapper = styled({ flex: 1 }, 'ui-auth.TabButtonWrapper')(View);
+const TabButtonWrapper = styled({ flex: 1 }, 'ui-auth.styles.TabButtonWrapper')(
+  View
+);
 
 const TabButton = styled(
   ({ theme, isActive }) => ({
@@ -99,12 +104,15 @@ const TabButton = styled(
 
     ...Platform.select(theme.shadows.none),
   }),
-  'ui-auth.TabButton'
+  'ui-auth.styles.TabButton'
 )(View);
 
-const TabButtonText = styled(({ theme, isActive }) => ({
-  color: isActive ? theme.colors.text.primary : theme.colors.text.tertiary,
-}))(UIText);
+const TabButtonText = styled(
+  ({ theme, isActive }) => ({
+    color: isActive ? theme.colors.text.primary : theme.colors.text.tertiary,
+  }),
+  'ui-auth.styles.TabButtonText'
+)(UIText);
 
 const TabCard = styled(
   ({ theme }) => ({
@@ -115,7 +123,7 @@ const TabCard = styled(
     marginVertical: 0,
     ...Platform.select(theme.shadows.none),
   }),
-  'ui-auth.TabCard'
+  'ui-auth.styles.TabCard'
 )(Card);
 
 const FieldLabel = styled(
@@ -124,7 +132,7 @@ const FieldLabel = styled(
     opacity: 0.7,
     ...(padded ? { marginTop: theme.sizing.baseUnit } : {}),
   }),
-  'ui-auth.FieldLabel'
+  'ui-auth.styles.FieldLabel'
 )(H6);
 
 const DatePicker = styled(
@@ -132,7 +140,7 @@ const DatePicker = styled(
     marginTop: 0,
     marginBottom: theme.sizing.baseUnit,
   }),
-  'ui-auth.DatePicker'
+  'ui-auth.styles.DatePicker'
 )(DateInput);
 
 const RadioInput = styled(
@@ -142,14 +150,14 @@ const RadioInput = styled(
     alignItems: 'center',
     flexWrap: 'wrap',
   }),
-  'ui-auth.RadioInput'
+  'ui-auth.styles.RadioInput'
 )(Radio);
 
 const RadioLabel = styled(
   ({ theme }) => ({
     marginLeft: theme.sizing.baseUnit * 0.5,
   }),
-  'ui-auth.RadioLabel'
+  'ui-auth.styles.RadioLabel'
 )(H5);
 
 const ProfileEntryFieldContainer = ({

@@ -42,6 +42,7 @@ export { GET_LOGIN_STATE, GET_USER_EXISTS } from './queries';
 export authLink from './authLink';
 export buildErrorLink from './buildErrorLink';
 export Entry from './Entry';
+export * from './LoginProvider';
 
 export {
   AuthSMSPhoneEntryConnected,

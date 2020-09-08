@@ -8,9 +8,12 @@ import ChannelLabel from '../ChannelLabel';
 import styled from '../styled';
 import { withTheme } from '../theme';
 
-const Container = styled({
-  flexDirection: 'column',
-})(View);
+const Container = styled(
+  {
+    flexDirection: 'column',
+  },
+  'ui-kit.ContentCard.Metrics.Container'
+)(View);
 
 const formatValue = (value) => numeral(value).format('0[.]0a');
 

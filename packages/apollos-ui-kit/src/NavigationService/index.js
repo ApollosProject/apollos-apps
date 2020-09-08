@@ -25,6 +25,10 @@ const navigate = performWhenReady((...args) => {
   _navigator.navigate(...args);
 });
 
+const dispatch = (...args) => {
+  _navigator.dispatch(...args);
+};
+
 const resetToAuth = performWhenReady(() => {
   _navigator.reset({
     index: 0,
@@ -52,6 +56,7 @@ const goBack = performWhenReady((from) => {
 export default {
   setTopLevelNavigator,
   navigate,
+  dispatch,
   goBack,
   resetToAuth,
   resetAction,

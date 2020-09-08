@@ -4,11 +4,14 @@ import { CardContent } from '../Card';
 import { H3, H4, H6, BodyText } from '../typography';
 import styled from '../styled';
 
-const StyledCardContent = styled(({ theme, tile }) => ({
-  ...(tile ? { paddingTop: theme.sizing.baseUnit } : {}),
-  paddingTop: theme.sizing.baseUnit * (tile ? 1 : 1.5), // TODO: should this be vertical ryhthm??? maybe should be applied to `TitleText` ??
-  paddingBottom: theme.sizing.baseUnit * 0.75, // this is reduced b/c this is always rendered above the stats section, which also has padding
-}))(CardContent);
+const StyledCardContent = styled(
+  ({ theme, tile }) => ({
+    ...(tile ? { paddingTop: theme.sizing.baseUnit } : {}),
+    paddingTop: theme.sizing.baseUnit * (tile ? 1 : 1.5), // TODO: should this be vertical ryhthm??? maybe should be applied to `TitleText` ??
+    paddingBottom: theme.sizing.baseUnit * 0.75, // this is reduced b/c this is always rendered above the stats section, which also has padding
+  }),
+  'ui-kit.ContentCard.ContentText.StyledCardContent'
+)(CardContent);
 
 const ContentText = ({ title, summary, isLoading, tile }) => {
   const TitleText = tile ? H4 : H3;

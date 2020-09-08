@@ -11,10 +11,13 @@ import {
   withTheme,
 } from '@apollosproject/ui-kit';
 
-const Input = styled(({ theme }) => ({
-  minHeight: theme.sizing.baseUnit * 3.25, // 🧙‍This magic numbers fixes jitter when you begin typing. At least one `baseUnit` is to ofset `paddingTop` on `Prompt`
-  paddingVertical: 0, // fixes jitter when you begin typing on Android
-}))(TextInput);
+const Input = styled(
+  ({ theme }) => ({
+    minHeight: theme.sizing.baseUnit * 3.25, // 🧙‍This magic numbers fixes jitter when you begin typing. At least one `baseUnit` is to ofset `paddingTop` on `Prompt`
+    paddingVertical: 0, // fixes jitter when you begin typing on Android
+  }),
+  'ui-prayer.PrayerInput.Input'
+)(TextInput);
 
 const TextLimit = withTheme(
   ({ length, maxLength, maxLengthWarning }) => ({
@@ -132,7 +135,7 @@ PrayerInput.propTypes = {
 };
 
 PrayerInput.defaultProps = {
-  prompt: "I'm thankful for...",
+  prompt: 'I need prayer for...',
   maxLength: 280,
   maxLengthWarning: 20,
 };

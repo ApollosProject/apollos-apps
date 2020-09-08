@@ -8,7 +8,7 @@ const ChipList = styled(
     alignItems: 'center',
     flexWrap: 'wrap',
   },
-  'Chip.List'
+  'ui-kit.Chip.ChipList'
 )(View);
 
 export default ChipList;

@@ -39,21 +39,27 @@ const LikeIconPositioning = styled(
   'ui-kit.HorizontalHighlightCard.LikeIconPositioning'
 )(View);
 
-const LikeIcon = withTheme(({ theme, isLiked }) => ({
-  name: isLiked ? 'like-solid' : 'like',
-  size: theme.sizing.baseUnit * 1.5,
-}))(Icon);
+const LikeIcon = withTheme(
+  ({ theme, isLiked }) => ({
+    name: isLiked ? 'like-solid' : 'like',
+    size: theme.sizing.baseUnit * 1.5,
+  }),
+  'ui-kit.HorizontalHighlightCard.LikeIcon'
+)(Icon);
 
-const Image = withTheme(({ customTheme, theme, disabled }) => ({
-  minAspectRatio: 1,
-  maxAspectRatio: 1,
-  maintainAspectRatio: true,
-  forceRatio: 1, // fixes loading state
-  overlayColor: disabled // There are effectively 3 conditions here for `overlayColor`.
-    ? theme.colors.white // if `disabled` use white
-    : get(customTheme, 'colors.primary', theme.colors.black), // else check for a custom theme (prop) or default to black.
-  overlayType: disabled ? 'medium' : 'gradient-bottom',
-}))(CardImage);
+const Image = withTheme(
+  ({ customTheme, theme, disabled }) => ({
+    minAspectRatio: 1,
+    maxAspectRatio: 1,
+    maintainAspectRatio: true,
+    forceRatio: 1, // fixes loading state
+    overlayColor: disabled // There are effectively 3 conditions here for `overlayColor`.
+      ? theme.colors.white // if `disabled` use white
+      : get(customTheme, 'colors.primary', theme.colors.black), // else check for a custom theme (prop) or default to black.
+    overlayType: disabled ? 'medium' : 'gradient-bottom',
+  }),
+  'ui-kit.HorizontalHighlightCard.Image'
+)(CardImage);
 
 const Content = styled(
   ({ theme }) => ({
@@ -76,20 +82,29 @@ const ActionLayout = styled(
   'ui-kit.HorizontalHighlightCard.ActionLayout'
 )(View);
 
-const FlexedActionLayoutText = styled(({ theme, hasAction }) => ({
-  ...(hasAction ? { marginRight: theme.sizing.baseUnit } : {}), // spaces out text from `ActionIcon`. This has to live here for ActionIcon's loading state
-}))(FlexedView);
+const FlexedActionLayoutText = styled(
+  ({ theme, hasAction }) => ({
+    ...(hasAction ? { marginRight: theme.sizing.baseUnit } : {}), // spaces out text from `ActionIcon`. This has to live here for ActionIcon's loading state
+  }),
+  'ui-kit.HorizontalHighlightCard.FlexedActionLayoutText'
+)(FlexedView);
 
-const ActionIcon = withTheme(({ theme }) => ({
-  fill: theme.colors.text.primary,
-  size: theme.sizing.baseUnit * 2,
-}))(Icon);
+const ActionIcon = withTheme(
+  ({ theme }) => ({
+    fill: theme.colors.text.primary,
+    size: theme.sizing.baseUnit * 2,
+  }),
+  'ui-kit.HorizontalHighlightCard.ActionIcon'
+)(Icon);
 
-const Label = withTheme(({ customTheme, labelText }) => ({
-  title: labelText,
-  theme: { colors: get(customTheme, 'colors', {}) },
-  type: 'overlay',
-}))(CardLabel);
+const Label = withTheme(
+  ({ customTheme, labelText }) => ({
+    title: labelText,
+    theme: { colors: get(customTheme, 'colors', {}) },
+    type: 'overlay',
+  }),
+  'ui-kit.HorizontalHighlightCard.Label'
+)(CardLabel);
 
 const renderLabel = (LabelComponent, labelText, theme) => {
   let ComponentToRender = null;

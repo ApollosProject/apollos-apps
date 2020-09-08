@@ -13,7 +13,7 @@ const StyledAvatar = withTheme(
     },
     themeSize: theme.sizing.avatar.medium * 0.8,
   }),
-  'ui-kit.AvatarList.TouchableAvatar.StyledAvatar'
+  'ui-kit.Avatar.AvatarList.TouchableAvatarIos.StyledAvatar'
 )(Avatar);
 
 // See the `.android` verson of this component for an explination of what and why.

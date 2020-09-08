@@ -12,9 +12,12 @@ import Icon from '../Icon';
 import { withIsLoading } from '../isLoading';
 import { ImageSourceType } from '../ConnectedImage';
 
-const StyledCard = withTheme(({ theme }) => ({
-  cardColor: theme.colors.primary,
-}))(Card);
+const StyledCard = withTheme(
+  ({ theme }) => ({
+    cardColor: theme.colors.primary,
+  }),
+  'ui-kit.HighlightCard.StyledCard'
+)(Card);
 
 // We have to position `LikeIcon` in a `View` rather than `LikeIcon` directly so `LikeIcon`'s loading state is positioned correctly 💥
 const LikeIconPositioning = styled(
@@ -26,18 +29,24 @@ const LikeIconPositioning = styled(
   'ui-kit.HighlightCard.LikeIconPositioning'
 )(View);
 
-const LikeIcon = withTheme(({ theme, isLiked }) => ({
-  name: isLiked ? 'like-solid' : 'like',
-  size: theme.sizing.baseUnit * 1.5,
-  iconPadding: theme.sizing.baseUnit * 1.5,
-}))(Icon);
+const LikeIcon = withTheme(
+  ({ theme, isLiked }) => ({
+    name: isLiked ? 'like-solid' : 'like',
+    size: theme.sizing.baseUnit * 1.5,
+    iconPadding: theme.sizing.baseUnit * 1.5,
+  }),
+  'ui-kit.HighlightCard.LikeIcon'
+)(Icon);
 
-const Image = withTheme(({ theme, customTheme }) => ({
-  maxAspectRatio: 1.2,
-  minAspectRatio: 0.75,
-  maintainAspectRatio: true,
-  overlayColor: get(customTheme, 'colors.primary', theme.colors.black),
-}))(CardImage);
+const Image = withTheme(
+  ({ theme, customTheme }) => ({
+    maxAspectRatio: 1.2,
+    minAspectRatio: 0.75,
+    maintainAspectRatio: true,
+    overlayColor: get(customTheme, 'colors.primary', theme.colors.black),
+  }),
+  'ui-kit.HighlightCard.Image'
+)(CardImage);
 
 const Content = styled(
   ({ theme }) => ({
@@ -63,35 +72,61 @@ const ActionLayout = styled(
   'ui-kit.HighlightCard.ActionLayout'
 )(View);
 
-const FlexedActionLayoutText = styled(({ theme }) => ({
-  marginRight: theme.sizing.baseUnit, // spaces out text from `ActionIcon`. This has to live here for ActionIcon's loading state
-}))(FlexedView);
+const FlexedActionLayoutText = styled(
+  ({ theme }) => ({
+    marginRight: theme.sizing.baseUnit, // spaces out text from `ActionIcon`. This has to live here for ActionIcon's loading state
+  }),
+  'ui-kit.HighlightCard.FlexedActionLayoutText'
+)(FlexedView);
 
-const ActionIcon = withTheme(({ theme }) => ({
-  fill: theme.colors.text.primary,
-  size: theme.sizing.baseUnit * 3,
+const ActionIcon = withTheme(
+  ({ theme }) => ({
+    fill: theme.colors.text.primary,
+    size: theme.sizing.baseUnit * 3,
+  }),
+  'ui-kit.HighlightCard.ActionIcon'
+)(Icon);
+
+const Label = withTheme(
+  ({ customTheme, hasSummary, labelText, theme, isLive }) => ({
+    ...(isLive
+      ? {
+          title: labelText || 'Live',
+          type: 'secondary',
+        }
+      : {
+          title: labelText,
+          theme: { colors: get(customTheme, 'colors', {}) },
+          type: 'overlay',
+        }),
+    style: {
+      ...(hasSummary ? { marginBottom: theme.sizing.baseUnit } : {}),
+    },
+  }),
+  'ui-kit.HighlightCard.Label'
+)(CardLabel);
+
+const LiveIcon = withTheme(({ theme }) => ({
+  name: 'live-dot',
+  size: theme.helpers.rem(0.4375),
+  style: { marginRight: theme.sizing.baseUnit * 0.5 },
 }))(Icon);
 
-const Label = withTheme(({ customTheme, hasSummary, labelText, theme }) => ({
-  title: labelText,
-  theme: { colors: get(customTheme, 'colors', {}) },
-  type: 'overlay',
-  style: {
-    ...(hasSummary ? { marginBottom: theme.sizing.baseUnit } : {}),
-  },
-}))(CardLabel);
-
-const renderLabel = (summary, LabelComponent, labelText, theme) => {
+const renderLabel = (summary, LabelComponent, labelText, theme, isLive) => {
   let ComponentToRender = null;
-
   if (LabelComponent) {
     ComponentToRender = LabelComponent;
-  } else if (labelText) {
+  } else if (labelText || isLive) {
     ComponentToRender = (
-      <Label customTheme={theme} hasSummary={summary} labelText={labelText} />
+      <Label
+        customTheme={theme}
+        hasSummary={summary}
+        labelText={labelText}
+        isLive={isLive}
+        IconComponent={isLive ? LiveIcon : null}
+      />
     );
   }
-
   return ComponentToRender;
 };
 
@@ -127,6 +162,7 @@ const HighlightCard = withIsLoading(
     LabelComponent,
     labelText,
     summary,
+    isLive,
     theme,
   }) => (
     <ThemeMixin
@@ -142,7 +178,7 @@ const HighlightCard = withIsLoading(
           source={coverImage}
         />
         <Content>
-          {renderLabel(summary, LabelComponent, labelText, theme)}
+          {renderLabel(summary, LabelComponent, labelText, theme, isLive)}
           {summary
             ? renderWithSummary(title, actionIcon, summary, hasAction)
             : renderOnlyTitle(title, actionIcon, hasAction)}

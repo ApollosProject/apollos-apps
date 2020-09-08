@@ -7,9 +7,12 @@ import ChannelLabel from '../../ChannelLabel';
 import Card from '../CardWrapper';
 import CardContent from '../Content';
 
-const StyledChannelLabel = styled(({ theme }) => ({
-  tintColor: theme.colors.tertiary,
-}))(ChannelLabel);
+const StyledChannelLabel = styled(
+  ({ theme }) => ({
+    tintColor: theme.colors.tertiary,
+  }),
+  'ui-kit.ErrorCard.StyledChannelLabel'
+)(ChannelLabel);
 
 const Err = ({ message = 'Uh oh!', error, showErrorMessage }) => {
   let errorMessage;

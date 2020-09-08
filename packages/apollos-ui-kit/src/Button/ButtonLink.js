@@ -6,7 +6,7 @@ const ButtonLink = styled(
   ({ theme }) => ({
     color: theme.colors.text.link,
   }),
-  'Button.Link'
+  'ui-kit.ButtonLink.ButtonLink'
 )(Text);
 
 export default ButtonLink;

@@ -5,25 +5,23 @@ import { compose, setDisplayName, pure } from 'recompose';
 import styled from '../../styled';
 import { withPlaceholder, Typography } from '../../Placeholder';
 
-const styles = styled(
-  ({ theme, padded }) => ({
-    fontSize: theme.helpers.rem(2.25),
-    lineHeight: theme.helpers.verticalRhythm(2.25, 1.15),
-    fontFamily: theme.typography.sans.black.default,
-    color: theme.colors.text.primary,
-    ...(padded
-      ? {
-          paddingTop: theme.helpers.verticalRhythm(1),
-          paddingBottom: theme.helpers.verticalRhythm(0.834),
-        }
-      : {}),
-  }),
-  'H2'
-);
-
 const H2 = compose(
-  setDisplayName('H2'),
-  styles,
+  setDisplayName('ui-kit.Typography.H2'),
+  styled(
+    ({ theme, padded }) => ({
+      fontSize: theme.helpers.rem(2.25),
+      lineHeight: theme.helpers.verticalRhythm(2.25, 1.15),
+      fontFamily: theme.typography.sans.black.default,
+      color: theme.colors.text.primary,
+      ...(padded
+        ? {
+            paddingTop: theme.helpers.verticalRhythm(1),
+            paddingBottom: theme.helpers.verticalRhythm(0.834),
+          }
+        : {}),
+    }),
+    'ui-kit.Typography.H2'
+  ),
   withPlaceholder(Typography, { width: '100%' }),
   pure
 )(Text);
