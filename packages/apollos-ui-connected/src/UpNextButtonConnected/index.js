@@ -36,6 +36,7 @@ const UpNextButtonConnected = ({
   Component,
   navigation,
   contentId,
+  nodeId, // You can pass either nodeId or contentId.
 }) => {
   // We want to avoid rendering the Query component if we don't have the ID.
   // Running the query without a contentId throws an error, and the query won't rerun.
@@ -46,7 +47,7 @@ const UpNextButtonConnected = ({
     <Query
       query={GET_CONTENT_UP_NEXT}
       fetchPolicy="cache-and-network"
-      variables={{ nodeId: contentId }}
+      variables={{ nodeId: nodeId || contentId }}
     >
       {({ data, loading }) => {
         const upNextId = get(data, 'node.upNext.id');
@@ -84,6 +85,7 @@ UpNextButtonConnected.propTypes = {
   doneText: PropTypes.node,
   Component: PropTypes.node,
   contentId: PropTypes.string,
+  nodeId: PropTypes.string,
 };
 
 UpNextButtonConnected.defaultProps = {
