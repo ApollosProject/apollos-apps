@@ -5,13 +5,9 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  CI:
 
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [10.19.x]
 
     steps:
       - uses: deepakputhraya/action-pr-title@master
