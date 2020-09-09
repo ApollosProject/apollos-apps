@@ -5,18 +5,19 @@ on:
     branches: [ master ]
 
 jobs:
-  publish:
+  build:
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0 # needs this to pull all tags and branches
 
     - name: Use Node 10.19.x
       uses: actions/setup-node@v1
       with:
         node-version: 10.19.x
-        registry-url: 'https://npm.pkg.github.com/apollosproject'
 
     - name: Install Yarn
       run: npm install -g yarn
