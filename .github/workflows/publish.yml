@@ -16,6 +16,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 10.19.x
+        registry-url: 'https://npm.pkg.github.com/apollosproject'
 
     - name: Install Yarn
       run: npm install -g yarn
@@ -24,6 +25,6 @@ jobs:
       run: yarn
 
     - name: Canary Release
-      run: |
-        echo "registry=https://npm.pkg.github.com/apollosproject" >> .npmrc
-        yarn release:canary
+      run: yarn release:canary
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
