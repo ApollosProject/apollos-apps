@@ -29,7 +29,7 @@ const ContentChildNodeConnected = ({ nodeId, ...props }) => (
       return {
         node: {
           ...previousResult.node,
-          siblingContentItemsConnected: {
+          siblingContentItemsConnection: {
             ...previousResult.node.siblingContentItemsConnection,
             edges: [
               ...previousResult.node.siblingContentItemsConnection.edges,
