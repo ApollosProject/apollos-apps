@@ -16,16 +16,19 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm install -g yarn
+        registry-url: 'https://npm.pkg.github.com/apollosproject'
+
+    - name: Install Yarn
+      run: npm install -g yarn
 
     - name: Install Dependencies
       run: yarn
 
     - name: Canary Release
-      run: |
-        echo "registry=https://npm.pkg.github.com/apollosproject" >> .npmrc
-        yarn release:canary
+      run: yarn release:canary
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
