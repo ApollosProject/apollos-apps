@@ -80,6 +80,10 @@
     "react-navigation": "^3.11.0",
     "react-test-renderer": "16.8.6"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
   "license": "SEE LICENSE IN LICENSE.md",
   "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"
 }
