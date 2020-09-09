@@ -56,7 +56,9 @@ const UpNextButtonConnected = ({
           'node.childContentItemsConnection.edges',
           []
         );
-        if (!loading && childContentItemsConnection.length === 0) {
+        // We shouldn't show the button if the content doesn't support it.
+        // The button is considered "supported" if it's a series (has children) or has an up next Id.
+        if (!loading && childContentItemsConnection.length === 0 && !upNextId) {
           return null;
         }
         return (
