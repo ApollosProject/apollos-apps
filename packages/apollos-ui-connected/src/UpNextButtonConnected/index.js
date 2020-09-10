@@ -40,7 +40,7 @@ const UpNextButtonConnected = ({
 }) => {
   // We want to avoid rendering the Query component if we don't have the ID.
   // Running the query without a contentId throws an error, and the query won't rerun.
-  if (!contentId) {
+  if (!contentId && !nodeId) {
     return <Component loading />;
   }
   return (
