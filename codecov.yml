@@ -1,12 +1,12 @@
 coverage:
   status:
     project:
-      api:
+      data:
         paths:
           - packages/apollos-data-*/*
           - packages/apollos-config/*
           - packages/apollos-server-core/*
-      mobile:
+      ui:
         paths:
           - packages/apollos-ui-*/*
 comment:
