@@ -16,6 +16,12 @@ export ContentSingleFeaturesConnected, {
   ContentSingleFeatures,
   GET_CONTENT_ITEM_FEATURES,
 } from './ContentSingleFeaturesConnected';
+export ContentChildFeedConnected, {
+  GET_CONTENT_CHILD_SIBLINGS,
+} from './ContentChildFeedConnected';
+export ContentParentFeedConnected, {
+  GET_CONTENT_PARENT_CHILDREN,
+} from './ContentParentFeedConnected';
 export FeaturesFeedConnected, {
   featuresFeedComponentMapper,
   GET_FEED_FEATURES,
