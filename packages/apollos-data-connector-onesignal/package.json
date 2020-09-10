@@ -37,6 +37,7 @@
     "jest": "^23.6.0"
   },
   "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
     "access": "public"
   },
   "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"
