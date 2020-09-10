@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
-import ConnectedHorizontalFeed from '../ConnectedHorizontalFeed';
+import HorizontalFeedConnected from '../HorizontalFeedConnected';
 import GET_CONTENT_CHILD_SIBLINGS from './getContentChildSiblings';
 
 const ContentChildNodeConnected = ({ nodeId, ...props }) => (
-  <ConnectedHorizontalFeed
+  <HorizontalFeedConnected
     {...props}
     query={GET_CONTENT_CHILD_SIBLINGS}
     variables={{ nodeId }}
@@ -26,7 +26,6 @@ const ContentChildNodeConnected = ({ nodeId, ...props }) => (
         'node.siblingContentItemsConnection.edges',
         []
       );
-
       return {
         node: {
           ...previousResult.node,
