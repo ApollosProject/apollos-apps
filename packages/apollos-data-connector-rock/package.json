@@ -51,6 +51,7 @@
     "jest-date-mock": "^1.0.8"
   },
   "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
     "access": "public"
   },
   "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"
