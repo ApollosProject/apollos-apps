@@ -3,7 +3,7 @@ import { get } from 'lodash';
 import PropTypes from 'prop-types';
 import { withNavigation } from 'react-navigation';
 
-import ConnectedHorizontalFeed from '../ConnectedHorizontalFeed';
+import HorizontalFeedConnected from '../HorizontalFeedConnected';
 
 import GET_CONTENT_SERIES from './getContentSeries';
 
@@ -13,7 +13,7 @@ const getIsParent = (data) => {
 };
 
 const HorizontalContentSeriesFeedConnected = ({ contentId, ...props }) => (
-  <ConnectedHorizontalFeed
+  <HorizontalFeedConnected
     {...props}
     query={GET_CONTENT_SERIES}
     variables={{ itemId: contentId }}
