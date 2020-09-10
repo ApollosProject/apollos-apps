@@ -22,7 +22,7 @@ const loadingStateObject = {
   },
 };
 
-class ContentFeed extends Component {
+class HorizontalFeedConnected extends Component {
   static propTypes = {
     // eslint-disable-next-line react/no-unused-prop-types
     Component: PropTypes.oneOfType([
@@ -129,4 +129,4 @@ class ContentFeed extends Component {
   }
 }
 
-export default withNavigation(ContentFeed);
+export default withNavigation(HorizontalFeedConnected);
