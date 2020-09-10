@@ -20,7 +20,7 @@
     "eslint-plugin-react-hooks": "^4.0.5",
     "eslint-plugin-react-native": "^3.8.1"
   },
-  "license": "SEE LICENSE IN LICENSE.md",
+  "license": "SEE LICENSE.md",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com",
     "access": "public"
