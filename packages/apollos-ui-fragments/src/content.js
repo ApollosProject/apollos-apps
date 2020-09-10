@@ -2,6 +2,20 @@ import gql from 'graphql-tag';
 
 const CONTENT_UP_NEXT_FRAGMENT = gql`
   fragment ContentUpNextFragment on ContentItem {
+    ... on ProgressNode {
+      upNext {
+        id
+      }
+    }
+    ... on ContentParentNode {
+      childContentItemsConnection {
+        edges {
+          node {
+            id
+          }
+        }
+      }
+    }
     ... on ContentSeriesContentItem {
       id
       upNext {

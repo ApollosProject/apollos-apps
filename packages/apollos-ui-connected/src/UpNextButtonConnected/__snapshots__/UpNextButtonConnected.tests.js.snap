@@ -10,6 +10,62 @@ exports[`the UpNextButtonConnected accepts doneText, continueText and Component 
 </View>
 `;
 
+exports[`the UpNextButtonConnected renders a continue state even with no children 1`] = `
+<View
+  accessible={true}
+  clickable={true}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    bordered={false}
+    disabled={false}
+    pill={true}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#00676D",
+        "borderColor": "#00676D",
+        "borderRadius": 48,
+        "borderWidth": 2,
+        "elevation": 2,
+        "flexDirection": "row",
+        "height": 48,
+        "justifyContent": "center",
+        "marginHorizontal": 16,
+        "opacity": 1,
+        "overflow": "hidden",
+        "paddingHorizontal": 16,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 16,
+          "lineHeight": 24,
+        }
+      }
+    >
+      Continue
+    </Text>
+  </View>
+</View>
+`;
+
 exports[`the UpNextButtonConnected renders a continue state when in progress 1`] = `
 <View
   accessible={true}
