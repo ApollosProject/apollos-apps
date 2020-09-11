@@ -7,15 +7,7 @@ module.exports = {
     'prettier/react',
   ],
   parser: 'babel-eslint',
-  plugins: [
-    'import',
-    'jsx-a11y',
-    'babel',
-    'prettier',
-    'jest',
-    'react',
-    'graphql',
-  ],
+  plugins: ['import', 'jsx-a11y', 'babel', 'prettier', 'jest', 'react'],
   rules: {
     'prettier/prettier': [
       'error',
@@ -60,7 +52,6 @@ module.exports = {
     'import/no-cycle': 0,
     'function-paren-newline': 0,
     'no-underscore-dangle': 0,
-    'graphql/template-strings': ['warn', { env: 'apollo' }],
   },
   parserOptions: {
     ecmaVersion: 7,
