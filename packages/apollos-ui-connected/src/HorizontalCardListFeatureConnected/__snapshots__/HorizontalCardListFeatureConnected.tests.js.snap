@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`The HorizontalCardListFeatureConnected component should not render without cards 1`] = `null`;
+
 exports[`The HorizontalCardListFeatureConnected component should render 1`] = `
 <View>
   <View

@@ -7,14 +7,19 @@ import { get } from 'lodash';
 import GET_CONTENT_ITEM_FEATURES from './getContentItemFeatures';
 import ContentSingleFeatures from './ContentSingleFeatures';
 
-const ContentSingleFeaturesConnected = ({ Component, contentId, ...props }) => {
-  if (!contentId) return null;
+const ContentSingleFeaturesConnected = ({
+  Component,
+  contentId,
+  nodeId,
+  ...props
+}) => {
+  if (!contentId && !nodeId) return null;
 
   return (
     <Query
       query={GET_CONTENT_ITEM_FEATURES}
       fetchPolicy="cache-and-network"
-      variables={{ contentId }}
+      variables={{ contentId: contentId || nodeId }}
     >
       {({ data: { node } = {}, loading, error }) => {
         if (error) return <ErrorCard error={error} />;
@@ -25,7 +30,11 @@ const ContentSingleFeaturesConnected = ({ Component, contentId, ...props }) => {
         if (!features || !features.length) return null;
 
         return (
-          <Component contentId={contentId} features={features} {...props} />
+          <Component
+            contentId={contentId || nodeId}
+            features={features}
+            {...props}
+          />
         );
       }}
     </Query>
@@ -35,6 +44,7 @@ const ContentSingleFeaturesConnected = ({ Component, contentId, ...props }) => {
 ContentSingleFeaturesConnected.propTypes = {
   Component: PropTypes.node,
   contentId: PropTypes.string,
+  nodeId: PropTypes.string,
 };
 
 ContentSingleFeaturesConnected.defaultProps = {

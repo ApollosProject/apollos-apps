@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/ui-connected",
-  "version": "1.5.0-beta.0",
-  "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
+  "repository": "git://github.com/apollosproject/apollos-apps.git",
+  "version": "1.5.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -54,7 +54,8 @@
     "apollo-upload-client": "9.0.0",
     "graphql-tag": "2.9.2",
     "lodash": "^4.17.11",
-    "react-apollo": "2.5.5"
+    "react-apollo": "2.5.5",
+    "apollo-storybook-react-native": "0.2.12"
   },
   "devDependencies": {
     "@react-native-community/async-storage": "^1.5.1",
@@ -72,6 +73,7 @@
     "waait": "1.0.2"
   },
   "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
     "access": "public"
   },
   "license": "SEE LICENSE IN LICENSE.md"

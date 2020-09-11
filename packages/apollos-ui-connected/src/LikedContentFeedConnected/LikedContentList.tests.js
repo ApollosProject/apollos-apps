@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import wait from 'waait';
 
-import { Providers } from '../utils/testUtils';
+import { Providers } from '../testUtils';
 import GET_LIKED_CONTENT from './getLikedContent';
 
 import LikedContentFeedConnected from '.';

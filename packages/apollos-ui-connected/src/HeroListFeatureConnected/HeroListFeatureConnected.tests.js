@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Providers, renderWithApolloData } from '../utils/testUtils';
+import { Providers, renderWithApolloData } from '../testUtils';
 
 import GET_HERO_LIST_FEATURE from './getHeroListFeature';
 
@@ -79,10 +79,80 @@ const mock = {
   },
 };
 
+const noHeroCardMock = {
+  ...mock,
+  result: {
+    data: {
+      node: {
+        ...mock.result.data.node,
+        heroCard: null,
+      },
+    },
+  },
+};
+
+const noActionsMock = {
+  ...mock,
+  result: {
+    data: {
+      node: {
+        ...mock.result.data.node,
+        actions: [],
+      },
+    },
+  },
+};
+
+const noActionsOrHeroMock = {
+  ...mock,
+  result: {
+    data: {
+      node: {
+        ...mock.result.data.node,
+        heroCard: null,
+        actions: [],
+      },
+    },
+  },
+};
+
 describe('The HeroListFeatureConnected component', () => {
   it('should render', async () => {
     const tree = await renderWithApolloData(
       <Providers mocks={[mock]}>
+        <HeroListFeatureConnected
+          refetchRef={jest.fn()}
+          featureId={'HeroListFeature:123'}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render without a hero card', async () => {
+    const tree = await renderWithApolloData(
+      <Providers mocks={[noHeroCardMock]}>
+        <HeroListFeatureConnected
+          refetchRef={jest.fn()}
+          featureId={'HeroListFeature:123'}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render without actions', async () => {
+    const tree = await renderWithApolloData(
+      <Providers mocks={[noActionsMock]}>
+        <HeroListFeatureConnected
+          refetchRef={jest.fn()}
+          featureId={'HeroListFeature:123'}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should not render without actions or hero', async () => {
+    const tree = await renderWithApolloData(
+      <Providers mocks={[noActionsOrHeroMock]}>
         <HeroListFeatureConnected
           refetchRef={jest.fn()}
           featureId={'HeroListFeature:123'}

@@ -1,16 +1,13 @@
 coverage:
   status:
     project:
-      api:
+      data:
         paths:
-          - packages/apollos-church-api/*
           - packages/apollos-data-*/*
           - packages/apollos-config/*
           - packages/apollos-server-core/*
-      mobile:
+      ui:
         paths:
-          - packages/apolloschurchapp/*
-          - packages/ui-kit/*
           - packages/apollos-ui-*/*
 comment:
   layout: "reach, diff, files"

@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/config",
-  "version": "1.5.0-beta.0",
-  "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
+  "repository": "git://github.com/apollosproject/apollos-apps.git",
+  "version": "1.5.0",
   "main": "lib/index.js",
   "react-native": "react-native/index.js",
   "files": [
@@ -32,7 +32,7 @@
     ]
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^1.5.0-beta.0",
+    "@apollosproject/babel-preset-apollos": "^1.5.0",
     "react-native-config": "0.11.7"
   },
   "peerDependencies": {
@@ -43,6 +43,7 @@
   },
   "license": "SEE LICENSE IN LICENSE.md",
   "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
     "access": "public"
   },
   "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"

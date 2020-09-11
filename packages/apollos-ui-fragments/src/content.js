@@ -2,6 +2,20 @@ import gql from 'graphql-tag';
 
 const CONTENT_UP_NEXT_FRAGMENT = gql`
   fragment ContentUpNextFragment on ContentItem {
+    ... on ProgressNode {
+      upNext {
+        id
+      }
+    }
+    ... on ContentParentNode {
+      childContentItemsConnection {
+        edges {
+          node {
+            id
+          }
+        }
+      }
+    }
     ... on ContentSeriesContentItem {
       id
       upNext {
@@ -49,6 +63,18 @@ const CONTENT_ITEM_FRAGMENT = gql`
       }
     }
     audios {
+      sources {
+        uri
+      }
+    }
+  }
+`;
+
+const CONTENT_SINGLE_FRAGMENT = gql`
+  fragment ContentSingleFragment on ContentItem {
+    title
+    htmlContent
+    coverImage {
       sources {
         uri
       }
@@ -131,6 +157,7 @@ const CONTENT_MEDIA_FRAGMENT = gql`
 
 export {
   CONTENT_ITEM_FRAGMENT,
+  CONTENT_SINGLE_FRAGMENT,
   CONTENT_CARD_FRAGMENT,
   CONTENT_MEDIA_FRAGMENT,
   CONTENT_UP_NEXT_FRAGMENT,

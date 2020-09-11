@@ -1,6 +1,7 @@
 {
   "name": "@apollosproject/eslint-config",
-  "version": "1.5.0-beta.0",
+  "repository": "git://github.com/apollosproject/apollos-apps.git",
+  "version": "1.5.0",
   "main": "./index.js",
   "peerDependencies": {
     "babel-eslint": "10.1.0",
@@ -19,8 +20,9 @@
     "eslint-plugin-react-hooks": "^4.0.5",
     "eslint-plugin-react-native": "^3.8.1"
   },
-  "license": "SEE LICENSE IN LICENSE.md",
+  "license": "SEE LICENSE.md",
   "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
     "access": "public"
   },
   "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"

@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { View } from 'react-native';
-import { Providers, renderWithApolloData } from '../utils/testUtils';
+import { Providers, renderWithApolloData } from '../testUtils';
 
 import getContentUpNext from './getContentUpNext';
 
@@ -76,6 +76,31 @@ const upNextMock = {
   },
 };
 
+const upNextNoChildrenMock = {
+  request: {
+    query: getContentUpNext,
+    variables: { nodeId: '1' },
+  },
+  result: {
+    data: {
+      node: {
+        id: '1',
+        __typename: 'ContentSeriesContentItem',
+        upNext: { id: '2', __typename: 'UniversalContentItem' },
+        childContentItemsConnection: {
+          __typename: 'ContentItemsConnection',
+          edges: [
+            {
+              node: { id: '2', __typename: 'UniversalContentItem' },
+              __typename: 'ContentItemsConnectionEdge',
+            },
+          ],
+        },
+      },
+    },
+  },
+};
+
 const navigation = {
   push: jest.fn(),
 };
@@ -108,6 +133,14 @@ describe('the UpNextButtonConnected', () => {
   it('renders a continue state when in progress', async () => {
     const tree = await renderWithApolloData(
       <Providers mocks={[upNextMock]}>
+        <UpNextButtonConnected contentId={'1'} navigation={navigation} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('renders a continue state even with no children', async () => {
+    const tree = await renderWithApolloData(
+      <Providers mocks={[upNextNoChildrenMock]}>
         <UpNextButtonConnected contentId={'1'} navigation={navigation} />
       </Providers>
     );

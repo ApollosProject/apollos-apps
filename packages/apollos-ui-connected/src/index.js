@@ -7,6 +7,7 @@ export ContentCardConnected, {
   contentCardComponentMapper, // TODO: Update to `ContentCardComponentMapper` export below is for temporary backwards compatibility.
   GET_CONTENT_CARD,
 } from './ContentCardConnected';
+export ContentNodeConnected, { GET_CONTENT_NODE } from './ContentNodeConnected';
 export CampaignItemListFeature from './CampaignItemListFeature';
 export ContentHTMLViewConnected, {
   GET_CONTENT_ITEM_CONTENT,
@@ -14,10 +15,13 @@ export ContentHTMLViewConnected, {
 export ContentSingleFeaturesConnected, {
   ContentSingleFeatures,
   GET_CONTENT_ITEM_FEATURES,
-  ScriptureFeature,
-  TextFeature,
-  WebviewFeature,
 } from './ContentSingleFeaturesConnected';
+export ContentChildFeedConnected, {
+  GET_CONTENT_CHILD_SIBLINGS,
+} from './ContentChildFeedConnected';
+export ContentParentFeedConnected, {
+  GET_CONTENT_PARENT_CHILDREN,
+} from './ContentParentFeedConnected';
 export FeaturesFeedConnected, {
   featuresFeedComponentMapper,
   GET_FEED_FEATURES,
@@ -55,6 +59,10 @@ export MediaControlsConnected, {
   GET_CONTENT_MEDIA,
   MediaControls,
 } from './MediaControlsConnected';
+export NodeFeaturesConnected, {
+  NodeFeatures,
+  GET_NODE_FEATURES,
+} from './NodeFeaturesConnected';
 export RockAuthedWebBrowser from './RockAuthedWebBrowser';
 export RockAuthedWebView from './RockAuthedWebView';
 export SearchCardConnected from './SearchCardConnected';
@@ -70,3 +78,4 @@ export VerticalCardListFeatureConnected, {
   GET_VERTICAL_CARD_LIST_FEATURE,
 } from './VerticalCardListFeatureConnected';
 export safeHandleUrl from './safeOpenUrl';
+export { ScriptureFeature, TextFeature, WebviewFeature } from './features';
