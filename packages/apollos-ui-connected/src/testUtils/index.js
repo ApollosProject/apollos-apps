@@ -6,7 +6,6 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import wait from 'waait';
 import { Providers as UIProviders } from '@apollosproject/ui-kit';
-import { merge } from 'lodash';
 import { MockedProvider } from 'react-apollo/test-utils';
 import possibleTypesJson from './fragmentTypes.json';
 import typeDefs from './typeDefsMock';
