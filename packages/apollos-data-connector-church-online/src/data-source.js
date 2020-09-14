@@ -3,6 +3,36 @@ import { RESTDataSource } from 'apollo-datasource-rest';
 import ApollosConfig from '@apollosproject/config';
 import { get } from 'lodash';
 
+const CurrentLivestreamQuery = `
+query CurrentState {
+  currentService {
+    ...ServiceFields
+    __typename
+  }
+}
+fragment ServiceFields on Service {
+  id
+  startTime
+  scheduleTime
+  endTime
+  content {
+    id
+    hostInfo
+    notes
+    title
+    hasVideo
+    videoStarted
+    video {
+      type
+      url
+      source
+      __typename
+    }
+    videoStartTime
+    __typename
+  }
+}`;
+
 export default class LiveStream extends RESTDataSource {
   resource = 'LiveStream';
 
@@ -18,11 +48,40 @@ export default class LiveStream extends RESTDataSource {
     return ApollosConfig.CHURCH_ONLINE.WEB_VIEW_URL;
   }
 
+  async getAccessToken() {
+    const { Cache } = this.context.dataSources;
+    const cachedAccessToken = await Cache.get({
+      key: ['church-online', 'access-token'],
+    });
+    if (cachedAccessToken) return cachedAccessToken;
+    const authResponse = await this.post('auth/guest');
+    const accessToken = authResponse.access_token;
+    await Cache.set({
+      key: ['church-online', 'access-token'],
+      data: accessToken,
+    });
+    return accessToken;
+  }
+
   async getLiveStream() {
-    const stream = await this.get('events/current');
+    const accessToken = await this.getAccessToken();
+    const result = await this.post(
+      'graphql',
+      {
+        operationName: 'CurrentState',
+        query: CurrentLivestreamQuery,
+      },
+      {
+        headers: {
+          cookie: `access_token=${accessToken};`,
+        },
+      }
+    );
+    // TODO: The cookie above won't last forever.
+    const { data } = result;
     return {
-      isLive: get(stream, 'response.item.isLive', false),
-      eventStartTime: get(stream, 'response.item.eventStartTime'),
+      isLive: get(data, 'currentService.content.videoStarted', false),
+      eventStartTime: get(data, 'currentService.startTime'),
       media: () =>
         this.mediaUrls.length
           ? {
