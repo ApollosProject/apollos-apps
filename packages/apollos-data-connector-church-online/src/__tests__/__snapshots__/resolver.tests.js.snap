@@ -5,7 +5,7 @@ Object {
   "data": Object {
     "liveStreams": Array [
       Object {
-        "eventStartTime": "2018-08-06T17:00:00Z",
+        "eventStartTime": "177682530000",
         "isLive": true,
         "media": Object {
           "sources": Array [

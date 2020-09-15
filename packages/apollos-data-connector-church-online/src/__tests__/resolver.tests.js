@@ -60,6 +60,15 @@ describe('LiveStream', () => {
         ]),
       },
     };
+    context.dataSources.LiveStream.getAccessToken = () => 'ABC123';
+    context.dataSources.LiveStream.post = jest.fn(() => ({
+      data: {
+        currentService: {
+          content: { videoStarted: true },
+          startTime: new Date('August 19, 1975 23:15:30 GMT+11:00'),
+        },
+      },
+    }));
 
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
