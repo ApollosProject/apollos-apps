@@ -63,6 +63,7 @@ export NodeFeaturesConnected, {
   NodeFeatures,
   GET_NODE_FEATURES,
 } from './NodeFeaturesConnected';
+export NodeSingleConnected from './NodeSingleConnected';
 export RockAuthedWebBrowser from './RockAuthedWebBrowser';
 export RockAuthedWebView from './RockAuthedWebView';
 export SearchCardConnected from './SearchCardConnected';
