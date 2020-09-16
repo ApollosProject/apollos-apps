@@ -1,3 +1,33 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [1.6.0-beta.0](https://github.com/ApollosProject/apollos-apps/compare/v1.5.0...v1.6.0-beta.0) (2020-09-16)
+
+
+### Bug Fixes
+
+* Added missing node-single export ([#1567](https://github.com/ApollosProject/apollos-apps/issues/1567)) ([ccb4c71](https://github.com/ApollosProject/apollos-apps/commit/ccb4c71))
+* Fix cardImage should use baseBorderRadius ([#1547](https://github.com/ApollosProject/apollos-apps/issues/1547)) ([2379274](https://github.com/ApollosProject/apollos-apps/commit/2379274))
+* Removes expand Person from invalid cookie auth flow ([#1538](https://github.com/ApollosProject/apollos-apps/issues/1538)) ([d1b06d1](https://github.com/ApollosProject/apollos-apps/commit/d1b06d1))
+
+
+### Features
+
+* Adds FeaturesNodeConnected component.  ([#1543](https://github.com/ApollosProject/apollos-apps/issues/1543)) ([449dda0](https://github.com/ApollosProject/apollos-apps/commit/449dda0))
+* Connected Content Node ([#1545](https://github.com/ApollosProject/apollos-apps/issues/1545)) ([16662dc](https://github.com/ApollosProject/apollos-apps/commit/16662dc))
+* ConnectedParentFeed and ConnectedChildFeed ([#1548](https://github.com/ApollosProject/apollos-apps/issues/1548)) ([f4b4241](https://github.com/ApollosProject/apollos-apps/commit/f4b4241))
+* ContentCardConnected stories.  ([#1563](https://github.com/ApollosProject/apollos-apps/issues/1563)) ([4623eb9](https://github.com/ApollosProject/apollos-apps/commit/4623eb9))
+* Initial draft of included interfaces ([#1536](https://github.com/ApollosProject/apollos-apps/issues/1536)) ([0540155](https://github.com/ApollosProject/apollos-apps/commit/0540155))
+* NodeSingleConnected component.  ([#1552](https://github.com/ApollosProject/apollos-apps/issues/1552)) ([a8ee837](https://github.com/ApollosProject/apollos-apps/commit/a8ee837))
+* Up next button with node ([#1549](https://github.com/ApollosProject/apollos-apps/issues/1549)) ([8946bdb](https://github.com/ApollosProject/apollos-apps/commit/8946bdb))
+* Upgrades Church Online to GraphQL Endpoint ([#1564](https://github.com/ApollosProject/apollos-apps/issues/1564)) ([411cd8c](https://github.com/ApollosProject/apollos-apps/commit/411cd8c))
+
+
+
+
+
 v1.5.0: August 18, 2020
 
 - Adds Github Actions CI (#1529) (9ac7cb55)

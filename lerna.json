@@ -1,7 +1,13 @@
 {
-  "packages": ["packages/*"],
-  "version": "1.5.0",
+  "packages": [
+    "packages/*"
+  ],
+  "version": "1.6.0-beta.0",
   "npmClient": "yarn",
   "useWorkspaces": true,
-  "command": { "publish": { "registry": "https://npm.pkg.github.com" } }
+  "command": {
+    "publish": {
+      "registry": "https://npm.pkg.github.com"
+    }
+  }
 }
