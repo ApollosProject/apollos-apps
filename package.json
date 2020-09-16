@@ -6,7 +6,8 @@
       "packages/*"
     ],
     "nohoist": [
-      "**/react-native"
+      "**/react-native",
+      "**/react-native-svg"
     ]
   },
   "scripts": {
@@ -26,7 +27,8 @@
     "nuke:cache": "watchman watch-del-all",
     "postinstall": "lerna run build --parallel",
     "generate-docs": "lerna run generate-docs",
-    "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js"
+    "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
+    "storybook": "(cd ApollosStorybook && yarn && yarn ios)"
   },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"
