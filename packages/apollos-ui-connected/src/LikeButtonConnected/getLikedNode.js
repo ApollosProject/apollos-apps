@@ -1,9 +1,13 @@
 import gql from 'graphql-tag';
 
 export default gql`
-  query getLikedContentItem($itemId: ID!) {
-    node(id: $itemId) {
+  query getLikedNode($nodeId: ID!) {
+    node(id: $nodeId) {
       ... on ContentItem {
+        id
+        isLiked
+      }
+      ... on LikableNode {
         id
         isLiked
       }
