@@ -3665,11 +3665,6 @@ decode-uri-component@^0.2.0:
   resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
   integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
 
-dedent-js@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/dedent-js/-/dedent-js-1.0.1.tgz#bee5fb7c9e727d85dffa24590d10ec1ab1255305"
-  integrity sha1-vuX7fJ5yfYXf+iRZDRDsGrElUwU=
-
 deep-assign@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/deep-assign/-/deep-assign-3.0.0.tgz#c8e4c4d401cba25550a2f0f486a2e75bc5f219a2"
@@ -7075,13 +7070,6 @@ metro-symbolicate@^0.56.4:
     source-map "^0.5.6"
     through2 "^2.0.1"
     vlq "^1.0.0"
-
-metro-with-symlinks@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/metro-with-symlinks/-/metro-with-symlinks-1.4.0.tgz#bc6fb9079c2f49f1f554b8d351a62b3d84ebebe1"
-  integrity sha512-OgO7+On+GADaTlHVBPeZHEGaJeOK776DpLVT90Tq5b9LeGANPJPdVQTj73tY1Jce3c9g0HRz6Rvjpg95cVHDzw==
-  dependencies:
-    dedent-js "^1.0.1"
 
 metro@0.58.0, metro@^0.58.0:
   version "0.58.0"

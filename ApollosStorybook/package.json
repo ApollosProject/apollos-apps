@@ -106,7 +106,6 @@
     "jest": "^25.1.0",
     "jetifier": "^1.6.4",
     "metro-react-native-babel-preset": "^0.59.0",
-    "metro-with-symlinks": "^1.4.0",
     "prettier": "1.14.2",
     "react-native-storybook-loader": "1.8.0",
     "react-native-version": "2.6.2",
