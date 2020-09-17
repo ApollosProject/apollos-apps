@@ -32,7 +32,7 @@ For more advanced development, you will need to use our templates repo. This wil
 
 #### from `apollos-apps`
 
-Register the packages from this repo
+Register the packages with `linkemon`
 
 ```
 yarn link-packages
@@ -49,7 +49,7 @@ Add reference in the app `.env` file. This step is necessary for `wml` to locate
 APOLLOS_APPS_LOCATION=../../apollos-apps
 ```
 
-Link packages with `linkemon` from the templates repo
+Link packages with `linkemon`
 
 ```
 yarn link-packages
