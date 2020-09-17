@@ -41,7 +41,7 @@ yarn start
 
 #### from `apollos-templates`
 
-Clone down the [templates](https://github.com/apollosproject/templates) repo and run through the quickstart to add all necessary environement variables.
+Clone down the [templates](https://github.com/apollosproject/templates) repo and run through the quickstart to add all necessary environment variables.
 
 Add reference in the app `.env` file. This step is necessary for `wml` to locate packages.
 
