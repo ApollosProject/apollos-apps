@@ -1,125 +1,116 @@
-# [The Apollos Project](https://apollosapp.io) [![Build status](https://build.appcenter.ms/v0.1/apps/7371d424-46b8-4202-9e79-46eafa64081a/branches/master/badge)](https://appcenter.ms) [![Build status](https://build.appcenter.ms/v0.1/apps/042a93dd-9ade-4695-9b41-8307c9acf4b9/branches/master/badge)](https://appcenter.ms)
+# [The Apollos Project](https://apollosapp.io)
 
 ### [Visit the docs](https://apollosapp.io/docs/install)
 
-## Contributing
+## Develop
 
-Open Source development is a key piece in the mission of the Apollos Project. We promote and encourage individuals to help contribute to this project, but we want to make sure you contribute within certain guidelines to keep unity within the community and the codebase.
+Install tools necessary
 
-Below you will find the tools and rules we use when developing within the Apollos Project.
+- [XCode](https://developer.apple.com/xcode/)
+- [Yarn](https://yarnpkg.com/)
+- [Bundler](https://bundler.io)
 
-### ESLint
+Install Dependencies
 
-We use ESLint in collaboration with Prettier to keep code clean and free of potential errors. Our ESLint configuration is dependent on the [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) package.
-
-ESLint and all required packages are built-in so once you `yarn`, you'll have the linter enabled. However, Prettier will need to be downloaded using your preferred code editor.
-
-#### Install/Configure using Atom
-
-- Prettier is a package you can download by going to Preferences > Install > search "Prettier"
-- Download the package, "prettier-atom"
-- In the settings menu for the package, make sure `ESLint Integration` is checked.
-
-#### Install/Configure using VS Code
-
-- You actually don't need the Prettier extension on VS code, just the ESLint extension
-- Download the ESLint extension by clicking the `Extension` icon and searching for `ESLINT`
-- Open up your `USER_SETTINGS` by going to Preferences > Settings
-- Make sure your settings have the following:
-
-```json
-{
-  "editor.formatOnSave": true,
-  "[javascript]": {
-    "editor.formatOnSave": false
-  },
-  "eslint.autoFixOnSave": true,
-  "eslint.alwaysShowStatus": true,
-  "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-    ],
-}
+```
+yarn
 ```
 
-#### Install/Configure using Sublime
+### Simple
 
-- You will need to install the [sublime-prettier](https://github.com/danreeves/sublime-prettier) plugins
-- Make sure you go through the above links instructions to correctly install this plugin.
+For simple UI component development, you can use the Storybook app in the root directory by typing:
 
-## Creating a new release
-
-Creating a release within the Apollos Church application is pretty simple! After you have pulled down the master branch and made sure every PR has been merged, the process is short:
-
-#### Create the release
-
-Checkout to a release branch first
-```bash
-# For example, version 2.7.1
-git checkout -b release-v2.7.1
+```
+yarn storybook
 ```
 
-Then, run the release script
-```bash
+This will boot generate stories from the different packages and surface them in a React Native app on an iPhone Simulator
+
+### Advanced
+
+For more advanced development, you will need to use our templates repo. This will allow you to spin a local version of the API and app.
+
+#### from `apollos-apps`
+
+Register the packages with `linkemon`
+
+```
+yarn link-packages
+yarn start
+```
+
+#### from `apollos-templates`
+
+Clone down the [templates](https://github.com/apollosproject/templates) repo and run through the quickstart to add all necessary environment variables.
+
+Add reference in the app `.env` file. This step is necessary for `wml` to locate packages.
+
+```
+APOLLOS_APPS_LOCATION=../../apollos-apps
+```
+
+Link packages with `linkemon`
+
+```
+yarn link-packages
+```
+
+Run simply run `yarn start` to start up the server and app. If you need to unlink the local packages in the templates repo to test that NPM dependencies are working properly, run `yarn unlink-packages` from both the `apps` and `templates` repos.
+
+## Publish
+
+We publish to both the standard NPM registry and Github Packages. Follow these steps.
+
+### NPM.js Registry
+
+First add an .npmrc file to the root of this directory that looks like this:
+
+```
+//registry.npmjs.org/:_authToken=TOKEN
+```
+
+Replace `TOKEN` with an access token with publish rights from your NPM settings.
+
+**_Don't commit this file!_**
+
+You can do a release three different ways:
+
+#### Canary (1.0.1-alpha.0)
+
+```
+yarn release:canary
+```
+
+Will bump the version for any packages that have changed using an `alpha` prerelease ID. Can be installed via:
+
+```
+yarn add @apollosproject/package@canary
+```
+
+#### Beta (1.1.0-beta.0 or 2.0.0-beta.0)
+
+```
+yarn release:beta
+```
+
+Installed via:
+
+```
+yarn add @apollosproject/package@next
+```
+
+#### Stable
+
+```
 yarn release
 ```
 
-After creating a release, changelog files will be updated. Make sure to read over the changelog messages, and make any edits necessary. If you make any edits, you'll want to amend the commit created by `yarn release`:
+### GitHub Package Registry
 
-```bash
-git commit --amend
+Do the same as before, except change your .npmrc file to this:
+
+```
+//npm.pkg.github.com/:_authToken=TOKEN
 ```
 
-Lastly, push up the new tag:
-
-```bash
-git push --tags
-```
-
-...And that is it! Create your new PR and set it for review.
-
-## Inline Documentation
-
-We're using the [JSDoc](http://usejsdoc.org/index.html) standard for comments in our code. Generally speaking, we just want to make
-sure that anyone coming into the code can understand what is happening in any particular component or function.
-
-#### A Few Standards
-
-- Add a comment just above your class/component definition describing what the component does:
-
-```javascript
-/**
- * This is where the component description lives
- * A FeedView wrapped in a query to pull content data.
- */
-class ContentFeed extends PureComponent {
-```
-
-- Add a comment just ahead of any functions:
-
-```javascript
-/** Function that is called when a card in the feed is pressed.
- * Takes the user to the ContentSingle
- */
-handleOnPress = item =>
-  this.props.navigation.navigate("ContentSingle", {
-    itemId: item.id,
-    itemTitle: item.title,
-  })
-```
-
-- Add comments around your prop types:
-
-```javascript
-static propTypes = {
-  /** Functions passed down from React Navigation to use in navigating to/from
-   * items in the feed.
-   */
-  navigation: PropTypes.shape({
-    getParam: PropTypes.func,
-    navigate: PropTypes.func,
-  }),
-};
-```
-
-🍕🍕🍕🍕🍕🍕🍕🍕
+Get the `TOKEN` from creating a Personal Access Token in your Github settings and give it read/write access to packages.
