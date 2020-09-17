@@ -18,7 +18,7 @@ yarn
 
 ### Simple
 
-For simple UI component development, you can use the simple Storybook app in the root directory by typing:
+For simple UI component development, you can use the Storybook app in the root directory by typing:
 
 ```
 yarn storybook
