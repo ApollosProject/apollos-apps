@@ -724,6 +724,7 @@ export const followingsSchema = gql`
 
   extend type Mutation {
     updateLikeEntity(input: LikeEntityInput!): ContentItem
+      @deprecated(reason: "Use the more general updateLikeNode instead")
     updateLikeNode(input: LikeEntityInput!): Node
   }
 
