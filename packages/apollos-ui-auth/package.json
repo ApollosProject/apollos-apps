@@ -70,7 +70,6 @@
     "waait": "^1.0.4"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
     "access": "public"
   },
   "license": "SEE LICENSE IN LICENSE.md",
