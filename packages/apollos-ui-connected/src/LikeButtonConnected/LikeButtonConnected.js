@@ -15,7 +15,7 @@ const GetLikeData = ({ nodeId, children }) => (
   <Query query={GET_LIKED_NODE} variables={{ nodeId }}>
     {({ data: { node = {} } = {}, loading, error }) => {
       // We shouldn't render anything if the current node isn't likeable.
-      if (!loading && !node.id) return null;
+      if (!loading && (node && node.isLiked == null)) return null;
       const isLiked = loading ? false : get(node, 'isLiked') || false;
       // We pass down node as `item` for backwards compatibility.
       return children({ isLiked, item: node, node });
