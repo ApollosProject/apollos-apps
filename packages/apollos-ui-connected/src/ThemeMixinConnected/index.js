@@ -8,7 +8,7 @@ import GET_NODE_THEME from './getNodeTheme';
 
 const ThemeMixinConnected = ({ nodeId, ...props }) => (
   <Query query={GET_NODE_THEME} variables={{ nodeId }}>
-    {({ data, loading }) => (
+    {({ data }) => (
       <ThemeMixin
         mixin={{
           ...get(data, 'node.theme'),
