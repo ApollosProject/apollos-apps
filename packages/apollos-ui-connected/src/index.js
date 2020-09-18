@@ -49,7 +49,7 @@ export LikeButtonConnected, {
   LikeButton,
   getLikedNode,
   updateLikedContent,
-  updateLikeEntity,
+  updateLikeNode,
 } from './LikeButtonConnected';
 export LikedContentFeedConnected, {
   GET_LIKED_CONTENT,
