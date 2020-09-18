@@ -18,6 +18,7 @@ const GetLikeData = ({ nodeId, children }) => (
       if (!loading && (node && node.isLiked == null)) return null;
       const isLiked = loading ? false : get(node, 'isLiked') || false;
       // We pass down node as `item` for backwards compatibility.
+      // TODO: deprecate item prop
       return children({ isLiked, item: node, node });
     }}
   </Query>

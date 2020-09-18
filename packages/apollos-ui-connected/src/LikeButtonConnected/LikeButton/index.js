@@ -18,6 +18,7 @@ LikeIcon.propTypes = {
   isLiked: PropTypes.bool,
 };
 
+// TODO: deprecate itemId prop
 const LikeButton = withNavigation(({ isLiked, toggleLike, nodeId, itemId }) => (
   <ProtectedTouchable
     onPress={() =>
