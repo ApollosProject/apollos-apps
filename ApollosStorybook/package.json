@@ -7,7 +7,7 @@
     "ios": "react-native run-ios --simulator=\"iPhone 11\"",
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "prestart": "yarn generate-stories",
-    "postinstall": "jetify && yarn pods && (cd .. && yarn lerna run generate-stories)",
+    "postinstall": "jetify && yarn pods",
     "pods": "(cd ios && bundle install && bundle exec pod install --repo-update)",
     "start": "react-native start",
     "test": "jest",
