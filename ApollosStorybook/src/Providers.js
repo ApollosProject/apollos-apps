@@ -6,18 +6,17 @@ import { LiveProvider } from '@apollosproject/ui-connected';
 import ClientProvider, { client } from './client';
 import customTheme, { customIcons } from './theme';
 
-console.log(ClientProvider);
 const AppProviders = (props) => (
   <ClientProvider>
-  <MediaPlayerProvider>
-      <LiveProvider>
-        <Providers
-          themeInput={customTheme}
-          iconInput={customIcons}
-          {...props}
-        />
-      </LiveProvider>
-  </MediaPlayerProvider>
+    <MediaPlayerProvider>
+        <LiveProvider>
+          <Providers
+            themeInput={customTheme}
+            iconInput={customIcons}
+            {...props}
+          />
+        </LiveProvider>
+    </MediaPlayerProvider>
   </ClientProvider>
 );
 

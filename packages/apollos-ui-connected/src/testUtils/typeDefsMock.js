@@ -6,10 +6,16 @@ export default gql`
     scope: CacheControlScope
   ) on FIELD_DEFINITION | OBJECT | INTERFACE
 
+  directive @client on FIELD
+
   enum ACTION_FEATURE_ACTION {
     READ_CONTENT
     READ_EVENT
     OPEN_URL
+  }
+
+  extend type Query {
+    isLoggedIn: Boolean
   }
 
   type ActionListAction {
@@ -435,6 +441,7 @@ export default gql`
   type Mutation {
     _placeholder: Boolean
     updateLikeEntity(input: LikeEntityInput!): ContentItem
+    updateLikeNode(input: LikeEntityInput!): Node
     updateProfileField(input: UpdateProfileInput!): Person
     updateProfileFields(input: [UpdateProfileInput]!): Person
     uploadProfileImage(file: Upload!, size: Int!): Person

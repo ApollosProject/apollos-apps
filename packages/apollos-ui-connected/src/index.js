@@ -47,9 +47,9 @@ export {
 export InteractWhenLoadedConnected from './InteractWhenLoadedConnected';
 export LikeButtonConnected, {
   LikeButton,
-  getLikedContentItem,
+  getLikedNode,
   updateLikedContent,
-  updateLikeEntity,
+  updateLikeNode,
 } from './LikeButtonConnected';
 export LikedContentFeedConnected, {
   GET_LIKED_CONTENT,
