@@ -9,12 +9,21 @@ import { share } from '../utils';
 import ShareButton from './ShareButton';
 import GET_SHARE_CONTENT from './getShareContent';
 
-const ShareButtonConnected = ({ itemId, message, onPress, title, url }) => (
+const ShareButtonConnected = ({
+  nodeId,
+  itemId,
+  message,
+  onPress,
+  title,
+  url,
+}) => (
   <AnalyticsConsumer>
     {({ track }) => (
-      <Query query={GET_SHARE_CONTENT} variables={{ itemId }}>
-        {({ data }) => {
-          const sharing = get(data, 'node.sharing', {});
+      <Query query={GET_SHARE_CONTENT} variables={{ nodeId: nodeId || itemId }}>
+        {({ data, loading }) => {
+          const sharing = get(data, 'node.sharing', null);
+          if (loading && !sharing) return null;
+
           const content = {
             id: itemId,
             title: title || sharing.title,
@@ -42,7 +51,8 @@ const ShareButtonConnected = ({ itemId, message, onPress, title, url }) => (
 );
 
 ShareButtonConnected.propTypes = {
-  itemId: PropTypes.string.isRequired,
+  itemId: PropTypes.string,
+  nodeId: PropTypes.string,
   // These props are available to override the default sharing data for a node.
   title: PropTypes.string,
   message: PropTypes.string,
