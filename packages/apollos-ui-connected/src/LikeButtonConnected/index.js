@@ -1,8 +1,8 @@
 import LikeButtonConnected from './LikeButtonConnected';
 
 export LikeButton from './LikeButton';
-export getLikedContentItem from './getLikedContentItem';
+export getLikedNode from './getLikedNode';
 export updateLikedContent from './updateLikedContent';
-export updateLikeEntity from './updateLikeEntity';
+export updateLikeNode from './updateLikeNode';
 
 export default LikeButtonConnected;
