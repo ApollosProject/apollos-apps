@@ -21,8 +21,6 @@ const ThemeMixinConnected = ({ nodeId, ...props }) => (
 
 ThemeMixinConnected.propTypes = {
   nodeId: PropTypes.string,
-  children: PropTypes.oneOf([PropTypes.func, PropTypes.node]),
-  defaultMixin: PropTypes.shape({}),
 };
 
 export { ThemeMixinConnected as default, GET_NODE_THEME };

@@ -48,10 +48,7 @@ storiesOf('ui-connected/ThemeMixinConnected', module)
   ))
   .addDecorator(ApolloStorybookDecorator({ mocks }))
   .add('example', () => (
-    <ThemeMixinConnected
-      // mixin={{ colors: { primary: 'rgb(0, 255, 0) ' } }}
-      nodeId={'UniversalContentItem:123'}
-    >
+    <ThemeMixinConnected nodeId={'UniversalContentItem:123'}>
       <Button type="primary" title="I am a bright green button!" />
     </ThemeMixinConnected>
   ));
