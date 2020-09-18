@@ -29,7 +29,6 @@
     "react-native": "0.59.10"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
     "access": "public"
   },
   "rnpm": {
