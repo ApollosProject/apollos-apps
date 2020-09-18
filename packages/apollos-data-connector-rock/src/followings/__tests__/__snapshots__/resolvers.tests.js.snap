@@ -17,6 +17,17 @@ Object {
 }
 `;
 
+exports[`Following likes a node 1`] = `
+Object {
+  "data": Object {
+    "updateLikeEntity": Object {
+      "id": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+      "isLiked": true,
+    },
+  },
+}
+`;
+
 exports[`Following likes an entity 1`] = `
 Object {
   "data": Object {

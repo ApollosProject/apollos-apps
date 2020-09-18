@@ -150,6 +150,26 @@ describe('Following', () => {
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
   });
+  it('likes a node', async () => {
+    const query = `
+      mutation likeEntity {
+        updateLikeEntity(
+          input: {
+            nodeId: "${createGlobalId(1, 'UniversalContentItem')}"
+            operation: Like
+          }
+        ) {
+          id
+          ... on LikableNode {
+            isLiked
+          }
+        }
+      }
+    `;
+    const rootValue = {};
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+  });
   it('unlikes an entity', async () => {
     const query = `
       mutation likeEntity {

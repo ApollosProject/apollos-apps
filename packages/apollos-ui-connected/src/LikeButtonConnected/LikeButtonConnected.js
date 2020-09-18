@@ -7,15 +7,15 @@ import { Query, Mutation } from 'react-apollo';
 import { AnalyticsConsumer } from '@apollosproject/ui-analytics';
 
 import LikeButton from './LikeButton';
-import UPDATE_LIKE_ENTITY from './updateLikeEntity';
+import UPDATE_LIKE_NODE from './updateLikeNode';
 import GET_LIKED_NODE from './getLikedNode';
 import updateLikedContent from './updateLikedContent';
 
 const GetLikeData = ({ nodeId, children }) => (
   <Query query={GET_LIKED_NODE} variables={{ nodeId }}>
-    {({ data: { node = {} } = {}, loading }) => {
+    {({ data: { node = {} } = {}, loading, error }) => {
       // We shouldn't render anything if the current node isn't likeable.
-      if (!loading && !!node.id) return null;
+      if (!loading && (node && node.isLiked == null)) return null;
       const isLiked = loading ? false : get(node, 'isLiked') || false;
       // We pass down node as `item` for backwards compatibility.
       return children({ isLiked, item: node, node });
@@ -37,9 +37,9 @@ const UpdateLikeStatus = ({
   <AnalyticsConsumer>
     {({ track }) => (
       <Mutation
-        mutation={UPDATE_LIKE_ENTITY}
+        mutation={UPDATE_LIKE_NODE}
         optimisticResponse={{
-          updateLikeEntity: {
+          updateLikeNode: {
             id: nodeId, // unknown at this time
             isLiked: !isLiked,
             likedCount: 0, // field required but exact value is not needed
@@ -50,7 +50,7 @@ const UpdateLikeStatus = ({
           cache,
           {
             data: {
-              updateLikeEntity: { isLiked: liked },
+              updateLikeNode: { isLiked: liked },
             },
           }
         ) => {
@@ -103,7 +103,7 @@ UpdateLikeStatus.propTypes = {
   }),
 };
 
-const LikeButtonConnected = ({ Component, itemId, nodeId }) => (
+const LikeButtonConnected = ({ Component, itemId, nodeId, ...props }) => (
   <GetLikeData nodeId={nodeId || itemId}>
     {({ isLiked, node }) => (
       <UpdateLikeStatus nodeId={nodeId || itemId} node={node} isLiked={isLiked}>
@@ -113,6 +113,7 @@ const LikeButtonConnected = ({ Component, itemId, nodeId }) => (
             nodeId={nodeId}
             isLiked={newLikeValue}
             toggleLike={toggleLike}
+            {...props}
           />
         )}
       </UpdateLikeStatus>
