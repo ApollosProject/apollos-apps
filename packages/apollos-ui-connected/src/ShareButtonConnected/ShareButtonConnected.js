@@ -9,6 +9,7 @@ import { share } from '../utils';
 import ShareButton from './ShareButton';
 import GET_SHARE_CONTENT from './getShareContent';
 
+// TODO: deprecate itemId prop
 const ShareButtonConnected = ({
   nodeId,
   itemId,
