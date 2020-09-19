@@ -39,7 +39,8 @@ const withThemeMixin = (themeInput) =>
     withPropsOnChange(
       (props, nextProps) =>
         props.theme !== nextProps.theme ||
-        props.themeInput !== nextProps.themeInput,
+        props.themeInput !== nextProps.themeInput ||
+        props.ownProps.mixin !== nextProps.ownProps.mixin,
       ({ theme, themeInput: originalThemeInput, ownProps }) => {
         // Start with the original theme input
         let themeInputAsObject = themeInput;
