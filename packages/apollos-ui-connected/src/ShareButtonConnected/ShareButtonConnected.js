@@ -21,8 +21,9 @@ const ShareButtonConnected = ({
     {({ track }) => (
       <Query query={GET_SHARE_CONTENT} variables={{ nodeId: nodeId || itemId }}>
         {({ data, loading }) => {
-          const sharing = get(data, 'node.sharing', null);
-          if (loading && !sharing) return null;
+          const sharing = get(data, 'node.sharing', {});
+          if (!loading && !sharing.title && !sharing.message && !sharing.url)
+            return null;
 
           const content = {
             id: itemId,
