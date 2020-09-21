@@ -1293,15 +1293,7 @@ Array [
           }
           style={
             Object {
-              "backgroundColor": Object {
-                "color": Array [
-                  248,
-                  247,
-                  244,
-                ],
-                "model": "rgb",
-                "valpha": 0.09999999999999998,
-              },
+              "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
               "borderRadius": 2,
               "height": 2,
               "marginHorizontal": 1,
@@ -1330,15 +1322,7 @@ Array [
           }
           style={
             Object {
-              "backgroundColor": Object {
-                "color": Array [
-                  248,
-                  247,
-                  244,
-                ],
-                "model": "rgb",
-                "valpha": 0.09999999999999998,
-              },
+              "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
               "borderRadius": 2,
               "height": 2,
               "marginHorizontal": 1,
@@ -1367,15 +1351,7 @@ Array [
           }
           style={
             Object {
-              "backgroundColor": Object {
-                "color": Array [
-                  248,
-                  247,
-                  244,
-                ],
-                "model": "rgb",
-                "valpha": 0.09999999999999998,
-              },
+              "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
               "borderRadius": 2,
               "height": 2,
               "marginHorizontal": 1,
@@ -1404,15 +1380,7 @@ Array [
           }
           style={
             Object {
-              "backgroundColor": Object {
-                "color": Array [
-                  248,
-                  247,
-                  244,
-                ],
-                "model": "rgb",
-                "valpha": 0.09999999999999998,
-              },
+              "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
               "borderRadius": 2,
               "height": 2,
               "marginHorizontal": 1,
