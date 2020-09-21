@@ -80,3 +80,4 @@ export VerticalCardListFeatureConnected, {
 } from './VerticalCardListFeatureConnected';
 export safeHandleUrl from './safeOpenUrl';
 export { ScriptureFeature, TextFeature, WebviewFeature } from './features';
+export ThemeMixinConnected, { GET_NODE_THEME } from './ThemeMixinConnected';
