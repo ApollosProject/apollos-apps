@@ -19,7 +19,7 @@
     "lint": "lerna run lint",
     "test": "TZ=utc lerna run test",
     "ci-test": "lerna run test  --stream -- --maxWorkers=2",
-    "release": "lerna publish --conventional-graduate",
+    "release": "lerna publish --conventional-graduate --no-git-tag-version --no-push",
     "release:beta": "lerna publish --conventional-prerelease --dist-tag beta --no-git-tag-version --no-push",
     "release:canary": "lerna publish --conventional-commits --canary --yes",
     "prepublishOnly": "lerna run build && lerna run generate-stories",
