@@ -22,7 +22,7 @@ exports[`Node Node class should return just the id if we are only asking for id 
 Object {
   "__type": "Test",
   "__typename": "Test",
-  "id": "123",
+  "id": "Test:2cc8f539e345e8f479a55e2fdc9743c0",
 }
 `;
 
