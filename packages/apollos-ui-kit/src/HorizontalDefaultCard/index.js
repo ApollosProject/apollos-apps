@@ -43,8 +43,6 @@ const Image = withTheme(
     maxAspectRatio: hasTitleAndSummary ? 2 : 1.5, // adjusts `Image` height to fill available `Card` whitespace if there is no `Title` or `Summary`
     forceRatio: hasTitleAndSummary ? 2 : 1.5, // forces the placeholder to use the same ratio as above.
     maintainAspectRatio: true,
-    overlayColor: theme.colors.black,
-    overlayType: 'gradient-top',
   }),
   'ui-kit.HorizontalDefaultCard.Image'
 )(CardImage);

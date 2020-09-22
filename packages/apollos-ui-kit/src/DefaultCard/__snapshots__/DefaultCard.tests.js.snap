@@ -57,43 +57,6 @@ exports[`DefaultCard should render a loading state with isLoading 1`] = `
           }
         }
       />
-      <BVLinearGradient
-        colors={
-          Array [
-            2147483648,
-            0,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            1,
-          ]
-        }
-        overlayColor="#000000"
-        overlayType="gradient-top"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      />
     </View>
     <View
       style={
@@ -105,6 +68,7 @@ exports[`DefaultCard should render a loading state with isLoading 1`] = `
         }
       }
     >
+       
       <View
         style={
           Object {
@@ -126,7 +90,9 @@ exports[`DefaultCard should render a loading state with isLoading 1`] = `
             }
           }
         />
+         
       </View>
+       
       <View
         style={
           Object {
@@ -139,6 +105,7 @@ exports[`DefaultCard should render a loading state with isLoading 1`] = `
           }
         }
       />
+       
       <View
         style={
           Object {
@@ -152,7 +119,10 @@ exports[`DefaultCard should render a loading state with isLoading 1`] = `
           }
         }
       />
+       
     </View>
+     
+     
   </View>
 </View>
 `;
@@ -212,43 +182,6 @@ exports[`DefaultCard should render at the images natural aspect ratio (between m
           }
         }
       />
-      <BVLinearGradient
-        colors={
-          Array [
-            2147483648,
-            0,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            1,
-          ]
-        }
-        overlayColor="#000000"
-        overlayType="gradient-top"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      />
     </View>
     <View
       style={
@@ -260,6 +193,8 @@ exports[`DefaultCard should render at the images natural aspect ratio (between m
         }
       }
     >
+       
+       
       <Text
         numberOfLines={2}
         style={
@@ -271,9 +206,15 @@ exports[`DefaultCard should render at the images natural aspect ratio (between m
           }
         }
       >
+         
         Are you telling me that you built a time machine out of a DeLorean?
+         
       </Text>
+       
+       
     </View>
+     
+     
   </View>
 </View>
 `;
@@ -333,43 +274,6 @@ exports[`DefaultCard should render at the maxAspectRatio bound (wider than tall)
           }
         }
       />
-      <BVLinearGradient
-        colors={
-          Array [
-            2147483648,
-            0,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            1,
-          ]
-        }
-        overlayColor="#000000"
-        overlayType="gradient-top"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      />
     </View>
     <View
       style={
@@ -381,6 +285,8 @@ exports[`DefaultCard should render at the maxAspectRatio bound (wider than tall)
         }
       }
     >
+       
+       
       <Text
         numberOfLines={2}
         style={
@@ -392,9 +298,15 @@ exports[`DefaultCard should render at the maxAspectRatio bound (wider than tall)
           }
         }
       >
+         
         Are you telling me that you built a time machine out of a DeLorean?
+         
       </Text>
+       
+       
     </View>
+     
+     
   </View>
 </View>
 `;
@@ -454,43 +366,6 @@ exports[`DefaultCard should render at the minAspectRatio bound (tall-ish) 1`] = 
           }
         }
       />
-      <BVLinearGradient
-        colors={
-          Array [
-            2147483648,
-            0,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            1,
-          ]
-        }
-        overlayColor="#000000"
-        overlayType="gradient-top"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      />
     </View>
     <View
       style={
@@ -502,6 +377,8 @@ exports[`DefaultCard should render at the minAspectRatio bound (tall-ish) 1`] = 
         }
       }
     >
+       
+       
       <Text
         numberOfLines={2}
         style={
@@ -513,9 +390,15 @@ exports[`DefaultCard should render at the minAspectRatio bound (tall-ish) 1`] = 
           }
         }
       >
+         
         Are you telling me that you built a time machine out of a DeLorean?
+         
       </Text>
+       
+       
     </View>
+     
+     
   </View>
 </View>
 `;
@@ -575,43 +458,6 @@ exports[`DefaultCard should render with a summary 1`] = `
           }
         }
       />
-      <BVLinearGradient
-        colors={
-          Array [
-            2147483648,
-            0,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            1,
-          ]
-        }
-        overlayColor="#000000"
-        overlayType="gradient-top"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      />
     </View>
     <View
       style={
@@ -623,6 +469,8 @@ exports[`DefaultCard should render with a summary 1`] = `
         }
       }
     >
+       
+       
       <Text
         numberOfLines={2}
         style={
@@ -634,8 +482,11 @@ exports[`DefaultCard should render with a summary 1`] = `
           }
         }
       >
+         
         Are you telling me that you built a time machine out of a DeLorean?
+         
       </Text>
+       
       <Text
         bold={false}
         italic={false}
@@ -650,9 +501,14 @@ exports[`DefaultCard should render with a summary 1`] = `
           }
         }
       >
+         
         The way I see it, if you’re going to build a time machine into a car, why not do it with some style?
+         
       </Text>
+       
     </View>
+     
+     
   </View>
 </View>
 `;
@@ -712,43 +568,6 @@ exports[`DefaultCard should render with custom LabelComponent 1`] = `
           }
         }
       />
-      <BVLinearGradient
-        colors={
-          Array [
-            2147483648,
-            0,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            1,
-          ]
-        }
-        overlayColor="#000000"
-        overlayType="gradient-top"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      />
     </View>
     <View
       style={
@@ -760,6 +579,7 @@ exports[`DefaultCard should render with custom LabelComponent 1`] = `
         }
       }
     >
+       
       <View
         style={
           Object {
@@ -768,6 +588,7 @@ exports[`DefaultCard should render with custom LabelComponent 1`] = `
           }
         }
       >
+         
         <View
           bordered={false}
           disabled={false}
@@ -805,7 +626,9 @@ exports[`DefaultCard should render with custom LabelComponent 1`] = `
             Custom LabelComponent
           </Text>
         </View>
+         
       </View>
+       
       <Text
         numberOfLines={2}
         style={
@@ -817,9 +640,15 @@ exports[`DefaultCard should render with custom LabelComponent 1`] = `
           }
         }
       >
+         
         Are you telling me that you built a time machine out of a DeLorean?
+         
       </Text>
+       
+       
     </View>
+     
+     
   </View>
 </View>
 `;
@@ -879,43 +708,6 @@ exports[`DefaultCard should render with custom labelText 1`] = `
           }
         }
       />
-      <BVLinearGradient
-        colors={
-          Array [
-            2147483648,
-            0,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            1,
-          ]
-        }
-        overlayColor="#000000"
-        overlayType="gradient-top"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      />
     </View>
     <View
       style={
@@ -927,6 +719,7 @@ exports[`DefaultCard should render with custom labelText 1`] = `
         }
       }
     >
+       
       <View
         style={
           Object {
@@ -972,7 +765,9 @@ exports[`DefaultCard should render with custom labelText 1`] = `
             Custom label text
           </Text>
         </View>
+         
       </View>
+       
       <Text
         numberOfLines={2}
         style={
@@ -984,9 +779,15 @@ exports[`DefaultCard should render with custom labelText 1`] = `
           }
         }
       >
+         
         Are you telling me that you built a time machine out of a DeLorean?
+         
       </Text>
+       
+       
     </View>
+     
+     
   </View>
 </View>
 `;
@@ -1046,43 +847,6 @@ exports[`DefaultCard should render with isLive support 1`] = `
           }
         }
       />
-      <BVLinearGradient
-        colors={
-          Array [
-            2147483648,
-            0,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            1,
-          ]
-        }
-        overlayColor="#000000"
-        overlayType="gradient-top"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      />
     </View>
     <View
       style={
@@ -1094,6 +858,7 @@ exports[`DefaultCard should render with isLive support 1`] = `
         }
       }
     >
+       
       <View
         style={
           Object {
@@ -1258,7 +1023,9 @@ exports[`DefaultCard should render with isLive support 1`] = `
             Live
           </Text>
         </View>
+         
       </View>
+       
       <Text
         numberOfLines={2}
         style={
@@ -1270,9 +1037,15 @@ exports[`DefaultCard should render with isLive support 1`] = `
           }
         }
       >
+         
         Are you telling me that you built a time machine out of a DeLorean?
+         
       </Text>
+       
+       
     </View>
+     
+     
   </View>
 </View>
 `;
@@ -1332,43 +1105,6 @@ exports[`DefaultCard should should render a like icon 1`] = `
           }
         }
       />
-      <BVLinearGradient
-        colors={
-          Array [
-            2147483648,
-            0,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            1,
-          ]
-        }
-        overlayColor="#000000"
-        overlayType="gradient-top"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      />
     </View>
     <View
       style={
@@ -1380,6 +1116,8 @@ exports[`DefaultCard should should render a like icon 1`] = `
         }
       }
     >
+       
+       
       <Text
         numberOfLines={2}
         style={
@@ -1391,9 +1129,14 @@ exports[`DefaultCard should should render a like icon 1`] = `
           }
         }
       >
+         
         Are you telling me that you built a time machine out of a DeLorean?
+         
       </Text>
+       
+       
     </View>
+     
     <View
       style={
         Object {
@@ -1519,7 +1262,9 @@ exports[`DefaultCard should should render a like icon 1`] = `
           />
         </RNSVGGroup>
       </RNSVGSvgView>
+       
     </View>
+     
   </View>
 </View>
 `;
@@ -1579,43 +1324,6 @@ exports[`DefaultCard should should render as isLiked 1`] = `
           }
         }
       />
-      <BVLinearGradient
-        colors={
-          Array [
-            2147483648,
-            0,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            1,
-          ]
-        }
-        overlayColor="#000000"
-        overlayType="gradient-top"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      />
     </View>
     <View
       style={
@@ -1627,6 +1335,8 @@ exports[`DefaultCard should should render as isLiked 1`] = `
         }
       }
     >
+       
+       
       <Text
         numberOfLines={2}
         style={
@@ -1638,9 +1348,14 @@ exports[`DefaultCard should should render as isLiked 1`] = `
           }
         }
       >
+         
         Are you telling me that you built a time machine out of a DeLorean?
+         
       </Text>
+       
+       
     </View>
+     
     <View
       style={
         Object {
@@ -1766,7 +1481,9 @@ exports[`DefaultCard should should render as isLiked 1`] = `
           />
         </RNSVGGroup>
       </RNSVGSvgView>
+       
     </View>
+     
   </View>
 </View>
 `;
