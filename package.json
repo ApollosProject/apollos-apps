@@ -59,7 +59,7 @@
     "eslint-plugin-react": "^7.10.0",
     "eslint-plugin-react-hooks": "^4.0.2",
     "eslint-plugin-react-native": "^3.2.1",
-    "@apollosproject/eslint-config": "^1.3.0",
+    "@apollosproject/eslint-config": "^1.6.0-beta.0",
     "lerna": "^3.14.0",
     "prettier": "^1.14.2",
     "react-apollo": "2.5.5",
