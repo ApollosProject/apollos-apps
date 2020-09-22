@@ -29,14 +29,14 @@ class Passes extends Component {
               error ? (
                 <ErrorCard error={error} />
               ) : (
-                <React.Fragment>
+                <>
                   <PassView isLoading={loading} {...data.userPass || {}} />
                   {Platform.OS === 'ios' ? (
                     <AddToAppleWalletButton
                       url={(data.userPass || {}).passkitFileUrl}
                     />
                   ) : null}
-                </React.Fragment>
+                </>
               )
             }
           </Query>

@@ -26,6 +26,7 @@ const createStyleSheet = (stylesToGenerate) => {
 
     // Process the generated stylesheet
     Object.keys(generatedStyleSheet).forEach((key) => {
+      /* eslint-disable-next-line */
       const index = parseInt(key, 0);
       const generatedStyle = generatedStyleSheet[key];
       const hash = styleHasher(styles[index]);
