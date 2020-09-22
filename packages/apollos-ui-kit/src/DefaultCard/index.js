@@ -35,7 +35,6 @@ const Image = withTheme(
     maxAspectRatio: 1.78,
     maintainAspectRatio: true,
     overlayColor: theme.colors.black,
-    overlayType: 'gradient-top',
   }),
   'ui-kit.DefaultCard.Image'
 )(CardImage);
