@@ -60,8 +60,8 @@ exports[`DefaultCard should render a loading state with isLoading 1`] = `
       <BVLinearGradient
         colors={
           Array [
+            2147483648,
             0,
-            4278190080,
           ]
         }
         endPoint={
@@ -72,12 +72,12 @@ exports[`DefaultCard should render a loading state with isLoading 1`] = `
         }
         locations={
           Array [
-            0.5,
+            0,
             1,
           ]
         }
         overlayColor="#000000"
-        overlayType="default"
+        overlayType="gradient-top"
         startPoint={
           Object {
             "x": 0,
@@ -215,8 +215,8 @@ exports[`DefaultCard should render at the images natural aspect ratio (between m
       <BVLinearGradient
         colors={
           Array [
+            2147483648,
             0,
-            4278190080,
           ]
         }
         endPoint={
@@ -227,12 +227,12 @@ exports[`DefaultCard should render at the images natural aspect ratio (between m
         }
         locations={
           Array [
-            0.5,
+            0,
             1,
           ]
         }
         overlayColor="#000000"
-        overlayType="default"
+        overlayType="gradient-top"
         startPoint={
           Object {
             "x": 0,
@@ -336,8 +336,8 @@ exports[`DefaultCard should render at the maxAspectRatio bound (wider than tall)
       <BVLinearGradient
         colors={
           Array [
+            2147483648,
             0,
-            4278190080,
           ]
         }
         endPoint={
@@ -348,12 +348,12 @@ exports[`DefaultCard should render at the maxAspectRatio bound (wider than tall)
         }
         locations={
           Array [
-            0.5,
+            0,
             1,
           ]
         }
         overlayColor="#000000"
-        overlayType="default"
+        overlayType="gradient-top"
         startPoint={
           Object {
             "x": 0,
@@ -457,8 +457,8 @@ exports[`DefaultCard should render at the minAspectRatio bound (tall-ish) 1`] = 
       <BVLinearGradient
         colors={
           Array [
+            2147483648,
             0,
-            4278190080,
           ]
         }
         endPoint={
@@ -469,12 +469,12 @@ exports[`DefaultCard should render at the minAspectRatio bound (tall-ish) 1`] = 
         }
         locations={
           Array [
-            0.5,
+            0,
             1,
           ]
         }
         overlayColor="#000000"
-        overlayType="default"
+        overlayType="gradient-top"
         startPoint={
           Object {
             "x": 0,
@@ -578,8 +578,8 @@ exports[`DefaultCard should render with a summary 1`] = `
       <BVLinearGradient
         colors={
           Array [
+            2147483648,
             0,
-            4278190080,
           ]
         }
         endPoint={
@@ -590,12 +590,12 @@ exports[`DefaultCard should render with a summary 1`] = `
         }
         locations={
           Array [
-            0.5,
+            0,
             1,
           ]
         }
         overlayColor="#000000"
-        overlayType="default"
+        overlayType="gradient-top"
         startPoint={
           Object {
             "x": 0,
@@ -715,8 +715,8 @@ exports[`DefaultCard should render with custom LabelComponent 1`] = `
       <BVLinearGradient
         colors={
           Array [
+            2147483648,
             0,
-            4278190080,
           ]
         }
         endPoint={
@@ -727,12 +727,12 @@ exports[`DefaultCard should render with custom LabelComponent 1`] = `
         }
         locations={
           Array [
-            0.5,
+            0,
             1,
           ]
         }
         overlayColor="#000000"
-        overlayType="default"
+        overlayType="gradient-top"
         startPoint={
           Object {
             "x": 0,
@@ -882,8 +882,8 @@ exports[`DefaultCard should render with custom labelText 1`] = `
       <BVLinearGradient
         colors={
           Array [
+            2147483648,
             0,
-            4278190080,
           ]
         }
         endPoint={
@@ -894,12 +894,12 @@ exports[`DefaultCard should render with custom labelText 1`] = `
         }
         locations={
           Array [
-            0.5,
+            0,
             1,
           ]
         }
         overlayColor="#000000"
-        overlayType="default"
+        overlayType="gradient-top"
         startPoint={
           Object {
             "x": 0,
@@ -1049,8 +1049,8 @@ exports[`DefaultCard should render with isLive support 1`] = `
       <BVLinearGradient
         colors={
           Array [
+            2147483648,
             0,
-            4278190080,
           ]
         }
         endPoint={
@@ -1061,12 +1061,12 @@ exports[`DefaultCard should render with isLive support 1`] = `
         }
         locations={
           Array [
-            0.5,
+            0,
             1,
           ]
         }
         overlayColor="#000000"
-        overlayType="default"
+        overlayType="gradient-top"
         startPoint={
           Object {
             "x": 0,
@@ -1335,8 +1335,8 @@ exports[`DefaultCard should should render a like icon 1`] = `
       <BVLinearGradient
         colors={
           Array [
+            2147483648,
             0,
-            4278190080,
           ]
         }
         endPoint={
@@ -1347,12 +1347,12 @@ exports[`DefaultCard should should render a like icon 1`] = `
         }
         locations={
           Array [
-            0.5,
+            0,
             1,
           ]
         }
         overlayColor="#000000"
-        overlayType="default"
+        overlayType="gradient-top"
         startPoint={
           Object {
             "x": 0,
@@ -1582,8 +1582,8 @@ exports[`DefaultCard should should render as isLiked 1`] = `
       <BVLinearGradient
         colors={
           Array [
+            2147483648,
             0,
-            4278190080,
           ]
         }
         endPoint={
@@ -1594,12 +1594,12 @@ exports[`DefaultCard should should render as isLiked 1`] = `
         }
         locations={
           Array [
-            0.5,
+            0,
             1,
           ]
         }
         overlayColor="#000000"
-        overlayType="default"
+        overlayType="gradient-top"
         startPoint={
           Object {
             "x": 0,
