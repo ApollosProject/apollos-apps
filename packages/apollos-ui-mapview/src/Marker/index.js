@@ -11,7 +11,9 @@ const InnerCircle = styled(
     width: theme.sizing.baseUnit * 0.5, // 8
     height: theme.sizing.baseUnit * 0.5, // 8
     borderRadius: theme.sizing.baseUnit * 0.25, // 4
-    backgroundColor: Color(theme.colors.primary).fade(theme.alpha.medium),
+    backgroundColor: Color(theme.colors.primary)
+      .fade(theme.alpha.medium)
+      .string(),
     zIndex: 2,
   }),
   'ui-mapview.Marker.InnerCircle'
@@ -22,9 +24,13 @@ const OuterCircle = styled(
     width: theme.sizing.baseUnit * 1.5, // 24
     height: theme.sizing.baseUnit * 1.5, // 24
     borderRadius: theme.sizing.baseUnit * 0.75, // 12
-    backgroundColor: Color(theme.colors.primary).fade(theme.alpha.low),
+    backgroundColor: Color(theme.colors.primary)
+      .fade(theme.alpha.low)
+      .string(),
     borderWidth: 1,
-    borderColor: Color(theme.colors.primary).fade(theme.alpha.medium),
+    borderColor: Color(theme.colors.primary)
+      .fade(theme.alpha.medium)
+      .string(),
     alignItems: 'center',
     justifyContent: 'center',
   }),

@@ -994,24 +994,8 @@ exports[`FeaturedCard should render with custom LabelComponent 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": Object {
-              "color": Array [
-                255,
-                255,
-                255,
-              ],
-              "model": "rgb",
-              "valpha": 0.4,
-            },
-            "borderColor": Object {
-              "color": Array [
-                255,
-                255,
-                255,
-              ],
-              "model": "rgb",
-              "valpha": 0.4,
-            },
+            "backgroundColor": "rgba(255, 255, 255, 0.4)",
+            "borderColor": "rgba(255, 255, 255, 0.4)",
             "borderRadius": 16,
             "borderWidth": 0,
             "elevation": 2,
@@ -1190,24 +1174,8 @@ exports[`FeaturedCard should render with custom labelText 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": Object {
-              "color": Array [
-                255,
-                255,
-                255,
-              ],
-              "model": "rgb",
-              "valpha": 0.4,
-            },
-            "borderColor": Object {
-              "color": Array [
-                255,
-                255,
-                255,
-              ],
-              "model": "rgb",
-              "valpha": 0.4,
-            },
+            "backgroundColor": "rgba(255, 255, 255, 0.4)",
+            "borderColor": "rgba(255, 255, 255, 0.4)",
             "borderRadius": 16,
             "borderWidth": 0,
             "elevation": 2,

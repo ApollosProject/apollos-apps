@@ -22,7 +22,9 @@ const forceInset = {
 
 const PaginationDot = styled(
   ({ theme }) => ({
-    backgroundColor: Color(theme.colors.text.primary).fade(theme.alpha.high),
+    backgroundColor: Color(theme.colors.text.primary)
+      .fade(theme.alpha.high)
+      .string(),
     ...dotStyles({ theme }),
   }),
   'ui-prayer.PrayerSwiper.PaginationDot'
