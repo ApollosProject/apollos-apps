@@ -34,6 +34,8 @@ const Image = withTheme(
     minAspectRatio: 1.2,
     maxAspectRatio: 1.78,
     maintainAspectRatio: true,
+    overlayColor: theme.colors.transparent,
+    overlayType: 'none',
   }),
   'ui-kit.DefaultCard.Image'
 )(CardImage);

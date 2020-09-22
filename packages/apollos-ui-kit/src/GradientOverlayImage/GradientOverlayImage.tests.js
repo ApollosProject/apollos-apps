@@ -147,4 +147,21 @@ describe('the GradientOverlayImage component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  
+  it('should render with overlayType.none', () => {
+    const tree = renderer.create( <
+      Providers>
+        <GradientOverlayImage source = {
+          [{
+            uri: 'https://picsum.photos/600/400/?random',
+            width: 600,
+            height: 400,
+          }, ]
+      }
+      overlayColor = {'transparent'}
+      overlayType = {'none'}
+    />  < /
+        Providers >
+      );
+      expect(tree).toMatchSnapshot();
 });

@@ -253,6 +253,18 @@ export const overlays = ({ alpha: themeAlpha, colors: themeColors }) => ({
     end: { x: 0, y: 1 },
     locations: [0, 0.8],
   }),
+    none: () => ({
+      colors: [themeColors.transparent],
+      start: {
+        x: 0,
+        y: 0
+      },
+      end: {
+        x: 0,
+        y: 1
+      },
+      locations: [0, 1],
+    }),
   // Overriding this property changes all BackgroundViews
   'background-gradient': ({ colors: customColors }) => ({
     colors: customColors || [
