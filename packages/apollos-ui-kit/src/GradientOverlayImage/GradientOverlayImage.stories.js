@@ -54,14 +54,10 @@ storiesOf('ui-kit/GradientOverlayImage', module)
       overlayColor={'salmon'}
       overlayType="featured"
     />
+  ))
+  .add('overlayType.none', () => ( 
+    <GradientOverlayImage 
+      source = {'https://picsum.photos/600/400/?random'}
+      overlayColor = {'transparent'}
+    />
   ));
-
-     .add('overlayType.none', () => ( <
-       GradientOverlayImage source = {
-         'https://picsum.photos/600/400/?random'
-       }
-       overlayColor = {
-         'transparent'
-       }
-       />
-     ))
