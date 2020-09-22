@@ -17,7 +17,7 @@ const ContentSingleFeatures = memo(
       <PaddedView vertical={false}>
         <H3 padded>{title}</H3>
       </PaddedView>
-      {features.map(({ __typename, ...feature }) => {
+      {[...features].map(({ __typename, ...feature }) => {
         const Feature = featureMap[__typename];
         if (!Feature) return null;
         return (
