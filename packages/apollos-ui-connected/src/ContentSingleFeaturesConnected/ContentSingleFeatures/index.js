@@ -35,11 +35,13 @@ const ContentSingleFeatures = memo(
 
 ContentSingleFeatures.propTypes = {
   contentId: PropTypes.string,
-  features: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    order: PropTypes.string,
-    __typename: PropTypes.string.isRequired,
-  }),
+  features: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      order: PropTypes.string,
+      __typename: PropTypes.string.isRequired,
+    })
+  ),
   featureMap: PropTypes.shape({}),
   isLoading: PropTypes.bool,
   title: PropTypes.string,

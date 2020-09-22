@@ -36,12 +36,12 @@ const Field = ({
 }) => (
   <FieldColumn>
     {isLoading ? (
-      <React.Fragment>
+      <>
         <LabelComponent isLoading />
         <ValueComponent isLoading />
-      </React.Fragment>
+      </>
     ) : (
-      <React.Fragment>
+      <>
         {label ? (
           <FieldTextAlignment textAlignment={textAlignment}>
             <LabelComponent>{label}</LabelComponent>
@@ -50,7 +50,7 @@ const Field = ({
         <FieldTextAlignment textAlignment={textAlignment}>
           <ValueComponent>{value}</ValueComponent>
         </FieldTextAlignment>
-      </React.Fragment>
+      </>
     )}
   </FieldColumn>
 );

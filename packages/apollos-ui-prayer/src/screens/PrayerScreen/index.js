@@ -76,10 +76,13 @@ PrayerScreen.propTypes = {
     isLoading: PropTypes.bool,
     isPrayed: PropTypes.bool,
     requestor: PropTypes.shape({
-      photo: PropTypes.any, // eslint-disable-line,
+      /* eslint-disable-next-line */
+      photo: PropTypes.any,
       nickName: PropTypes.string,
       firstName: PropTypes.string,
     }),
+    text: PropTypes.string,
+    __typename: PropTypes.string,
   }),
   onPressPrimary: PropTypes.func,
 };

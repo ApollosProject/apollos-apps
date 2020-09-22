@@ -198,7 +198,7 @@ you can return request.empty()
       resource: this.resource,
     });
     // make sure to clone this.query, which gets mutated by top/skip
-    cursor.query = Object.assign({}, this.query);
+    cursor.query = { ...this.query };
 
     const result = await cursor
       .select('Id')

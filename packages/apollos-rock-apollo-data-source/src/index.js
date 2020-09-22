@@ -50,7 +50,7 @@ export default class RockApolloDataSource extends RESTDataSource {
     if (!this.calls[request.path]) {
       this.calls[request.path] = 0;
     }
-    this.calls[request.path] = this.calls[request.path] + 1;
+    this.calls[request.path] += 1;
 
     if (!request.headers.has('Authorization-Token')) {
       request.headers.set('Authorization-Token', this.rockToken);

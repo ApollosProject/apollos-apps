@@ -56,7 +56,12 @@ Metrics.propTypes = {
     })
   ),
   isLoading: PropTypes.bool,
-  theme: PropTypes.shape({}),
+  theme: PropTypes.shape({
+    colors: PropTypes.shape({
+      primary: PropTypes.string,
+      text: PropTypes.shape({ secondary: PropTypes.string }),
+    }),
+  }),
   floating: PropTypes.bool,
 };
 

@@ -161,7 +161,9 @@ Entry.propTypes = {
   inputLabel: PropTypes.string,
   inputAutoComplete: PropTypes.string,
   theme: PropTypes.shape({
-    colors: PropTypes.shape({}),
+    colors: PropTypes.shape({
+      text: PropTypes.shape({ tertiary: PropTypes.string }),
+    }),
   }),
 };
 
