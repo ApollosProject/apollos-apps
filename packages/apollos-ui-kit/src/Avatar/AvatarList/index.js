@@ -58,8 +58,10 @@ const AvatarFeed = withTheme(
 const renderItem = (onPressAvatar, isLoading) => ({ item }) => (
   <TouchableAvatar
     disabled={isLoading || !onPressAvatar}
+    /* eslint-disable-next-line */
     notification={item.notification}
     onPress={() => onPressAvatar({ item })}
+    /* eslint-disable-next-line */
     source={item?.source}
   />
 );
