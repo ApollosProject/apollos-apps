@@ -35,6 +35,8 @@ module.exports = {
     'react/prefer-stateless-function': [2, { ignorePureComponents: true }],
     'react/require-default-props': 0,
     'react/prop-types': ['error', { ignore: ['navigation'] }],
+    'react/static-property-placement': 1,
+    'react/state-in-constructor': 1,
     'react-native/split-platform-components': 2,
     'react-native/no-unused-styles': 2,
     'react-native/no-inline-styles': 2,
