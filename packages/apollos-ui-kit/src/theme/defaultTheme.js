@@ -155,7 +155,9 @@ export const buttons = ({ colors: themeColors, alpha: themeAlpha }) => ({
     accent: themeColors.text.primary,
   },
   overlay: {
-    fill: Color(themeColors.white).alpha(themeAlpha.low),
+    fill: Color(themeColors.white)
+      .alpha(themeAlpha.low)
+      .string(),
     accent: themeColors.white,
   },
   alert: {

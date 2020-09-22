@@ -248,15 +248,7 @@ exports[`The PrayerSwiper component should render with a fragment as a child 1`]
         }
         style={
           Object {
-            "backgroundColor": Object {
-              "color": Array [
-                48,
-                48,
-                48,
-              ],
-              "model": "rgb",
-              "valpha": 0.09999999999999998,
-            },
+            "backgroundColor": "rgba(48, 48, 48, 0.09999999999999998)",
             "borderRadius": 2,
             "height": 2,
             "marginHorizontal": 1,
@@ -285,15 +277,7 @@ exports[`The PrayerSwiper component should render with a fragment as a child 1`]
         }
         style={
           Object {
-            "backgroundColor": Object {
-              "color": Array [
-                48,
-                48,
-                48,
-              ],
-              "model": "rgb",
-              "valpha": 0.09999999999999998,
-            },
+            "backgroundColor": "rgba(48, 48, 48, 0.09999999999999998)",
             "borderRadius": 2,
             "height": 2,
             "marginHorizontal": 1,
@@ -554,15 +538,7 @@ exports[`The PrayerSwiper component should render with an array as a child 1`] =
         }
         style={
           Object {
-            "backgroundColor": Object {
-              "color": Array [
-                48,
-                48,
-                48,
-              ],
-              "model": "rgb",
-              "valpha": 0.09999999999999998,
-            },
+            "backgroundColor": "rgba(48, 48, 48, 0.09999999999999998)",
             "borderRadius": 2,
             "height": 2,
             "marginHorizontal": 1,
@@ -591,15 +567,7 @@ exports[`The PrayerSwiper component should render with an array as a child 1`] =
         }
         style={
           Object {
-            "backgroundColor": Object {
-              "color": Array [
-                48,
-                48,
-                48,
-              ],
-              "model": "rgb",
-              "valpha": 0.09999999999999998,
-            },
+            "backgroundColor": "rgba(48, 48, 48, 0.09999999999999998)",
             "borderRadius": 2,
             "height": 2,
             "marginHorizontal": 1,
