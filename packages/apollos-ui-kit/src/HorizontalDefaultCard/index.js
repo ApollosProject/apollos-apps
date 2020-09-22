@@ -44,7 +44,6 @@ const Image = withTheme(
     forceRatio: hasTitleAndSummary ? 2 : 1.5, // forces the placeholder to use the same ratio as above.
     maintainAspectRatio: true,
     overlayColor: theme.colors.black,
-    overlayType: 'gradient-top',
   }),
   'ui-kit.HorizontalDefaultCard.Image'
 )(CardImage);
