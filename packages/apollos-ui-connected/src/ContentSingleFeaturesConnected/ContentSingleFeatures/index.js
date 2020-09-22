@@ -17,7 +17,7 @@ const ContentSingleFeatures = memo(
       <PaddedView vertical={false}>
         <H3 padded>{title}</H3>
       </PaddedView>
-      {[...features].map(({ __typename, ...feature }) => {
+      {features.map(({ __typename, ...feature }) => {
         const Feature = featureMap[__typename];
         if (!Feature) return null;
         return (
@@ -35,11 +35,13 @@ const ContentSingleFeatures = memo(
 
 ContentSingleFeatures.propTypes = {
   contentId: PropTypes.string,
-  features: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    order: PropTypes.string,
-    __typename: PropTypes.string.isRequired,
-  }),
+  features: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      order: PropTypes.string,
+      __typename: PropTypes.string.isRequired,
+    })
+  ),
   featureMap: PropTypes.shape({}),
   isLoading: PropTypes.bool,
   title: PropTypes.string,
