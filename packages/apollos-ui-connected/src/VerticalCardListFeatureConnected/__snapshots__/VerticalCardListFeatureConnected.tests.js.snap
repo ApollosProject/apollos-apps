@@ -184,8 +184,8 @@ exports[`The VerticalCardListFeatureConnected component should render 1`] = `
                 <BVLinearGradient
                   colors={
                     Array [
+                      2147483648,
                       0,
-                      4278190080,
                     ]
                   }
                   endPoint={
@@ -196,12 +196,12 @@ exports[`The VerticalCardListFeatureConnected component should render 1`] = `
                   }
                   locations={
                     Array [
-                      0.5,
+                      0,
                       1,
                     ]
                   }
                   overlayColor="#000000"
-                  overlayType="default"
+                  overlayType="gradient-top"
                   startPoint={
                     Object {
                       "x": 0,
@@ -972,8 +972,8 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 <BVLinearGradient
                   colors={
                     Array [
+                      2147483648,
                       0,
-                      4278190080,
                     ]
                   }
                   endPoint={
@@ -984,12 +984,12 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   locations={
                     Array [
-                      0.5,
+                      0,
                       1,
                     ]
                   }
                   overlayColor="#000000"
-                  overlayType="default"
+                  overlayType="gradient-top"
                   startPoint={
                     Object {
                       "x": 0,
@@ -1142,8 +1142,8 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 <BVLinearGradient
                   colors={
                     Array [
+                      2147483648,
                       0,
-                      4278190080,
                     ]
                   }
                   endPoint={
@@ -1154,12 +1154,12 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   locations={
                     Array [
-                      0.5,
+                      0,
                       1,
                     ]
                   }
                   overlayColor="#000000"
-                  overlayType="default"
+                  overlayType="gradient-top"
                   startPoint={
                     Object {
                       "x": 0,
@@ -1312,8 +1312,8 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 <BVLinearGradient
                   colors={
                     Array [
+                      2147483648,
                       0,
-                      4278190080,
                     ]
                   }
                   endPoint={
@@ -1324,12 +1324,12 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   locations={
                     Array [
-                      0.5,
+                      0,
                       1,
                     ]
                   }
                   overlayColor="#000000"
-                  overlayType="default"
+                  overlayType="gradient-top"
                   startPoint={
                     Object {
                       "x": 0,
@@ -1482,8 +1482,8 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 <BVLinearGradient
                   colors={
                     Array [
+                      2147483648,
                       0,
-                      4278190080,
                     ]
                   }
                   endPoint={
@@ -1494,12 +1494,12 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   locations={
                     Array [
-                      0.5,
+                      0,
                       1,
                     ]
                   }
                   overlayColor="#000000"
-                  overlayType="default"
+                  overlayType="gradient-top"
                   startPoint={
                     Object {
                       "x": 0,
@@ -1652,8 +1652,8 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 <BVLinearGradient
                   colors={
                     Array [
+                      2147483648,
                       0,
-                      4278190080,
                     ]
                   }
                   endPoint={
@@ -1664,12 +1664,12 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   locations={
                     Array [
-                      0.5,
+                      0,
                       1,
                     ]
                   }
                   overlayColor="#000000"
-                  overlayType="default"
+                  overlayType="gradient-top"
                   startPoint={
                     Object {
                       "x": 0,
@@ -1822,8 +1822,8 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 <BVLinearGradient
                   colors={
                     Array [
+                      2147483648,
                       0,
-                      4278190080,
                     ]
                   }
                   endPoint={
@@ -1834,12 +1834,12 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   locations={
                     Array [
-                      0.5,
+                      0,
                       1,
                     ]
                   }
                   overlayColor="#000000"
-                  overlayType="default"
+                  overlayType="gradient-top"
                   startPoint={
                     Object {
                       "x": 0,
@@ -1992,8 +1992,8 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 <BVLinearGradient
                   colors={
                     Array [
+                      2147483648,
                       0,
-                      4278190080,
                     ]
                   }
                   endPoint={
@@ -2004,12 +2004,12 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   locations={
                     Array [
-                      0.5,
+                      0,
                       1,
                     ]
                   }
                   overlayColor="#000000"
-                  overlayType="default"
+                  overlayType="gradient-top"
                   startPoint={
                     Object {
                       "x": 0,
@@ -2162,8 +2162,8 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 <BVLinearGradient
                   colors={
                     Array [
+                      2147483648,
                       0,
-                      4278190080,
                     ]
                   }
                   endPoint={
@@ -2174,12 +2174,12 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   locations={
                     Array [
-                      0.5,
+                      0,
                       1,
                     ]
                   }
                   overlayColor="#000000"
-                  overlayType="default"
+                  overlayType="gradient-top"
                   startPoint={
                     Object {
                       "x": 0,
@@ -2332,8 +2332,8 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 <BVLinearGradient
                   colors={
                     Array [
+                      2147483648,
                       0,
-                      4278190080,
                     ]
                   }
                   endPoint={
@@ -2344,12 +2344,12 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   locations={
                     Array [
-                      0.5,
+                      0,
                       1,
                     ]
                   }
                   overlayColor="#000000"
-                  overlayType="default"
+                  overlayType="gradient-top"
                   startPoint={
                     Object {
                       "x": 0,
@@ -2502,8 +2502,8 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 <BVLinearGradient
                   colors={
                     Array [
+                      2147483648,
                       0,
-                      4278190080,
                     ]
                   }
                   endPoint={
@@ -2514,12 +2514,12 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   locations={
                     Array [
-                      0.5,
+                      0,
                       1,
                     ]
                   }
                   overlayColor="#000000"
-                  overlayType="default"
+                  overlayType="gradient-top"
                   startPoint={
                     Object {
                       "x": 0,

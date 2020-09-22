@@ -62,8 +62,8 @@ exports[`HorizontalDefaultCard should render 1`] = `
       <BVLinearGradient
         colors={
           Array [
+            2147483648,
             0,
-            4278190080,
           ]
         }
         endPoint={
@@ -74,12 +74,12 @@ exports[`HorizontalDefaultCard should render 1`] = `
         }
         locations={
           Array [
-            0.5,
+            0,
             1,
           ]
         }
         overlayColor="#000000"
-        overlayType="default"
+        overlayType="gradient-top"
         startPoint={
           Object {
             "x": 0,
@@ -175,8 +175,8 @@ exports[`HorizontalDefaultCard should render a loading state with isLoading 1`] 
       <BVLinearGradient
         colors={
           Array [
+            2147483648,
             0,
-            4278190080,
           ]
         }
         endPoint={
@@ -187,12 +187,12 @@ exports[`HorizontalDefaultCard should render a loading state with isLoading 1`] 
         }
         locations={
           Array [
-            0.5,
+            0,
             1,
           ]
         }
         overlayColor="#000000"
-        overlayType="default"
+        overlayType="gradient-top"
         startPoint={
           Object {
             "x": 0,
@@ -312,8 +312,8 @@ exports[`HorizontalDefaultCard should render with a summary 1`] = `
       <BVLinearGradient
         colors={
           Array [
+            2147483648,
             0,
-            4278190080,
           ]
         }
         endPoint={
@@ -324,12 +324,12 @@ exports[`HorizontalDefaultCard should render with a summary 1`] = `
         }
         locations={
           Array [
-            0.5,
+            0,
             1,
           ]
         }
         overlayColor="#000000"
-        overlayType="default"
+        overlayType="gradient-top"
         startPoint={
           Object {
             "x": 0,
@@ -456,8 +456,8 @@ exports[`HorizontalDefaultCard should render with a title 1`] = `
       <BVLinearGradient
         colors={
           Array [
+            2147483648,
             0,
-            4278190080,
           ]
         }
         endPoint={
@@ -468,12 +468,12 @@ exports[`HorizontalDefaultCard should render with a title 1`] = `
         }
         locations={
           Array [
-            0.5,
+            0,
             1,
           ]
         }
         overlayColor="#000000"
-        overlayType="default"
+        overlayType="gradient-top"
         startPoint={
           Object {
             "x": 0,
@@ -580,8 +580,8 @@ exports[`HorizontalDefaultCard should should render a like icon 1`] = `
       <BVLinearGradient
         colors={
           Array [
+            2147483648,
             0,
-            4278190080,
           ]
         }
         endPoint={
@@ -592,12 +592,12 @@ exports[`HorizontalDefaultCard should should render a like icon 1`] = `
         }
         locations={
           Array [
-            0.5,
+            0,
             1,
           ]
         }
         overlayColor="#000000"
-        overlayType="default"
+        overlayType="gradient-top"
         startPoint={
           Object {
             "x": 0,
@@ -831,8 +831,8 @@ exports[`HorizontalDefaultCard should should render as isLiked 1`] = `
       <BVLinearGradient
         colors={
           Array [
+            2147483648,
             0,
-            4278190080,
           ]
         }
         endPoint={
@@ -843,12 +843,12 @@ exports[`HorizontalDefaultCard should should render as isLiked 1`] = `
         }
         locations={
           Array [
-            0.5,
+            0,
             1,
           ]
         }
         overlayColor="#000000"
-        overlayType="default"
+        overlayType="gradient-top"
         startPoint={
           Object {
             "x": 0,
