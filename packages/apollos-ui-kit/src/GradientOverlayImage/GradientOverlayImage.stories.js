@@ -59,5 +59,6 @@ storiesOf('ui-kit/GradientOverlayImage', module)
     <GradientOverlayImage 
       source = {'https://picsum.photos/600/400/?random'}
       overlayColor = {'transparent'}
+      overlayType="none"
     />
   ));
