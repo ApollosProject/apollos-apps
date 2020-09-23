@@ -14,6 +14,7 @@ import { ApolloStorybookDecorator } from '../testUtils';
 
 import HorizontalContentCardConnected from './HorizontalContentCardConnected';
 
+// eslint-disable-next-line
 const cardMapper = ({ title, hyphenatedTitle, ...props }) => {
   // map typename to the the card we want to render.
   switch (get(props, '__typename')) {
