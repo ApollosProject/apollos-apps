@@ -29,15 +29,7 @@ Object {
     },
     "overlay": Object {
       "accent": "#FFFFFF",
-      "fill": Object {
-        "color": Array [
-          255,
-          255,
-          255,
-        ],
-        "model": "rgb",
-        "valpha": 0.4,
-      },
+      "fill": "rgba(255, 255, 255, 0.4)",
     },
     "primary": Object {
       "accent": "#FFFFFF",
@@ -351,15 +343,7 @@ Object {
     },
     "overlay": Object {
       "accent": "#FFFFFF",
-      "fill": Object {
-        "color": Array [
-          255,
-          255,
-          255,
-        ],
-        "model": "rgb",
-        "valpha": 0.4,
-      },
+      "fill": "rgba(255, 255, 255, 0.4)",
     },
     "primary": Object {
       "accent": "#FFFFFF",

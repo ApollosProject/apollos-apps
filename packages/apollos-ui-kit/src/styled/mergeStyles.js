@@ -15,7 +15,7 @@ const mergeStyles = (...stylesToMerge) =>
       !Array.isArray(styleRight) &&
       typeof styleRight === 'object'
     ) {
-      style = Object.assign({}, style, styleRight);
+      style = { ...style, ...styleRight };
 
       // styles can't be merged automatically, result to joining them in an array
     } else {

@@ -47,7 +47,7 @@ export default class Node {
     // Then we can shortcut the need to fetch the entire document.
     // This helps us keep a clean schema but also minimize uneeded requests.
     if (uniq([...siblingFields, '__typename', 'id']).length === 2) {
-      return { id, __typename: __type, __type };
+      return { id: encodedId, __typename: __type, __type };
     }
 
     const possibleModels = this.getPossibleDataModels({
