@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import ContentCardConnected from '../ContentCardConnected';
 
-import horizontalContentCardComponentMapper from './horizontalContentCardComponentMapper';
+import HorizontalContentCardComponentMapper from './HorizontalContentCardComponentMapper';
 
 const HorizontalContentCardConnected = memo(
   ({ Component, isLoading, ...otherProps }) => (
@@ -21,7 +21,7 @@ HorizontalContentCardConnected.propTypes = {
 };
 
 HorizontalContentCardConnected.defaultProps = {
-  Component: horizontalContentCardComponentMapper,
+  Component: HorizontalContentCardComponentMapper,
 };
 
 HorizontalContentCardConnected.displayName = 'HorizontalContentCardConnected';
