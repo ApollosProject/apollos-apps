@@ -729,8 +729,8 @@ exports[`HorizontalLikedContentFeedConnected renders a HorizontalLikedContentFee
       <BVLinearGradient
         colors={
           Array [
+            2147483648,
             0,
-            4278190080,
           ]
         }
         endPoint={
@@ -741,12 +741,12 @@ exports[`HorizontalLikedContentFeedConnected renders a HorizontalLikedContentFee
         }
         locations={
           Array [
-            0.5,
+            0,
             1,
           ]
         }
         overlayColor="#000000"
-        overlayType="default"
+        overlayType="gradient-top"
         startPoint={
           Object {
             "x": 0,
