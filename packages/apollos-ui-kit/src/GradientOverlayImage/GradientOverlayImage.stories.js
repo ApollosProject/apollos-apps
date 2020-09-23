@@ -55,3 +55,4 @@ storiesOf('ui-kit/GradientOverlayImage', module)
       overlayType="featured"
     />
   ));
+  

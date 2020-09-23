@@ -146,5 +146,5 @@ describe('the GradientOverlayImage component', () => {
       </Providers>
     );
     expect(tree).toMatchSnapshot();
-  }); 
+  });
 });
