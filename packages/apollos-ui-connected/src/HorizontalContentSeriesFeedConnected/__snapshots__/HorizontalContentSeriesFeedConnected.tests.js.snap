@@ -236,7 +236,6 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
               }
             >
               <RCTImageView
-                customTheme={null}
                 disabled={false}
                 fadeDuration={250}
                 isLoading={false}
@@ -431,7 +430,6 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
               }
             >
               <RCTImageView
-                customTheme={null}
                 disabled={false}
                 fadeDuration={250}
                 isLoading={false}
@@ -626,7 +624,6 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
               }
             >
               <RCTImageView
-                customTheme={null}
                 disabled={false}
                 fadeDuration={250}
                 isLoading={false}
@@ -821,7 +818,6 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
               }
             >
               <RCTImageView
-                customTheme={null}
                 disabled={false}
                 fadeDuration={250}
                 isLoading={false}
