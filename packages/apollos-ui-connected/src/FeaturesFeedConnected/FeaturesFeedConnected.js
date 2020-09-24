@@ -48,8 +48,16 @@ class FeaturesFeedConnected extends PureComponent {
   // eslint-disable-next-line
   refetchRef = ({ refetch, id }) => (this.refetchFunctions[id] = refetch);
 
-  refetch = () => {
-    Promise.all(Object.values(this.refetchFunctions).map((rf) => rf()));
+  refetch = async () => {
+    // refetch the feed
+    const { data } = await this.refetchFunctions.feed();
+    // get the ids of the current set of loaded features.
+
+    const ids = get(data, 'userFeedFeatures', []).map(({ id }) => id);
+
+    return Promise.all(
+      ids.map((id) => this.refetchFunctions[id] && this.refetchFunctions[id]())
+    );
   };
 
   render() {
