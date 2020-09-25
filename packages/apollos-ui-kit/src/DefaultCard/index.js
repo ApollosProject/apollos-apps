@@ -29,12 +29,12 @@ const LikeIcon = withTheme(
   'ui-kit.DefaultCard.LikeIcon'
 )(Icon);
 
-const Image = withTheme(
-  ({ theme }) => ({
+const Image = styled(
+  {
     minAspectRatio: 1.2,
     maxAspectRatio: 1.78,
     maintainAspectRatio: true,
-  }),
+  },
   'ui-kit.DefaultCard.Image'
 )(CardImage);
 
