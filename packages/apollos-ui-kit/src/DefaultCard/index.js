@@ -30,12 +30,10 @@ const LikeIcon = withTheme(
 )(Icon);
 
 const Image = withTheme(
-  ({ theme }) => ({
+  () => ({
     minAspectRatio: 1.2,
     maxAspectRatio: 1.78,
     maintainAspectRatio: true,
-    overlayColor: theme.colors.black,
-    overlayType: 'gradient-top',
   }),
   'ui-kit.DefaultCard.Image'
 )(CardImage);
