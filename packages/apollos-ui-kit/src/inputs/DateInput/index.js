@@ -22,7 +22,7 @@ const StyledDateTimePicker = withTheme(
       colors: { text },
     },
   }) => ({
-    textColor: 'text.primary',
+    textColor: text.primary,
   }),
   'ui-kit.inputs.DateInput.StyledDateTimePicker'
 )(DateTimePicker);
