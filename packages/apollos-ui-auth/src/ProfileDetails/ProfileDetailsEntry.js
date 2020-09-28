@@ -2,10 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 import moment from 'moment';
-import {
-  RadioButton,
-  withTheme,
-} from '@apollosproject/ui-kit';
+import { RadioButton, withTheme } from '@apollosproject/ui-kit';
 
 import {
   ProfileEntryFieldContainer,
