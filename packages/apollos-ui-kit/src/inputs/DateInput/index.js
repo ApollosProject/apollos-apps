@@ -22,7 +22,7 @@ const StyledDateTimePicker = withTheme(
       colors: { text },
     },
   }) => ({
-    textColor: text.primary,
+    textColor: 'text.primary',
   }),
   'ui-kit.inputs.DateInput.StyledDateTimePicker'
 )(DateTimePicker);
@@ -37,6 +37,7 @@ class DateInput extends PureComponent {
     onChangeText: PropTypes.func,
     onBlur: PropTypes.func,
     error: PropTypes.any, // eslint-disable-line
+    minimumDate: PropTypes.any, // eslint-disable-line
     maximumDate: PropTypes.any, // eslint-disable-line
   };
 
@@ -74,14 +75,18 @@ class DateInput extends PureComponent {
           date={
             this.props.value
               ? moment(this.props.value).toDate()
-              : new Date(Date.now())
+              : moment(Date.now())
+                  .subtract(18, 'years')
+                  .toDate()
           } // Using Date.now so we have something to mock in the tests
           datePickerModeAndroid={'spinner'}
           isVisible={this.state.isVisible}
           maximumDate={
             this.props.maximumDate
               ? moment(this.props.maximumDate).toDate()
-              : new Date(Date.now())
+              : moment(Date.now())
+                  .subtract(16, 'years')
+                  .toDate() // one year in the future so the iOS picker doesn't force you to pick your birthyear first.
           } // Using Date.now so we have something to mock in the tests
           mode={'date'}
           onConfirm={this.handleConfirm}
@@ -100,4 +105,4 @@ class DateInput extends PureComponent {
   }
 }
 
-export default DateInput;
+export default withTheme(() => ({}), 'ui-kit.inputs.DateInput')(DateInput);
