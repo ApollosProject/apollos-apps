@@ -24,7 +24,7 @@ export default class Feature extends RockApolloDataSource {
     return accum;
   }, {});
 
-  getFromId(args, id, { info }) {
+  getFromId(args, id, { info } = { info: {} }) {
     this.cacheControl = info.cacheControl;
     const type = id.split(':')[0];
     const funcArgs = JSON.parse(args);
