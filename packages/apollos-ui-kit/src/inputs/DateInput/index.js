@@ -77,7 +77,7 @@ class DateInput extends PureComponent {
               ? moment(this.props.value).toDate()
               : moment(Date.now())
                   .subtract(18, 'years')
-                  .toDate()
+                  .toDate() // 18 years in the past, to ensure you don't have to change the year first on iOS
           } // Using Date.now so we have something to mock in the tests
           datePickerModeAndroid={'spinner'}
           isVisible={this.state.isVisible}
@@ -86,8 +86,9 @@ class DateInput extends PureComponent {
               ? moment(this.props.maximumDate).toDate()
               : moment(Date.now())
                   .subtract(16, 'years')
-                  .toDate() // one year in the future so the iOS picker doesn't force you to pick your birthyear first.
+                  .toDate() // sixteen year in the past to limit signups for 16 > year olds
           } // Using Date.now so we have something to mock in the tests
+          minimumDate={this.props.minimumDate}
           mode={'date'}
           onConfirm={this.handleConfirm}
           onCancel={this.handleClose}
