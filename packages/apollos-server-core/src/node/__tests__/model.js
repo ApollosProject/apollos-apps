@@ -188,7 +188,7 @@ describe('Node', () => {
     reset();
   });
 
-  it("Node class should return just the id in it's encoded state", async () => {
+  it("Node class should return just the id in it's unencoded state", async () => {
     const id = '123';
     const __type = 'Test';
     const globalId = createGlobalId(id, __type);
@@ -210,7 +210,7 @@ describe('Node', () => {
     const node = new Node();
     const result = await node.get(globalId, dataSources, { schema });
 
-    expect(result.id).toBe(globalId);
+    expect(result.id).toBe(id);
     reset();
   });
 
