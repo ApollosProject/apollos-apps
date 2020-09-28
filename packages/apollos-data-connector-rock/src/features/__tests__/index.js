@@ -15,6 +15,9 @@ const expandResult = async (result) => {
   if (result.heroCard && typeof result.heroCard === 'function') {
     expandedResult = { ...expandedResult, heroCard: await result.heroCard() };
   }
+  if (result.prayers && typeof result.prayers === 'function') {
+    expandedResult = { ...expandedResult, prayers: await result.prayers() };
+  }
 
   return expandedResult;
 };
@@ -112,6 +115,13 @@ describe('features', () => {
           getCoverImage: () => null,
           resolveType: () => 'UniversalContentItem',
           createSummary: () => 'summary data',
+        },
+        PrayerRequest: {
+          byDailyPrayerFeed: () => ({
+            top: () => ({
+              get: () => ({}),
+            }),
+          }),
         },
         Scripture: {},
         Event: {
