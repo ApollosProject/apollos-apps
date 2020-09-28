@@ -36,6 +36,38 @@ const RandomAvatar = styled(
   'ui-kit.Avatar.AvatarCloud.RandomAvatar'
 )(ConnectedImage);
 
+function getCircularAvatarPos({
+  index,
+  seed,
+  count,
+  containerWidth = 100,
+  containerHeight = 100,
+  centerMargin = 0,
+}) {
+  const initialAngle = Math.PI * seed * 2;
+  const angleIncrement = (Math.PI * 2) / count;
+  const finalAngle = initialAngle + angleIncrement * index;
+  const x =
+    Math.max(seed * containerWidth, centerMargin) * Math.cos(finalAngle) +
+    containerWidth / 2;
+  const y =
+    Math.max(seed * containerHeight, centerMargin) * Math.sin(finalAngle) +
+    containerHeight / 2;
+
+  console.log({
+    initialAngle,
+    angleIncrement,
+    finalAngle,
+    x,
+    y,
+    count,
+    seed,
+    index,
+  });
+
+  return { x, y };
+}
+
 class AvatarCloud extends PureComponent {
   static propTypes = {
     avatars: PropTypes.arrayOf(ImageSourceType).isRequired,
@@ -56,6 +88,7 @@ class AvatarCloud extends PureComponent {
     super();
 
     this.randomSeeds = {};
+    this.seed = Math.random();
   }
 
   getAvatarPercentageWidth = (width) => `${width * 100}%`;
@@ -97,7 +130,29 @@ class AvatarCloud extends PureComponent {
       ),
     };
 
+    console.log(xyPositions);
+
     return xyPositions;
+  }
+
+  getRadialXYPositions({ i, count }) {
+    const centerMargin = this.props.primaryAvatar
+      ? this.props.maxAvatarSize
+      : 0;
+    const { x, y } = getCircularAvatarPos({
+      index: i,
+      seed: this.seed,
+      count,
+      centerMargin,
+    });
+    console.log({
+      left: `${x}%`,
+      top: `${y}%`,
+    });
+    return {
+      left: `${x}%`,
+      top: `${y}%`,
+    };
   }
 
   renderRandomAvatars() {
@@ -105,6 +160,27 @@ class AvatarCloud extends PureComponent {
       <BlurWrapper
         avatarWidth={this.getAvatarPercentageWidth(size)}
         getXYPositions={this.getRandomXYPositions(size, i)}
+        key={`${
+          typeof this.props.avatars[i] === 'string'
+            ? this.props.avatars[i]
+            : this.props.avatars[i]?.uri
+        }${this.props.avatars[i].id ? this.props.avatars[i].id : i}`}
+        order={i} // order = zIndex == higher index === "closer two the viewer/higher layer"
+      >
+        <RandomAvatar
+          source={this.props.avatars[i]}
+          isLoading={this.props.isLoading}
+          blurRadius={this.props.blur ? sizes.length - i : 0}
+        />
+      </BlurWrapper>
+    ));
+  }
+
+  renderRadialRandomAvatars() {
+    return this.getRandomAvatarSizes().map((size, i, sizes) => (
+      <BlurWrapper
+        avatarWidth={this.getAvatarPercentageWidth(size)}
+        getXYPositions={this.getRadialXYPositions({ count: sizes.length, i })}
         key={`${
           typeof this.props.avatars[i] === 'string'
             ? this.props.avatars[i]
@@ -129,6 +205,7 @@ class AvatarCloud extends PureComponent {
       maxAvatarWidth,
       minAvatarWidth,
       primaryAvatar,
+      radial,
       ...props
     } = this.props;
     return (
@@ -140,7 +217,7 @@ class AvatarCloud extends PureComponent {
             isLoading={isLoading}
           />
         ) : null}
-        {this.renderRandomAvatars()}
+        {radial ? this.renderRadialRandomAvatars() : this.renderRandomAvatars()}
       </CenteredView>
     );
   }

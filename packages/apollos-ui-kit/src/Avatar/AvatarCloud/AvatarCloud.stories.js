@@ -12,6 +12,13 @@ const avatars = [
 
 storiesOf('ui-kit/Avatar/AvatarCloud', module)
   .add('default', () => <AvatarCloud avatars={avatars} />)
+  .add('radial', () => (
+    <AvatarCloud
+      radial
+      primaryAvatar={'https://picsum.photos/200'}
+      avatars={avatars}
+    />
+  ))
   .add('blur (false)', () => <AvatarCloud avatars={avatars} blur={false} />)
   .add('isLoading', () => (
     <AvatarCloud avatars={['', '', '']} primaryAvatar={''} isLoading />
