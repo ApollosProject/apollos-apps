@@ -30,7 +30,7 @@ export default {
     labelText: ({ subtitle }) => subtitle,
     id: ({ id }) => createGlobalId(id, 'CardListItem'),
   },
-  ActionListItem: {
+  ActionListAction: {
     id: ({ id }) => createGlobalId(id, 'ActionListAction'),
   },
   ScriptureFeature: {

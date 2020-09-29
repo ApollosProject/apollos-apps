@@ -24,11 +24,18 @@ export default class Feature extends RockApolloDataSource {
     return accum;
   }, {});
 
-  getFromId(args, id) {
+  getFromId(args, id, { info } = { info: {} }) {
+    this.cacheControl = info.cacheControl;
     const type = id.split(':')[0];
     const funcArgs = JSON.parse(args);
     const method = this[`create${type}`].bind(this);
     return method(funcArgs);
+  }
+
+  setCacheHint(args) {
+    if (this.cacheControl) {
+      this.cacheControl.setCacheHint(args);
+    }
   }
 
   // eslint-disable-next-line class-methods-use-this
@@ -253,6 +260,8 @@ export default class Feature extends RockApolloDataSource {
   }
 
   async dailyPrayerAlgorithm({ limit = 10 } = {}) {
+    this.setCacheHint({ maxAge: 0, scope: 'PRIVATE' });
+
     const { PrayerRequest } = this.context.dataSources;
     const cursor = await PrayerRequest.byDailyPrayerFeed();
     return cursor.top(limit).get();
@@ -280,6 +289,8 @@ export default class Feature extends RockApolloDataSource {
 
   // Gets the first 3 items for a user, based on their personas.
   async personaFeedAlgorithm() {
+    this.setCacheHint({ maxAge: 0, scope: 'PRIVATE' });
+
     const { ContentItem } = this.context.dataSources;
 
     // Get the first three persona items.
@@ -408,6 +419,8 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
   }
 
   async seriesInProgressAlgorithm({ limit = 3 } = {}) {
+    this.setCacheHint({ maxAge: 0, scope: 'PRIVATE' });
+
     const { ContentItem } = this.context.dataSources;
 
     const items = await (await ContentItem.getSeriesWithUserProgress())
