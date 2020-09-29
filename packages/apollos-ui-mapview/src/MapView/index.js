@@ -112,7 +112,7 @@ class MapView extends Component {
 
   componentDidMount() {
     this.animation.addListener(debounce(this.updateCoordinates));
-    if (this.props.userLocation) {
+    if (this.props.userLocation && this.props.campuses.length) {
       this.updateCoordinates({ value: this.previousScrollPosition }, 500);
     }
   }
