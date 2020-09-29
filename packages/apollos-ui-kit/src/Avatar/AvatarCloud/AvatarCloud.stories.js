@@ -7,12 +7,6 @@ import { times } from 'lodash';
 import { Button } from '../..';
 import AvatarCloud from '.';
 
-const avatars = [
-  'https://picsum.photos/200?1',
-  'https://picsum.photos/200?2',
-  'https://picsum.photos/200?3',
-];
-
 const generateAvatars = (count = 10) => {
   const seed = Math.abs(Math.random() * 100);
   return times(count, (i) => `https://picsum.photos/200?${i + seed}`);
@@ -24,6 +18,7 @@ function RadialWithRefresh(props) {
   return (
     <>
       <AvatarCloud radial avatars={avatars} seed={seed} {...props} />
+      {/* eslint-disable-next-line react-native/no-inline-styles */}
       <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
         <Button title="Three" onPress={() => setAvatars(generateAvatars(3))} />
         <Button title="Ten" onPress={() => setAvatars(generateAvatars(10))} />
@@ -32,30 +27,37 @@ function RadialWithRefresh(props) {
           onPress={() => setAvatars(generateAvatars(100))}
         />
       </View>
-      <Button title="Refresh" style={{ marginBottom: 30 }} onPress={() => setSeed(Math.random())} />
+      <Button
+        title="Refresh"
+        {/* eslint-disable-next-line react-native/no-inline-styles */}
+        style={{ marginBottom: 30 }}
+        onPress={() => setSeed(Math.random())}
+      />
     </>
   );
 }
 
 storiesOf('ui-kit/Avatar/AvatarCloud', module)
-  .add('default', () => <AvatarCloud avatars={avatars} />)
+  .add('default', () => <AvatarCloud avatars={generateAvatars()} />)
   .add('radial', () => <RadialWithRefresh />)
   .add('radial w/ primary avatar', () => (
     <RadialWithRefresh primaryAvatar={'https://picsum.photos/200'} />
   ))
-  .add('blur (false)', () => <AvatarCloud avatars={avatars} blur={false} />)
+  .add('blur (false)', () => (
+    <AvatarCloud avatars={generateAvatars()} blur={false} />
+  ))
   .add('isLoading', () => (
     <AvatarCloud avatars={['', '', '']} primaryAvatar={''} isLoading />
   ))
   .add('maxAvatarWidth', () => (
-    <AvatarCloud avatars={avatars} maxAvatarWidth={0.1} />
+    <AvatarCloud avatars={generateAvatars()} maxAvatarWidth={0.1} />
   ))
   .add('minAvatarWidth', () => (
-    <AvatarCloud avatars={avatars} minAvatarWidth={1} />
+    <AvatarCloud avatars={generateAvatars()} minAvatarWidth={1} />
   ))
   .add('primaryAvatar', () => (
     <AvatarCloud
-      avatars={avatars}
+      avatars={generateAvatars()}
       primaryAvatar={'https://picsum.photos/200'}
     />
   ));

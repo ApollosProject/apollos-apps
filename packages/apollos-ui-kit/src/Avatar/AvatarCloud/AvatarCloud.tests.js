@@ -35,7 +35,7 @@ describe('The AvatarCloud component', () => {
     );
 
     expect(tree).toMatchSnapshot();
-  });  
+  });
   it('should render without blur effect', () => {
     const tree = renderer.create(
       <Providers>
