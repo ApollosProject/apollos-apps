@@ -15,6 +15,9 @@ const expandResult = async (result) => {
   if (result.heroCard && typeof result.heroCard === 'function') {
     expandedResult = { ...expandedResult, heroCard: await result.heroCard() };
   }
+  if (result.prayers && typeof result.prayers === 'function') {
+    expandedResult = { ...expandedResult, prayers: await result.prayers() };
+  }
 
   return expandedResult;
 };
@@ -113,6 +116,13 @@ describe('features', () => {
           resolveType: () => 'UniversalContentItem',
           createSummary: () => 'summary data',
         },
+        PrayerRequest: {
+          byDailyPrayerFeed: () => ({
+            top: () => ({
+              get: () => ({}),
+            }),
+          }),
+        },
         Scripture: {},
         Event: {
           findRecent: () => ({
@@ -167,7 +177,24 @@ describe('features', () => {
 
       expect(await expandResult(result)).toMatchSnapshot();
     });
+    it('should set cache hints for a PERSONA_FEED algorithm', async () => {
+      const feature = new Feature();
+      feature.initialize({
+        context,
+      });
 
+      feature.cacheControl = { setCacheHint: jest.fn() };
+
+      const result = await feature.createActionListFeature({
+        algorithms: ['PERSONA_FEED'],
+        title: 'Test Action List',
+        subtitle: "It's great!",
+      });
+
+      await expandResult(result);
+
+      expect(feature.cacheControl.setCacheHint.mock.calls).toMatchSnapshot();
+    });
     it('should create an VerticalCardListFeature from a PERSONA_FEED', async () => {
       const feature = new Feature();
       feature.initialize({
@@ -421,6 +448,29 @@ describe('features', () => {
       expect(first.mock.calls).toMatchSnapshot();
     });
 
+    it('should set cache hints for a DAILY_PRAYER algorithm', async () => {
+      const feature = new Feature();
+      feature.initialize({
+        context,
+      });
+
+      feature.cacheControl = { setCacheHint: jest.fn() };
+
+      const result = await feature.createPrayerListFeature({
+        algorithms: [
+          {
+            type: 'DAILY_PRAYER',
+          },
+        ],
+        title: 'Test Action List',
+        subtitle: "It's great!",
+      });
+
+      await expandResult(result);
+
+      expect(feature.cacheControl.setCacheHint.mock.calls).toMatchSnapshot();
+    });
+
     it('createTextFeature should create a Text feature', async () => {
       const feature = new Feature();
       feature.initialize({
@@ -528,6 +578,28 @@ describe('features', () => {
       });
 
       expect(await expandResult(result)).toMatchSnapshot();
+    });
+    it('should set cache hints for a SERIES_IN_PROGRESS algorithm', async () => {
+      const feature = new Feature();
+      feature.initialize({
+        context,
+      });
+
+      feature.cacheControl = { setCacheHint: jest.fn() };
+
+      const result = await feature.createActionListFeature({
+        algorithms: [
+          {
+            type: 'SERIES_IN_PROGRESS',
+          },
+        ],
+        title: 'Test Featured Item',
+        subtitle: "It's featured!",
+      });
+
+      await expandResult(result);
+
+      expect(feature.cacheControl.setCacheHint.mock.calls).toMatchSnapshot();
     });
     it('should create an HeroListFeature from a USER_FEED algorithm', async () => {
       const feature = new Feature();
