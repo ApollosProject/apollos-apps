@@ -29,8 +29,7 @@ function RadialWithRefresh(props) {
       </View>
       <Button
         title="Refresh"
-        {/* eslint-disable-next-line react-native/no-inline-styles */}
-        style={{ marginBottom: 30 }}
+        style={{ marginBottom: 30 }} // eslint-disable-line react-native/no-inline-styles
         onPress={() => setSeed(Math.random())}
       />
     </>
