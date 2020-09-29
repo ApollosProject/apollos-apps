@@ -22,7 +22,9 @@ Object {
   "__typename": "PrayerListFeature",
   "id": "{\\"algorithms\\":[{\\"type\\":\\"DAILY_PRAYER\\"}],\\"title\\":\\"Test Action List\\",\\"subtitle\\":\\"It's great!\\",\\"isCard\\":true}",
   "isCard": true,
-  "prayers": [Function],
+  "prayers": Array [
+    Object {},
+  ],
   "subtitle": "It's great!",
   "title": "Test Action List",
 }
@@ -1828,6 +1830,39 @@ Array [
     "subtitle": "What's happening at apollos?",
     "title": "BULLETIN",
   },
+]
+`;
+
+exports[`features dataSource should set cache hints for a DAILY_PRAYER algorithm 1`] = `
+Array [
+  Array [
+    Object {
+      "maxAge": 0,
+      "scope": "PRIVATE",
+    },
+  ],
+]
+`;
+
+exports[`features dataSource should set cache hints for a PERSONA_FEED algorithm 1`] = `
+Array [
+  Array [
+    Object {
+      "maxAge": 0,
+      "scope": "PRIVATE",
+    },
+  ],
+]
+`;
+
+exports[`features dataSource should set cache hints for a SERIES_IN_PROGRESS algorithm 1`] = `
+Array [
+  Array [
+    Object {
+      "maxAge": 0,
+      "scope": "PRIVATE",
+    },
+  ],
 ]
 `;
 
