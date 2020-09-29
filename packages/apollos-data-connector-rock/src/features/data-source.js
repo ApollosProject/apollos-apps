@@ -32,8 +32,8 @@ export default class Feature extends RockApolloDataSource {
   }
 
   // eslint-disable-next-line class-methods-use-this
-  createFeatureId({ args, type }) {
-    return createGlobalId(JSON.stringify(args), type);
+  createFeatureId({ args }) {
+    return JSON.stringify(args);
   }
 
   async runAlgorithms({ algorithms }) {
@@ -76,7 +76,6 @@ export default class Feature extends RockApolloDataSource {
       // The Feature ID is based on all of the action ids, added together.
       // This is naive, and could be improved.
       id: this.createFeatureId({
-        type: 'ActionListFeature',
         args: {
           algorithms,
           title,
@@ -139,7 +138,6 @@ export default class Feature extends RockApolloDataSource {
       // The Feature ID is based on all of the action ids, added together.
       // This is naive, and could be improved.
       id: this.createFeatureId({
-        type: 'HeroListFeature',
         args: {
           algorithms,
           heroAlgorithms,
@@ -170,7 +168,6 @@ export default class Feature extends RockApolloDataSource {
       // The Feature ID is based on all of the action ids, added together.
       // This is naive, and could be improved.
       id: this.createFeatureId({
-        type: 'VerticalCardListFeature',
         args: {
           algorithms,
           title,
@@ -199,7 +196,6 @@ export default class Feature extends RockApolloDataSource {
       // The Feature ID is based on all of the action ids, added together.
       // This is naive, and could be improved.
       id: this.createFeatureId({
-        type: 'HorizontalCardListFeature',
         args: {
           algorithms,
           title,
@@ -219,7 +215,7 @@ export default class Feature extends RockApolloDataSource {
   createTextFeature({ text, id }) {
     return {
       body: text,
-      id: createGlobalId(id, 'TextFeature'),
+      id,
       __typename: 'TextFeature',
     };
   }
@@ -229,7 +225,7 @@ export default class Feature extends RockApolloDataSource {
     return {
       reference,
       version,
-      id: createGlobalId(id, 'ScriptureFeature'),
+      id,
       __typename: 'ScriptureFeature',
     };
   }
@@ -240,7 +236,6 @@ export default class Feature extends RockApolloDataSource {
       // The Feature ID is based on all of the action ids, added together.
       // This is naive, and could be improved.
       id: this.createFeatureId({
-        type: 'PrayerListFeature',
         args: {
           algorithms,
           title,
@@ -273,7 +268,7 @@ export default class Feature extends RockApolloDataSource {
       .get();
     // Map them into specific actions.
     return events.map((event, i) => ({
-      id: createGlobalId(`${event.id}${i}`, 'ActionListAction'),
+      id: `${event.id}${i}`,
       title: Event.getName(event),
       subtitle: Event.getDateTime(event.schedule).start,
       relatedNode: { ...event, __type: 'Event' },
@@ -293,7 +288,7 @@ export default class Feature extends RockApolloDataSource {
 
     // Map them into specific actions.
     return items.map((item, i) => ({
-      id: createGlobalId(`${item.id}${i}`, 'ActionListAction'),
+      id: `${item.id}${i}`,
       title: item.title,
       subtitle: get(item, 'contentChannel.name'),
       relatedNode: { ...item, __type: ContentItem.resolveType(item) },
@@ -320,7 +315,7 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
     const items = limit ? await cursor.top(limit).get() : await cursor.get();
 
     return items.map((item, i) => ({
-      id: createGlobalId(`${item.id}${i}`, 'ActionListAction'),
+      id: `${item.id}${i}`,
       title: item.title,
       subtitle: get(item, 'contentChannel.name'),
       relatedNode: { ...item, __type: ContentItem.resolveType(item) },
@@ -345,7 +340,7 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
     const items = limit ? await cursor.top(limit).get() : await cursor.get();
 
     return items.map((item, i) => ({
-      id: createGlobalId(`${item.id}${i}`, 'ActionListAction'),
+      id: `${item.id}${i}`,
       title: item.title,
       subtitle: get(item, 'contentChannel.name'),
       relatedNode: { ...item, __type: ContentItem.resolveType(item) },
@@ -384,7 +379,7 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
     );
 
     return items.map((item, i) => ({
-      id: createGlobalId(`${item.id}${i}`, 'ActionListAction'),
+      id: `${item.id}${i}`,
       title: item.title,
       subtitle: get(item, 'contentChannel.name'),
       relatedNode: { ...item, __type: ContentItem.resolveType(item) },
@@ -402,7 +397,7 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
       .get();
 
     return items.map((item, i) => ({
-      id: createGlobalId(`${item.id}${i}`, 'ActionListAction'),
+      id: `${item.id}${i}`,
       title: item.title,
       subtitle: get(item, 'contentChannel.name'),
       relatedNode: { ...item, __type: ContentItem.resolveType(item) },
@@ -421,7 +416,7 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
       .get();
 
     return items.map((item, i) => ({
-      id: createGlobalId(`${item.id}${i}`, 'ActionListAction'),
+      id: `${item.id}${i}`,
       title: item.title,
       subtitle: get(item, 'contentChannel.name'),
       relatedNode: { ...item, __type: ContentItem.resolveType(item) },

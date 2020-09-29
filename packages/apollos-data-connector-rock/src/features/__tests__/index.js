@@ -1,5 +1,5 @@
 import ApollosConfig from '@apollosproject/config';
-import { parseGlobalId } from '@apollosproject/server-core';
+import { createGlobalId } from '@apollosproject/server-core';
 
 import Feature from '../data-source';
 import resolver from '../resolver';
@@ -724,8 +724,8 @@ describe('features', () => {
         subtitle: "It's featured!",
       });
 
-      const { id } = parseGlobalId(builtFeature.id);
-      const result = await feature.getFromId(id, builtFeature.id);
+      const globalId = createGlobalId(builtFeature.id, 'ActionListFeature');
+      const result = await feature.getFromId(builtFeature.id, globalId);
 
       expect(await expandResult(result)).toMatchSnapshot();
     });
