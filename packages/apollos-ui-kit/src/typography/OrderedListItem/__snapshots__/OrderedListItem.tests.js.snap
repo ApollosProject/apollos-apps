@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`the BulletListItem component should render a loading state 1`] = `
+exports[`the OrderedListItem component should render a loading state 1`] = `
 <View
   style={
     Object {
@@ -52,7 +52,7 @@ exports[`the BulletListItem component should render a loading state 1`] = `
 </View>
 `;
 
-exports[`the BulletListItem component should render a string 1`] = `
+exports[`the OrderedListItem component should render a string 1`] = `
 <View
   style={
     Object {
@@ -80,7 +80,7 @@ exports[`the BulletListItem component should render a string 1`] = `
         }
       }
     >
-      •
+      1.
     </Text>
   </View>
   <View
@@ -108,7 +108,7 @@ exports[`the BulletListItem component should render a string 1`] = `
 </View>
 `;
 
-exports[`the BulletListItem component should render render child components 1`] = `
+exports[`the OrderedListItem component should render render child components 1`] = `
 <View
   style={
     Object {
@@ -136,7 +136,7 @@ exports[`the BulletListItem component should render render child components 1`] 
         }
       }
     >
-      •
+      1.
     </Text>
   </View>
   <View
