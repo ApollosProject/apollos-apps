@@ -90,6 +90,7 @@ class DateInput extends PureComponent {
           } // Using Date.now so we have something to mock in the tests
           minimumDate={this.props.minimumDate}
           mode={'date'}
+          display={Platform.OS === 'android' ? 'calendar' : 'spinner'}
           onConfirm={this.handleConfirm}
           onCancel={this.handleClose}
         />
