@@ -112,17 +112,26 @@ class MapView extends Component {
 
   componentDidMount() {
     this.animation.addListener(debounce(this.updateCoordinates));
+    if (this.props.userLocation && this.props.campuses.length) {
+      this.updateCoordinates({ value: this.previousScrollPosition }, 500);
+    }
   }
 
   componentDidUpdate(oldProps) {
-    // update mapview if there are campuses and the location changes
+    // Update the currentCampus state when it comes in from the network.
     if (this.props.currentCampus && !this.state.currentCampus) {
       // eslint-disable-next-line react/no-did-update-set-state
       this.setState({ currentCampus: this.props.currentCampus });
     }
+
+    // update mapview if there are campuses and the location changes
+    // or if we loaded in campuses and we already have a user location.
     if (
-      this.props.campuses.length &&
-      oldProps.userLocation !== this.props.userLocation
+      (this.props.campuses.length &&
+        oldProps.userLocation !== this.props.userLocation) ||
+      (this.props.campuses.length &&
+        !oldProps.campuses.length &&
+        this.props.userLocation)
     ) {
       this.updateCoordinates({ value: this.previousScrollPosition });
     }
@@ -145,6 +154,7 @@ class MapView extends Component {
     if (!currentCampus) {
       return campuses;
     }
+
     return [
       campuses.find(({ id }) => id === currentCampus.id),
       ...campuses.filter(({ id }) => id !== currentCampus.id),
@@ -190,11 +200,16 @@ class MapView extends Component {
           : bottomPadding,
     };
 
+    // Either the current campus or the first sorted campus with a geographic location.
     const visibleCampuses = [
-      ...(this.currentCampus ? [this.currentCampus] : this.sortedCampuses),
-    ].filter(
-      ({ latitude, longitude }) => !isNil(latitude) && !isNil(longitude)
-    );
+      ...(this.currentCampus
+        ? [this.currentCampus]
+        : [
+            this.sortedCampuses.filter(
+              ({ latitude, longitude }) => !isNil(latitude) && !isNil(longitude)
+            )[0],
+          ]),
+    ];
 
     if (userLocation) {
       // If we have a user location, we should include it in the current window
