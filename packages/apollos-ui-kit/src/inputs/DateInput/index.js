@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
-import { Animated } from 'react-native';
+import { Animated, Platforn } from 'react-native';
 import DateTimePicker from 'react-native-modal-datetime-picker';
 
 import Chip from '../../Chip';
