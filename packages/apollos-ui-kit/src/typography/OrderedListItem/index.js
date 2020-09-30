@@ -19,12 +19,12 @@ const Wrapper = styled(
   'ui-kit.Typography.OrderedListItem.Wrapper'
 )(View);
 
-const Bullet = styled(
+const Numeral = styled(
   ({ theme }) => ({
     // Set in a typographic unit to reflect changes in the default type size.
     paddingRight: theme.helpers.rem(1) / 2,
   }),
-  'ui-kit.Typography.OrderedListItem.Bullet'
+  'ui-kit.Typography.OrderedListItem.Numeral'
 )(View);
 
 const IosTextWrapFix = styled(
@@ -37,9 +37,9 @@ const IosTextWrapFix = styled(
 
 const OrderedListItem = enhance(({ children, index }) => (
   <Wrapper>
-    <Bullet>
+    <Numeral>
       <BodyText>{`${index}.`}</BodyText>
-    </Bullet>
+    </Numeral>
     <IosTextWrapFix>
       {typeof children === 'string' ? (
         <BodyText>{children}</BodyText>
