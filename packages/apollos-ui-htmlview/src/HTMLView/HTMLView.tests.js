@@ -125,6 +125,15 @@ describe('the HTMLView component', () => {
 
     expect(tree).toMatchSnapshot();
   });
+  it('should render an ordered list', () => {
+    const tree = renderer.create(
+      <Providers>
+        <HTMLView>{'<ol><li>Testings</li><li>Testings</li></ol>'}</HTMLView>
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
   it('should render a link', () => {
     const tree = renderer.create(
       <Providers>

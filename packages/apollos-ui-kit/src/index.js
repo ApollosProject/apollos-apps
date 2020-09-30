@@ -90,6 +90,7 @@ export {
   Paragraph,
   BlockQuote,
   BulletListItem,
+  OrderedListItem,
 } from './typography';
 export { getIsLoading, withIsLoading } from './isLoading';
 export Providers from './Providers';

@@ -10,3 +10,4 @@ export BodyText from './BodyText';
 export Paragraph from './Paragraph';
 export BlockQuote from './BlockQuote';
 export BulletListItem from './BulletListItem';
+export OrderedListItem from './OrderedListItem';

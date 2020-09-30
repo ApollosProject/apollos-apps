@@ -14,6 +14,7 @@ import {
   Paragraph,
   BlockQuote,
   BulletListItem,
+  OrderedListItem,
   ButtonLink,
   ConnectedImage,
 } from '@apollosproject/ui-kit';
@@ -108,6 +109,20 @@ const defaultRenderer = (node, { children }, handlePressAnchor) => {
     case 'ul':
       return <Paragraph>{children}</Paragraph>;
     case 'li':
+      if (node.parent.name === 'ol') {
+        const siblings = node.parent.children.filter(
+          ({ name }) => name === 'li'
+        );
+        // We are lucky this works.
+        // Thankfully the parser library has done the work to ensure that objects are not recreated in different contexts.
+        // Because of that, the current node and the node as represented in it's parent's children are ===
+        const selfIndex = siblings.findIndex((s) => s === node) + 1;
+        return (
+          <OrderedListItem index={selfIndex}>
+            {wrapTextChildren({ children })}
+          </OrderedListItem>
+        );
+      }
       return <BulletListItem>{wrapTextChildren({ children })}</BulletListItem>;
     case 'a': {
       let url = node.attribs && node.attribs.href;
