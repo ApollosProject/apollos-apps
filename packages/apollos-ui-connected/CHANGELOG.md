@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0-beta.1](https://github.com/apollosproject/apollos-apps/compare/v1.6.0-beta.0...v1.6.0-beta.1) (2020-09-30)
+
+
+### Bug Fixes
+
+* Removes gradient top on default card ([#1584](https://github.com/apollosproject/apollos-apps/issues/1584)) ([bf9fc8b](https://github.com/apollosproject/apollos-apps/commit/bf9fc8b))
+* Stop passing Color object into the Stylesheet ([#1579](https://github.com/apollosproject/apollos-apps/issues/1579)) ([d0df9f0](https://github.com/apollosproject/apollos-apps/commit/d0df9f0))
+
+
+### Features
+
+* Adding withTheme support to the HorizontalCardConnected ([#1586](https://github.com/apollosproject/apollos-apps/issues/1586)) ([5e5159d](https://github.com/apollosproject/apollos-apps/commit/5e5159d))
+
+
+
+
+
 # [1.6.0-beta.0](https://github.com/apollosproject/apollos-apps/compare/v1.5.0...v1.6.0-beta.0) (2020-09-21)
 
 

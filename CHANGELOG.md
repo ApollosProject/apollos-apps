@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0-beta.1](https://github.com/ApollosProject/apollos-apps/compare/v1.6.0-beta.0...v1.6.0-beta.1) (2020-09-30)
+
+
+### Bug Fixes
+
+* Adds Auth theme overrides ([#1589](https://github.com/ApollosProject/apollos-apps/issues/1589)) ([c06120a](https://github.com/ApollosProject/apollos-apps/commit/c06120a))
+* AvatarCloud improvements ([#1595](https://github.com/ApollosProject/apollos-apps/issues/1595)) ([62fdbd6](https://github.com/ApollosProject/apollos-apps/commit/62fdbd6))
+* Date picker defaults ([#1591](https://github.com/ApollosProject/apollos-apps/issues/1591)) ([215d417](https://github.com/ApollosProject/apollos-apps/commit/215d417))
+* Generate feature IDs in the resolvers, rather than in the datasources.  ([#1590](https://github.com/ApollosProject/apollos-apps/issues/1590)) ([1a75c17](https://github.com/ApollosProject/apollos-apps/commit/1a75c17))
+* Removes gradient top on default card ([#1584](https://github.com/ApollosProject/apollos-apps/issues/1584)) ([bf9fc8b](https://github.com/ApollosProject/apollos-apps/commit/bf9fc8b))
+* Scroll MapView to first campus on load ([#1596](https://github.com/ApollosProject/apollos-apps/issues/1596)) ([cd0ef4d](https://github.com/ApollosProject/apollos-apps/commit/cd0ef4d))
+* Stop passing Color object into the Stylesheet ([#1579](https://github.com/ApollosProject/apollos-apps/issues/1579)) ([d0df9f0](https://github.com/ApollosProject/apollos-apps/commit/d0df9f0))
+* Storyook bringing along RN dep ([#1585](https://github.com/ApollosProject/apollos-apps/issues/1585)) ([8a9adcc](https://github.com/ApollosProject/apollos-apps/commit/8a9adcc))
+
+
+### Features
+
+* Adding withTheme support to the HorizontalCardConnected ([#1586](https://github.com/ApollosProject/apollos-apps/issues/1586)) ([5e5159d](https://github.com/ApollosProject/apollos-apps/commit/5e5159d))
+* Feature caching support.  ([#1593](https://github.com/ApollosProject/apollos-apps/issues/1593)) ([8e65c2b](https://github.com/ApollosProject/apollos-apps/commit/8e65c2b))
+* Ordered lists ([#1597](https://github.com/ApollosProject/apollos-apps/issues/1597)) ([216dd38](https://github.com/ApollosProject/apollos-apps/commit/216dd38))
+
+
+
+
+
 # [1.6.0-beta.0](https://github.com/ApollosProject/apollos-apps/compare/v1.5.0...v1.6.0-beta.0) (2020-09-21)
 
 

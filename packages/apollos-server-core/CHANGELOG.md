@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0-beta.1](https://github.com/apollosproject/apollos-apps/compare/v1.6.0-beta.0...v1.6.0-beta.1) (2020-09-30)
+
+
+### Bug Fixes
+
+* Generate feature IDs in the resolvers, rather than in the datasources.  ([#1590](https://github.com/apollosproject/apollos-apps/issues/1590)) ([1a75c17](https://github.com/apollosproject/apollos-apps/commit/1a75c17))
+
+
+
+
+
 # [1.6.0-beta.0](https://github.com/apollosproject/apollos-apps/compare/v1.5.0...v1.6.0-beta.0) (2020-09-21)
 
 

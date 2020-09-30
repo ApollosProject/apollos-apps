@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0-beta.1](https://github.com/apollosproject/apollos-apps/compare/v1.6.0-beta.0...v1.6.0-beta.1) (2020-09-30)
+
+
+### Bug Fixes
+
+* Scroll MapView to first campus on load ([#1596](https://github.com/apollosproject/apollos-apps/issues/1596)) ([cd0ef4d](https://github.com/apollosproject/apollos-apps/commit/cd0ef4d))
+* Stop passing Color object into the Stylesheet ([#1579](https://github.com/apollosproject/apollos-apps/issues/1579)) ([d0df9f0](https://github.com/apollosproject/apollos-apps/commit/d0df9f0))
+
+
+
+
+
 # [1.6.0-beta.0](https://github.com/apollosproject/apollos-apps/compare/v1.5.0...v1.6.0-beta.0) (2020-09-21)
 
 **Note:** Version bump only for package @apollosproject/ui-mapview
