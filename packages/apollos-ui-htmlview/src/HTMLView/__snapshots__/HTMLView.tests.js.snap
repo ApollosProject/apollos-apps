@@ -661,7 +661,7 @@ exports[`the HTMLView component should handle the HTML changing: initial 1`] = `
             }
           }
         >
-          •
+          1.
         </Text>
       </View>
       <View
@@ -716,7 +716,7 @@ exports[`the HTMLView component should handle the HTML changing: initial 1`] = `
             }
           }
         >
-          •
+          2.
         </Text>
       </View>
       <View
@@ -771,7 +771,7 @@ exports[`the HTMLView component should handle the HTML changing: initial 1`] = `
             }
           }
         >
-          •
+          3.
         </Text>
       </View>
       <View
@@ -826,7 +826,7 @@ exports[`the HTMLView component should handle the HTML changing: initial 1`] = `
             }
           }
         >
-          •
+          4.
         </Text>
       </View>
       <View
@@ -1810,6 +1810,129 @@ exports[`the HTMLView component should render an image 1`] = `
 </View>
 `;
 
+exports[`the HTMLView component should render an ordered list 1`] = `
+<View
+  style={
+    Object {
+      "paddingBottom": 18,
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "paddingBottom": 9,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "paddingRight": 8,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          1.
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexShrink": 1,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text>
+            Testings
+          </Text>
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "paddingBottom": 9,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "paddingRight": 8,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          2.
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexShrink": 1,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text>
+            Testings
+          </Text>
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
 exports[`the HTMLView component should render bold text 1`] = `
 <View
   style={
@@ -2571,7 +2694,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
             }
           }
         >
-          •
+          1.
         </Text>
       </View>
       <View
@@ -2626,7 +2749,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
             }
           }
         >
-          •
+          2.
         </Text>
       </View>
       <View
@@ -2681,7 +2804,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
             }
           }
         >
-          •
+          3.
         </Text>
       </View>
       <View
@@ -2736,7 +2859,7 @@ exports[`the HTMLView component should render example HTML 1`] = `
             }
           }
         >
-          •
+          4.
         </Text>
       </View>
       <View
