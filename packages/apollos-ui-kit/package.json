@@ -46,7 +46,7 @@
   "peerDependencies": {
     "@apollosproject/storybook": "*",
     "@apollosproject/ui-media-player": "*",
-    "@react-native-community/datetimepicker": "*",
+    "@react-native-community/datetimepicker": "^3.0.2",
     "react": "*",
     "react-native": "*",
     "react-native-gesture-handler": "*",
@@ -67,7 +67,7 @@
     "rn-placeholder": "1.2.0"
   },
   "devDependencies": {
-    "@react-native-community/datetimepicker": "2.4.0",
+    "@react-native-community/datetimepicker": "3.0.2",
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
