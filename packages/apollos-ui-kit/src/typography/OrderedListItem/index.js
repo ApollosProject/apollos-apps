@@ -7,7 +7,7 @@ import styled from '../../styled';
 import BodyText from '../BodyText';
 
 const enhance = compose(
-  setDisplayName('BulletListItem'),
+  setDisplayName('OrderedListItem'),
   pure
 );
 

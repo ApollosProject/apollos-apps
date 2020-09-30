@@ -114,7 +114,8 @@ const defaultRenderer = (node, { children }, handlePressAnchor) => {
           ({ name }) => name === 'li'
         );
         // We are lucky this works.
-        // Thankfully the parser library has done the work to ensure that objects are recreated in different contexts.
+        // Thankfully the parser library has done the work to ensure that objects are not recreated in different contexts.
+        // Because of that, the current node and the node as represented in it's parent's children are ===
         const selfIndex = siblings.findIndex((s) => s === node) + 1;
         return (
           <OrderedListItem index={selfIndex}>
