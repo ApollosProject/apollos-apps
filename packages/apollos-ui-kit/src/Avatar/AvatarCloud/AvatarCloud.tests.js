@@ -27,6 +27,15 @@ describe('The AvatarCloud component', () => {
 
     expect(tree).toMatchSnapshot();
   });
+  it('should render as radial', () => {
+    const tree = renderer.create(
+      <Providers>
+        <AvatarCloud avatars={avatars} radial />
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
   it('should render without blur effect', () => {
     const tree = renderer.create(
       <Providers>
