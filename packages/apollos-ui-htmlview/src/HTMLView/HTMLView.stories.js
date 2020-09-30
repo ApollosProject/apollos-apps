@@ -45,6 +45,17 @@ storiesOf('ui-htmlview/HTMLView', module)
       </SafeAreaView>
     </ScrollView>
   ))
+  .add('ul / ol', () => (
+    <ScrollView>
+      <SafeAreaView>
+        <HTMLView>
+          {
+            '<p><h1>Ordered List</h1><ol>\n\t<li>Turn your phone off, leave it in the car, or put it in airplane mode. Habitual notification checks can take a break.</li>\n\t<li>Talk about something other than yourself. Ask someone else about their life (job, school, kids).</li>\n\t<li>Look for opportunities to encourage someone. Ask the Holy Spirit to speak through you and help you love people.</li>\n\t<li>Ask Jesus to keep your heart interested and engaged in what really matters. He wants to help!</li>\n</ol></p><p><ul>\n\t<h1>Unordered List</h1><li>Turn your phone off, leave it in the car, or put it in airplane mode. Habitual notification checks can take a break.</li>\n\t<li>Talk about something other than yourself. Ask someone else about their life (job, school, kids).</li>\n\t<li>Look for opportunities to encourage someone. Ask the Holy Spirit to speak through you and help you love people.</li>\n\t<li>Ask Jesus to keep your heart interested and engaged in what really matters. He wants to help!</li>\n</ul></p>'
+          }
+        </HTMLView>
+      </SafeAreaView>
+    </ScrollView>
+  ))
   .add('bad html text', () => (
     <ScrollView>
       <SafeAreaView>
