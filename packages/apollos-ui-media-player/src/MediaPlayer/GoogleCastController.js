@@ -1,4 +1,5 @@
 import React from 'react';
+import gql from 'graphql-tag';
 import { Animated, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
@@ -40,6 +41,10 @@ class Controller extends React.Component {
   componentDidMount() {
     // get Google Cast state on mount
     GoogleCast.getCastState().then((state) => {
+      const isAvailable = state !== 'NoDevicesAvailable';
+      this.props.client.mutate({
+        mutation: gql`mutation {mediaPlayerUpdateState(isCastAvailable: ${isAvailable}) @client }`,
+      });
       if (state === 'Connected') {
         this.props.client.mutate({ mutation: CAST_CONNECTED });
         this.props.onLoad({ duration: 0 });
