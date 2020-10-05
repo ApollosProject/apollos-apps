@@ -41,9 +41,9 @@ class Controller extends React.Component {
   componentDidMount() {
     // get Google Cast state on mount
     GoogleCast.getCastState().then((state) => {
-      const isAvailable = state !== 'NoDevicesAvailable';
+      const noDevices = state === 'NoDevicesAvailable';
       this.props.client.mutate({
-        mutation: gql`mutation {mediaPlayerUpdateState(isCastAvailable: ${isAvailable}) @client }`,
+        mutation: gql`mutation {mediaPlayerUpdateState(isCastAvailable: ${!noDevices}) @client }`,
       });
       if (state === 'Connected') {
         this.props.client.mutate({ mutation: CAST_CONNECTED });
