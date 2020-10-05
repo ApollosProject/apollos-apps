@@ -204,12 +204,10 @@ class MapView extends Component {
     const visibleCampuses = [
       ...(this.currentCampus
         ? [this.currentCampus]
-        : [
-            this.sortedCampuses.filter(
-              ({ latitude, longitude }) => !isNil(latitude) && !isNil(longitude)
-            )[0],
-          ]),
-    ];
+        : this.sortedCampuses.slice(0, 1)),
+    ].filter(
+      ({ latitude, longitude }) => !isNil(latitude) && !isNil(longitude)
+    );
 
     if (userLocation) {
       // If we have a user location, we should include it in the current window
