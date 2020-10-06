@@ -10,6 +10,7 @@ export const defaults = {
   currentTrack: null,
   isPlaying: false,
   isCasting: false,
+  isCastAvailable: false,
   isFullscreen: false,
   isVisible: false,
   currentTime: 0,
@@ -26,6 +27,7 @@ type MediaPlayerState {
   currentTrack: MediaPlayerTrack
   isPlaying: Boolean
   isCasting: Boolean
+  isCastAvailable: Boolean
   isFullscreen: Boolean
   isVisible: Boolean
   currentTime: Float
@@ -88,6 +90,7 @@ export const resolvers = {
         __typename: 'MediaPlayerState',
         isPlaying: true,
         isCasting: false,
+        isCastAvailable: false,
         isVisible: true,
         isFullscreen: mediaTrack.isVideo
           ? true
@@ -132,7 +135,15 @@ export const resolvers = {
     },
     mediaPlayerUpdateState: (
       root,
-      { isPlaying, isCasting, isFullscreen, isVisible, showVideo, muted },
+      {
+        isPlaying,
+        isCasting,
+        isCastAvailable,
+        isFullscreen,
+        isVisible,
+        showVideo,
+        muted,
+      },
       { cache }
     ) => {
       const query = gql`
@@ -140,6 +151,7 @@ export const resolvers = {
           mediaPlayer @client {
             isPlaying
             isCasting
+            isCastAvailable
             isFullscreen
             isVisible
             showVideo
@@ -154,6 +166,7 @@ export const resolvers = {
           mediaPlayer: merge(mediaPlayer, {
             isPlaying,
             isCasting,
+            isCastAvailable,
             isFullscreen,
             isVisible,
             showVideo,

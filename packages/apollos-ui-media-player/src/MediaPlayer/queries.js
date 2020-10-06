@@ -25,6 +25,7 @@ const GET_FULL_VISIBILITY_STATE = gql`
       isVisible
       isFullscreen
       isCasting
+      isCastAvailable
     }
   }
 `;

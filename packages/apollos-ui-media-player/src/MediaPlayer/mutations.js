@@ -91,6 +91,12 @@ const CAST_DISCONNECTED = gql`
   }
 `;
 
+const UPDATE_CAST_AVAILABLE = gql`
+  mutation updateCastAvailable($isCastAvailable: Boolean) {
+    mediaPlayerUpdateState(isCastAvailable: $isCastAvailable) @client
+  }
+`;
+
 const UPDATE_PLAYHEAD = gql`
   mutation mediaPlayerSetPlayhead($currentTime: Float) {
     mediaPlayerSetPlayhead(currentTime: $currentTime) @client
@@ -112,4 +118,5 @@ export {
   HIDE_VIDEO,
   CAST_CONNECTED,
   CAST_DISCONNECTED,
+  UPDATE_CAST_AVAILABLE,
 };

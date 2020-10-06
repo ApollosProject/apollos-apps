@@ -187,7 +187,11 @@ class FullscreenPlayer extends PureComponent {
   ]);
 
   renderCover = ({ data: { mediaPlayer = {} } = {} }) => {
-    const { isFullscreen = false, isCasting = false } = mediaPlayer;
+    const {
+      isFullscreen = false,
+      isCasting = false,
+      isCastAvailable = false,
+    } = mediaPlayer;
 
     Animated.spring(this.fullscreen, {
       toValue: isFullscreen ? 1 : 0,
@@ -234,7 +238,7 @@ class FullscreenPlayer extends PureComponent {
             showAudioToggleControl={this.props.showAudioToggleControl}
             showVideoToggleControl={this.props.showVideoToggleControl}
             airPlayEnabled={this.props.airPlayEnabled}
-            googleCastEnabled={this.props.googleCastEnabled}
+            googleCastEnabled={this.props.googleCastEnabled && isCastAvailable}
             isCasting={isCasting}
           />
         </Animated.View>
