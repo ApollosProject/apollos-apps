@@ -112,7 +112,11 @@ class MapView extends Component {
 
   componentDidMount() {
     this.animation.addListener(debounce(this.updateCoordinates));
-    if (this.props.userLocation && this.props.campuses.length) {
+    if (
+      this.props.userLocation &&
+      this.props.campuses.length &&
+      Platform.OS === 'ios' // Updating coordinates in didMount crashes on Android. https://github.com/react-native-maps/react-native-maps/blob/master/docs/mapview.md#methods
+    ) {
       this.updateCoordinates({ value: this.previousScrollPosition }, 500);
     }
   }
