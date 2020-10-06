@@ -5,7 +5,13 @@ import PropTypes from 'prop-types';
 import { get } from 'lodash';
 import GoogleCast from 'react-native-google-cast';
 import { Query } from 'react-apollo';
-import { PLAY, PAUSE, CAST_CONNECTED, CAST_DISCONNECTED } from './mutations';
+import {
+  PLAY,
+  PAUSE,
+  CAST_CONNECTED,
+  CAST_DISCONNECTED,
+  UPDATE_CAST_AVAILABLE,
+} from './mutations';
 import { GET_CAST_INFO } from './queries';
 import { ControlsConsumer } from './PlayheadState';
 
@@ -43,7 +49,8 @@ class Controller extends React.Component {
     GoogleCast.getCastState().then((state) => {
       const noDevices = state === 'NoDevicesAvailable';
       this.props.client.mutate({
-        mutation: gql`mutation {mediaPlayerUpdateState(isCastAvailable: ${!noDevices}) @client }`,
+        mutation: UPDATE_CAST_AVAILABLE,
+        variables: { isCastAvailable: !noDevices },
       });
       if (state === 'Connected') {
         this.props.client.mutate({ mutation: CAST_CONNECTED });
