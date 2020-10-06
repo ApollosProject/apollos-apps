@@ -1,5 +1,4 @@
 import React from 'react';
-import gql from 'graphql-tag';
 import { Animated, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
