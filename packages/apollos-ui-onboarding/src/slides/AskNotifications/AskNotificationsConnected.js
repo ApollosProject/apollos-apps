@@ -1,5 +1,4 @@
 import React, { memo } from 'react';
-import { Platform } from 'react-native';
 import PropTypes from 'prop-types';
 import { NotificationsConsumer } from '@apollosproject/ui-notifications';
 
@@ -31,7 +30,7 @@ const AskNotificationsConnected = memo(
         // Android has no concept of push prompt, notifications enabled by default.
         // so we'll just show them it's enabled and allow to proceed
         const ready =
-          Platform.OS === 'ios'
+          value.hasPrompted === undefined
             ? value.hasPushPermission || value.hasPrompted
             : value.hasPushPermission;
 
