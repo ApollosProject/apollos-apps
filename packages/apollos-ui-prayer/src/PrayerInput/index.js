@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TextInput, View } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 import PropTypes from 'prop-types';
 
 import {
@@ -69,6 +70,21 @@ const PrayerInput = ({
 }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [prayer, setPrayer] = useState('');
+  const [timer, setTimer] = useState(null);
+
+  // get current prayer from storage
+  useEffect(() => {
+    // hooks can't return promises, so we need a proxy
+    const getPrayer = async () => {
+      try {
+        const text = await AsyncStorage.getItem('currentPrayer');
+        setPrayer(text || '');
+      } catch (e) {
+        console.error(e);
+      }
+    };
+    getPrayer();
+  }, []);
 
   // eslint-disable-next-line consistent-return
   const handleOnBlur = () => {
@@ -87,10 +103,23 @@ const PrayerInput = ({
 
   const handleOnChangeText = (text) => {
     setPrayer(text);
+
+    // autosave after 3 sec
+    // check for existing timeout, clear it, and set a new one
+    clearTimeout(timer);
+    const newTimer = setTimeout(() => {
+      try {
+        AsyncStorage.setItem('currentPrayer', text);
+      } catch (e) {
+        console.error(e);
+      }
+    }, 3000);
+    setTimer(newTimer);
+
     return onChangeText && onChangeText(text);
   };
 
-  return !isEditing ? (
+  return !isEditing && prayer === '' ? (
     <Touchable onPress={handleOnPress}>
       <Prompt>
         <PromptIcon />
