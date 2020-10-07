@@ -33,7 +33,6 @@ const AskNotificationsConnected = memo(
         const ready =
           Platform.OS === 'ios' ? value.hasPrompted : value.hasPushPermission;
 
-        console.log(value);
         return (
           <Component
             isLoading={value.loading}
