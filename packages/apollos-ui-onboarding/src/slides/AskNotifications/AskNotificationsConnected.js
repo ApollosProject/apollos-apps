@@ -32,7 +32,7 @@ const AskNotificationsConnected = memo(
         // so we'll just show them it's enabled and allow to proceed
         const ready =
           Platform.OS === 'ios'
-            ? value.hasPushPermisson || value.hasPrompted
+            ? value.hasPushPermission || value.hasPrompted
             : value.hasPushPermission;
 
         return (
