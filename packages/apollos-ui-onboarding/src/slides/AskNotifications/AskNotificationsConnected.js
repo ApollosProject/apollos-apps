@@ -31,7 +31,9 @@ const AskNotificationsConnected = memo(
         // Android has no concept of push prompt, notifications enabled by default.
         // so we'll just show them it's enabled and allow to proceed
         const ready =
-          Platform.OS === 'ios' ? value.hasPrompted : value.hasPushPermission;
+          Platform.OS === 'ios'
+            ? value.hasPushPermisson || value.hasPrompted
+            : value.hasPushPermission;
 
         return (
           <Component
