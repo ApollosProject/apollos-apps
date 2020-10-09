@@ -4,7 +4,7 @@ exports[`Campus gets a campus by id 1`] = `
 Object {
   "data": Object {
     "node": Object {
-      "city": "",
+      "city": "When there's one",
       "distanceFromLocation": null,
       "id": "Campus:965b6e6d7046a885bea4e300b5c0400d",
       "image": Object {
@@ -14,9 +14,9 @@ Object {
       "longitude": -96.74738,
       "name": "Dallas Campus",
       "postalCode": "",
-      "state": "",
-      "street1": "",
-      "street2": "",
+      "state": "we'll let you know!",
+      "street1": "No locations near you. ",
+      "street2": null,
     },
   },
 }
@@ -26,7 +26,7 @@ exports[`Campus gets a campus by id 2`] = `
 Object {
   "data": Object {
     "node": Object {
-      "city": "",
+      "city": "When there's one",
       "distanceFromLocation": null,
       "id": "Campus:965b6e6d7046a885bea4e300b5c0400d",
       "image": Object {
@@ -36,9 +36,9 @@ Object {
       "longitude": -96.74738,
       "name": "Dallas Campus",
       "postalCode": "",
-      "state": "",
-      "street1": "",
-      "street2": "",
+      "state": "we'll let you know!",
+      "street1": "No locations near you. ",
+      "street2": null,
     },
   },
 }
@@ -48,7 +48,7 @@ exports[`Campus gets a campus by id with location 1`] = `
 Object {
   "data": Object {
     "node": Object {
-      "city": "",
+      "city": "When there's one",
       "distanceFromLocation": 852.2263712532958,
       "id": "Campus:965b6e6d7046a885bea4e300b5c0400d",
       "image": Object {
@@ -58,9 +58,9 @@ Object {
       "longitude": -96.74738,
       "name": "Dallas Campus",
       "postalCode": "",
-      "state": "",
-      "street1": "",
-      "street2": "",
+      "state": "we'll let you know!",
+      "street1": "No locations near you. ",
+      "street2": null,
     },
   },
 }
@@ -156,7 +156,7 @@ Object {
         "postalCode": "",
         "state": "we'll let you know!",
         "street1": "No locations near you. ",
-        "street2": "",
+        "street2": null,
       },
     ],
   },
@@ -305,7 +305,7 @@ Object {
         "postalCode": "",
         "state": "we'll let you know!",
         "street1": "No locations near you. ",
-        "street2": "",
+        "street2": null,
       },
     ],
   },
@@ -329,7 +329,7 @@ Object {
         "postalCode": "",
         "state": "we'll let you know!",
         "street1": "No locations near you. ",
-        "street2": "",
+        "street2": null,
       },
       Object {
         "city": "South Barrington",
@@ -429,7 +429,7 @@ Object {
 exports[`Campus gets current user's campus 2`] = `
 Array [
   Array [
-    "/Groups/GetFamilies/51?loadAttributes=expanded&%24expand=Campus%2CCampus%2FLocation%2CCampus%2FLocation%2FImage&%24top=1",
+    "/Groups/GetFamilies/51?loadAttributes=expanded&%24expand=Campus%2CCampus%2FLocation%2CCampus%2FCampusTypeValue%2CCampus%2FLocation%2FImage&%24top=1",
     Object {},
     Object {},
   ],
@@ -456,7 +456,7 @@ Object {
 exports[`Campus gets current user's campus 4`] = `
 Array [
   Array [
-    "/Groups/GetFamilies/51?loadAttributes=expanded&%24expand=Campus%2CCampus%2FLocation%2CCampus%2FLocation%2FImage&%24top=1",
+    "/Groups/GetFamilies/51?loadAttributes=expanded&%24expand=Campus%2CCampus%2FLocation%2CCampus%2FCampusTypeValue%2CCampus%2FLocation%2FImage&%24top=1",
     Object {},
     Object {},
   ],
@@ -478,7 +478,7 @@ Object {
 exports[`Campus returns null if a user has no campus 2`] = `
 Array [
   Array [
-    "/Groups/GetFamilies/51?loadAttributes=expanded&%24expand=Campus%2CCampus%2FLocation%2CCampus%2FLocation%2FImage&%24top=1",
+    "/Groups/GetFamilies/51?loadAttributes=expanded&%24expand=Campus%2CCampus%2FLocation%2CCampus%2FCampusTypeValue%2CCampus%2FLocation%2FImage&%24top=1",
     Object {},
     Object {},
   ],
@@ -502,7 +502,7 @@ Object {
         "postalCode": "",
         "state": "A state of being",
         "street1": "Test street",
-        "street2": "",
+        "street2": null,
       },
       Object {
         "city": "South Barrington",
@@ -603,7 +603,7 @@ Array [
     Object {},
   ],
   Array [
-    "/Groups/GetFamilies/51?loadAttributes=expanded&%24expand=Campus%2CCampus%2FLocation%2CCampus%2FLocation%2FImage&%24top=1",
+    "/Groups/GetFamilies/51?loadAttributes=expanded&%24expand=Campus%2CCampus%2FLocation%2CCampus%2FCampusTypeValue%2CCampus%2FLocation%2FImage&%24top=1",
     Object {},
     Object {},
   ],
