@@ -29,20 +29,9 @@ export default class Campus extends RockApolloDataSource {
   getByLocation = async ({ latitude, longitude } = {}) => {
     let campuses = await this.getAll();
 
-    const onlineCampuses = campuses
-      .filter(({ campusTypeValue }) => campusTypeValue?.value === 'Online')
-      .map((campus) => ({
-        ...campus,
-        location: {
-          ...campus.location,
-          ...get(ApollosConfig, 'REMOTE_CAMPUS.FIELDS', {
-            street1: 'No locations near you. ',
-            city: "When there's one",
-            state: "we'll let you know!",
-            postalCode: '',
-          }),
-        },
-      }));
+    const onlineCampuses = campuses.filter(
+      ({ campusTypeValue }) => campusTypeValue?.value === 'Online'
+    );
     campuses = campuses.filter(
       ({ campusTypeValue }) => campusTypeValue?.value !== 'Online'
     );
@@ -76,6 +65,7 @@ export default class Campus extends RockApolloDataSource {
     const family = await this.request(`/Groups/GetFamilies/${personId}`)
       .expand('Campus')
       .expand('Campus/Location')
+      .expand('Campus/CampusTypeValue')
       .expand('Campus/Location/Image')
       .first();
 
@@ -88,6 +78,24 @@ export default class Campus extends RockApolloDataSource {
       return family.campus;
     }
     return null;
+  };
+
+  REMOTE_CAMPUS_FIELDS = {
+    street1: 'No locations near you. ',
+    city: "When there's one",
+    state: "we'll let you know!",
+    postalCode: '',
+  };
+
+  getCampusField = ({ field, root }) => {
+    if (root.campusTypeValue?.value === 'Online') {
+      return get(
+        ApollosConfig,
+        `REMOTE_CAMPUS.FIELDS.${field}`,
+        this.REMOTE_CAMPUS_FIELDS[field]
+      );
+    }
+    return root.location[field];
   };
 
   updateCurrentUserCampus = async ({ campusId }) => {
