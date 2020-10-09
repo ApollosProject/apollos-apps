@@ -16,15 +16,15 @@ export default {
     latitude: ({ location }) => location.latitude,
     longitude: ({ location }) => location.longitude,
     postalCode: (root, args, { dataSources: { Campus } }) =>
-      Campus.getCampusField({ field: 'postalCode', root }),
+      Campus.getAddressField({ field: 'postalCode', root }),
     city: (root, args, { dataSources: { Campus } }) =>
-      Campus.getCampusField({ field: 'city', root }),
+      Campus.getAddressField({ field: 'city', root }),
     state: (root, args, { dataSources: { Campus } }) =>
-      Campus.getCampusField({ field: 'state', root }),
+      Campus.getAddressField({ field: 'state', root }),
     street1: (root, args, { dataSources: { Campus } }) =>
-      Campus.getCampusField({ field: 'street1', root }),
+      Campus.getAddressField({ field: 'street1', root }),
     street2: (root, args, { dataSources: { Campus } }) =>
-      Campus.getCampusField({ field: 'street2', root }),
+      Campus.getAddressField({ field: 'street2', root }),
     image: ({ location }) =>
       location.image
         ? {

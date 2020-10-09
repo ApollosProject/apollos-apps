@@ -80,19 +80,19 @@ export default class Campus extends RockApolloDataSource {
     return null;
   };
 
-  REMOTE_CAMPUS_FIELDS = {
+  ONLINE_CAMPUS_FIELDS = {
     street1: 'No locations near you. ',
     city: "When there's one",
     state: "we'll let you know!",
     postalCode: '',
   };
 
-  getCampusField = ({ field, root }) => {
+  getAddressField = ({ field, root }) => {
     if (root.campusTypeValue?.value === 'Online') {
-      return get(
-        ApollosConfig,
-        `REMOTE_CAMPUS.FIELDS.${field}`,
-        this.REMOTE_CAMPUS_FIELDS[field]
+      return (
+        get(ApollosConfig, `ONLINE_CAMPUS.FIELDS.${field}`) ||
+        get(ApollosConfig, `REMOTE_CAMPUS.FIELDS.${field}`) ||
+        this.ONLINE_CAMPUS_FIELDS[field]
       );
     }
     return root.location[field];
