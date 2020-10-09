@@ -91,6 +91,7 @@ export default class Campus extends RockApolloDataSource {
     if (root.campusTypeValue?.value === 'Online') {
       return (
         get(ApollosConfig, `ONLINE_CAMPUS.FIELDS.${field}`) ||
+        // TODO: deprecated, use ONLINE_CAMPUS_FIELDS and swap in config yaml
         get(ApollosConfig, `REMOTE_CAMPUS.FIELDS.${field}`) ||
         this.ONLINE_CAMPUS_FIELDS[field]
       );
