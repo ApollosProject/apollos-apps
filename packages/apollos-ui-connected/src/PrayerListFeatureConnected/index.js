@@ -19,18 +19,26 @@ function PrayerFeatureConnected({
 }) {
   const [modalOpened, setModalOpened] = useState(false);
   const [swiperIndex, setSwiperIndex] = useState(0);
+  // returns current state value and function to update; inital state set for first render
   const [shouldShowOnboarding, setShouldShowOnboarding] = useState(false);
+  // what is default/inital state of onboardingKey??
   const onboardingKey = `${featureId}-seenOnboarding`;
 
+  // like componentDidMount, componentDidUpdate
   useEffect(() => {
     (async () => {
       const hasSeenOnboarding = await AsyncStorage.getItem(onboardingKey);
       setShouldShowOnboarding(!hasSeenOnboarding);
     })();
-  });
+  // passing an empty array so no dependencies specified when the effect should execute
+  },[]);
 
   const handleOpenTo = (index = 0) => {
     setSwiperIndex(index);
+    // if (AsyncStorage.getItem(onboardingKey) === 'NO') {
+    //   return shouldShowOnboarding
+    // }
+    // else
     AsyncStorage.setItem(onboardingKey, 'YES');
     setModalOpened(true);
   };
