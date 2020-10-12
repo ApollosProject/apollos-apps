@@ -1,5 +1,6 @@
 import { get } from 'lodash';
 import { createGlobalId } from '@apollosproject/server-core';
+import ApollosConfig from '@apollosproject/config';
 
 export default {
   WeekendContentItem: {
@@ -47,7 +48,12 @@ export default {
   },
   Query: {
     userFeedFeatures: async (root, args, { dataSources: { Feature } }) =>
-      Feature.getHomeFeedFeatures(),
+      console.warn('getHomeFeedFeatures is deprecated. Use getFeedFeatures.') ||
+      Feature.getHomeFeedFeatures(get(ApollosConfig, 'HOME_FEATURES', [])),
+    homeFeedFeatures: async (root, args, { dataSources: { Feature } }) =>
+      Feature.getFeedFeatures(get(ApollosConfig, 'HOME_FEATURES', [])),
+    discoverFeedFeatures: async (root, args, { dataSources: { Feature } }) =>
+      Feature.getFeedFeatures(get(ApollosConfig, 'DISCOVER_FEATURES', [])),
   },
   ActionListFeature: {
     id: ({ id }) => createGlobalId(id, 'ActionListFeature'),

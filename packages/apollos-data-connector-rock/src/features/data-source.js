@@ -450,9 +450,12 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
       .join('\n\n');
   }
 
-  async getHomeFeedFeatures() {
+  // deprecated
+  getHomeFeedFeatures = this.getFeedFeatures.bind(this);
+
+  async getFeedFeatures(featuresConfig = []) {
     return Promise.all(
-      get(ApollosConfig, 'HOME_FEATURES', []).map((featureConfig) => {
+      featuresConfig.map((featureConfig) => {
         switch (featureConfig.type) {
           case 'VerticalCardList':
             return this.createVerticalCardListFeature(featureConfig);
