@@ -906,24 +906,32 @@ export const featuresSchema = gql`
     url: String
   }
 
-  extend type WeekendContentItem {
+  type FeatureFeed implements Node {
+    id: ID!
     features: [Feature]
   }
 
   interface FeaturesNode {
-    features: [Feature]
+    features: [Feature] @deprecated(reason: "Use featureFeed")
+    featureFeed: FeatureFeed
   }
 
-  extend type WeekendContentItem implements FeaturesNode
-
-  extend type ContentSeriesContentItem {
-    features: [Feature]
+  extend type WeekendContentItem implements FeaturesNode {
+    features: [Feature] @deprecated(reason: "Use featureFeed")
+    featureFeed: FeatureFeed
   }
 
-  extend type ContentSeriesContentItem implements FeaturesNode
+  extend type ContentSeriesContentItem implements FeaturesNode {
+    features: [Feature] @deprecated(reason: "Use featureFeed")
+    featureFeed: FeatureFeed
+  }
 
   extend type Query {
-    userFeedFeatures: [Feature] @cacheControl(maxAge: 0)
+    userFeedFeatures: [Feature]
+      @cacheControl(maxAge: 0)
+      @deprecated(reason: "Use homeFeedFeatures or discoverFeedFeatures")
+    homeFeedFeatures: [Feature] @cacheControl(maxAge: 0)
+    discoverFeedFeatures: [Feature] @cacheControl(maxAge: 0)
   }
 `;
 
