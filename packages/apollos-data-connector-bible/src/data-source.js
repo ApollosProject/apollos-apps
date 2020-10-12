@@ -64,6 +64,7 @@ export default class Scripture extends RESTDataSource {
         version: safeVersion,
       }));
     }
+    console.warn(`No scripture returned, query: ${query} may be invalid`);
     return [];
   }
 }
