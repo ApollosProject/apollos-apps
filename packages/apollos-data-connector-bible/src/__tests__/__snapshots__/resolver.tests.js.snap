@@ -14,6 +14,18 @@ Object {
 }
 `;
 
+exports[`Scripture returns a single verse 2`] = `
+Array [
+  "9879dbb7cfe39e4d-01/search?query=SNG.1.1",
+  null,
+  Object {
+    "cacheOptions": Object {
+      "ttl": 86400,
+    },
+  },
+]
+`;
+
 exports[`Scripture returns a verse as by node 1`] = `
 Object {
   "data": Object {
