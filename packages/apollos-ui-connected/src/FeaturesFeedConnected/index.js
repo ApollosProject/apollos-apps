@@ -1,6 +1,9 @@
-import FeaturesFeedConnected from './FeaturesFeedConnected';
+import FeaturesFeedConnected, {
+  ACTION_MAP as FEATURE_FEED_ACTION_MAP,
+} from './FeaturesFeedConnected';
+import GET_FEATURE_FEED from './getFeatureFeed';
 
 export featuresFeedComponentMapper from './featuresFeedComponentMapper';
-export GET_FEED_FEATURES from './getFeedFeatures';
 
+export { GET_FEATURE_FEED, GET_FEATURE_FEED as GET_FEED_FEATURES };
 export default FeaturesFeedConnected;
