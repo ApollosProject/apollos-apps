@@ -452,7 +452,9 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
 
   // deprecated
   getHomeFeedFeatures = () =>
-    this.getFeatures(get(ApollosConfig, 'HOME_FEATURES', []));
+    console.warn(
+      'getHomeFeedFeatures is deprecated, please use FeatureFeed.getFeed({type: "apollosConfig", args: {"section": "home"}})'
+    ) || this.getFeatures(get(ApollosConfig, 'HOME_FEATURES', []));
 
   getFeatures = async (featuresConfig = []) => {
     return Promise.all(
