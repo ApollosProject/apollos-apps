@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeatureFeed should query the home feed 1`] = `
+Object {
+  "errors": Array [
+    [GraphQLError: Syntax Error: Unexpected Name "homeFeedFeatures"],
+  ],
+}
+`;
