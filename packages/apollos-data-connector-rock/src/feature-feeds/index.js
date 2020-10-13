@@ -24,10 +24,7 @@ const resolver = {
 
 class FeatureFeed extends RockApolloDataSource {
   getFromId = (id) => {
-    const {
-      id: { type, args },
-    } = parseGlobalId(id);
-    return this.getFeed({ type, args });
+    return this.getFeed(JSON.parse(id));
   };
 
   getFeed = ({ type = '', args = {} }) => {
@@ -41,10 +38,12 @@ class FeatureFeed extends RockApolloDataSource {
 
     return {
       __typename: 'FeatureFeed',
-      id: createGlobalId({ type, args }, 'FeatureFeed'),
+      id: createGlobalId(JSON.stringify({ type, args }), 'FeatureFeed'),
+      // Defer parsing of feature feed if not requested in gql.
+      // Useful if the config comes from the network.
       getFeatures: () => Feature.getFeatures(config),
     };
   };
 }
 
-export default { resolver, dataSource: FeatureFeed };
+export { resolver, FeatureFeed as dataSource };
