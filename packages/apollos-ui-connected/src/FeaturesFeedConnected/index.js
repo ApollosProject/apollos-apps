@@ -5,5 +5,9 @@ import GET_FEATURE_FEED from './getFeatureFeed';
 
 export featuresFeedComponentMapper from './featuresFeedComponentMapper';
 
-export { GET_FEATURE_FEED, GET_FEATURE_FEED as GET_FEED_FEATURES };
+export {
+  FEATURE_FEED_ACTION_MAP,
+  GET_FEATURE_FEED,
+  GET_FEATURE_FEED as GET_FEED_FEATURES,
+};
 export default FeaturesFeedConnected;

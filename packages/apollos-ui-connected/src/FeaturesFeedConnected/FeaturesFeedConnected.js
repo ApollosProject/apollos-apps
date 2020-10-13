@@ -88,6 +88,18 @@ class FeaturesFeedConnected extends PureComponent {
 
   render() {
     const { Component, onPressActionItem, nodeId, ...props } = this.props;
+    // Early return if we don't have a nodeId.
+    if (!nodeId) {
+      return (
+        <FeedView
+          loadingStateData={this.loadingStateData}
+          renderItem={this.renderFeatures}
+          loading
+          refetch={this.refetch}
+          {...props}
+        />
+      );
+    }
     return (
       <Query
         query={GET_FEATURE_FEED}
@@ -96,7 +108,7 @@ class FeaturesFeedConnected extends PureComponent {
       >
         {({ error, data, loading, refetch }) => {
           const features = get(data, 'node.features', []);
-          console.log(data);
+
           this.refetchRef({ refetch, id: 'feed' });
           return (
             <FeedView
