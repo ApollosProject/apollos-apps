@@ -451,9 +451,10 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
   }
 
   // deprecated
-  getHomeFeedFeatures = this.getFeedFeatures.bind(this);
+  getHomeFeedFeatures = () =>
+    this.getFeatures(get(ApollosConfig, 'HOME_FEATURES', []));
 
-  async getFeedFeatures(featuresConfig = []) {
+  getFeatures = async (featuresConfig = []) => {
     return Promise.all(
       featuresConfig.map((featureConfig) => {
         switch (featureConfig.type) {
@@ -477,5 +478,5 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
         }
       })
     );
-  }
+  };
 }
