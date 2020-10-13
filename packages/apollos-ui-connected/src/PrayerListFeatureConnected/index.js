@@ -20,28 +20,39 @@ function PrayerFeatureConnected({
   const [modalOpened, setModalOpened] = useState(false);
   const [swiperIndex, setSwiperIndex] = useState(0);
   // returns current state value and function to update; inital state set for first render
-  const [shouldShowOnboarding, setShouldShowOnboarding] = useState(false);
+  const [shouldShowOnboarding, setShouldShowOnboarding] = useState(true);
   // what is default/inital state of onboardingKey??
-  // const onboardingKey = `${featureId}-seenOnboarding`;
+  const onboardingKey = `${featureId}-seenOnboarding`;
 
-  // // like componentDidMount, componentDidUpdate
-  // useEffect(() => {
-  //   (async () => {
-  //     const hasSeenOnboarding = await AsyncStorage.getItem(onboardingKey);
-  //     setShouldShowOnboarding(!hasSeenOnboarding);
-  //   })();
-  // // passing an empty array = effect doesn’t depend on any values from props or state, so it never needs to re-run
-  // },[]);
+  // separate async function and call it from use effect
+  const getOnboardingKey = (async () => {
+    const hasSeenOnboarding = await AsyncStorage.getItem(onboardingKey);
+    if (onboardingKey === null || onboardingKey != 'YES') { // this line may be redundant
+      setShouldShowOnboarding(!hasSeenOnboarding);
+    } else {
+      AsyncStorage.setItem(onboardingKey, 'YES'); // 
+    }
+  }).done();
+
+  // empty array as second arg is a way to implement componentDidMount
+  useEffect(() => {
+    getOnboardingKey();
+  }, []);
+
+// // immediately invoked function expression
+//   useEffect(() => {
+//     (async () => {
+//       const hasSeenOnboarding = await AsyncStorage.getItem(onboardingKey);
+//       setShouldShowOnboarding(!hasSeenOnboarding);
+//     })();
+//   }, []);
 
   const handleOpenTo = (index = 0) => {
     setSwiperIndex(index);
-    // if (AsyncStorage.getItem(onboardingKey) === 'NO') {
-    //   return shouldShowOnboarding
-    // }
-    // else
     // AsyncStorage.setItem(onboardingKey, 'YES');
-    setShouldShowOnboarding(true);
     setModalOpened(true);
+    // can I set this after I call these functions? Will it cause a re-render?
+    AsyncStorage.setItem(onboardingKey, 'YES');
   };
 
   return (
