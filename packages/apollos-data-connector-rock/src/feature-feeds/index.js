@@ -5,7 +5,10 @@ import ApollosConfig from '@apollosproject/config';
 const resolver = {
   Query: {
     homeFeedFeatures: async (root, args, { dataSources: { FeatureFeed } }) =>
-      FeatureFeed.getFeed({ type: 'apollosConfig', args: { section: 'home' } }),
+      FeatureFeed.getFeed({
+        type: 'apollosConfig',
+        args: { section: 'HOME_FEATURES' },
+      }),
     discoverFeedFeatures: async (
       root,
       args,
@@ -13,7 +16,7 @@ const resolver = {
     ) =>
       FeatureFeed.getFeed({
         type: 'apollosConfig',
-        args: { section: 'discover' },
+        args: { section: 'DISCOVER_FEED' },
       }),
   },
   FeatureFeed: {
@@ -27,21 +30,28 @@ class FeatureFeed extends RockApolloDataSource {
     return this.getFeed(JSON.parse(id));
   };
 
-  getFeed = ({ type = '', args = {} }) => {
-    const { Feature } = this.context.dataSources;
+  getApollosConfigFeatures(args) {
+    if (ApollosConfig[args.section]) {
+      return this.context.dataSources.Feature.getFeatures(
+        ApollosConfig[args.section]
+      );
+    }
+    return [];
+  }
 
-    let config = [];
-    if (type === 'apollosConfig' && args.section === 'home')
-      config = ApollosConfig.HOME_FEATURES || [];
-    else if (type === 'apollosConfig' && args.section === 'discover')
-      config = ApollosConfig.DISCOVER_FEATURES || [];
+  getFeed = ({ type = '', args = {} }) => {
+    let getFeatures;
+
+    if (type === 'apollosConfig') {
+      getFeatures = this.getApollosConfigFeatures.bind(this);
+    }
 
     return {
       __typename: 'FeatureFeed',
       id: createGlobalId(JSON.stringify({ type, args }), 'FeatureFeed'),
       // Defer parsing of feature feed if not requested in gql.
       // Useful if the config comes from the network.
-      getFeatures: () => Feature.getFeatures(config),
+      getFeatures: () => getFeatures(args),
     };
   };
 }
