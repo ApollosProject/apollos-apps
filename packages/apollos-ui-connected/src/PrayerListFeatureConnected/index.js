@@ -34,10 +34,10 @@ function PrayerFeatureConnected({
     }
   }).done();
 
-  // empty array as second arg is a way to implement componentDidMount
+  // passing array with an element = on mount and after every (state) change to onboarding key
   useEffect(() => {
     getOnboardingKey();
-  }, []);
+  }, [onboardingKey]);
 
 // // immediately invoked function expression
 //   useEffect(() => {
@@ -49,7 +49,6 @@ function PrayerFeatureConnected({
 
   const handleOpenTo = (index = 0) => {
     setSwiperIndex(index);
-    // AsyncStorage.setItem(onboardingKey, 'YES');
     setModalOpened(true);
     // can I set this after I call these functions? Will it cause a re-render?
     AsyncStorage.setItem(onboardingKey, 'YES');
