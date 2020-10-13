@@ -31,6 +31,8 @@ class FeatureFeed extends RockApolloDataSource {
   };
 
   getFeed = ({ type = '', args = {} }) => {
+    const { Feature } = this.context.dataSources;
+
     let config = [];
     if (type === 'apollosConfig' && args.section === 'home')
       config = ApollosConfig.HOME_FEATURES || [];
@@ -40,7 +42,7 @@ class FeatureFeed extends RockApolloDataSource {
     return {
       __typename: 'FeatureFeed',
       id: createGlobalId({ type, args }, 'FeatureFeed'),
-      getFeatures: () => this.getFeatures(config),
+      getFeatures: () => Feature.getFeatures(config),
     };
   };
 }
