@@ -1,5 +1,5 @@
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
-import { createGlobalId, parseGlobalId } from '@apollosproject/server-core';
+import { createGlobalId } from '@apollosproject/server-core';
 import ApollosConfig from '@apollosproject/config';
 
 const resolver = {
