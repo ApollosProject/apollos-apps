@@ -16,7 +16,7 @@ const resolver = {
     ) =>
       FeatureFeed.getFeed({
         type: 'apollosConfig',
-        args: { section: 'DISCOVER_FEED' },
+        args: { section: 'DISCOVER_FEATURES' },
       }),
   },
   FeatureFeed: {
