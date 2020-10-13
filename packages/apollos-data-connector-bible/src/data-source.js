@@ -58,19 +58,13 @@ export default class Scripture extends RESTDataSource {
         cacheOptions: { ttl: ONE_DAY },
       }
     );
-    // Bible.api has a history of making unexpected API changes.
-    // At one point scriptures had a sub field, "passages"
-    // At another point, they returned the passage data on the `data` key directly.
-    // We should handle both for the time being.
     if (get(scriptures, 'data.passages')) {
       return scriptures.data.passages.map((passage) => ({
         ...passage,
         version: safeVersion,
       }));
     }
-    return scriptures.data.map((passage) => ({
-      ...passage,
-      version: safeVersion,
-    }));
+    console.warn(`No scripture returned, query: ${query} may be invalid`);
+    return [];
   }
 }
