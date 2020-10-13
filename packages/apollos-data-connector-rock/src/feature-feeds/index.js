@@ -3,6 +3,19 @@ import { createGlobalId, parseGlobalId } from '@apollosproject/server-core';
 import ApollosConfig from '@apollosproject/config';
 
 const resolver = {
+  Query: {
+    homeFeedFeatures: async (root, args, { dataSources: { FeatureFeed } }) =>
+      FeatureFeed.getFeed({ type: 'apollosConfig', args: { section: 'home' } }),
+    discoverFeedFeatures: async (
+      root,
+      args,
+      { dataSources: { FeatureFeed } }
+    ) =>
+      FeatureFeed.getFeed({
+        type: 'apollosConfig',
+        args: { section: 'discover' },
+      }),
+  },
   FeatureFeed: {
     // lazy-loaded
     features: ({ getFeatures }) => getFeatures(),

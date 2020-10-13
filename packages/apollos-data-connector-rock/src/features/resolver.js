@@ -47,19 +47,8 @@ export default {
   },
   Query: {
     userFeedFeatures: async (root, args, { dataSources: { Feature } }) =>
-      console.warn('getHomeFeedFeatures is deprecated. Use getFeedFeatures.') ||
+      console.warn('userFeedFeatures is deprecated. Use homeFeedFeatures.') ||
       Feature.getHomeFeedFeatures(),
-    homeFeedFeatures: async (root, args, { dataSources: { FeatureFeed } }) =>
-      FeatureFeed.getFeed({ type: 'apollosConfig', args: { section: 'home' } }),
-    discoverFeedFeatures: async (
-      root,
-      args,
-      { dataSources: { FeatureFeed } }
-    ) =>
-      FeatureFeed.getFeed({
-        type: 'apollosConfig',
-        args: { section: 'discover' },
-      }),
   },
   ActionListFeature: {
     id: ({ id }) => createGlobalId(id, 'ActionListFeature'),
