@@ -1,6 +1,5 @@
 import { get } from 'lodash';
 import { createGlobalId } from '@apollosproject/server-core';
-import ApollosConfig from '@apollosproject/config';
 
 export default {
   WeekendContentItem: {
