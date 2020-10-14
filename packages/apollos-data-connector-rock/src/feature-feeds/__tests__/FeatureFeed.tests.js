@@ -51,6 +51,12 @@ describe('FeatureFeed', () => {
           type: 'HorizontalCardList',
         },
       ],
+      DISCOVER_FEATURES: [
+        {
+          algorithms: ['CONTENT_CHANNEL'],
+          title: 'Content',
+        },
+      ],
     });
     context.dataSources.Feature.runAlgorithms = () => [];
   });
@@ -58,13 +64,42 @@ describe('FeatureFeed', () => {
     const query = `
       query {
         homeFeedFeatures {
+          id
           features {
             id
           }
         }
       }
     `;
-    console.log(context);
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+  });
+  it('should query the discover feed', async () => {
+    const query = `
+      query {
+        discoverFeedFeatures {
+          id
+          features {
+            id
+          }
+        }
+      }
+    `;
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+  });
+  it('should get a specific feed', async () => {
+    const query = `
+       query {
+         node(id: "FeatureFeed:c7035fd9677aa209cd4613df53e9c83a0fb3b9ecd853808383d135407161a17b98645698d03097766084632c51ea2eb271dbdadb1205a7012706cfd3d3a513fb") {
+           ... on FeatureFeed {
+             features {
+               id
+             }
+           }
+         }
+       }
+   `;
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
   });
