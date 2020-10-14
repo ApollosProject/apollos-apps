@@ -42,18 +42,24 @@ const Header = styled(
   'ui-connected.HorizontalCardListFeatureConnected.HorizontalCardListFeature.Header'
 )(View);
 
-const AndroidTouchableFix = withTheme(({ theme }) => ({
-  borderRadius: theme.sizing.baseBorderRadius / 2,
-  style: { alignSelf: 'flex-end' },
-}))(Touchable);
+const AndroidTouchableFix = withTheme(
+  ({ theme }) => ({
+    borderRadius: theme.sizing.baseBorderRadius / 2,
+    style: { alignSelf: 'flex-end' },
+  }),
+  'ui-connected.HorizontalCardListFeatureConnected.HorizontalCardListFeature.AndroidTouchableFix'
+)(Touchable);
 
-const ButtonLinkSpacing = styled(({ theme }) => ({
-  flexDirection: 'row', // correctly positions the loading state
-  justifyContent: 'flex-end', // correctly positions the loading state
-  padding: theme.sizing.baseUnit, // UX hack to improve tapability.
-  // paddingBottom: titleAndSubtitle ? theme.sizing.baseUnit / 2 : 0,
-  alignItems: 'flex-end',
-}))(View);
+const ButtonLinkSpacing = styled(
+  ({ theme }) => ({
+    flexDirection: 'row', // correctly positions the loading state
+    justifyContent: 'flex-end', // correctly positions the loading state
+    padding: theme.sizing.baseUnit, // UX hack to improve tapability.
+    // paddingBottom: titleAndSubtitle ? theme.sizing.baseUnit / 2 : 0,
+    alignItems: 'flex-end',
+  }),
+  'ui-connected.HorizontalCardListFeatureConnected.HorizontalCardListFeature.ButtonLinkSpacing'
+)(View);
 
 class HorizontalCardListFeature extends PureComponent {
   static defaultProps = {
