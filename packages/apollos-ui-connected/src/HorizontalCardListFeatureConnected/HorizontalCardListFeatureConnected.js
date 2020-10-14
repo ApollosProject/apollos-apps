@@ -13,7 +13,11 @@ const HorizontalCardListFeatureConnected = ({
   refetchRef,
   ...props
 }) => (
-  <Query query={GET_HORIZONTAL_CARD_LIST_FEATURE} variables={{ featureId }}>
+  <Query
+    query={GET_HORIZONTAL_CARD_LIST_FEATURE}
+    fetchPolicy="cache-and-network"
+    variables={{ featureId }}
+  >
     {({ data, loading, refetch }) => {
       if (featureId && refetch && refetchRef)
         refetchRef({ refetch, id: featureId });
