@@ -19,7 +19,7 @@ function PrayerFeatureConnected({
 }) {
   const [modalOpened, setModalOpened] = useState(false);
   const [swiperIndex, setSwiperIndex] = useState(0);
-  const [shouldShowOnboarding, setShouldShowOnboarding] = useState(true);
+  const [shouldShowOnboarding, setShouldShowOnboarding] = useState(false);
   const onboardingKey = `${featureId}-seenOnboarding`;
 
   const getOnboardingKey = (async () => {
