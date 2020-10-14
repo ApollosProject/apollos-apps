@@ -806,6 +806,7 @@ export const featuresSchema = gql`
     READ_EVENT
     OPEN_URL
     OPEN_NODE
+    OPEN_CHANNEL
   }
 
   type Url implements Node {

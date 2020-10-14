@@ -168,7 +168,6 @@ export default class Feature extends RockApolloDataSource {
     title,
     subtitle,
     isFeatured = false,
-    primaryAction,
   }) {
     // Generate a list of cards.
     const cards = () => this.runAlgorithms({ algorithms });
@@ -212,6 +211,7 @@ export default class Feature extends RockApolloDataSource {
         primaryAction.relatedNode.__typename
       );
     }
+
     return {
       // The Feature ID is based on all of the action ids, added together.
       // This is naive, and could be improved.
