@@ -30,28 +30,19 @@ class FeatureFeed extends RockApolloDataSource {
     return this.getFeed(JSON.parse(id));
   };
 
-  getApollosConfigFeatures(args) {
-    if (ApollosConfig[args.section]) {
-      return this.context.dataSources.Feature.getFeatures(
-        ApollosConfig[args.section]
-      );
-    }
-    return [];
-  }
-
   getFeed = ({ type = '', args = {} }) => {
-    let getFeatures;
+    let getFeatures = () => [];
+    const { Feature } = this.context.dataSources;
 
     if (type === 'apollosConfig') {
-      getFeatures = this.getApollosConfigFeatures.bind(this);
+      getFeatures = () =>
+        Feature.getFeatures(ApollosConfig[args.section] || []);
     }
 
     return {
       __typename: 'FeatureFeed',
       id: createGlobalId(JSON.stringify({ type, args }), 'FeatureFeed'),
-      // Defer parsing of feature feed if not requested in gql.
-      // Useful if the config comes from the network.
-      getFeatures: () => getFeatures(args),
+      getFeatures,
     };
   };
 }
