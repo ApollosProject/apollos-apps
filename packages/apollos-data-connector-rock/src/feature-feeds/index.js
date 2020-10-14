@@ -31,7 +31,7 @@ class FeatureFeed extends RockApolloDataSource {
   };
 
   getFeed = ({ type = '', args = {} }) => {
-    let getFeatures;
+    let getFeatures = () => [];
     const { Feature } = this.context.dataSources;
 
     if (type === 'apollosConfig') {
