@@ -18,6 +18,11 @@ export default gql`
     isLoggedIn: Boolean
   }
 
+  type FeatureFeed implements Node {
+    id: ID!
+    features: [Feature]
+  }
+
   type ActionListAction {
     id: ID!
     title: String

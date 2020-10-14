@@ -6,7 +6,31 @@ import { get } from 'lodash';
 import { FeedView } from '@apollosproject/ui-kit';
 
 import featuresFeedComponentMapper from './featuresFeedComponentMapper';
-import GET_FEED_FEATURES from './getFeedFeatures';
+import GET_FEATURE_FEED from './getFeatureFeed';
+
+export const ACTION_MAP = {
+  READ_CONTENT: ({ navigation, relatedNode }) => {
+    navigation.navigate('ContentSingle', {
+      itemId: relatedNode.id,
+      transitionKey: 2,
+    });
+  },
+  READ_EVENT: ({ navigation, relatedNode }) => {
+    navigation.navigate('Event', {
+      eventId: relatedNode.id,
+      transitionKey: 2,
+    });
+  },
+  OPEN_NODE: ({ navigation, relatedNode }) => {
+    navigation.navigate('NodeSingle', {
+      nodeId: relatedNode.id,
+      transitionKey: 2,
+    });
+  },
+  OPEN_URL: ({ openUrl, relatedNode }) => {
+    openUrl(relatedNode.url);
+  },
+};
 
 class FeaturesFeedConnected extends PureComponent {
   static propTypes = {
@@ -15,6 +39,7 @@ class FeaturesFeedConnected extends PureComponent {
       PropTypes.func,
       PropTypes.object, // type check for React fragments
     ]),
+    nodeId: PropTypes.string.isRequired,
     onPressActionItem: PropTypes.func,
     additionalFeatures: PropTypes.shape({}),
   };
@@ -41,7 +66,8 @@ class FeaturesFeedConnected extends PureComponent {
     featuresFeedComponentMapper({
       feature: item,
       refetchRef: this.refetchRef,
-      onPressActionItem: this.props.onPressActionItem,
+      onPressActionItem: (args) =>
+        this.props.onPressActionItem({ ...this.props, ...args }),
       additionalFeatures: this.props.additionalFeatures,
     });
 
@@ -53,7 +79,7 @@ class FeaturesFeedConnected extends PureComponent {
     const { data } = await this.refetchFunctions.feed();
     // get the ids of the current set of loaded features.
 
-    const ids = get(data, 'userFeedFeatures', []).map(({ id }) => id);
+    const ids = get(data, 'node.features', []).map(({ id }) => id);
 
     return Promise.all(
       ids.map((id) => this.refetchFunctions[id] && this.refetchFunctions[id]())
@@ -61,11 +87,28 @@ class FeaturesFeedConnected extends PureComponent {
   };
 
   render() {
-    const { Component, onPressActionItem, ...props } = this.props;
+    const { Component, onPressActionItem, nodeId, ...props } = this.props;
+    // Early return if we don't have a nodeId.
+    if (!nodeId) {
+      return (
+        <FeedView
+          loadingStateData={this.loadingStateData}
+          renderItem={this.renderFeatures}
+          loading
+          refetch={this.refetch}
+          {...props}
+        />
+      );
+    }
     return (
-      <Query query={GET_FEED_FEATURES} fetchPolicy="cache-and-network">
+      <Query
+        query={GET_FEATURE_FEED}
+        variables={{ nodeId }}
+        fetchPolicy="cache-and-network"
+      >
         {({ error, data, loading, refetch }) => {
-          const features = get(data, 'userFeedFeatures', []);
+          const features = get(data, 'node.features', []);
+
           this.refetchRef({ refetch, id: 'feed' });
           return (
             <FeedView
