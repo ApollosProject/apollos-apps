@@ -7,39 +7,43 @@ exports[`The HorizontalCardListFeatureConnected component should render 1`] = `
   <View
     style={
       Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
         "paddingBottom": 8,
-        "paddingHorizontal": 16,
+        "paddingLeft": 16,
         "paddingTop": 48,
-        "paddingVertical": 0,
+        "zIndex": 2,
       }
     }
-    vertical={false}
   >
-    <Text
-      numberOfLines={1}
-      style={
-        Object {
-          "color": "#A5A5A5",
-          "fontFamily": "InterUI-Medium",
-          "fontSize": 14,
-          "lineHeight": 21,
+    <View>
+      <Text
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "#A5A5A5",
+            "fontFamily": "InterUI-Medium",
+            "fontSize": 14,
+            "lineHeight": 21,
+          }
         }
-      }
-    >
-      Some cool list
-    </Text>
-    <Text
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Black",
-          "fontSize": 36,
-          "lineHeight": 41.4,
+      >
+        Some cool list
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Black",
+            "fontSize": 36,
+            "lineHeight": 41.4,
+          }
         }
-      }
-    >
-      Check it out
-    </Text>
+      >
+        Check it out
+      </Text>
+    </View>
   </View>
   <RCTScrollView
     collapsable={false}
@@ -266,38 +270,42 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
   <View
     style={
       Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
         "paddingBottom": 8,
-        "paddingHorizontal": 16,
+        "paddingLeft": 16,
         "paddingTop": 48,
-        "paddingVertical": 0,
+        "zIndex": 2,
       }
     }
-    vertical={false}
   >
-    <View
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 16,
-          "height": 14,
-          "marginVertical": 3.5,
-          "width": "60%",
+    <View>
+      <View
+        style={
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 16,
+            "height": 14,
+            "marginVertical": 3.5,
+            "width": "60%",
+          }
         }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 16,
-          "height": 36,
-          "marginVertical": 2.6999999999999993,
-          "width": "100%",
+      />
+      <View
+        style={
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 16,
+            "height": 36,
+            "marginVertical": 2.6999999999999993,
+            "width": "100%",
+          }
         }
-      }
-    />
+      />
+    </View>
   </View>
   <RCTScrollView
     collapsable={false}
