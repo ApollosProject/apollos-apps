@@ -1,8 +1,6 @@
-name: Publish Canary
+name: Beta Release
 
-on:
-  push:
-    branches: [ master ]
+on: workflow_dispatch
 
 jobs:
   build:
@@ -14,11 +12,11 @@ jobs:
       with:
         fetch-depth: 0 # needs this to pull all tags and branches
 
-    - name: Setup Node for npmjs.org
+    - name: Setup Node for GPR
       uses: actions/setup-node@v1
       with:
         node-version: 10.19.x
-        registry-url: 'https://registry.npmjs.org'
+        registry-url: 'https://npm.pkg.github.com'
         scope: '@apollosproject'
 
     - name: Install Yarn
@@ -27,19 +25,19 @@ jobs:
     - name: Install Dependencies
       run: yarn
 
-    - name: Canary Release
-      run: yarn release:canary
+    - name: Beta Release (No Push)
+      run: yarn release:beta --registry "http://npm.pkg.github.com" --no-push --no-git-tag-version
       env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Setup Node for GPR
+    - name: Setup Node for npmjs.org
       uses: actions/setup-node@v1
       with:
         node-version: 10.19.x
-        registry-url: 'https://npm.pkg.github.com'
+        registry-url: 'https://registry.npmjs.org'
         scope: '@apollosproject'
 
-    - name: Canary Release
-      run: yarn release:canary --registry "http://npm.pkg.github.com"
+    - name: NPM Release
+      run: yarn release:beta
       env:
-        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

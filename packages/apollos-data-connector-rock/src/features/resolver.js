@@ -1,4 +1,5 @@
 import { get } from 'lodash';
+import { createGlobalId } from '@apollosproject/server-core';
 
 export default {
   WeekendContentItem: {
@@ -18,6 +19,7 @@ export default {
       title: 'Share text via...',
       message: body,
     }),
+    id: ({ id }) => createGlobalId(id, 'TextFeature'),
   },
   CardListItem: {
     coverImage: ({ image }) => image,
@@ -26,6 +28,10 @@ export default {
     hasAction: (root, args, { dataSources: { ContentItem } }) =>
       !!get(ContentItem.getVideos(root.relatedNode), '[0].sources[0]', null),
     labelText: ({ subtitle }) => subtitle,
+    id: ({ id }) => createGlobalId(id, 'CardListItem'),
+  },
+  ActionListAction: {
+    id: ({ id }) => createGlobalId(id, 'ActionListAction'),
   },
   ScriptureFeature: {
     scriptures: (
@@ -37,9 +43,26 @@ export default {
       title: 'Share scripture via...',
       message: Feature.getScriptureShareMessage(reference),
     }),
+    id: ({ id }) => createGlobalId(id, 'ScriptureFeature'),
   },
   Query: {
     userFeedFeatures: async (root, args, { dataSources: { Feature } }) =>
+      console.warn('userFeedFeatures is deprecated. Use homeFeedFeatures.') ||
       Feature.getHomeFeedFeatures(),
+  },
+  ActionListFeature: {
+    id: ({ id }) => createGlobalId(id, 'ActionListFeature'),
+  },
+  HeroListFeature: {
+    id: ({ id }) => createGlobalId(id, 'HeroListFeature'),
+  },
+  VerticalCardListFeature: {
+    id: ({ id }) => createGlobalId(id, 'VerticalCardListFeature'),
+  },
+  HorizontalCardListFeature: {
+    id: ({ id }) => createGlobalId(id, 'HorizontalCardListFeature'),
+  },
+  PrayerListFeature: {
+    id: ({ id }) => createGlobalId(id, 'PrayerListFeature'),
   },
 };

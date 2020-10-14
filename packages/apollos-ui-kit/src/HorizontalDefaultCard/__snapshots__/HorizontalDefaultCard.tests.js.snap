@@ -59,43 +59,6 @@ exports[`HorizontalDefaultCard should render 1`] = `
           }
         }
       />
-      <BVLinearGradient
-        colors={
-          Array [
-            2147483648,
-            0,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            1,
-          ]
-        }
-        overlayColor="#000000"
-        overlayType="gradient-top"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      />
     </View>
     <View
       style={
@@ -169,43 +132,6 @@ exports[`HorizontalDefaultCard should render a loading state with isLoading 1`] 
             "backgroundColor": "#A5A5A5",
             "resizeMode": "cover",
             "width": "100%",
-          }
-        }
-      />
-      <BVLinearGradient
-        colors={
-          Array [
-            2147483648,
-            0,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            1,
-          ]
-        }
-        overlayColor="#000000"
-        overlayType="gradient-top"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
           }
         }
       />
@@ -306,43 +232,6 @@ exports[`HorizontalDefaultCard should render with a summary 1`] = `
             "backgroundColor": "#A5A5A5",
             "resizeMode": "cover",
             "width": "100%",
-          }
-        }
-      />
-      <BVLinearGradient
-        colors={
-          Array [
-            2147483648,
-            0,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            1,
-          ]
-        }
-        overlayColor="#000000"
-        overlayType="gradient-top"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
           }
         }
       />
@@ -453,43 +342,6 @@ exports[`HorizontalDefaultCard should render with a title 1`] = `
           }
         }
       />
-      <BVLinearGradient
-        colors={
-          Array [
-            2147483648,
-            0,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            1,
-          ]
-        }
-        overlayColor="#000000"
-        overlayType="gradient-top"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      />
     </View>
     <View
       style={
@@ -574,43 +426,6 @@ exports[`HorizontalDefaultCard should should render a like icon 1`] = `
             "backgroundColor": "#A5A5A5",
             "resizeMode": "cover",
             "width": "100%",
-          }
-        }
-      />
-      <BVLinearGradient
-        colors={
-          Array [
-            2147483648,
-            0,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            1,
-          ]
-        }
-        overlayColor="#000000"
-        overlayType="gradient-top"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
           }
         }
       />
@@ -825,43 +640,6 @@ exports[`HorizontalDefaultCard should should render as isLiked 1`] = `
             "backgroundColor": "#A5A5A5",
             "resizeMode": "cover",
             "width": "100%",
-          }
-        }
-      />
-      <BVLinearGradient
-        colors={
-          Array [
-            2147483648,
-            0,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            1,
-          ]
-        }
-        overlayColor="#000000"
-        overlayType="gradient-top"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
           }
         }
       />
