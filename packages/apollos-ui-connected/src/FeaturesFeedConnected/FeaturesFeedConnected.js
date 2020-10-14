@@ -30,6 +30,12 @@ export const ACTION_MAP = {
   OPEN_URL: ({ openUrl, relatedNode }) => {
     openUrl(relatedNode.url);
   },
+  OPEN_CHANNEL: ({ relatedNode, navigation }) => {
+    navigation.navigate('ContentFeed', {
+      itemId: relatedNode.id,
+      itemTitle: relatedNode.name,
+    });
+  },
 };
 
 class FeaturesFeedConnected extends PureComponent {

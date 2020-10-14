@@ -881,6 +881,7 @@ export const featuresSchema = gql`
     title: String
     subtitle: String
     cards: [CardListItem]
+    primaryAction: FeatureAction
   }
 
   type TextFeature implements Feature & Node {

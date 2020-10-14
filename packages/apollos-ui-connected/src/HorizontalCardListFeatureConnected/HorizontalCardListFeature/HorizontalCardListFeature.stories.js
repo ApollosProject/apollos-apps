@@ -59,6 +59,14 @@ const cards = [
   },
 ];
 
+const primaryAction = {
+  title: 'See More',
+  action: 'OPEN_NODE',
+  relatedNode: {
+    id: 'DevotionalContentItem:95ff79f60a028b1b506aaeedf8b4c6ae',
+    __typename: 'DevotionalContentItem',
+  },
+};
 storiesOf('ui-connected/HorizontalCardListFeature', module)
   .addDecorator((story) => (
     <BackgroundView>
@@ -71,9 +79,13 @@ storiesOf('ui-connected/HorizontalCardListFeature', module)
       cards={cards}
       title={'Title'}
       subtitle={'Subtitle'}
+      primaryAction={primaryAction}
     />
   ))
   .add('default', () => <HorizontalCardListFeature cards={cards} />)
+  .add('primaryAction', () => (
+    <HorizontalCardListFeature cards={cards} primaryAction={primaryAction} />
+  ))
   .add('isLoading', () => <HorizontalCardListFeature cards={[]} isLoading />)
   .add('subtitle', () => (
     <HorizontalCardListFeature cards={cards} subtitle={'subtitle'} />
