@@ -81,6 +81,7 @@ class FeedView extends Component {
       renderItem,
       ...otherProps
     } = this.props;
+    console.warn(isLoading, 'feed view');
     return (
       <FlatList
         {...otherProps}

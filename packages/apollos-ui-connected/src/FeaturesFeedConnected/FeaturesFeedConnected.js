@@ -114,7 +114,6 @@ class FeaturesFeedConnected extends PureComponent {
       >
         {({ error, data, loading, refetch }) => {
           const features = get(data, 'node.features', []);
-
           this.refetchRef({ refetch, id: 'feed' });
           return (
             <FeedView
