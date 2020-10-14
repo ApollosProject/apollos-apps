@@ -47,6 +47,7 @@ export default {
   },
   Query: {
     userFeedFeatures: async (root, args, { dataSources: { Feature } }) =>
+      console.warn('userFeedFeatures is deprecated. Use homeFeedFeatures.') ||
       Feature.getHomeFeedFeatures(),
   },
   ActionListFeature: {
