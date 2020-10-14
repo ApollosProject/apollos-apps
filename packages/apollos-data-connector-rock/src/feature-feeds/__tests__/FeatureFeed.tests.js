@@ -52,7 +52,7 @@ describe('FeatureFeed', () => {
         },
       ],
     });
-    context.dataSources.Feature.getFeatures = () => [];
+    context.dataSources.Feature.runAlgorithms = () => [];
   });
   it('should query the home feed', async () => {
     const query = `
