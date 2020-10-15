@@ -1165,6 +1165,7 @@ Object {
   ],
   "hyphenatedTitle": undefined,
   "id": "{\\"algorithms\\":[\\"PERSONA_FEED\\"],\\"title\\":\\"Test Horizontal List of Cards\\",\\"subtitle\\":\\"Boom\\"}",
+  "primaryAction": undefined,
   "subtitle": "Boom",
   "title": "Test Horizontal List of Cards",
 }
@@ -1538,6 +1539,7 @@ Array [
     ],
     "hyphenatedTitle": undefined,
     "id": "{\\"algorithms\\":[\\"PERSONA_FEED\\"],\\"title\\":\\"FOR YOU\\",\\"subtitle\\":\\"Explore what God calls you to today\\"}",
+    "primaryAction": undefined,
     "subtitle": "Explore what God calls you to today",
     "title": "FOR YOU",
   },
