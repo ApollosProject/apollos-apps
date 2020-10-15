@@ -4,16 +4,12 @@ import ApollosConfig from '@apollosproject/config';
 
 const resolver = {
   Query: {
-    homeFeedFeatures: async (root, args, { dataSources: { FeatureFeed } }) =>
+    homeFeedFeatures: (root, args, { dataSources: { FeatureFeed } }) =>
       FeatureFeed.getFeed({
         type: 'apollosConfig',
         args: { section: 'HOME_FEATURES' },
       }),
-    discoverFeedFeatures: async (
-      root,
-      args,
-      { dataSources: { FeatureFeed } }
-    ) =>
+    discoverFeedFeatures: (root, args, { dataSources: { FeatureFeed } }) =>
       FeatureFeed.getFeed({
         type: 'apollosConfig',
         args: { section: 'DISCOVER_FEATURES' },
