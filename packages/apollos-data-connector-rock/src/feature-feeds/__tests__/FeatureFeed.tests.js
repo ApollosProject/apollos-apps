@@ -103,25 +103,25 @@ describe('FeatureFeed', () => {
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
   });
-  it('should handle sources other than the config', () => {
+  it('should handle sources other than the config', async () => {
     expect(
-      context.dataSources.FeatureFeed.getFeed({
+      await context.dataSources.FeatureFeed.getFeed({
         type: 'content',
         args: { id: 123 },
       })
     ).toMatchSnapshot();
   });
-  it('should handle a config source with an invalid section', () => {
+  it('should handle a config source with an invalid section', async () => {
     expect(
-      context.dataSources.FeatureFeed.getFeed({
+      await context.dataSources.FeatureFeed.getFeed({
         type: 'apollosConfig',
         args: { section: 'INVALID' },
       })
     ).toMatchSnapshot();
   });
-  it('should handle a config source with no section', () => {
+  it('should handle a config source with no section', async () => {
     expect(
-      context.dataSources.FeatureFeed.getFeed({ type: 'apollosConfig' })
+      await context.dataSources.FeatureFeed.getFeed({ type: 'apollosConfig' })
     ).toMatchSnapshot();
   });
 });

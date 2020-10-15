@@ -2,10 +2,12 @@ import { get } from 'lodash';
 import { createGlobalId } from '@apollosproject/server-core';
 
 export default {
+  // deprecated
   WeekendContentItem: {
     features: (root, args, { dataSources: { ContentItem } }) =>
       ContentItem.getFeatures(root),
   },
+  // deprecated
   ContentSeriesContentItem: {
     features: (root, args, { dataSources: { ContentItem } }) =>
       ContentItem.getFeatures(root),

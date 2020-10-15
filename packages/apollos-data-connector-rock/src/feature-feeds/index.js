@@ -4,20 +4,24 @@ import ApollosConfig from '@apollosproject/config';
 
 const resolver = {
   Query: {
-    homeFeedFeatures: async (root, args, { dataSources: { FeatureFeed } }) =>
+    homeFeedFeatures: (root, args, { dataSources: { FeatureFeed } }) =>
       FeatureFeed.getFeed({
         type: 'apollosConfig',
         args: { section: 'HOME_FEATURES' },
       }),
-    discoverFeedFeatures: async (
-      root,
-      args,
-      { dataSources: { FeatureFeed } }
-    ) =>
+    discoverFeedFeatures: (root, args, { dataSources: { FeatureFeed } }) =>
       FeatureFeed.getFeed({
         type: 'apollosConfig',
         args: { section: 'DISCOVER_FEATURES' },
       }),
+  },
+  WeekendContentItem: {
+    featureFeed: ({ id }, args, { dataSources: { FeatureFeed } }) =>
+      FeatureFeed.getFeed({ type: 'contentItem', args: { id } }),
+  },
+  ContentSeriesContentItem: {
+    featureFeed: ({ id }, args, { dataSources: { FeatureFeed } }) =>
+      FeatureFeed.getFeed({ type: 'contentItem', args: { id } }),
   },
   FeatureFeed: {
     // lazy-loaded
@@ -30,13 +34,18 @@ class FeatureFeed extends RockApolloDataSource {
     return this.getFeed(JSON.parse(id));
   };
 
-  getFeed = ({ type = '', args = {} }) => {
+  getFeed = async ({ type = '', args = {} }) => {
     let getFeatures = () => [];
-    const { Feature } = this.context.dataSources;
+    const { Feature, ContentItem } = this.context.dataSources;
 
     if (type === 'apollosConfig') {
       getFeatures = () =>
         Feature.getFeatures(ApollosConfig[args.section] || []);
+    }
+
+    if (type === 'contentItem' && args.id) {
+      const contentItem = await ContentItem.getFromId(args.id);
+      getFeatures = () => ContentItem.getFeatures(contentItem);
     }
 
     return {
