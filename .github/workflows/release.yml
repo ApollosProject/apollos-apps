@@ -1,4 +1,4 @@
-name: Beta Release
+name: Stable Release
 
 on: workflow_dispatch
 
@@ -25,8 +25,8 @@ jobs:
     - name: Install Dependencies
       run: yarn
 
-    - name: Beta Release (No Push)
-      run: yarn release:beta --registry "http://npm.pkg.github.com" --no-push --no-git-tag-version
+    - name: Release (No Push)
+      run: yarn release --registry "http://npm.pkg.github.com" --no-push --no-git-tag-version
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -38,6 +38,6 @@ jobs:
         scope: '@apollosproject'
 
     - name: NPM Release
-      run: yarn release:beta --yes
+      run: yarn release --yes
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
