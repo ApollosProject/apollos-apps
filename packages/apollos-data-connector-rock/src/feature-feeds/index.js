@@ -19,6 +19,14 @@ const resolver = {
         args: { section: 'DISCOVER_FEATURES' },
       }),
   },
+  WeekendContentItem: {
+    featureFeed: ({ id }, args, { dataSources: { FeatureFeed } }) =>
+      FeatureFeed.getFeed({ type: 'contentItem', args: { id } }),
+  },
+  ContentSeriesContentItem: {
+    featureFeed: ({ id }, args, { dataSources: { FeatureFeed } }) =>
+      FeatureFeed.getFeed({ type: 'contentItem', args: { id } }),
+  },
   FeatureFeed: {
     // lazy-loaded
     features: ({ getFeatures }) => getFeatures(),
@@ -30,13 +38,18 @@ class FeatureFeed extends RockApolloDataSource {
     return this.getFeed(JSON.parse(id));
   };
 
-  getFeed = ({ type = '', args = {} }) => {
+  getFeed = async ({ type = '', args = {} }) => {
     let getFeatures = () => [];
-    const { Feature } = this.context.dataSources;
+    const { Feature, ContentItem } = this.context.dataSources;
 
     if (type === 'apollosConfig') {
       getFeatures = () =>
         Feature.getFeatures(ApollosConfig[args.section] || []);
+    }
+
+    if (type === 'contentItem' && args.id) {
+      const contentItem = await ContentItem.getFromId(args.id);
+      getFeatures = () => ContentItem.getFeatures(contentItem);
     }
 
     return {
