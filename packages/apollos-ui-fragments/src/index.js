@@ -6,6 +6,7 @@ import * as pass from './pass';
 import * as scripture from './scripture';
 import * as user from './user';
 import * as interfaces from './interfaces';
+import * as searchResults from './searchResults';
 
 const FRAGMENTS = {
   ...campus,
@@ -16,6 +17,7 @@ const FRAGMENTS = {
   ...pass,
   ...user,
   ...interfaces,
+  ...searchResults,
 };
 
 export default FRAGMENTS;
