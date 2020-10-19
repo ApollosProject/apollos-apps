@@ -1,9 +1,12 @@
 import ApollosConfig from '@apollosproject/config';
 import { createGlobalId } from '@apollosproject/server-core';
 
+import {
+  dataSource as AlgoDS,
+  dataSource as ActionAlgorithm,
+} from '../../action-algorithms';
 import Feature from '../data-source';
 import resolver from '../resolver';
-import { dataSource as ActionAlgorithm } from '../../action-algorithms';
 
 async function expandResult(result) {
   let expandedResult = { ...result };
