@@ -54,6 +54,9 @@ jobs:
       run: yarn
 
     - name: NPM Release
-      run: yarn release:beta --yes
+      run: |
+        git config --global user.email "apps@apollos.app"
+        git config --global user.name "Apollos Admin"
+        yarn release:beta --yes
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
