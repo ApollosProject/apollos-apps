@@ -26,7 +26,7 @@ jobs:
       run: yarn
 
     - name: Beta Release (No Push)
-      run: yarn release:beta --registry "http://npm.pkg.github.com" --no-push --no-git-tag-version
+      run: yarn release:beta --registry "http://npm.pkg.github.com" --no-push --no-git-tag-version --yes
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
