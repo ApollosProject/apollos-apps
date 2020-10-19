@@ -4,7 +4,7 @@ import ApollosConfig from '@apollosproject/config';
 
 class ActionAlgorithm extends RockApolloDataSource {
   // Names of Action Algoritms mapping to the functions that create the actions.
-  ACTION_ALGORITHMS = Object.entries({
+  ACTION_ALGORITHIMS = Object.entries({
     // We need to make sure `this` refers to the class, not the `ACTION_ALGORITHIMS` object.
     PERSONA_FEED: this.personaFeedAlgorithm,
     CONTENT_CHANNEL: this.contentChannelAlgorithm,
@@ -27,27 +27,26 @@ class ActionAlgorithm extends RockApolloDataSource {
     return flatten(
       await Promise.all(
         algorithms.map(async (algorithm) => {
+          const featureAlgorithims = Feature.ACTION_ALGORITHIMS || {};
           // Lookup the algorithm function, based on the name, and run it.
           if (typeof algorithm === 'object') {
             // NOTE this is in for backwards compatibility
             // should remove reference to Feature.ACTION_ALGORITHIMS eventually
-            if (Feature.ACTION_ALGORITHIMS[algorithm.type]) {
+            if (featureAlgorithims[algorithm.type]) {
               console.warn(
                 'Please move action algorithms from Feature to ActionAlgorithm data source.'
               );
-              return Feature.ACTION_ALGORITHIMS[algorithm.type](
-                algorithm.arguments
-              );
+              return featureAlgorithims[algorithm.type](algorithm.arguments);
             }
 
-            return this.ACTION_ALGORITHMS[algorithm.type](algorithm.arguments);
+            return this.ACTION_ALGORITHIMS[algorithm.type](algorithm.arguments);
           }
           // NOTE this is in for backwards compatibility
           // should remove reference to Feature.ACTION_ALGORITHIMS eventually
           // return this.ACTION_ALGORITHMS[algorithm]();
           const allAlgos = {
-            ...this.ACTION_ALGORITHMS,
-            ...Feature.ACTION_ALGORITHIMS,
+            ...this.ACTION_ALGORITHIMS,
+            ...featureAlgorithims,
           };
           return allAlgos[algorithm]();
         })
@@ -233,4 +232,4 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
   }
 }
 
-export default { dataSource: ActionAlgorithm };
+export { ActionAlgorithm as dataSource };
