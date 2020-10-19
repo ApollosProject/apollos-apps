@@ -30,11 +30,15 @@ const ContentSingleFeaturesConnected = ({
         if (!features || !features.length) return null;
 
         return (
-          <Component
-            contentId={contentId || nodeId}
-            features={features}
-            {...props}
-          />
+          console.warn(
+            'ContentSingleFeaturesConnected is deprecated. Please use ContentFeatureFeedConnected.'
+          ) || (
+            <Component
+              contentId={contentId || nodeId}
+              features={features}
+              {...props}
+            />
+          )
         );
       }}
     </Query>

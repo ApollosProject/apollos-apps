@@ -59,6 +59,9 @@ const FEED_FEATURES_FRAGMENT = gql`
       subtitle
       isCard
     }
+    ...TextFeatureFragment
+    ...ScriptureFeatureFragment
+    ...WebviewFeatureFragment
   }
 `;
 
