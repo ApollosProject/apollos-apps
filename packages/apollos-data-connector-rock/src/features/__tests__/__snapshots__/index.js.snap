@@ -1868,6 +1868,11 @@ Array [
 ]
 `;
 
+exports[`features dataSource should throw an error when creating a ActionListFeature from a CONTENT_CHANNEL with no contentChannelId 1`] = `
+"contentChannelId is a required argument for the CONTENT_CHANNEL ActionList algorithm.
+Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aruments: { contentChannelId: 13 } }\`"
+`;
+
 exports[`features resolver must return a personaFeed, a sermonChildrenFeed, and a contentChannelFeed for the userFeedFeatures 1`] = `
 Array [
   Object {
