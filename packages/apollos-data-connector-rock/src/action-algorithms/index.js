@@ -28,6 +28,18 @@ class ActionAlgorithm extends RockApolloDataSource {
         algorithms.map(async (algorithm) => {
           // Lookup the algorithm function, based on the name, and run it.
           if (typeof algorithm === 'object') {
+            // NOTE this is in for backwards compatibility
+            // should remove reference to Feature.ACTION_ALGORITHIMS eventually
+            const { Feature } = this.content.dataSources;
+            if (Feature.ACTION_ALGORITHIMS[algorithm.type]) {
+              console.warn(
+                'Please move action algorithms from Feature to ActionAlgorithm data source.'
+              );
+              return Feature.ACTION_ALGORITHMS[algorithm.type](
+                algorithm.arguments
+              );
+            }
+
             return this.ACTION_ALGORITHMS[algorithm.type](algorithm.arguments);
           }
           return this.ACTION_ALGORITHMS[algorithm]();
