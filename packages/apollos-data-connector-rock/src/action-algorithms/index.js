@@ -4,7 +4,7 @@ import ApollosConfig from '@apollosproject/config';
 
 class ActionAlgorithm extends RockApolloDataSource {
   // Names of Action Algoritms mapping to the functions that create the actions.
-  ACTION_ALGORITHIMS = Object.entries({
+  ACTION_ALGORITHMS = Object.entries({
     // We need to make sure `this` refers to the class, not the `ACTION_ALGORITHIMS` object.
     PERSONA_FEED: this.personaFeedAlgorithm,
     CONTENT_CHANNEL: this.contentChannelAlgorithm,
@@ -39,13 +39,13 @@ class ActionAlgorithm extends RockApolloDataSource {
               return featureAlgorithims[algorithm.type](algorithm.arguments);
             }
 
-            return this.ACTION_ALGORITHIMS[algorithm.type](algorithm.arguments);
+            return this.ACTION_ALGORITHMS[algorithm.type](algorithm.arguments);
           }
           // NOTE this is in for backwards compatibility
           // should remove reference to Feature.ACTION_ALGORITHIMS eventually
           // return this.ACTION_ALGORITHMS[algorithm]();
           const allAlgos = {
-            ...this.ACTION_ALGORITHIMS,
+            ...this.ACTION_ALGORITHMS,
             ...featureAlgorithims,
           };
           return allAlgos[algorithm]();
