@@ -35,7 +35,7 @@ class ActionAlgorithm extends RockApolloDataSource {
               console.warn(
                 'Please move action algorithms from Feature to ActionAlgorithm data source.'
               );
-              return Feature.ACTION_ALGORITHMS[algorithm.type](
+              return Feature.ACTION_ALGORITHIMS[algorithm.type](
                 algorithm.arguments
               );
             }
