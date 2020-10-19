@@ -196,9 +196,22 @@ export default class Feature extends RockApolloDataSource {
     hyphenatedTitle,
     title,
     subtitle,
+    primaryAction,
   }) {
     // Generate a list of horizontal cards.
     const cards = () => this.runAlgorithms({ algorithms });
+    // Ensures that we have a generated ID for the Primary Action related node, if not provided.
+    if (
+      primaryAction &&
+      primaryAction.relatedNode &&
+      !primaryAction.relatedNode.id
+    ) {
+      primaryAction.relatedNode.id = createGlobalId( // eslint-disable-line
+        JSON.stringify(primaryAction.relatedNode),
+        primaryAction.relatedNode.__typename
+      );
+    }
+
     return {
       // The Feature ID is based on all of the action ids, added together.
       // This is naive, and could be improved.
@@ -207,12 +220,14 @@ export default class Feature extends RockApolloDataSource {
           algorithms,
           title,
           subtitle,
+          primaryAction,
         },
       }),
       cards,
       hyphenatedTitle,
       title,
       subtitle,
+      primaryAction,
       // Typename is required so GQL knows specifically what Feature is being created
       __typename: 'HorizontalCardListFeature',
     };

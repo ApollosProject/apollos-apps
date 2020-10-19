@@ -68,6 +68,11 @@ export NodeSingleConnected from './NodeSingleConnected';
 export RockAuthedWebBrowser from './RockAuthedWebBrowser';
 export RockAuthedWebView from './RockAuthedWebView';
 export SearchCardConnected from './SearchCardConnected';
+export SearchFeedConnected, {
+  SearchInputHeader,
+  SearchFeedNoResults,
+  GET_SEARCH_RESULTS,
+} from './SearchFeedConnected';
 export ShareButtonConnected, {
   GET_SHARE_CONTENT,
   ShareButton,
