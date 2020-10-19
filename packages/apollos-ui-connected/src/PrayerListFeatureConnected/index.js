@@ -23,12 +23,14 @@ function PrayerFeatureConnected({
   const onboardingKey = `${featureId}-seenOnboarding`;
 
   const getOnboardingKey = async () => {
-    const hasSeenOnboarding = await AsyncStorage.getItem(onboardingKey);
-    setShouldShowOnboarding(!hasSeenOnboarding);
+    try {
+      const hasSeenOnboarding = await AsyncStorage.getItem(onboardingKey);
+      setShouldShowOnboarding(!hasSeenOnboarding);
+      } catch (e) {
+        console.error(e);
+      }
+    }
   };
-
-  console.log(onboardingKey);
-  console.log(getOnboardingKey);
 
   useEffect(() => {
     getOnboardingKey();
