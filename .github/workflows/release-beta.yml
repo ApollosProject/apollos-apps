@@ -3,7 +3,8 @@ name: Beta Release
 on: workflow_dispatch
 
 jobs:
-  build:
+
+  gpr:
 
     runs-on: ubuntu-latest
 
@@ -30,12 +31,27 @@ jobs:
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+  npm:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0 # needs this to pull all tags and branches
+
     - name: Setup Node for npmjs.org
       uses: actions/setup-node@v1
       with:
         node-version: 10.19.x
         registry-url: 'https://registry.npmjs.org'
         scope: '@apollosproject'
+
+    - name: Install Yarn
+      run: npm install -g yarn
+
+    - name: Install Dependencies
+      run: yarn
 
     - name: NPM Release
       run: yarn release:beta --yes
