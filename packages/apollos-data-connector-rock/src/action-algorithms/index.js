@@ -22,7 +22,7 @@ class ActionAlgorithm extends RockApolloDataSource {
   }, {});
 
   async runAlgorithms({ algorithms }) {
-    const { Feature } = this.content.dataSources;
+    const { Feature } = this.context.dataSources;
     // We should flatten just in case a single algorithm generates multiple actions
     return flatten(
       await Promise.all(

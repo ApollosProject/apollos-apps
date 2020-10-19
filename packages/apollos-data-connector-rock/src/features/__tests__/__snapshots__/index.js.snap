@@ -1868,6 +1868,8 @@ Array [
 ]
 `;
 
+exports[`features dataSource should throw an error when creating a ActionListFeature from a CONTENT_CHANNEL with no contentChannelId 1`] = `"Cannot read property 'dataSources' of undefined"`;
+
 exports[`features resolver must return a personaFeed, a sermonChildrenFeed, and a contentChannelFeed for the userFeedFeatures 1`] = `
 Array [
   Object {
