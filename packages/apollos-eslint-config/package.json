@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/eslint-config",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "1.6.0",
+  "version": "1.7.0-beta.0",
   "main": "./index.js",
   "devDependencies": {
     "babel-eslint": "10.1.0",

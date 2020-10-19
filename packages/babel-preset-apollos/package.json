@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/babel-preset-apollos",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "1.6.0",
+  "version": "1.7.0-beta.0",
   "main": "./index.js",
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "7.4.0",

@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/ui-scripture",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "1.6.0",
+  "version": "1.7.0-beta.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -43,7 +43,7 @@
     "react-native": "*"
   },
   "devDependencies": {
-    "@apollosproject/ui-storybook": "^1.6.0",
+    "@apollosproject/ui-storybook": "^1.7.0-beta.0",
     "@storybook/react-native": "5.2.4",
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
