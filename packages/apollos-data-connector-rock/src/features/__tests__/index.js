@@ -1,7 +1,7 @@
 import ApollosConfig from '@apollosproject/config';
 import { createGlobalId } from '@apollosproject/server-core';
 
-import ActionAlgorithm from '../../action-algorithms';
+import { dataSource as AlgoDS } from '../../action-algorithms';
 import Feature from '../data-source';
 import resolver from '../resolver';
 
@@ -103,8 +103,6 @@ describe('features', () => {
     const byUserFeed = () => ({
       top: () => ({ get: () => Promise.resolve(itemMock) }),
     });
-
-    const { dataSource: AlgoDS } = ActionAlgorithm;
 
     context = {
       dataSources: {
