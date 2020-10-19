@@ -22,6 +22,7 @@ class ActionAlgorithm extends RockApolloDataSource {
   }, {});
 
   async runAlgorithms({ algorithms }) {
+    const { Feature } = this.content.dataSources;
     // We should flatten just in case a single algorithm generates multiple actions
     return flatten(
       await Promise.all(
@@ -30,7 +31,6 @@ class ActionAlgorithm extends RockApolloDataSource {
           if (typeof algorithm === 'object') {
             // NOTE this is in for backwards compatibility
             // should remove reference to Feature.ACTION_ALGORITHIMS eventually
-            const { Feature } = this.content.dataSources;
             if (Feature.ACTION_ALGORITHIMS[algorithm.type]) {
               console.warn(
                 'Please move action algorithms from Feature to ActionAlgorithm data source.'
@@ -42,7 +42,14 @@ class ActionAlgorithm extends RockApolloDataSource {
 
             return this.ACTION_ALGORITHMS[algorithm.type](algorithm.arguments);
           }
-          return this.ACTION_ALGORITHMS[algorithm]();
+          // NOTE this is in for backwards compatibility
+          // should remove reference to Feature.ACTION_ALGORITHIMS eventually
+          // return this.ACTION_ALGORITHMS[algorithm]();
+          const allAlgos = {
+            ...this.ACTION_ALGORITHMS,
+            ...Feature.ACTION_ALGORITHIMS,
+          };
+          return allAlgos[algorithm]();
         })
       )
     );
