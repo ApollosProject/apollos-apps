@@ -9,7 +9,7 @@ const mock = {
   request: {
     query: GET_FEATURE_FEED,
     variables: {
-      contentId: 'FeatureFeed:1',
+      featureFeedId: 'FeatureFeed:1',
     },
   },
   result: {
