@@ -13,7 +13,7 @@ const ActionBarConnected = ({ featureId, refetchRef, ...props }) => (
     {({ data, refetch }) => {
       if (featureId && refetch && refetchRef)
         refetchRef({ refetch, id: featureId });
-      const node = data.node || {};
+      const node = data?.node || {};
       return (
         <ActionBarFeature {...props} {...node} actions={node.actions || []} />
       );
