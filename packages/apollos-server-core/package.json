@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/server-core",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "1.6.0",
+  "version": "1.7.0-beta.0",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
@@ -20,7 +20,7 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@apollosproject/data-schema": "^1.6.0",
+    "@apollosproject/data-schema": "^1.7.0-beta.0",
     "apollo-server-caching": "^0.4.0",
     "bull": "^3.11.0",
     "bull-board": "^0.1.1",
@@ -33,7 +33,7 @@
     "apollo-server": "^2.11.0"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^1.6.0",
+    "@apollosproject/babel-preset-apollos": "^1.7.0-beta.0",
     "casual": "^1.5.19"
   },
   "license": "SEE LICENSE IN LICENSE.md",
