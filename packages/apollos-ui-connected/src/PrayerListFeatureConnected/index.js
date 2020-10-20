@@ -22,18 +22,17 @@ function PrayerFeatureConnected({
   const [shouldShowOnboarding, setShouldShowOnboarding] = useState(false);
   const onboardingKey = `${featureId}-seenOnboarding`;
 
-  const getOnboardingKey = async () => {
+  const setHasSeenOnboarding = async () => {
     try {
       const hasSeenOnboarding = await AsyncStorage.getItem(onboardingKey);
       setShouldShowOnboarding(!hasSeenOnboarding);
-      } catch (e) {
-        console.error(e);
-      }
+    } catch (e) {
+      console.error(e);
     }
   };
 
   useEffect(() => {
-    getOnboardingKey();
+    setHasSeenOnboarding();
   }, [onboardingKey]);
 
   const handleOpenTo = (index = 0) => {
