@@ -141,6 +141,22 @@ const ACTION_LIST_FEATURE_FRAGMENT = gql`
   }
 `;
 
+const ACTION_BAR_FEATURE_FRAGMENT = gql`
+  fragment ActionBarFeatureFragment on ActionBarFeature {
+    id
+    title
+    actions {
+      id
+      title
+      icon
+      action
+      relatedNode {
+        ...RelatedFeatureNodeFragment
+      }
+    }
+  }
+`;
+
 const HERO_LIST_FEATURE_FRAGMENT = gql`
   fragment HeroListFeatureFragment on HeroListFeature {
     id
@@ -269,6 +285,7 @@ export {
   CARD_FEATURES_FRAGMENT,
   FEATURES_FRAGMENT,
   ACTION_LIST_FEATURE_FRAGMENT,
+  ACTION_BAR_FEATURE_FRAGMENT,
   HERO_LIST_FEATURE_FRAGMENT,
   HORIZONTAL_CARD_LIST_FEATURE_FRAGMENT,
   VERTICAL_CARD_LIST_FEATURE_FRAGMENT,

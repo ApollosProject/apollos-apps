@@ -814,12 +814,14 @@ export const featuresSchema = gql`
     id: ID!
   }
 
+  # Represents a generic action. Typically a button or link.
   type FeatureAction {
     relatedNode: Node
     action: ACTION_FEATURE_ACTION
     title: String
   }
 
+  # An item on an ActionListFeature.
   type ActionListAction {
     id: ID!
 
@@ -830,6 +832,8 @@ export const featuresSchema = gql`
     action: ACTION_FEATURE_ACTION
   }
 
+  # A list of "actions", in this case thumbnails, title, and subtitle.
+  # Has a button at the very bottom (primary action)
   type ActionListFeature implements Feature & Node {
     id: ID!
     order: Int
@@ -840,6 +844,27 @@ export const featuresSchema = gql`
     primaryAction: FeatureAction
   }
 
+  # An item in an ActionBarFeature. Buttons with an icon and title.
+  type ActionBarAction {
+    id: ID!
+    icon: String
+    title: String
+    action: ACTION_FEATURE_ACTION
+    relatedNode: Node
+  }
+
+  # A list of actions, represented as a series of horizontal buttons with icons.
+  # Also has a title above the actions (which can exist by itself by omotting the actions)
+  type ActionBarFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    title: String
+    actions: [ActionBarAction]
+  }
+
+  # A Hero Card with (essentially) an Action List attached to the bottom.
+  # Also has a button at the very bottom.
   type HeroListFeature implements Feature & Node {
     id: ID!
     order: Int
@@ -851,6 +876,9 @@ export const featuresSchema = gql`
     primaryAction: FeatureAction
   }
 
+  # Represents a Card (card type is dictated on the client)
+  # Cards are rendered through either a HeroListFeature (hero) or Vertical/HorizontalCardList
+  # Similar to ActionListAction
   type CardListItem {
     id: ID!
 
@@ -865,6 +893,7 @@ export const featuresSchema = gql`
     action: ACTION_FEATURE_ACTION
   }
 
+  # A Vertical list of cards.
   type VerticalCardListFeature implements Feature & Node {
     id: ID!
     order: Int
@@ -875,6 +904,8 @@ export const featuresSchema = gql`
     cards: [CardListItem]
   }
 
+  # A Vertical list of cards.
+  # Also has a button at the top right.
   type HorizontalCardListFeature implements Feature & Node {
     id: ID!
     order: Int
