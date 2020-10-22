@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0-beta.0](https://github.com/apollosproject/apollos-apps/compare/v1.6.0...v1.7.0-beta.0) (2020-10-19)
+
+
+### Features
+
+* Adds Content Feature Feeds ([#1618](https://github.com/apollosproject/apollos-apps/issues/1618)) ([f8ea785](https://github.com/apollosproject/apollos-apps/commit/f8ea785))
+* Horizontal card list read more ([#1615](https://github.com/apollosproject/apollos-apps/issues/1615)) ([cb22a8e](https://github.com/apollosproject/apollos-apps/commit/cb22a8e))
+* SearchFeed connected components ([#1619](https://github.com/apollosproject/apollos-apps/issues/1619)) ([e63874f](https://github.com/apollosproject/apollos-apps/commit/e63874f))
+
+
+
+
+
 # [1.6.0](https://github.com/apollosproject/apollos-apps/compare/v1.6.0-beta.1...v1.6.0) (2020-10-09)
 
 **Note:** Version bump only for package @apollosproject/ui-fragments

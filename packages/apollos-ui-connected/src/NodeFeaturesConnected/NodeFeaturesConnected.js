@@ -24,7 +24,11 @@ const NodeFeaturesConnected = ({ Component, nodeId, ...props }) => {
         const features = get(node, 'features', []);
         if (!features || !features.length) return null;
 
-        return <Component nodeId={nodeId} features={features} {...props} />;
+        return (
+          console.warn(
+            'NodeFeaturesConnected is deprecated. Please use FeaturesFeedConnected.'
+          ) || <Component nodeId={nodeId} features={features} {...props} />
+        );
       }}
     </Query>
   );

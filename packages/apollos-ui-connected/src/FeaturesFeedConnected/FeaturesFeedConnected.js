@@ -30,20 +30,15 @@ export const ACTION_MAP = {
   OPEN_URL: ({ openUrl, relatedNode }) => {
     openUrl(relatedNode.url);
   },
+  OPEN_CHANNEL: ({ relatedNode, navigation }) => {
+    navigation.navigate('ContentFeed', {
+      itemId: relatedNode.id,
+      itemTitle: relatedNode.name,
+    });
+  },
 };
 
 class FeaturesFeedConnected extends PureComponent {
-  static propTypes = {
-    Component: PropTypes.oneOfType([
-      PropTypes.node,
-      PropTypes.func,
-      PropTypes.object, // type check for React fragments
-    ]),
-    nodeId: PropTypes.string.isRequired,
-    onPressActionItem: PropTypes.func,
-    additionalFeatures: PropTypes.shape({}),
-  };
-
   refetchFunctions = {};
 
   loadingStateObject = [
@@ -87,9 +82,14 @@ class FeaturesFeedConnected extends PureComponent {
   };
 
   render() {
-    const { Component, onPressActionItem, nodeId, ...props } = this.props;
-    // Early return if we don't have a nodeId.
-    if (!nodeId) {
+    const {
+      Component,
+      onPressActionItem,
+      featureFeedId,
+      ...props
+    } = this.props;
+    // Early return if we don't have a featureFeedId.
+    if (!featureFeedId) {
       return (
         <FeedView
           loadingStateData={this.loadingStateData}
@@ -103,12 +103,11 @@ class FeaturesFeedConnected extends PureComponent {
     return (
       <Query
         query={GET_FEATURE_FEED}
-        variables={{ nodeId }}
+        variables={{ featureFeedId }}
         fetchPolicy="cache-and-network"
       >
         {({ error, data, loading, refetch }) => {
           const features = get(data, 'node.features', []);
-
           this.refetchRef({ refetch, id: 'feed' });
           return (
             <FeedView
@@ -126,5 +125,16 @@ class FeaturesFeedConnected extends PureComponent {
     );
   }
 }
+
+FeaturesFeedConnected.propTypes = {
+  Component: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.func,
+    PropTypes.object, // type check for React fragments
+  ]),
+  featureFeedId: PropTypes.string.isRequired,
+  onPressActionItem: PropTypes.func,
+  additionalFeatures: PropTypes.shape({}),
+};
 
 export default FeaturesFeedConnected;

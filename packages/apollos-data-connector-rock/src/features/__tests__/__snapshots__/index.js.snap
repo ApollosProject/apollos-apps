@@ -32,6 +32,26 @@ Object {
 
 exports[`features dataSource should create a PrayerListFeature from a DAILY_PRAYER algorithm 2`] = `Array []`;
 
+exports[`features dataSource should create an ActionBarFeature 1`] = `
+Object {
+  "__typename": "ActionBarFeature",
+  "actions": Array [
+    Object {
+      "action": "OPEN_URL",
+      "icon": "Check",
+      "relatedNode": Object {
+        "__typename": "Url",
+        "id": "Url:f4974a223763b3a06ea2cd73ff30952be89d6281e05bc41f7ee423cd227a2b00721f5531d36e54dd64bc05eda4a94cbf1fbaf45384b4e924ae0fe47ee8d4e792",
+        "url": "https://www.google.com",
+      },
+      "title": "Check In",
+    },
+  ],
+  "id": "{\\"title\\":\\"Test Action List\\",\\"algorithms\\":[],\\"actions\\":[{\\"title\\":\\"Check In\\",\\"icon\\":\\"Check\\",\\"action\\":\\"OPEN_URL\\",\\"relatedNode\\":{\\"__typename\\":\\"Url\\",\\"url\\":\\"https://www.google.com\\"}}]}",
+  "title": "Test Action List",
+}
+`;
+
 exports[`features dataSource should create an ActionListFeature from a CAMPAIGN_ITEMS algorithm 1`] = `
 Object {
   "__typename": "ActionListFeature",
@@ -274,14 +294,9 @@ Object {
       "title": "third item by content channel id",
     },
   ],
-  "id": "{\\"algorithms\\":[{\\"type\\":\\"CONTENT_CHANNEL\\",\\"arguments\\":{\\"contentChannelId\\":13}}],\\"title\\":\\"Test Action List\\",\\"subtitle\\":\\"It's great!\\",\\"primaryAction\\":{\\"action\\":\\"OPEN_URL\\",\\"title\\":\\"Open this url\\",\\"relatedNode\\":{\\"id\\":\\"Url123\\",\\"__typename\\":\\"Url\\",\\"url\\":\\"https://www.google.com\\"}}}",
+  "id": "{\\"algorithms\\":[{\\"type\\":\\"CONTENT_CHANNEL\\",\\"arguments\\":{\\"contentChannelId\\":13}}],\\"title\\":\\"Test Action List\\",\\"subtitle\\":\\"It's great!\\",\\"primaryAction\\":{\\"action\\":\\"OPEN_URL\\",\\"title\\":\\"Open this url\\"}}",
   "primaryAction": Object {
     "action": "OPEN_URL",
-    "relatedNode": Object {
-      "__typename": "Url",
-      "id": "Url123",
-      "url": "https://www.google.com",
-    },
     "title": "Open this url",
   },
   "subtitle": "It's great!",
@@ -1021,14 +1036,9 @@ Object {
     "summary": "summary data",
     "title": "first item by content channel id",
   },
-  "id": "{\\"algorithms\\":[{\\"type\\":\\"USER_FEED\\"}],\\"heroAlgorithms\\":[],\\"title\\":\\"Test HeroListFeature\\",\\"subtitle\\":\\"It's a hero list feature!\\",\\"primaryAction\\":{\\"action\\":\\"OPEN_URL\\",\\"title\\":\\"Open this url\\",\\"relatedNode\\":{\\"__typename\\":\\"Url\\",\\"id\\":\\"Url:123\\",\\"url\\":\\"https://www.google.com\\"}}}",
+  "id": "{\\"algorithms\\":[{\\"type\\":\\"USER_FEED\\"}],\\"heroAlgorithms\\":[],\\"title\\":\\"Test HeroListFeature\\",\\"subtitle\\":\\"It's a hero list feature!\\",\\"primaryAction\\":{\\"action\\":\\"OPEN_URL\\",\\"title\\":\\"Open this url\\"}}",
   "primaryAction": Object {
     "action": "OPEN_URL",
-    "relatedNode": Object {
-      "__typename": "Url",
-      "id": "Url:123",
-      "url": "https://www.google.com",
-    },
     "title": "Open this url",
   },
   "subtitle": "It's a hero list feature!",
@@ -1165,6 +1175,7 @@ Object {
   ],
   "hyphenatedTitle": undefined,
   "id": "{\\"algorithms\\":[\\"PERSONA_FEED\\"],\\"title\\":\\"Test Horizontal List of Cards\\",\\"subtitle\\":\\"Boom\\"}",
+  "primaryAction": undefined,
   "subtitle": "Boom",
   "title": "Test Horizontal List of Cards",
 }
@@ -1538,6 +1549,7 @@ Array [
     ],
     "hyphenatedTitle": undefined,
     "id": "{\\"algorithms\\":[\\"PERSONA_FEED\\"],\\"title\\":\\"FOR YOU\\",\\"subtitle\\":\\"Explore what God calls you to today\\"}",
+    "primaryAction": undefined,
     "subtitle": "Explore what God calls you to today",
     "title": "FOR YOU",
   },
@@ -1864,6 +1876,11 @@ Array [
     },
   ],
 ]
+`;
+
+exports[`features dataSource should throw an error when creating a ActionListFeature from a CONTENT_CHANNEL with no contentChannelId 1`] = `
+"contentChannelId is a required argument for the CONTENT_CHANNEL ActionList algorithm.
+Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aruments: { contentChannelId: 13 } }\`"
 `;
 
 exports[`features resolver must return a personaFeed, a sermonChildrenFeed, and a contentChannelFeed for the userFeedFeatures 1`] = `

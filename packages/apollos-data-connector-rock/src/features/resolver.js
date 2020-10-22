@@ -2,10 +2,12 @@ import { get } from 'lodash';
 import { createGlobalId } from '@apollosproject/server-core';
 
 export default {
+  // deprecated
   WeekendContentItem: {
     features: (root, args, { dataSources: { ContentItem } }) =>
       ContentItem.getFeatures(root),
   },
+  // deprecated
   ContentSeriesContentItem: {
     features: (root, args, { dataSources: { ContentItem } }) =>
       ContentItem.getFeatures(root),
@@ -33,6 +35,9 @@ export default {
   ActionListAction: {
     id: ({ id }) => createGlobalId(id, 'ActionListAction'),
   },
+  ActionBarAction: {
+    id: ({ id }) => createGlobalId(id, 'ActionBarAction'),
+  },
   ScriptureFeature: {
     scriptures: (
       { reference, version },
@@ -52,6 +57,9 @@ export default {
   },
   ActionListFeature: {
     id: ({ id }) => createGlobalId(id, 'ActionListFeature'),
+  },
+  ActionBarFeature: {
+    id: ({ id }) => createGlobalId(id, 'ActionBarFeature'),
   },
   HeroListFeature: {
     id: ({ id }) => createGlobalId(id, 'HeroListFeature'),
