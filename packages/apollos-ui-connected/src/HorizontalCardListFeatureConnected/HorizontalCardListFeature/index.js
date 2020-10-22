@@ -12,7 +12,7 @@ import {
   withIsLoading,
 } from '@apollosproject/ui-kit';
 
-import { horizontalContentCardComponentMapper, LiveConsumer } from '../..';
+import { HorizontalContentCardComponentMapper, LiveConsumer } from '../..';
 
 const Title = styled(
   ({ theme }) => ({
@@ -68,11 +68,11 @@ class HorizontalCardListFeature extends PureComponent {
         const labelText = isLive ? 'Live' : item.labelText;
         return (
           <TouchableScale onPress={() => this.props.onPressItem(item)}>
-            {horizontalContentCardComponentMapper({
-              isLive,
-              ...item,
-              labelText,
-            })}
+            <HorizontalContentCardComponentMapper
+              isLive={isLive}
+              {...item}
+              labelText={labelText}
+            />
           </TouchableScale>
         );
       }}
