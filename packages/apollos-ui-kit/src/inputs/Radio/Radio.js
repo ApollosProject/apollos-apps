@@ -48,11 +48,11 @@ class Radio extends Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.value !== this.props.value) {
+  componentDidReceiveProps(lastProps) {
+    if (lastProps.value !== this.props.value) {
       this.setState(
         {
-          value: nextProps.value,
+          value: this.props.value,
         },
         this.notifyValueChanged
       );

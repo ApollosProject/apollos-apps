@@ -90,7 +90,7 @@ HorizontalDefaultCard.propTypes = {
   coverImage: PropTypes.oneOfType([
     PropTypes.arrayOf(ImageSourceType),
     ImageSourceType,
-  ]).isRequired,
+  ]),
   isLiked: PropTypes.bool,
   summary: PropTypes.string,
   title: PropTypes.string,

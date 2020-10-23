@@ -15,7 +15,8 @@ import {
   H6,
 } from '@apollosproject/ui-kit';
 
-import { HorizontalContentCardComponentMapper, LiveConsumer } from '../..';
+import { LiveConsumer } from '../../live';
+import { HorizontalContentCardComponentMapper } from '../../HorizontalContentCardConnected';
 
 const Title = styled(
   ({ theme }) => ({
