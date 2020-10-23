@@ -2,7 +2,9 @@ import React from 'react';
 import { Text } from 'react-native';
 import { Providers, renderWithApolloData } from '../testUtils';
 
-import MediaControlsConnected, { GET_MEDIA } from '../MediaControlsConnected';
+import MediaControlsConnected, {
+  GET_NODE_MEDIA,
+} from '../MediaControlsConnected';
 import GET_CONTENT_NODE from './getContentNode';
 
 import ContentNodeConnected from './ContentNodeConnected';
@@ -38,7 +40,7 @@ const contentMock = {
 
 const mediaMock = {
   request: {
-    query: GET_MEDIA,
+    query: GET_NODE_MEDIA,
     variables: {
       nodeId: 'WeekendContentItem:1',
     },

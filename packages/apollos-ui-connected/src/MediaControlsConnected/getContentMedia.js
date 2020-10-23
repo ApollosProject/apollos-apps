@@ -1,9 +1,10 @@
 import gql from 'graphql-tag';
 import ApollosConfig from '@apollosproject/config';
 
+// TODO this query is deprecated, use getNodeMedia
 export default gql`
-  query getMediaMedia($nodeId: ID!) {
-    node(id: $nodeId) {
+  query getContentMedia($contentId: ID!) {
+    node(id: $contentId) {
       ... on ContentItem {
         ...contentMediaFragment
       }
