@@ -167,6 +167,24 @@ describe('features', () => {
     });
   });
   describe('dataSource', () => {
+    it('should create an ActionBarFeature', async () => {
+      const result = await feature.createActionBarFeature({
+        title: 'Test Action List',
+        actions: [
+          {
+            title: 'Check In',
+            icon: 'Check',
+            action: 'OPEN_URL',
+            relatedNode: {
+              __typename: 'Url',
+              url: 'https://www.google.com',
+            },
+          },
+        ],
+      });
+
+      expect(await expandResult(result)).toMatchSnapshot();
+    });
     it('should create an ActionListFeature from a PERSONA_FEED', async () => {
       const result = await feature.createActionListFeature({
         algorithms: ['PERSONA_FEED'],

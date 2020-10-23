@@ -25,6 +25,24 @@ export default class Feature extends RockApolloDataSource {
     return JSON.stringify(args);
   }
 
+  // eslint-disable-next-line class-methods-use-this
+  attachRelatedNodeId({ relatedNode, ...action } = {}) {
+    if (relatedNode && !relatedNode.id) {
+      return {
+        ...action,
+        relatedNode: {
+          ...relatedNode,
+          id: createGlobalId(
+            JSON.stringify(relatedNode),
+            relatedNode.__typename
+          ),
+        },
+      };
+    }
+
+    return action;
+  }
+
   async createActionListFeature({
     algorithms = [],
     title,
@@ -36,15 +54,9 @@ export default class Feature extends RockApolloDataSource {
     const actions = () => ActionAlgorithm.runAlgorithms({ algorithms });
 
     // Ensures that we have a generated ID for the Primary Action related node, if not provided.
-    if (
-      primaryAction &&
-      primaryAction.relatedNode &&
-      !primaryAction.relatedNode.id
-    ) {
-      primaryAction.relatedNode.id = createGlobalId( // eslint-disable-line
-        JSON.stringify(primaryAction.relatedNode),
-        primaryAction.relatedNode.__typename
-      );
+    if (primaryAction) {
+      // eslint-disable-next-line no-param-reassign
+      primaryAction = this.attachRelatedNodeId(primaryAction);
     }
 
     return {
@@ -64,6 +76,32 @@ export default class Feature extends RockApolloDataSource {
       primaryAction,
       // Typanme is required so GQL knows specifically what Feature is being created
       __typename: 'ActionListFeature',
+    };
+  }
+
+  async createActionBarFeature({ actions = [], title, algorithms = [] }) {
+    const { ActionAlgorithm } = this.context.dataSources;
+
+    // Run algorithms if we have them, otherwise pull from the config
+    const compiledActions = () =>
+      actions.length
+        ? actions.map((action) => this.attachRelatedNodeId(action))
+        : ActionAlgorithm.runAlgorithms({ algorithms: [] });
+
+    return {
+      // The Feature ID is based on all of the action ids, added together.
+      // This is naive, and could be improved.
+      id: this.createFeatureId({
+        args: {
+          title,
+          algorithms,
+          actions,
+        },
+      }),
+      actions: compiledActions,
+      title,
+      // Typename is required so GQL knows specifically what Feature is being created
+      __typename: 'ActionBarFeature',
     };
   }
 
@@ -101,15 +139,9 @@ export default class Feature extends RockApolloDataSource {
     }
 
     // Ensures that we have a generated ID for the Primary Action related node, if not provided.
-    if (
-      primaryAction &&
-      primaryAction.relatedNode &&
-      !primaryAction.relatedNode.id
-    ) {
-      primaryAction.relatedNode.id = createGlobalId( // eslint-disable-line
-        JSON.stringify(primaryAction.relatedNode),
-        primaryAction.relatedNode.__typename
-      );
+    if (primaryAction) {
+      // eslint-disable-next-line no-param-reassign
+      primaryAction = this.attachRelatedNodeId(primaryAction);
     }
 
     return {
@@ -174,15 +206,10 @@ export default class Feature extends RockApolloDataSource {
     const { ActionAlgorithm } = this.context.dataSources;
     const cards = () => ActionAlgorithm.runAlgorithms({ algorithms });
     // Ensures that we have a generated ID for the Primary Action related node, if not provided.
-    if (
-      primaryAction &&
-      primaryAction.relatedNode &&
-      !primaryAction.relatedNode.id
-    ) {
-      primaryAction.relatedNode.id = createGlobalId( // eslint-disable-line
-        JSON.stringify(primaryAction.relatedNode),
-        primaryAction.relatedNode.__typename
-      );
+    // Ensures that we have a generated ID for the Primary Action related node, if not provided.
+    if (primaryAction) {
+      // eslint-disable-next-line no-param-reassign
+      primaryAction = this.attachRelatedNodeId(primaryAction);
     }
 
     return {
@@ -269,6 +296,8 @@ export default class Feature extends RockApolloDataSource {
     return Promise.all(
       featuresConfig.map((featureConfig) => {
         switch (featureConfig.type) {
+          case 'ActionBar':
+            return this.createActionBarFeature(featureConfig);
           case 'VerticalCardList':
             return this.createVerticalCardListFeature(featureConfig);
           case 'HorizontalCardList':

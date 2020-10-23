@@ -6,6 +6,7 @@ import HorizontalCardListFeatureConnected from '../HorizontalCardListFeatureConn
 import VerticalCardListFeatureConnected from '../VerticalCardListFeatureConnected';
 import HeroListFeatureConnected from '../HeroListFeatureConnected';
 import PrayerListFeatureConnected from '../PrayerListFeatureConnected';
+import ActionBarFeatureConnected from '../ActionBarFeatureConnected';
 import ScriptureFeature from '../features/ScriptureFeature';
 import TextFeature from '../features/TextFeature';
 import WebviewFeature from '../features/WebviewFeature';
@@ -15,6 +16,7 @@ const MAPPINGS = {
   HeroListFeature: HeroListFeatureConnected,
   HorizontalCardListFeature: HorizontalCardListFeatureConnected,
   VerticalCardListFeature: VerticalCardListFeatureConnected,
+  ActionBarFeature: ActionBarFeatureConnected,
   // TODO: HMW set this up so that features that depend on other packages,
   // like Prayer, don't all get stuck here, forcing all church apps to have
   // them all installed?

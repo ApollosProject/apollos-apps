@@ -37,6 +37,7 @@ export HorizontalCardListFeatureConnected, {
 } from './HorizontalCardListFeatureConnected';
 export HorizontalContentCardConnected, {
   horizontalContentCardComponentMapper,
+  HorizontalContentCardComponentMapper,
 } from './HorizontalContentCardConnected';
 export HorizontalContentSeriesFeedConnected, {
   GET_CONTENT_SERIES,
