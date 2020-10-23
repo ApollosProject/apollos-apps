@@ -48,8 +48,9 @@ class Radio extends Component {
     };
   }
 
-  componentDidReceiveProps(lastProps) {
+  componentDidUpdate(lastProps) {
     if (lastProps.value !== this.props.value) {
+      // eslint-disable-next-line react/no-did-update-set-state
       this.setState(
         {
           value: this.props.value,

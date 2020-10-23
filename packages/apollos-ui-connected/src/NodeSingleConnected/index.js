@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { styled, BackgroundView, StretchyView } from '@apollosproject/ui-kit';
 import ContentNodeConnected from '../ContentNodeConnected';
 import ContentParentFeedConnected from '../ContentParentFeedConnected';
+import ContentChildFeedConnected from '../ContentChildFeedConnected';
 import UpNextButtonConnected from '../UpNextButtonConnected';
 import ContentSingleFeaturesConnected from '../ContentSingleFeaturesConnected';
 
