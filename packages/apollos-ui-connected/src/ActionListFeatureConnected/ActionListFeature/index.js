@@ -140,7 +140,6 @@ const ActionListFeature = memo(
 ActionListFeature.displayName = 'Features';
 
 ActionListFeature.propTypes = {
-  // TODO: refactor ActionListCard to safely render without an actions array.
   actions: PropTypes.arrayOf(PropTypes.shape({})),
   primaryAction: PropTypes.shape({}),
   id: PropTypes.string.isRequired,

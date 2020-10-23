@@ -197,8 +197,8 @@ HighlightCard.propTypes = {
   coverImage: PropTypes.oneOfType([
     PropTypes.arrayOf(ImageSourceType),
     ImageSourceType,
-  ]).isRequired,
-  title: PropTypes.string.isRequired,
+  ]),
+  title: PropTypes.string,
   actionIcon: PropTypes.string,
   hasAction: PropTypes.bool,
   isLiked: PropTypes.bool,

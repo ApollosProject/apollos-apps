@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { ActionCard } from '@apollosproject/ui-kit';
 import { ScriptureItem } from '@apollosproject/ui-scripture';
-import { ShareButtonConnected } from '@apollosproject/ui-connected';
+import ShareButtonConnected from '../ShareButtonConnected';
 
 const ScriptureFeature = ({
   scriptures,

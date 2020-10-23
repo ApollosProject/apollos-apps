@@ -168,8 +168,8 @@ HorizontalHighlightCard.propTypes = {
   coverImage: PropTypes.oneOfType([
     PropTypes.arrayOf(ImageSourceType),
     ImageSourceType,
-  ]).isRequired,
-  title: PropTypes.string.isRequired,
+  ]),
+  title: PropTypes.string,
   actionIcon: PropTypes.string,
   hasAction: PropTypes.bool,
   disabled: PropTypes.bool, // "Disabled state". Alternatively use this to highlight/differentiate the "active" card in a list.

@@ -33,8 +33,8 @@ class TrackEventWhenLoaded extends PureComponent {
 }
 
 TrackEventWhenLoaded.propTypes = {
-  loaded: PropTypes.bool.isRequired,
-  isLoading: PropTypes.bool.isRequired,
+  loaded: PropTypes.bool,
+  isLoading: PropTypes.bool,
   eventName: PropTypes.string.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   properties: PropTypes.any,

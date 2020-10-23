@@ -132,7 +132,7 @@ FeaturesFeedConnected.propTypes = {
     PropTypes.func,
     PropTypes.object, // type check for React fragments
   ]),
-  featureFeedId: PropTypes.string.isRequired,
+  featureFeedId: PropTypes.string,
   onPressActionItem: PropTypes.func,
   additionalFeatures: PropTypes.shape({}),
 };

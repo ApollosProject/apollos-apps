@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { ActionCard, BodyText } from '@apollosproject/ui-kit';
-import { ShareButtonConnected } from '@apollosproject/ui-connected';
+import ShareButtonConnected from '../ShareButtonConnected';
 
 const TextFeature = ({
   body,

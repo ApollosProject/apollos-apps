@@ -59,7 +59,7 @@ const CoreNavigationAnalytics = ({ children }) => (
 );
 
 CoreNavigationAnalytics.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.func.isRequired,
 };
 
 export { CoreNavigationAnalytics as default, analytics as coreAnalytics };

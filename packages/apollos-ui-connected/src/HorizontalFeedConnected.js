@@ -6,7 +6,7 @@ import { Query } from 'react-apollo';
 
 import { HorizontalTileFeed, TouchableScale } from '@apollosproject/ui-kit';
 
-import { HorizontalContentCardConnected } from '@apollosproject/ui-connected';
+import HorizontalContentCardConnected from './HorizontalContentCardConnected';
 
 const loadingStateObject = {
   node: {

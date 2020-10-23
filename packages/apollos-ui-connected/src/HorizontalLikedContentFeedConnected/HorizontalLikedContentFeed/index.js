@@ -73,7 +73,12 @@ class HorizontalLikedContentFeed extends Component {
     content: PropTypes.arrayOf(
       PropTypes.any // this component doesn't care about the shape of `node`, just that it exists
     ),
-    Component: PropTypes.element,
+    Component: PropTypes.oneOfType([
+      PropTypes.node,
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.func,
+      PropTypes.object,
+    ]),
   };
 
   static defaultProps = {
