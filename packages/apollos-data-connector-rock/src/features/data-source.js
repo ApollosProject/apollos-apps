@@ -27,6 +27,8 @@ export default class Feature extends RockApolloDataSource {
 
   // eslint-disable-next-line class-methods-use-this
   attachRelatedNodeId({ relatedNode, ...action } = {}) {
+    // if we already have an ID, return as is
+    if (relatedNode?.id) return { relatedNode, ...action };
     if (relatedNode && !relatedNode.id) {
       return {
         ...action,
