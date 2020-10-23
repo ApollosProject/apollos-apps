@@ -4,7 +4,7 @@ import { Text } from 'react-native';
 import { ScriptureText, VerseNumber } from '@apollosproject/ui-scripture';
 import { BodyText } from '@apollosproject/ui-kit';
 
-import { PrayerDialogScreen } from '..';
+import PrayerDialogScreen from '../PrayerDialogScreen';
 
 const ConfirmationDialogScreen = (props) => (
   <PrayerDialogScreen

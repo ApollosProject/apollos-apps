@@ -67,7 +67,7 @@ const ActionListItem = ({
 
 ActionListItem.propTypes = {
   imageSource: ImageSourceType,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   action: PropTypes.string,
   relatedNode: PropTypes.any, // eslint-disable-line
   label: PropTypes.string,

@@ -8,7 +8,7 @@ import { AnalyticsContext } from '@apollosproject/ui-analytics';
 import PrayerCard from '../../PrayerCard';
 import PrayerView from '../../PrayerView';
 
-import { ConfirmationDialogScreen } from '..';
+import ConfirmationDialogScreen from '../ConfirmationDialogScreen';
 
 export const ADD_PRAYER = gql`
   mutation($prayer: String!) {
