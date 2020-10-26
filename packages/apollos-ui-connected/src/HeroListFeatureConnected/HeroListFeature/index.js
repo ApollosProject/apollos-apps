@@ -175,7 +175,7 @@ const HeroListFeature = memo(
           actions={isLoading && !actions.length ? loadingStateObject : actions}
           onPressActionItem={onPressItem}
           onPressActionListButton={() =>
-            console.log(primaryAction) || onPressActionListButton(primaryAction)
+            onPressActionListButton(primaryAction)
           }
           actionListButtonTitle={get(primaryAction, 'title')}
         />
