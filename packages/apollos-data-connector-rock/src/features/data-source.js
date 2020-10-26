@@ -40,7 +40,7 @@ export default class Feature extends RockApolloDataSource {
       };
     }
 
-    return action;
+    return { relatedNode, ...action };
   }
 
   async createActionListFeature({
