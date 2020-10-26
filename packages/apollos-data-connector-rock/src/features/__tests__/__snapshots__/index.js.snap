@@ -294,9 +294,14 @@ Object {
       "title": "third item by content channel id",
     },
   ],
-  "id": "{\\"algorithms\\":[{\\"type\\":\\"CONTENT_CHANNEL\\",\\"arguments\\":{\\"contentChannelId\\":13}}],\\"title\\":\\"Test Action List\\",\\"subtitle\\":\\"It's great!\\",\\"primaryAction\\":{\\"action\\":\\"OPEN_URL\\",\\"title\\":\\"Open this url\\"}}",
+  "id": "{\\"algorithms\\":[{\\"type\\":\\"CONTENT_CHANNEL\\",\\"arguments\\":{\\"contentChannelId\\":13}}],\\"title\\":\\"Test Action List\\",\\"subtitle\\":\\"It's great!\\",\\"primaryAction\\":{\\"relatedNode\\":{\\"id\\":\\"Url123\\",\\"__typename\\":\\"Url\\",\\"url\\":\\"https://www.google.com\\"},\\"action\\":\\"OPEN_URL\\",\\"title\\":\\"Open this url\\"}}",
   "primaryAction": Object {
     "action": "OPEN_URL",
+    "relatedNode": Object {
+      "__typename": "Url",
+      "id": "Url123",
+      "url": "https://www.google.com",
+    },
     "title": "Open this url",
   },
   "subtitle": "It's great!",
@@ -1036,9 +1041,14 @@ Object {
     "summary": "summary data",
     "title": "first item by content channel id",
   },
-  "id": "{\\"algorithms\\":[{\\"type\\":\\"USER_FEED\\"}],\\"heroAlgorithms\\":[],\\"title\\":\\"Test HeroListFeature\\",\\"subtitle\\":\\"It's a hero list feature!\\",\\"primaryAction\\":{\\"action\\":\\"OPEN_URL\\",\\"title\\":\\"Open this url\\"}}",
+  "id": "{\\"algorithms\\":[{\\"type\\":\\"USER_FEED\\"}],\\"heroAlgorithms\\":[],\\"title\\":\\"Test HeroListFeature\\",\\"subtitle\\":\\"It's a hero list feature!\\",\\"primaryAction\\":{\\"relatedNode\\":{\\"__typename\\":\\"Url\\",\\"id\\":\\"Url:123\\",\\"url\\":\\"https://www.google.com\\"},\\"action\\":\\"OPEN_URL\\",\\"title\\":\\"Open this url\\"}}",
   "primaryAction": Object {
     "action": "OPEN_URL",
+    "relatedNode": Object {
+      "__typename": "Url",
+      "id": "Url:123",
+      "url": "https://www.google.com",
+    },
     "title": "Open this url",
   },
   "subtitle": "It's a hero list feature!",
