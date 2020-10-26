@@ -1,6 +1,8 @@
 import { flatten, get } from 'lodash';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import ApollosConfig from '@apollosproject/config';
+import { parseGlobalId } from '@apollosproject/server-core';
+import { createImageUrlFromGuid } from '../utils';
 
 class ActionAlgorithm extends RockApolloDataSource {
   // Names of Action Algoritms mapping to the functions that create the actions.
@@ -14,6 +16,7 @@ class ActionAlgorithm extends RockApolloDataSource {
     SERIES_IN_PROGRESS: this.seriesInProgressAlgorithm,
     USER_FEED: this.userFeedAlgorithm,
     DAILY_PRAYER: this.dailyPrayerAlgorithm,
+    CURRENT_CAMPUS: this.currentCampusAlgorithm,
   }).reduce((accum, [key, value]) => {
     // convenciance code to make sure all methods are bound to the Features dataSource
     // eslint-disable-next-line
@@ -21,7 +24,7 @@ class ActionAlgorithm extends RockApolloDataSource {
     return accum;
   }, {});
 
-  async runAlgorithms({ algorithms }) {
+  async runAlgorithms({ algorithms, args }) {
     const { Feature } = this.context.dataSources;
     // We should flatten just in case a single algorithm generates multiple actions
     return flatten(
@@ -36,10 +39,16 @@ class ActionAlgorithm extends RockApolloDataSource {
               console.warn(
                 'Please move action algorithms from Feature to ActionAlgorithm data source.'
               );
-              return featureAlgorithims[algorithm.type](algorithm.arguments);
+              return featureAlgorithims[algorithm.type]({
+                ...algorithm.arguments,
+                ...args,
+              });
             }
 
-            return this.ACTION_ALGORITHMS[algorithm.type](algorithm.arguments);
+            return this.ACTION_ALGORITHMS[algorithm.type]({
+              ...algorithm.arguments,
+              ...args,
+            });
           }
           // NOTE this is in for backwards compatibility
           // should remove reference to Feature.ACTION_ALGORITHIMS eventually
@@ -48,7 +57,7 @@ class ActionAlgorithm extends RockApolloDataSource {
             ...this.ACTION_ALGORITHMS,
             ...featureAlgorithims,
           };
-          return allAlgos[algorithm]();
+          return allAlgos[algorithm](args);
         })
       )
     );
@@ -229,6 +238,30 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
       action: 'READ_CONTENT',
       summary: ContentItem.createSummary(item),
     }));
+  }
+
+  async currentCampusAlgorithm({ campusId }) {
+    const { Campus } = this.context.dataSources;
+    const { id } = parseGlobalId(campusId);
+    const campus = await Campus.getFromId(id);
+    return [
+      {
+        id,
+        title: campus.location.name,
+        subtitle: campus.name,
+        image: {
+          sources: [
+            {
+              uri: createImageUrlFromGuid(campus.location.image.guid),
+              width: campus.location.image.width,
+              height: campus.location.image.height,
+            },
+          ],
+        },
+        relatedNode: { ...campus, __type: 'Campus' },
+        action: null,
+      },
+    ];
   }
 }
 

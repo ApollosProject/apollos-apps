@@ -7,7 +7,7 @@ const resolver = {
     homeFeedFeatures: (root, args, { dataSources: { FeatureFeed } }) =>
       FeatureFeed.getFeed({
         type: 'apollosConfig',
-        args: { section: 'HOME_FEATURES' },
+        args: { section: 'HOME_FEATURES', ...args },
       }),
     discoverFeedFeatures: (root, args, { dataSources: { FeatureFeed } }) =>
       FeatureFeed.getFeed({
@@ -40,7 +40,7 @@ class FeatureFeed extends RockApolloDataSource {
 
     if (type === 'apollosConfig') {
       getFeatures = () =>
-        Feature.getFeatures(ApollosConfig[args.section] || []);
+        Feature.getFeatures(ApollosConfig[args.section] || [], args);
     }
 
     if (type === 'contentItem' && args.id) {

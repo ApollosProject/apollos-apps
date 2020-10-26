@@ -48,10 +48,11 @@ export default class Feature extends RockApolloDataSource {
     title,
     subtitle,
     primaryAction,
+    ...args
   }) {
     // Generate a list of actions.
     const { ActionAlgorithm } = this.context.dataSources;
-    const actions = () => ActionAlgorithm.runAlgorithms({ algorithms });
+    const actions = () => ActionAlgorithm.runAlgorithms({ algorithms, args });
 
     // Ensures that we have a generated ID for the Primary Action related node, if not provided.
     if (primaryAction) {
@@ -68,6 +69,7 @@ export default class Feature extends RockApolloDataSource {
           title,
           subtitle,
           primaryAction,
+          ...args,
         },
       }),
       actions,
@@ -79,14 +81,19 @@ export default class Feature extends RockApolloDataSource {
     };
   }
 
-  async createActionBarFeature({ actions = [], title, algorithms = [] }) {
+  async createActionBarFeature({
+    actions = [],
+    title,
+    algorithms = [],
+    ...args
+  }) {
     const { ActionAlgorithm } = this.context.dataSources;
 
     // Run algorithms if we have them, otherwise pull from the config
     const compiledActions = () =>
       actions.length
         ? actions.map((action) => this.attachRelatedNodeId(action))
-        : ActionAlgorithm.runAlgorithms({ algorithms: [] });
+        : ActionAlgorithm.runAlgorithms({ algorithms, args });
 
     return {
       // The Feature ID is based on all of the action ids, added together.
@@ -111,6 +118,7 @@ export default class Feature extends RockApolloDataSource {
     title,
     subtitle,
     primaryAction,
+    ...args
   }) {
     // Generate a list of actions.
     let actions;
@@ -120,18 +128,22 @@ export default class Feature extends RockApolloDataSource {
     // If we have a strategy for selecting the hero card.
     if (heroAlgorithms && heroAlgorithms.length) {
       // The actions come from the action algorithms
-      actions = () => ActionAlgorithm.runAlgorithms({ algorithms });
+      actions = () => ActionAlgorithm.runAlgorithms({ algorithms, args });
       // and the hero comes from the hero algorithms
       heroCard = async () => {
         const cards = await ActionAlgorithm.runAlgorithms({
           algorithms: heroAlgorithms,
+          args,
         });
         return cards.length ? cards[0] : null;
       };
       // Otherwise, if we don't have a strategy
     } else {
       // Get all the cards (sorry, no lazy loading here)
-      const allActions = await ActionAlgorithm.runAlgorithms({ algorithms });
+      const allActions = await ActionAlgorithm.runAlgorithms({
+        algorithms,
+        args,
+      });
       // The actions are all actions after the first
       actions = allActions.slice(1);
       // And the hero is the first action.
@@ -154,6 +166,7 @@ export default class Feature extends RockApolloDataSource {
           title,
           subtitle,
           primaryAction,
+          ...args,
         },
       }),
       actions,
@@ -171,10 +184,11 @@ export default class Feature extends RockApolloDataSource {
     title,
     subtitle,
     isFeatured = false,
+    ...args
   }) {
     // Generate a list of cards.
     const { ActionAlgorithm } = this.context.dataSources;
-    const cards = () => ActionAlgorithm.runAlgorithms({ algorithms });
+    const cards = () => ActionAlgorithm.runAlgorithms({ algorithms, args });
     return {
       // The Feature ID is based on all of the action ids, added together.
       // This is naive, and could be improved.
@@ -184,6 +198,7 @@ export default class Feature extends RockApolloDataSource {
           title,
           subtitle,
           isFeatured,
+          ...args,
         },
       }),
       cards,
@@ -201,10 +216,11 @@ export default class Feature extends RockApolloDataSource {
     title,
     subtitle,
     primaryAction,
+    ...args
   }) {
     // Generate a list of horizontal cards.
     const { ActionAlgorithm } = this.context.dataSources;
-    const cards = () => ActionAlgorithm.runAlgorithms({ algorithms });
+    const cards = () => ActionAlgorithm.runAlgorithms({ algorithms, args });
     // Ensures that we have a generated ID for the Primary Action related node, if not provided.
     // Ensures that we have a generated ID for the Primary Action related node, if not provided.
     if (primaryAction) {
@@ -221,6 +237,7 @@ export default class Feature extends RockApolloDataSource {
           title,
           subtitle,
           primaryAction,
+          ...args,
         },
       }),
       cards,
@@ -252,9 +269,15 @@ export default class Feature extends RockApolloDataSource {
     };
   }
 
-  createPrayerListFeature({ algorithms = [], title, subtitle, isCard = true }) {
+  createPrayerListFeature({
+    algorithms = [],
+    title,
+    subtitle,
+    isCard = true,
+    ...args
+  }) {
     const { ActionAlgorithm } = this.context.dataSources;
-    const prayers = () => ActionAlgorithm.runAlgorithms({ algorithms });
+    const prayers = () => ActionAlgorithm.runAlgorithms({ algorithms, args });
     return {
       // The Feature ID is based on all of the action ids, added together.
       // This is naive, and could be improved.
@@ -264,6 +287,7 @@ export default class Feature extends RockApolloDataSource {
           title,
           subtitle,
           isCard,
+          ...args,
         },
       }),
       prayers,
@@ -292,29 +316,30 @@ export default class Feature extends RockApolloDataSource {
       'getHomeFeedFeatures is deprecated, please use FeatureFeed.getFeed({type: "apollosConfig", args: {"section": "home"}})'
     ) || this.getFeatures(get(ApollosConfig, 'HOME_FEATURES', []));
 
-  getFeatures = async (featuresConfig = []) => {
+  getFeatures = async (featuresConfig = [], args = {}) => {
     return Promise.all(
       featuresConfig.map((featureConfig) => {
+        const finalConfig = { ...featureConfig, ...args };
         switch (featureConfig.type) {
           case 'ActionBar':
-            return this.createActionBarFeature(featureConfig);
+            return this.createActionBarFeature(finalConfig);
           case 'VerticalCardList':
-            return this.createVerticalCardListFeature(featureConfig);
+            return this.createVerticalCardListFeature(finalConfig);
           case 'HorizontalCardList':
-            return this.createHorizontalCardListFeature(featureConfig);
+            return this.createHorizontalCardListFeature(finalConfig);
           case 'HeroListFeature':
             console.warn(
               'Deprecated: Please use the name "HeroList" instead. You used "HeroListFeature"'
             );
-            return this.createHeroListFeature(featureConfig);
+            return this.createHeroListFeature(finalConfig);
           case 'HeroList':
-            return this.createHeroListFeature(featureConfig);
+            return this.createHeroListFeature(finalConfig);
           case 'PrayerList':
-            return this.createPrayerListFeature(featureConfig);
+            return this.createPrayerListFeature(finalConfig);
           case 'ActionList':
           default:
             // Action list was the default in 1.3.0 and prior.
-            return this.createActionListFeature(featureConfig);
+            return this.createActionListFeature(finalConfig);
         }
       })
     );
