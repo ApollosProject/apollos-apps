@@ -81,9 +81,21 @@ const UpNextButtonConnected = ({
 };
 
 UpNextButtonConnected.propTypes = {
-  continueText: PropTypes.node,
-  doneText: PropTypes.node,
-  Component: PropTypes.node,
+  continueText: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.func,
+  ]),
+  doneText: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.func,
+  ]),
+  Component: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.func,
+  ]),
   contentId: PropTypes.string,
   nodeId: PropTypes.string,
 };

@@ -48,11 +48,12 @@ class Radio extends Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.value !== this.props.value) {
+  componentDidUpdate(lastProps) {
+    if (lastProps.value !== this.props.value) {
+      // eslint-disable-next-line react/no-did-update-set-state
       this.setState(
         {
-          value: nextProps.value,
+          value: this.props.value,
         },
         this.notifyValueChanged
       );

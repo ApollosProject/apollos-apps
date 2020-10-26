@@ -1,14 +1,13 @@
 import React from 'react';
 import { Animated } from 'react-native';
 import PropTypes from 'prop-types';
-import {
-  ContentNodeConnected,
-  ContentParentFeedConnected,
-  ContentChildFeedConnected,
-  UpNextButtonConnected,
-  ContentSingleFeaturesConnected,
-} from '@apollosproject/ui-connected';
+
 import { styled, BackgroundView, StretchyView } from '@apollosproject/ui-kit';
+import ContentNodeConnected from '../ContentNodeConnected';
+import ContentParentFeedConnected from '../ContentParentFeedConnected';
+import ContentChildFeedConnected from '../ContentChildFeedConnected';
+import UpNextButtonConnected from '../UpNextButtonConnected';
+import ContentSingleFeaturesConnected from '../ContentSingleFeaturesConnected';
 
 const FlexedScrollView = styled({ flex: 1 })(Animated.ScrollView);
 
