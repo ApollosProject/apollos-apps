@@ -963,7 +963,7 @@ export const featuresSchema = gql`
     userFeedFeatures: [Feature]
       @cacheControl(maxAge: 0)
       @deprecated(reason: "Use homeFeedFeatures or discoverFeedFeatures")
-    homeFeedFeatures: FeatureFeed @cacheControl(maxAge: 0)
+    homeFeedFeatures(campusId: ID): FeatureFeed @cacheControl(maxAge: 0)
     discoverFeedFeatures: FeatureFeed @cacheControl(maxAge: 0)
   }
 `;
