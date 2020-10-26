@@ -6,7 +6,7 @@ const {
   SCRIPTURE_FEATURE_FRAGMENT,
   WEBVIEW_FEATURE_FRAGMENT,
   CARD_FEATURES_FRAGMENT,
-  FEATURES_NODE_FRAGMENT,
+  NODE_FEATURES_FRAGMENT,
 } = ApollosConfig.FRAGMENTS;
 
 export default gql`
@@ -14,12 +14,12 @@ export default gql`
     node(id: $contentId) {
       id
       ...CardFeaturesFragment
-      ...FeaturesNodeFragment
+      ...NodeFeaturesFragment
     }
   }
   ${TEXT_FEATURE_FRAGMENT}
   ${SCRIPTURE_FEATURE_FRAGMENT}
   ${WEBVIEW_FEATURE_FRAGMENT}
   ${CARD_FEATURES_FRAGMENT}
-  ${FEATURES_NODE_FRAGMENT}
+  ${NODE_FEATURES_FRAGMENT}
 `;
