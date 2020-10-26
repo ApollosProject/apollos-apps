@@ -33,38 +33,6 @@ const PRAYER_LIST_FEATURE_FRAGMENT = gql`
   }
 `;
 
-const FEED_FEATURES_FRAGMENT = gql`
-  fragment FeedFeaturesFragment on Feature {
-    id
-    __typename
-    ... on VerticalCardListFeature {
-      isFeatured
-      title
-      subtitle
-    }
-    ... on HorizontalCardListFeature {
-      title
-      subtitle
-    }
-    ... on ActionListFeature {
-      title
-      subtitle
-    }
-    ... on HeroListFeature {
-      title
-      subtitle
-    }
-    ... on PrayerListFeature {
-      title
-      subtitle
-      isCard
-    }
-    ...TextFeatureFragment
-    ...ScriptureFeatureFragment
-    ...WebviewFeatureFragment
-  }
-`;
-
 const SCRIPTURE_FEATURE_FRAGMENT = gql`
   fragment ScriptureFeatureFragment on ScriptureFeature {
     sharing {
@@ -83,11 +51,21 @@ const SCRIPTURE_FEATURE_FRAGMENT = gql`
 const FEATURES_FRAGMENT = gql`
   fragment FeaturesFragment on Feature {
     id
+    __typename
     ...TextFeatureFragment
     ...ScriptureFeatureFragment
     ...WebviewFeatureFragment
+    ...VerticalCardListFeatureFragment
+    ...ActionListFeatureFragment
+    ...ActionBarFeatureFragment
+    ...HeroListFeatureFragment
+    ...HorizontalCardListFeatureFragment
+    ...PrayerListFeatureFragment
   }
 `;
+
+// TODO deprecated
+const FEED_FEATURES_FRAGMENT = FEATURES_FRAGMENT;
 
 const CARD_FEATURES_FRAGMENT = gql`
   fragment CardFeaturesFragment on ContentItem {
