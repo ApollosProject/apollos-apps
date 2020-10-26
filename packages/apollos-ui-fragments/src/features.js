@@ -33,6 +33,49 @@ const PRAYER_LIST_FEATURE_FRAGMENT = gql`
   }
 `;
 
+const LITE_FEATURES_FRAGMENT = gql`
+  fragment LiteFeaturesFragment on Feature {
+    id
+    __typename
+    ... on VerticalCardListFeature {
+      isFeatured
+      title
+      subtitle
+    }
+    ... on HorizontalCardListFeature {
+      title
+      subtitle
+    }
+    ... on ActionListFeature {
+      title
+      subtitle
+    }
+    ... on HeroListFeature {
+      title
+      subtitle
+    }
+    ... on PrayerListFeature {
+      title
+      subtitle
+      isCard
+    }
+    ... on TextFeature {
+      body
+    }
+    ... on ScriptureFeature {
+      scriptures {
+        reference
+      }
+    }
+    ... on WebviewFeature {
+      title
+    }
+  }
+`;
+
+// name change
+const FEED_FEATURES_FRAGMENT = LITE_FEATURES_FRAGMENT;
+
 const SCRIPTURE_FEATURE_FRAGMENT = gql`
   fragment ScriptureFeatureFragment on ScriptureFeature {
     sharing {
@@ -48,35 +91,23 @@ const SCRIPTURE_FEATURE_FRAGMENT = gql`
   }
 `;
 
-const FEATURES_FRAGMENT = gql`
-  fragment FeaturesFragment on Feature {
-    id
-    __typename
-    ...TextFeatureFragment
-    ...ScriptureFeatureFragment
-    ...WebviewFeatureFragment
-    ...VerticalCardListFeatureFragment
-    ...ActionListFeatureFragment
-    ...ActionBarFeatureFragment
-    ...HeroListFeatureFragment
-    ...HorizontalCardListFeatureFragment
-    ...PrayerListFeatureFragment
-  }
-`;
-
-// TODO deprecated
-const FEED_FEATURES_FRAGMENT = FEATURES_FRAGMENT;
 
 const CARD_FEATURES_FRAGMENT = gql`
   fragment CardFeaturesFragment on ContentItem {
     ... on ContentSeriesContentItem {
       features {
-        ...FeaturesFragment
+        id
+        ...TextFeatureFragment
+        ...ScriptureFeatureFragment
+        ...WebviewFeatureFragment
       }
     }
     ... on WeekendContentItem {
       features {
-        ...FeaturesFragment
+        id
+        ...TextFeatureFragment
+        ...ScriptureFeatureFragment
+        ...WebviewFeatureFragment
       }
     }
   }
@@ -85,7 +116,10 @@ const CARD_FEATURES_FRAGMENT = gql`
 const NODE_FEATURES_FRAGMENT = gql`
   fragment NodeFeaturesFragment on FeaturesNode {
     features {
-      ...FeaturesFragment
+      id
+      ...TextFeatureFragment
+      ...ScriptureFeatureFragment
+      ...WebviewFeatureFragment
     }
   }
 `;
@@ -268,6 +302,7 @@ export {
   HORIZONTAL_CARD_LIST_FEATURE_FRAGMENT,
   VERTICAL_CARD_LIST_FEATURE_FRAGMENT,
   FEED_FEATURES_FRAGMENT,
+  INITIAL_FEATURES_FRAGMENT,
   WEBVIEW_FEATURE_FRAGMENT,
   PRAYER_LIST_FEATURE_FRAGMENT,
   RELATED_NODE_FRAGMENT,
