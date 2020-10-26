@@ -1,8 +1,6 @@
 import { flatten, get } from 'lodash';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import ApollosConfig from '@apollosproject/config';
-import { parseGlobalId } from '@apollosproject/server-core';
-import { createImageUrlFromGuid } from '../utils';
 
 class ActionAlgorithm extends RockApolloDataSource {
   // Names of Action Algoritms mapping to the functions that create the actions.
@@ -16,7 +14,6 @@ class ActionAlgorithm extends RockApolloDataSource {
     SERIES_IN_PROGRESS: this.seriesInProgressAlgorithm,
     USER_FEED: this.userFeedAlgorithm,
     DAILY_PRAYER: this.dailyPrayerAlgorithm,
-    CURRENT_CAMPUS: this.currentCampusAlgorithm,
   }).reduce((accum, [key, value]) => {
     // convenciance code to make sure all methods are bound to the Features dataSource
     // eslint-disable-next-line
@@ -238,30 +235,6 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
       action: 'READ_CONTENT',
       summary: ContentItem.createSummary(item),
     }));
-  }
-
-  async currentCampusAlgorithm({ campusId }) {
-    const { Campus } = this.context.dataSources;
-    const { id } = parseGlobalId(campusId);
-    const campus = await Campus.getFromId(id);
-    return [
-      {
-        id,
-        title: campus.location.name,
-        subtitle: campus.name,
-        image: {
-          sources: [
-            {
-              uri: createImageUrlFromGuid(campus.location.image.guid),
-              width: campus.location.image.width,
-              height: campus.location.image.height,
-            },
-          ],
-        },
-        relatedNode: { ...campus, __type: 'Campus' },
-        action: null,
-      },
-    ];
   }
 }
 
