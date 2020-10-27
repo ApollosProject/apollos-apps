@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import {
   FeedView,
-  H2,
+  H3,
   H5,
   PaddedView,
   styled,
@@ -23,7 +23,7 @@ const Title = styled(
 const Subtitle = styled(
   {},
   'ui-connected.VerticalCardListFeatureConnected.VerticalCardListFeature.Subtitle'
-)(H2);
+)(H3);
 
 const Header = styled(
   ({ theme }) => ({

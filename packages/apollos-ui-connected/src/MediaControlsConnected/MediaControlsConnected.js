@@ -5,7 +5,7 @@ import { get } from 'lodash';
 
 import { LiveConsumer } from '../live';
 
-import GET_MEDIA from './getMedia';
+import GET_NODE_MEDIA from './getNodeMedia';
 
 import MediaControls from './MediaControls';
 
@@ -15,7 +15,7 @@ const MediaControlsConnected = ({ Component, contentId, nodeId, ...props }) => {
     <LiveConsumer contentId={contentId}>
       {(liveStream) => (
         <Query
-          query={GET_MEDIA}
+          query={GET_NODE_MEDIA}
           fetchPolicy="cache-and-network"
           variables={{ nodeId: nodeId || contentId }}
         >

@@ -54,10 +54,10 @@
   version "0.0.0"
   uid ""
 
-"@apollosproject/ui-kit@^1.6.0-beta.0":
-  version "1.6.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-kit/-/ui-kit-1.6.0-beta.0.tgz#e495b218c06e757db95f8b74e60f8c0828494332"
-  integrity sha512-G4+Hd8c7dLcaesjfAuCm1/Vwcwf0KsLZoh4y4AcICTUz9JoAb2T+ZHgM+Mo72jsCuTQQpnJCVb5fA9oQYMpucg==
+"@apollosproject/ui-kit@^1.7.0-beta.1":
+  version "1.7.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-kit/-/ui-kit-1.7.0-beta.1.tgz#047ff5dd58e9277ad6dba51583b4f3662fcca0e5"
+  integrity sha512-zYX3qkEuYobXBoP37kD8yOzKmedHdwJj+ZegOe+AlnvWrWz4yupSAlkq20tuznIS0s6M2qtWYeq+37MZei4okw==
   dependencies:
     "@react-native-community/blur" "^3.6.0"
     color "^3.1.0"
@@ -101,10 +101,10 @@
   version "0.0.0"
   uid ""
 
-"@apollosproject/ui-storybook@^1.6.0-beta.0":
-  version "1.6.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-storybook/-/ui-storybook-1.6.0-beta.0.tgz#5d2aaf4bd906627f6fcd53c81b186a9320fc7662"
-  integrity sha512-IuJKlDUm/464K0fZZ5GF6fK4eajfOx9f/JYFXM99M1qqNi/D1DyaK2+ieXs3kuZL7FtPDQcCQQFWfMYV9Nwl+w==
+"@apollosproject/ui-storybook@^1.7.0-beta.1":
+  version "1.7.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-storybook/-/ui-storybook-1.7.0-beta.1.tgz#0fa79c041a93badd19819a9a3fd5b53b02f19eb7"
+  integrity sha512-VWuLIszntSSXJKEJwZV69Avpv8AlypNiJ8cKSHGltS6yrmlTBXky4sza1wJwGWcQ3o3NK/6tAeKb8Tqlnwf+Yw==
   dependencies:
     "@storybook/addon-actions" "5.2.4"
     "@storybook/addon-links" "5.2.4"

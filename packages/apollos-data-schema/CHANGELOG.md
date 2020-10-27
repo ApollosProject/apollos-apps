@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0-beta.1](https://github.com/apollosproject/apollos-apps/compare/v1.7.0-beta.0...v1.7.0-beta.1) (2020-10-23)
+
+
+### Features
+
+* ActionBarConnected ([#1624](https://github.com/apollosproject/apollos-apps/issues/1624)) ([cce5849](https://github.com/apollosproject/apollos-apps/commit/cce5849))
+
+
+
+
+
 # [1.7.0-beta.0](https://github.com/apollosproject/apollos-apps/compare/v1.6.0...v1.7.0-beta.0) (2020-10-19)
 
 

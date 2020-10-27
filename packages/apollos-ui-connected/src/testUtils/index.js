@@ -56,9 +56,13 @@ const ApolloStorybookDecorator = ({
   const fragmentMatcher = new IntrospectionFragmentMatcher({
     introspectionQueryResultData: finalPossibleTypes,
   });
+
   return apolloStorybookDecorator({
     typeDefs: [typeDefs, ...additionalSchema],
     mocks,
+    resolverValidationOptions: {
+      requireResolversForResolveType: false,
+    },
     cacheOptions: { fragmentMatcher },
   });
 };
