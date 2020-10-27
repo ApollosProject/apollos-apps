@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
 
-import { styled, ActionList, H3, H6 } from '@apollosproject/ui-kit';
+import { styled, ActionList, H3, H5 } from '@apollosproject/ui-kit';
 import { get } from 'lodash';
 
 const Title = styled(
@@ -10,7 +10,7 @@ const Title = styled(
     color: theme.colors.text.tertiary,
   }),
   'ui-connected.ActionListFeatureConnected.ActionListFeature.Title'
-)(H6);
+)(H5);
 
 const Subtitle = styled(
   {},

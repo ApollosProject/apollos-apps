@@ -5,7 +5,7 @@ import {
   ActionList,
   HighlightCard,
   H3,
-  H6,
+  H5,
   PaddedView,
   styled,
   TouchableScale,
@@ -25,7 +25,7 @@ const Title = styled(
     color: theme.colors.text.tertiary,
   }),
   'ui-connected.HeroListFeatureConnected.HeroListFeature.Title'
-)(H6);
+)(H5);
 
 const Subtitle = styled(
   {},

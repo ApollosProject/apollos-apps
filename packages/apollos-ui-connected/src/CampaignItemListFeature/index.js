@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import {
   FeaturedCard,
   FeedView,
-  H2,
+  H3,
   H5,
   PaddedView,
   styled,
@@ -23,7 +23,7 @@ const Title = styled(
 )(H5);
 
 const Subtitle = styled({}, 'ui-connected.CampaignItemListFeature.Subtitle')(
-  H2
+  H3
 );
 
 const Header = styled(
