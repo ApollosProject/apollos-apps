@@ -73,8 +73,18 @@ const LITE_FEATURES_FRAGMENT = gql`
   }
 `;
 
-// deprecated, name change
+// TODO: deprecated, name change
 const FEED_FEATURES_FRAGMENT = LITE_FEATURES_FRAGMENT;
+
+// TODO deprecated
+const FEATURES_FRAGMENT = gql`
+  fragment FeaturesFragment on Feature {
+    id
+    ...TextFeatureFragment
+    ...ScriptureFeatureFragment
+    ...WebviewFeatureFragment
+  }
+`;
 
 const SCRIPTURE_FEATURE_FRAGMENT = gql`
   fragment ScriptureFeatureFragment on ScriptureFeature {
@@ -294,6 +304,7 @@ export {
   TEXT_FEATURE_FRAGMENT,
   SCRIPTURE_FEATURE_FRAGMENT,
   CARD_FEATURES_FRAGMENT,
+  FEATURES_FRAGMENT,
   ACTION_LIST_FEATURE_FRAGMENT,
   ACTION_BAR_FEATURE_FRAGMENT,
   HERO_LIST_FEATURE_FRAGMENT,
