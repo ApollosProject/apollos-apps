@@ -59,6 +59,7 @@
   },
   "devDependencies": {
     "@react-native-community/async-storage": "^1.5.1",
+    "apollo-client": "^2.6.10",
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
