@@ -39,6 +39,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0 # needs this to pull all tags and branches
+        token: ${{ secrets.APOLLOS_ADMIN_TOKEN }}
 
     - name: Setup Node for npmjs.org
       uses: actions/setup-node@v1
