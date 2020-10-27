@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0-beta.2](https://github.com/apollosproject/apollos-apps/compare/v1.7.0-beta.1...v1.7.0-beta.2) (2020-10-27)
+
+
+### Features
+
+* CampusID support in home feed ([#1632](https://github.com/apollosproject/apollos-apps/issues/1632)) ([1d9cfd7](https://github.com/apollosproject/apollos-apps/commit/1d9cfd7))
+
+
+
+
+
 # [1.7.0-beta.1](https://github.com/apollosproject/apollos-apps/compare/v1.7.0-beta.0...v1.7.0-beta.1) (2020-10-23)
 
 
