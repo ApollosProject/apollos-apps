@@ -40,7 +40,6 @@ const Icon = ({ name, size, iconInput, isLoading = false, ...otherProps }) => {
 };
 // eslint-disable-next-line consistent-return
 export const namePropValidator = (props, propName, componentName) => {
-  console.log(props);
   const icons = Object.keys({ ...uikitIcons, ...props.iconInput }).map(
     kebabCase
   );
