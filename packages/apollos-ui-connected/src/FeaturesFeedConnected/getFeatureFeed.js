@@ -7,13 +7,10 @@ export default gql`
       id
       ... on FeatureFeed {
         features {
-          ...FeedFeaturesFragment
+          ...LiteFeaturesFragment
         }
       }
     }
   }
-  ${ApollosConfig.FRAGMENTS.FEED_FEATURES_FRAGMENT}
-  ${ApollosConfig.FRAGMENTS.TEXT_FEATURE_FRAGMENT}
-  ${ApollosConfig.FRAGMENTS.SCRIPTURE_FEATURE_FRAGMENT}
-  ${ApollosConfig.FRAGMENTS.WEBVIEW_FEATURE_FRAGMENT}
+  ${ApollosConfig.FRAGMENTS.LITE_FEATURES_FRAGMENT}
 `;
