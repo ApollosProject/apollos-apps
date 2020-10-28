@@ -1,4 +1,4 @@
-name: Beta Release
+name: Stable Release
 
 on: workflow_dispatch
 
