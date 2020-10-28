@@ -41,7 +41,6 @@ const Icon = ({ name, size, iconInput, isLoading = false, ...otherProps }) => {
 };
 // eslint-disable-next-line consistent-return
 export const namePropValidator = (props, propName, componentName) => {
-  console.log(props);
   const icons = Object.keys({ ...uikitIcons, ...props.iconInput }).map(
     kebabCase
   );
@@ -58,7 +57,12 @@ export const namePropValidator = (props, propName, componentName) => {
   }
 };
 
+// PropType checking needs to occur after the `isLoading`` and `iconInput` have been loaded in.
+// Those props are added via the call to `enhance`
 Icon.propTypes = {
+  iconInput: PropTypes.objectOf(
+    PropTypes.oneOfType([PropTypes.func, PropTypes.node, PropTypes.object])
+  ),
   name: namePropValidator,
   size: PropTypes.number,
   fill: PropTypes.string,

@@ -6,7 +6,7 @@ import ButtonIcon from '.';
 
 storiesOf('ui-kit/Buttons/Icon', module)
   .addDecorator((story) => (
-    <CenteredView style={{ alignItems: 'stretch' }}>{story()}</CenteredView> // eslint-disable-next-line react-native/no-inline-styles
+    <CenteredView style={{ alignItems: 'stretch' }}>{story()}</CenteredView> // eslint-disable-line
   ))
   .add('default', () => <ButtonIcon name={'umbrella'} />)
   .add('custom icon', () => <ButtonIcon name={'custom'} />)
