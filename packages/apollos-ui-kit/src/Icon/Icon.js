@@ -29,20 +29,19 @@ const enhance = compose(
   })
 );
 
-const Icon = enhance(
-  ({ name, size, iconInput, isLoading = false, ...otherProps }) => {
-    const Icons = { ...uikitIcons, ...iconInput };
-    const IconComponent = Icons[pascalCase(name)];
-    return (
-      <Placeholder.Media size={size} hasRadius onReady={!isLoading}>
-        <IconComponent size={size} {...otherProps} />
-      </Placeholder.Media>
-    );
-  }
-);
-
+const Icon = ({ name, size, iconInput, isLoading = false, ...otherProps }) => {
+  console.log({ name, size, iconInput });
+  const Icons = { ...uikitIcons, ...iconInput };
+  const IconComponent = Icons[pascalCase(name)];
+  return (
+    <Placeholder.Media size={size} hasRadius onReady={!isLoading}>
+      <IconComponent size={size} {...otherProps} />
+    </Placeholder.Media>
+  );
+};
 // eslint-disable-next-line consistent-return
-const namePropValidator = (props, propName, componentName) => {
+export const namePropValidator = (props, propName, componentName) => {
+  console.log(props);
   const icons = Object.keys({ ...uikitIcons, ...props.iconInput }).map(
     kebabCase
   );
@@ -70,6 +69,8 @@ Icon.defaultProps = {
   size: 32, // 32 is the default size used within the svg component
 };
 
-Icon.displayName = 'Icon';
+const IconWithIconInputAndLoading = enhance(Icon);
 
-export default Icon;
+IconWithIconInputAndLoading.displayName = 'Icon';
+
+export default IconWithIconInputAndLoading;
