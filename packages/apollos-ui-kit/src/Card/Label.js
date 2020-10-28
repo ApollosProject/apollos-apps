@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import styled from '../styled';
 import { ThemeMixin } from '../theme';
 import Chip from '../Chip';
-import Icon from '../Icon';
 
 const StyledChip = styled(
   ({ type }) => ({
@@ -35,7 +34,6 @@ const Label = ({ title, icon, type, theme, IconComponent, ...props }) => (
 
 Label.propTypes = {
   title: PropTypes.string.isRequired,
-  icon: Icon.propTypes.name,
   theme: PropTypes.shape({
     type: PropTypes.string,
     colors: PropTypes.shape({}),
