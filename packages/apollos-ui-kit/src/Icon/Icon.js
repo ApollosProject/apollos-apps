@@ -30,7 +30,6 @@ const enhance = compose(
 );
 
 const Icon = ({ name, size, iconInput, isLoading = false, ...otherProps }) => {
-  console.log({ name, size, iconInput });
   const Icons = { ...uikitIcons, ...iconInput };
   const IconComponent = Icons[pascalCase(name)];
   return (
