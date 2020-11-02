@@ -104,7 +104,6 @@ PasswordEntry.propTypes = {
   }),
   BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   newUser: PropTypes.bool,
-  onPressBack: PropTypes.func.isRequired,
 };
 
 PasswordEntry.defaultProps = {

@@ -84,7 +84,6 @@ Verification.propTypes = {
   }),
   isLoading: PropTypes.bool,
   onPressNext: PropTypes.func,
-  onPressBack: PropTypes.func,
   setFieldValue: PropTypes.func.isRequired,
   values: PropTypes.shape({
     code: PropTypes.string,
