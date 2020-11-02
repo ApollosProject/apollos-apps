@@ -8,7 +8,7 @@
     "storybook/**"
   ],
   "scripts": {
-    "test": "jest --no-watchman",
+    "test": "jest --no-watchman --passWithNoTests",
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "lint": "eslint ./src --ext .js"
   },
