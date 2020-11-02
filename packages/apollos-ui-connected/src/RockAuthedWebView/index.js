@@ -61,6 +61,9 @@ const RockAuthedWebView = ({ url, navigation, route }) => {
 
 RockAuthedWebView.propTypes = {
   url: PropTypes.string,
+  route: PropTypes.shape({
+    params: PropTypes.shape({ url: PropTypes.string, modal: PropTypes.bool }),
+  }),
 };
 
 export default RockAuthedWebView;

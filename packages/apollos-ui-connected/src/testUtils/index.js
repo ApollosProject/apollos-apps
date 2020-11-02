@@ -1,5 +1,8 @@
 /* eslint-disable import/prefer-default-export */
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+import {
+  createStackNavigator,
+  createAppContainer,
+} from '@react-navigation/compat';
 import { IntrospectionFragmentMatcher } from 'apollo-cache-inmemory';
 import apolloStorybookDecorator from 'apollo-storybook-react-native';
 import React from 'react';

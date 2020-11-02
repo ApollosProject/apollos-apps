@@ -31,6 +31,7 @@ const LikeButton = ({ isLiked, toggleLike, nodeId, itemId }) => (
 
 LikeButton.propTypes = {
   itemId: PropTypes.string,
+  nodeId: PropTypes.string,
   isLiked: PropTypes.bool,
   toggleLike: PropTypes.func,
 };

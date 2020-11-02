@@ -1,6 +1,9 @@
 import React from 'react';
 import { flatMap } from 'lodash';
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+import {
+  createStackNavigator,
+  createAppContainer,
+} from '@react-navigation/compat';
 import renderer from 'react-test-renderer';
 
 import { GET_CONTENT_CARD } from '@apollosproject/ui-connected';
