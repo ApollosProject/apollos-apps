@@ -9,7 +9,3 @@ NativeModules.RNGestureHandlerModule = {
   State: {},
   Directions: {},
 };
-
-jest.mock('@react-navigation/native', () => ({
-  useNavigation: () => jest.fn(),
-}));
