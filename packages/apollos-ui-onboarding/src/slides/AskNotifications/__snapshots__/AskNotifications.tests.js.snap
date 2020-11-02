@@ -16,13 +16,7 @@ Array [
     }
   >
     <View>
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
+      <View
         style={
           Object {
             "flex": 1,
@@ -67,7 +61,7 @@ Array [
             We'll let you know when important things are happening and keep you in the loop
           </Text>
         </View>
-      </RCTSafeAreaView>
+      </View>
     </View>
   </RCTScrollView>,
   <View
@@ -87,15 +81,7 @@ Array [
     }
     vertical={false}
   >
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-          "top": "never",
-        }
-      }
-    >
+    <View>
       <Text
         onPress={[MockFunction]}
         style={
@@ -109,7 +95,7 @@ Array [
       >
         Later
       </Text>
-    </RCTSafeAreaView>
+    </View>
   </View>,
 ]
 `;
@@ -129,13 +115,7 @@ exports[`The Onboarding AskNotifications component should render 1`] = `
   }
 >
   <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
+    <View
       style={
         Object {
           "flex": 1,
@@ -180,7 +160,7 @@ exports[`The Onboarding AskNotifications component should render 1`] = `
           We'll let you know when important things are happening and keep you in the loop
         </Text>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>
 </RCTScrollView>
 `;
@@ -231,13 +211,7 @@ exports[`The Onboarding AskNotifications component should render a BackgroundCom
         }
       />
     </View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
+    <View
       style={
         Object {
           "flex": 1,
@@ -282,7 +256,7 @@ exports[`The Onboarding AskNotifications component should render a BackgroundCom
           We'll let you know when important things are happening and keep you in the loop
         </Text>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>
 </RCTScrollView>
 `;
@@ -302,13 +276,7 @@ exports[`The Onboarding AskNotifications component should render a button with c
   }
 >
   <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
+    <View
       style={
         Object {
           "flex": 1,
@@ -415,7 +383,7 @@ exports[`The Onboarding AskNotifications component should render a button with c
           </View>
         </View>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>
 </RCTScrollView>
 `;
@@ -435,13 +403,7 @@ exports[`The Onboarding AskNotifications component should render a custom descri
   }
 >
   <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
+    <View
       style={
         Object {
           "flex": 1,
@@ -486,7 +448,7 @@ exports[`The Onboarding AskNotifications component should render a custom descri
           Custom description text
         </Text>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>
 </RCTScrollView>
 `;
@@ -506,13 +468,7 @@ exports[`The Onboarding AskNotifications component should render a custom title 
   }
 >
   <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
+    <View
       style={
         Object {
           "flex": 1,
@@ -557,7 +513,7 @@ exports[`The Onboarding AskNotifications component should render a custom title 
           We'll let you know when important things are happening and keep you in the loop
         </Text>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>
 </RCTScrollView>
 `;
@@ -577,13 +533,7 @@ exports[`The Onboarding AskNotifications component should render the button disa
   }
 >
   <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
+    <View
       style={
         Object {
           "flex": 1,
@@ -690,7 +640,7 @@ exports[`The Onboarding AskNotifications component should render the button disa
           </View>
         </View>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>
 </RCTScrollView>
 `;
@@ -710,13 +660,7 @@ exports[`The Onboarding AskNotifications component should render with a button 1
   }
 >
   <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
+    <View
       style={
         Object {
           "flex": 1,
@@ -823,7 +767,7 @@ exports[`The Onboarding AskNotifications component should render with a button 1
           </View>
         </View>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>
 </RCTScrollView>
 `;
