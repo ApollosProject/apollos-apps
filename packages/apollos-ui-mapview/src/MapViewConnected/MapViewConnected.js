@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Query, Mutation } from 'react-apollo';
 import { Dimensions } from 'react-native';
 import Geolocation from 'react-native-geolocation-service';
-import { PaddedView, ButtonLink } from '@apollosproject/ui-kit';
 import { get } from 'lodash';
 
 import MapView from '../MapView';
