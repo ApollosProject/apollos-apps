@@ -21,7 +21,7 @@
     "preset": "react-native",
     "collectCoverage": true,
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|@react-navigation/native|@apollosproject|@@react-navigation/native|@react-native-community/async-storage))"
+      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|@react-navigation/native|@react-navigation/stack|@apollosproject|@@react-navigation/native|@react-native-community/async-storage))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -49,6 +49,7 @@
     "react-native-inappbrowser-reborn": "*",
     "react-native-permissions": "*",
     "@react-navigation/native": "*",
+    "@react-navigation/stack": "*",
     "@react-navigation/compat": "*"
   },
   "dependencies": {
@@ -70,6 +71,7 @@
     "react-native-permissions": "2.0.5",
     "react-native-webview": "^7.0.0",
     "@react-navigation/native": "^5.6.1",
+    "@react-navigation/stack": "^5.6.1",
     "@react-navigation/compat": "^5.1.28",
     "react-test-renderer": "16.8.6",
     "waait": "1.0.2"
