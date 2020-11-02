@@ -43,7 +43,8 @@
     "react": "*",
     "react-native": "*",
     "react-native-geolocation-service": "*",
-    "react-native-maps": "*"
+    "react-native-maps": "*",
+    "react-native-safe-area-context": "*"
   },
   "dependencies": {
     "graphql-tag": "2.9.2",
@@ -58,6 +59,7 @@
     "react-native": "0.60.5",
     "react-native-geolocation-service": "^3.0.0",
     "react-native-maps": "0.26.1",
+    "react-native-safe-area-context": "^3.0.7",
     "react-test-renderer": "16.8.6",
     "waait": "1.0.2"
   },
