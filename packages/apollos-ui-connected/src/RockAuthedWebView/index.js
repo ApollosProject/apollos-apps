@@ -5,7 +5,6 @@ import { Query } from 'react-apollo';
 import { ModalView } from '@apollosproject/ui-kit';
 import { WebView } from 'react-native-webview';
 import PropTypes from 'prop-types';
-import { get } from 'lodash';
 
 const Browser = ({ url, cookie, modal, navigation }) => {
   if (modal) {
@@ -36,21 +35,17 @@ const GET_USER_COOKIE = gql`
 `;
 
 const RockAuthedWebView = ({ url, navigation, route }) => {
-  // get the url from the navigation param or default to the url prop;
-  const uri = route.params.url || url;
-  const modal = route.params.modal || false;
   return (
     <Query query={GET_USER_COOKIE}>
       {({ data, loading }) => {
         if (loading) {
           return null;
         }
-        const cookie = get(data, 'currentUser.rock.authCookie', '');
         return (
           <Browser
-            cookie={cookie}
-            url={uri}
-            modal={modal}
+            cookie={data?.currentUser?.rock?.authCookie ?? ''}
+            url={route?.params?.url ?? url}
+            modal={route?.params?.modal ?? false}
             navigation={navigation}
           />
         );
