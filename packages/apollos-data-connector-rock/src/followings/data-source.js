@@ -5,7 +5,7 @@ import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 export default class Followings extends RockApolloDataSource {
   resource = 'Followings';
 
-  async updateLikeContentItem({ nodeId, operation, resolveInfo }) {
+  async updateLikeNode({ nodeId, operation, resolveInfo }) {
     const {
       dataSources,
       models: { Node },
@@ -18,6 +18,8 @@ export default class Followings extends RockApolloDataSource {
     const item = await Node.get(nodeId, dataSources, resolveInfo);
     return { ...item, isLiked: operation === 'Like' };
   }
+
+  updateLikeContentItem = this.updateLikeNode.bind(this);
 
   async followNode({ nodeId }) {
     const {

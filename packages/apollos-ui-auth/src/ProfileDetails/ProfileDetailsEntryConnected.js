@@ -3,6 +3,7 @@ import React from 'react';
 import { Formik } from 'formik';
 import PropTypes from 'prop-types';
 import * as Yup from 'yup';
+import { withTheme } from '@apollosproject/ui-kit';
 
 import { LoginConsumer } from '../LoginProvider';
 import ProfileEntry from './ProfileDetailsEntry';
@@ -61,4 +62,6 @@ ProfileDetailsEntryConnected.defaultProps = {
   Component: ProfileEntry,
 };
 
-export default ProfileDetailsEntryConnected;
+export default withTheme(() => ({}), 'ui-auth.ProfileDetailsEntryConnected')(
+  ProfileDetailsEntryConnected
+);

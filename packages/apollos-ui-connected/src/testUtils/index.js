@@ -1,4 +1,5 @@
 /* eslint-disable import/prefer-default-export */
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 import { IntrospectionFragmentMatcher } from 'apollo-cache-inmemory';
 import apolloStorybookDecorator from 'apollo-storybook-react-native';
 import React from 'react';
@@ -6,7 +7,7 @@ import renderer from 'react-test-renderer';
 import wait from 'waait';
 import { Providers as UIProviders } from '@apollosproject/ui-kit';
 import { MockedProvider } from 'react-apollo/test-utils';
-import possibleTypes from './fragmentTypes.json';
+import possibleTypesJson from './fragmentTypes.json';
 import typeDefs from './typeDefsMock';
 
 const renderWithApolloData = async (component, existingTree) => {
@@ -23,15 +24,66 @@ const Providers = ({ children, ...props }) => (
   </UIProviders>
 );
 
-const fragmentMatcher = new IntrospectionFragmentMatcher({
-  introspectionQueryResultData: possibleTypes,
-});
-
-const ApolloStorybookDecorator = ({ mocks }) =>
-  apolloStorybookDecorator({
-    typeDefs,
-    mocks,
-    cacheOptions: { fragmentMatcher },
+const ApolloStorybookDecorator = ({
+  mocks,
+  additionalSchema = [],
+  possibleTypes = {},
+}) => {
+  // We can use this way simpler code long term when we upgrade to Apollo 3.
+  // const finalPossibleTypes = possibleTypes;
+  // possibleTypesJson.__schema.types.forEach((supertype) => {
+  //   if (supertype.possibleTypes) {
+  //     finalPossibleTypes[supertype.name] = [
+  //       ...supertype.possibleTypes.map((subtype) => subtype.name),
+  //       ...(possibleTypes[supertype.name] || []),
+  //     ];
+  //   }
+  // });
+  const finalPossibleTypes = possibleTypesJson;
+  Object.keys(possibleTypes).forEach((key) => {
+    const jsonTypeIndex = possibleTypesJson.__schema.types.findIndex(
+      ({ name }) => name === key
+    );
+    const newTypePossibleTypes = {
+      ...possibleTypesJson.__schema.types[jsonTypeIndex],
+      possibleTypes: [
+        ...possibleTypesJson.__schema.types[jsonTypeIndex].possibleTypes,
+        ...possibleTypes[key].map((type) => ({ name: type })),
+      ],
+    };
+    possibleTypesJson.__schema.types[jsonTypeIndex] = newTypePossibleTypes;
+  });
+  const fragmentMatcher = new IntrospectionFragmentMatcher({
+    introspectionQueryResultData: finalPossibleTypes,
   });
 
-export { renderWithApolloData, Providers, ApolloStorybookDecorator };
+  return apolloStorybookDecorator({
+    typeDefs: [typeDefs, ...additionalSchema],
+    mocks,
+    resolverValidationOptions: {
+      requireResolversForResolveType: false,
+    },
+    cacheOptions: { fragmentMatcher },
+  });
+};
+
+const WithReactNavigator = (Component) => {
+  const AppNavigator = createStackNavigator({
+    Home: {
+      screen: () => Component,
+      navigationOptions: {
+        headerMode: 'none',
+        header: null,
+      },
+    },
+  });
+
+  const AppContainer = createAppContainer(AppNavigator);
+  return <AppContainer />;
+};
+export {
+  renderWithApolloData,
+  Providers,
+  ApolloStorybookDecorator,
+  WithReactNavigator,
+};

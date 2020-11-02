@@ -1,3 +1,132 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [1.7.0-beta.2](https://github.com/ApollosProject/apollos-apps/compare/v1.7.0-beta.1...v1.7.0-beta.2) (2020-10-27)
+
+
+### Bug Fixes
+
+* Fixes Actions with Defined related node ([#1630](https://github.com/ApollosProject/apollos-apps/issues/1630)) ([337680a](https://github.com/ApollosProject/apollos-apps/commit/337680a))
+* prayer onboarding logic ([#1609](https://github.com/ApollosProject/apollos-apps/issues/1609)) ([6242b36](https://github.com/ApollosProject/apollos-apps/commit/6242b36))
+* Unify feature headers ([#1633](https://github.com/ApollosProject/apollos-apps/issues/1633)) ([e04c254](https://github.com/ApollosProject/apollos-apps/commit/e04c254))
+
+
+### Features
+
+* CampusID support in home feed ([#1632](https://github.com/ApollosProject/apollos-apps/issues/1632)) ([1d9cfd7](https://github.com/ApollosProject/apollos-apps/commit/1d9cfd7))
+
+
+
+
+
+# [1.7.0-beta.1](https://github.com/ApollosProject/apollos-apps/compare/v1.7.0-beta.0...v1.7.0-beta.1) (2020-10-23)
+
+
+### Features
+
+* ActionBarConnected ([#1624](https://github.com/ApollosProject/apollos-apps/issues/1624)) ([cce5849](https://github.com/ApollosProject/apollos-apps/commit/cce5849))
+* Allow users to override HorizontalFeature icons ([#1626](https://github.com/ApollosProject/apollos-apps/issues/1626)) ([c3717db](https://github.com/ApollosProject/apollos-apps/commit/c3717db))
+
+
+
+
+
+# [1.7.0-beta.0](https://github.com/ApollosProject/apollos-apps/compare/v1.6.0...v1.7.0-beta.0) (2020-10-19)
+
+
+### Bug Fixes
+
+* Fixes Incorrect Scripture Query ([#1606](https://github.com/ApollosProject/apollos-apps/issues/1606)) ([2bbe64c](https://github.com/ApollosProject/apollos-apps/commit/2bbe64c))
+
+
+### Features
+
+* Adds Content Feature Feeds ([#1618](https://github.com/ApollosProject/apollos-apps/issues/1618)) ([f8ea785](https://github.com/ApollosProject/apollos-apps/commit/f8ea785))
+* Adds Content Item Feature Feeds ([#1617](https://github.com/ApollosProject/apollos-apps/issues/1617)) ([3cda15e](https://github.com/ApollosProject/apollos-apps/commit/3cda15e))
+* Adds Discover Feed Query ([#1610](https://github.com/ApollosProject/apollos-apps/issues/1610)) ([7b4fcf9](https://github.com/ApollosProject/apollos-apps/commit/7b4fcf9))
+* Connected Feed Component ([#1611](https://github.com/ApollosProject/apollos-apps/issues/1611)) ([5e884cd](https://github.com/ApollosProject/apollos-apps/commit/5e884cd))
+* Horizontal card list read more ([#1615](https://github.com/ApollosProject/apollos-apps/issues/1615)) ([cb22a8e](https://github.com/ApollosProject/apollos-apps/commit/cb22a8e))
+* SearchFeed connected components ([#1619](https://github.com/ApollosProject/apollos-apps/issues/1619)) ([e63874f](https://github.com/ApollosProject/apollos-apps/commit/e63874f))
+
+
+
+
+
+# [1.6.0](https://github.com/ApollosProject/apollos-apps/compare/v1.6.0-beta.1...v1.6.0) (2020-10-09)
+
+
+### Bug Fixes
+
+* Checks For Cast Devices ([#1600](https://github.com/ApollosProject/apollos-apps/issues/1600)) ([1c58315](https://github.com/ApollosProject/apollos-apps/commit/1c58315))
+* Ensure we don't try and zoom the map to a remote campus ([#1599](https://github.com/ApollosProject/apollos-apps/issues/1599)) ([635ce20](https://github.com/ApollosProject/apollos-apps/commit/635ce20))
+* Fixes Android Notifications Onboarding ([#1602](https://github.com/ApollosProject/apollos-apps/issues/1602)) ([83615ce](https://github.com/ApollosProject/apollos-apps/commit/83615ce))
+* Move campus fields resolution to resolver ([#1604](https://github.com/ApollosProject/apollos-apps/issues/1604)) ([5a3dc66](https://github.com/ApollosProject/apollos-apps/commit/5a3dc66))
+
+
+### Features
+
+* Autosave Prayer Text ([#1603](https://github.com/ApollosProject/apollos-apps/issues/1603)) ([f663445](https://github.com/ApollosProject/apollos-apps/commit/f663445))
+
+
+
+
+
+# [1.6.0-beta.1](https://github.com/ApollosProject/apollos-apps/compare/v1.6.0-beta.0...v1.6.0-beta.1) (2020-09-30)
+
+
+### Bug Fixes
+
+* Adds Auth theme overrides ([#1589](https://github.com/ApollosProject/apollos-apps/issues/1589)) ([c06120a](https://github.com/ApollosProject/apollos-apps/commit/c06120a))
+* AvatarCloud improvements ([#1595](https://github.com/ApollosProject/apollos-apps/issues/1595)) ([62fdbd6](https://github.com/ApollosProject/apollos-apps/commit/62fdbd6))
+* Date picker defaults ([#1591](https://github.com/ApollosProject/apollos-apps/issues/1591)) ([215d417](https://github.com/ApollosProject/apollos-apps/commit/215d417))
+* Generate feature IDs in the resolvers, rather than in the datasources.  ([#1590](https://github.com/ApollosProject/apollos-apps/issues/1590)) ([1a75c17](https://github.com/ApollosProject/apollos-apps/commit/1a75c17))
+* Removes gradient top on default card ([#1584](https://github.com/ApollosProject/apollos-apps/issues/1584)) ([bf9fc8b](https://github.com/ApollosProject/apollos-apps/commit/bf9fc8b))
+* Scroll MapView to first campus on load ([#1596](https://github.com/ApollosProject/apollos-apps/issues/1596)) ([cd0ef4d](https://github.com/ApollosProject/apollos-apps/commit/cd0ef4d))
+* Stop passing Color object into the Stylesheet ([#1579](https://github.com/ApollosProject/apollos-apps/issues/1579)) ([d0df9f0](https://github.com/ApollosProject/apollos-apps/commit/d0df9f0))
+* Storyook bringing along RN dep ([#1585](https://github.com/ApollosProject/apollos-apps/issues/1585)) ([8a9adcc](https://github.com/ApollosProject/apollos-apps/commit/8a9adcc))
+
+
+### Features
+
+* Adding withTheme support to the HorizontalCardConnected ([#1586](https://github.com/ApollosProject/apollos-apps/issues/1586)) ([5e5159d](https://github.com/ApollosProject/apollos-apps/commit/5e5159d))
+* Feature caching support.  ([#1593](https://github.com/ApollosProject/apollos-apps/issues/1593)) ([8e65c2b](https://github.com/ApollosProject/apollos-apps/commit/8e65c2b))
+* Ordered lists ([#1597](https://github.com/ApollosProject/apollos-apps/issues/1597)) ([216dd38](https://github.com/ApollosProject/apollos-apps/commit/216dd38))
+
+
+
+
+
+# [1.6.0-beta.0](https://github.com/ApollosProject/apollos-apps/compare/v1.5.0...v1.6.0-beta.0) (2020-09-21)
+
+
+### Bug Fixes
+
+* Added missing node-single export ([#1567](https://github.com/ApollosProject/apollos-apps/issues/1567)) ([ccb4c71](https://github.com/ApollosProject/apollos-apps/commit/ccb4c71))
+* Fast refresh fix for apollos storybook ([#1571](https://github.com/ApollosProject/apollos-apps/issues/1571)) ([47e4215](https://github.com/ApollosProject/apollos-apps/commit/47e4215))
+* Fix cardImage should use baseBorderRadius ([#1547](https://github.com/ApollosProject/apollos-apps/issues/1547)) ([2379274](https://github.com/ApollosProject/apollos-apps/commit/2379274))
+* Removes expand Person from invalid cookie auth flow ([#1538](https://github.com/ApollosProject/apollos-apps/issues/1538)) ([d1b06d1](https://github.com/ApollosProject/apollos-apps/commit/d1b06d1))
+
+
+### Features
+
+* Adds FeaturesNodeConnected component.  ([#1543](https://github.com/ApollosProject/apollos-apps/issues/1543)) ([449dda0](https://github.com/ApollosProject/apollos-apps/commit/449dda0))
+* Connected Content Node ([#1545](https://github.com/ApollosProject/apollos-apps/issues/1545)) ([16662dc](https://github.com/ApollosProject/apollos-apps/commit/16662dc))
+* Connected Theme Mixin ([#1577](https://github.com/ApollosProject/apollos-apps/issues/1577)) ([1959f6f](https://github.com/ApollosProject/apollos-apps/commit/1959f6f))
+* ConnectedParentFeed and ConnectedChildFeed ([#1548](https://github.com/ApollosProject/apollos-apps/issues/1548)) ([f4b4241](https://github.com/ApollosProject/apollos-apps/commit/f4b4241))
+* ContentCardConnected stories.  ([#1563](https://github.com/ApollosProject/apollos-apps/issues/1563)) ([4623eb9](https://github.com/ApollosProject/apollos-apps/commit/4623eb9))
+* Initial draft of included interfaces ([#1536](https://github.com/ApollosProject/apollos-apps/issues/1536)) ([0540155](https://github.com/ApollosProject/apollos-apps/commit/0540155))
+* LikeButtonConnected supports Nodes and ContentItems ([#1575](https://github.com/ApollosProject/apollos-apps/issues/1575)) ([e44a5b7](https://github.com/ApollosProject/apollos-apps/commit/e44a5b7))
+* NodeSingleConnected component.  ([#1552](https://github.com/ApollosProject/apollos-apps/issues/1552)) ([a8ee837](https://github.com/ApollosProject/apollos-apps/commit/a8ee837))
+* ShareButtonConnected ([#1578](https://github.com/ApollosProject/apollos-apps/issues/1578)) ([89dc8ae](https://github.com/ApollosProject/apollos-apps/commit/89dc8ae))
+* Up next button with node ([#1549](https://github.com/ApollosProject/apollos-apps/issues/1549)) ([8946bdb](https://github.com/ApollosProject/apollos-apps/commit/8946bdb))
+* Upgrades Church Online to GraphQL Endpoint ([#1564](https://github.com/ApollosProject/apollos-apps/issues/1564)) ([411cd8c](https://github.com/ApollosProject/apollos-apps/commit/411cd8c))
+
+
+
+
+
 v1.5.0: August 18, 2020
 
 - Adds Github Actions CI (#1529) (9ac7cb55)

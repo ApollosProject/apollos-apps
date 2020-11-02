@@ -42,6 +42,7 @@ const SearchCardConnected = memo(
 SearchCardConnected.propTypes = {
   Component: PropTypes.func,
   coverImage: PropTypes.shape({
+    /* eslint-disable-next-line */
     sources: PropTypes.array,
   }),
   summary: PropTypes.string,

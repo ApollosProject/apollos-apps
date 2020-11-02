@@ -3,7 +3,7 @@
 exports[`features dataSource createScriptureFeature should create a Scriptre feature 1`] = `
 Object {
   "__typename": "ScriptureFeature",
-  "id": "ScriptureFeature:2cc8f539e345e8f479a55e2fdc9743c0",
+  "id": 123,
   "reference": "John 3:16",
   "version": undefined,
 }
@@ -13,16 +13,18 @@ exports[`features dataSource createTextFeature should create a Text feature 1`] 
 Object {
   "__typename": "TextFeature",
   "body": "Hello World",
-  "id": "TextFeature:2cc8f539e345e8f479a55e2fdc9743c0",
+  "id": 123,
 }
 `;
 
 exports[`features dataSource should create a PrayerListFeature from a DAILY_PRAYER algorithm 1`] = `
 Object {
   "__typename": "PrayerListFeature",
-  "id": "PrayerListFeature:f6b30a38eb547f1f75676ce0557a7e05769494e337dda60d9df12742802847cd863a32149911c6600a81adc72aefc4abe2a7f3d76eb6b4beb5913f5f1f9061101a8444f8a4f8320ff0b853ff9b92b4b82cb29986eea2756a26fe31bb9cb49114ca355123f0be79354b35c44c7830856e",
+  "id": "{\\"algorithms\\":[{\\"type\\":\\"DAILY_PRAYER\\"}],\\"title\\":\\"Test Action List\\",\\"subtitle\\":\\"It's great!\\",\\"isCard\\":true}",
   "isCard": true,
-  "prayers": [Function],
+  "prayers": Array [
+    Object {},
+  ],
   "subtitle": "It's great!",
   "title": "Test Action List",
 }
@@ -30,13 +32,33 @@ Object {
 
 exports[`features dataSource should create a PrayerListFeature from a DAILY_PRAYER algorithm 2`] = `Array []`;
 
+exports[`features dataSource should create an ActionBarFeature 1`] = `
+Object {
+  "__typename": "ActionBarFeature",
+  "actions": Array [
+    Object {
+      "action": "OPEN_URL",
+      "icon": "Check",
+      "relatedNode": Object {
+        "__typename": "Url",
+        "id": "Url:f4974a223763b3a06ea2cd73ff30952be89d6281e05bc41f7ee423cd227a2b00721f5531d36e54dd64bc05eda4a94cbf1fbaf45384b4e924ae0fe47ee8d4e792",
+        "url": "https://www.google.com",
+      },
+      "title": "Check In",
+    },
+  ],
+  "id": "{\\"title\\":\\"Test Action List\\",\\"algorithms\\":[],\\"actions\\":[{\\"title\\":\\"Check In\\",\\"icon\\":\\"Check\\",\\"action\\":\\"OPEN_URL\\",\\"relatedNode\\":{\\"__typename\\":\\"Url\\",\\"url\\":\\"https://www.google.com\\"}}]}",
+  "title": "Test Action List",
+}
+`;
+
 exports[`features dataSource should create an ActionListFeature from a CAMPAIGN_ITEMS algorithm 1`] = `
 Object {
   "__typename": "ActionListFeature",
   "actions": Array [
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "id": "10",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -53,7 +75,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "id": "21",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -70,7 +92,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "id": "32",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -84,7 +106,7 @@ Object {
       "title": "third item by content channel id",
     },
   ],
-  "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05e721bf197aa8e9b6ec68f4656048955afd1acf3539dffd80d68ba9da75380877e0800a46060ec5c3147deb359e677332e2be95e0a7de8e2cc7f6b04609c169f788e4daa8be2f6520244bd53df6cbcce3fcb5e3a714765eca41c857c49e0b0562",
+  "id": "{\\"algorithms\\":[{\\"type\\":\\"CAMPAIGN_ITEMS\\"}],\\"title\\":\\"Test Featured Item\\",\\"subtitle\\":\\"It's featured!\\"}",
   "primaryAction": undefined,
   "subtitle": "It's featured!",
   "title": "Test Featured Item",
@@ -99,7 +121,7 @@ Object {
   "actions": Array [
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "id": "10",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -115,7 +137,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "id": "21",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -131,7 +153,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "id": "32",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -144,7 +166,7 @@ Object {
       "title": "third item by content channel id",
     },
   ],
-  "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05bed66de665564bd0c5e37f069267679550e6d23b01e068694595ba074cd0d145c3508d6249fc0adc58f325fa1e4621dfa28d6be47ee5711bc3110dd8c31d1e04eea144d658590a0e9a2dbf8264823d3d5340139f7d32528cfcc1588f3bd73d219c8d9b5e307116281963cb5d72a9a0eb67c158fed1721f00408a9d7bf5570280",
+  "id": "{\\"algorithms\\":[{\\"type\\":\\"CONTENT_CHANNEL\\",\\"arguments\\":{\\"contentChannelId\\":13}}],\\"title\\":\\"Test Action List\\",\\"subtitle\\":\\"It's great!\\"}",
   "primaryAction": undefined,
   "subtitle": "It's great!",
   "title": "Test Action List",
@@ -159,7 +181,7 @@ Object {
   "actions": Array [
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "id": "10",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -175,7 +197,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "id": "21",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -191,7 +213,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "id": "32",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -204,7 +226,7 @@ Object {
       "title": "third item by content channel id",
     },
   ],
-  "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05bed66de665564bd0c5e37f069267679550e6d23b01e068694595ba074cd0d145c3508d6249fc0adc58f325fa1e4621dfa28d6be47ee5711bc3110dd8c31d1e04eea144d658590a0e9a2dbf8264823d3d5340139f7d32528cfcc1588f3bd73d219c8d9b5e307116281963cb5d72a9a0eb35b8e8d3be517c8e210451a95d760c54c4b01c4aee33c871368ff6ebe7ca6637b3a9666af0a73b8504bc612a395cbcec43e02d5703bd30ce52d3de8a68ac8ed39ecd30c156f6660299e9c392d1a5e882dc47375cb22f3116244a8224b322532b9cc650e080daf3e02325d43da62a0f107cff5ce1e6950c09fd904879a6ac27d98381672bcf67738d2599a2bdf25e5ff49842a333ed7dcffbdd589b1f4c75522a11d748e2402d010521272fdb2cac106f9aea09254eac2347628c40f433487738bb8b7777d506f4ac94808ec40a26249f5a52dab6435c0677fbca74fd0076525193a20787d0adbfe15ca5cd92ae6ab89300532950bc8c45cf5db91ebff4cfcc1d1a2480185bd0b9f209d9b6e1268a7466",
+  "id": "{\\"algorithms\\":[{\\"type\\":\\"CONTENT_CHANNEL\\",\\"arguments\\":{\\"contentChannelId\\":13}}],\\"title\\":\\"Test Action List\\",\\"subtitle\\":\\"It's great!\\",\\"primaryAction\\":{\\"action\\":\\"OPEN_URL\\",\\"title\\":\\"Open this url\\",\\"relatedNode\\":{\\"__typename\\":\\"Url\\",\\"url\\":\\"https://www.google.com\\",\\"id\\":\\"Url:f4974a223763b3a06ea2cd73ff30952be89d6281e05bc41f7ee423cd227a2b00721f5531d36e54dd64bc05eda4a94cbf1fbaf45384b4e924ae0fe47ee8d4e792\\"}}}",
   "primaryAction": Object {
     "action": "OPEN_URL",
     "relatedNode": Object {
@@ -227,7 +249,7 @@ Object {
   "actions": Array [
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "id": "10",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -243,7 +265,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "id": "21",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -259,7 +281,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "id": "32",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -272,7 +294,7 @@ Object {
       "title": "third item by content channel id",
     },
   ],
-  "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05bed66de665564bd0c5e37f069267679550e6d23b01e068694595ba074cd0d145c3508d6249fc0adc58f325fa1e4621dfa28d6be47ee5711bc3110dd8c31d1e04eea144d658590a0e9a2dbf8264823d3d5340139f7d32528cfcc1588f3bd73d219c8d9b5e307116281963cb5d72a9a0eb35b8e8d3be517c8e210451a95d760c54c4b01c4aee33c871368ff6ebe7ca6637b3a9666af0a73b8504bc612a395cbcec43e02d5703bd30ce52d3de8a68ac8ed39ecd30c156f6660299e9c392d1a5e8826b3390f392e79e994b6589845a05fca95a276c638468aab0baf026e19ad9ef81628564c5bf92768d0ab2c36f93fe9484510421d47765879defa4eca357066fc751af32e5e78062e9fa3e754b810f2c69",
+  "id": "{\\"algorithms\\":[{\\"type\\":\\"CONTENT_CHANNEL\\",\\"arguments\\":{\\"contentChannelId\\":13}}],\\"title\\":\\"Test Action List\\",\\"subtitle\\":\\"It's great!\\",\\"primaryAction\\":{\\"relatedNode\\":{\\"id\\":\\"Url123\\",\\"__typename\\":\\"Url\\",\\"url\\":\\"https://www.google.com\\"},\\"action\\":\\"OPEN_URL\\",\\"title\\":\\"Open this url\\"}}",
   "primaryAction": Object {
     "action": "OPEN_URL",
     "relatedNode": Object {
@@ -295,7 +317,7 @@ Object {
   "actions": Array [
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "id": "10",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -311,7 +333,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "id": "21",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -327,7 +349,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "id": "32",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -340,7 +362,7 @@ Object {
       "title": "third item by content channel id",
     },
   ],
-  "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05bed66de665564bd0c5e37f069267679550e6d23b01e068694595ba074cd0d145c3508d6249fc0adc58f325fa1e4621df4497cfad170322c1cd6dfbf929d91a41b3cb785288292d6ae4c2fd93d0bdce3c5c9a49192068fc16ef114e30cedac7050dff446fa64384d34958fc7fdd9453a65ff92251b358e4eb56ef546142104278",
+  "id": "{\\"algorithms\\":[{\\"type\\":\\"CONTENT_CHANNEL\\",\\"arguments\\":{\\"contentChannelId\\":13,\\"limit\\":1}}],\\"title\\":\\"Test Action List\\",\\"subtitle\\":\\"It's great!\\"}",
   "primaryAction": undefined,
   "subtitle": "It's great!",
   "title": "Test Action List",
@@ -355,7 +377,7 @@ Object {
   "actions": Array [
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "id": "10",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -371,7 +393,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "id": "21",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -387,7 +409,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "id": "32",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -402,7 +424,7 @@ Object {
       "title": "third item",
     },
   ],
-  "id": "ActionListFeature:9724110384a5109532f35a4980ea9b7732b56327ff3959d32d21ba892a0dc560bb26357a01aac9434d87a0703551598c92b2c412fdf37259605f1b041a7dc607d6ff24a8c05ec94df7df90a1ec5e3b908eaff956c6310680e33f2814dae370f7",
+  "id": "{\\"algorithms\\":[\\"PERSONA_FEED\\"],\\"title\\":\\"Test Action List\\",\\"subtitle\\":\\"It's great!\\"}",
   "primaryAction": undefined,
   "subtitle": "It's great!",
   "title": "Test Action List",
@@ -415,7 +437,7 @@ Object {
   "actions": Array [
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "id": "10",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -431,7 +453,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "id": "21",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -447,7 +469,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "id": "32",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -460,7 +482,7 @@ Object {
       "title": "third item by content channel id",
     },
   ],
-  "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e056fd5308dc560293be9d519308fe80fa29d2a14e411c8374c668c86c0c39ce98d0f134d35066f1dfb14f5f3aa227c870d661b1d28f790e3c9e2fa1d8db2779fc7c449245b23ad9318bd30a604fa2520788d62edf4fd540cbf07ec7e78eb2f3644",
+  "id": "{\\"algorithms\\":[{\\"type\\":\\"SERIES_IN_PROGRESS\\"}],\\"title\\":\\"Test Featured Item\\",\\"subtitle\\":\\"It's featured!\\"}",
   "primaryAction": undefined,
   "subtitle": "It's featured!",
   "title": "Test Featured Item",
@@ -473,7 +495,7 @@ Object {
   "actions": Array [
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "id": "10",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -489,7 +511,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "id": "21",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -505,7 +527,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "id": "32",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -518,7 +540,7 @@ Object {
       "title": "third item by content channel id",
     },
   ],
-  "id": "ActionListFeature:9724110384a5109532f35a4980ea9b77b7a918389784452bc4e113adf105f3ea8e8e801d95d0b4436951f9d33599379a3300274c4af3063094e4732138995b97ff744e92de1baa09ce74b190e06aa2f9163416e3079e2242d99cf00c22b31f43",
+  "id": "{\\"algorithms\\":[\\"SERMON_CHILDREN\\"],\\"title\\":\\"Test Action List\\",\\"subtitle\\":\\"It's great!\\"}",
   "primaryAction": undefined,
   "subtitle": "It's great!",
   "title": "Test Action List",
@@ -537,7 +559,7 @@ Object {
   "actions": Array [
     Object {
       "action": "READ_EVENT",
-      "id": "ActionListAction:00d497873ba581975969adcdf7940325",
+      "id": "1230",
       "image": Promise {},
       "relatedNode": Object {
         "__type": "Event",
@@ -552,7 +574,7 @@ Object {
       "title": Promise {},
     },
   ],
-  "id": "ActionListFeature:9724110384a5109532f35a4980ea9b7767740cad433b90efb9823feae3605ac245723957f27ac07935a1da416098d24d7971daf9d8c8c6b180927b1b0a5d5ce96643e859a7df94370cdfed5cfb18e63d4febb6c4838930044d4ecc7fb80cf2a1",
+  "id": "{\\"algorithms\\":[\\"UPCOMING_EVENTS\\"],\\"title\\":\\"Test Action List\\",\\"subtitle\\":\\"It's great!\\"}",
   "primaryAction": undefined,
   "subtitle": "It's great!",
   "title": "Test Action List",
@@ -565,7 +587,7 @@ Object {
   "actions": Array [
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "id": "10",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -581,7 +603,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "id": "21",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -597,7 +619,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "id": "32",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -610,7 +632,7 @@ Object {
       "title": "third item by content channel id",
     },
   ],
-  "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e0554b53dd31034539ff6489a39d15a8d3eeca5582fc0bd33166d8d8ae16b9455607f6fbd7b7850a7ddf4e396cdb326e93edead20d2b9d727fedc9d46e046689d479fdb5013fa2f329bf20e1ed73fcf498a",
+  "id": "{\\"algorithms\\":[{\\"type\\":\\"USER_FEED\\"}],\\"title\\":\\"Test Featured Item\\",\\"subtitle\\":\\"It's featured!\\"}",
   "primaryAction": undefined,
   "subtitle": "It's featured!",
   "title": "Test Featured Item",
@@ -625,7 +647,7 @@ Object {
   "actions": Array [
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "id": "10",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -641,7 +663,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "id": "21",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -657,7 +679,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "id": "32",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -673,7 +695,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "id": "10",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -689,7 +711,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "id": "21",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -705,7 +727,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "id": "32",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -720,7 +742,7 @@ Object {
       "title": "third item",
     },
   ],
-  "id": "ActionListFeature:9724110384a5109532f35a4980ea9b7775239711bdf3f25b5d6d3270ecc4acf06797e2f283bdca9ac8cd75b7fa3bcdb715c97b9c060052efe93a6b698f7f3a59b4e73f81ae3ccdb1b07bc83c78b127200f56ce7a6abfae5d9f87bd4897613ca7a33a6f0a80b43e32d5d1bb39b906021e",
+  "id": "{\\"algorithms\\":[\\"PERSONA_FEED\\",\\"PERSONA_FEED\\"],\\"title\\":\\"Test Action List\\",\\"subtitle\\":\\"It's great!\\"}",
   "primaryAction": undefined,
   "subtitle": "It's great!",
   "title": "Test Action List",
@@ -731,7 +753,7 @@ exports[`features dataSource should create an ActionListFeature from no algorith
 Object {
   "__typename": "ActionListFeature",
   "actions": Array [],
-  "id": "ActionListFeature:a7725529a395bf26a3952b239e6d3ac0df38feb15c03653c57d25fa5651c5f5c6295553055256523c35095de4cbdca1bc7a52592232b2eeaf76f656a678ce0d0da37ae86a3a5ae8febc6172c3a875401",
+  "id": "{\\"algorithms\\":[],\\"title\\":\\"Test Action List\\",\\"subtitle\\":\\"It's great!\\"}",
   "primaryAction": undefined,
   "subtitle": "It's great!",
   "title": "Test Action List",
@@ -744,7 +766,7 @@ Object {
   "actions": Array [
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "id": "10",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -760,7 +782,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "id": "21",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -776,7 +798,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "id": "32",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -790,7 +812,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "id": "10",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -806,7 +828,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "id": "21",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -822,7 +844,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "id": "32",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -837,7 +859,7 @@ Object {
       "title": "third item",
     },
   ],
-  "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05bed66de665564bd0c5e37f069267679550e6d23b01e068694595ba074cd0d145c3508d6249fc0adc58f325fa1e4621df7a11fa10715441e591dd5b00bdc2df32da56c9b53212292e694e188e164f1d79b050d45c5b35b73ea2a1e9f3a145bae74600135ca037ad7eb1a5e3528ecb306ce3ba3849e40023e0fec04b0ded4bdde99656d619dc359e0c5cda1478a6f083ab",
+  "id": "{\\"algorithms\\":[{\\"type\\":\\"CONTENT_CHANNEL\\",\\"arguments\\":{\\"contentChannelId\\":13}},\\"PERSONA_FEED\\"],\\"title\\":\\"Test Action List\\",\\"subtitle\\":\\"It's great!\\"}",
   "primaryAction": undefined,
   "subtitle": "It's great!",
   "title": "Test Action List",
@@ -850,7 +872,7 @@ Object {
   "actions": Array [
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "id": "21",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -866,7 +888,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "id": "32",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -881,7 +903,7 @@ Object {
   ],
   "heroCard": Object {
     "action": "READ_CONTENT",
-    "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+    "id": "10",
     "image": null,
     "relatedNode": Object {
       "__type": "UniversalContentItem",
@@ -895,7 +917,7 @@ Object {
     "summary": "summary data",
     "title": "first item by content channel id",
   },
-  "id": "HeroListFeature:f6b30a38eb547f1f75676ce0557a7e0554b53dd31034539ff6489a39d15a8d3e5ead8197b46239df34aebbab9cb2e3d59a926dfbeb645d0e930d986ab6d4c7fb18f5c785737e5cea5187623d9840aabd1126239e969aee45865cafd569d9bdd51ff4a0f3c557d01c6fc4d38223e85d6100a047461ee52531f53a38a6f3ac5b17",
+  "id": "{\\"algorithms\\":[{\\"type\\":\\"USER_FEED\\"}],\\"heroAlgorithms\\":[],\\"title\\":\\"Test HeroListFeature\\",\\"subtitle\\":\\"It's a hero list feature!\\"}",
   "primaryAction": undefined,
   "subtitle": "It's a hero list feature!",
   "title": "Test HeroListFeature",
@@ -908,7 +930,7 @@ Object {
   "actions": Array [
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "id": "21",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -924,7 +946,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "id": "32",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -939,7 +961,7 @@ Object {
   ],
   "heroCard": Object {
     "action": "READ_CONTENT",
-    "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+    "id": "10",
     "image": null,
     "relatedNode": Object {
       "__type": "UniversalContentItem",
@@ -953,7 +975,7 @@ Object {
     "summary": "summary data",
     "title": "first item by content channel id",
   },
-  "id": "HeroListFeature:f6b30a38eb547f1f75676ce0557a7e0554b53dd31034539ff6489a39d15a8d3e5ead8197b46239df34aebbab9cb2e3d59a926dfbeb645d0e930d986ab6d4c7fb18f5c785737e5cea5187623d9840aabd1126239e969aee45865cafd569d9bdd51ff4a0f3c557d01c6fc4d38223e85d613b26a3ab652fc3462da10b90aa52e6a21a73373f542af86553e600c878e2052851db8020ec64ecfae9f0a5eef136e9f6806c1217b50ec22b58b401860119b8eb92f512fe413f11d166859a8423153ee117bd56284eee68563180e57e2156275ebb2f934964630df55329349c435045b0350ef06d71465c90112a97cf7521b69d7f3941af8a13cd8fa8209e2705c2caa2e018a027cbc00032e74915cd41afe68c0cbf214f9c92a541173cce951e650f926490b5b838a7bfdf34decad8963b07ff7510ff110fbeef9ae3fd12b88d63837f0f6f38922ce0dfcdf4efb650f6daaa22d896b46f624349cddd83960f7cd3e5295ff258767ae3311e535b599e1e107e0d40c6ebfe9cdb5f4bf36287d4f905225d47f6db55bb9307dbc0fda9fbe3f8691c",
+  "id": "{\\"algorithms\\":[{\\"type\\":\\"USER_FEED\\"}],\\"heroAlgorithms\\":[],\\"title\\":\\"Test HeroListFeature\\",\\"subtitle\\":\\"It's a hero list feature!\\",\\"primaryAction\\":{\\"action\\":\\"OPEN_URL\\",\\"title\\":\\"Open this url\\",\\"relatedNode\\":{\\"__typename\\":\\"Url\\",\\"url\\":\\"https://www.google.com\\",\\"id\\":\\"Url:f4974a223763b3a06ea2cd73ff30952be89d6281e05bc41f7ee423cd227a2b00721f5531d36e54dd64bc05eda4a94cbf1fbaf45384b4e924ae0fe47ee8d4e792\\"}}}",
   "primaryAction": Object {
     "action": "OPEN_URL",
     "relatedNode": Object {
@@ -974,7 +996,7 @@ Object {
   "actions": Array [
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "id": "21",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -990,7 +1012,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "id": "32",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -1005,7 +1027,7 @@ Object {
   ],
   "heroCard": Object {
     "action": "READ_CONTENT",
-    "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+    "id": "10",
     "image": null,
     "relatedNode": Object {
       "__type": "UniversalContentItem",
@@ -1019,7 +1041,7 @@ Object {
     "summary": "summary data",
     "title": "first item by content channel id",
   },
-  "id": "HeroListFeature:f6b30a38eb547f1f75676ce0557a7e0554b53dd31034539ff6489a39d15a8d3e5ead8197b46239df34aebbab9cb2e3d59a926dfbeb645d0e930d986ab6d4c7fb18f5c785737e5cea5187623d9840aabd1126239e969aee45865cafd569d9bdd51ff4a0f3c557d01c6fc4d38223e85d613b26a3ab652fc3462da10b90aa52e6a21a73373f542af86553e600c878e2052851db8020ec64ecfae9f0a5eef136e9f6806c1217b50ec22b58b401860119b8eb92f512fe413f11d166859a8423153ee117bd56284eee68563180e57e2156275e5e3e260367edbcc9e24b79c12143ceb160b7ba7775c0d83de04a0ab321f989e771bb90ce932340a5c3ce04839bc1f0ded932eb0ddc82a598b20c36c81d24b0d0",
+  "id": "{\\"algorithms\\":[{\\"type\\":\\"USER_FEED\\"}],\\"heroAlgorithms\\":[],\\"title\\":\\"Test HeroListFeature\\",\\"subtitle\\":\\"It's a hero list feature!\\",\\"primaryAction\\":{\\"relatedNode\\":{\\"__typename\\":\\"Url\\",\\"id\\":\\"Url:123\\",\\"url\\":\\"https://www.google.com\\"},\\"action\\":\\"OPEN_URL\\",\\"title\\":\\"Open this url\\"}}",
   "primaryAction": Object {
     "action": "OPEN_URL",
     "relatedNode": Object {
@@ -1040,7 +1062,7 @@ Object {
   "actions": Array [
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "id": "10",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -1056,7 +1078,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "id": "21",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -1072,7 +1094,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "id": "32",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -1087,7 +1109,7 @@ Object {
   ],
   "heroCard": Object {
     "action": "READ_CONTENT",
-    "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+    "id": "10",
     "image": null,
     "relatedNode": Object {
       "__type": "UniversalContentItem",
@@ -1101,7 +1123,7 @@ Object {
     "summary": "summary data",
     "title": "first item",
   },
-  "id": "HeroListFeature:f6b30a38eb547f1f75676ce0557a7e0554b53dd31034539ff6489a39d15a8d3e5ead8197b46239df34aebbab9cb2e3d5ddebb04ae86620d62cba8ceb533fd7472c208099d0c73069d746c038d5ce5eb550c12e2c78643656350723d075488962ab02b17c4512b72f32f9b3bcca1de67da5c2b4255f923095ff467dc60e482286b29329d189fc52ffe1ed566803a45b9e07552290b8fc97da1650eb43a726be6f",
+  "id": "{\\"algorithms\\":[{\\"type\\":\\"USER_FEED\\"}],\\"heroAlgorithms\\":[{\\"type\\":\\"PERSONA_FEED\\"}],\\"title\\":\\"Test HeroListFeature\\",\\"subtitle\\":\\"It's a hero list feature!\\"}",
   "primaryAction": undefined,
   "subtitle": "It's a hero list feature!",
   "title": "Test HeroListFeature",
@@ -1114,7 +1136,7 @@ Object {
   "cards": Array [
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "id": "10",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -1130,7 +1152,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "id": "21",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -1146,7 +1168,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "id": "32",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -1162,7 +1184,8 @@ Object {
     },
   ],
   "hyphenatedTitle": undefined,
-  "id": "HorizontalCardListFeature:9724110384a5109532f35a4980ea9b7732b56327ff3959d32d21ba892a0dc56034391ae157e441e7d9f2b096fd4c5a3116822ad021c371a32a561ed552d97b7817b1d768f0b41e5f3c39a7ad5d9f139015433585e9fc1f44c96682cc680c306b",
+  "id": "{\\"algorithms\\":[\\"PERSONA_FEED\\"],\\"title\\":\\"Test Horizontal List of Cards\\",\\"subtitle\\":\\"Boom\\"}",
+  "primaryAction": undefined,
   "subtitle": "Boom",
   "title": "Test Horizontal List of Cards",
 }
@@ -1174,7 +1197,7 @@ Object {
   "cards": Array [
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "id": "10",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -1190,7 +1213,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "id": "21",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -1206,7 +1229,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "id": "32",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -1221,7 +1244,7 @@ Object {
       "title": "third item",
     },
   ],
-  "id": "VerticalCardListFeature:9724110384a5109532f35a4980ea9b7732b56327ff3959d32d21ba892a0dc560bb26357a01aac9434d87a0703551598c92b2c412fdf37259605f1b041a7dc607d6ff24a8c05ec94df7df90a1ec5e3b90127f4c553710ba94eece31c967288eb12a0b19f151af6ff26222d2345a975900",
+  "id": "{\\"algorithms\\":[\\"PERSONA_FEED\\"],\\"title\\":\\"Test Action List\\",\\"subtitle\\":\\"It's great!\\",\\"isFeatured\\":false}",
   "isFeatured": false,
   "subtitle": "It's great!",
   "title": "Test Action List",
@@ -1234,7 +1257,7 @@ exports[`features dataSource should lazy load running of attached algoritms: def
 Object {
   "__typename": "ActionListFeature",
   "actions": [Function],
-  "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05e721bf197aa8e9b6ec68f4656048955afd1acf3539dffd80d68ba9da75380877e0800a46060ec5c3147deb359e677332e2be95e0a7de8e2cc7f6b04609c169f788e4daa8be2f6520244bd53df6cbcce3fcb5e3a714765eca41c857c49e0b0562",
+  "id": "{\\"algorithms\\":[{\\"type\\":\\"CAMPAIGN_ITEMS\\"}],\\"title\\":\\"Test Featured Item\\",\\"subtitle\\":\\"It's featured!\\"}",
   "primaryAction": undefined,
   "subtitle": "It's featured!",
   "title": "Test Featured Item",
@@ -1247,7 +1270,7 @@ Object {
   "actions": Array [
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "id": "10",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -1264,7 +1287,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "id": "21",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -1281,7 +1304,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "id": "32",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -1295,7 +1318,7 @@ Object {
       "title": "third item by content channel id",
     },
   ],
-  "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05e721bf197aa8e9b6ec68f4656048955afd1acf3539dffd80d68ba9da75380877e0800a46060ec5c3147deb359e677332e2be95e0a7de8e2cc7f6b04609c169f788e4daa8be2f6520244bd53df6cbcce3fcb5e3a714765eca41c857c49e0b0562",
+  "id": "{\\"algorithms\\":[{\\"type\\":\\"CAMPAIGN_ITEMS\\"}],\\"title\\":\\"Test Featured Item\\",\\"subtitle\\":\\"It's featured!\\"}",
   "primaryAction": undefined,
   "subtitle": "It's featured!",
   "title": "Test Featured Item",
@@ -1308,7 +1331,7 @@ Object {
   "actions": Array [
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "id": "10",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -1325,7 +1348,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+      "id": "21",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -1342,7 +1365,7 @@ Object {
     },
     Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+      "id": "32",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -1356,7 +1379,7 @@ Object {
       "title": "third item by content channel id",
     },
   ],
-  "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05e721bf197aa8e9b6ec68f4656048955afd1acf3539dffd80d68ba9da75380877e0800a46060ec5c3147deb359e677332e2be95e0a7de8e2cc7f6b04609c169f788e4daa8be2f6520244bd53df6cbcce3fcb5e3a714765eca41c857c49e0b0562",
+  "id": "{\\"algorithms\\":[{\\"type\\":\\"CAMPAIGN_ITEMS\\"}],\\"title\\":\\"Test Featured Item\\",\\"subtitle\\":\\"It's featured!\\"}",
   "primaryAction": undefined,
   "subtitle": "It's featured!",
   "title": "Test Featured Item",
@@ -1370,7 +1393,7 @@ Array [
     "actions": Array [
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+        "id": "21",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1386,7 +1409,7 @@ Array [
       },
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+        "id": "32",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1403,7 +1426,7 @@ Array [
     ],
     "heroCard": Object {
       "action": "READ_CONTENT",
-      "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+      "id": "10",
       "image": null,
       "relatedNode": Object {
         "__type": "UniversalContentItem",
@@ -1417,7 +1440,7 @@ Array [
       "summary": "summary data",
       "title": "first item",
     },
-    "id": "HeroListFeature:9724110384a5109532f35a4980ea9b7732b56327ff3959d32d21ba892a0dc560f1b1cb7bc6590887f4896be8d098d564163098c6045ffbc379606756cbef966a2a78ff90ec110e63238e04ba9fe1e8337425d9f1bb6457dd618f66aa48392f7a63472ed6f7d90c5783fb0e161c7e7d43291e4b638c9d3ec1039fad492681c640",
+    "id": "{\\"algorithms\\":[\\"PERSONA_FEED\\"],\\"heroAlgorithms\\":[],\\"title\\":\\"FOR YOU\\",\\"subtitle\\":\\"Explore what God calls you to today\\",\\"type\\":\\"HeroListFeature\\"}",
     "primaryAction": undefined,
     "subtitle": "Explore what God calls you to today",
     "title": "FOR YOU",
@@ -1427,7 +1450,7 @@ Array [
     "actions": Array [
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+        "id": "10",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1443,7 +1466,7 @@ Array [
       },
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+        "id": "21",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1459,7 +1482,7 @@ Array [
       },
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+        "id": "32",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1472,7 +1495,7 @@ Array [
         "title": "third item by content channel id",
       },
     ],
-    "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05bed66de665564bd0c5e37f069267679550e6d23b01e068694595ba074cd0d145c3508d6249fc0adc58f325fa1e4621dfa28d6be47ee5711bc3110dd8c31d1e045c223357732b6f15ebde1237763d712279d3ab620bf416ae9a035a0ba171e5c4fecb9bfcb5ea92ea44148d7bd6731a9158ce9af2e56cb4be9ee86a3d8638a111",
+    "id": "{\\"algorithms\\":[{\\"type\\":\\"CONTENT_CHANNEL\\",\\"arguments\\":{\\"contentChannelId\\":13}}],\\"title\\":\\"BULLETIN\\",\\"subtitle\\":\\"What's happening at apollos?\\"}",
     "primaryAction": undefined,
     "subtitle": "What's happening at apollos?",
     "title": "BULLETIN",
@@ -1487,7 +1510,7 @@ Array [
     "cards": Array [
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+        "id": "10",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1503,7 +1526,7 @@ Array [
       },
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+        "id": "21",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1519,7 +1542,7 @@ Array [
       },
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+        "id": "32",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1535,7 +1558,8 @@ Array [
       },
     ],
     "hyphenatedTitle": undefined,
-    "id": "HorizontalCardListFeature:9724110384a5109532f35a4980ea9b7732b56327ff3959d32d21ba892a0dc56083e6e9fbc0eb9c30e70418ef51dbf0a0a206c0039dd9ab293a5df0c1f07cdf27809952c976cf9886f157a1265307677bc875f2abdcfce4136c7ce952bc293761e816c7f3829d43e2b54a3297a1add52b",
+    "id": "{\\"algorithms\\":[\\"PERSONA_FEED\\"],\\"title\\":\\"FOR YOU\\",\\"subtitle\\":\\"Explore what God calls you to today\\",\\"type\\":\\"HorizontalCardList\\"}",
+    "primaryAction": undefined,
     "subtitle": "Explore what God calls you to today",
     "title": "FOR YOU",
   },
@@ -1544,7 +1568,7 @@ Array [
     "actions": Array [
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+        "id": "10",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1560,7 +1584,7 @@ Array [
       },
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+        "id": "21",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1576,7 +1600,7 @@ Array [
       },
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+        "id": "32",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1589,7 +1613,7 @@ Array [
         "title": "third item by content channel id",
       },
     ],
-    "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05bed66de665564bd0c5e37f069267679550e6d23b01e068694595ba074cd0d145c3508d6249fc0adc58f325fa1e4621dfa28d6be47ee5711bc3110dd8c31d1e045c223357732b6f15ebde1237763d712279d3ab620bf416ae9a035a0ba171e5c4fecb9bfcb5ea92ea44148d7bd6731a9158ce9af2e56cb4be9ee86a3d8638a111",
+    "id": "{\\"algorithms\\":[{\\"type\\":\\"CONTENT_CHANNEL\\",\\"arguments\\":{\\"contentChannelId\\":13}}],\\"title\\":\\"BULLETIN\\",\\"subtitle\\":\\"What's happening at apollos?\\"}",
     "primaryAction": undefined,
     "subtitle": "What's happening at apollos?",
     "title": "BULLETIN",
@@ -1604,7 +1628,7 @@ Array [
     "cards": Array [
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+        "id": "10",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1620,7 +1644,7 @@ Array [
       },
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+        "id": "21",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1636,7 +1660,7 @@ Array [
       },
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+        "id": "32",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1651,7 +1675,7 @@ Array [
         "title": "third item",
       },
     ],
-    "id": "VerticalCardListFeature:9724110384a5109532f35a4980ea9b7732b56327ff3959d32d21ba892a0dc56083e6e9fbc0eb9c30e70418ef51dbf0a0a206c0039dd9ab293a5df0c1f07cdf27809952c976cf9886f157a1265307677bc875f2abdcfce4136c7ce952bc293761595fe0eca48636b58cd90cec39ba56bb6234007fbefcccc10aeddf96551f89d1",
+    "id": "{\\"algorithms\\":[\\"PERSONA_FEED\\"],\\"title\\":\\"FOR YOU\\",\\"subtitle\\":\\"Explore what God calls you to today\\",\\"isFeatured\\":false,\\"type\\":\\"VerticalCardList\\"}",
     "isFeatured": false,
     "subtitle": "Explore what God calls you to today",
     "title": "FOR YOU",
@@ -1661,7 +1685,7 @@ Array [
     "actions": Array [
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+        "id": "10",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1677,7 +1701,7 @@ Array [
       },
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+        "id": "21",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1693,7 +1717,7 @@ Array [
       },
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+        "id": "32",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1706,7 +1730,7 @@ Array [
         "title": "third item by content channel id",
       },
     ],
-    "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05bed66de665564bd0c5e37f069267679550e6d23b01e068694595ba074cd0d145c3508d6249fc0adc58f325fa1e4621dfa28d6be47ee5711bc3110dd8c31d1e045c223357732b6f15ebde1237763d712279d3ab620bf416ae9a035a0ba171e5c4fecb9bfcb5ea92ea44148d7bd6731a9158ce9af2e56cb4be9ee86a3d8638a111",
+    "id": "{\\"algorithms\\":[{\\"type\\":\\"CONTENT_CHANNEL\\",\\"arguments\\":{\\"contentChannelId\\":13}}],\\"title\\":\\"BULLETIN\\",\\"subtitle\\":\\"What's happening at apollos?\\"}",
     "primaryAction": undefined,
     "subtitle": "What's happening at apollos?",
     "title": "BULLETIN",
@@ -1721,7 +1745,7 @@ Array [
     "actions": Array [
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+        "id": "10",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1737,7 +1761,7 @@ Array [
       },
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+        "id": "21",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1753,7 +1777,7 @@ Array [
       },
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+        "id": "32",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1768,7 +1792,7 @@ Array [
         "title": "third item",
       },
     ],
-    "id": "ActionListFeature:9724110384a5109532f35a4980ea9b7732b56327ff3959d32d21ba892a0dc56083e6e9fbc0eb9c30e70418ef51dbf0a0a206c0039dd9ab293a5df0c1f07cdf27809952c976cf9886f157a1265307677bc875f2abdcfce4136c7ce952bc293761e816c7f3829d43e2b54a3297a1add52b",
+    "id": "{\\"algorithms\\":[\\"PERSONA_FEED\\"],\\"title\\":\\"FOR YOU\\",\\"subtitle\\":\\"Explore what God calls you to today\\"}",
     "primaryAction": undefined,
     "subtitle": "Explore what God calls you to today",
     "title": "FOR YOU",
@@ -1778,7 +1802,7 @@ Array [
     "actions": Array [
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+        "id": "10",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1794,7 +1818,7 @@ Array [
       },
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+        "id": "21",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1810,7 +1834,7 @@ Array [
       },
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+        "id": "32",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1823,12 +1847,50 @@ Array [
         "title": "third item by content channel id",
       },
     ],
-    "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05bed66de665564bd0c5e37f069267679550e6d23b01e068694595ba074cd0d145c3508d6249fc0adc58f325fa1e4621dfa28d6be47ee5711bc3110dd8c31d1e045c223357732b6f15ebde1237763d712279d3ab620bf416ae9a035a0ba171e5c4fecb9bfcb5ea92ea44148d7bd6731a9158ce9af2e56cb4be9ee86a3d8638a111",
+    "id": "{\\"algorithms\\":[{\\"type\\":\\"CONTENT_CHANNEL\\",\\"arguments\\":{\\"contentChannelId\\":13}}],\\"title\\":\\"BULLETIN\\",\\"subtitle\\":\\"What's happening at apollos?\\"}",
     "primaryAction": undefined,
     "subtitle": "What's happening at apollos?",
     "title": "BULLETIN",
   },
 ]
+`;
+
+exports[`features dataSource should set cache hints for a DAILY_PRAYER algorithm 1`] = `
+Array [
+  Array [
+    Object {
+      "maxAge": 0,
+      "scope": "PRIVATE",
+    },
+  ],
+]
+`;
+
+exports[`features dataSource should set cache hints for a PERSONA_FEED algorithm 1`] = `
+Array [
+  Array [
+    Object {
+      "maxAge": 0,
+      "scope": "PRIVATE",
+    },
+  ],
+]
+`;
+
+exports[`features dataSource should set cache hints for a SERIES_IN_PROGRESS algorithm 1`] = `
+Array [
+  Array [
+    Object {
+      "maxAge": 0,
+      "scope": "PRIVATE",
+    },
+  ],
+]
+`;
+
+exports[`features dataSource should throw an error when creating a ActionListFeature from a CONTENT_CHANNEL with no contentChannelId 1`] = `
+"contentChannelId is a required argument for the CONTENT_CHANNEL ActionList algorithm.
+Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aruments: { contentChannelId: 13 } }\`"
 `;
 
 exports[`features resolver must return a personaFeed, a sermonChildrenFeed, and a contentChannelFeed for the userFeedFeatures 1`] = `
@@ -1838,7 +1900,7 @@ Array [
     "actions": Array [
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+        "id": "10",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1854,7 +1916,7 @@ Array [
       },
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+        "id": "21",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1870,7 +1932,7 @@ Array [
       },
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+        "id": "32",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1884,7 +1946,7 @@ Array [
       },
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+        "id": "10",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1900,7 +1962,7 @@ Array [
       },
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+        "id": "21",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1916,7 +1978,7 @@ Array [
       },
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+        "id": "32",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1931,7 +1993,7 @@ Array [
         "title": "third item",
       },
     ],
-    "id": "ActionListFeature:9724110384a5109532f35a4980ea9b77b7a918389784452bc4e113adf105f3ea127f90f017f69aaf559572dcd95650eee53524e81615ffc32c33db72a2f5c60dea0a0ee24fb5c2e58fd4f7fdce093a379fbff37611ab309b2d2653ed759cb0783eb02fe34123322890197bce3345eb4d991dd64a7c1b34d60b205f17f03262fa",
+    "id": "{\\"algorithms\\":[\\"SERMON_CHILDREN\\",\\"PERSONA_FEED\\"],\\"title\\":\\"FOR YOU\\",\\"subtitle\\":\\"Explore what God calls you to today\\"}",
     "primaryAction": undefined,
     "subtitle": "Explore what God calls you to today",
     "title": "FOR YOU",
@@ -1941,7 +2003,7 @@ Array [
     "actions": Array [
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:b36e55d803443431e96bb4b5068147ec",
+        "id": "10",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1957,7 +2019,7 @@ Array [
       },
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:1c627c20911791321f819125a65c3c9d",
+        "id": "21",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1973,7 +2035,7 @@ Array [
       },
       Object {
         "action": "READ_CONTENT",
-        "id": "ActionListAction:a3b732a975f615de0ece53d43c60c8ef",
+        "id": "32",
         "image": null,
         "relatedNode": Object {
           "__type": "UniversalContentItem",
@@ -1986,7 +2048,7 @@ Array [
         "title": "third item by content channel id",
       },
     ],
-    "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05bed66de665564bd0c5e37f069267679550e6d23b01e068694595ba074cd0d145c3508d6249fc0adc58f325fa1e4621dfa28d6be47ee5711bc3110dd8c31d1e045c223357732b6f15ebde1237763d712279d3ab620bf416ae9a035a0ba171e5c4fecb9bfcb5ea92ea44148d7bd6731a9158ce9af2e56cb4be9ee86a3d8638a111",
+    "id": "{\\"algorithms\\":[{\\"type\\":\\"CONTENT_CHANNEL\\",\\"arguments\\":{\\"contentChannelId\\":13}}],\\"title\\":\\"BULLETIN\\",\\"subtitle\\":\\"What's happening at apollos?\\"}",
     "primaryAction": undefined,
     "subtitle": "What's happening at apollos?",
     "title": "BULLETIN",

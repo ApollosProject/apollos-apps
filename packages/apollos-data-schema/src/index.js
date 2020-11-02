@@ -724,6 +724,8 @@ export const followingsSchema = gql`
 
   extend type Mutation {
     updateLikeEntity(input: LikeEntityInput!): ContentItem
+      @deprecated(reason: "Use the more general updateLikeNode instead")
+    updateLikeNode(input: LikeEntityInput!): Node
   }
 
   ${extendForEachContentItemType(`
@@ -803,6 +805,8 @@ export const featuresSchema = gql`
     READ_CONTENT
     READ_EVENT
     OPEN_URL
+    OPEN_NODE
+    OPEN_CHANNEL
   }
 
   type Url implements Node {
@@ -810,12 +814,14 @@ export const featuresSchema = gql`
     id: ID!
   }
 
+  # Represents a generic action. Typically a button or link.
   type FeatureAction {
     relatedNode: Node
     action: ACTION_FEATURE_ACTION
     title: String
   }
 
+  # An item on an ActionListFeature.
   type ActionListAction {
     id: ID!
 
@@ -826,6 +832,8 @@ export const featuresSchema = gql`
     action: ACTION_FEATURE_ACTION
   }
 
+  # A list of "actions", in this case thumbnails, title, and subtitle.
+  # Has a button at the very bottom (primary action)
   type ActionListFeature implements Feature & Node {
     id: ID!
     order: Int
@@ -836,6 +844,27 @@ export const featuresSchema = gql`
     primaryAction: FeatureAction
   }
 
+  # An item in an ActionBarFeature. Buttons with an icon and title.
+  type ActionBarAction {
+    id: ID!
+    icon: String
+    title: String
+    action: ACTION_FEATURE_ACTION
+    relatedNode: Node
+  }
+
+  # A list of actions, represented as a series of horizontal buttons with icons.
+  # Also has a title above the actions (which can exist by itself by omotting the actions)
+  type ActionBarFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    title: String
+    actions: [ActionBarAction]
+  }
+
+  # A Hero Card with (essentially) an Action List attached to the bottom.
+  # Also has a button at the very bottom.
   type HeroListFeature implements Feature & Node {
     id: ID!
     order: Int
@@ -847,6 +876,9 @@ export const featuresSchema = gql`
     primaryAction: FeatureAction
   }
 
+  # Represents a Card (card type is dictated on the client)
+  # Cards are rendered through either a HeroListFeature (hero) or Vertical/HorizontalCardList
+  # Similar to ActionListAction
   type CardListItem {
     id: ID!
 
@@ -861,6 +893,7 @@ export const featuresSchema = gql`
     action: ACTION_FEATURE_ACTION
   }
 
+  # A Vertical list of cards.
   type VerticalCardListFeature implements Feature & Node {
     id: ID!
     order: Int
@@ -871,6 +904,8 @@ export const featuresSchema = gql`
     cards: [CardListItem]
   }
 
+  # A Vertical list of cards.
+  # Also has a button at the top right.
   type HorizontalCardListFeature implements Feature & Node {
     id: ID!
     order: Int
@@ -878,6 +913,7 @@ export const featuresSchema = gql`
     title: String
     subtitle: String
     cards: [CardListItem]
+    primaryAction: FeatureAction
   }
 
   type TextFeature implements Feature & Node {
@@ -903,24 +939,32 @@ export const featuresSchema = gql`
     url: String
   }
 
-  extend type WeekendContentItem {
+  type FeatureFeed implements Node {
+    id: ID!
     features: [Feature]
   }
 
   interface FeaturesNode {
-    features: [Feature]
+    features: [Feature] @deprecated(reason: "Use featureFeed")
+    featureFeed: FeatureFeed
   }
 
-  extend type WeekendContentItem implements FeaturesNode
-
-  extend type ContentSeriesContentItem {
-    features: [Feature]
+  extend type WeekendContentItem implements FeaturesNode {
+    features: [Feature] @deprecated(reason: "Use featureFeed")
+    featureFeed: FeatureFeed
   }
 
-  extend type ContentSeriesContentItem implements FeaturesNode
+  extend type ContentSeriesContentItem implements FeaturesNode {
+    features: [Feature] @deprecated(reason: "Use featureFeed")
+    featureFeed: FeatureFeed
+  }
 
   extend type Query {
-    userFeedFeatures: [Feature] @cacheControl(maxAge: 0)
+    userFeedFeatures: [Feature]
+      @cacheControl(maxAge: 0)
+      @deprecated(reason: "Use homeFeedFeatures or discoverFeedFeatures")
+    homeFeedFeatures(campusId: ID): FeatureFeed @cacheControl(maxAge: 0)
+    discoverFeedFeatures: FeatureFeed @cacheControl(maxAge: 0)
   }
 `;
 

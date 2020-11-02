@@ -22,17 +22,23 @@ function PrayerFeatureConnected({
   const [shouldShowOnboarding, setShouldShowOnboarding] = useState(false);
   const onboardingKey = `${featureId}-seenOnboarding`;
 
-  useEffect(() => {
-    (async () => {
+  const setHasSeenOnboarding = async () => {
+    try {
       const hasSeenOnboarding = await AsyncStorage.getItem(onboardingKey);
       setShouldShowOnboarding(!hasSeenOnboarding);
-    })();
-  });
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  useEffect(() => {
+    setHasSeenOnboarding();
+  }, [onboardingKey]);
 
   const handleOpenTo = (index = 0) => {
     setSwiperIndex(index);
-    AsyncStorage.setItem(onboardingKey, 'YES');
     setModalOpened(true);
+    AsyncStorage.setItem(onboardingKey, 'YES');
   };
 
   return (

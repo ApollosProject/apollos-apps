@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeatureFeed should get a specific feed 1`] = `
+Object {
+  "data": Object {
+    "node": Object {
+      "features": Array [
+        Object {
+          "id": "HorizontalCardListFeature:9724110384a5109532f35a4980ea9b7732b56327ff3959d32d21ba892a0dc56083e6e9fbc0eb9c30e70418ef51dbf0a0a206c0039dd9ab293a5df0c1f07cdf27809952c976cf9886f157a1265307677bc875f2abdcfce4136c7ce952bc293761d2c1c09570e5747ddde976fba6aa9bcae824a7c9018069e09c3d3904275766e443afc4cd13c8a456a69d52aaab4ec21072a784973a0f1658d6387a97c89439ea",
+        },
+        Object {
+          "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05bed66de665564bd0c5e37f069267679550e6d23b01e068694595ba074cd0d145c3508d6249fc0adc58f325fa1e4621dfa28d6be47ee5711bc3110dd8c31d1e045c223357732b6f15ebde1237763d712279d3ab620bf416ae9a035a0ba171e5c4fecb9bfcb5ea92ea44148d7bd6731a91c2cfdb4dd0c0091614b1748d458f17c5efa056b365462e5c7cc21407ec25d379fdb7549d12a8ae9ed00be7b6a645ccc5",
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`FeatureFeed should handle a config source with an invalid section 1`] = `
+Object {
+  "__typename": "FeatureFeed",
+  "getFeatures": [Function],
+  "id": "FeatureFeed:c7035fd9677aa209cd4613df53e9c83a0fb3b9ecd853808383d135407161a17b1b36788b9ba3c93bfba11684fa4d78c8caa9b3afa88f86162e7e200eabaae1b4",
+}
+`;
+
+exports[`FeatureFeed should handle a config source with no section 1`] = `
+Object {
+  "__typename": "FeatureFeed",
+  "getFeatures": [Function],
+  "id": "FeatureFeed:c7035fd9677aa209cd4613df53e9c83a0fb3b9ecd853808383d135407161a17b287da00bddfd676b90fb1b8e34fdaacf",
+}
+`;
+
+exports[`FeatureFeed should handle sources other than the config 1`] = `
+Object {
+  "__typename": "FeatureFeed",
+  "getFeatures": [Function],
+  "id": "FeatureFeed:181f4628454e81fb3db65ce53f56d6b6159ae40334a816afee4b0e3aacdf70d0ac4c6070d07c141c24858d03c0a5e5a3",
+}
+`;
+
+exports[`FeatureFeed should query the discover feed 1`] = `
+Object {
+  "data": Object {
+    "discoverFeedFeatures": Object {
+      "features": Array [
+        Object {
+          "id": "ActionListFeature:9724110384a5109532f35a4980ea9b77fc68ca68b7328a1dac42af2e6dfe37074ceb118d009211aca8e387fb33b75fb8e8de0133d5d4dd3554c7ef504bff2aab436c82cac5b6e801cd668bdea9d89792b4cb1d4bef07ecf08306a8d4264b01cf",
+        },
+      ],
+      "id": "FeatureFeed:c7035fd9677aa209cd4613df53e9c83a0fb3b9ecd853808383d135407161a17bc75b8c451176e861b2ade040817c1b9da6fbfe9c93b76645950e3ce952ba659e",
+    },
+  },
+}
+`;
+
+exports[`FeatureFeed should query the home feed 1`] = `
+Object {
+  "data": Object {
+    "homeFeedFeatures": Object {
+      "features": Array [
+        Object {
+          "id": "HorizontalCardListFeature:9724110384a5109532f35a4980ea9b7732b56327ff3959d32d21ba892a0dc56083e6e9fbc0eb9c30e70418ef51dbf0a0a206c0039dd9ab293a5df0c1f07cdf27809952c976cf9886f157a1265307677bc875f2abdcfce4136c7ce952bc293761d2c1c09570e5747ddde976fba6aa9bcae824a7c9018069e09c3d3904275766e443afc4cd13c8a456a69d52aaab4ec21072a784973a0f1658d6387a97c89439ea",
+        },
+        Object {
+          "id": "ActionListFeature:f6b30a38eb547f1f75676ce0557a7e05bed66de665564bd0c5e37f069267679550e6d23b01e068694595ba074cd0d145c3508d6249fc0adc58f325fa1e4621dfa28d6be47ee5711bc3110dd8c31d1e045c223357732b6f15ebde1237763d712279d3ab620bf416ae9a035a0ba171e5c4fecb9bfcb5ea92ea44148d7bd6731a91c2cfdb4dd0c0091614b1748d458f17c5efa056b365462e5c7cc21407ec25d379fdb7549d12a8ae9ed00be7b6a645ccc5",
+        },
+      ],
+      "id": "FeatureFeed:c7035fd9677aa209cd4613df53e9c83a0fb3b9ecd853808383d135407161a17b98645698d03097766084632c51ea2eb271dbdadb1205a7012706cfd3d3a513fb",
+    },
+  },
+}
+`;

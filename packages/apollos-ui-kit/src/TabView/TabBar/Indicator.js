@@ -38,6 +38,7 @@ const Indicator = ({
 Indicator.propTypes = {
   width: PropTypes.number,
   position: PropTypes.shape({ interpolate: PropTypes.func }),
+  /* eslint-disable-next-line */
   navigationState: PropTypes.shape({ routes: PropTypes.array }),
   indicatorColor: PropTypes.string,
 };

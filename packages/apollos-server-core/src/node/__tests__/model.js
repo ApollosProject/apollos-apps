@@ -188,6 +188,32 @@ describe('Node', () => {
     reset();
   });
 
+  it("Node class should return just the id in it's unencoded state", async () => {
+    const id = '123';
+    const __type = 'Test';
+    const globalId = createGlobalId(id, __type);
+
+    set({
+      fieldsByTypeName: {
+        ContentItem: {
+          id: { name: 'id' },
+        },
+      },
+    });
+
+    const dataSources = {
+      Test: {
+        getFromId: jest.fn(),
+      },
+    };
+
+    const node = new Node();
+    const result = await node.get(globalId, dataSources, { schema });
+
+    expect(result.id).toBe(id);
+    reset();
+  });
+
   it('Node class should call getFromId the id if we are asking for more than id', async () => {
     const id = '456';
     const __type = 'Test';

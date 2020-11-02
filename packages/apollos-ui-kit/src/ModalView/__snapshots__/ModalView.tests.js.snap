@@ -274,15 +274,7 @@ exports[`The ModalView component should render a custom back action 1`] = `
         iconPadding={8}
         style={
           Object {
-            "backgroundColor": Object {
-              "color": Array [
-                48,
-                48,
-                48,
-              ],
-              "model": "rgb",
-              "valpha": 0.7,
-            },
+            "backgroundColor": "rgba(48, 48, 48, 0.7)",
             "padding": 8,
           }
         }
@@ -630,15 +622,7 @@ exports[`The ModalView component should render a custom close action 1`] = `
         iconPadding={8}
         style={
           Object {
-            "backgroundColor": Object {
-              "color": Array [
-                48,
-                48,
-                48,
-              ],
-              "model": "rgb",
-              "valpha": 0.7,
-            },
+            "backgroundColor": "rgba(48, 48, 48, 0.7)",
             "padding": 8,
           }
         }

@@ -8,6 +8,7 @@ function defaultGetButtonText({ hasPushPermission, hasPrompted }) {
   if (hasPushPermission) {
     return 'Notifications Enabled!';
   }
+  // iOS only, hasPrompted is undefined in Android
   if (hasPrompted) {
     return 'Enable Notifications in Settings';
   }
@@ -25,25 +26,36 @@ const AskNotificationsConnected = memo(
     ...props
   }) => (
     <NotificationsConsumer>
-      {(value) => (
-        <Component
-          isLoading={value.loading}
-          onPressButton={() => onRequestPushPermissions(value.checkPermissions)}
-          buttonDisabled={value.hasPushPermission}
-          buttonText={getButtonText({
-            hasPrompted: value.hasPrompted,
-            hasPushPermission: value.hasPushPermission,
-          })}
-          onPressPrimary={value.hasPrompted ? onPressPrimary : null} // if notifications are enabled show the primary nav button (next/finish)
-          onPressSecondary={
-            // if notifications are not enabled show the secondary nav button (skip)
-            !value.hasPrompted ? onPressSecondary || onPressPrimary : null // if onPressSecondary exists use it else default onPressPrimary
-          }
-          pressPrimaryEventName={'Ask Notifications Completed'}
-          pressSecondaryEventName={'Ask Notifications Skipped'}
-          {...props}
-        />
-      )}
+      {(value) => {
+        // Android has no concept of push prompt, notifications enabled by default.
+        // so we'll just show them it's enabled and allow to proceed
+        const ready =
+          value.hasPrompted === undefined
+            ? value.hasPushPermission || value.hasPrompted
+            : value.hasPushPermission;
+
+        return (
+          <Component
+            isLoading={value.loading}
+            onPressButton={() =>
+              onRequestPushPermissions(value.checkPermissions)
+            }
+            buttonDisabled={value.hasPushPermission}
+            buttonText={getButtonText({
+              hasPrompted: value.hasPrompted,
+              hasPushPermission: value.hasPushPermission,
+            })}
+            onPressPrimary={ready ? onPressPrimary : null}
+            onPressSecondary={
+              // if onPressSecondary exists use it else default onPressPrimary
+              !ready ? onPressSecondary || onPressPrimary : null
+            }
+            pressPrimaryEventName={'Ask Notifications Completed'}
+            pressSecondaryEventName={'Ask Notifications Skipped'}
+            {...props}
+          />
+        );
+      }}
     </NotificationsConsumer>
   )
 );

@@ -1,5 +1,5 @@
 module.exports = {
   extends: [
-    '@apollosproject/eslint-config',
+    './packages/apollos-eslint-config/index.js',
   ],
 };

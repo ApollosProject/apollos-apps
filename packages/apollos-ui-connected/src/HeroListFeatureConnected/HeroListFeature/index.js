@@ -5,12 +5,12 @@ import {
   ActionList,
   HighlightCard,
   H3,
-  H6,
+  H5,
   PaddedView,
   styled,
   TouchableScale,
 } from '@apollosproject/ui-kit';
-import { LiveConsumer } from '../..';
+import { LiveConsumer } from '../../live';
 
 const Header = styled(
   ({ theme }) => ({
@@ -25,7 +25,7 @@ const Title = styled(
     color: theme.colors.text.tertiary,
   }),
   'ui-connected.HeroListFeatureConnected.HeroListFeature.Title'
-)(H6);
+)(H5);
 
 const Subtitle = styled(
   {},
@@ -185,10 +185,9 @@ const HeroListFeature = memo(
 HeroListFeature.displayName = 'Features';
 
 HeroListFeature.propTypes = {
-  // TODO: refactor ActionListCard to safely render without an actions array.
-  actions: PropTypes.arrayOf(PropTypes.shape({})).isRequired, // at least for the time being this is required
-  heroCard: PropTypes.shape({}).isRequired, // at least for the time being this is required
-  id: PropTypes.number,
+  actions: PropTypes.arrayOf(PropTypes.shape({})),
+  heroCard: PropTypes.shape({}),
+  id: PropTypes.string,
   isLoading: PropTypes.bool,
   HeroComponent: PropTypes.oneOfType([
     PropTypes.func,

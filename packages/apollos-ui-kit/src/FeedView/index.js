@@ -87,11 +87,9 @@ class FeedView extends Component {
         data={content}
         keyExtractor={keyExtractor}
         ListEmptyComponent={
-          error && !isLoading && (!content || !content.length) ? (
-            <ErrorCard error={error} />
-          ) : (
-            ListEmptyComponent
-          )
+          error && !isLoading && (!content || !content.length)
+            ? console.warn(error) || <ErrorCard error={error} />
+            : ListEmptyComponent
         }
         numColumns={numColumns}
         onEndReached={this.fetchMoreHandler({ fetchMore, error, isLoading })}

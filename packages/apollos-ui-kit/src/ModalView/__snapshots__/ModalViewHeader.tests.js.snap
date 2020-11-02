@@ -38,15 +38,7 @@ exports[`The ModalView/ModalViewHeader component should accept an onBack functio
       iconPadding={8}
       style={
         Object {
-          "backgroundColor": Object {
-            "color": Array [
-              48,
-              48,
-              48,
-            ],
-            "model": "rgb",
-            "valpha": 0.7,
-          },
+          "backgroundColor": "rgba(48, 48, 48, 0.7)",
           "padding": 8,
         }
       }
@@ -359,15 +351,7 @@ exports[`The ModalView/ModalViewHeader component should accept an onClose functi
       iconPadding={8}
       style={
         Object {
-          "backgroundColor": Object {
-            "color": Array [
-              48,
-              48,
-              48,
-            ],
-            "model": "rgb",
-            "valpha": 0.7,
-          },
+          "backgroundColor": "rgba(48, 48, 48, 0.7)",
           "padding": 8,
         }
       }
@@ -532,15 +516,7 @@ exports[`The ModalView/ModalViewHeader component should render 1`] = `
       iconPadding={8}
       style={
         Object {
-          "backgroundColor": Object {
-            "color": Array [
-              48,
-              48,
-              48,
-            ],
-            "model": "rgb",
-            "valpha": 0.7,
-          },
+          "backgroundColor": "rgba(48, 48, 48, 0.7)",
           "padding": 8,
         }
       }
@@ -779,15 +755,7 @@ exports[`The ModalView/ModalViewHeader component should render as a navigationHe
       iconPadding={8}
       style={
         Object {
-          "backgroundColor": Object {
-            "color": Array [
-              48,
-              48,
-              48,
-            ],
-            "model": "rgb",
-            "valpha": 0.7,
-          },
+          "backgroundColor": "rgba(48, 48, 48, 0.7)",
           "padding": 8,
         }
       }
@@ -933,15 +901,7 @@ exports[`The ModalView/ModalViewHeader component should render as a navigationHe
       iconPadding={8}
       style={
         Object {
-          "backgroundColor": Object {
-            "color": Array [
-              48,
-              48,
-              48,
-            ],
-            "model": "rgb",
-            "valpha": 0.7,
-          },
+          "backgroundColor": "rgba(48, 48, 48, 0.7)",
           "padding": 8,
         }
       }

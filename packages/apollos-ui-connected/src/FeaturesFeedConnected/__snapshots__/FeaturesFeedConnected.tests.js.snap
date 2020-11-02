@@ -1,0 +1,487 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeaturesFeedConnected should render 1`] = `
+<RCTScrollView
+  data={
+    Array [
+      Object {
+        "__typename": "WebviewFeature",
+        "id": "WebviewFeature:6",
+        "title": "Test Title",
+      },
+      Object {
+        "__typename": "TextFeature",
+        "body": "this is another, text feature",
+        "id": "TextFeature:1",
+        "scriptures": Array [
+          Object {
+            "__typename": "Scripture",
+            "reference": "Matthew 4:10",
+          },
+        ],
+      },
+      Object {
+        "__typename": "ScriptureFeature",
+        "id": "ScriptureFeature:3",
+        "scriptures": Array [
+          Object {
+            "__typename": "Scripture",
+            "reference": "Mark 1:12",
+          },
+        ],
+      },
+      Object {
+        "__typename": "ScriptureFeature",
+        "id": "ScriptureFeature:4",
+        "scriptures": Array [
+          Object {
+            "__typename": "Scripture",
+            "reference": "John 3:16",
+          },
+        ],
+      },
+    ]
+  }
+  disableVirtualization={false}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={false}
+  initialNumToRender={10}
+  keyExtractor={[Function]}
+  loading={false}
+  maxToRenderPerBatch={10}
+  numColumns={1}
+  onContentSizeChange={[Function]}
+  onEndReachedThreshold={0.7}
+  onLayout={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onRefresh={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  refreshControl={
+    <RefreshControlMock
+      onRefresh={[Function]}
+      refreshing={false}
+    />
+  }
+  refreshing={false}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={Array []}
+  updateCellsBatchingPeriod={50}
+  viewabilityConfigCallbackPairs={Array []}
+  windowSize={21}
+>
+  <RCTRefreshControl />
+  <View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        height={400}
+        style={
+          Object {
+            "backgroundColor": "#000000",
+            "borderRadius": 16,
+            "height": 400,
+            "marginHorizontal": 16,
+            "marginVertical": 12,
+            "overflow": "hidden",
+            "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 8,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "flexWrap": "nowrap",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            padded={true}
+            style={
+              Object {
+                "color": "#F8F7F4",
+                "fontFamily": "InterUI-Black",
+                "fontSize": 24,
+                "lineHeight": 27.6,
+                "paddingBottom": 18,
+                "paddingHorizontal": 16,
+                "paddingTop": 27,
+              }
+            }
+          >
+            Test Title
+          </Text>
+          <View
+            accessible={true}
+            clickable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#17B582",
+                  "fontFamily": "System",
+                  "fontSize": 14,
+                  "fontStyle": null,
+                  "fontWeight": null,
+                  "lineHeight": 21,
+                  "paddingHorizontal": 16,
+                }
+              }
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "flex": 1,
+                "overflow": "hidden",
+              },
+              undefined,
+            ]
+          }
+        >
+          <RNCWebView
+            cacheEnabled={true}
+            javaScriptEnabled={true}
+            messagingEnabled={false}
+            onContentProcessDidTerminate={[Function]}
+            onHttpError={[Function]}
+            onLoadingError={[Function]}
+            onLoadingFinish={[Function]}
+            onLoadingProgress={[Function]}
+            onLoadingStart={[Function]}
+            onMessage={[Function]}
+            onShouldStartLoadWithRequest={[Function]}
+            source={
+              Object {
+                "uri": undefined,
+              }
+            }
+            style={
+              Array [
+                Object {
+                  "flex": 1,
+                  "overflow": "hidden",
+                },
+                Object {
+                  "backgroundColor": "#ffffff",
+                },
+                Object {
+                  "flex": 1,
+                },
+              ]
+            }
+            useSharedProcessPool={true}
+          />
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 16,
+            "marginHorizontal": 16,
+            "marginVertical": 12,
+            "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 8,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "borderRadius": 16,
+              "overflow": "hidden",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
+              }
+            }
+          >
+            <Text
+              bold={false}
+              italic={false}
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Regular",
+                  "fontSize": 16,
+                  "lineHeight": 26,
+                }
+              }
+            >
+              this is another, text feature
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+                "justifyContent": "flex-end",
+                "paddingHorizontal": 16,
+                "paddingTop": 0,
+                "paddingVertical": 16,
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 16,
+            "marginHorizontal": 16,
+            "marginVertical": 12,
+            "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 8,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "borderRadius": 16,
+              "overflow": "hidden",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
+              }
+            }
+          >
+            <View>
+              <Text
+                style={
+                  Object {
+                    "color": "#303030",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                    "paddingBottom": 12,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 24,
+                    }
+                  }
+                >
+                  Mark 1:12
+                </Text>
+              </Text>
+              <View
+                style={
+                  Object {
+                    "paddingBottom": 18,
+                  }
+                }
+              >
+                <View />
+              </View>
+              <Text
+                bold={false}
+                italic={false}
+                style={
+                  Object {
+                    "color": "#505050",
+                    "fontFamily": "InterUI-Regular",
+                    "fontSize": 9.6,
+                    "lineHeight": 10.8,
+                  }
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+                "justifyContent": "flex-end",
+                "paddingHorizontal": 16,
+                "paddingTop": 0,
+                "paddingVertical": 16,
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 16,
+            "marginHorizontal": 16,
+            "marginVertical": 12,
+            "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 8,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "borderRadius": 16,
+              "overflow": "hidden",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
+              }
+            }
+          >
+            <View>
+              <Text
+                style={
+                  Object {
+                    "color": "#303030",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                    "paddingBottom": 12,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 24,
+                    }
+                  }
+                >
+                  John 3:16
+                </Text>
+              </Text>
+              <View
+                style={
+                  Object {
+                    "paddingBottom": 18,
+                  }
+                }
+              >
+                <View />
+              </View>
+              <Text
+                bold={false}
+                italic={false}
+                style={
+                  Object {
+                    "color": "#505050",
+                    "fontFamily": "InterUI-Regular",
+                    "fontSize": 9.6,
+                    "lineHeight": 10.8,
+                  }
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+                "justifyContent": "flex-end",
+                "paddingHorizontal": 16,
+                "paddingTop": 0,
+                "paddingVertical": 16,
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    />
+  </View>
+</RCTScrollView>
+`;

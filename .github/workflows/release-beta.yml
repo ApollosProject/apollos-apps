@@ -1,0 +1,63 @@
+name: Beta Release
+
+on: workflow_dispatch
+
+jobs:
+
+  gpr:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0 # needs this to pull all tags and branches
+
+    - name: Setup Node for GPR
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.19.x
+        registry-url: 'https://npm.pkg.github.com'
+        scope: '@apollosproject'
+
+    - name: Install Yarn
+      run: npm install -g yarn
+
+    - name: Install Dependencies
+      run: yarn
+
+    - name: Beta Release (No Push)
+      run: yarn release:beta --registry "http://npm.pkg.github.com" --no-push --no-git-tag-version --yes
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  npm:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0 # needs this to pull all tags and branches
+        token: ${{ secrets.APOLLOS_ADMIN_TOKEN }}
+
+    - name: Setup Node for npmjs.org
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.19.x
+        registry-url: 'https://registry.npmjs.org'
+        scope: '@apollosproject'
+
+    - name: Install Yarn
+      run: npm install -g yarn
+
+    - name: Install Dependencies
+      run: yarn
+
+    - name: NPM Release
+      run: |
+        git config --global user.email "apps@apollos.app"
+        git config --global user.name "Apollos Admin"
+        yarn release:beta --yes
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

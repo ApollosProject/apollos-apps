@@ -14,6 +14,8 @@ import * as Group from './groups';
 import * as Utils from './utils';
 import * as BinaryFiles from './binary-files';
 import * as Feature from './features';
+import * as ActionAlgorithm from './action-algorithms';
+import * as FeatureFeed from './feature-feeds';
 import * as Event from './events';
 import * as PrayerRequest from './prayer-request';
 
@@ -34,6 +36,8 @@ export {
   Utils,
   BinaryFiles,
   Feature,
+  ActionAlgorithm,
+  FeatureFeed,
   Event,
   PrayerRequest,
 };

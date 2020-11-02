@@ -7,9 +7,13 @@ const GET_CONTENT_CARD = gql`
       id
       __typename
       ...contentCardFragment
+      ...CardNodeFragment
+      ...ThemedNodeFragment
     }
   }
   ${ApollosConfig.FRAGMENTS.CONTENT_CARD_FRAGMENT}
+  ${ApollosConfig.FRAGMENTS.CARD_NODE_FRAGMENT}
+  ${ApollosConfig.FRAGMENTS.THEMED_NODE_FRAGMENT}
 `;
 
 export default GET_CONTENT_CARD;

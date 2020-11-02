@@ -15,7 +15,6 @@ module.exports = {
     'jest',
     'react',
     'react-native',
-    'graphql',
   ],
   rules: {
     'prettier/prettier': [
@@ -32,9 +31,12 @@ module.exports = {
     'react/jsx-filename-extension': 0,
     'react/jsx-handler-names': 2,
     'react/jsx-curly-brace-presence': 0,
+    'react/jsx-props-no-spreading': 1,
     'react/prefer-stateless-function': [2, { ignorePureComponents: true }],
     'react/require-default-props': 0,
     'react/prop-types': ['error', { ignore: ['navigation'] }],
+    'react/static-property-placement': 1,
+    'react/state-in-constructor': 1,
     'react-native/split-platform-components': 2,
     'react-native/no-unused-styles': 2,
     'react-native/no-inline-styles': 2,
@@ -64,7 +66,7 @@ module.exports = {
     'import/no-cycle': 0,
     'function-paren-newline': 0,
     'no-underscore-dangle': 0,
-    'graphql/template-strings': ['warn', { env: 'apollo' }],
+    'max-classes-per-file': 1,
   },
   parserOptions: {
     ecmaVersion: 7,

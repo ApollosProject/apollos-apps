@@ -260,24 +260,8 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                   style={
                     Object {
                       "alignItems": "center",
-                      "backgroundColor": Object {
-                        "color": Array [
-                          255,
-                          255,
-                          255,
-                        ],
-                        "model": "rgb",
-                        "valpha": 0.4,
-                      },
-                      "borderColor": Object {
-                        "color": Array [
-                          255,
-                          255,
-                          255,
-                        ],
-                        "model": "rgb",
-                        "valpha": 0.4,
-                      },
+                      "backgroundColor": "rgba(255, 255, 255, 0.4)",
+                      "borderColor": "rgba(255, 255, 255, 0.4)",
                       "borderRadius": 16,
                       "borderWidth": 0,
                       "elevation": 2,
@@ -550,43 +534,6 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                     }
                   }
                 />
-                <BVLinearGradient
-                  colors={
-                    Array [
-                      2147483648,
-                      0,
-                    ]
-                  }
-                  endPoint={
-                    Object {
-                      "x": 0,
-                      "y": 1,
-                    }
-                  }
-                  locations={
-                    Array [
-                      0,
-                      1,
-                    ]
-                  }
-                  overlayColor="#000000"
-                  overlayType="gradient-top"
-                  startPoint={
-                    Object {
-                      "x": 0,
-                      "y": 0,
-                    }
-                  }
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    }
-                  }
-                />
               </View>
               <View
                 style={
@@ -826,38 +773,42 @@ exports[`The HorizontalCardListFeature component should render a loading state f
   <View
     style={
       Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
         "paddingBottom": 8,
-        "paddingHorizontal": 16,
+        "paddingLeft": 16,
         "paddingTop": 48,
-        "paddingVertical": 0,
+        "zIndex": 2,
       }
     }
-    vertical={false}
   >
-    <View
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 16,
-          "height": 14,
-          "marginVertical": 3.5,
-          "width": "60%",
+    <View>
+      <View
+        style={
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 16,
+            "height": 14,
+            "marginVertical": 3.5,
+            "width": "60%",
+          }
         }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 16,
-          "height": 36,
-          "marginVertical": 2.6999999999999993,
-          "width": "100%",
+      />
+      <View
+        style={
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 16,
+            "height": 24,
+            "marginVertical": 1.8000000000000007,
+            "width": "100%",
+          }
         }
-      }
-    />
+      />
+    </View>
   </View>
   <RCTScrollView
     collapsable={false}
@@ -1912,27 +1863,31 @@ exports[`The HorizontalCardListFeature component should render a section title 1
   <View
     style={
       Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
         "paddingBottom": 8,
-        "paddingHorizontal": 16,
+        "paddingLeft": 16,
         "paddingTop": 48,
-        "paddingVertical": 0,
+        "zIndex": 2,
       }
     }
-    vertical={false}
   >
-    <Text
-      numberOfLines={1}
-      style={
-        Object {
-          "color": "#A5A5A5",
-          "fontFamily": "InterUI-Medium",
-          "fontSize": 14,
-          "lineHeight": 21,
+    <View>
+      <Text
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "#A5A5A5",
+            "fontFamily": "InterUI-Medium",
+            "fontSize": 14,
+            "lineHeight": 21,
+          }
         }
-      }
-    >
-      This renders smaller than its name would suggest
-    </Text>
+      >
+        This renders smaller than its name would suggest
+      </Text>
+    </View>
   </View>
   <RCTScrollView
     collapsable={false}
@@ -2192,24 +2147,8 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                   style={
                     Object {
                       "alignItems": "center",
-                      "backgroundColor": Object {
-                        "color": Array [
-                          255,
-                          255,
-                          255,
-                        ],
-                        "model": "rgb",
-                        "valpha": 0.4,
-                      },
-                      "borderColor": Object {
-                        "color": Array [
-                          255,
-                          255,
-                          255,
-                        ],
-                        "model": "rgb",
-                        "valpha": 0.4,
-                      },
+                      "backgroundColor": "rgba(255, 255, 255, 0.4)",
+                      "borderColor": "rgba(255, 255, 255, 0.4)",
                       "borderRadius": 16,
                       "borderWidth": 0,
                       "elevation": 2,
@@ -2479,43 +2418,6 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                       "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
-                    }
-                  }
-                />
-                <BVLinearGradient
-                  colors={
-                    Array [
-                      2147483648,
-                      0,
-                    ]
-                  }
-                  endPoint={
-                    Object {
-                      "x": 0,
-                      "y": 1,
-                    }
-                  }
-                  locations={
-                    Array [
-                      0,
-                      1,
-                    ]
-                  }
-                  overlayColor="#000000"
-                  overlayType="gradient-top"
-                  startPoint={
-                    Object {
-                      "x": 0,
-                      "y": 0,
-                    }
-                  }
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
                     }
                   }
                 />
@@ -2758,26 +2660,30 @@ exports[`The HorizontalCardListFeature component should render with a section su
   <View
     style={
       Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
         "paddingBottom": 8,
-        "paddingHorizontal": 16,
+        "paddingLeft": 16,
         "paddingTop": 48,
-        "paddingVertical": 0,
+        "zIndex": 2,
       }
     }
-    vertical={false}
   >
-    <Text
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Black",
-          "fontSize": 36,
-          "lineHeight": 41.4,
+    <View>
+      <Text
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Black",
+            "fontSize": 24,
+            "lineHeight": 27.6,
+          }
         }
-      }
-    >
-      This renders larger than you might expect
-    </Text>
+      >
+        This renders larger than you might expect
+      </Text>
+    </View>
   </View>
   <RCTScrollView
     collapsable={false}
@@ -3037,24 +2943,8 @@ exports[`The HorizontalCardListFeature component should render with a section su
                   style={
                     Object {
                       "alignItems": "center",
-                      "backgroundColor": Object {
-                        "color": Array [
-                          255,
-                          255,
-                          255,
-                        ],
-                        "model": "rgb",
-                        "valpha": 0.4,
-                      },
-                      "borderColor": Object {
-                        "color": Array [
-                          255,
-                          255,
-                          255,
-                        ],
-                        "model": "rgb",
-                        "valpha": 0.4,
-                      },
+                      "backgroundColor": "rgba(255, 255, 255, 0.4)",
+                      "borderColor": "rgba(255, 255, 255, 0.4)",
                       "borderRadius": 16,
                       "borderWidth": 0,
                       "elevation": 2,
@@ -3324,43 +3214,6 @@ exports[`The HorizontalCardListFeature component should render with a section su
                       "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
-                    }
-                  }
-                />
-                <BVLinearGradient
-                  colors={
-                    Array [
-                      2147483648,
-                      0,
-                    ]
-                  }
-                  endPoint={
-                    Object {
-                      "x": 0,
-                      "y": 1,
-                    }
-                  }
-                  locations={
-                    Array [
-                      0,
-                      1,
-                    ]
-                  }
-                  overlayColor="#000000"
-                  overlayType="gradient-top"
-                  startPoint={
-                    Object {
-                      "x": 0,
-                      "y": 0,
-                    }
-                  }
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
                     }
                   }
                 />
