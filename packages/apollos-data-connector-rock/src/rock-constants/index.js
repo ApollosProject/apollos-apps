@@ -1,8 +1,8 @@
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
-import Config from '@apollosproject/config';
+import ApollosConfig from '@apollosproject/config';
 import { get } from 'lodash';
 
-const { ROCK_MAPPINGS } = Config;
+const { ROCK_MAPPINGS } = ApollosConfig;
 
 class RockConstants extends RockApolloDataSource {
   async findOrCreate({ model, objectAttributes }) {
@@ -39,7 +39,10 @@ class RockConstants extends RockApolloDataSource {
       model: 'InteractionComponents',
       objectAttributes: {
         Name: componentName,
-        ChannelId: channelId,
+        // https://www.rockrms.com/ReleaseNotes#v11.0-core
+        ...(ApollosConfig?.ROCK?.VERSION >= 11.0
+          ? { InteractionChannelId: channelId }
+          : { ChannelId: channelId }),
         EntityId: entityId,
       },
     });

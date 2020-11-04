@@ -35,6 +35,33 @@ describe('RockConstants', () => {
     expect(dataSource.get.mock.calls).toMatchSnapshot();
     expect(dataSource.post.mock.calls).toMatchSnapshot();
   });
+  it('creates a content item Component w/ InteractionChannelId on new rock versions', async () => {
+    ApollosConfig.loadJs({
+      ROCK: {
+        VERSION: 11.0,
+      },
+    });
+    const dataSource = new RockConstants();
+    dataSource.modelType = buildGetMock(
+      { id: 101, friendlyName: 'Content Channel Item' },
+      dataSource
+    );
+    dataSource.get = buildGetMock([[], { Id: 1 }], dataSource);
+    dataSource.post = buildGetMock('1', dataSource);
+    const result = await dataSource.contentItemInteractionComponent({
+      contentItemId: 7,
+      contentTitle: 'Some Title',
+    });
+    expect(result).toMatchSnapshot();
+    expect(dataSource.modelType.mock.calls).toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+    expect(dataSource.post.mock.calls).toMatchSnapshot();
+    ApollosConfig.loadJs({
+      ROCK: {
+        VERSION: 9.4,
+      },
+    });
+  });
   it('finds the content item Channel if it exists', async () => {
     const dataSource = new RockConstants();
     dataSource.get = buildGetMock([{ Id: 1 }], dataSource);
