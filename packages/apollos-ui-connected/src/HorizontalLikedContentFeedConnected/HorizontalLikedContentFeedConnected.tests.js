@@ -1,7 +1,11 @@
 import React from 'react';
 import { GET_LIKED_CONTENT } from '@apollosproject/ui-connected';
 
-import { Providers, renderWithApolloData } from '../testUtils';
+import {
+  Providers,
+  renderWithApolloData,
+  WithReactNavigator,
+} from '../testUtils';
 
 import HorizontalContentCardConnected from '../HorizontalContentCardConnected';
 import HorizontalLikedContentFeedConnected from './HorizontalLikedContentFeedConnected';
@@ -73,9 +77,11 @@ describe('HorizontalLikedContentFeedConnected', () => {
   it('renders a HorizontalLikedContentFeedConnected', async () => {
     const navigation = { navigate: jest.fn(), getParam: jest.fn() };
     const tree = await renderWithApolloData(
-      <Providers mocks={[twoItemsMock]}>
-        <HorizontalLikedContentFeedConnected navigation={navigation} />
-      </Providers>
+      WithReactNavigator(
+        <Providers mocks={[twoItemsMock]}>
+          <HorizontalLikedContentFeedConnected navigation={navigation} />
+        </Providers>
+      )
     );
     expect(tree).toMatchSnapshot();
   });
@@ -83,12 +89,16 @@ describe('HorizontalLikedContentFeedConnected', () => {
   it('renders a HorizontalLikedContentFeedConnected with a custom component', async () => {
     const navigation = { navigate: jest.fn(), getParam: jest.fn() };
     const tree = await renderWithApolloData(
-      <Providers mocks={[twoItemsMock]}>
-        <HorizontalLikedContentFeedConnected
-          Component={() => <HorizontalContentCardConnected labelText="hello" />}
-          navigation={navigation}
-        />
-      </Providers>
+      WithReactNavigator(
+        <Providers mocks={[twoItemsMock]}>
+          <HorizontalLikedContentFeedConnected
+            Component={() => (
+              <HorizontalContentCardConnected labelText="hello" />
+            )}
+            navigation={navigation}
+          />
+        </Providers>
+      )
     );
     expect(tree).toMatchSnapshot();
   });
@@ -112,9 +122,11 @@ describe('HorizontalLikedContentFeedConnected', () => {
     };
     const navigation = { navigate: jest.fn(), getParam: jest.fn() };
     const tree = await renderWithApolloData(
-      <Providers mocks={[mock]}>
-        <HorizontalLikedContentFeedConnected navigation={navigation} />
-      </Providers>
+      WithReactNavigator(
+        <Providers mocks={[mock]}>
+          <HorizontalLikedContentFeedConnected navigation={navigation} />
+        </Providers>
+      )
     );
     expect(tree).toMatchSnapshot();
   });

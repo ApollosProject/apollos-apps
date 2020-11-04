@@ -4,7 +4,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import { GET_CONTENT_CARD } from '@apollosproject/ui-connected';
-import { renderWithApolloData, Providers } from '../testUtils';
+import {
+  renderWithApolloData,
+  Providers,
+  WithReactNavigator,
+} from '../testUtils';
 
 import GET_SEARCH_RESULTS from './getSearchResults';
 import SearchFeed from '.';
@@ -282,20 +286,21 @@ describe('The SearchFeed component', () => {
       })
     );
 
-    const Stack = createStackNavigator();
     const tree = await renderWithApolloData(
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen
-            name="Home"
-            component={() => (
-              <Providers mocks={[mockFeedData, ...mockSearchResultsCardData]}>
-                <SearchFeed searchText={'Love'} />
-              </Providers>
-            )}
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
+      // <NavigationContainer>
+      // <Stack.Navigator>
+      // <Stack.Screen
+      // name="Home"
+      // component={() => (
+      WithReactNavigator(
+        <Providers mocks={[mockFeedData, ...mockSearchResultsCardData]}>
+          <SearchFeed searchText={'Love'} navigation={{ navigation: {} }} />
+        </Providers>
+      )
+      // )}
+      /// >
+      // </Stack.Navigator>
+      // </NavigationContainer>
     );
     expect(tree).toMatchSnapshot();
   });

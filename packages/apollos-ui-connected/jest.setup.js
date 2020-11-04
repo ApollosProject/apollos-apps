@@ -1,7 +1,7 @@
 import React from 'react';
-import { NativeModules } from 'react-native';
 import ApollosConfig from '@apollosproject/config';
 import FRAGMENTS from '@apollosproject/ui-fragments';
+import 'react-native-gesture-handler/jestSetup';
 
 ApollosConfig.loadJs({ FRAGMENTS });
 
@@ -17,14 +17,14 @@ jest.mock('Animated', () => {
     timing: (value, config) => ({
       start: (callback) => {
         value.setValue(config.toValue);
-        callback && callback();
+        callback && callback({ finished: true });
       },
       stop: () => ({}),
     }),
     spring: (value, config) => ({
       start: (callback) => {
         value.setValue(config.toValue);
-        callback && callback();
+        callback && callback({ finished: true });
       },
       stop: () => ({}),
     }),
@@ -32,15 +32,6 @@ jest.mock('Animated', () => {
 });
 
 jest.mock('@react-native-community/datetimepicker', () => 'DatePicker');
-
-NativeModules.RNGestureHandlerModule = {
-  attachGestureHandler: jest.fn(),
-  createGestureHandler: jest.fn(),
-  dropGestureHandler: jest.fn(),
-  updateGestureHandler: jest.fn(),
-  State: {},
-  Directions: {},
-};
 
 jest.mock('@apollosproject/ui-analytics', () => ({
   track: () => '',
