@@ -1,7 +1,5 @@
 import React from 'react';
 import { flatMap } from 'lodash';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 
 import { GET_CONTENT_CARD } from '@apollosproject/ui-connected';
 import {
