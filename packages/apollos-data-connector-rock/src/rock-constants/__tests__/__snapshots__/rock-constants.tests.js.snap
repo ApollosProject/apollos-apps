@@ -97,6 +97,57 @@ Array [
 ]
 `;
 
+exports[`RockConstants creates a content item Component w/ InteractionChannelId on new rock versions 1`] = `Array []`;
+
+exports[`RockConstants creates a content item Component w/ InteractionChannelId on new rock versions 2`] = `
+Array [
+  Array [
+    "ContentItem",
+  ],
+]
+`;
+
+exports[`RockConstants creates a content item Component w/ InteractionChannelId on new rock versions 3`] = `
+Array [
+  Array [
+    "InteractionChannels?%24filter=%28Name%20eq%20%27Apollos%20App%20-%20Content%20Channel%20Item%27%29%20and%20%28UsesSession%20eq%20false%29%20and%20%28IsActive%20eq%20true%29%20and%20%28ComponentEntityTypeId%20eq%20101%29%20and%20%28ChannelTypeMediumValueId%20eq%20512%29&%24top=1",
+    Object {},
+    Object {
+      "cacheOptions": Object {
+        "ttl": 86400,
+      },
+    },
+  ],
+  Array [
+    "/InteractionChannels/1",
+  ],
+  Array [
+    "InteractionComponents?%24filter=%28Name%20eq%20%27Apollos%20Content%20Item%20-%207%27%29%20and%20%28InteractionChannelId%20eq%201%29%20and%20%28EntityId%20eq%207%29&%24top=1",
+    Object {},
+    Object {
+      "cacheOptions": Object {
+        "ttl": 86400,
+      },
+    },
+  ],
+]
+`;
+
+exports[`RockConstants creates a content item Component w/ InteractionChannelId on new rock versions 4`] = `
+Array [
+  Array [
+    "/InteractionChannels",
+    Object {
+      "ChannelTypeMediumValueId": 512,
+      "ComponentEntityTypeId": 101,
+      "IsActive": true,
+      "Name": "Apollos App - Content Channel Item",
+      "UsesSession": false,
+    },
+  ],
+]
+`;
+
 exports[`RockConstants finds a ContentItem model ID 1`] = `
 Object {
   "id": 1,
