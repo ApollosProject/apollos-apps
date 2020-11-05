@@ -108,7 +108,6 @@ class HorizontalLikedContentFeed extends Component {
 
   render() {
     const { isLoading, name, navigation, content = [] } = this.props;
-    console.log({ navigation });
     return (
       <PaddedView horizontal={false}>
         <RowHeader>
