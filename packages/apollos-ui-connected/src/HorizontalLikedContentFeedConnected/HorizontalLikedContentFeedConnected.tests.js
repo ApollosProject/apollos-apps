@@ -75,7 +75,7 @@ describe('HorizontalLikedContentFeedConnected', () => {
     },
   };
   it('renders a HorizontalLikedContentFeedConnected', async () => {
-    const navigation = { navigate: jest.fn(), getParam: jest.fn() };
+    const navigation = { navigate: jest.fn() };
     const tree = await renderWithApolloData(
       WithReactNavigator(
         <Providers mocks={[twoItemsMock]}>
@@ -87,7 +87,7 @@ describe('HorizontalLikedContentFeedConnected', () => {
   });
 
   it('renders a HorizontalLikedContentFeedConnected with a custom component', async () => {
-    const navigation = { navigate: jest.fn(), getParam: jest.fn() };
+    const navigation = { navigate: jest.fn() };
     const tree = await renderWithApolloData(
       WithReactNavigator(
         <Providers mocks={[twoItemsMock]}>
@@ -120,7 +120,7 @@ describe('HorizontalLikedContentFeedConnected', () => {
         },
       },
     };
-    const navigation = { navigate: jest.fn(), getParam: jest.fn() };
+    const navigation = { navigate: jest.fn() };
     const tree = await renderWithApolloData(
       WithReactNavigator(
         <Providers mocks={[mock]}>
