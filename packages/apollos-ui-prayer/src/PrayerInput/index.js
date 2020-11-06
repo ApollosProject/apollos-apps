@@ -66,6 +66,7 @@ const PrayerInput = ({
   maxLengthWarning,
   prompt,
   onChangeText,
+  completed,
   ...TextInputProps
 }) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -119,6 +120,13 @@ const PrayerInput = ({
     return onChangeText && onChangeText(text);
   };
 
+  useEffect(() => {
+    // Clear out the prayer box when we submit the prayer.
+    if (completed) {
+      handleOnChangeText('');
+    }
+  }, [completed]);
+
   return !isEditing && prayer === '' ? (
     <Touchable onPress={handleOnPress}>
       <Prompt>
@@ -161,6 +169,7 @@ PrayerInput.propTypes = {
   maxLength: PropTypes.number,
   maxLengthWarning: PropTypes.number, // triggers the "warning" to the user based on the number of characters remaining. `maxLength - maxLengthWarning = visual ui warning`
   prompt: PropTypes.string,
+  completed: PropTypes.bool,
 };
 
 PrayerInput.defaultProps = {
