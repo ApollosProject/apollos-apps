@@ -29,7 +29,7 @@ describe('UserAvatarConnected component', () => {
         },
       },
     };
-    const navigation = { navigate: jest.fn(), getParam: jest.fn() };
+    const navigation = { navigate: jest.fn() };
     const tree = await renderWithApolloData(
       <Providers mocks={[mock]}>
         <UserAvatarConnected navigation={navigation} />

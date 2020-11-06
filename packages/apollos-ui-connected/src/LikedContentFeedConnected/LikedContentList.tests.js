@@ -56,7 +56,7 @@ describe('LikedContentFeedConnected component', () => {
         },
       },
     };
-    const navigation = { navigate: jest.fn(), getParam: jest.fn() };
+    const navigation = { navigate: jest.fn() };
     const tree = renderer.create(
       <Providers mocks={[mock]}>
         <LikedContentFeedConnected navigation={navigation} />

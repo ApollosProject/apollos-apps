@@ -27,14 +27,13 @@
     "@apollosproject/ui-scripture": "*",
     "react": "*",
     "react-apollo": "*",
-    "react-native": "*",
-    "react-navigation": "*"
+    "react-native": "*"
   },
   "jest": {
     "preset": "react-native",
     "collectCoverage": true,
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@react-navigation|@apollosproject|@apollosproject/ui-*))"
+      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|@react-navigation/native|@@react-navigation/native|@apollosproject|@apollosproject/ui-*))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -67,7 +66,6 @@
     "prop-types": "15.6.1",
     "react": "16.8.6",
     "react-native": "0.60.5",
-    "react-navigation": "^3.11.0",
     "react-test-renderer": "16.8.6",
     "waait": "1.0.2"
   },

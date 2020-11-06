@@ -73,7 +73,6 @@ const mocks = {
 };
 
 const navigation = {
-  getParam: () => {},
   navigate: () => {},
   goBack: () => {},
 };

@@ -21,7 +21,7 @@
     "preset": "react-native",
     "collectCoverage": true,
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@apollosproject))"
+      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|@react-navigation/native|@apollosproject))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -44,7 +44,7 @@
     "react-native": "*",
     "react-native-geolocation-service": "*",
     "react-native-maps": "*",
-    "react-navigation": "*"
+    "react-native-safe-area-context": "*"
   },
   "dependencies": {
     "graphql-tag": "2.9.2",
@@ -59,7 +59,7 @@
     "react-native": "0.60.5",
     "react-native-geolocation-service": "^3.0.0",
     "react-native-maps": "0.26.1",
-    "react-navigation": "^3.11.0",
+    "react-native-safe-area-context": "^3.0.7",
     "react-test-renderer": "16.8.6",
     "waait": "1.0.2"
   },

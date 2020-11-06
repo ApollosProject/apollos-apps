@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, styled, H4, withTheme, Icon } from '@apollosproject/ui-kit';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
-import { withNavigation } from 'react-navigation';
+import { useNavigation } from '@react-navigation/native';
 import PropTypes from 'prop-types';
 import GET_CONTENT_UP_NEXT from './getContentUpNext';
 
@@ -34,10 +34,11 @@ const UpNextButtonConnected = ({
   continueText,
   doneText,
   Component,
-  navigation,
   contentId,
   nodeId, // You can pass either nodeId or contentId.
 }) => {
+  const navigation = useNavigation();
+
   // We want to avoid rendering the Query component if we don't have the ID.
   // Running the query without a contentId throws an error, and the query won't rerun.
   if (!contentId && !nodeId) {
@@ -111,4 +112,4 @@ UpNextButtonConnected.defaultProps = {
   Component: UpNextButton,
 };
 
-export default withNavigation(UpNextButtonConnected);
+export default UpNextButtonConnected;

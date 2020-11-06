@@ -1,7 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { View } from 'react-native';
-import { Providers, renderWithApolloData } from '../testUtils';
+import {
+  Providers,
+  renderWithApolloData,
+  WithReactNavigator,
+} from '../testUtils';
 
 import getContentUpNext from './getContentUpNext';
 
@@ -108,63 +112,77 @@ const navigation = {
 describe('the UpNextButtonConnected', () => {
   it('renders a loading state when loading', async () => {
     const tree = renderer.create(
-      <Providers mocks={[noChildrenMock]}>
-        <UpNextButtonConnected contentId={'1'} navigation={navigation} />
-      </Providers>
+      WithReactNavigator(
+        <Providers mocks={[noChildrenMock]}>
+          <UpNextButtonConnected contentId={'1'} navigation={navigation} />
+        </Providers>
+      )
     );
     expect(tree).toMatchSnapshot();
   });
   it('renders nothing when on an empty series', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={[noChildrenMock]}>
-        <UpNextButtonConnected contentId={'1'} navigation={navigation} />
-      </Providers>
+      WithReactNavigator(
+        <Providers mocks={[noChildrenMock]}>
+          <UpNextButtonConnected contentId={'1'} navigation={navigation} />
+        </Providers>
+      )
     );
     expect(tree).toMatchSnapshot();
   });
   it('renders a finished state when finished', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={[finishedMock]}>
-        <UpNextButtonConnected contentId={'1'} navigation={navigation} />
-      </Providers>
+      WithReactNavigator(
+        <Providers mocks={[finishedMock]}>
+          <UpNextButtonConnected contentId={'1'} navigation={navigation} />
+        </Providers>
+      )
     );
     expect(tree).toMatchSnapshot();
   });
   it('renders a continue state when in progress', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={[upNextMock]}>
-        <UpNextButtonConnected contentId={'1'} navigation={navigation} />
-      </Providers>
+      WithReactNavigator(
+        <Providers mocks={[upNextMock]}>
+          <UpNextButtonConnected contentId={'1'} navigation={navigation} />
+        </Providers>
+      )
     );
     expect(tree).toMatchSnapshot();
   });
   it('renders a continue state even with no children', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={[upNextNoChildrenMock]}>
-        <UpNextButtonConnected contentId={'1'} navigation={navigation} />
-      </Providers>
+      WithReactNavigator(
+        <Providers mocks={[upNextNoChildrenMock]}>
+          <UpNextButtonConnected contentId={'1'} navigation={navigation} />
+        </Providers>
+      )
     );
     expect(tree).toMatchSnapshot();
   });
   it('renders a loading state state without a contentId', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={[upNextMock]}>
-        <UpNextButtonConnected navigation={navigation} />
-      </Providers>
+      WithReactNavigator(
+        <Providers mocks={[upNextMock]}>
+          <UpNextButtonConnected navigation={navigation} />
+        </Providers>
+      )
     );
     expect(tree).toMatchSnapshot();
   });
   it('accepts doneText, continueText and Component as props, ', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={[upNextMock]}>
-        <UpNextButtonConnected
-          finishedText={"You're done forever!"}
-          continueText="Hold on cowboy, you got more to do"
-          Component={View}
-          contentId="1"
-          navigation={navigation}
-        />
-      </Providers>
+      WithReactNavigator(
+        <Providers mocks={[upNextMock]}>
+          <UpNextButtonConnected
+            finishedText={"You're done forever!"}
+            continueText="Hold on cowboy, you got more to do"
+            Component={View}
+            contentId="1"
+            navigation={navigation}
+          />
+        </Providers>
+      )
     );
     expect(tree).toMatchSnapshot();
   });

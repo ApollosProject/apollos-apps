@@ -52,15 +52,9 @@ exports[`The Auth Entry component should render 1`] = `
     }
   />
   <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
     style={
       Object {
         "height": "100%",
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 20,
       }
     }
   >
@@ -448,15 +442,9 @@ exports[`The Auth Entry component should render a custom policyInfo text 1`] = `
     }
   />
   <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
     style={
       Object {
         "height": "100%",
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 20,
       }
     }
   >
@@ -846,15 +834,9 @@ exports[`The Auth Entry component should render as disabled 1`] = `
     }
   />
   <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
     style={
       Object {
         "height": "100%",
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 20,
       }
     }
   >
@@ -1304,15 +1286,9 @@ exports[`The Auth Entry component should render in a loading state 1`] = `
     }
   />
   <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
     style={
       Object {
         "height": "100%",
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 20,
       }
     }
   >
@@ -1756,15 +1732,9 @@ exports[`The Auth Entry component should render in a next button 1`] = `
     }
   />
   <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
     style={
       Object {
         "height": "100%",
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 20,
       }
     }
   >
@@ -2214,15 +2184,9 @@ exports[`The Auth Entry component should render in an error state 1`] = `
     }
   />
   <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
     style={
       Object {
         "height": "100%",
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 20,
       }
     }
   >
@@ -2610,15 +2574,9 @@ exports[`The Auth Entry component should render with a custom alternateLoginText
     }
   />
   <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
     style={
       Object {
         "height": "100%",
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 20,
       }
     }
   >
@@ -3062,15 +3020,9 @@ exports[`The Auth Entry component should render with a custom authTitleText 1`] 
     }
   />
   <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
     style={
       Object {
         "height": "100%",
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 20,
       }
     }
   >
@@ -3458,15 +3410,9 @@ exports[`The Auth Entry component should render with a custom promptText 1`] = `
     }
   />
   <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
     style={
       Object {
         "height": "100%",
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 20,
       }
     }
   >
@@ -3854,15 +3800,9 @@ exports[`The Auth Entry component should render with a custom tabTitle 1`] = `
     }
   />
   <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
     style={
       Object {
         "height": "100%",
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 20,
       }
     }
   >
@@ -4252,15 +4192,9 @@ exports[`The Auth Entry component should render with a inputAutoComplete as tel 
     }
   />
   <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
     style={
       Object {
         "height": "100%",
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 20,
       }
     }
   >
@@ -4650,15 +4584,9 @@ exports[`The Auth Entry component should render with a inputLabel Phone Number 1
     }
   />
   <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
     style={
       Object {
         "height": "100%",
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 20,
       }
     }
   >
@@ -5048,15 +4976,9 @@ exports[`The Auth Entry component should render with a inputType phone 1`] = `
     }
   />
   <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
     style={
       Object {
         "height": "100%",
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 20,
       }
     }
   >
@@ -5446,15 +5368,9 @@ exports[`The Auth Entry component should render with a value 1`] = `
     }
   />
   <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
     style={
       Object {
         "height": "100%",
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 20,
       }
     }
   >
@@ -5842,15 +5758,9 @@ exports[`The Auth Entry component should render with an alternate login option w
     }
   />
   <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
     style={
       Object {
         "height": "100%",
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 20,
       }
     }
   >
@@ -6292,15 +6202,9 @@ exports[`The Auth Entry component should render with keyboard vertical offset fo
     }
   />
   <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
     style={
       Object {
         "height": "100%",
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 0,
       }
     }
   >

@@ -15,22 +15,8 @@ exports[`The Onboarding AskName component should accept a firstName 1`] = `
   }
 >
   <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-          "top": "always",
-        }
-      }
-    >
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
+    <View>
+      <View
         style={
           Object {
             "marginBottom": 48,
@@ -527,8 +513,8 @@ exports[`The Onboarding AskName component should accept a firstName 1`] = `
             </View>
           </View>
         </View>
-      </RCTSafeAreaView>
-    </RCTSafeAreaView>
+      </View>
+    </View>
   </View>
 </RCTScrollView>
 `;
@@ -548,22 +534,8 @@ exports[`The Onboarding AskName component should accept a lastName 1`] = `
   }
 >
   <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-          "top": "always",
-        }
-      }
-    >
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
+    <View>
+      <View
         style={
           Object {
             "marginBottom": 48,
@@ -1060,8 +1032,8 @@ exports[`The Onboarding AskName component should accept a lastName 1`] = `
             </View>
           </View>
         </View>
-      </RCTSafeAreaView>
-    </RCTSafeAreaView>
+      </View>
+    </View>
   </View>
 </RCTScrollView>
 `;
@@ -1082,22 +1054,8 @@ Array [
     }
   >
     <View>
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
-        forceInset={
-          Object {
-            "bottom": "always",
-            "top": "always",
-          }
-        }
-      >
-        <RCTSafeAreaView
-          emulateUnlessSupported={true}
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
+      <View>
+        <View
           style={
             Object {
               "marginBottom": 48,
@@ -1594,8 +1552,8 @@ Array [
               </View>
             </View>
           </View>
-        </RCTSafeAreaView>
-      </RCTSafeAreaView>
+        </View>
+      </View>
     </View>
   </RCTScrollView>,
   <View
@@ -1615,15 +1573,7 @@ Array [
     }
     vertical={false}
   >
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-          "top": "never",
-        }
-      }
-    >
+    <View>
       <View
         accessible={true}
         clickable={true}
@@ -1794,7 +1744,7 @@ Array [
           </RNSVGSvgView>
         </View>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>,
 ]
 `;
@@ -1814,22 +1764,8 @@ exports[`The Onboarding AskName component should render 1`] = `
   }
 >
   <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-          "top": "always",
-        }
-      }
-    >
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
+    <View>
+      <View
         style={
           Object {
             "marginBottom": 48,
@@ -2325,8 +2261,8 @@ exports[`The Onboarding AskName component should render 1`] = `
             </View>
           </View>
         </View>
-      </RCTSafeAreaView>
-    </RCTSafeAreaView>
+      </View>
+    </View>
   </View>
 </RCTScrollView>
 `;
@@ -2346,22 +2282,8 @@ exports[`The Onboarding AskName component should render a custom description 1`]
   }
 >
   <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-          "top": "always",
-        }
-      }
-    >
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
+    <View>
+      <View
         style={
           Object {
             "marginBottom": 48,
@@ -2857,8 +2779,8 @@ exports[`The Onboarding AskName component should render a custom description 1`]
             </View>
           </View>
         </View>
-      </RCTSafeAreaView>
-    </RCTSafeAreaView>
+      </View>
+    </View>
   </View>
 </RCTScrollView>
 `;
@@ -2878,22 +2800,8 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
   }
 >
   <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-          "top": "always",
-        }
-      }
-    >
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
+    <View>
+      <View
         style={
           Object {
             "marginBottom": 48,
@@ -3389,8 +3297,8 @@ exports[`The Onboarding AskName component should render a custom title 1`] = `
             </View>
           </View>
         </View>
-      </RCTSafeAreaView>
-    </RCTSafeAreaView>
+      </View>
+    </View>
   </View>
 </RCTScrollView>
 `;
@@ -3410,22 +3318,8 @@ exports[`The Onboarding AskName component should render a loading state 1`] = `
   }
 >
   <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-          "top": "always",
-        }
-      }
-    >
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
+    <View>
+      <View
         style={
           Object {
             "marginBottom": 48,
@@ -3923,8 +3817,8 @@ exports[`The Onboarding AskName component should render a loading state 1`] = `
             </View>
           </View>
         </View>
-      </RCTSafeAreaView>
-    </RCTSafeAreaView>
+      </View>
+    </View>
   </View>
 </RCTScrollView>
 `;

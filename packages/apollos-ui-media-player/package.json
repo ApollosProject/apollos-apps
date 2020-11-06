@@ -8,7 +8,7 @@
     "storybook/**"
   ],
   "scripts": {
-    "test": "jest --no-watchman",
+    "test": "jest --no-watchman --passWithNoTests",
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "lint": "eslint ./src --ext .js"
   },
@@ -21,7 +21,7 @@
     "preset": "react-native",
     "collectCoverage": true,
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@apollosproject))"
+      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|@react-navigation/native|@apollosproject))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -46,8 +46,7 @@
     "react-native-linear-gradient": "*",
     "react-native-music-control": "*",
     "react-native-video": "*",
-    "react-native-video-controls": "*",
-    "react-navigation": "*"
+    "react-native-video-controls": "*"
   },
   "dependencies": {
     "graphql-tag": "^2.10.1"
@@ -68,7 +67,6 @@
     "react-native-svg": "9.4.0",
     "react-native-video": "5.0.0",
     "react-native-video-controls": "2.2.3",
-    "react-navigation": "^3.11.0",
     "react-test-renderer": "16.8.6"
   },
   "publishConfig": {

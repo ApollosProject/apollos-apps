@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 import * as ReactIs from 'react-is';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import Swiper from 'react-native-swiper';
 import { styled } from '@apollosproject/ui-kit';
-
-import { SafeAreaView } from 'react-navigation';
 
 const dotStyles = ({ theme }) => ({
   width: theme.sizing.baseUnit / 2,
@@ -14,10 +13,6 @@ const dotStyles = ({ theme }) => ({
   borderRadius: theme.sizing.baseUnit / 4,
   margin: theme.sizing.baseUnit / 4,
 });
-
-const forceInset = {
-  bottom: 'always',
-};
 
 const PaginationDot = styled(
   ({ theme }) => ({
@@ -85,13 +80,13 @@ class OnboardingSwiper extends Component {
         ref={this.setSwiperRef}
         renderPagination={this.renderPagination}
         activeDot={
-          <SafeAreaView forceInset={forceInset}>
+          <SafeAreaView>
             <PaginationDotActive />
           </SafeAreaView>
         }
         dot={
-          <SafeAreaView forceInset={forceInset}>
-            <PaginationDot forceInset={forceInset} />
+          <SafeAreaView>
+            <PaginationDot />
           </SafeAreaView>
         }
         {...this.props}

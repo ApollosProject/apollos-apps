@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
 
@@ -22,7 +22,7 @@ const MediaPlayerSpacer = (props) => (
       get(data, 'mediaPlayer.isVisible') ? (
         <MediaPlayerSafeLayoutWithSpacing {...props} />
       ) : (
-        <SafeAreaView {...props} />
+        <SafeAreaView edges={['bottom']} {...props} />
       )
     }
   </Query>

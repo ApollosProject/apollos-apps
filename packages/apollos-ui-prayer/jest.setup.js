@@ -5,12 +5,8 @@ import { NativeModules } from 'react-native';
 
 // ApollosConfig.loadJs({ FRAGMENTS });
 
-jest.mock('react-native-safe-area-context', () => ({
-  SafeAreaConsumer: ({ children }) =>
-    children({ top: 0, bottom: 0, left: 0, right: 0 }),
-  SafeAreaProvider: ({ children }) => children,
-}));
-
+// jest.mock('@react-navigation/native', () => {
+//   const ActualNavigation = require.requireActual('@react-navigation/native');
 // jest.mock('../../node_modules/@metarouter/analytics-react-native', () => ({
 jest.mock('@metarouter/analytics-react-native', () => ({
   track: jest.fn(),

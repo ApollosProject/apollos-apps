@@ -6,8 +6,6 @@ import { createHttpLink } from 'apollo-link-http';
 
 import { resolvers } from './Provider';
 
-// import Auth from '.';
-
 const cache = new InMemoryCache();
 
 const client = new ApolloClient({
@@ -23,11 +21,3 @@ describe('Auth Store', () => {
     expect(client.cache).toMatchSnapshot();
   });
 });
-
-// describe('Auth component', () => {
-// it('should render', () => {
-// const navigation = { getParam: jest.fn(() => true) };
-// const tree = renderer.create(<Auth navigation={navigation} />).toJSON();
-// expect(tree).toBeTruthy();
-// });
-// });

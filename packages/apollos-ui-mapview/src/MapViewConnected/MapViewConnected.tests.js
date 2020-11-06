@@ -90,7 +90,6 @@ describe('The MapViewConnected component', () => {
   it('should render', async () => {
     const navigation = {
       navigate: jest.fn(),
-      getParam: jest.fn(),
       goBack: jest.fn(),
     };
 

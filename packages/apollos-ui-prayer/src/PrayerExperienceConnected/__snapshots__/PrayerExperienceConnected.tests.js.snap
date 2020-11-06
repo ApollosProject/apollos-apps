@@ -370,15 +370,9 @@ Array [
   >
     <RCTScrollView
       activeDot={
-        <withOrientation
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
-        >
+        <View>
           <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
-        </withOrientation>
+        </View>
       }
       automaticallyAdjustContentInsets={false}
       autoplay={false}
@@ -401,21 +395,9 @@ Array [
       disableNextButton={false}
       disablePrevButton={false}
       dot={
-        <withOrientation
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
-        >
-          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))
-            forceInset={
-              Object {
-                "bottom": "always",
-              }
-            }
-          />
-        </withOrientation>
+        <View>
+          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+        </View>
       }
       horizontal={true}
       index={0}
@@ -489,8 +471,7 @@ Array [
               }
             >
               <View>
-                <RCTSafeAreaView
-                  emulateUnlessSupported={true}
+                <View
                   style={
                     Object {
                       "flex": 1,
@@ -913,7 +894,7 @@ Array [
                       </Text>
                     </View>
                   </View>
-                </RCTSafeAreaView>
+                </View>
               </View>
             </RCTScrollView>
           </View>
@@ -963,8 +944,7 @@ Array [
               }
             >
               <View>
-                <RCTSafeAreaView
-                  emulateUnlessSupported={true}
+                <View
                   style={
                     Object {
                       "flex": 1,
@@ -1164,7 +1144,7 @@ Array [
                       </View>
                     </View>
                   </View>
-                </RCTSafeAreaView>
+                </View>
               </View>
             </RCTScrollView>
           </View>
@@ -1249,18 +1229,7 @@ Array [
         ]
       }
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
           style={
             Object {
@@ -1273,24 +1242,8 @@ Array [
           }
         />
       </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
@@ -1302,24 +1255,8 @@ Array [
           }
         />
       </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
@@ -1331,24 +1268,8 @@ Array [
           }
         />
       </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
@@ -1360,24 +1281,8 @@ Array [
           }
         />
       </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
@@ -1512,8 +1417,7 @@ Array [
           }
         >
           <View>
-            <RCTSafeAreaView
-              emulateUnlessSupported={true}
+            <View
               style={
                 Object {
                   "flex": 1,
@@ -1647,7 +1551,7 @@ Array [
                   </View>
                 </View>
               </View>
-            </RCTSafeAreaView>
+            </View>
           </View>
         </RCTScrollView>
       </View>

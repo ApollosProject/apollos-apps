@@ -1,8 +1,7 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, ScrollView } from 'react-native';
-
-import { SafeAreaView } from 'react-navigation';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import {
   styled,
@@ -23,11 +22,6 @@ const PrimaryButton = styled({}, 'ui-onboarding.Slide.Slide.PrimaryButton')(
 const styles = StyleSheet.create({
   contentContainer: { minHeight: '100%' },
 });
-
-const forceInset = {
-  top: 'never',
-  bottom: 'always',
-};
 
 const NavWrapper = styled(
   ({ theme }) => ({
@@ -95,7 +89,7 @@ const Slide = memo(
       </FlexedScrollView>
       {onPressPrimary || onPressSecondary ? (
         <NavWrapper vertical={false}>
-          <SafeAreaView forceInset={forceInset}>
+          <SafeAreaView>
             {onPressPrimary ? (
               <PrimaryButton
                 trackEventName={pressPrimaryEventName}
