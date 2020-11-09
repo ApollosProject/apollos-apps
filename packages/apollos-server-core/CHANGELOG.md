@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0-beta.3](https://github.com/apollosproject/apollos-apps/compare/v1.7.0-beta.2...v1.7.0-beta.3) (2020-11-09)
+
+**Note:** Version bump only for package @apollosproject/server-core
+
+
+
+
+
 # [1.7.0-beta.2](https://github.com/apollosproject/apollos-apps/compare/v1.7.0-beta.1...v1.7.0-beta.2) (2020-10-27)
 
 **Note:** Version bump only for package @apollosproject/server-core

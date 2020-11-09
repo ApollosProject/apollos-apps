@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0-beta.3](https://github.com/apollosproject/apollos-apps/compare/v1.7.0-beta.2...v1.7.0-beta.3) (2020-11-09)
+
+
+### Bug Fixes
+
+* Support Rock 11 out of the box ([#1641](https://github.com/apollosproject/apollos-apps/issues/1641)) ([4742450](https://github.com/apollosproject/apollos-apps/commit/4742450))
+* Use redis cache for rock-constants code ([#1642](https://github.com/apollosproject/apollos-apps/issues/1642)) ([671cbc4](https://github.com/apollosproject/apollos-apps/commit/671cbc4))
+* Users can follow/like weekend content items ([#1640](https://github.com/apollosproject/apollos-apps/issues/1640)) ([927ee98](https://github.com/apollosproject/apollos-apps/commit/927ee98))
+
+
+
+
+
 # [1.7.0-beta.2](https://github.com/apollosproject/apollos-apps/compare/v1.7.0-beta.1...v1.7.0-beta.2) (2020-10-27)
 
 
