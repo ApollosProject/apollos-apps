@@ -21,7 +21,7 @@
     "preset": "react-native",
     "collectCoverage": true,
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@apollosproject))"
+      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|@react-navigation/native|@apollosproject))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -41,7 +41,6 @@
     "react": "*",
     "react-native": "*",
     "react-native-passkit-wallet": "*",
-    "react-navigation": "*",
     "rn-fetch-blob": "*"
   },
   "dependencies": {

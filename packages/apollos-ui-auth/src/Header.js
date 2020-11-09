@@ -1,4 +1,4 @@
-import { SafeAreaView } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { styled } from '@apollosproject/ui-kit';
 
 const Header = styled(

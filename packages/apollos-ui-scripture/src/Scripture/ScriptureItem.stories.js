@@ -1,5 +1,6 @@
 import React from 'react';
-import { ScrollView, SafeAreaView } from 'react-native';
+import { ScrollView } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { PaddedView, ActionCard } from '@apollosproject/ui-kit';

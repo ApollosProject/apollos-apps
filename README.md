@@ -113,6 +113,4 @@ Change your .npmrc file to this:
 //npm.pkg.github.com/:_authToken=TOKEN
 ```
 
-Get the `TOKEN` from creating a Personal Access Token in your Github settings and give it read/write access to packages.
-
 Now run the same `yarn release:<XXX>` command you did before but add `--registry "https://npm.pkg.github.com"`

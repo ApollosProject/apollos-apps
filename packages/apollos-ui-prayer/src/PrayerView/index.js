@@ -1,12 +1,12 @@
 import React from 'react';
 import {
   KeyboardAvoidingView,
-  SafeAreaView,
   ScrollView,
   View,
   StyleSheet,
 } from 'react-native';
 import PropTypes from 'prop-types';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import {
   Button,

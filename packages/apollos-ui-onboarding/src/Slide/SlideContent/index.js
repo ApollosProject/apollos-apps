@@ -9,8 +9,7 @@ import {
   withIsLoading,
 } from '@apollosproject/ui-kit';
 import PropTypes from 'prop-types';
-
-import { SafeAreaView } from 'react-navigation';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const IconWrapper = styled(
   ({ theme }) => ({
@@ -67,7 +66,7 @@ const SlideContent = withIsLoading(
     }
 
     return (
-      <Wrapper forceInset={{ bottom: 'always' }} {...props}>
+      <Wrapper {...props}>
         <View>
           {icon ? (
             <IconWrapper>

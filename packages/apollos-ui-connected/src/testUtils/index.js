@@ -1,5 +1,6 @@
 /* eslint-disable import/prefer-default-export */
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import { IntrospectionFragmentMatcher } from 'apollo-cache-inmemory';
 import apolloStorybookDecorator from 'apollo-storybook-react-native';
 import React from 'react';
@@ -68,18 +69,14 @@ const ApolloStorybookDecorator = ({
 };
 
 const WithReactNavigator = (Component) => {
-  const AppNavigator = createStackNavigator({
-    Home: {
-      screen: () => Component,
-      navigationOptions: {
-        headerMode: 'none',
-        header: null,
-      },
-    },
-  });
-
-  const AppContainer = createAppContainer(AppNavigator);
-  return <AppContainer />;
+  const Stack = createStackNavigator();
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={() => Component} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 };
 export {
   renderWithApolloData,

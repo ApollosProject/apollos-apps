@@ -1,6 +1,6 @@
 import React from 'react';
 import { withProps } from 'recompose';
-import { withNavigation } from 'react-navigation';
+import { useNavigation } from '@react-navigation/native';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
@@ -30,8 +30,9 @@ const handleOnPress = ({ navigation, item }) => {
 
 const keyExtractor = (item) => item && get(item, 'node.id', null);
 
-const SearchFeedConnected = withNavigation(
-  ({ navigation, searchText, ...props }) => (
+const SearchFeedConnected = ({ searchText, ...props }) => {
+  const navigation = useNavigation();
+  return (
     <Query
       query={GET_SEARCH_RESULTS}
       variables={{ searchText }}
@@ -52,8 +53,8 @@ const SearchFeedConnected = withNavigation(
         />
       )}
     </Query>
-  )
-);
+  );
+};
 
 SearchFeedConnected.propTypes = {
   searchText: PropTypes.string,

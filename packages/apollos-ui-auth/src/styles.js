@@ -7,9 +7,9 @@ import {
   ScrollView,
   StyleSheet,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 import PropTypes from 'prop-types';
-import { compose, withProps } from 'recompose';
-import { SafeAreaView } from 'react-navigation';
 import {
   styled,
   Card,
@@ -25,11 +25,10 @@ import {
   PaddedView,
   BackgroundView,
 } from '@apollosproject/ui-kit';
-import BackButton from './BackButton';
 
-const FlexedSafeAreaView = compose(
-  styled({ height: '100%' }, 'ui-auth.styles.FlexedSafeAreaView'),
-  withProps({ forceInset: { top: 'always' } })
+const FlexedSafeAreaView = styled(
+  { height: '100%' },
+  'ui-auth.FlexedSafeAreaView'
 )(SafeAreaView);
 
 const BrandIcon = withTheme(
@@ -163,7 +162,6 @@ const RadioLabel = styled(
 
 const ProfileEntryFieldContainer = ({
   BackgroundComponent,
-  onPressBack,
   onPressNext,
   disabled,
   title,
@@ -181,7 +179,6 @@ const ProfileEntryFieldContainer = ({
     <BackgroundComponent>
       <FlexedSafeAreaView>
         <ScrollView>
-          <BackButton onPress={() => onPressBack()} />
           <PaddedView>
             <TitleText>{title}</TitleText>
             <PromptText padded>{prompt}</PromptText>
@@ -213,7 +210,6 @@ ProfileEntryFieldContainer.propTypes = {
   isLoading: PropTypes.bool,
   onPressNext: PropTypes.func, // used to navigate and/or submit the form
   BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-  onPressBack: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
 };
 

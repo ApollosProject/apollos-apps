@@ -1,16 +1,9 @@
 import React from 'react';
-import { NativeModules } from 'react-native';
 import ApollosConfig from '@apollosproject/config';
 import FRAGMENTS from '@apollosproject/ui-fragments';
+import 'react-native-gesture-handler/jestSetup';
 
 ApollosConfig.loadJs({ FRAGMENTS });
-
-// We ran into an issue where SafeAreaView would break jest tests.
-jest.mock('react-native-safe-area-context', () => ({
-  SafeAreaConsumer: ({ children }) =>
-    children({ top: 0, bottom: 0, left: 0, right: 0 }),
-  SafeAreaProvider: ({ children }) => children,
-}));
 
 jest.mock('Image', () => ({
   ...require.requireActual('Image'),
@@ -24,14 +17,14 @@ jest.mock('Animated', () => {
     timing: (value, config) => ({
       start: (callback) => {
         value.setValue(config.toValue);
-        callback && callback();
+        callback && callback({ finished: true });
       },
       stop: () => ({}),
     }),
     spring: (value, config) => ({
       start: (callback) => {
         value.setValue(config.toValue);
-        callback && callback();
+        callback && callback({ finished: true });
       },
       stop: () => ({}),
     }),
@@ -39,15 +32,6 @@ jest.mock('Animated', () => {
 });
 
 jest.mock('@react-native-community/datetimepicker', () => 'DatePicker');
-
-NativeModules.RNGestureHandlerModule = {
-  attachGestureHandler: jest.fn(),
-  createGestureHandler: jest.fn(),
-  dropGestureHandler: jest.fn(),
-  updateGestureHandler: jest.fn(),
-  State: {},
-  Directions: {},
-};
 
 jest.mock('@apollosproject/ui-analytics', () => ({
   track: () => '',

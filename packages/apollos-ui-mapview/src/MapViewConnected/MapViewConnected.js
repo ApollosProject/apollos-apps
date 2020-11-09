@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Query, Mutation } from 'react-apollo';
 import { Dimensions } from 'react-native';
 import Geolocation from 'react-native-geolocation-service';
-import { PaddedView, ButtonLink } from '@apollosproject/ui-kit';
 import { get } from 'lodash';
 
 import MapView from '../MapView';
@@ -19,7 +18,6 @@ class Location extends PureComponent {
       PropTypes.object, // type check for React fragments
     ]),
     navigation: PropTypes.shape({
-      getParam: PropTypes.func,
       navigate: PropTypes.func,
       goBack: PropTypes.func,
     }),
@@ -47,22 +45,6 @@ class Location extends PureComponent {
         Dimensions.get('window').height,
     },
   };
-
-  static navigationOptions = ({ navigation }) => ({
-    title: 'Location',
-    headerLeft: null,
-    headerRight: (
-      <PaddedView vertical={false}>
-        <ButtonLink onPress={() => navigation.goBack()}>Back</ButtonLink>
-      </PaddedView>
-    ),
-    headerStyle: {
-      backgroundColor: navigation.getParam('backgroundColor', ''),
-    },
-    headerTitleStyle: {
-      color: navigation.getParam('headerTitleColor', ''),
-    },
-  });
 
   state = {
     userLocation: null,
