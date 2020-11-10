@@ -33,10 +33,10 @@ export default class PrayerRequest extends RockApolloDataSource {
           .format()}' or ExpirationDate eq null`
       )
       .andFilter(
-        // prayers that were entered less then 24 hours ago
+        // prayers that were entered less then 72 hours ago
         `EnteredDateTime gt datetime'${moment
           .tz(ROCK.TIMEZONE)
-          .subtract(1, 'day')
+          .subtract(3, 'day')
           .format()}' or PrayerCount eq null` // include prayers that haven't prayed yet >24 hours old
       )
       .andFilter(`Answer eq null or Answer eq ''`) // prayers that aren't answered
@@ -44,12 +44,6 @@ export default class PrayerRequest extends RockApolloDataSource {
         { field: 'PrayerCount', direction: 'asc' }, // # of times prayed, ascending
         { field: 'EnteredDateTime', direction: 'asc' }, // oldest prayer first
       ]);
-      // IF array is empty? or less then x??
-      // if ('PrayerCount eq null')
-
-      // IF there are no prayers less than 24 hours AND no prayers aren't answered
-      // if ((EnteredDateTime > ) && (PrayerCount != null)) 
-      // THEN pull in five? prayers
   };
 
   incrementPrayed = async (id) => {
