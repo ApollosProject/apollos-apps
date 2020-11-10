@@ -44,6 +44,12 @@ export default class PrayerRequest extends RockApolloDataSource {
         { field: 'PrayerCount', direction: 'asc' }, // # of times prayed, ascending
         { field: 'EnteredDateTime', direction: 'asc' }, // oldest prayer first
       ]);
+      // IF array is empty? or less then x??
+      // if ('PrayerCount eq null')
+
+      // IF there are no prayers less than 24 hours AND no prayers aren't answered
+      // if ((EnteredDateTime > ) && (PrayerCount != null)) 
+      // THEN pull in five? prayers
   };
 
   incrementPrayed = async (id) => {
