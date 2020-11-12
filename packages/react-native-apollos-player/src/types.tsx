@@ -65,8 +65,8 @@ export interface IInternalPlayer {
       currentTime: number;
       playableDuration: number;
       seekableDuration: number;
-    }
-  }
+    };
+  };
 }
 
 export interface IPresentationComponents {

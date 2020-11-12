@@ -39,5 +39,7 @@ export const InternalPlayerContext = React.createContext<IInternalPlayer>({
   playerId: '',
   onProgress: (_: (props: IProgressProp) => void) => () => {},
   handleProgress: () => {},
-  playheadRef: { current: { currentTime: 0, playableDuration: 1, seekableDuration: 1 } }
+  playheadRef: {
+    current: { currentTime: 0, playableDuration: 1, seekableDuration: 1 },
+  },
 });

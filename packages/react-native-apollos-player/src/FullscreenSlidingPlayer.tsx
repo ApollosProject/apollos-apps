@@ -32,7 +32,7 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
   const window = Dimensions.get('screen');
 
   // TODO: calculate this some other way?
-  const videoHeight = Math.min(
+  const videoHeight: number = Math.min(
     layout.height * 0.4,
     Math.max(1, layout.width * (9 / 16))
   );
@@ -169,7 +169,9 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
       {/* Primary Video View */}
       <Animated.View style={presentationStyles}>
         <VideoPresentationContainer />
-        {!isFullscreen && PresentationComponent ? <PresentationComponent /> : null}
+        {!isFullscreen && PresentationComponent ? (
+          <PresentationComponent />
+        ) : null}
       </Animated.View>
 
       {/* iOS-only modal-based fullScreen controls */}
@@ -178,7 +180,9 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
           style={[presentationStyles, fullscreenPresentationStyles]}
         >
           {isFullscreen ? <VideoOutlet /> : null}
-          {isFullscreen && PresentationComponent ? <PresentationComponent /> : null}
+          {isFullscreen && PresentationComponent ? (
+            <PresentationComponent />
+          ) : null}
         </Animated.View>
       </FullscreenWrapper>
 

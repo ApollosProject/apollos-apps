@@ -78,12 +78,21 @@ const Seeker = ({
   minimal: Boolean;
   knobSize: number;
 }) => {
-  const { onProgress, setIsControlVisibilityLocked, playheadRef } = React.useContext(
-    InternalPlayerContext
-  );
-  const currentProgressValue = React.useRef(new Animated.Value(playheadRef.current.currentTime / Math.max(playheadRef.current.playableDuration, 1))).current;
+  const {
+    onProgress,
+    setIsControlVisibilityLocked,
+    playheadRef,
+  } = React.useContext(InternalPlayerContext);
+  const currentProgressValue = React.useRef(
+    new Animated.Value(
+      playheadRef.current.currentTime /
+        Math.max(playheadRef.current.playableDuration, 1)
+    )
+  ).current;
   const currentTimeRef = React.useRef(playheadRef.current.currentTime);
-  const playableDurationRef = React.useRef(Math.max(playheadRef.current.playableDuration, 1));
+  const playableDurationRef = React.useRef(
+    Math.max(playheadRef.current.playableDuration, 1)
+  );
   const isSeekingRef = React.useRef(false);
   const layoutWidthRef = React.useRef(1);
 

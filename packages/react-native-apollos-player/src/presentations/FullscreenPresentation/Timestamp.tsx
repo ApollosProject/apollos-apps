@@ -44,8 +44,12 @@ const formattedTimestamp = (time = 0) => {
  */
 const TimeStamp: React.FunctionComponent = () => {
   const { onProgress, playheadRef } = React.useContext(InternalPlayerContext);
-  const [time, setCurrentTime] = React.useState(playheadRef.current.currentTime);
-  const [totalTime, setTotalTime] = React.useState(playheadRef.current.playableDuration);
+  const [time, setCurrentTime] = React.useState(
+    playheadRef.current.currentTime
+  );
+  const [totalTime, setTotalTime] = React.useState(
+    playheadRef.current.playableDuration
+  );
 
   React.useEffect(
     () =>
