@@ -1,15 +1,7 @@
 import * as React from 'react';
 import { requireNativeComponent } from 'react-native';
 
-interface PortalOriginProps {
-  destination: string | null;
-  style?: any;
-  children: any;
-}
-
-interface PortalDestinationProps {
-  name: string;
-}
+import type { PortalOriginProps, PortalDestinationProps } from './portals';
 
 const PortalOrigin: React.FunctionComponent<PortalOriginProps> = (props) => (
   <RCTPortalOrigin {...props} />
