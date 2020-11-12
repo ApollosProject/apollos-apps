@@ -68,8 +68,6 @@ export const defaultContentItemResolvers = {
   }),
 };
 
-// console.log(defaultContentItemResolvers);
-
 const resolver = {
   Query: {
     campaigns: (root, args, { dataSources }) =>
