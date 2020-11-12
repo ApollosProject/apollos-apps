@@ -25,7 +25,7 @@ jobs:
       run: yarn
 
     - name: Jest
-      run: yarn ci-test
+      run: yarn test --stream -- -- --maxWorkers=2
 
     - name: Codecov
       uses: codecov/codecov-action@v1

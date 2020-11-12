@@ -29,20 +29,17 @@ const enhance = compose(
   })
 );
 
-const Icon = enhance(
-  ({ name, size, iconInput, isLoading = false, ...otherProps }) => {
-    const Icons = { ...uikitIcons, ...iconInput };
-    const IconComponent = Icons[pascalCase(name)];
-    return (
-      <Placeholder.Media size={size} hasRadius onReady={!isLoading}>
-        <IconComponent size={size} {...otherProps} />
-      </Placeholder.Media>
-    );
-  }
-);
-
+const Icon = ({ name, size, iconInput, isLoading = false, ...otherProps }) => {
+  const Icons = { ...uikitIcons, ...iconInput };
+  const IconComponent = Icons[pascalCase(name)];
+  return (
+    <Placeholder.Media size={size} hasRadius onReady={!isLoading}>
+      <IconComponent size={size} {...otherProps} />
+    </Placeholder.Media>
+  );
+};
 // eslint-disable-next-line consistent-return
-const namePropValidator = (props, propName, componentName) => {
+export const namePropValidator = (props, propName, componentName) => {
   const icons = Object.keys({ ...uikitIcons, ...props.iconInput }).map(
     kebabCase
   );
@@ -59,7 +56,12 @@ const namePropValidator = (props, propName, componentName) => {
   }
 };
 
+// PropType checking needs to occur after the `isLoading`` and `iconInput` have been loaded in.
+// Those props are added via the call to `enhance`
 Icon.propTypes = {
+  iconInput: PropTypes.objectOf(
+    PropTypes.oneOfType([PropTypes.func, PropTypes.node, PropTypes.object])
+  ),
   name: namePropValidator,
   size: PropTypes.number,
   fill: PropTypes.string,
@@ -70,6 +72,8 @@ Icon.defaultProps = {
   size: 32, // 32 is the default size used within the svg component
 };
 
-Icon.displayName = 'Icon';
+const IconWithIconInputAndLoading = enhance(Icon);
 
-export default Icon;
+IconWithIconInputAndLoading.displayName = 'Icon';
+
+export default IconWithIconInputAndLoading;
