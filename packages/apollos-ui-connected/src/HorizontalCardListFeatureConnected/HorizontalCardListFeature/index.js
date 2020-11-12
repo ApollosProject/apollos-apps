@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import {
-  H2,
+  H3,
   H5,
   HorizontalTileFeed,
   styled,
@@ -15,7 +15,8 @@ import {
   H6,
 } from '@apollosproject/ui-kit';
 
-import { horizontalContentCardComponentMapper, LiveConsumer } from '../..';
+import { LiveConsumer } from '../../live';
+import { HorizontalContentCardComponentMapper } from '../../HorizontalContentCardConnected';
 
 const Title = styled(
   ({ theme }) => ({
@@ -27,7 +28,7 @@ const Title = styled(
 const Subtitle = styled(
   {},
   'ui-connected.HorizontalCardListFeatureConnected.HorizontalCardListFeature.Subtitle'
-)(H2);
+)(H3);
 
 const Header = styled(
   ({ theme }) => ({
@@ -99,11 +100,11 @@ class HorizontalCardListFeature extends PureComponent {
         const labelText = isLive ? 'Live' : item.labelText;
         return (
           <TouchableScale onPress={() => this.props.onPressItem(item)}>
-            {horizontalContentCardComponentMapper({
-              isLive,
-              ...item,
-              labelText,
-            })}
+            <HorizontalContentCardComponentMapper
+              isLive={isLive}
+              {...item}
+              labelText={labelText}
+            />
           </TouchableScale>
         );
       }}

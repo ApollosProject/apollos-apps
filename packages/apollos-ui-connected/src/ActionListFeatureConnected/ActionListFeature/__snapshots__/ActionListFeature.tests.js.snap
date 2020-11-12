@@ -746,9 +746,9 @@ exports[`The ActionListFeatures component should render a loading state for isLo
             "alignSelf": "stretch",
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
-            "height": 12,
-            "marginVertical": 3,
-            "width": "50%",
+            "height": 14,
+            "marginVertical": 3.5,
+            "width": "60%",
           }
         }
       />
@@ -1327,9 +1327,9 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
         style={
           Object {
             "color": "#A5A5A5",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
-            "lineHeight": 18,
+            "fontFamily": "InterUI-Medium",
+            "fontSize": 14,
+            "lineHeight": 21,
           }
         }
       >

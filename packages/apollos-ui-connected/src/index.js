@@ -25,6 +25,7 @@ export ContentParentFeedConnected, {
 export FeaturesFeedConnected, {
   featuresFeedComponentMapper,
   GET_FEED_FEATURES,
+  GET_FEATURE_FEED,
   FEATURE_FEED_ACTION_MAP,
 } from './FeaturesFeedConnected';
 export HeroListFeatureConnected, {
@@ -37,6 +38,7 @@ export HorizontalCardListFeatureConnected, {
 } from './HorizontalCardListFeatureConnected';
 export HorizontalContentCardConnected, {
   horizontalContentCardComponentMapper,
+  HorizontalContentCardComponentMapper,
 } from './HorizontalContentCardConnected';
 export HorizontalContentSeriesFeedConnected, {
   GET_CONTENT_SERIES,
@@ -57,7 +59,9 @@ export LikedContentFeedConnected, {
 } from './LikedContentFeedConnected';
 export { LiveConsumer, LiveProvider } from './live';
 export MediaControlsConnected, {
+  // TODO deprecated
   GET_CONTENT_MEDIA,
+  GET_NODE_MEDIA,
   MediaControls,
 } from './MediaControlsConnected';
 export NodeFeaturesConnected, {

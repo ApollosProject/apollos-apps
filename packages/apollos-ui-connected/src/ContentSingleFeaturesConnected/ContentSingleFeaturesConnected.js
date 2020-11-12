@@ -46,7 +46,11 @@ const ContentSingleFeaturesConnected = ({
 };
 
 ContentSingleFeaturesConnected.propTypes = {
-  Component: PropTypes.node,
+  Component: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.func,
+  ]),
   contentId: PropTypes.string,
   nodeId: PropTypes.string,
 };

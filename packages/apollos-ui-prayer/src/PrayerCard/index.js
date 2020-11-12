@@ -89,6 +89,7 @@ const PrayerCard = ({
   onPrayerChangeText,
   prayer,
   title,
+  completed,
 }) => (
   <StyledCard cardColor={cardColor} isLoading={isLoading}>
     <Content>
@@ -105,7 +106,10 @@ const PrayerCard = ({
       ) : (
         </* we render this without `padded` so that the input text can be aligned correctly */>
           <H4>{title}</H4>
-          <PrayerInput onChangeText={onPrayerChangeText} />
+          <PrayerInput
+            onChangeText={onPrayerChangeText}
+            completed={completed}
+          />
         </>
       )}
     </Content>
@@ -116,6 +120,7 @@ PrayerCard.propTypes = {
   avatar: PropTypes.shape({}),
   cardColor: PropTypes.string,
   isLoading: PropTypes.bool,
+  completed: PropTypes.bool,
   title: PropTypes.string,
   prayer: PropTypes.string,
   onPrayerChangeText: PropTypes.func,

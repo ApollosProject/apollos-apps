@@ -6,8 +6,8 @@ import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
 import { FeedView } from '@apollosproject/ui-kit';
-import { SearchCardConnected } from '@apollosproject/ui-connected';
 
+import SearchCardConnected from '../SearchCardConnected';
 import GET_SEARCH_RESULTS from './getSearchResults';
 import NoResults from './NoResults';
 
