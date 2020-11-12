@@ -7,8 +7,6 @@ import * as scripture from './scripture';
 import * as user from './user';
 import * as interfaces from './interfaces';
 import * as searchResults from './searchResults';
-// import * as publish from './publish';
-
 
 const FRAGMENTS = {
   ...campus,
@@ -20,7 +18,6 @@ const FRAGMENTS = {
   ...user,
   ...interfaces,
   ...searchResults,
-  // ...publish,
 };
 
 export default FRAGMENTS;
