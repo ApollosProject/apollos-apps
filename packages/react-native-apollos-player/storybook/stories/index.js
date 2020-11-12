@@ -2,7 +2,10 @@ import * as React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { Text } from 'react-native';
 
-import { ApollosPlayerContainer, usePlayer } from 'react-native-apollos-player';
+import {
+  ApollosPlayerContainer,
+  usePlayer,
+} from '@apollosproject/react-native-apollos-player';
 
 const PlayerExamples = () => {
   const { setNowPlaying, setIsPlaying, setIsFullscreen } = usePlayer();
