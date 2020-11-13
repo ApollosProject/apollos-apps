@@ -14,7 +14,7 @@ const Container = styled(
     paddingHorizontal: theme?.sizing?.baseUnit,
     paddingBottom: theme?.sizing?.baseUnit,
   }),
-  'ui-media.MediaPlayer.Seeker.Container'
+  'ApollosPlayer.MediaPlayer.Seeker.Container'
 )(View);
 
 const TrackContainer = styled(
@@ -25,7 +25,7 @@ const TrackContainer = styled(
     paddingTop: minimal ? 20 : knobSize / 3,
     paddingBottom: minimal ? 0 : knobSize / 3,
   }),
-  'ui-media.MediaPlayer.Seeker.TrackContainer'
+  'ApollosPlayer.MediaPlayer.Seeker.TrackContainer'
 )(View);
 
 const Track = styled(
@@ -37,7 +37,7 @@ const Track = styled(
       ? theme?.colors?.transparent
       : theme?.colors?.text?.tertiary,
   }),
-  'ui-media.MediaPlayer.Seeker.Track'
+  'ApollosPlayer.MediaPlayer.Seeker.Track'
 )(View);
 
 const ProgressBar = styled(
@@ -45,7 +45,7 @@ const ProgressBar = styled(
     height: theme?.sizing?.baseUnit,
     backgroundColor: theme?.colors?.text?.secondary,
   }),
-  'ui-media.MediaPlayer.Seeker.ProgressBar'
+  'ApollosPlayer.MediaPlayer.Seeker.ProgressBar'
 )(View);
 
 // to create hit slop the actual Knob view is larger then the visible knob.
@@ -55,7 +55,7 @@ const KnobInside = styled(({ knobSize, theme }: any) => ({
   elevation: 2,
   borderRadius: theme?.sizing?.baseUnit,
   backgroundColor: theme?.colors?.text?.primary,
-}))(View);
+}), 'ApollosPlayer.MediaPlayer.Seeker.KnobInside')(View);
 
 const Knob = styled(
   ({ theme, knobSize }: any) => ({
@@ -89,10 +89,7 @@ const Seeker = ({
         Math.max(playheadRef.current.playableDuration, 1)
     )
   ).current;
-  const currentTimeRef = React.useRef(playheadRef.current.currentTime);
-  const playableDurationRef = React.useRef(
-    Math.max(playheadRef.current.playableDuration, 1)
-  );
+
   const isSeekingRef = React.useRef(false);
   const layoutWidthRef = React.useRef(1);
 
@@ -102,8 +99,9 @@ const Seeker = ({
     () =>
       onProgress(({ currentTime, playableDuration }: IProgressProp) => {
         if (isSeekingRef.current) return;
-        currentTimeRef.current = currentTime;
-        playableDurationRef.current = playableDuration;
+        // playheadRef.current.currentTime = currentTime;
+        // playheadRef.current.playableDurationRef = playableDuration;
+        // console.log('loaded', playheadRef.current.currentTime, currentTime);
         currentProgressValue.setValue(
           currentTime / Math.max(playableDuration, 1)
         );
@@ -128,7 +126,7 @@ const Seeker = ({
         },
         onPanResponderMove: (_, { dx }) => {
           const progressAtStart =
-            currentTimeRef.current / Math.max(1, playableDurationRef.current);
+            playheadRef.current.currentTime / Math.max(1, playheadRef.current.playableDuration);
 
           const offsetProgress = dx / layoutWidthRef.current;
 
@@ -136,12 +134,12 @@ const Seeker = ({
         },
         onPanResponderRelease: async (_, { dx }) => {
           const progressAtStart =
-            currentTimeRef.current / Math.max(1, playableDurationRef.current);
+            playheadRef.current.currentTime / Math.max(1, playheadRef.current.playableDuration);
           const offsetProgress = dx / layoutWidthRef.current;
 
           const newProgress = progressAtStart + offsetProgress;
 
-          const newSeekValue = newProgress * playableDurationRef.current;
+          const newSeekValue = newProgress * playheadRef.current.playableDuration;
 
           seek(newSeekValue);
           isSeekingRef.current = false;

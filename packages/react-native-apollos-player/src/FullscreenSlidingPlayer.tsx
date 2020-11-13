@@ -145,6 +145,8 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
     return Wrapper;
   }, [isFullscreen]);
 
+  console.log('re-render');
+
   return (
     <View
       style={StyleSheet.absoluteFill}

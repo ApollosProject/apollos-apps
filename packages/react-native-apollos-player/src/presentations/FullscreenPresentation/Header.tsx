@@ -17,7 +17,7 @@ const Image = styled(({ theme }: any) => ({
   borderRadius: theme.sizing.baseUnit,
   marginBottom: theme.sizing.baseUnit,
   aspectRatio: 1,
-}))(ConnectedImage);
+}), 'ApollosPlayer.FullscreenPresentation.Header.CoverImage')(ConnectedImage);
 
 const PiPButton = withTheme(
   ({ theme }: any) => ({
@@ -30,13 +30,13 @@ const PiPButton = withTheme(
     size: theme?.sizing?.baseUnit * 1.5,
     name: 'sections',
   }),
-  'ui-media.MediaPlayer.FullscreenControls.Header.DownButton'
+  'ApollosPlayer.FullscreenPresentation.Header.DownButton'
 )(ButtonIcon);
 
 const Container = styled({
   flexDirection: 'row',
   justifyContent: 'space-between',
-})(SafeAreaView);
+}, 'ApollosPlayer.FullscreenPresentation.Header.Container')(SafeAreaView);
 
 const Header: React.FunctionComponent = () => {
   const { nowPlaying, isInPiP, setIsInPiP } = usePlayer();

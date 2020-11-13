@@ -3,6 +3,7 @@ import type {
   IPlayerMedia,
   IPresentationComponents,
   IProgressProp,
+  IProgressRef,
 } from './types';
 import FullscreenSlidingPlayer from './FullscreenSlidingPlayer';
 import {
@@ -50,8 +51,7 @@ const Container: React.FunctionComponent<ContainerProps> = ({
     Array<(props: IProgressProp) => void>
   >([]);
 
-  const reset = React.useMemo(
-    () => () => {
+  const reset = React.useCallback(() => {
       setNowPlaying(null);
       setIsPlaying(false);
       setIsFullscreen(false);
@@ -59,7 +59,7 @@ const Container: React.FunctionComponent<ContainerProps> = ({
     [setNowPlaying, setIsPlaying, setIsFullscreen]
   );
 
-  const playheadRef = React.useRef({
+  const playheadRef = React.useRef<IProgressRef>({
     currentTime: 0,
     playableDuration: 0,
     seekableDuration: 0,
@@ -94,8 +94,8 @@ const Container: React.FunctionComponent<ContainerProps> = ({
     ]
   );
 
-  const onProgress = React.useMemo(
-    () => (handlerToAdd: (props: IProgressProp) => void) => {
+  const onProgress = React.useCallback(
+    (handlerToAdd: (props: IProgressProp) => void) => {
       setProgressHandlers((prevState) => [...prevState, handlerToAdd]);
       return () =>
         setProgressHandlers((prevState) =>

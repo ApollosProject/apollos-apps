@@ -33,17 +33,22 @@ const RNVideoPresentation = () => {
     playheadRef,
   } = React.useContext(InternalPlayerContext);
 
-  const handleProgressProp = React.useMemo(
-    () => (playhead: {
+  const handleProgressProp = React.useCallback((playhead: {
       currentTime: number;
       playableDuration: number;
       seekableDuration: number;
     }) => {
-      playheadRef.current = playhead;
+      playheadRef.current = Object.assign(playheadRef.current, playhead);
       handleProgress(playhead);
     },
     [playheadRef, handleProgress]
   );
+
+  const handleLoad = ({ duration }) => {
+    playheadRef.current.seekableDuration = duration;
+    playheadRef.current.playableDuration = duration;
+    handleProgress(playheadRef.current);
+  }
 
   const videoRef = React.useRef<Video>(null);
 
@@ -96,6 +101,7 @@ const RNVideoPresentation = () => {
           onProgress={handleProgressProp}
           onAudioBecomingNoisy={() => setIsPlaying(false)}
           pictureInPicture={isInPiP}
+          onLoad={handleLoad}
           onEnd={() => {
             setIsPlaying(false);
           }}
