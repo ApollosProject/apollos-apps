@@ -4,6 +4,7 @@ import FullscreenSlidingPlayer from './FullscreenSlidingPlayer';
 import { NowPlayingContext, InternalPlayerContext } from './context';
 
 import Controls from './Controls';
+import NativeControls from './NativeControls';
 import RNVideo from './RNVideo';
 
 interface ContainerProps extends IPlayerMedia {
@@ -136,6 +137,7 @@ const Container: React.FunctionComponent<ContainerProps> = ({
   return (
     <NowPlayingContext.Provider value={nowPlayingState}>
       <InternalPlayerContext.Provider value={internalPlayerState}>
+        <NativeControls />
         <FullscreenSlidingPlayer
           VideoComponent={VideoComponent}
           ControlsComponent={ControlsComponent}
