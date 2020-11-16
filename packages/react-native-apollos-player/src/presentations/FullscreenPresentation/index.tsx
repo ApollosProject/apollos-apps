@@ -40,7 +40,7 @@ const IconSm = withTheme(
     iconPadding: theme?.sizing?.baseUnit,
     fill: theme?.colors?.text?.secondary,
   }),
-  'ui-media.MediaPlayer.FullscreenControls.IconSm'
+  'ApollosPlayer.FullscreenPresentation.FullscreenControls.IconSm'
 )(ButtonIcon);
 
 const IconMd = withTheme(
@@ -48,7 +48,7 @@ const IconMd = withTheme(
     size: theme?.sizing?.baseUnit * 2,
     iconPadding: theme?.sizing?.baseUnit,
   }),
-  'ui-media.MediaPlayer.FullscreenControls.IconMd'
+  'ApollosPlayer.FullscreenPresentation.FullscreenControls.IconMd'
 )(ButtonIcon);
 
 const FullscreenPresentation = () => {

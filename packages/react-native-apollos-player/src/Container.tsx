@@ -51,6 +51,7 @@ const Container: React.FunctionComponent<ContainerProps> = ({
     Array<(props: IProgressProp) => void>
   >([]);
 
+
   const reset = React.useCallback(() => {
     setNowPlaying(null);
     setIsPlaying(false);
@@ -59,7 +60,7 @@ const Container: React.FunctionComponent<ContainerProps> = ({
     [setNowPlaying, setIsPlaying, setIsFullscreen]
   );
 
-  const playheadRef = React.useRef<IProgressRef>({
+  const playheadRef: IProgressRef = React.useRef<IProgressProp>({
     currentTime: 0,
     playableDuration: 0,
     seekableDuration: 0,
@@ -94,6 +95,7 @@ const Container: React.FunctionComponent<ContainerProps> = ({
     ]
   );
 
+  // Determine if we can rename this or use Event Handlers.
   const onProgress = React.useCallback(
     (handlerToAdd: (props: IProgressProp) => void) => {
       setProgressHandlers((prevState) => [...prevState, handlerToAdd]);
@@ -140,6 +142,7 @@ const Container: React.FunctionComponent<ContainerProps> = ({
     ]
   );
 
+  // todo: we can removte
   const presentationState = React.useMemo(
     () => ({
       VideoComponent,

@@ -15,7 +15,7 @@ import VideoPresentationContainer from './VideoPresentationContainer';
 
 import VideoOutlet from './VideoOutlet';
 
-interface FullScreenSlidingPlayerProps {}
+interface FullScreenSlidingPlayerProps { }
 
 const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerProps> = ({
   children,
@@ -121,6 +121,8 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
     [fullscreenAnimation, window.height]
   );
 
+
+  // TODO: Refactor not to use useMemo.
   let FullscreenWrapper = React.useMemo(() => {
     // We have to wrap fullscreen view in <Modal> on iOS in order to make sure
     // the player is presented on top of ReactNavigation Native Navigation views
@@ -144,8 +146,6 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
     );
     return Wrapper;
   }, [isFullscreen]);
-
-  console.log('re-render');
 
   return (
     <View
