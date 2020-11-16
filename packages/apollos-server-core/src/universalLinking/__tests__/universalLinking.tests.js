@@ -79,7 +79,7 @@ describe('Universal linking', () => {
     expect(res.send.mock.calls).toMatchSnapshot();
   });
 
-  it('default to sending app links to the app store', () => {
+  it('default to sending app links to the app store', async () => {
     const fns = [];
     const app = {
       get: (path, fn) => {
@@ -89,12 +89,12 @@ describe('Universal linking', () => {
     const res = { redirect: jest.fn() };
 
     setupUniversalLinks({ app });
-    fns['/app-link/*']({ headers: '' }, res);
+    await fns['/app-link/*']({ headers: '' }, res);
 
     expect(res.redirect.mock.calls[0][0]).toBe('app-store-link');
   });
 
-  it('default to sending android browsers to the play store', () => {
+  it('default to sending android browsers to the play store', async () => {
     const fns = [];
     const app = {
       get: (path, fn) => {
@@ -104,7 +104,7 @@ describe('Universal linking', () => {
     const res = { redirect: jest.fn() };
 
     setupUniversalLinks({ app });
-    fns['/app-link/*'](
+    await fns['/app-link/*'](
       {
         headers: {
           'user-agent':
@@ -117,7 +117,7 @@ describe('Universal linking', () => {
     expect(res.redirect.mock.calls[0][0]).toBe('play-store-link');
   });
 
-  it('can send users to a link determined by a custom function', () => {
+  it('can send users to a link determined by a custom function', async () => {
     const fns = [];
     const app = {
       get: (path, fn) => {
@@ -129,7 +129,7 @@ describe('Universal linking', () => {
     const createRedirectLink = jest.fn(() => 'return-url');
 
     setupUniversalLinks({ app, createRedirectLink });
-    fns['/app-link/*']({ headers: '', path: 'some-path-value' }, res);
+    await fns['/app-link/*']({ headers: '', path: 'some-path-value' }, res);
 
     expect(res.redirect.mock.calls[0][0]).toBe('return-url');
     expect(createRedirectLink.mock.calls).toMatchSnapshot();
