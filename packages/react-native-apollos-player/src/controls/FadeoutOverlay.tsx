@@ -7,8 +7,8 @@ import {
 } from 'react-native';
 import { styled } from '@apollosproject/ui-kit';
 import Color from 'color';
-import usePlayer from './usePlayer';
-import { InternalPlayerContext } from './context';
+import usePlayer from '../usePlayer';
+import { InternalPlayerContext } from '../context';
 
 const FadeoutOverlay: React.FunctionComponent<{
   style?: any;

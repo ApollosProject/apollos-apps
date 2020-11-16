@@ -3,7 +3,7 @@ import type { IPlayerMedia, IProgressProp, IProgressRef } from './types';
 import FullscreenSlidingPlayer from './FullscreenSlidingPlayer';
 import { NowPlayingContext, InternalPlayerContext } from './context';
 
-import Controls from './controls';
+import Controls from './Controls';
 import RNVideo from './RNVideo';
 
 interface ContainerProps extends IPlayerMedia {
