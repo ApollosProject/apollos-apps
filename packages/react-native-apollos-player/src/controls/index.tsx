@@ -13,6 +13,8 @@ import usePlayer from '../usePlayer';
 import Header from './Header';
 import Seeker from './Seeker';
 
+import AirPlayButton from '../AirPlayButton';
+
 const FooterWrapper = styled(
   {
     position: 'absolute',
@@ -51,6 +53,19 @@ const IconMd = withTheme(
   'ApollosPlayer.Controls.FullscreenControls.IconMd'
 )(ButtonIcon);
 
+const StyledAirPlayButton = withTheme(
+  ({ theme }: any) => ({
+    style: {
+      width: theme?.sizing?.baseUnit * 1.25,
+      height: theme?.sizing?.baseUnit * 1.25,
+      paddingHorizontal: theme?.sizing?.baseUnit,
+    },
+    activeTintColor: theme?.colors?.primary,
+    tintColor: theme?.colors?.text?.secondary,
+  }),
+  'ApollosPlayer.FullscreenPresentation.FullscreenControls.AirPlayButton'
+)(AirPlayButton);
+
 const Controls = () => {
   const {
     isFullscreen,
@@ -67,7 +82,7 @@ const Controls = () => {
         {isFullscreen ? <Header /> : null}
         <FooterWrapper>
           <FooterControls>
-            <IconSm name="chromecast" />
+            <StyledAirPlayButton />
             <IconMd name="skip-back-thirty" onPress={() => skip(-30)} />
             <IconMd
               name={isPlaying ? 'pause' : 'play'}

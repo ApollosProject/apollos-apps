@@ -15,6 +15,7 @@
 		79B96E5024BE94B70096AA86 /* ReparentableOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B96E4824BE94B70096AA86 /* ReparentableOrigin.swift */; };
 		79B96E5124BE94B70096AA86 /* ReparentableRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B96E4924BE94B70096AA86 /* ReparentableRegistry.swift */; };
 		79B96E5724BEB02A0096AA86 /* ReparentableDestinationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B96E5624BEB02A0096AA86 /* ReparentableDestinationManager.swift */; };
+		B26E6F7C25632D0800472319 /* RNAirPlayButtonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B26E6F7B25632D0800472319 /* RNAirPlayButtonManager.m */; };
 		F4FF95D7245B92E800C19C63 /* ApollosPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* ApollosPlayer.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		79B96E4824BE94B70096AA86 /* ReparentableOrigin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReparentableOrigin.swift; sourceTree = "<group>"; };
 		79B96E4924BE94B70096AA86 /* ReparentableRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReparentableRegistry.swift; sourceTree = "<group>"; };
 		79B96E5624BEB02A0096AA86 /* ReparentableDestinationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReparentableDestinationManager.swift; sourceTree = "<group>"; };
+		B26E6F7B25632D0800472319 /* RNAirPlayButtonManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNAirPlayButtonManager.m; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* ApollosPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApollosPlayer.m; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* ApollosPlayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ApollosPlayer-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4FF95D6245B92E800C19C63 /* ApollosPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApollosPlayer.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				B26E6F7B25632D0800472319 /* RNAirPlayButtonManager.m */,
 				79B96E4224BE94980096AA86 /* Reparentable */,
 				F4FF95D6245B92E800C19C63 /* ApollosPlayer.swift */,
 				B3E7B5891CC2AC0600A0062D /* ApollosPlayer.m */,
@@ -151,6 +154,7 @@
 				79B96E5724BEB02A0096AA86 /* ReparentableDestinationManager.swift in Sources */,
 				F4FF95D7245B92E800C19C63 /* ApollosPlayer.swift in Sources */,
 				79B96E4D24BE94B70096AA86 /* ReparentableView.swift in Sources */,
+				B26E6F7C25632D0800472319 /* RNAirPlayButtonManager.m in Sources */,
 				79B96E5124BE94B70096AA86 /* ReparentableRegistry.swift in Sources */,
 				79B96E4F24BE94B70096AA86 /* ReparentableOriginManager.swift in Sources */,
 				79B96E4C24BE94B70096AA86 /* ReparentableOrigin.m in Sources */,
