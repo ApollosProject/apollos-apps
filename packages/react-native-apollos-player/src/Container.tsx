@@ -38,10 +38,10 @@ const Container: React.FunctionComponent<ContainerProps> = ({
   const [isInPiP, setIsInPiP] = React.useState<boolean>(false);
   const [playerId, setPlayerId] = React.useState<string>('');
   const [seek, setSeekHandler] = React.useState<(seekTo: number) => void>(
-    () => {}
+    () => { }
   );
   const [skip, setSkipHandler] = React.useState<(skipBy: number) => void>(
-    () => {}
+    () => { }
   );
   const [
     isControlVisibilityLocked,
@@ -52,10 +52,10 @@ const Container: React.FunctionComponent<ContainerProps> = ({
   >([]);
 
   const reset = React.useCallback(() => {
-      setNowPlaying(null);
-      setIsPlaying(false);
-      setIsFullscreen(false);
-    },
+    setNowPlaying(null);
+    setIsPlaying(false);
+    setIsFullscreen(false);
+  },
     [setNowPlaying, setIsPlaying, setIsFullscreen]
   );
 
@@ -105,14 +105,13 @@ const Container: React.FunctionComponent<ContainerProps> = ({
     [setProgressHandlers]
   );
 
-  const handleProgress = React.useMemo(
-    () => (playhead: {
-      currentTime: number;
-      playableDuration: number;
-      seekableDuration: number;
-    }) => {
-      progressHandlers.forEach((handler) => handler(playhead));
-    },
+  const handleProgress = React.useCallback((playhead: {
+    currentTime: number;
+    playableDuration: number;
+    seekableDuration: number;
+  }) => {
+    progressHandlers.forEach((handler) => handler(playhead));
+  },
     [progressHandlers]
   );
 

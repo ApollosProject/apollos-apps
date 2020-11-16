@@ -38,6 +38,8 @@ const RNVideoPresentation = () => {
       playableDuration: number;
       seekableDuration: number;
     }) => {
+      // We actually want to mutate the object in this case.
+      // That way we can preserve references to playheadRef.current
       playheadRef.current = Object.assign(playheadRef.current, playhead);
       handleProgress(playhead);
     },
@@ -52,8 +54,8 @@ const RNVideoPresentation = () => {
 
   const videoRef = React.useRef<Video>(null);
 
-  const skip = React.useMemo(
-    () => (skipBy: number) => {
+  const skip = React.useCallback(
+    (skipBy: number) => {
       videoRef?.current?.seek(
         Math.max(
           0,
@@ -69,8 +71,8 @@ const RNVideoPresentation = () => {
 
   React.useEffect(() => setSkipHandler(() => skip), [setSkipHandler, skip]);
 
-  const seek = React.useMemo(
-    () => (seekBy: number) => videoRef?.current?.seek(seekBy),
+  const seek = React.useCallback(
+    (seekBy: number) => videoRef?.current?.seek(seekBy),
     [videoRef]
   );
 

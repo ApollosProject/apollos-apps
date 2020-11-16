@@ -99,9 +99,6 @@ const Seeker = ({
     () =>
       onProgress(({ currentTime, playableDuration }: IProgressProp) => {
         if (isSeekingRef.current) return;
-        // playheadRef.current.currentTime = currentTime;
-        // playheadRef.current.playableDurationRef = playableDuration;
-        // console.log('loaded', playheadRef.current.currentTime, currentTime);
         currentProgressValue.setValue(
           currentTime / Math.max(playableDuration, 1)
         );
