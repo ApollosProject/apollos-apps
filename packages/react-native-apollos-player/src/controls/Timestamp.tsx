@@ -2,7 +2,7 @@ import * as React from 'react';
 import { View } from 'react-native';
 
 import { H6, styled } from '@apollosproject/ui-kit';
-import { InternalPlayerContext } from '../context';
+import { InternalPlayerContext, NowPlayingContext } from '../context';
 
 const TimeText = styled(
   {
@@ -43,7 +43,8 @@ const formattedTimestamp = (time = 0) => {
  * Displays a MM:SS formatted timestamp from either a number or Animate.Value in seconds
  */
 const TimeStamp: React.FunctionComponent = () => {
-  const { onProgress, playheadRef } = React.useContext(InternalPlayerContext);
+  const { playheadRef } = React.useContext(InternalPlayerContext);
+  const { addProgressHandler } = React.useContext(NowPlayingContext);
   const [time, setCurrentTime] = React.useState(
     playheadRef.current.currentTime
   );
@@ -53,11 +54,11 @@ const TimeStamp: React.FunctionComponent = () => {
 
   React.useEffect(
     () =>
-      onProgress(({ currentTime, playableDuration }) => {
+      addProgressHandler(({ currentTime, playableDuration }) => {
         setCurrentTime(currentTime);
         setTotalTime(playableDuration);
       }),
-    [onProgress, setTotalTime, setCurrentTime]
+    [addProgressHandler, setTotalTime, setCurrentTime]
   );
 
   return (

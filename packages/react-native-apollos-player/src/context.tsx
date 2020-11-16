@@ -14,6 +14,7 @@ export const NowPlayingContext = React.createContext<INowPlaying>({
   skip: () => null,
   isInPiP: false,
   setIsInPiP: () => null,
+  addProgressHandler: (_: (props: IProgressProp) => void) => () => {},
 });
 
 export const InternalPlayerContext = React.createContext<IInternalPlayer>({
@@ -23,7 +24,6 @@ export const InternalPlayerContext = React.createContext<IInternalPlayer>({
   setIsControlVisibilityLocked: () => null,
   isControlVisibilityLocked: true,
   playerId: '',
-  onProgress: (_: (props: IProgressProp) => void) => () => {},
   handleProgress: () => {},
   playheadRef: {
     current: { currentTime: 0, playableDuration: 1, seekableDuration: 1 },

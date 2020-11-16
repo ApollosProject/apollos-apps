@@ -58,8 +58,30 @@ const Container: React.FunctionComponent<ContainerProps> = ({
     seekableDuration: 0,
   });
 
+  const addProgressHandler = React.useCallback(
+    (handlerToAdd: (props: IProgressProp) => void) => {
+      setProgressHandlers((prevState) => [...prevState, handlerToAdd]);
+      return () =>
+        setProgressHandlers((prevState) =>
+          prevState.filter((handler) => handler === handlerToAdd)
+        );
+    },
+    [setProgressHandlers]
+  );
+  const handleProgress = React.useCallback(
+    (playhead: {
+      currentTime: number;
+      playableDuration: number;
+      seekableDuration: number;
+    }) => {
+      progressHandlers.forEach((handler) => handler(playhead));
+    },
+    [progressHandlers]
+  );
+
   const nowPlayingState = React.useMemo(
     () => ({
+      addProgressHandler,
       nowPlaying,
       setNowPlaying,
       isPlaying,
@@ -73,6 +95,7 @@ const Container: React.FunctionComponent<ContainerProps> = ({
       setIsInPiP,
     }),
     [
+      addProgressHandler,
       nowPlaying,
       setNowPlaying,
       isPlaying,
@@ -87,32 +110,8 @@ const Container: React.FunctionComponent<ContainerProps> = ({
     ]
   );
 
-  // Determine if we can rename this or use Event Handlers.
-  const onProgress = React.useCallback(
-    (handlerToAdd: (props: IProgressProp) => void) => {
-      setProgressHandlers((prevState) => [...prevState, handlerToAdd]);
-      return () =>
-        setProgressHandlers((prevState) =>
-          prevState.filter((handler) => handler === handlerToAdd)
-        );
-    },
-    [setProgressHandlers]
-  );
-
-  const handleProgress = React.useCallback(
-    (playhead: {
-      currentTime: number;
-      playableDuration: number;
-      seekableDuration: number;
-    }) => {
-      progressHandlers.forEach((handler) => handler(playhead));
-    },
-    [progressHandlers]
-  );
-
   const internalPlayerState = React.useMemo(
     () => ({
-      onProgress,
       handleProgress,
       playerId,
       setPlayerId,
@@ -130,7 +129,6 @@ const Container: React.FunctionComponent<ContainerProps> = ({
       setIsControlVisibilityLocked,
       isControlVisibilityLocked,
       handleProgress,
-      onProgress,
       playheadRef,
     ]
   );

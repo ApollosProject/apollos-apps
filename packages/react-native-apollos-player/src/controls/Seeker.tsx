@@ -4,7 +4,7 @@ import { styled, withTheme } from '@apollosproject/ui-kit';
 import usePlayer from '../usePlayer';
 
 import type { IProgressProp } from '../types';
-import { InternalPlayerContext } from '../context';
+import { InternalPlayerContext, NowPlayingContext } from '../context';
 
 import Timestamp from './Timestamp';
 
@@ -81,11 +81,10 @@ const Seeker = ({
   minimal: Boolean;
   knobSize: number;
 }) => {
-  const {
-    onProgress,
-    setIsControlVisibilityLocked,
-    playheadRef,
-  } = React.useContext(InternalPlayerContext);
+  const { setIsControlVisibilityLocked, playheadRef } = React.useContext(
+    InternalPlayerContext
+  );
+  const { addProgressHandler } = React.useContext(NowPlayingContext);
   const currentProgressValue = React.useRef(
     new Animated.Value(
       playheadRef.current.currentTime /
@@ -100,13 +99,13 @@ const Seeker = ({
 
   React.useEffect(
     () =>
-      onProgress(({ currentTime, playableDuration }: IProgressProp) => {
+      addProgressHandler(({ currentTime, playableDuration }: IProgressProp) => {
         if (isSeekingRef.current) return;
         currentProgressValue.setValue(
           currentTime / Math.max(playableDuration, 1)
         );
       }),
-    [onProgress, currentProgressValue]
+    [addProgressHandler, currentProgressValue]
   );
 
   const trackBarWidth = React.useMemo(() => {

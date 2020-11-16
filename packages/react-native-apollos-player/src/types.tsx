@@ -17,6 +17,12 @@ export interface IPlayerMedia {
       };
 }
 
+export interface IProgressProp {
+  currentTime: number;
+  playableDuration: number;
+  seekableDuration: number;
+}
+
 export interface INowPlaying {
   /** Currently playing media */
   nowPlaying: IPlayerMedia | null;
@@ -35,12 +41,7 @@ export interface INowPlaying {
 
   isInPiP: boolean;
   setIsInPiP: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-export interface IProgressProp {
-  currentTime: number;
-  playableDuration: number;
-  seekableDuration: number;
+  addProgressHandler: (handler: (props: IProgressProp) => void) => () => void;
 }
 
 export interface IProgressRef {
@@ -58,9 +59,7 @@ export interface IInternalPlayer {
   >;
   setIsControlVisibilityLocked: React.Dispatch<React.SetStateAction<boolean>>;
   isControlVisibilityLocked: boolean;
-  onProgress: (handlerToAdd: (props: IProgressProp) => void) => () => void;
   handleProgress: (props: IProgressProp) => void;
-
   playheadRef: {
     current: {
       currentTime: number;
