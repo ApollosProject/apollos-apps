@@ -20,7 +20,7 @@ const FooterWrapper = styled(
     left: 0,
     right: 0,
   },
-  'ApollosPlayer.FullscreenPresentation.FooterWrapper'
+  'ApollosPlayer.Controls.FooterWrapper'
 )(SafeAreaView);
 
 const FooterControls = styled(
@@ -31,7 +31,7 @@ const FooterControls = styled(
     alignItems: 'center',
     paddingVertical: theme?.sizing?.baseUnit,
   }),
-  'ApollosPlayer.FullscreenPresentation.FooterControls'
+  'ApollosPlayer.Controls.FooterControls'
 )(View);
 
 const IconSm = withTheme(
@@ -40,7 +40,7 @@ const IconSm = withTheme(
     iconPadding: theme?.sizing?.baseUnit,
     fill: theme?.colors?.text?.secondary,
   }),
-  'ApollosPlayer.FullscreenPresentation.FullscreenControls.IconSm'
+  'ApollosPlayer.Controls.FullscreenControls.IconSm'
 )(ButtonIcon);
 
 const IconMd = withTheme(
@@ -48,10 +48,10 @@ const IconMd = withTheme(
     size: theme?.sizing?.baseUnit * 2,
     iconPadding: theme?.sizing?.baseUnit,
   }),
-  'ApollosPlayer.FullscreenPresentation.FullscreenControls.IconMd'
+  'ApollosPlayer.Controls.FullscreenControls.IconMd'
 )(ButtonIcon);
 
-const FullscreenPresentation = () => {
+const Controls = () => {
   const {
     isFullscreen,
     setIsFullscreen,
@@ -86,4 +86,4 @@ const FullscreenPresentation = () => {
   );
 };
 
-export default FullscreenPresentation;
+export default Controls;
