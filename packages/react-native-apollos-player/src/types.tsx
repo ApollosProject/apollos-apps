@@ -1,6 +1,3 @@
-import type { FunctionComponent } from 'react';
-import type { MiniPresentationProps } from './presentations/MiniPresentation';
-
 export interface IPlayerMedia {
   /** Media Source to play. Passed unaltered to underyling Video component */
   source?: number | { uri?: string | undefined };
@@ -9,15 +6,15 @@ export interface IPlayerMedia {
 
   /** props intended to be used by Presentation Components */
   presentationProps?:
-  | any // so you can roll your own presentation components!
-  | {
-    /** Title to display above video */
-    title?: string;
-    /** Description to display above video */
-    description?: string;
-    /** "Badge" to render in the corner of the video. Ex: live badge */
-    badge?: JSX.Element;
-  };
+    | any // so you can roll your own presentation components!
+    | {
+        /** Title to display above video */
+        title?: string;
+        /** Description to display above video */
+        description?: string;
+        /** "Badge" to render in the corner of the video. Ex: live badge */
+        badge?: JSX.Element;
+      };
 }
 
 export interface INowPlaying {
@@ -47,7 +44,7 @@ export interface IProgressProp {
 }
 
 export interface IProgressRef {
-  current: IProgressProp
+  current: IProgressProp;
 }
 
 export interface IInternalPlayer {
@@ -71,11 +68,4 @@ export interface IInternalPlayer {
       seekableDuration: number;
     };
   };
-}
-
-export interface IPresentationComponents {
-  /** Component that renders the actual video. Default: react-native-video */
-  VideoComponent?: FunctionComponent;
-  /** Component that is displayed above the video */
-  PresentationComponent?: FunctionComponent<MiniPresentationProps>;
 }

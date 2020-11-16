@@ -9,19 +9,24 @@ import {
   View,
 } from 'react-native';
 
-import { PresentationContext, NowPlayingContext } from './context';
+import { NowPlayingContext } from './context';
 
 import VideoPresentationContainer from './VideoPresentationContainer';
 
 import VideoOutlet from './VideoOutlet';
 
-interface FullScreenSlidingPlayerProps { }
+interface FullScreenSlidingPlayerProps {
+  /** Component that renders the actual video. Default: react-native-video */
+  VideoComponent?: React.FunctionComponent;
+  /** Component that is displayed above the video */
+  ControlsComponent?: React.FunctionComponent;
+}
 
 const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerProps> = ({
+  ControlsComponent,
+  VideoComponent,
   children,
 }) => {
-  const { PresentationComponent } = React.useContext(PresentationContext);
-
   const [layout, setLayout] = React.useState({
     x: 0,
     y: 0,
@@ -121,7 +126,6 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
     [fullscreenAnimation, window.height]
   );
 
-
   // TODO: Refactor not to use useMemo.
   let FullscreenWrapper = React.useMemo(() => {
     // We have to wrap fullscreen view in <Modal> on iOS in order to make sure
@@ -170,10 +174,8 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
 
       {/* Primary Video View */}
       <Animated.View style={presentationStyles}>
-        <VideoPresentationContainer />
-        {!isFullscreen && PresentationComponent ? (
-          <PresentationComponent />
-        ) : null}
+        <VideoPresentationContainer VideoComponent={VideoComponent} />
+        {!isFullscreen && ControlsComponent ? <ControlsComponent /> : null}
       </Animated.View>
 
       {/* iOS-only modal-based fullScreen controls */}
@@ -182,9 +184,7 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
           style={[presentationStyles, fullscreenPresentationStyles]}
         >
           {isFullscreen ? <VideoOutlet /> : null}
-          {isFullscreen && PresentationComponent ? (
-            <PresentationComponent />
-          ) : null}
+          {isFullscreen && ControlsComponent ? <ControlsComponent /> : null}
         </Animated.View>
       </FullscreenWrapper>
 

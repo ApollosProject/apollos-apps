@@ -10,14 +10,17 @@ import {
   withTheme,
 } from '@apollosproject/ui-kit';
 
-import usePlayer from '../../usePlayer';
+import usePlayer from '../usePlayer';
 
-const Image = styled(({ theme }: any) => ({
-  width: theme?.sizing?.baseUnit * 3.5,
-  borderRadius: theme.sizing.baseUnit,
-  marginBottom: theme.sizing.baseUnit,
-  aspectRatio: 1,
-}), 'ApollosPlayer.FullscreenPresentation.Header.CoverImage')(ConnectedImage);
+const Image = styled(
+  ({ theme }: any) => ({
+    width: theme?.sizing?.baseUnit * 3.5,
+    borderRadius: theme.sizing.baseUnit,
+    marginBottom: theme.sizing.baseUnit,
+    aspectRatio: 1,
+  }),
+  'ApollosPlayer.FullscreenPresentation.Header.CoverImage'
+)(ConnectedImage);
 
 const PiPButton = withTheme(
   ({ theme }: any) => ({
@@ -33,10 +36,13 @@ const PiPButton = withTheme(
   'ApollosPlayer.FullscreenPresentation.Header.DownButton'
 )(ButtonIcon);
 
-const Container = styled({
-  flexDirection: 'row',
-  justifyContent: 'space-between',
-}, 'ApollosPlayer.FullscreenPresentation.Header.Container')(SafeAreaView);
+const Container = styled(
+  {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  'ApollosPlayer.FullscreenPresentation.Header.Container'
+)(SafeAreaView);
 
 const Header: React.FunctionComponent = () => {
   const { nowPlaying, isInPiP, setIsInPiP } = usePlayer();

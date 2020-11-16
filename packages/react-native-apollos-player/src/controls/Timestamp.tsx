@@ -2,7 +2,7 @@ import * as React from 'react';
 import { View } from 'react-native';
 
 import { H6, styled } from '@apollosproject/ui-kit';
-import { InternalPlayerContext } from '../../context';
+import { InternalPlayerContext } from '../context';
 
 const TimeText = styled(
   {

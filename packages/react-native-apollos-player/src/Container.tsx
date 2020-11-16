@@ -1,27 +1,22 @@
 import * as React from 'react';
-import type {
-  IPlayerMedia,
-  IPresentationComponents,
-  IProgressProp,
-  IProgressRef,
-} from './types';
+import type { IPlayerMedia, IProgressProp, IProgressRef } from './types';
 import FullscreenSlidingPlayer from './FullscreenSlidingPlayer';
-import {
-  NowPlayingContext,
-  PresentationContext,
-  InternalPlayerContext,
-} from './context';
+import { NowPlayingContext, InternalPlayerContext } from './context';
 
-import FullscreenPresentation from './presentations/FullscreenPresentation';
-import RNVideoPresentation from './presentations/RNVideoPresentation';
+import Controls from './controls';
+import RNVideo from './RNVideo';
 
-interface ContainerProps extends IPresentationComponents, IPlayerMedia {
+interface ContainerProps extends IPlayerMedia {
   autoplay?: Boolean;
+  /** Component that renders the actual video. Default: react-native-video */
+  VideoComponent?: React.FunctionComponent;
+  /** Component that is displayed above the video */
+  ControlsComponent?: React.FunctionComponent;
 }
 
 const Container: React.FunctionComponent<ContainerProps> = ({
-  VideoComponent = RNVideoPresentation,
-  PresentationComponent = FullscreenPresentation,
+  VideoComponent = RNVideo,
+  ControlsComponent = Controls,
   children,
   source,
   coverImage,
@@ -38,10 +33,10 @@ const Container: React.FunctionComponent<ContainerProps> = ({
   const [isInPiP, setIsInPiP] = React.useState<boolean>(false);
   const [playerId, setPlayerId] = React.useState<string>('');
   const [seek, setSeekHandler] = React.useState<(seekTo: number) => void>(
-    () => { }
+    () => {}
   );
   const [skip, setSkipHandler] = React.useState<(skipBy: number) => void>(
-    () => { }
+    () => {}
   );
   const [
     isControlVisibilityLocked,
@@ -51,14 +46,11 @@ const Container: React.FunctionComponent<ContainerProps> = ({
     Array<(props: IProgressProp) => void>
   >([]);
 
-
   const reset = React.useCallback(() => {
     setNowPlaying(null);
     setIsPlaying(false);
     setIsFullscreen(false);
-  },
-    [setNowPlaying, setIsPlaying, setIsFullscreen]
-  );
+  }, [setNowPlaying, setIsPlaying, setIsFullscreen]);
 
   const playheadRef: IProgressRef = React.useRef<IProgressProp>({
     currentTime: 0,
@@ -107,13 +99,14 @@ const Container: React.FunctionComponent<ContainerProps> = ({
     [setProgressHandlers]
   );
 
-  const handleProgress = React.useCallback((playhead: {
-    currentTime: number;
-    playableDuration: number;
-    seekableDuration: number;
-  }) => {
-    progressHandlers.forEach((handler) => handler(playhead));
-  },
+  const handleProgress = React.useCallback(
+    (playhead: {
+      currentTime: number;
+      playableDuration: number;
+      seekableDuration: number;
+    }) => {
+      progressHandlers.forEach((handler) => handler(playhead));
+    },
     [progressHandlers]
   );
 
@@ -142,22 +135,16 @@ const Container: React.FunctionComponent<ContainerProps> = ({
     ]
   );
 
-  // todo: we can removte
-  const presentationState = React.useMemo(
-    () => ({
-      VideoComponent,
-      PresentationComponent,
-    }),
-    [VideoComponent, PresentationComponent]
-  );
-
   return (
     <NowPlayingContext.Provider value={nowPlayingState}>
-      <PresentationContext.Provider value={presentationState}>
-        <InternalPlayerContext.Provider value={internalPlayerState}>
-          <FullscreenSlidingPlayer>{children}</FullscreenSlidingPlayer>
-        </InternalPlayerContext.Provider>
-      </PresentationContext.Provider>
+      <InternalPlayerContext.Provider value={internalPlayerState}>
+        <FullscreenSlidingPlayer
+          VideoComponent={VideoComponent}
+          ControlsComponent={ControlsComponent}
+        >
+          {children}
+        </FullscreenSlidingPlayer>
+      </InternalPlayerContext.Provider>
     </NowPlayingContext.Provider>
   );
 };

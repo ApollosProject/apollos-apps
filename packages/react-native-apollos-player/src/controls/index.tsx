@@ -7,8 +7,8 @@ import {
   ButtonIcon,
 } from '@apollosproject/ui-kit';
 
-import FadeoutOverlay from '../../FadeoutOverlay';
-import usePlayer from '../../usePlayer';
+import FadeoutOverlay from '../FadeoutOverlay';
+import usePlayer from '../usePlayer';
 
 import Header from './Header';
 import Seeker from './Seeker';

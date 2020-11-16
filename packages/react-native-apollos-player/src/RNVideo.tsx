@@ -2,9 +2,9 @@ import * as React from 'react';
 import { StyleSheet, View, InteractionManager, Platform } from 'react-native';
 import Video from 'react-native-video';
 import { styled } from '@apollosproject/ui-kit';
-import usePlayer from '../usePlayer';
+import usePlayer from './usePlayer';
 
-import { InternalPlayerContext } from '../context';
+import { InternalPlayerContext } from './context';
 
 const Container = styled(
   ({ theme }: any) => ({
@@ -33,7 +33,8 @@ const RNVideoPresentation = () => {
     playheadRef,
   } = React.useContext(InternalPlayerContext);
 
-  const handleProgressProp = React.useCallback((playhead: {
+  const handleProgressProp = React.useCallback(
+    (playhead: {
       currentTime: number;
       playableDuration: number;
       seekableDuration: number;
@@ -46,11 +47,11 @@ const RNVideoPresentation = () => {
     [playheadRef, handleProgress]
   );
 
-  const handleLoad = ({ duration }) => {
+  const handleLoad = ({ duration }: { duration: number }) => {
     playheadRef.current.seekableDuration = duration;
     playheadRef.current.playableDuration = duration;
     handleProgress(playheadRef.current);
-  }
+  };
 
   const videoRef = React.useRef<Video>(null);
 

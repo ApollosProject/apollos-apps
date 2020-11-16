@@ -1,13 +1,6 @@
 import * as React from 'react';
 
-import type {
-  IPresentationComponents,
-  INowPlaying,
-  IInternalPlayer,
-  IProgressProp,
-} from './types';
-import MiniPresentation from './presentations/MiniPresentation';
-import RNVideoPresentation from './presentations/RNVideoPresentation';
+import type { INowPlaying, IInternalPlayer, IProgressProp } from './types';
 
 export const NowPlayingContext = React.createContext<INowPlaying>({
   nowPlaying: null,
@@ -22,13 +15,6 @@ export const NowPlayingContext = React.createContext<INowPlaying>({
   isInPiP: false,
   setIsInPiP: () => null,
 });
-
-export const PresentationContext = React.createContext<IPresentationComponents>(
-  {
-    VideoComponent: RNVideoPresentation,
-    PresentationComponent: MiniPresentation,
-  }
-);
 
 export const InternalPlayerContext = React.createContext<IInternalPlayer>({
   setPlayerId: () => null,

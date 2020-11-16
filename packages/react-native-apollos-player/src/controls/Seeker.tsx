@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { View, Animated, StyleSheet, PanResponder } from 'react-native';
 import { styled, withTheme } from '@apollosproject/ui-kit';
-import usePlayer from '../../usePlayer';
+import usePlayer from '../usePlayer';
 
-import type { IProgressProp } from '../../types';
-import { InternalPlayerContext } from '../../context';
+import type { IProgressProp } from '../types';
+import { InternalPlayerContext } from '../context';
 
 import Timestamp from './Timestamp';
 
@@ -49,13 +49,16 @@ const ProgressBar = styled(
 )(View);
 
 // to create hit slop the actual Knob view is larger then the visible knob.
-const KnobInside = styled(({ knobSize, theme }: any) => ({
-  width: knobSize,
-  height: knobSize,
-  elevation: 2,
-  borderRadius: theme?.sizing?.baseUnit,
-  backgroundColor: theme?.colors?.text?.primary,
-}), 'ApollosPlayer.MediaPlayer.Seeker.KnobInside')(View);
+const KnobInside = styled(
+  ({ knobSize, theme }: any) => ({
+    width: knobSize,
+    height: knobSize,
+    elevation: 2,
+    borderRadius: theme?.sizing?.baseUnit,
+    backgroundColor: theme?.colors?.text?.primary,
+  }),
+  'ApollosPlayer.MediaPlayer.Seeker.KnobInside'
+)(View);
 
 const Knob = styled(
   ({ theme, knobSize }: any) => ({
@@ -123,7 +126,8 @@ const Seeker = ({
         },
         onPanResponderMove: (_, { dx }) => {
           const progressAtStart =
-            playheadRef.current.currentTime / Math.max(1, playheadRef.current.playableDuration);
+            playheadRef.current.currentTime /
+            Math.max(1, playheadRef.current.playableDuration);
 
           const offsetProgress = dx / layoutWidthRef.current;
 
@@ -131,19 +135,21 @@ const Seeker = ({
         },
         onPanResponderRelease: async (_, { dx }) => {
           const progressAtStart =
-            playheadRef.current.currentTime / Math.max(1, playheadRef.current.playableDuration);
+            playheadRef.current.currentTime /
+            Math.max(1, playheadRef.current.playableDuration);
           const offsetProgress = dx / layoutWidthRef.current;
 
           const newProgress = progressAtStart + offsetProgress;
 
-          const newSeekValue = newProgress * playheadRef.current.playableDuration;
+          const newSeekValue =
+            newProgress * playheadRef.current.playableDuration;
 
           seek(newSeekValue);
           isSeekingRef.current = false;
           setIsControlVisibilityLocked(false);
         },
       }),
-    [currentProgressValue, setIsControlVisibilityLocked, seek]
+    [currentProgressValue, setIsControlVisibilityLocked, seek, playheadRef]
   );
 
   return (
