@@ -16,15 +16,21 @@ export default () => {
       setIsPlaying(true);
     });
 
+    MusicControl.enableControl('pause', true);
+    // @ts-ignore
+    MusicControl.on('pause', () => {
+      setIsPlaying(false);
+    });
+
     MusicControl.enableControl('skipBackward', true, { interval: 30 });
     // @ts-ignore
     MusicControl.on('skipBackward', () => {
-      skip(30);
+      skip(-30);
     });
     MusicControl.enableControl('skipForward', true, { interval: 30 });
     // @ts-ignore
     MusicControl.on('skipForward', () => {
-      skip(-30);
+      skip(30);
     });
 
     MusicControl.setNowPlaying({
