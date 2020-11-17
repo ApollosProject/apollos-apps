@@ -140,13 +140,20 @@ const Container: React.FunctionComponent<ContainerProps> = ({
       <PlayerControlsContext.Provider value={playerControlsContext}>
         <NowPlayingContext.Provider value={nowPlayingContext}>
           <PlayheadContext.Provider value={playheadContext}>
-            <NativeControls />
-            <FullscreenSlidingPlayer
-              VideoComponent={VideoComponent}
-              ControlsComponent={ControlsComponent}
-            >
-              {children}
-            </FullscreenSlidingPlayer>
+            {React.useMemo(
+              () => (
+                <React.Fragment>
+                  <NativeControls />
+                  <FullscreenSlidingPlayer
+                    VideoComponent={VideoComponent}
+                    ControlsComponent={ControlsComponent}
+                  >
+                    {children}
+                  </FullscreenSlidingPlayer>
+                </React.Fragment>
+              ),
+              [children, VideoComponent, ControlsComponent]
+            )}
           </PlayheadContext.Provider>
         </NowPlayingContext.Provider>
       </PlayerControlsContext.Provider>

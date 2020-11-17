@@ -10,6 +10,7 @@ import {
 } from '@apollosproject/react-native-apollos-player';
 
 const PlayerExamples = () => {
+  console.log('rendering PlayerExamples');
   const { setNowPlaying } = useNowPlaying();
   const { setPictureMode, play, pause } = usePlayerControls();
 

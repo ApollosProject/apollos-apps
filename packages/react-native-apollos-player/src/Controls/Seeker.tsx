@@ -79,17 +79,31 @@ const Seeker = ({
   knobSize: number;
 }) => {
   const { elapsedTime, totalDuration } = usePlayhead();
-  const { setIsControlVisibilityLocked, seek } = usePlayerControls();
+  const {
+    setIsControlVisibilityLocked,
+    isControlVisibilityLocked,
+    seek,
+  } = usePlayerControls();
 
-  const isSeekingRef = React.useRef(false);
   const layoutWidthRef = React.useRef(1);
 
   const currentProgress = elapsedTime / Math.max(totalDuration, 1);
+
+  // Okay, this is kind of bummer but these are refs so that the PanResponder
+  // function below will not re-initialize while panning...which would cause
+  // the panresponder to go bonkers if it happened. Here's a cookie 🥠
+  const currentProgressRef = React.useRef(currentProgress);
+  const totalDurationRef = React.useRef(totalDuration);
+
   const currentProgressAnimation = React.useRef(
     new Animated.Value(currentProgress)
   ).current;
 
-  currentProgressAnimation.setValue(currentProgress);
+  if (!isControlVisibilityLocked) {
+    currentProgressAnimation.setValue(currentProgress);
+    currentProgressRef.current = currentProgress;
+    totalDurationRef.current = totalDuration;
+  }
 
   const trackBarWidth = React.useMemo(() => {
     return currentProgressAnimation.interpolate({
@@ -103,35 +117,40 @@ const Seeker = ({
       PanResponder.create({
         onStartShouldSetPanResponder: () => true,
         onPanResponderGrant: () => {
-          isSeekingRef.current = true;
           setIsControlVisibilityLocked(true);
         },
         onPanResponderMove: (_, { dx }) => {
-          const progressAtStart = currentProgress;
+          const progressAtStart = currentProgressRef.current;
 
           const offsetProgress = dx / layoutWidthRef.current;
 
           currentProgressAnimation.setValue(progressAtStart + offsetProgress);
         },
         onPanResponderRelease: async (_, { dx }) => {
-          const progressAtStart = currentProgress;
+          const progressAtStart = currentProgressRef.current;
           const offsetProgress = dx / layoutWidthRef.current;
 
           const newProgress = progressAtStart + offsetProgress;
 
-          const newSeekValue = newProgress * totalDuration;
+          console.log('onPanResponderRelease', {
+            progressAtStart,
+            offsetProgress,
+            newProgress,
+            dx,
+          });
+
+          const newSeekValue = newProgress * totalDurationRef.current;
 
           seek(newSeekValue);
-          isSeekingRef.current = false;
           setIsControlVisibilityLocked(false);
         },
       }),
     [
+      currentProgressRef,
+      totalDurationRef,
       currentProgressAnimation,
-      currentProgress,
       setIsControlVisibilityLocked,
       seek,
-      totalDuration,
     ]
   );
 

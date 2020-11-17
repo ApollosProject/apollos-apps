@@ -26,8 +26,12 @@ const RNVideoPresentation = () => {
     updatePlayhead,
   } = useInternalPlayer();
 
-  const durationRef = React.useRef(1);
-  const elapsedTimeRef = React.useRef(0);
+  const playheadRef = React.useRef({
+    totalDuration: 1,
+    seekableDuration: 1,
+    playableDuration: 1,
+    elapsedTime: 0,
+  });
 
   const handleProgressProp = React.useCallback(
     (playhead: {
@@ -35,33 +39,28 @@ const RNVideoPresentation = () => {
       playableDuration: number;
       seekableDuration: number;
     }) => {
-      const maxDuration = Math.max(
-        durationRef.current,
+      const totalDuration = Math.max(
+        playheadRef.current.totalDuration,
         playhead.playableDuration,
         playhead.seekableDuration
       );
 
-      durationRef.current = maxDuration;
-      elapsedTimeRef.current = playhead.currentTime;
-
-      updatePlayhead({
-        totalDuration: maxDuration,
+      const newPlayhead = {
+        totalDuration,
         seekableDuration: playhead.seekableDuration,
         playableDuration: playhead.playableDuration,
         elapsedTime: playhead.currentTime,
-      });
+      };
+
+      playheadRef.current = newPlayhead;
+      updatePlayhead(newPlayhead);
     },
-    [updatePlayhead, durationRef]
+    [updatePlayhead, playheadRef]
   );
 
   const handleLoad = ({ duration }: { duration: number }) => {
-    durationRef.current = duration;
-    updatePlayhead({
-      totalDuration: duration,
-      seekableDuration: 1,
-      playableDuration: 1,
-      elapsedTime: 0,
-    });
+    playheadRef.current = { ...playheadRef.current, totalDuration: duration };
+    updatePlayhead(playheadRef.current);
   };
 
   const videoRef = React.useRef<Video>(null);
@@ -71,18 +70,27 @@ const RNVideoPresentation = () => {
       videoRef?.current?.seek(
         Math.max(
           0,
-          Math.min(elapsedTimeRef.current + skipBy, durationRef.current)
+          Math.min(
+            playheadRef.current.elapsedTime + skipBy,
+            playheadRef.current.totalDuration
+          )
         )
       );
     },
-    [videoRef, elapsedTimeRef, durationRef]
+    [videoRef, playheadRef]
   );
 
   React.useEffect(() => setSkipHandler(() => skip), [setSkipHandler, skip]);
 
   const seek = React.useCallback(
-    (seekBy: number) => videoRef?.current?.seek(seekBy),
-    [videoRef]
+    (seekTo: number) => {
+      videoRef?.current?.seek(seekTo);
+      updatePlayhead({
+        ...playheadRef.current,
+        elapsedTime: seekTo,
+      });
+    },
+    [videoRef, playheadRef, updatePlayhead]
   );
 
   React.useEffect(() => setSeekHandler(() => seek), [setSeekHandler, seek]);
