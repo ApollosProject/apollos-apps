@@ -110,6 +110,8 @@ const RNVideoPresentation = () => {
     <Container>
       {nowPlaying?.source ? (
         <Video
+          // this forces a remount when the source changes...helps prevent bugs
+          key={(nowPlaying?.source || '').toString()}
           ref={videoRef}
           source={nowPlaying?.source}
           paused={!isPlaying}
