@@ -1,8 +1,8 @@
 export interface IPlayerMedia {
   /** Media Source to play. Passed unaltered to underyling Video component */
-  source?: number | { uri?: string | undefined };
+  source?: { uri?: string };
   /** Image to display while loading */
-  coverImage?: number | { uri: string } | [{ uri: string }];
+  coverImage?: { uri?: string } | [{ uri: string }];
 
   /** props intended to be used by Presentation Components */
   presentationProps?:

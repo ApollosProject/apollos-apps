@@ -57,6 +57,7 @@
     "pod-install": "^0.1.0",
     "react": "16.13.1",
     "react-native": "0.63.2",
+    "react-native-music-control": "^1.2.1",
     "react-native-video": "^5.1.0-alpha8",
     "release-it": "^13.5.8",
     "typescript": "^3.8.3",
@@ -66,6 +67,7 @@
     "@apollosproject/ui-kit": "*",
     "react": "*",
     "react-native": "*",
+    "react-native-music-control": "*",
     "react-native-video": "*"
   },
   "jest": {

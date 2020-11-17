@@ -17944,6 +17944,11 @@ react-native-music-control@0.10.8:
   resolved "https://registry.yarnpkg.com/react-native-music-control/-/react-native-music-control-0.10.8.tgz#72272bf9cb1fc0142dc38c99e5f2142fece3c37a"
   integrity sha512-MRPdHpRwl4E2xS4JP2S+XtlFznGrYhizHERKrqE0GnpF/Osei+0fBtOdjHBVu/PkiYS/cwNeUxWdymmpmyQVpg==
 
+react-native-music-control@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-native-music-control/-/react-native-music-control-1.2.1.tgz#daf080fc9dbb1bfdf932196654043e8a78bbeb33"
+  integrity sha512-0ootW5rpecwrzyNn4tBv+4B44C6nYEajtxRW/7oeOo8k3Ctq61ktkS9RD5m9mPtp3gjVzg/QPXsR6N4IBWVP7w==
+
 react-native-onesignal@3.9.1:
   version "3.9.1"
   resolved "https://registry.yarnpkg.com/react-native-onesignal/-/react-native-onesignal-3.9.1.tgz#b47c2ab61e84dcc7fce63cd565574760c01b1f46"

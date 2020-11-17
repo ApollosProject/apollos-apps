@@ -16,10 +16,10 @@ const PlayerExamples = () => {
         onPress={() => {
           setNowPlaying({
             source: require('./broadchurch.mp4'),
+            coverImage: { uri: 'https://picsum.photos/100/100' },
             presentationProps: {
               title: 'Video Title',
               description: 'Video Description',
-              coverImage: { uri: 'https://picsum.photos/100/100' },
             },
           });
           setIsPlaying(true);

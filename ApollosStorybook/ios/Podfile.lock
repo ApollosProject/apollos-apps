@@ -264,7 +264,7 @@ PODS:
     - React
   - react-native-maps (0.26.1):
     - React
-  - react-native-music-control (0.10.8):
+  - react-native-music-control (1.2.1):
     - React
   - react-native-onesignal (3.9.1):
     - OneSignal (= 2.15.2)
@@ -611,7 +611,7 @@ SPEC CHECKSUMS:
   react-native-google-cast: 410619ef162b8b91815ecf7271502224998dee8e
   react-native-image-picker: e6e06d4315e3c85bad17e4b2002cd29f11d202c8
   react-native-maps: 6e499eee4eabf422ba8b6f94e993cc768bf35153
-  react-native-music-control: dcfe5b61e56a15898c4618579cb8ce612c9d21a8
+  react-native-music-control: 781c6ee82ebd845ced981ded73d993272e16c76a
   react-native-onesignal: ad2eaab1517951e50d19fa3eccd16d3048167181
   react-native-passkit-wallet: 51e3babdaeec4c10b5736786ebd1bfb470fcaa36
   react-native-safari-view: 955d7160d159241b8e9395d12d10ea0ef863dcdd
@@ -645,4 +645,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 9e460878e788d60300da30e23b50ec4f722772a5
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3
