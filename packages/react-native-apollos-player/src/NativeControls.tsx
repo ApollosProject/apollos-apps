@@ -3,9 +3,14 @@ import MusicControl from 'react-native-music-control';
 import { NowPlayingContext, InternalPlayerContext } from './context';
 
 export default () => {
-  const { nowPlaying, isPlaying, setIsPlaying, skip, seek } = useContext(
-    NowPlayingContext
-  );
+  const {
+    nowPlaying,
+    isPlaying,
+    setIsPlaying,
+    skip,
+    seek,
+    addProgressHandler,
+  } = useContext(NowPlayingContext);
   const { playheadRef } = useContext(InternalPlayerContext);
 
   // configure controls and handle unmount
@@ -34,7 +39,7 @@ export default () => {
       //artist: 'Church',
       //album: 'Sermons - Series',
       //genre: 'Post-disco, Rhythm and Blues, Funk, Dance-pop',
-      duration: playheadRef?.current?.playableDuration, // (Seconds)
+      duration: 130, // (Seconds)
       description: nowPlaying?.presentationProps?.description, // Android Only
       color: 0xffffff, // Android Only - Notification Color
       colorized: true, // Android 8+ Only - Notification Color extracted from the artwork. Set to false to use the color property instead
@@ -73,10 +78,12 @@ export default () => {
 
   // update elapsed time
   useEffect(() => {
-    MusicControl.updatePlayback({
-      elapsedTime: playheadRef?.current?.currentTime,
-    });
-  }, [playheadRef]);
+    addProgressHandler(({ currentTime }) =>
+      MusicControl.updatePlayback({
+        elapsedTime: currentTime,
+      })
+    );
+  }, [addProgressHandler]);
 
   return null;
 };
