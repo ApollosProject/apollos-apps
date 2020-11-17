@@ -251,6 +251,7 @@ export default gql`
     likedCount: Int
     sharing: SharableContentItem
     features: [Feature]
+    featureFeed: FeatureFeed
   }
 
   type Device implements Node {
@@ -307,6 +308,7 @@ export default gql`
 
   interface FeaturesNode {
     features: [Feature]
+    featureFeed: FeatureFeed
   }
 
   enum GENDER {
@@ -790,5 +792,6 @@ export default gql`
     liveStream: LiveStream
     sharing: SharableContentItem
     features: [Feature]
+    featureFeed: FeatureFeed
   }
 `;

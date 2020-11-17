@@ -16,6 +16,7 @@ exports[`FeaturesFeedConnected should render 1`] = `
         "scriptures": Array [
           Object {
             "__typename": "Scripture",
+            "id": "Scripture:2",
             "reference": "Matthew 4:10",
           },
         ],
@@ -26,6 +27,7 @@ exports[`FeaturesFeedConnected should render 1`] = `
         "scriptures": Array [
           Object {
             "__typename": "Scripture",
+            "id": "Scripture:4",
             "reference": "Mark 1:12",
           },
         ],
@@ -36,6 +38,7 @@ exports[`FeaturesFeedConnected should render 1`] = `
         "scriptures": Array [
           Object {
             "__typename": "Scripture",
+            "id": "Scripture:5",
             "reference": "John 3:16",
           },
         ],
