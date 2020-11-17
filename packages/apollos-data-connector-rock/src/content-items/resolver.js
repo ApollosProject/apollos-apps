@@ -8,6 +8,7 @@ import {
 import ApollosConfig from '@apollosproject/config';
 
 import sanitizeHtml from '../sanitize-html';
+import moment = require('moment');
 
 const { ROCK_MAPPINGS } = ApollosConfig;
 
@@ -53,8 +54,14 @@ export const defaultContentItemResolvers = {
   coverImage: (root, args, { dataSources: { ContentItem } }) =>
     ContentItem.getCoverImage(root),
 
-  publishDate: (root, args, { dataSources: { ContentItem } }) =>
-    ContentItem.getPublishDate(root),
+  // publishDate: (root, args, { dataSources: { ContentItem } }) =>
+  //   // ContentItem.getPublishDate(root),
+  //   {
+  //     console.log(root.startDateTime);
+  //     return "YOOOOO";
+  //   },
+
+  publishDate: ({ startDateTime }) => moment(startDateTime).format(),
 
   theme: () => null, // todo: integrate themes from Rock
 

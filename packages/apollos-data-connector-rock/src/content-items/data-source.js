@@ -191,6 +191,12 @@ export default class ContentItem extends RockApolloDataSource {
       .format();
   };
 
+  // getPublishDate = ({ startDateTime }) => {
+  //   moment(startDateTime)
+  //     .tz(ROCK.TIMEZONE)
+  //     .format();
+  // };
+
   createSummary = ({ content, attributeValues }) => {
     const summary = get(attributeValues, 'summary.value', '');
     if (summary !== '') return summary;
