@@ -8,12 +8,13 @@ import {
 } from '@apollosproject/ui-kit';
 
 import FadeoutOverlay from './FadeoutOverlay';
-import usePlayer from '../usePlayer';
+import { usePlayerControls } from '../context';
 
 import Header from './Header';
 import Seeker from './Seeker';
 
 import AirPlayButton from '../AirPlayButton';
+import { PictureMode } from '../types';
 
 const FooterWrapper = styled(
   {
@@ -68,12 +69,14 @@ const StyledAirPlayButton = withTheme(
 
 const Controls = () => {
   const {
-    isFullscreen,
-    setIsFullscreen,
+    pictureMode,
+    setPictureMode,
     isPlaying,
-    setIsPlaying,
+    play,
+    pause,
     skip,
-  } = usePlayer();
+  } = usePlayerControls();
+  const isFullscreen = pictureMode === PictureMode.Fullscreen;
 
   return (
     <ThemeMixin mixin={{ type: 'dark' }}>
@@ -86,12 +89,12 @@ const Controls = () => {
             <IconMd name="skip-back-thirty" onPress={() => skip(-30)} />
             <IconMd
               name={isPlaying ? 'pause' : 'play'}
-              onPress={() => setIsPlaying(!isPlaying)}
+              onPress={isPlaying ? pause : play}
             />
             <IconMd name="skip-forward-thirty" onPress={() => skip(30)} />
             <IconSm
               name="fullscreen"
-              onPress={() => setIsFullscreen(!isFullscreen)}
+              onPress={() => setPictureMode(PictureMode.Fullscreen)}
             />
           </FooterControls>
           <Seeker />

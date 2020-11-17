@@ -1,17 +1,12 @@
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import MusicControl from 'react-native-music-control';
-import { NowPlayingContext } from './context';
+
+import { useNowPlaying, usePlayerControls, usePlayhead } from './context';
 
 export default () => {
-  const {
-    nowPlaying,
-    isPlaying,
-    setIsPlaying,
-    skip,
-    seek,
-    duration,
-    addProgressHandler,
-  } = useContext(NowPlayingContext);
+  const nowPlaying = useNowPlaying();
+  const { isPlaying, play, pause, skip, seek } = usePlayerControls();
+  const { totalDuration, elapsedTime } = usePlayhead();
 
   // configure controls and handle unmount
   useEffect(() => {
@@ -39,7 +34,7 @@ export default () => {
       //artist: 'Church',
       //album: 'Sermons - Series',
       //genre: 'Post-disco, Rhythm and Blues, Funk, Dance-pop',
-      duration: duration, // (Seconds)
+      duration: totalDuration, // (Seconds)
       description: nowPlaying?.presentationProps?.description, // Android Only
       color: 0xffffff, // Android Only - Notification Color
       colorized: true, // Android 8+ Only - Notification Color extracted from the artwork. Set to false to use the color property instead
@@ -48,18 +43,14 @@ export default () => {
       //notificationIcon: 'my_custom_icon', // Android Only (String), Android Drawable resource name for a custom notification icon
       //isLiveStream: true, // iOS Only (Boolean), Show or hide Live Indicator instead of seekbar on lock screen for live streams. Default value is false.
     });
-  }, [nowPlaying, duration]);
+  }, [nowPlaying, totalDuration]);
 
   // configure listeners
   useEffect(() => {
     // @ts-ignore
-    MusicControl.on('play', () => {
-      setIsPlaying(true);
-    });
+    MusicControl.on('play', play);
     // @ts-ignore
-    MusicControl.on('pause', () => {
-      setIsPlaying(false);
-    });
+    MusicControl.on('pause', pause);
     // @ts-ignore
     MusicControl.on('skipBackward', () => {
       skip(-30);
@@ -69,21 +60,17 @@ export default () => {
       skip(30);
     });
     // @ts-ignore
-    MusicControl.on('togglePlayPause', () =>
-      isPlaying ? setIsPlaying(false) : setIsPlaying(true)
-    );
+    MusicControl.on('togglePlayPause', () => (isPlaying ? pause() : play()));
     // @ts-ignore
     MusicControl.on('changePlaybackPosition', (pos) => seek(pos));
-  }, [setIsPlaying, isPlaying, skip, seek]);
+  }, [play, pause, isPlaying, skip, seek]);
 
   // update elapsed time
   useEffect(() => {
-    addProgressHandler(({ currentTime }) =>
-      MusicControl.updatePlayback({
-        elapsedTime: currentTime,
-      })
-    );
-  }, [addProgressHandler]);
+    MusicControl.updatePlayback({
+      elapsedTime,
+    });
+  }, [elapsedTime]);
 
   return null;
 };

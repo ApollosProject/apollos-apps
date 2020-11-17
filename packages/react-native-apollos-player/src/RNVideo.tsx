@@ -2,9 +2,9 @@ import * as React from 'react';
 import { StyleSheet, View, InteractionManager, Platform } from 'react-native';
 import Video from 'react-native-video';
 import { styled } from '@apollosproject/ui-kit';
-import usePlayer from './usePlayer';
 
-import { InternalPlayerContext } from './context';
+import { useNowPlaying, usePlayerControls, useInternalPlayer } from './context';
+import { PictureMode } from './types';
 
 const Container = styled(
   ({ theme }: any) => ({
@@ -16,24 +16,18 @@ const Container = styled(
 )(View);
 
 const RNVideoPresentation = () => {
-  const {
-    nowPlaying,
-    setIsFullscreen,
-    isFullscreen,
-    isPlaying,
-    duration,
-    setIsPlaying,
-    setIsInPiP,
-    isInPiP,
-  } = usePlayer();
+  const nowPlaying = useNowPlaying();
+
+  const { isPlaying, pictureMode, setPictureMode, pause } = usePlayerControls();
 
   const {
     setSkipHandler,
     setSeekHandler,
-    handleProgress,
-    playheadRef,
-    setDuration,
-  } = React.useContext(InternalPlayerContext);
+    updatePlayhead,
+  } = useInternalPlayer();
+
+  const durationRef = React.useRef(1);
+  const elapsedTimeRef = React.useRef(0);
 
   const handleProgressProp = React.useCallback(
     (playhead: {
@@ -41,28 +35,33 @@ const RNVideoPresentation = () => {
       playableDuration: number;
       seekableDuration: number;
     }) => {
-      // We actually want to mutate the object in this case.
-      // That way we can preserve references to playheadRef.current
-      playheadRef.current = Object.assign(playheadRef.current, playhead);
-
       const maxDuration = Math.max(
-        duration,
+        durationRef.current,
         playhead.playableDuration,
         playhead.seekableDuration
       );
 
-      if (maxDuration !== duration) setDuration(maxDuration);
+      durationRef.current = maxDuration;
+      elapsedTimeRef.current = playhead.currentTime;
 
-      handleProgress(playhead);
+      updatePlayhead({
+        totalDuration: maxDuration,
+        seekableDuration: playhead.seekableDuration,
+        playableDuration: playhead.playableDuration,
+        elapsedTime: playhead.currentTime,
+      });
     },
-    [playheadRef, handleProgress, duration, setDuration]
+    [updatePlayhead, durationRef]
   );
 
-  const handleLoad = ({ duration: _duration }: { duration: number }) => {
-    setDuration(_duration);
-    playheadRef.current.seekableDuration = _duration;
-    playheadRef.current.playableDuration = _duration;
-    handleProgress(playheadRef.current);
+  const handleLoad = ({ duration }: { duration: number }) => {
+    durationRef.current = duration;
+    updatePlayhead({
+      totalDuration: duration,
+      seekableDuration: 1,
+      playableDuration: 1,
+      elapsedTime: 0,
+    });
   };
 
   const videoRef = React.useRef<Video>(null);
@@ -72,14 +71,11 @@ const RNVideoPresentation = () => {
       videoRef?.current?.seek(
         Math.max(
           0,
-          Math.min(
-            playheadRef.current.currentTime + skipBy,
-            playheadRef.current.seekableDuration
-          )
+          Math.min(elapsedTimeRef.current + skipBy, durationRef.current)
         )
       );
     },
-    [videoRef, playheadRef]
+    [videoRef, elapsedTimeRef, durationRef]
   );
 
   React.useEffect(() => setSkipHandler(() => skip), [setSkipHandler, skip]);
@@ -95,12 +91,12 @@ const RNVideoPresentation = () => {
   // and dismiss does still hide the status bar and Android controls
   React.useEffect(() => {
     if (Platform.OS !== 'android') return;
-    if (isFullscreen) {
+    if (pictureMode === PictureMode.Fullscreen) {
       videoRef.current?.presentFullscreenPlayer();
     } else {
       videoRef.current?.dismissFullscreenPlayer();
     }
-  }, [isFullscreen]);
+  }, [pictureMode]);
 
   return (
     <Container>
@@ -111,20 +107,25 @@ const RNVideoPresentation = () => {
           paused={!isPlaying}
           ignoreSilentSwitch={'ignore'}
           allowsExternalPlayback
-          // playInBackground
+          // playInBackground kills PiP mode
+          playInBackground={PictureMode.PictureInPicture !== pictureMode}
           playWhenInactive
           onProgress={handleProgressProp}
-          onAudioBecomingNoisy={() => setIsPlaying(false)}
-          pictureInPicture={isInPiP}
+          onAudioBecomingNoisy={pause}
+          pictureInPicture={pictureMode === PictureMode.PictureInPicture}
           onLoad={handleLoad}
-          onEnd={() => {
-            setIsPlaying(false);
+          onEnd={pause}
+          onPictureInPictureStatusChanged={({ isActive }) => {
+            if (isActive) {
+              // If the OS switches to PiP, make sure our state is updated:
+              setPictureMode(PictureMode.PictureInPicture);
+            } else if (pictureMode === PictureMode.PictureInPicture) {
+              // Only switch back to Normal pictureMode if we're still in PiP
+              setPictureMode(PictureMode.Normal);
+            }
           }}
-          onPictureInPictureStatusChanged={({ isActive }) =>
-            setIsInPiP(isActive)
-          }
           onRestoreUserInterfaceForPictureInPictureStop={() => {
-            setIsFullscreen(true);
+            setPictureMode(PictureMode.Fullscreen);
             InteractionManager.runAfterInteractions(() => {
               (videoRef.current as any).restoreUserInterfaceForPictureInPictureStopCompleted(
                 true
@@ -132,7 +133,9 @@ const RNVideoPresentation = () => {
             });
           }}
           repeat
-          resizeMode={isFullscreen ? 'contain' : 'cover'}
+          resizeMode={
+            PictureMode.Fullscreen === pictureMode ? 'contain' : 'cover'
+          }
           style={StyleSheet.absoluteFill}
         />
       ) : null}

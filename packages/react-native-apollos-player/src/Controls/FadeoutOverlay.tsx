@@ -7,16 +7,21 @@ import {
 } from 'react-native';
 import { styled } from '@apollosproject/ui-kit';
 import Color from 'color';
-import usePlayer from '../usePlayer';
-import { InternalPlayerContext } from '../context';
+import { PictureMode } from '../types';
+import { useNowPlaying, usePlayerControls } from '../context';
 
 const FadeoutOverlay: React.FunctionComponent<{
   style?: any;
   fadeTimeoutMs?: number;
   onPress?: (props: { isVisible: boolean }) => void;
 }> = ({ children, fadeTimeoutMs = 5000, style, ...other }) => {
-  const { nowPlaying, isPlaying, isFullscreen } = usePlayer();
-  const { isControlVisibilityLocked } = React.useContext(InternalPlayerContext);
+  const nowPlaying = useNowPlaying();
+  const {
+    isPlaying,
+    pictureMode,
+    isControlVisibilityLocked,
+  } = usePlayerControls();
+  const isFullscreen = pictureMode === PictureMode.Fullscreen;
 
   const [isPressing, setIsPressing] = React.useState(false);
 

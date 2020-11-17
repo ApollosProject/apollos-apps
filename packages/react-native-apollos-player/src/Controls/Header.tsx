@@ -10,7 +10,8 @@ import {
   withTheme,
 } from '@apollosproject/ui-kit';
 
-import usePlayer from '../usePlayer';
+import { useNowPlaying, usePlayerControls } from '../context';
+import { PictureMode } from '../types';
 
 const Image = styled(
   ({ theme }: any) => ({
@@ -45,8 +46,11 @@ const Container = styled(
 )(SafeAreaView);
 
 const Header: React.FunctionComponent = () => {
-  const { nowPlaying, isInPiP, setIsInPiP } = usePlayer();
+  const nowPlaying = useNowPlaying();
+  const { pictureMode, setPictureMode } = usePlayerControls();
   const [canPiP, setCanPiP] = React.useState(false);
+
+  const isInPiP = pictureMode === PictureMode.PictureInPicture;
 
   // Detect iOS PiP support
   React.useEffect(() => {
@@ -70,7 +74,15 @@ const Header: React.FunctionComponent = () => {
         <BodySmall>{nowPlaying?.presentationProps?.description}</BodySmall>
       </PaddedView>
 
-      {canPiP ? <PiPButton onPress={() => setIsInPiP(!isInPiP)} /> : null}
+      {canPiP ? (
+        <PiPButton
+          onPress={() =>
+            isInPiP
+              ? setPictureMode(PictureMode.PictureInPicture)
+              : setPictureMode(PictureMode.Normal)
+          }
+        />
+      ) : null}
     </Container>
   );
 };

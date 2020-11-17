@@ -1,31 +1,54 @@
 import * as React from 'react';
+import { useContext } from 'react';
 
-import type { INowPlaying, IInternalPlayer, IProgressProp } from './types';
+import {
+  INowPlaying,
+  IPlayerControls,
+  PictureMode,
+  IPlayhead,
+  IInternalPlayer,
+} from './types';
 
 export const NowPlayingContext = React.createContext<INowPlaying>({
-  nowPlaying: null,
-  isPlaying: false,
-  isFullscreen: false,
+  source: undefined,
+  coverImage: undefined,
+  presentationProps: undefined,
   setNowPlaying: () => null,
-  setIsPlaying: () => null,
-  setIsFullscreen: () => null,
-  reset: () => null,
-  seek: () => null,
-  skip: () => null,
-  isInPiP: false,
-  setIsInPiP: () => null,
-  addProgressHandler: (_: (props: IProgressProp) => void) => () => {},
 });
 
+export const useNowPlaying = () => useContext(NowPlayingContext);
+
+export const PlayerControlsContext = React.createContext<IPlayerControls>({
+  isPlaying: false,
+  pictureMode: PictureMode.Normal,
+  play: () => null,
+  pause: () => null,
+  seek: () => null,
+  skip: () => null,
+  setPictureMode: () => null,
+  setIsControlVisibilityLocked: () => null,
+  isControlVisibilityLocked: false,
+});
+
+export const usePlayerControls = () => useContext(PlayerControlsContext);
+
+export const PlayheadContext = React.createContext<IPlayhead>({
+  // Note: durations are initialized as 1 to help guard against a division by
+  // zero issue - common to do elapsedTime / duration to get % progress
+  totalDuration: 1,
+  seekableDuration: 1,
+  playableDuration: 1,
+  elapsedTime: 0,
+});
+
+export const usePlayhead = () => useContext(PlayheadContext);
+
 export const InternalPlayerContext = React.createContext<IInternalPlayer>({
+  playerId: '',
   setPlayerId: () => null,
   setSeekHandler: () => null,
   setSkipHandler: () => null,
-  setIsControlVisibilityLocked: () => null,
-  isControlVisibilityLocked: true,
-  playerId: '',
-  handleProgress: () => {},
-  playheadRef: {
-    current: { currentTime: 0, playableDuration: 1, seekableDuration: 1 },
-  },
+  updatePlayhead: () => null,
 });
+
+export const useInternalPlayer = () => useContext(InternalPlayerContext);

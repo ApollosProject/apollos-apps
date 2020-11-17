@@ -9,7 +9,9 @@ import {
   View,
 } from 'react-native';
 
-import { NowPlayingContext } from './context';
+import { PictureMode } from './types';
+
+import { usePlayerControls } from './context';
 
 import VideoPresentationContainer from './VideoPresentationContainer';
 
@@ -27,6 +29,8 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
   VideoComponent,
   children,
 }) => {
+  console.log('FullScreenSlidingPlayer is re-rendering');
+
   const [layout, setLayout] = React.useState({
     x: 0,
     y: 0,
@@ -44,7 +48,8 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
 
   const fullscreenAnimation = React.useRef(new Animated.Value(0)).current;
 
-  const { isFullscreen } = React.useContext(NowPlayingContext);
+  const { pictureMode } = usePlayerControls();
+  const isFullscreen = pictureMode === PictureMode.Fullscreen;
 
   Animated.spring(fullscreenAnimation, {
     toValue: isFullscreen ? 1 : 0,

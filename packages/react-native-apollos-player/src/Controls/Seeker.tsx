@@ -1,10 +1,7 @@
 import * as React from 'react';
 import { View, Animated, StyleSheet, PanResponder } from 'react-native';
 import { styled, withTheme } from '@apollosproject/ui-kit';
-import usePlayer from '../usePlayer';
-
-import type { IProgressProp } from '../types';
-import { InternalPlayerContext, NowPlayingContext } from '../context';
+import { usePlayerControls, usePlayhead } from '../context';
 
 import Timestamp from './Timestamp';
 
@@ -81,34 +78,25 @@ const Seeker = ({
   minimal: Boolean;
   knobSize: number;
 }) => {
-  const { setIsControlVisibilityLocked, playheadRef } = React.useContext(
-    InternalPlayerContext
-  );
-  const { addProgressHandler, duration } = React.useContext(NowPlayingContext);
-  const currentProgressValue = React.useRef(
-    new Animated.Value(playheadRef.current.currentTime / Math.max(duration, 1))
-  ).current;
+  const { elapsedTime, totalDuration } = usePlayhead();
+  const { setIsControlVisibilityLocked, seek } = usePlayerControls();
 
   const isSeekingRef = React.useRef(false);
   const layoutWidthRef = React.useRef(1);
 
-  const { seek } = usePlayer();
+  const currentProgress = elapsedTime / Math.max(totalDuration, 1);
+  const currentProgressAnimation = React.useRef(
+    new Animated.Value(currentProgress)
+  ).current;
 
-  React.useEffect(
-    () =>
-      addProgressHandler(({ currentTime }: IProgressProp) => {
-        if (isSeekingRef.current) return;
-        currentProgressValue.setValue(currentTime / Math.max(duration, 1));
-      }),
-    [addProgressHandler, currentProgressValue, duration]
-  );
+  currentProgressAnimation.setValue(currentProgress);
 
   const trackBarWidth = React.useMemo(() => {
-    return currentProgressValue.interpolate({
+    return currentProgressAnimation.interpolate({
       inputRange: [0, 1],
       outputRange: ['0%', '100%'],
     });
-  }, [currentProgressValue]);
+  }, [currentProgressAnimation]);
 
   const panResponder = React.useMemo(
     () =>
@@ -119,21 +107,19 @@ const Seeker = ({
           setIsControlVisibilityLocked(true);
         },
         onPanResponderMove: (_, { dx }) => {
-          const progressAtStart =
-            playheadRef.current.currentTime / Math.max(1, duration);
+          const progressAtStart = currentProgress;
 
           const offsetProgress = dx / layoutWidthRef.current;
 
-          currentProgressValue.setValue(progressAtStart + offsetProgress);
+          currentProgressAnimation.setValue(progressAtStart + offsetProgress);
         },
         onPanResponderRelease: async (_, { dx }) => {
-          const progressAtStart =
-            playheadRef.current.currentTime / Math.max(1, duration);
+          const progressAtStart = currentProgress;
           const offsetProgress = dx / layoutWidthRef.current;
 
           const newProgress = progressAtStart + offsetProgress;
 
-          const newSeekValue = newProgress * duration;
+          const newSeekValue = newProgress * totalDuration;
 
           seek(newSeekValue);
           isSeekingRef.current = false;
@@ -141,11 +127,11 @@ const Seeker = ({
         },
       }),
     [
-      currentProgressValue,
+      currentProgressAnimation,
+      currentProgress,
       setIsControlVisibilityLocked,
       seek,
-      duration,
-      playheadRef,
+      totalDuration,
     ]
   );
 

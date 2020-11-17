@@ -5,5 +5,31 @@ export { Video };
 import Container from './Container';
 export { Container as ApollosPlayerContainer };
 
-import usePlayer from './usePlayer';
-export { usePlayer };
+import {
+  useNowPlaying,
+  usePlayerControls,
+  usePlayhead,
+  useInternalPlayer,
+} from './context';
+export { useNowPlaying, usePlayerControls, usePlayhead, useInternalPlayer };
+
+import {
+  IPlayerMedia,
+  PictureMode,
+  INowPlaying,
+  IPlayerControls,
+  IPlayhead,
+  IProgressProp,
+  IProgressRef,
+  IInternalPlayer,
+} from './types';
+export {
+  IPlayerMedia,
+  PictureMode,
+  INowPlaying,
+  IPlayerControls,
+  IPlayhead,
+  IProgressProp,
+  IProgressRef,
+  IInternalPlayer,
+};

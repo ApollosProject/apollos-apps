@@ -1,7 +1,19 @@
 import * as React from 'react';
-import type { IPlayerMedia, IProgressProp, IProgressRef } from './types';
+import {
+  IPlayerMedia,
+  PictureMode,
+  INowPlaying,
+  IPlayhead,
+  IPlayerControls,
+  IInternalPlayer,
+} from './types';
 import FullscreenSlidingPlayer from './FullscreenSlidingPlayer';
-import { NowPlayingContext, InternalPlayerContext } from './context';
+import {
+  NowPlayingContext,
+  PlayerControlsContext,
+  PlayheadContext,
+  InternalPlayerContext,
+} from './context';
 
 import Controls from './Controls';
 import NativeControls from './NativeControls';
@@ -24,134 +36,121 @@ const Container: React.FunctionComponent<ContainerProps> = ({
   presentationProps,
   autoplay = false,
 }) => {
-  const [nowPlaying, setNowPlaying] = React.useState<IPlayerMedia | null>({
+  /*
+    We're going to set up 4 context state objects in this component:
+    1. nowPlayingContext: INowPlaying
+    2. playerControlsContext: IPlayerControls
+    3. playheadContext: IPlayheadContext
+    4. internalPlayerContext: IInternalPlayer
+
+    Read about these context shapes in ./types.tsx
+  */
+
+  // ---------
+  // setup NowPlaying Context
+  const [nowPlaying, setNowPlaying] = React.useState<IPlayerMedia>({
     source,
     coverImage,
     presentationProps,
   });
+
+  const nowPlayingContext: INowPlaying = React.useMemo(
+    () => ({
+      ...nowPlaying,
+      setNowPlaying,
+    }),
+    [nowPlaying, setNowPlaying]
+  );
+
+  // ---------
+  // setup PlayerControls Context
   const [isPlaying, setIsPlaying] = React.useState<boolean>(!!autoplay);
-  const [isFullscreen, setIsFullscreen] = React.useState<boolean>(false);
-  const [isInPiP, setIsInPiP] = React.useState<boolean>(false);
-  const [playerId, setPlayerId] = React.useState<string>('');
-  const [duration, setDuration] = React.useState<number>(0);
-  const [seek, setSeekHandler] = React.useState<(seekTo: number) => void>(
+  const [seek, setSeekHandler] = React.useState<IPlayerControls['seek']>(
     () => {}
   );
-  const [skip, setSkipHandler] = React.useState<(skipBy: number) => void>(
+  const [skip, setSkipHandler] = React.useState<IPlayerControls['skip']>(
     () => {}
+  );
+  const play = React.useCallback(() => setIsPlaying(true), [setIsPlaying]);
+  const pause = React.useCallback(() => setIsPlaying(false), [setIsPlaying]);
+  const [pictureMode, setPictureMode] = React.useState<PictureMode>(
+    PictureMode.Normal
   );
   const [
     isControlVisibilityLocked,
     setIsControlVisibilityLocked,
   ] = React.useState<boolean>(false);
-  const [progressHandlers, setProgressHandlers] = React.useState<
-    Array<(props: IProgressProp) => void>
-  >([]);
 
-  const reset = React.useCallback(() => {
-    setNowPlaying(null);
-    setIsPlaying(false);
-    setIsFullscreen(false);
-  }, [setNowPlaying, setIsPlaying, setIsFullscreen]);
+  const playerControlsContext: IPlayerControls = React.useMemo(
+    () => ({
+      isPlaying,
+      seek,
+      skip,
+      play,
+      pause,
+      pictureMode,
+      setPictureMode,
+      isControlVisibilityLocked,
+      setIsControlVisibilityLocked,
+    }),
+    [
+      isPlaying,
+      seek,
+      skip,
+      play,
+      pause,
+      pictureMode,
+      setPictureMode,
+      isControlVisibilityLocked,
+      setIsControlVisibilityLocked,
+    ]
+  );
 
-  const playheadRef: IProgressRef = React.useRef<IProgressProp>({
-    currentTime: 0,
-    playableDuration: 0,
-    seekableDuration: 0,
+  // ---------
+  // Setup Playhead Context
+  const [playhead, updatePlayhead] = React.useState<IPlayhead>({
+    totalDuration: 1,
+    seekableDuration: 1,
+    playableDuration: 1,
+    elapsedTime: 0,
   });
 
-  const addProgressHandler = React.useCallback(
-    (handlerToAdd: (props: IProgressProp) => void) => {
-      setProgressHandlers((prevState) => [...prevState, handlerToAdd]);
-      return () =>
-        setProgressHandlers((prevState) =>
-          prevState.filter((handler) => handler === handlerToAdd)
-        );
-    },
-    [setProgressHandlers]
-  );
-  const handleProgress = React.useCallback(
-    (playhead: {
-      currentTime: number;
-      playableDuration: number;
-      seekableDuration: number;
-    }) => {
-      console.log('handleProgress', { progressHandlers });
-      progressHandlers.forEach((handler) => handler(playhead));
-    },
-    [progressHandlers]
-  );
+  // Vincent not using useMemo here is for you 😘
+  const playheadContext: IPlayhead = playhead;
 
-  const nowPlayingState = React.useMemo(
-    () => ({
-      addProgressHandler,
-      nowPlaying,
-      setNowPlaying,
-      isPlaying,
-      setIsPlaying,
-      isFullscreen,
-      setIsFullscreen,
-      reset,
-      seek,
-      skip,
-      isInPiP,
-      setIsInPiP,
-      duration,
-    }),
-    [
-      addProgressHandler,
-      nowPlaying,
-      setNowPlaying,
-      isPlaying,
-      setIsPlaying,
-      isFullscreen,
-      setIsFullscreen,
-      reset,
-      seek,
-      skip,
-      isInPiP,
-      setIsInPiP,
-      duration,
-    ]
-  );
+  // ---------
+  // Setup InternalPlayer Context
+  const [playerId, setPlayerId] = React.useState<string>('');
 
-  const internalPlayerState = React.useMemo(
+  const internalPlayerContext: IInternalPlayer = React.useMemo(
     () => ({
-      handleProgress,
       playerId,
       setPlayerId,
       setSeekHandler,
       setSkipHandler,
-      setIsControlVisibilityLocked,
-      isControlVisibilityLocked,
-      playheadRef,
-      setDuration,
+      updatePlayhead,
     }),
-    [
-      playerId,
-      setPlayerId,
-      setSeekHandler,
-      setSkipHandler,
-      setIsControlVisibilityLocked,
-      isControlVisibilityLocked,
-      handleProgress,
-      playheadRef,
-      setDuration,
-    ]
+    [playerId, setPlayerId, setSeekHandler, setSkipHandler, updatePlayhead]
   );
 
+  // ---------
+  // 🚀 Go Time
   return (
-    <NowPlayingContext.Provider value={nowPlayingState}>
-      <InternalPlayerContext.Provider value={internalPlayerState}>
-        <NativeControls />
-        <FullscreenSlidingPlayer
-          VideoComponent={VideoComponent}
-          ControlsComponent={ControlsComponent}
-        >
-          {children}
-        </FullscreenSlidingPlayer>
-      </InternalPlayerContext.Provider>
-    </NowPlayingContext.Provider>
+    <InternalPlayerContext.Provider value={internalPlayerContext}>
+      <PlayerControlsContext.Provider value={playerControlsContext}>
+        <NowPlayingContext.Provider value={nowPlayingContext}>
+          <PlayheadContext.Provider value={playheadContext}>
+            <NativeControls />
+            <FullscreenSlidingPlayer
+              VideoComponent={VideoComponent}
+              ControlsComponent={ControlsComponent}
+            >
+              {children}
+            </FullscreenSlidingPlayer>
+          </PlayheadContext.Provider>
+        </NowPlayingContext.Provider>
+      </PlayerControlsContext.Provider>
+    </InternalPlayerContext.Provider>
   );
 };
 

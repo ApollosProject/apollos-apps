@@ -4,11 +4,14 @@ import { Text } from 'react-native';
 
 import {
   ApollosPlayerContainer,
-  usePlayer,
+  useNowPlaying,
+  usePlayerControls,
+  PictureMode,
 } from '@apollosproject/react-native-apollos-player';
 
 const PlayerExamples = () => {
-  const { setNowPlaying, setIsPlaying, setIsFullscreen } = usePlayer();
+  const { setNowPlaying } = useNowPlaying();
+  const { setPictureMode, play, pause } = usePlayerControls();
 
   return (
     <>
@@ -22,7 +25,7 @@ const PlayerExamples = () => {
               description: 'Video Description',
             },
           });
-          setIsPlaying(true);
+          play();
         }}
       >
         Play local MP4
@@ -36,7 +39,7 @@ const PlayerExamples = () => {
               description: 'Video Description',
             },
           });
-          setIsPlaying(true);
+          play();
         }}
       >
         Play local MP4 (no cover image)
@@ -53,7 +56,7 @@ const PlayerExamples = () => {
               description: 'Video Description',
             },
           });
-          setIsPlaying(true);
+          play();
         }}
       >
         Play streaming M3u8
@@ -75,12 +78,14 @@ const PlayerExamples = () => {
               ),
             },
           });
-          setIsPlaying(true);
+          play();
         }}
       >
         Play LIVE streaming M3u8
       </Text>
-      <Text onPress={() => setIsFullscreen(true)}>Open fullscreen</Text>
+      <Text onPress={() => setPictureMode(PictureMode.Fullscreen)}>
+        Open fullscreen
+      </Text>
     </>
   );
 };
