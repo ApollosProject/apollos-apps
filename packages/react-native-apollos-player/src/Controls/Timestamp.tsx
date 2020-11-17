@@ -44,27 +44,23 @@ const formattedTimestamp = (time = 0) => {
  */
 const TimeStamp: React.FunctionComponent = () => {
   const { playheadRef } = React.useContext(InternalPlayerContext);
-  const { addProgressHandler } = React.useContext(NowPlayingContext);
+  const { addProgressHandler, duration } = React.useContext(NowPlayingContext);
   const [time, setCurrentTime] = React.useState(
     playheadRef.current.currentTime
   );
-  const [totalTime, setTotalTime] = React.useState(
-    playheadRef.current.playableDuration
-  );
-
   React.useEffect(
     () =>
-      addProgressHandler(({ currentTime, playableDuration }) => {
+      addProgressHandler(({ currentTime }) => {
+        console.log({ currentTime });
         setCurrentTime(currentTime);
-        setTotalTime(playableDuration);
       }),
-    [addProgressHandler, setTotalTime, setCurrentTime]
+    [addProgressHandler, setCurrentTime]
   );
 
   return (
     <Container>
       <TimeText>{formattedTimestamp(time)}</TimeText>
-      <TimeText>{formattedTimestamp(totalTime)}</TimeText>
+      <TimeText>{formattedTimestamp(duration)}</TimeText>
     </Container>
   );
 };

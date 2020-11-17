@@ -84,12 +84,9 @@ const Seeker = ({
   const { setIsControlVisibilityLocked, playheadRef } = React.useContext(
     InternalPlayerContext
   );
-  const { addProgressHandler } = React.useContext(NowPlayingContext);
+  const { addProgressHandler, duration } = React.useContext(NowPlayingContext);
   const currentProgressValue = React.useRef(
-    new Animated.Value(
-      playheadRef.current.currentTime /
-        Math.max(playheadRef.current.playableDuration, 1)
-    )
+    new Animated.Value(playheadRef.current.currentTime / Math.max(duration, 1))
   ).current;
 
   const isSeekingRef = React.useRef(false);
@@ -99,13 +96,11 @@ const Seeker = ({
 
   React.useEffect(
     () =>
-      addProgressHandler(({ currentTime, playableDuration }: IProgressProp) => {
+      addProgressHandler(({ currentTime }: IProgressProp) => {
         if (isSeekingRef.current) return;
-        currentProgressValue.setValue(
-          currentTime / Math.max(playableDuration, 1)
-        );
+        currentProgressValue.setValue(currentTime / Math.max(duration, 1));
       }),
-    [addProgressHandler, currentProgressValue]
+    [addProgressHandler, currentProgressValue, duration]
   );
 
   const trackBarWidth = React.useMemo(() => {
@@ -125,8 +120,7 @@ const Seeker = ({
         },
         onPanResponderMove: (_, { dx }) => {
           const progressAtStart =
-            playheadRef.current.currentTime /
-            Math.max(1, playheadRef.current.playableDuration);
+            playheadRef.current.currentTime / Math.max(1, duration);
 
           const offsetProgress = dx / layoutWidthRef.current;
 
@@ -134,21 +128,25 @@ const Seeker = ({
         },
         onPanResponderRelease: async (_, { dx }) => {
           const progressAtStart =
-            playheadRef.current.currentTime /
-            Math.max(1, playheadRef.current.playableDuration);
+            playheadRef.current.currentTime / Math.max(1, duration);
           const offsetProgress = dx / layoutWidthRef.current;
 
           const newProgress = progressAtStart + offsetProgress;
 
-          const newSeekValue =
-            newProgress * playheadRef.current.playableDuration;
+          const newSeekValue = newProgress * duration;
 
           seek(newSeekValue);
           isSeekingRef.current = false;
           setIsControlVisibilityLocked(false);
         },
       }),
-    [currentProgressValue, setIsControlVisibilityLocked, seek, playheadRef]
+    [
+      currentProgressValue,
+      setIsControlVisibilityLocked,
+      seek,
+      duration,
+      playheadRef,
+    ]
   );
 
   return (

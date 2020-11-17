@@ -21,6 +21,7 @@ const RNVideoPresentation = () => {
     setIsFullscreen,
     isFullscreen,
     isPlaying,
+    duration,
     setIsPlaying,
     setIsInPiP,
     isInPiP,
@@ -31,6 +32,7 @@ const RNVideoPresentation = () => {
     setSeekHandler,
     handleProgress,
     playheadRef,
+    setDuration,
   } = React.useContext(InternalPlayerContext);
 
   const handleProgressProp = React.useCallback(
@@ -42,14 +44,24 @@ const RNVideoPresentation = () => {
       // We actually want to mutate the object in this case.
       // That way we can preserve references to playheadRef.current
       playheadRef.current = Object.assign(playheadRef.current, playhead);
+
+      const maxDuration = Math.max(
+        duration,
+        playhead.playableDuration,
+        playhead.seekableDuration
+      );
+
+      if (maxDuration !== duration) setDuration(maxDuration);
+
       handleProgress(playhead);
     },
-    [playheadRef, handleProgress]
+    [playheadRef, handleProgress, duration, setDuration]
   );
 
-  const handleLoad = ({ duration }: { duration: number }) => {
-    playheadRef.current.seekableDuration = duration;
-    playheadRef.current.playableDuration = duration;
+  const handleLoad = ({ duration: _duration }: { duration: number }) => {
+    setDuration(_duration);
+    playheadRef.current.seekableDuration = _duration;
+    playheadRef.current.playableDuration = _duration;
     handleProgress(playheadRef.current);
   };
 

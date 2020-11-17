@@ -63,6 +63,29 @@ const PlayerExamples = () => {
       >
         Play streaming M3u8
       </Text>
+      <Text
+        onPress={() => {
+          setNowPlaying({
+            source: {
+              uri:
+                'https://churchonline-streaming.life.church/fastly/ngrp:lifechurch_adaptive/playlist.m3u8',
+              // 'http://link.theplatform.com/s/IfSiAC/bD1fN9vCet4B?mbr=true@144364/master.m3u8',
+            },
+            presentationProps: {
+              title: 'Video Title',
+              description: 'Video Description',
+              badge: (
+                <Text style={{ color: 'white' }}>
+                  <Text style={{ color: 'red' }}>●</Text> Live
+                </Text>
+              ),
+            },
+          });
+          setIsPlaying(true);
+        }}
+      >
+        Play LIVE streaming M3u8
+      </Text>
       <Text onPress={() => setIsFullscreen(true)}>Open fullscreen</Text>
     </>
   );

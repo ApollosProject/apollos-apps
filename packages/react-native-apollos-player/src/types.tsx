@@ -31,6 +31,8 @@ export interface INowPlaying {
   /** Whether to present fullscreen presentation */
   isFullscreen: boolean;
 
+  duration: number;
+
   seek: (seekTo: number) => void;
   skip: (skipBy: number) => void;
 
@@ -60,6 +62,7 @@ export interface IInternalPlayer {
   setIsControlVisibilityLocked: React.Dispatch<React.SetStateAction<boolean>>;
   isControlVisibilityLocked: boolean;
   handleProgress: (props: IProgressProp) => void;
+  setDuration: React.Dispatch<React.SetStateAction<number>>;
   playheadRef: {
     current: {
       currentTime: number;
