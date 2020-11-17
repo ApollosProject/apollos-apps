@@ -48,7 +48,7 @@ export default () => {
       //notificationIcon: 'my_custom_icon', // Android Only (String), Android Drawable resource name for a custom notification icon
       //isLiveStream: true, // iOS Only (Boolean), Show or hide Live Indicator instead of seekbar on lock screen for live streams. Default value is false.
     });
-  }, [nowPlaying, playheadRef]);
+  }, [nowPlaying]);
 
   // configure listeners
   useEffect(() => {
