@@ -77,33 +77,36 @@ const Controls = () => {
     skip,
   } = usePlayerControls();
   const isFullscreen = pictureMode === PictureMode.Fullscreen;
+  const isInPiP = pictureMode === PictureMode.PictureInPicture;
 
   return (
     <ThemeMixin mixin={{ type: 'dark' }}>
       <StatusBar hidden={isFullscreen} />
-      <FadeoutOverlay>
-        {isFullscreen ? <Header /> : null}
-        <FooterWrapper>
-          <FooterControls>
-            <StyledAirPlayButton />
-            <IconMd name="skip-back-thirty" onPress={() => skip(-30)} />
-            <IconMd
-              name={isPlaying ? 'pause' : 'play'}
-              onPress={isPlaying ? pause : play}
-            />
-            <IconMd name="skip-forward-thirty" onPress={() => skip(30)} />
-            <IconSm
-              name="fullscreen"
-              onPress={() =>
-                setPictureMode(
-                  isFullscreen ? PictureMode.Normal : PictureMode.Fullscreen
-                )
-              }
-            />
-          </FooterControls>
-          <Seeker />
-        </FooterWrapper>
-      </FadeoutOverlay>
+      {isInPiP ? null : (
+        <FadeoutOverlay>
+          {isFullscreen ? <Header /> : null}
+          <FooterWrapper>
+            <FooterControls>
+              <StyledAirPlayButton />
+              <IconMd name="skip-back-thirty" onPress={() => skip(-30)} />
+              <IconMd
+                name={isPlaying ? 'pause' : 'play'}
+                onPress={isPlaying ? pause : play}
+              />
+              <IconMd name="skip-forward-thirty" onPress={() => skip(30)} />
+              <IconSm
+                name="fullscreen"
+                onPress={() =>
+                  setPictureMode(
+                    isFullscreen ? PictureMode.Normal : PictureMode.Fullscreen
+                  )
+                }
+              />
+            </FooterControls>
+            <Seeker />
+          </FooterWrapper>
+        </FadeoutOverlay>
+      )}
     </ThemeMixin>
   );
 };

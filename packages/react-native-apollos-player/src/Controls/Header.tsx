@@ -47,7 +47,7 @@ const Container = styled(
 
 const Header: React.FunctionComponent = () => {
   const nowPlaying = useNowPlaying();
-  const { pictureMode, setPictureMode } = usePlayerControls();
+  const { setPictureMode, pictureMode } = usePlayerControls();
   const [canPiP, setCanPiP] = React.useState(false);
 
   const isInPiP = pictureMode === PictureMode.PictureInPicture;
@@ -77,9 +77,9 @@ const Header: React.FunctionComponent = () => {
       {canPiP ? (
         <PiPButton
           onPress={() =>
-            isInPiP
-              ? setPictureMode(PictureMode.PictureInPicture)
-              : setPictureMode(PictureMode.Normal)
+            setPictureMode(
+              isInPiP ? PictureMode.Normal : PictureMode.PictureInPicture
+            )
           }
         />
       ) : null}

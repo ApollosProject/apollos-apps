@@ -133,7 +133,7 @@ const RNVideoPresentation = () => {
             }
           }}
           onRestoreUserInterfaceForPictureInPictureStop={() => {
-            setPictureMode(PictureMode.Fullscreen);
+            setPictureMode(PictureMode.Normal);
             InteractionManager.runAfterInteractions(() => {
               (videoRef.current as any).restoreUserInterfaceForPictureInPictureStopCompleted(
                 true
