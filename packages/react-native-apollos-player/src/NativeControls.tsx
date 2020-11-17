@@ -3,15 +3,28 @@ import MusicControl from 'react-native-music-control';
 import { NowPlayingContext, InternalPlayerContext } from './context';
 
 export default () => {
-  const { nowPlaying, setIsPlaying, skip, isPlaying } = useContext(
+  const { nowPlaying, isPlaying, setIsPlaying, skip, seek } = useContext(
     NowPlayingContext
   );
   const { playheadRef } = useContext(InternalPlayerContext);
 
-  // set metadata when media changes
+  // configure controls and handle unmount
   useEffect(() => {
     MusicControl.enableBackgroundMode(true);
     MusicControl.handleAudioInterruptions(true);
+    MusicControl.enableControl('play', true);
+    MusicControl.enableControl('pause', true);
+    MusicControl.enableControl('changePlaybackPosition', true);
+    MusicControl.enableControl('skipBackward', true, { interval: 30 });
+    MusicControl.enableControl('skipForward', true, { interval: 30 });
+    MusicControl.enableControl('togglePlayPause', true);
+    return () => {
+      MusicControl.stopControl();
+    };
+  }, []);
+
+  // set metadata when media changes
+  useEffect(() => {
     MusicControl.setNowPlaying({
       title: nowPlaying?.presentationProps?.title,
       // URL or RN's image require()
@@ -34,43 +47,36 @@ export default () => {
 
   // configure listeners
   useEffect(() => {
-    MusicControl.enableControl('play', true);
     // @ts-ignore
     MusicControl.on('play', () => {
       setIsPlaying(true);
     });
-
-    MusicControl.enableControl('pause', true);
     // @ts-ignore
     MusicControl.on('pause', () => {
       setIsPlaying(false);
     });
-
-    MusicControl.enableControl('skipBackward', true, { interval: 30 });
     // @ts-ignore
     MusicControl.on('skipBackward', () => {
       skip(-30);
     });
-    MusicControl.enableControl('skipForward', true, { interval: 30 });
     // @ts-ignore
     MusicControl.on('skipForward', () => {
       skip(30);
     });
-
-    // Remote (headphones) play/pause
-    MusicControl.enableControl('togglePlayPause', true);
     // @ts-ignore
     MusicControl.on('togglePlayPause', () =>
       isPlaying ? setIsPlaying(false) : setIsPlaying(true)
     );
-  }, [setIsPlaying, skip, isPlaying]);
+    // @ts-ignore
+    MusicControl.on('changePlaybackPosition', (pos) => seek(pos));
+  }, [setIsPlaying, isPlaying, skip, seek]);
 
-  // unmount
+  // update elapsed time
   useEffect(() => {
-    return () => {
-      MusicControl.stopControl();
-    };
-  }, []);
+    MusicControl.updatePlayback({
+      elapsedTime: playheadRef?.current?.currentTime,
+    });
+  }, [playheadRef]);
 
   return null;
 };
