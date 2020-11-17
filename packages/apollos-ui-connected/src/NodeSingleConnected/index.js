@@ -64,10 +64,7 @@ const NodeSingleConnectedWithMedia = ({ nodeId }) => (
         return <NodeSingleConnected nodeId={nodeId} />;
 
       return (
-        <ApollosPlayerContainer
-          autoplay
-          source={data.node.videos[0].sources[0]}
-        >
+        <ApollosPlayerContainer source={data.node.videos[0].sources[0]}>
           <NodeSingleInner nodeId={nodeId} ImageWrapperComponent={Noop} />
         </ApollosPlayerContainer>
       );
