@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react';
 import MusicControl from 'react-native-music-control';
-import { NowPlayingContext, InternalPlayerContext } from './context';
+import { NowPlayingContext } from './context';
 
 export default () => {
   const {
@@ -9,9 +9,9 @@ export default () => {
     setIsPlaying,
     skip,
     seek,
+    duration,
     addProgressHandler,
   } = useContext(NowPlayingContext);
-  const { playheadRef } = useContext(InternalPlayerContext);
 
   // configure controls and handle unmount
   useEffect(() => {
@@ -39,7 +39,7 @@ export default () => {
       //artist: 'Church',
       //album: 'Sermons - Series',
       //genre: 'Post-disco, Rhythm and Blues, Funk, Dance-pop',
-      duration: 130, // (Seconds)
+      duration: duration, // (Seconds)
       description: nowPlaying?.presentationProps?.description, // Android Only
       color: 0xffffff, // Android Only - Notification Color
       colorized: true, // Android 8+ Only - Notification Color extracted from the artwork. Set to false to use the color property instead
@@ -48,7 +48,7 @@ export default () => {
       //notificationIcon: 'my_custom_icon', // Android Only (String), Android Drawable resource name for a custom notification icon
       //isLiveStream: true, // iOS Only (Boolean), Show or hide Live Indicator instead of seekbar on lock screen for live streams. Default value is false.
     });
-  }, [nowPlaying]);
+  }, [nowPlaying, duration]);
 
   // configure listeners
   useEffect(() => {

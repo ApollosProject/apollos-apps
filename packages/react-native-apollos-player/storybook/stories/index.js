@@ -51,11 +51,6 @@ const PlayerExamples = () => {
             presentationProps: {
               title: 'Video Title',
               description: 'Video Description',
-              badge: (
-                <Text style={{ color: 'white' }}>
-                  <Text style={{ color: 'red' }}>●</Text> Live
-                </Text>
-              ),
             },
           });
           setIsPlaying(true);
@@ -68,8 +63,7 @@ const PlayerExamples = () => {
           setNowPlaying({
             source: {
               uri:
-                'https://churchonline-streaming.life.church/fastly/ngrp:lifechurch_adaptive/playlist.m3u8',
-              // 'http://link.theplatform.com/s/IfSiAC/bD1fN9vCet4B?mbr=true@144364/master.m3u8',
+                'https://moctobpltc-i.akamaihd.net/hls/live/571329/eight/playlist.m3u8',
             },
             presentationProps: {
               title: 'Video Title',
