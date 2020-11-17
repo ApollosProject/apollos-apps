@@ -94,7 +94,11 @@ const Controls = () => {
             <IconMd name="skip-forward-thirty" onPress={() => skip(30)} />
             <IconSm
               name="fullscreen"
-              onPress={() => setPictureMode(PictureMode.Fullscreen)}
+              onPress={() =>
+                setPictureMode(
+                  isFullscreen ? PictureMode.Normal : PictureMode.Fullscreen
+                )
+              }
             />
           </FooterControls>
           <Seeker />
