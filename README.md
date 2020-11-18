@@ -71,7 +71,7 @@ Push a preliminary package version to Github for aesthetic purposes. We won't ta
 
 Get the `TOKEN` from creating a Personal Access Token in your Github settings and give it read/write access to packages.
 
-Now run the same `yarn release:<XXX>` command you will run for NPM (from below) but add `--registry "https://npm.pkg.github.com --no-git-tag-version"`
+Now run the same `yarn release:<XXX>` command you will run for NPM (from below) but add `--registry "https://npm.pkg.github.com" --no-git-tag-version"`
 
 ### NPM.js Registry
 
