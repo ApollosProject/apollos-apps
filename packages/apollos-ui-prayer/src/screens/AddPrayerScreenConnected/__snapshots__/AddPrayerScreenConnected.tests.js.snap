@@ -1275,7 +1275,7 @@ exports[`The AddPrayerScreenConnected component should render a custom component
             }
           }
         >
-          {"avatar":{"uri":"https://1234.image.com","__typename":"ImageMediaSource"},"title":"Add your prayer"}
+          {"avatar":{"__typename":"ImageMediaSource","uri":"https://1234.image.com"},"title":"Add your prayer"}
         </View>
         <View
           style={

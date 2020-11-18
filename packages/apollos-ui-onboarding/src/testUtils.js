@@ -7,14 +7,14 @@ import { MockedProvider } from '@apollo/client/testing';
 
 export const renderWithApolloData = async (component) => {
   const tree = renderer.create(component);
-  await wait(1);
+  await wait(10);
   tree.update(component);
   return tree;
 };
 
 // eslint-disable-next-line
-export const Providers = ({ children, ...props }) => (
+export const Providers = ({ mocks, children, ...props }) => (
   <UIProviders {...props}>
-    <MockedProvider {...props}>{children}</MockedProvider>
+    <MockedProvider {...props} mocks={mocks}>{children}</MockedProvider>
   </UIProviders>
 );

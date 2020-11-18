@@ -22,7 +22,7 @@ describe('The Onboarding LocationFinderConnected component', () => {
     ];
 
     const component = (
-      <Providers mocks={mocks} addTypename={false}>
+      <Providers mocks={mocks}>
         <LocationFinderConnected
           navigation={navigation}
           onNavigate={jest.fn()}
@@ -41,7 +41,8 @@ describe('The Onboarding LocationFinderConnected component', () => {
         },
         result: {
           data: {
-            campus: {
+            currentUser: {
+              profile: {
               campus: {
                 id: 'Campus:a0f64573eabf00a607bec911794d50fb',
                 name: 'Chicago Campus',
@@ -59,6 +60,7 @@ describe('The Onboarding LocationFinderConnected component', () => {
                 },
               },
             },
+            }
           },
         },
       },
@@ -117,15 +119,6 @@ describe('The Onboarding LocationFinderConnected component', () => {
     );
 
     const tree = await renderWithApolloData(component);
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('should render with no data in the cache', () => {
-    const tree = renderer.create(
-      <Providers>
-        <LocationFinderConnected onNavigate={jest.fn()} />
-      </Providers>
-    );
     expect(tree).toMatchSnapshot();
   });
 });

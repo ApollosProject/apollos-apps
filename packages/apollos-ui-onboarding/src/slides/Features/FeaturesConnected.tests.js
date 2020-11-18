@@ -9,8 +9,27 @@ import FeaturesConnected from './FeaturesConnected';
 
 describe('The Onboarding FeaturesConnected component', () => {
   it('should render', () => {
+    const mock = {
+      request: {
+        query: GET_USER_FIRST_NAME,
+      },
+      result: {
+        data: {
+          currentUser: {
+            __typename: 'AuthenticatedUser',
+            id: 'AuthenticatedUser:123',
+            profile: {
+              __typename: 'Person',
+              id: 'Person:123',
+              firstName: 'Marty',
+            },
+          },
+        },
+      },
+    };
+
     const tree = renderer.create(
-      <Providers>
+      <Providers mocks={[mock]}>
         <FeaturesConnected />
       </Providers>
     );

@@ -1,4 +1,4 @@
-import { gql } from 'graphql-tag';
+import gql from 'graphql-tag';
 import { client } from './testUtils';
 import { getPushPermissions, getHasPrompted } from './permissionUtils';
 import { defaults } from './store';

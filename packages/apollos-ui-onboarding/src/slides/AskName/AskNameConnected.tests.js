@@ -3,14 +3,32 @@ import renderer from 'react-test-renderer';
 import { Text } from 'react-native';
 
 import { Providers, renderWithApolloData } from '../../testUtils';
+import UPDATE_USER_NAME from './updateUserName';
 
 import getUserFirstAndLastName from './getUserFirstAndLastName';
 import AskNameConnected from './AskNameConnected';
 
 describe('The AskNameConnected component', () => {
   it('renders in a default state', () => {
+    const mock = {
+      request: {
+        query: getUserFirstAndLastName,
+      },
+      result: {
+        data: {
+          currentUser: {
+            id: 'AuthenticatedUser:123',
+            profile: {
+              id: 'Person:123',
+              firstName: null,
+              lastName: null,
+            },
+          },
+        },
+      },
+    };
     const tree = renderer.create(
-      <Providers>
+      <Providers mocks={[mock]}>
         <AskNameConnected onPressPrimary={jest.fn()} />
       </Providers>
     );
@@ -24,10 +42,8 @@ describe('The AskNameConnected component', () => {
       result: {
         data: {
           currentUser: {
-            __typename: 'AuthenticatedUser',
             id: 'AuthenticatedUser:123',
             profile: {
-              __typename: 'Person',
               id: 'Person:123',
               firstName: 'Isaac',
               lastName: 'Hardy',

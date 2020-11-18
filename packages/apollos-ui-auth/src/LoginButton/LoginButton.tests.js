@@ -13,26 +13,19 @@ import LoginButton from '.';
 export const renderWithApolloData = async (component) => {
   const tree = renderer.create(component);
   await wait(0);
-  tree.update(component);
+  // tree.update(component);
   return tree;
 };
 
-// const cache = new InMemoryCache();
 describe('LoginButton component', () => {
   it('renders nothing when logged in', async () => {
-    const mock = {
-      request: {
-        query: GET_LOGIN_STATE,
-      },
-      result: {
-        data: { isLoggedIn: true, __typename: 'Query' },
-      },
-    };
+    const cache = new InMemoryCache();
+    cache.writeQuery({ query: GET_AUTH_TOKEN, data: { authToken: 'some-auth-token' }})
 
     const navigation = { navigate: jest.fn() };
     const tree = await renderWithApolloData(
       <MockedProvider
-        resolvers={{ Query: { isLoggedIn: () => true } }}
+        cache={cache}
       >
         <AuthProvider>
           <Providers>
@@ -45,42 +38,34 @@ describe('LoginButton component', () => {
   });
 
   it('renders a LoginButton when logged out', async () => {
-    const mock = {
-      request: {
-        query: GET_LOGIN_STATE,
-      },
-      result: {
-        data: { isLoggedIn: null, __typename: 'Query' },
-      },
-    };
+    const cache = new InMemoryCache();
+    cache.writeQuery({ query: GET_AUTH_TOKEN, data: { authToken: null }})
 
     const navigation = { navigate: jest.fn() };
     const tree = await renderWithApolloData(
-      <MockedProvider mocks={[mock]}>
-        <Providers>
-          <LoginButton navigation={navigation} />
-        </Providers>
+      <MockedProvider cache={cache}>
+        <AuthProvider>
+          <Providers>
+            <LoginButton navigation={navigation} />
+          </Providers>
+      </AuthProvider>
       </MockedProvider>
     );
     expect(tree).toMatchSnapshot();
   });
 
   it('renders a LoginButton that is loading', async () => {
-    const mock = {
-      request: {
-        query: GET_LOGIN_STATE,
-      },
-      result: {
-        data: { isLoggedIn: null, __typename: 'Query' },
-      },
-    };
+    const cache = new InMemoryCache();
+    cache.writeQuery({ query: GET_AUTH_TOKEN, data: { authToken: null }})
 
     const navigation = { navigate: jest.fn() };
     const tree = await renderWithApolloData(
-      <MockedProvider mocks={[mock]}>
-        <Providers>
-          <LoginButton navigation={navigation} loading />
-        </Providers>
+      <MockedProvider cache={cache}>
+        <AuthProvider>
+          <Providers>
+            <LoginButton navigation={navigation} loading />
+          </Providers>
+        </AuthProvider>
       </MockedProvider>
     );
     expect(tree).toMatchSnapshot();

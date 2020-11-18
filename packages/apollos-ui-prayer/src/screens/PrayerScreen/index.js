@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import gql from 'graphql-tag';
 import PropTypes from 'prop-types';
-import { useMutation } from '@apollo/react-hooks';
+import { useMutation } from '@apollo/client';
 
 import { AnalyticsContext } from '@apollosproject/ui-analytics';
 
