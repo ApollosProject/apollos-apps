@@ -7,7 +7,7 @@ import ContentNodeConnected from '../ContentNodeConnected';
 import ContentParentFeedConnected from '../ContentParentFeedConnected';
 import ContentChildFeedConnected from '../ContentChildFeedConnected';
 import UpNextButtonConnected from '../UpNextButtonConnected';
-import ContentSingleFeaturesConnected from '../ContentSingleFeaturesConnected';
+import NodeFeaturesConnected from '../NodeFeaturesConnected';
 
 const FlexedScrollView = styled({ flex: 1 })(Animated.ScrollView);
 
@@ -20,7 +20,7 @@ const NodeSingleConnected = ({ nodeId }) => (
             ImageWrapperComponent={Stretchy}
             nodeId={nodeId}
           />
-          <ContentSingleFeaturesConnected nodeId={nodeId} />
+          <NodeFeaturesConnected nodeId={nodeId} />
           <UpNextButtonConnected nodeId={nodeId} />
           <ContentParentFeedConnected nodeId={nodeId} />
           <ContentChildFeedConnected nodeId={nodeId} />
