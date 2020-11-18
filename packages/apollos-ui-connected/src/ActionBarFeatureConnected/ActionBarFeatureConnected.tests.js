@@ -15,7 +15,7 @@ const mock = {
     data: {
       node: {
         id: 'ActionBarFeatureConnected:123',
-        __typename: 'ActionBarFeatureConnected',
+        __typename: 'ActionBarFeature',
         title: 'Some cool list',
         actions: [
           {
