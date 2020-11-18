@@ -1,8 +1,8 @@
 import React from 'react';
 import { Providers, renderWithApolloData } from '../testUtils';
 
-import GET_NODE_FEED from './getNodeFeatures';
 import GET_FEATURE_FEED from '../FeaturesFeedConnected/getFeatureFeed';
+import GET_NODE_FEED from './getNodeFeatures';
 
 import NodeFeaturesConnected from './NodeFeaturesConnected';
 
@@ -12,8 +12,8 @@ describe('ContentSingleFeaturesConnected', () => {
       request: {
         query: GET_NODE_FEED,
         variables: {
-          nodeId: 'WeekendContentItem:123'
-        }
+          nodeId: 'WeekendContentItem:123',
+        },
       },
       result: {
         data: {
@@ -22,12 +22,12 @@ describe('ContentSingleFeaturesConnected', () => {
             __typename: 'WeekendContentItem',
             featureFeed: {
               __typename: 'FeatureFeed',
-              id: 'FeatureFeed:123'
-            }
-          }
-        }
-      }
-    }
+              id: 'FeatureFeed:123',
+            },
+          },
+        },
+      },
+    };
     const feedMock = {
       request: {
         query: GET_FEATURE_FEED,
@@ -126,7 +126,8 @@ describe('ContentSingleFeaturesConnected', () => {
     const finalTree = await renderWithApolloData(
       <Providers mocks={[nodeMock, feedMock]}>
         <NodeFeaturesConnected nodeId={'WeekendContentItem:123'} />
-      </Providers>, initalTree
+      </Providers>,
+      initalTree
     );
     expect(finalTree).toMatchSnapshot();
   });
