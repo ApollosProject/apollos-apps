@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
+import { Platform } from 'react-native';
 import MusicControl from 'react-native-music-control';
 
 import { useNowPlaying, usePlayerControls, usePlayhead } from './context';
 
 export default () => {
+  if (Platform.OS === 'android') return null;
   const nowPlaying = useNowPlaying();
   const { isPlaying, play, pause, skip, seek } = usePlayerControls();
   const { totalDuration, elapsedTime } = usePlayhead();

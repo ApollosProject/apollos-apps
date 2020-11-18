@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { requireNativeComponent } from 'react-native';
+import { Platform, requireNativeComponent } from 'react-native';
 
 interface PortalOriginProps {
   destination: string | null;
@@ -19,7 +19,13 @@ const PortalDestination: React.FunctionComponent<PortalDestinationProps> = (
   props
 ) => <RCTPortalDestination {...props} />;
 
-const RCTPortalOrigin = requireNativeComponent('RCTPortalOrigin');
-const RCTPortalDestination = requireNativeComponent('RCTPortalDestination');
+const RCTPortalOrigin =
+  Platform.OS === 'ios'
+    ? requireNativeComponent('RCTPortalOrigin')
+    : React.Fragment;
+const RCTPortalDestination =
+  Platform.OS === 'ios'
+    ? requireNativeComponent('RCTPortalDestination')
+    : React.Fragment;
 
 export { PortalOrigin, PortalDestination };
