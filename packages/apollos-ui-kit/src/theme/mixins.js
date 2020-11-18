@@ -52,8 +52,10 @@ const withThemeMixin = (themeInput) =>
         // This is important. Null leaves will override default values from the base theme, without providing a replacement.
         // This causes the app to crash if you're not careful to provide values for the entire theme.
         // Very common when sending GQL data over the wire.
-        themeInputAsObject = stripNullLeaves(
-          merge({}, originalThemeInput, themeInputAsObject)
+        themeInputAsObject = merge(
+          {},
+          originalThemeInput,
+          stripNullLeaves(themeInputAsObject)
         );
 
         const themeWithMixin = createTheme(themeInputAsObject);
