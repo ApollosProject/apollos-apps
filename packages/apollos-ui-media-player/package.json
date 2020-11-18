@@ -36,6 +36,11 @@
     "android"
   ],
   "author": "The Apollos Project <contact@apollos.app> (https://apollos.app)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apollosproject/apollos-apps/issues"
+  },
+  "homepage": "https://github.com/apollosproject/apollos-apps#readme",
   "devDependencies": {
     "@commitlint/config-conventional": "^8.3.4",
     "@react-native-community/bob": "^0.16.2",
