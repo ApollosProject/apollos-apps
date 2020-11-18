@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
-    "ios": "react-native run-ios --simulator=\"iPhone 11\"",
+    "ios": "react-native run-ios",
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "prestart": "yarn generate-stories",
     "postinstall": "jetify && yarn pods",
@@ -17,7 +17,6 @@
     "@apollo/react-hooks": "^3.1.3",
     "@apollosproject/config": "link:../packages/apollos-config",
     "@apollosproject/react-native-airplay-btn": "^0.2.0",
-    "@apollosproject/react-native-apollos-player": "link:../packages/react-native-apollos-player",
     "@apollosproject/ui-analytics": "link:../packages/apollos-ui-analytics",
     "@apollosproject/ui-auth": "link:../packages/apollos-ui-auth",
     "@apollosproject/ui-connected": "link:../packages/apollos-ui-connected",
