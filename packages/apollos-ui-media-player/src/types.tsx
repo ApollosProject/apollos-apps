@@ -3,6 +3,8 @@ export interface IPlayerMedia {
   source?: { uri?: string };
   /** Image to display while loading */
   coverImage?: { uri?: string } | [{ uri: string }];
+  /** Disables irrelevant UI controls during live stream */
+  isLive?: boolean;
 
   /** props intended to be used by Presentation Components */
   presentationProps?:

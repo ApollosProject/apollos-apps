@@ -14,7 +14,8 @@ import {
 } from '@apollosproject/ui-kit';
 
 import FadeoutOverlay from './FadeoutOverlay';
-import { usePlayerControls } from '../context';
+import LiveLabel from './LiveLabel';
+import { usePlayerControls, useNowPlaying } from '../context';
 
 import Header from './Header';
 import Seeker from './Seeker';
@@ -87,6 +88,7 @@ const Controls = ({
     pause,
     skip,
   } = usePlayerControls();
+  const { isLive } = useNowPlaying();
   const isFullscreen = pictureMode === PictureMode.Fullscreen;
   const isInPiP = pictureMode === PictureMode.PictureInPicture;
 
@@ -120,12 +122,16 @@ const Controls = ({
             <FooterWrapper>
               <FooterControls>
                 <StyledAirPlayButton />
-                <IconMd name="skip-back-thirty" onPress={() => skip(-30)} />
+                {!isLive ? (
+                  <IconMd name="skip-back-thirty" onPress={() => skip(-30)} />
+                ) : null}
                 <IconMd
                   name={isPlaying ? 'pause' : 'play'}
                   onPress={isPlaying ? pause : play}
                 />
-                <IconMd name="skip-forward-thirty" onPress={() => skip(30)} />
+                {!isLive ? (
+                  <IconMd name="skip-forward-thirty" onPress={() => skip(30)} />
+                ) : null}
                 <IconSm
                   name="fullscreen"
                   onPress={() =>
@@ -135,7 +141,7 @@ const Controls = ({
                   }
                 />
               </FooterControls>
-              <Seeker />
+              {!isLive ? <Seeker /> : <LiveLabel />}
             </FooterWrapper>
           </FadeoutOverlay>
         </Animated.View>

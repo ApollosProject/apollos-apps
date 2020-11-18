@@ -41,8 +41,9 @@ export default () => {
       //date: '1983-01-02T00:00:00Z', // Release Date (RFC 3339) - Android Only
       //rating: 84, // Android Only (Boolean or Number depending on the type)
       //notificationIcon: 'my_custom_icon', // Android Only (String), Android Drawable resource name for a custom notification icon
-      //isLiveStream: true, // iOS Only (Boolean), Show or hide Live Indicator instead of seekbar on lock screen for live streams. Default value is false.
+      isLiveStream: nowPlaying?.isLive ?? false, // iOS Only (Boolean), Show or hide Live Indicator instead of seekbar on lock screen for live streams. Default value is false.
     });
+    MusicControl.enableControl('changePlaybackPosition', !nowPlaying?.isLive);
   }, [nowPlaying, totalDuration]);
 
   // configure listeners

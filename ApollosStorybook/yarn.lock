@@ -34,10 +34,6 @@
   resolved "https://registry.yarnpkg.com/@apollosproject/react-native-airplay-btn/-/react-native-airplay-btn-0.2.0.tgz#19c1c7154e6c04fd4d5a5587faf6a69cb34d8a79"
   integrity sha512-yf5TRao2v+jq9LtzqAt4MBZ4OgYR01YsyfbU9TC8/D+M9TWkYTsU8uhWpwYyxN4K1dWBd9jagyDMU0fpcLhkPg==
 
-"@apollosproject/react-native-apollos-player@link:../packages/react-native-apollos-player":
-  version "0.0.0"
-  uid ""
-
 "@apollosproject/ui-analytics@link:../packages/apollos-ui-analytics":
   version "0.0.0"
   uid ""

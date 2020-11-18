@@ -71,6 +71,7 @@ const PlayerExamples = () => {
               uri:
                 'https://moctobpltc-i.akamaihd.net/hls/live/571329/eight/playlist.m3u8',
             },
+            isLive: true,
             presentationProps: {
               title: 'Video Title',
               description: 'Video Description',
