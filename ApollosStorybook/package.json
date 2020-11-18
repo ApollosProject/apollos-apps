@@ -58,7 +58,6 @@
     "node-fetch": "2.6.1",
     "react": "16.13.1",
     "react-native": "0.63.2",
-    "react-native-bootsplash": "^2.0.5",
     "react-native-config": "^0.11.7",
     "react-native-device-info": "^4.0.1",
     "react-native-geolocation-service": "^3.0.0",
