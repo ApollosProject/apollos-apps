@@ -12,14 +12,14 @@ import { InMemoryCache } from '@apollo/client/cache';
 import possibleTypesJson from './fragmentTypes.json';
 import typeDefs from './typeDefsMock';
 
-async function renderWithApolloData (component, existingTree) {
-  const tree = renderer.create(component);
+async function renderWithApolloData(component, existingTree) {
+  const tree = existingTree || renderer.create(component);
   await renderer.act(async () => {
     await wait(0);
     tree.update(component);
   });
   return tree;
-};
+}
 
 // eslint-disable-next-line
 const Providers = ({ children, ...props }) => {
@@ -34,15 +34,23 @@ const Providers = ({ children, ...props }) => {
   });
 
   const cache = new InMemoryCache({
-      possibleTypes: finalPossibleTypes
-    });
+    possibleTypes: finalPossibleTypes,
+  });
 
-  return (<UIProviders {...props}>
-    <MockedProvider                 defaultOptions={{
-                    watchQuery: { fetchPolicy: 'no-cache' },
-                    query: { fetchPolicy: 'no-cache' },
-                }} cache={cache} {...props}>{children}</MockedProvider>
-  </UIProviders>)
+  return (
+    <UIProviders {...props}>
+      <MockedProvider
+        defaultOptions={{
+          watchQuery: { fetchPolicy: 'no-cache' },
+          query: { fetchPolicy: 'no-cache' },
+        }}
+        cache={cache}
+        {...props}
+      >
+        {children}
+      </MockedProvider>
+    </UIProviders>
+  );
 };
 
 const ApolloStorybookDecorator = ({

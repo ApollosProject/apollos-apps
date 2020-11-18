@@ -3,7 +3,6 @@ import renderer from 'react-test-renderer';
 import { Text } from 'react-native';
 
 import { Providers, renderWithApolloData } from '../../testUtils';
-import UPDATE_USER_NAME from './updateUserName';
 
 import getUserFirstAndLastName from './getUserFirstAndLastName';
 import AskNameConnected from './AskNameConnected';

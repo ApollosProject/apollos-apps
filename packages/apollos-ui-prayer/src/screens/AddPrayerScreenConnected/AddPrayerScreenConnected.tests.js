@@ -1,6 +1,7 @@
 import React from 'react';
 import wait from 'waait';
 
+import { act } from 'react-test-renderer';
 import { Providers, renderWithApolloData } from '../../testUtils';
 import PrayerCard from '../../PrayerCard';
 
@@ -124,7 +125,7 @@ describe('The AddPrayerScreenConnected component', () => {
     const prayerCard = tree.root.findByType(PrayerCard);
     prayerCard.props.onPrayerChangeText('my prayer');
 
-    await wait(1);
+    await act(async () => wait(1));
 
     const button = tree.root.findByProps({
       primaryActionText: 'Share prayer',
@@ -132,7 +133,7 @@ describe('The AddPrayerScreenConnected component', () => {
 
     button.props.onPressPrimary();
 
-    await wait(1);
+    await act(async () => wait(1));
 
     expect(tree).toMatchSnapshot();
   });
