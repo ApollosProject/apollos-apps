@@ -31,7 +31,7 @@ export interface FullScreenSlidingPlayerProps {
     collapsedAnimation?: Animated.Value;
   }>;
 
-  collapseOnScroll: boolean;
+  collapseOnScroll?: boolean;
 }
 
 const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerProps> = ({
