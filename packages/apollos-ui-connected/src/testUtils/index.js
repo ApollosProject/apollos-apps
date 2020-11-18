@@ -13,11 +13,11 @@ import possibleTypesJson from './fragmentTypes.json';
 import typeDefs from './typeDefsMock';
 
 async function renderWithApolloData (component, existingTree) {
-  const tree = existingTree || renderer.create(component);
-  await renderer.act(() => wait(20));
-  // aact(() => {
-  // await wait(100);
-  tree.update(component);
+  const tree = renderer.create(component);
+  await renderer.act(async () => {
+    await wait(0);
+    tree.update(component);
+  });
   return tree;
 };
 
