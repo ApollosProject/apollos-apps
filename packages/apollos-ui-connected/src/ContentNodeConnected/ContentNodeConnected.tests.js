@@ -49,6 +49,17 @@ const mediaMock = {
     data: {
       node: {
         id: 'WeekendContentItem:1',
+        title: 'Weekend Content Item',
+        parentChannel: null,
+        coverImage: {
+          __typename: 'ImageMedia',
+          sources: [
+            {
+              __typename: 'ImageMediaSource',
+              uri: 'https://picsum.photos/2000/200/?random',
+            },
+          ],
+        },
         __typename: 'WeekendContentItem',
         videos: [
           {

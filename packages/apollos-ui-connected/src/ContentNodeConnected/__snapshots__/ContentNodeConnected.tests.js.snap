@@ -139,7 +139,7 @@ Array [
     </View>
   </View>,
   <Text>
-    {"coverImage":{"sources":[{"uri":"https://picsum.photos/2000/200/?random","__typename":"ImageMediaSource"}],"__typename":"ImageMedia"},"coverImageSources":[{"uri":"https://picsum.photos/2000/200/?random","__typename":"ImageMediaSource"}],"loading":false,"title":"Here is the title","videoSource":{"uri":"https://somevideo.com/video.bin","__typename":"VideoMediaSource"}}
+    {"coverImage":{"__typename":"ImageMedia","sources":[{"__typename":"ImageMediaSource","uri":"https://picsum.photos/2000/200/?random"}]},"coverImageSources":[{"__typename":"ImageMediaSource","uri":"https://picsum.photos/2000/200/?random"}],"error":{"graphQLErrors":[],"networkError":{},"message":"No more mocked responses for the query: query getNodeMedia($nodeId: ID!) {\\n  node(id: $nodeId) {\\n    ... on ContentItem {\\n      ...contentMediaFragment\\n      __typename\\n    }\\n    ... on VideoNode {\\n      ...VideoNodeFragment\\n      __typename\\n    }\\n    __typename\\n  }\\n}\\n\\nfragment contentMediaFragment on ContentItem {\\n  id\\n  title\\n  parentChannel {\\n    id\\n    name\\n    __typename\\n  }\\n  coverImage {\\n    sources {\\n      uri\\n      __typename\\n    }\\n    __typename\\n  }\\n  videos {\\n    sources {\\n      uri\\n      __typename\\n    }\\n    __typename\\n  }\\n  __typename\\n}\\n\\nfragment VideoNodeFragment on VideoNode {\\n  videos {\\n    sources {\\n      uri\\n      __typename\\n    }\\n    __typename\\n  }\\n  __typename\\n}\\n, variables: {\\"nodeId\\":\\"WeekendContentItem:1\\"}"},"loading":false,"title":"Weekend Content Item","videoSource":{"__typename":"VideoMediaSource","uri":"https://somevideo.com/video.bin"}}
   </Text>,
   <View
     style={
@@ -163,7 +163,7 @@ Array [
         }
       }
     >
-      Here is the title
+      Weekend Content Item
     </Text>
     <View
       style={

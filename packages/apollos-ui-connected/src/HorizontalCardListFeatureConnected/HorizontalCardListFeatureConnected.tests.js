@@ -15,13 +15,14 @@ const mock = {
     data: {
       node: {
         id: 'HorizontalCardListFeature:123',
-        __typename: 'ActionListFeature',
+        __typename: 'HorizontalCardListFeature',
         title: 'Some cool list',
         subtitle: 'Check it out',
+        primaryAction: null,
         cards: [
           {
-            __typename: 'ActionListCard',
-            id: 'ActionListCard:123',
+            __typename: 'CardListItem',
+            id: 'CardListItem:123',
             title: 'Boom',
             hyphenatedTitle: 'Boom',
             hasAction: false,

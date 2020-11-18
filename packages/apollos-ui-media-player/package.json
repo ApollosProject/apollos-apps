@@ -57,7 +57,7 @@
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
-    "react": "16.8.6",
+    "react": "16.9.0",
     "react-native": "0.60.5",
     "react-native-google-cast": "^3.3.0",
     "react-native-linear-gradient": "2.5.3",
@@ -65,7 +65,7 @@
     "react-native-svg": "9.4.0",
     "react-native-video": "5.0.0",
     "react-native-video-controls": "2.2.3",
-    "react-test-renderer": "16.8.6"
+    "react-test-renderer": "16.9.0"
   },
   "publishConfig": {
     "access": "public"

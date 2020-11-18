@@ -7,22 +7,43 @@ import renderer from 'react-test-renderer';
 import wait from 'waait';
 import { Providers as UIProviders } from '@apollosproject/ui-kit';
 import { MockedProvider } from '@apollo/client/testing';
+import { ApolloClient } from '@apollo/client';
+import { InMemoryCache } from '@apollo/client/cache';
 import possibleTypesJson from './fragmentTypes.json';
 import typeDefs from './typeDefsMock';
 
-const renderWithApolloData = async (component, existingTree) => {
+async function renderWithApolloData (component, existingTree) {
   const tree = existingTree || renderer.create(component);
-  await wait(1);
+  await renderer.act(() => wait(20));
+  // aact(() => {
+  // await wait(100);
   tree.update(component);
   return tree;
 };
 
 // eslint-disable-next-line
-const Providers = ({ children, ...props }) => (
-  <UIProviders {...props}>
-    <MockedProvider {...props}>{children}</MockedProvider>
-  </UIProviders>
-);
+const Providers = ({ children, ...props }) => {
+  const finalPossibleTypes = {};
+  possibleTypesJson.__schema.types.forEach((supertype) => {
+    if (supertype.possibleTypes) {
+      finalPossibleTypes[supertype.name] = [
+        ...supertype.possibleTypes.map((subtype) => subtype.name),
+        // ...(possibleTypes[supertype.name] || []),
+      ];
+    }
+  });
+
+  const cache = new InMemoryCache({
+      possibleTypes: finalPossibleTypes
+    });
+
+  return (<UIProviders {...props}>
+    <MockedProvider                 defaultOptions={{
+                    watchQuery: { fetchPolicy: 'no-cache' },
+                    query: { fetchPolicy: 'no-cache' },
+                }} cache={cache} {...props}>{children}</MockedProvider>
+  </UIProviders>)
+};
 
 const ApolloStorybookDecorator = ({
   mocks,

@@ -23,6 +23,7 @@ const noChildrenMock = {
         __typename: 'ContentSeriesContentItem',
         upNext: null,
         childContentItemsConnection: {
+          __typename: 'ContentItemsConnection',
           edges: [],
         },
       },

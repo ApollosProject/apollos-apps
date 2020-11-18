@@ -54,12 +54,12 @@
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
-    "react": "16.8.6",
+    "react": "16.9.0",
     "react-native": "0.60.5",
     "react-native-geolocation-service": "^3.0.0",
     "react-native-maps": "0.26.1",
     "react-native-safe-area-context": "^3.0.7",
-    "react-test-renderer": "16.8.6",
+    "react-test-renderer": "16.9.0",
     "waait": "1.0.2"
   },
   "publishConfig": {

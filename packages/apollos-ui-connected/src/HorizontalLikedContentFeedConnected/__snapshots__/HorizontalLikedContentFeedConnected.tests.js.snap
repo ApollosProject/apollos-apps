@@ -41,9 +41,9 @@ exports[`HorizontalLikedContentFeedConnected renders a HorizontalLikedContentFee
           style={
             Object {
               "backgroundColor": "rgb(255, 255, 255)",
-              "borderBottomColor": "rgb(224, 224, 224)",
+              "borderBottomColor": "rgb(216, 216, 216)",
               "flex": 1,
-              "shadowColor": "rgb(224, 224, 224)",
+              "shadowColor": "rgb(216, 216, 216)",
               "shadowOffset": Object {
                 "height": 0.5,
                 "width": 0,
@@ -155,13 +155,18 @@ exports[`HorizontalLikedContentFeedConnected renders a HorizontalLikedContentFee
         onTransitionStart={[Function]}
         pointerEvents="box-none"
         style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
+          Array [
+            Object {
+              "overflow": undefined,
+            },
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+          ]
         }
         transitionSpec={
           Object {
@@ -374,15 +379,9 @@ exports[`HorizontalLikedContentFeedConnected renders a HorizontalLikedContentFee
                             "hyphenatedTitle": "Mea Animal Aperiam Ornatus Eu",
                             "id": "UniversalContentItem:d57994350b9d213866b24dea3a97433d",
                             "isLiked": false,
-                            "parentChannel": Object {
-                              "__typename": "ContentChannel",
-                              "id": "ContentChannel:4f68015ba18662a7409d1219a4ce013e",
-                              "name": "Editorial",
-                            },
                             "summary": "Bla bla bla",
                             "theme": null,
                             "title": "Mea Animal Aperiam Ornatus Eu",
-                            "videos": Array [],
                           },
                           Object {
                             "__typename": "UniversalContentItem",
@@ -390,15 +389,9 @@ exports[`HorizontalLikedContentFeedConnected renders a HorizontalLikedContentFee
                             "hyphenatedTitle": "Probo Senserit Id Mea, Ut Sed Malis Postea,",
                             "id": "UniversalContentItem:b36e55d803443431e96bb4b5068147ec",
                             "isLiked": false,
-                            "parentChannel": Object {
-                              "__typename": "ContentChannel",
-                              "id": "ContentChannel:4f68015ba18662a7409d1219a4ce013e",
-                              "name": "Editorial",
-                            },
                             "summary": "Bla bla bla",
                             "theme": null,
                             "title": "Probo Senserit Id Mea, Ut Sed Malis Postea,",
-                            "videos": Array [],
                           },
                         ]
                       }
@@ -987,9 +980,9 @@ exports[`HorizontalLikedContentFeedConnected renders a HorizontalLikedContentFee
           style={
             Object {
               "backgroundColor": "rgb(255, 255, 255)",
-              "borderBottomColor": "rgb(224, 224, 224)",
+              "borderBottomColor": "rgb(216, 216, 216)",
               "flex": 1,
-              "shadowColor": "rgb(224, 224, 224)",
+              "shadowColor": "rgb(216, 216, 216)",
               "shadowOffset": Object {
                 "height": 0.5,
                 "width": 0,
@@ -1101,13 +1094,18 @@ exports[`HorizontalLikedContentFeedConnected renders a HorizontalLikedContentFee
         onTransitionStart={[Function]}
         pointerEvents="box-none"
         style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
+          Array [
+            Object {
+              "overflow": undefined,
+            },
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+          ]
         }
         transitionSpec={
           Object {
@@ -1334,9 +1332,9 @@ exports[`HorizontalLikedContentFeedConnected renders nothing if no liked content
           style={
             Object {
               "backgroundColor": "rgb(255, 255, 255)",
-              "borderBottomColor": "rgb(224, 224, 224)",
+              "borderBottomColor": "rgb(216, 216, 216)",
               "flex": 1,
-              "shadowColor": "rgb(224, 224, 224)",
+              "shadowColor": "rgb(216, 216, 216)",
               "shadowOffset": Object {
                 "height": 0.5,
                 "width": 0,
@@ -1448,13 +1446,18 @@ exports[`HorizontalLikedContentFeedConnected renders nothing if no liked content
         onTransitionStart={[Function]}
         pointerEvents="box-none"
         style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
+          Array [
+            Object {
+              "overflow": undefined,
+            },
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+          ]
         }
         transitionSpec={
           Object {

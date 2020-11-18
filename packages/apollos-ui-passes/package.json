@@ -51,10 +51,10 @@
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
-    "react": "16.8.6",
+    "react": "16.9.0",
     "react-native": "0.60.5",
     "react-native-passkit-wallet": "^0.1.4",
-    "react-test-renderer": "16.8.6",
+    "react-test-renderer": "16.9.0",
     "rn-fetch-blob": "^0.10.15"
   },
   "publishConfig": {
