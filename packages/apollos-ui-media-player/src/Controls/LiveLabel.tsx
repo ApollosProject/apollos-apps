@@ -5,14 +5,24 @@ import { styled } from '@apollosproject/ui-kit';
 const Container = styled(({ theme }: any) => ({
   width: '100%',
   alignItems: 'center',
+  justifyContent: 'center',
+  flexDirection: 'row',
   paddingHorizontal: theme?.sizing?.baseUnit,
   paddingBottom: theme?.sizing?.baseUnit,
 }))(View);
 
+const LiveText = styled(({ theme }: any) => ({
+  color: theme.colors.paper,
+}))(Text);
+
+const LiveDot = styled(({ theme }: any) => ({
+  color: 'red',
+  marginRight: theme.sizing.baseUnit * 0.5,
+}))(Text);
+
 export default () => (
   <Container>
-    <Text style={{ color: 'white' }}>
-      <Text style={{ color: 'red' }}>●</Text> Live Broadcast
-    </Text>
+    <LiveDot>●</LiveDot>
+    <LiveText>Live Broadcast</LiveText>
   </Container>
 );
