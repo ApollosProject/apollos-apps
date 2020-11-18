@@ -1,6 +1,7 @@
 /* eslint-disable prefer-template */
 
 import { get } from 'lodash';
+import moment from 'moment-timezone';
 import {
   createGlobalId,
   withEdgePagination,
@@ -8,9 +9,8 @@ import {
 import ApollosConfig from '@apollosproject/config';
 
 import sanitizeHtml from '../sanitize-html';
-import moment = require('moment');
 
-const { ROCK_MAPPINGS } = ApollosConfig;
+const { ROCK, ROCK_MAPPINGS } = ApollosConfig;
 
 export const defaultContentItemResolvers = {
   id: ({ id }, args, context, { parentType }) =>
@@ -54,14 +54,11 @@ export const defaultContentItemResolvers = {
   coverImage: (root, args, { dataSources: { ContentItem } }) =>
     ContentItem.getCoverImage(root),
 
-  // publishDate: (root, args, { dataSources: { ContentItem } }) =>
-  //   // ContentItem.getPublishDate(root),
-  //   {
-  //     console.log(root.startDateTime);
-  //     return "YOOOOO";
-  //   },
-
-  publishDate: ({ startDateTime }) => moment(startDateTime).format(),
+  publishDate: ({ startDateTime }) =>
+    moment(startDateTime)
+      .tz(ROCK.TIMEZONE)
+      .format()
+      .split(/[-+]\d+:\d+/)[0],
 
   theme: () => null, // todo: integrate themes from Rock
 
