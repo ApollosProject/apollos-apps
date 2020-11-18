@@ -25,7 +25,6 @@ const useVideoCollapseEffect = ({
     },
   }: any) => void
 ] => {
-  const window = Dimensions.get('window');
   const collapsedAnimation = React.useRef(new Animated.Value(0)).current;
   const percentCollapsedRef = React.useRef(0);
 
