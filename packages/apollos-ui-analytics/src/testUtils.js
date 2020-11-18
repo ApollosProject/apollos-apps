@@ -1,10 +1,8 @@
 import React from 'react';
 
 import { Providers } from '@apollosproject/ui-kit';
-import { ApolloProvider } from 'react-apollo';
-import { ApolloClient } from 'apollo-client';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { createHttpLink } from 'apollo-link-http';
+import { ApolloProvider, ApolloClient, createHttpLink } from '@apollo/client';
+import { InMemoryCache } from '@apollo/client/cache';
 import AnalyticsProvider from './Provider';
 
 const cache = new InMemoryCache();

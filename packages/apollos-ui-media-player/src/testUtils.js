@@ -3,12 +3,12 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import wait from 'waait';
 import { Providers as UIProviders } from '@apollosproject/ui-kit';
-import { MockedProvider } from 'react-apollo/test-utils';
-import { ApolloClient } from 'apollo-client';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { createHttpLink } from 'apollo-link-http';
+import { MockedProvider } from '@apollo/client/testing';
+import { ApolloClient, createHttpLink } from '@apollo/client';
+import { InMemoryCache } from '@apollo/client/cache';
 import fetch from 'jest-fetch-mock';
-import { resolvers } from './Provider';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 export const renderWithApolloData = async (component) => {
   const tree = renderer.create(component);
@@ -24,10 +24,22 @@ export const Providers = ({ children, ...props }) => (
   </UIProviders>
 );
 
+export const WithReactNavigator = (Component) => {
+  const Stack = createStackNavigator();
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={() => Component} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+
 const cache = new InMemoryCache();
 
-export const client = new ApolloClient({
-  link: createHttpLink({ fetch }),
-  cache,
-  resolvers,
-});
+export const createClient = (args) =>
+  new ApolloClient({
+    link: createHttpLink({ fetch }),
+    cache,
+    ...args,
+  });

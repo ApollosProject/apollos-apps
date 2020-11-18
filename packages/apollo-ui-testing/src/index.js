@@ -7,10 +7,10 @@ import { MockedProvider } from '@apollo/client/testing';
 import { ApolloClient, createHttpLink } from '@apollo/client';
 import { InMemoryCache } from '@apollo/client/cache';
 import fetch from 'jest-fetch-mock';
-import { resolvers } from './store';
+import { resolvers } from './Provider';
 
-export const renderWithApolloData = async (component) => {
-  const tree = renderer.create(component);
+export const renderWithApolloData = async (component, existingTree) => {
+  const tree = existingTree || renderer.create(component);
   await wait(1);
   tree.update(component);
   return tree;

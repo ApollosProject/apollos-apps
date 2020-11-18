@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
-import { Query, Mutation } from 'react-apollo';
+import { Query, Mutation } from '@apollo/client/react/components';
 
 import { AnalyticsConsumer } from '@apollosproject/ui-analytics';
 

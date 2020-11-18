@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Platform, SafeAreaView } from 'react-native';
 import { ErrorCard, ModalView, styled } from '@apollosproject/ui-kit';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 
 import PassView from './PassView';
 import GET_PASS from './getPass';

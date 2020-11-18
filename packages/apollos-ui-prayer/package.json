@@ -18,7 +18,6 @@
     "react-native"
   ],
   "peerDependencies": {
-    "@apollo/react-hooks": "*",
     "@apollosproject/storybook": "*",
     "@apollosproject/ui-analytics": "*",
     "@apollosproject/ui-fragments": "*",
@@ -26,7 +25,6 @@
     "@apollosproject/ui-notifications": "*",
     "@apollosproject/ui-scripture": "*",
     "react": "*",
-    "react-apollo": "*",
     "react-native": "*"
   },
   "jest": {
@@ -57,10 +55,8 @@
     "yup": "0.26.6"
   },
   "devDependencies": {
-    "@apollo/react-hooks": "3.1.5",
-    "@apollo/react-testing": "3.1.4",
     "@storybook/react-native": "5.2.4",
-    "apollo-client": "2.6.10",
+    "@apollo/client": "3.2.7",
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",

@@ -47,8 +47,7 @@
     "react-native-safe-area-context": "*"
   },
   "dependencies": {
-    "graphql-tag": "2.9.2",
-    "react-apollo": "2.5.5"
+    "graphql-tag": "2.9.2"
   },
   "devDependencies": {
     "@react-native-community/geolocation": "^2.0.2",

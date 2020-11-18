@@ -7,7 +7,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import wait from 'waait';
 import { Providers as UIProviders } from '@apollosproject/ui-kit';
-import { MockedProvider } from 'react-apollo/test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 import possibleTypesJson from './fragmentTypes.json';
 import typeDefs from './typeDefsMock';
 

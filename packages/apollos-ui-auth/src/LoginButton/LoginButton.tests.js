@@ -1,26 +1,39 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import renderer, { act } from 'react-test-renderer';
 import wait from 'waait';
 
 import { Providers } from '@apollosproject/ui-kit';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { MockedProvider } from 'react-apollo/test-utils';
+import { InMemoryCache } from '@apollo/client/cache';
+import { MockedProvider } from '@apollo/client/testing';
 import AuthProvider, { GET_AUTH_TOKEN } from '../Provider';
 
 import { GET_LOGIN_STATE } from '../queries';
 import LoginButton from '.';
 
-const cache = new InMemoryCache();
+export const renderWithApolloData = async (component) => {
+  const tree = renderer.create(component);
+  await wait(0);
+  tree.update(component);
+  return tree;
+};
+
+// const cache = new InMemoryCache();
 describe('LoginButton component', () => {
   it('renders nothing when logged in', async () => {
-    await cache.writeQuery({
-      query: GET_AUTH_TOKEN,
-      data: { authToken: 'test' },
-    });
+    const mock = {
+      request: {
+        query: GET_LOGIN_STATE,
+      },
+      result: {
+        data: { isLoggedIn: true, __typename: 'Query' },
+      },
+    };
 
     const navigation = { navigate: jest.fn() };
-    const tree = renderer.create(
-      <MockedProvider cache={cache}>
+    const tree = await renderWithApolloData(
+      <MockedProvider
+        resolvers={{ Query: { isLoggedIn: () => true } }}
+      >
         <AuthProvider>
           <Providers>
             <LoginButton navigation={navigation} />
@@ -28,7 +41,6 @@ describe('LoginButton component', () => {
         </AuthProvider>
       </MockedProvider>
     );
-    await wait(0); // wait for response from graphql
     expect(tree).toMatchSnapshot();
   });
 
@@ -38,19 +50,18 @@ describe('LoginButton component', () => {
         query: GET_LOGIN_STATE,
       },
       result: {
-        data: { isLoggedIn: null },
+        data: { isLoggedIn: null, __typename: 'Query' },
       },
     };
 
     const navigation = { navigate: jest.fn() };
-    const tree = renderer.create(
+    const tree = await renderWithApolloData(
       <MockedProvider mocks={[mock]}>
         <Providers>
           <LoginButton navigation={navigation} />
         </Providers>
       </MockedProvider>
     );
-    await wait(0); // wait for response from graphql
     expect(tree).toMatchSnapshot();
   });
 
@@ -60,19 +71,18 @@ describe('LoginButton component', () => {
         query: GET_LOGIN_STATE,
       },
       result: {
-        data: { isLoggedIn: null },
+        data: { isLoggedIn: null, __typename: 'Query' },
       },
     };
 
     const navigation = { navigate: jest.fn() };
-    const tree = renderer.create(
+    const tree = await renderWithApolloData(
       <MockedProvider mocks={[mock]}>
         <Providers>
           <LoginButton navigation={navigation} loading />
         </Providers>
       </MockedProvider>
     );
-    await wait(0); // wait for response from graphql
     expect(tree).toMatchSnapshot();
   });
 });

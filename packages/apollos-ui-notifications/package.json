@@ -35,27 +35,22 @@
   },
   "peerDependencies": {
     "@apollosproject/ui-auth": "*",
-    "apollo-client": "*",
+    "@apollo/client": "*",
     "react": "*",
-    "react-apollo": "*",
     "react-native": "*",
     "react-native-onesignal": "*"
   },
   "dependencies": {
-    "apollo-cache-inmemory": "^1.5.1",
-    "apollo-link-context": "1.0.14",
-    "apollo-link-http": "^1.5.14",
     "graphql-tag": "2.9.2",
     "lodash": "^4.17.11",
     "url": "^0.11.0"
   },
   "devDependencies": {
-    "apollo-client": "2.6.8",
+    "@apollo/client": "3.2.7",
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
     "react": "^16.8.3",
-    "react-apollo": "2.5.5",
     "react-native": "0.60.5",
     "react-native-onesignal": "3.9.1",
     "react-test-renderer": "16.8.6",
