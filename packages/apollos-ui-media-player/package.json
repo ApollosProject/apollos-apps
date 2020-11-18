@@ -54,7 +54,7 @@
     "react": "16.13.1",
     "react-native": "0.63.2",
     "react-native-music-control": "^1.2.1",
-    "react-native-safe-area-view": "1.1.1",
+    "react-native-safe-area-context": "3.1.9",
     "react-native-video": "^5.1.0-alpha8",
     "react-test-renderer": "*",
     "typescript": "^3.8.3",
@@ -65,7 +65,7 @@
     "react": "*",
     "react-native": "*",
     "react-native-music-control": "*",
-    "react-native-safe-area-view": "*",
+    "react-native-safe-area-context": "*",
     "react-native-video": "*"
   },
   "jest": {
