@@ -21,6 +21,7 @@ export enum PictureMode {
   Normal,
   Fullscreen,
   PictureInPicture,
+  Collapsed,
 }
 
 // Used in the useNowPlaying() hook

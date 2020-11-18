@@ -82,7 +82,8 @@
     "react-native-video": "^5.1.0-alpha8",
     "react-native-video-controls": "2.2.3",
     "react-native-webview": "^7.0.0",
-    "stream": "^0.0.2"
+    "stream": "^0.0.2",
+    "use-debounce": "5.1.0"
   },
   "devDependencies": {
     "@apollosproject/eslint-config": "^1.5.0",

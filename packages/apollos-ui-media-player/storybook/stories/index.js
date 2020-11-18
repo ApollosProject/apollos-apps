@@ -12,7 +12,7 @@ import {
 const PlayerExamples = () => {
   console.log('rendering PlayerExamples');
   const { setNowPlaying } = useNowPlaying();
-  const { setPictureMode, play, pause } = usePlayerControls();
+  const { setPictureMode, play } = usePlayerControls();
 
   return (
     <>
@@ -20,7 +20,9 @@ const PlayerExamples = () => {
         onPress={() => {
           setNowPlaying({
             source: require('./broadchurch.mp4'),
-            coverImage: { uri: 'https://picsum.photos/100/100' },
+            coverImage: {
+              uri: `https://picsum.photos/seed/${Math.random()}/100/100`,
+            },
             presentationProps: {
               title: 'Video Title',
               description: 'Video Description',
@@ -97,6 +99,9 @@ const BasicPlayer = () => (
     presentationProps={{
       title: 'Video Title',
       description: 'Video Description',
+    }}
+    coverImage={{
+      uri: `https://picsum.photos/seed/${Math.random()}/100/100`,
     }}
   >
     <PlayerExamples />

@@ -7,7 +7,9 @@ import {
   IPlayerControls,
   IInternalPlayer,
 } from './types';
-import FullscreenSlidingPlayer from './FullscreenSlidingPlayer';
+import FullscreenSlidingPlayer, {
+  FullScreenSlidingPlayerProps,
+} from './FullscreenSlidingPlayer';
 import {
   NowPlayingContext,
   PlayerControlsContext,
@@ -19,17 +21,17 @@ import Controls from './Controls';
 import NativeControls from './NativeControls';
 import RNVideo from './RNVideo';
 
-interface ContainerProps extends IPlayerMedia {
+interface ContainerProps extends IPlayerMedia, FullScreenSlidingPlayerProps {
   autoplay?: Boolean;
-  /** Component that renders the actual video. Default: react-native-video */
-  VideoComponent?: React.FunctionComponent;
-  /** Component that is displayed above the video */
-  ControlsComponent?: React.FunctionComponent;
+
+  /** The Player Component. Defaults to FullscreenSlidingPlayer */
+  PlayerComponent?: React.FunctionComponent;
 }
 
 const Container: React.FunctionComponent<ContainerProps> = ({
   VideoComponent = RNVideo,
   ControlsComponent = Controls,
+  PlayerComponent = FullscreenSlidingPlayer,
   children,
   source,
   coverImage,
@@ -144,12 +146,12 @@ const Container: React.FunctionComponent<ContainerProps> = ({
               () => (
                 <React.Fragment>
                   <NativeControls />
-                  <FullscreenSlidingPlayer
+                  <PlayerComponent
                     VideoComponent={VideoComponent}
                     ControlsComponent={ControlsComponent}
                   >
                     {children}
-                  </FullscreenSlidingPlayer>
+                  </PlayerComponent>
                 </React.Fragment>
               ),
               [children, VideoComponent, ControlsComponent]

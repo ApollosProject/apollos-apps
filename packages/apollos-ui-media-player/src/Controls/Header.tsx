@@ -64,8 +64,8 @@ const Header: React.FunctionComponent = () => {
   return (
     <Container>
       <PaddedView>
-        {nowPlaying?.presentationProps?.coverImage ? (
-          <Image source={nowPlaying.presentationProps.coverImage} />
+        {nowPlaying?.coverImage ? (
+          <Image source={nowPlaying.coverImage} />
         ) : null}
         {nowPlaying?.presentationProps?.badge
           ? nowPlaying?.presentationProps?.badge

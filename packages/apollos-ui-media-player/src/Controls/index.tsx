@@ -1,5 +1,11 @@
 import * as React from 'react';
-import { SafeAreaView, View, StatusBar } from 'react-native';
+import {
+  SafeAreaView,
+  View,
+  StatusBar,
+  Animated,
+  StyleSheet,
+} from 'react-native';
 import {
   ThemeMixin,
   styled,
@@ -15,6 +21,7 @@ import Seeker from './Seeker';
 
 import AirPlayButton from '../AirPlayButton';
 import { PictureMode } from '../types';
+import CollapsedHeader from './CollapsedHeader';
 
 const FooterWrapper = styled(
   {
@@ -67,7 +74,11 @@ const StyledAirPlayButton = withTheme(
   'ApollosPlayer.FullscreenPresentation.FullscreenControls.AirPlayButton'
 )(AirPlayButton);
 
-const Controls = () => {
+const Controls = ({
+  collapsedAnimation,
+}: {
+  collapsedAnimation?: Animated.Value;
+}) => {
   const {
     pictureMode,
     setPictureMode,
@@ -79,33 +90,55 @@ const Controls = () => {
   const isFullscreen = pictureMode === PictureMode.Fullscreen;
   const isInPiP = pictureMode === PictureMode.PictureInPicture;
 
+  const controlsCollapsedStyles = [
+    {
+      opacity: collapsedAnimation?.interpolate({
+        inputRange: [0, 1],
+        outputRange: [1, 0],
+      }),
+    },
+    StyleSheet.absoluteFill,
+  ];
+
+  const collapsedHeaderStyles = [
+    { opacity: collapsedAnimation },
+    StyleSheet.absoluteFill,
+  ];
+
   return (
     <ThemeMixin mixin={{ type: 'dark' }}>
       <StatusBar hidden={isFullscreen} />
+      {isFullscreen ? null : (
+        <Animated.View style={collapsedHeaderStyles}>
+          <CollapsedHeader />
+        </Animated.View>
+      )}
       {isInPiP ? null : (
-        <FadeoutOverlay>
-          {isFullscreen ? <Header /> : null}
-          <FooterWrapper>
-            <FooterControls>
-              <StyledAirPlayButton />
-              <IconMd name="skip-back-thirty" onPress={() => skip(-30)} />
-              <IconMd
-                name={isPlaying ? 'pause' : 'play'}
-                onPress={isPlaying ? pause : play}
-              />
-              <IconMd name="skip-forward-thirty" onPress={() => skip(30)} />
-              <IconSm
-                name="fullscreen"
-                onPress={() =>
-                  setPictureMode(
-                    isFullscreen ? PictureMode.Normal : PictureMode.Fullscreen
-                  )
-                }
-              />
-            </FooterControls>
-            <Seeker />
-          </FooterWrapper>
-        </FadeoutOverlay>
+        <Animated.View style={controlsCollapsedStyles}>
+          <FadeoutOverlay>
+            {isFullscreen ? <Header /> : null}
+            <FooterWrapper>
+              <FooterControls>
+                <StyledAirPlayButton />
+                <IconMd name="skip-back-thirty" onPress={() => skip(-30)} />
+                <IconMd
+                  name={isPlaying ? 'pause' : 'play'}
+                  onPress={isPlaying ? pause : play}
+                />
+                <IconMd name="skip-forward-thirty" onPress={() => skip(30)} />
+                <IconSm
+                  name="fullscreen"
+                  onPress={() =>
+                    setPictureMode(
+                      isFullscreen ? PictureMode.Normal : PictureMode.Fullscreen
+                    )
+                  }
+                />
+              </FooterControls>
+              <Seeker />
+            </FooterWrapper>
+          </FadeoutOverlay>
+        </Animated.View>
       )}
     </ThemeMixin>
   );
