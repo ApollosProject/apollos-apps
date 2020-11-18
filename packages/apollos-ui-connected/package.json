@@ -43,7 +43,6 @@
     "@apollosproject/ui-media-player": "*",
     "@apollosproject/ui-storybook": "*",
     "@react-native-community/async-storage": "*",
-    "react-native-apollos-player": "*",
     "react": "*",
     "react-native": "*",
     "react-native-image-picker": "*",

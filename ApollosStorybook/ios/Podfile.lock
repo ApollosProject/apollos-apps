@@ -410,7 +410,7 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
-  - react-native-apollos-player (from `../../packages/react-native-apollos-player`)
+  - react-native-apollos-player (from `../../packages/apollos-ui-media-player`)
   - react-native-config (from `../node_modules/react-native-config`)
   - "react-native-geolocation (from `../node_modules/@react-native-community/geolocation`)"
   - react-native-google-cast (from `../node_modules/react-native-google-cast/ios`)
@@ -501,7 +501,7 @@ EXTERNAL SOURCES:
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   react-native-apollos-player:
-    :path: "../../packages/react-native-apollos-player"
+    :path: "../../packages/apollos-ui-media-player"
   react-native-config:
     :path: "../node_modules/react-native-config"
   react-native-geolocation:

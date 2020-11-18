@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 
 import { styled, BackgroundView, StretchyView } from '@apollosproject/ui-kit';
-import { ApollosPlayerContainer } from '@apollosproject/react-native-apollos-player';
+import { ApollosPlayerContainer } from '@apollosproject/ui-media-player';
 
 import ContentNodeConnected from '../ContentNodeConnected';
 import ContentParentFeedConnected from '../ContentParentFeedConnected';
