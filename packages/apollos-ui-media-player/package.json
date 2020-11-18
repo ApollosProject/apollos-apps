@@ -1,5 +1,5 @@
 {
-  "name": "@apollosproject/react-native-apollos-player",
+  "name": "@apollosproject/ui-media-player",
   "version": "0.1.0",
   "description": "An opinionated media player for react-native apps from The Apollos Project",
   "main": "lib/commonjs/index",
