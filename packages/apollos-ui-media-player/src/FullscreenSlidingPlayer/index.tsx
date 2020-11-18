@@ -38,7 +38,7 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
   ControlsComponent,
   VideoComponent,
   children,
-  collapseOnScroll = true,
+  collapseOnScroll = false,
 }) => {
   // Setup layout and window objects for size references inside of computed
   // styles that are below.
@@ -80,7 +80,7 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
     videoHeight,
     collapsedVideoHeight,
     scrollTo: scrollViewRef.current?.scrollTo,
-    forceCollapsed: isPiP,
+    collapseOnScroll: collapseOnScroll || isPiP,
   });
 
   // presentationAnimation has 3 states:
@@ -152,6 +152,26 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
     ]
   );
 
+  const scrollViewStyles = React.useMemo(
+    () => ({
+      position: 'absolute',
+      left: 0,
+      right: 0,
+      bottom: 0,
+      top: 0,
+      transform: [
+        {
+          translateY: fullscreenAnimation.interpolate({
+            inputRange: [0, 1],
+            outputRange: [0, window.height],
+            extrapolate: 'clamp',
+          }),
+        },
+      ],
+    }),
+    [fullscreenAnimation, window.height]
+  );
+
   const FullscreenWrapper = React.useMemo(() => {
     // We have to wrap fullscreen view in <Modal> on iOS in order to make sure
     // the player is presented on top of ReactNavigation Native Navigation views
@@ -201,8 +221,8 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
           scrollViewRef.current = node;
         }}
         scrollEventThrottle={16}
-        onScroll={collapseOnScroll || isPiP ? handleScroll : undefined}
-        style={StyleSheet.absoluteFill}
+        onScroll={handleScroll}
+        style={scrollViewStyles}
         contentInset={{ top: videoHeight }}
         contentOffset={{
           x: 0,

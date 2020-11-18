@@ -11,12 +11,12 @@ const useVideoCollapseEffect = ({
   videoHeight, // The initial height of the video player
   collapsedVideoHeight, // the collapsed height of the video player
   scrollTo, // method called to scroll the scroll view
-  forceCollapsed = false, // whether to force the view into a collapsed mode
+  collapseOnScroll = true, // turns on or off the collapse while scrolling
 }: {
   videoHeight: number;
   collapsedVideoHeight: number;
   scrollTo?: (pos: { y: number }) => void;
-  forceCollapsed: boolean;
+  collapseOnScroll: boolean;
 }): [
   Animated.Value,
   ({
@@ -39,6 +39,7 @@ const useVideoCollapseEffect = ({
       : videoHeight - collapsedVideoHeight;
 
   const debouncedScrollHandler = useDebouncedCallback((percentageCollapsed) => {
+    if (!collapseOnScroll) return;
     if (percentageCollapsed > 1 || !scrollTo) return;
     if (percentageCollapsed > 0.5) {
       scrollTo({ y: collapsedY });
@@ -53,35 +54,43 @@ const useVideoCollapseEffect = ({
         contentOffset: { y },
       },
     }) => {
-      let percentageCollapsed = -(y - startingY) / collapsedOffset;
-      // handle the "stretchy effect"
-      if (percentageCollapsed < 0) {
-        percentageCollapsed = (y - startingY) / (window.height - videoHeight);
+      let percentageCollapsed = Math.max(0, -(y - startingY) / collapsedOffset);
+      if (collapseOnScroll) {
+        collapsedAnimation.setValue(percentageCollapsed);
+        debouncedScrollHandler.callback(percentageCollapsed);
       }
-      collapsedAnimation.setValue(percentageCollapsed);
-      debouncedScrollHandler.callback(percentageCollapsed);
       percentCollapsedRef.current = percentageCollapsed;
     },
     [
-      window.height,
+      collapseOnScroll,
       collapsedOffset,
       startingY,
       debouncedScrollHandler,
-      videoHeight,
       collapsedAnimation,
     ]
   );
 
-  // handle forceCollapsed mode
+  // handle collapseOnScroll changing
   React.useEffect(() => {
-    if (scrollTo) {
-      if (forceCollapsed && percentCollapsedRef.current < 1) {
-        scrollTo({ y: collapsedY });
-      } else if (!forceCollapsed && percentCollapsedRef.current <= 1) {
-        setTimeout(() => scrollTo({ y: startingY }), 250);
-      }
+    if (collapseOnScroll) {
+      Animated.spring(collapsedAnimation, {
+        toValue: percentCollapsedRef.current,
+        overshootClamping: true,
+        useNativeDriver: false,
+      }).start();
+    } else {
+      // this timeout gives the PiP animation time to complete
+      setTimeout(
+        () =>
+          Animated.spring(collapsedAnimation, {
+            toValue: 0,
+            overshootClamping: true,
+            useNativeDriver: false,
+          }).start(),
+        250
+      );
     }
-  }, [forceCollapsed, scrollTo, collapsedY, startingY]);
+  }, [collapseOnScroll, collapsedAnimation]);
 
   return [collapsedAnimation, scrollHandler];
 };
