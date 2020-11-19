@@ -7,59 +7,29 @@ import { Providers, renderWithApolloData } from '../../testUtils';
 import getUserFirstAndLastName from './getUserFirstAndLastName';
 import AskNameConnected from './AskNameConnected';
 
+const mock = {
+  request: {
+    query: getUserFirstAndLastName,
+  },
+  result: {
+    data: {
+      currentUser: {
+        __typename: 'AuthenticatedUser',
+        id: 'AuthenticatedUser:123',
+        profile: {
+          __typename: 'Person',
+          id: 'Person:123',
+          firstName: 'Isaac',
+          lastName: 'Hardy',
+        },
+      },
+    },
+  },
+};
+
 describe('The AskNameConnected component', () => {
   it('renders in a default state', () => {
-    const mock = {
-      request: {
-        query: getUserFirstAndLastName,
-      },
-      result: {
-        data: {
-          currentUser: {
-            id: 'AuthenticatedUser:123',
-            profile: {
-              id: 'Person:123',
-              firstName: null,
-              lastName: null,
-            },
-          },
-        },
-      },
-    };
-    const tree = renderer.create(
-      <Providers mocks={[mock]}>
-        <AskNameConnected onPressPrimary={jest.fn()} />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
-  it('renders User Name when logged in', async () => {
-    const mock = {
-      request: {
-        query: getUserFirstAndLastName,
-      },
-      result: {
-        data: {
-          currentUser: {
-            id: 'AuthenticatedUser:123',
-            profile: {
-              id: 'Person:123',
-              firstName: 'Isaac',
-              lastName: 'Hardy',
-            },
-          },
-        },
-      },
-    };
-    const tree = await renderWithApolloData(
-      <Providers mocks={[mock]}>
-        <AskNameConnected onPressPrimary={jest.fn()} />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
-  it('should render a custom Component', async () => {
-    const mock = {
+    const newUserMock = {
       request: {
         query: getUserFirstAndLastName,
       },
@@ -71,14 +41,29 @@ describe('The AskNameConnected component', () => {
             profile: {
               __typename: 'Person',
               id: 'Person:123',
-              firstName: 'Isaac',
-              lastName: 'Hardy',
+              firstName: null,
+              lastName: null,
             },
           },
         },
       },
     };
-
+    const tree = renderer.create(
+      <Providers mocks={[newUserMock]}>
+        <AskNameConnected onPressPrimary={jest.fn()} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('renders User Name when logged in', async () => {
+    const tree = await renderWithApolloData(
+      <Providers mocks={[mock]}>
+        <AskNameConnected onPressPrimary={jest.fn()} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render a custom Component', async () => {
     // eslint-disable-next-line react/prop-types
     const CustomComponent = ({ firstName, lastName }) => (
       <Text>
@@ -98,8 +83,8 @@ describe('The AskNameConnected component', () => {
   });
   it('renders loading state when fetching data', () => {
     const tree = renderer.create(
-      <Providers mocks={[]}>
-        <AskNameConnected onPressPrimary={jest.fn()} />
+      <Providers mocks={[mock]}>
+        <AskNameConnected onPressPrimary={jest.fn()} loading />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
