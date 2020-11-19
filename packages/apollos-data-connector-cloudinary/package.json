@@ -23,7 +23,7 @@
     ]
   },
   "dependencies": {
-    "cloudinary": "^1.13.2"
+    "cloudinary": "1.14.0"
   },
   "peerDependencies": {
     "@apollosproject/config": "*"
