@@ -1,5 +1,6 @@
 import React from 'react';
-import { Providers, renderWithApolloData } from '../testUtils';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 
 import GET_NODE_FEATURES from './getNodeFeatures';
 
@@ -98,7 +99,7 @@ describe('ContentSingleFeaturesConnected', () => {
       },
     };
     const tree = await renderWithApolloData(
-      <Providers mocks={[mock]}>
+      <Providers mocks={[mock]} MockedProvider={MockedProvider}>
         <NodeFeaturesConnected nodeId={'WeekendContentItem:1'} />
       </Providers>
     );

@@ -1,6 +1,7 @@
 import React from 'react';
 import wait from 'waait';
-import { Providers, renderWithApolloData } from '../testUtils';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 
 import { PrayerDialogScreen } from '../screens';
 import { PRAY } from '../screens/PrayerScreen';
@@ -183,7 +184,7 @@ const mocks = [
 describe('The PrayerExperienceConnected component', () => {
   it('should render', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={mocks}>
+      <Providers MockedProvider={MockedProvider} mocks={mocks}>
         <PrayerExperienceConnected id="PrayerListFeature:123" />
       </Providers>
     );
@@ -193,7 +194,7 @@ describe('The PrayerExperienceConnected component', () => {
 
   it('hides onboarding', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={mocks}>
+      <Providers MockedProvider={MockedProvider} mocks={mocks}>
         <PrayerExperienceConnected
           id="PrayerListFeature:123"
           showOnboarding={false}
@@ -206,7 +207,7 @@ describe('The PrayerExperienceConnected component', () => {
 
   it('closes onboarding when button is pressed', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={mocks}>
+      <Providers MockedProvider={MockedProvider} mocks={mocks}>
         <PrayerExperienceConnected id="PrayerListFeature:123" />
       </Providers>
     );
@@ -221,7 +222,7 @@ describe('The PrayerExperienceConnected component', () => {
 
   it('prays', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={mocks}>
+      <Providers MockedProvider={MockedProvider} mocks={mocks}>
         <PrayerExperienceConnected id="PrayerListFeature:123" />
       </Providers>
     );

@@ -2,7 +2,8 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { Text } from 'react-native';
 
-import { renderWithApolloData, Providers } from '../../testUtils';
+import { renderWithApolloData, Providers } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 
 import GET_USER_FIRST_NAME from './getUserFirstName';
 import FeaturesConnected from './FeaturesConnected';
@@ -29,7 +30,7 @@ describe('The Onboarding FeaturesConnected component', () => {
     };
 
     const tree = renderer.create(
-      <Providers mocks={[mock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <FeaturesConnected />
       </Providers>
     );
@@ -56,7 +57,7 @@ describe('The Onboarding FeaturesConnected component', () => {
     };
 
     const tree = await renderWithApolloData(
-      <Providers mocks={[mock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <FeaturesConnected />
       </Providers>
     );
@@ -88,7 +89,7 @@ describe('The Onboarding FeaturesConnected component', () => {
     );
 
     const tree = await renderWithApolloData(
-      <Providers mocks={[mock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <FeaturesConnected Component={CustomComponent} />
       </Providers>
     );

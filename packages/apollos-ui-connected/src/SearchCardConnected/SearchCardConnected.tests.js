@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Providers, renderWithApolloData } from '../testUtils';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 
 import SearchCardConnected from '.';
 
@@ -30,7 +31,7 @@ describe('The SearchCardConnected component', () => {
     };
 
     const tree = await renderWithApolloData(
-      <Providers>
+      <Providers MockedProvider={MockedProvider}>
         <SearchCardConnected
           coverImage={data.coverImage}
           summary={data.summary}
@@ -56,7 +57,7 @@ describe('The SearchCardConnected component', () => {
     };
 
     const tree = await renderWithApolloData(
-      <Providers>
+      <Providers MockedProvider={MockedProvider}>
         <SearchCardConnected
           coverImage={data.coverImage}
           summary={data.summary}

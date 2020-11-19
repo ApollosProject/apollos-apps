@@ -2,7 +2,8 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { Text } from 'react-native';
 
-import { Providers, renderWithApolloData } from '../../testUtils';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 
 import getUserFirstAndLastName from './getUserFirstAndLastName';
 import AskNameConnected from './AskNameConnected';
@@ -49,7 +50,7 @@ describe('The AskNameConnected component', () => {
       },
     };
     const tree = renderer.create(
-      <Providers mocks={[newUserMock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[newUserMock]}>
         <AskNameConnected onPressPrimary={jest.fn()} />
       </Providers>
     );
@@ -57,7 +58,7 @@ describe('The AskNameConnected component', () => {
   });
   it('renders User Name when logged in', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={[mock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <AskNameConnected onPressPrimary={jest.fn()} />
       </Providers>
     );
@@ -72,7 +73,7 @@ describe('The AskNameConnected component', () => {
     );
 
     const tree = await renderWithApolloData(
-      <Providers mocks={[mock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <AskNameConnected
           Component={CustomComponent}
           onPressPrimary={jest.fn()}
@@ -83,7 +84,7 @@ describe('The AskNameConnected component', () => {
   });
   it('renders loading state when fetching data', () => {
     const tree = renderer.create(
-      <Providers mocks={[mock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <AskNameConnected onPressPrimary={jest.fn()} loading />
       </Providers>
     );

@@ -1,7 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { Providers, renderWithApolloData } from '../testUtils';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 
 import GET_HORIZONTAL_CARD_LIST_FEATURE from './getHorizontalCardListFeature';
 import HorizontalCardListFeatureConnected from './index';
@@ -65,7 +66,7 @@ const noCardsMock = {
 describe('The HorizontalCardListFeatureConnected component', () => {
   it('should render', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={[mock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <HorizontalCardListFeatureConnected
           featureId={'HorizontalCardListFeature:123'}
           refetchRef={jest.fn()}
@@ -76,7 +77,7 @@ describe('The HorizontalCardListFeatureConnected component', () => {
   });
   it('should not render without cards', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={[noCardsMock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[noCardsMock]}>
         <HorizontalCardListFeatureConnected
           featureId={'HorizontalCardListFeature:123'}
           refetchRef={jest.fn()}
@@ -87,7 +88,7 @@ describe('The HorizontalCardListFeatureConnected component', () => {
   });
   it('should render a loading state when isLoading', async () => {
     const tree = renderer.create(
-      <Providers>
+      <Providers MockedProvider={MockedProvider}>
         <HorizontalCardListFeatureConnected
           featureId={'HorizontalCardListFeature:123'}
           refetchRef={jest.fn()}

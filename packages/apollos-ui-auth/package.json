@@ -22,7 +22,7 @@
     "collectCoverage": true,
     "coverageReporters": ["json", "lcovonly", "clover"],
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|@react-navigation/native|@apollosproject|@@react-navigation/native))"
+      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|@react-navigation/native|@apollosproject|@react-navigation/stack))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -56,6 +56,7 @@
   "devDependencies": {
     "@react-native-community/async-storage": "^1.5.1",
     "@apollo/client": "3.2.7",
+    "@apollosproject/ui-test-utils": "1.7.0-beta.2",
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",

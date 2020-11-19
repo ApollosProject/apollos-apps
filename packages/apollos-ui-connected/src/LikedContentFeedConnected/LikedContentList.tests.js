@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { GET_CONTENT_CARD } from '@apollosproject/ui-connected';
-import { Providers, renderWithApolloData } from '../testUtils';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 import GET_LIKED_CONTENT from './getLikedContent';
 
 import LikedContentFeedConnected from '.';
@@ -103,7 +104,10 @@ describe('LikedContentFeedConnected component', () => {
     );
     const navigation = { navigate: jest.fn() };
     const tree = await renderWithApolloData(
-      <Providers mocks={[mock, ...additionalMocks]}>
+      <Providers
+        MockedProvider={MockedProvider}
+        mocks={[mock, ...additionalMocks]}
+      >
         <LikedContentFeedConnected navigation={navigation} />
       </Providers>
     );

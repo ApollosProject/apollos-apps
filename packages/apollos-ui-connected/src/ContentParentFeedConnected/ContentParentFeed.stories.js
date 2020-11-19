@@ -3,7 +3,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 import { times } from 'lodash';
 
 import { BackgroundView, CenteredView } from '@apollosproject/ui-kit';
-import { ApolloStorybookDecorator } from '../testUtils';
+import { ApolloStorybookDecorator } from '@apollosproject/ui-test-utils';
 
 import ContentParentFeedConnected from './ContentParentFeedConnected';
 

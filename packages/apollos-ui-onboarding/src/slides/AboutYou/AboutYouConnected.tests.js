@@ -2,7 +2,8 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { Text } from 'react-native';
 
-import { renderWithApolloData, Providers } from '../../testUtils';
+import { renderWithApolloData, Providers } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 import GET_USER_GENDER_AND_BIRTH_DATE from './getUserGenderAndBirthDate';
 import AboutYouConnected from './AboutYouConnected';
 
@@ -38,7 +39,7 @@ describe('AboutYouConnected component', () => {
       },
     };
     const tree = renderer.create(
-      <Providers mocks={[mock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <AboutYouConnected
           onPressPrimary={jest.fn()}
           defaultDate={'2019-02-14T05:00:00.000Z'}
@@ -68,7 +69,7 @@ describe('AboutYouConnected component', () => {
       },
     };
     const tree = await renderWithApolloData(
-      <Providers mocks={[mock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <AboutYouConnected setFieldValue={jest.fn()} />
       </Providers>
     );
@@ -98,7 +99,7 @@ describe('AboutYouConnected component', () => {
     const CustomComponent = ({ gender }) => <Text>{gender}</Text>; // eslint-disable-line react/prop-types
 
     const tree = await renderWithApolloData(
-      <Providers mocks={[mock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <AboutYouConnected
           Component={CustomComponent}
           onPressPrimary={jest.fn()}

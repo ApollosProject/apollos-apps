@@ -1,20 +1,11 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import wait from 'waait';
 
-import { Providers } from '@apollosproject/ui-kit';
-import { InMemoryCache } from '@apollo/client/cache';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
 import { MockedProvider } from '@apollo/client/testing';
+import { InMemoryCache } from '@apollo/client/cache';
 import AuthProvider, { GET_AUTH_TOKEN } from '../Provider';
 
 import LoginButton from '.';
-
-export const renderWithApolloData = async (component) => {
-  const tree = renderer.create(component);
-  await wait(0);
-  // tree.update(component);
-  return tree;
-};
 
 describe('LoginButton component', () => {
   it('renders nothing when logged in', async () => {
@@ -26,13 +17,11 @@ describe('LoginButton component', () => {
 
     const navigation = { navigate: jest.fn() };
     const tree = await renderWithApolloData(
-      <MockedProvider cache={cache}>
+      <Providers MockedProvider={MockedProvider} cache={cache}>
         <AuthProvider>
-          <Providers>
-            <LoginButton navigation={navigation} />
-          </Providers>
+          <LoginButton navigation={navigation} />
         </AuthProvider>
-      </MockedProvider>
+      </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
@@ -43,13 +32,11 @@ describe('LoginButton component', () => {
 
     const navigation = { navigate: jest.fn() };
     const tree = await renderWithApolloData(
-      <MockedProvider cache={cache}>
+      <Providers MockedProvider={MockedProvider} cache={cache}>
         <AuthProvider>
-          <Providers>
-            <LoginButton navigation={navigation} />
-          </Providers>
+          <LoginButton navigation={navigation} />
         </AuthProvider>
-      </MockedProvider>
+      </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
@@ -60,13 +47,11 @@ describe('LoginButton component', () => {
 
     const navigation = { navigate: jest.fn() };
     const tree = await renderWithApolloData(
-      <MockedProvider cache={cache}>
+      <Providers MockedProvider={MockedProvider} cache={cache}>
         <AuthProvider>
-          <Providers>
-            <LoginButton navigation={navigation} loading />
-          </Providers>
+          <LoginButton navigation={navigation} loading />
         </AuthProvider>
-      </MockedProvider>
+      </Providers>
     );
     expect(tree).toMatchSnapshot();
   });

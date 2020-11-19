@@ -1,7 +1,17 @@
 import gql from 'graphql-tag';
-import { client } from './testUtils';
+import fetch from 'jest-fetch-mock';
+import { ApolloClient, createHttpLink } from '@apollo/client';
+import { InMemoryCache } from '@apollo/client/cache';
 import { getPushPermissions, getHasPrompted } from './permissionUtils';
-import { defaults } from './store';
+import { resolvers, defaults } from './store';
+
+const cache = new InMemoryCache();
+
+const client = new ApolloClient({
+  link: createHttpLink({ fetch }),
+  cache,
+  resolvers,
+});
 
 const GET_PUSH_ID = gql`
   query {

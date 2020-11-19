@@ -1,12 +1,13 @@
 /* eslint-disable import/prefer-default-export */
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { View } from 'react-native';
 // import apolloStorybookDecorator from 'apollo-storybook-react-native';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import wait from 'waait';
 import { Providers as UIProviders } from '@apollosproject/ui-kit';
-import { MockedProvider } from '@apollo/client/testing';
+// import { MockedProvider } from '@apollo/client/testing';
 // import { ApolloClient } from '@apollo/client';
 import { InMemoryCache } from '@apollo/client/cache';
 import possibleTypesJson from './fragmentTypes.json';
@@ -22,7 +23,7 @@ async function renderWithApolloData(component, existingTree) {
 }
 
 // eslint-disable-next-line
-function Providers({ children, ...props }){
+function Providers({ MockedProvider = View, children, ...props }){
   const finalPossibleTypes = {};
   possibleTypesJson.__schema.types.forEach((supertype) => {
     if (supertype.possibleTypes) {

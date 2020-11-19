@@ -2,7 +2,8 @@ import React from 'react';
 import wait from 'waait';
 
 import { act } from 'react-test-renderer';
-import { Providers, renderWithApolloData } from '../../testUtils';
+import { MockedProvider } from '@apollo/client/testing';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
 import PrayerCard from '../../PrayerCard';
 
 import AddPrayerCard, { GET_USER_PHOTO, ADD_PRAYER } from '.';
@@ -55,7 +56,7 @@ const mocks = [
 describe('The AddPrayerScreenConnected component', () => {
   it('should render', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={mocks}>
+      <Providers MockedProvider={MockedProvider} mocks={mocks}>
         <AddPrayerCard />
       </Providers>
     );
@@ -65,7 +66,7 @@ describe('The AddPrayerScreenConnected component', () => {
 
   it('should accept a title', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={mocks}>
+      <Providers MockedProvider={MockedProvider} mocks={mocks}>
         <AddPrayerCard title="Custom" />
       </Providers>
     );
@@ -75,7 +76,7 @@ describe('The AddPrayerScreenConnected component', () => {
 
   it('should render a custom component', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={mocks}>
+      <Providers MockedProvider={MockedProvider} mocks={mocks}>
         <AddPrayerCard PrayerCardComponent={(props) => JSON.stringify(props)} />
       </Providers>
     );
@@ -85,7 +86,7 @@ describe('The AddPrayerScreenConnected component', () => {
 
   it('should render a custom skipText', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={mocks}>
+      <Providers MockedProvider={MockedProvider} mocks={mocks}>
         <AddPrayerCard skipText="💣" />
       </Providers>
     );
@@ -95,7 +96,7 @@ describe('The AddPrayerScreenConnected component', () => {
 
   it('should render avatars', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={mocks}>
+      <Providers MockedProvider={MockedProvider} mocks={mocks}>
         <AddPrayerCard avatars={[{ uri: 'my-image.jpg' }]} />
       </Providers>
     );
@@ -105,7 +106,7 @@ describe('The AddPrayerScreenConnected component', () => {
 
   it('should render a custom post-add component', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={mocks}>
+      <Providers MockedProvider={MockedProvider} mocks={mocks}>
         <AddPrayerCard
           AddedPrayerComponent={(props) => JSON.stringify(props)}
         />
@@ -117,7 +118,7 @@ describe('The AddPrayerScreenConnected component', () => {
 
   it('should create a prayer', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={mocks}>
+      <Providers MockedProvider={MockedProvider} mocks={mocks}>
         <AddPrayerCard />
       </Providers>
     );
