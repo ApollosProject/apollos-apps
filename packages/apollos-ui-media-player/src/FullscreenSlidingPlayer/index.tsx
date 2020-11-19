@@ -8,6 +8,7 @@ import {
   Dimensions,
   View,
   ScrollView,
+  useWindowDimensions,
 } from 'react-native';
 
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -19,7 +20,6 @@ import VideoOutlet from '../VideoOutlet';
 
 import useVideoCollapseEffect from './useVideoCollapseEffect';
 import usePresentationAnimation from './usePresentationAnimation';
-import useOptimizedWindowDimensions from './useOptimizedWindowDimensions';
 
 export interface FullScreenSlidingPlayerProps {
   /** Component that renders the actual video. Default: react-native-video */
@@ -51,7 +51,7 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
     height: Dimensions.get('window').height,
   });
 
-  const window = useOptimizedWindowDimensions();
+  const window = useWindowDimensions();
 
   // pictureMode is used to detect fullscreen status, which drives
   // triggering the fullscreenAnimation and opening the ModalView.
@@ -104,21 +104,13 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
   const fullscreenPresentationStyles = React.useMemo(
     () => [
       StyleSheet.absoluteFill,
-      Platform.OS === 'android' && !useNativeFullscreeniOS
-        ? null
-        : {
-            zIndex: 99999,
-            top: window.height - layout.height,
-            left: window.width - layout.width,
-          },
+      {
+        zIndex: 99999,
+        top: window.height - layout.height,
+        left: window.width - layout.width,
+      },
     ],
-    [
-      layout.height,
-      layout.width,
-      window.height,
-      window.width,
-      useNativeFullscreeniOS,
-    ]
+    [layout.height, layout.width, window.height, window.width]
   );
 
   // presentation styles handle translating the video during fullscreen anim,
