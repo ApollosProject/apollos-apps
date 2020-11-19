@@ -5,7 +5,6 @@ import MusicControl from 'react-native-music-control';
 import { useNowPlaying, usePlayerControls, usePlayhead } from './context';
 
 export default () => {
-  if (Platform.OS === 'android') return null;
   const nowPlaying = useNowPlaying();
   const { isPlaying, play, pause, skip, seek } = usePlayerControls();
   const { totalDuration, elapsedTime } = usePlayhead();
@@ -13,10 +12,12 @@ export default () => {
   // configure controls and handle unmount
   useEffect(() => {
     MusicControl.enableBackgroundMode(true);
-    MusicControl.handleAudioInterruptions(true);
+    // broken on Android
+    if (Platform.OS === 'ios') MusicControl.handleAudioInterruptions(true);
     MusicControl.enableControl('play', true);
     MusicControl.enableControl('pause', true);
     MusicControl.enableControl('changePlaybackPosition', true);
+    MusicControl.enableControl('seek', true);
     MusicControl.enableControl('skipBackward', true, { interval: 30 });
     MusicControl.enableControl('skipForward', true, { interval: 30 });
     MusicControl.enableControl('togglePlayPause', true);
@@ -46,6 +47,7 @@ export default () => {
       isLiveStream: nowPlaying?.isLive ?? false, // iOS Only (Boolean), Show or hide Live Indicator instead of seekbar on lock screen for live streams. Default value is false.
     });
     MusicControl.enableControl('changePlaybackPosition', !nowPlaying?.isLive);
+    MusicControl.enableControl('seek', !nowPlaying?.isLive);
   }, [nowPlaying, totalDuration]);
 
   // configure listeners
@@ -66,14 +68,18 @@ export default () => {
     MusicControl.on('togglePlayPause', () => (isPlaying ? pause() : play()));
     // @ts-ignore
     MusicControl.on('changePlaybackPosition', (pos) => seek(pos));
-  }, [play, pause, isPlaying, skip, seek]);
-
-  // update elapsed time
-  useEffect(() => {
+    // @ts-ignore
+    MusicControl.on('seek', (pos) => seek(pos));
+    // @ts-ignore
+    MusicControl.on('closeNotification', () => {
+      pause();
+      seek(0);
+    });
     MusicControl.updatePlayback({
+      state: isPlaying ? MusicControl.STATE_PLAYING : MusicControl.STATE_PAUSED,
       elapsedTime,
     });
-  }, [elapsedTime]);
+  }, [play, pause, isPlaying, skip, seek, elapsedTime]);
 
   return null;
 };
