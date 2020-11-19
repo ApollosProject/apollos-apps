@@ -2,9 +2,11 @@ import React from 'react';
 import wait from 'waait';
 import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
 import { MockedProvider } from '@apollo/client/testing';
+import { act } from 'react-test-renderer';
 
 import { PrayerDialogScreen } from '../screens';
 import { PRAY } from '../screens/PrayerScreen';
+import { GET_USER_PHOTO } from '../screens/AddPrayerScreenConnected';
 import GET_PRAYER_FEATURE from './getPrayerFeature';
 import PrayerExperienceConnected from '.';
 
@@ -46,6 +48,27 @@ jest.mock('@apollosproject/config', () => {
 });
 
 const mocks = [
+  {
+    request: {
+      query: GET_USER_PHOTO,
+    },
+    result: {
+      data: {
+        currentUser: {
+          id: 'AuthenticatedUser:1234',
+          __typename: 'AuthenticatedUser',
+          profile: {
+            id: 'Person:1234',
+            __typename: 'Person',
+            photo: {
+              __typename: 'ImageMediaSource',
+              uri: 'https://1234.image.com',
+            },
+          },
+        },
+      },
+    },
+  },
   {
     request: {
       query: PRAY,
@@ -135,6 +158,7 @@ const mocks = [
                 nickName: 'Father',
                 firstName: 'Father',
                 photo: {
+                  __typename: 'ImageMediaSource',
                   uri: 'https://123.image-url.com',
                 },
               },
@@ -150,6 +174,7 @@ const mocks = [
                 nickName: 'Father',
                 firstName: 'Father',
                 photo: {
+                  __typename: 'ImageMediaSource',
                   uri: 'https://123.image-url.com',
                 },
               },
@@ -212,10 +237,15 @@ describe('The PrayerExperienceConnected component', () => {
       </Providers>
     );
 
+    tree.update(
+      <Providers MockedProvider={MockedProvider} mocks={mocks}>
+        <PrayerExperienceConnected id="PrayerListFeature:123" />
+      </Providers>
+    );
     const screen = tree.root.findByType(PrayerDialogScreen);
     screen.props.onPressPrimary();
 
-    await wait(1);
+    await act(async () => wait(1));
 
     expect(tree).toMatchSnapshot();
   });
@@ -227,13 +257,18 @@ describe('The PrayerExperienceConnected component', () => {
       </Providers>
     );
 
+    tree.update(
+      <Providers MockedProvider={MockedProvider} mocks={mocks}>
+        <PrayerExperienceConnected id="PrayerListFeature:123" />
+      </Providers>
+    );
     const screens = tree.root.findAllByProps({
       primaryActionText: '🙏 Pray',
     });
 
     screens.forEach((screen) => screen.props.onPressPrimary());
 
-    await wait(1);
+    await act(async () => wait(1));
 
     expect(tree).toMatchSnapshot();
   });

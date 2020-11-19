@@ -2,158 +2,1315 @@
 
 exports[`The PrayerInput component should render 1`] = `
 <View
-  accessible={true}
-  clickable={true}
-  isTVSelectable={true}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
+  cache={
+    InMemoryCache {
+      "addTypename": true,
+      "config": Object {
+        "addTypename": true,
+        "dataIdFromObject": [Function],
+        "possibleTypes": Object {
+          "AudioNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "Card": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "ContentChildNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "ContentItem": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "ContentNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "ContentParentNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "Feature": Array [
+            "ActionListFeature",
+            "HeroListFeature",
+            "VerticalCardListFeature",
+            "HorizontalCardListFeature",
+            "TextFeature",
+            "ScriptureFeature",
+            "WebviewFeature",
+            "PrayerListFeature",
+          ],
+          "FeaturesNode": Array [
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "LikableNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "LiveNode": Array [
+            "WeekendContentItem",
+          ],
+          "Media": Array [
+            "ImageMedia",
+            "VideoMedia",
+            "AudioMedia",
+          ],
+          "MediaSource": Array [
+            "ImageMediaSource",
+            "VideoMediaSource",
+            "AudioMediaSource",
+          ],
+          "Node": Array [
+            "ContentChannel",
+            "Person",
+            "Device",
+            "Campus",
+            "Event",
+            "Group",
+            "Scripture",
+            "Pass",
+            "PrayerRequest",
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+            "Url",
+            "ActionListFeature",
+            "HeroListFeature",
+            "VerticalCardListFeature",
+            "HorizontalCardListFeature",
+            "TextFeature",
+            "ScriptureFeature",
+            "WebviewFeature",
+            "PrayerListFeature",
+          ],
+          "ProgressNode": Array [
+            "ContentSeriesContentItem",
+          ],
+          "ScriptureNode": Array [
+            "DevotionalContentItem",
+            "MediaContentItem",
+          ],
+          "Sharable": Array [
+            "SharableContentItem",
+            "SharableFeature",
+          ],
+          "ShareableNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "ThemedNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "VideoNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+        },
+        "resultCaching": true,
+        "typePolicies": Object {},
+      },
+      "data": Root {
+        "canRead": [Function],
+        "data": Object {},
+        "getFieldValue": [Function],
+        "group": CacheGroup {
+          "caching": true,
+          "d": [Function],
+          "keyMaker": KeyTrie {
+            "makeData": [Function],
+            "weakness": true,
+          },
+        },
+        "policies": Policies {
+          "cache": [Circular],
+          "config": Object {
+            "cache": [Circular],
+            "dataIdFromObject": [Function],
+            "possibleTypes": Object {
+              "AudioNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "Card": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentChildNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentItem": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentParentNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "Feature": Array [
+                "ActionListFeature",
+                "HeroListFeature",
+                "VerticalCardListFeature",
+                "HorizontalCardListFeature",
+                "TextFeature",
+                "ScriptureFeature",
+                "WebviewFeature",
+                "PrayerListFeature",
+              ],
+              "FeaturesNode": Array [
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "LikableNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "LiveNode": Array [
+                "WeekendContentItem",
+              ],
+              "Media": Array [
+                "ImageMedia",
+                "VideoMedia",
+                "AudioMedia",
+              ],
+              "MediaSource": Array [
+                "ImageMediaSource",
+                "VideoMediaSource",
+                "AudioMediaSource",
+              ],
+              "Node": Array [
+                "ContentChannel",
+                "Person",
+                "Device",
+                "Campus",
+                "Event",
+                "Group",
+                "Scripture",
+                "Pass",
+                "PrayerRequest",
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+                "Url",
+                "ActionListFeature",
+                "HeroListFeature",
+                "VerticalCardListFeature",
+                "HorizontalCardListFeature",
+                "TextFeature",
+                "ScriptureFeature",
+                "WebviewFeature",
+                "PrayerListFeature",
+              ],
+              "ProgressNode": Array [
+                "ContentSeriesContentItem",
+              ],
+              "ScriptureNode": Array [
+                "DevotionalContentItem",
+                "MediaContentItem",
+              ],
+              "Sharable": Array [
+                "SharableContentItem",
+                "SharableFeature",
+              ],
+              "ShareableNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ThemedNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "VideoNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+            },
+            "typePolicies": Object {},
+          },
+          "fuzzySubtypes": Map {},
+          "rootIdsByTypename": Object {
+            "Mutation": "ROOT_MUTATION",
+            "Query": "ROOT_QUERY",
+            "Subscription": "ROOT_SUBSCRIPTION",
+          },
+          "rootTypenamesById": Object {
+            "ROOT_MUTATION": "Mutation",
+            "ROOT_QUERY": "Query",
+            "ROOT_SUBSCRIPTION": "Subscription",
+          },
+          "supertypeMap": Map {
+            "Node" => Set {},
+            "ContentChannel" => Set {
+              "Node",
+            },
+            "Person" => Set {
+              "Node",
+            },
+            "Device" => Set {
+              "Node",
+            },
+            "Campus" => Set {
+              "Node",
+            },
+            "Event" => Set {
+              "Node",
+            },
+            "Group" => Set {
+              "Node",
+            },
+            "Scripture" => Set {
+              "Node",
+            },
+            "Pass" => Set {
+              "Node",
+            },
+            "PrayerRequest" => Set {
+              "Node",
+            },
+            "UniversalContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "DevotionalContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ScriptureNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "MediaContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ScriptureNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "ContentSeriesContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "FeaturesNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ProgressNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "WeekendContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "FeaturesNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "LikableNode",
+              "ShareableNode",
+              "LiveNode",
+            },
+            "Url" => Set {
+              "Node",
+            },
+            "ActionListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "HeroListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "VerticalCardListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "HorizontalCardListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "TextFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "ScriptureFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "WebviewFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "PrayerListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "ContentItem" => Set {},
+            "Media" => Set {},
+            "ImageMedia" => Set {
+              "Media",
+            },
+            "VideoMedia" => Set {
+              "Media",
+            },
+            "AudioMedia" => Set {
+              "Media",
+            },
+            "MediaSource" => Set {},
+            "ImageMediaSource" => Set {
+              "MediaSource",
+            },
+            "VideoMediaSource" => Set {
+              "MediaSource",
+            },
+            "AudioMediaSource" => Set {
+              "MediaSource",
+            },
+            "Sharable" => Set {},
+            "SharableContentItem" => Set {
+              "Sharable",
+            },
+            "SharableFeature" => Set {
+              "Sharable",
+            },
+            "Feature" => Set {},
+            "ContentNode" => Set {},
+            "Card" => Set {},
+            "VideoNode" => Set {},
+            "AudioNode" => Set {},
+            "FeaturesNode" => Set {},
+            "ContentParentNode" => Set {},
+            "ContentChildNode" => Set {},
+            "ThemedNode" => Set {},
+            "ProgressNode" => Set {},
+            "ScriptureNode" => Set {},
+            "LikableNode" => Set {},
+            "ShareableNode" => Set {},
+            "LiveNode" => Set {},
+          },
+          "typePolicies": Object {},
+          "usingPossibleTypes": true,
+        },
+        "refs": Object {},
+        "rootIds": Object {},
+        "sharedLayerGroup": CacheGroup {
+          "caching": true,
+          "d": [Function],
+          "keyMaker": KeyTrie {
+            "makeData": [Function],
+            "weakness": true,
+          },
+        },
+        "storageTrie": KeyTrie {
+          "makeData": [Function],
+          "weakness": true,
+        },
+        "toReference": [Function],
+      },
+      "getFragmentDoc": [Function],
+      "makeVar": [Function],
+      "maybeBroadcastWatch": [Function],
+      "optimisticData": Root {
+        "canRead": [Function],
+        "data": Object {},
+        "getFieldValue": [Function],
+        "group": CacheGroup {
+          "caching": true,
+          "d": [Function],
+          "keyMaker": KeyTrie {
+            "makeData": [Function],
+            "weakness": true,
+          },
+        },
+        "policies": Policies {
+          "cache": [Circular],
+          "config": Object {
+            "cache": [Circular],
+            "dataIdFromObject": [Function],
+            "possibleTypes": Object {
+              "AudioNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "Card": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentChildNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentItem": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentParentNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "Feature": Array [
+                "ActionListFeature",
+                "HeroListFeature",
+                "VerticalCardListFeature",
+                "HorizontalCardListFeature",
+                "TextFeature",
+                "ScriptureFeature",
+                "WebviewFeature",
+                "PrayerListFeature",
+              ],
+              "FeaturesNode": Array [
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "LikableNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "LiveNode": Array [
+                "WeekendContentItem",
+              ],
+              "Media": Array [
+                "ImageMedia",
+                "VideoMedia",
+                "AudioMedia",
+              ],
+              "MediaSource": Array [
+                "ImageMediaSource",
+                "VideoMediaSource",
+                "AudioMediaSource",
+              ],
+              "Node": Array [
+                "ContentChannel",
+                "Person",
+                "Device",
+                "Campus",
+                "Event",
+                "Group",
+                "Scripture",
+                "Pass",
+                "PrayerRequest",
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+                "Url",
+                "ActionListFeature",
+                "HeroListFeature",
+                "VerticalCardListFeature",
+                "HorizontalCardListFeature",
+                "TextFeature",
+                "ScriptureFeature",
+                "WebviewFeature",
+                "PrayerListFeature",
+              ],
+              "ProgressNode": Array [
+                "ContentSeriesContentItem",
+              ],
+              "ScriptureNode": Array [
+                "DevotionalContentItem",
+                "MediaContentItem",
+              ],
+              "Sharable": Array [
+                "SharableContentItem",
+                "SharableFeature",
+              ],
+              "ShareableNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ThemedNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "VideoNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+            },
+            "typePolicies": Object {},
+          },
+          "fuzzySubtypes": Map {},
+          "rootIdsByTypename": Object {
+            "Mutation": "ROOT_MUTATION",
+            "Query": "ROOT_QUERY",
+            "Subscription": "ROOT_SUBSCRIPTION",
+          },
+          "rootTypenamesById": Object {
+            "ROOT_MUTATION": "Mutation",
+            "ROOT_QUERY": "Query",
+            "ROOT_SUBSCRIPTION": "Subscription",
+          },
+          "supertypeMap": Map {
+            "Node" => Set {},
+            "ContentChannel" => Set {
+              "Node",
+            },
+            "Person" => Set {
+              "Node",
+            },
+            "Device" => Set {
+              "Node",
+            },
+            "Campus" => Set {
+              "Node",
+            },
+            "Event" => Set {
+              "Node",
+            },
+            "Group" => Set {
+              "Node",
+            },
+            "Scripture" => Set {
+              "Node",
+            },
+            "Pass" => Set {
+              "Node",
+            },
+            "PrayerRequest" => Set {
+              "Node",
+            },
+            "UniversalContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "DevotionalContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ScriptureNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "MediaContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ScriptureNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "ContentSeriesContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "FeaturesNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ProgressNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "WeekendContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "FeaturesNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "LikableNode",
+              "ShareableNode",
+              "LiveNode",
+            },
+            "Url" => Set {
+              "Node",
+            },
+            "ActionListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "HeroListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "VerticalCardListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "HorizontalCardListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "TextFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "ScriptureFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "WebviewFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "PrayerListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "ContentItem" => Set {},
+            "Media" => Set {},
+            "ImageMedia" => Set {
+              "Media",
+            },
+            "VideoMedia" => Set {
+              "Media",
+            },
+            "AudioMedia" => Set {
+              "Media",
+            },
+            "MediaSource" => Set {},
+            "ImageMediaSource" => Set {
+              "MediaSource",
+            },
+            "VideoMediaSource" => Set {
+              "MediaSource",
+            },
+            "AudioMediaSource" => Set {
+              "MediaSource",
+            },
+            "Sharable" => Set {},
+            "SharableContentItem" => Set {
+              "Sharable",
+            },
+            "SharableFeature" => Set {
+              "Sharable",
+            },
+            "Feature" => Set {},
+            "ContentNode" => Set {},
+            "Card" => Set {},
+            "VideoNode" => Set {},
+            "AudioNode" => Set {},
+            "FeaturesNode" => Set {},
+            "ContentParentNode" => Set {},
+            "ContentChildNode" => Set {},
+            "ThemedNode" => Set {},
+            "ProgressNode" => Set {},
+            "ScriptureNode" => Set {},
+            "LikableNode" => Set {},
+            "ShareableNode" => Set {},
+            "LiveNode" => Set {},
+          },
+          "typePolicies": Object {},
+          "usingPossibleTypes": true,
+        },
+        "refs": Object {},
+        "rootIds": Object {},
+        "sharedLayerGroup": CacheGroup {
+          "caching": true,
+          "d": [Function],
+          "keyMaker": KeyTrie {
+            "makeData": [Function],
+            "weakness": true,
+          },
+        },
+        "storageTrie": KeyTrie {
+          "makeData": [Function],
+          "weakness": true,
+        },
+        "toReference": [Function],
+      },
+      "policies": Policies {
+        "cache": [Circular],
+        "config": Object {
+          "cache": [Circular],
+          "dataIdFromObject": [Function],
+          "possibleTypes": Object {
+            "AudioNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "Card": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "ContentChildNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "ContentItem": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "ContentNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "ContentParentNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "Feature": Array [
+              "ActionListFeature",
+              "HeroListFeature",
+              "VerticalCardListFeature",
+              "HorizontalCardListFeature",
+              "TextFeature",
+              "ScriptureFeature",
+              "WebviewFeature",
+              "PrayerListFeature",
+            ],
+            "FeaturesNode": Array [
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "LikableNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "LiveNode": Array [
+              "WeekendContentItem",
+            ],
+            "Media": Array [
+              "ImageMedia",
+              "VideoMedia",
+              "AudioMedia",
+            ],
+            "MediaSource": Array [
+              "ImageMediaSource",
+              "VideoMediaSource",
+              "AudioMediaSource",
+            ],
+            "Node": Array [
+              "ContentChannel",
+              "Person",
+              "Device",
+              "Campus",
+              "Event",
+              "Group",
+              "Scripture",
+              "Pass",
+              "PrayerRequest",
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+              "Url",
+              "ActionListFeature",
+              "HeroListFeature",
+              "VerticalCardListFeature",
+              "HorizontalCardListFeature",
+              "TextFeature",
+              "ScriptureFeature",
+              "WebviewFeature",
+              "PrayerListFeature",
+            ],
+            "ProgressNode": Array [
+              "ContentSeriesContentItem",
+            ],
+            "ScriptureNode": Array [
+              "DevotionalContentItem",
+              "MediaContentItem",
+            ],
+            "Sharable": Array [
+              "SharableContentItem",
+              "SharableFeature",
+            ],
+            "ShareableNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "ThemedNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "VideoNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+          },
+          "typePolicies": Object {},
+        },
+        "fuzzySubtypes": Map {},
+        "rootIdsByTypename": Object {
+          "Mutation": "ROOT_MUTATION",
+          "Query": "ROOT_QUERY",
+          "Subscription": "ROOT_SUBSCRIPTION",
+        },
+        "rootTypenamesById": Object {
+          "ROOT_MUTATION": "Mutation",
+          "ROOT_QUERY": "Query",
+          "ROOT_SUBSCRIPTION": "Subscription",
+        },
+        "supertypeMap": Map {
+          "Node" => Set {},
+          "ContentChannel" => Set {
+            "Node",
+          },
+          "Person" => Set {
+            "Node",
+          },
+          "Device" => Set {
+            "Node",
+          },
+          "Campus" => Set {
+            "Node",
+          },
+          "Event" => Set {
+            "Node",
+          },
+          "Group" => Set {
+            "Node",
+          },
+          "Scripture" => Set {
+            "Node",
+          },
+          "Pass" => Set {
+            "Node",
+          },
+          "PrayerRequest" => Set {
+            "Node",
+          },
+          "UniversalContentItem" => Set {
+            "Node",
+            "ContentItem",
+            "ContentNode",
+            "Card",
+            "VideoNode",
+            "AudioNode",
+            "ContentParentNode",
+            "ContentChildNode",
+            "ThemedNode",
+            "LikableNode",
+            "ShareableNode",
+          },
+          "DevotionalContentItem" => Set {
+            "Node",
+            "ContentItem",
+            "ContentNode",
+            "Card",
+            "VideoNode",
+            "AudioNode",
+            "ContentParentNode",
+            "ContentChildNode",
+            "ThemedNode",
+            "ScriptureNode",
+            "LikableNode",
+            "ShareableNode",
+          },
+          "MediaContentItem" => Set {
+            "Node",
+            "ContentItem",
+            "ContentNode",
+            "Card",
+            "VideoNode",
+            "AudioNode",
+            "ContentParentNode",
+            "ContentChildNode",
+            "ThemedNode",
+            "ScriptureNode",
+            "LikableNode",
+            "ShareableNode",
+          },
+          "ContentSeriesContentItem" => Set {
+            "Node",
+            "ContentItem",
+            "ContentNode",
+            "Card",
+            "VideoNode",
+            "AudioNode",
+            "FeaturesNode",
+            "ContentParentNode",
+            "ContentChildNode",
+            "ThemedNode",
+            "ProgressNode",
+            "LikableNode",
+            "ShareableNode",
+          },
+          "WeekendContentItem" => Set {
+            "Node",
+            "ContentItem",
+            "ContentNode",
+            "Card",
+            "VideoNode",
+            "AudioNode",
+            "FeaturesNode",
+            "ContentParentNode",
+            "ContentChildNode",
+            "ThemedNode",
+            "LikableNode",
+            "ShareableNode",
+            "LiveNode",
+          },
+          "Url" => Set {
+            "Node",
+          },
+          "ActionListFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "HeroListFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "VerticalCardListFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "HorizontalCardListFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "TextFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "ScriptureFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "WebviewFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "PrayerListFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "ContentItem" => Set {},
+          "Media" => Set {},
+          "ImageMedia" => Set {
+            "Media",
+          },
+          "VideoMedia" => Set {
+            "Media",
+          },
+          "AudioMedia" => Set {
+            "Media",
+          },
+          "MediaSource" => Set {},
+          "ImageMediaSource" => Set {
+            "MediaSource",
+          },
+          "VideoMediaSource" => Set {
+            "MediaSource",
+          },
+          "AudioMediaSource" => Set {
+            "MediaSource",
+          },
+          "Sharable" => Set {},
+          "SharableContentItem" => Set {
+            "Sharable",
+          },
+          "SharableFeature" => Set {
+            "Sharable",
+          },
+          "Feature" => Set {},
+          "ContentNode" => Set {},
+          "Card" => Set {},
+          "VideoNode" => Set {},
+          "AudioNode" => Set {},
+          "FeaturesNode" => Set {},
+          "ContentParentNode" => Set {},
+          "ContentChildNode" => Set {},
+          "ThemedNode" => Set {},
+          "ProgressNode" => Set {},
+          "ScriptureNode" => Set {},
+          "LikableNode" => Set {},
+          "ShareableNode" => Set {},
+          "LiveNode" => Set {},
+        },
+        "typePolicies": Object {},
+        "usingPossibleTypes": true,
+      },
+      "storeReader": StoreReader {
+        "config": Object {
+          "addTypename": true,
+          "cache": [Circular],
+        },
+        "executeSelectionSet": [Function],
+        "executeSubSelectedArray": [Function],
+        "knownResults": WeakMap {},
+      },
+      "storeWriter": StoreWriter {
+        "cache": [Circular],
+        "reader": StoreReader {
+          "config": Object {
+            "addTypename": true,
+            "cache": [Circular],
+          },
+          "executeSelectionSet": [Function],
+          "executeSubSelectedArray": [Function],
+          "knownResults": WeakMap {},
+        },
+      },
+      "txCount": 0,
+      "typenameDocumentCache": Map {},
+      "watchDep": [Function],
+      "watches": Set {},
+    }
+  }
+  defaultOptions={
     Object {
-      "opacity": 1,
+      "query": Object {
+        "fetchPolicy": "no-cache",
+      },
+      "watchQuery": Object {
+        "fetchPolicy": "no-cache",
+      },
     }
   }
 >
   <View
+    accessible={true}
+    clickable={true}
+    isTVSelectable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "paddingBottom": 10,
-        "paddingTop": 16,
+        "opacity": 1,
       }
     }
   >
-    <RNSVGSvgView
-      align="xMidYMid"
-      bbHeight={24}
-      bbWidth={24}
-      height={24}
-      meetOrSlice={0}
-      minX={0}
-      minY={0}
+    <View
       style={
-        Array [
-          Object {
-            "backgroundColor": "transparent",
-            "borderWidth": 0,
-          },
-          Object {
-            "marginRight": 8,
-          },
-          null,
-          Object {
-            "flex": 0,
-            "height": 24,
-            "width": 24,
-          },
-        ]
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "paddingBottom": 10,
+          "paddingTop": 16,
+        }
       }
-      vbHeight={24}
-      vbWidth={24}
-      width={24}
     >
-      <RNSVGGroup
-        fill={
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight={24}
+        bbWidth={24}
+        height={24}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
           Array [
-            0,
-            4278190080,
+            Object {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            Object {
+              "marginRight": 8,
+            },
+            null,
+            Object {
+              "flex": 0,
+              "height": 24,
+              "width": 24,
+            },
           ]
         }
-        fillOpacity={1}
-        fillRule={1}
-        font={Object {}}
-        matrix={
-          Array [
-            1,
-            0,
-            0,
-            1,
-            0,
-            0,
-          ]
-        }
-        opacity={1}
-        originX={0}
-        originY={0}
-        propList={Array []}
-        rotation={0}
-        scaleX={1}
-        scaleY={1}
-        skewX={0}
-        skewY={0}
-        stroke={null}
-        strokeDasharray={null}
-        strokeDashoffset={null}
-        strokeLinecap={0}
-        strokeLinejoin={0}
-        strokeMiterlimit={4}
-        strokeOpacity={1}
-        strokeWidth={1}
-        vectorEffect={0}
-        x={0}
-        y={0}
+        vbHeight={24}
+        vbWidth={24}
+        width={24}
       >
-        <RNSVGPath
-          d="M12 23.5a11.5 11.5 0 100-23 11.5 11.5 0 000 23zm0 .5a12 12 0 100-24 12 12 0 000 24z"
+        <RNSVGGroup
           fill={
             Array [
               0,
-              4281348144,
-            ]
-          }
-          fillOpacity={1}
-          fillRule={0}
-          matrix={
-            Array [
-              1,
-              0,
-              0,
-              1,
-              0,
-              0,
-            ]
-          }
-          opacity={1}
-          originX={0}
-          originY={0}
-          propList={
-            Array [
-              "fill",
-              "fillRule",
-            ]
-          }
-          rotation={0}
-          scaleX={1}
-          scaleY={1}
-          skewX={0}
-          skewY={0}
-          stroke={null}
-          strokeDasharray={null}
-          strokeDashoffset={null}
-          strokeLinecap={0}
-          strokeLinejoin={0}
-          strokeMiterlimit={4}
-          strokeOpacity={1}
-          strokeWidth={1}
-          vectorEffect={0}
-          x={0}
-          y={0}
-        />
-        <RNSVGPath
-          d="M17.7 11.7h-5.4V6.3a.3.3 0 00-.6 0v5.4H6.3a.3.3 0 000 .6h5.4v5.4a.3.3 0 00.6 0v-5.4h5.4a.3.3 0 000-.6z"
-          fill={
-            Array [
-              0,
-              4281348144,
+              4278190080,
             ]
           }
           fillOpacity={1}
           fillRule={1}
+          font={Object {}}
           matrix={
             Array [
               1,
@@ -167,11 +1324,7 @@ exports[`The PrayerInput component should render 1`] = `
           opacity={1}
           originX={0}
           originY={0}
-          propList={
-            Array [
-              "fill",
-            ]
-          }
+          propList={Array []}
           rotation={0}
           scaleX={1}
           scaleY={1}
@@ -188,181 +1341,1430 @@ exports[`The PrayerInput component should render 1`] = `
           vectorEffect={0}
           x={0}
           y={0}
-        />
-      </RNSVGGroup>
-    </RNSVGSvgView>
-    <Text
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Regular",
-          "fontSize": 16,
-          "lineHeight": 26,
+        >
+          <RNSVGPath
+            d="M12 23.5a11.5 11.5 0 100-23 11.5 11.5 0 000 23zm0 .5a12 12 0 100-24 12 12 0 000 24z"
+            fill={
+              Array [
+                0,
+                4281348144,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={0}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            originX={0}
+            originY={0}
+            propList={
+              Array [
+                "fill",
+                "fillRule",
+              ]
+            }
+            rotation={0}
+            scaleX={1}
+            scaleY={1}
+            skewX={0}
+            skewY={0}
+            stroke={null}
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+            vectorEffect={0}
+            x={0}
+            y={0}
+          />
+          <RNSVGPath
+            d="M17.7 11.7h-5.4V6.3a.3.3 0 00-.6 0v5.4H6.3a.3.3 0 000 .6h5.4v5.4a.3.3 0 00.6 0v-5.4h5.4a.3.3 0 000-.6z"
+            fill={
+              Array [
+                0,
+                4281348144,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            originX={0}
+            originY={0}
+            propList={
+              Array [
+                "fill",
+              ]
+            }
+            rotation={0}
+            scaleX={1}
+            scaleY={1}
+            skewX={0}
+            skewY={0}
+            stroke={null}
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+            vectorEffect={0}
+            x={0}
+            y={0}
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 16,
+            "lineHeight": 26,
+          }
         }
-      }
-    >
-      I need prayer for...
-    </Text>
+      >
+        I need prayer for...
+      </Text>
+    </View>
   </View>
 </View>
 `;
 
 exports[`The PrayerInput component should render a custom prompt 1`] = `
 <View
-  accessible={true}
-  clickable={true}
-  isTVSelectable={true}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
+  cache={
+    InMemoryCache {
+      "addTypename": true,
+      "config": Object {
+        "addTypename": true,
+        "dataIdFromObject": [Function],
+        "possibleTypes": Object {
+          "AudioNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "Card": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "ContentChildNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "ContentItem": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "ContentNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "ContentParentNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "Feature": Array [
+            "ActionListFeature",
+            "HeroListFeature",
+            "VerticalCardListFeature",
+            "HorizontalCardListFeature",
+            "TextFeature",
+            "ScriptureFeature",
+            "WebviewFeature",
+            "PrayerListFeature",
+          ],
+          "FeaturesNode": Array [
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "LikableNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "LiveNode": Array [
+            "WeekendContentItem",
+          ],
+          "Media": Array [
+            "ImageMedia",
+            "VideoMedia",
+            "AudioMedia",
+          ],
+          "MediaSource": Array [
+            "ImageMediaSource",
+            "VideoMediaSource",
+            "AudioMediaSource",
+          ],
+          "Node": Array [
+            "ContentChannel",
+            "Person",
+            "Device",
+            "Campus",
+            "Event",
+            "Group",
+            "Scripture",
+            "Pass",
+            "PrayerRequest",
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+            "Url",
+            "ActionListFeature",
+            "HeroListFeature",
+            "VerticalCardListFeature",
+            "HorizontalCardListFeature",
+            "TextFeature",
+            "ScriptureFeature",
+            "WebviewFeature",
+            "PrayerListFeature",
+          ],
+          "ProgressNode": Array [
+            "ContentSeriesContentItem",
+          ],
+          "ScriptureNode": Array [
+            "DevotionalContentItem",
+            "MediaContentItem",
+          ],
+          "Sharable": Array [
+            "SharableContentItem",
+            "SharableFeature",
+          ],
+          "ShareableNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "ThemedNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "VideoNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+        },
+        "resultCaching": true,
+        "typePolicies": Object {},
+      },
+      "data": Root {
+        "canRead": [Function],
+        "data": Object {},
+        "getFieldValue": [Function],
+        "group": CacheGroup {
+          "caching": true,
+          "d": [Function],
+          "keyMaker": KeyTrie {
+            "makeData": [Function],
+            "weakness": true,
+          },
+        },
+        "policies": Policies {
+          "cache": [Circular],
+          "config": Object {
+            "cache": [Circular],
+            "dataIdFromObject": [Function],
+            "possibleTypes": Object {
+              "AudioNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "Card": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentChildNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentItem": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentParentNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "Feature": Array [
+                "ActionListFeature",
+                "HeroListFeature",
+                "VerticalCardListFeature",
+                "HorizontalCardListFeature",
+                "TextFeature",
+                "ScriptureFeature",
+                "WebviewFeature",
+                "PrayerListFeature",
+              ],
+              "FeaturesNode": Array [
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "LikableNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "LiveNode": Array [
+                "WeekendContentItem",
+              ],
+              "Media": Array [
+                "ImageMedia",
+                "VideoMedia",
+                "AudioMedia",
+              ],
+              "MediaSource": Array [
+                "ImageMediaSource",
+                "VideoMediaSource",
+                "AudioMediaSource",
+              ],
+              "Node": Array [
+                "ContentChannel",
+                "Person",
+                "Device",
+                "Campus",
+                "Event",
+                "Group",
+                "Scripture",
+                "Pass",
+                "PrayerRequest",
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+                "Url",
+                "ActionListFeature",
+                "HeroListFeature",
+                "VerticalCardListFeature",
+                "HorizontalCardListFeature",
+                "TextFeature",
+                "ScriptureFeature",
+                "WebviewFeature",
+                "PrayerListFeature",
+              ],
+              "ProgressNode": Array [
+                "ContentSeriesContentItem",
+              ],
+              "ScriptureNode": Array [
+                "DevotionalContentItem",
+                "MediaContentItem",
+              ],
+              "Sharable": Array [
+                "SharableContentItem",
+                "SharableFeature",
+              ],
+              "ShareableNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ThemedNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "VideoNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+            },
+            "typePolicies": Object {},
+          },
+          "fuzzySubtypes": Map {},
+          "rootIdsByTypename": Object {
+            "Mutation": "ROOT_MUTATION",
+            "Query": "ROOT_QUERY",
+            "Subscription": "ROOT_SUBSCRIPTION",
+          },
+          "rootTypenamesById": Object {
+            "ROOT_MUTATION": "Mutation",
+            "ROOT_QUERY": "Query",
+            "ROOT_SUBSCRIPTION": "Subscription",
+          },
+          "supertypeMap": Map {
+            "Node" => Set {},
+            "ContentChannel" => Set {
+              "Node",
+            },
+            "Person" => Set {
+              "Node",
+            },
+            "Device" => Set {
+              "Node",
+            },
+            "Campus" => Set {
+              "Node",
+            },
+            "Event" => Set {
+              "Node",
+            },
+            "Group" => Set {
+              "Node",
+            },
+            "Scripture" => Set {
+              "Node",
+            },
+            "Pass" => Set {
+              "Node",
+            },
+            "PrayerRequest" => Set {
+              "Node",
+            },
+            "UniversalContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "DevotionalContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ScriptureNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "MediaContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ScriptureNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "ContentSeriesContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "FeaturesNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ProgressNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "WeekendContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "FeaturesNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "LikableNode",
+              "ShareableNode",
+              "LiveNode",
+            },
+            "Url" => Set {
+              "Node",
+            },
+            "ActionListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "HeroListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "VerticalCardListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "HorizontalCardListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "TextFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "ScriptureFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "WebviewFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "PrayerListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "ContentItem" => Set {},
+            "Media" => Set {},
+            "ImageMedia" => Set {
+              "Media",
+            },
+            "VideoMedia" => Set {
+              "Media",
+            },
+            "AudioMedia" => Set {
+              "Media",
+            },
+            "MediaSource" => Set {},
+            "ImageMediaSource" => Set {
+              "MediaSource",
+            },
+            "VideoMediaSource" => Set {
+              "MediaSource",
+            },
+            "AudioMediaSource" => Set {
+              "MediaSource",
+            },
+            "Sharable" => Set {},
+            "SharableContentItem" => Set {
+              "Sharable",
+            },
+            "SharableFeature" => Set {
+              "Sharable",
+            },
+            "Feature" => Set {},
+            "ContentNode" => Set {},
+            "Card" => Set {},
+            "VideoNode" => Set {},
+            "AudioNode" => Set {},
+            "FeaturesNode" => Set {},
+            "ContentParentNode" => Set {},
+            "ContentChildNode" => Set {},
+            "ThemedNode" => Set {},
+            "ProgressNode" => Set {},
+            "ScriptureNode" => Set {},
+            "LikableNode" => Set {},
+            "ShareableNode" => Set {},
+            "LiveNode" => Set {},
+          },
+          "typePolicies": Object {},
+          "usingPossibleTypes": true,
+        },
+        "refs": Object {},
+        "rootIds": Object {},
+        "sharedLayerGroup": CacheGroup {
+          "caching": true,
+          "d": [Function],
+          "keyMaker": KeyTrie {
+            "makeData": [Function],
+            "weakness": true,
+          },
+        },
+        "storageTrie": KeyTrie {
+          "makeData": [Function],
+          "weakness": true,
+        },
+        "toReference": [Function],
+      },
+      "getFragmentDoc": [Function],
+      "makeVar": [Function],
+      "maybeBroadcastWatch": [Function],
+      "optimisticData": Root {
+        "canRead": [Function],
+        "data": Object {},
+        "getFieldValue": [Function],
+        "group": CacheGroup {
+          "caching": true,
+          "d": [Function],
+          "keyMaker": KeyTrie {
+            "makeData": [Function],
+            "weakness": true,
+          },
+        },
+        "policies": Policies {
+          "cache": [Circular],
+          "config": Object {
+            "cache": [Circular],
+            "dataIdFromObject": [Function],
+            "possibleTypes": Object {
+              "AudioNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "Card": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentChildNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentItem": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentParentNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "Feature": Array [
+                "ActionListFeature",
+                "HeroListFeature",
+                "VerticalCardListFeature",
+                "HorizontalCardListFeature",
+                "TextFeature",
+                "ScriptureFeature",
+                "WebviewFeature",
+                "PrayerListFeature",
+              ],
+              "FeaturesNode": Array [
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "LikableNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "LiveNode": Array [
+                "WeekendContentItem",
+              ],
+              "Media": Array [
+                "ImageMedia",
+                "VideoMedia",
+                "AudioMedia",
+              ],
+              "MediaSource": Array [
+                "ImageMediaSource",
+                "VideoMediaSource",
+                "AudioMediaSource",
+              ],
+              "Node": Array [
+                "ContentChannel",
+                "Person",
+                "Device",
+                "Campus",
+                "Event",
+                "Group",
+                "Scripture",
+                "Pass",
+                "PrayerRequest",
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+                "Url",
+                "ActionListFeature",
+                "HeroListFeature",
+                "VerticalCardListFeature",
+                "HorizontalCardListFeature",
+                "TextFeature",
+                "ScriptureFeature",
+                "WebviewFeature",
+                "PrayerListFeature",
+              ],
+              "ProgressNode": Array [
+                "ContentSeriesContentItem",
+              ],
+              "ScriptureNode": Array [
+                "DevotionalContentItem",
+                "MediaContentItem",
+              ],
+              "Sharable": Array [
+                "SharableContentItem",
+                "SharableFeature",
+              ],
+              "ShareableNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ThemedNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "VideoNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+            },
+            "typePolicies": Object {},
+          },
+          "fuzzySubtypes": Map {},
+          "rootIdsByTypename": Object {
+            "Mutation": "ROOT_MUTATION",
+            "Query": "ROOT_QUERY",
+            "Subscription": "ROOT_SUBSCRIPTION",
+          },
+          "rootTypenamesById": Object {
+            "ROOT_MUTATION": "Mutation",
+            "ROOT_QUERY": "Query",
+            "ROOT_SUBSCRIPTION": "Subscription",
+          },
+          "supertypeMap": Map {
+            "Node" => Set {},
+            "ContentChannel" => Set {
+              "Node",
+            },
+            "Person" => Set {
+              "Node",
+            },
+            "Device" => Set {
+              "Node",
+            },
+            "Campus" => Set {
+              "Node",
+            },
+            "Event" => Set {
+              "Node",
+            },
+            "Group" => Set {
+              "Node",
+            },
+            "Scripture" => Set {
+              "Node",
+            },
+            "Pass" => Set {
+              "Node",
+            },
+            "PrayerRequest" => Set {
+              "Node",
+            },
+            "UniversalContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "DevotionalContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ScriptureNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "MediaContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ScriptureNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "ContentSeriesContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "FeaturesNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ProgressNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "WeekendContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "FeaturesNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "LikableNode",
+              "ShareableNode",
+              "LiveNode",
+            },
+            "Url" => Set {
+              "Node",
+            },
+            "ActionListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "HeroListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "VerticalCardListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "HorizontalCardListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "TextFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "ScriptureFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "WebviewFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "PrayerListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "ContentItem" => Set {},
+            "Media" => Set {},
+            "ImageMedia" => Set {
+              "Media",
+            },
+            "VideoMedia" => Set {
+              "Media",
+            },
+            "AudioMedia" => Set {
+              "Media",
+            },
+            "MediaSource" => Set {},
+            "ImageMediaSource" => Set {
+              "MediaSource",
+            },
+            "VideoMediaSource" => Set {
+              "MediaSource",
+            },
+            "AudioMediaSource" => Set {
+              "MediaSource",
+            },
+            "Sharable" => Set {},
+            "SharableContentItem" => Set {
+              "Sharable",
+            },
+            "SharableFeature" => Set {
+              "Sharable",
+            },
+            "Feature" => Set {},
+            "ContentNode" => Set {},
+            "Card" => Set {},
+            "VideoNode" => Set {},
+            "AudioNode" => Set {},
+            "FeaturesNode" => Set {},
+            "ContentParentNode" => Set {},
+            "ContentChildNode" => Set {},
+            "ThemedNode" => Set {},
+            "ProgressNode" => Set {},
+            "ScriptureNode" => Set {},
+            "LikableNode" => Set {},
+            "ShareableNode" => Set {},
+            "LiveNode" => Set {},
+          },
+          "typePolicies": Object {},
+          "usingPossibleTypes": true,
+        },
+        "refs": Object {},
+        "rootIds": Object {},
+        "sharedLayerGroup": CacheGroup {
+          "caching": true,
+          "d": [Function],
+          "keyMaker": KeyTrie {
+            "makeData": [Function],
+            "weakness": true,
+          },
+        },
+        "storageTrie": KeyTrie {
+          "makeData": [Function],
+          "weakness": true,
+        },
+        "toReference": [Function],
+      },
+      "policies": Policies {
+        "cache": [Circular],
+        "config": Object {
+          "cache": [Circular],
+          "dataIdFromObject": [Function],
+          "possibleTypes": Object {
+            "AudioNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "Card": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "ContentChildNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "ContentItem": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "ContentNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "ContentParentNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "Feature": Array [
+              "ActionListFeature",
+              "HeroListFeature",
+              "VerticalCardListFeature",
+              "HorizontalCardListFeature",
+              "TextFeature",
+              "ScriptureFeature",
+              "WebviewFeature",
+              "PrayerListFeature",
+            ],
+            "FeaturesNode": Array [
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "LikableNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "LiveNode": Array [
+              "WeekendContentItem",
+            ],
+            "Media": Array [
+              "ImageMedia",
+              "VideoMedia",
+              "AudioMedia",
+            ],
+            "MediaSource": Array [
+              "ImageMediaSource",
+              "VideoMediaSource",
+              "AudioMediaSource",
+            ],
+            "Node": Array [
+              "ContentChannel",
+              "Person",
+              "Device",
+              "Campus",
+              "Event",
+              "Group",
+              "Scripture",
+              "Pass",
+              "PrayerRequest",
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+              "Url",
+              "ActionListFeature",
+              "HeroListFeature",
+              "VerticalCardListFeature",
+              "HorizontalCardListFeature",
+              "TextFeature",
+              "ScriptureFeature",
+              "WebviewFeature",
+              "PrayerListFeature",
+            ],
+            "ProgressNode": Array [
+              "ContentSeriesContentItem",
+            ],
+            "ScriptureNode": Array [
+              "DevotionalContentItem",
+              "MediaContentItem",
+            ],
+            "Sharable": Array [
+              "SharableContentItem",
+              "SharableFeature",
+            ],
+            "ShareableNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "ThemedNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "VideoNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+          },
+          "typePolicies": Object {},
+        },
+        "fuzzySubtypes": Map {},
+        "rootIdsByTypename": Object {
+          "Mutation": "ROOT_MUTATION",
+          "Query": "ROOT_QUERY",
+          "Subscription": "ROOT_SUBSCRIPTION",
+        },
+        "rootTypenamesById": Object {
+          "ROOT_MUTATION": "Mutation",
+          "ROOT_QUERY": "Query",
+          "ROOT_SUBSCRIPTION": "Subscription",
+        },
+        "supertypeMap": Map {
+          "Node" => Set {},
+          "ContentChannel" => Set {
+            "Node",
+          },
+          "Person" => Set {
+            "Node",
+          },
+          "Device" => Set {
+            "Node",
+          },
+          "Campus" => Set {
+            "Node",
+          },
+          "Event" => Set {
+            "Node",
+          },
+          "Group" => Set {
+            "Node",
+          },
+          "Scripture" => Set {
+            "Node",
+          },
+          "Pass" => Set {
+            "Node",
+          },
+          "PrayerRequest" => Set {
+            "Node",
+          },
+          "UniversalContentItem" => Set {
+            "Node",
+            "ContentItem",
+            "ContentNode",
+            "Card",
+            "VideoNode",
+            "AudioNode",
+            "ContentParentNode",
+            "ContentChildNode",
+            "ThemedNode",
+            "LikableNode",
+            "ShareableNode",
+          },
+          "DevotionalContentItem" => Set {
+            "Node",
+            "ContentItem",
+            "ContentNode",
+            "Card",
+            "VideoNode",
+            "AudioNode",
+            "ContentParentNode",
+            "ContentChildNode",
+            "ThemedNode",
+            "ScriptureNode",
+            "LikableNode",
+            "ShareableNode",
+          },
+          "MediaContentItem" => Set {
+            "Node",
+            "ContentItem",
+            "ContentNode",
+            "Card",
+            "VideoNode",
+            "AudioNode",
+            "ContentParentNode",
+            "ContentChildNode",
+            "ThemedNode",
+            "ScriptureNode",
+            "LikableNode",
+            "ShareableNode",
+          },
+          "ContentSeriesContentItem" => Set {
+            "Node",
+            "ContentItem",
+            "ContentNode",
+            "Card",
+            "VideoNode",
+            "AudioNode",
+            "FeaturesNode",
+            "ContentParentNode",
+            "ContentChildNode",
+            "ThemedNode",
+            "ProgressNode",
+            "LikableNode",
+            "ShareableNode",
+          },
+          "WeekendContentItem" => Set {
+            "Node",
+            "ContentItem",
+            "ContentNode",
+            "Card",
+            "VideoNode",
+            "AudioNode",
+            "FeaturesNode",
+            "ContentParentNode",
+            "ContentChildNode",
+            "ThemedNode",
+            "LikableNode",
+            "ShareableNode",
+            "LiveNode",
+          },
+          "Url" => Set {
+            "Node",
+          },
+          "ActionListFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "HeroListFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "VerticalCardListFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "HorizontalCardListFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "TextFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "ScriptureFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "WebviewFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "PrayerListFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "ContentItem" => Set {},
+          "Media" => Set {},
+          "ImageMedia" => Set {
+            "Media",
+          },
+          "VideoMedia" => Set {
+            "Media",
+          },
+          "AudioMedia" => Set {
+            "Media",
+          },
+          "MediaSource" => Set {},
+          "ImageMediaSource" => Set {
+            "MediaSource",
+          },
+          "VideoMediaSource" => Set {
+            "MediaSource",
+          },
+          "AudioMediaSource" => Set {
+            "MediaSource",
+          },
+          "Sharable" => Set {},
+          "SharableContentItem" => Set {
+            "Sharable",
+          },
+          "SharableFeature" => Set {
+            "Sharable",
+          },
+          "Feature" => Set {},
+          "ContentNode" => Set {},
+          "Card" => Set {},
+          "VideoNode" => Set {},
+          "AudioNode" => Set {},
+          "FeaturesNode" => Set {},
+          "ContentParentNode" => Set {},
+          "ContentChildNode" => Set {},
+          "ThemedNode" => Set {},
+          "ProgressNode" => Set {},
+          "ScriptureNode" => Set {},
+          "LikableNode" => Set {},
+          "ShareableNode" => Set {},
+          "LiveNode" => Set {},
+        },
+        "typePolicies": Object {},
+        "usingPossibleTypes": true,
+      },
+      "storeReader": StoreReader {
+        "config": Object {
+          "addTypename": true,
+          "cache": [Circular],
+        },
+        "executeSelectionSet": [Function],
+        "executeSubSelectedArray": [Function],
+        "knownResults": WeakMap {},
+      },
+      "storeWriter": StoreWriter {
+        "cache": [Circular],
+        "reader": StoreReader {
+          "config": Object {
+            "addTypename": true,
+            "cache": [Circular],
+          },
+          "executeSelectionSet": [Function],
+          "executeSubSelectedArray": [Function],
+          "knownResults": WeakMap {},
+        },
+      },
+      "txCount": 0,
+      "typenameDocumentCache": Map {},
+      "watchDep": [Function],
+      "watches": Set {},
+    }
+  }
+  defaultOptions={
     Object {
-      "opacity": 1,
+      "query": Object {
+        "fetchPolicy": "no-cache",
+      },
+      "watchQuery": Object {
+        "fetchPolicy": "no-cache",
+      },
     }
   }
 >
   <View
+    accessible={true}
+    clickable={true}
+    isTVSelectable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "paddingBottom": 10,
-        "paddingTop": 16,
+        "opacity": 1,
       }
     }
   >
-    <RNSVGSvgView
-      align="xMidYMid"
-      bbHeight={24}
-      bbWidth={24}
-      height={24}
-      meetOrSlice={0}
-      minX={0}
-      minY={0}
+    <View
       style={
-        Array [
-          Object {
-            "backgroundColor": "transparent",
-            "borderWidth": 0,
-          },
-          Object {
-            "marginRight": 8,
-          },
-          null,
-          Object {
-            "flex": 0,
-            "height": 24,
-            "width": 24,
-          },
-        ]
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "paddingBottom": 10,
+          "paddingTop": 16,
+        }
       }
-      vbHeight={24}
-      vbWidth={24}
-      width={24}
     >
-      <RNSVGGroup
-        fill={
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight={24}
+        bbWidth={24}
+        height={24}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
           Array [
-            0,
-            4278190080,
+            Object {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            Object {
+              "marginRight": 8,
+            },
+            null,
+            Object {
+              "flex": 0,
+              "height": 24,
+              "width": 24,
+            },
           ]
         }
-        fillOpacity={1}
-        fillRule={1}
-        font={Object {}}
-        matrix={
-          Array [
-            1,
-            0,
-            0,
-            1,
-            0,
-            0,
-          ]
-        }
-        opacity={1}
-        originX={0}
-        originY={0}
-        propList={Array []}
-        rotation={0}
-        scaleX={1}
-        scaleY={1}
-        skewX={0}
-        skewY={0}
-        stroke={null}
-        strokeDasharray={null}
-        strokeDashoffset={null}
-        strokeLinecap={0}
-        strokeLinejoin={0}
-        strokeMiterlimit={4}
-        strokeOpacity={1}
-        strokeWidth={1}
-        vectorEffect={0}
-        x={0}
-        y={0}
+        vbHeight={24}
+        vbWidth={24}
+        width={24}
       >
-        <RNSVGPath
-          d="M12 23.5a11.5 11.5 0 100-23 11.5 11.5 0 000 23zm0 .5a12 12 0 100-24 12 12 0 000 24z"
+        <RNSVGGroup
           fill={
             Array [
               0,
-              4281348144,
-            ]
-          }
-          fillOpacity={1}
-          fillRule={0}
-          matrix={
-            Array [
-              1,
-              0,
-              0,
-              1,
-              0,
-              0,
-            ]
-          }
-          opacity={1}
-          originX={0}
-          originY={0}
-          propList={
-            Array [
-              "fill",
-              "fillRule",
-            ]
-          }
-          rotation={0}
-          scaleX={1}
-          scaleY={1}
-          skewX={0}
-          skewY={0}
-          stroke={null}
-          strokeDasharray={null}
-          strokeDashoffset={null}
-          strokeLinecap={0}
-          strokeLinejoin={0}
-          strokeMiterlimit={4}
-          strokeOpacity={1}
-          strokeWidth={1}
-          vectorEffect={0}
-          x={0}
-          y={0}
-        />
-        <RNSVGPath
-          d="M17.7 11.7h-5.4V6.3a.3.3 0 00-.6 0v5.4H6.3a.3.3 0 000 .6h5.4v5.4a.3.3 0 00.6 0v-5.4h5.4a.3.3 0 000-.6z"
-          fill={
-            Array [
-              0,
-              4281348144,
+              4278190080,
             ]
           }
           fillOpacity={1}
           fillRule={1}
+          font={Object {}}
           matrix={
             Array [
               1,
@@ -376,11 +2778,7 @@ exports[`The PrayerInput component should render a custom prompt 1`] = `
           opacity={1}
           originX={0}
           originY={0}
-          propList={
-            Array [
-              "fill",
-            ]
-          }
+          propList={Array []}
           rotation={0}
           scaleX={1}
           scaleY={1}
@@ -397,23 +2795,115 @@ exports[`The PrayerInput component should render a custom prompt 1`] = `
           vectorEffect={0}
           x={0}
           y={0}
-        />
-      </RNSVGGroup>
-    </RNSVGSvgView>
-    <Text
-      bold={false}
-      italic={false}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Regular",
-          "fontSize": 16,
-          "lineHeight": 26,
+        >
+          <RNSVGPath
+            d="M12 23.5a11.5 11.5 0 100-23 11.5 11.5 0 000 23zm0 .5a12 12 0 100-24 12 12 0 000 24z"
+            fill={
+              Array [
+                0,
+                4281348144,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={0}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            originX={0}
+            originY={0}
+            propList={
+              Array [
+                "fill",
+                "fillRule",
+              ]
+            }
+            rotation={0}
+            scaleX={1}
+            scaleY={1}
+            skewX={0}
+            skewY={0}
+            stroke={null}
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+            vectorEffect={0}
+            x={0}
+            y={0}
+          />
+          <RNSVGPath
+            d="M17.7 11.7h-5.4V6.3a.3.3 0 00-.6 0v5.4H6.3a.3.3 0 000 .6h5.4v5.4a.3.3 0 00.6 0v-5.4h5.4a.3.3 0 000-.6z"
+            fill={
+              Array [
+                0,
+                4281348144,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            originX={0}
+            originY={0}
+            propList={
+              Array [
+                "fill",
+              ]
+            }
+            rotation={0}
+            scaleX={1}
+            scaleY={1}
+            skewX={0}
+            skewY={0}
+            stroke={null}
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+            vectorEffect={0}
+            x={0}
+            y={0}
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 16,
+            "lineHeight": 26,
+          }
         }
-      }
-    >
-      Custom prompt text. Boom.
-    </Text>
+      >
+        Custom prompt text. Boom.
+      </Text>
+    </View>
   </View>
 </View>
 `;

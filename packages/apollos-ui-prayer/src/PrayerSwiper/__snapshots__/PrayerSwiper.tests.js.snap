@@ -2,228 +2,1473 @@
 
 exports[`The PrayerSwiper component should render with a fragment as a child 1`] = `
 <View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "backgroundColor": "transparent",
-        "flex": 1,
-        "position": "relative",
+  cache={
+    InMemoryCache {
+      "addTypename": true,
+      "config": Object {
+        "addTypename": true,
+        "dataIdFromObject": [Function],
+        "possibleTypes": Object {
+          "AudioNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "Card": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "ContentChildNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "ContentItem": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "ContentNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "ContentParentNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "Feature": Array [
+            "ActionListFeature",
+            "HeroListFeature",
+            "VerticalCardListFeature",
+            "HorizontalCardListFeature",
+            "TextFeature",
+            "ScriptureFeature",
+            "WebviewFeature",
+            "PrayerListFeature",
+          ],
+          "FeaturesNode": Array [
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "LikableNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "LiveNode": Array [
+            "WeekendContentItem",
+          ],
+          "Media": Array [
+            "ImageMedia",
+            "VideoMedia",
+            "AudioMedia",
+          ],
+          "MediaSource": Array [
+            "ImageMediaSource",
+            "VideoMediaSource",
+            "AudioMediaSource",
+          ],
+          "Node": Array [
+            "ContentChannel",
+            "Person",
+            "Device",
+            "Campus",
+            "Event",
+            "Group",
+            "Scripture",
+            "Pass",
+            "PrayerRequest",
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+            "Url",
+            "ActionListFeature",
+            "HeroListFeature",
+            "VerticalCardListFeature",
+            "HorizontalCardListFeature",
+            "TextFeature",
+            "ScriptureFeature",
+            "WebviewFeature",
+            "PrayerListFeature",
+          ],
+          "ProgressNode": Array [
+            "ContentSeriesContentItem",
+          ],
+          "ScriptureNode": Array [
+            "DevotionalContentItem",
+            "MediaContentItem",
+          ],
+          "Sharable": Array [
+            "SharableContentItem",
+            "SharableFeature",
+          ],
+          "ShareableNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "ThemedNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "VideoNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+        },
+        "resultCaching": true,
+        "typePolicies": Object {},
       },
-      undefined,
-    ]
+      "data": Root {
+        "canRead": [Function],
+        "data": Object {},
+        "getFieldValue": [Function],
+        "group": CacheGroup {
+          "caching": true,
+          "d": [Function],
+          "keyMaker": KeyTrie {
+            "makeData": [Function],
+            "weakness": true,
+          },
+        },
+        "policies": Policies {
+          "cache": [Circular],
+          "config": Object {
+            "cache": [Circular],
+            "dataIdFromObject": [Function],
+            "possibleTypes": Object {
+              "AudioNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "Card": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentChildNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentItem": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentParentNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "Feature": Array [
+                "ActionListFeature",
+                "HeroListFeature",
+                "VerticalCardListFeature",
+                "HorizontalCardListFeature",
+                "TextFeature",
+                "ScriptureFeature",
+                "WebviewFeature",
+                "PrayerListFeature",
+              ],
+              "FeaturesNode": Array [
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "LikableNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "LiveNode": Array [
+                "WeekendContentItem",
+              ],
+              "Media": Array [
+                "ImageMedia",
+                "VideoMedia",
+                "AudioMedia",
+              ],
+              "MediaSource": Array [
+                "ImageMediaSource",
+                "VideoMediaSource",
+                "AudioMediaSource",
+              ],
+              "Node": Array [
+                "ContentChannel",
+                "Person",
+                "Device",
+                "Campus",
+                "Event",
+                "Group",
+                "Scripture",
+                "Pass",
+                "PrayerRequest",
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+                "Url",
+                "ActionListFeature",
+                "HeroListFeature",
+                "VerticalCardListFeature",
+                "HorizontalCardListFeature",
+                "TextFeature",
+                "ScriptureFeature",
+                "WebviewFeature",
+                "PrayerListFeature",
+              ],
+              "ProgressNode": Array [
+                "ContentSeriesContentItem",
+              ],
+              "ScriptureNode": Array [
+                "DevotionalContentItem",
+                "MediaContentItem",
+              ],
+              "Sharable": Array [
+                "SharableContentItem",
+                "SharableFeature",
+              ],
+              "ShareableNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ThemedNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "VideoNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+            },
+            "typePolicies": Object {},
+          },
+          "fuzzySubtypes": Map {},
+          "rootIdsByTypename": Object {
+            "Mutation": "ROOT_MUTATION",
+            "Query": "ROOT_QUERY",
+            "Subscription": "ROOT_SUBSCRIPTION",
+          },
+          "rootTypenamesById": Object {
+            "ROOT_MUTATION": "Mutation",
+            "ROOT_QUERY": "Query",
+            "ROOT_SUBSCRIPTION": "Subscription",
+          },
+          "supertypeMap": Map {
+            "Node" => Set {},
+            "ContentChannel" => Set {
+              "Node",
+            },
+            "Person" => Set {
+              "Node",
+            },
+            "Device" => Set {
+              "Node",
+            },
+            "Campus" => Set {
+              "Node",
+            },
+            "Event" => Set {
+              "Node",
+            },
+            "Group" => Set {
+              "Node",
+            },
+            "Scripture" => Set {
+              "Node",
+            },
+            "Pass" => Set {
+              "Node",
+            },
+            "PrayerRequest" => Set {
+              "Node",
+            },
+            "UniversalContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "DevotionalContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ScriptureNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "MediaContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ScriptureNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "ContentSeriesContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "FeaturesNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ProgressNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "WeekendContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "FeaturesNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "LikableNode",
+              "ShareableNode",
+              "LiveNode",
+            },
+            "Url" => Set {
+              "Node",
+            },
+            "ActionListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "HeroListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "VerticalCardListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "HorizontalCardListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "TextFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "ScriptureFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "WebviewFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "PrayerListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "ContentItem" => Set {},
+            "Media" => Set {},
+            "ImageMedia" => Set {
+              "Media",
+            },
+            "VideoMedia" => Set {
+              "Media",
+            },
+            "AudioMedia" => Set {
+              "Media",
+            },
+            "MediaSource" => Set {},
+            "ImageMediaSource" => Set {
+              "MediaSource",
+            },
+            "VideoMediaSource" => Set {
+              "MediaSource",
+            },
+            "AudioMediaSource" => Set {
+              "MediaSource",
+            },
+            "Sharable" => Set {},
+            "SharableContentItem" => Set {
+              "Sharable",
+            },
+            "SharableFeature" => Set {
+              "Sharable",
+            },
+            "Feature" => Set {},
+            "ContentNode" => Set {},
+            "Card" => Set {},
+            "VideoNode" => Set {},
+            "AudioNode" => Set {},
+            "FeaturesNode" => Set {},
+            "ContentParentNode" => Set {},
+            "ContentChildNode" => Set {},
+            "ThemedNode" => Set {},
+            "ProgressNode" => Set {},
+            "ScriptureNode" => Set {},
+            "LikableNode" => Set {},
+            "ShareableNode" => Set {},
+            "LiveNode" => Set {},
+          },
+          "typePolicies": Object {},
+          "usingPossibleTypes": true,
+        },
+        "refs": Object {},
+        "rootIds": Object {},
+        "sharedLayerGroup": CacheGroup {
+          "caching": true,
+          "d": [Function],
+          "keyMaker": KeyTrie {
+            "makeData": [Function],
+            "weakness": true,
+          },
+        },
+        "storageTrie": KeyTrie {
+          "makeData": [Function],
+          "weakness": true,
+        },
+        "toReference": [Function],
+      },
+      "getFragmentDoc": [Function],
+      "makeVar": [Function],
+      "maybeBroadcastWatch": [Function],
+      "optimisticData": Root {
+        "canRead": [Function],
+        "data": Object {},
+        "getFieldValue": [Function],
+        "group": CacheGroup {
+          "caching": true,
+          "d": [Function],
+          "keyMaker": KeyTrie {
+            "makeData": [Function],
+            "weakness": true,
+          },
+        },
+        "policies": Policies {
+          "cache": [Circular],
+          "config": Object {
+            "cache": [Circular],
+            "dataIdFromObject": [Function],
+            "possibleTypes": Object {
+              "AudioNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "Card": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentChildNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentItem": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentParentNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "Feature": Array [
+                "ActionListFeature",
+                "HeroListFeature",
+                "VerticalCardListFeature",
+                "HorizontalCardListFeature",
+                "TextFeature",
+                "ScriptureFeature",
+                "WebviewFeature",
+                "PrayerListFeature",
+              ],
+              "FeaturesNode": Array [
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "LikableNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "LiveNode": Array [
+                "WeekendContentItem",
+              ],
+              "Media": Array [
+                "ImageMedia",
+                "VideoMedia",
+                "AudioMedia",
+              ],
+              "MediaSource": Array [
+                "ImageMediaSource",
+                "VideoMediaSource",
+                "AudioMediaSource",
+              ],
+              "Node": Array [
+                "ContentChannel",
+                "Person",
+                "Device",
+                "Campus",
+                "Event",
+                "Group",
+                "Scripture",
+                "Pass",
+                "PrayerRequest",
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+                "Url",
+                "ActionListFeature",
+                "HeroListFeature",
+                "VerticalCardListFeature",
+                "HorizontalCardListFeature",
+                "TextFeature",
+                "ScriptureFeature",
+                "WebviewFeature",
+                "PrayerListFeature",
+              ],
+              "ProgressNode": Array [
+                "ContentSeriesContentItem",
+              ],
+              "ScriptureNode": Array [
+                "DevotionalContentItem",
+                "MediaContentItem",
+              ],
+              "Sharable": Array [
+                "SharableContentItem",
+                "SharableFeature",
+              ],
+              "ShareableNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ThemedNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "VideoNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+            },
+            "typePolicies": Object {},
+          },
+          "fuzzySubtypes": Map {},
+          "rootIdsByTypename": Object {
+            "Mutation": "ROOT_MUTATION",
+            "Query": "ROOT_QUERY",
+            "Subscription": "ROOT_SUBSCRIPTION",
+          },
+          "rootTypenamesById": Object {
+            "ROOT_MUTATION": "Mutation",
+            "ROOT_QUERY": "Query",
+            "ROOT_SUBSCRIPTION": "Subscription",
+          },
+          "supertypeMap": Map {
+            "Node" => Set {},
+            "ContentChannel" => Set {
+              "Node",
+            },
+            "Person" => Set {
+              "Node",
+            },
+            "Device" => Set {
+              "Node",
+            },
+            "Campus" => Set {
+              "Node",
+            },
+            "Event" => Set {
+              "Node",
+            },
+            "Group" => Set {
+              "Node",
+            },
+            "Scripture" => Set {
+              "Node",
+            },
+            "Pass" => Set {
+              "Node",
+            },
+            "PrayerRequest" => Set {
+              "Node",
+            },
+            "UniversalContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "DevotionalContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ScriptureNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "MediaContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ScriptureNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "ContentSeriesContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "FeaturesNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ProgressNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "WeekendContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "FeaturesNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "LikableNode",
+              "ShareableNode",
+              "LiveNode",
+            },
+            "Url" => Set {
+              "Node",
+            },
+            "ActionListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "HeroListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "VerticalCardListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "HorizontalCardListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "TextFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "ScriptureFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "WebviewFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "PrayerListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "ContentItem" => Set {},
+            "Media" => Set {},
+            "ImageMedia" => Set {
+              "Media",
+            },
+            "VideoMedia" => Set {
+              "Media",
+            },
+            "AudioMedia" => Set {
+              "Media",
+            },
+            "MediaSource" => Set {},
+            "ImageMediaSource" => Set {
+              "MediaSource",
+            },
+            "VideoMediaSource" => Set {
+              "MediaSource",
+            },
+            "AudioMediaSource" => Set {
+              "MediaSource",
+            },
+            "Sharable" => Set {},
+            "SharableContentItem" => Set {
+              "Sharable",
+            },
+            "SharableFeature" => Set {
+              "Sharable",
+            },
+            "Feature" => Set {},
+            "ContentNode" => Set {},
+            "Card" => Set {},
+            "VideoNode" => Set {},
+            "AudioNode" => Set {},
+            "FeaturesNode" => Set {},
+            "ContentParentNode" => Set {},
+            "ContentChildNode" => Set {},
+            "ThemedNode" => Set {},
+            "ProgressNode" => Set {},
+            "ScriptureNode" => Set {},
+            "LikableNode" => Set {},
+            "ShareableNode" => Set {},
+            "LiveNode" => Set {},
+          },
+          "typePolicies": Object {},
+          "usingPossibleTypes": true,
+        },
+        "refs": Object {},
+        "rootIds": Object {},
+        "sharedLayerGroup": CacheGroup {
+          "caching": true,
+          "d": [Function],
+          "keyMaker": KeyTrie {
+            "makeData": [Function],
+            "weakness": true,
+          },
+        },
+        "storageTrie": KeyTrie {
+          "makeData": [Function],
+          "weakness": true,
+        },
+        "toReference": [Function],
+      },
+      "policies": Policies {
+        "cache": [Circular],
+        "config": Object {
+          "cache": [Circular],
+          "dataIdFromObject": [Function],
+          "possibleTypes": Object {
+            "AudioNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "Card": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "ContentChildNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "ContentItem": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "ContentNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "ContentParentNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "Feature": Array [
+              "ActionListFeature",
+              "HeroListFeature",
+              "VerticalCardListFeature",
+              "HorizontalCardListFeature",
+              "TextFeature",
+              "ScriptureFeature",
+              "WebviewFeature",
+              "PrayerListFeature",
+            ],
+            "FeaturesNode": Array [
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "LikableNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "LiveNode": Array [
+              "WeekendContentItem",
+            ],
+            "Media": Array [
+              "ImageMedia",
+              "VideoMedia",
+              "AudioMedia",
+            ],
+            "MediaSource": Array [
+              "ImageMediaSource",
+              "VideoMediaSource",
+              "AudioMediaSource",
+            ],
+            "Node": Array [
+              "ContentChannel",
+              "Person",
+              "Device",
+              "Campus",
+              "Event",
+              "Group",
+              "Scripture",
+              "Pass",
+              "PrayerRequest",
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+              "Url",
+              "ActionListFeature",
+              "HeroListFeature",
+              "VerticalCardListFeature",
+              "HorizontalCardListFeature",
+              "TextFeature",
+              "ScriptureFeature",
+              "WebviewFeature",
+              "PrayerListFeature",
+            ],
+            "ProgressNode": Array [
+              "ContentSeriesContentItem",
+            ],
+            "ScriptureNode": Array [
+              "DevotionalContentItem",
+              "MediaContentItem",
+            ],
+            "Sharable": Array [
+              "SharableContentItem",
+              "SharableFeature",
+            ],
+            "ShareableNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "ThemedNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "VideoNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+          },
+          "typePolicies": Object {},
+        },
+        "fuzzySubtypes": Map {},
+        "rootIdsByTypename": Object {
+          "Mutation": "ROOT_MUTATION",
+          "Query": "ROOT_QUERY",
+          "Subscription": "ROOT_SUBSCRIPTION",
+        },
+        "rootTypenamesById": Object {
+          "ROOT_MUTATION": "Mutation",
+          "ROOT_QUERY": "Query",
+          "ROOT_SUBSCRIPTION": "Subscription",
+        },
+        "supertypeMap": Map {
+          "Node" => Set {},
+          "ContentChannel" => Set {
+            "Node",
+          },
+          "Person" => Set {
+            "Node",
+          },
+          "Device" => Set {
+            "Node",
+          },
+          "Campus" => Set {
+            "Node",
+          },
+          "Event" => Set {
+            "Node",
+          },
+          "Group" => Set {
+            "Node",
+          },
+          "Scripture" => Set {
+            "Node",
+          },
+          "Pass" => Set {
+            "Node",
+          },
+          "PrayerRequest" => Set {
+            "Node",
+          },
+          "UniversalContentItem" => Set {
+            "Node",
+            "ContentItem",
+            "ContentNode",
+            "Card",
+            "VideoNode",
+            "AudioNode",
+            "ContentParentNode",
+            "ContentChildNode",
+            "ThemedNode",
+            "LikableNode",
+            "ShareableNode",
+          },
+          "DevotionalContentItem" => Set {
+            "Node",
+            "ContentItem",
+            "ContentNode",
+            "Card",
+            "VideoNode",
+            "AudioNode",
+            "ContentParentNode",
+            "ContentChildNode",
+            "ThemedNode",
+            "ScriptureNode",
+            "LikableNode",
+            "ShareableNode",
+          },
+          "MediaContentItem" => Set {
+            "Node",
+            "ContentItem",
+            "ContentNode",
+            "Card",
+            "VideoNode",
+            "AudioNode",
+            "ContentParentNode",
+            "ContentChildNode",
+            "ThemedNode",
+            "ScriptureNode",
+            "LikableNode",
+            "ShareableNode",
+          },
+          "ContentSeriesContentItem" => Set {
+            "Node",
+            "ContentItem",
+            "ContentNode",
+            "Card",
+            "VideoNode",
+            "AudioNode",
+            "FeaturesNode",
+            "ContentParentNode",
+            "ContentChildNode",
+            "ThemedNode",
+            "ProgressNode",
+            "LikableNode",
+            "ShareableNode",
+          },
+          "WeekendContentItem" => Set {
+            "Node",
+            "ContentItem",
+            "ContentNode",
+            "Card",
+            "VideoNode",
+            "AudioNode",
+            "FeaturesNode",
+            "ContentParentNode",
+            "ContentChildNode",
+            "ThemedNode",
+            "LikableNode",
+            "ShareableNode",
+            "LiveNode",
+          },
+          "Url" => Set {
+            "Node",
+          },
+          "ActionListFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "HeroListFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "VerticalCardListFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "HorizontalCardListFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "TextFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "ScriptureFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "WebviewFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "PrayerListFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "ContentItem" => Set {},
+          "Media" => Set {},
+          "ImageMedia" => Set {
+            "Media",
+          },
+          "VideoMedia" => Set {
+            "Media",
+          },
+          "AudioMedia" => Set {
+            "Media",
+          },
+          "MediaSource" => Set {},
+          "ImageMediaSource" => Set {
+            "MediaSource",
+          },
+          "VideoMediaSource" => Set {
+            "MediaSource",
+          },
+          "AudioMediaSource" => Set {
+            "MediaSource",
+          },
+          "Sharable" => Set {},
+          "SharableContentItem" => Set {
+            "Sharable",
+          },
+          "SharableFeature" => Set {
+            "Sharable",
+          },
+          "Feature" => Set {},
+          "ContentNode" => Set {},
+          "Card" => Set {},
+          "VideoNode" => Set {},
+          "AudioNode" => Set {},
+          "FeaturesNode" => Set {},
+          "ContentParentNode" => Set {},
+          "ContentChildNode" => Set {},
+          "ThemedNode" => Set {},
+          "ProgressNode" => Set {},
+          "ScriptureNode" => Set {},
+          "LikableNode" => Set {},
+          "ShareableNode" => Set {},
+          "LiveNode" => Set {},
+        },
+        "typePolicies": Object {},
+        "usingPossibleTypes": true,
+      },
+      "storeReader": StoreReader {
+        "config": Object {
+          "addTypename": true,
+          "cache": [Circular],
+        },
+        "executeSelectionSet": [Function],
+        "executeSubSelectedArray": [Function],
+        "knownResults": WeakMap {},
+      },
+      "storeWriter": StoreWriter {
+        "cache": [Circular],
+        "reader": StoreReader {
+          "config": Object {
+            "addTypename": true,
+            "cache": [Circular],
+          },
+          "executeSelectionSet": [Function],
+          "executeSubSelectedArray": [Function],
+          "knownResults": WeakMap {},
+        },
+      },
+      "txCount": 0,
+      "typenameDocumentCache": Map {},
+      "watchDep": [Function],
+      "watches": Set {},
+    }
+  }
+  defaultOptions={
+    Object {
+      "query": Object {
+        "fetchPolicy": "no-cache",
+      },
+      "watchQuery": Object {
+        "fetchPolicy": "no-cache",
+      },
+    }
   }
 >
-  <RCTScrollView
-    activeDot={
-      <View>
-        <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
-      </View>
-    }
-    automaticallyAdjustContentInsets={false}
-    autoplay={false}
-    autoplayDirection={true}
-    autoplayTimeout={2.5}
-    bounces={false}
-    contentContainerStyle={
+  <View
+    onLayout={[Function]}
+    style={
       Array [
         Object {
           "backgroundColor": "transparent",
+          "flex": 1,
+          "position": "relative",
         },
         undefined,
       ]
     }
-    contentOffset={
-      Object {
-        "x": 0,
-      }
-    }
-    disableNextButton={false}
-    disablePrevButton={false}
-    dot={
-      <View>
-        <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
-      </View>
-    }
-    horizontal={true}
-    index={0}
-    loadMinimal={true}
-    loadMinimalSize={1}
-    loop={false}
-    onIndexChanged={[Function]}
-    onMomentumScrollEnd={[Function]}
-    onScrollBeginDrag={[Function]}
-    onScrollEndDrag={[Function]}
-    orientation="portrait"
-    paginationStyle={
-      Object {
-        "alignItem": "flex-start",
-        "bottom": null,
-        "justifyContent": "flex-start",
-        "left": 16,
-      }
-    }
-    pagingEnabled={true}
-    removeClippedSubviews={true}
-    scrollsToTop={false}
-    showsButtons={false}
-    showsHorizontalScrollIndicator={false}
-    showsPagination={true}
-    showsVerticalScrollIndicator={false}
   >
-    <View>
-      <View
-        style={
-          Array [
-            Object {
-              "height": 1334,
-              "width": 750,
-            },
-            Object {
-              "backgroundColor": "transparent",
-            },
-          ]
-        }
-      >
-        <View
-          accessible={true}
-          clickable={true}
-          isTVSelectable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "opacity": 1,
-            }
-          }
-        >
-          <Text>
-            1
-          </Text>
+    <RCTScrollView
+      activeDot={
+        <View>
+          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
         </View>
-      </View>
-      <View
-        style={
-          Array [
-            Object {
-              "height": 1334,
-              "width": 750,
-            },
-            Object {
-              "backgroundColor": "transparent",
-            },
-          ]
-        }
-      >
-        <View
-          accessible={true}
-          clickable={true}
-          isTVSelectable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "opacity": 1,
-            }
-          }
-        >
-          <Text>
-            2
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
+      }
+      automaticallyAdjustContentInsets={false}
+      autoplay={false}
+      autoplayDirection={true}
+      autoplayTimeout={2.5}
+      bounces={false}
+      contentContainerStyle={
+        Array [
           Object {
-            "alignItems": "center",
-            "flex": 1,
-            "height": 1334,
-            "justifyContent": "center",
-            "width": 750,
-          }
-        }
-      >
-        <ActivityIndicator
-          animating={true}
-          color="#999999"
-          hidesWhenStopped={true}
-          size="small"
-        />
-      </View>
-    </View>
-  </RCTScrollView>
-  <View
-    pointerEvents="none"
-    style={
-      Array [
+            "backgroundColor": "transparent",
+          },
+          undefined,
+        ]
+      }
+      contentOffset={
         Object {
-          "alignItems": "center",
-          "backgroundColor": "transparent",
-          "bottom": 25,
-          "flex": 1,
-          "flexDirection": "row",
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-        },
+          "x": 0,
+        }
+      }
+      disableNextButton={false}
+      disablePrevButton={false}
+      dot={
+        <View>
+          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+        </View>
+      }
+      horizontal={true}
+      index={0}
+      loadMinimal={true}
+      loadMinimalSize={1}
+      loop={false}
+      onIndexChanged={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      orientation="portrait"
+      paginationStyle={
         Object {
           "alignItem": "flex-start",
           "bottom": null,
           "justifyContent": "flex-start",
           "left": 16,
-        },
-      ]
-    }
-  >
-    <View>
-      <View
-        style={
-          Object {
-            "backgroundColor": "#00676D",
-            "borderRadius": 2,
-            "height": 2,
-            "marginHorizontal": 1,
-            "width": 24,
-          }
         }
-      />
-    </View>
-    <View>
-      <View
-        style={
-          Object {
-            "backgroundColor": "rgba(48, 48, 48, 0.09999999999999998)",
-            "borderRadius": 2,
-            "height": 2,
-            "marginHorizontal": 1,
-            "width": 24,
+      }
+      pagingEnabled={true}
+      removeClippedSubviews={true}
+      scrollsToTop={false}
+      showsButtons={false}
+      showsHorizontalScrollIndicator={false}
+      showsPagination={true}
+      showsVerticalScrollIndicator={false}
+    >
+      <View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 1334,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+            ]
           }
-        }
-      />
-    </View>
-    <View>
-      <View
-        style={
-          Object {
-            "backgroundColor": "rgba(48, 48, 48, 0.09999999999999998)",
-            "borderRadius": 2,
-            "height": 2,
-            "marginHorizontal": 1,
-            "width": 24,
+        >
+          <View
+            accessible={true}
+            clickable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text>
+              1
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 1334,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+            ]
           }
-        }
-      />
+        >
+          <View
+            accessible={true}
+            clickable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text>
+              2
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "height": 1334,
+              "justifyContent": "center",
+              "width": 750,
+            }
+          }
+        >
+          <ActivityIndicator
+            animating={true}
+            color="#999999"
+            hidesWhenStopped={true}
+            size="small"
+          />
+        </View>
+      </View>
+    </RCTScrollView>
+    <View
+      pointerEvents="none"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "bottom": 25,
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+          },
+          Object {
+            "alignItem": "flex-start",
+            "bottom": null,
+            "justifyContent": "flex-start",
+            "left": 16,
+          },
+        ]
+      }
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#00676D",
+              "borderRadius": 2,
+              "height": 2,
+              "marginHorizontal": 1,
+              "width": 24,
+            }
+          }
+        />
+      </View>
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "rgba(48, 48, 48, 0.09999999999999998)",
+              "borderRadius": 2,
+              "height": 2,
+              "marginHorizontal": 1,
+              "width": 24,
+            }
+          }
+        />
+      </View>
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "rgba(48, 48, 48, 0.09999999999999998)",
+              "borderRadius": 2,
+              "height": 2,
+              "marginHorizontal": 1,
+              "width": 24,
+            }
+          }
+        />
+      </View>
     </View>
   </View>
 </View>
@@ -231,228 +1476,1473 @@ exports[`The PrayerSwiper component should render with a fragment as a child 1`]
 
 exports[`The PrayerSwiper component should render with an array as a child 1`] = `
 <View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "backgroundColor": "transparent",
-        "flex": 1,
-        "position": "relative",
+  cache={
+    InMemoryCache {
+      "addTypename": true,
+      "config": Object {
+        "addTypename": true,
+        "dataIdFromObject": [Function],
+        "possibleTypes": Object {
+          "AudioNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "Card": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "ContentChildNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "ContentItem": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "ContentNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "ContentParentNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "Feature": Array [
+            "ActionListFeature",
+            "HeroListFeature",
+            "VerticalCardListFeature",
+            "HorizontalCardListFeature",
+            "TextFeature",
+            "ScriptureFeature",
+            "WebviewFeature",
+            "PrayerListFeature",
+          ],
+          "FeaturesNode": Array [
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "LikableNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "LiveNode": Array [
+            "WeekendContentItem",
+          ],
+          "Media": Array [
+            "ImageMedia",
+            "VideoMedia",
+            "AudioMedia",
+          ],
+          "MediaSource": Array [
+            "ImageMediaSource",
+            "VideoMediaSource",
+            "AudioMediaSource",
+          ],
+          "Node": Array [
+            "ContentChannel",
+            "Person",
+            "Device",
+            "Campus",
+            "Event",
+            "Group",
+            "Scripture",
+            "Pass",
+            "PrayerRequest",
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+            "Url",
+            "ActionListFeature",
+            "HeroListFeature",
+            "VerticalCardListFeature",
+            "HorizontalCardListFeature",
+            "TextFeature",
+            "ScriptureFeature",
+            "WebviewFeature",
+            "PrayerListFeature",
+          ],
+          "ProgressNode": Array [
+            "ContentSeriesContentItem",
+          ],
+          "ScriptureNode": Array [
+            "DevotionalContentItem",
+            "MediaContentItem",
+          ],
+          "Sharable": Array [
+            "SharableContentItem",
+            "SharableFeature",
+          ],
+          "ShareableNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "ThemedNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+          "VideoNode": Array [
+            "UniversalContentItem",
+            "DevotionalContentItem",
+            "MediaContentItem",
+            "ContentSeriesContentItem",
+            "WeekendContentItem",
+          ],
+        },
+        "resultCaching": true,
+        "typePolicies": Object {},
       },
-      undefined,
-    ]
+      "data": Root {
+        "canRead": [Function],
+        "data": Object {},
+        "getFieldValue": [Function],
+        "group": CacheGroup {
+          "caching": true,
+          "d": [Function],
+          "keyMaker": KeyTrie {
+            "makeData": [Function],
+            "weakness": true,
+          },
+        },
+        "policies": Policies {
+          "cache": [Circular],
+          "config": Object {
+            "cache": [Circular],
+            "dataIdFromObject": [Function],
+            "possibleTypes": Object {
+              "AudioNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "Card": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentChildNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentItem": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentParentNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "Feature": Array [
+                "ActionListFeature",
+                "HeroListFeature",
+                "VerticalCardListFeature",
+                "HorizontalCardListFeature",
+                "TextFeature",
+                "ScriptureFeature",
+                "WebviewFeature",
+                "PrayerListFeature",
+              ],
+              "FeaturesNode": Array [
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "LikableNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "LiveNode": Array [
+                "WeekendContentItem",
+              ],
+              "Media": Array [
+                "ImageMedia",
+                "VideoMedia",
+                "AudioMedia",
+              ],
+              "MediaSource": Array [
+                "ImageMediaSource",
+                "VideoMediaSource",
+                "AudioMediaSource",
+              ],
+              "Node": Array [
+                "ContentChannel",
+                "Person",
+                "Device",
+                "Campus",
+                "Event",
+                "Group",
+                "Scripture",
+                "Pass",
+                "PrayerRequest",
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+                "Url",
+                "ActionListFeature",
+                "HeroListFeature",
+                "VerticalCardListFeature",
+                "HorizontalCardListFeature",
+                "TextFeature",
+                "ScriptureFeature",
+                "WebviewFeature",
+                "PrayerListFeature",
+              ],
+              "ProgressNode": Array [
+                "ContentSeriesContentItem",
+              ],
+              "ScriptureNode": Array [
+                "DevotionalContentItem",
+                "MediaContentItem",
+              ],
+              "Sharable": Array [
+                "SharableContentItem",
+                "SharableFeature",
+              ],
+              "ShareableNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ThemedNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "VideoNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+            },
+            "typePolicies": Object {},
+          },
+          "fuzzySubtypes": Map {},
+          "rootIdsByTypename": Object {
+            "Mutation": "ROOT_MUTATION",
+            "Query": "ROOT_QUERY",
+            "Subscription": "ROOT_SUBSCRIPTION",
+          },
+          "rootTypenamesById": Object {
+            "ROOT_MUTATION": "Mutation",
+            "ROOT_QUERY": "Query",
+            "ROOT_SUBSCRIPTION": "Subscription",
+          },
+          "supertypeMap": Map {
+            "Node" => Set {},
+            "ContentChannel" => Set {
+              "Node",
+            },
+            "Person" => Set {
+              "Node",
+            },
+            "Device" => Set {
+              "Node",
+            },
+            "Campus" => Set {
+              "Node",
+            },
+            "Event" => Set {
+              "Node",
+            },
+            "Group" => Set {
+              "Node",
+            },
+            "Scripture" => Set {
+              "Node",
+            },
+            "Pass" => Set {
+              "Node",
+            },
+            "PrayerRequest" => Set {
+              "Node",
+            },
+            "UniversalContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "DevotionalContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ScriptureNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "MediaContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ScriptureNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "ContentSeriesContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "FeaturesNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ProgressNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "WeekendContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "FeaturesNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "LikableNode",
+              "ShareableNode",
+              "LiveNode",
+            },
+            "Url" => Set {
+              "Node",
+            },
+            "ActionListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "HeroListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "VerticalCardListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "HorizontalCardListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "TextFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "ScriptureFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "WebviewFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "PrayerListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "ContentItem" => Set {},
+            "Media" => Set {},
+            "ImageMedia" => Set {
+              "Media",
+            },
+            "VideoMedia" => Set {
+              "Media",
+            },
+            "AudioMedia" => Set {
+              "Media",
+            },
+            "MediaSource" => Set {},
+            "ImageMediaSource" => Set {
+              "MediaSource",
+            },
+            "VideoMediaSource" => Set {
+              "MediaSource",
+            },
+            "AudioMediaSource" => Set {
+              "MediaSource",
+            },
+            "Sharable" => Set {},
+            "SharableContentItem" => Set {
+              "Sharable",
+            },
+            "SharableFeature" => Set {
+              "Sharable",
+            },
+            "Feature" => Set {},
+            "ContentNode" => Set {},
+            "Card" => Set {},
+            "VideoNode" => Set {},
+            "AudioNode" => Set {},
+            "FeaturesNode" => Set {},
+            "ContentParentNode" => Set {},
+            "ContentChildNode" => Set {},
+            "ThemedNode" => Set {},
+            "ProgressNode" => Set {},
+            "ScriptureNode" => Set {},
+            "LikableNode" => Set {},
+            "ShareableNode" => Set {},
+            "LiveNode" => Set {},
+          },
+          "typePolicies": Object {},
+          "usingPossibleTypes": true,
+        },
+        "refs": Object {},
+        "rootIds": Object {},
+        "sharedLayerGroup": CacheGroup {
+          "caching": true,
+          "d": [Function],
+          "keyMaker": KeyTrie {
+            "makeData": [Function],
+            "weakness": true,
+          },
+        },
+        "storageTrie": KeyTrie {
+          "makeData": [Function],
+          "weakness": true,
+        },
+        "toReference": [Function],
+      },
+      "getFragmentDoc": [Function],
+      "makeVar": [Function],
+      "maybeBroadcastWatch": [Function],
+      "optimisticData": Root {
+        "canRead": [Function],
+        "data": Object {},
+        "getFieldValue": [Function],
+        "group": CacheGroup {
+          "caching": true,
+          "d": [Function],
+          "keyMaker": KeyTrie {
+            "makeData": [Function],
+            "weakness": true,
+          },
+        },
+        "policies": Policies {
+          "cache": [Circular],
+          "config": Object {
+            "cache": [Circular],
+            "dataIdFromObject": [Function],
+            "possibleTypes": Object {
+              "AudioNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "Card": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentChildNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentItem": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ContentParentNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "Feature": Array [
+                "ActionListFeature",
+                "HeroListFeature",
+                "VerticalCardListFeature",
+                "HorizontalCardListFeature",
+                "TextFeature",
+                "ScriptureFeature",
+                "WebviewFeature",
+                "PrayerListFeature",
+              ],
+              "FeaturesNode": Array [
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "LikableNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "LiveNode": Array [
+                "WeekendContentItem",
+              ],
+              "Media": Array [
+                "ImageMedia",
+                "VideoMedia",
+                "AudioMedia",
+              ],
+              "MediaSource": Array [
+                "ImageMediaSource",
+                "VideoMediaSource",
+                "AudioMediaSource",
+              ],
+              "Node": Array [
+                "ContentChannel",
+                "Person",
+                "Device",
+                "Campus",
+                "Event",
+                "Group",
+                "Scripture",
+                "Pass",
+                "PrayerRequest",
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+                "Url",
+                "ActionListFeature",
+                "HeroListFeature",
+                "VerticalCardListFeature",
+                "HorizontalCardListFeature",
+                "TextFeature",
+                "ScriptureFeature",
+                "WebviewFeature",
+                "PrayerListFeature",
+              ],
+              "ProgressNode": Array [
+                "ContentSeriesContentItem",
+              ],
+              "ScriptureNode": Array [
+                "DevotionalContentItem",
+                "MediaContentItem",
+              ],
+              "Sharable": Array [
+                "SharableContentItem",
+                "SharableFeature",
+              ],
+              "ShareableNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "ThemedNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+              "VideoNode": Array [
+                "UniversalContentItem",
+                "DevotionalContentItem",
+                "MediaContentItem",
+                "ContentSeriesContentItem",
+                "WeekendContentItem",
+              ],
+            },
+            "typePolicies": Object {},
+          },
+          "fuzzySubtypes": Map {},
+          "rootIdsByTypename": Object {
+            "Mutation": "ROOT_MUTATION",
+            "Query": "ROOT_QUERY",
+            "Subscription": "ROOT_SUBSCRIPTION",
+          },
+          "rootTypenamesById": Object {
+            "ROOT_MUTATION": "Mutation",
+            "ROOT_QUERY": "Query",
+            "ROOT_SUBSCRIPTION": "Subscription",
+          },
+          "supertypeMap": Map {
+            "Node" => Set {},
+            "ContentChannel" => Set {
+              "Node",
+            },
+            "Person" => Set {
+              "Node",
+            },
+            "Device" => Set {
+              "Node",
+            },
+            "Campus" => Set {
+              "Node",
+            },
+            "Event" => Set {
+              "Node",
+            },
+            "Group" => Set {
+              "Node",
+            },
+            "Scripture" => Set {
+              "Node",
+            },
+            "Pass" => Set {
+              "Node",
+            },
+            "PrayerRequest" => Set {
+              "Node",
+            },
+            "UniversalContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "DevotionalContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ScriptureNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "MediaContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ScriptureNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "ContentSeriesContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "FeaturesNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "ProgressNode",
+              "LikableNode",
+              "ShareableNode",
+            },
+            "WeekendContentItem" => Set {
+              "Node",
+              "ContentItem",
+              "ContentNode",
+              "Card",
+              "VideoNode",
+              "AudioNode",
+              "FeaturesNode",
+              "ContentParentNode",
+              "ContentChildNode",
+              "ThemedNode",
+              "LikableNode",
+              "ShareableNode",
+              "LiveNode",
+            },
+            "Url" => Set {
+              "Node",
+            },
+            "ActionListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "HeroListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "VerticalCardListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "HorizontalCardListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "TextFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "ScriptureFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "WebviewFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "PrayerListFeature" => Set {
+              "Node",
+              "Feature",
+            },
+            "ContentItem" => Set {},
+            "Media" => Set {},
+            "ImageMedia" => Set {
+              "Media",
+            },
+            "VideoMedia" => Set {
+              "Media",
+            },
+            "AudioMedia" => Set {
+              "Media",
+            },
+            "MediaSource" => Set {},
+            "ImageMediaSource" => Set {
+              "MediaSource",
+            },
+            "VideoMediaSource" => Set {
+              "MediaSource",
+            },
+            "AudioMediaSource" => Set {
+              "MediaSource",
+            },
+            "Sharable" => Set {},
+            "SharableContentItem" => Set {
+              "Sharable",
+            },
+            "SharableFeature" => Set {
+              "Sharable",
+            },
+            "Feature" => Set {},
+            "ContentNode" => Set {},
+            "Card" => Set {},
+            "VideoNode" => Set {},
+            "AudioNode" => Set {},
+            "FeaturesNode" => Set {},
+            "ContentParentNode" => Set {},
+            "ContentChildNode" => Set {},
+            "ThemedNode" => Set {},
+            "ProgressNode" => Set {},
+            "ScriptureNode" => Set {},
+            "LikableNode" => Set {},
+            "ShareableNode" => Set {},
+            "LiveNode" => Set {},
+          },
+          "typePolicies": Object {},
+          "usingPossibleTypes": true,
+        },
+        "refs": Object {},
+        "rootIds": Object {},
+        "sharedLayerGroup": CacheGroup {
+          "caching": true,
+          "d": [Function],
+          "keyMaker": KeyTrie {
+            "makeData": [Function],
+            "weakness": true,
+          },
+        },
+        "storageTrie": KeyTrie {
+          "makeData": [Function],
+          "weakness": true,
+        },
+        "toReference": [Function],
+      },
+      "policies": Policies {
+        "cache": [Circular],
+        "config": Object {
+          "cache": [Circular],
+          "dataIdFromObject": [Function],
+          "possibleTypes": Object {
+            "AudioNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "Card": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "ContentChildNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "ContentItem": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "ContentNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "ContentParentNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "Feature": Array [
+              "ActionListFeature",
+              "HeroListFeature",
+              "VerticalCardListFeature",
+              "HorizontalCardListFeature",
+              "TextFeature",
+              "ScriptureFeature",
+              "WebviewFeature",
+              "PrayerListFeature",
+            ],
+            "FeaturesNode": Array [
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "LikableNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "LiveNode": Array [
+              "WeekendContentItem",
+            ],
+            "Media": Array [
+              "ImageMedia",
+              "VideoMedia",
+              "AudioMedia",
+            ],
+            "MediaSource": Array [
+              "ImageMediaSource",
+              "VideoMediaSource",
+              "AudioMediaSource",
+            ],
+            "Node": Array [
+              "ContentChannel",
+              "Person",
+              "Device",
+              "Campus",
+              "Event",
+              "Group",
+              "Scripture",
+              "Pass",
+              "PrayerRequest",
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+              "Url",
+              "ActionListFeature",
+              "HeroListFeature",
+              "VerticalCardListFeature",
+              "HorizontalCardListFeature",
+              "TextFeature",
+              "ScriptureFeature",
+              "WebviewFeature",
+              "PrayerListFeature",
+            ],
+            "ProgressNode": Array [
+              "ContentSeriesContentItem",
+            ],
+            "ScriptureNode": Array [
+              "DevotionalContentItem",
+              "MediaContentItem",
+            ],
+            "Sharable": Array [
+              "SharableContentItem",
+              "SharableFeature",
+            ],
+            "ShareableNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "ThemedNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+            "VideoNode": Array [
+              "UniversalContentItem",
+              "DevotionalContentItem",
+              "MediaContentItem",
+              "ContentSeriesContentItem",
+              "WeekendContentItem",
+            ],
+          },
+          "typePolicies": Object {},
+        },
+        "fuzzySubtypes": Map {},
+        "rootIdsByTypename": Object {
+          "Mutation": "ROOT_MUTATION",
+          "Query": "ROOT_QUERY",
+          "Subscription": "ROOT_SUBSCRIPTION",
+        },
+        "rootTypenamesById": Object {
+          "ROOT_MUTATION": "Mutation",
+          "ROOT_QUERY": "Query",
+          "ROOT_SUBSCRIPTION": "Subscription",
+        },
+        "supertypeMap": Map {
+          "Node" => Set {},
+          "ContentChannel" => Set {
+            "Node",
+          },
+          "Person" => Set {
+            "Node",
+          },
+          "Device" => Set {
+            "Node",
+          },
+          "Campus" => Set {
+            "Node",
+          },
+          "Event" => Set {
+            "Node",
+          },
+          "Group" => Set {
+            "Node",
+          },
+          "Scripture" => Set {
+            "Node",
+          },
+          "Pass" => Set {
+            "Node",
+          },
+          "PrayerRequest" => Set {
+            "Node",
+          },
+          "UniversalContentItem" => Set {
+            "Node",
+            "ContentItem",
+            "ContentNode",
+            "Card",
+            "VideoNode",
+            "AudioNode",
+            "ContentParentNode",
+            "ContentChildNode",
+            "ThemedNode",
+            "LikableNode",
+            "ShareableNode",
+          },
+          "DevotionalContentItem" => Set {
+            "Node",
+            "ContentItem",
+            "ContentNode",
+            "Card",
+            "VideoNode",
+            "AudioNode",
+            "ContentParentNode",
+            "ContentChildNode",
+            "ThemedNode",
+            "ScriptureNode",
+            "LikableNode",
+            "ShareableNode",
+          },
+          "MediaContentItem" => Set {
+            "Node",
+            "ContentItem",
+            "ContentNode",
+            "Card",
+            "VideoNode",
+            "AudioNode",
+            "ContentParentNode",
+            "ContentChildNode",
+            "ThemedNode",
+            "ScriptureNode",
+            "LikableNode",
+            "ShareableNode",
+          },
+          "ContentSeriesContentItem" => Set {
+            "Node",
+            "ContentItem",
+            "ContentNode",
+            "Card",
+            "VideoNode",
+            "AudioNode",
+            "FeaturesNode",
+            "ContentParentNode",
+            "ContentChildNode",
+            "ThemedNode",
+            "ProgressNode",
+            "LikableNode",
+            "ShareableNode",
+          },
+          "WeekendContentItem" => Set {
+            "Node",
+            "ContentItem",
+            "ContentNode",
+            "Card",
+            "VideoNode",
+            "AudioNode",
+            "FeaturesNode",
+            "ContentParentNode",
+            "ContentChildNode",
+            "ThemedNode",
+            "LikableNode",
+            "ShareableNode",
+            "LiveNode",
+          },
+          "Url" => Set {
+            "Node",
+          },
+          "ActionListFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "HeroListFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "VerticalCardListFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "HorizontalCardListFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "TextFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "ScriptureFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "WebviewFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "PrayerListFeature" => Set {
+            "Node",
+            "Feature",
+          },
+          "ContentItem" => Set {},
+          "Media" => Set {},
+          "ImageMedia" => Set {
+            "Media",
+          },
+          "VideoMedia" => Set {
+            "Media",
+          },
+          "AudioMedia" => Set {
+            "Media",
+          },
+          "MediaSource" => Set {},
+          "ImageMediaSource" => Set {
+            "MediaSource",
+          },
+          "VideoMediaSource" => Set {
+            "MediaSource",
+          },
+          "AudioMediaSource" => Set {
+            "MediaSource",
+          },
+          "Sharable" => Set {},
+          "SharableContentItem" => Set {
+            "Sharable",
+          },
+          "SharableFeature" => Set {
+            "Sharable",
+          },
+          "Feature" => Set {},
+          "ContentNode" => Set {},
+          "Card" => Set {},
+          "VideoNode" => Set {},
+          "AudioNode" => Set {},
+          "FeaturesNode" => Set {},
+          "ContentParentNode" => Set {},
+          "ContentChildNode" => Set {},
+          "ThemedNode" => Set {},
+          "ProgressNode" => Set {},
+          "ScriptureNode" => Set {},
+          "LikableNode" => Set {},
+          "ShareableNode" => Set {},
+          "LiveNode" => Set {},
+        },
+        "typePolicies": Object {},
+        "usingPossibleTypes": true,
+      },
+      "storeReader": StoreReader {
+        "config": Object {
+          "addTypename": true,
+          "cache": [Circular],
+        },
+        "executeSelectionSet": [Function],
+        "executeSubSelectedArray": [Function],
+        "knownResults": WeakMap {},
+      },
+      "storeWriter": StoreWriter {
+        "cache": [Circular],
+        "reader": StoreReader {
+          "config": Object {
+            "addTypename": true,
+            "cache": [Circular],
+          },
+          "executeSelectionSet": [Function],
+          "executeSubSelectedArray": [Function],
+          "knownResults": WeakMap {},
+        },
+      },
+      "txCount": 0,
+      "typenameDocumentCache": Map {},
+      "watchDep": [Function],
+      "watches": Set {},
+    }
+  }
+  defaultOptions={
+    Object {
+      "query": Object {
+        "fetchPolicy": "no-cache",
+      },
+      "watchQuery": Object {
+        "fetchPolicy": "no-cache",
+      },
+    }
   }
 >
-  <RCTScrollView
-    activeDot={
-      <View>
-        <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
-      </View>
-    }
-    automaticallyAdjustContentInsets={false}
-    autoplay={false}
-    autoplayDirection={true}
-    autoplayTimeout={2.5}
-    bounces={false}
-    contentContainerStyle={
+  <View
+    onLayout={[Function]}
+    style={
       Array [
         Object {
           "backgroundColor": "transparent",
+          "flex": 1,
+          "position": "relative",
         },
         undefined,
       ]
     }
-    contentOffset={
-      Object {
-        "x": 0,
-      }
-    }
-    disableNextButton={false}
-    disablePrevButton={false}
-    dot={
-      <View>
-        <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
-      </View>
-    }
-    horizontal={true}
-    index={0}
-    loadMinimal={true}
-    loadMinimalSize={1}
-    loop={false}
-    onIndexChanged={[Function]}
-    onMomentumScrollEnd={[Function]}
-    onScrollBeginDrag={[Function]}
-    onScrollEndDrag={[Function]}
-    orientation="portrait"
-    paginationStyle={
-      Object {
-        "alignItem": "flex-start",
-        "bottom": null,
-        "justifyContent": "flex-start",
-        "left": 16,
-      }
-    }
-    pagingEnabled={true}
-    removeClippedSubviews={true}
-    scrollsToTop={false}
-    showsButtons={false}
-    showsHorizontalScrollIndicator={false}
-    showsPagination={true}
-    showsVerticalScrollIndicator={false}
   >
-    <View>
-      <View
-        style={
-          Array [
-            Object {
-              "height": 1334,
-              "width": 750,
-            },
-            Object {
-              "backgroundColor": "transparent",
-            },
-          ]
-        }
-      >
-        <View
-          accessible={true}
-          clickable={true}
-          isTVSelectable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "opacity": 1,
-            }
-          }
-        >
-          <Text>
-            1
-          </Text>
+    <RCTScrollView
+      activeDot={
+        <View>
+          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
         </View>
-      </View>
-      <View
-        style={
-          Array [
-            Object {
-              "height": 1334,
-              "width": 750,
-            },
-            Object {
-              "backgroundColor": "transparent",
-            },
-          ]
-        }
-      >
-        <View
-          accessible={true}
-          clickable={true}
-          isTVSelectable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "opacity": 1,
-            }
-          }
-        >
-          <Text>
-            2
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
+      }
+      automaticallyAdjustContentInsets={false}
+      autoplay={false}
+      autoplayDirection={true}
+      autoplayTimeout={2.5}
+      bounces={false}
+      contentContainerStyle={
+        Array [
           Object {
-            "alignItems": "center",
-            "flex": 1,
-            "height": 1334,
-            "justifyContent": "center",
-            "width": 750,
-          }
-        }
-      >
-        <ActivityIndicator
-          animating={true}
-          color="#999999"
-          hidesWhenStopped={true}
-          size="small"
-        />
-      </View>
-    </View>
-  </RCTScrollView>
-  <View
-    pointerEvents="none"
-    style={
-      Array [
+            "backgroundColor": "transparent",
+          },
+          undefined,
+        ]
+      }
+      contentOffset={
         Object {
-          "alignItems": "center",
-          "backgroundColor": "transparent",
-          "bottom": 25,
-          "flex": 1,
-          "flexDirection": "row",
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-        },
+          "x": 0,
+        }
+      }
+      disableNextButton={false}
+      disablePrevButton={false}
+      dot={
+        <View>
+          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+        </View>
+      }
+      horizontal={true}
+      index={0}
+      loadMinimal={true}
+      loadMinimalSize={1}
+      loop={false}
+      onIndexChanged={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      orientation="portrait"
+      paginationStyle={
         Object {
           "alignItem": "flex-start",
           "bottom": null,
           "justifyContent": "flex-start",
           "left": 16,
-        },
-      ]
-    }
-  >
-    <View>
-      <View
-        style={
-          Object {
-            "backgroundColor": "#00676D",
-            "borderRadius": 2,
-            "height": 2,
-            "marginHorizontal": 1,
-            "width": 24,
-          }
         }
-      />
-    </View>
-    <View>
-      <View
-        style={
-          Object {
-            "backgroundColor": "rgba(48, 48, 48, 0.09999999999999998)",
-            "borderRadius": 2,
-            "height": 2,
-            "marginHorizontal": 1,
-            "width": 24,
+      }
+      pagingEnabled={true}
+      removeClippedSubviews={true}
+      scrollsToTop={false}
+      showsButtons={false}
+      showsHorizontalScrollIndicator={false}
+      showsPagination={true}
+      showsVerticalScrollIndicator={false}
+    >
+      <View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 1334,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+            ]
           }
-        }
-      />
-    </View>
-    <View>
-      <View
-        style={
-          Object {
-            "backgroundColor": "rgba(48, 48, 48, 0.09999999999999998)",
-            "borderRadius": 2,
-            "height": 2,
-            "marginHorizontal": 1,
-            "width": 24,
+        >
+          <View
+            accessible={true}
+            clickable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text>
+              1
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 1334,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+            ]
           }
-        }
-      />
+        >
+          <View
+            accessible={true}
+            clickable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text>
+              2
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "height": 1334,
+              "justifyContent": "center",
+              "width": 750,
+            }
+          }
+        >
+          <ActivityIndicator
+            animating={true}
+            color="#999999"
+            hidesWhenStopped={true}
+            size="small"
+          />
+        </View>
+      </View>
+    </RCTScrollView>
+    <View
+      pointerEvents="none"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "bottom": 25,
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+          },
+          Object {
+            "alignItem": "flex-start",
+            "bottom": null,
+            "justifyContent": "flex-start",
+            "left": 16,
+          },
+        ]
+      }
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#00676D",
+              "borderRadius": 2,
+              "height": 2,
+              "marginHorizontal": 1,
+              "width": 24,
+            }
+          }
+        />
+      </View>
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "rgba(48, 48, 48, 0.09999999999999998)",
+              "borderRadius": 2,
+              "height": 2,
+              "marginHorizontal": 1,
+              "width": 24,
+            }
+          }
+        />
+      </View>
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "rgba(48, 48, 48, 0.09999999999999998)",
+              "borderRadius": 2,
+              "height": 2,
+              "marginHorizontal": 1,
+              "width": 24,
+            }
+          }
+        />
+      </View>
     </View>
   </View>
 </View>
