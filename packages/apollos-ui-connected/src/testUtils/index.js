@@ -7,10 +7,10 @@ import renderer from 'react-test-renderer';
 import wait from 'waait';
 import { Providers as UIProviders } from '@apollosproject/ui-kit';
 import { MockedProvider } from '@apollo/client/testing';
-import { ApolloClient } from '@apollo/client';
+// import { ApolloClient } from '@apollo/client';
 import { InMemoryCache } from '@apollo/client/cache';
 import possibleTypesJson from './fragmentTypes.json';
-import typeDefs from './typeDefsMock';
+// import typeDefs from './typeDefsMock';
 
 async function renderWithApolloData(component, existingTree) {
   const tree = existingTree || renderer.create(component);
@@ -54,8 +54,8 @@ const Providers = ({ children, ...props }) => {
 };
 
 const ApolloStorybookDecorator = ({
-  mocks,
-  additionalSchema = [],
+  // mocks,
+  // additionalSchema = [],
   possibleTypes = {},
 }) => {
   // We can use this way simpler code long term when we upgrade to Apollo 3.

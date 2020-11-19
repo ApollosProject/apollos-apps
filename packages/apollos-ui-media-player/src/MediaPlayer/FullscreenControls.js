@@ -249,7 +249,8 @@ class FullscreenControls extends PureComponent {
       this.isVideo &&
       this.isPlaying &&
       this.wasFullscreen &&
-      (!this.animatingClosed && this.controlsVisible)
+      !this.animatingClosed &&
+      this.controlsVisible
     ) {
       this.animatingClosed = true;
       this.close.start(() => {
@@ -326,7 +327,8 @@ class FullscreenControls extends PureComponent {
     if (
       (mediaPlayer.isFullscreen && !this.wasFullscreen) ||
       !this.isVideo ||
-      (!this.isPlaying || (this.isPlaying && !this.wasPlaying))
+      !this.isPlaying ||
+      (this.isPlaying && !this.wasPlaying)
     )
       this.handleControlVisibility();
 

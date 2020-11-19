@@ -77,6 +77,7 @@ PrayerExperienceConnected.propTypes = {
   index: PropTypes.number,
 };
 
-export default withTheme(() => ({}), 'ui-prayer.PrayerExperienceConnected')(
-  PrayerExperienceConnected
-);
+export default withTheme(
+  () => ({}),
+  'ui-prayer.PrayerExperienceConnected'
+)(PrayerExperienceConnected);

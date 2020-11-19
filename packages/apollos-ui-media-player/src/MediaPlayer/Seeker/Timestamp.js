@@ -39,6 +39,7 @@ class Timestamp extends PureComponent {
     }
   }
 
+  // eslint-disable-next-line
   componentWillUpdate(newProps) {
     if (
       newProps.time !== this.props.time ||

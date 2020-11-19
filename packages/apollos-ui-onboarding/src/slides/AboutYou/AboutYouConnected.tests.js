@@ -36,7 +36,7 @@ describe('AboutYouConnected component', () => {
           },
         },
       },
-    };    
+    };
     const tree = renderer.create(
       <Providers mocks={[mock]}>
         <AboutYouConnected
