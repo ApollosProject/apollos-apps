@@ -13,15 +13,13 @@ import {
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { PictureMode } from '../types';
-
 import { usePlayerControls } from '../context';
-
 import VideoPresentationContainer from '../VideoPresentationContainer';
-
 import VideoOutlet from '../VideoOutlet';
 
 import useVideoCollapseEffect from './useVideoCollapseEffect';
 import usePresentationAnimation from './usePresentationAnimation';
+import useOptimizedWindowDimensions from './useOptimizedWindowDimensions';
 
 export interface FullScreenSlidingPlayerProps {
   /** Component that renders the actual video. Default: react-native-video */
@@ -48,7 +46,8 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
     width: Dimensions.get('window').width,
     height: Dimensions.get('window').height,
   });
-  const window = Dimensions.get('screen');
+
+  const window = useOptimizedWindowDimensions();
 
   // pictureMode is used to detect fullscreen status, which drives
   // triggering the fullscreenAnimation and opening the ModalView.
@@ -132,12 +131,16 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
       ],
       width: presentationAnimation.interpolate({
         inputRange: [0, 1],
-        outputRange: [layout.width, window.width],
+        outputRange: [layout.width, Math.max(layout.width, window.width)],
         extrapolate: 'clamp',
       }),
       height: presentationAnimation.interpolate({
         inputRange: [-1, 0, 1],
-        outputRange: [collapsedVideoHeight, videoHeight, window.height],
+        outputRange: [
+          collapsedVideoHeight,
+          videoHeight,
+          Math.max(layout.height, window.height),
+        ],
         extrapolate: 'clamp',
       }),
     }),
@@ -200,7 +203,12 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
       </Animated.ScrollView>
 
       {/* Primary Video View */}
-      <Animated.View style={presentationStyles}>
+      <Animated.View
+        style={[
+          presentationStyles,
+          isFullscreen ? fullscreenPresentationStyles : null,
+        ]}
+      >
         <VideoPresentationContainer VideoComponent={VideoComponent} />
         {(!isFullscreen || Platform.OS === 'android') && ControlsComponent ? (
           <ControlsComponent collapsedAnimation={collapsedAnimation} />

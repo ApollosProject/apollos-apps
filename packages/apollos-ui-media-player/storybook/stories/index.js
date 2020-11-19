@@ -10,7 +10,6 @@ import {
 } from '@apollosproject/ui-media-player';
 
 const PlayerExamples = () => {
-  console.log('rendering PlayerExamples');
   const { setNowPlaying } = useNowPlaying();
   const { setPictureMode, play } = usePlayerControls();
 
