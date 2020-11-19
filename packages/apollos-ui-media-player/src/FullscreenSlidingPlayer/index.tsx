@@ -72,8 +72,10 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
     Math.max(1, layout.width * (9 / 16))
   );
   const { top } = useSafeAreaInsets();
-  // TODO: 41 is a magic number from iOS...
-  const collapsedVideoHeight = top + 41;
+  // TODO: these magic numbers always suck
+  const appBarHeight =
+    Platform.OS === 'ios' ? (window.width > window.height ? 32 : 44) : 56;
+  const collapsedVideoHeight = top + appBarHeight;
 
   const [collapsedAnimation, handleScroll] = useVideoCollapseEffect({
     videoHeight,
