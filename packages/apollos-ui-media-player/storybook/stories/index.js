@@ -243,4 +243,5 @@ const BasicPlayer = (props) => (
 
 storiesOf('@apollosproject/ui-media-player', module)
   .add('Basic Player', BasicPlayer)
-  .add('Collapsing Player', () => <BasicPlayer collapseOnScroll />);
+  .add('Collapsing Player', () => <BasicPlayer collapseOnScroll />)
+  .add('Native iOS Fullscreen', () => <BasicPlayer useNativeFullscreeniOS />);

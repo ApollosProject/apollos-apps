@@ -15,7 +15,11 @@ const Container = styled(
   'ApollosPlayer.RNVideoPresentation.Container'
 )(View);
 
-const RNVideoPresentation = () => {
+const RNVideoPresentation = ({
+  useNativeFullscreeniOS,
+}: {
+  useNativeFullscreeniOS?: boolean;
+}) => {
   const nowPlaying = useNowPlaying();
 
   const { isPlaying, pictureMode, setPictureMode, pause } = usePlayerControls();
@@ -98,13 +102,14 @@ const RNVideoPresentation = () => {
   // While Android doesn't have a fullscreen player, calling present
   // and dismiss does still hide the status bar and Android controls
   React.useEffect(() => {
-    if (Platform.OS !== 'android') return;
-    if (pictureMode === PictureMode.Fullscreen) {
-      videoRef.current?.presentFullscreenPlayer();
-    } else {
-      videoRef.current?.dismissFullscreenPlayer();
+    if (Platform.OS === 'android' || useNativeFullscreeniOS) {
+      if (pictureMode === PictureMode.Fullscreen) {
+        videoRef.current?.presentFullscreenPlayer();
+      } else {
+        videoRef.current?.dismissFullscreenPlayer();
+      }
     }
-  }, [pictureMode]);
+  }, [pictureMode, useNativeFullscreeniOS, pause]);
 
   return (
     <Container>
@@ -125,6 +130,10 @@ const RNVideoPresentation = () => {
           pictureInPicture={pictureMode === PictureMode.PictureInPicture}
           onLoad={handleLoad}
           onEnd={pause}
+          onFullscreenPlayerWillDismiss={() => {
+            setPictureMode(PictureMode.Normal);
+            if (Platform.OS === 'ios') pause();
+          }}
           onPictureInPictureStatusChanged={({ isActive }) => {
             if (isActive) {
               // If the OS switches to PiP, make sure our state is updated:

@@ -23,13 +23,16 @@ import useOptimizedWindowDimensions from './useOptimizedWindowDimensions';
 
 export interface FullScreenSlidingPlayerProps {
   /** Component that renders the actual video. Default: react-native-video */
-  VideoComponent?: React.FunctionComponent;
+  VideoComponent?: React.FunctionComponent<{
+    useNativeFullscreeniOS?: boolean;
+  }>;
   /** Component that is displayed above the video */
   ControlsComponent?: React.FunctionComponent<{
     collapsedAnimation?: Animated.Value;
   }>;
 
   collapseOnScroll?: boolean;
+  useNativeFullscreeniOS?: boolean;
 }
 
 const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerProps> = ({
@@ -37,6 +40,7 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
   VideoComponent,
   children,
   collapseOnScroll = false,
+  useNativeFullscreeniOS = false,
 }) => {
   // Setup layout and window objects for size references inside of computed
   // styles that are below.
@@ -57,11 +61,13 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
   const isPiP = pictureMode === PictureMode.PictureInPicture;
 
   const fullscreenAnimation = React.useRef(new Animated.Value(0)).current;
-  Animated.spring(fullscreenAnimation, {
-    toValue: isFullscreen ? 1 : 0,
-    useNativeDriver: false, // todo
-    overshootClamping: true,
-  }).start();
+  if (Platform.OS === 'android' || !useNativeFullscreeniOS) {
+    Animated.spring(fullscreenAnimation, {
+      toValue: isFullscreen ? 1 : 0,
+      useNativeDriver: false, // todo
+      overshootClamping: true,
+    }).start();
+  }
 
   // Setup the collapsedAnimation and collapse effect.
   // The collapse effect is tied to the collapseOnScroll bool and PiP mode.
@@ -98,13 +104,21 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
   const fullscreenPresentationStyles = React.useMemo(
     () => [
       StyleSheet.absoluteFill,
-      {
-        zIndex: 99999,
-        top: window.height - layout.height,
-        left: window.width - layout.width,
-      },
+      Platform.OS === 'android' && !useNativeFullscreeniOS
+        ? null
+        : {
+            zIndex: 99999,
+            top: window.height - layout.height,
+            left: window.width - layout.width,
+          },
     ],
-    [layout.height, layout.width, window.height, window.width]
+    [
+      layout.height,
+      layout.width,
+      window.height,
+      window.width,
+      useNativeFullscreeniOS,
+    ]
   );
 
   // presentation styles handle translating the video during fullscreen anim,
@@ -211,14 +225,17 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
           isFullscreen ? fullscreenPresentationStyles : null,
         ]}
       >
-        <VideoPresentationContainer VideoComponent={VideoComponent} />
+        <VideoPresentationContainer
+          VideoComponent={VideoComponent}
+          useNativeFullscreeniOS={useNativeFullscreeniOS}
+        />
         {(!isFullscreen || Platform.OS === 'android') && ControlsComponent ? (
           <ControlsComponent collapsedAnimation={collapsedAnimation} />
         ) : null}
       </Animated.View>
 
       {/* iOS-only modal-based fullScreen controls */}
-      {Platform.OS === 'ios' ? (
+      {!useNativeFullscreeniOS && Platform.OS === 'ios' ? (
         <Modal
           animationType="fade"
           presentationStyle="overFullScreen"

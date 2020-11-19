@@ -38,6 +38,7 @@ const Container: React.FunctionComponent<ContainerProps> = ({
   presentationProps,
   collapseOnScroll,
   autoplay = false,
+  useNativeFullscreeniOS,
 }) => {
   /*
     We're going to set up 4 context state objects in this component:
@@ -151,12 +152,19 @@ const Container: React.FunctionComponent<ContainerProps> = ({
                     VideoComponent={VideoComponent}
                     ControlsComponent={ControlsComponent}
                     collapseOnScroll={collapseOnScroll}
+                    useNativeFullscreeniOS={useNativeFullscreeniOS}
                   >
                     {children}
                   </PlayerComponent>
                 </React.Fragment>
               ),
-              [children, VideoComponent, ControlsComponent, collapseOnScroll]
+              [
+                children,
+                VideoComponent,
+                ControlsComponent,
+                collapseOnScroll,
+                useNativeFullscreeniOS,
+              ]
             )}
           </PlayheadContext.Provider>
         </NowPlayingContext.Provider>

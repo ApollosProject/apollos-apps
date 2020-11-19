@@ -6,8 +6,12 @@ import { PortalOrigin } from './portals';
 
 const VideoPresentationContainer = ({
   VideoComponent,
+  useNativeFullscreeniOS,
 }: {
-  VideoComponent?: React.FunctionComponent;
+  VideoComponent?: React.FunctionComponent<{
+    useNativeFullscreeniOS?: boolean;
+  }>;
+  useNativeFullscreeniOS?: boolean;
 }) => {
   const { playerId } = React.useContext(InternalPlayerContext);
 
@@ -15,7 +19,7 @@ const VideoPresentationContainer = ({
 
   return (
     <PortalOrigin destination={playerId} style={StyleSheet.absoluteFill}>
-      <VideoComponent />
+      <VideoComponent useNativeFullscreeniOS={useNativeFullscreeniOS} />
     </PortalOrigin>
   );
 };
