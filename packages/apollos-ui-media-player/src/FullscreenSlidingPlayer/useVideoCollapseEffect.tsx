@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Animated, Platform, Dimensions } from 'react-native';
+import { Animated, Platform } from 'react-native';
 import { useDebouncedCallback } from 'use-debounce';
 
 /**
@@ -28,8 +28,7 @@ const useVideoCollapseEffect = ({
   const collapsedAnimation = React.useRef(new Animated.Value(0)).current;
   const percentCollapsedRef = React.useRef(0);
 
-  const collapsedOffset =
-    Platform.OS === 'ios' ? -(videoHeight - collapsedVideoHeight) : 0;
+  const collapsedOffset = -(videoHeight - collapsedVideoHeight);
 
   const startingY = Platform.OS === 'ios' ? -videoHeight : 0;
   const collapsedY =

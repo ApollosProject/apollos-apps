@@ -36,6 +36,7 @@ const Container: React.FunctionComponent<ContainerProps> = ({
   source,
   coverImage,
   presentationProps,
+  collapseOnScroll,
   autoplay = false,
 }) => {
   /*
@@ -149,12 +150,13 @@ const Container: React.FunctionComponent<ContainerProps> = ({
                   <PlayerComponent
                     VideoComponent={VideoComponent}
                     ControlsComponent={ControlsComponent}
+                    collapseOnScroll={collapseOnScroll}
                   >
                     {children}
                   </PlayerComponent>
                 </React.Fragment>
               ),
-              [children, VideoComponent, ControlsComponent]
+              [children, VideoComponent, ControlsComponent, collapseOnScroll]
             )}
           </PlayheadContext.Provider>
         </NowPlayingContext.Provider>

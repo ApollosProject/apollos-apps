@@ -172,54 +172,17 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
     [fullscreenAnimation, window.height]
   );
 
-  const FullscreenWrapper = React.useMemo(() => {
-    // We have to wrap fullscreen view in <Modal> on iOS in order to make sure
-    // the player is presented on top of ReactNavigation Native Navigation views
-    if (Platform.OS !== 'ios') return () => null;
-    const Wrapper: React.FunctionComponent = (props) => (
-      <Modal
-        animationType="fade"
-        presentationStyle="overFullScreen"
-        hardwareAccelerated
-        transparent
-        visible={isFullscreen}
-        supportedOrientations={[
-          'portrait',
-          'portrait-upside-down',
-          'landscape',
-          'landscape-left',
-          'landscape-right',
-        ]}
-        {...props}
-      />
-    );
-    return Wrapper;
-  }, [isFullscreen]);
-
   return (
     <View
       style={StyleSheet.absoluteFill}
       onLayout={({ nativeEvent: { layout: _layout } }) => setLayout(_layout)}
     >
       <Animated.ScrollView
-        ref={(ref) => {
-          let node: ScrollView | null = null;
-          // So...this is annoying. Animated.ScrollView's ref works differently
-          // and this ref can be 3 different things. I can't get typescript
-          // to accept that ref?.getNode effectively checks for one of those
-          // 3 types, and instanceof doens't work. So...I do this.
-          // I think it's safe. It's also what is recommended here:
-          // https://github.com/facebook/react-native/issues/19650#issue-331142775
-          // @ts-ignore
-          if (ref?.getNode) {
-            // @ts-ignore
-            node = ref.getNode();
-          } else {
-            // @ts-ignore
-            node = ref;
-          }
-          scrollViewRef.current = node;
-        }}
+        // So...this is annoying. Animated.ScrollView's ref used to behave
+        // differently then other refs in older versions of React-Native.
+        // The exported types seem to still think that's the case.
+        // @ts-ignore
+        ref={scrollViewRef}
         scrollEventThrottle={16}
         onScroll={handleScroll}
         style={scrollViewStyles}
@@ -239,20 +202,35 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
       {/* Primary Video View */}
       <Animated.View style={presentationStyles}>
         <VideoPresentationContainer VideoComponent={VideoComponent} />
-        {!isFullscreen && ControlsComponent ? (
+        {(!isFullscreen || Platform.OS === 'android') && ControlsComponent ? (
           <ControlsComponent collapsedAnimation={collapsedAnimation} />
         ) : null}
       </Animated.View>
 
       {/* iOS-only modal-based fullScreen controls */}
-      <FullscreenWrapper>
-        <Animated.View
-          style={[presentationStyles, fullscreenPresentationStyles]}
+      {Platform.OS === 'ios' ? (
+        <Modal
+          animationType="fade"
+          presentationStyle="overFullScreen"
+          hardwareAccelerated
+          transparent
+          visible={isFullscreen}
+          supportedOrientations={[
+            'portrait',
+            'portrait-upside-down',
+            'landscape',
+            'landscape-left',
+            'landscape-right',
+          ]}
         >
-          {isFullscreen ? <VideoOutlet /> : null}
-          {isFullscreen && ControlsComponent ? <ControlsComponent /> : null}
-        </Animated.View>
-      </FullscreenWrapper>
+          <Animated.View
+            style={[presentationStyles, fullscreenPresentationStyles]}
+          >
+            {isFullscreen ? <VideoOutlet /> : null}
+            {isFullscreen && ControlsComponent ? <ControlsComponent /> : null}
+          </Animated.View>
+        </Modal>
+      ) : null}
 
       <StatusBar
         hidden={isFullscreen}

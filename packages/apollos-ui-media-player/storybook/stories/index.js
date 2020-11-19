@@ -19,26 +19,29 @@ const PlayerExamples = () => {
       <Text
         onPress={() => {
           setNowPlaying({
-            source: require('./broadchurch.mp4'),
+            source: {
+              uri:
+                'http://embed.wistia.com/deliveries/0e364f7e6f6604384ece8a35905a53a864386e9f.bin',
+            },
             coverImage: {
               uri: `https://picsum.photos/seed/${Math.random()}/100/100`,
             },
             presentationProps: {
-              title: 'Video Title',
+              title: 'Remote Video',
               description: 'Video Description',
             },
           });
           play();
         }}
       >
-        Play local MP4
+        Play remote MP4
       </Text>
       <Text
         onPress={() => {
           setNowPlaying({
             source: require('./broadchurch.mp4'),
             presentationProps: {
-              title: 'Video Title',
+              title: 'Local Video',
               description: 'Video Description',
             },
           });
@@ -55,7 +58,7 @@ const PlayerExamples = () => {
                 'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8',
             },
             presentationProps: {
-              title: 'Video Title',
+              title: 'On Demand Stream',
               description: 'Video Description',
             },
           });
@@ -73,7 +76,7 @@ const PlayerExamples = () => {
             },
             isLive: true,
             presentationProps: {
-              title: 'Video Title',
+              title: 'Live Stream',
               description: 'Video Description',
               badge: (
                 <Text style={{ color: 'white' }}>
@@ -94,9 +97,12 @@ const PlayerExamples = () => {
   );
 };
 
-const BasicPlayer = () => (
+const BasicPlayer = (props) => (
   <ApollosPlayerContainer
-    source={require('./broadchurch.mp4')}
+    source={{
+      uri:
+        'http://embed.wistia.com/deliveries/0e364f7e6f6604384ece8a35905a53a864386e9f.bin',
+    }}
     presentationProps={{
       title: 'Video Title',
       description: 'Video Description',
@@ -104,6 +110,7 @@ const BasicPlayer = () => (
     coverImage={{
       uri: `https://picsum.photos/seed/${Math.random()}/100/100`,
     }}
+    {...props}
   >
     <PlayerExamples />
     <Text>---------</Text>
@@ -235,7 +242,6 @@ const BasicPlayer = () => (
   </ApollosPlayerContainer>
 );
 
-storiesOf('@apollosproject/ui-media-player', module).add(
-  'Basic Player',
-  BasicPlayer
-);
+storiesOf('@apollosproject/ui-media-player', module)
+  .add('Basic Player', BasicPlayer)
+  .add('Collapsing Player', () => <BasicPlayer collapseOnScroll />);
