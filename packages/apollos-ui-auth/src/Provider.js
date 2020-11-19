@@ -27,7 +27,6 @@ export const resolvers = {
     isLoggedIn: (_root, _args, { cache }) => {
       // When logging out, this query returns an error.
       // Rescue the error, and return false.
-      console.log('checking is logged in')
       try {
         const { authToken } = cache.readQuery({ query: GET_AUTH_TOKEN });
         return !!authToken;

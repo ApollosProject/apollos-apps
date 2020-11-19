@@ -8,8 +8,7 @@ import { AuthConsumer } from '../Provider';
 
 const LoginButton = (props) => (
   <Query query={GET_LOGIN_STATE}>
-    {({ data, error, loading, ...args }) => {
-      console.log(error, data, loading);
+    {({ data, loading }) => {
       if (loading) {
         return <Button title="Get Connected" loading={loading} {...props} />;
       }
