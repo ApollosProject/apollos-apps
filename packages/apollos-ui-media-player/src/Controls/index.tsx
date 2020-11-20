@@ -35,13 +35,12 @@ const FooterWrapper = styled(
 )(SafeAreaView);
 
 const FooterControls = styled(
-  ({ theme }: any) => ({
+  {
     width: '100%',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     alignItems: 'center',
-    paddingVertical: theme?.sizing?.baseUnit,
-  }),
+  },
   'ApollosPlayer.Controls.FooterControls'
 )(View);
 
@@ -56,16 +55,29 @@ const IconSm = withTheme(
 
 const IconMd = withTheme(
   ({ theme }: any) => ({
-    size: theme?.sizing?.baseUnit * 2,
+    size: theme?.sizing?.baseUnit * 1.5,
     iconPadding: theme?.sizing?.baseUnit,
   }),
   'ApollosPlayer.Controls.FullscreenControls.IconMd'
 )(ButtonIcon);
 
+const IconLg = withTheme(
+  ({ theme }: any) => ({
+    size: theme?.sizing?.baseUnit * 2.25,
+    iconPadding: theme?.sizing?.baseUnit,
+  }),
+  'ApollosPlayer.Controls.FullscreenControls.IconLg'
+)(ButtonIcon);
+
+const IconWrapper = styled(({ theme }: any) => ({
+  width: theme?.sizing?.baseUnit * 4,
+  alignItems: 'center',
+  justifyContent: 'center',
+}))(View);
+
 const StyledAirPlayButton = withTheme(
   ({ theme }: any) => ({
     style: {
-      width: theme?.sizing?.baseUnit * 1.25,
       height: theme?.sizing?.baseUnit * 1.25,
       paddingHorizontal: theme?.sizing?.baseUnit,
     },
@@ -121,25 +133,44 @@ const Controls = ({
             {isFullscreen ? <Header /> : null}
             <FooterWrapper>
               <FooterControls>
-                <StyledAirPlayButton />
+                <IconWrapper>
+                  <StyledAirPlayButton />
+                </IconWrapper>
+
                 {!isLive ? (
-                  <IconMd name="skip-back-thirty" onPress={() => skip(-30)} />
+                  <IconWrapper>
+                    <IconMd name="skip-back-thirty" onPress={() => skip(-30)} />
+                  </IconWrapper>
                 ) : null}
-                <IconMd
-                  name={isPlaying ? 'pause' : 'play'}
-                  onPress={isPlaying ? pause : play}
-                />
+
+                <IconWrapper>
+                  <IconLg
+                    name={isPlaying ? 'pause' : 'play'}
+                    onPress={isPlaying ? pause : play}
+                  />
+                </IconWrapper>
+
                 {!isLive ? (
-                  <IconMd name="skip-forward-thirty" onPress={() => skip(30)} />
+                  <IconWrapper>
+                    <IconMd
+                      name="skip-forward-thirty"
+                      onPress={() => skip(30)}
+                    />
+                  </IconWrapper>
                 ) : null}
-                <IconSm
-                  name="fullscreen"
-                  onPress={() =>
-                    setPictureMode(
-                      isFullscreen ? PictureMode.Normal : PictureMode.Fullscreen
-                    )
-                  }
-                />
+
+                <IconWrapper>
+                  <IconSm
+                    name={isFullscreen ? 'arrow-in' : 'arrow-out'}
+                    onPress={() =>
+                      setPictureMode(
+                        isFullscreen
+                          ? PictureMode.Normal
+                          : PictureMode.Fullscreen
+                      )
+                    }
+                  />
+                </IconWrapper>
               </FooterControls>
               {!isLive ? <Seeker /> : <LiveLabel />}
             </FooterWrapper>

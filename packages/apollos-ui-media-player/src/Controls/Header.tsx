@@ -32,7 +32,7 @@ const PiPButton = withTheme(
       borderRadius: 0,
     },
     size: theme?.sizing?.baseUnit * 1.5,
-    name: 'sections',
+    name: 'picture-in-picture',
   }),
   'ApollosPlayer.FullscreenPresentation.Header.DownButton'
 )(ButtonIcon);

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
-import { styled } from '@apollosproject/ui-kit';
+import { View } from 'react-native';
+import { styled, H6 } from '@apollosproject/ui-kit';
 
 const Container = styled(({ theme }: any) => ({
   width: '100%',
@@ -12,13 +12,13 @@ const Container = styled(({ theme }: any) => ({
 }))(View);
 
 const LiveText = styled(({ theme }: any) => ({
-  color: theme.colors.paper,
-}))(Text);
+  color: theme.colors.text.secondary,
+}))(H6);
 
 const LiveDot = styled(({ theme }: any) => ({
-  color: 'red',
+  color: theme.colors.alert,
   marginRight: theme.sizing.baseUnit * 0.5,
-}))(Text);
+}))(H6);
 
 export default () => (
   <Container>
