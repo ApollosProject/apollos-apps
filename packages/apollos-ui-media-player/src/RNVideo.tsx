@@ -1,10 +1,18 @@
 import * as React from 'react';
-import { StyleSheet, View, InteractionManager, Platform } from 'react-native';
+import {
+  StyleSheet,
+  View,
+  InteractionManager,
+  Platform,
+  Animated,
+} from 'react-native';
 import Video from 'react-native-video';
-import { styled } from '@apollosproject/ui-kit';
+import { styled, ActivityIndicator } from '@apollosproject/ui-kit';
 
 import { useNowPlaying, usePlayerControls, useInternalPlayer } from './context';
 import { PictureMode } from './types';
+
+import CoverImage from './CoverImage';
 
 const Container = styled(
   ({ theme }: any) => ({
@@ -21,8 +29,21 @@ const RNVideoPresentation = ({
   useNativeFullscreeniOS?: boolean;
 }) => {
   const nowPlaying = useNowPlaying();
-
   const { isPlaying, pictureMode, setPictureMode, pause } = usePlayerControls();
+
+  const [showCoverImage, setShowCoverImage] = React.useState(true);
+  const coverImageOpacity = React.useRef(new Animated.Value(1)).current;
+  Animated.spring(coverImageOpacity, {
+    toValue: showCoverImage || nowPlaying.audioOnly ? 1 : 0,
+    useNativeDriver: true,
+  }).start();
+
+  const [showLoading, setShowLoading] = React.useState(true);
+  const loadingOpacity = React.useRef(new Animated.Value(1)).current;
+  Animated.spring(loadingOpacity, {
+    toValue: showLoading ? 1 : 0,
+    useNativeDriver: true,
+  }).start();
 
   const {
     setSkipHandler,
@@ -57,12 +78,14 @@ const RNVideoPresentation = ({
       };
 
       playheadRef.current = newPlayhead;
+      if (playhead.currentTime > 0 && showCoverImage) setShowCoverImage(false);
       updatePlayhead(newPlayhead);
     },
-    [updatePlayhead, playheadRef]
+    [updatePlayhead, playheadRef, setShowCoverImage, showCoverImage]
   );
 
   const handleLoad = ({ duration }: { duration: number }) => {
+    setShowLoading(false);
     playheadRef.current = { ...playheadRef.current, totalDuration: duration };
     updatePlayhead(playheadRef.current);
   };
@@ -129,6 +152,10 @@ const RNVideoPresentation = ({
           onAudioBecomingNoisy={pause}
           pictureInPicture={pictureMode === PictureMode.PictureInPicture}
           onLoad={handleLoad}
+          onLoadStart={() => {
+            setShowLoading(true);
+            setShowCoverImage(true);
+          }}
           onEnd={pause}
           onFullscreenPlayerWillDismiss={() => {
             setPictureMode(PictureMode.Normal);
@@ -158,6 +185,16 @@ const RNVideoPresentation = ({
           style={StyleSheet.absoluteFill}
         />
       ) : null}
+      <Animated.View
+        style={[StyleSheet.absoluteFill, { opacity: coverImageOpacity }]}
+      >
+        <CoverImage source={nowPlaying?.coverImage} />
+      </Animated.View>
+      <Animated.View
+        style={[StyleSheet.absoluteFill, { opacity: loadingOpacity }]}
+      >
+        <ActivityIndicator size="large" />
+      </Animated.View>
     </Container>
   );
 };

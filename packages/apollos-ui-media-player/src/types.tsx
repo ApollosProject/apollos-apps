@@ -5,6 +5,8 @@ export interface IPlayerMedia {
   coverImage?: { uri?: string } | [{ uri: string }];
   /** Disables irrelevant UI controls during live stream */
   isLive?: boolean;
+  /** Keeps the cover image visible at all times and disables the video track */
+  audioOnly?: boolean;
 
   /** props intended to be used by Presentation Components */
   presentationProps?:

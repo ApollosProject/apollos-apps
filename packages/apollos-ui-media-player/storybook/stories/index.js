@@ -73,21 +73,39 @@ const PlayerExamples = () => {
               uri:
                 'https://moctobpltc-i.akamaihd.net/hls/live/571329/eight/playlist.m3u8',
             },
+
             isLive: true,
             presentationProps: {
               title: 'Live Stream',
               description: 'Video Description',
-              badge: (
-                <Text style={{ color: 'white' }}>
-                  <Text style={{ color: 'red' }}>●</Text> Live
-                </Text>
-              ),
             },
           });
           play();
         }}
       >
         Play LIVE streaming M3u8
+      </Text>
+      <Text
+        onPress={() => {
+          setNowPlaying({
+            source: {
+              uri:
+                'https://s3.amazonaws.com/media-files.watermark.org/assets/20201116/985db3f6-d9e9-438c-9c2b-5b8dd69a5866/VFTP-Evil-mixdown.mp3',
+            },
+            coverImage: {
+              uri:
+                'https://d3fnu4rii7irnm.cloudfront.net/images/16024/thumb/2800/',
+            },
+            audioOnly: true,
+            presentationProps: {
+              title: 'Audio Only',
+              description: 'Video Description',
+            },
+          });
+          play();
+        }}
+      >
+        Play Mp3
       </Text>
       <Text onPress={() => setPictureMode(PictureMode.Fullscreen)}>
         Open fullscreen

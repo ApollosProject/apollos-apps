@@ -37,6 +37,8 @@ const Container: React.FunctionComponent<ContainerProps> = ({
   coverImage,
   presentationProps,
   collapseOnScroll,
+  isLive = false,
+  audioOnly = false,
   autoplay = false,
   useNativeFullscreeniOS,
 }) => {
@@ -55,6 +57,8 @@ const Container: React.FunctionComponent<ContainerProps> = ({
   const [nowPlaying, setNowPlaying] = React.useState<IPlayerMedia>({
     source,
     coverImage,
+    isLive,
+    audioOnly,
     presentationProps,
   });
 
@@ -70,10 +74,10 @@ const Container: React.FunctionComponent<ContainerProps> = ({
   // setup PlayerControls Context
   const [isPlaying, setIsPlaying] = React.useState<boolean>(!!autoplay);
   const [seek, setSeekHandler] = React.useState<IPlayerControls['seek']>(
-    () => {}
+    () => { }
   );
   const [skip, setSkipHandler] = React.useState<IPlayerControls['skip']>(
-    () => {}
+    () => { }
   );
   const play = React.useCallback(() => setIsPlaying(true), [setIsPlaying]);
   const pause = React.useCallback(() => setIsPlaying(false), [setIsPlaying]);
