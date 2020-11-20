@@ -2,23 +2,44 @@ import React from 'react';
 import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
 import { MockedProvider } from '@apollo/client/testing';
 
-import GET_NODE_FEATURES from './getNodeFeatures';
+import GET_FEATURE_FEED from '../FeaturesFeedConnected/getFeatureFeed';
+import GET_NODE_FEED from './getNodeFeatures';
 
 import NodeFeaturesConnected from './NodeFeaturesConnected';
 
 describe('ContentSingleFeaturesConnected', () => {
   it('should render', async () => {
-    const mock = {
+    const nodeMock = {
       request: {
-        query: GET_NODE_FEATURES,
+        query: GET_NODE_FEED,
         variables: {
-          nodeId: 'WeekendContentItem:1',
+          nodeId: 'WeekendContentItem:123',
         },
       },
       result: {
         data: {
           node: {
-            id: 'WeekendContentItem:1',
+            id: 'WeekendContentItem:123',
+            __typename: 'WeekendContentItem',
+            featureFeed: {
+              __typename: 'FeatureFeed',
+              id: 'FeatureFeed:123',
+            },
+          },
+        },
+      },
+    };
+    const feedMock = {
+      request: {
+        query: GET_FEATURE_FEED,
+        variables: {
+          featureFeedId: 'FeatureFeed:123',
+        },
+      },
+      result: {
+        data: {
+          node: {
+            id: 'FeatureFeed:123',
             features: [
               {
                 id: 'WebviewFeature:6',
@@ -93,14 +114,17 @@ describe('ContentSingleFeaturesConnected', () => {
                 __typename: 'ScriptureFeature',
               },
             ],
-            __typename: 'WeekendContentItem',
+            __typename: 'FeatureFeed',
           },
         },
       },
     };
     const tree = await renderWithApolloData(
-      <Providers mocks={[mock]} MockedProvider={MockedProvider}>
-        <NodeFeaturesConnected nodeId={'WeekendContentItem:1'} />
+      <Providers
+        mocks={[nodeMock, nodeMock, feedMock]}
+        MockedProvider={MockedProvider}
+      >
+        <NodeFeaturesConnected nodeId={'WeekendContentItem:123'} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

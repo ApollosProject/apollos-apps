@@ -18,7 +18,7 @@
     "push-all": "lerna exec -- yarn yalc push",
     "lint": "lerna run lint",
     "test": "TZ=utc lerna run test",
-    "release": "lerna publish --conventional-commits --create-release github --force-publish",
+    "release": "lerna publish --conventional-commits --conventional-graduate --create-release github --force-publish",
     "release:beta": "lerna publish --conventional-commits --conventional-prerelease --preid beta --dist-tag beta --force-publish",
     "release:canary": "lerna publish --conventional-commits --canary",
     "release:next": "lerna publish --conventional-commits --canary premajor --dist-tag next --force-publish",
