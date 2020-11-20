@@ -24,10 +24,6 @@
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "prepare": "bob build",
-    "release": "release-it",
-    "example": "yarn --cwd example",
-    "pods": "cd example && pod-install --quiet",
-    "bootstrap": "yarn example && yarn && yarn pods",
     "generate-stories": "rnstl"
   },
   "keywords": [
@@ -50,7 +46,7 @@
     "@types/react-native-video": "^5.0.3",
     "@types/react-test-renderer": "*",
     "jest": "^26.0.1",
-    "pod-install": "^0.1.0",
+    "jest-react-native": "18.0.0",
     "react": "16.13.1",
     "react-native": "0.63.2",
     "react-native-music-control": "^1.2.1",
@@ -73,6 +69,11 @@
     "collectCoverage": true,
     "transformIgnorePatterns": [
       "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@apollosproject))"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/example/node_modules",
+      "<rootDir>/lib/",
+      "node_modules/@storybook/"
     ]
   },
   "eslintConfig": {
