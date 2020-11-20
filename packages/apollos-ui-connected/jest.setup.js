@@ -40,11 +40,3 @@ jest.mock('@apollosproject/ui-analytics', () => ({
   TrackEventWhenLoaded: () => null,
   withTrackOnPress: (Component) => (props) => <Component {...props} />,
 }));
-
-jest.mock('@apollosproject/ui-media-player', () => ({
-  MediaPlayerSpacer: ({ children }) => children,
-  MediaPlayer: () => 'MediaPlayer',
-  MediaPlayerProvider: ({ children }) => children,
-  playVideoMutation: 'mutation { playVideo }',
-  withTabBarMediaSpacer: () => ({ children }) => children,
-}));
