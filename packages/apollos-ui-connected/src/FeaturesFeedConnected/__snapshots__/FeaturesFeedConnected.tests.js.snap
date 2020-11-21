@@ -2,53 +2,7 @@
 
 exports[`FeaturesFeedConnected should render 1`] = `
 <RCTScrollView
-<<<<<<< HEAD
   data={Array []}
-=======
-  data={
-    Array [
-      Object {
-        "__typename": "WebviewFeature",
-        "id": "WebviewFeature:6",
-        "title": "Test Title",
-      },
-      Object {
-        "__typename": "TextFeature",
-        "body": "this is another, text feature",
-        "id": "TextFeature:1",
-        "scriptures": Array [
-          Object {
-            "__typename": "Scripture",
-            "id": "Scripture:2",
-            "reference": "Matthew 4:10",
-          },
-        ],
-      },
-      Object {
-        "__typename": "ScriptureFeature",
-        "id": "ScriptureFeature:3",
-        "scriptures": Array [
-          Object {
-            "__typename": "Scripture",
-            "id": "Scripture:4",
-            "reference": "Mark 1:12",
-          },
-        ],
-      },
-      Object {
-        "__typename": "ScriptureFeature",
-        "id": "ScriptureFeature:4",
-        "scriptures": Array [
-          Object {
-            "__typename": "Scripture",
-            "id": "Scripture:5",
-            "reference": "John 3:16",
-          },
-        ],
-      },
-    ]
-  }
->>>>>>> 24048b50f87b3885da72032dfba510fe53c1841e
   disableVirtualization={false}
   getItem={[Function]}
   getItemCount={[Function]}
