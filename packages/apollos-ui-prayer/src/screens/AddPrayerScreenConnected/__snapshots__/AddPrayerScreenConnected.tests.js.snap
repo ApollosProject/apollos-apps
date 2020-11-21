@@ -783,56 +783,38 @@ Array [
             }
           >
             <View
-              accessible={true}
-              clickable={true}
-              isTVSelectable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
+              bordered={false}
+              disabled={true}
+              pill={true}
               style={
                 Object {
-                  "opacity": 1,
+                  "alignItems": "center",
+                  "backgroundColor": "#00676D",
+                  "borderColor": "#00676D",
+                  "borderRadius": 48,
+                  "borderWidth": 2,
+                  "elevation": 2,
+                  "flexDirection": "row",
+                  "height": 48,
+                  "justifyContent": "center",
+                  "opacity": 0.5,
+                  "overflow": "hidden",
+                  "paddingHorizontal": 16,
                 }
               }
             >
-              <View
-                bordered={false}
-                disabled={false}
-                pill={true}
+              <Text
                 style={
                   Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#00676D",
-                    "borderColor": "#00676D",
-                    "borderRadius": 48,
-                    "borderWidth": 2,
-                    "elevation": 2,
-                    "flexDirection": "row",
-                    "height": 48,
-                    "justifyContent": "center",
-                    "opacity": 1,
-                    "overflow": "hidden",
-                    "paddingHorizontal": 16,
+                    "color": "#FFFFFF",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "lineHeight": 24,
                   }
                 }
               >
-                <Text
-                  style={
-                    Object {
-                      "color": "#FFFFFF",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 16,
-                      "lineHeight": 24,
-                    }
-                  }
-                >
-                  Share prayer
-                </Text>
-              </View>
+                Share prayer
+              </Text>
             </View>
           </View>
         </View>
@@ -849,7 +831,7 @@ Array [
         "top": 0,
         "transform": Array [
           Object {
-            "translateY": 1334,
+            "translateY": 1260.0612940717588,
           },
         ],
       }
