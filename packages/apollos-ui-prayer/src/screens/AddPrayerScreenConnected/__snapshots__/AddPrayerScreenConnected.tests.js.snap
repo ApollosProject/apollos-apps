@@ -831,7 +831,7 @@ Array [
         "top": 0,
         "transform": Array [
           Object {
-            "translateY": 1260.0612940717588,
+            "translateY": 0,
           },
         ],
       }
