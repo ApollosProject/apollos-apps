@@ -10,7 +10,7 @@ import ApollosConfig from '@apollosproject/config';
 
 import sanitizeHtml from '../sanitize-html';
 
-const { ROCK, ROCK_MAPPINGS } = ApollosConfig;
+const { ROCK_MAPPINGS } = ApollosConfig;
 
 export const defaultContentItemResolvers = {
   id: ({ id }, args, context, { parentType }) =>
@@ -56,9 +56,8 @@ export const defaultContentItemResolvers = {
 
   publishDate: ({ startDateTime }) =>
     moment(startDateTime)
-      .tz(ROCK.TIMEZONE)
-      .format()
-      .split(/[-+]\d+:\d+/)[0],
+      .tz('UTC')
+      .format(),
 
   theme: () => null, // todo: integrate themes from Rock
 

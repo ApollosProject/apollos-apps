@@ -7,7 +7,6 @@ import {
 export const interfacesSchema = gql`
   interface ContentNode {
     title(hyphenated: Boolean): String
-    publishDate: String
     coverImage: ImageMedia
     htmlContent: String
   }
