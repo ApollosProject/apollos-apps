@@ -1,7 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { Providers, renderWithApolloData } from '../testUtils';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 
 import GET_ACTION_BAR_FEATURE from './getActionBarFeature';
 import ActionBarFeatureConnected from './index';
@@ -15,7 +16,7 @@ const mock = {
     data: {
       node: {
         id: 'ActionBarFeatureConnected:123',
-        __typename: 'ActionBarFeatureConnected',
+        __typename: 'ActionBarFeature',
         title: 'Some cool list',
         actions: [
           {
@@ -39,7 +40,7 @@ const mock = {
 describe('The ActionBarFeatureConnected component', () => {
   it('should render', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={[mock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <ActionBarFeatureConnected
           refetchRef={jest.fn()}
           featureId={'ActionBarFeature:123'}
@@ -50,7 +51,7 @@ describe('The ActionBarFeatureConnected component', () => {
   });
   it('should render a loading state when isLoading', async () => {
     const tree = renderer.create(
-      <Providers>
+      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <ActionBarFeatureConnected
           refetchRef={jest.fn()}
           featureId={'ActionBarFeature:123'}

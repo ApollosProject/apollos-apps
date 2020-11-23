@@ -26,9 +26,7 @@ class MagicChangingHtml extends React.Component {
 
   render() {
     return this.props.children(
-      `<div><p>This content should not repeat </p><p>The Latest Bit of Content - ${
-        this.state.count
-      } </p></div>`
+      `<div><p>This content should not repeat </p><p>The Latest Bit of Content - ${this.state.count} </p></div>`
     );
   }
 }

@@ -1,11 +1,12 @@
 import React from 'react';
-import { Providers, renderWithApolloData } from '../testUtils';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 import InteractWhenLoadedConnected from '.';
 
 describe('The InteractWhenLoadedConnected component', () => {
   it('should render with isLoading=false', async () => {
     const tree = await renderWithApolloData(
-      <Providers>
+      <Providers MockedProvider={MockedProvider}>
         <InteractWhenLoadedConnected
           isLoading={false}
           action="COMPLETE"
@@ -18,7 +19,7 @@ describe('The InteractWhenLoadedConnected component', () => {
 
   it('should render with isLoading=true', async () => {
     const tree = await renderWithApolloData(
-      <Providers>
+      <Providers MockedProvider={MockedProvider}>
         <InteractWhenLoadedConnected
           isLoading
           action="COMPLETE"

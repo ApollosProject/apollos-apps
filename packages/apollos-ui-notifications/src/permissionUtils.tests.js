@@ -1,8 +1,25 @@
-import { client } from './testUtils';
+import gql from 'graphql-tag';
+import fetch from 'jest-fetch-mock';
+import { ApolloClient, createHttpLink } from '@apollo/client';
+import { InMemoryCache } from '@apollo/client/cache';
 import { getPushPermissions, getHasPrompted } from './permissionUtils';
-import { defaults } from './store';
+import { resolvers, defaults } from './store';
 
-client.writeData({ data: defaults });
+const cache = new InMemoryCache();
+
+const client = new ApolloClient({
+  link: createHttpLink({ fetch }),
+  cache,
+  resolvers,
+});
+
+const GET_PUSH_ID = gql`
+  query {
+    pushId @client
+  }
+`;
+
+client.writeQuery({ query: GET_PUSH_ID, data: defaults });
 
 describe('getPushPermissions', () => {
   it('should return a boolean based on the result from OneSignal', async () => {

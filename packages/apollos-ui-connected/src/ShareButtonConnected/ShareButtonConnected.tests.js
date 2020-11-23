@@ -1,5 +1,6 @@
 import React from 'react';
-import { Providers, renderWithApolloData } from '../testUtils';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 
 import getShareContent from './getShareContent';
 
@@ -31,7 +32,7 @@ const mocks = [shareMock];
 describe('the ShareButtonConnected', () => {
   it('renders a share button', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={mocks}>
+      <Providers MockedProvider={MockedProvider} mocks={mocks}>
         <ShareButtonConnected itemId={'1'} />
       </Providers>
     );
@@ -39,7 +40,7 @@ describe('the ShareButtonConnected', () => {
   });
   it('renders a share button with custom url, and title', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={mocks}>
+      <Providers MockedProvider={MockedProvider} mocks={mocks}>
         <ShareButtonConnected
           itemId={'1'}
           url={'https://apollosrock.com'}

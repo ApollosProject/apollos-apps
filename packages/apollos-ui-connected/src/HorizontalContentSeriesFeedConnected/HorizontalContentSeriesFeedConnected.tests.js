@@ -5,7 +5,9 @@ import {
   Providers,
   renderWithApolloData,
   WithReactNavigator,
-} from '../testUtils';
+} from '@apollosproject/ui-test-utils';
+
+import { MockedProvider } from '@apollo/client/testing';
 
 import GET_CONTENT_SERIES from './getContentSeries';
 import HorizontalContentSeriesFeedConnected from '.';
@@ -215,7 +217,10 @@ describe('the HorizontalContentSeriesFeedConnected component', () => {
   it('should render', async () => {
     const tree = await renderWithApolloData(
       WithReactNavigator(
-        <Providers mocks={[mock, ...additionalMocks]}>
+        <Providers
+          MockedProvider={MockedProvider}
+          mocks={[mock, ...additionalMocks]}
+        >
           <HorizontalContentSeriesFeedConnected
             contentId={'ContentSeriesContentItem:123'}
             navigation={navigation}
@@ -225,7 +230,10 @@ describe('the HorizontalContentSeriesFeedConnected component', () => {
     );
     const finalTree = await renderWithApolloData(
       WithReactNavigator(
-        <Providers mocks={[mock, ...additionalMocks]}>
+        <Providers
+          MockedProvider={MockedProvider}
+          mocks={[mock, ...additionalMocks]}
+        >
           <HorizontalContentSeriesFeedConnected
             contentId={'ContentSeriesContentItem:123'}
             navigation={navigation}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
-import { Providers, renderWithApolloData } from '../testUtils';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 
 import MediaControlsConnected, {
   GET_NODE_MEDIA,
@@ -49,6 +50,17 @@ const mediaMock = {
     data: {
       node: {
         id: 'WeekendContentItem:1',
+        title: 'Weekend Content Item',
+        parentChannel: null,
+        coverImage: {
+          __typename: 'ImageMedia',
+          sources: [
+            {
+              __typename: 'ImageMediaSource',
+              uri: 'https://picsum.photos/2000/200/?random',
+            },
+          ],
+        },
         __typename: 'WeekendContentItem',
         videos: [
           {
@@ -69,7 +81,7 @@ const mediaMock = {
 describe('ContentNodeConnected', () => {
   it('should render', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={[contentMock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[contentMock]}>
         <ContentNodeConnected nodeId={'WeekendContentItem:1'} />
       </Providers>
     );
@@ -81,7 +93,10 @@ describe('ContentNodeConnected', () => {
       <MediaControlsConnected {...props} Component={Component} />
     );
     const tree = await renderWithApolloData(
-      <Providers mocks={[mediaMock, contentMock]}>
+      <Providers
+        MockedProvider={MockedProvider}
+        mocks={[mediaMock, contentMock]}
+      >
         <ContentNodeConnected
           MediaControlsComponent={MediaControlsConnectedShallow}
           nodeId={'WeekendContentItem:1'}
@@ -89,7 +104,10 @@ describe('ContentNodeConnected', () => {
       </Providers>
     );
     const finalTree = await renderWithApolloData(
-      <Providers mocks={[contentMock, mediaMock]}>
+      <Providers
+        MockedProvider={MockedProvider}
+        mocks={[mediaMock, contentMock]}
+      >
         <ContentNodeConnected
           MediaControlsComponent={MediaControlsConnectedShallow}
           nodeId={'WeekendContentItem:1'}

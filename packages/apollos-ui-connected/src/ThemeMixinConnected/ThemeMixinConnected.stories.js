@@ -3,7 +3,7 @@ import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { GraphQLScalarType } from 'graphql';
 import { BackgroundView, CenteredView, Button } from '@apollosproject/ui-kit';
-import { ApolloStorybookDecorator } from '../testUtils';
+import { ApolloStorybookDecorator } from '@apollosproject/ui-test-utils';
 import ThemeMixinConnected from './index';
 
 const colorScalarType = new GraphQLScalarType({

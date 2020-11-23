@@ -31,6 +31,7 @@
     "@apollosproject/ui-prayer": "link:../packages/apollos-ui-prayer",
     "@apollosproject/ui-scripture": "link:../packages/apollos-ui-scripture",
     "@apollosproject/ui-storybook": "link:../packages/apollos-ui-storybook",
+    "@apollosproject/ui-test-utils": "link:../packages/apollos-ui-test-utils",
     "@carimus/metro-symlinked-deps": "^1.1.0",
     "@metarouter/analytics-react-native": "^1.1.5",
     "@react-native-community/async-storage": "^1.5.1",
@@ -108,7 +109,7 @@
     "prettier": "1.14.2",
     "react-native-storybook-loader": "1.8.0",
     "react-native-version": "2.6.2",
-    "react-test-renderer": "16.8.6",
+    "react-test-renderer": "16.9.0",
     "waait": "1.0.2"
   },
   "jest": {

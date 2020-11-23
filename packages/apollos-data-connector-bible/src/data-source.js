@@ -44,9 +44,7 @@ export default class Scripture extends RESTDataSource {
     let safeVersion = version ? version.toUpperCase() : null;
     if (!this.availableVersions.includes(safeVersion)) {
       console.warn(
-        `${safeVersion} version not available, using ${
-          this.availableVersions[0]
-        }`
+        `${safeVersion} version not available, using ${this.availableVersions[0]}`
       );
       [safeVersion] = this.availableVersions;
     }

@@ -10,7 +10,7 @@ import ContentNodeConnected from '../ContentNodeConnected';
 import ContentParentFeedConnected from '../ContentParentFeedConnected';
 import ContentChildFeedConnected from '../ContentChildFeedConnected';
 import UpNextButtonConnected from '../UpNextButtonConnected';
-import ContentSingleFeaturesConnected from '../ContentSingleFeaturesConnected';
+import NodeFeaturesConnected from '../NodeFeaturesConnected';
 
 import GET_MEDIA from './getMedia';
 

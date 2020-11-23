@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 import PropTypes from 'prop-types';
 import {
   PrayerFeature,

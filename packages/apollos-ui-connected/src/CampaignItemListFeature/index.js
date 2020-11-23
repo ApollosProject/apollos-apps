@@ -22,9 +22,10 @@ const Title = styled(
   'ui-connected.CampaignListFeature.Title'
 )(H5);
 
-const Subtitle = styled({}, 'ui-connected.CampaignItemListFeature.Subtitle')(
-  H3
-);
+const Subtitle = styled(
+  {},
+  'ui-connected.CampaignItemListFeature.Subtitle'
+)(H3);
 
 const Header = styled(
   ({ theme }) => ({

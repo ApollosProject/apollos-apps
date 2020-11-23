@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Mutation } from 'react-apollo';
+import { Mutation } from '@apollo/client/react/components';
 import INTERACT_WITH_NODE from './interactWithNode';
 
 class InteractWhenLoaded extends PureComponent {
