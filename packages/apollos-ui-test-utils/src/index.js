@@ -23,7 +23,12 @@ async function renderWithApolloData(component, existingTree) {
 }
 
 // eslint-disable-next-line
-function Providers({ MockedProvider = View, children, ...props }){
+function Providers({ MockedProvider, children, ...props }){
+  let MockedApolloProvider = React.Fragment;
+  if (MockedProvider) {
+    MockedApolloProvider = MockedProvider;
+  }
+
   const finalPossibleTypes = {};
   possibleTypesJson.__schema.types.forEach((supertype) => {
     if (supertype.possibleTypes) {
@@ -40,16 +45,20 @@ function Providers({ MockedProvider = View, children, ...props }){
 
   return (
     <UIProviders {...props}>
-      <MockedProvider
-        defaultOptions={{
-          watchQuery: { fetchPolicy: 'no-cache' },
-          query: { fetchPolicy: 'no-cache' },
-        }}
-        cache={cache}
+      <MockedApolloProvider
+        {...(MockedProvider
+          ? {
+              defaultOptions: {
+                watchQuery: { fetchPolicy: 'no-cache' },
+                query: { fetchPolicy: 'no-cache' },
+              },
+              cache,
+            }
+          : {})}
         {...props}
       >
         {children}
-      </MockedProvider>
+      </MockedApolloProvider>
     </UIProviders>
   );
 }

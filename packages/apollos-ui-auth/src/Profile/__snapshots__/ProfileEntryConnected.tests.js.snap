@@ -2,1725 +2,480 @@
 
 exports[`ui-auth/Profile/ProfileEntryConnected should render 1`] = `
 <View
-  cache={
-    InMemoryCache {
-      "addTypename": true,
-      "config": Object {
-        "addTypename": true,
-        "dataIdFromObject": [Function],
-        "possibleTypes": Object {
-          "AudioNode": Array [
-            "UniversalContentItem",
-            "DevotionalContentItem",
-            "MediaContentItem",
-            "ContentSeriesContentItem",
-            "WeekendContentItem",
-          ],
-          "Card": Array [
-            "UniversalContentItem",
-            "DevotionalContentItem",
-            "MediaContentItem",
-            "ContentSeriesContentItem",
-            "WeekendContentItem",
-          ],
-          "ContentChildNode": Array [
-            "UniversalContentItem",
-            "DevotionalContentItem",
-            "MediaContentItem",
-            "ContentSeriesContentItem",
-            "WeekendContentItem",
-          ],
-          "ContentItem": Array [
-            "UniversalContentItem",
-            "DevotionalContentItem",
-            "MediaContentItem",
-            "ContentSeriesContentItem",
-            "WeekendContentItem",
-          ],
-          "ContentNode": Array [
-            "UniversalContentItem",
-            "DevotionalContentItem",
-            "MediaContentItem",
-            "ContentSeriesContentItem",
-            "WeekendContentItem",
-          ],
-          "ContentParentNode": Array [
-            "UniversalContentItem",
-            "DevotionalContentItem",
-            "MediaContentItem",
-            "ContentSeriesContentItem",
-            "WeekendContentItem",
-          ],
-          "Feature": Array [
-            "ActionListFeature",
-            "HeroListFeature",
-            "VerticalCardListFeature",
-            "HorizontalCardListFeature",
-            "TextFeature",
-            "ScriptureFeature",
-            "WebviewFeature",
-            "PrayerListFeature",
-          ],
-          "FeaturesNode": Array [
-            "ContentSeriesContentItem",
-            "WeekendContentItem",
-          ],
-          "LikableNode": Array [
-            "UniversalContentItem",
-            "DevotionalContentItem",
-            "MediaContentItem",
-            "ContentSeriesContentItem",
-            "WeekendContentItem",
-          ],
-          "LiveNode": Array [
-            "WeekendContentItem",
-          ],
-          "Media": Array [
-            "ImageMedia",
-            "VideoMedia",
-            "AudioMedia",
-          ],
-          "MediaSource": Array [
-            "ImageMediaSource",
-            "VideoMediaSource",
-            "AudioMediaSource",
-          ],
-          "Node": Array [
-            "ContentChannel",
-            "Person",
-            "Device",
-            "Campus",
-            "Event",
-            "Group",
-            "Scripture",
-            "Pass",
-            "PrayerRequest",
-            "UniversalContentItem",
-            "DevotionalContentItem",
-            "MediaContentItem",
-            "ContentSeriesContentItem",
-            "WeekendContentItem",
-            "Url",
-            "ActionListFeature",
-            "HeroListFeature",
-            "VerticalCardListFeature",
-            "HorizontalCardListFeature",
-            "TextFeature",
-            "ScriptureFeature",
-            "WebviewFeature",
-            "PrayerListFeature",
-          ],
-          "ProgressNode": Array [
-            "ContentSeriesContentItem",
-          ],
-          "ScriptureNode": Array [
-            "DevotionalContentItem",
-            "MediaContentItem",
-          ],
-          "Sharable": Array [
-            "SharableContentItem",
-            "SharableFeature",
-          ],
-          "ShareableNode": Array [
-            "UniversalContentItem",
-            "DevotionalContentItem",
-            "MediaContentItem",
-            "ContentSeriesContentItem",
-            "WeekendContentItem",
-          ],
-          "ThemedNode": Array [
-            "UniversalContentItem",
-            "DevotionalContentItem",
-            "MediaContentItem",
-            "ContentSeriesContentItem",
-            "WeekendContentItem",
-          ],
-          "VideoNode": Array [
-            "UniversalContentItem",
-            "DevotionalContentItem",
-            "MediaContentItem",
-            "ContentSeriesContentItem",
-            "WeekendContentItem",
-          ],
-        },
-        "resultCaching": true,
-        "typePolicies": Object {},
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
       },
-      "data": Root {
-        "canRead": [Function],
-        "data": Object {},
-        "getFieldValue": [Function],
-        "group": CacheGroup {
-          "caching": true,
-          "d": [Function],
-          "keyMaker": KeyTrie {
-            "makeData": [Function],
-            "weakness": true,
-          },
-        },
-        "policies": Policies {
-          "cache": [Circular],
-          "config": Object {
-            "cache": [Circular],
-            "dataIdFromObject": [Function],
-            "possibleTypes": Object {
-              "AudioNode": Array [
-                "UniversalContentItem",
-                "DevotionalContentItem",
-                "MediaContentItem",
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-              ],
-              "Card": Array [
-                "UniversalContentItem",
-                "DevotionalContentItem",
-                "MediaContentItem",
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-              ],
-              "ContentChildNode": Array [
-                "UniversalContentItem",
-                "DevotionalContentItem",
-                "MediaContentItem",
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-              ],
-              "ContentItem": Array [
-                "UniversalContentItem",
-                "DevotionalContentItem",
-                "MediaContentItem",
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-              ],
-              "ContentNode": Array [
-                "UniversalContentItem",
-                "DevotionalContentItem",
-                "MediaContentItem",
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-              ],
-              "ContentParentNode": Array [
-                "UniversalContentItem",
-                "DevotionalContentItem",
-                "MediaContentItem",
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-              ],
-              "Feature": Array [
-                "ActionListFeature",
-                "HeroListFeature",
-                "VerticalCardListFeature",
-                "HorizontalCardListFeature",
-                "TextFeature",
-                "ScriptureFeature",
-                "WebviewFeature",
-                "PrayerListFeature",
-              ],
-              "FeaturesNode": Array [
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-              ],
-              "LikableNode": Array [
-                "UniversalContentItem",
-                "DevotionalContentItem",
-                "MediaContentItem",
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-              ],
-              "LiveNode": Array [
-                "WeekendContentItem",
-              ],
-              "Media": Array [
-                "ImageMedia",
-                "VideoMedia",
-                "AudioMedia",
-              ],
-              "MediaSource": Array [
-                "ImageMediaSource",
-                "VideoMediaSource",
-                "AudioMediaSource",
-              ],
-              "Node": Array [
-                "ContentChannel",
-                "Person",
-                "Device",
-                "Campus",
-                "Event",
-                "Group",
-                "Scripture",
-                "Pass",
-                "PrayerRequest",
-                "UniversalContentItem",
-                "DevotionalContentItem",
-                "MediaContentItem",
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-                "Url",
-                "ActionListFeature",
-                "HeroListFeature",
-                "VerticalCardListFeature",
-                "HorizontalCardListFeature",
-                "TextFeature",
-                "ScriptureFeature",
-                "WebviewFeature",
-                "PrayerListFeature",
-              ],
-              "ProgressNode": Array [
-                "ContentSeriesContentItem",
-              ],
-              "ScriptureNode": Array [
-                "DevotionalContentItem",
-                "MediaContentItem",
-              ],
-              "Sharable": Array [
-                "SharableContentItem",
-                "SharableFeature",
-              ],
-              "ShareableNode": Array [
-                "UniversalContentItem",
-                "DevotionalContentItem",
-                "MediaContentItem",
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-              ],
-              "ThemedNode": Array [
-                "UniversalContentItem",
-                "DevotionalContentItem",
-                "MediaContentItem",
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-              ],
-              "VideoNode": Array [
-                "UniversalContentItem",
-                "DevotionalContentItem",
-                "MediaContentItem",
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-              ],
-            },
-            "typePolicies": Object {},
-          },
-          "fuzzySubtypes": Map {},
-          "rootIdsByTypename": Object {
-            "Mutation": "ROOT_MUTATION",
-            "Query": "ROOT_QUERY",
-            "Subscription": "ROOT_SUBSCRIPTION",
-          },
-          "rootTypenamesById": Object {
-            "ROOT_MUTATION": "Mutation",
-            "ROOT_QUERY": "Query",
-            "ROOT_SUBSCRIPTION": "Subscription",
-          },
-          "supertypeMap": Map {
-            "Node" => Set {},
-            "ContentChannel" => Set {
-              "Node",
-            },
-            "Person" => Set {
-              "Node",
-            },
-            "Device" => Set {
-              "Node",
-            },
-            "Campus" => Set {
-              "Node",
-            },
-            "Event" => Set {
-              "Node",
-            },
-            "Group" => Set {
-              "Node",
-            },
-            "Scripture" => Set {
-              "Node",
-            },
-            "Pass" => Set {
-              "Node",
-            },
-            "PrayerRequest" => Set {
-              "Node",
-            },
-            "UniversalContentItem" => Set {
-              "Node",
-              "ContentItem",
-              "ContentNode",
-              "Card",
-              "VideoNode",
-              "AudioNode",
-              "ContentParentNode",
-              "ContentChildNode",
-              "ThemedNode",
-              "LikableNode",
-              "ShareableNode",
-            },
-            "DevotionalContentItem" => Set {
-              "Node",
-              "ContentItem",
-              "ContentNode",
-              "Card",
-              "VideoNode",
-              "AudioNode",
-              "ContentParentNode",
-              "ContentChildNode",
-              "ThemedNode",
-              "ScriptureNode",
-              "LikableNode",
-              "ShareableNode",
-            },
-            "MediaContentItem" => Set {
-              "Node",
-              "ContentItem",
-              "ContentNode",
-              "Card",
-              "VideoNode",
-              "AudioNode",
-              "ContentParentNode",
-              "ContentChildNode",
-              "ThemedNode",
-              "ScriptureNode",
-              "LikableNode",
-              "ShareableNode",
-            },
-            "ContentSeriesContentItem" => Set {
-              "Node",
-              "ContentItem",
-              "ContentNode",
-              "Card",
-              "VideoNode",
-              "AudioNode",
-              "FeaturesNode",
-              "ContentParentNode",
-              "ContentChildNode",
-              "ThemedNode",
-              "ProgressNode",
-              "LikableNode",
-              "ShareableNode",
-            },
-            "WeekendContentItem" => Set {
-              "Node",
-              "ContentItem",
-              "ContentNode",
-              "Card",
-              "VideoNode",
-              "AudioNode",
-              "FeaturesNode",
-              "ContentParentNode",
-              "ContentChildNode",
-              "ThemedNode",
-              "LikableNode",
-              "ShareableNode",
-              "LiveNode",
-            },
-            "Url" => Set {
-              "Node",
-            },
-            "ActionListFeature" => Set {
-              "Node",
-              "Feature",
-            },
-            "HeroListFeature" => Set {
-              "Node",
-              "Feature",
-            },
-            "VerticalCardListFeature" => Set {
-              "Node",
-              "Feature",
-            },
-            "HorizontalCardListFeature" => Set {
-              "Node",
-              "Feature",
-            },
-            "TextFeature" => Set {
-              "Node",
-              "Feature",
-            },
-            "ScriptureFeature" => Set {
-              "Node",
-              "Feature",
-            },
-            "WebviewFeature" => Set {
-              "Node",
-              "Feature",
-            },
-            "PrayerListFeature" => Set {
-              "Node",
-              "Feature",
-            },
-            "ContentItem" => Set {},
-            "Media" => Set {},
-            "ImageMedia" => Set {
-              "Media",
-            },
-            "VideoMedia" => Set {
-              "Media",
-            },
-            "AudioMedia" => Set {
-              "Media",
-            },
-            "MediaSource" => Set {},
-            "ImageMediaSource" => Set {
-              "MediaSource",
-            },
-            "VideoMediaSource" => Set {
-              "MediaSource",
-            },
-            "AudioMediaSource" => Set {
-              "MediaSource",
-            },
-            "Sharable" => Set {},
-            "SharableContentItem" => Set {
-              "Sharable",
-            },
-            "SharableFeature" => Set {
-              "Sharable",
-            },
-            "Feature" => Set {},
-            "ContentNode" => Set {},
-            "Card" => Set {},
-            "VideoNode" => Set {},
-            "AudioNode" => Set {},
-            "FeaturesNode" => Set {},
-            "ContentParentNode" => Set {},
-            "ContentChildNode" => Set {},
-            "ThemedNode" => Set {},
-            "ProgressNode" => Set {},
-            "ScriptureNode" => Set {},
-            "LikableNode" => Set {},
-            "ShareableNode" => Set {},
-            "LiveNode" => Set {},
-          },
-          "typePolicies": Object {},
-          "usingPossibleTypes": true,
-        },
-        "refs": Object {},
-        "rootIds": Object {},
-        "sharedLayerGroup": CacheGroup {
-          "caching": true,
-          "d": [Function],
-          "keyMaker": KeyTrie {
-            "makeData": [Function],
-            "weakness": true,
-          },
-        },
-        "storageTrie": KeyTrie {
-          "makeData": [Function],
-          "weakness": true,
-        },
-        "toReference": [Function],
+      Object {
+        "paddingBottom": 0,
       },
-      "getFragmentDoc": [Function],
-      "makeVar": [Function],
-      "maybeBroadcastWatch": [Function],
-      "optimisticData": Root {
-        "canRead": [Function],
-        "data": Object {},
-        "getFieldValue": [Function],
-        "group": CacheGroup {
-          "caching": true,
-          "d": [Function],
-          "keyMaker": KeyTrie {
-            "makeData": [Function],
-            "weakness": true,
-          },
-        },
-        "policies": Policies {
-          "cache": [Circular],
-          "config": Object {
-            "cache": [Circular],
-            "dataIdFromObject": [Function],
-            "possibleTypes": Object {
-              "AudioNode": Array [
-                "UniversalContentItem",
-                "DevotionalContentItem",
-                "MediaContentItem",
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-              ],
-              "Card": Array [
-                "UniversalContentItem",
-                "DevotionalContentItem",
-                "MediaContentItem",
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-              ],
-              "ContentChildNode": Array [
-                "UniversalContentItem",
-                "DevotionalContentItem",
-                "MediaContentItem",
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-              ],
-              "ContentItem": Array [
-                "UniversalContentItem",
-                "DevotionalContentItem",
-                "MediaContentItem",
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-              ],
-              "ContentNode": Array [
-                "UniversalContentItem",
-                "DevotionalContentItem",
-                "MediaContentItem",
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-              ],
-              "ContentParentNode": Array [
-                "UniversalContentItem",
-                "DevotionalContentItem",
-                "MediaContentItem",
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-              ],
-              "Feature": Array [
-                "ActionListFeature",
-                "HeroListFeature",
-                "VerticalCardListFeature",
-                "HorizontalCardListFeature",
-                "TextFeature",
-                "ScriptureFeature",
-                "WebviewFeature",
-                "PrayerListFeature",
-              ],
-              "FeaturesNode": Array [
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-              ],
-              "LikableNode": Array [
-                "UniversalContentItem",
-                "DevotionalContentItem",
-                "MediaContentItem",
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-              ],
-              "LiveNode": Array [
-                "WeekendContentItem",
-              ],
-              "Media": Array [
-                "ImageMedia",
-                "VideoMedia",
-                "AudioMedia",
-              ],
-              "MediaSource": Array [
-                "ImageMediaSource",
-                "VideoMediaSource",
-                "AudioMediaSource",
-              ],
-              "Node": Array [
-                "ContentChannel",
-                "Person",
-                "Device",
-                "Campus",
-                "Event",
-                "Group",
-                "Scripture",
-                "Pass",
-                "PrayerRequest",
-                "UniversalContentItem",
-                "DevotionalContentItem",
-                "MediaContentItem",
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-                "Url",
-                "ActionListFeature",
-                "HeroListFeature",
-                "VerticalCardListFeature",
-                "HorizontalCardListFeature",
-                "TextFeature",
-                "ScriptureFeature",
-                "WebviewFeature",
-                "PrayerListFeature",
-              ],
-              "ProgressNode": Array [
-                "ContentSeriesContentItem",
-              ],
-              "ScriptureNode": Array [
-                "DevotionalContentItem",
-                "MediaContentItem",
-              ],
-              "Sharable": Array [
-                "SharableContentItem",
-                "SharableFeature",
-              ],
-              "ShareableNode": Array [
-                "UniversalContentItem",
-                "DevotionalContentItem",
-                "MediaContentItem",
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-              ],
-              "ThemedNode": Array [
-                "UniversalContentItem",
-                "DevotionalContentItem",
-                "MediaContentItem",
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-              ],
-              "VideoNode": Array [
-                "UniversalContentItem",
-                "DevotionalContentItem",
-                "MediaContentItem",
-                "ContentSeriesContentItem",
-                "WeekendContentItem",
-              ],
-            },
-            "typePolicies": Object {},
-          },
-          "fuzzySubtypes": Map {},
-          "rootIdsByTypename": Object {
-            "Mutation": "ROOT_MUTATION",
-            "Query": "ROOT_QUERY",
-            "Subscription": "ROOT_SUBSCRIPTION",
-          },
-          "rootTypenamesById": Object {
-            "ROOT_MUTATION": "Mutation",
-            "ROOT_QUERY": "Query",
-            "ROOT_SUBSCRIPTION": "Subscription",
-          },
-          "supertypeMap": Map {
-            "Node" => Set {},
-            "ContentChannel" => Set {
-              "Node",
-            },
-            "Person" => Set {
-              "Node",
-            },
-            "Device" => Set {
-              "Node",
-            },
-            "Campus" => Set {
-              "Node",
-            },
-            "Event" => Set {
-              "Node",
-            },
-            "Group" => Set {
-              "Node",
-            },
-            "Scripture" => Set {
-              "Node",
-            },
-            "Pass" => Set {
-              "Node",
-            },
-            "PrayerRequest" => Set {
-              "Node",
-            },
-            "UniversalContentItem" => Set {
-              "Node",
-              "ContentItem",
-              "ContentNode",
-              "Card",
-              "VideoNode",
-              "AudioNode",
-              "ContentParentNode",
-              "ContentChildNode",
-              "ThemedNode",
-              "LikableNode",
-              "ShareableNode",
-            },
-            "DevotionalContentItem" => Set {
-              "Node",
-              "ContentItem",
-              "ContentNode",
-              "Card",
-              "VideoNode",
-              "AudioNode",
-              "ContentParentNode",
-              "ContentChildNode",
-              "ThemedNode",
-              "ScriptureNode",
-              "LikableNode",
-              "ShareableNode",
-            },
-            "MediaContentItem" => Set {
-              "Node",
-              "ContentItem",
-              "ContentNode",
-              "Card",
-              "VideoNode",
-              "AudioNode",
-              "ContentParentNode",
-              "ContentChildNode",
-              "ThemedNode",
-              "ScriptureNode",
-              "LikableNode",
-              "ShareableNode",
-            },
-            "ContentSeriesContentItem" => Set {
-              "Node",
-              "ContentItem",
-              "ContentNode",
-              "Card",
-              "VideoNode",
-              "AudioNode",
-              "FeaturesNode",
-              "ContentParentNode",
-              "ContentChildNode",
-              "ThemedNode",
-              "ProgressNode",
-              "LikableNode",
-              "ShareableNode",
-            },
-            "WeekendContentItem" => Set {
-              "Node",
-              "ContentItem",
-              "ContentNode",
-              "Card",
-              "VideoNode",
-              "AudioNode",
-              "FeaturesNode",
-              "ContentParentNode",
-              "ContentChildNode",
-              "ThemedNode",
-              "LikableNode",
-              "ShareableNode",
-              "LiveNode",
-            },
-            "Url" => Set {
-              "Node",
-            },
-            "ActionListFeature" => Set {
-              "Node",
-              "Feature",
-            },
-            "HeroListFeature" => Set {
-              "Node",
-              "Feature",
-            },
-            "VerticalCardListFeature" => Set {
-              "Node",
-              "Feature",
-            },
-            "HorizontalCardListFeature" => Set {
-              "Node",
-              "Feature",
-            },
-            "TextFeature" => Set {
-              "Node",
-              "Feature",
-            },
-            "ScriptureFeature" => Set {
-              "Node",
-              "Feature",
-            },
-            "WebviewFeature" => Set {
-              "Node",
-              "Feature",
-            },
-            "PrayerListFeature" => Set {
-              "Node",
-              "Feature",
-            },
-            "ContentItem" => Set {},
-            "Media" => Set {},
-            "ImageMedia" => Set {
-              "Media",
-            },
-            "VideoMedia" => Set {
-              "Media",
-            },
-            "AudioMedia" => Set {
-              "Media",
-            },
-            "MediaSource" => Set {},
-            "ImageMediaSource" => Set {
-              "MediaSource",
-            },
-            "VideoMediaSource" => Set {
-              "MediaSource",
-            },
-            "AudioMediaSource" => Set {
-              "MediaSource",
-            },
-            "Sharable" => Set {},
-            "SharableContentItem" => Set {
-              "Sharable",
-            },
-            "SharableFeature" => Set {
-              "Sharable",
-            },
-            "Feature" => Set {},
-            "ContentNode" => Set {},
-            "Card" => Set {},
-            "VideoNode" => Set {},
-            "AudioNode" => Set {},
-            "FeaturesNode" => Set {},
-            "ContentParentNode" => Set {},
-            "ContentChildNode" => Set {},
-            "ThemedNode" => Set {},
-            "ProgressNode" => Set {},
-            "ScriptureNode" => Set {},
-            "LikableNode" => Set {},
-            "ShareableNode" => Set {},
-            "LiveNode" => Set {},
-          },
-          "typePolicies": Object {},
-          "usingPossibleTypes": true,
-        },
-        "refs": Object {},
-        "rootIds": Object {},
-        "sharedLayerGroup": CacheGroup {
-          "caching": true,
-          "d": [Function],
-          "keyMaker": KeyTrie {
-            "makeData": [Function],
-            "weakness": true,
-          },
-        },
-        "storageTrie": KeyTrie {
-          "makeData": [Function],
-          "weakness": true,
-        },
-        "toReference": [Function],
-      },
-      "policies": Policies {
-        "cache": [Circular],
-        "config": Object {
-          "cache": [Circular],
-          "dataIdFromObject": [Function],
-          "possibleTypes": Object {
-            "AudioNode": Array [
-              "UniversalContentItem",
-              "DevotionalContentItem",
-              "MediaContentItem",
-              "ContentSeriesContentItem",
-              "WeekendContentItem",
-            ],
-            "Card": Array [
-              "UniversalContentItem",
-              "DevotionalContentItem",
-              "MediaContentItem",
-              "ContentSeriesContentItem",
-              "WeekendContentItem",
-            ],
-            "ContentChildNode": Array [
-              "UniversalContentItem",
-              "DevotionalContentItem",
-              "MediaContentItem",
-              "ContentSeriesContentItem",
-              "WeekendContentItem",
-            ],
-            "ContentItem": Array [
-              "UniversalContentItem",
-              "DevotionalContentItem",
-              "MediaContentItem",
-              "ContentSeriesContentItem",
-              "WeekendContentItem",
-            ],
-            "ContentNode": Array [
-              "UniversalContentItem",
-              "DevotionalContentItem",
-              "MediaContentItem",
-              "ContentSeriesContentItem",
-              "WeekendContentItem",
-            ],
-            "ContentParentNode": Array [
-              "UniversalContentItem",
-              "DevotionalContentItem",
-              "MediaContentItem",
-              "ContentSeriesContentItem",
-              "WeekendContentItem",
-            ],
-            "Feature": Array [
-              "ActionListFeature",
-              "HeroListFeature",
-              "VerticalCardListFeature",
-              "HorizontalCardListFeature",
-              "TextFeature",
-              "ScriptureFeature",
-              "WebviewFeature",
-              "PrayerListFeature",
-            ],
-            "FeaturesNode": Array [
-              "ContentSeriesContentItem",
-              "WeekendContentItem",
-            ],
-            "LikableNode": Array [
-              "UniversalContentItem",
-              "DevotionalContentItem",
-              "MediaContentItem",
-              "ContentSeriesContentItem",
-              "WeekendContentItem",
-            ],
-            "LiveNode": Array [
-              "WeekendContentItem",
-            ],
-            "Media": Array [
-              "ImageMedia",
-              "VideoMedia",
-              "AudioMedia",
-            ],
-            "MediaSource": Array [
-              "ImageMediaSource",
-              "VideoMediaSource",
-              "AudioMediaSource",
-            ],
-            "Node": Array [
-              "ContentChannel",
-              "Person",
-              "Device",
-              "Campus",
-              "Event",
-              "Group",
-              "Scripture",
-              "Pass",
-              "PrayerRequest",
-              "UniversalContentItem",
-              "DevotionalContentItem",
-              "MediaContentItem",
-              "ContentSeriesContentItem",
-              "WeekendContentItem",
-              "Url",
-              "ActionListFeature",
-              "HeroListFeature",
-              "VerticalCardListFeature",
-              "HorizontalCardListFeature",
-              "TextFeature",
-              "ScriptureFeature",
-              "WebviewFeature",
-              "PrayerListFeature",
-            ],
-            "ProgressNode": Array [
-              "ContentSeriesContentItem",
-            ],
-            "ScriptureNode": Array [
-              "DevotionalContentItem",
-              "MediaContentItem",
-            ],
-            "Sharable": Array [
-              "SharableContentItem",
-              "SharableFeature",
-            ],
-            "ShareableNode": Array [
-              "UniversalContentItem",
-              "DevotionalContentItem",
-              "MediaContentItem",
-              "ContentSeriesContentItem",
-              "WeekendContentItem",
-            ],
-            "ThemedNode": Array [
-              "UniversalContentItem",
-              "DevotionalContentItem",
-              "MediaContentItem",
-              "ContentSeriesContentItem",
-              "WeekendContentItem",
-            ],
-            "VideoNode": Array [
-              "UniversalContentItem",
-              "DevotionalContentItem",
-              "MediaContentItem",
-              "ContentSeriesContentItem",
-              "WeekendContentItem",
-            ],
-          },
-          "typePolicies": Object {},
-        },
-        "fuzzySubtypes": Map {},
-        "rootIdsByTypename": Object {
-          "Mutation": "ROOT_MUTATION",
-          "Query": "ROOT_QUERY",
-          "Subscription": "ROOT_SUBSCRIPTION",
-        },
-        "rootTypenamesById": Object {
-          "ROOT_MUTATION": "Mutation",
-          "ROOT_QUERY": "Query",
-          "ROOT_SUBSCRIPTION": "Subscription",
-        },
-        "supertypeMap": Map {
-          "Node" => Set {},
-          "ContentChannel" => Set {
-            "Node",
-          },
-          "Person" => Set {
-            "Node",
-          },
-          "Device" => Set {
-            "Node",
-          },
-          "Campus" => Set {
-            "Node",
-          },
-          "Event" => Set {
-            "Node",
-          },
-          "Group" => Set {
-            "Node",
-          },
-          "Scripture" => Set {
-            "Node",
-          },
-          "Pass" => Set {
-            "Node",
-          },
-          "PrayerRequest" => Set {
-            "Node",
-          },
-          "UniversalContentItem" => Set {
-            "Node",
-            "ContentItem",
-            "ContentNode",
-            "Card",
-            "VideoNode",
-            "AudioNode",
-            "ContentParentNode",
-            "ContentChildNode",
-            "ThemedNode",
-            "LikableNode",
-            "ShareableNode",
-          },
-          "DevotionalContentItem" => Set {
-            "Node",
-            "ContentItem",
-            "ContentNode",
-            "Card",
-            "VideoNode",
-            "AudioNode",
-            "ContentParentNode",
-            "ContentChildNode",
-            "ThemedNode",
-            "ScriptureNode",
-            "LikableNode",
-            "ShareableNode",
-          },
-          "MediaContentItem" => Set {
-            "Node",
-            "ContentItem",
-            "ContentNode",
-            "Card",
-            "VideoNode",
-            "AudioNode",
-            "ContentParentNode",
-            "ContentChildNode",
-            "ThemedNode",
-            "ScriptureNode",
-            "LikableNode",
-            "ShareableNode",
-          },
-          "ContentSeriesContentItem" => Set {
-            "Node",
-            "ContentItem",
-            "ContentNode",
-            "Card",
-            "VideoNode",
-            "AudioNode",
-            "FeaturesNode",
-            "ContentParentNode",
-            "ContentChildNode",
-            "ThemedNode",
-            "ProgressNode",
-            "LikableNode",
-            "ShareableNode",
-          },
-          "WeekendContentItem" => Set {
-            "Node",
-            "ContentItem",
-            "ContentNode",
-            "Card",
-            "VideoNode",
-            "AudioNode",
-            "FeaturesNode",
-            "ContentParentNode",
-            "ContentChildNode",
-            "ThemedNode",
-            "LikableNode",
-            "ShareableNode",
-            "LiveNode",
-          },
-          "Url" => Set {
-            "Node",
-          },
-          "ActionListFeature" => Set {
-            "Node",
-            "Feature",
-          },
-          "HeroListFeature" => Set {
-            "Node",
-            "Feature",
-          },
-          "VerticalCardListFeature" => Set {
-            "Node",
-            "Feature",
-          },
-          "HorizontalCardListFeature" => Set {
-            "Node",
-            "Feature",
-          },
-          "TextFeature" => Set {
-            "Node",
-            "Feature",
-          },
-          "ScriptureFeature" => Set {
-            "Node",
-            "Feature",
-          },
-          "WebviewFeature" => Set {
-            "Node",
-            "Feature",
-          },
-          "PrayerListFeature" => Set {
-            "Node",
-            "Feature",
-          },
-          "ContentItem" => Set {},
-          "Media" => Set {},
-          "ImageMedia" => Set {
-            "Media",
-          },
-          "VideoMedia" => Set {
-            "Media",
-          },
-          "AudioMedia" => Set {
-            "Media",
-          },
-          "MediaSource" => Set {},
-          "ImageMediaSource" => Set {
-            "MediaSource",
-          },
-          "VideoMediaSource" => Set {
-            "MediaSource",
-          },
-          "AudioMediaSource" => Set {
-            "MediaSource",
-          },
-          "Sharable" => Set {},
-          "SharableContentItem" => Set {
-            "Sharable",
-          },
-          "SharableFeature" => Set {
-            "Sharable",
-          },
-          "Feature" => Set {},
-          "ContentNode" => Set {},
-          "Card" => Set {},
-          "VideoNode" => Set {},
-          "AudioNode" => Set {},
-          "FeaturesNode" => Set {},
-          "ContentParentNode" => Set {},
-          "ContentChildNode" => Set {},
-          "ThemedNode" => Set {},
-          "ProgressNode" => Set {},
-          "ScriptureNode" => Set {},
-          "LikableNode" => Set {},
-          "ShareableNode" => Set {},
-          "LiveNode" => Set {},
-        },
-        "typePolicies": Object {},
-        "usingPossibleTypes": true,
-      },
-      "storeReader": StoreReader {
-        "config": Object {
-          "addTypename": true,
-          "cache": [Circular],
-        },
-        "executeSelectionSet": [Function],
-        "executeSubSelectedArray": [Function],
-        "knownResults": WeakMap {},
-      },
-      "storeWriter": StoreWriter {
-        "cache": [Circular],
-        "reader": StoreReader {
-          "config": Object {
-            "addTypename": true,
-            "cache": [Circular],
-          },
-          "executeSelectionSet": [Function],
-          "executeSubSelectedArray": [Function],
-          "knownResults": WeakMap {},
-        },
-      },
-      "txCount": 0,
-      "typenameDocumentCache": Map {},
-      "watchDep": [Function],
-      "watches": Set {},
-    }
-  }
-  defaultOptions={
-    Object {
-      "query": Object {
-        "fetchPolicy": "no-cache",
-      },
-      "watchQuery": Object {
-        "fetchPolicy": "no-cache",
-      },
-    }
+    ]
   }
 >
-  <View
-    onLayout={[Function]}
-    style={
+  <BVLinearGradient
+    colors={
       Array [
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        },
-        Object {
-          "paddingBottom": 0,
-        },
+        4294967295,
+        4294506484,
       ]
     }
+    endPoint={
+      Object {
+        "x": 0.5,
+        "y": 1,
+      }
+    }
+    locations={null}
+    startPoint={
+      Object {
+        "x": 0.5,
+        "y": 0,
+      }
+    }
+    style={
+      Object {
+        "flex": 1,
+        "height": "100%",
+      }
+    }
   >
-    <BVLinearGradient
-      colors={
-        Array [
-          4294967295,
-          4294506484,
-        ]
-      }
-      endPoint={
-        Object {
-          "x": 0.5,
-          "y": 1,
-        }
-      }
-      locations={null}
-      startPoint={
-        Object {
-          "x": 0.5,
-          "y": 0,
-        }
-      }
+    <View
       style={
         Object {
-          "flex": 1,
           "height": "100%",
         }
       }
     >
-      <View
-        style={
-          Object {
-            "height": "100%",
-          }
-        }
-      >
-        <RCTScrollView>
-          <View>
-            <View
+      <RCTScrollView>
+        <View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
+              }
+            }
+          >
+            <Text
               style={
                 Object {
-                  "paddingHorizontal": 16,
-                  "paddingVertical": 16,
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
                 }
               }
             >
-              <Text
-                style={
-                  Object {
-                    "color": "#00676D",
-                    "fontFamily": "InterUI-Black",
-                    "fontSize": 36,
-                    "lineHeight": 41.4,
-                  }
+              Welcome!
+            </Text>
+            <Text
+              padded={true}
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
+                  "paddingBottom": 24,
+                  "paddingTop": 13.86,
                 }
-              >
-                Welcome!
-              </Text>
-              <Text
-                padded={true}
-                style={
-                  Object {
-                    "color": "#303030",
-                    "fontFamily": "InterUI-Medium",
-                    "fontSize": 14,
-                    "lineHeight": 21,
-                    "paddingBottom": 24,
-                    "paddingTop": 13.86,
-                  }
+              }
+            >
+              Every relationship starts with a name. Complete your profile to help us connect with you.
+            </Text>
+            <View
+              disabled={false}
+              style={
+                Object {
+                  "marginVertical": 16,
                 }
-              >
-                Every relationship starts with a name. Complete your profile to help us connect with you.
-              </Text>
-              <View
-                disabled={false}
-                style={
-                  Object {
-                    "marginVertical": 16,
+              }
+            >
+              <View>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "center",
+                    }
                   }
-                }
-              >
-                <View>
+                >
                   <View
                     style={
                       Object {
-                        "flexDirection": "row",
+                        "alignItems": "center",
                         "justifyContent": "center",
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "flex-end",
+                        "flex": 1,
                       }
                     }
                   >
                     <View
                       style={
                         Object {
-                          "alignItems": "center",
-                          "justifyContent": "center",
-                        }
-                      }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "flex-end",
-                          "flex": 1,
+                          "opacity": 0,
                         }
                       }
                     >
-                      <View
+                      <TextInput
+                        allowFontScaling={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        name="firstName"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        onSubmitEditing={[Function]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
                         style={
                           Object {
-                            "opacity": 0,
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
                           }
                         }
-                      >
-                        <TextInput
-                          allowFontScaling={true}
-                          editable={true}
-                          enablesReturnKeyAutomatically={true}
-                          name="firstName"
-                          onBlur={[Function]}
-                          onChangeText={[Function]}
-                          onFocus={[Function]}
-                          onSubmitEditing={[Function]}
-                          placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                          rejectResponderTermination={true}
-                          returnKeyType="next"
-                          style={
-                            Object {
-                              "color": "#303030",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 14,
-                              "height": 38,
-                              "paddingVertical": 0,
-                            }
-                          }
-                          textContentType="givenName"
-                          type="text"
-                          underlineColorAndroid="transparent"
-                        />
-                      </View>
-                      <View
-                        onLayout={[Function]}
-                        pointerEvents="none"
-                        style={
-                          Object {
-                            "bottom": 0,
-                            "justifyContent": "center",
-                            "opacity": 1,
-                            "position": "absolute",
-                            "top": 0,
-                            "transform": Array [
-                              Object {
-                                "scale": 1,
-                              },
-                              Object {
-                                "translateX": 0,
-                              },
-                              Object {
-                                "translateY": 0,
-                              },
-                            ],
-                          }
-                        }
-                      >
-                        <Text
-                          style={
-                            Object {
-                              "backgroundColor": "transparent",
-                              "color": "#505050",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 12,
-                              "lineHeight": 18,
-                              "paddingVertical": 4,
-                            }
-                          }
-                        >
-                          First Name
-                        </Text>
-                      </View>
+                        textContentType="givenName"
+                        type="text"
+                        underlineColorAndroid="transparent"
+                      />
                     </View>
                     <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
                       style={
                         Object {
-                          "alignItems": "center",
+                          "bottom": 0,
                           "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
                         }
                       }
-                    />
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 18,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        First Name
+                      </Text>
+                    </View>
                   </View>
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "right": 0,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "bottom": -0.5,
+                        "height": 0.5,
+                      }
+                    }
+                  />
                   <View
                     style={
                       Object {
                         "bottom": 0,
                         "left": 0,
                         "right": 0,
+                        "transform": Array [
+                          Object {
+                            "scaleX": 0.0001,
+                          },
+                        ],
                       }
                     }
                   >
                     <View
+                      hasError={false}
                       style={
                         Object {
-                          "backgroundColor": "#A5A5A5",
-                          "bottom": -0.5,
+                          "backgroundColor": "#17B582",
+                          "bottom": 0,
                           "height": 0.5,
                         }
                       }
                     />
-                    <View
-                      style={
-                        Object {
-                          "bottom": 0,
-                          "left": 0,
-                          "right": 0,
-                          "transform": Array [
-                            Object {
-                              "scaleX": 0.0001,
-                            },
-                          ],
-                        }
-                      }
-                    >
-                      <View
-                        hasError={false}
-                        style={
-                          Object {
-                            "backgroundColor": "#17B582",
-                            "bottom": 0,
-                            "height": 0.5,
-                          }
-                        }
-                      />
-                    </View>
                   </View>
                 </View>
               </View>
-              <View
-                disabled={false}
-                style={
-                  Object {
-                    "marginVertical": 16,
-                  }
+            </View>
+            <View
+              disabled={false}
+              style={
+                Object {
+                  "marginVertical": 16,
                 }
-              >
-                <View>
+              }
+            >
+              <View>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "center",
+                    }
+                  }
+                >
                   <View
                     style={
                       Object {
-                        "flexDirection": "row",
+                        "alignItems": "center",
                         "justifyContent": "center",
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "flex-end",
+                        "flex": 1,
                       }
                     }
                   >
                     <View
                       style={
                         Object {
-                          "alignItems": "center",
-                          "justifyContent": "center",
-                        }
-                      }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "flex-end",
-                          "flex": 1,
+                          "opacity": 0,
                         }
                       }
                     >
-                      <View
+                      <TextInput
+                        allowFontScaling={true}
+                        editable={true}
+                        enablesReturnKeyAutomatically={true}
+                        name="lastName"
+                        onBlur={[Function]}
+                        onChangeText={[Function]}
+                        onFocus={[Function]}
+                        onSubmitEditing={[Function]}
+                        placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                        rejectResponderTermination={true}
+                        returnKeyType="next"
                         style={
                           Object {
-                            "opacity": 0,
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 14,
+                            "height": 38,
+                            "paddingVertical": 0,
                           }
                         }
-                      >
-                        <TextInput
-                          allowFontScaling={true}
-                          editable={true}
-                          enablesReturnKeyAutomatically={true}
-                          name="lastName"
-                          onBlur={[Function]}
-                          onChangeText={[Function]}
-                          onFocus={[Function]}
-                          onSubmitEditing={[Function]}
-                          placeholderTextColor="rgba(48, 48, 48, 0.6)"
-                          rejectResponderTermination={true}
-                          returnKeyType="next"
-                          style={
-                            Object {
-                              "color": "#303030",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 14,
-                              "height": 38,
-                              "paddingVertical": 0,
-                            }
-                          }
-                          textContentType="familyName"
-                          type="text"
-                          underlineColorAndroid="transparent"
-                        />
-                      </View>
-                      <View
-                        onLayout={[Function]}
-                        pointerEvents="none"
-                        style={
-                          Object {
-                            "bottom": 0,
-                            "justifyContent": "center",
-                            "opacity": 1,
-                            "position": "absolute",
-                            "top": 0,
-                            "transform": Array [
-                              Object {
-                                "scale": 1,
-                              },
-                              Object {
-                                "translateX": 0,
-                              },
-                              Object {
-                                "translateY": 0,
-                              },
-                            ],
-                          }
-                        }
-                      >
-                        <Text
-                          style={
-                            Object {
-                              "backgroundColor": "transparent",
-                              "color": "#505050",
-                              "fontFamily": "InterUI-Bold",
-                              "fontSize": 12,
-                              "lineHeight": 18,
-                              "paddingVertical": 4,
-                            }
-                          }
-                        >
-                          Last Name
-                        </Text>
-                      </View>
+                        textContentType="familyName"
+                        type="text"
+                        underlineColorAndroid="transparent"
+                      />
                     </View>
                     <View
+                      onLayout={[Function]}
+                      pointerEvents="none"
                       style={
                         Object {
-                          "alignItems": "center",
+                          "bottom": 0,
                           "justifyContent": "center",
+                          "opacity": 1,
+                          "position": "absolute",
+                          "top": 0,
+                          "transform": Array [
+                            Object {
+                              "scale": 1,
+                            },
+                            Object {
+                              "translateX": 0,
+                            },
+                            Object {
+                              "translateY": 0,
+                            },
+                          ],
                         }
                       }
-                    />
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#505050",
+                            "fontFamily": "InterUI-Bold",
+                            "fontSize": 12,
+                            "lineHeight": 18,
+                            "paddingVertical": 4,
+                          }
+                        }
+                      >
+                        Last Name
+                      </Text>
+                    </View>
                   </View>
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "right": 0,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "bottom": -0.5,
+                        "height": 0.5,
+                      }
+                    }
+                  />
                   <View
                     style={
                       Object {
                         "bottom": 0,
                         "left": 0,
                         "right": 0,
+                        "transform": Array [
+                          Object {
+                            "scaleX": 0.0001,
+                          },
+                        ],
                       }
                     }
                   >
                     <View
+                      hasError={false}
                       style={
                         Object {
-                          "backgroundColor": "#A5A5A5",
-                          "bottom": -0.5,
+                          "backgroundColor": "#17B582",
+                          "bottom": 0,
                           "height": 0.5,
                         }
                       }
                     />
-                    <View
-                      style={
-                        Object {
-                          "bottom": 0,
-                          "left": 0,
-                          "right": 0,
-                          "transform": Array [
-                            Object {
-                              "scaleX": 0.0001,
-                            },
-                          ],
-                        }
-                      }
-                    >
-                      <View
-                        hasError={false}
-                        style={
-                          Object {
-                            "backgroundColor": "#17B582",
-                            "bottom": 0,
-                            "height": 0.5,
-                          }
-                        }
-                      />
-                    </View>
                   </View>
                 </View>
               </View>
             </View>
           </View>
-        </RCTScrollView>
+        </View>
+      </RCTScrollView>
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
+          }
+        }
+      >
         <View
+          accessible={true}
+          clickable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
+              "opacity": 1,
             }
           }
         >
           <View
-            accessible={true}
-            clickable={true}
-            isTVSelectable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
+            bordered={false}
+            disabled={true}
+            pill={false}
             style={
               Object {
-                "opacity": 1,
+                "alignItems": "center",
+                "backgroundColor": "#00676D",
+                "borderColor": "#00676D",
+                "borderRadius": 16,
+                "borderWidth": 2,
+                "elevation": 2,
+                "flexDirection": "row",
+                "height": 48,
+                "justifyContent": "center",
+                "opacity": 0.5,
+                "overflow": "hidden",
+                "paddingHorizontal": 16,
               }
             }
           >
-            <View
-              bordered={false}
-              disabled={true}
-              pill={false}
+            <Text
               style={
                 Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#00676D",
-                  "borderColor": "#00676D",
-                  "borderRadius": 16,
-                  "borderWidth": 2,
-                  "elevation": 2,
-                  "flexDirection": "row",
-                  "height": 48,
-                  "justifyContent": "center",
-                  "opacity": 0.5,
-                  "overflow": "hidden",
-                  "paddingHorizontal": 16,
+                  "color": "#FFFFFF",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
                 }
               }
             >
-              <Text
-                style={
-                  Object {
-                    "color": "#FFFFFF",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 24,
-                  }
-                }
-              >
-                Next
-              </Text>
-            </View>
+              Next
+            </Text>
           </View>
         </View>
       </View>
-    </BVLinearGradient>
-  </View>
+    </View>
+  </BVLinearGradient>
 </View>
 `;
