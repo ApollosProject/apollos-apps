@@ -18,7 +18,7 @@ exports[`withThemeMixin overrides styles without affecting siblings 1`] = `
     <Text
       style={
         Object {
-          "color": "#303030",
+          "color": "#00676D",
           "fontFamily": "InterUI-Black",
           "fontSize": 24,
           "lineHeight": 27.6,
@@ -30,7 +30,7 @@ exports[`withThemeMixin overrides styles without affecting siblings 1`] = `
     <Text
       style={
         Object {
-          "color": "#505050",
+          "color": "#17B582",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
           "lineHeight": 18,
@@ -64,7 +64,7 @@ exports[`withThemeMixin overrides styles without affecting siblings 1`] = `
     <Text
       style={
         Object {
-          "color": "#F8F7F4",
+          "color": "#00676D",
           "fontFamily": "InterUI-Black",
           "fontSize": 24,
           "lineHeight": 27.6,
@@ -76,7 +76,7 @@ exports[`withThemeMixin overrides styles without affecting siblings 1`] = `
     <Text
       style={
         Object {
-          "color": "#DBDBD9",
+          "color": "#17B582",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
           "lineHeight": 18,
@@ -110,7 +110,7 @@ exports[`withThemeMixin overrides styles without affecting siblings 1`] = `
     <Text
       style={
         Object {
-          "color": "#303030",
+          "color": "#00676D",
           "fontFamily": "InterUI-Black",
           "fontSize": 24,
           "lineHeight": 27.6,
@@ -122,7 +122,7 @@ exports[`withThemeMixin overrides styles without affecting siblings 1`] = `
     <Text
       style={
         Object {
-          "color": "#505050",
+          "color": "#17B582",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
           "lineHeight": 18,
@@ -167,7 +167,7 @@ exports[`withThemeMixin prunes null inputs 1`] = `
     <Text
       style={
         Object {
-          "color": "#303030",
+          "color": "#00676D",
           "fontFamily": "InterUI-Black",
           "fontSize": 24,
           "lineHeight": 27.6,
@@ -179,7 +179,64 @@ exports[`withThemeMixin prunes null inputs 1`] = `
     <Text
       style={
         Object {
-          "color": "#505050",
+          "color": "#17B582",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
+        }
+      }
+    >
+      Lorem ipsum dolor sit amet.
+    </Text>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sodales sit amet ante eu lobortis. In vitae faucibus lectus, at interdum nibh. Fusce suscipit tincidunt justo, vitae cursus mi fermentum eget.
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`withThemeMixin reverts to themeInput when mixin has null values 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "salmon",
+          "fontFamily": "InterUI-Black",
+          "fontSize": 24,
+          "lineHeight": 27.6,
+        }
+      }
+    >
+      Hi there!
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "blue",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
           "lineHeight": 18,
@@ -224,7 +281,7 @@ exports[`withThemeMixin works with dynamic props 1`] = `
     <Text
       style={
         Object {
-          "color": "#303030",
+          "color": "red",
           "fontFamily": "InterUI-Black",
           "fontSize": 24,
           "lineHeight": 27.6,
@@ -236,7 +293,7 @@ exports[`withThemeMixin works with dynamic props 1`] = `
     <Text
       style={
         Object {
-          "color": "#505050",
+          "color": "#17B582",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
           "lineHeight": 18,
@@ -270,7 +327,7 @@ exports[`withThemeMixin works with dynamic props 1`] = `
     <Text
       style={
         Object {
-          "color": "#F8F7F4",
+          "color": "blue",
           "fontFamily": "InterUI-Black",
           "fontSize": 24,
           "lineHeight": 27.6,
@@ -282,7 +339,7 @@ exports[`withThemeMixin works with dynamic props 1`] = `
     <Text
       style={
         Object {
-          "color": "#DBDBD9",
+          "color": "#17B582",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
           "lineHeight": 18,

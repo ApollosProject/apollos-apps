@@ -4,8 +4,8 @@ import { Query } from 'react-apollo';
 import { ErrorCard } from '@apollosproject/ui-kit';
 import { get } from 'lodash';
 
+import FeaturesFeedConnected from '../FeaturesFeedConnected';
 import GET_NODE_FEATURES from './getNodeFeatures';
-import NodeFeatures from './NodeFeatures';
 
 const NodeFeaturesConnected = ({ Component, nodeId, ...props }) => {
   if (!nodeId) return null;
@@ -21,14 +21,11 @@ const NodeFeaturesConnected = ({ Component, nodeId, ...props }) => {
         // TODO: set an optimistic response for this query to return a visually appeallying empty query so we can enable loading states
         if (loading) return null;
 
-        const features = get(node, 'features', []);
-        if (!features || !features.length) return null;
+        const featureFeedId = get(node, 'featureFeed.id');
 
-        return (
-          console.warn(
-            'NodeFeaturesConnected is deprecated. Please use FeaturesFeedConnected.'
-          ) || <Component nodeId={nodeId} features={features} {...props} />
-        );
+        if (!featureFeedId) return null;
+
+        return <Component featureFeedId={featureFeedId} {...props} />;
       }}
     </Query>
   );
@@ -40,7 +37,7 @@ NodeFeaturesConnected.propTypes = {
 };
 
 NodeFeaturesConnected.defaultProps = {
-  Component: NodeFeatures,
+  Component: FeaturesFeedConnected,
 };
 
 export default NodeFeaturesConnected;

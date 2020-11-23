@@ -25,6 +25,7 @@ export ContentParentFeedConnected, {
 export FeaturesFeedConnected, {
   featuresFeedComponentMapper,
   GET_FEED_FEATURES,
+  GET_FEATURE_FEED,
   FEATURE_FEED_ACTION_MAP,
 } from './FeaturesFeedConnected';
 export HeroListFeatureConnected, {
@@ -64,7 +65,6 @@ export MediaControlsConnected, {
   MediaControls,
 } from './MediaControlsConnected';
 export NodeFeaturesConnected, {
-  NodeFeatures,
   GET_NODE_FEATURES,
 } from './NodeFeaturesConnected';
 export NodeSingleConnected from './NodeSingleConnected';

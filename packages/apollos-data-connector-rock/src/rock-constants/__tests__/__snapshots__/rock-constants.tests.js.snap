@@ -19,11 +19,7 @@ Array [
   Array [
     "InteractionChannels?%24filter=%28Name%20eq%20%27Apollos%20App%20-%20Content%20Channel%20Item%27%29%20and%20%28UsesSession%20eq%20false%29%20and%20%28IsActive%20eq%20true%29%20and%20%28ComponentEntityTypeId%20eq%20101%29%20and%20%28ChannelTypeMediumValueId%20eq%20512%29&%24top=1",
     Object {},
-    Object {
-      "cacheOptions": Object {
-        "ttl": 86400,
-      },
-    },
+    Object {},
   ],
   Array [
     "/InteractionChannels/1",
@@ -61,11 +57,7 @@ Array [
   Array [
     "InteractionChannels?%24filter=%28Name%20eq%20%27Apollos%20App%20-%20Content%20Channel%20Item%27%29%20and%20%28UsesSession%20eq%20false%29%20and%20%28IsActive%20eq%20true%29%20and%20%28ComponentEntityTypeId%20eq%20101%29%20and%20%28ChannelTypeMediumValueId%20eq%20512%29&%24top=1",
     Object {},
-    Object {
-      "cacheOptions": Object {
-        "ttl": 86400,
-      },
-    },
+    Object {},
   ],
   Array [
     "/InteractionChannels/1",
@@ -73,16 +65,103 @@ Array [
   Array [
     "InteractionComponents?%24filter=%28Name%20eq%20%27Apollos%20Content%20Item%20-%207%27%29%20and%20%28ChannelId%20eq%201%29%20and%20%28EntityId%20eq%207%29&%24top=1",
     Object {},
-    Object {
-      "cacheOptions": Object {
-        "ttl": 86400,
-      },
-    },
+    Object {},
   ],
 ]
 `;
 
 exports[`RockConstants creates a content item Component if it doesn't exist 4`] = `
+Array [
+  Array [
+    "/InteractionChannels",
+    Object {
+      "ChannelTypeMediumValueId": 512,
+      "ComponentEntityTypeId": 101,
+      "IsActive": true,
+      "Name": "Apollos App - Content Channel Item",
+      "UsesSession": false,
+    },
+  ],
+]
+`;
+
+exports[`RockConstants creates a content item Component if it doesn't exist: cache get 1`] = `
+Array [
+  Array [
+    Object {
+      "key": Array [
+        "rockConstants",
+        "InteractionChannels",
+        "{\\"Name\\":\\"Apollos App - Content Channel Item\\",\\"UsesSession\\":false,\\"IsActive\\":true,\\"ComponentEntityTypeId\\":101,\\"ChannelTypeMediumValueId\\":512}",
+      ],
+    },
+  ],
+  Array [
+    Object {
+      "key": Array [
+        "rockConstants",
+        "InteractionComponents",
+        "{\\"Name\\":\\"Apollos Content Item - 7\\",\\"ChannelId\\":1,\\"EntityId\\":7}",
+      ],
+    },
+  ],
+]
+`;
+
+exports[`RockConstants creates a content item Component if it doesn't exist: cache set 1`] = `
+Array [
+  Array [
+    Object {
+      "data": "{\\"id\\":1}",
+      "key": Array [
+        "rockConstants",
+        "InteractionChannels",
+        "{\\"Name\\":\\"Apollos App - Content Channel Item\\",\\"UsesSession\\":false,\\"IsActive\\":true,\\"ComponentEntityTypeId\\":101,\\"ChannelTypeMediumValueId\\":512}",
+      ],
+    },
+  ],
+  Array [
+    Object {
+      "data": "[]",
+      "key": Array [
+        "rockConstants",
+        "InteractionComponents",
+        "{\\"Name\\":\\"Apollos Content Item - 7\\",\\"ChannelId\\":1,\\"EntityId\\":7}",
+      ],
+    },
+  ],
+]
+`;
+
+exports[`RockConstants creates a content item Component w/ InteractionChannelId on new rock versions 1`] = `Array []`;
+
+exports[`RockConstants creates a content item Component w/ InteractionChannelId on new rock versions 2`] = `
+Array [
+  Array [
+    "ContentItem",
+  ],
+]
+`;
+
+exports[`RockConstants creates a content item Component w/ InteractionChannelId on new rock versions 3`] = `
+Array [
+  Array [
+    "InteractionChannels?%24filter=%28Name%20eq%20%27Apollos%20App%20-%20Content%20Channel%20Item%27%29%20and%20%28UsesSession%20eq%20false%29%20and%20%28IsActive%20eq%20true%29%20and%20%28ComponentEntityTypeId%20eq%20101%29%20and%20%28ChannelTypeMediumValueId%20eq%20512%29&%24top=1",
+    Object {},
+    Object {},
+  ],
+  Array [
+    "/InteractionChannels/1",
+  ],
+  Array [
+    "InteractionComponents?%24filter=%28Name%20eq%20%27Apollos%20Content%20Item%20-%207%27%29%20and%20%28InteractionChannelId%20eq%201%29%20and%20%28EntityId%20eq%207%29&%24top=1",
+    Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`RockConstants creates a content item Component w/ InteractionChannelId on new rock versions 4`] = `
 Array [
   Array [
     "/InteractionChannels",
@@ -188,11 +267,7 @@ Array [
   Array [
     "InteractionChannels?%24filter=%28Name%20eq%20%27Apollos%20App%20-%20Content%20Channel%20Item%27%29%20and%20%28UsesSession%20eq%20false%29%20and%20%28IsActive%20eq%20true%29%20and%20%28ComponentEntityTypeId%20eq%20101%29%20and%20%28ChannelTypeMediumValueId%20eq%20512%29&%24top=1",
     Object {},
-    Object {
-      "cacheOptions": Object {
-        "ttl": 86400,
-      },
-    },
+    Object {},
   ],
 ]
 `;
@@ -208,20 +283,93 @@ Array [
   Array [
     "InteractionChannels?%24filter=%28Name%20eq%20%27Apollos%20App%20-%20Content%20Channel%20Item%27%29%20and%20%28UsesSession%20eq%20false%29%20and%20%28IsActive%20eq%20true%29%20and%20%28ComponentEntityTypeId%20eq%20101%29%20and%20%28ChannelTypeMediumValueId%20eq%20512%29&%24top=1",
     Object {},
-    Object {
-      "cacheOptions": Object {
-        "ttl": 86400,
-      },
-    },
+    Object {},
   ],
   Array [
     "InteractionComponents?%24filter=%28Name%20eq%20%27Apollos%20Content%20Item%20-%207%27%29%20and%20%28ChannelId%20eq%201%29%20and%20%28EntityId%20eq%207%29&%24top=1",
     Object {},
+    Object {},
+  ],
+]
+`;
+
+exports[`RockConstants finds the content item Component if it exists: cache get 1`] = `
+Array [
+  Array [
     Object {
-      "cacheOptions": Object {
-        "ttl": 86400,
-      },
+      "key": Array [
+        "rockConstants",
+        "InteractionChannels",
+        "{\\"Name\\":\\"Apollos App - Content Channel Item\\",\\"UsesSession\\":false,\\"IsActive\\":true,\\"ComponentEntityTypeId\\":101,\\"ChannelTypeMediumValueId\\":512}",
+      ],
+    },
+  ],
+  Array [
+    Object {
+      "key": Array [
+        "rockConstants",
+        "InteractionComponents",
+        "{\\"Name\\":\\"Apollos Content Item - 7\\",\\"ChannelId\\":1,\\"EntityId\\":7}",
+      ],
     },
   ],
 ]
 `;
+
+exports[`RockConstants finds the content item Component if it exists: cache set 1`] = `
+Array [
+  Array [
+    Object {
+      "data": "{\\"id\\":1}",
+      "key": Array [
+        "rockConstants",
+        "InteractionChannels",
+        "{\\"Name\\":\\"Apollos App - Content Channel Item\\",\\"UsesSession\\":false,\\"IsActive\\":true,\\"ComponentEntityTypeId\\":101,\\"ChannelTypeMediumValueId\\":512}",
+      ],
+    },
+  ],
+  Array [
+    Object {
+      "data": "{\\"id\\":1}",
+      "key": Array [
+        "rockConstants",
+        "InteractionComponents",
+        "{\\"Name\\":\\"Apollos Content Item - 7\\",\\"ChannelId\\":1,\\"EntityId\\":7}",
+      ],
+    },
+  ],
+]
+`;
+
+exports[`RockConstants pulls the item component from the cache, when it exists 1`] = `
+Object {
+  "id": "123",
+}
+`;
+
+exports[`RockConstants pulls the item component from the cache, when it exists 2`] = `Array []`;
+
+exports[`RockConstants pulls the item component from the cache, when it exists: cache get 1`] = `
+Array [
+  Array [
+    Object {
+      "key": Array [
+        "rockConstants",
+        "InteractionChannels",
+        "{\\"Name\\":\\"Apollos App - Content Channel Item\\",\\"UsesSession\\":false,\\"IsActive\\":true,\\"ComponentEntityTypeId\\":101,\\"ChannelTypeMediumValueId\\":512}",
+      ],
+    },
+  ],
+  Array [
+    Object {
+      "key": Array [
+        "rockConstants",
+        "InteractionComponents",
+        "{\\"Name\\":\\"Apollos Content Item - 7\\",\\"ChannelId\\":\\"123\\",\\"EntityId\\":7}",
+      ],
+    },
+  ],
+]
+`;
+
+exports[`RockConstants pulls the item component from the cache, when it exists: cache set 1`] = `Array []`;

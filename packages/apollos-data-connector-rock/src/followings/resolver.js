@@ -66,6 +66,7 @@ const resolvers = {
   UniversalContentItem: defaultContentItemResolvers,
   DevotionalContentItem: defaultContentItemResolvers,
   ContentSeriesContentItem: defaultContentItemResolvers,
+  WeekendContentItem: defaultContentItemResolvers,
   MediaContentItem: defaultContentItemResolvers,
 };
 

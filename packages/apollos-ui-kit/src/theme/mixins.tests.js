@@ -7,11 +7,15 @@ import { H3, H6, BodyText } from '../typography';
 
 import { ThemeProvider } from './';
 import { withThemeMixin } from './mixins';
+import styled from '../styled';
+
+const StyledH3 = styled(({ theme: { colors: { primary }}}) => ({ color: primary }))(H3);
+const StyledH6 = styled(({ theme: { colors: { secondary }}}) => ({ color: secondary }))(H6);
 
 const TypeExample = () => (
   <FlexedView>
-    <H3>Hi there!</H3>
-    <H6>Lorem ipsum dolor sit amet.</H6>
+    <StyledH3>Hi there!</StyledH3>
+    <StyledH6>Lorem ipsum dolor sit amet.</StyledH6>
     <BodyText>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sodales
       sit amet ante eu lobortis. In vitae faucibus lectus, at interdum nibh.
@@ -28,6 +32,13 @@ const TypeExampleWithNullInputs = withThemeMixin({
   type: 'light',
   colors: {
     primary: null,
+    secondary: null,
+  },
+})(TypeExample);
+
+const TypeExampleWithSomeColors = withThemeMixin({
+  colors: {
+    primary: 'salmon',
     secondary: null,
   },
 })(TypeExample);
@@ -68,6 +79,16 @@ describe('withThemeMixin', () => {
       <ThemeProvider>
         <FlexedView>
           <TypeExampleWithNullInputs />
+        </FlexedView>
+      </ThemeProvider>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('reverts to themeInput when mixin has null values', () => {
+    const tree = renderer.create(
+      <ThemeProvider themeInput={{ colors: { primary: 'red', secondary: 'blue' }}}>
+        <FlexedView>
+          <TypeExampleWithSomeColors />
         </FlexedView>
       </ThemeProvider>
     );

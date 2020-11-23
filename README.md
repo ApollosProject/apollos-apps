@@ -61,9 +61,21 @@ Run simply run `yarn start` to start up the server and app. If you need to unlin
 
 We publish to both the standard NPM registry and Github Packages. Follow these steps.
 
+### GitHub Package Registry
+
+Push a preliminary package version to Github for aesthetic purposes. We won't tag or push the actual code yet. First add an .npmrc file to the root of this directory that looks like this:
+
+```
+//npm.pkg.github.com/:_authToken=TOKEN
+```
+
+Get the `TOKEN` from creating a Personal Access Token in your Github settings and give it read/write access to packages.
+
+Now run the same `yarn release:<XXX>` command you will run for NPM (from below) but add `--registry "https://npm.pkg.github.com" --no-git-tag-version"`
+
 ### NPM.js Registry
 
-First add an .npmrc file to the root of this directory that looks like this:
+Change your .npmrc file to this:
 
 ```
 //registry.npmjs.org/:_authToken=TOKEN
@@ -104,13 +116,3 @@ yarn add @apollosproject/package@next
 ```
 yarn release
 ```
-
-### GitHub Package Registry
-
-Change your .npmrc file to this:
-
-```
-//npm.pkg.github.com/:_authToken=TOKEN
-```
-
-Now run the same `yarn release:<XXX>` command you did before but add `--registry "https://npm.pkg.github.com"`
