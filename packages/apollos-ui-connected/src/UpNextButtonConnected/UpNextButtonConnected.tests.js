@@ -5,7 +5,8 @@ import {
   Providers,
   renderWithApolloData,
   WithReactNavigator,
-} from '../testUtils';
+} from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 
 import getContentUpNext from './getContentUpNext';
 
@@ -23,6 +24,7 @@ const noChildrenMock = {
         __typename: 'ContentSeriesContentItem',
         upNext: null,
         childContentItemsConnection: {
+          __typename: 'ContentItemsConnection',
           edges: [],
         },
       },
@@ -113,7 +115,7 @@ describe('the UpNextButtonConnected', () => {
   it('renders a loading state when loading', async () => {
     const tree = renderer.create(
       WithReactNavigator(
-        <Providers mocks={[noChildrenMock]}>
+        <Providers MockedProvider={MockedProvider} mocks={[noChildrenMock]}>
           <UpNextButtonConnected contentId={'1'} navigation={navigation} />
         </Providers>
       )
@@ -123,7 +125,7 @@ describe('the UpNextButtonConnected', () => {
   it('renders nothing when on an empty series', async () => {
     const tree = await renderWithApolloData(
       WithReactNavigator(
-        <Providers mocks={[noChildrenMock]}>
+        <Providers MockedProvider={MockedProvider} mocks={[noChildrenMock]}>
           <UpNextButtonConnected contentId={'1'} navigation={navigation} />
         </Providers>
       )
@@ -133,7 +135,7 @@ describe('the UpNextButtonConnected', () => {
   it('renders a finished state when finished', async () => {
     const tree = await renderWithApolloData(
       WithReactNavigator(
-        <Providers mocks={[finishedMock]}>
+        <Providers MockedProvider={MockedProvider} mocks={[finishedMock]}>
           <UpNextButtonConnected contentId={'1'} navigation={navigation} />
         </Providers>
       )
@@ -143,7 +145,7 @@ describe('the UpNextButtonConnected', () => {
   it('renders a continue state when in progress', async () => {
     const tree = await renderWithApolloData(
       WithReactNavigator(
-        <Providers mocks={[upNextMock]}>
+        <Providers MockedProvider={MockedProvider} mocks={[upNextMock]}>
           <UpNextButtonConnected contentId={'1'} navigation={navigation} />
         </Providers>
       )
@@ -153,7 +155,10 @@ describe('the UpNextButtonConnected', () => {
   it('renders a continue state even with no children', async () => {
     const tree = await renderWithApolloData(
       WithReactNavigator(
-        <Providers mocks={[upNextNoChildrenMock]}>
+        <Providers
+          MockedProvider={MockedProvider}
+          mocks={[upNextNoChildrenMock]}
+        >
           <UpNextButtonConnected contentId={'1'} navigation={navigation} />
         </Providers>
       )
@@ -163,7 +168,7 @@ describe('the UpNextButtonConnected', () => {
   it('renders a loading state state without a contentId', async () => {
     const tree = await renderWithApolloData(
       WithReactNavigator(
-        <Providers mocks={[upNextMock]}>
+        <Providers MockedProvider={MockedProvider} mocks={[upNextMock]}>
           <UpNextButtonConnected navigation={navigation} />
         </Providers>
       )
@@ -173,7 +178,7 @@ describe('the UpNextButtonConnected', () => {
   it('accepts doneText, continueText and Component as props, ', async () => {
     const tree = await renderWithApolloData(
       WithReactNavigator(
-        <Providers mocks={[upNextMock]}>
+        <Providers MockedProvider={MockedProvider} mocks={[upNextMock]}>
           <UpNextButtonConnected
             finishedText={"You're done forever!"}
             continueText="Hold on cowboy, you got more to do"

@@ -23,9 +23,9 @@ export default class Interactions extends RockApolloDataSource {
   async updateSeriesStarted({ id }) {
     const { ContentItem } = this.context.dataSources;
     // Get all the parents
-    const seriesParents = await (await ContentItem.getCursorByChildContentItemId(
-      id
-    )).get();
+    const seriesParents = await (
+      await ContentItem.getCursorByChildContentItemId(id)
+    ).get();
     return Promise.all(
       seriesParents.map(async (seriesParent) => {
         // Check to see if we have started the series before
@@ -94,9 +94,7 @@ export default class Interactions extends RockApolloDataSource {
       Operation: operationName,
       InteractionDateTime: new Date().toJSON(),
       InteractionSummary: `${operationName} - ${itemTitle}`,
-      InteractionData: `${
-        ApollosConfig.APP.DEEP_LINK_HOST
-      }://Interactions/ContentSingle?itemId=${itemId}`,
+      InteractionData: `${ApollosConfig.APP.DEEP_LINK_HOST}://Interactions/ContentSingle?itemId=${itemId}`,
     });
 
     return this.get(`/Interactions/${interactionId}`);
@@ -131,9 +129,7 @@ export default class Interactions extends RockApolloDataSource {
           this.request()
             .filterOneOf(actions.map((a) => `Operation eq '${a}'`))
             .andFilter(
-              `(ForeignKey eq '${nodeId}') and (PersonAliasId eq ${
-                currentUser.primaryAliasId
-              })`
+              `(ForeignKey eq '${nodeId}') and (PersonAliasId eq ${currentUser.primaryAliasId})`
             )
             .get()
         )

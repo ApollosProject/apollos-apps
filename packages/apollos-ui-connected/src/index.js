@@ -59,7 +59,6 @@ export LikedContentFeedConnected, {
 } from './LikedContentFeedConnected';
 export { LiveConsumer, LiveProvider } from './live';
 export NodeFeaturesConnected, {
-  NodeFeatures,
   GET_NODE_FEATURES,
 } from './NodeFeaturesConnected';
 export NodeSingleConnected from './NodeSingleConnected';

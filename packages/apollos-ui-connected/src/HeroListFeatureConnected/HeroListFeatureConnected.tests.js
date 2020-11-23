@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Providers, renderWithApolloData } from '../testUtils';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 
 import GET_HERO_LIST_FEATURE from './getHeroListFeature';
 
@@ -119,7 +120,7 @@ const noActionsOrHeroMock = {
 describe('The HeroListFeatureConnected component', () => {
   it('should render', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={[mock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <HeroListFeatureConnected
           refetchRef={jest.fn()}
           featureId={'HeroListFeature:123'}
@@ -130,7 +131,7 @@ describe('The HeroListFeatureConnected component', () => {
   });
   it('should render without a hero card', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={[noHeroCardMock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[noHeroCardMock]}>
         <HeroListFeatureConnected
           refetchRef={jest.fn()}
           featureId={'HeroListFeature:123'}
@@ -141,7 +142,7 @@ describe('The HeroListFeatureConnected component', () => {
   });
   it('should render without actions', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={[noActionsMock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[noActionsMock]}>
         <HeroListFeatureConnected
           refetchRef={jest.fn()}
           featureId={'HeroListFeature:123'}
@@ -152,7 +153,7 @@ describe('The HeroListFeatureConnected component', () => {
   });
   it('should not render without actions or hero', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={[noActionsOrHeroMock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[noActionsOrHeroMock]}>
         <HeroListFeatureConnected
           refetchRef={jest.fn()}
           featureId={'HeroListFeature:123'}
@@ -163,7 +164,7 @@ describe('The HeroListFeatureConnected component', () => {
   });
   it('should render a loading state when isLoading', async () => {
     const tree = renderer.create(
-      <Providers>
+      <Providers MockedProvider={MockedProvider}>
         <HeroListFeatureConnected
           refetchRef={jest.fn()}
           featureId={'HeroListFeature:123'}

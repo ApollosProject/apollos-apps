@@ -1,12 +1,13 @@
 {
   "name": "@apollosproject/ui-media-player",
-  "version": "0.1.0",
   "description": "An opinionated media player for react-native apps from The Apollos Project",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
   "react-native": "src/index",
   "source": "src/index",
+  "repository": "git://github.com/apollosproject/apollos-apps.git",
+  "version": "1.7.0",
   "files": [
     "src",
     "lib",
@@ -67,6 +68,7 @@
   "jest": {
     "preset": "react-native",
     "collectCoverage": true,
+    "coverageReporters": ["json", "lcovonly", "clover"],
     "transformIgnorePatterns": [
       "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@apollosproject))"
     ],

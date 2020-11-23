@@ -9,7 +9,7 @@ import {
   styled,
   StretchyView,
 } from '@apollosproject/ui-kit';
-import { ApolloStorybookDecorator } from '../testUtils';
+import { ApolloStorybookDecorator } from '@apollosproject/ui-test-utils';
 import ContentNodeConnected from './ContentNodeConnected';
 
 const FlexedScrollView = styled({ flex: 1 })(Animated.ScrollView);

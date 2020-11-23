@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { BackgroundView, CenteredView } from '@apollosproject/ui-kit';
-import { ApolloStorybookDecorator } from '../testUtils';
+import { ApolloStorybookDecorator } from '@apollosproject/ui-test-utils';
 import ShareButtonConnected from './ShareButtonConnected';
 
 const mocks = {

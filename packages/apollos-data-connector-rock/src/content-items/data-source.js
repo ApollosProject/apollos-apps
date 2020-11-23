@@ -277,9 +277,9 @@ export default class ContentItem extends RockApolloDataSource {
     // If no image, check parent for image:
     if (!image) {
       // The cursor returns a promise which returns a promisee, hence th edouble eawait.
-      const parentItems = await (await this.getCursorByChildContentItemId(
-        root.id
-      )).get();
+      const parentItems = await (
+        await this.getCursorByChildContentItemId(root.id)
+      ).get();
 
       if (parentItems.length) {
         const validParentImages = parentItems
@@ -540,16 +540,18 @@ export default class ContentItem extends RockApolloDataSource {
     // We need to make sure we don't include the campaign channels.
     // We could also consider doing this using a whitelist.
     // This also may be part of a broader conversation about how we identify the true parent of a content item
-    const blacklistedIds = (await this.byContentChannelIds(
-      ROCK_MAPPINGS.CAMPAIGN_CHANNEL_IDS
-    ).get()).map(({ id }) => `${id}`);
+    const blacklistedIds = (
+      await this.byContentChannelIds(ROCK_MAPPINGS.CAMPAIGN_CHANNEL_IDS).get()
+    ).map(({ id }) => `${id}`);
 
-    const completedIds = (await Promise.all(
-      ids.map(async (id) => ({
-        id,
-        percent: await this.getPercentComplete({ id }),
-      }))
-    ))
+    const completedIds = (
+      await Promise.all(
+        ids.map(async (id) => ({
+          id,
+          percent: await this.getPercentComplete({ id }),
+        }))
+      )
+    )
       .filter(({ percent }) => percent === 100)
       .map(({ id }) => id);
 

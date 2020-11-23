@@ -242,7 +242,7 @@ PODS:
     - React-cxxreact (= 0.63.2)
     - React-jsi (= 0.63.2)
   - React-jsinspector (0.63.2)
-  - react-native-apollos-player (0.1.0):
+  - react-native-apollos-player (1.7.0):
     - React
   - react-native-config (0.11.7):
     - React
@@ -333,16 +333,16 @@ PODS:
   - RNAnalytics (1.1.5):
     - AstronomerAnalytics
     - React
-  - RNCAsyncStorage (1.12.0):
-    - React
+  - RNCAsyncStorage (1.12.1):
+    - React-Core
   - RNCMaskedView (0.1.10):
     - React
-  - RNDateTimePicker (3.0.2):
-    - React
+  - RNDateTimePicker (3.0.6):
+    - React-Core
   - RNDeviceInfo (4.0.1):
     - React
-  - RNGestureHandler (1.8.0):
-    - React
+  - RNGestureHandler (1.9.0):
+    - React-Core
   - RNInAppBrowser (3.3.4):
     - React
   - RNPermissions (2.0.5):
@@ -578,7 +578,7 @@ SPEC CHECKSUMS:
   React-jsi: 54245e1d5f4b690dec614a73a3795964eeef13a8
   React-jsiexecutor: 8ca588cc921e70590820ce72b8789b02c67cce38
   React-jsinspector: b14e62ebe7a66e9231e9581279909f2fc3db6606
-  react-native-apollos-player: 24cffb97092d10570f15faf0a8b900c7d9f93e81
+  react-native-apollos-player: 3dc851f3f2166cdf5efb73fea8dc5e3226c89438
   react-native-config: 55548054279d92e0e4566ea15a8b9b81028ec342
   react-native-geolocation: c956aeb136625c23e0dce0467664af2c437888c9
   react-native-image-picker: e6e06d4315e3c85bad17e4b2002cd29f11d202c8
@@ -601,11 +601,11 @@ SPEC CHECKSUMS:
   ReactCommon: a0a1edbebcac5e91338371b72ffc66aa822792ce
   RNAirplay: 75777dd55dafbd3687703c3eb9c290ea6cc43248
   RNAnalytics: 360b0680753d0e1d37152a25d47aa34a015cab72
-  RNCAsyncStorage: 2a692bcb9b69b76a2f1a95f33db057129700af64
+  RNCAsyncStorage: b03032fdbdb725bea0bd9e5ec5a7272865ae7398
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
-  RNDateTimePicker: a84d2b439666c9243d42a8396c588d4d1d36e3f3
+  RNDateTimePicker: 120f8d08b19dd50c0308d30a07c1982e4618e9ad
   RNDeviceInfo: 687c1b2ab6d86ff1ca1208783320cd144138c7f2
-  RNGestureHandler: 7a5833d0f788dbd107fbb913e09aa0c1ff333c39
+  RNGestureHandler: 9b7e605a741412e20e13c512738a31bd1611759b
   RNInAppBrowser: 9936b2e23ab7ed9b6ac938eb1c4a656b95292e11
   RNPermissions: c40561e25ae1d4ca4ad987bde1026f9294a89f74
   RNScreens: c526239bbe0e957b988dacc8d75ac94ec9cb19da

@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import gql from 'graphql-tag';
-import { useQuery, useMutation } from '@apollo/react-hooks';
+import { useQuery, useMutation } from '@apollo/client';
 import PropTypes from 'prop-types';
 
 import { AnalyticsContext } from '@apollosproject/ui-analytics';
@@ -50,8 +50,9 @@ const AddPrayerScreenConnected = ({
   const [prayer, setPrayer] = useState('');
 
   const [addPrayer, { loading, data }] = useMutation(ADD_PRAYER, {
-    onCompleted: () =>
-      track({ eventName: 'PrayerAdded', properties: { prayer } }),
+    onCompleted: () => {
+      track({ eventName: 'PrayerAdded', properties: { prayer } });
+    },
   });
 
   const completed = data?.addPrayer;
@@ -74,6 +75,7 @@ const AddPrayerScreenConnected = ({
           avatar={photo || null}
           title={title}
           onPrayerChangeText={setPrayer}
+          completed={completed}
         />
       </PrayerView>
       {completed ? (

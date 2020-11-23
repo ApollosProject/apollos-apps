@@ -6,8 +6,9 @@ import {
   renderWithApolloData,
   Providers,
   WithReactNavigator,
-} from '../testUtils';
+} from '@apollosproject/ui-test-utils';
 
+import { MockedProvider } from '@apollo/client/testing';
 import GET_SEARCH_RESULTS from './getSearchResults';
 import SearchFeed from '.';
 
@@ -291,7 +292,10 @@ describe('The SearchFeed component', () => {
       // name="Home"
       // component={() => (
       WithReactNavigator(
-        <Providers mocks={[mockFeedData, ...mockSearchResultsCardData]}>
+        <Providers
+          MockedProvider={MockedProvider}
+          mocks={[mockFeedData, ...mockSearchResultsCardData]}
+        >
           <SearchFeed searchText={'Love'} navigation={{ navigation: {} }} />
         </Providers>
       )
