@@ -82,7 +82,6 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
   initialNumToRender={10}
   keyExtractor={[Function]}
   maxToRenderPerBatch={10}
-  numColumns={1}
   onContentSizeChange={[Function]}
   onEndReachedThreshold={2}
   onLayout={[Function]}
@@ -114,8 +113,7 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -268,8 +266,7 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -352,8 +349,7 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -436,8 +432,7 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -520,8 +515,7 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -588,8 +582,7 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -656,8 +649,7 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -724,8 +716,7 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -792,8 +783,7 @@ exports[`The AvatarList component should accept an onPressAdd function 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -924,7 +914,6 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
   initialNumToRender={10}
   keyExtractor={[Function]}
   maxToRenderPerBatch={10}
-  numColumns={1}
   onContentSizeChange={[Function]}
   onEndReachedThreshold={2}
   onLayout={[Function]}
@@ -954,8 +943,7 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1038,8 +1026,7 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1122,8 +1109,7 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1206,8 +1192,7 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1274,8 +1259,7 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1342,8 +1326,7 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1410,8 +1393,7 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1478,8 +1460,7 @@ exports[`The AvatarList component should accept an onPressAvatar function 1`] = 
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1610,7 +1591,6 @@ exports[`The AvatarList component should render 1`] = `
   initialNumToRender={10}
   keyExtractor={[Function]}
   maxToRenderPerBatch={10}
-  numColumns={1}
   onContentSizeChange={[Function]}
   onEndReachedThreshold={2}
   onLayout={[Function]}
@@ -1640,8 +1620,7 @@ exports[`The AvatarList component should render 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1724,8 +1703,7 @@ exports[`The AvatarList component should render 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1808,8 +1786,7 @@ exports[`The AvatarList component should render 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1892,8 +1869,7 @@ exports[`The AvatarList component should render 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1960,8 +1936,7 @@ exports[`The AvatarList component should render 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -2028,8 +2003,7 @@ exports[`The AvatarList component should render 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -2096,8 +2070,7 @@ exports[`The AvatarList component should render 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -2164,8 +2137,7 @@ exports[`The AvatarList component should render 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -2303,7 +2275,6 @@ exports[`The AvatarList component should render a loading state 1`] = `
   initialNumToRender={10}
   keyExtractor={[Function]}
   maxToRenderPerBatch={10}
-  numColumns={1}
   onContentSizeChange={[Function]}
   onEndReachedThreshold={2}
   onLayout={[Function]}
@@ -2335,8 +2306,7 @@ exports[`The AvatarList component should render a loading state 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2385,8 +2355,7 @@ exports[`The AvatarList component should render a loading state 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -2543,8 +2512,7 @@ exports[`The AvatarList component should render a loading state 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -2701,8 +2669,7 @@ exports[`The AvatarList component should render a loading state 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -2859,8 +2826,7 @@ exports[`The AvatarList component should render a loading state 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -3017,8 +2983,7 @@ exports[`The AvatarList component should render a loading state 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -3175,8 +3140,7 @@ exports[`The AvatarList component should render a loading state 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -3333,8 +3297,7 @@ exports[`The AvatarList component should render a loading state 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -3491,8 +3454,7 @@ exports[`The AvatarList component should render a loading state 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}

@@ -7,7 +7,9 @@
     ],
     "nohoist": [
       "**/react-native",
-      "**/react-native-svg"
+      "**/react-native-*",
+      "**/rn-placeholder",
+      "**/@react-native-community/*"
     ]
   },
   "scripts": {

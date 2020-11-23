@@ -3,8 +3,7 @@
 exports[`The Button component should render 1`] = `
 <View
   accessible={true}
-  clickable={true}
-  isTVSelectable={true}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -58,8 +57,7 @@ exports[`The Button component should render 1`] = `
 exports[`The Button component should render a Tertiary button 1`] = `
 <View
   accessible={true}
-  clickable={true}
-  isTVSelectable={true}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -113,8 +111,7 @@ exports[`The Button component should render a Tertiary button 1`] = `
 exports[`The Button component should render a bordered button 1`] = `
 <View
   accessible={true}
-  clickable={true}
-  isTVSelectable={true}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -167,8 +164,7 @@ exports[`The Button component should render a bordered button 1`] = `
 exports[`The Button component should render a disabled button 1`] = `
 <View
   accessible={true}
-  clickable={true}
-  isTVSelectable={true}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -222,8 +218,7 @@ exports[`The Button component should render a disabled button 1`] = `
 exports[`The Button component should render a ghost button 1`] = `
 <View
   accessible={true}
-  clickable={true}
-  isTVSelectable={true}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -276,8 +271,7 @@ exports[`The Button component should render a ghost button 1`] = `
 exports[`The Button component should render a ghost pill button 1`] = `
 <View
   accessible={true}
-  clickable={true}
-  isTVSelectable={true}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -330,8 +324,7 @@ exports[`The Button component should render a ghost pill button 1`] = `
 exports[`The Button component should render a loading state 1`] = `
 <View
   accessible={true}
-  clickable={true}
-  isTVSelectable={true}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -379,8 +372,7 @@ exports[`The Button component should render a loading state 1`] = `
 exports[`The Button component should render a pill button 1`] = `
 <View
   accessible={true}
-  clickable={true}
-  isTVSelectable={true}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -434,8 +426,7 @@ exports[`The Button component should render a pill button 1`] = `
 exports[`The Button component should render a primary button 1`] = `
 <View
   accessible={true}
-  clickable={true}
-  isTVSelectable={true}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -489,8 +480,7 @@ exports[`The Button component should render a primary button 1`] = `
 exports[`The Button component should render a secondary button 1`] = `
 <View
   accessible={true}
-  clickable={true}
-  isTVSelectable={true}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -544,8 +534,7 @@ exports[`The Button component should render a secondary button 1`] = `
 exports[`The Button component should render as default type 1`] = `
 <View
   accessible={true}
-  clickable={true}
-  isTVSelectable={true}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}

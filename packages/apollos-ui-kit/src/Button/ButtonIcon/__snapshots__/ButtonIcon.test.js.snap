@@ -3,8 +3,7 @@
 exports[`The ButtonIcon component should render 1`] = `
 <View
   accessible={true}
-  clickable={true}
-  isTVSelectable={true}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -151,8 +150,7 @@ exports[`The ButtonIcon component should render 1`] = `
 exports[`The ButtonIcon component should render additional styles 1`] = `
 <View
   accessible={true}
-  clickable={true}
-  isTVSelectable={true}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -300,8 +298,7 @@ exports[`The ButtonIcon component should render additional styles 1`] = `
 exports[`The ButtonIcon component should render disabled 1`] = `
 <View
   accessible={true}
-  clickable={true}
-  isTVSelectable={true}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -448,8 +445,7 @@ exports[`The ButtonIcon component should render disabled 1`] = `
 exports[`The ButtonIcon component should render with custom padding 1`] = `
 <View
   accessible={true}
-  clickable={true}
-  isTVSelectable={true}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}

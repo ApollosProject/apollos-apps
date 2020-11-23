@@ -328,8 +328,7 @@ exports[`The ModalView component should render a custom close action 1`] = `
     </RNSVGSvgView>
     <View
       accessible={true}
-      clickable={true}
-      isTVSelectable={true}
+      focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}

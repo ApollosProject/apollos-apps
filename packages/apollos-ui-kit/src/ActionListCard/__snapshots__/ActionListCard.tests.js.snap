@@ -49,7 +49,7 @@ exports[`ActionListCard should render 5 items 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -147,7 +147,7 @@ exports[`ActionListCard should render 5 items 1`] = `
       </View>
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -245,7 +245,7 @@ exports[`ActionListCard should render 5 items 1`] = `
       </View>
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -343,7 +343,7 @@ exports[`ActionListCard should render 5 items 1`] = `
       </View>
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -441,7 +441,7 @@ exports[`ActionListCard should render 5 items 1`] = `
       </View>
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -579,7 +579,7 @@ exports[`ActionListCard should render a loading state 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -672,7 +672,7 @@ exports[`ActionListCard should render a loading state 1`] = `
       </View>
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -765,7 +765,7 @@ exports[`ActionListCard should render a loading state 1`] = `
       </View>
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -858,7 +858,7 @@ exports[`ActionListCard should render a loading state 1`] = `
       </View>
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -951,7 +951,7 @@ exports[`ActionListCard should render a loading state 1`] = `
       </View>
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1124,7 +1124,7 @@ exports[`ActionListCard should render with a header 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1222,7 +1222,7 @@ exports[`ActionListCard should render with a header 1`] = `
       </View>
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1320,7 +1320,7 @@ exports[`ActionListCard should render with a header 1`] = `
       </View>
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1418,7 +1418,7 @@ exports[`ActionListCard should render with a header 1`] = `
       </View>
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1516,7 +1516,7 @@ exports[`ActionListCard should render with a header 1`] = `
       </View>
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1653,7 +1653,7 @@ exports[`ActionListCard should render with onPressActionListButton 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1751,7 +1751,7 @@ exports[`ActionListCard should render with onPressActionListButton 1`] = `
       </View>
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1849,7 +1849,7 @@ exports[`ActionListCard should render with onPressActionListButton 1`] = `
       </View>
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1947,7 +1947,7 @@ exports[`ActionListCard should render with onPressActionListButton 1`] = `
       </View>
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -2045,7 +2045,7 @@ exports[`ActionListCard should render with onPressActionListButton 1`] = `
       </View>
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -2144,8 +2144,7 @@ exports[`ActionListCard should render with onPressActionListButton 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
