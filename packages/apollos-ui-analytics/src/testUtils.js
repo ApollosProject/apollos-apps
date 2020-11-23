@@ -1,6 +1,4 @@
 import React from 'react';
-
-import { Providers } from '@apollosproject/ui-kit';
 import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
@@ -23,10 +21,8 @@ export const wait = (time) =>
 // eslint-disable-next-line
 export const ProviderStack = ({ children }) => (
   <ApolloProvider client={client}>
-    <Providers>
-      <AnalyticsProvider trackFunctions={[trackMock]}>
-        {children}
-      </AnalyticsProvider>
-    </Providers>
+    <AnalyticsProvider trackFunctions={[trackMock]}>
+      {children}
+    </AnalyticsProvider>
   </ApolloProvider>
 );
