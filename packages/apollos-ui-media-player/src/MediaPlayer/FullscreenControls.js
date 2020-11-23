@@ -10,7 +10,8 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { Query, withApollo } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
+import { withApollo } from '@apollo/client/react/hoc';
 import LinearGradient from 'react-native-linear-gradient';
 import GoogleCast from 'react-native-google-cast';
 import { get } from 'lodash';
@@ -248,7 +249,8 @@ class FullscreenControls extends PureComponent {
       this.isVideo &&
       this.isPlaying &&
       this.wasFullscreen &&
-      (!this.animatingClosed && this.controlsVisible)
+      !this.animatingClosed &&
+      this.controlsVisible
     ) {
       this.animatingClosed = true;
       this.close.start(() => {
@@ -325,7 +327,8 @@ class FullscreenControls extends PureComponent {
     if (
       (mediaPlayer.isFullscreen && !this.wasFullscreen) ||
       !this.isVideo ||
-      (!this.isPlaying || (this.isPlaying && !this.wasPlaying))
+      !this.isPlaying ||
+      (this.isPlaying && !this.wasPlaying)
     )
       this.handleControlVisibility();
 

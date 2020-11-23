@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { StatusBar } from 'react-native';
 import PropTypes from 'prop-types';
-import { useQuery } from '@apollo/react-hooks';
+import { useQuery } from '@apollo/client';
 import { withTheme, ThemeMixin, ModalView } from '@apollosproject/ui-kit';
 import { AnalyticsContext } from '@apollosproject/ui-analytics';
 
@@ -77,6 +77,7 @@ PrayerExperienceConnected.propTypes = {
   index: PropTypes.number,
 };
 
-export default withTheme(() => ({}), 'ui-prayer.PrayerExperienceConnected')(
-  PrayerExperienceConnected
-);
+export default withTheme(
+  () => ({}),
+  'ui-prayer.PrayerExperienceConnected'
+)(PrayerExperienceConnected);

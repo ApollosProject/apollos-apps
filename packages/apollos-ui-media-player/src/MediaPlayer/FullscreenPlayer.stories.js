@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
-import { Mutation } from 'react-apollo';
+import { Mutation } from '@apollo/client/react/components';
 
 import {
   ButtonLink,

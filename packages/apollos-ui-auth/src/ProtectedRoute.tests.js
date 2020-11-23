@@ -4,8 +4,8 @@ import renderer from 'react-test-renderer';
 import wait from 'waait';
 
 import { Providers } from '@apollosproject/ui-kit';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { MockedProvider } from 'react-apollo/test-utils';
+import { InMemoryCache } from '@apollo/client/cache';
+import { MockedProvider } from '@apollo/client/testing';
 import AuthProvider, { GET_AUTH_TOKEN } from './Provider';
 
 import ProtectedRoute from './ProtectedRoute';

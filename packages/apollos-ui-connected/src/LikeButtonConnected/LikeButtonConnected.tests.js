@@ -2,7 +2,7 @@
 // import renderer from 'react-test-renderer';
 // import gql from 'graphql-tag';
 
-// import { Providers } from '../testUtils';
+// import { Providers } from '@apollosproject/ui-test-utils';
 
 // import LikeButtonConnected from '.';
 

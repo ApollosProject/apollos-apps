@@ -3,7 +3,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import wait from 'waait';
 
-import { Providers } from '../../testUtils';
+import { Providers } from '@apollosproject/ui-test-utils';
 
 import PlayButton from './PlayButton';
 

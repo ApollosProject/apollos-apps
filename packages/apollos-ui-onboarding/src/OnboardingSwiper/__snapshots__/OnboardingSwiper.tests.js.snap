@@ -39,6 +39,7 @@ exports[`The onboarding swiper should render with a fragment as a child 1`] = `
       }
     }
     disableNextButton={false}
+    disablePrevButton={false}
     dot={
       <View>
         <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
@@ -253,6 +254,7 @@ exports[`The onboarding swiper should render with an array as a child 1`] = `
       }
     }
     disableNextButton={false}
+    disablePrevButton={false}
     dot={
       <View>
         <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />

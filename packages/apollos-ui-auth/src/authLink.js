@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-community/async-storage';
-import { setContext } from 'apollo-link-context';
+import { setContext } from '@apollo/client/link/context';
 
 export default setContext(async (request, { headers }) => {
   try {

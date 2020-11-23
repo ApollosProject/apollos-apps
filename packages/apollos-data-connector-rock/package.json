@@ -10,6 +10,7 @@
   },
   "jest": {
     "collectCoverage": true,
+    "coverageReporters": ["json", "lcovonly", "clover"],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
     ],
@@ -46,7 +47,7 @@
     "@apollosproject/babel-preset-apollos": "^1.7.0",
     "apollo-server": "^2.11.0",
     "apollo-server-env": "^2.3.0",
-    "graphql": "14.6.0",
+    "graphql": "14.7.0",
     "jest": "^23.6.0",
     "jest-date-mock": "^1.0.8"
   },

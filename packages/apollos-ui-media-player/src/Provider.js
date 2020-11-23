@@ -1,9 +1,26 @@
 import { merge, get } from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ApolloConsumer } from 'react-apollo';
+import { ApolloConsumer } from '@apollo/client';
 import gql from 'graphql-tag';
 import { track } from '@apollosproject/ui-analytics';
+
+const GET_MEDIA_PLAYER = gql`
+  query {
+    mediaPlayer @client {
+      currentTrack {
+        id
+      }
+      isPlaying
+      isCasting
+      isCastAvailable
+      isFullscreen
+      isVisible
+      showVideo
+      muted
+    }
+  }
+`;
 
 export const defaults = {
   __typename: 'MediaPlayerState',
@@ -116,7 +133,7 @@ export const resolvers = {
         trackId += 1;
       }
 
-      cache.writeData({
+      cache.writeQuery({
         query,
         data: {
           mediaPlayer: newMediaPlayerState,
@@ -208,9 +225,15 @@ const Provider = ({ children, ...authContext }) => (
       {(client) => {
         if (!loaded) {
           client.addResolvers(resolvers);
-          client.writeData({ data: { mediaPlayer: defaults } });
+          client.writeQuery({
+            query: GET_MEDIA_PLAYER,
+            data: { mediaPlayer: defaults },
+          });
           client.onClearStore(() =>
-            client.writeData({ data: { mediaPlayer: defaults } })
+            client.writeQuery({
+              query: GET_MEDIA_PLAYER,
+              data: { mediaPlayer: defaults },
+            })
           );
           loaded = true;
         }

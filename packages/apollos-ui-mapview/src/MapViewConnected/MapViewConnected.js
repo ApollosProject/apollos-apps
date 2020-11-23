@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Query, Mutation } from 'react-apollo';
+import { Query, Mutation } from '@apollo/client/react/components';
 import { Dimensions } from 'react-native';
 import Geolocation from 'react-native-geolocation-service';
 import { get } from 'lodash';

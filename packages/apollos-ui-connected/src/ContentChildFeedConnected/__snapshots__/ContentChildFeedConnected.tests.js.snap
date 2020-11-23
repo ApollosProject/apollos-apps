@@ -41,9 +41,9 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
           style={
             Object {
               "backgroundColor": "rgb(255, 255, 255)",
-              "borderBottomColor": "rgb(224, 224, 224)",
+              "borderBottomColor": "rgb(216, 216, 216)",
               "flex": 1,
-              "shadowColor": "rgb(224, 224, 224)",
+              "shadowColor": "rgb(216, 216, 216)",
               "shadowOffset": Object {
                 "height": 0.5,
                 "width": 0,
@@ -155,13 +155,18 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
         onTransitionStart={[Function]}
         pointerEvents="box-none"
         style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
+          Array [
+            Object {
+              "overflow": undefined,
+            },
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+          ]
         }
         transitionSpec={
           Object {
@@ -279,75 +284,97 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                     data={
                       Array [
                         Object {
-                          "id": "fakeId0",
-                          "node": Object {
-                            "__typename": "MediaContentItem",
-                            "coverImage": "",
-                            "id": "fakeId0",
-                            "isLoading": true,
-                            "parentChannel": Object {
-                              "name": "",
-                            },
-                            "title": "",
+                          "__typename": "DevotionalContentItem",
+                          "coverImage": Object {
+                            "__typename": "ImageMedia",
+                            "sources": Array [
+                              Object {
+                                "__typename": "ImageMediaSource",
+                                "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                              },
+                            ],
                           },
+                          "hyphenatedTitle": "God sees who you can be not who you are",
+                          "id": "DevotionalContentItem:d395278cd4b68e074ca4e595c8feab6d",
+                          "parentChannel": Object {
+                            "__typename": "ContentChannel",
+                            "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
+                            "name": "Devotional",
+                          },
+                          "summary": "bla bla bla",
+                          "theme": null,
+                          "title": "God sees who you can be not who you are",
                         },
                         Object {
-                          "id": "fakeId1",
-                          "node": Object {
-                            "__typename": "MediaContentItem",
-                            "coverImage": "",
-                            "id": "fakeId0",
-                            "isLoading": true,
-                            "parentChannel": Object {
-                              "name": "",
-                            },
-                            "title": "",
+                          "__typename": "DevotionalContentItem",
+                          "coverImage": Object {
+                            "__typename": "ImageMedia",
+                            "sources": Array [
+                              Object {
+                                "__typename": "ImageMediaSource",
+                                "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                              },
+                            ],
                           },
+                          "hyphenatedTitle": "Thank God for the friends who will tell it like it is",
+                          "id": "DevotionalContentItem:fbea6914a3e8877516cbd333d919075d",
+                          "parentChannel": Object {
+                            "__typename": "ContentChannel",
+                            "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
+                            "name": "Devotional",
+                          },
+                          "summary": "bla bla bla",
+                          "theme": null,
+                          "title": "Thank God for the friends who will tell it like it is",
                         },
                         Object {
-                          "id": "fakeId2",
-                          "node": Object {
-                            "__typename": "MediaContentItem",
-                            "coverImage": "",
-                            "id": "fakeId0",
-                            "isLoading": true,
-                            "parentChannel": Object {
-                              "name": "",
-                            },
-                            "title": "",
+                          "__typename": "DevotionalContentItem",
+                          "coverImage": Object {
+                            "__typename": "ImageMedia",
+                            "sources": Array [
+                              Object {
+                                "__typename": "ImageMediaSource",
+                                "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                              },
+                            ],
                           },
+                          "hyphenatedTitle": "No sin is too bad",
+                          "id": "DevotionalContentItem:5e18250f586ab8de4d3d6292c919dcc4",
+                          "parentChannel": Object {
+                            "__typename": "ContentChannel",
+                            "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
+                            "name": "Devotional",
+                          },
+                          "summary": "bla bla bla",
+                          "theme": null,
+                          "title": "No sin is too bad",
                         },
                         Object {
-                          "id": "fakeId3",
-                          "node": Object {
-                            "__typename": "MediaContentItem",
-                            "coverImage": "",
-                            "id": "fakeId0",
-                            "isLoading": true,
-                            "parentChannel": Object {
-                              "name": "",
-                            },
-                            "title": "",
+                          "__typename": "DevotionalContentItem",
+                          "coverImage": Object {
+                            "__typename": "ImageMedia",
+                            "sources": Array [
+                              Object {
+                                "__typename": "ImageMediaSource",
+                                "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                              },
+                            ],
                           },
-                        },
-                        Object {
-                          "id": "fakeId4",
-                          "node": Object {
-                            "__typename": "MediaContentItem",
-                            "coverImage": "",
-                            "id": "fakeId0",
-                            "isLoading": true,
-                            "parentChannel": Object {
-                              "name": "",
-                            },
-                            "title": "",
+                          "hyphenatedTitle": "Change starts with a choice",
+                          "id": "DevotionalContentItem:bdc2c29b85949e4ca8232b373a07953d",
+                          "parentChannel": Object {
+                            "__typename": "ContentChannel",
+                            "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
+                            "name": "Devotional",
                           },
+                          "summary": "bla bla bla",
+                          "theme": null,
+                          "title": "Change starts with a choice",
                         },
                       ]
                     }
                     decelerationRate="fast"
                     disableVirtualization={false}
-                    fetchMore={[Function]}
                     getItem={[Function]}
                     getItemCount={[Function]}
                     getItemLayout={[Function]}
@@ -381,7 +408,7 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                     onScroll={[Function]}
                     onScrollBeginDrag={[Function]}
                     onScrollEndDrag={[Function]}
-                    refreshing={true}
+                    refreshing={false}
                     removeClippedSubviews={false}
                     renderItem={[Function]}
                     renderScrollComponent={[Function]}
@@ -426,11 +453,31 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                           }
                         >
                           <View
+                            __typename="DevotionalContentItem"
+                            disabled={false}
+                            id="DevotionalContentItem:d395278cd4b68e074ca4e595c8feab6d"
                             inHorizontalList={true}
-                            isLoading={true}
+                            isLive={false}
+                            isLoading={false}
+                            parentChannel={
+                              Object {
+                                "__typename": "ContentChannel",
+                                "iconName": "text",
+                                "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
+                                "name": "Devotional",
+                              }
+                            }
+                            sharing={
+                              Object {
+                                "__typename": "SharableContentItem",
+                                "message": "God sees who you can be not who you are - Life is challenging enough.",
+                                "title": "Share via ...",
+                                "url": "https://apollosrock.newspring.cc/devotional/god-sees-who-you-can-be-not-who-you-are",
+                              }
+                            }
                             style={
                               Object {
-                                "backgroundColor": "#FFFFFF",
+                                "backgroundColor": "#303030",
                                 "borderRadius": 16,
                                 "height": 240,
                                 "margin": 8,
@@ -445,6 +492,8 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                 "width": 240,
                               }
                             }
+                            summary="bla bla bla"
+                            videos={Array []}
                           >
                             <View
                               style={
@@ -464,19 +513,64 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                 }
                               >
                                 <RCTImageView
+                                  disabled={false}
                                   fadeDuration={250}
-                                  hasTitleAndSummary={false}
-                                  isLoading={true}
+                                  isLoading={false}
                                   onLoad={[Function]}
                                   resizeMode="cover"
-                                  source={Array []}
+                                  source={
+                                    Array [
+                                      Object {
+                                        "__typename": "ImageMediaSource",
+                                        "cache": "force-cache",
+                                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                                      },
+                                    ]
+                                  }
                                   style={
                                     Object {
-                                      "aspectRatio": 1.5,
+                                      "aspectRatio": 1,
                                       "backgroundColor": "#A5A5A5",
                                       "overflow": "hidden",
                                       "resizeMode": "cover",
                                       "width": "100%",
+                                    }
+                                  }
+                                />
+                                <BVLinearGradient
+                                  colors={
+                                    Array [
+                                      1711276032,
+                                      2147483648,
+                                    ]
+                                  }
+                                  endPoint={
+                                    Object {
+                                      "x": 0,
+                                      "y": 1,
+                                    }
+                                  }
+                                  locations={
+                                    Array [
+                                      0,
+                                      1,
+                                    ]
+                                  }
+                                  overlayColor="#000000"
+                                  overlayType="gradient-bottom"
+                                  startPoint={
+                                    Object {
+                                      "x": 0,
+                                      "y": 0,
+                                    }
+                                  }
+                                  style={
+                                    Object {
+                                      "bottom": 0,
+                                      "left": 0,
+                                      "position": "absolute",
+                                      "right": 0,
+                                      "top": 0,
                                     }
                                   }
                                 />
@@ -485,12 +579,48 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                 style={
                                   Object {
                                     "alignItems": "flex-start",
+                                    "bottom": 0,
                                     "paddingBottom": 24,
                                     "paddingHorizontal": 16,
                                     "paddingVertical": 16,
+                                    "position": "absolute",
+                                    "width": "100%",
                                   }
                                 }
-                              />
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "alignItems": "flex-end",
+                                      "flexDirection": "row",
+                                      "paddingTop": 16,
+                                    }
+                                  }
+                                >
+                                  <View
+                                    hasAction={false}
+                                    style={
+                                      Object {
+                                        "flex": 1,
+                                      }
+                                    }
+                                  >
+                                    <Text
+                                      numberOfLines={4}
+                                      style={
+                                        Object {
+                                          "color": "#F8F7F4",
+                                          "fontFamily": "InterUI-Black",
+                                          "fontSize": 24,
+                                          "lineHeight": 27.6,
+                                        }
+                                      }
+                                    >
+                                      God sees who you can be not who you are
+                                    </Text>
+                                  </View>
+                                </View>
+                              </View>
                             </View>
                           </View>
                         </View>
@@ -526,11 +656,31 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                           }
                         >
                           <View
+                            __typename="DevotionalContentItem"
+                            disabled={false}
+                            id="DevotionalContentItem:fbea6914a3e8877516cbd333d919075d"
                             inHorizontalList={true}
-                            isLoading={true}
+                            isLive={false}
+                            isLoading={false}
+                            parentChannel={
+                              Object {
+                                "__typename": "ContentChannel",
+                                "iconName": "text",
+                                "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
+                                "name": "Devotional",
+                              }
+                            }
+                            sharing={
+                              Object {
+                                "__typename": "SharableContentItem",
+                                "message": "Thank God for the friends who will tell it like it is - Some of us grew up in a sanitized church.",
+                                "title": "Share via ...",
+                                "url": "https://apollosrock.newspring.cc/devotional/thank-god-for-the-friends-who-will-tell-it-like-it-is",
+                              }
+                            }
                             style={
                               Object {
-                                "backgroundColor": "#FFFFFF",
+                                "backgroundColor": "#303030",
                                 "borderRadius": 16,
                                 "height": 240,
                                 "margin": 8,
@@ -545,6 +695,8 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                 "width": 240,
                               }
                             }
+                            summary="bla bla bla"
+                            videos={Array []}
                           >
                             <View
                               style={
@@ -564,19 +716,64 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                 }
                               >
                                 <RCTImageView
+                                  disabled={false}
                                   fadeDuration={250}
-                                  hasTitleAndSummary={false}
-                                  isLoading={true}
+                                  isLoading={false}
                                   onLoad={[Function]}
                                   resizeMode="cover"
-                                  source={Array []}
+                                  source={
+                                    Array [
+                                      Object {
+                                        "__typename": "ImageMediaSource",
+                                        "cache": "force-cache",
+                                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                                      },
+                                    ]
+                                  }
                                   style={
                                     Object {
-                                      "aspectRatio": 1.5,
+                                      "aspectRatio": 1,
                                       "backgroundColor": "#A5A5A5",
                                       "overflow": "hidden",
                                       "resizeMode": "cover",
                                       "width": "100%",
+                                    }
+                                  }
+                                />
+                                <BVLinearGradient
+                                  colors={
+                                    Array [
+                                      1711276032,
+                                      2147483648,
+                                    ]
+                                  }
+                                  endPoint={
+                                    Object {
+                                      "x": 0,
+                                      "y": 1,
+                                    }
+                                  }
+                                  locations={
+                                    Array [
+                                      0,
+                                      1,
+                                    ]
+                                  }
+                                  overlayColor="#000000"
+                                  overlayType="gradient-bottom"
+                                  startPoint={
+                                    Object {
+                                      "x": 0,
+                                      "y": 0,
+                                    }
+                                  }
+                                  style={
+                                    Object {
+                                      "bottom": 0,
+                                      "left": 0,
+                                      "position": "absolute",
+                                      "right": 0,
+                                      "top": 0,
                                     }
                                   }
                                 />
@@ -585,12 +782,48 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                 style={
                                   Object {
                                     "alignItems": "flex-start",
+                                    "bottom": 0,
                                     "paddingBottom": 24,
                                     "paddingHorizontal": 16,
                                     "paddingVertical": 16,
+                                    "position": "absolute",
+                                    "width": "100%",
                                   }
                                 }
-                              />
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "alignItems": "flex-end",
+                                      "flexDirection": "row",
+                                      "paddingTop": 16,
+                                    }
+                                  }
+                                >
+                                  <View
+                                    hasAction={false}
+                                    style={
+                                      Object {
+                                        "flex": 1,
+                                      }
+                                    }
+                                  >
+                                    <Text
+                                      numberOfLines={4}
+                                      style={
+                                        Object {
+                                          "color": "#F8F7F4",
+                                          "fontFamily": "InterUI-Black",
+                                          "fontSize": 24,
+                                          "lineHeight": 27.6,
+                                        }
+                                      }
+                                    >
+                                      Thank God for the friends who will tell it like it is
+                                    </Text>
+                                  </View>
+                                </View>
+                              </View>
                             </View>
                           </View>
                         </View>
@@ -626,11 +859,31 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                           }
                         >
                           <View
+                            __typename="DevotionalContentItem"
+                            disabled={false}
+                            id="DevotionalContentItem:5e18250f586ab8de4d3d6292c919dcc4"
                             inHorizontalList={true}
-                            isLoading={true}
+                            isLive={false}
+                            isLoading={false}
+                            parentChannel={
+                              Object {
+                                "__typename": "ContentChannel",
+                                "iconName": "text",
+                                "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
+                                "name": "Devotional",
+                              }
+                            }
+                            sharing={
+                              Object {
+                                "__typename": "SharableContentItem",
+                                "message": "No sin is too bad - In Jeremiah 3, God’s people had really messed up.",
+                                "title": "Share via ...",
+                                "url": "https://apollosrock.newspring.cc/devotional/no-sin-is-too-bad",
+                              }
+                            }
                             style={
                               Object {
-                                "backgroundColor": "#FFFFFF",
+                                "backgroundColor": "#303030",
                                 "borderRadius": 16,
                                 "height": 240,
                                 "margin": 8,
@@ -645,6 +898,8 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                 "width": 240,
                               }
                             }
+                            summary="bla bla bla"
+                            videos={Array []}
                           >
                             <View
                               style={
@@ -664,19 +919,64 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                 }
                               >
                                 <RCTImageView
+                                  disabled={false}
                                   fadeDuration={250}
-                                  hasTitleAndSummary={false}
-                                  isLoading={true}
+                                  isLoading={false}
                                   onLoad={[Function]}
                                   resizeMode="cover"
-                                  source={Array []}
+                                  source={
+                                    Array [
+                                      Object {
+                                        "__typename": "ImageMediaSource",
+                                        "cache": "force-cache",
+                                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                                      },
+                                    ]
+                                  }
                                   style={
                                     Object {
-                                      "aspectRatio": 1.5,
+                                      "aspectRatio": 1,
                                       "backgroundColor": "#A5A5A5",
                                       "overflow": "hidden",
                                       "resizeMode": "cover",
                                       "width": "100%",
+                                    }
+                                  }
+                                />
+                                <BVLinearGradient
+                                  colors={
+                                    Array [
+                                      1711276032,
+                                      2147483648,
+                                    ]
+                                  }
+                                  endPoint={
+                                    Object {
+                                      "x": 0,
+                                      "y": 1,
+                                    }
+                                  }
+                                  locations={
+                                    Array [
+                                      0,
+                                      1,
+                                    ]
+                                  }
+                                  overlayColor="#000000"
+                                  overlayType="gradient-bottom"
+                                  startPoint={
+                                    Object {
+                                      "x": 0,
+                                      "y": 0,
+                                    }
+                                  }
+                                  style={
+                                    Object {
+                                      "bottom": 0,
+                                      "left": 0,
+                                      "position": "absolute",
+                                      "right": 0,
+                                      "top": 0,
                                     }
                                   }
                                 />
@@ -685,12 +985,48 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                 style={
                                   Object {
                                     "alignItems": "flex-start",
+                                    "bottom": 0,
                                     "paddingBottom": 24,
                                     "paddingHorizontal": 16,
                                     "paddingVertical": 16,
+                                    "position": "absolute",
+                                    "width": "100%",
                                   }
                                 }
-                              />
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "alignItems": "flex-end",
+                                      "flexDirection": "row",
+                                      "paddingTop": 16,
+                                    }
+                                  }
+                                >
+                                  <View
+                                    hasAction={false}
+                                    style={
+                                      Object {
+                                        "flex": 1,
+                                      }
+                                    }
+                                  >
+                                    <Text
+                                      numberOfLines={4}
+                                      style={
+                                        Object {
+                                          "color": "#F8F7F4",
+                                          "fontFamily": "InterUI-Black",
+                                          "fontSize": 24,
+                                          "lineHeight": 27.6,
+                                        }
+                                      }
+                                    >
+                                      No sin is too bad
+                                    </Text>
+                                  </View>
+                                </View>
+                              </View>
                             </View>
                           </View>
                         </View>
@@ -726,11 +1062,31 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                           }
                         >
                           <View
+                            __typename="DevotionalContentItem"
+                            disabled={false}
+                            id="DevotionalContentItem:bdc2c29b85949e4ca8232b373a07953d"
                             inHorizontalList={true}
-                            isLoading={true}
+                            isLive={false}
+                            isLoading={false}
+                            parentChannel={
+                              Object {
+                                "__typename": "ContentChannel",
+                                "iconName": "text",
+                                "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
+                                "name": "Devotional",
+                              }
+                            }
+                            sharing={
+                              Object {
+                                "__typename": "SharableContentItem",
+                                "message": "Change starts with a choice - Have you ever restored an old piece of furniture?",
+                                "title": "Share via ...",
+                                "url": "https://apollosrock.newspring.cc/devotional/change-starts-with-a-choice",
+                              }
+                            }
                             style={
                               Object {
-                                "backgroundColor": "#FFFFFF",
+                                "backgroundColor": "#303030",
                                 "borderRadius": 16,
                                 "height": 240,
                                 "margin": 8,
@@ -745,6 +1101,8 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                 "width": 240,
                               }
                             }
+                            summary="bla bla bla"
+                            videos={Array []}
                           >
                             <View
                               style={
@@ -764,19 +1122,64 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                 }
                               >
                                 <RCTImageView
+                                  disabled={false}
                                   fadeDuration={250}
-                                  hasTitleAndSummary={false}
-                                  isLoading={true}
+                                  isLoading={false}
                                   onLoad={[Function]}
                                   resizeMode="cover"
-                                  source={Array []}
+                                  source={
+                                    Array [
+                                      Object {
+                                        "__typename": "ImageMediaSource",
+                                        "cache": "force-cache",
+                                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                                      },
+                                    ]
+                                  }
                                   style={
                                     Object {
-                                      "aspectRatio": 1.5,
+                                      "aspectRatio": 1,
                                       "backgroundColor": "#A5A5A5",
                                       "overflow": "hidden",
                                       "resizeMode": "cover",
                                       "width": "100%",
+                                    }
+                                  }
+                                />
+                                <BVLinearGradient
+                                  colors={
+                                    Array [
+                                      1711276032,
+                                      2147483648,
+                                    ]
+                                  }
+                                  endPoint={
+                                    Object {
+                                      "x": 0,
+                                      "y": 1,
+                                    }
+                                  }
+                                  locations={
+                                    Array [
+                                      0,
+                                      1,
+                                    ]
+                                  }
+                                  overlayColor="#000000"
+                                  overlayType="gradient-bottom"
+                                  startPoint={
+                                    Object {
+                                      "x": 0,
+                                      "y": 0,
+                                    }
+                                  }
+                                  style={
+                                    Object {
+                                      "bottom": 0,
+                                      "left": 0,
+                                      "position": "absolute",
+                                      "right": 0,
+                                      "top": 0,
                                     }
                                   }
                                 />
@@ -785,112 +1188,48 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                 style={
                                   Object {
                                     "alignItems": "flex-start",
+                                    "bottom": 0,
                                     "paddingBottom": 24,
                                     "paddingHorizontal": 16,
                                     "paddingVertical": 16,
-                                  }
-                                }
-                              />
-                            </View>
-                          </View>
-                        </View>
-                      </View>
-                      <View
-                        style={
-                          Array [
-                            Object {
-                              "flexDirection": "row",
-                            },
-                            null,
-                          ]
-                        }
-                      >
-                        <View
-                          accessible={true}
-                          clickable={true}
-                          onClick={[Function]}
-                          onResponderGrant={[Function]}
-                          onResponderMove={[Function]}
-                          onResponderRelease={[Function]}
-                          onResponderTerminate={[Function]}
-                          onResponderTerminationRequest={[Function]}
-                          onStartShouldSetResponder={[Function]}
-                          style={
-                            Object {
-                              "transform": Array [
-                                Object {
-                                  "scale": 1,
-                                },
-                              ],
-                            }
-                          }
-                        >
-                          <View
-                            inHorizontalList={true}
-                            isLoading={true}
-                            style={
-                              Object {
-                                "backgroundColor": "#FFFFFF",
-                                "borderRadius": 16,
-                                "height": 240,
-                                "margin": 8,
-                                "marginBottom": 12,
-                                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-                                "shadowOffset": Object {
-                                  "height": 2,
-                                  "width": 0,
-                                },
-                                "shadowOpacity": 1,
-                                "shadowRadius": 8,
-                                "width": 240,
-                              }
-                            }
-                          >
-                            <View
-                              style={
-                                Object {
-                                  "borderRadius": 16,
-                                  "overflow": "hidden",
-                                }
-                              }
-                            >
-                              <View
-                                style={
-                                  Object {
-                                    "backgroundColor": "#A5A5A5",
-                                    "overflow": "hidden",
+                                    "position": "absolute",
                                     "width": "100%",
                                   }
                                 }
                               >
-                                <RCTImageView
-                                  fadeDuration={250}
-                                  hasTitleAndSummary={false}
-                                  isLoading={true}
-                                  onLoad={[Function]}
-                                  resizeMode="cover"
-                                  source={Array []}
+                                <View
                                   style={
                                     Object {
-                                      "aspectRatio": 1.5,
-                                      "backgroundColor": "#A5A5A5",
-                                      "overflow": "hidden",
-                                      "resizeMode": "cover",
-                                      "width": "100%",
+                                      "alignItems": "flex-end",
+                                      "flexDirection": "row",
+                                      "paddingTop": 16,
                                     }
                                   }
-                                />
+                                >
+                                  <View
+                                    hasAction={false}
+                                    style={
+                                      Object {
+                                        "flex": 1,
+                                      }
+                                    }
+                                  >
+                                    <Text
+                                      numberOfLines={4}
+                                      style={
+                                        Object {
+                                          "color": "#F8F7F4",
+                                          "fontFamily": "InterUI-Black",
+                                          "fontSize": 24,
+                                          "lineHeight": 27.6,
+                                        }
+                                      }
+                                    >
+                                      Change starts with a choice
+                                    </Text>
+                                  </View>
+                                </View>
                               </View>
-                              <View
-                                style={
-                                  Object {
-                                    "alignItems": "flex-start",
-                                    "paddingBottom": 24,
-                                    "paddingHorizontal": 16,
-                                    "paddingVertical": 16,
-                                  }
-                                }
-                              />
                             </View>
                           </View>
                         </View>

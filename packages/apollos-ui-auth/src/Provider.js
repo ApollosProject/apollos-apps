@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AsyncStorage from '@react-native-community/async-storage';
-import { ApolloConsumer } from 'react-apollo';
+import { ApolloConsumer } from '@apollo/client';
 import gql from 'graphql-tag';
 import { track } from '@apollosproject/ui-analytics';
 import { GET_PUSH_ID, updatePushId } from '@apollosproject/ui-notifications';
@@ -54,9 +54,6 @@ export const resolvers = {
         await cache.writeQuery({
           query: GET_LOGIN_STATE,
           data: { isLoggedIn: true },
-        });
-        await cache.writeData({
-          data: { authToken },
         });
 
         const { data: { pushId } = { data: {} } } = await client.query({

@@ -62,6 +62,7 @@ ProfileDetailsEntryConnected.defaultProps = {
   Component: ProfileEntry,
 };
 
-export default withTheme(() => ({}), 'ui-auth.ProfileDetailsEntryConnected')(
-  ProfileDetailsEntryConnected
-);
+export default withTheme(
+  () => ({}),
+  'ui-auth.ProfileDetailsEntryConnected'
+)(ProfileDetailsEntryConnected);

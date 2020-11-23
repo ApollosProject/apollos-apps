@@ -1,7 +1,7 @@
 // Provider API for WebBrowser that injects theme values and defaults to the web browser:
 import React from 'react';
 import gql from 'graphql-tag';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 import { ModalView } from '@apollosproject/ui-kit';
 import { WebView } from 'react-native-webview';
 import PropTypes from 'prop-types';

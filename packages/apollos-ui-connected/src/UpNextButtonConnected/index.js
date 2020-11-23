@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, styled, H4, withTheme, Icon } from '@apollosproject/ui-kit';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 import { get } from 'lodash';
 import { useNavigation } from '@react-navigation/native';
 import PropTypes from 'prop-types';

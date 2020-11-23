@@ -15,9 +15,10 @@ import {
 
 import { withTrackOnPress } from '@apollosproject/ui-analytics';
 
-const PrimaryButton = styled({}, 'ui-onboarding.Slide.Slide.PrimaryButton')(
-  withTrackOnPress(Button)
-);
+const PrimaryButton = styled(
+  {},
+  'ui-onboarding.Slide.Slide.PrimaryButton'
+)(withTrackOnPress(Button));
 
 const styles = StyleSheet.create({
   contentContainer: { minHeight: '100%' },

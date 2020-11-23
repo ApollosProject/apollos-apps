@@ -18,7 +18,6 @@
     "react-native"
   ],
   "peerDependencies": {
-    "@apollo/react-hooks": "*",
     "@apollosproject/storybook": "*",
     "@apollosproject/ui-analytics": "*",
     "@apollosproject/ui-fragments": "*",
@@ -26,14 +25,14 @@
     "@apollosproject/ui-notifications": "*",
     "@apollosproject/ui-scripture": "*",
     "react": "*",
-    "react-apollo": "*",
     "react-native": "*"
   },
   "jest": {
     "preset": "react-native",
     "collectCoverage": true,
+    "coverageReporters": ["json", "lcovonly", "clover"],
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|@react-navigation/native|@@react-navigation/native|@apollosproject|@apollosproject/ui-*))"
+      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|@react-navigation/native|@react-navigation/stack|@apollosproject|@apollosproject/ui-*))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -52,21 +51,19 @@
     "formik": "1.5.1",
     "graphql-tag": "2.9.2",
     "lodash": "4.17.19",
-    "react-is": "^16.8.6",
+    "react-is": "^16.9.0",
     "react-native-swiper": "^1.6.0",
     "yup": "0.26.6"
   },
   "devDependencies": {
-    "@apollo/react-hooks": "3.1.5",
-    "@apollo/react-testing": "3.1.4",
     "@storybook/react-native": "5.2.4",
-    "apollo-client": "2.6.10",
+    "@apollo/client": "3.2.7",
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
-    "react": "16.8.6",
+    "react": "16.9.0",
     "react-native": "0.60.5",
-    "react-test-renderer": "16.8.6",
+    "react-test-renderer": "16.9.0",
     "waait": "1.0.2"
   },
   "publishConfig": {

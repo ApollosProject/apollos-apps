@@ -10,6 +10,7 @@
   },
   "jest": {
     "collectCoverage": true,
+    "coverageReporters": ["json", "lcovonly", "clover"],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
     ],
@@ -23,7 +24,7 @@
     ]
   },
   "dependencies": {
-    "cloudinary": "^1.13.2"
+    "cloudinary": "1.14.0"
   },
   "peerDependencies": {
     "@apollosproject/config": "*"

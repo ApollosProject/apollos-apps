@@ -1324,6 +1324,7 @@ Array [
         "minHeight": "100%",
       }
     }
+    loading={true}
     overScrollMode="auto"
     style={
       Object {

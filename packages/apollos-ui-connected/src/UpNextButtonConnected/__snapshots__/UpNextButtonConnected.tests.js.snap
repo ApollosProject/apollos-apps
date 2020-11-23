@@ -41,9 +41,9 @@ exports[`the UpNextButtonConnected accepts doneText, continueText and Component 
           style={
             Object {
               "backgroundColor": "rgb(255, 255, 255)",
-              "borderBottomColor": "rgb(224, 224, 224)",
+              "borderBottomColor": "rgb(216, 216, 216)",
               "flex": 1,
-              "shadowColor": "rgb(224, 224, 224)",
+              "shadowColor": "rgb(216, 216, 216)",
               "shadowOffset": Object {
                 "height": 0.5,
                 "width": 0,
@@ -155,13 +155,18 @@ exports[`the UpNextButtonConnected accepts doneText, continueText and Component 
         onTransitionStart={[Function]}
         pointerEvents="box-none"
         style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
+          Array [
+            Object {
+              "overflow": undefined,
+            },
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+          ]
         }
         transitionSpec={
           Object {
@@ -327,9 +332,9 @@ exports[`the UpNextButtonConnected renders a continue state even with no childre
           style={
             Object {
               "backgroundColor": "rgb(255, 255, 255)",
-              "borderBottomColor": "rgb(224, 224, 224)",
+              "borderBottomColor": "rgb(216, 216, 216)",
               "flex": 1,
-              "shadowColor": "rgb(224, 224, 224)",
+              "shadowColor": "rgb(216, 216, 216)",
               "shadowOffset": Object {
                 "height": 0.5,
                 "width": 0,
@@ -441,13 +446,18 @@ exports[`the UpNextButtonConnected renders a continue state even with no childre
         onTransitionStart={[Function]}
         pointerEvents="box-none"
         style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
+          Array [
+            Object {
+              "overflow": undefined,
+            },
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+          ]
         }
         transitionSpec={
           Object {
@@ -659,9 +669,9 @@ exports[`the UpNextButtonConnected renders a continue state when in progress 1`]
           style={
             Object {
               "backgroundColor": "rgb(255, 255, 255)",
-              "borderBottomColor": "rgb(224, 224, 224)",
+              "borderBottomColor": "rgb(216, 216, 216)",
               "flex": 1,
-              "shadowColor": "rgb(224, 224, 224)",
+              "shadowColor": "rgb(216, 216, 216)",
               "shadowOffset": Object {
                 "height": 0.5,
                 "width": 0,
@@ -773,13 +783,18 @@ exports[`the UpNextButtonConnected renders a continue state when in progress 1`]
         onTransitionStart={[Function]}
         pointerEvents="box-none"
         style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
+          Array [
+            Object {
+              "overflow": undefined,
+            },
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+          ]
         }
         transitionSpec={
           Object {
@@ -991,9 +1006,9 @@ exports[`the UpNextButtonConnected renders a finished state when finished 1`] = 
           style={
             Object {
               "backgroundColor": "rgb(255, 255, 255)",
-              "borderBottomColor": "rgb(224, 224, 224)",
+              "borderBottomColor": "rgb(216, 216, 216)",
               "flex": 1,
-              "shadowColor": "rgb(224, 224, 224)",
+              "shadowColor": "rgb(216, 216, 216)",
               "shadowOffset": Object {
                 "height": 0.5,
                 "width": 0,
@@ -1105,13 +1120,18 @@ exports[`the UpNextButtonConnected renders a finished state when finished 1`] = 
         onTransitionStart={[Function]}
         pointerEvents="box-none"
         style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
+          Array [
+            Object {
+              "overflow": undefined,
+            },
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+          ]
         }
         transitionSpec={
           Object {
@@ -1421,9 +1441,9 @@ exports[`the UpNextButtonConnected renders a loading state state without a conte
           style={
             Object {
               "backgroundColor": "rgb(255, 255, 255)",
-              "borderBottomColor": "rgb(224, 224, 224)",
+              "borderBottomColor": "rgb(216, 216, 216)",
               "flex": 1,
-              "shadowColor": "rgb(224, 224, 224)",
+              "shadowColor": "rgb(216, 216, 216)",
               "shadowOffset": Object {
                 "height": 0.5,
                 "width": 0,
@@ -1535,13 +1555,18 @@ exports[`the UpNextButtonConnected renders a loading state state without a conte
         onTransitionStart={[Function]}
         pointerEvents="box-none"
         style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
+          Array [
+            Object {
+              "overflow": undefined,
+            },
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+          ]
         }
         transitionSpec={
           Object {
@@ -1729,9 +1754,9 @@ exports[`the UpNextButtonConnected renders a loading state when loading 1`] = `
           style={
             Object {
               "backgroundColor": "rgb(255, 255, 255)",
-              "borderBottomColor": "rgb(224, 224, 224)",
+              "borderBottomColor": "rgb(216, 216, 216)",
               "flex": 1,
-              "shadowColor": "rgb(224, 224, 224)",
+              "shadowColor": "rgb(216, 216, 216)",
               "shadowOffset": Object {
                 "height": 0.5,
                 "width": 0,
@@ -1843,13 +1868,18 @@ exports[`the UpNextButtonConnected renders a loading state when loading 1`] = `
         onTransitionStart={[Function]}
         pointerEvents="box-none"
         style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
+          Array [
+            Object {
+              "overflow": undefined,
+            },
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+          ]
         }
         transitionSpec={
           Object {
@@ -2037,9 +2067,9 @@ exports[`the UpNextButtonConnected renders nothing when on an empty series 1`] =
           style={
             Object {
               "backgroundColor": "rgb(255, 255, 255)",
-              "borderBottomColor": "rgb(224, 224, 224)",
+              "borderBottomColor": "rgb(216, 216, 216)",
               "flex": 1,
-              "shadowColor": "rgb(224, 224, 224)",
+              "shadowColor": "rgb(216, 216, 216)",
               "shadowOffset": Object {
                 "height": 0.5,
                 "width": 0,
@@ -2151,13 +2181,18 @@ exports[`the UpNextButtonConnected renders nothing when on an empty series 1`] =
         onTransitionStart={[Function]}
         pointerEvents="box-none"
         style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
+          Array [
+            Object {
+              "overflow": undefined,
+            },
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+          ]
         }
         transitionSpec={
           Object {

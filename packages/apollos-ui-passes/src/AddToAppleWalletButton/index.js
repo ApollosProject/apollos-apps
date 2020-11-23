@@ -6,7 +6,7 @@ import PassKit from 'react-native-passkit-wallet';
 import gql from 'graphql-tag';
 import RNFetchBlob from 'rn-fetch-blob';
 
-import { withApollo } from 'react-apollo';
+import { withApollo } from '@apollo/client/react/hoc';
 
 const iconSource = {
   // circumvent react-native's asset weirdness with linked npm packages

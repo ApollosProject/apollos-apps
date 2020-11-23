@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 import { ErrorCard } from '@apollosproject/ui-kit';
 import { get } from 'lodash';
 
@@ -17,6 +17,7 @@ const NodeFeaturesConnected = ({ Component, nodeId, ...props }) => {
       variables={{ nodeId }}
     >
       {({ data: { node } = {}, loading, error }) => {
+        console.log(error);
         if (error) return <ErrorCard error={error} />;
         // TODO: set an optimistic response for this query to return a visually appeallying empty query so we can enable loading states
         if (loading) return null;

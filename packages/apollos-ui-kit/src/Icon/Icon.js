@@ -8,11 +8,7 @@ import Placeholder from '../Placeholder';
 
 import * as uikitIcons from '../theme/icons';
 
-const pascalCase = (string) =>
-  flow(
-    camelCase,
-    upperFirst
-  )(string);
+const pascalCase = (string) => flow(camelCase, upperFirst)(string);
 
 // Convenience component to render icons based on the icon's string name, like:
 // <Icon name="skip-next" {...allOtherPropsPassedToComponent} />

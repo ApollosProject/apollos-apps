@@ -41,14 +41,12 @@
     "@babel/parser": "7.1.6",
     "@babel/runtime": "^7.4.4",
     "apollo": "^1.9.2",
-    "apollo-client": "2.5.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^24.8.0",
     "chokidar": "^3.0.1",
     "codecov": "3.7.1",
     "lerna": "^3.14.0",
     "prettier": "^1.14.2",
-    "react-apollo": "2.5.5",
     "react-native-storybook-loader": "^1.8.0",
     "yalc": "^1.0.0-pre.35"
   }

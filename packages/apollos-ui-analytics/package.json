@@ -20,8 +20,9 @@
   "jest": {
     "preset": "react-native",
     "collectCoverage": true,
+    "coverageReporters": ["json", "lcovonly", "clover"],
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|@react-navigation/native|@apollosproject))"
+      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|@react-navigation/native|@react-navigation/stack|@apollosproject))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -36,9 +37,8 @@
   "peerDependencies": {
     "@apollosproject/ui-kit": "*",
     "@metarouter/analytics-react-native": "*",
-    "apollo-client": "*",
+    "@apollo/client": "*",
     "react": "*",
-    "react-apollo": "*",
     "react-native": "*"
   },
   "dependencies": {
@@ -47,17 +47,14 @@
   },
   "devDependencies": {
     "@metarouter/analytics-react-native": "^1.1.5",
-    "apollo-cache-inmemory": "^1.5.1",
-    "apollo-client": "2.6.8",
-    "apollo-link-http": "^1.5.14",
+    "@apollo/client": "3.2.7",
     "jest": "24.8.0",
     "jest-fetch-mock": "^2.1.2",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
-    "react": "16.8.6",
-    "react-apollo": "2.5.5",
+    "react": "16.9.0",
     "react-native": "0.60.5",
-    "react-test-renderer": "16.8.6"
+    "react-test-renderer": "16.9.0"
   },
   "publishConfig": {
     "access": "public"

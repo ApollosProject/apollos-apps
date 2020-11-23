@@ -1,0 +1,18 @@
+{
+   "name": "@apollosproject/ui-test-utils",
+   "repository": "git://github.com/apollosproject/apollos-apps.git",
+   "version": "1.7.0-beta.2",
+   "main": "./src/index.js",
+   "peerDependencies": {
+     "prop-types": "*",
+     "react": "*",
+     "react-navigation": "*",
+     "react-test-renderer": "*",
+     "waait": "*"
+   },
+   "license": "SEE LICENSE IN LICENSE.md",
+   "publishConfig": {
+     "access": "public"
+   },
+   "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"
+ }

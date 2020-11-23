@@ -21,6 +21,27 @@ jest.mock('@metarouter/analytics-react-native', () => ({
 //   };
 // });
 
+jest.mock('Animated', () => {
+  const ActualAnimated = require.requireActual('Animated');
+  return {
+    ...ActualAnimated,
+    timing: (value, config) => ({
+      start: (callback) => {
+        value.setValue(config.toValue);
+        callback && callback({ finished: true });
+      },
+      stop: () => ({}),
+    }),
+    spring: (value, config) => ({
+      start: (callback) => {
+        value.setValue(config.toValue);
+        callback && callback({ finished: true });
+      },
+      stop: () => ({}),
+    }),
+  };
+});
+
 NativeModules.RNGestureHandlerModule = {
   attachGestureHandler: jest.fn(),
   createGestureHandler: jest.fn(),

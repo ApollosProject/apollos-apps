@@ -5,7 +5,9 @@ import {
   Providers,
   renderWithApolloData,
   WithReactNavigator,
-} from '../testUtils';
+} from '@apollosproject/ui-test-utils';
+
+import { MockedProvider } from '@apollo/client/testing';
 
 import HorizontalContentCardConnected from '../HorizontalContentCardConnected';
 import HorizontalLikedContentFeedConnected from './HorizontalLikedContentFeedConnected';
@@ -78,7 +80,7 @@ describe('HorizontalLikedContentFeedConnected', () => {
     const navigation = { navigate: jest.fn() };
     const tree = await renderWithApolloData(
       WithReactNavigator(
-        <Providers mocks={[twoItemsMock]}>
+        <Providers MockedProvider={MockedProvider} mocks={[twoItemsMock]}>
           <HorizontalLikedContentFeedConnected navigation={navigation} />
         </Providers>
       )
@@ -90,7 +92,7 @@ describe('HorizontalLikedContentFeedConnected', () => {
     const navigation = { navigate: jest.fn() };
     const tree = await renderWithApolloData(
       WithReactNavigator(
-        <Providers mocks={[twoItemsMock]}>
+        <Providers MockedProvider={MockedProvider} mocks={[twoItemsMock]}>
           <HorizontalLikedContentFeedConnected
             Component={() => (
               <HorizontalContentCardConnected labelText="hello" />
@@ -123,7 +125,7 @@ describe('HorizontalLikedContentFeedConnected', () => {
     const navigation = { navigate: jest.fn() };
     const tree = await renderWithApolloData(
       WithReactNavigator(
-        <Providers mocks={[mock]}>
+        <Providers MockedProvider={MockedProvider} mocks={[mock]}>
           <HorizontalLikedContentFeedConnected navigation={navigation} />
         </Providers>
       )

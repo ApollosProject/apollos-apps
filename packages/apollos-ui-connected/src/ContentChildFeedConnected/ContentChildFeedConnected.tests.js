@@ -5,7 +5,8 @@ import {
   Providers,
   renderWithApolloData,
   WithReactNavigator,
-} from '../testUtils';
+} from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 
 import GET_CONTENT_CHILD_SIBLINGS from './getContentChildSiblings';
 import ContentChildFeedConnected from './ContentChildFeedConnected';
@@ -211,7 +212,10 @@ describe('the ContentChildFeedConnected component', () => {
   it('should render', async () => {
     const tree = await renderWithApolloData(
       WithReactNavigator(
-        <Providers mocks={[mock, ...additionalMocks]}>
+        <Providers
+          mocks={[mock, ...additionalMocks]}
+          MockedProvider={MockedProvider}
+        >
           <ContentChildFeedConnected
             nodeId={'ContentSeriesContentItem:123'}
             navigation={navigation}
@@ -221,7 +225,10 @@ describe('the ContentChildFeedConnected component', () => {
     );
     const finalTree = await renderWithApolloData(
       WithReactNavigator(
-        <Providers mocks={[mock, ...additionalMocks]}>
+        <Providers
+          mocks={[mock, ...additionalMocks]}
+          MockedProvider={MockedProvider}
+        >
           <ContentChildFeedConnected
             nodeId={'ContentSeriesContentItem:123'}
             navigation={navigation}
