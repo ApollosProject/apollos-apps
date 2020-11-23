@@ -48,9 +48,8 @@
   "devDependencies": {
     "@metarouter/analytics-react-native": "^1.1.5",
     "@apollo/client": "3.2.7",
-    "jest": "24.8.0",
+    "jest": "^25.1.0",
     "jest-fetch-mock": "^2.1.2",
-    "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
     "react": "16.13.1",
     "react-apollo": "2.5.5",

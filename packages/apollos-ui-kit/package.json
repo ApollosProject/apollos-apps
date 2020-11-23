@@ -63,8 +63,7 @@
   },
   "devDependencies": {
     "@react-native-community/datetimepicker": "^3.0.2",
-    "jest": "24.8.0",
-    "jest-react-native": "18.0.0",
+    "jest": "^25.1.0",
     "prop-types": "15.6.1",
     "react": "16.13.1",
     "react-docgen": "^4.1.0",
