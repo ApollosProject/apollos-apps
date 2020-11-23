@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 
 import { styled, BackgroundView, StretchyView } from '@apollosproject/ui-kit';
-import { ApollosPlayerContainer } from '@apollosproject/react-native-apollos-player';
+import { ApollosPlayerContainer } from '@apollosproject/ui-media-player';
 
 import ContentNodeConnected from '../ContentNodeConnected';
 import ContentParentFeedConnected from '../ContentParentFeedConnected';
@@ -64,10 +64,7 @@ const NodeSingleConnectedWithMedia = ({ nodeId }) => (
         return <NodeSingleConnected nodeId={nodeId} />;
 
       return (
-        <ApollosPlayerContainer
-          autoplay
-          source={data.node.videos[0].sources[0]}
-        >
+        <ApollosPlayerContainer source={data.node.videos[0].sources[0]}>
           <NodeSingleInner nodeId={nodeId} ImageWrapperComponent={Noop} />
         </ApollosPlayerContainer>
       );

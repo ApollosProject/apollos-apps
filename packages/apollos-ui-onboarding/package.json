@@ -42,6 +42,7 @@
     "@apollosproject/ui-fragments": "*",
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-notifications": "*",
+    "react-native-safe-area-context": "*",
     "apollo-client": "*",
     "react": "*",
     "react-apollo": "*",
@@ -68,6 +69,7 @@
     "react-apollo": "2.5.5",
     "react-native": "0.63.2",
     "react-test-renderer": "16.8.6",
+    "react-native-safe-area-context": "^3.0.7",
     "waait": "1.0.2"
   },
   "publishConfig": {

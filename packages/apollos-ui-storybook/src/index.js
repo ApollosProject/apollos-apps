@@ -11,7 +11,7 @@ import { loadStories as loadOnboardingStories } from '@apollosproject/ui-onboard
 import { loadStories as loadMapViewStories } from '@apollosproject/ui-mapview/storybook/storyLoader';
 import { loadStories as loadScriptureStories } from '@apollosproject/ui-scripture/storybook/storyLoader';
 import { loadStories as loadConnectedStories } from '@apollosproject/ui-connected/storybook/storyLoader';
-import { loadStories as loadApollosPlayerStories } from '@apollosproject/react-native-apollos-player/storybook/storyLoader';
+import { loadStories as loadApollosPlayerStories } from '@apollosproject/ui-media-player/storybook/storyLoader';
 
 import { Providers as UIKitProviders } from '@apollosproject/ui-kit';
 

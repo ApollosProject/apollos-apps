@@ -1,40 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import { Mutation } from 'react-apollo';
-
-import { PLAY_VIDEO } from '@apollosproject/ui-media-player';
 
 import PlayButton from './PlayButton';
 
-const PlayButtonConnected = ({
-  coverImageSources,
-  isVideo,
-  parentChannelName,
-  title,
-  videoSource,
-  Component,
-  ...props
-}) => (
-  <Mutation mutation={PLAY_VIDEO}>
-    {(play) => (
-      <Component
-        onPress={() =>
-          play({
-            variables: {
-              mediaSource: videoSource,
-              posterSources: coverImageSources,
-              title,
-              isVideo,
-              artist: parentChannelName,
-            },
-          })
-        }
-        coverImageSources={coverImageSources}
-        {...props}
-      />
-    )}
-  </Mutation>
-);
+const PlayButtonConnected = () =>
+  console.warn('PlayButtonConnected is deprecated') || null;
 
 PlayButtonConnected.propTypes = {
   coverImageSources: PropTypes.arrayOf(PropTypes.shape({})),

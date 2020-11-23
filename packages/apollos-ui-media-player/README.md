@@ -1,122 +1,73 @@
-# Apollos UI: MediaPlayer
+# react-native-apollos-player
 
-Provides a media player to render Video and Audio content in the app. Both fullscreen and in a conveniant Mini Player.
+An opinionated media player for react-native apps from The Apollos Project
 
-## Installation:
+## Installation
 
-1. Install library and peer dependencies from `npm`:
-
-```
-yarn add @apollosproject/apollos-ui-media-player react-native-video react-native-music-control react-native-video-controls @apollosproject/react-native-airplay-btn
-```
-
-2. Link native dependencies
-
-```
-yarn run react-native link
+```sh
+npm install react-native-apollos-player
 ```
 
 ## Usage
 
-Integrating this module requires a few steps.
+todo
 
-1. Render the MediaPlayer at the bottom of your App component tree.
+## Architecture
 
-```
-import { MediaPlayer } from '@apollosproject/ui-media-player';
-...
-const App = () => (
-  <Providers>
-    <BackgroundView>
-      <AppStatusBar barStyle="dark-content" />
-      <AppNavigator
-        ref={(navigatorRef) => {
-          NavigationService.setTopLevelNavigator(navigatorRef);
-        }}
-      />
-      <MediaPlayer /> // <-- add this
-    </BackgroundView>
-  </Providers>
-);
-```
+- We still render player at root-level
+- Need to figure out how to display above r-n modals / everything
 
-2. Include the Provider
+On iOS we can't render on top of modals, but we can move the video around
+On android we can still render on top of modals, but we cna't move the video around
 
-```
-import { MediaPlayerProvider } from '@apollosproject/ui-media-player';
 
-const AppProviders = (props) => (
-  <ClientProvider {...props}>
-    <NotificationsManager>
-      <AuthProvider
-        navigateToAuth={() => NavigationService.navigate('Auth')}
-        closeAuth={() => NavigationService.navigate('Onboarding')}
-      >
-        <MediaPlayerProvider>
-          <AnalyticsProvider>
-            <Providers {...props} />
-          </AnalyticsProvider>
-        </MediaPlayerProvider>
-      </AuthProvider>
-    </NotificationsManager>
-  </ClientProvider>
-);
+## Exposed Components:
+
+```jsx
+<ApollosPlayerProvider />
+
+<VideoPreviewView />
+<VideoPreviewMiniIOS />
+
+const { playNow, setIsPlaying, seek } = usePlayer();
+const { setOverlayInsets, setPresentationMode, setOverlayIsVisible } = usePlayerPresentation();
 ```
 
-3. Where needed, include a MediaPlayerSpacer. This component will increase it's own height when the MiniPlayer is rendered. Useful for TabBars and other static footers.
+```jsx
+  <VideoPreviewView
+    source={}
+  />
+```
+  iOS: preview plays the specified media, as long as something else isn't already playing.
+       on interaction, opens the media in full-screen Presentation
+  Android: preview plays the specified media.
+       On interaction, opens the media in full-screen Presentation
 
-```
-import { MediaPlayerSpacer } from '@apollosproject/ui-media-player';
-...
-const ActionContainer = ({ itemId }) => (
-  <Container>
-    <MediaPlayerSpacer>
-      <PositioningView>
-        <LikeButton itemId={itemId} />
-        <Query query={GET_SHARE_CONTENT} variables={{ itemId }}>
-          {({ data: { node } = {}, error, loading }) => {
-            const sharing = get(node, 'sharing');
-            return loading || error || !sharing ? null : (
-              <Share content={sharing} />
-            );
-          }}
-        </Query>
-      </PositioningView>
-    </MediaPlayerSpacer>
-  </Container>
-);
-```
+---
 
-4. Wire up ways to "call" the media player. We export a series of `Mutations` that can be used to pause, play, and advance the media player. Example:
+```jsx
+  <VideoPreviewMiniIOS
+    source={}
+    isVisible
+  />
+```
+  iOS: preview plays the specified media, unless something else is playing -
+       in which case, it will play show media instead.
+  Android:
+       does not render. this gets picked up by the root-level player
 
-```
-import { PLAY_VIDEO } from '@apollosproject/ui-media-player';
-...
-      <Mutation mutation={PLAY_VIDEO}>
-        {(play) => (
-          <Container>
-            {videoSource ? (
-              <MediaButtonBorder>
-                <MediaButton
-                  type="primary"
-                  onPress={() =>
-                    play({
-                      variables: {
-                        mediaSource: videoSource,
-                        posterSources: coverImageSources,
-                        title,
-                        isVideo: true,
-                        artist: parentChannel.name,
-                      },
-                    })
-                  }
-                  useForeground
-                >
-                  <MediaIcon name="play" />
-                </MediaButton>
-              </MediaButtonBorder>
-            ) : null}
-          </Container>
-        )}
-      </Mutation>
-```
+---
+
+## Internal (these are likely over-ride-able props on Provider)
+
+- VideoTextureView
+- MiniPresentation
+- FullScreenPresentation
+
+## Contributing
+
+See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
+
+## License
+
+MIT
