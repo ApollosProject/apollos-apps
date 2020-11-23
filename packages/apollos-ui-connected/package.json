@@ -28,7 +28,8 @@
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
     ],
     "modulePaths": [
-      "<rootDir>/src/"
+      "<rootDir>/src/",
+      "<rootDir>/../../"
     ],
     "setupFiles": [
       "./jest.setup.js"

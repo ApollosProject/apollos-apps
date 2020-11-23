@@ -1,7 +1,7 @@
 import React from 'react';
 import { Animated } from 'react-native';
 import PropTypes from 'prop-types';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 
 import { styled, BackgroundView, StretchyView } from '@apollosproject/ui-kit';
 import { ApollosPlayerContainer } from '@apollosproject/ui-media-player';

@@ -1,10 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { ApolloProvider } from 'react-apollo';
-import { ApolloProvider as ApolloHookProvider } from '@apollo/react-hooks';
-import { ApolloClient } from 'apollo-client';
-import { ApolloLink } from 'apollo-link';
-import { InMemoryCache } from 'apollo-cache-inmemory';
+import { ApolloProvider, ApolloClient, ApolloLink } from '@apollo/client';
+import { InMemoryCache } from '@apollo/client/cache';
 
 import httpLink from './httpLink';
 
@@ -39,9 +36,7 @@ class ClientProvider extends PureComponent {
     const { children, ...otherProps } = this.props;
     return (
       <ApolloProvider {...otherProps} client={client}>
-        <ApolloHookProvider {...otherProps} client={client}>
-          {children}
-        </ApolloHookProvider>
+        {children}
       </ApolloProvider>
     );
   }
