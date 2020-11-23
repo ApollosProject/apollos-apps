@@ -7,7 +7,9 @@ export default gql`
     node(id: $nodeId) {
       id
       ...VideoNodeFragment
+      ...ContentNodeFragment
     }
   }
   ${ApollosConfig.FRAGMENTS.VIDEO_NODE_FRAGMENT}
+  ${ApollosConfig.FRAGMENTS.CONTENT_NODE_FRAGMENT}
 `;

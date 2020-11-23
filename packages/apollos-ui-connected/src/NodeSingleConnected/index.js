@@ -21,7 +21,6 @@ const FlexedScrollView = styled({ flex: 1 })(Animated.ScrollView);
 const NodeSingleInner = ({ nodeId, ImageWrapperComponent }) => (
   <>
     <ContentNodeConnected
-      MediaControlsComponent={Noop}
       ImageWrapperComponent={ImageWrapperComponent}
       nodeId={nodeId}
     />
@@ -64,7 +63,13 @@ const NodeSingleConnectedWithMedia = ({ nodeId }) => (
         return <NodeSingleConnected nodeId={nodeId} />;
 
       return (
-        <ApollosPlayerContainer source={data.node.videos[0].sources[0]}>
+        <ApollosPlayerContainer
+          source={data.node?.videos[0]?.sources[0]}
+          coverImage={data.node?.coverImage?.sources}
+          presentationProps={{
+            title: data.node.title,
+          }}
+        >
           <NodeSingleInner nodeId={nodeId} ImageWrapperComponent={Noop} />
         </ApollosPlayerContainer>
       );
