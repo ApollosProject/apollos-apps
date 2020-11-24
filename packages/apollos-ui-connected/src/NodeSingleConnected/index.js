@@ -24,7 +24,7 @@ const NodeSingleInner = ({ nodeId, ImageWrapperComponent }) => (
       ImageWrapperComponent={ImageWrapperComponent}
       nodeId={nodeId}
     />
-    <ContentSingleFeaturesConnected nodeId={nodeId} />
+    <NodeFeaturesConnected nodeId={nodeId} />
     <UpNextButtonConnected nodeId={nodeId} />
     <ContentParentFeedConnected nodeId={nodeId} />
     <ContentChildFeedConnected nodeId={nodeId} />

@@ -1,10 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import wait from 'waait';
-import {
-  ApolloProvider,
-  renderWithApolloData,
-} from '@apollosproject/ui-test-utils';
+import { ApolloProvider } from '@apollosproject/ui-test-utils';
 import { MockedProvider } from '@apollo/client/testing';
 import TrackEventWhenLoaded from './TrackEventWhenLoaded';
 import AnalyticsProvider from './Provider';
