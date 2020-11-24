@@ -4,7 +4,6 @@ import renderer from 'react-test-renderer';
 import { Text, ScrollView } from 'react-native';
 import { ApollosPlayerContainer, PictureMode } from '../index';
 import { Providers } from '@apollosproject/ui-test-utils';
-import wait from 'waait';
 
 import {
   useNowPlaying,
