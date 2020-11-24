@@ -6,8 +6,6 @@ import { Providers } from './testUtils';
 
 import Entry from './Entry';
 
-jest.mock('Platform');
-
 describe('The Auth Entry component', () => {
   it('should render', () => {
     const tree = renderer.create(

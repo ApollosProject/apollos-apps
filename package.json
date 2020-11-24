@@ -6,10 +6,6 @@
       "packages/*"
     ],
     "nohoist": [
-      "**/react-native",
-      "**/react-native-*",
-      "**/rn-placeholder",
-      "**/@react-native-community/*"
     ]
   },
   "scripts": {
@@ -26,7 +22,7 @@
     "release:next": "lerna publish --conventional-commits --canary premajor --dist-tag next --force-publish",
     "prepublishOnly": "lerna run build && lerna run generate-stories",
     "nuke": "./scripts/boom.sh && yarn nuke:node && yarn nuke:cache",
-    "nuke:node": "rm -rdf ./node_modules packages/*/node_modules && yarn cache clean && yarn",
+    "nuke:node": "rm -rdf ./node_modules packages/*/node_modules && yarn",
     "nuke:cache": "watchman watch-del-all",
     "postinstall": "lerna run build --parallel",
     "generate-docs": "lerna run generate-docs",

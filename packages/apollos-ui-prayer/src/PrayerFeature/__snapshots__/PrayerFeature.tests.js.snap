@@ -149,7 +149,6 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
         isCard={true}
         keyExtractor={[Function]}
         maxToRenderPerBatch={10}
-        numColumns={1}
         onContentSizeChange={[Function]}
         onEndReachedThreshold={2}
         onLayout={[Function]}
@@ -181,8 +180,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
             >
               <View
                 accessible={true}
-                clickable={true}
-                isTVSelectable={true}
+                focusable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -335,8 +333,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -419,8 +416,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -503,8 +499,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -587,8 +582,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -655,8 +649,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -723,8 +716,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -791,8 +783,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -859,8 +850,7 @@ exports[`The PrayerFeature component should accept an onPressAdd function 1`] = 
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -1061,7 +1051,6 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
         isCard={true}
         keyExtractor={[Function]}
         maxToRenderPerBatch={10}
-        numColumns={1}
         onContentSizeChange={[Function]}
         onEndReachedThreshold={2}
         onLayout={[Function]}
@@ -1091,8 +1080,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -1175,8 +1163,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -1259,8 +1246,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -1343,8 +1329,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -1411,8 +1396,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -1479,8 +1463,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -1547,8 +1530,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -1615,8 +1597,7 @@ exports[`The PrayerFeature component should accept an onPressAvatar function 1`]
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -1817,7 +1798,6 @@ exports[`The PrayerFeature component should render 1`] = `
         isCard={true}
         keyExtractor={[Function]}
         maxToRenderPerBatch={10}
-        numColumns={1}
         onContentSizeChange={[Function]}
         onEndReachedThreshold={2}
         onLayout={[Function]}
@@ -1847,8 +1827,7 @@ exports[`The PrayerFeature component should render 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -1931,8 +1910,7 @@ exports[`The PrayerFeature component should render 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -2015,8 +1993,7 @@ exports[`The PrayerFeature component should render 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -2099,8 +2076,7 @@ exports[`The PrayerFeature component should render 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -2167,8 +2143,7 @@ exports[`The PrayerFeature component should render 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -2235,8 +2210,7 @@ exports[`The PrayerFeature component should render 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -2303,8 +2277,7 @@ exports[`The PrayerFeature component should render 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -2371,8 +2344,7 @@ exports[`The PrayerFeature component should render 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -2586,7 +2558,6 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
         isCard={true}
         keyExtractor={[Function]}
         maxToRenderPerBatch={10}
-        numColumns={1}
         onContentSizeChange={[Function]}
         onEndReachedThreshold={2}
         onLayout={[Function]}
@@ -2616,8 +2587,7 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -2700,8 +2670,7 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -2784,8 +2753,7 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -2868,8 +2836,7 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -2936,8 +2903,7 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -3004,8 +2970,7 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -3072,8 +3037,7 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -3140,8 +3104,7 @@ exports[`The PrayerFeature component should render a loading state 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -3305,7 +3268,6 @@ Array [
       isCard={false}
       keyExtractor={[Function]}
       maxToRenderPerBatch={10}
-      numColumns={1}
       onContentSizeChange={[Function]}
       onEndReachedThreshold={2}
       onLayout={[Function]}
@@ -3335,8 +3297,7 @@ Array [
         >
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -3509,8 +3470,7 @@ Array [
         >
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -3683,8 +3643,7 @@ Array [
         >
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -3857,8 +3816,7 @@ Array [
         >
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -4031,8 +3989,7 @@ Array [
         >
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -4205,8 +4162,7 @@ Array [
         >
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -4512,7 +4468,6 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
         isCard={true}
         keyExtractor={[Function]}
         maxToRenderPerBatch={10}
-        numColumns={1}
         onContentSizeChange={[Function]}
         onEndReachedThreshold={2}
         onLayout={[Function]}
@@ -4542,8 +4497,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -4626,8 +4580,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -4710,8 +4663,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -4794,8 +4746,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -4862,8 +4813,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -4930,8 +4880,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -4998,8 +4947,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -5066,8 +5014,7 @@ exports[`The PrayerFeature component should render with a custom subtitle 1`] = 
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -5281,7 +5228,6 @@ exports[`The PrayerFeature component should render with a title 1`] = `
         isCard={true}
         keyExtractor={[Function]}
         maxToRenderPerBatch={10}
-        numColumns={1}
         onContentSizeChange={[Function]}
         onEndReachedThreshold={2}
         onLayout={[Function]}
@@ -5311,8 +5257,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -5395,8 +5340,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -5479,8 +5423,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -5563,8 +5506,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -5631,8 +5573,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -5699,8 +5640,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -5767,8 +5707,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -5835,8 +5774,7 @@ exports[`The PrayerFeature component should render with a title 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -6014,7 +5952,6 @@ Array [
       isCard={false}
       keyExtractor={[Function]}
       maxToRenderPerBatch={10}
-      numColumns={1}
       onContentSizeChange={[Function]}
       onEndReachedThreshold={2}
       onLayout={[Function]}
@@ -6044,8 +5981,7 @@ Array [
         >
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -6128,8 +6064,7 @@ Array [
         >
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -6212,8 +6147,7 @@ Array [
         >
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -6296,8 +6230,7 @@ Array [
         >
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -6364,8 +6297,7 @@ Array [
         >
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -6432,8 +6364,7 @@ Array [
         >
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -6500,8 +6431,7 @@ Array [
         >
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -6568,8 +6498,7 @@ Array [
         >
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}

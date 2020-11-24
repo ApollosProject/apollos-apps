@@ -8,7 +8,6 @@ import {
   PaddedView,
   H2,
   GradientOverlayImage,
-  styled,
 } from '@apollosproject/ui-kit';
 
 import safeOpenUrl from '../safeOpenUrl';
@@ -74,7 +73,6 @@ ContentNodeConnected.propTypes = {
   nodeId: PropTypes.string.isRequired,
   HtmlComponent: ComponentPropType,
   ImageWrapperComponent: ComponentPropType,
-  MediaControlsComponent: ComponentPropType,
   onPressAnchor: PropTypes.func,
 };
 

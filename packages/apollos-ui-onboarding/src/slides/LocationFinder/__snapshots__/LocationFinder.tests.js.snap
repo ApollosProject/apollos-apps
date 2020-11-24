@@ -464,8 +464,7 @@ exports[`The Onboarding LocationFinder component should render a button with cus
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -801,8 +800,7 @@ Array [
         </View>
         <View
           accessible={true}
-          clickable={false}
-          isTVSelectable={true}
+          focusable={false}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -948,8 +946,7 @@ South Barrington, IL 60010-6143
     <View>
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1192,8 +1189,7 @@ exports[`The Onboarding LocationFinder component should render with a button 1`]
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}

@@ -87,8 +87,7 @@ exports[`The PrayerSwiper component should render with a fragment as a child 1`]
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -122,8 +121,7 @@ exports[`The PrayerSwiper component should render with a fragment as a child 1`]
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -316,8 +314,7 @@ exports[`The PrayerSwiper component should render with an array as a child 1`] =
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -351,8 +348,7 @@ exports[`The PrayerSwiper component should render with an array as a child 1`] =
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}

@@ -76,7 +76,6 @@ exports[`LikedContentFeedConnected component renders LikedContentFeedConnected 1
     initialNumToRender={10}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReached={[Function]}
     onEndReachedThreshold={0.7}
@@ -110,7 +109,7 @@ exports[`LikedContentFeedConnected component renders LikedContentFeedConnected 1
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -163,11 +162,10 @@ exports[`LikedContentFeedConnected component renders LikedContentFeedConnected 1
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   isLoading={false}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={
                     Array [
                       Object {
@@ -181,7 +179,6 @@ exports[`LikedContentFeedConnected component renders LikedContentFeedConnected 1
                     Object {
                       "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
@@ -258,7 +255,7 @@ exports[`LikedContentFeedConnected component renders LikedContentFeedConnected 1
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -311,11 +308,10 @@ exports[`LikedContentFeedConnected component renders LikedContentFeedConnected 1
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   isLoading={false}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={
                     Array [
                       Object {
@@ -329,7 +325,6 @@ exports[`LikedContentFeedConnected component renders LikedContentFeedConnected 1
                     Object {
                       "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }

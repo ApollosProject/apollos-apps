@@ -10,7 +10,7 @@ const cache = new InMemoryCache();
 const client = new ApolloClient({
   link: createHttpLink({ fetch: jest.fn() }),
   cache,
-  resolvers,
+  // resolvers,
 });
 
 describe('Auth Store', () => {

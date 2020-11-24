@@ -1,9 +1,6 @@
 import { Platform, Share } from 'react-native';
 import share from '.';
 
-jest.mock('Platform');
-jest.mock('Share');
-
 describe('the share function', () => {
   beforeAll(() => {
     Share.share = jest.fn();

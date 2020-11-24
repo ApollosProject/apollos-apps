@@ -118,29 +118,32 @@ const Provider = ({
   trackFunctions,
   identifyFunctions,
   useServerAnalytics,
-}) => (
-  <ApolloConsumer>
-    {(client) => {
-      client.addResolvers(
-        createResolvers({
-          trackFunctions,
-          identifyFunctions,
-          useServerAnalytics,
-        })
-      );
-      return (
-        <AnalyticsContext.Provider
-          value={{
-            track: createTrack({ client }),
-            identify: createIdentify({ client }),
-          }}
-        >
-          {children}
-        </AnalyticsContext.Provider>
-      );
-    }}
-  </ApolloConsumer>
-);
+}) =>
+  console.log(children, 'children') || (
+    <ApolloConsumer>
+      {(client) => {
+        console.log(client, 'client here');
+        console.log(ApolloConsumer, 'apollo consumer');
+        client.addResolvers(
+          createResolvers({
+            trackFunctions,
+            identifyFunctions,
+            useServerAnalytics,
+          })
+        );
+        return (
+          <AnalyticsContext.Provider
+            value={{
+              track: createTrack({ client }),
+              identify: createIdentify({ client }),
+            }}
+          >
+            {children}
+          </AnalyticsContext.Provider>
+        );
+      }}
+    </ApolloConsumer>
+  );
 
 Provider.propTypes = {
   children: PropTypes.node,

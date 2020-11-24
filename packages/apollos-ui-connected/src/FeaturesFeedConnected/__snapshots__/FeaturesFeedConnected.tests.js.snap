@@ -11,7 +11,6 @@ exports[`FeaturesFeedConnected should render 1`] = `
   keyExtractor={[Function]}
   loading={false}
   maxToRenderPerBatch={10}
-  numColumns={1}
   onContentSizeChange={[Function]}
   onEndReachedThreshold={0.7}
   onLayout={[Function]}

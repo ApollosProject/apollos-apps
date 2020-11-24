@@ -32,7 +32,6 @@ exports[`The CampaignItemListFeature component should render 1`] = `
     initialNumToRender={10}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReachedThreshold={0.7}
     onLayout={[Function]}
@@ -56,7 +55,7 @@ exports[`The CampaignItemListFeature component should render 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -109,10 +108,9 @@ exports[`The CampaignItemListFeature component should render 1`] = `
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={
                     Array [
                       Object {
@@ -125,7 +123,6 @@ exports[`The CampaignItemListFeature component should render 1`] = `
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
@@ -307,7 +304,6 @@ exports[`The CampaignItemListFeature component should render a loading state for
     initialNumToRender={10}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReachedThreshold={0.7}
     onLayout={[Function]}
@@ -331,7 +327,7 @@ exports[`The CampaignItemListFeature component should render a loading state for
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -385,11 +381,10 @@ exports[`The CampaignItemListFeature component should render a loading state for
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   isLoading={true}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={
                     Array [
                       Object {
@@ -402,7 +397,6 @@ exports[`The CampaignItemListFeature component should render a loading state for
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
@@ -578,7 +572,6 @@ exports[`The CampaignItemListFeature component should render a section title 1`]
     initialNumToRender={10}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReachedThreshold={0.7}
     onLayout={[Function]}
@@ -602,7 +595,7 @@ exports[`The CampaignItemListFeature component should render a section title 1`]
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -655,10 +648,9 @@ exports[`The CampaignItemListFeature component should render a section title 1`]
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={
                     Array [
                       Object {
@@ -671,7 +663,6 @@ exports[`The CampaignItemListFeature component should render a section title 1`]
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
@@ -840,7 +831,6 @@ exports[`The CampaignItemListFeature component should render with a subtitle 1`]
     initialNumToRender={10}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReachedThreshold={0.7}
     onLayout={[Function]}
@@ -864,7 +854,7 @@ exports[`The CampaignItemListFeature component should render with a subtitle 1`]
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -917,10 +907,9 @@ exports[`The CampaignItemListFeature component should render with a subtitle 1`]
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={
                     Array [
                       Object {
@@ -933,7 +922,6 @@ exports[`The CampaignItemListFeature component should render with a subtitle 1`]
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }

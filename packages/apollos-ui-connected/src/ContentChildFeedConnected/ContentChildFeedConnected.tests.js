@@ -1,5 +1,5 @@
 import React from 'react';
-import { GET_CONTENT_CARD } from '@apollosproject/ui-connected';
+import { GET_CONTENT_CARD } from '../ContentCardConnected';
 
 import {
   Providers,

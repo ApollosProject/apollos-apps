@@ -36,10 +36,9 @@ exports[`The CampaignItemListFeature component should render 1`] = `
         }
       }
     >
-      <RCTImageView
+      <Image
         fadeDuration={250}
         onLoad={[Function]}
-        resizeMode="cover"
         source={
           Array [
             Object {
@@ -52,7 +51,6 @@ exports[`The CampaignItemListFeature component should render 1`] = `
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "overflow": "hidden",
             "resizeMode": "cover",
             "width": "100%",
           }
@@ -236,11 +234,10 @@ exports[`The CampaignItemListFeature component should render 2`] = `
         }
       }
     >
-      <RCTImageView
+      <Image
         fadeDuration={250}
         isLoading={true}
         onLoad={[Function]}
-        resizeMode="cover"
         source={
           Array [
             Object {
@@ -253,7 +250,6 @@ exports[`The CampaignItemListFeature component should render 2`] = `
           Object {
             "aspectRatio": 1.2,
             "backgroundColor": "#A5A5A5",
-            "overflow": "hidden",
             "resizeMode": "cover",
             "width": "100%",
           }
@@ -333,10 +329,9 @@ exports[`The CampaignItemListFeature component should render a Component prop 1`
         }
       }
     >
-      <RCTImageView
+      <Image
         fadeDuration={250}
         onLoad={[Function]}
-        resizeMode="cover"
         source={
           Array [
             Object {
@@ -349,7 +344,6 @@ exports[`The CampaignItemListFeature component should render a Component prop 1`
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "overflow": "hidden",
             "resizeMode": "cover",
             "width": "100%",
           }
@@ -765,10 +759,9 @@ exports[`The CampaignItemListFeature component should render a HighlightCard 1`]
         }
       }
     >
-      <RCTImageView
+      <Image
         fadeDuration={250}
         onLoad={[Function]}
-        resizeMode="cover"
         source={
           Array [
             Object {
@@ -781,7 +774,6 @@ exports[`The CampaignItemListFeature component should render a HighlightCard 1`]
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "overflow": "hidden",
             "resizeMode": "cover",
             "width": "100%",
           }

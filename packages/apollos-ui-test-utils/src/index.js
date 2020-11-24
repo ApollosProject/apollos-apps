@@ -15,7 +15,7 @@ import possibleTypesJson from './fragmentTypes.json';
 
 async function renderWithApolloData(component, existingTree) {
   const tree = existingTree || renderer.create(component);
-  await renderer.act(async function() {
+  await renderer.act(async function () {
     await wait(0);
     tree.update(component);
   });
@@ -42,6 +42,8 @@ function Providers({ MockedProvider, children, ...props }){
   const cache = new InMemoryCache({
     possibleTypes: finalPossibleTypes,
   });
+
+  console.log(MockedApolloProvider, children);
 
   return (
     <UIProviders {...props}>

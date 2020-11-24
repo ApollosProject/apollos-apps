@@ -78,8 +78,7 @@ exports[`The onboarding swiper should render with a fragment as a child 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -113,8 +112,7 @@ exports[`The onboarding swiper should render with a fragment as a child 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -293,8 +291,7 @@ exports[`The onboarding swiper should render with an array as a child 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -328,8 +325,7 @@ exports[`The onboarding swiper should render with an array as a child 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
