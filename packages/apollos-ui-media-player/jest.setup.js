@@ -4,6 +4,14 @@ RNNativeModules.UIManager = {
   RCTView: () => ({
     directEventTypes: {},
   }),
+  RCTVideo: {
+    Constants: {
+      ScaleToFill: 1,
+      ScaleAspectFit: 2,
+      ScaleAspectFill: 2,
+      ScaleNone: 0,
+    },
+  },
 };
 
 RNNativeModules.MusicControlManager = {

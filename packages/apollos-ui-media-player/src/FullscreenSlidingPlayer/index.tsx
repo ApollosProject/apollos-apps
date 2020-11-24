@@ -191,9 +191,15 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
       <Animated.ScrollView
         // So...this is annoying. Animated.ScrollView's ref used to behave
         // differently then other refs in older versions of React-Native.
-        // The exported types seem to still think that's the case.
-        // @ts-ignore
-        ref={scrollViewRef}
+        // Animated Component refs used to return a { getNode: () => {} } shape,
+        // and now they return the actual component. This handles both cases.
+        ref={(ref: { getNode: () => ScrollView }) => {
+          if (ref?.getNode && typeof ref.getNode === 'function') {
+            return ref.getNode();
+          } else {
+            return ref;
+          }
+        }}
         scrollEventThrottle={16}
         onScroll={handleScroll}
         style={scrollViewStyles}
