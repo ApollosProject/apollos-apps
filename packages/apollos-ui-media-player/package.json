@@ -54,8 +54,7 @@
     "react-native-safe-area-context": "^3.0.7",
     "react-native-video": "^5.1.0-alpha8",
     "react-test-renderer": "16.13.1",
-    "typescript": "^3.8.3",
-    "waait": "^1.0.5"
+    "typescript": "^3.8.3"
   },
   "peerDependencies": {
     "@apollosproject/ui-kit": "*",
