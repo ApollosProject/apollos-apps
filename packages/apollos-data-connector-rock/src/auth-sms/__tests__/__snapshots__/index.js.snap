@@ -29,7 +29,7 @@ exports[`AuthSms schema checks to see if a user exists via phone number 2`] = `
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
   ],
@@ -55,7 +55,7 @@ exports[`AuthSms schema checks to see if a user exists via phone number and retu
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
   ],
