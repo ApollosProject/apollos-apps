@@ -1,7 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { View } from 'react-native';
 // import apolloStorybookDecorator from 'apollo-storybook-react-native';
 import React from 'react';
 import renderer from 'react-test-renderer';
@@ -23,7 +22,7 @@ async function renderWithApolloData(component, existingTree) {
 }
 
 // eslint-disable-next-line
-function Providers({ MockedProvider, children, ...props }){
+function ApolloProvider({ MockedProvider, children, ...props }) {
   let MockedApolloProvider = React.Fragment;
   if (MockedProvider) {
     MockedApolloProvider = MockedProvider;
@@ -43,24 +42,29 @@ function Providers({ MockedProvider, children, ...props }){
     possibleTypes: finalPossibleTypes,
   });
 
-  console.log(MockedApolloProvider, children);
+  return (
+    <MockedApolloProvider
+      {...(MockedProvider
+        ? {
+            defaultOptions: {
+              watchQuery: { fetchPolicy: 'no-cache' },
+              query: { fetchPolicy: 'no-cache' },
+            },
+            cache,
+          }
+        : {})}
+      {...props}
+    >
+      {children}
+    </MockedApolloProvider>
+  );
+}
 
+// eslint-disable-next-line
+function Providers({ children, ...props }) {
   return (
     <UIProviders {...props}>
-      <MockedApolloProvider
-        {...(MockedProvider
-          ? {
-              defaultOptions: {
-                watchQuery: { fetchPolicy: 'no-cache' },
-                query: { fetchPolicy: 'no-cache' },
-              },
-              cache,
-            }
-          : {})}
-        {...props}
-      >
-        {children}
-      </MockedApolloProvider>
+      <ApolloProvider {...props}>{children}</ApolloProvider>
     </UIProviders>
   );
 }
@@ -122,6 +126,7 @@ const WithReactNavigator = (Component) => {
 export {
   renderWithApolloData,
   Providers,
+  ApolloProvider,
   ApolloStorybookDecorator,
   WithReactNavigator,
 };

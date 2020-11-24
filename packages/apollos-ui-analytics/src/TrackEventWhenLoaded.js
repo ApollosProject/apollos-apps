@@ -42,11 +42,10 @@ TrackEventWhenLoaded.propTypes = {
   track: PropTypes.func,
 };
 
-const TrackEventWhenLoadedConnected = (props) =>
-  console.log('render') || (
-    <AnalyticsConsumer>
-      {({ track }) => <TrackEventWhenLoaded {...props} track={track} />}
-    </AnalyticsConsumer>
-  );
+const TrackEventWhenLoadedConnected = (props) => (
+  <AnalyticsConsumer>
+    {({ track }) => <TrackEventWhenLoaded {...props} track={track} />}
+  </AnalyticsConsumer>
+);
 
 export default TrackEventWhenLoadedConnected;
