@@ -51,7 +51,6 @@
     "jest": "^25.1.0",
     "prop-types": "15.6.1",
     "react": "16.13.1",
-    "react-apollo": "2.5.5",
     "react-native": "0.63.2",
     "react-native-onesignal": "3.9.1",
     "react-test-renderer": "16.13.1",
