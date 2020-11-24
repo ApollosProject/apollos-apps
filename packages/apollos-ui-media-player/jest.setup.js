@@ -30,5 +30,8 @@ RNNativeModules.MusicControlManager = {
 
 RNNativeModules.KeyboardObserver = {};
 RNNativeModules.ApollosPlayer = {
-  isPictureInPictureSupported: jest.fn(), // eslint-disable-line
+  // eslint-disable-next-line no-undef
+  isPictureInPictureSupported: jest.fn(
+    () => new Promise((resolve) => resolve(true))
+  ),
 };

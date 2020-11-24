@@ -33,6 +33,10 @@ export interface FullScreenSlidingPlayerProps {
 
   collapseOnScroll?: boolean;
   useNativeFullscreeniOS?: boolean;
+
+  scrollViewRef?:
+    | ((instance: ScrollView | null) => void)
+    | React.RefObject<ScrollView>;
 }
 
 const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerProps> = ({
@@ -41,6 +45,7 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
   children,
   collapseOnScroll = false,
   useNativeFullscreeniOS = false,
+  scrollViewRef: scrollViewRefProp,
 }) => {
   // Setup layout and window objects for size references inside of computed
   // styles that are below.
@@ -72,6 +77,15 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
   // Setup the collapsedAnimation and collapse effect.
   // The collapse effect is tied to the collapseOnScroll bool and PiP mode.
   const scrollViewRef = React.useRef<ScrollView | null>();
+  if (scrollViewRef.current && scrollViewRefProp) {
+    if (typeof scrollViewRefProp === 'function') {
+      scrollViewRefProp(scrollViewRef.current);
+    } else {
+      // @ts-ignore
+      scrollViewRefProp.current = scrollViewRef.current;
+    }
+  }
+
   const videoHeight: number = Math.min(
     // TODO: calculate this another way?
     layout.height * 0.4,

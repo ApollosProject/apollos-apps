@@ -54,7 +54,8 @@
     "react-native-safe-area-context": "^3.0.7",
     "react-native-video": "^5.1.0-alpha8",
     "react-test-renderer": "16.13.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "waait": "^1.0.5"
   },
   "peerDependencies": {
     "@apollosproject/ui-kit": "*",
@@ -67,11 +68,6 @@
   "jest": {
     "preset": "react-native",
     "collectCoverage": true,
-    "coverageReporters": [
-      "json",
-      "lcovonly",
-      "clover"
-    ],
     "transformIgnorePatterns": [
       "../../node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@apollosproject))"
     ],

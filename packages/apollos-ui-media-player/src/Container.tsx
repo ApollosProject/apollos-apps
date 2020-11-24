@@ -41,6 +41,7 @@ const Container: React.FunctionComponent<ContainerProps> = ({
   audioOnly = false,
   autoplay = false,
   useNativeFullscreeniOS,
+  scrollViewRef,
 }) => {
   /*
     We're going to set up 4 context state objects in this component:
@@ -157,6 +158,7 @@ const Container: React.FunctionComponent<ContainerProps> = ({
                     ControlsComponent={ControlsComponent}
                     collapseOnScroll={collapseOnScroll}
                     useNativeFullscreeniOS={useNativeFullscreeniOS}
+                    scrollViewRef={scrollViewRef}
                   >
                     {children}
                   </PlayerComponent>
@@ -168,6 +170,7 @@ const Container: React.FunctionComponent<ContainerProps> = ({
                 ControlsComponent,
                 collapseOnScroll,
                 useNativeFullscreeniOS,
+                scrollViewRef,
               ]
             )}
           </PlayheadContext.Provider>
