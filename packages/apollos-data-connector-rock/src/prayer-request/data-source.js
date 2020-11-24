@@ -14,7 +14,7 @@ export default class PrayerRequest extends RockApolloDataSource {
       .find(id)
       .get();
 
-  byDailyPrayerFeed = async () => {
+  byDailyPrayerFeed = async ({ numberDaysSincePrayer = 3 }) => {
     const {
       dataSources: { Auth },
     } = this.context;
@@ -36,7 +36,7 @@ export default class PrayerRequest extends RockApolloDataSource {
         // prayers that were entered less then 72 hours ago
         `EnteredDateTime gt datetime'${moment
           .tz(ROCK.TIMEZONE)
-          .subtract(3, 'day')
+          .subtract(numberDaysSincePrayer, 'day')
           .format()}' or PrayerCount eq null` // include prayers that haven't prayed yet >24 hours old
       )
       .andFilter(`Answer eq null or Answer eq ''`) // prayers that aren't answered
