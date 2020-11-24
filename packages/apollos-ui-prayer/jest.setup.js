@@ -12,7 +12,7 @@ Animated.timing = (value, config) => ({
   },
   stop: () => ({}),
 });
-Animated.timing = (value, config) => ({
+Animated.spring = (value, config) => ({
   start: (callback) => {
     value.setValue(config.toValue);
     callback && callback({ finished: true });

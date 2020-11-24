@@ -21,10 +21,7 @@
     "setupFiles": [
       "./jest.setup.js"
     ],
-    "testEnvironment": "node",
-    "reporters": [
-      "<rootDir>/../../scripts/fingers-crossed-reporter.js"
-    ]
+    "testEnvironment": "node"
   },
   "dependencies": {
     "@apollosproject/data-schema": "^1.7.0",

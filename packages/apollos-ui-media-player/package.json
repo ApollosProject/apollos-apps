@@ -69,7 +69,7 @@
     "collectCoverage": true,
     "coverageReporters": ["json", "lcovonly", "clover"],
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@apollosproject))"
+      "../../node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@apollosproject))"
     ],
     "modulePathIgnorePatterns": [
       "<rootDir>/example/node_modules",
@@ -77,7 +77,8 @@
       "node_modules/@storybook/"
     ],
     "setupFiles": [
-      "./jest.setup.js"
+      "./jest.setup.js",
+      "../../node_modules/react-native-gesture-handler/jestSetup.js"
     ]
   },
   "eslintConfig": {

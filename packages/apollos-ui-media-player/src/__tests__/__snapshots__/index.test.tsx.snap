@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The media player renders 1`] = `
+<nest(ThemeProvider, SafeAreaProvider)>
+  <ApolloProvider>
+    <Container
+      coverImage={
+        Object {
+          "uri": "https://picsum.photos/seed/0.08528254551576286/100/100",
+        }
+      }
+      presentationProps={
+        Object {
+          "description": "Video Description",
+          "title": "Video Title",
+        }
+      }
+      source={
+        Object {
+          "uri": "http://embed.wistia.com/deliveries/0e364f7e6f6604384ece8a35905a53a864386e9f.bin",
+        }
+      }
+    >
+      <Text>
+        ---------
+      </Text>
+    </Container>
+  </ApolloProvider>
+</nest(ThemeProvider, SafeAreaProvider)>
+`;

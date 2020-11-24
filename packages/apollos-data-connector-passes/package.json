@@ -18,9 +18,6 @@
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
     ],
-    "reporters": [
-      "<rootDir>/../../scripts/fingers-crossed-reporter.js"
-    ],
     "testEnvironment": "node"
   },
   "dependencies": {
