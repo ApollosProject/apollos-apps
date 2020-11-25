@@ -174,7 +174,7 @@ exports[`The Avatar component should render icon button 1`] = `
   >
     <View
       accessible={true}
-      clickable={true}
+      focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}

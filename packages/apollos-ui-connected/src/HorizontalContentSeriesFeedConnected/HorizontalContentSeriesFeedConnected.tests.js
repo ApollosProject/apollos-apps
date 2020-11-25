@@ -1,5 +1,4 @@
 import React from 'react';
-import { GET_CONTENT_CARD } from '@apollosproject/ui-connected';
 
 import {
   Providers,
@@ -9,6 +8,7 @@ import {
 
 import { MockedProvider } from '@apollo/client/testing';
 
+import { GET_CONTENT_CARD } from '../ContentCardConnected';
 import GET_CONTENT_SERIES from './getContentSeries';
 import HorizontalContentSeriesFeedConnected from '.';
 

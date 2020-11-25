@@ -42,8 +42,7 @@ exports[`The Picker Input component should render correctly 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -82,7 +81,7 @@ exports[`The Picker Input component should render correctly 1`] = `
         }
       >
         <RCTSwitch
-          accessibilityRole="button"
+          accessibilityRole="switch"
           onChange={[Function]}
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}

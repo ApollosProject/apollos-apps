@@ -64,9 +64,7 @@ export default class AuthDataSource extends RockApolloDataSource {
     if (!login || !login.personId) {
       throw new AuthenticationError('Invalid user cookie; no user login found');
     }
-    return this.request('/People')
-      .filter(`Id eq ${login.personId}`)
-      .first();
+    return this.request('/People').filter(`Id eq ${login.personId}`).first();
   };
 
   fetchUserCookie = async (Username, Password) => {

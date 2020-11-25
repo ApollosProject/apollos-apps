@@ -24,13 +24,9 @@ const OuterCircle = styled(
     width: theme.sizing.baseUnit * 1.5, // 24
     height: theme.sizing.baseUnit * 1.5, // 24
     borderRadius: theme.sizing.baseUnit * 0.75, // 12
-    backgroundColor: Color(theme.colors.primary)
-      .fade(theme.alpha.low)
-      .string(),
+    backgroundColor: Color(theme.colors.primary).fade(theme.alpha.low).string(),
     borderWidth: 1,
-    borderColor: Color(theme.colors.primary)
-      .fade(theme.alpha.medium)
-      .string(),
+    borderColor: Color(theme.colors.primary).fade(theme.alpha.medium).string(),
     alignItems: 'center',
     justifyContent: 'center',
   }),

@@ -81,6 +81,7 @@ exports[`TabView Component renders 1`] = `
             },
           ]
         }
+        forwardedRef={[Function]}
         horizontal={true}
         keyboardShouldPersistTaps="handled"
         onMomentumScrollBegin={[Function]}
@@ -97,8 +98,7 @@ exports[`TabView Component renders 1`] = `
           <View
             accessibilityLabel="FIRST"
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -153,8 +153,7 @@ exports[`TabView Component renders 1`] = `
           <View
             accessibilityLabel="SECOND"
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -220,6 +219,7 @@ exports[`TabView Component renders 1`] = `
   >
     <View
       collapsable={false}
+      forwardedRef={[Function]}
       onGestureHandlerEvent={[Function]}
       onGestureHandlerStateChange={[Function]}
       style={

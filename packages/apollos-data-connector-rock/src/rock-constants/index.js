@@ -28,9 +28,7 @@ class RockConstants extends RockApolloDataSource {
       .join(' and ');
 
     // Look for objects matching that filter.
-    const object = await this.request(model)
-      .filter(filter)
-      .first();
+    const object = await this.request(model).filter(filter).first();
 
     // if we have one
     if (object) {

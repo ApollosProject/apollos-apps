@@ -83,8 +83,7 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
       </Text>
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -631,8 +630,7 @@ exports[`ContentSingleFeaturesConnected should render with nodeId 1`] = `
       </Text>
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}

@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import wait from 'waait';
-import { Providers as TestProviders } from '@apollosproject/ui-test-utils';
+import { ApolloProvider } from '@apollosproject/ui-test-utils';
 import { MockedProvider } from '@apollo/client/testing';
 import TrackEventWhenLoaded from './TrackEventWhenLoaded';
 import AnalyticsProvider from './Provider';
@@ -10,11 +10,11 @@ const trackMock = jest.fn();
 
 // eslint-disable-next-line
 const Providers = ({ children }) => (
-  <TestProviders MockedProvider={MockedProvider}>
+  <ApolloProvider MockedProvider={MockedProvider}>
     <AnalyticsProvider trackFunctions={[trackMock]}>
       {children}
     </AnalyticsProvider>
-  </TestProviders>
+  </ApolloProvider>
 );
 
 describe('The TrackEventWhenLoaded component', () => {
@@ -31,7 +31,7 @@ describe('The TrackEventWhenLoaded component', () => {
         />
       </Providers>
     );
-    await wait(1000);
+    await wait(0);
     expect(trackMock.mock.calls).toMatchSnapshot();
   });
 
@@ -45,7 +45,7 @@ describe('The TrackEventWhenLoaded component', () => {
         />
       </Providers>
     );
-    await wait(1000);
+    await wait(0);
     expect(trackMock.mock.calls).toMatchSnapshot();
   });
 
@@ -61,7 +61,7 @@ describe('The TrackEventWhenLoaded component', () => {
         />
       </Providers>
     );
-    await wait(1000);
+    await wait(0);
     expect(trackMock.mock.calls).toMatchSnapshot('mounted');
     tree.update(
       <Providers>
@@ -74,7 +74,7 @@ describe('The TrackEventWhenLoaded component', () => {
         />
       </Providers>
     );
-    await wait(1000);
+    await wait(0);
     expect(trackMock.mock.calls).toMatchSnapshot('first update, not loaded');
     tree.update(
       <Providers>
@@ -87,7 +87,7 @@ describe('The TrackEventWhenLoaded component', () => {
         />
       </Providers>
     );
-    await wait(1000);
+    await wait(0);
     expect(trackMock.mock.calls).toMatchSnapshot('second update, loaded');
   });
 
@@ -103,7 +103,7 @@ describe('The TrackEventWhenLoaded component', () => {
         />
       </Providers>
     );
-    await wait(1000);
+    await wait(0);
     expect(trackMock.mock.calls).toMatchSnapshot('mounted');
     tree.update(
       <Providers>
@@ -116,7 +116,7 @@ describe('The TrackEventWhenLoaded component', () => {
         />
       </Providers>
     );
-    await wait(1000);
+    await wait(0);
     expect(trackMock.mock.calls).toMatchSnapshot('first update, not loaded');
     tree.update(
       <Providers>
@@ -129,7 +129,7 @@ describe('The TrackEventWhenLoaded component', () => {
         />
       </Providers>
     );
-    await wait(1000);
+    await wait(0);
     expect(trackMock.mock.calls).toMatchSnapshot('second update, loaded');
   });
 });

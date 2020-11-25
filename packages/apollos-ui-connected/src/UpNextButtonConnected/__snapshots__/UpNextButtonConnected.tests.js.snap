@@ -152,7 +152,7 @@ exports[`the UpNextButtonConnected accepts doneText, continueText and Component 
         onGestureCanceled={[Function]}
         onGestureEnd={[Function]}
         onOpen={[Function]}
-        onTransitionStart={[Function]}
+        onTransition={[Function]}
         pointerEvents="box-none"
         style={
           Array [
@@ -206,6 +206,7 @@ exports[`the UpNextButtonConnected accepts doneText, continueText and Component 
         >
           <View
             collapsable={false}
+            forwardedRef={[Function]}
             onGestureHandlerEvent={[Function]}
             onGestureHandlerStateChange={[Function]}
             style={
@@ -443,7 +444,7 @@ exports[`the UpNextButtonConnected renders a continue state even with no childre
         onGestureCanceled={[Function]}
         onGestureEnd={[Function]}
         onOpen={[Function]}
-        onTransitionStart={[Function]}
+        onTransition={[Function]}
         pointerEvents="box-none"
         style={
           Array [
@@ -497,6 +498,7 @@ exports[`the UpNextButtonConnected renders a continue state even with no childre
         >
           <View
             collapsable={false}
+            forwardedRef={[Function]}
             onGestureHandlerEvent={[Function]}
             onGestureHandlerStateChange={[Function]}
             style={
@@ -566,8 +568,7 @@ exports[`the UpNextButtonConnected renders a continue state even with no childre
                 >
                   <View
                     accessible={true}
-                    clickable={true}
-                    isTVSelectable={true}
+                    focusable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -780,7 +781,7 @@ exports[`the UpNextButtonConnected renders a continue state when in progress 1`]
         onGestureCanceled={[Function]}
         onGestureEnd={[Function]}
         onOpen={[Function]}
-        onTransitionStart={[Function]}
+        onTransition={[Function]}
         pointerEvents="box-none"
         style={
           Array [
@@ -834,6 +835,7 @@ exports[`the UpNextButtonConnected renders a continue state when in progress 1`]
         >
           <View
             collapsable={false}
+            forwardedRef={[Function]}
             onGestureHandlerEvent={[Function]}
             onGestureHandlerStateChange={[Function]}
             style={
@@ -903,8 +905,7 @@ exports[`the UpNextButtonConnected renders a continue state when in progress 1`]
                 >
                   <View
                     accessible={true}
-                    clickable={true}
-                    isTVSelectable={true}
+                    focusable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -1117,7 +1118,7 @@ exports[`the UpNextButtonConnected renders a finished state when finished 1`] = 
         onGestureCanceled={[Function]}
         onGestureEnd={[Function]}
         onOpen={[Function]}
-        onTransitionStart={[Function]}
+        onTransition={[Function]}
         pointerEvents="box-none"
         style={
           Array [
@@ -1171,6 +1172,7 @@ exports[`the UpNextButtonConnected renders a finished state when finished 1`] = 
         >
           <View
             collapsable={false}
+            forwardedRef={[Function]}
             onGestureHandlerEvent={[Function]}
             onGestureHandlerStateChange={[Function]}
             style={
@@ -1552,7 +1554,7 @@ exports[`the UpNextButtonConnected renders a loading state state without a conte
         onGestureCanceled={[Function]}
         onGestureEnd={[Function]}
         onOpen={[Function]}
-        onTransitionStart={[Function]}
+        onTransition={[Function]}
         pointerEvents="box-none"
         style={
           Array [
@@ -1606,6 +1608,7 @@ exports[`the UpNextButtonConnected renders a loading state state without a conte
         >
           <View
             collapsable={false}
+            forwardedRef={[Function]}
             onGestureHandlerEvent={[Function]}
             onGestureHandlerStateChange={[Function]}
             style={
@@ -1865,7 +1868,7 @@ exports[`the UpNextButtonConnected renders a loading state when loading 1`] = `
         onGestureCanceled={[Function]}
         onGestureEnd={[Function]}
         onOpen={[Function]}
-        onTransitionStart={[Function]}
+        onTransition={[Function]}
         pointerEvents="box-none"
         style={
           Array [
@@ -1919,6 +1922,7 @@ exports[`the UpNextButtonConnected renders a loading state when loading 1`] = `
         >
           <View
             collapsable={false}
+            forwardedRef={[Function]}
             onGestureHandlerEvent={[Function]}
             onGestureHandlerStateChange={[Function]}
             style={
@@ -2178,7 +2182,7 @@ exports[`the UpNextButtonConnected renders nothing when on an empty series 1`] =
         onGestureCanceled={[Function]}
         onGestureEnd={[Function]}
         onOpen={[Function]}
-        onTransitionStart={[Function]}
+        onTransition={[Function]}
         pointerEvents="box-none"
         style={
           Array [
@@ -2232,6 +2236,7 @@ exports[`the UpNextButtonConnected renders nothing when on an empty series 1`] =
         >
           <View
             collapsable={false}
+            forwardedRef={[Function]}
             onGestureHandlerEvent={[Function]}
             onGestureHandlerStateChange={[Function]}
             style={

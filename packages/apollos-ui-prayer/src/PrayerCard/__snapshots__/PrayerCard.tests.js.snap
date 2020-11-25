@@ -182,8 +182,7 @@ exports[`The PrayerCard component should render 1`] = `
       </Text>
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -573,8 +572,7 @@ exports[`The PrayerCard component should render a custom title 1`] = `
       </Text>
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1185,8 +1183,7 @@ exports[`The PrayerCard component should render an avatar 1`] = `
       </Text>
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1577,8 +1574,7 @@ exports[`The PrayerCard component should render with a cardColor 1`] = `
       </Text>
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}

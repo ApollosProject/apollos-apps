@@ -24,8 +24,8 @@
     "graphql-tag": "^2.10.0"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^1.7.0",
-    "jest": "^23.6.0"
+    "@apollosproject/babel-preset-apollos": "^1.7.0-beta.2",
+    "jest": "^25.1.0"
   },
   "peerDependencies": {
     "@apollosproject/config": "*"

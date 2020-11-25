@@ -12,16 +12,6 @@ jest.mock('@apollosproject/ui-analytics', () => ({
   withTrackOnPress: (Component) => (props) => <Component {...props} />,
 }));
 
-jest.mock('@react-navigation/native', () => {
-  const ActualNavigation = require.requireActual('@react-navigation/native');
-  return {
-    ...ActualNavigation,
-    SafeAreaView: require.requireActual('SafeAreaView'),
-  };
-});
-
-jest.mock('DatePickerIOS', () => 'DatePicker');
-
 NativeModules.RNGestureHandlerModule = {
   attachGestureHandler: jest.fn(),
   createGestureHandler: jest.fn(),

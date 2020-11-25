@@ -29,7 +29,7 @@ const allowedAttributes = {
 };
 
 // A very picky HTML sanitizer
-export default function(dirty) {
+export default function (dirty) {
   return sanitizeHtml(dirty, {
     allowedTags,
     allowedAttributes,

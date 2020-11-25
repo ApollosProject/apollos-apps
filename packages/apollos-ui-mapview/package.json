@@ -52,15 +52,14 @@
   },
   "devDependencies": {
     "@react-native-community/geolocation": "^2.0.2",
-    "jest": "24.8.0",
-    "jest-react-native": "18.0.0",
+    "jest": "^25.1.0",
     "prop-types": "15.6.1",
-    "react": "16.9.0",
-    "react-native": "0.60.5",
+    "react": "16.13.1",
+    "react-native": "0.63.2",
     "react-native-geolocation-service": "^3.0.0",
     "react-native-maps": "0.26.1",
     "react-native-safe-area-context": "^3.0.7",
-    "react-test-renderer": "16.9.0",
+    "react-test-renderer": "16.13.1",
     "waait": "1.0.2"
   },
   "publishConfig": {

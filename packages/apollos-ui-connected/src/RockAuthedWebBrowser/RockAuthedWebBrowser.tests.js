@@ -9,8 +9,6 @@ import { MockedProvider } from '@apollo/client/testing';
 
 import RockAuthedWebBrowser from '.';
 
-jest.mock('Platform');
-
 describe(`RockAuthedWebBrowser Consumer`, () => {
   it('passes a function', async () => {
     renderer.create(

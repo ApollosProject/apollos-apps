@@ -10,10 +10,7 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
   expanded = true;
 
   hashPassword = ({ pin }) =>
-    crypto
-      .createHash('sha256')
-      .update(`${pin}${secret}`)
-      .digest('hex');
+    crypto.createHash('sha256').update(`${pin}${secret}`).digest('hex');
 
   parsePhoneNumber = ({ phoneNumber }) => {
     const number = new PhoneNumber(phoneNumber, 'US');

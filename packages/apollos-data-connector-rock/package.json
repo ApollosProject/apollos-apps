@@ -30,7 +30,7 @@
     "form-data": "^2.3.3",
     "hyphenation.en-us": "^0.2.1",
     "hypher": "^0.2.5",
-    "jest": "^23.6.0",
+    "jest": "^25.1.0",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.11",
     "moment": "^2.22.2",
@@ -48,7 +48,7 @@
     "apollo-server": "^2.11.0",
     "apollo-server-env": "^2.3.0",
     "graphql": "14.7.0",
-    "jest": "^23.6.0",
+    "jest": "^25.1.0",
     "jest-date-mock": "^1.0.8"
   },
   "publishConfig": {

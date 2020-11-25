@@ -152,7 +152,7 @@ exports[`The SearchFeed component should render 1`] = `
         onGestureCanceled={[Function]}
         onGestureEnd={[Function]}
         onOpen={[Function]}
-        onTransitionStart={[Function]}
+        onTransition={[Function]}
         pointerEvents="box-none"
         style={
           Array [
@@ -206,6 +206,7 @@ exports[`The SearchFeed component should render 1`] = `
         >
           <View
             collapsable={false}
+            forwardedRef={[Function]}
             onGestureHandlerEvent={[Function]}
             onGestureHandlerStateChange={[Function]}
             style={
@@ -396,7 +397,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         "navigation": Object {},
                       }
                     }
-                    numColumns={1}
                     onContentSizeChange={[Function]}
                     onEndReachedThreshold={0.7}
                     onLayout={[Function]}
@@ -429,7 +429,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                       >
                         <View
                           accessible={true}
-                          clickable={true}
+                          focusable={true}
                           onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
@@ -482,10 +482,9 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                 }
                               >
-                                <RCTImageView
+                                <Image
                                   fadeDuration={250}
                                   onLoad={[Function]}
-                                  resizeMode="cover"
                                   source={
                                     Array [
                                       Object {
@@ -499,7 +498,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                     Object {
                                       "aspectRatio": 1,
                                       "backgroundColor": "#A5A5A5",
-                                      "overflow": "hidden",
                                       "resizeMode": "cover",
                                       "width": "100%",
                                     }
@@ -615,7 +613,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                       >
                         <View
                           accessible={true}
-                          clickable={true}
+                          focusable={true}
                           onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
@@ -728,7 +726,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                       >
                         <View
                           accessible={true}
-                          clickable={true}
+                          focusable={true}
                           onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
@@ -780,10 +778,9 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                 }
                               >
-                                <RCTImageView
+                                <Image
                                   fadeDuration={250}
                                   onLoad={[Function]}
-                                  resizeMode="cover"
                                   source={
                                     Array [
                                       Object {
@@ -797,7 +794,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                     Object {
                                       "aspectRatio": 1.2,
                                       "backgroundColor": "#A5A5A5",
-                                      "overflow": "hidden",
                                       "resizeMode": "cover",
                                       "width": "100%",
                                     }
@@ -854,7 +850,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                       >
                         <View
                           accessible={true}
-                          clickable={true}
+                          focusable={true}
                           onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
@@ -906,10 +902,9 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                 }
                               >
-                                <RCTImageView
+                                <Image
                                   fadeDuration={250}
                                   onLoad={[Function]}
-                                  resizeMode="cover"
                                   source={
                                     Array [
                                       Object {
@@ -923,7 +918,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                     Object {
                                       "aspectRatio": 1.2,
                                       "backgroundColor": "#A5A5A5",
-                                      "overflow": "hidden",
                                       "resizeMode": "cover",
                                       "width": "100%",
                                     }
@@ -980,7 +974,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                       >
                         <View
                           accessible={true}
-                          clickable={true}
+                          focusable={true}
                           onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
@@ -1092,7 +1086,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                       >
                         <View
                           accessible={true}
-                          clickable={true}
+                          focusable={true}
                           onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
@@ -1145,10 +1139,9 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                 }
                               >
-                                <RCTImageView
+                                <Image
                                   fadeDuration={250}
                                   onLoad={[Function]}
-                                  resizeMode="cover"
                                   source={
                                     Array [
                                       Object {
@@ -1162,7 +1155,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                     Object {
                                       "aspectRatio": 1,
                                       "backgroundColor": "#A5A5A5",
-                                      "overflow": "hidden",
                                       "resizeMode": "cover",
                                       "width": "100%",
                                     }

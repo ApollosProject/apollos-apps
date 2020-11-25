@@ -9,16 +9,10 @@ export default class Event extends RockApolloDataSource {
   expanded = true;
 
   getFromId = (id) =>
-    this.request()
-      .filter(`Id eq ${id}`)
-      .expand('Schedule')
-      .first();
+    this.request().filter(`Id eq ${id}`).expand('Schedule').first();
 
   getByCampus = (id) =>
-    this.findRecent()
-      .cache({ ttl: 60 })
-      .filter(`CampusId eq ${id}`)
-      .get();
+    this.findRecent().cache({ ttl: 60 }).filter(`CampusId eq ${id}`).get();
 
   findRecent = () => {
     let request = this.request();
@@ -78,10 +72,7 @@ export default class Event extends RockApolloDataSource {
         .tz(dateTimes[2], ApollosConfig.ROCK.TIMEZONE)
         .utc()
         .format(),
-      end: moment
-        .tz(dateTimes[1], ApollosConfig.ROCK.TIMEZONE)
-        .utc()
-        .format(),
+      end: moment.tz(dateTimes[1], ApollosConfig.ROCK.TIMEZONE).utc().format(),
     };
   };
 }

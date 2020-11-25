@@ -151,9 +151,7 @@ export const buttons = ({ colors: themeColors, alpha: themeAlpha }) => ({
     accent: themeColors.text.primary,
   },
   overlay: {
-    fill: Color(themeColors.white)
-      .alpha(themeAlpha.low)
-      .string(),
+    fill: Color(themeColors.white).alpha(themeAlpha.low).string(),
     accent: themeColors.white,
   },
   alert: {
@@ -165,24 +163,15 @@ export const buttons = ({ colors: themeColors, alpha: themeAlpha }) => ({
 export const overlays = ({ alpha: themeAlpha, colors: themeColors }) => ({
   // these are a function because we can't assume colors of an overlay based on a theme (varies on usage + context)
   default: ({ overlayColor }) => ({
-    colors: [
-      `${Color(overlayColor)
-        .fade(1)
-        .string()}`,
-      overlayColor,
-    ],
+    colors: [`${Color(overlayColor).fade(1).string()}`, overlayColor],
     start: { x: 0, y: 0 },
     end: { x: 0, y: 1 },
     locations: [0.5, 1],
   }),
   high: ({ overlayColor }) => ({
     colors: [
-      `${Color(overlayColor)
-        .alpha(themeAlpha.high)
-        .string()}`,
-      `${Color(overlayColor)
-        .alpha(themeAlpha.high)
-        .string()}`,
+      `${Color(overlayColor).alpha(themeAlpha.high).string()}`,
+      `${Color(overlayColor).alpha(themeAlpha.high).string()}`,
     ],
     start: { x: 0, y: 0 },
     end: { x: 0, y: 1 },
@@ -190,12 +179,8 @@ export const overlays = ({ alpha: themeAlpha, colors: themeColors }) => ({
   }),
   medium: ({ overlayColor }) => ({
     colors: [
-      `${Color(overlayColor)
-        .alpha(themeAlpha.medium)
-        .string()}`,
-      `${Color(overlayColor)
-        .alpha(themeAlpha.medium)
-        .string()}`,
+      `${Color(overlayColor).alpha(themeAlpha.medium).string()}`,
+      `${Color(overlayColor).alpha(themeAlpha.medium).string()}`,
     ],
     start: { x: 0, y: 0 },
     end: { x: 0, y: 1 },
@@ -203,12 +188,8 @@ export const overlays = ({ alpha: themeAlpha, colors: themeColors }) => ({
   }),
   low: ({ overlayColor }) => ({
     colors: [
-      `${Color(overlayColor)
-        .alpha(themeAlpha.low)
-        .string()}`,
-      `${Color(overlayColor)
-        .alpha(themeAlpha.low)
-        .string()}`,
+      `${Color(overlayColor).alpha(themeAlpha.low).string()}`,
+      `${Color(overlayColor).alpha(themeAlpha.low).string()}`,
     ],
     start: { x: 0, y: 0 },
     end: { x: 0, y: 1 },
@@ -216,12 +197,8 @@ export const overlays = ({ alpha: themeAlpha, colors: themeColors }) => ({
   }),
   'gradient-bottom': ({ overlayColor }) => ({
     colors: [
-      `${Color(overlayColor)
-        .alpha(themeAlpha.low)
-        .string()}`,
-      `${Color(overlayColor)
-        .alpha(themeAlpha.medium)
-        .string()}`,
+      `${Color(overlayColor).alpha(themeAlpha.low).string()}`,
+      `${Color(overlayColor).alpha(themeAlpha.medium).string()}`,
     ],
     start: { x: 0, y: 0 },
     end: { x: 0, y: 1 },
@@ -229,9 +206,7 @@ export const overlays = ({ alpha: themeAlpha, colors: themeColors }) => ({
   }),
   'gradient-top': ({ overlayColor }) => ({
     colors: [
-      `${Color(overlayColor)
-        .alpha(themeAlpha.medium)
-        .string()}`,
+      `${Color(overlayColor).alpha(themeAlpha.medium).string()}`,
       themeColors.transparent,
     ],
     start: { x: 0, y: 0 },
@@ -240,9 +215,7 @@ export const overlays = ({ alpha: themeAlpha, colors: themeColors }) => ({
   }),
   featured: ({ overlayColor }) => ({
     colors: [
-      `${Color(overlayColor)
-        .alpha(themeAlpha.low)
-        .string()}`,
+      `${Color(overlayColor).alpha(themeAlpha.low).string()}`,
       overlayColor,
     ],
     start: { x: 0, y: 0 },

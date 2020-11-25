@@ -27,7 +27,9 @@ ApollosConfig.loadJs({
 const RealDate = Date;
 
 function mockDate(isoDate) {
-  global.Date = class extends RealDate {
+  global.Date = class extends (
+    RealDate
+  ) {
     constructor() {
       return new RealDate(isoDate);
     }

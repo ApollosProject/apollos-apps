@@ -31,7 +31,6 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
   initialNumToRender={10}
   keyExtractor={[Function]}
   maxToRenderPerBatch={10}
-  numColumns={1}
   onContentSizeChange={[Function]}
   onEndReachedThreshold={0.7}
   onLayout={[Function]}
@@ -55,7 +54,7 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
     >
       <View
         accessible={true}
-        clickable={false}
+        focusable={false}
         id="1"
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -275,7 +274,6 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
   initialNumToRender={10}
   keyExtractor={[Function]}
   maxToRenderPerBatch={10}
-  numColumns={1}
   onContentSizeChange={[Function]}
   onEndReached={[Function]}
   onEndReachedThreshold={0.7}
@@ -301,7 +299,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -507,7 +505,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -713,7 +711,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -919,7 +917,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1125,7 +1123,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1331,7 +1329,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1537,7 +1535,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1743,7 +1741,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1949,7 +1947,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -2155,7 +2153,7 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -2408,7 +2406,6 @@ exports[`The FeedView component renders correctly 1`] = `
   initialNumToRender={10}
   keyExtractor={[Function]}
   maxToRenderPerBatch={10}
-  numColumns={1}
   onContentSizeChange={[Function]}
   onEndReachedThreshold={0.7}
   onLayout={[Function]}
@@ -2432,7 +2429,7 @@ exports[`The FeedView component renders correctly 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -2525,7 +2522,7 @@ exports[`The FeedView component renders correctly 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -2641,7 +2638,6 @@ exports[`The FeedView component renders custom loading data 1`] = `
     ]
   }
   maxToRenderPerBatch={10}
-  numColumns={1}
   onContentSizeChange={[Function]}
   onEndReached={[Function]}
   onEndReachedThreshold={0.7}
@@ -2666,7 +2662,7 @@ exports[`The FeedView component renders custom loading data 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -2866,7 +2862,6 @@ exports[`The FeedView component renders empty state 1`] = `
   initialNumToRender={10}
   keyExtractor={[Function]}
   maxToRenderPerBatch={10}
-  numColumns={1}
   onContentSizeChange={[Function]}
   onEndReached={[Function]}
   onEndReachedThreshold={0.7}
@@ -2891,7 +2886,7 @@ exports[`The FeedView component renders empty state 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -3097,7 +3092,7 @@ exports[`The FeedView component renders empty state 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -3303,7 +3298,7 @@ exports[`The FeedView component renders empty state 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -3509,7 +3504,7 @@ exports[`The FeedView component renders empty state 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -3715,7 +3710,7 @@ exports[`The FeedView component renders empty state 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -3921,7 +3916,7 @@ exports[`The FeedView component renders empty state 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -4127,7 +4122,7 @@ exports[`The FeedView component renders empty state 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -4333,7 +4328,7 @@ exports[`The FeedView component renders empty state 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -4539,7 +4534,7 @@ exports[`The FeedView component renders empty state 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -4745,7 +4740,7 @@ exports[`The FeedView component renders empty state 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}

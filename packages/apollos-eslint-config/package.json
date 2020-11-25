@@ -4,6 +4,7 @@
   "version": "1.7.0",
   "main": "./index.js",
   "devDependencies": {
+    "@react-native-community/eslint-config": "^2.0.0",
     "babel-eslint": "10.1.0",
     "eslint": "^7.4.0",
     "eslint-config-airbnb": "^18.2.0",
@@ -17,7 +18,8 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.5",
-    "eslint-plugin-react-native": "^3.8.1"
+    "eslint-plugin-react-native": "^3.8.1",
+    "prettier": "^2.0.5"
   },
   "license": "SEE LICENSE.md",
   "publishConfig": {

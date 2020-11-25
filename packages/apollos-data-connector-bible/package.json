@@ -34,7 +34,7 @@
     "@apollosproject/babel-preset-apollos": "^1.7.0",
     "apollo-server-env": "^2.3.0",
     "graphql": "14.7.0",
-    "jest": "^23.6.0"
+    "jest": "^25.1.0"
   },
   "publishConfig": {
     "access": "public"

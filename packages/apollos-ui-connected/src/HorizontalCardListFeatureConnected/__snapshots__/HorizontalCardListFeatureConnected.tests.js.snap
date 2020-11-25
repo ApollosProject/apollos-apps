@@ -98,7 +98,6 @@ exports[`The HorizontalCardListFeatureConnected component should render 1`] = `
       }
     }
     maxToRenderPerBatch={10}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
     onGestureHandlerEvent={[Function]}
@@ -135,7 +134,7 @@ exports[`The HorizontalCardListFeatureConnected component should render 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -190,11 +189,10 @@ exports[`The HorizontalCardListFeatureConnected component should render 1`] = `
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   hasTitleAndSummary={true}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={
                     Array [
                       Object {
@@ -208,7 +206,6 @@ exports[`The HorizontalCardListFeatureConnected component should render 1`] = `
                     Object {
                       "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
@@ -391,7 +388,6 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
       }
     }
     maxToRenderPerBatch={10}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
     onGestureHandlerEvent={[Function]}
@@ -428,7 +424,7 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -488,17 +484,15 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   isLoading={true}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={Array []}
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
@@ -615,7 +609,7 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -675,17 +669,15 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   isLoading={true}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={Array []}
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
@@ -802,7 +794,7 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -862,17 +854,15 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   isLoading={true}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={Array []}
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
@@ -989,7 +979,7 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1049,17 +1039,15 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   isLoading={true}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={Array []}
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
@@ -1176,7 +1164,7 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1236,17 +1224,15 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   isLoading={true}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={Array []}
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }

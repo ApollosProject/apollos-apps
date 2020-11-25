@@ -20,17 +20,23 @@ const HeaderWrapper = styled({
 
 const ModalViewHeader = ({ onClose, onBack }) => (
   <HeaderWrapper pointerEvents={'box-none'}>
-    {// android isn't working currently, hardware back button more reliable
-    Platform.OS === 'android' ? null : (
-      <>
-        {onBack ? <ModalBackButton onPress={onBack} /> : <Icon name="empty" />}
-        {onClose ? (
-          <ModalCloseButton name={'close'} onPress={onClose} />
-        ) : (
-          <Icon name="empty" />
-        )}
-      </>
-    )}
+    {
+      // android isn't working currently, hardware back button more reliable
+      Platform.OS === 'android' ? null : (
+        <>
+          {onBack ? (
+            <ModalBackButton onPress={onBack} />
+          ) : (
+            <Icon name="empty" />
+          )}
+          {onClose ? (
+            <ModalCloseButton name={'close'} onPress={onClose} />
+          ) : (
+            <Icon name="empty" />
+          )}
+        </>
+      )
+    }
   </HeaderWrapper>
 );
 

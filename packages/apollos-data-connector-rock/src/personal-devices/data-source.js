@@ -31,9 +31,7 @@ export default class PersonalDevices extends RockApolloDataSource {
   }
 
   getByPersonAliasId(id) {
-    return this.request()
-      .filter(`PersonAliasId eq ${id}`)
-      .get();
+    return this.request().filter(`PersonAliasId eq ${id}`).get();
   }
 
   updateNotificationsEnabled = async (pushId, enabled) => {

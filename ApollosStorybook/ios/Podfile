@@ -11,6 +11,8 @@ target 'ApollosStorybook' do
   permissions_path = '../node_modules/react-native-permissions/ios'
   pod 'Permission-LocationWhenInUse', :path => "#{permissions_path}/LocationWhenInUse.podspec"
 
+  pod 'react-native-video', :path => '../node_modules/react-native-video'
+
   target 'ApollosStorybookTests' do
     inherit! :complete
     # Pods for testing

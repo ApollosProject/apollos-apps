@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { GET_CONTENT_CARD } from '@apollosproject/ui-connected';
 import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
 import { MockedProvider } from '@apollo/client/testing';
+import { GET_CONTENT_CARD } from '../ContentCardConnected';
 import GET_LIKED_CONTENT from './getLikedContent';
 
 import LikedContentFeedConnected from '.';

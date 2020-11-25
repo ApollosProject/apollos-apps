@@ -10,9 +10,7 @@ const StyledButtonIcon = withTheme(({ theme }) => ({
   size: theme.sizing.baseUnit,
   iconPadding: theme.sizing.baseUnit * 0.5, // TODO: decreases button tappability but gives us the desired "smaller button" look
   style: {
-    backgroundColor: Color(theme.colors.text.primary)
-      .fade(0.3)
-      .toString(),
+    backgroundColor: Color(theme.colors.text.primary).fade(0.3).toString(),
   },
 }))(ButtonIcon);
 
