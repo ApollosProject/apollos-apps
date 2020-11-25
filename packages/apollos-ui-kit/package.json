@@ -22,7 +22,11 @@
   "jest": {
     "preset": "react-native",
     "collectCoverage": true,
-    "coverageReporters": ["json", "lcovonly", "clover"],
+    "coverageReporters": [
+      "json",
+      "lcovonly",
+      "clover"
+    ],
     "transformIgnorePatterns": [
       "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|@react-navigation/native|@react-native-community))"
     ],
@@ -48,15 +52,16 @@
   "peerDependencies": {
     "@apollosproject/storybook": "*",
     "@apollosproject/ui-media-player": "*",
-    "@react-native-community/datetimepicker": "^3.0.2",
+    "@react-native-community/datetimepicker": "*",
+    "@react-navigation/native": "*",
+    "@react-native-picker/picker": "*",
     "react": "*",
     "react-native": "*",
     "react-native-gesture-handler": "*",
     "react-native-linear-gradient": "*",
     "react-native-modal-datetime-picker": "*",
-    "react-native-svg": "*",
-    "@react-navigation/native": "*",
-    "react-native-safe-area-context": "*"
+    "react-native-safe-area-context": "*",
+    "react-native-svg": "*"
   },
   "dependencies": {
     "@react-native-community/blur": "^3.6.0",
@@ -71,16 +76,17 @@
   },
   "devDependencies": {
     "@react-native-community/datetimepicker": "3.0.2",
+    "@react-native-picker/picker": "^1.9.3",
+    "@react-navigation/native": "^5.6.1",
     "jest": "24.8.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
     "react": "16.9.0",
     "react-docgen": "^4.1.0",
     "react-native": "0.60.5",
-    "react-native-safe-area-context": "^3.0.7",
     "react-native-linear-gradient": "2.5.4",
+    "react-native-safe-area-context": "^3.0.7",
     "react-native-svg": "9.4.0",
-    "@react-navigation/native": "^5.6.1",
     "react-test-renderer": "16.9.0"
   },
   "publishConfig": {
