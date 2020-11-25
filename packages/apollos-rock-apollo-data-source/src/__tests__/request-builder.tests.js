@@ -68,10 +68,7 @@ describe('RequestBuilder', () => {
 
   it('chains multiple filters', () => {
     expect(
-      request
-        .filter('A eq Ab')
-        .filter('B eq Bc')
-        .get()
+      request.filter('A eq Ab').filter('B eq Bc').get()
     ).resolves.toMatchSnapshot();
   });
 
@@ -81,29 +78,18 @@ describe('RequestBuilder', () => {
 
   it('chains multiple expands', () => {
     expect(
-      request
-        .expand('Puppies')
-        .expand('Cats')
-        .get()
+      request.expand('Puppies').expand('Cats').get()
     ).resolves.toMatchSnapshot();
   });
 
   it('chains mixed-format expands', () => {
     expect(
-      request
-        .expand('Dogs/Puppies')
-        .expand('Cats,Kittens')
-        .get()
+      request.expand('Dogs/Puppies').expand('Cats,Kittens').get()
     ).resolves.toMatchSnapshot();
   });
 
   it('allows for pagination', () => {
-    expect(
-      request
-        .top(2)
-        .skip(5)
-        .get()
-    ).resolves.toMatchSnapshot();
+    expect(request.top(2).skip(5).get()).resolves.toMatchSnapshot();
   });
 
   it('fetches a count', async () => {
@@ -114,10 +100,7 @@ describe('RequestBuilder', () => {
       resource: 'SomeResource',
     });
 
-    const cursor = request
-      .filter('Something')
-      .top(2)
-      .skip(5);
+    const cursor = request.filter('Something').top(2).skip(5);
 
     const result = await cursor.count();
 

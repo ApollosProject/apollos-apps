@@ -47,14 +47,13 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
-    "@apollo/client": "3.2.7",
-    "jest": "24.8.0",
-    "jest-react-native": "18.0.0",
+    "@apollo/client": "3.3.0-rc.2",
+    "jest": "^25.1.0",
     "prop-types": "15.6.1",
-    "react": "16.9.0",
-    "react-native": "0.60.5",
+    "react": "16.13.1",
+    "react-native": "0.63.2",
     "react-native-onesignal": "3.9.1",
-    "react-test-renderer": "16.9.0",
+    "react-test-renderer": "16.13.1",
     "waait": "^1.0.4"
   },
   "publishConfig": {

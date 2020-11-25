@@ -327,11 +327,11 @@ exports[`ContentItemsModel gets a percentage for a content series, based on diff
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
   ],
@@ -356,7 +356,7 @@ exports[`ContentItemsModel gets a percentage for a content series, based on diff
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
   ],
@@ -383,11 +383,11 @@ exports[`ContentItemsModel gets a percentage for a content series, based on past
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
   ],
@@ -412,7 +412,7 @@ exports[`ContentItemsModel gets a percentage for a content series, based on past
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
   ],
@@ -434,7 +434,7 @@ exports[`ContentItemsModel gets a percentage for a content series, even if a ser
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
   ],
@@ -580,11 +580,11 @@ exports[`ContentItemsModel gets the next item for a content series, based on dif
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
   ],
@@ -609,7 +609,7 @@ exports[`ContentItemsModel gets the next item for a content series, based on dif
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
   ],
@@ -636,11 +636,11 @@ exports[`ContentItemsModel gets the next item for a content series, based on pas
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
   ],
@@ -665,7 +665,7 @@ exports[`ContentItemsModel gets the next item for a content series, based on pas
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
   ],

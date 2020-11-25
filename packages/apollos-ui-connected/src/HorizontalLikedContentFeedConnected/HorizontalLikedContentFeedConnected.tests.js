@@ -1,5 +1,4 @@
 import React from 'react';
-import { GET_LIKED_CONTENT } from '@apollosproject/ui-connected';
 
 import {
   Providers,
@@ -8,6 +7,7 @@ import {
 } from '@apollosproject/ui-test-utils';
 
 import { MockedProvider } from '@apollo/client/testing';
+import { GET_LIKED_CONTENT } from '../LikedContentFeedConnected';
 
 import HorizontalContentCardConnected from '../HorizontalContentCardConnected';
 import HorizontalLikedContentFeedConnected from './HorizontalLikedContentFeedConnected';

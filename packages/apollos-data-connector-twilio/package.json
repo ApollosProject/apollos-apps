@@ -18,10 +18,7 @@
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
     ],
-    "testEnvironment": "node",
-    "reporters": [
-      "<rootDir>/../../scripts/fingers-crossed-reporter.js"
-    ]
+    "testEnvironment": "node"
   },
   "dependencies": {
     "apollo-datasource": "^0.2.0",
@@ -31,9 +28,9 @@
     "@apollosproject/config": "*"
   },
   "devDependencies": {
-    "@apollosproject/apollo-server-env-mock": "^1.7.0",
-    "@apollosproject/babel-preset-apollos": "^1.7.0",
-    "jest": "^23.6.0"
+    "@apollosproject/apollo-server-env-mock": "^1.7.0-beta.2",
+    "@apollosproject/babel-preset-apollos": "^1.7.0-beta.2",
+    "jest": "^25.1.0"
   },
   "publishConfig": {
     "access": "public"

@@ -174,7 +174,7 @@ exports[`Interactions use a lookup map to find additional interactions to fire 1
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
   ],

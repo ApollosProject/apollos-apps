@@ -152,7 +152,7 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
         onGestureCanceled={[Function]}
         onGestureEnd={[Function]}
         onOpen={[Function]}
-        onTransitionStart={[Function]}
+        onTransition={[Function]}
         pointerEvents="box-none"
         style={
           Array [
@@ -206,6 +206,7 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
         >
           <View
             collapsable={false}
+            forwardedRef={[Function]}
             onGestureHandlerEvent={[Function]}
             onGestureHandlerStateChange={[Function]}
             style={
@@ -397,7 +398,6 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                       }
                     }
                     maxToRenderPerBatch={10}
-                    numColumns={1}
                     onContentSizeChange={[Function]}
                     onEndReached={[Function]}
                     onEndReachedThreshold={2}
@@ -434,7 +434,7 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                       >
                         <View
                           accessible={true}
-                          clickable={true}
+                          focusable={true}
                           onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
@@ -512,12 +512,11 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                   }
                                 }
                               >
-                                <RCTImageView
+                                <Image
                                   disabled={false}
                                   fadeDuration={250}
                                   isLoading={false}
                                   onLoad={[Function]}
-                                  resizeMode="cover"
                                   source={
                                     Array [
                                       Object {
@@ -531,7 +530,6 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                     Object {
                                       "aspectRatio": 1,
                                       "backgroundColor": "#A5A5A5",
-                                      "overflow": "hidden",
                                       "resizeMode": "cover",
                                       "width": "100%",
                                     }
@@ -637,7 +635,7 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                       >
                         <View
                           accessible={true}
-                          clickable={true}
+                          focusable={true}
                           onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
@@ -715,12 +713,11 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                   }
                                 }
                               >
-                                <RCTImageView
+                                <Image
                                   disabled={false}
                                   fadeDuration={250}
                                   isLoading={false}
                                   onLoad={[Function]}
-                                  resizeMode="cover"
                                   source={
                                     Array [
                                       Object {
@@ -734,7 +731,6 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                     Object {
                                       "aspectRatio": 1,
                                       "backgroundColor": "#A5A5A5",
-                                      "overflow": "hidden",
                                       "resizeMode": "cover",
                                       "width": "100%",
                                     }
@@ -840,7 +836,7 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                       >
                         <View
                           accessible={true}
-                          clickable={true}
+                          focusable={true}
                           onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
@@ -918,12 +914,11 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                   }
                                 }
                               >
-                                <RCTImageView
+                                <Image
                                   disabled={false}
                                   fadeDuration={250}
                                   isLoading={false}
                                   onLoad={[Function]}
-                                  resizeMode="cover"
                                   source={
                                     Array [
                                       Object {
@@ -937,7 +932,6 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                     Object {
                                       "aspectRatio": 1,
                                       "backgroundColor": "#A5A5A5",
-                                      "overflow": "hidden",
                                       "resizeMode": "cover",
                                       "width": "100%",
                                     }
@@ -1043,7 +1037,7 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                       >
                         <View
                           accessible={true}
-                          clickable={true}
+                          focusable={true}
                           onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
@@ -1121,12 +1115,11 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                   }
                                 }
                               >
-                                <RCTImageView
+                                <Image
                                   disabled={false}
                                   fadeDuration={250}
                                   isLoading={false}
                                   onLoad={[Function]}
-                                  resizeMode="cover"
                                   source={
                                     Array [
                                       Object {
@@ -1140,7 +1133,6 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                     Object {
                                       "aspectRatio": 1,
                                       "backgroundColor": "#A5A5A5",
-                                      "overflow": "hidden",
                                       "resizeMode": "cover",
                                       "width": "100%",
                                     }

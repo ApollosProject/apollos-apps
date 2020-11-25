@@ -7,7 +7,7 @@ import { THEME_PROPS } from './createTheme';
 
 const DEFAULT_MAPPER_FN = ({ theme } = {}) => ({ theme });
 
-export default function(mapperFn = DEFAULT_MAPPER_FN, fqn) {
+export default function (mapperFn = DEFAULT_MAPPER_FN, fqn) {
   return hoistStatics(
     compose(
       getContext({

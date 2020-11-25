@@ -46,7 +46,12 @@ InMemoryCache {
         "ROOT_SUBSCRIPTION": "Subscription",
       },
       "supertypeMap": Map {},
-      "typePolicies": Object {},
+      "toBeAdded": Object {},
+      "typePolicies": Object {
+        "Query": Object {
+          "fields": Object {},
+        },
+      },
       "usingPossibleTypes": false,
     },
     "refs": Object {},
@@ -107,7 +112,12 @@ InMemoryCache {
         "ROOT_SUBSCRIPTION": "Subscription",
       },
       "supertypeMap": Map {},
-      "typePolicies": Object {},
+      "toBeAdded": Object {},
+      "typePolicies": Object {
+        "Query": Object {
+          "fields": Object {},
+        },
+      },
       "usingPossibleTypes": false,
     },
     "refs": Object {},
@@ -148,7 +158,12 @@ InMemoryCache {
       "ROOT_SUBSCRIPTION": "Subscription",
     },
     "supertypeMap": Map {},
-    "typePolicies": Object {},
+    "toBeAdded": Object {},
+    "typePolicies": Object {
+      "Query": Object {
+        "fields": Object {},
+      },
+    },
     "usingPossibleTypes": false,
   },
   "storeReader": StoreReader {

@@ -58,12 +58,6 @@ export LikedContentFeedConnected, {
   GET_LIKED_CONTENT,
 } from './LikedContentFeedConnected';
 export { LiveConsumer, LiveProvider } from './live';
-export MediaControlsConnected, {
-  // TODO deprecated
-  GET_CONTENT_MEDIA,
-  GET_NODE_MEDIA,
-  MediaControls,
-} from './MediaControlsConnected';
 export NodeFeaturesConnected, {
   GET_NODE_FEATURES,
 } from './NodeFeaturesConnected';

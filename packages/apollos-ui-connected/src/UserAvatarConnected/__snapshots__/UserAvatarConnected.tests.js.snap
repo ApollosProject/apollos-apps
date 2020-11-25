@@ -12,10 +12,9 @@ exports[`UserAvatarConnected component renders UserAvatarConnected 1`] = `
   }
   themeSize={40}
 >
-  <RCTImageView
+  <Image
     fadeDuration={250}
     onLoad={[Function]}
-    resizeMode="cover"
     source={
       Array [
         Object {
@@ -32,7 +31,6 @@ exports[`UserAvatarConnected component renders UserAvatarConnected 1`] = `
         "bottom": 0,
         "height": "100%",
         "left": 0,
-        "overflow": "hidden",
         "position": "absolute",
         "right": 0,
         "top": 0,

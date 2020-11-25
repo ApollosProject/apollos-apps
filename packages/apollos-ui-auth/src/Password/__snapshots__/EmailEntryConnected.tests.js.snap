@@ -140,8 +140,7 @@ exports[`ui-auth/Password/EmailEntryConnected should render 1`] = `
                 >
                   <View
                     accessible={true}
-                    clickable={false}
-                    isTVSelectable={true}
+                    focusable={false}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -199,8 +198,7 @@ exports[`ui-auth/Password/EmailEntryConnected should render 1`] = `
                 >
                   <View
                     accessible={true}
-                    clickable={true}
-                    isTVSelectable={true}
+                    focusable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -481,8 +479,7 @@ exports[`ui-auth/Password/EmailEntryConnected should render 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}

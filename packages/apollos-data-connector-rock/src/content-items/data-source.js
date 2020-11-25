@@ -413,9 +413,7 @@ export default class ContentItem extends RockApolloDataSource {
   };
 
   byUserFeed = () =>
-    this.byActive()
-      .orderBy('StartDateTime', 'desc')
-      .expand('ContentChannel');
+    this.byActive().orderBy('StartDateTime', 'desc').expand('ContentChannel');
 
   byActive = () =>
     this.request()
@@ -603,10 +601,7 @@ export default class ContentItem extends RockApolloDataSource {
     return (totalItemsWithInteractions / childItems.length) * 100;
   }
 
-  getFromId = (id) =>
-    this.request()
-      .find(id)
-      .get();
+  getFromId = (id) => this.request().find(id).get();
 
   resolveType({
     attributeValues,

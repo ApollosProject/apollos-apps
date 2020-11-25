@@ -152,7 +152,7 @@ exports[`HorizontalLikedContentFeedConnected renders a HorizontalLikedContentFee
         onGestureCanceled={[Function]}
         onGestureEnd={[Function]}
         onOpen={[Function]}
-        onTransitionStart={[Function]}
+        onTransition={[Function]}
         pointerEvents="box-none"
         style={
           Array [
@@ -206,6 +206,7 @@ exports[`HorizontalLikedContentFeedConnected renders a HorizontalLikedContentFee
         >
           <View
             collapsable={false}
+            forwardedRef={[Function]}
             onGestureHandlerEvent={[Function]}
             onGestureHandlerStateChange={[Function]}
             style={
@@ -316,8 +317,7 @@ exports[`HorizontalLikedContentFeedConnected renders a HorizontalLikedContentFee
                       </View>
                       <View
                         accessible={true}
-                        clickable={true}
-                        isTVSelectable={true}
+                        focusable={true}
                         onClick={[Function]}
                         onResponderGrant={[Function]}
                         onResponderMove={[Function]}
@@ -411,7 +411,6 @@ exports[`HorizontalLikedContentFeedConnected renders a HorizontalLikedContentFee
                         }
                       }
                       maxToRenderPerBatch={10}
-                      numColumns={1}
                       onContentSizeChange={[Function]}
                       onEndReachedThreshold={2}
                       onGestureHandlerEvent={[Function]}
@@ -454,7 +453,7 @@ exports[`HorizontalLikedContentFeedConnected renders a HorizontalLikedContentFee
                         >
                           <View
                             accessible={true}
-                            clickable={true}
+                            focusable={true}
                             onClick={[Function]}
                             onResponderGrant={[Function]}
                             onResponderMove={[Function]}
@@ -696,7 +695,7 @@ exports[`HorizontalLikedContentFeedConnected renders a HorizontalLikedContentFee
                         >
                           <View
                             accessible={true}
-                            clickable={true}
+                            focusable={true}
                             onClick={[Function]}
                             onResponderGrant={[Function]}
                             onResponderMove={[Function]}
@@ -1091,7 +1090,7 @@ exports[`HorizontalLikedContentFeedConnected renders a HorizontalLikedContentFee
         onGestureCanceled={[Function]}
         onGestureEnd={[Function]}
         onOpen={[Function]}
-        onTransitionStart={[Function]}
+        onTransition={[Function]}
         pointerEvents="box-none"
         style={
           Array [
@@ -1145,6 +1144,7 @@ exports[`HorizontalLikedContentFeedConnected renders a HorizontalLikedContentFee
         >
           <View
             collapsable={false}
+            forwardedRef={[Function]}
             onGestureHandlerEvent={[Function]}
             onGestureHandlerStateChange={[Function]}
             style={
@@ -1250,18 +1250,16 @@ exports[`HorizontalLikedContentFeedConnected renders a HorizontalLikedContentFee
                           }
                         }
                       >
-                        <RCTImageView
+                        <Image
                           fadeDuration={250}
                           hasTitleAndSummary={false}
                           isLoading={true}
                           onLoad={[Function]}
-                          resizeMode="cover"
                           source={Array []}
                           style={
                             Object {
                               "aspectRatio": 1.5,
                               "backgroundColor": "#A5A5A5",
-                              "overflow": "hidden",
                               "resizeMode": "cover",
                               "width": "100%",
                             }
@@ -1443,7 +1441,7 @@ exports[`HorizontalLikedContentFeedConnected renders nothing if no liked content
         onGestureCanceled={[Function]}
         onGestureEnd={[Function]}
         onOpen={[Function]}
-        onTransitionStart={[Function]}
+        onTransition={[Function]}
         pointerEvents="box-none"
         style={
           Array [
@@ -1497,6 +1495,7 @@ exports[`HorizontalLikedContentFeedConnected renders nothing if no liked content
         >
           <View
             collapsable={false}
+            forwardedRef={[Function]}
             onGestureHandlerEvent={[Function]}
             onGestureHandlerStateChange={[Function]}
             style={
