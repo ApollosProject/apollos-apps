@@ -73,11 +73,6 @@
   dependencies:
     xss "^1.0.6"
 
-"@apollosproject/ui-test-utils@1.7.0-beta.2":
-  version "1.7.0-beta.2"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-test-utils/-/ui-test-utils-1.7.0-beta.2.tgz#07c3270c11d28e88e80c80bf7e4bd1587d68bfae"
-  integrity sha512-4rUCDOAWe4XEc1JJ4hwuF4VDOLIIW3nZVBcr6IVImJ7OJk59KInfrjtCcmkhM5DJxy6nw/zjUkGjPwDM67qKzw==
-
 "@babel/cli@7.1.5":
   version "7.1.5"
   resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-7.1.5.tgz#4ccf0a8cdabeefdd8ce955384530f050935bc4d7"
