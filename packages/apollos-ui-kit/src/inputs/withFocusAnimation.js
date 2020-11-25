@@ -25,7 +25,7 @@ const withFocusAnimation = (Component) =>
         toValue,
         duration: this.props.focusAnimationDuration,
         easing: this.props.focusAnimationEasing,
-        rruseNativeDriver: true,
+        useNativeDriver: true,
       }).start();
     };
 
