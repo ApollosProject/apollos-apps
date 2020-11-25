@@ -111,6 +111,10 @@ const ApolloStorybookDecorator = ({
   //   // cacheOptions: { fragmentMatcher },
   //   possibleTypes: finalPossibleTypes
   // });
+
+  return (story) => {
+    return story();
+  };
 };
 
 const WithReactNavigator = (Component) => {
