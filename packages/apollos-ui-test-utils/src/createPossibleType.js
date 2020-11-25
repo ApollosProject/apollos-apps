@@ -1,6 +1,6 @@
 import possibleTypesJson from './fragmentTypes.json';
 
-export default function createPossibleType({ possibleTypes }) {
+export default function createPossibleType({ possibleTypes = {} } = {}) {
   const finalPossibleTypes = {};
   possibleTypesJson.__schema.types.forEach((supertype) => {
     if (supertype.possibleTypes) {
