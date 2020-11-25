@@ -1,9 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {
-  Animated,
-  TouchableOpacity,
-} from 'react-native';
+import { Animated, TouchableOpacity } from 'react-native';
 
 import { Picker as NativePicker } from '@react-native-picker/picker';
 
