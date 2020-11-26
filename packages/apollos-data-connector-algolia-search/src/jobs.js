@@ -44,9 +44,7 @@ const createJobs = ({ getContext, queues }) => {
     const context = getContext();
     const jobs = await DeltaIndexQueue.getCompleted();
     const timestamp = isEmpty(jobs)
-      ? moment()
-          .subtract(1, 'day')
-          .toDate()
+      ? moment().subtract(1, 'day').toDate()
       : jobs
           .map((j) => j.opts.timestamp)
           .sort((a, b) => {

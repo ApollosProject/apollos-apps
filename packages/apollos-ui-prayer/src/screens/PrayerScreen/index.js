@@ -62,8 +62,9 @@ const PrayerScreen = ({
       <PrayerCardComponent
         prayer={prayer.text}
         avatar={prayer.requestor?.photo || null}
-        title={`Pray for ${prayer.requestor?.nickName ||
-          prayer.requestor?.firstName}`}
+        title={`Pray for ${
+          prayer.requestor?.nickName || prayer.requestor?.firstName
+        }`}
       />
     </PrayerView>
   );

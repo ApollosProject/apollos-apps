@@ -1,5 +1,5 @@
 // const blacklist = require('metro-config/src/defaults/blacklist');
-// 
+//
 // module.exports = {
 //   resolver: {
 //     blacklistRE: blacklist([
@@ -35,7 +35,15 @@ module.exports = applyConfigForLinkedDependencies(
     },
     {
         projectRoot: __dirname,
-        blacklistLinkedModules: ['react-native', 'react-native-linear-gradient', 'react-native-svg', '@storybook'],
+        blacklistLinkedModules: [
+            'react',
+            'react-native',
+            'react-native-linear-gradient',
+            'react-native-svg',
+            'react-native-safe-area-context',
+            'react-native-gesture-handler',
+            '@storybook'
+        ],
         resolveNodeModulesAtRoot: true,
     },
 );

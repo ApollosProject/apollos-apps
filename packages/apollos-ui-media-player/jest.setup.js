@@ -1,65 +1,35 @@
-import { NativeModules } from 'react-native';
+import { NativeModules as RNNativeModules } from 'react-native';
 
-jest.mock('@apollosproject/ui-analytics', () => ({
-  track: () => '',
-  AnalyticsProvider: ({ children }) => children,
-}));
-
-jest.mock('@apollosproject/react-native-airplay-btn', () => ({
-  AirPlayButton: () => 'AirPlayButton',
-}));
-
-jest.mock('react-native-safe-area-context', () => ({
-  SafeAreaConsumer: ({ children }) =>
-    children({ top: 0, bottom: 0, left: 0, right: 0 }),
-  SafeAreaProvider: ({ children }) => children,
-}));
-
-jest.mock('react-native-music-control', () => ({
-  enableBackgroundMode: jest.fn(),
-  enableControl: jest.fn(),
-  on: jest.fn(),
-  setNowPlaying: jest.fn(),
-  updatePlayback: jest.fn(),
-}));
-
-jest.mock('Animated', () => {
-  const ActualAnimated = require.requireActual('Animated');
-  return {
-    ...ActualAnimated,
-    timing: (value, config) => ({
-      start: (callback) => {
-        value.setValue(config.toValue);
-        callback && callback();
-      },
-      stop: () => ({}),
-    }),
-    spring: (value, config) => ({
-      start: (callback) => {
-        value.setValue(config.toValue);
-        callback && callback();
-      },
-      stop: () => ({}),
-    }),
-  };
-});
-
-jest.mock('react-native-google-cast', () => ({
-  CastButton: () => 'GoogleCastButton',
-  play: () => null,
-  pause: () => null,
-  getCastState: () => Promise.resolve('Connected'),
-  EventEmitter: { addListener: () => null },
-}));
-
-NativeModules.RNGestureHandlerModule = {
-  attachGestureHandler: jest.fn(),
-  createGestureHandler: jest.fn(),
-  dropGestureHandler: jest.fn(),
-  updateGestureHandler: jest.fn(),
-  forceTouchAvailable: jest.fn(),
-  State: {},
-  Directions: {},
+RNNativeModules.UIManager = {
+  RCTView: () => ({
+    directEventTypes: {},
+  }),
+  RCTVideo: {
+    Constants: {
+      ScaleToFill: 1,
+      ScaleAspectFit: 2,
+      ScaleAspectFill: 2,
+      ScaleNone: 0,
+    },
+  },
 };
 
-jest.mock('@react-native-community/datetimepicker', () => 'DatePicker');
+RNNativeModules.MusicControlManager = {
+  STATE_PLAYING: 'STATE_PLAYING',
+  STATE_PAUSED: 'STATE_PAUSED',
+  STATE_ERROR: 'STATE_ERROR',
+  STATE_STOPPED: 'STATE_STOPPED',
+  STATE_BUFFERING: 'STATE_BUFFERING',
+  RATING_HEART: 'RATING_HEART',
+  RATING_THUMBS_UP_DOWN: 'RATING_THUMBS_UP_DOWN',
+  RATING_3_STARS: 'RATING_3_STARS',
+  RATING_4_STARS: 'RATING_4_STARS',
+  RATING_5_STARS: 'RATING_5_STARS',
+  RATING_PERCENTAGE: 'RATING_PERCENTAGE',
+};
+
+RNNativeModules.KeyboardObserver = {};
+RNNativeModules.ApollosPlayer = {
+  // eslint-disable-next-line no-undef
+  isPictureInPictureSupported: jest.fn(),
+};

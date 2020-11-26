@@ -72,9 +72,7 @@ class ActionAlgorithm extends RockApolloDataSource {
     const { Event } = this.context.dataSources;
 
     // Get the first three persona items.
-    const events = await Event.findRecent()
-      .top(3)
-      .get();
+    const events = await Event.findRecent().top(3).get();
     // Map them into specific actions.
     return events.map((event, i) => ({
       id: `${event.id}${i}`,
@@ -202,9 +200,7 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
   async userFeedAlgorithm({ limit = 20 } = {}) {
     const { ContentItem } = this.context.dataSources;
 
-    const items = await ContentItem.byUserFeed()
-      .top(limit)
-      .get();
+    const items = await ContentItem.byUserFeed().top(limit).get();
 
     return items.map((item, i) => ({
       id: `${item.id}${i}`,

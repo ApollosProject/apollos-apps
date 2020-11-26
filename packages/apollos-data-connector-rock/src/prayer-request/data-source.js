@@ -9,10 +9,7 @@ export default class PrayerRequest extends RockApolloDataSource {
 
   expanded = true;
 
-  getFromId = (id) =>
-    this.request()
-      .find(id)
-      .get();
+  getFromId = (id) => this.request().find(id).get();
 
   byDailyPrayerFeed = async () => {
     const {
@@ -113,16 +110,9 @@ export default class PrayerRequest extends RockApolloDataSource {
       IsActive: true,
       AllowComments: false,
       IsUrgent: false,
-      EnteredDateTime: moment()
-        .tz(ROCK.TIMEZONE)
-        .format(),
-      ApprovedOnDateTime: moment()
-        .tz(ROCK.TIMEZONE)
-        .format(),
-      ExpirationDate: moment()
-        .tz(ROCK.TIMEZONE)
-        .add(2, 'weeks')
-        .format(),
+      EnteredDateTime: moment().tz(ROCK.TIMEZONE).format(),
+      ApprovedOnDateTime: moment().tz(ROCK.TIMEZONE).format(),
+      ExpirationDate: moment().tz(ROCK.TIMEZONE).add(2, 'weeks').format(),
     });
     return this.getFromId(prayerId);
   };

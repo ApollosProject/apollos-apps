@@ -154,8 +154,7 @@ exports[`The AddPrayerScreenConnected component should accept a title 1`] = `
                 </Text>
                 <View
                   accessible={true}
-                  clickable={true}
-                  isTVSelectable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -566,8 +565,7 @@ Array [
                   </Text>
                   <View
                     accessible={true}
-                    clickable={true}
-                    isTVSelectable={true}
+                    focusable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -1280,8 +1278,7 @@ exports[`The AddPrayerScreenConnected component should render 1`] = `
                 </Text>
                 <View
                   accessible={true}
-                  clickable={true}
-                  isTVSelectable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -1790,8 +1787,7 @@ exports[`The AddPrayerScreenConnected component should render a custom post-add 
                 </Text>
                 <View
                   accessible={true}
-                  clickable={true}
-                  isTVSelectable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -2201,8 +2197,7 @@ exports[`The AddPrayerScreenConnected component should render a custom skipText 
                 </Text>
                 <View
                   accessible={true}
-                  clickable={true}
-                  isTVSelectable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -2612,8 +2607,7 @@ exports[`The AddPrayerScreenConnected component should render avatars 1`] = `
                 </Text>
                 <View
                   accessible={true}
-                  clickable={true}
-                  isTVSelectable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}

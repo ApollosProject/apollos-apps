@@ -1,7 +1,6 @@
 import React from 'react';
 import { flatMap } from 'lodash';
 
-import { GET_CONTENT_CARD } from '@apollosproject/ui-connected';
 import {
   renderWithApolloData,
   Providers,
@@ -9,6 +8,7 @@ import {
 } from '@apollosproject/ui-test-utils';
 
 import { MockedProvider } from '@apollo/client/testing';
+import { GET_CONTENT_CARD } from '../ContentCardConnected';
 import GET_SEARCH_RESULTS from './getSearchResults';
 import SearchFeed from '.';
 

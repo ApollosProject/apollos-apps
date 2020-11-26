@@ -100,8 +100,7 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -255,8 +254,7 @@ exports[`The Onboarding LocationFinderConnected component should render with a u
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}

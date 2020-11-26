@@ -11,18 +11,12 @@ const dark = ({ colors, alpha }) => ({
     background: {
       screen: colors.black,
       paper: colors.darkPrimary,
-      secondary: Color(colors.darkTertiary)
-        .fade(alpha.medium)
-        .string(),
-      accent: Color(colors.darkTertiary)
-        .fade(alpha.medium)
-        .string(),
+      secondary: Color(colors.darkTertiary).fade(alpha.medium).string(),
+      accent: Color(colors.darkTertiary).fade(alpha.medium).string(),
       inactive: colors.darkTertiary,
     },
     shadows: {
-      default: Color(colors.black)
-        .fade(alpha.high)
-        .string(),
+      default: Color(colors.black).fade(alpha.high).string(),
     },
     action: {
       default: colors.darkTertiary,

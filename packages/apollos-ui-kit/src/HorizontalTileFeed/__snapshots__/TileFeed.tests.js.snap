@@ -41,7 +41,6 @@ exports[`The TileFeed component renders correctly 1`] = `
     }
   }
   maxToRenderPerBatch={10}
-  numColumns={1}
   onContentSizeChange={[Function]}
   onEndReachedThreshold={2}
   onGestureHandlerEvent={[Function]}
@@ -253,7 +252,6 @@ exports[`The TileFeed component renders empty state 1`] = `
     }
   }
   maxToRenderPerBatch={10}
-  numColumns={1}
   onContentSizeChange={[Function]}
   onEndReachedThreshold={2}
   onGestureHandlerEvent={[Function]}

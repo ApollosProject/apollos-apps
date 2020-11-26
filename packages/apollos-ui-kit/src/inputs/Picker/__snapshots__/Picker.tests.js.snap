@@ -10,8 +10,7 @@ exports[`The Picker Input component focuses and blurs 1`] = `
 >
   <View
     accessible={true}
-    clickable={true}
-    isTVSelectable={true}
+    focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -251,11 +250,9 @@ exports[`The Picker Input component focuses and blurs 1`] = `
           }
         }
       >
-        <RCTPicker
+        <RNCPicker
           items={Array []}
           onChange={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
           selectedIndex={0}
           style={
             Array [
@@ -363,8 +360,7 @@ exports[`The Picker Input component focuses and blurs 2`] = `
 >
   <View
     accessible={true}
-    clickable={true}
-    isTVSelectable={true}
+    focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -604,11 +600,9 @@ exports[`The Picker Input component focuses and blurs 2`] = `
           }
         }
       >
-        <RCTPicker
+        <RNCPicker
           items={Array []}
           onChange={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
           selectedIndex={0}
           style={
             Array [
@@ -716,8 +710,7 @@ exports[`The Picker Input component focuses and blurs 3`] = `
 >
   <View
     accessible={true}
-    clickable={true}
-    isTVSelectable={true}
+    focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -957,11 +950,9 @@ exports[`The Picker Input component focuses and blurs 3`] = `
           }
         }
       >
-        <RCTPicker
+        <RNCPicker
           items={Array []}
           onChange={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
           selectedIndex={0}
           style={
             Array [
@@ -1069,8 +1060,7 @@ exports[`The Picker Input component should render correctly 1`] = `
 >
   <View
     accessible={true}
-    clickable={true}
-    isTVSelectable={true}
+    focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -1301,7 +1291,7 @@ exports[`The Picker Input component should render correctly 1`] = `
           }
         }
       >
-        <RCTPicker
+        <RNCPicker
           items={
             Array [
               Object {
@@ -1317,8 +1307,6 @@ exports[`The Picker Input component should render correctly 1`] = `
             ]
           }
           onChange={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
           selectedIndex={0}
           style={
             Array [

@@ -58,8 +58,7 @@ exports[`The PrayerView component should accept an onPressPrimary function 1`] =
         >
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -173,8 +172,7 @@ exports[`The PrayerView component should accept an onPressSecondary function 1`]
         >
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -589,8 +587,7 @@ exports[`The PrayerView component should render a loading state (isLoading) 1`] 
                 </Text>
                 <View
                   accessible={true}
-                  clickable={true}
-                  isTVSelectable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -807,8 +804,7 @@ exports[`The PrayerView component should render a loading state (isLoading) 1`] 
         >
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}

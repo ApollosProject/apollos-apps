@@ -200,11 +200,7 @@ you can return request.empty()
     // make sure to clone this.query, which gets mutated by top/skip
     cursor.query = { ...this.query };
 
-    const result = await cursor
-      .select('Id')
-      .top(null)
-      .skip(0)
-      .get();
+    const result = await cursor.select('Id').top(null).skip(0).get();
 
     return result.length;
   };

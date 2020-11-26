@@ -185,8 +185,7 @@ exports[`The ModalView/ModalViewHeader component should accept an onClose functi
   </RNSVGSvgView>
   <View
     accessible={true}
-    clickable={true}
-    isTVSelectable={true}
+    focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -443,8 +442,7 @@ exports[`The ModalView/ModalViewHeader component should render as a navigationHe
 >
   <View
     accessible={true}
-    clickable={true}
-    isTVSelectable={true}
+    focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}

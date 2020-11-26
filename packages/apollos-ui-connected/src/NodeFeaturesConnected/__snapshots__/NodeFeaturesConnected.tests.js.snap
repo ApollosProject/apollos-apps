@@ -66,7 +66,6 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
   keyExtractor={[Function]}
   loading={false}
   maxToRenderPerBatch={10}
-  numColumns={1}
   onContentSizeChange={[Function]}
   onEndReachedThreshold={0.7}
   onLayout={[Function]}
@@ -144,8 +143,7 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
           </Text>
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}

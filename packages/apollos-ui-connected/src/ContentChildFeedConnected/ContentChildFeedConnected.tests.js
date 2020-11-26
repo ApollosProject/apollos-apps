@@ -1,5 +1,4 @@
 import React from 'react';
-import { GET_CONTENT_CARD } from '@apollosproject/ui-connected';
 
 import {
   Providers,
@@ -7,6 +6,7 @@ import {
   WithReactNavigator,
 } from '@apollosproject/ui-test-utils';
 import { MockedProvider } from '@apollo/client/testing';
+import { GET_CONTENT_CARD } from '../ContentCardConnected';
 
 import GET_CONTENT_CHILD_SIBLINGS from './getContentChildSiblings';
 import ContentChildFeedConnected from './ContentChildFeedConnected';

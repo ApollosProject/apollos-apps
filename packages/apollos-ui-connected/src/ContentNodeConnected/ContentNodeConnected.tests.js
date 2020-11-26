@@ -1,11 +1,7 @@
 import React from 'react';
-import { Text } from 'react-native';
 import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
 import { MockedProvider } from '@apollo/client/testing';
 
-import MediaControlsConnected, {
-  GET_NODE_MEDIA,
-} from '../MediaControlsConnected';
 import GET_CONTENT_NODE from './getContentNode';
 
 import ContentNodeConnected from './ContentNodeConnected';
@@ -39,45 +35,6 @@ const contentMock = {
   },
 };
 
-const mediaMock = {
-  request: {
-    query: GET_NODE_MEDIA,
-    variables: {
-      nodeId: 'WeekendContentItem:1',
-    },
-  },
-  result: {
-    data: {
-      node: {
-        id: 'WeekendContentItem:1',
-        title: 'Weekend Content Item',
-        parentChannel: null,
-        coverImage: {
-          __typename: 'ImageMedia',
-          sources: [
-            {
-              __typename: 'ImageMediaSource',
-              uri: 'https://picsum.photos/2000/200/?random',
-            },
-          ],
-        },
-        __typename: 'WeekendContentItem',
-        videos: [
-          {
-            __typename: 'VideoMedia',
-            sources: [
-              {
-                uri: 'https://somevideo.com/video.bin',
-                __typename: 'VideoMediaSource',
-              },
-            ],
-          },
-        ],
-      },
-    },
-  },
-};
-
 describe('ContentNodeConnected', () => {
   it('should render', async () => {
     const tree = await renderWithApolloData(
@@ -86,35 +43,5 @@ describe('ContentNodeConnected', () => {
       </Providers>
     );
     expect(tree).toMatchSnapshot();
-  });
-  it('should render with media player', async () => {
-    const Component = (props) => <Text>{JSON.stringify(props)}</Text>;
-    const MediaControlsConnectedShallow = (props) => (
-      <MediaControlsConnected {...props} Component={Component} />
-    );
-    const tree = await renderWithApolloData(
-      <Providers
-        MockedProvider={MockedProvider}
-        mocks={[mediaMock, contentMock]}
-      >
-        <ContentNodeConnected
-          MediaControlsComponent={MediaControlsConnectedShallow}
-          nodeId={'WeekendContentItem:1'}
-        />
-      </Providers>
-    );
-    const finalTree = await renderWithApolloData(
-      <Providers
-        MockedProvider={MockedProvider}
-        mocks={[mediaMock, contentMock]}
-      >
-        <ContentNodeConnected
-          MediaControlsComponent={MediaControlsConnectedShallow}
-          nodeId={'WeekendContentItem:1'}
-        />
-      </Providers>,
-      tree
-    );
-    expect(finalTree).toMatchSnapshot();
   });
 });

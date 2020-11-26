@@ -22,7 +22,7 @@
     "collectCoverage": true,
     "coverageReporters": ["json", "lcovonly", "clover"],
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|@react-navigation/native|@apollosproject))"
+      "node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@apollosproject))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -46,13 +46,12 @@
   "devDependencies": {
     "@apollosproject/ui-storybook": "^1.7.0",
     "@storybook/react-native": "5.2.4",
-    "jest": "24.8.0",
-    "jest-react-native": "18.0.0",
+    "jest": "^25.1.0",
     "metro-react-native-babel-preset": "^0.56.0",
     "prop-types": "15.6.1",
-    "react": "16.9.0",
-    "react-native": "0.60.5",
-    "react-test-renderer": "16.9.0"
+    "react": "16.13.1",
+    "react-native": "0.63.2",
+    "react-test-renderer": "16.13.1"
   },
   "publishConfig": {
     "access": "public"
