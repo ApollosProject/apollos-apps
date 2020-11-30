@@ -18,7 +18,8 @@
     "!lib/typescript/example",
     "!**/__tests__",
     "!**/__fixtures__",
-    "!**/__mocks__"
+    "!**/__mocks__",
+    "storybook/**"
   ],
   "scripts": {
     "test": "jest",
