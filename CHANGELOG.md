@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/ApollosProject/apollos-apps/compare/v1.7.0-beta.3...v1.7.0) (2020-11-18)
+
+
+### Bug Fixes
+
+* Stop ThemeMixin from clobbering ThemeInput ([#1644](https://github.com/ApollosProject/apollos-apps/issues/1644)) ([79e7cb0](https://github.com/ApollosProject/apollos-apps/commit/79e7cb0))
+
+
+
+
+
 # [1.7.0-beta.3](https://github.com/ApollosProject/apollos-apps/compare/v1.7.0-beta.2...v1.7.0-beta.3) (2020-11-09)
 
 

@@ -65,7 +65,6 @@ export MediaControlsConnected, {
   MediaControls,
 } from './MediaControlsConnected';
 export NodeFeaturesConnected, {
-  NodeFeatures,
   GET_NODE_FEATURES,
 } from './NodeFeaturesConnected';
 export NodeSingleConnected from './NodeSingleConnected';
