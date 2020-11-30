@@ -33,11 +33,11 @@ export default class PrayerRequest extends RockApolloDataSource {
           .format()}' or ExpirationDate eq null`
       )
       .andFilter(
-        // prayers that were entered less then 72 hours ago
+        // prayers that were entered less then x days ago
         `EnteredDateTime gt datetime'${moment
           .tz(ROCK.TIMEZONE)
           .subtract(numberDaysSincePrayer, 'day')
-          .format()}' or PrayerCount eq null` // include prayers that haven't prayed yet >24 hours old
+          .format()}' or PrayerCount eq null` // include prayers that haven't prayed yet and within x number of days old
       )
       .andFilter(`Answer eq null or Answer eq ''`) // prayers that aren't answered
       .sort([
