@@ -5,6 +5,7 @@
   "main": "./index.js",
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
+    "@react-native-community/eslint-plugin": "^1.1.0",
     "babel-eslint": "10.1.0",
     "eslint": "^7.4.0",
     "eslint-config-airbnb": "^18.2.0",
