@@ -58,11 +58,13 @@ export function setupUniversalLinks({
     );
   });
 
-  app.get('/app-link/*', (req, res) => {
+  app.get('/app-link/*', async (req, res) => {
     if (/Android/.test(req.headers['user-agent'])) {
-      res.redirect(createRedirectLink({ platform: 'android', req }));
+      const link = await createRedirectLink({ platform: 'android', req });
+      res.redirect(link);
     } else {
-      res.redirect(createRedirectLink({ platform: 'ios', req }));
+      const link = await createRedirectLink({ platform: 'ios', req });
+      res.redirect(link);
     }
   });
 }

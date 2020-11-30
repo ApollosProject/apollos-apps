@@ -61,14 +61,28 @@ const LITE_FEATURES_FRAGMENT = gql`
     }
     ... on TextFeature {
       body
+      sharing {
+        message
+      }
     }
     ... on ScriptureFeature {
+      # The whole fragment is currently included b/c these nodes don't fetch their own content.
+      sharing {
+        message
+      }
       scriptures {
+        id
+        html
         reference
+        copyright
+        version
       }
     }
     ... on WebviewFeature {
+      # The whole fragment is currently included b/c these nodes don't fetch their own content.
+      linkText
       title
+      url
     }
   }
 `;
