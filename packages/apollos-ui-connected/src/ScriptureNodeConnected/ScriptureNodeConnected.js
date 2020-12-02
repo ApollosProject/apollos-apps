@@ -20,7 +20,6 @@ const ContentNodeConnected = ({ nodeId }) => {
       }) => {
         // We don't want to show a loading state since this is an optional component.
         // However, if we know there are scriptures (from cached data) we should go ahead and show scripture
-        console.log(scriptures, loading, error);
         if (!scriptures?.length || (!scriptures?.length && loading) || error) {
           return null;
         }
