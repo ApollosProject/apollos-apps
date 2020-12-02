@@ -80,7 +80,8 @@ const RNVideoPresentation = ({
       playheadRef.current = newPlayhead;
       // the default currentTime is often a very low value
       // ex: 0.000009999999747378752
-      if (playhead.currentTime >= 0.01 && showCoverImage) setShowCoverImage(false);
+      if (playhead.currentTime >= 0.01 && showCoverImage)
+        setShowCoverImage(false);
       updatePlayhead(newPlayhead);
     },
     [updatePlayhead, playheadRef, setShowCoverImage, showCoverImage]
