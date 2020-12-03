@@ -37,8 +37,9 @@ export class ThemeProvider extends PureComponent {
 export const ThemeProviderWithApperance = ( { themeInput= {} , ...props} ) => {
   const themeType = useColorScheme();
   return (
-    <ThemeProvider {...props}
+    <ThemeProvider
       themeInput={ { type: themeType, ...themeInput } }
+      {...props}
     />
   )
 }

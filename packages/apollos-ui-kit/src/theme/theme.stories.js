@@ -49,6 +49,15 @@ storiesOf('ui-kit/Theming', module)
       <TypeExample />
     </ThemeProvider>
   ))
+  .add('ThemeProvider - light theme', () => (
+    <ThemeProvider
+      themeInput={{
+        type: 'light',
+      }}
+    >
+      <TypeExample />
+    </ThemeProvider>
+  ))
   .add('ThemeMixin', () => (
     <ThemeProvider>
       <FlexedView>
