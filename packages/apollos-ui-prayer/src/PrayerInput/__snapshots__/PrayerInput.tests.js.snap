@@ -3,8 +3,7 @@
 exports[`The PrayerInput component should render 1`] = `
 <View
   accessible={true}
-  clickable={true}
-  isTVSelectable={true}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -212,8 +211,7 @@ exports[`The PrayerInput component should render 1`] = `
 exports[`The PrayerInput component should render a custom prompt 1`] = `
 <View
   accessible={true}
-  clickable={true}
-  isTVSelectable={true}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}

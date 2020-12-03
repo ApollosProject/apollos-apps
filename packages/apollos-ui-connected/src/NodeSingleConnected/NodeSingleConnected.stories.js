@@ -3,7 +3,10 @@ import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { times } from 'lodash';
 import { BackgroundView, CenteredView } from '@apollosproject/ui-kit';
-import { ApolloStorybookDecorator, WithReactNavigator } from '../testUtils';
+import {
+  ApolloStorybookDecorator,
+  WithReactNavigator,
+} from '@apollosproject/ui-test-utils';
 import NodeSingleConnected from './index';
 
 const devoMock = (root, { id }) => ({

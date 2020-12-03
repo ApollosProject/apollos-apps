@@ -1,5 +1,6 @@
 import React from 'react';
-import { Providers, renderWithApolloData } from '../testUtils';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 
 import GET_CONTENT_ITEM_FEATURES from './getContentItemFeatures';
 
@@ -99,7 +100,7 @@ const mock = {
 describe('ContentSingleFeaturesConnected', () => {
   it('should render', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={[mock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <ContentSingleFeaturesConnected contentId={'WeekendContentItem:1'} />
       </Providers>
     );
@@ -107,7 +108,7 @@ describe('ContentSingleFeaturesConnected', () => {
   });
   it('should render with nodeId', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={[mock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <ContentSingleFeaturesConnected nodeId={'WeekendContentItem:1'} />
       </Providers>
     );

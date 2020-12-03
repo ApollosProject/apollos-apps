@@ -1,928 +1,1233 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the ContentChildFeedConnected component should render 1`] = `
-<RCTScrollView
-  collapsable={false}
-  contentContainerStyle={
+<View
+  style={
     Object {
-      "padding": 8,
-      "paddingBottom": 0,
+      "flex": 1,
     }
   }
-  data={
-    Array [
-      Object {
-        "__typename": "DevotionalContentItem",
-        "coverImage": Object {
-          "__typename": "ImageMedia",
-          "sources": Array [
-            Object {
-              "__typename": "ImageMediaSource",
-              "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
-            },
-          ],
-        },
-        "hyphenatedTitle": "God sees who you can be not who you are",
-        "id": "DevotionalContentItem:d395278cd4b68e074ca4e595c8feab6d",
-        "parentChannel": Object {
-          "__typename": "ContentChannel",
-          "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
-          "name": "Devotional",
-        },
-        "summary": "bla bla bla",
-        "theme": null,
-        "title": "God sees who you can be not who you are",
-        "videos": Array [],
-      },
-      Object {
-        "__typename": "DevotionalContentItem",
-        "coverImage": Object {
-          "__typename": "ImageMedia",
-          "sources": Array [
-            Object {
-              "__typename": "ImageMediaSource",
-              "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
-            },
-          ],
-        },
-        "hyphenatedTitle": "Thank God for the friends who will tell it like it is",
-        "id": "DevotionalContentItem:fbea6914a3e8877516cbd333d919075d",
-        "parentChannel": Object {
-          "__typename": "ContentChannel",
-          "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
-          "name": "Devotional",
-        },
-        "summary": "bla bla bla",
-        "theme": null,
-        "title": "Thank God for the friends who will tell it like it is",
-        "videos": Array [],
-      },
-      Object {
-        "__typename": "DevotionalContentItem",
-        "coverImage": Object {
-          "__typename": "ImageMedia",
-          "sources": Array [
-            Object {
-              "__typename": "ImageMediaSource",
-              "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
-            },
-          ],
-        },
-        "hyphenatedTitle": "No sin is too bad",
-        "id": "DevotionalContentItem:5e18250f586ab8de4d3d6292c919dcc4",
-        "parentChannel": Object {
-          "__typename": "ContentChannel",
-          "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
-          "name": "Devotional",
-        },
-        "summary": "bla bla bla",
-        "theme": null,
-        "title": "No sin is too bad",
-        "videos": Array [],
-      },
-      Object {
-        "__typename": "DevotionalContentItem",
-        "coverImage": Object {
-          "__typename": "ImageMedia",
-          "sources": Array [
-            Object {
-              "__typename": "ImageMediaSource",
-              "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
-            },
-          ],
-        },
-        "hyphenatedTitle": "Change starts with a choice",
-        "id": "DevotionalContentItem:bdc2c29b85949e4ca8232b373a07953d",
-        "parentChannel": Object {
-          "__typename": "ContentChannel",
-          "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
-          "name": "Devotional",
-        },
-        "summary": "bla bla bla",
-        "theme": null,
-        "title": "Change starts with a choice",
-        "videos": Array [],
-      },
-    ]
-  }
-  decelerationRate="fast"
-  disableVirtualization={false}
-  getItem={[Function]}
-  getItemCount={[Function]}
-  getItemLayout={[Function]}
-  horizontal={true}
-  initialNumToRender={10}
-  initialScrollIndex={0}
-  keyExtractor={[Function]}
-  loadingStateObject={
-    Object {
-      "node": Object {
-        "__typename": "MediaContentItem",
-        "coverImage": "",
-        "id": "fakeId0",
-        "isLoading": true,
-        "parentChannel": Object {
-          "name": "",
-        },
-        "title": "",
-      },
-    }
-  }
-  maxToRenderPerBatch={10}
-  numColumns={1}
-  onContentSizeChange={[Function]}
-  onEndReached={[Function]}
-  onEndReachedThreshold={2}
-  onGestureHandlerEvent={[Function]}
-  onGestureHandlerStateChange={[Function]}
-  onLayout={[Function]}
-  onMomentumScrollEnd={[Function]}
-  onScroll={[Function]}
-  onScrollBeginDrag={[Function]}
-  onScrollEndDrag={[Function]}
-  refreshing={false}
-  removeClippedSubviews={false}
-  renderItem={[Function]}
-  renderScrollComponent={[Function]}
-  scrollEventThrottle={50}
-  showsHorizontalScrollIndicator={false}
-  snapToAlignment="start"
-  snapToInterval={256}
-  stickyHeaderIndices={Array []}
-  updateCellsBatchingPeriod={50}
-  viewabilityConfigCallbackPairs={Array []}
-  windowSize={21}
 >
-  <View>
-    <View
-      style={
-        Array [
-          Object {
-            "flexDirection": "row",
-          },
-          null,
-        ]
+  <View
+    pointerEvents="box-none"
+    style={
+      Object {
+        "zIndex": 1,
       }
+    }
+  >
+    <View
+      accessibilityElementsHidden={false}
+      importantForAccessibility="auto"
+      onLayout={[Function]}
+      pointerEvents="box-none"
+      style={null}
     >
       <View
-        accessible={true}
-        clickable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
+        pointerEvents="box-none"
         style={
           Object {
-            "transform": Array [
-              Object {
-                "scale": 1,
-              },
-            ],
+            "bottom": 0,
+            "left": 0,
+            "opacity": 1,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "zIndex": 0,
           }
         }
       >
         <View
-          __typename="DevotionalContentItem"
-          disabled={false}
-          id="DevotionalContentItem:d395278cd4b68e074ca4e595c8feab6d"
-          inHorizontalList={true}
-          isLive={false}
-          isLoading={false}
-          parentChannel={
-            Object {
-              "__typename": "ContentChannel",
-              "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
-              "name": "Devotional",
-            }
-          }
           style={
             Object {
-              "backgroundColor": "#303030",
-              "borderRadius": 16,
-              "height": 240,
-              "margin": 8,
-              "marginBottom": 12,
-              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+              "backgroundColor": "rgb(255, 255, 255)",
+              "borderBottomColor": "rgb(216, 216, 216)",
+              "flex": 1,
+              "shadowColor": "rgb(216, 216, 216)",
               "shadowOffset": Object {
-                "height": 2,
+                "height": 0.5,
                 "width": 0,
               },
-              "shadowOpacity": 1,
-              "shadowRadius": 8,
-              "width": 240,
+              "shadowOpacity": 0.85,
+              "shadowRadius": 0,
             }
           }
-          summary="bla bla bla"
-          videos={Array []}
+        />
+      </View>
+      <View
+        pointerEvents="box-none"
+        style={
+          Object {
+            "height": 44,
+            "maxHeight": undefined,
+            "minHeight": undefined,
+            "opacity": undefined,
+            "transform": undefined,
+          }
+        }
+      >
+        <View
+          pointerEvents="none"
+          style={
+            Object {
+              "height": 0,
+            }
+          }
+        />
+        <View
+          pointerEvents="box-none"
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+              "justifyContent": "center",
+            }
+          }
         >
           <View
+            pointerEvents="box-none"
             style={
               Object {
-                "borderRadius": 16,
-                "overflow": "hidden",
+                "marginHorizontal": 16,
+                "opacity": 1,
               }
             }
           >
-            <View
+            <Text
+              accessibilityRole="header"
+              aria-level="1"
+              numberOfLines={1}
+              onLayout={[Function]}
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
-                  "overflow": "hidden",
-                  "width": "100%",
+                  "color": "rgb(28, 28, 30)",
+                  "fontSize": 17,
+                  "fontWeight": "600",
                 }
               }
             >
-              <RCTImageView
-                disabled={false}
-                fadeDuration={250}
-                isLoading={false}
-                onLoad={[Function]}
-                resizeMode="cover"
-                source={
-                  Array [
-                    Object {
-                      "__typename": "ImageMediaSource",
-                      "cache": "force-cache",
-                      "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
-                    },
-                  ]
-                }
-                style={
-                  Object {
-                    "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
-                    "resizeMode": "cover",
-                    "width": "100%",
-                  }
-                }
-              />
-              <BVLinearGradient
-                colors={
-                  Array [
-                    1711276032,
-                    2147483648,
-                  ]
-                }
-                endPoint={
-                  Object {
-                    "x": 0,
-                    "y": 1,
-                  }
-                }
-                locations={
-                  Array [
-                    0,
-                    1,
-                  ]
-                }
-                overlayColor="#000000"
-                overlayType="gradient-bottom"
-                startPoint={
-                  Object {
-                    "x": 0,
-                    "y": 0,
-                  }
-                }
-                style={
-                  Object {
-                    "bottom": 0,
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  }
-                }
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "alignItems": "flex-start",
-                  "bottom": 0,
-                  "paddingBottom": 24,
-                  "paddingHorizontal": 16,
-                  "paddingVertical": 16,
-                  "position": "absolute",
-                  "width": "100%",
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "flexDirection": "row",
-                    "paddingTop": 16,
-                  }
-                }
-              >
-                <View
-                  hasAction={false}
-                  style={
-                    Object {
-                      "flex": 1,
-                    }
-                  }
-                >
-                  <Text
-                    numberOfLines={4}
-                    style={
-                      Object {
-                        "color": "#F8F7F4",
-                        "fontFamily": "InterUI-Black",
-                        "fontSize": 24,
-                        "lineHeight": 27.6,
-                      }
-                    }
-                  >
-                    God sees who you can be not who you are
-                  </Text>
-                </View>
-              </View>
-            </View>
+              Home
+            </Text>
           </View>
         </View>
       </View>
     </View>
+  </View>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
     <View
+      pointerEvents="box-none"
       style={
-        Array [
-          Object {
-            "flexDirection": "row",
-          },
-          null,
-        ]
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
       }
     >
       <View
-        accessible={true}
-        clickable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
+        collapsable={false}
         style={
           Object {
-            "transform": Array [
-              Object {
-                "scale": 1,
+            "opacity": 1,
+          }
+        }
+      />
+      <View
+        accessibilityElementsHidden={false}
+        closing={false}
+        gestureVelocityImpact={0.3}
+        importantForAccessibility="auto"
+        onClose={[Function]}
+        onGestureBegin={[Function]}
+        onGestureCanceled={[Function]}
+        onGestureEnd={[Function]}
+        onOpen={[Function]}
+        onTransition={[Function]}
+        pointerEvents="box-none"
+        style={
+          Array [
+            Object {
+              "overflow": undefined,
+            },
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+          ]
+        }
+        transitionSpec={
+          Object {
+            "close": Object {
+              "animation": "spring",
+              "config": Object {
+                "damping": 500,
+                "mass": 3,
+                "overshootClamping": true,
+                "restDisplacementThreshold": 10,
+                "restSpeedThreshold": 10,
+                "stiffness": 1000,
               },
-            ],
+            },
+            "open": Object {
+              "animation": "spring",
+              "config": Object {
+                "damping": 500,
+                "mass": 3,
+                "overshootClamping": true,
+                "restDisplacementThreshold": 10,
+                "restSpeedThreshold": 10,
+                "stiffness": 1000,
+              },
+            },
           }
         }
       >
         <View
-          __typename="DevotionalContentItem"
-          disabled={false}
-          id="DevotionalContentItem:fbea6914a3e8877516cbd333d919075d"
-          inHorizontalList={true}
-          isLive={false}
-          isLoading={false}
-          parentChannel={
-            Object {
-              "__typename": "ContentChannel",
-              "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
-              "name": "Devotional",
-            }
-          }
+          needsOffscreenAlphaCompositing={false}
+          pointerEvents="box-none"
           style={
             Object {
-              "backgroundColor": "#303030",
-              "borderRadius": 16,
-              "height": 240,
-              "margin": 8,
-              "marginBottom": 12,
-              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-              "shadowOffset": Object {
-                "height": 2,
-                "width": 0,
-              },
-              "shadowOpacity": 1,
-              "shadowRadius": 8,
-              "width": 240,
+              "flex": 1,
             }
           }
-          summary="bla bla bla"
-          videos={Array []}
         >
           <View
+            collapsable={false}
+            forwardedRef={[Function]}
+            onGestureHandlerEvent={[Function]}
+            onGestureHandlerStateChange={[Function]}
             style={
               Object {
-                "borderRadius": 16,
-                "overflow": "hidden",
+                "flex": 1,
+                "transform": Array [
+                  Object {
+                    "translateX": 0,
+                  },
+                  Object {
+                    "translateX": 0,
+                  },
+                ],
               }
             }
           >
             <View
+              pointerEvents="none"
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
-                  "overflow": "hidden",
-                  "width": "100%",
+                  "backgroundColor": "rgb(242, 242, 242)",
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "shadowColor": "#000",
+                  "shadowOffset": Object {
+                    "height": 1,
+                    "width": -1,
+                  },
+                  "shadowOpacity": 0.3,
+                  "shadowRadius": 5,
+                  "top": 0,
+                  "width": 3,
                 }
               }
-            >
-              <RCTImageView
-                disabled={false}
-                fadeDuration={250}
-                isLoading={false}
-                onLoad={[Function]}
-                resizeMode="cover"
-                source={
-                  Array [
-                    Object {
-                      "__typename": "ImageMediaSource",
-                      "cache": "force-cache",
-                      "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
-                    },
-                  ]
-                }
-                style={
-                  Object {
-                    "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
-                    "resizeMode": "cover",
-                    "width": "100%",
-                  }
-                }
-              />
-              <BVLinearGradient
-                colors={
-                  Array [
-                    1711276032,
-                    2147483648,
-                  ]
-                }
-                endPoint={
-                  Object {
-                    "x": 0,
-                    "y": 1,
-                  }
-                }
-                locations={
-                  Array [
-                    0,
-                    1,
-                  ]
-                }
-                overlayColor="#000000"
-                overlayType="gradient-bottom"
-                startPoint={
-                  Object {
-                    "x": 0,
-                    "y": 0,
-                  }
-                }
-                style={
-                  Object {
-                    "bottom": 0,
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  }
-                }
-              />
-            </View>
+            />
             <View
               style={
-                Object {
-                  "alignItems": "flex-start",
-                  "bottom": 0,
-                  "paddingBottom": 24,
-                  "paddingHorizontal": 16,
-                  "paddingVertical": 16,
-                  "position": "absolute",
-                  "width": "100%",
-                }
+                Array [
+                  Object {
+                    "flex": 1,
+                    "overflow": "hidden",
+                  },
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(242, 242, 242)",
+                    },
+                    undefined,
+                  ],
+                ]
               }
             >
               <View
                 style={
                   Object {
-                    "alignItems": "flex-end",
-                    "flexDirection": "row",
-                    "paddingTop": 16,
+                    "flex": 1,
+                    "flexDirection": "column-reverse",
                   }
                 }
               >
                 <View
-                  hasAction={false}
                   style={
                     Object {
                       "flex": 1,
                     }
                   }
                 >
-                  <Text
-                    numberOfLines={4}
-                    style={
+                  <RCTScrollView
+                    collapsable={false}
+                    contentContainerStyle={
                       Object {
-                        "color": "#F8F7F4",
-                        "fontFamily": "InterUI-Black",
-                        "fontSize": 24,
-                        "lineHeight": 27.6,
+                        "padding": 8,
+                        "paddingBottom": 0,
                       }
                     }
-                  >
-                    Thank God for the friends who will tell it like it is
-                  </Text>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-      </View>
-    </View>
-    <View
-      style={
-        Array [
-          Object {
-            "flexDirection": "row",
-          },
-          null,
-        ]
-      }
-    >
-      <View
-        accessible={true}
-        clickable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "transform": Array [
-              Object {
-                "scale": 1,
-              },
-            ],
-          }
-        }
-      >
-        <View
-          __typename="DevotionalContentItem"
-          disabled={false}
-          id="DevotionalContentItem:5e18250f586ab8de4d3d6292c919dcc4"
-          inHorizontalList={true}
-          isLive={false}
-          isLoading={false}
-          parentChannel={
-            Object {
-              "__typename": "ContentChannel",
-              "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
-              "name": "Devotional",
-            }
-          }
-          style={
-            Object {
-              "backgroundColor": "#303030",
-              "borderRadius": 16,
-              "height": 240,
-              "margin": 8,
-              "marginBottom": 12,
-              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-              "shadowOffset": Object {
-                "height": 2,
-                "width": 0,
-              },
-              "shadowOpacity": 1,
-              "shadowRadius": 8,
-              "width": 240,
-            }
-          }
-          summary="bla bla bla"
-          videos={Array []}
-        >
-          <View
-            style={
-              Object {
-                "borderRadius": 16,
-                "overflow": "hidden",
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "overflow": "hidden",
-                  "width": "100%",
-                }
-              }
-            >
-              <RCTImageView
-                disabled={false}
-                fadeDuration={250}
-                isLoading={false}
-                onLoad={[Function]}
-                resizeMode="cover"
-                source={
-                  Array [
-                    Object {
-                      "__typename": "ImageMediaSource",
-                      "cache": "force-cache",
-                      "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
-                    },
-                  ]
-                }
-                style={
-                  Object {
-                    "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
-                    "resizeMode": "cover",
-                    "width": "100%",
-                  }
-                }
-              />
-              <BVLinearGradient
-                colors={
-                  Array [
-                    1711276032,
-                    2147483648,
-                  ]
-                }
-                endPoint={
-                  Object {
-                    "x": 0,
-                    "y": 1,
-                  }
-                }
-                locations={
-                  Array [
-                    0,
-                    1,
-                  ]
-                }
-                overlayColor="#000000"
-                overlayType="gradient-bottom"
-                startPoint={
-                  Object {
-                    "x": 0,
-                    "y": 0,
-                  }
-                }
-                style={
-                  Object {
-                    "bottom": 0,
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  }
-                }
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "alignItems": "flex-start",
-                  "bottom": 0,
-                  "paddingBottom": 24,
-                  "paddingHorizontal": 16,
-                  "paddingVertical": 16,
-                  "position": "absolute",
-                  "width": "100%",
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "flexDirection": "row",
-                    "paddingTop": 16,
-                  }
-                }
-              >
-                <View
-                  hasAction={false}
-                  style={
-                    Object {
-                      "flex": 1,
+                    data={
+                      Array [
+                        Object {
+                          "__typename": "DevotionalContentItem",
+                          "coverImage": Object {
+                            "__typename": "ImageMedia",
+                            "sources": Array [
+                              Object {
+                                "__typename": "ImageMediaSource",
+                                "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                              },
+                            ],
+                          },
+                          "hyphenatedTitle": "God sees who you can be not who you are",
+                          "id": "DevotionalContentItem:d395278cd4b68e074ca4e595c8feab6d",
+                          "parentChannel": Object {
+                            "__typename": "ContentChannel",
+                            "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
+                            "name": "Devotional",
+                          },
+                          "summary": "bla bla bla",
+                          "theme": null,
+                          "title": "God sees who you can be not who you are",
+                        },
+                        Object {
+                          "__typename": "DevotionalContentItem",
+                          "coverImage": Object {
+                            "__typename": "ImageMedia",
+                            "sources": Array [
+                              Object {
+                                "__typename": "ImageMediaSource",
+                                "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                              },
+                            ],
+                          },
+                          "hyphenatedTitle": "Thank God for the friends who will tell it like it is",
+                          "id": "DevotionalContentItem:fbea6914a3e8877516cbd333d919075d",
+                          "parentChannel": Object {
+                            "__typename": "ContentChannel",
+                            "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
+                            "name": "Devotional",
+                          },
+                          "summary": "bla bla bla",
+                          "theme": null,
+                          "title": "Thank God for the friends who will tell it like it is",
+                        },
+                        Object {
+                          "__typename": "DevotionalContentItem",
+                          "coverImage": Object {
+                            "__typename": "ImageMedia",
+                            "sources": Array [
+                              Object {
+                                "__typename": "ImageMediaSource",
+                                "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                              },
+                            ],
+                          },
+                          "hyphenatedTitle": "No sin is too bad",
+                          "id": "DevotionalContentItem:5e18250f586ab8de4d3d6292c919dcc4",
+                          "parentChannel": Object {
+                            "__typename": "ContentChannel",
+                            "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
+                            "name": "Devotional",
+                          },
+                          "summary": "bla bla bla",
+                          "theme": null,
+                          "title": "No sin is too bad",
+                        },
+                        Object {
+                          "__typename": "DevotionalContentItem",
+                          "coverImage": Object {
+                            "__typename": "ImageMedia",
+                            "sources": Array [
+                              Object {
+                                "__typename": "ImageMediaSource",
+                                "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                              },
+                            ],
+                          },
+                          "hyphenatedTitle": "Change starts with a choice",
+                          "id": "DevotionalContentItem:bdc2c29b85949e4ca8232b373a07953d",
+                          "parentChannel": Object {
+                            "__typename": "ContentChannel",
+                            "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
+                            "name": "Devotional",
+                          },
+                          "summary": "bla bla bla",
+                          "theme": null,
+                          "title": "Change starts with a choice",
+                        },
+                      ]
                     }
-                  }
-                >
-                  <Text
-                    numberOfLines={4}
-                    style={
+                    decelerationRate="fast"
+                    disableVirtualization={false}
+                    getItem={[Function]}
+                    getItemCount={[Function]}
+                    getItemLayout={[Function]}
+                    horizontal={true}
+                    initialNumToRender={10}
+                    initialScrollIndex={0}
+                    keyExtractor={[Function]}
+                    loadingStateObject={
                       Object {
-                        "color": "#F8F7F4",
-                        "fontFamily": "InterUI-Black",
-                        "fontSize": 24,
-                        "lineHeight": 27.6,
+                        "node": Object {
+                          "__typename": "MediaContentItem",
+                          "coverImage": "",
+                          "id": "fakeId0",
+                          "isLoading": true,
+                          "parentChannel": Object {
+                            "name": "",
+                          },
+                          "title": "",
+                        },
                       }
                     }
+                    maxToRenderPerBatch={10}
+                    onContentSizeChange={[Function]}
+                    onEndReached={[Function]}
+                    onEndReachedThreshold={2}
+                    onGestureHandlerEvent={[Function]}
+                    onGestureHandlerStateChange={[Function]}
+                    onLayout={[Function]}
+                    onMomentumScrollEnd={[Function]}
+                    onScroll={[Function]}
+                    onScrollBeginDrag={[Function]}
+                    onScrollEndDrag={[Function]}
+                    refreshing={false}
+                    removeClippedSubviews={false}
+                    renderItem={[Function]}
+                    renderScrollComponent={[Function]}
+                    scrollEventThrottle={50}
+                    showsHorizontalScrollIndicator={false}
+                    snapToAlignment="start"
+                    snapToInterval={256}
+                    stickyHeaderIndices={Array []}
+                    updateCellsBatchingPeriod={50}
+                    viewabilityConfigCallbackPairs={Array []}
+                    windowSize={21}
                   >
-                    No sin is too bad
-                  </Text>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-      </View>
-    </View>
-    <View
-      style={
-        Array [
-          Object {
-            "flexDirection": "row",
-          },
-          null,
-        ]
-      }
-    >
-      <View
-        accessible={true}
-        clickable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "transform": Array [
-              Object {
-                "scale": 1,
-              },
-            ],
-          }
-        }
-      >
-        <View
-          __typename="DevotionalContentItem"
-          disabled={false}
-          id="DevotionalContentItem:bdc2c29b85949e4ca8232b373a07953d"
-          inHorizontalList={true}
-          isLive={false}
-          isLoading={false}
-          parentChannel={
-            Object {
-              "__typename": "ContentChannel",
-              "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
-              "name": "Devotional",
-            }
-          }
-          style={
-            Object {
-              "backgroundColor": "#303030",
-              "borderRadius": 16,
-              "height": 240,
-              "margin": 8,
-              "marginBottom": 12,
-              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-              "shadowOffset": Object {
-                "height": 2,
-                "width": 0,
-              },
-              "shadowOpacity": 1,
-              "shadowRadius": 8,
-              "width": 240,
-            }
-          }
-          summary="bla bla bla"
-          videos={Array []}
-        >
-          <View
-            style={
-              Object {
-                "borderRadius": 16,
-                "overflow": "hidden",
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "overflow": "hidden",
-                  "width": "100%",
-                }
-              }
-            >
-              <RCTImageView
-                disabled={false}
-                fadeDuration={250}
-                isLoading={false}
-                onLoad={[Function]}
-                resizeMode="cover"
-                source={
-                  Array [
-                    Object {
-                      "__typename": "ImageMediaSource",
-                      "cache": "force-cache",
-                      "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
-                    },
-                  ]
-                }
-                style={
-                  Object {
-                    "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
-                    "resizeMode": "cover",
-                    "width": "100%",
-                  }
-                }
-              />
-              <BVLinearGradient
-                colors={
-                  Array [
-                    1711276032,
-                    2147483648,
-                  ]
-                }
-                endPoint={
-                  Object {
-                    "x": 0,
-                    "y": 1,
-                  }
-                }
-                locations={
-                  Array [
-                    0,
-                    1,
-                  ]
-                }
-                overlayColor="#000000"
-                overlayType="gradient-bottom"
-                startPoint={
-                  Object {
-                    "x": 0,
-                    "y": 0,
-                  }
-                }
-                style={
-                  Object {
-                    "bottom": 0,
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  }
-                }
-              />
-            </View>
-            <View
-              style={
-                Object {
-                  "alignItems": "flex-start",
-                  "bottom": 0,
-                  "paddingBottom": 24,
-                  "paddingHorizontal": 16,
-                  "paddingVertical": 16,
-                  "position": "absolute",
-                  "width": "100%",
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "flexDirection": "row",
-                    "paddingTop": 16,
-                  }
-                }
-              >
-                <View
-                  hasAction={false}
-                  style={
-                    Object {
-                      "flex": 1,
-                    }
-                  }
-                >
-                  <Text
-                    numberOfLines={4}
-                    style={
-                      Object {
-                        "color": "#F8F7F4",
-                        "fontFamily": "InterUI-Black",
-                        "fontSize": 24,
-                        "lineHeight": 27.6,
-                      }
-                    }
-                  >
-                    Change starts with a choice
-                  </Text>
+                    <View>
+                      <View
+                        style={
+                          Array [
+                            Object {
+                              "flexDirection": "row",
+                            },
+                            null,
+                          ]
+                        }
+                      >
+                        <View
+                          accessible={true}
+                          focusable={true}
+                          onClick={[Function]}
+                          onResponderGrant={[Function]}
+                          onResponderMove={[Function]}
+                          onResponderRelease={[Function]}
+                          onResponderTerminate={[Function]}
+                          onResponderTerminationRequest={[Function]}
+                          onStartShouldSetResponder={[Function]}
+                          style={
+                            Object {
+                              "transform": Array [
+                                Object {
+                                  "scale": 1,
+                                },
+                              ],
+                            }
+                          }
+                        >
+                          <View
+                            __typename="DevotionalContentItem"
+                            disabled={false}
+                            id="DevotionalContentItem:d395278cd4b68e074ca4e595c8feab6d"
+                            inHorizontalList={true}
+                            isLive={false}
+                            isLoading={false}
+                            parentChannel={
+                              Object {
+                                "__typename": "ContentChannel",
+                                "iconName": "text",
+                                "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
+                                "name": "Devotional",
+                              }
+                            }
+                            sharing={
+                              Object {
+                                "__typename": "SharableContentItem",
+                                "message": "God sees who you can be not who you are - Life is challenging enough.",
+                                "title": "Share via ...",
+                                "url": "https://apollosrock.newspring.cc/devotional/god-sees-who-you-can-be-not-who-you-are",
+                              }
+                            }
+                            style={
+                              Object {
+                                "backgroundColor": "#303030",
+                                "borderRadius": 16,
+                                "height": 240,
+                                "margin": 8,
+                                "marginBottom": 12,
+                                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                                "shadowOffset": Object {
+                                  "height": 2,
+                                  "width": 0,
+                                },
+                                "shadowOpacity": 1,
+                                "shadowRadius": 8,
+                                "width": 240,
+                              }
+                            }
+                            summary="bla bla bla"
+                            videos={Array []}
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "borderRadius": 16,
+                                  "overflow": "hidden",
+                                }
+                              }
+                            >
+                              <View
+                                style={
+                                  Object {
+                                    "backgroundColor": "#A5A5A5",
+                                    "overflow": "hidden",
+                                    "width": "100%",
+                                  }
+                                }
+                              >
+                                <Image
+                                  disabled={false}
+                                  fadeDuration={250}
+                                  isLoading={false}
+                                  onLoad={[Function]}
+                                  source={
+                                    Array [
+                                      Object {
+                                        "__typename": "ImageMediaSource",
+                                        "cache": "force-cache",
+                                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                                      },
+                                    ]
+                                  }
+                                  style={
+                                    Object {
+                                      "aspectRatio": 1,
+                                      "backgroundColor": "#A5A5A5",
+                                      "resizeMode": "cover",
+                                      "width": "100%",
+                                    }
+                                  }
+                                />
+                                <BVLinearGradient
+                                  colors={
+                                    Array [
+                                      1711276032,
+                                      2147483648,
+                                    ]
+                                  }
+                                  endPoint={
+                                    Object {
+                                      "x": 0,
+                                      "y": 1,
+                                    }
+                                  }
+                                  locations={
+                                    Array [
+                                      0,
+                                      1,
+                                    ]
+                                  }
+                                  overlayColor="#000000"
+                                  overlayType="gradient-bottom"
+                                  startPoint={
+                                    Object {
+                                      "x": 0,
+                                      "y": 0,
+                                    }
+                                  }
+                                  style={
+                                    Object {
+                                      "bottom": 0,
+                                      "left": 0,
+                                      "position": "absolute",
+                                      "right": 0,
+                                      "top": 0,
+                                    }
+                                  }
+                                />
+                              </View>
+                              <View
+                                style={
+                                  Object {
+                                    "alignItems": "flex-start",
+                                    "bottom": 0,
+                                    "paddingBottom": 24,
+                                    "paddingHorizontal": 16,
+                                    "paddingVertical": 16,
+                                    "position": "absolute",
+                                    "width": "100%",
+                                  }
+                                }
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "alignItems": "flex-end",
+                                      "flexDirection": "row",
+                                      "paddingTop": 16,
+                                    }
+                                  }
+                                >
+                                  <View
+                                    hasAction={false}
+                                    style={
+                                      Object {
+                                        "flex": 1,
+                                      }
+                                    }
+                                  >
+                                    <Text
+                                      numberOfLines={4}
+                                      style={
+                                        Object {
+                                          "color": "#F8F7F4",
+                                          "fontFamily": "InterUI-Black",
+                                          "fontSize": 24,
+                                          "lineHeight": 27.6,
+                                        }
+                                      }
+                                    >
+                                      God sees who you can be not who you are
+                                    </Text>
+                                  </View>
+                                </View>
+                              </View>
+                            </View>
+                          </View>
+                        </View>
+                      </View>
+                      <View
+                        style={
+                          Array [
+                            Object {
+                              "flexDirection": "row",
+                            },
+                            null,
+                          ]
+                        }
+                      >
+                        <View
+                          accessible={true}
+                          focusable={true}
+                          onClick={[Function]}
+                          onResponderGrant={[Function]}
+                          onResponderMove={[Function]}
+                          onResponderRelease={[Function]}
+                          onResponderTerminate={[Function]}
+                          onResponderTerminationRequest={[Function]}
+                          onStartShouldSetResponder={[Function]}
+                          style={
+                            Object {
+                              "transform": Array [
+                                Object {
+                                  "scale": 1,
+                                },
+                              ],
+                            }
+                          }
+                        >
+                          <View
+                            __typename="DevotionalContentItem"
+                            disabled={false}
+                            id="DevotionalContentItem:fbea6914a3e8877516cbd333d919075d"
+                            inHorizontalList={true}
+                            isLive={false}
+                            isLoading={false}
+                            parentChannel={
+                              Object {
+                                "__typename": "ContentChannel",
+                                "iconName": "text",
+                                "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
+                                "name": "Devotional",
+                              }
+                            }
+                            sharing={
+                              Object {
+                                "__typename": "SharableContentItem",
+                                "message": "Thank God for the friends who will tell it like it is - Some of us grew up in a sanitized church.",
+                                "title": "Share via ...",
+                                "url": "https://apollosrock.newspring.cc/devotional/thank-god-for-the-friends-who-will-tell-it-like-it-is",
+                              }
+                            }
+                            style={
+                              Object {
+                                "backgroundColor": "#303030",
+                                "borderRadius": 16,
+                                "height": 240,
+                                "margin": 8,
+                                "marginBottom": 12,
+                                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                                "shadowOffset": Object {
+                                  "height": 2,
+                                  "width": 0,
+                                },
+                                "shadowOpacity": 1,
+                                "shadowRadius": 8,
+                                "width": 240,
+                              }
+                            }
+                            summary="bla bla bla"
+                            videos={Array []}
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "borderRadius": 16,
+                                  "overflow": "hidden",
+                                }
+                              }
+                            >
+                              <View
+                                style={
+                                  Object {
+                                    "backgroundColor": "#A5A5A5",
+                                    "overflow": "hidden",
+                                    "width": "100%",
+                                  }
+                                }
+                              >
+                                <Image
+                                  disabled={false}
+                                  fadeDuration={250}
+                                  isLoading={false}
+                                  onLoad={[Function]}
+                                  source={
+                                    Array [
+                                      Object {
+                                        "__typename": "ImageMediaSource",
+                                        "cache": "force-cache",
+                                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                                      },
+                                    ]
+                                  }
+                                  style={
+                                    Object {
+                                      "aspectRatio": 1,
+                                      "backgroundColor": "#A5A5A5",
+                                      "resizeMode": "cover",
+                                      "width": "100%",
+                                    }
+                                  }
+                                />
+                                <BVLinearGradient
+                                  colors={
+                                    Array [
+                                      1711276032,
+                                      2147483648,
+                                    ]
+                                  }
+                                  endPoint={
+                                    Object {
+                                      "x": 0,
+                                      "y": 1,
+                                    }
+                                  }
+                                  locations={
+                                    Array [
+                                      0,
+                                      1,
+                                    ]
+                                  }
+                                  overlayColor="#000000"
+                                  overlayType="gradient-bottom"
+                                  startPoint={
+                                    Object {
+                                      "x": 0,
+                                      "y": 0,
+                                    }
+                                  }
+                                  style={
+                                    Object {
+                                      "bottom": 0,
+                                      "left": 0,
+                                      "position": "absolute",
+                                      "right": 0,
+                                      "top": 0,
+                                    }
+                                  }
+                                />
+                              </View>
+                              <View
+                                style={
+                                  Object {
+                                    "alignItems": "flex-start",
+                                    "bottom": 0,
+                                    "paddingBottom": 24,
+                                    "paddingHorizontal": 16,
+                                    "paddingVertical": 16,
+                                    "position": "absolute",
+                                    "width": "100%",
+                                  }
+                                }
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "alignItems": "flex-end",
+                                      "flexDirection": "row",
+                                      "paddingTop": 16,
+                                    }
+                                  }
+                                >
+                                  <View
+                                    hasAction={false}
+                                    style={
+                                      Object {
+                                        "flex": 1,
+                                      }
+                                    }
+                                  >
+                                    <Text
+                                      numberOfLines={4}
+                                      style={
+                                        Object {
+                                          "color": "#F8F7F4",
+                                          "fontFamily": "InterUI-Black",
+                                          "fontSize": 24,
+                                          "lineHeight": 27.6,
+                                        }
+                                      }
+                                    >
+                                      Thank God for the friends who will tell it like it is
+                                    </Text>
+                                  </View>
+                                </View>
+                              </View>
+                            </View>
+                          </View>
+                        </View>
+                      </View>
+                      <View
+                        style={
+                          Array [
+                            Object {
+                              "flexDirection": "row",
+                            },
+                            null,
+                          ]
+                        }
+                      >
+                        <View
+                          accessible={true}
+                          focusable={true}
+                          onClick={[Function]}
+                          onResponderGrant={[Function]}
+                          onResponderMove={[Function]}
+                          onResponderRelease={[Function]}
+                          onResponderTerminate={[Function]}
+                          onResponderTerminationRequest={[Function]}
+                          onStartShouldSetResponder={[Function]}
+                          style={
+                            Object {
+                              "transform": Array [
+                                Object {
+                                  "scale": 1,
+                                },
+                              ],
+                            }
+                          }
+                        >
+                          <View
+                            __typename="DevotionalContentItem"
+                            disabled={false}
+                            id="DevotionalContentItem:5e18250f586ab8de4d3d6292c919dcc4"
+                            inHorizontalList={true}
+                            isLive={false}
+                            isLoading={false}
+                            parentChannel={
+                              Object {
+                                "__typename": "ContentChannel",
+                                "iconName": "text",
+                                "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
+                                "name": "Devotional",
+                              }
+                            }
+                            sharing={
+                              Object {
+                                "__typename": "SharableContentItem",
+                                "message": "No sin is too bad - In Jeremiah 3, God’s people had really messed up.",
+                                "title": "Share via ...",
+                                "url": "https://apollosrock.newspring.cc/devotional/no-sin-is-too-bad",
+                              }
+                            }
+                            style={
+                              Object {
+                                "backgroundColor": "#303030",
+                                "borderRadius": 16,
+                                "height": 240,
+                                "margin": 8,
+                                "marginBottom": 12,
+                                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                                "shadowOffset": Object {
+                                  "height": 2,
+                                  "width": 0,
+                                },
+                                "shadowOpacity": 1,
+                                "shadowRadius": 8,
+                                "width": 240,
+                              }
+                            }
+                            summary="bla bla bla"
+                            videos={Array []}
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "borderRadius": 16,
+                                  "overflow": "hidden",
+                                }
+                              }
+                            >
+                              <View
+                                style={
+                                  Object {
+                                    "backgroundColor": "#A5A5A5",
+                                    "overflow": "hidden",
+                                    "width": "100%",
+                                  }
+                                }
+                              >
+                                <Image
+                                  disabled={false}
+                                  fadeDuration={250}
+                                  isLoading={false}
+                                  onLoad={[Function]}
+                                  source={
+                                    Array [
+                                      Object {
+                                        "__typename": "ImageMediaSource",
+                                        "cache": "force-cache",
+                                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                                      },
+                                    ]
+                                  }
+                                  style={
+                                    Object {
+                                      "aspectRatio": 1,
+                                      "backgroundColor": "#A5A5A5",
+                                      "resizeMode": "cover",
+                                      "width": "100%",
+                                    }
+                                  }
+                                />
+                                <BVLinearGradient
+                                  colors={
+                                    Array [
+                                      1711276032,
+                                      2147483648,
+                                    ]
+                                  }
+                                  endPoint={
+                                    Object {
+                                      "x": 0,
+                                      "y": 1,
+                                    }
+                                  }
+                                  locations={
+                                    Array [
+                                      0,
+                                      1,
+                                    ]
+                                  }
+                                  overlayColor="#000000"
+                                  overlayType="gradient-bottom"
+                                  startPoint={
+                                    Object {
+                                      "x": 0,
+                                      "y": 0,
+                                    }
+                                  }
+                                  style={
+                                    Object {
+                                      "bottom": 0,
+                                      "left": 0,
+                                      "position": "absolute",
+                                      "right": 0,
+                                      "top": 0,
+                                    }
+                                  }
+                                />
+                              </View>
+                              <View
+                                style={
+                                  Object {
+                                    "alignItems": "flex-start",
+                                    "bottom": 0,
+                                    "paddingBottom": 24,
+                                    "paddingHorizontal": 16,
+                                    "paddingVertical": 16,
+                                    "position": "absolute",
+                                    "width": "100%",
+                                  }
+                                }
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "alignItems": "flex-end",
+                                      "flexDirection": "row",
+                                      "paddingTop": 16,
+                                    }
+                                  }
+                                >
+                                  <View
+                                    hasAction={false}
+                                    style={
+                                      Object {
+                                        "flex": 1,
+                                      }
+                                    }
+                                  >
+                                    <Text
+                                      numberOfLines={4}
+                                      style={
+                                        Object {
+                                          "color": "#F8F7F4",
+                                          "fontFamily": "InterUI-Black",
+                                          "fontSize": 24,
+                                          "lineHeight": 27.6,
+                                        }
+                                      }
+                                    >
+                                      No sin is too bad
+                                    </Text>
+                                  </View>
+                                </View>
+                              </View>
+                            </View>
+                          </View>
+                        </View>
+                      </View>
+                      <View
+                        style={
+                          Array [
+                            Object {
+                              "flexDirection": "row",
+                            },
+                            null,
+                          ]
+                        }
+                      >
+                        <View
+                          accessible={true}
+                          focusable={true}
+                          onClick={[Function]}
+                          onResponderGrant={[Function]}
+                          onResponderMove={[Function]}
+                          onResponderRelease={[Function]}
+                          onResponderTerminate={[Function]}
+                          onResponderTerminationRequest={[Function]}
+                          onStartShouldSetResponder={[Function]}
+                          style={
+                            Object {
+                              "transform": Array [
+                                Object {
+                                  "scale": 1,
+                                },
+                              ],
+                            }
+                          }
+                        >
+                          <View
+                            __typename="DevotionalContentItem"
+                            disabled={false}
+                            id="DevotionalContentItem:bdc2c29b85949e4ca8232b373a07953d"
+                            inHorizontalList={true}
+                            isLive={false}
+                            isLoading={false}
+                            parentChannel={
+                              Object {
+                                "__typename": "ContentChannel",
+                                "iconName": "text",
+                                "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
+                                "name": "Devotional",
+                              }
+                            }
+                            sharing={
+                              Object {
+                                "__typename": "SharableContentItem",
+                                "message": "Change starts with a choice - Have you ever restored an old piece of furniture?",
+                                "title": "Share via ...",
+                                "url": "https://apollosrock.newspring.cc/devotional/change-starts-with-a-choice",
+                              }
+                            }
+                            style={
+                              Object {
+                                "backgroundColor": "#303030",
+                                "borderRadius": 16,
+                                "height": 240,
+                                "margin": 8,
+                                "marginBottom": 12,
+                                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                                "shadowOffset": Object {
+                                  "height": 2,
+                                  "width": 0,
+                                },
+                                "shadowOpacity": 1,
+                                "shadowRadius": 8,
+                                "width": 240,
+                              }
+                            }
+                            summary="bla bla bla"
+                            videos={Array []}
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "borderRadius": 16,
+                                  "overflow": "hidden",
+                                }
+                              }
+                            >
+                              <View
+                                style={
+                                  Object {
+                                    "backgroundColor": "#A5A5A5",
+                                    "overflow": "hidden",
+                                    "width": "100%",
+                                  }
+                                }
+                              >
+                                <Image
+                                  disabled={false}
+                                  fadeDuration={250}
+                                  isLoading={false}
+                                  onLoad={[Function]}
+                                  source={
+                                    Array [
+                                      Object {
+                                        "__typename": "ImageMediaSource",
+                                        "cache": "force-cache",
+                                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                                      },
+                                    ]
+                                  }
+                                  style={
+                                    Object {
+                                      "aspectRatio": 1,
+                                      "backgroundColor": "#A5A5A5",
+                                      "resizeMode": "cover",
+                                      "width": "100%",
+                                    }
+                                  }
+                                />
+                                <BVLinearGradient
+                                  colors={
+                                    Array [
+                                      1711276032,
+                                      2147483648,
+                                    ]
+                                  }
+                                  endPoint={
+                                    Object {
+                                      "x": 0,
+                                      "y": 1,
+                                    }
+                                  }
+                                  locations={
+                                    Array [
+                                      0,
+                                      1,
+                                    ]
+                                  }
+                                  overlayColor="#000000"
+                                  overlayType="gradient-bottom"
+                                  startPoint={
+                                    Object {
+                                      "x": 0,
+                                      "y": 0,
+                                    }
+                                  }
+                                  style={
+                                    Object {
+                                      "bottom": 0,
+                                      "left": 0,
+                                      "position": "absolute",
+                                      "right": 0,
+                                      "top": 0,
+                                    }
+                                  }
+                                />
+                              </View>
+                              <View
+                                style={
+                                  Object {
+                                    "alignItems": "flex-start",
+                                    "bottom": 0,
+                                    "paddingBottom": 24,
+                                    "paddingHorizontal": 16,
+                                    "paddingVertical": 16,
+                                    "position": "absolute",
+                                    "width": "100%",
+                                  }
+                                }
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "alignItems": "flex-end",
+                                      "flexDirection": "row",
+                                      "paddingTop": 16,
+                                    }
+                                  }
+                                >
+                                  <View
+                                    hasAction={false}
+                                    style={
+                                      Object {
+                                        "flex": 1,
+                                      }
+                                    }
+                                  >
+                                    <Text
+                                      numberOfLines={4}
+                                      style={
+                                        Object {
+                                          "color": "#F8F7F4",
+                                          "fontFamily": "InterUI-Black",
+                                          "fontSize": 24,
+                                          "lineHeight": 27.6,
+                                        }
+                                      }
+                                    >
+                                      Change starts with a choice
+                                    </Text>
+                                  </View>
+                                </View>
+                              </View>
+                            </View>
+                          </View>
+                        </View>
+                      </View>
+                    </View>
+                  </RCTScrollView>
                 </View>
               </View>
             </View>
@@ -931,5 +1236,5 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
       </View>
     </View>
   </View>
-</RCTScrollView>
+</View>
 `;

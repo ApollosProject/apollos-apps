@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
-import { Query, Mutation } from 'react-apollo';
+import { Query, Mutation } from '@apollo/client/react/components';
 
 import { AnalyticsConsumer } from '@apollosproject/ui-analytics';
 
@@ -15,7 +15,7 @@ const GetLikeData = ({ nodeId, children }) => (
   <Query query={GET_LIKED_NODE} variables={{ nodeId }}>
     {({ data: { node = {} } = {}, loading }) => {
       // We shouldn't render anything if the current node isn't likeable.
-      if (!loading && (node && node.isLiked == null)) return null;
+      if (!loading && node && node.isLiked == null) return null;
       const isLiked = loading ? false : get(node, 'isLiked') || false;
       // We pass down node as `item` for backwards compatibility.
       // TODO: deprecate item prop

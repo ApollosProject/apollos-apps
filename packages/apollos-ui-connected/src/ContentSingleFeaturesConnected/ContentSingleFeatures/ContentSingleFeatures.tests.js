@@ -1,7 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { Providers } from '../../testUtils';
+import { Providers } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 
 import ContentSingleFeatures from '.';
 
@@ -75,7 +76,7 @@ const mockFeaturesData = [
 describe('ContentSingleFeatures', () => {
   it('should render', async () => {
     const tree = renderer.create(
-      <Providers>
+      <Providers MockedProvider={MockedProvider}>
         <ContentSingleFeatures
           contentId={'WeekendContentItem:1'}
           features={mockFeaturesData}
@@ -87,7 +88,7 @@ describe('ContentSingleFeatures', () => {
   });
   it('should take a custom title', async () => {
     const tree = renderer.create(
-      <Providers>
+      <Providers MockedProvider={MockedProvider}>
         <ContentSingleFeatures
           contentId={'WeekendContentItem:1'}
           features={mockFeaturesData}
@@ -100,7 +101,7 @@ describe('ContentSingleFeatures', () => {
   });
   it('should render a loading state', async () => {
     const tree = renderer.create(
-      <Providers>
+      <Providers MockedProvider={MockedProvider}>
         <ContentSingleFeatures
           contentId={'WeekendContentItem:1'}
           features={mockFeaturesData}

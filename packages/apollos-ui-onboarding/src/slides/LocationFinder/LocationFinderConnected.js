@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Platform } from 'react-native';
 import PropTypes from 'prop-types';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 import { AnalyticsConsumer } from '@apollosproject/ui-analytics';
 import Geolocation from 'react-native-geolocation-service';
 import hasLocationPermission from './hasLocationPermission';

@@ -1,7 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { Providers, renderWithApolloData } from '../testUtils';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 
 import GET_ACTION_LIST_FEATURE from './getActionListFeature';
 import ActionListFeatureConnected from './index';
@@ -58,7 +59,7 @@ const mock = {
 describe('The ActionListFeatureConnected component', () => {
   it('should render', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={[mock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <ActionListFeatureConnected
           refetchRef={jest.fn()}
           featureId={'ActionListFeature:123'}
@@ -69,7 +70,7 @@ describe('The ActionListFeatureConnected component', () => {
   });
   it('should render a loading state when isLoading', async () => {
     const tree = renderer.create(
-      <Providers>
+      <Providers MockedProvider={MockedProvider}>
         <ActionListFeatureConnected
           refetchRef={jest.fn()}
           featureId={'ActionListFeature:123'}

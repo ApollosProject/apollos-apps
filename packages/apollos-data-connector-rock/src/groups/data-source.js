@@ -13,11 +13,7 @@ export default class Group extends RockApolloDataSource {
     Family: ROCK_MAPPINGS.FAMILY_GROUP_TYPE_ID,
   };
 
-  getFromId = ({ id }) =>
-    this.request()
-      .find(id)
-      .expand('Members')
-      .get();
+  getFromId = ({ id }) => this.request().find(id).expand('Members').get();
 
   getMembers = async (groupId) => {
     const { Person } = this.context.dataSources;

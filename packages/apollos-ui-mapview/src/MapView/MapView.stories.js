@@ -52,7 +52,6 @@ const initialRegion = {
 };
 
 const navigation = {
-  getParam: () => {},
   navigate: () => {},
   goBack: () => {},
 };

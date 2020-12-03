@@ -1,7 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { Providers, renderWithApolloData } from '../testUtils';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 
 import GET_VERTICAL_CARD_LIST_FEATURE from './getVerticalCardListFeature';
 import VerticalCardListFeatureConnected from './index';
@@ -15,14 +16,14 @@ const mock = {
     data: {
       node: {
         id: 'VerticalCardListFeature:123',
-        __typename: 'ActionListFeature',
+        __typename: 'VerticalCardListFeature',
         title: '',
         subtitle: 'Check it out',
         isFeatured: false,
         cards: [
           {
-            __typename: 'ActionListCard',
-            id: 'ActionListCard:123',
+            __typename: 'CardListItem',
+            id: 'CardListItem:123',
             title: 'Boom',
             hyphenatedTitle: 'Boom',
             hasAction: false,
@@ -65,7 +66,7 @@ const noCardsMock = {
 describe('The VerticalCardListFeatureConnected component', () => {
   it('should render', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={[mock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <VerticalCardListFeatureConnected
           featureId={'VerticalCardListFeature:123'}
           refetchRef={jest.fn()}
@@ -76,7 +77,7 @@ describe('The VerticalCardListFeatureConnected component', () => {
   });
   it('should not render without cards', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={[noCardsMock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[noCardsMock]}>
         <VerticalCardListFeatureConnected
           featureId={'VerticalCardListFeature:123'}
           refetchRef={jest.fn()}
@@ -88,7 +89,7 @@ describe('The VerticalCardListFeatureConnected component', () => {
   it('should render as a featured card', async () => {
     mock.result.data.node.isFeatured = true;
     const tree = await renderWithApolloData(
-      <Providers mocks={[mock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <VerticalCardListFeatureConnected
           featureId={'VerticalCardListFeature:123'}
           refetchRef={jest.fn()}
@@ -101,7 +102,7 @@ describe('The VerticalCardListFeatureConnected component', () => {
   it('should not render as a featured card without cards', async () => {
     noCardsMock.result.data.node.isFeatured = true;
     const tree = await renderWithApolloData(
-      <Providers mocks={[noCardsMock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[noCardsMock]}>
         <VerticalCardListFeatureConnected
           featureId={'VerticalCardListFeature:123'}
           refetchRef={jest.fn()}
@@ -113,7 +114,7 @@ describe('The VerticalCardListFeatureConnected component', () => {
   });
   it('should render a loading state when isLoading', async () => {
     const tree = renderer.create(
-      <Providers>
+      <Providers MockedProvider={MockedProvider}>
         <VerticalCardListFeatureConnected
           featureId={'VerticalCardListFeature:123'}
           refetchRef={jest.fn()}
@@ -124,7 +125,7 @@ describe('The VerticalCardListFeatureConnected component', () => {
   });
   it('should render a featured loading state when isLoading', async () => {
     const tree = renderer.create(
-      <Providers>
+      <Providers MockedProvider={MockedProvider}>
         <VerticalCardListFeatureConnected
           featureId={'VerticalCardListFeature:123'}
           refetchRef={jest.fn()}

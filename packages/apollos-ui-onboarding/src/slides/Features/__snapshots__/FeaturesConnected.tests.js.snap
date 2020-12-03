@@ -15,13 +15,7 @@ exports[`The Onboarding FeaturesConnected component should render 1`] = `
   }
 >
   <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
+    <View
       style={
         Object {
           "marginBottom": 48,
@@ -64,7 +58,7 @@ exports[`The Onboarding FeaturesConnected component should render 1`] = `
           We'd like to help personalize your mobile experience so we can help you with every step on your journey.
         </Text>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>
 </RCTScrollView>
 `;
@@ -90,13 +84,7 @@ exports[`The Onboarding FeaturesConnected component should render with a firstNa
   }
 >
   <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
+    <View
       style={
         Object {
           "marginBottom": 48,
@@ -139,7 +127,7 @@ exports[`The Onboarding FeaturesConnected component should render with a firstNa
           We'd like to help personalize your mobile experience so we can help you with every step on your journey.
         </Text>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>
 </RCTScrollView>
 `;

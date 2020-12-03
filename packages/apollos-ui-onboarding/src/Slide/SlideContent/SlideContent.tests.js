@@ -2,7 +2,7 @@ import React from 'react';
 import { Text } from 'react-native';
 import renderer from 'react-test-renderer';
 
-import { Providers } from '../../testUtils';
+import { Providers } from '@apollosproject/ui-test-utils';
 
 import SlideContent from '.';
 

@@ -107,6 +107,7 @@ PrayerExperience.propTypes = {
   onFinish: PropTypes.func,
 };
 
-export default withTheme(() => ({}), 'ui-prayer.PrayerExperience')(
-  PrayerExperience
-);
+export default withTheme(
+  () => ({}),
+  'ui-prayer.PrayerExperience'
+)(PrayerExperience);

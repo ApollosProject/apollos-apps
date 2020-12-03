@@ -1,7 +1,13 @@
 import React from 'react';
-import { GET_CONTENT_CARD } from '@apollosproject/ui-connected';
 
-import { Providers, renderWithApolloData } from '../testUtils';
+import {
+  Providers,
+  renderWithApolloData,
+  WithReactNavigator,
+} from '@apollosproject/ui-test-utils';
+
+import { MockedProvider } from '@apollo/client/testing';
+import { GET_CONTENT_CARD } from '../ContentCardConnected';
 
 import GET_CONTENT_PARENT_CHILDREN from './getContentParentChildren';
 import ContentParentFeedConnected from './ContentParentFeedConnected';
@@ -206,20 +212,30 @@ const additionalMocks = mock.result.data.node.childContentItemsConnection.edges.
 describe('the ContentParentFeedConnected component', () => {
   it('should render', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={[mock, ...additionalMocks]}>
-        <ContentParentFeedConnected
-          nodeId={'ContentSeriesContentItem:123'}
-          navigation={navigation}
-        />
-      </Providers>
+      WithReactNavigator(
+        <Providers
+          MockedProvider={MockedProvider}
+          mocks={[mock, ...additionalMocks]}
+        >
+          <ContentParentFeedConnected
+            nodeId={'ContentSeriesContentItem:123'}
+            navigation={navigation}
+          />
+        </Providers>
+      )
     );
     const finalTree = await renderWithApolloData(
-      <Providers mocks={[mock, ...additionalMocks]}>
-        <ContentParentFeedConnected
-          nodeId={'ContentSeriesContentItem:123'}
-          navigation={navigation}
-        />
-      </Providers>,
+      WithReactNavigator(
+        <Providers
+          MockedProvider={MockedProvider}
+          mocks={[mock, ...additionalMocks]}
+        >
+          <ContentParentFeedConnected
+            nodeId={'ContentSeriesContentItem:123'}
+            navigation={navigation}
+          />
+        </Providers>
+      ),
       tree
     );
     expect(finalTree).toMatchSnapshot();

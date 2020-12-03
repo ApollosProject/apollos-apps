@@ -3,8 +3,7 @@
 exports[`LoginButton component renders a LoginButton that is loading 1`] = `
 <View
   accessible={true}
-  clickable={true}
-  isTVSelectable={true}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -52,8 +51,7 @@ exports[`LoginButton component renders a LoginButton that is loading 1`] = `
 exports[`LoginButton component renders a LoginButton when logged out 1`] = `
 <View
   accessible={true}
-  clickable={true}
-  isTVSelectable={true}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}

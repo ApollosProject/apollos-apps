@@ -88,6 +88,7 @@ ProfileDetailsEntry.LegalText = LegalText;
 
 ProfileDetailsEntry.displayName = 'ProfileDetailsEntry';
 
-export default withTheme(() => ({}), 'ui-auth.ProfileDetailsEntry')(
-  ProfileDetailsEntry
-);
+export default withTheme(
+  () => ({}),
+  'ui-auth.ProfileDetailsEntry'
+)(ProfileDetailsEntry);

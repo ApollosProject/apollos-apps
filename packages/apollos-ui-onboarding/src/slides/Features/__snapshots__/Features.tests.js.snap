@@ -16,13 +16,7 @@ Array [
     }
   >
     <View>
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
+      <View
         style={
           Object {
             "marginBottom": 48,
@@ -65,7 +59,7 @@ Array [
             We'd like to help personalize your mobile experience so we can help you with every step on your journey.
           </Text>
         </View>
-      </RCTSafeAreaView>
+      </View>
     </View>
   </RCTScrollView>,
   <View
@@ -85,19 +79,10 @@ Array [
     }
     vertical={false}
   >
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-          "top": "never",
-        }
-      }
-    >
+    <View>
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -264,7 +249,7 @@ Array [
           </RNSVGSvgView>
         </View>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>,
 ]
 `;
@@ -284,13 +269,7 @@ exports[`The Onboarding Features component should render 1`] = `
   }
 >
   <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
+    <View
       style={
         Object {
           "marginBottom": 48,
@@ -333,7 +312,7 @@ exports[`The Onboarding Features component should render 1`] = `
           We'd like to help personalize your mobile experience so we can help you with every step on your journey.
         </Text>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>
 </RCTScrollView>
 `;
@@ -384,13 +363,7 @@ exports[`The Onboarding Features component should render a BackgroundComponent 1
         }
       />
     </View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
+    <View
       style={
         Object {
           "marginBottom": 48,
@@ -433,7 +406,7 @@ exports[`The Onboarding Features component should render a BackgroundComponent 1
           We'd like to help personalize your mobile experience so we can help you with every step on your journey.
         </Text>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>
 </RCTScrollView>
 `;
@@ -453,13 +426,7 @@ exports[`The Onboarding Features component should render a custom description 1`
   }
 >
   <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
+    <View
       style={
         Object {
           "marginBottom": 48,
@@ -502,7 +469,7 @@ exports[`The Onboarding Features component should render a custom description 1`
           Custom description text
         </Text>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>
 </RCTScrollView>
 `;
@@ -522,13 +489,7 @@ exports[`The Onboarding Features component should render a custom first name 1`]
   }
 >
   <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
+    <View
       style={
         Object {
           "marginBottom": 48,
@@ -571,7 +532,7 @@ exports[`The Onboarding Features component should render a custom first name 1`]
           We'd like to help personalize your mobile experience so we can help you with every step on your journey.
         </Text>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>
 </RCTScrollView>
 `;
@@ -592,13 +553,7 @@ exports[`The Onboarding Features component should render a custom title 1`] = `
   }
 >
   <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
+    <View
       style={
         Object {
           "marginBottom": 48,
@@ -641,7 +596,7 @@ exports[`The Onboarding Features component should render a custom title 1`] = `
           We'd like to help personalize your mobile experience so we can help you with every step on your journey.
         </Text>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>
 </RCTScrollView>
 `;

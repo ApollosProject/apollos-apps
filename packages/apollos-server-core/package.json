@@ -10,6 +10,7 @@
   },
   "jest": {
     "collectCoverage": true,
+    "coverageReporters": ["json", "lcovonly", "clover"],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
     ],

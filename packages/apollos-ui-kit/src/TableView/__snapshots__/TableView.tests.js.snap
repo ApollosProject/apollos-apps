@@ -369,8 +369,7 @@ exports[`the TableView Component should render 1`] = `
             >
               <View
                 accessible={true}
-                clickable={true}
-                isTVSelectable={true}
+                focusable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -407,7 +406,7 @@ exports[`the TableView Component should render 1`] = `
               }
             >
               <RCTSwitch
-                accessibilityRole="button"
+                accessibilityRole="switch"
                 onChange={[Function]}
                 onResponderTerminationRequest={[Function]}
                 onStartShouldSetResponder={[Function]}

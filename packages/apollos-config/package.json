@@ -15,6 +15,7 @@
   },
   "jest": {
     "collectCoverage": true,
+    "coverageReporters": ["json", "lcovonly", "clover"],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
       "react-native/**/*.{js,jsx}"
@@ -26,9 +27,6 @@
     "testEnvironment": "node",
     "setupFiles": [
       "./jest.setup.js"
-    ],
-    "reporters": [
-      "<rootDir>/../../scripts/fingers-crossed-reporter.js"
     ]
   },
   "devDependencies": {

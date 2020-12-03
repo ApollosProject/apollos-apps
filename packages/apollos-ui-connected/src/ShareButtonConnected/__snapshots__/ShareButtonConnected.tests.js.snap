@@ -3,8 +3,7 @@
 exports[`the ShareButtonConnected renders a share button 1`] = `
 <View
   accessible={true}
-  clickable={true}
-  isTVSelectable={true}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -139,8 +138,7 @@ exports[`the ShareButtonConnected renders a share button 1`] = `
 exports[`the ShareButtonConnected renders a share button with custom url, and title 1`] = `
 <View
   accessible={true}
-  clickable={true}
-  isTVSelectable={true}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}

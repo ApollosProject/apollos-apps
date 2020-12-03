@@ -28,9 +28,7 @@ class RockConstants extends RockApolloDataSource {
       .join(' and ');
 
     // Look for objects matching that filter.
-    const object = await this.request(model)
-      .filter(filter)
-      .first();
+    const object = await this.request(model).filter(filter).first();
 
     // if we have one
     if (object) {
@@ -89,9 +87,7 @@ class RockConstants extends RockApolloDataSource {
       entityTypeName,
     });
     return this.createOrFindInteractionComponent({
-      componentName: `${
-        ROCK_MAPPINGS.INTERACTIONS.COMPONENT_NAME
-      } - ${entityId}`,
+      componentName: `${ROCK_MAPPINGS.INTERACTIONS.COMPONENT_NAME} - ${entityId}`,
       channelId: channel.id,
       entityId: parseInt(entityId, 10),
     });
@@ -99,9 +95,7 @@ class RockConstants extends RockApolloDataSource {
 
   async interactionChannel({ entityTypeId, entityTypeName }) {
     return this.createOrFindInteractionChannel({
-      channelName: `${
-        ROCK_MAPPINGS.INTERACTIONS.CHANNEL_NAME
-      } - ${entityTypeName}`,
+      channelName: `${ROCK_MAPPINGS.INTERACTIONS.CHANNEL_NAME} - ${entityTypeName}`,
       entityTypeId,
     });
   }

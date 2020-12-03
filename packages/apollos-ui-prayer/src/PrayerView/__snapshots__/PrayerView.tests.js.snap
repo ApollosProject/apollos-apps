@@ -33,8 +33,7 @@ exports[`The PrayerView component should accept an onPressPrimary function 1`] =
     }
   >
     <View>
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
+      <View
         style={
           Object {
             "flex": 1,
@@ -59,8 +58,7 @@ exports[`The PrayerView component should accept an onPressPrimary function 1`] =
         >
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -110,7 +108,7 @@ exports[`The PrayerView component should accept an onPressPrimary function 1`] =
             </View>
           </View>
         </View>
-      </RCTSafeAreaView>
+      </View>
     </View>
   </RCTScrollView>
 </View>
@@ -149,8 +147,7 @@ exports[`The PrayerView component should accept an onPressSecondary function 1`]
     }
   >
     <View>
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
+      <View
         style={
           Object {
             "flex": 1,
@@ -175,8 +172,7 @@ exports[`The PrayerView component should accept an onPressSecondary function 1`]
         >
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -259,7 +255,7 @@ exports[`The PrayerView component should accept an onPressSecondary function 1`]
             </Text>
           </View>
         </View>
-      </RCTSafeAreaView>
+      </View>
     </View>
   </RCTScrollView>
 </View>
@@ -298,8 +294,7 @@ exports[`The PrayerView component should render 1`] = `
     }
   >
     <View>
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
+      <View
         style={
           Object {
             "flex": 1,
@@ -357,7 +352,7 @@ exports[`The PrayerView component should render 1`] = `
             </Text>
           </View>
         </View>
-      </RCTSafeAreaView>
+      </View>
     </View>
   </RCTScrollView>
 </View>
@@ -396,8 +391,7 @@ exports[`The PrayerView component should render a loading state (isLoading) 1`] 
     }
   >
     <View>
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
+      <View
         style={
           Object {
             "flex": 1,
@@ -593,8 +587,7 @@ exports[`The PrayerView component should render a loading state (isLoading) 1`] 
                 </Text>
                 <View
                   accessible={true}
-                  clickable={true}
-                  isTVSelectable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -811,8 +804,7 @@ exports[`The PrayerView component should render a loading state (isLoading) 1`] 
         >
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -895,7 +887,7 @@ exports[`The PrayerView component should render a loading state (isLoading) 1`] 
             </Text>
           </View>
         </View>
-      </RCTSafeAreaView>
+      </View>
     </View>
   </RCTScrollView>
 </View>
@@ -934,8 +926,7 @@ exports[`The PrayerView component should render with children 1`] = `
     }
   >
     <View>
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
+      <View
         style={
           Object {
             "flex": 1,
@@ -997,7 +988,7 @@ exports[`The PrayerView component should render with children 1`] = `
             </Text>
           </View>
         </View>
-      </RCTSafeAreaView>
+      </View>
     </View>
   </RCTScrollView>
 </View>
@@ -1036,8 +1027,7 @@ exports[`The PrayerView component should render with custom primaryActionText 1`
     }
   >
     <View>
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
+      <View
         style={
           Object {
             "flex": 1,
@@ -1095,7 +1085,7 @@ exports[`The PrayerView component should render with custom primaryActionText 1`
             </Text>
           </View>
         </View>
-      </RCTSafeAreaView>
+      </View>
     </View>
   </RCTScrollView>
 </View>
@@ -1134,8 +1124,7 @@ exports[`The PrayerView component should render with custom secondaryActionText 
     }
   >
     <View>
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
+      <View
         style={
           Object {
             "flex": 1,
@@ -1193,7 +1182,7 @@ exports[`The PrayerView component should render with custom secondaryActionText 
             </Text>
           </View>
         </View>
-      </RCTSafeAreaView>
+      </View>
     </View>
   </RCTScrollView>
 </View>

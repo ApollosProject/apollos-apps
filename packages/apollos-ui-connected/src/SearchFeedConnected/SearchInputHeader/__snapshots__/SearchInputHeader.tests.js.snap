@@ -230,8 +230,7 @@ exports[`The Onboarding LandingScreen component should be stylable 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -625,8 +624,7 @@ exports[`The Onboarding LandingScreen component should render 1`] = `
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -1020,8 +1018,7 @@ exports[`The Onboarding LandingScreen component should render pass props to Sear
           >
             <View
               accessible={true}
-              clickable={true}
-              isTVSelectable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}

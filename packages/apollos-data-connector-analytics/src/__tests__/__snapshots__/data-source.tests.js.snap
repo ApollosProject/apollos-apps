@@ -97,7 +97,7 @@ exports[`Analytics Data Source must accept arbitrary interfaces 2`] = `
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
   ],
@@ -128,7 +128,7 @@ exports[`Analytics Data Source must accept arbitrary interfaces 4`] = `
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
   ],

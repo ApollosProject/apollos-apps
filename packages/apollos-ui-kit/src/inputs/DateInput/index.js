@@ -75,18 +75,14 @@ class DateInput extends PureComponent {
           date={
             this.props.value
               ? moment(this.props.value).toDate()
-              : moment(Date.now())
-                  .subtract(18, 'years')
-                  .toDate() // 18 years in the past, to ensure you don't have to change the year first on iOS
+              : moment(Date.now()).subtract(18, 'years').toDate() // 18 years in the past, to ensure you don't have to change the year first on iOS
           } // Using Date.now so we have something to mock in the tests
           datePickerModeAndroid={'spinner'}
           isVisible={this.state.isVisible}
           maximumDate={
             this.props.maximumDate
               ? moment(this.props.maximumDate).toDate()
-              : moment(Date.now())
-                  .subtract(16, 'years')
-                  .toDate() // sixteen year in the past to limit signups for 16 > year olds
+              : moment(Date.now()).subtract(16, 'years').toDate() // sixteen year in the past to limit signups for 16 > year olds
           } // Using Date.now so we have something to mock in the tests
           minimumDate={this.props.minimumDate}
           mode={'date'}

@@ -10,6 +10,7 @@
   },
   "jest": {
     "collectCoverage": true,
+    "coverageReporters": ["json", "lcovonly", "clover"],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
     ],
@@ -17,10 +18,7 @@
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
     ],
-    "testEnvironment": "node",
-    "reporters": [
-      "<rootDir>/../../scripts/fingers-crossed-reporter.js"
-    ]
+    "testEnvironment": "node"
   },
   "dependencies": {
     "@apollosproject/data-schema": "^1.7.0",

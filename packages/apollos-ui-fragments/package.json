@@ -19,8 +19,9 @@
   ],
   "jest": {
     "collectCoverage": true,
+    "coverageReporters": ["json", "lcovonly", "clover"],
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@apollosproject))"
+      "node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@apollosproject))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -36,7 +37,7 @@
     "graphql-tag": "2.9.2"
   },
   "devDependencies": {
-    "jest": "24.8.0",
+    "jest": "^25.1.0",
     "jest-react-native": "18.0.0"
   },
   "publishConfig": {

@@ -16,22 +16,8 @@ Array [
     }
   >
     <View>
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
-        forceInset={
-          Object {
-            "bottom": "always",
-            "top": "always",
-          }
-        }
-      >
-        <RCTSafeAreaView
-          emulateUnlessSupported={true}
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
+      <View>
+        <View
           style={
             Object {
               "marginBottom": 48,
@@ -530,8 +516,8 @@ Array [
               </View>
             </View>
           </View>
-        </RCTSafeAreaView>
-      </RCTSafeAreaView>
+        </View>
+      </View>
     </View>
   </RCTScrollView>,
   <View
@@ -551,19 +537,10 @@ Array [
     }
     vertical={false}
   >
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-          "top": "never",
-        }
-      }
-    >
+    <View>
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -730,7 +707,7 @@ Array [
           </RNSVGSvgView>
         </View>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>,
 ]
 `;
@@ -751,22 +728,8 @@ Array [
     }
   >
     <View>
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
-        forceInset={
-          Object {
-            "bottom": "always",
-            "top": "always",
-          }
-        }
-      >
-        <RCTSafeAreaView
-          emulateUnlessSupported={true}
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
+      <View>
+        <View
           style={
             Object {
               "marginBottom": 48,
@@ -1265,8 +1228,8 @@ Array [
               </View>
             </View>
           </View>
-        </RCTSafeAreaView>
-      </RCTSafeAreaView>
+        </View>
+      </View>
     </View>
   </RCTScrollView>,
   <View
@@ -1286,19 +1249,10 @@ Array [
     }
     vertical={false}
   >
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-          "top": "never",
-        }
-      }
-    >
+    <View>
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1355,7 +1309,7 @@ Array [
       >
         Skip
       </Text>
-    </RCTSafeAreaView>
+    </View>
   </View>,
 ]
 `;
@@ -1368,6 +1322,7 @@ Array [
         "minHeight": "100%",
       }
     }
+    loading={true}
     overScrollMode="auto"
     style={
       Object {
@@ -1376,22 +1331,8 @@ Array [
     }
   >
     <View>
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
-        forceInset={
-          Object {
-            "bottom": "always",
-            "top": "always",
-          }
-        }
-      >
-        <RCTSafeAreaView
-          emulateUnlessSupported={true}
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
+      <View>
+        <View
           style={
             Object {
               "marginBottom": 48,
@@ -1890,8 +1831,8 @@ Array [
               </View>
             </View>
           </View>
-        </RCTSafeAreaView>
-      </RCTSafeAreaView>
+        </View>
+      </View>
     </View>
   </RCTScrollView>,
   <View
@@ -1911,19 +1852,10 @@ Array [
     }
     vertical={false}
   >
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-          "top": "never",
-        }
-      }
-    >
+    <View>
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1980,7 +1912,7 @@ Array [
       >
         Skip
       </Text>
-    </RCTSafeAreaView>
+    </View>
   </View>,
 ]
 `;

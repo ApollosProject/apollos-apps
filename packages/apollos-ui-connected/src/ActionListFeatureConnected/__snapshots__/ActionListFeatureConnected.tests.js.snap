@@ -78,10 +78,9 @@ exports[`The ActionListFeatureConnected component should render 1`] = `
           }
         }
       >
-        <RCTImageView
+        <Image
           fadeDuration={250}
           onLoad={[Function]}
-          resizeMode="cover"
           source={
             Array [
               Object {
@@ -97,7 +96,6 @@ exports[`The ActionListFeatureConnected component should render 1`] = `
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
-              "overflow": "hidden",
               "width": 64,
             }
           }
@@ -143,8 +141,7 @@ exports[`The ActionListFeatureConnected component should render 1`] = `
       </View>
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -277,10 +274,9 @@ exports[`The ActionListFeatureConnected component should render a loading state 
           }
         }
       >
-        <RCTImageView
+        <Image
           fadeDuration={250}
           onLoad={[Function]}
-          resizeMode="cover"
           source={
             Array [
               Object {
@@ -295,7 +291,6 @@ exports[`The ActionListFeatureConnected component should render a loading state 
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
-              "overflow": "hidden",
               "width": 64,
             }
           }
@@ -318,10 +313,9 @@ exports[`The ActionListFeatureConnected component should render a loading state 
           }
         }
       >
-        <RCTImageView
+        <Image
           fadeDuration={250}
           onLoad={[Function]}
-          resizeMode="cover"
           source={
             Array [
               Object {
@@ -336,7 +330,6 @@ exports[`The ActionListFeatureConnected component should render a loading state 
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
-              "overflow": "hidden",
               "width": 64,
             }
           }
@@ -359,10 +352,9 @@ exports[`The ActionListFeatureConnected component should render a loading state 
           }
         }
       >
-        <RCTImageView
+        <Image
           fadeDuration={250}
           onLoad={[Function]}
-          resizeMode="cover"
           source={
             Array [
               Object {
@@ -377,7 +369,6 @@ exports[`The ActionListFeatureConnected component should render a loading state 
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
-              "overflow": "hidden",
               "width": 64,
             }
           }
@@ -400,10 +391,9 @@ exports[`The ActionListFeatureConnected component should render a loading state 
           }
         }
       >
-        <RCTImageView
+        <Image
           fadeDuration={250}
           onLoad={[Function]}
-          resizeMode="cover"
           source={
             Array [
               Object {
@@ -418,7 +408,6 @@ exports[`The ActionListFeatureConnected component should render a loading state 
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
-              "overflow": "hidden",
               "width": 64,
             }
           }

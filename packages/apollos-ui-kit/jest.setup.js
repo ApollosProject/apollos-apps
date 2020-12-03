@@ -1,5 +1,10 @@
 import { NativeModules } from 'react-native';
 
+jest.mock(
+  'react-native/Libraries/Components/DatePicker/DatePickerIOS',
+  () => 'DatePicker'
+);
+
 NativeModules.RNGestureHandlerModule = {
   attachGestureHandler: jest.fn(),
   createGestureHandler: jest.fn(),

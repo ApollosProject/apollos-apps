@@ -10,15 +10,13 @@
   },
   "jest": {
     "collectCoverage": true,
+    "coverageReporters": ["json", "lcovonly", "clover"],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
     ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
-    ],
-    "reporters": [
-      "<rootDir>/../../scripts/fingers-crossed-reporter.js"
     ],
     "testEnvironment": "node"
   },
@@ -40,9 +38,9 @@
     "@apollosproject/apollo-server-env-mock": "^1.7.0",
     "@apollosproject/babel-preset-apollos": "^1.7.0",
     "apollo-server-env": "^2.3.0",
-    "graphql": "^14.6.0",
+    "graphql": "14.7.0",
     "graphql-tag": "^2.10.1",
-    "jest": "^24.8.0"
+    "jest": "^25.1.0"
   },
   "publishConfig": {
     "access": "public"

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { SideBySideView, H3, UIText, styled } from '@apollosproject/ui-kit';
 import { WebView } from 'react-native-webview';
 import { Platform, View, TouchableOpacity, Linking } from 'react-native';
-// import { SafeAreaView } from 'react-navigation';
+// import { SafeAreaView } from '@react-navigation/native';
 
 const StyledCard = styled(
   ({ theme, height }) => ({
