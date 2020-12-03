@@ -11,7 +11,7 @@ import ContentParentFeedConnected from '../ContentParentFeedConnected';
 import ContentChildFeedConnected from '../ContentChildFeedConnected';
 import UpNextButtonConnected from '../UpNextButtonConnected';
 import NodeFeaturesConnected from '../NodeFeaturesConnected';
-import ScriptureNodeConnected from '../ScriptureNodeConnected';
+// import ScriptureNodeConnected from '../ScriptureNodeConnected';
 
 import GET_MEDIA from './getMedia';
 
@@ -25,7 +25,7 @@ const NodeSingleInner = ({ nodeId, ImageWrapperComponent }) => (
       ImageWrapperComponent={ImageWrapperComponent}
       nodeId={nodeId}
     />
-    <ScriptureNodeConnected nodeId={nodeId} />
+    {/* <ScriptureNodeConnected nodeId={nodeId} /> */}
     <NodeFeaturesConnected nodeId={nodeId} />
     <UpNextButtonConnected nodeId={nodeId} />
     <ContentParentFeedConnected nodeId={nodeId} />
@@ -53,6 +53,7 @@ const NodeSingleConnected = ({ nodeId, children }) => (
 
 NodeSingleConnected.propTypes = {
   nodeId: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 };
 
 const NodeSingleConnectedWithMedia = ({ nodeId, children }) => (
@@ -86,6 +87,7 @@ const NodeSingleConnectedWithMedia = ({ nodeId, children }) => (
 
 NodeSingleConnectedWithMedia.propTypes = {
   nodeId: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 };
 
 export default NodeSingleConnectedWithMedia;
