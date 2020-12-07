@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useColorScheme } from 'react-native-appearance';
 import renderer from 'react-test-renderer';
@@ -6,25 +5,25 @@ import renderer from 'react-test-renderer';
 import FlexedView from '../FlexedView';
 import { H3 } from '../typography';
 
-import { ThemeProvider } from './';
+import { ThemeProvider } from '.';
 
 const themeExample = () => {
   const colorScheme = useColorScheme();
   const isDarkMode = colorScheme === 'dark';
-  const themeColor = isDarkMode ?
-    themeInput.type === 'dark' :
-    themeInput.type === 'light';
+  const themeColor = isDarkMode
+    ? themeInput.type === 'dark'
+    : themeInput.type === 'light';
   return (
     <FlexedView>
-      <H3 style={themeColor}>Hello there</H3>/>
+      <H3 style={{ type: 'light' }}>Hello there</H3>/>
     </FlexedView>
-  )
-}
+  );
+};
 
-const mockColorScheme = jest.fn()
+const mockColorScheme = jest.fn();
 jest.mock('react-native-appearance', () => ({
   useColorScheme: mockColorScheme,
-}))
+}));
 
 // recreate complex behavior such that multiple function calls produce different results
 describe('ThemeProvider', () => {

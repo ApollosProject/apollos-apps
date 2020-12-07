@@ -34,14 +34,11 @@ export class ThemeProvider extends PureComponent {
   }
 }
 
-export const ThemeProviderWithApperance = ( { themeInput= {} , ...props} ) => {
+export const ThemeProviderWithApperance = ({ themeInput = {}, ...props }) => {
   const themeType = useColorScheme();
   return (
-    <ThemeProvider
-      themeInput={ { type: themeType, ...themeInput } }
-      {...props}
-    />
-  )
-}
+    <ThemeProvider themeInput={{ type: themeType, ...themeInput }} {...props} />
+  );
+};
 
-export default ThemeProviderWithApperance
+export default ThemeProviderWithApperance;
