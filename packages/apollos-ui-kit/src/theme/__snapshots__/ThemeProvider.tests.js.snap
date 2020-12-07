@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemeProvider defaults to user settings 1`] = `<themeExample />`;
+
+exports[`ThemeProvider renders in dark theme 1`] = `<themeExample />`;
+
+exports[`ThemeProvider renders in light theme 1`] = `<themeExample />`;
