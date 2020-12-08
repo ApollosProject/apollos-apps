@@ -44,10 +44,10 @@ const ScriptureNodeConnected = ({ nodeId }) => {
   );
 };
 
-ContentNodeConnected.propTypes = {
+ScriptureNodeConnected.propTypes = {
   nodeId: PropTypes.string.isRequired,
 };
 
-ContentNodeConnected.defaultProps = {};
+ScriptureNodeConnected.defaultProps = {};
 
-export default ContentNodeConnected;
+export default ScriptureNodeConnected;
