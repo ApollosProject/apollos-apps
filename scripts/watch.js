@@ -3,16 +3,9 @@ const chokidar = require('chokidar');
 
 console.log('Watching for changes');
 chokidar
-  .watch(
-    [
-      'packages/apollos-data-*/**',
-      'packages/apollos-rock-apollo-data-source/**',
-      'packages/apollos-server-core/**',
-    ],
-    {
-      ignored: ['**/node_modules/**', '**/lib/**', '*.html', '*.snap'],
-    }
-  )
+  .watch(['packages/**'], {
+    ignored: ['**/node_modules/**', '**/lib/**', '*.html', '*.snap'],
+  })
   .on('change', (fullPath) => {
     const pkg = fullPath.split('/')[1].replace('apollos-', '@apollosproject/');
     exec(`yarn lerna run build --scope ${pkg}`, (err, stdout, stderr) => {

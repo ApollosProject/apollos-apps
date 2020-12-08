@@ -11,8 +11,8 @@
     ]
   },
   "scripts": {
-    "start": "lerna run build && yarn push-all && yarn build:api-watch",
-    "build:api-watch": "node ./scripts/watch.js",
+    "start": "lerna run build && yarn push-all && yarn build:watch",
+    "build:watch": "node ./scripts/watch.js",
     "link-packages": "lerna exec -- yarn yalc publish",
     "unlink-packages": "lerna exec -- yarn yalc installations clean",
     "push-all": "lerna exec -- yarn yalc push",
