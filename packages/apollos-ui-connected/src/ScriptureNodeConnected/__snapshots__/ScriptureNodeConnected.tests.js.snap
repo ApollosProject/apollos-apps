@@ -1,0 +1,762 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContentNodeConnected should render 1`] = `
+<View
+  style={
+    Object {
+      "paddingHorizontal": 16,
+      "paddingVertical": 16,
+    }
+  }
+>
+  <View>
+    <Text
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 16,
+          "lineHeight": 24,
+          "paddingBottom": 12,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
+          }
+        }
+      >
+        Psalm 32
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#505050",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 12,
+            "lineHeight": 18,
+          }
+        }
+      >
+         
+        WEB
+      </Text>
+    </Text>
+    <View
+      style={
+        Object {
+          "paddingBottom": 18,
+        }
+      }
+    >
+      <View>
+        <Text
+          padded={true}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Bold",
+              "fontSize": 16,
+              "lineHeight": 24,
+              "paddingBottom": 12,
+              "paddingTop": 15.84,
+            }
+          }
+        >
+          <Text>
+            By David. A contemplative psalm.
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+               
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "DroidSerif",
+                "fontSize": 9.6,
+                "lineHeight": 26,
+              }
+            }
+          >
+             
+            <Text>
+              1
+            </Text>
+             
+          </Text>
+          <Text>
+            Blessed is he whose disobedience is forgiven,
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+                    
+          <Text>
+            whose sin is covered.
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+               
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "DroidSerif",
+                "fontSize": 9.6,
+                "lineHeight": 26,
+              }
+            }
+          >
+             
+            <Text>
+              2
+            </Text>
+             
+          </Text>
+          <Text>
+            Blessed is the man to whom Yahweh doesn’t impute iniquity,
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+                    
+          <Text>
+            in whose spirit there is no deceit.
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+               
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "DroidSerif",
+                "fontSize": 9.6,
+                "lineHeight": 26,
+              }
+            }
+          >
+             
+            <Text>
+              3
+            </Text>
+             
+          </Text>
+          <Text>
+            When I kept silence, my bones wasted away through my groaning all day long.
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+               
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "DroidSerif",
+                "fontSize": 9.6,
+                "lineHeight": 26,
+              }
+            }
+          >
+             
+            <Text>
+              4
+            </Text>
+             
+          </Text>
+          <Text>
+            For day and night your hand was heavy on me.
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+                    
+          <Text>
+            My strength was sapped in the heat of summer. 
+          </Text>
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "DroidSerif",
+                "fontSize": 16,
+                "lineHeight": 26,
+                "textAlign": "right",
+              }
+            }
+          >
+            
+
+            <Text>
+              Selah.
+            </Text>
+            
+
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+               
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "DroidSerif",
+                "fontSize": 9.6,
+                "lineHeight": 26,
+              }
+            }
+          >
+             
+            <Text>
+              5
+            </Text>
+             
+          </Text>
+          <Text>
+            I acknowledged my sin to you.
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+                    
+          <Text>
+            I didn’t hide my iniquity.
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+               
+          <Text>
+            I said, I will confess my transgressions to Yahweh,
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+                    
+          <Text>
+            and you forgave the iniquity of my sin. 
+          </Text>
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "DroidSerif",
+                "fontSize": 16,
+                "lineHeight": 26,
+                "textAlign": "right",
+              }
+            }
+          >
+            
+
+            <Text>
+              Selah.
+            </Text>
+            
+
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+               
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "DroidSerif",
+                "fontSize": 9.6,
+                "lineHeight": 26,
+              }
+            }
+          >
+             
+            <Text>
+              6
+            </Text>
+             
+          </Text>
+          <Text>
+            For this, let everyone who is godly pray to you in a time when you may be found.
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+                    
+          <Text>
+            Surely when the great waters overflow, they shall not reach to him.
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+               
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "DroidSerif",
+                "fontSize": 9.6,
+                "lineHeight": 26,
+              }
+            }
+          >
+             
+            <Text>
+              7
+            </Text>
+             
+          </Text>
+          <Text>
+            You are my hiding place.
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+                    
+          <Text>
+            You will preserve me from trouble.
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+                    
+          <Text>
+            You will surround me with songs of deliverance. 
+          </Text>
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "DroidSerif",
+                "fontSize": 16,
+                "lineHeight": 26,
+                "textAlign": "right",
+              }
+            }
+          >
+            
+
+            <Text>
+              Selah.
+            </Text>
+            
+
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+               
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "DroidSerif",
+                "fontSize": 9.6,
+                "lineHeight": 26,
+              }
+            }
+          >
+             
+            <Text>
+              8
+            </Text>
+             
+          </Text>
+          <Text>
+            I will instruct you and teach you in the way which you shall go.
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+                    
+          <Text>
+            I will counsel you with my eye on you.
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+               
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "DroidSerif",
+                "fontSize": 9.6,
+                "lineHeight": 26,
+              }
+            }
+          >
+             
+            <Text>
+              9
+            </Text>
+             
+          </Text>
+          <Text>
+            Don’t be like the horse, or like the mule, which have no understanding,
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+                    
+          <Text>
+            who are controlled by bit and bridle, or else they will not come near to you.
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+               
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "DroidSerif",
+                "fontSize": 9.6,
+                "lineHeight": 26,
+              }
+            }
+          >
+             
+            <Text>
+              10
+            </Text>
+             
+          </Text>
+          <Text>
+            Many sorrows come to the wicked,
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+                    
+          <Text>
+            but loving kindness shall surround him who trusts in Yahweh.
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+               
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "DroidSerif",
+                "fontSize": 9.6,
+                "lineHeight": 26,
+              }
+            }
+          >
+             
+            <Text>
+              11
+            </Text>
+             
+          </Text>
+          <Text>
+            Be glad in Yahweh, and rejoice, you righteous!
+          </Text>
+        </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+                    
+          <Text>
+            Shout for joy, all you who are upright in heart!
+          </Text>
+        </Text>
+      </View>
+    </View>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#505050",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 9.6,
+          "lineHeight": 10.8,
+        }
+      }
+    >
+      PUBLIC DOMAIN except in the United Kingdom, where a Crown Copyright applies to printing the KJV. See http://www.cambridge.org/about-us/who-we-are/queens-printers-patent
+    </Text>
+  </View>
+</View>
+`;
