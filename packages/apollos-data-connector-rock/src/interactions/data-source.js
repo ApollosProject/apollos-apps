@@ -1,18 +1,18 @@
-import { parseGlobalId, createGlobalId } from '@apollosproject/server-core';
-import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
-import ApollosConfig from '@apollosproject/config';
-import { flatten, get } from 'lodash';
+import { parseGlobalId, createGlobalId } from "@apollosproject/server-core";
+import RockApolloDataSource from "@apollosproject/rock-apollo-data-source";
+import ApollosConfig from "@apollosproject/config";
+import { flatten, get } from "lodash";
 
 export default class Interactions extends RockApolloDataSource {
-  resource = 'Interactions';
+  resource = "Interactions";
 
   ADDITIONAL_INTERACTIONS_MAP = {
     ContentItem: {
-      COMPLETE: this.updateSeriesStarted.bind(this),
+      COMPLETE: this.updateSeriesStarted.bind(this)
     },
     PrayerRequest: {
-      PRAY: this.incrementPrayer.bind(this),
-    },
+      PRAY: this.incrementPrayer.bind(this)
+    }
   };
 
   async incrementPrayer({ id }) {
@@ -27,22 +27,22 @@ export default class Interactions extends RockApolloDataSource {
       id
     )).get();
     return Promise.all(
-      seriesParents.map(async (seriesParent) => {
+      seriesParents.map(async seriesParent => {
         // Check to see if we have started the series before
         const parentType = ContentItem.resolveType(seriesParent);
         const nodeId = createGlobalId(seriesParent.id, parentType);
         const otherInteractions = await this.getInteractionsForCurrentUserAndNodes(
           {
             nodeIds: [nodeId],
-            actions: ['SERIES_START'],
+            actions: ["SERIES_START"]
           }
         );
         // If we haven't, mark it as started
         if (!otherInteractions.length) {
           await this.createNodeInteraction({
             nodeId,
-            action: 'SERIES_START',
-            additional: false, // we pass this prop to avoid recursive interaction creation
+            action: "SERIES_START",
+            additional: false // we pass this prop to avoid recursive interaction creation
           });
         }
       })
@@ -54,11 +54,11 @@ export default class Interactions extends RockApolloDataSource {
     // This will likely be something like, [UniversalContentItem, ContentItem]
     const normalizedTypeNames = this.context.models.Node.getPossibleDataModels({
       schema: this.context.schema,
-      __type,
+      __type
     });
     // For each of this types
     return Promise.all(
-      normalizedTypeNames.map(async (normalizedType) => {
+      normalizedTypeNames.map(async normalizedType => {
         // do we have a function to call?
         const possibleFunction = get(
           this.ADDITIONAL_INTERACTIONS_MAP,
@@ -75,7 +75,7 @@ export default class Interactions extends RockApolloDataSource {
 
   async createContentItemInteraction({ itemId, operationName, itemTitle }) {
     const {
-      dataSources: { RockConstants, Auth },
+      dataSources: { RockConstants, Auth }
     } = this.context;
     const { id } = parseGlobalId(itemId);
 
@@ -84,19 +84,27 @@ export default class Interactions extends RockApolloDataSource {
         contentItemId: id,
         // Don't want to recreate channels if name changes
         // In the future, we could use itemTitle here.
-        contentName: id,
+        contentName: id
       }
     );
     const currentUser = await Auth.getCurrentPerson();
-    const interactionId = await this.post('/Interactions', {
+    const interactionId = await this.post("/Interactions", {
       PersonAliasId: currentUser.primaryAliasId,
       InteractionComponentId: interactionComponent.id,
       Operation: operationName,
       InteractionDateTime: new Date().toJSON(),
       InteractionSummary: `${operationName} - ${itemTitle}`,
+<<<<<<< Updated upstream
       InteractionData: `${
         ApollosConfig.APP.DEEP_LINK_HOST
       }://Interactions/ContentSingle?itemId=${itemId}`,
+||||||| constructed merge base
+      InteractionData: `${ApollosConfig.APP.DEEP_LINK_HOST}://Interactions/ContentSingle?itemId=${itemId}`,
+=======
+      InteractionData: `${
+        ApollosConfig.APP.DEEP_LINK_HOST
+      }://Interactions/ContentSingle?itemId=${itemId}`
+>>>>>>> Stashed changes
     });
 
     return this.get(`/Interactions/${interactionId}`);
@@ -115,21 +123,31 @@ export default class Interactions extends RockApolloDataSource {
     }
 
     if (ApollosConfig.ROCK.USE_PLUGIN) {
-      return this.request(
-        `/Apollos/GetInteractionsByForeignKeys?keys=${nodeIds.join(',')}`
-      )
-        .filterOneOf(actions.map((a) => `Operation eq '${a}'`))
-        .andFilter(`PersonAliasId eq ${currentUser.primaryAliasId}`)
-        .get();
+      // need to split up the request for ASP.NET
+      const splitNodeIds = new Array(Math.ceil(nodeIds.length / 10))
+        .fill()
+        .map(_ => nodeIds.splice(0, 10));
+      return flatten(
+        await Promise.all(
+          splitNodeIds.map(async group =>
+            this.request(
+              `/Apollos/GetInteractionsByForeignKeys?keys=${nodeIds.join(",")}`
+            )
+              .filterOneOf(actions.map(a => `Operation eq '${a}'`))
+              .andFilter(`PersonAliasId eq ${currentUser.primaryAliasId}`)
+              .get()
+          )
+        )
+      );
     }
     console.warn(
-      'Fetching interactions without the Rock plugin is extremly inefficient\n\nWe highly recommend using plugin version 1.6.0 or higher'
+      "Fetching interactions without the Rock plugin is extremly inefficient\n\nWe highly recommend using plugin version 1.6.0 or higher"
     );
     return flatten(
       await Promise.all(
-        nodeIds.map(async (nodeId) =>
+        nodeIds.map(async nodeId =>
           this.request()
-            .filterOneOf(actions.map((a) => `Operation eq '${a}'`))
+            .filterOneOf(actions.map(a => `Operation eq '${a}'`))
             .andFilter(
               `(ForeignKey eq '${nodeId}') and (PersonAliasId eq ${
                 currentUser.primaryAliasId
@@ -144,7 +162,7 @@ export default class Interactions extends RockApolloDataSource {
   getNodeInteractionsForCurrentUser({ nodeId, actions = [] }) {
     return this.getInteractionsForCurrentUserAndNodes({
       nodeIds: [nodeId],
-      actions,
+      actions
     });
   }
 
@@ -156,14 +174,14 @@ export default class Interactions extends RockApolloDataSource {
       return [];
     }
     return this.request()
-      .filterOneOf(actions.map((a) => `Operation eq '${a}'`))
+      .filterOneOf(actions.map(a => `Operation eq '${a}'`))
       .andFilter(`PersonAliasId eq ${currentUser.primaryAliasId}`)
       .get();
   }
 
   async createNodeInteraction({ nodeId, action, additional = true }) {
     const {
-      dataSources: { RockConstants, Auth },
+      dataSources: { RockConstants, Auth }
     } = this.context;
     const { id, __type } = parseGlobalId(nodeId);
 
@@ -171,7 +189,7 @@ export default class Interactions extends RockApolloDataSource {
 
     if (!entityType) {
       console.error(
-        'nodeId is an invalid (non-rock) entity type. This is not yet supported.'
+        "nodeId is an invalid (non-rock) entity type. This is not yet supported."
       );
       return { success: false };
     }
@@ -179,17 +197,17 @@ export default class Interactions extends RockApolloDataSource {
     const interactionComponent = await RockConstants.interactionComponent({
       entityId: id,
       entityTypeId: entityType.id,
-      entityTypeName: entityType.friendlyName,
+      entityTypeName: entityType.friendlyName
     });
 
     const currentUser = await Auth.getCurrentPerson();
-    await this.post('/Interactions', {
+    await this.post("/Interactions", {
       PersonAliasId: currentUser.primaryAliasId,
       InteractionComponentId: interactionComponent.id,
       Operation: action,
       InteractionDateTime: new Date().toJSON(),
       InteractionSummary: `${action}`,
-      ForeignKey: nodeId,
+      ForeignKey: nodeId
     });
 
     if (additional) {
@@ -198,7 +216,7 @@ export default class Interactions extends RockApolloDataSource {
 
     return {
       success: true,
-      nodeId,
+      nodeId
     };
   }
 }
