@@ -34,7 +34,9 @@ const ContentNodeConnected = ({
       fetchPolicy={'cache-and-network'}
     >
       {({
-        data: { node: { htmlContent, title, coverImage, publishDate } = {} } = {},
+        data: {
+          node: { htmlContent, title, coverImage, publishDate } = {},
+        } = {},
         loading,
         error,
       }) => {
