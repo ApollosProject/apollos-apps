@@ -7,6 +7,7 @@ import {
   ErrorCard,
   PaddedView,
   H2,
+  H6,
   GradientOverlayImage,
 } from '@apollosproject/ui-kit';
 
@@ -33,7 +34,7 @@ const ContentNodeConnected = ({
       fetchPolicy={'cache-and-network'}
     >
       {({
-        data: { node: { htmlContent, title, coverImage } = {} } = {},
+        data: { node: { htmlContent, title, coverImage, publishDate } = {} } = {},
         loading,
         error,
       }) => {
@@ -55,6 +56,9 @@ const ContentNodeConnected = ({
               <H2 padded isLoading={!title && loading}>
                 {title}
               </H2>
+              <H6 padded isLoading={!publishDate && loading}>
+                {publishDate}
+              </H6>
               <HtmlComponent
                 isLoading={!htmlContent && loading}
                 onPressAnchor={onPressAnchor}

@@ -183,6 +183,7 @@ export default gql`
   interface ContentItem {
     id: ID!
     title(hyphenated: Boolean): String
+    publishDate: String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
@@ -223,6 +224,7 @@ export default gql`
   interface ContentNode {
     title(hyphenated: Boolean): String
     coverImage: ImageMedia
+    publishDate: String
     htmlContent: String
   }
 
@@ -236,6 +238,7 @@ export default gql`
   type ContentSeriesContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ProgressNode & LikableNode & ShareableNode & FeaturesNode {
     id: ID!
     title(hyphenated: Boolean): String
+    publishDate: String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
@@ -271,6 +274,7 @@ export default gql`
   type DevotionalContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ScriptureNode & LikableNode & ShareableNode {
     id: ID!
     title(hyphenated: Boolean): String
+    publishDate: String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
@@ -427,6 +431,7 @@ export default gql`
   type MediaContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ScriptureNode & LikableNode & ShareableNode {
     id: ID!
     title(hyphenated: Boolean): String
+    publishDate: String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
@@ -698,6 +703,7 @@ export default gql`
   type UniversalContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & LikableNode & ShareableNode {
     id: ID!
     title(hyphenated: Boolean): String
+    publishDate: String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
@@ -789,6 +795,7 @@ export default gql`
   type WeekendContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & LikableNode & LiveNode & ShareableNode & FeaturesNode {
     id: ID!
     title(hyphenated: Boolean): String
+    publishDate: String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]

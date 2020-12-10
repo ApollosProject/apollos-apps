@@ -21,6 +21,7 @@ const SCRIPTURE_NODE_FRAGMENT = gql`
 const CONTENT_NODE_FRAGMENT = gql`
   fragment ContentNodeFragment on ContentNode {
     title
+    publishDate
     htmlContent
     coverImage {
       sources {
