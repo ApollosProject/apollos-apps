@@ -111,6 +111,7 @@ Object {
         "__typename": "ContentChannel",
         "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
       },
+      "publishDate": "2013-08-01T00:00:00-04:00",
       "sharing": Object {
         "__typename": "SharableContentItem",
         "message": "SAMPLE: Easter - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -249,6 +250,7 @@ Object {
         "__typename": "ContentChannel",
         "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
       },
+      "publishDate": "2013-08-01T00:00:00-04:00",
       "sharing": Object {
         "__typename": "SharableContentItem",
         "message": "SAMPLE: Easter - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -387,6 +389,7 @@ Object {
         "__typename": "ContentChannel",
         "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
       },
+      "publishDate": "2013-08-01T00:00:00-04:00",
       "sharing": Object {
         "__typename": "SharableContentItem",
         "message": "SAMPLE: Easter - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -525,6 +528,7 @@ Object {
         "__typename": "ContentChannel",
         "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
       },
+      "publishDate": "2013-08-01T00:00:00-04:00",
       "sharing": Object {
         "__typename": "SharableContentItem",
         "message": "SAMPLE: Easter - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -666,6 +670,7 @@ Object {
               "__typename": "ContentChannel",
               "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
             },
+            "publishDate": "2013-08-01T00:00:00-04:00",
             "sharing": Object {
               "__typename": "SharableContentItem",
               "message": "SAMPLE: Easter - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -842,6 +847,7 @@ Object {
               "__typename": "ContentChannel",
               "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
             },
+            "publishDate": "2013-08-01T00:00:00-04:00",
             "sharing": Object {
               "__typename": "SharableContentItem",
               "message": "SAMPLE: Easter - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -986,6 +992,7 @@ Object {
               "__typename": "ContentChannel",
               "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
             },
+            "publishDate": "2013-08-01T00:00:00-04:00",
             "sharing": Object {
               "__typename": "SharableContentItem",
               "message": "SAMPLE: Easter - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -1130,6 +1137,7 @@ Object {
               "__typename": "ContentChannel",
               "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
             },
+            "publishDate": "2013-08-01T00:00:00-04:00",
             "sharing": Object {
               "__typename": "SharableContentItem",
               "message": "SAMPLE: Easter - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -1203,6 +1211,7 @@ Object {
         "__typename": "ContentChannel",
         "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
       },
+      "publishDate": "2013-08-01T00:00:00-04:00",
       "sharing": Object {
         "__typename": "SharableContentItem",
         "message": "SAMPLE: Easter - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
