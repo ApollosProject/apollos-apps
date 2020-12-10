@@ -12,6 +12,8 @@ import sanitizeHtml from '../sanitize-html';
 
 const { ROCK, ROCK_MAPPINGS } = ApollosConfig;
 
+const dateFormat ='MMMM D, YYYY';
+
 export const defaultContentItemResolvers = {
   id: ({ id }, args, context, { parentType }) =>
     createGlobalId(id, parentType.name),
@@ -55,7 +57,7 @@ export const defaultContentItemResolvers = {
     ContentItem.getCoverImage(root),
 
   publishDate: ({ startDateTime }) =>
-    moment.tz(startDateTime, ROCK.TIMEZONE).format(),
+    moment.tz(startDateTime, ROCK.TIMEZONE).format(dateFormat),
 
   theme: () => null, // todo: integrate themes from Rock
 
