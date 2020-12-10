@@ -10,8 +10,8 @@ chokidar
       'packages/apollos-server-core/**',
     ],
     {
-      ignored: ['**/node_modules/**', '**/lib/**', '*.html', '*.snap'],	
-    }	
+      ignored: ['**/node_modules/**', '**/lib/**', '*.html', '*.snap'],
+    }
   )
   .on('change', (fullPath) => {
     const pkg = fullPath.split('/')[1].replace('apollos-', '@apollosproject/');
