@@ -19,7 +19,7 @@ const contentMock = {
         __typename: 'WeekendContentItem',
         id: 'WeekendContentItem:1',
         title: 'Here is the title',
-        publishDate: '2018-05-08T00:00:00-04:00',
+        publishDate: 'May 8, 2018',
         htmlContent:
           '<p>Of Myths and Money, lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim euismod arcu, volutpat feugiat tortor luctus vitae. Suspendisse efficitur faucibus ante at facilisis. Phasellus in velit suscipit lectus tempus dapibus vitae eu quam. Fusce venenatis mauris non ante scelerisque, sit amet blandit odio ultricies. In sed lacinia dui, eu blandit metus. Ut ante enim, facilisis sed pretium et, posuere vitae felis. Phasellus ornare mauris mauris, eget pretium nibh imperdiet ac. Integer eleifend dui ut nisl sagittis mattis. Nunc consectetur consequat tristique. Pellentesque luctus tortor nec quam pulvinar iaculis.</p>',
         coverImage: {
