@@ -1,7 +1,7 @@
 import { parseGlobalId, createGlobalId } from '@apollosproject/server-core';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import ApollosConfig from '@apollosproject/config';
-import { flatten, get } from 'lodash';
+import { flatten, get, chunk } from 'lodash';
 
 export default class Interactions extends RockApolloDataSource {
   resource = 'Interactions';
@@ -113,12 +113,19 @@ export default class Interactions extends RockApolloDataSource {
     }
 
     if (ApollosConfig.ROCK.USE_PLUGIN) {
-      return this.request(
-        `/Apollos/GetInteractionsByForeignKeys?keys=${nodeIds.join(',')}`
-      )
-        .filterOneOf(actions.map((a) => `Operation eq '${a}'`))
-        .andFilter(`PersonAliasId eq ${currentUser.primaryAliasId}`)
-        .get();
+      // need to split up the request for ASP.NET
+      return flatten(
+        await Promise.all(
+          chunk(nodeIds, 10).map(async (group) =>
+            this.request(
+              `/Apollos/GetInteractionsByForeignKeys?keys=${group.join(',')}`
+            )
+              .filterOneOf(actions.map((a) => `Operation eq '${a}'`))
+              .andFilter(`PersonAliasId eq ${currentUser.primaryAliasId}`)
+              .get()
+          )
+        )
+      );
     }
     console.warn(
       'Fetching interactions without the Rock plugin is extremly inefficient\n\nWe highly recommend using plugin version 1.6.0 or higher'
