@@ -1,7 +1,7 @@
 import { parseGlobalId, createGlobalId } from '@apollosproject/server-core';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import ApollosConfig from '@apollosproject/config';
-import { flatten, get } from 'lodash';
+import { flatten, get, chunk } from 'lodash';
 
 export default class Interactions extends RockApolloDataSource {
   resource = 'Interactions';
@@ -116,13 +116,9 @@ export default class Interactions extends RockApolloDataSource {
 
     if (ApollosConfig.ROCK.USE_PLUGIN) {
       // need to split up the request for ASP.NET
-      const splitNodeIds = new Array(Math.ceil(nodeIds.length / 10))
-        .fill()
-        // eslint-disable-next-line
-        .map(_ => nodeIds.splice(0, 10));
       return flatten(
         await Promise.all(
-          splitNodeIds.map(async (group) =>
+          chunk(nodeIds, 10).map(async (group) =>
             this.request(
               `/Apollos/GetInteractionsByForeignKeys?keys=${group.join(',')}`
             )
