@@ -82,9 +82,7 @@ describe('Prayer', () => {
     };
     dataSource.get = buildGetMock([prayerMock], dataSource);
 
-    const result = await (await dataSource.byDailyPrayerFeed({
-      numberDaysSincePrayer: 3,
-    })).get();
+    const result = await (await dataSource.byDailyPrayerFeed()).get();
     expect(result).toMatchSnapshot();
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });

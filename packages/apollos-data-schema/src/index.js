@@ -381,7 +381,6 @@ export const contentItemSchema = gql`
   interface ContentItem {
     id: ID!
     title(hyphenated: Boolean): String
-    publishDate: String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
@@ -403,7 +402,6 @@ export const contentItemSchema = gql`
   type UniversalContentItem implements ContentItem & Node {
     id: ID!
     title(hyphenated: Boolean): String
-    publishDate: String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
@@ -425,7 +423,6 @@ export const contentItemSchema = gql`
   type DevotionalContentItem implements ContentItem & Node {
     id: ID!
     title(hyphenated: Boolean): String
-    publishDate: String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
@@ -449,7 +446,6 @@ export const contentItemSchema = gql`
   type MediaContentItem implements ContentItem & Node {
     id: ID!
     title(hyphenated: Boolean): String
-    publishDate: String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
@@ -473,7 +469,6 @@ export const contentItemSchema = gql`
   type ContentSeriesContentItem implements ContentItem & Node {
     id: ID!
     title(hyphenated: Boolean): String
-    publishDate: String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
@@ -498,7 +493,6 @@ export const contentItemSchema = gql`
   type WeekendContentItem implements ContentItem & Node {
     id: ID!
     title(hyphenated: Boolean): String
-    publishDate: String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]

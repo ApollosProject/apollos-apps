@@ -36,7 +36,6 @@ const CONTENT_ITEM_FRAGMENT = gql`
   fragment contentItemFragment on ContentItem {
     id
     title
-    publishDate
     summary
     htmlContent
     coverImage {
