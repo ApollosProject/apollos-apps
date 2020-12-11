@@ -9,8 +9,8 @@
     ]
   },
   "scripts": {
-    "start": "lerna run build && yarn push-all && yarn build:api-watch",
-    "build:api-watch": "node ./scripts/watch.js",
+    "start": "lerna run build && yarn push-all && yarn build:watch",
+    "build:watch": "node ./scripts/watch.js",
     "link-packages": "lerna exec -- yarn yalc publish",
     "unlink-packages": "lerna exec -- yarn yalc installations clean",
     "push-all": "lerna exec -- yarn yalc push",
@@ -27,7 +27,7 @@
     "postinstall": "lerna run build --parallel",
     "generate-docs": "lerna run generate-docs",
     "generate-stories": "lerna run generate-stories",
-    "storybook": "(lerna run generate-stories && cd ApollosStorybook && yarn && yarn ios)"
+    "storybook": "(yarn generate-stories && cd ApollosStorybook && yarn && yarn ios)"
   },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"
