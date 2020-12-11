@@ -15,7 +15,7 @@ const themeExample = () => {
     : themeInput.type === 'light';
   return (
     <FlexedView>
-      <H3 style={{ type: 'light' }}>Hello there</H3>/>
+      <H3 style={{ themeColor: 'light' }}>YOOO</H3>/>
     </FlexedView>
   );
 };

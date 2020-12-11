@@ -8,8 +8,14 @@ import { H3, H6, BodyText } from '../typography';
 import { ThemeProvider, ThemeMixin, withThemeMixin } from './';
 import styled from '../styled'
 
+//flexed view is not theme aware so create one that is
+const FlexedViewWithBackground = styled(({ theme }) => ({
+  backgroundColor: theme.colors.background.screen,
+  })) 
+(FlexedView);
+
 const TypeExample = () => (
-  <FlexedView>
+  <FlexedViewWithBackground>
     <H3>Hi there!</H3>
     <H6>Lorem ipsum dolor sit amet.</H6>
     <BodyText>
@@ -17,7 +23,7 @@ const TypeExample = () => (
       sit amet ante eu lobortis. In vitae faucibus lectus, at interdum nibh.
       Fusce suscipit tincidunt justo, vitae cursus mi fermentum eget.
     </BodyText>
-  </FlexedView>
+  </FlexedViewWithBackground>
 );
 
 const MixinPrimaryText = styled(({ theme: { colors: { primary } } }) => ({ backgroundColor: primary }))(H3);
