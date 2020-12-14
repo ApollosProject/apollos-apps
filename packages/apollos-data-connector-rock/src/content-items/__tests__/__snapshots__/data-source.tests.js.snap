@@ -560,6 +560,36 @@ Array [
 ]
 `;
 
+exports[`ContentItemsModel gets series from specific channel a user has viewed: get from ids 1`] = `
+Array [
+  Array [
+    Array [
+      "3",
+    ],
+  ],
+]
+`;
+
+exports[`ContentItemsModel gets series from specific channel a user has viewed: get percent complete 1`] = `
+Array [
+  Array [
+    Object {
+      "id": "1",
+    },
+  ],
+  Array [
+    Object {
+      "id": "2",
+    },
+  ],
+  Array [
+    Object {
+      "id": "3",
+    },
+  ],
+]
+`;
+
 exports[`ContentItemsModel gets the next item for a content series, based on different past interactions 1`] = `
 [MockFunction] {
   "calls": Array [

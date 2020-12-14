@@ -925,6 +925,33 @@ describe('ContentItemsModel', () => {
       'get percent complete'
     );
   });
+  it('gets series from specific channel a user has viewed', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = jest.fn(() => Promise.resolve([{ id: 3 }]));
+    dataSource.getPercentComplete = jest.fn(({ id }) => (id === '1' ? 100 : 0));
+    dataSource.getFromIds = jest.fn();
+    dataSource.context = {
+      dataSources: {
+        Auth: { getCurrentPerson: () => ({ id: '1' }) },
+        Interactions: {
+          getInteractionsForCurrentUser: jest.fn(() =>
+            Promise.resolve([
+              { foreignKey: createGlobalId('1', 'UniversalContentItem') },
+              { foreignKey: createGlobalId('2', 'UniversalContentItem') },
+              { foreignKey: createGlobalId('2', 'UniversalContentItem') },
+              { foreignKey: createGlobalId('3', 'UniversalContentItem') },
+            ])
+          ),
+        },
+      },
+    };
+
+    await dataSource.getSeriesWithUserProgress({ channelIds: [10] });
+    expect(dataSource.getFromIds.mock.calls).toMatchSnapshot('get from ids');
+    expect(dataSource.getPercentComplete.mock.calls).toMatchSnapshot(
+      'get percent complete'
+    );
+  });
   it('gets an empty array fpr series a user has viewed without a user', async () => {
     const dataSource = new ContentItemsDataSource();
     dataSource.get = jest.fn(() => Promise.resolve([{ id: 3 }]));
