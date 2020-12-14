@@ -558,6 +558,7 @@ export default class ContentItem extends RockApolloDataSource {
     ROCK_MAPPINGS.CAMPAIGN_CHANNEL_IDS.forEach((id) => {
       cursor = cursor.andFilter(`ContentChannelId ne ${id}`);
     });
+
     return cursor;
   }
 
