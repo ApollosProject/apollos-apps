@@ -11,7 +11,7 @@ export default class PrayerRequest extends RockApolloDataSource {
 
   getFromId = (id) => this.request().find(id).get();
 
-  byDailyPrayerFeed = async ({ numberDaysSincePrayer }) => {
+  byDailyPrayerFeed = async ({ numberDaysSincePrayer = 3 }) => {
     const {
       dataSources: { Auth },
     } = this.context;

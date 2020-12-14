@@ -54,7 +54,7 @@ export const defaultContentItemResolvers = {
   coverImage: (root, args, { dataSources: { ContentItem } }) =>
     ContentItem.getCoverImage(root),
 
-  publishDate: ({ startDateTime }) =>	
+  publishDate: ({ startDateTime }) =>
     moment.tz(startDateTime, ROCK.TIMEZONE).format(),
 
   theme: () => null, // todo: integrate themes from Rock
