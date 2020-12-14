@@ -516,7 +516,7 @@ export default class ContentItem extends RockApolloDataSource {
     return childItemsWithApollosIds[firstInteractedIndex - 1];
   }
 
-  async getSeriesWithUserProgress() {
+  async getSeriesWithUserProgress({ channelIds }) {
     const { Auth, Interactions } = this.context.dataSources;
 
     // Safely exit if we don't have a current user.
@@ -537,13 +537,6 @@ export default class ContentItem extends RockApolloDataSource {
       })
     );
 
-    // We need to make sure we don't include the campaign channels.
-    // We could also consider doing this using a whitelist.
-    // This also may be part of a broader conversation about how we identify the true parent of a content item
-    const blacklistedIds = (await this.byContentChannelIds(
-      ROCK_MAPPINGS.CAMPAIGN_CHANNEL_IDS
-    ).get()).map(({ id }) => `${id}`);
-
     const completedIds = (await Promise.all(
       ids.map(async (id) => ({
         id,
@@ -553,10 +546,25 @@ export default class ContentItem extends RockApolloDataSource {
       .filter(({ percent }) => percent === 100)
       .map(({ id }) => id);
 
-    const finalIds = ids.filter(
-      (id) => ![...blacklistedIds, ...completedIds].includes(id)
-    );
+    const inProgressIds = ids.filter((id) => ![...completedIds].includes(id));
 
+    // whitelist only channels we've specified
+    if (channelIds) {
+      const whitelist = (await this.byContentChannelIds(channelIds).get()).map(
+        ({ id }) => `${id}`
+      );
+      const finalIds = inProgressIds.filter((id) =>
+        [...whitelist].includes(id)
+      );
+      return this.getFromIds(finalIds);
+    }
+
+    // blacklist certain series channels
+    // We need to make sure we don't include the campaign channels.
+    const blacklist = (await this.byContentChannelIds(
+      ROCK_MAPPINGS.CAMPAIGN_CHANNEL_IDS
+    ).get()).map(({ id }) => `${id}`);
+    const finalIds = inProgressIds.filter((id) => ![...blacklist].includes(id));
     return this.getFromIds(finalIds);
   }
 
