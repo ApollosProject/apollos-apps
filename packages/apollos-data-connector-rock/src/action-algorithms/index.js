@@ -219,7 +219,7 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
     }));
   }
 
-  async seriesInProgressAlgorithm({ limit = 3, channelIds } = {}) {
+  async seriesInProgressAlgorithm({ limit = 3, channelIds = [] } = {}) {
     const { ContentItem, Feature } = this.context.dataSources;
     Feature.setCacheHint({ maxAge: 0, scope: 'PRIVATE' });
 
