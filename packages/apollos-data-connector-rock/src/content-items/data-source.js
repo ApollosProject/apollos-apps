@@ -547,25 +547,18 @@ export default class ContentItem extends RockApolloDataSource {
       .map(({ id }) => id);
 
     const inProgressIds = ids.filter((id) => ![...completedIds].includes(id));
+    let cursor = this.getFromIds(inProgressIds);
 
-    // whitelist only channels we've specified
-    if (channelIds) {
-      const whitelist = (await this.byContentChannelIds(channelIds).get()).map(
-        ({ id }) => `${id}`
-      );
-      const finalIds = inProgressIds.filter((id) =>
-        [...whitelist].includes(id)
-      );
-      return this.getFromIds(finalIds);
-    }
+    // only search through allowed channels
+    channelIds.forEach((id) => {
+      cursor = cursor.andFilter(`ContentChannelId eq ${id}`);
+    });
 
-    // blacklist certain series channels
-    // We need to make sure we don't include the campaign channels.
-    const blacklist = (await this.byContentChannelIds(
-      ROCK_MAPPINGS.CAMPAIGN_CHANNEL_IDS
-    ).get()).map(({ id }) => `${id}`);
-    const finalIds = inProgressIds.filter((id) => ![...blacklist].includes(id));
-    return this.getFromIds(finalIds);
+    // exclude campaign channels
+    ROCK_MAPPINGS.CAMPAIGN_CHANNEL_IDS.forEach((id) => {
+      cursor = cursor.andFilter(`ContentChannelId ne ${id}`);
+    });
+    return cursor;
   }
 
   async getPercentComplete({ id }) {
