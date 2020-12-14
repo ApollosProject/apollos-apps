@@ -6,9 +6,9 @@ import FlexedView from '../FlexedView';
 import { H3, H6, BodyText } from '../typography';
 
 import { ThemeProvider, ThemeMixin, withThemeMixin } from './';
-import styled from '../styled'
+import styled from '../styled';
 
-//flexed view is not theme aware so create one that is
+// Create flexed view that is theme aware
 const FlexedViewWithBackground = styled(({ theme }) => ({
   backgroundColor: theme.colors.background.screen,
   })) 

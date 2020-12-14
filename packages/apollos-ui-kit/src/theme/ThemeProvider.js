@@ -34,6 +34,7 @@ export class ThemeProvider extends PureComponent {
   }
 }
 
+// useColorScheme returns string 'dark' when user is in dark mode
 export const ThemeProviderWithApperance = ({ themeInput = {}, ...props }) => {
   const themeType = useColorScheme();
   return (

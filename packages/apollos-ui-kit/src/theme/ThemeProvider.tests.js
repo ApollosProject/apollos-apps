@@ -5,32 +5,30 @@ import renderer from 'react-test-renderer';
 import FlexedView from '../FlexedView';
 import { H3 } from '../typography';
 
+import styled from '../styled';
 import { ThemeProvider } from '.';
 
-const themeExample = () => {
-  const colorScheme = useColorScheme();
-  const isDarkMode = colorScheme === 'dark';
-  const themeColor = isDarkMode
-    ? themeInput.type === 'dark'
-    : themeInput.type === 'light';
-  return (
-    <FlexedView>
-      <H3 style={{ themeColor: 'light' }}>YOOO</H3>/>
-    </FlexedView>
-  );
-};
+// Create flexed view that is theme aware
+const FlexedViewWithBackground = styled(({ theme }) => ({
+  backgroundColor: theme.colors.background.screen,
+}))(FlexedView);
+
+const ThemeExample = () => (
+  <FlexedViewWithBackground>
+    <H3>YOOO</H3>
+  </FlexedViewWithBackground>
+);
 
 const mockColorScheme = jest.fn();
 jest.mock('react-native-appearance', () => ({
   useColorScheme: mockColorScheme,
 }));
 
-// recreate complex behavior such that multiple function calls produce different results
 describe('ThemeProvider', () => {
   it('defaults to user settings', () => {
     const tree = renderer.create(
       <ThemeProvider>
-        <themeExample />
+        <ThemeExample />
       </ThemeProvider>
     );
     expect(tree).toMatchSnapshot();
@@ -39,7 +37,7 @@ describe('ThemeProvider', () => {
     mockColorScheme.mockImplementationOnce(() => 'light');
     const tree = renderer.create(
       <ThemeProvider>
-        <themeExample />
+        <ThemeExample />
       </ThemeProvider>
     );
     expect(tree).toMatchSnapshot();
@@ -48,7 +46,7 @@ describe('ThemeProvider', () => {
     mockColorScheme.mockImplementationOnce(() => 'dark');
     const tree = renderer.create(
       <ThemeProvider>
-        <themeExample />
+        <ThemeExample />
       </ThemeProvider>
     );
     expect(tree).toMatchSnapshot();
