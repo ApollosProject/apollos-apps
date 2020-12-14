@@ -1,5 +1,4 @@
 import React from 'react';
-import { useColorScheme } from 'react-native-appearance';
 import renderer from 'react-test-renderer';
 
 import FlexedView from '../FlexedView';
@@ -20,9 +19,6 @@ const ThemeExample = () => (
 );
 
 const mockColorScheme = jest.fn();
-jest.mock('react-native-appearance', () => ({
-  useColorScheme: mockColorScheme,
-}));
 
 describe('ThemeProvider', () => {
   it('defaults to user settings', () => {

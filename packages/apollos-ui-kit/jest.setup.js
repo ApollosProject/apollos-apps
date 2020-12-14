@@ -1,11 +1,11 @@
-import { NativeModules } from 'react-native';
+import * as reactNative from 'react-native';
 
 jest.mock(
   'react-native/Libraries/Components/DatePicker/DatePickerIOS',
   () => 'DatePicker'
 );
 
-NativeModules.RNGestureHandlerModule = {
+reactNative.NativeModules.RNGestureHandlerModule = {
   attachGestureHandler: jest.fn(),
   createGestureHandler: jest.fn(),
   dropGestureHandler: jest.fn(),
@@ -14,3 +14,5 @@ NativeModules.RNGestureHandlerModule = {
   State: {},
   Directions: {},
 };
+
+reactNative.useColorScheme = jest.fn();
