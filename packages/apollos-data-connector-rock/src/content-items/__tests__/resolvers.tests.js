@@ -113,6 +113,7 @@ const contentItemFragment = `
     id
     __typename
     title
+    publishDate
     summary
     coverImage {
       name
