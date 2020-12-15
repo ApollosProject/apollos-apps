@@ -11,6 +11,11 @@ import ContentParentFeedConnected from '../ContentParentFeedConnected';
 import ContentChildFeedConnected from '../ContentChildFeedConnected';
 import UpNextButtonConnected from '../UpNextButtonConnected';
 import NodeFeaturesConnected from '../NodeFeaturesConnected';
+import ScriptureNodeConnected from '../ScriptureNodeConnected';
+
+import GET_MEDIA from './getMedia';
+
+const Noop = () => null;
 
 import GET_MEDIA from './getMedia';
 
@@ -45,11 +50,47 @@ const NodeSingleConnected = ({ nodeId }) => (
         </FlexedScrollView>
       )}
     </StretchyView>
+    {children}
   </BackgroundView>
 );
 
 NodeSingleConnected.propTypes = {
   nodeId: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+};
+
+const NodeSingleConnectedWithMedia = ({ nodeId, children }) => (
+  <Query
+    query={GET_MEDIA}
+    variables={{ nodeId }}
+    fetchPolicy={'cache-and-network'}
+  >
+    {({ data = {} }) => {
+      if (!data?.node?.videos?.length)
+        return (
+          <NodeSingleConnected nodeId={nodeId}>{children}</NodeSingleConnected>
+        );
+      return (
+        <>
+          <ApollosPlayerContainer
+            source={data.node?.videos[0]?.sources[0]}
+            coverImage={data.node?.coverImage?.sources}
+            presentationProps={{
+              title: data.node.title,
+            }}
+          >
+            <NodeSingleInner nodeId={nodeId} ImageWrapperComponent={Noop} />
+          </ApollosPlayerContainer>
+          {children}
+        </>
+      );
+    }}
+  </Query>
+);
+
+NodeSingleConnectedWithMedia.propTypes = {
+  nodeId: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 };
 
 const NodeSingleConnectedWithMedia = ({ nodeId }) => (
