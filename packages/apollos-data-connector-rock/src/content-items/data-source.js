@@ -516,7 +516,7 @@ export default class ContentItem extends RockApolloDataSource {
     return childItemsWithApollosIds[firstInteractedIndex - 1];
   }
 
-  async getSeriesWithUserProgress({ channelIds }) {
+  async getSeriesWithUserProgress({ channelIds = [] } = {}) {
     const { Auth, Interactions } = this.context.dataSources;
 
     // Safely exit if we don't have a current user.

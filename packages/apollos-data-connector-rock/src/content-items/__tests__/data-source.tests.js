@@ -16,6 +16,7 @@ ApollosConfig.loadJs({
   },
   ROCK_MAPPINGS: {
     SERMON_CHANNEL_ID: 'TEST_ID',
+    CAMPAIGN_CHANNEL_IDS: [1],
   },
   BIBLE_API: {
     BIBLE_ID: {
@@ -902,7 +903,7 @@ describe('ContentItemsModel', () => {
     const dataSource = new ContentItemsDataSource();
     dataSource.get = jest.fn(() => Promise.resolve([{ id: 3 }]));
     dataSource.getPercentComplete = jest.fn(({ id }) => (id === '1' ? 100 : 0));
-    dataSource.getFromIds = jest.fn();
+    dataSource.getFromIds = jest.fn(() => ({ andFilter: () => null }));
     dataSource.context = {
       dataSources: {
         Auth: { getCurrentPerson: () => ({ id: '1' }) },
@@ -929,7 +930,9 @@ describe('ContentItemsModel', () => {
     const dataSource = new ContentItemsDataSource();
     dataSource.get = jest.fn(() => Promise.resolve([{ id: 3 }]));
     dataSource.getPercentComplete = jest.fn(({ id }) => (id === '1' ? 100 : 0));
-    dataSource.getFromIds = jest.fn();
+    dataSource.getFromIds = jest.fn(() => ({
+      andFilter: () => ({ andFilter: () => null }),
+    }));
     dataSource.context = {
       dataSources: {
         Auth: { getCurrentPerson: () => ({ id: '1' }) },
