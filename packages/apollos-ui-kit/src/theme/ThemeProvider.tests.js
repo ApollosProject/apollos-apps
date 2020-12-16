@@ -5,6 +5,7 @@ import FlexedView from '../FlexedView';
 import { H3 } from '../typography';
 
 import styled from '../styled';
+import { withThemeMixin } from './mixins';
 import { ThemeProvider } from '.';
 
 // Create flexed view that is theme aware
@@ -18,7 +19,19 @@ const ThemeExample = () => (
   </FlexedViewWithBackground>
 );
 
+const LightThemeExample = withThemeMixin({
+  type: 'light',
+})(ThemeExample);
+
+const DarkThemeExample = withThemeMixin({
+  type: 'dark',
+})(ThemeExample);
+
+// Needed in order to set a return value of 'light' or 'dark'
 const mockColorScheme = jest.fn();
+jest.mock('react-native-appearance', () => ({
+  useColorScheme: mockColorScheme,
+}));
 
 describe('ThemeProvider', () => {
   it('defaults to user settings', () => {
@@ -33,7 +46,7 @@ describe('ThemeProvider', () => {
     mockColorScheme.mockImplementationOnce(() => 'light');
     const tree = renderer.create(
       <ThemeProvider>
-        <ThemeExample />
+        <LightThemeExample />
       </ThemeProvider>
     );
     expect(tree).toMatchSnapshot();
@@ -42,7 +55,7 @@ describe('ThemeProvider', () => {
     mockColorScheme.mockImplementationOnce(() => 'dark');
     const tree = renderer.create(
       <ThemeProvider>
-        <ThemeExample />
+        <DarkThemeExample />
       </ThemeProvider>
     );
     expect(tree).toMatchSnapshot();

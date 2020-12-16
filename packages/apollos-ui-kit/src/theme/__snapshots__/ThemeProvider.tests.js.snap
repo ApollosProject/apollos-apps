@@ -28,7 +28,7 @@ exports[`ThemeProvider renders in dark theme 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "#F8F7F4",
+      "backgroundColor": "#000000",
       "flex": 1,
     }
   }
@@ -36,7 +36,7 @@ exports[`ThemeProvider renders in dark theme 1`] = `
   <Text
     style={
       Object {
-        "color": "#303030",
+        "color": "#F8F7F4",
         "fontFamily": "InterUI-Black",
         "fontSize": 24,
         "lineHeight": 27.6,
