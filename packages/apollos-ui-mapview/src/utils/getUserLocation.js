@@ -1,3 +1,4 @@
+/* eslint-disable react-native/split-platform-components */
 import {
   Alert,
   Linking,
