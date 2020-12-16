@@ -8,6 +8,7 @@ import {
 
 import Geolocation from 'react-native-geolocation-service';
 
+// Taken almost verbatum from `react-native-geolocation-service`s example app.
 const hasLocationPermissionIOS = async () => {
   const openSetting = () => {
     Linking.openSettings().catch(() => {
@@ -21,7 +22,10 @@ const hasLocationPermissionIOS = async () => {
   }
 
   if (status === 'denied') {
-    Alert.alert('Location permission denied');
+    Alert.alert(`Turn on Location Services to determine your location.`, '', [
+      { text: 'Go to Settings', onPress: openSetting },
+      { text: "Don't Use Location", onPress: () => {} },
+    ]);
   }
 
   if (status === 'disabled') {
