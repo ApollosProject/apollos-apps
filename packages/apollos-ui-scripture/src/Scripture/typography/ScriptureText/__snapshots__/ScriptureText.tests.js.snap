@@ -36,18 +36,20 @@ exports[`the ScriptureText component should accept and render passed in styles 1
 `;
 
 exports[`the ScriptureText component should render a loading state 1`] = `
-<View
+<Text
+  bold={false}
+  italic={false}
   style={
     Object {
-      "alignSelf": "stretch",
-      "backgroundColor": "#A5A5A5",
-      "borderRadius": 16,
-      "height": 16,
-      "marginVertical": 5,
-      "width": "100%",
+      "color": "#303030",
+      "fontFamily": "DroidSerif",
+      "fontSize": 16,
+      "lineHeight": 26,
     }
   }
-/>
+>
+  Default ScriptureText text
+</Text>
 `;
 
 exports[`the ScriptureText component should render as bold 1`] = `
