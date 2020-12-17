@@ -18,6 +18,9 @@ jest.mock('@apollosproject/ui-analytics', () => ({
   withTrackOnPress: (Component) => (props) => <Component {...props} />,
 }));
 
+jest.mock('@apollosproject/ui-mapview', () => ({
+}));
+
 jest.mock('react-navigation', () => {
   const ActualNavigation = require.requireActual('react-navigation');
   return {
