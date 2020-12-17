@@ -23,12 +23,13 @@
     ]
   },
   "dependencies": {
-    "@apollosproject/data-schema": "^1.7.0",
     "@apollosproject/server-core": "^1.7.0",
     "apollo-datasource-rest": "^0.6.4"
   },
   "peerDependencies": {
-    "@apollosproject/config": "*"
+    "@apollosproject/config": "*",
+    "@apollosproject/data-schema": "*",
+    "@apollosproject/data-connector-rock": "*"
   },
   "devDependencies": {
     "@apollosproject/apollo-server-env-mock": "^1.7.0",
