@@ -23,7 +23,6 @@
     ]
   },
   "dependencies": {
-    "@apollosproject/data-schema": "^1.7.0",
     "analytics-node": "^3.4.0-beta.1",
     "apollo-datasource": "^0.2.0",
     "universal-analytics": "^0.4.20"
@@ -31,6 +30,7 @@
   "peerDependencies": {
     "@apollosproject/config": "*",
     "@apollosproject/rock-apollo-data-source": "*",
+    "@apollosproject/data-schema": "*",
     "apollo-server": "^2.11.0"
   },
   "devDependencies": {
