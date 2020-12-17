@@ -138,7 +138,7 @@ class HorizontalCardListFeature extends PureComponent {
                 ) : null}
                 {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
               </CardHeaderTitles>
-              {primaryAction ? (
+              {isLoading || primaryAction ? (
                 <AndroidTouchableFix
                   onPress={() => onPressAction(primaryAction)}
                 >
