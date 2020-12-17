@@ -131,9 +131,18 @@ class HorizontalCardListFeature extends PureComponent {
             <Header>
               <View>
                 {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
-                  <Title numberOfLines={1}>{title}</Title>
+                  <Title
+                    isLoading={isLoading && !title && !subtitle}
+                    numberOfLines={1}
+                  >
+                    {title}
+                  </Title>
                 ) : null}
-                {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
+                {isLoading || subtitle ? (
+                  <Subtitle isLoading={isLoading && !title && !subtitle}>
+                    {subtitle}
+                  </Subtitle>
+                ) : null}
               </View>
               {primaryAction ? (
                 <AndroidTouchableFix

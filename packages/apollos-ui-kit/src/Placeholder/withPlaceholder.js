@@ -12,7 +12,7 @@ const withPlaceholder = (PlaceholderComponent = Line, getProps = {}) => (
       typeof getProps === 'function' ? getProps(props) : getProps;
     return (
       <PlaceholderComponent
-        onReady={!isLoading}
+        onReady={!isLoading || props.children}
         style={style}
         lineNumber={lineNumber}
         {...propInput}
