@@ -487,18 +487,21 @@ exports[`The CampaignItemListFeature component should render a loading state for
                       }
                     }
                   >
-                    <View
+                    <Text
+                      bold={false}
+                      italic={false}
+                      numberOfLines={2}
                       style={
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 16,
-                          "marginVertical": 5,
-                          "width": "100%",
+                          "color": "#F8F7F4",
+                          "fontFamily": "InterUI-Regular",
+                          "fontSize": 16,
+                          "lineHeight": 26,
                         }
                       }
-                    />
+                    >
+                      boom
+                    </Text>
                   </View>
                   <View
                     style={

@@ -526,18 +526,21 @@ exports[`The VerticalCardListFeatureConnected component should render a featured
                       }
                     }
                   >
-                    <View
+                    <Text
+                      bold={false}
+                      italic={false}
+                      numberOfLines={2}
                       style={
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 16,
-                          "marginVertical": 5,
-                          "width": "100%",
+                          "color": "#F8F7F4",
+                          "fontFamily": "InterUI-Regular",
+                          "fontSize": 16,
+                          "lineHeight": 26,
                         }
                       }
-                    />
+                    >
+                      boom
+                    </Text>
                   </View>
                   <View
                     style={
@@ -952,32 +955,43 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                 >
                   <View
+                    bordered={false}
+                    disabled={false}
+                    pill={false}
                     style={
                       Object {
                         "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
+                        "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 16,
+                        "borderWidth": 2,
+                        "elevation": 2,
+                        "flexDirection": "row",
                         "height": 32,
+                        "justifyContent": "center",
+                        "opacity": 1,
+                        "overflow": "hidden",
                         "paddingHorizontal": 12,
-                        "width": 64,
                       }
                     }
                   />
                 </View>
-                <View
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={2}
                   style={
                     Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
-                      "width": "100%",
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                      "paddingTop": 16,
                     }
                   }
-                />
+                >
+                  boom
+                </Text>
               </View>
             </View>
           </View>
@@ -1085,32 +1099,43 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                 >
                   <View
+                    bordered={false}
+                    disabled={false}
+                    pill={false}
                     style={
                       Object {
                         "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
+                        "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 16,
+                        "borderWidth": 2,
+                        "elevation": 2,
+                        "flexDirection": "row",
                         "height": 32,
+                        "justifyContent": "center",
+                        "opacity": 1,
+                        "overflow": "hidden",
                         "paddingHorizontal": 12,
-                        "width": 64,
                       }
                     }
                   />
                 </View>
-                <View
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={2}
                   style={
                     Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
-                      "width": "100%",
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                      "paddingTop": 16,
                     }
                   }
-                />
+                >
+                  boom
+                </Text>
               </View>
             </View>
           </View>
@@ -1218,32 +1243,43 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                 >
                   <View
+                    bordered={false}
+                    disabled={false}
+                    pill={false}
                     style={
                       Object {
                         "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
+                        "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 16,
+                        "borderWidth": 2,
+                        "elevation": 2,
+                        "flexDirection": "row",
                         "height": 32,
+                        "justifyContent": "center",
+                        "opacity": 1,
+                        "overflow": "hidden",
                         "paddingHorizontal": 12,
-                        "width": 64,
                       }
                     }
                   />
                 </View>
-                <View
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={2}
                   style={
                     Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
-                      "width": "100%",
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                      "paddingTop": 16,
                     }
                   }
-                />
+                >
+                  boom
+                </Text>
               </View>
             </View>
           </View>
@@ -1351,32 +1387,43 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                 >
                   <View
+                    bordered={false}
+                    disabled={false}
+                    pill={false}
                     style={
                       Object {
                         "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
+                        "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 16,
+                        "borderWidth": 2,
+                        "elevation": 2,
+                        "flexDirection": "row",
                         "height": 32,
+                        "justifyContent": "center",
+                        "opacity": 1,
+                        "overflow": "hidden",
                         "paddingHorizontal": 12,
-                        "width": 64,
                       }
                     }
                   />
                 </View>
-                <View
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={2}
                   style={
                     Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
-                      "width": "100%",
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                      "paddingTop": 16,
                     }
                   }
-                />
+                >
+                  boom
+                </Text>
               </View>
             </View>
           </View>
@@ -1484,32 +1531,43 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                 >
                   <View
+                    bordered={false}
+                    disabled={false}
+                    pill={false}
                     style={
                       Object {
                         "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
+                        "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 16,
+                        "borderWidth": 2,
+                        "elevation": 2,
+                        "flexDirection": "row",
                         "height": 32,
+                        "justifyContent": "center",
+                        "opacity": 1,
+                        "overflow": "hidden",
                         "paddingHorizontal": 12,
-                        "width": 64,
                       }
                     }
                   />
                 </View>
-                <View
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={2}
                   style={
                     Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
-                      "width": "100%",
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                      "paddingTop": 16,
                     }
                   }
-                />
+                >
+                  boom
+                </Text>
               </View>
             </View>
           </View>
@@ -1617,32 +1675,43 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                 >
                   <View
+                    bordered={false}
+                    disabled={false}
+                    pill={false}
                     style={
                       Object {
                         "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
+                        "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 16,
+                        "borderWidth": 2,
+                        "elevation": 2,
+                        "flexDirection": "row",
                         "height": 32,
+                        "justifyContent": "center",
+                        "opacity": 1,
+                        "overflow": "hidden",
                         "paddingHorizontal": 12,
-                        "width": 64,
                       }
                     }
                   />
                 </View>
-                <View
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={2}
                   style={
                     Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
-                      "width": "100%",
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                      "paddingTop": 16,
                     }
                   }
-                />
+                >
+                  boom
+                </Text>
               </View>
             </View>
           </View>
@@ -1750,32 +1819,43 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                 >
                   <View
+                    bordered={false}
+                    disabled={false}
+                    pill={false}
                     style={
                       Object {
                         "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
+                        "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 16,
+                        "borderWidth": 2,
+                        "elevation": 2,
+                        "flexDirection": "row",
                         "height": 32,
+                        "justifyContent": "center",
+                        "opacity": 1,
+                        "overflow": "hidden",
                         "paddingHorizontal": 12,
-                        "width": 64,
                       }
                     }
                   />
                 </View>
-                <View
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={2}
                   style={
                     Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
-                      "width": "100%",
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                      "paddingTop": 16,
                     }
                   }
-                />
+                >
+                  boom
+                </Text>
               </View>
             </View>
           </View>
@@ -1883,32 +1963,43 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                 >
                   <View
+                    bordered={false}
+                    disabled={false}
+                    pill={false}
                     style={
                       Object {
                         "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
+                        "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 16,
+                        "borderWidth": 2,
+                        "elevation": 2,
+                        "flexDirection": "row",
                         "height": 32,
+                        "justifyContent": "center",
+                        "opacity": 1,
+                        "overflow": "hidden",
                         "paddingHorizontal": 12,
-                        "width": 64,
                       }
                     }
                   />
                 </View>
-                <View
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={2}
                   style={
                     Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
-                      "width": "100%",
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                      "paddingTop": 16,
                     }
                   }
-                />
+                >
+                  boom
+                </Text>
               </View>
             </View>
           </View>
@@ -2016,32 +2107,43 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                 >
                   <View
+                    bordered={false}
+                    disabled={false}
+                    pill={false}
                     style={
                       Object {
                         "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
+                        "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 16,
+                        "borderWidth": 2,
+                        "elevation": 2,
+                        "flexDirection": "row",
                         "height": 32,
+                        "justifyContent": "center",
+                        "opacity": 1,
+                        "overflow": "hidden",
                         "paddingHorizontal": 12,
-                        "width": 64,
                       }
                     }
                   />
                 </View>
-                <View
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={2}
                   style={
                     Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
-                      "width": "100%",
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                      "paddingTop": 16,
                     }
                   }
-                />
+                >
+                  boom
+                </Text>
               </View>
             </View>
           </View>
@@ -2149,32 +2251,43 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                 >
                   <View
+                    bordered={false}
+                    disabled={false}
+                    pill={false}
                     style={
                       Object {
                         "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
+                        "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 16,
+                        "borderWidth": 2,
+                        "elevation": 2,
+                        "flexDirection": "row",
                         "height": 32,
+                        "justifyContent": "center",
+                        "opacity": 1,
+                        "overflow": "hidden",
                         "paddingHorizontal": 12,
-                        "width": 64,
                       }
                     }
                   />
                 </View>
-                <View
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={2}
                   style={
                     Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
-                      "width": "100%",
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                      "paddingTop": 16,
                     }
                   }
-                />
+                >
+                  boom
+                </Text>
               </View>
             </View>
           </View>
