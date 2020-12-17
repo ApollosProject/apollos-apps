@@ -32,35 +32,34 @@ exports[`the H6 component should accept and render passed in styles 1`] = `
 `;
 
 exports[`the H6 component should render a loading state 1`] = `
-<Text
+<View
   style={
     Object {
-      "color": "#505050",
-      "fontFamily": "InterUI-Bold",
-      "fontSize": 12,
-      "lineHeight": 18,
+      "alignSelf": "stretch",
+      "backgroundColor": "#A5A5A5",
+      "borderRadius": 16,
+      "height": 12,
+      "marginVertical": 3,
+      "width": "50%",
     }
   }
->
-  Default H6 text
-</Text>
+/>
 `;
 
 exports[`the H6 component should render a loading state with correct positioning (margins) 1`] = `
-<Text
-  padded={true}
+<View
   style={
     Object {
-      "color": "#505050",
-      "fontFamily": "InterUI-Bold",
-      "fontSize": 12,
-      "lineHeight": 18,
-      "paddingBottom": 9,
+      "alignSelf": "stretch",
+      "backgroundColor": "#A5A5A5",
+      "borderRadius": 16,
+      "height": 12,
+      "marginBottom": 9,
+      "marginVertical": 3,
+      "width": "50%",
     }
   }
->
-  Padded H6 text
-</Text>
+/>
 `;
 
 exports[`the H6 component should render correctly 1`] = `

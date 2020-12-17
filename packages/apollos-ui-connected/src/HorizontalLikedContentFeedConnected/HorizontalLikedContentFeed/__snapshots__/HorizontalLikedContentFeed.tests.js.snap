@@ -419,18 +419,18 @@ exports[`HorizontalLikedContentFeed renders a loading state 1`] = `
         }
       }
     >
-      <Text
+      <View
         style={
           Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Medium",
-            "fontSize": 14,
-            "lineHeight": 21,
+            "alignSelf": "stretch",
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 16,
+            "height": 14,
+            "marginVertical": 3.5,
+            "width": "60%",
           }
         }
-      >
-        Liked Content
-      </Text>
+      />
     </View>
     <View
       accessible={true}
@@ -458,26 +458,18 @@ exports[`HorizontalLikedContentFeed renders a loading state 1`] = `
           }
         }
       >
-        <Text
+        <View
           style={
             Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "lineHeight": 18,
+              "alignSelf": "stretch",
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 12,
+              "marginVertical": 3,
+              "width": "50%",
             }
           }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#17B582",
-              }
-            }
-          >
-            View All
-          </Text>
-        </Text>
+        />
       </View>
     </View>
   </View>

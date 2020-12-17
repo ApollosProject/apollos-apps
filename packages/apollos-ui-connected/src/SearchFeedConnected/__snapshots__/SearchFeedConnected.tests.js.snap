@@ -1472,23 +1472,15 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                           }
                         >
                           <View
-                            bordered={false}
-                            disabled={false}
-                            pill={false}
                             style={
                               Object {
                                 "alignItems": "center",
-                                "backgroundColor": "#17B582",
-                                "borderColor": "#17B582",
+                                "alignSelf": "stretch",
+                                "backgroundColor": "#A5A5A5",
                                 "borderRadius": 16,
-                                "borderWidth": 2,
-                                "elevation": 2,
-                                "flexDirection": "row",
                                 "height": 32,
-                                "justifyContent": "center",
-                                "opacity": 1,
-                                "overflow": "hidden",
                                 "paddingHorizontal": 12,
+                                "width": 64,
                               }
                             }
                           />
@@ -1593,23 +1585,15 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                           }
                         >
                           <View
-                            bordered={false}
-                            disabled={false}
-                            pill={false}
                             style={
                               Object {
                                 "alignItems": "center",
-                                "backgroundColor": "#17B582",
-                                "borderColor": "#17B582",
+                                "alignSelf": "stretch",
+                                "backgroundColor": "#A5A5A5",
                                 "borderRadius": 16,
-                                "borderWidth": 2,
-                                "elevation": 2,
-                                "flexDirection": "row",
                                 "height": 32,
-                                "justifyContent": "center",
-                                "opacity": 1,
-                                "overflow": "hidden",
                                 "paddingHorizontal": 12,
+                                "width": 64,
                               }
                             }
                           />
@@ -1714,23 +1698,15 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                           }
                         >
                           <View
-                            bordered={false}
-                            disabled={false}
-                            pill={false}
                             style={
                               Object {
                                 "alignItems": "center",
-                                "backgroundColor": "#17B582",
-                                "borderColor": "#17B582",
+                                "alignSelf": "stretch",
+                                "backgroundColor": "#A5A5A5",
                                 "borderRadius": 16,
-                                "borderWidth": 2,
-                                "elevation": 2,
-                                "flexDirection": "row",
                                 "height": 32,
-                                "justifyContent": "center",
-                                "opacity": 1,
-                                "overflow": "hidden",
                                 "paddingHorizontal": 12,
+                                "width": 64,
                               }
                             }
                           />
@@ -1835,23 +1811,15 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                           }
                         >
                           <View
-                            bordered={false}
-                            disabled={false}
-                            pill={false}
                             style={
                               Object {
                                 "alignItems": "center",
-                                "backgroundColor": "#17B582",
-                                "borderColor": "#17B582",
+                                "alignSelf": "stretch",
+                                "backgroundColor": "#A5A5A5",
                                 "borderRadius": 16,
-                                "borderWidth": 2,
-                                "elevation": 2,
-                                "flexDirection": "row",
                                 "height": 32,
-                                "justifyContent": "center",
-                                "opacity": 1,
-                                "overflow": "hidden",
                                 "paddingHorizontal": 12,
+                                "width": 64,
                               }
                             }
                           />
@@ -1956,23 +1924,15 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                           }
                         >
                           <View
-                            bordered={false}
-                            disabled={false}
-                            pill={false}
                             style={
                               Object {
                                 "alignItems": "center",
-                                "backgroundColor": "#17B582",
-                                "borderColor": "#17B582",
+                                "alignSelf": "stretch",
+                                "backgroundColor": "#A5A5A5",
                                 "borderRadius": 16,
-                                "borderWidth": 2,
-                                "elevation": 2,
-                                "flexDirection": "row",
                                 "height": 32,
-                                "justifyContent": "center",
-                                "opacity": 1,
-                                "overflow": "hidden",
                                 "paddingHorizontal": 12,
+                                "width": 64,
                               }
                             }
                           />
@@ -2077,23 +2037,15 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                           }
                         >
                           <View
-                            bordered={false}
-                            disabled={false}
-                            pill={false}
                             style={
                               Object {
                                 "alignItems": "center",
-                                "backgroundColor": "#17B582",
-                                "borderColor": "#17B582",
+                                "alignSelf": "stretch",
+                                "backgroundColor": "#A5A5A5",
                                 "borderRadius": 16,
-                                "borderWidth": 2,
-                                "elevation": 2,
-                                "flexDirection": "row",
                                 "height": 32,
-                                "justifyContent": "center",
-                                "opacity": 1,
-                                "overflow": "hidden",
                                 "paddingHorizontal": 12,
+                                "width": 64,
                               }
                             }
                           />
@@ -2198,23 +2150,15 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                           }
                         >
                           <View
-                            bordered={false}
-                            disabled={false}
-                            pill={false}
                             style={
                               Object {
                                 "alignItems": "center",
-                                "backgroundColor": "#17B582",
-                                "borderColor": "#17B582",
+                                "alignSelf": "stretch",
+                                "backgroundColor": "#A5A5A5",
                                 "borderRadius": 16,
-                                "borderWidth": 2,
-                                "elevation": 2,
-                                "flexDirection": "row",
                                 "height": 32,
-                                "justifyContent": "center",
-                                "opacity": 1,
-                                "overflow": "hidden",
                                 "paddingHorizontal": 12,
+                                "width": 64,
                               }
                             }
                           />
@@ -2319,23 +2263,15 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                           }
                         >
                           <View
-                            bordered={false}
-                            disabled={false}
-                            pill={false}
                             style={
                               Object {
                                 "alignItems": "center",
-                                "backgroundColor": "#17B582",
-                                "borderColor": "#17B582",
+                                "alignSelf": "stretch",
+                                "backgroundColor": "#A5A5A5",
                                 "borderRadius": 16,
-                                "borderWidth": 2,
-                                "elevation": 2,
-                                "flexDirection": "row",
                                 "height": 32,
-                                "justifyContent": "center",
-                                "opacity": 1,
-                                "overflow": "hidden",
                                 "paddingHorizontal": 12,
+                                "width": 64,
                               }
                             }
                           />
@@ -2440,23 +2376,15 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                           }
                         >
                           <View
-                            bordered={false}
-                            disabled={false}
-                            pill={false}
                             style={
                               Object {
                                 "alignItems": "center",
-                                "backgroundColor": "#17B582",
-                                "borderColor": "#17B582",
+                                "alignSelf": "stretch",
+                                "backgroundColor": "#A5A5A5",
                                 "borderRadius": 16,
-                                "borderWidth": 2,
-                                "elevation": 2,
-                                "flexDirection": "row",
                                 "height": 32,
-                                "justifyContent": "center",
-                                "opacity": 1,
-                                "overflow": "hidden",
                                 "paddingHorizontal": 12,
+                                "width": 64,
                               }
                             }
                           />
@@ -2561,23 +2489,15 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                           }
                         >
                           <View
-                            bordered={false}
-                            disabled={false}
-                            pill={false}
                             style={
                               Object {
                                 "alignItems": "center",
-                                "backgroundColor": "#17B582",
-                                "borderColor": "#17B582",
+                                "alignSelf": "stretch",
+                                "backgroundColor": "#A5A5A5",
                                 "borderRadius": 16,
-                                "borderWidth": 2,
-                                "elevation": 2,
-                                "flexDirection": "row",
                                 "height": 32,
-                                "justifyContent": "center",
-                                "opacity": 1,
-                                "overflow": "hidden",
                                 "paddingHorizontal": 12,
+                                "width": 64,
                               }
                             }
                           />

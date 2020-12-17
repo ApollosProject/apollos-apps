@@ -481,19 +481,18 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                     withIcon="empty"
                   >
-                    <Text
+                    <View
                       style={
                         Object {
-                          "color": "#A5A5A5",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "lineHeight": 18,
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 3,
+                          "width": "50%",
                         }
                       }
-                      tint="#A5A5A5"
-                    >
-                      empty
-                    </Text>
+                    />
                   </View>
                 </View>
               </View>
@@ -688,19 +687,18 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                     withIcon="empty"
                   >
-                    <Text
+                    <View
                       style={
                         Object {
-                          "color": "#A5A5A5",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "lineHeight": 18,
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 3,
+                          "width": "50%",
                         }
                       }
-                      tint="#A5A5A5"
-                    >
-                      empty
-                    </Text>
+                    />
                   </View>
                 </View>
               </View>
@@ -895,19 +893,18 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                     withIcon="empty"
                   >
-                    <Text
+                    <View
                       style={
                         Object {
-                          "color": "#A5A5A5",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "lineHeight": 18,
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 3,
+                          "width": "50%",
                         }
                       }
-                      tint="#A5A5A5"
-                    >
-                      empty
-                    </Text>
+                    />
                   </View>
                 </View>
               </View>
@@ -1102,19 +1099,18 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                     withIcon="empty"
                   >
-                    <Text
+                    <View
                       style={
                         Object {
-                          "color": "#A5A5A5",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "lineHeight": 18,
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 3,
+                          "width": "50%",
                         }
                       }
-                      tint="#A5A5A5"
-                    >
-                      empty
-                    </Text>
+                    />
                   </View>
                 </View>
               </View>
@@ -1309,19 +1305,18 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                     withIcon="empty"
                   >
-                    <Text
+                    <View
                       style={
                         Object {
-                          "color": "#A5A5A5",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "lineHeight": 18,
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 3,
+                          "width": "50%",
                         }
                       }
-                      tint="#A5A5A5"
-                    >
-                      empty
-                    </Text>
+                    />
                   </View>
                 </View>
               </View>
@@ -1516,19 +1511,18 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                     withIcon="empty"
                   >
-                    <Text
+                    <View
                       style={
                         Object {
-                          "color": "#A5A5A5",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "lineHeight": 18,
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 3,
+                          "width": "50%",
                         }
                       }
-                      tint="#A5A5A5"
-                    >
-                      empty
-                    </Text>
+                    />
                   </View>
                 </View>
               </View>
@@ -1723,19 +1717,18 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                     withIcon="empty"
                   >
-                    <Text
+                    <View
                       style={
                         Object {
-                          "color": "#A5A5A5",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "lineHeight": 18,
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 3,
+                          "width": "50%",
                         }
                       }
-                      tint="#A5A5A5"
-                    >
-                      empty
-                    </Text>
+                    />
                   </View>
                 </View>
               </View>
@@ -1930,19 +1923,18 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                     withIcon="empty"
                   >
-                    <Text
+                    <View
                       style={
                         Object {
-                          "color": "#A5A5A5",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "lineHeight": 18,
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 3,
+                          "width": "50%",
                         }
                       }
-                      tint="#A5A5A5"
-                    >
-                      empty
-                    </Text>
+                    />
                   </View>
                 </View>
               </View>
@@ -2137,19 +2129,18 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                     withIcon="empty"
                   >
-                    <Text
+                    <View
                       style={
                         Object {
-                          "color": "#A5A5A5",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "lineHeight": 18,
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 3,
+                          "width": "50%",
                         }
                       }
-                      tint="#A5A5A5"
-                    >
-                      empty
-                    </Text>
+                    />
                   </View>
                 </View>
               </View>
@@ -2344,19 +2335,18 @@ exports[`The FeedView component passes an onPressItem prop 1`] = `
                     }
                     withIcon="empty"
                   >
-                    <Text
+                    <View
                       style={
                         Object {
-                          "color": "#A5A5A5",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "lineHeight": 18,
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 3,
+                          "width": "50%",
                         }
                       }
-                      tint="#A5A5A5"
-                    >
-                      empty
-                    </Text>
+                    />
                   </View>
                 </View>
               </View>
@@ -3081,19 +3071,18 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                     withIcon="empty"
                   >
-                    <Text
+                    <View
                       style={
                         Object {
-                          "color": "#A5A5A5",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "lineHeight": 18,
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 3,
+                          "width": "50%",
                         }
                       }
-                      tint="#A5A5A5"
-                    >
-                      empty
-                    </Text>
+                    />
                   </View>
                 </View>
               </View>
@@ -3288,19 +3277,18 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                     withIcon="empty"
                   >
-                    <Text
+                    <View
                       style={
                         Object {
-                          "color": "#A5A5A5",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "lineHeight": 18,
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 3,
+                          "width": "50%",
                         }
                       }
-                      tint="#A5A5A5"
-                    >
-                      empty
-                    </Text>
+                    />
                   </View>
                 </View>
               </View>
@@ -3495,19 +3483,18 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                     withIcon="empty"
                   >
-                    <Text
+                    <View
                       style={
                         Object {
-                          "color": "#A5A5A5",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "lineHeight": 18,
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 3,
+                          "width": "50%",
                         }
                       }
-                      tint="#A5A5A5"
-                    >
-                      empty
-                    </Text>
+                    />
                   </View>
                 </View>
               </View>
@@ -3702,19 +3689,18 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                     withIcon="empty"
                   >
-                    <Text
+                    <View
                       style={
                         Object {
-                          "color": "#A5A5A5",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "lineHeight": 18,
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 3,
+                          "width": "50%",
                         }
                       }
-                      tint="#A5A5A5"
-                    >
-                      empty
-                    </Text>
+                    />
                   </View>
                 </View>
               </View>
@@ -3909,19 +3895,18 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                     withIcon="empty"
                   >
-                    <Text
+                    <View
                       style={
                         Object {
-                          "color": "#A5A5A5",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "lineHeight": 18,
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 3,
+                          "width": "50%",
                         }
                       }
-                      tint="#A5A5A5"
-                    >
-                      empty
-                    </Text>
+                    />
                   </View>
                 </View>
               </View>
@@ -4116,19 +4101,18 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                     withIcon="empty"
                   >
-                    <Text
+                    <View
                       style={
                         Object {
-                          "color": "#A5A5A5",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "lineHeight": 18,
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 3,
+                          "width": "50%",
                         }
                       }
-                      tint="#A5A5A5"
-                    >
-                      empty
-                    </Text>
+                    />
                   </View>
                 </View>
               </View>
@@ -4323,19 +4307,18 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                     withIcon="empty"
                   >
-                    <Text
+                    <View
                       style={
                         Object {
-                          "color": "#A5A5A5",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "lineHeight": 18,
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 3,
+                          "width": "50%",
                         }
                       }
-                      tint="#A5A5A5"
-                    >
-                      empty
-                    </Text>
+                    />
                   </View>
                 </View>
               </View>
@@ -4530,19 +4513,18 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                     withIcon="empty"
                   >
-                    <Text
+                    <View
                       style={
                         Object {
-                          "color": "#A5A5A5",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "lineHeight": 18,
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 3,
+                          "width": "50%",
                         }
                       }
-                      tint="#A5A5A5"
-                    >
-                      empty
-                    </Text>
+                    />
                   </View>
                 </View>
               </View>
@@ -4737,19 +4719,18 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                     withIcon="empty"
                   >
-                    <Text
+                    <View
                       style={
                         Object {
-                          "color": "#A5A5A5",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "lineHeight": 18,
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 3,
+                          "width": "50%",
                         }
                       }
-                      tint="#A5A5A5"
-                    >
-                      empty
-                    </Text>
+                    />
                   </View>
                 </View>
               </View>
@@ -4944,19 +4925,18 @@ exports[`The FeedView component renders empty state 1`] = `
                     }
                     withIcon="empty"
                   >
-                    <Text
+                    <View
                       style={
                         Object {
-                          "color": "#A5A5A5",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "lineHeight": 18,
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 12,
+                          "marginVertical": 3,
+                          "width": "50%",
                         }
                       }
-                      tint="#A5A5A5"
-                    >
-                      empty
-                    </Text>
+                    />
                   </View>
                 </View>
               </View>

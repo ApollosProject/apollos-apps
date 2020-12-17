@@ -14,21 +14,18 @@ exports[`the BlockQuote component should render a loading state 1`] = `
     }
   }
 >
-  <Text
-    bold={false}
-    italic={false}
+  <View
     style={
       Object {
-        "color": "#303030",
-        "fontFamily": "InterUI-Italic",
-        "fontSize": 16,
-        "lineHeight": 26,
-        "textAlign": "center",
+        "alignSelf": "stretch",
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 16,
+        "height": 16,
+        "marginVertical": 5,
+        "width": "100%",
       }
     }
-  >
-    "You are the only Bible some unbelievers will ever read." – John MacArthur
-  </Text>
+  />
 </View>
 `;
 

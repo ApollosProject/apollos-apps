@@ -32,35 +32,33 @@ exports[`the H1 component should accept and render passed in styles 1`] = `
 `;
 
 exports[`the H1 component should render a loading state 1`] = `
-<Text
+<View
   style={
     Object {
-      "color": "#303030",
-      "fontFamily": "InterUI-Black",
-      "fontSize": 43,
-      "lineHeight": 49.45,
+      "alignSelf": "stretch",
+      "backgroundColor": "#A5A5A5",
+      "borderRadius": 16,
+      "height": 43,
+      "marginVertical": 3.2250000000000014,
+      "width": "100%",
     }
   }
->
-  Default H1 text
-</Text>
+/>
 `;
 
 exports[`the H1 component should render a loading state with correct positioning (margins) 1`] = `
-<Text
-  padded={true}
+<View
   style={
     Object {
-      "color": "#303030",
-      "fontFamily": "InterUI-Black",
-      "fontSize": 43,
-      "lineHeight": 49.45,
-      "paddingVertical": 48.38,
+      "alignSelf": "stretch",
+      "backgroundColor": "#A5A5A5",
+      "borderRadius": 16,
+      "height": 43,
+      "marginVertical": 48.38,
+      "width": "100%",
     }
   }
->
-  Padded H1 text
-</Text>
+/>
 `;
 
 exports[`the H1 component should render correctly 1`] = `

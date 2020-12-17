@@ -444,19 +444,18 @@ exports[`ContentCard renders a Default Placeholder 1`] = `
             }
             withIcon="empty"
           >
-            <Text
+            <View
               style={
                 Object {
-                  "color": "#A5A5A5",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 16,
+                  "height": 12,
+                  "marginVertical": 3,
+                  "width": "50%",
                 }
               }
-              tint="#A5A5A5"
-            >
-              empty
-            </Text>
+            />
           </View>
         </View>
       </View>
@@ -1490,19 +1489,18 @@ exports[`ContentCard renders with Default Placeholder 1`] = `
             }
             withIcon="empty"
           >
-            <Text
+            <View
               style={
                 Object {
-                  "color": "#A5A5A5",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "alignSelf": "stretch",
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 16,
+                  "height": 12,
+                  "marginVertical": 3,
+                  "width": "50%",
                 }
               }
-              tint="#A5A5A5"
-            >
-              empty
-            </Text>
+            />
           </View>
         </View>
       </View>

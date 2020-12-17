@@ -435,35 +435,30 @@ exports[`ActionList should render a loading state 1`] = `
             }
           }
         >
-          <Text
-            numberOfLines={1}
+          <View
             style={
               Object {
-                "color": "#303030",
-                "fontFamily": "InterUI-Medium",
-                "fontSize": 14,
-                "lineHeight": 21,
+                "alignSelf": "stretch",
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 16,
+                "height": 14,
+                "marginVertical": 3.5,
+                "width": "60%",
               }
             }
-          >
-            Hello 1
-          </Text>
-          <Text
-            bold={false}
-            ellipsizeMode="tail"
-            italic={false}
-            numberOfLines={2}
+          />
+          <View
             style={
               Object {
-                "color": "#A5A5A5",
-                "fontFamily": "InterUI-Regular",
-                "fontSize": 12,
-                "lineHeight": 18,
+                "alignSelf": "stretch",
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 16,
+                "height": 12,
+                "marginVertical": 3,
+                "width": "100%",
               }
             }
-          >
-            Boom
-          </Text>
+          />
         </View>
       </View>
       <View
@@ -505,35 +500,30 @@ exports[`ActionList should render a loading state 1`] = `
             }
           }
         >
-          <Text
-            numberOfLines={1}
+          <View
             style={
               Object {
-                "color": "#303030",
-                "fontFamily": "InterUI-Medium",
-                "fontSize": 14,
-                "lineHeight": 21,
+                "alignSelf": "stretch",
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 16,
+                "height": 14,
+                "marginVertical": 3.5,
+                "width": "60%",
               }
             }
-          >
-            Hello 2
-          </Text>
-          <Text
-            bold={false}
-            ellipsizeMode="tail"
-            italic={false}
-            numberOfLines={2}
+          />
+          <View
             style={
               Object {
-                "color": "#A5A5A5",
-                "fontFamily": "InterUI-Regular",
-                "fontSize": 12,
-                "lineHeight": 18,
+                "alignSelf": "stretch",
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 16,
+                "height": 12,
+                "marginVertical": 3,
+                "width": "100%",
               }
             }
-          >
-            Boom
-          </Text>
+          />
         </View>
       </View>
       <View
@@ -575,35 +565,30 @@ exports[`ActionList should render a loading state 1`] = `
             }
           }
         >
-          <Text
-            numberOfLines={1}
+          <View
             style={
               Object {
-                "color": "#303030",
-                "fontFamily": "InterUI-Medium",
-                "fontSize": 14,
-                "lineHeight": 21,
+                "alignSelf": "stretch",
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 16,
+                "height": 14,
+                "marginVertical": 3.5,
+                "width": "60%",
               }
             }
-          >
-            Hello 3
-          </Text>
-          <Text
-            bold={false}
-            ellipsizeMode="tail"
-            italic={false}
-            numberOfLines={2}
+          />
+          <View
             style={
               Object {
-                "color": "#A5A5A5",
-                "fontFamily": "InterUI-Regular",
-                "fontSize": 12,
-                "lineHeight": 18,
+                "alignSelf": "stretch",
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 16,
+                "height": 12,
+                "marginVertical": 3,
+                "width": "100%",
               }
             }
-          >
-            Boom
-          </Text>
+          />
         </View>
       </View>
       <View
@@ -645,35 +630,30 @@ exports[`ActionList should render a loading state 1`] = `
             }
           }
         >
-          <Text
-            numberOfLines={1}
+          <View
             style={
               Object {
-                "color": "#303030",
-                "fontFamily": "InterUI-Medium",
-                "fontSize": 14,
-                "lineHeight": 21,
+                "alignSelf": "stretch",
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 16,
+                "height": 14,
+                "marginVertical": 3.5,
+                "width": "60%",
               }
             }
-          >
-            Hello 4
-          </Text>
-          <Text
-            bold={false}
-            ellipsizeMode="tail"
-            italic={false}
-            numberOfLines={2}
+          />
+          <View
             style={
               Object {
-                "color": "#A5A5A5",
-                "fontFamily": "InterUI-Regular",
-                "fontSize": 12,
-                "lineHeight": 18,
+                "alignSelf": "stretch",
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 16,
+                "height": 12,
+                "marginVertical": 3,
+                "width": "100%",
               }
             }
-          >
-            Boom
-          </Text>
+          />
         </View>
       </View>
       <View

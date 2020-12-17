@@ -36,20 +36,18 @@ exports[`the UIText component should accept and render passed in styles 1`] = `
 `;
 
 exports[`the UIText component should render a loading state 1`] = `
-<Text
+<View
   style={
     Object {
-      "color": "#303030",
-      "fontFamily": "System",
-      "fontSize": 14,
-      "fontStyle": null,
-      "fontWeight": null,
-      "lineHeight": 21,
+      "alignSelf": "stretch",
+      "backgroundColor": "#A5A5A5",
+      "borderRadius": 16,
+      "height": 14,
+      "marginVertical": 3.5,
+      "width": "40%",
     }
   }
->
-  Default UIText text
-</Text>
+/>
 `;
 
 exports[`the UIText component should render as bold 1`] = `

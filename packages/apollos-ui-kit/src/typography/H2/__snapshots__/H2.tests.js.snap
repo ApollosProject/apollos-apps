@@ -32,36 +32,35 @@ exports[`the H2 component should accept and render passed in styles 1`] = `
 `;
 
 exports[`the H2 component should render a loading state 1`] = `
-<Text
+<View
   style={
     Object {
-      "color": "#303030",
-      "fontFamily": "InterUI-Black",
-      "fontSize": 36,
-      "lineHeight": 41.4,
+      "alignSelf": "stretch",
+      "backgroundColor": "#A5A5A5",
+      "borderRadius": 16,
+      "height": 36,
+      "marginVertical": 2.6999999999999993,
+      "width": "100%",
     }
   }
->
-  Default H2 text
-</Text>
+/>
 `;
 
 exports[`the H2 component should render a loading state with correct positioning (margins) 1`] = `
-<Text
-  padded={true}
+<View
   style={
     Object {
-      "color": "#303030",
-      "fontFamily": "InterUI-Black",
-      "fontSize": 36,
-      "lineHeight": 41.4,
-      "paddingBottom": 20.02,
-      "paddingTop": 24,
+      "alignSelf": "stretch",
+      "backgroundColor": "#A5A5A5",
+      "borderRadius": 16,
+      "height": 36,
+      "marginBottom": 20.02,
+      "marginTop": 24,
+      "marginVertical": 2.6999999999999993,
+      "width": "100%",
     }
   }
->
-  Padded H2 text
-</Text>
+/>
 `;
 
 exports[`the H2 component should render correctly 1`] = `
