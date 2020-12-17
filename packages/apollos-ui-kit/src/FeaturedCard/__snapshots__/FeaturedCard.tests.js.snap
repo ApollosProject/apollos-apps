@@ -251,31 +251,66 @@ exports[`FeaturedCard should render a loading state with isLoading 1`] = `
       }
     >
       <View
+        bordered={false}
+        disabled={false}
+        pill={false}
         style={
           Object {
             "alignItems": "center",
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "#17B582",
+            "borderColor": "#17B582",
             "borderRadius": 16,
+            "borderWidth": 2,
+            "elevation": 2,
+            "flexDirection": "row",
             "height": 32,
+            "justifyContent": "center",
             "marginBottom": 16,
+            "opacity": 1,
+            "overflow": "hidden",
             "paddingHorizontal": 12,
-            "width": 64,
           }
         }
-      />
-      <View
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 7,
+              "width": 7,
+            }
+          }
+        />
+        <Text
+          style={
+            Object {
+              "alignItems": "center",
+              "color": "#FFFFFF",
+              "fontFamily": "InterUI-Bold",
+              "fontSize": 12,
+              "justifyContent": "center",
+              "lineHeight": 18,
+              "textAlign": "center",
+            }
+          }
+        >
+          Live
+        </Text>
+      </View>
+      <Text
+        numberOfLines={3}
         style={
           Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 36,
-            "marginVertical": 2.6999999999999993,
-            "width": "100%",
+            "color": "#F8F7F4",
+            "fontFamily": "InterUI-Black",
+            "fontSize": 36,
+            "lineHeight": 41.4,
           }
         }
-      />
+      >
+        Are you telling me that you built a time machine out of a DeLorean?
+      </Text>
       <View
         hasSummary={true}
         style={
@@ -294,18 +329,21 @@ exports[`FeaturedCard should render a loading state with isLoading 1`] = `
             }
           }
         >
-          <View
+          <Text
+            bold={false}
+            italic={false}
+            numberOfLines={2}
             style={
               Object {
-                "alignSelf": "stretch",
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 16,
-                "marginVertical": 5,
-                "width": "100%",
+                "color": "#F8F7F4",
+                "fontFamily": "InterUI-Regular",
+                "fontSize": 16,
+                "lineHeight": 26,
               }
             }
-          />
+          >
+            The way I see it, if you’re going to build a time machine into a car, why not do it with some style?
+          </Text>
         </View>
         <View
           style={

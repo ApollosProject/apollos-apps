@@ -32,35 +32,36 @@ exports[`the H5 component should accept and render passed in styles 1`] = `
 `;
 
 exports[`the H5 component should render a loading state 1`] = `
-<View
+<Text
   style={
     Object {
-      "alignSelf": "stretch",
-      "backgroundColor": "#A5A5A5",
-      "borderRadius": 16,
-      "height": 14,
-      "marginVertical": 3.5,
-      "width": "60%",
+      "color": "#303030",
+      "fontFamily": "InterUI-Medium",
+      "fontSize": 14,
+      "lineHeight": 21,
     }
   }
-/>
+>
+  Default H5 text
+</Text>
 `;
 
 exports[`the H5 component should render a loading state with correct positioning (margins) 1`] = `
-<View
+<Text
+  padded={true}
   style={
     Object {
-      "alignSelf": "stretch",
-      "backgroundColor": "#A5A5A5",
-      "borderRadius": 16,
-      "height": 14,
-      "marginBottom": 10.5,
-      "marginTop": 13.86,
-      "marginVertical": 3.5,
-      "width": "60%",
+      "color": "#303030",
+      "fontFamily": "InterUI-Medium",
+      "fontSize": 14,
+      "lineHeight": 21,
+      "paddingBottom": 10.5,
+      "paddingTop": 13.86,
     }
   }
-/>
+>
+  Padded H5 text
+</Text>
 `;
 
 exports[`the H5 component should render correctly 1`] = `

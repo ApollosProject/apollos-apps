@@ -131,18 +131,18 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
           }
         }
       >
-        <View
+        <Text
           style={
             Object {
-              "alignSelf": "stretch",
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "height": 14,
-              "marginVertical": 3.5,
-              "width": "60%",
+              "color": "#303030",
+              "fontFamily": "InterUI-Medium",
+              "fontSize": 14,
+              "lineHeight": 21,
             }
           }
-        />
+        >
+          Why Jesus is Timeless
+        </Text>
         <View
           flexed={false}
           style={
@@ -160,18 +160,19 @@ exports[`the ThumbnailCard component should render a loading state 1`] = `
               }
             }
           >
-            <View
+            <Text
               style={
                 Object {
-                  "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 12,
-                  "marginVertical": 3,
-                  "width": "50%",
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 18,
                 }
               }
-            />
+              tint="#A5A5A5"
+            >
+              Time Travel
+            </Text>
           </View>
         </View>
       </View>

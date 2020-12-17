@@ -36,18 +36,20 @@ exports[`the BodySmall component should accept and render passed in styles 1`] =
 `;
 
 exports[`the BodySmall component should render a loading state 1`] = `
-<View
+<Text
+  bold={false}
+  italic={false}
   style={
     Object {
-      "alignSelf": "stretch",
-      "backgroundColor": "#A5A5A5",
-      "borderRadius": 16,
-      "height": 12,
-      "marginVertical": 3,
-      "width": "100%",
+      "color": "#303030",
+      "fontFamily": "InterUI-Regular",
+      "fontSize": 12,
+      "lineHeight": 18,
     }
   }
-/>
+>
+  Default BodySmall text
+</Text>
 `;
 
 exports[`the BodySmall component should render as bold 1`] = `

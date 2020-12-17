@@ -77,44 +77,56 @@ exports[`DefaultCard should render a loading state with isLoading 1`] = `
         }
       >
         <View
+          bordered={false}
+          disabled={false}
+          pill={false}
           style={
             Object {
               "alignItems": "center",
-              "alignSelf": "stretch",
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "#17B582",
+              "borderColor": "#17B582",
               "borderRadius": 16,
+              "borderWidth": 2,
+              "elevation": 2,
+              "flexDirection": "row",
               "height": 32,
+              "justifyContent": "center",
+              "opacity": 1,
+              "overflow": "hidden",
               "paddingHorizontal": 12,
-              "width": 64,
             }
           }
         />
       </View>
-      <View
+      <Text
+        numberOfLines={2}
         style={
           Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 24,
-            "marginVertical": 1.8000000000000007,
-            "width": "100%",
+            "color": "#303030",
+            "fontFamily": "InterUI-Black",
+            "fontSize": 24,
+            "lineHeight": 27.6,
           }
         }
-      />
-      <View
+      >
+        Are you telling me that you built a time machine out of a DeLorean?
+      </Text>
+      <Text
+        bold={false}
+        italic={false}
+        numberOfLines={2}
         style={
           Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 16,
-            "marginTop": 16,
-            "marginVertical": 5,
-            "width": "100%",
+            "color": "#303030",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 16,
+            "lineHeight": 26,
+            "paddingTop": 16,
           }
         }
-      />
+      >
+        The way I see it, if you’re going to build a time machine into a car, why not do it with some style?
+      </Text>
     </View>
   </View>
 </View>

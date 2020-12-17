@@ -53,18 +53,19 @@ exports[`the ChannelLabel component should render a skeleton view 1`] = `
       }
     }
   >
-    <View
+    <Text
       style={
         Object {
-          "alignSelf": "stretch",
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 16,
-          "height": 12,
-          "marginVertical": 3,
-          "width": "50%",
+          "color": "#A5A5A5",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
         }
       }
-    />
+      tint="#A5A5A5"
+    >
+      Default
+    </Text>
   </View>
 </View>
 `;
@@ -98,18 +99,19 @@ exports[`the ChannelLabel component should render a skeleton view that supports 
     }
     withIcon="like"
   >
-    <View
+    <Text
       style={
         Object {
-          "alignSelf": "stretch",
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 16,
-          "height": 12,
-          "marginVertical": 3,
-          "width": "50%",
+          "color": "#A5A5A5",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
         }
       }
-    />
+      tint="#A5A5A5"
+    >
+      Default
+    </Text>
   </View>
 </View>
 `;

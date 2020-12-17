@@ -643,30 +643,35 @@ exports[`ActionListCard should render a loading state 1`] = `
               }
             }
           >
-            <View
+            <Text
+              numberOfLines={1}
               style={
                 Object {
-                  "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 14,
-                  "marginVertical": 3.5,
-                  "width": "60%",
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
                 }
               }
-            />
-            <View
+            >
+              Hello 1
+            </Text>
+            <Text
+              bold={false}
+              ellipsizeMode="tail"
+              italic={false}
+              numberOfLines={2}
               style={
                 Object {
-                  "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 12,
-                  "marginVertical": 3,
-                  "width": "100%",
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Regular",
+                  "fontSize": 12,
+                  "lineHeight": 18,
                 }
               }
-            />
+            >
+              Boom
+            </Text>
           </View>
         </View>
       </View>
@@ -736,30 +741,35 @@ exports[`ActionListCard should render a loading state 1`] = `
               }
             }
           >
-            <View
+            <Text
+              numberOfLines={1}
               style={
                 Object {
-                  "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 14,
-                  "marginVertical": 3.5,
-                  "width": "60%",
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
                 }
               }
-            />
-            <View
+            >
+              Hello 2
+            </Text>
+            <Text
+              bold={false}
+              ellipsizeMode="tail"
+              italic={false}
+              numberOfLines={2}
               style={
                 Object {
-                  "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 12,
-                  "marginVertical": 3,
-                  "width": "100%",
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Regular",
+                  "fontSize": 12,
+                  "lineHeight": 18,
                 }
               }
-            />
+            >
+              Boom
+            </Text>
           </View>
         </View>
       </View>
@@ -829,30 +839,35 @@ exports[`ActionListCard should render a loading state 1`] = `
               }
             }
           >
-            <View
+            <Text
+              numberOfLines={1}
               style={
                 Object {
-                  "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 14,
-                  "marginVertical": 3.5,
-                  "width": "60%",
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
                 }
               }
-            />
-            <View
+            >
+              Hello 3
+            </Text>
+            <Text
+              bold={false}
+              ellipsizeMode="tail"
+              italic={false}
+              numberOfLines={2}
               style={
                 Object {
-                  "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 12,
-                  "marginVertical": 3,
-                  "width": "100%",
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Regular",
+                  "fontSize": 12,
+                  "lineHeight": 18,
                 }
               }
-            />
+            >
+              Boom
+            </Text>
           </View>
         </View>
       </View>
@@ -922,30 +937,35 @@ exports[`ActionListCard should render a loading state 1`] = `
               }
             }
           >
-            <View
+            <Text
+              numberOfLines={1}
               style={
                 Object {
-                  "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 14,
-                  "marginVertical": 3.5,
-                  "width": "60%",
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
                 }
               }
-            />
-            <View
+            >
+              Hello 4
+            </Text>
+            <Text
+              bold={false}
+              ellipsizeMode="tail"
+              italic={false}
+              numberOfLines={2}
               style={
                 Object {
-                  "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 12,
-                  "marginVertical": 3,
-                  "width": "100%",
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Regular",
+                  "fontSize": 12,
+                  "lineHeight": 18,
                 }
               }
-            />
+            >
+              Boom
+            </Text>
           </View>
         </View>
       </View>

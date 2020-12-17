@@ -32,35 +32,36 @@ exports[`the H4 component should accept and render passed in styles 1`] = `
 `;
 
 exports[`the H4 component should render a loading state 1`] = `
-<View
+<Text
   style={
     Object {
-      "alignSelf": "stretch",
-      "backgroundColor": "#A5A5A5",
-      "borderRadius": 16,
-      "height": 16,
-      "marginVertical": 4,
-      "width": "80%",
+      "color": "#303030",
+      "fontFamily": "InterUI-Bold",
+      "fontSize": 16,
+      "lineHeight": 24,
     }
   }
-/>
+>
+  Default H4 text
+</Text>
 `;
 
 exports[`the H4 component should render a loading state with correct positioning (margins) 1`] = `
-<View
+<Text
+  padded={true}
   style={
     Object {
-      "alignSelf": "stretch",
-      "backgroundColor": "#A5A5A5",
-      "borderRadius": 16,
-      "height": 16,
-      "marginBottom": 12,
-      "marginTop": 15.84,
-      "marginVertical": 4,
-      "width": "80%",
+      "color": "#303030",
+      "fontFamily": "InterUI-Bold",
+      "fontSize": 16,
+      "lineHeight": 24,
+      "paddingBottom": 12,
+      "paddingTop": 15.84,
     }
   }
-/>
+>
+  Padded H4 text
+</Text>
 `;
 
 exports[`the H4 component should render correctly 1`] = `

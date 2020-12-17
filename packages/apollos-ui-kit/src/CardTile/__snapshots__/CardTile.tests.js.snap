@@ -191,18 +191,18 @@ exports[`the CardTile component should render a loading skeleton 1`] = `
           }
         }
       >
-        <View
+        <Text
           style={
             Object {
-              "alignSelf": "stretch",
-              "backgroundColor": "#DBDBD9",
-              "borderRadius": 16,
-              "height": 24,
-              "marginVertical": 1.8000000000000007,
-              "width": "100%",
+              "color": "#303030",
+              "fontFamily": "InterUI-Black",
+              "fontSize": 24,
+              "lineHeight": 27.6,
             }
           }
-        />
+        >
+          Why Jesus is Timeless
+        </Text>
       </View>
     </View>
   </View>
@@ -279,18 +279,18 @@ exports[`the CardTile component should render a loading skeleton for all availab
           }
         }
       >
-        <View
+        <Text
           style={
             Object {
-              "alignSelf": "stretch",
-              "backgroundColor": "#DBDBD9",
-              "borderRadius": 16,
-              "height": 24,
-              "marginVertical": 1.8000000000000007,
-              "width": "100%",
+              "color": "#303030",
+              "fontFamily": "InterUI-Black",
+              "fontSize": 24,
+              "lineHeight": 27.6,
             }
           }
-        />
+        >
+          Why Jesus is Timeless
+        </Text>
       </View>
       <View
         style={
@@ -333,32 +333,33 @@ exports[`the CardTile component should render a loading skeleton for all availab
             }
             withIcon="video"
           >
-            <View
+            <Text
               style={
                 Object {
-                  "alignSelf": "stretch",
-                  "backgroundColor": "#DBDBD9",
-                  "borderRadius": 16,
-                  "height": 12,
-                  "marginVertical": 3,
-                  "width": "50%",
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 18,
                 }
               }
-            />
+              tint="#A5A5A5"
+            >
+              Marty McFly
+            </Text>
           </View>
         </View>
-        <View
+        <Text
           style={
             Object {
-              "alignSelf": "stretch",
-              "backgroundColor": "#DBDBD9",
-              "borderRadius": 16,
-              "height": 12,
-              "marginVertical": 3,
-              "width": "50%",
+              "color": "#505050",
+              "fontFamily": "InterUI-Bold",
+              "fontSize": 12,
+              "lineHeight": 18,
             }
           }
-        />
+        >
+          1d
+        </Text>
       </View>
     </View>
   </View>

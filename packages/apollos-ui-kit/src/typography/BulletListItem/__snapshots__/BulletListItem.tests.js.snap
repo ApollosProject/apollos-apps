@@ -16,18 +16,20 @@ exports[`the BulletListItem component should render a loading state 1`] = `
       }
     }
   >
-    <View
+    <Text
+      bold={false}
+      italic={false}
       style={
         Object {
-          "alignSelf": "stretch",
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 16,
-          "height": 16,
-          "marginVertical": 5,
-          "width": "100%",
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
         }
       }
-    />
+    >
+      •
+    </Text>
   </View>
   <View
     style={
@@ -36,18 +38,20 @@ exports[`the BulletListItem component should render a loading state 1`] = `
       }
     }
   >
-    <View
+    <Text
+      bold={false}
+      italic={false}
       style={
         Object {
-          "alignSelf": "stretch",
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 16,
-          "height": 16,
-          "marginVertical": 5,
-          "width": "100%",
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
         }
       }
-    />
+    >
+      "God's work done in God's way will never lack God's supplies." – Hudson Taylor
+    </Text>
   </View>
 </View>
 `;

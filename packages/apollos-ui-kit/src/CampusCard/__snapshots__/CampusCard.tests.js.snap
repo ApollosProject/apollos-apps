@@ -216,18 +216,18 @@ exports[`CampusCard should render a loading 1`] = `
             }
           }
         >
-          <View
+          <Text
             style={
               Object {
-                "alignSelf": "stretch",
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 14,
-                "marginVertical": 3.5,
-                "width": "60%",
+                "color": "#303030",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
               }
             }
-          />
+          >
+            Stanley Goodspeed
+          </Text>
           <View
             style={
               Object {
@@ -237,32 +237,33 @@ exports[`CampusCard should render a loading 1`] = `
               }
             }
           >
-            <View
+            <Text
               style={
                 Object {
-                  "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 12,
-                  "marginVertical": 3,
-                  "width": "50%",
+                  "color": "#505050",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 18,
                 }
               }
-            />
+            >
+              2038
+              mi
+            </Text>
           </View>
         </View>
-        <View
+        <Text
           style={
             Object {
-              "alignSelf": "stretch",
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "height": 12,
-              "marginVertical": 3,
-              "width": "50%",
+              "color": "#505050",
+              "fontFamily": "InterUI-Bold",
+              "fontSize": 12,
+              "lineHeight": 18,
             }
           }
-        />
+        >
+          "How… In the name of Zeus's BUTTHOLE, did you get out of your cell?"
+        </Text>
       </View>
     </View>
   </View>
