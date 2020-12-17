@@ -20,6 +20,8 @@ jest.mock('react-native-safe-area-context', () => ({
   SafeAreaProvider: ({ children }) => children,
 }));
 
+jest.mock('react-native-geolocation-service', () => {});
+
 NativeModules.RNGestureHandlerModule = {
   attachGestureHandler: jest.fn(),
   createGestureHandler: jest.fn(),

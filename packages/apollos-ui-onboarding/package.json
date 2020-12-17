@@ -42,6 +42,7 @@
     "@apollosproject/ui-fragments": "*",
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-notifications": "*",
+    "@apollosproject/ui-map-view": "*",
     "apollo-client": "*",
     "react": "*",
     "react-apollo": "*",
@@ -55,7 +56,6 @@
     "lodash": "4.17.19",
     "moment": "2.22.2",
     "react-is": "^16.8.6",
-    "react-native-geolocation-service": "^3.0.0",
     "react-native-swiper": "^1.5.14",
     "yup": "0.26.6"
   },
