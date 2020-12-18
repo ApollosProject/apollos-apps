@@ -12,6 +12,7 @@ import {
   withTheme,
   Touchable,
   ButtonLink,
+  FlexedView,
   H6,
 } from '@apollosproject/ui-kit';
 
@@ -129,7 +130,7 @@ class HorizontalCardListFeature extends PureComponent {
         <View>
           {isLoading || title || subtitle || primaryAction ? (
             <Header>
-              <View>
+              <FlexedView>
                 {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
                   <Title
                     isLoading={isLoading && !title && !subtitle}
@@ -143,8 +144,8 @@ class HorizontalCardListFeature extends PureComponent {
                     {subtitle}
                   </Subtitle>
                 ) : null}
-              </View>
-              {primaryAction ? (
+              </FlexedView>
+              {isLoading || primaryAction ? (
                 <AndroidTouchableFix
                   onPress={() => onPressAction(primaryAction)}
                 >
