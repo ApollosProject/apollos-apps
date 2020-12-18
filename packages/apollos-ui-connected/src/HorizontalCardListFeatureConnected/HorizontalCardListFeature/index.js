@@ -12,6 +12,7 @@ import {
   withTheme,
   Touchable,
   ButtonLink,
+  FlexedView,
   H6,
 } from '@apollosproject/ui-kit';
 
@@ -61,8 +62,6 @@ const ButtonLinkSpacing = styled(
   }),
   'ui-connected.HorizontalCardListFeatureConnected.HorizontalCardListFeature.ButtonLinkSpacing'
 )(View);
-
-const CardHeaderTitles = styled(({ flex: 1}), 'ui-connected.HorizontalCardListFeatureConnected.HorizontalCardListFeature.HeaderTitles')(View)
 
 class HorizontalCardListFeature extends PureComponent {
   static defaultProps = {
@@ -126,18 +125,18 @@ class HorizontalCardListFeature extends PureComponent {
       loadingStateObject,
     } = this.props;
     const onPressAction = onPressPrimaryButton || onPressItem;
-    console.log(isLoading, subtitle);
+
     return (
       !!(isLoading || cards.length) && (
         <View>
           {isLoading || title || subtitle || primaryAction ? (
             <Header>
-              <CardHeaderTitles>
+              <FlexedView>
                 {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
                   <Title numberOfLines={1}>{title}</Title>
                 ) : null}
                 {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
-              </CardHeaderTitles>
+              </FlexedView>
               {isLoading || primaryAction ? (
                 <AndroidTouchableFix
                   onPress={() => onPressAction(primaryAction)}
