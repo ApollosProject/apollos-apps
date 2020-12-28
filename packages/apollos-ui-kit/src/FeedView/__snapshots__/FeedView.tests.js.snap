@@ -112,7 +112,7 @@ exports[`The FeedView component handles a renderItem prop 1`] = `
               }
               style={
                 Object {
-                  "aspectRatio": 1,
+                  "aspectRatio": 1.5,
                   "backgroundColor": "#A5A5A5",
                   "resizeMode": "cover",
                   "width": "100%",
