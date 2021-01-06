@@ -70,8 +70,8 @@ const ConnectedImage = ({
 
   // Aspect Ratio Calculations
   const [[width, height], setImageSize] = useState([
-    cachedSource.width,
-    cachedSource.height,
+    cachedSource[0]?.width,
+    cachedSource[0]?.height,
   ]);
   const aspectRatioStyle = {};
 
@@ -100,7 +100,7 @@ const ConnectedImage = ({
         nativeEvent: { source: loadedSource },
       } = e;
       updateCache(loadedSource);
-      setImageSize([loadedSource.newWidth, loadedSource.newHeight]);
+      setImageSize([loadedSource.width, loadedSource.height]);
     }
   };
 
