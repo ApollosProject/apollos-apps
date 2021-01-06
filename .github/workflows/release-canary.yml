@@ -5,7 +5,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  realease:
 
     runs-on: ubuntu-latest
 
