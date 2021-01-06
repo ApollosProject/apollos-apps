@@ -2,11 +2,11 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Query, Mutation } from '@apollo/client/react/components';
 import { Dimensions } from 'react-native';
-import Geolocation from 'react-native-geolocation-service';
+import { PaddedView, ButtonLink } from '@apollosproject/ui-kit';
 import { get } from 'lodash';
 
 import MapView from '../MapView';
-
+import getUserLocation from '../utils/getUserLocation';
 import GET_CAMPUSES from './getCampusLocations';
 import CHANGE_CAMPUS from './campusChange';
 
@@ -52,18 +52,19 @@ class Location extends PureComponent {
   };
 
   async componentDidMount() {
-    Geolocation.getCurrentPosition(
-      (position) => {
+    try {
+      const position = await getUserLocation();
+      if (position) {
         this.setState({
           userLocation: {
             latitude: position.coords.latitude,
             longitude: position.coords.longitude,
           },
         });
-      },
-      (e) => console.warn('Error getting location!', e), // eslint-disable-line no-console
-      { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
-    );
+      }
+    } catch (e) {
+      console.warn(e);
+    }
   }
 
   render() {

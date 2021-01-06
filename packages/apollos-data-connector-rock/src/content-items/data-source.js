@@ -514,7 +514,7 @@ export default class ContentItem extends RockApolloDataSource {
     return childItemsWithApollosIds[firstInteractedIndex - 1];
   }
 
-  async getSeriesWithUserProgress() {
+  async getSeriesWithUserProgress({ channelIds = [] } = {}) {
     const { Auth, Interactions } = this.context.dataSources;
 
     // Safely exit if we don't have a current user.
@@ -535,29 +535,29 @@ export default class ContentItem extends RockApolloDataSource {
       })
     );
 
-    // We need to make sure we don't include the campaign channels.
-    // We could also consider doing this using a whitelist.
-    // This also may be part of a broader conversation about how we identify the true parent of a content item
-    const blacklistedIds = (
-      await this.byContentChannelIds(ROCK_MAPPINGS.CAMPAIGN_CHANNEL_IDS).get()
-    ).map(({ id }) => `${id}`);
-
-    const completedIds = (
-      await Promise.all(
-        ids.map(async (id) => ({
-          id,
-          percent: await this.getPercentComplete({ id }),
-        }))
-      )
-    )
+    const completedIds = (await Promise.all(
+      ids.map(async (id) => ({
+        id,
+        percent: await this.getPercentComplete({ id }),
+      }))
+    ))
       .filter(({ percent }) => percent === 100)
       .map(({ id }) => id);
 
-    const finalIds = ids.filter(
-      (id) => ![...blacklistedIds, ...completedIds].includes(id)
-    );
+    const inProgressIds = ids.filter((id) => ![...completedIds].includes(id));
+    let cursor = this.getFromIds(inProgressIds);
 
-    return this.getFromIds(finalIds);
+    // only search through allowed channels
+    channelIds.forEach((id) => {
+      cursor = cursor.andFilter(`ContentChannelId eq ${id}`);
+    });
+
+    // exclude campaign channels
+    ROCK_MAPPINGS.CAMPAIGN_CHANNEL_IDS.forEach((id) => {
+      cursor = cursor.andFilter(`ContentChannelId ne ${id}`);
+    });
+
+    return cursor;
   }
 
   async getPercentComplete({ id }) {

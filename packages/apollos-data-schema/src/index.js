@@ -811,6 +811,7 @@ export const featuresSchema = gql`
     READ_CONTENT
     READ_EVENT
     OPEN_URL
+    OPEN_AUTHENTICATED_URL
     OPEN_NODE
     OPEN_CHANNEL
   }

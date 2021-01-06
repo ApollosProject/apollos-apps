@@ -30,6 +30,9 @@ export const ACTION_MAP = {
   OPEN_URL: ({ openUrl, relatedNode }) => {
     openUrl(relatedNode.url);
   },
+  OPEN_AUTHENTICATED_URL: ({ openUrl, relatedNode }) => {
+    openUrl(relatedNode.url, {}, { useRockToken: true });
+  },
   OPEN_CHANNEL: ({ relatedNode, navigation }) => {
     navigation.navigate('ContentFeed', {
       itemId: relatedNode.id,
