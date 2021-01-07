@@ -1,23 +1,23 @@
 {
-   "name": "@apollosproject/ui-test-utils",
-   "repository": "git://github.com/apollosproject/apollos-apps.git",
-   "version": "1.7.0",
-   "main": "./src/index.js",
-   "peerDependencies": {
-     "prop-types": "*",
-     "react": "*",
-     "react-navigation": "*",
-     "react-test-renderer": "*",
-     "waait": "*"
-   },
-   "devDependencies": {
+  "name": "@apollosproject/ui-test-utils",
+  "repository": "git://github.com/apollosproject/apollos-apps.git",
+  "version": "2.0.0-beta.0",
+  "main": "./src/index.js",
+  "peerDependencies": {
+    "prop-types": "*",
+    "react": "*",
+    "react-navigation": "*",
+    "react-test-renderer": "*",
+    "waait": "*"
+  },
+  "devDependencies": {
     "@react-navigation/compat": "^5.1.28",
     "@react-navigation/native": "^5.6.1",
     "@react-navigation/stack": "^5.6.2"
-   },
-   "license": "SEE LICENSE IN LICENSE.md",
-   "publishConfig": {
-     "access": "public"
-   },
-   "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"
- }
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"
+}

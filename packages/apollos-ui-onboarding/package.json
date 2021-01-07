@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/ui-onboarding",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "1.8.0-beta.0",
+  "version": "2.0.0-beta.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -20,7 +20,11 @@
   "jest": {
     "preset": "react-native",
     "collectCoverage": true,
-    "coverageReporters": ["json", "lcovonly", "clover"],
+    "coverageReporters": [
+      "json",
+      "lcovonly",
+      "clover"
+    ],
     "transformIgnorePatterns": [
       "node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@react-navigation/stack|@apollosproject|@apollosproject/ui-*))"
     ],
@@ -38,16 +42,16 @@
     ]
   },
   "peerDependencies": {
+    "@apollo/client": "*",
     "@apollosproject/storybook": "*",
     "@apollosproject/ui-analytics": "*",
     "@apollosproject/ui-fragments": "*",
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-map-view": "*",
     "@apollosproject/ui-notifications": "*",
-    "react-native-safe-area-context": "*",
-    "@apollo/client": "*",
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-native-safe-area-context": "*"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.5.1",
@@ -60,14 +64,14 @@
     "yup": "0.26.6"
   },
   "devDependencies": {
-    "@storybook/react-native": "5.2.4",
     "@apollo/client": "3.3.0-rc.2",
+    "@storybook/react-native": "5.2.4",
     "jest": "^25.1.0",
     "prop-types": "15.6.1",
     "react": "16.13.1",
     "react-native": "0.63.2",
-    "react-test-renderer": "16.13.1",
     "react-native-safe-area-context": "^3.0.7",
+    "react-test-renderer": "16.13.1",
     "waait": "1.0.2"
   },
   "publishConfig": {

@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/ui-auth",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "1.8.0-beta.0",
+  "version": "2.0.0-beta.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -20,7 +20,11 @@
   "jest": {
     "preset": "react-native",
     "collectCoverage": true,
-    "coverageReporters": ["json", "lcovonly", "clover"],
+    "coverageReporters": [
+      "json",
+      "lcovonly",
+      "clover"
+    ],
     "transformIgnorePatterns": [
       "../../node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@apollosproject|@react-navigation/stack))"
     ],
@@ -36,18 +40,18 @@
     ]
   },
   "peerDependencies": {
+    "@apollo/client": "*",
     "@apollosproject/ui-analytics": "*",
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-notifications": "*",
     "@apollosproject/ui-storybook": "*",
     "@react-native-community/async-storage": "*",
-    "@apollo/client": "*",
+    "@react-navigation/native": "*",
+    "@react-navigation/stack": "*",
     "react": "*",
     "react-native": "*",
     "react-native-gesture-handler": "*",
-    "@react-navigation/native": "*",
-    "react-native-screens": "*",
-    "@react-navigation/stack": "*"
+    "react-native-screens": "*"
   },
   "dependencies": {
     "formik": "1.5.1",
@@ -55,16 +59,16 @@
     "yup": "^0.27.0"
   },
   "devDependencies": {
-    "@react-native-community/async-storage": "^1.5.1",
     "@apollo/client": "3.3.0-rc.2",
-    "@apollosproject/ui-test-utils": "1.7.0",
+    "@apollosproject/ui-test-utils": "^2.0.0-beta.0",
+    "@react-native-community/async-storage": "^1.5.1",
+    "@react-navigation/native": "^5.6.1",
+    "@react-navigation/stack": "^5.6.2",
     "jest": "^25.1.0",
     "prop-types": "15.6.1",
     "react": "16.13.1",
     "react-native": "0.63.2",
     "react-native-gesture-handler": "^1.3.0",
-    "@react-navigation/native": "^5.6.1",
-    "@react-navigation/stack": "^5.6.2",
     "react-native-screens": "2.9.0",
     "react-test-renderer": "16.13.1",
     "waait": "^1.0.4"

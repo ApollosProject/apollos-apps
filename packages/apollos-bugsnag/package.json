@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/bugsnag",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "1.8.0-beta.0",
+  "version": "2.0.0-beta.0",
   "main": "lib/index.js",
   "react-native": "react-native/index.js",
   "files": [
@@ -15,7 +15,11 @@
   },
   "jest": {
     "collectCoverage": true,
-    "coverageReporters": ["json", "lcovonly", "clover"],
+    "coverageReporters": [
+      "json",
+      "lcovonly",
+      "clover"
+    ],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
       "react-native/**/*.{js,jsx}"
@@ -30,7 +34,7 @@
     ]
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^1.8.0-beta.0"
+    "@apollosproject/babel-preset-apollos": "^2.0.0-beta.0"
   },
   "dependencies": {
     "@bugsnag/js": "7.2.1"

@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/ui-fragments",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "1.8.0-beta.0",
+  "version": "2.0.0-beta.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -19,7 +19,11 @@
   ],
   "jest": {
     "collectCoverage": true,
-    "coverageReporters": ["json", "lcovonly", "clover"],
+    "coverageReporters": [
+      "json",
+      "lcovonly",
+      "clover"
+    ],
     "transformIgnorePatterns": [
       "node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@apollosproject))"
     ],
