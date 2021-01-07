@@ -20,7 +20,11 @@
   "jest": {
     "preset": "react-native",
     "collectCoverage": true,
-    "coverageReporters": ["json", "lcovonly", "clover"],
+    "coverageReporters": [
+      "json",
+      "lcovonly",
+      "clover"
+    ],
     "transformIgnorePatterns": [
       "node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@apollosproject))"
     ],
@@ -40,8 +44,6 @@
     "react-native": "*"
   },
   "dependencies": {
-    "@apollosproject/ui-kit": "^1.8.0-beta.0",
-    "@apollosproject/ui-storybook": "^1.8.0-beta.0",
     "entities": "^1.1.2",
     "htmlparser2": "3.9.2"
   },
