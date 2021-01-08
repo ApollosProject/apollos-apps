@@ -194,7 +194,7 @@ class AvatarCloud extends PureComponent {
           typeof this.props.avatars[i] === 'string'
             ? this.props.avatars[i]
             : this.props.avatars[i]?.uri
-        }${this.props.avatars[i].id ? this.props.avatars[i].id : i}`}
+        }${this.props.avatars[i]?.id ? this.props.avatars[i].id : i}`}
         order={Math.floor(Math.abs(Math.sin(i * this.seed)) * 10)} // order = zIndex == higher index === "closer two the viewer/higher layer"
       >
         <RandomAvatar
