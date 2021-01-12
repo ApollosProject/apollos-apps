@@ -37,11 +37,7 @@ export default class LiveStream extends RESTDataSource {
   resource = 'LiveStream';
 
   get baseURL() {
-    return (
-      console.warn(
-        'CHURCH_ONLINE.URL is deprecated. Use CHURCH_ONLINE.WEB_VIEW_URL.'
-      ) || ApollosConfig.CHURCH_ONLINE.URL
-    );
+    return ApollosConfig.CHURCH_ONLINE.URL;
   }
 
   get mediaUrls() {
@@ -49,7 +45,10 @@ export default class LiveStream extends RESTDataSource {
   }
 
   get webViewUrl() {
-    return ApollosConfig.CHURCH_ONLINE.WEB_VIEW_URL;
+    return (
+      ApollosConfig.CHURCH_ONLINE.WEB_VIEW_URL ||
+      ApollosConfig.CHURCH_ONLINE.URL
+    );
   }
 
   async getAccessToken() {
