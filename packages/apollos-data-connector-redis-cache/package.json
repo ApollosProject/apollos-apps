@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/data-connector-redis-cache",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "1.7.0",
+  "version": "1.8.0-beta.0",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
@@ -30,7 +30,7 @@
     "@apollosproject/config": "*"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^1.7.0",
+    "@apollosproject/babel-preset-apollos": "^1.8.0-beta.0",
     "jest": "^23.6.0"
   },
   "publishConfig": {

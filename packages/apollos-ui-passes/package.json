@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/ui-passes",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "1.7.0",
+  "version": "1.8.0-beta.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -45,7 +45,7 @@
     "rn-fetch-blob": "*"
   },
   "dependencies": {
-    "@apollosproject/ui-kit": "^1.7.0",
+    "@apollosproject/ui-kit": "^1.8.0-beta.0",
     "graphql-tag": "^2.10.1",
     "react-apollo": "2.5.5"
   },

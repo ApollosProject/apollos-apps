@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/data-connector-rock",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "1.7.0",
+  "version": "1.8.0-beta.0",
   "main": "lib/index.js",
   "scripts": {
     "test": "TZ=UTC jest",
@@ -23,7 +23,7 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@apollosproject/server-core": "^1.7.0",
+    "@apollosproject/server-core": "^1.8.0-beta.0",
     "awesome-phonenumber": "^2.4.2",
     "form-data": "^2.3.3",
     "hyphenation.en-us": "^0.2.1",
@@ -38,12 +38,12 @@
   },
   "peerDependencies": {
     "@apollosproject/config": "*",
-    "@apollosproject/rock-apollo-data-source": "*",
-    "@apollosproject/data-schema": "*"
+    "@apollosproject/data-schema": "*",
+    "@apollosproject/rock-apollo-data-source": "*"
   },
   "devDependencies": {
-    "@apollosproject/apollo-server-env-mock": "^1.7.0",
-    "@apollosproject/babel-preset-apollos": "^1.7.0",
+    "@apollosproject/apollo-server-env-mock": "^1.8.0-beta.0",
+    "@apollosproject/babel-preset-apollos": "^1.8.0-beta.0",
     "apollo-server": "^2.11.0",
     "apollo-server-env": "^2.3.0",
     "graphql": "14.6.0",

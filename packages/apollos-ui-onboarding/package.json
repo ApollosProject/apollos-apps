@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/ui-onboarding",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "1.7.0",
+  "version": "1.8.0-beta.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -41,8 +41,8 @@
     "@apollosproject/ui-analytics": "*",
     "@apollosproject/ui-fragments": "*",
     "@apollosproject/ui-kit": "*",
-    "@apollosproject/ui-notifications": "*",
     "@apollosproject/ui-map-view": "*",
+    "@apollosproject/ui-notifications": "*",
     "apollo-client": "*",
     "react": "*",
     "react-apollo": "*",

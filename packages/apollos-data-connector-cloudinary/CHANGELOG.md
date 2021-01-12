@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0-beta.0](https://github.com/apollosproject/apollos-apps/compare/v1.7.0...v1.8.0-beta.0) (2021-01-06)
+
+**Note:** Version bump only for package @apollosproject/data-connector-cloudinary
+
+
+
+
+
 # [1.7.0](https://github.com/apollosproject/apollos-apps/compare/v1.7.0-beta.3...v1.7.0) (2020-11-18)
 
 **Note:** Version bump only for package @apollosproject/data-connector-cloudinary
