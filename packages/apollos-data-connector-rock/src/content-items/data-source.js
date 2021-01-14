@@ -109,20 +109,22 @@ export default class ContentItem extends RockApolloDataSource {
     }));
   };
 
-  getFeatures({ attributeValues, __typename }) {
+  getFeatures({ attributeValues, __typename, id }) {
     const { Feature } = this.context.dataSources;
     const features = [];
 
-      features.push(Features.addCommentFeature(), Features.createCommentFeature())
+    features.push(
+      Feature.createCommentListFeature({ nodeId: id, nodeType: __typename })
+    );
 
-//     if(__typename == "DevotionalContentItem"){
-//       features.push(Features.createCommentFeature())
-//     }
-// 
-//     const text = get(attributeValues, 'showComments.value', '');
-//     if (text == 'True') {
-//       features.push(Features.createCommentFeature())
-//     }    
+    //     if(__typename == "DevotionalContentItem"){
+    //       features.push(Features.createCommentFeature())
+    //     }
+    //
+    //     const text = get(attributeValues, 'showComments.value', '');
+    //     if (text == 'True') {
+    //       features.push(Features.createCommentFeature())
+    //     }
 
     // TODO this should replace all other methods
     // TODO this should be written in a more extendable way for partners

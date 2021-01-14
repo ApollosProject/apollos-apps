@@ -58,6 +58,9 @@ export default {
   ActionListFeature: {
     id: ({ id }) => createGlobalId(id, 'ActionListFeature'),
   },
+  CommentListFeature: {
+    id: ({ id }) => createGlobalId(id, 'CommentListFeature'),
+  },
   ActionBarFeature: {
     id: ({ id }) => createGlobalId(id, 'ActionBarFeature'),
   },

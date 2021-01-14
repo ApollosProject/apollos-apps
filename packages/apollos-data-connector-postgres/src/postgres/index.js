@@ -28,6 +28,11 @@ const defineModel = ({
   sequelizeOptions = {},
   external = false,
 }) => () => {
+  if (attributes.originId || attributes.originType) {
+    console.error(
+      `originId and originType are reserved attribute names. Use 'external = true' or pick other attributes.`
+    );
+  }
   const model = sequelize.define(
     modelName,
     {

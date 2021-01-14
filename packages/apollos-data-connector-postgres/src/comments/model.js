@@ -3,6 +3,7 @@ import { defineModel, configureModel } from '../postgres';
 
 const createModel = defineModel({
   modelName: 'comments',
+  resolveType: () => 'Comment',
   attributes: {
     text: DataTypes.TEXT,
     // reportCount: {
