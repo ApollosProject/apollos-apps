@@ -15,6 +15,7 @@ class PostgresDataSource {
   initialize(config) {
     this.context = config.context;
     this.sequelize = sequelize;
+    this.model = sequelize.models[this.modelName];
   }
 }
 
