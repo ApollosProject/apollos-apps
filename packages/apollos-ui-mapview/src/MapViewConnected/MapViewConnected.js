@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Query, Mutation } from '@apollo/client/react/components';
 import { Dimensions } from 'react-native';
-import { PaddedView, ButtonLink } from '@apollosproject/ui-kit';
 import { get } from 'lodash';
 
 import MapView from '../MapView';
