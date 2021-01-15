@@ -7,6 +7,8 @@ import { PRAY } from '../screens/PrayerScreen';
 import GET_PRAYER_FEATURE from './getPrayerFeature';
 import PrayerExperienceConnected from '.';
 
+global.Math.random = () => 0.5;
+
 jest.mock('react-native-device-info', () => ({
   getModel: jest.fn(),
   getUniqueId: jest.fn(),
