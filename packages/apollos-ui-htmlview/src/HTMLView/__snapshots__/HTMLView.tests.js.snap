@@ -186,6 +186,22 @@ exports[`the HTMLView component should handle the HTML changing: initial 1`] = `
       </Text>
     </View>
     <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      <Text>
+         
+      </Text>
+    </Text>
+    <Text
       padded={true}
       style={
         Object {
@@ -202,6 +218,22 @@ exports[`the HTMLView component should handle the HTML changing: initial 1`] = `
         <Text>
           Why Being Present Matters
         </Text>
+      </Text>
+    </Text>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      <Text>
+         
       </Text>
     </Text>
     <View
@@ -356,6 +388,22 @@ exports[`the HTMLView component should handle the HTML changing: initial 1`] = `
         </Text>
       </Text>
     </View>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      <Text>
+         
+      </Text>
+    </Text>
     <View
       style={
         Object {
@@ -363,6 +411,9 @@ exports[`the HTMLView component should handle the HTML changing: initial 1`] = `
         }
       }
     >
+      <Text>
+         
+      </Text>
       <View
         style={
           Object {
@@ -418,6 +469,9 @@ exports[`the HTMLView component should handle the HTML changing: initial 1`] = `
           </Text>
         </View>
       </View>
+      <Text>
+         
+      </Text>
       <View
         style={
           Object {
@@ -473,6 +527,9 @@ exports[`the HTMLView component should handle the HTML changing: initial 1`] = `
           </Text>
         </View>
       </View>
+      <Text>
+         
+      </Text>
       <View
         style={
           Object {
@@ -528,7 +585,26 @@ exports[`the HTMLView component should handle the HTML changing: initial 1`] = `
           </Text>
         </View>
       </View>
+      <Text>
+         
+      </Text>
     </View>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      <Text>
+         
+      </Text>
+    </Text>
     <View
       style={
         Object {
@@ -578,6 +654,22 @@ exports[`the HTMLView component should handle the HTML changing: initial 1`] = `
       </Text>
     </View>
     <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      <Text>
+         
+      </Text>
+    </Text>
+    <Text
       padded={true}
       style={
         Object {
@@ -594,6 +686,22 @@ exports[`the HTMLView component should handle the HTML changing: initial 1`] = `
         <Text>
           Four Ways To Stay Away From Your Phone And Be Intentionally Present
         </Text>
+      </Text>
+    </Text>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      <Text>
+         
       </Text>
     </Text>
     <View
@@ -634,6 +742,25 @@ exports[`the HTMLView component should handle the HTML changing: initial 1`] = `
         </Text>
       </Text>
     </View>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      <Text>
+         
+      </Text>
+      <Text>
+         
+      </Text>
+    </Text>
     <View
       style={
         Object {
@@ -689,6 +816,22 @@ exports[`the HTMLView component should handle the HTML changing: initial 1`] = `
         </Text>
       </View>
     </View>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      <Text>
+         
+      </Text>
+    </Text>
     <View
       style={
         Object {
@@ -744,6 +887,22 @@ exports[`the HTMLView component should handle the HTML changing: initial 1`] = `
         </Text>
       </View>
     </View>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      <Text>
+         
+      </Text>
+    </Text>
     <View
       style={
         Object {
@@ -799,6 +958,22 @@ exports[`the HTMLView component should handle the HTML changing: initial 1`] = `
         </Text>
       </View>
     </View>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      <Text>
+         
+      </Text>
+    </Text>
     <View
       style={
         Object {
@@ -854,6 +1029,25 @@ exports[`the HTMLView component should handle the HTML changing: initial 1`] = `
         </Text>
       </View>
     </View>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      <Text>
+         
+      </Text>
+      <Text>
+         
+      </Text>
+    </Text>
     <View
       style={
         Object {
@@ -2219,6 +2413,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
       </Text>
     </View>
     <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      <Text>
+         
+      </Text>
+    </Text>
+    <Text
       padded={true}
       style={
         Object {
@@ -2235,6 +2445,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
         <Text>
           Why Being Present Matters
         </Text>
+      </Text>
+    </Text>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      <Text>
+         
       </Text>
     </Text>
     <View
@@ -2389,6 +2615,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
         </Text>
       </Text>
     </View>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      <Text>
+         
+      </Text>
+    </Text>
     <View
       style={
         Object {
@@ -2396,6 +2638,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
         }
       }
     >
+      <Text>
+         
+      </Text>
       <View
         style={
           Object {
@@ -2451,6 +2696,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
           </Text>
         </View>
       </View>
+      <Text>
+         
+      </Text>
       <View
         style={
           Object {
@@ -2506,6 +2754,9 @@ exports[`the HTMLView component should render example HTML 1`] = `
           </Text>
         </View>
       </View>
+      <Text>
+         
+      </Text>
       <View
         style={
           Object {
@@ -2561,7 +2812,26 @@ exports[`the HTMLView component should render example HTML 1`] = `
           </Text>
         </View>
       </View>
+      <Text>
+         
+      </Text>
     </View>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      <Text>
+         
+      </Text>
+    </Text>
     <View
       style={
         Object {
@@ -2611,6 +2881,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
       </Text>
     </View>
     <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      <Text>
+         
+      </Text>
+    </Text>
+    <Text
       padded={true}
       style={
         Object {
@@ -2627,6 +2913,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
         <Text>
           Four Ways To Stay Away From Your Phone And Be Intentionally Present
         </Text>
+      </Text>
+    </Text>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      <Text>
+         
       </Text>
     </Text>
     <View
@@ -2667,6 +2969,25 @@ exports[`the HTMLView component should render example HTML 1`] = `
         </Text>
       </Text>
     </View>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      <Text>
+         
+      </Text>
+      <Text>
+         
+      </Text>
+    </Text>
     <View
       style={
         Object {
@@ -2722,6 +3043,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
         </Text>
       </View>
     </View>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      <Text>
+         
+      </Text>
+    </Text>
     <View
       style={
         Object {
@@ -2777,6 +3114,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
         </Text>
       </View>
     </View>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      <Text>
+         
+      </Text>
+    </Text>
     <View
       style={
         Object {
@@ -2832,6 +3185,22 @@ exports[`the HTMLView component should render example HTML 1`] = `
         </Text>
       </View>
     </View>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      <Text>
+         
+      </Text>
+    </Text>
     <View
       style={
         Object {
@@ -2887,6 +3256,25 @@ exports[`the HTMLView component should render example HTML 1`] = `
         </Text>
       </View>
     </View>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      <Text>
+         
+      </Text>
+      <Text>
+         
+      </Text>
+    </Text>
     <View
       style={
         Object {
@@ -3083,6 +3471,55 @@ exports[`the HTMLView component should render italic text using <i> 1`] = `
           <Text>
             Testings
           </Text>
+        </Text>
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`the HTMLView component should render spaces between spans 1`] = `
+<View
+  style={
+    Object {
+      "paddingBottom": 18,
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 18,
+        }
+      }
+    >
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 16,
+            "lineHeight": 26,
+          }
+        }
+      >
+        <Text>
+          There are some bits of scripture
+        </Text>
+        <Text>
+           
+        </Text>
+        <Text>
+          where the spaces between words
+        </Text>
+        <Text>
+           
+        </Text>
+        <Text>
+          exist outside spans
         </Text>
       </Text>
     </View>
