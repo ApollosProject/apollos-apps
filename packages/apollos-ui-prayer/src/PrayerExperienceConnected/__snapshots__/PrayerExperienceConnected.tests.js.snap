@@ -1543,21 +1543,21 @@ Array [
                     }
                   />
                   <View
-                    avatarWidth="10%"
+                    avatarWidth="20%"
                     getXYPositions={
                       Object {
-                        "left": "56.21920954612326%",
-                        "top": "23.403808621125158%",
+                        "left": "56.606864173460494%",
+                        "top": "23.304682536290912%",
                       }
                     }
                     order={0}
                     style={
                       Object {
                         "aspectRatio": 1,
-                        "left": "56.21920954612326%",
+                        "left": "56.606864173460494%",
                         "position": "absolute",
-                        "top": "23.403808621125158%",
-                        "width": "10%",
+                        "top": "23.304682536290912%",
+                        "width": "20%",
                         "zIndex": 0,
                       }
                     }
@@ -1588,17 +1588,17 @@ Array [
                     avatarWidth="10%"
                     getXYPositions={
                       Object {
-                        "left": "67.66448876133558%",
-                        "top": "80.51023454834476%",
+                        "left": "55.70979239266592%",
+                        "top": "84.54900862042592%",
                       }
                     }
                     order={7}
                     style={
                       Object {
                         "aspectRatio": 1,
-                        "left": "67.66448876133558%",
+                        "left": "55.70979239266592%",
                         "position": "absolute",
-                        "top": "80.51023454834476%",
+                        "top": "84.54900862042592%",
                         "width": "10%",
                         "zIndex": 7,
                       }
@@ -1627,21 +1627,21 @@ Array [
                     />
                   </View>
                   <View
-                    avatarWidth="20%"
+                    avatarWidth="10%"
                     getXYPositions={
                       Object {
-                        "left": "20.019775727980335%",
-                        "top": "40.8891782947172%",
+                        "left": "25.6678027794571%",
+                        "top": "39.87494871966792%",
                       }
                     }
                     order={9}
                     style={
                       Object {
                         "aspectRatio": 1,
-                        "left": "20.019775727980335%",
+                        "left": "25.6678027794571%",
                         "position": "absolute",
-                        "top": "40.8891782947172%",
-                        "width": "20%",
+                        "top": "39.87494871966792%",
+                        "width": "10%",
                         "zIndex": 9,
                       }
                     }
@@ -4708,17 +4708,17 @@ Array [
                     avatarWidth="20%"
                     getXYPositions={
                       Object {
-                        "left": "20.68114180382986%",
-                        "top": "34.82489439757314%",
+                        "left": "61.36317476188162%",
+                        "top": "26.943922902759255%",
                       }
                     }
                     order={0}
                     style={
                       Object {
                         "aspectRatio": 1,
-                        "left": "20.68114180382986%",
+                        "left": "61.36317476188162%",
                         "position": "absolute",
-                        "top": "34.82489439757314%",
+                        "top": "26.943922902759255%",
                         "width": "20%",
                         "zIndex": 0,
                       }
@@ -4747,22 +4747,22 @@ Array [
                     />
                   </View>
                   <View
-                    avatarWidth="10%"
+                    avatarWidth="20%"
                     getXYPositions={
                       Object {
-                        "left": "76.79069420319752%",
-                        "top": "13.205108271764917%",
+                        "left": "40.886719283881654%",
+                        "top": "75.49260634499122%",
                       }
                     }
-                    order={5}
+                    order={7}
                     style={
                       Object {
                         "aspectRatio": 1,
-                        "left": "76.79069420319752%",
+                        "left": "40.886719283881654%",
                         "position": "absolute",
-                        "top": "13.205108271764917%",
-                        "width": "10%",
-                        "zIndex": 5,
+                        "top": "75.49260634499122%",
+                        "width": "20%",
+                        "zIndex": 7,
                       }
                     }
                   >
@@ -4792,19 +4792,19 @@ Array [
                     avatarWidth="10%"
                     getXYPositions={
                       Object {
-                        "left": "50.177656179116255%",
-                        "top": "64.31817477120597%",
+                        "left": "27.435140604984127%",
+                        "top": "35.43570627629398%",
                       }
                     }
-                    order={8}
+                    order={9}
                     style={
                       Object {
                         "aspectRatio": 1,
-                        "left": "50.177656179116255%",
+                        "left": "27.435140604984127%",
                         "position": "absolute",
-                        "top": "64.31817477120597%",
+                        "top": "35.43570627629398%",
                         "width": "10%",
-                        "zIndex": 8,
+                        "zIndex": 9,
                       }
                     }
                   >
@@ -6496,17 +6496,17 @@ Array [
                     avatarWidth="10%"
                     getXYPositions={
                       Object {
-                        "left": "39.63281258535814%",
-                        "top": "25.73362257049577%",
+                        "left": "28.49224628742852%",
+                        "top": "56.291327086090575%",
                       }
                     }
                     order={0}
                     style={
                       Object {
                         "aspectRatio": 1,
-                        "left": "39.63281258535814%",
+                        "left": "28.49224628742852%",
                         "position": "absolute",
-                        "top": "25.73362257049577%",
+                        "top": "56.291327086090575%",
                         "width": "10%",
                         "zIndex": 0,
                       }
@@ -6535,22 +6535,22 @@ Array [
                     />
                   </View>
                   <View
-                    avatarWidth="20%"
+                    avatarWidth="10%"
                     getXYPositions={
                       Object {
-                        "left": "78.02583473992448%",
-                        "top": "49.78696187840493%",
+                        "left": "41.663401752361494%",
+                        "top": "1.36007081154019%",
                       }
                     }
-                    order={6}
+                    order={3}
                     style={
                       Object {
                         "aspectRatio": 1,
-                        "left": "78.02583473992448%",
+                        "left": "41.663401752361494%",
                         "position": "absolute",
-                        "top": "49.78696187840493%",
-                        "width": "20%",
-                        "zIndex": 6,
+                        "top": "1.36007081154019%",
+                        "width": "10%",
+                        "zIndex": 3,
                       }
                     }
                   >
@@ -6580,19 +6580,19 @@ Array [
                     avatarWidth="10%"
                     getXYPositions={
                       Object {
-                        "left": "30.998421414471125%",
-                        "top": "59.28130936270408%",
+                        "left": "63.328779806884654%",
+                        "top": "53.79262349888047%",
                       }
                     }
-                    order={9}
+                    order={7}
                     style={
                       Object {
                         "aspectRatio": 1,
-                        "left": "30.998421414471125%",
+                        "left": "63.328779806884654%",
                         "position": "absolute",
-                        "top": "59.28130936270408%",
+                        "top": "53.79262349888047%",
                         "width": "10%",
-                        "zIndex": 9,
+                        "zIndex": 7,
                       }
                     }
                   >
