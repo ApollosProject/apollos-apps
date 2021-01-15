@@ -109,12 +109,12 @@ export default class ContentItem extends RockApolloDataSource {
     }));
   };
 
-  getFeatures({ attributeValues, __typename, id }) {
+  getFeatures({ attributeValues, __type, id }) {
     const { Feature } = this.context.dataSources;
     const features = [];
 
     features.push(
-      Feature.createCommentListFeature({ nodeId: id, nodeType: __typename })
+      Feature.createCommentListFeature({ nodeId: id, nodeType: __type })
     );
 
     //     if(__typename == "DevotionalContentItem"){

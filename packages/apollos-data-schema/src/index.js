@@ -977,7 +977,7 @@ export const featuresSchema = gql`
 
 export const commentSchema = gql`
   extend type Mutation {
-    addComment(featureId: ID!, text: String!): Comment
+    addComment(parentId: ID!, text: String!): Comment
   }
 
   type CommentListFeature implements Feature & Node {

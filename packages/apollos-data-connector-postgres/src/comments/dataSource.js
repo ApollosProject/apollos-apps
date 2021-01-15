@@ -4,36 +4,19 @@ import { PostgresDataSource } from '../postgres';
 class CommentDataSource extends PostgresDataSource {
   modelName = 'comments';
 
-  async addComment({ text, featureId }) {
+  async addComment({ text, parentId }) {
     const currentUser = await this.context.dataSources.Auth.getCurrentPerson();
 
-    const { id } = parseGlobalId(featureId);
-    const { nodeId, nodeType } = JSON.parse(id);
+    const { id, __type } = parseGlobalId(parentId);
 
     const ret = await this.sequelize.transaction(async (t) => {
       const comment = await this.model.create(
         {
           text,
-        },
-        { transaction: t }
-      );
-
-      await this.sequelize.models.comment_relationships.create(
-        {
-          externalId: currentUser.id,
-          externalSource: 'rock',
-          relationshipType: 'person',
-          commentId: comment.id,
-        },
-        { transaction: t }
-      );
-
-      await this.sequelize.models.comment_relationships.create(
-        {
-          externalId: nodeId,
-          externalSource: 'rock',
-          relationshipType: 'parent',
-          commentId: comment.id,
+          externalParentId: id,
+          externalParentType: __type,
+          externalParentSource: 'rock',
+          externalPersonId: currentUser.id,
         },
         { transaction: t }
       );
@@ -44,27 +27,20 @@ class CommentDataSource extends PostgresDataSource {
     return ret;
   }
 
-  async getForNode({ nodeId }) {
-    const commentRelationships = await this.sequelize.models.comment_relationships.findAll(
-      {
-        where: { externalId: nodeId, relationshipType: 'parent' },
-        include: this.sequelize.models.comments,
-      }
-    );
+  async getForNode({ nodeId, nodeType }) {
+    const comments = await this.sequelize.models.comments.findAll({
+      where: { externalParentId: nodeId, externalParentType: nodeType },
+    });
 
-    return commentRelationships.map(({ comment }) => comment);
+    return comments;
   }
 
   async getPerson({ id }) {
-    const personRelationship = await this.sequelize.models.comment_relationships.findOne(
-      {
-        where: { commentId: id, relationshipType: 'person' },
-      }
-    );
+    const comment = await this.sequelize.models.comments.findOne({
+      where: { id },
+    });
 
-    return this.context.dataSources.Person.getFromId(
-      personRelationship.externalId
-    );
+    return this.context.dataSources.Person.getFromId(comment.externalPersonId);
   }
 }
 
