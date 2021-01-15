@@ -558,6 +558,7 @@ export const contentChannelSchema = gql`
 
   extend type Query {
     contentChannels: [ContentChannel]
+      @deprecated(reason: "No longer supported.")
   }
 `;
 

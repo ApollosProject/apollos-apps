@@ -219,9 +219,11 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
     const { ContentItem, Feature } = this.context.dataSources;
     Feature.setCacheHint({ maxAge: 0, scope: 'PRIVATE' });
 
-    const items = await (await ContentItem.getSeriesWithUserProgress({
-      channelIds,
-    }))
+    const items = await (
+      await ContentItem.getSeriesWithUserProgress({
+        channelIds,
+      })
+    )
       .expand('ContentChannel')
       .top(limit)
       .get();
