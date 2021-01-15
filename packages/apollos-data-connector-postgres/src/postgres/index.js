@@ -76,12 +76,13 @@ const defineModel = ({
         },
         afterCreate: async (instance, options) => {
           if (!instance.apollosId) {
-            await instance.set(
-              { apollosId: createGlobalId(instance.id, instance.apollosType) },
-              {
-                transaction: options.transaction,
-              }
+            instance.apollosId = createGlobalId(
+              instance.id,
+              instance.apollosType
             );
+            await instance.save({
+              transaction: options.transaction,
+            });
           }
         },
       },
