@@ -535,12 +535,14 @@ export default class ContentItem extends RockApolloDataSource {
       })
     );
 
-    const completedIds = (await Promise.all(
-      ids.map(async (id) => ({
-        id,
-        percent: await this.getPercentComplete({ id }),
-      }))
-    ))
+    const completedIds = (
+      await Promise.all(
+        ids.map(async (id) => ({
+          id,
+          percent: await this.getPercentComplete({ id }),
+        }))
+      )
+    )
       .filter(({ percent }) => percent === 100)
       .map(({ id }) => id);
 
