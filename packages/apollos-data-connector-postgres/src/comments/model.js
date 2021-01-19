@@ -15,6 +15,19 @@ const createModel = defineModel({
     //   default: 0
     // }
   },
+  sequelizeOptions: {
+    indexes: [
+      {
+        unique: true,
+        fields: [
+          'externalParentId',
+          'externalParentType',
+          'externalPersonId',
+          'text',
+        ],
+      },
+    ],
+  },
 });
 
 export { createModel };
