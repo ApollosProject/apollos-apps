@@ -1,5 +1,7 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
+import { ScrollView, View, Text } from 'react-native';
 
 import { kebabCase } from 'lodash';
 
@@ -20,3 +22,22 @@ Object.keys(icons).forEach((iconName) => {
 });
 
 stories.add('isLoading', () => <Icon name={'umbrella'} isLoading />);
+
+stories.add('All Icons', () => (
+  <ScrollView>
+    <View
+      style={{
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'space-between',
+      }}
+    >
+      {Object.keys(icons).map((iconName) => (
+        <View key={iconName} style={{ alignItems: 'center', margin: 8 }}>
+          <Icon name={kebabCase(iconName)} />
+          <Text>{iconName}</Text>
+        </View>
+      ))}
+    </View>
+  </ScrollView>
+));
