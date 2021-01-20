@@ -1,4 +1,5 @@
 /* eslint-disable no-param-reassign */
+/* eslint-disable no-console */
 
 import { Sequelize, DataTypes } from 'sequelize';
 import ApollosConfig from '@apollosproject/config';

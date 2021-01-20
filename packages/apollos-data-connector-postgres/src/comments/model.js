@@ -30,4 +30,5 @@ const createModel = defineModel({
   },
 });
 
+// eslint-disable-next-line import/prefer-default-export
 export { createModel };
