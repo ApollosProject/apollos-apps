@@ -1,3 +1,5 @@
+import { createGlobalId } from '@apollosproject/server-core';
+
 const resolvers = {
   Mutation: {
     addComment: (root, args, { dataSources: { Comment } }) =>
