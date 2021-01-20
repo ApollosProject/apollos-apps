@@ -8,6 +8,9 @@ const resolvers = {
       Comment.getPerson(root),
     id: ({ apollosId }) => apollosId,
   },
+  CommentListFeature: {
+    id: ({ id }) => createGlobalId(id, 'CommentListFeature'),
+  },
 };
 
 export default resolvers;
