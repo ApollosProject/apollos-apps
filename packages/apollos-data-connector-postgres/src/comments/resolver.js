@@ -6,9 +6,7 @@ const resolvers = {
   Comment: {
     person: (root, args, { dataSources: { Comment } }) =>
       Comment.getPerson(root),
-    id: ({ dataValues }) => {
-      return dataValues.apollosId;
-    },
+    id: ({ apollosId }) => apollosId,
   },
 };
 
