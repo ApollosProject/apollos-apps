@@ -44,9 +44,14 @@ export const createResolvers = (data) =>
     )
   );
 
+const getDbModels = (data) =>
+  mapValues({ ...builtInData, ...data }, (datum) => datum.models);
+
 const getDataSources = (data) =>
   mapValues({ ...builtInData, ...data }, (datum) => datum.dataSource);
 
+// Deprecated - we won't be using this models paradigm going forward.
+// All models should be renamed as DataSources.
 const getModels = (data) =>
   mapValues({ ...builtInData, ...data }, (datum) => datum.model);
 
@@ -66,6 +71,25 @@ export const createDataSources = (data) => {
     });
     return sources;
   };
+};
+
+export const setupSequelize = (data) => {
+  const models = getDbModels(data);
+  // Create all the models first.
+  // This ensures they exist in the global model list.
+  Object.values(models).forEach(({ createModel } = {}) => {
+    if (createModel) {
+      createModel();
+    }
+  });
+  // Now setup all the models.
+  // This two stage aproach means we can setup circular associations
+  // and do other things that would otherwise cause problems with circular imports.
+  Object.values(models).forEach(({ setupModel } = {}) => {
+    if (setupModel) {
+      setupModel();
+    }
+  });
 };
 
 export const createContext = (data) => ({ req = {} } = {}) => {
@@ -181,6 +205,8 @@ export const createJobs = (data) => ({ app, context, dataSources }) => {
 };
 
 export const createApolloServerConfig = (data) => {
+  // Setup all the DB models
+  setupSequelize(data);
   const dataSources = createDataSources(data);
   const schema = createSchema(data);
   const resolvers = createResolvers(data);
