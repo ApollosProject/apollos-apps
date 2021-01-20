@@ -269,6 +269,15 @@ export default class Feature extends RockApolloDataSource {
     };
   }
 
+  createCommentListFeature({ nodeId, nodeType }) {
+    return {
+      id: JSON.stringify({ nodeId, nodeType }),
+      comments: () =>
+        this.context.dataSources.Comment.getForNode({ nodeId, nodeType }),
+      __typename: 'CommentListFeature',
+    };
+  }
+
   createPrayerListFeature({
     algorithms = [],
     title,
