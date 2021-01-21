@@ -92,7 +92,7 @@ const AddCommentInput = ({ initialPrompt, addPrompt, onSubmit, profile }) => {
     </CommentInputContainer>
   ) : (
     <AddCommentContainer onPress={onStartWriting}>
-      <CommentAvatar source={profile.image} />
+      <CommentAvatar source={profile?.image} />
       <AddCommentPrompt>{currentText || initialPrompt}</AddCommentPrompt>
     </AddCommentContainer>
   );
