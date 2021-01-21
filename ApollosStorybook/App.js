@@ -14,7 +14,6 @@ import { loadStories } from './storybook/storyLoader';
 // Storybook issue. Might be solved by updating Core to RN 63
 LogBox.ignoreLogs(['null is not an object (evaluating \'story.id\')', 'Story with id', 'No permission handler detected.']);
 
-setSiblingWrapper((sibling) => <Providers>{sibling}</Providers>);
 addApollosProviderDecorator(Providers);
 
 configure(() => {
