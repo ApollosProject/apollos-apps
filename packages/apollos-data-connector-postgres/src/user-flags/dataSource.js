@@ -25,6 +25,14 @@ class UserFlagDataSource extends PostgresDataSource {
 
     return userFlag;
   }
+
+  async getPerson({ id }) {
+    const flag = await this.sequelize.models.user_flags.findOne({
+      where: { id },
+    });
+
+    return this.context.dataSources.Person.getFromId(flag.externalPersonId);
+  }
 }
 
 export { UserFlagDataSource as default };

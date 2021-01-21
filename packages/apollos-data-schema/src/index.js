@@ -1010,7 +1010,7 @@ export const commentSchema = gql`
 
   type UserFlag {
     id: ID!
-    # persion: Person
+    person: Person
   }
 `;
 
