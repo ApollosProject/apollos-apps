@@ -1,9 +1,9 @@
-import { createGlobalId } from '@apollosproject/server-core';
+import { createGlobalId } from "@apollosproject/server-core";
 
 export default {
   Mutation: {
     addPrayer: (root, args, { dataSources }) =>
-      dataSources.PrayerRequest.addPrayer(args),
+      dataSources.PrayerRequest.addPrayer(args)
   },
   PrayerRequest: {
     id: ({ id }, args, context, { parentType }) =>
@@ -15,11 +15,17 @@ export default {
       const interactions = await dataSources.Interactions.getInteractionsForCurrentUserAndNodes(
         {
           nodeIds: [createGlobalId(id, parentType.name)],
-          actions: ['PRAY'],
+          actions: ["PRAY"]
         }
       );
       return interactions.length;
-    },
+    }
+  },
+  Person: {
+    prayers: ({ primaryAliasId }, args, { dataSources }) => {
+      cursor = dataSources.PrayerRequest.byDailyPrayerFeed({ primaryAliasId });
+      return cursor.get();
+    }
   },
   PrayerListFeature: {
     // id: ID!
@@ -27,5 +33,5 @@ export default {
     // title: String
     // subtitle: String
     // prayers: [Prayer]
-  },
+  }
 };

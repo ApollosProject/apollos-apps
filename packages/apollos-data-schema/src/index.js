@@ -1,8 +1,8 @@
-import gql from 'graphql-tag';
+import gql from "graphql-tag";
 import {
   extendForEachContentItemType,
-  addInterfacesForEachContentItemType,
-} from './utils';
+  addInterfacesForEachContentItemType
+} from "./utils";
 
 export const interfacesSchema = gql`
   interface ContentNode {
@@ -57,20 +57,20 @@ export const interfacesSchema = gql`
   # Reduces visual fluff in this file. No magic.
   ${addInterfacesForEachContentItemType(
     [
-      'ContentNode',
-      'Card',
-      'VideoNode',
-      'AudioNode',
-      'ContentChildNode',
-      'ContentParentNode',
-      'ThemedNode',
+      "ContentNode",
+      "Card",
+      "VideoNode",
+      "AudioNode",
+      "ContentChildNode",
+      "ContentParentNode",
+      "ThemedNode"
     ],
     [
-      'UniversalContentItem',
-      'WeekendContentItem',
-      'MediaContentItem',
-      'ContentSeriesContentItem',
-      'DevotionalContentItem',
+      "UniversalContentItem",
+      "WeekendContentItem",
+      "MediaContentItem",
+      "ContentSeriesContentItem",
+      "DevotionalContentItem"
     ]
   )}
 
@@ -603,13 +603,13 @@ export const sharableSchema = gql`
   }
 
   ${addInterfacesForEachContentItemType(
-    ['ShareableNode'],
+    ["ShareableNode"],
     [
-      'UniversalContentItem',
-      'WeekendContentItem',
-      'MediaContentItem',
-      'ContentSeriesContentItem',
-      'DevotionalContentItem',
+      "UniversalContentItem",
+      "WeekendContentItem",
+      "MediaContentItem",
+      "ContentSeriesContentItem",
+      "DevotionalContentItem"
     ]
   )}
 
@@ -746,13 +746,13 @@ export const followingsSchema = gql`
   }
 
   ${addInterfacesForEachContentItemType(
-    ['LikableNode'],
+    ["LikableNode"],
     [
-      'UniversalContentItem',
-      'WeekendContentItem',
-      'MediaContentItem',
-      'ContentSeriesContentItem',
-      'DevotionalContentItem',
+      "UniversalContentItem",
+      "WeekendContentItem",
+      "MediaContentItem",
+      "ContentSeriesContentItem",
+      "DevotionalContentItem"
     ]
   )}
 
@@ -1016,6 +1016,10 @@ export const prayerSchema = gql`
 
   extend enum InteractionAction {
     PRAY
+  }
+
+  extend type Person {
+    prayers: [PrayerRequest]
   }
 `;
 
