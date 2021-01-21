@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, TextInput, KeyboardAvoidingView } from 'react-native';
+import { StyleSheet, TextInput } from 'react-native';
 import PropTypes from 'prop-types';
 import styled from '../styled';
 import { H4, H5, BodySmall } from '../typography';
@@ -44,21 +44,25 @@ const AddCommentTextInput = styled(({ theme: { sizing } }) => ({
 const AddCommentInput = ({ initialPrompt, addPrompt, onSubmit }) => {
   const [isWriting, setIsWriting] = useState(false);
   const [currentText, setCurrentText] = useState(null);
+
+  const onPressSubmit = async () => {
+    onSubmit && (await onSubmit(currentText)); // eslint-disable-line no-unused-expressions
+    setIsWriting(false);
+  };
   return isWriting ? (
-    <KeyboardAvoidingView behavior="padding" keyboardVerticalOffset={40}>
+    <>
       <PaddedView>
         <BodySmall>{addPrompt}</BodySmall>
         <AddCommentTextInput
           multiline
+          autoFocus
           onChangeText={(text) => setCurrentText(text)}
         />
-        <NextButtonTouchable
-          onPress={() => onSubmit(currentText) && setIsWriting(false)}
-        >
+        <NextButtonTouchable onPress={onPressSubmit}>
           <NextButton>{'Submit'}</NextButton>
         </NextButtonTouchable>
       </PaddedView>
-    </KeyboardAvoidingView>
+    </>
   ) : (
     <AddCommentContainer onPress={() => setIsWriting(true)}>
       <CommentAvatar />

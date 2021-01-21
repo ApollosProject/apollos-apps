@@ -1,6 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
-import { View, FlatList, Text } from 'react-native';
+import {
+  View,
+  FlatList,
+  Text,
+  ScrollView,
+  KeyboardAvoidingView,
+} from 'react-native';
 import { times } from 'lodash';
 
 import ScriptureComment from '../ScriptureComment';
@@ -29,19 +35,21 @@ storiesOf('ui-kit/AddCommentInput', module)
     </View>
   ))
   .add('with content and comments', () => (
-    <>
-      {times(30, () => (
-        <Text>{'----------------'}</Text>
-      ))}
-      <FlatList
-        renderItem={({ item }) =>
-          item.__typename === 'Comment' ? (
-            <ScriptureComment {...item} />
-          ) : (
-            <AddCommentInput />
-          )
-        }
-        data={fakeData}
-      />
-    </>
+    <KeyboardAvoidingView behavior={'padding'} style={{ flex: 1 }}>
+      <ScrollView>
+        {times(30, () => (
+          <Text>{'----------------'}</Text>
+        ))}
+        <FlatList
+          renderItem={({ item }) =>
+            item.__typename === 'Comment' ? (
+              <ScriptureComment {...item} />
+            ) : (
+              <AddCommentInput />
+            )
+          }
+          data={fakeData}
+        />
+      </ScrollView>
+    </KeyboardAvoidingView>
   ));
