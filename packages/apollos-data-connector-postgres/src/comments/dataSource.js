@@ -1,10 +1,11 @@
 import { parseGlobalId } from '@apollosproject/server-core';
 import { PostgresDataSource } from '../postgres';
+import { Visibility } from './model';
 
 class CommentDataSource extends PostgresDataSource {
   modelName = 'comments';
 
-  async addComment({ text, parentId }) {
+  async addComment({ text, parentId, visibility = Visibility.PRIVATE }) {
     const currentUser = await this.context.dataSources.Auth.getCurrentPerson();
 
     const { id, __type } = parseGlobalId(parentId);
@@ -17,6 +18,9 @@ class CommentDataSource extends PostgresDataSource {
           externalParentType: __type,
           externalParentSource: 'rock',
           externalPersonId: currentUser.id,
+        },
+        defaults: {
+          visibility,
         },
         transaction: t,
       });

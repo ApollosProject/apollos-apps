@@ -1,6 +1,12 @@
 import { DataTypes } from 'sequelize';
 import { defineModel } from '../postgres';
 
+const Visibility = {
+  PUBLIC: 'PUBLIC',
+  PRIVATE: 'PRIVATE',
+  FOLLOWERS: 'FOLLOWERS',
+};
+
 const createModel = defineModel({
   modelName: 'comments',
   resolveType: () => 'Comment',
@@ -10,6 +16,7 @@ const createModel = defineModel({
     externalParentType: DataTypes.TEXT,
     externalParentSource: DataTypes.TEXT,
     externalPersonId: DataTypes.TEXT,
+    visibility: DataTypes.ENUM(Object.values(Visibility)),
     // reportCount: {
     //   type: DataTypes.INTEGER,
     //   default: 0
@@ -30,5 +37,4 @@ const createModel = defineModel({
   },
 });
 
-// eslint-disable-next-line import/prefer-default-export
-export { createModel };
+export { createModel, Visibility };
