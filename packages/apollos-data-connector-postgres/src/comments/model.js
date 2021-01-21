@@ -17,10 +17,10 @@ const createModel = defineModel({
     externalParentSource: DataTypes.TEXT,
     externalPersonId: DataTypes.TEXT,
     visibility: DataTypes.ENUM(Object.values(Visibility)),
-    // flagCount: {
-    //   type: DataTypes.INTEGER,
-    //   default: 0,
-    // },
+    flagCount: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+    },
   },
 });
 
