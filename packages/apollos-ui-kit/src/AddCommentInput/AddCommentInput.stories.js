@@ -1,3 +1,5 @@
+/* eslint-disable react-native/no-inline-styles */
+
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import {
@@ -31,7 +33,11 @@ const fakeData = [
 storiesOf('ui-kit/AddCommentInput', module)
   .add('default', () => (
     <View style={{ justifyContent: 'flex-end', flex: 1 }}>
-      <AddCommentInput />
+      <AddCommentInput
+        profile={{
+          image: { uri: 'https://picsum.photos/200' },
+        }}
+      />
     </View>
   ))
   .add('with content and comments', () => (
