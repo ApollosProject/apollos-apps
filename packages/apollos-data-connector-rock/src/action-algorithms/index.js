@@ -9,6 +9,7 @@ class ActionAlgorithm extends RockApolloDataSource {
     PERSONA_FEED: this.personaFeedAlgorithm,
     CONTENT_CHANNEL: this.contentChannelAlgorithm,
     SERMON_CHILDREN: this.sermonChildrenAlgorithm,
+    LATEST_SERIES_CHILDREN: this.latestSeriesChildrenAlgorithm,
     UPCOMING_EVENTS: this.upcomingEventsAlgorithm,
     CAMPAIGN_ITEMS: this.campaignItemsAlgorithm,
     SERIES_IN_PROGRESS: this.seriesInProgressAlgorithm,
@@ -146,6 +147,31 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
 
     const cursor = (
       await ContentItem.getCursorByParentContentItemId(sermon.id)
+    ).expand('ContentChannel');
+    const items = limit ? await cursor.top(limit).get() : await cursor.get();
+
+    return items.map((item, i) => ({
+      id: `${item.id}${i}`,
+      title: item.title,
+      subtitle: get(item, 'contentChannel.name'),
+      relatedNode: { ...item, __type: ContentItem.resolveType(item) },
+      image: ContentItem.getCoverImage(item),
+      action: 'READ_CONTENT',
+      summary: ContentItem.createSummary(item),
+    }));
+  }
+
+  async latestSeriesChildrenAlgorithm({ limit = null, channelId } = {}) {
+    const { ContentItem } = this.context.dataSources;
+
+    if (!channelId) return console.warn('Must provide channelId') || [];
+    const series = await ContentItem.byContentChannelId(channelId)
+      .andFilter(ContentItem.LIVE_CONTENT())
+      .first();
+    if (!series) return [];
+
+    const cursor = (
+      await ContentItem.getCursorByParentContentItemId(series.id)
     ).expand('ContentChannel');
     const items = limit ? await cursor.top(limit).get() : await cursor.get();
 
