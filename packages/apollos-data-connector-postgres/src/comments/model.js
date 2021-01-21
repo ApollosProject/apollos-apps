@@ -17,23 +17,10 @@ const createModel = defineModel({
     externalParentSource: DataTypes.TEXT,
     externalPersonId: DataTypes.TEXT,
     visibility: DataTypes.ENUM(Object.values(Visibility)),
-    // reportCount: {
+    // flagCount: {
     //   type: DataTypes.INTEGER,
-    //   default: 0
-    // }
-  },
-  sequelizeOptions: {
-    indexes: [
-      {
-        unique: true,
-        fields: [
-          'externalParentId',
-          'externalParentType',
-          'externalPersonId',
-          'text',
-        ],
-      },
-    ],
+    //   default: 0,
+    // },
   },
 });
 
