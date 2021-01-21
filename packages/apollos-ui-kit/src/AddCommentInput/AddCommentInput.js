@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, TextInput } from 'react-native';
+import Modal from 'react-native-root-modal';
 import PropTypes from 'prop-types';
 import styled from '../styled';
 import { H4, H5, BodySmall } from '../typography';
@@ -41,6 +42,10 @@ const AddCommentTextInput = styled(({ theme: { sizing } }) => ({
   minHeight: sizing.baseUnit * 4,
 }))(TextInput);
 
+const CommentInputContainer = styled(({ theme: { colors } }) => ({
+  backgroundColor: colors.screen,
+}))(PaddedView);
+
 const AddCommentInput = ({ initialPrompt, addPrompt, onSubmit }) => {
   const [isWriting, setIsWriting] = useState(false);
   const [currentText, setCurrentText] = useState(null);
@@ -50,8 +55,19 @@ const AddCommentInput = ({ initialPrompt, addPrompt, onSubmit }) => {
     setIsWriting(false);
   };
   return isWriting ? (
-    <>
-      <PaddedView>
+    <Modal
+      style={{
+        position: 'relative',
+        right: 0,
+        bottom: 0,
+        left: 0,
+        height: 10,
+        // backgroundColor: 'red',
+      }}
+      visible
+      // transparent
+    >
+      <CommentInputContainer>
         <BodySmall>{addPrompt}</BodySmall>
         <AddCommentTextInput
           multiline
@@ -61,8 +77,8 @@ const AddCommentInput = ({ initialPrompt, addPrompt, onSubmit }) => {
         <NextButtonTouchable onPress={onPressSubmit}>
           <NextButton>{'Submit'}</NextButton>
         </NextButtonTouchable>
-      </PaddedView>
-    </>
+      </CommentInputContainer>
+    </Modal>
   ) : (
     <AddCommentContainer onPress={() => setIsWriting(true)}>
       <CommentAvatar />
