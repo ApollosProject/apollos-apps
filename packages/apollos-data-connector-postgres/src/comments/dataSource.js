@@ -10,31 +10,26 @@ class CommentDataSource extends PostgresDataSource {
 
     const { id, __type } = parseGlobalId(parentId);
 
-    const ret = await this.sequelize.transaction(async (t) => {
-      const [comment, created] = await this.model.findOrCreate({
-        where: {
-          text,
-          externalParentId: id,
-          externalParentType: __type,
-          externalParentSource: 'rock',
-          externalPersonId: currentUser.id,
-        },
-        defaults: {
-          visibility,
-        },
-        transaction: t,
-      });
-
-      if (!created) {
-        throw new Error(
-          'Unable to save comment, a duplicate comment already exists'
-        );
-      }
-
-      return comment;
+    const [comment, created] = await this.model.findOrCreate({
+      where: {
+        text,
+        externalParentId: id,
+        externalParentType: __type,
+        externalParentSource: 'rock',
+        externalPersonId: currentUser.id,
+      },
+      defaults: {
+        visibility,
+      },
     });
 
-    return ret;
+    if (!created) {
+      throw new Error(
+        'Unable to save comment, a duplicate comment already exists'
+      );
+    }
+
+    return comment;
   }
 
   async getForNode({ nodeId, nodeType }) {
