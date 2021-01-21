@@ -22,10 +22,12 @@ export default {
     },
   },
   Person: {
-    prayers: ({ primaryAliasId }, args, { dataSources }) => {
-      return dataSources.PrayerRequest.byDailyPrayerFeed({
-        primaryAliasId,
-      }).get();
+    prayers: async ({ primaryAliasId }, args, { dataSources }) => {
+      return (
+        await dataSources.PrayerRequest.byDailyPrayerFeed({
+          primaryAliasId,
+        })
+      ).get();
     },
   },
   PrayerListFeature: {
