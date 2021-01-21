@@ -1011,6 +1011,7 @@ export const commentSchema = gql`
   type UserFlag {
     id: ID!
     person: Person
+    comment: Comment
   }
 `;
 

@@ -5,6 +5,7 @@ const createModel = defineModel({
   modelName: 'user_flags',
   resolveType: () => 'UserFlag',
   attributes: {
+    commentId: DataTypes.INTEGER,
     externalPersonId: DataTypes.TEXT,
   },
 });
