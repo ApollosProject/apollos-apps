@@ -1,6 +1,6 @@
-import RockApolloDataSource from "@apollosproject/rock-apollo-data-source";
-import ApollosConfig from "@apollosproject/config";
-import { get } from "lodash";
+import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
+import ApollosConfig from '@apollosproject/config';
+import { get } from 'lodash';
 
 const { ROCK_MAPPINGS } = ApollosConfig;
 
@@ -9,7 +9,7 @@ class RockConstants extends RockApolloDataSource {
     // Turns {ChannelId: 7, Name: 'Something'} into '(ChannelId eq 7) and (Name eq 'Something')'
     const { Cache } = this.context.dataSources;
 
-    const cacheKey = ["rockConstants", model, JSON.stringify(objectAttributes)];
+    const cacheKey = ['rockConstants', model, JSON.stringify(objectAttributes)];
     const cachedObj = await Cache.get({ key: cacheKey });
 
     // If we have a cached object, return it.
@@ -19,18 +19,16 @@ class RockConstants extends RockApolloDataSource {
 
     // If we don't have a cached object create a filter out of the attributes of the expected objects.
     const filter = Object.keys(objectAttributes)
-      .map(key => {
-        if (typeof objectAttributes[key] === "string") {
+      .map((key) => {
+        if (typeof objectAttributes[key] === 'string') {
           return `(${key} eq '${objectAttributes[key]}')`;
         }
         return `(${key} eq ${objectAttributes[key]})`;
       })
-      .join(" and ");
+      .join(' and ');
 
     // Look for objects matching that filter.
-    const object = await this.request(model)
-      .filter(filter)
-      .first();
+    const object = await this.request(model).filter(filter).first();
 
     // if we have one
     if (object) {
@@ -54,78 +52,74 @@ class RockConstants extends RockApolloDataSource {
   async createOrFindInteractionComponent({
     componentName,
     channelId,
-    entityId
+    entityId,
   }) {
     return this.findOrCreate({
-      model: "InteractionComponents",
+      model: 'InteractionComponents',
       objectAttributes: {
         Name: componentName,
         // https://www.rockrms.com/ReleaseNotes#v11.0-core
         ...(ApollosConfig?.ROCK?.VERSION < 11.0
           ? { ChannelId: channelId }
           : { InteractionChannelId: channelId }),
-        EntityId: entityId
-      }
+        EntityId: entityId,
+      },
     });
   }
 
   async createOrFindInteractionChannel({ channelName, entityTypeId }) {
     return this.findOrCreate({
-      model: "InteractionChannels",
+      model: 'InteractionChannels',
       objectAttributes: {
         Name: channelName,
         UsesSession: false,
         IsActive: true,
         ComponentEntityTypeId: entityTypeId,
         ChannelTypeMediumValueId:
-          ROCK_MAPPINGS.INTERACTIONS.CHANNEL_MEDIUM_TYPE_ID
-      }
+          ROCK_MAPPINGS.INTERACTIONS.CHANNEL_MEDIUM_TYPE_ID,
+      },
     });
   }
 
   async interactionComponent({ entityId, entityTypeId, entityTypeName }) {
     const channel = await this.interactionChannel({
       entityTypeId,
-      entityTypeName
+      entityTypeName,
     });
     return this.createOrFindInteractionComponent({
-      componentName: `${
-        ROCK_MAPPINGS.INTERACTIONS.COMPONENT_NAME
-      } - ${entityId}`,
+      componentName: `${ROCK_MAPPINGS.INTERACTIONS.COMPONENT_NAME} - ${entityId}`,
       channelId: channel.id,
-      entityId: parseInt(entityId, 10)
+      entityId: parseInt(entityId, 10),
     });
   }
 
   async interactionChannel({ entityTypeId, entityTypeName }) {
     return this.createOrFindInteractionChannel({
-      channelName: `${
-        ROCK_MAPPINGS.INTERACTIONS.CHANNEL_NAME
-      } - ${entityTypeName}`,
-      entityTypeId
+      channelName: `${ROCK_MAPPINGS.INTERACTIONS.CHANNEL_NAME} - ${entityTypeName}`,
+      entityTypeId,
     });
   }
 
   // Deprecated. Use the interactionComponent method directly.
   async contentItemInteractionComponent({ contentItemId }) {
-    const { id, friendlyName } = await this.modelType("ContentItem");
+    const { id, friendlyName } = await this.modelType('ContentItem');
     return this.interactionComponent({
       entityId: contentItemId,
       entityTypeId: id,
-      entityTypeName: friendlyName
+      entityTypeName: friendlyName,
     });
   }
 
   // Deprecated. Use the interactionChannel method directly.
   async contentItemInteractionChannel() {
-    const { id, friendlyName } = await this.modelType("ContentItem");
+    const { id, friendlyName } = await this.modelType('ContentItem');
     return this.interactionChannel({
       entityTypeId: id,
-      entityTypeName: friendlyName
+      entityTypeName: friendlyName,
     });
   }
 
-  mapApollosNameToRockName = name => {
+  mapApollosNameToRockName = (name) => {
     if (ROCK_MAPPINGS.CONTENT_ITEM[name]) {
       return ROCK_MAPPINGS.CONTENT_ITEM[name].EntityType;
     }
@@ -135,7 +129,7 @@ class RockConstants extends RockApolloDataSource {
   async modelType(nameInput) {
     const name = this.mapApollosNameToRockName(nameInput);
 
-    const type = await this.request("EntityTypes")
+    const type = await this.request('EntityTypes')
       .filter(`Name eq 'Rock.Model.${name}'`)
       .cache({ ttl: 86400 })
       .first();
