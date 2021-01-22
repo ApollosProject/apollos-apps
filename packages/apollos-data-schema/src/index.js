@@ -976,6 +976,26 @@ export const featuresSchema = gql`
   }
 `;
 
+export const commentSchema = gql`
+  extend type Mutation {
+    addComment(parentId: ID!, text: String!): Comment
+  }
+
+  type CommentListFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    comments: [Comment]
+  }
+
+  type Comment implements Node {
+    id: ID!
+
+    person: Person
+    text: String
+  }
+`;
+
 export const eventSchema = gql`
   type Event implements Node {
     id: ID!

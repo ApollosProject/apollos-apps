@@ -95,3 +95,5 @@ packages/**/docs/generated/*
 
 # npm login config, includes personal token
 .npmrc
+
+testing*.db
