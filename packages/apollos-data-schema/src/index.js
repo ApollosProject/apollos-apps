@@ -984,7 +984,7 @@ export const commentSchema = gql`
       visibility: CommentVisibility
     ): Comment
 
-    flagComment(commentId: ID!): UserFlag
+    flagComment(commentId: ID!): Comment
   }
 
   type CommentListFeature implements Feature & Node {
@@ -1006,12 +1006,6 @@ export const commentSchema = gql`
     person: Person
     text: String
     visibility: CommentVisibility
-  }
-
-  type UserFlag {
-    id: ID!
-    person: Person
-    comment: Comment
   }
 `;
 

@@ -7,12 +7,13 @@ class UserFlagDataSource extends PostgresDataSource {
   async flagComment({ commentId }) {
     const currentUser = await this.context.dataSources.Auth.getCurrentPerson();
 
-    const { id } = parseGlobalId(commentId);
+    const { id, __type } = parseGlobalId(commentId);
 
     // Record the flag unless the user has already flagged this comment, in which case simply ignore it.
-    const [userFlag, created] = await this.model.findOrCreate({
+    const [, created] = await this.model.findOrCreate({
       where: {
-        commentId: id,
+        nodeId: id,
+        nodeType: __type,
         externalPersonId: currentUser.id,
       },
     });
@@ -23,7 +24,11 @@ class UserFlagDataSource extends PostgresDataSource {
       });
     }
 
-    return userFlag;
+    const comment = this.sequelize.models.comments.findOne({
+      where: { id },
+    });
+
+    return comment;
   }
 
   async getPerson({ id }) {
@@ -32,16 +37,6 @@ class UserFlagDataSource extends PostgresDataSource {
     });
 
     return this.context.dataSources.Person.getFromId(flag.externalPersonId);
-  }
-
-  async getComment({ id }) {
-    const flag = await this.sequelize.models.user_flags.findOne({
-      where: { id },
-    });
-
-    return this.sequelize.models.comments.findOne({
-      where: { id: flag.commentId },
-    });
   }
 }
 

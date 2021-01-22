@@ -45,12 +45,14 @@ describe('Apollos Postgres Comment Flags DataSource', () => {
     const userFlagDataSource = new UserFlagDataSource();
     userFlagDataSource.initialize({ context });
 
-    const flag = await userFlagDataSource.flagComment({
+    const flaggedComment = await userFlagDataSource.flagComment({
       commentId: comment.apollosId,
     });
 
-    expect(flag.commentId).toBe(comment.id.toString());
-    expect(flag.apollosId).toBe(createGlobalId(flag.id, 'UserFlag'));
+    expect(flaggedComment.id.toString()).toBe(comment.id.toString());
+    expect(flaggedComment.apollosId).toBe(
+      createGlobalId(comment.id, 'Comment')
+    );
   });
 
   it('should increment flag count on comment', async () => {
@@ -108,23 +110,15 @@ describe('Apollos Postgres Comment Flags DataSource', () => {
     const userFlagDataSource = new UserFlagDataSource();
     userFlagDataSource.initialize({ context });
 
-    const flag = await userFlagDataSource.flagComment({
+    const flaggedComment = await userFlagDataSource.flagComment({
       commentId: comment.apollosId,
+    });
+
+    const flag = await sequelize.models.user_flags.findOne({
+      nodeId: flaggedComment.apollosId,
     });
 
     const flagPerson = await userFlagDataSource.getPerson(flag);
     expect(flagPerson).toEqual({ id: personId });
-  });
-
-  it('should return a comment for a flag', async () => {
-    const userFlagDataSource = new UserFlagDataSource();
-    userFlagDataSource.initialize({ context });
-
-    const flag = await userFlagDataSource.flagComment({
-      commentId: comment.apollosId,
-    });
-    const flagComment = await userFlagDataSource.getComment(flag);
-
-    expect(flagComment).toEqual(expect.objectContaining({ id: comment.id }));
   });
 });
