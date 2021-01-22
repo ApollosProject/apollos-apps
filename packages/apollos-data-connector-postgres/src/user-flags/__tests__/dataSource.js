@@ -115,4 +115,16 @@ describe('Apollos Postgres Comment Flags DataSource', () => {
     const flagPerson = await userFlagDataSource.getPerson(flag);
     expect(flagPerson).toEqual({ id: personId });
   });
+
+  it('should return a comment for a flag', async () => {
+    const userFlagDataSource = new UserFlagDataSource();
+    userFlagDataSource.initialize({ context });
+
+    const flag = await userFlagDataSource.flagComment({
+      commentId: comment.apollosId,
+    });
+    const flagComment = await userFlagDataSource.getComment(flag);
+
+    expect(flagComment).toEqual(expect.objectContaining({ id: comment.id }));
+  });
 });
