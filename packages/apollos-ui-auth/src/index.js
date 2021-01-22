@@ -85,10 +85,12 @@ const AuthNavigator = (props) => (
     <AuthStack.Screen
       name="AuthSMSVerificationConnected"
       component={AuthSMSVerificationConnected}
+      options={{ headerShown: true }}
     />
     <AuthStack.Screen
       name="AuthPasswordEntryConnected"
       component={AuthPasswordEntryConnected}
+      options={{ headerShown: true }}
     />
     <AuthStack.Screen
       name="AuthProfileEntryConnected"
@@ -130,6 +132,7 @@ const ThemedAuthNavigator = withTheme(({ theme, ...props }) => ({
     headerHideShadow: true,
     headerTitle: '',
     headerBackTitle: 'Back',
+    headerShown: false,
   },
 }))(AuthNavigator);
 
