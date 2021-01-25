@@ -296,20 +296,34 @@ describe('ContentItemsModel', () => {
       id: 'ScriptureFeature:123',
       reference: 'john 3',
     }));
+    const createCommentListFeature = jest.fn(() => ({
+      id: 'CommentListFeature:123',
+      comments: [],
+      __typename: 'CommentListFeature',
+    }));
     dataSource.context = {
-      dataSources: { Feature: { createTextFeature, createScriptureFeature } },
+      dataSources: {
+        Feature: {
+          createTextFeature,
+          createScriptureFeature,
+          createCommentListFeature,
+        },
+      },
     };
     const result = dataSource.getFeatures({
       attributeValues: {
         features: {
           id: 123,
-          value: 'scripture^john 3|text^text feature',
+          value: 'scripture^john 3|text^text feature|comments',
         },
       },
+      __type: 'ContentItem',
+      id: 'ContentItem:123Test',
     });
     expect(result).toMatchSnapshot();
     expect(createTextFeature.mock.calls).toMatchSnapshot();
     expect(createScriptureFeature.mock.calls).toMatchSnapshot();
+    expect(createCommentListFeature.mock.calls).toMatchSnapshot();
   });
 
   it('returns a text feature when a contentItem has a TextFeature field', async () => {
