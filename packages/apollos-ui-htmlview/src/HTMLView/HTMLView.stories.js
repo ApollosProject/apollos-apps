@@ -67,6 +67,17 @@ storiesOf('ui-htmlview/HTMLView', module)
       </SafeAreaView>
     </ScrollView>
   ))
+  .add('spans with spaces in between', () => (
+    <ScrollView>
+      <SafeAreaView>
+        <HTMLView>
+          {`
+            <p><span>There are some bits of scripture</span> <span>where the spaces between words</span> <span>exist outside spans</span></p>
+            `}
+        </HTMLView>
+      </SafeAreaView>
+    </ScrollView>
+  ))
   .add('Example Links', () => (
     <ScrollView>
       <SafeAreaView>

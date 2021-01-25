@@ -61,15 +61,30 @@ export const wrapTextChildren = ({
 };
 
 const defaultRenderer = (node, { children }, handlePressAnchor) => {
-  if (node.type === 'text' && node.data && node.data.trim()) {
+  const blockElements = ['p', 'div', 'blockquote'];
+
+  if (node.type === 'text' && node.data) {
     const text = decodeHTML(node.data);
-    if (!node.parent) {
+    const blankText = !text.trim();
+
+    if (
+      blankText &&
+      ((node.next && !blockElements.includes(node.next.name)) ||
+        (node.prev && !blockElements.includes(node.prev.name)))
+    ) {
+      // If the text is blank, but it's beside other text, include it.
+      // Think: two spans with a space between them.
+      return <Text>{text}</Text>;
+    }
+
+    if (!node.parent && !blankText) {
+      // If the text top level, show it inside a body text element.
       return <BodyText>{text}</BodyText>;
     }
-    return <Text>{text}</Text>;
+    if (!blankText) {
+      return <Text>{text}</Text>;
+    }
   }
-
-  const blockElements = ['p', 'div', 'blockquote'];
 
   switch (node.name) {
     case 'div':
