@@ -1030,6 +1030,15 @@ export const prayerSchema = gql`
     prayers: [PrayerRequest]
   }
 
+  type UserPrayersFeature implements Feature & Node {
+    id: ID!
+    order: Int
+    avatar: ImageMediaSource
+    title: String
+    subtitle: String
+    prayers: [PrayerRequest]
+  }
+
   extend type Mutation {
     addPrayer(text: String!, isAnonymous: Boolean): PrayerRequest
   }
