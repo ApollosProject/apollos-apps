@@ -11,15 +11,22 @@ export default class PrayerRequest extends RockApolloDataSource {
 
   getFromId = (id) => this.request().find(id).get();
 
-  byDailyPrayerFeed = async ({ numberDaysSincePrayer = 3 }) => {
+  byDailyPrayerFeed = async ({ primaryAliasId, numberDaysSincePrayer = 3 }) => {
     const {
       dataSources: { Auth },
     } = this.context;
 
-    const { primaryAliasId } = await Auth.getCurrentPerson();
+    let excludedAliasId;
+    if (!primaryAliasId) {
+      excludedAliasId = (await Auth.getCurrentPerson()).primaryAliasId;
+    }
 
     return this.request()
-      .filter(`RequestedByPersonAliasId ${'ne'} ${primaryAliasId}`) // don't show your own prayers
+      .filter(
+        `RequestedByPersonAliasId ${
+          primaryAliasId ? `eq ${primaryAliasId}` : `ne ${excludedAliasId}`
+        }`
+      ) // don't show your own prayers
       .andFilter(`IsActive eq true`) // prayers can be marked as "in-active" in Rock
       .andFilter(`IsApproved eq true`) // prayers can be moderated in Rock
       .andFilter('IsPublic eq true') // prayers can be set to private in Rock
