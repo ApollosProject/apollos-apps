@@ -1037,6 +1037,10 @@ export const prayerSchema = gql`
   extend enum InteractionAction {
     PRAY
   }
+
+  extend type Person {
+    prayers: [PrayerRequest]
+  }
 `;
 
 export { extendForEachContentItemType };
