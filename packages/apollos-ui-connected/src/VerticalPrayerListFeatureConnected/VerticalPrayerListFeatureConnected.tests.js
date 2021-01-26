@@ -2,28 +2,23 @@ import React from 'react';
 import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
 import { MockedProvider } from '@apollo/client/testing';
 
-import GET_USER_PRAYERS_FEATURE from './getUserPrayersFeature';
+import GET_VERTICAL_PRAYER_LIST_FEATURE from './getVerticalPrayerListFeature';
 
-import UserPrayersFeatureConnected from '.';
+import VerticalPrayerListFeatureConnected from '.';
 
-describe('UserPrayersFeatureConnected component', () => {
-  it('renders UserPrayersFeatureConnected', async () => {
+describe('VerticalPrayerListFeatureConnected component', () => {
+  it('renders VerticalPrayerListFeatureConnected', async () => {
     const mock = {
       request: {
-        query: GET_USER_PRAYERS_FEATURE,
+        query: GET_VERTICAL_PRAYER_LIST_FEATURE,
       },
       result: {
         data: {
           node: {
             __typename: 'UserPrayersFeature',
             id: 'UserPrayersFeature:123',
-            title: 'Pray for brad',
-            subtitle: 'This is a prayer...',
-            avatar: {
-              __typename: 'ImageMediaSource',
-              id: 'ImageMediaSource:123',
-              uri: 'https://picturesite.com',
-            },
+            title: 'title',
+            subtitle: 'subtitle',
             prayers: [
               { __typename: 'PrayerRequest', id: 'PrayerRequest:123' },
               { __typename: 'PrayerRequest', id: 'PrayerRequest:456' },
@@ -35,7 +30,7 @@ describe('UserPrayersFeatureConnected component', () => {
     const navigation = { navigate: jest.fn() };
     const tree = await renderWithApolloData(
       <Providers MockedProvider={MockedProvider} mocks={[mock]}>
-        <UserPrayersFeatureConnected navigation={navigation} />
+        <VerticalPrayerListFeatureConnected navigation={navigation} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

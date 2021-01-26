@@ -28,7 +28,7 @@ const StyledButtonLink = styled({
   flex: 1,
 })(ButtonLink);
 
-const UserPrayersFeature = ({
+const VerticalPrayerListFeature = ({
   title,
   subtitle,
   avatar,
@@ -58,7 +58,7 @@ const UserPrayersFeature = ({
   </Card>
 );
 
-UserPrayersFeature.propTypes = {
+VerticalPrayerListFeature.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
   avatar: PropTypes.shape({ uri: PropTypes.string }),
@@ -66,4 +66,4 @@ UserPrayersFeature.propTypes = {
   onPressDetails: PropTypes.func,
 };
 
-export default UserPrayersFeature;
+export default VerticalPrayerListFeature;

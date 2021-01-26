@@ -1,4 +1,4 @@
-import gql from 'graphql-tag';
+import gql from "graphql-tag";
 
 const TEXT_FEATURE_FRAGMENT = gql`
   fragment TextFeatureFragment on TextFeature {
@@ -33,15 +33,24 @@ const PRAYER_LIST_FEATURE_FRAGMENT = gql`
   }
 `;
 
-const USER_PRAYERS_FEATURE_FRAGMENT = gql`
-  fragment UserPrayersFeatureFragment on UserPrayersFeature {
+const VERTICAL_PRAYER_LIST_FEATURE_FRAGMENT = gql`
+  fragment UserPrayersFeatureFragment on VerticalPrayerListFeature {
     id
     title
     subtitle
-    avatar
     prayers {
       __typename
       id
+      text
+      isPrayed
+      requestor {
+        id
+        nickName
+        firstName
+        photo {
+          uri
+        }
+      }
     }
   }
 `;

@@ -1030,10 +1030,9 @@ export const prayerSchema = gql`
     prayers: [PrayerRequest]
   }
 
-  type UserPrayersFeature implements Feature & Node {
+  type VerticalPrayerListFeature implements Feature & Node {
     id: ID!
     order: Int
-    avatar: ImageMediaSource
     title: String
     subtitle: String
     prayers: [PrayerRequest]
