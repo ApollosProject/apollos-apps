@@ -137,11 +137,6 @@ export default class ContentItem extends RockApolloDataSource {
             })
           );
           break;
-        case 'comments':
-          features.push(
-            Feature.createCommentListFeature({ nodeId: id, nodeType: __type })
-          );
-          break;
         default:
           console.warn(`Received invalid feature key: ${key}`);
       }
@@ -180,6 +175,13 @@ export default class ContentItem extends RockApolloDataSource {
           })
         );
       });
+    }
+
+    const commentFeatures = get(attributeValues, 'comments.value', 'False');
+    if (commentFeatures === 'True') {
+      features.push(
+        Feature.createCommentListFeature({ nodeId: id, nodeType: __type })
+      );
     }
 
     return features;

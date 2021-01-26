@@ -312,9 +312,13 @@ describe('ContentItemsModel', () => {
     };
     const result = dataSource.getFeatures({
       attributeValues: {
+        comments: {
+          id: 123,
+          value: 'True',
+        },
         features: {
           id: 123,
-          value: 'scripture^john 3|text^text feature|comments',
+          value: 'scripture^john 3|text^text feature',
         },
       },
       __type: 'ContentItem',
