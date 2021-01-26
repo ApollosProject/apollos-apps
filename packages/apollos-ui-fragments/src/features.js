@@ -33,6 +33,18 @@ const PRAYER_LIST_FEATURE_FRAGMENT = gql`
   }
 `;
 
+const USER_PRAYERS_FEATURE_FRAGMENT = gql`
+  fragment UserPrayersFeatureFragment on UserPrayersFeature {
+    id
+    title
+    subtitle
+    avatar
+    prayers {
+      __typename
+      id
+    }
+  }
+`;
 const LITE_FEATURES_FRAGMENT = gql`
   fragment LiteFeaturesFragment on Feature {
     id
@@ -328,6 +340,7 @@ export {
   LITE_FEATURES_FRAGMENT,
   WEBVIEW_FEATURE_FRAGMENT,
   PRAYER_LIST_FEATURE_FRAGMENT,
+  USER_PRAYERS_FEATURE_FRAGMENT,
   RELATED_NODE_FRAGMENT,
   NODE_FEATURES_FRAGMENT,
 };
