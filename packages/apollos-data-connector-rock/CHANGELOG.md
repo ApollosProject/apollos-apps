@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.1](https://github.com/apollosproject/apollos-apps/compare/v2.0.0-beta.0...v2.0.0-beta.1) (2021-01-22)
+
+
+### Features
+
+* Adds Series Children Algorithm ([#1692](https://github.com/apollosproject/apollos-apps/issues/1692)) ([1ef867e](https://github.com/apollosproject/apollos-apps/commit/1ef867e7f7e6c96c0d9c92072c3e095ae129619a))
+* Comments ([#1685](https://github.com/apollosproject/apollos-apps/issues/1685)) ([9e12b69](https://github.com/apollosproject/apollos-apps/commit/9e12b69d167f12fa42df2937cf636191b9653cb4))
+
+
+
+
+
 # [1.8.0-beta.0](https://github.com/apollosproject/apollos-apps/compare/v1.7.0...v1.8.0-beta.0) (2021-01-06)
 
 
