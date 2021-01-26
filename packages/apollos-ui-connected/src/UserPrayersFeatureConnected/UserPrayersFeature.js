@@ -28,7 +28,13 @@ const StyledButtonLink = styled({
   flex: 1,
 })(ButtonLink);
 
-const UserPrayersFeature = ({ title, subtitle, avatar }) => (
+const UserPrayersFeature = ({
+  title,
+  subtitle,
+  avatar,
+  onPressPrimary,
+  onPressDetails,
+}) => (
   <Card>
     <CardContent>
       <StyledAvatarView>
@@ -40,8 +46,12 @@ const UserPrayersFeature = ({ title, subtitle, avatar }) => (
       </Paragraph>
     </CardContent>
     <CardActions>
-      <StyledButton title="Start Praying" pill={false} />
-      <StyledButtonLink>
+      <StyledButton
+        title="Start Praying"
+        pill={false}
+        onPress={onPressPrimary}
+      />
+      <StyledButtonLink onPress={onPressDetails}>
         <Icon name="dots-three-vertical" />
       </StyledButtonLink>
     </CardActions>
@@ -52,6 +62,8 @@ UserPrayersFeature.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
   avatar: PropTypes.shape({ uri: PropTypes.string }),
+  onPressPrimary: PropTypes.func,
+  onPressDetails: PropTypes.func,
 };
 
 export default UserPrayersFeature;

@@ -6,6 +6,7 @@ import HorizontalCardListFeatureConnected from '../HorizontalCardListFeatureConn
 import VerticalCardListFeatureConnected from '../VerticalCardListFeatureConnected';
 import HeroListFeatureConnected from '../HeroListFeatureConnected';
 import PrayerListFeatureConnected from '../PrayerListFeatureConnected';
+import UserPrayersFeatureConnected from '../UserPrayersFeatureConnected';
 import ActionBarFeatureConnected from '../ActionBarFeatureConnected';
 import ScriptureFeature from '../features/ScriptureFeature';
 import TextFeature from '../features/TextFeature';
@@ -21,6 +22,7 @@ const MAPPINGS = {
   // like Prayer, don't all get stuck here, forcing all church apps to have
   // them all installed?
   PrayerListFeature: PrayerListFeatureConnected,
+  UserPrayersFeature: UserPrayersFeatureConnected,
   ScriptureFeature,
   TextFeature,
   WebviewFeature,
