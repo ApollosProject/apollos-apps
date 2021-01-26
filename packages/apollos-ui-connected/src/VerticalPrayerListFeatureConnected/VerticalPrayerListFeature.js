@@ -13,6 +13,8 @@ import {
   Avatar,
   PaddedView,
   styled,
+  H6,
+  H3,
 } from '@apollosproject/ui-kit';
 
 const StyledAvatarView = styled({
@@ -31,37 +33,45 @@ const StyledButtonLink = styled({
 const VerticalPrayerListFeature = ({
   title,
   subtitle,
-  avatar,
+  prayers,
   onPressPrimary,
   onPressDetails,
 }) => (
-  <Card>
-    <CardContent>
-      <StyledAvatarView>
-        <Avatar size="medium" source={avatar} />
-      </StyledAvatarView>
-      <H4>{title}</H4>
-      <Paragraph>
-        <BodyText>{subtitle}</BodyText>
-      </Paragraph>
-    </CardContent>
-    <CardActions>
-      <StyledButton
-        title="Start Praying"
-        pill={false}
-        onPress={onPressPrimary}
-      />
-      <StyledButtonLink onPress={onPressDetails}>
-        <Icon name="dots-three-vertical" />
-      </StyledButtonLink>
-    </CardActions>
-  </Card>
+  <>
+    <PaddedView>
+      <H6>{title}</H6>
+      <H3>{subtitle}</H3>
+    </PaddedView>
+    {prayers.map((prayer) => (
+      <Card key={prayer.id}>
+        <CardContent>
+          <StyledAvatarView>
+            <Avatar size="medium" source={prayer.requestor?.photo} />
+          </StyledAvatarView>
+          <H4>{`Pray for ${prayer.requestor?.firstName}`}</H4>
+          <Paragraph>
+            <BodyText>{prayer.text}</BodyText>
+          </Paragraph>
+        </CardContent>
+        <CardActions>
+          <StyledButton
+            title="Start Praying"
+            pill={false}
+            onPress={onPressPrimary}
+          />
+          <StyledButtonLink onPress={onPressDetails}>
+            <Icon name="dots-three-vertical" />
+          </StyledButtonLink>
+        </CardActions>
+      </Card>
+    ))}
+  </>
 );
 
 VerticalPrayerListFeature.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
-  avatar: PropTypes.shape({ uri: PropTypes.string }),
+  prayers: PropTypes.arrayOf(PropTypes.shape({})),
   onPressPrimary: PropTypes.func,
   onPressDetails: PropTypes.func,
 };

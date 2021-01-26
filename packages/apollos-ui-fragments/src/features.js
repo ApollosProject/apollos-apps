@@ -1,4 +1,4 @@
-import gql from "graphql-tag";
+import gql from 'graphql-tag';
 
 const TEXT_FEATURE_FRAGMENT = gql`
   fragment TextFeatureFragment on TextFeature {
@@ -34,7 +34,7 @@ const PRAYER_LIST_FEATURE_FRAGMENT = gql`
 `;
 
 const VERTICAL_PRAYER_LIST_FEATURE_FRAGMENT = gql`
-  fragment UserPrayersFeatureFragment on VerticalPrayerListFeature {
+  fragment VerticalCardListFeatureFragment on VerticalPrayerListFeature {
     id
     title
     subtitle
@@ -349,7 +349,7 @@ export {
   LITE_FEATURES_FRAGMENT,
   WEBVIEW_FEATURE_FRAGMENT,
   PRAYER_LIST_FEATURE_FRAGMENT,
-  USER_PRAYERS_FEATURE_FRAGMENT,
+  VERTICAL_PRAYER_LIST_FEATURE_FRAGMENT,
   RELATED_NODE_FRAGMENT,
   NODE_FEATURES_FRAGMENT,
 };

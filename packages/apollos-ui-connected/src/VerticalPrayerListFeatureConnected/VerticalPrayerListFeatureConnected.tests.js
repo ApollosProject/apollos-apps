@@ -15,8 +15,8 @@ describe('VerticalPrayerListFeatureConnected component', () => {
       result: {
         data: {
           node: {
-            __typename: 'UserPrayersFeature',
-            id: 'UserPrayersFeature:123',
+            __typename: 'VerticalCardListFeature',
+            id: 'VerticalCardListFeature:123',
             title: 'title',
             subtitle: 'subtitle',
             prayers: [

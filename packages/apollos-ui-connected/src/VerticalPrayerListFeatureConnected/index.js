@@ -5,7 +5,7 @@ import { useQuery } from '@apollo/client';
 import VerticalPrayerListFeature from './VerticalPrayerListFeature';
 import GET_VERTICAL_PRAYER_LIST_FEATURE from './getVerticalPrayerListFeature';
 
-const UserPrayersFeatureConnected = ({ featureId }) => {
+const VerticalPrayerListFeatureConnected = ({ featureId }) => {
   const { loading, error, data } = useQuery(GET_VERTICAL_PRAYER_LIST_FEATURE, {
     fetchPolicy: 'cache-and-network',
     variables: { featureId },
@@ -22,8 +22,8 @@ const UserPrayersFeatureConnected = ({ featureId }) => {
   );
 };
 
-UserPrayersFeatureConnected.propTypes = {
+VerticalPrayerListFeatureConnected.propTypes = {
   featureId: PropTypes.string,
 };
 
-export default UserPrayersFeatureConnected;
+export default VerticalPrayerListFeatureConnected;
