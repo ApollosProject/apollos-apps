@@ -28,8 +28,8 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@apollosproject/data-schema": "^1.7.0",
-    "@apollosproject/server-core": "^1.7.0",
+    "@apollosproject/data-schema": "2.0.0-beta.1",
+    "@apollosproject/server-core": "2.0.0-beta.1",
     "lodash": "^4.17.11",
     "pg": "^8.5.1",
     "pg-hstore": "^2.3.3",
@@ -40,7 +40,7 @@
     "@apollosproject/config": "*"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^1.7.0",
+    "@apollosproject/babel-preset-apollos": "2.0.0-beta.1",
     "jest": "^25.1.0",
     "sequelize-mock": "^0.10.2"
   },

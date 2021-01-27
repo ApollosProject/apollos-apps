@@ -4,6 +4,8 @@ const resolvers = {
   Mutation: {
     addComment: (root, args, { dataSources: { Comment } }) =>
       Comment.addComment(args),
+    flagComment: (root, args, { dataSources: { UserFlag } }) =>
+      UserFlag.flagComment(args),
   },
   Comment: {
     person: (root, args, { dataSources: { Comment } }) =>
