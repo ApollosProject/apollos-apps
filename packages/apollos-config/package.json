@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/config",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "2.0.0-beta.2",
+  "version": "2.0.0-2.0.0-alpha.16.0",
   "main": "lib/index.js",
   "react-native": "react-native/index.js",
   "files": [
@@ -34,7 +34,7 @@
     ]
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^2.0.0-beta.2",
+    "@apollosproject/babel-preset-apollos": "^2.0.0-2.0.0-alpha.16.0",
     "react-native-config": "0.11.7"
   },
   "peerDependencies": {
