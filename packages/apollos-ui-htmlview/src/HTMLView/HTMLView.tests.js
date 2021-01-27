@@ -206,6 +206,19 @@ describe('the HTMLView component', () => {
 
     expect(tree).toMatchSnapshot();
   });
+  it('should render spaces between spans', () => {
+    const tree = renderer.create(
+      <Providers>
+        <HTMLView>
+          {
+            '<p><span>There are some bits of scripture</span> <span>where the spaces between words</span> <span>exist outside spans</span></p>'
+          }
+        </HTMLView>
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
   it('should render a line break (br) without a parent', () => {
     const tree = renderer.create(
       <Providers>

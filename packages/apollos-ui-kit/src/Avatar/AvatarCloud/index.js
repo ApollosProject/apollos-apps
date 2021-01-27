@@ -125,8 +125,8 @@ class AvatarCloud extends PureComponent {
     return this.randomSeeds[seed];
   }
 
-  getRandomAvatarSizes() {
-    return this.props.avatars.map((avatar, i) => {
+  getRandomAvatarSizes(avatars) {
+    return avatars.map((avatar, i) => {
       const randomNumberInRange =
         this.getRandomPositionValue(i) *
           (this.getRandomAvatarMaxWidth() - this.props.minAvatarWidth) +
@@ -182,7 +182,10 @@ class AvatarCloud extends PureComponent {
       ? this.getRadialXYPositions.bind(this)
       : this.getRandomXYPositions.bind(this);
 
-    return this.getRandomAvatarSizes().map((size, i, sizes) => (
+    // filter out null avatars
+    const avatars = this.props.avatars.filter((avatar) => avatar != null);
+
+    return this.getRandomAvatarSizes(avatars).map((size, i, sizes) => (
       <BlurWrapper
         avatarWidth={this.getAvatarPercentageWidth(size)}
         getXYPositions={positionFunction({
@@ -190,15 +193,13 @@ class AvatarCloud extends PureComponent {
           i,
           size,
         })}
-        key={`${
-          typeof this.props.avatars[i] === 'string'
-            ? this.props.avatars[i]
-            : this.props.avatars[i]?.uri
-        }${this.props.avatars[i].id ? this.props.avatars[i].id : i}`}
+        key={`${typeof avatars[i] === 'string' ? avatars[i] : avatars[i].uri}${
+          avatars[i].id || i
+        }`}
         order={Math.floor(Math.abs(Math.sin(i * this.seed)) * 10)} // order = zIndex == higher index === "closer two the viewer/higher layer"
       >
         <RandomAvatar
-          source={this.props.avatars[i]}
+          source={avatars[i]}
           isLoading={this.props.isLoading}
           blurRadius={this.props.blur ? sizes.length - i : 0}
         />

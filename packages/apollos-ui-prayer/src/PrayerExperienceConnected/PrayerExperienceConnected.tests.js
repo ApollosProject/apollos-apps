@@ -10,6 +10,9 @@ import { GET_USER_PHOTO } from '../screens/AddPrayerScreenConnected';
 import GET_PRAYER_FEATURE from './getPrayerFeature';
 import PrayerExperienceConnected from '.';
 
+// mock this so the AvatarCloud looks the same every time
+global.Math.random = () => 0.5;
+
 jest.mock('react-native-device-info', () => ({
   getModel: jest.fn(),
   getUniqueId: jest.fn(),
