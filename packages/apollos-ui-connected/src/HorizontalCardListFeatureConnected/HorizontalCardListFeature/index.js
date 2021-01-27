@@ -150,7 +150,7 @@ class HorizontalCardListFeature extends PureComponent {
             </Header>
           ) : null}
           <HorizontalTileFeed
-            content={cards}
+            content={isLoading ? null : cards}
             isLoading={isLoading}
             listKey={listKey}
             keyExtractor={this.keyExtractor}

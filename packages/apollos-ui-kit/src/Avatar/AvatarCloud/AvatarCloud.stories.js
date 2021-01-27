@@ -38,6 +38,9 @@ function RadialWithRefresh(props) {
 
 storiesOf('ui-kit/Avatar/AvatarCloud', module)
   .add('default', () => <AvatarCloud avatars={generateAvatars()} />)
+  .add('empty', () => (
+    <AvatarCloud avatars={[null, { id: 'Photo:123', uri: '' }]} />
+  ))
   .add('radial', () => <RadialWithRefresh />)
   .add('radial w/ primary avatar', () => (
     <RadialWithRefresh primaryAvatar={'https://picsum.photos/200'} />
