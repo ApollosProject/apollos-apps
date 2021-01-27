@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { storiesOf } from '@apollosproject/ui-storybook';
-import { CenteredView, ScrollView } from '@apollosproject/ui-kit';
+import { CenteredView } from '@apollosproject/ui-kit';
 
 import VerticalPrayerListFeature from './VerticalPrayerListFeature';
 

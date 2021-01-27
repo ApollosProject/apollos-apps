@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, View, Text } from 'react-native';
+import { Modal, View } from 'react-native';
 import PropTypes from 'prop-types';
 import {
   Card,
@@ -7,7 +7,6 @@ import {
   H4,
   Paragraph,
   BodyText,
-  CardActions,
   Button,
   // ButtonLink,
   // Icon,
