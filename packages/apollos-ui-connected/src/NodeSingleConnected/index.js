@@ -63,7 +63,11 @@ const NodeSingleConnectedWithMedia = ({ nodeId, children }) => (
     fetchPolicy={'cache-and-network'}
   >
     {({ data = {} }) => {
-      if (!data?.node?.videos?.length)
+      const hasMedia =
+        data?.node?.videos?.length &&
+        data.node.videos.some(({ sources }) => sources.length);
+
+      if (!hasMedia)
         return (
           <NodeSingleConnected nodeId={nodeId}>{children}</NodeSingleConnected>
         );
