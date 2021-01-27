@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.1](https://github.com/apollosproject/apollos-apps/compare/v2.0.0-beta.0...v2.0.0-beta.1) (2021-01-22)
+
+
+### Features
+
+* Adds Series Children Algorithm ([#1692](https://github.com/apollosproject/apollos-apps/issues/1692)) ([1ef867e](https://github.com/apollosproject/apollos-apps/commit/1ef867e7f7e6c96c0d9c92072c3e095ae129619a))
+* Comments ([#1685](https://github.com/apollosproject/apollos-apps/issues/1685)) ([9e12b69](https://github.com/apollosproject/apollos-apps/commit/9e12b69d167f12fa42df2937cf636191b9653cb4))
+
+
+
+
+
+# [1.8.0-beta.0](https://github.com/apollosproject/apollos-apps/compare/v1.7.0...v1.8.0-beta.0) (2021-01-06)
+
+
+### Bug Fixes
+
+* Splits Interaction Requests ([#1663](https://github.com/apollosproject/apollos-apps/issues/1663)) ([84f1433](https://github.com/apollosproject/apollos-apps/commit/84f1433))
+* Update prayer algorithm  ([#1646](https://github.com/apollosproject/apollos-apps/issues/1646)) ([2c50471](https://github.com/apollosproject/apollos-apps/commit/2c50471))
+
+
+### Features
+
+* add date to content items ([#1614](https://github.com/apollosproject/apollos-apps/issues/1614)) ([5345a55](https://github.com/apollosproject/apollos-apps/commit/5345a55))
+* Adds Whitelist to Series Progress Algorithm ([#1668](https://github.com/apollosproject/apollos-apps/issues/1668)) ([7d024b5](https://github.com/apollosproject/apollos-apps/commit/7d024b5))
+
+
+
+
+
 # [1.7.0](https://github.com/apollosproject/apollos-apps/compare/v1.7.0-beta.3...v1.7.0) (2020-11-18)
 
 **Note:** Version bump only for package @apollosproject/data-connector-rock

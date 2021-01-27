@@ -16,6 +16,7 @@ ApollosConfig.loadJs({
   },
   ROCK_MAPPINGS: {
     SERMON_CHANNEL_ID: 'TEST_ID',
+    CAMPAIGN_CHANNEL_IDS: [1],
   },
   BIBLE_API: {
     BIBLE_ID: {
@@ -904,7 +905,7 @@ describe('ContentItemsModel', () => {
     const dataSource = new ContentItemsDataSource();
     dataSource.get = jest.fn(() => Promise.resolve([{ id: 3 }]));
     dataSource.getPercentComplete = jest.fn(({ id }) => (id === '1' ? 100 : 0));
-    dataSource.getFromIds = jest.fn();
+    dataSource.getFromIds = jest.fn(() => ({ andFilter: () => null }));
     dataSource.context = {
       dataSources: {
         Auth: { getCurrentPerson: () => ({ id: '1' }) },
@@ -922,6 +923,35 @@ describe('ContentItemsModel', () => {
     };
 
     await dataSource.getSeriesWithUserProgress();
+    expect(dataSource.getFromIds.mock.calls).toMatchSnapshot('get from ids');
+    expect(dataSource.getPercentComplete.mock.calls).toMatchSnapshot(
+      'get percent complete'
+    );
+  });
+  it('gets series from specific channel a user has viewed', async () => {
+    const dataSource = new ContentItemsDataSource();
+    dataSource.get = jest.fn(() => Promise.resolve([{ id: 3 }]));
+    dataSource.getPercentComplete = jest.fn(({ id }) => (id === '1' ? 100 : 0));
+    dataSource.getFromIds = jest.fn(() => ({
+      andFilter: () => ({ andFilter: () => null }),
+    }));
+    dataSource.context = {
+      dataSources: {
+        Auth: { getCurrentPerson: () => ({ id: '1' }) },
+        Interactions: {
+          getInteractionsForCurrentUser: jest.fn(() =>
+            Promise.resolve([
+              { foreignKey: createGlobalId('1', 'UniversalContentItem') },
+              { foreignKey: createGlobalId('2', 'UniversalContentItem') },
+              { foreignKey: createGlobalId('2', 'UniversalContentItem') },
+              { foreignKey: createGlobalId('3', 'UniversalContentItem') },
+            ])
+          ),
+        },
+      },
+    };
+
+    await dataSource.getSeriesWithUserProgress({ channelIds: [10] });
     expect(dataSource.getFromIds.mock.calls).toMatchSnapshot('get from ids');
     expect(dataSource.getPercentComplete.mock.calls).toMatchSnapshot(
       'get percent complete'

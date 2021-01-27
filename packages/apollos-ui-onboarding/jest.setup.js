@@ -12,6 +12,8 @@ jest.mock('@apollosproject/ui-analytics', () => ({
   withTrackOnPress: (Component) => (props) => <Component {...props} />,
 }));
 
+jest.mock('react-native-geolocation-service', () => ({}));
+
 NativeModules.RNGestureHandlerModule = {
   attachGestureHandler: jest.fn(),
   createGestureHandler: jest.fn(),

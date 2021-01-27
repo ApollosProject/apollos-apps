@@ -109,9 +109,22 @@ export default class ContentItem extends RockApolloDataSource {
     }));
   };
 
-  getFeatures({ attributeValues }) {
+  getFeatures({ attributeValues /* , __type, id */ }) {
     const { Feature } = this.context.dataSources;
     const features = [];
+
+    // features.push(
+    //   Feature.createCommentListFeature({ nodeId: id, nodeType: __type })
+    // );
+
+    //     if(__typename == "DevotionalContentItem"){
+    //       features.push(Features.createCommentFeature())
+    //     }
+    //
+    //     const text = get(attributeValues, 'showComments.value', '');
+    //     if (text == 'True') {
+    //       features.push(Features.createCommentFeature())
+    //     }
 
     // TODO this should replace all other methods
     // TODO this should be written in a more extendable way for partners
@@ -514,7 +527,7 @@ export default class ContentItem extends RockApolloDataSource {
     return childItemsWithApollosIds[firstInteractedIndex - 1];
   }
 
-  async getSeriesWithUserProgress() {
+  async getSeriesWithUserProgress({ channelIds = [] } = {}) {
     const { Auth, Interactions } = this.context.dataSources;
 
     // Safely exit if we don't have a current user.
@@ -535,13 +548,6 @@ export default class ContentItem extends RockApolloDataSource {
       })
     );
 
-    // We need to make sure we don't include the campaign channels.
-    // We could also consider doing this using a whitelist.
-    // This also may be part of a broader conversation about how we identify the true parent of a content item
-    const blacklistedIds = (
-      await this.byContentChannelIds(ROCK_MAPPINGS.CAMPAIGN_CHANNEL_IDS).get()
-    ).map(({ id }) => `${id}`);
-
     const completedIds = (
       await Promise.all(
         ids.map(async (id) => ({
@@ -553,11 +559,20 @@ export default class ContentItem extends RockApolloDataSource {
       .filter(({ percent }) => percent === 100)
       .map(({ id }) => id);
 
-    const finalIds = ids.filter(
-      (id) => ![...blacklistedIds, ...completedIds].includes(id)
-    );
+    const inProgressIds = ids.filter((id) => ![...completedIds].includes(id));
+    let cursor = this.getFromIds(inProgressIds);
 
-    return this.getFromIds(finalIds);
+    // only search through allowed channels
+    channelIds.forEach((id) => {
+      cursor = cursor.andFilter(`ContentChannelId eq ${id}`);
+    });
+
+    // exclude campaign channels
+    ROCK_MAPPINGS.CAMPAIGN_CHANNEL_IDS.forEach((id) => {
+      cursor = cursor.andFilter(`ContentChannelId ne ${id}`);
+    });
+
+    return cursor;
   }
 
   async getPercentComplete({ id }) {

@@ -6,6 +6,7 @@ ApollosConfig.loadJs({ FRAGMENTS });
 
 jest.mock('react-native-maps');
 
+jest.mock('react-native-geolocation-service', () => {});
 NativeModules.RNGestureHandlerModule = {
   attachGestureHandler: jest.fn(),
   createGestureHandler: jest.fn(),

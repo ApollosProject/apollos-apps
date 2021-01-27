@@ -59,9 +59,9 @@ class RockConstants extends RockApolloDataSource {
       objectAttributes: {
         Name: componentName,
         // https://www.rockrms.com/ReleaseNotes#v11.0-core
-        ...(ApollosConfig?.ROCK?.VERSION >= 11.0
-          ? { InteractionChannelId: channelId }
-          : { ChannelId: channelId }),
+        ...(ApollosConfig?.ROCK?.VERSION < 11.0
+          ? { ChannelId: channelId }
+          : { InteractionChannelId: channelId }),
         EntityId: entityId,
       },
     });

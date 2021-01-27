@@ -269,6 +269,15 @@ export default class Feature extends RockApolloDataSource {
     };
   }
 
+  createCommentListFeature({ nodeId, nodeType }) {
+    return {
+      id: JSON.stringify({ nodeId, nodeType }),
+      comments: () =>
+        this.context.dataSources.Comment.getForNode({ nodeId, nodeType }),
+      __typename: 'CommentListFeature',
+    };
+  }
+
   createPrayerListFeature({
     algorithms = [],
     title,
@@ -296,6 +305,25 @@ export default class Feature extends RockApolloDataSource {
       isCard,
       // Typename is required so GQL knows specifically what Feature is being created
       __typename: 'PrayerListFeature',
+    };
+  }
+
+  async createUserPrayersFeature() {
+    const { ActionAlgorithm, Auth } = this.context.dataSources;
+    const { primaryAliasId, firstName, photo } = await Auth.getCurrentPerson();
+    const prayers = () =>
+      ActionAlgorithm.runAlgorithms({
+        algorithms: ['DAILY_PRAYER'],
+        args: { primaryAliasId },
+      });
+    return {
+      id: this.createFeatureId({
+        primaryAliasId,
+      }),
+      prayers,
+      avatar: { uri: photo?.url || '' },
+      title: `Pray for ${firstName}`,
+      __typename: 'UserPrayersFeature',
     };
   }
 
@@ -336,6 +364,8 @@ export default class Feature extends RockApolloDataSource {
             return this.createHeroListFeature(finalConfig);
           case 'PrayerList':
             return this.createPrayerListFeature(finalConfig);
+          case 'UserPrayers':
+            return this.createUserPrayersFeature(finalConfig);
           case 'ActionList':
           default:
             // Action list was the default in 1.3.0 and prior.

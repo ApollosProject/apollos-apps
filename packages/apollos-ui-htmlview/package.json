@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/ui-htmlview",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "1.7.0",
+  "version": "2.0.0-beta.1",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -20,7 +20,11 @@
   "jest": {
     "preset": "react-native",
     "collectCoverage": true,
-    "coverageReporters": ["json", "lcovonly", "clover"],
+    "coverageReporters": [
+      "json",
+      "lcovonly",
+      "clover"
+    ],
     "transformIgnorePatterns": [
       "node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@apollosproject))"
     ],
@@ -40,8 +44,6 @@
     "react-native": "*"
   },
   "dependencies": {
-    "@apollosproject/ui-kit": "^1.7.0",
-    "@apollosproject/ui-storybook": "^1.7.0",
     "entities": "^1.1.2",
     "htmlparser2": "3.9.2"
   },

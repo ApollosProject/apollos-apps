@@ -776,7 +776,13 @@ exports[`The HorizontalCardListFeature component should render a loading state f
       }
     }
   >
-    <View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
       <View
         style={
           Object {
@@ -801,6 +807,47 @@ exports[`The HorizontalCardListFeature component should render a loading state f
           }
         }
       />
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignSelf": "flex-end",
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "flexDirection": "row",
+            "justifyContent": "flex-end",
+            "padding": 16,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 12,
+              "marginVertical": 3,
+              "width": "50%",
+            }
+          }
+        />
+      </View>
     </View>
   </View>
   <RCTScrollView
@@ -1855,7 +1902,13 @@ exports[`The HorizontalCardListFeature component should render a section title 1
       }
     }
   >
-    <View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
       <Text
         numberOfLines={1}
         style={
@@ -2645,7 +2698,13 @@ exports[`The HorizontalCardListFeature component should render with a section su
       }
     }
   >
-    <View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
       <Text
         style={
           Object {

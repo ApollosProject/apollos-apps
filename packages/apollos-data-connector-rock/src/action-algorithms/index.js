@@ -9,6 +9,7 @@ class ActionAlgorithm extends RockApolloDataSource {
     PERSONA_FEED: this.personaFeedAlgorithm,
     CONTENT_CHANNEL: this.contentChannelAlgorithm,
     SERMON_CHILDREN: this.sermonChildrenAlgorithm,
+    LATEST_SERIES_CHILDREN: this.latestSeriesChildrenAlgorithm,
     UPCOMING_EVENTS: this.upcomingEventsAlgorithm,
     CAMPAIGN_ITEMS: this.campaignItemsAlgorithm,
     SERIES_IN_PROGRESS: this.seriesInProgressAlgorithm,
@@ -60,11 +61,16 @@ class ActionAlgorithm extends RockApolloDataSource {
     );
   }
 
-  async dailyPrayerAlgorithm({ limit = 10, numberDaysSincePrayer } = {}) {
+  async dailyPrayerAlgorithm({
+    limit = 10,
+    numberDaysSincePrayer,
+    primaryAliasId,
+  } = {}) {
     const { PrayerRequest, Feature } = this.context.dataSources;
     Feature.setCacheHint({ maxAge: 0, scope: 'PRIVATE' });
     const cursor = await PrayerRequest.byDailyPrayerFeed({
       numberDaysSincePrayer,
+      primaryAliasId,
     });
     return cursor.top(limit).get();
   }
@@ -160,6 +166,31 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
     }));
   }
 
+  async latestSeriesChildrenAlgorithm({ limit = null, channelId } = {}) {
+    const { ContentItem } = this.context.dataSources;
+
+    if (!channelId) return console.warn('Must provide channelId') || [];
+    const series = await ContentItem.byContentChannelId(channelId)
+      .andFilter(ContentItem.LIVE_CONTENT())
+      .first();
+    if (!series) return [];
+
+    const cursor = (
+      await ContentItem.getCursorByParentContentItemId(series.id)
+    ).expand('ContentChannel');
+    const items = limit ? await cursor.top(limit).get() : await cursor.get();
+
+    return items.map((item, i) => ({
+      id: `${item.id}${i}`,
+      title: item.title,
+      subtitle: get(item, 'contentChannel.name'),
+      relatedNode: { ...item, __type: ContentItem.resolveType(item) },
+      image: ContentItem.getCoverImage(item),
+      action: 'READ_CONTENT',
+      summary: ContentItem.createSummary(item),
+    }));
+  }
+
   // Gets a configurable amount of content items from each of the configured campaigns
   async campaignItemsAlgorithm({ limit = 1 } = {}) {
     const { ContentItem } = this.context.dataSources;
@@ -215,11 +246,15 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
     }));
   }
 
-  async seriesInProgressAlgorithm({ limit = 3 } = {}) {
+  async seriesInProgressAlgorithm({ limit = 3, channelIds = [] } = {}) {
     const { ContentItem, Feature } = this.context.dataSources;
     Feature.setCacheHint({ maxAge: 0, scope: 'PRIVATE' });
 
-    const items = await (await ContentItem.getSeriesWithUserProgress())
+    const items = await (
+      await ContentItem.getSeriesWithUserProgress({
+        channelIds,
+      })
+    )
       .expand('ContentChannel')
       .top(limit)
       .get();
