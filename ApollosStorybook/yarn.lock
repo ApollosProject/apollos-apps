@@ -74,26 +74,9 @@
   version "0.0.0"
   uid ""
 
-<<<<<<< HEAD
-"@apollosproject/ui-kit@^2.0.0-beta.0":
+"@apollosproject/ui-kit@^2.0.0-beta.1":
   version "0.0.0"
   uid ""
-=======
-"@apollosproject/ui-kit@^1.8.0-beta.0":
-  version "1.8.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-kit/-/ui-kit-1.8.0-beta.0.tgz#6f2940d99189ba0feb49fee3f1e5e294cbbc9b4c"
-  integrity sha512-lX+POyQ0rpYhbX/Vi2yT/BIJZfB9a0jeBRYLgR3D5WpEPPumLi8crDGjaHobkSka7lcOwEDRbR27oLFGkEaUeg==
-  dependencies:
-    "@react-native-community/blur" "^3.6.0"
-    color "^3.1.0"
-    lodash "^4.17.11"
-    moment "^2.24.0"
-    numeral "^2.0.6"
-    react-native-modal-datetime-picker "8.7.1"
-    react-native-tab-view "1.0.2"
-    recompose "^0.30.0"
-    rn-placeholder "1.2.0"
->>>>>>> 5eabd45109772efec9738c05f35cf5d3e586bd37
 
 "@apollosproject/ui-kit@link:../packages/apollos-ui-kit":
   version "0.0.0"
@@ -127,19 +110,6 @@
   version "0.0.0"
   uid ""
 
-<<<<<<< HEAD
-=======
-"@apollosproject/ui-storybook@^1.8.0-beta.0":
-  version "1.8.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-storybook/-/ui-storybook-1.8.0-beta.0.tgz#a8eeff27cb9cfc9d3690497c4a2eec84f3a8e56f"
-  integrity sha512-qBzipEB8NJHRCc2eQgeDeOKa4YR30xG0fE5qwhcfNKHtfEWkFrr85J39Y1yYqtQL2fYRs9IRcpKeSRk1wMeJgw==
-  dependencies:
-    "@storybook/addon-actions" "5.2.4"
-    "@storybook/addon-links" "5.2.4"
-    "@storybook/addons" "5.2.4"
-    "@storybook/react-native" "5.2.4"
-
->>>>>>> 5eabd45109772efec9738c05f35cf5d3e586bd37
 "@apollosproject/ui-storybook@link:../packages/apollos-ui-storybook":
   version "0.0.0"
   uid ""
