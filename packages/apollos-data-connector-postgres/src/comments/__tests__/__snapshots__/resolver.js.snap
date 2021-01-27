@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Apollos Postgres Comment Flags Resolver adds new comment 1`] = `
+Object {
+  "data": Object {
+    "addComment": Object {
+      "id": "Comment:1234",
+    },
+  },
+}
+`;
+
+exports[`Apollos Postgres Comment Flags Resolver flags comment 1`] = `
+Object {
+  "data": Object {
+    "flagComment": Object {
+      "id": "UserFlag:1234",
+    },
+  },
+}
+`;

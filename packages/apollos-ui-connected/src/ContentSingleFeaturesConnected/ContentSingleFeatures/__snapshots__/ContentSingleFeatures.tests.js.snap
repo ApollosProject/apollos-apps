@@ -358,6 +358,22 @@ exports[`ContentSingleFeatures should render 1`] = `
                       ¶ For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.
                     </Text>
                   </Text>
+                  <Text
+                    bold={false}
+                    italic={false}
+                    style={
+                      Object {
+                        "color": "#303030",
+                        "fontFamily": "DroidSerif",
+                        "fontSize": 16,
+                        "lineHeight": 26,
+                      }
+                    }
+                  >
+                    <Text>
+                       
+                    </Text>
+                  </Text>
                 </Text>
               </View>
             </View>
@@ -654,6 +670,22 @@ exports[`ContentSingleFeatures should render 1`] = `
                     </Text>
                   </Text>
                   <Text
+                    bold={false}
+                    italic={false}
+                    style={
+                      Object {
+                        "color": "#303030",
+                        "fontFamily": "DroidSerif",
+                        "fontSize": 16,
+                        "lineHeight": 26,
+                      }
+                    }
+                  >
+                    <Text>
+                       
+                    </Text>
+                  </Text>
+                  <Text
                     style={
                       Object {
                         "color": "#8b0000",
@@ -662,6 +694,22 @@ exports[`ContentSingleFeatures should render 1`] = `
                   >
                     <Text>
                       Son, that whoever believes in him should not perish, but have eternal life, forever. 
+                    </Text>
+                  </Text>
+                  <Text
+                    bold={false}
+                    italic={false}
+                    style={
+                      Object {
+                        "color": "#303030",
+                        "fontFamily": "DroidSerif",
+                        "fontSize": 16,
+                        "lineHeight": 26,
+                      }
+                    }
+                  >
+                    <Text>
+                       
                     </Text>
                   </Text>
                 </Text>
@@ -1900,6 +1948,22 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
                       ¶ For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.
                     </Text>
                   </Text>
+                  <Text
+                    bold={false}
+                    italic={false}
+                    style={
+                      Object {
+                        "color": "#303030",
+                        "fontFamily": "DroidSerif",
+                        "fontSize": 16,
+                        "lineHeight": 26,
+                      }
+                    }
+                  >
+                    <Text>
+                       
+                    </Text>
+                  </Text>
                 </Text>
               </View>
             </View>
@@ -2196,6 +2260,22 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
                     </Text>
                   </Text>
                   <Text
+                    bold={false}
+                    italic={false}
+                    style={
+                      Object {
+                        "color": "#303030",
+                        "fontFamily": "DroidSerif",
+                        "fontSize": 16,
+                        "lineHeight": 26,
+                      }
+                    }
+                  >
+                    <Text>
+                       
+                    </Text>
+                  </Text>
+                  <Text
                     style={
                       Object {
                         "color": "#8b0000",
@@ -2204,6 +2284,22 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
                   >
                     <Text>
                       Son, that whoever believes in him should not perish, but have eternal life, forever. 
+                    </Text>
+                  </Text>
+                  <Text
+                    bold={false}
+                    italic={false}
+                    style={
+                      Object {
+                        "color": "#303030",
+                        "fontFamily": "DroidSerif",
+                        "fontSize": 16,
+                        "lineHeight": 26,
+                      }
+                    }
+                  >
+                    <Text>
+                       
                     </Text>
                   </Text>
                 </Text>
