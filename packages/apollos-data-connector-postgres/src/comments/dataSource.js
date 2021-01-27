@@ -1,36 +1,35 @@
 import { parseGlobalId } from '@apollosproject/server-core';
 import { PostgresDataSource } from '../postgres';
+import { Visibility } from './model';
 
 class CommentDataSource extends PostgresDataSource {
   modelName = 'comments';
 
-  async addComment({ text, parentId }) {
+  async addComment({ text, parentId, visibility = Visibility.PRIVATE }) {
     const currentUser = await this.context.dataSources.Auth.getCurrentPerson();
 
     const { id, __type } = parseGlobalId(parentId);
 
-    const ret = await this.sequelize.transaction(async (t) => {
-      const [comment, created] = await this.model.findOrCreate({
-        where: {
-          text,
-          externalParentId: id,
-          externalParentType: __type,
-          externalParentSource: 'rock',
-          externalPersonId: currentUser.id,
-        },
-        transaction: t,
-      });
-
-      if (!created) {
-        throw new Error(
-          'Unable to save comment, a duplicate comment already exists'
-        );
-      }
-
-      return comment;
+    const [comment, created] = await this.model.findOrCreate({
+      where: {
+        text,
+        externalParentId: id,
+        externalParentType: __type,
+        externalParentSource: 'rock',
+        externalPersonId: currentUser.id,
+      },
+      defaults: {
+        visibility,
+      },
     });
 
-    return ret;
+    if (!created) {
+      throw new Error(
+        'Unable to save comment, a duplicate comment already exists'
+      );
+    }
+
+    return comment;
   }
 
   async getForNode({ nodeId, nodeType }) {

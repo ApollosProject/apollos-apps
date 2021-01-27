@@ -978,7 +978,13 @@ export const featuresSchema = gql`
 
 export const commentSchema = gql`
   extend type Mutation {
-    addComment(parentId: ID!, text: String!): Comment
+    addComment(
+      parentId: ID!
+      text: String!
+      visibility: CommentVisibility
+    ): Comment
+
+    flagComment(commentId: ID!): Comment
   }
 
   type CommentListFeature implements Feature & Node {
@@ -988,11 +994,18 @@ export const commentSchema = gql`
     comments: [Comment]
   }
 
+  enum CommentVisibility {
+    PUBLIC
+    PRIVATE
+    FOLLOWERS
+  }
+
   type Comment implements Node {
     id: ID!
 
     person: Person
     text: String
+    visibility: CommentVisibility
   }
 `;
 

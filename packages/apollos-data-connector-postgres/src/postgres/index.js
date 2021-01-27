@@ -5,11 +5,15 @@ import { Sequelize, DataTypes } from 'sequelize';
 import ApollosConfig from '@apollosproject/config';
 import { createGlobalId } from '@apollosproject/server-core';
 
+const sequelizeConfigOptions =
+  process.env.NODE_ENV === 'test' ? { logging: false } : {};
+
 // Use the DB url from the apollos config if provided.
 // Otherwise, use a SQlite database in the server root directory.
 const sequelize = new Sequelize(
   ApollosConfig?.DATABASE?.URL ||
-    `sqlite:${process.env.PWD}/${process.env.NODE_ENV || 'development'}.db`
+    `sqlite:${process.env.PWD}/${process.env.NODE_ENV || 'development'}.db`,
+  sequelizeConfigOptions
 );
 
 class PostgresDataSource {
