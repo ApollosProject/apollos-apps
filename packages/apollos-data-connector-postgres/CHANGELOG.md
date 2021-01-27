@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-beta.2](https://github.com/apollosproject/apollos-apps/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2021-01-27)
+
+
+### Features
+
+* Comment visibility and flagging ([#1693](https://github.com/apollosproject/apollos-apps/issues/1693)) ([61e0386](https://github.com/apollosproject/apollos-apps/commit/61e03861bb8b09684be4b6b0b89fbf739062988d))
+
+
+
+
+
 # [2.0.0-beta.1](https://github.com/apollosproject/apollos-apps/compare/v2.0.0-beta.0...v2.0.0-beta.1) (2021-01-22)
 
 
