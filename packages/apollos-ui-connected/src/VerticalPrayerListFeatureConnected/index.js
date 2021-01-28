@@ -5,12 +5,17 @@ import { useQuery } from '@apollo/client';
 import VerticalPrayerListFeature from './VerticalPrayerListFeature';
 import GET_VERTICAL_PRAYER_LIST_FEATURE from './getVerticalPrayerListFeature';
 
-const VerticalPrayerListFeatureConnected = ({ featureId }) => {
-  const { loading, error, data } = useQuery(GET_VERTICAL_PRAYER_LIST_FEATURE, {
-    fetchPolicy: 'cache-and-network',
-    variables: { featureId },
-  });
+const VerticalPrayerListFeatureConnected = ({ featureId, refetchRef }) => {
+  const { loading, error, data, refetch } = useQuery(
+    GET_VERTICAL_PRAYER_LIST_FEATURE,
+    {
+      fetchPolicy: 'cache-and-network',
+      variables: { featureId },
+    }
+  );
   if (error || loading) return null;
+  if (featureId && refetch && refetchRef)
+    refetchRef({ refetch, id: featureId });
   const { node: { title, subtitle, prayers } = {} } = data;
   return (
     <VerticalPrayerListFeature
@@ -23,6 +28,7 @@ const VerticalPrayerListFeatureConnected = ({ featureId }) => {
 
 VerticalPrayerListFeatureConnected.propTypes = {
   featureId: PropTypes.string,
+  refetchRef: PropTypes.func,
 };
 
 export default VerticalPrayerListFeatureConnected;
