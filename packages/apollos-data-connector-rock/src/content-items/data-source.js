@@ -109,22 +109,9 @@ export default class ContentItem extends RockApolloDataSource {
     }));
   };
 
-  getFeatures({ attributeValues /* , __type, id */ }) {
+  getFeatures({ attributeValues, __type, id }) {
     const { Feature } = this.context.dataSources;
     const features = [];
-
-    // features.push(
-    //   Feature.createCommentListFeature({ nodeId: id, nodeType: __type })
-    // );
-
-    //     if(__typename == "DevotionalContentItem"){
-    //       features.push(Features.createCommentFeature())
-    //     }
-    //
-    //     const text = get(attributeValues, 'showComments.value', '');
-    //     if (text == 'True') {
-    //       features.push(Features.createCommentFeature())
-    //     }
 
     // TODO this should replace all other methods
     // TODO this should be written in a more extendable way for partners
@@ -188,6 +175,13 @@ export default class ContentItem extends RockApolloDataSource {
           })
         );
       });
+    }
+
+    const commentFeatures = get(attributeValues, 'comments.value', 'False');
+    if (commentFeatures === 'True') {
+      features.push(
+        Feature.createCommentListFeature({ nodeId: id, nodeType: __type })
+      );
     }
 
     return features;

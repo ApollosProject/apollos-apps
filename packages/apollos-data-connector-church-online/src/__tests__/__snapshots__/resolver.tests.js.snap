@@ -14,7 +14,7 @@ Object {
             },
           ],
         },
-        "webViewUrl": null,
+        "webViewUrl": "https://apollos.churchonline.org/api/v1/",
       },
     ],
   },
