@@ -73,52 +73,6 @@
   dependencies:
     xss "^1.0.6"
 
-"@apollosproject/babel-preset-apollos@2.0.0-alpha.15":
-  version "2.0.0-alpha.15"
-  resolved "https://registry.yarnpkg.com/@apollosproject/babel-preset-apollos/-/babel-preset-apollos-2.0.0-alpha.15.tgz#afd87a0b4990bc53b9650d0acb7696e2f0049eaf"
-  integrity sha512-4y54usQA9lXzjZ5nUB7/lbrDbum4uUCMWu+BuQO3eMVpuPFEZI2j4Abnu1f6J9NTFu8UI2/dq3RLjCY2/FDO9w==
-  dependencies:
-    "@babel/plugin-proposal-class-properties" "7.4.0"
-    "@babel/plugin-proposal-decorators" "7.4.0"
-    "@babel/plugin-proposal-do-expressions" "7.2.0"
-    "@babel/plugin-proposal-export-default-from" "7.2.0"
-    "@babel/plugin-proposal-export-namespace-from" "7.2.0"
-    "@babel/plugin-proposal-function-bind" "7.2.0"
-    "@babel/plugin-proposal-function-sent" "7.2.0"
-    "@babel/plugin-proposal-json-strings" "7.2.0"
-    "@babel/plugin-proposal-logical-assignment-operators" "7.2.0"
-    "@babel/plugin-proposal-nullish-coalescing-operator" "7.2.0"
-    "@babel/plugin-proposal-numeric-separator" "7.2.0"
-    "@babel/plugin-proposal-optional-chaining" "7.2.0"
-    "@babel/plugin-proposal-pipeline-operator" "7.2.0"
-    "@babel/plugin-proposal-throw-expressions" "7.2.0"
-    "@babel/plugin-syntax-dynamic-import" "7.2.0"
-    "@babel/plugin-syntax-import-meta" "7.2.0"
-    "@babel/plugin-transform-runtime" "7.4.0"
-    "@babel/preset-env" "7.4.2"
-    babel-plugin-module-resolver "^3.1.1"
-
-"@apollosproject/data-schema@2.0.0-alpha.15":
-  version "2.0.0-alpha.15"
-  resolved "https://registry.yarnpkg.com/@apollosproject/data-schema/-/data-schema-2.0.0-alpha.15.tgz#15d5f65c47f85d3437cd0c30b25c6f8444131d16"
-  integrity sha512-eHSsC4oAhhhz64kMB7JiIwaEJlgPOzGk4nLfzqN1t0vparimdYu763VpU6J6aXL4xCuIJKNfSVDD7FzTg17FXQ==
-  dependencies:
-    graphql-tag "^2.10.0"
-
-"@apollosproject/server-core@2.0.0-alpha.15":
-  version "2.0.0-alpha.15"
-  resolved "https://registry.yarnpkg.com/@apollosproject/server-core/-/server-core-2.0.0-alpha.15.tgz#8db23763f67ed41cabffbbf0bec53f16d6244324"
-  integrity sha512-Zi8hbsHKYlOVDKcXP4AutRZUeZWkbJ3HVE2j5je7R+9QpccY1o0VTZzxmPMQUFfPdl5APrCpwInk1d9/lIVgkg==
-  dependencies:
-    "@apollosproject/data-schema" "^2.0.0-alpha.15+9ef8d244"
-    apollo-server-caching "^0.4.0"
-    bull "^3.11.0"
-    bull-board "^0.1.1"
-    express-basic-auth "^1.2.0"
-    graphql-parse-resolve-info "^4.4.5"
-    graphql-tag "^2.10.0"
-    lodash "^4.17.11"
-
 "@babel/cli@7.1.5":
   version "7.1.5"
   resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-7.1.5.tgz#4ccf0a8cdabeefdd8ce955384530f050935bc4d7"
