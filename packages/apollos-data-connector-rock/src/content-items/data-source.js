@@ -190,13 +190,13 @@ export default class ContentItem extends RockApolloDataSource {
         'What stands out to you?'
       );
       features.push(
-        Feature.createCommentListFeature({ nodeId: id, nodeType: __type }),
         Feature.createAddCommentFeature({
           nodeId: id,
           nodeType: __type,
           initialPrompt,
           addPrompt,
-        })
+        }),
+        Feature.createCommentListFeature({ nodeId: id, nodeType: __type })
       );
     }
 
