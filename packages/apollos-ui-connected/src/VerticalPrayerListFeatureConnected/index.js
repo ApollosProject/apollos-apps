@@ -10,8 +10,7 @@ const VerticalPrayerListFeatureConnected = ({ featureId }) => {
     fetchPolicy: 'cache-and-network',
     variables: { featureId },
   });
-  if (error) return null;
-  if (loading) return null;
+  if (error || loading) return null;
   const { node: { title, subtitle, prayers } = {} } = data;
   return (
     <VerticalPrayerListFeature
