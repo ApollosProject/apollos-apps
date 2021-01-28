@@ -997,7 +997,7 @@ export const commentSchema = gql`
   type AddCommentFeature implements Feature & Node {
     id: ID!
     order: Int
-    # relatedNode: Node!
+    relatedNode: Node!
 
     addPrompt: String
     initialPrompt: String
