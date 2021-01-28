@@ -278,6 +278,16 @@ export default class Feature extends RockApolloDataSource {
     };
   }
 
+  // eslint-disable-next-line class-methods-use-this
+  createAddCommentFeature({ nodeId, nodeType, initialPrompt, addPrompt }) {
+    return {
+      id: JSON.stringify({ nodeId, nodeType }),
+      initialPrompt,
+      addPrompt,
+      __typename: 'AddCommentFeature',
+    };
+  }
+
   createPrayerListFeature({
     algorithms = [],
     title,

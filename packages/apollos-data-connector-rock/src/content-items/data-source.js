@@ -179,8 +179,24 @@ export default class ContentItem extends RockApolloDataSource {
 
     const commentFeatures = get(attributeValues, 'comments.value', 'False');
     if (commentFeatures === 'True') {
+      const initialPrompt = get(
+        attributeValues,
+        'initialPrompt.value',
+        'Write Something...'
+      );
+      const addPrompt = get(
+        attributeValues,
+        'addPrompt.value',
+        'What stands out to you?'
+      );
       features.push(
-        Feature.createCommentListFeature({ nodeId: id, nodeType: __type })
+        Feature.createCommentListFeature({ nodeId: id, nodeType: __type }),
+        Feature.createAddCommentFeature({
+          nodeId: id,
+          nodeType: __type,
+          initialPrompt,
+          addPrompt,
+        })
       );
     }
 

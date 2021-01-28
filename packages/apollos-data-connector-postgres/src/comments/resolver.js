@@ -15,6 +15,13 @@ const resolvers = {
   CommentListFeature: {
     id: ({ id }) => createGlobalId(id, 'CommentListFeature'),
   },
+  AddCommentFeature: {
+    id: ({ id }) => createGlobalId(id, 'AddCommentFeature'),
+    // relatedNode: (arg1, arg2, ar3) => {
+    //   console.log(arg1, arg2, ar3);
+    //   return {};
+    // },
+  },
 };
 
 export default resolvers;
