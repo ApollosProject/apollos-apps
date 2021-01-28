@@ -814,6 +814,11 @@ Array [
     "body": "text feature",
     "id": "TextFeature:123",
   },
+  Object {
+    "__typename": "CommentListFeature",
+    "comments": Array [],
+    "id": "CommentListFeature:123",
+  },
 ]
 `;
 
@@ -835,6 +840,17 @@ Array [
       "id": "123-0",
       "reference": "john 3",
       "version": undefined,
+    },
+  ],
+]
+`;
+
+exports[`ContentItemsModel returns features when a contentItem has a Features field 4`] = `
+Array [
+  Array [
+    Object {
+      "nodeId": "ContentItem:123Test",
+      "nodeType": "ContentItem",
     },
   ],
 ]
