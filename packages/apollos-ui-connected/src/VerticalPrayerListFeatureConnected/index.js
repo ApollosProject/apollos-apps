@@ -1,4 +1,5 @@
 import React from 'react';
+import { Text } from 'react-native';
 import PropTypes from 'prop-types';
 
 import { useQuery } from '@apollo/client';
@@ -13,15 +14,14 @@ const VerticalPrayerListFeatureConnected = ({ featureId, refetchRef }) => {
       variables: { featureId },
     }
   );
-  if (error || loading) return null;
+  if (error || loading) return <Text>hello</Text>;
   if (featureId && refetch && refetchRef)
     refetchRef({ refetch, id: featureId });
-  const { node: { title, subtitle, prayers } = {} } = data;
   return (
     <VerticalPrayerListFeature
-      title={title}
-      subtitle={subtitle}
-      prayers={prayers}
+      title={data?.node?.title ?? ''}
+      subtitle={data?.node?.subtitle ?? ''}
+      prayers={data?.node?.prayers ?? []}
     />
   );
 };

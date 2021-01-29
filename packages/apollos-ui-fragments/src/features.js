@@ -34,7 +34,7 @@ const PRAYER_LIST_FEATURE_FRAGMENT = gql`
 `;
 
 const VERTICAL_PRAYER_LIST_FEATURE_FRAGMENT = gql`
-  fragment VerticalCardListFeatureFragment on VerticalPrayerListFeature {
+  fragment VerticalPrayerListFeatureFragment on VerticalPrayerListFeature {
     id
     title
     subtitle
@@ -79,6 +79,10 @@ const LITE_FEATURES_FRAGMENT = gql`
       title
       subtitle
       isCard
+    }
+    ... on VerticalPrayerListFeature {
+      title
+      subtitle
     }
     ... on TextFeature {
       body
