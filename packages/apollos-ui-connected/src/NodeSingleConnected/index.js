@@ -1,5 +1,5 @@
 import React from 'react';
-import { Animated } from 'react-native';
+import { Animated, View } from 'react-native';
 import PropTypes from 'prop-types';
 import { Query } from '@apollo/client/react/components';
 
@@ -19,8 +19,8 @@ const Noop = () => null;
 
 const FlexedScrollView = styled({ flex: 1 })(Animated.ScrollView);
 
-const NodeSingleInner = ({ nodeId, ImageWrapperComponent }) => (
-  <>
+const NodeSingleInner = ({ nodeId, ImageWrapperComponent, ...props }) => (
+  <View {...props}>
     <ContentNodeConnected
       ImageWrapperComponent={ImageWrapperComponent}
       nodeId={nodeId}
@@ -30,7 +30,9 @@ const NodeSingleInner = ({ nodeId, ImageWrapperComponent }) => (
     <UpNextButtonConnected nodeId={nodeId} />
     <ContentParentFeedConnected nodeId={nodeId} />
     <ContentChildFeedConnected nodeId={nodeId} />
-  </>
+    <ContentChildFeedConnected nodeId={nodeId} />
+    <ContentChildFeedConnected nodeId={nodeId} />
+  </View>
 );
 
 NodeSingleInner.propTypes = {
@@ -38,17 +40,23 @@ NodeSingleInner.propTypes = {
   ImageWrapperComponent: PropTypes.any, // eslint-disable-line
 };
 
-const NodeSingleConnected = ({ nodeId, children }) => (
-  <BackgroundView>
-    <StretchyView>
-      {({ Stretchy, ...scrollViewProps }) => (
-        <FlexedScrollView {...scrollViewProps}>
-          <NodeSingleInner nodeId={nodeId} ImageWrapperComponent={Stretchy} />
-        </FlexedScrollView>
-      )}
-    </StretchyView>
+const NodeSingleConnected = ({ nodeId, children, ...props }) => (
+  <>
+    <BackgroundView>
+      <StretchyView>
+        {({ Stretchy, ...scrollViewProps }) => (
+          <FlexedScrollView {...scrollViewProps}>
+            <NodeSingleInner
+              nodeId={nodeId}
+              ImageWrapperComponent={Stretchy}
+              {...props}
+            />
+          </FlexedScrollView>
+        )}
+      </StretchyView>
+    </BackgroundView>
     {children}
-  </BackgroundView>
+  </>
 );
 
 NodeSingleConnected.propTypes = {
@@ -56,7 +64,7 @@ NodeSingleConnected.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 };
 
-const NodeSingleConnectedWithMedia = ({ nodeId, children }) => (
+const NodeSingleConnectedWithMedia = ({ nodeId, children, ...props }) => (
   <Query
     query={GET_MEDIA}
     variables={{ nodeId }}
@@ -69,7 +77,9 @@ const NodeSingleConnectedWithMedia = ({ nodeId, children }) => (
 
       if (!hasMedia)
         return (
-          <NodeSingleConnected nodeId={nodeId}>{children}</NodeSingleConnected>
+          <NodeSingleConnected nodeId={nodeId} {...props}>
+            {children}
+          </NodeSingleConnected>
         );
       return (
         <>
@@ -80,7 +90,11 @@ const NodeSingleConnectedWithMedia = ({ nodeId, children }) => (
               title: data.node.title,
             }}
           >
-            <NodeSingleInner nodeId={nodeId} ImageWrapperComponent={Noop} />
+            <NodeSingleInner
+              nodeId={nodeId}
+              ImageWrapperComponent={Noop}
+              {...props}
+            />
           </ApollosPlayerContainer>
           {children}
         </>
