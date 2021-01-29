@@ -21,6 +21,7 @@ export Close from './Close';
 export Credit from './Credit';
 export DotsThreeVertical from './DotsThreeVertical';
 export Chromecast from './Chromecast';
+export ChunkyPlus from './ChunkyPlus';
 export Download from './Download';
 export Dropdown from './Dropdown';
 export Empty from './Empty';

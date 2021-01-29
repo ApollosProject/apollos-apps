@@ -49,8 +49,8 @@ const Image = styled(
 )(ConnectedImage);
 
 const StyledButtonIcon = styled(
-  ({ theme }) => ({
-    backgroundColor: theme.colors.background.paper,
+  ({ theme, iconBackground }) => ({
+    backgroundColor: iconBackground || theme.colors.background.paper,
     ...Platform.select(theme.shadows.default),
   }),
   'ui-kit.Avatar.Avatar.StyledButtonIcon'
@@ -102,8 +102,10 @@ const Avatar = ({
   isLoading,
   buttonIcon,
   iconFill,
+  iconSize,
   onPressIcon,
   notification,
+  iconButtonProps,
   ...imageProps
 }) => (
   <Container style={containerStyle} themeSize={themeSize}>
@@ -128,6 +130,7 @@ const Avatar = ({
             size={themeSize / 5}
             fill={iconFill}
             TouchableComponent={TouchableScale}
+            {...iconButtonProps}
           />
         )}
       </ButtonIconPositioner>
