@@ -181,22 +181,10 @@ export default class ContentItem extends RockApolloDataSource {
     const commentFeatures = get(attributeValues, 'comments.value', 'False');
     if (commentFeatures === 'True') {
       const nodeType = item.__type || this.resolveType(item);
-      const initialPrompt = get(
-        attributeValues,
-        'initialPrompt.value',
-        'Write Something...'
-      );
-      const addPrompt = get(
-        attributeValues,
-        'addPrompt.value',
-        'What stands out to you?'
-      );
       features.push(
         Feature.createAddCommentFeature({
           nodeId: id,
           nodeType,
-          initialPrompt,
-          addPrompt,
           relatedNode: item,
         }),
         Feature.createCommentListFeature({ nodeId: id, nodeType })
@@ -205,6 +193,14 @@ export default class ContentItem extends RockApolloDataSource {
 
     return features;
   }
+
+  getAddCommentInitialPrompt = (attributeValues) => {
+    return get(attributeValues, 'initialPrompt.value', 'Write Something...');
+  };
+
+  getAddCommentAddPrompt = (attributeValues) => {
+    return get(attributeValues, 'addPrompt.value', 'What stands out to you?');
+  };
 
   createSummary = ({ content, attributeValues }) => {
     const summary = get(attributeValues, 'summary.value', '');
