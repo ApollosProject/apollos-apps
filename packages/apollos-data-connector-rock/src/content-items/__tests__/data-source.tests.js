@@ -28,9 +28,7 @@ ApollosConfig.loadJs({
 const RealDate = Date;
 
 function mockDate(isoDate) {
-  global.Date = class extends (
-    RealDate
-  ) {
+  global.Date = class extends RealDate {
     constructor() {
       return new RealDate(isoDate);
     }
@@ -321,7 +319,7 @@ describe('ContentItemsModel', () => {
           value: 'scripture^john 3|text^text feature',
         },
       },
-      __type: 'ContentItem',
+      attributes: {},
       id: 'ContentItem:123Test',
     });
     expect(result).toMatchSnapshot();
