@@ -45,7 +45,10 @@ export default class LiveStream extends RESTDataSource {
   }
 
   get webViewUrl() {
-    return ApollosConfig.CHURCH_ONLINE.WEB_VIEW_URL;
+    return (
+      ApollosConfig.CHURCH_ONLINE.WEB_VIEW_URL ||
+      ApollosConfig.CHURCH_ONLINE.URL
+    );
   }
 
   async getAccessToken() {
