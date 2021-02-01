@@ -82,7 +82,7 @@ const NodeSingleConnectedWithMedia = ({ nodeId, children, ...props }) => (
           </NodeSingleConnected>
         );
       return (
-        <>
+        <BackgroundView>
           <ApollosPlayerContainer
             source={data.node?.videos[0]?.sources[0]}
             coverImage={data.node?.coverImage?.sources}
@@ -97,7 +97,7 @@ const NodeSingleConnectedWithMedia = ({ nodeId, children, ...props }) => (
             />
           </ApollosPlayerContainer>
           {children}
-        </>
+        </BackgroundView>
       );
     }}
   </Query>
