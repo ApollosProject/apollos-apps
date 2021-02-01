@@ -31,7 +31,6 @@ const setIsReady = () => {
 };
 
 const navigate = performWhenReady((...args) => {
-  console.log(...args, 'deese args');
   _navigator.navigate(...args);
 });
 
