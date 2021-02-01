@@ -804,6 +804,56 @@ Array [
 ]
 `;
 
+exports[`ContentItemsModel returns comment features when a contentItem has a Comments field set to true 1`] = `
+Array [
+  Object {
+    "__typename": "AddCommentFeature",
+    "addPrompt": "What stands out to you?",
+    "id": "AddCommentFeature:123",
+    "initialPrompt": "Write Something...",
+  },
+  Object {
+    "__typename": "CommentListFeature",
+    "comments": Array [],
+    "id": "CommentListFeature:123",
+  },
+]
+`;
+
+exports[`ContentItemsModel returns comment features when a contentItem has a Comments field set to true 2`] = `
+Array [
+  Array [
+    Object {
+      "nodeId": "ContentItem:123Test",
+      "nodeType": "ContentItem",
+    },
+  ],
+]
+`;
+
+exports[`ContentItemsModel returns comment features when a contentItem has a Comments field set to true 3`] = `
+Array [
+  Array [
+    Object {
+      "addPrompt": "What stands out to you?",
+      "initialPrompt": "Write Something...",
+      "nodeId": "ContentItem:123Test",
+      "nodeType": "ContentItem",
+      "relatedNode": Object {
+        "__type": "ContentItem",
+        "attributeValues": Object {
+          "comments": Object {
+            "id": 123,
+            "value": "True",
+          },
+        },
+        "id": "ContentItem:123Test",
+      },
+    },
+  ],
+]
+`;
+
 exports[`ContentItemsModel returns features when a contentItem has a Features field 1`] = `
 Array [
   Object {
@@ -813,11 +863,6 @@ Array [
   Object {
     "body": "text feature",
     "id": "TextFeature:123",
-  },
-  Object {
-    "__typename": "CommentListFeature",
-    "comments": Array [],
-    "id": "CommentListFeature:123",
   },
 ]
 `;
@@ -840,17 +885,6 @@ Array [
       "id": "123-0",
       "reference": "john 3",
       "version": undefined,
-    },
-  ],
-]
-`;
-
-exports[`ContentItemsModel returns features when a contentItem has a Features field 4`] = `
-Array [
-  Array [
-    Object {
-      "nodeId": "ContentItem:123Test",
-      "nodeType": "ContentItem",
     },
   ],
 ]
