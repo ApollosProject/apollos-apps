@@ -24,6 +24,21 @@ const resolvers = {
     ) => ContentItem.getAddCommentInitialPrompt(attributeValues),
     addPrompt: ({ attributeValues }, args, { dataSources: { ContentItem } }) =>
       ContentItem.getAddCommentAddPrompt(attributeValues),
+    relatedNode: async (
+      { id },
+      args,
+      { models: { Node }, dataSources },
+      info
+    ) => {
+      const { relatedNode } = JSON.parse(id);
+      const item = await Node.get(
+        createGlobalId(relatedNode.id, relatedNode.__type),
+        dataSources,
+        info
+      );
+
+      return item;
+    },
   },
 };
 

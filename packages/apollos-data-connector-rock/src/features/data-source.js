@@ -281,9 +281,15 @@ export default class Feature extends RockApolloDataSource {
   // eslint-disable-next-line class-methods-use-this
   createAddCommentFeature({ nodeId, nodeType, relatedNode }) {
     return {
-      id: JSON.stringify({ nodeId, nodeType }),
+      id: JSON.stringify({
+        nodeId,
+        nodeType,
+        relatedNode: {
+          id: relatedNode.id,
+          __type: nodeType,
+        },
+      }),
       __typename: 'AddCommentFeature',
-      relatedNode: { ...relatedNode, __type: nodeType },
     };
   }
 
