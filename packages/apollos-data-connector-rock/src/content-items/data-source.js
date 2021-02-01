@@ -186,6 +186,8 @@ export default class ContentItem extends RockApolloDataSource {
           nodeId: id,
           nodeType,
           relatedNode: item,
+          initialPrompt: this.getAddCommentInitialPrompt(attributeValues),
+          addPrompt: this.getAddCommentAddPrompt(attributeValues),
         }),
         Feature.createCommentListFeature({ nodeId: id, nodeType })
       );

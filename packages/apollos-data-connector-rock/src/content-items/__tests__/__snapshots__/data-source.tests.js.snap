@@ -835,6 +835,8 @@ exports[`ContentItemsModel returns comment features when a contentItem has a Com
 Array [
   Array [
     Object {
+      "addPrompt": "What stands out to you?",
+      "initialPrompt": "Write Something...",
       "nodeId": "ContentItem:123Test",
       "nodeType": "ContentItem",
       "relatedNode": Object {

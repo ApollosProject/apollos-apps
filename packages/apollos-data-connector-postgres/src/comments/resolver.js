@@ -17,13 +17,8 @@ const resolvers = {
   },
   AddCommentFeature: {
     id: ({ id }) => createGlobalId(id, 'AddCommentFeature'),
-    initialPrompt: (
-      { attributeValues },
-      args,
-      { dataSources: { ContentItem } }
-    ) => ContentItem.getAddCommentInitialPrompt(attributeValues),
-    addPrompt: ({ attributeValues }, args, { dataSources: { ContentItem } }) =>
-      ContentItem.getAddCommentAddPrompt(attributeValues),
+    initialPrompt: ({ id }) => JSON.parse(id).initialPrompt,
+    addPrompt: ({ id }) => JSON.parse(id).addPrompt,
     relatedNode: async (
       { id },
       args,

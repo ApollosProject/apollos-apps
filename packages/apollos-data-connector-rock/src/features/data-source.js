@@ -279,7 +279,13 @@ export default class Feature extends RockApolloDataSource {
   }
 
   // eslint-disable-next-line class-methods-use-this
-  createAddCommentFeature({ nodeId, nodeType, relatedNode }) {
+  createAddCommentFeature({
+    nodeId,
+    nodeType,
+    relatedNode,
+    initialPrompt,
+    addPrompt,
+  }) {
     return {
       id: JSON.stringify({
         nodeId,
@@ -288,6 +294,8 @@ export default class Feature extends RockApolloDataSource {
           id: relatedNode.id,
           __type: nodeType,
         },
+        initialPrompt,
+        addPrompt,
       }),
       __typename: 'AddCommentFeature',
     };
