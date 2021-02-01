@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Query } from '@apollo/client/react/components';
 import { get } from 'lodash';
 
-import { FeedView } from '@apollosproject/ui-kit';
+import { FeedView, withTheme } from '@apollosproject/ui-kit';
 
 import featuresFeedComponentMapper from './featuresFeedComponentMapper';
 import GET_FEATURE_FEED from './getFeatureFeed';
@@ -140,4 +140,9 @@ FeaturesFeedConnected.propTypes = {
   additionalFeatures: PropTypes.shape({}),
 };
 
-export default FeaturesFeedConnected;
+const FeaturesFeedConnectedWithTheme = withTheme(
+  () => ({}),
+  'ui-connected.FeaturesFeedConnected'
+)(FeaturesFeedConnected);
+
+export default FeaturesFeedConnectedWithTheme;
