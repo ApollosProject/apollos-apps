@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { withTheme } from '@apollosproject/ui-kit';
+import { named } from '@apollosproject/ui-kit';
 import ActionListFeatureConnected from '../ActionListFeatureConnected';
 import HorizontalCardListFeatureConnected from '../HorizontalCardListFeatureConnected';
 import VerticalCardListFeatureConnected from '../VerticalCardListFeatureConnected';
@@ -64,9 +64,6 @@ featuresFeedComponentMapper.propTypes = {
   refetchRef: PropTypes.func.isRequired,
 };
 
-const FeatureFeedComponentMapper = withTheme(
-  () => ({}),
-  'ui-connected.FeaturesFeed.FeatureFeedComponentMapper'
-)(featuresFeedComponentMapper);
-
-export default FeatureFeedComponentMapper;
+export default named('ui-connected.FeaturesFeed.FeatureFeedComponentMapper')(
+  featuresFeedComponentMapper
+);
