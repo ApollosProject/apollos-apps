@@ -59,10 +59,7 @@ export ModalView, {
 } from './ModalView';
 export PaddedView from './PaddedView';
 export Placeholder, { withPlaceholder } from './Placeholder';
-export ScriptureComment, {
-  CommentLikeButton,
-  ActionMenu,
-} from './ScriptureComment';
+export Comment, { CommentLikeButton, ActionMenu } from './Comment';
 export SideBySideView from './SideBySideView';
 export styled from './styled';
 export StretchyView from './StretchyView';
@@ -80,6 +77,7 @@ export ThemeProvider, {
   ThemeMixin,
   withThemeMixin,
   ThemeConsumer,
+  named,
 } from './theme';
 export ThumbnailCard from './ThumbnailCard';
 export TileImage from './TileImage';

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { named } from '@apollosproject/ui-kit';
 import ActionListFeatureConnected from '../ActionListFeatureConnected';
 import HorizontalCardListFeatureConnected from '../HorizontalCardListFeatureConnected';
 import VerticalCardListFeatureConnected from '../VerticalCardListFeatureConnected';
@@ -11,6 +12,7 @@ import ActionBarFeatureConnected from '../ActionBarFeatureConnected';
 import ScriptureFeature from '../features/ScriptureFeature';
 import TextFeature from '../features/TextFeature';
 import WebviewFeature from '../features/WebviewFeature';
+import CommentListFeatureConnected from '../CommentListFeatureConnected';
 
 const MAPPINGS = {
   ActionListFeature: ActionListFeatureConnected,
@@ -23,6 +25,7 @@ const MAPPINGS = {
   // them all installed?
   PrayerListFeature: PrayerListFeatureConnected,
   VerticalPrayerListFeature: VerticalPrayerListFeatureConnected,
+  CommentListFeature: CommentListFeatureConnected,
   ScriptureFeature,
   TextFeature,
   WebviewFeature,
@@ -65,4 +68,6 @@ featuresFeedComponentMapper.propTypes = {
   refetchRef: PropTypes.func.isRequired,
 };
 
-export default featuresFeedComponentMapper;
+export default named('ui-connected.FeaturesFeed.FeatureFeedComponentMapper')(
+  featuresFeedComponentMapper
+);

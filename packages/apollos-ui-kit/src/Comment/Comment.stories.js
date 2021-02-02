@@ -4,11 +4,11 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 
 import { times } from 'lodash';
 import CenteredView from '../CenteredView';
-import ScriptureComment from './ScriptureComment';
+import Comment from './Comment';
 
 const fakeData = times(10, (i) => ({
   profile: {
-    image: { uri: `https://picsum.photos/seed/${i}/200` },
+    photo: { uri: `https://picsum.photos/seed/${i}/200` },
     nickName: 'Albert Flores',
   },
   subtitle: 'Anderson Campus',
@@ -18,12 +18,12 @@ const fakeData = times(10, (i) => ({
     'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
 }));
 
-storiesOf('ui-kit/ScriptureComment', module)
+storiesOf('ui-kit/Comment', module)
   .addDecorator((story) => <CenteredView>{story()}</CenteredView>)
   .add('Example', () => (
-    <ScriptureComment
+    <Comment
       profile={{
-        image: { uri: 'https://picsum.photos/200' },
+        photo: { uri: 'https://picsum.photos/200' },
         nickName: 'Albert Flores',
       }}
       subtitle={'Anderson Campus'}
@@ -35,9 +35,9 @@ storiesOf('ui-kit/ScriptureComment', module)
     />
   ))
   .add('without onPressLike', () => (
-    <ScriptureComment
+    <Comment
       profile={{
-        image: { uri: 'https://picsum.photos/200' },
+        photo: { uri: 'https://picsum.photos/200' },
         nickName: 'Albert Flores',
       }}
       subtitle={'Anderson Campus'}
@@ -48,9 +48,9 @@ storiesOf('ui-kit/ScriptureComment', module)
     />
   ))
   .add('without onPressActionMenu', () => (
-    <ScriptureComment
+    <Comment
       profile={{
-        image: { uri: 'https://picsum.photos/200' },
+        photo: { uri: 'https://picsum.photos/200' },
         nickName: 'Albert Flores',
       }}
       subtitle={'Anderson Campus'}
@@ -62,7 +62,7 @@ storiesOf('ui-kit/ScriptureComment', module)
   ))
   .add('as a flatlist render', () => (
     <FlatList
-      renderItem={({ item }) => <ScriptureComment {...item} />}
+      renderItem={({ item }) => <Comment {...item} />}
       data={fakeData}
     />
   ));
