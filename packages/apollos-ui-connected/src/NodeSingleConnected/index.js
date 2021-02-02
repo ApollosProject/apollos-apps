@@ -30,8 +30,6 @@ const NodeSingleInner = ({ nodeId, ImageWrapperComponent, ...props }) => (
     <UpNextButtonConnected nodeId={nodeId} />
     <ContentParentFeedConnected nodeId={nodeId} />
     <ContentChildFeedConnected nodeId={nodeId} />
-    <ContentChildFeedConnected nodeId={nodeId} />
-    <ContentChildFeedConnected nodeId={nodeId} />
   </View>
 );
 
