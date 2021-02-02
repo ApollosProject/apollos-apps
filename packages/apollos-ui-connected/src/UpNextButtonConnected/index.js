@@ -1,5 +1,12 @@
 import React from 'react';
-import { Button, styled, H4, withTheme, Icon } from '@apollosproject/ui-kit';
+import {
+  Button,
+  styled,
+  H4,
+  withTheme,
+  Icon,
+  named,
+} from '@apollosproject/ui-kit';
 import { Query } from '@apollo/client/react/components';
 import { get } from 'lodash';
 import { useNavigation } from '@react-navigation/native';
@@ -112,4 +119,6 @@ UpNextButtonConnected.defaultProps = {
   Component: UpNextButton,
 };
 
-export default UpNextButtonConnected;
+export default named('ui-connected.UpNextButtonConnected')(
+  UpNextButtonConnected
+);

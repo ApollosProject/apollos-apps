@@ -4,7 +4,7 @@ import { View } from 'react-native';
 
 import Providers from '../Providers';
 
-import withTheme from './withTheme';
+import withTheme, { named } from './withTheme';
 
 describe('the styled HOC', () => {
   it('provides a theme', () => {
@@ -76,6 +76,24 @@ describe('the styled HOC', () => {
       }),
       'StyledView'
     )(View);
+    const overrides = {
+      StyledView: {
+        style: {
+          backgroundColor: 'active-color',
+          borderRadius: 7,
+        },
+        clickable: false,
+      },
+    };
+    const tree = renderer.create(
+      <Providers themeInput={{ overrides }}>
+        <StyledView />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('uses overide when using `named` hoc', () => {
+    const StyledView = named('StyledView')(View);
     const overrides = {
       StyledView: {
         style: {

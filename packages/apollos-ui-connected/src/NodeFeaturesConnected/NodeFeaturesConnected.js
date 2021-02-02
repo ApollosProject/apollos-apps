@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Query } from '@apollo/client/react/components';
-import { ErrorCard } from '@apollosproject/ui-kit';
+import { ErrorCard, named } from '@apollosproject/ui-kit';
 import { get } from 'lodash';
 
 import FeaturesFeedConnected from '../FeaturesFeedConnected';
@@ -40,4 +40,6 @@ NodeFeaturesConnected.defaultProps = {
   Component: FeaturesFeedConnected,
 };
 
-export default NodeFeaturesConnected;
+export default named('ui-connected.NodeFeaturesConnected')(
+  NodeFeaturesConnected
+);

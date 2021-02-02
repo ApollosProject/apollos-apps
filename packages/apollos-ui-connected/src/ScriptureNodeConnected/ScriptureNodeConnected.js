@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Query } from '@apollo/client/react/components';
 import ScriptureItem from '@apollosproject/ui-scripture';
-import { PaddedView } from '@apollosproject/ui-kit';
+import { PaddedView, named } from '@apollosproject/ui-kit';
 import GET_SCRIPTURE_NODE from './getScriptureNode';
 
 const ScriptureNodeConnected = ({ nodeId }) => {
@@ -50,4 +50,6 @@ ScriptureNodeConnected.propTypes = {
 
 ScriptureNodeConnected.defaultProps = {};
 
-export default ScriptureNodeConnected;
+export default named('ui-connected.ScriptureNodeConnected')(
+  ScriptureNodeConnected
+);

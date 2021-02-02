@@ -3,7 +3,12 @@ import { Animated } from 'react-native';
 import PropTypes from 'prop-types';
 import { Query } from '@apollo/client/react/components';
 
-import { styled, BackgroundView, StretchyView } from '@apollosproject/ui-kit';
+import {
+  styled,
+  BackgroundView,
+  StretchyView,
+  named,
+} from '@apollosproject/ui-kit';
 import { ApollosPlayerContainer } from '@apollosproject/ui-media-player';
 
 import ContentNodeConnected from '../ContentNodeConnected';
@@ -94,4 +99,6 @@ NodeSingleConnectedWithMedia.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 };
 
-export default NodeSingleConnectedWithMedia;
+export default named('ui-connected.NodeSingleConnected')(
+  NodeSingleConnectedWithMedia
+);
