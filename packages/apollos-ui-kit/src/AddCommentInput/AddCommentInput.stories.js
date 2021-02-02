@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import { times } from 'lodash';
 
-import ScriptureComment from '../ScriptureComment';
+import Comment from '../Comment';
 import AddCommentInput from './AddCommentInput';
 
 const fakeData = [
@@ -49,7 +49,7 @@ storiesOf('ui-kit/AddCommentInput', module)
         <FlatList
           renderItem={({ item }) =>
             item.__typename === 'Comment' ? (
-              <ScriptureComment {...item} />
+              <Comment {...item} />
             ) : (
               <AddCommentInput />
             )

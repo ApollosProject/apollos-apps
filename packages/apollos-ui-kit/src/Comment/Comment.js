@@ -13,14 +13,14 @@ const HeaderContainer = styled(
     flexDirection: 'row',
     alignItems: 'center',
   },
-  'ui-kit.ScriptureComment.HeaderContainer'
+  'ui-kit.Comment.HeaderContainer'
 )(View);
 
 const CommentAvatar = withTheme(
   ({ theme: { sizing } }) => ({
     themeSize: sizing.baseUnit * 3,
   }),
-  'ui-kit.ScriptureComment.CommentAvatar'
+  'ui-kit.Comment.CommentAvatar'
 )(Avatar);
 
 const HeaderTextContainer = styled(
@@ -28,7 +28,7 @@ const HeaderTextContainer = styled(
     marginLeft: sizing.baseUnit / 2,
     justifyContent: 'center',
   }),
-  'ui-kit.ScriptureComment.HeaderTextContainer'
+  'ui-kit.Comment.HeaderTextContainer'
 )(View);
 
 const Subtitle = styled(
@@ -41,27 +41,27 @@ const Subtitle = styled(
   }) => ({
     color: tertiary,
   }),
-  'ui-kit.ScriptureComment.Subtitle'
+  'ui-kit.Comment.Subtitle'
 )(H6);
 
-const ScriptureCommentContainer = styled(
+const CommentContainer = styled(
   ({ theme: { sizing } }) => ({
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderTopWidth: StyleSheet.hairlineWidth,
     borderColor: 'rgba(0, 0, 0, 0.1)',
     padding: sizing.baseUnit,
   }),
-  'ui-kit.ScriptureComment.ScriptureCommentContainer'
+  'ui-kit.Comment.CommentContainer'
 )(View);
 
 const CommentText = styled(
   ({ theme: { sizing } }) => ({
     marginVertical: sizing.baseUnit / 2,
   }),
-  'ui-kit.ScriptureComment.CommentText'
+  'ui-kit.Comment.CommentText'
 )(BodyText);
 
-const ScriptureComment = ({
+const Comment = ({
   profile,
   commentText,
   subtitle,
@@ -69,9 +69,9 @@ const ScriptureComment = ({
   onPressActionMenu,
 }) => {
   return (
-    <ScriptureCommentContainer>
+    <CommentContainer>
       <HeaderContainer>
-        <CommentAvatar source={profile.image} />
+        <CommentAvatar source={profile.photo} />
         <HeaderTextContainer>
           <H4>{profile.nickName}</H4>
           <Subtitle>{subtitle}</Subtitle>
@@ -80,13 +80,13 @@ const ScriptureComment = ({
       </HeaderContainer>
       <CommentText>{commentText}</CommentText>
       {onPressLike && <CommentLikeButton onPress={onPressLike} />}
-    </ScriptureCommentContainer>
+    </CommentContainer>
   );
 };
 
-ScriptureComment.propTypes = {
+Comment.propTypes = {
   profile: PropTypes.shape({
-    image: PropTypes.shape({ uri: PropTypes.string }),
+    photo: PropTypes.shape({ uri: PropTypes.string }),
     nickName: PropTypes.string,
   }),
   subtitle: PropTypes.string,
@@ -95,4 +95,4 @@ ScriptureComment.propTypes = {
   onPressLike: PropTypes.func,
 };
 
-export default ScriptureComment;
+export default Comment;

@@ -825,7 +825,7 @@ Array [
   Array [
     Object {
       "nodeId": "ContentItem:123Test",
-      "nodeType": "ContentItem",
+      "nodeType": "UniversalContentItem",
     },
   ],
 ]
@@ -838,15 +838,15 @@ Array [
       "addPrompt": "What stands out to you?",
       "initialPrompt": "Write Something...",
       "nodeId": "ContentItem:123Test",
-      "nodeType": "ContentItem",
+      "nodeType": "UniversalContentItem",
       "relatedNode": Object {
-        "__type": "ContentItem",
         "attributeValues": Object {
           "comments": Object {
             "id": 123,
             "value": "True",
           },
         },
+        "attributes": Object {},
         "id": "ContentItem:123Test",
       },
     },

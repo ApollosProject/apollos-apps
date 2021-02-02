@@ -84,6 +84,9 @@ const LITE_FEATURES_FRAGMENT = gql`
       title
       url
     }
+    ... on CommentListFeature {
+      id
+    }
   }
 `;
 
@@ -187,6 +190,27 @@ const ACTION_BAR_FEATURE_FRAGMENT = gql`
       action
       relatedNode {
         ...RelatedFeatureNodeFragment
+      }
+    }
+  }
+`;
+
+const COMMENT_LIST_FEATURE_FRAGMENT = gql`
+  fragment CommentListFeatureFragment on CommentListFeature {
+    id
+    comments {
+      id
+      text
+      person {
+        id
+        nickName
+        photo {
+          uri
+        }
+        campus {
+          id
+          name
+        }
       }
     }
   }
@@ -321,6 +345,7 @@ export {
   FEATURES_FRAGMENT,
   ACTION_LIST_FEATURE_FRAGMENT,
   ACTION_BAR_FEATURE_FRAGMENT,
+  COMMENT_LIST_FEATURE_FRAGMENT,
   HERO_LIST_FEATURE_FRAGMENT,
   HORIZONTAL_CARD_LIST_FEATURE_FRAGMENT,
   VERTICAL_CARD_LIST_FEATURE_FRAGMENT,

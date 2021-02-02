@@ -3,15 +3,15 @@ import { Alert } from 'react-native';
 
 import renderer from 'react-test-renderer';
 import Providers from '../Providers';
-import ScriptureComment from './ScriptureComment';
+import Comment from './Comment';
 
-describe('ui-kit/ScriptureComment', () => {
+describe('ui-kit/Comment', () => {
   it('Should render', () => {
     const tree = renderer.create(
       <Providers>
-        <ScriptureComment
+        <Comment
           profile={{
-            image: { uri: 'https://picsum.photos/200' },
+            photo: { uri: 'https://picsum.photos/200' },
             nickName: 'Albert Flores',
           }}
           subtitle={'Anderson Campus'}
@@ -28,9 +28,9 @@ describe('ui-kit/ScriptureComment', () => {
   it('Should render without onPressLike', () => {
     const tree = renderer.create(
       <Providers>
-        <ScriptureComment
+        <Comment
           profile={{
-            image: { uri: 'https://picsum.photos/200' },
+            photo: { uri: 'https://picsum.photos/200' },
             nickName: 'Albert Flores',
           }}
           subtitle={'Anderson Campus'}
@@ -46,9 +46,9 @@ describe('ui-kit/ScriptureComment', () => {
   it('should render without onPressActionMenu', () => {
     const tree = renderer.create(
       <Providers>
-        <ScriptureComment
+        <Comment
           profile={{
-            image: { uri: 'https://picsum.photos/200' },
+            photo: { uri: 'https://picsum.photos/200' },
             nickName: 'Albert Flores',
           }}
           subtitle={'Anderson Campus'}

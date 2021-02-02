@@ -1,4 +1,5 @@
 import React from 'react';
+import { View } from 'react-native';
 import PropTypes from 'prop-types';
 import { withTheme } from '../theme';
 import styled from '../styled';
@@ -11,16 +12,21 @@ const ActionMenuIcon = withTheme(({ theme: { colors, sizing } }) => ({
   fill: colors.text.tertiary,
 }))(Icon);
 
-const ActionTouchable = styled({
+const ActionTouchable = styled(({ theme: { sizing } }) => ({
+  padding: sizing.baseUnit, // Large padding to increase surface area for tapping
+}))(Touchable);
+
+const ActionPosition = styled({
   position: 'absolute',
-  padding: 16, // Large padding to increase surface area for tapping
   right: -8, // Negative value to offset padding.
-})(Touchable);
+})(View);
 
 const ActionMenu = (props) => (
-  <ActionTouchable {...props}>
-    <ActionMenuIcon />
-  </ActionTouchable>
+  <ActionPosition>
+    <ActionTouchable {...props}>
+      <ActionMenuIcon />
+    </ActionTouchable>
+  </ActionPosition>
 );
 
 ActionMenu.propTypes = {
