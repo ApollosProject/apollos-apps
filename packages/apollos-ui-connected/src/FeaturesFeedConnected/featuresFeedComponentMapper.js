@@ -11,6 +11,7 @@ import ActionBarFeatureConnected from '../ActionBarFeatureConnected';
 import ScriptureFeature from '../features/ScriptureFeature';
 import TextFeature from '../features/TextFeature';
 import WebviewFeature from '../features/WebviewFeature';
+import CommentListFeatureConnected from '../CommentListFeatureConnected';
 
 const MAPPINGS = {
   ActionListFeature: ActionListFeatureConnected,
@@ -22,6 +23,7 @@ const MAPPINGS = {
   // like Prayer, don't all get stuck here, forcing all church apps to have
   // them all installed?
   PrayerListFeature: PrayerListFeatureConnected,
+  CommentListFeature: CommentListFeatureConnected,
   ScriptureFeature,
   TextFeature,
   WebviewFeature,

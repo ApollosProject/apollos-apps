@@ -345,7 +345,7 @@ describe('ContentItemsModel', () => {
           value: 'True',
         },
       },
-      __type: 'ContentItem',
+      attributes: {},
       id: 'ContentItem:123Test',
     });
     expect(result).toMatchSnapshot();

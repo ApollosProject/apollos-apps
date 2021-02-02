@@ -1,0 +1,1294 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommentListFeature must render 1`] = `
+<RCTScrollView
+  data={
+    Array [
+      Object {
+        "id": "Comment:0",
+        "onPressActionMenu": [Function],
+        "onPressLike": [Function],
+        "person": Object {
+          "campus": Object {
+            "name": "Anderson Campus",
+          },
+          "nickName": "Albert Flores",
+          "photo": Object {
+            "uri": "https://picsum.photos/seed/0/200",
+          },
+        },
+        "text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      Object {
+        "id": "Comment:1",
+        "onPressActionMenu": [Function],
+        "onPressLike": [Function],
+        "person": Object {
+          "campus": Object {
+            "name": "Anderson Campus",
+          },
+          "nickName": "Albert Flores",
+          "photo": Object {
+            "uri": "https://picsum.photos/seed/1/200",
+          },
+        },
+        "text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      Object {
+        "id": "Comment:2",
+        "onPressActionMenu": [Function],
+        "onPressLike": [Function],
+        "person": Object {
+          "campus": Object {
+            "name": "Anderson Campus",
+          },
+          "nickName": "Albert Flores",
+          "photo": Object {
+            "uri": "https://picsum.photos/seed/2/200",
+          },
+        },
+        "text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      Object {
+        "id": "Comment:3",
+        "onPressActionMenu": [Function],
+        "onPressLike": [Function],
+        "person": Object {
+          "campus": Object {
+            "name": "Anderson Campus",
+          },
+          "nickName": "Albert Flores",
+          "photo": Object {
+            "uri": "https://picsum.photos/seed/3/200",
+          },
+        },
+        "text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      Object {
+        "id": "Comment:4",
+        "onPressActionMenu": [Function],
+        "onPressLike": [Function],
+        "person": Object {
+          "campus": Object {
+            "name": "Anderson Campus",
+          },
+          "nickName": "Albert Flores",
+          "photo": Object {
+            "uri": "https://picsum.photos/seed/4/200",
+          },
+        },
+        "text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      Object {
+        "id": "Comment:5",
+        "onPressActionMenu": [Function],
+        "onPressLike": [Function],
+        "person": Object {
+          "campus": Object {
+            "name": "Anderson Campus",
+          },
+          "nickName": "Albert Flores",
+          "photo": Object {
+            "uri": "https://picsum.photos/seed/5/200",
+          },
+        },
+        "text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      Object {
+        "id": "Comment:6",
+        "onPressActionMenu": [Function],
+        "onPressLike": [Function],
+        "person": Object {
+          "campus": Object {
+            "name": "Anderson Campus",
+          },
+          "nickName": "Albert Flores",
+          "photo": Object {
+            "uri": "https://picsum.photos/seed/6/200",
+          },
+        },
+        "text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      Object {
+        "id": "Comment:7",
+        "onPressActionMenu": [Function],
+        "onPressLike": [Function],
+        "person": Object {
+          "campus": Object {
+            "name": "Anderson Campus",
+          },
+          "nickName": "Albert Flores",
+          "photo": Object {
+            "uri": "https://picsum.photos/seed/7/200",
+          },
+        },
+        "text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      Object {
+        "id": "Comment:8",
+        "onPressActionMenu": [Function],
+        "onPressLike": [Function],
+        "person": Object {
+          "campus": Object {
+            "name": "Anderson Campus",
+          },
+          "nickName": "Albert Flores",
+          "photo": Object {
+            "uri": "https://picsum.photos/seed/8/200",
+          },
+        },
+        "text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      Object {
+        "id": "Comment:9",
+        "onPressActionMenu": [Function],
+        "onPressLike": [Function],
+        "person": Object {
+          "campus": Object {
+            "name": "Anderson Campus",
+          },
+          "nickName": "Albert Flores",
+          "photo": Object {
+            "uri": "https://picsum.photos/seed/9/200",
+          },
+        },
+        "text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+    ]
+  }
+  disableVirtualization={false}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={false}
+  initialNumToRender={10}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  onContentSizeChange={[Function]}
+  onEndReachedThreshold={2}
+  onLayout={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={Array []}
+  updateCellsBatchingPeriod={50}
+  viewabilityConfigCallbackPairs={Array []}
+  windowSize={21}
+>
+  <View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "rgba(0, 0, 0, 0.1)",
+            "borderTopWidth": 0.5,
+            "padding": 16,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 48,
+                "justifyContent": "center",
+                "width": 48,
+              }
+            }
+            themeSize={48}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/seed/0/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 24,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={48}
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "justifyContent": "center",
+                "marginLeft": 8,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
+                }
+              }
+            >
+              Albert Flores
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 18,
+                }
+              }
+            >
+              Anderson Campus
+            </Text>
+          </View>
+        </View>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+              "marginVertical": 8,
+            }
+          }
+        >
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+        </Text>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "rgba(0, 0, 0, 0.1)",
+            "borderTopWidth": 0.5,
+            "padding": 16,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 48,
+                "justifyContent": "center",
+                "width": 48,
+              }
+            }
+            themeSize={48}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/seed/1/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 24,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={48}
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "justifyContent": "center",
+                "marginLeft": 8,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
+                }
+              }
+            >
+              Albert Flores
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 18,
+                }
+              }
+            >
+              Anderson Campus
+            </Text>
+          </View>
+        </View>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+              "marginVertical": 8,
+            }
+          }
+        >
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+        </Text>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "rgba(0, 0, 0, 0.1)",
+            "borderTopWidth": 0.5,
+            "padding": 16,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 48,
+                "justifyContent": "center",
+                "width": 48,
+              }
+            }
+            themeSize={48}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/seed/2/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 24,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={48}
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "justifyContent": "center",
+                "marginLeft": 8,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
+                }
+              }
+            >
+              Albert Flores
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 18,
+                }
+              }
+            >
+              Anderson Campus
+            </Text>
+          </View>
+        </View>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+              "marginVertical": 8,
+            }
+          }
+        >
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+        </Text>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "rgba(0, 0, 0, 0.1)",
+            "borderTopWidth": 0.5,
+            "padding": 16,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 48,
+                "justifyContent": "center",
+                "width": 48,
+              }
+            }
+            themeSize={48}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/seed/3/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 24,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={48}
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "justifyContent": "center",
+                "marginLeft": 8,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
+                }
+              }
+            >
+              Albert Flores
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 18,
+                }
+              }
+            >
+              Anderson Campus
+            </Text>
+          </View>
+        </View>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+              "marginVertical": 8,
+            }
+          }
+        >
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+        </Text>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "rgba(0, 0, 0, 0.1)",
+            "borderTopWidth": 0.5,
+            "padding": 16,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 48,
+                "justifyContent": "center",
+                "width": 48,
+              }
+            }
+            themeSize={48}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/seed/4/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 24,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={48}
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "justifyContent": "center",
+                "marginLeft": 8,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
+                }
+              }
+            >
+              Albert Flores
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 18,
+                }
+              }
+            >
+              Anderson Campus
+            </Text>
+          </View>
+        </View>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+              "marginVertical": 8,
+            }
+          }
+        >
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+        </Text>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "rgba(0, 0, 0, 0.1)",
+            "borderTopWidth": 0.5,
+            "padding": 16,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 48,
+                "justifyContent": "center",
+                "width": 48,
+              }
+            }
+            themeSize={48}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/seed/5/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 24,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={48}
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "justifyContent": "center",
+                "marginLeft": 8,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
+                }
+              }
+            >
+              Albert Flores
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 18,
+                }
+              }
+            >
+              Anderson Campus
+            </Text>
+          </View>
+        </View>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+              "marginVertical": 8,
+            }
+          }
+        >
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+        </Text>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "rgba(0, 0, 0, 0.1)",
+            "borderTopWidth": 0.5,
+            "padding": 16,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 48,
+                "justifyContent": "center",
+                "width": 48,
+              }
+            }
+            themeSize={48}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/seed/6/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 24,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={48}
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "justifyContent": "center",
+                "marginLeft": 8,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
+                }
+              }
+            >
+              Albert Flores
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 18,
+                }
+              }
+            >
+              Anderson Campus
+            </Text>
+          </View>
+        </View>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+              "marginVertical": 8,
+            }
+          }
+        >
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+        </Text>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "rgba(0, 0, 0, 0.1)",
+            "borderTopWidth": 0.5,
+            "padding": 16,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 48,
+                "justifyContent": "center",
+                "width": 48,
+              }
+            }
+            themeSize={48}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/seed/7/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 24,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={48}
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "justifyContent": "center",
+                "marginLeft": 8,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
+                }
+              }
+            >
+              Albert Flores
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 18,
+                }
+              }
+            >
+              Anderson Campus
+            </Text>
+          </View>
+        </View>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+              "marginVertical": 8,
+            }
+          }
+        >
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+        </Text>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "rgba(0, 0, 0, 0.1)",
+            "borderTopWidth": 0.5,
+            "padding": 16,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 48,
+                "justifyContent": "center",
+                "width": 48,
+              }
+            }
+            themeSize={48}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/seed/8/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 24,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={48}
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "justifyContent": "center",
+                "marginLeft": 8,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
+                }
+              }
+            >
+              Albert Flores
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 18,
+                }
+              }
+            >
+              Anderson Campus
+            </Text>
+          </View>
+        </View>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+              "marginVertical": 8,
+            }
+          }
+        >
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+        </Text>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "rgba(0, 0, 0, 0.1)",
+            "borderTopWidth": 0.5,
+            "padding": 16,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 48,
+                "justifyContent": "center",
+                "width": 48,
+              }
+            }
+            themeSize={48}
+          >
+            <Image
+              fadeDuration={250}
+              onLoad={[Function]}
+              source={
+                Array [
+                  Object {
+                    "cache": "force-cache",
+                    "uri": "https://picsum.photos/seed/9/200",
+                  },
+                ]
+              }
+              style={
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 24,
+                  "bottom": 0,
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              themeSize={48}
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "justifyContent": "center",
+                "marginLeft": 8,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
+                }
+              }
+            >
+              Albert Flores
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#A5A5A5",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 18,
+                }
+              }
+            >
+              Anderson Campus
+            </Text>
+          </View>
+        </View>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+              "marginVertical": 8,
+            }
+          }
+        >
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
