@@ -181,7 +181,7 @@ export default class ContentItem extends RockApolloDataSource {
     const commentFeatures = get(attributeValues, 'comments.value', 'False');
     if (commentFeatures === 'True') {
       const nodeType = item.__type || this.resolveType(item);
-      const flagLimit = ApollosConfig.APP.FLAG_LIMIT;
+      const flagLimit = get(ApollosConfig, 'APP.FLAG_LIMIT', 0);
       features.push(
         Feature.createAddCommentFeature({
           nodeId: id,
