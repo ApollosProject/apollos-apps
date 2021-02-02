@@ -73,13 +73,7 @@ export default {
   PrayerListFeature: {
     id: ({ id }) => createGlobalId(id, 'PrayerListFeature'),
   },
-  UserPrayersFeature: {
-    id: ({ id }) => createGlobalId(id, 'UserPrayersFeature'),
-    subtitle: async ({ prayers: getPrayers }) => {
-      const prayers = await getPrayers();
-      return (
-        `${prayers[prayers.length - 1]?.text.slice(0, 30)}...` || 'No prayers'
-      );
-    },
+  VerticalPrayerListFeature: {
+    id: ({ id }) => createGlobalId(id, 'VerticalPrayerListFeature'),
   },
 };

@@ -331,22 +331,22 @@ export default class Feature extends RockApolloDataSource {
     };
   }
 
-  async createUserPrayersFeature() {
+  async createVerticalPrayerListFeature({ title, subtitle, ...args }) {
     const { ActionAlgorithm, Auth } = this.context.dataSources;
-    const { primaryAliasId, firstName, photo } = await Auth.getCurrentPerson();
+    const { primaryAliasId } = await Auth.getCurrentPerson();
     const prayers = () =>
       ActionAlgorithm.runAlgorithms({
         algorithms: ['DAILY_PRAYER'],
-        args: { primaryAliasId },
+        args: { primaryAliasId, ...args },
       });
     return {
       id: this.createFeatureId({
-        primaryAliasId,
+        args: { primaryAliasId, title, subtitle },
       }),
       prayers,
-      avatar: { uri: photo?.url || '' },
-      title: `Pray for ${firstName}`,
-      __typename: 'UserPrayersFeature',
+      title,
+      subtitle,
+      __typename: 'VerticalPrayerListFeature',
     };
   }
 
@@ -387,8 +387,8 @@ export default class Feature extends RockApolloDataSource {
             return this.createHeroListFeature(finalConfig);
           case 'PrayerList':
             return this.createPrayerListFeature(finalConfig);
-          case 'UserPrayers':
-            return this.createUserPrayersFeature(finalConfig);
+          case 'VerticalPrayerList':
+            return this.createVerticalPrayerListFeature(finalConfig);
           case 'ActionList':
           default:
             // Action list was the default in 1.3.0 and prior.
