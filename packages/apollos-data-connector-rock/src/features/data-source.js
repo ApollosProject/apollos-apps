@@ -271,7 +271,7 @@ export default class Feature extends RockApolloDataSource {
 
   createCommentListFeature({ nodeId, nodeType, flagLimit }) {
     return {
-      id: JSON.stringify({ nodeId, nodeType }),
+      id: JSON.stringify({ nodeId, nodeType, flagLimit }),
       comments: () =>
         this.context.dataSources.Comment.getForNode({
           nodeId,
