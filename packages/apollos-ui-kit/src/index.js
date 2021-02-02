@@ -77,6 +77,7 @@ export ThemeProvider, {
   ThemeMixin,
   withThemeMixin,
   ThemeConsumer,
+  named,
 } from './theme';
 export ThumbnailCard from './ThumbnailCard';
 export TileImage from './TileImage';

@@ -109,7 +109,8 @@ export default class ContentItem extends RockApolloDataSource {
     }));
   };
 
-  getFeatures({ attributeValues, id, ...args }) {
+  getFeatures(item) {
+    const { attributeValues, id } = item;
     const { Feature } = this.context.dataSources;
     const features = [];
 
@@ -179,14 +180,29 @@ export default class ContentItem extends RockApolloDataSource {
 
     const commentFeatures = get(attributeValues, 'comments.value', 'False');
     if (commentFeatures === 'True') {
-      const __type = this.resolveType({ attributeValues, id, ...args });
+      const nodeType = item.__type || this.resolveType(item);
       features.push(
-        Feature.createCommentListFeature({ nodeId: id, nodeType: __type })
+        Feature.createAddCommentFeature({
+          nodeId: id,
+          nodeType,
+          relatedNode: item,
+          initialPrompt: this.getAddCommentInitialPrompt(attributeValues),
+          addPrompt: this.getAddCommentAddPrompt(attributeValues),
+        }),
+        Feature.createCommentListFeature({ nodeId: id, nodeType })
       );
     }
 
     return features;
   }
+
+  getAddCommentInitialPrompt = (attributeValues) => {
+    return get(attributeValues, 'initialPrompt.value', 'Write Something...');
+  };
+
+  getAddCommentAddPrompt = (attributeValues) => {
+    return get(attributeValues, 'addPrompt.value', 'What stands out to you?');
+  };
 
   createSummary = ({ content, attributeValues }) => {
     const summary = get(attributeValues, 'summary.value', '');

@@ -8,6 +8,7 @@ import {
   PaddedView,
   H2,
   GradientOverlayImage,
+  named,
 } from '@apollosproject/ui-kit';
 
 import safeOpenUrl from '../safeOpenUrl';
@@ -82,4 +83,4 @@ ContentNodeConnected.defaultProps = {
   onPressAnchor: safeOpenUrl,
 };
 
-export default ContentNodeConnected;
+export default named('ui-connected.ContentNodeConnected')(ContentNodeConnected);
