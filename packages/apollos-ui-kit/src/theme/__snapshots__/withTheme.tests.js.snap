@@ -55,3 +55,15 @@ exports[`the styled HOC provides a theme 1`] = `
   }
 />
 `;
+
+exports[`the styled HOC uses overide when using \`named\` hoc 1`] = `
+<View
+  clickable={false}
+  style={
+    Object {
+      "backgroundColor": "active-color",
+      "borderRadius": 7,
+    }
+  }
+/>
+`;

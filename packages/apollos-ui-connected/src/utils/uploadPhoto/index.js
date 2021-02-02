@@ -1,42 +1,17 @@
-import { Platform } from 'react-native';
-
 import { ReactNativeFile } from 'apollo-upload-client';
 import gql from 'graphql-tag';
-import ImagePicker from 'react-native-image-picker';
-import { check, PERMISSIONS, request, RESULTS } from 'react-native-permissions';
+import { launchImageLibrary } from 'react-native-image-picker';
 
 import GET_USER_PHOTO from '../../UserAvatarConnected/getUserPhoto';
 
 const options = {
-  title: 'Select Profile Image',
   quality: 0.7,
-  storageOptions: {
-    skipBackup: true,
-    path: 'images',
-    waitUntilSaved: true,
-    cameraRoll: true,
-  },
+  mediaType: 'photo',
 };
 
-async function handleIOSPermissions() {
-  let cameraPermissionStatus = await check(PERMISSIONS.IOS.PHOTO_LIBRARY);
-  let hasPermission = cameraPermissionStatus === RESULTS.GRANTED;
-  if (!hasPermission) {
-    cameraPermissionStatus = await request(PERMISSIONS.IOS.PHOTO_LIBRARY);
-    hasPermission = cameraPermissionStatus === RESULTS.GRANTED;
-    if (!hasPermission) {
-      return false;
-    }
-  }
-  return true;
-}
-
 async function showImagePicker() {
-  if (Platform.OS === 'ios' && !(await handleIOSPermissions())) {
-    return null;
-  }
   return new Promise((resolve, reject) => {
-    ImagePicker.showImagePicker(options, (response) => {
+    launchImageLibrary(options, (response) => {
       if (response.didCancel) {
         reject(response.didCancel);
       } else if (response.error) {

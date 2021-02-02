@@ -15,6 +15,26 @@ const resolvers = {
   CommentListFeature: {
     id: ({ id }) => createGlobalId(id, 'CommentListFeature'),
   },
+  AddCommentFeature: {
+    id: ({ id }) => createGlobalId(id, 'AddCommentFeature'),
+    initialPrompt: ({ id }) => JSON.parse(id).initialPrompt,
+    addPrompt: ({ id }) => JSON.parse(id).addPrompt,
+    relatedNode: async (
+      { id },
+      args,
+      { models: { Node }, dataSources },
+      info
+    ) => {
+      const { relatedNode } = JSON.parse(id);
+      const item = await Node.get(
+        createGlobalId(relatedNode.id, relatedNode.__type),
+        dataSources,
+        info
+      );
+
+      return item;
+    },
+  },
 };
 
 export default resolvers;
