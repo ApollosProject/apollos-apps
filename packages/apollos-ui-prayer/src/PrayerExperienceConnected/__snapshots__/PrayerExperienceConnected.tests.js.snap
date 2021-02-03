@@ -6021,6 +6021,7 @@ Array [
                       "justifyContent": "center",
                     }
                   }
+<<<<<<< HEAD
                 >
                   <Image
                     avatarWidth="40%"
@@ -6132,6 +6133,161 @@ Array [
                     />
                   </View>
                 </View>
+||||||| d858a9ee
+                />
+=======
+                >
+                  <Image
+                    avatarWidth="40%"
+                    fadeDuration={250}
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "__typename": "ImageMediaSource",
+                          "cache": "force-cache",
+                          "uri": "https://1234.image.com",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 1000,
+                        "width": "40%",
+                        "zIndex": 100,
+                      }
+                    }
+                  />
+                  <View
+                    avatarWidth="20%"
+                    getXYPositions={
+                      Object {
+                        "left": "20%",
+                        "top": "40%",
+                      }
+                    }
+                    order={0}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "left": "20%",
+                        "position": "absolute",
+                        "top": "40%",
+                        "width": "20%",
+                        "zIndex": 0,
+                      }
+                    }
+                  >
+                    <Image
+                      blurRadius={3}
+                      fadeDuration={250}
+                      onLoad={[Function]}
+                      source={
+                        Array [
+                          Object {
+                            "cache": "force-cache",
+                            "uri": "https://123.image-url.com",
+                          },
+                        ]
+                      }
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 1000,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <View
+                    avatarWidth="20%"
+                    getXYPositions={
+                      Object {
+                        "left": "59.899924966004434%",
+                        "top": "5.532318892071906%",
+                      }
+                    }
+                    order={4}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "left": "59.899924966004434%",
+                        "position": "absolute",
+                        "top": "5.532318892071906%",
+                        "width": "20%",
+                        "zIndex": 4,
+                      }
+                    }
+                  >
+                    <Image
+                      blurRadius={2}
+                      fadeDuration={250}
+                      onLoad={[Function]}
+                      source={
+                        Array [
+                          Object {
+                            "cache": "force-cache",
+                            "uri": "https://123.image-url.com",
+                          },
+                        ]
+                      }
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 1000,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <View
+                    avatarWidth="20%"
+                    getXYPositions={
+                      Object {
+                        "left": "50.000000000000014%",
+                        "top": "57.320508075688764%",
+                      }
+                    }
+                    order={8}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "left": "50.000000000000014%",
+                        "position": "absolute",
+                        "top": "57.320508075688764%",
+                        "width": "20%",
+                        "zIndex": 8,
+                      }
+                    }
+                  >
+                    <Image
+                      blurRadius={1}
+                      fadeDuration={250}
+                      onLoad={[Function]}
+                      source={
+                        Array [
+                          Object {
+                            "cache": "force-cache",
+                            "uri": "https://123.image-url.com",
+                          },
+                        ]
+                      }
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 1000,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+>>>>>>> master
                 <View
                   style={
                     Object {
