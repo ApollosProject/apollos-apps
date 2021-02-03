@@ -109,7 +109,8 @@ export default class ContentItem extends RockApolloDataSource {
     }));
   };
 
-  getFeatures({ attributeValues }) {
+  getFeatures(item) {
+    const { attributeValues, id } = item;
     const { Feature } = this.context.dataSources;
     const features = [];
 
@@ -177,8 +178,31 @@ export default class ContentItem extends RockApolloDataSource {
       });
     }
 
+    const commentFeatures = get(attributeValues, 'comments.value', 'False');
+    if (commentFeatures === 'True') {
+      const nodeType = item.__type || this.resolveType(item);
+      features.push(
+        Feature.createAddCommentFeature({
+          nodeId: id,
+          nodeType,
+          relatedNode: item,
+          initialPrompt: this.getAddCommentInitialPrompt(attributeValues),
+          addPrompt: this.getAddCommentAddPrompt(attributeValues),
+        }),
+        Feature.createCommentListFeature({ nodeId: id, nodeType })
+      );
+    }
+
     return features;
   }
+
+  getAddCommentInitialPrompt = (attributeValues) => {
+    return get(attributeValues, 'initialPrompt.value', 'Write Something...');
+  };
+
+  getAddCommentAddPrompt = (attributeValues) => {
+    return get(attributeValues, 'addPrompt.value', 'What stands out to you?');
+  };
 
   createSummary = ({ content, attributeValues }) => {
     const summary = get(attributeValues, 'summary.value', '');
@@ -277,9 +301,9 @@ export default class ContentItem extends RockApolloDataSource {
     // If no image, check parent for image:
     if (!image) {
       // The cursor returns a promise which returns a promisee, hence th edouble eawait.
-      const parentItems = await (await this.getCursorByChildContentItemId(
-        root.id
-      )).get();
+      const parentItems = await (
+        await this.getCursorByChildContentItemId(root.id)
+      ).get();
 
       if (parentItems.length) {
         const validParentImages = parentItems
@@ -413,9 +437,7 @@ export default class ContentItem extends RockApolloDataSource {
   };
 
   byUserFeed = () =>
-    this.byActive()
-      .orderBy('StartDateTime', 'desc')
-      .expand('ContentChannel');
+    this.byActive().orderBy('StartDateTime', 'desc').expand('ContentChannel');
 
   byActive = () =>
     this.request()
@@ -537,12 +559,14 @@ export default class ContentItem extends RockApolloDataSource {
       })
     );
 
-    const completedIds = (await Promise.all(
-      ids.map(async (id) => ({
-        id,
-        percent: await this.getPercentComplete({ id }),
-      }))
-    ))
+    const completedIds = (
+      await Promise.all(
+        ids.map(async (id) => ({
+          id,
+          percent: await this.getPercentComplete({ id }),
+        }))
+      )
+    )
       .filter(({ percent }) => percent === 100)
       .map(({ id }) => id);
 
@@ -603,10 +627,7 @@ export default class ContentItem extends RockApolloDataSource {
     return (totalItemsWithInteractions / childItems.length) * 100;
   }
 
-  getFromId = (id) =>
-    this.request()
-      .find(id)
-      .get();
+  getFromId = (id) => this.request().find(id).get();
 
   resolveType({
     attributeValues,

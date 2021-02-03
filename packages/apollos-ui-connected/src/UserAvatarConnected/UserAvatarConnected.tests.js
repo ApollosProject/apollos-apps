@@ -1,5 +1,6 @@
 import React from 'react';
-import { Providers, renderWithApolloData } from '../testUtils';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 
 import GET_USER_PHOTO from './getUserPhoto';
 
@@ -29,9 +30,9 @@ describe('UserAvatarConnected component', () => {
         },
       },
     };
-    const navigation = { navigate: jest.fn(), getParam: jest.fn() };
+    const navigation = { navigate: jest.fn() };
     const tree = await renderWithApolloData(
-      <Providers mocks={[mock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <UserAvatarConnected navigation={navigation} />
       </Providers>
     );

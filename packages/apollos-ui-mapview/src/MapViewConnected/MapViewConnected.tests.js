@@ -1,6 +1,6 @@
 import React from 'react';
-import { Providers, renderWithApolloData } from '../utils/testUtils';
-
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 import GET_CAMPUS_LOCATIONS from './getCampusLocations';
 import MapViewConnected from './MapViewConnected';
 
@@ -90,7 +90,6 @@ describe('The MapViewConnected component', () => {
   it('should render', async () => {
     const navigation = {
       navigate: jest.fn(),
-      getParam: jest.fn(),
       goBack: jest.fn(),
     };
 
@@ -119,7 +118,7 @@ describe('The MapViewConnected component', () => {
     };
 
     const tree = await renderWithApolloData(
-      <Providers mocks={[mock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <MapViewConnected
           navigation={navigation}
           initialRegion={initialRegion}

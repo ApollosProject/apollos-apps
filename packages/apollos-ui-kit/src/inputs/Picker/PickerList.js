@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Modal, StyleSheet, View, Picker as NativePicker } from 'react-native';
+import { Modal, StyleSheet, View } from 'react-native';
+
+import { Picker as NativePicker } from '@react-native-picker/picker';
 
 import styled from '../../styled';
 import { ButtonLink } from '../../Button';

@@ -12,11 +12,10 @@ Array [
         }
       }
     >
-      <RCTImageView
+      <Image
         fadeDuration={250}
         isLoading={false}
         onLoad={[Function]}
-        resizeMode="cover"
         source={
           Array [
             Object {
@@ -30,7 +29,6 @@ Array [
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "overflow": "hidden",
             "resizeMode": "cover",
             "width": "100%",
           }
@@ -38,109 +36,6 @@ Array [
       />
     </View>
   </View>,
-  <View
-    style={
-      Object {
-        "paddingHorizontal": 16,
-        "paddingVertical": 0,
-      }
-    }
-    vertical={false}
-  >
-    <Text
-      padded={true}
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Black",
-          "fontSize": 36,
-          "lineHeight": 41.4,
-          "paddingBottom": 20.02,
-          "paddingTop": 24,
-        }
-      }
-    >
-      Here is the title
-    </Text>
-    <View
-      style={
-        Object {
-          "paddingBottom": 18,
-        }
-      }
-    >
-      <View>
-        <View
-          style={
-            Object {
-              "paddingBottom": 18,
-            }
-          }
-        >
-          <Text
-            bold={false}
-            italic={false}
-            style={
-              Object {
-                "color": "#303030",
-                "fontFamily": "InterUI-Regular",
-                "fontSize": 16,
-                "lineHeight": 26,
-              }
-            }
-          >
-            <Text>
-              Of Myths and Money, lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim euismod arcu, volutpat feugiat tortor luctus vitae. Suspendisse efficitur faucibus ante at facilisis. Phasellus in velit suscipit lectus tempus dapibus vitae eu quam. Fusce venenatis mauris non ante scelerisque, sit amet blandit odio ultricies. In sed lacinia dui, eu blandit metus. Ut ante enim, facilisis sed pretium et, posuere vitae felis. Phasellus ornare mauris mauris, eget pretium nibh imperdiet ac. Integer eleifend dui ut nisl sagittis mattis. Nunc consectetur consequat tristique. Pellentesque luctus tortor nec quam pulvinar iaculis.
-            </Text>
-          </Text>
-        </View>
-      </View>
-    </View>
-  </View>,
-]
-`;
-
-exports[`ContentNodeConnected should render with media player 1`] = `
-Array [
-  <View>
-    <View
-      style={
-        Object {
-          "backgroundColor": "#A5A5A5",
-          "overflow": "hidden",
-          "width": "100%",
-        }
-      }
-    >
-      <RCTImageView
-        fadeDuration={250}
-        isLoading={false}
-        onLoad={[Function]}
-        resizeMode="cover"
-        source={
-          Array [
-            Object {
-              "__typename": "ImageMediaSource",
-              "cache": "force-cache",
-              "uri": "https://picsum.photos/2000/200/?random",
-            },
-          ]
-        }
-        style={
-          Object {
-            "aspectRatio": 1,
-            "backgroundColor": "#A5A5A5",
-            "overflow": "hidden",
-            "resizeMode": "cover",
-            "width": "100%",
-          }
-        }
-      />
-    </View>
-  </View>,
-  <Text>
-    {"coverImage":{"sources":[{"uri":"https://picsum.photos/2000/200/?random","__typename":"ImageMediaSource"}],"__typename":"ImageMedia"},"coverImageSources":[{"uri":"https://picsum.photos/2000/200/?random","__typename":"ImageMediaSource"}],"loading":false,"title":"Here is the title","videoSource":{"uri":"https://somevideo.com/video.bin","__typename":"VideoMediaSource"}}
-  </Text>,
   <View
     style={
       Object {

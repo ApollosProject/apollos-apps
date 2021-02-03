@@ -4,16 +4,15 @@ import { Platform } from 'react-native';
 
 import { Touchable } from '@apollosproject/ui-kit';
 
-import { Providers } from '../testUtils';
+import { Providers } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 
 import RockAuthedWebBrowser from '.';
-
-jest.mock('Platform');
 
 describe(`RockAuthedWebBrowser Consumer`, () => {
   it('passes a function', async () => {
     renderer.create(
-      <Providers>
+      <Providers MockedProvider={MockedProvider}>
         <RockAuthedWebBrowser>
           {(openUrl) => {
             expect(typeof openUrl).toBe('function');
@@ -32,7 +31,7 @@ describe(`RockAuthedWebBrowser Consumer`, () => {
   it('passes a function (Android)', async () => {
     Platform.OS = 'android';
     renderer.create(
-      <Providers>
+      <Providers MockedProvider={MockedProvider}>
         <RockAuthedWebBrowser>
           {(openUrl) => {
             expect(typeof openUrl).toBe('function');

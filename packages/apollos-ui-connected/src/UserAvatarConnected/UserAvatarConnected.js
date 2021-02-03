@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 
 import { Avatar } from '@apollosproject/ui-kit';
 import GET_USER_PHOTO from './getUserPhoto';

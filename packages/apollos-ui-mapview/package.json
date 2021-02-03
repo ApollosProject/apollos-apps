@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/ui-mapview",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "1.8.0-beta.0",
+  "version": "2.0.0-2.0.0-alpha.16.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -20,8 +20,13 @@
   "jest": {
     "preset": "react-native",
     "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "lcovonly",
+      "clover"
+    ],
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@apollosproject))"
+      "node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@react-navigation/stack|@apollosproject|@react-native-picker))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -43,22 +48,22 @@
     "react-native": "*",
     "react-native-geolocation-service": "*",
     "react-native-maps": "*",
-    "react-navigation": "*"
+    "react-native-safe-area-context": "*"
   },
   "dependencies": {
-    "graphql-tag": "2.9.2",
-    "react-apollo": "2.5.5"
+    "graphql-tag": "2.9.2"
   },
   "devDependencies": {
-    "jest": "24.8.0",
+    "@react-native-community/geolocation": "^2.0.2",
+    "jest": "^25.1.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
-    "react": "16.8.6",
-    "react-native": "0.60.5",
+    "react": "16.13.1",
+    "react-native": "0.63.2",
     "react-native-geolocation-service": "^5.1.1",
     "react-native-maps": "0.26.1",
-    "react-navigation": "^3.11.0",
-    "react-test-renderer": "16.8.6",
+    "react-native-safe-area-context": "^3.0.7",
+    "react-test-renderer": "16.13.1",
     "waait": "1.0.2"
   },
   "publishConfig": {

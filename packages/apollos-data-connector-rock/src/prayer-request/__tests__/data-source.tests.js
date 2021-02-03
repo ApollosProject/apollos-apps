@@ -27,44 +27,83 @@ const auth = (dataSource, other = {}) => ({
   ),
 });
 
-const prayerMock = {
-  FirstName: 'Conrad',
-  LastName: 'VanLandingham',
-  Email: 'hi@convan.me',
-  RequestedByPersonAliasId: null,
-  CategoryId: 2,
-  Text:
-    'Our Father, Who art in heaven, \nHallowed be Thy Name. \nThy Kingdom come. \nThy Will be done, \non earth as it is in Heaven.\n\nGive us this day our daily bread. \nAnd forgive us our trespasses, \nas we forgive those who trespass against us. \nAnd lead us not into temptation, \nbut deliver us from evil. Amen.',
-  Answer: '',
-  EnteredDateTime: '2020-05-15T12:42:29.227',
-  ExpirationDate: '2020-05-29T00:00:00',
-  GroupId: null,
-  AllowComments: true,
-  IsUrgent: false,
-  IsPublic: true,
-  IsActive: true,
-  IsApproved: true,
-  FlagCount: null,
-  PrayerCount: null,
-  ApprovedByPersonAliasId: 62,
-  CampusId: 2,
-  ApprovedOnDateTime: '2020-05-15T12:42:29.227',
-  RequestedByPersonAlias: null,
-  Category: null,
-  ApprovedByPersonAlias: null,
-  CreatedDateTime: '2020-05-15T12:42:29.243',
-  ModifiedDateTime: '2020-05-15T12:42:29.243',
-  CreatedByPersonAliasId: 62,
-  ModifiedByPersonAliasId: 62,
-  ModifiedAuditValuesAlreadyUpdated: false,
-  Attributes: null,
-  AttributeValues: null,
-  Id: 13,
-  Guid: 'eb90493d-0e41-4a35-b085-3b48ac78cadf',
-  ForeignId: null,
-  ForeignGuid: null,
-  ForeignKey: null,
-};
+const prayersMock = [
+  {
+    FirstName: 'Conrad',
+    LastName: 'VanLandingham',
+    Email: 'hi@convan.me',
+    RequestedByPersonAliasId: null,
+    CategoryId: 2,
+    Text:
+      'Our Father, Who art in heaven, \nHallowed be Thy Name. \nThy Kingdom come. \nThy Will be done, \non earth as it is in Heaven.\n\nGive us this day our daily bread. \nAnd forgive us our trespasses, \nas we forgive those who trespass against us. \nAnd lead us not into temptation, \nbut deliver us from evil. Amen.',
+    Answer: '',
+    EnteredDateTime: '2020-05-15T12:42:29.227',
+    ExpirationDate: '2020-05-29T00:00:00',
+    GroupId: null,
+    AllowComments: true,
+    IsUrgent: false,
+    IsPublic: true,
+    IsActive: true,
+    IsApproved: true,
+    FlagCount: null,
+    PrayerCount: null,
+    ApprovedByPersonAliasId: 62,
+    CampusId: 2,
+    ApprovedOnDateTime: '2020-05-15T12:42:29.227',
+    RequestedByPersonAlias: 62,
+    Category: null,
+    ApprovedByPersonAlias: null,
+    CreatedDateTime: '2020-05-15T12:42:29.243',
+    ModifiedDateTime: '2020-05-15T12:42:29.243',
+    CreatedByPersonAliasId: 62,
+    ModifiedByPersonAliasId: 62,
+    ModifiedAuditValuesAlreadyUpdated: false,
+    Attributes: null,
+    AttributeValues: null,
+    Id: 13,
+    Guid: 'eb90493d-0e41-4a35-b085-3b48ac78cadf',
+    ForeignId: null,
+    ForeignGuid: null,
+    ForeignKey: null,
+  },
+  {
+    FirstName: 'Michael',
+    LastName: 'Neeley',
+    Email: 'michaels@email.com',
+    RequestedByPersonAliasId: null,
+    CategoryId: 2,
+    Text: 'Another prayer',
+    Answer: '',
+    EnteredDateTime: '2020-05-15T12:42:29.227',
+    ExpirationDate: '2020-05-29T00:00:00',
+    GroupId: null,
+    AllowComments: true,
+    IsUrgent: false,
+    IsPublic: true,
+    IsActive: true,
+    IsApproved: true,
+    FlagCount: null,
+    PrayerCount: null,
+    ApprovedByPersonAliasId: 63,
+    CampusId: 2,
+    ApprovedOnDateTime: '2020-05-15T12:42:29.227',
+    RequestedByPersonAlias: null,
+    Category: null,
+    ApprovedByPersonAlias: null,
+    CreatedDateTime: '2020-05-15T12:42:29.243',
+    ModifiedDateTime: '2020-05-15T12:42:29.243',
+    CreatedByPersonAliasId: 63,
+    ModifiedByPersonAliasId: 63,
+    ModifiedAuditValuesAlreadyUpdated: false,
+    Attributes: null,
+    AttributeValues: null,
+    Id: 13,
+    Guid: 'eb90493d-0e41-4a35-b085-3b48ac78cadf',
+    ForeignId: null,
+    ForeignGuid: null,
+    ForeignKey: null,
+  },
+];
 
 describe('Prayer', () => {
   it('constructs', () => {
@@ -80,15 +119,37 @@ describe('Prayer', () => {
       rockCookie: 'fakeCookie',
       dataSources: { Auth },
     };
-    dataSource.get = buildGetMock([prayerMock], dataSource);
+    dataSource.get = buildGetMock([prayersMock[0]], dataSource);
 
-    const result = await (await dataSource.byDailyPrayerFeed({
-      numberDaysSincePrayer: 3,
-    })).get();
+    const result = await (
+      await dataSource.byDailyPrayerFeed({
+        numberDaysSincePrayer: 3,
+      })
+    ).get();
     expect(result).toMatchSnapshot();
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
+  it('gets daily prayer feed by person', async () => {
+    advanceTo(new Date(2020, 1, 20, 0, 0, 0));
+    const dataSource = new Prayer();
+    const Auth = auth(dataSource);
+
+    dataSource.context = {
+      rockCookie: 'fakeCookie',
+      dataSources: { Auth },
+    };
+    dataSource.get = buildGetMock(prayersMock[1], dataSource);
+
+    const result = await (
+      await dataSource.byDailyPrayerFeed({
+        numberDaysSincePrayer: 3,
+        primaryAliasId: 63,
+      })
+    ).get();
+    expect(result).toMatchSnapshot();
+    expect(dataSource.get.mock.calls).toMatchSnapshot();
+  });
   it('gets by id', () => {
     const dataSource = new Prayer();
     dataSource.get = buildGetMock({ Id: 1 }, dataSource);

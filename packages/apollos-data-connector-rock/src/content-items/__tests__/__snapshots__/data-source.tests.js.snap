@@ -327,11 +327,11 @@ exports[`ContentItemsModel gets a percentage for a content series, based on diff
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
   ],
@@ -356,7 +356,7 @@ exports[`ContentItemsModel gets a percentage for a content series, based on diff
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
   ],
@@ -383,11 +383,11 @@ exports[`ContentItemsModel gets a percentage for a content series, based on past
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
   ],
@@ -412,7 +412,7 @@ exports[`ContentItemsModel gets a percentage for a content series, based on past
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
   ],
@@ -434,7 +434,7 @@ exports[`ContentItemsModel gets a percentage for a content series, even if a ser
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
   ],
@@ -612,11 +612,11 @@ exports[`ContentItemsModel gets the next item for a content series, based on dif
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
   ],
@@ -641,7 +641,7 @@ exports[`ContentItemsModel gets the next item for a content series, based on dif
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
   ],
@@ -668,11 +668,11 @@ exports[`ContentItemsModel gets the next item for a content series, based on pas
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
   ],
@@ -697,7 +697,7 @@ exports[`ContentItemsModel gets the next item for a content series, based on pas
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": Promise {},
     },
   ],
@@ -798,6 +798,56 @@ Array [
     Object {
       "cacheOptions": Object {
         "ttl": 60,
+      },
+    },
+  ],
+]
+`;
+
+exports[`ContentItemsModel returns comment features when a contentItem has a Comments field set to true 1`] = `
+Array [
+  Object {
+    "__typename": "AddCommentFeature",
+    "addPrompt": "What stands out to you?",
+    "id": "AddCommentFeature:123",
+    "initialPrompt": "Write Something...",
+  },
+  Object {
+    "__typename": "CommentListFeature",
+    "comments": Array [],
+    "id": "CommentListFeature:123",
+  },
+]
+`;
+
+exports[`ContentItemsModel returns comment features when a contentItem has a Comments field set to true 2`] = `
+Array [
+  Array [
+    Object {
+      "nodeId": "ContentItem:123Test",
+      "nodeType": "UniversalContentItem",
+    },
+  ],
+]
+`;
+
+exports[`ContentItemsModel returns comment features when a contentItem has a Comments field set to true 3`] = `
+Array [
+  Array [
+    Object {
+      "addPrompt": "What stands out to you?",
+      "initialPrompt": "Write Something...",
+      "nodeId": "ContentItem:123Test",
+      "nodeType": "UniversalContentItem",
+      "relatedNode": Object {
+        "attributeValues": Object {
+          "comments": Object {
+            "id": 123,
+            "value": "True",
+          },
+        },
+        "attributes": Object {},
+        "id": "ContentItem:123Test",
       },
     },
   ],

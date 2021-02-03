@@ -1,5 +1,6 @@
 import React from 'react';
-import { Providers, renderWithApolloData } from '../testUtils';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 
 import GET_FEATURE_FEED from './getFeatureFeed';
 
@@ -66,7 +67,7 @@ const mock = {
 describe('FeaturesFeedConnected', () => {
   it('should render', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={[mock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <FeaturesFeedConnected featureFeedId={'FeatureFeed:1'} />
       </Providers>
     );

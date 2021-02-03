@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { AnalyticsConsumer } from './Provider';
 
-class TrackEventWhenLoaded extends PureComponent {
+export class TrackEventWhenLoaded extends PureComponent {
   componentDidMount() {
     if (this.props.loaded || this.props.isLoading === false) {
       this.track();

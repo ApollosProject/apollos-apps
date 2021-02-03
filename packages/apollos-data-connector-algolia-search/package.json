@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/data-connector-algolia-search",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "1.8.0-beta.0",
+  "version": "2.0.0-2.0.0-alpha.16.0",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
@@ -10,6 +10,11 @@
   },
   "jest": {
     "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "lcovonly",
+      "clover"
+    ],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
     ],
@@ -20,13 +25,10 @@
     "setupFiles": [
       "./jest.setup.js"
     ],
-    "testEnvironment": "node",
-    "reporters": [
-      "<rootDir>/../../scripts/fingers-crossed-reporter.js"
-    ]
+    "testEnvironment": "node"
   },
   "dependencies": {
-    "@apollosproject/server-core": "^1.8.0-beta.0",
+    "@apollosproject/server-core": "^2.0.0-2.0.0-alpha.16.0",
     "algoliasearch": "^3.34.0",
     "apollo-datasource-rest": "^0.6.4"
   },
@@ -35,11 +37,11 @@
     "@apollosproject/data-schema": "*"
   },
   "devDependencies": {
-    "@apollosproject/apollo-server-env-mock": "^1.8.0-beta.0",
-    "@apollosproject/babel-preset-apollos": "^1.8.0-beta.0",
+    "@apollosproject/apollo-server-env-mock": "^2.0.0-2.0.0-alpha.16.0",
+    "@apollosproject/babel-preset-apollos": "^2.0.0-2.0.0-alpha.16.0",
     "apollo-server-env": "^2.3.0",
-    "graphql": "^14.6.0",
-    "jest": "^23.6.0"
+    "graphql": "14.7.0",
+    "jest": "^25.1.0"
   },
   "publishConfig": {
     "access": "public"

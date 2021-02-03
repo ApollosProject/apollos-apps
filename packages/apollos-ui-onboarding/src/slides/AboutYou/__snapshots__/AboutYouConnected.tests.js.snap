@@ -18,13 +18,7 @@ Array [
     }
   >
     <View>
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
+      <View
         style={
           Object {
             "marginBottom": 48,
@@ -95,7 +89,7 @@ Array [
         >
           <View
             accessible={true}
-            clickable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -156,7 +150,7 @@ Array [
           </View>
           <View
             accessible={true}
-            clickable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -205,7 +199,7 @@ Array [
           </View>
           <View
             accessible={true}
-            clickable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -275,8 +269,7 @@ Array [
         >
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -339,7 +332,7 @@ Array [
           >
             <View
               accessible={true}
-              clickable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -400,7 +393,7 @@ Array [
             />
           </View>
         </View>
-      </RCTSafeAreaView>
+      </View>
     </View>
   </RCTScrollView>,
   <View
@@ -420,19 +413,10 @@ Array [
     }
     vertical={false}
   >
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-          "top": "never",
-        }
-      }
-    >
+    <View>
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -599,7 +583,7 @@ Array [
           </RNSVGSvgView>
         </View>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>,
 ]
 `;
@@ -620,13 +604,7 @@ Array [
     }
   >
     <View>
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
+      <View
         style={
           Object {
             "marginBottom": 48,
@@ -697,7 +675,7 @@ Array [
         >
           <View
             accessible={true}
-            clickable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -746,7 +724,7 @@ Array [
           </View>
           <View
             accessible={true}
-            clickable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -795,7 +773,7 @@ Array [
           </View>
           <View
             accessible={true}
-            clickable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -865,8 +843,7 @@ Array [
         >
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -929,7 +906,7 @@ Array [
           >
             <View
               accessible={true}
-              clickable={true}
+              focusable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -990,7 +967,7 @@ Array [
             />
           </View>
         </View>
-      </RCTSafeAreaView>
+      </View>
     </View>
   </RCTScrollView>,
   <View
@@ -1010,15 +987,7 @@ Array [
     }
     vertical={false}
   >
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-          "top": "never",
-        }
-      }
-    >
+    <View>
       <Text
         onPress={[MockFunction]}
         style={
@@ -1033,7 +1002,7 @@ Array [
       >
         Skip
       </Text>
-    </RCTSafeAreaView>
+    </View>
   </View>,
 ]
 `;

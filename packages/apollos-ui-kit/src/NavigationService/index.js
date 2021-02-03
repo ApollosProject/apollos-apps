@@ -1,12 +1,13 @@
-import { StackActions, NavigationActions } from 'react-navigation';
+import { CommonActions } from '@react-navigation/native';
 
 let _navigator;
+let _ready = false;
 let _pendingActions = [];
 
 const getNavigator = () => _navigator;
 
 const performWhenReady = (func) => (...args) => {
-  if (_navigator) {
+  if (_navigator && _ready) {
     func(...args);
   } else {
     _pendingActions.push(() => func(...args));
@@ -15,19 +16,22 @@ const performWhenReady = (func) => (...args) => {
 
 const setTopLevelNavigator = (navigatorRef) => {
   _navigator = navigatorRef;
-  if (_pendingActions.length > 0) {
+  if (_pendingActions.length > 0 && _ready) {
     _pendingActions.forEach((action) => action());
+    _pendingActions = [];
   }
-  _pendingActions = [];
 };
 
-const navigate = performWhenReady((routeName, params) => {
-  _navigator.dispatch(
-    NavigationActions.navigate({
-      routeName,
-      params,
-    })
-  );
+const setIsReady = () => {
+  _ready = true;
+  if (_pendingActions.length > 0 && _navigator) {
+    _pendingActions.forEach((action) => action());
+    _pendingActions = [];
+  }
+};
+
+const navigate = performWhenReady((...args) => {
+  _navigator.navigate(...args);
 });
 
 const dispatch = (...args) => {
@@ -35,34 +39,18 @@ const dispatch = (...args) => {
 };
 
 const resetToAuth = performWhenReady(() => {
-  _navigator.dispatch(
-    StackActions.reset({
-      index: 0,
-      key: null,
-      actions: [
-        NavigationActions.navigate({
-          routeName: 'Auth',
-          action: NavigationActions.navigate({
-            routeName: 'AuthSMSPhoneEntryConnected',
-          }),
-        }),
-      ],
-    })
-  );
+  _navigator.reset({
+    index: 0,
+    routes: [
+      { name: 'Auth', params: { screen: 'AuthSMSPhoneEntryConnected' } },
+    ],
+  });
 });
 
 const resetAction = ({ navigatorName, routeName }) =>
-  StackActions.reset({
+  CommonActions.reset({
     index: 0,
-    key: null,
-    actions: [
-      NavigationActions.navigate({
-        routeName: navigatorName,
-        action: NavigationActions.navigate({
-          routeName,
-        }),
-      }),
-    ],
+    routes: [{ name: navigatorName, params: { screen: routeName } }],
   });
 
 const goBack = performWhenReady((from) => {
@@ -71,7 +59,7 @@ const goBack = performWhenReady((from) => {
     const route = _navigator.state.nav.routes.find((r) => r.routeName === from);
     if (route) ({ key } = route);
   }
-  _navigator.dispatch(NavigationActions.back({ key }));
+  _navigator.dispatch(CommonActions.back({ key }));
 });
 
 export default {
@@ -82,4 +70,5 @@ export default {
   resetToAuth,
   resetAction,
   getNavigator,
+  setIsReady,
 };

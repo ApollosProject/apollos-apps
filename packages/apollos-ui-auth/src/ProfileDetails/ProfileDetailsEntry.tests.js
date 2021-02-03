@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 import { View } from 'react-native';
-import { Providers } from '../testUtils';
+import { Providers } from '@apollosproject/ui-test-utils';
 
 import ProfileDetailsEntry from './ProfileDetailsEntry';
 

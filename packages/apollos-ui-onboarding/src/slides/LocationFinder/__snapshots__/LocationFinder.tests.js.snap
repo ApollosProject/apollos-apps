@@ -16,13 +16,7 @@ Array [
     }
   >
     <View>
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
+      <View
         style={
           Object {
             "flex": 1,
@@ -111,7 +105,7 @@ Array [
             </Text>
           </View>
         </View>
-      </RCTSafeAreaView>
+      </View>
     </View>
   </RCTScrollView>,
   <View
@@ -131,15 +125,7 @@ Array [
     }
     vertical={false}
   >
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-          "top": "never",
-        }
-      }
-    >
+    <View>
       <Text
         onPress={[MockFunction]}
         style={
@@ -153,7 +139,7 @@ Array [
       >
         Later
       </Text>
-    </RCTSafeAreaView>
+    </View>
   </View>,
 ]
 `;
@@ -173,13 +159,7 @@ exports[`The Onboarding LocationFinder component should render 1`] = `
   }
 >
   <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
+    <View
       style={
         Object {
           "flex": 1,
@@ -268,7 +248,7 @@ exports[`The Onboarding LocationFinder component should render 1`] = `
           </Text>
         </View>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>
 </RCTScrollView>
 `;
@@ -319,13 +299,7 @@ exports[`The Onboarding LocationFinder component should render a BackgroundCompo
         }
       />
     </View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
+    <View
       style={
         Object {
           "flex": 1,
@@ -414,7 +388,7 @@ exports[`The Onboarding LocationFinder component should render a BackgroundCompo
           </Text>
         </View>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>
 </RCTScrollView>
 `;
@@ -434,13 +408,7 @@ exports[`The Onboarding LocationFinder component should render a button with cus
   }
 >
   <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
+    <View
       style={
         Object {
           "flex": 1,
@@ -496,8 +464,7 @@ exports[`The Onboarding LocationFinder component should render a button with cus
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -547,7 +514,7 @@ exports[`The Onboarding LocationFinder component should render a button with cus
           </View>
         </View>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>
 </RCTScrollView>
 `;
@@ -567,13 +534,7 @@ exports[`The Onboarding LocationFinder component should render a custom descript
   }
 >
   <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
+    <View
       style={
         Object {
           "flex": 1,
@@ -662,7 +623,7 @@ exports[`The Onboarding LocationFinder component should render a custom descript
           </Text>
         </View>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>
 </RCTScrollView>
 `;
@@ -682,13 +643,7 @@ exports[`The Onboarding LocationFinder component should render a custom title 1`
   }
 >
   <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
+    <View
       style={
         Object {
           "flex": 1,
@@ -777,7 +732,7 @@ exports[`The Onboarding LocationFinder component should render a custom title 1`
           </Text>
         </View>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>
 </RCTScrollView>
 `;
@@ -798,13 +753,7 @@ Array [
     }
   >
     <View>
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
+      <View
         style={
           Object {
             "flex": 1,
@@ -851,8 +800,7 @@ Array [
         </View>
         <View
           accessible={true}
-          clickable={false}
-          isTVSelectable={true}
+          focusable={false}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -975,7 +923,7 @@ South Barrington, IL 60010-6143
             </View>
           </View>
         </View>
-      </RCTSafeAreaView>
+      </View>
     </View>
   </RCTScrollView>,
   <View
@@ -995,19 +943,10 @@ South Barrington, IL 60010-6143
     }
     vertical={false}
   >
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-          "top": "never",
-        }
-      }
-    >
+    <View>
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1174,7 +1113,7 @@ South Barrington, IL 60010-6143
           </RNSVGSvgView>
         </View>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>,
 ]
 `;
@@ -1194,13 +1133,7 @@ exports[`The Onboarding LocationFinder component should render with a button 1`]
   }
 >
   <View>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
+    <View
       style={
         Object {
           "flex": 1,
@@ -1256,8 +1189,7 @@ exports[`The Onboarding LocationFinder component should render with a button 1`]
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1307,7 +1239,7 @@ exports[`The Onboarding LocationFinder component should render with a button 1`]
           </View>
         </View>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>
 </RCTScrollView>
 `;

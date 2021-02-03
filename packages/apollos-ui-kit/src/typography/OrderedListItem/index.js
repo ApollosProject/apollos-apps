@@ -6,10 +6,7 @@ import { View } from 'react-native';
 import styled from '../../styled';
 import BodyText from '../BodyText';
 
-const enhance = compose(
-  setDisplayName('OrderedListItem'),
-  pure
-);
+const enhance = compose(setDisplayName('OrderedListItem'), pure);
 
 const Wrapper = styled(
   ({ theme }) => ({

@@ -1,6 +1,6 @@
 // Provider API for WebBrowser that injects theme values and defaults to the web browser:
 import { Platform } from 'react-native';
-import { withApollo } from 'react-apollo';
+import { withApollo } from '@apollo/client/react/hoc';
 
 import { withTheme } from '@apollosproject/ui-kit';
 

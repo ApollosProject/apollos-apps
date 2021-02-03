@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
-import { ApolloStorybookDecorator } from '@apollosproject/ui-connected/src/testUtils';
+import { ApolloStorybookDecorator } from '@apollosproject/ui-test-utils';
 
 import MapViewConnected from '.';
 
@@ -73,7 +73,6 @@ const mocks = {
 };
 
 const navigation = {
-  getParam: () => {},
   navigate: () => {},
   goBack: () => {},
 };

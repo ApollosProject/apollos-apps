@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { Providers } from '../testUtils';
+import { Providers } from '@apollosproject/ui-test-utils';
 
 import Verification from './Verification';
 

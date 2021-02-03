@@ -193,9 +193,9 @@ class AvatarCloud extends PureComponent {
           i,
           size,
         })}
-        key={`${
-          typeof avatars[i] === 'string' ? avatars[i] : avatars[i].uri
-        }${avatars[i].id || i}`}
+        key={`${typeof avatars[i] === 'string' ? avatars[i] : avatars[i].uri}${
+          avatars[i].id || i
+        }`}
         order={Math.floor(Math.abs(Math.sin(i * this.seed)) * 10)} // order = zIndex == higher index === "closer two the viewer/higher layer"
       >
         <RandomAvatar

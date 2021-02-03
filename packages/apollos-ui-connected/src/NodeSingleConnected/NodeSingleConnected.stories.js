@@ -3,7 +3,10 @@ import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { times } from 'lodash';
 import { BackgroundView, CenteredView } from '@apollosproject/ui-kit';
-import { ApolloStorybookDecorator, WithReactNavigator } from '../testUtils';
+import {
+  ApolloStorybookDecorator,
+  WithReactNavigator,
+} from '@apollosproject/ui-test-utils';
 import NodeSingleConnected from './index';
 
 const devoMock = (root, { id }) => ({
@@ -94,12 +97,16 @@ const nodeMock = (root, args) => ({
     ? {
         videos: [
           {
-            sources: [
-              {
-                uri:
-                  'http://embed.wistia.com/deliveries/0e364f7e6f6604384ece8a35905a53a864386e9f.bin',
-              },
-            ],
+            sources:
+              args.id === 'MediaContentItem:123'
+                ? [
+                    {
+                      uri:
+                        'http://embed.wistia.com/deliveries/0e364f7e6f6604384ece8a35905a53a864386e9f.bin',
+                      __typename: 'ImageMediaSource',
+                    },
+                  ]
+                : [],
           },
         ],
       }
@@ -173,6 +180,9 @@ storiesOf('ui-connected/NodeSingleConnected', module)
   ))
   .add('with media', () => (
     <NodeSingleConnected nodeId={'MediaContentItem:123'} />
+  ))
+  .add('with no media', () => (
+    <NodeSingleConnected nodeId={'MediaContentItem:456'} />
   ))
   .add('with children', () => (
     <NodeSingleConnected nodeId={'ContentSeriesContentItem:123'} />

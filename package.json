@@ -6,8 +6,6 @@
       "packages/*"
     ],
     "nohoist": [
-      "**/react-native",
-      "**/react-native-svg"
     ]
   },
   "scripts": {
@@ -24,7 +22,7 @@
     "release:next": "lerna publish --conventional-commits --canary premajor --dist-tag next --force-publish",
     "prepublishOnly": "lerna run build && lerna run generate-stories",
     "nuke": "./scripts/boom.sh && yarn nuke:node && yarn nuke:cache",
-    "nuke:node": "rm -rdf ./node_modules packages/*/node_modules && yarn cache clean && yarn",
+    "nuke:node": "rm -rdf ./node_modules packages/*/node_modules && yarn",
     "nuke:cache": "watchman watch-del-all",
     "postinstall": "lerna run build --parallel",
     "generate-docs": "lerna run generate-docs",
@@ -41,14 +39,13 @@
     "@babel/parser": "7.1.6",
     "@babel/runtime": "^7.4.4",
     "apollo": "^1.9.2",
-    "apollo-client": "2.5.1",
     "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "^24.8.0",
+    "babel-jest": "^25.1.0",
     "chokidar": "^3.0.1",
     "codecov": "3.7.1",
     "lerna": "^3.14.0",
-    "prettier": "^1.14.2",
-    "react-apollo": "2.5.5",
+    "prettier": "^2.1.2",
+    "eslint-plugin-prettier": "^3.1.4",
     "react-native-storybook-loader": "^1.8.0",
     "yalc": "^1.0.0-pre.35"
   }

@@ -8,10 +8,7 @@ const { ROCK_MAPPINGS } = ApollosConfig;
 export default class ContentChannel extends RockApolloDataSource {
   resource = 'ContentChannels';
 
-  all = () =>
-    this.request()
-      .expand('ChildContentChannels')
-      .get();
+  all = () => this.request().expand('ChildContentChannels').get();
 
   getRootChannels = async () => {
     const channels = await this.request()
@@ -44,8 +41,5 @@ export default class ContentChannel extends RockApolloDataSource {
   };
 
   getFromId = (id) =>
-    this.request()
-      .filter(`Id eq ${id}`)
-      .expand('ChildContentChannels')
-      .first();
+    this.request().filter(`Id eq ${id}`).expand('ChildContentChannels').first();
 }

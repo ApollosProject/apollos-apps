@@ -1,7 +1,7 @@
 import React from 'react';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
-import { withNavigation } from 'react-navigation';
+import { withNavigation } from '@react-navigation/compat';
 
 import HorizontalFeedConnected from '../HorizontalFeedConnected';
 

@@ -1,7 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { Providers } from '../../testUtils';
+import { Providers } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 
 import HorizontalLikedContentFeed from '.';
 
@@ -52,7 +53,7 @@ describe('HorizontalLikedContentFeed', () => {
     };
 
     const tree = renderer.create(
-      <Providers>
+      <Providers MockedProvider={MockedProvider}>
         <HorizontalLikedContentFeed {...props} />
       </Providers>
     );
@@ -103,7 +104,7 @@ describe('HorizontalLikedContentFeed', () => {
     };
 
     const tree = renderer.create(
-      <Providers>
+      <Providers MockedProvider={MockedProvider}>
         <HorizontalLikedContentFeed {...props} />
       </Providers>
     );

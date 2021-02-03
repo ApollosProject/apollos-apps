@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
-import { ApolloConsumer } from 'react-apollo';
+import { ApolloConsumer } from '@apollo/client';
 
 import { PaddedView, styled } from '@apollosproject/ui-kit';
 

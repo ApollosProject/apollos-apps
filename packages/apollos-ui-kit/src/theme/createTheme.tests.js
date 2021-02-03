@@ -46,6 +46,12 @@ describe('createTheme', () => {
     const theme = createTheme({ type: 'dark' });
     expect(theme).toMatchSnapshot();
   });
+  it('allows all caps theme names', () => {
+    const darkTheme = createTheme({ type: 'dark' });
+    const DARKTheme = createTheme({ type: 'DARK' });
+
+    expect(JSON.stringify(DARKTheme)).toEqual(JSON.stringify(darkTheme));
+  });
   it('throws an error for an unsupported theme type', () => {
     const theme = () => createTheme({ type: 'Boom' });
     expect(theme).toThrowErrorMatchingSnapshot();

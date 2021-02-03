@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/data-schema",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "1.8.0-beta.0",
+  "version": "2.0.0-2.0.0-alpha.16.0",
   "main": "lib/index.js",
   "scripts": {
     "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
@@ -10,6 +10,11 @@
   },
   "jest": {
     "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "lcovonly",
+      "clover"
+    ],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
     ],
@@ -23,8 +28,8 @@
     "graphql-tag": "^2.10.0"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^1.8.0-beta.0",
-    "jest": "^23.6.0"
+    "@apollosproject/babel-preset-apollos": "^2.0.0-2.0.0-alpha.16.0",
+    "jest": "^25.1.0"
   },
   "peerDependencies": {
     "@apollosproject/config": "*"

@@ -1,4 +1,4 @@
-import { onError } from 'apollo-link-error';
+import { onError } from '@apollo/client/link/error';
 import AsyncStorage from '@react-native-community/async-storage';
 
 export default (onAuthError) =>

@@ -1,7 +1,8 @@
 {
   "name": "@apollosproject/ui-kit",
+  "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "1.8.0-beta.0",
+  "version": "2.0.0-2.0.0-alpha.16.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -21,23 +22,19 @@
   "jest": {
     "preset": "react-native",
     "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "lcovonly",
+      "clover"
+    ],
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@react-native-community))"
+      "node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|@react-navigation/native|@react-native))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
     ],
     "modulePaths": [
       "<rootDir>/src/"
-    ],
-    "reporters": [
-      "<rootDir>/../../scripts/fingers-crossed-reporter.js"
-    ],
-    "modulePathIgnorePatterns": [
-      "<rootDir>/node_modules/react-native-svg",
-      "<rootDir>/node_modules/@storybook/react-native",
-      "<rootDir>/node_modules/apollos-ui-htmlview/react-native",
-      "<rootDir>/node_modules/react-navigation"
     ],
     "setupFiles": [
       "./jest.setup.js"
@@ -46,7 +43,9 @@
   "peerDependencies": {
     "@apollosproject/storybook": "*",
     "@apollosproject/ui-media-player": "*",
-    "@react-native-community/datetimepicker": "^3.0.2",
+    "@react-native-community/datetimepicker": "*",
+    "@react-native-picker/picker": "*",
+    "@react-navigation/native": "*",
     "react": "*",
     "react-native": "*",
     "react-native-gesture-handler": "*",
@@ -61,6 +60,7 @@
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "numeral": "^2.0.6",
+    "react-native-appearance": "^0.3.4",
     "react-native-modal-datetime-picker": "8.7.1",
     "react-native-tab-view": "1.0.2",
     "recompose": "^0.30.0",
@@ -68,17 +68,19 @@
   },
   "devDependencies": {
     "@react-native-community/datetimepicker": "3.0.2",
-    "jest": "24.8.0",
+    "@react-native-picker/picker": "^1.9.3",
+    "@react-navigation/native": "^5.6.1",
+    "jest": "^25.1.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
-    "react": "16.8.6",
+    "react": "16.13.1",
     "react-docgen": "^4.1.0",
-    "react-native": "0.60.5",
+    "react-native": "0.63.2",
+    "react-native-gesture-handler": "^1.3.0",
     "react-native-linear-gradient": "2.5.4",
-    "react-native-safe-area-context": "^0.3.6",
+    "react-native-safe-area-context": "^3.0.7",
     "react-native-svg": "9.4.0",
-    "react-navigation": "^3.11.0",
-    "react-test-renderer": "16.8.6"
+    "react-test-renderer": "16.13.1"
   },
   "publishConfig": {
     "access": "public"

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
-import { withNavigation } from 'react-navigation';
-import { Query } from 'react-apollo';
+import { withNavigation } from '@react-navigation/compat';
+import { Query } from '@apollo/client/react/components';
 
 import { HorizontalTileFeed, TouchableScale } from '@apollosproject/ui-kit';
 

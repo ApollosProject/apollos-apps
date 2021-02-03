@@ -1,5 +1,6 @@
 import React from 'react';
-import { Providers, renderWithApolloData } from '../testUtils';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 
 import GET_FEATURE_FEED from '../FeaturesFeedConnected/getFeatureFeed';
 import GET_NODE_FEED from './getNodeFeatures';
@@ -118,17 +119,14 @@ describe('ContentSingleFeaturesConnected', () => {
         },
       },
     };
-    const initalTree = await renderWithApolloData(
-      <Providers mocks={[nodeMock, feedMock]}>
+    const tree = await renderWithApolloData(
+      <Providers
+        mocks={[nodeMock, nodeMock, feedMock]}
+        MockedProvider={MockedProvider}
+      >
         <NodeFeaturesConnected nodeId={'WeekendContentItem:123'} />
       </Providers>
     );
-    const finalTree = await renderWithApolloData(
-      <Providers mocks={[nodeMock, feedMock]}>
-        <NodeFeaturesConnected nodeId={'WeekendContentItem:123'} />
-      </Providers>,
-      initalTree
-    );
-    expect(finalTree).toMatchSnapshot();
+    expect(tree).toMatchSnapshot();
   });
 });

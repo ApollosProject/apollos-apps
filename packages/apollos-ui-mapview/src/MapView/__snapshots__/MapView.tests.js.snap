@@ -9,16 +9,10 @@ exports[`<MapView> should render 1`] = `
   }
 >
   <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
     style={
       Object {
         "bottom": 0,
         "left": 0,
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 20,
         "position": "absolute",
         "right": 0,
       }
@@ -31,6 +25,7 @@ exports[`<MapView> should render 1`] = `
         }
       }
       decelerationRate="fast"
+      forwardedRef={[Function]}
       horizontal={true}
       onScroll={[Function]}
       scrollEventThrottle={16}
@@ -41,8 +36,7 @@ exports[`<MapView> should render 1`] = `
       <View>
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -170,8 +164,7 @@ Richardson, TX 75080-5525
         </View>
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -332,8 +325,7 @@ Cincinnati, OH 45202-2118
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -396,16 +388,10 @@ exports[`<MapView> should render with a custom buttonTitle 1`] = `
   }
 >
   <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
     style={
       Object {
         "bottom": 0,
         "left": 0,
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 20,
         "position": "absolute",
         "right": 0,
       }
@@ -418,6 +404,7 @@ exports[`<MapView> should render with a custom buttonTitle 1`] = `
         }
       }
       decelerationRate="fast"
+      forwardedRef={[Function]}
       horizontal={true}
       onScroll={[Function]}
       scrollEventThrottle={16}
@@ -428,8 +415,7 @@ exports[`<MapView> should render with a custom buttonTitle 1`] = `
       <View>
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -557,8 +543,7 @@ Richardson, TX 75080-5525
         </View>
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -719,8 +704,7 @@ Cincinnati, OH 45202-2118
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -783,16 +767,10 @@ exports[`<MapView> should render with a digital campus 1`] = `
   }
 >
   <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
     style={
       Object {
         "bottom": 0,
         "left": 0,
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 20,
         "position": "absolute",
         "right": 0,
       }
@@ -805,6 +783,7 @@ exports[`<MapView> should render with a digital campus 1`] = `
         }
       }
       decelerationRate="fast"
+      forwardedRef={[Function]}
       horizontal={true}
       onScroll={[Function]}
       scrollEventThrottle={16}
@@ -815,8 +794,7 @@ exports[`<MapView> should render with a digital campus 1`] = `
       <View>
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -944,8 +922,7 @@ Richardson, TX 75080-5525
         </View>
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1096,8 +1073,7 @@ Cincinnati, OH 45202-2118
         </View>
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1235,8 +1211,7 @@ Digital Campus,
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}

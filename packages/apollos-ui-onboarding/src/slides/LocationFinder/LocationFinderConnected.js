@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 import { AnalyticsConsumer } from '@apollosproject/ui-analytics';
 import { hasLocationPermission } from '@apollosproject/ui-mapview';
 import GET_USER_CAMPUS from './getUserCampus';
@@ -19,36 +19,38 @@ class LocationFinderConnected extends PureComponent {
       <Query query={GET_USER_CAMPUS} fetchPolicy="cache-and-network">
         {({
           data: { currentUser: { profile: { campus } = {} } = {} } = {},
-        }) => (
-          <AnalyticsConsumer>
-            {({ track }) => {
-              const { onPressPrimary, ...otherProps } = this.props;
-              const showNextBtn = !!(campus && this.state.locationPermission);
+        }) => {
+          return (
+            <AnalyticsConsumer>
+              {({ track }) => {
+                const { onPressPrimary, ...otherProps } = this.props;
+                const showNextBtn = !!(campus && this.state.locationPermission);
 
-              const { Component: MapViewComponent } = this.props;
+                const { Component: MapViewComponent } = this.props;
 
-              return (
-                <MapViewComponent
-                  onPressButton={async () => {
-                    await this.checkPermission();
-                    this.props.onNavigate();
+                return (
+                  <MapViewComponent
+                    onPressButton={async () => {
+                      await this.checkPermission();
+                      this.props.onNavigate();
 
-                    track({ eventName: 'LocationFinder Opened MapView' });
-                  }}
-                  // next button
-                  onPressPrimary={showNextBtn ? onPressPrimary : null}
-                  // skip button
-                  onPressSecondary={!showNextBtn ? onPressPrimary : null}
-                  pressPrimaryEventName={'Ask Location Completed'}
-                  pressSecondaryEventName={'Ask Location Skipped'}
-                  buttonText={'Yes, find my local campus'}
-                  campus={campus}
-                  {...otherProps}
-                />
-              );
-            }}
-          </AnalyticsConsumer>
-        )}
+                      track({ eventName: 'LocationFinder Opened MapView' });
+                    }}
+                    // next button
+                    onPressPrimary={showNextBtn ? onPressPrimary : null}
+                    // skip button
+                    onPressSecondary={!showNextBtn ? onPressPrimary : null}
+                    pressPrimaryEventName={'Ask Location Completed'}
+                    pressSecondaryEventName={'Ask Location Skipped'}
+                    buttonText={'Yes, find my local campus'}
+                    campus={campus}
+                    {...otherProps}
+                  />
+                );
+              }}
+            </AnalyticsConsumer>
+          );
+        }}
       </Query>
     );
   }

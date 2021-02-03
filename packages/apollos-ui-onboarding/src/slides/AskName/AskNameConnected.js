@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { Query, Mutation } from 'react-apollo';
+import { Query, Mutation } from '@apollo/client/react/components';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import PropTypes from 'prop-types';

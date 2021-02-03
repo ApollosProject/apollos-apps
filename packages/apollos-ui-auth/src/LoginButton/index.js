@@ -1,5 +1,5 @@
 import React from 'react';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 
 import { Button } from '@apollosproject/ui-kit';
 
@@ -8,8 +8,11 @@ import { AuthConsumer } from '../Provider';
 
 const LoginButton = (props) => (
   <Query query={GET_LOGIN_STATE}>
-    {({ data }) => {
-      const { isLoggedIn, loading } = data;
+    {({ data, loading }) => {
+      if (loading) {
+        return <Button title="Get Connected" loading={loading} {...props} />;
+      }
+      const { isLoggedIn } = data;
       if (isLoggedIn) return null;
       return (
         <AuthConsumer>

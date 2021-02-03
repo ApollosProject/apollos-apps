@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 import { ActivityIndicator } from 'react-native';
 import { CenteredView } from '@apollosproject/ui-kit';
 import PropTypes from 'prop-types';

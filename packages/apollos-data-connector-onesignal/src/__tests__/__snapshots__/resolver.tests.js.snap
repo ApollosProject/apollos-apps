@@ -23,7 +23,7 @@ exports[`OneSignal updates an external push id with a valid user 2`] = `
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
   ],
@@ -40,7 +40,7 @@ exports[`OneSignal updates an external push id with a valid user 3`] = `
   ],
   "results": Array [
     Object {
-      "isThrow": false,
+      "type": "return",
       "value": undefined,
     },
   ],

@@ -16,15 +16,9 @@ exports[`The onboarding swiper should render with a fragment as a child 1`] = `
 >
   <RCTScrollView
     activeDot={
-      <ForwardRef(_SafeAreaView)
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
-      >
+      <View>
         <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
-      </ForwardRef(_SafeAreaView)>
+      </View>
     }
     automaticallyAdjustContentInsets={false}
     autoplay={false}
@@ -45,22 +39,11 @@ exports[`The onboarding swiper should render with a fragment as a child 1`] = `
       }
     }
     disableNextButton={false}
+    disablePrevButton={false}
     dot={
-      <ForwardRef(_SafeAreaView)
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
-      >
-        <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
-        />
-      </ForwardRef(_SafeAreaView)>
+      <View>
+        <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+      </View>
     }
     horizontal={true}
     index={0}
@@ -95,8 +78,7 @@ exports[`The onboarding swiper should render with a fragment as a child 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -130,8 +112,7 @@ exports[`The onboarding swiper should render with a fragment as a child 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -189,14 +170,7 @@ exports[`The onboarding swiper should render with a fragment as a child 1`] = `
       ]
     }
   >
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
-    >
+    <View>
       <View
         style={
           Object {
@@ -208,21 +182,9 @@ exports[`The onboarding swiper should render with a fragment as a child 1`] = `
           }
         }
       />
-    </RCTSafeAreaView>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
-    >
+    </View>
+    <View>
       <View
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
         style={
           Object {
             "backgroundColor": "#A5A5A5",
@@ -233,21 +195,9 @@ exports[`The onboarding swiper should render with a fragment as a child 1`] = `
           }
         }
       />
-    </RCTSafeAreaView>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
-    >
+    </View>
+    <View>
       <View
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
         style={
           Object {
             "backgroundColor": "#A5A5A5",
@@ -258,7 +208,7 @@ exports[`The onboarding swiper should render with a fragment as a child 1`] = `
           }
         }
       />
-    </RCTSafeAreaView>
+    </View>
   </View>
 </View>
 `;
@@ -279,15 +229,9 @@ exports[`The onboarding swiper should render with an array as a child 1`] = `
 >
   <RCTScrollView
     activeDot={
-      <ForwardRef(_SafeAreaView)
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
-      >
+      <View>
         <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
-      </ForwardRef(_SafeAreaView)>
+      </View>
     }
     automaticallyAdjustContentInsets={false}
     autoplay={false}
@@ -308,22 +252,11 @@ exports[`The onboarding swiper should render with an array as a child 1`] = `
       }
     }
     disableNextButton={false}
+    disablePrevButton={false}
     dot={
-      <ForwardRef(_SafeAreaView)
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
-      >
-        <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
-        />
-      </ForwardRef(_SafeAreaView)>
+      <View>
+        <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+      </View>
     }
     horizontal={true}
     index={0}
@@ -358,8 +291,7 @@ exports[`The onboarding swiper should render with an array as a child 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -393,8 +325,7 @@ exports[`The onboarding swiper should render with an array as a child 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -452,14 +383,7 @@ exports[`The onboarding swiper should render with an array as a child 1`] = `
       ]
     }
   >
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
-    >
+    <View>
       <View
         style={
           Object {
@@ -471,21 +395,9 @@ exports[`The onboarding swiper should render with an array as a child 1`] = `
           }
         }
       />
-    </RCTSafeAreaView>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
-    >
+    </View>
+    <View>
       <View
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
         style={
           Object {
             "backgroundColor": "#A5A5A5",
@@ -496,21 +408,9 @@ exports[`The onboarding swiper should render with an array as a child 1`] = `
           }
         }
       />
-    </RCTSafeAreaView>
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-        }
-      }
-    >
+    </View>
+    <View>
       <View
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
         style={
           Object {
             "backgroundColor": "#A5A5A5",
@@ -521,7 +421,7 @@ exports[`The onboarding swiper should render with an array as a child 1`] = `
           }
         }
       />
-    </RCTSafeAreaView>
+    </View>
   </View>
 </View>
 `;

@@ -10,8 +10,7 @@ exports[`The DateInput component should render 1`] = `
 >
   <View
     accessible={true}
-    clickable={true}
-    isTVSelectable={true}
+    focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -58,7 +57,7 @@ exports[`The DateInput component should render 1`] = `
   >
     <View
       accessible={true}
-      clickable={true}
+      focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -94,8 +93,7 @@ exports[`The DateInput component should render with a displayValue 1`] = `
 >
   <View
     accessible={true}
-    clickable={true}
-    isTVSelectable={true}
+    focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -158,7 +156,7 @@ exports[`The DateInput component should render with a displayValue 1`] = `
   >
     <View
       accessible={true}
-      clickable={true}
+      focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -231,8 +229,7 @@ exports[`The DateInput component should render with a label 1`] = `
 >
   <View
     accessible={true}
-    clickable={true}
-    isTVSelectable={true}
+    focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -295,7 +292,7 @@ exports[`The DateInput component should render with a label 1`] = `
   >
     <View
       accessible={true}
-      clickable={true}
+      focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -370,8 +367,7 @@ exports[`The DateInput component should render with a placeholder 1`] = `
 >
   <View
     accessible={true}
-    clickable={true}
-    isTVSelectable={true}
+    focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -434,7 +430,7 @@ exports[`The DateInput component should render with a placeholder 1`] = `
   >
     <View
       accessible={true}
-      clickable={true}
+      focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -507,8 +503,7 @@ exports[`The DateInput component should render with an error 1`] = `
 >
   <View
     accessible={true}
-    clickable={true}
-    isTVSelectable={true}
+    focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -555,7 +550,7 @@ exports[`The DateInput component should render with an error 1`] = `
   >
     <View
       accessible={true}
-      clickable={true}
+      focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -604,8 +599,7 @@ exports[`The DateInput component should render without a maximum date 1`] = `
 >
   <View
     accessible={true}
-    clickable={true}
-    isTVSelectable={true}
+    focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -668,7 +662,7 @@ exports[`The DateInput component should render without a maximum date 1`] = `
   >
     <View
       accessible={true}
-      clickable={true}
+      focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}

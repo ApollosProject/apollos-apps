@@ -1,11 +1,10 @@
 import { Platform } from 'react-native';
 import { createUploadLink } from 'apollo-upload-client';
 import ApollosConfig from '@apollosproject/config';
-import { split } from 'apollo-link';
-import { createHttpLink } from 'apollo-link-http';
-import { getMainDefinition } from 'apollo-utilities';
+import { split, createHttpLink } from '@apollo/client';
+import { getMainDefinition } from '@apollo/client/utilities';
 
-let uri = ApollosConfig.APP_DATA_URL;
+let uri = ApollosConfig.APP_DATA_URL || 'http://localhost:4000/graphql';
 const androidUri = ApollosConfig.ANDROID_URL || '10.0.2.2';
 
 // Android's emulator requires localhost network traffic to go through 10.0.2.2

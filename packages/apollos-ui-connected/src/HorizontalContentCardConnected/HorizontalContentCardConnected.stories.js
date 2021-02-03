@@ -10,7 +10,7 @@ import {
   ThemeMixin,
 } from '@apollosproject/ui-kit';
 import gql from 'graphql-tag';
-import { ApolloStorybookDecorator } from '../testUtils';
+import { ApolloStorybookDecorator } from '@apollosproject/ui-test-utils';
 
 import HorizontalContentCardConnected from './HorizontalContentCardConnected';
 

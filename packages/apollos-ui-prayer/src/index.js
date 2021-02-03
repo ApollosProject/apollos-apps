@@ -1,3 +1,5 @@
+export { PrayerScreen } from './screens';
+
 export PrayerCard from './PrayerCard';
 export PrayerFeature from './PrayerFeature';
 export PrayerInput from './PrayerInput';

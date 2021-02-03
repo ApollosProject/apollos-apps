@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 import HTMLView from '@apollosproject/ui-htmlview';
-import { ErrorCard } from '@apollosproject/ui-kit';
+import { ErrorCard, named } from '@apollosproject/ui-kit';
 
 import safeOpenUrl from '../safeOpenUrl';
 import GET_CONTENT_ITEM_CONTENT from './getContentItemContent';
@@ -46,4 +46,6 @@ ContentHTMLViewConnected.defaultProps = {
   onPressAnchor: safeOpenUrl,
 };
 
-export default ContentHTMLViewConnected;
+export default named('ui-connected.ContentHTMLViewConnected')(
+  ContentHTMLViewConnected
+);

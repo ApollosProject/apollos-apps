@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/data-connector-analytics",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "1.8.0-beta.0",
+  "version": "2.0.0-2.0.0-alpha.16.0",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
@@ -10,6 +10,11 @@
   },
   "jest": {
     "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "lcovonly",
+      "clover"
+    ],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
     ],
@@ -17,10 +22,7 @@
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
     ],
-    "testEnvironment": "node",
-    "reporters": [
-      "<rootDir>/../../scripts/fingers-crossed-reporter.js"
-    ]
+    "testEnvironment": "node"
   },
   "dependencies": {
     "analytics-node": "^3.4.0-beta.1",
@@ -34,7 +36,7 @@
     "apollo-server": "^2.11.0"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^1.8.0-beta.0"
+    "@apollosproject/babel-preset-apollos": "^2.0.0-2.0.0-alpha.16.0"
   },
   "publishConfig": {
     "access": "public"

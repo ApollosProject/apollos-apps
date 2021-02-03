@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 import { get } from 'lodash';
 
 import { BackgroundView, FeedView } from '@apollosproject/ui-kit';
@@ -28,7 +28,6 @@ class LikedContentFeedConnected extends PureComponent {
      * items in the feed.
      */
     navigation: PropTypes.shape({
-      getParam: PropTypes.func,
       navigate: PropTypes.func,
     }),
   };

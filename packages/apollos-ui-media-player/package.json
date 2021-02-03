@@ -1,79 +1,134 @@
 {
   "name": "@apollosproject/ui-media-player",
+  "description": "An opinionated media player for react-native apps from The Apollos Project",
+  "main": "lib/commonjs/index",
+  "module": "lib/module/index",
+  "types": "lib/typescript/src/index.d.ts",
+  "react-native": "src/index",
+  "source": "src/index",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "1.8.0-beta.0",
-  "main": "src/index.js",
+  "version": "2.0.0-2.0.0-alpha.16.0",
   "files": [
-    "src/**",
+    "src",
+    "lib",
+    "android",
+    "ios",
+    "cpp",
+    "react-native-apollos-player.podspec",
+    "!lib/typescript/example",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
     "storybook/**"
   ],
   "scripts": {
-    "test": "jest --no-watchman",
-    "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
-    "lint": "eslint ./src --ext .js"
+    "test": "jest",
+    "typescript": "tsc --noEmit",
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "prepare": "bob build",
+    "build": "yarn prepare",
+    "generate-stories": "rnstl"
   },
   "keywords": [
-    "react-native-component",
-    "react-component",
-    "react-native"
+    "react-native",
+    "ios",
+    "android"
   ],
+  "author": "The Apollos Project <contact@apollos.app> (https://apollos.app)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apollosproject/apollos-apps/issues"
+  },
+  "homepage": "https://github.com/apollosproject/apollos-apps#readme",
+  "devDependencies": {
+    "@react-native-community/bob": "^0.16.2",
+    "@storybook/react-native": "5.2.4",
+    "@types/jest": "^26.0.15",
+    "@types/react": "^16.9.19",
+    "@types/react-native": "0.62.13",
+    "@types/react-native-video": "^5.0.3",
+    "@types/react-test-renderer": "16.8.3",
+    "jest": "^25.1.0",
+    "prettier": "^2.0.5",
+    "react": "16.13.1",
+    "react-native": "0.63.2",
+    "react-native-music-control": "^1.2.1",
+    "react-native-safe-area-context": "^3.0.7",
+    "react-native-video": "^5.1.0-alpha8",
+    "react-test-renderer": "16.13.1",
+    "typescript": "^3.8.3"
+  },
+  "peerDependencies": {
+    "@apollosproject/ui-kit": "*",
+    "react": "*",
+    "react-native": "*",
+    "react-native-music-control": "*",
+    "react-native-safe-area-context": "*",
+    "react-native-video": "*"
+  },
   "jest": {
     "preset": "react-native",
     "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "lcovonly",
+      "clover"
+    ],
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@apollosproject))"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
-    ],
-    "modulePaths": [
-      "<rootDir>/src/"
+      "../../node_modules/(?!((jest-)?react-native|rn-*|@react-native-picker|react-clone-referenced-element|react-navigation|@apollosproject))"
     ],
     "modulePathIgnorePatterns": [
+      "<rootDir>/example/node_modules",
+      "<rootDir>/lib/",
       "node_modules/@storybook/"
     ],
     "setupFiles": [
-      "./jest.setup.js"
+      "./jest.setup.js",
+      "../../node_modules/react-native-gesture-handler/jestSetup.js"
     ]
   },
-  "peerDependencies": {
-    "@apollosproject/react-native-airplay-btn": "*",
-    "@apollosproject/ui-kit": "*",
-    "apollo-client": "*",
-    "react": "*",
-    "react-apollo": "*",
-    "react-native": "*",
-    "react-native-linear-gradient": "*",
-    "react-native-music-control": "*",
-    "react-native-video": "*",
-    "react-native-video-controls": "*",
-    "react-navigation": "*"
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@react-native-community",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "quoteProps": "consistent",
+          "singleQuote": true,
+          "tabWidth": 2,
+          "trailingComma": "es5",
+          "useTabs": false
+        }
+      ]
+    }
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ],
+  "prettier": {
+    "quoteProps": "consistent",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false
+  },
+  "@react-native-community/bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
+    ]
   },
   "dependencies": {
-    "graphql-tag": "^2.10.1"
-  },
-  "devDependencies": {
-    "@apollosproject/react-native-airplay-btn": "^0.2.0",
-    "@storybook/react-native": "5.2.4",
-    "apollo-client": "2.6.8",
-    "jest": "24.8.0",
-    "jest-react-native": "18.0.0",
-    "prop-types": "15.6.1",
-    "react": "16.8.6",
-    "react-apollo": "2.5.5",
-    "react-native": "0.60.5",
-    "react-native-google-cast": "^3.3.0",
-    "react-native-linear-gradient": "2.5.3",
-    "react-native-music-control": "0.10.8",
-    "react-native-svg": "9.4.0",
-    "react-native-video": "5.0.0",
-    "react-native-video-controls": "2.2.3",
-    "react-navigation": "^3.11.0",
-    "react-test-renderer": "16.8.6"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "license": "SEE LICENSE IN LICENSE.md",
-  "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"
+    "@types/color": "^3.0.1",
+    "color": "^3.1.2",
+    "use-debounce": "5.1.0"
+  }
 }

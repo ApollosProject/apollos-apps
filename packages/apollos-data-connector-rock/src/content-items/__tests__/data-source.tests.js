@@ -28,7 +28,9 @@ ApollosConfig.loadJs({
 const RealDate = Date;
 
 function mockDate(isoDate) {
-  global.Date = class extends RealDate {
+  global.Date = class extends (
+    RealDate
+  ) {
     constructor() {
       return new RealDate(isoDate);
     }
@@ -295,7 +297,12 @@ describe('ContentItemsModel', () => {
       reference: 'john 3',
     }));
     dataSource.context = {
-      dataSources: { Feature: { createTextFeature, createScriptureFeature } },
+      dataSources: {
+        Feature: {
+          createTextFeature,
+          createScriptureFeature,
+        },
+      },
     };
     const result = dataSource.getFeatures({
       attributeValues: {
@@ -308,6 +315,42 @@ describe('ContentItemsModel', () => {
     expect(result).toMatchSnapshot();
     expect(createTextFeature.mock.calls).toMatchSnapshot();
     expect(createScriptureFeature.mock.calls).toMatchSnapshot();
+  });
+
+  it('returns comment features when a contentItem has a Comments field set to true', async () => {
+    const dataSource = new ContentItemsDataSource();
+    const createCommentListFeature = jest.fn(() => ({
+      id: 'CommentListFeature:123',
+      comments: [],
+      __typename: 'CommentListFeature',
+    }));
+    const createAddCommentFeature = jest.fn(() => ({
+      id: 'AddCommentFeature:123',
+      initialPrompt: 'Write Something...',
+      addPrompt: 'What stands out to you?',
+      __typename: 'AddCommentFeature',
+    }));
+    dataSource.context = {
+      dataSources: {
+        Feature: {
+          createCommentListFeature,
+          createAddCommentFeature,
+        },
+      },
+    };
+    const result = dataSource.getFeatures({
+      attributeValues: {
+        comments: {
+          id: 123,
+          value: 'True',
+        },
+      },
+      attributes: {},
+      id: 'ContentItem:123Test',
+    });
+    expect(result).toMatchSnapshot();
+    expect(createCommentListFeature.mock.calls).toMatchSnapshot();
+    expect(createAddCommentFeature.mock.calls).toMatchSnapshot();
   });
 
   it('returns a text feature when a contentItem has a TextFeature field', async () => {

@@ -5,6 +5,7 @@
 
 function loadStories() {
   require('./Avatar/Avatar.stories');
+  require('./AddCommentInput/AddCommentInput.stories');
   require('./Button/Button.stories');
   require('./Button/ButtonIcon/ButtonIcon.stories');
   require('./Button/ButtonLink.stories');
@@ -47,6 +48,7 @@ function loadStories() {
 
 const stories = [
   './Avatar/Avatar.stories',
+  './AddCommentInput/AddCommentInput.stories',
   './Button/Button.stories',
   './Button/ButtonIcon/ButtonIcon.stories',
   './Button/ButtonLink.stories',

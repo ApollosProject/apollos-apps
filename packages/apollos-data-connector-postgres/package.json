@@ -1,0 +1,51 @@
+{
+  "name": "@apollosproject/data-connector-postgres",
+  "repository": "git://github.com/apollosproject/apollos-apps.git",
+  "version": "2.0.0-2.0.0-alpha.16.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "TZ=UTC jest",
+    "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib -s",
+    "lint": "eslint ./src --ext .js"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "lcovonly",
+      "clover"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/src/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
+    ],
+    "setupFiles": [
+      "jest-date-mock"
+    ],
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "@apollosproject/data-schema": "^2.0.0-2.0.0-alpha.16.0",
+    "@apollosproject/server-core": "^2.0.0-2.0.0-alpha.16.0",
+    "lodash": "^4.17.11",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.5",
+    "sqlite3": "^5.0.0"
+  },
+  "peerDependencies": {
+    "@apollosproject/config": "*"
+  },
+  "devDependencies": {
+    "@apollosproject/babel-preset-apollos": "^2.0.0-2.0.0-alpha.16.0",
+    "jest": "^25.1.0",
+    "sequelize-mock": "^0.10.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "eb803583da83beeab7756baddcae3adca7650c39"
+}

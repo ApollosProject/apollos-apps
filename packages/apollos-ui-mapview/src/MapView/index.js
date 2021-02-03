@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import RNMapView from 'react-native-maps';
 import { Animated, Dimensions, Platform, PixelRatio } from 'react-native';
-import { SafeAreaView } from 'react-navigation';
 import { debounce, isNil } from 'lodash';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import {
   Button,
@@ -15,7 +15,6 @@ import {
   CampusCard,
   withIsLoading,
 } from '@apollosproject/ui-kit';
-import { MediaPlayerSpacer } from '@apollosproject/ui-media-player';
 
 import Marker from '../Marker';
 
@@ -306,21 +305,19 @@ class MapView extends Component {
               </Touchable>
             ))}
           </Animated.ScrollView>
-          <MediaPlayerSpacer>
-            <PaddedView>
-              <ConfirmButton
-                title={this.props.buttonTitle}
-                pill={false}
-                type={'secondary'}
-                onPress={() =>
-                  this.props.onLocationSelect(
-                    this.currentCampus || this.sortedCampuses[0]
-                  )
-                }
-                loading={this.props.isLoadingSelectedCampus}
-              />
-            </PaddedView>
-          </MediaPlayerSpacer>
+          <PaddedView>
+            <ConfirmButton
+              title={this.props.buttonTitle}
+              pill={false}
+              type={'secondary'}
+              onPress={() =>
+                this.props.onLocationSelect(
+                  this.currentCampus || this.sortedCampuses[0]
+                )
+              }
+              loading={this.props.isLoadingSelectedCampus}
+            />
+          </PaddedView>
         </Footer>
       </FlexedView>
     );

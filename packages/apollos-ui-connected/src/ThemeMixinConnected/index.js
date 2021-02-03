@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { get } from 'lodash';
 import { ThemeMixin } from '@apollosproject/ui-kit';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 import GET_NODE_THEME from './getNodeTheme';
 
 const ThemeMixinConnected = ({ nodeId, ...props }) => (

@@ -9,6 +9,7 @@ class ActionAlgorithm extends RockApolloDataSource {
     PERSONA_FEED: this.personaFeedAlgorithm,
     CONTENT_CHANNEL: this.contentChannelAlgorithm,
     SERMON_CHILDREN: this.sermonChildrenAlgorithm,
+    LATEST_SERIES_CHILDREN: this.latestSeriesChildrenAlgorithm,
     UPCOMING_EVENTS: this.upcomingEventsAlgorithm,
     CAMPAIGN_ITEMS: this.campaignItemsAlgorithm,
     SERIES_IN_PROGRESS: this.seriesInProgressAlgorithm,
@@ -60,11 +61,16 @@ class ActionAlgorithm extends RockApolloDataSource {
     );
   }
 
-  async dailyPrayerAlgorithm({ limit = 10, numberDaysSincePrayer } = {}) {
+  async dailyPrayerAlgorithm({
+    limit = 10,
+    numberDaysSincePrayer,
+    primaryAliasId,
+  } = {}) {
     const { PrayerRequest, Feature } = this.context.dataSources;
     Feature.setCacheHint({ maxAge: 0, scope: 'PRIVATE' });
     const cursor = await PrayerRequest.byDailyPrayerFeed({
       numberDaysSincePrayer,
+      primaryAliasId,
     });
     return cursor.top(limit).get();
   }
@@ -74,9 +80,7 @@ class ActionAlgorithm extends RockApolloDataSource {
     const { Event } = this.context.dataSources;
 
     // Get the first three persona items.
-    const events = await Event.findRecent()
-      .top(3)
-      .get();
+    const events = await Event.findRecent().top(3).get();
     // Map them into specific actions.
     return events.map((event, i) => ({
       id: `${event.id}${i}`,
@@ -146,9 +150,34 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
       return [];
     }
 
-    const cursor = (await ContentItem.getCursorByParentContentItemId(
-      sermon.id
-    )).expand('ContentChannel');
+    const cursor = (
+      await ContentItem.getCursorByParentContentItemId(sermon.id)
+    ).expand('ContentChannel');
+    const items = limit ? await cursor.top(limit).get() : await cursor.get();
+
+    return items.map((item, i) => ({
+      id: `${item.id}${i}`,
+      title: item.title,
+      subtitle: get(item, 'contentChannel.name'),
+      relatedNode: { ...item, __type: ContentItem.resolveType(item) },
+      image: ContentItem.getCoverImage(item),
+      action: 'READ_CONTENT',
+      summary: ContentItem.createSummary(item),
+    }));
+  }
+
+  async latestSeriesChildrenAlgorithm({ limit = null, channelId } = {}) {
+    const { ContentItem } = this.context.dataSources;
+
+    if (!channelId) return console.warn('Must provide channelId') || [];
+    const series = await ContentItem.byContentChannelId(channelId)
+      .andFilter(ContentItem.LIVE_CONTENT())
+      .first();
+    if (!series) return [];
+
+    const cursor = (
+      await ContentItem.getCursorByParentContentItemId(series.id)
+    ).expand('ContentChannel');
     const items = limit ? await cursor.top(limit).get() : await cursor.get();
 
     return items.map((item, i) => ({
@@ -204,9 +233,7 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
   async userFeedAlgorithm({ limit = 20 } = {}) {
     const { ContentItem } = this.context.dataSources;
 
-    const items = await ContentItem.byUserFeed()
-      .top(limit)
-      .get();
+    const items = await ContentItem.byUserFeed().top(limit).get();
 
     return items.map((item, i) => ({
       id: `${item.id}${i}`,
@@ -223,9 +250,11 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
     const { ContentItem, Feature } = this.context.dataSources;
     Feature.setCacheHint({ maxAge: 0, scope: 'PRIVATE' });
 
-    const items = await (await ContentItem.getSeriesWithUserProgress({
-      channelIds,
-    }))
+    const items = await (
+      await ContentItem.getSeriesWithUserProgress({
+        channelIds,
+      })
+    )
       .expand('ContentChannel')
       .top(limit)
       .get();

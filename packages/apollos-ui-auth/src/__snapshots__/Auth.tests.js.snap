@@ -3,94 +3,193 @@
 exports[`Auth Store logs a user out 1`] = `
 InMemoryCache {
   "addTypename": true,
-  "cacheKeyRoot": KeyTrie {
-    "weakness": true,
-  },
   "config": Object {
     "addTypename": true,
     "dataIdFromObject": [Function],
-    "fragmentMatcher": HeuristicFragmentMatcher {},
-    "freezeResults": false,
     "resultCaching": true,
+    "typePolicies": Object {},
   },
-  "data": DepTrackingCache {
+  "data": Root {
+    "canRead": [Function],
     "data": Object {
       "ROOT_QUERY": Object {
+        "__typename": "Query",
         "authToken": "some-auth-token",
       },
     },
-    "depend": [Function],
+    "getFieldValue": [Function],
+    "group": CacheGroup {
+      "caching": true,
+      "d": [Function],
+      "keyMaker": KeyTrie {
+        "makeData": [Function],
+        "weakness": true,
+      },
+    },
+    "policies": Policies {
+      "cache": [Circular],
+      "config": Object {
+        "cache": [Circular],
+        "dataIdFromObject": [Function],
+        "possibleTypes": undefined,
+        "typePolicies": Object {},
+      },
+      "fuzzySubtypes": Map {},
+      "rootIdsByTypename": Object {
+        "Mutation": "ROOT_MUTATION",
+        "Query": "ROOT_QUERY",
+        "Subscription": "ROOT_SUBSCRIPTION",
+      },
+      "rootTypenamesById": Object {
+        "ROOT_MUTATION": "Mutation",
+        "ROOT_QUERY": "Query",
+        "ROOT_SUBSCRIPTION": "Subscription",
+      },
+      "supertypeMap": Map {},
+      "toBeAdded": Object {},
+      "typePolicies": Object {
+        "Query": Object {
+          "fields": Object {},
+        },
+      },
+      "usingPossibleTypes": false,
+    },
+    "refs": Object {},
+    "rootIds": Object {
+      "ROOT_QUERY": 1,
+    },
+    "sharedLayerGroup": CacheGroup {
+      "caching": true,
+      "d": [Function],
+      "keyMaker": KeyTrie {
+        "makeData": [Function],
+        "weakness": true,
+      },
+    },
+    "storageTrie": KeyTrie {
+      "makeData": [Function],
+      "weakness": true,
+    },
+    "toReference": [Function],
   },
+  "getFragmentDoc": [Function],
+  "makeVar": [Function],
   "maybeBroadcastWatch": [Function],
-  "optimisticData": DepTrackingCache {
+  "optimisticData": Root {
+    "canRead": [Function],
     "data": Object {
       "ROOT_QUERY": Object {
+        "__typename": "Query",
         "authToken": "some-auth-token",
       },
     },
-    "depend": [Function],
+    "getFieldValue": [Function],
+    "group": CacheGroup {
+      "caching": true,
+      "d": [Function],
+      "keyMaker": KeyTrie {
+        "makeData": [Function],
+        "weakness": true,
+      },
+    },
+    "policies": Policies {
+      "cache": [Circular],
+      "config": Object {
+        "cache": [Circular],
+        "dataIdFromObject": [Function],
+        "possibleTypes": undefined,
+        "typePolicies": Object {},
+      },
+      "fuzzySubtypes": Map {},
+      "rootIdsByTypename": Object {
+        "Mutation": "ROOT_MUTATION",
+        "Query": "ROOT_QUERY",
+        "Subscription": "ROOT_SUBSCRIPTION",
+      },
+      "rootTypenamesById": Object {
+        "ROOT_MUTATION": "Mutation",
+        "ROOT_QUERY": "Query",
+        "ROOT_SUBSCRIPTION": "Subscription",
+      },
+      "supertypeMap": Map {},
+      "toBeAdded": Object {},
+      "typePolicies": Object {
+        "Query": Object {
+          "fields": Object {},
+        },
+      },
+      "usingPossibleTypes": false,
+    },
+    "refs": Object {},
+    "rootIds": Object {
+      "ROOT_QUERY": 1,
+    },
+    "sharedLayerGroup": CacheGroup {
+      "caching": true,
+      "d": [Function],
+      "keyMaker": KeyTrie {
+        "makeData": [Function],
+        "weakness": true,
+      },
+    },
+    "storageTrie": KeyTrie {
+      "makeData": [Function],
+      "weakness": true,
+    },
+    "toReference": [Function],
   },
-  "silenceBroadcast": false,
+  "policies": Policies {
+    "cache": [Circular],
+    "config": Object {
+      "cache": [Circular],
+      "dataIdFromObject": [Function],
+      "possibleTypes": undefined,
+      "typePolicies": Object {},
+    },
+    "fuzzySubtypes": Map {},
+    "rootIdsByTypename": Object {
+      "Mutation": "ROOT_MUTATION",
+      "Query": "ROOT_QUERY",
+      "Subscription": "ROOT_SUBSCRIPTION",
+    },
+    "rootTypenamesById": Object {
+      "ROOT_MUTATION": "Mutation",
+      "ROOT_QUERY": "Query",
+      "ROOT_SUBSCRIPTION": "Subscription",
+    },
+    "supertypeMap": Map {},
+    "toBeAdded": Object {},
+    "typePolicies": Object {
+      "Query": Object {
+        "fields": Object {},
+      },
+    },
+    "usingPossibleTypes": false,
+  },
   "storeReader": StoreReader {
+    "config": Object {
+      "addTypename": true,
+      "cache": [Circular],
+    },
     "executeSelectionSet": [Function],
-    "executeStoreQuery": [Function],
     "executeSubSelectedArray": [Function],
-    "freezeResults": false,
+    "knownResults": WeakMap {},
   },
-  "storeWriter": StoreWriter {},
-  "typenameDocumentCache": Map {
-    Object {
-      "definitions": Array [
-        Object {
-          "kind": "OperationDefinition",
-          "name": Object {
-            "kind": "Name",
-            "value": "GeneratedClientQuery",
-          },
-          "operation": "query",
-          "selectionSet": Object {
-            "kind": "SelectionSet",
-            "selections": Array [
-              Object {
-                "kind": "Field",
-                "name": Object {
-                  "kind": "Name",
-                  "value": "authToken",
-                },
-                "selectionSet": undefined,
-              },
-            ],
-          },
-        },
-      ],
-      "kind": "Document",
-    } => Object {
-      "definitions": Array [
-        Object {
-          "kind": "OperationDefinition",
-          "name": Object {
-            "kind": "Name",
-            "value": "GeneratedClientQuery",
-          },
-          "operation": "query",
-          "selectionSet": Object {
-            "kind": "SelectionSet",
-            "selections": Array [
-              Object {
-                "kind": "Field",
-                "name": Object {
-                  "kind": "Name",
-                  "value": "authToken",
-                },
-                "selectionSet": undefined,
-              },
-            ],
-          },
-        },
-      ],
-      "kind": "Document",
+  "storeWriter": StoreWriter {
+    "cache": [Circular],
+    "reader": StoreReader {
+      "config": Object {
+        "addTypename": true,
+        "cache": [Circular],
+      },
+      "executeSelectionSet": [Function],
+      "executeSubSelectedArray": [Function],
+      "knownResults": WeakMap {},
     },
   },
+  "txCount": 0,
+  "typenameDocumentCache": Map {},
+  "watchDep": [Function],
   "watches": Set {},
 }
 `;

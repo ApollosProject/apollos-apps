@@ -558,6 +558,7 @@ export const contentChannelSchema = gql`
 
   extend type Query {
     contentChannels: [ContentChannel]
+      @deprecated(reason: "No longer supported.")
   }
 `;
 
@@ -975,6 +976,48 @@ export const featuresSchema = gql`
   }
 `;
 
+export const commentSchema = gql`
+  extend type Mutation {
+    addComment(
+      parentId: ID!
+      text: String!
+      visibility: CommentVisibility
+    ): Comment
+
+    flagComment(commentId: ID!): Comment
+  }
+
+  type CommentListFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    comments: [Comment]
+  }
+
+  type AddCommentFeature implements Feature & Node {
+    id: ID!
+    order: Int
+    relatedNode: Node!
+
+    addPrompt: String
+    initialPrompt: String
+  }
+
+  enum CommentVisibility {
+    PUBLIC
+    PRIVATE
+    FOLLOWERS
+  }
+
+  type Comment implements Node {
+    id: ID!
+
+    person: Person
+    text: String
+    visibility: CommentVisibility
+  }
+`;
+
 export const eventSchema = gql`
   type Event implements Node {
     id: ID!
@@ -1009,12 +1052,24 @@ export const prayerSchema = gql`
     prayers: [PrayerRequest]
   }
 
+  type VerticalPrayerListFeature implements Feature & Node {
+    id: ID!
+    order: Int
+    title: String
+    subtitle: String
+    prayers: [PrayerRequest]
+  }
+
   extend type Mutation {
     addPrayer(text: String!, isAnonymous: Boolean): PrayerRequest
   }
 
   extend enum InteractionAction {
     PRAY
+  }
+
+  extend type Person {
+    prayers: [PrayerRequest]
   }
 `;
 

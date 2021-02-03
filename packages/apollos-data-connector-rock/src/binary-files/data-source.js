@@ -6,9 +6,7 @@ export default class BinaryFiles extends RockApolloDataSource {
   resource = 'BinaryFiles';
 
   getFromId(id) {
-    return this.request()
-      .find(id)
-      .get();
+    return this.request().find(id).get();
   }
 
   async uploadFile({ stream }) {

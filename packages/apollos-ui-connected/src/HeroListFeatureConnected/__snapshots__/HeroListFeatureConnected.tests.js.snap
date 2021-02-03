@@ -42,7 +42,7 @@ Array [
   </View>,
   <View
     accessible={true}
-    clickable={true}
+    focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -95,10 +95,9 @@ Array [
             }
           }
         >
-          <RCTImageView
+          <Image
             fadeDuration={250}
             onLoad={[Function]}
-            resizeMode="cover"
             source={
               Array [
                 Object {
@@ -112,7 +111,6 @@ Array [
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
-                "overflow": "hidden",
                 "resizeMode": "cover",
                 "width": "100%",
               }
@@ -277,10 +275,9 @@ Array [
         }
       }
     >
-      <RCTImageView
+      <Image
         fadeDuration={250}
         onLoad={[Function]}
-        resizeMode="cover"
         source={
           Array [
             Object {
@@ -296,7 +293,6 @@ Array [
             "borderRadius": 16,
             "height": 64,
             "marginRight": 16,
-            "overflow": "hidden",
             "width": 64,
           }
         }
@@ -342,8 +338,7 @@ Array [
     </View>
     <View
       accessible={true}
-      clickable={true}
-      isTVSelectable={true}
+      focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -436,7 +431,7 @@ Array [
   </View>,
   <View
     accessible={true}
-    clickable={true}
+    focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -490,17 +485,15 @@ Array [
             }
           }
         >
-          <RCTImageView
+          <Image
             fadeDuration={250}
             isLoading={true}
             onLoad={[Function]}
-            resizeMode="cover"
             source={Array []}
             style={
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
-                "overflow": "hidden",
                 "resizeMode": "cover",
                 "width": "100%",
               }
@@ -611,10 +604,9 @@ Array [
         }
       }
     >
-      <RCTImageView
+      <Image
         fadeDuration={250}
         onLoad={[Function]}
-        resizeMode="cover"
         source={
           Array [
             Object {
@@ -629,7 +621,6 @@ Array [
             "borderRadius": 16,
             "height": 64,
             "marginRight": 16,
-            "overflow": "hidden",
             "width": 64,
           }
         }
@@ -677,10 +668,9 @@ Array [
         }
       }
     >
-      <RCTImageView
+      <Image
         fadeDuration={250}
         onLoad={[Function]}
-        resizeMode="cover"
         source={
           Array [
             Object {
@@ -695,7 +685,6 @@ Array [
             "borderRadius": 16,
             "height": 64,
             "marginRight": 16,
-            "overflow": "hidden",
             "width": 64,
           }
         }
@@ -743,10 +732,9 @@ Array [
         }
       }
     >
-      <RCTImageView
+      <Image
         fadeDuration={250}
         onLoad={[Function]}
-        resizeMode="cover"
         source={
           Array [
             Object {
@@ -761,7 +749,6 @@ Array [
             "borderRadius": 16,
             "height": 64,
             "marginRight": 16,
-            "overflow": "hidden",
             "width": 64,
           }
         }
@@ -809,10 +796,9 @@ Array [
         }
       }
     >
-      <RCTImageView
+      <Image
         fadeDuration={250}
         onLoad={[Function]}
-        resizeMode="cover"
         source={
           Array [
             Object {
@@ -827,7 +813,6 @@ Array [
             "borderRadius": 16,
             "height": 64,
             "marginRight": 16,
-            "overflow": "hidden",
             "width": 64,
           }
         }
@@ -926,10 +911,9 @@ Array [
         }
       }
     >
-      <RCTImageView
+      <Image
         fadeDuration={250}
         onLoad={[Function]}
-        resizeMode="cover"
         source={
           Array [
             Object {
@@ -945,7 +929,6 @@ Array [
             "borderRadius": 16,
             "height": 64,
             "marginRight": 16,
-            "overflow": "hidden",
             "width": 64,
           }
         }
@@ -991,8 +974,7 @@ Array [
     </View>
     <View
       accessible={true}
-      clickable={true}
-      isTVSelectable={true}
+      focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -1086,7 +1068,7 @@ Array [
   </View>,
   <View
     accessible={true}
-    clickable={true}
+    focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -1139,10 +1121,9 @@ Array [
             }
           }
         >
-          <RCTImageView
+          <Image
             fadeDuration={250}
             onLoad={[Function]}
-            resizeMode="cover"
             source={
               Array [
                 Object {
@@ -1156,7 +1137,6 @@ Array [
               Object {
                 "aspectRatio": 1,
                 "backgroundColor": "#A5A5A5",
-                "overflow": "hidden",
                 "resizeMode": "cover",
                 "width": "100%",
               }
@@ -1314,8 +1294,7 @@ Array [
   >
     <View
       accessible={true}
-      clickable={true}
-      isTVSelectable={true}
+      focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}

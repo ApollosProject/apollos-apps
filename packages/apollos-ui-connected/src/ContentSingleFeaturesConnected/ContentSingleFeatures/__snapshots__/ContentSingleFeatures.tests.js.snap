@@ -98,8 +98,7 @@ exports[`ContentSingleFeatures should render 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -410,8 +409,7 @@ exports[`ContentSingleFeatures should render 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -735,8 +733,7 @@ exports[`ContentSingleFeatures should render 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -969,8 +966,7 @@ exports[`ContentSingleFeatures should render a loading state 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1214,8 +1210,7 @@ exports[`ContentSingleFeatures should render a loading state 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1459,8 +1454,7 @@ exports[`ContentSingleFeatures should render a loading state 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1694,8 +1688,7 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2006,8 +1999,7 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2331,8 +2323,7 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
-          isTVSelectable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
