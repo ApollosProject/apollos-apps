@@ -2,7 +2,9 @@ import { createGlobalId } from '@apollosproject/server-core';
 import { range } from 'lodash';
 import { sequelize, sync } from '../../postgres/index';
 import { createModel } from '../model';
+import { createModel as createFlagsModel } from '../../user-flags/model';
 import CommentDataSource from '../dataSource';
+import UserFlagDataSource from '../../user-flags/dataSource';
 
 const context = {
   dataSources: {
@@ -18,6 +20,7 @@ const context = {
 describe('Apollos Postgres Comments DatSource', () => {
   beforeEach(async () => {
     await createModel();
+    await createFlagsModel();
     await sync();
   });
   afterEach(async () => {
@@ -95,5 +98,61 @@ describe('Apollos Postgres Comments DatSource', () => {
 
     const commentPerson = await commentDataSource.getPerson(comment);
     expect(commentPerson).toEqual({ id: 1 });
+  });
+
+  it('returns all comments when flagLimit is 0', async () => {
+    const commentDataSource = new CommentDataSource();
+    commentDataSource.initialize({ context });
+
+    const flagDataSource = new UserFlagDataSource();
+    flagDataSource.initialize({ context });
+
+    await commentDataSource.addComment({
+      text: `This is okay!`,
+      parentId: createGlobalId(123, 'UniversalContentItem'),
+    });
+    const comment = await commentDataSource.addComment({
+      text: `This is flagged!`,
+      parentId: createGlobalId(123, 'UniversalContentItem'),
+    });
+
+    await flagDataSource.flagComment({
+      commentId: createGlobalId(comment.id, 'Comment'),
+    });
+
+    const itemComments = await commentDataSource.getForNode({
+      nodeId: 123,
+      nodeType: 'UniversalContentItem',
+    });
+    expect(itemComments.length).toBe(2);
+  });
+
+  it('should only return un-flagged comments', async () => {
+    const commentDataSource = new CommentDataSource();
+    commentDataSource.initialize({ context });
+
+    const flagDataSource = new UserFlagDataSource();
+    flagDataSource.initialize({ context });
+
+    await commentDataSource.addComment({
+      text: `This is okay!`,
+      parentId: createGlobalId(123, 'UniversalContentItem'),
+    });
+    const comment = await commentDataSource.addComment({
+      text: `This is flagged!`,
+      parentId: createGlobalId(123, 'UniversalContentItem'),
+    });
+
+    await flagDataSource.flagComment({
+      commentId: createGlobalId(comment.id, 'Comment'),
+    });
+
+    const itemComments = await commentDataSource.getForNode({
+      nodeId: 123,
+      nodeType: 'UniversalContentItem',
+      flagLimit: 1,
+    });
+    expect(itemComments.length).toBe(1);
+    expect(itemComments[0].text).toBe('This is okay!');
   });
 });

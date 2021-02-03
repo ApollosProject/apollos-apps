@@ -824,6 +824,7 @@ exports[`ContentItemsModel returns comment features when a contentItem has a Com
 Array [
   Array [
     Object {
+      "flagLimit": 0,
       "nodeId": "ContentItem:123Test",
       "nodeType": "UniversalContentItem",
     },

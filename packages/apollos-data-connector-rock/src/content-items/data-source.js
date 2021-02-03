@@ -181,6 +181,7 @@ export default class ContentItem extends RockApolloDataSource {
     const commentFeatures = get(attributeValues, 'comments.value', 'False');
     if (commentFeatures === 'True') {
       const nodeType = item.__type || this.resolveType(item);
+      const flagLimit = get(ApollosConfig, 'APP.FLAG_LIMIT', 0);
       features.push(
         Feature.createAddCommentFeature({
           nodeId: id,
@@ -189,7 +190,7 @@ export default class ContentItem extends RockApolloDataSource {
           initialPrompt: this.getAddCommentInitialPrompt(attributeValues),
           addPrompt: this.getAddCommentAddPrompt(attributeValues),
         }),
-        Feature.createCommentListFeature({ nodeId: id, nodeType })
+        Feature.createCommentListFeature({ nodeId: id, nodeType, flagLimit })
       );
     }
 
