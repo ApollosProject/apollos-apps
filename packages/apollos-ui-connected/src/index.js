@@ -82,5 +82,8 @@ export VerticalCardListFeatureConnected, {
   GET_VERTICAL_CARD_LIST_FEATURE,
 } from './VerticalCardListFeatureConnected';
 export safeHandleUrl from './safeOpenUrl';
+export ScriptureNodeConnected, {
+  GET_SCRIPTURE_NODE,
+} from './ScriptureNodeConnected';
 export { ScriptureFeature, TextFeature, WebviewFeature } from './features';
 export ThemeMixinConnected, { GET_NODE_THEME } from './ThemeMixinConnected';
