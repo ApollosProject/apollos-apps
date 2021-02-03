@@ -242,7 +242,7 @@ PODS:
     - React-cxxreact (= 0.63.2)
     - React-jsi (= 0.63.2)
   - React-jsinspector (0.63.2)
-  - react-native-apollos-player (2.0.0-2.0.0-alpha.16.0):
+  - react-native-apollos-player (2.0.0-beta.4):
     - React
   - react-native-config (0.11.7):
     - React
@@ -583,7 +583,7 @@ SPEC CHECKSUMS:
   React-jsi: 54245e1d5f4b690dec614a73a3795964eeef13a8
   React-jsiexecutor: 8ca588cc921e70590820ce72b8789b02c67cce38
   React-jsinspector: b14e62ebe7a66e9231e9581279909f2fc3db6606
-  react-native-apollos-player: de6850894c92823296a6ab5276a2c5c58b13e871
+  react-native-apollos-player: 8f9827448d221db8cbe622e846dc746830e96c42
   react-native-config: 55548054279d92e0e4566ea15a8b9b81028ec342
   react-native-geolocation: c956aeb136625c23e0dce0467664af2c437888c9
   react-native-image-picker: e6e06d4315e3c85bad17e4b2002cd29f11d202c8
