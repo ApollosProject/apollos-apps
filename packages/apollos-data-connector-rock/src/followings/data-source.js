@@ -84,14 +84,16 @@ export default class Followings extends RockApolloDataSource {
 
     if (cachedCount != null) return cachedCount;
 
-    const count = (await this.request('Followings')
-      .filter(
-        // eslint-disable-next-line prettier/prettier
+    const count = (
+      await this.request('Followings')
+        .filter(
+          // eslint-disable-next-line prettier/prettier
           `(EntityId eq ${id}) and (EntityTypeId eq ${nodeType.id})`
-      )
-      .select('Id') // $count not supported, next best thing to make efficient
-      .cache({ ttl: 1800 }) // TODO: whats the right way to do this?
-      .get()).length;
+        )
+        .select('Id') // $count not supported, next best thing to make efficient
+        .cache({ ttl: 1800 }) // TODO: whats the right way to do this?
+        .get()
+    ).length;
 
     await Cache.set({
       key: ['likedCount', nodeType.id, id],
@@ -198,9 +200,7 @@ export default class Followings extends RockApolloDataSource {
       const currentUser = await Auth.getCurrentPerson();
       return this.request('Followings')
         .filter(
-          `(EntityTypeId eq ${nodeType.id}) and (PersonAliasId eq ${
-            currentUser.primaryAliasId
-          })`
+          `(EntityTypeId eq ${nodeType.id}) and (PersonAliasId eq ${currentUser.primaryAliasId})`
         )
         .orderBy('CreatedDateTime', 'desc');
     } catch (e) {

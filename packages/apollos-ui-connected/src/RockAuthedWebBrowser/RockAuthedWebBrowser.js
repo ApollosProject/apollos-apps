@@ -41,10 +41,7 @@ const RockAuthedInAppBrowser = {
           url.searchParams.append('rckipid', creds.authToken);
       }
       const isValidUrl = ['http', 'https'].includes(
-        url
-          .toString()
-          .split(':')[0]
-          .toLowerCase()
+        url.toString().split(':')[0].toLowerCase()
       );
       if (
         !options.externalBrowser &&

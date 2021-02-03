@@ -10,6 +10,14 @@ const VIDEO_NODE_FRAGMENT = gql`
   }
 `;
 
+const SCRIPTURE_NODE_FRAGMENT = gql`
+  fragment ScriptureNodeFragment on ScriptureNode {
+    scriptures {
+      ...ScriptureFragment
+    }
+  }
+`;
+
 const CONTENT_NODE_FRAGMENT = gql`
   fragment ContentNodeFragment on ContentNode {
     title
@@ -59,6 +67,7 @@ const THEMED_NODE_FRAGMENT = gql`
 
 export {
   VIDEO_NODE_FRAGMENT,
+  SCRIPTURE_NODE_FRAGMENT,
   CONTENT_NODE_FRAGMENT,
   FEATURES_NODE_FRAGMENT,
   CARD_NODE_FRAGMENT,

@@ -124,6 +124,7 @@ Array [
         source={
           Array [
             Object {
+              "__typename": "ImageMediaSource",
               "cache": "force-cache",
               "uri": "https://123.image-url.com",
             },
@@ -194,6 +195,7 @@ Array [
         source={
           Array [
             Object {
+              "__typename": "ImageMediaSource",
               "cache": "force-cache",
               "uri": "https://123.image-url.com",
             },
@@ -265,7 +267,7 @@ Array [
           Array [
             Object {
               "cache": "force-cache",
-              "uri": "https://123.image-url.com",
+              "uri": "",
             },
           ]
         }
@@ -368,15 +370,9 @@ Array [
   >
     <RCTScrollView
       activeDot={
-        <withOrientation
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
-        >
+        <View>
           <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
-        </withOrientation>
+        </View>
       }
       automaticallyAdjustContentInsets={false}
       autoplay={false}
@@ -399,21 +395,9 @@ Array [
       disableNextButton={false}
       disablePrevButton={false}
       dot={
-        <withOrientation
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
-        >
-          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))
-            forceInset={
-              Object {
-                "bottom": "always",
-              }
-            }
-          />
-        </withOrientation>
+        <View>
+          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+        </View>
       }
       horizontal={true}
       index={0}
@@ -487,8 +471,7 @@ Array [
               }
             >
               <View>
-                <RCTSafeAreaView
-                  emulateUnlessSupported={true}
+                <View
                   style={
                     Object {
                       "flex": 1,
@@ -609,8 +592,7 @@ Array [
                           </Text>
                           <View
                             accessible={true}
-                            clickable={true}
-                            isTVSelectable={true}
+                            focusable={true}
                             onClick={[Function]}
                             onResponderGrant={[Function]}
                             onResponderMove={[Function]}
@@ -827,8 +809,7 @@ Array [
                   >
                     <View
                       accessible={true}
-                      clickable={true}
-                      isTVSelectable={true}
+                      focusable={true}
                       onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
@@ -911,7 +892,7 @@ Array [
                       </Text>
                     </View>
                   </View>
-                </RCTSafeAreaView>
+                </View>
               </View>
             </RCTScrollView>
           </View>
@@ -961,8 +942,7 @@ Array [
               }
             >
               <View>
-                <RCTSafeAreaView
-                  emulateUnlessSupported={true}
+                <View
                   style={
                     Object {
                       "flex": 1,
@@ -1045,6 +1025,7 @@ Array [
                                   source={
                                     Array [
                                       Object {
+                                        "__typename": "ImageMediaSource",
                                         "cache": "force-cache",
                                         "uri": "https://123.image-url.com",
                                       },
@@ -1111,8 +1092,7 @@ Array [
                   >
                     <View
                       accessible={true}
-                      clickable={true}
-                      isTVSelectable={true}
+                      focusable={true}
                       onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
@@ -1162,7 +1142,7 @@ Array [
                       </View>
                     </View>
                   </View>
-                </RCTSafeAreaView>
+                </View>
               </View>
             </RCTScrollView>
           </View>
@@ -1247,18 +1227,7 @@ Array [
         ]
       }
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
           style={
             Object {
@@ -1271,24 +1240,8 @@ Array [
           }
         />
       </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
@@ -1300,24 +1253,8 @@ Array [
           }
         />
       </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
@@ -1329,24 +1266,8 @@ Array [
           }
         />
       </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
@@ -1358,24 +1279,8 @@ Array [
           }
         />
       </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
@@ -1399,7 +1304,7 @@ Array [
         "top": 0,
         "transform": Array [
           Object {
-            "translateY": 0,
+            "translateY": 1334,
           },
         ],
       }
@@ -1494,8 +1399,7 @@ Array [
           }
         >
           <View>
-            <RCTSafeAreaView
-              emulateUnlessSupported={true}
+            <View
               style={
                 Object {
                   "flex": 1,
@@ -1563,54 +1467,13 @@ Array [
                     }
                   >
                     <Image
-                      blurRadius={3}
-                      fadeDuration={250}
-                      onLoad={[Function]}
-                      source={
-                        Array [
-                          Object {
-                            "cache": "force-cache",
-                            "uri": "https://123.image-url.com",
-                          },
-                        ]
-                      }
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 1000,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    avatarWidth="20%"
-                    getXYPositions={
-                      Object {
-                        "left": "59.899924966004434%",
-                        "top": "5.532318892071906%",
-                      }
-                    }
-                    order={4}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "left": "59.899924966004434%",
-                        "position": "absolute",
-                        "top": "5.532318892071906%",
-                        "width": "20%",
-                        "zIndex": 4,
-                      }
-                    }
-                  >
-                    <Image
                       blurRadius={2}
                       fadeDuration={250}
                       onLoad={[Function]}
                       source={
                         Array [
                           Object {
+                            "__typename": "ImageMediaSource",
                             "cache": "force-cache",
                             "uri": "https://123.image-url.com",
                           },
@@ -1630,19 +1493,19 @@ Array [
                     avatarWidth="20%"
                     getXYPositions={
                       Object {
-                        "left": "50.000000000000014%",
-                        "top": "57.320508075688764%",
+                        "left": "79.79984993200891%",
+                        "top": "39.99999999999999%",
                       }
                     }
-                    order={8}
+                    order={4}
                     style={
                       Object {
                         "aspectRatio": 1,
-                        "left": "50.000000000000014%",
+                        "left": "79.79984993200891%",
                         "position": "absolute",
-                        "top": "57.320508075688764%",
+                        "top": "39.99999999999999%",
                         "width": "20%",
-                        "zIndex": 8,
+                        "zIndex": 4,
                       }
                     }
                   >
@@ -1653,6 +1516,7 @@ Array [
                       source={
                         Array [
                           Object {
+                            "__typename": "ImageMediaSource",
                             "cache": "force-cache",
                             "uri": "https://123.image-url.com",
                           },
@@ -1728,8 +1592,7 @@ Array [
               >
                 <View
                   accessible={true}
-                  clickable={true}
-                  isTVSelectable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -1779,7 +1642,7 @@ Array [
                   </View>
                 </View>
               </View>
-            </RCTSafeAreaView>
+            </View>
           </View>
         </RCTScrollView>
       </View>
@@ -1912,6 +1775,7 @@ Array [
         source={
           Array [
             Object {
+              "__typename": "ImageMediaSource",
               "cache": "force-cache",
               "uri": "https://123.image-url.com",
             },
@@ -1982,6 +1846,7 @@ Array [
         source={
           Array [
             Object {
+              "__typename": "ImageMediaSource",
               "cache": "force-cache",
               "uri": "https://123.image-url.com",
             },
@@ -2053,7 +1918,7 @@ Array [
           Array [
             Object {
               "cache": "force-cache",
-              "uri": "https://123.image-url.com",
+              "uri": "",
             },
           ]
         }
@@ -2156,15 +2021,9 @@ Array [
   >
     <RCTScrollView
       activeDot={
-        <withOrientation
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
-        >
+        <View>
           <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
-        </withOrientation>
+        </View>
       }
       automaticallyAdjustContentInsets={false}
       autoplay={false}
@@ -2187,21 +2046,9 @@ Array [
       disableNextButton={false}
       disablePrevButton={false}
       dot={
-        <withOrientation
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
-        >
-          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))
-            forceInset={
-              Object {
-                "bottom": "always",
-              }
-            }
-          />
-        </withOrientation>
+        <View>
+          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+        </View>
       }
       horizontal={true}
       index={0}
@@ -2275,8 +2122,7 @@ Array [
               }
             >
               <View>
-                <RCTSafeAreaView
-                  emulateUnlessSupported={true}
+                <View
                   style={
                     Object {
                       "flex": 1,
@@ -2397,8 +2243,7 @@ Array [
                           </Text>
                           <View
                             accessible={true}
-                            clickable={true}
-                            isTVSelectable={true}
+                            focusable={true}
                             onClick={[Function]}
                             onResponderGrant={[Function]}
                             onResponderMove={[Function]}
@@ -2615,8 +2460,7 @@ Array [
                   >
                     <View
                       accessible={true}
-                      clickable={true}
-                      isTVSelectable={true}
+                      focusable={true}
                       onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
@@ -2699,7 +2543,7 @@ Array [
                       </Text>
                     </View>
                   </View>
-                </RCTSafeAreaView>
+                </View>
               </View>
             </RCTScrollView>
           </View>
@@ -2749,8 +2593,7 @@ Array [
               }
             >
               <View>
-                <RCTSafeAreaView
-                  emulateUnlessSupported={true}
+                <View
                   style={
                     Object {
                       "flex": 1,
@@ -2833,6 +2676,7 @@ Array [
                                   source={
                                     Array [
                                       Object {
+                                        "__typename": "ImageMediaSource",
                                         "cache": "force-cache",
                                         "uri": "https://123.image-url.com",
                                       },
@@ -2899,8 +2743,7 @@ Array [
                   >
                     <View
                       accessible={true}
-                      clickable={true}
-                      isTVSelectable={true}
+                      focusable={true}
                       onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
@@ -2950,7 +2793,7 @@ Array [
                       </View>
                     </View>
                   </View>
-                </RCTSafeAreaView>
+                </View>
               </View>
             </RCTScrollView>
           </View>
@@ -3035,18 +2878,7 @@ Array [
         ]
       }
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
           style={
             Object {
@@ -3059,24 +2891,8 @@ Array [
           }
         />
       </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
@@ -3088,24 +2904,8 @@ Array [
           }
         />
       </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
@@ -3117,24 +2917,8 @@ Array [
           }
         />
       </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
@@ -3146,24 +2930,8 @@ Array [
           }
         />
       </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
@@ -3304,6 +3072,7 @@ Array [
         source={
           Array [
             Object {
+              "__typename": "ImageMediaSource",
               "cache": "force-cache",
               "uri": "https://123.image-url.com",
             },
@@ -3374,6 +3143,7 @@ Array [
         source={
           Array [
             Object {
+              "__typename": "ImageMediaSource",
               "cache": "force-cache",
               "uri": "https://123.image-url.com",
             },
@@ -3445,7 +3215,7 @@ Array [
           Array [
             Object {
               "cache": "force-cache",
-              "uri": "https://123.image-url.com",
+              "uri": "",
             },
           ]
         }
@@ -3548,15 +3318,9 @@ Array [
   >
     <RCTScrollView
       activeDot={
-        <withOrientation
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
-        >
+        <View>
           <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
-        </withOrientation>
+        </View>
       }
       automaticallyAdjustContentInsets={false}
       autoplay={false}
@@ -3579,21 +3343,9 @@ Array [
       disableNextButton={false}
       disablePrevButton={false}
       dot={
-        <withOrientation
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
-        >
-          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))
-            forceInset={
-              Object {
-                "bottom": "always",
-              }
-            }
-          />
-        </withOrientation>
+        <View>
+          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+        </View>
       }
       horizontal={true}
       index={0}
@@ -3667,8 +3419,7 @@ Array [
               }
             >
               <View>
-                <RCTSafeAreaView
-                  emulateUnlessSupported={true}
+                <View
                   style={
                     Object {
                       "flex": 1,
@@ -3789,8 +3540,7 @@ Array [
                           </Text>
                           <View
                             accessible={true}
-                            clickable={true}
-                            isTVSelectable={true}
+                            focusable={true}
                             onClick={[Function]}
                             onResponderGrant={[Function]}
                             onResponderMove={[Function]}
@@ -4007,8 +3757,7 @@ Array [
                   >
                     <View
                       accessible={true}
-                      clickable={true}
-                      isTVSelectable={true}
+                      focusable={true}
                       onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
@@ -4091,7 +3840,7 @@ Array [
                       </Text>
                     </View>
                   </View>
-                </RCTSafeAreaView>
+                </View>
               </View>
             </RCTScrollView>
           </View>
@@ -4141,8 +3890,7 @@ Array [
               }
             >
               <View>
-                <RCTSafeAreaView
-                  emulateUnlessSupported={true}
+                <View
                   style={
                     Object {
                       "flex": 1,
@@ -4225,6 +3973,7 @@ Array [
                                   source={
                                     Array [
                                       Object {
+                                        "__typename": "ImageMediaSource",
                                         "cache": "force-cache",
                                         "uri": "https://123.image-url.com",
                                       },
@@ -4290,41 +4039,58 @@ Array [
                     }
                   >
                     <View
-                      bordered={false}
-                      disabled={true}
-                      pill={true}
+                      accessible={true}
+                      focusable={true}
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
                       style={
                         Object {
-                          "alignItems": "center",
-                          "backgroundColor": "#00676D",
-                          "borderColor": "#00676D",
-                          "borderRadius": 48,
-                          "borderWidth": 2,
-                          "elevation": 2,
-                          "flexDirection": "row",
-                          "height": 48,
-                          "justifyContent": "center",
-                          "opacity": 0.5,
-                          "overflow": "hidden",
-                          "paddingHorizontal": 16,
+                          "opacity": 1,
                         }
                       }
                     >
-                      <Text
+                      <View
+                        bordered={false}
+                        disabled={false}
+                        pill={true}
                         style={
                           Object {
-                            "color": "#FFFFFF",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 16,
-                            "lineHeight": 24,
+                            "alignItems": "center",
+                            "backgroundColor": "#00676D",
+                            "borderColor": "#00676D",
+                            "borderRadius": 48,
+                            "borderWidth": 2,
+                            "elevation": 2,
+                            "flexDirection": "row",
+                            "height": 48,
+                            "justifyContent": "center",
+                            "opacity": 1,
+                            "overflow": "hidden",
+                            "paddingHorizontal": 16,
                           }
                         }
                       >
-                        Prayed!
-                      </Text>
+                        <Text
+                          style={
+                            Object {
+                              "color": "#FFFFFF",
+                              "fontFamily": "InterUI-Bold",
+                              "fontSize": 16,
+                              "lineHeight": 24,
+                            }
+                          }
+                        >
+                          🙏 Pray
+                        </Text>
+                      </View>
                     </View>
                   </View>
-                </RCTSafeAreaView>
+                </View>
               </View>
             </RCTScrollView>
           </View>
@@ -4409,18 +4175,7 @@ Array [
         ]
       }
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
           style={
             Object {
@@ -4433,24 +4188,8 @@ Array [
           }
         />
       </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
@@ -4462,24 +4201,8 @@ Array [
           }
         />
       </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
@@ -4491,24 +4214,8 @@ Array [
           }
         />
       </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
@@ -4520,24 +4227,8 @@ Array [
           }
         />
       </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
@@ -4656,8 +4347,7 @@ Array [
           }
         >
           <View>
-            <RCTSafeAreaView
-              emulateUnlessSupported={true}
+            <View
               style={
                 Object {
                   "flex": 1,
@@ -4725,54 +4415,13 @@ Array [
                     }
                   >
                     <Image
-                      blurRadius={3}
-                      fadeDuration={250}
-                      onLoad={[Function]}
-                      source={
-                        Array [
-                          Object {
-                            "cache": "force-cache",
-                            "uri": "https://123.image-url.com",
-                          },
-                        ]
-                      }
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 1000,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    avatarWidth="20%"
-                    getXYPositions={
-                      Object {
-                        "left": "59.899924966004434%",
-                        "top": "5.532318892071906%",
-                      }
-                    }
-                    order={4}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "left": "59.899924966004434%",
-                        "position": "absolute",
-                        "top": "5.532318892071906%",
-                        "width": "20%",
-                        "zIndex": 4,
-                      }
-                    }
-                  >
-                    <Image
                       blurRadius={2}
                       fadeDuration={250}
                       onLoad={[Function]}
                       source={
                         Array [
                           Object {
+                            "__typename": "ImageMediaSource",
                             "cache": "force-cache",
                             "uri": "https://123.image-url.com",
                           },
@@ -4792,19 +4441,19 @@ Array [
                     avatarWidth="20%"
                     getXYPositions={
                       Object {
-                        "left": "50.000000000000014%",
-                        "top": "57.320508075688764%",
+                        "left": "79.79984993200891%",
+                        "top": "39.99999999999999%",
                       }
                     }
-                    order={8}
+                    order={4}
                     style={
                       Object {
                         "aspectRatio": 1,
-                        "left": "50.000000000000014%",
+                        "left": "79.79984993200891%",
                         "position": "absolute",
-                        "top": "57.320508075688764%",
+                        "top": "39.99999999999999%",
                         "width": "20%",
-                        "zIndex": 8,
+                        "zIndex": 4,
                       }
                     }
                   >
@@ -4815,6 +4464,7 @@ Array [
                       source={
                         Array [
                           Object {
+                            "__typename": "ImageMediaSource",
                             "cache": "force-cache",
                             "uri": "https://123.image-url.com",
                           },
@@ -4890,8 +4540,7 @@ Array [
               >
                 <View
                   accessible={true}
-                  clickable={true}
-                  isTVSelectable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -4941,7 +4590,7 @@ Array [
                   </View>
                 </View>
               </View>
-            </RCTSafeAreaView>
+            </View>
           </View>
         </RCTScrollView>
       </View>
@@ -5074,6 +4723,7 @@ Array [
         source={
           Array [
             Object {
+              "__typename": "ImageMediaSource",
               "cache": "force-cache",
               "uri": "https://123.image-url.com",
             },
@@ -5144,6 +4794,7 @@ Array [
         source={
           Array [
             Object {
+              "__typename": "ImageMediaSource",
               "cache": "force-cache",
               "uri": "https://123.image-url.com",
             },
@@ -5215,7 +4866,7 @@ Array [
           Array [
             Object {
               "cache": "force-cache",
-              "uri": "https://123.image-url.com",
+              "uri": "",
             },
           ]
         }
@@ -5318,15 +4969,9 @@ Array [
   >
     <RCTScrollView
       activeDot={
-        <withOrientation
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
-        >
+        <View>
           <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
-        </withOrientation>
+        </View>
       }
       automaticallyAdjustContentInsets={false}
       autoplay={false}
@@ -5349,21 +4994,9 @@ Array [
       disableNextButton={false}
       disablePrevButton={false}
       dot={
-        <withOrientation
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
-        >
-          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))
-            forceInset={
-              Object {
-                "bottom": "always",
-              }
-            }
-          />
-        </withOrientation>
+        <View>
+          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+        </View>
       }
       horizontal={true}
       index={0}
@@ -5437,8 +5070,7 @@ Array [
               }
             >
               <View>
-                <RCTSafeAreaView
-                  emulateUnlessSupported={true}
+                <View
                   style={
                     Object {
                       "flex": 1,
@@ -5559,8 +5191,7 @@ Array [
                           </Text>
                           <View
                             accessible={true}
-                            clickable={true}
-                            isTVSelectable={true}
+                            focusable={true}
                             onClick={[Function]}
                             onResponderGrant={[Function]}
                             onResponderMove={[Function]}
@@ -5777,8 +5408,7 @@ Array [
                   >
                     <View
                       accessible={true}
-                      clickable={true}
-                      isTVSelectable={true}
+                      focusable={true}
                       onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
@@ -5861,7 +5491,7 @@ Array [
                       </Text>
                     </View>
                   </View>
-                </RCTSafeAreaView>
+                </View>
               </View>
             </RCTScrollView>
           </View>
@@ -5911,8 +5541,7 @@ Array [
               }
             >
               <View>
-                <RCTSafeAreaView
-                  emulateUnlessSupported={true}
+                <View
                   style={
                     Object {
                       "flex": 1,
@@ -5995,6 +5624,7 @@ Array [
                                   source={
                                     Array [
                                       Object {
+                                        "__typename": "ImageMediaSource",
                                         "cache": "force-cache",
                                         "uri": "https://123.image-url.com",
                                       },
@@ -6061,8 +5691,7 @@ Array [
                   >
                     <View
                       accessible={true}
-                      clickable={true}
-                      isTVSelectable={true}
+                      focusable={true}
                       onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
@@ -6112,7 +5741,7 @@ Array [
                       </View>
                     </View>
                   </View>
-                </RCTSafeAreaView>
+                </View>
               </View>
             </RCTScrollView>
           </View>
@@ -6197,18 +5826,7 @@ Array [
         ]
       }
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
           style={
             Object {
@@ -6221,24 +5839,8 @@ Array [
           }
         />
       </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
@@ -6250,24 +5852,8 @@ Array [
           }
         />
       </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
@@ -6279,24 +5865,8 @@ Array [
           }
         />
       </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
@@ -6308,24 +5878,8 @@ Array [
           }
         />
       </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
-          Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
-          }
-        }
-      >
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
@@ -6444,8 +5998,7 @@ Array [
           }
         >
           <View>
-            <RCTSafeAreaView
-              emulateUnlessSupported={true}
+            <View
               style={
                 Object {
                   "flex": 1,
@@ -6513,54 +6066,13 @@ Array [
                     }
                   >
                     <Image
-                      blurRadius={3}
-                      fadeDuration={250}
-                      onLoad={[Function]}
-                      source={
-                        Array [
-                          Object {
-                            "cache": "force-cache",
-                            "uri": "https://123.image-url.com",
-                          },
-                        ]
-                      }
-                      style={
-                        Object {
-                          "aspectRatio": 1,
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 1000,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    avatarWidth="20%"
-                    getXYPositions={
-                      Object {
-                        "left": "59.899924966004434%",
-                        "top": "5.532318892071906%",
-                      }
-                    }
-                    order={4}
-                    style={
-                      Object {
-                        "aspectRatio": 1,
-                        "left": "59.899924966004434%",
-                        "position": "absolute",
-                        "top": "5.532318892071906%",
-                        "width": "20%",
-                        "zIndex": 4,
-                      }
-                    }
-                  >
-                    <Image
                       blurRadius={2}
                       fadeDuration={250}
                       onLoad={[Function]}
                       source={
                         Array [
                           Object {
+                            "__typename": "ImageMediaSource",
                             "cache": "force-cache",
                             "uri": "https://123.image-url.com",
                           },
@@ -6580,19 +6092,19 @@ Array [
                     avatarWidth="20%"
                     getXYPositions={
                       Object {
-                        "left": "50.000000000000014%",
-                        "top": "57.320508075688764%",
+                        "left": "79.79984993200891%",
+                        "top": "39.99999999999999%",
                       }
                     }
-                    order={8}
+                    order={4}
                     style={
                       Object {
                         "aspectRatio": 1,
-                        "left": "50.000000000000014%",
+                        "left": "79.79984993200891%",
                         "position": "absolute",
-                        "top": "57.320508075688764%",
+                        "top": "39.99999999999999%",
                         "width": "20%",
-                        "zIndex": 8,
+                        "zIndex": 4,
                       }
                     }
                   >
@@ -6603,6 +6115,7 @@ Array [
                       source={
                         Array [
                           Object {
+                            "__typename": "ImageMediaSource",
                             "cache": "force-cache",
                             "uri": "https://123.image-url.com",
                           },
@@ -6678,8 +6191,7 @@ Array [
               >
                 <View
                   accessible={true}
-                  clickable={true}
-                  isTVSelectable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -6729,7 +6241,7 @@ Array [
                   </View>
                 </View>
               </View>
-            </RCTSafeAreaView>
+            </View>
           </View>
         </RCTScrollView>
       </View>

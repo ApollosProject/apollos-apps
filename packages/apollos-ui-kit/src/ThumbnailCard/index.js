@@ -15,10 +15,7 @@ import ChannelLabel from '../ChannelLabel';
 
 import Thumbnail from './Thumbnail';
 
-const enhance = compose(
-  withIsLoading,
-  pure
-);
+const enhance = compose(withIsLoading, pure);
 
 const HorizontalLayout = styled(
   {

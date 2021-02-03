@@ -43,8 +43,7 @@ exports[`The Chip component should be selected 1`] = `
 exports[`The Chip component should render a custom icon 1`] = `
 <View
   accessible={true}
-  clickable={true}
-  isTVSelectable={true}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -390,8 +389,7 @@ exports[`The Chip component should render an icon 1`] = `
 exports[`The Chip component should render correctly 1`] = `
 <View
   accessible={true}
-  clickable={true}
-  isTVSelectable={true}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}

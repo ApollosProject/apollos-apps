@@ -15,16 +15,6 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
         "__typename": "TextFeature",
         "body": "this is another, text feature",
         "id": "TextFeature:1",
-        "scriptures": Array [
-          Object {
-            "__typename": "Scripture",
-            "copyright": "PUBLIC DOMAIN except in the United Kingdom, where a Crown Copyright applies to printing the KJV. See http://www.cambridge.org/about-us/who-we-are/queens-printers-patent",
-            "html": "<p class=\\"p\\"><span data-number=\\"16\\" class=\\"v\\">16</span><span class=\\"wj\\">¶ For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.</span> </p>",
-            "id": "Scripture:2",
-            "reference": "Matthew 4:10",
-            "version": "KJV",
-          },
-        ],
         "sharing": Object {
           "__typename": "SharableFeature",
           "message": "this is another, text feature",
@@ -32,7 +22,6 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
       },
       Object {
         "__typename": "ScriptureFeature",
-        "body": "this is another, scripture feature",
         "id": "ScriptureFeature:3",
         "scriptures": Array [
           Object {
@@ -51,7 +40,6 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
       },
       Object {
         "__typename": "ScriptureFeature",
-        "body": "this is another, scripture feature",
         "id": "ScriptureFeature:4",
         "scriptures": Array [
           Object {
@@ -78,7 +66,6 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
   keyExtractor={[Function]}
   loading={false}
   maxToRenderPerBatch={10}
-  numColumns={1}
   onContentSizeChange={[Function]}
   onEndReachedThreshold={0.7}
   onLayout={[Function]}
@@ -156,8 +143,7 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
           </Text>
           <View
             accessible={true}
-            clickable={true}
-            isTVSelectable={true}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -682,13 +668,6 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
         </View>
       </View>
     </View>
-    <View
-      style={
-        Object {
-          "height": 0,
-        }
-      }
-    />
   </View>
 </RCTScrollView>
 `;

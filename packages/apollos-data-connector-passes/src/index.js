@@ -56,9 +56,7 @@ const serverMiddleware = ({ app, getContext }) => {
       const stream = await pass.generate();
       res.set({
         'Content-type': 'application/vnd.apple.pkpass',
-        'Content-disposition': `attachment; filename=${
-          req.params.template
-        }.pkpass`,
+        'Content-disposition': `attachment; filename=${req.params.template}.pkpass`,
       });
 
       return stream.pipe(res);

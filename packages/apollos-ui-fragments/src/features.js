@@ -33,6 +33,27 @@ const PRAYER_LIST_FEATURE_FRAGMENT = gql`
   }
 `;
 
+const VERTICAL_PRAYER_LIST_FEATURE_FRAGMENT = gql`
+  fragment VerticalPrayerListFeatureFragment on VerticalPrayerListFeature {
+    id
+    title
+    subtitle
+    prayers {
+      __typename
+      id
+      text
+      isPrayed
+      requestor {
+        id
+        nickName
+        firstName
+        photo {
+          uri
+        }
+      }
+    }
+  }
+`;
 const LITE_FEATURES_FRAGMENT = gql`
   fragment LiteFeaturesFragment on Feature {
     id
@@ -59,6 +80,10 @@ const LITE_FEATURES_FRAGMENT = gql`
       subtitle
       isCard
     }
+    ... on VerticalPrayerListFeature {
+      title
+      subtitle
+    }
     ... on TextFeature {
       body
       sharing {
@@ -83,6 +108,9 @@ const LITE_FEATURES_FRAGMENT = gql`
       linkText
       title
       url
+    }
+    ... on CommentListFeature {
+      id
     }
   }
 `;
@@ -187,6 +215,27 @@ const ACTION_BAR_FEATURE_FRAGMENT = gql`
       action
       relatedNode {
         ...RelatedFeatureNodeFragment
+      }
+    }
+  }
+`;
+
+const COMMENT_LIST_FEATURE_FRAGMENT = gql`
+  fragment CommentListFeatureFragment on CommentListFeature {
+    id
+    comments {
+      id
+      text
+      person {
+        id
+        nickName
+        photo {
+          uri
+        }
+        campus {
+          id
+          name
+        }
       }
     }
   }
@@ -321,6 +370,7 @@ export {
   FEATURES_FRAGMENT,
   ACTION_LIST_FEATURE_FRAGMENT,
   ACTION_BAR_FEATURE_FRAGMENT,
+  COMMENT_LIST_FEATURE_FRAGMENT,
   HERO_LIST_FEATURE_FRAGMENT,
   HORIZONTAL_CARD_LIST_FEATURE_FRAGMENT,
   VERTICAL_CARD_LIST_FEATURE_FRAGMENT,
@@ -328,6 +378,7 @@ export {
   LITE_FEATURES_FRAGMENT,
   WEBVIEW_FEATURE_FRAGMENT,
   PRAYER_LIST_FEATURE_FRAGMENT,
+  VERTICAL_PRAYER_LIST_FEATURE_FRAGMENT,
   RELATED_NODE_FRAGMENT,
   NODE_FEATURES_FRAGMENT,
 };

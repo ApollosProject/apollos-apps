@@ -5,10 +5,7 @@
     "packages": [
       "packages/*"
     ],
-    "nohoist": [
-      "**/react-native",
-      "**/react-native-svg"
-    ]
+    "nohoist": []
   },
   "scripts": {
     "start": "lerna run build && yarn push-all && yarn build:watch",
@@ -18,13 +15,12 @@
     "push-all": "lerna exec -- yarn yalc push",
     "lint": "lerna run lint",
     "test": "TZ=utc lerna run test",
-    "release": "lerna publish --conventional-commits --conventional-graduate --create-release github --force-publish",
-    "release:beta": "lerna publish --conventional-commits --conventional-prerelease --preid beta --dist-tag beta --force-publish",
-    "release:canary": "lerna publish --conventional-commits --canary",
-    "release:next": "lerna publish --conventional-commits --canary premajor --dist-tag next --force-publish",
+    "release": "lerna publish --conventional-commits --create-release github",
+    "release:canary": "lerna publish --canary",
+    "release:next": "lerna publish --canary premajor --dist-tag next",
     "prepublishOnly": "lerna run build && lerna run generate-stories",
     "nuke": "./scripts/boom.sh && yarn nuke:node && yarn nuke:cache",
-    "nuke:node": "rm -rdf ./node_modules packages/*/node_modules && yarn cache clean && yarn",
+    "nuke:node": "rm -rdf ./node_modules packages/*/node_modules && yarn",
     "nuke:cache": "watchman watch-del-all",
     "postinstall": "lerna run build --parallel",
     "generate-docs": "lerna run generate-docs",
@@ -41,14 +37,13 @@
     "@babel/parser": "7.1.6",
     "@babel/runtime": "^7.4.4",
     "apollo": "^1.9.2",
-    "apollo-client": "2.5.1",
     "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "^24.8.0",
+    "babel-jest": "^25.1.0",
     "chokidar": "^3.0.1",
     "codecov": "3.7.1",
     "lerna": "^3.14.0",
-    "prettier": "^1.14.2",
-    "react-apollo": "2.5.5",
+    "prettier": "^2.1.2",
+    "eslint-plugin-prettier": "^3.1.4",
     "react-native-storybook-loader": "^1.8.0",
     "yalc": "^1.0.0-pre.35"
   }

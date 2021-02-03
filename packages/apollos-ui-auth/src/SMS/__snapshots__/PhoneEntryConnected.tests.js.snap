@@ -52,15 +52,9 @@ exports[`ui-auth/SMS/PhoneEntryConnected should render 1`] = `
     }
   />
   <View
-    onLayout={[Function]}
-    pointerEvents="box-none"
     style={
       Object {
         "height": "100%",
-        "paddingBottom": 0,
-        "paddingLeft": 0,
-        "paddingRight": 0,
-        "paddingTop": 20,
       }
     }
   >
@@ -146,8 +140,7 @@ exports[`ui-auth/SMS/PhoneEntryConnected should render 1`] = `
                 >
                   <View
                     accessible={true}
-                    clickable={false}
-                    isTVSelectable={true}
+                    focusable={false}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -205,8 +198,7 @@ exports[`ui-auth/SMS/PhoneEntryConnected should render 1`] = `
                 >
                   <View
                     accessible={true}
-                    clickable={true}
-                    isTVSelectable={true}
+                    focusable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -485,8 +477,7 @@ exports[`ui-auth/SMS/PhoneEntryConnected should render 1`] = `
     >
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}

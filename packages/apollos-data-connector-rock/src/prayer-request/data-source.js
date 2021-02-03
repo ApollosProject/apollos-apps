@@ -9,20 +9,24 @@ export default class PrayerRequest extends RockApolloDataSource {
 
   expanded = true;
 
-  getFromId = (id) =>
-    this.request()
-      .find(id)
-      .get();
+  getFromId = (id) => this.request().find(id).get();
 
-  byDailyPrayerFeed = async ({ numberDaysSincePrayer = 3 }) => {
+  byDailyPrayerFeed = async ({ primaryAliasId, numberDaysSincePrayer = 3 }) => {
     const {
       dataSources: { Auth },
     } = this.context;
 
-    const { primaryAliasId } = await Auth.getCurrentPerson();
+    let excludedAliasId;
+    if (!primaryAliasId) {
+      excludedAliasId = (await Auth.getCurrentPerson()).primaryAliasId;
+    }
 
     return this.request()
-      .filter(`RequestedByPersonAliasId ${'ne'} ${primaryAliasId}`) // don't show your own prayers
+      .filter(
+        `RequestedByPersonAliasId ${
+          primaryAliasId ? `eq ${primaryAliasId}` : `ne ${excludedAliasId}`
+        }`
+      ) // don't show your own prayers
       .andFilter(`IsActive eq true`) // prayers can be marked as "in-active" in Rock
       .andFilter(`IsApproved eq true`) // prayers can be moderated in Rock
       .andFilter('IsPublic eq true') // prayers can be set to private in Rock
@@ -113,16 +117,9 @@ export default class PrayerRequest extends RockApolloDataSource {
       IsActive: true,
       AllowComments: false,
       IsUrgent: false,
-      EnteredDateTime: moment()
-        .tz(ROCK.TIMEZONE)
-        .format(),
-      ApprovedOnDateTime: moment()
-        .tz(ROCK.TIMEZONE)
-        .format(),
-      ExpirationDate: moment()
-        .tz(ROCK.TIMEZONE)
-        .add(2, 'weeks')
-        .format(),
+      EnteredDateTime: moment().tz(ROCK.TIMEZONE).format(),
+      ApprovedOnDateTime: moment().tz(ROCK.TIMEZONE).format(),
+      ExpirationDate: moment().tz(ROCK.TIMEZONE).add(2, 'weeks').format(),
     });
     return this.getFromId(prayerId);
   };

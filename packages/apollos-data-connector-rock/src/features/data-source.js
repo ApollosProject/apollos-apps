@@ -269,6 +269,38 @@ export default class Feature extends RockApolloDataSource {
     };
   }
 
+  createCommentListFeature({ nodeId, nodeType }) {
+    return {
+      id: JSON.stringify({ nodeId, nodeType }),
+      comments: () =>
+        this.context.dataSources.Comment.getForNode({ nodeId, nodeType }),
+      __typename: 'CommentListFeature',
+    };
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  createAddCommentFeature({
+    nodeId,
+    nodeType,
+    relatedNode,
+    initialPrompt,
+    addPrompt,
+  }) {
+    return {
+      id: JSON.stringify({
+        nodeId,
+        nodeType,
+        relatedNode: {
+          id: relatedNode.id,
+          __type: nodeType,
+        },
+        initialPrompt,
+        addPrompt,
+      }),
+      __typename: 'AddCommentFeature',
+    };
+  }
+
   createPrayerListFeature({
     algorithms = [],
     title,
@@ -296,6 +328,25 @@ export default class Feature extends RockApolloDataSource {
       isCard,
       // Typename is required so GQL knows specifically what Feature is being created
       __typename: 'PrayerListFeature',
+    };
+  }
+
+  async createVerticalPrayerListFeature({ title, subtitle, ...args }) {
+    const { ActionAlgorithm, Auth } = this.context.dataSources;
+    const { primaryAliasId } = await Auth.getCurrentPerson();
+    const prayers = () =>
+      ActionAlgorithm.runAlgorithms({
+        algorithms: ['DAILY_PRAYER'],
+        args: { primaryAliasId, ...args },
+      });
+    return {
+      id: this.createFeatureId({
+        args: { primaryAliasId, title, subtitle },
+      }),
+      prayers,
+      title,
+      subtitle,
+      __typename: 'VerticalPrayerListFeature',
     };
   }
 
@@ -336,6 +387,8 @@ export default class Feature extends RockApolloDataSource {
             return this.createHeroListFeature(finalConfig);
           case 'PrayerList':
             return this.createPrayerListFeature(finalConfig);
+          case 'VerticalPrayerList':
+            return this.createVerticalPrayerListFeature(finalConfig);
           case 'ActionList':
           default:
             // Action list was the default in 1.3.0 and prior.

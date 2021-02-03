@@ -21,6 +21,15 @@ export default {
       return interactions.length;
     },
   },
+  Person: {
+    prayers: async ({ primaryAliasId }, args, { dataSources }) => {
+      return (
+        await dataSources.PrayerRequest.byDailyPrayerFeed({
+          primaryAliasId,
+        })
+      ).get();
+    },
+  },
   PrayerListFeature: {
     // id: ID!
     // order: Int

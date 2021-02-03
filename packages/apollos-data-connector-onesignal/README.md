@@ -70,8 +70,6 @@ const UPDATE_DEVICE_PUSH_ID = gql`
 `;
 
 export default class NotificationsInit extends Component {
-  static navigationOptions = {};
-
   componentDidMount() {
     OneSignal.init(Config.ONE_SIGNAL_KEY, {
       kOSSettingsKeyAutoPrompt: true,

@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemeProvider defaults to user settings 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#F8F7F4",
+      "flex": 1,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "InterUI-Black",
+        "fontSize": 24,
+        "lineHeight": 27.6,
+      }
+    }
+  >
+    YOOO
+  </Text>
+</View>
+`;
+
+exports[`ThemeProvider renders in dark theme 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#000000",
+      "flex": 1,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#F8F7F4",
+        "fontFamily": "InterUI-Black",
+        "fontSize": 24,
+        "lineHeight": 27.6,
+      }
+    }
+  >
+    YOOO
+  </Text>
+</View>
+`;
+
+exports[`ThemeProvider renders in light theme 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#F8F7F4",
+      "flex": 1,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "InterUI-Black",
+        "fontSize": 24,
+        "lineHeight": 27.6,
+      }
+    }
+  >
+    YOOO
+  </Text>
+</View>
+`;

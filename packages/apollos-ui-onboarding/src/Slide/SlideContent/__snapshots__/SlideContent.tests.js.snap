@@ -1,13 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Onboarding Slide component should render a custom icon 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
-  forceInset={
-    Object {
-      "bottom": "always",
-    }
-  }
+<View
   style={
     Object {
       "marginBottom": 48,
@@ -170,17 +164,11 @@ exports[`The Onboarding Slide component should render a custom icon 1`] = `
       }
     />
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Onboarding Slide component should render a description 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
-  forceInset={
-    Object {
-      "bottom": "always",
-    }
-  }
+<View
   style={
     Object {
       "marginBottom": 48,
@@ -221,17 +209,11 @@ exports[`The Onboarding Slide component should render a description 1`] = `
       There's that word again: "heavy." Why are things so heavy in the future? Is there a problem with the Earth's gravitational pull?
     </Text>
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Onboarding Slide component should render a loading state 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
-  forceInset={
-    Object {
-      "bottom": "always",
-    }
-  }
+<View
   style={
     Object {
       "marginBottom": 48,
@@ -292,17 +274,11 @@ exports[`The Onboarding Slide component should render a loading state 1`] = `
       }
     />
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Onboarding Slide component should render a title 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
-  forceInset={
-    Object {
-      "bottom": "always",
-    }
-  }
+<View
   style={
     Object {
       "marginBottom": 48,
@@ -343,17 +319,11 @@ exports[`The Onboarding Slide component should render a title 1`] = `
       }
     />
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Onboarding Slide component should render accept additionall props 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
-  forceInset={
-    Object {
-      "bottom": "always",
-    }
-  }
+<View
   style={
     Object {
       "flex": 1,
@@ -397,17 +367,11 @@ exports[`The Onboarding Slide component should render accept additionall props 1
   <Text>
     Great Scott!
   </Text>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Onboarding Slide component should render an icon 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
-  forceInset={
-    Object {
-      "bottom": "always",
-    }
-  }
+<View
   style={
     Object {
       "marginBottom": 48,
@@ -570,17 +534,11 @@ exports[`The Onboarding Slide component should render an icon 1`] = `
       }
     />
   </View>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Onboarding Slide component should render children alone 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
-  forceInset={
-    Object {
-      "bottom": "always",
-    }
-  }
+<View
   style={
     Object {
       "marginBottom": 48,
@@ -622,17 +580,11 @@ exports[`The Onboarding Slide component should render children alone 1`] = `
   <Text>
     Great Scott!
   </Text>
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`The Onboarding Slide component should render with children 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
-  forceInset={
-    Object {
-      "bottom": "always",
-    }
-  }
+<View
   style={
     Object {
       "marginBottom": 48,
@@ -678,5 +630,5 @@ exports[`The Onboarding Slide component should render with children 1`] = `
   <Text>
     Great Scott!
   </Text>
-</RCTSafeAreaView>
+</View>
 `;

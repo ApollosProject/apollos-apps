@@ -738,7 +738,7 @@ exports[`ActionList should render items as "touchable via onPressActionItem 1`] 
     >
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -829,7 +829,7 @@ exports[`ActionList should render items as "touchable via onPressActionItem 1`] 
       </View>
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -920,7 +920,7 @@ exports[`ActionList should render items as "touchable via onPressActionItem 1`] 
       </View>
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1011,7 +1011,7 @@ exports[`ActionList should render items as "touchable via onPressActionItem 1`] 
       </View>
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1102,7 +1102,7 @@ exports[`ActionList should render items as "touchable via onPressActionItem 1`] 
       </View>
       <View
         accessible={true}
-        clickable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -1897,8 +1897,7 @@ exports[`ActionList should render with events 1`] = `
       </View>
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -2310,8 +2309,7 @@ exports[`ActionList should render with onPressActionListButton 1`] = `
       </View>
       <View
         accessible={true}
-        clickable={true}
-        isTVSelectable={true}
+        focusable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}

@@ -83,7 +83,6 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
       }
     }
     maxToRenderPerBatch={10}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
     onGestureHandlerEvent={[Function]}
@@ -120,7 +119,7 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -180,10 +179,9 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={
                     Array [
                       Object {
@@ -196,7 +194,6 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
@@ -456,7 +453,7 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -511,11 +508,10 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   hasTitleAndSummary={true}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={
                     Array [
                       Object {
@@ -528,7 +524,6 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                     Object {
                       "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
@@ -593,7 +588,7 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -653,10 +648,9 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={
                     Array [
                       Object {
@@ -669,7 +663,6 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
@@ -817,8 +810,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
     </View>
     <View
       accessible={true}
-      clickable={true}
-      isTVSelectable={true}
+      focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -942,7 +934,6 @@ exports[`The HorizontalCardListFeature component should render a loading state f
       }
     }
     maxToRenderPerBatch={10}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
     onGestureHandlerEvent={[Function]}
@@ -979,7 +970,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1039,17 +1030,15 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   isLoading={true}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={Array []}
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
@@ -1166,7 +1155,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1226,17 +1215,15 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   isLoading={true}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={Array []}
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
@@ -1353,7 +1340,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1413,17 +1400,15 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   isLoading={true}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={Array []}
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
@@ -1540,7 +1525,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1600,17 +1585,15 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   isLoading={true}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={Array []}
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
@@ -1727,7 +1710,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1787,17 +1770,15 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   isLoading={true}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={Array []}
                   style={
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
@@ -2024,7 +2005,6 @@ exports[`The HorizontalCardListFeature component should render a section title 1
       }
     }
     maxToRenderPerBatch={10}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
     onGestureHandlerEvent={[Function]}
@@ -2061,7 +2041,7 @@ exports[`The HorizontalCardListFeature component should render a section title 1
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2121,10 +2101,9 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={
                     Array [
                       Object {
@@ -2137,7 +2116,6 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
@@ -2397,7 +2375,7 @@ exports[`The HorizontalCardListFeature component should render a section title 1
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2452,11 +2430,10 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   hasTitleAndSummary={true}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={
                     Array [
                       Object {
@@ -2469,7 +2446,6 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                     Object {
                       "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
@@ -2534,7 +2510,7 @@ exports[`The HorizontalCardListFeature component should render a section title 1
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2594,10 +2570,9 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={
                     Array [
                       Object {
@@ -2610,7 +2585,6 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
@@ -2826,7 +2800,6 @@ exports[`The HorizontalCardListFeature component should render with a section su
       }
     }
     maxToRenderPerBatch={10}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
     onGestureHandlerEvent={[Function]}
@@ -2863,7 +2836,7 @@ exports[`The HorizontalCardListFeature component should render with a section su
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2923,10 +2896,9 @@ exports[`The HorizontalCardListFeature component should render with a section su
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={
                     Array [
                       Object {
@@ -2939,7 +2911,6 @@ exports[`The HorizontalCardListFeature component should render with a section su
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
@@ -3199,7 +3170,7 @@ exports[`The HorizontalCardListFeature component should render with a section su
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -3254,11 +3225,10 @@ exports[`The HorizontalCardListFeature component should render with a section su
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   hasTitleAndSummary={true}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={
                     Array [
                       Object {
@@ -3271,7 +3241,6 @@ exports[`The HorizontalCardListFeature component should render with a section su
                     Object {
                       "aspectRatio": 2,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
@@ -3336,7 +3305,7 @@ exports[`The HorizontalCardListFeature component should render with a section su
       >
         <View
           accessible={true}
-          clickable={true}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -3396,10 +3365,9 @@ exports[`The HorizontalCardListFeature component should render with a section su
                   }
                 }
               >
-                <RCTImageView
+                <Image
                   fadeDuration={250}
                   onLoad={[Function]}
-                  resizeMode="cover"
                   source={
                     Array [
                       Object {
@@ -3412,7 +3380,6 @@ exports[`The HorizontalCardListFeature component should render with a section su
                     Object {
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "overflow": "hidden",
                       "resizeMode": "cover",
                       "width": "100%",
                     }
