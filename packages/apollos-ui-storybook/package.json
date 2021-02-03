@@ -3,6 +3,9 @@
   "repository": "git://github.com/apollosproject/apollos-apps.git",
   "version": "2.0.0-beta.4",
   "main": "./src/index.js",
+  "engines": {
+    "node": ">=12.x.x"
+  },
   "peerDependencies": {
     "@apollosproject/ui-analytics": "*",
     "@apollosproject/ui-auth": "*",

@@ -2,6 +2,9 @@
   "name": "@apollosproject/ui-media-player",
   "description": "An opinionated media player for react-native apps from The Apollos Project",
   "main": "lib/commonjs/index",
+  "engines": {
+    "node": ">=12.x.x"
+  },
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
   "react-native": "src/index",
