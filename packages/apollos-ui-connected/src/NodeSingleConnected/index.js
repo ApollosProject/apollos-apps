@@ -43,13 +43,13 @@ NodeSingleInner.propTypes = {
   ImageWrapperComponent: PropTypes.any, // eslint-disable-line
 };
 
-const NodeSingleConnected = ({ nodeId, children, ...props }) => (
+const NodeSingleConnected = ({ nodeId, children, Component, ...props }) => (
   <>
     <BackgroundView>
       <StretchyView>
         {({ Stretchy, ...scrollViewProps }) => (
           <FlexedScrollView {...scrollViewProps}>
-            <NodeSingleInner
+            <Component
               nodeId={nodeId}
               ImageWrapperComponent={Stretchy}
               {...props}
@@ -65,9 +65,19 @@ const NodeSingleConnected = ({ nodeId, children, ...props }) => (
 NodeSingleConnected.propTypes = {
   nodeId: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+  Component: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 };
 
-const NodeSingleConnectedWithMedia = ({ nodeId, children, ...props }) => (
+NodeSingleConnected.defaultProps = {
+  Component: NodeSingleInner,
+};
+
+const NodeSingleConnectedWithMedia = ({
+  nodeId,
+  children,
+  Component,
+  ...props
+}) => (
   <Query
     query={GET_MEDIA}
     variables={{ nodeId }}
@@ -93,7 +103,7 @@ const NodeSingleConnectedWithMedia = ({ nodeId, children, ...props }) => (
               title: data.node.title,
             }}
           >
-            <NodeSingleInner
+            <Component
               nodeId={nodeId}
               ImageWrapperComponent={Noop}
               {...props}
@@ -108,7 +118,12 @@ const NodeSingleConnectedWithMedia = ({ nodeId, children, ...props }) => (
 
 NodeSingleConnectedWithMedia.propTypes = {
   nodeId: PropTypes.string,
+  Component: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+};
+
+NodeSingleConnectedWithMedia.defaultProps = {
+  Component: NodeSingleInner,
 };
 
 export default named('ui-connected.NodeSingleConnected')(
