@@ -1,3 +1,4 @@
+import { Op } from 'sequelize';
 import { parseGlobalId } from '@apollosproject/server-core';
 import { PostgresDataSource } from '../postgres';
 import { Visibility } from './model';
@@ -32,10 +33,17 @@ class CommentDataSource extends PostgresDataSource {
     return comment;
   }
 
-  async getForNode({ nodeId, nodeType }) {
-    const comments = await this.sequelize.models.comments.findAll({
-      where: { externalParentId: nodeId, externalParentType: nodeType },
-    });
+  async getForNode({ nodeId, nodeType, flagLimit = 0 }) {
+    const where = {
+      externalParentId: nodeId,
+      externalParentType: nodeType,
+    };
+
+    if (flagLimit > 0) {
+      where.flagCount = { [Op.lt]: flagLimit };
+    }
+
+    const comments = await this.sequelize.models.comments.findAll({ where });
 
     return comments;
   }
