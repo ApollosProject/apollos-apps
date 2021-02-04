@@ -5,10 +5,6 @@ import { split, createHttpLink } from '@apollo/client';
 import { getMainDefinition } from '@apollo/client/utilities';
 
 let uri = ApollosConfig.APP_DATA_URL || 'http://localhost:4000/graphql';
-const androidUri = ApollosConfig.ANDROID_URL || '10.0.2.2';
-
-// Android's emulator requires localhost network traffic to go through 10.0.2.2
-if (Platform.OS === 'android') uri = uri.replace('localhost', androidUri);
 
 export default split(
   ({ query }) => {
