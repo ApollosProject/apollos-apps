@@ -65,6 +65,17 @@ storiesOf('ui-htmlview/HTMLView', module)
       </SafeAreaView>
     </ScrollView>
   ))
+  .add('local image urls', () => (
+    <ScrollView>
+      <SafeAreaView>
+        <HTMLView>
+          {`
+            <p>You shouldn't see an image below <img src="/images/fake-image.png"></img></p>
+            `}
+        </HTMLView>
+      </SafeAreaView>
+    </ScrollView>
+  ))
   .add('spans with spaces in between', () => (
     <ScrollView>
       <SafeAreaView>

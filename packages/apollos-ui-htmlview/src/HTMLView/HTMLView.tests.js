@@ -175,6 +175,19 @@ describe('the HTMLView component', () => {
 
     expect(tree).toMatchSnapshot();
   });
+  it('should not render local images', () => {
+    const tree = renderer.create(
+      <Providers>
+        <HTMLView>
+          {`
+            <p>You shouldn't see an image below <img src="/images/fake-image.png"></img></p>
+            `}
+        </HTMLView>
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
   it('should not render an image inside an anchor', () => {
     const tree = renderer.create(
       <Providers>
