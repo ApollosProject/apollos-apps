@@ -1324,7 +1324,19 @@ exports[`the HTMLView component should render a block quote 1`] = `
         }
       }
     >
-      <Text>
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Italic",
+            "fontSize": 16,
+            "lineHeight": 26,
+            "textAlign": "center",
+          }
+        }
+      >
         <Text>
           Testings
         </Text>
