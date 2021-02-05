@@ -74,20 +74,9 @@
   version "0.0.0"
   uid ""
 
-"@apollosproject/ui-kit@^2.0.0-2.0.0-alpha.16.0":
-  version "2.0.0-beta.2"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-kit/-/ui-kit-2.0.0-beta.2.tgz#42a0dce3f3f484ec7bde351a361268f9b263e2c9"
-  integrity sha512-5znYxWrXoyEGiSxADr68PD1qOPJGCKAjVYAVMVV1YZBJKTnga6ek6n4UcsTNdBEXqf5IjyfhP/73fX3bZesB6g==
-  dependencies:
-    "@react-native-community/blur" "^3.6.0"
-    color "^3.1.0"
-    lodash "^4.17.11"
-    moment "^2.24.0"
-    numeral "^2.0.6"
-    react-native-modal-datetime-picker "8.7.1"
-    react-native-tab-view "1.0.2"
-    recompose "^0.30.0"
-    rn-placeholder "1.2.0"
+"@apollosproject/ui-kit@^2.0.0":
+  version "0.0.0"
+  uid ""
 
 "@apollosproject/ui-kit@link:../packages/apollos-ui-kit":
   version "0.0.0"
