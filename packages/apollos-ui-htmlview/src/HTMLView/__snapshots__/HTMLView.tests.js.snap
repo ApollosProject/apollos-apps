@@ -1241,6 +1241,43 @@ exports[`the HTMLView component should not render an image inside an anchor 1`] 
 </View>
 `;
 
+exports[`the HTMLView component should not render local images 1`] = `
+<View
+  style={
+    Object {
+      "paddingBottom": 18,
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 18,
+        }
+      }
+    >
+      <Text
+        bold={false}
+        italic={false}
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 16,
+            "lineHeight": 26,
+          }
+        }
+      >
+        <Text>
+          You shouldn't see an image below 
+        </Text>
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
 exports[`the HTMLView component should render a block quote 1`] = `
 <View
   style={

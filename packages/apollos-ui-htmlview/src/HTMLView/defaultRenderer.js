@@ -23,6 +23,10 @@ const LINE_BREAK = '\n';
 const TEXT_TYPES_THAT_SHOULD_WRAP = [Text, BodyText, ButtonLink];
 const ILLEGAL_TEXT_CHILDREN_TYPES = [ConnectedImage, View];
 
+// Detects if the image urls are relative.
+// Example /images/foo.png vs //rock.com/images/foo.png
+export const isLocalImg = (src) => src.startsWith('/') && !src.startsWith('//');
+
 export const stripIllegalMarkup = (children) =>
   Children.toArray(children).filter(
     (child) => !ILLEGAL_TEXT_CHILDREN_TYPES.includes(child.type)
@@ -163,6 +167,8 @@ const defaultRenderer = (node, { children }, handlePressAnchor) => {
       const source = {
         url: node.attribs.src,
       };
+
+      if (source.url && isLocalImg(source.url)) return null;
 
       const imgStyles = {
         resizeMode: 'contain',
