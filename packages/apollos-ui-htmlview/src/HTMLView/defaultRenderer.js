@@ -110,7 +110,7 @@ const defaultRenderer = (node, { children }, handlePressAnchor) => {
     case 'blockquote':
       return (
         <BlockQuote>
-          {wrapTextChildren({ children, Component: Text, strip: false })}
+          {wrapTextChildren({ children, Component: BodyText, strip: false })}
         </BlockQuote>
       );
     case 'h1':

@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrollView, SafeAreaView } from 'react-native';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import PropTypes from 'prop-types';
+import { BackgroundView } from '@apollosproject/ui-kit';
 
 import HTMLView from '.';
 
@@ -32,6 +33,7 @@ class MagicChangingHtml extends React.Component {
 }
 
 storiesOf('ui-htmlview/HTMLView', module)
+  .addDecorator((story) => <BackgroundView>{story()}</BackgroundView>)
   .add('Example', () => (
     <ScrollView>
       <SafeAreaView>
@@ -82,6 +84,17 @@ storiesOf('ui-htmlview/HTMLView', module)
         <HTMLView>
           {`
             <p><span>There are some bits of scripture</span> <span>where the spaces between words</span> <span>exist outside spans</span></p>
+            `}
+        </HTMLView>
+      </SafeAreaView>
+    </ScrollView>
+  ))
+  .add('blockquotes', () => (
+    <ScrollView>
+      <SafeAreaView>
+        <HTMLView>
+          {`
+            <p><blockquote>Ever wish your home life felt as good as it looks on Instagram? If so, you’re not alone.</blockquote></p>
             `}
         </HTMLView>
       </SafeAreaView>
