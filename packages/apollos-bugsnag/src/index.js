@@ -47,9 +47,9 @@ export class BugsnagPlugin {
                 location: JSON.stringify(error.locations),
                 variables: request.variables,
                 operationName: request.operationName,
-                headers,
               },
               'Auth Error Info': get(error, 'extensions.exception.userContext'),
+              Headers: headers,
             },
             (err) => {
               const ip = get(headers, 'fastly-client-ip', 'unknown');
