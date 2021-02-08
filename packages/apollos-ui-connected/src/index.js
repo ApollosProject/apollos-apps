@@ -2,6 +2,10 @@ export ActionListFeatureConnected, {
   ActionListFeature,
   GET_ACTION_LIST_FEATURE,
 } from './ActionListFeatureConnected';
+export AddCommentFeatureConnected, {
+  GET_ADD_COMMENT_FEATURE,
+  ADD_COMMENT,
+} from './AddCommentFeatureConnected';
 export ContentCardConnected, {
   ContentCardComponentMapper,
   contentCardComponentMapper, // TODO: Update to `ContentCardComponentMapper` export below is for temporary backwards compatibility.

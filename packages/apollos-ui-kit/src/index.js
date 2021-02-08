@@ -5,6 +5,7 @@ export ActivityIndicator, {
   InlineActivityIndicator,
 } from './ActivityIndicator';
 export ActionBar, { ActionBarItem } from './ActionBar';
+export AddCommentInput from './AddCommentInput';
 export Avatar, { AvatarList, AvatarCloud } from './Avatar';
 export BackgroundImageBlur from './BackgroundImageBlur';
 export BackgroundView from './BackgroundView';
