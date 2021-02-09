@@ -14,10 +14,10 @@ class CommentDataSource extends PostgresDataSource {
     const [comment, created] = await this.model.findOrCreate({
       where: {
         text,
-        externalParentId: id,
+        externalParentId: String(id),
         externalParentType: __type,
         externalParentSource: 'rock',
-        externalPersonId: currentUser.id,
+        externalPersonId: String(currentUser.id),
       },
       defaults: {
         visibility,
@@ -35,7 +35,7 @@ class CommentDataSource extends PostgresDataSource {
 
   async getForNode({ nodeId, nodeType, flagLimit = 0 }) {
     const where = {
-      externalParentId: nodeId,
+      externalParentId: String(nodeId),
       externalParentType: nodeType,
     };
 

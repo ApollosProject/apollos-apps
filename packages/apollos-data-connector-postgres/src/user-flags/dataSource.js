@@ -12,9 +12,9 @@ class UserFlagDataSource extends PostgresDataSource {
     // Record the flag unless the user has already flagged this comment, in which case simply ignore it.
     const [, created] = await this.model.findOrCreate({
       where: {
-        nodeId: id,
+        nodeId: String(id),
         nodeType: __type,
-        externalPersonId: currentUser.id,
+        externalPersonId: String(currentUser.id),
       },
     });
 
