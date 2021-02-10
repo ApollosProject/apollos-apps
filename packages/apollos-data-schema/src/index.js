@@ -991,7 +991,7 @@ export const commentSchema = gql`
     id: ID!
     order: Int
 
-    comments: [Comment]
+    comments: [Comment] @cacheControl(maxAge: 0)
   }
 
   type AddCommentFeature implements Feature & Node {

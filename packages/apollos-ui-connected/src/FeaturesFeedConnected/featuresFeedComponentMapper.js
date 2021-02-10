@@ -13,6 +13,7 @@ import ScriptureFeature from '../features/ScriptureFeature';
 import TextFeature from '../features/TextFeature';
 import WebviewFeature from '../features/WebviewFeature';
 import CommentListFeatureConnected from '../CommentListFeatureConnected';
+import AddCommentFeatureConnected from '../AddCommentFeatureConnected';
 
 const MAPPINGS = {
   ActionListFeature: ActionListFeatureConnected,
@@ -26,6 +27,7 @@ const MAPPINGS = {
   PrayerListFeature: PrayerListFeatureConnected,
   VerticalPrayerListFeature: VerticalPrayerListFeatureConnected,
   CommentListFeature: CommentListFeatureConnected,
+  AddCommentFeature: AddCommentFeatureConnected,
   ScriptureFeature,
   TextFeature,
   WebviewFeature,
