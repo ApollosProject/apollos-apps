@@ -13,7 +13,7 @@ const sequelizeConfigOptions =
 const sequelize = new Sequelize(
   ApollosConfig?.DATABASE?.URL ||
     `sqlite:${process.env.PWD}/${process.env.NODE_ENV || 'development'}.db`,
-  sequelizeConfigOptions
+  { ...sequelizeConfigOptions, ...(ApollosConfig?.DATABASE?.OPTIONS || {}) }
 );
 
 class PostgresDataSource {
