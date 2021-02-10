@@ -1,5 +1,4 @@
 import React from 'react';
-import { Text } from 'react-native';
 import PropTypes from 'prop-types';
 
 import { useQuery } from '@apollo/client';
@@ -14,7 +13,7 @@ const VerticalPrayerListFeatureConnected = ({ featureId, refetchRef }) => {
       variables: { featureId },
     }
   );
-  if (error || loading) return <Text>hello</Text>;
+  if (error || loading) return null;
   if (featureId && refetch && refetchRef)
     refetchRef({ refetch, id: featureId });
   return (
