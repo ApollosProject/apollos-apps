@@ -12,6 +12,8 @@ import {
 import { times } from 'lodash';
 
 import Comment from '../Comment';
+import { ThemeMixin } from '../theme';
+import BackgroundView from '../BackgroundView';
 import AddCommentInput from './AddCommentInput';
 
 const fakeData = [
@@ -39,6 +41,17 @@ storiesOf('ui-kit/AddCommentInput', module)
         }}
       />
     </View>
+  ))
+  .add('dark mode', () => (
+    <ThemeMixin mixin={{ type: 'dark' }}>
+      <BackgroundView style={{ justifyContent: 'flex-end', flex: 1 }}>
+        <AddCommentInput
+          profile={{
+            image: { uri: 'https://picsum.photos/200' },
+          }}
+        />
+      </BackgroundView>
+    </ThemeMixin>
   ))
   .add('with content and comments', () => (
     <KeyboardAvoidingView behavior={'padding'} style={{ flex: 1 }}>
