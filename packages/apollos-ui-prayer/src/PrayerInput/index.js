@@ -16,6 +16,7 @@ const Input = styled(
   ({ theme }) => ({
     minHeight: theme.sizing.baseUnit * 3.25, // 🧙‍This magic numbers fixes jitter when you begin typing. At least one `baseUnit` is to ofset `paddingTop` on `Prompt`
     paddingVertical: 0, // fixes jitter when you begin typing on Android
+    color: theme.colors.text.primary,
   }),
   'ui-prayer.PrayerInput.Input'
 )(TextInput);
