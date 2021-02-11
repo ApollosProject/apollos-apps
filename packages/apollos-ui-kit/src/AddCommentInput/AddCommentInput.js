@@ -53,8 +53,9 @@ const AddCommentPrompt = styled(
 )(H5);
 
 const AddCommentTextInput = styled(
-  ({ theme: { sizing } }) => ({
+  ({ theme: { sizing, colors } }) => ({
     minHeight: sizing.baseUnit * 4,
+    color: colors.text.primary,
   }),
   'ui-kit.AddCommentInput.AddCommentTextInput'
 )(TextInput);
