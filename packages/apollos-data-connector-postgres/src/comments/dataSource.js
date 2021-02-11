@@ -6,7 +6,7 @@ import { Visibility } from './model';
 class CommentDataSource extends PostgresDataSource {
   modelName = 'comments';
 
-  async addComment({ text, parentId, visibility = Visibility.PRIVATE }) {
+  async addComment({ text, parentId, visibility = Visibility.PUBLIC }) {
     const currentUser = await this.context.dataSources.Auth.getCurrentPerson();
 
     const { id, __type } = parseGlobalId(parentId);
@@ -34,9 +34,22 @@ class CommentDataSource extends PostgresDataSource {
   }
 
   async getForNode({ nodeId, nodeType, flagLimit = 0 }) {
+    let currentUser;
+    try {
+      currentUser = await this.context.dataSources.Auth.getCurrentPerson();
+    } catch {
+      // no user signed in, that's fine.
+    }
+
     const where = {
       externalParentId: String(nodeId),
       externalParentType: nodeType,
+      [Op.or]: [
+        { visibility: Visibility.PUBLIC }, // Show public journals
+        ...(currentUser
+          ? [{ externalPersonId: currentUser.id, externalParentSource: 'rock' }]
+          : []), // Or show journals that belong to you.
+      ],
     };
 
     if (flagLimit > 0) {
