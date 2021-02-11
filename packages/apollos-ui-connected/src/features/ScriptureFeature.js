@@ -8,11 +8,13 @@ import ShareButtonConnected from '../ShareButtonConnected';
 const ScriptureFeature = ({
   scriptures,
   sharing: { message } = {},
+  title,
   isLoading,
   contentId,
   nodeId,
 }) => (
   <ActionCard
+    label={title}
     icon={'text'}
     action={
       <ShareButtonConnected message={message} itemId={nodeId || contentId} />
@@ -44,6 +46,7 @@ ScriptureFeature.propTypes = {
   ),
   sharing: PropTypes.shape({ message: PropTypes.string }),
   contentId: PropTypes.string,
+  title: PropTypes.string,
   nodeId: PropTypes.string,
 };
 

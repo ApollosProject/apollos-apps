@@ -7,7 +7,7 @@ import GET_NODE_FEED from './getNodeFeatures';
 
 import NodeFeaturesConnected from './NodeFeaturesConnected';
 
-describe('ContentSingleFeaturesConnected', () => {
+describe('NodeFeaturesConnected', () => {
   it('should render', async () => {
     const nodeMock = {
       request: {
@@ -51,27 +51,17 @@ describe('ContentSingleFeaturesConnected', () => {
               },
               {
                 id: 'TextFeature:1',
+                title: 'title',
                 body: 'this is another, text feature',
                 sharing: {
                   message: 'this is another, text feature',
                   __typename: 'SharableFeature',
                 },
-                scriptures: [
-                  {
-                    id: 'Scripture:2',
-                    html:
-                      '<p class="p"><span data-number="16" class="v">16</span><span class="wj">¶ For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.</span> </p>',
-                    reference: 'Matthew 4:10',
-                    copyright:
-                      'PUBLIC DOMAIN except in the United Kingdom, where a Crown Copyright applies to printing the KJV. See http://www.cambridge.org/about-us/who-we-are/queens-printers-patent',
-                    version: 'KJV',
-                    __typename: 'Scripture',
-                  },
-                ],
                 __typename: 'TextFeature',
               },
               {
                 id: 'ScriptureFeature:3',
+                title: 'title',
                 body: 'this is another, scripture feature',
                 sharing: {
                   message:
@@ -94,6 +84,7 @@ describe('ContentSingleFeaturesConnected', () => {
               },
               {
                 id: 'ScriptureFeature:4',
+                title: 'title',
                 body: 'this is another, scripture feature',
                 sharing: {
                   message:

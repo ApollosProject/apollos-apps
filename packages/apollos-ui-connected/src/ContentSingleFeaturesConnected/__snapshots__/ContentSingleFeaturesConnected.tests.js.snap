@@ -193,6 +193,39 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
           }
         }
       >
+        <View
+          flexed={false}
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": null,
+              "flexDirection": "row",
+              "paddingBottom": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "paddingRight": 4,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 18,
+                }
+              }
+              tint="#00676D"
+            >
+              title
+            </Text>
+          </View>
+        </View>
         <Text
           bold={false}
           italic={false}
@@ -788,6 +821,39 @@ exports[`ContentSingleFeaturesConnected should render with nodeId 1`] = `
           }
         }
       >
+        <View
+          flexed={false}
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": null,
+              "flexDirection": "row",
+              "paddingBottom": 16,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "paddingRight": 4,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 18,
+                }
+              }
+              tint="#00676D"
+            >
+              title
+            </Text>
+          </View>
+        </View>
         <Text
           bold={false}
           italic={false}

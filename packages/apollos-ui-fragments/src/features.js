@@ -2,6 +2,7 @@ import gql from 'graphql-tag';
 
 const TEXT_FEATURE_FRAGMENT = gql`
   fragment TextFeatureFragment on TextFeature {
+    title
     body
     id
     sharing {
@@ -85,6 +86,8 @@ const LITE_FEATURES_FRAGMENT = gql`
       subtitle
     }
     ... on TextFeature {
+      # The whole fragment is currently included b/c these nodes don't fetch their own content.
+      title
       body
       sharing {
         message
@@ -92,6 +95,7 @@ const LITE_FEATURES_FRAGMENT = gql`
     }
     ... on ScriptureFeature {
       # The whole fragment is currently included b/c these nodes don't fetch their own content.
+      title
       sharing {
         message
       }

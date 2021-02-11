@@ -6,12 +6,11 @@ export default gql`
     scope: CacheControlScope
   ) on FIELD_DEFINITION | OBJECT | INTERFACE
 
-  directive @client on FIELD
-
   enum ACTION_FEATURE_ACTION {
     READ_CONTENT
     READ_EVENT
     OPEN_URL
+    OPEN_AUTHENTICATED_URL
     OPEN_NODE
     OPEN_CHANNEL
   }
@@ -47,6 +46,14 @@ export default gql`
     subtitle: String
     actions: [ActionListAction]
     primaryAction: FeatureAction
+  }
+
+  type AddCommentFeature implements Feature & Node {
+    id: ID!
+    order: Int
+    relatedNode: Node!
+    addPrompt: String
+    initialPrompt: String
   }
 
   input AnalyticsDeviceInfo {
@@ -160,6 +167,25 @@ export default gql`
   """
   scalar Color
 
+  type Comment implements Node {
+    id: ID!
+    person: Person
+    text: String
+    visibility: CommentVisibility
+  }
+
+  type CommentListFeature implements Feature & Node {
+    id: ID!
+    order: Int
+    comments: [Comment]
+  }
+
+  enum CommentVisibility {
+    PUBLIC
+    PRIVATE
+    FOLLOWERS
+  }
+
   type ContentChannel implements Node {
     id: ID!
     name: String
@@ -183,6 +209,7 @@ export default gql`
   interface ContentItem {
     id: ID!
     title(hyphenated: Boolean): String
+    publishDate: String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
@@ -236,6 +263,7 @@ export default gql`
   type ContentSeriesContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ProgressNode & LikableNode & ShareableNode & FeaturesNode {
     id: ID!
     title(hyphenated: Boolean): String
+    publishDate: String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
@@ -271,6 +299,7 @@ export default gql`
   type DevotionalContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ScriptureNode & LikableNode & ShareableNode {
     id: ID!
     title(hyphenated: Boolean): String
+    publishDate: String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
@@ -427,6 +456,7 @@ export default gql`
   type MediaContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ScriptureNode & LikableNode & ShareableNode {
     id: ID!
     title(hyphenated: Boolean): String
+    publishDate: String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
@@ -491,6 +521,12 @@ export default gql`
     updateUserPushSettings(input: PushSettingsInput!): Person
     updateUserCampus(campusId: String!): Person
     addPrayer(text: String!, isAnonymous: Boolean): PrayerRequest
+    addComment(
+      parentId: ID!
+      text: String!
+      visibility: CommentVisibility
+    ): Comment
+    flagComment(commentId: ID!): Comment
   }
 
   interface Node {
@@ -548,6 +584,7 @@ export default gql`
     devices: [Device]
     campus: Campus
     groups(type: GROUP_TYPE, asLeader: Boolean): [Group]
+    prayers: [PrayerRequest]
   }
 
   type PrayerListFeature implements Feature & Node {
@@ -582,6 +619,7 @@ export default gql`
     node(id: ID!): Node
     likedContent(first: Int, after: String): ContentItemsConnection
     contentChannels: [ContentChannel]
+      @deprecated(reason: "No longer supported.")
     campaigns: ContentItemsConnection
     userFeed(first: Int, after: String): ContentItemsConnection
     personaFeed(first: Int, after: String): ContentItemsConnection
@@ -618,6 +656,7 @@ export default gql`
   type ScriptureFeature implements Feature & Node {
     id: ID!
     order: Int
+    title: String
     scriptures: [Scripture]
     sharing: SharableFeature
   }
@@ -669,6 +708,7 @@ export default gql`
   type TextFeature implements Feature & Node {
     id: ID!
     order: Int
+    title: String
     body: String
     sharing: SharableFeature
   }
@@ -698,6 +738,7 @@ export default gql`
   type UniversalContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & LikableNode & ShareableNode {
     id: ID!
     title(hyphenated: Boolean): String
+    publishDate: String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
@@ -733,9 +774,6 @@ export default gql`
     value: String!
   }
 
-  """
-  The Upload scalar type represents a file upload.
-  """
   scalar Upload
 
   type Url implements Node {
@@ -763,6 +801,14 @@ export default gql`
     cards: [CardListItem]
   }
 
+  type VerticalPrayerListFeature implements Feature & Node {
+    id: ID!
+    order: Int
+    title: String
+    subtitle: String
+    prayers: [PrayerRequest]
+  }
+
   type VideoMedia implements Media {
     name: String
     key: String
@@ -781,14 +827,15 @@ export default gql`
   type WebviewFeature implements Feature & Node {
     id: ID!
     order: Int
-    linkText: String
     title: String
+    linkText: String
     url: String
   }
 
   type WeekendContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & LikableNode & LiveNode & ShareableNode & FeaturesNode {
     id: ID!
     title(hyphenated: Boolean): String
+    publishDate: String
     coverImage: ImageMedia
     images: [ImageMedia]
     videos: [VideoMedia]
