@@ -1,12 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  KeyboardAvoidingView,
-  Platform,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-} from 'react-native';
+import { KeyboardAvoidingView, ScrollView, StyleSheet } from 'react-native';
 import { get } from 'lodash';
 import {
   BackgroundView,
@@ -39,6 +33,8 @@ const FullScreenGradientBackground = styled(
   'ui-auth.Entry.FullScreenGradientBackground'
 )(BackgroundView);
 
+const FlexedKeyboardAvoidingView = styled({ flex: 1 })(KeyboardAvoidingView);
+
 const Entry = ({
   BackgroundComponent,
   alternateLoginText,
@@ -62,79 +58,78 @@ const Entry = ({
   const handleOnChangeText = (text) => setFieldValue(inputType, text);
 
   return (
-    <KeyboardAvoidingView
-      style={StyleSheet.absoluteFill}
-      behavior={'padding'}
-      keyboardVerticalOffset={
-        Platform.OS === 'android' ? StatusBar.currentHeight : 0
-      }
-    >
+    <>
       {React.isValidElement(BackgroundComponent) ? (
         BackgroundComponent
       ) : (
         <BackgroundComponent />
       )}
-      <FlexedSafeAreaView>
-        <ScrollView keyboardShouldPersistTaps="always">
-          <PaddedView>
-            <TitleText>{authTitleText}</TitleText>
-            <PromptText padded>{promptText}</PromptText>
-            <TabWrapper>
-              <TabContainer alternateLogin={alternateLogin}>
-                <TabButtonWrapper>
-                  <Touchable>
-                    <TabButton isActive>
-                      <TabButtonText isActive>{tabTitle}</TabButtonText>
-                    </TabButton>
-                  </Touchable>
-                </TabButtonWrapper>
-
-                {onPressAlternateLogin ? (
+      <FlexedSafeAreaView
+        style={StyleSheet.absoluteFillObject}
+        edges={['right', 'top', 'left']}
+      >
+        <FlexedKeyboardAvoidingView behavior={'padding'}>
+          <ScrollView keyboardShouldPersistTaps="always">
+            <PaddedView>
+              <TitleText>{authTitleText}</TitleText>
+              <PromptText padded>{promptText}</PromptText>
+              <TabWrapper>
+                <TabContainer alternateLogin={alternateLogin}>
                   <TabButtonWrapper>
-                    <Touchable onPress={onPressAlternateLogin}>
-                      <TabButton>
-                        <TabButtonText>{alternateLoginText}</TabButtonText>
+                    <Touchable>
+                      <TabButton isActive>
+                        <TabButtonText isActive>{tabTitle}</TabButtonText>
                       </TabButton>
                     </Touchable>
                   </TabButtonWrapper>
-                ) : null}
-              </TabContainer>
-              <TabCard>
-                <PaddedView>
-                  <TextInput
-                    autoComplete={inputAutoComplete}
-                    autoFocus
-                    enablesReturnKeyAutomatically
-                    error={get(errors, inputType)}
-                    label={inputLabel}
-                    labelColor={theme.colors.text.tertiary}
-                    onChangeText={handleOnChangeText}
-                    onSubmitEditing={onPressNext}
-                    returnKeyType={'next'}
-                    type={inputType}
-                    value={get(values, inputType)}
-                  />
-                  <LegalText>{policyInfo}</LegalText>
-                </PaddedView>
-              </TabCard>
-            </TabWrapper>
-          </PaddedView>
-        </ScrollView>
 
-        {onPressNext ? (
-          <PaddedView>
-            <Button
-              onPress={onPressNext}
-              disabled={disabled}
-              loading={isLoading}
-              title={'Next'}
-              type={'primary'}
-              pill={false}
-            />
-          </PaddedView>
-        ) : null}
+                  {onPressAlternateLogin ? (
+                    <TabButtonWrapper>
+                      <Touchable onPress={onPressAlternateLogin}>
+                        <TabButton>
+                          <TabButtonText>{alternateLoginText}</TabButtonText>
+                        </TabButton>
+                      </Touchable>
+                    </TabButtonWrapper>
+                  ) : null}
+                </TabContainer>
+                <TabCard>
+                  <PaddedView>
+                    <TextInput
+                      autoComplete={inputAutoComplete}
+                      autoFocus
+                      enablesReturnKeyAutomatically
+                      error={get(errors, inputType)}
+                      label={inputLabel}
+                      labelColor={theme.colors.text.tertiary}
+                      onChangeText={handleOnChangeText}
+                      onSubmitEditing={onPressNext}
+                      returnKeyType={'next'}
+                      type={inputType}
+                      value={get(values, inputType)}
+                    />
+                    <LegalText>{policyInfo}</LegalText>
+                  </PaddedView>
+                </TabCard>
+              </TabWrapper>
+            </PaddedView>
+          </ScrollView>
+
+          {onPressNext ? (
+            <PaddedView>
+              <Button
+                onPress={onPressNext}
+                disabled={disabled}
+                loading={isLoading}
+                title={'Next'}
+                type={'primary'}
+                pill={false}
+              />
+            </PaddedView>
+          ) : null}
+        </FlexedKeyboardAvoidingView>
       </FlexedSafeAreaView>
-    </KeyboardAvoidingView>
+    </>
   );
 };
 
