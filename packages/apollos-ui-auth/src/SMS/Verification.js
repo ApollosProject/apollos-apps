@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { KeyboardAvoidingView, StyleSheet, ScrollView } from 'react-native';
+import {
+  KeyboardAvoidingView,
+  StyleSheet,
+  ScrollView,
+  Platform,
+} from 'react-native';
 import { get } from 'lodash';
 
 import {
@@ -8,10 +13,10 @@ import {
   PaddedView,
   TextInput,
   BackgroundView,
-  useStatusBarHeight,
   styled,
 } from '@apollosproject/ui-kit';
 
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { FlexedSafeAreaView, TitleText, PromptText } from '../styles';
 
 const FlexedKeyboardAvoidingView = styled({ flex: 1 })(KeyboardAvoidingView);
@@ -35,6 +40,10 @@ const Verification = ({
   values,
   BackgroundComponent,
 }) => {
+  // We need to  the avoiding view by by header height on iOS so the button doesn't appear under the keyboard.
+  // https://github.com/software-mansion/react-native-screens/blob/bcd5e4d8ea861b78bff7747162e6df7163ed4e1f/createNativeStackNavigator/README.md
+  const statusBarInset = useSafeAreaInsets().top; // inset of the status bar
+  const headerInset = statusBarInset + 44; // inset to use for a small header since it's frame is equal to 44 + the frame of status bar
   return (
     <>
       {React.isValidElement(BackgroundComponent) ? (
@@ -43,7 +52,10 @@ const Verification = ({
         <BackgroundComponent />
       )}
       <FlexedSafeAreaView style={StyleSheet.absoluteFillObject}>
-        <FlexedKeyboardAvoidingView behavior={'padding'}>
+        <FlexedKeyboardAvoidingView
+          behavior={'padding'}
+          keyboardVerticalOffset={Platform.OS === 'ios' ? headerInset : 0}
+        >
           <ScrollView>
             <PaddedView vertical={false}>
               <TitleText>{confirmationTitleText}</TitleText>
