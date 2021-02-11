@@ -6,7 +6,7 @@ import { getHasPrompted, getPushPermissions } from './permissionUtils';
 export const PushContext = React.createContext({
   hasPrompted: true,
   hasPushPermission: true,
-  loading: false,
+  loading: true,
   checkPermissions: () => {},
 });
 
@@ -18,23 +18,26 @@ class Provider extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      loading: false,
+      loading: true,
       hasPrompted: null,
       hasPushPermission: null,
       checkPermissions: () => {},
     };
   }
 
-  componentDidMount() {
-    getPushPermissions().then((permissionRes) => {
-      getHasPrompted().then((promptRes) => {
-        this.setState({
-          hasPrompted: promptRes,
-          hasPushPermission: permissionRes,
-          checkPermissions: this.update,
-        });
+  async componentDidMount() {
+    try {
+      const permissionRes = await getPushPermissions();
+      const promptRes = await getHasPrompted();
+      this.setState({
+        hasPrompted: promptRes,
+        hasPushPermission: permissionRes,
+        checkPermissions: this.update,
+        loading: false,
       });
-    });
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   update = () => {
