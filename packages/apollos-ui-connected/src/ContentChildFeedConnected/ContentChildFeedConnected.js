@@ -7,8 +7,10 @@ import HorizontalFeedConnected from '../HorizontalFeedConnected';
 import GET_CONTENT_CHILD_SIBLINGS from './getContentChildSiblings';
 
 const ContentChildNodeConnected = ({ nodeId, ...props }) => {
-  const loadingEnabled =
-    nodeId && nodeImplementsType(nodeId, 'ContentChildNode');
+  const loadingEnabled = nodeImplementsType(nodeId, 'ContentChildNode');
+
+  if (!nodeId && !loadingEnabled) return null;
+
   return (
     <HorizontalFeedConnected
       {...props}
