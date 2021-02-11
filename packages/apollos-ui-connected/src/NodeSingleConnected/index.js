@@ -2,7 +2,6 @@ import React from 'react';
 import { Animated, View } from 'react-native';
 import PropTypes from 'prop-types';
 import { Query } from '@apollo/client/react/components';
-import ApollosConfig from '@apollosproject/config';
 
 import {
   styled,
@@ -23,17 +22,6 @@ import GET_MEDIA from './getMedia';
 
 const Noop = () => null;
 
-const getType = (nodeId) => (nodeId ? nodeId.split(':')[0] : '');
-
-const nodeImplementsType = (nodeId, type) =>
-  ApollosConfig.TYPEMAP[getType(nodeId)].includes(type);
-
-const isChildNode = (nodeId) =>
-  nodeId && nodeImplementsType(nodeId, 'ContentChildNode');
-
-const isParentNode = (nodeId) =>
-  nodeId && nodeImplementsType(nodeId, 'ContentParentNode');
-
 const FlexedScrollView = styled({ flex: 1 })(Animated.ScrollView);
 
 const NodeSingleInner = ({ nodeId, ImageWrapperComponent, ...props }) => (
@@ -44,18 +32,9 @@ const NodeSingleInner = ({ nodeId, ImageWrapperComponent, ...props }) => (
     />
     <ScriptureNodeConnected nodeId={nodeId} />
     <NodeFeaturesConnected nodeId={nodeId} />
-    <UpNextButtonConnected
-      nodeId={nodeId}
-      loadingEnabled={isParentNode(nodeId)}
-    />
-    <ContentParentFeedConnected
-      nodeId={nodeId}
-      loadingEnabled={isChildNode(nodeId)}
-    />
-    <ContentChildFeedConnected
-      nodeId={nodeId}
-      loadingEnabled={isParentNode(nodeId)}
-    />
+    <UpNextButtonConnected nodeId={nodeId} />
+    <ContentParentFeedConnected nodeId={nodeId} />
+    <ContentChildFeedConnected nodeId={nodeId} />
   </View>
 );
 

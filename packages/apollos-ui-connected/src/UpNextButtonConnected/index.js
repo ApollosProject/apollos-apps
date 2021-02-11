@@ -11,6 +11,7 @@ import { Query } from '@apollo/client/react/components';
 import { get } from 'lodash';
 import { useNavigation } from '@react-navigation/native';
 import PropTypes from 'prop-types';
+import nodeImplementsType from '../utils/nodeImplementsType';
 import GET_CONTENT_UP_NEXT from './getContentUpNext';
 
 const UpNextButton = styled(
@@ -43,9 +44,10 @@ const UpNextButtonConnected = ({
   Component,
   contentId,
   nodeId, // You can pass either nodeId or contentId.
-  loadingEnabled,
 }) => {
   const navigation = useNavigation();
+  const loadingEnabled =
+    nodeId && nodeImplementsType(nodeId, 'ContentParentNode');
 
   // We want to avoid rendering the Query component if we don't have the ID.
   // Running the query without a contentId throws an error, and the query won't rerun.
@@ -108,7 +110,6 @@ UpNextButtonConnected.propTypes = {
   ]),
   contentId: PropTypes.string,
   nodeId: PropTypes.string,
-  loadingEnabled: PropTypes.bool,
 };
 
 UpNextButtonConnected.defaultProps = {
@@ -120,7 +121,6 @@ UpNextButtonConnected.defaultProps = {
     </>
   ),
   Component: UpNextButton,
-  loadingEnabled: true,
 };
 
 export default named('ui-connected.UpNextButtonConnected')(
