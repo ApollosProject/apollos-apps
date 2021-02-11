@@ -18,6 +18,7 @@ const featureFeedMock = {
     {
       id: 'ScriptureFeature:123',
       __typename: 'ScriptureFeature',
+      title: 'Memory Verse',
       scriptures: [
         {
           id: 'Scripture:123',
