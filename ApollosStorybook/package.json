@@ -3,11 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
+    "android": "react-native run-android && yarn start",
     "ios": "react-native run-ios",
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "prestart": "yarn generate-stories",
-    "postinstall": "jetify && yarn pods",
+    "postinstall": "run-script-os",
+    "postinstall:darwin": "jetify && yarn pods",
+    "postinstall:linux": "jetify",
     "pods": "(cd ios && bundle install && bundle exec pod install --repo-update)",
     "start": "react-native start",
     "test": "jest",
@@ -105,6 +107,7 @@
     "react-native-storybook-loader": "1.8.0",
     "react-native-version": "2.6.2",
     "react-test-renderer": "16.13.1",
+    "run-script-os": "^1.1.5",
     "waait": "1.0.2"
   },
   "jest": {

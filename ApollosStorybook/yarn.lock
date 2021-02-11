@@ -8603,6 +8603,11 @@ run-async@^2.2.0:
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-2.4.1.tgz#8440eccf99ea3e70bd409d49aab88e10c189a455"
   integrity sha512-tvVnVv01b8c1RrA6Ep7JkStj85Guv/YrMcwqYQnwjsAS2cTmmPGBBjAjpCW7RrSodNSoE2/qg9O4bceNvUuDgQ==
 
+run-script-os@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/run-script-os/-/run-script-os-1.1.5.tgz#6038a92b370a1cbca5fa2fa73d1c740b0037b6ff"
+  integrity sha512-kLvUnf1SM1+gSH2bY1P41MNFaWdXaG2nkhoJS9WQNQxk6g9KNuncKderBLG7vOsp77GtQqNs0bEazxip/I6wfg==
+
 rx-lite-aggregates@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/rx-lite-aggregates/-/rx-lite-aggregates-4.0.8.tgz#753b87a89a11c95467c4ac1626c4efc4e05c67be"
