@@ -51,7 +51,10 @@ const Verification = ({
       ) : (
         <BackgroundComponent />
       )}
-      <FlexedSafeAreaView style={StyleSheet.absoluteFillObject}>
+      <FlexedSafeAreaView
+        style={StyleSheet.absoluteFillObject}
+        edges={['right', 'top', 'left']}
+      >
         <FlexedKeyboardAvoidingView
           behavior={'padding'}
           keyboardVerticalOffset={Platform.OS === 'ios' ? headerInset : 0}

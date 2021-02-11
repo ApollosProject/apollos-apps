@@ -64,7 +64,10 @@ const Entry = ({
       ) : (
         <BackgroundComponent />
       )}
-      <FlexedSafeAreaView style={StyleSheet.absoluteFillObject}>
+      <FlexedSafeAreaView
+        style={StyleSheet.absoluteFillObject}
+        edges={['right', 'top', 'left']}
+      >
         <FlexedKeyboardAvoidingView behavior={'padding'}>
           <ScrollView keyboardShouldPersistTaps="always">
             <PaddedView>
