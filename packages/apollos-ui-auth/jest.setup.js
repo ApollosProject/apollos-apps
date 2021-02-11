@@ -6,5 +6,9 @@ jest.mock('@apollosproject/ui-analytics', () => ({
 }));
 
 NativeModules.RNGestureHandlerModule = {};
+NativeModules.StatusBarManager = {
+  ...NativeModules.StatusBarManager,
+  getHeight: () => 64,
+};
 
 // jest.mock('@react-native-community/datetimepicker', () => 'DatePicker');

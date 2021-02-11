@@ -84,13 +84,13 @@ const AuthNavigator = (props) => (
     </AuthStack.Screen>
     <AuthStack.Screen
       name="AuthSMSVerificationConnected"
-      component={AuthSMSVerificationConnected}
       options={{ headerShown: true }}
+      component={AuthSMSVerificationConnected}
     />
     <AuthStack.Screen
       name="AuthPasswordEntryConnected"
-      component={AuthPasswordEntryConnected}
       options={{ headerShown: true }}
+      component={AuthPasswordEntryConnected}
     />
     <AuthStack.Screen
       name="AuthProfileEntryConnected"

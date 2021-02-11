@@ -1,4 +1,14 @@
-module.exports = {
-  SafeAreaProvider: ({ children }) => children,
-  SafeAreaView: jest.requireActual('react-native').View,
+const inset = {
+  top: 0,
+  right: 0,
+  bottom: 0,
+  left: 0,
 };
+
+export const SafeAreaProvider = ({ children }) => children;
+
+export const SafeAreaView = ({ children }) => children;
+
+export const SafeAreaConsumer = ({ children }) => children(inset);
+
+export const useSafeAreaInsets = () => inset;

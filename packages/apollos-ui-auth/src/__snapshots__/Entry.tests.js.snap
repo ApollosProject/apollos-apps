@@ -1,23 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Auth Entry component should render 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
+Array [
   <BVLinearGradient
     colors={
       Array [
@@ -50,12 +34,18 @@ exports[`The Auth Entry component should render 1`] = `
         "top": 0,
       }
     }
-  />
+  />,
   <View
+    onLayout={[Function]}
     style={
-      Object {
-        "height": "100%",
-      }
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
     }
   >
     <RCTScrollView
@@ -400,28 +390,12 @@ exports[`The Auth Entry component should render 1`] = `
         </View>
       </View>
     </RCTScrollView>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`The Auth Entry component should render a custom policyInfo text 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
+Array [
   <BVLinearGradient
     colors={
       Array [
@@ -454,12 +428,18 @@ exports[`The Auth Entry component should render a custom policyInfo text 1`] = `
         "top": 0,
       }
     }
-  />
+  />,
   <View
+    onLayout={[Function]}
     style={
-      Object {
-        "height": "100%",
-      }
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
     }
   >
     <RCTScrollView
@@ -806,28 +786,12 @@ exports[`The Auth Entry component should render a custom policyInfo text 1`] = `
         </View>
       </View>
     </RCTScrollView>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`The Auth Entry component should render as disabled 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
+Array [
   <BVLinearGradient
     colors={
       Array [
@@ -860,12 +824,18 @@ exports[`The Auth Entry component should render as disabled 1`] = `
         "top": 0,
       }
     }
-  />
+  />,
   <View
+    onLayout={[Function]}
     style={
-      Object {
-        "height": "100%",
-      }
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
     }
   >
     <RCTScrollView
@@ -1271,28 +1241,12 @@ exports[`The Auth Entry component should render as disabled 1`] = `
         </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`The Auth Entry component should render in a loading state 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
+Array [
   <BVLinearGradient
     colors={
       Array [
@@ -1325,12 +1279,18 @@ exports[`The Auth Entry component should render in a loading state 1`] = `
         "top": 0,
       }
     }
-  />
+  />,
   <View
+    onLayout={[Function]}
     style={
-      Object {
-        "height": "100%",
-      }
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
     }
   >
     <RCTScrollView
@@ -1730,28 +1690,12 @@ exports[`The Auth Entry component should render in a loading state 1`] = `
         </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`The Auth Entry component should render in a next button 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
+Array [
   <BVLinearGradient
     colors={
       Array [
@@ -1784,12 +1728,18 @@ exports[`The Auth Entry component should render in a next button 1`] = `
         "top": 0,
       }
     }
-  />
+  />,
   <View
+    onLayout={[Function]}
     style={
-      Object {
-        "height": "100%",
-      }
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
     }
   >
     <RCTScrollView
@@ -2195,28 +2145,12 @@ exports[`The Auth Entry component should render in a next button 1`] = `
         </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`The Auth Entry component should render in an error state 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
+Array [
   <BVLinearGradient
     colors={
       Array [
@@ -2249,12 +2183,18 @@ exports[`The Auth Entry component should render in an error state 1`] = `
         "top": 0,
       }
     }
-  />
+  />,
   <View
+    onLayout={[Function]}
     style={
-      Object {
-        "height": "100%",
-      }
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
     }
   >
     <RCTScrollView
@@ -2599,28 +2539,12 @@ exports[`The Auth Entry component should render in an error state 1`] = `
         </View>
       </View>
     </RCTScrollView>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`The Auth Entry component should render with a custom alternateLoginText 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
+Array [
   <BVLinearGradient
     colors={
       Array [
@@ -2653,12 +2577,18 @@ exports[`The Auth Entry component should render with a custom alternateLoginText
         "top": 0,
       }
     }
-  />
+  />,
   <View
+    onLayout={[Function]}
     style={
-      Object {
-        "height": "100%",
-      }
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
     }
   >
     <RCTScrollView
@@ -3059,28 +2989,12 @@ exports[`The Auth Entry component should render with a custom alternateLoginText
         </View>
       </View>
     </RCTScrollView>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`The Auth Entry component should render with a custom authTitleText 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
+Array [
   <BVLinearGradient
     colors={
       Array [
@@ -3113,12 +3027,18 @@ exports[`The Auth Entry component should render with a custom authTitleText 1`] 
         "top": 0,
       }
     }
-  />
+  />,
   <View
+    onLayout={[Function]}
     style={
-      Object {
-        "height": "100%",
-      }
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
     }
   >
     <RCTScrollView
@@ -3463,28 +3383,12 @@ exports[`The Auth Entry component should render with a custom authTitleText 1`] 
         </View>
       </View>
     </RCTScrollView>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`The Auth Entry component should render with a custom promptText 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
+Array [
   <BVLinearGradient
     colors={
       Array [
@@ -3517,12 +3421,18 @@ exports[`The Auth Entry component should render with a custom promptText 1`] = `
         "top": 0,
       }
     }
-  />
+  />,
   <View
+    onLayout={[Function]}
     style={
-      Object {
-        "height": "100%",
-      }
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
     }
   >
     <RCTScrollView
@@ -3867,28 +3777,12 @@ exports[`The Auth Entry component should render with a custom promptText 1`] = `
         </View>
       </View>
     </RCTScrollView>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`The Auth Entry component should render with a custom tabTitle 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
+Array [
   <BVLinearGradient
     colors={
       Array [
@@ -3921,12 +3815,18 @@ exports[`The Auth Entry component should render with a custom tabTitle 1`] = `
         "top": 0,
       }
     }
-  />
+  />,
   <View
+    onLayout={[Function]}
     style={
-      Object {
-        "height": "100%",
-      }
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
     }
   >
     <RCTScrollView
@@ -4273,28 +4173,12 @@ exports[`The Auth Entry component should render with a custom tabTitle 1`] = `
         </View>
       </View>
     </RCTScrollView>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`The Auth Entry component should render with a inputAutoComplete as tel 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
+Array [
   <BVLinearGradient
     colors={
       Array [
@@ -4327,12 +4211,18 @@ exports[`The Auth Entry component should render with a inputAutoComplete as tel 
         "top": 0,
       }
     }
-  />
+  />,
   <View
+    onLayout={[Function]}
     style={
-      Object {
-        "height": "100%",
-      }
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
     }
   >
     <RCTScrollView
@@ -4679,28 +4569,12 @@ exports[`The Auth Entry component should render with a inputAutoComplete as tel 
         </View>
       </View>
     </RCTScrollView>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`The Auth Entry component should render with a inputLabel Phone Number 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
+Array [
   <BVLinearGradient
     colors={
       Array [
@@ -4733,12 +4607,18 @@ exports[`The Auth Entry component should render with a inputLabel Phone Number 1
         "top": 0,
       }
     }
-  />
+  />,
   <View
+    onLayout={[Function]}
     style={
-      Object {
-        "height": "100%",
-      }
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
     }
   >
     <RCTScrollView
@@ -5085,28 +4965,12 @@ exports[`The Auth Entry component should render with a inputLabel Phone Number 1
         </View>
       </View>
     </RCTScrollView>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`The Auth Entry component should render with a inputType phone 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
+Array [
   <BVLinearGradient
     colors={
       Array [
@@ -5139,12 +5003,18 @@ exports[`The Auth Entry component should render with a inputType phone 1`] = `
         "top": 0,
       }
     }
-  />
+  />,
   <View
+    onLayout={[Function]}
     style={
-      Object {
-        "height": "100%",
-      }
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
     }
   >
     <RCTScrollView
@@ -5491,28 +5361,12 @@ exports[`The Auth Entry component should render with a inputType phone 1`] = `
         </View>
       </View>
     </RCTScrollView>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`The Auth Entry component should render with a value 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
+Array [
   <BVLinearGradient
     colors={
       Array [
@@ -5545,12 +5399,18 @@ exports[`The Auth Entry component should render with a value 1`] = `
         "top": 0,
       }
     }
-  />
+  />,
   <View
+    onLayout={[Function]}
     style={
-      Object {
-        "height": "100%",
-      }
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
     }
   >
     <RCTScrollView
@@ -5895,28 +5755,12 @@ exports[`The Auth Entry component should render with a value 1`] = `
         </View>
       </View>
     </RCTScrollView>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`The Auth Entry component should render with an alternate login option with default text 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
+Array [
   <BVLinearGradient
     colors={
       Array [
@@ -5949,12 +5793,18 @@ exports[`The Auth Entry component should render with an alternate login option w
         "top": 0,
       }
     }
-  />
+  />,
   <View
+    onLayout={[Function]}
     style={
-      Object {
-        "height": "100%",
-      }
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
     }
   >
     <RCTScrollView
@@ -6353,28 +6203,12 @@ exports[`The Auth Entry component should render with an alternate login option w
         </View>
       </View>
     </RCTScrollView>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`The Auth Entry component should render with keyboard vertical offset for Android 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
+Array [
   <BVLinearGradient
     colors={
       Array [
@@ -6407,12 +6241,18 @@ exports[`The Auth Entry component should render with keyboard vertical offset fo
         "top": 0,
       }
     }
-  />
+  />,
   <View
+    onLayout={[Function]}
     style={
-      Object {
-        "height": "100%",
-      }
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
     }
   >
     <RCTScrollView
@@ -6769,6 +6609,6 @@ exports[`The Auth Entry component should render with keyboard vertical offset fo
         </View>
       </View>
     </RCTScrollView>
-  </View>
-</View>
+  </View>,
+]
 `;
