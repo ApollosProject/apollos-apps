@@ -123,7 +123,7 @@ describe('Apollos Postgres Comments DatSource', () => {
       await commentDataSource.addComment({
         text: `I am a fun comment #${index}!`,
         parentId: createGlobalId(123, 'UniversalContentItem'),
-        visibility: 'PRIVATE', // tag every other comment as public
+        visibility: 'PRIVATE', // tag each comment as private
       });
     }
     // Go back to our original user user
@@ -134,7 +134,7 @@ describe('Apollos Postgres Comments DatSource', () => {
       await commentDataSource.addComment({
         text: `I am a fun comment #${index}!`,
         parentId: createGlobalId(123, 'UniversalContentItem'),
-        visibility: 'PRIVATE', // tag every other comment as public
+        visibility: 'PRIVATE', // tag each comment as private
       });
     }
 
