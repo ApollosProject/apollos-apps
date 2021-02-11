@@ -78,7 +78,7 @@ AskNotificationsWithStatus.propTypes = {
   }),
 };
 
-AskNotificationsConnected.defaultProps = {
+AskNotificationsWithStatus.defaultProps = {
   Component: AskNotifications,
   getButtonText: defaultGetButtonText,
 };
