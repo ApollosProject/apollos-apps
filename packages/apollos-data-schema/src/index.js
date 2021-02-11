@@ -928,6 +928,7 @@ export const featuresSchema = gql`
     id: ID!
     order: Int
 
+    title: String
     body: String
   }
 
@@ -935,6 +936,7 @@ export const featuresSchema = gql`
     id: ID!
     order: Int
 
+    title: String
     scriptures: [Scripture]
   }
 
@@ -942,8 +944,8 @@ export const featuresSchema = gql`
     id: ID!
     order: Int
 
-    linkText: String
     title: String
+    linkText: String
     url: String
   }
 
