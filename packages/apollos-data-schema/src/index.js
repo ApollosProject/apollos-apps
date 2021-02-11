@@ -76,7 +76,6 @@ export const interfacesSchema = gql`
 
   extend type MediaContentItem implements ScriptureNode
   extend type DevotionalContentItem implements ScriptureNode
-
   extend type ContentSeriesContentItem implements ProgressNode
 `;
 
@@ -960,6 +959,11 @@ export const featuresSchema = gql`
   }
 
   extend type WeekendContentItem implements FeaturesNode {
+    features: [Feature] @deprecated(reason: "Use featureFeed")
+    featureFeed: FeatureFeed
+  }
+
+  extend type DevotionalContentItem implements FeaturesNode {
     features: [Feature] @deprecated(reason: "Use featureFeed")
     featureFeed: FeatureFeed
   }
