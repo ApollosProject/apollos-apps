@@ -25,11 +25,14 @@ const Noop = () => null;
 
 const getType = (nodeId) => (nodeId ? nodeId.split(':')[0] : '');
 
+const nodeImplementsType = (nodeId, type) =>
+  ApollosConfig.TYPEMAP[getType(nodeId)].includes(type);
+
 const isChildNode = (nodeId) =>
-  ApollosConfig.TYPEMAP[getType(nodeId)].includes('ContentChildNode');
+  nodeId && nodeImplementsType(nodeId, 'ContentChildNode');
 
 const isParentNode = (nodeId) =>
-  ApollosConfig.TYPEMAP[getType(nodeId)].includes('ContentParentNode');
+  nodeId && nodeImplementsType(nodeId, 'ContentParentNode');
 
 const FlexedScrollView = styled({ flex: 1 })(Animated.ScrollView);
 
@@ -41,15 +44,18 @@ const NodeSingleInner = ({ nodeId, ImageWrapperComponent, ...props }) => (
     />
     <ScriptureNodeConnected nodeId={nodeId} />
     <NodeFeaturesConnected nodeId={nodeId} />
-    {nodeId && isParentNode(nodeId) ? (
-      <UpNextButtonConnected nodeId={nodeId} />
-    ) : null}
-    {nodeId && isChildNode(nodeId) ? (
-      <ContentParentFeedConnected nodeId={nodeId} />
-    ) : null}
-    {nodeId && isParentNode(nodeId) ? (
-      <ContentChildFeedConnected nodeId={nodeId} />
-    ) : null}
+    <UpNextButtonConnected
+      nodeId={nodeId}
+      loadingEnabled={isParentNode(nodeId)}
+    />
+    <ContentParentFeedConnected
+      nodeId={nodeId}
+      loadingEnabled={isChildNode(nodeId)}
+    />
+    <ContentChildFeedConnected
+      nodeId={nodeId}
+      loadingEnabled={isParentNode(nodeId)}
+    />
   </View>
 );
 

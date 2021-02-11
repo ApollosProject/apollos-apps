@@ -5,13 +5,13 @@ import { get } from 'lodash';
 import HorizontalFeedConnected from '../HorizontalFeedConnected';
 import GET_CONTENT_PARENT_CHILDREN from './getContentParentChildren';
 
-const ContentParentFeedConnected = ({ nodeId, ...props }) => (
+const ContentParentFeedConnected = ({ nodeId, loadingEnabled, ...props }) => (
   <HorizontalFeedConnected
     {...props}
     query={GET_CONTENT_PARENT_CHILDREN}
     variables={{ nodeId }}
     isItemDisabled={({ id }) => id === nodeId}
-    isLoading={!nodeId}
+    isLoading={loadingEnabled && !nodeId}
     mapContentFromData={({ data }) => {
       const edges = get(data, 'node.childContentItemsConnection.edges', []);
       const content = edges.map((edge) => edge.node);
@@ -44,6 +44,11 @@ const ContentParentFeedConnected = ({ nodeId, ...props }) => (
 
 ContentParentFeedConnected.propTypes = {
   nodeId: PropTypes.string,
+  loadingEnabled: PropTypes.bool,
+};
+
+ContentParentFeedConnected.defaultProps = {
+  loadingEnabled: true,
 };
 
 export default ContentParentFeedConnected;

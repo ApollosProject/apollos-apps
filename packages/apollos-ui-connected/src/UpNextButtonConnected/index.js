@@ -43,12 +43,14 @@ const UpNextButtonConnected = ({
   Component,
   contentId,
   nodeId, // You can pass either nodeId or contentId.
+  loadingEnabled,
 }) => {
   const navigation = useNavigation();
 
   // We want to avoid rendering the Query component if we don't have the ID.
   // Running the query without a contentId throws an error, and the query won't rerun.
   if (!contentId && !nodeId) {
+    if (!loadingEnabled) return null;
     return <Component loading />;
   }
   return (
@@ -72,7 +74,7 @@ const UpNextButtonConnected = ({
         }
         return (
           <Component
-            loading={loading}
+            loading={loadingEnabled && loading}
             disabled={finishedSeries}
             onPress={
               !finishedSeries && !loading
@@ -106,6 +108,7 @@ UpNextButtonConnected.propTypes = {
   ]),
   contentId: PropTypes.string,
   nodeId: PropTypes.string,
+  loadingEnabled: PropTypes.bool,
 };
 
 UpNextButtonConnected.defaultProps = {
@@ -117,6 +120,7 @@ UpNextButtonConnected.defaultProps = {
     </>
   ),
   Component: UpNextButton,
+  loadingEnabled: true,
 };
 
 export default named('ui-connected.UpNextButtonConnected')(
