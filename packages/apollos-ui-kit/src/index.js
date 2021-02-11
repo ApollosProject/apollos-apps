@@ -102,4 +102,3 @@ export {
 export { getIsLoading, withIsLoading } from './isLoading';
 export Providers from './Providers';
 export NavigationService from './NavigationService';
-export useStatusBarHeight from './statusBarHeight';

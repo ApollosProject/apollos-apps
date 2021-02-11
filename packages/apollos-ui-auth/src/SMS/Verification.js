@@ -9,9 +9,20 @@ import {
   TextInput,
   BackgroundView,
   useStatusBarHeight,
+  styled,
 } from '@apollosproject/ui-kit';
 
 import { FlexedSafeAreaView, TitleText, PromptText } from '../styles';
+
+const FlexedKeyboardAvoidingView = styled({ flex: 1 })(KeyboardAvoidingView);
+
+const FullScreenGradientBackground = styled(
+  {
+    ...StyleSheet.absoluteFillObject,
+    resizeMode: 'cover',
+  },
+  'ui-auth.Entry.FullScreenGradientBackground'
+)(BackgroundView);
 
 const Verification = ({
   confirmationTitleText,
@@ -24,15 +35,15 @@ const Verification = ({
   values,
   BackgroundComponent,
 }) => {
-  const statusBarHeight = useStatusBarHeight();
   return (
-    <BackgroundComponent>
-      <KeyboardAvoidingView
-        style={StyleSheet.absoluteFill}
-        behavior={'padding'}
-        keyboardVerticalOffset={statusBarHeight}
-      >
-        <FlexedSafeAreaView>
+    <>
+      {React.isValidElement(BackgroundComponent) ? (
+        BackgroundComponent
+      ) : (
+        <BackgroundComponent />
+      )}
+      <FlexedSafeAreaView style={StyleSheet.absoluteFillObject}>
+        <FlexedKeyboardAvoidingView behavior={'padding'}>
           <ScrollView>
             <PaddedView vertical={false}>
               <TitleText>{confirmationTitleText}</TitleText>
@@ -65,9 +76,9 @@ const Verification = ({
               />
             </PaddedView>
           ) : null}
-        </FlexedSafeAreaView>
-      </KeyboardAvoidingView>
-    </BackgroundComponent>
+        </FlexedKeyboardAvoidingView>
+      </FlexedSafeAreaView>
+    </>
   );
 };
 
@@ -91,7 +102,7 @@ Verification.defaultProps = {
   confirmationTitleText: 'Thanks!\nStand by…',
   confirmationPromptText:
     'We just sent you a code. Enter it below when it comes.',
-  BackgroundComponent: BackgroundView,
+  BackgroundComponent: <FullScreenGradientBackground />,
 };
 
 export default Verification;

@@ -9,7 +9,6 @@ import {
   TextInput,
   styled,
   withTheme,
-  useStatusBarHeight,
   Touchable,
 } from '@apollosproject/ui-kit';
 
@@ -34,6 +33,8 @@ const FullScreenGradientBackground = styled(
   'ui-auth.Entry.FullScreenGradientBackground'
 )(BackgroundView);
 
+const FlexedKeyboardAvoidingView = styled({ flex: 1 })(KeyboardAvoidingView);
+
 const Entry = ({
   BackgroundComponent,
   alternateLoginText,
@@ -55,7 +56,6 @@ const Entry = ({
   alternateLogin,
 }) => {
   const handleOnChangeText = (text) => setFieldValue(inputType, text);
-  const statusBarHeight = useStatusBarHeight();
 
   return (
     <>
@@ -64,12 +64,8 @@ const Entry = ({
       ) : (
         <BackgroundComponent />
       )}
-      <KeyboardAvoidingView
-        style={StyleSheet.absoluteFill}
-        behavior={'padding'}
-        keyboardVerticalOffset={statusBarHeight}
-      >
-        <FlexedSafeAreaView>
+      <FlexedSafeAreaView style={StyleSheet.absoluteFillObject}>
+        <FlexedKeyboardAvoidingView behavior={'padding'}>
           <ScrollView keyboardShouldPersistTaps="always">
             <PaddedView>
               <TitleText>{authTitleText}</TitleText>
@@ -128,8 +124,8 @@ const Entry = ({
               />
             </PaddedView>
           ) : null}
-        </FlexedSafeAreaView>
-      </KeyboardAvoidingView>
+        </FlexedKeyboardAvoidingView>
+      </FlexedSafeAreaView>
     </>
   );
 };
