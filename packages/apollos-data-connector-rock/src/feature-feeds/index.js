@@ -19,6 +19,10 @@ const resolver = {
     featureFeed: ({ id }, args, { dataSources: { FeatureFeed } }) =>
       FeatureFeed.getFeed({ type: 'contentItem', args: { id } }),
   },
+  DevotionalContentItem: {
+    featureFeed: ({ id }, args, { dataSources: { FeatureFeed } }) =>
+      FeatureFeed.getFeed({ type: 'contentItem', args: { id } }),
+  },
   ContentSeriesContentItem: {
     featureFeed: ({ id }, args, { dataSources: { FeatureFeed } }) =>
       FeatureFeed.getFeed({ type: 'contentItem', args: { id } }),
