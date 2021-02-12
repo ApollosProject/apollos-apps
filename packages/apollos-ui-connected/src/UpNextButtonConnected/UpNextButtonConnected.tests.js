@@ -165,11 +165,37 @@ describe('the UpNextButtonConnected', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('renders a loading state state without a contentId', async () => {
-    const tree = await renderWithApolloData(
+  it("doesn't render a loading state state without a contentId", async () => {
+    const tree = renderer.create(
       WithReactNavigator(
         <Providers MockedProvider={MockedProvider} mocks={[upNextMock]}>
           <UpNextButtonConnected navigation={navigation} />
+        </Providers>
+      )
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('renders a loading state state with a content series', async () => {
+    const tree = await renderer.create(
+      WithReactNavigator(
+        <Providers MockedProvider={MockedProvider} mocks={[upNextMock]}>
+          <UpNextButtonConnected
+            nodeId="ContentSeriesContentItem:1"
+            navigation={navigation}
+          />
+        </Providers>
+      )
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it("doesn't render loading state state with a devotational", async () => {
+    const tree = renderer.create(
+      WithReactNavigator(
+        <Providers MockedProvider={MockedProvider} mocks={[upNextMock]}>
+          <UpNextButtonConnected
+            nodeId="DevotionalContentItem:1"
+            navigation={navigation}
+          />
         </Providers>
       )
     );

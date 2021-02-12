@@ -3,7 +3,23 @@ import ApollosConfig from '@apollosproject/config';
 import FRAGMENTS from '@apollosproject/ui-fragments';
 import { Animated } from 'react-native';
 
-ApollosConfig.loadJs({ FRAGMENTS });
+import { fragmentTypes } from '@apollosproject/ui-test-utils';
+
+const TYPEMAP = fragmentTypes.__schema.types.reduce((acc, curr) => {
+  const { name } = curr;
+  const types = curr.possibleTypes
+    .map((type) => [type.name, name])
+    .reduce((accum, [n, t]) => {
+      accum[n] = t; // eslint-disable-line
+      return accum;
+    }, {});
+  Object.keys(types).forEach((key) => {
+    acc[key] = acc[key] ? [...acc[key], types[key]] : [types[key]];
+  });
+  return acc;
+}, {});
+
+ApollosConfig.loadJs({ FRAGMENTS, TYPEMAP });
 
 Animated.timing = (value, config) => ({
   start: (callback) => {

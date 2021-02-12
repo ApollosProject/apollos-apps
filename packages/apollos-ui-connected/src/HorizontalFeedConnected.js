@@ -80,6 +80,7 @@ class HorizontalFeedConnected extends Component {
   renderFeed = ({ data, loading, error, fetchMore }) => {
     if (error) return null;
 
+
     const { content, nextCursor, currentIndex } = this.props.mapContentFromData(
       {
         data,
