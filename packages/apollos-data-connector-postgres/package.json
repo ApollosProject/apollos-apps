@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/data-connector-postgres",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "2.0.0",
+  "version": "2.0.1-canary.0",
   "main": "lib/index.js",
   "scripts": {
     "test": "TZ=UTC jest",
@@ -28,8 +28,8 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@apollosproject/data-schema": "^2.0.0",
-    "@apollosproject/server-core": "^2.0.0",
+    "@apollosproject/data-schema": "^2.0.1-canary.0",
+    "@apollosproject/server-core": "^2.0.1-canary.0",
     "lodash": "^4.17.11",
     "pg": "^8.5.1",
     "pg-hstore": "^2.3.3",

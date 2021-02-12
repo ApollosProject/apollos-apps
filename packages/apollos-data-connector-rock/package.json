@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/data-connector-rock",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "2.0.0",
+  "version": "2.0.1-canary.0",
   "main": "lib/index.js",
   "scripts": {
     "test": "TZ=UTC jest",
@@ -28,7 +28,7 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@apollosproject/server-core": "^2.0.0",
+    "@apollosproject/server-core": "^2.0.1-canary.0",
     "awesome-phonenumber": "^2.4.2",
     "form-data": "^2.3.3",
     "hyphenation.en-us": "^0.2.1",
