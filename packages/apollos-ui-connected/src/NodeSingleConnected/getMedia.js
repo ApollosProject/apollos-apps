@@ -8,8 +8,10 @@ export default gql`
       id
       ...VideoNodeFragment
       ...ContentNodeFragment
+      ...LiveNodeFragment
     }
   }
   ${ApollosConfig.FRAGMENTS.VIDEO_NODE_FRAGMENT}
   ${ApollosConfig.FRAGMENTS.CONTENT_NODE_FRAGMENT}
+  ${ApollosConfig.FRAGMENTS.LIVE_NODE_FRAGMENT}
 `;
