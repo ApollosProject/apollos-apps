@@ -83,7 +83,7 @@ const NodeSingleConnectedWithMedia = ({
     variables={{ nodeId }}
     fetchPolicy={'cache-and-network'}
   >
-    {({ data = {}, ...args }) => {
+    {({ data = {} }) => {
       const hasMedia =
         data?.node?.videos?.length &&
         data.node.videos.some(({ sources }) => sources.length);
