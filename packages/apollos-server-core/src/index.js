@@ -17,7 +17,6 @@ export {
   parseCursor,
   withEdgePagination,
 } from './pagination/utils';
-export { resolverMerge, schemaMerge } from './utils';
 export { setupUniversalLinks } from './universalLinking';
 export { Interfaces };
 
