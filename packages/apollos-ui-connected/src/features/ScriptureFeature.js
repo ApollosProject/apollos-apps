@@ -12,12 +12,16 @@ const ScriptureFeature = ({
   isLoading,
   contentId,
   nodeId,
+  featureId,
 }) => (
   <ActionCard
     label={title}
     icon={'text'}
     action={
-      <ShareButtonConnected message={message} itemId={nodeId || contentId} />
+      <ShareButtonConnected
+        message={message}
+        itemId={nodeId || contentId || featureId}
+      />
     }
   >
     {scriptures.map(({ copyright, reference, html, id, version }) => (
@@ -48,6 +52,7 @@ ScriptureFeature.propTypes = {
   contentId: PropTypes.string,
   title: PropTypes.string,
   nodeId: PropTypes.string,
+  featureId: PropTypes.string,
 };
 
 export default ScriptureFeature;
