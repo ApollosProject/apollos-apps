@@ -618,11 +618,11 @@ export const sharableSchema = gql`
     url: String @deprecated(reason: "Not supported on a feature")
   }
 
-  extend type TextFeature implements SharableNode {
+  extend type TextFeature implements ShareableNode {
     sharing: SharableFeature
   }
 
-  extend type ScriptureFeature implements SharableNode {
+  extend type ScriptureFeature implements ShareableNode {
     sharing: SharableFeature
   }
 `;
