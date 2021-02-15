@@ -15,6 +15,7 @@ import { createImageUrlFromGuid } from '../utils';
 
 const {
   APP: { ROOT_API_URL },
+  ROCK,
   ROCK_MAPPINGS,
   ROCK_CONSTANTS,
 } = ApollosConfig;
