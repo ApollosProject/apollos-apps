@@ -13,7 +13,7 @@ import { createGlobalId, parseGlobalId } from '@apollosproject/server-core';
 
 import { createImageUrlFromGuid } from '../utils';
 
-const { ROCK, ROCK_MAPPINGS, ROCK_CONSTANTS } = ApollosConfig;
+const { APP, ROCK, ROCK_MAPPINGS, ROCK_CONSTANTS } = ApollosConfig;
 
 export default class ContentItem extends RockApolloDataSource {
   resource = 'ContentChannelItems';
@@ -231,7 +231,7 @@ export default class ContentItem extends RockApolloDataSource {
       channelId
     );
 
-    if (!contentChannel.itemUrl) return ROCK.SHARE_URL;
+    if (!contentChannel.itemUrl) return APP.ROOT_API_URL;
 
     const slug = await this.request('ContentChannelItemSlugs')
       .filter(`ContentChannelItemId eq ${contentId}`)
@@ -239,7 +239,7 @@ export default class ContentItem extends RockApolloDataSource {
       .first();
 
     return [
-      ROCK.SHARE_URL,
+      APP.ROOT_API_URL,
       contentChannel.itemUrl.replace(/^\//, ''),
       slug ? slug.slug : '',
     ].join('/');
