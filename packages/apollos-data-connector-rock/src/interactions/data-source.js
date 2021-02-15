@@ -94,7 +94,7 @@ export default class Interactions extends RockApolloDataSource {
       Operation: operationName,
       InteractionDateTime: new Date().toJSON(),
       InteractionSummary: `${operationName} - ${itemTitle}`,
-      InteractionData: `${ApollosConfig.APP.DEEP_LINK_HOST}://Interactions/ContentSingle?itemId=${itemId}`,
+      InteractionData: `${itemId}`,
     });
 
     return this.get(`/Interactions/${interactionId}`);
