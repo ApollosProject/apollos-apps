@@ -91,8 +91,7 @@ const NodeSingleConnectedWithMedia = ({
 
       const hasLivestream =
         data?.node?.liveStream?.isLive &&
-        data.node.liveStream.media &&
-        data.node.liveStream.media.sources.length;
+        data?.node?.liveStream?.media?.sources?.length;
 
       if (!hasMedia && !hasLivestream)
         return (
