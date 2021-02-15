@@ -107,9 +107,6 @@ ApollosConfig.loadJs({
       'MediaContentItem',
     ],
   },
-  APP: {
-    DEEP_LINK_HOST: 'apolloschurch',
-  },
 });
 
 describe('Following', () => {

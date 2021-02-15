@@ -42,7 +42,7 @@ Array [
     "/Interactions",
     Object {
       "InteractionComponentId": 789,
-      "InteractionData": "apolloschurch://Interactions/ContentSingle?itemId=UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+      "InteractionData": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
       "InteractionSummary": "Like - Super Cool Content",
       "Operation": "Like",
       "PersonAliasId": 456,

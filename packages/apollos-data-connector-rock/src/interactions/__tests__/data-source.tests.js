@@ -12,9 +12,6 @@ ApollosConfig.loadJs({
     IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
     USE_PLUGIN: true,
   },
-  APP: {
-    DEEP_LINK_HOST: 'apolloschurch',
-  },
 });
 
 const ds = new Interactions();
