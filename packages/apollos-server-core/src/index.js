@@ -8,6 +8,7 @@ import basicAuth from 'express-basic-auth';
 
 import * as Node from './node';
 import * as Interfaces from './interfaces';
+import * as Theme from './theme';
 import * as Pagination from './pagination';
 import * as Media from './media';
 
@@ -19,7 +20,7 @@ export {
 } from './pagination/utils';
 export { resolverMerge, schemaMerge } from './utils';
 export { setupUniversalLinks } from './universalLinking';
-export { Interfaces };
+export { Interfaces, Theme };
 
 // Types that all apollos-church servers will use.
 const builtInData = { Node, Pagination, Media };

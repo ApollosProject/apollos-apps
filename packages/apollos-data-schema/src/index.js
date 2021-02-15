@@ -275,9 +275,9 @@ export const themeSchema = gql`
   type ThemeColors {
     primary: Color
     secondary: Color
-    screen: Color
-    paper: Color
-    alert: Color
+    screen: Color @deprecated(reason: "Not supported on content items")
+    paper: Color @deprecated(reason: "Not supported on content items")
+    alert: Color @deprecated(reason: "Not supported on content items")
   }
 `;
 
