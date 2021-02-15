@@ -47,7 +47,12 @@ class CommentDataSource extends PostgresDataSource {
       [Op.or]: [
         { visibility: Visibility.PUBLIC }, // Show public journals
         ...(currentUser
-          ? [{ externalPersonId: currentUser.id, externalParentSource: 'rock' }]
+          ? [
+              {
+                externalPersonId: String(currentUser.id),
+                externalParentSource: 'rock',
+              },
+            ]
           : []), // Or show journals that belong to you.
       ],
     };
