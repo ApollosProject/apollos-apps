@@ -88,7 +88,6 @@ const NodeSingleConnectedWithMedia = ({
         data?.node?.videos?.length &&
         data.node.videos.some(({ sources }) => sources.length);
 
-
       const hasLivestream =
         data?.node?.liveStream?.isLive &&
         data?.node?.liveStream?.media?.sources?.length;
