@@ -2,11 +2,13 @@ import ApollosConfig from '@apollosproject/config';
 import EventsDataSource from '../data-source';
 
 ApollosConfig.loadJs({
+  APP: {
+    ROOT_API_URL: 'https://apollos.api',
+  },
   ROCK: {
     API_URL: 'https://apollosrock.newspring.cc/api',
     API_TOKEN: 'some-rock-token',
     IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
-    SHARE_URL: 'https://apollosrock.newspring.cc',
     TIMEZONE: 'America/New_York',
   },
   ROCK_MAPPINGS: {
