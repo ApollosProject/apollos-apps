@@ -88,16 +88,25 @@ const NodeSingleConnectedWithMedia = ({
         data?.node?.videos?.length &&
         data.node.videos.some(({ sources }) => sources.length);
 
-      if (!hasMedia)
+      const hasLivestream =
+        data?.node?.liveStream?.isLive &&
+        data?.node?.liveStream?.media?.sources?.length;
+
+      if (!hasMedia && !hasLivestream)
         return (
           <NodeSingleConnected nodeId={nodeId} {...props}>
             {children}
           </NodeSingleConnected>
         );
+
+      const mediaSource = hasLivestream
+        ? data.node?.liveStream?.media?.sources[0]
+        : data.node?.videos[0]?.sources[0];
+
       return (
         <BackgroundView>
           <ApollosPlayerContainer
-            source={data.node?.videos[0]?.sources[0]}
+            source={mediaSource}
             coverImage={data.node?.coverImage?.sources}
             presentationProps={{
               title: data.node.title,
