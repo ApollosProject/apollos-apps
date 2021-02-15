@@ -55,7 +55,7 @@ const mock = {
                   message:
                     'God sees who you can be not who you are - Life is challenging enough.',
                   title: 'Share via ...',
-                  __typename: 'SharableContentItem',
+                  __typename: 'Sharable',
                 },
                 __typename: 'DevotionalContentItem',
               },
@@ -94,7 +94,7 @@ const mock = {
                   message:
                     'Thank God for the friends who will tell it like it is - Some of us grew up in a sanitized church.',
                   title: 'Share via ...',
-                  __typename: 'SharableContentItem',
+                  __typename: 'Sharable',
                 },
                 __typename: 'DevotionalContentItem',
               },
@@ -132,7 +132,7 @@ const mock = {
                   message:
                     'No sin is too bad - In Jeremiah 3, God’s people had really messed up.',
                   title: 'Share via ...',
-                  __typename: 'SharableContentItem',
+                  __typename: 'Sharable',
                 },
                 __typename: 'DevotionalContentItem',
               },
@@ -170,7 +170,7 @@ const mock = {
                   message:
                     'Change starts with a choice - Have you ever restored an old piece of furniture?',
                   title: 'Share via ...',
-                  __typename: 'SharableContentItem',
+                  __typename: 'Sharable',
                 },
                 __typename: 'DevotionalContentItem',
               },

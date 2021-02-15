@@ -228,7 +228,7 @@ export default gql`
     theme: Theme
     isLiked: Boolean
     likedCount: Int
-    sharing: SharableContentItem
+    sharing: Sharable
   }
 
   type ContentItemsConnection {
@@ -260,7 +260,7 @@ export default gql`
     ): ContentItemsConnection
   }
 
-  type ContentSeriesContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ProgressNode & LikableNode & ShareableNode & FeaturesNode {
+  type ContentSeriesContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ProgressNode & LikableNode & SharableNode & FeaturesNode {
     id: ID!
     title(hyphenated: Boolean): String
     publishDate: String
@@ -285,7 +285,7 @@ export default gql`
     scriptures: [Scripture]
     isLiked: Boolean
     likedCount: Int
-    sharing: SharableContentItem
+    sharing: Sharable
     features: [Feature] @deprecated(reason: "Use featureFeed")
     featureFeed: FeatureFeed
   }
@@ -296,7 +296,7 @@ export default gql`
     notificationsEnabled: Boolean!
   }
 
-  type DevotionalContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ScriptureNode & LikableNode & ShareableNode {
+  type DevotionalContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ScriptureNode & LikableNode & SharableNode & FeaturesNode {
     id: ID!
     title(hyphenated: Boolean): String
     publishDate: String
@@ -319,7 +319,9 @@ export default gql`
     scriptures: [Scripture]
     isLiked: Boolean
     likedCount: Int
-    sharing: SharableContentItem
+    sharing: Sharable
+    features: [Feature] @deprecated(reason: "Use featureFeed")
+    featureFeed: FeatureFeed
   }
 
   type Event implements Node {
@@ -453,7 +455,7 @@ export default gql`
     sources: [MediaSource]
   }
 
-  type MediaContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ScriptureNode & LikableNode & ShareableNode {
+  type MediaContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ScriptureNode & LikableNode & SharableNode {
     id: ID!
     title(hyphenated: Boolean): String
     publishDate: String
@@ -476,7 +478,7 @@ export default gql`
     scriptures: [Scripture]
     isLiked: Boolean
     likedCount: Int
-    sharing: SharableContentItem
+    sharing: Sharable
   }
 
   enum MediaInputType {
@@ -653,12 +655,12 @@ export default gql`
     version: String
   }
 
-  type ScriptureFeature implements Feature & Node {
+  type ScriptureFeature implements Feature & Node & SharableNode {
     id: ID!
     order: Int
     title: String
     scriptures: [Scripture]
-    sharing: SharableFeature
+    sharing: Sharable
   }
 
   interface ScriptureNode {
@@ -678,26 +680,14 @@ export default gql`
     pageInfo: PaginationInfo
   }
 
-  interface Sharable {
-    message: String
+  type Sharable {
     title: String
-    url: String @deprecated(reason: "Not supported on the interface")
-  }
-
-  type SharableContentItem implements Sharable {
     message: String
-    title: String
     url: String
   }
 
-  type SharableFeature implements Sharable {
-    message: String
-    title: String
-    url: String @deprecated(reason: "Not supported on a feature")
-  }
-
-  interface ShareableNode {
-    sharing: SharableContentItem
+  interface SharableNode {
+    sharing: Sharable
   }
 
   type SmsPinResult {
@@ -705,12 +695,12 @@ export default gql`
     userAuthStatus: USER_AUTH_STATUS
   }
 
-  type TextFeature implements Feature & Node {
+  type TextFeature implements Feature & Node & SharableNode {
     id: ID!
     order: Int
     title: String
     body: String
-    sharing: SharableFeature
+    sharing: Sharable
   }
 
   type Theme {
@@ -735,7 +725,7 @@ export default gql`
     DARK
   }
 
-  type UniversalContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & LikableNode & ShareableNode {
+  type UniversalContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & LikableNode & SharableNode {
     id: ID!
     title(hyphenated: Boolean): String
     publishDate: String
@@ -757,7 +747,7 @@ export default gql`
     theme: Theme
     isLiked: Boolean
     likedCount: Int
-    sharing: SharableContentItem
+    sharing: Sharable
   }
 
   enum UPDATEABLE_PROFILE_FIELDS {
@@ -832,7 +822,7 @@ export default gql`
     url: String
   }
 
-  type WeekendContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & LikableNode & LiveNode & ShareableNode & FeaturesNode {
+  type WeekendContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & LikableNode & LiveNode & SharableNode & FeaturesNode {
     id: ID!
     title(hyphenated: Boolean): String
     publishDate: String
@@ -855,7 +845,7 @@ export default gql`
     isLiked: Boolean
     likedCount: Int
     liveStream: LiveStream
-    sharing: SharableContentItem
+    sharing: Sharable
     features: [Feature] @deprecated(reason: "Use featureFeed")
     featureFeed: FeatureFeed
   }

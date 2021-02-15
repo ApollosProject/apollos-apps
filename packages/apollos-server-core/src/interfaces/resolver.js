@@ -5,7 +5,7 @@ export default {
   LikableNode: {
     __resolveType,
   },
-  ShareableNode: {
+  SharableNode: {
     __resolveType,
   },
   LiveNode: {

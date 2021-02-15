@@ -113,7 +113,7 @@ Object {
       },
       "publishDate": "2013-08-01T00:00:00-04:00",
       "sharing": Object {
-        "__typename": "SharableContentItem",
+        "__typename": "Sharable",
         "message": "SAMPLE: Easter - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "title": "Share via ...",
         "url": "fakeurl.com",
@@ -252,7 +252,7 @@ Object {
       },
       "publishDate": "2013-08-01T00:00:00-04:00",
       "sharing": Object {
-        "__typename": "SharableContentItem",
+        "__typename": "Sharable",
         "message": "SAMPLE: Easter - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "title": "Share via ...",
         "url": "fakeurl.com",
@@ -391,7 +391,7 @@ Object {
       },
       "publishDate": "2013-08-01T00:00:00-04:00",
       "sharing": Object {
-        "__typename": "SharableContentItem",
+        "__typename": "Sharable",
         "message": "SAMPLE: Easter - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "title": "Share via ...",
         "url": "fakeurl.com",
@@ -530,7 +530,7 @@ Object {
       },
       "publishDate": "2013-08-01T00:00:00-04:00",
       "sharing": Object {
-        "__typename": "SharableContentItem",
+        "__typename": "Sharable",
         "message": "SAMPLE: Easter - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "title": "Share via ...",
         "url": "fakeurl.com",
@@ -672,7 +672,7 @@ Object {
             },
             "publishDate": "2013-08-01T00:00:00-04:00",
             "sharing": Object {
-              "__typename": "SharableContentItem",
+              "__typename": "Sharable",
               "message": "SAMPLE: Easter - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
               "title": "Share via ...",
               "url": "fakeurl.com",
@@ -849,7 +849,7 @@ Object {
             },
             "publishDate": "2013-08-01T00:00:00-04:00",
             "sharing": Object {
-              "__typename": "SharableContentItem",
+              "__typename": "Sharable",
               "message": "SAMPLE: Easter - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
               "title": "Share via ...",
               "url": "fakeurl.com",
@@ -994,7 +994,7 @@ Object {
             },
             "publishDate": "2013-08-01T00:00:00-04:00",
             "sharing": Object {
-              "__typename": "SharableContentItem",
+              "__typename": "Sharable",
               "message": "SAMPLE: Easter - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
               "title": "Share via ...",
               "url": "fakeurl.com",
@@ -1139,7 +1139,7 @@ Object {
             },
             "publishDate": "2013-08-01T00:00:00-04:00",
             "sharing": Object {
-              "__typename": "SharableContentItem",
+              "__typename": "Sharable",
               "message": "SAMPLE: Easter - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
               "title": "Share via ...",
               "url": "fakeurl.com",
@@ -1213,7 +1213,7 @@ Object {
       },
       "publishDate": "2013-08-01T00:00:00-04:00",
       "sharing": Object {
-        "__typename": "SharableContentItem",
+        "__typename": "Sharable",
         "message": "SAMPLE: Easter - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "title": "Share via ...",
         "url": "fakeurl.com",

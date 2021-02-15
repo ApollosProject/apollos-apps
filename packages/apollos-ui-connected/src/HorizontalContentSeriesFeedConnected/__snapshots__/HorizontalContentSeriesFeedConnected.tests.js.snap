@@ -469,7 +469,7 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
                             }
                             sharing={
                               Object {
-                                "__typename": "SharableContentItem",
+                                "__typename": "Sharable",
                                 "message": "God sees who you can be not who you are - Life is challenging enough.",
                                 "title": "Share via ...",
                                 "url": "https://apollosrock.newspring.cc/devotional/god-sees-who-you-can-be-not-who-you-are",
@@ -670,7 +670,7 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
                             }
                             sharing={
                               Object {
-                                "__typename": "SharableContentItem",
+                                "__typename": "Sharable",
                                 "message": "Thank God for the friends who will tell it like it is - Some of us grew up in a sanitized church.",
                                 "title": "Share via ...",
                                 "url": "https://apollosrock.newspring.cc/devotional/thank-god-for-the-friends-who-will-tell-it-like-it-is",
@@ -871,7 +871,7 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
                             }
                             sharing={
                               Object {
-                                "__typename": "SharableContentItem",
+                                "__typename": "Sharable",
                                 "message": "No sin is too bad - In Jeremiah 3, God’s people had really messed up.",
                                 "title": "Share via ...",
                                 "url": "https://apollosrock.newspring.cc/devotional/no-sin-is-too-bad",
@@ -1072,7 +1072,7 @@ exports[`the HorizontalContentSeriesFeedConnected component should render 1`] = 
                             }
                             sharing={
                               Object {
-                                "__typename": "SharableContentItem",
+                                "__typename": "Sharable",
                                 "message": "Change starts with a choice - Have you ever restored an old piece of furniture?",
                                 "title": "Share via ...",
                                 "url": "https://apollosrock.newspring.cc/devotional/change-starts-with-a-choice",

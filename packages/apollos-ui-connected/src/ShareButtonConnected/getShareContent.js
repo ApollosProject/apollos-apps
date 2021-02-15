@@ -4,14 +4,7 @@ export default gql`
   query getShareContent($nodeId: ID!) {
     node(id: $nodeId) {
       id
-      ... on ContentItem {
-        sharing {
-          url
-          message
-          title
-        }
-      }
-      ... on ShareableNode {
+      ... on SharableNode {
         sharing {
           url
           message

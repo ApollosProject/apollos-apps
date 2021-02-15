@@ -40,7 +40,7 @@ const devoMock = (root, { id }) => ({
     message:
       'God sees who you can be not who you are - Life is challenging enough.',
     title: 'Share via ...',
-    __typename: 'SharableContentItem',
+    __typename: 'Sharable',
   },
   siblingContentItemsConnection: (_root, { after = 0 }) => ({
     edges: times(10, (index) => ({
@@ -75,7 +75,7 @@ const devoMock = (root, { id }) => ({
           message:
             'God sees who you can be not who you are - Life is challenging enough.',
           title: 'Share via ...',
-          __typename: 'SharableContentItem',
+          __typename: 'Sharable',
         },
       },
       cursor: index + Number(after),
@@ -146,7 +146,7 @@ const nodeMock = (root, args) => ({
                 message:
                   'God sees who you can be not who you are - Life is challenging enough.',
                 title: 'Share via ...',
-                __typename: 'SharableContentItem',
+                __typename: 'Sharable',
               },
             },
             cursor: index + Number(after),

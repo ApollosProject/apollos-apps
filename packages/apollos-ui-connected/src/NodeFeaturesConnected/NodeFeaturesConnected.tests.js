@@ -55,7 +55,7 @@ describe('NodeFeaturesConnected', () => {
                 body: 'this is another, text feature',
                 sharing: {
                   message: 'this is another, text feature',
-                  __typename: 'SharableFeature',
+                  __typename: 'Sharable',
                 },
                 __typename: 'TextFeature',
               },
@@ -66,7 +66,7 @@ describe('NodeFeaturesConnected', () => {
                 sharing: {
                   message:
                     '16For God so loved the world, that he gave his only born Son, that whoever believes in him should not perish, but have eternal life.   Luke 1:2',
-                  __typename: 'SharableFeature',
+                  __typename: 'Sharable',
                 },
                 scriptures: [
                   {
@@ -89,7 +89,7 @@ describe('NodeFeaturesConnected', () => {
                 sharing: {
                   message:
                     '16For God so loved the world, that he gave his only born Son, that whoever believes in him should not perish, but have eternal life.   John 3:16',
-                  __typename: 'SharableFeature',
+                  __typename: 'Sharable',
                 },
                 scriptures: [
                   {

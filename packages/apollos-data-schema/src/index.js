@@ -1,8 +1,5 @@
 import gql from 'graphql-tag';
-import {
-  extendForEachContentItemType,
-  addInterfacesForEachContentItemType,
-} from './utils';
+import { extendForEachContentItemType, addInterfacesToTypes } from './utils';
 
 export const interfacesSchema = gql`
   interface ContentNode {
@@ -55,7 +52,7 @@ export const interfacesSchema = gql`
 
   # Maps to each type implementing each interface.
   # Reduces visual fluff in this file. No magic.
-  ${addInterfacesForEachContentItemType(
+  ${addInterfacesToTypes(
     [
       'ContentNode',
       'Card',
@@ -581,50 +578,40 @@ export const searchSchema = gql`
 `;
 
 export const sharableSchema = gql`
-  interface Sharable {
-    message: String
+  type Sharable {
     title: String
-    url: String @deprecated(reason: "Not supported on the interface")
-  }
-
-  type SharableContentItem implements Sharable {
     message: String
-    title: String
     url: String
   }
 
-  ${extendForEachContentItemType(`
-    sharing: SharableContentItem
-`)}
-
-  interface ShareableNode {
-    sharing: SharableContentItem
+  interface SharableNode {
+    sharing: Sharable
   }
 
-  ${addInterfacesForEachContentItemType(
-    ['ShareableNode'],
+  ${extendForEachContentItemType(`
+    sharing: Sharable
+`)}
+
+  extend type TextFeature {
+    sharing: Sharable
+  }
+
+  extend type ScriptureFeature {
+    sharing: Sharable
+  }
+
+  ${addInterfacesToTypes(
+    ['SharableNode'],
     [
       'UniversalContentItem',
       'WeekendContentItem',
       'MediaContentItem',
       'ContentSeriesContentItem',
       'DevotionalContentItem',
+      'TextFeature',
+      'ScriptureFeature',
     ]
   )}
-
-  type SharableFeature implements Sharable {
-    message: String
-    title: String
-    url: String @deprecated(reason: "Not supported on a feature")
-  }
-
-  extend type TextFeature {
-    sharing: SharableFeature
-  }
-
-  extend type ScriptureFeature {
-    sharing: SharableFeature
-  }
 `;
 
 export const liveSchema = gql`
@@ -744,7 +731,7 @@ export const followingsSchema = gql`
     likedCount: Int
   }
 
-  ${addInterfacesForEachContentItemType(
+  ${addInterfacesToTypes(
     ['LikableNode'],
     [
       'UniversalContentItem',

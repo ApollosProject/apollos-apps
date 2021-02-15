@@ -43,7 +43,7 @@ const seriesMock = (_root, args) => ({
           message:
             'God sees who you can be not who you are - Life is challenging enough.',
           title: 'Share via ...',
-          __typename: 'SharableContentItem',
+          __typename: 'Sharable',
         },
       },
       cursor: index + Number(after),
@@ -82,7 +82,7 @@ const devoMock = (root, { id }) => ({
     message:
       'God sees who you can be not who you are - Life is challenging enough.',
     title: 'Share via ...',
-    __typename: 'SharableContentItem',
+    __typename: 'Sharable',
   },
 });
 
