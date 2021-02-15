@@ -18,6 +18,18 @@ export default gql`
           title
         }
       }
+      ... on TextFeature {
+        sharing {
+          title
+          message
+        }
+      }
+      ... on ScriptureFeature {
+        sharing {
+          title
+          message
+        }
+      }
     }
   }
 `;
