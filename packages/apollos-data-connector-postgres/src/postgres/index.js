@@ -2,17 +2,53 @@
 /* eslint-disable no-console */
 
 import { Sequelize, DataTypes } from 'sequelize';
+import { Client } from 'pg';
 import ApollosConfig from '@apollosproject/config';
 import { createGlobalId } from '@apollosproject/server-core';
 
 const sequelizeConfigOptions =
   process.env.NODE_ENV === 'test' ? { logging: false } : {};
 
+const dbName = `${process.env.NODE_ENV || 'development'}`;
+
+/**
+ * If no database is configured, create one locally.
+ */
+const init = async () => {
+  try {
+    if (!ApollosConfig?.DATABASE?.URL) {
+      // If there's no configured DB url, create a local database
+      const client = new Client({
+        host: 'localhost',
+        database: 'postgres',
+      });
+
+      console.log('client created, connecting...');
+
+      await client.connect();
+
+      console.log(`connected, creating ${dbName}`);
+
+      try {
+        await client.query(`CREATE DATABASE ${dbName}`);
+        console.log(`created ${dbName}`);
+      } catch {
+        // db must already exist
+        console.log('already exists');
+      } finally {
+        await client.end();
+        console.log('ending');
+      }
+    }
+  } catch (e) {
+    // nothing
+  }
+};
+
 // Use the DB url from the apollos config if provided.
-// Otherwise, use a SQlite database in the server root directory.
+// Otherwise, use a Postgres database in the server root directory.
 const sequelize = new Sequelize(
-  ApollosConfig?.DATABASE?.URL ||
-    `sqlite:${process.env.PWD}/${process.env.NODE_ENV || 'development'}.db`,
+  ApollosConfig?.DATABASE?.URL || `postgres:localhost/${dbName}`,
   { ...sequelizeConfigOptions, ...(ApollosConfig?.DATABASE?.OPTIONS || {}) }
 );
 
@@ -107,6 +143,13 @@ const configureModel = (callback) => () => callback({ sequelize });
 
 // Replaces DB migrations - alters the tables so they match the structure defined in code.
 // Potentially harmful - will clober columns and tables that no longer exist - so use with caution.
-const sync = async () => sequelize.sync({ alter: true });
+const sync = async (options) => sequelize.sync({ ...options, alter: true });
 
-export { defineModel, configureModel, sequelize, sync, PostgresDataSource };
+export {
+  defineModel,
+  configureModel,
+  sequelize,
+  sync,
+  init,
+  PostgresDataSource,
+};
