@@ -1,6 +1,6 @@
 import { createGlobalId } from '@apollosproject/server-core';
 import { range } from 'lodash';
-import { init, sequelize, sync } from '../../postgres/index';
+import { sequelize, sync } from '../../postgres/index';
 import { createModel } from '../model';
 import { createModel as createFlagsModel } from '../../user-flags/model';
 import CommentDataSource from '../dataSource';
@@ -18,9 +18,6 @@ const context = {
 };
 
 describe('Apollos Postgres Comments DatSource', () => {
-  beforeAll(async () => {
-    await init();
-  });
   beforeEach(async () => {
     try {
       await createModel();
@@ -35,13 +32,10 @@ describe('Apollos Postgres Comments DatSource', () => {
   });
 
   it('should support creating new comments', async () => {
-    console.log('creating CommentDataSource');
     const commentDataSource = new CommentDataSource();
 
-    console.log('initializing datasource');
     commentDataSource.initialize({ context });
 
-    console.log('adding Comment');
     const comment = await commentDataSource.addComment({
       text: 'I am a fun comment!',
       parentId: createGlobalId(123, 'UniversalContentItem'),

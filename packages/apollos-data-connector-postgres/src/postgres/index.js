@@ -1,6 +1,7 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-console */
 
+import './pgEnum-fix';
 import { Sequelize, DataTypes } from 'sequelize';
 import { Client } from 'pg';
 import ApollosConfig from '@apollosproject/config';

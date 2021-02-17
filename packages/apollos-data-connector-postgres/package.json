@@ -26,6 +26,7 @@
       "jest-date-mock"
     ],
     "testEnvironment": "node",
+    "globalSetup": "./jest.setup.js",
     "globalTeardown": "./jest.teardown.js"
   },
   "dependencies": {
