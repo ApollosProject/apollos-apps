@@ -4,7 +4,7 @@ import { defineModel, configureModel, sequelize, sync } from '../index';
 
 describe('Apollos Postgres support', () => {
   afterEach(async () => {
-    await sequelize.dropAllSchemas();
+    await sequelize.drop({});
   });
   it('should support defining new models', async () => {
     const makeContentItem = defineModel({
@@ -37,6 +37,7 @@ describe('Apollos Postgres support', () => {
       resolveType: () => 'ContentItem',
       external: true,
     });
+
     makeContentItem();
 
     await sync();
@@ -93,8 +94,6 @@ describe('Apollos Postgres support', () => {
     const fakeJournal = await sequelize.models.journal.create({
       journal: 'Some journal content',
     });
-
-    // console.log(fakeJournal, fakeContentItem);
 
     fakeContentItem.addJournal(fakeJournal);
 

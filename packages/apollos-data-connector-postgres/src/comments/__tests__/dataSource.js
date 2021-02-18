@@ -28,7 +28,7 @@ describe('Apollos Postgres Comments DatSource', () => {
     }
   });
   afterEach(async () => {
-    await sequelize.dropAllSchemas();
+    await sequelize.drop({});
   });
 
   it('should support creating new comments', async () => {
