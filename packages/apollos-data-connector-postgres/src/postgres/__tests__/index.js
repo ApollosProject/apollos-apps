@@ -95,7 +95,7 @@ describe('Apollos Postgres support', () => {
       journal: 'Some journal content',
     });
 
-    fakeContentItem.addJournal(fakeJournal);
+    await fakeContentItem.addJournal(fakeJournal);
 
     expect(await fakeContentItem.getJournals()).toContainEqual(
       await fakeJournal.reload()
