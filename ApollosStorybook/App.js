@@ -1,6 +1,9 @@
 import React from 'react';
 import { LogBox } from 'react-native';
 import ApollosConfig from '@apollosproject/config';
+import { enableScreens } from 'react-native-screens';
+
+enableScreens();
 
 import StorybookUI, {
   loadApollosStories,

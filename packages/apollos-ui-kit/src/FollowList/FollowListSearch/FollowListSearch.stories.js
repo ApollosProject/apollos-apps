@@ -1,11 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
-import CenteredView from '../CenteredView';
-import BackgroundView from '../BackgroundView';
-import { H3, H4 } from '../typography';
+import CenteredView from '../../CenteredView';
+import BackgroundView from '../../BackgroundView';
+import { H3, H4 } from '../../typography';
 
-import FollowList from '.';
+import FollowList from '..';
+import FollowListSearch from '.';
 
 const followerRequests = [
   {
@@ -91,27 +92,20 @@ const buttonFuncs = {
   },
 };
 
-storiesOf('FollowList', module)
+storiesOf('FollowListSearch', module)
   .addDecorator((story) => (
     <BackgroundView>
       {/* eslint-disable-next-line react-native/no-inline-styles */}
       <CenteredView style={{ alignItems: 'stretch' }}>{story()}</CenteredView>
     </BackgroundView>
   ))
-  .add('default', () => (
-    <>
-      <FollowList
-        followers={followerRequests}
-        {...buttonFuncs}
-        header={<H4>Follow Requests</H4>}
-      />
-      <FollowList
-        followers={followerSuggestions}
-        {...buttonFuncs}
-        header={<H4>Suggested Followers</H4>}
-      />
-    </>
-  ))
+  .add('default', () => {
+    return (
+      <>
+        <FollowListSearch />
+      </>
+    );
+  })
   .add('header', () => {
     return (
       <FollowList
@@ -132,9 +126,6 @@ storiesOf('FollowList', module)
       followListButtonTitle="Find People to Follow"
       {...buttonFuncs}
     />
-  ))
-  .add('isCard', () => (
-    <FollowList followers={followerRequests} isCard {...buttonFuncs} />
   ))
   .add('isLoading', () => (
     <FollowList
