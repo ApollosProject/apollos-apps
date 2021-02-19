@@ -1,29 +1,27 @@
-import ApollosConfig from '@apollosproject/config';
 import { Client } from 'pg';
-import { sequelize } from './src/postgres/index';
+import { dbName } from './test-connect';
+
+const JEST_WORKER_COUNT = 2;
 
 export default async () => {
-  await sequelize.dropAllSchemas();
-  await sequelize.close();
+  let count = 1;
 
-  if (!ApollosConfig?.DATABASE?.URL) {
-    const dbName = `${process.env.NODE_ENV || 'development'}`;
-    // If there's no configured DB url, create a local database
-    const client = new Client({
-      host: 'localhost',
-      database: 'postgres',
-    });
+  const client = new Client({
+    host: 'localhost',
+    database: 'postgres',
+  });
 
-    await client.connect();
+  await client.connect();
 
-    try {
-      await client.query(`DROP DATABASE ${dbName} WITH (FORCE)`);
-    } catch (e) {
-      // db must not exist
-    } finally {
-      await client.end();
-    }
+  while (count <= JEST_WORKER_COUNT) {
+    // eslint-disable-next-line no-await-in-loop
+    await client.query(
+      `DROP DATABASE IF EXISTS ${dbName(count)} WITH (FORCE);`
+    );
+
+    count += 1;
   }
+  await client.end();
 
   return true;
 };

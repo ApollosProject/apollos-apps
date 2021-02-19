@@ -3,61 +3,26 @@
 
 import './pgEnum-fix';
 import { Sequelize, DataTypes } from 'sequelize';
-import { Client } from 'pg';
-import ApollosConfig from '@apollosproject/config';
 import { createGlobalId } from '@apollosproject/server-core';
+import ApollosConfig from '@apollosproject/config';
 
 const sequelizeConfigOptions =
   process.env.NODE_ENV === 'test' ? { logging: false } : {};
 
-const dbName = `${process.env.NODE_ENV || 'development'}`;
-
-/**
- * If no database is configured, create one locally.
- */
-const init = async () => {
-  try {
-    if (!ApollosConfig?.DATABASE?.URL) {
-      // If there's no configured DB url, create a local database
-      const client = new Client({
-        host: 'localhost',
-        database: 'postgres',
-      });
-
-      console.log('client created, connecting...');
-
-      await client.connect();
-
-      console.log(`connected, creating ${dbName}`);
-
-      try {
-        await client.query(`CREATE DATABASE ${dbName}`);
-        console.log(`created ${dbName}`);
-      } catch {
-        // db must already exist
-        console.log('already exists');
-      } finally {
-        await client.end();
-        console.log('ending');
-      }
-    }
-  } catch (e) {
-    // nothing
-  }
-};
-
 // Use the DB url from the apollos config if provided.
-// Otherwise, use a Postgres database in the server root directory.
-const sequelize = new Sequelize(
-  ApollosConfig?.DATABASE?.URL || `postgres:localhost/${dbName}`,
-  { ...sequelizeConfigOptions, ...(ApollosConfig?.DATABASE?.OPTIONS || {}) }
-);
+// Otherwise, expect methods to provide their own connection.
+const sequelize = ApollosConfig?.DATABASE?.URL
+  ? new Sequelize(ApollosConfig?.DATABASE?.URL, {
+      ...sequelizeConfigOptions,
+      ...(ApollosConfig?.DATABASE?.OPTIONS || {}),
+    })
+  : null;
 
 class PostgresDataSource {
   initialize(config) {
     this.context = config.context;
-    this.sequelize = sequelize;
-    this.model = sequelize.models[this.modelName];
+    this.sequelize = config.sequelize || sequelize;
+    this.model = this.sequelize.models[this.modelName];
   }
 }
 
@@ -69,13 +34,13 @@ const defineModel = ({
   resolveType,
   sequelizeOptions = {},
   external = false,
-}) => () => {
+}) => (client = sequelize) => {
   if (attributes.originId || attributes.originType) {
     console.error(
       `originId and originType are reserved attribute names. Use 'external = true' or pick other attributes.`
     );
   }
-  const model = sequelize.define(
+  const model = client.define(
     modelName,
     {
       ...attributes,
@@ -140,17 +105,12 @@ const defineModel = ({
 
 // Creates a function that returns a function that can be called with sequelize as an argument.
 // Used to configure relationships between models.
-const configureModel = (callback) => () => callback({ sequelize });
+const configureModel = (callback) => (client = sequelize) =>
+  callback({ sequelize: client });
 
 // Replaces DB migrations - alters the tables so they match the structure defined in code.
 // Potentially harmful - will clober columns and tables that no longer exist - so use with caution.
-const sync = async (options) => sequelize.sync({ ...options, alter: true });
+const sync = async (options, client = sequelize) =>
+  client.sync({ ...options, alter: true });
 
-export {
-  defineModel,
-  configureModel,
-  sequelize,
-  sync,
-  init,
-  PostgresDataSource,
-};
+export { defineModel, configureModel, sequelize, sync, PostgresDataSource };

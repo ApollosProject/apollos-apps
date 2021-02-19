@@ -4,7 +4,7 @@
   "version": "2.0.1-canary.0",
   "main": "lib/index.js",
   "scripts": {
-    "test": "TZ=UTC jest --runInBand",
+    "test": "TZ=UTC jest",
     "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib -s",
     "lint": "eslint ./src --ext .js"
   },

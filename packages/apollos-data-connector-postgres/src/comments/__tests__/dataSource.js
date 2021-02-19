@@ -1,10 +1,11 @@
 import { createGlobalId } from '@apollosproject/server-core';
 import { range } from 'lodash';
-import { sequelize, sync } from '../../postgres/index';
+import { sync } from '../../postgres/index';
 import { createModel } from '../model';
 import { createModel as createFlagsModel } from '../../user-flags/model';
 import CommentDataSource from '../dataSource';
 import UserFlagDataSource from '../../user-flags/dataSource';
+import connect from '../../../test-connect';
 
 const context = {
   dataSources: {
@@ -17,12 +18,20 @@ const context = {
   },
 };
 
+let sequelize;
+
 describe('Apollos Postgres Comments DatSource', () => {
+  beforeAll(async () => {
+    sequelize = connect();
+  });
+
+  afterAll(async () => sequelize.close());
+
   beforeEach(async () => {
     try {
-      await createModel();
-      await createFlagsModel();
-      await sync({ force: true });
+      await createModel(sequelize);
+      await createFlagsModel(sequelize);
+      await sync({ force: true }, sequelize);
     } catch (e) {
       console.error(e);
     }
@@ -34,7 +43,7 @@ describe('Apollos Postgres Comments DatSource', () => {
   it('should support creating new comments', async () => {
     const commentDataSource = new CommentDataSource();
 
-    commentDataSource.initialize({ context });
+    commentDataSource.initialize({ context, sequelize });
 
     const comment = await commentDataSource.addComment({
       text: 'I am a fun comment!',
@@ -47,7 +56,7 @@ describe('Apollos Postgres Comments DatSource', () => {
 
   it('should prevent creating duplicate comments', async () => {
     const commentDataSource = new CommentDataSource();
-    commentDataSource.initialize({ context });
+    commentDataSource.initialize({ context, sequelize });
 
     const commentArgs = {
       text: 'I am a fun comment!',
@@ -74,7 +83,7 @@ describe('Apollos Postgres Comments DatSource', () => {
 
   it('should return comments for a given node', async () => {
     const commentDataSource = new CommentDataSource();
-    commentDataSource.initialize({ context });
+    commentDataSource.initialize({ context, sequelize });
 
     // eslint-disable-next-line no-restricted-syntax
     for (const index of range(10)) {
@@ -96,7 +105,7 @@ describe('Apollos Postgres Comments DatSource', () => {
     const commentDataSource = new CommentDataSource();
     // Change the user id to a different user
     context.dataSources.Auth.getCurrentPerson = () => ({ id: 2 });
-    commentDataSource.initialize({ context });
+    commentDataSource.initialize({ context, sequelize });
 
     // eslint-disable-next-line no-restricted-syntax
     for (const index of range(10)) {
@@ -120,7 +129,7 @@ describe('Apollos Postgres Comments DatSource', () => {
     const commentDataSource = new CommentDataSource();
     // Change the user id to a different user
     context.dataSources.Auth.getCurrentPerson = () => ({ id: 2 });
-    commentDataSource.initialize({ context });
+    commentDataSource.initialize({ context, sequelize });
 
     // eslint-disable-next-line no-restricted-syntax
     for (const index of range(5)) {
@@ -152,7 +161,7 @@ describe('Apollos Postgres Comments DatSource', () => {
 
   it('should return a user for a comment', async () => {
     const commentDataSource = new CommentDataSource();
-    commentDataSource.initialize({ context });
+    commentDataSource.initialize({ context, sequelize });
 
     const comment = await commentDataSource.addComment({
       text: `I am a fun comment!`,
@@ -165,10 +174,10 @@ describe('Apollos Postgres Comments DatSource', () => {
 
   it('returns all comments when flagLimit is 0', async () => {
     const commentDataSource = new CommentDataSource();
-    commentDataSource.initialize({ context });
+    commentDataSource.initialize({ context, sequelize });
 
     const flagDataSource = new UserFlagDataSource();
-    flagDataSource.initialize({ context });
+    flagDataSource.initialize({ context, sequelize });
 
     await commentDataSource.addComment({
       text: `This is okay!`,
@@ -192,10 +201,10 @@ describe('Apollos Postgres Comments DatSource', () => {
 
   it('should only return un-flagged comments', async () => {
     const commentDataSource = new CommentDataSource();
-    commentDataSource.initialize({ context });
+    commentDataSource.initialize({ context, sequelize });
 
     const flagDataSource = new UserFlagDataSource();
-    flagDataSource.initialize({ context });
+    flagDataSource.initialize({ context, sequelize });
 
     await commentDataSource.addComment({
       text: `This is okay!`,

@@ -1,11 +1,21 @@
 import { DataTypes } from 'sequelize';
 import { createGlobalId } from '@apollosproject/server-core';
-import { defineModel, configureModel, sequelize, sync } from '../index';
+import { defineModel, configureModel, sync } from '../index';
+import connect from '../../../test-connect';
+
+let sequelize;
 
 describe('Apollos Postgres support', () => {
+  beforeAll(async () => {
+    sequelize = connect();
+  });
+
+  afterAll(async () => sequelize.close());
+
   afterEach(async () => {
     await sequelize.drop({});
   });
+
   it('should support defining new models', async () => {
     const makeContentItem = defineModel({
       modelName: 'content_item',
@@ -14,9 +24,9 @@ describe('Apollos Postgres support', () => {
       },
       resolveType: () => 'ContentItem',
     });
-    makeContentItem();
+    makeContentItem(sequelize);
 
-    await sync();
+    await sync({}, sequelize);
 
     const fakeContentItem = await sequelize.models.content_item.create({
       title: 'A content item title',
@@ -38,9 +48,9 @@ describe('Apollos Postgres support', () => {
       external: true,
     });
 
-    makeContentItem();
+    makeContentItem(sequelize);
 
-    await sync();
+    await sync({}, sequelize);
 
     const fakeContentItem = await sequelize.models.content_item.create({
       title: 'A content item title',
@@ -78,12 +88,12 @@ describe('Apollos Postgres support', () => {
       models.content_item.hasMany(models.journal);
     });
 
-    makeContentItem();
-    makeScriptureJournal();
+    makeContentItem(sequelize);
+    makeScriptureJournal(sequelize);
 
-    makeRelationships();
+    makeRelationships(sequelize);
 
-    await sync();
+    await sync({}, sequelize);
 
     const fakeContentItem = await sequelize.models.content_item.create({
       title: 'A content item title',
