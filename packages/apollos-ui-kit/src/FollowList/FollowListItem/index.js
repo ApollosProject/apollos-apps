@@ -6,8 +6,9 @@ import { H5 } from '../../typography';
 import styled from '../../styled';
 import { ImageSourceType } from '../../ConnectedImage';
 import FlexedView from '../../FlexedView';
-import FollowListImage from '../FollowListImage';
 import Button from '../../Button';
+import H6 from '../../typography/H6';
+import FollowListImage from './FollowListImage';
 
 const TextContainer = styled(
   {
@@ -18,32 +19,78 @@ const TextContainer = styled(
 
 const Cell = styled(
   ({ theme }) => ({
-    paddingBottom: theme.sizing.baseUnit * 0.5,
+    marginBottom: theme.sizing.baseUnit,
     flexDirection: 'row',
     justifyContent: 'flex-start',
+    alignItems: 'center',
   }),
   'ui-kit.FollowList.FollowListItem.Cell'
 )(View);
 
-const FollowListItem = ({ imageSource, name }) => (
-  <Cell>
-    <FollowListImage source={imageSource} />
-    <TextContainer>
-      {name ? <H5 numberOfLines={1}>{name}</H5> : null}
-    </TextContainer>
-    <Button pill={false} title="Hide" type="default" />
-    <Button
-      pill={false}
-      title="Confirm"
-      type="primary"
-      style={{ marginLeft: 10 }}
-    />
-  </Cell>
-);
+const StyledButton = styled(
+  ({ theme }) => ({
+    paddingHorizontal: theme.sizing.baseUnit * 0.5,
+    height: theme.sizing.baseUnit * 2,
+    borderRadius: theme.sizing.baseUnit * 0.5,
+    marginLeft: theme.sizing.baseUnit * 0.5,
+  }),
+  'ui-kit.FollowList.FollowListItem.Button'
+)(Button);
+
+const FollowListItem = ({
+  imageSource,
+  name,
+  request,
+  requested,
+  confirmed,
+  onHide,
+  onConfirm,
+  onFollow,
+}) => {
+  return (
+    <Cell>
+      <FollowListImage source={imageSource} />
+      <TextContainer>
+        {name ? <H5 numberOfLines={1}>{name}</H5> : null}
+      </TextContainer>
+      {request && !confirmed && (
+        <StyledButton pill={false} type="default" onPress={onHide}>
+          <H6>Hide</H6>
+        </StyledButton>
+      )}
+      {request && (
+        <StyledButton
+          disabled={confirmed}
+          pill={false}
+          type="primary"
+          onPress={onConfirm}
+        >
+          <H6>{confirmed ? 'Confirmed!' : 'Confirm'}</H6>
+        </StyledButton>
+      )}
+      {!request && (
+        <StyledButton
+          disabled={requested}
+          pill={false}
+          type="primary"
+          onPress={onFollow}
+        >
+          <H6>{requested ? 'Requested' : 'Follow'}</H6>
+        </StyledButton>
+      )}
+    </Cell>
+  );
+};
 
 FollowListItem.propTypes = {
   imageSource: ImageSourceType.isRequired,
   name: PropTypes.string,
+  request: PropTypes.bool,
+  requested: PropTypes.bool,
+  confirmed: PropTypes.bool,
+  onHide: PropTypes.func,
+  onConfirm: PropTypes.func,
+  onFollow: PropTypes.func,
 };
 
 export default FollowListItem;

@@ -15,47 +15,32 @@ describe('FollowListItem', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render with a title', () => {
+  it('should render with a name', () => {
     const tree = renderer.create(
       <Providers>
         <FollowListItem
           imageSource={'https://picsum.photos/600/400/?random'}
-          title={'Boom'}
+          name={'Joe Schmoe'}
         />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render with a label', () => {
+  it('should render a follower request', () => {
     const tree = renderer.create(
       <Providers>
         <FollowListItem
           imageSource={'https://picsum.photos/600/400/?random'}
-          label={'What'}
+          request
         />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render with an event', () => {
+  it('should render a follower suggestion', () => {
     const tree = renderer.create(
       <Providers>
-        <FollowListItem
-          imageSource={null}
-          label={'What'}
-          start={'11/02/1996'}
-        />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
-  it('should handle an onPress function', () => {
-    const tree = renderer.create(
-      <Providers>
-        <FollowListItem
-          imageSource={'https://picsum.photos/600/400/?random'}
-          onPress={() => {}}
-        />
+        <FollowListItem imageSource={'https://picsum.photos/600/400/?random'} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -66,10 +51,8 @@ describe('FollowListItem', () => {
       <Providers>
         <SetIsLoading isLoading>
           <FollowListItem
-            onPress={() => {}}
-            imageSource={'https://picsum.photos/600/400/?random'}
-            title={'Boom'}
-            label={'What'}
+            imageSource="https://picsum.photos/600/400/?random"
+            name={'Joe Schmoe'}
           />
         </SetIsLoading>
       </Providers>

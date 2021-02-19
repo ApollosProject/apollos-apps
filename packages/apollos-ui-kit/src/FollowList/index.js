@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
 
+import { View } from 'react-native';
 import styled from '../styled';
 import { ImageSourceType } from '../ConnectedImage';
 import Card, { CardContent } from '../Card';
@@ -9,6 +10,13 @@ import { withIsLoading } from '../isLoading';
 import Button from '../Button';
 
 import FollowListItem from './FollowListItem';
+
+const HeaderView = styled(
+  ({ theme }) => ({
+    marginBottom: theme.sizing.baseUnit,
+  }),
+  'ui-kit.ActionList.Header'
+)(View);
 
 const Content = styled(
   ({ theme, cardPadding }) => ({
@@ -38,6 +46,9 @@ class FollowList extends PureComponent {
         firstName: PropTypes.string,
         lastName: PropTypes.string,
         image: ImageSourceType,
+        request: PropTypes.bool,
+        requested: PropTypes.bool,
+        confirmed: PropTypes.bool,
       })
     ),
     followListButtonTitle: PropTypes.string,
@@ -45,6 +56,9 @@ class FollowList extends PureComponent {
     header: PropTypes.element,
     isLoading: PropTypes.bool,
     onPressFollowListButton: PropTypes.func,
+    onFollow: PropTypes.func,
+    onHide: PropTypes.func,
+    onConfirm: PropTypes.func,
   };
 
   static defaultProps = {
@@ -61,6 +75,9 @@ class FollowList extends PureComponent {
   render() {
     const {
       onPressFollowListButton,
+      onFollow,
+      onHide,
+      onConfirm,
       followListButtonTitle,
       followers,
       header,
@@ -70,18 +87,25 @@ class FollowList extends PureComponent {
 
     return (
       <RenderAsCard>
-        {header || null}
         <Content cardPadding={this.props.isCard}>
+          <HeaderView>{header || null}</HeaderView>
           {followers.map((item) => (
             <FollowListItem
               {...get(item, 'relatedNode', {})}
               key={item.id}
+              id={get(item, 'id')}
+              requested={get(item, 'requested')}
+              request={get(item, 'request')}
+              confirmed={get(item, 'confirmed')}
               name={
                 [item.firstName, item.lastName]
                   .filter((name) => Boolean(name))
                   .join(' ') || ''
               }
               imageSource={get(item, 'image.sources[0]', '')}
+              onFollow={(id) => onFollow(id)}
+              onHide={(id) => onHide(id)}
+              onConfirm={(id) => onConfirm(id)}
             />
           ))}
           {onPressFollowListButton && followListButtonTitle ? (

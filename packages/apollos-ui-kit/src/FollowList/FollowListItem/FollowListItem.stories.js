@@ -5,9 +5,23 @@ import CenteredView from '../../CenteredView';
 import PaddedView from '../../PaddedView';
 import BackgroundView from '../../BackgroundView';
 
-import ActionListItem from '.';
+import FollowListItem from '.';
 
-storiesOf('ActionList/ActionListItem', module)
+const name = 'Joe Schmoe';
+
+const buttonFuncs = {
+  onHide(id) {
+    console.log(`hide request for ${id}`);
+  },
+  onConfirm(id) {
+    console.log(`confirm request for ${id}`);
+  },
+  onFollow(id) {
+    console.log(`follow request for ${id}`);
+  },
+};
+
+storiesOf('FollowList/FollowListItem', module)
   .addDecorator((story) => (
     <BackgroundView>
       {/* eslint-disable-next-line react-native/no-inline-styles */}
@@ -16,38 +30,51 @@ storiesOf('ActionList/ActionListItem', module)
       </CenteredView>
     </BackgroundView>
   ))
-  .add('example', () => (
-    <ActionListItem
-      imageSource={'https://picsum.photos/600/400/?random'}
-      label={'Boom'}
-      onPress={() => {}}
-      title={'Hello 1'}
-    />
-  ))
   .add('default', () => (
-    <ActionListItem imageSource={'https://picsum.photos/600/400/?random'} />
-  ))
-  .add('label', () => (
-    <ActionListItem
-      onPress={() => {}}
+    <FollowListItem
       imageSource={'https://picsum.photos/600/400/?random'}
-      label={'Boom'}
-      title={'Hello 1'}
-      relatedNodeId={'fakeID'}
+      name={name}
+      {...buttonFuncs}
     />
   ))
-  .add('title', () => (
-    <ActionListItem
+  .add('renders without image src', () => (
+    <FollowListItem name={name} {...buttonFuncs} />
+  ))
+  .add('renders without name', () => (
+    <FollowListItem
       imageSource={'https://picsum.photos/600/400/?random'}
-      title={'Hello 1'}
+      {...buttonFuncs}
     />
   ))
-  .add('event', () => (
-    <ActionListItem imageSource={null} title={'Hello 1'} start={'11/02/1996'} />
-  ))
-  .add('onPress', () => (
-    <ActionListItem
+  .add('follower request', () => (
+    <FollowListItem
       imageSource={'https://picsum.photos/600/400/?random'}
-      onPress={() => {}}
+      name={name}
+      request
+      {...buttonFuncs}
+    />
+  ))
+  .add('follower suggestion', () => (
+    <FollowListItem
+      imageSource={'https://picsum.photos/600/400/random'}
+      name={name}
+      {...buttonFuncs}
+    />
+  ))
+  .add('follower confirmed', () => (
+    <FollowListItem
+      imageSource={'https://picsum.photos/600/400/?random'}
+      name={name}
+      request
+      confirmed
+      {...buttonFuncs}
+    />
+  ))
+  .add('follower requested', () => (
+    <FollowListItem
+      imageSource={'https://picsum.photos/600/400/?random'}
+      name={name}
+      requested
+      {...buttonFuncs}
     />
   ));
