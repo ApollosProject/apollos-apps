@@ -1,10 +1,9 @@
 import { createGlobalId } from '@apollosproject/server-core';
-import { sync } from '../../postgres/index';
+import { sequelize, sync } from '../../postgres/index';
 import { createModel } from '../model';
 import { createModel as createCommentModel } from '../../comments/model';
 import CommentDataSource from '../../comments/dataSource';
 import UserFlagDataSource from '../dataSource';
-import connect from '../../../test-connect';
 
 let personId;
 
@@ -22,36 +21,30 @@ const context = {
 describe('Apollos Postgres Comment Flags DataSource', () => {
   let comment;
   let commentDataSource;
-  let sequelize;
-
-  beforeAll(async () => {
-    sequelize = connect();
-  });
-
-  afterAll(async () => sequelize.close());
 
   beforeEach(async () => {
     personId = 1;
 
-    await createCommentModel(sequelize);
-    await createModel(sequelize);
-    await sync({}, sequelize);
+    await createCommentModel();
+    await createModel();
+    await sync();
 
     commentDataSource = new CommentDataSource();
-    commentDataSource.initialize({ context, sequelize });
+    commentDataSource.initialize({ context });
 
     comment = await commentDataSource.addComment({
       text: 'I am a fun comment!',
       parentId: createGlobalId(123, 'UniversalContentItem'),
     });
   });
+
   afterEach(async () => {
     await sequelize.drop({});
   });
 
   it('should support flagging comment', async () => {
     const userFlagDataSource = new UserFlagDataSource();
-    userFlagDataSource.initialize({ context, sequelize });
+    userFlagDataSource.initialize({ context });
 
     const flaggedComment = await userFlagDataSource.flagComment({
       commentId: comment.apollosId,
@@ -65,7 +58,7 @@ describe('Apollos Postgres Comment Flags DataSource', () => {
 
   it('should increment flag count on comment', async () => {
     const userFlagDataSource = new UserFlagDataSource();
-    userFlagDataSource.initialize({ context, sequelize });
+    userFlagDataSource.initialize({ context });
 
     await userFlagDataSource.flagComment({
       commentId: comment.apollosId,
@@ -81,7 +74,7 @@ describe('Apollos Postgres Comment Flags DataSource', () => {
 
   it('should only increment count for new flags', async () => {
     const userFlagDataSource = new UserFlagDataSource();
-    userFlagDataSource.initialize({ context, sequelize });
+    userFlagDataSource.initialize({ context });
 
     // Try to have the same user flag a comment twice
     await userFlagDataSource.flagComment({
@@ -116,7 +109,7 @@ describe('Apollos Postgres Comment Flags DataSource', () => {
 
   it('should return a user for a flag', async () => {
     const userFlagDataSource = new UserFlagDataSource();
-    userFlagDataSource.initialize({ context, sequelize });
+    userFlagDataSource.initialize({ context });
 
     const flaggedComment = await userFlagDataSource.flagComment({
       commentId: comment.apollosId,
