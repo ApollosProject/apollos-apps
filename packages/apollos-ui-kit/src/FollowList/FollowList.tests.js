@@ -1,102 +1,96 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import moment from 'moment';
 
 import Providers from '../Providers';
-import { H3 } from '../typography';
+import { H4 } from '../typography';
 
 import FollowList from '.';
 
-const followers = [
+const followerRequests = [
   {
     id: 'fakeId1',
-    title: 'Hello 1',
-    subtitle: 'Boom',
+    request: true,
+    firstName: 'Joshua',
+    lastName: 'Imel',
     parentChannel: {
       id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
       name: 'NewSpring - Articles',
     },
-    coverImage: {
-      sources: {
-        uri: 'https://picsum.photos/600/400?random',
-      },
+    image: {
+      sources: [
+        {
+          uri: 'https://picsum.photos/600/400?random',
+        },
+      ],
     },
   },
   {
     id: 'fakeId2',
-    title: 'Hello 2',
-    subtitle: 'Boom',
+    request: true,
+    firstName: 'Joe',
+    lastName: 'Schmoe',
     parentChannel: {
       id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
       name: 'NewSpring - Articles',
     },
-    coverImage: {
-      sources: {
-        uri: 'https://picsum.photos/600/400?random',
-      },
-    },
-  },
-  {
-    id: 'fakeId3',
-    title: 'Hello 3',
-    subtitle: 'Boom',
-    parentChannel: {
-      id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
-      name: 'NewSpring - Articles',
-    },
-    coverImage: {
-      sources: {
-        uri: 'https://picsum.photos/600/400?random',
-      },
-    },
-  },
-  {
-    id: 'fakeId4',
-    title: 'Hello 4',
-    subtitle: 'Boom',
-    parentChannel: {
-      id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
-      name: 'NewSpring - Articles',
-    },
-    coverImage: {
-      sources: {
-        uri: 'https://picsum.photos/600/400?random',
-      },
-    },
-  },
-  {
-    id: 'fakeId5',
-    parentChannel: {
-      id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
-      name: 'NewSpring - Articles',
-    },
-    coverImage: {
-      sources: {
-        uri: 'https://picsum.photos/600/400?random',
-      },
+    image: {
+      sources: [
+        {
+          uri: 'https://picsum.photos/600/400?random',
+        },
+      ],
     },
   },
 ];
 
-const eventActions = followers.map((action, i) => ({
-  ...action,
-  image: null,
-  start: moment(`November ${i + 1}, 2020`).toJSON(),
-}));
+const followerSuggestions = [
+  {
+    id: 'fakeId3',
+    firstName: 'John',
+    lastName: 'Doe',
+    parentChannel: {
+      id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
+      name: 'NewSpring - Articles',
+    },
+    image: {
+      sources: [
+        {
+          uri: 'https://picsum.photos/600/400?random',
+        },
+      ],
+    },
+  },
+  {
+    id: 'fakeId4',
+    firstName: 'Billy',
+    lastName: 'Bob',
+    parentChannel: {
+      id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
+      name: 'NewSpring - Articles',
+    },
+    image: {
+      sources: [
+        {
+          uri: 'https://picsum.photos/600/400?random',
+        },
+      ],
+    },
+  },
+];
 
 describe('FollowList', () => {
-  it('should render 5 items', () => {
+  it('should render 4 items', () => {
     const tree = renderer.create(
       <Providers>
-        <FollowList followers={followers} />
+        <FollowList followers={[...followerRequests, ...followerSuggestions]} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render without a "card border"', () => {
+  it('should render as a card', () => {
     const tree = renderer.create(
       <Providers>
-        <FollowList followers={followers} isCard={false} />
+        <FollowList followers={followerRequests} isCard />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -105,44 +99,40 @@ describe('FollowList', () => {
     const tree = renderer.create(
       <Providers>
         <FollowList
-          followers={followers}
-          header={
-            <H3 numberOfLines={3} ellipsizeMode="tail">
-              Custom Header Element
-            </H3>
-          }
+          followers={followerRequests}
+          header={<H4>Follow Requests</H4>}
         />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render items as "touchable via onPressActionItem', () => {
+  it('should render items with Follow button', () => {
     const tree = renderer.create(
       <Providers>
-        <FollowList followers={followers} onPressActionItem={jest.fn()} />
+        <FollowList followers={followerSuggestions} onFollow={jest.fn()} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render with onPressActionListButton', () => {
+  it('should render items with Hide and Confirm buttons', () => {
     const tree = renderer.create(
       <Providers>
         <FollowList
-          followers={followers}
-          actionListButtonTitle="Press Me!"
-          onPressActionListButton={jest.fn()}
+          followers={followerRequests}
+          onHide={jest.fn()}
+          onConfirm={jest.fn()}
         />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render with events', () => {
+  it('should render with onPressFollowListButton', () => {
     const tree = renderer.create(
       <Providers>
         <FollowList
-          followers={eventActions}
-          actionListButtonTitle="Press Me!"
-          onPressActionListButton={jest.fn()}
+          followers={followerRequests}
+          followListButtonTitle="Press Me!"
+          onPressFollowListButton={jest.fn()}
         />
       </Providers>
     );
@@ -151,12 +141,7 @@ describe('FollowList', () => {
   it('should render a loading state', () => {
     const tree = renderer.create(
       <Providers>
-        <FollowList
-          onPress={jest.fn()}
-          isLoading
-          followers={followers}
-          onPressActionListButton={jest.fn()}
-        />
+        <FollowList isLoading followers={followerRequests} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
