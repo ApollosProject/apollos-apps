@@ -561,7 +561,7 @@ export const contentChannelSchema = gql`
     content(channel: CONTENT_CHANNEL_TYPE): ContentItemsConnection
   }
 
-  enum CONTENT_CHANNEL_TYPE {
+  enum CONTENT_CHANNEL {
     Sermons
     Devotionals
     Articles
