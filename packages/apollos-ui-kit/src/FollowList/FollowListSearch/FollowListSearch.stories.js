@@ -1,11 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import CenteredView from '../../CenteredView';
 import BackgroundView from '../../BackgroundView';
 import { H3, H4 } from '../../typography';
 
 import FollowList from '..';
+import FollowListSearchModal from './FollowListSearchModal';
 import FollowListSearch from '.';
 
 const followerRequests = [
@@ -100,10 +102,24 @@ storiesOf('FollowListSearch', module)
     </BackgroundView>
   ))
   .add('default', () => {
+    const RootStack = createStackNavigator();
     return (
-      <>
-        <FollowListSearch />
-      </>
+      <RootStack.Navigator mode="modal">
+        <RootStack.Screen name="Main" options={{ headerShown: false }}>
+          {({ navigation, ...props }) => (
+            <FollowList
+              followers={[]}
+              onPressFollowListButton={() => navigation.navigate('FollowModal')}
+              followListButtonTitle="Search"
+              {...props}
+            />
+          )}
+        </RootStack.Screen>
+        <RootStack.Screen
+          name="FollowModal"
+          component={FollowListSearchModal}
+        />
+      </RootStack.Navigator>
     );
   })
   .add('header', () => {

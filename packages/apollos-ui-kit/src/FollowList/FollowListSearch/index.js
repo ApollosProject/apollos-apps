@@ -1,13 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { createNativeStackNavigator } from 'react-native-screens/native-stack';
-import { Button } from 'react-native';
 import FollowList from '..';
 import H4 from '../../typography/H4';
 
-const NavStack = createNativeStackNavigator();
-
-function FollowListScreen() {
+function FollowListSearch() {
   return (
     <FollowList
       header={<H4>Followers</H4>}
@@ -33,34 +28,5 @@ function FollowListScreen() {
     />
   );
 }
-
-const FollowListSearch = ({ title }) => {
-  return (
-    <NavStack.Navigator
-      initialRouteName="Follow"
-      mode="float"
-      screenOptions={{ stackPresentation: 'modal' }}
-    >
-      <NavStack.Screen
-        name="Follow"
-        component={FollowListScreen}
-        options={{
-          title,
-          headerRight: function HeaderRight() {
-            return <Button title="Test" />;
-          },
-        }}
-      />
-    </NavStack.Navigator>
-  );
-};
-
-FollowListSearch.propTypes = {
-  title: PropTypes.string,
-};
-
-FollowListSearch.defaultProps = {
-  title: 'Find People to Follow',
-};
 
 export default FollowListSearch;
