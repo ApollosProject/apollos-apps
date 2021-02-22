@@ -1,76 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ActionListItem should handle an onPress function 1`] = `
-<View
-  accessible={true}
-  focusable={true}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "transform": Array [
-        Object {
-          "scale": 1,
-        },
-      ],
-    }
-  }
->
-  <View
-    style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "flex-start",
-        "paddingBottom": 8,
-      }
-    }
-  >
-    <Image
-      fadeDuration={250}
-      onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/600/400/?random",
-            "url": "https://picsum.photos/600/400/?random",
-          },
-        ]
-      }
-      style={
-        Object {
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 16,
-          "height": 64,
-          "marginRight": 16,
-          "width": 64,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "flex": 1,
-          "justifyContent": "center",
-        }
-      }
-    />
-  </View>
-</View>
-`;
-
-exports[`ActionListItem should render 1`] = `
+exports[`FollowListItem should render 1`] = `
 <View
   style={
     Object {
+      "alignItems": "center",
       "flexDirection": "row",
       "justifyContent": "flex-start",
-      "paddingBottom": 8,
+      "marginBottom": 16,
     }
   }
 >
@@ -89,7 +26,7 @@ exports[`ActionListItem should render 1`] = `
     style={
       Object {
         "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
+        "borderRadius": 32,
         "height": 64,
         "marginRight": 16,
         "width": 64,
@@ -104,165 +41,52 @@ exports[`ActionListItem should render 1`] = `
       }
     }
   />
-</View>
-`;
-
-exports[`ActionListItem should render a loading state 1`] = `
-<View
-  accessible={true}
-  focusable={true}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "transform": Array [
-        Object {
-          "scale": 1,
-        },
-      ],
-    }
-  }
->
   <View
+    bordered={false}
+    disabled={false}
+    pill={false}
     style={
       Object {
+        "alignItems": "center",
+        "backgroundColor": "#00676D",
+        "borderColor": "#00676D",
+        "borderRadius": 8,
+        "borderWidth": 2,
+        "elevation": 2,
         "flexDirection": "row",
-        "justifyContent": "flex-start",
-        "paddingBottom": 8,
-      }
-    }
-  >
-    <Image
-      fadeDuration={250}
-      onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/600/400/?random",
-            "url": "https://picsum.photos/600/400/?random",
-          },
-        ]
-      }
-      style={
-        Object {
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 16,
-          "height": 64,
-          "marginRight": 16,
-          "width": 64,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "flex": 1,
-          "justifyContent": "center",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 14,
-            "marginVertical": 3.5,
-            "width": "60%",
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 12,
-            "marginVertical": 3,
-            "width": "100%",
-          }
-        }
-      />
-    </View>
-  </View>
-</View>
-`;
-
-exports[`ActionListItem should render with a label 1`] = `
-<View
-  style={
-    Object {
-      "flexDirection": "row",
-      "justifyContent": "flex-start",
-      "paddingBottom": 8,
-    }
-  }
->
-  <Image
-    fadeDuration={250}
-    onLoad={[Function]}
-    source={
-      Array [
-        Object {
-          "cache": "force-cache",
-          "uri": "https://picsum.photos/600/400/?random",
-          "url": "https://picsum.photos/600/400/?random",
-        },
-      ]
-    }
-    style={
-      Object {
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 64,
-        "marginRight": 16,
-        "width": 64,
-      }
-    }
-  />
-  <View
-    style={
-      Object {
-        "flex": 1,
+        "height": 32,
         "justifyContent": "center",
+        "marginLeft": 8,
+        "opacity": 1,
+        "overflow": "hidden",
+        "paddingHorizontal": 8,
       }
     }
   >
     <Text
-      bold={false}
-      ellipsizeMode="tail"
-      italic={false}
-      numberOfLines={3}
       style={
         Object {
-          "color": "#A5A5A5",
-          "fontFamily": "InterUI-Regular",
+          "color": "#FFFFFF",
+          "fontFamily": "InterUI-Bold",
           "fontSize": 12,
           "lineHeight": 18,
         }
       }
     >
-      What
+      Follow
     </Text>
   </View>
 </View>
 `;
 
-exports[`ActionListItem should render with a title 1`] = `
+exports[`FollowListItem should render a follower request 1`] = `
 <View
   style={
     Object {
+      "alignItems": "center",
       "flexDirection": "row",
       "justifyContent": "flex-start",
-      "paddingBottom": 8,
+      "marginBottom": 16,
     }
   }
 >
@@ -281,7 +105,270 @@ exports[`ActionListItem should render with a title 1`] = `
     style={
       Object {
         "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
+        "borderRadius": 32,
+        "height": 64,
+        "marginRight": 16,
+        "width": 64,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  />
+  <View
+    bordered={false}
+    disabled={false}
+    pill={false}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#A5A5A5",
+        "borderColor": "#A5A5A5",
+        "borderRadius": 8,
+        "borderWidth": 2,
+        "elevation": 2,
+        "flexDirection": "row",
+        "height": 32,
+        "justifyContent": "center",
+        "marginLeft": 8,
+        "opacity": 1,
+        "overflow": "hidden",
+        "paddingHorizontal": 8,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
+        }
+      }
+    >
+      Hide
+    </Text>
+  </View>
+  <View
+    bordered={false}
+    disabled={false}
+    pill={false}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#00676D",
+        "borderColor": "#00676D",
+        "borderRadius": 8,
+        "borderWidth": 2,
+        "elevation": 2,
+        "flexDirection": "row",
+        "height": 32,
+        "justifyContent": "center",
+        "marginLeft": 8,
+        "opacity": 1,
+        "overflow": "hidden",
+        "paddingHorizontal": 8,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
+        }
+      }
+    >
+      Confirm
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`FollowListItem should render a follower suggestion 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flexDirection": "row",
+      "justifyContent": "flex-start",
+      "marginBottom": 16,
+    }
+  }
+>
+  <Image
+    fadeDuration={250}
+    onLoad={[Function]}
+    source={
+      Array [
+        Object {
+          "cache": "force-cache",
+          "uri": "https://picsum.photos/600/400/?random",
+          "url": "https://picsum.photos/600/400/?random",
+        },
+      ]
+    }
+    style={
+      Object {
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 32,
+        "height": 64,
+        "marginRight": 16,
+        "width": 64,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  />
+  <View
+    bordered={false}
+    disabled={false}
+    pill={false}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#00676D",
+        "borderColor": "#00676D",
+        "borderRadius": 8,
+        "borderWidth": 2,
+        "elevation": 2,
+        "flexDirection": "row",
+        "height": 32,
+        "justifyContent": "center",
+        "marginLeft": 8,
+        "opacity": 1,
+        "overflow": "hidden",
+        "paddingHorizontal": 8,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
+        }
+      }
+    >
+      Follow
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`FollowListItem should render a loading state 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flexDirection": "row",
+      "justifyContent": "flex-start",
+      "marginBottom": 16,
+    }
+  }
+>
+  <Image
+    fadeDuration={250}
+    onLoad={[Function]}
+    source={
+      Array [
+        Object {
+          "cache": "force-cache",
+          "uri": "https://picsum.photos/600/400/?random",
+          "url": "https://picsum.photos/600/400/?random",
+        },
+      ]
+    }
+    style={
+      Object {
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 32,
+        "height": 64,
+        "marginRight": 16,
+        "width": 64,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 14,
+          "marginVertical": 3.5,
+          "width": "60%",
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 8,
+        "height": 32,
+        "marginLeft": 8,
+        "paddingHorizontal": 8,
+        "width": 64,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`FollowListItem should render with a name 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flexDirection": "row",
+      "justifyContent": "flex-start",
+      "marginBottom": 16,
+    }
+  }
+>
+  <Image
+    fadeDuration={250}
+    onLoad={[Function]}
+    source={
+      Array [
+        Object {
+          "cache": "force-cache",
+          "uri": "https://picsum.photos/600/400/?random",
+          "url": "https://picsum.photos/600/400/?random",
+        },
+      ]
+    }
+    style={
+      Object {
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 32,
         "height": 64,
         "marginRight": 16,
         "width": 64,
@@ -297,7 +384,7 @@ exports[`ActionListItem should render with a title 1`] = `
     }
   >
     <Text
-      numberOfLines={2}
+      numberOfLines={1}
       style={
         Object {
           "color": "#303030",
@@ -307,86 +394,42 @@ exports[`ActionListItem should render with a title 1`] = `
         }
       }
     >
-      Boom
+      Joe Schmoe
     </Text>
   </View>
-</View>
-`;
-
-exports[`ActionListItem should render with an event 1`] = `
-<View
-  style={
-    Object {
-      "flexDirection": "row",
-      "justifyContent": "flex-start",
-      "paddingBottom": 8,
-    }
-  }
->
   <View
+    bordered={false}
+    disabled={false}
+    pill={false}
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#F4F4F5",
-        "borderRadius": 16,
-        "height": 64,
+        "backgroundColor": "#00676D",
+        "borderColor": "#00676D",
+        "borderRadius": 8,
+        "borderWidth": 2,
+        "elevation": 2,
+        "flexDirection": "row",
+        "height": 32,
         "justifyContent": "center",
-        "marginRight": 16,
-        "width": 64,
+        "marginLeft": 8,
+        "opacity": 1,
+        "overflow": "hidden",
+        "paddingHorizontal": 8,
       }
     }
   >
     <Text
       style={
         Object {
-          "color": "#505050",
-          "fontFamily": "InterUI-Black",
-          "fontSize": 24,
-          "lineHeight": 27.6,
-          "marginBottom": -8,
-          "textAlign": "center",
-          "width": "100%",
-        }
-      }
-    >
-      2
-    </Text>
-    <Text
-      style={
-        Object {
-          "color": "#505050",
+          "color": "#FFFFFF",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
           "lineHeight": 18,
         }
       }
     >
-      Nov
-    </Text>
-  </View>
-  <View
-    style={
-      Object {
-        "flex": 1,
-        "justifyContent": "center",
-      }
-    }
-  >
-    <Text
-      bold={false}
-      ellipsizeMode="tail"
-      italic={false}
-      numberOfLines={3}
-      style={
-        Object {
-          "color": "#A5A5A5",
-          "fontFamily": "InterUI-Regular",
-          "fontSize": 12,
-          "lineHeight": 18,
-        }
-      }
-    >
-      What
+      Follow
     </Text>
   </View>
 </View>
