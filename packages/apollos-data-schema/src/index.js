@@ -558,6 +558,14 @@ export const contentChannelSchema = gql`
   extend type Query {
     contentChannels: [ContentChannel]
       @deprecated(reason: "No longer supported.")
+    content(channel: CONTENT_CHANNEL_TYPE): ContentItemsConnection
+  }
+
+  enum CONTENT_CHANNEL_TYPE {
+    Sermons
+    Devotionals
+    Articles
+    Events
   }
 `;
 
