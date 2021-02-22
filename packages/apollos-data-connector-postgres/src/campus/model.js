@@ -20,7 +20,8 @@ const createModel = defineModel({
 });
 
 const setupModel = configureModel(({ sequelize }) => {
-  sequelize.models.campus.hasMany(sequelize.models.person);
+  sequelize.models.campus.hasMany(sequelize.models.people);
+  sequelize.models.people.belongsTo(sequelize.models.campus);
 });
 
 export { createModel, setupModel };
