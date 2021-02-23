@@ -5,6 +5,7 @@ import { View, Button, SafeAreaView } from 'react-native';
 import CenteredView from '../../CenteredView';
 import BackgroundView from '../../BackgroundView';
 
+import styled from '../../styled';
 import FollowListSearchModal from './FollowListSearchModal';
 import FollowListSearch from '.';
 
@@ -80,6 +81,10 @@ const followerSuggestions = [
   },
 ];
 
+const Container = styled({
+  height: '100%',
+})(SafeAreaView);
+
 const buttonFuncs = {
   onHide(id) {
     console.log(`hide request for ${id}`);
@@ -96,7 +101,7 @@ function FollowListSearchStory() {
   const [followers, setFollowers] = useState([]);
 
   return (
-    <SafeAreaView style={{ height: '100%' }}>
+    <Container>
       <FollowListSearch
         onSearch={(value) =>
           setFollowers(
@@ -110,7 +115,7 @@ function FollowListSearchStory() {
         results={followers}
         {...buttonFuncs}
       />
-    </SafeAreaView>
+    </Container>
   );
 }
 

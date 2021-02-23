@@ -95,6 +95,7 @@ const buttonFuncs = {
 
 function ModalStory() {
   const [open, setModalOpen] = useState(false);
+  const [followers, setFollowers] = useState([]);
 
   return (
     <View>
@@ -104,7 +105,21 @@ function ModalStory() {
         followListButtonTitle="Find People to Follow"
         {...buttonFuncs}
       />
-      <FollowListSearchModal open={open} setModalOpen={setModalOpen} />
+      <FollowListSearchModal
+        open={open}
+        setModalOpen={setModalOpen}
+        onSearch={(value) =>
+          setFollowers(
+            [...followerSuggestions, ...followerRequests].filter((follower) =>
+              `${follower.firstName.toLowerCase()} ${follower.lastName.toLowerCase()}`.includes(
+                value.toLowerCase()
+              )
+            )
+          )
+        }
+        results={followers}
+        {...buttonFuncs}
+      />
     </View>
   );
 }
