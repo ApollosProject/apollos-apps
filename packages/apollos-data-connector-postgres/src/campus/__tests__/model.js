@@ -2,7 +2,7 @@ import { sequelize, sync } from '../../postgres/index';
 import { createModel, setupModel } from '../model';
 import { createModel as createPeopleModel } from '../../people/model';
 
-describe('Comments model', () => {
+describe('Campus model', () => {
   beforeEach(async () => {
     await createPeopleModel();
     await createModel();
