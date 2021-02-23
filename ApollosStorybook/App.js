@@ -1,7 +1,4 @@
 import { LogBox } from 'react-native';
-import { enableScreens } from 'react-native-screens';
-
-enableScreens();
 
 import StorybookUI, {
   loadApollosStories,
