@@ -1,32 +1,73 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import { View } from 'react-native';
 import FollowList from '..';
-import H4 from '../../typography/H4';
+import Search from '../../inputs/Search';
+import styled from '../../styled';
 
-function FollowListSearch() {
+const SearchContainer = styled(({ theme }) => ({
+  marginHorizontal: theme.sizing.baseUnit,
+}))(View);
+
+function FollowListSearch({
+  onSearch,
+  onHide,
+  onConfirm,
+  onFollow,
+  results = [],
+}) {
+  const [searchTimeout, setSearchTimeout] = useState();
+  const [searchTimer, setSearchTimer] = useState(false);
+  const [search, setSearch] = useState('');
+
+  useEffect(() => {
+    if (searchTimer) {
+      clearTimeout(searchTimeout);
+      const timeout = setTimeout(() => {
+        onSearch(search);
+      }, 500);
+      setSearchTimer(false);
+      setSearchTimeout(timeout);
+    }
+    return () => {
+      clearTimeout(searchTimeout);
+    };
+  }, [onSearch, search, searchTimeout, searchTimer]);
   return (
-    <FollowList
-      header={<H4>Followers</H4>}
-      followers={[
-        {
-          id: 'fakeId1',
-          request: true,
-          firstName: 'Joshua',
-          lastName: 'Imel',
-          parentChannel: {
-            id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
-            name: 'NewSpring - Articles',
-          },
-          image: {
-            sources: [
-              {
-                uri: 'https://picsum.photos/600/400?random',
-              },
-            ],
-          },
-        },
-      ]}
-    />
+    <>
+      <SearchContainer>
+        <Search
+          showCancelButton={false}
+          onChangeText={(value) => {
+            setSearch(value);
+            setSearchTimer(true);
+          }}
+        />
+      </SearchContainer>
+      <FollowList
+        followers={results}
+        onHide={onHide}
+        onConfirm={onConfirm}
+        onFollow={onFollow}
+      />
+    </>
   );
 }
+
+FollowListSearch.propTypes = {
+  onSearch: PropTypes.func,
+  onHide: PropTypes.func,
+  onConfirm: PropTypes.func,
+  onFollow: PropTypes.func,
+  results: PropTypes.arrayOf(PropTypes.object),
+};
+
+FollowListSearch.defaultProps = {
+  onSearch: () => {},
+  onHide: () => {},
+  onConfirm: () => {},
+  onFollow: () => {},
+  results: [],
+};
 
 export default FollowListSearch;

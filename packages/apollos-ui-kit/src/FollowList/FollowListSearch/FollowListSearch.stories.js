@@ -1,12 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
-import { createStackNavigator } from '@react-navigation/stack';
+import { View, Button, SafeAreaView } from 'react-native';
 
 import CenteredView from '../../CenteredView';
 import BackgroundView from '../../BackgroundView';
-import { H3, H4 } from '../../typography';
 
-import FollowList from '..';
 import FollowListSearchModal from './FollowListSearchModal';
 import FollowListSearch from '.';
 
@@ -94,6 +92,54 @@ const buttonFuncs = {
   },
 };
 
+function FollowListSearchStory() {
+  const [followers, setFollowers] = useState([]);
+
+  return (
+    <SafeAreaView style={{ height: '100%' }}>
+      <FollowListSearch
+        onSearch={(value) =>
+          setFollowers(
+            [...followerSuggestions, ...followerRequests].filter((follower) =>
+              `${follower.firstName.toLowerCase()} ${follower.lastName.toLowerCase()}`.includes(
+                value.toLowerCase()
+              )
+            )
+          )
+        }
+        results={followers}
+        {...buttonFuncs}
+      />
+    </SafeAreaView>
+  );
+}
+
+function FollowListSearchModalStory() {
+  const [open, setModalOpen] = useState(false);
+  const [followers, setFollowers] = useState([]);
+
+  return (
+    <View>
+      <Button onPress={() => setModalOpen(true)} title="Open" />
+      <FollowListSearchModal
+        open={open}
+        setModalOpen={setModalOpen}
+        onSearch={(value) =>
+          setFollowers(
+            [...followerSuggestions, ...followerRequests].filter((follower) =>
+              `${follower.firstName.toLowerCase()} ${follower.lastName.toLowerCase()}`.includes(
+                value.toLowerCase()
+              )
+            )
+          )
+        }
+        results={followers}
+        {...buttonFuncs}
+      />
+    </View>
+  );
+}
+
 storiesOf('FollowListSearch', module)
   .addDecorator((story) => (
     <BackgroundView>
@@ -102,56 +148,8 @@ storiesOf('FollowListSearch', module)
     </BackgroundView>
   ))
   .add('default', () => {
-    const RootStack = createStackNavigator();
-    return (
-      <RootStack.Navigator mode="modal">
-        <RootStack.Screen name="Main" options={{ headerShown: false }}>
-          {({ navigation, ...props }) => (
-            <FollowList
-              followers={[]}
-              onPressFollowListButton={() => navigation.navigate('FollowModal')}
-              followListButtonTitle="Search"
-              {...props}
-            />
-          )}
-        </RootStack.Screen>
-        <RootStack.Screen
-          name="FollowModal"
-          component={FollowListSearchModal}
-        />
-      </RootStack.Navigator>
-    );
+    return <FollowListSearchStory />;
   })
-  .add('header', () => {
-    return (
-      <FollowList
-        followers={followerRequests}
-        header={
-          <H4 numberOfLines={1} ellipsizeMode="tail">
-            Follow Requests
-          </H4>
-        }
-        {...buttonFuncs}
-      />
-    );
-  })
-  .add('onPressActionListButton', () => (
-    <FollowList
-      followers={followerRequests}
-      onPressFollowListButton={() => {}}
-      followListButtonTitle="Find People to Follow"
-      {...buttonFuncs}
-    />
-  ))
-  .add('isLoading', () => (
-    <FollowList
-      isLoading
-      followers={followerRequests}
-      header={
-        <H3 numberOfLines={1} ellipsizeMode="tail">
-          Some random text that encourages you
-        </H3>
-      }
-      {...buttonFuncs}
-    />
-  ));
+  .add('has modal variation', () => {
+    return <FollowListSearchModalStory />;
+  });
