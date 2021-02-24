@@ -1,9 +1,7 @@
 import { Client } from 'pg';
 import { dbName } from './src/postgres/test-connect';
 
-const JEST_WORKER_COUNT = 2;
-
-export default async () => {
+export default async ({ maxWorkers }) => {
   const client = new Client({
     host: 'localhost',
     database: 'postgres',
@@ -18,7 +16,7 @@ export default async () => {
 
   let count = 1;
 
-  while (count <= JEST_WORKER_COUNT) {
+  while (count <= maxWorkers) {
     const name = dbName(count);
 
     try {

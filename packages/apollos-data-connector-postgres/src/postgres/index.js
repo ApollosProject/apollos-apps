@@ -102,8 +102,8 @@ const defineModel = ({
       indexes: [
         { unique: true, fields: ['apollosId'] },
         ...(external
-          ? { unique: true, fields: ['originId', 'originType'] }
-          : {}),
+          ? [{ unique: true, fields: ['originId', 'originType'] }]
+          : []),
         ...(sequelizeOptions?.indexes || []),
       ],
     }
