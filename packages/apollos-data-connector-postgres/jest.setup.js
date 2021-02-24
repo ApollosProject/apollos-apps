@@ -39,7 +39,6 @@ export default async ({ maxWorkers }) => {
         `CREATE EXTENSION IF NOT EXISTS "uuid-ossp";`
       );
       await dbTestClient.end();
-      console.log(create, uuid, uuid.rows);
     } catch (e) {
       console.error(`Failed to create test database ${name}`);
       console.error(e);
