@@ -76,7 +76,6 @@ export const interfacesSchema = gql`
 
   extend type MediaContentItem implements ScriptureNode
   extend type DevotionalContentItem implements ScriptureNode
-
   extend type ContentSeriesContentItem implements ProgressNode
 `;
 
@@ -928,6 +927,7 @@ export const featuresSchema = gql`
     id: ID!
     order: Int
 
+    title: String
     body: String
   }
 
@@ -935,6 +935,7 @@ export const featuresSchema = gql`
     id: ID!
     order: Int
 
+    title: String
     scriptures: [Scripture]
   }
 
@@ -942,8 +943,8 @@ export const featuresSchema = gql`
     id: ID!
     order: Int
 
-    linkText: String
     title: String
+    linkText: String
     url: String
   }
 
@@ -958,6 +959,11 @@ export const featuresSchema = gql`
   }
 
   extend type WeekendContentItem implements FeaturesNode {
+    features: [Feature] @deprecated(reason: "Use featureFeed")
+    featureFeed: FeatureFeed
+  }
+
+  extend type DevotionalContentItem implements FeaturesNode {
     features: [Feature] @deprecated(reason: "Use featureFeed")
     featureFeed: FeatureFeed
   }
@@ -991,7 +997,7 @@ export const commentSchema = gql`
     id: ID!
     order: Int
 
-    comments: [Comment]
+    comments: [Comment] @cacheControl(maxAge: 0)
   }
 
   type AddCommentFeature implements Feature & Node {

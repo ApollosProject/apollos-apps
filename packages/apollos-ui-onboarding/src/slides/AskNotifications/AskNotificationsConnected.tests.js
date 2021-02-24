@@ -17,6 +17,7 @@ describe('The Onboarding AskNotificationsConnected component', () => {
             loading: false,
             hasPushPermission: false,
             hasPrompted: false,
+            checkPermissions: () => ({}),
           }}
         >
           <AskNotificationsConnected
@@ -34,7 +35,12 @@ describe('The Onboarding AskNotificationsConnected component', () => {
     const component = (
       <Providers MockedProvider={MockedProvider}>
         <PushContext.Provider
-          value={{ loading: false, hasPushPermission: true, hasPrompted: true }}
+          value={{
+            loading: false,
+            hasPushPermission: true,
+            hasPrompted: true,
+            checkPermissions: () => ({}),
+          }}
         >
           <AskNotificationsConnected
             onPressPrimary={jest.fn()}

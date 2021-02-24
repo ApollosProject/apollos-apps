@@ -1,12 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  KeyboardAvoidingView,
-  StyleSheet,
-  ScrollView,
-  Platform,
-  StatusBar,
-} from 'react-native';
+import { ScrollView, Platform } from 'react-native';
 import { get } from 'lodash';
 import {
   PaddedView,
@@ -15,8 +9,14 @@ import {
   ButtonLink,
   BackgroundView,
 } from '@apollosproject/ui-kit';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { FlexedSafeAreaView, TitleText, PromptText } from '../styles';
+import {
+  FlexedSafeAreaView,
+  TitleText,
+  PromptText,
+  FlexedKeyboardAvoidingView,
+} from '../styles';
 
 const PasswordEntry = ({
   passwordTitleText,
@@ -31,61 +31,64 @@ const PasswordEntry = ({
   values,
   BackgroundComponent,
   newUser,
-}) => (
-  <KeyboardAvoidingView
-    style={StyleSheet.absoluteFill}
-    behavior={'padding'}
-    keyboardVerticalOffset={
-      Platform.OS === 'android' ? StatusBar.currentHeight : 0
-    }
-  >
+}) => {
+  // We need to  the avoiding view by by header height on iOS so the button doesn't appear under the keyboard.
+  // https://github.com/software-mansion/react-native-screens/blob/bcd5e4d8ea861b78bff7747162e6df7163ed4e1f/createNativeStackNavigator/README.md
+  const statusBarInset = useSafeAreaInsets().top; // inset of the status bar
+  const headerInset = statusBarInset + 44; // inset to use for a small header since it's frame is equal to 44 + the frame of status bar
+  return (
     <BackgroundComponent>
-      <FlexedSafeAreaView>
-        <ScrollView>
-          <PaddedView>
-            <TitleText>{passwordTitleText}</TitleText>
-            <PromptText padded>
-              {newUser ? passwordPromptTextNewUser : passwordPromptText}
-            </PromptText>
+      <FlexedSafeAreaView edges={['right', 'top', 'left']}>
+        <FlexedKeyboardAvoidingView
+          behavior={'padding'}
+          keyboardVerticalOffset={Platform.OS === 'ios' ? headerInset : 0}
+        >
+          <ScrollView>
+            <PaddedView>
+              <TitleText>{passwordTitleText}</TitleText>
+              <PromptText padded>
+                {newUser ? passwordPromptTextNewUser : passwordPromptText}
+              </PromptText>
 
-            <TextInput
-              autoFocus
-              autoComplete={'password'}
-              label={'Password'}
-              type={'password'}
-              textContentType="password"
-              enablesReturnKeyAutomatically
-              returnKeyType={'next'}
-              onSubmitEditing={onPressNext}
-              error={get(errors, 'password')}
-              onChangeText={(text) => setFieldValue('password', text)}
-              value={get(values, 'password')}
-            />
+              <TextInput
+                autoFocus
+                autoComplete={'password'}
+                label={'Password'}
+                type={'password'}
+                textContentType="password"
+                enablesReturnKeyAutomatically
+                returnKeyType={'next'}
+                onSubmitEditing={onPressNext}
+                error={get(errors, 'password')}
+                onChangeText={(text) => setFieldValue('password', text)}
+                value={get(values, 'password')}
+              />
 
-            {handleForgotPassword ? (
-              <ButtonLink onPress={handleForgotPassword}>
-                Forgot your password?
-              </ButtonLink>
-            ) : null}
-          </PaddedView>
-        </ScrollView>
+              {handleForgotPassword ? (
+                <ButtonLink onPress={handleForgotPassword}>
+                  Forgot your password?
+                </ButtonLink>
+              ) : null}
+            </PaddedView>
+          </ScrollView>
 
-        {onPressNext ? (
-          <PaddedView>
-            <Button
-              onPress={onPressNext}
-              disabled={disabled}
-              loading={isLoading}
-              title={'Login'}
-              type={'primary'}
-              pill={false}
-            />
-          </PaddedView>
-        ) : null}
+          {onPressNext ? (
+            <PaddedView>
+              <Button
+                onPress={onPressNext}
+                disabled={disabled}
+                loading={isLoading}
+                title={'Login'}
+                type={'primary'}
+                pill={false}
+              />
+            </PaddedView>
+          ) : null}
+        </FlexedKeyboardAvoidingView>
       </FlexedSafeAreaView>
     </BackgroundComponent>
-  </KeyboardAvoidingView>
-);
+  );
+};
 
 PasswordEntry.propTypes = {
   passwordTitleText: PropTypes.string,

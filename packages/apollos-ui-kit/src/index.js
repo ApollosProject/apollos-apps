@@ -5,6 +5,7 @@ export ActivityIndicator, {
   InlineActivityIndicator,
 } from './ActivityIndicator';
 export ActionBar, { ActionBarItem } from './ActionBar';
+export AddCommentInput from './AddCommentInput';
 export Avatar, { AvatarList, AvatarCloud } from './Avatar';
 export BackgroundImageBlur from './BackgroundImageBlur';
 export BackgroundView from './BackgroundView';
@@ -27,6 +28,7 @@ export DefaultCard from './DefaultCard';
 export FeaturedCard from './FeaturedCard';
 export FeedView from './FeedView';
 export FlexedView from './FlexedView';
+export FollowList from './FollowList';
 export GradientOverlayImage from './GradientOverlayImage';
 export HighlightCard from './HighlightCard';
 export HorizontalHighlightCard from './HorizontalHighlightCard';

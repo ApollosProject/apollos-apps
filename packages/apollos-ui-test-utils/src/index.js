@@ -8,6 +8,7 @@ import { Providers as UIProviders } from '@apollosproject/ui-kit';
 import { InMemoryCache } from '@apollo/client/cache';
 import createPossibleType from './createPossibleType';
 import ApolloStorybookDecorator from './ApolloStorybookDecorator';
+import fragmentTypes from './fragmentTypes.json';
 
 async function renderWithApolloData(component, existingTree) {
   const tree = existingTree || renderer.create(component);
@@ -72,4 +73,5 @@ export {
   ApolloProvider,
   WithReactNavigator,
   ApolloStorybookDecorator,
+  fragmentTypes,
 };

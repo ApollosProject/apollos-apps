@@ -1,8 +1,7 @@
 {
-  "packages": [
-    "packages/*"
-  ],
-  "version": "2.0.0",
+  "packages": ["packages/*"],
+  "version": "2.0.1-canary.0",
   "npmClient": "yarn",
-  "useWorkspaces": true
+  "useWorkspaces": true,
+  "changelogPreset": "conventionalcommits"
 }

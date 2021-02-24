@@ -2,6 +2,7 @@ import gql from 'graphql-tag';
 
 const TEXT_FEATURE_FRAGMENT = gql`
   fragment TextFeatureFragment on TextFeature {
+    title
     body
     id
     sharing {
@@ -85,6 +86,8 @@ const LITE_FEATURES_FRAGMENT = gql`
       subtitle
     }
     ... on TextFeature {
+      # The whole fragment is currently included b/c these nodes don't fetch their own content.
+      title
       body
       sharing {
         message
@@ -92,6 +95,7 @@ const LITE_FEATURES_FRAGMENT = gql`
     }
     ... on ScriptureFeature {
       # The whole fragment is currently included b/c these nodes don't fetch their own content.
+      title
       sharing {
         message
       }
@@ -108,9 +112,6 @@ const LITE_FEATURES_FRAGMENT = gql`
       linkText
       title
       url
-    }
-    ... on CommentListFeature {
-      id
     }
   }
 `;
@@ -216,6 +217,20 @@ const ACTION_BAR_FEATURE_FRAGMENT = gql`
       relatedNode {
         ...RelatedFeatureNodeFragment
       }
+    }
+  }
+`;
+
+const ADD_COMMENT_FEATURE_FRAGMENT = gql`
+  fragment AddCommentFeatureFragment on AddCommentFeature {
+    id
+
+    addPrompt
+    initialPrompt
+
+    relatedNode {
+      id
+      __typename
     }
   }
 `;
@@ -370,6 +385,7 @@ export {
   FEATURES_FRAGMENT,
   ACTION_LIST_FEATURE_FRAGMENT,
   ACTION_BAR_FEATURE_FRAGMENT,
+  ADD_COMMENT_FEATURE_FRAGMENT,
   COMMENT_LIST_FEATURE_FRAGMENT,
   HERO_LIST_FEATURE_FRAGMENT,
   HORIZONTAL_CARD_LIST_FEATURE_FRAGMENT,

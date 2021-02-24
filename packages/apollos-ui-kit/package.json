@@ -2,7 +2,7 @@
   "name": "@apollosproject/ui-kit",
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "2.0.0",
+  "version": "2.0.1-canary.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -60,7 +60,6 @@
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "numeral": "^2.0.6",
-    "react-native-appearance": "^0.3.4",
     "react-native-modal-datetime-picker": "8.7.1",
     "react-native-tab-view": "1.0.2",
     "recompose": "^0.30.0",

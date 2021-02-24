@@ -19,16 +19,21 @@ const context = {
 
 describe('Apollos Postgres Comments DatSource', () => {
   beforeEach(async () => {
-    await createModel();
-    await createFlagsModel();
-    await sync();
+    try {
+      await createModel();
+      await createFlagsModel();
+      await sync({ force: true });
+    } catch (e) {
+      console.error(e);
+    }
   });
   afterEach(async () => {
-    await sequelize.dropAllSchemas();
+    await sequelize.drop({});
   });
 
   it('should support creating new comments', async () => {
     const commentDataSource = new CommentDataSource();
+
     commentDataSource.initialize({ context });
 
     const comment = await commentDataSource.addComment({
@@ -85,6 +90,64 @@ describe('Apollos Postgres Comments DatSource', () => {
       nodeType: 'UniversalContentItem',
     });
     expect(itemComments.length).toBe(10);
+  });
+
+  it('should return only public comments for a given node', async () => {
+    const commentDataSource = new CommentDataSource();
+    // Change the user id to a different user
+    context.dataSources.Auth.getCurrentPerson = () => ({ id: 2 });
+    commentDataSource.initialize({ context });
+
+    // eslint-disable-next-line no-restricted-syntax
+    for (const index of range(10)) {
+      // eslint-disable-next-line no-await-in-loop
+      await commentDataSource.addComment({
+        text: `I am a fun comment #${index}!`,
+        parentId: createGlobalId(123, 'UniversalContentItem'),
+        visibility: index % 2 === 0 ? 'PUBLIC' : 'PRIVATE', // tag every other comment as public
+      });
+    }
+    // Go back to our original user user
+    context.dataSources.Auth.getCurrentPerson = () => ({ id: 1 });
+    const itemComments = await commentDataSource.getForNode({
+      nodeId: 123,
+      nodeType: 'UniversalContentItem',
+    });
+    expect(itemComments.length).toBe(5);
+  });
+
+  it('should return your private comments', async () => {
+    const commentDataSource = new CommentDataSource();
+    // Change the user id to a different user
+    context.dataSources.Auth.getCurrentPerson = () => ({ id: 2 });
+    commentDataSource.initialize({ context });
+
+    // eslint-disable-next-line no-restricted-syntax
+    for (const index of range(5)) {
+      // eslint-disable-next-line no-await-in-loop
+      await commentDataSource.addComment({
+        text: `I am a fun comment #${index}!`,
+        parentId: createGlobalId(123, 'UniversalContentItem'),
+        visibility: 'PRIVATE', // tag each comment as private
+      });
+    }
+    // Go back to our original user user
+    context.dataSources.Auth.getCurrentPerson = () => ({ id: 1 });
+    // eslint-disable-next-line no-restricted-syntax
+    for (const index of range(5)) {
+      // eslint-disable-next-line no-await-in-loop
+      await commentDataSource.addComment({
+        text: `I am a fun comment #${index}!`,
+        parentId: createGlobalId(123, 'UniversalContentItem'),
+        visibility: 'PRIVATE', // tag each comment as private
+      });
+    }
+
+    const itemComments = await commentDataSource.getForNode({
+      nodeId: 123,
+      nodeType: 'UniversalContentItem',
+    });
+    expect(itemComments.length).toBe(5);
   });
 
   it('should return a user for a comment', async () => {

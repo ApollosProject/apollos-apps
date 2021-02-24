@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, TextInput } from 'react-native';
+import { StyleSheet, TextInput, View } from 'react-native';
 import PropTypes from 'prop-types';
 import styled from '../styled';
 import { H4, H5, BodySmall } from '../typography';
@@ -31,7 +31,7 @@ const AddCommentContainer = styled(
     alignItems: 'center',
   }),
   'ui-kit.AddCommentInput.AddCommentContainer'
-)(Touchable);
+)(View);
 
 const NextButton = styled(
   ({ theme: { colors } }) => ({
@@ -53,8 +53,9 @@ const AddCommentPrompt = styled(
 )(H5);
 
 const AddCommentTextInput = styled(
-  ({ theme: { sizing } }) => ({
+  ({ theme: { sizing, colors } }) => ({
     minHeight: sizing.baseUnit * 4,
+    color: colors.text.primary,
   }),
   'ui-kit.AddCommentInput.AddCommentTextInput'
 )(TextInput);
@@ -91,10 +92,12 @@ const AddCommentInput = ({ initialPrompt, addPrompt, onSubmit, profile }) => {
       </NextButtonTouchable>
     </CommentInputContainer>
   ) : (
-    <AddCommentContainer onPress={onStartWriting}>
-      <CommentAvatar source={profile?.image} />
-      <AddCommentPrompt>{currentText || initialPrompt}</AddCommentPrompt>
-    </AddCommentContainer>
+    <Touchable onPress={onStartWriting}>
+      <AddCommentContainer>
+        <CommentAvatar source={profile?.image} />
+        <AddCommentPrompt>{currentText || initialPrompt}</AddCommentPrompt>
+      </AddCommentContainer>
+    </Touchable>
   );
 };
 
