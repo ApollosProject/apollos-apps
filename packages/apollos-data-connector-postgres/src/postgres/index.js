@@ -48,7 +48,7 @@ const defineModel = ({
       id: {
         primaryKey: true,
         type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV4,
+        defaultValue: Sequelize.literal('uuid_generate_v4()'),
       },
       apollosId: {
         type: DataTypes.STRING,

@@ -29,7 +29,17 @@ export default async ({ maxWorkers }) => {
 
     try {
       // eslint-disable-next-line no-await-in-loop
-      await client.query(`CREATE DATABASE ${name};`);
+      const create = await client.query(`CREATE DATABASE ${name};`);
+      const dbTestClient = new Client({
+        host: 'localhost',
+        database: dbName(count),
+      });
+      await dbTestClient.connect();
+      const uuid = await dbTestClient.query(
+        `CREATE EXTENSION IF NOT EXISTS "uuid-ossp";`
+      );
+      await dbTestClient.end();
+      console.log(create, uuid, uuid.rows);
     } catch (e) {
       console.error(`Failed to create test database ${name}`);
       console.error(e);
