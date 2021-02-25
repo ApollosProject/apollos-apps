@@ -21,7 +21,7 @@ export default async ({ maxWorkers }) => {
     const name = dbName(count);
 
     // eslint-disable-next-line no-await-in-loop
-    await ensureLocalDb(client, name);
+    await ensureLocalDb(client, name, true);
 
     count += 1;
   }

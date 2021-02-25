@@ -18,6 +18,16 @@ const ensureLocalDb = async (client, name, drop = false) => {
 
   try {
     await client.query(`CREATE DATABASE ${name};`);
+    // If we want to check first, and are willing to install dblink, we could do this instead:
+    // await client.query(
+    //   `DO $do$ BEGIN IF NOT EXISTS (SELECT FROM pg_database WHERE datname = '${name}') THEN PERFORM dblink_exec('dbname=' || current_database(), 'CREATE DATABASE ${name}'); END IF; END $do$;`
+    // );
+  } catch (e) {
+    // Assume the database already exists
+    console.log('database already exists');
+  }
+
+  try {
     const dbTestClient = new Client({
       host: 'localhost',
       database: name,
