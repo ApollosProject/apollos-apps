@@ -7,14 +7,14 @@ import Slide, { SlideContent } from '../../Slide';
 const Follow = memo(
   ({
     BackgroundComponent,
-    title = 'Get connected',
+    slideTitle = 'Get connected',
     description = 'Follow others to stay up to date with your church community.',
     followers = [],
     ...props
   }) => (
     <Slide {...props}>
       {BackgroundComponent}
-      <SlideContent title={title} description={description}>
+      <SlideContent title={slideTitle} description={description}>
         <FollowList followers={followers} />
       </SlideContent>
     </Slide>
@@ -25,7 +25,7 @@ Follow.displayName = 'Follow';
 
 Follow.propTypes = {
   followers: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string,
+  slideTitle: PropTypes.string,
   description: PropTypes.string,
   /* The `Swiper` component used in `<onBoarding>` looks for and hijacks the title prop of it's
    * children. Thus we have to use more unique name.
