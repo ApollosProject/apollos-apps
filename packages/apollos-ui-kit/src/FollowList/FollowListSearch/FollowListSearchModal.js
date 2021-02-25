@@ -11,25 +11,34 @@ import { styled } from '@apollosproject/ui-kit';
 import H4 from '../../typography/H4';
 import FollowListSearch from '.';
 
-const Header = styled(({ theme }) => ({
-  width: '100%',
-  height: theme.sizing.baseUnit * 4,
-  flexDirection: 'row',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  padding: theme.sizing.baseUnit,
-}))(View);
+const Header = styled(
+  ({ theme }) => ({
+    width: '100%',
+    height: theme.sizing.baseUnit * 4,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: theme.sizing.baseUnit,
+  }),
+  'ui-kit.FollowListSearchModal.Header'
+)(View);
 
-const Button = styled(({ theme }) => ({
-  width: theme.sizing.baseUnit * 3,
-}))(TouchableOpacity);
+const Button = styled(
+  ({ theme }) => ({
+    width: theme.sizing.baseUnit * 3,
+  }),
+  'ui-kit.FollowListSearchModal.Button'
+)(TouchableOpacity);
 
-const ButtonText = styled(({ theme }) => ({
-  color: theme.colors.primary,
-  fontSize: theme.typography.baseFontSize,
-  lineHeight: theme.typography.baseLineHeight,
-  textAlign: 'right',
-}))(Text);
+const ButtonText = styled(
+  ({ theme }) => ({
+    color: theme.colors.primary,
+    fontSize: theme.typography.baseFontSize,
+    lineHeight: theme.typography.baseLineHeight,
+    textAlign: 'right',
+  }),
+  'ui-kit.FollowListSearchModal.ButtonText'
+)(Text);
 
 const FollowListSearchModal = ({
   onSearch,
