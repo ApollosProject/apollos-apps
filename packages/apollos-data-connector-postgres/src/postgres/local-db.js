@@ -6,12 +6,14 @@ import { Client } from 'pg';
  * @param {Client} client;
  * @param {string} name;
  */
-const ensureLocalDb = async (client, name) => {
-  try {
-    await client.query(`DROP DATABASE IF EXISTS ${name};`);
-  } catch (e) {
-    console.error(`Failed to drop local database ${name}`);
-    console.error(e);
+const ensureLocalDb = async (client, name, drop = false) => {
+  if (drop) {
+    try {
+      await client.query(`DROP DATABASE IF EXISTS ${name};`);
+    } catch (e) {
+      console.error(`Failed to drop local database ${name}`);
+      console.error(e);
+    }
   }
 
   try {
