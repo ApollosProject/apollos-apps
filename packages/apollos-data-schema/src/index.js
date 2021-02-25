@@ -982,6 +982,16 @@ export const featuresSchema = gql`
   }
 `;
 
+export const followRequestSchema = gql`
+  extend type Mutation {
+    requestFollow(followedPersonId: ID!): FollowRequestResult
+  }
+
+  type FollowRequestResult {
+    following: Boolean
+  }
+`;
+
 export const commentSchema = gql`
   extend type Mutation {
     addComment(

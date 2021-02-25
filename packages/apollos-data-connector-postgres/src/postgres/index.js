@@ -15,6 +15,9 @@ const sequelizeConfigOptions =
 const name = `${process.env.NODE_ENV || 'development'}`;
 
 // Create a local database if it doesn't exist
+// FIXME: Because the main thread here doesn't wait for this process to complete,
+// the database doesn't exist on first run, and the sequelize instance below is undefined
+// until you quit and restart.
 if (!ApollosConfig?.DATABASE?.URL && process.env.NODE_ENV !== 'test') {
   const client = new Client({
     host: 'localhost',
