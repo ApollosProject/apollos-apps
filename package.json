@@ -41,9 +41,10 @@
     "babel-jest": "^25.1.0",
     "chokidar": "^3.0.1",
     "codecov": "3.7.1",
+    "conventional-changelog-conventionalcommits": "^4.5.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "lerna": "^3.14.0",
     "prettier": "^2.1.2",
-    "eslint-plugin-prettier": "^3.1.4",
     "react-native-storybook-loader": "^1.8.0",
     "yalc": "^1.0.0-pre.35"
   }
