@@ -111,6 +111,7 @@ const Share = styled(
 
 const CurrentText = styled(
   ({ theme }) => ({
+    color: theme.colors.text.primary,
     fontSize: theme.typography.baseFontSize,
     lineHeight: theme.typography.baseLineHeight,
     paddingHorizontal: theme.sizing.baseUnit,
