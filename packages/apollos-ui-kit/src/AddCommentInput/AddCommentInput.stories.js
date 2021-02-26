@@ -38,8 +38,7 @@ storiesOf('ui-kit/AddCommentInput', module)
       <AddCommentInput
         profile={{
           image: { uri: 'https://picsum.photos/200' },
-          firstName: 'Jeff',
-          lastName: 'Bridges',
+          nickName: 'Jeff Bridges',
         }}
         onSubmit={() => {}}
       />
@@ -51,8 +50,7 @@ storiesOf('ui-kit/AddCommentInput', module)
         <AddCommentInput
           profile={{
             image: { uri: 'https://picsum.photos/200' },
-            firstName: 'Jeff',
-            lastName: 'Bridges',
+            nickName: 'Jeff Bridges',
           }}
           onSubmit={() => {}}
         />
@@ -74,8 +72,7 @@ storiesOf('ui-kit/AddCommentInput', module)
                 onSubmit={() => {}}
                 profile={{
                   image: { uri: 'https://picsum.photos/200' },
-                  firstName: 'Jeff',
-                  lastName: 'Bridges',
+                  nickName: 'Jeff Bridges',
                 }}
               />
             )
