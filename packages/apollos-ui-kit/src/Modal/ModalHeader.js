@@ -19,14 +19,17 @@ function ModalHeader({
   onPrevious,
   onNext,
   title,
-  onPreviousText,
-  onNextText,
+  onPreviousText = 'Back',
+  onNextText = 'Next',
 }) {
   return (
     <Header>
-      <ModalButton onPress={onPrevious} title={onPreviousText} />
+      <ModalButton
+        onPress={onPrevious}
+        title={onPrevious ? onPreviousText : null}
+      />
       <H4>{title}</H4>
-      <ModalButton onPress={onNext} title={onNextText} />
+      <ModalButton onPress={onNext} title={onNext ? onNextText : null} />
     </Header>
   );
 }
