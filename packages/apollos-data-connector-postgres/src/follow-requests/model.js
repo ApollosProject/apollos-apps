@@ -5,8 +5,8 @@ const createModel = defineModel({
   modelName: 'follow-requests',
   resolveType: () => 'FollowRequest',
   attributes: {
-    requestPersonId: DataTypes.INTEGER,
-    followedPersonId: DataTypes.INTEGER,
+    requestPersonId: DataTypes.UUID,
+    followedPersonId: DataTypes.UUID,
     accepted: {
       type: DataTypes.BOOLEAN,
       // null = requested, false = declined, true = accepted
