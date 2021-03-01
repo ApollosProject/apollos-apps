@@ -1,14 +1,20 @@
+import { AuthenticationError } from 'apollo-server';
 import { PostgresDataSource } from '../postgres';
 
 class FollowRequestDataSource extends PostgresDataSource {
   modelName = 'follow-requests';
 
   async requestFollow({ followedPersonId }) {
-    const currentUser = await this.context.dataSources.Auth.getCurrentPerson();
+    const { Auth, PersonApollos } = this.context.dataSources;
+    const currentPerson = await Auth.getCurrentPerson();
+
+    if (!currentPerson) throw new AuthenticationError('Invalid Credentials');
+
+    const requestPersonId = await PersonApollos.resolveId(currentPerson.id);
 
     const existingRequest = await this.model.findOne({
       where: {
-        requestPersonId: currentUser.id,
+        requestPersonId,
         followedPersonId,
       },
     });
@@ -25,7 +31,7 @@ class FollowRequestDataSource extends PostgresDataSource {
     } else {
       // There was no existing request, so lets make one.
       await this.model.create({
-        requestPersonId: currentUser.id,
+        requestPersonId,
         followedPersonId,
       });
     }
