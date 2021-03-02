@@ -29,9 +29,11 @@ const allowedAttributes = {
 };
 
 // A very picky HTML sanitizer
-export default function (dirty) {
-  return sanitizeHtml(dirty, {
-    allowedTags,
-    allowedAttributes,
-  });
-}
+export default (dirty) =>
+  // by default, it turns null into "null"
+  dirty
+    ? sanitizeHtml(dirty, {
+        allowedTags,
+        allowedAttributes,
+      })
+    : '';
