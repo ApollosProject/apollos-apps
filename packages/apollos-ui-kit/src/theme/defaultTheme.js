@@ -160,7 +160,11 @@ export const buttons = ({ colors: themeColors, alpha: themeAlpha }) => ({
   },
 });
 
-export const overlays = ({ alpha: themeAlpha, colors: themeColors }) => ({
+export const overlays = ({
+  alpha: themeAlpha,
+  colors: themeColors,
+  type: themeType,
+}) => ({
   // these are a function because we can't assume colors of an overlay based on a theme (varies on usage + context)
   default: ({ overlayColor }) => ({
     colors: [`${Color(overlayColor).fade(1).string()}`, overlayColor],
@@ -225,7 +229,9 @@ export const overlays = ({ alpha: themeAlpha, colors: themeColors }) => ({
   // Overriding this property changes all BackgroundViews
   'background-gradient': ({ colors: customColors }) => ({
     colors: customColors || [
-      themeColors.background.paper,
+      themeType === 'dark'
+        ? themeColors.background.screen
+        : themeColors.background.paper,
       themeColors.background.screen,
     ],
     // default props from `react-native-linear-gradient`
