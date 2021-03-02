@@ -13,9 +13,6 @@ export ContentCardConnected, {
 } from './ContentCardConnected';
 export ContentNodeConnected, { GET_CONTENT_NODE } from './ContentNodeConnected';
 export CampaignItemListFeature from './CampaignItemListFeature';
-export ContentHTMLViewConnected, {
-  GET_CONTENT_ITEM_CONTENT,
-} from './ContentHTMLViewConnected';
 export ContentSingleFeaturesConnected, {
   ContentSingleFeatures,
   GET_CONTENT_ITEM_FEATURES,
