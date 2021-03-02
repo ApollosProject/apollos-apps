@@ -33,20 +33,20 @@ const withThemeMixin = (themeInput) =>
   compose(
     mapProps((props) => ({ ownProps: props })),
     getContext({
-      theme: PropTypes.shape(THEME_PROPS),
+      themeContext: PropTypes.shape(THEME_PROPS),
       themeInput: PropTypes.shape(THEME_PROPS),
     }),
     withPropsOnChange(
       (props, nextProps) =>
-        props.theme !== nextProps.theme ||
+        props.themeContext !== nextProps.themeContext ||
         props.themeInput !== nextProps.themeInput ||
         props.ownProps.mixin !== nextProps.ownProps.mixin,
-      ({ theme, themeInput: originalThemeInput, ownProps }) => {
+      ({ themeContext, themeInput: originalThemeInput, ownProps }) => {
         // Start with the original theme input
         let themeInputAsObject = themeInput;
         // If it's a function, call the function with the current props + theme.
         if (typeof themeInput === 'function') {
-          themeInputAsObject = themeInput({ ...ownProps, theme });
+          themeInputAsObject = themeInput({ ...ownProps, theme: themeContext });
         }
         // Now, merge together the input, and strip out all the null leaves.
         // This is important. Null leaves will override default values from the base theme, without providing a replacement.
@@ -61,18 +61,18 @@ const withThemeMixin = (themeInput) =>
         const themeWithMixin = createTheme(themeInputAsObject);
 
         return {
-          theme: themeWithMixin,
+          themeContext: themeWithMixin,
           themeInput: themeInputAsObject,
         };
       }
     ),
     withContext(
       {
-        theme: PropTypes.shape(THEME_PROPS),
+        themeContext: PropTypes.shape(THEME_PROPS),
         themeInput: PropTypes.shape(THEME_PROPS),
       },
-      ({ theme, themeInput: newThemeInput }) => ({
-        theme,
+      ({ themeContext, themeInput: newThemeInput }) => ({
+        themeContext,
         themeInput: newThemeInput,
       })
     ),

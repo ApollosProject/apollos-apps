@@ -11,9 +11,9 @@ export default function withTheme(mapperFn = DEFAULT_MAPPER_FN, fqn) {
   return hoistStatics(
     compose(
       getContext({
-        theme: PropTypes.shape(THEME_PROPS),
+        themeContext: PropTypes.shape(THEME_PROPS),
       }),
-      mapProps(({ theme, ...otherProps }) => {
+      mapProps(({ themeContext: theme, ...otherProps }) => {
         const themeOverridesValue = fqn
           ? get(theme, `overrides['${fqn}']`, {})
           : {};

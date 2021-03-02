@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
-import { withTheme, ThemeMixin } from '../theme';
+import { withTheme, ThemeMixin, named } from '../theme';
 import styled from '../styled';
 import Card, { CardContent, CardLabel, CardImage } from '../Card';
 import FlexedView from '../FlexedView';
@@ -215,4 +215,4 @@ HighlightCard.defaultProps = {
   actionIcon: 'play-opaque',
 };
 
-export default HighlightCard;
+export default named('ui-kit.HighlightCard')(HighlightCard);

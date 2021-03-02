@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { withTheme } from '../theme';
+import { withTheme, named } from '../theme';
 import styled from '../styled';
 import Card, { CardImage, CardLabel, CardContent } from '../Card';
 import { H3, BodyText } from '../typography';
@@ -141,4 +141,4 @@ DefaultCard.propTypes = {
 
 DefaultCard.displayName = 'DefaultCard';
 
-export default DefaultCard;
+export default named('ui-kit.DefaultCard')(DefaultCard);
