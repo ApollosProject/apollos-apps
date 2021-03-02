@@ -38,7 +38,9 @@ storiesOf('ui-kit/AddCommentInput', module)
       <AddCommentInput
         profile={{
           image: { uri: 'https://picsum.photos/200' },
+          nickName: 'Jeff Bridges',
         }}
+        onSubmit={() => {}}
       />
     </View>
   ))
@@ -48,7 +50,9 @@ storiesOf('ui-kit/AddCommentInput', module)
         <AddCommentInput
           profile={{
             image: { uri: 'https://picsum.photos/200' },
+            nickName: 'Jeff Bridges',
           }}
+          onSubmit={() => {}}
         />
       </BackgroundView>
     </ThemeMixin>
@@ -64,7 +68,13 @@ storiesOf('ui-kit/AddCommentInput', module)
             item.__typename === 'Comment' ? (
               <Comment {...item} />
             ) : (
-              <AddCommentInput />
+              <AddCommentInput
+                onSubmit={() => {}}
+                profile={{
+                  image: { uri: 'https://picsum.photos/200' },
+                  nickName: 'Jeff Bridges',
+                }}
+              />
             )
           }
           data={fakeData}
