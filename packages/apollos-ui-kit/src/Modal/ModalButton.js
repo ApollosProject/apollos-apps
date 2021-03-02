@@ -6,7 +6,7 @@ import styled from '../styled';
 
 const Button = styled(({ theme }) => ({
   width: theme.sizing.baseUnit * 3,
-}))(TouchableOpacity);
+}), 'ui-kit.ModalButton.Button')(TouchableOpacity);
 
 const ButtonText = styled(({ theme }) => ({
   color: theme.colors.primary,
