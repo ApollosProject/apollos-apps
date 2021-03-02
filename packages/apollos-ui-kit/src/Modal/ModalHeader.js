@@ -6,14 +6,17 @@ import styled from '../styled';
 import { H4 } from '../typography';
 import ModalButton from './ModalButton';
 
-const Header = styled(({ theme }) => ({
-  width: '100%',
-  height: theme.sizing.baseUnit * 4,
-  flexDirection: 'row',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  padding: theme.sizing.baseUnit,
-}), 'ui-kit.ModalHeader.Header')(View);
+const Header = styled(
+  ({ theme }) => ({
+    width: '100%',
+    height: theme.sizing.baseUnit * 4,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: theme.sizing.baseUnit,
+  }),
+  'ui-kit.ModalHeader.Header'
+)(View);
 
 function ModalHeader({
   onPrevious,
