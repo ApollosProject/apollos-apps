@@ -5,7 +5,7 @@ import { GradientOverlayImage } from '@apollosproject/ui-kit';
 import Follow from './Follow';
 
 storiesOf('ui-onboarding/slides/Follow', module)
-  .add('default', () => <Follow isLoading />)
+  .add('default', () => <Follow />)
   .add('followers', () => (
     <Follow followers={[{ firstName: 'Joe', lastName: 'Schmoe' }]} />
   ))
