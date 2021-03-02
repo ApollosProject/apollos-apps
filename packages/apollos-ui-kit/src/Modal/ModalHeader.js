@@ -13,7 +13,7 @@ const Header = styled(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'space-between',
   padding: theme.sizing.baseUnit,
-}))(View);
+}), 'ui-kit.ModalHeader.Header')(View);
 
 function ModalHeader({
   onPrevious,
