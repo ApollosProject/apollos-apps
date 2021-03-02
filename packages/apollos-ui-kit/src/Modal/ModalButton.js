@@ -13,7 +13,7 @@ const ButtonText = styled(({ theme }) => ({
   fontSize: theme.typography.baseFontSize,
   lineHeight: theme.typography.baseLineHeight,
   textAlign: 'right',
-}))(Text);
+}), 'ui-kit.ModalButton.ButtonText')(Text);
 
 function ModalButton({ onPress, title }) {
   return (
