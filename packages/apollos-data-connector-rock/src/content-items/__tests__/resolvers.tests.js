@@ -45,6 +45,8 @@ class AuthDataSource {
     }
     throw new AuthenticationError('Must be logged in');
   }
+
+  getAuthToken = () => '123XYZ';
 }
 
 const Auth = {
@@ -93,6 +95,7 @@ const { getSchema, getContext } = createTestHelpers({
 ApollosConfig.loadJs({
   ROCK: {
     API_URL: 'https://apollosrock.newspring.cc/api',
+    EXTERNAL_SITE_URL: 'https://apollos.app',
     API_TOKEN: 'some-rock-token',
     IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
     TIMEZONE: 'America/New_York',

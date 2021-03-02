@@ -15,7 +15,17 @@ const { ROCK, ROCK_MAPPINGS } = ApollosConfig;
 export const defaultContentItemResolvers = {
   id: ({ id }, args, context, { parentType }) =>
     createGlobalId(id, parentType.name),
-  htmlContent: ({ content }) => sanitizeHtml(content),
+  htmlContent: ({ content }, args, { dataSources }) => {
+    const token = dataSources.Auth.getAuthToken();
+    return sanitizeHtml(
+      content.replace(/href="(.*)"/, (p1) => {
+        const url = new URL(p1);
+        if (url.includes(ROCK.EXTERNAL_SITE_URL))
+          url.searchParams.append('rckipid', token);
+        return `href="${url}"`;
+      })
+    );
+  },
   childContentItemsConnection: async ({ id }, args, { dataSources }) =>
     dataSources.ContentItem.paginate({
       cursor: await dataSources.ContentItem.getCursorByParentContentItemId(id),
