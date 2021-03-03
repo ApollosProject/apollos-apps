@@ -12,7 +12,7 @@ export class ThemeProvider extends PureComponent {
   };
 
   static childContextTypes = {
-    theme: PropTypes.shape(THEME_PROPS),
+    themeContext: PropTypes.shape(THEME_PROPS),
     themeInput: PropTypes.shape(THEME_PROPS),
     iconInput: PropTypes.objectOf(PropTypes.func),
   };
@@ -24,7 +24,7 @@ export class ThemeProvider extends PureComponent {
   };
 
   getChildContext = () => ({
-    theme: createTheme(this.props.themeInput),
+    themeContext: createTheme(this.props.themeInput),
     themeInput: this.props.themeInput,
     iconInput: this.props.iconInput,
   });

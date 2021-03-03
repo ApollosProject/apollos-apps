@@ -70,7 +70,12 @@ class PostgresDataSource {
     this.model = sequelize.models[this.modelName];
   }
 
-  getFromId(id) {
+  getFromId(id, encodedId, { originType = null } = {}) {
+    if (originType) {
+      return this.model.findOne({
+        where: { originId: String(id), originType },
+      });
+    }
     return this.model.findByPk(id);
   }
 }

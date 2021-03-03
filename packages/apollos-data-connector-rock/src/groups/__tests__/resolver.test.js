@@ -3,11 +3,12 @@ import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
 
 import { peopleSchema, authSchema } from '@apollosproject/data-schema';
 import * as Group from '../index';
-import { Auth } from '../../index';
+import { Auth, Person } from '../../index';
 
 const { getSchema, getContext } = createTestHelpers({
   Group,
   Auth,
+  Person,
 });
 
 describe('Groups resolver', () => {
@@ -43,6 +44,9 @@ describe('Groups resolver', () => {
     `;
 
     context.dataSources.Auth.getCurrentPerson = jest.fn(() =>
+      Promise.resolve({ id: 3 })
+    );
+    context.dataSources.Person.getFromId = jest.fn(() =>
       Promise.resolve({ id: 3 })
     );
     context.dataSources.Group.getByPerson = jest.fn(() =>

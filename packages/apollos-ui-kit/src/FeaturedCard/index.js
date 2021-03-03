@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
-import { withTheme, ThemeMixin } from '../theme';
+import { withTheme, ThemeMixin, named } from '../theme';
 import styled from '../styled';
 import Card, { CardImage, CardLabel, CardContent } from '../Card';
 import FlexedView from '../FlexedView';
@@ -223,4 +223,4 @@ FeaturedCard.defaultProps = {
 
 FeaturedCard.displayName = 'FeaturedCard';
 
-export default FeaturedCard;
+export default named('ui-kit.FeaturedCard')(FeaturedCard);
