@@ -38,6 +38,32 @@ class FollowRequestDataSource extends PostgresDataSource {
 
     return { following: false };
   }
+
+  async acceptFollowRequest({ followRequestId }) {
+    // TODO: exit if followedPersonId !== currentPerson.id
+    const existingRequest = await this.model.findOne({
+      where: {
+        id: followRequestId,
+      },
+    });
+
+    await existingRequest.update({ accepted: true });
+
+    return { following: true };
+  }
+
+  async ignoreFollowRequest({ followRequestId }) {
+    // TODO: exit if followedPersonId !== currentPerson.id
+    const existingRequest = await this.model.findOne({
+      where: {
+        id: followRequestId,
+      },
+    });
+
+    await existingRequest.update({ accepted: false });
+
+    return { following: true };
+  }
 }
 
 export { FollowRequestDataSource as default };

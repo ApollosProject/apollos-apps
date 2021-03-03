@@ -68,27 +68,117 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     expect(follows[0].accepted).toBe(null);
   });
 
-  // TODO: should ignore existing accepted request
+  it('should ignore request', async () => {
+    const requestFollowDataSource = new FollowRequestDataSource();
 
-  // it('should reset existing denied request', async () => {
-  //   const requestFollowDataSource = new FollowRequestDataSource();
+    requestFollowDataSource.initialize({ context });
 
-  //   requestFollowDataSource.initialize({ context });
+    await requestFollowDataSource.requestFollow({ followedPersonId: uuid1 });
 
-  //   requestFollowDataSource.requestFollow({ followedPersonId: uuid1 });
+    // Find and deny the request
+    let existingRequest = await requestFollowDataSource.model.findOne({
+      where: {
+        followedPersonId: uuid1,
+      },
+    });
+    await requestFollowDataSource.ignoreFollowRequest({
+      followRequestId: existingRequest.id,
+    });
 
-  //   // TODO: deny request
+    existingRequest = await requestFollowDataSource.model.findOne({
+      where: {
+        followedPersonId: uuid1,
+      },
+    });
 
-  //   // Send another request
-  //   requestFollowDataSource.requestFollow({ followedPersonId: uuid1 });
+    expect(existingRequest.accepted).toBe(false);
+  });
 
-  //   const follows = await requestFollowDataSource.model.findAll({
-  //     where: {
-  //       followedPersonId: uuid1,
-  //     },
-  //   });
+  it('should accept request', async () => {
+    const requestFollowDataSource = new FollowRequestDataSource();
 
-  //   expect(follows.length).toBe(1);
-  //   expect(follows[0].accepted).toBe(null);
-  // });
+    requestFollowDataSource.initialize({ context });
+
+    await requestFollowDataSource.requestFollow({ followedPersonId: uuid1 });
+
+    // Find and accept the request
+    let existingRequest = await requestFollowDataSource.model.findOne({
+      where: {
+        followedPersonId: uuid1,
+      },
+    });
+    await requestFollowDataSource.acceptFollowRequest({
+      followRequestId: existingRequest.id,
+    });
+
+    existingRequest = await requestFollowDataSource.model.findOne({
+      where: {
+        followedPersonId: uuid1,
+      },
+    });
+
+    expect(existingRequest.accepted).toBe(true);
+  });
+
+  it('should ignore existing accepted request', async () => {
+    const requestFollowDataSource = new FollowRequestDataSource();
+
+    requestFollowDataSource.initialize({ context });
+
+    await requestFollowDataSource.requestFollow({ followedPersonId: uuid1 });
+
+    // Find and accept the request
+    const existingRequest = await requestFollowDataSource.model.findOne({
+      where: {
+        followedPersonId: uuid1,
+      },
+    });
+    await requestFollowDataSource.acceptFollowRequest({
+      followRequestId: existingRequest.id,
+    });
+
+    // Send another request
+    await requestFollowDataSource.requestFollow({ followedPersonId: uuid1 });
+
+    const follows = await requestFollowDataSource.model.findAll({
+      where: {
+        followedPersonId: uuid1,
+      },
+    });
+
+    expect(follows.length).toBe(1);
+    expect(follows[0].accepted).toBe(true);
+  });
+
+  it('should reset existing denied request', async () => {
+    const requestFollowDataSource = new FollowRequestDataSource();
+
+    requestFollowDataSource.initialize({ context });
+
+    await requestFollowDataSource.requestFollow({ followedPersonId: uuid1 });
+
+    // Find and deny the request
+    const existingRequest = await requestFollowDataSource.model.findOne({
+      where: {
+        followedPersonId: uuid1,
+      },
+    });
+    await requestFollowDataSource.ignoreFollowRequest({
+      followRequestId: existingRequest.id,
+    });
+
+    // Send another request
+    await requestFollowDataSource.requestFollow({ followedPersonId: uuid1 });
+
+    const follows = await requestFollowDataSource.model.findAll({
+      where: {
+        followedPersonId: uuid1,
+      },
+    });
+
+    expect(follows.length).toBe(1);
+    expect(follows[0].accepted).toBe(null);
+  });
+
+  // TODO: should only process accept or ignore on requests to follow user
 });
