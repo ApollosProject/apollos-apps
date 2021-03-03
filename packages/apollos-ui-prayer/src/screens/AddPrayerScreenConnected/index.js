@@ -3,6 +3,7 @@ import gql from 'graphql-tag';
 import { useQuery, useMutation } from '@apollo/client';
 import PropTypes from 'prop-types';
 
+import { named } from '@apollosproject/ui-kit';
 import { AnalyticsContext } from '@apollosproject/ui-analytics';
 
 import PrayerCard from '../../PrayerCard';
@@ -100,4 +101,6 @@ AddPrayerScreenConnected.propTypes = {
   AddedPrayerComponent: PropTypes.func,
 };
 
-export default AddPrayerScreenConnected;
+export default named('ui-prayer.AddPrayerScreenConnected')(
+  AddPrayerScreenConnected
+);

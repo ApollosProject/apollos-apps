@@ -2,7 +2,7 @@ import React from 'react';
 import { Text } from 'react-native';
 
 import { ScriptureText, VerseNumber } from '@apollosproject/ui-scripture';
-import { BodyText } from '@apollosproject/ui-kit';
+import { BodyText, named } from '@apollosproject/ui-kit';
 
 import PrayerDialogScreen from '../PrayerDialogScreen';
 
@@ -25,4 +25,4 @@ const ConfirmationDialogScreen = (props) => (
   />
 );
 
-export default ConfirmationDialogScreen;
+export default named('ui-prayer.Confirmation')(ConfirmationDialogScreen);
