@@ -64,13 +64,13 @@ class ActionAlgorithm extends RockApolloDataSource {
   async dailyPrayerAlgorithm({
     limit = 10,
     numberDaysSincePrayer,
-    primaryAliasId,
+    personId,
   } = {}) {
     const { PrayerRequest, Feature } = this.context.dataSources;
     Feature.setCacheHint({ maxAge: 0, scope: 'PRIVATE' });
     const cursor = await PrayerRequest.byDailyPrayerFeed({
       numberDaysSincePrayer,
-      primaryAliasId,
+      personId,
     });
     return cursor.top(limit).get();
   }

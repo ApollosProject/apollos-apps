@@ -2,6 +2,24 @@
 
 exports[`Person Throws an error if trying to set an invalid gender 1`] = `"Rock gender must be either Unknown, Male, or Female"`;
 
+exports[`Person creates a profile 1`] = `
+Array [
+  Array [
+    "/People",
+    Object {
+      "BirthDay": 1,
+      "BirthMonth": 2,
+      "BirthYear": 2020,
+      "FirstName": "Vincent",
+      "Gender": 1,
+      "IsSystem": false,
+    },
+  ],
+]
+`;
+
+exports[`Person creates a profile 2`] = `Object {}`;
+
 exports[`Person gets person from aliasId: The call to fetch the alias id 1`] = `
 Array [
   Array [
@@ -41,30 +59,6 @@ exports[`Person gets person from id 2`] = `
 Object {
   "id": 51,
 }
-`;
-
-exports[`Person gets persons dataview associations 1`] = `Object {}`;
-
-exports[`Person gets persons dataview associations 2`] = `
-Array [
-  Array [
-    "DataViews/GetPersistedDataViewsForEntity/15/51?categoryId=undefined&%24select=Guid",
-    Object {},
-    Object {},
-  ],
-]
-`;
-
-exports[`Person gets persons dataview associations from plugin endpoints 1`] = `Object {}`;
-
-exports[`Person gets persons dataview associations from plugin endpoints 2`] = `
-Array [
-  Array [
-    "Apollos/GetPersistedDataViewsForEntity/15/51?categoryId=210&%24select=Guid",
-    Object {},
-    Object {},
-  ],
-]
 `;
 
 exports[`Person returns null when getPersonByAliasId is not valid: The call to fetch the alias id 1`] = `

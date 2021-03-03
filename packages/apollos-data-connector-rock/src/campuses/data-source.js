@@ -61,7 +61,13 @@ export default class Campus extends RockApolloDataSource {
     return campuses;
   };
 
-  getForPerson = async ({ personId }) => {
+  getForPerson = async ({ id, originId, originType }) => {
+    let personId = id;
+
+    if (originType && originType === 'rock') {
+      personId = originId;
+    }
+
     const family = await this.request(`/Groups/GetFamilies/${personId}`)
       .expand('Campus')
       .expand('Campus/Location')

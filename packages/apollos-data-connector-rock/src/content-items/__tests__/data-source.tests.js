@@ -526,7 +526,7 @@ describe('ContentItemsModel', () => {
     const personaMock = jest.fn(() => Promise.resolve(['123', '456']));
     dataSource.context = {
       dataSources: {
-        Person: {
+        Persona: {
           getPersonas: personaMock,
         },
       },
@@ -591,7 +591,7 @@ describe('ContentItemsModel', () => {
     const personaMock = jest.fn(() => Promise.resolve([]));
     dataSource.context = {
       dataSources: {
-        Person: {
+        Persona: {
           getPersonas: personaMock,
         },
       },
@@ -617,7 +617,7 @@ describe('ContentItemsModel', () => {
     const personaMock = jest.fn(() => Promise.resolve(['123', '456']));
     dataSource.context = {
       dataSources: {
-        Person: {
+        Persona: {
           getPersonas: personaMock,
         },
       },

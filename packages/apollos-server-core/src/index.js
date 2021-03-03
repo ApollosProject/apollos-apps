@@ -11,7 +11,7 @@ import * as Interfaces from './interfaces';
 import * as Pagination from './pagination';
 import * as Media from './media';
 
-export { createGlobalId, parseGlobalId } from './node';
+export { createGlobalId, parseGlobalId, isUuid } from './node';
 export {
   createCursor,
   parseCursor,

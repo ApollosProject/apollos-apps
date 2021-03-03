@@ -11,21 +11,21 @@ Object {
             "leaders": Array [
               Object {
                 "firstName": "Frank",
-                "id": "1",
+                "id": "Person:559b23fd0aa90e81b1c023e72e230fa1",
               },
               Object {
                 "firstName": "Michael",
-                "id": "2",
+                "id": "Person:965b6e6d7046a885bea4e300b5c0400d",
               },
             ],
             "members": Array [
               Object {
                 "firstName": "Caleb",
-                "id": "2",
+                "id": "Person:965b6e6d7046a885bea4e300b5c0400d",
               },
               Object {
                 "firstName": "Burke",
-                "id": "3",
+                "id": "Person:4f68015ba18662a7409d1219a4ce013e",
               },
             ],
             "name": "franks beer group",

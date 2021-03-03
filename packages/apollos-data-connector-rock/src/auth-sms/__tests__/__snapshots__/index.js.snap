@@ -92,7 +92,7 @@ exports[`AuthSms schema logs a new user in via their phone number and pin: creat
 Array [
   Array [
     Object {
-      "email": null,
+      "Email": null,
     },
   ],
 ]
@@ -216,7 +216,7 @@ exports[`AuthSms schema logs a user with multiple phone numbers in via their pho
 Array [
   Array [
     Object {
-      "email": null,
+      "Email": null,
     },
   ],
 ]
@@ -322,9 +322,9 @@ exports[`AuthSms schema registers a new user via their phone number and pin: cre
 Array [
   Array [
     Object {
+      "Email": null,
       "FirstName": "Burke",
       "LastName": "Shartsis",
-      "email": null,
     },
   ],
 ]
@@ -397,10 +397,10 @@ exports[`AuthSms schema registers a new user via their phone number, pin, and ge
 Array [
   Array [
     Object {
+      "Email": null,
       "FirstName": "Burke",
-      "Gender": 1,
+      "Gender": "Male",
       "LastName": "Shartsis",
-      "email": null,
     },
   ],
 ]

@@ -105,6 +105,12 @@ const prayersMock = [
   },
 ];
 
+const Person = {
+  getFromId: () => ({
+    id: 1,
+  }),
+};
+
 describe('Prayer', () => {
   it('constructs', () => {
     expect(new Prayer()).toBeTruthy();
@@ -137,14 +143,17 @@ describe('Prayer', () => {
 
     dataSource.context = {
       rockCookie: 'fakeCookie',
-      dataSources: { Auth },
+      dataSources: { Auth, Person },
     };
-    dataSource.get = buildGetMock(prayersMock[1], dataSource);
+    dataSource.get = buildGetMock(
+      [{ PrimaryAliasId: 1 }, prayersMock[1]],
+      dataSource
+    );
 
     const result = await (
       await dataSource.byDailyPrayerFeed({
         numberDaysSincePrayer: 3,
-        primaryAliasId: 63,
+        id: 63,
       })
     ).get();
     expect(result).toMatchSnapshot();

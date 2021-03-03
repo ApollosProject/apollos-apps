@@ -21,7 +21,9 @@ export default class Group extends RockApolloDataSource {
       .andFilter(`GroupId eq ${groupId}`)
       .get();
     return Promise.all(
-      members.map(({ personId }) => Person.getFromId(personId))
+      members.map(({ personId }) =>
+        Person.getFromId(personId, null, { originType: 'rock' })
+      )
     );
   };
 
@@ -33,7 +35,9 @@ export default class Group extends RockApolloDataSource {
       .expand('GroupRole')
       .get();
     const leaders = await Promise.all(
-      members.map(({ personId }) => Person.getFromId(personId))
+      members.map(({ personId }) =>
+        Person.getFromId(personId, null, { originType: 'rock' })
+      )
     );
     return leaders.length ? leaders : null;
   };

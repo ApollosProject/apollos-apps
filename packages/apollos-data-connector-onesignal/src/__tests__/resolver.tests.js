@@ -30,6 +30,7 @@ describe('OneSignal', () => {
           Promise.resolve({ primaryAliasId: 'user123', id: 'user123' })
         ),
       },
+      Person: { getFromId: () => Promise.resolve({ id: 'user123' }) },
       PersonalDevice: { updateNotificationsEnabled: jest.fn() },
     };
     context.dataSources.OneSignal.put = jest.fn();
