@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Animated } from 'react-native';
 
-import { ActivityIndicator, withTheme } from '@apollosproject/ui-kit';
+import { ActivityIndicator, withTheme, named } from '@apollosproject/ui-kit';
 
 import PrayerSwiper from '../PrayerSwiper';
 import {
@@ -21,7 +21,7 @@ const PrayerExperience = ({
   track,
   AddPrayerComponent = AddPrayerScreenConnected,
   PrayerScreenComponent = PrayerScreen,
-  OnboardingComponent = PrayerDialogScreen,
+  OnboardingComponent = named('ui-prayer.Onboarding')(PrayerDialogScreen),
   primaryAvatar,
   willShowOnboarding,
   onFinish,
