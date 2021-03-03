@@ -138,12 +138,11 @@ export default class AuthDataSource extends RockApolloDataSource {
 
   createUserProfile = async ({ email, ...otherFields }) => {
     try {
-      return await this.post('/People', {
-        Gender: 0, // Required by Rock. Listed first so it can be overridden by otherFields
-        ...otherFields,
+      const person = await this.context.dataSources.Person.create({
         Email: email,
-        IsSystem: false, // Required by Rock
+        ...otherFields,
       });
+      return person;
     } catch (err) {
       throw new Error('Unable to create profile!');
     }
@@ -191,13 +190,9 @@ export default class AuthDataSource extends RockApolloDataSource {
     if (personExists) throw new Error('User already exists!');
 
     const profileFields = fieldsAsObject(userProfile || []);
-    const rockUpdateFields = this.context.dataSources.Person.mapApollosFieldsToRock(
-      profileFields
-    );
-
     const personId = await this.createUserProfile({
       email,
-      ...rockUpdateFields,
+      ...profileFields,
     });
 
     await this.createUserLogin({

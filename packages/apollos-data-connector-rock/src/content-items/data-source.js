@@ -407,11 +407,11 @@ export default class ContentItem extends RockApolloDataSource {
   // Generates feed based on persons dataview membership
   byPersonaFeed = async (first) => {
     const {
-      dataSources: { Person },
+      dataSources: { Persona },
     } = this.context;
 
     // Grabs the guids associated with all dataviews user is memeber
-    const getPersonaGuidsForUser = await Person.getPersonas({
+    const getPersonaGuidsForUser = await Persona.getPersonas({
       categoryId: ROCK_MAPPINGS.DATAVIEW_CATEGORIES.PersonaId,
     });
 
