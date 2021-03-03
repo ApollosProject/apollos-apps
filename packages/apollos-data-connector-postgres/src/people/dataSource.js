@@ -23,6 +23,9 @@ export const camelCaseKeys = (obj) => {
 export default class Person extends PostgresDataSource {
   modelName = 'people';
 
+  /**
+   * If the provided id is a Rock id, find and return the postgres id
+   */
   async resolveId(id) {
     const { Auth } = this.context.dataSources;
 

@@ -5,12 +5,12 @@ class FollowRequestDataSource extends PostgresDataSource {
   modelName = 'follow-requests';
 
   async requestFollow({ followedPersonId }) {
-    const { Auth, PersonApollos } = this.context.dataSources;
+    const { Auth, Person } = this.context.dataSources;
     const currentPerson = await Auth.getCurrentPerson();
 
     if (!currentPerson) throw new AuthenticationError('Invalid Credentials');
 
-    const requestPersonId = await PersonApollos.resolveId(currentPerson.id);
+    const requestPersonId = await Person.resolveId(currentPerson.id);
 
     const existingRequest = await this.model.findOne({
       where: {
