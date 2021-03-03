@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
+import { View } from 'react-native';
 import CenteredView from '../CenteredView';
 import BackgroundView from '../BackgroundView';
 import { H3, H4 } from '../typography';
 
+import FollowListSearchModal from './FollowListSearch/FollowListSearchModal';
 import FollowList from '.';
 
 const followerRequests = [
@@ -91,6 +93,37 @@ const buttonFuncs = {
   },
 };
 
+function ModalStory() {
+  const [open, setModalOpen] = useState(false);
+  const [followers, setFollowers] = useState([]);
+
+  return (
+    <View>
+      <FollowList
+        followers={followerRequests}
+        onPressFollowListButton={() => setModalOpen(true)}
+        followListButtonTitle="Find People to Follow"
+        {...buttonFuncs}
+      />
+      <FollowListSearchModal
+        open={open}
+        setModalOpen={setModalOpen}
+        onSearch={(value) =>
+          setFollowers(
+            [...followerSuggestions, ...followerRequests].filter((follower) =>
+              `${follower.firstName.toLowerCase()} ${follower.lastName.toLowerCase()}`.includes(
+                value.toLowerCase()
+              )
+            )
+          )
+        }
+        results={followers}
+        {...buttonFuncs}
+      />
+    </View>
+  );
+}
+
 storiesOf('FollowList', module)
   .addDecorator((story) => (
     <BackgroundView>
@@ -125,16 +158,9 @@ storiesOf('FollowList', module)
       />
     );
   })
-  .add('onPressActionListButton', () => (
-    <FollowList
-      followers={followerRequests}
-      onPressFollowListButton={() => {}}
-      followListButtonTitle="Find People to Follow"
-      {...buttonFuncs}
-    />
-  ))
-  .add('isCard (false)', () => (
-    <FollowList followers={followerRequests} isCard={false} {...buttonFuncs} />
+  .add('onPressActionListButton', () => <ModalStory />)
+  .add('isCard', () => (
+    <FollowList followers={followerRequests} isCard {...buttonFuncs} />
   ))
   .add('isLoading', () => (
     <FollowList
