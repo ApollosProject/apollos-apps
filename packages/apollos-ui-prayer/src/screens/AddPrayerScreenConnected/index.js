@@ -40,9 +40,7 @@ const AddPrayerScreenConnected = ({
   primaryButtonText = 'Share prayer',
   swipeForward,
   avatars = [],
-  AddedPrayerComponent = named('ui-prayer.Confirmation')(
-    ConfirmationDialogScreen
-  ),
+  AddedPrayerComponent = ConfirmationDialogScreen,
   ...screenProps
 }) => {
   const { data: userData } = useQuery(GET_USER_PHOTO);

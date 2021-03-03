@@ -14,6 +14,8 @@ import {
 
 import AnimatedBackgrounds from './AnimatedBackgrounds';
 
+const Onboarding = named('ui-prayer.Onboarding')(PrayerDialogScreen);
+
 const PrayerExperience = ({
   index,
   loading,
@@ -21,7 +23,7 @@ const PrayerExperience = ({
   track,
   AddPrayerComponent = AddPrayerScreenConnected,
   PrayerScreenComponent = PrayerScreen,
-  OnboardingComponent = named('ui-prayer.Onboarding')(PrayerDialogScreen),
+  OnboardingComponent = Onboarding,
   primaryAvatar,
   willShowOnboarding,
   onFinish,
