@@ -13,11 +13,25 @@ export function createGlobalId(id, type) {
   return `${type}:${encrypted}`;
 }
 
+export const isUuid = (id) =>
+  /^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i.test(
+    `${id}`
+  );
+
 export function parseGlobalId(encodedId) {
   try {
     const decipher = Crypto.createDecipher('aes192', secret);
 
     const [__type, encryptedId] = encodedId.split(':');
+
+    // That means it's a postgres ID belonging it's an apollos database
+    if (isUuid(encryptedId)) {
+      return {
+        __type,
+        id: encryptedId,
+      };
+    }
+
     let decrypted = decipher.update(encryptedId, 'hex', 'utf8');
     decrypted += decipher.final('utf8');
 
