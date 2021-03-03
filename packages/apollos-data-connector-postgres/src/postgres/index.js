@@ -26,7 +26,7 @@ class PostgresDataSource {
     this.model = sequelize.models[this.modelName];
   }
 
-  getFromId(id, apollosId, { originType = null } = {}) {
+  getFromId(id, encodedId, { originType = null } = {}) {
     if (originType) {
       return this.model.findOne({
         where: { originId: String(id), originType },
