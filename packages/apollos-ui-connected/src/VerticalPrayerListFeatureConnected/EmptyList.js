@@ -6,7 +6,7 @@ import {
   H3,
   BodyText,
   BodySmall,
-  Button,
+  // Button,
 } from '@apollosproject/ui-kit';
 
 const Container = styled({
@@ -35,13 +35,14 @@ const EmptyList = ({
   header = '🙏',
   title = "It looks like you don't have any prayers yet",
   subtitle = "Let's fix that! Are you ready to get started?",
-  onPress = () => null,
+  // onPress = () => null,
 }) => (
   <Container>
     <Header>{header}</Header>
     <Title>{title}</Title>
     <Subtitle>{subtitle}</Subtitle>
-    <Button onPress={onPress} title={'Start Praying'} bordered pill={false} />
+    {/* TODO wire up button once destination is finalized */}
+    {/* <Button onPress={onPress} title={'Start Praying'} bordered pill={false} /> */}
   </Container>
 );
 

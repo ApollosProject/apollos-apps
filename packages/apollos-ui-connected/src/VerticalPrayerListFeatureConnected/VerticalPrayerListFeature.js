@@ -34,12 +34,7 @@ const StyledButton = styled({
 // flex: 1,
 // })(ButtonLink);
 
-const VerticalPrayerListFeature = ({
-  title,
-  subtitle,
-  prayers,
-  onPressEmpty,
-}) => {
+const VerticalPrayerListFeature = ({ title, subtitle, prayers }) => {
   const [modalOpened, setModalOpened] = useState(false);
   return (
     <>
@@ -90,7 +85,7 @@ const VerticalPrayerListFeature = ({
           </View>
         ))
       ) : (
-        <EmptyList onPress={onPressEmpty} />
+        <EmptyList />
       )}
     </>
   );
@@ -100,7 +95,6 @@ VerticalPrayerListFeature.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
   prayers: PropTypes.arrayOf(PropTypes.shape({})),
-  onPressEmpty: PropTypes.func,
 };
 
 export default VerticalPrayerListFeature;

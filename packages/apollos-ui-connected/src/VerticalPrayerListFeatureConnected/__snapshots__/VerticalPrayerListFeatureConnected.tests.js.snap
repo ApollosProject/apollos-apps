@@ -683,56 +683,6 @@ Array [
     >
       Let's fix that! Are you ready to get started?
     </Text>
-    <View
-      accessible={true}
-      focusable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <View
-        bordered={true}
-        disabled={false}
-        pill={false}
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "transparent",
-            "borderColor": "#00676D",
-            "borderRadius": 16,
-            "borderWidth": 2,
-            "flexDirection": "row",
-            "height": 48,
-            "justifyContent": "center",
-            "opacity": 1,
-            "overflow": "hidden",
-            "paddingHorizontal": 16,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#00676D",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 16,
-              "lineHeight": 24,
-            }
-          }
-        >
-          Start Praying
-        </Text>
-      </View>
-    </View>
   </View>,
 ]
 `;
