@@ -1,7 +1,8 @@
+import { isUuid } from '@apollosproject/server-core';
 import { AuthenticationError } from 'apollo-server';
 import { camelCase } from 'lodash';
 
-import { isApollosId, PostgresDataSource } from '../postgres';
+import { PostgresDataSource } from '../postgres';
 
 export const fieldsAsObject = (fields) =>
   fields.reduce(
@@ -29,7 +30,7 @@ export default class Person extends PostgresDataSource {
   async resolveId(id) {
     const { Auth } = this.context.dataSources;
 
-    if (!isApollosId(id) && Auth.ORIGIN_TYPE) {
+    if (!isUuid(id) && Auth.ORIGIN_TYPE) {
       const person = await this.model.findOne({
         where: {
           originId: id.toString(),
