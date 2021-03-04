@@ -1,7 +1,7 @@
 import { sequelize, sync } from '../../postgres/index';
 import { createModel, FollowState } from '../model';
 import { createModel as createPeopleModel } from '../../people/model';
-import FollowRequestDataSource from '../dataSource';
+import FollowDataSource from '../dataSource';
 
 // Current user by default
 const uuid1 = '82182626-4331-4506-a87b-490cb9ffae2e';
@@ -38,7 +38,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
   });
 
   it('should create new follow request', async () => {
-    const requestFollowDataSource = new FollowRequestDataSource();
+    const requestFollowDataSource = new FollowDataSource();
 
     requestFollowDataSource.initialize({ context });
 
@@ -55,7 +55,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
   });
 
   it('should ignore existing unaccepted request', async () => {
-    const requestFollowDataSource = new FollowRequestDataSource();
+    const requestFollowDataSource = new FollowDataSource();
 
     requestFollowDataSource.initialize({ context });
 
@@ -75,7 +75,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
   });
 
   it('should ignore request', async () => {
-    const requestFollowDataSource = new FollowRequestDataSource();
+    const requestFollowDataSource = new FollowDataSource();
 
     requestFollowDataSource.initialize({ context });
 
@@ -103,11 +103,11 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     });
 
     expect(existingRequest.state).toBe(FollowState.DECLINED);
-    expect(existingRequest.id).toBe(ignoreResult.followRequestId);
+    expect(existingRequest.id).toBe(ignoreResult.followId);
   });
 
   it('should accept request', async () => {
-    const requestFollowDataSource = new FollowRequestDataSource();
+    const requestFollowDataSource = new FollowDataSource();
 
     requestFollowDataSource.initialize({ context });
 
@@ -133,11 +133,11 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     });
 
     expect(existingRequest.state).toBe(FollowState.ACCEPTED);
-    expect(existingRequest.id).toBe(acceptResult.followRequestId);
+    expect(existingRequest.id).toBe(acceptResult.followId);
   });
 
   it('should ignore existing accepted request', async () => {
-    const requestFollowDataSource = new FollowRequestDataSource();
+    const requestFollowDataSource = new FollowDataSource();
 
     requestFollowDataSource.initialize({ context });
 
@@ -172,7 +172,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
   });
 
   it('should reset existing denied request', async () => {
-    const requestFollowDataSource = new FollowRequestDataSource();
+    const requestFollowDataSource = new FollowDataSource();
 
     requestFollowDataSource.initialize({ context });
 

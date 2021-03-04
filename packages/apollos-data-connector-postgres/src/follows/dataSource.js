@@ -2,8 +2,8 @@ import { AuthenticationError } from 'apollo-server';
 import { PostgresDataSource } from '../postgres';
 import { FollowState } from './model';
 
-class FollowRequestDataSource extends PostgresDataSource {
-  modelName = 'follow_requests';
+class Follow extends PostgresDataSource {
+  modelName = 'follows';
 
   async requestFollow({ followedPersonId }) {
     const { Auth, Person } = this.context.dataSources;
@@ -13,26 +13,26 @@ class FollowRequestDataSource extends PostgresDataSource {
 
     const requestPersonId = await Person.resolveId(currentPerson.id);
 
-    const existingRequest = await this.model.findOne({
+    const existingFollow = await this.model.findOne({
       where: {
         requestPersonId,
         followedPersonId,
       },
     });
 
-    let followRequestId;
+    let followId;
 
-    if (existingRequest) {
-      const { dataValues } = existingRequest;
-      followRequestId = existingRequest.id;
+    if (existingFollow) {
+      const { dataValues } = existingFollow;
+      followId = existingFollow.id;
 
       if (dataValues.state === FollowState.ACCEPTED) {
         // The request was already accepted.
-        return { followRequestId, state: dataValues.state };
+        return { followId, state: dataValues.state };
       }
 
       // If a request already exists that was denied, update it as a new request.
-      await existingRequest.update({ state: FollowState.REQUESTED });
+      await existingFollow.update({ state: FollowState.REQUESTED });
     } else {
       // There was no existing request, so lets make one.
       const newRequest = await this.model.create({
@@ -41,10 +41,10 @@ class FollowRequestDataSource extends PostgresDataSource {
         state: FollowState.REQUESTED,
       });
 
-      followRequestId = newRequest.id;
+      followId = newRequest.id;
     }
 
-    return { followRequestId, state: FollowState.REQUESTED };
+    return { followId, state: FollowState.REQUESTED };
   }
 
   async acceptFollowRequest({ requestPersonId }) {
@@ -52,20 +52,20 @@ class FollowRequestDataSource extends PostgresDataSource {
     const currentPerson = await Auth.getCurrentPerson();
     const currentPersonId = await Person.resolveId(currentPerson.id);
 
-    const existingRequest = await this.model.findOne({
+    const existingFollow = await this.model.findOne({
       where: {
         requestPersonId,
         followedPersonId: currentPersonId,
       },
     });
 
-    if (!existingRequest) {
+    if (!existingFollow) {
       throw new Error('No matching request');
     }
 
-    await existingRequest.update({ state: FollowState.ACCEPTED });
+    await existingFollow.update({ state: FollowState.ACCEPTED });
 
-    return { followRequestId: existingRequest.id, state: FollowState.ACCEPTED };
+    return { followId: existingFollow.id, state: FollowState.ACCEPTED };
   }
 
   async ignoreFollowRequest({ requestPersonId }) {
@@ -73,21 +73,21 @@ class FollowRequestDataSource extends PostgresDataSource {
     const currentPerson = await Auth.getCurrentPerson();
     const currentPersonId = await Person.resolveId(currentPerson.id);
 
-    const existingRequest = await this.model.findOne({
+    const existingFollow = await this.model.findOne({
       where: {
         requestPersonId,
         followedPersonId: currentPersonId,
       },
     });
 
-    if (!existingRequest) {
+    if (!existingFollow) {
       throw new Error('No matching request');
     }
 
-    await existingRequest.update({ state: FollowState.DECLINED });
+    await existingFollow.update({ state: FollowState.DECLINED });
 
-    return { followRequestId: existingRequest.id, state: FollowState.DECLINED };
+    return { followId: existingFollow.id, state: FollowState.DECLINED };
   }
 }
 
-export { FollowRequestDataSource as default };
+export { Follow as default };

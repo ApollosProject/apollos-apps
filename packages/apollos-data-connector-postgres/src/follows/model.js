@@ -8,8 +8,8 @@ const FollowState = {
 };
 
 const createModel = defineModel({
-  modelName: 'follow_requests',
-  resolveType: () => 'FollowRequest',
+  modelName: 'follows',
+  resolveType: () => 'Follow',
   attributes: {
     requestPersonId: DataTypes.UUID,
     followedPersonId: DataTypes.UUID,

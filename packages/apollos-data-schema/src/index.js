@@ -982,13 +982,13 @@ export const featuresSchema = gql`
   }
 `;
 
-export const followRequestSchema = gql`
+export const followSchema = gql`
   extend type Mutation {
-    requestFollow(followedPersonId: ID!): FollowRequestResult
+    requestFollow(followedPersonId: ID!): FollowResult
 
-    ignoreFollowRequest(requestPersonId: ID!): FollowRequestResult
+    ignoreFollowRequest(requestPersonId: ID!): FollowResult
 
-    acceptFollowRequest(requestPersonId: ID!): FollowRequestResult
+    acceptFollowRequest(requestPersonId: ID!): FollowResult
   }
 
   enum FollowState {
@@ -997,8 +997,8 @@ export const followRequestSchema = gql`
     ACCEPTED
   }
 
-  type FollowRequestResult {
-    followRequestId: ID
+  type FollowResult {
+    followId: ID
     state: FollowState
     following: Boolean
   }
