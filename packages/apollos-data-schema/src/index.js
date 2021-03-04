@@ -985,9 +985,14 @@ export const featuresSchema = gql`
 export const followRequestSchema = gql`
   extend type Mutation {
     requestFollow(followedPersonId: ID!): FollowRequestResult
+
+    ignoreFollowRequest(followRequestId: ID!): FollowRequestResult
+
+    acceptFollowRequest(followRequestId: ID!): FollowRequestResult
   }
 
   type FollowRequestResult {
+    followRequestId: ID
     following: Boolean
   }
 `;
