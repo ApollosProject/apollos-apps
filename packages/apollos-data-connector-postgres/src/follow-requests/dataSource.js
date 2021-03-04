@@ -1,5 +1,6 @@
 import { AuthenticationError } from 'apollo-server';
 import { PostgresDataSource } from '../postgres';
+import { FollowState } from './model';
 
 class FollowRequestDataSource extends PostgresDataSource {
   modelName = 'follow_requests';
@@ -25,24 +26,25 @@ class FollowRequestDataSource extends PostgresDataSource {
       const { dataValues } = existingRequest;
       followRequestId = existingRequest.id;
 
-      if (dataValues.accepted) {
+      if (dataValues.state === FollowState.ACCEPTED) {
         // The request was already accepted.
-        return { followRequestId, following: true };
+        return { followRequestId, state: dataValues.state };
       }
 
       // If a request already exists that was denied, update it as a new request.
-      await existingRequest.update({ accepted: null });
+      await existingRequest.update({ state: FollowState.REQUESTED });
     } else {
       // There was no existing request, so lets make one.
       const newRequest = await this.model.create({
         requestPersonId,
         followedPersonId,
+        state: FollowState.REQUESTED,
       });
 
       followRequestId = newRequest.id;
     }
 
-    return { followRequestId, following: false };
+    return { followRequestId, state: FollowState.REQUESTED };
   }
 
   async acceptFollowRequest({ followRequestId }) {
@@ -60,13 +62,13 @@ class FollowRequestDataSource extends PostgresDataSource {
       throw new Error('Invalid request id');
     }
 
-    if (existingRequest.followedPersonId !== requestPersonId) {
+    if (existingRequest.dataValues.followedPersonId !== requestPersonId) {
       throw new Error('You are not authorized to do that');
     }
 
-    await existingRequest.update({ accepted: true });
+    await existingRequest.update({ state: FollowState.ACCEPTED });
 
-    return { followRequestId, following: true };
+    return { followRequestId, state: FollowState.ACCEPTED };
   }
 
   async ignoreFollowRequest({ followRequestId }) {
@@ -84,13 +86,13 @@ class FollowRequestDataSource extends PostgresDataSource {
       throw new Error('Invalid request id');
     }
 
-    if (existingRequest.followedPersonId !== requestPersonId) {
+    if (existingRequest.dataValues.followedPersonId !== requestPersonId) {
       throw new Error('You are not authorized to do that');
     }
 
-    await existingRequest.update({ accepted: false });
+    await existingRequest.update({ state: FollowState.DECLINED });
 
-    return { followRequestId, following: false };
+    return { followRequestId, state: FollowState.DECLINED };
   }
 }
 

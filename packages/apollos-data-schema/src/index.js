@@ -991,8 +991,15 @@ export const followRequestSchema = gql`
     acceptFollowRequest(followRequestId: ID!): FollowRequestResult
   }
 
+  enum FollowState {
+    REQUESTED
+    DECLINED
+    ACCEPTED
+  }
+
   type FollowRequestResult {
     followRequestId: ID
+    state: FollowState
     following: Boolean
   }
 `;

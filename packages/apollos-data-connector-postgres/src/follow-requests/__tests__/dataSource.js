@@ -1,5 +1,5 @@
 import { sequelize, sync } from '../../postgres/index';
-import { createModel } from '../model';
+import { createModel, FollowState } from '../model';
 import { createModel as createPeopleModel } from '../../people/model';
 import FollowRequestDataSource from '../dataSource';
 
@@ -48,7 +48,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     });
 
     expect(follows.length).toBe(1);
-    expect(follows[0].accepted).toBe(null);
+    expect(follows[0].state).toBe(FollowState.REQUESTED);
   });
 
   it('should ignore existing unaccepted request', async () => {
@@ -68,7 +68,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     });
 
     expect(follows.length).toBe(1);
-    expect(follows[0].accepted).toBe(null);
+    expect(follows[0].state).toBe(FollowState.REQUESTED);
   });
 
   it('should ignore request', async () => {
@@ -96,7 +96,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
       },
     });
 
-    expect(existingRequest.accepted).toBe(false);
+    expect(existingRequest.state).toBe(FollowState.DECLINED);
     expect(existingRequest.id).toBe(ignoreResult.followRequestId);
   });
 
@@ -123,7 +123,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
       },
     });
 
-    expect(existingRequest.accepted).toBe(true);
+    expect(existingRequest.state).toBe(FollowState.ACCEPTED);
     expect(existingRequest.id).toBe(acceptResult.followRequestId);
   });
 
@@ -154,7 +154,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     });
 
     expect(follows.length).toBe(1);
-    expect(follows[0].accepted).toBe(true);
+    expect(follows[0].state).toBe(FollowState.ACCEPTED);
   });
 
   it('should reset existing denied request', async () => {
@@ -184,7 +184,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     });
 
     expect(follows.length).toBe(1);
-    expect(follows[0].accepted).toBe(null);
+    expect(follows[0].state).toBe(FollowState.REQUESTED);
   });
 
   it('should only process accept for current user', async () => {
@@ -221,7 +221,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
       },
     });
 
-    expect(existingRequest.accepted).toBe(null);
+    expect(existingRequest.state).toBe(FollowState.REQUESTED);
   });
 
   it('should only process ignore for current user', async () => {
@@ -258,6 +258,6 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
       },
     });
 
-    expect(existingRequest.accepted).toBe(null);
+    expect(existingRequest.state).toBe(FollowState.REQUESTED);
   });
 });
