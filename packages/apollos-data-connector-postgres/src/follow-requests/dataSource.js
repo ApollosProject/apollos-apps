@@ -2,7 +2,7 @@ import { AuthenticationError } from 'apollo-server';
 import { PostgresDataSource } from '../postgres';
 
 class FollowRequestDataSource extends PostgresDataSource {
-  modelName = 'follow-requests';
+  modelName = 'follow_requests';
 
   async requestFollow({ followedPersonId }) {
     const { Auth, Person } = this.context.dataSources;

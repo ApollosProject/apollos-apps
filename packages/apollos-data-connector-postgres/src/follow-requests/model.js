@@ -2,7 +2,7 @@ import { DataTypes } from 'sequelize';
 import { defineModel } from '../postgres';
 
 const createModel = defineModel({
-  modelName: 'follow-requests',
+  modelName: 'follow_requests',
   resolveType: () => 'FollowRequest',
   attributes: {
     requestPersonId: DataTypes.UUID,
