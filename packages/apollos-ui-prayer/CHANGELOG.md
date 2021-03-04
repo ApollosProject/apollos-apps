@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.0](https://github.com/apollosproject/apollos-apps/compare/v2.1.1...v2.2.0) (2021-03-04)
+
+
+### Features
+
+* add prayer component prop handles ([#1775](https://github.com/apollosproject/apollos-apps/issues/1775)) ([44ac06c](https://github.com/apollosproject/apollos-apps/commit/44ac06cb3d4cbebb7ca5b7b1dd48b0fba5220021))
+
+
+### Bug Fixes
+
+* adjust background gradient in dark mode ([#1770](https://github.com/apollosproject/apollos-apps/issues/1770)) ([85b0e7f](https://github.com/apollosproject/apollos-apps/commit/85b0e7f03dac7b15bff49907db98fd49289dc1f1))
+
+
+
 ### [2.1.1](https://github.com/apollosproject/apollos-apps/compare/v2.1.0...v2.1.1) (2021-02-26)
 
 **Note:** Version bump only for package @apollosproject/ui-prayer
