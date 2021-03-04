@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.0](https://github.com/ApollosProject/apollos-apps/compare/v2.1.1...v2.2.0) (2021-03-04)
+
+
+### Features
+
+* add prayer component prop handles ([#1775](https://github.com/ApollosProject/apollos-apps/issues/1775)) ([44ac06c](https://github.com/ApollosProject/apollos-apps/commit/44ac06cb3d4cbebb7ca5b7b1dd48b0fba5220021))
+* Follow List Onboarding ([#1765](https://github.com/ApollosProject/apollos-apps/issues/1765)) ([a7b3110](https://github.com/ApollosProject/apollos-apps/commit/a7b311092ee558766f91fd155799327339e3ce59))
+* Journal Confirmation Screen ([#1767](https://github.com/ApollosProject/apollos-apps/issues/1767)) ([c7b2a8c](https://github.com/ApollosProject/apollos-apps/commit/c7b2a8cc498c007f22ae84b8179eab04508d14ce))
+* Postgres Person datasource ([#1768](https://github.com/ApollosProject/apollos-apps/issues/1768)) ([f87a584](https://github.com/ApollosProject/apollos-apps/commit/f87a58443986ffd2b8dd4c69f2537200f6c81804))
+
+
+### Bug Fixes
+
+* adjust background gradient in dark mode ([#1770](https://github.com/ApollosProject/apollos-apps/issues/1770)) ([85b0e7f](https://github.com/ApollosProject/apollos-apps/commit/85b0e7f03dac7b15bff49907db98fd49289dc1f1))
+* allow theme HOCs to accept custom theme prop ([#1763](https://github.com/ApollosProject/apollos-apps/issues/1763)) ([4b0a5b1](https://github.com/ApollosProject/apollos-apps/commit/4b0a5b1f82e1e1e83ea30ccec75b0ab18f29a38f))
+* return empty string with null HTML ([#1769](https://github.com/ApollosProject/apollos-apps/issues/1769)) ([43679a7](https://github.com/ApollosProject/apollos-apps/commit/43679a7dfe00b85bf687960e0b13db77c7a767d9))
+
+
+
 ### [2.1.1](https://github.com/ApollosProject/apollos-apps/compare/v2.1.0...v2.1.1) (2021-02-26)
 
 **Note:** Version bump only for package apollos
