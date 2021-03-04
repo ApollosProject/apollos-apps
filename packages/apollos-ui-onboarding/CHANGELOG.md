@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.0](https://github.com/apollosproject/apollos-apps/compare/v2.1.1...v2.2.0) (2021-03-04)
+
+
+### Features
+
+* Follow List Onboarding ([#1765](https://github.com/apollosproject/apollos-apps/issues/1765)) ([a7b3110](https://github.com/apollosproject/apollos-apps/commit/a7b311092ee558766f91fd155799327339e3ce59))
+
+
+
 ### [2.1.1](https://github.com/apollosproject/apollos-apps/compare/v2.1.0...v2.1.1) (2021-02-26)
 
 **Note:** Version bump only for package @apollosproject/ui-onboarding
