@@ -948,6 +948,14 @@ export const featuresSchema = gql`
     url: String
   }
 
+  type ButtonLinkFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    title: String
+    url: String
+  }
+
   type FeatureFeed implements Node {
     id: ID!
     features: [Feature]
@@ -969,6 +977,11 @@ export const featuresSchema = gql`
   }
 
   extend type ContentSeriesContentItem implements FeaturesNode {
+    features: [Feature] @deprecated(reason: "Use featureFeed")
+    featureFeed: FeatureFeed
+  }
+
+  extend type UniversalContentItem implements FeaturesNode {
     features: [Feature] @deprecated(reason: "Use featureFeed")
     featureFeed: FeatureFeed
   }

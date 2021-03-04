@@ -194,6 +194,17 @@ export default class ContentItem extends RockApolloDataSource {
       );
     }
 
+    const buttonLink = attributeValues?.buttonLink?.value;
+    if (buttonLink) {
+      const buttonText = attributeValues?.buttonText?.value || 'Go!';
+      features.push({
+        id: createGlobalId(id, 'ButtonLinkFeature'),
+        __typename: 'ButtonLinkFeature',
+        title: buttonText,
+        url: buttonLink,
+      });
+    }
+
     return features;
   }
 
