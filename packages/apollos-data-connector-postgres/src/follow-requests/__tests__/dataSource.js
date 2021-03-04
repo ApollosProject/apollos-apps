@@ -3,7 +3,10 @@ import { createModel, FollowState } from '../model';
 import { createModel as createPeopleModel } from '../../people/model';
 import FollowRequestDataSource from '../dataSource';
 
+// Current user by default
 const uuid1 = '82182626-4331-4506-a87b-490cb9ffae2e';
+
+// Followed user by default
 const uuid2 = '70bfd529-cbf0-4fdf-b6e6-415278d3f5cb';
 
 let currentPersonId = 1;
@@ -39,11 +42,11 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     requestFollowDataSource.initialize({ context });
 
-    await requestFollowDataSource.requestFollow({ followedPersonId: uuid1 });
+    await requestFollowDataSource.requestFollow({ followedPersonId: uuid2 });
 
     const follows = await requestFollowDataSource.model.findAll({
       where: {
-        followedPersonId: uuid1,
+        followedPersonId: uuid2,
       },
     });
 
@@ -56,14 +59,14 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     requestFollowDataSource.initialize({ context });
 
-    await requestFollowDataSource.requestFollow({ followedPersonId: uuid1 });
+    await requestFollowDataSource.requestFollow({ followedPersonId: uuid2 });
 
     // Send another request
-    await requestFollowDataSource.requestFollow({ followedPersonId: uuid1 });
+    await requestFollowDataSource.requestFollow({ followedPersonId: uuid2 });
 
     const follows = await requestFollowDataSource.model.findAll({
       where: {
-        followedPersonId: uuid1,
+        followedPersonId: uuid2,
       },
     });
 
@@ -77,22 +80,25 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     requestFollowDataSource.initialize({ context });
 
     await requestFollowDataSource.requestFollow({
-      followedPersonId: uuid1,
+      followedPersonId: uuid2,
     });
 
     // Find and deny the request
     let existingRequest = await requestFollowDataSource.model.findOne({
       where: {
-        followedPersonId: uuid1,
+        followedPersonId: uuid2,
       },
     });
+
+    currentPersonId = 2;
+
     const ignoreResult = await requestFollowDataSource.ignoreFollowRequest({
-      followRequestId: existingRequest.id,
+      requestPersonId: uuid1,
     });
 
     existingRequest = await requestFollowDataSource.model.findOne({
       where: {
-        followedPersonId: uuid1,
+        followedPersonId: uuid2,
       },
     });
 
@@ -105,21 +111,24 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     requestFollowDataSource.initialize({ context });
 
-    await requestFollowDataSource.requestFollow({ followedPersonId: uuid1 });
+    await requestFollowDataSource.requestFollow({ followedPersonId: uuid2 });
 
     // Find and accept the request
     let existingRequest = await requestFollowDataSource.model.findOne({
       where: {
-        followedPersonId: uuid1,
+        followedPersonId: uuid2,
       },
     });
+
+    currentPersonId = 2;
+
     const acceptResult = await requestFollowDataSource.acceptFollowRequest({
-      followRequestId: existingRequest.id,
+      requestPersonId: uuid1,
     });
 
     existingRequest = await requestFollowDataSource.model.findOne({
       where: {
-        followedPersonId: uuid1,
+        followedPersonId: uuid2,
       },
     });
 
@@ -132,24 +141,29 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     requestFollowDataSource.initialize({ context });
 
-    await requestFollowDataSource.requestFollow({ followedPersonId: uuid1 });
+    await requestFollowDataSource.requestFollow({ followedPersonId: uuid2 });
 
     // Find and accept the request
-    const existingRequest = await requestFollowDataSource.model.findOne({
+    await requestFollowDataSource.model.findOne({
       where: {
-        followedPersonId: uuid1,
+        followedPersonId: uuid2,
       },
     });
+
+    currentPersonId = 2;
+
     await requestFollowDataSource.acceptFollowRequest({
-      followRequestId: existingRequest.id,
+      requestPersonId: uuid1,
     });
 
+    currentPersonId = 1;
+
     // Send another request
-    await requestFollowDataSource.requestFollow({ followedPersonId: uuid1 });
+    await requestFollowDataSource.requestFollow({ followedPersonId: uuid2 });
 
     const follows = await requestFollowDataSource.model.findAll({
       where: {
-        followedPersonId: uuid1,
+        followedPersonId: uuid2,
       },
     });
 
@@ -162,102 +176,33 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     requestFollowDataSource.initialize({ context });
 
-    await requestFollowDataSource.requestFollow({ followedPersonId: uuid1 });
+    await requestFollowDataSource.requestFollow({ followedPersonId: uuid2 });
 
     // Find and deny the request
-    const existingRequest = await requestFollowDataSource.model.findOne({
+    await requestFollowDataSource.model.findOne({
       where: {
-        followedPersonId: uuid1,
+        followedPersonId: uuid2,
       },
     });
+
+    currentPersonId = 2;
+
     await requestFollowDataSource.ignoreFollowRequest({
-      followRequestId: existingRequest.id,
+      requestPersonId: uuid1,
     });
 
+    currentPersonId = 1;
+
     // Send another request
-    await requestFollowDataSource.requestFollow({ followedPersonId: uuid1 });
+    await requestFollowDataSource.requestFollow({ followedPersonId: uuid2 });
 
     const follows = await requestFollowDataSource.model.findAll({
       where: {
-        followedPersonId: uuid1,
+        followedPersonId: uuid2,
       },
     });
 
     expect(follows.length).toBe(1);
     expect(follows[0].state).toBe(FollowState.REQUESTED);
-  });
-
-  it('should only process accept for current user', async () => {
-    const requestFollowDataSource = new FollowRequestDataSource();
-
-    requestFollowDataSource.initialize({ context });
-
-    await requestFollowDataSource.requestFollow({ followedPersonId: uuid1 });
-
-    // Change the current person
-    currentPersonId = 999;
-
-    // Find and try to accept the request
-    let existingRequest = await requestFollowDataSource.model.findOne({
-      where: {
-        followedPersonId: uuid1,
-      },
-    });
-
-    // Make sure the error assertion is made by expecting all the assertions below
-    expect.assertions(2);
-
-    try {
-      await requestFollowDataSource.acceptFollowRequest({
-        followRequestId: existingRequest.id,
-      });
-    } catch (e) {
-      expect(e).toBeTruthy();
-    }
-
-    existingRequest = await requestFollowDataSource.model.findOne({
-      where: {
-        followedPersonId: uuid1,
-      },
-    });
-
-    expect(existingRequest.state).toBe(FollowState.REQUESTED);
-  });
-
-  it('should only process ignore for current user', async () => {
-    const requestFollowDataSource = new FollowRequestDataSource();
-
-    requestFollowDataSource.initialize({ context });
-
-    await requestFollowDataSource.requestFollow({ followedPersonId: uuid1 });
-
-    // Change the current person
-    currentPersonId = 999;
-
-    // Find and try to ignore the request
-    let existingRequest = await requestFollowDataSource.model.findOne({
-      where: {
-        followedPersonId: uuid1,
-      },
-    });
-
-    // Make sure the error assertion is made by expecting all the assertions below
-    expect.assertions(2);
-
-    try {
-      await requestFollowDataSource.ignoreFollowRequest({
-        followRequestId: existingRequest.id,
-      });
-    } catch (e) {
-      expect(e).toBeTruthy();
-    }
-
-    existingRequest = await requestFollowDataSource.model.findOne({
-      where: {
-        followedPersonId: uuid1,
-      },
-    });
-
-    expect(existingRequest.state).toBe(FollowState.REQUESTED);
   });
 });

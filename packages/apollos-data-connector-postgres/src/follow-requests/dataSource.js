@@ -47,52 +47,46 @@ class FollowRequestDataSource extends PostgresDataSource {
     return { followRequestId, state: FollowState.REQUESTED };
   }
 
-  async acceptFollowRequest({ followRequestId }) {
+  async acceptFollowRequest({ requestPersonId }) {
     const { Auth, Person } = this.context.dataSources;
     const currentPerson = await Auth.getCurrentPerson();
-    const requestPersonId = await Person.resolveId(currentPerson.id);
+    const currentPersonId = await Person.resolveId(currentPerson.id);
 
     const existingRequest = await this.model.findOne({
       where: {
-        id: followRequestId,
+        requestPersonId,
+        followedPersonId: currentPersonId,
       },
     });
 
     if (!existingRequest) {
-      throw new Error('Invalid request id');
-    }
-
-    if (existingRequest.dataValues.followedPersonId !== requestPersonId) {
-      throw new Error('You are not authorized to do that');
+      throw new Error('No matching request');
     }
 
     await existingRequest.update({ state: FollowState.ACCEPTED });
 
-    return { followRequestId, state: FollowState.ACCEPTED };
+    return { followRequestId: existingRequest.id, state: FollowState.ACCEPTED };
   }
 
-  async ignoreFollowRequest({ followRequestId }) {
+  async ignoreFollowRequest({ requestPersonId }) {
     const { Auth, Person } = this.context.dataSources;
     const currentPerson = await Auth.getCurrentPerson();
-    const requestPersonId = await Person.resolveId(currentPerson.id);
+    const currentPersonId = await Person.resolveId(currentPerson.id);
 
     const existingRequest = await this.model.findOne({
       where: {
-        id: followRequestId,
+        requestPersonId,
+        followedPersonId: currentPersonId,
       },
     });
 
     if (!existingRequest) {
-      throw new Error('Invalid request id');
-    }
-
-    if (existingRequest.dataValues.followedPersonId !== requestPersonId) {
-      throw new Error('You are not authorized to do that');
+      throw new Error('No matching request');
     }
 
     await existingRequest.update({ state: FollowState.DECLINED });
 
-    return { followRequestId, state: FollowState.DECLINED };
+    return { followRequestId: existingRequest.id, state: FollowState.DECLINED };
   }
 }
 

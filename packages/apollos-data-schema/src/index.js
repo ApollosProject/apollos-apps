@@ -986,9 +986,9 @@ export const followRequestSchema = gql`
   extend type Mutation {
     requestFollow(followedPersonId: ID!): FollowRequestResult
 
-    ignoreFollowRequest(followRequestId: ID!): FollowRequestResult
+    ignoreFollowRequest(requestPersonId: ID!): FollowRequestResult
 
-    acceptFollowRequest(followRequestId: ID!): FollowRequestResult
+    acceptFollowRequest(requestPersonId: ID!): FollowRequestResult
   }
 
   enum FollowState {
