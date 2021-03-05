@@ -72,4 +72,32 @@ describe('VerticalPrayerListFeatureConnected component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('renders empty VerticalPrayerListFeatureConnected', async () => {
+    const mock = {
+      request: {
+        query: GET_VERTICAL_PRAYER_LIST_FEATURE,
+        variables: { featureId: 'VerticalPrayerListFeature:123' },
+      },
+      result: {
+        data: {
+          node: {
+            __typename: 'VerticalPrayerListFeature',
+            id: 'VerticalPrayerListFeature:123',
+            title: 'title',
+            subtitle: 'subtitle',
+            prayers: [],
+          },
+        },
+      },
+    };
+
+    const tree = await renderWithApolloData(
+      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
+        <VerticalPrayerListFeatureConnected
+          featureId={'VerticalPrayerListFeature:123'}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });
