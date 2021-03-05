@@ -40,4 +40,7 @@ storiesOf('ui-connected/VerticalPrayerListFeature', module)
       subtitle="subtitle"
       prayers={prayers}
     />
+  ))
+  .add('empty', () => (
+    <VerticalPrayerListFeature title="title" subtitle="subtitle" prayers={[]} />
   ));
