@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.0](https://github.com/apollosproject/apollos-apps/compare/v2.1.1...v2.2.0) (2021-03-04)
+
+
+### Features
+
+* Journal Confirmation Screen ([#1767](https://github.com/apollosproject/apollos-apps/issues/1767)) ([c7b2a8c](https://github.com/apollosproject/apollos-apps/commit/c7b2a8cc498c007f22ae84b8179eab04508d14ce))
+
+
+### Bug Fixes
+
+* adjust background gradient in dark mode ([#1770](https://github.com/apollosproject/apollos-apps/issues/1770)) ([85b0e7f](https://github.com/apollosproject/apollos-apps/commit/85b0e7f03dac7b15bff49907db98fd49289dc1f1))
+* allow theme HOCs to accept custom theme prop ([#1763](https://github.com/apollosproject/apollos-apps/issues/1763)) ([4b0a5b1](https://github.com/apollosproject/apollos-apps/commit/4b0a5b1f82e1e1e83ea30ccec75b0ab18f29a38f))
+
+
+
 ### [2.1.1](https://github.com/apollosproject/apollos-apps/compare/v2.1.0...v2.1.1) (2021-02-26)
 
 **Note:** Version bump only for package @apollosproject/ui-kit

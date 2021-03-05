@@ -105,7 +105,6 @@ class HorizontalFeedConnected extends Component {
         onEndReached={() =>
           !loading &&
           fetchMore({
-            query: this.props.query,
             variables: { cursor: nextCursor, ...this.props.variables },
             updateQuery: this.props.updateQuery,
           })
@@ -122,6 +121,7 @@ class HorizontalFeedConnected extends Component {
         query={this.props.query}
         variables={this.props.variables}
         fetchPolicy={'cache-and-network'}
+        notifyOnNetworkStatusChange
       >
         {this.renderFeed}
       </Query>
