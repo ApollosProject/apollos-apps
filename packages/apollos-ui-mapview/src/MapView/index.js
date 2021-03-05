@@ -152,10 +152,14 @@ class MapView extends Component {
   }
 
   get sortedCampuses() {
-    const { campuses = [] } = this.props;
+    const { campuses = [], isLoading } = this.props;
     const { currentCampus } = this.state;
     if (!currentCampus) {
       return campuses;
+    }
+
+    if (isLoading && !campuses.length) {
+      return [];
     }
 
     return [
