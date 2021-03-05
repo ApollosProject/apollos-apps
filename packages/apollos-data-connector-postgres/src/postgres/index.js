@@ -48,6 +48,7 @@ if (!ApollosConfig?.DATABASE?.URL && process.env.NODE_ENV !== 'test') {
 const connectDev = () => {
   return new Sequelize(`postgres:localhost/${name}`, {
     ...(ApollosConfig?.DATABASE?.OPTIONS || {}),
+    dialectOptions: {},
   });
 };
 
@@ -165,8 +166,18 @@ const defineModel = ({
   return model;
 };
 
-// Creates a function that returns a function that can be called with sequelize as an argument.
-// Used to configure relationships between models.
+/**
+ * @callback ConfigureModelCallback
+ * @param {Object} args
+ * @param {import('sequelize').Sequelize} args.sequelize
+ */
+
+/**
+ * Creates a function that returns a function that can be called with sequelize as an argument.
+ * Used to configure relationships between models.
+ *
+ * @param {ConfigureModelCallback} callback
+ */
 const configureModel = (callback) => () => callback({ sequelize });
 
 // Replaces DB migrations - alters the tables so they match the structure defined in code.
