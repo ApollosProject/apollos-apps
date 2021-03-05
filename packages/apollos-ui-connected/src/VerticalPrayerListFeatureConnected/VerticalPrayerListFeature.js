@@ -18,6 +18,8 @@ import {
 } from '@apollosproject/ui-kit';
 import { PrayerScreen } from '@apollosproject/ui-prayer';
 
+import EmptyList from './EmptyList';
+
 const StyledAvatarView = styled({
   alignItems: 'center',
 })(PaddedView);
@@ -40,47 +42,51 @@ const VerticalPrayerListFeature = ({ title, subtitle, prayers }) => {
         <H6>{title}</H6>
         <H3>{subtitle}</H3>
       </PaddedView>
-      {prayers.map((prayer) => (
-        <View key={prayer.id}>
-          <Card>
-            <CardContent>
-              <StyledAvatarView>
-                <Avatar size="medium" source={prayer.requestor?.photo} />
-              </StyledAvatarView>
-              <H4>{`Pray for ${prayer.requestor?.firstName}`}</H4>
-              <Paragraph>
-                <BodyText>{prayer.text}</BodyText>
-              </Paragraph>
-            </CardContent>
-            {/*
+      {prayers.length ? (
+        prayers.map((prayer) => (
+          <View key={prayer.id}>
+            <Card>
+              <CardContent>
+                <StyledAvatarView>
+                  <Avatar size="medium" source={prayer.requestor?.photo} />
+                </StyledAvatarView>
+                <H4>{`Pray for ${prayer.requestor?.firstName}`}</H4>
+                <Paragraph>
+                  <BodyText>{prayer.text}</BodyText>
+                </Paragraph>
+              </CardContent>
+              {/*
             <CardActions>
             */}
-            <PaddedView>
-              <StyledButton
-                title="Start Praying"
-                pill={false}
-                onPress={() => setModalOpened(true)}
-              />
-            </PaddedView>
-            {/*
+              <PaddedView>
+                <StyledButton
+                  title="Start Praying"
+                  pill={false}
+                  onPress={() => setModalOpened(true)}
+                />
+              </PaddedView>
+              {/*
           <StyledButtonLink onPress={onPressDetails}>
             <Icon name="dots-three-vertical" />
           </StyledButtonLink>
             </CardActions>
           */}
-          </Card>
-          <Modal
-            animationType={'slide'}
-            onRequestClose={() => setModalOpened(false)}
-            visible={modalOpened}
-          >
-            <PrayerScreen
-              prayer={prayer}
-              onPressPrimary={() => setModalOpened(false)}
-            />
-          </Modal>
-        </View>
-      ))}
+            </Card>
+            <Modal
+              animationType={'slide'}
+              onRequestClose={() => setModalOpened(false)}
+              visible={modalOpened}
+            >
+              <PrayerScreen
+                prayer={prayer}
+                onPressPrimary={() => setModalOpened(false)}
+              />
+            </Modal>
+          </View>
+        ))
+      ) : (
+        <EmptyList />
+      )}
     </>
   );
 };
