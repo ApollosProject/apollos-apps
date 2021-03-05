@@ -1,5 +1,5 @@
 import { DataTypes } from 'sequelize';
-import { defineModel } from '../postgres';
+import { configureModel, defineModel } from '../postgres';
 
 const FollowState = {
   REQUESTED: 'REQUESTED',
@@ -17,4 +17,13 @@ const createModel = defineModel({
   },
 });
 
-export { createModel, FollowState };
+const setupModel = configureModel(({ sequelize }) => {
+  sequelize.models.follows.belongsTo(sequelize.models.people, {
+    foreignKey: 'requestPersonId',
+  });
+  sequelize.models.follows.belongsTo(sequelize.models.people, {
+    foreignKey: 'followedPersonId',
+  });
+});
+
+export { createModel, setupModel, FollowState };
