@@ -1,7 +1,7 @@
 {
   "name": "@apollosproject/ui-analytics",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "main": "src/index.js",
   "files": [
     "src/**",

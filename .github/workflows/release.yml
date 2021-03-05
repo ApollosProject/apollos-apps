@@ -63,3 +63,35 @@ jobs:
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  templates:
+
+    needs: npm
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        repository: apollosproject/apollos-templates
+
+    - name: Bump
+      run: |
+        git config --global user.email "apps@apollos.app"
+        git config --global user.name "Apollos Admin"
+        yarn bump
+
+  upgrade-tool:
+
+    needs: templates
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        repository: apollosproject/apollos-upgrade
+
+    - name: Bump
+      run: |
+        git config --global user.email "apps@apollos.app"
+        git config --global user.name "Apollos Admin"
+        yarn bump
