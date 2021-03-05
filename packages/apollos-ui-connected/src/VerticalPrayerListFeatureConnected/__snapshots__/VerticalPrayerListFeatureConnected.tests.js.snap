@@ -591,3 +591,98 @@ Array [
   </View>,
 ]
 `;
+
+exports[`VerticalPrayerListFeatureConnected component renders empty VerticalPrayerListFeatureConnected 1`] = `
+Array [
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 16,
+        "paddingVertical": 16,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#505050",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
+        }
+      }
+    >
+      title
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Black",
+          "fontSize": 24,
+          "lineHeight": 27.6,
+        }
+      }
+    >
+      subtitle
+    </Text>
+  </View>,
+  <View
+    style={
+      Object {
+        "alignItems": "stretch",
+        "paddingHorizontal": 16,
+        "paddingVertical": 16,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Black",
+          "fontSize": 24,
+          "lineHeight": 27.6,
+          "marginBottom": 8,
+          "textAlign": "center",
+        }
+      }
+    >
+      🙏
+    </Text>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#00676D",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+          "marginBottom": 8,
+          "textAlign": "center",
+        }
+      }
+    >
+      It looks like you don't have any prayers yet
+    </Text>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#17B582",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 12,
+          "fontStyle": "italic",
+          "lineHeight": 18,
+          "marginBottom": 32,
+          "textAlign": "center",
+        }
+      }
+    >
+      Let's fix that! Are you ready to get started?
+    </Text>
+  </View>,
+]
+`;
