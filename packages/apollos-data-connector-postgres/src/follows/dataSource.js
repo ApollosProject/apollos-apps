@@ -1,3 +1,4 @@
+import { parseGlobalId } from '@apollosproject/server-core/lib/node';
 import { AuthenticationError } from 'apollo-server';
 import { PostgresDataSource } from '../postgres';
 import { FollowState } from './model';
@@ -13,10 +14,12 @@ class Follow extends PostgresDataSource {
 
     const requestPersonId = await Person.resolveId(currentPerson.id);
 
+    const { id } = parseGlobalId(followedPersonId);
+
     const existingFollow = await this.model.findOne({
       where: {
         requestPersonId,
-        followedPersonId,
+        followedPersonId: id,
       },
     });
 
@@ -37,7 +40,7 @@ class Follow extends PostgresDataSource {
       // There was no existing request, so lets make one.
       const newRequest = await this.model.create({
         requestPersonId,
-        followedPersonId,
+        followedPersonId: id,
         state: FollowState.REQUESTED,
       });
 
@@ -52,9 +55,11 @@ class Follow extends PostgresDataSource {
     const currentPerson = await Auth.getCurrentPerson();
     const currentPersonId = await Person.resolveId(currentPerson.id);
 
+    const { id } = parseGlobalId(requestPersonId);
+
     const existingFollow = await this.model.findOne({
       where: {
-        requestPersonId,
+        requestPersonId: id,
         followedPersonId: currentPersonId,
       },
     });
@@ -73,9 +78,11 @@ class Follow extends PostgresDataSource {
     const currentPerson = await Auth.getCurrentPerson();
     const currentPersonId = await Person.resolveId(currentPerson.id);
 
+    const { id } = parseGlobalId(requestPersonId);
+
     const existingFollow = await this.model.findOne({
       where: {
-        requestPersonId,
+        requestPersonId: id,
         followedPersonId: currentPersonId,
       },
     });

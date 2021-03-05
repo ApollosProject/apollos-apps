@@ -1,3 +1,4 @@
+import { parseGlobalId } from '@apollosproject/server-core';
 import { sequelize, sync } from '../../postgres/index';
 import { createModel, FollowState } from '../model';
 import { createModel as createPeopleModel } from '../../people/model';
@@ -5,9 +6,11 @@ import FollowDataSource from '../dataSource';
 
 // Current user by default
 const uuid1 = '82182626-4331-4506-a87b-490cb9ffae2e';
+const personId1 = `Person:${uuid1}`;
 
 // Followed user by default
 const uuid2 = '70bfd529-cbf0-4fdf-b6e6-415278d3f5cb';
+const PersonId2 = `Person:${uuid2}`;
 
 let currentPersonId = 1;
 
@@ -42,11 +45,13 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     requestFollowDataSource.initialize({ context });
 
-    await requestFollowDataSource.requestFollow({ followedPersonId: uuid2 });
+    await requestFollowDataSource.requestFollow({
+      followedPersonId: PersonId2,
+    });
 
     const follows = await requestFollowDataSource.model.findAll({
       where: {
-        followedPersonId: uuid2,
+        followedPersonId: parseGlobalId(PersonId2).id,
       },
     });
 
@@ -59,14 +64,18 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     requestFollowDataSource.initialize({ context });
 
-    await requestFollowDataSource.requestFollow({ followedPersonId: uuid2 });
+    await requestFollowDataSource.requestFollow({
+      followedPersonId: PersonId2,
+    });
 
     // Send another request
-    await requestFollowDataSource.requestFollow({ followedPersonId: uuid2 });
+    await requestFollowDataSource.requestFollow({
+      followedPersonId: PersonId2,
+    });
 
     const follows = await requestFollowDataSource.model.findAll({
       where: {
-        followedPersonId: uuid2,
+        followedPersonId: parseGlobalId(PersonId2).id,
       },
     });
 
@@ -80,25 +89,25 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     requestFollowDataSource.initialize({ context });
 
     await requestFollowDataSource.requestFollow({
-      followedPersonId: uuid2,
+      followedPersonId: PersonId2,
     });
 
     // Find and deny the request
     let existingRequest = await requestFollowDataSource.model.findOne({
       where: {
-        followedPersonId: uuid2,
+        followedPersonId: parseGlobalId(PersonId2).id,
       },
     });
 
     currentPersonId = 2;
 
     const ignoreResult = await requestFollowDataSource.ignoreFollowRequest({
-      requestPersonId: uuid1,
+      requestPersonId: personId1,
     });
 
     existingRequest = await requestFollowDataSource.model.findOne({
       where: {
-        followedPersonId: uuid2,
+        followedPersonId: parseGlobalId(PersonId2).id,
       },
     });
 
@@ -111,24 +120,26 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     requestFollowDataSource.initialize({ context });
 
-    await requestFollowDataSource.requestFollow({ followedPersonId: uuid2 });
+    await requestFollowDataSource.requestFollow({
+      followedPersonId: PersonId2,
+    });
 
     // Find and accept the request
     let existingRequest = await requestFollowDataSource.model.findOne({
       where: {
-        followedPersonId: uuid2,
+        followedPersonId: parseGlobalId(PersonId2).id,
       },
     });
 
     currentPersonId = 2;
 
     const acceptResult = await requestFollowDataSource.acceptFollowRequest({
-      requestPersonId: uuid1,
+      requestPersonId: personId1,
     });
 
     existingRequest = await requestFollowDataSource.model.findOne({
       where: {
-        followedPersonId: uuid2,
+        followedPersonId: parseGlobalId(PersonId2).id,
       },
     });
 
@@ -141,29 +152,33 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     requestFollowDataSource.initialize({ context });
 
-    await requestFollowDataSource.requestFollow({ followedPersonId: uuid2 });
+    await requestFollowDataSource.requestFollow({
+      followedPersonId: PersonId2,
+    });
 
     // Find and accept the request
     await requestFollowDataSource.model.findOne({
       where: {
-        followedPersonId: uuid2,
+        followedPersonId: parseGlobalId(PersonId2).id,
       },
     });
 
     currentPersonId = 2;
 
     await requestFollowDataSource.acceptFollowRequest({
-      requestPersonId: uuid1,
+      requestPersonId: personId1,
     });
 
     currentPersonId = 1;
 
     // Send another request
-    await requestFollowDataSource.requestFollow({ followedPersonId: uuid2 });
+    await requestFollowDataSource.requestFollow({
+      followedPersonId: PersonId2,
+    });
 
     const follows = await requestFollowDataSource.model.findAll({
       where: {
-        followedPersonId: uuid2,
+        followedPersonId: parseGlobalId(PersonId2).id,
       },
     });
 
@@ -176,29 +191,33 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     requestFollowDataSource.initialize({ context });
 
-    await requestFollowDataSource.requestFollow({ followedPersonId: uuid2 });
+    await requestFollowDataSource.requestFollow({
+      followedPersonId: PersonId2,
+    });
 
     // Find and deny the request
     await requestFollowDataSource.model.findOne({
       where: {
-        followedPersonId: uuid2,
+        followedPersonId: parseGlobalId(PersonId2).id,
       },
     });
 
     currentPersonId = 2;
 
     await requestFollowDataSource.ignoreFollowRequest({
-      requestPersonId: uuid1,
+      requestPersonId: personId1,
     });
 
     currentPersonId = 1;
 
     // Send another request
-    await requestFollowDataSource.requestFollow({ followedPersonId: uuid2 });
+    await requestFollowDataSource.requestFollow({
+      followedPersonId: PersonId2,
+    });
 
     const follows = await requestFollowDataSource.model.findAll({
       where: {
-        followedPersonId: uuid2,
+        followedPersonId: parseGlobalId(PersonId2).id,
       },
     });
 
