@@ -805,6 +805,11 @@ export const featuresSchema = gql`
   interface Feature {
     id: ID!
     order: Int # 0 is the "Main Content". If order is < 0 than this comes before the body content.
+    sources: [FeatureSource]
+  }
+
+  enum FeatureSource {
+    SERIES_IN_PROGRESS
   }
 
   enum ACTION_FEATURE_ACTION {
@@ -844,6 +849,7 @@ export const featuresSchema = gql`
   type ActionListFeature implements Feature & Node {
     id: ID!
     order: Int
+    sources: [FeatureSource]
 
     title: String
     subtitle: String
@@ -865,6 +871,7 @@ export const featuresSchema = gql`
   type ActionBarFeature implements Feature & Node {
     id: ID!
     order: Int
+    sources: [FeatureSource]
 
     title: String
     actions: [ActionBarAction]
@@ -875,6 +882,7 @@ export const featuresSchema = gql`
   type HeroListFeature implements Feature & Node {
     id: ID!
     order: Int
+    sources: [FeatureSource]
 
     title: String
     subtitle: String
@@ -904,6 +912,7 @@ export const featuresSchema = gql`
   type VerticalCardListFeature implements Feature & Node {
     id: ID!
     order: Int
+    sources: [FeatureSource]
 
     title: String
     subtitle: String
@@ -916,6 +925,7 @@ export const featuresSchema = gql`
   type HorizontalCardListFeature implements Feature & Node {
     id: ID!
     order: Int
+    sources: [FeatureSource]
 
     title: String
     subtitle: String
@@ -926,6 +936,7 @@ export const featuresSchema = gql`
   type TextFeature implements Feature & Node {
     id: ID!
     order: Int
+    sources: [FeatureSource]
 
     title: String
     body: String
@@ -934,6 +945,7 @@ export const featuresSchema = gql`
   type ScriptureFeature implements Feature & Node {
     id: ID!
     order: Int
+    sources: [FeatureSource]
 
     title: String
     scriptures: [Scripture]
@@ -942,6 +954,7 @@ export const featuresSchema = gql`
   type WebviewFeature implements Feature & Node {
     id: ID!
     order: Int
+    sources: [FeatureSource]
 
     title: String
     linkText: String
@@ -996,6 +1009,7 @@ export const commentSchema = gql`
   type CommentListFeature implements Feature & Node {
     id: ID!
     order: Int
+    sources: [FeatureSource]
 
     comments: [Comment] @cacheControl(maxAge: 0)
   }
@@ -1003,6 +1017,7 @@ export const commentSchema = gql`
   type AddCommentFeature implements Feature & Node {
     id: ID!
     order: Int
+    sources: [FeatureSource]
     relatedNode: Node!
 
     addPrompt: String
@@ -1052,6 +1067,7 @@ export const prayerSchema = gql`
   type PrayerListFeature implements Feature & Node {
     id: ID!
     order: Int
+    sources: [FeatureSource]
     isCard: Boolean
     title: String
     subtitle: String
@@ -1061,6 +1077,7 @@ export const prayerSchema = gql`
   type VerticalPrayerListFeature implements Feature & Node {
     id: ID!
     order: Int
+    sources: [FeatureSource]
     title: String
     subtitle: String
     prayers: [PrayerRequest]
