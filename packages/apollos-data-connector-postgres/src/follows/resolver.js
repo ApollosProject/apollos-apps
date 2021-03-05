@@ -9,7 +9,7 @@ const resolvers = {
     ignoreFollowRequest: (root, args, { dataSources: { Follow } }) =>
       Follow.ignoreFollowRequest(args),
   },
-  FollowResult: {
+  Follow: {
     following: ({ state }) => state === FollowState.ACCEPTED,
   },
 };
