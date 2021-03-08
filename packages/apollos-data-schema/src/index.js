@@ -982,6 +982,28 @@ export const featuresSchema = gql`
   }
 `;
 
+export const followSchema = gql`
+  extend type Mutation {
+    requestFollow(followedPersonId: ID!): Follow
+
+    ignoreFollowRequest(requestPersonId: ID!): Follow
+
+    acceptFollowRequest(requestPersonId: ID!): Follow
+  }
+
+  enum FollowState {
+    REQUESTED
+    DECLINED
+    ACCEPTED
+  }
+
+  type Follow {
+    followId: ID
+    state: FollowState
+    following: Boolean
+  }
+`;
+
 export const commentSchema = gql`
   extend type Mutation {
     addComment(

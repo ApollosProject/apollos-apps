@@ -1,3 +1,4 @@
+import { isUuid } from '@apollosproject/server-core';
 import { AuthenticationError } from 'apollo-server';
 import { camelCase } from 'lodash';
 
@@ -22,6 +23,28 @@ export const camelCaseKeys = (obj) => {
 
 export default class Person extends PostgresDataSource {
   modelName = 'people';
+
+  /**
+   * If the provided id is a Rock id, find and return the postgres id
+   */
+  async resolveId(id) {
+    const { Auth } = this.context.dataSources;
+
+    if (!isUuid(id) && Auth.ORIGIN_TYPE) {
+      const person = await this.model.findOne({
+        where: {
+          originId: id.toString(),
+          originType: Auth.ORIGIN_TYPE,
+        },
+      });
+
+      if (!person) throw new Error(`Invalid user Id ${id}`);
+
+      return person.id;
+    }
+
+    return id;
+  }
 
   async create(attributes) {
     const cleanedAttributes = camelCaseKeys(attributes);

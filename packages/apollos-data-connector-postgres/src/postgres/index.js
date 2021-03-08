@@ -3,12 +3,57 @@
 
 import './pgEnum-fix';
 import { Sequelize, DataTypes } from 'sequelize';
+import { Client } from 'pg';
 import { createGlobalId } from '@apollosproject/server-core';
 import ApollosConfig from '@apollosproject/config';
 import connectJest from './test-connect';
+import { ensureLocalDb } from './local-db';
 
 const sequelizeConfigOptions =
   process.env.NODE_ENV === 'test' ? { logging: false } : {};
+
+const name = `${process.env.NODE_ENV || 'development'}`;
+
+// Create a local database if it doesn't exist
+// FIXME: Because the main thread here doesn't wait for this process to complete,
+// the database doesn't exist on first run, and the sequelize instance below is undefined
+// until you quit and restart.
+if (!ApollosConfig?.DATABASE?.URL && process.env.NODE_ENV !== 'test') {
+  const client = new Client({
+    host: 'localhost',
+    database: 'postgres',
+  });
+
+  console.log('creating db');
+  (async () => {
+    try {
+      await client.connect();
+    } catch (e) {
+      console.error('Failed to connect to local postgres instance');
+      console.error(e);
+    }
+
+    try {
+      await ensureLocalDb(client, name);
+    } catch (e) {
+      console.error('Failed to ensure local database');
+      console.error(e);
+    }
+
+    await client.end();
+  })();
+  console.log('created!');
+}
+
+const connectDev = () => {
+  return new Sequelize(`postgres:localhost/${name}`, {
+    ...(ApollosConfig?.DATABASE?.OPTIONS || {}),
+    dialectOptions: {},
+  });
+};
+
+const localConnect = () =>
+  process.env.NODE_ENV === 'test' ? connectJest() : connectDev();
 
 // Use the DB url from the apollos config if provided.
 // Otherwise, connect to the proper test database
@@ -17,7 +62,7 @@ const sequelize = ApollosConfig?.DATABASE?.URL
       ...sequelizeConfigOptions,
       ...(ApollosConfig?.DATABASE?.OPTIONS || {}),
     })
-  : connectJest();
+  : localConnect();
 
 class PostgresDataSource {
   initialize(config) {
@@ -121,8 +166,18 @@ const defineModel = ({
   return model;
 };
 
-// Creates a function that returns a function that can be called with sequelize as an argument.
-// Used to configure relationships between models.
+/**
+ * @callback ConfigureModelCallback
+ * @param {Object} args
+ * @param {import('sequelize').Sequelize} args.sequelize
+ */
+
+/**
+ * Creates a function that returns a function that can be called with sequelize as an argument.
+ * Used to configure relationships between models.
+ *
+ * @param {ConfigureModelCallback} callback
+ */
 const configureModel = (callback) => () => callback({ sequelize });
 
 // Replaces DB migrations - alters the tables so they match the structure defined in code.
