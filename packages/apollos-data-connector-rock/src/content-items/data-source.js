@@ -200,7 +200,6 @@ export default class ContentItem extends RockApolloDataSource {
       features.push(
         Feature.createButtonFeature({
           id: attributeValues.buttonLink.id,
-          __typename: 'ButtonFeature',
           // NOTE: right now only URLs are implemented
           // could optionally parse Rock IDs for OPEN_NODE action?
           action: Feature.attachRelatedNodeId({
