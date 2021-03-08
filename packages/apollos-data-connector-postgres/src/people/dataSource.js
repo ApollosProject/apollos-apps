@@ -26,6 +26,7 @@ export default class Person extends PostgresDataSource {
   async create(attributes) {
     const cleanedAttributes = camelCaseKeys(attributes);
     const person = await this.model.create({
+      apollosUser: true,
       ...cleanedAttributes,
       ...(cleanedAttributes.gender
         ? { gender: cleanedAttributes.gender.toUpperCase() }

@@ -18,6 +18,10 @@ const createModel = defineModel({
     birthDate: DataTypes.DATE,
     profileImageUrl: DataTypes.STRING,
     gender: DataTypes.ENUM(Object.values(Gender)),
+    apollosUser: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
   },
 });
 
