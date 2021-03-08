@@ -25,9 +25,9 @@ const ProfileDetailsEntry = (props) => (
     >
       {props.genderList.map((gender) => [
         <RadioButton
-          key={gender}
-          value={gender}
-          label={() => <RadioLabel>{gender}</RadioLabel>}
+          key={gender.field || gender}
+          value={gender.field || gender}
+          label={() => <RadioLabel>{gender.label || gender}</RadioLabel>}
           underline={false}
         />,
       ])}
@@ -88,7 +88,11 @@ ProfileDetailsEntry.defaultProps = {
   title: "This one's easy.",
   prompt:
     'Help us understand who you are so we can connect you with the best ministries and events.',
-  genderList: ['Male', 'Female', 'Prefer not to reply'],
+  genderList: [
+    'Male',
+    'Female',
+    { label: 'Prefer not to reply', field: 'Unknown' },
+  ],
 };
 
 ProfileDetailsEntry.LegalText = LegalText;
