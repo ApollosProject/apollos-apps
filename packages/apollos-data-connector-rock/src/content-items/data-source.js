@@ -196,13 +196,23 @@ export default class ContentItem extends RockApolloDataSource {
 
     const buttonLink = attributeValues?.buttonLink?.value;
     if (buttonLink) {
-      const buttonText = attributeValues?.buttonText?.value || 'Go!';
-      features.push({
-        id: createGlobalId(id, 'ButtonLinkFeature'),
-        __typename: 'ButtonLinkFeature',
-        title: buttonText,
-        url: buttonLink,
-      });
+      const buttonText = attributeValues.buttonText?.value || '';
+      features.push(
+        Feature.createButtonFeature({
+          id: attributeValues.buttonLink.id,
+          __typename: 'ButtonFeature',
+          // NOTE: right now only URLs are implemented
+          // could optionally parse Rock IDs for OPEN_NODE action?
+          action: Feature.attachRelatedNodeId({
+            relatedNode: {
+              __typename: 'Url',
+              url: buttonLink,
+            },
+            action: 'OPEN_AUTHENTICATED_URL',
+            title: buttonText,
+          }),
+        })
+      );
     }
 
     return features;

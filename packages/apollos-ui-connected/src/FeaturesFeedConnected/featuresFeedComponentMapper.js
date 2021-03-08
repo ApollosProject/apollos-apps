@@ -12,7 +12,7 @@ import ActionBarFeatureConnected from '../ActionBarFeatureConnected';
 import ScriptureFeature from '../features/ScriptureFeature';
 import TextFeature from '../features/TextFeature';
 import WebviewFeature from '../features/WebviewFeature';
-import ButtonLinkFeature from '../features/ButtonLinkFeature';
+import ButtonFeature from '../features/ButtonFeature';
 import CommentListFeatureConnected from '../CommentListFeatureConnected';
 import AddCommentFeatureConnected from '../AddCommentFeatureConnected';
 
@@ -32,7 +32,7 @@ const MAPPINGS = {
   ScriptureFeature,
   TextFeature,
   WebviewFeature,
-  ButtonLinkFeature,
+  ButtonFeature,
 };
 
 const featuresFeedComponentMapper = ({

@@ -113,10 +113,18 @@ const LITE_FEATURES_FRAGMENT = gql`
       title
       url
     }
-    ... on ButtonLinkFeature {
+    ... on ButtonFeature {
       # The whole fragment is currently included b/c these nodes don't fetch their own content.
-      title
-      url
+      action {
+        title
+        action
+        relatedNode {
+          id
+          ... on Url {
+            url
+          }
+        }
+      }
     }
   }
 `;
