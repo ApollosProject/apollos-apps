@@ -10,12 +10,13 @@ const Follow = memo(
     slideTitle = 'Get connected',
     description = 'Follow others to stay up to date with your church community.',
     followers = [],
+    onFollow,
     ...props
   }) => (
     <Slide {...props}>
       {BackgroundComponent}
       <SlideContent title={slideTitle} description={description}>
-        <FollowList followers={followers} />
+        <FollowList followers={followers} onFollow={onFollow} />
       </SlideContent>
     </Slide>
   )

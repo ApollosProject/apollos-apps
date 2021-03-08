@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Apollos Postgres People DataSource should throw an error when passing a non-uuid to getStaticSuggestedFollowsFor 1`] = `[Error: ID 1 is not a valid UUID. You are probally passing a Rock (or other) id to getStaticSuggestedFollowsFor when it expects a Postgres UUID.]`;
-
-exports[`Apollos Postgres People DataSource should throw an error when passing a non-uuid to getStaticSuggestedFollowsFor 2`] = `[Error: ID 1 is not a valid UUID. You are probally passing a Rock (or other) id to getStaticSuggestedFollowsFor when it expects a Postgres UUID.]`;

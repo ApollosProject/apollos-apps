@@ -18,8 +18,9 @@ const context = {
       }),
     },
     Person: {
-      resolveId: (id) => id,
-      whereCurrentPerson: ({ id }) => ({ id }),
+      whereCurrentPerson: () => ({
+        id: currentPersonId,
+      }),
     },
   },
 };
