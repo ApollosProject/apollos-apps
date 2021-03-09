@@ -1004,7 +1004,7 @@ export const followSchema = gql`
   }
 
   extend type Query {
-    getFollows: [Person]
+    followRequests: [Person] @cacheControl(maxAge: 0)
   }
 
   enum FollowState {

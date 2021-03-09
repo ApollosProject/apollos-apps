@@ -261,7 +261,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     currentPersonId = 1;
 
-    const follows = await followDataSource.getFollows();
+    const follows = await followDataSource.followRequests();
 
     expect(follows.length).toBe(followRange.length);
   });
@@ -289,7 +289,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
       requestPersonId: getPersonId(2),
     });
 
-    const follows = await followDataSource.getFollows();
+    const follows = await followDataSource.followRequests();
 
     // Should be one fewer request
     expect(follows.length).toBe(followRange.length - 1);

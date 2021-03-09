@@ -88,7 +88,7 @@ class Follow extends PostgresDataSource {
     return { followId: existingFollow.id, state: FollowState.DECLINED };
   }
 
-  async getFollows() {
+  async followRequests() {
     const currentPersonId = await this.getCurrentPersonId();
 
     const followers = await this.model.findAll({

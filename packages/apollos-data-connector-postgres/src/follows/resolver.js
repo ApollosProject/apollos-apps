@@ -13,8 +13,8 @@ const resolvers = {
     following: ({ state }) => state === FollowState.ACCEPTED,
   },
   Query: {
-    getFollows: (root, args, { dataSources: { Follow } }) =>
-      Follow.getFollows(args),
+    followRequests: (root, args, { dataSources: { Follow } }) =>
+      Follow.followRequests(args),
   },
 };
 
