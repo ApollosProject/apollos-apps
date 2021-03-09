@@ -12,32 +12,36 @@ const HorizontalCardListFeatureConnected = ({
   isLoading,
   refetchRef,
   ...props
-}) => (
-  <Query
-    query={GET_HORIZONTAL_CARD_LIST_FEATURE}
-    fetchPolicy="cache-and-network"
-    variables={{ featureId }}
-  >
-    {({ data, loading, refetch }) => {
-      if (featureId && refetch && refetchRef)
-        refetchRef({ refetch, id: featureId });
-      return (
-        <Component
-          {...get(data, 'node')}
-          cards={get(data, 'node.cards', []).map(({ actionIcon, ...card }) => ({
-            ...card,
-            ...(actionIcon != null ? { actionIcon: card.actionIcon } : {}), // temp hack because ContentCard doesn't handle null action icon well
-            coverImage: get(card, 'coverImage.sources', undefined),
-            __typename: card.relatedNode.__typename,
-            id: card.relatedNode.id,
-          }))}
-          {...props}
-          isLoading={loading || isLoading}
-        />
-      );
-    }}
-  </Query>
-);
+}) =>
+  console.log('featureID', featureId) || (
+    <Query
+      query={GET_HORIZONTAL_CARD_LIST_FEATURE}
+      fetchPolicy="cache-and-network"
+      variables={{ featureId }}
+    >
+      {({ data, loading, refetch }) => {
+        console.log('cards', data?.node?.cards);
+        if (featureId && refetch && refetchRef)
+          refetchRef({ refetch, id: featureId });
+        return (
+          <Component
+            {...get(data, 'node')}
+            cards={get(data, 'node.cards', []).map(
+              ({ actionIcon, ...card }) => ({
+                ...card,
+                ...(actionIcon != null ? { actionIcon: card.actionIcon } : {}), // temp hack because ContentCard doesn't handle null action icon well
+                coverImage: get(card, 'coverImage.sources', undefined),
+                __typename: card.relatedNode.__typename,
+                id: card.relatedNode.id,
+              })
+            )}
+            {...props}
+            isLoading={loading || isLoading}
+          />
+        );
+      }}
+    </Query>
+  );
 
 HorizontalCardListFeatureConnected.propTypes = {
   Component: PropTypes.oneOfType([

@@ -263,7 +263,6 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
       .top(limit)
       .get();
 
-    const emptyHTML = `<h1>${emptyMessage}</h1>`;
     return items.length
       ? items.map((item, i) => ({
           id: `${item.id}${i}`,
@@ -278,10 +277,9 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
           {
             id: 'EmtpyCard',
             relatedNode: {
-              id: 'Message',
               // __type: 'Message',
               __typename: 'Message',
-              message: emptyHTML,
+              message: emptyMessage,
             },
           },
         ];
