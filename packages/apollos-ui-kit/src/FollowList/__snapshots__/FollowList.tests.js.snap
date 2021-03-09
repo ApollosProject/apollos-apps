@@ -29,14 +29,7 @@ exports[`FollowList should render 4 items 1`] = `
     <Image
       fadeDuration={250}
       onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/600/400?random",
-          },
-        ]
-      }
+      source={Array []}
       style={
         Object {
           "backgroundColor": "#A5A5A5",
@@ -92,58 +85,6 @@ exports[`FollowList should render 4 items 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#A5A5A5",
-            "borderColor": "#A5A5A5",
-            "borderRadius": 8,
-            "borderWidth": 2,
-            "elevation": 2,
-            "flexDirection": "row",
-            "height": 32,
-            "justifyContent": "center",
-            "marginLeft": 8,
-            "opacity": 1,
-            "overflow": "hidden",
-            "paddingHorizontal": 8,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "lineHeight": 18,
-            }
-          }
-        >
-          Hide
-        </Text>
-      </View>
-    </View>
-    <View
-      accessible={true}
-      focusable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <View
-        bordered={false}
-        disabled={false}
-        pill={false}
-        style={
-          Object {
-            "alignItems": "center",
             "backgroundColor": "#00676D",
             "borderColor": "#00676D",
             "borderRadius": 8,
@@ -169,7 +110,7 @@ exports[`FollowList should render 4 items 1`] = `
             }
           }
         >
-          Confirm
+          Follow
         </Text>
       </View>
     </View>
@@ -187,14 +128,7 @@ exports[`FollowList should render 4 items 1`] = `
     <Image
       fadeDuration={250}
       onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/600/400?random",
-          },
-        ]
-      }
+      source={Array []}
       style={
         Object {
           "backgroundColor": "#A5A5A5",
@@ -250,58 +184,6 @@ exports[`FollowList should render 4 items 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#A5A5A5",
-            "borderColor": "#A5A5A5",
-            "borderRadius": 8,
-            "borderWidth": 2,
-            "elevation": 2,
-            "flexDirection": "row",
-            "height": 32,
-            "justifyContent": "center",
-            "marginLeft": 8,
-            "opacity": 1,
-            "overflow": "hidden",
-            "paddingHorizontal": 8,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "lineHeight": 18,
-            }
-          }
-        >
-          Hide
-        </Text>
-      </View>
-    </View>
-    <View
-      accessible={true}
-      focusable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <View
-        bordered={false}
-        disabled={false}
-        pill={false}
-        style={
-          Object {
-            "alignItems": "center",
             "backgroundColor": "#00676D",
             "borderColor": "#00676D",
             "borderRadius": 8,
@@ -327,7 +209,7 @@ exports[`FollowList should render 4 items 1`] = `
             }
           }
         >
-          Confirm
+          Follow
         </Text>
       </View>
     </View>
@@ -345,14 +227,7 @@ exports[`FollowList should render 4 items 1`] = `
     <Image
       fadeDuration={250}
       onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/600/400?random",
-          },
-        ]
-      }
+      source={Array []}
       style={
         Object {
           "backgroundColor": "#A5A5A5",
@@ -451,14 +326,7 @@ exports[`FollowList should render 4 items 1`] = `
     <Image
       fadeDuration={250}
       onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/600/400?random",
-          },
-        ]
-      }
+      source={Array []}
       style={
         Object {
           "backgroundColor": "#A5A5A5",
@@ -576,14 +444,7 @@ exports[`FollowList should render a loading state 1`] = `
     <Image
       fadeDuration={250}
       onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/600/400?random",
-          },
-        ]
-      }
+      source={Array []}
       style={
         Object {
           "backgroundColor": "#A5A5A5",
@@ -615,19 +476,6 @@ exports[`FollowList should render a loading state 1`] = `
         }
       />
     </View>
-    <View
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 8,
-          "height": 32,
-          "marginLeft": 8,
-          "paddingHorizontal": 8,
-          "width": 64,
-        }
-      }
-    />
     <View
       style={
         Object {
@@ -655,14 +503,7 @@ exports[`FollowList should render a loading state 1`] = `
     <Image
       fadeDuration={250}
       onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/600/400?random",
-          },
-        ]
-      }
+      source={Array []}
       style={
         Object {
           "backgroundColor": "#A5A5A5",
@@ -694,19 +535,6 @@ exports[`FollowList should render a loading state 1`] = `
         }
       />
     </View>
-    <View
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 8,
-          "height": 32,
-          "marginLeft": 8,
-          "paddingHorizontal": 8,
-          "width": 64,
-        }
-      }
-    />
     <View
       style={
         Object {
@@ -779,14 +607,7 @@ exports[`FollowList should render as a card 1`] = `
         <Image
           fadeDuration={250}
           onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/600/400?random",
-              },
-            ]
-          }
+          source={Array []}
           style={
             Object {
               "backgroundColor": "#A5A5A5",
@@ -842,58 +663,6 @@ exports[`FollowList should render as a card 1`] = `
             style={
               Object {
                 "alignItems": "center",
-                "backgroundColor": "#A5A5A5",
-                "borderColor": "#A5A5A5",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "elevation": 2,
-                "flexDirection": "row",
-                "height": 32,
-                "justifyContent": "center",
-                "marginLeft": 8,
-                "opacity": 1,
-                "overflow": "hidden",
-                "paddingHorizontal": 8,
-              }
-            }
-          >
-            <Text
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
-                }
-              }
-            >
-              Hide
-            </Text>
-          </View>
-        </View>
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "opacity": 1,
-            }
-          }
-        >
-          <View
-            bordered={false}
-            disabled={false}
-            pill={false}
-            style={
-              Object {
-                "alignItems": "center",
                 "backgroundColor": "#00676D",
                 "borderColor": "#00676D",
                 "borderRadius": 8,
@@ -919,7 +688,7 @@ exports[`FollowList should render as a card 1`] = `
                 }
               }
             >
-              Confirm
+              Follow
             </Text>
           </View>
         </View>
@@ -937,14 +706,7 @@ exports[`FollowList should render as a card 1`] = `
         <Image
           fadeDuration={250}
           onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/600/400?random",
-              },
-            ]
-          }
+          source={Array []}
           style={
             Object {
               "backgroundColor": "#A5A5A5",
@@ -1000,58 +762,6 @@ exports[`FollowList should render as a card 1`] = `
             style={
               Object {
                 "alignItems": "center",
-                "backgroundColor": "#A5A5A5",
-                "borderColor": "#A5A5A5",
-                "borderRadius": 8,
-                "borderWidth": 2,
-                "elevation": 2,
-                "flexDirection": "row",
-                "height": 32,
-                "justifyContent": "center",
-                "marginLeft": 8,
-                "opacity": 1,
-                "overflow": "hidden",
-                "paddingHorizontal": 8,
-              }
-            }
-          >
-            <Text
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
-                }
-              }
-            >
-              Hide
-            </Text>
-          </View>
-        </View>
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "opacity": 1,
-            }
-          }
-        >
-          <View
-            bordered={false}
-            disabled={false}
-            pill={false}
-            style={
-              Object {
-                "alignItems": "center",
                 "backgroundColor": "#00676D",
                 "borderColor": "#00676D",
                 "borderRadius": 8,
@@ -1077,7 +787,7 @@ exports[`FollowList should render as a card 1`] = `
                 }
               }
             >
-              Confirm
+              Follow
             </Text>
           </View>
         </View>
@@ -1116,14 +826,7 @@ exports[`FollowList should render items with Follow button 1`] = `
     <Image
       fadeDuration={250}
       onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/600/400?random",
-          },
-        ]
-      }
+      source={Array []}
       style={
         Object {
           "backgroundColor": "#A5A5A5",
@@ -1222,14 +925,7 @@ exports[`FollowList should render items with Follow button 1`] = `
     <Image
       fadeDuration={250}
       onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/600/400?random",
-          },
-        ]
-      }
+      source={Array []}
       style={
         Object {
           "backgroundColor": "#A5A5A5",
@@ -1347,14 +1043,7 @@ exports[`FollowList should render items with Hide and Confirm buttons 1`] = `
     <Image
       fadeDuration={250}
       onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/600/400?random",
-          },
-        ]
-      }
+      source={Array []}
       style={
         Object {
           "backgroundColor": "#A5A5A5",
@@ -1410,58 +1099,6 @@ exports[`FollowList should render items with Hide and Confirm buttons 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#A5A5A5",
-            "borderColor": "#A5A5A5",
-            "borderRadius": 8,
-            "borderWidth": 2,
-            "elevation": 2,
-            "flexDirection": "row",
-            "height": 32,
-            "justifyContent": "center",
-            "marginLeft": 8,
-            "opacity": 1,
-            "overflow": "hidden",
-            "paddingHorizontal": 8,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "lineHeight": 18,
-            }
-          }
-        >
-          Hide
-        </Text>
-      </View>
-    </View>
-    <View
-      accessible={true}
-      focusable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <View
-        bordered={false}
-        disabled={false}
-        pill={false}
-        style={
-          Object {
-            "alignItems": "center",
             "backgroundColor": "#00676D",
             "borderColor": "#00676D",
             "borderRadius": 8,
@@ -1487,7 +1124,7 @@ exports[`FollowList should render items with Hide and Confirm buttons 1`] = `
             }
           }
         >
-          Confirm
+          Follow
         </Text>
       </View>
     </View>
@@ -1505,14 +1142,7 @@ exports[`FollowList should render items with Hide and Confirm buttons 1`] = `
     <Image
       fadeDuration={250}
       onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/600/400?random",
-          },
-        ]
-      }
+      source={Array []}
       style={
         Object {
           "backgroundColor": "#A5A5A5",
@@ -1568,58 +1198,6 @@ exports[`FollowList should render items with Hide and Confirm buttons 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#A5A5A5",
-            "borderColor": "#A5A5A5",
-            "borderRadius": 8,
-            "borderWidth": 2,
-            "elevation": 2,
-            "flexDirection": "row",
-            "height": 32,
-            "justifyContent": "center",
-            "marginLeft": 8,
-            "opacity": 1,
-            "overflow": "hidden",
-            "paddingHorizontal": 8,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "lineHeight": 18,
-            }
-          }
-        >
-          Hide
-        </Text>
-      </View>
-    </View>
-    <View
-      accessible={true}
-      focusable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <View
-        bordered={false}
-        disabled={false}
-        pill={false}
-        style={
-          Object {
-            "alignItems": "center",
             "backgroundColor": "#00676D",
             "borderColor": "#00676D",
             "borderRadius": 8,
@@ -1645,7 +1223,7 @@ exports[`FollowList should render items with Hide and Confirm buttons 1`] = `
             }
           }
         >
-          Confirm
+          Follow
         </Text>
       </View>
     </View>
@@ -1695,14 +1273,7 @@ exports[`FollowList should render with a header 1`] = `
     <Image
       fadeDuration={250}
       onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/600/400?random",
-          },
-        ]
-      }
+      source={Array []}
       style={
         Object {
           "backgroundColor": "#A5A5A5",
@@ -1758,58 +1329,6 @@ exports[`FollowList should render with a header 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#A5A5A5",
-            "borderColor": "#A5A5A5",
-            "borderRadius": 8,
-            "borderWidth": 2,
-            "elevation": 2,
-            "flexDirection": "row",
-            "height": 32,
-            "justifyContent": "center",
-            "marginLeft": 8,
-            "opacity": 1,
-            "overflow": "hidden",
-            "paddingHorizontal": 8,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "lineHeight": 18,
-            }
-          }
-        >
-          Hide
-        </Text>
-      </View>
-    </View>
-    <View
-      accessible={true}
-      focusable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <View
-        bordered={false}
-        disabled={false}
-        pill={false}
-        style={
-          Object {
-            "alignItems": "center",
             "backgroundColor": "#00676D",
             "borderColor": "#00676D",
             "borderRadius": 8,
@@ -1835,7 +1354,7 @@ exports[`FollowList should render with a header 1`] = `
             }
           }
         >
-          Confirm
+          Follow
         </Text>
       </View>
     </View>
@@ -1853,14 +1372,7 @@ exports[`FollowList should render with a header 1`] = `
     <Image
       fadeDuration={250}
       onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/600/400?random",
-          },
-        ]
-      }
+      source={Array []}
       style={
         Object {
           "backgroundColor": "#A5A5A5",
@@ -1916,58 +1428,6 @@ exports[`FollowList should render with a header 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#A5A5A5",
-            "borderColor": "#A5A5A5",
-            "borderRadius": 8,
-            "borderWidth": 2,
-            "elevation": 2,
-            "flexDirection": "row",
-            "height": 32,
-            "justifyContent": "center",
-            "marginLeft": 8,
-            "opacity": 1,
-            "overflow": "hidden",
-            "paddingHorizontal": 8,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "lineHeight": 18,
-            }
-          }
-        >
-          Hide
-        </Text>
-      </View>
-    </View>
-    <View
-      accessible={true}
-      focusable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <View
-        bordered={false}
-        disabled={false}
-        pill={false}
-        style={
-          Object {
-            "alignItems": "center",
             "backgroundColor": "#00676D",
             "borderColor": "#00676D",
             "borderRadius": 8,
@@ -1993,7 +1453,7 @@ exports[`FollowList should render with a header 1`] = `
             }
           }
         >
-          Confirm
+          Follow
         </Text>
       </View>
     </View>
@@ -2030,14 +1490,7 @@ exports[`FollowList should render with onPressFollowListButton 1`] = `
     <Image
       fadeDuration={250}
       onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/600/400?random",
-          },
-        ]
-      }
+      source={Array []}
       style={
         Object {
           "backgroundColor": "#A5A5A5",
@@ -2093,58 +1546,6 @@ exports[`FollowList should render with onPressFollowListButton 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#A5A5A5",
-            "borderColor": "#A5A5A5",
-            "borderRadius": 8,
-            "borderWidth": 2,
-            "elevation": 2,
-            "flexDirection": "row",
-            "height": 32,
-            "justifyContent": "center",
-            "marginLeft": 8,
-            "opacity": 1,
-            "overflow": "hidden",
-            "paddingHorizontal": 8,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "lineHeight": 18,
-            }
-          }
-        >
-          Hide
-        </Text>
-      </View>
-    </View>
-    <View
-      accessible={true}
-      focusable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <View
-        bordered={false}
-        disabled={false}
-        pill={false}
-        style={
-          Object {
-            "alignItems": "center",
             "backgroundColor": "#00676D",
             "borderColor": "#00676D",
             "borderRadius": 8,
@@ -2170,7 +1571,7 @@ exports[`FollowList should render with onPressFollowListButton 1`] = `
             }
           }
         >
-          Confirm
+          Follow
         </Text>
       </View>
     </View>
@@ -2188,14 +1589,7 @@ exports[`FollowList should render with onPressFollowListButton 1`] = `
     <Image
       fadeDuration={250}
       onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/600/400?random",
-          },
-        ]
-      }
+      source={Array []}
       style={
         Object {
           "backgroundColor": "#A5A5A5",
@@ -2251,58 +1645,6 @@ exports[`FollowList should render with onPressFollowListButton 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#A5A5A5",
-            "borderColor": "#A5A5A5",
-            "borderRadius": 8,
-            "borderWidth": 2,
-            "elevation": 2,
-            "flexDirection": "row",
-            "height": 32,
-            "justifyContent": "center",
-            "marginLeft": 8,
-            "opacity": 1,
-            "overflow": "hidden",
-            "paddingHorizontal": 8,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "lineHeight": 18,
-            }
-          }
-        >
-          Hide
-        </Text>
-      </View>
-    </View>
-    <View
-      accessible={true}
-      focusable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <View
-        bordered={false}
-        disabled={false}
-        pill={false}
-        style={
-          Object {
-            "alignItems": "center",
             "backgroundColor": "#00676D",
             "borderColor": "#00676D",
             "borderRadius": 8,
@@ -2328,7 +1670,7 @@ exports[`FollowList should render with onPressFollowListButton 1`] = `
             }
           }
         >
-          Confirm
+          Follow
         </Text>
       </View>
     </View>

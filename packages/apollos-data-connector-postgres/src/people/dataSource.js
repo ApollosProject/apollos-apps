@@ -1,4 +1,3 @@
-import { isUuid } from '@apollosproject/server-core';
 import { AuthenticationError } from 'apollo-server';
 import { camelCase } from 'lodash';
 

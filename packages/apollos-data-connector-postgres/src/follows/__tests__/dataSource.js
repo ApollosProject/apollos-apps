@@ -129,7 +129,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     });
 
     expect(existingRequest.state).toBe(FollowState.DECLINED);
-    expect(existingRequest.id).toBe(ignoreResult.followId);
+    expect(existingRequest.id).toBe(ignoreResult.id);
   });
 
   it('should accept request', async () => {
@@ -161,7 +161,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     });
 
     expect(existingRequest.state).toBe(FollowState.ACCEPTED);
-    expect(existingRequest.id).toBe(acceptResult.followId);
+    expect(existingRequest.id).toBe(acceptResult.id);
   });
 
   it('should ignore existing accepted request', async () => {
