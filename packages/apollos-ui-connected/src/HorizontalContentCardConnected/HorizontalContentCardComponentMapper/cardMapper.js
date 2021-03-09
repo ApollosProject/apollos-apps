@@ -5,9 +5,10 @@ import PropTypes from 'prop-types';
 import {
   HorizontalDefaultCard,
   HorizontalHighlightCard,
+  HTMLView,
 } from '@apollosproject/ui-kit';
 
-const cardMapper = ({ title, hyphenatedTitle, ...props }) => {
+const cardMapper = ({ title, hyphenatedTitle, htmlContent, ...props }) => {
   // map typename to the the card we want to render.
   switch (get(props, '__typename')) {
     case 'MediaContentItem':
@@ -15,6 +16,8 @@ const cardMapper = ({ title, hyphenatedTitle, ...props }) => {
     case 'ContentSeriesContentItem':
     case 'DevotionalContentItem':
       return <HorizontalHighlightCard title={hyphenatedTitle} {...props} />;
+    case 'Message':
+      return <HTMLView>{htmlContent}</HTMLView>;
     default:
       return <HorizontalDefaultCard title={title} {...props} />;
   }

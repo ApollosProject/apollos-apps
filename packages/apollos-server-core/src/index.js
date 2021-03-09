@@ -10,6 +10,7 @@ import * as Node from './node';
 import * as Interfaces from './interfaces';
 import * as Pagination from './pagination';
 import * as Media from './media';
+// import * as Message from './message';
 
 export { createGlobalId, parseGlobalId, isUuid } from './node';
 export {
