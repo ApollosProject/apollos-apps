@@ -215,6 +215,7 @@ export default class Feature extends RockApolloDataSource {
     hyphenatedTitle,
     title,
     subtitle,
+    emptyMessage,
     primaryAction,
     ...args
   }) {
@@ -236,6 +237,7 @@ export default class Feature extends RockApolloDataSource {
           algorithms,
           title,
           subtitle,
+          emptyMessage,
           primaryAction,
           ...args,
         },
@@ -244,6 +246,7 @@ export default class Feature extends RockApolloDataSource {
       hyphenatedTitle,
       title,
       subtitle,
+      emptyMessage,
       primaryAction,
       // Typename is required so GQL knows specifically what Feature is being created
       __typename: 'HorizontalCardListFeature',

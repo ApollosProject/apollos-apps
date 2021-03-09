@@ -919,6 +919,7 @@ export const featuresSchema = gql`
 
     title: String
     subtitle: String
+    emptyMessage: String
     cards: [CardListItem]
     primaryAction: FeatureAction
   }
