@@ -125,6 +125,7 @@ class HorizontalCardListFeature extends PureComponent {
       loadingStateObject,
     } = this.props;
     const onPressAction = onPressPrimaryButton || onPressItem;
+    console.log('cards', cards);
     return (
       !!(isLoading || cards.length) && (
         <View>
