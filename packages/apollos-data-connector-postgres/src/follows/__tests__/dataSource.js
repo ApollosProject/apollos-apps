@@ -264,6 +264,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     const follows = await followDataSource.followRequests();
 
     expect(follows.length).toBe(followRange.length);
+    expect(follows.map((f) => f.id).includes(uuids[0])).toBeFalsy();
   });
 
   it('should only return unanswered requests', async () => {

@@ -91,21 +91,26 @@ class Follow extends PostgresDataSource {
   async followRequests() {
     const currentPersonId = await this.getCurrentPersonId();
 
-    const followers = await this.model.findAll({
+    const currentPerson = await this.sequelize.models.people.findOne({
       where: {
-        followedPersonId: currentPersonId,
-        state: { [Op.or]: [null, FollowState.REQUESTED] },
+        id: currentPersonId,
       },
       include: [
         {
-          model: this.sequelize.models.people,
-          as: 'person',
-          where: { id: currentPersonId },
+          model: this.sequelize.models.follows,
+          as: 'follow_requests',
+          where: {
+            state: { [Op.or]: [null, FollowState.REQUESTED] },
+          },
+          include: {
+            model: this.sequelize.models.people,
+            as: 'request_person',
+          },
         },
       ],
     });
 
-    return followers.map((f) => f.person);
+    return currentPerson.follow_requests.map((f) => f.request_person);
   }
 
   async getCurrentPersonId() {
