@@ -85,12 +85,7 @@ class FeaturesFeedConnected extends PureComponent {
   };
 
   render() {
-    const {
-      Component,
-      onPressActionItem,
-      featureFeedId,
-      ...props
-    } = this.props;
+    const { onPressActionItem, featureFeedId, ...props } = this.props;
     // Early return if we don't have a featureFeedId.
     if (!featureFeedId) {
       return (
@@ -130,11 +125,6 @@ class FeaturesFeedConnected extends PureComponent {
 }
 
 FeaturesFeedConnected.propTypes = {
-  Component: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.func,
-    PropTypes.object, // type check for React fragments
-  ]),
   featureFeedId: PropTypes.string,
   onPressActionItem: PropTypes.func,
   additionalFeatures: PropTypes.shape({}),
