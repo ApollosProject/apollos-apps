@@ -1,5 +1,6 @@
 import { parseGlobalId } from '@apollosproject/server-core/lib/node';
 import { AuthenticationError } from 'apollo-server';
+import { Op } from 'sequelize';
 import { PostgresDataSource } from '../postgres';
 import { FollowState } from './model';
 
@@ -93,6 +94,7 @@ class Follow extends PostgresDataSource {
     const followers = await this.model.findAll({
       where: {
         followedPersonId: currentPersonId,
+        state: { [Op.or]: [null, FollowState.REQUESTED] },
       },
       include: [
         {

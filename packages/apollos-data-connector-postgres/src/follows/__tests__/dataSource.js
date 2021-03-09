@@ -265,4 +265,33 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     expect(follows.length).toBe(followRange.length);
   });
+
+  it('should only return unanswered requests', async () => {
+    const followDataSource = new FollowDataSource();
+
+    followDataSource.initialize({ context });
+
+    // Have several people follow user 1
+    const followRange = range(2, uuids.length + 1);
+    await Promise.all(
+      followRange.map((id) => {
+        currentPersonId = id;
+        return followDataSource.requestFollow({
+          followedPersonId: getPersonId(1),
+        });
+      })
+    );
+
+    currentPersonId = 1;
+
+    // accept one of the requests
+    await followDataSource.acceptFollowRequest({
+      requestPersonId: getPersonId(2),
+    });
+
+    const follows = await followDataSource.getFollows();
+
+    // Should be one fewer request
+    expect(follows.length).toBe(followRange.length - 1);
+  });
 });
