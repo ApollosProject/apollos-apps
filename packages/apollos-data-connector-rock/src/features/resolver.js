@@ -76,4 +76,7 @@ export default {
   VerticalPrayerListFeature: {
     id: ({ id }) => createGlobalId(id, 'VerticalPrayerListFeature'),
   },
+  ButtonFeature: {
+    id: ({ id }) => createGlobalId(id, 'ButtonFeature'),
+  },
 };
