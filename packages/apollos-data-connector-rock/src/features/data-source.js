@@ -269,6 +269,15 @@ export default class Feature extends RockApolloDataSource {
     };
   }
 
+  // eslint-disable-next-line class-methods-use-this
+  createButtonFeature({ action, id }) {
+    return {
+      action,
+      id,
+      __typename: 'ButtonFeature',
+    };
+  }
+
   createCommentListFeature({ nodeId, nodeType, flagLimit }) {
     return {
       id: JSON.stringify({ nodeId, nodeType, flagLimit }),
