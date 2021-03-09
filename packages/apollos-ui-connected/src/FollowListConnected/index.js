@@ -47,4 +47,5 @@ FollowListConnected.defaultProps = {
 
 FollowListConnected.displayName = 'FollowListConnected';
 
+export { REQUEST_FOLLOW };
 export default FollowListConnected;
