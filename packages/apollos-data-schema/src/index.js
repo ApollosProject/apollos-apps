@@ -991,6 +991,10 @@ export const followSchema = gql`
     acceptFollowRequest(requestPersonId: ID!): Follow
   }
 
+  extend type Query {
+    getFollows: [Person]
+  }
+
   enum FollowState {
     REQUESTED
     DECLINED

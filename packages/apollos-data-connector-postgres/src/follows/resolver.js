@@ -12,6 +12,10 @@ const resolvers = {
   Follow: {
     following: ({ state }) => state === FollowState.ACCEPTED,
   },
+  Query: {
+    getFollows: (root, args, { dataSources: { Follow } }) =>
+      Follow.getFollows(args),
+  },
 };
 
 export default resolvers;
