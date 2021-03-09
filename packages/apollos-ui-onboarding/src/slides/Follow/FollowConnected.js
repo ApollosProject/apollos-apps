@@ -1,24 +1,17 @@
 import React from 'react';
-import { useQuery, useMutation } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import PropTypes from 'prop-types';
 
 import GET_SUGGESTED_FOLLOWS from './getSuggestedFollows';
-import REQUEST_FOLLOW_PERSON from './requestFollowPerson';
 import Follow from './Follow';
 
 const FollowConnected = ({ Component, ...props }) => {
-  const { data, loading, refetch } = useQuery(GET_SUGGESTED_FOLLOWS);
-  const [requestFollowPerson] = useMutation(REQUEST_FOLLOW_PERSON, {
-    onCompleted: refetch,
+  const { data, loading } = useQuery(GET_SUGGESTED_FOLLOWS, {
+    fetchPolicy: 'cache-and-network',
   });
   const suggestedFollows = data?.suggestedFollows || [];
   return (
-    <Component
-      loading={loading}
-      followers={suggestedFollows}
-      onFollow={(id) => requestFollowPerson({ variables: { personId: id } })}
-      {...props}
-    />
+    <Component loading={loading} followers={suggestedFollows} {...props} />
   );
 };
 

@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { get } from 'lodash';
 
 import { View } from 'react-native';
 import styled from '../styled';
@@ -87,10 +86,8 @@ class FollowList extends PureComponent {
           {followers.map((item) => {
             const isFollowingState = item?.currentUserFollowing?.state;
             const isFollowed = item?.followsCurrentUser?.state;
-            console.log(item);
             return (
               <FollowListItem
-                {...get(item, 'relatedNode', {})}
                 key={item.id}
                 id={item.id}
                 requested={isFollowingState === 'REQUESTED'}
@@ -123,4 +120,5 @@ class FollowList extends PureComponent {
   }
 }
 
+export { FollowListItem };
 export default withIsLoading(FollowList);

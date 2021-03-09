@@ -52,16 +52,14 @@ class Follow extends PostgresDataSource {
       }
 
       // If a request already exists that was denied, update it as a new request.
-      await existingFollow.update({ state: FollowState.REQUESTED });
-    } else {
-      // There was no existing request, so lets make one.
-      const newRequest = await this.model.create({
-        requestPersonId: currentPerson.id,
-        followedPersonId: id,
-        state: FollowState.REQUESTED,
-      });
-      return newRequest;
+      return existingFollow.update({ state: FollowState.REQUESTED });
     }
+    // There was no existing request, so lets make one.
+    return this.model.create({
+      requestPersonId: currentPerson.id,
+      followedPersonId: id,
+      state: FollowState.REQUESTED,
+    });
   }
 
   async acceptFollowRequest({ requestPersonId }) {
