@@ -21,4 +21,8 @@ export default {
     ),
     email: enforceCurrentUser(({ email }) => email),
   },
+  Query: {
+    suggestedFollows: async (root, args, { dataSources: { Follow } }) =>
+      Follow.getStaticSuggestedFollowsForCurrentPerson(),
+  },
 };

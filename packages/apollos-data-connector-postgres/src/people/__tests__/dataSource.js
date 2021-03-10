@@ -1,5 +1,9 @@
 import { sequelize, sync } from '../../postgres/index';
 import { createModel } from '../model';
+import {
+  createModel as createCampusModel,
+  setupModel as setupCampusModel,
+} from '../../campus/model';
 import PeopleDataSource from '../dataSource';
 
 let personId;
@@ -24,6 +28,8 @@ describe('Apollos Postgres People DataSource', () => {
     personId = 1;
 
     await createModel();
+    await createCampusModel();
+    await setupCampusModel();
     await sync();
 
     peopleDataSource = new PeopleDataSource();

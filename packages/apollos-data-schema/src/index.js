@@ -188,6 +188,10 @@ export const peopleSchema = gql`
     updateProfileFields(input: [UpdateProfileInput]!): Person
     uploadProfileImage(file: Upload!, size: Int!): Person
   }
+
+  extend type Query {
+    suggestedFollows: [Person] @cacheControl(maxAge: 0)
+  }
 `;
 
 export const deviceSchema = gql`
