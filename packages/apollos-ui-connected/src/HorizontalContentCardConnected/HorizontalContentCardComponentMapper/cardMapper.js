@@ -6,7 +6,8 @@ import {
   HorizontalDefaultCard,
   HorizontalHighlightCard,
 } from '@apollosproject/ui-kit';
-import HTMLView from '@apollosproject/ui-htmlview';
+
+import Message from './Message';
 
 const cardMapper = ({ title, hyphenatedTitle, ...props }) => {
   // map typename to the the card we want to render.
@@ -18,9 +19,11 @@ const cardMapper = ({ title, hyphenatedTitle, ...props }) => {
       return <HorizontalHighlightCard title={hyphenatedTitle} {...props} />;
     case 'Message':
       return (
-        <HTMLView
-          {...props}
-        >{`<h1>${props.relatedNode?.message}</h1>`}</HTMLView>
+        <Message
+          title={title}
+          subtitle={props.subtitle}
+          body={props.relatedNode?.message}
+        />
       );
     default:
       return <HorizontalDefaultCard title={title} {...props} />;
