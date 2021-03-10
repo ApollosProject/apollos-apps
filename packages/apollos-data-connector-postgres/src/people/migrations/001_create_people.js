@@ -1,22 +1,28 @@
-import { Sequelize } from 'sequelize';
+import { DataTypes, Sequelize } from 'sequelize';
+
+const Gender = {
+  MALE: 'MALE',
+  FEMALE: 'FEMALE',
+  UNKNOWN: 'UNKNOWN',
+};
 
 async function up({ context: queryInterface }) {
-  await queryInterface.createTable('campuses', {
+  await queryInterface.createTable('people', {
     id: {
       primaryKey: true,
       type: Sequelize.UUID,
       defaultValue: Sequelize.literal('uuid_generate_v4()'),
     },
-    name: Sequelize.STRING,
-    street1: Sequelize.TEXT,
-    street2: Sequelize.TEXT,
-    city: Sequelize.TEXT,
-    state: Sequelize.TEXT,
-    postalCode: Sequelize.TEXT,
-    latitude: Sequelize.FLOAT,
-    longitude: Sequelize.FLOAT,
-    imageUrl: Sequelize.TEXT,
-    digital: Sequelize.BOOLEAN,
+    firstName: DataTypes.STRING,
+    lastName: DataTypes.STRING,
+    email: DataTypes.STRING,
+    birthDate: DataTypes.DATE,
+    profileImageUrl: DataTypes.STRING,
+    gender: DataTypes.ENUM(Object.values(Gender)),
+    apollosUser: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
     apollosId: {
       type: Sequelize.STRING,
       allowNull: true, // we set this value with an "afterCreate" hook if not set.
@@ -40,9 +46,9 @@ async function up({ context: queryInterface }) {
 }
 
 async function down({ context: queryInterface }) {
-  await queryInterface.dropTable('campuses');
+  await queryInterface.dropTable('people');
 }
 
-const name = '001-create-campus';
+const name = '001-create-people';
 
 module.exports = { up, down, name, order: 1 };
