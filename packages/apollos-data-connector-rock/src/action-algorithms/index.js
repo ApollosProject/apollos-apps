@@ -275,7 +275,7 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
         }))
       : [
           {
-            id: 'EmtpyCard',
+            id: 'EmptyCard',
             relatedNode: {
               // __type: 'Message',
               __typename: 'Message',
