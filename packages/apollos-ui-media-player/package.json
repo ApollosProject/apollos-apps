@@ -7,6 +7,9 @@
   "react-native": "src/index",
   "source": "src/index",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
+  "engines": {
+    "node": "10.x.x"
+  },
   "version": "2.2.0",
   "files": [
     "src",
