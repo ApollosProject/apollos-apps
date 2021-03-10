@@ -1,6 +1,9 @@
 {
   "name": "@apollosproject/data-connector-postgres",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
+  "engines": {
+    "node": "10.x.x"
+  },
   "version": "2.2.0",
   "main": "lib/index.js",
   "scripts": {

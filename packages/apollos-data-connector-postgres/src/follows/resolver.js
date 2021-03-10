@@ -13,6 +13,10 @@ const resolvers = {
     followingCurrentUser: (root, args, { dataSources: { Follow } }) =>
       Follow.getPersonFollowingCurrentUser(root),
   },
+  Query: {
+    followRequests: (root, args, { dataSources: { Follow } }) =>
+      Follow.followRequests(args),
+  },
 };
 
 export default resolvers;

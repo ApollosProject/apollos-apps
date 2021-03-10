@@ -7,6 +7,7 @@ import {
   setupModel as setupCampusModel,
 } from '../../campus/model';
 import FollowDataSource from '../dataSource';
+import PeopleDataSource from '../../people/dataSource';
 
 let currentPersonId = 1;
 
@@ -18,27 +19,31 @@ const context = {
       }),
     },
     Person: {
-      whereCurrentPerson: () => ({
-        id: currentPersonId,
-      }),
+      resolveId: (id) => id,
+      whereCurrentPerson: ({ id }) => ({ id }),
     },
   },
 };
 
 let person1;
 let person2;
+let person3;
+let person4;
+
 describe('Apollos Postgres FollowRequest DataSource', () => {
-  let followDataSource;
+  // let followDataSource;
   beforeEach(async () => {
     try {
-      await createModel();
       await createPeopleModel();
-      await createCampusModel();
+      await createModel();
       await setupModel();
+      await createCampusModel();
       await setupCampusModel();
       await sync({ force: true });
-      followDataSource = new FollowDataSource();
-      followDataSource.initialize({ context });
+
+      // Make sure people exist for all of our test ids
+      const peopleDataSource = new PeopleDataSource();
+      peopleDataSource.initialize({ context });
     } catch (e) {
       console.error(e);
     }
@@ -50,6 +55,14 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
       originId: '22',
       originType: 'rock',
     });
+    person3 = await sequelize.models.people.create({
+      originId: '33',
+      originType: 'rock',
+    });
+    person4 = await sequelize.models.people.create({
+      originId: '44',
+      originType: 'rock',
+    });
     currentPersonId = person1.id;
   });
   afterEach(async () => {
@@ -58,15 +71,15 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
   });
 
   it('should create new follow request', async () => {
-    const requestFollowDataSource = new FollowDataSource();
+    const followDataSource = new FollowDataSource();
 
-    requestFollowDataSource.initialize({ context });
+    followDataSource.initialize({ context });
 
-    await requestFollowDataSource.requestFollow({
+    await followDataSource.requestFollow({
       followedPersonId: `Person:${person2.id}`,
     });
 
-    const follows = await requestFollowDataSource.model.findAll({
+    const follows = await followDataSource.model.findAll({
       where: {
         followedPersonId: person2.id,
       },
@@ -77,20 +90,20 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
   });
 
   it('should ignore existing unaccepted request', async () => {
-    const requestFollowDataSource = new FollowDataSource();
+    const followDataSource = new FollowDataSource();
 
-    requestFollowDataSource.initialize({ context });
+    followDataSource.initialize({ context });
 
-    await requestFollowDataSource.requestFollow({
+    await followDataSource.requestFollow({
       followedPersonId: `Person:${person2.id}`,
     });
 
     // Send another request
-    await requestFollowDataSource.requestFollow({
+    await followDataSource.requestFollow({
       followedPersonId: `Person:${person2.id}`,
     });
 
-    const follows = await requestFollowDataSource.model.findAll({
+    const follows = await followDataSource.model.findAll({
       where: {
         followedPersonId: person2.id,
       },
@@ -101,16 +114,16 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
   });
 
   it('should ignore request', async () => {
-    const requestFollowDataSource = new FollowDataSource();
+    const followDataSource = new FollowDataSource();
 
-    requestFollowDataSource.initialize({ context });
+    followDataSource.initialize({ context });
 
-    await requestFollowDataSource.requestFollow({
+    await followDataSource.requestFollow({
       followedPersonId: `Person:${person2.id}`,
     });
 
     // Find and deny the request
-    let existingRequest = await requestFollowDataSource.model.findOne({
+    let existingRequest = await followDataSource.model.findOne({
       where: {
         followedPersonId: person2.id,
       },
@@ -118,11 +131,11 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     currentPersonId = person2.id;
 
-    const ignoreResult = await requestFollowDataSource.ignoreFollowRequest({
+    const ignoreResult = await followDataSource.ignoreFollowRequest({
       requestPersonId: `Person:${person1.id}`,
     });
 
-    existingRequest = await requestFollowDataSource.model.findOne({
+    existingRequest = await followDataSource.model.findOne({
       where: {
         followedPersonId: person2.id,
       },
@@ -133,16 +146,16 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
   });
 
   it('should accept request', async () => {
-    const requestFollowDataSource = new FollowDataSource();
+    const followDataSource = new FollowDataSource();
 
-    requestFollowDataSource.initialize({ context });
+    followDataSource.initialize({ context });
 
-    await requestFollowDataSource.requestFollow({
+    await followDataSource.requestFollow({
       followedPersonId: `Person:${person2.id}`,
     });
 
     // Find and accept the request
-    let existingRequest = await requestFollowDataSource.model.findOne({
+    let existingRequest = await followDataSource.model.findOne({
       where: {
         followedPersonId: person2.id,
       },
@@ -150,11 +163,11 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     currentPersonId = person2.id;
 
-    const acceptResult = await requestFollowDataSource.acceptFollowRequest({
+    const acceptResult = await followDataSource.acceptFollowRequest({
       requestPersonId: `Person:${person1.id}`,
     });
 
-    existingRequest = await requestFollowDataSource.model.findOne({
+    existingRequest = await followDataSource.model.findOne({
       where: {
         followedPersonId: person2.id,
       },
@@ -165,16 +178,16 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
   });
 
   it('should ignore existing accepted request', async () => {
-    const requestFollowDataSource = new FollowDataSource();
+    const followDataSource = new FollowDataSource();
 
-    requestFollowDataSource.initialize({ context });
+    followDataSource.initialize({ context });
 
-    await requestFollowDataSource.requestFollow({
+    await followDataSource.requestFollow({
       followedPersonId: `Person:${person2.id}`,
     });
 
     // Find and accept the request
-    await requestFollowDataSource.model.findOne({
+    await followDataSource.model.findOne({
       where: {
         followedPersonId: person2.id,
       },
@@ -182,18 +195,18 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     currentPersonId = person2.id;
 
-    await requestFollowDataSource.acceptFollowRequest({
+    await followDataSource.acceptFollowRequest({
       requestPersonId: `Person:${person1.id}`,
     });
 
     currentPersonId = person1.id;
 
     // Send another request
-    await requestFollowDataSource.requestFollow({
+    await followDataSource.requestFollow({
       followedPersonId: `Person:${person2.id}`,
     });
 
-    const follows = await requestFollowDataSource.model.findAll({
+    const follows = await followDataSource.model.findAll({
       where: {
         followedPersonId: person2.id,
       },
@@ -204,16 +217,16 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
   });
 
   it('should reset existing denied request', async () => {
-    const requestFollowDataSource = new FollowDataSource();
+    const followDataSource = new FollowDataSource();
 
-    requestFollowDataSource.initialize({ context });
+    followDataSource.initialize({ context });
 
-    await requestFollowDataSource.requestFollow({
+    await followDataSource.requestFollow({
       followedPersonId: `Person:${person2.id}`,
     });
 
     // Find and deny the request
-    await requestFollowDataSource.model.findOne({
+    await followDataSource.model.findOne({
       where: {
         followedPersonId: person2.id,
       },
@@ -221,18 +234,18 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     currentPersonId = person2.id;
 
-    await requestFollowDataSource.ignoreFollowRequest({
+    await followDataSource.ignoreFollowRequest({
       requestPersonId: `Person:${person1.id}`,
     });
 
     currentPersonId = person1.id;
 
     // Send another request
-    await requestFollowDataSource.requestFollow({
+    await followDataSource.requestFollow({
       followedPersonId: `Person:${person2.id}`,
     });
 
-    const follows = await requestFollowDataSource.model.findAll({
+    const follows = await followDataSource.model.findAll({
       where: {
         followedPersonId: person2.id,
       },
@@ -243,6 +256,8 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
   });
 
   it("should get a user's list of sugggested people to follow", async () => {
+    const followDataSource = new FollowDataSource();
+    followDataSource.initialize({ context });
     // Lengthy setup :g
     const mainCampus = await sequelize.models.campus.create({
       name: 'Main Campus',
@@ -310,6 +325,8 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
   });
 
   it("should get a user's list of sugggested people to follow if they have no campus", async () => {
+    const followDataSource = new FollowDataSource();
+    followDataSource.initialize({ context });
     // Lengthy setup :g
     const mainCampus = await sequelize.models.campus.create({
       name: 'Main Campus',
@@ -376,6 +393,8 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
   });
 
   it('should not suggest a user follows themselves', async () => {
+    const followDataSource = new FollowDataSource();
+    followDataSource.initialize({ context });
     const me = await sequelize.models.people.create({
       originId: '4',
       originType: 'rock',
@@ -396,6 +415,8 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     expect(suggestedFollowers.map(({ email }) => email)).toEqual([]);
   });
   it('should throw an error when passing a non-uuid to getStaticSuggestedFollowsFor', async () => {
+    const followDataSource = new FollowDataSource();
+    followDataSource.initialize({ context });
     const invalidCampus = followDataSource.getStaticSuggestedFollowsFor({
       campusId: 1,
     });
@@ -406,6 +427,8 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
   });
 
   it('should not suggest a user follows someone they already follow', async () => {
+    const followDataSource = new FollowDataSource();
+    followDataSource.initialize({ context });
     const me = await sequelize.models.people.create({
       originId: '4',
       originType: 'rock',
@@ -440,6 +463,9 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     expect(suggestedFollowers).toEqual([]);
   });
   it('should throw an error when passing a non-uuid to getStaticSuggestedFollowsFor', async () => {
+    const followDataSource = new FollowDataSource();
+
+    followDataSource.initialize({ context });
     const invalidCampus = followDataSource.getStaticSuggestedFollowsFor({
       campusId: 1,
     });
@@ -447,5 +473,56 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     const invalidId = followDataSource.getStaticSuggestedFollowsFor({ id: 1 });
     await expect(invalidId).rejects.toMatchSnapshot();
+  });
+  it('should return list of users requesting to follow the current user', async () => {
+    const followDataSource = new FollowDataSource();
+
+    followDataSource.initialize({ context });
+
+    // Have several people follow user 1
+    await Promise.all(
+      [person2, person3, person4].map(({ id }) => {
+        currentPersonId = id;
+        return followDataSource.requestFollow({
+          followedPersonId: `Person:${person1.id}`,
+        });
+      })
+    );
+
+    currentPersonId = person1.id;
+
+    const follows = await followDataSource.followRequests();
+
+    expect(follows.length).toBe(3);
+    expect(follows.map((f) => f.id).includes(person1.id)).toBeFalsy();
+  });
+
+  it('should only return unanswered requests', async () => {
+    const followDataSource = new FollowDataSource();
+
+    followDataSource.initialize({ context });
+
+    // Have several people follow user 1
+    const followRange = [person2, person3, person4];
+    await Promise.all(
+      followRange.map(({ id }) => {
+        currentPersonId = id;
+        return followDataSource.requestFollow({
+          followedPersonId: `Person:${person1.id}`,
+        });
+      })
+    );
+
+    currentPersonId = person1.id;
+
+    // accept one of the requests
+    await followDataSource.acceptFollowRequest({
+      requestPersonId: `Person:${person2.id}`,
+    });
+
+    const follows = await followDataSource.followRequests();
+
+    // Should be one fewer request
+    expect(follows.length).toBe(followRange.length - 1);
   });
 });

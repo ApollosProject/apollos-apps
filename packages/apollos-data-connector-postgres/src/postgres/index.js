@@ -88,7 +88,7 @@ const UUID_V4_REGEXP = new RegExp(
 export const assertUuid = (uuid, caller = '') => {
   if (uuid && !UUID_V4_REGEXP.test(uuid)) {
     throw new Error(
-      `ID ${uuid} is not a valid UUID. You are probally passing a Rock (or other) id to ${caller} when it expects a Postgres UUID.`
+      `ID ${uuid} is not a valid UUID. You are probably passing a Rock (or other) id to ${caller} when it expects a Postgres UUID.`
     );
   }
 };

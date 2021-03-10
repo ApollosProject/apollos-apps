@@ -2,6 +2,7 @@ import ApollosConfig from '@apollosproject/config';
 import { Op } from 'sequelize';
 import { parseGlobalId } from '@apollosproject/server-core/lib/node';
 import { get } from 'lodash';
+import { AuthenticationError } from 'apollo-server';
 import { PostgresDataSource, assertUuid } from '../postgres';
 import { FollowState } from './model';
 
@@ -27,18 +28,13 @@ class Follow extends PostgresDataSource {
 
   // eslint-disable-next-line consistent-return
   async requestFollow({ followedPersonId }) {
-    const { Person } = this.context.dataSources;
-
-    const currentPersonWhere = await Person.whereCurrentPerson();
-    const currentPerson = await this.sequelize.models.people.findOne({
-      where: currentPersonWhere,
-    });
+    const currentPersonId = await this.getCurrentPersonId();
 
     const { id } = parseGlobalId(followedPersonId);
 
     const existingFollow = await this.model.findOne({
       where: {
-        requestPersonId: currentPerson.id,
+        requestPersonId: currentPersonId,
         followedPersonId: id,
       },
     });
@@ -56,26 +52,21 @@ class Follow extends PostgresDataSource {
     }
     // There was no existing request, so lets make one.
     return this.model.create({
-      requestPersonId: currentPerson.id,
+      requestPersonId: currentPersonId,
       followedPersonId: id,
       state: FollowState.REQUESTED,
     });
   }
 
   async acceptFollowRequest({ requestPersonId }) {
-    const { Person } = this.context.dataSources;
-
-    const currentPersonWhere = await Person.whereCurrentPerson();
-    const currentPerson = await this.sequelize.models.people.findOne({
-      where: currentPersonWhere,
-    });
+    const currentPersonId = await this.getCurrentPersonId();
 
     const { id } = parseGlobalId(requestPersonId);
 
     const existingFollow = await this.model.findOne({
       where: {
         requestPersonId: id,
-        followedPersonId: currentPerson.id,
+        followedPersonId: currentPersonId,
       },
     });
 
@@ -91,19 +82,14 @@ class Follow extends PostgresDataSource {
   }
 
   async ignoreFollowRequest({ requestPersonId }) {
-    const { Person } = this.context.dataSources;
-
-    const currentPersonWhere = await Person.whereCurrentPerson();
-    const currentPerson = await this.sequelize.models.people.findOne({
-      where: currentPersonWhere,
-    });
+    const currentPersonId = await this.getCurrentPersonId();
 
     const { id } = parseGlobalId(requestPersonId);
 
     const existingFollow = await this.model.findOne({
       where: {
         requestPersonId: id,
-        followedPersonId: currentPerson.id,
+        followedPersonId: currentPersonId,
       },
     });
 
@@ -166,6 +152,30 @@ class Follow extends PostgresDataSource {
       ],
     });
   };
+
+  async followRequests() {
+    const currentPersonId = await this.getCurrentPersonId();
+
+    const currentPerson = await this.sequelize.models.people.findOne({
+      where: {
+        id: currentPersonId,
+      },
+    });
+
+    return currentPerson.getFollowers({
+      joinTableAttributes: ['state'],
+      through: { where: { state: { [Op.or]: [FollowState.REQUESTED, null] } } },
+    });
+  }
+
+  async getCurrentPersonId() {
+    const { Auth, Person } = this.context.dataSources;
+    const currentPerson = await Auth.getCurrentPerson();
+
+    if (!currentPerson) throw new AuthenticationError('Invalid Credentials');
+
+    return Person.resolveId(currentPerson.id);
+  }
 }
 
 export { Follow as default };
