@@ -1,5 +1,6 @@
 import { parseGlobalId } from '@apollosproject/server-core/lib/node';
 import { AuthenticationError } from 'apollo-server';
+import { Op } from 'sequelize';
 import { PostgresDataSource } from '../postgres';
 import { FollowState } from './model';
 
@@ -96,15 +97,10 @@ class Follow extends PostgresDataSource {
       },
     });
 
-    const followers = await currentPerson.getFollowers({
+    return currentPerson.getFollowers({
       joinTableAttributes: ['state'],
+      through: { where: { state: { [Op.or]: [FollowState.REQUESTED, null] } } },
     });
-
-    // Only get follows that haven't been accepted yet
-    return followers.filter(
-      (f) =>
-        f.follows.state === FollowState.REQUESTED || f.follows.state === null
-    );
   }
 
   async getCurrentPersonId() {
