@@ -1,9 +1,11 @@
 import { flatten } from 'lodash';
 import { Umzug, SequelizeStorage } from 'umzug';
+import AddUuidExtension000 from './migrations/000_add_uuid_extension';
 import { sequelize } from './index';
 
 const createMigrationRunner = async ({ migrations }) => {
   const migrationsToRun = flatten(migrations);
+  migrationsToRun.unshift(AddUuidExtension000);
 
   const umzug = new Umzug({
     migrations: migrationsToRun,
