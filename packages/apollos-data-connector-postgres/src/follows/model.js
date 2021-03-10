@@ -20,9 +20,21 @@ const createModel = defineModel({
 const setupModel = configureModel(({ sequelize }) => {
   sequelize.models.follows.belongsTo(sequelize.models.people, {
     foreignKey: 'requestPersonId',
+    as: 'requestPerson',
   });
   sequelize.models.follows.belongsTo(sequelize.models.people, {
     foreignKey: 'followedPersonId',
+    as: 'followedPerson',
+  });
+  sequelize.models.people.hasMany(sequelize.models.follows, {
+    foreignKey: 'followedPersonId',
+    as: 'followRequests',
+  });
+  sequelize.models.people.belongsToMany(sequelize.models.people, {
+    through: sequelize.models.follows,
+    foreignKey: 'followedPersonId',
+    otherKey: 'requestPersonId',
+    as: 'followers',
   });
 });
 
