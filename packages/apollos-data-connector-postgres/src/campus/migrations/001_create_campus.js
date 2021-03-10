@@ -37,6 +37,9 @@ async function up({ context: queryInterface }) {
       allowNull: false,
     },
   });
+  await queryInterface.addIndex('campuses', ['originId', 'originType'], {
+    unique: true,
+  });
 }
 
 async function down({ context: queryInterface }) {

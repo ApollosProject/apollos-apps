@@ -43,6 +43,9 @@ async function up({ context: queryInterface }) {
       allowNull: false,
     },
   });
+  await queryInterface.addIndex('people', ['originId', 'originType'], {
+    unique: true,
+  });
 }
 
 async function down({ context: queryInterface }) {
