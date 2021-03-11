@@ -388,6 +388,9 @@ const RELATED_NODE_FRAGMENT = gql`
     ... on ContentChannel {
       name
     }
+    ... on Message {
+      message
+    }
   }
 `;
 

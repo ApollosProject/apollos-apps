@@ -7,6 +7,8 @@ import {
   HorizontalHighlightCard,
 } from '@apollosproject/ui-kit';
 
+import Message from './Message';
+
 const cardMapper = ({ title, hyphenatedTitle, ...props }) => {
   // map typename to the the card we want to render.
   switch (get(props, '__typename')) {
@@ -15,6 +17,14 @@ const cardMapper = ({ title, hyphenatedTitle, ...props }) => {
     case 'ContentSeriesContentItem':
     case 'DevotionalContentItem':
       return <HorizontalHighlightCard title={hyphenatedTitle} {...props} />;
+    case 'Message':
+      return (
+        <Message
+          title={title}
+          subtitle={props.subtitle}
+          body={props.relatedNode?.message}
+        />
+      );
     default:
       return <HorizontalDefaultCard title={title} {...props} />;
   }
