@@ -30,7 +30,7 @@ class Follow extends PostgresDataSource {
 
     return this.model.findOne({
       where: {
-        requestPersonId: currentPerson.id,
+        requestPersonId: currentPersonId,
         followedPersonId: id,
       },
     });
