@@ -123,5 +123,5 @@ describe('FollowList', () => {
       </Providers>
     );
     expect(tree).toMatchSnapshot();
-  });  
+  });
 });
