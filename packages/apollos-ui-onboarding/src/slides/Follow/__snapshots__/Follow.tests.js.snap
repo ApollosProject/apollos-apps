@@ -59,22 +59,6 @@ Array [
             Follow others to stay up to date with your church community.
           </Text>
         </View>
-        <View
-          style={
-            Object {
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "marginBottom": 16,
-              }
-            }
-          />
-        </View>
       </View>
     </View>
   </RCTScrollView>,
@@ -328,22 +312,6 @@ exports[`The Onboarding Follow component should render 1`] = `
           Follow others to stay up to date with your church community.
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "marginBottom": 16,
-            }
-          }
-        />
-      </View>
     </View>
   </View>
 </RCTScrollView>
@@ -438,22 +406,6 @@ exports[`The Onboarding Follow component should render a BackgroundComponent 1`]
           Follow others to stay up to date with your church community.
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "marginBottom": 16,
-            }
-          }
-        />
-      </View>
     </View>
   </View>
 </RCTScrollView>
@@ -516,22 +468,6 @@ exports[`The Onboarding Follow component should render a custom description 1`] 
         >
           Custom description text
         </Text>
-      </View>
-      <View
-        style={
-          Object {
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "marginBottom": 16,
-            }
-          }
-        />
       </View>
     </View>
   </View>
@@ -597,22 +533,6 @@ exports[`The Onboarding Follow component should render a custom first name 1`] =
           Follow others to stay up to date with your church community.
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "marginBottom": 16,
-            }
-          }
-        />
-      </View>
     </View>
   </View>
 </RCTScrollView>
@@ -675,22 +595,6 @@ exports[`The Onboarding Follow component should render a custom title 1`] = `
         >
           Follow others to stay up to date with your church community.
         </Text>
-      </View>
-      <View
-        style={
-          Object {
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "marginBottom": 16,
-            }
-          }
-        />
       </View>
     </View>
   </View>

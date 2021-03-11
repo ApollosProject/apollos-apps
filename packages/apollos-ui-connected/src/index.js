@@ -32,7 +32,12 @@ export FeaturesFeedConnected, {
   GET_FEATURE_FEED,
   FEATURE_FEED_ACTION_MAP,
 } from './FeaturesFeedConnected';
-export FollowListConnected, { REQUEST_FOLLOW } from './FollowListConnected';
+export FollowListConnected, {
+  REQUEST_FOLLOW,
+  SuggestedFollowListConnected,
+  RequestedFollowListConnected,
+  GET_SUGGESTED_FOLLOWS,
+} from './FollowListConnected';
 export HeroListFeatureConnected, {
   HeroListFeature,
   GET_HERO_LIST_FEATURE,

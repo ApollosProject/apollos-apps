@@ -36,6 +36,19 @@ class Follow extends PostgresDataSource {
     });
   }
 
+  async getPersonFollowingCurrentUser({ id }) {
+    assertUuid(id, 'getPersonFollowingCurrentUser');
+
+    const currentPersonId = await this.getCurrentPersonId();
+
+    return this.model.findOne({
+      where: {
+        requestPersonId: id,
+        followedPersonId: currentPersonId,
+      },
+    });
+  }
+
   // eslint-disable-next-line consistent-return
   async requestFollow({ followedPersonId }) {
     const { Person } = this.context.dataSources;
