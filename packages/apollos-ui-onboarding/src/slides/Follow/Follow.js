@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
-import FollowList from '@apollosproject/ui-kit/src/FollowList';
+import { FollowListConnected } from '@apollosproject/ui-connected';
 import Slide, { SlideContent } from '../../Slide';
 
 const Follow = memo(
@@ -15,7 +15,7 @@ const Follow = memo(
     <Slide {...props}>
       {BackgroundComponent}
       <SlideContent title={slideTitle} description={description}>
-        <FollowList followers={followers} />
+        <FollowListConnected followers={followers} />
       </SlideContent>
     </Slide>
   )

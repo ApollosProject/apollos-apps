@@ -1,5 +1,3 @@
-import { FollowState } from './model';
-
 const resolvers = {
   Mutation: {
     requestFollow: (root, args, { dataSources: { Follow } }) =>
@@ -9,8 +7,11 @@ const resolvers = {
     ignoreFollowRequest: (root, args, { dataSources: { Follow } }) =>
       Follow.ignoreFollowRequest(args),
   },
-  Follow: {
-    following: ({ state }) => state === FollowState.ACCEPTED,
+  Person: {
+    currentUserFollowing: (root, args, { dataSources: { Follow } }) =>
+      Follow.getCurrentUserFollowingPerson(root),
+    followingCurrentUser: (root, args, { dataSources: { Follow } }) =>
+      Follow.getPersonFollowingCurrentUser(root),
   },
   Query: {
     followRequests: (root, args, { dataSources: { Follow } }) =>

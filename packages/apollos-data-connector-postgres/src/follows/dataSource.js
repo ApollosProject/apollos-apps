@@ -1,7 +1,6 @@
 import ApollosConfig from '@apollosproject/config';
 import { Op } from 'sequelize';
 import { parseGlobalId } from '@apollosproject/server-core/lib/node';
-import { AuthenticationError } from 'apollo-server';
 import { get } from 'lodash';
 import { PostgresDataSource, assertUuid } from '../postgres';
 import { FollowState } from './model';
@@ -9,43 +8,62 @@ import { FollowState } from './model';
 class Follow extends PostgresDataSource {
   modelName = 'follows';
 
+  async getCurrentUserFollowingPerson({ id }) {
+    assertUuid(id, 'getCurrentUserFollowingPerson');
+
+    const currentPersonId = await this.getCurrentPersonId();
+
+    return this.model.findOne({
+      where: {
+        requestPersonId: currentPersonId,
+        followedPersonId: id,
+      },
+    });
+  }
+
+  async getPersonFollowingCurrentUser({ id }) {
+    assertUuid(id, 'getPersonFollowingCurrentUser');
+
+    const currentPersonId = await this.getCurrentPersonId();
+
+    return this.model.findOne({
+      where: {
+        requestPersonId: id,
+        followedPersonId: currentPersonId,
+      },
+    });
+  }
+
+  // eslint-disable-next-line consistent-return
   async requestFollow({ followedPersonId }) {
-    const requestPersonId = await this.getCurrentPersonId();
+    const currentPersonId = await this.getCurrentPersonId();
 
     const { id } = parseGlobalId(followedPersonId);
 
     const existingFollow = await this.model.findOne({
       where: {
-        requestPersonId,
+        requestPersonId: currentPersonId,
         followedPersonId: id,
       },
     });
 
-    let followId;
-
     if (existingFollow) {
       const { dataValues } = existingFollow;
-      followId = existingFollow.id;
 
       if (dataValues.state === FollowState.ACCEPTED) {
         // The request was already accepted.
-        return { followId, state: dataValues.state };
+        return existingFollow;
       }
 
       // If a request already exists that was denied, update it as a new request.
-      await existingFollow.update({ state: FollowState.REQUESTED });
-    } else {
-      // There was no existing request, so lets make one.
-      const newRequest = await this.model.create({
-        requestPersonId,
-        followedPersonId: id,
-        state: FollowState.REQUESTED,
-      });
-
-      followId = newRequest.id;
+      return existingFollow.update({ state: FollowState.REQUESTED });
     }
-
-    return { followId, state: FollowState.REQUESTED };
+    // There was no existing request, so lets make one.
+    return this.model.create({
+      requestPersonId: currentPersonId,
+      followedPersonId: id,
+      state: FollowState.REQUESTED,
+    });
   }
 
   async acceptFollowRequest({ requestPersonId }) {
@@ -64,9 +82,11 @@ class Follow extends PostgresDataSource {
       throw new Error('No matching request');
     }
 
-    await existingFollow.update({ state: FollowState.ACCEPTED });
+    const updatedModel = await existingFollow.update({
+      state: FollowState.ACCEPTED,
+    });
 
-    return { followId: existingFollow.id, state: FollowState.ACCEPTED };
+    return updatedModel;
   }
 
   async ignoreFollowRequest({ requestPersonId }) {
@@ -85,9 +105,11 @@ class Follow extends PostgresDataSource {
       throw new Error('No matching request');
     }
 
-    await existingFollow.update({ state: FollowState.DECLINED });
+    const updatedModel = await existingFollow.update({
+      state: FollowState.DECLINED,
+    });
 
-    return { followId: existingFollow.id, state: FollowState.DECLINED };
+    return updatedModel;
   }
 
   getStaticSuggestedFollowsForCurrentPerson = async () => {
@@ -126,7 +148,7 @@ class Follow extends PostgresDataSource {
       where: {
         email: { [Op.in]: suggestedEmails },
         id: { [Op.ne]: id },
-        '$followingRequests.state$': { [Op.or]: [null, 'REQUESTED'] },
+        '$followingRequests.state$': { [Op.or]: [null, FollowState.REQUESTED] },
       },
       include: [
         {
@@ -155,12 +177,10 @@ class Follow extends PostgresDataSource {
   }
 
   async getCurrentPersonId() {
-    const { Auth, Person } = this.context.dataSources;
-    const currentPerson = await Auth.getCurrentPerson();
-
-    if (!currentPerson) throw new AuthenticationError('Invalid Credentials');
-
-    return Person.resolveId(currentPerson.id);
+    const { Person } = this.context.dataSources;
+    const currentPersonWhere = await Person.whereCurrentPerson();
+    const person = await Person.model.findOne({ where: currentPersonWhere });
+    return person.id;
   }
 }
 
