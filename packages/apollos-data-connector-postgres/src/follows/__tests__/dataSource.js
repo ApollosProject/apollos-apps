@@ -19,8 +19,7 @@ const context = {
       }),
     },
     Person: {
-      resolveId: (id) => id,
-      whereCurrentPerson: ({ id }) => ({ id }),
+      whereCurrentPerson: () => ({ id: currentPersonId }),
     },
   },
 };
@@ -31,22 +30,20 @@ let person3;
 let person4;
 
 describe('Apollos Postgres FollowRequest DataSource', () => {
-  // let followDataSource;
   beforeEach(async () => {
-    try {
-      await createPeopleModel();
-      await createModel();
-      await setupModel();
-      await createCampusModel();
-      await setupCampusModel();
-      await sync({ force: true });
+    await createPeopleModel();
+    await createModel();
+    await setupModel();
+    await createCampusModel();
+    await setupCampusModel();
+    await sync({ force: true });
 
-      // Make sure people exist for all of our test ids
-      const peopleDataSource = new PeopleDataSource();
-      peopleDataSource.initialize({ context });
-    } catch (e) {
-      console.error(e);
-    }
+    // Make sure people exist for all of our test ids
+    const peopleDataSource = new PeopleDataSource();
+    peopleDataSource.initialize({ context });
+    // frustrating that we have to do this, but it's easier to inject a fix here
+    // then mock out the whole Person dataSource in the context.
+    context.dataSources.Person.model = peopleDataSource.model;
     person1 = await sequelize.models.people.create({
       originId: '11',
       originType: 'rock',

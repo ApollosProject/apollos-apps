@@ -169,12 +169,10 @@ class Follow extends PostgresDataSource {
   }
 
   async getCurrentPersonId() {
-    const { Auth, Person } = this.context.dataSources;
-    const currentPerson = await Auth.getCurrentPerson();
-
-    if (!currentPerson) throw new AuthenticationError('Invalid Credentials');
-
-    return Person.resolveId(currentPerson.id);
+    const { Person } = this.context.dataSources;
+    const currentPersonWhere = await Person.whereCurrentPerson();
+    const person = await Person.model.findOne({ where: currentPersonWhere });
+    return person.id;
   }
 }
 
