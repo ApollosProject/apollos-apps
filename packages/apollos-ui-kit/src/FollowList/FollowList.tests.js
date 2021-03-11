@@ -116,4 +116,12 @@ describe('FollowList', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should not render without followers', () => {
+    const tree = renderer.create(
+      <Providers>
+        <FollowList isLoading={false} followers={[]} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });

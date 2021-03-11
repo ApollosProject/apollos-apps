@@ -76,16 +76,20 @@ class FollowList extends PureComponent {
       followListButtonTitle,
       followers,
       header,
+      isLoading,
     } = this.props;
 
     const { RenderAsCard } = this;
+
+    if (followers?.length === 0 && !isLoading) return null;
+
     return (
       <RenderAsCard>
         <Content cardPadding={this.props.isCard}>
           <HeaderView>{header || null}</HeaderView>
           {followers.map((item) => {
             const isFollowingState = item?.currentUserFollowing?.state;
-            const isFollowed = item?.followsCurrentUser?.state;
+            const isFollowed = item?.followingCurrentUser?.state;
             return (
               <FollowListItem
                 key={item.id}

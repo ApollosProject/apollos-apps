@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`FollowList should not render without followers 1`] = `null`;
+
 exports[`FollowList should render 4 items 1`] = `
 <View
   style={
