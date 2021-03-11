@@ -3,7 +3,7 @@
   "homepage": "https://github.com/ApollosProject/apollos-prototype#readme",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
   "engines": {
-    "node": "10.x.x"
+    "node": ">=10.x.x"
   },
   "version": "2.3.0",
   "main": "src/index.js",

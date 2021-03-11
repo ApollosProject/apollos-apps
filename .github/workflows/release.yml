@@ -75,6 +75,8 @@ jobs:
         repository: apollosproject/apollos-templates
         token: ${{ secrets.APOLLOS_ADMIN_TOKEN }}
 
+    - uses: actions/setup-node@v2
+
     - name: Bump
       run: |
         git config --global user.email "apps@apollos.app"
@@ -91,6 +93,8 @@ jobs:
       with:
         repository: apollosproject/apollos-upgrade
         token: ${{ secrets.APOLLOS_ADMIN_TOKEN }}
+
+    - uses: actions/setup-node@v2
 
     - name: Bump
       run: |
