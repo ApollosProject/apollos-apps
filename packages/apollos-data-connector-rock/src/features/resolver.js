@@ -26,8 +26,11 @@ export default {
   CardListItem: {
     coverImage: ({ image }) => image,
     title: ({ title }, { hyphenated }, { dataSources: { ContentItem } }) =>
-      hyphenated ? ContentItem.createHyphenatedString({ text: title }) : title,
+      title && hyphenated
+        ? ContentItem.createHyphenatedString({ text: title })
+        : title,
     hasAction: (root, args, { dataSources: { ContentItem } }) =>
+      root.attributes &&
       !!get(ContentItem.getVideos(root.relatedNode), '[0].sources[0]', null),
     labelText: ({ subtitle }) => subtitle,
     id: ({ id }) => createGlobalId(id, 'CardListItem'),
