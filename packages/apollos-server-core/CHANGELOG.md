@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.0](https://github.com/apollosproject/apollos-apps/compare/v2.2.0...v2.3.0) (2021-03-11)
+
+
+### Features
+
+* add empty card to progress algorithm ([#1788](https://github.com/apollosproject/apollos-apps/issues/1788)) ([71fcf37](https://github.com/apollosproject/apollos-apps/commit/71fcf373bdaf06af9d3fc956d2b95f9e5f4506a2))
+
+
+
 ## [2.2.0](https://github.com/apollosproject/apollos-apps/compare/v2.1.1...v2.2.0) (2021-03-04)
 
 
