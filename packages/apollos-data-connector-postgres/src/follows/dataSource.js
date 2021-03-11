@@ -26,6 +26,23 @@ class Follow extends PostgresDataSource {
     });
   }
 
+  async getPersonFollowingCurrentUser({ id }) {
+    const { Person } = this.context.dataSources;
+    assertUuid(id, 'getCurrentUserFollowingPerson');
+
+    const currentPersonWhere = await Person.whereCurrentPerson();
+    const currentPerson = await this.sequelize.models.people.findOne({
+      where: currentPersonWhere,
+    });
+
+    return this.model.findOne({
+      where: {
+        requestPersonId: id,
+        followedPersonId: currentPerson.id,
+      },
+    });
+  }
+
   // eslint-disable-next-line consistent-return
   async requestFollow({ followedPersonId }) {
     const currentPersonId = await this.getCurrentPersonId();
@@ -169,12 +186,10 @@ class Follow extends PostgresDataSource {
   }
 
   async getCurrentPersonId() {
-    const { Auth, Person } = this.context.dataSources;
-    const currentPerson = await Auth.getCurrentPerson();
-
-    if (!currentPerson) throw new AuthenticationError('Invalid Credentials');
-
-    return Person.resolveId(currentPerson.id);
+    const { Person } = this.context.dataSources;
+    const currentPersonWhere = await Person.whereCurrentPerson();
+    const person = await Person.model.findOne({ where: currentPersonWhere });
+    return person.id;
   }
 }
 

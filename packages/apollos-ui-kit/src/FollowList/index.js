@@ -76,9 +76,13 @@ class FollowList extends PureComponent {
       followListButtonTitle,
       followers,
       header,
+      isLoading,
     } = this.props;
 
     const { RenderAsCard } = this;
+
+    if (followers?.length === 0 && !isLoading) return null;
+
     return (
       <RenderAsCard>
         <Content cardPadding={this.props.isCard}>
