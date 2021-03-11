@@ -19,8 +19,7 @@ const context = {
       }),
     },
     Person: {
-      resolveId: (id) => id,
-      whereCurrentPerson: ({ id }) => ({ id }),
+      whereCurrentPerson: () => ({ id: currentPersonId }),
     },
   },
 };
@@ -31,22 +30,20 @@ let person3;
 let person4;
 
 describe('Apollos Postgres FollowRequest DataSource', () => {
-  // let followDataSource;
   beforeEach(async () => {
-    try {
-      await createPeopleModel();
-      await createModel();
-      await setupModel();
-      await createCampusModel();
-      await setupCampusModel();
-      await sync({ force: true });
+    await createPeopleModel();
+    await createModel();
+    await setupModel();
+    await createCampusModel();
+    await setupCampusModel();
+    await sync({ force: true });
 
-      // Make sure people exist for all of our test ids
-      const peopleDataSource = new PeopleDataSource();
-      peopleDataSource.initialize({ context });
-    } catch (e) {
-      console.error(e);
-    }
+    // Make sure people exist for all of our test ids
+    const peopleDataSource = new PeopleDataSource();
+    peopleDataSource.initialize({ context });
+    // frustrating that we have to do this, but it's easier to inject a fix here
+    // then mock out the whole Person dataSource in the context.
+    context.dataSources.Person.model = peopleDataSource.model;
     person1 = await sequelize.models.people.create({
       originId: '11',
       originType: 'rock',
@@ -142,7 +139,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     });
 
     expect(existingRequest.state).toBe(FollowState.DECLINED);
-    expect(existingRequest.id).toBe(ignoreResult.followId);
+    expect(existingRequest.id).toBe(ignoreResult.id);
   });
 
   it('should accept request', async () => {
@@ -174,7 +171,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     });
 
     expect(existingRequest.state).toBe(FollowState.ACCEPTED);
-    expect(existingRequest.id).toBe(acceptResult.followId);
+    expect(existingRequest.id).toBe(acceptResult.id);
   });
 
   it('should ignore existing accepted request', async () => {
@@ -461,6 +458,18 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     );
 
     expect(suggestedFollowers).toEqual([]);
+  });
+  it('should throw an error when passing a non-uuid to getStaticSuggestedFollowsFor', async () => {
+    const followDataSource = new FollowDataSource();
+
+    followDataSource.initialize({ context });
+    const invalidCampus = followDataSource.getStaticSuggestedFollowsFor({
+      campusId: 1,
+    });
+    await expect(invalidCampus).rejects.toMatchSnapshot();
+
+    const invalidId = followDataSource.getStaticSuggestedFollowsFor({ id: 1 });
+    await expect(invalidId).rejects.toMatchSnapshot();
   });
   it('should return list of users requesting to follow the current user', async () => {
     const followDataSource = new FollowDataSource();

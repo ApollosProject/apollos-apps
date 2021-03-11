@@ -1271,15 +1271,7 @@ Array [
       <Image
         fadeDuration={250}
         onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "",
-              "url": "",
-            },
-          ]
-        }
+        source={Array []}
         style={
           Object {
             "backgroundColor": "#A5A5A5",

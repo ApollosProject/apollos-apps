@@ -27,7 +27,7 @@
   "scripts": {
     "test": "jest",
     "typescript": "tsc --noEmit",
-    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "lint": "eslint ./src --ext js,ts,tsx",
     "prepare": "bob build",
     "build": "yarn prepare",
     "generate-stories": "rnstl"

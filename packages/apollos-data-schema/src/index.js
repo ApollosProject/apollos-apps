@@ -1018,9 +1018,13 @@ export const followSchema = gql`
   }
 
   type Follow {
-    followId: ID
+    id: ID
     state: FollowState
-    following: Boolean
+  }
+
+  extend type Person {
+    currentUserFollowing: Follow @cacheControl(maxAge: 0)
+    followingCurrentUser: Follow @cacheControl(maxAge: 0)
   }
 `;
 

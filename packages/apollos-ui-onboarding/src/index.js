@@ -10,6 +10,8 @@ export {
   LocationFinderConnected,
   Features,
   FeaturesConnected,
+  Follow,
+  FollowConnected,
 } from './slides';
 
 export Slide, { SlideContent } from './Slide';

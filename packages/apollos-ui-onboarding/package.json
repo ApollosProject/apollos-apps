@@ -52,6 +52,7 @@
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-map-view": "*",
     "@apollosproject/ui-notifications": "*",
+    "@apollosproject/ui-connected": "*",
     "react": "*",
     "react-native": "*",
     "react-native-safe-area-context": "*"
