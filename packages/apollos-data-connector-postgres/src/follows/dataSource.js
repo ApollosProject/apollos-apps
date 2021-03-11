@@ -2,7 +2,6 @@ import ApollosConfig from '@apollosproject/config';
 import { Op } from 'sequelize';
 import { parseGlobalId } from '@apollosproject/server-core/lib/node';
 import { get } from 'lodash';
-import { AuthenticationError } from 'apollo-server';
 import { PostgresDataSource, assertUuid } from '../postgres';
 import { FollowState } from './model';
 
