@@ -9,13 +9,24 @@ class Follow extends PostgresDataSource {
   modelName = 'follows';
 
   async getCurrentUserFollowingPerson({ id }) {
-    const { Person } = this.context.dataSources;
     assertUuid(id, 'getCurrentUserFollowingPerson');
 
-    const currentPersonWhere = await Person.whereCurrentPerson();
-    const currentPerson = await this.sequelize.models.people.findOne({
-      where: currentPersonWhere,
+    const { Person } = this.context.dataSources;
+    const currentPersonId = await Person.getCurrentPersonId();
+
+    return this.model.findOne({
+      where: {
+        requestPersonId: currentPersonId,
+        followedPersonId: id,
+      },
     });
+  }
+
+  async getPersonFollowingCurrentUser({ id }) {
+    assertUuid(id, 'getPersonFollowingCurrentUser');
+
+    const { Person } = this.context.dataSources;
+    const currentPersonId = await Person.getCurrentPersonId();
 
     return this.model.findOne({
       where: {
@@ -27,7 +38,8 @@ class Follow extends PostgresDataSource {
 
   // eslint-disable-next-line consistent-return
   async requestFollow({ followedPersonId }) {
-    const currentPersonId = await this.getCurrentPersonId();
+    const { Person } = this.context.dataSources;
+    const currentPersonId = await Person.getCurrentPersonId();
 
     const { id } = parseGlobalId(followedPersonId);
 
@@ -58,7 +70,8 @@ class Follow extends PostgresDataSource {
   }
 
   async acceptFollowRequest({ requestPersonId }) {
-    const currentPersonId = await this.getCurrentPersonId();
+    const { Person } = this.context.dataSources;
+    const currentPersonId = await Person.getCurrentPersonId();
 
     const { id } = parseGlobalId(requestPersonId);
 
@@ -81,7 +94,8 @@ class Follow extends PostgresDataSource {
   }
 
   async ignoreFollowRequest({ requestPersonId }) {
-    const currentPersonId = await this.getCurrentPersonId();
+    const { Person } = this.context.dataSources;
+    const currentPersonId = await Person.getCurrentPersonId();
 
     const { id } = parseGlobalId(requestPersonId);
 
@@ -153,7 +167,8 @@ class Follow extends PostgresDataSource {
   };
 
   async followRequests() {
-    const currentPersonId = await this.getCurrentPersonId();
+    const { Person } = this.context.dataSources;
+    const currentPersonId = await Person.getCurrentPersonId();
 
     const currentPerson = await this.sequelize.models.people.findOne({
       where: {
@@ -165,13 +180,6 @@ class Follow extends PostgresDataSource {
       joinTableAttributes: ['state'],
       through: { where: { state: { [Op.or]: [FollowState.REQUESTED, null] } } },
     });
-  }
-
-  async getCurrentPersonId() {
-    const { Person } = this.context.dataSources;
-    const currentPersonWhere = await Person.whereCurrentPerson();
-    const person = await Person.model.findOne({ where: currentPersonWhere });
-    return person.id;
   }
 }
 
