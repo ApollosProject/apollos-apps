@@ -1,7 +1,9 @@
+import ApollosConfig from '@apollosproject/config';
+import { Op } from 'sequelize';
 import { parseGlobalId } from '@apollosproject/server-core/lib/node';
 import { AuthenticationError } from 'apollo-server';
-import { Op } from 'sequelize';
-import { PostgresDataSource } from '../postgres';
+import { get } from 'lodash';
+import { PostgresDataSource, assertUuid } from '../postgres';
 import { FollowState } from './model';
 
 class Follow extends PostgresDataSource {
@@ -87,6 +89,55 @@ class Follow extends PostgresDataSource {
 
     return { followId: existingFollow.id, state: FollowState.DECLINED };
   }
+
+  getStaticSuggestedFollowsForCurrentPerson = async () => {
+    const { Person } = this.context.dataSources;
+    const where = await Person.whereCurrentPerson();
+    const currentPerson = await this.sequelize.models.people.findOne({ where });
+    return this.getStaticSuggestedFollowsFor(currentPerson);
+  };
+
+  getStaticSuggestedFollowsFor = async ({ campusId, id } = {}) => {
+    assertUuid(campusId, 'getStaticSuggestedFollowsFor');
+    assertUuid(id, 'getStaticSuggestedFollowsFor');
+
+    const suggestedFollowers = get(ApollosConfig, 'SUGGESTED_FOLLOWS', []);
+    const suggestedFollowersForCampus = suggestedFollowers.filter((p) => {
+      // if the suggested follower has a specific campus.
+      if (p.campusId) {
+        // match it against the user's campus, if they have a campus
+        return !!campusId && p.campusId === campusId;
+      }
+      // If not, return true.
+      return true;
+    });
+
+    // Suggested followers is a list of mixed emails strings and objects with an email key.
+    const suggestedEmails = suggestedFollowersForCampus.map((p) =>
+      p.email ? p.email : p
+    );
+
+    // select people.*, follows.state
+    // as follow_id from people
+    // left outer join follows on (follows."requestPersonId" = 'current user id' and follows."followedPersonId" = people.id)
+    // where people.email in ('email list') and (follows.state != 'ACCEPTED' or follows.state is null);
+
+    return this.sequelize.models.people.findAll({
+      where: {
+        email: { [Op.in]: suggestedEmails },
+        id: { [Op.ne]: id },
+        '$followingRequests.state$': { [Op.or]: [null, 'REQUESTED'] },
+      },
+      include: [
+        {
+          model: this.model,
+          as: 'followingRequests',
+          required: false,
+          where: { requestPersonId: id },
+        },
+      ],
+    });
+  };
 
   async followRequests() {
     const currentPersonId = await this.getCurrentPersonId();

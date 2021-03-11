@@ -81,6 +81,18 @@ class PostgresDataSource {
   }
 }
 
+const UUID_V4_REGEXP = new RegExp(
+  /^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i
+);
+
+export const assertUuid = (uuid, caller = '') => {
+  if (uuid && !UUID_V4_REGEXP.test(uuid)) {
+    throw new Error(
+      `ID ${uuid} is not a valid UUID. You are probably passing a Rock (or other) id to ${caller} when it expects a Postgres UUID.`
+    );
+  }
+};
+
 // Define model is used to define the base attributes of a model
 // as well as any pre/post hooks.
 const defineModel = ({

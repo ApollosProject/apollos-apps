@@ -61,18 +61,7 @@ export default class Person extends PostgresDataSource {
   // fields is an array of objects matching the pattern
   // [{ field: String, value: String }]
   updateProfile = async (fields) => {
-    const { Auth } = this.context.dataSources;
-    const currentPerson = await Auth.getCurrentPerson();
-
-    if (!currentPerson) throw new AuthenticationError('Invalid Credentials');
-
-    let where = { id: currentPerson.id };
-    if (Auth.ORIGIN_TYPE) {
-      where = {
-        originId: String(currentPerson.id),
-        originType: Auth.ORIGIN_TYPE,
-      };
-    }
+    const where = await this.whereCurrentPerson();
 
     const profileFields = fieldsAsObject(fields);
 
@@ -83,12 +72,8 @@ export default class Person extends PostgresDataSource {
 
   uploadProfileImage = async (file, length) => {
     const {
-      dataSources: { Auth, BinaryFiles },
+      dataSources: { BinaryFiles },
     } = this.context;
-
-    const currentPerson = await Auth.getCurrentPerson();
-
-    if (!currentPerson) throw new AuthenticationError('Invalid Credentials');
 
     const { createReadStream, filename } = await file;
 
@@ -96,6 +81,23 @@ export default class Person extends PostgresDataSource {
 
     const photoId = await BinaryFiles.uploadFile({ filename, stream, length });
     const url = await BinaryFiles.findOrReturnImageUrl({ id: photoId });
+
+    const where = await this.whereCurrentPerson();
+
+    await this.model.update({ profileImageUrl: url }, { where });
+
+    return this.model.findOne({ where });
+  };
+
+  // Returns a where clause that will find the current person
+  // Raise an error if the current person doesn't exist
+  // Smart enough to work even if the Auth dataSource pulls from a different database than postgres
+  whereCurrentPerson = async () => {
+    const { Auth } = this.context.dataSources;
+
+    const currentPerson = await Auth.getCurrentPerson();
+
+    if (!currentPerson) throw new AuthenticationError('Invalid Credentials');
 
     let where = { id: currentPerson.id };
     if (Auth.ORIGIN_TYPE) {
@@ -105,8 +107,6 @@ export default class Person extends PostgresDataSource {
       };
     }
 
-    await this.model.update({ profileImageUrl: url }, { where });
-
-    return this.model.findOne({ where });
+    return where;
   };
 }
