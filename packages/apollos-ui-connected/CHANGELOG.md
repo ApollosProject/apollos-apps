@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.0](https://github.com/apollosproject/apollos-apps/compare/v2.2.0...v2.3.0) (2021-03-11)
+
+
+### Features
+
+* add button link feature to content ([#1779](https://github.com/apollosproject/apollos-apps/issues/1779)) ([c254c5b](https://github.com/apollosproject/apollos-apps/commit/c254c5bcdac03c840926da53b19eeba9ac11e9a5))
+* add empty card to progress algorithm ([#1788](https://github.com/apollosproject/apollos-apps/issues/1788)) ([71fcf37](https://github.com/apollosproject/apollos-apps/commit/71fcf373bdaf06af9d3fc956d2b95f9e5f4506a2))
+* add empty vertical prayer list state ([#1776](https://github.com/apollosproject/apollos-apps/issues/1776)) ([b0b213b](https://github.com/apollosproject/apollos-apps/commit/b0b213be0c43fbef10fa1d713ae002a324f1d994))
+* Hookup suggested followers ([#1785](https://github.com/apollosproject/apollos-apps/issues/1785)) ([68d042d](https://github.com/apollosproject/apollos-apps/commit/68d042de2999aa466f7460263db6ec273cceafe4))
+
+
+
 ## [2.2.0](https://github.com/apollosproject/apollos-apps/compare/v2.1.1...v2.2.0) (2021-03-04)
 
 

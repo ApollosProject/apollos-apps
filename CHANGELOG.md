@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.0](https://github.com/ApollosProject/apollos-apps/compare/v2.2.0...v2.3.0) (2021-03-11)
+
+
+### Features
+
+* add button link feature to content ([#1779](https://github.com/ApollosProject/apollos-apps/issues/1779)) ([c254c5b](https://github.com/ApollosProject/apollos-apps/commit/c254c5bcdac03c840926da53b19eeba9ac11e9a5))
+* add empty card to progress algorithm ([#1788](https://github.com/ApollosProject/apollos-apps/issues/1788)) ([71fcf37](https://github.com/ApollosProject/apollos-apps/commit/71fcf373bdaf06af9d3fc956d2b95f9e5f4506a2))
+* add empty vertical prayer list state ([#1776](https://github.com/ApollosProject/apollos-apps/issues/1776)) ([b0b213b](https://github.com/ApollosProject/apollos-apps/commit/b0b213be0c43fbef10fa1d713ae002a324f1d994))
+* Follow data model ([#1766](https://github.com/ApollosProject/apollos-apps/issues/1766)) ([804a0a7](https://github.com/ApollosProject/apollos-apps/commit/804a0a7c98e4abf8cc7aeef548d1735a9d40c5f9))
+* Follow request list query ([#1787](https://github.com/ApollosProject/apollos-apps/issues/1787)) ([3d3d1a2](https://github.com/ApollosProject/apollos-apps/commit/3d3d1a2ee014e68abcc2b28b3677bacefbe1cd49))
+* Hookup suggested followers ([#1785](https://github.com/ApollosProject/apollos-apps/issues/1785)) ([68d042d](https://github.com/ApollosProject/apollos-apps/commit/68d042de2999aa466f7460263db6ec273cceafe4))
+* Suggested follows ([#1773](https://github.com/ApollosProject/apollos-apps/issues/1773)) ([5f3cd78](https://github.com/ApollosProject/apollos-apps/commit/5f3cd78c45d1e2588f85dd5c6e6f0bba4349ad0f))
+
+
+
 ## [2.2.0](https://github.com/ApollosProject/apollos-apps/compare/v2.1.1...v2.2.0) (2021-03-04)
 
 

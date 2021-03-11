@@ -4,7 +4,7 @@
   "engines": {
     "node": "10.x.x"
   },
-  "version": "2.2.0",
+  "version": "2.3.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -48,11 +48,11 @@
     "@apollo/client": "*",
     "@apollosproject/storybook": "*",
     "@apollosproject/ui-analytics": "*",
+    "@apollosproject/ui-connected": "*",
     "@apollosproject/ui-fragments": "*",
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-map-view": "*",
     "@apollosproject/ui-notifications": "*",
-    "@apollosproject/ui-connected": "*",
     "react": "*",
     "react-native": "*",
     "react-native-safe-area-context": "*"

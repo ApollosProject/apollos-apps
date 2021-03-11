@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.0](https://github.com/apollosproject/apollos-apps/compare/v2.2.0...v2.3.0) (2021-03-11)
+
+
+### Features
+
+* Hookup suggested followers ([#1785](https://github.com/apollosproject/apollos-apps/issues/1785)) ([68d042d](https://github.com/apollosproject/apollos-apps/commit/68d042de2999aa466f7460263db6ec273cceafe4))
+
+
+
 ## [2.2.0](https://github.com/apollosproject/apollos-apps/compare/v2.1.1...v2.2.0) (2021-03-04)
 
 **Note:** Version bump only for package @apollosproject/ui-media-player
