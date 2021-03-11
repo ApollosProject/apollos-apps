@@ -89,7 +89,7 @@ class FollowList extends PureComponent {
           <HeaderView>{header || null}</HeaderView>
           {followers.map((item) => {
             const isFollowingState = item?.currentUserFollowing?.state;
-            const isFollowed = item?.followsCurrentUser?.state;
+            const isFollowed = item?.followingCurrentUser?.state;
             return (
               <FollowListItem
                 key={item.id}

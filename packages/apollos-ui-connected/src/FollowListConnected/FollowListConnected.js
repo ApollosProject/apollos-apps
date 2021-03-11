@@ -4,12 +4,16 @@ import PropTypes from 'prop-types';
 
 import { FollowList } from '@apollosproject/ui-kit';
 import REQUEST_FOLLOW from './requestFollow';
+import ACCEPT_REQUEST from './acceptFollowRequest';
+import IGNORE_REQUEST from './ignoreFollowRequest';
 
 const FollowListConnected = ({ Component, ...props }) => {
   const [requestFollowPerson] = useMutation(REQUEST_FOLLOW);
+  const [acceptFollowRequest] = useMutation(ACCEPT_REQUEST);
+  const [ignoreFollowRequest] = useMutation(IGNORE_REQUEST);
 
   const handleFollow = (id) => {
-    requestFollowPerson({
+    return requestFollowPerson({
       variables: { personId: id },
       // In a perfect world, we wouldn't need this update.
       // However, since in an initial state, there is likely not an existing person.currentUserFollowing field
@@ -29,7 +33,22 @@ const FollowListConnected = ({ Component, ...props }) => {
       },
     });
   };
-  return <Component onFollow={handleFollow} {...props} />;
+
+  const handleAccept = (id) => {
+    return acceptFollowRequest({ variables: { personId: id } });
+  };
+
+  const handleIgnore = (id) => {
+    return ignoreFollowRequest({ variables: { personId: id } });
+  };
+  return (
+    <Component
+      onFollow={handleFollow}
+      onHide={handleIgnore}
+      onConfirm={handleAccept}
+      {...props}
+    />
+  );
 };
 
 FollowListConnected.propTypes = {

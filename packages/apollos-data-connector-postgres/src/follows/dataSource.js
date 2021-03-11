@@ -13,32 +13,26 @@ class Follow extends PostgresDataSource {
     const { Person } = this.context.dataSources;
     assertUuid(id, 'getCurrentUserFollowingPerson');
 
-    const currentPersonWhere = await Person.whereCurrentPerson();
-    const currentPerson = await this.sequelize.models.people.findOne({
-      where: currentPersonWhere,
-    });
+    const currentPersonId = await this.getCurrentPersonId();
 
     return this.model.findOne({
       where: {
-        requestPersonId: currentPerson.id,
+        requestPersonId: currentPersonId,
         followedPersonId: id,
       },
     });
   }
 
-  async getPersonFollowingCurrentUser({ id }) {
+  async getPersonFollowingCurrentUser(person) {
     const { Person } = this.context.dataSources;
-    assertUuid(id, 'getCurrentUserFollowingPerson');
+    assertUuid(id, 'getPersonFollowingCurrentUser');
 
-    const currentPersonWhere = await Person.whereCurrentPerson();
-    const currentPerson = await this.sequelize.models.people.findOne({
-      where: currentPersonWhere,
-    });
+    const currentPersonId = await this.getCurrentPersonId();
 
     return this.model.findOne({
       where: {
         requestPersonId: id,
-        followedPersonId: currentPerson.id,
+        followedPersonId: currentPersonId,
       },
     });
   }
