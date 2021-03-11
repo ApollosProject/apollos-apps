@@ -12,11 +12,7 @@ let person2;
 let currentPerson;
 const context = {
   dataSources: {
-    Auth: {
-      getCurrentPerson: () => person1.id,
-    },
     Person: {
-      getFromId: () => person1,
       getCurrentPersonId: () => currentPerson.id,
     },
   },
