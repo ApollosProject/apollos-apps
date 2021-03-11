@@ -2,7 +2,6 @@ import ApollosConfig from '@apollosproject/config';
 import { Op } from 'sequelize';
 import { parseGlobalId } from '@apollosproject/server-core/lib/node';
 import { get } from 'lodash';
-import { AuthenticationError } from 'apollo-server';
 import { PostgresDataSource, assertUuid } from '../postgres';
 import { FollowState } from './model';
 
@@ -10,7 +9,6 @@ class Follow extends PostgresDataSource {
   modelName = 'follows';
 
   async getCurrentUserFollowingPerson({ id }) {
-    const { Person } = this.context.dataSources;
     assertUuid(id, 'getCurrentUserFollowingPerson');
 
     const currentPersonId = await this.getCurrentPersonId();
@@ -24,7 +22,6 @@ class Follow extends PostgresDataSource {
   }
 
   async getPersonFollowingCurrentUser({ id }) {
-    const { Person } = this.context.dataSources;
     assertUuid(id, 'getPersonFollowingCurrentUser');
 
     const currentPersonId = await this.getCurrentPersonId();
