@@ -10,6 +10,7 @@ const SuggestedFollowListConnected = ({ Component, Header, ...props }) => {
     fetchPolicy: 'cache-and-network',
   });
   const suggestedFollows = data?.suggestedFollows || [];
+
   return (
     <Component
       header={Header}

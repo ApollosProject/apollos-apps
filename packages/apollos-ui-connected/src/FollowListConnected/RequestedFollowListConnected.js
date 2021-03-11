@@ -9,8 +9,8 @@ const RequestedFollowListConnected = ({ Component, Header, ...props }) => {
   const { data, loading } = useQuery(GET_REQUESTED_FOLLOWS, {
     fetchPolicy: 'cache-and-network',
   });
-  console.log(data, 'data');
   const followRequests = data?.followRequests || [];
+
   return (
     <Component
       header={Header}
