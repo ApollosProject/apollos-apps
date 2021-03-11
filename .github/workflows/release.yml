@@ -74,6 +74,8 @@ jobs:
       with:
         repository: apollosproject/apollos-templates
 
+    - uses: actions/setup-node@v2
+
     - name: Bump
       run: |
         git config --global user.email "apps@apollos.app"
@@ -89,6 +91,8 @@ jobs:
     - uses: actions/checkout@v2
       with:
         repository: apollosproject/apollos-upgrade
+
+    - uses: actions/setup-node@v2
 
     - name: Bump
       run: |
