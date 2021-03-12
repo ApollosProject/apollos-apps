@@ -19,6 +19,15 @@ async function up({ context: queryInterface }) {
     birthDate: DataTypes.DATE,
     profileImageUrl: DataTypes.STRING,
     gender: DataTypes.ENUM(Object.values(Gender)),
+    campusId: {
+      type: DataTypes.UUID,
+      allowNull: true,
+      references: {
+        model: 'campuses',
+        key: 'id',
+        as: 'campus',
+      },
+    },
     apollosUser: {
       type: DataTypes.BOOLEAN,
       defaultValue: false,
@@ -54,4 +63,4 @@ async function down({ context: queryInterface }) {
 
 const name = '001-create-people';
 
-module.exports = { up, down, name, order: 1 };
+module.exports = { up, down, name, order: 2 };

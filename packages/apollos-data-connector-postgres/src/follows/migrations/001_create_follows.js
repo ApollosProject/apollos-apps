@@ -1,28 +1,35 @@
 import { Sequelize } from 'sequelize';
 
-const Visibility = {
-  PUBLIC: 'PUBLIC',
-  PRIVATE: 'PRIVATE',
-  FOLLOWERS: 'FOLLOWERS',
+const FollowState = {
+  REQUESTED: 'REQUESTED',
+  DECLINED: 'DECLINED',
+  ACCEPTED: 'ACCEPTED',
 };
 
 async function up({ context: queryInterface }) {
-  await queryInterface.createTable('comments', {
+  await queryInterface.createTable('follows', {
     id: {
       primaryKey: true,
       type: Sequelize.UUID,
       defaultValue: Sequelize.literal('uuid_generate_v4()'),
     },
-    text: Sequelize.TEXT,
-    externalParentId: Sequelize.TEXT,
-    externalParentType: Sequelize.TEXT,
-    externalParentSource: Sequelize.TEXT,
-    externalPersonId: Sequelize.TEXT,
-    visibility: Sequelize.ENUM(Object.values(Visibility)),
-    flagCount: {
-      type: Sequelize.INTEGER,
-      defaultValue: 0,
+    requestPersonId: {
+      type: Sequelize.UUID,
+      references: {
+        model: 'people',
+        key: 'id',
+        as: 'follower',
+      },
     },
+    followedPersonId: {
+      type: Sequelize.UUID,
+      references: {
+        model: 'people',
+        key: 'id',
+        as: 'follower',
+      },
+    },
+    state: Sequelize.ENUM(Object.values(FollowState)),
     apollosId: {
       type: Sequelize.STRING,
       allowNull: true, // we set this value with an "afterCreate" hook if not set.
@@ -44,9 +51,9 @@ async function up({ context: queryInterface }) {
 }
 
 async function down({ context: queryInterface }) {
-  await queryInterface.dropTable('comments');
+  await queryInterface.dropTable('follows');
 }
 
-const name = '001-create-comments';
+const name = '001-create-follows';
 
-module.exports = { up, down, name, order: 1 };
+module.exports = { up, down, name, order: 3 };

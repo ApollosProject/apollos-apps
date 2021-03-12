@@ -7,6 +7,8 @@ const createMigrationRunner = async ({ migrations }) => {
   const migrationsToRun = flatten(migrations);
   migrationsToRun.unshift(AddUuidExtension000);
 
+  migrationsToRun.sort((a, b) => (a.order < b.order ? -1 : 1));
+
   const umzug = new Umzug({
     migrations: migrationsToRun,
     context: sequelize.getQueryInterface(),
