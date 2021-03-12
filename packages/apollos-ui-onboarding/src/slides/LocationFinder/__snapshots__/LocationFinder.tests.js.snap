@@ -125,7 +125,13 @@ Array [
     }
     vertical={false}
   >
-    <View>
+    <View
+      edges={
+        Array [
+          "bottom",
+        ]
+      }
+    >
       <Text
         onPress={[MockFunction]}
         style={
@@ -943,7 +949,13 @@ South Barrington, IL 60010-6143
     }
     vertical={false}
   >
-    <View>
+    <View
+      edges={
+        Array [
+          "bottom",
+        ]
+      }
+    >
       <View
         accessible={true}
         focusable={true}

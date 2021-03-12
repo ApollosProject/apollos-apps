@@ -413,7 +413,13 @@ Array [
     }
     vertical={false}
   >
-    <View>
+    <View
+      edges={
+        Array [
+          "bottom",
+        ]
+      }
+    >
       <View
         accessible={true}
         focusable={true}
@@ -987,7 +993,13 @@ Array [
     }
     vertical={false}
   >
-    <View>
+    <View
+      edges={
+        Array [
+          "bottom",
+        ]
+      }
+    >
       <Text
         onPress={[MockFunction]}
         style={

@@ -90,7 +90,7 @@ const Slide = memo(
       </FlexedScrollView>
       {onPressPrimary || onPressSecondary ? (
         <NavWrapper vertical={false}>
-          <SafeAreaView>
+          <SafeAreaView edges={['bottom']}>
             {onPressPrimary ? (
               <PrimaryButton
                 trackEventName={pressPrimaryEventName}
