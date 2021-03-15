@@ -86,4 +86,10 @@ export default class Person extends PostgresDataSource {
 
     return where;
   };
+
+  async getCurrentPersonId() {
+    const currentPersonWhere = await this.whereCurrentPerson();
+    const person = await this.model.findOne({ where: currentPersonWhere });
+    return person.id;
+  }
 }
