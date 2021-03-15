@@ -80,7 +80,15 @@ ProfileDetailsEntry.propTypes = {
   }),
   BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   onPressBack: PropTypes.func.isRequired,
-  genderList: PropTypes.arrayOf(PropTypes.string),
+  genderList: PropTypes.arrayOf(
+    PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.shape({
+        field: PropTypes.string,
+        label: PropTypes.string,
+      }),
+    ])
+  ),
   defaultDate: PropTypes.instanceOf(Date),
 };
 
