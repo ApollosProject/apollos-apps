@@ -14,11 +14,17 @@ async function up({ context: queryInterface }) {
       defaultValue: Sequelize.literal('uuid_generate_v4()'),
     },
     text: Sequelize.TEXT,
+    visibility: Sequelize.ENUM(Object.values(Visibility)),
     externalParentId: Sequelize.TEXT,
     externalParentType: Sequelize.TEXT,
     externalParentSource: Sequelize.TEXT,
-    externalPersonId: Sequelize.TEXT,
-    visibility: Sequelize.ENUM(Object.values(Visibility)),
+    personId: {
+      type: Sequelize.UUID,
+      references: {
+        model: 'people',
+        key: 'id',
+      },
+    },
     flagCount: {
       type: Sequelize.INTEGER,
       defaultValue: 0,
@@ -49,4 +55,4 @@ async function down({ context: queryInterface }) {
 
 const name = '001-create-comments';
 
-module.exports = { up, down, name, order: 1 };
+module.exports = { up, down, name, order: 3 };
