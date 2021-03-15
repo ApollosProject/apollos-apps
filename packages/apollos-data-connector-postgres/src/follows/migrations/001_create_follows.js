@@ -18,7 +18,6 @@ async function up({ context: queryInterface }) {
       references: {
         model: 'people',
         key: 'id',
-        as: 'follower',
       },
     },
     followedPersonId: {
@@ -26,7 +25,6 @@ async function up({ context: queryInterface }) {
       references: {
         model: 'people',
         key: 'id',
-        as: 'follower',
       },
     },
     state: Sequelize.ENUM(Object.values(FollowState)),
