@@ -64,14 +64,6 @@ class CommentDataSource extends PostgresDataSource {
 
     return comments;
   }
-
-  async getPerson({ id }) {
-    const comment = await this.sequelize.models.comments.findOne({
-      where: { id },
-    });
-
-    return this.context.dataSources.Person.getFromId(comment.personId);
-  }
 }
 
 export { CommentDataSource as default };

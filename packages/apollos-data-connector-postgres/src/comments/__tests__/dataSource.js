@@ -164,19 +164,6 @@ describe('Apollos Postgres Comments DatSource', () => {
     expect(itemComments.length).toBe(5);
   });
 
-  it('should return a user for a comment', async () => {
-    const commentDataSource = new CommentDataSource();
-    commentDataSource.initialize({ context });
-
-    const comment = await commentDataSource.addComment({
-      text: `I am a fun comment!`,
-      parentId: createGlobalId(123, 'UniversalContentItem'),
-    });
-
-    const commentPerson = await commentDataSource.getPerson(comment);
-    expect(commentPerson.id).toEqual(person1.id);
-  });
-
   it('returns all comments when flagLimit is 0', async () => {
     const commentDataSource = new CommentDataSource();
     commentDataSource.initialize({ context });
