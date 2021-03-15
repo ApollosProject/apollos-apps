@@ -3,7 +3,10 @@ import { range } from 'lodash';
 import { sequelize, sync } from '../../postgres/index';
 import { createModel, setupModel } from '../model';
 import { createModel as createPersonModel } from '../../people/model';
-import { createModel as createFlagsModel } from '../../user-flags/model';
+import {
+  createModel as createFlagsModel,
+  setupModel as setupFlagsModel,
+} from '../../user-flags/model';
 import CommentDataSource from '../dataSource';
 import UserFlagDataSource from '../../user-flags/dataSource';
 
@@ -14,6 +17,7 @@ const context = {
   dataSources: {
     Person: {
       getCurrentPersonId: () => currentPerson.id,
+      getFromId: (id) => ({ id }),
     },
   },
 };
@@ -24,6 +28,7 @@ describe('Apollos Postgres Comments DatSource', () => {
     await createFlagsModel();
     await createPersonModel();
     await setupModel();
+    await setupFlagsModel();
     await sync({ force: true });
     person1 = await sequelize.models.people.create({
       originId: '1',
