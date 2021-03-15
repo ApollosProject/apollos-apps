@@ -1,5 +1,5 @@
 import { DataTypes } from 'sequelize';
-import { defineModel } from '../postgres';
+import { defineModel, configureModel } from '../postgres';
 
 const Visibility = {
   PUBLIC: 'PUBLIC',
@@ -12,11 +12,10 @@ const createModel = defineModel({
   resolveType: () => 'Comment',
   attributes: {
     text: DataTypes.TEXT,
+    visibility: DataTypes.ENUM(Object.values(Visibility)),
     externalParentId: DataTypes.TEXT,
     externalParentType: DataTypes.TEXT,
     externalParentSource: DataTypes.TEXT,
-    externalPersonId: DataTypes.TEXT,
-    visibility: DataTypes.ENUM(Object.values(Visibility)),
     flagCount: {
       type: DataTypes.INTEGER,
       defaultValue: 0,
@@ -24,4 +23,9 @@ const createModel = defineModel({
   },
 });
 
-export { createModel, Visibility };
+const setupModel = configureModel(({ sequelize }) => {
+  sequelize.models.comments.belongsTo(sequelize.models.people);
+  sequelize.models.people.hasMany(sequelize.models.comments);
+});
+
+export { createModel, Visibility, setupModel };

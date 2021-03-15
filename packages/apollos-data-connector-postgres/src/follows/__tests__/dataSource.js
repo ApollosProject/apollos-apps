@@ -9,17 +9,14 @@ import {
 import FollowDataSource from '../dataSource';
 import PeopleDataSource from '../../people/dataSource';
 
-let currentPersonId = 1;
+let currentPersonId;
 
 const context = {
   dataSources: {
-    Auth: {
-      getCurrentPerson: () => ({
-        id: currentPersonId,
-      }),
-    },
+    Auth: {},
     Person: {
       whereCurrentPerson: () => ({ id: currentPersonId }),
+      getCurrentPersonId: () => currentPersonId,
     },
   },
 };

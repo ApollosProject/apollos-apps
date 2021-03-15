@@ -7,7 +7,7 @@ class CommentDataSource extends PostgresDataSource {
   modelName = 'comments';
 
   async addComment({ text, parentId, visibility = Visibility.PUBLIC }) {
-    const currentUser = await this.context.dataSources.Auth.getCurrentPerson();
+    const currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
 
     const { id, __type } = parseGlobalId(parentId);
 
@@ -17,7 +17,7 @@ class CommentDataSource extends PostgresDataSource {
         externalParentId: String(id),
         externalParentType: __type,
         externalParentSource: 'rock',
-        externalPersonId: String(currentUser.id),
+        personId: currentPersonId,
       },
       defaults: {
         visibility,
@@ -34,9 +34,9 @@ class CommentDataSource extends PostgresDataSource {
   }
 
   async getForNode({ nodeId, nodeType, flagLimit = 0 }) {
-    let currentUser;
+    let currentPersonId;
     try {
-      currentUser = await this.context.dataSources.Auth.getCurrentPerson();
+      currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
     } catch {
       // no user signed in, that's fine.
     }
@@ -46,11 +46,10 @@ class CommentDataSource extends PostgresDataSource {
       externalParentType: nodeType,
       [Op.or]: [
         { visibility: Visibility.PUBLIC }, // Show public journals
-        ...(currentUser
+        ...(currentPersonId
           ? [
               {
-                externalPersonId: String(currentUser.id),
-                externalParentSource: 'rock',
+                personId: currentPersonId,
               },
             ]
           : []), // Or show journals that belong to you.
@@ -64,14 +63,6 @@ class CommentDataSource extends PostgresDataSource {
     const comments = await this.sequelize.models.comments.findAll({ where });
 
     return comments;
-  }
-
-  async getPerson({ id }) {
-    const comment = await this.sequelize.models.comments.findOne({
-      where: { id },
-    });
-
-    return this.context.dataSources.Person.getFromId(comment.externalPersonId);
   }
 }
 

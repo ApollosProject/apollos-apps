@@ -5,7 +5,7 @@ class UserFlagDataSource extends PostgresDataSource {
   modelName = 'user_flags';
 
   async flagComment({ commentId }) {
-    const currentUser = await this.context.dataSources.Auth.getCurrentPerson();
+    const currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
 
     const { id, __type } = parseGlobalId(commentId);
 
@@ -14,7 +14,7 @@ class UserFlagDataSource extends PostgresDataSource {
       where: {
         nodeId: String(id),
         nodeType: __type,
-        externalPersonId: String(currentUser.id),
+        personId: currentPersonId,
       },
     });
 
@@ -29,14 +29,6 @@ class UserFlagDataSource extends PostgresDataSource {
     });
 
     return comment;
-  }
-
-  async getPerson({ id }) {
-    const flag = await this.sequelize.models.user_flags.findOne({
-      where: { id },
-    });
-
-    return this.context.dataSources.Person.getFromId(flag.externalPersonId);
   }
 }
 
