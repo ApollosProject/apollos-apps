@@ -246,7 +246,11 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
     }));
   }
 
-  async seriesInProgressAlgorithm({ limit = 3, channelIds = [] } = {}) {
+  async seriesInProgressAlgorithm({
+    limit = 3,
+    channelIds = [],
+    emptyMessage = 'All caught up!',
+  } = {}) {
     const { ContentItem, Feature } = this.context.dataSources;
     Feature.setCacheHint({ maxAge: 0, scope: 'PRIVATE' });
 
@@ -259,15 +263,26 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
       .top(limit)
       .get();
 
-    return items.map((item, i) => ({
-      id: `${item.id}${i}`,
-      title: item.title,
-      subtitle: get(item, 'contentChannel.name'),
-      relatedNode: { ...item, __type: ContentItem.resolveType(item) },
-      image: ContentItem.getCoverImage(item),
-      action: 'READ_CONTENT',
-      summary: ContentItem.createSummary(item),
-    }));
+    return items.length
+      ? items.map((item, i) => ({
+          id: `${item.id}${i}`,
+          title: item.title,
+          subtitle: get(item, 'contentChannel.name'),
+          relatedNode: { ...item, __type: ContentItem.resolveType(item) },
+          image: ContentItem.getCoverImage(item),
+          action: 'READ_CONTENT',
+          summary: ContentItem.createSummary(item),
+        }))
+      : [
+          {
+            id: 'EmptyCard',
+            relatedNode: {
+              // __type: 'Message',
+              __typename: 'Message',
+              message: emptyMessage,
+            },
+          },
+        ];
   }
 }
 

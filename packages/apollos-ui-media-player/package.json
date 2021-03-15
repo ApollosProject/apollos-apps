@@ -7,7 +7,10 @@
   "react-native": "src/index",
   "source": "src/index",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "2.2.0",
+  "engines": {
+    "node": ">=10.x.x"
+  },
+  "version": "2.3.1",
   "files": [
     "src",
     "lib",
@@ -24,7 +27,7 @@
   "scripts": {
     "test": "jest",
     "typescript": "tsc --noEmit",
-    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "lint": "eslint ./src --ext js,ts,tsx",
     "prepare": "bob build",
     "build": "yarn prepare",
     "generate-stories": "rnstl"
