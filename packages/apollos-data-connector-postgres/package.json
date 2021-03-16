@@ -38,7 +38,8 @@
     "lodash": "^4.17.11",
     "pg": "^8.5.1",
     "pg-hstore": "^2.3.3",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "umzug": "^3.0.0-beta.15"
   },
   "peerDependencies": {
     "@apollosproject/config": "*"
