@@ -1,31 +1,44 @@
 import { createGlobalId } from '@apollosproject/server-core';
 import { range } from 'lodash';
 import { sequelize, sync } from '../../postgres/index';
-import { createModel } from '../model';
-import { createModel as createFlagsModel } from '../../user-flags/model';
+import { createModel, setupModel } from '../model';
+import { createModel as createPersonModel } from '../../people/model';
+import {
+  createModel as createFlagsModel,
+  setupModel as setupFlagsModel,
+} from '../../user-flags/model';
 import CommentDataSource from '../dataSource';
 import UserFlagDataSource from '../../user-flags/dataSource';
 
+let person1;
+let person2;
+let currentPerson;
 const context = {
   dataSources: {
-    Auth: {
-      getCurrentPerson: () => ({ id: 1 }),
-    },
     Person: {
-      getFromId: () => ({ id: 1 }),
+      getCurrentPersonId: () => currentPerson.id,
+      getFromId: (id) => ({ id }),
     },
   },
 };
 
 describe('Apollos Postgres Comments DatSource', () => {
   beforeEach(async () => {
-    try {
-      await createModel();
-      await createFlagsModel();
-      await sync({ force: true });
-    } catch (e) {
-      console.error(e);
-    }
+    await createModel();
+    await createFlagsModel();
+    await createPersonModel();
+    await setupModel();
+    await setupFlagsModel();
+    await sync({ force: true });
+    person1 = await sequelize.models.people.create({
+      originId: '1',
+      originType: 'rock',
+    });
+    person2 = await sequelize.models.people.create({
+      originId: '2',
+      originType: 'rock',
+    });
+    currentPerson = person1;
   });
   afterEach(async () => {
     await sequelize.drop({});
@@ -69,6 +82,7 @@ describe('Apollos Postgres Comments DatSource', () => {
       nodeId: 123,
       nodeType: 'UniversalContentItem',
     });
+
     expect(comments.length).toBe(1);
   });
 
@@ -95,7 +109,7 @@ describe('Apollos Postgres Comments DatSource', () => {
   it('should return only public comments for a given node', async () => {
     const commentDataSource = new CommentDataSource();
     // Change the user id to a different user
-    context.dataSources.Auth.getCurrentPerson = () => ({ id: 2 });
+    currentPerson = person2;
     commentDataSource.initialize({ context });
 
     // eslint-disable-next-line no-restricted-syntax
@@ -108,7 +122,7 @@ describe('Apollos Postgres Comments DatSource', () => {
       });
     }
     // Go back to our original user user
-    context.dataSources.Auth.getCurrentPerson = () => ({ id: 1 });
+    currentPerson = person1;
     const itemComments = await commentDataSource.getForNode({
       nodeId: 123,
       nodeType: 'UniversalContentItem',
@@ -119,7 +133,7 @@ describe('Apollos Postgres Comments DatSource', () => {
   it('should return your private comments', async () => {
     const commentDataSource = new CommentDataSource();
     // Change the user id to a different user
-    context.dataSources.Auth.getCurrentPerson = () => ({ id: 2 });
+    currentPerson = person2;
     commentDataSource.initialize({ context });
 
     // eslint-disable-next-line no-restricted-syntax
@@ -132,7 +146,7 @@ describe('Apollos Postgres Comments DatSource', () => {
       });
     }
     // Go back to our original user user
-    context.dataSources.Auth.getCurrentPerson = () => ({ id: 1 });
+    currentPerson = person1;
     // eslint-disable-next-line no-restricted-syntax
     for (const index of range(5)) {
       // eslint-disable-next-line no-await-in-loop
@@ -148,19 +162,6 @@ describe('Apollos Postgres Comments DatSource', () => {
       nodeType: 'UniversalContentItem',
     });
     expect(itemComments.length).toBe(5);
-  });
-
-  it('should return a user for a comment', async () => {
-    const commentDataSource = new CommentDataSource();
-    commentDataSource.initialize({ context });
-
-    const comment = await commentDataSource.addComment({
-      text: `I am a fun comment!`,
-      parentId: createGlobalId(123, 'UniversalContentItem'),
-    });
-
-    const commentPerson = await commentDataSource.getPerson(comment);
-    expect(commentPerson).toEqual({ id: 1 });
   });
 
   it('returns all comments when flagLimit is 0', async () => {

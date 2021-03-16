@@ -11,11 +11,13 @@ import {
   themeSchema,
 } from '@apollosproject/data-schema';
 import * as Comment from '../index';
+import * as Person from '../../people';
 import * as UserFlag from '../../user-flags/index';
 
 const { getSchema, getContext } = createTestHelpers({
   Comment,
   UserFlag,
+  Person,
 });
 
 describe('Apollos Postgres Comment Flags Resolver', () => {
