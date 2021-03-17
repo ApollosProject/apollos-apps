@@ -1,4 +1,4 @@
-import { compact, mapValues, merge, values } from 'lodash';
+import { compact, mapValues, merge, values, flatten } from 'lodash';
 import gql from 'graphql-tag';
 import { InMemoryLRUCache } from 'apollo-server-caching';
 import { makeExecutableSchema } from 'apollo-server';
@@ -10,8 +10,9 @@ import * as Node from './node';
 import * as Interfaces from './interfaces';
 import * as Pagination from './pagination';
 import * as Media from './media';
+import * as Message from './message';
 
-export { createGlobalId, parseGlobalId } from './node';
+export { createGlobalId, parseGlobalId, isUuid } from './node';
 export {
   createCursor,
   parseCursor,
@@ -22,7 +23,7 @@ export { setupUniversalLinks } from './universalLinking';
 export { Interfaces };
 
 // Types that all apollos-church servers will use.
-const builtInData = { Node, Pagination, Media };
+const builtInData = { Node, Pagination, Media, Message };
 
 export const createSchema = (data) => [
   gql`
@@ -46,6 +47,13 @@ export const createResolvers = (data) =>
 
 const getDbModels = (data) =>
   mapValues({ ...builtInData, ...data }, (datum) => datum.models);
+
+const getMigrations = (data) =>
+  compact(
+    flatten(
+      values({ ...builtInData, ...data }).map((datum) => datum.migrations)
+    )
+  );
 
 const getDataSources = (data) =>
   mapValues({ ...builtInData, ...data }, (datum) => datum.dataSource);
@@ -213,6 +221,7 @@ export const createApolloServerConfig = (data) => {
   const context = createContext(data);
   const applyServerMiddleware = createMiddleware(data);
   const setupJobs = createJobs(data);
+  const migrations = getMigrations(data);
   return {
     context,
     dataSources,
@@ -220,5 +229,6 @@ export const createApolloServerConfig = (data) => {
     resolvers,
     applyServerMiddleware,
     setupJobs,
+    migrations,
   };
 };

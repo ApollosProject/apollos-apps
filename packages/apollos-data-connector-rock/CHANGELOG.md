@@ -3,6 +3,54 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.3.1](https://github.com/apollosproject/apollos-apps/compare/v2.3.0...v2.3.1) (2021-03-11)
+
+**Note:** Version bump only for package @apollosproject/data-connector-rock
+
+
+
+
+
+## [2.3.0](https://github.com/apollosproject/apollos-apps/compare/v2.2.0...v2.3.0) (2021-03-11)
+
+
+### Features
+
+* add button link feature to content ([#1779](https://github.com/apollosproject/apollos-apps/issues/1779)) ([c254c5b](https://github.com/apollosproject/apollos-apps/commit/c254c5bcdac03c840926da53b19eeba9ac11e9a5))
+* add empty card to progress algorithm ([#1788](https://github.com/apollosproject/apollos-apps/issues/1788)) ([71fcf37](https://github.com/apollosproject/apollos-apps/commit/71fcf373bdaf06af9d3fc956d2b95f9e5f4506a2))
+
+
+
+## [2.2.0](https://github.com/apollosproject/apollos-apps/compare/v2.1.1...v2.2.0) (2021-03-04)
+
+
+### Features
+
+* Postgres Person datasource ([#1768](https://github.com/apollosproject/apollos-apps/issues/1768)) ([f87a584](https://github.com/apollosproject/apollos-apps/commit/f87a58443986ffd2b8dd4c69f2537200f6c81804))
+
+
+### Bug Fixes
+
+* return empty string with null HTML ([#1769](https://github.com/apollosproject/apollos-apps/issues/1769)) ([43679a7](https://github.com/apollosproject/apollos-apps/commit/43679a7dfe00b85bf687960e0b13db77c7a767d9))
+
+
+
+### [2.1.1](https://github.com/apollosproject/apollos-apps/compare/v2.1.0...v2.1.1) (2021-02-26)
+
+**Note:** Version bump only for package @apollosproject/data-connector-rock
+
+
+
+
+
+## [2.1.0](https://github.com/apollosproject/apollos-apps/compare/v2.0.1-canary.0...v2.1.0) (2021-02-26)
+
+**Note:** Version bump only for package @apollosproject/data-connector-rock
+
+
+
+
+
 # [2.0.0](https://github.com/apollosproject/apollos-apps/compare/v2.0.0-beta.4...v2.0.0) (2021-02-03)
 
 **Note:** Version bump only for package @apollosproject/data-connector-rock

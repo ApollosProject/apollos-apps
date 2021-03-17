@@ -3,6 +3,63 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.3.1](https://github.com/apollosproject/apollos-apps/compare/v2.3.0...v2.3.1) (2021-03-11)
+
+**Note:** Version bump only for package @apollosproject/ui-connected
+
+
+
+
+
+## [2.3.0](https://github.com/apollosproject/apollos-apps/compare/v2.2.0...v2.3.0) (2021-03-11)
+
+
+### Features
+
+* add button link feature to content ([#1779](https://github.com/apollosproject/apollos-apps/issues/1779)) ([c254c5b](https://github.com/apollosproject/apollos-apps/commit/c254c5bcdac03c840926da53b19eeba9ac11e9a5))
+* add empty card to progress algorithm ([#1788](https://github.com/apollosproject/apollos-apps/issues/1788)) ([71fcf37](https://github.com/apollosproject/apollos-apps/commit/71fcf373bdaf06af9d3fc956d2b95f9e5f4506a2))
+* add empty vertical prayer list state ([#1776](https://github.com/apollosproject/apollos-apps/issues/1776)) ([b0b213b](https://github.com/apollosproject/apollos-apps/commit/b0b213be0c43fbef10fa1d713ae002a324f1d994))
+* Hookup suggested followers ([#1785](https://github.com/apollosproject/apollos-apps/issues/1785)) ([68d042d](https://github.com/apollosproject/apollos-apps/commit/68d042de2999aa466f7460263db6ec273cceafe4))
+
+
+
+## [2.2.0](https://github.com/apollosproject/apollos-apps/compare/v2.1.1...v2.2.0) (2021-03-04)
+
+
+### Features
+
+* Journal Confirmation Screen ([#1767](https://github.com/apollosproject/apollos-apps/issues/1767)) ([c7b2a8c](https://github.com/apollosproject/apollos-apps/commit/c7b2a8cc498c007f22ae84b8179eab04508d14ce))
+
+
+### Bug Fixes
+
+* allow theme HOCs to accept custom theme prop ([#1763](https://github.com/apollosproject/apollos-apps/issues/1763)) ([4b0a5b1](https://github.com/apollosproject/apollos-apps/commit/4b0a5b1f82e1e1e83ea30ccec75b0ab18f29a38f))
+
+
+
+### [2.1.1](https://github.com/apollosproject/apollos-apps/compare/v2.1.0...v2.1.1) (2021-02-26)
+
+**Note:** Version bump only for package @apollosproject/ui-connected
+
+
+
+
+
+## [2.1.0](https://github.com/apollosproject/apollos-apps/compare/v2.0.1-canary.0...v2.1.0) (2021-02-26)
+
+
+### Features
+
+* Add NodeSingleConnected live stream support. ([#1741](https://github.com/apollosproject/apollos-apps/issues/1741)) ([695e8cb](https://github.com/apollosproject/apollos-apps/commit/695e8cb4df9331aba19fc1666e5566d9f2545e2f))
+
+
+### Bug Fixes
+
+* add sharing to text and scripture features ([#1740](https://github.com/apollosproject/apollos-apps/issues/1740)) ([4680e13](https://github.com/apollosproject/apollos-apps/commit/4680e13c6ddd093ffe791ffc6dc8067f5084e7cd))
+* send feature ID to share button ([#1734](https://github.com/apollosproject/apollos-apps/issues/1734)) ([d3e537e](https://github.com/apollosproject/apollos-apps/commit/d3e537e22f05826a1563b45ece8cf4661835f944))
+
+
+
 # [2.0.0](https://github.com/apollosproject/apollos-apps/compare/v2.0.0-beta.4...v2.0.0) (2021-02-03)
 
 

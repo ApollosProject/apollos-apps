@@ -3,6 +3,78 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.3.1](https://github.com/ApollosProject/apollos-apps/compare/v2.3.0...v2.3.1) (2021-03-11)
+
+**Note:** Version bump only for package apollos
+
+
+
+
+
+## [2.3.0](https://github.com/ApollosProject/apollos-apps/compare/v2.2.0...v2.3.0) (2021-03-11)
+
+
+### Features
+
+* add button link feature to content ([#1779](https://github.com/ApollosProject/apollos-apps/issues/1779)) ([c254c5b](https://github.com/ApollosProject/apollos-apps/commit/c254c5bcdac03c840926da53b19eeba9ac11e9a5))
+* add empty card to progress algorithm ([#1788](https://github.com/ApollosProject/apollos-apps/issues/1788)) ([71fcf37](https://github.com/ApollosProject/apollos-apps/commit/71fcf373bdaf06af9d3fc956d2b95f9e5f4506a2))
+* add empty vertical prayer list state ([#1776](https://github.com/ApollosProject/apollos-apps/issues/1776)) ([b0b213b](https://github.com/ApollosProject/apollos-apps/commit/b0b213be0c43fbef10fa1d713ae002a324f1d994))
+* Follow data model ([#1766](https://github.com/ApollosProject/apollos-apps/issues/1766)) ([804a0a7](https://github.com/ApollosProject/apollos-apps/commit/804a0a7c98e4abf8cc7aeef548d1735a9d40c5f9))
+* Follow request list query ([#1787](https://github.com/ApollosProject/apollos-apps/issues/1787)) ([3d3d1a2](https://github.com/ApollosProject/apollos-apps/commit/3d3d1a2ee014e68abcc2b28b3677bacefbe1cd49))
+* Hookup suggested followers ([#1785](https://github.com/ApollosProject/apollos-apps/issues/1785)) ([68d042d](https://github.com/ApollosProject/apollos-apps/commit/68d042de2999aa466f7460263db6ec273cceafe4))
+* Suggested follows ([#1773](https://github.com/ApollosProject/apollos-apps/issues/1773)) ([5f3cd78](https://github.com/ApollosProject/apollos-apps/commit/5f3cd78c45d1e2588f85dd5c6e6f0bba4349ad0f))
+
+
+
+## [2.2.0](https://github.com/ApollosProject/apollos-apps/compare/v2.1.1...v2.2.0) (2021-03-04)
+
+
+### Features
+
+* add prayer component prop handles ([#1775](https://github.com/ApollosProject/apollos-apps/issues/1775)) ([44ac06c](https://github.com/ApollosProject/apollos-apps/commit/44ac06cb3d4cbebb7ca5b7b1dd48b0fba5220021))
+* Follow List Onboarding ([#1765](https://github.com/ApollosProject/apollos-apps/issues/1765)) ([a7b3110](https://github.com/ApollosProject/apollos-apps/commit/a7b311092ee558766f91fd155799327339e3ce59))
+* Journal Confirmation Screen ([#1767](https://github.com/ApollosProject/apollos-apps/issues/1767)) ([c7b2a8c](https://github.com/ApollosProject/apollos-apps/commit/c7b2a8cc498c007f22ae84b8179eab04508d14ce))
+* Postgres Person datasource ([#1768](https://github.com/ApollosProject/apollos-apps/issues/1768)) ([f87a584](https://github.com/ApollosProject/apollos-apps/commit/f87a58443986ffd2b8dd4c69f2537200f6c81804))
+
+
+### Bug Fixes
+
+* adjust background gradient in dark mode ([#1770](https://github.com/ApollosProject/apollos-apps/issues/1770)) ([85b0e7f](https://github.com/ApollosProject/apollos-apps/commit/85b0e7f03dac7b15bff49907db98fd49289dc1f1))
+* allow theme HOCs to accept custom theme prop ([#1763](https://github.com/ApollosProject/apollos-apps/issues/1763)) ([4b0a5b1](https://github.com/ApollosProject/apollos-apps/commit/4b0a5b1f82e1e1e83ea30ccec75b0ab18f29a38f))
+* return empty string with null HTML ([#1769](https://github.com/ApollosProject/apollos-apps/issues/1769)) ([43679a7](https://github.com/ApollosProject/apollos-apps/commit/43679a7dfe00b85bf687960e0b13db77c7a767d9))
+
+
+
+### [2.1.1](https://github.com/ApollosProject/apollos-apps/compare/v2.1.0...v2.1.1) (2021-02-26)
+
+**Note:** Version bump only for package apollos
+
+
+
+
+
+## [2.1.0](https://github.com/ApollosProject/apollos-apps/compare/v2.0.1-canary.0...v2.1.0) (2021-02-26)
+
+
+### Features
+
+* Add a unique index for origin fields and switch to uuid for ids ([#1762](https://github.com/ApollosProject/apollos-apps/issues/1762)) ([2deaf28](https://github.com/ApollosProject/apollos-apps/commit/2deaf288013b50b1833094eb61a0155334e17834))
+* Add NodeSingleConnected live stream support. ([#1741](https://github.com/ApollosProject/apollos-apps/issues/1741)) ([695e8cb](https://github.com/ApollosProject/apollos-apps/commit/695e8cb4df9331aba19fc1666e5566d9f2545e2f))
+* Follow List Search ([#1754](https://github.com/ApollosProject/apollos-apps/issues/1754)) ([23318a6](https://github.com/ApollosProject/apollos-apps/commit/23318a6fa5719fab421f5f32cccf7df54d65870f))
+* Postgres instead of SQLite ([#1752](https://github.com/ApollosProject/apollos-apps/issues/1752)) ([dbacb3c](https://github.com/ApollosProject/apollos-apps/commit/dbacb3c2e504cbda1c37572e03381674543156ef))
+
+
+### Bug Fixes
+
+* add sharing to text and scripture features ([#1740](https://github.com/ApollosProject/apollos-apps/issues/1740)) ([4680e13](https://github.com/ApollosProject/apollos-apps/commit/4680e13c6ddd093ffe791ffc6dc8067f5084e7cd))
+* Button padding on Auth Onboarding ([#1750](https://github.com/ApollosProject/apollos-apps/issues/1750)) ([9fbda1f](https://github.com/ApollosProject/apollos-apps/commit/9fbda1ffd4336b4dc8c2baca4eaa45948b2b74cd))
+* Correctly default date picker to 18 years ago ([#1751](https://github.com/ApollosProject/apollos-apps/issues/1751)) ([fa48b87](https://github.com/ApollosProject/apollos-apps/commit/fa48b877fce2c04e56d214e26b18ea6d005e0050))
+* insure to generate stories for storybook ([29a573e](https://github.com/ApollosProject/apollos-apps/commit/29a573e2fee1314e6e6a10dcc9cc1a6bcdc3d7b8))
+* remove comment list query fragment ([#1747](https://github.com/ApollosProject/apollos-apps/issues/1747)) ([e014263](https://github.com/ApollosProject/apollos-apps/commit/e0142635302cf71cb61eccfd2337183e8f1818e4))
+* send feature ID to share button ([#1734](https://github.com/ApollosProject/apollos-apps/issues/1734)) ([d3e537e](https://github.com/ApollosProject/apollos-apps/commit/d3e537e22f05826a1563b45ece8cf4661835f944))
+
+
+
 # [2.0.0](https://github.com/ApollosProject/apollos-apps/compare/v2.0.0-beta.4...v2.0.0) (2021-02-03)
 
 

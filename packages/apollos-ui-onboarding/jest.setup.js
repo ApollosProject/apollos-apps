@@ -25,3 +25,8 @@ NativeModules.RNGestureHandlerModule = {
 };
 
 jest.mock('@react-native-community/datetimepicker', () => 'DatePicker');
+
+jest.mock('@apollosproject/ui-connected', () => ({
+  FollowListConnected: require.requireActual('@apollosproject/ui-kit')
+    .FollowList,
+}));

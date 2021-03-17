@@ -8,8 +8,7 @@ const resolvers = {
       UserFlag.flagComment(args),
   },
   Comment: {
-    person: (root, args, { dataSources: { Comment } }) =>
-      Comment.getPerson(root),
+    person: (root) => root.getPerson(),
     id: ({ apollosId }) => apollosId,
   },
   CommentListFeature: {

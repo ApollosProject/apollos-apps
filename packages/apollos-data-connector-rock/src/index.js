@@ -18,6 +18,7 @@ import * as ActionAlgorithm from './action-algorithms';
 import * as FeatureFeed from './feature-feeds';
 import * as Event from './events';
 import * as PrayerRequest from './prayer-request';
+import * as Persona from './personas';
 
 export {
   Followings,
@@ -40,4 +41,5 @@ export {
   FeatureFeed,
   Event,
   PrayerRequest,
+  Persona,
 };

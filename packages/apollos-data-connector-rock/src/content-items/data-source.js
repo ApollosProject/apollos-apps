@@ -194,6 +194,26 @@ export default class ContentItem extends RockApolloDataSource {
       );
     }
 
+    const buttonLink = attributeValues?.buttonLink?.value;
+    if (buttonLink) {
+      const buttonText = attributeValues.buttonText?.value || '';
+      features.push(
+        Feature.createButtonFeature({
+          id: attributeValues.buttonLink.id,
+          // NOTE: right now only URLs are implemented
+          // could optionally parse Rock IDs for OPEN_NODE action?
+          action: Feature.attachRelatedNodeId({
+            relatedNode: {
+              __typename: 'Url',
+              url: buttonLink,
+            },
+            action: 'OPEN_AUTHENTICATED_URL',
+            title: buttonText,
+          }),
+        })
+      );
+    }
+
     return features;
   }
 
@@ -407,11 +427,11 @@ export default class ContentItem extends RockApolloDataSource {
   // Generates feed based on persons dataview membership
   byPersonaFeed = async (first) => {
     const {
-      dataSources: { Person },
+      dataSources: { Persona },
     } = this.context;
 
     // Grabs the guids associated with all dataviews user is memeber
-    const getPersonaGuidsForUser = await Person.getPersonas({
+    const getPersonaGuidsForUser = await Persona.getPersonas({
       categoryId: ROCK_MAPPINGS.DATAVIEW_CATEGORIES.PersonaId,
     });
 

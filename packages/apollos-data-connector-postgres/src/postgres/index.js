@@ -3,12 +3,56 @@
 
 import './pgEnum-fix';
 import { Sequelize, DataTypes } from 'sequelize';
-import { createGlobalId } from '@apollosproject/server-core';
+import { Client } from 'pg';
 import ApollosConfig from '@apollosproject/config';
 import connectJest from './test-connect';
+import { ensureLocalDb } from './local-db';
 
 const sequelizeConfigOptions =
   process.env.NODE_ENV === 'test' ? { logging: false } : {};
+
+const name = `${process.env.NODE_ENV || 'development'}`;
+
+// Create a local database if it doesn't exist
+// FIXME: Because the main thread here doesn't wait for this process to complete,
+// the database doesn't exist on first run, and the sequelize instance below is undefined
+// until you quit and restart.
+if (!ApollosConfig?.DATABASE?.URL && process.env.NODE_ENV !== 'test') {
+  const client = new Client({
+    host: 'localhost',
+    database: 'postgres',
+  });
+
+  console.log('creating db');
+  (async () => {
+    try {
+      await client.connect();
+    } catch (e) {
+      console.error('Failed to connect to local postgres instance');
+      console.error(e);
+    }
+
+    try {
+      await ensureLocalDb(client, name);
+    } catch (e) {
+      console.error('Failed to ensure local database');
+      console.error(e);
+    }
+
+    await client.end();
+  })();
+  console.log('created!');
+}
+
+const connectDev = () => {
+  return new Sequelize(`postgres:localhost/${name}`, {
+    ...(ApollosConfig?.DATABASE?.OPTIONS || {}),
+    dialectOptions: {},
+  });
+};
+
+const localConnect = () =>
+  process.env.NODE_ENV === 'test' ? connectJest() : connectDev();
 
 // Use the DB url from the apollos config if provided.
 // Otherwise, connect to the proper test database
@@ -17,7 +61,7 @@ const sequelize = ApollosConfig?.DATABASE?.URL
       ...sequelizeConfigOptions,
       ...(ApollosConfig?.DATABASE?.OPTIONS || {}),
     })
-  : connectJest();
+  : localConnect();
 
 class PostgresDataSource {
   initialize(config) {
@@ -25,7 +69,28 @@ class PostgresDataSource {
     this.sequelize = sequelize;
     this.model = sequelize.models[this.modelName];
   }
+
+  getFromId(id, encodedId, { originType = null } = {}) {
+    if (originType) {
+      return this.model.findOne({
+        where: { originId: String(id), originType },
+      });
+    }
+    return this.model.findByPk(id);
+  }
 }
+
+const UUID_V4_REGEXP = new RegExp(
+  /^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i
+);
+
+export const assertUuid = (uuid, caller = '') => {
+  if (uuid && !UUID_V4_REGEXP.test(uuid)) {
+    throw new Error(
+      `ID ${uuid} is not a valid UUID. You are probably passing a Rock (or other) id to ${caller} when it expects a Postgres UUID.`
+    );
+  }
+};
 
 // Define model is used to define the base attributes of a model
 // as well as any pre/post hooks.
@@ -71,28 +136,13 @@ const defineModel = ({
       hooks: {
         ...(sequelizeOptions?.hooks || {}),
         beforeValidate: (instance) => {
-          // First, compoute the apollos type from the resolve type, if passed.
           if (resolveType && !instance.apollosType) {
             instance.apollosType = resolveType(instance);
-          }
-          // Second, use the origin id to compute the apollos id (if it exists)
-          if (
-            instance.originId != null &&
-            instance.apollosType != null &&
-            !instance.apollosId
-          ) {
-            instance.apollosId = createGlobalId(
-              instance.originId,
-              instance.apollosType
-            );
           }
         },
         afterCreate: async (instance, options) => {
           if (!instance.apollosId) {
-            instance.apollosId = createGlobalId(
-              instance.id,
-              instance.apollosType
-            );
+            instance.apollosId = `${instance.apollosType}:${instance.id}`;
             await instance.save({
               transaction: options.transaction,
             });
@@ -112,8 +162,18 @@ const defineModel = ({
   return model;
 };
 
-// Creates a function that returns a function that can be called with sequelize as an argument.
-// Used to configure relationships between models.
+/**
+ * @callback ConfigureModelCallback
+ * @param {Object} args
+ * @param {import('sequelize').Sequelize} args.sequelize
+ */
+
+/**
+ * Creates a function that returns a function that can be called with sequelize as an argument.
+ * Used to configure relationships between models.
+ *
+ * @param {ConfigureModelCallback} callback
+ */
 const configureModel = (callback) => () => callback({ sequelize });
 
 // Replaces DB migrations - alters the tables so they match the structure defined in code.

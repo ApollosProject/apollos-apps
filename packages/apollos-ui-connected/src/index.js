@@ -6,6 +6,7 @@ export AddCommentFeatureConnected, {
   GET_ADD_COMMENT_FEATURE,
   ADD_COMMENT,
 } from './AddCommentFeatureConnected';
+export ConnectScreenConnected from './ConnectScreenConnected';
 export ContentCardConnected, {
   ContentCardComponentMapper,
   contentCardComponentMapper, // TODO: Update to `ContentCardComponentMapper` export below is for temporary backwards compatibility.
@@ -32,6 +33,12 @@ export FeaturesFeedConnected, {
   GET_FEATURE_FEED,
   FEATURE_FEED_ACTION_MAP,
 } from './FeaturesFeedConnected';
+export FollowListConnected, {
+  REQUEST_FOLLOW,
+  SuggestedFollowListConnected,
+  RequestedFollowListConnected,
+  GET_SUGGESTED_FOLLOWS,
+} from './FollowListConnected';
 export HeroListFeatureConnected, {
   HeroListFeature,
   GET_HERO_LIST_FEATURE,
@@ -80,6 +87,9 @@ export ShareButtonConnected, {
 } from './ShareButtonConnected';
 export UpNextButtonConnected from './UpNextButtonConnected';
 export UserAvatarConnected, { UserAvatarUpdate } from './UserAvatarConnected';
+export UserAvatarHeaderConnected, {
+  GET_USER_PROFILE,
+} from './UserAvatarHeaderConnected';
 export { fetchMoreResolver, share, uploadPhoto } from './utils';
 export VerticalCardListFeatureConnected, {
   VerticalCardListFeature,

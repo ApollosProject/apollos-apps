@@ -269,6 +269,15 @@ export default class Feature extends RockApolloDataSource {
     };
   }
 
+  // eslint-disable-next-line class-methods-use-this
+  createButtonFeature({ action, id }) {
+    return {
+      action,
+      id,
+      __typename: 'ButtonFeature',
+    };
+  }
+
   createCommentListFeature({ nodeId, nodeType, flagLimit }) {
     return {
       id: JSON.stringify({ nodeId, nodeType, flagLimit }),
@@ -337,15 +346,15 @@ export default class Feature extends RockApolloDataSource {
 
   async createVerticalPrayerListFeature({ title, subtitle, ...args }) {
     const { ActionAlgorithm, Auth } = this.context.dataSources;
-    const { primaryAliasId } = await Auth.getCurrentPerson();
+    const { id } = await Auth.getCurrentPerson();
     const prayers = () =>
       ActionAlgorithm.runAlgorithms({
         algorithms: ['DAILY_PRAYER'],
-        args: { primaryAliasId, ...args },
+        args: { personId: id, ...args },
       });
     return {
       id: this.createFeatureId({
-        args: { primaryAliasId, title, subtitle },
+        args: { personId: id, title, subtitle },
       }),
       prayers,
       title,

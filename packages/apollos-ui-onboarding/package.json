@@ -1,7 +1,10 @@
 {
   "name": "@apollosproject/ui-onboarding",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "2.0.1-canary.0",
+  "engines": {
+    "node": ">=10.x.x"
+  },
+  "version": "2.3.1",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -45,6 +48,7 @@
     "@apollo/client": "*",
     "@apollosproject/storybook": "*",
     "@apollosproject/ui-analytics": "*",
+    "@apollosproject/ui-connected": "*",
     "@apollosproject/ui-fragments": "*",
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-map-view": "*",

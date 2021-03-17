@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.3.1](https://github.com/apollosproject/apollos-apps/compare/v2.3.0...v2.3.1) (2021-03-11)
+
+**Note:** Version bump only for package @apollosproject/data-connector-onesignal
+
+
+
+
+
+## [2.3.0](https://github.com/apollosproject/apollos-apps/compare/v2.2.0...v2.3.0) (2021-03-11)
+
+**Note:** Version bump only for package @apollosproject/data-connector-onesignal
+
+
+
+
+
+## [2.2.0](https://github.com/apollosproject/apollos-apps/compare/v2.1.1...v2.2.0) (2021-03-04)
+
+
+### Features
+
+* Postgres Person datasource ([#1768](https://github.com/apollosproject/apollos-apps/issues/1768)) ([f87a584](https://github.com/apollosproject/apollos-apps/commit/f87a58443986ffd2b8dd4c69f2537200f6c81804))
+
+
+
+### [2.1.1](https://github.com/apollosproject/apollos-apps/compare/v2.1.0...v2.1.1) (2021-02-26)
+
+**Note:** Version bump only for package @apollosproject/data-connector-onesignal
+
+
+
+
+
+## [2.1.0](https://github.com/apollosproject/apollos-apps/compare/v2.0.1-canary.0...v2.1.0) (2021-02-26)
+
+**Note:** Version bump only for package @apollosproject/data-connector-onesignal
+
+
+
+
+
 # [2.0.0](https://github.com/apollosproject/apollos-apps/compare/v2.0.0-beta.4...v2.0.0) (2021-02-03)
 
 **Note:** Version bump only for package @apollosproject/data-connector-onesignal
