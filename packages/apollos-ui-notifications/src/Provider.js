@@ -36,6 +36,11 @@ class NotificationsInit extends Component {
       writeQuery: PropTypes.func,
       onClearStore: PropTypes.func,
     }).isRequired,
+    actionMap: PropTypes.shape({}),
+  };
+
+  static defaultProps = {
+    actionMap: {},
   };
 
   static navigationOptions = {};
@@ -87,6 +92,7 @@ class NotificationsInit extends Component {
   };
 
   onOpened = (openResult) => {
+    console.log(openResult);
     console.log('Message: ', openResult.notification.payload.body);
     console.log('Data: ', openResult.notification.payload.additionalData);
     console.log('isActive: ', openResult.notification.isAppInFocus);
@@ -98,6 +104,13 @@ class NotificationsInit extends Component {
     const url = get(openResult, 'notification.payload.additionalData.url');
     if (url) {
       this.navigate(url);
+    } else if (
+      openResult?.action?.actionID &&
+      this.props.actionMap[openResult.action.actionID]
+    ) {
+      this.props.actionMap[openResult.action.actionID](
+        openResult.notification.payload.additionalData
+      );
     }
   };
 
