@@ -59,13 +59,39 @@ class Follow extends PostgresDataSource {
       }
 
       // If a request already exists that was denied, update it as a new request.
+      this.sendRequestFollowNotification({
+        followedPersonId: id,
+        requestPersonId: currentPersonId,
+      });
       return existingFollow.update({ state: FollowState.REQUESTED });
     }
     // There was no existing request, so lets make one.
+    this.sendRequestFollowNotification({
+      followedPersonId: id,
+      requestPersonId: currentPersonId,
+    });
     return this.model.create({
       requestPersonId: currentPersonId,
       followedPersonId: id,
       state: FollowState.REQUESTED,
+    });
+  }
+
+  async sendRequestFollowNotification({ followedPersonId, requestPersonId }) {
+    const { Person } = this.context.dataSources;
+
+    const followedPerson = await Person.getFromId(followedPersonId);
+    const requestPerson = await Person.getFromId(requestPersonId);
+
+    return this.context.dataSources.OneSignal.createNotification({
+      content: `${requestPerson.firstName} ${requestPerson.lastName} has asked to follow you.`,
+      to: followedPerson,
+      buttons: [
+        {
+          id: `acceptFollowRequest:${requestPerson.apollosId}`,
+          text: 'Confirm',
+        },
+      ],
     });
   }
 
