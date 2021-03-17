@@ -1,20 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Switch, PaddedView } from '@apollosproject/ui-kit';
+import { Switch, PaddedView, BackgroundView } from '@apollosproject/ui-kit';
 
 const NotificationSettings = ({
   allNotificationsEnabled,
   toggleNotifications,
 }) => (
-  <PaddedView>
-    <Switch
-      value={allNotificationsEnabled}
-      label={'Notifications'}
-      onValueChange={() => {
-        toggleNotifications();
-      }}
-    />
-  </PaddedView>
+  <BackgroundView>
+    <PaddedView>
+      <Switch
+        value={allNotificationsEnabled}
+        label={'Notifications'}
+        onValueChange={() => {
+          toggleNotifications();
+        }}
+      />
+    </PaddedView>
+  </BackgroundView>
 );
 
 NotificationSettings.propTypes = {
