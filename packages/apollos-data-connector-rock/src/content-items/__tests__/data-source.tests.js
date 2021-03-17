@@ -57,22 +57,21 @@ describe('ContentItemsModel', () => {
     expect(new ContentItemsDataSource()).toBeTruthy();
   });
 
-  it('creates a sharing URL with channel url and item slug', async () => {
+  it('creates a sharing URL with item slug', async () => {
     const dataSource = new ContentItemsDataSource();
-    dataSource.context = {
-      dataSources: {
-        ContentChannel: {
-          getFromId: jest.fn(() => ({
-            itemUrl: '/news',
-          })),
-        },
-      },
-    };
-    dataSource.get = jest.fn(() => ({ slug: 'cool-article' }));
-    const result = 'https://apollorock.newspring.cc/news/cool-article';
-    expect(
-      dataSource.getShareUrl({ contentId: 'fakeId', channelId: 'fakeChannel' })
-    ).resolves.toEqual(result);
+    dataSource.request = () => ({
+      filter: () => ({
+        cache: () => ({
+          first: () => ({ slug: 'cool-article' }),
+        }),
+      }),
+    });
+    const result = 'https://apollorock.newspring.cc/cool-article';
+    const url = await dataSource.getShareUrl({
+      contentId: 1,
+      baseUrl: 'https://apollorock.newspring.cc',
+    });
+    expect(url).toEqual(result);
   });
 
   it('filters by content channel id', () => {

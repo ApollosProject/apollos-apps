@@ -106,7 +106,10 @@ export const createContext = (data) => ({ req = {} } = {}) => {
   // For all non-datasource connectors. Right now only `Node`.
   const models = getModels(data);
   let context = {
-    requestUrl: `${req.protocol}://${req.headers.host}`,
+    requestUrl:
+      req.protocal && req.headers
+        ? `${req.protocol}://${req.headers.host}`
+        : '',
     models: initiatedModels,
   };
 
