@@ -30,9 +30,13 @@ const ConnectScreenConnected = (props) => {
   const handleRefetch = async () => {
     if (!isRefetching) {
       setIsRefetching(true);
-      await Promise.all(
-        Object.values(refetchFunctions).map((refetchFn) => refetchFn())
-      );
+      try {
+        await Promise.all(
+          Object.values(refetchFunctions).map((refetchFn) => refetchFn())
+        );
+      } catch (e) {
+        console.warn(e);
+      }
       setIsRefetching(false);
     }
   };
