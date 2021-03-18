@@ -1,7 +1,15 @@
+import Sequelize from 'sequelize';
+
 async function up({ context: queryInterface }) {
-  await queryInterface.sequelize.query(
-    `CREATE index in_people_firstName_and_lastName ON people USING gin (lower("firstName" || ' ' || "lastName") gin_trgm_ops)`
-  );
+  await queryInterface.addIndex('people', {
+    name: 'in_people_firstName_and_lastName',
+    using: 'gin',
+    fields: [
+      Sequelize.literal(
+        'lower("firstName" || \' \' || "lastName") gin_trgm_ops'
+      ),
+    ],
+  });
 }
 
 async function down({ context: queryInterface }) {
