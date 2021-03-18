@@ -4,8 +4,11 @@ async function up({ context: queryInterface }) {
   );
 }
 
-async function down() {
-  // no
+async function down({ context: queryInterface }) {
+  await queryInterface.sequelize.removeIndex(
+    'people',
+    'in_people_firstName_and_lastName'
+  );
 }
 
 const name = '003-add-name-index';
