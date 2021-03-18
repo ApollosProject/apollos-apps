@@ -92,7 +92,6 @@ class NotificationsInit extends Component {
   };
 
   onOpened = (openResult) => {
-    console.log(openResult);
     console.log('Message: ', openResult.notification.payload.body);
     console.log('Data: ', openResult.notification.payload.additionalData);
     console.log('isActive: ', openResult.notification.isAppInFocus);
