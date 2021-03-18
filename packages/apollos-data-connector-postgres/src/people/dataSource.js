@@ -1,5 +1,7 @@
 import { AuthenticationError } from 'apollo-server';
 import { camelCase } from 'lodash';
+import Sequelize, { Op } from 'sequelize';
+import { parseCursor, createCursor } from '@apollosproject/server-core';
 
 import { PostgresDataSource } from '../postgres';
 
@@ -65,6 +67,33 @@ export default class Person extends PostgresDataSource {
 
     return this.model.findOne({ where });
   };
+
+  async byPaginatedQuery({ name, after, first = 20 }) {
+    const length = first;
+    let offset = 0;
+    if (after) {
+      const parsed = parseCursor(after);
+      if (parsed && Object.hasOwnProperty.call(parsed, 'position')) {
+        offset = parsed.position + 1;
+      } else {
+        throw new Error(`An invalid 'after' cursor was provided: ${after}`);
+      }
+    }
+    const people = await this.model.findAll({
+      where: {
+        [Op.and]: Sequelize.literal(
+          `lower("firstName" || ' ' || "lastName") LIKE ${this.sequelize.escape(
+            `%${name.toLowerCase()}%`
+          )}`
+        ),
+      },
+    });
+    console.log(people);
+    return people.map((node, i) => ({
+      node,
+      cursor: createCursor({ position: i + offset }),
+    }));
+  }
 
   // Returns a where clause that will find the current person
   // Raise an error if the current person doesn't exist
