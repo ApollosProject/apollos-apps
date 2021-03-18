@@ -3,7 +3,3 @@
 exports[`Apollos Postgres FollowRequest DataSource should throw an error when passing a non-uuid to getStaticSuggestedFollowsFor 1`] = `[Error: ID 1 is not a valid UUID. You are probably passing a Rock (or other) id to getStaticSuggestedFollowsFor when it expects a Postgres UUID.]`;
 
 exports[`Apollos Postgres FollowRequest DataSource should throw an error when passing a non-uuid to getStaticSuggestedFollowsFor 2`] = `[Error: ID 1 is not a valid UUID. You are probably passing a Rock (or other) id to getStaticSuggestedFollowsFor when it expects a Postgres UUID.]`;
-
-exports[`Apollos Postgres FollowRequest DataSource should throw an error when passing a non-uuid to getStaticSuggestedFollowsFor 3`] = `[Error: ID 1 is not a valid UUID. You are probably passing a Rock (or other) id to getStaticSuggestedFollowsFor when it expects a Postgres UUID.]`;
-
-exports[`Apollos Postgres FollowRequest DataSource should throw an error when passing a non-uuid to getStaticSuggestedFollowsFor 4`] = `[Error: ID 1 is not a valid UUID. You are probably passing a Rock (or other) id to getStaticSuggestedFollowsFor when it expects a Postgres UUID.]`;

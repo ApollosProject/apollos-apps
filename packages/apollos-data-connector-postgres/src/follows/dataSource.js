@@ -61,11 +61,18 @@ class Follow extends PostgresDataSource {
       // If a request already exists that was denied, update it as a new request.
       return existingFollow.update({ state: FollowState.REQUESTED });
     }
+
+    let initialState = FollowState.REQUESTED;
+
+    // Automatically accept requests to follow suggested people
+    const suggested = await this.getStaticSuggestedFollowsForCurrentPerson();
+    if (suggested.some((s) => s.id === id)) initialState = FollowState.ACCEPTED;
+
     // There was no existing request, so lets make one.
     return this.model.create({
       requestPersonId: currentPersonId,
       followedPersonId: id,
-      state: FollowState.REQUESTED,
+      state: initialState,
     });
   }
 
