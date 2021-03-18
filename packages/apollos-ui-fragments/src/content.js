@@ -71,6 +71,7 @@ const CONTENT_ITEM_FRAGMENT = gql`
   }
 `;
 
+// TODO: deprecated
 const CONTENT_SINGLE_FRAGMENT = gql`
   fragment ContentSingleFragment on ContentItem {
     title

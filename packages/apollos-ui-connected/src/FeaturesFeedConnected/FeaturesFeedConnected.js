@@ -9,7 +9,9 @@ import featuresFeedComponentMapper from './featuresFeedComponentMapper';
 import GET_FEATURE_FEED from './getFeatureFeed';
 
 export const ACTION_MAP = {
+  // TODO: READ_CONTENT deprecated
   READ_CONTENT: ({ navigation, relatedNode }) => {
+    console.warn('READ_CONTENT action deprecated use OPEN_NODE');
     navigation.navigate('ContentSingle', {
       itemId: relatedNode.id,
       transitionKey: 2,

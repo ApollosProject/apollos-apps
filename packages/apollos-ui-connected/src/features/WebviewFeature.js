@@ -15,6 +15,7 @@ const StyledCard = styled(
     overflow: 'hidden',
     ...Platform.select(theme.shadows.default),
   }),
+  // TODO: deprecated, remove ContentSingleFeaturesConnected from name
   'ui-connected.ContentSingleFeaturesConnected.WebviewFeature.StyledCard'
 )(View);
 
@@ -22,6 +23,7 @@ const StyledWebView = styled(
   () => ({
     flex: 1,
   }),
+  // TODO: deprecated, remove ContentSingleFeaturesConnected from name
   'ui-connected.ContentSingleFeaturesConnected.WebviewFeature.StyledWebView'
 )(WebView);
 
@@ -30,6 +32,7 @@ const StyledH3 = styled(
     paddingHorizontal: theme.sizing.baseUnit,
     color: theme.colors.screen,
   }),
+  // TODO: deprecated, remove ContentSingleFeaturesConnected from name
   'ui-connected.ContentSingleFeaturesConnected.WebviewFeature.StyledH3'
 )(H3);
 
@@ -38,6 +41,7 @@ const StyledText = styled(
     color: theme.colors.secondary,
     paddingHorizontal: theme.sizing.baseUnit,
   }),
+  // TODO: deprecated, remove ContentSingleFeaturesConnected from name
   'ui-connected.ContentSingleFeaturesConnected.WebviewFeature.StyledText'
 )(UIText);
 
@@ -45,6 +49,7 @@ const StyledSideBySideView = styled(
   () => ({
     alignItems: 'center',
   }),
+  // TODO: deprecated, remove ContentSingleFeaturesConnected from name
   'ui-connected.ContentSingleFeaturesConnected.WebviewFeature.StyledSideBySideView'
 )(SideBySideView);
 

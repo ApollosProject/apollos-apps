@@ -106,7 +106,7 @@ storiesOf('ui-htmlview/HTMLView', module)
         <HTMLView>
           {`
             <p>A normal HTTP <a href="http://example.com">link</a></p>
-            <p>A content deep <a href="apolloschurchapp://navigate/ContentSingle?itemId=?WeekendContentItem:cdfcef9941c7140b303251714b9b7ecd">link</a></p>
+            <p>A content deep <a href="apolloschurchapp://navigate/NodeSingle?nodeId=?WeekendContentItem:cdfcef9941c7140b303251714b9b7ecd">link</a></p>
             <p>How about a <a href="mailto:vincent@differential.com">mailto? </a></p>
             `}
         </HTMLView>

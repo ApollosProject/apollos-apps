@@ -94,7 +94,7 @@ class NotificationsInit extends Component {
     // URL looks like this
     // apolloschurchapp://AppStackNavigator/Connect
     // apolloschurchapp://SomethingElse/Connect
-    // apolloschurchapp://SomethingElse/ContentSingle?itemId=SomeItemId:blablalba
+    // apolloschurchapp://SomethingElse/NodeSingle?nodeId=SomeItemId:blablalba
     const url = get(openResult, 'notification.payload.additionalData.url');
     if (url) {
       this.navigate(url);

@@ -83,7 +83,7 @@ const UpNextButtonConnected = ({
             disabled={finishedSeries}
             onPress={
               !finishedSeries && !loading
-                ? () => navigation.push('ContentSingle', { itemId: upNextId })
+                ? () => navigation.push('NodeSingle', { nodeId: upNextId })
                 : null
             }
           >

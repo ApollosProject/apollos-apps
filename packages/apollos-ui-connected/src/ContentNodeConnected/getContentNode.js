@@ -6,6 +6,7 @@ export default gql`
     node(id: $nodeId) {
       id
       ...ContentNodeFragment
+      # TODO: ContentSingleFragment deprecated
       ...ContentSingleFragment
     }
   }

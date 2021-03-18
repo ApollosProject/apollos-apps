@@ -36,12 +36,9 @@ class LikedContentFeedConnected extends PureComponent {
     Component: FeedView,
   };
 
-  /** Function that is called when a card in the feed is pressed.
-   * Takes the user to the ContentSingle
-   */
   handleOnPress = (item) =>
-    this.props.navigation.navigate('ContentSingle', {
-      itemId: item.id,
+    this.props.navigation.navigate('NodeSingle', {
+      nodeId: item.id,
       sharing: item.sharing,
     });
 

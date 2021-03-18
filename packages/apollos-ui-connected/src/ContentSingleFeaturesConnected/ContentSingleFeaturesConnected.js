@@ -29,16 +29,16 @@ const ContentSingleFeaturesConnected = ({
         const features = get(node, 'features', []);
         if (!features || !features.length) return null;
 
+        // TODO deprecated
+        console.warn(
+          'ContentSingleFeaturesConnected is deprecated. Please use ContentFeatureFeedConnected.'
+        );
         return (
-          console.warn(
-            'ContentSingleFeaturesConnected is deprecated. Please use ContentFeatureFeedConnected.'
-          ) || (
-            <Component
-              contentId={contentId || nodeId}
-              features={features}
-              {...props}
-            />
-          )
+          <Component
+            contentId={contentId || nodeId}
+            features={features}
+            {...props}
+          />
         );
       }}
     </Query>

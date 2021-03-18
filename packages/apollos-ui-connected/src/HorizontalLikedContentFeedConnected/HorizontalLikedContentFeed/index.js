@@ -96,8 +96,8 @@ class HorizontalLikedContentFeed extends Component {
     return (
       <TouchableScale
         onPress={() => {
-          this.props.navigation.push('ContentSingle', {
-            itemId: item.id,
+          this.props.navigation.push('NodeSingle', {
+            nodeId: item.id,
           });
         }}
       >

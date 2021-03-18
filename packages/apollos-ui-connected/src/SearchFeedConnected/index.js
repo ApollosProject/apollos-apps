@@ -22,8 +22,8 @@ const StyledFeedView = withProps(({ hasContent }) => ({
 
 const handleOnPress = ({ navigation, item }) => {
   const id = get(item, 'node.id', null);
-  return navigation.navigate('ContentSingle', {
-    itemId: id,
+  return navigation.navigate('NodeSingle', {
+    nodeId: id,
     transitionKey: item.transitionKey,
   });
 };

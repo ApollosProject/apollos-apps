@@ -25,7 +25,7 @@ storiesOf('ui-connected/safeOpenUrl', module)
         title="Open App Deep Link"
         onPress={() =>
           safeOpenUrl(
-            'apolloschurchapp://navigate/ContentSingle?itemId=?WeekendContentItem:cdfcef9941c7140b303251714b9b7ecd'
+            'apolloschurchapp://navigate/NodeSingle?nodeId=?WeekendContentItem:cdfcef9941c7140b303251714b9b7ecd'
           )
         }
       />

@@ -72,8 +72,8 @@ class HorizontalFeedConnected extends Component {
   };
 
   handleOnPressItem = (item) => {
-    this.props.navigation.push('ContentSingle', {
-      itemId: item.id,
+    this.props.navigation.push('NodeSingle', {
+      nodeId: item.id,
     });
   };
 
