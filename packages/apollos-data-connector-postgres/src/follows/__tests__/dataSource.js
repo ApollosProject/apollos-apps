@@ -318,6 +318,69 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     ]);
   });
 
+  it('should get a suggested people by id if specified', async () => {
+    const followDataSource = new FollowDataSource();
+    followDataSource.initialize({ context });
+    // Lengthy setup :g
+    await sequelize.models.people.create({
+      originId: '1',
+      originType: 'rock',
+      firstName: 'Jim',
+      lastName: 'Bob',
+      email: 'jim@bob.com',
+    });
+    const dupe = await sequelize.models.people.create({
+      originId: '2',
+      originType: 'rock',
+      firstName: 'Vincent',
+      lastName: 'Wilson',
+      email: 'vin@wil.com',
+    });
+    await sequelize.models.people.create({
+      originId: '3',
+      originType: 'rock',
+      firstName: 'Nick',
+      lastName: 'Offerman',
+      email: 'nick@offer.man',
+    });
+    await sequelize.models.people.create({
+      originId: '4',
+      originType: 'rock',
+      firstName: 'Don',
+      lastName: "T'Include",
+      email: 'vin@wil.com', // same email as user 2
+    });
+    ApollosConfig.loadJs({
+      SUGGESTED_FOLLOWS: [
+        'nick@offer.man',
+        {
+          id: dupe.id,
+          email: 'vin@wil.com',
+        },
+        {
+          email: 'jim@bob.com',
+        },
+      ],
+    });
+
+    const me = await sequelize.models.people.create({
+      originId: '5',
+      originType: 'rock',
+      firstName: 'Me',
+      lastName: 'Myself',
+    });
+
+    const suggestedFollowers = await followDataSource.getStaticSuggestedFollowsFor(
+      me
+    );
+
+    expect(suggestedFollowers.map(({ firstName }) => firstName)).toEqual([
+      'Jim',
+      'Vincent',
+      'Nick',
+    ]);
+  });
+
   it("should get a user's list of sugggested people to follow if they have no campus", async () => {
     const followDataSource = new FollowDataSource();
     followDataSource.initialize({ context });
