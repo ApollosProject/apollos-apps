@@ -66,8 +66,7 @@ class Follow extends PostgresDataSource {
 
     // Automatically accept requests to follow suggested people
     const suggested = await this.getStaticSuggestedFollowsForCurrentPerson();
-    if (suggested.some((s) => s.id === id)
-      initialState = FollowState.ACCEPTED;
+    if (suggested.some((s) => s.id === id)) initialState = FollowState.ACCEPTED;
 
     // There was no existing request, so lets make one.
     return this.model.create({
