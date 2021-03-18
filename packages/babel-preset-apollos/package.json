@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=10.x.x"
   },
-  "version": "2.3.1",
+  "version": "2.4.0",
   "main": "./index.js",
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "7.4.0",

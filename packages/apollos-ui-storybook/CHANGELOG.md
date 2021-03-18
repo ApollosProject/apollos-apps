@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.0](https://github.com/apollosproject/apollos-apps/compare/v2.3.1...v2.4.0) (2021-03-18)
+
+
+### Features
+
+* add notification settings ([#1764](https://github.com/apollosproject/apollos-apps/issues/1764)) ([ac590ac](https://github.com/apollosproject/apollos-apps/commit/ac590acc94c6f1d39039fc58eabf94f7cc12575c))
+
+
+
 ### [2.3.1](https://github.com/apollosproject/apollos-apps/compare/v2.3.0...v2.3.1) (2021-03-11)
 
 **Note:** Version bump only for package @apollosproject/ui-storybook

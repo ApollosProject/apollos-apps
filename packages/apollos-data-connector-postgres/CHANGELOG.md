@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.0](https://github.com/apollosproject/apollos-apps/compare/v2.3.1...v2.4.0) (2021-03-18)
+
+
+### Features
+
+* Adds Postgres migrations ([#1791](https://github.com/apollosproject/apollos-apps/issues/1791)) ([eb115b6](https://github.com/apollosproject/apollos-apps/commit/eb115b616eaa6f1a69c5c0701bbb8dd99e0b4dbe))
+* Adds RequestedFollowsList  ([#1792](https://github.com/apollosproject/apollos-apps/issues/1792)) ([b855156](https://github.com/apollosproject/apollos-apps/commit/b85515670375785deb366c787819020656aee29c))
+* Sort users you follow to the top ([#1801](https://github.com/apollosproject/apollos-apps/issues/1801)) ([d6360a4](https://github.com/apollosproject/apollos-apps/commit/d6360a49fa60d34b0dc1f870b16a05458b8e428a))
+
+
+### Bug Fixes
+
+* Upgrades and fixes for comments ([#1800](https://github.com/apollosproject/apollos-apps/issues/1800)) ([b77dbc2](https://github.com/apollosproject/apollos-apps/commit/b77dbc28af621190173e7c82e0e4295abc047109))
+
+
+
 ### [2.3.1](https://github.com/apollosproject/apollos-apps/compare/v2.3.0...v2.3.1) (2021-03-11)
 
 **Note:** Version bump only for package @apollosproject/data-connector-postgres
