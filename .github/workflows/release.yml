@@ -67,7 +67,7 @@ jobs:
   templates:
 
     needs: npm
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -86,7 +86,7 @@ jobs:
   upgrade-tool:
 
     needs: templates
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v2
