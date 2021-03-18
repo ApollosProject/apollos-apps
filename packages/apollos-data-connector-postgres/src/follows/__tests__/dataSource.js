@@ -408,8 +408,10 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     expect(suggestedFollowers.map(({ email }) => email)).toEqual([]);
   });
+
   it('should throw an error when passing a non-uuid to getStaticSuggestedFollowsFor', async () => {
     const followDataSource = new FollowDataSource();
+
     followDataSource.initialize({ context });
     const invalidCampus = followDataSource.getStaticSuggestedFollowsFor({
       campusId: 1,
@@ -456,18 +458,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     expect(suggestedFollowers).toEqual([]);
   });
-  it('should throw an error when passing a non-uuid to getStaticSuggestedFollowsFor', async () => {
-    const followDataSource = new FollowDataSource();
 
-    followDataSource.initialize({ context });
-    const invalidCampus = followDataSource.getStaticSuggestedFollowsFor({
-      campusId: 1,
-    });
-    await expect(invalidCampus).rejects.toMatchSnapshot();
-
-    const invalidId = followDataSource.getStaticSuggestedFollowsFor({ id: 1 });
-    await expect(invalidId).rejects.toMatchSnapshot();
-  });
   it('should return list of users requesting to follow the current user', async () => {
     const followDataSource = new FollowDataSource();
 
