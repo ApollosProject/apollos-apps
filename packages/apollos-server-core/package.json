@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=10.x.x"
   },
-  "version": "2.3.1",
+  "version": "2.4.0",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
@@ -28,7 +28,7 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@apollosproject/data-schema": "^2.3.1",
+    "@apollosproject/data-schema": "^2.4.0",
     "apollo-server-caching": "^0.4.0",
     "bull": "^3.11.0",
     "bull-board": "^0.1.1",
@@ -41,7 +41,7 @@
     "apollo-server": "^2.11.0"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^2.3.1",
+    "@apollosproject/babel-preset-apollos": "^2.4.0",
     "casual": "^1.5.19"
   },
   "license": "SEE LICENSE IN LICENSE.md",
