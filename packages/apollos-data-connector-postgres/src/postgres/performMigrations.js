@@ -1,11 +1,10 @@
 import { flatten } from 'lodash';
 import { Umzug, SequelizeStorage } from 'umzug';
-import AddUuidExtension000 from './migrations/000_add_uuid_extension';
+import systemMigrations from './migrations';
 import { sequelize } from './index';
 
 const createMigrationRunner = async ({ migrations }) => {
-  const migrationsToRun = flatten(migrations);
-  migrationsToRun.unshift(AddUuidExtension000);
+  const migrationsToRun = flatten([...systemMigrations, ...migrations]);
 
   migrationsToRun.sort((a, b) => (a.order < b.order ? -1 : 1));
 
