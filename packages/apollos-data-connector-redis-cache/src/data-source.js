@@ -27,13 +27,7 @@ export default class Cache extends DataSource {
   DEFAULT_TIMEOUT = 86400;
 
   safely = async (func) => {
-    if (!this.redis) {
-      console.log('NO REDIS');
-      console.warn(
-        'Redis is not running. Cache dataSource methods will only return null'
-      );
-      return null;
-    }
+    if (!this.redis) return null;
     try {
       // Redundent assignment because it makes sure the error is captured.
       const result = await func();
