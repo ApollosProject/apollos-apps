@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.0](https://github.com/ApollosProject/apollos-apps/compare/v2.3.1...v2.4.0) (2021-03-18)
+
+
+### Features
+
+* add notification settings ([#1764](https://github.com/ApollosProject/apollos-apps/issues/1764)) ([ac590ac](https://github.com/ApollosProject/apollos-apps/commit/ac590acc94c6f1d39039fc58eabf94f7cc12575c))
+* Adds Postgres migrations ([#1791](https://github.com/ApollosProject/apollos-apps/issues/1791)) ([eb115b6](https://github.com/ApollosProject/apollos-apps/commit/eb115b616eaa6f1a69c5c0701bbb8dd99e0b4dbe))
+* Adds RequestedFollowsList  ([#1792](https://github.com/ApollosProject/apollos-apps/issues/1792)) ([b855156](https://github.com/ApollosProject/apollos-apps/commit/b85515670375785deb366c787819020656aee29c))
+* Pull to refresh on the connect tab ([#1803](https://github.com/ApollosProject/apollos-apps/issues/1803)) ([3d0b4a8](https://github.com/ApollosProject/apollos-apps/commit/3d0b4a83b7f8b90a5d22018494f4efa51c3aa29e))
+* Sort users you follow to the top ([#1801](https://github.com/ApollosProject/apollos-apps/issues/1801)) ([d6360a4](https://github.com/ApollosProject/apollos-apps/commit/d6360a49fa60d34b0dc1f870b16a05458b8e428a))
+
+
+### Bug Fixes
+
+* gender auth onboarding issue ([#1782](https://github.com/ApollosProject/apollos-apps/issues/1782)) ([cc85dfe](https://github.com/ApollosProject/apollos-apps/commit/cc85dfe37b43d95b1baeaf2619ec6bd3a59757c1))
+* Unpressable onboarding buttons ([#1797](https://github.com/ApollosProject/apollos-apps/issues/1797)) ([c15555a](https://github.com/ApollosProject/apollos-apps/commit/c15555abf014fcd804f897d0a5dd840970870924))
+* Upgrades and fixes for comments ([#1800](https://github.com/ApollosProject/apollos-apps/issues/1800)) ([b77dbc2](https://github.com/ApollosProject/apollos-apps/commit/b77dbc28af621190173e7c82e0e4295abc047109))
+
+
+
 ### [2.3.1](https://github.com/ApollosProject/apollos-apps/compare/v2.3.0...v2.3.1) (2021-03-11)
 
 **Note:** Version bump only for package apollos
