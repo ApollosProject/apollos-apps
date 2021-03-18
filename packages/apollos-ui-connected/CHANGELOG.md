@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.0](https://github.com/apollosproject/apollos-apps/compare/v2.3.1...v2.4.0) (2021-03-18)
+
+
+### Features
+
+* Adds RequestedFollowsList  ([#1792](https://github.com/apollosproject/apollos-apps/issues/1792)) ([b855156](https://github.com/apollosproject/apollos-apps/commit/b85515670375785deb366c787819020656aee29c))
+* Pull to refresh on the connect tab ([#1803](https://github.com/apollosproject/apollos-apps/issues/1803)) ([3d0b4a8](https://github.com/apollosproject/apollos-apps/commit/3d0b4a83b7f8b90a5d22018494f4efa51c3aa29e))
+
+
+### Bug Fixes
+
+* Upgrades and fixes for comments ([#1800](https://github.com/apollosproject/apollos-apps/issues/1800)) ([b77dbc2](https://github.com/apollosproject/apollos-apps/commit/b77dbc28af621190173e7c82e0e4295abc047109))
+
+
+
 ### [2.3.1](https://github.com/apollosproject/apollos-apps/compare/v2.3.0...v2.3.1) (2021-03-11)
 
 **Note:** Version bump only for package @apollosproject/ui-connected

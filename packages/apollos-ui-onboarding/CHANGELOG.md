@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.0](https://github.com/apollosproject/apollos-apps/compare/v2.3.1...v2.4.0) (2021-03-18)
+
+
+### Features
+
+* add notification settings ([#1764](https://github.com/apollosproject/apollos-apps/issues/1764)) ([ac590ac](https://github.com/apollosproject/apollos-apps/commit/ac590acc94c6f1d39039fc58eabf94f7cc12575c))
+* Adds RequestedFollowsList  ([#1792](https://github.com/apollosproject/apollos-apps/issues/1792)) ([b855156](https://github.com/apollosproject/apollos-apps/commit/b85515670375785deb366c787819020656aee29c))
+
+
+### Bug Fixes
+
+* Unpressable onboarding buttons ([#1797](https://github.com/apollosproject/apollos-apps/issues/1797)) ([c15555a](https://github.com/apollosproject/apollos-apps/commit/c15555abf014fcd804f897d0a5dd840970870924))
+
+
+
 ### [2.3.1](https://github.com/apollosproject/apollos-apps/compare/v2.3.0...v2.3.1) (2021-03-11)
 
 **Note:** Version bump only for package @apollosproject/ui-onboarding

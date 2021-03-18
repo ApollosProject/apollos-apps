@@ -4,13 +4,13 @@
   "engines": {
     "node": ">=10.x.x"
   },
-  "version": "2.3.1",
+  "version": "2.4.0",
   "main": "lib/index.js",
   "scripts": {
     "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^2.3.1",
+    "@apollosproject/babel-preset-apollos": "^2.4.0",
     "jest-fetch-mock": "^2.0.0"
   },
   "license": "SEE LICENSE IN LICENSE.md",

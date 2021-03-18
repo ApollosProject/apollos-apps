@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=10.x.x"
   },
-  "version": "2.3.1",
+  "version": "2.4.0",
   "main": "lib/index.js",
   "react-native": "react-native/index.js",
   "files": [
@@ -37,7 +37,7 @@
     ]
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^2.3.1",
+    "@apollosproject/babel-preset-apollos": "^2.4.0",
     "react-native-config": "0.11.7"
   },
   "peerDependencies": {

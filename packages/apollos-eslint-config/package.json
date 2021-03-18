@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=10.x.x"
   },
-  "version": "2.3.1",
+  "version": "2.4.0",
   "main": "./index.js",
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
