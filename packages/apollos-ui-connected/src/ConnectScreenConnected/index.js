@@ -62,7 +62,7 @@ const ConnectScreenConnected = (props) => {
             <SuggestedFollowListConnected
               refetchRef={refetchRef}
               onPressFollowListButton={() => setModalOpen(true)}
-              followListButtonTitle={'Find People to People'}
+              followListButtonTitle={'Find People to Follow'}
             />
 
             <HorizontalLikedContentFeedConnected />
