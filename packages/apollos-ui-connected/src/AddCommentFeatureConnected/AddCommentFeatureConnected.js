@@ -2,6 +2,7 @@ import React from 'react';
 import { useMutation, useQuery } from '@apollo/client';
 import PropTypes from 'prop-types';
 import { AddCommentInput } from '@apollosproject/ui-kit';
+import { Platform } from 'react-native';
 
 import GET_NODE_FEATURE_FEED from '../FeaturesFeedConnected/getFeatureFeed';
 import GET_NODE_FEATURES from '../NodeFeaturesConnected/getNodeFeatures';
@@ -85,6 +86,7 @@ const AddCommentFeatureConnected = ({
     <Component
       {...node}
       {...props}
+      openBottomSheetOnMount
       loading={isLoading || loading}
       onSubmit={(text, visibility) =>
         addComment({

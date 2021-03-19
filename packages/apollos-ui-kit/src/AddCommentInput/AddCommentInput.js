@@ -192,7 +192,6 @@ const StyledTextInput = withTheme(({ theme }) => ({
 const AddCommentInput = ({
   prompt = 'What stands out to you?',
   openBottomSheetOnMount = true,
-  showInlinePrompt = false,
   dismissEditorOnPanDown = false,
   onSubmit,
   profile,
@@ -200,11 +199,7 @@ const AddCommentInput = ({
   const [currentText, setCurrentText] = useState('');
   const [confirmModalOpen, setConfirmModalOpen] = useState(false);
   const [share, setShare] = useState('PRIVATE');
-
-  const onPressSave = async () => {
-    onSubmit && (await onSubmit(currentText, share)); // eslint-disable-line no-unused-expressions
-    setConfirmModalOpen(false);
-  };
+  const [bottomSheetOpen, setBottomSheetOpen] = useState(false);
 
   // ref
   const bottomSheetModalRef = useRef(null);
@@ -213,23 +208,35 @@ const AddCommentInput = ({
   // variables
   const insets = useSafeAreaInsets();
   const handleHeight = 24; // todo: static from react-native-bottom-sheet
-  const snapPoints = useMemo(() => [54 + insets.bottom, '100%'], [
+  const initialSnapPoint = Platform.select({ ios: 54, android: 64 });
+  const snapPoints = useMemo(() => [initialSnapPoint + insets.bottom, '100%'], [
     insets.bottom,
   ]);
 
   // present on mount
   // todo: make this optional via a prop
   useEffect(() => {
-    if (openBottomSheetOnMount) bottomSheetModalRef.current?.present();
+    if (openBottomSheetOnMount) {
+      bottomSheetModalRef.current?.present();
+      setBottomSheetOpen(true);
+    }
   }, [openBottomSheetOnMount]);
 
   const handleStartWriting = useCallback(() => {
     bottomSheetModalRef.current?.expand();
+    setBottomSheetOpen(true);
   }, []);
 
   const handleStopWriting = useCallback(() => {
     bottomSheetModalRef.current?.collapse();
   }, []);
+
+  const onPressSave = async () => {
+    onSubmit && (await onSubmit(currentText, share)); // eslint-disable-line no-unused-expressions
+    bottomSheetModalRef.current?.close();
+    setConfirmModalOpen(false);
+    setBottomSheetOpen(false);
+  };
 
   const handleEditorChange = useCallback((index) => {
     if (!index) {
@@ -241,6 +248,7 @@ const AddCommentInput = ({
 
   const openModal = useCallback(() => {
     bottomSheetModalRef.current?.expand();
+    setBottomSheetOpen(true);
   }, []);
 
   return (
@@ -291,11 +299,11 @@ const AddCommentInput = ({
         </FlexedSafeAreaView>
       </BottomSheetModal>
 
-      {showInlinePrompt ? (
+      {!bottomSheetOpen ? (
         <Touchable onPress={openModal}>
           <AddCommentContainer>
             <CommentAvatar source={profile?.image} />
-            <AddCommentPrompt>{currentText || prompt}</AddCommentPrompt>
+            <AddCommentPrompt>{prompt}</AddCommentPrompt>
           </AddCommentContainer>
         </Touchable>
       ) : null}
@@ -344,7 +352,6 @@ AddCommentInput.propTypes = {
     nickName: PropTypes.string,
   }),
   openBottomSheetOnMount: PropTypes.bool,
-  showInlinePrompt: PropTypes.bool,
   dismissEditorOnPanDown: PropTypes.bool,
 };
 
