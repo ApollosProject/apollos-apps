@@ -566,6 +566,87 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                               !
                             </Text>
                           </View>
+                          <View
+                            style={
+                              Object {
+                                "paddingHorizontal": 16,
+                                "paddingVertical": 16,
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "marginBottom": 16,
+                                }
+                              }
+                            >
+                              <Text
+                                style={
+                                  Object {
+                                    "color": "#303030",
+                                    "fontFamily": "InterUI-Bold",
+                                    "fontSize": 16,
+                                    "lineHeight": 24,
+                                  }
+                                }
+                              >
+                                Suggested Followers
+                              </Text>
+                            </View>
+                            <View
+                              accessible={true}
+                              focusable={true}
+                              onClick={[Function]}
+                              onResponderGrant={[Function]}
+                              onResponderMove={[Function]}
+                              onResponderRelease={[Function]}
+                              onResponderTerminate={[Function]}
+                              onResponderTerminationRequest={[Function]}
+                              onStartShouldSetResponder={[Function]}
+                              style={
+                                Object {
+                                  "opacity": 1,
+                                }
+                              }
+                            >
+                              <View
+                                bordered={true}
+                                disabled={false}
+                                pill={false}
+                                style={
+                                  Object {
+                                    "alignItems": "center",
+                                    "backgroundColor": "transparent",
+                                    "borderColor": "#A5A5A5",
+                                    "borderRadius": 16,
+                                    "borderWidth": 2,
+                                    "flexDirection": "row",
+                                    "height": 48,
+                                    "justifyContent": "center",
+                                    "marginTop": 8,
+                                    "opacity": 1,
+                                    "overflow": "hidden",
+                                    "paddingHorizontal": 16,
+                                    "width": "100%",
+                                  }
+                                }
+                              >
+                                <Text
+                                  style={
+                                    Object {
+                                      "color": "#A5A5A5",
+                                      "fontFamily": "InterUI-Bold",
+                                      "fontSize": 16,
+                                      "lineHeight": 24,
+                                    }
+                                  }
+                                >
+                                  Find People to Follow
+                                </Text>
+                              </View>
+                            </View>
+                          </View>
                         </View>
                       </RCTScrollView>
                     </View>
@@ -1636,6 +1717,87 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                           <Text>
                             Action Bar
                           </Text>
+                          <View
+                            style={
+                              Object {
+                                "paddingHorizontal": 16,
+                                "paddingVertical": 16,
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "marginBottom": 16,
+                                }
+                              }
+                            >
+                              <Text
+                                style={
+                                  Object {
+                                    "color": "#303030",
+                                    "fontFamily": "InterUI-Bold",
+                                    "fontSize": 16,
+                                    "lineHeight": 24,
+                                  }
+                                }
+                              >
+                                Suggested Followers
+                              </Text>
+                            </View>
+                            <View
+                              accessible={true}
+                              focusable={true}
+                              onClick={[Function]}
+                              onResponderGrant={[Function]}
+                              onResponderMove={[Function]}
+                              onResponderRelease={[Function]}
+                              onResponderTerminate={[Function]}
+                              onResponderTerminationRequest={[Function]}
+                              onStartShouldSetResponder={[Function]}
+                              style={
+                                Object {
+                                  "opacity": 1,
+                                }
+                              }
+                            >
+                              <View
+                                bordered={true}
+                                disabled={false}
+                                pill={false}
+                                style={
+                                  Object {
+                                    "alignItems": "center",
+                                    "backgroundColor": "transparent",
+                                    "borderColor": "#A5A5A5",
+                                    "borderRadius": 16,
+                                    "borderWidth": 2,
+                                    "flexDirection": "row",
+                                    "height": 48,
+                                    "justifyContent": "center",
+                                    "marginTop": 8,
+                                    "opacity": 1,
+                                    "overflow": "hidden",
+                                    "paddingHorizontal": 16,
+                                    "width": "100%",
+                                  }
+                                }
+                              >
+                                <Text
+                                  style={
+                                    Object {
+                                      "color": "#A5A5A5",
+                                      "fontFamily": "InterUI-Bold",
+                                      "fontSize": 16,
+                                      "lineHeight": 24,
+                                    }
+                                  }
+                                >
+                                  Find People to Follow
+                                </Text>
+                              </View>
+                            </View>
+                          </View>
                           <Text>
                             Action Table
                           </Text>
