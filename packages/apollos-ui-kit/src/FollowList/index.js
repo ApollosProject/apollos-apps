@@ -87,7 +87,9 @@ class FollowList extends PureComponent {
 
     const { RenderAsCard } = this;
 
-    if (followers?.length === 0 && !isLoading) return null;
+    const showButton = onPressFollowListButton && followListButtonTitle;
+
+    if (followers?.length === 0 && !isLoading && !showButton) return null;
 
     return (
       <RenderAsCard>
@@ -115,7 +117,7 @@ class FollowList extends PureComponent {
               />
             );
           })}
-          {onPressFollowListButton && followListButtonTitle ? (
+          {showButton ? (
             <FullWidthButton
               title={followListButtonTitle}
               type={'default'}
