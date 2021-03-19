@@ -9,6 +9,8 @@ import { withIsLoading } from '../isLoading';
 import Button from '../Button';
 
 import FollowListItem from './FollowListItem';
+import FollowListSearch from './FollowListSearch';
+import FollowListSearchModal from './FollowListSearch/FollowListSearchModal';
 
 const HeaderView = styled(
   ({ theme }) => ({
@@ -58,6 +60,10 @@ class FollowList extends PureComponent {
     onFollow: PropTypes.func,
     onHide: PropTypes.func,
     onConfirm: PropTypes.func,
+  };
+
+  static defaultProps = {
+    followers: [],
   };
 
   RenderAsCard = ({ children }) =>
@@ -124,5 +130,5 @@ class FollowList extends PureComponent {
   }
 }
 
-export { FollowListItem };
+export { FollowListItem, FollowListSearch, FollowListSearchModal };
 export default withIsLoading(FollowList);

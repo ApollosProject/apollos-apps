@@ -69,6 +69,9 @@ export default class Person extends PostgresDataSource {
   };
 
   async byPaginatedQuery({ name, after, first = 20 }) {
+    // logged out users can't search. fine by me!
+    const currentPersonId = await this.getCurrentPersonId();
+
     const length = first;
     let offset = 0;
     if (after) {
@@ -81,14 +84,35 @@ export default class Person extends PostgresDataSource {
     }
     const people = await this.model.findAll({
       where: {
-        [Op.and]: Sequelize.literal(
-          `lower("firstName" || ' ' || "lastName") LIKE ${this.sequelize.escape(
-            `%${name.toLowerCase()}%`
-          )}`
-        ),
+        [Op.and]: [
+          Sequelize.literal(
+            // using op.and here is weird, but there's not another good way to use a literal as a where statement
+            `lower("firstName" || ' ' || "lastName") LIKE ${this.sequelize.escape(
+              `%${name.toLowerCase()}%`
+            )}`
+          ),
+          { id: { [Op.ne]: currentPersonId } },
+        ],
       },
+      limit: length,
+      include: [
+        {
+          model: this.sequelize.models.follows,
+          as: 'followingRequests',
+          where: { requestPersonId: currentPersonId },
+          required: false,
+        },
+        {
+          model: this.sequelize.models.follows,
+          as: 'requestedFollows',
+          where: { requestPersonId: currentPersonId },
+          required: false,
+        },
+      ],
+      order: [['id', 'desc']], // arbitrary for now
+      offset,
     });
-    console.log(people);
+
     return people.map((node, i) => ({
       node,
       cursor: createCursor({ position: i + offset }),
@@ -117,8 +141,14 @@ export default class Person extends PostgresDataSource {
   };
 
   async getCurrentPersonId() {
+    if (this.context.currentPostgresPerson) {
+      return this.context.currentPostgresPerson.id;
+    }
     const currentPersonWhere = await this.whereCurrentPerson();
     const person = await this.model.findOne({ where: currentPersonWhere });
+    // cache the current user on the context. avoids oft repeated n+1 queries.
+    // this is a huge win, but we need to identify a more elegant way to do this in the future.
+    this.context.currentPostgresPerson = person;
     return person.id;
   }
 }
