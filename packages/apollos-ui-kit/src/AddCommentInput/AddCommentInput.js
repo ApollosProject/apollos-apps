@@ -189,6 +189,10 @@ const StyledTextInput = withTheme(({ theme }) => ({
   },
 }))(TextInput);
 
+const FlexedMaxHeightSafeAreaView = styled({
+  minHeight: '100%',
+})(FlexedSafeAreaView);
+
 const AddCommentInput = ({
   prompt = 'What stands out to you?',
   openBottomSheetOnMount = true,
@@ -271,10 +275,7 @@ const AddCommentInput = ({
         // has something to do with the component not re-rendering properly
         backgroundComponent={(props) => <ModalBackgroundView {...props} />} // eslint-disable-line react/jsx-props-no-spreading
       >
-        <FlexedSafeAreaView
-          style={{ minHeight: '100%' }}
-          edges={['right', 'bottom', 'left']}
-        >
+        <FlexedMaxHeightSafeAreaView edges={['right', 'bottom', 'left']}>
           <CommentInputContainer
             keyboardVerticalOffset={handleHeight + insets.top}
             behavior="padding"
@@ -296,7 +297,7 @@ const AddCommentInput = ({
               </NextButton>
             </EditorButtons>
           </CommentInputContainer>
-        </FlexedSafeAreaView>
+        </FlexedMaxHeightSafeAreaView>
       </BottomSheetModal>
 
       {!bottomSheetOpen ? (
