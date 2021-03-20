@@ -65,7 +65,9 @@ storiesOf('ui-kit/AddCommentInput', module)
           ) : (
             <AddCommentInput
               showInlinePrompt
-              onSubmit={() => new Promise(resolve => setTimeout(() => resolve(), 3000))}
+              onSubmit={() =>
+                new Promise((resolve) => setTimeout(() => resolve(), 3000))
+              }
               profile={{
                 photo: { uri: 'https://picsum.photos/200' },
                 nickName: 'Jeff Bridges',

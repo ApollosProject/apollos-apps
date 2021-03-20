@@ -81,7 +81,7 @@ const AddCommentInput = ({
         />
       </BottomSheetModal>
 
-      {!showInlinePrompt ? (
+      {showInlinePrompt ? (
         <Touchable onPress={openModal}>
           <Prompt image={profile.photo} prompt={prompt} />
         </Touchable>
