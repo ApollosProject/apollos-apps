@@ -140,11 +140,13 @@ const Editor = ({
           returnKeyType={Platform.OS === 'ios' ? 'default' : 'none'}
           // TextInputComponent={BottomSheetTextInput}
         />
-        <View
-          style={{
-            height: keyboardHeight,
-          }}
-        />
+        {keyboardHeight ? (
+          <View
+            style={{
+              height: keyboardHeight,
+            }}
+          />
+        ) : null}
       </CommentInputContainer>
     </ContainerScrollView>
   );
