@@ -49,6 +49,7 @@
     "@react-native-community/datetimepicker": "*",
     "@react-native-picker/picker": "*",
     "@react-navigation/native": "*",
+    "@react-navigation/stack": "^5.14.3",
     "react": "*",
     "react-native": "*",
     "react-native-gesture-handler": "*",
@@ -56,6 +57,7 @@
     "react-native-modal-datetime-picker": "*",
     "react-native-safe-area-context": "*",
     "react-native-svg": "*",
+    "react-native-screens": "*",
     "@gorhom/bottom-sheet": "*",
     "react-native-reanimated": "^2.0.0"
   },
@@ -68,12 +70,14 @@
     "react-native-modal-datetime-picker": "8.7.1",
     "react-native-tab-view": "1.0.2",
     "recompose": "^0.30.0",
-    "rn-placeholder": "1.2.0"
+    "rn-placeholder": "1.2.0",
+    "react-native-keyboard-avoiding-scroll-view": "1.0.1"
   },
   "devDependencies": {
     "@react-native-community/datetimepicker": "3.0.2",
     "@react-native-picker/picker": "^1.9.3",
-    "@react-navigation/native": "^5.6.1",
+    "@react-navigation/native": "^5.9.3",
+    "@react-navigation/stack": "^5.14.3",
     "jest": "^25.1.0",
     "jest-react-native": "18.0.0",
     "prop-types": "15.6.1",
