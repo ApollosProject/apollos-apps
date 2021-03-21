@@ -5,13 +5,10 @@ import FollowListSearch from '.';
 
 const FollowListSearchModal = ({
   onSearch,
-  onHide,
-  onConfirm,
-  onFollow,
-  results,
   open,
   setModalOpen,
   title,
+  ...props
 }) => {
   return (
     <Modal
@@ -24,13 +21,7 @@ const FollowListSearchModal = ({
         onNextText="Done"
         title={title}
       />
-      <FollowListSearch
-        onSearch={onSearch}
-        results={results}
-        onHide={onHide}
-        onConfirm={onConfirm}
-        onFollow={onFollow}
-      />
+      <FollowListSearch onSearch={onSearch} {...props} />
     </Modal>
   );
 };
@@ -49,10 +40,6 @@ FollowListSearchModal.propTypes = {
 FollowListSearchModal.defaultProps = {
   title: 'Find People to Follow',
   onSearch: () => {},
-  onHide: () => {},
-  onConfirm: () => {},
-  onFollow: () => {},
-  results: [],
   open: false,
 };
 

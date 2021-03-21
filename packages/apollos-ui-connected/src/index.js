@@ -39,6 +39,7 @@ export FollowListConnected, {
   RequestedFollowListConnected,
   GET_SUGGESTED_FOLLOWS,
 } from './FollowListConnected';
+export FollowListSearchModalConnected from './FollowListSearchModalConnected';
 export HeroListFeatureConnected, {
   HeroListFeature,
   GET_HERO_LIST_FEATURE,

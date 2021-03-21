@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
+import { View, ScrollView } from 'react-native';
 import FollowList from '..';
 import Search from '../../inputs/Search';
 import styled from '../../styled';
@@ -9,13 +9,7 @@ const SearchContainer = styled(({ theme }) => ({
   marginHorizontal: theme.sizing.baseUnit,
 }))(View);
 
-function FollowListSearch({
-  onSearch,
-  onHide,
-  onConfirm,
-  onFollow,
-  results = [],
-}) {
+function FollowListSearch({ onSearch, FollowListComponent, ...props }) {
   const [searchTimeout, setSearchTimeout] = useState();
   const [searchTimer, setSearchTimer] = useState(false);
   const [search, setSearch] = useState('');
@@ -44,12 +38,9 @@ function FollowListSearch({
           }}
         />
       </SearchContainer>
-      <FollowList
-        followers={results}
-        onHide={onHide}
-        onConfirm={onConfirm}
-        onFollow={onFollow}
-      />
+      <ScrollView>
+        <FollowListComponent {...props} />
+      </ScrollView>
     </>
   );
 }
@@ -59,15 +50,12 @@ FollowListSearch.propTypes = {
   onHide: PropTypes.func,
   onConfirm: PropTypes.func,
   onFollow: PropTypes.func,
-  results: PropTypes.arrayOf(PropTypes.object),
+  FollowListComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
 };
 
 FollowListSearch.defaultProps = {
   onSearch: () => {},
-  onHide: () => {},
-  onConfirm: () => {},
-  onFollow: () => {},
-  results: [],
+  FollowListComponent: FollowList,
 };
 
 export default FollowListSearch;

@@ -8,11 +8,19 @@ import { FollowState } from './model';
 class Follow extends PostgresDataSource {
   modelName = 'follows';
 
-  async getCurrentUserFollowingPerson({ id }) {
+  async getCurrentUserFollowingPerson({ id, followingRequests }) {
     assertUuid(id, 'getCurrentUserFollowingPerson');
 
     const { Person } = this.context.dataSources;
     const currentPersonId = await Person.getCurrentPersonId();
+
+    // Patch for eager loading data.
+    // Lets us skip a step if we have already joined
+    if (Array.isArray(followingRequests)) {
+      return followingRequests.find(
+        ({ requestPersonId }) => requestPersonId === currentPersonId
+      );
+    }
 
     return this.model.findOne({
       where: {
@@ -22,16 +30,24 @@ class Follow extends PostgresDataSource {
     });
   }
 
-  async getPersonFollowingCurrentUser({ id }) {
+  async getPersonFollowingCurrentUser({ id, requestedFollows }) {
     assertUuid(id, 'getPersonFollowingCurrentUser');
 
     const { Person } = this.context.dataSources;
     const currentPersonId = await Person.getCurrentPersonId();
 
+    // Patch for eager loading data.
+    // Lets us skip a step if we have already joined
+    if (Array.isArray(requestedFollows)) {
+      return requestedFollows.find(
+        ({ followedPersonId }) => followedPersonId === currentPersonId
+      );
+    }
+
     return this.model.findOne({
       where: {
-        requestPersonId: currentPersonId,
-        followedPersonId: id,
+        requestPersonId: id,
+        followedPersonId: currentPersonId,
       },
     });
   }

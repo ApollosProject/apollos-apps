@@ -27,7 +27,7 @@ describe('FollowListSearch', () => {
     const tree = renderer.create(
       <Providers>
         <FollowListSearch
-          results={[{ firstName: 'Joe', lastName: 'Schmoe' }]}
+          followers={[{ firstName: 'Joe', lastName: 'Schmoe' }]}
         />
       </Providers>
     );
