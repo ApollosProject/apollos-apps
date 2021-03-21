@@ -49,7 +49,7 @@
     "@react-native-community/datetimepicker": "*",
     "@react-native-picker/picker": "*",
     "@react-navigation/native": "*",
-    "@react-navigation/stack": "^5.14.3",
+    "@react-navigation/stack": "*",
     "react": "*",
     "react-native": "*",
     "react-native-gesture-handler": "*",

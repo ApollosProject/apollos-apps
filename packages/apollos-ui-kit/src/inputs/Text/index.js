@@ -49,6 +49,7 @@ const propsForInputType = {
 };
 
 const enhance = compose(
+  pure,
   withTheme(),
   withFocusAnimation,
   withProps(({ type, ...props }) => ({
@@ -80,7 +81,6 @@ const Text = enhance(
   }) => {
     const focusAnimation =
       value || !label ? new Animated.Value(1) : focusAnimationInput;
-
     const animatedStyle = { opacity: focusAnimation };
 
     return (

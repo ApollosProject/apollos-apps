@@ -1,14 +1,21 @@
 import React, { useCallback, useState, useEffect, useMemo } from 'react';
 import PropTypes from 'prop-types';
-import { useDerivedValue, runOnJS } from 'react-native-reanimated';
+import Animated, {
+  useDerivedValue,
+  runOnJS,
+  useSharedValue,
+  useAnimatedStyle,
+  withSpring,
+} from 'react-native-reanimated';
 import { useFocusEffect } from '@react-navigation/native';
 import { BottomSheetScrollView } from '@gorhom/bottom-sheet';
-import { Platform, View } from 'react-native';
+import { Platform, View, Animated as RNAnimated } from 'react-native';
 import { Text } from '../inputs';
 import { withTheme } from '../theme';
 import Avatar from '../Avatar';
 import styled from '../styled';
 import { H4 } from '../typography';
+import PaddedView from '../PaddedView';
 import useKeyboardHeight from './useKeyboardHeight';
 
 const ContainerScrollView = styled(({ theme }) => ({
@@ -21,6 +28,8 @@ const CommentInputContainer = styled(
   ({ theme }) => ({
     flex: 1,
     paddingLeft: theme.sizing.baseUnit,
+    paddingTop: Platform.OS === 'android' ? theme.sizing.baseUnit / 2 : 0,
+    paddingBottom: theme.sizing.baseUnit,
   }),
   'ui-kit.AddCommentInput.CommentInputContainer'
 )(View);
@@ -75,49 +84,69 @@ const Editor = ({
   prompt,
   bottomSheetIndex,
 }) => {
-  const [value, setValue] = useState(null);
   const keyboardHeight = useKeyboardHeight();
+  const text = useSharedValue(null);
+  const [isEditing, setIsEditing] = useState(false);
+  const [headerShown, setHeaderShown] = useState(false);
 
   const handleStartWriting = useCallback(() => {
+    setIsEditing(true);
     bottomSheetModalRef.current?.expand();
   }, [bottomSheetModalRef]);
 
   const handleStopWriting = useCallback(() => {
-    if (!value?.length) bottomSheetModalRef.current?.collapse();
-  }, [bottomSheetModalRef, value]);
+    setIsEditing(false);
+    if (!text.value?.length) bottomSheetModalRef.current?.collapse();
+  }, [bottomSheetModalRef, text]);
 
-  const headerRight = useMemo(
-    // eslint-disable-next-line react/display-name
-    () => () => (
-      <NextButton
-        onPress={() => navigation.navigate('Confirmation', { value })}
-      >
-        Next
-      </NextButton>
-    ),
-    [navigation, value]
+  const onSubmit = useCallback(
+    () => navigation.navigate('Confirmation', { value: text.value }),
+    [navigation, text]
   );
 
+  const HeaderRight = useMemo(
+    // eslint-disable-next-line react/display-name
+    () => () => <NextButton onPress={onSubmit}>Next</NextButton>,
+    [onSubmit]
+  );
+
+  useDerivedValue(() => {
+    const textHasLength = text.value?.length > 0;
+
+    // hide header when compressed
+    runOnJS(setHeaderShown)(
+      textHasLength && (isEditing || bottomSheetIndex > 0)
+    );
+  }, [isEditing, bottomSheetIndex, setHeaderShown, text]);
+
   useEffect(() => {
+    // not working on android 😭
+    // Has nothing to do with reanimated derivedvalue stuff, hiding and showing
+    // the navigation header while the keyboard is visible is borked on the
+    // react-native-screens side of things. Not sure why 🤔
+    let shouldShowHeader = headerShown;
+    if (Platform.OS === 'android') shouldShowHeader = false;
+
     navigation.setOptions({
-      headerShown: !!value?.length,
-      ...(value?.length
+      headerShown: shouldShowHeader,
+      ...(shouldShowHeader
         ? {
             title: headerTitle,
-            headerRight,
+            headerRight: HeaderRight,
           }
         : {}),
     });
-  }, [value, headerRight, headerTitle, navigation]);
+  }, [navigation, headerShown, headerTitle, HeaderRight]);
 
-  useDerivedValue(() => {
-    // hide header when compressed
-    if (bottomSheetIndex.value <= 0) {
-      runOnJS(navigation.setOptions)({ headerShown: false });
-    } else if (value?.length) {
-      runOnJS(navigation.setOptions)({ headerShown: true });
-    }
-  });
+  const androidHeaderOpacity = useDerivedValue(() =>
+    withSpring(headerShown ? 1 : 0)
+  );
+  const androidHeaderStyles = useAnimatedStyle(() => ({
+    position: 'absolute',
+    top: 0,
+    right: 0, // todo: replace with useTheme()
+    opacity: androidHeaderOpacity.value,
+  }));
 
   const flex = useMemo(() => ({ flex: 1 }), []);
 
@@ -132,15 +161,21 @@ const Editor = ({
           prefix={<EditorAvatar source={image} />}
           label={prompt}
           multiline
-          onChangeText={setValue}
+          onChangeText={(value) => {
+            text.value = value;
+          }}
           onFocus={handleStartWriting}
           onBlur={handleStopWriting}
           enablesReturnKeyAutomatically
           underline={false}
+          onSubmitEditing={onSubmit}
           returnKeyType={Platform.OS === 'ios' ? 'default' : 'none'}
+          focusAnimation={
+            headerShown || text.value ? new RNAnimated.Value(1) : undefined
+          }
           // TextInputComponent={BottomSheetTextInput}
         />
-        {keyboardHeight ? (
+        {keyboardHeight && Platform.OS === 'ios' ? (
           <View
             style={{
               height: keyboardHeight,
@@ -148,6 +183,14 @@ const Editor = ({
           />
         ) : null}
       </CommentInputContainer>
+
+      {Platform.OS === 'android' ? (
+        <Animated.View style={androidHeaderStyles}>
+          <PaddedView vertical={false}>
+            <HeaderRight />
+          </PaddedView>
+        </Animated.View>
+      ) : null}
     </ContainerScrollView>
   );
 };

@@ -1,9 +1,14 @@
-import React, { useRef, useEffect, useMemo, useCallback } from 'react';
+import React, {
+  useRef,
+  useEffect,
+  useMemo,
+  useState,
+  useCallback,
+} from 'react';
 import { Platform, View, Keyboard } from 'react-native';
 import PropTypes from 'prop-types';
 import { BottomSheetModal } from '@gorhom/bottom-sheet';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { useSharedValue } from 'react-native-reanimated';
 
 import Touchable from '../Touchable';
 import styled from '../styled';
@@ -28,22 +33,23 @@ const AddCommentInput = ({
   profile,
 }) => {
   const safeArea = useSafeAreaInsets();
-  const bottomSheetIndex = useSharedValue(0);
+  const [bottomSheetIndex, setBottomSheetIndex] = useState(-1);
 
   // todo: when we have useTheme() replace this
-  const snapPoints = useMemo(() => [48 + 16 + safeArea.bottom, '100%'], [
-    safeArea.bottom,
-  ]);
+  const snapPoints = useMemo(
+    () => [48 + 16 + (safeArea.bottom || 16), '100%'],
+    [safeArea.bottom]
+  );
   const bottomSheetModalRef = useRef(null);
 
   const handleEditorChange = useCallback(
     (index) => {
-      bottomSheetIndex.value = index;
+      setBottomSheetIndex(index);
       if (!index) {
         Keyboard.dismiss();
       }
     },
-    [bottomSheetIndex]
+    [setBottomSheetIndex]
   );
 
   const openModal = useCallback(() => {

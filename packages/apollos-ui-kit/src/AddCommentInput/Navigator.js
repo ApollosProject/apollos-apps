@@ -29,7 +29,6 @@ const Navigator = ({
             image={profile?.photo}
             prompt={prompt}
             headerTitle={editorTitle}
-            options={{ headerShown: false }}
             {...props}
           />
         )}
@@ -72,7 +71,9 @@ Navigator.propTypes = {
 
 const EnhancedNavigator = withTheme(({ theme, ...props }) => ({
   ...props,
+  initialRouteName: 'Editor',
   screenOptions: {
+    safeAreaInsets: { top: 0 },
     headerTintColor: theme.colors.action.secondary,
     headerTitleStyle: {
       color: theme.colors.text.primary,
