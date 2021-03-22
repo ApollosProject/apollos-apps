@@ -4,6 +4,10 @@ import {
   createModel as createCampusModel,
   setupModel as setupCampusModel,
 } from '../../campus/model';
+import {
+  createModel as createFollowsModel,
+  setupModel as setupFollowsModel,
+} from '../../follows/model';
 import PeopleDataSource from '../dataSource';
 
 let personId;
@@ -29,7 +33,9 @@ describe('Apollos Postgres People DataSource', () => {
 
     await createModel();
     await createCampusModel();
+    await createFollowsModel();
     await setupCampusModel();
+    await setupFollowsModel();
     await sync();
 
     peopleDataSource = new PeopleDataSource();
@@ -70,6 +76,33 @@ describe('Apollos Postgres People DataSource', () => {
     expect(person.firstName).toBe('John');
     expect(person.originId).toBe('1');
     expect(person.id).toBe(newPerson.id);
+  });
+
+  it('should be able to search a user', async () => {
+    await peopleDataSource.model.create({
+      originId: '1',
+      originType: 'rock',
+      firstName: 'John',
+      lastName: 'Williams',
+    });
+    await peopleDataSource.model.create({
+      originId: '2',
+      originType: 'rock',
+      firstName: 'Phil',
+      lastName: 'Woodhall',
+    });
+
+    const foundPerson = await peopleDataSource.model.create({
+      originId: '3',
+      originType: 'rock',
+      firstName: 'Vincent',
+      lastName: 'Found',
+    });
+
+    const edges = await peopleDataSource.byPaginatedQuery({ name: 'Vincent' });
+
+    expect(edges.length).toBe(1);
+    expect(edges[0].node.id).toBe(foundPerson.id);
   });
 
   it('should create a user', async () => {

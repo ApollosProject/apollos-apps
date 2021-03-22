@@ -80,7 +80,6 @@ const mocks = [
 
 describe('import ConnectScreenConnected component', () => {
   it('renders ConnectScreenConnected', async () => {
-    console.log(ConnectScreenConnected);
     const tree = await renderWithApolloData(
       WithReactNavigator(
         <Providers MockedProvider={MockedProvider} mocks={mocks}>
