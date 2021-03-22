@@ -101,15 +101,15 @@ class NotificationsInit extends Component {
     // apolloschurchapp://SomethingElse/Connect
     // apolloschurchapp://SomethingElse/ContentSingle?itemId=SomeItemId:blablalba
     const url = get(openResult, 'notification.payload.additionalData.url');
-    if (url) {
-      this.navigate(url);
-    } else if (
+    if (
       openResult?.action?.actionID &&
       this.props.actionMap[openResult.action.actionID]
     ) {
       this.props.actionMap[openResult.action.actionID](
         openResult.notification.payload.additionalData
       );
+    } else if (url) {
+      this.navigate(url);
     }
   };
 
