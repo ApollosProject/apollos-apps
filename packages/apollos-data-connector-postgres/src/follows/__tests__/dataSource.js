@@ -100,7 +100,9 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     await followDataSource.requestFollow({
       followedPersonId: `Person:${person2.id}`,
     });
-    expect(notificationMock.mock.calls[0][0].data).toMatchSnapshot();
+    expect(notificationMock.mock.calls[0][0].data).toEqual({
+      requestPersonId: person1.apollosId,
+    });
     expect(notificationMock.mock.calls[0][0].buttons).toMatchSnapshot();
     expect(notificationMock.mock.calls[0][0].content).toMatchSnapshot();
     expect(notificationMock.mock.calls[0][0].to.id).toBe(person2.id);

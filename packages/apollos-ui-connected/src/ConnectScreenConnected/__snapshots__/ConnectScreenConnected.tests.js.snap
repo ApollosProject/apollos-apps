@@ -711,8 +711,8 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                             onStartShouldSetResponder={[Function]}
                             style={
                               Object {
+                                "minWidth": 48,
                                 "opacity": 1,
-                                "width": 48,
                               }
                             }
                           >
@@ -720,8 +720,9 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                               numberOfLines={1}
                               style={
                                 Object {
-                                  "color": "#00676D",
+                                  "color": "#17B582",
                                   "fontSize": 16,
+                                  "fontWeight": undefined,
                                   "lineHeight": 24,
                                   "textAlign": "right",
                                 }
@@ -752,17 +753,19 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                             onStartShouldSetResponder={[Function]}
                             style={
                               Object {
+                                "minWidth": 48,
                                 "opacity": 1,
-                                "width": 48,
                               }
                             }
                           >
                             <Text
                               numberOfLines={1}
+                              strong={true}
                               style={
                                 Object {
-                                  "color": "#00676D",
+                                  "color": "#17B582",
                                   "fontSize": 16,
+                                  "fontWeight": "bold",
                                   "lineHeight": 24,
                                   "textAlign": "right",
                                 }
@@ -1865,8 +1868,8 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                             onStartShouldSetResponder={[Function]}
                             style={
                               Object {
+                                "minWidth": 48,
                                 "opacity": 1,
-                                "width": 48,
                               }
                             }
                           >
@@ -1874,8 +1877,9 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                               numberOfLines={1}
                               style={
                                 Object {
-                                  "color": "#00676D",
+                                  "color": "#17B582",
                                   "fontSize": 16,
+                                  "fontWeight": undefined,
                                   "lineHeight": 24,
                                   "textAlign": "right",
                                 }
@@ -1906,17 +1910,19 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                             onStartShouldSetResponder={[Function]}
                             style={
                               Object {
+                                "minWidth": 48,
                                 "opacity": 1,
-                                "width": 48,
                               }
                             }
                           >
                             <Text
                               numberOfLines={1}
+                              strong={true}
                               style={
                                 Object {
-                                  "color": "#00676D",
+                                  "color": "#17B582",
                                   "fontSize": 16,
+                                  "fontWeight": "bold",
                                   "lineHeight": 24,
                                   "textAlign": "right",
                                 }

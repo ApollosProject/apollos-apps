@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=10.x.x"
   },
-  "version": "2.4.0",
+  "version": "2.5.0",
   "main": "lib/index.js",
   "scripts": {
     "test": "TZ=UTC jest",
@@ -31,7 +31,7 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@apollosproject/server-core": "^2.4.0",
+    "@apollosproject/server-core": "^2.5.0",
     "awesome-phonenumber": "^2.4.2",
     "form-data": "^2.3.3",
     "hyphenation.en-us": "^0.2.1",
@@ -50,8 +50,8 @@
     "@apollosproject/rock-apollo-data-source": "*"
   },
   "devDependencies": {
-    "@apollosproject/apollo-server-env-mock": "^2.4.0",
-    "@apollosproject/babel-preset-apollos": "^2.4.0",
+    "@apollosproject/apollo-server-env-mock": "^2.5.0",
+    "@apollosproject/babel-preset-apollos": "^2.5.0",
     "apollo-server": "^2.11.0",
     "apollo-server-env": "^2.3.0",
     "graphql": "14.7.0",

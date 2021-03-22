@@ -1,5 +1,5 @@
 import React from 'react';
-import { Providers } from '@apollosproject/ui-kit';
+import { Providers, BackgroundView } from '@apollosproject/ui-kit';
 import { LiveProvider } from '@apollosproject/ui-connected';
 import ClientProvider, { client } from './client';
 import customTheme, { customIcons } from './theme';
@@ -10,8 +10,10 @@ const AppProviders = (props) => (
       <Providers
         themeInput={customTheme}
         iconInput={customIcons}
-        {...props}
-      />
+        
+      >
+        <BackgroundView {...props} />
+      </Providers>
     </LiveProvider>
   </ClientProvider>
 );

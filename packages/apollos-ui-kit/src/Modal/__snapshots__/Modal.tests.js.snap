@@ -1,206 +1,266 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Modal component should render 1`] = `
-<Modal
-  hardwareAccelerated={false}
-  visible={true}
->
-  <BVLinearGradient
-    colors={
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
       Array [
-        4294967295,
-        4294506484,
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
       ]
     }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
-    style={
-      Object {
-        "flex": 1,
-        "height": "100%",
-      }
-    }
+  />,
+  <Modal
+    hardwareAccelerated={false}
+    visible={true}
   >
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-    />
-  </BVLinearGradient>
-</Modal>
+    <BVLinearGradient
+      colors={
+        Array [
+          4294967295,
+          4294506484,
+        ]
+      }
+      endPoint={
+        Object {
+          "x": 0.5,
+          "y": 1,
+        }
+      }
+      locations={null}
+      startPoint={
+        Object {
+          "x": 0.5,
+          "y": 0,
+        }
+      }
+      style={
+        Object {
+          "flex": 1,
+          "height": "100%",
+        }
+      }
+    >
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+      />
+    </BVLinearGradient>
+  </Modal>,
+]
 `;
 
 exports[`The Modal component should render a custom close action 1`] = `
-<Modal
-  hardwareAccelerated={false}
-  visible={true}
->
-  <BVLinearGradient
-    colors={
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
       Array [
-        4294967295,
-        4294506484,
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
       ]
     }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
-    style={
-      Object {
-        "flex": 1,
-        "height": "100%",
-      }
-    }
+  />,
+  <Modal
+    hardwareAccelerated={false}
+    visible={true}
   >
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-            "height": 64,
-            "justifyContent": "space-between",
-            "padding": 16,
-            "width": "100%",
-          }
+    <BVLinearGradient
+      colors={
+        Array [
+          4294967295,
+          4294506484,
+        ]
+      }
+      endPoint={
+        Object {
+          "x": 0.5,
+          "y": 1,
         }
+      }
+      locations={null}
+      startPoint={
+        Object {
+          "x": 0.5,
+          "y": 0,
+        }
+      }
+      style={
+        Object {
+          "flex": 1,
+          "height": "100%",
+        }
+      }
+    >
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
       >
         <View
-          accessible={true}
-          focusable={false}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "opacity": 1,
-              "width": 48,
+              "alignItems": "center",
+              "flexDirection": "row",
+              "height": 64,
+              "justifyContent": "space-between",
+              "padding": 16,
+              "width": "100%",
             }
           }
         >
-          <Text
-            numberOfLines={1}
+          <View
+            accessible={true}
+            focusable={false}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "color": "#00676D",
-                "fontSize": 16,
-                "lineHeight": 24,
-                "textAlign": "right",
-              }
-            }
-          />
-        </View>
-        <Text
-          style={
-            Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 16,
-              "lineHeight": 24,
-            }
-          }
-        />
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "opacity": 1,
-              "width": 48,
-            }
-          }
-        >
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "color": "#00676D",
-                "fontSize": 16,
-                "lineHeight": 24,
-                "textAlign": "right",
+                "minWidth": 48,
+                "opacity": 1,
               }
             }
           >
-            Next
-          </Text>
+            <Text
+              numberOfLines={1}
+              style={
+                Object {
+                  "color": "#17B582",
+                  "fontSize": 16,
+                  "fontWeight": undefined,
+                  "lineHeight": 24,
+                  "textAlign": "right",
+                }
+              }
+            />
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 16,
+                "lineHeight": 24,
+              }
+            }
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "minWidth": 48,
+                "opacity": 1,
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              strong={true}
+              style={
+                Object {
+                  "color": "#17B582",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                  "lineHeight": 24,
+                  "textAlign": "right",
+                }
+              }
+            >
+              Next
+            </Text>
+          </View>
         </View>
-      </View>
-    </RCTSafeAreaView>
-  </BVLinearGradient>
-</Modal>
+      </RCTSafeAreaView>
+    </BVLinearGradient>
+  </Modal>,
+]
 `;
 
 exports[`The Modal component should render with children 1`] = `
-<Modal
-  hardwareAccelerated={false}
-  visible={true}
->
-  <BVLinearGradient
-    colors={
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
       Array [
-        4294967295,
-        4294506484,
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
       ]
     }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
-    style={
-      Object {
-        "flex": 1,
-        "height": "100%",
-      }
-    }
+  />,
+  <Modal
+    hardwareAccelerated={false}
+    visible={true}
   >
-    <RCTSafeAreaView
-      emulateUnlessSupported={true}
+    <BVLinearGradient
+      colors={
+        Array [
+          4294967295,
+          4294506484,
+        ]
+      }
+      endPoint={
+        Object {
+          "x": 0.5,
+          "y": 1,
+        }
+      }
+      locations={null}
+      startPoint={
+        Object {
+          "x": 0.5,
+          "y": 0,
+        }
+      }
+      style={
+        Object {
+          "flex": 1,
+          "height": "100%",
+        }
+      }
     >
-      <Text>
-        "Roads? Where we going we don’t need roads." – Doc
-      </Text>
-    </RCTSafeAreaView>
-  </BVLinearGradient>
-</Modal>
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+      >
+        <Text>
+          "Roads? Where we going we don’t need roads." – Doc
+        </Text>
+      </RCTSafeAreaView>
+    </BVLinearGradient>
+  </Modal>,
+]
 `;

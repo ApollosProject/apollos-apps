@@ -1,4 +1,5 @@
 import React from 'react';
+import { View } from 'react-native';
 import PropTypes from 'prop-types';
 import { withTheme } from '../theme';
 import styled from '../styled';
@@ -8,10 +9,10 @@ import Icon from '../Icon';
 
 const LikeText = styled({})(BodyText);
 
-const LikeTouchable = styled({
+const LikeWrapper = styled({
   flexDirection: 'row',
   alignItems: 'center',
-})(Touchable);
+})(View);
 
 const LikeIcon = withTheme(({ theme: { sizing, colors } }) => ({
   size: sizing.baseUnit * 1.5,
@@ -20,10 +21,12 @@ const LikeIcon = withTheme(({ theme: { sizing, colors } }) => ({
 }))(Icon);
 
 const ScriptureLikeButton = (props) => (
-  <LikeTouchable {...props}>
-    <LikeIcon name={'thumbs-up'} />
-    <LikeText>{'Like'}</LikeText>
-  </LikeTouchable>
+  <Touchable {...props}>
+    <LikeWrapper>
+      <LikeIcon name={'thumbs-up'} />
+      <LikeText>{'Like'}</LikeText>
+    </LikeWrapper>
+  </Touchable>
 );
 
 ScriptureLikeButton.propTypes = {
