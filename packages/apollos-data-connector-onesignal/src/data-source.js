@@ -22,6 +22,7 @@ export default class OneSignal extends RESTDataSource {
     content = '',
     heading,
     subtitle,
+    ...args
   }) {
     return this.post('notifications', {
       app_id: ONE_SIGNAL.APP_ID,
@@ -29,6 +30,7 @@ export default class OneSignal extends RESTDataSource {
       contents: { en: content },
       headings: { en: heading },
       subtitle: { en: subtitle },
+      ...args,
     });
   }
 
