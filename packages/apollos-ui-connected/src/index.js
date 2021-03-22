@@ -35,6 +35,8 @@ export FeaturesFeedConnected, {
 } from './FeaturesFeedConnected';
 export FollowListConnected, {
   REQUEST_FOLLOW,
+  ACCEPT_FOLLOW_REQUEST,
+  IGNORE_FOLLOW_REQUEST,
   SuggestedFollowListConnected,
   RequestedFollowListConnected,
   GET_SUGGESTED_FOLLOWS,
