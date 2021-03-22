@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.0](https://github.com/apollosproject/apollos-apps/compare/v2.4.0...v2.5.0) (2021-03-22)
+
+
+### Features
+
+* add bottom sheet to AddCommentForm ([#1807](https://github.com/apollosproject/apollos-apps/issues/1807)) ([4c09ff0](https://github.com/apollosproject/apollos-apps/commit/4c09ff0382c60aa011080407de5a6443d5b35db5))
+
+
+
 ## [2.4.0](https://github.com/apollosproject/apollos-apps/compare/v2.3.1...v2.4.0) (2021-03-18)
 
 **Note:** Version bump only for package @apollosproject/ui-mapview

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.0](https://github.com/apollosproject/apollos-apps/compare/v2.4.0...v2.5.0) (2021-03-22)
+
+
+### Bug Fixes
+
+* correctly pull person ID ([#1817](https://github.com/apollosproject/apollos-apps/issues/1817)) ([14ba52d](https://github.com/apollosproject/apollos-apps/commit/14ba52d28011d2ba579dab65e6a102b7e85e8cbd))
+
+
+
 ## [2.4.0](https://github.com/apollosproject/apollos-apps/compare/v2.3.1...v2.4.0) (2021-03-18)
 
 **Note:** Version bump only for package @apollosproject/data-connector-rock

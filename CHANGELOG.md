@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.0](https://github.com/ApollosProject/apollos-apps/compare/v2.4.0...v2.5.0) (2021-03-22)
+
+
+### Features
+
+* add bottom sheet to AddCommentForm ([#1807](https://github.com/ApollosProject/apollos-apps/issues/1807)) ([4c09ff0](https://github.com/ApollosProject/apollos-apps/commit/4c09ff0382c60aa011080407de5a6443d5b35db5))
+* Auto follow ([#1810](https://github.com/ApollosProject/apollos-apps/issues/1810)) ([a96bfec](https://github.com/ApollosProject/apollos-apps/commit/a96bfec991ba1f4f444183d40b525b89063a31e9))
+* People Search ([#1815](https://github.com/ApollosProject/apollos-apps/issues/1815)) ([16e3556](https://github.com/ApollosProject/apollos-apps/commit/16e35562198d9b0049e067075c53f9f9aab0d25f))
+* Push notifications on follow request ([#1806](https://github.com/ApollosProject/apollos-apps/issues/1806)) ([19ba81b](https://github.com/ApollosProject/apollos-apps/commit/19ba81b0452c19275918fbdc251425fa981a735e))
+
+
+### Bug Fixes
+
+* correctly pull person ID ([#1817](https://github.com/ApollosProject/apollos-apps/issues/1817)) ([14ba52d](https://github.com/ApollosProject/apollos-apps/commit/14ba52d28011d2ba579dab65e6a102b7e85e8cbd))
+* follow list button states ([#1816](https://github.com/ApollosProject/apollos-apps/issues/1816)) ([0b28777](https://github.com/ApollosProject/apollos-apps/commit/0b287776e7a05c02dc68e1e67a9503d69f70f1c5))
+
+
+
 ## [2.4.0](https://github.com/ApollosProject/apollos-apps/compare/v2.3.1...v2.4.0) (2021-03-18)
 
 

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.0](https://github.com/apollosproject/apollos-apps/compare/v2.4.0...v2.5.0) (2021-03-22)
+
+
+### Features
+
+* Push notifications on follow request ([#1806](https://github.com/apollosproject/apollos-apps/issues/1806)) ([19ba81b](https://github.com/apollosproject/apollos-apps/commit/19ba81b0452c19275918fbdc251425fa981a735e))
+
+
+
 ## [2.4.0](https://github.com/apollosproject/apollos-apps/compare/v2.3.1...v2.4.0) (2021-03-18)
 
 **Note:** Version bump only for package @apollosproject/data-connector-onesignal
