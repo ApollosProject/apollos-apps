@@ -189,6 +189,58 @@ exports[`The RequestedFollowListConnected component should render with data 1`] 
         </Text>
       </View>
     </View>
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        bordered={false}
+        disabled={false}
+        pill={false}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#00676D",
+            "borderColor": "#00676D",
+            "borderRadius": 8,
+            "borderWidth": 2,
+            "elevation": 2,
+            "flexDirection": "row",
+            "height": 32,
+            "justifyContent": "center",
+            "marginLeft": 8,
+            "opacity": 1,
+            "overflow": "hidden",
+            "paddingHorizontal": 8,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "fontFamily": "InterUI-Bold",
+              "fontSize": 12,
+              "lineHeight": 18,
+            }
+          }
+        >
+          Follow
+        </Text>
+      </View>
+    </View>
   </View>
 </View>
 `;

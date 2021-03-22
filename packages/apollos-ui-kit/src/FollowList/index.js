@@ -102,9 +102,10 @@ class FollowList extends PureComponent {
               <FollowListItem
                 key={item.id}
                 id={item.id}
-                requested={isFollowingState === 'REQUESTED'}
-                request={isFollowed === 'REQUESTED'}
-                confirmed={isFollowingState === 'APPROVED'}
+                requestingFollow={isFollowingState === 'REQUESTED'}
+                followRequested={isFollowed === 'REQUESTED'}
+                confirmedFollowing={isFollowingState === 'ACCEPTED'}
+                confirmedFollower={isFollowed === 'ACCEPTED'}
                 name={
                   [item.firstName, item.lastName]
                     .filter((name) => Boolean(name))

@@ -31,7 +31,41 @@ describe('FollowListItem', () => {
       <Providers>
         <FollowListItem
           imageSource={'https://picsum.photos/600/400/?random'}
-          request
+          followRequested
+          confirmedFollowing
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render a sent follow request', () => {
+    const tree = renderer.create(
+      <Providers>
+        <FollowListItem
+          imageSource={'https://picsum.photos/600/400/?random'}
+          requestingFollow
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render a confirmed request', () => {
+    const tree = renderer.create(
+      <Providers>
+        <FollowListItem
+          imageSource={'https://picsum.photos/600/400/?random'}
+          confirmedFollowing
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render a confirmed follow', () => {
+    const tree = renderer.create(
+      <Providers>
+        <FollowListItem
+          imageSource={'https://picsum.photos/600/400/?random'}
+          confirmedFollower
         />
       </Providers>
     );
