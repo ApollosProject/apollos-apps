@@ -1,22 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ProtectedRoute component navigates to the auth route when logged out 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "flex": 1,
-      "justifyContent": "center",
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  <ActivityIndicator
-    animating={true}
-    color="#999999"
-    hidesWhenStopped={true}
-    size="small"
-  />
-</View>
+  />,
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <ActivityIndicator
+      animating={true}
+      color="#999999"
+      hidesWhenStopped={true}
+      size="small"
+    />
+  </View>,
+]
 `;
 
 exports[`ProtectedRoute component navigates to the auth route when logged out 2`] = `
@@ -28,22 +47,41 @@ Array [
 `;
 
 exports[`ProtectedRoute component navigates to the logged in route when logged in 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "flex": 1,
-      "justifyContent": "center",
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  <ActivityIndicator
-    animating={true}
-    color="#999999"
-    hidesWhenStopped={true}
-    size="small"
-  />
-</View>
+  />,
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <ActivityIndicator
+      animating={true}
+      color="#999999"
+      hidesWhenStopped={true}
+      size="small"
+    />
+  </View>,
+]
 `;
 
 exports[`ProtectedRoute component navigates to the logged in route when logged in 2`] = `
@@ -54,6 +92,27 @@ Array [
 ]
 `;
 
-exports[`ProtectedRoute component renders a custom loading component 1`] = `<View />`;
+exports[`ProtectedRoute component renders a custom loading component 1`] = `
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View />,
+]
+`;
 
 exports[`ProtectedRoute component renders a custom loading component 2`] = `Array []`;

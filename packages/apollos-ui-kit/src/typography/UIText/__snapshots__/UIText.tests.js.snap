@@ -1,123 +1,256 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the UIText component should accept additional props 1`] = `
-<Text
-  accessible={false}
-  style={
-    Object {
-      "color": "#303030",
-      "fontFamily": "System",
-      "fontSize": 14,
-      "fontStyle": null,
-      "fontWeight": null,
-      "lineHeight": 21,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  "You are the only Bible some unbelievers will ever read." – John MacArthur
-</Text>
+  />,
+  <Text
+    accessible={false}
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "System",
+        "fontSize": 14,
+        "fontStyle": null,
+        "fontWeight": null,
+        "lineHeight": 21,
+      }
+    }
+  >
+    "You are the only Bible some unbelievers will ever read." – John MacArthur
+  </Text>,
+]
 `;
 
 exports[`the UIText component should accept and render passed in styles 1`] = `
-<Text
-  style={
-    Object {
-      "color": "salmon",
-      "fontFamily": "System",
-      "fontSize": 14,
-      "fontStyle": null,
-      "fontWeight": null,
-      "lineHeight": 21,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  Salmon text
-</Text>
+  />,
+  <Text
+    style={
+      Object {
+        "color": "salmon",
+        "fontFamily": "System",
+        "fontSize": 14,
+        "fontStyle": null,
+        "fontWeight": null,
+        "lineHeight": 21,
+      }
+    }
+  >
+    Salmon text
+  </Text>,
+]
 `;
 
 exports[`the UIText component should render a loading state 1`] = `
-<View
-  style={
-    Object {
-      "alignSelf": "stretch",
-      "backgroundColor": "#A5A5A5",
-      "borderRadius": 16,
-      "height": 14,
-      "marginVertical": 3.5,
-      "width": "40%",
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-/>
+  />,
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 16,
+        "height": 14,
+        "marginVertical": 3.5,
+        "width": "40%",
+      }
+    }
+  />,
+]
 `;
 
 exports[`the UIText component should render as bold 1`] = `
-<Text
-  bold={true}
-  style={
-    Object {
-      "color": "#303030",
-      "fontFamily": "System",
-      "fontSize": 14,
-      "fontStyle": null,
-      "fontWeight": "700",
-      "lineHeight": 21,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  Bold UIText text
-</Text>
+  />,
+  <Text
+    bold={true}
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "System",
+        "fontSize": 14,
+        "fontStyle": null,
+        "fontWeight": "700",
+        "lineHeight": 21,
+      }
+    }
+  >
+    Bold UIText text
+  </Text>,
+]
 `;
 
 exports[`the UIText component should render as bold italic 1`] = `
-<Text
-  bold={true}
-  italic={true}
-  style={
-    Object {
-      "color": "#303030",
-      "fontFamily": "System",
-      "fontSize": 14,
-      "fontStyle": "italic",
-      "fontWeight": "700",
-      "lineHeight": 21,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  Bold italic UIText text
-</Text>
+  />,
+  <Text
+    bold={true}
+    italic={true}
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "System",
+        "fontSize": 14,
+        "fontStyle": "italic",
+        "fontWeight": "700",
+        "lineHeight": 21,
+      }
+    }
+  >
+    Bold italic UIText text
+  </Text>,
+]
 `;
 
 exports[`the UIText component should render as italic 1`] = `
-<Text
-  italic={true}
-  style={
-    Object {
-      "color": "#303030",
-      "fontFamily": "System",
-      "fontSize": 14,
-      "fontStyle": "italic",
-      "fontWeight": null,
-      "lineHeight": 21,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  Italic UIText text
-</Text>
+  />,
+  <Text
+    italic={true}
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "System",
+        "fontSize": 14,
+        "fontStyle": "italic",
+        "fontWeight": null,
+        "lineHeight": 21,
+      }
+    }
+  >
+    Italic UIText text
+  </Text>,
+]
 `;
 
 exports[`the UIText component should render correctly 1`] = `
-<Text
-  style={
-    Object {
-      "color": "#303030",
-      "fontFamily": "System",
-      "fontSize": 14,
-      "fontStyle": null,
-      "fontWeight": null,
-      "lineHeight": 21,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  Default UIText text
-</Text>
+  />,
+  <Text
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "System",
+        "fontSize": 14,
+        "fontStyle": null,
+        "fontWeight": null,
+        "lineHeight": 21,
+      }
+    }
+  >
+    Default UIText text
+  </Text>,
+]
 `;

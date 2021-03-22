@@ -41,6 +41,7 @@
       "node_modules/@storybook/"
     ],
     "setupFiles": [
+      "../apollos-ui-test-utils/src/mocks/reanimated.js",
       "./jest.setup.js"
     ]
   },

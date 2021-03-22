@@ -1,709 +1,728 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The MapViewConnected component should render 1`] = `
-<View
-  style={
-    Object {
-      "flex": 1,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
+  />,
   <View
     style={
       Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
+        "flex": 1,
       }
     }
   >
-    <RCTScrollView
-      contentContainerStyle={
-        Object {
-          "paddingHorizontal": 12,
-        }
-      }
-      decelerationRate="fast"
-      forwardedRef={[Function]}
-      horizontal={true}
-      onScroll={[Function]}
-      scrollEventThrottle={16}
-      showsHorizontalScrollIndicator={false}
-      snapToAlignment="start"
-      snapToInterval={722}
-    >
-      <View>
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "opacity": 1,
-            }
-          }
-        >
-          <View
-            cardWidth={714}
-            inHorizontalList={true}
-            isLoading={false}
-            style={
-              Object {
-                "backgroundColor": "#FFFFFF",
-                "borderRadius": 16,
-                "margin": 8,
-                "marginBottom": 12,
-                "marginHorizontal": 4,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-                "shadowOffset": Object {
-                  "height": 2,
-                  "width": 0,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 8,
-                "width": 714,
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "borderRadius": 16,
-                  "overflow": "hidden",
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                    "flexWrap": "nowrap",
-                    "height": 96,
-                    "justifyContent": "space-between",
-                  }
-                }
-              >
-                <Image
-                  fadeDuration={250}
-                  onLoad={[Function]}
-                  source={
-                    Array [
-                      Object {
-                        "__typename": "ImageMediaSource",
-                        "cache": "force-cache",
-                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dede1fb83-968e-4bef-8d77-ad81c96e8a47",
-                      },
-                    ]
-                  }
-                  style={
-                    Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#A5A5A5",
-                      "height": "100%",
-                      "resizeMode": "cover",
-                    }
-                  }
-                />
-                <View
-                  style={
-                    Object {
-                      "flex": 1,
-                      "paddingHorizontal": 16,
-                      "paddingVertical": 16,
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "stretch",
-                        "flexDirection": "row",
-                        "flexWrap": "nowrap",
-                        "height": 21,
-                        "justifyContent": "space-between",
-                      }
-                    }
-                  >
-                    <Text
-                      style={
-                        Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Medium",
-                          "fontSize": 14,
-                          "lineHeight": 21,
-                        }
-                      }
-                    >
-                      Chicago Campus
-                    </Text>
-                    <View
-                      style={
-                        Object {
-                          "flex": 1,
-                          "flexDirection": "row",
-                          "justifyContent": "flex-end",
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          Object {
-                            "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 18,
-                          }
-                        }
-                      >
-                        5000
-                        mi
-                      </Text>
-                    </View>
-                  </View>
-                  <Text
-                    style={
-                      Object {
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 18,
-                      }
-                    }
-                  >
-                    67 Algonquin Rd
-South Barrington, IL 60010-6143
-                  </Text>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "opacity": 1,
-            }
-          }
-        >
-          <View
-            cardWidth={714}
-            inHorizontalList={true}
-            isLoading={false}
-            style={
-              Object {
-                "backgroundColor": "#FFFFFF",
-                "borderRadius": 16,
-                "margin": 8,
-                "marginBottom": 12,
-                "marginHorizontal": 4,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-                "shadowOffset": Object {
-                  "height": 2,
-                  "width": 0,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 8,
-                "width": 714,
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "borderRadius": 16,
-                  "overflow": "hidden",
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                    "flexWrap": "nowrap",
-                    "height": 96,
-                    "justifyContent": "space-between",
-                  }
-                }
-              >
-                <Image
-                  fadeDuration={250}
-                  onLoad={[Function]}
-                  source={
-                    Array [
-                      Object {
-                        "__typename": "ImageMediaSource",
-                        "cache": "force-cache",
-                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Da47e8e69-9542-42de-9ed3-ff42fdc82417",
-                      },
-                    ]
-                  }
-                  style={
-                    Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#A5A5A5",
-                      "height": "100%",
-                      "resizeMode": "cover",
-                    }
-                  }
-                />
-                <View
-                  style={
-                    Object {
-                      "flex": 1,
-                      "paddingHorizontal": 16,
-                      "paddingVertical": 16,
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "stretch",
-                        "flexDirection": "row",
-                        "flexWrap": "nowrap",
-                        "height": 21,
-                        "justifyContent": "space-between",
-                      }
-                    }
-                  >
-                    <Text
-                      style={
-                        Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Medium",
-                          "fontSize": 14,
-                          "lineHeight": 21,
-                        }
-                      }
-                    >
-                      Anderson Campus
-                    </Text>
-                    <View
-                      style={
-                        Object {
-                          "flex": 1,
-                          "flexDirection": "row",
-                          "justifyContent": "flex-end",
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          Object {
-                            "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 18,
-                          }
-                        }
-                      >
-                        5
-                        mi
-                      </Text>
-                    </View>
-                  </View>
-                  <Text
-                    style={
-                      Object {
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 18,
-                      }
-                    }
-                  >
-                    2940 Concord Rd
-Anderson, SC 29621-3619
-                  </Text>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "opacity": 1,
-            }
-          }
-        >
-          <View
-            cardWidth={714}
-            inHorizontalList={true}
-            isLoading={false}
-            style={
-              Object {
-                "backgroundColor": "#FFFFFF",
-                "borderRadius": 16,
-                "margin": 8,
-                "marginBottom": 12,
-                "marginHorizontal": 4,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-                "shadowOffset": Object {
-                  "height": 2,
-                  "width": 0,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 8,
-                "width": 714,
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "borderRadius": 16,
-                  "overflow": "hidden",
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                    "flexWrap": "nowrap",
-                    "height": 96,
-                    "justifyContent": "space-between",
-                  }
-                }
-              >
-                <Image
-                  fadeDuration={250}
-                  onLoad={[Function]}
-                  source={
-                    Array [
-                      Object {
-                        "__typename": "ImageMediaSource",
-                        "cache": "force-cache",
-                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D5f9fd97a-fd6e-4ae5-ab5d-a9b95290d9b6",
-                      },
-                    ]
-                  }
-                  style={
-                    Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#A5A5A5",
-                      "height": "100%",
-                      "resizeMode": "cover",
-                    }
-                  }
-                />
-                <View
-                  style={
-                    Object {
-                      "flex": 1,
-                      "paddingHorizontal": 16,
-                      "paddingVertical": 16,
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "stretch",
-                        "flexDirection": "row",
-                        "flexWrap": "nowrap",
-                        "height": 21,
-                        "justifyContent": "space-between",
-                      }
-                    }
-                  >
-                    <Text
-                      style={
-                        Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Medium",
-                          "fontSize": 14,
-                          "lineHeight": 21,
-                        }
-                      }
-                    >
-                      Dallas Campus
-                    </Text>
-                    <View
-                      style={
-                        Object {
-                          "flex": 1,
-                          "flexDirection": "row",
-                          "justifyContent": "flex-end",
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          Object {
-                            "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 18,
-                          }
-                        }
-                      >
-                        50
-                        mi
-                      </Text>
-                    </View>
-                  </View>
-                  <Text
-                    style={
-                      Object {
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 18,
-                      }
-                    }
-                  >
-                    102 N Weatherred Dr
-Richardson, TX 75080-5525
-                  </Text>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "opacity": 1,
-            }
-          }
-        >
-          <View
-            cardWidth={714}
-            inHorizontalList={true}
-            isLoading={false}
-            style={
-              Object {
-                "backgroundColor": "#FFFFFF",
-                "borderRadius": 16,
-                "margin": 8,
-                "marginBottom": 12,
-                "marginHorizontal": 4,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-                "shadowOffset": Object {
-                  "height": 2,
-                  "width": 0,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 8,
-                "width": 714,
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "borderRadius": 16,
-                  "overflow": "hidden",
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                    "flexWrap": "nowrap",
-                    "height": 96,
-                    "justifyContent": "space-between",
-                  }
-                }
-              >
-                <Image
-                  fadeDuration={250}
-                  onLoad={[Function]}
-                  source={
-                    Array [
-                      Object {
-                        "__typename": "ImageMediaSource",
-                        "cache": "force-cache",
-                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dbad9eb54-3e78-44a7-a028-3f2d6e71a36f",
-                      },
-                    ]
-                  }
-                  style={
-                    Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#A5A5A5",
-                      "height": "100%",
-                      "resizeMode": "cover",
-                    }
-                  }
-                />
-                <View
-                  style={
-                    Object {
-                      "flex": 1,
-                      "paddingHorizontal": 16,
-                      "paddingVertical": 16,
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "stretch",
-                        "flexDirection": "row",
-                        "flexWrap": "nowrap",
-                        "height": 21,
-                        "justifyContent": "space-between",
-                      }
-                    }
-                  >
-                    <Text
-                      style={
-                        Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Medium",
-                          "fontSize": 14,
-                          "lineHeight": 21,
-                        }
-                      }
-                    >
-                      Cincinnati Campus
-                    </Text>
-                    <View
-                      style={
-                        Object {
-                          "flex": 1,
-                          "flexDirection": "row",
-                          "justifyContent": "flex-end",
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          Object {
-                            "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 18,
-                          }
-                        }
-                      >
-                        500
-                        mi
-                      </Text>
-                    </View>
-                  </View>
-                  <Text
-                    style={
-                      Object {
-                        "color": "#505050",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "lineHeight": 18,
-                      }
-                    }
-                  >
-                    120 E 8th St
-Cincinnati, OH 45202-2118
-                  </Text>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-      </View>
-    </RCTScrollView>
     <View
       style={
         Object {
-          "paddingHorizontal": 16,
-          "paddingVertical": 16,
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
         }
       }
     >
+      <RCTScrollView
+        contentContainerStyle={
+          Object {
+            "paddingHorizontal": 12,
+          }
+        }
+        decelerationRate="fast"
+        forwardedRef={[Function]}
+        horizontal={true}
+        onScroll={[Function]}
+        scrollEventThrottle={16}
+        showsHorizontalScrollIndicator={false}
+        snapToAlignment="start"
+        snapToInterval={722}
+      >
+        <View>
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              cardWidth={714}
+              inHorizontalList={true}
+              isLoading={false}
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 16,
+                  "margin": 8,
+                  "marginBottom": 12,
+                  "marginHorizontal": 4,
+                  "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
+                  "width": 714,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "overflow": "hidden",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "flexWrap": "nowrap",
+                      "height": 96,
+                      "justifyContent": "space-between",
+                    }
+                  }
+                >
+                  <Image
+                    fadeDuration={250}
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "__typename": "ImageMediaSource",
+                          "cache": "force-cache",
+                          "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dede1fb83-968e-4bef-8d77-ad81c96e8a47",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "height": "100%",
+                        "resizeMode": "cover",
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "paddingHorizontal": 16,
+                        "paddingVertical": 16,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "stretch",
+                          "flexDirection": "row",
+                          "flexWrap": "nowrap",
+                          "height": 21,
+                          "justifyContent": "space-between",
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Medium",
+                            "fontSize": 14,
+                            "lineHeight": 21,
+                          }
+                        }
+                      >
+                        Chicago Campus
+                      </Text>
+                      <View
+                        style={
+                          Object {
+                            "flex": 1,
+                            "flexDirection": "row",
+                            "justifyContent": "flex-end",
+                          }
+                        }
+                      >
+                        <Text
+                          style={
+                            Object {
+                              "color": "#505050",
+                              "fontFamily": "InterUI-Bold",
+                              "fontSize": 12,
+                              "lineHeight": 18,
+                            }
+                          }
+                        >
+                          5000
+                          mi
+                        </Text>
+                      </View>
+                    </View>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#505050",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 12,
+                          "lineHeight": 18,
+                        }
+                      }
+                    >
+                      67 Algonquin Rd
+South Barrington, IL 60010-6143
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              cardWidth={714}
+              inHorizontalList={true}
+              isLoading={false}
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 16,
+                  "margin": 8,
+                  "marginBottom": 12,
+                  "marginHorizontal": 4,
+                  "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
+                  "width": 714,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "overflow": "hidden",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "flexWrap": "nowrap",
+                      "height": 96,
+                      "justifyContent": "space-between",
+                    }
+                  }
+                >
+                  <Image
+                    fadeDuration={250}
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "__typename": "ImageMediaSource",
+                          "cache": "force-cache",
+                          "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Da47e8e69-9542-42de-9ed3-ff42fdc82417",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "height": "100%",
+                        "resizeMode": "cover",
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "paddingHorizontal": 16,
+                        "paddingVertical": 16,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "stretch",
+                          "flexDirection": "row",
+                          "flexWrap": "nowrap",
+                          "height": 21,
+                          "justifyContent": "space-between",
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Medium",
+                            "fontSize": 14,
+                            "lineHeight": 21,
+                          }
+                        }
+                      >
+                        Anderson Campus
+                      </Text>
+                      <View
+                        style={
+                          Object {
+                            "flex": 1,
+                            "flexDirection": "row",
+                            "justifyContent": "flex-end",
+                          }
+                        }
+                      >
+                        <Text
+                          style={
+                            Object {
+                              "color": "#505050",
+                              "fontFamily": "InterUI-Bold",
+                              "fontSize": 12,
+                              "lineHeight": 18,
+                            }
+                          }
+                        >
+                          5
+                          mi
+                        </Text>
+                      </View>
+                    </View>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#505050",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 12,
+                          "lineHeight": 18,
+                        }
+                      }
+                    >
+                      2940 Concord Rd
+Anderson, SC 29621-3619
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              cardWidth={714}
+              inHorizontalList={true}
+              isLoading={false}
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 16,
+                  "margin": 8,
+                  "marginBottom": 12,
+                  "marginHorizontal": 4,
+                  "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
+                  "width": 714,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "overflow": "hidden",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "flexWrap": "nowrap",
+                      "height": 96,
+                      "justifyContent": "space-between",
+                    }
+                  }
+                >
+                  <Image
+                    fadeDuration={250}
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "__typename": "ImageMediaSource",
+                          "cache": "force-cache",
+                          "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D5f9fd97a-fd6e-4ae5-ab5d-a9b95290d9b6",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "height": "100%",
+                        "resizeMode": "cover",
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "paddingHorizontal": 16,
+                        "paddingVertical": 16,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "stretch",
+                          "flexDirection": "row",
+                          "flexWrap": "nowrap",
+                          "height": 21,
+                          "justifyContent": "space-between",
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Medium",
+                            "fontSize": 14,
+                            "lineHeight": 21,
+                          }
+                        }
+                      >
+                        Dallas Campus
+                      </Text>
+                      <View
+                        style={
+                          Object {
+                            "flex": 1,
+                            "flexDirection": "row",
+                            "justifyContent": "flex-end",
+                          }
+                        }
+                      >
+                        <Text
+                          style={
+                            Object {
+                              "color": "#505050",
+                              "fontFamily": "InterUI-Bold",
+                              "fontSize": 12,
+                              "lineHeight": 18,
+                            }
+                          }
+                        >
+                          50
+                          mi
+                        </Text>
+                      </View>
+                    </View>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#505050",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 12,
+                          "lineHeight": 18,
+                        }
+                      }
+                    >
+                      102 N Weatherred Dr
+Richardson, TX 75080-5525
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              cardWidth={714}
+              inHorizontalList={true}
+              isLoading={false}
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 16,
+                  "margin": 8,
+                  "marginBottom": 12,
+                  "marginHorizontal": 4,
+                  "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
+                  "width": 714,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "overflow": "hidden",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "flexWrap": "nowrap",
+                      "height": 96,
+                      "justifyContent": "space-between",
+                    }
+                  }
+                >
+                  <Image
+                    fadeDuration={250}
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "__typename": "ImageMediaSource",
+                          "cache": "force-cache",
+                          "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dbad9eb54-3e78-44a7-a028-3f2d6e71a36f",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "height": "100%",
+                        "resizeMode": "cover",
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "paddingHorizontal": 16,
+                        "paddingVertical": 16,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "stretch",
+                          "flexDirection": "row",
+                          "flexWrap": "nowrap",
+                          "height": 21,
+                          "justifyContent": "space-between",
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Medium",
+                            "fontSize": 14,
+                            "lineHeight": 21,
+                          }
+                        }
+                      >
+                        Cincinnati Campus
+                      </Text>
+                      <View
+                        style={
+                          Object {
+                            "flex": 1,
+                            "flexDirection": "row",
+                            "justifyContent": "flex-end",
+                          }
+                        }
+                      >
+                        <Text
+                          style={
+                            Object {
+                              "color": "#505050",
+                              "fontFamily": "InterUI-Bold",
+                              "fontSize": 12,
+                              "lineHeight": 18,
+                            }
+                          }
+                        >
+                          500
+                          mi
+                        </Text>
+                      </View>
+                    </View>
+                    <Text
+                      style={
+                        Object {
+                          "color": "#505050",
+                          "fontFamily": "InterUI-Bold",
+                          "fontSize": 12,
+                          "lineHeight": 18,
+                        }
+                      }
+                    >
+                      120 E 8th St
+Cincinnati, OH 45202-2118
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </RCTScrollView>
       <View
-        accessible={true}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "opacity": 1,
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
           }
         }
       >
         <View
-          bordered={false}
-          disabled={false}
-          pill={false}
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "alignItems": "center",
-              "backgroundColor": "#17B582",
-              "borderColor": "#17B582",
-              "borderRadius": 16,
-              "borderWidth": 2,
-              "elevation": 2,
-              "flexDirection": "row",
-              "height": 48,
-              "justifyContent": "center",
               "opacity": 1,
-              "overflow": "hidden",
-              "paddingHorizontal": 16,
             }
           }
         >
-          <Text
+          <View
+            bordered={false}
+            disabled={false}
+            pill={false}
             style={
               Object {
-                "color": "#FFFFFF",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 16,
-                "lineHeight": 24,
+                "alignItems": "center",
+                "backgroundColor": "#17B582",
+                "borderColor": "#17B582",
+                "borderRadius": 16,
+                "borderWidth": 2,
+                "elevation": 2,
+                "flexDirection": "row",
+                "height": 48,
+                "justifyContent": "center",
+                "opacity": 1,
+                "overflow": "hidden",
+                "paddingHorizontal": 16,
               }
             }
           >
-            Confirm Selection
-          </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
+                }
+              }
+            >
+              Confirm Selection
+            </Text>
+          </View>
         </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;

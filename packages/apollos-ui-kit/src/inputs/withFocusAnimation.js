@@ -38,7 +38,7 @@ const withFocusAnimation = (Component) =>
     handleBlur = (event, ...other) => {
       if (this.props.onBlur) this.props.onBlur(event, ...other);
       this.focused = false;
-      this.playAnimation(0);
+      if (!event.nativeEvent.text) this.playAnimation(0);
     };
 
     render() {

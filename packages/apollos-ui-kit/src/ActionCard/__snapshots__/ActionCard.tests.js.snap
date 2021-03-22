@@ -1,304 +1,146 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the ActionCard component should accept additional Card props 1`] = `
-<View
-  cardColor="salmon"
-  style={
-    Object {
-      "backgroundColor": "salmon",
-      "borderRadius": 16,
-      "marginHorizontal": 16,
-      "marginVertical": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
-    }
-  }
->
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    cardColor="salmon"
     style={
       Object {
+        "backgroundColor": "salmon",
         "borderRadius": 16,
-        "overflow": "hidden",
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
       }
     }
   >
     <View
       style={
         Object {
-          "paddingHorizontal": 16,
-          "paddingVertical": 16,
+          "borderRadius": 16,
+          "overflow": "hidden",
         }
       }
     >
-      <Text
-        bold={false}
-        italic={false}
+      <View
         style={
           Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Regular",
-            "fontSize": 16,
-            "lineHeight": 26,
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
           }
         }
       >
-        “Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elitbibendum.”
-      </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          “Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elitbibendum.”
+        </Text>
+      </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`the ActionCard component should render an action 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "marginHorizontal": 16,
-      "marginVertical": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
+  />,
   <View
     style={
       Object {
+        "backgroundColor": "#FFFFFF",
         "borderRadius": 16,
-        "overflow": "hidden",
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
       }
     }
   >
     <View
       style={
         Object {
-          "paddingHorizontal": 16,
-          "paddingVertical": 16,
+          "borderRadius": 16,
+          "overflow": "hidden",
         }
       }
     >
       <View
-        flexed={false}
         style={
           Object {
-            "alignItems": "center",
-            "flex": null,
-            "flexDirection": "row",
-            "paddingBottom": 16,
-          }
-        }
-      >
-        <RNSVGSvgView
-          align="xMidYMid"
-          bbHeight={19.2}
-          bbWidth={19.2}
-          height={19.2}
-          meetOrSlice={0}
-          minX={0}
-          minY={0}
-          style={
-            Array [
-              Object {
-                "backgroundColor": "transparent",
-                "borderWidth": 0,
-              },
-              undefined,
-              null,
-              Object {
-                "flex": 0,
-                "height": 19,
-                "width": 19,
-              },
-            ]
-          }
-          vbHeight={24}
-          vbWidth={24}
-          width={19.2}
-        >
-          <RNSVGGroup
-            fill={
-              Array [
-                0,
-                4278190080,
-              ]
-            }
-            fillOpacity={1}
-            fillRule={1}
-            font={Object {}}
-            matrix={
-              Array [
-                1,
-                0,
-                0,
-                1,
-                0,
-                0,
-              ]
-            }
-            opacity={1}
-            originX={0}
-            originY={0}
-            propList={Array []}
-            rotation={0}
-            scaleX={1}
-            scaleY={1}
-            skewX={0}
-            skewY={0}
-            stroke={null}
-            strokeDasharray={null}
-            strokeDashoffset={null}
-            strokeLinecap={0}
-            strokeLinejoin={0}
-            strokeMiterlimit={4}
-            strokeOpacity={1}
-            strokeWidth={1}
-            vectorEffect={0}
-            x={0}
-            y={0}
-          >
-            <RNSVGPath
-              d="M4.6 3.64v16.356c0 .004 0 .004-.003.004h14.806c-.004 0-.003 0-.003-.004V3.64c0-.004 0-.004.003-.004H4.597c.004 0 .003 0 .003.004zm-1.6 0C3 2.734 3.717 2 4.597 2h14.806C20.285 2 21 2.734 21 3.64v16.356c0 .906-.717 1.64-1.597 1.64H4.597c-.882 0-1.597-.734-1.597-1.64V3.64zm4 3.27c0 .45.366.817.818.817h8.364c.452 0 .818-.366.818-.818 0-.454-.366-.82-.818-.82H7.818c-.452 0-.818.366-.818.82zm0 4.908c0 .452.366.818.818.818h8.364c.452 0 .818-.366.818-.818 0-.452-.366-.818-.818-.818H7.818c-.452 0-.818.366-.818.818zm0 4.91c0 .45.366.817.818.817h4.764c.452 0 .818-.366.818-.818 0-.452-.366-.818-.818-.818H7.818c-.452 0-.818.364-.818.816z"
-              fill={
-                Array [
-                  0,
-                  4278216557,
-                ]
-              }
-              fillOpacity={1}
-              fillRule={1}
-              matrix={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-              opacity={1}
-              originX={0}
-              originY={0}
-              propList={
-                Array [
-                  "fill",
-                ]
-              }
-              rotation={0}
-              scaleX={1}
-              scaleY={1}
-              skewX={0}
-              skewY={0}
-              stroke={null}
-              strokeDasharray={null}
-              strokeDashoffset={null}
-              strokeLinecap={0}
-              strokeLinejoin={0}
-              strokeMiterlimit={4}
-              strokeOpacity={1}
-              strokeWidth={1}
-              vectorEffect={0}
-              x={0}
-              y={0}
-            />
-          </RNSVGGroup>
-        </RNSVGSvgView>
-        <View
-          style={
-            Object {
-              "paddingHorizontal": 4,
-            }
-          }
-          withIcon="text"
-        >
-          <Text
-            style={
-              Object {
-                "color": "#00676D",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 12,
-                "lineHeight": 18,
-              }
-            }
-            tint="#00676D"
-          >
-            Key Idea
-          </Text>
-        </View>
-      </View>
-      <Text
-        bold={false}
-        italic={false}
-        style={
-          Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Regular",
-            "fontSize": 16,
-            "lineHeight": 26,
-          }
-        }
-      >
-        “Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elitbibendum.”
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "justifyContent": "flex-end",
-          "paddingHorizontal": 16,
-          "paddingTop": 0,
-          "paddingVertical": 16,
-        }
-      }
-    >
-      <View
-        bordered={false}
-        disabled={false}
-        pill={false}
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#A5A5A5",
-            "borderColor": "#A5A5A5",
-            "borderRadius": 16,
-            "borderWidth": 2,
-            "elevation": 2,
-            "flexDirection": "row",
-            "height": 32,
-            "justifyContent": "center",
-            "opacity": 1,
-            "overflow": "hidden",
-            "paddingHorizontal": 12,
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
           }
         }
       >
         <View
-          hasTitle={true}
+          flexed={false}
           style={
             Object {
-              "paddingRight": 8,
+              "alignItems": "center",
+              "flex": null,
+              "flexDirection": "row",
+              "paddingBottom": 16,
             }
           }
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={16}
-            bbWidth={16}
-            height={16}
+            bbHeight={19.2}
+            bbWidth={19.2}
+            height={19.2}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -308,18 +150,18 @@ exports[`the ActionCard component should render an action 1`] = `
                   "backgroundColor": "transparent",
                   "borderWidth": 0,
                 },
-                Object {},
+                undefined,
                 null,
                 Object {
                   "flex": 0,
-                  "height": 16,
-                  "width": 16,
+                  "height": 19,
+                  "width": 19,
                 },
               ]
             }
             vbHeight={24}
             vbWidth={24}
-            width={16}
+            width={19.2}
           >
             <RNSVGGroup
               fill={
@@ -363,11 +205,11 @@ exports[`the ActionCard component should render an action 1`] = `
               y={0}
             >
               <RNSVGPath
-                d="M12.8 3.621v8.6568h-1.6V3.5545L8.6046 6.224c-.3037.3124-.7962.3124-1.1 0-.3037-.3124-.3037-.819 0-1.1314l3.826-3.9352c.174-.179.41-.2554.637-.2293.227-.026.463.0505.637.2295l3.826 3.9352c.3037.3125.3037.819 0 1.1314-.3038.3125-.7963.3125-1.1 0L12.8 3.621zM8.0338 8v1.5556H6.4012c-.4785 0-.8012.2822-.8012.544v9.8007c0 .2617.3228.544.7997.544h11.2006c.477 0 .7997-.2823.7997-.544v-9.8006c0-.2623-.3216-.544-.796-.544h-1.623V8h1.623C18.927 8 20 8.9403 20 10.0997v9.8006C20 21.06 18.9254 22 17.6003 22H6.3997C5.0744 22 4 21.0597 4 19.9003v-9.8006C4 8.94 5.0743 8 6.4012 8h1.6326z"
+                d="M4.6 3.64v16.356c0 .004 0 .004-.003.004h14.806c-.004 0-.003 0-.003-.004V3.64c0-.004 0-.004.003-.004H4.597c.004 0 .003 0 .003.004zm-1.6 0C3 2.734 3.717 2 4.597 2h14.806C20.285 2 21 2.734 21 3.64v16.356c0 .906-.717 1.64-1.597 1.64H4.597c-.882 0-1.597-.734-1.597-1.64V3.64zm4 3.27c0 .45.366.817.818.817h8.364c.452 0 .818-.366.818-.818 0-.454-.366-.82-.818-.82H7.818c-.452 0-.818.366-.818.82zm0 4.908c0 .452.366.818.818.818h8.364c.452 0 .818-.366.818-.818 0-.452-.366-.818-.818-.818H7.818c-.452 0-.818.366-.818.818zm0 4.91c0 .45.366.817.818.817h4.764c.452 0 .818-.366.818-.818 0-.452-.366-.818-.818-.818H7.818c-.452 0-.818.364-.818.816z"
                 fill={
                   Array [
                     0,
-                    4281348144,
+                    4278216557,
                   ]
                 }
                 fillOpacity={1}
@@ -409,151 +251,324 @@ exports[`the ActionCard component should render an action 1`] = `
               />
             </RNSVGGroup>
           </RNSVGSvgView>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 4,
+              }
+            }
+            withIcon="text"
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 18,
+                }
+              }
+              tint="#00676D"
+            >
+              Key Idea
+            </Text>
+          </View>
         </View>
         <Text
+          bold={false}
+          italic={false}
           style={
             Object {
-              "alignItems": "center",
               "color": "#303030",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "justifyContent": "center",
-              "lineHeight": 18,
-              "textAlign": "center",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
             }
           }
         >
-          Share
+          “Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elitbibendum.”
         </Text>
       </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "justifyContent": "flex-end",
+            "paddingHorizontal": 16,
+            "paddingTop": 0,
+            "paddingVertical": 16,
+          }
+        }
+      >
+        <View
+          bordered={false}
+          disabled={false}
+          pill={false}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#A5A5A5",
+              "borderColor": "#A5A5A5",
+              "borderRadius": 16,
+              "borderWidth": 2,
+              "elevation": 2,
+              "flexDirection": "row",
+              "height": 32,
+              "justifyContent": "center",
+              "opacity": 1,
+              "overflow": "hidden",
+              "paddingHorizontal": 12,
+            }
+          }
+        >
+          <View
+            hasTitle={true}
+            style={
+              Object {
+                "paddingRight": 8,
+              }
+            }
+          >
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={16}
+              bbWidth={16}
+              height={16}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  Object {},
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 16,
+                    "width": 16,
+                  },
+                ]
+              }
+              vbHeight={24}
+              vbWidth={24}
+              width={16}
+            >
+              <RNSVGGroup
+                fill={
+                  Array [
+                    0,
+                    4278190080,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                font={Object {}}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={Array []}
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              >
+                <RNSVGPath
+                  d="M12.8 3.621v8.6568h-1.6V3.5545L8.6046 6.224c-.3037.3124-.7962.3124-1.1 0-.3037-.3124-.3037-.819 0-1.1314l3.826-3.9352c.174-.179.41-.2554.637-.2293.227-.026.463.0505.637.2295l3.826 3.9352c.3037.3125.3037.819 0 1.1314-.3038.3125-.7963.3125-1.1 0L12.8 3.621zM8.0338 8v1.5556H6.4012c-.4785 0-.8012.2822-.8012.544v9.8007c0 .2617.3228.544.7997.544h11.2006c.477 0 .7997-.2823.7997-.544v-9.8006c0-.2623-.3216-.544-.796-.544h-1.623V8h1.623C18.927 8 20 8.9403 20 10.0997v9.8006C20 21.06 18.9254 22 17.6003 22H6.3997C5.0744 22 4 21.0597 4 19.9003v-9.8006C4 8.94 5.0743 8 6.4012 8h1.6326z"
+                  fill={
+                    Array [
+                      0,
+                      4281348144,
+                    ]
+                  }
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+          </View>
+          <Text
+            style={
+              Object {
+                "alignItems": "center",
+                "color": "#303030",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 12,
+                "justifyContent": "center",
+                "lineHeight": 18,
+                "textAlign": "center",
+              }
+            }
+          >
+            Share
+          </Text>
+        </View>
+      </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`the ActionCard component should render an icon and label 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "marginHorizontal": 16,
-      "marginVertical": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
+  />,
   <View
     style={
       Object {
+        "backgroundColor": "#FFFFFF",
         "borderRadius": 16,
-        "overflow": "hidden",
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
       }
     }
   >
     <View
       style={
         Object {
-          "paddingHorizontal": 16,
-          "paddingVertical": 16,
+          "borderRadius": 16,
+          "overflow": "hidden",
         }
       }
     >
       <View
-        flexed={false}
         style={
           Object {
-            "alignItems": "center",
-            "flex": null,
-            "flexDirection": "row",
-            "paddingBottom": 16,
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
           }
         }
       >
-        <RNSVGSvgView
-          align="xMidYMid"
-          bbHeight={19.2}
-          bbWidth={19.2}
-          height={19.2}
-          meetOrSlice={0}
-          minX={0}
-          minY={0}
+        <View
+          flexed={false}
           style={
-            Array [
-              Object {
-                "backgroundColor": "transparent",
-                "borderWidth": 0,
-              },
-              undefined,
-              null,
-              Object {
-                "flex": 0,
-                "height": 19,
-                "width": 19,
-              },
-            ]
+            Object {
+              "alignItems": "center",
+              "flex": null,
+              "flexDirection": "row",
+              "paddingBottom": 16,
+            }
           }
-          vbHeight={24}
-          vbWidth={24}
-          width={19.2}
         >
-          <RNSVGGroup
-            fill={
+          <RNSVGSvgView
+            align="xMidYMid"
+            bbHeight={19.2}
+            bbWidth={19.2}
+            height={19.2}
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            style={
               Array [
-                0,
-                4278190080,
+                Object {
+                  "backgroundColor": "transparent",
+                  "borderWidth": 0,
+                },
+                undefined,
+                null,
+                Object {
+                  "flex": 0,
+                  "height": 19,
+                  "width": 19,
+                },
               ]
             }
-            fillOpacity={1}
-            fillRule={1}
-            font={Object {}}
-            matrix={
-              Array [
-                1,
-                0,
-                0,
-                1,
-                0,
-                0,
-              ]
-            }
-            opacity={1}
-            originX={0}
-            originY={0}
-            propList={Array []}
-            rotation={0}
-            scaleX={1}
-            scaleY={1}
-            skewX={0}
-            skewY={0}
-            stroke={null}
-            strokeDasharray={null}
-            strokeDashoffset={null}
-            strokeLinecap={0}
-            strokeLinejoin={0}
-            strokeMiterlimit={4}
-            strokeOpacity={1}
-            strokeWidth={1}
-            vectorEffect={0}
-            x={0}
-            y={0}
+            vbHeight={24}
+            vbWidth={24}
+            width={19.2}
           >
-            <RNSVGPath
-              d="M4.6 3.64v16.356c0 .004 0 .004-.003.004h14.806c-.004 0-.003 0-.003-.004V3.64c0-.004 0-.004.003-.004H4.597c.004 0 .003 0 .003.004zm-1.6 0C3 2.734 3.717 2 4.597 2h14.806C20.285 2 21 2.734 21 3.64v16.356c0 .906-.717 1.64-1.597 1.64H4.597c-.882 0-1.597-.734-1.597-1.64V3.64zm4 3.27c0 .45.366.817.818.817h8.364c.452 0 .818-.366.818-.818 0-.454-.366-.82-.818-.82H7.818c-.452 0-.818.366-.818.82zm0 4.908c0 .452.366.818.818.818h8.364c.452 0 .818-.366.818-.818 0-.452-.366-.818-.818-.818H7.818c-.452 0-.818.366-.818.818zm0 4.91c0 .45.366.817.818.817h4.764c.452 0 .818-.366.818-.818 0-.452-.366-.818-.818-.818H7.818c-.452 0-.818.364-.818.816z"
+            <RNSVGGroup
               fill={
                 Array [
                   0,
-                  4278216557,
+                  4278190080,
                 ]
               }
               fillOpacity={1}
               fillRule={1}
+              font={Object {}}
               matrix={
                 Array [
                   1,
@@ -567,11 +582,7 @@ exports[`the ActionCard component should render an icon and label 1`] = `
               opacity={1}
               originX={0}
               originY={0}
-              propList={
-                Array [
-                  "fill",
-                ]
-              }
+              propList={Array []}
               rotation={0}
               scaleX={1}
               scaleY={1}
@@ -588,100 +599,165 @@ exports[`the ActionCard component should render an icon and label 1`] = `
               vectorEffect={0}
               x={0}
               y={0}
-            />
-          </RNSVGGroup>
-        </RNSVGSvgView>
-        <View
-          style={
-            Object {
-              "paddingHorizontal": 4,
-            }
-          }
-          withIcon="text"
-        >
-          <Text
+            >
+              <RNSVGPath
+                d="M4.6 3.64v16.356c0 .004 0 .004-.003.004h14.806c-.004 0-.003 0-.003-.004V3.64c0-.004 0-.004.003-.004H4.597c.004 0 .003 0 .003.004zm-1.6 0C3 2.734 3.717 2 4.597 2h14.806C20.285 2 21 2.734 21 3.64v16.356c0 .906-.717 1.64-1.597 1.64H4.597c-.882 0-1.597-.734-1.597-1.64V3.64zm4 3.27c0 .45.366.817.818.817h8.364c.452 0 .818-.366.818-.818 0-.454-.366-.82-.818-.82H7.818c-.452 0-.818.366-.818.82zm0 4.908c0 .452.366.818.818.818h8.364c.452 0 .818-.366.818-.818 0-.452-.366-.818-.818-.818H7.818c-.452 0-.818.366-.818.818zm0 4.91c0 .45.366.817.818.817h4.764c.452 0 .818-.366.818-.818 0-.452-.366-.818-.818-.818H7.818c-.452 0-.818.364-.818.816z"
+                fill={
+                  Array [
+                    0,
+                    4278216557,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                  ]
+                }
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              />
+            </RNSVGGroup>
+          </RNSVGSvgView>
+          <View
             style={
               Object {
-                "color": "#00676D",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 12,
-                "lineHeight": 18,
+                "paddingHorizontal": 4,
               }
             }
-            tint="#00676D"
+            withIcon="text"
           >
-            Key Idea
-          </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 12,
+                  "lineHeight": 18,
+                }
+              }
+              tint="#00676D"
+            >
+              Key Idea
+            </Text>
+          </View>
         </View>
-      </View>
-      <Text
-        bold={false}
-        italic={false}
-        style={
-          Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Regular",
-            "fontSize": 16,
-            "lineHeight": 26,
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
           }
-        }
-      >
-        “Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elitbibendum.”
-      </Text>
+        >
+          “Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elitbibendum.”
+        </Text>
+      </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`the ActionCard component should render children 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "marginHorizontal": 16,
-      "marginVertical": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
+  />,
   <View
     style={
       Object {
+        "backgroundColor": "#FFFFFF",
         "borderRadius": 16,
-        "overflow": "hidden",
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
       }
     }
   >
     <View
       style={
         Object {
-          "paddingHorizontal": 16,
-          "paddingVertical": 16,
+          "borderRadius": 16,
+          "overflow": "hidden",
         }
       }
     >
-      <Text
-        bold={false}
-        italic={false}
+      <View
         style={
           Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Regular",
-            "fontSize": 16,
-            "lineHeight": 26,
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
           }
         }
       >
-        “Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elitbibendum.”
-      </Text>
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          “Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elitbibendum.”
+        </Text>
+      </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;

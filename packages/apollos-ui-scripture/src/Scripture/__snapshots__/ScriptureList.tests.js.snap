@@ -1,29 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the ScriptureList component renders a scripture List 1`] = `
-<Text
-  style={
-    Object {
-      "color": "#00676D",
-      "fontFamily": "InterUI-Bold",
-      "fontSize": 16,
-      "lineHeight": 24,
-      "paddingBottom": 24,
-      "textAlign": "center",
-      "textDecorationLine": "underline",
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
+  />,
   <Text
-    onPress={[Function]}
-    padded={true}
     style={
       Object {
-        "color": "#17B582",
+        "color": "#00676D",
+        "fontFamily": "InterUI-Bold",
+        "fontSize": 16,
+        "lineHeight": 24,
+        "paddingBottom": 24,
+        "textAlign": "center",
+        "textDecorationLine": "underline",
       }
     }
   >
-    1 Corinthians 15:57, Exodus 17:8-15
-  </Text>
-</Text>
+    <Text
+      onPress={[Function]}
+      padded={true}
+      style={
+        Object {
+          "color": "#17B582",
+        }
+      }
+    >
+      1 Corinthians 15:57, Exodus 17:8-15
+    </Text>
+  </Text>,
+]
 `;

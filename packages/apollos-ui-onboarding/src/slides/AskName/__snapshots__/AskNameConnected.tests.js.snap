@@ -2,6 +2,23 @@
 
 exports[`The AskNameConnected component renders User Name when logged in 1`] = `
 Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -245,13 +262,16 @@ Array [
                         rejectResponderTermination={true}
                         returnKeyType="next"
                         style={
-                          Object {
-                            "color": "#303030",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 14,
-                            "height": 38,
-                            "paddingVertical": 0,
-                          }
+                          Array [
+                            Object {
+                              "color": "#303030",
+                              "fontFamily": "InterUI-Bold",
+                              "fontSize": 14,
+                              "height": 38,
+                              "paddingVertical": 0,
+                            },
+                            undefined,
+                          ]
                         }
                         textContentType="givenName"
                         type="text"
@@ -288,9 +308,9 @@ Array [
                           Object {
                             "backgroundColor": "transparent",
                             "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 18,
+                            "fontFamily": "InterUI-Medium",
+                            "fontSize": 14,
+                            "lineHeight": 21,
                             "paddingVertical": 4,
                           }
                         }
@@ -406,13 +426,16 @@ Array [
                         rejectResponderTermination={true}
                         returnKeyType="next"
                         style={
-                          Object {
-                            "color": "#303030",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 14,
-                            "height": 38,
-                            "paddingVertical": 0,
-                          }
+                          Array [
+                            Object {
+                              "color": "#303030",
+                              "fontFamily": "InterUI-Bold",
+                              "fontSize": 14,
+                              "height": 38,
+                              "paddingVertical": 0,
+                            },
+                            undefined,
+                          ]
                         }
                         textContentType="familyName"
                         type="text"
@@ -449,9 +472,9 @@ Array [
                           Object {
                             "backgroundColor": "transparent",
                             "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 18,
+                            "fontFamily": "InterUI-Medium",
+                            "fontSize": 14,
+                            "lineHeight": 21,
                             "paddingVertical": 4,
                           }
                         }
@@ -720,6 +743,23 @@ Array [
 
 exports[`The AskNameConnected component renders in a default state 1`] = `
 Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -964,13 +1004,16 @@ Array [
                         rejectResponderTermination={true}
                         returnKeyType="next"
                         style={
-                          Object {
-                            "color": "#303030",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 14,
-                            "height": 38,
-                            "paddingVertical": 0,
-                          }
+                          Array [
+                            Object {
+                              "color": "#303030",
+                              "fontFamily": "InterUI-Bold",
+                              "fontSize": 14,
+                              "height": 38,
+                              "paddingVertical": 0,
+                            },
+                            undefined,
+                          ]
                         }
                         textContentType="givenName"
                         type="text"
@@ -1006,9 +1049,9 @@ Array [
                           Object {
                             "backgroundColor": "transparent",
                             "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 18,
+                            "fontFamily": "InterUI-Medium",
+                            "fontSize": 14,
+                            "lineHeight": 21,
                             "paddingVertical": 4,
                           }
                         }
@@ -1125,13 +1168,16 @@ Array [
                         rejectResponderTermination={true}
                         returnKeyType="next"
                         style={
-                          Object {
-                            "color": "#303030",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 14,
-                            "height": 38,
-                            "paddingVertical": 0,
-                          }
+                          Array [
+                            Object {
+                              "color": "#303030",
+                              "fontFamily": "InterUI-Bold",
+                              "fontSize": 14,
+                              "height": 38,
+                              "paddingVertical": 0,
+                            },
+                            undefined,
+                          ]
                         }
                         textContentType="familyName"
                         type="text"
@@ -1167,9 +1213,9 @@ Array [
                           Object {
                             "backgroundColor": "transparent",
                             "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 18,
+                            "fontFamily": "InterUI-Medium",
+                            "fontSize": 14,
+                            "lineHeight": 21,
                             "paddingVertical": 4,
                           }
                         }
@@ -1328,6 +1374,23 @@ Array [
 
 exports[`The AskNameConnected component renders loading state when fetching data 1`] = `
 Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -1573,13 +1636,16 @@ Array [
                         rejectResponderTermination={true}
                         returnKeyType="next"
                         style={
-                          Object {
-                            "color": "#303030",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 14,
-                            "height": 38,
-                            "paddingVertical": 0,
-                          }
+                          Array [
+                            Object {
+                              "color": "#303030",
+                              "fontFamily": "InterUI-Bold",
+                              "fontSize": 14,
+                              "height": 38,
+                              "paddingVertical": 0,
+                            },
+                            undefined,
+                          ]
                         }
                         textContentType="givenName"
                         type="text"
@@ -1615,9 +1681,9 @@ Array [
                           Object {
                             "backgroundColor": "transparent",
                             "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 18,
+                            "fontFamily": "InterUI-Medium",
+                            "fontSize": 14,
+                            "lineHeight": 21,
                             "paddingVertical": 4,
                           }
                         }
@@ -1734,13 +1800,16 @@ Array [
                         rejectResponderTermination={true}
                         returnKeyType="next"
                         style={
-                          Object {
-                            "color": "#303030",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 14,
-                            "height": 38,
-                            "paddingVertical": 0,
-                          }
+                          Array [
+                            Object {
+                              "color": "#303030",
+                              "fontFamily": "InterUI-Bold",
+                              "fontSize": 14,
+                              "height": 38,
+                              "paddingVertical": 0,
+                            },
+                            undefined,
+                          ]
                         }
                         textContentType="familyName"
                         type="text"
@@ -1776,9 +1845,9 @@ Array [
                           Object {
                             "backgroundColor": "transparent",
                             "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 18,
+                            "fontFamily": "InterUI-Medium",
+                            "fontSize": 14,
+                            "lineHeight": 21,
                             "paddingVertical": 4,
                           }
                         }
@@ -1936,7 +2005,26 @@ Array [
 `;
 
 exports[`The AskNameConnected component should render a custom Component 1`] = `
-<Text>
-  Isaac Hardy thinks Skyline chili is the best.
-</Text>
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <Text>
+    Isaac Hardy thinks Skyline chili is the best.
+  </Text>,
+]
 `;

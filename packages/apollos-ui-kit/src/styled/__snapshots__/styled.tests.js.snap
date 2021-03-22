@@ -1,17 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the styled HOC allows a theme to supply overrides 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "green",
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-/>
+  />,
+  <View
+    style={
+      Object {
+        "backgroundColor": "green",
+      }
+    }
+  />,
+]
 `;
 
 exports[`the styled HOC allows a theme to supply overrides that depend on props 1`] = `
 Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
   <View
     active={true}
     style={
@@ -41,13 +77,32 @@ exports[`the styled HOC passes style literal to the base component 1`] = `
 `;
 
 exports[`the styled HOC provides a theme 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "#00676D",
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-/>
+  />,
+  <View
+    style={
+      Object {
+        "backgroundColor": "#00676D",
+      }
+    }
+  />,
+]
 `;
 
 exports[`the styled HOC should accept a function, works with props 1`] = `

@@ -35,6 +35,7 @@
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
     ],
     "setupFiles": [
+      "../apollos-ui-test-utils/src/mocks/reanimated.js",
       "./jest.setup.js"
     ],
     "modulePathIgnorePatterns": [

@@ -1,12 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the PaddedView component should render 1`] = `
-<View
-  style={
-    Object {
-      "paddingHorizontal": 16,
-      "paddingVertical": 16,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-/>
+  />,
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 16,
+        "paddingVertical": 16,
+      }
+    }
+  />,
+]
 `;

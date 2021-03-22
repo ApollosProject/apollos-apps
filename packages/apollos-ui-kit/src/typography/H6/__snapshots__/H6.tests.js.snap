@@ -1,95 +1,209 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the H6 component should accept additional props 1`] = `
-<Text
-  accessible={false}
-  style={
-    Object {
-      "color": "#505050",
-      "fontFamily": "InterUI-Bold",
-      "fontSize": 12,
-      "lineHeight": 18,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  "Radical obedience to Christ is not easy... It's not comfort, not health, not wealth, and not prosperity in this world. Radical obedience to Christ risks losing all these things. But in the end, such risk finds its reward in Christ. And he is more than enough for us." ― David Platt
-</Text>
+  />,
+  <Text
+    accessible={false}
+    style={
+      Object {
+        "color": "#505050",
+        "fontFamily": "InterUI-Bold",
+        "fontSize": 12,
+        "lineHeight": 18,
+      }
+    }
+  >
+    "Radical obedience to Christ is not easy... It's not comfort, not health, not wealth, and not prosperity in this world. Radical obedience to Christ risks losing all these things. But in the end, such risk finds its reward in Christ. And he is more than enough for us." ― David Platt
+  </Text>,
+]
 `;
 
 exports[`the H6 component should accept and render passed in styles 1`] = `
-<Text
-  style={
-    Object {
-      "color": "salmon",
-      "fontFamily": "InterUI-Bold",
-      "fontSize": 12,
-      "lineHeight": 18,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  Salmon text
-</Text>
+  />,
+  <Text
+    style={
+      Object {
+        "color": "salmon",
+        "fontFamily": "InterUI-Bold",
+        "fontSize": 12,
+        "lineHeight": 18,
+      }
+    }
+  >
+    Salmon text
+  </Text>,
+]
 `;
 
 exports[`the H6 component should render a loading state 1`] = `
-<View
-  style={
-    Object {
-      "alignSelf": "stretch",
-      "backgroundColor": "#A5A5A5",
-      "borderRadius": 16,
-      "height": 12,
-      "marginVertical": 3,
-      "width": "50%",
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-/>
+  />,
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 16,
+        "height": 12,
+        "marginVertical": 3,
+        "width": "50%",
+      }
+    }
+  />,
+]
 `;
 
 exports[`the H6 component should render a loading state with correct positioning (margins) 1`] = `
-<View
-  style={
-    Object {
-      "alignSelf": "stretch",
-      "backgroundColor": "#A5A5A5",
-      "borderRadius": 16,
-      "height": 12,
-      "marginBottom": 9,
-      "marginVertical": 3,
-      "width": "50%",
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-/>
+  />,
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 16,
+        "height": 12,
+        "marginBottom": 9,
+        "marginVertical": 3,
+        "width": "50%",
+      }
+    }
+  />,
+]
 `;
 
 exports[`the H6 component should render correctly 1`] = `
-<Text
-  style={
-    Object {
-      "color": "#505050",
-      "fontFamily": "InterUI-Bold",
-      "fontSize": 12,
-      "lineHeight": 18,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  Default H6 text
-</Text>
+  />,
+  <Text
+    style={
+      Object {
+        "color": "#505050",
+        "fontFamily": "InterUI-Bold",
+        "fontSize": 12,
+        "lineHeight": 18,
+      }
+    }
+  >
+    Default H6 text
+  </Text>,
+]
 `;
 
 exports[`the H6 component should render with correct padding 1`] = `
-<Text
-  padded={true}
-  style={
-    Object {
-      "color": "#505050",
-      "fontFamily": "InterUI-Bold",
-      "fontSize": 12,
-      "lineHeight": 18,
-      "paddingBottom": 9,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  Padded H6 text
-</Text>
+  />,
+  <Text
+    padded={true}
+    style={
+      Object {
+        "color": "#505050",
+        "fontFamily": "InterUI-Bold",
+        "fontSize": 12,
+        "lineHeight": 18,
+        "paddingBottom": 9,
+      }
+    }
+  >
+    Padded H6 text
+  </Text>,
+]
 `;

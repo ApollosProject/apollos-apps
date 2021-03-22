@@ -1,97 +1,211 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the H4 component should accept additional props 1`] = `
-<Text
-  accessible={false}
-  style={
-    Object {
-      "color": "#303030",
-      "fontFamily": "InterUI-Bold",
-      "fontSize": 16,
-      "lineHeight": 24,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  "What you are is God's gift to you, what you become is your gift to God." ― Hans Urs von Balthasar
-</Text>
+  />,
+  <Text
+    accessible={false}
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "InterUI-Bold",
+        "fontSize": 16,
+        "lineHeight": 24,
+      }
+    }
+  >
+    "What you are is God's gift to you, what you become is your gift to God." ― Hans Urs von Balthasar
+  </Text>,
+]
 `;
 
 exports[`the H4 component should accept and render passed in styles 1`] = `
-<Text
-  style={
-    Object {
-      "color": "salmon",
-      "fontFamily": "InterUI-Bold",
-      "fontSize": 16,
-      "lineHeight": 24,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  Salmon text
-</Text>
+  />,
+  <Text
+    style={
+      Object {
+        "color": "salmon",
+        "fontFamily": "InterUI-Bold",
+        "fontSize": 16,
+        "lineHeight": 24,
+      }
+    }
+  >
+    Salmon text
+  </Text>,
+]
 `;
 
 exports[`the H4 component should render a loading state 1`] = `
-<View
-  style={
-    Object {
-      "alignSelf": "stretch",
-      "backgroundColor": "#A5A5A5",
-      "borderRadius": 16,
-      "height": 16,
-      "marginVertical": 4,
-      "width": "80%",
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-/>
+  />,
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 16,
+        "height": 16,
+        "marginVertical": 4,
+        "width": "80%",
+      }
+    }
+  />,
+]
 `;
 
 exports[`the H4 component should render a loading state with correct positioning (margins) 1`] = `
-<View
-  style={
-    Object {
-      "alignSelf": "stretch",
-      "backgroundColor": "#A5A5A5",
-      "borderRadius": 16,
-      "height": 16,
-      "marginBottom": 12,
-      "marginTop": 15.84,
-      "marginVertical": 4,
-      "width": "80%",
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-/>
+  />,
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 16,
+        "height": 16,
+        "marginBottom": 12,
+        "marginTop": 15.84,
+        "marginVertical": 4,
+        "width": "80%",
+      }
+    }
+  />,
+]
 `;
 
 exports[`the H4 component should render correctly 1`] = `
-<Text
-  style={
-    Object {
-      "color": "#303030",
-      "fontFamily": "InterUI-Bold",
-      "fontSize": 16,
-      "lineHeight": 24,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  Default H4 text
-</Text>
+  />,
+  <Text
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "InterUI-Bold",
+        "fontSize": 16,
+        "lineHeight": 24,
+      }
+    }
+  >
+    Default H4 text
+  </Text>,
+]
 `;
 
 exports[`the H4 component should render with correct padding 1`] = `
-<Text
-  padded={true}
-  style={
-    Object {
-      "color": "#303030",
-      "fontFamily": "InterUI-Bold",
-      "fontSize": 16,
-      "lineHeight": 24,
-      "paddingBottom": 12,
-      "paddingTop": 15.84,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  Padded H4 text
-</Text>
+  />,
+  <Text
+    padded={true}
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "InterUI-Bold",
+        "fontSize": 16,
+        "lineHeight": 24,
+        "paddingBottom": 12,
+        "paddingTop": 15.84,
+      }
+    }
+  >
+    Padded H4 text
+  </Text>,
+]
 `;

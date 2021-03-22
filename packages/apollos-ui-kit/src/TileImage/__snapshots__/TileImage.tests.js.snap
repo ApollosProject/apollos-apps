@@ -1,34 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the TileImage component passes an onPressItem prop 1`] = `
-<View
-  accessible={true}
-  focusable={true}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "transform": Array [
-        Object {
-          "scale": 1,
-        },
-      ],
-    }
-  }
->
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "aspectRatio": 1,
-        "borderRadius": 16,
-        "height": "100%",
-        "overflow": "hidden",
-        "width": "100%",
+        "transform": Array [
+          Object {
+            "scale": 1,
+          },
+        ],
       }
     }
   >
@@ -36,83 +43,102 @@ exports[`the TileImage component passes an onPressItem prop 1`] = `
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": "100%",
           "overflow": "hidden",
           "width": "100%",
         }
       }
     >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://picsum.photos/600/400/?random",
-              "url": "https://picsum.photos/600/400/?random",
-            },
-          ]
-        }
+      <View
         style={
           Object {
+            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "resizeMode": "cover",
+            "overflow": "hidden",
             "width": "100%",
           }
         }
-      />
-    </View>
-    <Text
-      style={
-        Object {
-          "backgroundColor": "transparent",
-          "bottom": 16,
-          "color": "#F8F7F4",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 16,
-          "left": 16,
-          "lineHeight": 24,
-          "position": "absolute",
-          "right": 16,
+      >
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/600/400/?random",
+                "url": "https://picsum.photos/600/400/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "resizeMode": "cover",
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <Text
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "bottom": 16,
+            "color": "#F8F7F4",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "left": 16,
+            "lineHeight": 24,
+            "position": "absolute",
+            "right": 16,
+          }
         }
-      }
-    >
-      
-    </Text>
-  </View>
-</View>
+      >
+        
+      </Text>
+    </View>
+  </View>,
+]
 `;
 
 exports[`the TileImage component should render 1`] = `
-<View
-  accessible={true}
-  focusable={true}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "transform": Array [
-        Object {
-          "scale": 1,
-        },
-      ],
-    }
-  }
->
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "aspectRatio": 1,
-        "borderRadius": 16,
-        "height": "100%",
-        "overflow": "hidden",
-        "width": "100%",
+        "transform": Array [
+          Object {
+            "scale": 1,
+          },
+        ],
       }
     }
   >
@@ -120,120 +146,139 @@ exports[`the TileImage component should render 1`] = `
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": "100%",
           "overflow": "hidden",
           "width": "100%",
         }
       }
     >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://picsum.photos/600/400/?random",
-              "url": "https://picsum.photos/600/400/?random",
-            },
-          ]
-        }
+      <View
         style={
           Object {
+            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "resizeMode": "cover",
+            "overflow": "hidden",
             "width": "100%",
           }
         }
-      />
-      <BVLinearGradient
-        colors={
-          Array [
-            0,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
+      >
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/600/400/?random",
+                "url": "https://picsum.photos/600/400/?random",
+              },
+            ]
           }
-        }
-        locations={
-          Array [
-            0.5,
-            1,
-          ]
-        }
-        overlayColor="#000000"
-        overlayType="default"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "resizeMode": "cover",
+              "width": "100%",
+            }
           }
-        }
+        />
+        <BVLinearGradient
+          colors={
+            Array [
+              0,
+              4278190080,
+            ]
+          }
+          endPoint={
+            Object {
+              "x": 0,
+              "y": 1,
+            }
+          }
+          locations={
+            Array [
+              0.5,
+              1,
+            ]
+          }
+          overlayColor="#000000"
+          overlayType="default"
+          startPoint={
+            Object {
+              "x": 0,
+              "y": 0,
+            }
+          }
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+      <Text
         style={
           Object {
-            "bottom": 0,
-            "left": 0,
+            "backgroundColor": "transparent",
+            "bottom": 16,
+            "color": "#F8F7F4",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "left": 16,
+            "lineHeight": 24,
             "position": "absolute",
-            "right": 0,
-            "top": 0,
+            "right": 16,
           }
         }
-      />
+      >
+        So cool!
+      </Text>
     </View>
-    <Text
-      style={
-        Object {
-          "backgroundColor": "transparent",
-          "bottom": 16,
-          "color": "#F8F7F4",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 16,
-          "left": 16,
-          "lineHeight": 24,
-          "position": "absolute",
-          "right": 16,
-        }
-      }
-    >
-      So cool!
-    </Text>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`the TileImage component should render a loading state 1`] = `
-<View
-  accessible={true}
-  focusable={true}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "transform": Array [
-        Object {
-          "scale": 1,
-        },
-      ],
-    }
-  }
->
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "aspectRatio": 1,
-        "borderRadius": 16,
-        "height": "100%",
-        "overflow": "hidden",
-        "width": "100%",
+        "transform": Array [
+          Object {
+            "scale": 1,
+          },
+        ],
       }
     }
   >
@@ -241,79 +286,98 @@ exports[`the TileImage component should render a loading state 1`] = `
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": "100%",
           "overflow": "hidden",
           "width": "100%",
         }
       }
     >
-      <Image
-        fadeDuration={250}
-        isLoading={true}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://picsum.photos/600/400/?random",
-              "url": "https://picsum.photos/600/400/?random",
-            },
-          ]
-        }
+      <View
         style={
           Object {
+            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "resizeMode": "cover",
+            "overflow": "hidden",
             "width": "100%",
+          }
+        }
+      >
+        <Image
+          fadeDuration={250}
+          isLoading={true}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/600/400/?random",
+                "url": "https://picsum.photos/600/400/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "resizeMode": "cover",
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 16,
+            "height": 16,
+            "marginVertical": 4,
+            "width": "80%",
           }
         }
       />
     </View>
-    <View
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 16,
-          "height": 16,
-          "marginVertical": 4,
-          "width": "80%",
-        }
-      }
-    />
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`the TileImage component should render without text 1`] = `
-<View
-  accessible={true}
-  focusable={true}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "transform": Array [
-        Object {
-          "scale": 1,
-        },
-      ],
-    }
-  }
->
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "aspectRatio": 1,
-        "borderRadius": 16,
-        "height": "100%",
-        "overflow": "hidden",
-        "width": "100%",
+        "transform": Array [
+          Object {
+            "scale": 1,
+          },
+        ],
       }
     }
   >
@@ -321,50 +385,62 @@ exports[`the TileImage component should render without text 1`] = `
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": "100%",
           "overflow": "hidden",
           "width": "100%",
         }
       }
     >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://picsum.photos/600/400/?random",
-              "url": "https://picsum.photos/600/400/?random",
-            },
-          ]
-        }
+      <View
         style={
           Object {
+            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "resizeMode": "cover",
+            "overflow": "hidden",
             "width": "100%",
           }
         }
-      />
-    </View>
-    <Text
-      style={
-        Object {
-          "backgroundColor": "transparent",
-          "bottom": 16,
-          "color": "#F8F7F4",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 16,
-          "left": 16,
-          "lineHeight": 24,
-          "position": "absolute",
-          "right": 16,
+      >
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/600/400/?random",
+                "url": "https://picsum.photos/600/400/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "resizeMode": "cover",
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <Text
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "bottom": 16,
+            "color": "#F8F7F4",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "left": 16,
+            "lineHeight": 24,
+            "position": "absolute",
+            "right": 16,
+          }
         }
-      }
-    >
-      
-    </Text>
-  </View>
-</View>
+      >
+        
+      </Text>
+    </View>
+  </View>,
+]
 `;

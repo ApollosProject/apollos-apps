@@ -6,25 +6,28 @@ import styled from '../styled';
 
 const Button = styled(
   ({ theme }) => ({
-    width: theme.sizing.baseUnit * 3,
+    minWidth: theme.sizing.baseUnit * 3,
   }),
   'ui-kit.ModalButton.Button'
 )(TouchableOpacity);
 
 const ButtonText = styled(
-  ({ theme }) => ({
-    color: theme.colors.primary,
+  ({ theme, strong = false }) => ({
+    color: theme.colors.secondary,
     fontSize: theme.typography.baseFontSize,
     lineHeight: theme.typography.baseLineHeight,
     textAlign: 'right',
+    fontWeight: strong ? 'bold' : undefined,
   }),
   'ui-kit.ModalButton.ButtonText'
 )(Text);
 
-function ModalButton({ onPress, title }) {
+function ModalButton({ onPress, title, strong }) {
   return (
     <Button onPress={onPress}>
-      <ButtonText numberOfLines={1}>{title}</ButtonText>
+      <ButtonText numberOfLines={1} strong={strong}>
+        {title}
+      </ButtonText>
     </Button>
   );
 }
@@ -32,6 +35,7 @@ function ModalButton({ onPress, title }) {
 ModalButton.propTypes = {
   onPress: PropTypes.func,
   title: PropTypes.string,
+  strong: PropTypes.bool,
 };
 
 export default ModalButton;

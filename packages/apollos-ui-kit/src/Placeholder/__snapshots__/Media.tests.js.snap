@@ -1,40 +1,97 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Media placeholder accepts custom styles 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "salmon",
-      "borderRadius": 16,
-      "height": "100%",
-      "width": "100%",
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-/>
+  />,
+  <View
+    style={
+      Object {
+        "backgroundColor": "salmon",
+        "borderRadius": 16,
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  />,
+]
 `;
 
 exports[`The Media placeholder accepts size 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "#A5A5A5",
-      "borderRadius": 16,
-      "height": "50%",
-      "width": "50%",
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-/>
+  />,
+  <View
+    style={
+      Object {
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 16,
+        "height": "50%",
+        "width": "50%",
+      }
+    }
+  />,
+]
 `;
 
 exports[`The Media placeholder renders correctly 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "#A5A5A5",
-      "borderRadius": 16,
-      "height": "100%",
-      "width": "100%",
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-/>
+  />,
+  <View
+    style={
+      Object {
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 16,
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  />,
+]
 `;

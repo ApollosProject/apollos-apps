@@ -2,6 +2,23 @@
 
 exports[`The Onboarding AskNotifications component should pass additional props to Slide component 1`] = `
 Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -107,670 +124,803 @@ Array [
 `;
 
 exports[`The Onboarding AskNotifications component should render 1`] = `
-<RCTScrollView
-  contentContainerStyle={
-    Object {
-      "minHeight": "100%",
-    }
-  }
-  overScrollMode="auto"
-  style={
-    Object {
-      "flex": 1,
-    }
-  }
->
-  <View>
-    <View
-      style={
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
         Object {
-          "flex": 1,
-          "justifyContent": "space-between",
-          "marginBottom": 48,
-          "paddingHorizontal": 16,
-          "paddingTop": 16,
-        }
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
       }
-    >
-      <View>
-        <View
-          style={
-            Object {
-              "paddingBottom": 8,
-            }
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "space-between",
+            "marginBottom": 48,
+            "paddingHorizontal": 16,
+            "paddingTop": 16,
           }
-        >
-          <Text
+        }
+      >
+        <View>
+          <View
             style={
               Object {
-                "color": "#00676D",
-                "fontFamily": "InterUI-Black",
-                "fontSize": 36,
-                "lineHeight": 41.4,
+                "paddingBottom": 8,
               }
             }
           >
-            Can we keep you informed?
+            <Text
+              style={
+                Object {
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Can we keep you informed?
+            </Text>
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+              }
+            }
+          >
+            We'll let you know when important things are happening and keep you in the loop
           </Text>
         </View>
-        <Text
-          style={
-            Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Medium",
-              "fontSize": 14,
-              "lineHeight": 21,
-            }
-          }
-        >
-          We'll let you know when important things are happening and keep you in the loop
-        </Text>
       </View>
     </View>
-  </View>
-</RCTScrollView>
+  </RCTScrollView>,
+]
 `;
 
 exports[`The Onboarding AskNotifications component should render a BackgroundComponent 1`] = `
-<RCTScrollView
-  contentContainerStyle={
-    Object {
-      "minHeight": "100%",
-    }
-  }
-  overScrollMode="auto"
-  style={
-    Object {
-      "flex": 1,
-    }
-  }
->
-  <View>
-    <View
-      style={
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
         Object {
-          "backgroundColor": "#A5A5A5",
+          "bottom": 0,
+          "left": 0,
           "overflow": "hidden",
-          "width": "100%",
-        }
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
       }
-    >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://picsum.photos/640/640/?random",
-              "url": "https://picsum.photos/640/640/?random",
-            },
-          ]
-        }
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View
         style={
           Object {
-            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "resizeMode": "cover",
+            "overflow": "hidden",
             "width": "100%",
           }
         }
-      />
-    </View>
-    <View
-      style={
-        Object {
-          "flex": 1,
-          "justifyContent": "space-between",
-          "marginBottom": 48,
-          "paddingHorizontal": 16,
-          "paddingTop": 16,
-        }
-      }
-    >
-      <View>
-        <View
+      >
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/640/640/?random",
+                "url": "https://picsum.photos/640/640/?random",
+              },
+            ]
+          }
           style={
             Object {
-              "paddingBottom": 8,
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "resizeMode": "cover",
+              "width": "100%",
             }
           }
-        >
-          <Text
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "space-between",
+            "marginBottom": 48,
+            "paddingHorizontal": 16,
+            "paddingTop": 16,
+          }
+        }
+      >
+        <View>
+          <View
             style={
               Object {
-                "color": "#00676D",
-                "fontFamily": "InterUI-Black",
-                "fontSize": 36,
-                "lineHeight": 41.4,
+                "paddingBottom": 8,
               }
             }
           >
-            Can we keep you informed?
+            <Text
+              style={
+                Object {
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Can we keep you informed?
+            </Text>
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+              }
+            }
+          >
+            We'll let you know when important things are happening and keep you in the loop
           </Text>
         </View>
-        <Text
-          style={
-            Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Medium",
-              "fontSize": 14,
-              "lineHeight": 21,
-            }
-          }
-        >
-          We'll let you know when important things are happening and keep you in the loop
-        </Text>
       </View>
     </View>
-  </View>
-</RCTScrollView>
+  </RCTScrollView>,
+]
 `;
 
 exports[`The Onboarding AskNotifications component should render a button with custom text 1`] = `
-<RCTScrollView
-  contentContainerStyle={
-    Object {
-      "minHeight": "100%",
-    }
-  }
-  overScrollMode="auto"
-  style={
-    Object {
-      "flex": 1,
-    }
-  }
->
-  <View>
-    <View
-      style={
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
         Object {
-          "flex": 1,
-          "justifyContent": "space-between",
-          "marginBottom": 48,
-          "paddingHorizontal": 16,
-          "paddingTop": 16,
-        }
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
       }
-    >
-      <View>
-        <View
-          style={
-            Object {
-              "paddingBottom": 8,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#00676D",
-                "fontFamily": "InterUI-Black",
-                "fontSize": 36,
-                "lineHeight": 41.4,
-              }
-            }
-          >
-            Can we keep you informed?
-          </Text>
-        </View>
-        <Text
-          style={
-            Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Medium",
-              "fontSize": 14,
-              "lineHeight": 21,
-            }
-          }
-        >
-          We'll let you know when important things are happening and keep you in the loop
-        </Text>
-      </View>
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
       <View
-        horizontal={false}
         style={
           Object {
-            "paddingHorizontal": 0,
-            "paddingVertical": 16,
+            "flex": 1,
+            "justifyContent": "space-between",
+            "marginBottom": 48,
+            "paddingHorizontal": 16,
+            "paddingTop": 16,
           }
         }
       >
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "opacity": 1,
-            }
-          }
-        >
+        <View>
           <View
-            bordered={false}
-            disabled={false}
-            pill={false}
             style={
               Object {
-                "alignItems": "center",
-                "backgroundColor": "#00676D",
-                "borderColor": "#00676D",
-                "borderRadius": 16,
-                "borderWidth": 2,
-                "elevation": 2,
-                "flexDirection": "row",
-                "height": 48,
-                "justifyContent": "center",
-                "opacity": 1,
-                "overflow": "hidden",
-                "paddingHorizontal": 16,
+                "paddingBottom": 8,
               }
             }
           >
             <Text
               style={
                 Object {
-                  "color": "#FFFFFF",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 16,
-                  "lineHeight": 24,
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
                 }
               }
             >
-              Custom button text
+              Can we keep you informed?
             </Text>
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+              }
+            }
+          >
+            We'll let you know when important things are happening and keep you in the loop
+          </Text>
+        </View>
+        <View
+          horizontal={false}
+          style={
+            Object {
+              "paddingHorizontal": 0,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              bordered={false}
+              disabled={false}
+              pill={false}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#00676D",
+                  "borderColor": "#00676D",
+                  "borderRadius": 16,
+                  "borderWidth": 2,
+                  "elevation": 2,
+                  "flexDirection": "row",
+                  "height": 48,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "overflow": "hidden",
+                  "paddingHorizontal": 16,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                  }
+                }
+              >
+                Custom button text
+              </Text>
+            </View>
           </View>
         </View>
       </View>
     </View>
-  </View>
-</RCTScrollView>
+  </RCTScrollView>,
+]
 `;
 
 exports[`The Onboarding AskNotifications component should render a custom description 1`] = `
-<RCTScrollView
-  contentContainerStyle={
-    Object {
-      "minHeight": "100%",
-    }
-  }
-  overScrollMode="auto"
-  style={
-    Object {
-      "flex": 1,
-    }
-  }
->
-  <View>
-    <View
-      style={
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
         Object {
-          "flex": 1,
-          "justifyContent": "space-between",
-          "marginBottom": 48,
-          "paddingHorizontal": 16,
-          "paddingTop": 16,
-        }
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
       }
-    >
-      <View>
-        <View
-          style={
-            Object {
-              "paddingBottom": 8,
-            }
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "space-between",
+            "marginBottom": 48,
+            "paddingHorizontal": 16,
+            "paddingTop": 16,
           }
-        >
-          <Text
+        }
+      >
+        <View>
+          <View
             style={
               Object {
-                "color": "#00676D",
-                "fontFamily": "InterUI-Black",
-                "fontSize": 36,
-                "lineHeight": 41.4,
+                "paddingBottom": 8,
               }
             }
           >
-            Can we keep you informed?
+            <Text
+              style={
+                Object {
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Can we keep you informed?
+            </Text>
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+              }
+            }
+          >
+            Custom description text
           </Text>
         </View>
-        <Text
-          style={
-            Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Medium",
-              "fontSize": 14,
-              "lineHeight": 21,
-            }
-          }
-        >
-          Custom description text
-        </Text>
       </View>
     </View>
-  </View>
-</RCTScrollView>
+  </RCTScrollView>,
+]
 `;
 
 exports[`The Onboarding AskNotifications component should render a custom title 1`] = `
-<RCTScrollView
-  contentContainerStyle={
-    Object {
-      "minHeight": "100%",
-    }
-  }
-  overScrollMode="auto"
-  style={
-    Object {
-      "flex": 1,
-    }
-  }
->
-  <View>
-    <View
-      style={
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
         Object {
-          "flex": 1,
-          "justifyContent": "space-between",
-          "marginBottom": 48,
-          "paddingHorizontal": 16,
-          "paddingTop": 16,
-        }
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
       }
-    >
-      <View>
-        <View
-          style={
-            Object {
-              "paddingBottom": 8,
-            }
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "space-between",
+            "marginBottom": 48,
+            "paddingHorizontal": 16,
+            "paddingTop": 16,
           }
-        >
-          <Text
+        }
+      >
+        <View>
+          <View
             style={
               Object {
-                "color": "#00676D",
-                "fontFamily": "InterUI-Black",
-                "fontSize": 36,
-                "lineHeight": 41.4,
+                "paddingBottom": 8,
               }
             }
           >
-            Custom title text
+            <Text
+              style={
+                Object {
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Custom title text
+            </Text>
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+              }
+            }
+          >
+            We'll let you know when important things are happening and keep you in the loop
           </Text>
         </View>
-        <Text
-          style={
-            Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Medium",
-              "fontSize": 14,
-              "lineHeight": 21,
-            }
-          }
-        >
-          We'll let you know when important things are happening and keep you in the loop
-        </Text>
       </View>
     </View>
-  </View>
-</RCTScrollView>
+  </RCTScrollView>,
+]
 `;
 
 exports[`The Onboarding AskNotifications component should render the button disabled 1`] = `
-<RCTScrollView
-  contentContainerStyle={
-    Object {
-      "minHeight": "100%",
-    }
-  }
-  overScrollMode="auto"
-  style={
-    Object {
-      "flex": 1,
-    }
-  }
->
-  <View>
-    <View
-      style={
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
         Object {
-          "flex": 1,
-          "justifyContent": "space-between",
-          "marginBottom": 48,
-          "paddingHorizontal": 16,
-          "paddingTop": 16,
-        }
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
       }
-    >
-      <View>
-        <View
-          style={
-            Object {
-              "paddingBottom": 8,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#00676D",
-                "fontFamily": "InterUI-Black",
-                "fontSize": 36,
-                "lineHeight": 41.4,
-              }
-            }
-          >
-            Can we keep you informed?
-          </Text>
-        </View>
-        <Text
-          style={
-            Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Medium",
-              "fontSize": 14,
-              "lineHeight": 21,
-            }
-          }
-        >
-          We'll let you know when important things are happening and keep you in the loop
-        </Text>
-      </View>
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
       <View
-        horizontal={false}
         style={
           Object {
-            "paddingHorizontal": 0,
-            "paddingVertical": 16,
+            "flex": 1,
+            "justifyContent": "space-between",
+            "marginBottom": 48,
+            "paddingHorizontal": 16,
+            "paddingTop": 16,
           }
         }
       >
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "opacity": 1,
-            }
-          }
-        >
+        <View>
           <View
-            bordered={false}
-            disabled={true}
-            pill={false}
             style={
               Object {
-                "alignItems": "center",
-                "backgroundColor": "#00676D",
-                "borderColor": "#00676D",
-                "borderRadius": 16,
-                "borderWidth": 2,
-                "elevation": 2,
-                "flexDirection": "row",
-                "height": 48,
-                "justifyContent": "center",
-                "opacity": 0.5,
-                "overflow": "hidden",
-                "paddingHorizontal": 16,
+                "paddingBottom": 8,
               }
             }
           >
             <Text
               style={
                 Object {
-                  "color": "#FFFFFF",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 16,
-                  "lineHeight": 24,
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
                 }
               }
             >
-              Yes, enable notifications
+              Can we keep you informed?
             </Text>
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+              }
+            }
+          >
+            We'll let you know when important things are happening and keep you in the loop
+          </Text>
+        </View>
+        <View
+          horizontal={false}
+          style={
+            Object {
+              "paddingHorizontal": 0,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              bordered={false}
+              disabled={true}
+              pill={false}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#00676D",
+                  "borderColor": "#00676D",
+                  "borderRadius": 16,
+                  "borderWidth": 2,
+                  "elevation": 2,
+                  "flexDirection": "row",
+                  "height": 48,
+                  "justifyContent": "center",
+                  "opacity": 0.5,
+                  "overflow": "hidden",
+                  "paddingHorizontal": 16,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                  }
+                }
+              >
+                Yes, enable notifications
+              </Text>
+            </View>
           </View>
         </View>
       </View>
     </View>
-  </View>
-</RCTScrollView>
+  </RCTScrollView>,
+]
 `;
 
 exports[`The Onboarding AskNotifications component should render with a button 1`] = `
-<RCTScrollView
-  contentContainerStyle={
-    Object {
-      "minHeight": "100%",
-    }
-  }
-  overScrollMode="auto"
-  style={
-    Object {
-      "flex": 1,
-    }
-  }
->
-  <View>
-    <View
-      style={
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
         Object {
-          "flex": 1,
-          "justifyContent": "space-between",
-          "marginBottom": 48,
-          "paddingHorizontal": 16,
-          "paddingTop": 16,
-        }
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
       }
-    >
-      <View>
-        <View
-          style={
-            Object {
-              "paddingBottom": 8,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#00676D",
-                "fontFamily": "InterUI-Black",
-                "fontSize": 36,
-                "lineHeight": 41.4,
-              }
-            }
-          >
-            Can we keep you informed?
-          </Text>
-        </View>
-        <Text
-          style={
-            Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Medium",
-              "fontSize": 14,
-              "lineHeight": 21,
-            }
-          }
-        >
-          We'll let you know when important things are happening and keep you in the loop
-        </Text>
-      </View>
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
       <View
-        horizontal={false}
         style={
           Object {
-            "paddingHorizontal": 0,
-            "paddingVertical": 16,
+            "flex": 1,
+            "justifyContent": "space-between",
+            "marginBottom": 48,
+            "paddingHorizontal": 16,
+            "paddingTop": 16,
           }
         }
       >
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "opacity": 1,
-            }
-          }
-        >
+        <View>
           <View
-            bordered={false}
-            disabled={false}
-            pill={false}
             style={
               Object {
-                "alignItems": "center",
-                "backgroundColor": "#00676D",
-                "borderColor": "#00676D",
-                "borderRadius": 16,
-                "borderWidth": 2,
-                "elevation": 2,
-                "flexDirection": "row",
-                "height": 48,
-                "justifyContent": "center",
-                "opacity": 1,
-                "overflow": "hidden",
-                "paddingHorizontal": 16,
+                "paddingBottom": 8,
               }
             }
           >
             <Text
               style={
                 Object {
-                  "color": "#FFFFFF",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 16,
-                  "lineHeight": 24,
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
                 }
               }
             >
-              Yes, enable notifications
+              Can we keep you informed?
             </Text>
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+              }
+            }
+          >
+            We'll let you know when important things are happening and keep you in the loop
+          </Text>
+        </View>
+        <View
+          horizontal={false}
+          style={
+            Object {
+              "paddingHorizontal": 0,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              bordered={false}
+              disabled={false}
+              pill={false}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#00676D",
+                  "borderColor": "#00676D",
+                  "borderRadius": 16,
+                  "borderWidth": 2,
+                  "elevation": 2,
+                  "flexDirection": "row",
+                  "height": 48,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "overflow": "hidden",
+                  "paddingHorizontal": 16,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                  }
+                }
+              >
+                Yes, enable notifications
+              </Text>
+            </View>
           </View>
         </View>
       </View>
     </View>
-  </View>
-</RCTScrollView>
+  </RCTScrollView>,
+]
 `;

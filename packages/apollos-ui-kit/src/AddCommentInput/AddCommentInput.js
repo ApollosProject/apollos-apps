@@ -1,14 +1,30 @@
-import React, { useState } from 'react';
-import { SafeAreaView, StyleSheet, TextInput, Text, View } from 'react-native';
+import React, {
+  useState,
+  useRef,
+  useMemo,
+  useCallback,
+  useEffect,
+} from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Keyboard,
+  KeyboardAvoidingView,
+  Platform,
+} from 'react-native';
 import PropTypes from 'prop-types';
+import { BottomSheetModal } from '@gorhom/bottom-sheet';
+
+import { useSafeAreaInsets, FlexedSafeAreaView } from '../LayoutContext';
 import styled from '../styled';
-import { H4, H5, BodySmall } from '../typography';
+import { H4, H5 } from '../typography';
 import Touchable from '../Touchable';
 import Avatar from '../Avatar';
 import { withTheme } from '../theme';
 import PaddedView from '../PaddedView';
 import Modal, { ModalHeader } from '../Modal';
-import { Switch } from '../inputs';
+import { Switch, Text as TextInput } from '../inputs';
 
 const CommentAvatar = withTheme(
   ({ theme: { sizing, colors } }) => ({
@@ -23,6 +39,22 @@ const CommentAvatar = withTheme(
   'ui-kit.AddCommentInput.CommentAvatar'
 )(Avatar);
 
+const EditorAvatar = withTheme(
+  ({ theme: { sizing, colors } }) => ({
+    themeSize: sizing.baseUnit * 3,
+    buttonIcon: 'chunky-plus',
+    iconButtonProps: {
+      size: sizing.baseUnit * 0.75,
+      fill: colors.white,
+      iconBackground: colors.action.secondary,
+    },
+    containerStyle: {
+      marginRight: sizing.baseUnit / 2,
+    },
+  }),
+  'ui-kit.AddCommentInput.EditorAvatar'
+)(Avatar);
+
 const AddCommentContainer = styled(
   ({ theme: { sizing } }) => ({
     borderBottomWidth: StyleSheet.hairlineWidth,
@@ -35,6 +67,13 @@ const AddCommentContainer = styled(
   'ui-kit.AddCommentInput.AddCommentContainer'
 )(View);
 
+const ModalBackgroundView = styled(({ theme }) => ({
+  borderTopLeftRadius: theme.sizing.baseUnit,
+  borderTopRightRadius: theme.sizing.baseUnit,
+  backgroundColor: theme.colors.background.paper,
+  ...Platform.select({ ios: theme.shadows.default.ios }),
+}))(View);
+
 const NextButton = styled(
   ({ theme: { colors } }) => ({
     color: colors.action.secondary,
@@ -42,10 +81,13 @@ const NextButton = styled(
   'ui-kit.AddCommentInput.NextButton'
 )(H4);
 
-const NextButtonTouchable = styled(
-  { alignSelf: 'flex-end' },
-  'ui-kit.AddCommentInput.NextButtonTouchable'
-)(Touchable);
+const EditorButtons = styled(
+  ({ theme }) => ({
+    paddingBottom: theme.sizing.baseUnit,
+    alignSelf: 'flex-end',
+  }),
+  'ui-kit.AddCommentInput.EditorButtons'
+)(View);
 
 const AddCommentPrompt = styled(
   ({ theme: { sizing } }) => ({
@@ -54,18 +96,13 @@ const AddCommentPrompt = styled(
   'ui-kit.AddCommentInput.AddCommentPrompt'
 )(H5);
 
-const AddCommentTextInput = styled(
-  ({ theme: { sizing, colors } }) => ({
-    minHeight: sizing.baseUnit * 4,
-    color: colors.text.primary,
-  }),
-  'ui-kit.AddCommentInput.AddCommentTextInput'
-)(TextInput);
-
 const CommentInputContainer = styled(
-  {},
+  ({ theme }) => ({
+    flex: 1,
+    paddingHorizontal: theme.sizing.baseUnit,
+  }),
   'ui-kit.AddCommentInput.CommentInputContainer'
-)(PaddedView);
+)(Platform.OS === 'android' ? View : KeyboardAvoidingView);
 
 const UserData = styled(
   () => ({
@@ -99,8 +136,8 @@ const Share = styled(
     marginVertical: theme.sizing.baseUnit,
     paddingVertical: theme.sizing.baseUnit,
     paddingHorizontal: theme.sizing.baseUnit,
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
+    borderTopWidth: StyleSheet.hairlineWidth,
+    borderBottomWidth: StyleSheet.hairlineWidth,
     borderColor: theme.colors.lightSecondary,
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -133,45 +170,145 @@ const ShareDisclaimer = styled(
   'ui-kit.AddCommentInput.ShareDisclaimer'
 )(H5);
 
-const AddCommentInput = ({ initialPrompt, addPrompt, onSubmit, profile }) => {
-  const [isWriting, setIsWriting] = useState(false);
-  const [currentText, setCurrentText] = useState(null);
+const StyledTextInput = withTheme(({ theme }) => ({
+  wrapperStyle: {
+    marginVertical: 0,
+    paddingTop: theme.sizing.baseUnit / 2,
+    flex: 1,
+  },
+  inputAddonStyle: {
+    justifyContent: 'flex-start',
+  },
+  style: {
+    height: null,
+    marginTop: theme.sizing.baseUnit / 2,
+    marginBottom: theme.sizing.baseUnit / 2,
+  },
+  floatingLabelStyle: {
+    height: 30, // magic value from Text Input component
+  },
+}))(TextInput);
+
+const FlexedMaxHeightSafeAreaView = styled({
+  minHeight: '100%',
+})(FlexedSafeAreaView);
+
+const AddCommentInput = ({
+  prompt = 'What stands out to you?',
+  openBottomSheetOnMount = true,
+  dismissEditorOnPanDown = false,
+  onSubmit,
+  profile,
+}) => {
+  const [currentText, setCurrentText] = useState('');
   const [confirmModalOpen, setConfirmModalOpen] = useState(false);
   const [share, setShare] = useState('PRIVATE');
+  const [bottomSheetOpen, setBottomSheetOpen] = useState(false);
+
+  // ref
+  const bottomSheetModalRef = useRef(null);
+  const editorRef = useRef(null);
+
+  // variables
+  const insets = useSafeAreaInsets();
+  const handleHeight = 24; // todo: static from react-native-bottom-sheet
+  const initialSnapPoint = Platform.select({ ios: 54, android: 64 });
+  const snapPoints = useMemo(() => [initialSnapPoint + insets.bottom, '100%'], [
+    insets.bottom,
+  ]);
+
+  // present on mount
+  // todo: make this optional via a prop
+  useEffect(() => {
+    if (openBottomSheetOnMount) {
+      bottomSheetModalRef.current?.present();
+      setBottomSheetOpen(true);
+    }
+  }, [openBottomSheetOnMount]);
+
+  const handleStartWriting = useCallback(() => {
+    bottomSheetModalRef.current?.expand();
+    setBottomSheetOpen(true);
+  }, []);
+
+  const handleStopWriting = useCallback(() => {
+    bottomSheetModalRef.current?.collapse();
+  }, []);
 
   const onPressSave = async () => {
     onSubmit && (await onSubmit(currentText, share)); // eslint-disable-line no-unused-expressions
+    bottomSheetModalRef.current?.close();
     setConfirmModalOpen(false);
-    setIsWriting(false);
+    setBottomSheetOpen(false);
   };
 
-  const onStartWriting = () => {
-    setCurrentText(null);
-    setIsWriting(true);
-  };
+  const handleEditorChange = useCallback((index) => {
+    if (!index) {
+      Keyboard.dismiss();
+    } else {
+      editorRef.current?.focus();
+    }
+  }, []);
+
+  const openModal = useCallback(() => {
+    bottomSheetModalRef.current?.expand();
+    setBottomSheetOpen(true);
+  }, []);
 
   return (
-    <SafeAreaView>
-      {isWriting ? (
-        <CommentInputContainer>
-          <BodySmall>{addPrompt}</BodySmall>
-          <AddCommentTextInput
-            multiline
-            autoFocus
-            onChangeText={(text) => setCurrentText(text)}
-          />
-          <NextButtonTouchable onPress={() => setConfirmModalOpen(true)}>
-            <NextButton>{'Submit'}</NextButton>
-          </NextButtonTouchable>
-        </CommentInputContainer>
-      ) : (
-        <Touchable onPress={onStartWriting}>
+    <>
+      <BottomSheetModal
+        ref={bottomSheetModalRef}
+        index={0}
+        snapPoints={snapPoints}
+        onChange={handleEditorChange}
+        dismissOnPanDown={dismissEditorOnPanDown}
+        animateOnMount
+        topInset={insets.top}
+        bottomInset={insets.bottom}
+        handleHeight={handleHeight}
+        enableContentPanningGesture
+        enableHandlePanningGesture
+        // todo: re-enable when working keyboardBehavior={'interactive'}
+
+        // this functional component below fixes dark mode compat...think it
+        // has something to do with the component not re-rendering properly
+        backgroundComponent={(props) => <ModalBackgroundView {...props} />} // eslint-disable-line react/jsx-props-no-spreading
+      >
+        <FlexedMaxHeightSafeAreaView edges={['right', 'bottom', 'left']}>
+          <CommentInputContainer
+            keyboardVerticalOffset={handleHeight + insets.top}
+            behavior="padding"
+          >
+            <StyledTextInput
+              prefix={<EditorAvatar source={profile?.image} />}
+              label={prompt}
+              inputRef={editorRef}
+              multiline
+              onChangeText={(text) => setCurrentText(text)}
+              onFocus={handleStartWriting}
+              onBlur={handleStopWriting}
+              enablesReturnKeyAutomatically
+              underline={false}
+            />
+            <EditorButtons>
+              <NextButton onPress={() => setConfirmModalOpen(true)}>
+                {'Submit'}
+              </NextButton>
+            </EditorButtons>
+          </CommentInputContainer>
+        </FlexedMaxHeightSafeAreaView>
+      </BottomSheetModal>
+
+      {!bottomSheetOpen ? (
+        <Touchable onPress={openModal}>
           <AddCommentContainer>
             <CommentAvatar source={profile?.image} />
-            <AddCommentPrompt>{currentText || initialPrompt}</AddCommentPrompt>
+            <AddCommentPrompt>{prompt}</AddCommentPrompt>
           </AddCommentContainer>
         </Touchable>
-      )}
+      ) : null}
+
       <Modal
         visible={confirmModalOpen}
         animationType="slide"
@@ -180,6 +317,8 @@ const AddCommentInput = ({ initialPrompt, addPrompt, onSubmit, profile }) => {
         <ModalHeader
           onNext={onPressSave}
           onNextText="Save"
+          onPrevious={() => setConfirmModalOpen(false)}
+          onPreviousText="Cancel"
           title="New Journal"
         />
         <ModalContent>
@@ -202,23 +341,19 @@ const AddCommentInput = ({ initialPrompt, addPrompt, onSubmit, profile }) => {
           </Share>
         </ModalContent>
       </Modal>
-    </SafeAreaView>
+    </>
   );
 };
 
 AddCommentInput.propTypes = {
-  initialPrompt: PropTypes.string,
-  addPrompt: PropTypes.string,
+  prompt: PropTypes.string,
   onSubmit: PropTypes.func.isRequired,
   profile: PropTypes.shape({
     image: PropTypes.shape({ uri: PropTypes.string }),
     nickName: PropTypes.string,
   }),
-};
-
-AddCommentInput.defaultProps = {
-  initialPrompt: 'Write Something...',
-  addPrompt: 'What stands out to you?',
+  openBottomSheetOnMount: PropTypes.bool,
+  dismissEditorOnPanDown: PropTypes.bool,
 };
 
 export default AddCommentInput;

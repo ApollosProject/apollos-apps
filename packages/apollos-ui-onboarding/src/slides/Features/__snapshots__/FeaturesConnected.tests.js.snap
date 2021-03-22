@@ -1,133 +1,190 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Onboarding FeaturesConnected component should render 1`] = `
-<RCTScrollView
-  contentContainerStyle={
-    Object {
-      "minHeight": "100%",
-    }
-  }
-  overScrollMode="auto"
-  style={
-    Object {
-      "flex": 1,
-    }
-  }
->
-  <View>
-    <View
-      style={
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
         Object {
-          "marginBottom": 48,
-          "paddingHorizontal": 16,
-          "paddingTop": 16,
-        }
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
       }
-    >
-      <View>
-        <View
-          style={
-            Object {
-              "paddingBottom": 8,
-            }
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "marginBottom": 48,
+            "paddingHorizontal": 16,
+            "paddingTop": 16,
           }
-        >
-          <Text
+        }
+      >
+        <View>
+          <View
             style={
               Object {
-                "color": "#00676D",
-                "fontFamily": "InterUI-Black",
-                "fontSize": 36,
-                "lineHeight": 41.4,
+                "paddingBottom": 8,
               }
             }
           >
-            Hey friend!
+            <Text
+              style={
+                Object {
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Hey friend!
+            </Text>
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+              }
+            }
+          >
+            We'd like to help personalize your mobile experience so we can help you with every step on your journey.
           </Text>
         </View>
-        <Text
-          style={
-            Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Medium",
-              "fontSize": 14,
-              "lineHeight": 21,
-            }
-          }
-        >
-          We'd like to help personalize your mobile experience so we can help you with every step on your journey.
-        </Text>
       </View>
     </View>
-  </View>
-</RCTScrollView>
+  </RCTScrollView>,
+]
 `;
 
 exports[`The Onboarding FeaturesConnected component should render a custom Component 1`] = `
-<Text>
-  Marty also thinks Skyline chili is the best.
-</Text>
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <Text>
+    Marty also thinks Skyline chili is the best.
+  </Text>,
+]
 `;
 
 exports[`The Onboarding FeaturesConnected component should render with a firstName when logged in 1`] = `
-<RCTScrollView
-  contentContainerStyle={
-    Object {
-      "minHeight": "100%",
-    }
-  }
-  overScrollMode="auto"
-  style={
-    Object {
-      "flex": 1,
-    }
-  }
->
-  <View>
-    <View
-      style={
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
         Object {
-          "marginBottom": 48,
-          "paddingHorizontal": 16,
-          "paddingTop": 16,
-        }
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
       }
-    >
-      <View>
-        <View
-          style={
-            Object {
-              "paddingBottom": 8,
-            }
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "marginBottom": 48,
+            "paddingHorizontal": 16,
+            "paddingTop": 16,
           }
-        >
-          <Text
+        }
+      >
+        <View>
+          <View
             style={
               Object {
-                "color": "#00676D",
-                "fontFamily": "InterUI-Black",
-                "fontSize": 36,
-                "lineHeight": 41.4,
+                "paddingBottom": 8,
               }
             }
           >
-            Hey Marty!
+            <Text
+              style={
+                Object {
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Hey Marty!
+            </Text>
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+              }
+            }
+          >
+            We'd like to help personalize your mobile experience so we can help you with every step on your journey.
           </Text>
         </View>
-        <Text
-          style={
-            Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Medium",
-              "fontSize": 14,
-              "lineHeight": 21,
-            }
-          }
-        >
-          We'd like to help personalize your mobile experience so we can help you with every step on your journey.
-        </Text>
       </View>
     </View>
-  </View>
-</RCTScrollView>
+  </RCTScrollView>,
+]
 `;

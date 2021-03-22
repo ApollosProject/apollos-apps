@@ -32,7 +32,7 @@ function ModalHeader({
         title={onPrevious ? onPreviousText : null}
       />
       <H4>{title}</H4>
-      <ModalButton onPress={onNext} title={onNext ? onNextText : null} />
+      <ModalButton onPress={onNext} title={onNext ? onNextText : null} strong />
     </Header>
   );
 }

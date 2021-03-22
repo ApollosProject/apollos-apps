@@ -1,158 +1,253 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the CardWrapper component should accept a backgroundColor 1`] = `
-<View
-  backgroundColor="salmon"
-  style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "marginHorizontal": 16,
-      "marginVertical": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
-    }
-  }
->
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    backgroundColor="salmon"
     style={
       Object {
+        "backgroundColor": "#FFFFFF",
         "borderRadius": 16,
-        "overflow": "hidden",
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
       }
     }
   >
-    <Text>
-      Boom!
-    </Text>
-  </View>
-</View>
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <Text>
+        Boom!
+      </Text>
+    </View>
+  </View>,
+]
 `;
 
 exports[`the CardWrapper component should accept additional props 1`] = `
-<View
-  accessible={false}
-  style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "marginHorizontal": 16,
-      "marginVertical": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
-    }
-  }
->
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    accessible={false}
     style={
       Object {
+        "backgroundColor": "#FFFFFF",
         "borderRadius": 16,
-        "overflow": "hidden",
-      }
-    }
-  />
-</View>
-`;
-
-exports[`the CardWrapper component should accept and render passed in styles 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "height": 400,
-      "marginHorizontal": 16,
-      "marginVertical": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
-      "width": "92%",
-    }
-  }
->
-  <View
-    style={
-      Object {
-        "borderRadius": 16,
-        "overflow": "hidden",
-      }
-    }
-  />
-</View>
-`;
-
-exports[`the CardWrapper component should render 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "marginHorizontal": 16,
-      "marginVertical": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
-    }
-  }
->
-  <View
-    style={
-      Object {
-        "borderRadius": 16,
-        "overflow": "hidden",
-      }
-    }
-  />
-</View>
-`;
-
-exports[`the CardWrapper component should render children 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "marginHorizontal": 16,
-      "marginVertical": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
-    }
-  }
->
-  <View
-    style={
-      Object {
-        "borderRadius": 16,
-        "overflow": "hidden",
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
       }
     }
   >
-    <Text>
-      Boom!
-    </Text>
-  </View>
-</View>
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    />
+  </View>,
+]
+`;
+
+exports[`the CardWrapper component should accept and render passed in styles 1`] = `
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 16,
+        "height": 400,
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
+        "width": "92%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    />
+  </View>,
+]
+`;
+
+exports[`the CardWrapper component should render 1`] = `
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 16,
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    />
+  </View>,
+]
+`;
+
+exports[`the CardWrapper component should render children 1`] = `
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 16,
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <Text>
+        Boom!
+      </Text>
+    </View>
+  </View>,
+]
 `;
