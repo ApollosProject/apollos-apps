@@ -1,157 +1,214 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LoginButton component renders a LoginButton that is loading 1`] = `
-<View
-  accessible={true}
-  focusable={true}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
->
+Array [
   <View
-    bordered={false}
-    disabled={false}
-    pill={true}
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "alignItems": "center",
-        "backgroundColor": "#00676D",
-        "borderColor": "#00676D",
-        "borderRadius": 48,
-        "borderWidth": 2,
-        "elevation": 2,
-        "flexDirection": "row",
-        "height": 48,
-        "justifyContent": "center",
         "opacity": 1,
-        "overflow": "hidden",
-        "paddingHorizontal": 16,
       }
     }
   >
-    <ActivityIndicator
-      animating={true}
-      color="#FFFFFF"
-      hidesWhenStopped={true}
-      size="small"
-    />
-  </View>
-</View>
+    <View
+      bordered={false}
+      disabled={false}
+      pill={true}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#00676D",
+          "borderColor": "#00676D",
+          "borderRadius": 48,
+          "borderWidth": 2,
+          "elevation": 2,
+          "flexDirection": "row",
+          "height": 48,
+          "justifyContent": "center",
+          "opacity": 1,
+          "overflow": "hidden",
+          "paddingHorizontal": 16,
+        }
+      }
+    >
+      <ActivityIndicator
+        animating={true}
+        color="#FFFFFF"
+        hidesWhenStopped={true}
+        size="small"
+      />
+    </View>
+  </View>,
+]
 `;
 
 exports[`LoginButton component renders a LoginButton when logged out 1`] = `
-<View
-  accessible={true}
-  focusable={true}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
->
+Array [
   <View
-    bordered={false}
-    disabled={false}
-    pill={true}
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "alignItems": "center",
-        "backgroundColor": "#00676D",
-        "borderColor": "#00676D",
-        "borderRadius": 48,
-        "borderWidth": 2,
-        "elevation": 2,
-        "flexDirection": "row",
-        "height": 48,
-        "justifyContent": "center",
         "opacity": 1,
-        "overflow": "hidden",
-        "paddingHorizontal": 16,
       }
     }
   >
-    <Text
+    <View
+      bordered={false}
+      disabled={false}
+      pill={true}
       style={
         Object {
-          "color": "#FFFFFF",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 16,
-          "lineHeight": 24,
+          "alignItems": "center",
+          "backgroundColor": "#00676D",
+          "borderColor": "#00676D",
+          "borderRadius": 48,
+          "borderWidth": 2,
+          "elevation": 2,
+          "flexDirection": "row",
+          "height": 48,
+          "justifyContent": "center",
+          "opacity": 1,
+          "overflow": "hidden",
+          "paddingHorizontal": 16,
         }
       }
     >
-      Get Connected
-    </Text>
-  </View>
-</View>
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
+          }
+        }
+      >
+        Get Connected
+      </Text>
+    </View>
+  </View>,
+]
 `;
 
 exports[`LoginButton component renders nothing when logged in 1`] = `
-<View
-  accessible={true}
-  focusable={true}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
->
+Array [
   <View
-    bordered={false}
-    disabled={false}
-    pill={true}
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "alignItems": "center",
-        "backgroundColor": "#00676D",
-        "borderColor": "#00676D",
-        "borderRadius": 48,
-        "borderWidth": 2,
-        "elevation": 2,
-        "flexDirection": "row",
-        "height": 48,
-        "justifyContent": "center",
         "opacity": 1,
-        "overflow": "hidden",
-        "paddingHorizontal": 16,
       }
     }
   >
-    <Text
+    <View
+      bordered={false}
+      disabled={false}
+      pill={true}
       style={
         Object {
-          "color": "#FFFFFF",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 16,
-          "lineHeight": 24,
+          "alignItems": "center",
+          "backgroundColor": "#00676D",
+          "borderColor": "#00676D",
+          "borderRadius": 48,
+          "borderWidth": 2,
+          "elevation": 2,
+          "flexDirection": "row",
+          "height": 48,
+          "justifyContent": "center",
+          "opacity": 1,
+          "overflow": "hidden",
+          "paddingHorizontal": 16,
         }
       }
     >
-      Get Connected
-    </Text>
-  </View>
-</View>
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
+          }
+        }
+      >
+        Get Connected
+      </Text>
+    </View>
+  </View>,
+]
 `;

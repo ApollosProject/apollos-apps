@@ -38,6 +38,7 @@
       "<rootDir>/src/"
     ],
     "setupFiles": [
+      "../apollos-ui-test-utils/src/mocks/reanimated.js",
       "../../node_modules/react-native-gesture-handler/jestSetup.js",
       "./jest.setup.js"
     ]

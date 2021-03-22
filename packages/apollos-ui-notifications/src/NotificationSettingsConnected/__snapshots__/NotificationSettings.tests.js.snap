@@ -1,146 +1,165 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The NotificationSettings toggle switch should render correctly 1`] = `
-<BVLinearGradient
-  colors={
-    Array [
-      4294967295,
-      4294506484,
-    ]
-  }
-  endPoint={
-    Object {
-      "x": 0.5,
-      "y": 1,
-    }
-  }
-  locations={null}
-  startPoint={
-    Object {
-      "x": 0.5,
-      "y": 0,
-    }
-  }
-  style={
-    Object {
-      "flex": 1,
-      "height": "100%",
-    }
-  }
->
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <BVLinearGradient
+    colors={
+      Array [
+        4294967295,
+        4294506484,
+      ]
+    }
+    endPoint={
+      Object {
+        "x": 0.5,
+        "y": 1,
+      }
+    }
+    locations={null}
+    startPoint={
+      Object {
+        "x": 0.5,
+        "y": 0,
+      }
+    }
     style={
       Object {
-        "paddingHorizontal": 16,
-        "paddingVertical": 16,
+        "flex": 1,
+        "height": "100%",
       }
     }
   >
     <View
       style={
         Object {
-          "marginVertical": 16,
+          "paddingHorizontal": 16,
+          "paddingVertical": 16,
         }
       }
     >
       <View
         style={
           Object {
-            "height": 38,
-            "paddingVertical": 4,
+            "marginVertical": 16,
           }
         }
       >
         <View
           style={
             Object {
-              "flexDirection": "row",
-              "justifyContent": "center",
+              "height": 38,
+              "paddingVertical": 4,
             }
           }
         >
           <View
             style={
               Object {
-                "alignItems": "center",
-                "justifyContent": "center",
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "flex": 1,
+                "flexDirection": "row",
                 "justifyContent": "center",
               }
             }
           >
             <View
-              accessible={true}
-              focusable={true}
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
               style={
                 Object {
-                  "opacity": 1,
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                }
+              }
+            />
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "justifyContent": "center",
                 }
               }
             >
-              <Text
+              <View
+                accessible={true}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
                 style={
                   Object {
-                    "backgroundColor": "transparent",
-                    "color": "#505050",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
-                    "paddingVertical": 4,
+                    "opacity": 1,
                   }
                 }
               >
-                Notifications
-              </Text>
+                <Text
+                  style={
+                    Object {
+                      "backgroundColor": "transparent",
+                      "color": "#505050",
+                      "fontFamily": "InterUI-Medium",
+                      "fontSize": 14,
+                      "lineHeight": 21,
+                      "paddingVertical": 4,
+                    }
+                  }
+                >
+                  Notifications
+                </Text>
+              </View>
             </View>
-          </View>
-          <View
-            style={
-              Object {
-                "alignItems": "center",
-                "justifyContent": "center",
-              }
-            }
-          >
-            <RCTSwitch
-              accessibilityRole="switch"
-              onChange={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
-              onTintColor="#00676D"
+            <View
               style={
-                Array [
-                  Object {
-                    "height": 31,
-                    "width": 51,
-                  },
-                  Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 16,
-                  },
-                ]
+                Object {
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                }
               }
-              thumbTintColor="#FFFFFF"
-              tintColor="#A5A5A5"
-              value={false}
-            />
+            >
+              <RCTSwitch
+                accessibilityRole="switch"
+                onChange={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                onTintColor="#00676D"
+                style={
+                  Array [
+                    Object {
+                      "height": 31,
+                      "width": 51,
+                    },
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                    },
+                  ]
+                }
+                thumbTintColor="#FFFFFF"
+                tintColor="#A5A5A5"
+                value={false}
+              />
+            </View>
           </View>
         </View>
       </View>
     </View>
-  </View>
-</BVLinearGradient>
+  </BVLinearGradient>,
+]
 `;
