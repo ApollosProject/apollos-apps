@@ -1,427 +1,465 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The onboarding swiper should render with a fragment as a child 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "backgroundColor": "transparent",
-        "flex": 1,
-        "position": "relative",
-      },
-      undefined,
-    ]
-  }
->
-  <RCTScrollView
-    activeDot={
-      <View>
-        <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
-      </View>
-    }
-    automaticallyAdjustContentInsets={false}
-    autoplay={false}
-    autoplayDirection={true}
-    autoplayTimeout={2.5}
-    bounces={false}
-    contentContainerStyle={
-      Array [
-        Object {
-          "backgroundColor": "transparent",
-        },
-        undefined,
-      ]
-    }
-    contentOffset={
-      Object {
-        "x": 0,
-      }
-    }
-    disableNextButton={false}
-    disablePrevButton={false}
-    dot={
-      <View>
-        <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
-      </View>
-    }
-    horizontal={true}
-    index={0}
-    loadMinimal={true}
-    loadMinimalSize={1}
-    loop={false}
-    onIndexChanged={[Function]}
-    onMomentumScrollEnd={[Function]}
-    onScrollBeginDrag={[Function]}
-    onScrollEndDrag={[Function]}
-    pagingEnabled={true}
-    removeClippedSubviews={true}
-    scrollsToTop={false}
-    showsButtons={false}
-    showsHorizontalScrollIndicator={false}
-    showsPagination={true}
-    showsVerticalScrollIndicator={false}
-  >
-    <View>
-      <View
-        style={
-          Array [
-            Object {
-              "height": 1334,
-              "width": 750,
-            },
-            Object {
-              "backgroundColor": "transparent",
-            },
-          ]
-        }
-      >
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "opacity": 1,
-            }
-          }
-        >
-          <Text>
-            1
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
-          Array [
-            Object {
-              "height": 1334,
-              "width": 750,
-            },
-            Object {
-              "backgroundColor": "transparent",
-            },
-          ]
-        }
-      >
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "opacity": 1,
-            }
-          }
-        >
-          <Text>
-            2
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "height": 1334,
-            "justifyContent": "center",
-            "width": 750,
-          }
-        }
-      >
-        <ActivityIndicator
-          animating={true}
-          color="#999999"
-          hidesWhenStopped={true}
-          size="small"
-        />
-      </View>
-    </View>
-  </RCTScrollView>
+Array [
   <View
-    pointerEvents="none"
+    onLayout={[Function]}
+    pointerEvents="box-none"
     style={
       Array [
         Object {
-          "alignItems": "center",
-          "backgroundColor": "transparent",
-          "bottom": 25,
-          "flex": 1,
-          "flexDirection": "row",
-          "justifyContent": "center",
+          "bottom": 0,
           "left": 0,
+          "overflow": "hidden",
           "position": "absolute",
           "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "flex": 1,
+          "position": "relative",
         },
         undefined,
       ]
     }
   >
-    <View>
-      <View
-        style={
+    <RCTScrollView
+      activeDot={
+        <View>
+          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+        </View>
+      }
+      automaticallyAdjustContentInsets={false}
+      autoplay={false}
+      autoplayDirection={true}
+      autoplayTimeout={2.5}
+      bounces={false}
+      contentContainerStyle={
+        Array [
           Object {
-            "backgroundColor": "#00676D",
-            "borderRadius": 4,
-            "height": 8,
-            "margin": 4,
-            "width": 8,
-          }
+            "backgroundColor": "transparent",
+          },
+          undefined,
+        ]
+      }
+      contentOffset={
+        Object {
+          "x": 0,
         }
-      />
-    </View>
-    <View>
-      <View
-        style={
+      }
+      disableNextButton={false}
+      disablePrevButton={false}
+      dot={
+        <View>
+          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+        </View>
+      }
+      horizontal={true}
+      index={0}
+      loadMinimal={true}
+      loadMinimalSize={1}
+      loop={false}
+      onIndexChanged={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      pagingEnabled={true}
+      removeClippedSubviews={true}
+      scrollsToTop={false}
+      showsButtons={false}
+      showsHorizontalScrollIndicator={false}
+      showsPagination={true}
+      showsVerticalScrollIndicator={false}
+    >
+      <View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 1334,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text>
+              1
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 1334,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text>
+              2
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "height": 1334,
+              "justifyContent": "center",
+              "width": 750,
+            }
+          }
+        >
+          <ActivityIndicator
+            animating={true}
+            color="#999999"
+            hidesWhenStopped={true}
+            size="small"
+          />
+        </View>
+      </View>
+    </RCTScrollView>
+    <View
+      pointerEvents="none"
+      style={
+        Array [
           Object {
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 4,
-            "height": 8,
-            "margin": 4,
-            "width": 8,
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "bottom": 25,
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#00676D",
+              "borderRadius": 4,
+              "height": 8,
+              "margin": 4,
+              "width": 8,
+            }
           }
-        }
-      />
-    </View>
-    <View>
-      <View
-        style={
-          Object {
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 4,
-            "height": 8,
-            "margin": 4,
-            "width": 8,
+        />
+      </View>
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 4,
+              "height": 8,
+              "margin": 4,
+              "width": 8,
+            }
           }
-        }
-      />
+        />
+      </View>
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 4,
+              "height": 8,
+              "margin": 4,
+              "width": 8,
+            }
+          }
+        />
+      </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`The onboarding swiper should render with an array as a child 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "backgroundColor": "transparent",
-        "flex": 1,
-        "position": "relative",
-      },
-      undefined,
-    ]
-  }
->
-  <RCTScrollView
-    activeDot={
-      <View>
-        <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
-      </View>
-    }
-    automaticallyAdjustContentInsets={false}
-    autoplay={false}
-    autoplayDirection={true}
-    autoplayTimeout={2.5}
-    bounces={false}
-    contentContainerStyle={
-      Array [
-        Object {
-          "backgroundColor": "transparent",
-        },
-        undefined,
-      ]
-    }
-    contentOffset={
-      Object {
-        "x": 0,
-      }
-    }
-    disableNextButton={false}
-    disablePrevButton={false}
-    dot={
-      <View>
-        <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
-      </View>
-    }
-    horizontal={true}
-    index={0}
-    loadMinimal={true}
-    loadMinimalSize={1}
-    loop={false}
-    onIndexChanged={[Function]}
-    onMomentumScrollEnd={[Function]}
-    onScrollBeginDrag={[Function]}
-    onScrollEndDrag={[Function]}
-    pagingEnabled={true}
-    removeClippedSubviews={true}
-    scrollsToTop={false}
-    showsButtons={false}
-    showsHorizontalScrollIndicator={false}
-    showsPagination={true}
-    showsVerticalScrollIndicator={false}
-  >
-    <View>
-      <View
-        style={
-          Array [
-            Object {
-              "height": 1334,
-              "width": 750,
-            },
-            Object {
-              "backgroundColor": "transparent",
-            },
-          ]
-        }
-      >
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "opacity": 1,
-            }
-          }
-        >
-          <Text>
-            1
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
-          Array [
-            Object {
-              "height": 1334,
-              "width": 750,
-            },
-            Object {
-              "backgroundColor": "transparent",
-            },
-          ]
-        }
-      >
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "opacity": 1,
-            }
-          }
-        >
-          <Text>
-            2
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 1,
-            "height": 1334,
-            "justifyContent": "center",
-            "width": 750,
-          }
-        }
-      >
-        <ActivityIndicator
-          animating={true}
-          color="#999999"
-          hidesWhenStopped={true}
-          size="small"
-        />
-      </View>
-    </View>
-  </RCTScrollView>
+Array [
   <View
-    pointerEvents="none"
+    onLayout={[Function]}
+    pointerEvents="box-none"
     style={
       Array [
         Object {
-          "alignItems": "center",
-          "backgroundColor": "transparent",
-          "bottom": 25,
-          "flex": 1,
-          "flexDirection": "row",
-          "justifyContent": "center",
+          "bottom": 0,
           "left": 0,
+          "overflow": "hidden",
           "position": "absolute",
           "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "flex": 1,
+          "position": "relative",
         },
         undefined,
       ]
     }
   >
-    <View>
-      <View
-        style={
+    <RCTScrollView
+      activeDot={
+        <View>
+          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+        </View>
+      }
+      automaticallyAdjustContentInsets={false}
+      autoplay={false}
+      autoplayDirection={true}
+      autoplayTimeout={2.5}
+      bounces={false}
+      contentContainerStyle={
+        Array [
           Object {
-            "backgroundColor": "#00676D",
-            "borderRadius": 4,
-            "height": 8,
-            "margin": 4,
-            "width": 8,
-          }
+            "backgroundColor": "transparent",
+          },
+          undefined,
+        ]
+      }
+      contentOffset={
+        Object {
+          "x": 0,
         }
-      />
-    </View>
-    <View>
-      <View
-        style={
+      }
+      disableNextButton={false}
+      disablePrevButton={false}
+      dot={
+        <View>
+          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+        </View>
+      }
+      horizontal={true}
+      index={0}
+      loadMinimal={true}
+      loadMinimalSize={1}
+      loop={false}
+      onIndexChanged={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      pagingEnabled={true}
+      removeClippedSubviews={true}
+      scrollsToTop={false}
+      showsButtons={false}
+      showsHorizontalScrollIndicator={false}
+      showsPagination={true}
+      showsVerticalScrollIndicator={false}
+    >
+      <View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 1334,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text>
+              1
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 1334,
+                "width": 750,
+              },
+              Object {
+                "backgroundColor": "transparent",
+              },
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text>
+              2
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "height": 1334,
+              "justifyContent": "center",
+              "width": 750,
+            }
+          }
+        >
+          <ActivityIndicator
+            animating={true}
+            color="#999999"
+            hidesWhenStopped={true}
+            size="small"
+          />
+        </View>
+      </View>
+    </RCTScrollView>
+    <View
+      pointerEvents="none"
+      style={
+        Array [
           Object {
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 4,
-            "height": 8,
-            "margin": 4,
-            "width": 8,
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "bottom": 25,
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#00676D",
+              "borderRadius": 4,
+              "height": 8,
+              "margin": 4,
+              "width": 8,
+            }
           }
-        }
-      />
-    </View>
-    <View>
-      <View
-        style={
-          Object {
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 4,
-            "height": 8,
-            "margin": 4,
-            "width": 8,
+        />
+      </View>
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 4,
+              "height": 8,
+              "margin": 4,
+              "width": 8,
+            }
           }
-        }
-      />
+        />
+      </View>
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 4,
+              "height": 8,
+              "margin": 4,
+              "width": 8,
+            }
+          }
+        />
+      </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;

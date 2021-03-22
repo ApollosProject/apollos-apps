@@ -1,674 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The AddCommentInput Component must render 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+Array [
   <View
-    accessible={true}
-    focusable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
+    onLayout={[Function]}
+    pointerEvents="box-none"
     style={
-      Object {
-        "opacity": 1,
-      }
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "borderBottomWidth": 0.5,
-          "borderColor": "rgba(0, 0, 0, 0.1)",
-          "borderTopWidth": 0.5,
-          "flexDirection": "row",
-          "padding": 16,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "height": 48,
-            "justifyContent": "center",
-            "width": 48,
-          }
-        }
-        themeSize={48}
-      >
-        <Image
-          fadeDuration={250}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/200",
-              },
-            ]
-          }
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 24,
-              "bottom": 0,
-              "height": "100%",
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "width": "100%",
-            }
-          }
-          themeSize={48}
-        />
-        <View
-          style={
-            Object {
-              "bottom": 0,
-              "position": "absolute",
-              "right": 0,
-            }
-          }
-        >
-          <View
-            accessible={true}
-            focusable={false}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "transform": Array [
-                  Object {
-                    "scale": 1,
-                  },
-                ],
-              }
-            }
-          >
-            <View
-              borderRadius={24}
-              iconPadding={4.8}
-              style={
-                Object {
-                  "backgroundColor": "#17B582",
-                  "padding": 4.8,
-                  "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-                  "shadowOffset": Object {
-                    "height": 2,
-                    "width": 0,
-                  },
-                  "shadowOpacity": 1,
-                  "shadowRadius": 8,
-                }
-              }
-            >
-              <RNSVGSvgView
-                align="xMidYMid"
-                bbHeight={12}
-                bbWidth={12}
-                fill="none"
-                height={12}
-                meetOrSlice={0}
-                minX={0}
-                minY={0}
-                style={
-                  Array [
-                    Object {
-                      "backgroundColor": "transparent",
-                      "borderWidth": 0,
-                    },
-                    undefined,
-                    Object {
-                      "opacity": 1,
-                    },
-                    Object {
-                      "flex": 0,
-                      "height": 12,
-                      "width": 12,
-                    },
-                  ]
-                }
-                vbHeight={10}
-                vbWidth={10}
-                width={12}
-              >
-                <RNSVGGroup
-                  fill={null}
-                  fillOpacity={1}
-                  fillRule={1}
-                  font={Object {}}
-                  matrix={
-                    Array [
-                      1,
-                      0,
-                      0,
-                      1,
-                      0,
-                      0,
-                    ]
-                  }
-                  opacity={1}
-                  originX={0}
-                  originY={0}
-                  propList={
-                    Array [
-                      "fill",
-                    ]
-                  }
-                  rotation={0}
-                  scaleX={1}
-                  scaleY={1}
-                  skewX={0}
-                  skewY={0}
-                  stroke={null}
-                  strokeDasharray={null}
-                  strokeDashoffset={null}
-                  strokeLinecap={0}
-                  strokeLinejoin={0}
-                  strokeMiterlimit={4}
-                  strokeOpacity={1}
-                  strokeWidth={1}
-                  vectorEffect={0}
-                  x={0}
-                  y={0}
-                >
-                  <RNSVGPath
-                    d="M1.5625 5H8.4375"
-                    fill={
-                      Array [
-                        0,
-                        4278190080,
-                      ]
-                    }
-                    fillOpacity={1}
-                    fillRule={1}
-                    matrix={
-                      Array [
-                        1,
-                        0,
-                        0,
-                        1,
-                        0,
-                        0,
-                      ]
-                    }
-                    opacity={1}
-                    originX={0}
-                    originY={0}
-                    propList={
-                      Array [
-                        "stroke",
-                        "strokeWidth",
-                        "strokeLinecap",
-                        "strokeLinejoin",
-                      ]
-                    }
-                    rotation={0}
-                    scaleX={1}
-                    scaleY={1}
-                    skewX={0}
-                    skewY={0}
-                    stroke={
-                      Array [
-                        0,
-                        4294967295,
-                      ]
-                    }
-                    strokeDasharray={null}
-                    strokeDashoffset={null}
-                    strokeLinecap={1}
-                    strokeLinejoin={1}
-                    strokeMiterlimit={4}
-                    strokeOpacity={1}
-                    strokeWidth="2"
-                    vectorEffect={0}
-                    x={0}
-                    y={0}
-                  />
-                  <RNSVGPath
-                    d="M5 1.5625V8.4375"
-                    fill={
-                      Array [
-                        0,
-                        4278190080,
-                      ]
-                    }
-                    fillOpacity={1}
-                    fillRule={1}
-                    matrix={
-                      Array [
-                        1,
-                        0,
-                        0,
-                        1,
-                        0,
-                        0,
-                      ]
-                    }
-                    opacity={1}
-                    originX={0}
-                    originY={0}
-                    propList={
-                      Array [
-                        "stroke",
-                        "strokeWidth",
-                        "strokeLinecap",
-                        "strokeLinejoin",
-                      ]
-                    }
-                    rotation={0}
-                    scaleX={1}
-                    scaleY={1}
-                    skewX={0}
-                    skewY={0}
-                    stroke={
-                      Array [
-                        0,
-                        4294967295,
-                      ]
-                    }
-                    strokeDasharray={null}
-                    strokeDashoffset={null}
-                    strokeLinecap={1}
-                    strokeLinejoin={1}
-                    strokeMiterlimit={4}
-                    strokeOpacity={1}
-                    strokeWidth="2"
-                    vectorEffect={0}
-                    x={0}
-                    y={0}
-                  />
-                </RNSVGGroup>
-              </RNSVGSvgView>
-            </View>
-          </View>
-        </View>
-      </View>
-      <Text
-        style={
-          Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Medium",
-            "fontSize": 14,
-            "lineHeight": 21,
-            "padding": 8,
-          }
-        }
-      >
-        Write Something...
-      </Text>
-    </View>
-  </View>
-  <Modal
-    animationType="slide"
-    hardwareAccelerated={false}
-    onRequestClose={[Function]}
-    visible={false}
-  >
-    <BVLinearGradient
-      colors={
-        Array [
-          4294967295,
-          4294506484,
-        ]
-      }
-      endPoint={
-        Object {
-          "x": 0.5,
-          "y": 1,
-        }
-      }
-      locations={null}
-      startPoint={
-        Object {
-          "x": 0.5,
-          "y": 0,
-        }
-      }
-      style={
-        Object {
-          "flex": 1,
-          "height": "100%",
-        }
-      }
-    >
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
-      >
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "height": 64,
-              "justifyContent": "space-between",
-              "padding": 16,
-              "width": "100%",
-            }
-          }
-        >
-          <View
-            accessible={true}
-            focusable={false}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "opacity": 1,
-                "width": 48,
-              }
-            }
-          >
-            <Text
-              numberOfLines={1}
-              style={
-                Object {
-                  "color": "#00676D",
-                  "fontSize": 16,
-                  "lineHeight": 24,
-                  "textAlign": "right",
-                }
-              }
-            />
-          </View>
-          <Text
-            style={
-              Object {
-                "color": "#303030",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 16,
-                "lineHeight": 24,
-              }
-            }
-          >
-            New Journal
-          </Text>
-          <View
-            accessible={true}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "opacity": 1,
-                "width": 48,
-              }
-            }
-          >
-            <Text
-              numberOfLines={1}
-              style={
-                Object {
-                  "color": "#00676D",
-                  "fontSize": 16,
-                  "lineHeight": 24,
-                  "textAlign": "right",
-                }
-              }
-            >
-              Save
-            </Text>
-          </View>
-        </View>
-        <View
-          style={Object {}}
-        >
-          <View
-            style={
-              Object {
-                "alignItems": "center",
-                "flexDirection": "row",
-                "paddingHorizontal": 16,
-                "paddingVertical": 16,
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "height": 48,
-                  "justifyContent": "center",
-                  "width": 48,
-                }
-              }
-              themeSize={48}
-            >
-              <Image
-                fadeDuration={250}
-                onLoad={[Function]}
-                source={
-                  Array [
-                    Object {
-                      "cache": "force-cache",
-                      "uri": "https://picsum.photos/200",
-                    },
-                  ]
-                }
-                style={
-                  Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 24,
-                    "bottom": 0,
-                    "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
-                  }
-                }
-                themeSize={48}
-              />
-            </View>
-            <Text
-              numberOfLines={1}
-              style={
-                Object {
-                  "color": "#303030",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 16,
-                  "lineHeight": 24,
-                  "marginLeft": 8,
-                }
-              }
-            />
-          </View>
-          <Text
-            style={
-              Object {
-                "color": "#303030",
-                "fontSize": 16,
-                "lineHeight": 24,
-                "paddingHorizontal": 16,
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "alignItems": "center",
-                "borderBottomWidth": 1,
-                "borderColor": "#DBDBD9",
-                "borderTopWidth": 1,
-                "flexDirection": "row",
-                "justifyContent": "space-between",
-                "marginVertical": 16,
-                "paddingHorizontal": 16,
-                "paddingVertical": 16,
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "flexShrink": 1,
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "color": "#303030",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 16,
-                    "lineHeight": 24,
-                  }
-                }
-              >
-                Share with the Community
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "#A5A5A5",
-                    "fontFamily": "InterUI-Medium",
-                    "fontSize": 14,
-                    "lineHeight": 21,
-                  }
-                }
-              >
-                Your name and photo will be visible to the community.
-              </Text>
-            </View>
-            <View
-              style={
-                Object {
-                  "marginVertical": 16,
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "height": 38,
-                    "paddingVertical": 4,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "flexDirection": "row",
-                      "justifyContent": "center",
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "justifyContent": "center",
-                      }
-                    }
-                  />
-                  <View
-                    style={
-                      Object {
-                        "flex": 1,
-                        "justifyContent": "center",
-                      }
-                    }
-                  >
-                    <View
-                      accessible={true}
-                      focusable={true}
-                      onClick={[Function]}
-                      onResponderGrant={[Function]}
-                      onResponderMove={[Function]}
-                      onResponderRelease={[Function]}
-                      onResponderTerminate={[Function]}
-                      onResponderTerminationRequest={[Function]}
-                      onStartShouldSetResponder={[Function]}
-                      style={
-                        Object {
-                          "opacity": 1,
-                        }
-                      }
-                    >
-                      <Text
-                        style={
-                          Object {
-                            "backgroundColor": "transparent",
-                            "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 18,
-                            "paddingVertical": 4,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "justifyContent": "center",
-                      }
-                    }
-                  >
-                    <RCTSwitch
-                      accessibilityRole="switch"
-                      onChange={[Function]}
-                      onResponderTerminationRequest={[Function]}
-                      onStartShouldSetResponder={[Function]}
-                      onTintColor="#00676D"
-                      style={
-                        Array [
-                          Object {
-                            "height": 31,
-                            "width": 51,
-                          },
-                          Object {
-                            "backgroundColor": "#A5A5A5",
-                            "borderRadius": 16,
-                          },
-                        ]
-                      }
-                      thumbTintColor="#FFFFFF"
-                      tintColor="#A5A5A5"
-                      value={false}
-                    />
-                  </View>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-      </RCTSafeAreaView>
-    </BVLinearGradient>
-  </Modal>
-</RCTSafeAreaView>
-`;
-
-exports[`The AddCommentInput Component must render without an avatar 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+  />,
   <View
     accessible={true}
     focusable={true}
@@ -1063,10 +413,10 @@ exports[`The AddCommentInput Component must render without an avatar 1`] = `
           }
         }
       >
-        Write Something...
+        What stands out to you?
       </Text>
     </View>
-  </View>
+  </View>,
   <Modal
     animationType="slide"
     hardwareAccelerated={false}
@@ -1117,7 +467,7 @@ exports[`The AddCommentInput Component must render without an avatar 1`] = `
         >
           <View
             accessible={true}
-            focusable={false}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -1127,8 +477,8 @@ exports[`The AddCommentInput Component must render without an avatar 1`] = `
             onStartShouldSetResponder={[Function]}
             style={
               Object {
+                "minWidth": 48,
                 "opacity": 1,
-                "width": 48,
               }
             }
           >
@@ -1136,13 +486,16 @@ exports[`The AddCommentInput Component must render without an avatar 1`] = `
               numberOfLines={1}
               style={
                 Object {
-                  "color": "#00676D",
+                  "color": "#17B582",
                   "fontSize": 16,
+                  "fontWeight": undefined,
                   "lineHeight": 24,
                   "textAlign": "right",
                 }
               }
-            />
+            >
+              Cancel
+            </Text>
           </View>
           <Text
             style={
@@ -1168,17 +521,19 @@ exports[`The AddCommentInput Component must render without an avatar 1`] = `
             onStartShouldSetResponder={[Function]}
             style={
               Object {
+                "minWidth": 48,
                 "opacity": 1,
-                "width": 48,
               }
             }
           >
             <Text
               numberOfLines={1}
+              strong={true}
               style={
                 Object {
-                  "color": "#00676D",
+                  "color": "#17B582",
                   "fontSize": 16,
+                  "fontWeight": "bold",
                   "lineHeight": 24,
                   "textAlign": "right",
                 }
@@ -1351,14 +706,16 @@ exports[`The AddCommentInput Component must render without an avatar 1`] = `
                 "paddingHorizontal": 16,
               }
             }
-          />
+          >
+            
+          </Text>
           <View
             style={
               Object {
                 "alignItems": "center",
-                "borderBottomWidth": 1,
+                "borderBottomWidth": 0.5,
                 "borderColor": "#DBDBD9",
-                "borderTopWidth": 1,
+                "borderTopWidth": 0.5,
                 "flexDirection": "row",
                 "justifyContent": "space-between",
                 "marginVertical": 16,
@@ -1459,9 +816,9 @@ exports[`The AddCommentInput Component must render without an avatar 1`] = `
                           Object {
                             "backgroundColor": "transparent",
                             "color": "#505050",
-                            "fontFamily": "InterUI-Bold",
-                            "fontSize": 12,
-                            "lineHeight": 18,
+                            "fontFamily": "InterUI-Medium",
+                            "fontSize": 14,
+                            "lineHeight": 21,
                             "paddingVertical": 4,
                           }
                         }
@@ -1506,6 +863,6 @@ exports[`The AddCommentInput Component must render without an avatar 1`] = `
         </View>
       </RCTSafeAreaView>
     </BVLinearGradient>
-  </Modal>
-</RCTSafeAreaView>
+  </Modal>,
+]
 `;

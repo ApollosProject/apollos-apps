@@ -10,6 +10,7 @@ import FollowDataSource from '../dataSource';
 import PeopleDataSource from '../../people/dataSource';
 
 let currentPersonId;
+const notificationMock = jest.fn();
 
 const context = {
   dataSources: {
@@ -17,6 +18,9 @@ const context = {
     Person: {
       whereCurrentPerson: () => ({ id: currentPersonId }),
       getCurrentPersonId: () => currentPersonId,
+    },
+    OneSignal: {
+      createNotification: notificationMock,
     },
   },
 };
@@ -41,8 +45,11 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     // frustrating that we have to do this, but it's easier to inject a fix here
     // then mock out the whole Person dataSource in the context.
     context.dataSources.Person.model = peopleDataSource.model;
+    context.dataSources.Person.getFromId = peopleDataSource.getFromId;
     person1 = await sequelize.models.people.create({
       originId: '11',
+      firstName: 'Jim',
+      lastName: 'Randy',
       originType: 'rock',
     });
     person2 = await sequelize.models.people.create({
@@ -62,6 +69,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
   afterEach(async () => {
     await sequelize.drop({});
     currentPersonId = 1;
+    notificationMock.mockReset();
   });
 
   it('should create new follow request', async () => {
@@ -81,6 +89,23 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     expect(follows.length).toBe(1);
     expect(follows[0].state).toBe(FollowState.REQUESTED);
+    expect(notificationMock.mock.calls.length).toBe(1);
+  });
+
+  it('should send a push when creating new follow request', async () => {
+    const followDataSource = new FollowDataSource();
+
+    followDataSource.initialize({ context });
+
+    await followDataSource.requestFollow({
+      followedPersonId: `Person:${person2.id}`,
+    });
+    expect(notificationMock.mock.calls[0][0].data).toEqual({
+      requestPersonId: person1.apollosId,
+    });
+    expect(notificationMock.mock.calls[0][0].buttons).toMatchSnapshot();
+    expect(notificationMock.mock.calls[0][0].content).toMatchSnapshot();
+    expect(notificationMock.mock.calls[0][0].to.id).toBe(person2.id);
   });
 
   it('should ignore existing unaccepted request', async () => {
@@ -208,6 +233,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     expect(follows.length).toBe(1);
     expect(follows[0].state).toBe(FollowState.ACCEPTED);
+    expect(notificationMock.mock.calls.length).toBe(1);
   });
 
   it('should reset existing denied request', async () => {

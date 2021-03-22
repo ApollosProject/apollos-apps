@@ -1,776 +1,871 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Paragraph placeholder accepts custom line styles 1`] = `
-<View>
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
     style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 33,
-        "marginVertical": 5,
-        "width": "85%",
-      }
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 33,
-        "marginVertical": 5,
-        "width": "100%",
+  />,
+  <View>
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 33,
+          "marginVertical": 5,
+          "width": "85%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 33,
-        "marginVertical": 5,
-        "width": "75%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 33,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-</View>
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 33,
+          "marginVertical": 5,
+          "width": "75%",
+        }
+      }
+    />
+  </View>,
+]
 `;
 
 exports[`The Paragraph placeholder accepts custom styles 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "salmon",
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
+  />,
   <View
     style={
       Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "85%",
+        "backgroundColor": "salmon",
       }
     }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "85%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "75%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-</View>
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "75%",
+        }
+      }
+    />
+  </View>,
+]
 `;
 
 exports[`The Paragraph placeholder has varying width lines 1`] = `
-<View>
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
     style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "23%",
-      }
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+  />,
+  <View>
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "23%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": 33,
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-</View>
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": 33,
+        }
+      }
+    />
+  </View>,
+]
 `;
 
 exports[`The Paragraph placeholder renders correctly 1`] = `
-<View>
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
     style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "85%",
-      }
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+  />,
+  <View>
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "85%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "75%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-</View>
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "75%",
+        }
+      }
+    />
+  </View>,
+]
 `;
 
 exports[`The Paragraph placeholder renders multiple lines 1`] = `
-<View>
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
     style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "85%",
-      }
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+  />,
+  <View>
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "85%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-  <View
-    style={
-      Object {
-        "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "75%",
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
       }
-    }
-  />
-</View>
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "75%",
+        }
+      }
+    />
+  </View>,
+]
 `;

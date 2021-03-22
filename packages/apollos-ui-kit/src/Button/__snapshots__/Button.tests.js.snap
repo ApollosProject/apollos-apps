@@ -1,445 +1,818 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Button component should render 1`] = `
-<View
-  accessible={true}
-  focusable={true}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
->
+Array [
   <View
-    bordered={false}
-    disabled={false}
-    pill={true}
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "alignItems": "center",
-        "backgroundColor": "#00676D",
-        "borderColor": "#00676D",
-        "borderRadius": 48,
-        "borderWidth": 2,
-        "elevation": 2,
-        "flexDirection": "row",
-        "height": 48,
-        "justifyContent": "center",
         "opacity": 1,
-        "overflow": "hidden",
-        "paddingHorizontal": 16,
       }
     }
   >
-    <Text
+    <View
+      bordered={false}
+      disabled={false}
+      pill={true}
       style={
         Object {
-          "color": "#FFFFFF",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 16,
-          "lineHeight": 24,
+          "alignItems": "center",
+          "backgroundColor": "#00676D",
+          "borderColor": "#00676D",
+          "borderRadius": 48,
+          "borderWidth": 2,
+          "elevation": 2,
+          "flexDirection": "row",
+          "height": 48,
+          "justifyContent": "center",
+          "opacity": 1,
+          "overflow": "hidden",
+          "paddingHorizontal": 16,
         }
       }
     >
-      My Button!
-    </Text>
-  </View>
-</View>
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
+          }
+        }
+      >
+        My Button!
+      </Text>
+    </View>
+  </View>,
+]
 `;
 
 exports[`The Button component should render a Tertiary button 1`] = `
-<View
-  accessible={true}
-  focusable={true}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
->
+Array [
   <View
-    bordered={false}
-    disabled={false}
-    pill={true}
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "alignItems": "center",
-        "backgroundColor": "#6EC5B8",
-        "borderColor": "#6EC5B8",
-        "borderRadius": 48,
-        "borderWidth": 2,
-        "elevation": 2,
-        "flexDirection": "row",
-        "height": 48,
-        "justifyContent": "center",
         "opacity": 1,
-        "overflow": "hidden",
-        "paddingHorizontal": 16,
       }
     }
   >
-    <Text
+    <View
+      bordered={false}
+      disabled={false}
+      pill={true}
       style={
         Object {
-          "color": "#FFFFFF",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 16,
-          "lineHeight": 24,
+          "alignItems": "center",
+          "backgroundColor": "#6EC5B8",
+          "borderColor": "#6EC5B8",
+          "borderRadius": 48,
+          "borderWidth": 2,
+          "elevation": 2,
+          "flexDirection": "row",
+          "height": 48,
+          "justifyContent": "center",
+          "opacity": 1,
+          "overflow": "hidden",
+          "paddingHorizontal": 16,
         }
       }
     >
-      Tertiary Action
-    </Text>
-  </View>
-</View>
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
+          }
+        }
+      >
+        Tertiary Action
+      </Text>
+    </View>
+  </View>,
+]
 `;
 
 exports[`The Button component should render a bordered button 1`] = `
-<View
-  accessible={true}
-  focusable={true}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
->
+Array [
   <View
-    bordered={true}
-    disabled={false}
-    pill={true}
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "alignItems": "center",
-        "backgroundColor": "transparent",
-        "borderColor": "#00676D",
-        "borderRadius": 48,
-        "borderWidth": 2,
-        "flexDirection": "row",
-        "height": 48,
-        "justifyContent": "center",
         "opacity": 1,
-        "overflow": "hidden",
-        "paddingHorizontal": 16,
       }
     }
   >
-    <Text
+    <View
+      bordered={true}
+      disabled={false}
+      pill={true}
       style={
         Object {
-          "color": "#00676D",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 16,
-          "lineHeight": 24,
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderColor": "#00676D",
+          "borderRadius": 48,
+          "borderWidth": 2,
+          "flexDirection": "row",
+          "height": 48,
+          "justifyContent": "center",
+          "opacity": 1,
+          "overflow": "hidden",
+          "paddingHorizontal": 16,
         }
       }
     >
-      Ghost Button
-    </Text>
-  </View>
-</View>
+      <Text
+        style={
+          Object {
+            "color": "#00676D",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
+          }
+        }
+      >
+        Ghost Button
+      </Text>
+    </View>
+  </View>,
+]
 `;
 
 exports[`The Button component should render a disabled button 1`] = `
-<View
-  accessible={true}
-  focusable={true}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
->
+Array [
   <View
-    bordered={false}
-    disabled={true}
-    pill={true}
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "alignItems": "center",
-        "backgroundColor": "#00676D",
-        "borderColor": "#00676D",
-        "borderRadius": 48,
-        "borderWidth": 2,
-        "elevation": 2,
-        "flexDirection": "row",
-        "height": 48,
-        "justifyContent": "center",
-        "opacity": 0.5,
-        "overflow": "hidden",
-        "paddingHorizontal": 16,
+        "opacity": 1,
       }
     }
   >
-    <Text
+    <View
+      bordered={false}
+      disabled={true}
+      pill={true}
       style={
         Object {
-          "color": "#FFFFFF",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 16,
-          "lineHeight": 24,
+          "alignItems": "center",
+          "backgroundColor": "#00676D",
+          "borderColor": "#00676D",
+          "borderRadius": 48,
+          "borderWidth": 2,
+          "elevation": 2,
+          "flexDirection": "row",
+          "height": 48,
+          "justifyContent": "center",
+          "opacity": 0.5,
+          "overflow": "hidden",
+          "paddingHorizontal": 16,
         }
       }
     >
-      Disabled Button 😭
-    </Text>
-  </View>
-</View>
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
+          }
+        }
+      >
+        Disabled Button 😭
+      </Text>
+    </View>
+  </View>,
+]
 `;
 
 exports[`The Button component should render a ghost button 1`] = `
-<View
-  accessible={true}
-  focusable={true}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
->
+Array [
   <View
-    bordered={true}
-    disabled={false}
-    pill={true}
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "alignItems": "center",
-        "backgroundColor": "transparent",
-        "borderColor": "#303030",
-        "borderRadius": 48,
-        "borderWidth": 2,
-        "flexDirection": "row",
-        "height": 48,
-        "justifyContent": "center",
         "opacity": 1,
-        "overflow": "hidden",
-        "paddingHorizontal": 16,
       }
     }
   >
-    <Text
+    <View
+      bordered={true}
+      disabled={false}
+      pill={true}
       style={
         Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 16,
-          "lineHeight": 24,
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderColor": "#303030",
+          "borderRadius": 48,
+          "borderWidth": 2,
+          "flexDirection": "row",
+          "height": 48,
+          "justifyContent": "center",
+          "opacity": 1,
+          "overflow": "hidden",
+          "paddingHorizontal": 16,
         }
       }
     >
-      Ghost Button
-    </Text>
-  </View>
-</View>
+      <Text
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
+          }
+        }
+      >
+        Ghost Button
+      </Text>
+    </View>
+  </View>,
+]
 `;
 
 exports[`The Button component should render a ghost pill button 1`] = `
-<View
-  accessible={true}
-  focusable={true}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
->
+Array [
   <View
-    bordered={true}
-    disabled={false}
-    pill={true}
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "alignItems": "center",
-        "backgroundColor": "transparent",
-        "borderColor": "#303030",
-        "borderRadius": 48,
-        "borderWidth": 2,
-        "flexDirection": "row",
-        "height": 48,
-        "justifyContent": "center",
         "opacity": 1,
-        "overflow": "hidden",
-        "paddingHorizontal": 16,
       }
     }
   >
-    <Text
+    <View
+      bordered={true}
+      disabled={false}
+      pill={true}
       style={
         Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 16,
-          "lineHeight": 24,
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderColor": "#303030",
+          "borderRadius": 48,
+          "borderWidth": 2,
+          "flexDirection": "row",
+          "height": 48,
+          "justifyContent": "center",
+          "opacity": 1,
+          "overflow": "hidden",
+          "paddingHorizontal": 16,
         }
       }
     >
-      Ghost Button
-    </Text>
-  </View>
-</View>
+      <Text
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
+          }
+        }
+      >
+        Ghost Button
+      </Text>
+    </View>
+  </View>,
+]
 `;
 
 exports[`The Button component should render a loading state 1`] = `
-<View
-  accessible={true}
-  focusable={true}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
->
+Array [
   <View
-    bordered={false}
-    disabled={false}
-    pill={true}
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "alignItems": "center",
-        "backgroundColor": "#00676D",
-        "borderColor": "#00676D",
-        "borderRadius": 48,
-        "borderWidth": 2,
-        "elevation": 2,
-        "flexDirection": "row",
-        "height": 48,
-        "justifyContent": "center",
         "opacity": 1,
-        "overflow": "hidden",
-        "paddingHorizontal": 16,
       }
     }
   >
-    <ActivityIndicator
-      animating={true}
-      color="#FFFFFF"
-      hidesWhenStopped={true}
-      size="small"
-    />
-  </View>
-</View>
+    <View
+      bordered={false}
+      disabled={false}
+      pill={true}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#00676D",
+          "borderColor": "#00676D",
+          "borderRadius": 48,
+          "borderWidth": 2,
+          "elevation": 2,
+          "flexDirection": "row",
+          "height": 48,
+          "justifyContent": "center",
+          "opacity": 1,
+          "overflow": "hidden",
+          "paddingHorizontal": 16,
+        }
+      }
+    >
+      <ActivityIndicator
+        animating={true}
+        color="#FFFFFF"
+        hidesWhenStopped={true}
+        size="small"
+      />
+    </View>
+  </View>,
+]
 `;
 
 exports[`The Button component should render a pill button 1`] = `
-<View
-  accessible={true}
-  focusable={true}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
->
+Array [
   <View
-    bordered={false}
-    disabled={false}
-    pill={true}
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "alignItems": "center",
-        "backgroundColor": "#00676D",
-        "borderColor": "#00676D",
-        "borderRadius": 48,
-        "borderWidth": 2,
-        "elevation": 2,
-        "flexDirection": "row",
-        "height": 48,
-        "justifyContent": "center",
         "opacity": 1,
-        "overflow": "hidden",
-        "paddingHorizontal": 16,
       }
     }
   >
-    <Text
+    <View
+      bordered={false}
+      disabled={false}
+      pill={true}
       style={
         Object {
-          "color": "#FFFFFF",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 16,
-          "lineHeight": 24,
+          "alignItems": "center",
+          "backgroundColor": "#00676D",
+          "borderColor": "#00676D",
+          "borderRadius": 48,
+          "borderWidth": 2,
+          "elevation": 2,
+          "flexDirection": "row",
+          "height": 48,
+          "justifyContent": "center",
+          "opacity": 1,
+          "overflow": "hidden",
+          "paddingHorizontal": 16,
         }
       }
     >
-      Pill Button
-    </Text>
-  </View>
-</View>
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
+          }
+        }
+      >
+        Pill Button
+      </Text>
+    </View>
+  </View>,
+]
 `;
 
 exports[`The Button component should render a primary button 1`] = `
-<View
-  accessible={true}
-  focusable={true}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
+  />,
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      bordered={false}
+      disabled={false}
+      pill={true}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#00676D",
+          "borderColor": "#00676D",
+          "borderRadius": 48,
+          "borderWidth": 2,
+          "elevation": 2,
+          "flexDirection": "row",
+          "height": 48,
+          "justifyContent": "center",
+          "opacity": 1,
+          "overflow": "hidden",
+          "paddingHorizontal": 16,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
+          }
+        }
+      >
+        Primary Action
+      </Text>
+    </View>
+  </View>,
+]
+`;
+
+exports[`The Button component should render a secondary button 1`] = `
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      bordered={false}
+      disabled={false}
+      pill={true}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#17B582",
+          "borderColor": "#17B582",
+          "borderRadius": 48,
+          "borderWidth": 2,
+          "elevation": 2,
+          "flexDirection": "row",
+          "height": 48,
+          "justifyContent": "center",
+          "opacity": 1,
+          "overflow": "hidden",
+          "paddingHorizontal": 16,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
+          }
+        }
+      >
+        Secondary Action
+      </Text>
+    </View>
+  </View>,
+]
+`;
+
+exports[`The Button component should render as default type 1`] = `
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      bordered={false}
+      disabled={false}
+      pill={true}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#A5A5A5",
+          "borderColor": "#A5A5A5",
+          "borderRadius": 48,
+          "borderWidth": 2,
+          "elevation": 2,
+          "flexDirection": "row",
+          "height": 48,
+          "justifyContent": "center",
+          "opacity": 1,
+          "overflow": "hidden",
+          "paddingHorizontal": 16,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#303030",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
+          }
+        }
+      >
+        My Button!
+      </Text>
+    </View>
+  </View>,
+]
+`;
+
+exports[`The Button component should render with children 1`] = `
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
   <View
     bordered={false}
     disabled={false}
@@ -461,152 +834,7 @@ exports[`The Button component should render a primary button 1`] = `
       }
     }
   >
-    <Text
-      style={
-        Object {
-          "color": "#FFFFFF",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 16,
-          "lineHeight": 24,
-        }
-      }
-    >
-      Primary Action
-    </Text>
-  </View>
-</View>
-`;
-
-exports[`The Button component should render a secondary button 1`] = `
-<View
-  accessible={true}
-  focusable={true}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
->
-  <View
-    bordered={false}
-    disabled={false}
-    pill={true}
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#17B582",
-        "borderColor": "#17B582",
-        "borderRadius": 48,
-        "borderWidth": 2,
-        "elevation": 2,
-        "flexDirection": "row",
-        "height": 48,
-        "justifyContent": "center",
-        "opacity": 1,
-        "overflow": "hidden",
-        "paddingHorizontal": 16,
-      }
-    }
-  >
-    <Text
-      style={
-        Object {
-          "color": "#FFFFFF",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 16,
-          "lineHeight": 24,
-        }
-      }
-    >
-      Secondary Action
-    </Text>
-  </View>
-</View>
-`;
-
-exports[`The Button component should render as default type 1`] = `
-<View
-  accessible={true}
-  focusable={true}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
->
-  <View
-    bordered={false}
-    disabled={false}
-    pill={true}
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#A5A5A5",
-        "borderColor": "#A5A5A5",
-        "borderRadius": 48,
-        "borderWidth": 2,
-        "elevation": 2,
-        "flexDirection": "row",
-        "height": 48,
-        "justifyContent": "center",
-        "opacity": 1,
-        "overflow": "hidden",
-        "paddingHorizontal": 16,
-      }
-    }
-  >
-    <Text
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 16,
-          "lineHeight": 24,
-        }
-      }
-    >
-      My Button!
-    </Text>
-  </View>
-</View>
-`;
-
-exports[`The Button component should render with children 1`] = `
-<View
-  bordered={false}
-  disabled={false}
-  pill={true}
-  style={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "#00676D",
-      "borderColor": "#00676D",
-      "borderRadius": 48,
-      "borderWidth": 2,
-      "elevation": 2,
-      "flexDirection": "row",
-      "height": 48,
-      "justifyContent": "center",
-      "opacity": 1,
-      "overflow": "hidden",
-      "paddingHorizontal": 16,
-    }
-  }
->
-  <View />
-</View>
+    <View />
+  </View>,
+]
 `;
