@@ -10,6 +10,7 @@ import {
   RequestedFollowListConnected,
 } from '../FollowListConnected';
 import UserAvatarHeaderConnected from '../UserAvatarHeaderConnected';
+import FollowListSearchModalConnected from '../FollowListSearchModalConnected';
 
 const FlexedSafeAreaView = styled(
   { flex: 1 },
@@ -41,27 +42,40 @@ const ConnectScreenConnected = (props) => {
     }
   };
 
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
-    <BackgroundView>
-      <FlexedSafeAreaView edges={['top', 'left', 'right']}>
-        <ScrollView
-          refreshControl={
-            <RefreshControl
-              refreshing={isRefetching}
-              onRefresh={handleRefetch}
+    <>
+      <BackgroundView>
+        <FlexedSafeAreaView edges={['top', 'left', 'right']}>
+          <ScrollView
+            refreshControl={
+              <RefreshControl
+                refreshing={isRefetching}
+                onRefresh={handleRefetch}
+              />
+            }
+          >
+            <UserAvatarHeaderConnected />
+            {ActionBar && <ActionBar />}
+            <RequestedFollowListConnected refetchRef={refetchRef} />
+            <SuggestedFollowListConnected
+              refetchRef={refetchRef}
+              onPressFollowListButton={() => setModalOpen(true)}
+              followListButtonTitle={'Find People to Follow'}
             />
-          }
-        >
-          <UserAvatarHeaderConnected />
-          {ActionBar && <ActionBar />}
-          <RequestedFollowListConnected refetchRef={refetchRef} />
-          <SuggestedFollowListConnected refetchRef={refetchRef} />
-          <HorizontalLikedContentFeedConnected />
-          {ActionTable && <ActionTable />}
-          {children}
-        </ScrollView>
-      </FlexedSafeAreaView>
-    </BackgroundView>
+
+            <HorizontalLikedContentFeedConnected />
+            {ActionTable && <ActionTable />}
+            {children}
+          </ScrollView>
+        </FlexedSafeAreaView>
+      </BackgroundView>
+      <FollowListSearchModalConnected
+        open={modalOpen}
+        setModalOpen={setModalOpen}
+      />
+    </>
   );
 };
 
