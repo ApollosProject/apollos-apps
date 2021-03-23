@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 import { ScrollView, RefreshControl } from 'react-native';
 import PropTypes from 'prop-types';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -20,12 +20,11 @@ const FlexedSafeAreaView = styled(
 const ConnectScreenConnected = (props) => {
   const { ActionBar, ActionTable, children } = props;
 
-  const [refetchFunctions, setRefetchFunctions] = useState({});
+  const refetchFunctions = useRef({});
   const [isRefetching, setIsRefetching] = useState(false);
 
-  const refetchRef = useCallback(({ refetch, id }) => {
-    const nextRefetchFunctions = { ...refetchFunctions, [id]: refetch };
-    setRefetchFunctions(nextRefetchFunctions);
+  const refetchRef = useCallback(({ id, refetch }) => {
+    refetchFunctions.current[id] = refetch;
   });
 
   const handleRefetch = async () => {
@@ -33,7 +32,9 @@ const ConnectScreenConnected = (props) => {
       setIsRefetching(true);
       try {
         await Promise.all(
-          Object.values(refetchFunctions).map((refetchFn) => refetchFn())
+          Object.values(refetchFunctions.current).map((refetchFn) =>
+            refetchFn()
+          )
         );
       } catch (e) {
         console.warn(e);
