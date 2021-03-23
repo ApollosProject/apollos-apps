@@ -68,7 +68,7 @@ export default class Person extends PostgresDataSource {
     return this.model.findOne({ where });
   };
 
-  async byPaginatedQuery({ name, after, first = 20 }) {
+  async byPaginatedQuery({ name = '', after, first = 20 }) {
     // logged out users can't search. fine by me!
     const currentPersonId = await this.getCurrentPersonId();
 
@@ -88,10 +88,10 @@ export default class Person extends PostgresDataSource {
           Sequelize.literal(
             // using op.and here is weird, but there's not another good way to use a literal as a where statement
             `lower("firstName" || ' ' || "lastName") LIKE ${this.sequelize.escape(
-              `%${name.toLowerCase()}%`
+              `%${name.toLowerCase().trim()}%`
             )}`
           ),
-          { id: { [Op.ne]: currentPersonId } },
+          { id: { [Op.ne]: currentPersonId }, apollosUser: true },
         ],
       },
       limit: length,
