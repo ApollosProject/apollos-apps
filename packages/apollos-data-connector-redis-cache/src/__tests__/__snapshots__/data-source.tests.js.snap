@@ -105,7 +105,6 @@ Cache {
     "retryAttempts": 0,
     "scriptsSet": Object {},
     "status": "connecting",
-    Symbol(kCapture): false,
   },
   "safely": [Function],
 }
