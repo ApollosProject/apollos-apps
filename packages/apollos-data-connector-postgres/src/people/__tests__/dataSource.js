@@ -124,7 +124,7 @@ describe('Apollos Postgres People DataSource', () => {
       apollosUser: true,
     });
 
-    const foundPerson = await peopleDataSource.model.create({
+    await peopleDataSource.model.create({
       originId: '3',
       originType: 'rock',
       firstName: 'Vincent',
