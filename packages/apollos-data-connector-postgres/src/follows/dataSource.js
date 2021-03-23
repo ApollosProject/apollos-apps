@@ -88,11 +88,15 @@ class Follow extends PostgresDataSource {
     const suggested = await this.getStaticSuggestedFollowsForCurrentPerson();
     if (suggested.some((s) => s.id === id)) initialState = FollowState.ACCEPTED;
 
+    // We shouldn't send push notifications to auto-accepting users
+    if (initialState !== FollowState.ACCEPTED) {
+      this.sendRequestFollowNotification({
+        followedPersonId: id,
+        requestPersonId: currentPersonId,
+      });
+    }
+
     // There was no existing request, so lets make one.
-    this.sendRequestFollowNotification({
-      followedPersonId: id,
-      requestPersonId: currentPersonId,
-    });
     return this.model.create({
       requestPersonId: currentPersonId,
       followedPersonId: id,
