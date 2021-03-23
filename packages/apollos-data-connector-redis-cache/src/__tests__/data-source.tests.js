@@ -39,14 +39,8 @@ describe('Redis Cache', () => {
   it('safely handles no redis instance', async () => {
     const cache = new Cache();
     delete cache.redis;
-
-    console._warn = console.warn;
-    console.warn = jest.fn();
     const result = await cache.get({ key: 'someKey' });
-
     expect(result).toMatchSnapshot();
-    expect(console.warn.mock.calls).toMatchSnapshot();
-    console.warn = console._warn;
   });
   it('sets data in redis', async () => {
     const cache = new Cache();
