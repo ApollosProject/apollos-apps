@@ -168,7 +168,6 @@ const Editor = ({
           onBlur={handleStopWriting}
           enablesReturnKeyAutomatically
           underline={false}
-          onSubmitEditing={onSubmit}
           returnKeyType={Platform.OS === 'ios' ? 'default' : 'none'}
           focusAnimation={
             headerShown || text.value ? new RNAnimated.Value(1) : undefined
