@@ -56,7 +56,13 @@ jobs:
       run: yarn
 
     - name: Force publish canary with latest code
-      run: yarn release:canary --yes --force-publish
+      run: |
+        git config --global user.email "apps@apollos.app"
+        git config --global user.name "Apollos Admin"
+        yarn release:canary --yes --force-publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: NPM Release
       run: |
