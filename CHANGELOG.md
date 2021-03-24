@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.6.0](https://github.com/ApollosProject/apollos-apps/compare/v2.5.0...v2.6.0) (2021-03-24)
+
+
+### Features
+
+* Onboard only seen slides ([#1827](https://github.com/ApollosProject/apollos-apps/issues/1827)) ([199edb8](https://github.com/ApollosProject/apollos-apps/commit/199edb8b3a83ab053964c640aa9d477ef3a4c991))
+
+
+### Bug Fixes
+
+* Don't search non-apollosUsers and trim whitespace ([#1820](https://github.com/ApollosProject/apollos-apps/issues/1820)) ([3599340](https://github.com/ApollosProject/apollos-apps/commit/35993404922e8d9ae3bdfe275a6f2488f1ae2c8b))
+
+
+
 ## [2.5.0](https://github.com/ApollosProject/apollos-apps/compare/v2.4.0...v2.5.0) (2021-03-22)
 
 
