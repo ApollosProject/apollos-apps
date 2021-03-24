@@ -35,7 +35,7 @@ class UserLike extends PostgresDataSource {
         where: { id },
       });
     } else {
-      comment = (await comments.findOne({ where: { id } })).dataValues;
+      comment = await comments.findOne({ where: { id }, raw: true });
     }
 
     return { ...comment, isLiked: isLike };

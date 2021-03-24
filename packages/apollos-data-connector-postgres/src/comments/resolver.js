@@ -6,10 +6,15 @@ const resolvers = {
       Comment.addComment(args),
     flagComment: (root, args, { dataSources: { UserFlag } }) =>
       UserFlag.flagComment(args),
+    likeComment: (root, args, { dataSources: { UserLike } }) =>
+      UserLike.updateLikeComment({ ...args, operation: 'Like' }),
+    unlikeComment: (root, args, { dataSources: { UserLike } }) =>
+      UserLike.updateLikeComment({ ...args, operation: 'Unlike' }),
   },
   Comment: {
     person: (root) => root.getPerson(),
     id: ({ apollosId }) => apollosId,
+    isLiked: (root) => root.likedCount > 0,
   },
   CommentListFeature: {
     id: ({ id }) => createGlobalId(id, 'CommentListFeature'),

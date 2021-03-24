@@ -1,5 +1,4 @@
 import { createGlobalId } from '@apollosproject/server-core';
-import { unset } from 'lodash';
 import { sequelize, sync } from '../../postgres/index';
 import { createModel, setupModel } from '../model';
 import {
@@ -168,8 +167,6 @@ describe('Apollos Postgres User Likes DataSource', () => {
       commentId: comment.apollosId,
       operation: 'Like',
     });
-
-    console.log(likedComment);
 
     expect(likedComment.likedCount).toBe(2);
   });
