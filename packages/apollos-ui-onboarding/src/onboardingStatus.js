@@ -9,40 +9,62 @@ export const WITH_USER_ID = gql`
   }
 `;
 
-export const onboardingComplete = async ({ userId }) => {
+const makeOnboardingKey = ({ userId }) => `@onboarding-status/${userId}`;
+
+export const onboardingComplete = async ({ userId, version }) => {
   try {
-    const jsonValue = JSON.stringify(true);
-    await AsyncStorage.setItem(`@onboarding-status/${userId}`, jsonValue);
+    const jsonValue = JSON.stringify(version);
+    const key = makeOnboardingKey({ userId });
+    await AsyncStorage.setItem(key, jsonValue);
   } catch (e) {
     // saving error
   }
 };
 
+export const safeGetOnboardingStatus = async ({ userId }) => {
+  try {
+    const key = makeOnboardingKey({ userId });
+    const jsonValue = await AsyncStorage.getItem(key);
+    return JSON.parse(jsonValue);
+  } catch (e) {
+    // error reading value
+  }
+  return null;
+};
+
 export const checkOnboardingStatusAndNavigate = async ({
   client,
   navigation,
+  latestOnboardingVersion = 1, // represents the newest onboarding version. Helps us avoid showing the user an empty onboarding.
+  navigateHome = true, // should we navigate home if we have already onboarded
 }) => {
   const { data } = await client.query({ query: WITH_USER_ID });
-  let hasOnboarded = false;
+  let onboardingVersion;
   if (data.currentUser.id) {
-    try {
-      const jsonValue = await AsyncStorage.getItem(
-        `@onboarding-status/${data.currentUser.id}`
-      );
-      hasOnboarded = jsonValue != null ? JSON.parse(jsonValue) : false;
-    } catch (e) {
-      // error reading value
+    onboardingVersion = await safeGetOnboardingStatus({
+      userId: data.currentUser.id,
+    });
+    if (!onboardingVersion) {
+      onboardingVersion = 0; // if we haven't onboarded before, default us to 0
+    } else if (
+      onboardingVersion === true ||
+      typeof onboardingVersion !== 'number'
+    ) {
+      onboardingVersion = 1; // if we have onboarded before, we've seen version 0
     }
   }
 
-  if (hasOnboarded) {
-    navigation.dispatch(
-      navigation.resetAction({
-        navigatorName: 'Tabs',
-        routeName: 'Home',
-      })
-    );
+  // If the user has onboarded before, and they have seen the current version of onboarding.
+  if (onboardingVersion && onboardingVersion >= latestOnboardingVersion) {
+    if (navigateHome) {
+      navigation.dispatch(
+        navigation.resetAction({
+          navigatorName: 'Tabs',
+          routeName: 'Home',
+        })
+      );
+    }
   } else {
-    navigation.navigate('Onboarding');
+    navigation.navigate('Onboarding', { userVersion: onboardingVersion });
   }
 };

@@ -79,6 +79,7 @@ Array [
       showsHorizontalScrollIndicator={false}
       showsPagination={true}
       showsVerticalScrollIndicator={false}
+      userVersion={0}
     >
       <View>
         <View
@@ -311,6 +312,7 @@ Array [
       showsHorizontalScrollIndicator={false}
       showsPagination={true}
       showsVerticalScrollIndicator={false}
+      userVersion={0}
     >
       <View>
         <View
