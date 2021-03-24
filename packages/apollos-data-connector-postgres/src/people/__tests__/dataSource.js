@@ -84,12 +84,14 @@ describe('Apollos Postgres People DataSource', () => {
       originType: 'rock',
       firstName: 'John',
       lastName: 'Williams',
+      apollosUser: true,
     });
     await peopleDataSource.model.create({
       originId: '2',
       originType: 'rock',
       firstName: 'Phil',
       lastName: 'Woodhall',
+      apollosUser: true,
     });
 
     const foundPerson = await peopleDataSource.model.create({
@@ -97,9 +99,71 @@ describe('Apollos Postgres People DataSource', () => {
       originType: 'rock',
       firstName: 'Vincent',
       lastName: 'Found',
+      apollosUser: true,
     });
 
     const edges = await peopleDataSource.byPaginatedQuery({ name: 'Vincent' });
+
+    expect(edges.length).toBe(1);
+    expect(edges[0].node.id).toBe(foundPerson.id);
+  });
+
+  it('should not return non-apollos users when searching', async () => {
+    await peopleDataSource.model.create({
+      originId: '1',
+      originType: 'rock',
+      firstName: 'John',
+      lastName: 'Williams',
+      apollosUser: true,
+    });
+    await peopleDataSource.model.create({
+      originId: '2',
+      originType: 'rock',
+      firstName: 'Phil',
+      lastName: 'Woodhall',
+      apollosUser: true,
+    });
+
+    await peopleDataSource.model.create({
+      originId: '3',
+      originType: 'rock',
+      firstName: 'Vincent',
+      lastName: 'Found',
+      apollosUser: false,
+    });
+
+    const edges = await peopleDataSource.byPaginatedQuery({ name: 'Vincent' });
+
+    expect(edges.length).toBe(0);
+  });
+
+  it('should trim whitespace from string when searching', async () => {
+    await peopleDataSource.model.create({
+      originId: '1',
+      originType: 'rock',
+      firstName: 'John',
+      lastName: 'Williams',
+      apollosUser: true,
+    });
+    await peopleDataSource.model.create({
+      originId: '2',
+      originType: 'rock',
+      firstName: 'Phil',
+      lastName: 'Woodhall',
+      apollosUser: true,
+    });
+
+    const foundPerson = await peopleDataSource.model.create({
+      originId: '3',
+      originType: 'rock',
+      firstName: 'Vincent',
+      lastName: 'Found',
+      apollosUser: true,
+    });
+
+    const edges = await peopleDataSource.byPaginatedQuery({
+      name: 'Vincent Found   ',
+    });
 
     expect(edges.length).toBe(1);
     expect(edges[0].node.id).toBe(foundPerson.id);

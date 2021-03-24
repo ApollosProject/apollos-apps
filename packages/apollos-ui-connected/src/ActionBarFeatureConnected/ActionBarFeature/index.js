@@ -38,7 +38,7 @@ const ActionBarFeature = ({ actions, title, onPressItem }) => (
 );
 
 ActionBarFeature.propTypes = {
-  title: PropTypes,
+  title: PropTypes.string,
   onPressItem: PropTypes.func,
   actions: PropTypes.arrayOf(
     PropTypes.shape({
