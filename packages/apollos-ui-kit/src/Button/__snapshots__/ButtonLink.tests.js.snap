@@ -1,31 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Button component should render 1`] = `
-<Text
-  onPress={[Function]}
-  style={
-    Object {
-      "color": "#17B582",
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  Boom
-</Text>
-`;
-
-exports[`The Button component should render inherit typographic styles 1`] = `
-<Text
-  bold={false}
-  italic={false}
-  style={
-    Object {
-      "color": "#303030",
-      "fontFamily": "InterUI-Regular",
-      "fontSize": 16,
-      "lineHeight": 26,
-    }
-  }
->
+  />,
   <Text
     onPress={[Function]}
     style={
@@ -35,6 +28,51 @@ exports[`The Button component should render inherit typographic styles 1`] = `
     }
   >
     Boom
-  </Text>
-</Text>
+  </Text>,
+]
+`;
+
+exports[`The Button component should render inherit typographic styles 1`] = `
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <Text
+    bold={false}
+    italic={false}
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "InterUI-Regular",
+        "fontSize": 16,
+        "lineHeight": 26,
+      }
+    }
+  >
+    <Text
+      onPress={[Function]}
+      style={
+        Object {
+          "color": "#17B582",
+        }
+      }
+    >
+      Boom
+    </Text>
+  </Text>,
+]
 `;

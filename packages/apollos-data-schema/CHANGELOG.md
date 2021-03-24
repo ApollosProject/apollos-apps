@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.0](https://github.com/apollosproject/apollos-apps/compare/v2.4.0...v2.5.0) (2021-03-22)
+
+
+### Features
+
+* People Search ([#1815](https://github.com/apollosproject/apollos-apps/issues/1815)) ([16e3556](https://github.com/apollosproject/apollos-apps/commit/16e35562198d9b0049e067075c53f9f9aab0d25f))
+
+
+
 ## [2.4.0](https://github.com/apollosproject/apollos-apps/compare/v2.3.1...v2.4.0) (2021-03-18)
 
 **Note:** Version bump only for package @apollosproject/data-schema

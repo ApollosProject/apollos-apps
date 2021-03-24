@@ -1,322 +1,379 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the OverlayBackgroundImage component should render 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Object {
-      "aspectRatio": 1,
-      "width": "100%",
-    }
-  }
->
+Array [
   <View
-    containerWidth={750}
-    rounded={true}
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    onLayout={[Function]}
     style={
       Object {
-        "borderRadius": 3000,
-        "bottom": 0,
-        "left": "-200%",
-        "overflow": "hidden",
-        "position": "absolute",
-        "right": "-200%",
-        "top": "-400%",
+        "aspectRatio": 1,
+        "width": "100%",
       }
     }
   >
     <View
+      containerWidth={750}
+      rounded={true}
       style={
         Object {
+          "borderRadius": 3000,
           "bottom": 0,
-          "height": "20%",
-          "left": "40%",
+          "left": "-200%",
           "overflow": "hidden",
           "position": "absolute",
-          "right": "40%",
+          "right": "-200%",
+          "top": "-400%",
         }
       }
     >
       <View
         style={
           Object {
-            "backgroundColor": "red",
             "bottom": 0,
-            "left": 0,
+            "height": "20%",
+            "left": "40%",
             "overflow": "hidden",
             "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "width": "100%",
+            "right": "40%",
           }
         }
       >
-        <Image
-          fadeDuration={250}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/600/600",
-              },
-            ]
-          }
+        <View
           style={
             Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "red",
               "bottom": 0,
               "left": 0,
+              "overflow": "hidden",
               "position": "absolute",
-              "resizeMode": "cover",
               "right": 0,
               "top": 0,
               "width": "100%",
             }
           }
-        />
-        <BVLinearGradient
-          colors={
-            Array [
-              1711302509,
-              4278216557,
-            ]
-          }
-          endPoint={
-            Object {
-              "x": 0,
-              "y": 1,
+        >
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/600/600",
+                },
+              ]
             }
-          }
-          locations={
-            Array [
-              0,
-              0.8,
-            ]
-          }
-          overlayColor="#00676D"
-          overlayType="featured"
-          startPoint={
-            Object {
-              "x": 0,
-              "y": 0,
+            style={
+              Object {
+                "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "resizeMode": "cover",
+                "right": 0,
+                "top": 0,
+                "width": "100%",
+              }
             }
-          }
-          style={
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
+          />
+          <BVLinearGradient
+            colors={
+              Array [
+                1711302509,
+                4278216557,
+              ]
             }
-          }
-        />
+            endPoint={
+              Object {
+                "x": 0,
+                "y": 1,
+              }
+            }
+            locations={
+              Array [
+                0,
+                0.8,
+              ]
+            }
+            overlayColor="#00676D"
+            overlayType="featured"
+            startPoint={
+              Object {
+                "x": 0,
+                "y": 0,
+              }
+            }
+            style={
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+        </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`the OverlayBackgroundImage component should render with custom overlay color 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Object {
-      "aspectRatio": 1,
-      "width": "100%",
-    }
-  }
->
+Array [
   <View
-    containerWidth={750}
-    rounded={true}
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    onLayout={[Function]}
     style={
       Object {
-        "borderRadius": 3000,
-        "bottom": 0,
-        "left": "-200%",
-        "overflow": "hidden",
-        "position": "absolute",
-        "right": "-200%",
-        "top": "-400%",
+        "aspectRatio": 1,
+        "width": "100%",
       }
     }
   >
     <View
+      containerWidth={750}
+      rounded={true}
       style={
         Object {
+          "borderRadius": 3000,
           "bottom": 0,
-          "height": "20%",
-          "left": "40%",
+          "left": "-200%",
           "overflow": "hidden",
           "position": "absolute",
-          "right": "40%",
+          "right": "-200%",
+          "top": "-400%",
         }
       }
     >
       <View
         style={
           Object {
-            "backgroundColor": "red",
             "bottom": 0,
-            "left": 0,
+            "height": "20%",
+            "left": "40%",
             "overflow": "hidden",
             "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "width": "100%",
+            "right": "40%",
           }
         }
       >
-        <Image
-          fadeDuration={250}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/600/600",
-              },
-            ]
-          }
+        <View
           style={
             Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "red",
               "bottom": 0,
               "left": 0,
+              "overflow": "hidden",
               "position": "absolute",
-              "resizeMode": "cover",
               "right": 0,
               "top": 0,
               "width": "100%",
             }
           }
-        />
-        <BVLinearGradient
-          colors={
-            Array [
-              2164195328,
-              2164195328,
-            ]
-          }
-          endPoint={
-            Object {
-              "x": 0,
-              "y": 1,
+        >
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/600/600",
+                },
+              ]
             }
-          }
-          locations={
-            Array [
-              0,
-              1,
-            ]
-          }
-          overlayColor="red"
-          overlayType="medium"
-          startPoint={
-            Object {
-              "x": 0,
-              "y": 0,
+            style={
+              Object {
+                "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "resizeMode": "cover",
+                "right": 0,
+                "top": 0,
+                "width": "100%",
+              }
             }
-          }
-          style={
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
+          />
+          <BVLinearGradient
+            colors={
+              Array [
+                2164195328,
+                2164195328,
+              ]
             }
-          }
-        />
+            endPoint={
+              Object {
+                "x": 0,
+                "y": 1,
+              }
+            }
+            locations={
+              Array [
+                0,
+                1,
+              ]
+            }
+            overlayColor="red"
+            overlayType="medium"
+            startPoint={
+              Object {
+                "x": 0,
+                "y": 0,
+              }
+            }
+            style={
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+        </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`the OverlayBackgroundImage component should render with custom size 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Object {
-      "aspectRatio": undefined,
-      "height": "75%",
-      "width": "100%",
-    }
-  }
->
+Array [
   <View
-    containerWidth={750}
-    rounded={true}
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    onLayout={[Function]}
     style={
       Object {
-        "borderRadius": 3000,
-        "bottom": 0,
-        "left": "-200%",
-        "overflow": "hidden",
-        "position": "absolute",
-        "right": "-200%",
-        "top": "-400%",
+        "aspectRatio": undefined,
+        "height": "75%",
+        "width": "100%",
       }
     }
   >
     <View
+      containerWidth={750}
+      rounded={true}
       style={
         Object {
+          "borderRadius": 3000,
           "bottom": 0,
-          "height": "20%",
-          "left": "40%",
+          "left": "-200%",
           "overflow": "hidden",
           "position": "absolute",
-          "right": "40%",
+          "right": "-200%",
+          "top": "-400%",
         }
       }
     >
       <View
         style={
           Object {
-            "backgroundColor": "red",
             "bottom": 0,
-            "left": 0,
+            "height": "20%",
+            "left": "40%",
             "overflow": "hidden",
             "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "width": "100%",
+            "right": "40%",
           }
         }
       >
-        <Image
-          fadeDuration={250}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/600/600",
-              },
-            ]
-          }
+        <View
           style={
             Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "red",
               "bottom": 0,
               "left": 0,
+              "overflow": "hidden",
               "position": "absolute",
-              "resizeMode": "cover",
               "right": 0,
               "top": 0,
               "width": "100%",
             }
           }
-        />
+        >
+          <Image
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/600/600",
+                },
+              ]
+            }
+            style={
+              Object {
+                "aspectRatio": 1,
+                "backgroundColor": "#A5A5A5",
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "resizeMode": "cover",
+                "right": 0,
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          />
+        </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;

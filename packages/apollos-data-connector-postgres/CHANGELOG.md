@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.0](https://github.com/apollosproject/apollos-apps/compare/v2.4.0...v2.5.0) (2021-03-22)
+
+
+### Features
+
+* add bottom sheet to AddCommentForm ([#1807](https://github.com/apollosproject/apollos-apps/issues/1807)) ([4c09ff0](https://github.com/apollosproject/apollos-apps/commit/4c09ff0382c60aa011080407de5a6443d5b35db5))
+* Auto follow ([#1810](https://github.com/apollosproject/apollos-apps/issues/1810)) ([a96bfec](https://github.com/apollosproject/apollos-apps/commit/a96bfec991ba1f4f444183d40b525b89063a31e9))
+* People Search ([#1815](https://github.com/apollosproject/apollos-apps/issues/1815)) ([16e3556](https://github.com/apollosproject/apollos-apps/commit/16e35562198d9b0049e067075c53f9f9aab0d25f))
+* Push notifications on follow request ([#1806](https://github.com/apollosproject/apollos-apps/issues/1806)) ([19ba81b](https://github.com/apollosproject/apollos-apps/commit/19ba81b0452c19275918fbdc251425fa981a735e))
+
+
+
 ## [2.4.0](https://github.com/apollosproject/apollos-apps/compare/v2.3.1...v2.4.0) (2021-03-18)
 
 
