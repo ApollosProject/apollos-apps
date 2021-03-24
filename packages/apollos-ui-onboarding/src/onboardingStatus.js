@@ -21,7 +21,7 @@ export const onboardingComplete = async ({ userId, version }) => {
   }
 };
 
-const safeGetOnboardingStatus = async ({ userId }) => {
+export const safeGetOnboardingStatus = async ({ userId }) => {
   try {
     const key = makeOnboardingKey({ userId });
     const jsonValue = await AsyncStorage.getItem(key);
@@ -35,13 +35,20 @@ const safeGetOnboardingStatus = async ({ userId }) => {
 export const checkOnboardingStatusAndNavigate = async ({
   client,
   navigation,
-  latestOnboardingVersion = 1,
+  latestOnboardingVersion = 1, // represents the newest onboarding version. Helps us avoid showing the user an empty onboarding.
 }) => {
   const { data } = await client.query({ query: WITH_USER_ID });
   let onboardingVersion;
   if (data.currentUser.id) {
-    onboardingVersion = safeGetOnboardingStatus();
-    if (onboardingVersion === true) {
+    onboardingVersion = await safeGetOnboardingStatus({
+      userId: data.currentUser.id,
+    });
+    if (!onboardingVersion) {
+      onboardingVersion = 0; // if we haven't onboarded before, default us to 0
+    } else if (
+      onboardingVersion === true ||
+      typeof onboardingVersion !== 'number'
+    ) {
       onboardingVersion = 1; // if we have onboarded before, we've seen version 0
     }
   }
@@ -57,15 +64,4 @@ export const checkOnboardingStatusAndNavigate = async ({
   } else {
     navigation.navigate('Onboarding', { userVersion: onboardingVersion });
   }
-};
-
-export const hideIfSeen = (Component) => ({
-  version = 1,
-  userVersion = 0,
-  ...props
-}) => {
-  if (version > userVersion) {
-    return <Component {...props} />;
-  }
-  return null;
 };
