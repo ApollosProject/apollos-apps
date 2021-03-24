@@ -13,32 +13,32 @@ class UserLike extends PostgresDataSource {
 
     const currentPersonId = await Person.getCurrentPersonId();
     const isLike = operation === 'Like';
-    const args = { personId: currentPersonId, commentId };
+    const args = { personId: currentPersonId, nodeId: commentId };
     const { id } = parseGlobalId(commentId);
 
-    let likedCountChange;
+    let likeCreated = false;
+    let likeDeleted = false;
     if (isLike) {
-      const likeCreated = this.likeNode(args);
-      likedCountChange = likeCreated ? 1 : 0;
+      likeCreated = await this.likeNode(args);
     } else {
-      const likeDeleted = this.unlikeNode(args);
-      likedCountChange = likeDeleted ? -1 : 0;
+      likeDeleted = await this.unlikeNode(args);
     }
 
-    // Based on how that went, update the total likes count
-    let updateCount;
-    if (likedCountChange > 0) {
-      updateCount = comments.increment;
-    } else if (likedCountChange < 0) {
-      updateCount = comments.decrement;
+    // Increment only if a new like was created, decrement only if an existing one was deleted
+    let comment;
+    if (likeCreated) {
+      [[[comment]]] = await comments.increment('likedCount', {
+        where: { id },
+      });
+    } else if (likeDeleted) {
+      [[[comment]]] = await comments.decrement('likedCount', {
+        where: { id },
+      });
+    } else {
+      comment = (await comments.findOne({ where: { id } })).dataValues;
     }
 
-    const comment = await updateCount('likedCount', {
-      where: { id },
-      by: Math.abs(likedCountChange),
-    });
-
-    return comment;
+    return { ...comment, isLiked: isLike };
   }
 
   /**

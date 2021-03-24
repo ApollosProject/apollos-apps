@@ -58,7 +58,7 @@ describe('Apollos Postgres User Likes DataSource', () => {
     await sequelize.drop({});
   });
 
-  it.only('should support liking comment', async () => {
+  it('should support liking comment', async () => {
     const userLikeDataSource = new UserLike();
     userLikeDataSource.initialize({ context });
 
@@ -70,7 +70,7 @@ describe('Apollos Postgres User Likes DataSource', () => {
     expect(likedComment).toBeTruthy();
   });
 
-  it.only('should return false if comment already liked', async () => {
+  it('should return false if comment already liked', async () => {
     const userLikeDataSource = new UserLike();
     userLikeDataSource.initialize({ context });
 
@@ -87,7 +87,7 @@ describe('Apollos Postgres User Likes DataSource', () => {
     expect(likedComment).toBeFalsy();
   });
 
-  it.only('should support unliking comment', async () => {
+  it('should support unliking comment', async () => {
     const userLikeDataSource = new UserLike();
     userLikeDataSource.initialize({ context });
 
@@ -105,7 +105,7 @@ describe('Apollos Postgres User Likes DataSource', () => {
     expect(unlikedComment).toBeTruthy();
   });
 
-  it.only('should return false if comment not liked', async () => {
+  it('should return false if comment not liked', async () => {
     const userLikeDataSource = new UserLike();
     userLikeDataSource.initialize({ context });
 
@@ -117,7 +117,7 @@ describe('Apollos Postgres User Likes DataSource', () => {
     expect(unlikedComment).toBeFalsy();
   });
 
-  it.only('should like comment', async () => {
+  it('should like comment', async () => {
     const userLikeDataSource = new UserLike();
     userLikeDataSource.initialize({ context });
 
@@ -129,78 +129,80 @@ describe('Apollos Postgres User Likes DataSource', () => {
     expect(likedComment.isLiked).toBeTruthy();
   });
 
-  // should unlike comment
-
-  // should only increase likedCount when a new like is added
-
-  // should only decrease likedCount when a like is removed
-
-  // From copy paste --- TODO: DELETE
-
-  it('should increment flag count on comment', async () => {
+  it('should unlike comment', async () => {
     const userLikeDataSource = new UserLike();
     userLikeDataSource.initialize({ context });
 
-    await userLikeDataSource.likeNode({
+    await userLikeDataSource.updateLikeComment({
       commentId: comment.apollosId,
+      operation: 'Like',
     });
 
-    const updatedComments = await commentDataSource.getForNode({
-      nodeId: 123,
-      nodeType: 'UniversalContentItem',
+    const likedComment = await userLikeDataSource.updateLikeComment({
+      commentId: comment.apollosId,
+      operation: 'Unlike',
     });
 
-    expect(updatedComments[0].flagCount).toBe(1);
+    expect(likedComment.isLiked).toBeFalsy();
   });
 
-  it('should only increment count for new flags', async () => {
+  it('should only increase likedCount when a new like is added', async () => {
     const userLikeDataSource = new UserLike();
     userLikeDataSource.initialize({ context });
 
-    // Try to have the same user flag a comment twice
-    await userLikeDataSource.likeNode({
+    await userLikeDataSource.updateLikeComment({
       commentId: comment.apollosId,
-    });
-    await userLikeDataSource.likeNode({
-      commentId: comment.apollosId,
+      operation: 'Like',
     });
 
-    const updatedComments = await commentDataSource.getForNode({
-      nodeId: 123,
-      nodeType: 'UniversalContentItem',
-    });
-
-    // Should only record one flag
-    expect(updatedComments[0].flagCount).toBe(1);
-
-    // Have another user flag it though...
+    // Like as a different person
     currentPerson = person2;
-    await userLikeDataSource.likeNode({
+    await userLikeDataSource.updateLikeComment({
       commentId: comment.apollosId,
+      operation: 'Like',
     });
 
-    // And now the count is incremented
-    const updatedAgainComments = await commentDataSource.getForNode({
-      nodeId: 123,
-      nodeType: 'UniversalContentItem',
+    // Try to like again as the original person
+    currentPerson = person1;
+    const likedComment = await userLikeDataSource.updateLikeComment({
+      commentId: comment.apollosId,
+      operation: 'Like',
     });
 
-    expect(updatedAgainComments[0].flagCount).toBe(2);
+    console.log(likedComment);
+
+    expect(likedComment.likedCount).toBe(2);
   });
 
-  it('should return a user for a flag', async () => {
+  it('should only decrease likedCount when a like is removed', async () => {
     const userLikeDataSource = new UserLike();
     userLikeDataSource.initialize({ context });
 
-    const likedComment = await userLikeDataSource.likeNode({
+    // Add like as person1
+    await userLikeDataSource.updateLikeComment({
       commentId: comment.apollosId,
+      operation: 'Like',
     });
 
-    const flag = await sequelize.models.user_flags.findOne({
-      nodeId: likedComment.apollosId,
+    // Add like as person2
+    currentPerson = person2;
+    await userLikeDataSource.updateLikeComment({
+      commentId: comment.apollosId,
+      operation: 'Like',
     });
 
-    const flagPerson = await sequelize.models.people.findByPk(flag.personId);
-    expect(flagPerson.id).toEqual(currentPerson.id);
+    // Unlike with person 2
+    await userLikeDataSource.updateLikeComment({
+      commentId: comment.apollosId,
+      operation: 'Unlike',
+    });
+
+    // Unlike with person 2 again
+    const unlikedComment = await userLikeDataSource.updateLikeComment({
+      commentId: comment.apollosId,
+      operation: 'Unlike',
+    });
+
+    expect(unlikedComment.likedCount).toBe(1);
   });
 });
