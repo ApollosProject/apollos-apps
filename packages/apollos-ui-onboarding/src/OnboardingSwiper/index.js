@@ -47,13 +47,13 @@ class OnboardingSwiper extends Component {
     userVersion: 0,
   };
 
+  swiper = null;
+
   constructor(props) {
     super(props);
 
     this.state = { index: 0 };
   }
-
-  swiper = null;
 
   // Creates ref to Swiper to be passed as a prop to children.
   setSwiperRef = (r) => {
