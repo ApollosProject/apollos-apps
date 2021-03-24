@@ -11,6 +11,6 @@ async function down({ context: queryInterface }) {
   await queryInterface.removeColumn('comments', 'likedCount');
 }
 
-const name = '002-create-comments';
+const name = '002-add-liked-count';
 
 module.exports = { up, down, name, order: 3 };
