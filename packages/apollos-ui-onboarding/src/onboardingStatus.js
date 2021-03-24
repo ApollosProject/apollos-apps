@@ -36,6 +36,7 @@ export const checkOnboardingStatusAndNavigate = async ({
   client,
   navigation,
   latestOnboardingVersion = 1, // represents the newest onboarding version. Helps us avoid showing the user an empty onboarding.
+  navigateHome = true, // should we navigate home if we have already onboarded
 }) => {
   const { data } = await client.query({ query: WITH_USER_ID });
   let onboardingVersion;
@@ -55,12 +56,14 @@ export const checkOnboardingStatusAndNavigate = async ({
 
   // If the user has onboarded before, and they have seen the current version of onboarding.
   if (onboardingVersion && onboardingVersion >= latestOnboardingVersion) {
-    navigation.dispatch(
-      navigation.resetAction({
-        navigatorName: 'Tabs',
-        routeName: 'Home',
-      })
-    );
+    if (navigateHome) {
+      navigation.dispatch(
+        navigation.resetAction({
+          navigatorName: 'Tabs',
+          routeName: 'Home',
+        })
+      );
+    }
   } else {
     navigation.navigate('Onboarding', { userVersion: onboardingVersion });
   }
