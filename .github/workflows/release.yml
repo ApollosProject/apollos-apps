@@ -55,6 +55,9 @@ jobs:
     - name: Install Dependencies
       run: yarn
 
+    - name: Force publish canary with latest code
+      run: yarn release:canary --yes --force-publish
+
     - name: NPM Release
       run: |
         git config --global user.email "apps@apollos.app"
