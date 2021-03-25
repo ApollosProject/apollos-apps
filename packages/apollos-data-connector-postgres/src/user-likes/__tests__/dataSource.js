@@ -120,12 +120,16 @@ describe('Apollos Postgres User Likes DataSource', () => {
     const userLikeDataSource = new UserLike();
     userLikeDataSource.initialize({ context });
 
-    const likedComment = await userLikeDataSource.updateLikeComment({
+    await userLikeDataSource.updateLikeComment({
       commentId: comment.apollosId,
       operation: 'Like',
     });
 
-    expect(likedComment.isLiked).toBeTruthy();
+    const isLiked = await userLikeDataSource.userLikedNode({
+      nodeId: comment.apollosId,
+    });
+
+    expect(isLiked).toBeTruthy();
   });
 
   it('should unlike comment', async () => {
@@ -137,12 +141,16 @@ describe('Apollos Postgres User Likes DataSource', () => {
       operation: 'Like',
     });
 
-    const likedComment = await userLikeDataSource.updateLikeComment({
+    await userLikeDataSource.updateLikeComment({
       commentId: comment.apollosId,
       operation: 'Unlike',
     });
 
-    expect(likedComment.isLiked).toBeFalsy();
+    const isLiked = await userLikeDataSource.userLikedNode({
+      nodeId: comment.apollosId,
+    });
+
+    expect(isLiked).toBeFalsy();
   });
 
   it('should only increase likedCount when a new like is added', async () => {
