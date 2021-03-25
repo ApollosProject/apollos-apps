@@ -38,6 +38,7 @@
       "<rootDir>/src/"
     ],
     "setupFiles": [
+      "../apollos-ui-test-utils/src/mocks/reanimated.js",
       "../../node_modules/react-native-gesture-handler/jestSetup.js",
       "./jest.setup.js"
     ]
@@ -72,8 +73,8 @@
     "@apollosproject/ui-test-utils": "^2.6.0",
     "@react-native-community/async-storage": "^1.5.1",
     "@react-navigation/compat": "^5.1.28",
-    "@react-navigation/native": "^5.6.1",
-    "@react-navigation/stack": "^5.6.2",
+    "@react-navigation/native": "^5.9.3",
+    "@react-navigation/stack": "^5.14.3",
     "jest": "^25.1.0",
     "prop-types": "15.6.1",
     "react": "16.13.1",

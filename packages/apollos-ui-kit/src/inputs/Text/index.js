@@ -49,8 +49,8 @@ const propsForInputType = {
 };
 
 const enhance = compose(
-  withTheme(),
   pure,
+  withTheme(),
   withFocusAnimation,
   withProps(({ type, ...props }) => ({
     ...get(propsForInputType, type, {}),
@@ -75,11 +75,12 @@ const Text = enhance(
     focusAnimation: focusAnimationInput, // from withFocusAnimation
     underline,
     style,
+    component,
+    TextInputComponent = TextInput,
     ...textInputProps
   }) => {
     const focusAnimation =
       value || !label ? new Animated.Value(1) : focusAnimationInput;
-
     const animatedStyle = { opacity: focusAnimation };
 
     return (
@@ -89,7 +90,7 @@ const Text = enhance(
             <InputAddon style={inputAddonStyle}>{prefix}</InputAddon>
             <TextInputWrapper>
               <Animated.View style={animatedStyle}>
-                <TextInput
+                <TextInputComponent
                   style={[textStyle({ theme }), style]}
                   ref={inputRef}
                   placeholderTextColor={Color(theme.colors.text.primary)
@@ -148,6 +149,7 @@ Text.propTypes = {
   underlineColorAndroid: PropTypes.string,
   inputRef: PropTypes.func,
   underline: PropTypes.bool,
+  TextInputComponent: PropTypes.any, // eslint-disable-line
 };
 
 export default Text;
