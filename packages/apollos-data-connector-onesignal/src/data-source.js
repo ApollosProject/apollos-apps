@@ -22,6 +22,7 @@ export default class OneSignal extends RESTDataSource {
     content = '',
     heading,
     subtitle,
+    ...args
   }) {
     return this.post('notifications', {
       app_id: ONE_SIGNAL.APP_ID,
@@ -29,13 +30,13 @@ export default class OneSignal extends RESTDataSource {
       contents: { en: content },
       headings: { en: heading },
       subtitle: { en: subtitle },
+      ...args,
     });
   }
 
   async updatePushSettings({ enabled, pushProviderUserId }) {
     const { Auth, PersonalDevice, Person } = this.context.dataSources;
-    const currentUser = await Auth.getCurrentPerson();
-    const currentPerson = await Person.getFromId(currentUser.personId);
+    const { id, primaryAliasId } = await Auth.getCurrentPerson();
 
     if (enabled != null && pushProviderUserId != null)
       await PersonalDevice.updateNotificationsEnabled(
@@ -46,9 +47,9 @@ export default class OneSignal extends RESTDataSource {
     if (pushProviderUserId != null) {
       await this.updateExternalUserId({
         playerId: pushProviderUserId,
-        userId: currentUser.primaryAliasId,
+        userId: primaryAliasId,
       });
     }
-    return currentPerson;
+    return Person.getFromId(id, null, { originType: 'rock' });
   }
 }

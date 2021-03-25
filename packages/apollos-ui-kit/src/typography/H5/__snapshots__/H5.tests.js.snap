@@ -1,97 +1,211 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the H5 component should accept additional props 1`] = `
-<Text
-  accessible={false}
-  style={
-    Object {
-      "color": "#303030",
-      "fontFamily": "InterUI-Medium",
-      "fontSize": 14,
-      "lineHeight": 21,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  "Faith does not eliminate questions. But faith knows where to take them." ― Elisabeth Elliot
-</Text>
+  />,
+  <Text
+    accessible={false}
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "InterUI-Medium",
+        "fontSize": 14,
+        "lineHeight": 21,
+      }
+    }
+  >
+    "Faith does not eliminate questions. But faith knows where to take them." ― Elisabeth Elliot
+  </Text>,
+]
 `;
 
 exports[`the H5 component should accept and render passed in styles 1`] = `
-<Text
-  style={
-    Object {
-      "color": "salmon",
-      "fontFamily": "InterUI-Medium",
-      "fontSize": 14,
-      "lineHeight": 21,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  Salmon text
-</Text>
+  />,
+  <Text
+    style={
+      Object {
+        "color": "salmon",
+        "fontFamily": "InterUI-Medium",
+        "fontSize": 14,
+        "lineHeight": 21,
+      }
+    }
+  >
+    Salmon text
+  </Text>,
+]
 `;
 
 exports[`the H5 component should render a loading state 1`] = `
-<View
-  style={
-    Object {
-      "alignSelf": "stretch",
-      "backgroundColor": "#A5A5A5",
-      "borderRadius": 16,
-      "height": 14,
-      "marginVertical": 3.5,
-      "width": "60%",
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-/>
+  />,
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 16,
+        "height": 14,
+        "marginVertical": 3.5,
+        "width": "60%",
+      }
+    }
+  />,
+]
 `;
 
 exports[`the H5 component should render a loading state with correct positioning (margins) 1`] = `
-<View
-  style={
-    Object {
-      "alignSelf": "stretch",
-      "backgroundColor": "#A5A5A5",
-      "borderRadius": 16,
-      "height": 14,
-      "marginBottom": 10.5,
-      "marginTop": 13.86,
-      "marginVertical": 3.5,
-      "width": "60%",
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-/>
+  />,
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 16,
+        "height": 14,
+        "marginBottom": 10.5,
+        "marginTop": 13.86,
+        "marginVertical": 3.5,
+        "width": "60%",
+      }
+    }
+  />,
+]
 `;
 
 exports[`the H5 component should render correctly 1`] = `
-<Text
-  style={
-    Object {
-      "color": "#303030",
-      "fontFamily": "InterUI-Medium",
-      "fontSize": 14,
-      "lineHeight": 21,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  Default H5 text
-</Text>
+  />,
+  <Text
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "InterUI-Medium",
+        "fontSize": 14,
+        "lineHeight": 21,
+      }
+    }
+  >
+    Default H5 text
+  </Text>,
+]
 `;
 
 exports[`the H5 component should render with correct padding 1`] = `
-<Text
-  padded={true}
-  style={
-    Object {
-      "color": "#303030",
-      "fontFamily": "InterUI-Medium",
-      "fontSize": 14,
-      "lineHeight": 21,
-      "paddingBottom": 10.5,
-      "paddingTop": 13.86,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  Padded H5 text
-</Text>
+  />,
+  <Text
+    padded={true}
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "InterUI-Medium",
+        "fontSize": 14,
+        "lineHeight": 21,
+        "paddingBottom": 10.5,
+        "paddingTop": 13.86,
+      }
+    }
+  >
+    Padded H5 text
+  </Text>,
+]
 `;

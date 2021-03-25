@@ -74,7 +74,10 @@ class CommentDataSource extends PostgresDataSource {
           required: false, // emulates a left outer join
         },
       ],
-      order: [[follows, 'id', 'desc', 'nulls last']], // and sort null (no relationship) values to the bottom
+      order: [
+        [follows, 'id', 'desc', 'nulls last'], // and sort null (no relationship) values to the bottom
+        ['likedCount', 'desc'],
+      ],
     });
   }
 }

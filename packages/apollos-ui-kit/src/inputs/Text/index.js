@@ -49,8 +49,8 @@ const propsForInputType = {
 };
 
 const enhance = compose(
-  withTheme(),
   pure,
+  withTheme(),
   withFocusAnimation,
   withProps(({ type, ...props }) => ({
     ...get(propsForInputType, type, {}),
@@ -66,28 +66,32 @@ const Text = enhance(
     suffix,
     value,
     wrapperStyle,
+    floatingLabelStyle,
+    inputAddonStyle,
     error,
     disabled = false,
     theme,
     inputRef,
     focusAnimation: focusAnimationInput, // from withFocusAnimation
     underline,
+    style,
+    component,
+    TextInputComponent = TextInput,
     ...textInputProps
   }) => {
     const focusAnimation =
       value || !label ? new Animated.Value(1) : focusAnimationInput;
-
     const animatedStyle = { opacity: focusAnimation };
 
     return (
       <InputWrapper style={wrapperStyle} disabled={disabled}>
         <View>
           <AddonRow>
-            <InputAddon>{prefix}</InputAddon>
+            <InputAddon style={inputAddonStyle}>{prefix}</InputAddon>
             <TextInputWrapper>
               <Animated.View style={animatedStyle}>
-                <TextInput
-                  style={textStyle({ theme })}
+                <TextInputComponent
+                  style={[textStyle({ theme }), style]}
                   ref={inputRef}
                   placeholderTextColor={Color(theme.colors.text.primary)
                     .fade(theme.alpha.low)
@@ -97,7 +101,11 @@ const Text = enhance(
                   value={value}
                 />
               </Animated.View>
-              <FloatingLabel color={labelColor} animation={focusAnimation}>
+              <FloatingLabel
+                style={floatingLabelStyle}
+                color={labelColor}
+                animation={focusAnimation}
+              >
                 {label}
               </FloatingLabel>
             </TextInputWrapper>
@@ -133,11 +141,15 @@ Text.propTypes = {
   labelColor: PropTypes.string,
   value: PropTypes.any, // eslint-disable-line
   wrapperStyle: PropTypes.any, // eslint-disable-line
+  inputAddonStyle: PropTypes.any, // eslint-disable-line
+  floatingLabelStyle: PropTypes.any, // eslint-disable-line
+  style: PropTypes.any, // eslint-disable-line
   returnKeyType: PropTypes.string,
   error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   underlineColorAndroid: PropTypes.string,
   inputRef: PropTypes.func,
   underline: PropTypes.bool,
+  TextInputComponent: PropTypes.any, // eslint-disable-line
 };
 
 export default Text;

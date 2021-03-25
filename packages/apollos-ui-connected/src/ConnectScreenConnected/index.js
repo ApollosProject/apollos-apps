@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 import { ScrollView, RefreshControl } from 'react-native';
 import PropTypes from 'prop-types';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -10,6 +10,7 @@ import {
   RequestedFollowListConnected,
 } from '../FollowListConnected';
 import UserAvatarHeaderConnected from '../UserAvatarHeaderConnected';
+import FollowListSearchModalConnected from '../FollowListSearchModalConnected';
 
 const FlexedSafeAreaView = styled(
   { flex: 1 },
@@ -19,12 +20,11 @@ const FlexedSafeAreaView = styled(
 const ConnectScreenConnected = (props) => {
   const { ActionBar, ActionTable, children } = props;
 
-  const [refetchFunctions, setRefetchFunctions] = useState({});
+  const refetchFunctions = useRef({});
   const [isRefetching, setIsRefetching] = useState(false);
 
-  const refetchRef = useCallback(({ refetch, id }) => {
-    const nextRefetchFunctions = { ...refetchFunctions, [id]: refetch };
-    setRefetchFunctions(nextRefetchFunctions);
+  const refetchRef = useCallback(({ id, refetch }) => {
+    refetchFunctions.current[id] = refetch;
   });
 
   const handleRefetch = async () => {
@@ -32,7 +32,9 @@ const ConnectScreenConnected = (props) => {
       setIsRefetching(true);
       try {
         await Promise.all(
-          Object.values(refetchFunctions).map((refetchFn) => refetchFn())
+          Object.values(refetchFunctions.current).map((refetchFn) =>
+            refetchFn()
+          )
         );
       } catch (e) {
         console.warn(e);
@@ -41,27 +43,40 @@ const ConnectScreenConnected = (props) => {
     }
   };
 
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
-    <BackgroundView>
-      <FlexedSafeAreaView edges={['top', 'left', 'right']}>
-        <ScrollView
-          refreshControl={
-            <RefreshControl
-              refreshing={isRefetching}
-              onRefresh={handleRefetch}
+    <>
+      <BackgroundView>
+        <FlexedSafeAreaView edges={['top', 'left', 'right']}>
+          <ScrollView
+            refreshControl={
+              <RefreshControl
+                refreshing={isRefetching}
+                onRefresh={handleRefetch}
+              />
+            }
+          >
+            <UserAvatarHeaderConnected />
+            {ActionBar && <ActionBar />}
+            <RequestedFollowListConnected refetchRef={refetchRef} />
+            <SuggestedFollowListConnected
+              refetchRef={refetchRef}
+              onPressFollowListButton={() => setModalOpen(true)}
+              followListButtonTitle={'Find People to Follow'}
             />
-          }
-        >
-          <UserAvatarHeaderConnected />
-          {ActionBar && <ActionBar />}
-          <RequestedFollowListConnected refetchRef={refetchRef} />
-          <SuggestedFollowListConnected refetchRef={refetchRef} />
-          <HorizontalLikedContentFeedConnected />
-          {ActionTable && <ActionTable />}
-          {children}
-        </ScrollView>
-      </FlexedSafeAreaView>
-    </BackgroundView>
+
+            <HorizontalLikedContentFeedConnected />
+            {ActionTable && <ActionTable />}
+            {children}
+          </ScrollView>
+        </FlexedSafeAreaView>
+      </BackgroundView>
+      <FollowListSearchModalConnected
+        open={modalOpen}
+        setModalOpen={setModalOpen}
+      />
+    </>
   );
 };
 

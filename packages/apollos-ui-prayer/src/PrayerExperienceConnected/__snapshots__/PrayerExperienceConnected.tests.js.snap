@@ -3,6 +3,23 @@
 exports[`The PrayerExperienceConnected component closes onboarding when button is pressed 1`] = `
 Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
     style={
       Object {
         "bottom": 0,
@@ -1654,6 +1671,23 @@ Array [
 exports[`The PrayerExperienceConnected component hides onboarding 1`] = `
 Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
     style={
       Object {
         "bottom": 0,
@@ -2950,6 +2984,23 @@ Array [
 
 exports[`The PrayerExperienceConnected component prays 1`] = `
 Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
   <View
     style={
       Object {
@@ -4601,6 +4652,23 @@ Array [
 
 exports[`The PrayerExperienceConnected component should render 1`] = `
 Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
   <View
     style={
       Object {

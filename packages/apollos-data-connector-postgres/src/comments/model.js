@@ -20,6 +20,10 @@ const createModel = defineModel({
       type: DataTypes.INTEGER,
       defaultValue: 0,
     },
+    likedCount: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+    },
   },
 });
 

@@ -83,7 +83,7 @@ RenderAsCard.propTypes = {
 };
 
 const PrayerFeature = ({
-  prayers = [],
+  prayers,
   isCard,
   isLoading,
   onPressAdd,
@@ -121,7 +121,7 @@ PrayerFeature.propTypes = {
         photo: ImageSourceType,
       }),
     })
-  ).isRequired,
+  ),
   isCard: PropTypes.bool,
   isLoading: PropTypes.bool,
   onPressAdd: PropTypes.func,
@@ -133,6 +133,7 @@ PrayerFeature.propTypes = {
 PrayerFeature.defaultProps = {
   isCard: true,
   subtitle: 'Prayer',
+  prayers: [],
 };
 
 export default withIsLoading(PrayerFeature);

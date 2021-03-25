@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Animated, StyleSheet } from 'react-native';
 
-import { H6 } from '../typography';
+import { H5 } from '../typography';
 import styled from '../styled';
 import { withTheme } from '../theme';
 
@@ -13,7 +13,7 @@ export const LabelText = styled(
     paddingVertical: theme.sizing.baseUnit / 4,
   }),
   'ui-kit.inputs.FloatingLabel.LabelText'
-)(H6);
+)(H5);
 
 const styles = StyleSheet.create({
   floatLabelView: {
@@ -33,6 +33,7 @@ class FloatingLabel extends PureComponent {
     scaleSize: PropTypes.number, // how much smaller to make label when focused
     floatingOpacity: PropTypes.number,
     color: PropTypes.string,
+    style: PropTypes.any, // eslint-disable-line
   };
 
   static defaultProps = {
@@ -66,7 +67,7 @@ class FloatingLabel extends PureComponent {
     });
     const translateY = this.props.animation.interpolate({
       inputRange: [0, 1],
-      outputRange: [0, -(this.state.labelHeight * 0.7)],
+      outputRange: [0, -(this.state.labelHeight * 0.6)],
     });
     const translateX = this.props.animation.interpolate({
       inputRange: [0, 1],
@@ -81,7 +82,7 @@ class FloatingLabel extends PureComponent {
       <Animated.View
         pointerEvents="none"
         onLayout={this.handleLayout}
-        style={[styles.floatLabelView, wrapperStyles]}
+        style={[styles.floatLabelView, wrapperStyles, this.props.style]}
       >
         <LabelText color={this.props.color}>{this.props.children}</LabelText>
       </Animated.View>
