@@ -8,8 +8,13 @@ import {
   createModel as createFlagsModel,
   setupModel as setupFlagsModel,
 } from '../../user-flags/model';
+import {
+  createModel as createLikesModel,
+  setupModel as setupLikesModel,
+} from '../../user-likes/model';
 import CommentDataSource from '../dataSource';
 import UserFlagDataSource from '../../user-flags/dataSource';
+import UserLikeDataSource from '../../user-likes/dataSource';
 
 let person1;
 let person2;
@@ -28,10 +33,12 @@ describe('Apollos Postgres Comments DatSource', () => {
   beforeEach(async () => {
     await createModel();
     await createFlagsModel();
+    await createLikesModel();
     await createPersonModel();
     await createFollowModel();
     await setupModel();
     await setupFlagsModel();
+    await setupLikesModel();
     await sync({ force: true });
     person1 = await sequelize.models.people.create({
       originId: '1',
@@ -264,6 +271,96 @@ describe('Apollos Postgres Comments DatSource', () => {
     });
     expect(itemComments.length).toBe(3);
     expect([comment2, comment1, comment3].map(({ id }) => id)).toEqual(
+      itemComments.map(({ id }) => id)
+    );
+  });
+
+  it('should sort by likes', async () => {
+    const commentDataSource = new CommentDataSource();
+    commentDataSource.initialize({ context });
+    const userLikeDataSource = new UserLikeDataSource();
+    userLikeDataSource.initialize({ context });
+
+    currentPerson = person2;
+    const comment1 = await commentDataSource.addComment({
+      text: `I am not liked!`,
+      parentId: createGlobalId(123, 'UniversalContentItem'),
+    });
+
+    currentPerson = person3;
+    const comment2 = await commentDataSource.addComment({
+      text: `I am liked! I should float to the top!`,
+      parentId: createGlobalId(123, 'UniversalContentItem'),
+    });
+
+    currentPerson = person2;
+    const comment3 = await commentDataSource.addComment({
+      text: `I am not liked! Back to the bottom!`,
+      parentId: createGlobalId(123, 'UniversalContentItem'),
+    });
+
+    currentPerson = person1;
+
+    await userLikeDataSource.updateLikeComment({
+      commentId: comment2.apollosId,
+      operation: 'Like',
+    });
+
+    const itemComments = await commentDataSource.getForNode({
+      nodeId: 123,
+      nodeType: 'UniversalContentItem',
+      flagLimit: 1,
+    });
+    expect(itemComments.length).toBe(3);
+    expect([comment2, comment1, comment3].map(({ id }) => id)).toEqual(
+      itemComments.map(({ id }) => id)
+    );
+  });
+
+  it('should include follows before high like counts', async () => {
+    const commentDataSource = new CommentDataSource();
+    commentDataSource.initialize({ context });
+    const userLikeDataSource = new UserLikeDataSource();
+    userLikeDataSource.initialize({ context });
+
+    currentPerson = person2;
+    const comment1 = await commentDataSource.addComment({
+      text: `I am not followed nor liked!`,
+      parentId: createGlobalId(123, 'UniversalContentItem'),
+    });
+
+    currentPerson = person3;
+    const comment2 = await commentDataSource.addComment({
+      text: `I am followed! I should float to the top!`,
+      parentId: createGlobalId(123, 'UniversalContentItem'),
+    });
+
+    currentPerson = person2;
+    const comment3 = await commentDataSource.addComment({
+      text: `I am not followed, but I am liked! 2nd place for me!`,
+      parentId: createGlobalId(123, 'UniversalContentItem'),
+    });
+
+    currentPerson = person1;
+
+    await sequelize.models.follows.create({
+      requestPersonId: person1.id,
+      followedPersonId: person3.id,
+      state: 'ACCEPTED',
+    });
+
+    await userLikeDataSource.updateLikeComment({
+      commentId: comment3.apollosId,
+      operation: 'Like',
+    });
+
+    const itemComments = await commentDataSource.getForNode({
+      nodeId: 123,
+      nodeType: 'UniversalContentItem',
+      flagLimit: 1,
+    });
+    expect(itemComments.length).toBe(3);
+    expect([comment2, comment3, comment1].map(({ id }) => id)).toEqual(
       itemComments.map(({ id }) => id)
     );
   });
