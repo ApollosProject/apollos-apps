@@ -1475,7 +1475,11 @@
     query-string "^6.13.6"
     react-is "^16.13.0"
 
+<<<<<<< HEAD
 "@react-navigation/native@^5.9.3":
+=======
+"@react-navigation/native@^5.6.1":
+>>>>>>> 278387525f1bef67857ad21f172ef63f7b00e265
   version "5.9.3"
   resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-5.9.3.tgz#3859f439adc9a744b79a98fbc7606bdd459574d5"
   integrity sha512-xaRlCDRVuFGxHsP/IetwLdNvLJwIJBYCUIx/ufWs6QkT9Q0EB0DtKzXCItuHydjMEVPd1Cy7lfjUlSM6hZ6Q3Q==
@@ -1491,7 +1495,11 @@
   dependencies:
     nanoid "^3.1.15"
 
+<<<<<<< HEAD
 "@react-navigation/stack@^5.14.3":
+=======
+"@react-navigation/stack@^5.6.2":
+>>>>>>> 278387525f1bef67857ad21f172ef63f7b00e265
   version "5.14.3"
   resolved "https://registry.yarnpkg.com/@react-navigation/stack/-/stack-5.14.3.tgz#3d15fcd2cf8d0d2a1248686565c6a85e2d8e1c55"
   integrity sha512-7rHc13DHsYP7l7GcgBcLEyX2/IAuCcRZ1Iu3MtOZSayjvFXxBBYKFKw0OyY9NxOfZUdLl3Q3mLiUHVFZkHMcuA==
@@ -7448,8 +7456,19 @@ optimism@^0.13.1:
   version "0.13.2"
   resolved "https://registry.yarnpkg.com/optimism/-/optimism-0.13.2.tgz#002a438b69652bfe8f8754a4493ed35c2e9d9821"
   integrity sha512-kJkpDUEs/Rp8HsAYYlDzyvQHlT6YZa95P+2GGNR8p/VvsIkt6NilAk7oeTvMRKCq7BeclB7+bmdIexog2859GQ==
+<<<<<<< HEAD
+=======
   dependencies:
     "@wry/context" "^0.5.2"
+
+optimism@^0.14.0:
+  version "0.14.1"
+  resolved "https://registry.yarnpkg.com/optimism/-/optimism-0.14.1.tgz#db35a0c770e16863f6c288f7cf58341a2348db44"
+  integrity sha512-7+1lSN+LJEtaj3uBLLFk8uFCFKy3txLvcvln5Dh1szXjF9yghEMeWclmnk0qdtYZ+lcMNyu48RmQQRw+LRYKSQ==
+>>>>>>> 278387525f1bef67857ad21f172ef63f7b00e265
+  dependencies:
+    "@wry/context" "^0.5.2"
+    "@wry/trie" "^0.2.1"
 
 optimism@^0.14.0:
   version "0.14.1"

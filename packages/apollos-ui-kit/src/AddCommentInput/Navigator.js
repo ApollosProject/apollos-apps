@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
 
 import { withTheme } from '../theme';
 import Editor from './Editor';
@@ -20,37 +21,39 @@ const Navigator = ({
   ...navigatorProps
 }) => {
   return (
-    <Stack.Navigator {...navigatorProps}>
-      <Stack.Screen name="Editor">
-        {(props) => (
-          <Editor
-            bottomSheetModalRef={bottomSheetModalRef}
-            bottomSheetIndex={bottomSheetIndex}
-            image={profile?.photo}
-            prompt={prompt}
-            headerTitle={editorTitle}
-            {...props}
-          />
-        )}
-      </Stack.Screen>
-      <Stack.Screen
-        name="Confirmation"
-        options={{
-          headerShown: true,
-          headerTitle: confirmationTitle,
-          headerBackTitle: 'Edit',
-        }}
-      >
-        {(props) => (
-          <Confirmation
-            bottomSheetModalRef={bottomSheetModalRef}
-            profile={profile}
-            onSubmit={onSubmit}
-            {...props}
-          />
-        )}
-      </Stack.Screen>
-    </Stack.Navigator>
+    <NavigationContainer>
+      <Stack.Navigator {...navigatorProps}>
+        <Stack.Screen name="Editor">
+          {(props) => (
+            <Editor
+              bottomSheetModalRef={bottomSheetModalRef}
+              bottomSheetIndex={bottomSheetIndex}
+              image={profile?.photo}
+              prompt={prompt}
+              headerTitle={editorTitle}
+              {...props}
+            />
+          )}
+        </Stack.Screen>
+        <Stack.Screen
+          name="Confirmation"
+          options={{
+            headerShown: true,
+            headerTitle: confirmationTitle,
+            headerBackTitle: 'Edit',
+          }}
+        >
+          {(props) => (
+            <Confirmation
+              bottomSheetModalRef={bottomSheetModalRef}
+              profile={profile}
+              onSubmit={onSubmit}
+              {...props}
+            />
+          )}
+        </Stack.Screen>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 

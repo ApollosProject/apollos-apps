@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=10.x.x"
   },
-  "version": "2.4.0",
+  "version": "2.6.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -38,6 +38,7 @@
       "<rootDir>/src/"
     ],
     "setupFiles": [
+      "../apollos-ui-test-utils/src/mocks/reanimated.js",
       "./jest.setup.js"
     ]
   },

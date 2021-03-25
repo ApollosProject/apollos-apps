@@ -9,6 +9,8 @@ import { withIsLoading } from '../isLoading';
 import Button from '../Button';
 
 import FollowListItem from './FollowListItem';
+import FollowListSearch from './FollowListSearch';
+import FollowListSearchModal from './FollowListSearch/FollowListSearchModal';
 
 const HeaderView = styled(
   ({ theme }) => ({
@@ -60,6 +62,10 @@ class FollowList extends PureComponent {
     onConfirm: PropTypes.func,
   };
 
+  static defaultProps = {
+    followers: [],
+  };
+
   RenderAsCard = ({ children }) =>
     this.props.isCard ? (
       <Card isLoading={this.props.isLoading}>{children}</Card>
@@ -81,7 +87,9 @@ class FollowList extends PureComponent {
 
     const { RenderAsCard } = this;
 
-    if (followers?.length === 0 && !isLoading) return null;
+    const showButton = onPressFollowListButton && followListButtonTitle;
+
+    if (followers?.length === 0 && !isLoading && !showButton) return null;
 
     return (
       <RenderAsCard>
@@ -94,9 +102,10 @@ class FollowList extends PureComponent {
               <FollowListItem
                 key={item.id}
                 id={item.id}
-                requested={isFollowingState === 'REQUESTED'}
-                request={isFollowed === 'REQUESTED'}
-                confirmed={isFollowingState === 'APPROVED'}
+                requestingFollow={isFollowingState === 'REQUESTED'}
+                followRequested={isFollowed === 'REQUESTED'}
+                confirmedFollowing={isFollowingState === 'ACCEPTED'}
+                confirmedFollower={isFollowed === 'ACCEPTED'}
                 name={
                   [item.firstName, item.lastName]
                     .filter((name) => Boolean(name))
@@ -109,7 +118,7 @@ class FollowList extends PureComponent {
               />
             );
           })}
-          {onPressFollowListButton && followListButtonTitle ? (
+          {showButton ? (
             <FullWidthButton
               title={followListButtonTitle}
               type={'default'}
@@ -124,5 +133,5 @@ class FollowList extends PureComponent {
   }
 }
 
-export { FollowListItem };
+export { FollowListItem, FollowListSearch, FollowListSearchModal };
 export default withIsLoading(FollowList);

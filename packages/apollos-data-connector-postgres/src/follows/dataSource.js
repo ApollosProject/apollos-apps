@@ -8,11 +8,19 @@ import { FollowState } from './model';
 class Follow extends PostgresDataSource {
   modelName = 'follows';
 
-  async getCurrentUserFollowingPerson({ id }) {
+  async getCurrentUserFollowingPerson({ id, followingRequests }) {
     assertUuid(id, 'getCurrentUserFollowingPerson');
 
     const { Person } = this.context.dataSources;
     const currentPersonId = await Person.getCurrentPersonId();
+
+    // Patch for eager loading data.
+    // Lets us skip a step if we have already joined
+    if (Array.isArray(followingRequests)) {
+      return followingRequests.find(
+        ({ requestPersonId }) => requestPersonId === currentPersonId
+      );
+    }
 
     return this.model.findOne({
       where: {
@@ -22,16 +30,24 @@ class Follow extends PostgresDataSource {
     });
   }
 
-  async getPersonFollowingCurrentUser({ id }) {
+  async getPersonFollowingCurrentUser({ id, requestedFollows }) {
     assertUuid(id, 'getPersonFollowingCurrentUser');
 
     const { Person } = this.context.dataSources;
     const currentPersonId = await Person.getCurrentPersonId();
 
+    // Patch for eager loading data.
+    // Lets us skip a step if we have already joined
+    if (Array.isArray(requestedFollows)) {
+      return requestedFollows.find(
+        ({ followedPersonId }) => followedPersonId === currentPersonId
+      );
+    }
+
     return this.model.findOne({
       where: {
-        requestPersonId: currentPersonId,
-        followedPersonId: id,
+        requestPersonId: id,
+        followedPersonId: currentPersonId,
       },
     });
   }
@@ -59,6 +75,10 @@ class Follow extends PostgresDataSource {
       }
 
       // If a request already exists that was denied, update it as a new request.
+      this.sendRequestFollowNotification({
+        followedPersonId: id,
+        requestPersonId: currentPersonId,
+      });
       return existingFollow.update({ state: FollowState.REQUESTED });
     }
 
@@ -68,11 +88,38 @@ class Follow extends PostgresDataSource {
     const suggested = await this.getStaticSuggestedFollowsForCurrentPerson();
     if (suggested.some((s) => s.id === id)) initialState = FollowState.ACCEPTED;
 
+    // We shouldn't send push notifications to auto-accepting users
+    if (initialState !== FollowState.ACCEPTED) {
+      this.sendRequestFollowNotification({
+        followedPersonId: id,
+        requestPersonId: currentPersonId,
+      });
+    }
+
     // There was no existing request, so lets make one.
     return this.model.create({
       requestPersonId: currentPersonId,
       followedPersonId: id,
       state: initialState,
+    });
+  }
+
+  async sendRequestFollowNotification({ followedPersonId, requestPersonId }) {
+    const { Person } = this.context.dataSources;
+
+    const followedPerson = await Person.getFromId(followedPersonId);
+    const requestPerson = await Person.getFromId(requestPersonId);
+
+    return this.context.dataSources.OneSignal.createNotification({
+      content: `${requestPerson.firstName} ${requestPerson.lastName} has asked to follow you.`,
+      to: followedPerson,
+      data: { requestPersonId: requestPerson.apollosId },
+      buttons: [
+        {
+          id: `acceptFollowRequest`,
+          text: 'Confirm',
+        },
+      ],
     });
   }
 
