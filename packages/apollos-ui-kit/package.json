@@ -5,7 +5,7 @@
   "engines": {
     "node": ">=10.x.x"
   },
-  "version": "2.6.0",
+  "version": "2.7.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -58,10 +58,8 @@
     "react-native-modal-datetime-picker": "*",
     "react-native-reanimated": "^2.0.0",
     "react-native-safe-area-context": "*",
-    "react-native-svg": "*",
     "react-native-screens": "*",
-    "@gorhom/bottom-sheet": "*",
-    "react-native-reanimated": "^2.0.0"
+    "react-native-svg": "*"
   },
   "dependencies": {
     "@react-native-community/blur": "^3.6.0",
@@ -69,11 +67,11 @@
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "numeral": "^2.0.6",
+    "react-native-keyboard-avoiding-scroll-view": "1.0.1",
     "react-native-modal-datetime-picker": "8.7.1",
     "react-native-tab-view": "1.0.2",
     "recompose": "^0.30.0",
-    "rn-placeholder": "1.2.0",
-    "react-native-keyboard-avoiding-scroll-view": "1.0.1"
+    "rn-placeholder": "1.2.0"
   },
   "devDependencies": {
     "@gorhom/bottom-sheet": "3.4.1",
@@ -92,9 +90,7 @@
     "react-native-reanimated": "2.0.0",
     "react-native-safe-area-context": "^3.0.7",
     "react-native-svg": "9.4.0",
-    "react-test-renderer": "16.13.1",
-    "@gorhom/bottom-sheet": "3.4.1",
-    "react-native-reanimated": "2.0.0"
+    "react-test-renderer": "16.13.1"
   },
   "publishConfig": {
     "access": "public"

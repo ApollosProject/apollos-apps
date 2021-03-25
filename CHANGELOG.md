@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.7.0](https://github.com/ApollosProject/apollos-apps/compare/v2.6.0...v2.7.0) (2021-03-25)
+
+
+### Features
+
+* Bottom sheet editor v2 ([#1818](https://github.com/ApollosProject/apollos-apps/issues/1818)) ([615715b](https://github.com/ApollosProject/apollos-apps/commit/615715b9fe0d7cba49dbe3abd895194891e017ad))
+* Liking comments ([#1829](https://github.com/ApollosProject/apollos-apps/issues/1829)) ([4590af7](https://github.com/ApollosProject/apollos-apps/commit/4590af7c4299d3e7e0643b25385d82cfc7891ada))
+
+
+### Bug Fixes
+
+* find correct person when updating push notifications ([#1831](https://github.com/ApollosProject/apollos-apps/issues/1831)) ([c5d8085](https://github.com/ApollosProject/apollos-apps/commit/c5d80852899b006aa3b736ff82645765c418eb9d))
+
+
+
 ## [2.6.0](https://github.com/ApollosProject/apollos-apps/compare/v2.5.0...v2.6.0) (2021-03-24)
 
 
