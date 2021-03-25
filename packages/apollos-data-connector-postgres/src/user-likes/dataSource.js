@@ -44,8 +44,8 @@ class UserLike extends PostgresDataSource {
   /**
    * Args for liking or unliking nodes
    * @typedef {Object} LikeArgs
-   * @property {string} args.personId Postgres UUID of the user doing the liking
-   * @property {string} args.nodeId Apollos globalId of the node being liked
+   * @property {string} personId Postgres UUID of the user doing the liking
+   * @property {string} nodeId Apollos globalId of the node being liked
    */
 
   /**
@@ -84,6 +84,31 @@ class UserLike extends PostgresDataSource {
     });
 
     return numDeleted > 0;
+  }
+
+  /**
+   * @param {Object} args
+   * @param {string} nodeId Apollos globalId of the node being liked
+   * @param {string} [personId] Optional. Postgres UUID of the user to check. If omitted, the current user is checked.
+   */
+  async userLikedNode({ nodeId, personId = null }) {
+    let currentPersonId = personId;
+    const { id, __type } = parseGlobalId(nodeId);
+    const { Person } = this.context.dataSources;
+
+    if (personId === null) {
+      currentPersonId = await Person.getCurrentPersonId();
+    }
+
+    const existingLike = await this.model.findOne({
+      where: {
+        nodeId: String(id),
+        nodeType: __type,
+        personId: currentPersonId,
+      },
+    });
+
+    return !!existingLike;
   }
 }
 
