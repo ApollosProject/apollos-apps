@@ -14,3 +14,7 @@ jest.mock('react-native-reanimated', () => {
 
   return Reanimated;
 });
+
+jest.mock('react-native-screens/native-stack', () => ({
+  createNativeStackNavigator: jest.fn(),
+}));
