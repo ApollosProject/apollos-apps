@@ -37,7 +37,6 @@ export default class OneSignal extends RESTDataSource {
   async updatePushSettings({ enabled, pushProviderUserId }) {
     const { Auth, PersonalDevice, Person } = this.context.dataSources;
     const { id, primaryAliasId } = await Auth.getCurrentPerson();
-    const currentPerson = await Person.getFromId(id);
 
     if (enabled != null && pushProviderUserId != null)
       await PersonalDevice.updateNotificationsEnabled(
@@ -51,6 +50,6 @@ export default class OneSignal extends RESTDataSource {
         userId: primaryAliasId,
       });
     }
-    return currentPerson;
+    return Person.getFromId(id);
   }
 }
