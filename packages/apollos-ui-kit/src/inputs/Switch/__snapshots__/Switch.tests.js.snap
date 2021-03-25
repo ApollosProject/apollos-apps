@@ -103,7 +103,7 @@ Array [
             onChange={[Function]}
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
-            onTintColor="#00676D"
+            onTintColor="#17B582"
             style={
               Array [
                 Object {

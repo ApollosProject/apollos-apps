@@ -8,30 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* ApollosStorybookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ApollosStorybookTests.m */; };
+		02011CFB72DFA389564B2DCA /* libPods-ApollosStorybook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B56F3227C000E80D33132E67 /* libPods-ApollosStorybook.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		17659DA806A64B45B2EC95C6 /* DroidSerif-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF71B90FA5FF447E954FC689 /* DroidSerif-BoldItalic.ttf */; };
+		21EA88786D38B39F5C189CC9 /* libPods-ApollosStorybook-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8134B51AC854DAFABB323717 /* libPods-ApollosStorybook-tvOSTests.a */; };
 		2B84CEB11FA94250978B191F /* DroidSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64D652DEA2C74ECEAB244C1A /* DroidSerif-Regular.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* ApollosStorybookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ApollosStorybookTests.m */; };
 		4374DA1F7CB5407098DC94BC /* Inter-UI-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E8CF8904D441BF8E59BBB2 /* Inter-UI-Regular.otf */; };
+		60842651EC6AA18880112383 /* libPods-ApollosStorybook-ApollosStorybookTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C655C65504F50B1529AC12 /* libPods-ApollosStorybook-ApollosStorybookTests.a */; };
 		66FF670EB45B443DB9045A27 /* Inter-UI-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 713E3E92DD3741C781377638 /* Inter-UI-Black.otf */; };
 		68A71016E67C4E6DBB463AAF /* Inter-UI-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6F6D61B0D2A24A4F8C4D05EF /* Inter-UI-MediumItalic.otf */; };
+		6E0F011592CC707AB35AB7B4 /* libPods-ApollosStorybook-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E652F09B9EB966109640DA /* libPods-ApollosStorybook-tvOS.a */; };
 		70116202B45D4C019BA65DB0 /* DroidSerif-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C67FADA94D5C42A7B91B302F /* DroidSerif-Italic.ttf */; };
 		7EA1240A5BBA4D8BBDFCEA98 /* Inter-UI-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7E09673CA3E4718B6F94242 /* Inter-UI-BoldItalic.otf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8F72AB64E29FC00D529E022C /* libPods-ApollosStorybook-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C11B64F0FE4019AE65DCF8D /* libPods-ApollosStorybook-tvOS.a */; };
 		A4B60B90E4F94D4F975BEE9A /* DroidSerif-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 840BF2FAB333417E834FB446 /* DroidSerif-Bold.ttf */; };
-		B0B7BF466D0E304349FEC42D /* libPods-ApollosStorybook-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C99A97907F52D1F8BD6AB9C3 /* libPods-ApollosStorybook-tvOSTests.a */; };
 		B22D539B2551E1F0006A9362 /* BridgingFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22D539A2551E1F0006A9362 /* BridgingFile.swift */; };
 		D3CB0145A8D74F2B8C3BE47D /* Inter-UI-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A23F6947D1504282BB771752 /* Inter-UI-Medium.otf */; };
 		D4EF4B1B0A6547189252EB7D /* Inter-UI-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA7C10586A204428A2D442EE /* Inter-UI-BlackItalic.otf */; };
 		DD28931779064D428C17FB57 /* Inter-UI-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B86278A9093E40638DC456BC /* Inter-UI-Italic.otf */; };
-		DFE2DD8A415691DBCFFC47EE /* libPods-ApollosStorybook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D31310B8E0FAE1CCF1173DFE /* libPods-ApollosStorybook.a */; };
-		EAFC5C61D1CA36C200341E15 /* libPods-ApollosStorybook-ApollosStorybookTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88095D90A349258D18A10227 /* libPods-ApollosStorybook-ApollosStorybookTests.a */; };
 		F4E6AAEA9E4A4011855DF7A1 /* Inter-UI-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EB0E98CAC47B45569400F50F /* Inter-UI-Bold.otf */; };
 /* End PBXBuildFile section */
 
@@ -57,42 +57,42 @@
 		00E356EE1AD99517003FC87E /* ApollosStorybookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApollosStorybookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* ApollosStorybookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApollosStorybookTests.m; sourceTree = "<group>"; };
-		115EBFAB9EB76DF200EA83B3 /* Pods-ApollosStorybook-ApollosStorybookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApollosStorybook-ApollosStorybookTests.release.xcconfig"; path = "Target Support Files/Pods-ApollosStorybook-ApollosStorybookTests/Pods-ApollosStorybook-ApollosStorybookTests.release.xcconfig"; sourceTree = "<group>"; };
-		123551D3ABFA191F36E53D60 /* Pods-ApollosStorybook-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApollosStorybook-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-ApollosStorybook-tvOSTests/Pods-ApollosStorybook-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		06C655C65504F50B1529AC12 /* libPods-ApollosStorybook-ApollosStorybookTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ApollosStorybook-ApollosStorybookTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09F12EA1CEB290FD4B146AA5 /* Pods-ApollosStorybook-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApollosStorybook-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-ApollosStorybook-tvOSTests/Pods-ApollosStorybook-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		11DEE5EF716A61635FF41708 /* Pods-ApollosStorybook-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApollosStorybook-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-ApollosStorybook-tvOS/Pods-ApollosStorybook-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* ApollosStorybook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApollosStorybook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ApollosStorybook/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ApollosStorybook/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ApollosStorybook/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ApollosStorybook/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ApollosStorybook/main.m; sourceTree = "<group>"; };
+		13E652F09B9EB966109640DA /* libPods-ApollosStorybook-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ApollosStorybook-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23E78BDD50280931C54DF1F7 /* Pods-ApollosStorybook-ApollosStorybookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApollosStorybook-ApollosStorybookTests.release.xcconfig"; path = "Target Support Files/Pods-ApollosStorybook-ApollosStorybookTests/Pods-ApollosStorybook-ApollosStorybookTests.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* ApollosStorybook-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ApollosStorybook-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* ApollosStorybook-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ApollosStorybook-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		424F871343C39E6AEB10FFA5 /* Pods-ApollosStorybook-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApollosStorybook-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-ApollosStorybook-tvOS/Pods-ApollosStorybook-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		5C11B64F0FE4019AE65DCF8D /* libPods-ApollosStorybook-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ApollosStorybook-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36C91EC7856888CA7F747020 /* Pods-ApollosStorybook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApollosStorybook.release.xcconfig"; path = "Target Support Files/Pods-ApollosStorybook/Pods-ApollosStorybook.release.xcconfig"; sourceTree = "<group>"; };
+		4FE6CA58F7AF6F19E1E92977 /* Pods-ApollosStorybook-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApollosStorybook-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-ApollosStorybook-tvOSTests/Pods-ApollosStorybook-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		64D652DEA2C74ECEAB244C1A /* DroidSerif-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DroidSerif-Regular.ttf"; path = "../assets/fonts/DroidSerif-Regular.ttf"; sourceTree = "<group>"; };
 		6F6D61B0D2A24A4F8C4D05EF /* Inter-UI-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-MediumItalic.otf"; path = "../assets/fonts/Inter-UI-MediumItalic.otf"; sourceTree = "<group>"; };
 		713E3E92DD3741C781377638 /* Inter-UI-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-Black.otf"; path = "../assets/fonts/Inter-UI-Black.otf"; sourceTree = "<group>"; };
+		8134B51AC854DAFABB323717 /* libPods-ApollosStorybook-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ApollosStorybook-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ApollosStorybook/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		840BF2FAB333417E834FB446 /* DroidSerif-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DroidSerif-Bold.ttf"; path = "../assets/fonts/DroidSerif-Bold.ttf"; sourceTree = "<group>"; };
-		88095D90A349258D18A10227 /* libPods-ApollosStorybook-ApollosStorybookTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ApollosStorybook-ApollosStorybookTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93F79B006A9F5FC70AAC3961 /* Pods-ApollosStorybook-ApollosStorybookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApollosStorybook-ApollosStorybookTests.debug.xcconfig"; path = "Target Support Files/Pods-ApollosStorybook-ApollosStorybookTests/Pods-ApollosStorybook-ApollosStorybookTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A23F6947D1504282BB771752 /* Inter-UI-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-Medium.otf"; path = "../assets/fonts/Inter-UI-Medium.otf"; sourceTree = "<group>"; };
-		AAE7919456C3306C08A2EB1A /* Pods-ApollosStorybook-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApollosStorybook-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-ApollosStorybook-tvOSTests/Pods-ApollosStorybook-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		AFC598A66AF91FF60042868A /* Pods-ApollosStorybook-ApollosStorybookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApollosStorybook-ApollosStorybookTests.debug.xcconfig"; path = "Target Support Files/Pods-ApollosStorybook-ApollosStorybookTests/Pods-ApollosStorybook-ApollosStorybookTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A299C4AEE11D3E5959100E33 /* Pods-ApollosStorybook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApollosStorybook.debug.xcconfig"; path = "Target Support Files/Pods-ApollosStorybook/Pods-ApollosStorybook.debug.xcconfig"; sourceTree = "<group>"; };
 		B22D53992551E1F0006A9362 /* ApollosStorybook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ApollosStorybook-Bridging-Header.h"; sourceTree = "<group>"; };
 		B22D539A2551E1F0006A9362 /* BridgingFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgingFile.swift; sourceTree = "<group>"; };
+		B56F3227C000E80D33132E67 /* libPods-ApollosStorybook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ApollosStorybook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B86278A9093E40638DC456BC /* Inter-UI-Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-Italic.otf"; path = "../assets/fonts/Inter-UI-Italic.otf"; sourceTree = "<group>"; };
 		C4E8CF8904D441BF8E59BBB2 /* Inter-UI-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-Regular.otf"; path = "../assets/fonts/Inter-UI-Regular.otf"; sourceTree = "<group>"; };
 		C67FADA94D5C42A7B91B302F /* DroidSerif-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DroidSerif-Italic.ttf"; path = "../assets/fonts/DroidSerif-Italic.ttf"; sourceTree = "<group>"; };
-		C8E86B00300DCAA9455132A3 /* Pods-ApollosStorybook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApollosStorybook.release.xcconfig"; path = "Target Support Files/Pods-ApollosStorybook/Pods-ApollosStorybook.release.xcconfig"; sourceTree = "<group>"; };
-		C99A97907F52D1F8BD6AB9C3 /* libPods-ApollosStorybook-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ApollosStorybook-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA7C10586A204428A2D442EE /* Inter-UI-BlackItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-BlackItalic.otf"; path = "../assets/fonts/Inter-UI-BlackItalic.otf"; sourceTree = "<group>"; };
-		D31310B8E0FAE1CCF1173DFE /* libPods-ApollosStorybook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ApollosStorybook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D45E07269197FDB8B64AA865 /* Pods-ApollosStorybook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApollosStorybook.debug.xcconfig"; path = "Target Support Files/Pods-ApollosStorybook/Pods-ApollosStorybook.debug.xcconfig"; sourceTree = "<group>"; };
+		D7A8750D7C583CDEAACCD406 /* Pods-ApollosStorybook-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApollosStorybook-tvOS.release.xcconfig"; path = "Target Support Files/Pods-ApollosStorybook-tvOS/Pods-ApollosStorybook-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		D7E09673CA3E4718B6F94242 /* Inter-UI-BoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-BoldItalic.otf"; path = "../assets/fonts/Inter-UI-BoldItalic.otf"; sourceTree = "<group>"; };
 		EB0E98CAC47B45569400F50F /* Inter-UI-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-Bold.otf"; path = "../assets/fonts/Inter-UI-Bold.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		FC625F41656FA0CFD981ADEA /* Pods-ApollosStorybook-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApollosStorybook-tvOS.release.xcconfig"; path = "Target Support Files/Pods-ApollosStorybook-tvOS/Pods-ApollosStorybook-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		FF71B90FA5FF447E954FC689 /* DroidSerif-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DroidSerif-BoldItalic.ttf"; path = "../assets/fonts/DroidSerif-BoldItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAFC5C61D1CA36C200341E15 /* libPods-ApollosStorybook-ApollosStorybookTests.a in Frameworks */,
+				60842651EC6AA18880112383 /* libPods-ApollosStorybook-ApollosStorybookTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFE2DD8A415691DBCFFC47EE /* libPods-ApollosStorybook.a in Frameworks */,
+				02011CFB72DFA389564B2DCA /* libPods-ApollosStorybook.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F72AB64E29FC00D529E022C /* libPods-ApollosStorybook-tvOS.a in Frameworks */,
+				6E0F011592CC707AB35AB7B4 /* libPods-ApollosStorybook-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0B7BF466D0E304349FEC42D /* libPods-ApollosStorybook-tvOSTests.a in Frameworks */,
+				21EA88786D38B39F5C189CC9 /* libPods-ApollosStorybook-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,14 +166,14 @@
 		2577DC035449AB343CA91539 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D45E07269197FDB8B64AA865 /* Pods-ApollosStorybook.debug.xcconfig */,
-				C8E86B00300DCAA9455132A3 /* Pods-ApollosStorybook.release.xcconfig */,
-				AFC598A66AF91FF60042868A /* Pods-ApollosStorybook-ApollosStorybookTests.debug.xcconfig */,
-				115EBFAB9EB76DF200EA83B3 /* Pods-ApollosStorybook-ApollosStorybookTests.release.xcconfig */,
-				424F871343C39E6AEB10FFA5 /* Pods-ApollosStorybook-tvOS.debug.xcconfig */,
-				FC625F41656FA0CFD981ADEA /* Pods-ApollosStorybook-tvOS.release.xcconfig */,
-				123551D3ABFA191F36E53D60 /* Pods-ApollosStorybook-tvOSTests.debug.xcconfig */,
-				AAE7919456C3306C08A2EB1A /* Pods-ApollosStorybook-tvOSTests.release.xcconfig */,
+				A299C4AEE11D3E5959100E33 /* Pods-ApollosStorybook.debug.xcconfig */,
+				36C91EC7856888CA7F747020 /* Pods-ApollosStorybook.release.xcconfig */,
+				93F79B006A9F5FC70AAC3961 /* Pods-ApollosStorybook-ApollosStorybookTests.debug.xcconfig */,
+				23E78BDD50280931C54DF1F7 /* Pods-ApollosStorybook-ApollosStorybookTests.release.xcconfig */,
+				11DEE5EF716A61635FF41708 /* Pods-ApollosStorybook-tvOS.debug.xcconfig */,
+				D7A8750D7C583CDEAACCD406 /* Pods-ApollosStorybook-tvOS.release.xcconfig */,
+				4FE6CA58F7AF6F19E1E92977 /* Pods-ApollosStorybook-tvOSTests.debug.xcconfig */,
+				09F12EA1CEB290FD4B146AA5 /* Pods-ApollosStorybook-tvOSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -183,10 +183,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				D31310B8E0FAE1CCF1173DFE /* libPods-ApollosStorybook.a */,
-				88095D90A349258D18A10227 /* libPods-ApollosStorybook-ApollosStorybookTests.a */,
-				5C11B64F0FE4019AE65DCF8D /* libPods-ApollosStorybook-tvOS.a */,
-				C99A97907F52D1F8BD6AB9C3 /* libPods-ApollosStorybook-tvOSTests.a */,
+				B56F3227C000E80D33132E67 /* libPods-ApollosStorybook.a */,
+				06C655C65504F50B1529AC12 /* libPods-ApollosStorybook-ApollosStorybookTests.a */,
+				13E652F09B9EB966109640DA /* libPods-ApollosStorybook-tvOS.a */,
+				8134B51AC854DAFABB323717 /* libPods-ApollosStorybook-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -253,11 +253,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ApollosStorybookTests" */;
 			buildPhases = (
-				0702496A929F7DA0E7DB7271 /* [CP] Check Pods Manifest.lock */,
+				9D0EC8AF70A696997BF0B84A /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C893518C714FFFEE8280F876 /* [CP] Copy Pods Resources */,
+				68B8AD2EBF503ABD4AB1451C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -273,13 +273,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ApollosStorybook" */;
 			buildPhases = (
-				DA490A2EC7CD389FF7192A8F /* [CP] Check Pods Manifest.lock */,
+				B2F1F6F70FB2CB5DF24D24EC /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				C72CFA48463C941663C9458A /* [CP] Copy Pods Resources */,
+				56E53B5603913AE99F44DA37 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -294,7 +294,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ApollosStorybook-tvOS" */;
 			buildPhases = (
-				F9391D672C03AEA91EFE1390 /* [CP] Check Pods Manifest.lock */,
+				0B480091607BFDB6204516AF /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -314,7 +314,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ApollosStorybook-tvOSTests" */;
 			buildPhases = (
-				4A1CB94A4F4151B3E531191F /* [CP] Check Pods Manifest.lock */,
+				1A344BD9E8D4C2EEFC18B4B9 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -438,7 +438,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		0702496A929F7DA0E7DB7271 /* [CP] Check Pods Manifest.lock */ = {
+		0B480091607BFDB6204516AF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -453,28 +453,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ApollosStorybook-ApollosStorybookTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ApollosStorybook-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Bundle React Native Code And Images";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
-		};
-		4A1CB94A4F4151B3E531191F /* [CP] Check Pods Manifest.lock */ = {
+		1A344BD9E8D4C2EEFC18B4B9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -496,7 +482,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C72CFA48463C941663C9458A /* [CP] Copy Pods Resources */ = {
+		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native Code And Images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		56E53B5603913AE99F44DA37 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -514,7 +514,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ApollosStorybook/Pods-ApollosStorybook-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C893518C714FFFEE8280F876 /* [CP] Copy Pods Resources */ = {
+		68B8AD2EBF503ABD4AB1451C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -532,7 +532,29 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ApollosStorybook-ApollosStorybookTests/Pods-ApollosStorybook-ApollosStorybookTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DA490A2EC7CD389FF7192A8F /* [CP] Check Pods Manifest.lock */ = {
+		9D0EC8AF70A696997BF0B84A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ApollosStorybook-ApollosStorybookTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2F1F6F70FB2CB5DF24D24EC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -548,28 +570,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ApollosStorybook-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F9391D672C03AEA91EFE1390 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ApollosStorybook-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -670,7 +670,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AFC598A66AF91FF60042868A /* Pods-ApollosStorybook-ApollosStorybookTests.debug.xcconfig */;
+			baseConfigurationReference = 93F79B006A9F5FC70AAC3961 /* Pods-ApollosStorybook-ApollosStorybookTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -694,7 +694,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 115EBFAB9EB76DF200EA83B3 /* Pods-ApollosStorybook-ApollosStorybookTests.release.xcconfig */;
+			baseConfigurationReference = 23E78BDD50280931C54DF1F7 /* Pods-ApollosStorybook-ApollosStorybookTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -715,7 +715,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D45E07269197FDB8B64AA865 /* Pods-ApollosStorybook.debug.xcconfig */;
+			baseConfigurationReference = A299C4AEE11D3E5959100E33 /* Pods-ApollosStorybook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -741,7 +741,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8E86B00300DCAA9455132A3 /* Pods-ApollosStorybook.release.xcconfig */;
+			baseConfigurationReference = 36C91EC7856888CA7F747020 /* Pods-ApollosStorybook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -765,7 +765,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 424F871343C39E6AEB10FFA5 /* Pods-ApollosStorybook-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 11DEE5EF716A61635FF41708 /* Pods-ApollosStorybook-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -793,7 +793,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC625F41656FA0CFD981ADEA /* Pods-ApollosStorybook-tvOS.release.xcconfig */;
+			baseConfigurationReference = D7A8750D7C583CDEAACCD406 /* Pods-ApollosStorybook-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -821,7 +821,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 123551D3ABFA191F36E53D60 /* Pods-ApollosStorybook-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 4FE6CA58F7AF6F19E1E92977 /* Pods-ApollosStorybook-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -848,7 +848,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AAE7919456C3306C08A2EB1A /* Pods-ApollosStorybook-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 09F12EA1CEB290FD4B146AA5 /* Pods-ApollosStorybook-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;

@@ -67,7 +67,7 @@ class FloatingLabel extends PureComponent {
     });
     const translateY = this.props.animation.interpolate({
       inputRange: [0, 1],
-      outputRange: [0, -(this.state.labelHeight * 0.7)],
+      outputRange: [0, -(this.state.labelHeight * 0.6)],
     });
     const translateX = this.props.animation.interpolate({
       inputRange: [0, 1],
