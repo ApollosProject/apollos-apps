@@ -62,7 +62,7 @@ describe('ui-kit/Comment', () => {
       </Providers>
     );
     expect(tree).toMatchSnapshot();
-  });  
+  });
   it('should render without onPressActionMenu', () => {
     const tree = renderer.create(
       <Providers>
