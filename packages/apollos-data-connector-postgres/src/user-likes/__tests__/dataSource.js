@@ -232,4 +232,25 @@ describe('Apollos Postgres User Likes DataSource', () => {
 
     expect(after).toBeTruthy();
   });
+
+  it('should return false if the user has unliked the comment', async () => {
+    const userLikeDataSource = new UserLike();
+    userLikeDataSource.initialize({ context });
+
+    await userLikeDataSource.updateLikeComment({
+      commentId: comment.apollosId,
+      operation: 'Like',
+    });
+
+    await userLikeDataSource.updateLikeComment({
+      commentId: comment.apollosId,
+      operation: 'Unike',
+    });
+
+    const after = await userLikeDataSource.userLikedNode({
+      nodeId: comment.apollosId,
+    });
+
+    expect(after).toBeFalsy();
+  });
 });
