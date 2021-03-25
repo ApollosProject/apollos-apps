@@ -50,6 +50,6 @@ export default class OneSignal extends RESTDataSource {
         userId: primaryAliasId,
       });
     }
-    return Person.getFromId(id);
+    return Person.getFromId(id, null, { originType: 'rock' });
   }
 }
