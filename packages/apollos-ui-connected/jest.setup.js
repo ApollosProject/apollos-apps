@@ -36,6 +36,13 @@ Animated.spring = (value, config) => ({
   stop: () => ({}),
 });
 
+jest.mock('react-native-screens/native-stack', () => ({
+  createNativeStackNavigator: () => ({
+    Navigator: ({ children }) => children,
+    Screen: ({ children }) => children,
+  }),
+}));
+
 jest.mock('@apollosproject/ui-analytics', () => ({
   track: () => '',
   AnalyticsConsumer: ({ children }) => children({ test: jest.fn() }),

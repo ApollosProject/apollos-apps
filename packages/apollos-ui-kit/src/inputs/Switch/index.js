@@ -20,7 +20,7 @@ const enhance = compose(
   pure,
   withTheme(({ theme }) => ({
     trackColor: {
-      true: theme.colors.primary,
+      true: theme.colors.secondary,
       false: theme.colors.background.inactive,
     },
     thumbColor: theme.colors.background.paper,

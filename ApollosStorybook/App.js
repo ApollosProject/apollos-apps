@@ -8,6 +8,9 @@ import StorybookUI, {
 import Providers from './src/Providers';
 
 import { loadStories } from './storybook/storyLoader';
+import { enableScreens } from 'react-native-screens';
+enableScreens();
+
 // Storybook issue. Might be solved by updating Core to RN 63
 LogBox.ignoreLogs(['null is not an object (evaluating \'story.id\')', 'Story with id', 'No permission handler detected.']);
 

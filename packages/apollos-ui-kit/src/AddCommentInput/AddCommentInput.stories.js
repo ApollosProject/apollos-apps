@@ -15,7 +15,7 @@ const fakeData = [
   ...times(10, (i) => ({
     __typename: 'Comment',
     profile: {
-      image: { uri: `https://picsum.photos/seed/${i}/200` },
+      photo: { uri: `https://picsum.photos/seed/${i}/200` },
       nickName: 'Albert Flores',
     },
     subtitle: 'Anderson Campus',
@@ -32,7 +32,7 @@ storiesOf('ui-kit/AddCommentInput', module)
       <AddCommentInput
         showInlinePrompt
         profile={{
-          image: { uri: 'https://picsum.photos/200' },
+          photo: { uri: 'https://picsum.photos/200' },
           nickName: 'Jeff Bridges',
         }}
         onSubmit={() => {}}
@@ -45,7 +45,7 @@ storiesOf('ui-kit/AddCommentInput', module)
         <AddCommentInput
           showInlinePrompt
           profile={{
-            image: { uri: 'https://picsum.photos/200' },
+            photo: { uri: 'https://picsum.photos/200' },
             nickName: 'Jeff Bridges',
           }}
           onSubmit={() => {}}
@@ -65,9 +65,11 @@ storiesOf('ui-kit/AddCommentInput', module)
           ) : (
             <AddCommentInput
               showInlinePrompt
-              onSubmit={() => {}}
+              onSubmit={() =>
+                new Promise((resolve) => setTimeout(() => resolve(), 3000))
+              }
               profile={{
-                image: { uri: 'https://picsum.photos/200' },
+                photo: { uri: 'https://picsum.photos/200' },
                 nickName: 'Jeff Bridges',
               }}
             />
