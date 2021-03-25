@@ -21,7 +21,7 @@ const Navigator = ({
   ...navigatorProps
 }) => {
   return (
-    <NavigationContainer>
+    <NavigationContainer independent>
       <Stack.Navigator {...navigatorProps}>
         <Stack.Screen name="Editor">
           {(props) => (

@@ -89,7 +89,7 @@ const AddCommentInput = ({
 
       {showInlinePrompt ? (
         <Touchable onPress={openModal}>
-          <Prompt image={profile.photo} prompt={prompt} />
+          <Prompt image={profile?.photo} prompt={prompt} />
         </Touchable>
       ) : null}
     </>

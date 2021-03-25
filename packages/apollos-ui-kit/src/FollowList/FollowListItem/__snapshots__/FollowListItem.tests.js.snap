@@ -98,11 +98,7 @@ Array [
 ]
 `;
 
-<<<<<<< HEAD
-exports[`FollowListItem should render a follower request 1`] = `
-=======
 exports[`FollowListItem should render a confirmed follow 1`] = `
->>>>>>> 278387525f1bef67857ad21f172ef63f7b00e265
 Array [
   <View
     onLayout={[Function]}
@@ -121,8 +117,6 @@ Array [
       ]
     }
   />,
-<<<<<<< HEAD
-=======
   <View
     style={
       Object {
@@ -221,7 +215,6 @@ Array [
       ]
     }
   />,
->>>>>>> 278387525f1bef67857ad21f172ef63f7b00e265
   <View
     style={
       Object {
@@ -244,25 +237,6 @@ Array [
           },
         ]
       }
-<<<<<<< HEAD
-      style={
-        Object {
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 32,
-          "height": 64,
-          "marginRight": 16,
-          "width": 64,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "flex": 1,
-          "justifyContent": "center",
-        }
-      }
-=======
       style={
         Object {
           "backgroundColor": "#A5A5A5",
@@ -378,14 +352,11 @@ Array [
           "justifyContent": "center",
         }
       }
->>>>>>> 278387525f1bef67857ad21f172ef63f7b00e265
     />
     <View
       bordered={false}
       disabled={false}
       pill={false}
-<<<<<<< HEAD
-=======
       style={
         Object {
           "alignItems": "center",
@@ -456,7 +427,6 @@ Array [
       bordered={false}
       disabled={true}
       pill={false}
->>>>>>> 278387525f1bef67857ad21f172ef63f7b00e265
       style={
         Object {
           "alignItems": "center",
@@ -469,11 +439,7 @@ Array [
           "height": 32,
           "justifyContent": "center",
           "marginLeft": 8,
-<<<<<<< HEAD
-          "opacity": 1,
-=======
           "opacity": 0.5,
->>>>>>> 278387525f1bef67857ad21f172ef63f7b00e265
           "overflow": "hidden",
           "paddingHorizontal": 8,
         }
@@ -489,46 +455,7 @@ Array [
           }
         }
       >
-<<<<<<< HEAD
-        Hide
-      </Text>
-    </View>
-    <View
-      bordered={false}
-      disabled={false}
-      pill={false}
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#00676D",
-          "borderColor": "#00676D",
-          "borderRadius": 8,
-          "borderWidth": 2,
-          "elevation": 2,
-          "flexDirection": "row",
-          "height": 32,
-          "justifyContent": "center",
-          "marginLeft": 8,
-          "opacity": 1,
-          "overflow": "hidden",
-          "paddingHorizontal": 8,
-        }
-      }
-    >
-      <Text
-        style={
-          Object {
-            "color": "#FFFFFF",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
-            "lineHeight": 18,
-          }
-        }
-      >
-        Confirm
-=======
         Following
->>>>>>> 278387525f1bef67857ad21f172ef63f7b00e265
       </Text>
     </View>
   </View>,
@@ -576,7 +503,6 @@ Array [
           },
         ]
       }
-<<<<<<< HEAD
       style={
         Object {
           "backgroundColor": "#A5A5A5",
@@ -590,21 +516,6 @@ Array [
     <View
       style={
         Object {
-=======
-      style={
-        Object {
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 32,
-          "height": 64,
-          "marginRight": 16,
-          "width": 64,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
->>>>>>> 278387525f1bef67857ad21f172ef63f7b00e265
           "flex": 1,
           "justifyContent": "center",
         }
@@ -738,11 +649,7 @@ Array [
 ]
 `;
 
-<<<<<<< HEAD
-exports[`FollowListItem should render with a name 1`] = `
-=======
 exports[`FollowListItem should render a sent follow request 1`] = `
->>>>>>> 278387525f1bef67857ad21f172ef63f7b00e265
 Array [
   <View
     onLayout={[Function]}
@@ -783,25 +690,6 @@ Array [
           },
         ]
       }
-<<<<<<< HEAD
-      style={
-        Object {
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 32,
-          "height": 64,
-          "marginRight": 16,
-          "width": 64,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "flex": 1,
-          "justifyContent": "center",
-        }
-      }
-=======
       style={
         Object {
           "backgroundColor": "#A5A5A5",
@@ -917,7 +805,6 @@ Array [
           "justifyContent": "center",
         }
       }
->>>>>>> 278387525f1bef67857ad21f172ef63f7b00e265
     >
       <Text
         numberOfLines={1}

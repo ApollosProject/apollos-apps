@@ -378,12 +378,9 @@ Array [
       </View>
     </View>
   </View>,
-<<<<<<< HEAD
-=======
   <RCTScrollView>
     <View />
   </RCTScrollView>,
->>>>>>> 278387525f1bef67857ad21f172ef63f7b00e265
 ]
 `;
 
@@ -889,12 +886,9 @@ Array [
             </View>
           </View>
         </View>
-<<<<<<< HEAD
-=======
         <RCTScrollView>
           <View />
         </RCTScrollView>
->>>>>>> 278387525f1bef67857ad21f172ef63f7b00e265
       </RCTSafeAreaView>
     </BVLinearGradient>
   </Modal>,
@@ -1779,11 +1773,8 @@ Array [
       </View>
     </View>
   </View>,
-<<<<<<< HEAD
-=======
   <RCTScrollView>
     <View />
   </RCTScrollView>,
->>>>>>> 278387525f1bef67857ad21f172ef63f7b00e265
 ]
 `;
