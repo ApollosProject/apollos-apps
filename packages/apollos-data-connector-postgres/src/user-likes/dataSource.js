@@ -83,13 +83,19 @@ class UserLike extends PostgresDataSource {
    * @param {string} nodeId Apollos globalId of the node being liked
    * @param {string} [personId] Optional. Postgres UUID of the user to check. If omitted, the current user is checked.
    */
-  async userLikedNode({ nodeId, personId = null }) {
+  async userLikedNode({ nodeId, personId = null, ...node }) {
     let currentPersonId = personId;
     const { id, __type } = parseGlobalId(nodeId);
     const { Person } = this.context.dataSources;
 
     if (personId === null) {
       currentPersonId = await Person.getCurrentPersonId();
+    }
+
+    // For models that have a eager loaded their user_likes relationship.
+    // Pull the correct userLike
+    if (node.user_likes && Array.isArray(node.user_likes)) {
+      return node.user_likes.some((like) => like.personId === currentPersonId);
     }
 
     const existingLike = await this.model.findOne({

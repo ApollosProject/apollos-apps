@@ -15,7 +15,7 @@ const resolvers = {
     person: (root) => root.getPerson(),
     id: ({ apollosId }) => apollosId,
     isLiked: (root, args, { dataSources: { UserLike } }) =>
-      UserLike.userLikedNode({ nodeId: root.apollosId }),
+      UserLike.userLikedNode({ ...root, nodeId: root.apollosId }),
   },
   CommentListFeature: {
     id: ({ id }) => createGlobalId(id, 'CommentListFeature'),
