@@ -4,10 +4,17 @@ import { View, ScrollView } from 'react-native';
 import FollowList from '..';
 import Search from '../../inputs/Search';
 import styled from '../../styled';
+import { withTheme } from '../../theme';
 
 const SearchContainer = styled(({ theme }) => ({
   marginHorizontal: theme.sizing.baseUnit,
 }))(View);
+
+const StyledSearch = withTheme(({ theme }) => ({
+  screenBackgroundColor: theme.colors.background.paper,
+}))(Search);
+
+const FullHeightScrollView = styled({ height: '100%' })(ScrollView);
 
 function FollowListSearch({ onSearch, FollowListComponent, ...props }) {
   const [searchTimeout, setSearchTimeout] = useState();
@@ -30,7 +37,7 @@ function FollowListSearch({ onSearch, FollowListComponent, ...props }) {
   return (
     <>
       <SearchContainer>
-        <Search
+        <StyledSearch
           showCancelButton={false}
           onChangeText={(value) => {
             setSearch(value);
@@ -38,9 +45,9 @@ function FollowListSearch({ onSearch, FollowListComponent, ...props }) {
           }}
         />
       </SearchContainer>
-      <ScrollView>
+      <FullHeightScrollView>
         <FollowListComponent {...props} />
-      </ScrollView>
+      </FullHeightScrollView>
     </>
   );
 }

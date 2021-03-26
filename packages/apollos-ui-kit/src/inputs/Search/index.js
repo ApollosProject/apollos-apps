@@ -169,6 +169,7 @@ class Search extends PureComponent {
             onLayout={this.handleOnLayout}
             onPressClearSearchButton={this.handleOnPressClearSearchButton}
             showClearSearchButton={this.state.value !== ''}
+            screenBackgroundColor={screenBackgroundColor}
           />
         </Animated.View>
       </SearchWrapper>
