@@ -34,6 +34,21 @@ storiesOf('ui-kit/Comment', module)
       onPressActionMenu={() => Alert.alert('You pressed action menu!')}
     />
   ))
+  .add('isLiked', () => (
+    <Comment
+      profile={{
+        photo: { uri: 'https://picsum.photos/200' },
+        nickName: 'Albert Flores',
+      }}
+      subtitle={'Anderson Campus'}
+      commentText={
+        'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'
+      }
+      onPressLike={() => Alert.alert('You pressed like!')}
+      onPressActionMenu={() => Alert.alert('You pressed action menu!')}
+      isLiked
+    />
+  ))
   .add('without onPressLike', () => (
     <Comment
       profile={{
