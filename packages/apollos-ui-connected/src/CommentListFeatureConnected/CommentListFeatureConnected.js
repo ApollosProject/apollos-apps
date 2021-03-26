@@ -6,6 +6,8 @@ import { get } from 'lodash';
 import PropTypes from 'prop-types';
 import GET_COMMENT_LIST_FEATURE from './getCommentListFeature';
 import FLAG_COMMENT from './flagComment';
+import LIKE_COMMENT from './likeComment';
+import UNLIKE_COMMENT from './unlikeComment';
 import CommentListFeature from './CommentListFeature';
 
 const presentActionOption = ({ callback, actionText, title }) => {
@@ -82,6 +84,17 @@ function CommentListFeatureConnected({
     update: onFlagComment,
   });
 
+  const [likeComment] = useMutation(LIKE_COMMENT);
+  const [unlikeComment] = useMutation(UNLIKE_COMMENT);
+
+  const handlePressLike = ({ isLiked, id }) => {
+    if (isLiked) {
+      unlikeComment({ variables: { commentId: id } });
+    } else {
+      likeComment({ variables: { commentId: id } });
+    }
+  };
+
   const handlePressActionMenu = ({ id: commentId }) => {
     presentActionOption({
       callback: () => flagComment({ variables: { commentId } }),
@@ -99,7 +112,7 @@ function CommentListFeatureConnected({
       {...props}
       isLoading={loading || isLoading}
       onPressActionMenu={handlePressActionMenu}
-      onFlagComment
+      onPressLike={handlePressLike}
     />
   );
 }

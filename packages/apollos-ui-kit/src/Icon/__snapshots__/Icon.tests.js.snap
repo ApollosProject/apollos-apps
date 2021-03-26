@@ -9906,6 +9906,143 @@ Array [
 ]
 `;
 
+exports[`The ThumbsUpFilled icon renders correctly 1`] = `
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <RNSVGSvgView
+    align="xMidYMid"
+    bbHeight={32}
+    bbWidth={32}
+    fill="none"
+    height={32}
+    meetOrSlice={0}
+    minX={0}
+    minY={0}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        undefined,
+        null,
+        Object {
+          "flex": 0,
+          "height": 32,
+          "width": 32,
+        },
+      ]
+    }
+    vbHeight={25}
+    vbWidth={28}
+    width={32}
+  >
+    <RNSVGGroup
+      fill={null}
+      fillOpacity={1}
+      fillRule={1}
+      font={Object {}}
+      matrix={
+        Array [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+        ]
+      }
+      opacity={1}
+      originX={0}
+      originY={0}
+      propList={
+        Array [
+          "fill",
+        ]
+      }
+      rotation={0}
+      scaleX={1}
+      scaleY={1}
+      skewX={0}
+      skewY={0}
+      stroke={null}
+      strokeDasharray={null}
+      strokeDashoffset={null}
+      strokeLinecap={0}
+      strokeLinejoin={0}
+      strokeMiterlimit={4}
+      strokeOpacity={1}
+      strokeWidth={1}
+      vectorEffect={0}
+      x={0}
+      y={0}
+    >
+      <RNSVGPath
+        d="M26.9827 8.01453C26.7011 7.69571 26.355 7.44039 25.9672 7.26549C25.5795 7.09058 25.159 7.00009 24.7336 7H17.9993V5C17.9978 3.67438 17.4705 2.40349 16.5331 1.46613C15.5958 0.528774 14.3249 0.00150599 12.9993 3.08036e-09C12.8136 -1.45722e-05 12.6315 0.0516952 12.4735 0.149333C12.3156 0.246971 12.1879 0.386678 12.1049 0.552795L7.38122 10H1.99927C1.46902 10.0006 0.960665 10.2115 0.585724 10.5865C0.210782 10.9614 -0.000125999 11.4698 -0.000732422 12V23C-0.000125999 23.5302 0.210782 24.0386 0.585724 24.4135C0.960665 24.7885 1.46902 24.9994 1.99927 25H23.2336C23.9646 24.999 24.6701 24.7315 25.218 24.2478C25.766 23.7641 26.1189 23.0972 26.2106 22.3721L27.7106 10.3721C27.7632 9.94997 27.7255 9.52149 27.6 9.11505C27.4746 8.70861 27.2641 8.33348 26.9827 8.01453ZM1.99927 12H6.99927V23H1.99927V12Z"
+        fill={
+          Array [
+            0,
+            4281348144,
+          ]
+        }
+        fillOpacity={1}
+        fillRule={1}
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        opacity={1}
+        originX={0}
+        originY={0}
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+        rotation={0}
+        scaleX={1}
+        scaleY={1}
+        skewX={0}
+        skewY={0}
+        stroke={null}
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={1}
+        vectorEffect={0}
+        x={0}
+        y={0}
+      />
+    </RNSVGGroup>
+  </RNSVGSvgView>,
+]
+`;
+
 exports[`The Time icon renders correctly 1`] = `
 Array [
   <View

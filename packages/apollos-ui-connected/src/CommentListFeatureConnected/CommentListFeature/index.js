@@ -12,6 +12,7 @@ const CommentListFeature = ({ comments, onPressLike, onPressActionMenu }) => (
         subtitle={item.person?.campus?.name}
         profile={item.person}
         key={item.id}
+        isLiked={item.isLiked}
         commentText={item.text}
       />
     )}

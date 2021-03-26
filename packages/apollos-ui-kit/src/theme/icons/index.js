@@ -63,6 +63,7 @@ export SkipNext from './SkipNext';
 export SkipPrevious from './SkipPrevious';
 export Text from './Text';
 export ThumbsUp from './ThumbsUp';
+export ThumbsUpFilled from './ThumbsUpFilled';
 export Time from './Time';
 export Umbrella from './Umbrella';
 export Video from './Video';
