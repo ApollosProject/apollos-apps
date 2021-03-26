@@ -204,6 +204,26 @@ describe('Apollos Postgres People DataSource', () => {
     expect(updatedPerson.firstName).toBe('Milton');
   });
 
+  it('update a users gender', async () => {
+    await peopleDataSource.model.create({
+      originId: '1',
+      originType: 'rock',
+      firstName: 'John',
+      lastName: 'Williams',
+    });
+
+    personId = 1;
+    const person = await peopleDataSource.updateProfile([
+      { field: 'Gender', value: 'Male' }, // lowercase, like the gql value
+    ]);
+
+    expect(person.gender).toBe('MALE'); // uppercase, like the postgres enum
+
+    const updatedPerson = await peopleDataSource.getFromId(person.id);
+
+    expect(updatedPerson.gender).toBe('MALE');
+  });
+
   it("uploads a user's profile picture", async () => {
     await peopleDataSource.model.create({
       originId: '1',
