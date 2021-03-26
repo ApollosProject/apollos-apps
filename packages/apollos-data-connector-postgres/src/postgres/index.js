@@ -135,10 +135,11 @@ const defineModel = ({
       ...sequelizeOptions,
       hooks: {
         ...(sequelizeOptions?.hooks || {}),
-        beforeValidate: (instance) => {
+        beforeValidate: (instance, options) => {
           if (resolveType && !instance.apollosType) {
             instance.apollosType = resolveType(instance);
           }
+          sequelizeOptions?.hooks?.beforeValidate?.(instance, options);
         },
         afterCreate: async (instance, options) => {
           if (!instance.apollosId) {
