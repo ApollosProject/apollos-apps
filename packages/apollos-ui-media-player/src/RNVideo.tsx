@@ -23,6 +23,10 @@ const Container = styled(
   'ApollosPlayer.RNVideoPresentation.Container'
 )(View);
 
+interface VideoExpanded extends Video {
+  setNativeProps: (arg0: any) => void;
+}
+
 const RNVideoPresentation = ({
   useNativeFullscreeniOS,
 }: {
@@ -93,7 +97,7 @@ const RNVideoPresentation = ({
     updatePlayhead(playheadRef.current);
   };
 
-  const videoRef = React.useRef<Video>(null);
+  const videoRef = React.useRef<VideoExpanded>(null);
 
   const skip = React.useCallback(
     (skipBy: number) => {
@@ -136,6 +140,14 @@ const RNVideoPresentation = ({
       }
     }
   }, [pictureMode, useNativeFullscreeniOS, pause]);
+
+
+  React.useEffect(() => {
+    return () => {
+      videoRef?.current?.setNativeProps({ paused: true, pictureInPicture: false });
+    }
+  }, [])
+
 
   return (
     <Container>
