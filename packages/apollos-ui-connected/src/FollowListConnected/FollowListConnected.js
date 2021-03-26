@@ -15,6 +15,14 @@ const FollowListConnected = ({ Component, ...props }) => {
   const handleFollow = (id) => {
     return requestFollowPerson({
       variables: { personId: id },
+      optimisticResponse: {
+        __typename: 'Mutation',
+        requestFollow: {
+          __typename: 'Follow',
+          state: 'REQUESTED',
+          id: null,
+        },
+      },
       // In a perfect world, we wouldn't need this update.
       // However, since in an initial state, there is likely not an existing person.currentUserFollowing field
       // we have to manually add that field to the user who we are requesting to follow.
