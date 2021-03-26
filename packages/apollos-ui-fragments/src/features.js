@@ -240,6 +240,7 @@ const ADD_COMMENT_FEATURE_FRAGMENT = gql`
 
     addPrompt
     initialPrompt
+    isLiked
 
     relatedNode {
       id
@@ -254,6 +255,7 @@ const COMMENT_LIST_FEATURE_FRAGMENT = gql`
     comments {
       id
       text
+      isLiked
       person {
         id
         nickName
