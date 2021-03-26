@@ -23,6 +23,16 @@ const createModel = defineModel({
       defaultValue: false,
     },
   },
+  sequelizeOptions: {
+    hooks: {
+      beforeValidate: (person) => {
+        if (person.gender) {
+          // eslint-disable-next-line no-param-reassign
+          person.gender = person.gender.toUpperCase();
+        }
+      },
+    },
+  },
 });
 
 export { createModel };
