@@ -27,6 +27,7 @@ const createModel = defineModel({
     hooks: {
       beforeValidate: (person) => {
         if (person.gender) {
+          // eslint-disable-next-line no-param-reassign
           person.gender = person.gender.toUpperCase();
         }
       },
