@@ -23,6 +23,15 @@ const createModel = defineModel({
       defaultValue: false,
     },
   },
+  sequelizeOptions: {
+    hooks: {
+      beforeValidate: (person) => {
+        if (person.gender) {
+          person.gender = person.gender.toUpperCase();
+        }
+      },
+    },
+  },
 });
 
 export { createModel };
