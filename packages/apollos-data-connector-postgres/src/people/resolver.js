@@ -1,6 +1,6 @@
 import moment from 'moment-timezone';
-// import { createGlobalId } from '@apollosproject/server-core';
-// import ApollosConfig from '@apollosproject/config';
+import { withEdgePagination } from '@apollosproject/server-core';
+import { startCase, toLower } from 'lodash';
 import { enforceCurrentUser } from '../utils';
 
 export default {
@@ -20,9 +20,17 @@ export default {
       birthDate ? moment(birthDate).toJSON() : null
     ),
     email: enforceCurrentUser(({ email }) => email),
+    nickName: ({ firstName, lastName }) => `${firstName} ${lastName}`,
+    gender: ({ gender }) => startCase(toLower(gender)),
+  },
+  SearchPeopleResultsConnection: {
+    edges: (edges) => edges,
+    pageInfo: (edges) => withEdgePagination({ edges }),
   },
   Query: {
     suggestedFollows: async (root, args, { dataSources: { Follow } }) =>
       Follow.getStaticSuggestedFollowsForCurrentPerson(),
+    searchPeople: async (root, input, { dataSources }) =>
+      dataSources.Person.byPaginatedQuery(input),
   },
 };

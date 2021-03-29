@@ -1,352 +1,365 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The AvatarCloud component should accept a maxAvatarWidth 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "flex": 1,
-      "justifyContent": "center",
-    }
-  }
->
+Array [
   <View
-    avatarWidth="10%"
-    getXYPositions={
-      Object {
-        "left": "11.11111101%",
-        "top": "11.11111101%",
-      }
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-    order={0}
+  />,
+  <View
     style={
       Object {
-        "aspectRatio": 1,
-        "left": "11.11111101%",
-        "position": "absolute",
-        "top": "11.11111101%",
-        "width": "10%",
-        "zIndex": 0,
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
       }
     }
   >
-    <Image
-      blurRadius={3}
-      fadeDuration={250}
-      onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/200?1",
-            "url": "https://picsum.photos/200?1",
-          },
-        ]
+    <View
+      avatarWidth="10%"
+      getXYPositions={
+        Object {
+          "left": "11.11111101%",
+          "top": "11.11111101%",
+        }
       }
+      order={0}
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 1000,
-          "width": "100%",
+          "left": "11.11111101%",
+          "position": "absolute",
+          "top": "11.11111101%",
+          "width": "10%",
+          "zIndex": 0,
         }
       }
-    />
-  </View>
-  <View
-    avatarWidth="10%"
-    getXYPositions={
-      Object {
-        "left": "11.11111101%",
-        "top": "11.11111101%",
-      }
-    }
-    order={1}
-    style={
-      Object {
-        "aspectRatio": 1,
-        "left": "11.11111101%",
-        "position": "absolute",
-        "top": "11.11111101%",
-        "width": "10%",
-        "zIndex": 1,
-      }
-    }
-  >
-    <Image
-      blurRadius={2}
-      fadeDuration={250}
-      onLoad={[Function]}
-      source={
-        Array [
+    >
+      <Image
+        blurRadius={3}
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/200?1",
+              "url": "https://picsum.photos/200?1",
+            },
+          ]
+        }
+        style={
           Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/200?2",
-            "url": "https://picsum.photos/200?2",
-          },
-        ]
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <View
+      avatarWidth="10%"
+      getXYPositions={
+        Object {
+          "left": "11.11111101%",
+          "top": "11.11111101%",
+        }
       }
+      order={1}
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 1000,
-          "width": "100%",
+          "left": "11.11111101%",
+          "position": "absolute",
+          "top": "11.11111101%",
+          "width": "10%",
+          "zIndex": 1,
         }
       }
-    />
-  </View>
-  <View
-    avatarWidth="10%"
-    getXYPositions={
-      Object {
-        "left": "11.11111101%",
-        "top": "11.11111101%",
-      }
-    }
-    order={2}
-    style={
-      Object {
-        "aspectRatio": 1,
-        "left": "11.11111101%",
-        "position": "absolute",
-        "top": "11.11111101%",
-        "width": "10%",
-        "zIndex": 2,
-      }
-    }
-  >
-    <Image
-      blurRadius={1}
-      fadeDuration={250}
-      onLoad={[Function]}
-      source={
-        Array [
+    >
+      <Image
+        blurRadius={2}
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/200?2",
+              "url": "https://picsum.photos/200?2",
+            },
+          ]
+        }
+        style={
           Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/200?3",
-            "url": "https://picsum.photos/200?3",
-          },
-        ]
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <View
+      avatarWidth="10%"
+      getXYPositions={
+        Object {
+          "left": "11.11111101%",
+          "top": "11.11111101%",
+        }
       }
+      order={2}
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 1000,
-          "width": "100%",
+          "left": "11.11111101%",
+          "position": "absolute",
+          "top": "11.11111101%",
+          "width": "10%",
+          "zIndex": 2,
         }
       }
-    />
-  </View>
-</View>
+    >
+      <Image
+        blurRadius={1}
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/200?3",
+              "url": "https://picsum.photos/200?3",
+            },
+          ]
+        }
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+  </View>,
+]
 `;
 
 exports[`The AvatarCloud component should accept a minAvatarWidth 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "flex": 1,
-      "justifyContent": "center",
-    }
-  }
->
+Array [
   <View
-    avatarWidth="90%"
-    getXYPositions={
-      Object {
-        "left": "1.2345678899999997%",
-        "top": "1.2345678899999997%",
-      }
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-    order={0}
+  />,
+  <View
     style={
       Object {
-        "aspectRatio": 1,
-        "left": "1.2345678899999997%",
-        "position": "absolute",
-        "top": "1.2345678899999997%",
-        "width": "90%",
-        "zIndex": 0,
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
       }
     }
   >
-    <Image
-      blurRadius={3}
-      fadeDuration={250}
-      onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/200?1",
-            "url": "https://picsum.photos/200?1",
-          },
-        ]
+    <View
+      avatarWidth="90%"
+      getXYPositions={
+        Object {
+          "left": "1.2345678899999997%",
+          "top": "1.2345678899999997%",
+        }
       }
+      order={0}
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 1000,
-          "width": "100%",
+          "left": "1.2345678899999997%",
+          "position": "absolute",
+          "top": "1.2345678899999997%",
+          "width": "90%",
+          "zIndex": 0,
         }
       }
-    />
-  </View>
-  <View
-    avatarWidth="90%"
-    getXYPositions={
-      Object {
-        "left": "1.2345678899999997%",
-        "top": "1.2345678899999997%",
-      }
-    }
-    order={1}
-    style={
-      Object {
-        "aspectRatio": 1,
-        "left": "1.2345678899999997%",
-        "position": "absolute",
-        "top": "1.2345678899999997%",
-        "width": "90%",
-        "zIndex": 1,
-      }
-    }
-  >
-    <Image
-      blurRadius={2}
-      fadeDuration={250}
-      onLoad={[Function]}
-      source={
-        Array [
+    >
+      <Image
+        blurRadius={3}
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/200?1",
+              "url": "https://picsum.photos/200?1",
+            },
+          ]
+        }
+        style={
           Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/200?2",
-            "url": "https://picsum.photos/200?2",
-          },
-        ]
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <View
+      avatarWidth="90%"
+      getXYPositions={
+        Object {
+          "left": "1.2345678899999997%",
+          "top": "1.2345678899999997%",
+        }
       }
+      order={1}
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 1000,
-          "width": "100%",
+          "left": "1.2345678899999997%",
+          "position": "absolute",
+          "top": "1.2345678899999997%",
+          "width": "90%",
+          "zIndex": 1,
         }
       }
-    />
-  </View>
-  <View
-    avatarWidth="90%"
-    getXYPositions={
-      Object {
-        "left": "1.2345678899999997%",
-        "top": "1.2345678899999997%",
-      }
-    }
-    order={2}
-    style={
-      Object {
-        "aspectRatio": 1,
-        "left": "1.2345678899999997%",
-        "position": "absolute",
-        "top": "1.2345678899999997%",
-        "width": "90%",
-        "zIndex": 2,
-      }
-    }
-  >
-    <Image
-      blurRadius={1}
-      fadeDuration={250}
-      onLoad={[Function]}
-      source={
-        Array [
+    >
+      <Image
+        blurRadius={2}
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/200?2",
+              "url": "https://picsum.photos/200?2",
+            },
+          ]
+        }
+        style={
           Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/200?3",
-            "url": "https://picsum.photos/200?3",
-          },
-        ]
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <View
+      avatarWidth="90%"
+      getXYPositions={
+        Object {
+          "left": "1.2345678899999997%",
+          "top": "1.2345678899999997%",
+        }
       }
+      order={2}
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 1000,
-          "width": "100%",
+          "left": "1.2345678899999997%",
+          "position": "absolute",
+          "top": "1.2345678899999997%",
+          "width": "90%",
+          "zIndex": 2,
         }
       }
-    />
-  </View>
-</View>
+    >
+      <Image
+        blurRadius={1}
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/200?3",
+              "url": "https://picsum.photos/200?3",
+            },
+          ]
+        }
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+  </View>,
+]
 `;
 
 exports[`The AvatarCloud component should accept a primaryAvatar 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "flex": 1,
-      "justifyContent": "center",
-    }
-  }
->
-  <Image
-    avatarWidth="50%"
-    fadeDuration={250}
-    onLoad={[Function]}
-    source={
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
       Array [
         Object {
-          "cache": "force-cache",
-          "uri": "https://picsum.photos/200",
-          "url": "https://picsum.photos/200",
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
         },
+        Object {},
       ]
     }
-    style={
-      Object {
-        "aspectRatio": 1,
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 1000,
-        "width": "50%",
-        "zIndex": 100,
-      }
-    }
-  />
+  />,
   <View
-    avatarWidth="10%"
-    getXYPositions={
-      Object {
-        "left": "62.848243487516356%",
-        "top": "62.50543356819047%",
-      }
-    }
-    order={0}
     style={
       Object {
-        "aspectRatio": 1,
-        "left": "62.848243487516356%",
-        "position": "absolute",
-        "top": "62.50543356819047%",
-        "width": "10%",
-        "zIndex": 0,
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
       }
     }
   >
     <Image
-      blurRadius={3}
+      avatarWidth="50%"
       fadeDuration={250}
       onLoad={[Function]}
       source={
         Array [
           Object {
             "cache": "force-cache",
-            "uri": "https://picsum.photos/200?1",
-            "url": "https://picsum.photos/200?1",
+            "uri": "https://picsum.photos/200",
+            "url": "https://picsum.photos/200",
           },
         ]
       }
@@ -355,298 +368,335 @@ exports[`The AvatarCloud component should accept a primaryAvatar 1`] = `
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 1000,
-          "width": "100%",
+          "width": "50%",
+          "zIndex": 100,
         }
       }
     />
-  </View>
-  <View
-    avatarWidth="10%"
-    getXYPositions={
-      Object {
-        "left": "9.760079860170563%",
-        "top": "54.809702499171244%",
+    <View
+      avatarWidth="10%"
+      getXYPositions={
+        Object {
+          "left": "62.848243487516356%",
+          "top": "62.50543356819047%",
+        }
       }
-    }
-    order={1}
-    style={
-      Object {
-        "aspectRatio": 1,
-        "left": "9.760079860170563%",
-        "position": "absolute",
-        "top": "54.809702499171244%",
-        "width": "10%",
-        "zIndex": 1,
-      }
-    }
-  >
-    <Image
-      blurRadius={2}
-      fadeDuration={250}
-      onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/200?2",
-            "url": "https://picsum.photos/200?2",
-          },
-        ]
-      }
+      order={0}
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 1000,
-          "width": "100%",
+          "left": "62.848243487516356%",
+          "position": "absolute",
+          "top": "62.50543356819047%",
+          "width": "10%",
+          "zIndex": 0,
         }
       }
-    />
-  </View>
-  <View
-    avatarWidth="10%"
-    getXYPositions={
-      Object {
-        "left": "53.13154976726397%",
-        "top": "13.431385215129293%",
-      }
-    }
-    order={2}
-    style={
-      Object {
-        "aspectRatio": 1,
-        "left": "53.13154976726397%",
-        "position": "absolute",
-        "top": "13.431385215129293%",
-        "width": "10%",
-        "zIndex": 2,
-      }
-    }
-  >
-    <Image
-      blurRadius={1}
-      fadeDuration={250}
-      onLoad={[Function]}
-      source={
-        Array [
+    >
+      <Image
+        blurRadius={3}
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/200?1",
+              "url": "https://picsum.photos/200?1",
+            },
+          ]
+        }
+        style={
           Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/200?3",
-            "url": "https://picsum.photos/200?3",
-          },
-        ]
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <View
+      avatarWidth="10%"
+      getXYPositions={
+        Object {
+          "left": "9.760079860170563%",
+          "top": "54.809702499171244%",
+        }
       }
+      order={1}
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 1000,
-          "width": "100%",
+          "left": "9.760079860170563%",
+          "position": "absolute",
+          "top": "54.809702499171244%",
+          "width": "10%",
+          "zIndex": 1,
         }
       }
-    />
-  </View>
-</View>
+    >
+      <Image
+        blurRadius={2}
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/200?2",
+              "url": "https://picsum.photos/200?2",
+            },
+          ]
+        }
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <View
+      avatarWidth="10%"
+      getXYPositions={
+        Object {
+          "left": "53.13154976726397%",
+          "top": "13.431385215129293%",
+        }
+      }
+      order={2}
+      style={
+        Object {
+          "aspectRatio": 1,
+          "left": "53.13154976726397%",
+          "position": "absolute",
+          "top": "13.431385215129293%",
+          "width": "10%",
+          "zIndex": 2,
+        }
+      }
+    >
+      <Image
+        blurRadius={1}
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/200?3",
+              "url": "https://picsum.photos/200?3",
+            },
+          ]
+        }
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+  </View>,
+]
 `;
 
 exports[`The AvatarCloud component should render 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "flex": 1,
-      "justifyContent": "center",
-    }
-  }
->
+Array [
   <View
-    avatarWidth="10%"
-    getXYPositions={
-      Object {
-        "left": "11.11111101%",
-        "top": "11.11111101%",
-      }
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-    order={0}
+  />,
+  <View
     style={
       Object {
-        "aspectRatio": 1,
-        "left": "11.11111101%",
-        "position": "absolute",
-        "top": "11.11111101%",
-        "width": "10%",
-        "zIndex": 0,
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
       }
     }
   >
-    <Image
-      blurRadius={3}
-      fadeDuration={250}
-      onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/200?1",
-            "url": "https://picsum.photos/200?1",
-          },
-        ]
+    <View
+      avatarWidth="10%"
+      getXYPositions={
+        Object {
+          "left": "11.11111101%",
+          "top": "11.11111101%",
+        }
       }
+      order={0}
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 1000,
-          "width": "100%",
+          "left": "11.11111101%",
+          "position": "absolute",
+          "top": "11.11111101%",
+          "width": "10%",
+          "zIndex": 0,
         }
       }
-    />
-  </View>
-  <View
-    avatarWidth="10%"
-    getXYPositions={
-      Object {
-        "left": "11.11111101%",
-        "top": "11.11111101%",
-      }
-    }
-    order={1}
-    style={
-      Object {
-        "aspectRatio": 1,
-        "left": "11.11111101%",
-        "position": "absolute",
-        "top": "11.11111101%",
-        "width": "10%",
-        "zIndex": 1,
-      }
-    }
-  >
-    <Image
-      blurRadius={2}
-      fadeDuration={250}
-      onLoad={[Function]}
-      source={
-        Array [
+    >
+      <Image
+        blurRadius={3}
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/200?1",
+              "url": "https://picsum.photos/200?1",
+            },
+          ]
+        }
+        style={
           Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/200?2",
-            "url": "https://picsum.photos/200?2",
-          },
-        ]
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <View
+      avatarWidth="10%"
+      getXYPositions={
+        Object {
+          "left": "11.11111101%",
+          "top": "11.11111101%",
+        }
       }
+      order={1}
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 1000,
-          "width": "100%",
+          "left": "11.11111101%",
+          "position": "absolute",
+          "top": "11.11111101%",
+          "width": "10%",
+          "zIndex": 1,
         }
       }
-    />
-  </View>
-  <View
-    avatarWidth="10%"
-    getXYPositions={
-      Object {
-        "left": "11.11111101%",
-        "top": "11.11111101%",
-      }
-    }
-    order={2}
-    style={
-      Object {
-        "aspectRatio": 1,
-        "left": "11.11111101%",
-        "position": "absolute",
-        "top": "11.11111101%",
-        "width": "10%",
-        "zIndex": 2,
-      }
-    }
-  >
-    <Image
-      blurRadius={1}
-      fadeDuration={250}
-      onLoad={[Function]}
-      source={
-        Array [
+    >
+      <Image
+        blurRadius={2}
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/200?2",
+              "url": "https://picsum.photos/200?2",
+            },
+          ]
+        }
+        style={
           Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/200?3",
-            "url": "https://picsum.photos/200?3",
-          },
-        ]
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <View
+      avatarWidth="10%"
+      getXYPositions={
+        Object {
+          "left": "11.11111101%",
+          "top": "11.11111101%",
+        }
       }
+      order={2}
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 1000,
-          "width": "100%",
+          "left": "11.11111101%",
+          "position": "absolute",
+          "top": "11.11111101%",
+          "width": "10%",
+          "zIndex": 2,
         }
       }
-    />
-  </View>
-</View>
+    >
+      <Image
+        blurRadius={1}
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/200?3",
+              "url": "https://picsum.photos/200?3",
+            },
+          ]
+        }
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+  </View>,
+]
 `;
 
 exports[`The AvatarCloud component should render as isLoading 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "flex": 1,
-      "justifyContent": "center",
-    }
-  }
->
-  <Image
-    avatarWidth="50%"
-    fadeDuration={250}
-    isLoading={true}
-    onLoad={[Function]}
-    source={
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
       Array [
         Object {
-          "cache": "force-cache",
-          "uri": "",
-          "url": "",
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
         },
+        Object {},
       ]
     }
-    style={
-      Object {
-        "aspectRatio": 1,
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 1000,
-        "width": "50%",
-        "zIndex": 100,
-      }
-    }
-  />
+  />,
   <View
-    avatarWidth="10%"
-    getXYPositions={
-      Object {
-        "left": "11.11111101%",
-        "top": "11.11111101%",
-      }
-    }
-    order={0}
     style={
       Object {
-        "aspectRatio": 1,
-        "left": "11.11111101%",
-        "position": "absolute",
-        "top": "11.11111101%",
-        "width": "10%",
-        "zIndex": 0,
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
       }
     }
   >
     <Image
-      blurRadius={3}
+      avatarWidth="50%"
       fadeDuration={250}
       isLoading={true}
       onLoad={[Function]}
@@ -664,382 +714,465 @@ exports[`The AvatarCloud component should render as isLoading 1`] = `
           "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "borderRadius": 1000,
-          "width": "100%",
+          "width": "50%",
+          "zIndex": 100,
         }
       }
     />
-  </View>
-  <View
-    avatarWidth="10%"
-    getXYPositions={
-      Object {
-        "left": "11.11111101%",
-        "top": "11.11111101%",
+    <View
+      avatarWidth="10%"
+      getXYPositions={
+        Object {
+          "left": "11.11111101%",
+          "top": "11.11111101%",
+        }
       }
-    }
-    order={1}
-    style={
-      Object {
-        "aspectRatio": 1,
-        "left": "11.11111101%",
-        "position": "absolute",
-        "top": "11.11111101%",
-        "width": "10%",
-        "zIndex": 1,
-      }
-    }
-  >
-    <Image
-      blurRadius={2}
-      fadeDuration={250}
-      isLoading={true}
-      onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "",
-            "url": "",
-          },
-        ]
-      }
+      order={0}
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 1000,
-          "width": "100%",
+          "left": "11.11111101%",
+          "position": "absolute",
+          "top": "11.11111101%",
+          "width": "10%",
+          "zIndex": 0,
         }
       }
-    />
-  </View>
-  <View
-    avatarWidth="10%"
-    getXYPositions={
-      Object {
-        "left": "11.11111101%",
-        "top": "11.11111101%",
-      }
-    }
-    order={2}
-    style={
-      Object {
-        "aspectRatio": 1,
-        "left": "11.11111101%",
-        "position": "absolute",
-        "top": "11.11111101%",
-        "width": "10%",
-        "zIndex": 2,
-      }
-    }
-  >
-    <Image
-      blurRadius={1}
-      fadeDuration={250}
-      isLoading={true}
-      onLoad={[Function]}
-      source={
-        Array [
+    >
+      <Image
+        blurRadius={3}
+        fadeDuration={250}
+        isLoading={true}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "",
+              "url": "",
+            },
+          ]
+        }
+        style={
           Object {
-            "cache": "force-cache",
-            "uri": "",
-            "url": "",
-          },
-        ]
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <View
+      avatarWidth="10%"
+      getXYPositions={
+        Object {
+          "left": "11.11111101%",
+          "top": "11.11111101%",
+        }
       }
+      order={1}
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 1000,
-          "width": "100%",
+          "left": "11.11111101%",
+          "position": "absolute",
+          "top": "11.11111101%",
+          "width": "10%",
+          "zIndex": 1,
         }
       }
-    />
-  </View>
-</View>
+    >
+      <Image
+        blurRadius={2}
+        fadeDuration={250}
+        isLoading={true}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "",
+              "url": "",
+            },
+          ]
+        }
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <View
+      avatarWidth="10%"
+      getXYPositions={
+        Object {
+          "left": "11.11111101%",
+          "top": "11.11111101%",
+        }
+      }
+      order={2}
+      style={
+        Object {
+          "aspectRatio": 1,
+          "left": "11.11111101%",
+          "position": "absolute",
+          "top": "11.11111101%",
+          "width": "10%",
+          "zIndex": 2,
+        }
+      }
+    >
+      <Image
+        blurRadius={1}
+        fadeDuration={250}
+        isLoading={true}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "",
+              "url": "",
+            },
+          ]
+        }
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+  </View>,
+]
 `;
 
 exports[`The AvatarCloud component should render as radial 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "flex": 1,
-      "justifyContent": "center",
-    }
-  }
->
+Array [
   <View
-    avatarWidth="10%"
-    getXYPositions={
-      Object {
-        "left": "45.48718103626949%",
-        "top": "45.4778237854085%",
-      }
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-    order={0}
+  />,
+  <View
     style={
       Object {
-        "aspectRatio": 1,
-        "left": "45.48718103626949%",
-        "position": "absolute",
-        "top": "45.4778237854085%",
-        "width": "10%",
-        "zIndex": 0,
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
       }
     }
   >
-    <Image
-      blurRadius={3}
-      fadeDuration={250}
-      onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/200?1",
-            "url": "https://picsum.photos/200?1",
-          },
-        ]
+    <View
+      avatarWidth="10%"
+      getXYPositions={
+        Object {
+          "left": "45.48718103626949%",
+          "top": "45.4778237854085%",
+        }
       }
+      order={0}
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 1000,
-          "width": "100%",
+          "left": "45.48718103626949%",
+          "position": "absolute",
+          "top": "45.4778237854085%",
+          "width": "10%",
+          "zIndex": 0,
         }
       }
-    />
-  </View>
-  <View
-    avatarWidth="10%"
-    getXYPositions={
-      Object {
-        "left": "9.760079860170563%",
-        "top": "54.809702499171244%",
-      }
-    }
-    order={1}
-    style={
-      Object {
-        "aspectRatio": 1,
-        "left": "9.760079860170563%",
-        "position": "absolute",
-        "top": "54.809702499171244%",
-        "width": "10%",
-        "zIndex": 1,
-      }
-    }
-  >
-    <Image
-      blurRadius={2}
-      fadeDuration={250}
-      onLoad={[Function]}
-      source={
-        Array [
+    >
+      <Image
+        blurRadius={3}
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/200?1",
+              "url": "https://picsum.photos/200?1",
+            },
+          ]
+        }
+        style={
           Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/200?2",
-            "url": "https://picsum.photos/200?2",
-          },
-        ]
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <View
+      avatarWidth="10%"
+      getXYPositions={
+        Object {
+          "left": "9.760079860170563%",
+          "top": "54.809702499171244%",
+        }
       }
+      order={1}
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 1000,
-          "width": "100%",
+          "left": "9.760079860170563%",
+          "position": "absolute",
+          "top": "54.809702499171244%",
+          "width": "10%",
+          "zIndex": 1,
         }
       }
-    />
-  </View>
-  <View
-    avatarWidth="10%"
-    getXYPositions={
-      Object {
-        "left": "53.13154976726397%",
-        "top": "13.431385215129293%",
-      }
-    }
-    order={2}
-    style={
-      Object {
-        "aspectRatio": 1,
-        "left": "53.13154976726397%",
-        "position": "absolute",
-        "top": "13.431385215129293%",
-        "width": "10%",
-        "zIndex": 2,
-      }
-    }
-  >
-    <Image
-      blurRadius={1}
-      fadeDuration={250}
-      onLoad={[Function]}
-      source={
-        Array [
+    >
+      <Image
+        blurRadius={2}
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/200?2",
+              "url": "https://picsum.photos/200?2",
+            },
+          ]
+        }
+        style={
           Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/200?3",
-            "url": "https://picsum.photos/200?3",
-          },
-        ]
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <View
+      avatarWidth="10%"
+      getXYPositions={
+        Object {
+          "left": "53.13154976726397%",
+          "top": "13.431385215129293%",
+        }
       }
+      order={2}
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 1000,
-          "width": "100%",
+          "left": "53.13154976726397%",
+          "position": "absolute",
+          "top": "13.431385215129293%",
+          "width": "10%",
+          "zIndex": 2,
         }
       }
-    />
-  </View>
-</View>
+    >
+      <Image
+        blurRadius={1}
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/200?3",
+              "url": "https://picsum.photos/200?3",
+            },
+          ]
+        }
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+  </View>,
+]
 `;
 
 exports[`The AvatarCloud component should render without blur effect 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "flex": 1,
-      "justifyContent": "center",
-    }
-  }
->
+Array [
   <View
-    avatarWidth="10%"
-    getXYPositions={
-      Object {
-        "left": "11.11111101%",
-        "top": "11.11111101%",
-      }
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-    order={0}
+  />,
+  <View
     style={
       Object {
-        "aspectRatio": 1,
-        "left": "11.11111101%",
-        "position": "absolute",
-        "top": "11.11111101%",
-        "width": "10%",
-        "zIndex": 0,
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
       }
     }
   >
-    <Image
-      blurRadius={0}
-      fadeDuration={250}
-      onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/200?1",
-            "url": "https://picsum.photos/200?1",
-          },
-        ]
+    <View
+      avatarWidth="10%"
+      getXYPositions={
+        Object {
+          "left": "11.11111101%",
+          "top": "11.11111101%",
+        }
       }
+      order={0}
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 1000,
-          "width": "100%",
+          "left": "11.11111101%",
+          "position": "absolute",
+          "top": "11.11111101%",
+          "width": "10%",
+          "zIndex": 0,
         }
       }
-    />
-  </View>
-  <View
-    avatarWidth="10%"
-    getXYPositions={
-      Object {
-        "left": "11.11111101%",
-        "top": "11.11111101%",
-      }
-    }
-    order={1}
-    style={
-      Object {
-        "aspectRatio": 1,
-        "left": "11.11111101%",
-        "position": "absolute",
-        "top": "11.11111101%",
-        "width": "10%",
-        "zIndex": 1,
-      }
-    }
-  >
-    <Image
-      blurRadius={0}
-      fadeDuration={250}
-      onLoad={[Function]}
-      source={
-        Array [
+    >
+      <Image
+        blurRadius={0}
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/200?1",
+              "url": "https://picsum.photos/200?1",
+            },
+          ]
+        }
+        style={
           Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/200?2",
-            "url": "https://picsum.photos/200?2",
-          },
-        ]
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <View
+      avatarWidth="10%"
+      getXYPositions={
+        Object {
+          "left": "11.11111101%",
+          "top": "11.11111101%",
+        }
       }
+      order={1}
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 1000,
-          "width": "100%",
+          "left": "11.11111101%",
+          "position": "absolute",
+          "top": "11.11111101%",
+          "width": "10%",
+          "zIndex": 1,
         }
       }
-    />
-  </View>
-  <View
-    avatarWidth="10%"
-    getXYPositions={
-      Object {
-        "left": "11.11111101%",
-        "top": "11.11111101%",
-      }
-    }
-    order={2}
-    style={
-      Object {
-        "aspectRatio": 1,
-        "left": "11.11111101%",
-        "position": "absolute",
-        "top": "11.11111101%",
-        "width": "10%",
-        "zIndex": 2,
-      }
-    }
-  >
-    <Image
-      blurRadius={0}
-      fadeDuration={250}
-      onLoad={[Function]}
-      source={
-        Array [
+    >
+      <Image
+        blurRadius={0}
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/200?2",
+              "url": "https://picsum.photos/200?2",
+            },
+          ]
+        }
+        style={
           Object {
-            "cache": "force-cache",
-            "uri": "https://picsum.photos/200?3",
-            "url": "https://picsum.photos/200?3",
-          },
-        ]
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <View
+      avatarWidth="10%"
+      getXYPositions={
+        Object {
+          "left": "11.11111101%",
+          "top": "11.11111101%",
+        }
       }
+      order={2}
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 1000,
-          "width": "100%",
+          "left": "11.11111101%",
+          "position": "absolute",
+          "top": "11.11111101%",
+          "width": "10%",
+          "zIndex": 2,
         }
       }
-    />
-  </View>
-</View>
+    >
+      <Image
+        blurRadius={0}
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/200?3",
+              "url": "https://picsum.photos/200?3",
+            },
+          ]
+        }
+        style={
+          Object {
+            "aspectRatio": 1,
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 1000,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+  </View>,
+]
 `;

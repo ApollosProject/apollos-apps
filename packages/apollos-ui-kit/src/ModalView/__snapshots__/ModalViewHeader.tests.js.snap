@@ -1,294 +1,290 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The ModalView/ModalViewHeader component should accept an onBack function 1`] = `
-<View
-  pointerEvents="box-none"
-  style={
-    Object {
-      "flexDirection": "row",
-      "justifyContent": "space-between",
-      "paddingHorizontal": 16,
-      "paddingVertical": 16,
-      "position": "absolute",
-      "top": 0,
-      "width": "100%",
-      "zIndex": 999,
-    }
-  }
->
-  <RNSVGSvgView
-    align="xMidYMid"
-    bbHeight={32}
-    bbWidth={32}
-    fill="#303030"
-    height={32}
-    meetOrSlice={0}
-    minX={0}
-    minY={0}
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
     style={
       Array [
         Object {
-          "backgroundColor": "transparent",
-          "borderWidth": 0,
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
         },
-        undefined,
-        null,
-        Object {
-          "flex": 0,
-          "height": 32,
-          "width": 32,
-        },
+        Object {},
       ]
     }
-    vbHeight={24}
-    vbWidth={24}
-    width={32}
+  />,
+  <View
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingHorizontal": 16,
+        "paddingVertical": 16,
+        "position": "absolute",
+        "top": 0,
+        "width": "100%",
+        "zIndex": 999,
+      }
+    }
   >
-    <RNSVGGroup
-      fill={
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight={32}
+      bbWidth={32}
+      fill="#303030"
+      height={32}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
         Array [
-          0,
-          4281348144,
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          undefined,
+          null,
+          Object {
+            "flex": 0,
+            "height": 32,
+            "width": 32,
+          },
         ]
       }
-      fillOpacity={1}
-      fillRule={1}
-      font={Object {}}
-      matrix={
-        Array [
-          1,
-          0,
-          0,
-          1,
-          0,
-          0,
-        ]
-      }
-      opacity={1}
-      originX={0}
-      originY={0}
-      propList={
-        Array [
-          "fill",
-        ]
-      }
-      rotation={0}
-      scaleX={1}
-      scaleY={1}
-      skewX={0}
-      skewY={0}
-      stroke={null}
-      strokeDasharray={null}
-      strokeDashoffset={null}
-      strokeLinecap={0}
-      strokeLinejoin={0}
-      strokeMiterlimit={4}
-      strokeOpacity={1}
-      strokeWidth={1}
-      vectorEffect={0}
-      x={0}
-      y={0}
-    />
-  </RNSVGSvgView>
-</View>
+      vbHeight={24}
+      vbWidth={24}
+      width={32}
+    >
+      <RNSVGGroup
+        fill={
+          Array [
+            0,
+            4281348144,
+          ]
+        }
+        fillOpacity={1}
+        fillRule={1}
+        font={Object {}}
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        opacity={1}
+        originX={0}
+        originY={0}
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+        rotation={0}
+        scaleX={1}
+        scaleY={1}
+        skewX={0}
+        skewY={0}
+        stroke={null}
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={1}
+        vectorEffect={0}
+        x={0}
+        y={0}
+      />
+    </RNSVGSvgView>
+  </View>,
+]
 `;
 
 exports[`The ModalView/ModalViewHeader component should accept an onClose function 1`] = `
-<View
-  pointerEvents="box-none"
-  style={
-    Object {
-      "flexDirection": "row",
-      "justifyContent": "space-between",
-      "paddingHorizontal": 16,
-      "paddingVertical": 16,
-      "position": "absolute",
-      "top": 0,
-      "width": "100%",
-      "zIndex": 999,
-    }
-  }
->
-  <RNSVGSvgView
-    align="xMidYMid"
-    bbHeight={32}
-    bbWidth={32}
-    fill="#303030"
-    height={32}
-    meetOrSlice={0}
-    minX={0}
-    minY={0}
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
     style={
       Array [
         Object {
-          "backgroundColor": "transparent",
-          "borderWidth": 0,
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
         },
-        undefined,
-        null,
-        Object {
-          "flex": 0,
-          "height": 32,
-          "width": 32,
-        },
+        Object {},
       ]
     }
-    vbHeight={24}
-    vbWidth={24}
-    width={32}
-  >
-    <RNSVGGroup
-      fill={
-        Array [
-          0,
-          4281348144,
-        ]
-      }
-      fillOpacity={1}
-      fillRule={1}
-      font={Object {}}
-      matrix={
-        Array [
-          1,
-          0,
-          0,
-          1,
-          0,
-          0,
-        ]
-      }
-      opacity={1}
-      originX={0}
-      originY={0}
-      propList={
-        Array [
-          "fill",
-        ]
-      }
-      rotation={0}
-      scaleX={1}
-      scaleY={1}
-      skewX={0}
-      skewY={0}
-      stroke={null}
-      strokeDasharray={null}
-      strokeDashoffset={null}
-      strokeLinecap={0}
-      strokeLinejoin={0}
-      strokeMiterlimit={4}
-      strokeOpacity={1}
-      strokeWidth={1}
-      vectorEffect={0}
-      x={0}
-      y={0}
-    />
-  </RNSVGSvgView>
+  />,
   <View
-    accessible={true}
-    focusable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
+    pointerEvents="box-none"
     style={
       Object {
-        "opacity": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingHorizontal": 16,
+        "paddingVertical": 16,
+        "position": "absolute",
+        "top": 0,
+        "width": "100%",
+        "zIndex": 999,
       }
     }
   >
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight={32}
+      bbWidth={32}
+      fill="#303030"
+      height={32}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          undefined,
+          null,
+          Object {
+            "flex": 0,
+            "height": 32,
+            "width": 32,
+          },
+        ]
+      }
+      vbHeight={24}
+      vbWidth={24}
+      width={32}
+    >
+      <RNSVGGroup
+        fill={
+          Array [
+            0,
+            4281348144,
+          ]
+        }
+        fillOpacity={1}
+        fillRule={1}
+        font={Object {}}
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        opacity={1}
+        originX={0}
+        originY={0}
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+        rotation={0}
+        scaleX={1}
+        scaleY={1}
+        skewX={0}
+        skewY={0}
+        stroke={null}
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={1}
+        vectorEffect={0}
+        x={0}
+        y={0}
+      />
+    </RNSVGSvgView>
     <View
-      borderRadius={24}
-      iconPadding={8}
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "rgba(48, 48, 48, 0.7)",
-          "padding": 8,
+          "opacity": 1,
         }
       }
     >
-      <RNSVGSvgView
-        align="xMidYMid"
-        bbHeight={16}
-        bbWidth={16}
-        height={16}
-        meetOrSlice={0}
-        minX={0}
-        minY={0}
+      <View
+        borderRadius={24}
+        iconPadding={8}
         style={
-          Array [
-            Object {
-              "backgroundColor": "transparent",
-              "borderWidth": 0,
-            },
-            undefined,
-            Object {
-              "opacity": 1,
-            },
-            Object {
-              "flex": 0,
-              "height": 16,
-              "width": 16,
-            },
-          ]
+          Object {
+            "backgroundColor": "rgba(48, 48, 48, 0.7)",
+            "padding": 8,
+          }
         }
-        vbHeight={24}
-        vbWidth={24}
-        width={16}
       >
-        <RNSVGGroup
-          fill={
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight={16}
+          bbWidth={16}
+          height={16}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
             Array [
-              0,
-              4278190080,
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              undefined,
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "flex": 0,
+                "height": 16,
+                "width": 16,
+              },
             ]
           }
-          fillOpacity={1}
-          fillRule={1}
-          font={Object {}}
-          matrix={
-            Array [
-              1,
-              0,
-              0,
-              1,
-              0,
-              0,
-            ]
-          }
-          opacity={1}
-          originX={0}
-          originY={0}
-          propList={Array []}
-          rotation={0}
-          scaleX={1}
-          scaleY={1}
-          skewX={0}
-          skewY={0}
-          stroke={null}
-          strokeDasharray={null}
-          strokeDashoffset={null}
-          strokeLinecap={0}
-          strokeLinejoin={0}
-          strokeMiterlimit={4}
-          strokeOpacity={1}
-          strokeWidth={1}
-          vectorEffect={0}
-          x={0}
-          y={0}
+          vbHeight={24}
+          vbWidth={24}
+          width={16}
         >
-          <RNSVGPath
-            d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
+          <RNSVGGroup
             fill={
               Array [
                 0,
-                4294967295,
+                4278190080,
               ]
             }
             fillOpacity={1}
             fillRule={1}
+            font={Object {}}
             matrix={
               Array [
                 1,
@@ -302,11 +298,7 @@ exports[`The ModalView/ModalViewHeader component should accept an onClose functi
             opacity={1}
             originX={0}
             originY={0}
-            propList={
-              Array [
-                "fill",
-              ]
-            }
+            propList={Array []}
             rotation={0}
             scaleX={1}
             scaleY={1}
@@ -323,229 +315,271 @@ exports[`The ModalView/ModalViewHeader component should accept an onClose functi
             vectorEffect={0}
             x={0}
             y={0}
-          />
-        </RNSVGGroup>
-      </RNSVGSvgView>
+          >
+            <RNSVGPath
+              d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
+              fill={
+                Array [
+                  0,
+                  4294967295,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              rotation={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+              vectorEffect={0}
+              x={0}
+              y={0}
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`The ModalView/ModalViewHeader component should render 1`] = `
-<View
-  pointerEvents="box-none"
-  style={
-    Object {
-      "flexDirection": "row",
-      "justifyContent": "space-between",
-      "paddingHorizontal": 16,
-      "paddingVertical": 16,
-      "position": "absolute",
-      "top": 0,
-      "width": "100%",
-      "zIndex": 999,
-    }
-  }
->
-  <RNSVGSvgView
-    align="xMidYMid"
-    bbHeight={32}
-    bbWidth={32}
-    fill="#303030"
-    height={32}
-    meetOrSlice={0}
-    minX={0}
-    minY={0}
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
     style={
       Array [
         Object {
-          "backgroundColor": "transparent",
-          "borderWidth": 0,
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
         },
-        undefined,
-        null,
-        Object {
-          "flex": 0,
-          "height": 32,
-          "width": 32,
-        },
+        Object {},
       ]
     }
-    vbHeight={24}
-    vbWidth={24}
-    width={32}
+  />,
+  <View
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingHorizontal": 16,
+        "paddingVertical": 16,
+        "position": "absolute",
+        "top": 0,
+        "width": "100%",
+        "zIndex": 999,
+      }
+    }
   >
-    <RNSVGGroup
-      fill={
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight={32}
+      bbWidth={32}
+      fill="#303030"
+      height={32}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
         Array [
-          0,
-          4281348144,
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          undefined,
+          null,
+          Object {
+            "flex": 0,
+            "height": 32,
+            "width": 32,
+          },
         ]
       }
-      fillOpacity={1}
-      fillRule={1}
-      font={Object {}}
-      matrix={
-        Array [
-          1,
-          0,
-          0,
-          1,
-          0,
-          0,
-        ]
-      }
-      opacity={1}
-      originX={0}
-      originY={0}
-      propList={
-        Array [
-          "fill",
-        ]
-      }
-      rotation={0}
-      scaleX={1}
-      scaleY={1}
-      skewX={0}
-      skewY={0}
-      stroke={null}
-      strokeDasharray={null}
-      strokeDashoffset={null}
-      strokeLinecap={0}
-      strokeLinejoin={0}
-      strokeMiterlimit={4}
-      strokeOpacity={1}
-      strokeWidth={1}
-      vectorEffect={0}
-      x={0}
-      y={0}
-    />
-  </RNSVGSvgView>
-</View>
+      vbHeight={24}
+      vbWidth={24}
+      width={32}
+    >
+      <RNSVGGroup
+        fill={
+          Array [
+            0,
+            4281348144,
+          ]
+        }
+        fillOpacity={1}
+        fillRule={1}
+        font={Object {}}
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        opacity={1}
+        originX={0}
+        originY={0}
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+        rotation={0}
+        scaleX={1}
+        scaleY={1}
+        skewX={0}
+        skewY={0}
+        stroke={null}
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={1}
+        vectorEffect={0}
+        x={0}
+        y={0}
+      />
+    </RNSVGSvgView>
+  </View>,
+]
 `;
 
 exports[`The ModalView/ModalViewHeader component should render as a navigationHeader 1`] = `
-<View
-  pointerEvents="box-none"
-  style={
-    Object {
-      "flexDirection": "row",
-      "justifyContent": "space-between",
-      "paddingHorizontal": 16,
-      "paddingVertical": 16,
-      "position": "absolute",
-      "top": 0,
-      "width": "100%",
-      "zIndex": 999,
-    }
-  }
->
+Array [
   <View
-    accessible={true}
-    focusable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    pointerEvents="box-none"
     style={
       Object {
-        "opacity": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingHorizontal": 16,
+        "paddingVertical": 16,
+        "position": "absolute",
+        "top": 0,
+        "width": "100%",
+        "zIndex": 999,
       }
     }
   >
     <View
-      borderRadius={24}
-      iconPadding={8}
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "rgba(48, 48, 48, 0.7)",
-          "padding": 8,
+          "opacity": 1,
         }
       }
     >
-      <RNSVGSvgView
-        align="xMidYMid"
-        bbHeight={16}
-        bbWidth={16}
-        height={16}
-        meetOrSlice={0}
-        minX={0}
-        minY={0}
+      <View
+        borderRadius={24}
+        iconPadding={8}
         style={
-          Array [
-            Object {
-              "backgroundColor": "transparent",
-              "borderWidth": 0,
-            },
-            undefined,
-            Object {
-              "opacity": 1,
-            },
-            Object {
-              "flex": 0,
-              "height": 16,
-              "width": 16,
-            },
-          ]
+          Object {
+            "backgroundColor": "rgba(48, 48, 48, 0.7)",
+            "padding": 8,
+          }
         }
-        vbHeight={24}
-        vbWidth={24}
-        width={16}
       >
-        <RNSVGGroup
-          fill={
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight={16}
+          bbWidth={16}
+          height={16}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
             Array [
-              0,
-              4278190080,
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              undefined,
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "flex": 0,
+                "height": 16,
+                "width": 16,
+              },
             ]
           }
-          fillOpacity={1}
-          fillRule={1}
-          font={Object {}}
-          matrix={
-            Array [
-              1,
-              0,
-              0,
-              1,
-              0,
-              0,
-            ]
-          }
-          opacity={1}
-          originX={0}
-          originY={0}
-          propList={Array []}
-          rotation={0}
-          scaleX={1}
-          scaleY={1}
-          skewX={0}
-          skewY={0}
-          stroke={null}
-          strokeDasharray={null}
-          strokeDashoffset={null}
-          strokeLinecap={0}
-          strokeLinejoin={0}
-          strokeMiterlimit={4}
-          strokeOpacity={1}
-          strokeWidth={1}
-          vectorEffect={0}
-          x={0}
-          y={0}
+          vbHeight={24}
+          vbWidth={24}
+          width={16}
         >
-          <RNSVGPath
-            d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
+          <RNSVGGroup
             fill={
               Array [
                 0,
-                4294967295,
+                4278190080,
               ]
             }
             fillOpacity={1}
             fillRule={1}
+            font={Object {}}
             matrix={
               Array [
                 1,
@@ -559,11 +593,7 @@ exports[`The ModalView/ModalViewHeader component should render as a navigationHe
             opacity={1}
             originX={0}
             originY={0}
-            propList={
-              Array [
-                "fill",
-              ]
-            }
+            propList={Array []}
             rotation={0}
             scaleX={1}
             scaleY={1}
@@ -580,10 +610,56 @@ exports[`The ModalView/ModalViewHeader component should render as a navigationHe
             vectorEffect={0}
             x={0}
             y={0}
-          />
-        </RNSVGGroup>
-      </RNSVGSvgView>
+          >
+            <RNSVGPath
+              d="M13.07 12l7.2-7.2.5-.5c.3-.3.3-.78 0-1.08-.3-.3-.76-.3-1.06 0l-.5.5-7.2 7.2-7.2-7.2-.5-.5c-.3-.3-.77-.3-1.07 0-.3.3-.3.77 0 1.07l.5.5 7.2 7.2-7.7 7.7c-.3.3-.3.77 0 1.07.3.3.77.3 1.07 0l7.7-7.7 7.7 7.7c.3.3.78.3 1.08 0 .3-.3.3-.77 0-1.07l-7.7-7.7z"
+              fill={
+                Array [
+                  0,
+                  4294967295,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              rotation={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+              vectorEffect={0}
+              x={0}
+              y={0}
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;

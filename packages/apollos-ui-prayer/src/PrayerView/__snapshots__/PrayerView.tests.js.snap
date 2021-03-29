@@ -1,80 +1,265 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The PrayerView component should accept an onPressPrimary function 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "flex": 1,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
-  <RCTScrollView
-    contentContainerStyle={
-      Object {
-        "flexGrow": 1,
-      }
-    }
-    keyboardDismissMode="on-drag"
-    keyboardShouldPersistTaps="never"
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
     style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
     }
   >
-    <View>
-      <View
-        style={
-          Object {
-            "flex": 1,
-          }
+    <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "flexGrow": 1,
         }
-      >
+      }
+      keyboardDismissMode="on-drag"
+      keyboardShouldPersistTaps="never"
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <View>
         <View
           style={
             Object {
-              "flexGrow": 1,
-              "justifyContent": "center",
-            }
-          }
-        />
-        <View
-          style={
-            Object {
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
+              "flex": 1,
             }
           }
         >
           <View
-            accessible={true}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "opacity": 1,
+                "flexGrow": 1,
+                "justifyContent": "center",
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
               }
             }
           >
             <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <View
+                bordered={false}
+                disabled={false}
+                pill={true}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#00676D",
+                    "borderColor": "#00676D",
+                    "borderRadius": 48,
+                    "borderWidth": 2,
+                    "elevation": 2,
+                    "flexDirection": "row",
+                    "height": 48,
+                    "justifyContent": "center",
+                    "opacity": 1,
+                    "overflow": "hidden",
+                    "paddingHorizontal": 16,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                      "fontFamily": "InterUI-Bold",
+                      "fontSize": 16,
+                      "lineHeight": 24,
+                    }
+                  }
+                >
+                  🙏 Pray
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>,
+]
+`;
+
+exports[`The PrayerView component should accept an onPressSecondary function 1`] = `
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
+    }
+  >
+    <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "flexGrow": 1,
+        }
+      }
+      keyboardDismissMode="on-drag"
+      keyboardShouldPersistTaps="never"
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexGrow": 1,
+                "justifyContent": "center",
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <View
+                bordered={true}
+                disabled={false}
+                pill={true}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "transparent",
+                    "borderColor": "#A5A5A5",
+                    "borderRadius": 48,
+                    "borderWidth": 0,
+                    "flexDirection": "row",
+                    "height": 48,
+                    "justifyContent": "center",
+                    "opacity": 1,
+                    "overflow": "hidden",
+                    "paddingHorizontal": 16,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#A5A5A5",
+                      "fontFamily": "InterUI-Medium",
+                      "fontSize": 14,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  How to Pray
+                </Text>
+              </View>
+            </View>
+            <View
               bordered={false}
-              disabled={false}
+              disabled={true}
               pill={true}
               style={
                 Object {
@@ -87,7 +272,7 @@ exports[`The PrayerView component should accept an onPressPrimary function 1`] =
                   "flexDirection": "row",
                   "height": 48,
                   "justifyContent": "center",
-                  "opacity": 1,
+                  "opacity": 0.5,
                   "overflow": "hidden",
                   "paddingHorizontal": 16,
                 }
@@ -109,98 +294,101 @@ exports[`The PrayerView component should accept an onPressPrimary function 1`] =
           </View>
         </View>
       </View>
-    </View>
-  </RCTScrollView>
-</View>
+    </RCTScrollView>
+  </View>,
+]
 `;
 
-exports[`The PrayerView component should accept an onPressSecondary function 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "flex": 1,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
-  <RCTScrollView
-    contentContainerStyle={
-      Object {
-        "flexGrow": 1,
-      }
-    }
-    keyboardDismissMode="on-drag"
-    keyboardShouldPersistTaps="never"
+exports[`The PrayerView component should render 1`] = `
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
     style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
     }
   >
-    <View>
-      <View
-        style={
-          Object {
-            "flex": 1,
-          }
+    <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "flexGrow": 1,
         }
-      >
+      }
+      keyboardDismissMode="on-drag"
+      keyboardShouldPersistTaps="never"
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <View>
         <View
           style={
             Object {
-              "flexGrow": 1,
-              "justifyContent": "center",
-            }
-          }
-        />
-        <View
-          style={
-            Object {
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
+              "flex": 1,
             }
           }
         >
           <View
-            accessible={true}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "opacity": 1,
+                "flexGrow": 1,
+                "justifyContent": "center",
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
               }
             }
           >
             <View
-              bordered={true}
-              disabled={false}
+              bordered={false}
+              disabled={true}
               pill={true}
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "transparent",
-                  "borderColor": "#A5A5A5",
+                  "backgroundColor": "#00676D",
+                  "borderColor": "#00676D",
                   "borderRadius": 48,
-                  "borderWidth": 0,
+                  "borderWidth": 2,
+                  "elevation": 2,
                   "flexDirection": "row",
                   "height": 48,
                   "justifyContent": "center",
-                  "opacity": 1,
+                  "opacity": 0.5,
                   "overflow": "hidden",
                   "paddingHorizontal": 16,
                 }
@@ -209,534 +397,177 @@ exports[`The PrayerView component should accept an onPressSecondary function 1`]
               <Text
                 style={
                   Object {
-                    "color": "#A5A5A5",
-                    "fontFamily": "InterUI-Medium",
-                    "fontSize": 14,
-                    "lineHeight": 21,
+                    "color": "#FFFFFF",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "lineHeight": 24,
                   }
                 }
               >
-                How to Pray
+                🙏 Pray
               </Text>
             </View>
           </View>
-          <View
-            bordered={false}
-            disabled={true}
-            pill={true}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#00676D",
-                "borderColor": "#00676D",
-                "borderRadius": 48,
-                "borderWidth": 2,
-                "elevation": 2,
-                "flexDirection": "row",
-                "height": 48,
-                "justifyContent": "center",
-                "opacity": 0.5,
-                "overflow": "hidden",
-                "paddingHorizontal": 16,
-              }
-            }
-          >
-            <Text
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 16,
-                  "lineHeight": 24,
-                }
-              }
-            >
-              🙏 Pray
-            </Text>
-          </View>
         </View>
       </View>
-    </View>
-  </RCTScrollView>
-</View>
-`;
-
-exports[`The PrayerView component should render 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "flex": 1,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
-  <RCTScrollView
-    contentContainerStyle={
-      Object {
-        "flexGrow": 1,
-      }
-    }
-    keyboardDismissMode="on-drag"
-    keyboardShouldPersistTaps="never"
-    style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }
-  >
-    <View>
-      <View
-        style={
-          Object {
-            "flex": 1,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "flexGrow": 1,
-              "justifyContent": "center",
-            }
-          }
-        />
-        <View
-          style={
-            Object {
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
-            }
-          }
-        >
-          <View
-            bordered={false}
-            disabled={true}
-            pill={true}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#00676D",
-                "borderColor": "#00676D",
-                "borderRadius": 48,
-                "borderWidth": 2,
-                "elevation": 2,
-                "flexDirection": "row",
-                "height": 48,
-                "justifyContent": "center",
-                "opacity": 0.5,
-                "overflow": "hidden",
-                "paddingHorizontal": 16,
-              }
-            }
-          >
-            <Text
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 16,
-                  "lineHeight": 24,
-                }
-              }
-            >
-              🙏 Pray
-            </Text>
-          </View>
-        </View>
-      </View>
-    </View>
-  </RCTScrollView>
-</View>
+    </RCTScrollView>
+  </View>,
+]
 `;
 
 exports[`The PrayerView component should render a loading state (isLoading) 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "flex": 1,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
-  <RCTScrollView
-    contentContainerStyle={
-      Object {
-        "flexGrow": 1,
-      }
-    }
-    keyboardDismissMode="on-drag"
-    keyboardShouldPersistTaps="never"
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
     style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
     }
   >
-    <View>
-      <View
-        style={
-          Object {
-            "flex": 1,
-          }
+    <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "flexGrow": 1,
         }
-      >
+      }
+      keyboardDismissMode="on-drag"
+      keyboardShouldPersistTaps="never"
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <View>
         <View
           style={
             Object {
-              "flexGrow": 1,
-              "justifyContent": "center",
+              "flex": 1,
             }
           }
         >
           <View
             style={
               Object {
-                "backgroundColor": "#FFFFFF",
-                "borderRadius": 16,
-                "marginHorizontal": 16,
-                "marginVertical": 12,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-                "shadowOffset": Object {
-                  "height": 2,
-                  "width": 0,
-                },
-                "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "flexGrow": 1,
+                "justifyContent": "center",
               }
             }
           >
             <View
               style={
                 Object {
+                  "backgroundColor": "#FFFFFF",
                   "borderRadius": 16,
-                  "overflow": "hidden",
+                  "marginHorizontal": 16,
+                  "marginVertical": 12,
+                  "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                  "shadowOffset": Object {
+                    "height": 2,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 8,
                 }
               }
             >
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 24,
-                    "paddingVertical": 24,
+                    "borderRadius": 16,
+                    "overflow": "hidden",
                   }
                 }
               >
                 <View
-                  hasAvatar={false}
                   style={
                     Object {
-                      "alignItems": "center",
-                      "paddingBottom": 0,
+                      "paddingHorizontal": 24,
+                      "paddingVertical": 24,
                     }
                   }
                 >
                   <View
-                    style={
-                      Object {
-                        "borderRadius": 80,
-                        "overflow": "hidden",
-                      }
-                    }
-                  >
-                    <RNSVGSvgView
-                      align="xMidYMid"
-                      bbHeight={100}
-                      bbWidth={100}
-                      height={100}
-                      meetOrSlice={0}
-                      minX={0}
-                      minY={0}
-                      style={
-                        Array [
-                          Object {
-                            "backgroundColor": "transparent",
-                            "borderWidth": 0,
-                          },
-                          undefined,
-                          null,
-                          Object {
-                            "flex": 0,
-                            "height": 100,
-                            "width": 100,
-                          },
-                        ]
-                      }
-                      vbHeight={24}
-                      vbWidth={24}
-                      width={100}
-                    >
-                      <RNSVGGroup
-                        fill={
-                          Array [
-                            0,
-                            4278190080,
-                          ]
-                        }
-                        fillOpacity={1}
-                        fillRule={1}
-                        font={Object {}}
-                        matrix={
-                          Array [
-                            1,
-                            0,
-                            0,
-                            1,
-                            0,
-                            0,
-                          ]
-                        }
-                        opacity={1}
-                        originX={0}
-                        originY={0}
-                        propList={Array []}
-                        rotation={0}
-                        scaleX={1}
-                        scaleY={1}
-                        skewX={0}
-                        skewY={0}
-                        stroke={null}
-                        strokeDasharray={null}
-                        strokeDashoffset={null}
-                        strokeLinecap={0}
-                        strokeLinejoin={0}
-                        strokeMiterlimit={4}
-                        strokeOpacity={1}
-                        strokeWidth={1}
-                        vectorEffect={0}
-                        x={0}
-                        y={0}
-                      >
-                        <RNSVGPath
-                          d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-3.33 8.33C8.67 8.5 10.2 7 12 7s3.33 1.5 3.33 3.33v.84c0 1.84-1.53 3.33-3.33 3.33S8.67 13 8.67 11.17v-.84zm3.33 10c-2.03 0-3.9-.73-5.33-1.93.7-1.32 2.07-2.23 3.66-2.23h3.34c1.6 0 2.97.9 3.66 2.22-1.44 1.2-3.3 1.92-5.33 1.92z"
-                          fill={
-                            Array [
-                              0,
-                              4281348144,
-                            ]
-                          }
-                          fillOpacity={1}
-                          fillRule={1}
-                          matrix={
-                            Array [
-                              1,
-                              0,
-                              0,
-                              1,
-                              0,
-                              0,
-                            ]
-                          }
-                          opacity={1}
-                          originX={0}
-                          originY={0}
-                          propList={
-                            Array [
-                              "fill",
-                            ]
-                          }
-                          rotation={0}
-                          scaleX={1}
-                          scaleY={1}
-                          skewX={0}
-                          skewY={0}
-                          stroke={null}
-                          strokeDasharray={null}
-                          strokeDashoffset={null}
-                          strokeLinecap={0}
-                          strokeLinejoin={0}
-                          strokeMiterlimit={4}
-                          strokeOpacity={1}
-                          strokeWidth={1}
-                          vectorEffect={0}
-                          x={0}
-                          y={0}
-                        />
-                      </RNSVGGroup>
-                    </RNSVGSvgView>
-                  </View>
-                </View>
-                <Text
-                  style={
-                    Object {
-                      "color": "#303030",
-                      "fontFamily": "InterUI-Bold",
-                      "fontSize": 16,
-                      "lineHeight": 24,
-                    }
-                  }
-                >
-                  Add your prayer
-                </Text>
-                <View
-                  accessible={true}
-                  focusable={true}
-                  onClick={[Function]}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  style={
-                    Object {
-                      "opacity": 1,
-                    }
-                  }
-                >
-                  <View
+                    hasAvatar={false}
                     style={
                       Object {
                         "alignItems": "center",
-                        "flexDirection": "row",
-                        "paddingBottom": 10,
-                        "paddingTop": 16,
+                        "paddingBottom": 0,
                       }
                     }
                   >
-                    <RNSVGSvgView
-                      align="xMidYMid"
-                      bbHeight={24}
-                      bbWidth={24}
-                      height={24}
-                      meetOrSlice={0}
-                      minX={0}
-                      minY={0}
+                    <View
                       style={
-                        Array [
-                          Object {
-                            "backgroundColor": "transparent",
-                            "borderWidth": 0,
-                          },
-                          Object {
-                            "marginRight": 8,
-                          },
-                          null,
-                          Object {
-                            "flex": 0,
-                            "height": 24,
-                            "width": 24,
-                          },
-                        ]
+                        Object {
+                          "borderRadius": 80,
+                          "overflow": "hidden",
+                        }
                       }
-                      vbHeight={24}
-                      vbWidth={24}
-                      width={24}
                     >
-                      <RNSVGGroup
-                        fill={
+                      <RNSVGSvgView
+                        align="xMidYMid"
+                        bbHeight={100}
+                        bbWidth={100}
+                        height={100}
+                        meetOrSlice={0}
+                        minX={0}
+                        minY={0}
+                        style={
                           Array [
-                            0,
-                            4278190080,
+                            Object {
+                              "backgroundColor": "transparent",
+                              "borderWidth": 0,
+                            },
+                            undefined,
+                            null,
+                            Object {
+                              "flex": 0,
+                              "height": 100,
+                              "width": 100,
+                            },
                           ]
                         }
-                        fillOpacity={1}
-                        fillRule={1}
-                        font={Object {}}
-                        matrix={
-                          Array [
-                            1,
-                            0,
-                            0,
-                            1,
-                            0,
-                            0,
-                          ]
-                        }
-                        opacity={1}
-                        originX={0}
-                        originY={0}
-                        propList={Array []}
-                        rotation={0}
-                        scaleX={1}
-                        scaleY={1}
-                        skewX={0}
-                        skewY={0}
-                        stroke={null}
-                        strokeDasharray={null}
-                        strokeDashoffset={null}
-                        strokeLinecap={0}
-                        strokeLinejoin={0}
-                        strokeMiterlimit={4}
-                        strokeOpacity={1}
-                        strokeWidth={1}
-                        vectorEffect={0}
-                        x={0}
-                        y={0}
+                        vbHeight={24}
+                        vbWidth={24}
+                        width={100}
                       >
-                        <RNSVGPath
-                          d="M12 23.5a11.5 11.5 0 100-23 11.5 11.5 0 000 23zm0 .5a12 12 0 100-24 12 12 0 000 24z"
+                        <RNSVGGroup
                           fill={
                             Array [
                               0,
-                              4281348144,
-                            ]
-                          }
-                          fillOpacity={1}
-                          fillRule={0}
-                          matrix={
-                            Array [
-                              1,
-                              0,
-                              0,
-                              1,
-                              0,
-                              0,
-                            ]
-                          }
-                          opacity={1}
-                          originX={0}
-                          originY={0}
-                          propList={
-                            Array [
-                              "fill",
-                              "fillRule",
-                            ]
-                          }
-                          rotation={0}
-                          scaleX={1}
-                          scaleY={1}
-                          skewX={0}
-                          skewY={0}
-                          stroke={null}
-                          strokeDasharray={null}
-                          strokeDashoffset={null}
-                          strokeLinecap={0}
-                          strokeLinejoin={0}
-                          strokeMiterlimit={4}
-                          strokeOpacity={1}
-                          strokeWidth={1}
-                          vectorEffect={0}
-                          x={0}
-                          y={0}
-                        />
-                        <RNSVGPath
-                          d="M17.7 11.7h-5.4V6.3a.3.3 0 00-.6 0v5.4H6.3a.3.3 0 000 .6h5.4v5.4a.3.3 0 00.6 0v-5.4h5.4a.3.3 0 000-.6z"
-                          fill={
-                            Array [
-                              0,
-                              4281348144,
+                              4278190080,
                             ]
                           }
                           fillOpacity={1}
                           fillRule={1}
+                          font={Object {}}
                           matrix={
                             Array [
                               1,
@@ -750,11 +581,7 @@ exports[`The PrayerView component should render a loading state (isLoading) 1`] 
                           opacity={1}
                           originX={0}
                           originY={0}
-                          propList={
-                            Array [
-                              "fill",
-                            ]
-                          }
+                          propList={Array []}
                           rotation={0}
                           scaleX={1}
                           scaleY={1}
@@ -771,68 +598,351 @@ exports[`The PrayerView component should render a loading state (isLoading) 1`] 
                           vectorEffect={0}
                           x={0}
                           y={0}
-                        />
-                      </RNSVGGroup>
-                    </RNSVGSvgView>
-                    <Text
-                      bold={false}
-                      italic={false}
+                        >
+                          <RNSVGPath
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-3.33 8.33C8.67 8.5 10.2 7 12 7s3.33 1.5 3.33 3.33v.84c0 1.84-1.53 3.33-3.33 3.33S8.67 13 8.67 11.17v-.84zm3.33 10c-2.03 0-3.9-.73-5.33-1.93.7-1.32 2.07-2.23 3.66-2.23h3.34c1.6 0 2.97.9 3.66 2.22-1.44 1.2-3.3 1.92-5.33 1.92z"
+                            fill={
+                              Array [
+                                0,
+                                4281348144,
+                              ]
+                            }
+                            fillOpacity={1}
+                            fillRule={1}
+                            matrix={
+                              Array [
+                                1,
+                                0,
+                                0,
+                                1,
+                                0,
+                                0,
+                              ]
+                            }
+                            opacity={1}
+                            originX={0}
+                            originY={0}
+                            propList={
+                              Array [
+                                "fill",
+                              ]
+                            }
+                            rotation={0}
+                            scaleX={1}
+                            scaleY={1}
+                            skewX={0}
+                            skewY={0}
+                            stroke={null}
+                            strokeDasharray={null}
+                            strokeDashoffset={null}
+                            strokeLinecap={0}
+                            strokeLinejoin={0}
+                            strokeMiterlimit={4}
+                            strokeOpacity={1}
+                            strokeWidth={1}
+                            vectorEffect={0}
+                            x={0}
+                            y={0}
+                          />
+                        </RNSVGGroup>
+                      </RNSVGSvgView>
+                    </View>
+                  </View>
+                  <Text
+                    style={
+                      Object {
+                        "color": "#303030",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 16,
+                        "lineHeight": 24,
+                      }
+                    }
+                  >
+                    Add your prayer
+                  </Text>
+                  <View
+                    accessible={true}
+                    focusable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      Object {
+                        "opacity": 1,
+                      }
+                    }
+                  >
+                    <View
                       style={
                         Object {
-                          "color": "#303030",
-                          "fontFamily": "InterUI-Regular",
-                          "fontSize": 16,
-                          "lineHeight": 26,
+                          "alignItems": "center",
+                          "flexDirection": "row",
+                          "paddingBottom": 10,
+                          "paddingTop": 16,
                         }
                       }
                     >
-                      I need prayer for...
-                    </Text>
+                      <RNSVGSvgView
+                        align="xMidYMid"
+                        bbHeight={24}
+                        bbWidth={24}
+                        height={24}
+                        meetOrSlice={0}
+                        minX={0}
+                        minY={0}
+                        style={
+                          Array [
+                            Object {
+                              "backgroundColor": "transparent",
+                              "borderWidth": 0,
+                            },
+                            Object {
+                              "marginRight": 8,
+                            },
+                            null,
+                            Object {
+                              "flex": 0,
+                              "height": 24,
+                              "width": 24,
+                            },
+                          ]
+                        }
+                        vbHeight={24}
+                        vbWidth={24}
+                        width={24}
+                      >
+                        <RNSVGGroup
+                          fill={
+                            Array [
+                              0,
+                              4278190080,
+                            ]
+                          }
+                          fillOpacity={1}
+                          fillRule={1}
+                          font={Object {}}
+                          matrix={
+                            Array [
+                              1,
+                              0,
+                              0,
+                              1,
+                              0,
+                              0,
+                            ]
+                          }
+                          opacity={1}
+                          originX={0}
+                          originY={0}
+                          propList={Array []}
+                          rotation={0}
+                          scaleX={1}
+                          scaleY={1}
+                          skewX={0}
+                          skewY={0}
+                          stroke={null}
+                          strokeDasharray={null}
+                          strokeDashoffset={null}
+                          strokeLinecap={0}
+                          strokeLinejoin={0}
+                          strokeMiterlimit={4}
+                          strokeOpacity={1}
+                          strokeWidth={1}
+                          vectorEffect={0}
+                          x={0}
+                          y={0}
+                        >
+                          <RNSVGPath
+                            d="M12 23.5a11.5 11.5 0 100-23 11.5 11.5 0 000 23zm0 .5a12 12 0 100-24 12 12 0 000 24z"
+                            fill={
+                              Array [
+                                0,
+                                4281348144,
+                              ]
+                            }
+                            fillOpacity={1}
+                            fillRule={0}
+                            matrix={
+                              Array [
+                                1,
+                                0,
+                                0,
+                                1,
+                                0,
+                                0,
+                              ]
+                            }
+                            opacity={1}
+                            originX={0}
+                            originY={0}
+                            propList={
+                              Array [
+                                "fill",
+                                "fillRule",
+                              ]
+                            }
+                            rotation={0}
+                            scaleX={1}
+                            scaleY={1}
+                            skewX={0}
+                            skewY={0}
+                            stroke={null}
+                            strokeDasharray={null}
+                            strokeDashoffset={null}
+                            strokeLinecap={0}
+                            strokeLinejoin={0}
+                            strokeMiterlimit={4}
+                            strokeOpacity={1}
+                            strokeWidth={1}
+                            vectorEffect={0}
+                            x={0}
+                            y={0}
+                          />
+                          <RNSVGPath
+                            d="M17.7 11.7h-5.4V6.3a.3.3 0 00-.6 0v5.4H6.3a.3.3 0 000 .6h5.4v5.4a.3.3 0 00.6 0v-5.4h5.4a.3.3 0 000-.6z"
+                            fill={
+                              Array [
+                                0,
+                                4281348144,
+                              ]
+                            }
+                            fillOpacity={1}
+                            fillRule={1}
+                            matrix={
+                              Array [
+                                1,
+                                0,
+                                0,
+                                1,
+                                0,
+                                0,
+                              ]
+                            }
+                            opacity={1}
+                            originX={0}
+                            originY={0}
+                            propList={
+                              Array [
+                                "fill",
+                              ]
+                            }
+                            rotation={0}
+                            scaleX={1}
+                            scaleY={1}
+                            skewX={0}
+                            skewY={0}
+                            stroke={null}
+                            strokeDasharray={null}
+                            strokeDashoffset={null}
+                            strokeLinecap={0}
+                            strokeLinejoin={0}
+                            strokeMiterlimit={4}
+                            strokeOpacity={1}
+                            strokeWidth={1}
+                            vectorEffect={0}
+                            x={0}
+                            y={0}
+                          />
+                        </RNSVGGroup>
+                      </RNSVGSvgView>
+                      <Text
+                        bold={false}
+                        italic={false}
+                        style={
+                          Object {
+                            "color": "#303030",
+                            "fontFamily": "InterUI-Regular",
+                            "fontSize": 16,
+                            "lineHeight": 26,
+                          }
+                        }
+                      >
+                        I need prayer for...
+                      </Text>
+                    </View>
                   </View>
                 </View>
               </View>
             </View>
           </View>
-        </View>
-        <View
-          style={
-            Object {
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
-            }
-          }
-        >
           <View
-            accessible={true}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "opacity": 1,
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
               }
             }
           >
             <View
-              bordered={true}
-              disabled={false}
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <View
+                bordered={true}
+                disabled={false}
+                pill={true}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "transparent",
+                    "borderColor": "#A5A5A5",
+                    "borderRadius": 48,
+                    "borderWidth": 0,
+                    "flexDirection": "row",
+                    "height": 48,
+                    "justifyContent": "center",
+                    "opacity": 1,
+                    "overflow": "hidden",
+                    "paddingHorizontal": 16,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#A5A5A5",
+                      "fontFamily": "InterUI-Medium",
+                      "fontSize": 14,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  How to Pray
+                </Text>
+              </View>
+            </View>
+            <View
+              bordered={false}
+              disabled={true}
               pill={true}
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "transparent",
-                  "borderColor": "#A5A5A5",
+                  "backgroundColor": "#00676D",
+                  "borderColor": "#00676D",
                   "borderRadius": 48,
-                  "borderWidth": 0,
+                  "borderWidth": 2,
+                  "elevation": 2,
                   "flexDirection": "row",
                   "height": 48,
                   "justifyContent": "center",
-                  "opacity": 1,
+                  "opacity": 0.5,
                   "overflow": "hidden",
                   "paddingHorizontal": 16,
                 }
@@ -841,349 +951,372 @@ exports[`The PrayerView component should render a loading state (isLoading) 1`] 
               <Text
                 style={
                   Object {
-                    "color": "#A5A5A5",
-                    "fontFamily": "InterUI-Medium",
-                    "fontSize": 14,
-                    "lineHeight": 21,
+                    "color": "#FFFFFF",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "lineHeight": 24,
                   }
                 }
               >
-                How to Pray
+                🙏 Pray
               </Text>
             </View>
           </View>
-          <View
-            bordered={false}
-            disabled={true}
-            pill={true}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#00676D",
-                "borderColor": "#00676D",
-                "borderRadius": 48,
-                "borderWidth": 2,
-                "elevation": 2,
-                "flexDirection": "row",
-                "height": 48,
-                "justifyContent": "center",
-                "opacity": 0.5,
-                "overflow": "hidden",
-                "paddingHorizontal": 16,
-              }
-            }
-          >
-            <Text
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 16,
-                  "lineHeight": 24,
-                }
-              }
-            >
-              🙏 Pray
-            </Text>
-          </View>
         </View>
       </View>
-    </View>
-  </RCTScrollView>
-</View>
+    </RCTScrollView>
+  </View>,
+]
 `;
 
 exports[`The PrayerView component should render with children 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "flex": 1,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
-  <RCTScrollView
-    contentContainerStyle={
-      Object {
-        "flexGrow": 1,
-      }
-    }
-    keyboardDismissMode="on-drag"
-    keyboardShouldPersistTaps="never"
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
     style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
     }
   >
-    <View>
-      <View
-        style={
-          Object {
-            "flex": 1,
-          }
+    <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "flexGrow": 1,
         }
-      >
+      }
+      keyboardDismissMode="on-drag"
+      keyboardShouldPersistTaps="never"
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <View>
         <View
           style={
             Object {
-              "flexGrow": 1,
-              "justifyContent": "center",
-            }
-          }
-        >
-          <Text>
-            Boom
-          </Text>
-        </View>
-        <View
-          style={
-            Object {
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
+              "flex": 1,
             }
           }
         >
           <View
-            bordered={false}
-            disabled={true}
-            pill={true}
             style={
               Object {
-                "alignItems": "center",
-                "backgroundColor": "#00676D",
-                "borderColor": "#00676D",
-                "borderRadius": 48,
-                "borderWidth": 2,
-                "elevation": 2,
-                "flexDirection": "row",
-                "height": 48,
+                "flexGrow": 1,
                 "justifyContent": "center",
-                "opacity": 0.5,
-                "overflow": "hidden",
-                "paddingHorizontal": 16,
               }
             }
           >
-            <Text
+            <Text>
+              Boom
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "paddingHorizontal": 16,
+                "paddingVertical": 16,
+              }
+            }
+          >
+            <View
+              bordered={false}
+              disabled={true}
+              pill={true}
               style={
                 Object {
-                  "color": "#FFFFFF",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 16,
-                  "lineHeight": 24,
+                  "alignItems": "center",
+                  "backgroundColor": "#00676D",
+                  "borderColor": "#00676D",
+                  "borderRadius": 48,
+                  "borderWidth": 2,
+                  "elevation": 2,
+                  "flexDirection": "row",
+                  "height": 48,
+                  "justifyContent": "center",
+                  "opacity": 0.5,
+                  "overflow": "hidden",
+                  "paddingHorizontal": 16,
                 }
               }
             >
-              🙏 Pray
-            </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                  }
+                }
+              >
+                🙏 Pray
+              </Text>
+            </View>
           </View>
         </View>
       </View>
-    </View>
-  </RCTScrollView>
-</View>
+    </RCTScrollView>
+  </View>,
+]
 `;
 
 exports[`The PrayerView component should render with custom primaryActionText 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "flex": 1,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
-  <RCTScrollView
-    contentContainerStyle={
-      Object {
-        "flexGrow": 1,
-      }
-    }
-    keyboardDismissMode="on-drag"
-    keyboardShouldPersistTaps="never"
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
     style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
     }
   >
-    <View>
-      <View
-        style={
-          Object {
-            "flex": 1,
-          }
+    <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "flexGrow": 1,
         }
-      >
+      }
+      keyboardDismissMode="on-drag"
+      keyboardShouldPersistTaps="never"
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <View>
         <View
           style={
             Object {
-              "flexGrow": 1,
-              "justifyContent": "center",
-            }
-          }
-        />
-        <View
-          style={
-            Object {
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
+              "flex": 1,
             }
           }
         >
           <View
-            bordered={false}
-            disabled={true}
-            pill={true}
             style={
               Object {
-                "alignItems": "center",
-                "backgroundColor": "#00676D",
-                "borderColor": "#00676D",
-                "borderRadius": 48,
-                "borderWidth": 2,
-                "elevation": 2,
-                "flexDirection": "row",
-                "height": 48,
+                "flexGrow": 1,
                 "justifyContent": "center",
-                "opacity": 0.5,
-                "overflow": "hidden",
+              }
+            }
+          />
+          <View
+            style={
+              Object {
                 "paddingHorizontal": 16,
+                "paddingVertical": 16,
               }
             }
           >
-            <Text
+            <View
+              bordered={false}
+              disabled={true}
+              pill={true}
               style={
                 Object {
-                  "color": "#FFFFFF",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 16,
-                  "lineHeight": 24,
+                  "alignItems": "center",
+                  "backgroundColor": "#00676D",
+                  "borderColor": "#00676D",
+                  "borderRadius": 48,
+                  "borderWidth": 2,
+                  "elevation": 2,
+                  "flexDirection": "row",
+                  "height": 48,
+                  "justifyContent": "center",
+                  "opacity": 0.5,
+                  "overflow": "hidden",
+                  "paddingHorizontal": 16,
                 }
               }
             >
-              Custom primaryActionText
-            </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                  }
+                }
+              >
+                Custom primaryActionText
+              </Text>
+            </View>
           </View>
         </View>
       </View>
-    </View>
-  </RCTScrollView>
-</View>
+    </RCTScrollView>
+  </View>,
+]
 `;
 
 exports[`The PrayerView component should render with custom secondaryActionText 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "flex": 1,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
-  <RCTScrollView
-    contentContainerStyle={
-      Object {
-        "flexGrow": 1,
-      }
-    }
-    keyboardDismissMode="on-drag"
-    keyboardShouldPersistTaps="never"
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
     style={
-      Object {
-        "bottom": 0,
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
     }
   >
-    <View>
-      <View
-        style={
-          Object {
-            "flex": 1,
-          }
+    <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "flexGrow": 1,
         }
-      >
+      }
+      keyboardDismissMode="on-drag"
+      keyboardShouldPersistTaps="never"
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <View>
         <View
           style={
             Object {
-              "flexGrow": 1,
-              "justifyContent": "center",
-            }
-          }
-        />
-        <View
-          style={
-            Object {
-              "paddingHorizontal": 16,
-              "paddingVertical": 16,
+              "flex": 1,
             }
           }
         >
           <View
-            bordered={false}
-            disabled={true}
-            pill={true}
             style={
               Object {
-                "alignItems": "center",
-                "backgroundColor": "#00676D",
-                "borderColor": "#00676D",
-                "borderRadius": 48,
-                "borderWidth": 2,
-                "elevation": 2,
-                "flexDirection": "row",
-                "height": 48,
+                "flexGrow": 1,
                 "justifyContent": "center",
-                "opacity": 0.5,
-                "overflow": "hidden",
+              }
+            }
+          />
+          <View
+            style={
+              Object {
                 "paddingHorizontal": 16,
+                "paddingVertical": 16,
               }
             }
           >
-            <Text
+            <View
+              bordered={false}
+              disabled={true}
+              pill={true}
               style={
                 Object {
-                  "color": "#FFFFFF",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 16,
-                  "lineHeight": 24,
+                  "alignItems": "center",
+                  "backgroundColor": "#00676D",
+                  "borderColor": "#00676D",
+                  "borderRadius": 48,
+                  "borderWidth": 2,
+                  "elevation": 2,
+                  "flexDirection": "row",
+                  "height": 48,
+                  "justifyContent": "center",
+                  "opacity": 0.5,
+                  "overflow": "hidden",
+                  "paddingHorizontal": 16,
                 }
               }
             >
-              🙏 Pray
-            </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                  }
+                }
+              >
+                🙏 Pray
+              </Text>
+            </View>
           </View>
         </View>
       </View>
-    </View>
-  </RCTScrollView>
-</View>
+    </RCTScrollView>
+  </View>,
+]
 `;

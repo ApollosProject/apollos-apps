@@ -9,6 +9,8 @@ import { withIsLoading } from '../isLoading';
 import Button from '../Button';
 
 import FollowListItem from './FollowListItem';
+import FollowListSearch from './FollowListSearch';
+import FollowListSearchModal from './FollowListSearch/FollowListSearchModal';
 
 const HeaderView = styled(
   ({ theme }) => ({
@@ -60,6 +62,10 @@ class FollowList extends PureComponent {
     onConfirm: PropTypes.func,
   };
 
+  static defaultProps = {
+    followers: [],
+  };
+
   RenderAsCard = ({ children }) =>
     this.props.isCard ? (
       <Card isLoading={this.props.isLoading}>{children}</Card>
@@ -81,35 +87,48 @@ class FollowList extends PureComponent {
 
     const { RenderAsCard } = this;
 
-    if (followers?.length === 0 && !isLoading) return null;
+    const showButton = onPressFollowListButton && followListButtonTitle;
+
+    if (followers?.length === 0 && !isLoading && !showButton) return null;
 
     return (
       <RenderAsCard>
         <Content cardPadding={this.props.isCard}>
           <HeaderView>{header || null}</HeaderView>
-          {followers.map((item) => {
-            const isFollowingState = item?.currentUserFollowing?.state;
-            const isFollowed = item?.followingCurrentUser?.state;
+          {followers.map((person) => {
+            const isFollowingState = person?.currentUserFollowing?.state;
+            const isFollowed = person?.followingCurrentUser?.state;
             return (
               <FollowListItem
-                key={item.id}
-                id={item.id}
-                requested={isFollowingState === 'REQUESTED'}
-                request={isFollowed === 'REQUESTED'}
-                confirmed={isFollowingState === 'APPROVED'}
+                key={person.id}
+                id={person.id}
+                requestingFollow={isFollowingState === 'REQUESTED'}
+                followRequested={isFollowed === 'REQUESTED'}
+                confirmedFollowing={isFollowingState === 'ACCEPTED'}
+                confirmedFollower={isFollowed === 'ACCEPTED'}
                 name={
-                  [item.firstName, item.lastName]
+                  [person.firstName, person.lastName]
                     .filter((name) => Boolean(name))
                     .join(' ') || ''
                 }
-                imageSource={item.photo}
-                onFollow={() => onFollow?.(item.id)}
-                onHide={() => onHide?.(item.id)}
-                onConfirm={() => onConfirm?.(item.id)}
+                imageSource={person.photo}
+                onFollow={() => onFollow?.({ personId: person.id })}
+                onHide={() =>
+                  onHide?.({
+                    personId: person.id,
+                    requestId: person?.followingCurrentUser?.id,
+                  })
+                }
+                onConfirm={() =>
+                  onConfirm?.({
+                    personId: person.id,
+                    requestId: person?.followingCurrentUser?.id,
+                  })
+                }
               />
             );
           })}
-          {onPressFollowListButton && followListButtonTitle ? (
+          {showButton ? (
             <FullWidthButton
               title={followListButtonTitle}
               type={'default'}
@@ -124,5 +143,5 @@ class FollowList extends PureComponent {
   }
 }
 
-export { FollowListItem };
+export { FollowListItem, FollowListSearch, FollowListSearchModal };
 export default withIsLoading(FollowList);

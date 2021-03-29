@@ -5,9 +5,10 @@ import PropTypes from 'prop-types';
 // helper HOC to wrap an Input in a floating label and animated underline
 const withFocusAnimation = (Component) =>
   class WrappedInput extends PureComponent {
-    focusAnimation = new Animated.Value(0);
+    _focusAnimation = new Animated.Value(0);
 
     static propTypes = {
+      focusAnimation: PropTypes.any, // eslint-disable-line
       focusAnimationDuration: PropTypes.number,
       focusAnimationEasing: PropTypes.func,
       onFocus: PropTypes.func,
@@ -19,6 +20,10 @@ const withFocusAnimation = (Component) =>
       focusAnimationDuration: 450,
       focusAnimationEasing: Easing.in(Easing.bezier(0.23, 1, 0.32, 1)),
     };
+
+    get focusAnimation() {
+      return this.props.focusAnimation || this._focusAnimation;
+    }
 
     playAnimation = (toValue) => {
       Animated.timing(this.focusAnimation, {
@@ -38,7 +43,7 @@ const withFocusAnimation = (Component) =>
     handleBlur = (event, ...other) => {
       if (this.props.onBlur) this.props.onBlur(event, ...other);
       this.focused = false;
-      this.playAnimation(0);
+      if (!event.nativeEvent.text) this.playAnimation(0);
     };
 
     render() {

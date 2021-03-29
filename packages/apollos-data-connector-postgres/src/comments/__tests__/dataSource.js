@@ -1,31 +1,58 @@
 import { createGlobalId } from '@apollosproject/server-core';
 import { range } from 'lodash';
 import { sequelize, sync } from '../../postgres/index';
-import { createModel } from '../model';
-import { createModel as createFlagsModel } from '../../user-flags/model';
+import { createModel, setupModel } from '../model';
+import { createModel as createPersonModel } from '../../people/model';
+import { createModel as createFollowModel } from '../../follows/model';
+import {
+  createModel as createFlagsModel,
+  setupModel as setupFlagsModel,
+} from '../../user-flags/model';
+import {
+  createModel as createLikesModel,
+  setupModel as setupLikesModel,
+} from '../../user-likes/model';
 import CommentDataSource from '../dataSource';
 import UserFlagDataSource from '../../user-flags/dataSource';
+import UserLikeDataSource from '../../user-likes/dataSource';
 
+let person1;
+let person2;
+let person3;
+let currentPerson;
 const context = {
   dataSources: {
-    Auth: {
-      getCurrentPerson: () => ({ id: 1 }),
-    },
     Person: {
-      getFromId: () => ({ id: 1 }),
+      getCurrentPersonId: () => currentPerson.id,
+      getFromId: (id) => ({ id }),
     },
   },
 };
 
 describe('Apollos Postgres Comments DatSource', () => {
   beforeEach(async () => {
-    try {
-      await createModel();
-      await createFlagsModel();
-      await sync({ force: true });
-    } catch (e) {
-      console.error(e);
-    }
+    await createModel();
+    await createFlagsModel();
+    await createLikesModel();
+    await createPersonModel();
+    await createFollowModel();
+    await setupModel();
+    await setupFlagsModel();
+    await setupLikesModel();
+    await sync({ force: true });
+    person1 = await sequelize.models.people.create({
+      originId: '1',
+      originType: 'rock',
+    });
+    person2 = await sequelize.models.people.create({
+      originId: '2',
+      originType: 'rock',
+    });
+    person3 = await sequelize.models.people.create({
+      originId: '3',
+      originType: 'rock',
+    });
+    currentPerson = person1;
   });
   afterEach(async () => {
     await sequelize.drop({});
@@ -69,6 +96,7 @@ describe('Apollos Postgres Comments DatSource', () => {
       nodeId: 123,
       nodeType: 'UniversalContentItem',
     });
+
     expect(comments.length).toBe(1);
   });
 
@@ -95,7 +123,7 @@ describe('Apollos Postgres Comments DatSource', () => {
   it('should return only public comments for a given node', async () => {
     const commentDataSource = new CommentDataSource();
     // Change the user id to a different user
-    context.dataSources.Auth.getCurrentPerson = () => ({ id: 2 });
+    currentPerson = person2;
     commentDataSource.initialize({ context });
 
     // eslint-disable-next-line no-restricted-syntax
@@ -108,7 +136,7 @@ describe('Apollos Postgres Comments DatSource', () => {
       });
     }
     // Go back to our original user user
-    context.dataSources.Auth.getCurrentPerson = () => ({ id: 1 });
+    currentPerson = person1;
     const itemComments = await commentDataSource.getForNode({
       nodeId: 123,
       nodeType: 'UniversalContentItem',
@@ -119,7 +147,7 @@ describe('Apollos Postgres Comments DatSource', () => {
   it('should return your private comments', async () => {
     const commentDataSource = new CommentDataSource();
     // Change the user id to a different user
-    context.dataSources.Auth.getCurrentPerson = () => ({ id: 2 });
+    currentPerson = person2;
     commentDataSource.initialize({ context });
 
     // eslint-disable-next-line no-restricted-syntax
@@ -132,7 +160,7 @@ describe('Apollos Postgres Comments DatSource', () => {
       });
     }
     // Go back to our original user user
-    context.dataSources.Auth.getCurrentPerson = () => ({ id: 1 });
+    currentPerson = person1;
     // eslint-disable-next-line no-restricted-syntax
     for (const index of range(5)) {
       // eslint-disable-next-line no-await-in-loop
@@ -148,19 +176,6 @@ describe('Apollos Postgres Comments DatSource', () => {
       nodeType: 'UniversalContentItem',
     });
     expect(itemComments.length).toBe(5);
-  });
-
-  it('should return a user for a comment', async () => {
-    const commentDataSource = new CommentDataSource();
-    commentDataSource.initialize({ context });
-
-    const comment = await commentDataSource.addComment({
-      text: `I am a fun comment!`,
-      parentId: createGlobalId(123, 'UniversalContentItem'),
-    });
-
-    const commentPerson = await commentDataSource.getPerson(comment);
-    expect(commentPerson).toEqual({ id: 1 });
   });
 
   it('returns all comments when flagLimit is 0', async () => {
@@ -217,5 +232,136 @@ describe('Apollos Postgres Comments DatSource', () => {
     });
     expect(itemComments.length).toBe(1);
     expect(itemComments[0].text).toBe('This is okay!');
+  });
+
+  it('should sort your followers to the top', async () => {
+    const commentDataSource = new CommentDataSource();
+    commentDataSource.initialize({ context });
+
+    currentPerson = person2;
+    const comment1 = await commentDataSource.addComment({
+      text: `I am not followed!`,
+      parentId: createGlobalId(123, 'UniversalContentItem'),
+    });
+
+    currentPerson = person3;
+    const comment2 = await commentDataSource.addComment({
+      text: `I am followed! I should float to the top!`,
+      parentId: createGlobalId(123, 'UniversalContentItem'),
+    });
+
+    currentPerson = person2;
+    const comment3 = await commentDataSource.addComment({
+      text: `I am not followed! Back to the bottom!`,
+      parentId: createGlobalId(123, 'UniversalContentItem'),
+    });
+
+    currentPerson = person1;
+
+    await sequelize.models.follows.create({
+      requestPersonId: person1.id,
+      followedPersonId: person3.id,
+      state: 'ACCEPTED',
+    });
+
+    const itemComments = await commentDataSource.getForNode({
+      nodeId: 123,
+      nodeType: 'UniversalContentItem',
+      flagLimit: 1,
+    });
+    expect(itemComments.length).toBe(3);
+    expect([comment2, comment1, comment3].map(({ id }) => id)).toEqual(
+      itemComments.map(({ id }) => id)
+    );
+  });
+
+  it('should sort by likes', async () => {
+    const commentDataSource = new CommentDataSource();
+    commentDataSource.initialize({ context });
+    const userLikeDataSource = new UserLikeDataSource();
+    userLikeDataSource.initialize({ context });
+
+    currentPerson = person2;
+    const comment1 = await commentDataSource.addComment({
+      text: `I am not liked!`,
+      parentId: createGlobalId(123, 'UniversalContentItem'),
+    });
+
+    currentPerson = person3;
+    const comment2 = await commentDataSource.addComment({
+      text: `I am liked! I should float to the top!`,
+      parentId: createGlobalId(123, 'UniversalContentItem'),
+    });
+
+    currentPerson = person2;
+    const comment3 = await commentDataSource.addComment({
+      text: `I am not liked! Back to the bottom!`,
+      parentId: createGlobalId(123, 'UniversalContentItem'),
+    });
+
+    currentPerson = person1;
+
+    await userLikeDataSource.updateLikeComment({
+      commentId: comment2.apollosId,
+      operation: 'Like',
+    });
+
+    const itemComments = await commentDataSource.getForNode({
+      nodeId: 123,
+      nodeType: 'UniversalContentItem',
+      flagLimit: 1,
+    });
+    expect(itemComments.length).toBe(3);
+    expect([comment2, comment1, comment3].map(({ id }) => id)).toEqual(
+      itemComments.map(({ id }) => id)
+    );
+  });
+
+  it('should include follows before high like counts', async () => {
+    const commentDataSource = new CommentDataSource();
+    commentDataSource.initialize({ context });
+    const userLikeDataSource = new UserLikeDataSource();
+    userLikeDataSource.initialize({ context });
+
+    currentPerson = person2;
+    const comment1 = await commentDataSource.addComment({
+      text: `I am not followed nor liked!`,
+      parentId: createGlobalId(123, 'UniversalContentItem'),
+    });
+
+    currentPerson = person3;
+    const comment2 = await commentDataSource.addComment({
+      text: `I am followed! I should float to the top!`,
+      parentId: createGlobalId(123, 'UniversalContentItem'),
+    });
+
+    currentPerson = person2;
+    const comment3 = await commentDataSource.addComment({
+      text: `I am not followed, but I am liked! 2nd place for me!`,
+      parentId: createGlobalId(123, 'UniversalContentItem'),
+    });
+
+    currentPerson = person1;
+
+    await sequelize.models.follows.create({
+      requestPersonId: person1.id,
+      followedPersonId: person3.id,
+      state: 'ACCEPTED',
+    });
+
+    await userLikeDataSource.updateLikeComment({
+      commentId: comment3.apollosId,
+      operation: 'Like',
+    });
+
+    const itemComments = await commentDataSource.getForNode({
+      nodeId: 123,
+      nodeType: 'UniversalContentItem',
+      flagLimit: 1,
+    });
+    expect(itemComments.length).toBe(3);
+    expect([comment2, comment3, comment1].map(({ id }) => id)).toEqual(
+      itemComments.map(({ id }) => id)
+    );
   });
 });

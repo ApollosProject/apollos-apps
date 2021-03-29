@@ -3,10 +3,7 @@ import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { times } from 'lodash';
 import { BackgroundView, CenteredView } from '@apollosproject/ui-kit';
-import {
-  ApolloStorybookDecorator,
-  WithReactNavigator,
-} from '@apollosproject/ui-test-utils';
+import { ApolloStorybookDecorator } from '@apollosproject/ui-test-utils';
 import NodeSingleConnected from './index';
 
 const devoMock = (root, { id }) => ({
@@ -183,14 +180,12 @@ const mocks = {
 };
 
 storiesOf('ui-connected/NodeSingleConnected', module)
-  .addDecorator((story) =>
-    WithReactNavigator(
-      <BackgroundView>
-        {/* eslint-disable-next-line react-native/no-inline-styles */}
-        <CenteredView style={{ alignItems: 'stretch' }}>{story()}</CenteredView>
-      </BackgroundView>
-    )
-  )
+  .addDecorator((story) => (
+    <BackgroundView>
+      {/* eslint-disable-next-line react-native/no-inline-styles */}
+      <CenteredView style={{ alignItems: 'stretch' }}>{story()}</CenteredView>
+    </BackgroundView>
+  ))
   .addDecorator(ApolloStorybookDecorator({ mocks }))
   .add('example', () => (
     <NodeSingleConnected nodeId={'UniversalContentItem:123'} />

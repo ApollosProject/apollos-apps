@@ -142,7 +142,7 @@ ActionListFeature.displayName = 'Features';
 ActionListFeature.propTypes = {
   actions: PropTypes.arrayOf(PropTypes.shape({})),
   primaryAction: PropTypes.shape({}),
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   isLoading: PropTypes.bool,
   loadingStateObject: PropTypes.arrayOf(PropTypes.shape({})),
   onPressActionListButton: PropTypes.func,

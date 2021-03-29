@@ -1,17 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { View } from 'react-native';
 import Modal, { ModalHeader } from '../../Modal';
+import styled from '../../styled';
 import FollowListSearch from '.';
+
+const SearchBackground = styled(
+  ({ theme }) => ({
+    backgroundColor: theme.colors.background.paper,
+  }),
+  'ui-kit.onFollow.SearchBackground'
+)(View);
 
 const FollowListSearchModal = ({
   onSearch,
-  onHide,
-  onConfirm,
-  onFollow,
-  results,
   open,
   setModalOpen,
   title,
+  ...props
 }) => {
   return (
     <Modal
@@ -19,18 +25,14 @@ const FollowListSearchModal = ({
       onRequestClose={() => setModalOpen(false)}
       visible={open}
     >
-      <ModalHeader
-        onNext={() => setModalOpen(false)}
-        onNextText="Done"
-        title={title}
-      />
-      <FollowListSearch
-        onSearch={onSearch}
-        results={results}
-        onHide={onHide}
-        onConfirm={onConfirm}
-        onFollow={onFollow}
-      />
+      <SearchBackground>
+        <ModalHeader
+          onNext={() => setModalOpen(false)}
+          onNextText="Done"
+          title={title}
+        />
+        <FollowListSearch onSearch={onSearch} {...props} />
+      </SearchBackground>
     </Modal>
   );
 };
@@ -49,10 +51,6 @@ FollowListSearchModal.propTypes = {
 FollowListSearchModal.defaultProps = {
   title: 'Find People to Follow',
   onSearch: () => {},
-  onHide: () => {},
-  onConfirm: () => {},
-  onFollow: () => {},
-  results: [],
   open: false,
 };
 

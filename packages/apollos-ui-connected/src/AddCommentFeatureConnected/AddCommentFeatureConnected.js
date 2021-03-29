@@ -85,12 +85,14 @@ const AddCommentFeatureConnected = ({
     <Component
       {...node}
       {...props}
+      openBottomSheetOnMount
       loading={isLoading || loading}
-      onSubmit={(text) =>
+      onSubmit={(text, visibility) =>
         addComment({
           variables: {
             text,
             parentId: node.relatedNode.id,
+            visibility,
           },
         })
       }

@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.8.0](https://github.com/apollosproject/apollos-apps/compare/v2.7.0...v2.8.0) (2021-03-29)
+
+
+### Features
+
+* Add like button to comments ([#1832](https://github.com/apollosproject/apollos-apps/issues/1832)) ([3c778a3](https://github.com/apollosproject/apollos-apps/commit/3c778a35b8eebee39ce5a118894343d13ac79114))
+
+
+
+## [2.7.0](https://github.com/apollosproject/apollos-apps/compare/v2.6.0...v2.7.0) (2021-03-25)
+
+**Note:** Version bump only for package @apollosproject/ui-fragments
+
+
+
+
+
+## [2.6.0](https://github.com/apollosproject/apollos-apps/compare/v2.5.0...v2.6.0) (2021-03-24)
+
+**Note:** Version bump only for package @apollosproject/ui-fragments
+
+
+
+
+
+## [2.5.0](https://github.com/apollosproject/apollos-apps/compare/v2.4.0...v2.5.0) (2021-03-22)
+
+**Note:** Version bump only for package @apollosproject/ui-fragments
+
+
+
+
+
+## [2.4.0](https://github.com/apollosproject/apollos-apps/compare/v2.3.1...v2.4.0) (2021-03-18)
+
+**Note:** Version bump only for package @apollosproject/ui-fragments
+
+
+
+
+
 ### [2.3.1](https://github.com/apollosproject/apollos-apps/compare/v2.3.0...v2.3.1) (2021-03-11)
 
 **Note:** Version bump only for package @apollosproject/ui-fragments

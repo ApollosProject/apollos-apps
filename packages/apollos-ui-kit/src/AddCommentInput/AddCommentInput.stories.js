@@ -2,13 +2,7 @@
 
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
-import {
-  View,
-  FlatList,
-  Text,
-  ScrollView,
-  KeyboardAvoidingView,
-} from 'react-native';
+import { View, FlatList, Text, ScrollView } from 'react-native';
 import { times } from 'lodash';
 
 import Comment from '../Comment';
@@ -21,7 +15,7 @@ const fakeData = [
   ...times(10, (i) => ({
     __typename: 'Comment',
     profile: {
-      image: { uri: `https://picsum.photos/seed/${i}/200` },
+      photo: { uri: `https://picsum.photos/seed/${i}/200` },
       nickName: 'Albert Flores',
     },
     subtitle: 'Anderson Campus',
@@ -36,8 +30,9 @@ storiesOf('ui-kit/AddCommentInput', module)
   .add('default', () => (
     <View style={{ justifyContent: 'flex-end', flex: 1 }}>
       <AddCommentInput
+        showInlinePrompt
         profile={{
-          image: { uri: 'https://picsum.photos/200' },
+          photo: { uri: 'https://picsum.photos/200' },
           nickName: 'Jeff Bridges',
         }}
         onSubmit={() => {}}
@@ -48,8 +43,9 @@ storiesOf('ui-kit/AddCommentInput', module)
     <ThemeMixin mixin={{ type: 'dark' }}>
       <BackgroundView style={{ justifyContent: 'flex-end', flex: 1 }}>
         <AddCommentInput
+          showInlinePrompt
           profile={{
-            image: { uri: 'https://picsum.photos/200' },
+            photo: { uri: 'https://picsum.photos/200' },
             nickName: 'Jeff Bridges',
           }}
           onSubmit={() => {}}
@@ -58,27 +54,28 @@ storiesOf('ui-kit/AddCommentInput', module)
     </ThemeMixin>
   ))
   .add('with content and comments', () => (
-    <KeyboardAvoidingView behavior={'padding'} style={{ flex: 1 }}>
-      <ScrollView>
-        {times(30, () => (
-          <Text>{'----------------'}</Text>
-        ))}
-        <FlatList
-          renderItem={({ item }) =>
-            item.__typename === 'Comment' ? (
-              <Comment {...item} />
-            ) : (
-              <AddCommentInput
-                onSubmit={() => {}}
-                profile={{
-                  image: { uri: 'https://picsum.photos/200' },
-                  nickName: 'Jeff Bridges',
-                }}
-              />
-            )
-          }
-          data={fakeData}
-        />
-      </ScrollView>
-    </KeyboardAvoidingView>
+    <ScrollView>
+      {times(30, () => (
+        <Text>{'----------------'}</Text>
+      ))}
+      <FlatList
+        renderItem={({ item }) =>
+          item.__typename === 'Comment' ? (
+            <Comment {...item} />
+          ) : (
+            <AddCommentInput
+              showInlinePrompt
+              onSubmit={() =>
+                new Promise((resolve) => setTimeout(() => resolve(), 3000))
+              }
+              profile={{
+                photo: { uri: 'https://picsum.photos/200' },
+                nickName: 'Jeff Bridges',
+              }}
+            />
+          )
+        }
+        data={fakeData}
+      />
+    </ScrollView>
   ));
