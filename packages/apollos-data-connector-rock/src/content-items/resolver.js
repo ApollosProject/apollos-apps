@@ -43,11 +43,11 @@ export const defaultContentItemResolvers = {
         img: ['src'],
       },
       transformTags: {
-        img: (tagName, attribs) => {
+        img: (tagName, { src }) => {
           return {
             tagName,
             attribs: {
-              src: `${ROCK.URL || ''}${attribs.src}`,
+              src: src.startsWith('http') ? src : `${ROCK.URL || ''}${src}`,
             },
           };
         },
