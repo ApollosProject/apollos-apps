@@ -1762,10 +1762,11 @@ Array [
       }
     >
       <View
+        screenBackgroundColor="salmon"
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#FFFFFF",
+            "backgroundColor": "salmon",
             "flexDirection": "row",
           }
         }

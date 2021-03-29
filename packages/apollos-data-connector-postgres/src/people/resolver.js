@@ -1,5 +1,6 @@
 import moment from 'moment-timezone';
 import { withEdgePagination } from '@apollosproject/server-core';
+import { startCase, toLower } from 'lodash';
 import { enforceCurrentUser } from '../utils';
 
 export default {
@@ -20,6 +21,7 @@ export default {
     ),
     email: enforceCurrentUser(({ email }) => email),
     nickName: ({ firstName, lastName }) => `${firstName} ${lastName}`,
+    gender: ({ gender }) => startCase(toLower(gender)),
   },
   SearchPeopleResultsConnection: {
     edges: (edges) => edges,
