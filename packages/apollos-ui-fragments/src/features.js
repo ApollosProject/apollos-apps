@@ -240,7 +240,6 @@ const ADD_COMMENT_FEATURE_FRAGMENT = gql`
 
     addPrompt
     initialPrompt
-    isLiked
 
     relatedNode {
       id
