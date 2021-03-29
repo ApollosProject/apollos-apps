@@ -47,6 +47,7 @@ export const defaultContentItemResolvers = {
           return {
             tagName,
             attribs: {
+              // adds Rock URL in the case of local image references in the CMS
               src: src.startsWith('http') ? src : `${ROCK.URL || ''}${src}`,
             },
           };
