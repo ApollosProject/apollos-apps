@@ -12,9 +12,9 @@ const FollowListConnected = ({ Component, ...props }) => {
   const [acceptFollowRequest] = useMutation(ACCEPT_REQUEST);
   const [ignoreFollowRequest] = useMutation(IGNORE_REQUEST);
 
-  const handleFollow = (id) => {
+  const handleFollow = ({ personId }) => {
     return requestFollowPerson({
-      variables: { personId: id },
+      variables: { personId },
       optimisticResponse: {
         __typename: 'Mutation',
         requestFollow: {
@@ -31,7 +31,7 @@ const FollowListConnected = ({ Component, ...props }) => {
       // If you don't care about the UI updating, or plan on refetching your queries, you can delete this argument ;)
       update: (cache, { data: { requestFollow } }) => {
         cache.modify({
-          id: cache.identify({ id, __typename: 'Person' }),
+          id: cache.identify({ id: personId, __typename: 'Person' }),
           fields: {
             currentUserFollowing() {
               return requestFollow;
@@ -42,12 +42,32 @@ const FollowListConnected = ({ Component, ...props }) => {
     });
   };
 
-  const handleAccept = (id) => {
-    return acceptFollowRequest({ variables: { personId: id } });
+  const handleAccept = ({ personId, requestId }) => {
+    return acceptFollowRequest({
+      variables: { personId },
+      optimisticResponse: {
+        __typename: 'Mutation',
+        acceptFollowRequest: {
+          __typename: 'Follow',
+          state: 'ACCEPTED',
+          id: requestId,
+        },
+      },
+    });
   };
 
-  const handleIgnore = (id) => {
-    return ignoreFollowRequest({ variables: { personId: id } });
+  const handleIgnore = ({ personId, requestId }) => {
+    return ignoreFollowRequest({
+      variables: { personId },
+      optimisticResponse: {
+        __typename: 'Mutation',
+        ignoreFollowRequest: {
+          __typename: 'Follow',
+          state: 'DECLINED',
+          id: requestId,
+        },
+      },
+    });
   };
   return (
     <Component
