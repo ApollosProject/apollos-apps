@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`the sanitizeHtml function returns an empty string with null HTML 1`] = `""`;
