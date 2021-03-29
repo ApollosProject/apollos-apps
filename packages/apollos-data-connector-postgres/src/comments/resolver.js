@@ -12,7 +12,7 @@ const resolvers = {
       UserLike.updateLikeComment({ ...args, operation: 'Unlike' }),
   },
   Comment: {
-    person: (root) => root.getPerson(),
+    person: (root) => root.person || root.getPerson(),
     id: ({ apollosId }) => apollosId,
     isLiked: (root, args, { dataSources: { UserLike } }) =>
       UserLike.userLikedNode({ ...root, nodeId: root.apollosId }),
