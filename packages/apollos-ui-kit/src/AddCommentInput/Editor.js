@@ -16,6 +16,7 @@ import Avatar from '../Avatar';
 import styled from '../styled';
 import { H4 } from '../typography';
 import PaddedView from '../PaddedView';
+import Touchable from '../Touchable';
 import useKeyboardHeight from './useKeyboardHeight';
 
 const ContainerScrollView = styled(({ theme }) => ({
@@ -158,7 +159,11 @@ const Editor = ({
     >
       <CommentInputContainer>
         <TextInput
-          prefix={<EditorAvatar source={image} />}
+          prefix={
+            <Touchable onPress={() => bottomSheetModalRef.current?.expand()}>
+              <EditorAvatar source={image} />
+            </Touchable>
+          }
           label={prompt}
           multiline
           onChangeText={(value) => {
@@ -172,7 +177,6 @@ const Editor = ({
           focusAnimation={
             headerShown || text.value ? new RNAnimated.Value(1) : undefined
           }
-          // TextInputComponent={BottomSheetTextInput}
         />
         {keyboardHeight && Platform.OS === 'ios' ? (
           <View
