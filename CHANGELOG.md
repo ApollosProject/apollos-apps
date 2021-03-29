@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.8.0](https://github.com/ApollosProject/apollos-apps/compare/v2.7.0...v2.8.0) (2021-03-29)
+
+
+### Features
+
+* Add like button to comments ([#1832](https://github.com/ApollosProject/apollos-apps/issues/1832)) ([3c778a3](https://github.com/ApollosProject/apollos-apps/commit/3c778a35b8eebee39ce5a118894343d13ac79114))
+
+
+### Bug Fixes
+
+* Map gender to a postgres compatible value ([#1836](https://github.com/ApollosProject/apollos-apps/issues/1836)) ([183da8b](https://github.com/ApollosProject/apollos-apps/commit/183da8bfafa7f810d77cd470f8f74ae8dcd688e2))
+
+
+
 ## [2.7.0](https://github.com/ApollosProject/apollos-apps/compare/v2.6.0...v2.7.0) (2021-03-25)
 
 
