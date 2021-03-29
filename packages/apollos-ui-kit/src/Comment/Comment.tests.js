@@ -43,6 +43,26 @@ describe('ui-kit/Comment', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('Should render with isLiked', () => {
+    const tree = renderer.create(
+      <Providers>
+        <Comment
+          profile={{
+            photo: { uri: 'https://picsum.photos/200' },
+            nickName: 'Albert Flores',
+          }}
+          subtitle={'Anderson Campus'}
+          commentText={
+            'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.'
+          }
+          isLiked
+          onPressActionMenu={() => Alert.alert('You pressed action menu!')}
+          onPressLike={() => Alert.alert('You pressed like!')}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should render without onPressActionMenu', () => {
     const tree = renderer.create(
       <Providers>

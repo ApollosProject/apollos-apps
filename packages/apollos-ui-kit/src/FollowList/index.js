@@ -95,26 +95,36 @@ class FollowList extends PureComponent {
       <RenderAsCard>
         <Content cardPadding={this.props.isCard}>
           <HeaderView>{header || null}</HeaderView>
-          {followers.map((item) => {
-            const isFollowingState = item?.currentUserFollowing?.state;
-            const isFollowed = item?.followingCurrentUser?.state;
+          {followers.map((person) => {
+            const isFollowingState = person?.currentUserFollowing?.state;
+            const isFollowed = person?.followingCurrentUser?.state;
             return (
               <FollowListItem
-                key={item.id}
-                id={item.id}
+                key={person.id}
+                id={person.id}
                 requestingFollow={isFollowingState === 'REQUESTED'}
                 followRequested={isFollowed === 'REQUESTED'}
                 confirmedFollowing={isFollowingState === 'ACCEPTED'}
                 confirmedFollower={isFollowed === 'ACCEPTED'}
                 name={
-                  [item.firstName, item.lastName]
+                  [person.firstName, person.lastName]
                     .filter((name) => Boolean(name))
                     .join(' ') || ''
                 }
-                imageSource={item.photo}
-                onFollow={() => onFollow?.(item.id)}
-                onHide={() => onHide?.(item.id)}
-                onConfirm={() => onConfirm?.(item.id)}
+                imageSource={person.photo}
+                onFollow={() => onFollow?.({ personId: person.id })}
+                onHide={() =>
+                  onHide?.({
+                    personId: person.id,
+                    requestId: person?.followingCurrentUser?.id,
+                  })
+                }
+                onConfirm={() =>
+                  onConfirm?.({
+                    personId: person.id,
+                    requestId: person?.followingCurrentUser?.id,
+                  })
+                }
               />
             );
           })}
