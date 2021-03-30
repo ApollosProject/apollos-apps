@@ -198,18 +198,32 @@ export const createJobs = (data) => ({ app, context, dataSources }) => {
     queues = createQueues(process.env.REDIS_URL);
   }
 
-  app.use(
-    '/admin/queues',
-    basicAuth({
+  const jobsPath = '/admin/queues';
+  let trigger = () => null;
+  if (ApollosConfig.APP.JOBS_USERNAME && ApollosConfig.APP.JOBS_PASSWORD) {
+    const auth = basicAuth({
       users: {
         [ApollosConfig.APP.JOBS_USERNAME]: ApollosConfig.APP.JOBS_PASSWORD,
       },
       challenge: true,
-    }),
-    UI
-  );
+    });
 
-  return jobs.forEach((create) => create({ app, getContext, queues }));
+    app.use(jobsPath, auth, UI);
+
+    // callback to define a manually triggered job
+    trigger = (path, job) => {
+      app.post(`${jobsPath}${path}`, auth, (req, res) => {
+        job.add(null);
+        res.sendStatus(201);
+      });
+    };
+  } else {
+    app.get(jobsPath, (req, res) => {
+      res.send('Must specify a username and password in the server config');
+    });
+  }
+
+  return jobs.forEach((create) => create({ app, getContext, queues, trigger }));
 };
 
 export const createApolloServerConfig = (data) => {
