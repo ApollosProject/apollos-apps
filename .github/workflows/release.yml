@@ -59,8 +59,9 @@ jobs:
       run: |
         git config --global user.email "apps@apollos.app"
         git config --global user.name "Apollos Admin"
-        yarn release:canary --yes --force-publish
         yarn release --yes
+        git commit --allow-empty -m "chore: first canary build"
+        git push
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
