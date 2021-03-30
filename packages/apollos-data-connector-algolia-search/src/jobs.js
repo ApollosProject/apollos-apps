@@ -31,7 +31,7 @@ if (REDIS_URL) {
   };
 }
 
-const createJobs = ({ getContext, queues, trigger }) => {
+const createJobs = ({ getContext, queues, trigger = () => null }) => {
   const FullIndexQueue = queues.add('algolia-full-index-queue', queueOpts);
   const DeltaIndexQueue = queues.add('algolia-delta-index-queue', queueOpts);
 
