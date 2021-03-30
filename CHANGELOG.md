@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.9.0](https://github.com/ApollosProject/apollos-apps/compare/v2.8.0...v2.9.0) (2021-03-30)
+
+
+### Features
+
+* Optimistic response for requesting follows ([#1839](https://github.com/ApollosProject/apollos-apps/issues/1839)) ([54a6893](https://github.com/ApollosProject/apollos-apps/commit/54a68932bb1b39d3cc2caaa4081333ae1580aac3))
+
+
+### Bug Fixes
+
+* allow adding images to Rock CMS ([#1834](https://github.com/ApollosProject/apollos-apps/issues/1834)) ([80a4fb8](https://github.com/ApollosProject/apollos-apps/commit/80a4fb8ebcf8678241ae85cce6cb67cffcc6a2a6))
+* Avatar not showing up / crash when adding comment ([#1841](https://github.com/ApollosProject/apollos-apps/issues/1841)) ([8ed9c1d](https://github.com/ApollosProject/apollos-apps/commit/8ed9c1d845e828e4a14c13e1b5d02912c9cb04b0))
+* Video playing in background after closing ([#1837](https://github.com/ApollosProject/apollos-apps/issues/1837)) ([30b694f](https://github.com/ApollosProject/apollos-apps/commit/30b694f973885f1ffce16d6dcbe82f17371d2df5))
+
+
+
 ## [2.8.0](https://github.com/ApollosProject/apollos-apps/compare/v2.7.0...v2.8.0) (2021-03-29)
 
 
