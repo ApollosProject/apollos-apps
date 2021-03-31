@@ -22,8 +22,10 @@ export const ACTION_MAP = {
     });
   },
   OPEN_NODE: ({ navigation, relatedNode }) => {
-    navigation.navigate('NodeSingle', {
-      nodeId: relatedNode.id,
+    // TODO deprecate
+    console.warn('OPEN_NODE action deprecated, use READ_CONTENT');
+    navigation.navigate('ContentSingle', {
+      itemId: relatedNode.id,
       transitionKey: 2,
     });
   },
