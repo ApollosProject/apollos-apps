@@ -83,6 +83,7 @@ jobs:
       run: |
         git config --global user.email "apps@apollos.app"
         git config --global user.name "Apollos Admin"
+        sleep 120 # this is to insure the tag has been uploaded to Github and the API call will work
         yarn bump
 
   upgrade-tool:
