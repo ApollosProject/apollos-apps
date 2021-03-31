@@ -18,6 +18,10 @@ const { APP, ROCK, ROCK_MAPPINGS, ROCK_CONSTANTS } = ApollosConfig;
 export default class ContentItem extends RockApolloDataSource {
   resource = 'ContentChannelItems';
 
+  activeChannelIds =
+    ROCK_MAPPINGS.ACTIVE_CONTENT_CHANNEL_IDS ||
+    ROCK_MAPPINGS.FEED_CONTENT_CHANNEL_IDS;
+
   attributeIsImage = ({ key, attributeValues, attributes }) =>
     attributes[key].fieldTypeId === ROCK_CONSTANTS.IMAGE ||
     (key.toLowerCase().includes('image') &&
@@ -463,9 +467,7 @@ export default class ContentItem extends RockApolloDataSource {
   byActive = () =>
     this.request()
       .filterOneOf(
-        ROCK_MAPPINGS.FEED_CONTENT_CHANNEL_IDS.map(
-          (id) => `ContentChannelId eq ${id}`
-        )
+        this.activeChannelIds.map((id) => `ContentChannelId eq ${id}`)
       )
       .cache({ ttl: 60 })
       .andFilter(this.LIVE_CONTENT());
@@ -473,9 +475,7 @@ export default class ContentItem extends RockApolloDataSource {
   byDateAndActive = async ({ datetime }) =>
     this.request()
       .filterOneOf(
-        ROCK_MAPPINGS.FEED_CONTENT_CHANNEL_IDS.map(
-          (id) => `ContentChannelId eq ${id}`
-        )
+        this.activeChannelIds.map((id) => `ContentChannelId eq ${id}`)
       )
       .cache({ ttl: 60 })
       .andFilter(
