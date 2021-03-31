@@ -192,11 +192,11 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
   }
 
   // Gets a configurable amount of content items from each of the configured campaigns
-  async campaignItemsAlgorithm({ limit = 1 } = {}) {
+  async campaignItemsAlgorithm({ channelIds = [], limit = 1 } = {}) {
     const { ContentItem } = this.context.dataSources;
 
     const channels = await ContentItem.byContentChannelIds(
-      ApollosConfig.ROCK_MAPPINGS.CAMPAIGN_CHANNEL_IDS
+      channelIds || ApollosConfig.ROCK_MAPPINGS.CAMPAIGN_CHANNEL_IDS
     ).get();
 
     const items = flatten(
