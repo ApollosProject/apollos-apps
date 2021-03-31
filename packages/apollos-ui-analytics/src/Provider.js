@@ -143,8 +143,8 @@ const Provider = ({
 );
 
 export const useTrack = () => {
-  const { track } = useContext(AnalyticsContext);
-  return track;
+  const ctx = useContext(AnalyticsContext);
+  return ctx.track;
 };
 
 Provider.propTypes = {

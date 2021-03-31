@@ -20,8 +20,6 @@ const AddCommentFeatureConnected = ({
   onAddComment,
   ...props
 }) => {
-  console.warn(props);
-
   const { data, loading, refetch } = useQuery(GET_ADD_COMMENT_FEATURE, {
     variables: {
       featureId,
@@ -85,12 +83,12 @@ const AddCommentFeatureConnected = ({
     update: onAddComment || addCommentUpdate,
   });
 
-  // const track = useTrack();
-  // const parentId = node.relatedNode.id;
-  // const parentTitle = useQuery(GET_TITLE, {
-  //   variables: { nodeId: parentId },
-  //   fetchPolicy: 'cache-only',
-  // })?.data?.node?.title;
+  const track = useTrack();
+  const parentId = node.relatedNode.id;
+  const parentTitle = useQuery(GET_TITLE, {
+    variables: { nodeId: parentId },
+    fetchPolicy: 'cache-only',
+  })?.data?.node?.title;
 
   return (
     <Component

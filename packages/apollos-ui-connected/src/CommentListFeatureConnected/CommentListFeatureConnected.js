@@ -2,10 +2,8 @@
 import React from 'react';
 import { useQuery, useMutation } from '@apollo/client';
 import { Alert, Platform, ActionSheetIOS } from 'react-native';
-import { get } from 'lodash';
 import PropTypes from 'prop-types';
 import { useTrack } from '@apollosproject/ui-analytics';
-import GET_TITLE from '../NodeSingleConnected/getTitle';
 import GET_COMMENT_LIST_FEATURE from './getCommentListFeature';
 import FLAG_COMMENT from './flagComment';
 import LIKE_COMMENT from './likeComment';
@@ -113,7 +111,7 @@ function CommentListFeatureConnected({
         track({
           eventName: 'Comment Flagged',
           properties: {
-            commentId: id,
+            commentId,
           },
         });
         flagComment({ variables: { commentId } });
