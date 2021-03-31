@@ -29,6 +29,7 @@ const AddCommentInput = ({
   openBottomSheetOnMount = true,
   showInlinePrompt = true,
   dismissOnPanDown = false,
+  expanded = false,
   onSubmit,
   profile,
 }) => {
@@ -62,6 +63,13 @@ const AddCommentInput = ({
       bottomSheetModalRef.current?.present();
     }
   }, [openBottomSheetOnMount]);
+
+  useEffect(() => {
+    if (expanded) {
+      bottomSheetModalRef.current?.present();
+      bottomSheetModalRef.current?.expand();
+    }
+  }, [expanded]);
 
   return (
     <>
