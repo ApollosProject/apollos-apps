@@ -75,7 +75,10 @@ export { LiveConsumer, LiveProvider } from './live';
 export NodeFeaturesConnected, {
   GET_NODE_FEATURES,
 } from './NodeFeaturesConnected';
-export NodeSingleConnected from './NodeSingleConnected';
+export NodeSingleConnected, {
+  GET_MEDIA,
+  GET_TITLE,
+} from './NodeSingleConnected';
 export RockAuthedWebBrowser from './RockAuthedWebBrowser';
 export RockAuthedWebView from './RockAuthedWebView';
 export SearchCardConnected from './SearchCardConnected';

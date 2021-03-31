@@ -7,6 +7,10 @@ import {
 } from '../../comments/model';
 import { createModel as createPeopleModel } from '../../people/model';
 import { createModel as createFollowModel } from '../../follows/model';
+import {
+  createModel as createLikesModel,
+  setupModel as setupLikesModel,
+} from '../../user-likes/model';
 import CommentDataSource from '../../comments/dataSource';
 import UserFlagDataSource from '../dataSource';
 
@@ -29,8 +33,10 @@ describe('Apollos Postgres Comment Flags DataSource', () => {
     await createCommentModel();
     await createPeopleModel();
     await createFollowModel();
+    await createLikesModel();
     await createModel();
     await setupModel();
+    await setupLikesModel();
     await setupCommentModel();
     await sync();
 
