@@ -254,6 +254,7 @@ const COMMENT_LIST_FEATURE_FRAGMENT = gql`
     comments {
       id
       text
+      isLiked
       person {
         id
         nickName

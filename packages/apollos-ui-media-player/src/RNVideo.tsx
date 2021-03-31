@@ -23,6 +23,10 @@ const Container = styled(
   'ApollosPlayer.RNVideoPresentation.Container'
 )(View);
 
+interface VideoExpanded extends Video {
+  setNativeProps: (arg0: any) => void;
+}
+
 const RNVideoPresentation = ({
   useNativeFullscreeniOS,
 }: {
@@ -93,7 +97,7 @@ const RNVideoPresentation = ({
     updatePlayhead(playheadRef.current);
   };
 
-  const videoRef = React.useRef<Video>(null);
+  const videoRef = React.useRef<VideoExpanded>(null);
 
   const skip = React.useCallback(
     (skipBy: number) => {
@@ -136,6 +140,20 @@ const RNVideoPresentation = ({
       }
     }
   }, [pictureMode, useNativeFullscreeniOS, pause]);
+
+  React.useEffect(() => {
+    return () => {
+      // Ugly :/
+      // Thanks to RNScreens, the native video doesn't realize it's unmounted.
+      // React land does thought, so we need to intercept that unmount and stop the video.
+      // We also need to stop pip, since the PIP player doesn't work once the component is paused.
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      videoRef?.current?.setNativeProps({
+        paused: true,
+        pictureInPicture: false,
+      });
+    };
+  }, []);
 
   return (
     <Container>

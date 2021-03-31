@@ -9,6 +9,7 @@ export default gql`
     addComment(text: $text, parentId: $parentId, visibility: $visibility) {
       id
       text
+      isLiked
       person {
         id
         nickName
