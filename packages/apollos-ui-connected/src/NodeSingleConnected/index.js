@@ -19,6 +19,7 @@ import NodeFeaturesConnected from '../NodeFeaturesConnected';
 import ScriptureNodeConnected from '../ScriptureNodeConnected';
 
 import GET_MEDIA from './getMedia';
+import GET_TITLE from './getTitle';
 
 const Noop = () => null;
 
@@ -134,6 +135,8 @@ NodeSingleConnectedWithMedia.propTypes = {
 NodeSingleConnectedWithMedia.defaultProps = {
   Component: NodeSingleInner,
 };
+
+export { GET_MEDIA, GET_TITLE };
 
 export default named('ui-connected.NodeSingleConnected')(
   NodeSingleConnectedWithMedia

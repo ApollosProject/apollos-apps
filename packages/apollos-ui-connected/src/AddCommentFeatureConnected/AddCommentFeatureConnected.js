@@ -2,10 +2,12 @@ import React from 'react';
 import { useMutation, useQuery } from '@apollo/client';
 import PropTypes from 'prop-types';
 import { AddCommentInput } from '@apollosproject/ui-kit';
+import { useTrack } from '@apollosproject/ui-analytics';
 
 import GET_NODE_FEATURE_FEED from '../FeaturesFeedConnected/getFeatureFeed';
 import GET_NODE_FEATURES from '../NodeFeaturesConnected/getNodeFeatures';
 import GET_COMMENT_LIST_FEATURE from '../CommentListFeatureConnected/getCommentListFeature';
+import GET_TITLE from '../NodeSingleConnected/getTitle';
 
 import GET_ADD_COMMENT_FEATURE from './getAddCommentFeature';
 import ADD_COMMENT from './addComment';
@@ -81,21 +83,36 @@ const AddCommentFeatureConnected = ({
     update: onAddComment || addCommentUpdate,
   });
 
+  const track = useTrack();
+  const parentId = node?.relatedNode?.id;
+  const parentTitle = useQuery(GET_TITLE, {
+    variables: { nodeId: parentId },
+    fetchPolicy: 'cache-only',
+  })?.data?.node?.title;
+
   return (
     <Component
       {...node}
       {...props}
       openBottomSheetOnMount
       loading={isLoading || loading}
-      onSubmit={(text, visibility) =>
-        addComment({
+      onSubmit={(text, visibility) => {
+        track({
+          eventName: 'Comment Added',
+          properties: {
+            visibility,
+            parentId,
+            parentTitle,
+          },
+        });
+        return addComment({
           variables: {
             text,
-            parentId: node.relatedNode.id,
+            parentId,
             visibility,
           },
-        })
-      }
+        });
+      }}
       profile={currentPerson?.profile}
     />
   );
