@@ -45,6 +45,7 @@ jest.mock('react-native-screens/native-stack', () => ({
 
 jest.mock('@apollosproject/ui-analytics', () => ({
   track: () => '',
+  useTrack: () => () => jest.fn,
   AnalyticsConsumer: ({ children }) => children({ test: jest.fn() }),
   AnalyticsProvider: ({ children }) => children,
   TrackEventWhenLoaded: () => null,

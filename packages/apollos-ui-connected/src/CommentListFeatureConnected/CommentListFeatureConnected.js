@@ -4,6 +4,8 @@ import { useQuery, useMutation } from '@apollo/client';
 import { Alert, Platform, ActionSheetIOS } from 'react-native';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
+import { useTrack } from '@apollosproject/ui-analytics';
+import GET_TITLE from '../NodeSingleConnected/getTitle';
 import GET_COMMENT_LIST_FEATURE from './getCommentListFeature';
 import FLAG_COMMENT from './flagComment';
 import LIKE_COMMENT from './likeComment';
@@ -52,6 +54,8 @@ function CommentListFeatureConnected({
     fetchPolicy: 'cache-and-network',
   });
 
+  const node = data?.node;
+
   const onFlagComment = (cache, { data: { flagComment } }) => {
     // Let's get started! No crashing allowed.
     try {
@@ -87,7 +91,15 @@ function CommentListFeatureConnected({
   const [likeComment] = useMutation(LIKE_COMMENT);
   const [unlikeComment] = useMutation(UNLIKE_COMMENT);
 
+  const track = useTrack();
+
   const handlePressLike = ({ isLiked, id }) => {
+    track({
+      eventName: `Comment ${isLiked ? 'Unliked' : 'Liked'}`,
+      properties: {
+        commentId: id,
+      },
+    });
     if (isLiked) {
       unlikeComment({ variables: { commentId: id } });
     } else {
@@ -97,7 +109,15 @@ function CommentListFeatureConnected({
 
   const handlePressActionMenu = ({ id: commentId }) => {
     presentActionOption({
-      callback: () => flagComment({ variables: { commentId } }),
+      callback: () => {
+        track({
+          eventName: 'Comment Flagged',
+          properties: {
+            commentId: id,
+          },
+        });
+        flagComment({ variables: { commentId } });
+      },
       title: 'Report as inappropriate.',
       actionText: 'Report',
     });
@@ -108,7 +128,7 @@ function CommentListFeatureConnected({
 
   return (
     <Component
-      {...get(data, 'node')}
+      {...node}
       {...props}
       isLoading={loading || isLoading}
       onPressActionMenu={handlePressActionMenu}
