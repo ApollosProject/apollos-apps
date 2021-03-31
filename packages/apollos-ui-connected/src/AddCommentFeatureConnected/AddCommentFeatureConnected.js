@@ -84,7 +84,7 @@ const AddCommentFeatureConnected = ({
   });
 
   const track = useTrack();
-  const parentId = node.relatedNode.id;
+  const parentId = node?.relatedNode?.id;
   const parentTitle = useQuery(GET_TITLE, {
     variables: { nodeId: parentId },
     fetchPolicy: 'cache-only',
