@@ -87,11 +87,33 @@ function CommentListFeatureConnected({
   const [likeComment] = useMutation(LIKE_COMMENT);
   const [unlikeComment] = useMutation(UNLIKE_COMMENT);
 
-  const handlePressLike = ({ isLiked, id }) => {
+  const handlePressLike = ({ isLiked, id, ...rest }) => {
     if (isLiked) {
-      unlikeComment({ variables: { commentId: id } });
+      unlikeComment({
+        variables: { commentId: id },
+        optimisticResponse: {
+          __typename: 'Mutation',
+          unlikeComment: {
+            __typename: 'Comment',
+            id,
+            isLiked: !isLiked,
+            ...rest,
+          },
+        },
+      });
     } else {
-      likeComment({ variables: { commentId: id } });
+      likeComment({
+        variables: { commentId: id },
+        optimisticResponse: {
+          __typename: 'Mutation',
+          likeComment: {
+            __typename: 'Comment',
+            id,
+            isLiked: !isLiked,
+            ...rest,
+          },
+        },
+      });
     }
   };
 
