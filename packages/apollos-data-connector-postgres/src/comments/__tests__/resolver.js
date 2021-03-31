@@ -8,16 +8,19 @@ import {
   scriptureSchema,
   contentItemSchema,
   contentChannelSchema,
+  followingsSchema,
   themeSchema,
 } from '@apollosproject/data-schema';
 import * as Comment from '../index';
 import * as Person from '../../people';
 import * as Follow from '../../follows';
 import * as UserFlag from '../../user-flags/index';
+import * as UserLike from '../../user-likes/index';
 
 const { getSchema, getContext } = createTestHelpers({
   Comment,
   UserFlag,
+  UserLike,
   Person,
   Follow,
 });
@@ -35,6 +38,7 @@ describe('Apollos Postgres Comment Flags Resolver', () => {
       contentItemSchema,
       contentChannelSchema,
       themeSchema,
+      followingsSchema,
     ]);
     context = getContext();
     rootValue = {};

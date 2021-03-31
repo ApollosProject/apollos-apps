@@ -38,6 +38,13 @@ const setupModel = configureModel(({ sequelize }) => {
     sourceKey: 'personId',
     constraints: false,
   });
+
+  sequelize.models.comments.hasMany(sequelize.models.user_likes, {
+    foreignKey: 'nodeId',
+    sourceKey: 'id',
+    constraints: false,
+    scope: { nodeType: 'Comment' },
+  });
 });
 
 export { createModel, Visibility, setupModel };
