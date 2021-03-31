@@ -4,13 +4,19 @@ import { useQuery, useMutation } from '@apollo/client';
 import { Alert, Platform, ActionSheetIOS } from 'react-native';
 import PropTypes from 'prop-types';
 import { useTrack } from '@apollosproject/ui-analytics';
+import { AddCommentInput } from '@apollosproject/ui-kit';
 import GET_COMMENT_LIST_FEATURE from './getCommentListFeature';
 import FLAG_COMMENT from './flagComment';
 import LIKE_COMMENT from './likeComment';
 import UNLIKE_COMMENT from './unlikeComment';
 import CommentListFeature from './CommentListFeature';
 
-const presentActionOption = ({ callback, actionText, title }) => {
+const presentActionOption = ({
+  callback,
+  actionText,
+  title,
+  destructiveButtonIndex = 0,
+}) => {
   if (Platform.OS === 'ios') {
     ActionSheetIOS.showActionSheetWithOptions(
       {
@@ -52,6 +58,7 @@ function CommentListFeatureConnected({
     fetchPolicy: 'cache-and-network',
   });
 
+  const currentPersonId = data?.currentUser?.profile?.id;
   const node = data?.node;
 
   const onFlagComment = (cache, { data: { flagComment } }) => {
@@ -105,33 +112,52 @@ function CommentListFeatureConnected({
     }
   };
 
-  const handlePressActionMenu = ({ id: commentId }) => {
-    presentActionOption({
-      callback: () => {
-        track({
-          eventName: 'Comment Flagged',
-          properties: {
-            commentId,
-          },
-        });
-        flagComment({ variables: { commentId } });
-      },
-      title: 'Report as inappropriate.',
-      actionText: 'Report',
-    });
+  const handlePressActionMenu = ({ id: commentId, person }) => {
+    console.warn(person.id, currentPersonId);
+    if (person.id === currentPersonId) {
+      presentActionOption({
+        callback: () => {
+          console.warn('editing');
+        },
+        title: 'Comment Options',
+        actionText: 'Edit',
+        destructiveButtonIndex: null,
+      });
+    } else {
+      presentActionOption({
+        callback: () => {
+          track({
+            eventName: 'Comment Flagged',
+            properties: {
+              commentId,
+            },
+          });
+          flagComment({ variables: { commentId } });
+        },
+        title: 'Report as inappropriate.',
+        actionText: 'Report',
+      });
+    }
   };
 
   if (featureId && refetch && refetchRef)
     refetchRef({ refetch, id: featureId });
 
   return (
-    <Component
-      {...node}
-      {...props}
-      isLoading={loading || isLoading}
-      onPressActionMenu={handlePressActionMenu}
-      onPressLike={handlePressLike}
-    />
+    <>
+      <Component
+        {...node}
+        {...props}
+        isLoading={loading || isLoading}
+        onPressActionMenu={handlePressActionMenu}
+        onPressLike={handlePressLike}
+      />
+      <AddCommentInput
+        openBottomSheetOnMount={false}
+        showInlinePrompt={false}
+        prompt={'Edit'}
+      />
+    </>
   );
 }
 
