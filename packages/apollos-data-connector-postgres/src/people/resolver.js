@@ -20,7 +20,7 @@ export default {
       birthDate ? moment(birthDate).toJSON() : null
     ),
     email: enforceCurrentUser(({ email }) => email),
-    nickName: ({ firstName, lastName }) => `${firstName} ${lastName}`,
+    nickName: ({ firstName }) => `${firstName}`,
     gender: ({ gender }) => startCase(toLower(gender)),
   },
   SearchPeopleResultsConnection: {

@@ -3,6 +3,7 @@ import AnalyticsProvider, {
   AnalyticsContext,
   identify,
   track,
+  useTrack,
 } from './Provider';
 import TrackEventWhenLoaded from './TrackEventWhenLoaded';
 import withTrackOnPress from './withTrackOnPress';
@@ -17,4 +18,5 @@ export {
   track,
   TrackEventWhenLoaded,
   withTrackOnPress,
+  useTrack,
 };
