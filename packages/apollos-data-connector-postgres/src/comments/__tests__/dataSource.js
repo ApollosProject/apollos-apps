@@ -144,7 +144,13 @@ describe('Apollos Postgres Comments DatSource', () => {
         visibility: 'PUBLIC',
       });
 
+      const unchangedComment = await commentDataSource.model.findOne({
+        where: { id: comment.id },
+      });
+
       await expect(updatedComment).rejects.toMatchSnapshot();
+      expect(unchangedComment.text).toBe('I am a fun comment!');
+      expect(unchangedComment.visibility).toBe('PRIVATE');
     });
   });
 
