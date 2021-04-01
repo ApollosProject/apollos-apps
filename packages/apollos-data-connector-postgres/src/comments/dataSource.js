@@ -53,10 +53,25 @@ class CommentDataSource extends PostgresDataSource {
     );
 
     if (count < 1) {
-      throw new Error('Unable to find comment');
+      throw new Error('Unable to update comment');
     }
 
     return results[0];
+  }
+
+  async deleteComment({ commentId }) {
+    const currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
+
+    const { id } = parseGlobalId(commentId);
+
+    const count = await this.model.destroy({
+      where: {
+        id,
+        personId: currentPersonId,
+      },
+    });
+
+    return count > 0;
   }
 
   async getForNode({ nodeId, nodeType, flagLimit = 0 }) {

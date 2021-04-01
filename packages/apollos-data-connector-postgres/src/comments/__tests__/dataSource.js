@@ -137,7 +137,7 @@ describe('Apollos Postgres Comments DatSource', () => {
       // Change the user id to a different user
       currentPerson = person2;
 
-      // Try to update the othe user's comment
+      // Try to update the other user's comment
       const updatedComment = commentDataSource.updateComment({
         commentId: comment.apollosId,
         text: 'This comment has been updated',
@@ -145,6 +145,56 @@ describe('Apollos Postgres Comments DatSource', () => {
       });
 
       await expect(updatedComment).rejects.toMatchSnapshot();
+    });
+  });
+
+  describe('deleteComment', () => {
+    it('should delete comment', async () => {
+      const commentDataSource = new CommentDataSource();
+      commentDataSource.initialize({ context });
+
+      const comment = await commentDataSource.addComment({
+        text: 'I am a fun comment!',
+        visibility: 'PRIVATE',
+        parentId: createGlobalId(123, 'UniversalContentItem'),
+      });
+
+      const success = await commentDataSource.deleteComment({
+        commentId: comment.apollosId,
+      });
+
+      const goneComment = await commentDataSource.model.findOne({
+        where: { id: comment.id },
+      });
+
+      expect(success).toBeTruthy();
+      expect(goneComment).toBeNull();
+    });
+
+    it('user can only delete own comment', async () => {
+      const commentDataSource = new CommentDataSource();
+      commentDataSource.initialize({ context });
+
+      const comment = await commentDataSource.addComment({
+        text: 'I am a fun comment!',
+        visibility: 'PRIVATE',
+        parentId: createGlobalId(123, 'UniversalContentItem'),
+      });
+
+      // Change the user id to a different user
+      currentPerson = person2;
+
+      // Try to delete the other user's comment
+      const success = await commentDataSource.deleteComment({
+        commentId: comment.apollosId,
+      });
+
+      const stillHereComment = await commentDataSource.model.findOne({
+        where: { id: comment.id },
+      });
+
+      expect(success).toBeFalsy();
+      expect(stillHereComment.text).toBe('I am a fun comment!');
     });
   });
 
