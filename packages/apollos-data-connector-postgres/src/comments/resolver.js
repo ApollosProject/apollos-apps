@@ -4,6 +4,10 @@ const resolvers = {
   Mutation: {
     addComment: (root, args, { dataSources: { Comment } }) =>
       Comment.addComment(args),
+    updateComment: (root, args, { dataSources: { Comment } }) =>
+      Comment.updateComment(args),
+    deleteComment: (root, args, { dataSources: { Comment } }) =>
+      Comment.deleteComment(args),
     flagComment: (root, args, { dataSources: { UserFlag } }) =>
       UserFlag.flagComment(args),
     likeComment: (root, args, { dataSources: { UserLike } }) =>
