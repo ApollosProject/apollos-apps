@@ -10,6 +10,9 @@ export default gql`
       id
       profile {
         id
+        photo {
+          uri
+        }
       }
     }
   }

@@ -18,6 +18,7 @@ const Navigator = ({
   onSubmit,
   profile,
   prompt,
+  initialValue,
   ...navigatorProps
 }) => {
   return (
@@ -31,6 +32,7 @@ const Navigator = ({
               image={profile?.photo}
               prompt={prompt}
               headerTitle={editorTitle}
+              initialValue={initialValue}
               {...props}
             />
           )}

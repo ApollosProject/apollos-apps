@@ -83,10 +83,11 @@ const Editor = ({
   headerTitle,
   image,
   prompt,
+  initialValue,
   bottomSheetIndex,
 }) => {
   const keyboardHeight = useKeyboardHeight();
-  const text = useSharedValue(null);
+  const text = useSharedValue(initialValue);
   const [isEditing, setIsEditing] = useState(false);
   const [headerShown, setHeaderShown] = useState(false);
 
@@ -164,6 +165,7 @@ const Editor = ({
               <EditorAvatar source={image} />
             </Touchable>
           }
+          defaultValue={initialValue}
           label={prompt}
           multiline
           onChangeText={(value) => {

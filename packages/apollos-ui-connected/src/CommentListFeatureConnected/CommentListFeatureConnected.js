@@ -1,5 +1,5 @@
 /* eslint-disable react-native/split-platform-components */
-import React from 'react';
+import React, { useState } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
 import { Alert, Platform, ActionSheetIOS } from 'react-native';
 import PropTypes from 'prop-types';
@@ -58,7 +58,7 @@ function CommentListFeatureConnected({
     fetchPolicy: 'cache-and-network',
   });
 
-  const currentPersonId = data?.currentUser?.profile?.id;
+  const currentPerson = data?.currentUser?.profile;
   const node = data?.node;
 
   const onFlagComment = (cache, { data: { flagComment } }) => {
@@ -98,6 +98,9 @@ function CommentListFeatureConnected({
 
   const track = useTrack();
 
+  const [editOpen, setEditOpen] = useState(false);
+  const [editingComment, setEditingComment] = useState();
+
   const handlePressLike = ({ isLiked, id }) => {
     track({
       eventName: `Comment ${isLiked ? 'Unliked' : 'Liked'}`,
@@ -112,12 +115,12 @@ function CommentListFeatureConnected({
     }
   };
 
-  const handlePressActionMenu = ({ id: commentId, person }) => {
-    console.warn(person.id, currentPersonId);
-    if (person.id === currentPersonId) {
+  const handlePressActionMenu = ({ id: commentId, person, ...comment }) => {
+    if (person.id === currentPerson?.id) {
       presentActionOption({
         callback: () => {
-          console.warn('editing');
+          setEditingComment({ id: commentId, ...comment });
+          setEditOpen(true);
         },
         title: 'Comment Options',
         actionText: 'Edit',
@@ -156,6 +159,12 @@ function CommentListFeatureConnected({
         openBottomSheetOnMount={false}
         showInlinePrompt={false}
         prompt={'Edit'}
+        editorTitle={'Edit Journal'}
+        confirmationTitle={'Update Journal'}
+        initialValue={editingComment?.text}
+        expanded={editOpen}
+        profile={currentPerson}
+        fullscreen
       />
     </>
   );

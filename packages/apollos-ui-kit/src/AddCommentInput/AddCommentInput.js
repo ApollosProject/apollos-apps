@@ -26,16 +26,20 @@ const AddCommentInput = ({
   prompt = 'What stands out to you?',
   editorTitle = 'New Journal',
   confirmationTitle = 'Post Journal',
+  initialValue = '',
   openBottomSheetOnMount = true,
   showInlinePrompt = true,
   dismissOnPanDown = false,
   expanded = false,
+  fullscreen = false,
   onSubmit,
   profile,
+  ...props
 }) => {
   const safeArea = useSafeAreaInsets();
   const [bottomSheetIndex, setBottomSheetIndex] = useState(-1);
 
+  const fullScreenSnapPoints = useMemo(() => ['100%'], [safeArea.bottom]);
   // todo: when we have useTheme() replace this
   const snapPoints = useMemo(
     () => [48 + 16 + (safeArea.bottom || 16), '100%'],
@@ -76,18 +80,20 @@ const AddCommentInput = ({
       <BottomSheetModal
         ref={bottomSheetModalRef}
         index={0}
-        snapPoints={snapPoints}
+        snapPoints={fullscreen ? fullScreenSnapPoints : snapPoints}
         onChange={handleEditorChange}
         topInset={safeArea.top}
         animateOnMount
         // keyboardBehavior={'fullScreen'}
         dismissOnPanDown={dismissOnPanDown}
         backgroundComponent={(props) => <ModalBackgroundView {...props} />} // eslint-disable-line react/jsx-props-no-spreading
+        {...props}
       >
         <Navigator
           onSubmit={onSubmit}
           profile={profile}
           prompt={prompt}
+          initialValue={initialValue}
           bottomSheetModalRef={bottomSheetModalRef}
           bottomSheetIndex={bottomSheetIndex}
           editorTitle={editorTitle}
