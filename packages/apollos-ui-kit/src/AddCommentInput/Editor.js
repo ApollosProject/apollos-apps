@@ -15,7 +15,6 @@ import { withTheme } from '../theme';
 import Avatar from '../Avatar';
 import styled from '../styled';
 import { H4 } from '../typography';
-import PaddedView from '../PaddedView';
 import Touchable from '../Touchable';
 import useKeyboardHeight from './useKeyboardHeight';
 
@@ -36,8 +35,17 @@ const CommentInputContainer = styled(
 )(View);
 
 const NextButton = styled(
-  ({ theme: { colors } }) => ({
+  ({ theme: { colors, sizing }, left = false }) => ({
     color: colors.action.secondary,
+    ...Platform.select({
+      ios: {},
+      android: {
+        alignSelf: left ? 'flex-start' : 'flex-end',
+        textAlign: left ? 'left' : 'right',
+        flex: 1,
+        paddingHorizontal: sizing.baseUnit,
+      },
+    }),
   }),
   'ui-kit.AddCommentInput.NextButton'
 )(H4);
@@ -93,13 +101,11 @@ const Editor = ({
   const [headerShown, setHeaderShown] = useState(false);
 
   const handleStartWriting = useCallback(() => {
-    console.warn('start writing');
     setIsEditing(true);
     bottomSheetModalRef.current?.expand();
   }, [bottomSheetModalRef]);
 
   const handleStopWriting = useCallback(() => {
-    console.warn('stop writing');
     setIsEditing(false);
     if (!text.value?.length) bottomSheetModalRef.current?.collapse();
   }, [bottomSheetModalRef, text]);
@@ -121,7 +127,11 @@ const Editor = ({
 
   const HeaderLeft = useMemo(
     // eslint-disable-next-line react/display-name
-    () => () => <NextButton onPress={handleDismiss}>Cancel</NextButton>,
+    () => () => (
+      <NextButton left onPress={handleDismiss}>
+        Cancel
+      </NextButton>
+    ),
     [handleDismiss]
   );
 
@@ -168,10 +178,13 @@ const Editor = ({
   const androidHeaderOpacity = useDerivedValue(() =>
     withSpring(headerShown ? 1 : 0)
   );
+
   const androidHeaderStyles = useAnimatedStyle(() => ({
     position: 'absolute',
     top: 0,
     right: 0, // todo: replace with useTheme()
+    left: 0,
+    flexDirection: 'row',
     opacity: androidHeaderOpacity.value,
   }));
 
@@ -183,7 +196,13 @@ const Editor = ({
       focusHook={useFocusEffect}
       contentContainerStyle={flex}
     >
-      <CommentInputContainer>
+      <CommentInputContainer
+        style={Platform.select({
+          android: {
+            paddingTop: headerShown ? 32 : 0, // TODO: Animate this.
+          },
+        })}
+      >
         <TextInput
           prefix={
             <Touchable onPress={() => bottomSheetModalRef.current?.expand()}>
@@ -216,10 +235,8 @@ const Editor = ({
 
       {Platform.OS === 'android' ? (
         <Animated.View style={androidHeaderStyles}>
-          <PaddedView vertical={false}>
-            {showCancel && <HeaderLeft />}
-            <HeaderRight />
-          </PaddedView>
+          {showCancel && <HeaderLeft />}
+          <HeaderRight />
         </Animated.View>
       ) : null}
     </ContainerScrollView>
