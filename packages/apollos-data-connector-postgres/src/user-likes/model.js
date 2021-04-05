@@ -5,7 +5,7 @@ const createModel = defineModel({
   modelName: 'user_likes',
   resolveType: () => 'UserLike',
   attributes: {
-    nodeId: DataTypes.TEXT,
+    nodeId: DataTypes.UUID,
     nodeType: DataTypes.TEXT,
     personId: DataTypes.UUID,
   },

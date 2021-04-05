@@ -1,6 +1,28 @@
-const ApolloServer = require.requireActual('@apollosproject/config').default;
+const ApollosConfig = require.requireActual('@apollosproject/config').default;
 
-ApolloServer.loadJs({
+ApollosConfig.loadJs({
+  ROCK_MAPPINGS: {
+    CONTENT_ITEM: {
+      ContentSeriesContentItem: {
+        EntityType: 'ContentChannelItem',
+      },
+      DevotionalContentItem: {
+        EntityType: 'SomeOtherEntity',
+      },
+      MediaContentItem: {
+        EntityType: 'ContentChannelItem',
+      },
+      UniversalContentItem: {
+        EntityType: 'ContentChannelItem',
+      },
+      WeekendContentItem: {
+        EntityType: 'ContentChannelItem',
+      },
+      ContentItem: {
+        EntityType: 'ContentChannelItem',
+      },
+    },
+  },
 });
 
-export default ApolloServer;
+export default ApollosConfig;
