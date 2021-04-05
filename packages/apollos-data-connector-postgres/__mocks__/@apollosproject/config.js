@@ -1,6 +1,9 @@
 const ApollosConfig = require.requireActual('@apollosproject/config').default;
 
-ApollosConfig.loadJs({
+ApolloServer.loadJs({
+  APP: {
+    DEEP_LINK_HOST: 'apolloschurchapp',
+  },
   ROCK_MAPPINGS: {
     CONTENT_ITEM: {
       ContentSeriesContentItem: {

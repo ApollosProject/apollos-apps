@@ -113,7 +113,10 @@ class Follow extends PostgresDataSource {
     return this.context.dataSources.OneSignal.createNotification({
       content: `${requestPerson.firstName} ${requestPerson.lastName} has asked to follow you.`,
       to: followedPerson,
-      data: { requestPersonId: requestPerson.apollosId },
+      data: {
+        requestPersonId: requestPerson.apollosId,
+        url: `${ApollosConfig?.APP?.DEEP_LINK_HOST}://nav/Tabs?screen=Connect`,
+      },
       buttons: [
         {
           id: `acceptFollowRequest`,
