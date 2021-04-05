@@ -132,6 +132,7 @@ function CommentListFeatureConnected({
 
   const handlePressActionMenu = ({ id: commentId, person, ...comment }) => {
     if (person.id === currentPerson?.id) {
+      // Actions for the current person's comments.
       presentActionOptions(
         [
           {
@@ -158,6 +159,7 @@ function CommentListFeatureConnected({
         }
       );
     } else {
+      // Actions for for everyone else's comments.
       presentActionOptions(
         [
           {

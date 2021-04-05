@@ -156,7 +156,14 @@ const Editor = ({
           }
         : {}),
     });
-  }, [navigation, headerShown, headerTitle, HeaderRight]);
+  }, [
+    navigation,
+    headerShown,
+    headerTitle,
+    HeaderRight,
+    HeaderLeft,
+    showCancel,
+  ]);
 
   const androidHeaderOpacity = useDerivedValue(() =>
     withSpring(headerShown ? 1 : 0)
@@ -220,10 +227,12 @@ const Editor = ({
 };
 
 Editor.propTypes = {
+  showCancel: PropTypes.bool,
   bottomSheetModalRef: PropTypes.shape({
     current: PropTypes.shape({
       collapse: PropTypes.func,
       expand: PropTypes.func,
+      dismiss: PropTypes.func,
     }),
   }),
   image: PropTypes.shape({}),
@@ -232,6 +241,7 @@ Editor.propTypes = {
     value: PropTypes.string,
     setValue: PropTypes.func,
   }),
+  initialValue: PropTypes.string,
   headerTitle: PropTypes.string,
   bottomSheetIndex: PropTypes.shape({
     value: PropTypes.number,

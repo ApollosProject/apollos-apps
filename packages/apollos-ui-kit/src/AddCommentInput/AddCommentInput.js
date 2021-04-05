@@ -30,9 +30,9 @@ const AddCommentInput = ({
   openBottomSheetOnMount = true,
   showInlinePrompt = true,
   dismissOnPanDown = false,
-  expanded = false,
   fullscreen = false,
   showCancel = false,
+  // Used so that parent components can also get access to the bottom sheet modal ref.
   bottomSheetModalRef: setBottomSheetModalRef,
   onSubmit,
   profile,
@@ -60,20 +60,19 @@ const AddCommentInput = ({
   );
 
   const openModal = useCallback(() => {
-    console.warn('open modal')
     bottomSheetModalRef.current?.present();
   }, []);
 
   // present on mount
   useEffect(() => {
     if (openBottomSheetOnMount) {
-      console.warn('present on mount');
       bottomSheetModalRef.current?.present();
     }
   }, [openBottomSheetOnMount]);
 
   useEffect(() => {
     if (bottomSheetModalRef && setBottomSheetModalRef) {
+      // eslint-disable-next-line no-param-reassign
       setBottomSheetModalRef.current = bottomSheetModalRef.current;
     }
   }, [setBottomSheetModalRef, bottomSheetModalRef]);
@@ -89,7 +88,7 @@ const AddCommentInput = ({
         animateOnMount
         // keyboardBehavior={'fullScreen'}
         dismissOnPanDown={dismissOnPanDown}
-        backgroundComponent={(props) => <ModalBackgroundView {...props} />} // eslint-disable-line react/jsx-props-no-spreading
+        backgroundComponent={(bgProps) => <ModalBackgroundView {...bgProps} />} // eslint-disable-line react/jsx-props-no-spreading
         {...props}
       >
         <Navigator
@@ -121,11 +120,17 @@ AddCommentInput.propTypes = {
     photo: PropTypes.shape({ uri: PropTypes.string }),
     nickName: PropTypes.string,
   }),
+  bottomSheetModalRef: PropTypes.shape({
+    current: PropTypes.shape({}),
+  }),
   openBottomSheetOnMount: PropTypes.bool,
   showInlinePrompt: PropTypes.bool,
   dismissOnPanDown: PropTypes.bool,
+  fullscreen: PropTypes.bool,
+  showCancel: PropTypes.bool,
   editorTitle: PropTypes.string,
   confirmationTitle: PropTypes.string,
+  initialValue: PropTypes.string,
 };
 
 export default AddCommentInput;
