@@ -19,6 +19,7 @@ const Navigator = ({
   profile,
   prompt,
   initialValue,
+  showCancel,
   ...navigatorProps
 }) => {
   return (
@@ -33,6 +34,7 @@ const Navigator = ({
               prompt={prompt}
               headerTitle={editorTitle}
               initialValue={initialValue}
+              showCancel={showCancel}
               {...props}
             />
           )}

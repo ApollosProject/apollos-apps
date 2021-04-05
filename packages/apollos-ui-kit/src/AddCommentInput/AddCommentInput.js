@@ -32,6 +32,8 @@ const AddCommentInput = ({
   dismissOnPanDown = false,
   expanded = false,
   fullscreen = false,
+  showCancel = false,
+  bottomSheetModalRef: setBottomSheetModalRef,
   onSubmit,
   profile,
   ...props
@@ -45,7 +47,7 @@ const AddCommentInput = ({
     () => [48 + 16 + (safeArea.bottom || 16), '100%'],
     [safeArea.bottom]
   );
-  const bottomSheetModalRef = useRef(null);
+  const bottomSheetModalRef = useRef();
 
   const handleEditorChange = useCallback(
     (index) => {
@@ -69,11 +71,10 @@ const AddCommentInput = ({
   }, [openBottomSheetOnMount]);
 
   useEffect(() => {
-    if (expanded) {
-      bottomSheetModalRef.current?.present();
-      bottomSheetModalRef.current?.expand();
+    if (bottomSheetModalRef && setBottomSheetModalRef) {
+      setBottomSheetModalRef.current = bottomSheetModalRef.current;
     }
-  }, [expanded]);
+  }, [setBottomSheetModalRef, bottomSheetModalRef]);
 
   return (
     <>
@@ -98,6 +99,7 @@ const AddCommentInput = ({
           bottomSheetIndex={bottomSheetIndex}
           editorTitle={editorTitle}
           confirmationTitle={confirmationTitle}
+          showCancel={showCancel}
         />
       </BottomSheetModal>
 

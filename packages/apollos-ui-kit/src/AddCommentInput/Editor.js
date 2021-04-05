@@ -84,6 +84,7 @@ const Editor = ({
   image,
   prompt,
   initialValue,
+  showCancel,
   bottomSheetIndex,
 }) => {
   const keyboardHeight = useKeyboardHeight();
@@ -101,6 +102,10 @@ const Editor = ({
     if (!text.value?.length) bottomSheetModalRef.current?.collapse();
   }, [bottomSheetModalRef, text]);
 
+  const handleDismiss = useCallback(() => {
+    bottomSheetModalRef.current?.dismiss();
+  }, [bottomSheetModalRef]);
+
   const onSubmit = useCallback(
     () => navigation.navigate('Confirmation', { value: text.value }),
     [navigation, text]
@@ -110,6 +115,12 @@ const Editor = ({
     // eslint-disable-next-line react/display-name
     () => () => <NextButton onPress={onSubmit}>Next</NextButton>,
     [onSubmit]
+  );
+
+  const HeaderLeft = useMemo(
+    // eslint-disable-next-line react/display-name
+    () => () => <NextButton onPress={handleDismiss}>Cancel</NextButton>,
+    [handleDismiss]
   );
 
   useDerivedValue(() => {
@@ -135,6 +146,7 @@ const Editor = ({
         ? {
             title: headerTitle,
             headerRight: HeaderRight,
+            headerLeft: showCancel ? HeaderLeft : null,
           }
         : {}),
     });
@@ -192,6 +204,7 @@ const Editor = ({
       {Platform.OS === 'android' ? (
         <Animated.View style={androidHeaderStyles}>
           <PaddedView vertical={false}>
+            {showCancel && <HeaderLeft />}
             <HeaderRight />
           </PaddedView>
         </Animated.View>

@@ -1,42 +1,41 @@
 /* eslint-disable react-native/split-platform-components */
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
 import { Alert, Platform, ActionSheetIOS } from 'react-native';
 import PropTypes from 'prop-types';
 import { useTrack } from '@apollosproject/ui-analytics';
 import { AddCommentInput } from '@apollosproject/ui-kit';
 import GET_COMMENT_LIST_FEATURE from './getCommentListFeature';
+import GET_CURRENT_PERSON_PROFILE from './getCurrentPersonProfile';
 import FLAG_COMMENT from './flagComment';
 import LIKE_COMMENT from './likeComment';
 import UNLIKE_COMMENT from './unlikeComment';
 import CommentListFeature from './CommentListFeature';
 
-const presentActionOption = ({
-  callback,
-  actionText,
-  title,
-  destructiveButtonIndex = 0,
-}) => {
+const presentActionOptions = (
+  options,
+  { title, destructiveButtonIndex = 0 }
+) => {
   if (Platform.OS === 'ios') {
     ActionSheetIOS.showActionSheetWithOptions(
       {
-        options: [actionText, 'Cancel'],
-        destructiveButtonIndex: 0,
-        cancelButtonIndex: 1,
+        options: [...options.map(({ text }) => text), 'Cancel'],
+        destructiveButtonIndex,
+        cancelButtonIndex: options.length,
         title,
       },
       (buttonIndex) => {
-        if (buttonIndex === 0) {
-          callback();
+        if (options[buttonIndex]?.callback) {
+          options[buttonIndex].callback();
         }
       }
     );
   } else {
     Alert.alert(title, null, [
-      {
-        text: actionText,
+      ...options.map(({ text, callback }) => ({
+        text,
         onPress: callback,
-      },
+      })),
       {
         text: 'Cancel',
         onPress: () => ({}),
@@ -58,7 +57,11 @@ function CommentListFeatureConnected({
     fetchPolicy: 'cache-and-network',
   });
 
-  const currentPerson = data?.currentUser?.profile;
+  const { data: profileData } = useQuery(GET_CURRENT_PERSON_PROFILE, {
+    variables: { featureId },
+  });
+
+  const currentPerson = profileData?.currentUser?.profile;
   const node = data?.node;
 
   const onFlagComment = (cache, { data: { flagComment } }) => {
@@ -98,7 +101,7 @@ function CommentListFeatureConnected({
 
   const track = useTrack();
 
-  const [editOpen, setEditOpen] = useState(false);
+  const bottomSheetModalRef = useRef(null);
   const [editingComment, setEditingComment] = useState();
 
   const handlePressLike = ({ isLiked, id }) => {
@@ -117,29 +120,48 @@ function CommentListFeatureConnected({
 
   const handlePressActionMenu = ({ id: commentId, person, ...comment }) => {
     if (person.id === currentPerson?.id) {
-      presentActionOption({
-        callback: () => {
-          setEditingComment({ id: commentId, ...comment });
-          setEditOpen(true);
-        },
-        title: 'Comment Options',
-        actionText: 'Edit',
-        destructiveButtonIndex: null,
-      });
-    } else {
-      presentActionOption({
-        callback: () => {
-          track({
-            eventName: 'Comment Flagged',
-            properties: {
-              commentId,
+      presentActionOptions(
+        [
+          {
+            callback: () => {
+              setEditingComment({ id: commentId, ...comment });
+              bottomSheetModalRef.current.present();
+              bottomSheetModalRef.current.expand();
             },
-          });
-          flagComment({ variables: { commentId } });
-        },
-        title: 'Report as inappropriate.',
-        actionText: 'Report',
-      });
+            text: 'Edit',
+          },
+          {
+            callback: () => {
+              console.warn('delete');
+            },
+            text: 'Delete',
+          },
+        ],
+        {
+          title: 'Comment Options',
+          destructiveButtonIndex: 1,
+        }
+      );
+    } else {
+      presentActionOptions(
+        [
+          {
+            callback: () => {
+              track({
+                eventName: 'Comment Flagged',
+                properties: {
+                  commentId,
+                },
+              });
+              flagComment({ variables: { commentId } });
+            },
+            text: 'Report as inappropriate.',
+          },
+        ],
+        {
+          title: 'Report',
+        }
+      );
     }
   };
 
@@ -162,8 +184,9 @@ function CommentListFeatureConnected({
         editorTitle={'Edit Journal'}
         confirmationTitle={'Update Journal'}
         initialValue={editingComment?.text}
-        expanded={editOpen}
         profile={currentPerson}
+        showCancel
+        bottomSheetModalRef={bottomSheetModalRef}
         fullscreen
       />
     </>

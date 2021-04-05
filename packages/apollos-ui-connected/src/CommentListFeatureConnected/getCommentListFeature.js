@@ -6,15 +6,6 @@ export default gql`
     node(id: $featureId) {
       ...CommentListFeatureFragment
     }
-    currentUser {
-      id
-      profile {
-        id
-        photo {
-          uri
-        }
-      }
-    }
   }
   ${ApollosConfig.FRAGMENTS.COMMENT_LIST_FEATURE_FRAGMENT}
 `;
