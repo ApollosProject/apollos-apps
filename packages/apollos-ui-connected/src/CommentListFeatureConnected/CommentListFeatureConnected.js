@@ -91,7 +91,7 @@ function CommentListFeatureConnected({
 
   const track = useTrack();
 
-  const handlePressLike = ({ isLiked, id }) => {
+  const handlePressLike = ({ isLiked, id, ...rest }) => {
     track({
       eventName: `Comment ${isLiked ? 'Unliked' : 'Liked'}`,
       properties: {
@@ -99,9 +99,31 @@ function CommentListFeatureConnected({
       },
     });
     if (isLiked) {
-      unlikeComment({ variables: { commentId: id } });
+      unlikeComment({
+        variables: { commentId: id },
+        optimisticResponse: {
+          __typename: 'Mutation',
+          unlikeComment: {
+            __typename: 'Comment',
+            id,
+            isLiked: !isLiked,
+            ...rest,
+          },
+        },
+      });
     } else {
-      likeComment({ variables: { commentId: id } });
+      likeComment({
+        variables: { commentId: id },
+        optimisticResponse: {
+          __typename: 'Mutation',
+          likeComment: {
+            __typename: 'Comment',
+            id,
+            isLiked: !isLiked,
+            ...rest,
+          },
+        },
+      });
     }
   };
 
