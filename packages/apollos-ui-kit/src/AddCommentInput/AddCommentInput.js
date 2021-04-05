@@ -60,12 +60,14 @@ const AddCommentInput = ({
   );
 
   const openModal = useCallback(() => {
+    console.warn('open modal')
     bottomSheetModalRef.current?.present();
   }, []);
 
   // present on mount
   useEffect(() => {
     if (openBottomSheetOnMount) {
+      console.warn('present on mount');
       bottomSheetModalRef.current?.present();
     }
   }, [openBottomSheetOnMount]);

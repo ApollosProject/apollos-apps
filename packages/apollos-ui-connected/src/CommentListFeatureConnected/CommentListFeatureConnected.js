@@ -10,6 +10,8 @@ import GET_CURRENT_PERSON_PROFILE from './getCurrentPersonProfile';
 import FLAG_COMMENT from './flagComment';
 import LIKE_COMMENT from './likeComment';
 import UNLIKE_COMMENT from './unlikeComment';
+import UPDATE_COMMENT from './updateComment';
+import DELETE_COMMENT from './deleteComment';
 import CommentListFeature from './CommentListFeature';
 
 const presentActionOptions = (
@@ -45,6 +47,34 @@ const presentActionOptions = (
   }
 };
 
+const removeCommentFromCache = (cache, { commentId, featureId }) => {
+  // Let's get started! No crashing allowed.
+  try {
+    // Let's find our comment list.
+    const commentListFeature = cache.readQuery({
+      query: GET_COMMENT_LIST_FEATURE,
+      variables: { featureId },
+    });
+
+    // Now let's remove our flagged comment from that comment list.
+    cache.writeQuery({
+      query: GET_COMMENT_LIST_FEATURE,
+      variables: { featureId },
+      data: {
+        ...commentListFeature,
+        node: {
+          ...commentListFeature.node,
+          comments: commentListFeature.node.comments.filter(
+            ({ id }) => id !== commentId
+          ),
+        },
+      },
+    });
+  } catch (e) {
+    console.warn('Failed to update cache after deleeting comment', e);
+  }
+};
+
 function CommentListFeatureConnected({
   featureId,
   Component,
@@ -64,40 +94,22 @@ function CommentListFeatureConnected({
   const currentPerson = profileData?.currentUser?.profile;
   const node = data?.node;
 
-  const onFlagComment = (cache, { data: { flagComment } }) => {
-    // Let's get started! No crashing allowed.
-    try {
-      // Let's find our comment list.
-      const commentListFeature = cache.readQuery({
-        query: GET_COMMENT_LIST_FEATURE,
-        variables: { featureId },
-      });
-
-      // Now let's remove our flagged comment from that comment list.
-      cache.writeQuery({
-        query: GET_COMMENT_LIST_FEATURE,
-        variables: { featureId },
-        data: {
-          ...commentListFeature,
-          node: {
-            ...commentListFeature.node,
-            comments: commentListFeature.node.comments.filter(
-              ({ id }) => id !== flagComment.id
-            ),
-          },
-        },
-      });
-    } catch (e) {
-      console.warn('Failed to update cache after adding comment', e);
-    }
-  };
-
   const [flagComment] = useMutation(FLAG_COMMENT, {
-    update: onFlagComment,
+    update: (
+      cache,
+      {
+        data: {
+          flagComment: { id },
+        },
+      }
+    ) => removeCommentFromCache(cache, { commentId: id, featureId }),
   });
+  const [deleteComment] = useMutation(DELETE_COMMENT);
 
   const [likeComment] = useMutation(LIKE_COMMENT);
   const [unlikeComment] = useMutation(UNLIKE_COMMENT);
+
+  const [updateComment] = useMutation(UPDATE_COMMENT);
 
   const track = useTrack();
 
@@ -126,13 +138,16 @@ function CommentListFeatureConnected({
             callback: () => {
               setEditingComment({ id: commentId, ...comment });
               bottomSheetModalRef.current.present();
-              bottomSheetModalRef.current.expand();
             },
             text: 'Edit',
           },
           {
             callback: () => {
-              console.warn('delete');
+              deleteComment({
+                variables: { commentId },
+                update: (cache) =>
+                  removeCommentFromCache(cache, { commentId, featureId }),
+              });
             },
             text: 'Delete',
           },
@@ -178,6 +193,7 @@ function CommentListFeatureConnected({
         onPressLike={handlePressLike}
       />
       <AddCommentInput
+        name={'edit'}
         openBottomSheetOnMount={false}
         showInlinePrompt={false}
         prompt={'Edit'}
@@ -187,6 +203,15 @@ function CommentListFeatureConnected({
         profile={currentPerson}
         showCancel
         bottomSheetModalRef={bottomSheetModalRef}
+        onSubmit={async (text, visibility) => {
+          const updatedComment = await updateComment({
+            variables: { text, visibility, commentId: editingComment.id },
+          });
+          // It's a bummer that we need this here.
+          // The editor is supposed to handle it, but for whatever reason it doens't work consistently.
+          bottomSheetModalRef.current.dismiss();
+          return updatedComment;
+        }}
         fullscreen
       />
     </>

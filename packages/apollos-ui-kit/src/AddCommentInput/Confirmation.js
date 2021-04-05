@@ -62,7 +62,7 @@ const Confirmation = ({
       setSubmitting(true);
       await onSubmit(route?.params?.value, share);
       setSubmitting(false);
-      bottomSheetModalRef.current?.close();
+      bottomSheetModalRef.current.dismiss();
     }
   }, [
     bottomSheetModalRef,

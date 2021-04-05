@@ -93,11 +93,13 @@ const Editor = ({
   const [headerShown, setHeaderShown] = useState(false);
 
   const handleStartWriting = useCallback(() => {
+    console.warn('start writing');
     setIsEditing(true);
     bottomSheetModalRef.current?.expand();
   }, [bottomSheetModalRef]);
 
   const handleStopWriting = useCallback(() => {
+    console.warn('stop writing');
     setIsEditing(false);
     if (!text.value?.length) bottomSheetModalRef.current?.collapse();
   }, [bottomSheetModalRef, text]);
@@ -146,6 +148,10 @@ const Editor = ({
         ? {
             title: headerTitle,
             headerRight: HeaderRight,
+          }
+        : {}),
+      ...(shouldShowHeader && showCancel
+        ? {
             headerLeft: showCancel ? HeaderLeft : null,
           }
         : {}),
