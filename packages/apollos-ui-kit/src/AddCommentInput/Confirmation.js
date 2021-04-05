@@ -120,6 +120,7 @@ Confirmation.propTypes = {
   bottomSheetModalRef: PropTypes.shape({
     current: PropTypes.shape({
       close: PropTypes.func,
+      dismiss: PropTypes.func,
     }),
   }),
 };

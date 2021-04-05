@@ -121,7 +121,9 @@ AddCommentInput.propTypes = {
     nickName: PropTypes.string,
   }),
   bottomSheetModalRef: PropTypes.shape({
-    current: PropTypes.shape({}),
+    current: PropTypes.shape({
+      present: PropTypes.func,
+    }),
   }),
   openBottomSheetOnMount: PropTypes.bool,
   showInlinePrompt: PropTypes.bool,
