@@ -33,6 +33,47 @@ class CommentDataSource extends PostgresDataSource {
     return comment;
   }
 
+  async updateComment({ commentId, text, visibility }) {
+    const currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
+
+    const { id } = parseGlobalId(commentId);
+
+    const [count, results] = await this.model.update(
+      {
+        text,
+        visibility,
+      },
+      {
+        where: {
+          id,
+          personId: currentPersonId,
+        },
+        returning: true,
+      }
+    );
+
+    if (count < 1) {
+      throw new Error('Unable to update comment');
+    }
+
+    return results[0];
+  }
+
+  async deleteComment({ commentId }) {
+    const currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
+
+    const { id } = parseGlobalId(commentId);
+
+    const count = await this.model.destroy({
+      where: {
+        id,
+        personId: currentPersonId,
+      },
+    });
+
+    return count > 0;
+  }
+
   async getForNode({ nodeId, nodeType, flagLimit = 0 }) {
     let currentPersonId;
     try {

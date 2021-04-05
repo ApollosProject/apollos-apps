@@ -1051,6 +1051,14 @@ export const commentSchema = gql`
       visibility: CommentVisibility
     ): Comment
 
+    updateComment(
+      commentId: ID!
+      text: String
+      visibility: CommentVisibility
+    ): Comment
+
+    deleteComment(commentId: ID!): Boolean
+
     flagComment(commentId: ID!): Comment
 
     likeComment(commentId: ID!): Comment
