@@ -59,7 +59,8 @@ class CommentDataSource extends PostgresDataSource {
       where.flagCount = { [Op.lt]: flagLimit };
     }
 
-    const { comments, follows } = this.sequelize.models;
+    // eslint-disable-next-line camelcase
+    const { comments, follows, people, user_likes } = this.sequelize.models;
 
     return comments.findAll({
       where,
@@ -70,6 +71,16 @@ class CommentDataSource extends PostgresDataSource {
           where: {
             requestPersonId: currentPersonId, // we look for people who you follows
             state: 'ACCEPTED', // and make sure they are accepted
+          },
+          required: false, // emulates a left outer join
+        },
+        {
+          model: people,
+        },
+        {
+          model: user_likes,
+          where: {
+            personId: currentPersonId,
           },
           required: false, // emulates a left outer join
         },
