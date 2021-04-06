@@ -26,21 +26,28 @@ const AddCommentInput = ({
   prompt = 'What stands out to you?',
   editorTitle = 'New Journal',
   confirmationTitle = 'Post Journal',
+  initialValue = '',
   openBottomSheetOnMount = true,
   showInlinePrompt = true,
   dismissOnPanDown = false,
+  fullscreen = false,
+  showCancel = false,
+  // Used so that parent components can also get access to the bottom sheet modal ref.
+  bottomSheetModalRef: setBottomSheetModalRef,
   onSubmit,
   profile,
+  ...props
 }) => {
   const safeArea = useSafeAreaInsets();
   const [bottomSheetIndex, setBottomSheetIndex] = useState(-1);
 
+  const fullScreenSnapPoints = useMemo(() => ['100%'], [safeArea.bottom]);
   // todo: when we have useTheme() replace this
   const snapPoints = useMemo(
     () => [48 + 16 + (safeArea.bottom || 16), '100%'],
     [safeArea.bottom]
   );
-  const bottomSheetModalRef = useRef(null);
+  const bottomSheetModalRef = useRef();
 
   const handleEditorChange = useCallback(
     (index) => {
@@ -63,27 +70,37 @@ const AddCommentInput = ({
     }
   }, [openBottomSheetOnMount]);
 
+  useEffect(() => {
+    if (bottomSheetModalRef && setBottomSheetModalRef) {
+      // eslint-disable-next-line no-param-reassign
+      setBottomSheetModalRef.current = bottomSheetModalRef.current;
+    }
+  }, [setBottomSheetModalRef, bottomSheetModalRef]);
+
   return (
     <>
       <BottomSheetModal
         ref={bottomSheetModalRef}
         index={0}
-        snapPoints={snapPoints}
+        snapPoints={fullscreen ? fullScreenSnapPoints : snapPoints}
         onChange={handleEditorChange}
         topInset={safeArea.top}
         animateOnMount
         // keyboardBehavior={'fullScreen'}
         dismissOnPanDown={dismissOnPanDown}
-        backgroundComponent={(props) => <ModalBackgroundView {...props} />} // eslint-disable-line react/jsx-props-no-spreading
+        backgroundComponent={(bgProps) => <ModalBackgroundView {...bgProps} />} // eslint-disable-line react/jsx-props-no-spreading
+        {...props}
       >
         <Navigator
           onSubmit={onSubmit}
           profile={profile}
           prompt={prompt}
+          initialValue={initialValue}
           bottomSheetModalRef={bottomSheetModalRef}
           bottomSheetIndex={bottomSheetIndex}
           editorTitle={editorTitle}
           confirmationTitle={confirmationTitle}
+          showCancel={showCancel}
         />
       </BottomSheetModal>
 
@@ -103,11 +120,19 @@ AddCommentInput.propTypes = {
     photo: PropTypes.shape({ uri: PropTypes.string }),
     nickName: PropTypes.string,
   }),
+  bottomSheetModalRef: PropTypes.shape({
+    current: PropTypes.shape({
+      present: PropTypes.func,
+    }),
+  }),
   openBottomSheetOnMount: PropTypes.bool,
   showInlinePrompt: PropTypes.bool,
   dismissOnPanDown: PropTypes.bool,
+  fullscreen: PropTypes.bool,
+  showCancel: PropTypes.bool,
   editorTitle: PropTypes.string,
   confirmationTitle: PropTypes.string,
+  initialValue: PropTypes.string,
 };
 
 export default AddCommentInput;

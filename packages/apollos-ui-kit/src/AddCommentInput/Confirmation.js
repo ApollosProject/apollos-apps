@@ -62,7 +62,7 @@ const Confirmation = ({
       setSubmitting(true);
       await onSubmit(route?.params?.value, share);
       setSubmitting(false);
-      bottomSheetModalRef.current?.close();
+      bottomSheetModalRef.current.dismiss();
     }
   }, [
     bottomSheetModalRef,
@@ -120,6 +120,7 @@ Confirmation.propTypes = {
   bottomSheetModalRef: PropTypes.shape({
     current: PropTypes.shape({
       close: PropTypes.func,
+      dismiss: PropTypes.func,
     }),
   }),
 };
