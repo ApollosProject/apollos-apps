@@ -95,7 +95,7 @@ const NodeSingleConnectedWithMedia = ({
 
       if (!hasMedia && !hasLivestream)
         return (
-          <NodeSingleConnected nodeId={nodeId} {...props}>
+          <NodeSingleConnected nodeId={nodeId} Component={Component} {...props}>
             {children}
           </NodeSingleConnected>
         );
