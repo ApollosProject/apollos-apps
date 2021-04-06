@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.10.0](https://github.com/apollosproject/apollos-apps/compare/v2.9.0...v2.10.0) (2021-04-06)
+
+
+### Features
+
+* Added analytics for new features - journal and following ([#1851](https://github.com/apollosproject/apollos-apps/issues/1851)) ([1f307b0](https://github.com/apollosproject/apollos-apps/commit/1f307b0c5719e2d42cead7ea411552f565389ff5))
+* Edit / Delete journals UI ([#1856](https://github.com/apollosproject/apollos-apps/issues/1856)) ([6dc0fdd](https://github.com/apollosproject/apollos-apps/commit/6dc0fdda33fdba42969fa3a39449cb3e1a25dc15))
+
+
+### Bug Fixes
+
+* component overrides for NodeSingleConnected ([#1858](https://github.com/apollosproject/apollos-apps/issues/1858)) ([e57384e](https://github.com/apollosproject/apollos-apps/commit/e57384ed415ba052b3cd5710a24013115d081191))
+
+
+
 ## [2.9.0](https://github.com/apollosproject/apollos-apps/compare/v2.8.0...v2.9.0) (2021-03-30)
 
 
