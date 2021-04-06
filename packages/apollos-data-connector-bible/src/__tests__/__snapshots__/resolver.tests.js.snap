@@ -26,6 +26,12 @@ Array [
 ]
 `;
 
+exports[`Scripture returns a single verse 3`] = `
+Array [
+  "SNG",
+]
+`;
+
 exports[`Scripture returns a verse as by node 1`] = `
 Object {
   "data": Object {
