@@ -146,6 +146,8 @@ const resolver = {
   },
   ContentSeriesContentItem: {
     ...defaultContentItemResolvers,
+    series: ({ id }, __, { dataSources: { ContentItem } }) =>
+      ContentItem.getSeriesByChildId(id),
     upNext: (root, args, { dataSources }) =>
       dataSources.ContentItem.getUpNext(root),
     percentComplete: (root, args, { dataSources }) =>

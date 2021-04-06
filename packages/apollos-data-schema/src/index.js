@@ -507,6 +507,7 @@ export const contentItemSchema = gql`
       after: String
     ): ContentItemsConnection
     parentChannel: ContentChannel
+    series: ContentItem
     theme: Theme
     percentComplete: Float @cacheControl(maxAge: 0)
     upNext: ContentItem @cacheControl(maxAge: 0)

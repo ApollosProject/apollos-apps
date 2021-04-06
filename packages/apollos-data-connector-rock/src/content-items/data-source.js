@@ -221,6 +221,26 @@ export default class ContentItem extends RockApolloDataSource {
     return features;
   }
 
+  getSeriesByChildId = async (childId) => {
+    const parentAssociations = await this.request(
+      'ContentChannelItemAssociations'
+    )
+      .filter(`ChildContentChannelItemId eq ${childId}`)
+      .cache({ ttl: 60 })
+      .get();
+
+    const seriesItems = await Promise.all(
+      parentAssociations.map(({ contentChannelItemId }) =>
+        this.getFromId(contentChannelItemId)
+      )
+    );
+
+    // get first match that also exists in the SERIES_CHANNEL_IDS list
+    return seriesItems.find(({ contentChannelId }) =>
+      ROCK_MAPPINGS.SERIES_CHANNEL_IDS.includes(contentChannelId)
+    );
+  };
+
   getAddCommentInitialPrompt = (attributeValues) => {
     return get(attributeValues, 'initialPrompt.value', 'Write Something...');
   };
