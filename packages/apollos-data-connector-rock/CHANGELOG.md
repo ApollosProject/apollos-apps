@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.10.0](https://github.com/apollosproject/apollos-apps/compare/v2.9.0...v2.10.0) (2021-04-06)
+
+
+### Bug Fixes
+
+* add safety check to prayer requestor ([#1857](https://github.com/apollosproject/apollos-apps/issues/1857)) ([56cf8da](https://github.com/apollosproject/apollos-apps/commit/56cf8da9c0a7bf93283669c85d9156a606a282f6))
+
+
+
 ## [2.9.0](https://github.com/apollosproject/apollos-apps/compare/v2.8.0...v2.9.0) (2021-03-30)
 
 
