@@ -39,7 +39,7 @@ describe('Cloudinary', () => {
     const url = withCloudinary(originalUrl);
 
     expect(url).toEqual(
-      'https://res.cloudinary.com/n07t21i7/image/fetch/c_limit,f_auto,q_auto:eco,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Df54b0db0-95f5-44ad-b8f2-8bcd1b23cfdb'
+      'https://res.cloudinary.com/n07t21i7/image/fetch/c_limit,f_jpg,q_auto,w_750/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Df54b0db0-95f5-44ad-b8f2-8bcd1b23cfdb'
     );
   });
   it('must not double parse a cloudinary url.', () => {

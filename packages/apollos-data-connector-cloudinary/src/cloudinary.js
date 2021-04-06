@@ -27,10 +27,10 @@ export default function withCloudinary(_url = '', options) {
   if (CLOUDINARY.URL) {
     return cloudinary.url(url, {
       type: 'fetch',
-      fetch_format: 'auto',
-      width: '1600',
+      fetch_format: 'jpg',
+      width: '750',
       crop: 'limit',
-      quality: 'auto:eco',
+      quality: 'auto',
       ...options,
     });
   }
