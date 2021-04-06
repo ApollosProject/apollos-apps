@@ -306,6 +306,7 @@ export const scriptureSchema = gql`
 
     html: String
     reference: String
+    book: String
     copyright: String
     version: String
   }
