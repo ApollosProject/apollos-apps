@@ -85,6 +85,7 @@ describe('Scripture', () => {
           id
           html
           reference
+          book
           copyright
           version
         }
@@ -95,10 +96,14 @@ describe('Scripture', () => {
         passages: oneVerseMock,
       },
     }));
+    context.dataSources.Scripture.getBook = jest.fn(() => 'Song Of Soloman');
     const rootValue = {};
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
     expect(context.dataSources.Scripture.get.mock.calls[0]).toMatchSnapshot();
+    expect(
+      context.dataSources.Scripture.getBook.mock.calls[0]
+    ).toMatchSnapshot();
   });
 
   it('returns multiple verses', async () => {

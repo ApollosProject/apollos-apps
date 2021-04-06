@@ -39,6 +39,20 @@ export default class Scripture extends RESTDataSource {
     return null;
   }
 
+  getBook = async (bookId) => {
+    const {
+      data: { name },
+    } = await this.get(
+      // use the first version available, shouldn't matter
+      `${Object.values(BIBLE_API.BIBLE_ID)[0]}/books/${bookId}`,
+      null,
+      {
+        cacheOptions: { ttl: ONE_DAY },
+      }
+    );
+    return name;
+  };
+
   async getScriptures(query, version) {
     if (query === '') return [];
     let safeVersion = version ? version.toUpperCase() : null;
