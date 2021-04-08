@@ -87,7 +87,7 @@ describe('HorizontalLikedContentFeedConnected', () => {
         </Providers>
       )
     );
-    await new Promise((res) => setTimeout(res, 5));
+    await new Promise((res) => setTimeout(res, 100));
     expect(tree).toMatchSnapshot();
   });
 
@@ -105,6 +105,7 @@ describe('HorizontalLikedContentFeedConnected', () => {
         </Providers>
       )
     );
+    await new Promise((res) => setTimeout(res, 100));
     expect(tree).toMatchSnapshot();
   });
   it('renders nothing if no liked content', async () => {
@@ -133,6 +134,7 @@ describe('HorizontalLikedContentFeedConnected', () => {
         </Providers>
       )
     );
+    await new Promise((res) => setTimeout(res, 100));
     expect(tree).toMatchSnapshot();
   });
 });
