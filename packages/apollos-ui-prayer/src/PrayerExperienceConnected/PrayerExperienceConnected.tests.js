@@ -50,10 +50,7 @@ jest.mock('@apollosproject/config', () => {
   };
 });
 
-jest.mock(
-  '../screens/AddPrayerScreenConnected',
-  () => 'AddPrayerScreenConnected'
-);
+jest.mock('../PrayerCard', () => 'PrayerCard');
 
 const mocks = [
   {

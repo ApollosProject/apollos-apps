@@ -3906,12 +3906,7 @@ Array [
                     }
                   >
                     <PrayerCard
-                      avatar={
-                        Object {
-                          "__typename": "ImageMediaSource",
-                          "uri": "https://1234.image.com",
-                        }
-                      }
+                      avatar={null}
                       onPrayerChangeText={[Function]}
                       title="Add your prayer"
                     />
