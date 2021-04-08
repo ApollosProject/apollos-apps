@@ -5,7 +5,30 @@ Config.loadJs({
   ONE_SIGNAL: {
     APP_ID: 'bla-bla-bla-app-id',
   },
+  ROCK_MAPPINGS: {
+    CONTENT_ITEM: {
+      ContentSeriesContentItem: {
+        EntityType: 'ContentChannelItem',
+      },
+      DevotionalContentItem: {
+        EntityType: 'SomeOtherEntity',
+      },
+      MediaContentItem: {
+        EntityType: 'ContentChannelItem',
+      },
+      UniversalContentItem: {
+        EntityType: 'ContentChannelItem',
+      },
+      WeekendContentItem: {
+        EntityType: 'ContentChannelItem',
+      },
+      ContentItem: {
+        EntityType: 'ContentChannelItem',
+      },
+    },
+  },
 });
+
 describe('OneSignal', () => {
   it('sends a push notification to a user', async () => {
     // eslint-disable-next-line
