@@ -217,6 +217,8 @@ describe('The PrayerExperienceConnected component', () => {
       </Providers>
     );
 
+    await new Promise((resolve) => setTimeout(resolve, 5));
+
     expect(tree).toMatchSnapshot();
   });
 
