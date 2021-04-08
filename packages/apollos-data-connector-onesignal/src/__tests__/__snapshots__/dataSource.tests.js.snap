@@ -5,7 +5,7 @@ Array [
   Array [
     "notifications",
     Object {
-      "app_id": "bla-bla-bla-app-id",
+      "app_id": "some-app-id",
       "contents": Object {
         "en": "Welcome to the app!",
       },
