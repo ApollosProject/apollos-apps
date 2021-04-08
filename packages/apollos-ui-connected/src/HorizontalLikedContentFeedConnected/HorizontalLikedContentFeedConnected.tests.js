@@ -12,6 +12,8 @@ import { GET_LIKED_CONTENT } from '../LikedContentFeedConnected';
 import HorizontalContentCardConnected from '../HorizontalContentCardConnected';
 import HorizontalLikedContentFeedConnected from './HorizontalLikedContentFeedConnected';
 
+jest.mock('./HorizontalLikedContentFeed', () => 'HorizontalLikedContentFeed');
+
 describe('HorizontalLikedContentFeedConnected', () => {
   const twoItemsMock = {
     request: {
@@ -85,6 +87,7 @@ describe('HorizontalLikedContentFeedConnected', () => {
         </Providers>
       )
     );
+    await new Promise((res) => setTimeout(res, 5));
     expect(tree).toMatchSnapshot();
   });
 

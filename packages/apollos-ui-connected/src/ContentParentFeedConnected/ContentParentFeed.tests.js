@@ -238,6 +238,7 @@ describe('the ContentParentFeedConnected component', () => {
       ),
       tree
     );
+    await new Promise((res) => setTimeout(res, 100));
     expect(finalTree).toMatchSnapshot();
   });
 });
