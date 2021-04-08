@@ -21,7 +21,7 @@ jest.mock('react-native-device-info', () => ({
 }));
 
 jest.mock('@apollosproject/config', () => {
-  const gql = require.requireActual('graphql-tag');
+  const gql = jest.requireActual('graphql-tag');
   return {
     FRAGMENTS: {
       PRAYER_LIST_FEATURE_FRAGMENT: gql`
@@ -49,6 +49,8 @@ jest.mock('@apollosproject/config', () => {
     },
   };
 });
+
+jest.mock('../PrayerCard', () => 'PrayerCard');
 
 const mocks = [
   {
@@ -216,8 +218,6 @@ describe('The PrayerExperienceConnected component', () => {
         <PrayerExperienceConnected id="PrayerListFeature:123" />
       </Providers>
     );
-
-    await new Promise((resolve) => setTimeout(resolve, 100));
 
     expect(tree).toMatchSnapshot();
   });
