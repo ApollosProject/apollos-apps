@@ -18,6 +18,8 @@ const Navigator = ({
   onSubmit,
   profile,
   prompt,
+  initialValue,
+  showCancel,
   ...navigatorProps
 }) => {
   return (
@@ -31,6 +33,8 @@ const Navigator = ({
               image={profile?.photo}
               prompt={prompt}
               headerTitle={editorTitle}
+              initialValue={initialValue}
+              showCancel={showCancel}
               {...props}
             />
           )}
@@ -59,6 +63,7 @@ const Navigator = ({
 
 Navigator.propTypes = {
   prompt: PropTypes.string,
+  initialValue: PropTypes.string,
   onSubmit: PropTypes.func.isRequired,
   profile: PropTypes.shape({
     photo: PropTypes.shape({ uri: PropTypes.string }),
@@ -70,6 +75,7 @@ Navigator.propTypes = {
   editorTitle: PropTypes.string,
   confirmationTitle: PropTypes.string,
   bottomSheetIndex: PropTypes.shape({}),
+  showCancel: PropTypes.bool,
 };
 
 const EnhancedNavigator = withTheme(({ theme, ...props }) => ({

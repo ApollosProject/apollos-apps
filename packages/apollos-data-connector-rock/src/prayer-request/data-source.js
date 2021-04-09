@@ -77,6 +77,7 @@ export default class PrayerRequest extends RockApolloDataSource {
   };
 
   getRequestor = async ({ requestedByPersonAliasId }) => {
+    if (!requestedByPersonAliasId) return null;
     const { personId } = await this.request('/PersonAlias')
       .filter(`Id eq ${requestedByPersonAliasId}`)
       .select('PersonId')

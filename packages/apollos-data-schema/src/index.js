@@ -306,6 +306,7 @@ export const scriptureSchema = gql`
 
     html: String
     reference: String
+    book: String
     copyright: String
     version: String
   }
@@ -1050,6 +1051,14 @@ export const commentSchema = gql`
       text: String!
       visibility: CommentVisibility
     ): Comment
+
+    updateComment(
+      commentId: ID!
+      text: String
+      visibility: CommentVisibility
+    ): Comment
+
+    deleteComment(commentId: ID!): Boolean
 
     flagComment(commentId: ID!): Comment
 

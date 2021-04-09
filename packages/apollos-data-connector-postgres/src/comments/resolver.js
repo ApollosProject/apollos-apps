@@ -4,6 +4,10 @@ const resolvers = {
   Mutation: {
     addComment: (root, args, { dataSources: { Comment } }) =>
       Comment.addComment(args),
+    updateComment: (root, args, { dataSources: { Comment } }) =>
+      Comment.updateComment(args),
+    deleteComment: (root, args, { dataSources: { Comment } }) =>
+      Comment.deleteComment(args),
     flagComment: (root, args, { dataSources: { UserFlag } }) =>
       UserFlag.flagComment(args),
     likeComment: (root, args, { dataSources: { UserLike } }) =>
@@ -12,10 +16,10 @@ const resolvers = {
       UserLike.updateLikeComment({ ...args, operation: 'Unlike' }),
   },
   Comment: {
-    person: (root) => root.getPerson(),
+    person: (root) => root.person || root.getPerson(),
     id: ({ apollosId }) => apollosId,
     isLiked: (root, args, { dataSources: { UserLike } }) =>
-      UserLike.userLikedNode({ nodeId: root.apollosId }),
+      UserLike.userLikedNode({ ...root, nodeId: root.apollosId }),
   },
   CommentListFeature: {
     id: ({ id }) => createGlobalId(id, 'CommentListFeature'),
