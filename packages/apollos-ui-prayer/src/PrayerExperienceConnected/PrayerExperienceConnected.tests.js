@@ -1,8 +1,6 @@
 import React from 'react';
-import wait from 'waait';
 import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
 import { MockedProvider } from '@apollo/client/testing';
-import { act } from 'react-test-renderer';
 
 import { PrayerDialogScreen } from '../screens';
 import { PRAY } from '../screens/PrayerScreen';
