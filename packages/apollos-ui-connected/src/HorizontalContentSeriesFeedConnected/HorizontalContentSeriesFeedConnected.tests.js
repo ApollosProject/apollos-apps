@@ -228,20 +228,21 @@ describe('the HorizontalContentSeriesFeedConnected component', () => {
         </Providers>
       )
     );
-    const finalTree = await renderWithApolloData(
-      WithReactNavigator(
-        <Providers
-          MockedProvider={MockedProvider}
-          mocks={[mock, ...additionalMocks]}
-        >
-          <HorizontalContentSeriesFeedConnected
-            contentId={'ContentSeriesContentItem:123'}
-            navigation={navigation}
-          />
-        </Providers>
-      ),
-      tree
-    );
-    expect(finalTree).toMatchSnapshot();
+    // const finalTree = await renderWithApolloData(
+    // WithReactNavigator(
+    // <Providers
+    // MockedProvider={MockedProvider}
+    // mocks={[mock, ...additionalMocks]}
+    // >
+    // <HorizontalContentSeriesFeedConnected
+    // contentId={'ContentSeriesContentItem:123'}
+    // navigation={navigation}
+    /// >
+    // </Providers>
+    // ),
+    // tree
+    // );
+    await new Promise((res) => setTimeout(res, 100));
+    expect(tree).toMatchSnapshot();
   });
 });
