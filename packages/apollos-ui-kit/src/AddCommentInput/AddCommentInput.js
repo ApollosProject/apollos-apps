@@ -101,6 +101,7 @@ const AddCommentInput = ({
           editorTitle={editorTitle}
           confirmationTitle={confirmationTitle}
           showCancel={showCancel}
+          hiddenIndex={fullscreen ? -1 : 0}
         />
       </BottomSheetModal>
 
