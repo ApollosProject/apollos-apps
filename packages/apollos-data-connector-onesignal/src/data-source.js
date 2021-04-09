@@ -26,7 +26,7 @@ export default class OneSignal extends RESTDataSource {
   }) {
     return this.post('notifications', {
       app_id: ONE_SIGNAL.APP_ID,
-      include_external_user_ids: toUserIds,
+      include_external_user_ids: toUserIds.map(String),
       contents: { en: content },
       headings: { en: heading },
       subtitle: { en: subtitle },
