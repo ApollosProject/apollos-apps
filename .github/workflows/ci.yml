@@ -39,7 +39,7 @@ jobs:
       run: yarn
 
     - name: Jest
-      run: yarn test --stream --concurrency=1 --max-buffer=10000000 -- -- --maxWorkers=2
+      run: yarn test --no-bail --stream --concurrency=1 --max-buffer=10000000 -- -- --maxWorkers=2
 
     - name: Codecov
       uses: codecov/codecov-action@v1
