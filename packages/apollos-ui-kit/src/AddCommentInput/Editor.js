@@ -94,6 +94,7 @@ const Editor = ({
   initialValue,
   showCancel,
   bottomSheetIndex,
+  hiddenIndex,
 }) => {
   const keyboardHeight = useKeyboardHeight();
   const text = useSharedValue(initialValue);
@@ -140,9 +141,9 @@ const Editor = ({
 
     // hide header when compressed
     runOnJS(setHeaderShown)(
-      textHasLength && (isEditing || bottomSheetIndex > 0)
+      textHasLength && (isEditing || bottomSheetIndex > hiddenIndex)
     );
-  }, [isEditing, bottomSheetIndex, setHeaderShown, text]);
+  }, [isEditing, bottomSheetIndex, setHeaderShown, text, hiddenIndex]);
 
   useEffect(() => {
     // not working on android 😭
@@ -199,7 +200,7 @@ const Editor = ({
       <CommentInputContainer
         style={Platform.select({
           android: {
-            paddingTop: headerShown ? 32 : 0, // TODO: Animate this.
+            paddingTop: headerShown ? 32 : 0,
           },
         })}
       >
@@ -260,9 +261,12 @@ Editor.propTypes = {
   }),
   initialValue: PropTypes.string,
   headerTitle: PropTypes.string,
-  bottomSheetIndex: PropTypes.shape({
-    value: PropTypes.number,
-  }),
+  bottomSheetIndex: PropTypes.number,
+  hiddenIndex: PropTypes.number,
+};
+
+Editor.defaultProps = {
+  hiddenIndex: 0,
 };
 
 export default Editor;
