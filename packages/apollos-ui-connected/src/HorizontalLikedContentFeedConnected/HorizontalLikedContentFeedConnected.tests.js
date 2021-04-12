@@ -87,8 +87,15 @@ describe('HorizontalLikedContentFeedConnected', () => {
         </Providers>
       )
     );
-    await new Promise((res) => setTimeout(res, 100));
-    expect(tree).toMatchSnapshot();
+    const updatedTree = await renderWithApolloData(
+      WithReactNavigator(
+        <Providers MockedProvider={MockedProvider} mocks={[twoItemsMock]}>
+          <HorizontalLikedContentFeedConnected navigation={navigation} />
+        </Providers>
+      ),
+      tree
+    );
+    expect(updatedTree).toMatchSnapshot();
   });
 
   it('renders a HorizontalLikedContentFeedConnected with a custom component', async () => {
