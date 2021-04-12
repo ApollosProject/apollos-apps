@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.11.0](https://github.com/apollosproject/apollos-apps/compare/v2.10.0...v2.11.0) (2021-04-12)
+
+
+### Bug Fixes
+
+* Buttons hiding too soon in editing modal on Android ([#1864](https://github.com/apollosproject/apollos-apps/issues/1864)) ([2734e39](https://github.com/apollosproject/apollos-apps/commit/2734e398fdf375cc7d1d42d8afe1a7dbac362d05))
+
+
+
 ## [2.10.0](https://github.com/apollosproject/apollos-apps/compare/v2.9.0...v2.10.0) (2021-04-06)
 
 
