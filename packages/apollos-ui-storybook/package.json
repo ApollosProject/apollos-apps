@@ -4,6 +4,9 @@
   "engines": {
     "node": ">=12"
   },
+  "scripts": {
+    "test": "echo \"No tests here!\""
+  },
   "version": "2.11.0",
   "main": "./src/index.js",
   "peerDependencies": {
