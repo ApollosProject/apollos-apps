@@ -109,7 +109,9 @@ describe('LikedContentFeedConnected component', () => {
         mocks={[mock, ...additionalMocks]}
       >
         <LikedContentFeedConnected navigation={navigation} />
-      </Providers>
+      </Providers>,
+      null,
+      { renderCount: 3 }
     );
     expect(tree).toMatchSnapshot();
   });
