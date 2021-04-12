@@ -8,7 +8,7 @@
   "source": "src/index",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
   "engines": {
-    "node": ">=10.x.x"
+    "node": ">=12"
   },
   "version": "2.11.0",
   "files": [

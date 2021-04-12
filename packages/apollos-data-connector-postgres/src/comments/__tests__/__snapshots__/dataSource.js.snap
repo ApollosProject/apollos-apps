@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Apollos Postgres Comments DatSource updateComment user can only update own comment 1`] = `[Error: Unable to find comment]`;
+exports[`Apollos Postgres Comments DatSource updateComment user can only update own comment 1`] = `[Error: Unable to update comment]`;

@@ -2,10 +2,13 @@
   "name": "@apollosproject/babel-preset-apollos",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
   "engines": {
-    "node": ">=10.x.x"
+    "node": ">=12"
   },
   "version": "2.11.0",
   "main": "./index.js",
+  "scripts": {
+    "test": "echo \"No tests here!\""
+  },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "7.4.0",
     "@babel/plugin-proposal-decorators": "7.4.0",

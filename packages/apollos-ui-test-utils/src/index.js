@@ -10,12 +10,25 @@ import createPossibleType from './createPossibleType';
 import ApolloStorybookDecorator from './ApolloStorybookDecorator';
 import fragmentTypes from './fragmentTypes.json';
 
-async function renderWithApolloData(component, existingTree) {
-  const tree = existingTree || renderer.create(component);
+async function renderWithApolloData(
+  component,
+  existingTree,
+  { renderCount } = 1
+) {
+  let tree = existingTree || renderer.create(component);
   await renderer.act(async function () {
     await wait(0);
     tree.update(component);
   });
+  if (renderCount - 1 > 0) {
+    for (let i; i < renderCount; i += 1) {
+      // eslint-disable-next-line
+      tree = await renderer.act(async function () {
+        await wait(0);
+        tree.update(component);
+      });
+    }
+  }
   return tree;
 }
 

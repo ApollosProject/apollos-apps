@@ -43,7 +43,7 @@
     "codecov": "3.7.1",
     "conventional-changelog-conventionalcommits": "^4.5.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "lerna": "^3.14.0",
+    "lerna": "^4.0.0",
     "prettier": "^2.1.2",
     "react-native-storybook-loader": "^1.8.0",
     "yalc": "^1.0.0-pre.35"

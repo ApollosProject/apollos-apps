@@ -24,6 +24,11 @@ class LikedContentFeedConnected extends PureComponent {
       PropTypes.func,
       PropTypes.object, // type check for React fragments
     ]),
+    ContentCardComponent: PropTypes.oneOfType([
+      PropTypes.node,
+      PropTypes.func,
+      PropTypes.object, // type check for React fragments
+    ]),
     /** Functions passed down from React Navigation to use in navigating to/from
      * items in the feed.
      */
@@ -34,6 +39,7 @@ class LikedContentFeedConnected extends PureComponent {
 
   static defaultProps = {
     Component: FeedView,
+    ContentCardComponent: ContentCardConnected,
   };
 
   /** Function that is called when a card in the feed is pressed.
@@ -57,7 +63,7 @@ class LikedContentFeedConnected extends PureComponent {
     });
 
   render() {
-    const { Component } = this.props;
+    const { Component, ContentCardComponent } = this.props;
 
     return (
       <BackgroundView>
@@ -68,7 +74,7 @@ class LikedContentFeedConnected extends PureComponent {
         >
           {({ loading, error, data, refetch, fetchMore, variables }) => (
             <Component
-              ListItemComponent={ContentCardConnected}
+              ListItemComponent={ContentCardComponent}
               content={this.getContent(data)}
               isLoading={loading}
               error={error}
