@@ -11,7 +11,6 @@ import {
   styled,
   withIsLoading,
   withTheme,
-  Avatar,
 } from '@apollosproject/ui-kit';
 
 const AvatarWrapper = styled(
