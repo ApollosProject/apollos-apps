@@ -3,6 +3,103 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.11.0](https://github.com/apollosproject/apollos-apps/compare/v2.10.0...v2.11.0) (2021-04-12)
+
+
+### Features
+
+* add books of the bible to scripture references ([#1859](https://github.com/apollosproject/apollos-apps/issues/1859)) ([87f6ded](https://github.com/apollosproject/apollos-apps/commit/87f6dedc7dcd979c1aa96bdb2b308b2fc1288900))
+
+
+
+## [2.10.0](https://github.com/apollosproject/apollos-apps/compare/v2.9.0...v2.10.0) (2021-04-06)
+
+
+### Features
+
+* Comment update and delete ([#1855](https://github.com/apollosproject/apollos-apps/issues/1855)) ([6968b6c](https://github.com/apollosproject/apollos-apps/commit/6968b6cae059adc4b810c18d2ed9e217166c48cb))
+
+
+
+## [2.9.0](https://github.com/apollosproject/apollos-apps/compare/v2.8.0...v2.9.0) (2021-03-30)
+
+**Note:** Version bump only for package @apollosproject/data-schema
+
+
+
+
+
+## [2.8.0](https://github.com/apollosproject/apollos-apps/compare/v2.7.0...v2.8.0) (2021-03-29)
+
+**Note:** Version bump only for package @apollosproject/data-schema
+
+
+
+
+
+## [2.7.0](https://github.com/apollosproject/apollos-apps/compare/v2.6.0...v2.7.0) (2021-03-25)
+
+
+### Features
+
+* Liking comments ([#1829](https://github.com/apollosproject/apollos-apps/issues/1829)) ([4590af7](https://github.com/apollosproject/apollos-apps/commit/4590af7c4299d3e7e0643b25385d82cfc7891ada))
+
+
+
+## [2.6.0](https://github.com/apollosproject/apollos-apps/compare/v2.5.0...v2.6.0) (2021-03-24)
+
+**Note:** Version bump only for package @apollosproject/data-schema
+
+
+
+
+
+## [2.5.0](https://github.com/apollosproject/apollos-apps/compare/v2.4.0...v2.5.0) (2021-03-22)
+
+
+### Features
+
+* People Search ([#1815](https://github.com/apollosproject/apollos-apps/issues/1815)) ([16e3556](https://github.com/apollosproject/apollos-apps/commit/16e35562198d9b0049e067075c53f9f9aab0d25f))
+
+
+
+## [2.4.0](https://github.com/apollosproject/apollos-apps/compare/v2.3.1...v2.4.0) (2021-03-18)
+
+**Note:** Version bump only for package @apollosproject/data-schema
+
+
+
+
+
+### [2.3.1](https://github.com/apollosproject/apollos-apps/compare/v2.3.0...v2.3.1) (2021-03-11)
+
+**Note:** Version bump only for package @apollosproject/data-schema
+
+
+
+
+
+## [2.3.0](https://github.com/apollosproject/apollos-apps/compare/v2.2.0...v2.3.0) (2021-03-11)
+
+
+### Features
+
+* add button link feature to content ([#1779](https://github.com/apollosproject/apollos-apps/issues/1779)) ([c254c5b](https://github.com/apollosproject/apollos-apps/commit/c254c5bcdac03c840926da53b19eeba9ac11e9a5))
+* Follow data model ([#1766](https://github.com/apollosproject/apollos-apps/issues/1766)) ([804a0a7](https://github.com/apollosproject/apollos-apps/commit/804a0a7c98e4abf8cc7aeef548d1735a9d40c5f9))
+* Follow request list query ([#1787](https://github.com/apollosproject/apollos-apps/issues/1787)) ([3d3d1a2](https://github.com/apollosproject/apollos-apps/commit/3d3d1a2ee014e68abcc2b28b3677bacefbe1cd49))
+* Hookup suggested followers ([#1785](https://github.com/apollosproject/apollos-apps/issues/1785)) ([68d042d](https://github.com/apollosproject/apollos-apps/commit/68d042de2999aa466f7460263db6ec273cceafe4))
+* Suggested follows ([#1773](https://github.com/apollosproject/apollos-apps/issues/1773)) ([5f3cd78](https://github.com/apollosproject/apollos-apps/commit/5f3cd78c45d1e2588f85dd5c6e6f0bba4349ad0f))
+
+
+
+## [2.2.0](https://github.com/apollosproject/apollos-apps/compare/v2.1.1...v2.2.0) (2021-03-04)
+
+**Note:** Version bump only for package @apollosproject/data-schema
+
+
+
+
+
 ### [2.1.1](https://github.com/apollosproject/apollos-apps/compare/v2.1.0...v2.1.1) (2021-02-26)
 
 **Note:** Version bump only for package @apollosproject/data-schema

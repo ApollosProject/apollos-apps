@@ -2,6 +2,23 @@
 
 exports[`AboutYouConnected component renders Gender and BirthDate when logged in 1`] = `
 Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
   <RCTScrollView
     birthDate="1980-02-10T05:00:00.000Z"
     contentContainerStyle={
@@ -384,9 +401,9 @@ Array [
                 Object {
                   "backgroundColor": "transparent",
                   "color": "#505050",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
                   "paddingVertical": 4,
                 }
               }
@@ -413,7 +430,13 @@ Array [
     }
     vertical={false}
   >
-    <View>
+    <View
+      edges={
+        Array [
+          "bottom",
+        ]
+      }
+    >
       <View
         accessible={true}
         focusable={true}
@@ -590,6 +613,23 @@ Array [
 
 exports[`AboutYouConnected component renders in a default state 1`] = `
 Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -958,9 +998,9 @@ Array [
                 Object {
                   "backgroundColor": "transparent",
                   "color": "#505050",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
                   "paddingVertical": 4,
                 }
               }
@@ -987,7 +1027,13 @@ Array [
     }
     vertical={false}
   >
-    <View>
+    <View
+      edges={
+        Array [
+          "bottom",
+        ]
+      }
+    >
       <Text
         onPress={[MockFunction]}
         style={
@@ -1008,7 +1054,26 @@ Array [
 `;
 
 exports[`AboutYouConnected component should render a custom Component 1`] = `
-<Text>
-  Male
-</Text>
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <Text>
+    Male
+  </Text>,
+]
 `;

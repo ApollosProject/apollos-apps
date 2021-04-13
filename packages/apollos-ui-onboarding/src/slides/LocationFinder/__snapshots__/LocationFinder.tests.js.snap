@@ -2,6 +2,23 @@
 
 exports[`The Onboarding LocationFinder component should pass additional props to Slide component 1`] = `
 Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -125,7 +142,13 @@ Array [
     }
     vertical={false}
   >
-    <View>
+    <View
+      edges={
+        Array [
+          "bottom",
+        ]
+      }
+    >
       <Text
         onPress={[MockFunction]}
         style={
@@ -145,336 +168,89 @@ Array [
 `;
 
 exports[`The Onboarding LocationFinder component should render 1`] = `
-<RCTScrollView
-  contentContainerStyle={
-    Object {
-      "minHeight": "100%",
-    }
-  }
-  overScrollMode="auto"
-  style={
-    Object {
-      "flex": 1,
-    }
-  }
->
-  <View>
-    <View
-      style={
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
         Object {
-          "flex": 1,
-          "justifyContent": "space-between",
-          "marginBottom": 48,
-          "paddingHorizontal": 16,
-          "paddingTop": 16,
-        }
-      }
-    >
-      <View>
-        <View
-          style={
-            Object {
-              "paddingBottom": 8,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#00676D",
-                "fontFamily": "InterUI-Black",
-                "fontSize": 36,
-                "lineHeight": 41.4,
-              }
-            }
-          >
-            Let's select your local campus
-          </Text>
-        </View>
-        <Text
-          style={
-            Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Medium",
-              "fontSize": 14,
-              "lineHeight": 21,
-            }
-          }
-        >
-          We'll use your location to connect you with your nearby campus and community
-        </Text>
-      </View>
-      <View
-        horizontal={false}
-        style={
-          Object {
-            "paddingHorizontal": 0,
-            "paddingVertical": 16,
-          }
-        }
-      >
-        <View
-          bordered={false}
-          disabled={false}
-          pill={false}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#00676D",
-              "borderColor": "#00676D",
-              "borderRadius": 16,
-              "borderWidth": 2,
-              "elevation": 2,
-              "flexDirection": "row",
-              "height": 48,
-              "justifyContent": "center",
-              "opacity": 1,
-              "overflow": "hidden",
-              "paddingHorizontal": 16,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#FFFFFF",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 16,
-                "lineHeight": 24,
-              }
-            }
-          >
-            Yes, find my local campus
-          </Text>
-        </View>
-      </View>
-    </View>
-  </View>
-</RCTScrollView>
-`;
-
-exports[`The Onboarding LocationFinder component should render a BackgroundComponent 1`] = `
-<RCTScrollView
-  contentContainerStyle={
-    Object {
-      "minHeight": "100%",
-    }
-  }
-  overScrollMode="auto"
-  style={
-    Object {
-      "flex": 1,
-    }
-  }
->
-  <View>
-    <View
-      style={
-        Object {
-          "backgroundColor": "#A5A5A5",
+          "bottom": 0,
+          "left": 0,
           "overflow": "hidden",
-          "width": "100%",
-        }
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
       }
-    >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://picsum.photos/640/640/?random",
-              "url": "https://picsum.photos/640/640/?random",
-            },
-          ]
-        }
-        style={
-          Object {
-            "aspectRatio": 1,
-            "backgroundColor": "#A5A5A5",
-            "resizeMode": "cover",
-            "width": "100%",
-          }
-        }
-      />
-    </View>
-    <View
-      style={
-        Object {
-          "flex": 1,
-          "justifyContent": "space-between",
-          "marginBottom": 48,
-          "paddingHorizontal": 16,
-          "paddingTop": 16,
-        }
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
       }
-    >
-      <View>
-        <View
-          style={
-            Object {
-              "paddingBottom": 8,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#00676D",
-                "fontFamily": "InterUI-Black",
-                "fontSize": 36,
-                "lineHeight": 41.4,
-              }
-            }
-          >
-            Let's select your local campus
-          </Text>
-        </View>
-        <Text
-          style={
-            Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Medium",
-              "fontSize": 14,
-              "lineHeight": 21,
-            }
-          }
-        >
-          We'll use your location to connect you with your nearby campus and community
-        </Text>
-      </View>
+    }
+  >
+    <View>
       <View
-        horizontal={false}
         style={
           Object {
-            "paddingHorizontal": 0,
-            "paddingVertical": 16,
+            "flex": 1,
+            "justifyContent": "space-between",
+            "marginBottom": 48,
+            "paddingHorizontal": 16,
+            "paddingTop": 16,
           }
         }
       >
-        <View
-          bordered={false}
-          disabled={false}
-          pill={false}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#00676D",
-              "borderColor": "#00676D",
-              "borderRadius": 16,
-              "borderWidth": 2,
-              "elevation": 2,
-              "flexDirection": "row",
-              "height": 48,
-              "justifyContent": "center",
-              "opacity": 1,
-              "overflow": "hidden",
-              "paddingHorizontal": 16,
-            }
-          }
-        >
-          <Text
+        <View>
+          <View
             style={
               Object {
-                "color": "#FFFFFF",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 16,
-                "lineHeight": 24,
+                "paddingBottom": 8,
               }
             }
           >
-            Yes, find my local campus
-          </Text>
-        </View>
-      </View>
-    </View>
-  </View>
-</RCTScrollView>
-`;
-
-exports[`The Onboarding LocationFinder component should render a button with custom text 1`] = `
-<RCTScrollView
-  contentContainerStyle={
-    Object {
-      "minHeight": "100%",
-    }
-  }
-  overScrollMode="auto"
-  style={
-    Object {
-      "flex": 1,
-    }
-  }
->
-  <View>
-    <View
-      style={
-        Object {
-          "flex": 1,
-          "justifyContent": "space-between",
-          "marginBottom": 48,
-          "paddingHorizontal": 16,
-          "paddingTop": 16,
-        }
-      }
-    >
-      <View>
-        <View
-          style={
-            Object {
-              "paddingBottom": 8,
-            }
-          }
-        >
+            <Text
+              style={
+                Object {
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Let's select your local campus
+            </Text>
+          </View>
           <Text
             style={
               Object {
-                "color": "#00676D",
-                "fontFamily": "InterUI-Black",
-                "fontSize": 36,
-                "lineHeight": 41.4,
+                "color": "#505050",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
               }
             }
           >
-            Let's select your local campus
+            We'll use your location to connect you with your nearby campus and community
           </Text>
         </View>
-        <Text
-          style={
-            Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Medium",
-              "fontSize": 14,
-              "lineHeight": 21,
-            }
-          }
-        >
-          We'll use your location to connect you with your nearby campus and community
-        </Text>
-      </View>
-      <View
-        horizontal={false}
-        style={
-          Object {
-            "paddingHorizontal": 0,
-            "paddingVertical": 16,
-          }
-        }
-      >
         <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
+          horizontal={false}
           style={
             Object {
-              "opacity": 1,
+              "paddingHorizontal": 0,
+              "paddingVertical": 16,
             }
           }
         >
@@ -509,236 +285,595 @@ exports[`The Onboarding LocationFinder component should render a button with cus
                 }
               }
             >
-              Custom button text
+              Yes, find my local campus
             </Text>
           </View>
         </View>
       </View>
     </View>
-  </View>
-</RCTScrollView>
+  </RCTScrollView>,
+]
+`;
+
+exports[`The Onboarding LocationFinder component should render a BackgroundComponent 1`] = `
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
+      }
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "overflow": "hidden",
+            "width": "100%",
+          }
+        }
+      >
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/640/640/?random",
+                "url": "https://picsum.photos/640/640/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "resizeMode": "cover",
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "space-between",
+            "marginBottom": 48,
+            "paddingHorizontal": 16,
+            "paddingTop": 16,
+          }
+        }
+      >
+        <View>
+          <View
+            style={
+              Object {
+                "paddingBottom": 8,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Let's select your local campus
+            </Text>
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+              }
+            }
+          >
+            We'll use your location to connect you with your nearby campus and community
+          </Text>
+        </View>
+        <View
+          horizontal={false}
+          style={
+            Object {
+              "paddingHorizontal": 0,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            bordered={false}
+            disabled={false}
+            pill={false}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#00676D",
+                "borderColor": "#00676D",
+                "borderRadius": 16,
+                "borderWidth": 2,
+                "elevation": 2,
+                "flexDirection": "row",
+                "height": 48,
+                "justifyContent": "center",
+                "opacity": 1,
+                "overflow": "hidden",
+                "paddingHorizontal": 16,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
+                }
+              }
+            >
+              Yes, find my local campus
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>,
+]
+`;
+
+exports[`The Onboarding LocationFinder component should render a button with custom text 1`] = `
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
+      }
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "space-between",
+            "marginBottom": 48,
+            "paddingHorizontal": 16,
+            "paddingTop": 16,
+          }
+        }
+      >
+        <View>
+          <View
+            style={
+              Object {
+                "paddingBottom": 8,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Let's select your local campus
+            </Text>
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+              }
+            }
+          >
+            We'll use your location to connect you with your nearby campus and community
+          </Text>
+        </View>
+        <View
+          horizontal={false}
+          style={
+            Object {
+              "paddingHorizontal": 0,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              bordered={false}
+              disabled={false}
+              pill={false}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#00676D",
+                  "borderColor": "#00676D",
+                  "borderRadius": 16,
+                  "borderWidth": 2,
+                  "elevation": 2,
+                  "flexDirection": "row",
+                  "height": 48,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "overflow": "hidden",
+                  "paddingHorizontal": 16,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                  }
+                }
+              >
+                Custom button text
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>,
+]
 `;
 
 exports[`The Onboarding LocationFinder component should render a custom description 1`] = `
-<RCTScrollView
-  contentContainerStyle={
-    Object {
-      "minHeight": "100%",
-    }
-  }
-  overScrollMode="auto"
-  style={
-    Object {
-      "flex": 1,
-    }
-  }
->
-  <View>
-    <View
-      style={
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
         Object {
-          "flex": 1,
-          "justifyContent": "space-between",
-          "marginBottom": 48,
-          "paddingHorizontal": 16,
-          "paddingTop": 16,
-        }
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
       }
-    >
-      <View>
-        <View
-          style={
-            Object {
-              "paddingBottom": 8,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#00676D",
-                "fontFamily": "InterUI-Black",
-                "fontSize": 36,
-                "lineHeight": 41.4,
-              }
-            }
-          >
-            Let's select your local campus
-          </Text>
-        </View>
-        <Text
-          style={
-            Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Medium",
-              "fontSize": 14,
-              "lineHeight": 21,
-            }
-          }
-        >
-          Custom description text
-        </Text>
-      </View>
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
       <View
-        horizontal={false}
         style={
           Object {
-            "paddingHorizontal": 0,
-            "paddingVertical": 16,
+            "flex": 1,
+            "justifyContent": "space-between",
+            "marginBottom": 48,
+            "paddingHorizontal": 16,
+            "paddingTop": 16,
           }
         }
       >
-        <View
-          bordered={false}
-          disabled={false}
-          pill={false}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#00676D",
-              "borderColor": "#00676D",
-              "borderRadius": 16,
-              "borderWidth": 2,
-              "elevation": 2,
-              "flexDirection": "row",
-              "height": 48,
-              "justifyContent": "center",
-              "opacity": 1,
-              "overflow": "hidden",
-              "paddingHorizontal": 16,
-            }
-          }
-        >
-          <Text
+        <View>
+          <View
             style={
               Object {
-                "color": "#FFFFFF",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 16,
-                "lineHeight": 24,
+                "paddingBottom": 8,
               }
             }
           >
-            Yes, find my local campus
+            <Text
+              style={
+                Object {
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Let's select your local campus
+            </Text>
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+              }
+            }
+          >
+            Custom description text
           </Text>
+        </View>
+        <View
+          horizontal={false}
+          style={
+            Object {
+              "paddingHorizontal": 0,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            bordered={false}
+            disabled={false}
+            pill={false}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#00676D",
+                "borderColor": "#00676D",
+                "borderRadius": 16,
+                "borderWidth": 2,
+                "elevation": 2,
+                "flexDirection": "row",
+                "height": 48,
+                "justifyContent": "center",
+                "opacity": 1,
+                "overflow": "hidden",
+                "paddingHorizontal": 16,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
+                }
+              }
+            >
+              Yes, find my local campus
+            </Text>
+          </View>
         </View>
       </View>
     </View>
-  </View>
-</RCTScrollView>
+  </RCTScrollView>,
+]
 `;
 
 exports[`The Onboarding LocationFinder component should render a custom title 1`] = `
-<RCTScrollView
-  contentContainerStyle={
-    Object {
-      "minHeight": "100%",
-    }
-  }
-  overScrollMode="auto"
-  style={
-    Object {
-      "flex": 1,
-    }
-  }
->
-  <View>
-    <View
-      style={
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
         Object {
-          "flex": 1,
-          "justifyContent": "space-between",
-          "marginBottom": 48,
-          "paddingHorizontal": 16,
-          "paddingTop": 16,
-        }
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
       }
-    >
-      <View>
-        <View
-          style={
-            Object {
-              "paddingBottom": 8,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#00676D",
-                "fontFamily": "InterUI-Black",
-                "fontSize": 36,
-                "lineHeight": 41.4,
-              }
-            }
-          >
-            Custom title text
-          </Text>
-        </View>
-        <Text
-          style={
-            Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Medium",
-              "fontSize": 14,
-              "lineHeight": 21,
-            }
-          }
-        >
-          We'll use your location to connect you with your nearby campus and community
-        </Text>
-      </View>
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
       <View
-        horizontal={false}
         style={
           Object {
-            "paddingHorizontal": 0,
-            "paddingVertical": 16,
+            "flex": 1,
+            "justifyContent": "space-between",
+            "marginBottom": 48,
+            "paddingHorizontal": 16,
+            "paddingTop": 16,
           }
         }
       >
-        <View
-          bordered={false}
-          disabled={false}
-          pill={false}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#00676D",
-              "borderColor": "#00676D",
-              "borderRadius": 16,
-              "borderWidth": 2,
-              "elevation": 2,
-              "flexDirection": "row",
-              "height": 48,
-              "justifyContent": "center",
-              "opacity": 1,
-              "overflow": "hidden",
-              "paddingHorizontal": 16,
-            }
-          }
-        >
-          <Text
+        <View>
+          <View
             style={
               Object {
-                "color": "#FFFFFF",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 16,
-                "lineHeight": 24,
+                "paddingBottom": 8,
               }
             }
           >
-            Yes, find my local campus
+            <Text
+              style={
+                Object {
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
+                }
+              }
+            >
+              Custom title text
+            </Text>
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+              }
+            }
+          >
+            We'll use your location to connect you with your nearby campus and community
           </Text>
+        </View>
+        <View
+          horizontal={false}
+          style={
+            Object {
+              "paddingHorizontal": 0,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            bordered={false}
+            disabled={false}
+            pill={false}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#00676D",
+                "borderColor": "#00676D",
+                "borderRadius": 16,
+                "borderWidth": 2,
+                "elevation": 2,
+                "flexDirection": "row",
+                "height": 48,
+                "justifyContent": "center",
+                "opacity": 1,
+                "overflow": "hidden",
+                "paddingHorizontal": 16,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
+                }
+              }
+            >
+              Yes, find my local campus
+            </Text>
+          </View>
         </View>
       </View>
     </View>
-  </View>
-</RCTScrollView>
+  </RCTScrollView>,
+]
 `;
 
 exports[`The Onboarding LocationFinder component should render the campus card 1`] = `
 Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
   <RCTScrollView
     contentContainerStyle={
       Object {
@@ -943,7 +1078,13 @@ South Barrington, IL 60010-6143
     }
     vertical={false}
   >
-    <View>
+    <View
+      edges={
+        Array [
+          "bottom",
+        ]
+      }
+    >
       <View
         accessible={true}
         focusable={true}
@@ -1119,127 +1260,146 @@ South Barrington, IL 60010-6143
 `;
 
 exports[`The Onboarding LocationFinder component should render with a button 1`] = `
-<RCTScrollView
-  contentContainerStyle={
-    Object {
-      "minHeight": "100%",
-    }
-  }
-  overScrollMode="auto"
-  style={
-    Object {
-      "flex": 1,
-    }
-  }
->
-  <View>
-    <View
-      style={
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
         Object {
-          "flex": 1,
-          "justifyContent": "space-between",
-          "marginBottom": 48,
-          "paddingHorizontal": 16,
-          "paddingTop": 16,
-        }
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "minHeight": "100%",
       }
-    >
-      <View>
-        <View
-          style={
-            Object {
-              "paddingBottom": 8,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#00676D",
-                "fontFamily": "InterUI-Black",
-                "fontSize": 36,
-                "lineHeight": 41.4,
-              }
-            }
-          >
-            Let's select your local campus
-          </Text>
-        </View>
-        <Text
-          style={
-            Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Medium",
-              "fontSize": 14,
-              "lineHeight": 21,
-            }
-          }
-        >
-          We'll use your location to connect you with your nearby campus and community
-        </Text>
-      </View>
+    }
+    overScrollMode="auto"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
       <View
-        horizontal={false}
         style={
           Object {
-            "paddingHorizontal": 0,
-            "paddingVertical": 16,
+            "flex": 1,
+            "justifyContent": "space-between",
+            "marginBottom": 48,
+            "paddingHorizontal": 16,
+            "paddingTop": 16,
           }
         }
       >
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "opacity": 1,
-            }
-          }
-        >
+        <View>
           <View
-            bordered={false}
-            disabled={false}
-            pill={false}
             style={
               Object {
-                "alignItems": "center",
-                "backgroundColor": "#00676D",
-                "borderColor": "#00676D",
-                "borderRadius": 16,
-                "borderWidth": 2,
-                "elevation": 2,
-                "flexDirection": "row",
-                "height": 48,
-                "justifyContent": "center",
-                "opacity": 1,
-                "overflow": "hidden",
-                "paddingHorizontal": 16,
+                "paddingBottom": 8,
               }
             }
           >
             <Text
               style={
                 Object {
-                  "color": "#FFFFFF",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 16,
-                  "lineHeight": 24,
+                  "color": "#00676D",
+                  "fontFamily": "InterUI-Black",
+                  "fontSize": 36,
+                  "lineHeight": 41.4,
                 }
               }
             >
-              Yes, find my local campus
+              Let's select your local campus
             </Text>
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "InterUI-Medium",
+                "fontSize": 14,
+                "lineHeight": 21,
+              }
+            }
+          >
+            We'll use your location to connect you with your nearby campus and community
+          </Text>
+        </View>
+        <View
+          horizontal={false}
+          style={
+            Object {
+              "paddingHorizontal": 0,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              bordered={false}
+              disabled={false}
+              pill={false}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#00676D",
+                  "borderColor": "#00676D",
+                  "borderRadius": 16,
+                  "borderWidth": 2,
+                  "elevation": 2,
+                  "flexDirection": "row",
+                  "height": 48,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "overflow": "hidden",
+                  "paddingHorizontal": 16,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                  }
+                }
+              >
+                Yes, find my local campus
+              </Text>
+            </View>
           </View>
         </View>
       </View>
     </View>
-  </View>
-</RCTScrollView>
+  </RCTScrollView>,
+]
 `;

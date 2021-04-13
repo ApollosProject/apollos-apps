@@ -7,7 +7,10 @@
   "react-native": "src/index",
   "source": "src/index",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "2.1.1",
+  "engines": {
+    "node": ">=12"
+  },
+  "version": "2.11.0",
   "files": [
     "src",
     "lib",
@@ -24,7 +27,7 @@
   "scripts": {
     "test": "jest",
     "typescript": "tsc --noEmit",
-    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "lint": "eslint ./src --ext js,ts,tsx",
     "prepare": "bob build",
     "build": "yarn prepare",
     "generate-stories": "rnstl"
@@ -83,6 +86,7 @@
       "node_modules/@storybook/"
     ],
     "setupFiles": [
+      "../apollos-ui-test-utils/src/mocks/reanimated.js",
       "./jest.setup.js",
       "../../node_modules/react-native-gesture-handler/jestSetup.js"
     ]

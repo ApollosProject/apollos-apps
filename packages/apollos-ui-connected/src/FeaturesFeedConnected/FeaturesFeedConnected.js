@@ -22,8 +22,10 @@ export const ACTION_MAP = {
     });
   },
   OPEN_NODE: ({ navigation, relatedNode }) => {
-    navigation.navigate('NodeSingle', {
-      nodeId: relatedNode.id,
+    // TODO deprecate
+    console.warn('OPEN_NODE action deprecated, use READ_CONTENT');
+    navigation.navigate('ContentSingle', {
+      itemId: relatedNode.id,
       transitionKey: 2,
     });
   },
@@ -85,12 +87,7 @@ class FeaturesFeedConnected extends PureComponent {
   };
 
   render() {
-    const {
-      Component,
-      onPressActionItem,
-      featureFeedId,
-      ...props
-    } = this.props;
+    const { onPressActionItem, featureFeedId, ...props } = this.props;
     // Early return if we don't have a featureFeedId.
     if (!featureFeedId) {
       return (
@@ -130,11 +127,6 @@ class FeaturesFeedConnected extends PureComponent {
 }
 
 FeaturesFeedConnected.propTypes = {
-  Component: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.func,
-    PropTypes.object, // type check for React fragments
-  ]),
   featureFeedId: PropTypes.string,
   onPressActionItem: PropTypes.func,
   additionalFeatures: PropTypes.shape({}),

@@ -3,6 +3,105 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.11.0](https://github.com/apollosproject/apollos-apps/compare/v2.10.0...v2.11.0) (2021-04-12)
+
+**Note:** Version bump only for package @apollosproject/data-connector-rock
+
+
+
+
+
+## [2.10.0](https://github.com/apollosproject/apollos-apps/compare/v2.9.0...v2.10.0) (2021-04-06)
+
+
+### Bug Fixes
+
+* add safety check to prayer requestor ([#1857](https://github.com/apollosproject/apollos-apps/issues/1857)) ([56cf8da](https://github.com/apollosproject/apollos-apps/commit/56cf8da9c0a7bf93283669c85d9156a606a282f6))
+
+
+
+## [2.9.0](https://github.com/apollosproject/apollos-apps/compare/v2.8.0...v2.9.0) (2021-03-30)
+
+
+### Bug Fixes
+
+* allow adding images to Rock CMS ([#1834](https://github.com/apollosproject/apollos-apps/issues/1834)) ([80a4fb8](https://github.com/apollosproject/apollos-apps/commit/80a4fb8ebcf8678241ae85cce6cb67cffcc6a2a6))
+
+
+
+## [2.8.0](https://github.com/apollosproject/apollos-apps/compare/v2.7.0...v2.8.0) (2021-03-29)
+
+**Note:** Version bump only for package @apollosproject/data-connector-rock
+
+
+
+
+
+## [2.7.0](https://github.com/apollosproject/apollos-apps/compare/v2.6.0...v2.7.0) (2021-03-25)
+
+**Note:** Version bump only for package @apollosproject/data-connector-rock
+
+
+
+
+
+## [2.6.0](https://github.com/apollosproject/apollos-apps/compare/v2.5.0...v2.6.0) (2021-03-24)
+
+**Note:** Version bump only for package @apollosproject/data-connector-rock
+
+
+
+
+
+## [2.5.0](https://github.com/apollosproject/apollos-apps/compare/v2.4.0...v2.5.0) (2021-03-22)
+
+
+### Bug Fixes
+
+* correctly pull person ID ([#1817](https://github.com/apollosproject/apollos-apps/issues/1817)) ([14ba52d](https://github.com/apollosproject/apollos-apps/commit/14ba52d28011d2ba579dab65e6a102b7e85e8cbd))
+
+
+
+## [2.4.0](https://github.com/apollosproject/apollos-apps/compare/v2.3.1...v2.4.0) (2021-03-18)
+
+**Note:** Version bump only for package @apollosproject/data-connector-rock
+
+
+
+
+
+### [2.3.1](https://github.com/apollosproject/apollos-apps/compare/v2.3.0...v2.3.1) (2021-03-11)
+
+**Note:** Version bump only for package @apollosproject/data-connector-rock
+
+
+
+
+
+## [2.3.0](https://github.com/apollosproject/apollos-apps/compare/v2.2.0...v2.3.0) (2021-03-11)
+
+
+### Features
+
+* add button link feature to content ([#1779](https://github.com/apollosproject/apollos-apps/issues/1779)) ([c254c5b](https://github.com/apollosproject/apollos-apps/commit/c254c5bcdac03c840926da53b19eeba9ac11e9a5))
+* add empty card to progress algorithm ([#1788](https://github.com/apollosproject/apollos-apps/issues/1788)) ([71fcf37](https://github.com/apollosproject/apollos-apps/commit/71fcf373bdaf06af9d3fc956d2b95f9e5f4506a2))
+
+
+
+## [2.2.0](https://github.com/apollosproject/apollos-apps/compare/v2.1.1...v2.2.0) (2021-03-04)
+
+
+### Features
+
+* Postgres Person datasource ([#1768](https://github.com/apollosproject/apollos-apps/issues/1768)) ([f87a584](https://github.com/apollosproject/apollos-apps/commit/f87a58443986ffd2b8dd4c69f2537200f6c81804))
+
+
+### Bug Fixes
+
+* return empty string with null HTML ([#1769](https://github.com/apollosproject/apollos-apps/issues/1769)) ([43679a7](https://github.com/apollosproject/apollos-apps/commit/43679a7dfe00b85bf687960e0b13db77c7a767d9))
+
+
+
 ### [2.1.1](https://github.com/apollosproject/apollos-apps/compare/v2.1.0...v2.1.1) (2021-02-26)
 
 **Note:** Version bump only for package @apollosproject/data-connector-rock

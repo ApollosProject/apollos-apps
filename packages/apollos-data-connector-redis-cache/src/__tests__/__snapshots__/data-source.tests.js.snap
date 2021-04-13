@@ -105,6 +105,7 @@ Cache {
     "retryAttempts": 0,
     "scriptsSet": Object {},
     "status": "connecting",
+    Symbol(kCapture): false,
   },
   "safely": [Function],
 }
@@ -161,14 +162,6 @@ exports[`Redis Cache safely handle thrown errors in get 1`] = `null`;
 exports[`Redis Cache safely handle thrown errors in set 1`] = `null`;
 
 exports[`Redis Cache safely handles no redis instance 1`] = `null`;
-
-exports[`Redis Cache safely handles no redis instance 2`] = `
-Array [
-  Array [
-    "Redis is not running. Cache dataSource methods will only return null",
-  ],
-]
-`;
 
 exports[`Redis Cache safely swallows errors when decrementing 1`] = `null`;
 

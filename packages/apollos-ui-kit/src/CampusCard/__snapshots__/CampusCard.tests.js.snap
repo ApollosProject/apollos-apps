@@ -1,239 +1,255 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CampusCard should render 1`] = `
-<View
-  category=""
-  inHorizontalList={true}
-  isLoading={false}
-  style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "margin": 8,
-      "marginBottom": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
-    }
-  }
->
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    category=""
+    inHorizontalList={true}
+    isLoading={false}
     style={
       Object {
+        "backgroundColor": "#FFFFFF",
         "borderRadius": 16,
-        "overflow": "hidden",
+        "margin": 8,
+        "marginBottom": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
       }
     }
   >
     <View
       style={
         Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "flexWrap": "nowrap",
-          "height": 96,
-          "justifyContent": "space-between",
+          "borderRadius": 16,
+          "overflow": "hidden",
         }
       }
     >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://www.placecage.com/c/250/250",
-              "url": "https://www.placecage.com/c/250/250",
-            },
-          ]
-        }
-        style={
-          Object {
-            "aspectRatio": 1,
-            "backgroundColor": "#A5A5A5",
-            "height": "100%",
-            "resizeMode": "cover",
-          }
-        }
-      />
       <View
         style={
           Object {
-            "flex": 1,
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
+            "alignItems": "center",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "height": 96,
+            "justifyContent": "space-between",
           }
         }
       >
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://www.placecage.com/c/250/250",
+                "url": "https://www.placecage.com/c/250/250",
+              },
+            ]
+          }
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "height": "100%",
+              "resizeMode": "cover",
+            }
+          }
+        />
         <View
           style={
             Object {
-              "alignItems": "stretch",
-              "flexDirection": "row",
-              "flexWrap": "nowrap",
-              "height": 21,
-              "justifyContent": "space-between",
+              "flex": 1,
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
-          <Text
-            style={
-              Object {
-                "color": "#303030",
-                "fontFamily": "InterUI-Medium",
-                "fontSize": 14,
-                "lineHeight": 21,
-              }
-            }
-          >
-            Cameron Poe
-          </Text>
           <View
             style={
               Object {
-                "flex": 1,
+                "alignItems": "stretch",
                 "flexDirection": "row",
-                "justifyContent": "flex-end",
+                "flexWrap": "nowrap",
+                "height": 21,
+                "justifyContent": "space-between",
               }
             }
           >
             <Text
               style={
                 Object {
-                  "color": "#505050",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
                 }
               }
             >
-              2038
-              mi
+              Cameron Poe
             </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "flex-end",
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#505050",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 12,
+                    "lineHeight": 18,
+                  }
+                }
+              >
+                2038
+                mi
+              </Text>
+            </View>
           </View>
-        </View>
-        <Text
-          style={
-            Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "lineHeight": 18,
+          <Text
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 12,
+                "lineHeight": 18,
+              }
             }
-          }
-        >
-          "Why couldn't you just put the Bunny back in the box?"
-        </Text>
+          >
+            "Why couldn't you just put the Bunny back in the box?"
+          </Text>
+        </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`CampusCard should render a loading 1`] = `
-<View
-  category=""
-  inHorizontalList={true}
-  isLoading={true}
-  style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "margin": 8,
-      "marginBottom": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
-    }
-  }
->
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    category=""
+    inHorizontalList={true}
+    isLoading={true}
     style={
       Object {
+        "backgroundColor": "#FFFFFF",
         "borderRadius": 16,
-        "overflow": "hidden",
+        "margin": 8,
+        "marginBottom": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
       }
     }
   >
     <View
       style={
         Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "flexWrap": "nowrap",
-          "height": 96,
-          "justifyContent": "space-between",
+          "borderRadius": 16,
+          "overflow": "hidden",
         }
       }
     >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://www.placecage.com/c/250/250",
-              "url": "https://www.placecage.com/c/250/250",
-            },
-          ]
-        }
-        style={
-          Object {
-            "aspectRatio": 1,
-            "backgroundColor": "#A5A5A5",
-            "height": "100%",
-            "resizeMode": "cover",
-          }
-        }
-      />
       <View
         style={
           Object {
-            "flex": 1,
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
+            "alignItems": "center",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "height": 96,
+            "justifyContent": "space-between",
           }
         }
       >
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://www.placecage.com/c/250/250",
+                "url": "https://www.placecage.com/c/250/250",
+              },
+            ]
+          }
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "height": "100%",
+              "resizeMode": "cover",
+            }
+          }
+        />
         <View
           style={
             Object {
-              "alignItems": "stretch",
-              "flexDirection": "row",
-              "flexWrap": "nowrap",
-              "height": 21,
-              "justifyContent": "space-between",
+              "flex": 1,
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
           <View
             style={
               Object {
-                "alignSelf": "stretch",
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 14,
-                "marginVertical": 3.5,
-                "width": "60%",
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "flex": 1,
+                "alignItems": "stretch",
                 "flexDirection": "row",
-                "justifyContent": "flex-end",
+                "flexWrap": "nowrap",
+                "height": 21,
+                "justifyContent": "space-between",
               }
             }
           >
@@ -243,745 +259,900 @@ exports[`CampusCard should render a loading 1`] = `
                   "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "height": 12,
-                  "marginVertical": 3,
-                  "width": "50%",
+                  "height": 14,
+                  "marginVertical": 3.5,
+                  "width": "60%",
                 }
               }
             />
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "flex-end",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignSelf": "stretch",
+                    "backgroundColor": "#A5A5A5",
+                    "borderRadius": 16,
+                    "height": 12,
+                    "marginVertical": 3,
+                    "width": "50%",
+                  }
+                }
+              />
+            </View>
           </View>
-        </View>
-        <View
-          style={
-            Object {
-              "alignSelf": "stretch",
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "height": 12,
-              "marginVertical": 3,
-              "width": "50%",
+          <View
+            style={
+              Object {
+                "alignSelf": "stretch",
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 16,
+                "height": 12,
+                "marginVertical": 3,
+                "width": "50%",
+              }
             }
-          }
-        />
+          />
+        </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`CampusCard should render with a title and description 1`] = `
-<View
-  inHorizontalList={true}
-  isLoading={false}
-  style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "margin": 8,
-      "marginBottom": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
-    }
-  }
->
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    inHorizontalList={true}
+    isLoading={false}
     style={
       Object {
+        "backgroundColor": "#FFFFFF",
         "borderRadius": 16,
-        "overflow": "hidden",
+        "margin": 8,
+        "marginBottom": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
       }
     }
   >
     <View
       style={
         Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "flexWrap": "nowrap",
-          "height": 96,
-          "justifyContent": "space-between",
+          "borderRadius": 16,
+          "overflow": "hidden",
         }
       }
     >
       <View
         style={
           Object {
-            "flex": 1,
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
+            "alignItems": "center",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "height": 96,
+            "justifyContent": "space-between",
           }
         }
       >
         <View
           style={
             Object {
-              "alignItems": "stretch",
-              "flexDirection": "row",
-              "flexWrap": "nowrap",
-              "height": 21,
-              "justifyContent": "space-between",
+              "flex": 1,
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
-          <Text
+          <View
             style={
               Object {
-                "color": "#303030",
-                "fontFamily": "InterUI-Medium",
-                "fontSize": 14,
-                "lineHeight": 21,
+                "alignItems": "stretch",
+                "flexDirection": "row",
+                "flexWrap": "nowrap",
+                "height": 21,
+                "justifyContent": "space-between",
               }
             }
           >
-            Damon Macready
+            <Text
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
+                }
+              }
+            >
+              Damon Macready
+            </Text>
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 12,
+                "lineHeight": 18,
+              }
+            }
+          >
+            "Oh, child..."
           </Text>
         </View>
-        <Text
-          style={
-            Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "lineHeight": 18,
-            }
-          }
-        >
-          "Oh, child..."
-        </Text>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`CampusCard should render with a title and distance 1`] = `
-<View
-  inHorizontalList={true}
-  isLoading={false}
-  style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "margin": 8,
-      "marginBottom": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
-    }
-  }
->
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    inHorizontalList={true}
+    isLoading={false}
     style={
       Object {
+        "backgroundColor": "#FFFFFF",
         "borderRadius": 16,
-        "overflow": "hidden",
+        "margin": 8,
+        "marginBottom": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
       }
     }
   >
     <View
       style={
         Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "flexWrap": "nowrap",
-          "height": 96,
-          "justifyContent": "space-between",
+          "borderRadius": 16,
+          "overflow": "hidden",
         }
       }
     >
       <View
         style={
           Object {
-            "flex": 1,
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
+            "alignItems": "center",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "height": 96,
+            "justifyContent": "space-between",
           }
         }
       >
         <View
           style={
             Object {
-              "alignItems": "stretch",
-              "flexDirection": "row",
-              "flexWrap": "nowrap",
-              "height": 21,
-              "justifyContent": "space-between",
+              "flex": 1,
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
-          <Text
-            style={
-              Object {
-                "color": "#303030",
-                "fontFamily": "InterUI-Medium",
-                "fontSize": 14,
-                "lineHeight": 21,
-              }
-            }
-          >
-            Memphis Raines
-          </Text>
           <View
             style={
               Object {
-                "flex": 1,
+                "alignItems": "stretch",
                 "flexDirection": "row",
-                "justifyContent": "flex-end",
+                "flexWrap": "nowrap",
+                "height": 21,
+                "justifyContent": "space-between",
               }
             }
           >
             <Text
               style={
                 Object {
-                  "color": "#505050",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
                 }
               }
             >
-              2038
-              mi
+              Memphis Raines
             </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "flex-end",
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#505050",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 12,
+                    "lineHeight": 18,
+                  }
+                }
+              >
+                2038
+                mi
+              </Text>
+            </View>
           </View>
         </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`CampusCard should render with a title and image 1`] = `
-<View
-  inHorizontalList={true}
-  isLoading={false}
-  style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "margin": 8,
-      "marginBottom": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
-    }
-  }
->
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    inHorizontalList={true}
+    isLoading={false}
     style={
       Object {
+        "backgroundColor": "#FFFFFF",
         "borderRadius": 16,
-        "overflow": "hidden",
+        "margin": 8,
+        "marginBottom": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
       }
     }
   >
     <View
       style={
         Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "flexWrap": "nowrap",
-          "height": 96,
-          "justifyContent": "space-between",
+          "borderRadius": 16,
+          "overflow": "hidden",
         }
       }
     >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://www.placecage.com/c/250/250",
-              "url": "https://www.placecage.com/c/250/250",
-            },
-          ]
-        }
-        style={
-          Object {
-            "aspectRatio": 1,
-            "backgroundColor": "#A5A5A5",
-            "height": "100%",
-            "resizeMode": "cover",
-          }
-        }
-      />
       <View
         style={
           Object {
-            "flex": 1,
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
+            "alignItems": "center",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "height": 96,
+            "justifyContent": "space-between",
           }
         }
       >
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://www.placecage.com/c/250/250",
+                "url": "https://www.placecage.com/c/250/250",
+              },
+            ]
+          }
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "height": "100%",
+              "resizeMode": "cover",
+            }
+          }
+        />
         <View
           style={
             Object {
-              "alignItems": "stretch",
-              "flexDirection": "row",
-              "flexWrap": "nowrap",
-              "height": 21,
-              "justifyContent": "space-between",
+              "flex": 1,
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
-          <Text
+          <View
             style={
               Object {
-                "color": "#303030",
-                "fontFamily": "InterUI-Medium",
-                "fontSize": 14,
-                "lineHeight": 21,
+                "alignItems": "stretch",
+                "flexDirection": "row",
+                "flexWrap": "nowrap",
+                "height": 21,
+                "justifyContent": "space-between",
               }
             }
           >
-            Castor Troy
-          </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
+                }
+              }
+            >
+              Castor Troy
+            </Text>
+          </View>
         </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`CampusCard should render with just a title 1`] = `
-<View
-  inHorizontalList={true}
-  isLoading={false}
-  style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "margin": 8,
-      "marginBottom": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
-    }
-  }
->
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    inHorizontalList={true}
+    isLoading={false}
     style={
       Object {
+        "backgroundColor": "#FFFFFF",
         "borderRadius": 16,
-        "overflow": "hidden",
+        "margin": 8,
+        "marginBottom": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
       }
     }
   >
     <View
       style={
         Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "flexWrap": "nowrap",
-          "height": 96,
-          "justifyContent": "space-between",
+          "borderRadius": 16,
+          "overflow": "hidden",
         }
       }
     >
       <View
         style={
           Object {
-            "flex": 1,
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
+            "alignItems": "center",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "height": 96,
+            "justifyContent": "space-between",
           }
         }
       >
         <View
           style={
             Object {
-              "alignItems": "stretch",
-              "flexDirection": "row",
-              "flexWrap": "nowrap",
-              "height": 21,
-              "justifyContent": "space-between",
+              "flex": 1,
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
-          <Text
+          <View
             style={
               Object {
-                "color": "#303030",
-                "fontFamily": "InterUI-Medium",
-                "fontSize": 14,
-                "lineHeight": 21,
+                "alignItems": "stretch",
+                "flexDirection": "row",
+                "flexWrap": "nowrap",
+                "height": 21,
+                "justifyContent": "space-between",
               }
             }
           >
-            Edward Malus
-          </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
+                }
+              }
+            >
+              Edward Malus
+            </Text>
+          </View>
         </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`CampusCard should render without a description 1`] = `
-<View
-  category=""
-  inHorizontalList={true}
-  isLoading={false}
-  style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "margin": 8,
-      "marginBottom": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
-    }
-  }
->
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    category=""
+    inHorizontalList={true}
+    isLoading={false}
     style={
       Object {
+        "backgroundColor": "#FFFFFF",
         "borderRadius": 16,
-        "overflow": "hidden",
+        "margin": 8,
+        "marginBottom": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
       }
     }
   >
     <View
       style={
         Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "flexWrap": "nowrap",
-          "height": 96,
-          "justifyContent": "space-between",
+          "borderRadius": 16,
+          "overflow": "hidden",
         }
       }
     >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://www.placecage.com/c/250/250",
-              "url": "https://www.placecage.com/c/250/250",
-            },
-          ]
-        }
-        style={
-          Object {
-            "aspectRatio": 1,
-            "backgroundColor": "#A5A5A5",
-            "height": "100%",
-            "resizeMode": "cover",
-          }
-        }
-      />
       <View
         style={
           Object {
-            "flex": 1,
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
+            "alignItems": "center",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "height": 96,
+            "justifyContent": "space-between",
           }
         }
       >
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://www.placecage.com/c/250/250",
+                "url": "https://www.placecage.com/c/250/250",
+              },
+            ]
+          }
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "height": "100%",
+              "resizeMode": "cover",
+            }
+          }
+        />
         <View
           style={
             Object {
-              "alignItems": "stretch",
-              "flexDirection": "row",
-              "flexWrap": "nowrap",
-              "height": 21,
-              "justifyContent": "space-between",
+              "flex": 1,
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
-          <Text
-            style={
-              Object {
-                "color": "#303030",
-                "fontFamily": "InterUI-Medium",
-                "fontSize": 14,
-                "lineHeight": 21,
-              }
-            }
-          >
-            Cris Johnson
-          </Text>
           <View
             style={
               Object {
-                "flex": 1,
+                "alignItems": "stretch",
                 "flexDirection": "row",
-                "justifyContent": "flex-end",
+                "flexWrap": "nowrap",
+                "height": 21,
+                "justifyContent": "space-between",
               }
             }
           >
             <Text
               style={
                 Object {
-                  "color": "#505050",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
                 }
               }
             >
-              2038
-              mi
+              Cris Johnson
             </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "flex-end",
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#505050",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 12,
+                    "lineHeight": 18,
+                  }
+                }
+              >
+                2038
+                mi
+              </Text>
+            </View>
           </View>
         </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`CampusCard should render without a distance 1`] = `
-<View
-  category=""
-  inHorizontalList={true}
-  isLoading={false}
-  style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "margin": 8,
-      "marginBottom": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
-    }
-  }
->
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    category=""
+    inHorizontalList={true}
+    isLoading={false}
     style={
       Object {
+        "backgroundColor": "#FFFFFF",
         "borderRadius": 16,
-        "overflow": "hidden",
+        "margin": 8,
+        "marginBottom": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
       }
     }
   >
     <View
       style={
         Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "flexWrap": "nowrap",
-          "height": 96,
-          "justifyContent": "space-between",
-        }
-      }
-    >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://www.placecage.com/c/250/250",
-              "url": "https://www.placecage.com/c/250/250",
-            },
-          ]
-        }
-        style={
-          Object {
-            "aspectRatio": 1,
-            "backgroundColor": "#A5A5A5",
-            "height": "100%",
-            "resizeMode": "cover",
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "flex": 1,
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "alignItems": "stretch",
-              "flexDirection": "row",
-              "flexWrap": "nowrap",
-              "height": 21,
-              "justifyContent": "space-between",
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#303030",
-                "fontFamily": "InterUI-Medium",
-                "fontSize": 14,
-                "lineHeight": 21,
-              }
-            }
-          >
-            Johnny Blaze
-          </Text>
-        </View>
-        <Text
-          style={
-            Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "lineHeight": 18,
-            }
-          }
-        >
-          "He may have my soul but he doesn't have my spirit."
-        </Text>
-      </View>
-    </View>
-  </View>
-</View>
-`;
-
-exports[`CampusCard should render without an image 1`] = `
-<View
-  category=""
-  inHorizontalList={true}
-  isLoading={false}
-  style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "margin": 8,
-      "marginBottom": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
-    }
-  }
->
-  <View
-    style={
-      Object {
-        "borderRadius": 16,
-        "overflow": "hidden",
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "flexWrap": "nowrap",
-          "height": 96,
-          "justifyContent": "space-between",
+          "borderRadius": 16,
+          "overflow": "hidden",
         }
       }
     >
       <View
         style={
           Object {
-            "flex": 1,
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
+            "alignItems": "center",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "height": 96,
+            "justifyContent": "space-between",
           }
         }
       >
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://www.placecage.com/c/250/250",
+                "url": "https://www.placecage.com/c/250/250",
+              },
+            ]
+          }
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "height": "100%",
+              "resizeMode": "cover",
+            }
+          }
+        />
         <View
           style={
             Object {
-              "alignItems": "stretch",
-              "flexDirection": "row",
-              "flexWrap": "nowrap",
-              "height": 21,
-              "justifyContent": "space-between",
+              "flex": 1,
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
-          <Text
-            style={
-              Object {
-                "color": "#303030",
-                "fontFamily": "InterUI-Medium",
-                "fontSize": 14,
-                "lineHeight": 21,
-              }
-            }
-          >
-            Benjamin Franklin Gates
-          </Text>
           <View
             style={
               Object {
-                "flex": 1,
+                "alignItems": "stretch",
                 "flexDirection": "row",
-                "justifyContent": "flex-end",
+                "flexWrap": "nowrap",
+                "height": 21,
+                "justifyContent": "space-between",
               }
             }
           >
             <Text
               style={
                 Object {
-                  "color": "#505050",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
                 }
               }
             >
-              2038
-              mi
+              Johnny Blaze
             </Text>
           </View>
+          <Text
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 12,
+                "lineHeight": 18,
+              }
+            }
+          >
+            "He may have my soul but he doesn't have my spirit."
+          </Text>
         </View>
-        <Text
+      </View>
+    </View>
+  </View>,
+]
+`;
+
+exports[`CampusCard should render without an image 1`] = `
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    category=""
+    inHorizontalList={true}
+    isLoading={false}
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 16,
+        "margin": 8,
+        "marginBottom": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 16,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "flexWrap": "nowrap",
+            "height": 96,
+            "justifyContent": "space-between",
+          }
+        }
+      >
+        <View
           style={
             Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "lineHeight": 18,
+              "flex": 1,
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
-          "You hungry?"
-        </Text>
+          <View
+            style={
+              Object {
+                "alignItems": "stretch",
+                "flexDirection": "row",
+                "flexWrap": "nowrap",
+                "height": 21,
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
+                }
+              }
+            >
+              Benjamin Franklin Gates
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "flex-end",
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#505050",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 12,
+                    "lineHeight": 18,
+                  }
+                }
+              >
+                2038
+                mi
+              </Text>
+            </View>
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 12,
+                "lineHeight": 18,
+              }
+            }
+          >
+            "You hungry?"
+          </Text>
+        </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;

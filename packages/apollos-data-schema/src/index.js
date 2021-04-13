@@ -188,6 +188,25 @@ export const peopleSchema = gql`
     updateProfileFields(input: [UpdateProfileInput]!): Person
     uploadProfileImage(file: Upload!, size: Int!): Person
   }
+
+  type SearchPeopleResultsConnection {
+    edges: [SearchPeopleResult]
+    pageInfo: PaginationInfo
+  }
+
+  type SearchPeopleResult {
+    node: Person
+    cursor: String
+  }
+
+  extend type Query {
+    suggestedFollows: [Person] @cacheControl(maxAge: 0)
+    searchPeople(
+      name: String
+      first: Int
+      after: String
+    ): SearchPeopleResultsConnection
+  }
 `;
 
 export const deviceSchema = gql`
@@ -287,6 +306,7 @@ export const scriptureSchema = gql`
 
     html: String
     reference: String
+    book: String
     copyright: String
     version: String
   }
@@ -948,6 +968,13 @@ export const featuresSchema = gql`
     url: String
   }
 
+  type ButtonFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    action: FeatureAction
+  }
+
   type FeatureFeed implements Node {
     id: ID!
     features: [Feature]
@@ -973,12 +1000,47 @@ export const featuresSchema = gql`
     featureFeed: FeatureFeed
   }
 
+  extend type UniversalContentItem implements FeaturesNode {
+    features: [Feature] @deprecated(reason: "Use featureFeed")
+    featureFeed: FeatureFeed
+  }
+
   extend type Query {
     userFeedFeatures: [Feature]
       @cacheControl(maxAge: 0)
       @deprecated(reason: "Use homeFeedFeatures or discoverFeedFeatures")
     homeFeedFeatures(campusId: ID): FeatureFeed @cacheControl(maxAge: 0)
     discoverFeedFeatures: FeatureFeed @cacheControl(maxAge: 0)
+  }
+`;
+
+export const followSchema = gql`
+  extend type Mutation {
+    requestFollow(followedPersonId: ID!): Follow
+
+    ignoreFollowRequest(requestPersonId: ID!): Follow
+
+    acceptFollowRequest(requestPersonId: ID!): Follow
+  }
+
+  extend type Query {
+    followRequests: [Person] @cacheControl(maxAge: 0)
+  }
+
+  enum FollowState {
+    REQUESTED
+    DECLINED
+    ACCEPTED
+  }
+
+  type Follow {
+    id: ID
+    state: FollowState
+  }
+
+  extend type Person {
+    currentUserFollowing: Follow @cacheControl(maxAge: 0)
+    followingCurrentUser: Follow @cacheControl(maxAge: 0)
   }
 `;
 
@@ -990,7 +1052,19 @@ export const commentSchema = gql`
       visibility: CommentVisibility
     ): Comment
 
+    updateComment(
+      commentId: ID!
+      text: String
+      visibility: CommentVisibility
+    ): Comment
+
+    deleteComment(commentId: ID!): Boolean
+
     flagComment(commentId: ID!): Comment
+
+    likeComment(commentId: ID!): Comment
+
+    unlikeComment(commentId: ID!): Comment
   }
 
   type CommentListFeature implements Feature & Node {
@@ -1015,12 +1089,14 @@ export const commentSchema = gql`
     FOLLOWERS
   }
 
-  type Comment implements Node {
+  type Comment implements Node & LikableNode {
     id: ID!
 
     person: Person
     text: String
     visibility: CommentVisibility
+    isLiked: Boolean @cacheControl(maxAge: 0)
+    likedCount: Int
   }
 `;
 

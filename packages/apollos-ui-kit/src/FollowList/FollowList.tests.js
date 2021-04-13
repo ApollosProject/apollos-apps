@@ -12,16 +12,8 @@ const followerRequests = [
     request: true,
     firstName: 'Joshua',
     lastName: 'Imel',
-    parentChannel: {
-      id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
-      name: 'NewSpring - Articles',
-    },
     image: {
-      sources: [
-        {
-          uri: 'https://picsum.photos/600/400?random',
-        },
-      ],
+      uri: 'https://picsum.photos/600/400?random',
     },
   },
   {
@@ -29,16 +21,8 @@ const followerRequests = [
     request: true,
     firstName: 'Joe',
     lastName: 'Schmoe',
-    parentChannel: {
-      id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
-      name: 'NewSpring - Articles',
-    },
     image: {
-      sources: [
-        {
-          uri: 'https://picsum.photos/600/400?random',
-        },
-      ],
+      uri: 'https://picsum.photos/600/400?random',
     },
   },
 ];
@@ -48,16 +32,8 @@ const followerSuggestions = [
     id: 'fakeId3',
     firstName: 'John',
     lastName: 'Doe',
-    parentChannel: {
-      id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
-      name: 'NewSpring - Articles',
-    },
     image: {
-      sources: [
-        {
-          uri: 'https://picsum.photos/600/400?random',
-        },
-      ],
+      uri: 'https://picsum.photos/600/400?random',
     },
   },
   {
@@ -68,13 +44,7 @@ const followerSuggestions = [
       id: 'ContentChannel:be35f49307d7297989d3514be788ef2d',
       name: 'NewSpring - Articles',
     },
-    image: {
-      sources: [
-        {
-          uri: 'https://picsum.photos/600/400?random',
-        },
-      ],
-    },
+    uri: 'https://picsum.photos/600/400?random',
   },
 ];
 
@@ -142,6 +112,14 @@ describe('FollowList', () => {
     const tree = renderer.create(
       <Providers>
         <FollowList isLoading followers={followerRequests} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should not render without followers', () => {
+    const tree = renderer.create(
+      <Providers>
+        <FollowList isLoading={false} followers={[]} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

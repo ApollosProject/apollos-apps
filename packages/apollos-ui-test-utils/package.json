@@ -1,8 +1,14 @@
 {
   "name": "@apollosproject/ui-test-utils",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "2.1.1",
+  "engines": {
+    "node": ">=12"
+  },
+  "version": "2.11.0",
   "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"No tests here!\""
+  },
   "peerDependencies": {
     "prop-types": "*",
     "react": "*",
@@ -12,8 +18,8 @@
   },
   "devDependencies": {
     "@react-navigation/compat": "^5.1.28",
-    "@react-navigation/native": "^5.6.1",
-    "@react-navigation/stack": "^5.6.2"
+    "@react-navigation/native": "^5.9.3",
+    "@react-navigation/stack": "^5.14.3"
   },
   "license": "SEE LICENSE IN LICENSE.md",
   "publishConfig": {

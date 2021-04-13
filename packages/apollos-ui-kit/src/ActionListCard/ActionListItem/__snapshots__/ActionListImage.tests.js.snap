@@ -1,110 +1,186 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ActionListImage should not render with a date if it has an image 1`] = `
-<Image
-  fadeDuration={250}
-  onLoad={[Function]}
-  source={
-    Array [
-      Object {
-        "cache": "force-cache",
-        "uri": "https://picsum.photos/600/400/?random",
-        "url": "https://picsum.photos/600/400/?random",
-      },
-    ]
-  }
-  style={
-    Object {
-      "backgroundColor": "#A5A5A5",
-      "borderRadius": 16,
-      "height": 64,
-      "marginRight": 16,
-      "width": 64,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-/>
+  />,
+  <Image
+    fadeDuration={250}
+    onLoad={[Function]}
+    source={
+      Array [
+        Object {
+          "cache": "force-cache",
+          "uri": "https://picsum.photos/600/400/?random",
+          "url": "https://picsum.photos/600/400/?random",
+        },
+      ]
+    }
+    style={
+      Object {
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 16,
+        "height": 64,
+        "marginRight": 16,
+        "width": 64,
+      }
+    }
+  />,
+]
 `;
 
 exports[`ActionListImage should render 1`] = `
-<Image
-  fadeDuration={250}
-  onLoad={[Function]}
-  source={
-    Array [
-      Object {
-        "cache": "force-cache",
-        "uri": "https://picsum.photos/600/400/?random",
-        "url": "https://picsum.photos/600/400/?random",
-      },
-    ]
-  }
-  style={
-    Object {
-      "backgroundColor": "#A5A5A5",
-      "borderRadius": 16,
-      "height": 64,
-      "marginRight": 16,
-      "width": 64,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-/>
+  />,
+  <Image
+    fadeDuration={250}
+    onLoad={[Function]}
+    source={
+      Array [
+        Object {
+          "cache": "force-cache",
+          "uri": "https://picsum.photos/600/400/?random",
+          "url": "https://picsum.photos/600/400/?random",
+        },
+      ]
+    }
+    style={
+      Object {
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 16,
+        "height": 64,
+        "marginRight": 16,
+        "width": 64,
+      }
+    }
+  />,
+]
 `;
 
 exports[`ActionListImage should render a loading state 1`] = `
-<Image
-  fadeDuration={250}
-  onLoad={[Function]}
-  source={Array []}
-  style={
-    Object {
-      "backgroundColor": "#A5A5A5",
-      "borderRadius": 16,
-      "height": 64,
-      "marginRight": 16,
-      "width": 64,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-/>
+  />,
+  <Image
+    fadeDuration={250}
+    onLoad={[Function]}
+    source={Array []}
+    style={
+      Object {
+        "backgroundColor": "#A5A5A5",
+        "borderRadius": 16,
+        "height": 64,
+        "marginRight": 16,
+        "width": 64,
+      }
+    }
+  />,
+]
 `;
 
 exports[`ActionListImage should render with a date 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "#F4F4F5",
-      "borderRadius": 16,
-      "height": 64,
-      "justifyContent": "center",
-      "marginRight": 16,
-      "width": 64,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  <Text
+  />,
+  <View
     style={
       Object {
-        "color": "#505050",
-        "fontFamily": "InterUI-Black",
-        "fontSize": 24,
-        "lineHeight": 27.6,
-        "marginBottom": -8,
+        "alignItems": "center",
+        "backgroundColor": "#F4F4F5",
+        "borderRadius": 16,
+        "height": 64,
+        "justifyContent": "center",
+        "marginRight": 16,
+        "width": 64,
       }
     }
   >
-    12
-  </Text>
-  <Text
-    style={
-      Object {
-        "color": "#505050",
-        "fontFamily": "InterUI-Bold",
-        "fontSize": 12,
-        "lineHeight": 18,
+    <Text
+      style={
+        Object {
+          "color": "#505050",
+          "fontFamily": "InterUI-Black",
+          "fontSize": 24,
+          "lineHeight": 27.6,
+          "marginBottom": -8,
+        }
       }
-    }
-  >
-    Nov
-  </Text>
-</View>
+    >
+      12
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#505050",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
+        }
+      }
+    >
+      Nov
+    </Text>
+  </View>,
+]
 `;

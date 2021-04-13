@@ -4,13 +4,22 @@ const resolvers = {
   Mutation: {
     addComment: (root, args, { dataSources: { Comment } }) =>
       Comment.addComment(args),
+    updateComment: (root, args, { dataSources: { Comment } }) =>
+      Comment.updateComment(args),
+    deleteComment: (root, args, { dataSources: { Comment } }) =>
+      Comment.deleteComment(args),
     flagComment: (root, args, { dataSources: { UserFlag } }) =>
       UserFlag.flagComment(args),
+    likeComment: (root, args, { dataSources: { UserLike } }) =>
+      UserLike.updateLikeComment({ ...args, operation: 'Like' }),
+    unlikeComment: (root, args, { dataSources: { UserLike } }) =>
+      UserLike.updateLikeComment({ ...args, operation: 'Unlike' }),
   },
   Comment: {
-    person: (root, args, { dataSources: { Comment } }) =>
-      Comment.getPerson(root),
+    person: (root) => root.person || root.getPerson(),
     id: ({ apollosId }) => apollosId,
+    isLiked: (root, args, { dataSources: { UserLike } }) =>
+      UserLike.userLikedNode({ ...root, nodeId: root.apollosId }),
   },
   CommentListFeature: {
     id: ({ id }) => createGlobalId(id, 'CommentListFeature'),

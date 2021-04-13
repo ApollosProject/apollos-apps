@@ -1,19 +1,26 @@
 import { createGlobalId } from '@apollosproject/server-core';
 import { sequelize, sync } from '../../postgres/index';
-import { createModel } from '../model';
-import { createModel as createCommentModel } from '../../comments/model';
+import { createModel, setupModel } from '../model';
+import {
+  createModel as createCommentModel,
+  setupModel as setupCommentModel,
+} from '../../comments/model';
+import { createModel as createPeopleModel } from '../../people/model';
+import { createModel as createFollowModel } from '../../follows/model';
+import {
+  createModel as createLikesModel,
+  setupModel as setupLikesModel,
+} from '../../user-likes/model';
 import CommentDataSource from '../../comments/dataSource';
 import UserFlagDataSource from '../dataSource';
 
-let personId;
-
+let person1;
+let person2;
+let currentPerson;
 const context = {
   dataSources: {
-    Auth: {
-      getCurrentPerson: () => ({ id: personId }),
-    },
     Person: {
-      getFromId: () => ({ id: personId }),
+      getCurrentPersonId: () => currentPerson.id,
     },
   },
 };
@@ -23,11 +30,25 @@ describe('Apollos Postgres Comment Flags DataSource', () => {
   let commentDataSource;
 
   beforeEach(async () => {
-    personId = 1;
-
     await createCommentModel();
+    await createPeopleModel();
+    await createFollowModel();
+    await createLikesModel();
     await createModel();
+    await setupModel();
+    await setupLikesModel();
+    await setupCommentModel();
     await sync();
+
+    person1 = await sequelize.models.people.create({
+      originId: '1',
+      originType: 'rock',
+    });
+    person2 = await sequelize.models.people.create({
+      originId: '2',
+      originType: 'rock',
+    });
+    currentPerson = person1;
 
     commentDataSource = new CommentDataSource();
     commentDataSource.initialize({ context });
@@ -51,9 +72,7 @@ describe('Apollos Postgres Comment Flags DataSource', () => {
     });
 
     expect(flaggedComment.id.toString()).toBe(comment.id.toString());
-    expect(flaggedComment.apollosId).toBe(
-      createGlobalId(comment.id, 'Comment')
-    );
+    expect(flaggedComment.apollosId).toBe(`Comment:${comment.id}`);
   });
 
   it('should increment flag count on comment', async () => {
@@ -93,7 +112,7 @@ describe('Apollos Postgres Comment Flags DataSource', () => {
     expect(updatedComments[0].flagCount).toBe(1);
 
     // Have another user flag it though...
-    personId = 2;
+    currentPerson = person2;
     await userFlagDataSource.flagComment({
       commentId: comment.apollosId,
     });
@@ -119,7 +138,7 @@ describe('Apollos Postgres Comment Flags DataSource', () => {
       nodeId: flaggedComment.apollosId,
     });
 
-    const flagPerson = await userFlagDataSource.getPerson(flag);
-    expect(flagPerson).toEqual({ id: personId });
+    const flagPerson = await sequelize.models.people.findByPk(flag.personId);
+    expect(flagPerson.id).toEqual(currentPerson.id);
   });
 });

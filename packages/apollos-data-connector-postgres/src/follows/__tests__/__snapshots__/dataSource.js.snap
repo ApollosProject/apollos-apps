@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Apollos Postgres FollowRequest DataSource should send a push when creating new follow request 1`] = `
+Array [
+  Object {
+    "id": "acceptFollowRequest",
+    "text": "Confirm",
+  },
+]
+`;
+
+exports[`Apollos Postgres FollowRequest DataSource should send a push when creating new follow request 2`] = `"Jim Randy has asked to follow you."`;
+
+exports[`Apollos Postgres FollowRequest DataSource should throw an error when passing a non-uuid to getStaticSuggestedFollowsFor 1`] = `[Error: ID 1 is not a valid UUID. You are probably passing a Rock (or other) id to getStaticSuggestedFollowsFor when it expects a Postgres UUID.]`;
+
+exports[`Apollos Postgres FollowRequest DataSource should throw an error when passing a non-uuid to getStaticSuggestedFollowsFor 2`] = `[Error: ID 1 is not a valid UUID. You are probably passing a Rock (or other) id to getStaticSuggestedFollowsFor when it expects a Postgres UUID.]`;

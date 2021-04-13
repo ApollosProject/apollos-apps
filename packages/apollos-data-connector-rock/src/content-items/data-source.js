@@ -18,6 +18,10 @@ const { APP, ROCK, ROCK_MAPPINGS, ROCK_CONSTANTS } = ApollosConfig;
 export default class ContentItem extends RockApolloDataSource {
   resource = 'ContentChannelItems';
 
+  activeChannelIds =
+    ROCK_MAPPINGS.ACTIVE_CONTENT_CHANNEL_IDS ||
+    ROCK_MAPPINGS.FEED_CONTENT_CHANNEL_IDS;
+
   attributeIsImage = ({ key, attributeValues, attributes }) =>
     attributes[key].fieldTypeId === ROCK_CONSTANTS.IMAGE ||
     (key.toLowerCase().includes('image') &&
@@ -191,6 +195,26 @@ export default class ContentItem extends RockApolloDataSource {
           addPrompt: this.getAddCommentAddPrompt(attributeValues),
         }),
         Feature.createCommentListFeature({ nodeId: id, nodeType, flagLimit })
+      );
+    }
+
+    const buttonLink = attributeValues?.buttonLink?.value;
+    if (buttonLink) {
+      const buttonText = attributeValues.buttonText?.value || '';
+      features.push(
+        Feature.createButtonFeature({
+          id: attributeValues.buttonLink.id,
+          // NOTE: right now only URLs are implemented
+          // could optionally parse Rock IDs for OPEN_NODE action?
+          action: Feature.attachRelatedNodeId({
+            relatedNode: {
+              __typename: 'Url',
+              url: buttonLink,
+            },
+            action: 'OPEN_AUTHENTICATED_URL',
+            title: buttonText,
+          }),
+        })
       );
     }
 
@@ -407,11 +431,11 @@ export default class ContentItem extends RockApolloDataSource {
   // Generates feed based on persons dataview membership
   byPersonaFeed = async (first) => {
     const {
-      dataSources: { Person },
+      dataSources: { Persona },
     } = this.context;
 
     // Grabs the guids associated with all dataviews user is memeber
-    const getPersonaGuidsForUser = await Person.getPersonas({
+    const getPersonaGuidsForUser = await Persona.getPersonas({
       categoryId: ROCK_MAPPINGS.DATAVIEW_CATEGORIES.PersonaId,
     });
 
@@ -443,9 +467,7 @@ export default class ContentItem extends RockApolloDataSource {
   byActive = () =>
     this.request()
       .filterOneOf(
-        ROCK_MAPPINGS.FEED_CONTENT_CHANNEL_IDS.map(
-          (id) => `ContentChannelId eq ${id}`
-        )
+        this.activeChannelIds.map((id) => `ContentChannelId eq ${id}`)
       )
       .cache({ ttl: 60 })
       .andFilter(this.LIVE_CONTENT());
@@ -453,9 +475,7 @@ export default class ContentItem extends RockApolloDataSource {
   byDateAndActive = async ({ datetime }) =>
     this.request()
       .filterOneOf(
-        ROCK_MAPPINGS.FEED_CONTENT_CHANNEL_IDS.map(
-          (id) => `ContentChannelId eq ${id}`
-        )
+        this.activeChannelIds.map((id) => `ContentChannelId eq ${id}`)
       )
       .cache({ ttl: 60 })
       .andFilter(

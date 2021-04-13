@@ -1,109 +1,128 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The Picker Input component should render correctly 1`] = `
-<View
-  style={
-    Object {
-      "marginVertical": 16,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
+  />,
   <View
     style={
       Object {
-        "height": 38,
-        "paddingVertical": 4,
+        "marginVertical": 16,
       }
     }
   >
     <View
       style={
         Object {
-          "flexDirection": "row",
-          "justifyContent": "center",
+          "height": 38,
+          "paddingVertical": 4,
         }
       }
     >
       <View
         style={
           Object {
-            "alignItems": "center",
-            "justifyContent": "center",
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "flex": 1,
+            "flexDirection": "row",
             "justifyContent": "center",
           }
         }
       >
         <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "opacity": 1,
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "justifyContent": "center",
             }
           }
         >
-          <Text
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "backgroundColor": "transparent",
-                "color": "#505050",
-                "fontFamily": "InterUI-Bold",
-                "fontSize": 12,
-                "lineHeight": 18,
-                "paddingVertical": 4,
+                "opacity": 1,
               }
             }
           >
-            Some label text
-          </Text>
+            <Text
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#505050",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
+                  "paddingVertical": 4,
+                }
+              }
+            >
+              Some label text
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <RCTSwitch
+            accessibilityRole="switch"
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onTintColor="#17B582"
+            style={
+              Array [
+                Object {
+                  "height": 31,
+                  "width": 51,
+                },
+                Object {
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 16,
+                },
+              ]
+            }
+            thumbTintColor="#FFFFFF"
+            tintColor="#A5A5A5"
+            value={false}
+          />
         </View>
       </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "justifyContent": "center",
-          }
-        }
-      >
-        <RCTSwitch
-          accessibilityRole="switch"
-          onChange={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          onTintColor="#00676D"
-          style={
-            Array [
-              Object {
-                "height": 31,
-                "width": 51,
-              },
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-              },
-            ]
-          }
-          thumbTintColor="#FFFFFF"
-          tintColor="#A5A5A5"
-          value={false}
-        />
-      </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;

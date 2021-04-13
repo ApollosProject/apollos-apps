@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { View } from 'react-native';
 import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
 import { MockedProvider } from '@apollo/client/testing';
 import { GET_CONTENT_CARD } from '../ContentCardConnected';
@@ -108,8 +109,13 @@ describe('LikedContentFeedConnected component', () => {
         MockedProvider={MockedProvider}
         mocks={[mock, ...additionalMocks]}
       >
-        <LikedContentFeedConnected navigation={navigation} />
-      </Providers>
+        <LikedContentFeedConnected
+          ContentCardComponent={View}
+          navigation={navigation}
+        />
+      </Providers>,
+      null,
+      { renderCount: 2 }
     );
     expect(tree).toMatchSnapshot();
   });

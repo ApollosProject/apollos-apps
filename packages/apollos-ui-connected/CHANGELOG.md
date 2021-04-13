@@ -3,6 +3,129 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.11.0](https://github.com/apollosproject/apollos-apps/compare/v2.10.0...v2.11.0) (2021-04-12)
+
+**Note:** Version bump only for package @apollosproject/ui-connected
+
+
+
+
+
+## [2.10.0](https://github.com/apollosproject/apollos-apps/compare/v2.9.0...v2.10.0) (2021-04-06)
+
+
+### Features
+
+* Added analytics for new features - journal and following ([#1851](https://github.com/apollosproject/apollos-apps/issues/1851)) ([1f307b0](https://github.com/apollosproject/apollos-apps/commit/1f307b0c5719e2d42cead7ea411552f565389ff5))
+* Edit / Delete journals UI ([#1856](https://github.com/apollosproject/apollos-apps/issues/1856)) ([6dc0fdd](https://github.com/apollosproject/apollos-apps/commit/6dc0fdda33fdba42969fa3a39449cb3e1a25dc15))
+
+
+### Bug Fixes
+
+* component overrides for NodeSingleConnected ([#1858](https://github.com/apollosproject/apollos-apps/issues/1858)) ([e57384e](https://github.com/apollosproject/apollos-apps/commit/e57384ed415ba052b3cd5710a24013115d081191))
+
+
+
+## [2.9.0](https://github.com/apollosproject/apollos-apps/compare/v2.8.0...v2.9.0) (2021-03-30)
+
+
+### Features
+
+* Optimistic response for requesting follows ([#1839](https://github.com/apollosproject/apollos-apps/issues/1839)) ([54a6893](https://github.com/apollosproject/apollos-apps/commit/54a68932bb1b39d3cc2caaa4081333ae1580aac3))
+
+
+
+## [2.8.0](https://github.com/apollosproject/apollos-apps/compare/v2.7.0...v2.8.0) (2021-03-29)
+
+
+### Features
+
+* Add like button to comments ([#1832](https://github.com/apollosproject/apollos-apps/issues/1832)) ([3c778a3](https://github.com/apollosproject/apollos-apps/commit/3c778a35b8eebee39ce5a118894343d13ac79114))
+
+
+
+## [2.7.0](https://github.com/apollosproject/apollos-apps/compare/v2.6.0...v2.7.0) (2021-03-25)
+
+
+### Features
+
+* Bottom sheet editor v2 ([#1818](https://github.com/apollosproject/apollos-apps/issues/1818)) ([615715b](https://github.com/apollosproject/apollos-apps/commit/615715b9fe0d7cba49dbe3abd895194891e017ad))
+
+
+
+## [2.6.0](https://github.com/apollosproject/apollos-apps/compare/v2.5.0...v2.6.0) (2021-03-24)
+
+**Note:** Version bump only for package @apollosproject/ui-connected
+
+
+
+
+
+## [2.5.0](https://github.com/apollosproject/apollos-apps/compare/v2.4.0...v2.5.0) (2021-03-22)
+
+
+### Features
+
+* add bottom sheet to AddCommentForm ([#1807](https://github.com/apollosproject/apollos-apps/issues/1807)) ([4c09ff0](https://github.com/apollosproject/apollos-apps/commit/4c09ff0382c60aa011080407de5a6443d5b35db5))
+* People Search ([#1815](https://github.com/apollosproject/apollos-apps/issues/1815)) ([16e3556](https://github.com/apollosproject/apollos-apps/commit/16e35562198d9b0049e067075c53f9f9aab0d25f))
+* Push notifications on follow request ([#1806](https://github.com/apollosproject/apollos-apps/issues/1806)) ([19ba81b](https://github.com/apollosproject/apollos-apps/commit/19ba81b0452c19275918fbdc251425fa981a735e))
+
+
+### Bug Fixes
+
+* follow list button states ([#1816](https://github.com/apollosproject/apollos-apps/issues/1816)) ([0b28777](https://github.com/apollosproject/apollos-apps/commit/0b287776e7a05c02dc68e1e67a9503d69f70f1c5))
+
+
+
+## [2.4.0](https://github.com/apollosproject/apollos-apps/compare/v2.3.1...v2.4.0) (2021-03-18)
+
+
+### Features
+
+* Adds RequestedFollowsList  ([#1792](https://github.com/apollosproject/apollos-apps/issues/1792)) ([b855156](https://github.com/apollosproject/apollos-apps/commit/b85515670375785deb366c787819020656aee29c))
+* Pull to refresh on the connect tab ([#1803](https://github.com/apollosproject/apollos-apps/issues/1803)) ([3d0b4a8](https://github.com/apollosproject/apollos-apps/commit/3d0b4a83b7f8b90a5d22018494f4efa51c3aa29e))
+
+
+### Bug Fixes
+
+* Upgrades and fixes for comments ([#1800](https://github.com/apollosproject/apollos-apps/issues/1800)) ([b77dbc2](https://github.com/apollosproject/apollos-apps/commit/b77dbc28af621190173e7c82e0e4295abc047109))
+
+
+
+### [2.3.1](https://github.com/apollosproject/apollos-apps/compare/v2.3.0...v2.3.1) (2021-03-11)
+
+**Note:** Version bump only for package @apollosproject/ui-connected
+
+
+
+
+
+## [2.3.0](https://github.com/apollosproject/apollos-apps/compare/v2.2.0...v2.3.0) (2021-03-11)
+
+
+### Features
+
+* add button link feature to content ([#1779](https://github.com/apollosproject/apollos-apps/issues/1779)) ([c254c5b](https://github.com/apollosproject/apollos-apps/commit/c254c5bcdac03c840926da53b19eeba9ac11e9a5))
+* add empty card to progress algorithm ([#1788](https://github.com/apollosproject/apollos-apps/issues/1788)) ([71fcf37](https://github.com/apollosproject/apollos-apps/commit/71fcf373bdaf06af9d3fc956d2b95f9e5f4506a2))
+* add empty vertical prayer list state ([#1776](https://github.com/apollosproject/apollos-apps/issues/1776)) ([b0b213b](https://github.com/apollosproject/apollos-apps/commit/b0b213be0c43fbef10fa1d713ae002a324f1d994))
+* Hookup suggested followers ([#1785](https://github.com/apollosproject/apollos-apps/issues/1785)) ([68d042d](https://github.com/apollosproject/apollos-apps/commit/68d042de2999aa466f7460263db6ec273cceafe4))
+
+
+
+## [2.2.0](https://github.com/apollosproject/apollos-apps/compare/v2.1.1...v2.2.0) (2021-03-04)
+
+
+### Features
+
+* Journal Confirmation Screen ([#1767](https://github.com/apollosproject/apollos-apps/issues/1767)) ([c7b2a8c](https://github.com/apollosproject/apollos-apps/commit/c7b2a8cc498c007f22ae84b8179eab04508d14ce))
+
+
+### Bug Fixes
+
+* allow theme HOCs to accept custom theme prop ([#1763](https://github.com/apollosproject/apollos-apps/issues/1763)) ([4b0a5b1](https://github.com/apollosproject/apollos-apps/commit/4b0a5b1f82e1e1e83ea30ccec75b0ab18f29a38f))
+
+
+
 ### [2.1.1](https://github.com/apollosproject/apollos-apps/compare/v2.1.0...v2.1.1) (2021-02-26)
 
 **Note:** Version bump only for package @apollosproject/ui-connected

@@ -8,7 +8,8 @@ const resolver = {
   AuthenticatedUser: {
     id: ({ id }, args, context, { parentType }) =>
       createGlobalId(id, parentType.name),
-    profile: (authUser) => authUser,
+    profile: ({ id }, args, { dataSources }) =>
+      dataSources.Person.getFromId(id, null, { originType: 'rock' }),
     rock: (rockDetails) => rockDetails,
     rockToken: (root, args, context) => context.rockCookie,
   },

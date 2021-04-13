@@ -113,6 +113,19 @@ const LITE_FEATURES_FRAGMENT = gql`
       title
       url
     }
+    ... on ButtonFeature {
+      # The whole fragment is currently included b/c these nodes don't fetch their own content.
+      action {
+        title
+        action
+        relatedNode {
+          id
+          ... on Url {
+            url
+          }
+        }
+      }
+    }
   }
 `;
 
@@ -241,6 +254,7 @@ const COMMENT_LIST_FEATURE_FRAGMENT = gql`
     comments {
       id
       text
+      isLiked
       person {
         id
         nickName
@@ -374,6 +388,9 @@ const RELATED_NODE_FRAGMENT = gql`
     }
     ... on ContentChannel {
       name
+    }
+    ... on Message {
+      message
     }
   }
 `;

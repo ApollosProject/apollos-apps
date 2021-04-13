@@ -17,16 +17,13 @@ Array [
 ]
 `;
 
-exports[`Auth should post when creating a new user 1`] = `undefined`;
+exports[`Auth should post when creating a new user 1`] = `1`;
 
 exports[`Auth should post when creating a new user 2`] = `
 Array [
   Array [
-    "/People",
     Object {
       "Email": "bob-jones@example.com",
-      "Gender": 0,
-      "IsSystem": false,
     },
   ],
 ]
@@ -37,12 +34,9 @@ exports[`Auth should post with userProfile fields when creating a new user 1`] =
 exports[`Auth should post with userProfile fields when creating a new user 2`] = `
 Array [
   Array [
-    "/People",
     Object {
       "Email": "bob-jones@example.com",
       "FirstName": "Burke",
-      "Gender": 0,
-      "IsSystem": false,
       "LastName": "Shartsis",
     },
   ],
@@ -54,15 +48,11 @@ exports[`Auth should post with userProfile fields when creating a new user and m
 exports[`Auth should post with userProfile fields when creating a new user and map gender/birthdate 2`] = `
 Array [
   Array [
-    "/People",
     Object {
-      "BirthDay": 22,
-      "BirthMonth": 2,
-      "BirthYear": 1996,
+      "BirthDate": "1996-02-22T05:00:00.000Z",
       "Email": "bob-jones@example.com",
       "FirstName": "Burke",
-      "Gender": 2,
-      "IsSystem": false,
+      "Gender": "Female",
       "LastName": "Shartsis",
     },
   ],
@@ -113,11 +103,8 @@ Array [
 exports[`Auth should throw an error when creating an invalid user 1`] = `
 Array [
   Array [
-    "/People",
     Object {
       "Email": "bob-jones@example.com",
-      "Gender": 0,
-      "IsSystem": false,
     },
   ],
 ]

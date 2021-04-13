@@ -81,14 +81,11 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
       return existingPhoneNumbers[0].personId;
     }
 
-    // Otherwise, create a new user.
     const profileFields = fieldsAsObject(userProfile || []);
-    const rockUpdateFields = this.context.dataSources.Person.mapApollosFieldsToRock(
-      profileFields
-    );
+    // Otherwise, create a new user.
     const personId = await this.context.dataSources.Auth.createUserProfile({
-      email: null,
-      ...rockUpdateFields,
+      Email: null,
+      ...profileFields,
     });
 
     // And create their phone number.

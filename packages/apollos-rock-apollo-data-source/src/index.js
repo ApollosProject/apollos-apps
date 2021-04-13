@@ -38,6 +38,8 @@ export default class RockApolloDataSource extends RESTDataSource {
 
   agent = ROCK_AGENT;
 
+  ORIGIN_TYPE = 'rock';
+
   didReceiveResponse(response, request) {
     // Can't use await b/c of `super` keyword
     return super

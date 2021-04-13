@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { get } from 'lodash';
 
 import { View } from 'react-native';
 import styled from '../styled';
@@ -10,12 +9,14 @@ import { withIsLoading } from '../isLoading';
 import Button from '../Button';
 
 import FollowListItem from './FollowListItem';
+import FollowListSearch from './FollowListSearch';
+import FollowListSearchModal from './FollowListSearch/FollowListSearchModal';
 
 const HeaderView = styled(
   ({ theme }) => ({
     marginBottom: theme.sizing.baseUnit,
   }),
-  'ui-kit.ActionList.Header'
+  'ui-kit.FollowList.Header'
 )(View);
 
 const Content = styled(
@@ -27,7 +28,7 @@ const Content = styled(
       ? theme.sizing.baseUnit * 1.5
       : theme.sizing.baseUnit,
   }),
-  'ui-kit.ActionList.Content'
+  'ui-kit.FollowList.Content'
 )(CardContent);
 
 const FullWidthButton = styled(
@@ -35,7 +36,7 @@ const FullWidthButton = styled(
     width: '100%', // fixes loading state not showing up at 100% width
     marginTop: theme.sizing.baseUnit * 0.5,
   }),
-  'ui-kit.ActionList.FullWidthButton'
+  'ui-kit.FollowList.FullWidthButton'
 )(Button);
 
 class FollowList extends PureComponent {
@@ -61,6 +62,10 @@ class FollowList extends PureComponent {
     onConfirm: PropTypes.func,
   };
 
+  static defaultProps = {
+    followers: [],
+  };
+
   RenderAsCard = ({ children }) =>
     this.props.isCard ? (
       <Card isLoading={this.props.isLoading}>{children}</Card>
@@ -77,34 +82,53 @@ class FollowList extends PureComponent {
       followListButtonTitle,
       followers,
       header,
+      isLoading,
     } = this.props;
 
     const { RenderAsCard } = this;
+
+    const showButton = onPressFollowListButton && followListButtonTitle;
+
+    if (followers?.length === 0 && !isLoading && !showButton) return null;
 
     return (
       <RenderAsCard>
         <Content cardPadding={this.props.isCard}>
           <HeaderView>{header || null}</HeaderView>
-          {followers.map((item) => (
-            <FollowListItem
-              {...get(item, 'relatedNode', {})}
-              key={item.id}
-              id={get(item, 'id')}
-              requested={get(item, 'requested')}
-              request={get(item, 'request')}
-              confirmed={get(item, 'confirmed')}
-              name={
-                [item.firstName, item.lastName]
-                  .filter((name) => Boolean(name))
-                  .join(' ') || ''
-              }
-              imageSource={get(item, 'image.sources[0]', '')}
-              onFollow={(id) => onFollow?.(id)}
-              onHide={(id) => onHide?.(id)}
-              onConfirm={(id) => onConfirm?.(id)}
-            />
-          ))}
-          {onPressFollowListButton && followListButtonTitle ? (
+          {followers.map((person) => {
+            const isFollowingState = person?.currentUserFollowing?.state;
+            const isFollowed = person?.followingCurrentUser?.state;
+            return (
+              <FollowListItem
+                key={person.id}
+                id={person.id}
+                requestingFollow={isFollowingState === 'REQUESTED'}
+                followRequested={isFollowed === 'REQUESTED'}
+                confirmedFollowing={isFollowingState === 'ACCEPTED'}
+                confirmedFollower={isFollowed === 'ACCEPTED'}
+                name={
+                  [person.firstName, person.lastName]
+                    .filter((name) => Boolean(name))
+                    .join(' ') || ''
+                }
+                imageSource={person.photo}
+                onFollow={() => onFollow?.({ personId: person.id })}
+                onHide={() =>
+                  onHide?.({
+                    personId: person.id,
+                    requestId: person?.followingCurrentUser?.id,
+                  })
+                }
+                onConfirm={() =>
+                  onConfirm?.({
+                    personId: person.id,
+                    requestId: person?.followingCurrentUser?.id,
+                  })
+                }
+              />
+            );
+          })}
+          {showButton ? (
             <FullWidthButton
               title={followListButtonTitle}
               type={'default'}
@@ -119,4 +143,5 @@ class FollowList extends PureComponent {
   }
 }
 
+export { FollowListItem, FollowListSearch, FollowListSearchModal };
 export default withIsLoading(FollowList);

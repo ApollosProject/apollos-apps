@@ -1,7 +1,10 @@
 {
   "name": "@apollosproject/ui-onboarding",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "2.1.1",
+  "engines": {
+    "node": ">=12"
+  },
+  "version": "2.11.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -38,6 +41,7 @@
       "node_modules/@storybook/"
     ],
     "setupFiles": [
+      "../apollos-ui-test-utils/src/mocks/reanimated.js",
       "./jest.setup.js"
     ]
   },
@@ -45,6 +49,7 @@
     "@apollo/client": "*",
     "@apollosproject/storybook": "*",
     "@apollosproject/ui-analytics": "*",
+    "@apollosproject/ui-connected": "*",
     "@apollosproject/ui-fragments": "*",
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-map-view": "*",

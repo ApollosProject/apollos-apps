@@ -1,7 +1,10 @@
 {
   "name": "@apollosproject/ui-prayer",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
-  "version": "2.1.1",
+  "engines": {
+    "node": ">=12"
+  },
+  "version": "2.11.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -48,6 +51,7 @@
       "node_modules/@storybook/"
     ],
     "setupFiles": [
+      "../apollos-ui-test-utils/src/mocks/reanimated.js",
       "../../node_modules/react-native-gesture-handler/jestSetup.js",
       "./jest.setup.js"
     ]

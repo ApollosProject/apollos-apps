@@ -16,8 +16,22 @@ const createModel = defineModel({
     lastName: DataTypes.STRING,
     email: DataTypes.STRING,
     birthDate: DataTypes.DATE,
-    profileImageUrl: DataTypes.STRING,
+    profileImageUrl: DataTypes.TEXT,
     gender: DataTypes.ENUM(Object.values(Gender)),
+    apollosUser: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
+  },
+  sequelizeOptions: {
+    hooks: {
+      beforeValidate: (person) => {
+        if (person.gender) {
+          // eslint-disable-next-line no-param-reassign
+          person.gender = person.gender.toUpperCase();
+        }
+      },
+    },
   },
 });
 

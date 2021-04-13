@@ -3,6 +3,98 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.11.0](https://github.com/apollosproject/apollos-apps/compare/v2.10.0...v2.11.0) (2021-04-12)
+
+**Note:** Version bump only for package @apollosproject/ui-fragments
+
+
+
+
+
+## [2.10.0](https://github.com/apollosproject/apollos-apps/compare/v2.9.0...v2.10.0) (2021-04-06)
+
+**Note:** Version bump only for package @apollosproject/ui-fragments
+
+
+
+
+
+## [2.9.0](https://github.com/apollosproject/apollos-apps/compare/v2.8.0...v2.9.0) (2021-03-30)
+
+
+### Bug Fixes
+
+* Avatar not showing up / crash when adding comment ([#1841](https://github.com/apollosproject/apollos-apps/issues/1841)) ([8ed9c1d](https://github.com/apollosproject/apollos-apps/commit/8ed9c1d845e828e4a14c13e1b5d02912c9cb04b0))
+
+
+
+## [2.8.0](https://github.com/apollosproject/apollos-apps/compare/v2.7.0...v2.8.0) (2021-03-29)
+
+
+### Features
+
+* Add like button to comments ([#1832](https://github.com/apollosproject/apollos-apps/issues/1832)) ([3c778a3](https://github.com/apollosproject/apollos-apps/commit/3c778a35b8eebee39ce5a118894343d13ac79114))
+
+
+
+## [2.7.0](https://github.com/apollosproject/apollos-apps/compare/v2.6.0...v2.7.0) (2021-03-25)
+
+**Note:** Version bump only for package @apollosproject/ui-fragments
+
+
+
+
+
+## [2.6.0](https://github.com/apollosproject/apollos-apps/compare/v2.5.0...v2.6.0) (2021-03-24)
+
+**Note:** Version bump only for package @apollosproject/ui-fragments
+
+
+
+
+
+## [2.5.0](https://github.com/apollosproject/apollos-apps/compare/v2.4.0...v2.5.0) (2021-03-22)
+
+**Note:** Version bump only for package @apollosproject/ui-fragments
+
+
+
+
+
+## [2.4.0](https://github.com/apollosproject/apollos-apps/compare/v2.3.1...v2.4.0) (2021-03-18)
+
+**Note:** Version bump only for package @apollosproject/ui-fragments
+
+
+
+
+
+### [2.3.1](https://github.com/apollosproject/apollos-apps/compare/v2.3.0...v2.3.1) (2021-03-11)
+
+**Note:** Version bump only for package @apollosproject/ui-fragments
+
+
+
+
+
+## [2.3.0](https://github.com/apollosproject/apollos-apps/compare/v2.2.0...v2.3.0) (2021-03-11)
+
+
+### Features
+
+* add button link feature to content ([#1779](https://github.com/apollosproject/apollos-apps/issues/1779)) ([c254c5b](https://github.com/apollosproject/apollos-apps/commit/c254c5bcdac03c840926da53b19eeba9ac11e9a5))
+* add empty card to progress algorithm ([#1788](https://github.com/apollosproject/apollos-apps/issues/1788)) ([71fcf37](https://github.com/apollosproject/apollos-apps/commit/71fcf373bdaf06af9d3fc956d2b95f9e5f4506a2))
+
+
+
+## [2.2.0](https://github.com/apollosproject/apollos-apps/compare/v2.1.1...v2.2.0) (2021-03-04)
+
+**Note:** Version bump only for package @apollosproject/ui-fragments
+
+
+
+
+
 ### [2.1.1](https://github.com/apollosproject/apollos-apps/compare/v2.1.0...v2.1.1) (2021-02-26)
 
 **Note:** Version bump only for package @apollosproject/ui-fragments

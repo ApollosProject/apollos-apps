@@ -1,91 +1,148 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the BlockQuote component should render a loading state 1`] = `
-<View
-  style={
-    Object {
-      "alignSelf": "stretch",
-      "borderBottomWidth": 0.5,
-      "borderColor": "#A5A5A5",
-      "borderTopWidth": 0.5,
-      "marginVertical": 48,
-      "paddingHorizontal": 16,
-      "paddingVertical": 36,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
+  />,
   <View
     style={
       Object {
         "alignSelf": "stretch",
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "height": 16,
-        "marginVertical": 5,
-        "width": "100%",
+        "borderBottomWidth": 0.5,
+        "borderColor": "#A5A5A5",
+        "borderTopWidth": 0.5,
+        "marginVertical": 48,
+        "paddingHorizontal": 16,
+        "paddingVertical": 36,
       }
     }
-  />
-</View>
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 16,
+          "marginVertical": 5,
+          "width": "100%",
+        }
+      }
+    />
+  </View>,
+]
 `;
 
 exports[`the BlockQuote component should render a string 1`] = `
-<View
-  style={
-    Object {
-      "alignSelf": "stretch",
-      "borderBottomWidth": 0.5,
-      "borderColor": "#A5A5A5",
-      "borderTopWidth": 0.5,
-      "marginVertical": 48,
-      "paddingHorizontal": 16,
-      "paddingVertical": 36,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  <Text
-    bold={false}
-    italic={false}
+  />,
+  <View
     style={
       Object {
-        "color": "#303030",
-        "fontFamily": "InterUI-Italic",
-        "fontSize": 16,
-        "lineHeight": 26,
-        "textAlign": "center",
+        "alignSelf": "stretch",
+        "borderBottomWidth": 0.5,
+        "borderColor": "#A5A5A5",
+        "borderTopWidth": 0.5,
+        "marginVertical": 48,
+        "paddingHorizontal": 16,
+        "paddingVertical": 36,
       }
     }
   >
-    "You are the only Bible some unbelievers will ever read." – John MacArthur
-  </Text>
-</View>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Italic",
+          "fontSize": 16,
+          "lineHeight": 26,
+          "textAlign": "center",
+        }
+      }
+    >
+      "You are the only Bible some unbelievers will ever read." – John MacArthur
+    </Text>
+  </View>,
+]
 `;
 
 exports[`the BlockQuote component should render child components 1`] = `
-<View
-  style={
-    Object {
-      "alignSelf": "stretch",
-      "borderBottomWidth": 0.5,
-      "borderColor": "#A5A5A5",
-      "borderTopWidth": 0.5,
-      "marginVertical": 48,
-      "paddingHorizontal": 16,
-      "paddingVertical": 36,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
-  <Text
+  />,
+  <View
     style={
       Object {
-        "color": "#303030",
-        "fontFamily": "InterUI-Medium",
-        "fontSize": 14,
-        "lineHeight": 21,
+        "alignSelf": "stretch",
+        "borderBottomWidth": 0.5,
+        "borderColor": "#A5A5A5",
+        "borderTopWidth": 0.5,
+        "marginVertical": 48,
+        "paddingHorizontal": 16,
+        "paddingVertical": 36,
       }
     }
   >
-    "You are the only Bible some unbelievers will ever read." – John MacArthur
-  </Text>
-</View>
+    <Text
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Medium",
+          "fontSize": 14,
+          "lineHeight": 21,
+        }
+      }
+    >
+      "You are the only Bible some unbelievers will ever read." – John MacArthur
+    </Text>
+  </View>,
+]
 `;
