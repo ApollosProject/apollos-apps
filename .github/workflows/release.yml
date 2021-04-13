@@ -19,9 +19,6 @@ jobs:
         registry-url: 'https://npm.pkg.github.com'
         scope: '@apollosproject'
 
-    - name: Install Yarn
-      run: npm install -g yarn
-
     - name: Install Dependencies
       run: yarn
 
@@ -46,9 +43,6 @@ jobs:
       with:
         registry-url: 'https://registry.npmjs.org'
         scope: '@apollosproject'
-
-    - name: Install Yarn
-      run: npm install -g yarn
 
     - name: Install Dependencies
       run: yarn

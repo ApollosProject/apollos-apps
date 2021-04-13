@@ -16,9 +16,6 @@ jobs:
     - name: Use Node
       uses: actions/setup-node@v2
 
-    - name: Install Yarn
-      run: npm install -g yarn
-
     - name: Install Dependencies
       run: yarn
 
