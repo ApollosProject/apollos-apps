@@ -59,18 +59,10 @@ describe('ContentItemsModel', () => {
 
   it('creates a sharing URL with item slug', async () => {
     const dataSource = new ContentItemsDataSource();
-    dataSource.request = () => ({
-      filter: () => ({
-        cache: () => ({
-          first: () => ({ slug: 'cool-article' }),
-        }),
-      }),
-    });
-    const result = 'https://apollorock.newspring.cc/cool-article';
     const url = await dataSource.getShareUrl({
       content: { id: 1, contentChannelId: 6 },
     });
-    expect(url).toEqual(result);
+    expect(url).toMatchSnapshot();
   });
 
   it('filters by content channel id', () => {
