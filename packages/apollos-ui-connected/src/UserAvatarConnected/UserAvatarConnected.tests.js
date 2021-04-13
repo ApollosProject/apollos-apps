@@ -40,7 +40,7 @@ describe('UserAvatarConnected component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('renders UserAvatarConnected withou a photo', async () => {
+  it('renders UserAvatarConnected without a photo', async () => {
     const mock = {
       request: {
         query: GET_USER_PHOTO,
