@@ -62,6 +62,19 @@ storiesOf('ui-kit/Avatar', module)
       />
     </>
   ))
+  .add('placeholder initals', () => (
+    <>
+      <Avatar isLoading size={'small'} placeholderInitials={'VW'} />
+      <Avatar isLoading size={'medium'} placeholderInitials={'VW'} />
+      <Avatar isLoading size={'large'} placeholderInitials={'VW'} />
+      <Avatar isLoading size={'small'} placeholderInitials={'CV'} />
+      <Avatar isLoading size={'medium'} placeholderInitials={'CV'} />
+      <Avatar isLoading size={'large'} placeholderInitials={'CV'} />
+      <Avatar isLoading size={'small'} placeholderInitials={'MN'} />
+      <Avatar isLoading size={'medium'} placeholderInitials={'MN'} />
+      <Avatar isLoading size={'large'} placeholderInitials={'MN'} />
+    </>
+  ))
   .add('notification', () => (
     <>
       <Avatar

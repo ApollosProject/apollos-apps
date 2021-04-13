@@ -11,6 +11,7 @@ import ActivityIndicator from '../ActivityIndicator';
 import { ButtonIcon } from '../Button';
 import Icon from '../Icon';
 import TouchableScale from '../TouchableScale';
+import PlaceholderInitials from './Placeholder';
 
 const Container = styled(
   ({ themeSize }) => ({
@@ -106,11 +107,18 @@ const Avatar = ({
   onPressIcon,
   notification,
   iconButtonProps,
+  placeholderInitials,
   ...imageProps
 }) => (
   <Container style={containerStyle} themeSize={themeSize}>
-    {!isLoading && source && source.uri ? (
+    {!isLoading && source && source.uri ? ( // eslint-disable-line no-nested-ternary
       <Image source={source} {...imageProps} themeSize={themeSize} />
+    ) : placeholderInitials ? (
+      <PlaceholderInitials
+        placeholderInitials={placeholderInitials}
+        themeSize={themeSize}
+        isLoading={false}
+      />
     ) : (
       <PlaceholderIcon themeSize={themeSize} isLoading={false} />
     )}
