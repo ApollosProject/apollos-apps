@@ -1655,7 +1655,7 @@ Array [
               }
             }
           >
-            {"avatar":{"__typename":"ImageMediaSource","uri":"https://1234.image.com"},"title":"Add your prayer"}
+            {"avatar":{"__typename":"ImageMediaSource","uri":"https://1234.image.com"},"initials":"","title":"Add your prayer"}
           </View>
           <View
             style={

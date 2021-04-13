@@ -513,6 +513,7 @@ Array [
                             "uri": "https://1234.image.com",
                           }
                         }
+                        initials=""
                         onPrayerChangeText={[Function]}
                         title="Add your prayer"
                       />
@@ -682,6 +683,7 @@ Array [
                             "uri": "https://123.image-url.com",
                           }
                         }
+                        initials="F"
                         prayer="I pray for you."
                         title="Pray for Father"
                       />
@@ -1769,6 +1771,7 @@ Array [
                             "uri": "https://1234.image.com",
                           }
                         }
+                        initials=""
                         onPrayerChangeText={[Function]}
                         title="Add your prayer"
                       />
@@ -1938,6 +1941,7 @@ Array [
                             "uri": "https://123.image-url.com",
                           }
                         }
+                        initials="F"
                         prayer="I pray for you."
                         title="Pray for Father"
                       />
@@ -2671,6 +2675,7 @@ Array [
                             "uri": "https://1234.image.com",
                           }
                         }
+                        initials=""
                         onPrayerChangeText={[Function]}
                         title="Add your prayer"
                       />
@@ -2840,6 +2845,7 @@ Array [
                             "uri": "https://123.image-url.com",
                           }
                         }
+                        initials="F"
                         prayer="I pray for you."
                         title="Pray for Father"
                       />
@@ -3927,6 +3933,7 @@ Array [
                             "uri": "https://1234.image.com",
                           }
                         }
+                        initials=""
                         onPrayerChangeText={[Function]}
                         title="Add your prayer"
                       />
@@ -4096,6 +4103,7 @@ Array [
                             "uri": "https://123.image-url.com",
                           }
                         }
+                        initials="F"
                         prayer="I pray for you."
                         title="Pray for Father"
                       />

@@ -49,7 +49,7 @@ const VERTICAL_PRAYER_LIST_FEATURE_FRAGMENT = gql`
         id
         firstName
         nickName
-        firstName
+        lastName
         photo {
           uri
         }

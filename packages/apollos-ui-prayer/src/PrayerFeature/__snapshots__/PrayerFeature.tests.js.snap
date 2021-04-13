@@ -101,6 +101,7 @@ Array [
             Array [
               Object {
                 "id": "1",
+                "initials": "",
                 "notification": true,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -108,6 +109,7 @@ Array [
               },
               Object {
                 "id": "2",
+                "initials": "",
                 "notification": true,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -115,6 +117,7 @@ Array [
               },
               Object {
                 "id": "3",
+                "initials": "",
                 "notification": true,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -122,6 +125,7 @@ Array [
               },
               Object {
                 "id": "4",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -129,6 +133,7 @@ Array [
               },
               Object {
                 "id": "5",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -136,6 +141,7 @@ Array [
               },
               Object {
                 "id": "6",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -143,6 +149,7 @@ Array [
               },
               Object {
                 "id": "7",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -150,6 +157,7 @@ Array [
               },
               Object {
                 "id": "8",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -1022,6 +1030,7 @@ Array [
             Array [
               Object {
                 "id": "1",
+                "initials": "",
                 "notification": true,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -1029,6 +1038,7 @@ Array [
               },
               Object {
                 "id": "2",
+                "initials": "",
                 "notification": true,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -1036,6 +1046,7 @@ Array [
               },
               Object {
                 "id": "3",
+                "initials": "",
                 "notification": true,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -1043,6 +1054,7 @@ Array [
               },
               Object {
                 "id": "4",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -1050,6 +1062,7 @@ Array [
               },
               Object {
                 "id": "5",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -1057,6 +1070,7 @@ Array [
               },
               Object {
                 "id": "6",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -1064,6 +1078,7 @@ Array [
               },
               Object {
                 "id": "7",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -1071,6 +1086,7 @@ Array [
               },
               Object {
                 "id": "8",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -1788,6 +1804,7 @@ Array [
             Array [
               Object {
                 "id": "1",
+                "initials": "",
                 "notification": true,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -1795,6 +1812,7 @@ Array [
               },
               Object {
                 "id": "2",
+                "initials": "",
                 "notification": true,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -1802,6 +1820,7 @@ Array [
               },
               Object {
                 "id": "3",
+                "initials": "",
                 "notification": true,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -1809,6 +1828,7 @@ Array [
               },
               Object {
                 "id": "4",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -1816,6 +1836,7 @@ Array [
               },
               Object {
                 "id": "5",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -1823,6 +1844,7 @@ Array [
               },
               Object {
                 "id": "6",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -1830,6 +1852,7 @@ Array [
               },
               Object {
                 "id": "7",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -1837,6 +1860,7 @@ Array [
               },
               Object {
                 "id": "8",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -2567,6 +2591,7 @@ Array [
             Array [
               Object {
                 "id": "1",
+                "initials": "",
                 "notification": true,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -2574,6 +2599,7 @@ Array [
               },
               Object {
                 "id": "2",
+                "initials": "",
                 "notification": true,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -2581,6 +2607,7 @@ Array [
               },
               Object {
                 "id": "3",
+                "initials": "",
                 "notification": true,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -2588,6 +2615,7 @@ Array [
               },
               Object {
                 "id": "4",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -2595,6 +2623,7 @@ Array [
               },
               Object {
                 "id": "5",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -2602,6 +2631,7 @@ Array [
               },
               Object {
                 "id": "6",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -2609,6 +2639,7 @@ Array [
               },
               Object {
                 "id": "7",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -2616,6 +2647,7 @@ Array [
               },
               Object {
                 "id": "8",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -3321,31 +3353,37 @@ Array [
         Array [
           Object {
             "id": undefined,
+            "initials": "",
             "notification": true,
             "source": undefined,
           },
           Object {
             "id": undefined,
+            "initials": "",
             "notification": true,
             "source": undefined,
           },
           Object {
             "id": undefined,
+            "initials": "",
             "notification": true,
             "source": undefined,
           },
           Object {
             "id": undefined,
+            "initials": "",
             "notification": true,
             "source": undefined,
           },
           Object {
             "id": undefined,
+            "initials": "",
             "notification": true,
             "source": undefined,
           },
           Object {
             "id": undefined,
+            "initials": "",
             "notification": true,
             "source": undefined,
           },
@@ -4513,6 +4551,7 @@ Array [
             Array [
               Object {
                 "id": "1",
+                "initials": "",
                 "notification": true,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -4520,6 +4559,7 @@ Array [
               },
               Object {
                 "id": "2",
+                "initials": "",
                 "notification": true,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -4527,6 +4567,7 @@ Array [
               },
               Object {
                 "id": "3",
+                "initials": "",
                 "notification": true,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -4534,6 +4575,7 @@ Array [
               },
               Object {
                 "id": "4",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -4541,6 +4583,7 @@ Array [
               },
               Object {
                 "id": "5",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -4548,6 +4591,7 @@ Array [
               },
               Object {
                 "id": "6",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -4555,6 +4599,7 @@ Array [
               },
               Object {
                 "id": "7",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -4562,6 +4607,7 @@ Array [
               },
               Object {
                 "id": "8",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -5292,6 +5338,7 @@ Array [
             Array [
               Object {
                 "id": "1",
+                "initials": "",
                 "notification": true,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -5299,6 +5346,7 @@ Array [
               },
               Object {
                 "id": "2",
+                "initials": "",
                 "notification": true,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -5306,6 +5354,7 @@ Array [
               },
               Object {
                 "id": "3",
+                "initials": "",
                 "notification": true,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -5313,6 +5362,7 @@ Array [
               },
               Object {
                 "id": "4",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -5320,6 +5370,7 @@ Array [
               },
               Object {
                 "id": "5",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -5327,6 +5378,7 @@ Array [
               },
               Object {
                 "id": "6",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -5334,6 +5386,7 @@ Array [
               },
               Object {
                 "id": "7",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -5341,6 +5394,7 @@ Array [
               },
               Object {
                 "id": "8",
+                "initials": "",
                 "notification": false,
                 "source": Object {
                   "uri": "https://picsum.photos/200",
@@ -6034,6 +6088,7 @@ Array [
         Array [
           Object {
             "id": "1",
+            "initials": "",
             "notification": true,
             "source": Object {
               "uri": "https://picsum.photos/200",
@@ -6041,6 +6096,7 @@ Array [
           },
           Object {
             "id": "2",
+            "initials": "",
             "notification": true,
             "source": Object {
               "uri": "https://picsum.photos/200",
@@ -6048,6 +6104,7 @@ Array [
           },
           Object {
             "id": "3",
+            "initials": "",
             "notification": true,
             "source": Object {
               "uri": "https://picsum.photos/200",
@@ -6055,6 +6112,7 @@ Array [
           },
           Object {
             "id": "4",
+            "initials": "",
             "notification": false,
             "source": Object {
               "uri": "https://picsum.photos/200",
@@ -6062,6 +6120,7 @@ Array [
           },
           Object {
             "id": "5",
+            "initials": "",
             "notification": false,
             "source": Object {
               "uri": "https://picsum.photos/200",
@@ -6069,6 +6128,7 @@ Array [
           },
           Object {
             "id": "6",
+            "initials": "",
             "notification": false,
             "source": Object {
               "uri": "https://picsum.photos/200",
@@ -6076,6 +6136,7 @@ Array [
           },
           Object {
             "id": "7",
+            "initials": "",
             "notification": false,
             "source": Object {
               "uri": "https://picsum.photos/200",
@@ -6083,6 +6144,7 @@ Array [
           },
           Object {
             "id": "8",
+            "initials": "",
             "notification": false,
             "source": Object {
               "uri": "https://picsum.photos/200",
