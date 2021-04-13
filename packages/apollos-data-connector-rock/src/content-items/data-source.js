@@ -9,7 +9,11 @@ import RockApolloDataSource, {
   parseKeyValueAttribute,
 } from '@apollosproject/rock-apollo-data-source';
 import ApollosConfig from '@apollosproject/config';
-import { createGlobalId, parseGlobalId } from '@apollosproject/server-core';
+import {
+  createGlobalId,
+  parseGlobalId,
+  generateAppLink,
+} from '@apollosproject/server-core';
 
 import { createImageUrlFromGuid } from '../utils';
 
@@ -246,14 +250,13 @@ export default class ContentItem extends RockApolloDataSource {
       : tokens[0];
   };
 
-  getShareUrl = async ({ contentId, baseUrl }) => {
-    // assumes slugs are unique
-    const slug = await this.request('ContentChannelItemSlugs')
-      .filter(`ContentChannelItemId eq ${contentId}`)
-      .cache({ ttl: 60 })
-      .first();
-
-    return `${baseUrl}/${slug?.slug || ''}`;
+  getShareUrl = async (content) => {
+    const __typename = this.resolveType(content);
+    return generateAppLink(
+      'universal',
+      'content',
+      createGlobalId(content.id, __typename)
+    );
   };
 
   getSermonFeed() {

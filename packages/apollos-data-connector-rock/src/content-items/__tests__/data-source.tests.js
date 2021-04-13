@@ -7,7 +7,7 @@ import ContentItemsDataSource from '../data-source';
 
 ApollosConfig.loadJs({
   APP: {
-    ROOT_API_URL: 'https://apollos.api',
+    UNIVERSAL_LINK_HOST: 'https://apollos.api',
   },
   ROCK: {
     API_URL: 'https://apollosrock.newspring.cc/api',
@@ -68,8 +68,7 @@ describe('ContentItemsModel', () => {
     });
     const result = 'https://apollorock.newspring.cc/cool-article';
     const url = await dataSource.getShareUrl({
-      contentId: 1,
-      baseUrl: 'https://apollorock.newspring.cc',
+      content: { id: 1, contentChannelId: 6 },
     });
     expect(url).toEqual(result);
   });
