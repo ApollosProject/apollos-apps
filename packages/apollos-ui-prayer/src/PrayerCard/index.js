@@ -91,36 +91,35 @@ const PrayerCard = ({
   prayer,
   title,
   completed,
-}) =>
-  console.warn(initials) || (
-    <StyledCard cardColor={cardColor} isLoading={isLoading}>
-      <Content>
-        <AvatarPlacement hasAvatar={!!avatar}>
-          <AvatarWrapper>
-            {avatar || initials ? (
-              <UserAvatar initials={initials} source={avatar} />
-            ) : (
-              <DefaultAvatar />
-            )}
-          </AvatarWrapper>
-        </AvatarPlacement>
-        {isLoading || prayer ? (
-          <>
-            <H4 padded>{title}</H4>
-            <BodyText>{prayer}</BodyText>
-          </>
-        ) : (
-          </* we render this without `padded` so that the input text can be aligned correctly */>
-            <H4>{title}</H4>
-            <PrayerInput
-              onChangeText={onPrayerChangeText}
-              completed={completed}
-            />
-          </>
-        )}
-      </Content>
-    </StyledCard>
-  );
+}) => (
+  <StyledCard cardColor={cardColor} isLoading={isLoading}>
+    <Content>
+      <AvatarPlacement hasAvatar={!!avatar}>
+        <AvatarWrapper>
+          {avatar || initials ? (
+            <UserAvatar initials={initials} source={avatar} />
+          ) : (
+            <DefaultAvatar />
+          )}
+        </AvatarWrapper>
+      </AvatarPlacement>
+      {isLoading || prayer ? (
+        <>
+          <H4 padded>{title}</H4>
+          <BodyText>{prayer}</BodyText>
+        </>
+      ) : (
+        </* we render this without `padded` so that the input text can be aligned correctly */>
+          <H4>{title}</H4>
+          <PrayerInput
+            onChangeText={onPrayerChangeText}
+            completed={completed}
+          />
+        </>
+      )}
+    </Content>
+  </StyledCard>
+);
 
 PrayerCard.propTypes = {
   avatar: PropTypes.shape({}),
