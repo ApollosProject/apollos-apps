@@ -1,29 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from '../../styled';
-import ConnectedImage, { ImageSourceType } from '../../ConnectedImage';
+import { withTheme } from '../../theme';
+import { ImageSourceType } from '../../ConnectedImage';
 import { withIsLoading } from '../../isLoading';
+import Avatar from '../../Avatar';
 
-const CellImage = styled(
+const CellImage = withTheme(
   ({ theme }) => ({
-    width: theme.sizing.baseUnit * 4,
-    height: theme.sizing.baseUnit * 4,
-    borderRadius: theme.sizing.baseUnit * 2,
-    marginRight: theme.sizing.baseUnit,
+    themeSize: theme.sizing.baseUnit * 4,
+    containerStyle: {
+      marginRight: theme.sizing.baseUnit,
+    },
   }),
   'ui-kit.FollowList.FollowListItem.FollowListImage.CellImage'
-)(ConnectedImage);
+)(Avatar);
 
-const FollowListImage = ({ isLoading, source }) => {
+const FollowListImage = ({ isLoading, source, initials }) => {
   if (isLoading) {
-    return <CellImage />;
+    return <CellImage size="small" initials={initials} />;
   }
-  return <CellImage source={source} />;
+  return <CellImage size="small" source={source} initials={initials} />;
 };
 
 FollowListImage.propTypes = {
   source: ImageSourceType,
   isLoading: PropTypes.bool,
+  initials: PropTypes.string,
 };
 
 export default withIsLoading(FollowListImage);

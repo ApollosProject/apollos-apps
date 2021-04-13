@@ -12,6 +12,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import Touchable from '../Touchable';
 import styled from '../styled';
+import Avatar from '../Avatar';
 import Navigator from './Navigator';
 import Prompt from './Prompt';
 
@@ -107,7 +108,11 @@ const AddCommentInput = ({
 
       {showInlinePrompt ? (
         <Touchable onPress={openModal}>
-          <Prompt image={profile?.photo} prompt={prompt} />
+          <Prompt
+            image={profile?.photo}
+            initials={Avatar.initials(profile?.firstName, profile?.lastName)}
+            prompt={prompt}
+          />
         </Touchable>
       ) : null}
     </>
@@ -120,6 +125,8 @@ AddCommentInput.propTypes = {
   profile: PropTypes.shape({
     photo: PropTypes.shape({ uri: PropTypes.string }),
     nickName: PropTypes.string,
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
   }),
   bottomSheetModalRef: PropTypes.shape({
     current: PropTypes.shape({

@@ -95,6 +95,7 @@ const Editor = ({
   showCancel,
   bottomSheetIndex,
   hiddenIndex,
+  profile,
 }) => {
   const keyboardHeight = useKeyboardHeight();
   const text = useSharedValue(initialValue);
@@ -207,7 +208,13 @@ const Editor = ({
         <TextInput
           prefix={
             <Touchable onPress={() => bottomSheetModalRef.current?.expand()}>
-              <EditorAvatar source={image} />
+              <EditorAvatar
+                initials={Avatar.initials(
+                  profile?.firstName,
+                  profile?.lastName
+                )}
+                source={image}
+              />
             </Touchable>
           }
           defaultValue={initialValue}
@@ -258,6 +265,10 @@ Editor.propTypes = {
   text: PropTypes.shape({
     value: PropTypes.string,
     setValue: PropTypes.func,
+  }),
+  profile: PropTypes.shape({
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
   }),
   initialValue: PropTypes.string,
   headerTitle: PropTypes.string,

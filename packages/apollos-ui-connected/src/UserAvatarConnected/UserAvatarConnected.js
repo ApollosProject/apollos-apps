@@ -7,10 +7,10 @@ import { Avatar } from '@apollosproject/ui-kit';
 import GET_USER_PHOTO from './getUserPhoto';
 
 const GetPhotoData = ({ children }) => (
-  <Query query={GET_USER_PHOTO}>
+  <Query query={GET_USER_PHOTO} fetchPolicy={'cache-and-network'}>
     {({ data: { currentUser = {} } = {} }) => {
-      const photo = get(currentUser, 'profile.photo');
-      return children({ photo });
+      const profile = get(currentUser, 'profile', {});
+      return children(profile);
     }}
   </Query>
 );
@@ -28,7 +28,7 @@ const UserAvatarConnected = ({
   size,
 }) => (
   <GetPhotoData>
-    {({ photo }) => (
+    {({ photo, firstName, lastName }) => (
       <Avatar
         buttonIcon={buttonIcon}
         containerStyle={containerStyle}
@@ -37,6 +37,7 @@ const UserAvatarConnected = ({
         onPressIcon={onPressIcon}
         size={size}
         source={photo}
+        initials={Avatar.initials(firstName, lastName)}
       />
     )}
   </GetPhotoData>

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View, Platform } from 'react-native';
-import { get } from 'lodash';
+import { get, compact } from 'lodash';
 import { compose, setDisplayName } from 'recompose';
 
 import ConnectedImage from '../ConnectedImage';
@@ -107,15 +107,15 @@ const Avatar = ({
   onPressIcon,
   notification,
   iconButtonProps,
-  placeholderInitials,
+  initials,
   ...imageProps
 }) => (
   <Container style={containerStyle} themeSize={themeSize}>
     {!isLoading && source && source.uri ? ( // eslint-disable-line no-nested-ternary
       <Image source={source} {...imageProps} themeSize={themeSize} />
-    ) : placeholderInitials ? (
+    ) : initials ? (
       <PlaceholderInitials
-        placeholderInitials={placeholderInitials}
+        placeholderInitials={initials}
         themeSize={themeSize}
         isLoading={false}
       />
@@ -156,6 +156,11 @@ Avatar.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   ...ConnectedImage.propTypes,
 };
+
+Avatar.initials = (...names) =>
+  compact(names)
+    .map((n) => n.substring(0, 1).toUpperCase())
+    .join('');
 
 export default withTheme(
   ({ theme, size, themeSize }) => ({

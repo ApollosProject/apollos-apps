@@ -26,6 +26,7 @@ const PRAYER_LIST_FEATURE_FRAGMENT = gql`
         id
         nickName
         firstName
+        lastName
         photo {
           uri
         }
@@ -46,6 +47,7 @@ const VERTICAL_PRAYER_LIST_FEATURE_FRAGMENT = gql`
       isPrayed
       requestor {
         id
+        firstName
         nickName
         firstName
         photo {
@@ -258,6 +260,8 @@ const COMMENT_LIST_FEATURE_FRAGMENT = gql`
       person {
         id
         nickName
+        firstName
+        lastName
         photo {
           uri
         }

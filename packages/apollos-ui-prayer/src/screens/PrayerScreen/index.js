@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { useMutation } from '@apollo/client';
 
 import { AnalyticsContext } from '@apollosproject/ui-analytics';
+import { Avatar } from '@apollosproject/ui-kit';
 
 import PrayerCard from '../../PrayerCard';
 import PrayerView from '../../PrayerView';
@@ -62,6 +63,10 @@ const PrayerScreen = ({
       <PrayerCardComponent
         prayer={prayer.text}
         avatar={prayer.requestor?.photo || null}
+        initials={Avatar.initials(
+          prayer.requestor?.firstName,
+          prayer.requestor?.lastName
+        )}
         title={`Pray for ${
           prayer.requestor?.nickName || prayer.requestor?.firstName
         }`}
@@ -81,6 +86,7 @@ PrayerScreen.propTypes = {
       photo: PropTypes.any,
       nickName: PropTypes.string,
       firstName: PropTypes.string,
+      lastName: PropTypes.string,
     }),
     text: PropTypes.string,
     __typename: PropTypes.string,

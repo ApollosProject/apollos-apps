@@ -3,7 +3,7 @@ import gql from 'graphql-tag';
 import { useQuery, useMutation } from '@apollo/client';
 import PropTypes from 'prop-types';
 
-import { named } from '@apollosproject/ui-kit';
+import { named, Avatar } from '@apollosproject/ui-kit';
 import { AnalyticsContext } from '@apollosproject/ui-analytics';
 
 import PrayerCard from '../../PrayerCard';
@@ -24,6 +24,8 @@ export const GET_USER_PHOTO = gql`
     currentUser {
       id
       profile {
+        firstName
+        lastName
         id
         photo {
           uri
@@ -45,6 +47,8 @@ const AddPrayerScreenConnected = ({
 }) => {
   const { data: userData } = useQuery(GET_USER_PHOTO);
   const photo = userData?.currentUser?.profile?.photo;
+  const firstName = userData?.currentUser?.profile?.firstName;
+  const lastName = userData?.currentUser?.profile?.lastName;
 
   const { track } = useContext(AnalyticsContext);
 
@@ -74,6 +78,7 @@ const AddPrayerScreenConnected = ({
       >
         <PrayerCardComponent
           avatar={photo || null}
+          initials={Avatar.initials(firstName, lastName)}
           title={title}
           onPrayerChangeText={setPrayer}
           completed={completed}

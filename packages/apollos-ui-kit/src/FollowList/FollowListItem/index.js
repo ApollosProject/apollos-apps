@@ -47,10 +47,11 @@ const FollowListItem = ({
   onHide,
   onConfirm,
   onFollow,
+  initials,
 }) => {
   return (
     <Cell>
-      <FollowListImage source={imageSource} />
+      <FollowListImage initials={initials} source={imageSource} />
       <TextContainer>
         {name ? <H5 numberOfLines={1}>{name}</H5> : null}
       </TextContainer>
@@ -90,7 +91,8 @@ const FollowListItem = ({
 };
 
 FollowListItem.propTypes = {
-  imageSource: ImageSourceType.isRequired,
+  imageSource: ImageSourceType,
+  initials: PropTypes.string,
   name: PropTypes.string,
   followRequested: PropTypes.bool,
   confirmedFollower: PropTypes.bool,

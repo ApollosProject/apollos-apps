@@ -11,6 +11,7 @@ import {
   styled,
   withIsLoading,
   withTheme,
+  Avatar,
 } from '@apollosproject/ui-kit';
 
 const AvatarWrapper = styled(
@@ -31,6 +32,10 @@ const getAvatars = (prayers) =>
     id: prayer.id,
     notification: !prayer.isPrayed,
     source: prayer.requestor?.photo,
+    initials: Avatar.initials(
+      prayer.requestor?.firstName,
+      prayer.requestor?.lastName
+    ),
   }));
 
 const Header = styled(
