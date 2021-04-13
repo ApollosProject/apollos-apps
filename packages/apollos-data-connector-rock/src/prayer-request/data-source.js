@@ -23,13 +23,13 @@ export default class PrayerRequest extends RockApolloDataSource {
 
     if (person.originType && person.originType === 'rock') {
       const { primaryAliasId } = await this.request('/People')
-        .find(`Id eq ${person.originId}`)
+        .filter(`Id eq ${person.originId}`)
         .first();
       return primaryAliasId;
     }
 
     const { primaryAliasId } = await this.request('/People')
-      .find(`Id eq ${personId}`)
+      .filter(`Id eq ${personId}`)
       .first();
     return primaryAliasId;
   };
@@ -77,6 +77,7 @@ export default class PrayerRequest extends RockApolloDataSource {
   };
 
   getRequestor = async ({ requestedByPersonAliasId }) => {
+    if (!requestedByPersonAliasId) return null;
     const { personId } = await this.request('/PersonAlias')
       .filter(`Id eq ${requestedByPersonAliasId}`)
       .select('PersonId')

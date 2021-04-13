@@ -1,70 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the Card component it should render a placeholder 1`] = `
-<View
-  isLoading={true}
-  style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "marginHorizontal": 16,
-      "marginVertical": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
-    }
-  }
->
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    isLoading={true}
     style={
       Object {
+        "backgroundColor": "#FFFFFF",
         "borderRadius": 16,
-        "overflow": "hidden",
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
       }
     }
   >
     <View
       style={
         Object {
-          "paddingHorizontal": 16,
-          "paddingVertical": 16,
+          "borderRadius": 16,
+          "overflow": "hidden",
         }
       }
     >
       <View
         style={
           Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 24,
-            "marginVertical": 1.8000000000000007,
-            "width": "100%",
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "alignSelf": "flex-start",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "borderWidth": 0,
-            "height": 32,
-            "paddingHorizontal": 12,
-            "width": 64,
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "paddingBottom": 18,
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
           }
         }
       >
@@ -74,20 +59,8 @@ exports[`the Card component it should render a placeholder 1`] = `
               "alignSelf": "stretch",
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
-              "height": 16,
-              "marginVertical": 5,
-              "width": "85%",
-            }
-          }
-        />
-        <View
-          style={
-            Object {
-              "alignSelf": "stretch",
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "height": 16,
-              "marginVertical": 5,
+              "height": 24,
+              "marginVertical": 1.8000000000000007,
               "width": "100%",
             }
           }
@@ -95,238 +68,261 @@ exports[`the Card component it should render a placeholder 1`] = `
         <View
           style={
             Object {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "borderWidth": 0,
+              "height": 32,
+              "paddingHorizontal": 12,
+              "width": 64,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "paddingBottom": 18,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignSelf": "stretch",
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 16,
+                "height": 16,
+                "marginVertical": 5,
+                "width": "85%",
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "alignSelf": "stretch",
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 16,
+                "height": 16,
+                "marginVertical": 5,
+                "width": "100%",
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "alignSelf": "stretch",
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 16,
+                "height": 16,
+                "marginVertical": 5,
+                "width": "75%",
+              }
+            }
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "justifyContent": "space-between",
+            "paddingHorizontal": 16,
+            "paddingTop": 0,
+            "paddingVertical": 16,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
               "alignSelf": "stretch",
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
-              "height": 16,
-              "marginVertical": 5,
-              "width": "75%",
+              "height": 32,
+              "width": 64,
+            }
+          }
+        />
+        <Text
+          style={
+            Object {
+              "color": "#17B582",
             }
           }
         />
       </View>
     </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "justifyContent": "space-between",
-          "paddingHorizontal": 16,
-          "paddingTop": 0,
-          "paddingVertical": 16,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 32,
-            "width": 64,
-          }
-        }
-      />
-      <Text
-        style={
-          Object {
-            "color": "#17B582",
-          }
-        }
-      />
-    </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`the Card component should render 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "marginHorizontal": 16,
-      "marginVertical": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
+  />,
   <View
     style={
       Object {
+        "backgroundColor": "#FFFFFF",
         "borderRadius": 16,
-        "overflow": "hidden",
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
       }
     }
   >
     <View
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
           "overflow": "hidden",
-          "width": "100%",
         }
       }
     >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://picsum.photos/600/400/?image=63",
-              "url": "https://picsum.photos/600/400/?image=63",
-            },
-          ]
-        }
+      <View
         style={
           Object {
-            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "resizeMode": "cover",
+            "overflow": "hidden",
             "width": "100%",
           }
         }
-      />
-    </View>
-    <View
-      style={
-        Object {
-          "paddingHorizontal": 16,
-          "paddingVertical": 16,
-        }
-      }
-    >
-      <Text
-        style={
-          Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Black",
-            "fontSize": 24,
-            "lineHeight": 27.6,
-          }
-        }
       >
-        Coffee
-      </Text>
-      <View
-        bordered={false}
-        disabled={false}
-        pill={false}
-        style={
-          Object {
-            "alignItems": "center",
-            "alignSelf": "flex-start",
-            "backgroundColor": "rgba(255, 255, 255, 0.4)",
-            "borderColor": "rgba(255, 255, 255, 0.4)",
-            "borderRadius": 16,
-            "borderWidth": 0,
-            "elevation": 2,
-            "flexDirection": "row",
-            "height": 32,
-            "justifyContent": "center",
-            "opacity": 1,
-            "overflow": "hidden",
-            "paddingHorizontal": 12,
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/600/400/?image=63",
+                "url": "https://picsum.photos/600/400/?image=63",
+              },
+            ]
           }
-        }
-      >
-        <View
-          hasTitle={true}
           style={
             Object {
-              "paddingRight": 8,
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "resizeMode": "cover",
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Black",
+              "fontSize": 24,
+              "lineHeight": 27.6,
             }
           }
         >
-          <RNSVGSvgView
-            align="xMidYMid"
-            bbHeight={16}
-            bbWidth={16}
-            height={16}
-            meetOrSlice={0}
-            minX={0}
-            minY={0}
-            style={
-              Array [
-                Object {
-                  "backgroundColor": "transparent",
-                  "borderWidth": 0,
-                },
-                Object {},
-                null,
-                Object {
-                  "flex": 0,
-                  "height": 16,
-                  "width": 16,
-                },
-              ]
+          Coffee
+        </Text>
+        <View
+          bordered={false}
+          disabled={false}
+          pill={false}
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "rgba(255, 255, 255, 0.4)",
+              "borderColor": "rgba(255, 255, 255, 0.4)",
+              "borderRadius": 16,
+              "borderWidth": 0,
+              "elevation": 2,
+              "flexDirection": "row",
+              "height": 32,
+              "justifyContent": "center",
+              "opacity": 1,
+              "overflow": "hidden",
+              "paddingHorizontal": 12,
             }
-            vbHeight={24}
-            vbWidth={24}
-            width={16}
+          }
+        >
+          <View
+            hasTitle={true}
+            style={
+              Object {
+                "paddingRight": 8,
+              }
+            }
           >
-            <RNSVGGroup
-              fill={
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={16}
+              bbWidth={16}
+              height={16}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
                 Array [
-                  0,
-                  4278190080,
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  Object {},
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 16,
+                    "width": 16,
+                  },
                 ]
               }
-              fillOpacity={1}
-              fillRule={1}
-              font={Object {}}
-              matrix={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-              opacity={1}
-              originX={0}
-              originY={0}
-              propList={Array []}
-              rotation={0}
-              scaleX={1}
-              scaleY={1}
-              skewX={0}
-              skewY={0}
-              stroke={null}
-              strokeDasharray={null}
-              strokeDashoffset={null}
-              strokeLinecap={0}
-              strokeLinejoin={0}
-              strokeMiterlimit={4}
-              strokeOpacity={1}
-              strokeWidth={1}
-              vectorEffect={0}
-              x={0}
-              y={0}
+              vbHeight={24}
+              vbWidth={24}
+              width={16}
             >
-              <RNSVGPath
-                d="M14.07 18.6c0-.42-.33-.75-.74-.75h-2.66c-.4 0-.74.33-.74.74 0 .4.33.7.74.7h2.66c.4 0 .74-.35.74-.76zM2.74 7.47h18.52c.4 0 .74-.33.74-.74 0-.4-.33-.74-.74-.74H2.74c-.4 0-.74.3-.74.7 0 .4.33.73.74.73zm15.8 5.2c0-.42-.32-.75-.73-.75H6.2c-.42 0-.75.33-.75.74 0 .4.33.74.74.74h11.6c.4 0 .7-.32.7-.73z"
+              <RNSVGGroup
                 fill={
                   Array [
                     0,
-                    4294967295,
+                    4278190080,
                   ]
                 }
                 fillOpacity={1}
                 fillRule={1}
+                font={Object {}}
                 matrix={
                   Array [
                     1,
@@ -340,11 +336,7 @@ exports[`the Card component should render 1`] = `
                 opacity={1}
                 originX={0}
                 originY={0}
-                propList={
-                  Array [
-                    "fill",
-                  ]
-                }
+                propList={Array []}
                 rotation={0}
                 scaleX={1}
                 scaleY={1}
@@ -361,106 +353,152 @@ exports[`the Card component should render 1`] = `
                 vectorEffect={0}
                 x={0}
                 y={0}
-              />
-            </RNSVGGroup>
-          </RNSVGSvgView>
+              >
+                <RNSVGPath
+                  d="M14.07 18.6c0-.42-.33-.75-.74-.75h-2.66c-.4 0-.74.33-.74.74 0 .4.33.7.74.7h2.66c.4 0 .74-.35.74-.76zM2.74 7.47h18.52c.4 0 .74-.33.74-.74 0-.4-.33-.74-.74-.74H2.74c-.4 0-.74.3-.74.7 0 .4.33.73.74.73zm15.8 5.2c0-.42-.32-.75-.73-.75H6.2c-.42 0-.75.33-.75.74 0 .4.33.74.74.74h11.6c.4 0 .7-.32.7-.73z"
+                  fill={
+                    Array [
+                      0,
+                      4294967295,
+                    ]
+                  }
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+          </View>
+          <Text
+            style={
+              Object {
+                "alignItems": "center",
+                "color": "#FFFFFF",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 12,
+                "justifyContent": "center",
+                "lineHeight": 18,
+                "textAlign": "center",
+              }
+            }
+          >
+            noun
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "paddingBottom": 18,
+            }
+          }
+        >
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "InterUI-Regular",
+                "fontSize": 16,
+                "lineHeight": 26,
+              }
+            }
+          >
+            A dark substance that turns "leave me alone" into "good morning!"
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "justifyContent": "space-between",
+            "paddingHorizontal": 16,
+            "paddingTop": 0,
+            "paddingVertical": 16,
+          }
+        }
+      >
+        <View
+          bordered={false}
+          disabled={false}
+          pill={false}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#00676D",
+              "borderColor": "#00676D",
+              "borderRadius": 16,
+              "borderWidth": 2,
+              "elevation": 2,
+              "flexDirection": "row",
+              "height": 48,
+              "justifyContent": "center",
+              "opacity": 1,
+              "overflow": "hidden",
+              "paddingHorizontal": 16,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#FFFFFF",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 16,
+                "lineHeight": 24,
+              }
+            }
+          >
+            Learn More
+          </Text>
         </View>
         <Text
           style={
             Object {
-              "alignItems": "center",
-              "color": "#FFFFFF",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "justifyContent": "center",
-              "lineHeight": 18,
-              "textAlign": "center",
+              "color": "#17B582",
             }
           }
         >
-          noun
-        </Text>
-      </View>
-      <View
-        style={
-          Object {
-            "paddingBottom": 18,
-          }
-        }
-      >
-        <Text
-          bold={false}
-          italic={false}
-          style={
-            Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Regular",
-              "fontSize": 16,
-              "lineHeight": 26,
-            }
-          }
-        >
-          A dark substance that turns "leave me alone" into "good morning!"
+          Share
         </Text>
       </View>
     </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "justifyContent": "space-between",
-          "paddingHorizontal": 16,
-          "paddingTop": 0,
-          "paddingVertical": 16,
-        }
-      }
-    >
-      <View
-        bordered={false}
-        disabled={false}
-        pill={false}
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#00676D",
-            "borderColor": "#00676D",
-            "borderRadius": 16,
-            "borderWidth": 2,
-            "elevation": 2,
-            "flexDirection": "row",
-            "height": 48,
-            "justifyContent": "center",
-            "opacity": 1,
-            "overflow": "hidden",
-            "paddingHorizontal": 16,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#FFFFFF",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 16,
-              "lineHeight": 24,
-            }
-          }
-        >
-          Learn More
-        </Text>
-      </View>
-      <Text
-        style={
-          Object {
-            "color": "#17B582",
-          }
-        }
-      >
-        Share
-      </Text>
-    </View>
-  </View>
-</View>
+  </View>,
+]
 `;

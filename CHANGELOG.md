@@ -3,6 +3,136 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.11.0](https://github.com/ApollosProject/apollos-apps/compare/v2.10.0...v2.11.0) (2021-04-12)
+
+
+### Features
+
+* add books of the bible to scripture references ([#1859](https://github.com/ApollosProject/apollos-apps/issues/1859)) ([87f6ded](https://github.com/ApollosProject/apollos-apps/commit/87f6dedc7dcd979c1aa96bdb2b308b2fc1288900))
+
+
+### Bug Fixes
+
+* Buttons hiding too soon in editing modal on Android ([#1864](https://github.com/ApollosProject/apollos-apps/issues/1864)) ([2734e39](https://github.com/ApollosProject/apollos-apps/commit/2734e398fdf375cc7d1d42d8afe1a7dbac362d05))
+* Onesignal Api change, make sure external_user_ids are strings ([#1862](https://github.com/ApollosProject/apollos-apps/issues/1862)) ([e97d739](https://github.com/ApollosProject/apollos-apps/commit/e97d73939d848e353f08db9db50f8667d78511f1))
+
+
+
+## [2.10.0](https://github.com/ApollosProject/apollos-apps/compare/v2.9.0...v2.10.0) (2021-04-06)
+
+
+### Features
+
+* Added analytics for new features - journal and following ([#1851](https://github.com/ApollosProject/apollos-apps/issues/1851)) ([1f307b0](https://github.com/ApollosProject/apollos-apps/commit/1f307b0c5719e2d42cead7ea411552f565389ff5))
+* Comment update and delete ([#1855](https://github.com/ApollosProject/apollos-apps/issues/1855)) ([6968b6c](https://github.com/ApollosProject/apollos-apps/commit/6968b6cae059adc4b810c18d2ed9e217166c48cb))
+* Edit / Delete journals UI ([#1856](https://github.com/ApollosProject/apollos-apps/issues/1856)) ([6dc0fdd](https://github.com/ApollosProject/apollos-apps/commit/6dc0fdda33fdba42969fa3a39449cb3e1a25dc15))
+
+
+### Bug Fixes
+
+* add safety check to prayer requestor ([#1857](https://github.com/ApollosProject/apollos-apps/issues/1857)) ([56cf8da](https://github.com/ApollosProject/apollos-apps/commit/56cf8da9c0a7bf93283669c85d9156a606a282f6))
+* component overrides for NodeSingleConnected ([#1858](https://github.com/ApollosProject/apollos-apps/issues/1858)) ([e57384e](https://github.com/ApollosProject/apollos-apps/commit/e57384ed415ba052b3cd5710a24013115d081191))
+* Optimize Cloudinary image settings ([#1854](https://github.com/ApollosProject/apollos-apps/issues/1854)) ([bd25e77](https://github.com/ApollosProject/apollos-apps/commit/bd25e77693fd6187dd74a54c8f89e3e27892027b))
+
+
+
+## [2.9.0](https://github.com/ApollosProject/apollos-apps/compare/v2.8.0...v2.9.0) (2021-03-30)
+
+
+### Features
+
+* Optimistic response for requesting follows ([#1839](https://github.com/ApollosProject/apollos-apps/issues/1839)) ([54a6893](https://github.com/ApollosProject/apollos-apps/commit/54a68932bb1b39d3cc2caaa4081333ae1580aac3))
+
+
+### Bug Fixes
+
+* allow adding images to Rock CMS ([#1834](https://github.com/ApollosProject/apollos-apps/issues/1834)) ([80a4fb8](https://github.com/ApollosProject/apollos-apps/commit/80a4fb8ebcf8678241ae85cce6cb67cffcc6a2a6))
+* Avatar not showing up / crash when adding comment ([#1841](https://github.com/ApollosProject/apollos-apps/issues/1841)) ([8ed9c1d](https://github.com/ApollosProject/apollos-apps/commit/8ed9c1d845e828e4a14c13e1b5d02912c9cb04b0))
+* Video playing in background after closing ([#1837](https://github.com/ApollosProject/apollos-apps/issues/1837)) ([30b694f](https://github.com/ApollosProject/apollos-apps/commit/30b694f973885f1ffce16d6dcbe82f17371d2df5))
+
+
+
+## [2.8.0](https://github.com/ApollosProject/apollos-apps/compare/v2.7.0...v2.8.0) (2021-03-29)
+
+
+### Features
+
+* Add like button to comments ([#1832](https://github.com/ApollosProject/apollos-apps/issues/1832)) ([3c778a3](https://github.com/ApollosProject/apollos-apps/commit/3c778a35b8eebee39ce5a118894343d13ac79114))
+
+
+### Bug Fixes
+
+* Map gender to a postgres compatible value ([#1836](https://github.com/ApollosProject/apollos-apps/issues/1836)) ([183da8b](https://github.com/ApollosProject/apollos-apps/commit/183da8bfafa7f810d77cd470f8f74ae8dcd688e2))
+
+
+
+## [2.7.0](https://github.com/ApollosProject/apollos-apps/compare/v2.6.0...v2.7.0) (2021-03-25)
+
+
+### Features
+
+* Bottom sheet editor v2 ([#1818](https://github.com/ApollosProject/apollos-apps/issues/1818)) ([615715b](https://github.com/ApollosProject/apollos-apps/commit/615715b9fe0d7cba49dbe3abd895194891e017ad))
+* Liking comments ([#1829](https://github.com/ApollosProject/apollos-apps/issues/1829)) ([4590af7](https://github.com/ApollosProject/apollos-apps/commit/4590af7c4299d3e7e0643b25385d82cfc7891ada))
+
+
+### Bug Fixes
+
+* find correct person when updating push notifications ([#1831](https://github.com/ApollosProject/apollos-apps/issues/1831)) ([c5d8085](https://github.com/ApollosProject/apollos-apps/commit/c5d80852899b006aa3b736ff82645765c418eb9d))
+
+
+
+## [2.6.0](https://github.com/ApollosProject/apollos-apps/compare/v2.5.0...v2.6.0) (2021-03-24)
+
+
+### Features
+
+* Onboard only seen slides ([#1827](https://github.com/ApollosProject/apollos-apps/issues/1827)) ([199edb8](https://github.com/ApollosProject/apollos-apps/commit/199edb8b3a83ab053964c640aa9d477ef3a4c991))
+
+
+### Bug Fixes
+
+* Don't search non-apollosUsers and trim whitespace ([#1820](https://github.com/ApollosProject/apollos-apps/issues/1820)) ([3599340](https://github.com/ApollosProject/apollos-apps/commit/35993404922e8d9ae3bdfe275a6f2488f1ae2c8b))
+
+
+
+## [2.5.0](https://github.com/ApollosProject/apollos-apps/compare/v2.4.0...v2.5.0) (2021-03-22)
+
+
+### Features
+
+* add bottom sheet to AddCommentForm ([#1807](https://github.com/ApollosProject/apollos-apps/issues/1807)) ([4c09ff0](https://github.com/ApollosProject/apollos-apps/commit/4c09ff0382c60aa011080407de5a6443d5b35db5))
+* Auto follow ([#1810](https://github.com/ApollosProject/apollos-apps/issues/1810)) ([a96bfec](https://github.com/ApollosProject/apollos-apps/commit/a96bfec991ba1f4f444183d40b525b89063a31e9))
+* People Search ([#1815](https://github.com/ApollosProject/apollos-apps/issues/1815)) ([16e3556](https://github.com/ApollosProject/apollos-apps/commit/16e35562198d9b0049e067075c53f9f9aab0d25f))
+* Push notifications on follow request ([#1806](https://github.com/ApollosProject/apollos-apps/issues/1806)) ([19ba81b](https://github.com/ApollosProject/apollos-apps/commit/19ba81b0452c19275918fbdc251425fa981a735e))
+
+
+### Bug Fixes
+
+* correctly pull person ID ([#1817](https://github.com/ApollosProject/apollos-apps/issues/1817)) ([14ba52d](https://github.com/ApollosProject/apollos-apps/commit/14ba52d28011d2ba579dab65e6a102b7e85e8cbd))
+* follow list button states ([#1816](https://github.com/ApollosProject/apollos-apps/issues/1816)) ([0b28777](https://github.com/ApollosProject/apollos-apps/commit/0b287776e7a05c02dc68e1e67a9503d69f70f1c5))
+
+
+
+## [2.4.0](https://github.com/ApollosProject/apollos-apps/compare/v2.3.1...v2.4.0) (2021-03-18)
+
+
+### Features
+
+* add notification settings ([#1764](https://github.com/ApollosProject/apollos-apps/issues/1764)) ([ac590ac](https://github.com/ApollosProject/apollos-apps/commit/ac590acc94c6f1d39039fc58eabf94f7cc12575c))
+* Adds Postgres migrations ([#1791](https://github.com/ApollosProject/apollos-apps/issues/1791)) ([eb115b6](https://github.com/ApollosProject/apollos-apps/commit/eb115b616eaa6f1a69c5c0701bbb8dd99e0b4dbe))
+* Adds RequestedFollowsList  ([#1792](https://github.com/ApollosProject/apollos-apps/issues/1792)) ([b855156](https://github.com/ApollosProject/apollos-apps/commit/b85515670375785deb366c787819020656aee29c))
+* Pull to refresh on the connect tab ([#1803](https://github.com/ApollosProject/apollos-apps/issues/1803)) ([3d0b4a8](https://github.com/ApollosProject/apollos-apps/commit/3d0b4a83b7f8b90a5d22018494f4efa51c3aa29e))
+* Sort users you follow to the top ([#1801](https://github.com/ApollosProject/apollos-apps/issues/1801)) ([d6360a4](https://github.com/ApollosProject/apollos-apps/commit/d6360a49fa60d34b0dc1f870b16a05458b8e428a))
+
+
+### Bug Fixes
+
+* gender auth onboarding issue ([#1782](https://github.com/ApollosProject/apollos-apps/issues/1782)) ([cc85dfe](https://github.com/ApollosProject/apollos-apps/commit/cc85dfe37b43d95b1baeaf2619ec6bd3a59757c1))
+* Unpressable onboarding buttons ([#1797](https://github.com/ApollosProject/apollos-apps/issues/1797)) ([c15555a](https://github.com/ApollosProject/apollos-apps/commit/c15555abf014fcd804f897d0a5dd840970870924))
+* Upgrades and fixes for comments ([#1800](https://github.com/ApollosProject/apollos-apps/issues/1800)) ([b77dbc2](https://github.com/ApollosProject/apollos-apps/commit/b77dbc28af621190173e7c82e0e4295abc047109))
+
+
+
 ### [2.3.1](https://github.com/ApollosProject/apollos-apps/compare/v2.3.0...v2.3.1) (2021-03-11)
 
 **Note:** Version bump only for package apollos

@@ -11,5 +11,7 @@ export default {
     id: ({ id, bibleId }, args, context, { parentType }) =>
       createGlobalId(JSON.stringify({ id, bibleId }), parentType.name),
     html: ({ content }) => content,
+    book: ({ bookId }, __, { dataSources: { Scripture } }) =>
+      Scripture.getBook(bookId),
   },
 };

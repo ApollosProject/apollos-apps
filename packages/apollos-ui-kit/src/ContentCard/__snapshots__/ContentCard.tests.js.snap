@@ -1,229 +1,206 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ContentCard renders Basic card, with Image 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "marginHorizontal": 16,
-      "marginVertical": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
+  />,
   <View
     style={
       Object {
+        "backgroundColor": "#FFFFFF",
         "borderRadius": 16,
-        "overflow": "hidden",
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
       }
     }
   >
     <View
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
           "overflow": "hidden",
-          "width": "100%",
-        }
-      }
-    >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://picsum.photos/600/400/?random",
-            },
-          ]
-        }
-        style={
-          Object {
-            "aspectRatio": 1,
-            "backgroundColor": "#A5A5A5",
-            "resizeMode": "cover",
-            "width": "100%",
-          }
-        }
-      />
-    </View>
-    <View
-      style={
-        Object {
-          "paddingBottom": 12,
-          "paddingHorizontal": 16,
-          "paddingTop": 24,
-          "paddingVertical": 16,
-        }
-      }
-    >
-      <Text
-        ellipsizeMode="tail"
-        numberOfLines={3}
-        style={
-          Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Black",
-            "fontSize": 24,
-            "lineHeight": 27.6,
-          }
-        }
-      >
-        Acts: A 28-Day Devotional
-      </Text>
-      <Text
-        bold={false}
-        ellipsizeMode="tail"
-        italic={false}
-        numberOfLines={3}
-        style={
-          Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Regular",
-            "fontSize": 16,
-            "lineHeight": 26,
-          }
-        }
-      >
-        How does one man’s life and death change the course of history? One conversation at a time.
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "height": 32,
-          "justifyContent": "space-between",
-          "paddingHorizontal": 16,
-          "paddingTop": 0,
-          "paddingVertical": 16,
-        }
-      }
-    />
-    <View
-      floating={false}
-      style={
-        Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "justifyContent": "space-between",
-          "left": 0,
-          "paddingHorizontal": 16,
-          "paddingTop": 0,
-          "paddingVertical": 16,
-          "position": "absolute",
-          "right": 0,
         }
       }
     >
       <View
         style={
           Object {
-            "flexDirection": "column",
+            "backgroundColor": "#A5A5A5",
+            "overflow": "hidden",
+            "width": "100%",
+          }
+        }
+      >
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/600/400/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "resizeMode": "cover",
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "paddingBottom": 12,
+            "paddingHorizontal": 16,
+            "paddingTop": 24,
+            "paddingVertical": 16,
+          }
+        }
+      >
+        <Text
+          ellipsizeMode="tail"
+          numberOfLines={3}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Black",
+              "fontSize": 24,
+              "lineHeight": 27.6,
+            }
+          }
+        >
+          Acts: A 28-Day Devotional
+        </Text>
+        <Text
+          bold={false}
+          ellipsizeMode="tail"
+          italic={false}
+          numberOfLines={3}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          How does one man’s life and death change the course of history? One conversation at a time.
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "height": 32,
+            "justifyContent": "space-between",
+            "paddingHorizontal": 16,
+            "paddingTop": 0,
+            "paddingVertical": 16,
+          }
+        }
+      />
+      <View
+        floating={false}
+        style={
+          Object {
+            "alignItems": "center",
+            "bottom": 0,
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "justifyContent": "space-between",
+            "left": 0,
+            "paddingHorizontal": 16,
+            "paddingTop": 0,
+            "paddingVertical": 16,
+            "position": "absolute",
+            "right": 0,
           }
         }
       >
         <View
-          flexed={false}
           style={
             Object {
-              "alignItems": "center",
-              "flex": null,
-              "flexDirection": "row",
+              "flexDirection": "column",
             }
           }
         >
-          <RNSVGSvgView
-            align="xMidYMid"
-            bbHeight={19.2}
-            bbWidth={19.2}
-            height={19.2}
-            meetOrSlice={0}
-            minX={0}
-            minY={0}
+          <View
+            flexed={false}
             style={
-              Array [
-                Object {
-                  "backgroundColor": "transparent",
-                  "borderWidth": 0,
-                },
-                undefined,
-                null,
-                Object {
-                  "flex": 0,
-                  "height": 19,
-                  "width": 19,
-                },
-              ]
+              Object {
+                "alignItems": "center",
+                "flex": null,
+                "flexDirection": "row",
+              }
             }
-            vbHeight={24}
-            vbWidth={24}
-            width={19.2}
           >
-            <RNSVGGroup
-              fill={
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={19.2}
+              bbWidth={19.2}
+              height={19.2}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
                 Array [
-                  0,
-                  4278190080,
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  undefined,
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 19,
+                    "width": 19,
+                  },
                 ]
               }
-              fillOpacity={1}
-              fillRule={1}
-              font={Object {}}
-              matrix={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-              opacity={1}
-              originX={0}
-              originY={0}
-              propList={Array []}
-              rotation={0}
-              scaleX={1}
-              scaleY={1}
-              skewX={0}
-              skewY={0}
-              stroke={null}
-              strokeDasharray={null}
-              strokeDashoffset={null}
-              strokeLinecap={0}
-              strokeLinejoin={0}
-              strokeMiterlimit={4}
-              strokeOpacity={1}
-              strokeWidth={1}
-              vectorEffect={0}
-              x={0}
-              y={0}
+              vbHeight={24}
+              vbWidth={24}
+              width={19.2}
             >
-              <RNSVGPath
-                d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
+              <RNSVGGroup
                 fill={
                   Array [
                     0,
-                    4289045925,
+                    4278190080,
                   ]
                 }
                 fillOpacity={1}
                 fillRule={1}
+                font={Object {}}
                 matrix={
                   Array [
                     1,
@@ -237,11 +214,7 @@ exports[`ContentCard renders Basic card, with Image 1`] = `
                 opacity={1}
                 originX={0}
                 originY={0}
-                propList={
-                  Array [
-                    "fill",
-                  ]
-                }
+                propList={Array []}
                 rotation={0}
                 scaleX={1}
                 scaleY={1}
@@ -258,439 +231,481 @@ exports[`ContentCard renders Basic card, with Image 1`] = `
                 vectorEffect={0}
                 x={0}
                 y={0}
-              />
-            </RNSVGGroup>
-          </RNSVGSvgView>
-          <View
-            style={
-              Object {
-                "paddingHorizontal": 4,
-              }
-            }
-            withIcon="like"
-          >
-            <Text
+              >
+                <RNSVGPath
+                  d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
+                  fill={
+                    Array [
+                      0,
+                      4289045925,
+                    ]
+                  }
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+            <View
               style={
                 Object {
-                  "color": "#A5A5A5",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "paddingHorizontal": 4,
                 }
               }
-              tint="#A5A5A5"
+              withIcon="like"
             >
-              16.8k
-            </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#A5A5A5",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 12,
+                    "lineHeight": 18,
+                  }
+                }
+                tint="#A5A5A5"
+              >
+                16.8k
+              </Text>
+            </View>
           </View>
         </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`ContentCard renders a Default Placeholder 1`] = `
-<View
-  isLoading={true}
-  style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "marginHorizontal": 16,
-      "marginVertical": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
-    }
-  }
->
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    isLoading={true}
     style={
       Object {
+        "backgroundColor": "#FFFFFF",
         "borderRadius": 16,
-        "overflow": "hidden",
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
       }
     }
   >
     <View
       style={
         Object {
-          "aspectRatio": 2,
-          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
           "overflow": "hidden",
-          "width": "100%",
         }
       }
     >
-      <Image
-        fadeDuration={250}
-        isLoading={true}
-        onLoad={[Function]}
-        source={Array []}
+      <View
         style={
           Object {
             "aspectRatio": 2,
             "backgroundColor": "#A5A5A5",
-            "resizeMode": "cover",
+            "overflow": "hidden",
             "width": "100%",
           }
         }
-      />
-    </View>
-    <View
-      style={
-        Object {
-          "paddingBottom": 12,
-          "paddingHorizontal": 16,
-          "paddingTop": 24,
-          "paddingVertical": 16,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 24,
-            "marginVertical": 1.8000000000000007,
-            "width": "100%",
+      >
+        <Image
+          fadeDuration={250}
+          isLoading={true}
+          onLoad={[Function]}
+          source={Array []}
+          style={
+            Object {
+              "aspectRatio": 2,
+              "backgroundColor": "#A5A5A5",
+              "resizeMode": "cover",
+              "width": "100%",
+            }
           }
-        }
-      />
+        />
+      </View>
       <View
         style={
           Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 16,
-            "marginVertical": 5,
-            "width": "100%",
-          }
-        }
-      />
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "height": 32,
-          "justifyContent": "space-between",
-          "paddingHorizontal": 16,
-          "paddingTop": 0,
-          "paddingVertical": 16,
-        }
-      }
-    />
-    <View
-      floating={false}
-      style={
-        Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "justifyContent": "space-between",
-          "left": 0,
-          "paddingHorizontal": 16,
-          "paddingTop": 0,
-          "paddingVertical": 16,
-          "position": "absolute",
-          "right": 0,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "flexDirection": "column",
+            "paddingBottom": 12,
+            "paddingHorizontal": 16,
+            "paddingTop": 24,
+            "paddingVertical": 16,
           }
         }
       >
         <View
-          flexed={false}
           style={
             Object {
-              "alignItems": "center",
-              "flex": null,
-              "flexDirection": "row",
+              "alignSelf": "stretch",
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 24,
+              "marginVertical": 1.8000000000000007,
+              "width": "100%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 16,
+              "marginVertical": 5,
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "height": 32,
+            "justifyContent": "space-between",
+            "paddingHorizontal": 16,
+            "paddingTop": 0,
+            "paddingVertical": 16,
+          }
+        }
+      />
+      <View
+        floating={false}
+        style={
+          Object {
+            "alignItems": "center",
+            "bottom": 0,
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "justifyContent": "space-between",
+            "left": 0,
+            "paddingHorizontal": 16,
+            "paddingTop": 0,
+            "paddingVertical": 16,
+            "position": "absolute",
+            "right": 0,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "column",
             }
           }
         >
           <View
+            flexed={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 19.2,
-                "width": 19.2,
+                "alignItems": "center",
+                "flex": null,
+                "flexDirection": "row",
               }
             }
-          />
-          <View
-            style={
-              Object {
-                "paddingHorizontal": 4,
-              }
-            }
-            withIcon="empty"
           >
             <View
               style={
                 Object {
-                  "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "height": 12,
-                  "marginVertical": 3,
-                  "width": "50%",
+                  "height": 19.2,
+                  "width": 19.2,
                 }
               }
             />
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 4,
+                }
+              }
+              withIcon="empty"
+            >
+              <View
+                style={
+                  Object {
+                    "alignSelf": "stretch",
+                    "backgroundColor": "#A5A5A5",
+                    "borderRadius": 16,
+                    "height": 12,
+                    "marginVertical": 3,
+                    "width": "50%",
+                  }
+                }
+              />
+            </View>
           </View>
         </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`ContentCard renders as Tile/Image only 1`] = `
-<View
-  forceRatio={1}
-  style={
-    Object {
-      "aspectRatio": 1,
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "marginHorizontal": 16,
-      "marginVertical": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
-      "width": 495,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-  tile={true}
->
+  />,
   <View
     forceRatio={1}
     style={
       Object {
         "aspectRatio": 1,
+        "backgroundColor": "#FFFFFF",
         "borderRadius": 16,
-        "overflow": "hidden",
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
+        "width": 495,
       }
     }
+    tile={true}
   >
     <View
+      forceRatio={1}
       style={
         Object {
           "aspectRatio": 1,
-          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
           "overflow": "hidden",
-          "width": "100%",
         }
       }
     >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://picsum.photos/600/400/?random",
-            },
-          ]
-        }
+      <View
         style={
           Object {
             "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "resizeMode": "cover",
+            "overflow": "hidden",
             "width": "100%",
           }
         }
-      />
-      <BVLinearGradient
-        colors={
-          Array [
-            26477,
-            4278216557,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
+      >
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/600/400/?random",
+              },
+            ]
           }
-        }
-        locations={
-          Array [
-            0.5,
-            1,
-          ]
-        }
-        overlayColor="#00676D"
-        overlayType="default"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "resizeMode": "cover",
+              "width": "100%",
+            }
           }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
+        />
+        <BVLinearGradient
+          colors={
+            Array [
+              26477,
+              4278216557,
+            ]
           }
-        }
-      />
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "height": 32,
-          "justifyContent": "space-between",
-          "paddingHorizontal": 16,
-          "paddingTop": 0,
-          "paddingVertical": 16,
-        }
-      }
-    />
-    <View
-      floating={true}
-      style={
-        Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "justifyContent": "space-between",
-          "left": 0,
-          "paddingHorizontal": 16,
-          "paddingTop": 0,
-          "paddingVertical": 16,
-          "position": "absolute",
-          "right": 0,
-        }
-      }
-    >
+          endPoint={
+            Object {
+              "x": 0,
+              "y": 1,
+            }
+          }
+          locations={
+            Array [
+              0.5,
+              1,
+            ]
+          }
+          overlayColor="#00676D"
+          overlayType="default"
+          startPoint={
+            Object {
+              "x": 0,
+              "y": 0,
+            }
+          }
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
       <View
         style={
           Object {
-            "flexDirection": "column",
+            "alignItems": "center",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "height": 32,
+            "justifyContent": "space-between",
+            "paddingHorizontal": 16,
+            "paddingTop": 0,
+            "paddingVertical": 16,
+          }
+        }
+      />
+      <View
+        floating={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "bottom": 0,
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "justifyContent": "space-between",
+            "left": 0,
+            "paddingHorizontal": 16,
+            "paddingTop": 0,
+            "paddingVertical": 16,
+            "position": "absolute",
+            "right": 0,
           }
         }
       >
         <View
-          flexed={false}
           style={
             Object {
-              "alignItems": "center",
-              "flex": null,
-              "flexDirection": "row",
+              "flexDirection": "column",
             }
           }
         >
-          <RNSVGSvgView
-            align="xMidYMid"
-            bbHeight={19.2}
-            bbWidth={19.2}
-            height={19.2}
-            meetOrSlice={0}
-            minX={0}
-            minY={0}
+          <View
+            flexed={false}
             style={
-              Array [
-                Object {
-                  "backgroundColor": "transparent",
-                  "borderWidth": 0,
-                },
-                undefined,
-                null,
-                Object {
-                  "flex": 0,
-                  "height": 19,
-                  "width": 19,
-                },
-              ]
+              Object {
+                "alignItems": "center",
+                "flex": null,
+                "flexDirection": "row",
+              }
             }
-            vbHeight={24}
-            vbWidth={24}
-            width={19.2}
           >
-            <RNSVGGroup
-              fill={
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={19.2}
+              bbWidth={19.2}
+              height={19.2}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
                 Array [
-                  0,
-                  4278190080,
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  undefined,
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 19,
+                    "width": 19,
+                  },
                 ]
               }
-              fillOpacity={1}
-              fillRule={1}
-              font={Object {}}
-              matrix={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-              opacity={1}
-              originX={0}
-              originY={0}
-              propList={Array []}
-              rotation={0}
-              scaleX={1}
-              scaleY={1}
-              skewX={0}
-              skewY={0}
-              stroke={null}
-              strokeDasharray={null}
-              strokeDashoffset={null}
-              strokeLinecap={0}
-              strokeLinejoin={0}
-              strokeMiterlimit={4}
-              strokeOpacity={1}
-              strokeWidth={1}
-              vectorEffect={0}
-              x={0}
-              y={0}
+              vbHeight={24}
+              vbWidth={24}
+              width={19.2}
             >
-              <RNSVGPath
-                d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
+              <RNSVGGroup
                 fill={
                   Array [
                     0,
-                    4285440419,
+                    4278190080,
                   ]
                 }
                 fillOpacity={1}
                 fillRule={1}
+                font={Object {}}
                 matrix={
                   Array [
                     1,
@@ -704,11 +719,7 @@ exports[`ContentCard renders as Tile/Image only 1`] = `
                 opacity={1}
                 originX={0}
                 originY={0}
-                propList={
-                  Array [
-                    "fill",
-                  ]
-                }
+                propList={Array []}
                 rotation={0}
                 scaleX={1}
                 scaleY={1}
@@ -725,247 +736,270 @@ exports[`ContentCard renders as Tile/Image only 1`] = `
                 vectorEffect={0}
                 x={0}
                 y={0}
-              />
-            </RNSVGGroup>
-          </RNSVGSvgView>
-          <View
-            style={
-              Object {
-                "paddingHorizontal": 4,
-              }
-            }
-            withIcon="like"
-          >
-            <Text
+              >
+                <RNSVGPath
+                  d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
+                  fill={
+                    Array [
+                      0,
+                      4285440419,
+                    ]
+                  }
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+            <View
               style={
                 Object {
-                  "color": "rgb(110, 161, 163)",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "paddingHorizontal": 4,
                 }
               }
-              tint="rgb(110, 161, 163)"
+              withIcon="like"
             >
-              150
-            </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "rgb(110, 161, 163)",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 12,
+                    "lineHeight": 18,
+                  }
+                }
+                tint="rgb(110, 161, 163)"
+              >
+                150
+              </Text>
+            </View>
           </View>
         </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`ContentCard renders as Tile/No image 1`] = `
-<View
-  forceRatio={1}
-  style={
-    Object {
-      "aspectRatio": 1,
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "marginHorizontal": 16,
-      "marginVertical": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
-      "width": 495,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-  tile={true}
->
+  />,
   <View
     forceRatio={1}
     style={
       Object {
         "aspectRatio": 1,
+        "backgroundColor": "#FFFFFF",
         "borderRadius": 16,
-        "overflow": "hidden",
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
+        "width": 495,
       }
     }
+    tile={true}
   >
     <View
+      forceRatio={1}
       style={
         Object {
-          "backgroundColor": "rgba(165, 165, 165, 0.5)",
-          "paddingHorizontal": 16,
-          "paddingVertical": 16,
-        }
-      }
-    >
-      <Text
-        ellipsizeMode="tail"
-        numberOfLines={3}
-        style={
-          Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Black",
-            "fontSize": 24,
-            "lineHeight": 27.6,
-          }
-        }
-      >
-        Hurricane Florence cancels Fuse at several campuses
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "paddingBottom": 12,
-          "paddingHorizontal": 16,
-          "paddingTop": 16,
-          "paddingVertical": 16,
-        }
-      }
-      tile={true}
-    >
-      <Text
-        ellipsizeMode="tail"
-        numberOfLines={2}
-        style={
-          Object {
-            "color": "#505050",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
-            "lineHeight": 18,
-          }
-        }
-      >
-        As Hurricane Florence moves toward South Carolina, Gov. Henry McMaster has called for a mandatory evacuation of several coastal communities and many surrounding school districts are closing in preparation for the storm.
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "height": 32,
-          "justifyContent": "space-between",
-          "paddingHorizontal": 16,
-          "paddingTop": 0,
-          "paddingVertical": 16,
-        }
-      }
-    />
-    <View
-      floating={true}
-      style={
-        Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "justifyContent": "space-between",
-          "left": 0,
-          "paddingHorizontal": 16,
-          "paddingTop": 0,
-          "paddingVertical": 16,
-          "position": "absolute",
-          "right": 0,
+          "aspectRatio": 1,
+          "borderRadius": 16,
+          "overflow": "hidden",
         }
       }
     >
       <View
         style={
           Object {
-            "flexDirection": "column",
+            "backgroundColor": "rgba(165, 165, 165, 0.5)",
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
+          }
+        }
+      >
+        <Text
+          ellipsizeMode="tail"
+          numberOfLines={3}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Black",
+              "fontSize": 24,
+              "lineHeight": 27.6,
+            }
+          }
+        >
+          Hurricane Florence cancels Fuse at several campuses
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingBottom": 12,
+            "paddingHorizontal": 16,
+            "paddingTop": 16,
+            "paddingVertical": 16,
+          }
+        }
+        tile={true}
+      >
+        <Text
+          ellipsizeMode="tail"
+          numberOfLines={2}
+          style={
+            Object {
+              "color": "#505050",
+              "fontFamily": "InterUI-Bold",
+              "fontSize": 12,
+              "lineHeight": 18,
+            }
+          }
+        >
+          As Hurricane Florence moves toward South Carolina, Gov. Henry McMaster has called for a mandatory evacuation of several coastal communities and many surrounding school districts are closing in preparation for the storm.
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "height": 32,
+            "justifyContent": "space-between",
+            "paddingHorizontal": 16,
+            "paddingTop": 0,
+            "paddingVertical": 16,
+          }
+        }
+      />
+      <View
+        floating={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "bottom": 0,
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "justifyContent": "space-between",
+            "left": 0,
+            "paddingHorizontal": 16,
+            "paddingTop": 0,
+            "paddingVertical": 16,
+            "position": "absolute",
+            "right": 0,
           }
         }
       >
         <View
-          flexed={false}
           style={
             Object {
-              "alignItems": "center",
-              "flex": null,
-              "flexDirection": "row",
+              "flexDirection": "column",
             }
           }
         >
-          <RNSVGSvgView
-            align="xMidYMid"
-            bbHeight={19.2}
-            bbWidth={19.2}
-            height={19.2}
-            meetOrSlice={0}
-            minX={0}
-            minY={0}
+          <View
+            flexed={false}
             style={
-              Array [
-                Object {
-                  "backgroundColor": "transparent",
-                  "borderWidth": 0,
-                },
-                undefined,
-                null,
-                Object {
-                  "flex": 0,
-                  "height": 19,
-                  "width": 19,
-                },
-              ]
+              Object {
+                "alignItems": "center",
+                "flex": null,
+                "flexDirection": "row",
+              }
             }
-            vbHeight={24}
-            vbWidth={24}
-            width={19.2}
           >
-            <RNSVGGroup
-              fill={
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={19.2}
+              bbWidth={19.2}
+              height={19.2}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
                 Array [
-                  0,
-                  4278190080,
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  undefined,
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 19,
+                    "width": 19,
+                  },
                 ]
               }
-              fillOpacity={1}
-              fillRule={1}
-              font={Object {}}
-              matrix={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-              opacity={1}
-              originX={0}
-              originY={0}
-              propList={Array []}
-              rotation={0}
-              scaleX={1}
-              scaleY={1}
-              skewX={0}
-              skewY={0}
-              stroke={null}
-              strokeDasharray={null}
-              strokeDashoffset={null}
-              strokeLinecap={0}
-              strokeLinejoin={0}
-              strokeMiterlimit={4}
-              strokeOpacity={1}
-              strokeWidth={1}
-              vectorEffect={0}
-              x={0}
-              y={0}
+              vbHeight={24}
+              vbWidth={24}
+              width={19.2}
             >
-              <RNSVGPath
-                d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
+              <RNSVGGroup
                 fill={
                   Array [
                     0,
-                    4289045925,
+                    4278190080,
                   ]
                 }
                 fillOpacity={1}
                 fillRule={1}
+                font={Object {}}
                 matrix={
                   Array [
                     1,
@@ -979,11 +1013,7 @@ exports[`ContentCard renders as Tile/No image 1`] = `
                 opacity={1}
                 originX={0}
                 originY={0}
-                propList={
-                  Array [
-                    "fill",
-                  ]
-                }
+                propList={Array []}
                 rotation={0}
                 scaleX={1}
                 scaleY={1}
@@ -1000,268 +1030,291 @@ exports[`ContentCard renders as Tile/No image 1`] = `
                 vectorEffect={0}
                 x={0}
                 y={0}
-              />
-            </RNSVGGroup>
-          </RNSVGSvgView>
-          <View
-            style={
-              Object {
-                "paddingHorizontal": 4,
-              }
-            }
-            withIcon="like"
-          >
-            <Text
+              >
+                <RNSVGPath
+                  d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
+                  fill={
+                    Array [
+                      0,
+                      4289045925,
+                    ]
+                  }
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+            <View
               style={
                 Object {
-                  "color": "#A5A5A5",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "paddingHorizontal": 4,
                 }
               }
-              tint="#A5A5A5"
+              withIcon="like"
             >
-              150
-            </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#A5A5A5",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 12,
+                    "lineHeight": 18,
+                  }
+                }
+                tint="#A5A5A5"
+              >
+                150
+              </Text>
+            </View>
           </View>
         </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`ContentCard renders basic tile card, with Image 1`] = `
-<View
-  forceRatio={1}
-  style={
-    Object {
-      "aspectRatio": 1,
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "marginHorizontal": 16,
-      "marginVertical": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
-      "width": 495,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-  tile={true}
->
+  />,
   <View
     forceRatio={1}
     style={
       Object {
         "aspectRatio": 1,
+        "backgroundColor": "#FFFFFF",
         "borderRadius": 16,
-        "overflow": "hidden",
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
+        "width": 495,
       }
     }
+    tile={true}
   >
     <View
+      forceRatio={1}
       style={
         Object {
-          "aspectRatio": 2,
-          "backgroundColor": "#A5A5A5",
+          "aspectRatio": 1,
+          "borderRadius": 16,
           "overflow": "hidden",
-          "width": "100%",
-        }
-      }
-    >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://picsum.photos/600/400/?random",
-            },
-          ]
-        }
-        style={
-          Object {
-            "aspectRatio": 2,
-            "backgroundColor": "#A5A5A5",
-            "resizeMode": "cover",
-            "width": "100%",
-          }
-        }
-      />
-    </View>
-    <View
-      style={
-        Object {
-          "paddingBottom": 12,
-          "paddingHorizontal": 16,
-          "paddingTop": 16,
-          "paddingVertical": 16,
-        }
-      }
-      tile={true}
-    >
-      <Text
-        ellipsizeMode="tail"
-        numberOfLines={1}
-        style={
-          Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 16,
-            "lineHeight": 24,
-          }
-        }
-      >
-        Acts: A 28-Day Devotional
-      </Text>
-      <Text
-        ellipsizeMode="tail"
-        numberOfLines={2}
-        style={
-          Object {
-            "color": "#505050",
-            "fontFamily": "InterUI-Bold",
-            "fontSize": 12,
-            "lineHeight": 18,
-          }
-        }
-      >
-        How does one man’s life and death change the course of history? One conversation at a time.
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "height": 32,
-          "justifyContent": "space-between",
-          "paddingHorizontal": 16,
-          "paddingTop": 0,
-          "paddingVertical": 16,
-        }
-      }
-    />
-    <View
-      floating={true}
-      style={
-        Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "justifyContent": "space-between",
-          "left": 0,
-          "paddingHorizontal": 16,
-          "paddingTop": 0,
-          "paddingVertical": 16,
-          "position": "absolute",
-          "right": 0,
         }
       }
     >
       <View
         style={
           Object {
-            "flexDirection": "column",
+            "aspectRatio": 2,
+            "backgroundColor": "#A5A5A5",
+            "overflow": "hidden",
+            "width": "100%",
+          }
+        }
+      >
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/600/400/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "aspectRatio": 2,
+              "backgroundColor": "#A5A5A5",
+              "resizeMode": "cover",
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "paddingBottom": 12,
+            "paddingHorizontal": 16,
+            "paddingTop": 16,
+            "paddingVertical": 16,
+          }
+        }
+        tile={true}
+      >
+        <Text
+          ellipsizeMode="tail"
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Bold",
+              "fontSize": 16,
+              "lineHeight": 24,
+            }
+          }
+        >
+          Acts: A 28-Day Devotional
+        </Text>
+        <Text
+          ellipsizeMode="tail"
+          numberOfLines={2}
+          style={
+            Object {
+              "color": "#505050",
+              "fontFamily": "InterUI-Bold",
+              "fontSize": 12,
+              "lineHeight": 18,
+            }
+          }
+        >
+          How does one man’s life and death change the course of history? One conversation at a time.
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "height": 32,
+            "justifyContent": "space-between",
+            "paddingHorizontal": 16,
+            "paddingTop": 0,
+            "paddingVertical": 16,
+          }
+        }
+      />
+      <View
+        floating={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "bottom": 0,
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "justifyContent": "space-between",
+            "left": 0,
+            "paddingHorizontal": 16,
+            "paddingTop": 0,
+            "paddingVertical": 16,
+            "position": "absolute",
+            "right": 0,
           }
         }
       >
         <View
-          flexed={false}
           style={
             Object {
-              "alignItems": "center",
-              "flex": null,
-              "flexDirection": "row",
+              "flexDirection": "column",
             }
           }
         >
-          <RNSVGSvgView
-            align="xMidYMid"
-            bbHeight={19.2}
-            bbWidth={19.2}
-            height={19.2}
-            meetOrSlice={0}
-            minX={0}
-            minY={0}
+          <View
+            flexed={false}
             style={
-              Array [
-                Object {
-                  "backgroundColor": "transparent",
-                  "borderWidth": 0,
-                },
-                undefined,
-                null,
-                Object {
-                  "flex": 0,
-                  "height": 19,
-                  "width": 19,
-                },
-              ]
+              Object {
+                "alignItems": "center",
+                "flex": null,
+                "flexDirection": "row",
+              }
             }
-            vbHeight={24}
-            vbWidth={24}
-            width={19.2}
           >
-            <RNSVGGroup
-              fill={
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={19.2}
+              bbWidth={19.2}
+              height={19.2}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
                 Array [
-                  0,
-                  4278190080,
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  undefined,
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 19,
+                    "width": 19,
+                  },
                 ]
               }
-              fillOpacity={1}
-              fillRule={1}
-              font={Object {}}
-              matrix={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-              opacity={1}
-              originX={0}
-              originY={0}
-              propList={Array []}
-              rotation={0}
-              scaleX={1}
-              scaleY={1}
-              skewX={0}
-              skewY={0}
-              stroke={null}
-              strokeDasharray={null}
-              strokeDashoffset={null}
-              strokeLinecap={0}
-              strokeLinejoin={0}
-              strokeMiterlimit={4}
-              strokeOpacity={1}
-              strokeWidth={1}
-              vectorEffect={0}
-              x={0}
-              y={0}
+              vbHeight={24}
+              vbWidth={24}
+              width={19.2}
             >
-              <RNSVGPath
-                d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
+              <RNSVGGroup
                 fill={
                   Array [
                     0,
-                    4289045925,
+                    4278190080,
                   ]
                 }
                 fillOpacity={1}
                 fillRule={1}
+                font={Object {}}
                 matrix={
                   Array [
                     1,
@@ -1275,11 +1328,7 @@ exports[`ContentCard renders basic tile card, with Image 1`] = `
                 opacity={1}
                 originX={0}
                 originY={0}
-                propList={
-                  Array [
-                    "fill",
-                  ]
-                }
+                propList={Array []}
                 rotation={0}
                 scaleX={1}
                 scaleY={1}
@@ -1296,422 +1345,464 @@ exports[`ContentCard renders basic tile card, with Image 1`] = `
                 vectorEffect={0}
                 x={0}
                 y={0}
-              />
-            </RNSVGGroup>
-          </RNSVGSvgView>
-          <View
-            style={
-              Object {
-                "paddingHorizontal": 4,
-              }
-            }
-            withIcon="like"
-          >
-            <Text
+              >
+                <RNSVGPath
+                  d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
+                  fill={
+                    Array [
+                      0,
+                      4289045925,
+                    ]
+                  }
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+            <View
               style={
                 Object {
-                  "color": "#A5A5A5",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "paddingHorizontal": 4,
                 }
               }
-              tint="#A5A5A5"
+              withIcon="like"
             >
-              16.8k
-            </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#A5A5A5",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 12,
+                    "lineHeight": 18,
+                  }
+                }
+                tint="#A5A5A5"
+              >
+                16.8k
+              </Text>
+            </View>
           </View>
         </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`ContentCard renders with Default Placeholder 1`] = `
-<View
-  forceRatio={1}
-  isLoading={true}
-  style={
-    Object {
-      "aspectRatio": 1,
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "marginHorizontal": 16,
-      "marginVertical": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
-      "width": 495,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-  tile={true}
->
+  />,
   <View
     forceRatio={1}
+    isLoading={true}
     style={
       Object {
         "aspectRatio": 1,
+        "backgroundColor": "#FFFFFF",
         "borderRadius": 16,
-        "overflow": "hidden",
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
+        "width": 495,
       }
     }
+    tile={true}
   >
     <View
+      forceRatio={1}
       style={
         Object {
-          "aspectRatio": 2,
-          "backgroundColor": "#A5A5A5",
+          "aspectRatio": 1,
+          "borderRadius": 16,
           "overflow": "hidden",
-          "width": "100%",
         }
       }
     >
-      <Image
-        fadeDuration={250}
-        isLoading={true}
-        onLoad={[Function]}
-        source={Array []}
+      <View
         style={
           Object {
             "aspectRatio": 2,
             "backgroundColor": "#A5A5A5",
-            "resizeMode": "cover",
+            "overflow": "hidden",
             "width": "100%",
           }
         }
-      />
-    </View>
-    <View
-      style={
-        Object {
-          "paddingBottom": 12,
-          "paddingHorizontal": 16,
-          "paddingTop": 16,
-          "paddingVertical": 16,
-        }
-      }
-      tile={true}
-    >
+      >
+        <Image
+          fadeDuration={250}
+          isLoading={true}
+          onLoad={[Function]}
+          source={Array []}
+          style={
+            Object {
+              "aspectRatio": 2,
+              "backgroundColor": "#A5A5A5",
+              "resizeMode": "cover",
+              "width": "100%",
+            }
+          }
+        />
+      </View>
       <View
         style={
           Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 16,
-            "marginVertical": 4,
-            "width": "80%",
+            "paddingBottom": 12,
+            "paddingHorizontal": 16,
+            "paddingTop": 16,
+            "paddingVertical": 16,
+          }
+        }
+        tile={true}
+      >
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 16,
+              "marginVertical": 4,
+              "width": "80%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 12,
+              "marginVertical": 3,
+              "width": "50%",
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "height": 32,
+            "justifyContent": "space-between",
+            "paddingHorizontal": 16,
+            "paddingTop": 0,
+            "paddingVertical": 16,
           }
         }
       />
       <View
+        floating={true}
         style={
           Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 12,
-            "marginVertical": 3,
-            "width": "50%",
-          }
-        }
-      />
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "height": 32,
-          "justifyContent": "space-between",
-          "paddingHorizontal": 16,
-          "paddingTop": 0,
-          "paddingVertical": 16,
-        }
-      }
-    />
-    <View
-      floating={true}
-      style={
-        Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "justifyContent": "space-between",
-          "left": 0,
-          "paddingHorizontal": 16,
-          "paddingTop": 0,
-          "paddingVertical": 16,
-          "position": "absolute",
-          "right": 0,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "flexDirection": "column",
+            "alignItems": "center",
+            "bottom": 0,
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "justifyContent": "space-between",
+            "left": 0,
+            "paddingHorizontal": 16,
+            "paddingTop": 0,
+            "paddingVertical": 16,
+            "position": "absolute",
+            "right": 0,
           }
         }
       >
         <View
-          flexed={false}
           style={
             Object {
-              "alignItems": "center",
-              "flex": null,
-              "flexDirection": "row",
+              "flexDirection": "column",
             }
           }
         >
           <View
+            flexed={false}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 16,
-                "height": 19.2,
-                "width": 19.2,
+                "alignItems": "center",
+                "flex": null,
+                "flexDirection": "row",
               }
             }
-          />
-          <View
-            style={
-              Object {
-                "paddingHorizontal": 4,
-              }
-            }
-            withIcon="empty"
           >
             <View
               style={
                 Object {
-                  "alignSelf": "stretch",
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "height": 12,
-                  "marginVertical": 3,
-                  "width": "50%",
+                  "height": 19.2,
+                  "width": 19.2,
                 }
               }
             />
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 4,
+                }
+              }
+              withIcon="empty"
+            >
+              <View
+                style={
+                  Object {
+                    "alignSelf": "stretch",
+                    "backgroundColor": "#A5A5A5",
+                    "borderRadius": 16,
+                    "height": 12,
+                    "marginVertical": 3,
+                    "width": "50%",
+                  }
+                }
+              />
+            </View>
           </View>
         </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`ContentCard renders with No image 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "marginHorizontal": 16,
-      "marginVertical": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
+  />,
   <View
     style={
       Object {
+        "backgroundColor": "#FFFFFF",
         "borderRadius": 16,
-        "overflow": "hidden",
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
       }
     }
   >
     <View
       style={
         Object {
-          "backgroundColor": "rgba(165, 165, 165, 0.5)",
-          "paddingHorizontal": 16,
-          "paddingVertical": 16,
-        }
-      }
-    >
-      <Text
-        ellipsizeMode="tail"
-        numberOfLines={3}
-        style={
-          Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Black",
-            "fontSize": 24,
-            "lineHeight": 27.6,
-          }
-        }
-      >
-        Hurricane Florence cancels Fuse at several campuses
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "paddingBottom": 12,
-          "paddingHorizontal": 16,
-          "paddingTop": 24,
-          "paddingVertical": 16,
-        }
-      }
-    >
-      <Text
-        bold={false}
-        ellipsizeMode="tail"
-        italic={false}
-        numberOfLines={3}
-        style={
-          Object {
-            "color": "#303030",
-            "fontFamily": "InterUI-Regular",
-            "fontSize": 16,
-            "lineHeight": 26,
-          }
-        }
-      >
-        As Hurricane Florence moves toward South Carolina, Gov. Henry McMaster has called for a mandatory evacuation of several coastal communities and many surrounding school districts are closing in preparation for the storm.
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "height": 32,
-          "justifyContent": "space-between",
-          "paddingHorizontal": 16,
-          "paddingTop": 0,
-          "paddingVertical": 16,
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "justifyContent": "space-between",
-          "left": 0,
-          "paddingHorizontal": 16,
-          "paddingTop": 0,
-          "paddingVertical": 16,
-          "position": "absolute",
-          "right": 0,
+          "borderRadius": 16,
+          "overflow": "hidden",
         }
       }
     >
       <View
         style={
           Object {
-            "flexDirection": "column",
+            "backgroundColor": "rgba(165, 165, 165, 0.5)",
+            "paddingHorizontal": 16,
+            "paddingVertical": 16,
+          }
+        }
+      >
+        <Text
+          ellipsizeMode="tail"
+          numberOfLines={3}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Black",
+              "fontSize": 24,
+              "lineHeight": 27.6,
+            }
+          }
+        >
+          Hurricane Florence cancels Fuse at several campuses
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingBottom": 12,
+            "paddingHorizontal": 16,
+            "paddingTop": 24,
+            "paddingVertical": 16,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          ellipsizeMode="tail"
+          italic={false}
+          numberOfLines={3}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "InterUI-Regular",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          As Hurricane Florence moves toward South Carolina, Gov. Henry McMaster has called for a mandatory evacuation of several coastal communities and many surrounding school districts are closing in preparation for the storm.
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "height": 32,
+            "justifyContent": "space-between",
+            "paddingHorizontal": 16,
+            "paddingTop": 0,
+            "paddingVertical": 16,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "bottom": 0,
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "justifyContent": "space-between",
+            "left": 0,
+            "paddingHorizontal": 16,
+            "paddingTop": 0,
+            "paddingVertical": 16,
+            "position": "absolute",
+            "right": 0,
           }
         }
       >
         <View
-          flexed={false}
           style={
             Object {
-              "alignItems": "center",
-              "flex": null,
-              "flexDirection": "row",
+              "flexDirection": "column",
             }
           }
         >
-          <RNSVGSvgView
-            align="xMidYMid"
-            bbHeight={19.2}
-            bbWidth={19.2}
-            height={19.2}
-            meetOrSlice={0}
-            minX={0}
-            minY={0}
+          <View
+            flexed={false}
             style={
-              Array [
-                Object {
-                  "backgroundColor": "transparent",
-                  "borderWidth": 0,
-                },
-                undefined,
-                null,
-                Object {
-                  "flex": 0,
-                  "height": 19,
-                  "width": 19,
-                },
-              ]
+              Object {
+                "alignItems": "center",
+                "flex": null,
+                "flexDirection": "row",
+              }
             }
-            vbHeight={24}
-            vbWidth={24}
-            width={19.2}
           >
-            <RNSVGGroup
-              fill={
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={19.2}
+              bbWidth={19.2}
+              height={19.2}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
                 Array [
-                  0,
-                  4278190080,
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  undefined,
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 19,
+                    "width": 19,
+                  },
                 ]
               }
-              fillOpacity={1}
-              fillRule={1}
-              font={Object {}}
-              matrix={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-              opacity={1}
-              originX={0}
-              originY={0}
-              propList={Array []}
-              rotation={0}
-              scaleX={1}
-              scaleY={1}
-              skewX={0}
-              skewY={0}
-              stroke={null}
-              strokeDasharray={null}
-              strokeDashoffset={null}
-              strokeLinecap={0}
-              strokeLinejoin={0}
-              strokeMiterlimit={4}
-              strokeOpacity={1}
-              strokeWidth={1}
-              vectorEffect={0}
-              x={0}
-              y={0}
+              vbHeight={24}
+              vbWidth={24}
+              width={19.2}
             >
-              <RNSVGPath
-                d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
+              <RNSVGGroup
                 fill={
                   Array [
                     0,
-                    4289045925,
+                    4278190080,
                   ]
                 }
                 fillOpacity={1}
                 fillRule={1}
+                font={Object {}}
                 matrix={
                   Array [
                     1,
@@ -1725,11 +1816,7 @@ exports[`ContentCard renders with No image 1`] = `
                 opacity={1}
                 originX={0}
                 originY={0}
-                propList={
-                  Array [
-                    "fill",
-                  ]
-                }
+                propList={Array []}
                 rotation={0}
                 scaleX={1}
                 scaleY={1}
@@ -1746,258 +1833,281 @@ exports[`ContentCard renders with No image 1`] = `
                 vectorEffect={0}
                 x={0}
                 y={0}
-              />
-            </RNSVGGroup>
-          </RNSVGSvgView>
-          <View
-            style={
-              Object {
-                "paddingHorizontal": 4,
-              }
-            }
-            withIcon="like"
-          >
-            <Text
+              >
+                <RNSVGPath
+                  d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
+                  fill={
+                    Array [
+                      0,
+                      4289045925,
+                    ]
+                  }
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+            <View
               style={
                 Object {
-                  "color": "#A5A5A5",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "paddingHorizontal": 4,
                 }
               }
-              tint="#A5A5A5"
+              withIcon="like"
             >
-              150
-            </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#A5A5A5",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 12,
+                    "lineHeight": 18,
+                  }
+                }
+                tint="#A5A5A5"
+              >
+                150
+              </Text>
+            </View>
           </View>
         </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`ContentCard renders with an Image only 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "#FFFFFF",
-      "borderRadius": 16,
-      "marginHorizontal": 16,
-      "marginVertical": 12,
-      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 0,
-      },
-      "shadowOpacity": 1,
-      "shadowRadius": 8,
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
->
+  />,
   <View
     style={
       Object {
+        "backgroundColor": "#FFFFFF",
         "borderRadius": 16,
-        "overflow": "hidden",
+        "marginHorizontal": 16,
+        "marginVertical": 12,
+        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 8,
       }
     }
   >
     <View
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
           "overflow": "hidden",
-          "width": "100%",
-        }
-      }
-    >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://picsum.photos/600/400/?random",
-            },
-          ]
-        }
-        style={
-          Object {
-            "aspectRatio": 1,
-            "backgroundColor": "#A5A5A5",
-            "resizeMode": "cover",
-            "width": "100%",
-          }
-        }
-      />
-      <BVLinearGradient
-        colors={
-          Array [
-            26477,
-            4278216557,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0.5,
-            1,
-          ]
-        }
-        overlayColor="#00676D"
-        overlayType="default"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      />
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "height": 32,
-          "justifyContent": "space-between",
-          "paddingHorizontal": 16,
-          "paddingTop": 0,
-          "paddingVertical": 16,
-        }
-      }
-    />
-    <View
-      floating={true}
-      style={
-        Object {
-          "alignItems": "center",
-          "bottom": 0,
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "justifyContent": "space-between",
-          "left": 0,
-          "paddingHorizontal": 16,
-          "paddingTop": 0,
-          "paddingVertical": 16,
-          "position": "absolute",
-          "right": 0,
         }
       }
     >
       <View
         style={
           Object {
-            "flexDirection": "column",
+            "backgroundColor": "#A5A5A5",
+            "overflow": "hidden",
+            "width": "100%",
+          }
+        }
+      >
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/600/400/?random",
+              },
+            ]
+          }
+          style={
+            Object {
+              "aspectRatio": 1,
+              "backgroundColor": "#A5A5A5",
+              "resizeMode": "cover",
+              "width": "100%",
+            }
+          }
+        />
+        <BVLinearGradient
+          colors={
+            Array [
+              26477,
+              4278216557,
+            ]
+          }
+          endPoint={
+            Object {
+              "x": 0,
+              "y": 1,
+            }
+          }
+          locations={
+            Array [
+              0.5,
+              1,
+            ]
+          }
+          overlayColor="#00676D"
+          overlayType="default"
+          startPoint={
+            Object {
+              "x": 0,
+              "y": 0,
+            }
+          }
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "height": 32,
+            "justifyContent": "space-between",
+            "paddingHorizontal": 16,
+            "paddingTop": 0,
+            "paddingVertical": 16,
+          }
+        }
+      />
+      <View
+        floating={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "bottom": 0,
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "justifyContent": "space-between",
+            "left": 0,
+            "paddingHorizontal": 16,
+            "paddingTop": 0,
+            "paddingVertical": 16,
+            "position": "absolute",
+            "right": 0,
           }
         }
       >
         <View
-          flexed={false}
           style={
             Object {
-              "alignItems": "center",
-              "flex": null,
-              "flexDirection": "row",
+              "flexDirection": "column",
             }
           }
         >
-          <RNSVGSvgView
-            align="xMidYMid"
-            bbHeight={19.2}
-            bbWidth={19.2}
-            height={19.2}
-            meetOrSlice={0}
-            minX={0}
-            minY={0}
+          <View
+            flexed={false}
             style={
-              Array [
-                Object {
-                  "backgroundColor": "transparent",
-                  "borderWidth": 0,
-                },
-                undefined,
-                null,
-                Object {
-                  "flex": 0,
-                  "height": 19,
-                  "width": 19,
-                },
-              ]
+              Object {
+                "alignItems": "center",
+                "flex": null,
+                "flexDirection": "row",
+              }
             }
-            vbHeight={24}
-            vbWidth={24}
-            width={19.2}
           >
-            <RNSVGGroup
-              fill={
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={19.2}
+              bbWidth={19.2}
+              height={19.2}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
                 Array [
-                  0,
-                  4278190080,
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  undefined,
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 19,
+                    "width": 19,
+                  },
                 ]
               }
-              fillOpacity={1}
-              fillRule={1}
-              font={Object {}}
-              matrix={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-              opacity={1}
-              originX={0}
-              originY={0}
-              propList={Array []}
-              rotation={0}
-              scaleX={1}
-              scaleY={1}
-              skewX={0}
-              skewY={0}
-              stroke={null}
-              strokeDasharray={null}
-              strokeDashoffset={null}
-              strokeLinecap={0}
-              strokeLinejoin={0}
-              strokeMiterlimit={4}
-              strokeOpacity={1}
-              strokeWidth={1}
-              vectorEffect={0}
-              x={0}
-              y={0}
+              vbHeight={24}
+              vbWidth={24}
+              width={19.2}
             >
-              <RNSVGPath
-                d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
+              <RNSVGGroup
                 fill={
                   Array [
                     0,
-                    4285440419,
+                    4278190080,
                   ]
                 }
                 fillOpacity={1}
                 fillRule={1}
+                font={Object {}}
                 matrix={
                   Array [
                     1,
@@ -2011,11 +2121,7 @@ exports[`ContentCard renders with an Image only 1`] = `
                 opacity={1}
                 originX={0}
                 originY={0}
-                propList={
-                  Array [
-                    "fill",
-                  ]
-                }
+                propList={Array []}
                 rotation={0}
                 scaleX={1}
                 scaleY={1}
@@ -2032,34 +2138,80 @@ exports[`ContentCard renders with an Image only 1`] = `
                 vectorEffect={0}
                 x={0}
                 y={0}
-              />
-            </RNSVGGroup>
-          </RNSVGSvgView>
-          <View
-            style={
-              Object {
-                "paddingHorizontal": 4,
-              }
-            }
-            withIcon="like"
-          >
-            <Text
+              >
+                <RNSVGPath
+                  d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
+                  fill={
+                    Array [
+                      0,
+                      4285440419,
+                    ]
+                  }
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+            <View
               style={
                 Object {
-                  "color": "rgb(110, 161, 163)",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "paddingHorizontal": 4,
                 }
               }
-              tint="rgb(110, 161, 163)"
+              withIcon="like"
             >
-              150
-            </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "rgb(110, 161, 163)",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 12,
+                    "lineHeight": 18,
+                  }
+                }
+                tint="rgb(110, 161, 163)"
+              >
+                150
+              </Text>
+            </View>
           </View>
         </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;

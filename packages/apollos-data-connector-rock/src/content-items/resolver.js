@@ -2,20 +2,58 @@
 
 import { get } from 'lodash';
 import moment from 'moment-timezone';
+import sanitizeHtml from 'sanitize-html';
 import {
   createGlobalId,
   withEdgePagination,
 } from '@apollosproject/server-core';
 import ApollosConfig from '@apollosproject/config';
 
-import sanitizeHtml from '../sanitize-html';
-
 const { ROCK, ROCK_MAPPINGS } = ApollosConfig;
 
 export const defaultContentItemResolvers = {
   id: ({ id }, args, context, { parentType }) =>
     createGlobalId(id, parentType.name),
-  htmlContent: ({ content }) => sanitizeHtml(content),
+  htmlContent: ({ content }) =>
+    sanitizeHtml(content, {
+      allowedTags: [
+        'h1',
+        'h2',
+        'h3',
+        'h4',
+        'h5',
+        'h6',
+        'blockquote',
+        'p',
+        'a',
+        'ul',
+        'ol',
+        'li',
+        'b',
+        'i',
+        'strong',
+        'em',
+        'br',
+        'caption',
+        'img',
+        'div',
+      ],
+      allowedAttributes: {
+        a: ['href', 'target'],
+        img: ['src'],
+      },
+      transformTags: {
+        img: (tagName, { src }) => {
+          return {
+            tagName,
+            attribs: {
+              // adds Rock URL in the case of local image references in the CMS
+              src: src.startsWith('http') ? src : `${ROCK.URL || ''}${src}`,
+            },
+          };
+        },
+      },
+    }),
   childContentItemsConnection: async ({ id }, args, { dataSources }) =>
     dataSources.ContentItem.paginate({
       cursor: await dataSources.ContentItem.getCursorByParentContentItemId(id),

@@ -20,6 +20,10 @@ const createModel = defineModel({
       type: DataTypes.INTEGER,
       defaultValue: 0,
     },
+    likedCount: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+    },
   },
 });
 
@@ -33,6 +37,13 @@ const setupModel = configureModel(({ sequelize }) => {
     foreignKey: 'followedPersonId',
     sourceKey: 'personId',
     constraints: false,
+  });
+
+  sequelize.models.comments.hasMany(sequelize.models.user_likes, {
+    foreignKey: 'nodeId',
+    sourceKey: 'id',
+    constraints: false,
+    scope: { nodeType: 'Comment' },
   });
 });
 

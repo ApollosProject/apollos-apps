@@ -1,317 +1,337 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the CardTile component number box should grow elegantly with larger numbers 1`] = `
-<View
-  collapsable={false}
-  style={
-    Object {
-      "padding": 8,
-    }
-  }
->
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    collapsable={false}
     style={
       Object {
-        "aspectRatio": 1,
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "width": 495,
+        "padding": 8,
       }
     }
   >
     <View
       style={
         Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
           "borderRadius": 16,
-          "bottom": 0,
-          "justifyContent": "center",
-          "left": 0,
-          "overflow": "hidden",
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
+          "width": 495,
         }
       }
     >
       <View
-        size={4}
         style={
           Object {
-            "alignItems": "center",
-            "backgroundColor": "#FFFFFF",
-            "borderBottomRightRadius": 16,
-            "borderTopLeftRadius": 16,
-            "height": 64,
+            "borderRadius": 16,
+            "bottom": 0,
             "justifyContent": "center",
             "left": 0,
+            "overflow": "hidden",
             "position": "absolute",
+            "right": 0,
             "top": 0,
-            "width": 64,
           }
         }
       >
-        <View>
+        <View
+          size={4}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "borderBottomRightRadius": 16,
+              "borderTopLeftRadius": 16,
+              "height": 64,
+              "justifyContent": "center",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": 64,
+            }
+          }
+        >
+          <View>
+            <Text
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
+                }
+              }
+            >
+              7777
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
           <Text
             style={
               Object {
                 "color": "#303030",
-                "fontFamily": "InterUI-Medium",
-                "fontSize": 14,
-                "lineHeight": 21,
+                "fontFamily": "InterUI-Black",
+                "fontSize": 24,
+                "lineHeight": 27.6,
               }
             }
           >
-            7777
+            Why Jesus is Timeless
           </Text>
         </View>
       </View>
-      <View
-        style={
-          Object {
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Black",
-              "fontSize": 24,
-              "lineHeight": 27.6,
-            }
-          }
-        >
-          Why Jesus is Timeless
-        </Text>
-      </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`the CardTile component should render 1`] = `
-<View
-  collapsable={false}
-  style={
-    Object {
-      "padding": 8,
-    }
-  }
->
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    collapsable={false}
     style={
       Object {
-        "aspectRatio": 1,
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "width": 495,
+        "padding": 8,
       }
     }
   >
     <View
       style={
         Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
           "borderRadius": 16,
-          "bottom": 0,
-          "justifyContent": "center",
-          "left": 0,
-          "overflow": "hidden",
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
+          "width": 495,
         }
       }
     >
       <View
         style={
           Object {
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
+            "borderRadius": 16,
+            "bottom": 0,
+            "justifyContent": "center",
+            "left": 0,
+            "overflow": "hidden",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
           }
         }
       >
-        <Text
+        <View
           style={
             Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Black",
-              "fontSize": 24,
-              "lineHeight": 27.6,
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
         >
-          Why Jesus is Timeless
-        </Text>
+          <Text
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "InterUI-Black",
+                "fontSize": 24,
+                "lineHeight": 27.6,
+              }
+            }
+          >
+            Why Jesus is Timeless
+          </Text>
+        </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`the CardTile component should render a loading skeleton 1`] = `
-<View
-  collapsable={false}
-  style={
-    Object {
-      "padding": 8,
-    }
-  }
->
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    collapsable={false}
     style={
       Object {
-        "aspectRatio": 1,
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "width": 495,
+        "padding": 8,
       }
     }
   >
     <View
       style={
         Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
           "borderRadius": 16,
-          "bottom": 0,
-          "justifyContent": "center",
-          "left": 0,
-          "overflow": "hidden",
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
+          "width": 495,
         }
       }
     >
       <View
         style={
           Object {
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
+            "borderRadius": 16,
+            "bottom": 0,
+            "justifyContent": "center",
+            "left": 0,
+            "overflow": "hidden",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
           }
         }
       >
         <View
           style={
             Object {
-              "alignSelf": "stretch",
-              "backgroundColor": "#DBDBD9",
-              "borderRadius": 16,
-              "height": 24,
-              "marginVertical": 1.8000000000000007,
-              "width": "100%",
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
             }
           }
-        />
+        >
+          <View
+            style={
+              Object {
+                "alignSelf": "stretch",
+                "backgroundColor": "#DBDBD9",
+                "borderRadius": 16,
+                "height": 24,
+                "marginVertical": 1.8000000000000007,
+                "width": "100%",
+              }
+            }
+          />
+        </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`the CardTile component should render a loading skeleton for all available props 1`] = `
-<View
-  collapsable={false}
-  style={
-    Object {
-      "padding": 8,
-    }
-  }
->
+Array [
   <View
-    showDetails={true}
+    onLayout={[Function]}
+    pointerEvents="box-none"
     style={
-      Object {
-        "aspectRatio": 1,
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "width": 495,
-      }
-    }
-  >
-    <View
-      style={
+      Array [
         Object {
-          "borderRadius": 16,
           "bottom": 0,
-          "justifyContent": "center",
           "left": 0,
           "overflow": "hidden",
           "position": "absolute",
           "right": 0,
           "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    collapsable={false}
+    style={
+      Object {
+        "padding": 8,
+      }
+    }
+  >
+    <View
+      showDetails={true}
+      style={
+        Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "width": 495,
         }
       }
     >
       <View
-        size={1}
         style={
           Object {
-            "alignItems": "center",
-            "backgroundColor": "#FFFFFF",
-            "borderBottomRightRadius": 16,
-            "borderTopLeftRadius": 16,
-            "height": 32,
+            "borderRadius": 16,
+            "bottom": 0,
             "justifyContent": "center",
             "left": 0,
+            "overflow": "hidden",
             "position": "absolute",
+            "right": 0,
             "top": 0,
-            "width": 32,
           }
         }
       >
         <View
-          style={
-            Object {
-              "backgroundColor": "#DBDBD9",
-              "borderRadius": 16,
-              "height": 40,
-              "width": 40,
-            }
-          }
-        />
-      </View>
-      <View
-        style={
-          Object {
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "alignSelf": "stretch",
-              "backgroundColor": "#DBDBD9",
-              "borderRadius": 16,
-              "height": 24,
-              "marginVertical": 1.8000000000000007,
-              "width": "100%",
-            }
-          }
-        />
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-            "flexWrap": "wrap",
-            "justifyContent": "space-between",
-            "paddingHorizontal": 16,
-            "paddingTop": 0,
-            "paddingVertical": 16,
-          }
-        }
-      >
-        <View
-          flexed={true}
+          size={1}
           style={
             Object {
               "alignItems": "center",
-              "flex": 1,
-              "flexDirection": "row",
+              "backgroundColor": "#FFFFFF",
+              "borderBottomRightRadius": 16,
+              "borderTopLeftRadius": 16,
+              "height": 32,
+              "justifyContent": "center",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": 32,
             }
           }
         >
@@ -320,330 +340,382 @@ exports[`the CardTile component should render a loading skeleton for all availab
               Object {
                 "backgroundColor": "#DBDBD9",
                 "borderRadius": 16,
-                "height": 19.2,
-                "width": 19.2,
+                "height": 40,
+                "width": 40,
               }
             }
           />
+        </View>
+        <View
+          style={
+            Object {
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
           <View
             style={
               Object {
-                "paddingHorizontal": 4,
+                "alignSelf": "stretch",
+                "backgroundColor": "#DBDBD9",
+                "borderRadius": 16,
+                "height": 24,
+                "marginVertical": 1.8000000000000007,
+                "width": "100%",
               }
             }
-            withIcon="video"
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "justifyContent": "space-between",
+              "paddingHorizontal": 16,
+              "paddingTop": 0,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            flexed={true}
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "flexDirection": "row",
+              }
+            }
           >
             <View
               style={
                 Object {
-                  "alignSelf": "stretch",
                   "backgroundColor": "#DBDBD9",
                   "borderRadius": 16,
-                  "height": 12,
-                  "marginVertical": 3,
-                  "width": "50%",
+                  "height": 19.2,
+                  "width": 19.2,
                 }
               }
             />
+            <View
+              style={
+                Object {
+                  "paddingHorizontal": 4,
+                }
+              }
+              withIcon="video"
+            >
+              <View
+                style={
+                  Object {
+                    "alignSelf": "stretch",
+                    "backgroundColor": "#DBDBD9",
+                    "borderRadius": 16,
+                    "height": 12,
+                    "marginVertical": 3,
+                    "width": "50%",
+                  }
+                }
+              />
+            </View>
           </View>
-        </View>
-        <View
-          style={
-            Object {
-              "alignSelf": "stretch",
-              "backgroundColor": "#DBDBD9",
-              "borderRadius": 16,
-              "height": 12,
-              "marginVertical": 3,
-              "width": "50%",
+          <View
+            style={
+              Object {
+                "alignSelf": "stretch",
+                "backgroundColor": "#DBDBD9",
+                "borderRadius": 16,
+                "height": 12,
+                "marginVertical": 3,
+                "width": "50%",
+              }
             }
-          }
-        />
+          />
+        </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`the CardTile component should render a number box 1`] = `
-<View
-  collapsable={false}
-  style={
-    Object {
-      "padding": 8,
-    }
-  }
->
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    collapsable={false}
     style={
       Object {
-        "aspectRatio": 1,
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "width": 495,
+        "padding": 8,
       }
     }
   >
     <View
       style={
         Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
           "borderRadius": 16,
-          "bottom": 0,
-          "justifyContent": "center",
-          "left": 0,
-          "overflow": "hidden",
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
+          "width": 495,
         }
       }
     >
       <View
-        size={1}
         style={
           Object {
-            "alignItems": "center",
-            "backgroundColor": "#FFFFFF",
-            "borderBottomRightRadius": 16,
-            "borderTopLeftRadius": 16,
-            "height": 32,
+            "borderRadius": 16,
+            "bottom": 0,
             "justifyContent": "center",
             "left": 0,
+            "overflow": "hidden",
             "position": "absolute",
+            "right": 0,
             "top": 0,
-            "width": 32,
           }
         }
       >
-        <View>
+        <View
+          size={1}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "borderBottomRightRadius": 16,
+              "borderTopLeftRadius": 16,
+              "height": 32,
+              "justifyContent": "center",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": 32,
+            }
+          }
+        >
+          <View>
+            <Text
+              style={
+                Object {
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
+                }
+              }
+            >
+              7
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
           <Text
             style={
               Object {
                 "color": "#303030",
-                "fontFamily": "InterUI-Medium",
-                "fontSize": 14,
-                "lineHeight": 21,
+                "fontFamily": "InterUI-Black",
+                "fontSize": 24,
+                "lineHeight": 27.6,
               }
             }
           >
-            7
+            Why Jesus is Timeless
           </Text>
         </View>
       </View>
-      <View
-        style={
-          Object {
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Black",
-              "fontSize": 24,
-              "lineHeight": 27.6,
-            }
-          }
-        >
-          Why Jesus is Timeless
-        </Text>
-      </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`the CardTile component should render card details 1`] = `
-<View
-  collapsable={false}
-  style={
-    Object {
-      "padding": 8,
-    }
-  }
->
+Array [
   <View
-    showDetails={true}
+    onLayout={[Function]}
+    pointerEvents="box-none"
     style={
-      Object {
-        "aspectRatio": 1,
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "width": 495,
-      }
-    }
-  >
-    <View
-      style={
+      Array [
         Object {
-          "borderRadius": 16,
           "bottom": 0,
-          "justifyContent": "center",
           "left": 0,
           "overflow": "hidden",
           "position": "absolute",
           "right": 0,
           "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    collapsable={false}
+    style={
+      Object {
+        "padding": 8,
+      }
+    }
+  >
+    <View
+      showDetails={true}
+      style={
+        Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "width": 495,
         }
       }
     >
       <View
-        size={1}
         style={
           Object {
-            "alignItems": "center",
-            "backgroundColor": "#FFFFFF",
-            "borderBottomRightRadius": 16,
-            "borderTopLeftRadius": 16,
-            "height": 32,
+            "borderRadius": 16,
+            "bottom": 0,
             "justifyContent": "center",
             "left": 0,
+            "overflow": "hidden",
             "position": "absolute",
+            "right": 0,
             "top": 0,
-            "width": 32,
-          }
-        }
-      >
-        <View>
-          <Text
-            style={
-              Object {
-                "color": "#303030",
-                "fontFamily": "InterUI-Medium",
-                "fontSize": 14,
-                "lineHeight": 21,
-              }
-            }
-          >
-            7
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Black",
-              "fontSize": 24,
-              "lineHeight": 27.6,
-            }
-          }
-        >
-          Why Jesus is Timeless
-        </Text>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-            "flexWrap": "wrap",
-            "justifyContent": "space-between",
-            "paddingHorizontal": 16,
-            "paddingTop": 0,
-            "paddingVertical": 16,
           }
         }
       >
         <View
-          flexed={true}
+          size={1}
           style={
             Object {
               "alignItems": "center",
-              "flex": 1,
-              "flexDirection": "row",
+              "backgroundColor": "#FFFFFF",
+              "borderBottomRightRadius": 16,
+              "borderTopLeftRadius": 16,
+              "height": 32,
+              "justifyContent": "center",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": 32,
             }
           }
         >
-          <RNSVGSvgView
-            align="xMidYMid"
-            bbHeight={19.2}
-            bbWidth={19.2}
-            height={19.2}
-            meetOrSlice={0}
-            minX={0}
-            minY={0}
-            style={
-              Array [
+          <View>
+            <Text
+              style={
                 Object {
-                  "backgroundColor": "transparent",
-                  "borderWidth": 0,
-                },
-                undefined,
-                null,
-                Object {
-                  "flex": 0,
-                  "height": 19,
-                  "width": 19,
-                },
-              ]
-            }
-            vbHeight={24}
-            vbWidth={24}
-            width={19.2}
-          >
-            <RNSVGGroup
-              fill={
-                Array [
-                  0,
-                  4278190080,
-                ]
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
+                }
               }
-              fillOpacity={1}
-              fillRule={1}
-              font={Object {}}
-              matrix={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-              opacity={1}
-              originX={0}
-              originY={0}
-              propList={Array []}
-              rotation={0}
-              scaleX={1}
-              scaleY={1}
-              skewX={0}
-              skewY={0}
-              stroke={null}
-              strokeDasharray={null}
-              strokeDashoffset={null}
-              strokeLinecap={0}
-              strokeLinejoin={0}
-              strokeMiterlimit={4}
-              strokeOpacity={1}
-              strokeWidth={1}
-              vectorEffect={0}
-              x={0}
-              y={0}
             >
-              <RNSVGPath
-                d="M3.8182 5.7778v12.4444H14.2V5.7778H3.8182zM16 6v12c0 1.1046-.8954 2-2 2H4c-1.1046 0-2-.8954-2-2V6c0-1.1046.8954-2 2-2h10c1.1046 0 2 .8954 2 2zm4.1818 2.6952L16 11.8084v.3832l4.1818 3.251V8.695zM16 14.4957V9.4253l6-4.2178v13.585l-6-4.2968z"
+              7
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "InterUI-Black",
+                "fontSize": 24,
+                "lineHeight": 27.6,
+              }
+            }
+          >
+            Why Jesus is Timeless
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "justifyContent": "space-between",
+              "paddingHorizontal": 16,
+              "paddingTop": 0,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            flexed={true}
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "flexDirection": "row",
+              }
+            }
+          >
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={19.2}
+              bbWidth={19.2}
+              height={19.2}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  undefined,
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 19,
+                    "width": 19,
+                  },
+                ]
+              }
+              vbHeight={24}
+              vbWidth={24}
+              width={19.2}
+            >
+              <RNSVGGroup
                 fill={
                   Array [
                     0,
-                    4289045925,
+                    4278190080,
                   ]
                 }
                 fillOpacity={1}
                 fillRule={1}
+                font={Object {}}
                 matrix={
                   Array [
                     1,
@@ -657,11 +729,7 @@ exports[`the CardTile component should render card details 1`] = `
                 opacity={1}
                 originX={0}
                 originY={0}
-                propList={
-                  Array [
-                    "fill",
-                  ]
-                }
+                propList={Array []}
                 rotation={0}
                 scaleX={1}
                 scaleY={1}
@@ -678,226 +746,249 @@ exports[`the CardTile component should render card details 1`] = `
                 vectorEffect={0}
                 x={0}
                 y={0}
-              />
-            </RNSVGGroup>
-          </RNSVGSvgView>
-          <View
-            style={
-              Object {
-                "paddingHorizontal": 4,
-              }
-            }
-            withIcon="video"
-          >
-            <Text
+              >
+                <RNSVGPath
+                  d="M3.8182 5.7778v12.4444H14.2V5.7778H3.8182zM16 6v12c0 1.1046-.8954 2-2 2H4c-1.1046 0-2-.8954-2-2V6c0-1.1046.8954-2 2-2h10c1.1046 0 2 .8954 2 2zm4.1818 2.6952L16 11.8084v.3832l4.1818 3.251V8.695zM16 14.4957V9.4253l6-4.2178v13.585l-6-4.2968z"
+                  fill={
+                    Array [
+                      0,
+                      4289045925,
+                    ]
+                  }
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+            <View
               style={
                 Object {
-                  "color": "#A5A5A5",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "paddingHorizontal": 4,
                 }
               }
-              tint="#A5A5A5"
+              withIcon="video"
             >
-              Marty McFly
-            </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#A5A5A5",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 12,
+                    "lineHeight": 18,
+                  }
+                }
+                tint="#A5A5A5"
+              >
+                Marty McFly
+              </Text>
+            </View>
           </View>
         </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`the CardTile component should render card details with date 1`] = `
-<View
-  collapsable={false}
-  style={
-    Object {
-      "padding": 8,
-    }
-  }
->
+Array [
   <View
-    showDetails={true}
+    onLayout={[Function]}
+    pointerEvents="box-none"
     style={
-      Object {
-        "aspectRatio": 1,
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "width": 495,
-      }
-    }
-  >
-    <View
-      style={
+      Array [
         Object {
-          "borderRadius": 16,
           "bottom": 0,
-          "justifyContent": "center",
           "left": 0,
           "overflow": "hidden",
           "position": "absolute",
           "right": 0,
           "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    collapsable={false}
+    style={
+      Object {
+        "padding": 8,
+      }
+    }
+  >
+    <View
+      showDetails={true}
+      style={
+        Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "width": 495,
         }
       }
     >
       <View
-        size={1}
         style={
           Object {
-            "alignItems": "center",
-            "backgroundColor": "#FFFFFF",
-            "borderBottomRightRadius": 16,
-            "borderTopLeftRadius": 16,
-            "height": 32,
+            "borderRadius": 16,
+            "bottom": 0,
             "justifyContent": "center",
             "left": 0,
+            "overflow": "hidden",
             "position": "absolute",
+            "right": 0,
             "top": 0,
-            "width": 32,
-          }
-        }
-      >
-        <View>
-          <Text
-            style={
-              Object {
-                "color": "#303030",
-                "fontFamily": "InterUI-Medium",
-                "fontSize": 14,
-                "lineHeight": 21,
-              }
-            }
-          >
-            7
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "paddingHorizontal": 16,
-            "paddingVertical": 16,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#303030",
-              "fontFamily": "InterUI-Black",
-              "fontSize": 24,
-              "lineHeight": 27.6,
-            }
-          }
-        >
-          Why Jesus is Timeless
-        </Text>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-            "flexWrap": "wrap",
-            "justifyContent": "space-between",
-            "paddingHorizontal": 16,
-            "paddingTop": 0,
-            "paddingVertical": 16,
           }
         }
       >
         <View
-          flexed={true}
+          size={1}
           style={
             Object {
               "alignItems": "center",
-              "flex": 1,
-              "flexDirection": "row",
+              "backgroundColor": "#FFFFFF",
+              "borderBottomRightRadius": 16,
+              "borderTopLeftRadius": 16,
+              "height": 32,
+              "justifyContent": "center",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": 32,
             }
           }
         >
-          <RNSVGSvgView
-            align="xMidYMid"
-            bbHeight={19.2}
-            bbWidth={19.2}
-            height={19.2}
-            meetOrSlice={0}
-            minX={0}
-            minY={0}
-            style={
-              Array [
+          <View>
+            <Text
+              style={
                 Object {
-                  "backgroundColor": "transparent",
-                  "borderWidth": 0,
-                },
-                undefined,
-                null,
-                Object {
-                  "flex": 0,
-                  "height": 19,
-                  "width": 19,
-                },
-              ]
-            }
-            vbHeight={24}
-            vbWidth={24}
-            width={19.2}
-          >
-            <RNSVGGroup
-              fill={
-                Array [
-                  0,
-                  4278190080,
-                ]
+                  "color": "#303030",
+                  "fontFamily": "InterUI-Medium",
+                  "fontSize": 14,
+                  "lineHeight": 21,
+                }
               }
-              fillOpacity={1}
-              fillRule={1}
-              font={Object {}}
-              matrix={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-              opacity={1}
-              originX={0}
-              originY={0}
-              propList={Array []}
-              rotation={0}
-              scaleX={1}
-              scaleY={1}
-              skewX={0}
-              skewY={0}
-              stroke={null}
-              strokeDasharray={null}
-              strokeDashoffset={null}
-              strokeLinecap={0}
-              strokeLinejoin={0}
-              strokeMiterlimit={4}
-              strokeOpacity={1}
-              strokeWidth={1}
-              vectorEffect={0}
-              x={0}
-              y={0}
             >
-              <RNSVGPath
-                d="M3.8182 5.7778v12.4444H14.2V5.7778H3.8182zM16 6v12c0 1.1046-.8954 2-2 2H4c-1.1046 0-2-.8954-2-2V6c0-1.1046.8954-2 2-2h10c1.1046 0 2 .8954 2 2zm4.1818 2.6952L16 11.8084v.3832l4.1818 3.251V8.695zM16 14.4957V9.4253l6-4.2178v13.585l-6-4.2968z"
+              7
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "paddingHorizontal": 16,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "InterUI-Black",
+                "fontSize": 24,
+                "lineHeight": 27.6,
+              }
+            }
+          >
+            Why Jesus is Timeless
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "justifyContent": "space-between",
+              "paddingHorizontal": 16,
+              "paddingTop": 0,
+              "paddingVertical": 16,
+            }
+          }
+        >
+          <View
+            flexed={true}
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "flexDirection": "row",
+              }
+            }
+          >
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={19.2}
+              bbWidth={19.2}
+              height={19.2}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  undefined,
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 19,
+                    "width": 19,
+                  },
+                ]
+              }
+              vbHeight={24}
+              vbWidth={24}
+              width={19.2}
+            >
+              <RNSVGGroup
                 fill={
                   Array [
                     0,
-                    4289045925,
+                    4278190080,
                   ]
                 }
                 fillOpacity={1}
                 fillRule={1}
+                font={Object {}}
                 matrix={
                   Array [
                     1,
@@ -911,11 +1002,7 @@ exports[`the CardTile component should render card details with date 1`] = `
                 opacity={1}
                 originX={0}
                 originY={0}
-                propList={
-                  Array [
-                    "fill",
-                  ]
-                }
+                propList={Array []}
                 rotation={0}
                 scaleX={1}
                 scaleY={1}
@@ -932,87 +1019,152 @@ exports[`the CardTile component should render card details with date 1`] = `
                 vectorEffect={0}
                 x={0}
                 y={0}
-              />
-            </RNSVGGroup>
-          </RNSVGSvgView>
-          <View
-            style={
-              Object {
-                "paddingHorizontal": 4,
-              }
-            }
-            withIcon="video"
-          >
-            <Text
+              >
+                <RNSVGPath
+                  d="M3.8182 5.7778v12.4444H14.2V5.7778H3.8182zM16 6v12c0 1.1046-.8954 2-2 2H4c-1.1046 0-2-.8954-2-2V6c0-1.1046.8954-2 2-2h10c1.1046 0 2 .8954 2 2zm4.1818 2.6952L16 11.8084v.3832l4.1818 3.251V8.695zM16 14.4957V9.4253l6-4.2178v13.585l-6-4.2968z"
+                  fill={
+                    Array [
+                      0,
+                      4289045925,
+                    ]
+                  }
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+            <View
               style={
                 Object {
-                  "color": "#A5A5A5",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
+                  "paddingHorizontal": 4,
                 }
               }
-              tint="#A5A5A5"
+              withIcon="video"
             >
-              Marty McFly
-            </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#A5A5A5",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 12,
+                    "lineHeight": 18,
+                  }
+                }
+                tint="#A5A5A5"
+              >
+                Marty McFly
+              </Text>
+            </View>
           </View>
-        </View>
-        <Text
-          style={
-            Object {
-              "color": "#505050",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "lineHeight": 18,
+          <Text
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 12,
+                "lineHeight": 18,
+              }
             }
-          }
-        >
-          1d
-        </Text>
+          >
+            1d
+          </Text>
+        </View>
       </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;
 
 exports[`the CardTile component should render children 1`] = `
-<View
-  collapsable={false}
-  style={
-    Object {
-      "padding": 8,
-    }
-  }
->
+Array [
   <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <View
+    collapsable={false}
     style={
       Object {
-        "aspectRatio": 1,
-        "backgroundColor": "#A5A5A5",
-        "borderRadius": 16,
-        "width": 495,
+        "padding": 8,
       }
     }
   >
     <View
       style={
         Object {
+          "aspectRatio": 1,
+          "backgroundColor": "#A5A5A5",
           "borderRadius": 16,
-          "bottom": 0,
-          "justifyContent": "center",
-          "left": 0,
-          "overflow": "hidden",
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
+          "width": 495,
         }
       }
     >
-      <Text>
-        Biff Tannen was here
-      </Text>
+      <View
+        style={
+          Object {
+            "borderRadius": 16,
+            "bottom": 0,
+            "justifyContent": "center",
+            "left": 0,
+            "overflow": "hidden",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      >
+        <Text>
+          Biff Tannen was here
+        </Text>
+      </View>
     </View>
-  </View>
-</View>
+  </View>,
+]
 `;

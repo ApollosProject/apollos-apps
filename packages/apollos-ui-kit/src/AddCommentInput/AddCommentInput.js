@@ -1,224 +1,139 @@
-import React, { useState } from 'react';
-import { SafeAreaView, StyleSheet, TextInput, Text, View } from 'react-native';
+import React, {
+  useRef,
+  useEffect,
+  useMemo,
+  useState,
+  useCallback,
+} from 'react';
+import { Platform, View, Keyboard } from 'react-native';
 import PropTypes from 'prop-types';
-import styled from '../styled';
-import { H4, H5, BodySmall } from '../typography';
+import { BottomSheetModal } from '@gorhom/bottom-sheet';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
 import Touchable from '../Touchable';
-import Avatar from '../Avatar';
-import { withTheme } from '../theme';
-import PaddedView from '../PaddedView';
-import Modal, { ModalHeader } from '../Modal';
-import { Switch } from '../inputs';
+import styled from '../styled';
+import Navigator from './Navigator';
+import Prompt from './Prompt';
 
-const CommentAvatar = withTheme(
-  ({ theme: { sizing, colors } }) => ({
-    themeSize: sizing.baseUnit * 3,
-    buttonIcon: 'chunky-plus',
-    iconButtonProps: {
-      size: sizing.baseUnit * 0.75,
-      fill: colors.white,
-      iconBackground: colors.action.secondary,
+const ModalBackgroundView = styled(({ theme }) => ({
+  borderTopLeftRadius: theme.sizing.baseUnit,
+  borderTopRightRadius: theme.sizing.baseUnit,
+  backgroundColor: theme.colors.background.paper,
+  ...Platform.select({ ios: theme.shadows.default.ios }),
+}))(View);
+
+const AddCommentInput = ({
+  prompt = 'What stands out to you?',
+  editorTitle = 'New Journal',
+  confirmationTitle = 'Post Journal',
+  initialValue = '',
+  openBottomSheetOnMount = true,
+  showInlinePrompt = true,
+  dismissOnPanDown = false,
+  fullscreen = false,
+  showCancel = false,
+  // Used so that parent components can also get access to the bottom sheet modal ref.
+  bottomSheetModalRef: setBottomSheetModalRef,
+  onSubmit,
+  profile,
+  ...props
+}) => {
+  const safeArea = useSafeAreaInsets();
+  const [bottomSheetIndex, setBottomSheetIndex] = useState(-1);
+
+  const fullScreenSnapPoints = useMemo(() => ['100%'], [safeArea.bottom]);
+  // todo: when we have useTheme() replace this
+  const snapPoints = useMemo(
+    () => [48 + 16 + (safeArea.bottom || 16), '100%'],
+    [safeArea.bottom]
+  );
+  const bottomSheetModalRef = useRef();
+
+  const handleEditorChange = useCallback(
+    (index) => {
+      setBottomSheetIndex(index);
+      if (!index) {
+        Keyboard.dismiss();
+      }
     },
-  }),
-  'ui-kit.AddCommentInput.CommentAvatar'
-)(Avatar);
+    [setBottomSheetIndex]
+  );
 
-const AddCommentContainer = styled(
-  ({ theme: { sizing } }) => ({
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderTopWidth: StyleSheet.hairlineWidth,
-    borderColor: 'rgba(0, 0, 0, 0.1)',
-    padding: sizing.baseUnit,
-    flexDirection: 'row',
-    alignItems: 'center',
-  }),
-  'ui-kit.AddCommentInput.AddCommentContainer'
-)(View);
+  const openModal = useCallback(() => {
+    bottomSheetModalRef.current?.present();
+  }, []);
 
-const NextButton = styled(
-  ({ theme: { colors } }) => ({
-    color: colors.action.secondary,
-  }),
-  'ui-kit.AddCommentInput.NextButton'
-)(H4);
+  // present on mount
+  useEffect(() => {
+    if (openBottomSheetOnMount) {
+      bottomSheetModalRef.current?.present();
+    }
+  }, [openBottomSheetOnMount]);
 
-const NextButtonTouchable = styled(
-  { alignSelf: 'flex-end' },
-  'ui-kit.AddCommentInput.NextButtonTouchable'
-)(Touchable);
-
-const AddCommentPrompt = styled(
-  ({ theme: { sizing } }) => ({
-    padding: sizing.baseUnit / 2,
-  }),
-  'ui-kit.AddCommentInput.AddCommentPrompt'
-)(H5);
-
-const AddCommentTextInput = styled(
-  ({ theme: { sizing, colors } }) => ({
-    minHeight: sizing.baseUnit * 4,
-    color: colors.text.primary,
-  }),
-  'ui-kit.AddCommentInput.AddCommentTextInput'
-)(TextInput);
-
-const CommentInputContainer = styled(
-  {},
-  'ui-kit.AddCommentInput.CommentInputContainer'
-)(PaddedView);
-
-const UserData = styled(
-  () => ({
-    flexDirection: 'row',
-    alignItems: 'center',
-  }),
-  'ui-kit.AddCommentInput.UserData'
-)(PaddedView);
-
-const UserName = styled(
-  ({ theme }) => ({
-    marginLeft: theme.sizing.baseUnit / 2,
-  }),
-  'ui-kit.AddCommentInput.UserName'
-)(H4);
-
-const ModalAvatar = withTheme(
-  ({ theme: { sizing } }) => ({
-    themeSize: sizing.baseUnit * 3,
-  }),
-  'ui-kit.AddCommentInput.CommentAvatar'
-)(Avatar);
-
-const ModalContent = styled(
-  () => ({}),
-  'ui-kit.AddCommentInput.ModalContent'
-)(View);
-
-const Share = styled(
-  ({ theme }) => ({
-    marginVertical: theme.sizing.baseUnit,
-    paddingVertical: theme.sizing.baseUnit,
-    paddingHorizontal: theme.sizing.baseUnit,
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderColor: theme.colors.lightSecondary,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  }),
-  'ui-kit.AddCommentInput.Share'
-)(View);
-
-const CurrentText = styled(
-  ({ theme }) => ({
-    color: theme.colors.text.primary,
-    fontSize: theme.typography.baseFontSize,
-    lineHeight: theme.typography.baseLineHeight,
-    paddingHorizontal: theme.sizing.baseUnit,
-  }),
-  'ui-kit.AddCommentInput.CurrentText'
-)(Text);
-
-const ShareText = styled(
-  () => ({
-    flexShrink: 1,
-  }),
-  'ui-kit.AddCommentInput.ShareText'
-)(View);
-
-const ShareDisclaimer = styled(
-  ({ theme }) => ({
-    color: theme.colors.text.tertiary,
-  }),
-  'ui-kit.AddCommentInput.ShareDisclaimer'
-)(H5);
-
-const AddCommentInput = ({ initialPrompt, addPrompt, onSubmit, profile }) => {
-  const [isWriting, setIsWriting] = useState(false);
-  const [currentText, setCurrentText] = useState(null);
-  const [confirmModalOpen, setConfirmModalOpen] = useState(false);
-  const [share, setShare] = useState('PRIVATE');
-
-  const onPressSave = async () => {
-    onSubmit && (await onSubmit(currentText, share)); // eslint-disable-line no-unused-expressions
-    setConfirmModalOpen(false);
-    setIsWriting(false);
-  };
-
-  const onStartWriting = () => {
-    setCurrentText(null);
-    setIsWriting(true);
-  };
+  useEffect(() => {
+    if (bottomSheetModalRef && setBottomSheetModalRef) {
+      // eslint-disable-next-line no-param-reassign
+      setBottomSheetModalRef.current = bottomSheetModalRef.current;
+    }
+  }, [setBottomSheetModalRef, bottomSheetModalRef]);
 
   return (
-    <SafeAreaView>
-      {isWriting ? (
-        <CommentInputContainer>
-          <BodySmall>{addPrompt}</BodySmall>
-          <AddCommentTextInput
-            multiline
-            autoFocus
-            onChangeText={(text) => setCurrentText(text)}
-          />
-          <NextButtonTouchable onPress={() => setConfirmModalOpen(true)}>
-            <NextButton>{'Submit'}</NextButton>
-          </NextButtonTouchable>
-        </CommentInputContainer>
-      ) : (
-        <Touchable onPress={onStartWriting}>
-          <AddCommentContainer>
-            <CommentAvatar source={profile?.image} />
-            <AddCommentPrompt>{currentText || initialPrompt}</AddCommentPrompt>
-          </AddCommentContainer>
-        </Touchable>
-      )}
-      <Modal
-        visible={confirmModalOpen}
-        animationType="slide"
-        onRequestClose={() => setConfirmModalOpen(false)}
+    <>
+      <BottomSheetModal
+        ref={bottomSheetModalRef}
+        index={0}
+        snapPoints={fullscreen ? fullScreenSnapPoints : snapPoints}
+        onChange={handleEditorChange}
+        topInset={safeArea.top}
+        animateOnMount
+        // keyboardBehavior={'fullScreen'}
+        dismissOnPanDown={dismissOnPanDown}
+        backgroundComponent={(bgProps) => <ModalBackgroundView {...bgProps} />} // eslint-disable-line react/jsx-props-no-spreading
+        {...props}
       >
-        <ModalHeader
-          onNext={onPressSave}
-          onNextText="Save"
-          title="New Journal"
+        <Navigator
+          onSubmit={onSubmit}
+          profile={profile}
+          prompt={prompt}
+          initialValue={initialValue}
+          bottomSheetModalRef={bottomSheetModalRef}
+          bottomSheetIndex={bottomSheetIndex}
+          editorTitle={editorTitle}
+          confirmationTitle={confirmationTitle}
+          showCancel={showCancel}
+          hiddenIndex={fullscreen ? -1 : 0}
         />
-        <ModalContent>
-          <UserData>
-            <ModalAvatar source={profile?.image} />
-            <UserName numberOfLines={1}>{profile?.nickName}</UserName>
-          </UserData>
-          <CurrentText>{currentText}</CurrentText>
-          <Share>
-            <ShareText>
-              <H4>Share with the Community</H4>
-              <ShareDisclaimer>
-                Your name and photo will be visible to the community.
-              </ShareDisclaimer>
-            </ShareText>
-            <Switch
-              value={share === 'PUBLIC'}
-              onValueChange={(value) => setShare(value ? 'PUBLIC' : 'PRIVATE')}
-            />
-          </Share>
-        </ModalContent>
-      </Modal>
-    </SafeAreaView>
+      </BottomSheetModal>
+
+      {showInlinePrompt ? (
+        <Touchable onPress={openModal}>
+          <Prompt image={profile?.photo} prompt={prompt} />
+        </Touchable>
+      ) : null}
+    </>
   );
 };
 
 AddCommentInput.propTypes = {
-  initialPrompt: PropTypes.string,
-  addPrompt: PropTypes.string,
+  prompt: PropTypes.string,
   onSubmit: PropTypes.func.isRequired,
   profile: PropTypes.shape({
-    image: PropTypes.shape({ uri: PropTypes.string }),
+    photo: PropTypes.shape({ uri: PropTypes.string }),
     nickName: PropTypes.string,
   }),
-};
-
-AddCommentInput.defaultProps = {
-  initialPrompt: 'Write Something...',
-  addPrompt: 'What stands out to you?',
+  bottomSheetModalRef: PropTypes.shape({
+    current: PropTypes.shape({
+      present: PropTypes.func,
+    }),
+  }),
+  openBottomSheetOnMount: PropTypes.bool,
+  showInlinePrompt: PropTypes.bool,
+  dismissOnPanDown: PropTypes.bool,
+  fullscreen: PropTypes.bool,
+  showCancel: PropTypes.bool,
+  editorTitle: PropTypes.string,
+  confirmationTitle: PropTypes.string,
+  initialValue: PropTypes.string,
 };
 
 export default AddCommentInput;

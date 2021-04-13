@@ -1,8 +1,6 @@
 import React from 'react';
-import wait from 'waait';
 import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
 import { MockedProvider } from '@apollo/client/testing';
-import { act } from 'react-test-renderer';
 
 import { PrayerDialogScreen } from '../screens';
 import { PRAY } from '../screens/PrayerScreen';
@@ -21,7 +19,7 @@ jest.mock('react-native-device-info', () => ({
 }));
 
 jest.mock('@apollosproject/config', () => {
-  const gql = require.requireActual('graphql-tag');
+  const gql = jest.requireActual('graphql-tag');
   return {
     FRAGMENTS: {
       PRAYER_LIST_FEATURE_FRAGMENT: gql`
@@ -49,6 +47,8 @@ jest.mock('@apollosproject/config', () => {
     },
   };
 });
+
+jest.mock('../PrayerCard', () => 'PrayerCard');
 
 const mocks = [
   {
@@ -217,6 +217,7 @@ describe('The PrayerExperienceConnected component', () => {
       </Providers>
     );
 
+    await new Promise((res) => setTimeout(res, 100));
     expect(tree).toMatchSnapshot();
   });
 
@@ -230,6 +231,7 @@ describe('The PrayerExperienceConnected component', () => {
       </Providers>
     );
 
+    await new Promise((res) => setTimeout(res, 100));
     expect(tree).toMatchSnapshot();
   });
 
@@ -240,16 +242,10 @@ describe('The PrayerExperienceConnected component', () => {
       </Providers>
     );
 
-    tree.update(
-      <Providers MockedProvider={MockedProvider} mocks={mocks}>
-        <PrayerExperienceConnected id="PrayerListFeature:123" />
-      </Providers>
-    );
     const screen = tree.root.findByType(PrayerDialogScreen);
     screen.props.onPressPrimary();
 
-    await act(async () => wait(1));
-
+    await new Promise((res) => setTimeout(res, 100));
     expect(tree).toMatchSnapshot();
   });
 
@@ -260,19 +256,13 @@ describe('The PrayerExperienceConnected component', () => {
       </Providers>
     );
 
-    tree.update(
-      <Providers MockedProvider={MockedProvider} mocks={mocks}>
-        <PrayerExperienceConnected id="PrayerListFeature:123" />
-      </Providers>
-    );
     const screens = tree.root.findAllByProps({
       primaryActionText: '🙏 Pray',
     });
 
     screens.forEach((screen) => screen.props.onPressPrimary());
 
-    await act(async () => wait(1));
-
+    await new Promise((res) => setTimeout(res, 100));
     expect(tree).toMatchSnapshot();
   });
 });

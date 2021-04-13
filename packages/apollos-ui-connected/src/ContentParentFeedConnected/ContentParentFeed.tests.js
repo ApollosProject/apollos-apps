@@ -224,20 +224,7 @@ describe('the ContentParentFeedConnected component', () => {
         </Providers>
       )
     );
-    const finalTree = await renderWithApolloData(
-      WithReactNavigator(
-        <Providers
-          MockedProvider={MockedProvider}
-          mocks={[mock, ...additionalMocks]}
-        >
-          <ContentParentFeedConnected
-            nodeId={'ContentSeriesContentItem:123'}
-            navigation={navigation}
-          />
-        </Providers>
-      ),
-      tree
-    );
-    expect(finalTree).toMatchSnapshot();
+    await new Promise((res) => setTimeout(res, 100));
+    expect(tree).toMatchSnapshot();
   });
 });

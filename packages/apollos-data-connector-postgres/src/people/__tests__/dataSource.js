@@ -4,6 +4,10 @@ import {
   createModel as createCampusModel,
   setupModel as setupCampusModel,
 } from '../../campus/model';
+import {
+  createModel as createFollowsModel,
+  setupModel as setupFollowsModel,
+} from '../../follows/model';
 import PeopleDataSource from '../dataSource';
 
 let personId;
@@ -29,7 +33,9 @@ describe('Apollos Postgres People DataSource', () => {
 
     await createModel();
     await createCampusModel();
+    await createFollowsModel();
     await setupCampusModel();
+    await setupFollowsModel();
     await sync();
 
     peopleDataSource = new PeopleDataSource();
@@ -72,6 +78,97 @@ describe('Apollos Postgres People DataSource', () => {
     expect(person.id).toBe(newPerson.id);
   });
 
+  it('should be able to search a user', async () => {
+    await peopleDataSource.model.create({
+      originId: '1',
+      originType: 'rock',
+      firstName: 'John',
+      lastName: 'Williams',
+      apollosUser: true,
+    });
+    await peopleDataSource.model.create({
+      originId: '2',
+      originType: 'rock',
+      firstName: 'Phil',
+      lastName: 'Woodhall',
+      apollosUser: true,
+    });
+
+    const foundPerson = await peopleDataSource.model.create({
+      originId: '3',
+      originType: 'rock',
+      firstName: 'Vincent',
+      lastName: 'Found',
+      apollosUser: true,
+    });
+
+    const edges = await peopleDataSource.byPaginatedQuery({ name: 'Vincent' });
+
+    expect(edges.length).toBe(1);
+    expect(edges[0].node.id).toBe(foundPerson.id);
+  });
+
+  it('should not return non-apollos users when searching', async () => {
+    await peopleDataSource.model.create({
+      originId: '1',
+      originType: 'rock',
+      firstName: 'John',
+      lastName: 'Williams',
+      apollosUser: true,
+    });
+    await peopleDataSource.model.create({
+      originId: '2',
+      originType: 'rock',
+      firstName: 'Phil',
+      lastName: 'Woodhall',
+      apollosUser: true,
+    });
+
+    await peopleDataSource.model.create({
+      originId: '3',
+      originType: 'rock',
+      firstName: 'Vincent',
+      lastName: 'Found',
+      apollosUser: false,
+    });
+
+    const edges = await peopleDataSource.byPaginatedQuery({ name: 'Vincent' });
+
+    expect(edges.length).toBe(0);
+  });
+
+  it('should trim whitespace from string when searching', async () => {
+    await peopleDataSource.model.create({
+      originId: '1',
+      originType: 'rock',
+      firstName: 'John',
+      lastName: 'Williams',
+      apollosUser: true,
+    });
+    await peopleDataSource.model.create({
+      originId: '2',
+      originType: 'rock',
+      firstName: 'Phil',
+      lastName: 'Woodhall',
+      apollosUser: true,
+    });
+
+    const foundPerson = await peopleDataSource.model.create({
+      originId: '3',
+      originType: 'rock',
+      firstName: 'Vincent',
+      lastName: 'Found',
+      apollosUser: true,
+    });
+
+    const edges = await peopleDataSource.byPaginatedQuery({
+      name: 'Vincent Found   ',
+    });
+
+    expect(edges.length).toBe(1);
+    expect(edges[0].node.id).toBe(foundPerson.id);
+  });
+
   it('should create a user', async () => {
     const newPersonId = await peopleDataSource.create({
       FirstName: 'Vincent',
@@ -105,6 +202,26 @@ describe('Apollos Postgres People DataSource', () => {
     const updatedPerson = await peopleDataSource.getFromId(person.id);
 
     expect(updatedPerson.firstName).toBe('Milton');
+  });
+
+  it('update a users gender', async () => {
+    await peopleDataSource.model.create({
+      originId: '1',
+      originType: 'rock',
+      firstName: 'John',
+      lastName: 'Williams',
+    });
+
+    personId = 1;
+    const person = await peopleDataSource.updateProfile([
+      { field: 'Gender', value: 'Male' }, // lowercase, like the gql value
+    ]);
+
+    expect(person.gender).toBe('MALE'); // uppercase, like the postgres enum
+
+    const updatedPerson = await peopleDataSource.getFromId(person.id);
+
+    expect(updatedPerson.gender).toBe('MALE');
   });
 
   it("uploads a user's profile picture", async () => {

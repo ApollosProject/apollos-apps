@@ -95,6 +95,7 @@ describe('ContentSingleFeaturesConnected', () => {
         <ContentSingleFeaturesConnected contentId={'WeekendContentItem:1'} />
       </Providers>
     );
+    await new Promise((res) => setTimeout(res, 1));
     expect(tree).toMatchSnapshot();
   });
   it('should render with nodeId', async () => {

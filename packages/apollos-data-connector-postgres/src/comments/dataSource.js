@@ -33,6 +33,47 @@ class CommentDataSource extends PostgresDataSource {
     return comment;
   }
 
+  async updateComment({ commentId, text, visibility }) {
+    const currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
+
+    const { id } = parseGlobalId(commentId);
+
+    const [count, results] = await this.model.update(
+      {
+        text,
+        visibility,
+      },
+      {
+        where: {
+          id,
+          personId: currentPersonId,
+        },
+        returning: true,
+      }
+    );
+
+    if (count < 1) {
+      throw new Error('Unable to update comment');
+    }
+
+    return results[0];
+  }
+
+  async deleteComment({ commentId }) {
+    const currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
+
+    const { id } = parseGlobalId(commentId);
+
+    const count = await this.model.destroy({
+      where: {
+        id,
+        personId: currentPersonId,
+      },
+    });
+
+    return count > 0;
+  }
+
   async getForNode({ nodeId, nodeType, flagLimit = 0 }) {
     let currentPersonId;
     try {
@@ -59,7 +100,8 @@ class CommentDataSource extends PostgresDataSource {
       where.flagCount = { [Op.lt]: flagLimit };
     }
 
-    const { comments, follows } = this.sequelize.models;
+    // eslint-disable-next-line camelcase
+    const { comments, follows, people, user_likes } = this.sequelize.models;
 
     return comments.findAll({
       where,
@@ -73,8 +115,21 @@ class CommentDataSource extends PostgresDataSource {
           },
           required: false, // emulates a left outer join
         },
+        {
+          model: people,
+        },
+        {
+          model: user_likes,
+          where: {
+            personId: currentPersonId,
+          },
+          required: false, // emulates a left outer join
+        },
       ],
-      order: [[follows, 'id', 'desc', 'nulls last']], // and sort null (no relationship) values to the bottom
+      order: [
+        [follows, 'id', 'desc', 'nulls last'], // and sort null (no relationship) values to the bottom
+        ['likedCount', 'desc'],
+      ],
     });
   }
 }

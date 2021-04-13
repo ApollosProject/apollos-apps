@@ -39,9 +39,21 @@ class OnboardingSwiper extends Component {
 
   static propTypes = {
     children: PropTypes.func.isRequired,
+    userVersion: PropTypes.number,
+    onComplete: PropTypes.func,
+  };
+
+  static defaultProps = {
+    userVersion: 0,
   };
 
   swiper = null;
+
+  constructor(props) {
+    super(props);
+
+    this.state = { index: 0 };
+  }
 
   // Creates ref to Swiper to be passed as a prop to children.
   setSwiperRef = (r) => {
@@ -50,12 +62,7 @@ class OnboardingSwiper extends Component {
     return this.swiper;
   };
 
-  // Advance swiper 1 slide. See Swiper documentation for scrollBy details. https://github.com/leecade/react-native-swiper#methods
-  swipeForward = () => this.swiper.scrollBy(1);
-
-  scrollBy = (...args) => this.swiper.scrollBy(...args);
-
-  render() {
+  get slides() {
     const children = this.props.children({
       swipeForward: this.swipeForward,
       scrollBy: this.scrollBy,
@@ -69,6 +76,25 @@ class OnboardingSwiper extends Component {
       slides = children.props.children;
     }
 
+    const unseenSlides = slides.filter((slide) => {
+      const slideVersion = slide.props.version || 1; // slides without a version are version 1. Consider version 0 "pre slides"
+      return slideVersion > this.props.userVersion;
+    });
+
+    return unseenSlides;
+  }
+
+  // Advance swiper 1 slide. See Swiper documentation for scrollBy details. https://github.com/leecade/react-native-swiper#methods
+  swipeForward = () => {
+    this.swiper.scrollBy(1);
+    if (this.slides.length - 1 === this.state.index) {
+      this.props?.onComplete();
+    }
+  };
+
+  scrollBy = (...args) => this.swiper.scrollBy(...args);
+
+  render() {
     return (
       <Swiper
         loadMinimal
@@ -78,6 +104,7 @@ class OnboardingSwiper extends Component {
         // scrollEnabled={false}
         showsButtons={false}
         ref={this.setSwiperRef}
+        onIndexChanged={(index) => this.setState({ index })}
         renderPagination={this.renderPagination}
         activeDot={
           <SafeAreaView>
@@ -91,7 +118,7 @@ class OnboardingSwiper extends Component {
         }
         {...this.props}
       >
-        {slides}
+        {this.slides}
       </Swiper>
     );
   }

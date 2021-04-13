@@ -1,117 +1,212 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the ConnectedImage component should maintain aspect ratio 1`] = `
-<Image
-  fadeDuration={250}
-  onLoad={[Function]}
-  source={
-    Array [
-      Object {
-        "cache": "force-cache",
-        "height": 150,
-        "uri": "https://placeholdit.co/i/150x150?bg=eeeeee&fc=577084",
-        "width": 150,
-      },
-    ]
-  }
-  style={
-    Object {
-      "aspectRatio": 1,
-      "backgroundColor": "#A5A5A5",
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-/>
+  />,
+  <Image
+    fadeDuration={250}
+    onLoad={[Function]}
+    source={
+      Array [
+        Object {
+          "cache": "force-cache",
+          "height": 150,
+          "uri": "https://placeholdit.co/i/150x150?bg=eeeeee&fc=577084",
+          "width": 150,
+        },
+      ]
+    }
+    style={
+      Object {
+        "aspectRatio": 1,
+        "backgroundColor": "#A5A5A5",
+      }
+    }
+  />,
+]
 `;
 
 exports[`the ConnectedImage component should render between minAspectRatio and maxAspectRatio 1`] = `
-<Image
-  fadeDuration={250}
-  onLoad={[Function]}
-  source={
-    Array [
-      Object {
-        "cache": "force-cache",
-        "height": 200,
-        "uri": "https://picsum.photos/200/200/?random",
-        "width": 200,
-      },
-    ]
-  }
-  style={
-    Object {
-      "aspectRatio": 1,
-      "backgroundColor": "#A5A5A5",
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-/>
+  />,
+  <Image
+    fadeDuration={250}
+    onLoad={[Function]}
+    source={
+      Array [
+        Object {
+          "cache": "force-cache",
+          "height": 200,
+          "uri": "https://picsum.photos/200/200/?random",
+          "width": 200,
+        },
+      ]
+    }
+    style={
+      Object {
+        "aspectRatio": 1,
+        "backgroundColor": "#A5A5A5",
+      }
+    }
+  />,
+]
 `;
 
 exports[`the ConnectedImage component should render immediately with a network image with a known width and height 1`] = `
-<Image
-  fadeDuration={250}
-  onLoad={[Function]}
-  source={
-    Array [
-      Object {
-        "cache": "force-cache",
-        "height": 150,
-        "uri": "https://placeholdit.co/i/150x150?bg=eeeeee&fc=577084",
-        "width": 150,
-      },
-    ]
-  }
-  style={
-    Object {
-      "backgroundColor": "#A5A5A5",
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-/>
+  />,
+  <Image
+    fadeDuration={250}
+    onLoad={[Function]}
+    source={
+      Array [
+        Object {
+          "cache": "force-cache",
+          "height": 150,
+          "uri": "https://placeholdit.co/i/150x150?bg=eeeeee&fc=577084",
+          "width": 150,
+        },
+      ]
+    }
+    style={
+      Object {
+        "backgroundColor": "#A5A5A5",
+      }
+    }
+  />,
+]
 `;
 
 exports[`the ConnectedImage component should render with a maxAspectRatio 1`] = `
-<Image
-  fadeDuration={250}
-  onLoad={[Function]}
-  source={
-    Array [
-      Object {
-        "cache": "force-cache",
-        "height": 200,
-        "uri": "https://picsum.photos/200/200/?random",
-        "width": 200,
-      },
-    ]
-  }
-  style={
-    Object {
-      "aspectRatio": 0.5,
-      "backgroundColor": "#A5A5A5",
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-/>
+  />,
+  <Image
+    fadeDuration={250}
+    onLoad={[Function]}
+    source={
+      Array [
+        Object {
+          "cache": "force-cache",
+          "height": 200,
+          "uri": "https://picsum.photos/200/200/?random",
+          "width": 200,
+        },
+      ]
+    }
+    style={
+      Object {
+        "aspectRatio": 0.5,
+        "backgroundColor": "#A5A5A5",
+      }
+    }
+  />,
+]
 `;
 
 exports[`the ConnectedImage component should render with a minAspectRatio 1`] = `
-<Image
-  fadeDuration={250}
-  onLoad={[Function]}
-  source={
-    Array [
-      Object {
-        "cache": "force-cache",
-        "height": 200,
-        "uri": "https://picsum.photos/200/200/?random",
-        "width": 200,
-      },
-    ]
-  }
-  style={
-    Object {
-      "aspectRatio": 2,
-      "backgroundColor": "#A5A5A5",
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
     }
-  }
-/>
+  />,
+  <Image
+    fadeDuration={250}
+    onLoad={[Function]}
+    source={
+      Array [
+        Object {
+          "cache": "force-cache",
+          "height": 200,
+          "uri": "https://picsum.photos/200/200/?random",
+          "width": 200,
+        },
+      ]
+    }
+    style={
+      Object {
+        "aspectRatio": 2,
+        "backgroundColor": "#A5A5A5",
+      }
+    }
+  />,
+]
 `;
 
 exports[`the ConnectedImage component should throw an error if maxAspectRatio is used without maintainAspectRatio 1`] = `
