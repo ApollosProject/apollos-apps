@@ -15,14 +15,10 @@ jobs:
         fetch-depth: 0 # needs this to pull all tags and branches
 
     - name: Setup Node for npmjs.org
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
-        node-version: 10.19.x
         registry-url: 'https://registry.npmjs.org'
         scope: '@apollosproject'
-
-    - name: Install Yarn
-      run: npm install -g yarn
 
     - name: Install Dependencies
       run: yarn
@@ -33,9 +29,8 @@ jobs:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     - name: Setup Node for GPR
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
-        node-version: 10.19.x
         registry-url: 'https://npm.pkg.github.com'
         scope: '@apollosproject'
 
