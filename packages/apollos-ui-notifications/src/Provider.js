@@ -37,6 +37,7 @@ class NotificationsInit extends Component {
       onClearStore: PropTypes.func,
     }).isRequired,
     actionMap: PropTypes.shape({}),
+    handleExternalLink: PropTypes.func,
   };
 
   static defaultProps = {
@@ -78,6 +79,13 @@ class NotificationsInit extends Component {
 
   navigate = (rawUrl) => {
     if (!rawUrl) return;
+    // this is the long term solution
+    if (this.props.handleExternalLink) {
+      this.props.handleExternalLink(rawUrl);
+      return;
+    }
+    // TODO, leave in for backwards compatibility but long term,
+    // should use the prop above
     const url = URL.parse(rawUrl);
     const route = url.pathname.substring(1);
     const cleanedRoute = route.includes('/app-link/')
