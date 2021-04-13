@@ -39,17 +39,20 @@ const AddCommentPrompt = styled(
   'ui-kit.AddCommentInput.AddCommentPrompt'
 )(H5);
 
-const Prompt = ({ image, prompt, initials }) => (
+const Prompt = ({ prompt, profile }) => (
   <AddCommentContainer>
-    <CommentAvatar initials={initials} source={image} />
+    <CommentAvatar profile={profile} />
     <AddCommentPrompt>{prompt}</AddCommentPrompt>
   </AddCommentContainer>
 );
 
 Prompt.propTypes = {
   prompt: PropTypes.string,
-  initials: PropTypes.string,
-  image: PropTypes.shape({ uri: PropTypes.string }),
+  profile: PropTypes.shape({
+    image: PropTypes.shape({ uri: PropTypes.string }),
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
+  }),
 };
 
 export default Prompt;

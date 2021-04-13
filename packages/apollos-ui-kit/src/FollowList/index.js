@@ -7,7 +7,6 @@ import { ImageSourceType } from '../ConnectedImage';
 import Card, { CardContent } from '../Card';
 import { withIsLoading } from '../isLoading';
 import Button from '../Button';
-import Avatar from '../Avatar';
 
 import FollowListItem from './FollowListItem';
 import FollowListSearch from './FollowListSearch';
@@ -112,8 +111,7 @@ class FollowList extends PureComponent {
                     .filter((name) => Boolean(name))
                     .join(' ') || ''
                 }
-                initials={Avatar.initials(person.firstName, person.lastName)}
-                imageSource={person.photo}
+                profile={person}
                 onFollow={() => onFollow?.({ personId: person.id })}
                 onHide={() =>
                   onHide?.({

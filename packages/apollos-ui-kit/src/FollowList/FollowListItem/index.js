@@ -38,7 +38,6 @@ const StyledButton = styled(
 )(Button);
 
 const FollowListItem = ({
-  imageSource,
   name,
   followRequested,
   confirmedFollower,
@@ -47,11 +46,11 @@ const FollowListItem = ({
   onHide,
   onConfirm,
   onFollow,
-  initials,
+  profile,
 }) => {
   return (
     <Cell>
-      <FollowListImage initials={initials} source={imageSource} />
+      <FollowListImage profile={profile} />
       <TextContainer>
         {name ? <H5 numberOfLines={1}>{name}</H5> : null}
       </TextContainer>
@@ -91,8 +90,11 @@ const FollowListItem = ({
 };
 
 FollowListItem.propTypes = {
-  imageSource: ImageSourceType,
-  initials: PropTypes.string,
+  profile: PropTypes.shape({
+    imageSource: ImageSourceType,
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
+  }),
   name: PropTypes.string,
   followRequested: PropTypes.bool,
   confirmedFollower: PropTypes.bool,

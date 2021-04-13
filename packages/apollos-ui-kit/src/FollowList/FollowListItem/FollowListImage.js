@@ -15,17 +15,20 @@ const CellImage = withTheme(
   'ui-kit.FollowList.FollowListItem.FollowListImage.CellImage'
 )(Avatar);
 
-const FollowListImage = ({ isLoading, source, initials }) => {
+const FollowListImage = ({ isLoading, profile }) => {
   if (isLoading) {
-    return <CellImage size="small" initials={initials} />;
+    return <CellImage size="small" profile={profile} />;
   }
-  return <CellImage size="small" source={source} initials={initials} />;
+  return <CellImage size="small" profile={profile} />;
 };
 
 FollowListImage.propTypes = {
-  source: ImageSourceType,
   isLoading: PropTypes.bool,
-  initials: PropTypes.string,
+  profile: PropTypes.shape({
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
+    photo: ImageSourceType,
+  }),
 };
 
 export default withIsLoading(FollowListImage);

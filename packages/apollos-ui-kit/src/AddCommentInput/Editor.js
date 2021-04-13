@@ -89,7 +89,6 @@ const Editor = ({
   bottomSheetModalRef,
   navigation,
   headerTitle,
-  image,
   prompt,
   initialValue,
   showCancel,
@@ -208,13 +207,7 @@ const Editor = ({
         <TextInput
           prefix={
             <Touchable onPress={() => bottomSheetModalRef.current?.expand()}>
-              <EditorAvatar
-                initials={Avatar.initials(
-                  profile?.firstName,
-                  profile?.lastName
-                )}
-                source={image}
-              />
+              <EditorAvatar profile={profile} />
             </Touchable>
           }
           defaultValue={initialValue}

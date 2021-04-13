@@ -31,11 +31,7 @@ const getAvatars = (prayers) =>
   prayers.map((prayer) => ({
     id: prayer.id,
     notification: !prayer.isPrayed,
-    source: prayer.requestor?.photo,
-    initials: Avatar.initials(
-      prayer.requestor?.firstName,
-      prayer.requestor?.lastName
-    ),
+    profile: prayer.requestor,
   }));
 
 const Header = styled(

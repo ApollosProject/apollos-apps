@@ -64,15 +64,51 @@ storiesOf('ui-kit/Avatar', module)
   ))
   .add('placeholder initals', () => (
     <>
-      <Avatar isLoading size={'small'} placeholderInitials={'VW'} />
-      <Avatar isLoading size={'medium'} placeholderInitials={'VW'} />
-      <Avatar isLoading size={'large'} placeholderInitials={'VW'} />
-      <Avatar isLoading size={'small'} placeholderInitials={'CV'} />
-      <Avatar isLoading size={'medium'} placeholderInitials={'CV'} />
-      <Avatar isLoading size={'large'} placeholderInitials={'CV'} />
-      <Avatar isLoading size={'small'} placeholderInitials={'MN'} />
-      <Avatar isLoading size={'medium'} placeholderInitials={'MN'} />
-      <Avatar isLoading size={'large'} placeholderInitials={'MN'} />
+      <Avatar
+        isLoading
+        size={'small'}
+        profile={{ firstName: 'Vincent', lastName: 'Wilson' }}
+      />
+      <Avatar
+        isLoading
+        size={'medium'}
+        profile={{ firstName: 'Vincent', lastName: 'Wilson' }}
+      />
+      <Avatar
+        isLoading
+        size={'large'}
+        profile={{ firstName: 'Vincent', lastName: 'Wilson' }}
+      />
+      <Avatar
+        isLoading
+        size={'small'}
+        profile={{ firstName: 'Conrad', lastName: 'VanLandingham' }}
+      />
+      <Avatar
+        isLoading
+        size={'medium'}
+        profile={{ firstName: 'Conrad', lastName: 'VanLandingham' }}
+      />
+      <Avatar
+        isLoading
+        size={'large'}
+        profile={{ firstName: 'Conrad', lastName: 'VanLandingham' }}
+      />
+      <Avatar
+        isLoading
+        size={'small'}
+        profile={{ firstName: 'michael', lastName: 'neeley' }}
+      />
+      <Avatar
+        isLoading
+        size={'medium'}
+        profile={{ firstName: 'michael', lastName: 'neeley' }}
+      />
+      <Avatar
+        isLoading
+        size={'large'}
+        profile={{ firstName: 'michael', lastName: 'neeley' }}
+      />
     </>
   ))
   .add('notification', () => (

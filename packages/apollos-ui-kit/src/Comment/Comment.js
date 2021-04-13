@@ -72,10 +72,7 @@ const Comment = ({
   return (
     <CommentContainer>
       <HeaderContainer>
-        <CommentAvatar
-          initials={Avatar.initials(profile?.firstName, profile?.lastName)}
-          source={profile.photo}
-        />
+        <CommentAvatar profile={profile} />
         <HeaderTextContainer>
           <H4>{profile.nickName}</H4>
           <Subtitle>{subtitle}</Subtitle>

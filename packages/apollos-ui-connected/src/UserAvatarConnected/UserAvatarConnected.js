@@ -28,7 +28,7 @@ const UserAvatarConnected = ({
   size,
 }) => (
   <GetPhotoData>
-    {({ photo, firstName, lastName }) => (
+    {(profile) => (
       <Avatar
         buttonIcon={buttonIcon}
         containerStyle={containerStyle}
@@ -36,8 +36,7 @@ const UserAvatarConnected = ({
         isLoading={isLoading}
         onPressIcon={onPressIcon}
         size={size}
-        source={photo}
-        initials={Avatar.initials(firstName, lastName)}
+        profile={profile}
       />
     )}
   </GetPhotoData>
