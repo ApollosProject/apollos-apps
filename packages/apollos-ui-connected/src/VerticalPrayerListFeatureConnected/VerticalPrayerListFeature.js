@@ -50,7 +50,7 @@ const VerticalPrayerListFeature = ({ title, subtitle, prayers }) => {
                 <StyledAvatarView>
                   <Avatar
                     size="medium"
-                    initials={Avatar.initals(
+                    initials={Avatar.initials(
                       prayer.requestor?.firstName,
                       prayer.requestor?.lastName
                     )}
