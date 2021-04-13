@@ -256,11 +256,9 @@ export default class ContentItem extends RockApolloDataSource {
 
   getShareUrl = async (content) => {
     const __typename = this.resolveType(content);
-    return generateAppLink(
-      'universal',
-      'content',
-      createGlobalId(content.id, __typename)
-    );
+    return generateAppLink('universal', 'content', {
+      contentID: createGlobalId(content.id, __typename),
+    });
   };
 
   getSermonFeed() {

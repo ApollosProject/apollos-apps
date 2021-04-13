@@ -57,11 +57,10 @@ describe('ContentItemsModel', () => {
     expect(new ContentItemsDataSource()).toBeTruthy();
   });
 
-  it('creates a sharing URL with item slug', async () => {
+  it('creates a sharing URL', async () => {
     const dataSource = new ContentItemsDataSource();
-    const url = await dataSource.getShareUrl({
-      content: { id: 1, contentChannelId: 6 },
-    });
+    dataSource.resolveType = () => 'WeekendContentItem';
+    const url = await dataSource.getShareUrl({ content: { id: 1 } });
     expect(url).toMatchSnapshot();
   });
 

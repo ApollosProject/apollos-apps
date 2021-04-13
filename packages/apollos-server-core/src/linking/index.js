@@ -88,8 +88,8 @@ export const generateAppLink = (
     throw new Error(`Must select screen from ${SCREENS} with nav route link`);
 
   const host = {
-    universal: `${ApollosConfig.UNIVERSAL_LINK_HOST}/app-link/`,
-    deep: `${ApollosConfig.DEEP_LINK_HOST}://app-link/`,
+    universal: `${ApollosConfig.APP.UNIVERSAL_LINK_HOST}/app-link/`,
+    deep: `${ApollosConfig.APP.DEEP_LINK_HOST}://app-link/`,
   };
 
   const path = {
