@@ -7,7 +7,7 @@ import ContentItemsDataSource from '../data-source';
 
 ApollosConfig.loadJs({
   APP: {
-    ROOT_API_URL: 'https://apollos.api',
+    UNIVERSAL_LINK_HOST: 'https://apollos.api',
   },
   ROCK: {
     API_URL: 'https://apollosrock.newspring.cc/api',
@@ -57,22 +57,11 @@ describe('ContentItemsModel', () => {
     expect(new ContentItemsDataSource()).toBeTruthy();
   });
 
-  it('creates a sharing URL with channel url and item slug', async () => {
+  it('creates a sharing URL', async () => {
     const dataSource = new ContentItemsDataSource();
-    dataSource.context = {
-      dataSources: {
-        ContentChannel: {
-          getFromId: jest.fn(() => ({
-            itemUrl: '/news',
-          })),
-        },
-      },
-    };
-    dataSource.get = jest.fn(() => ({ slug: 'cool-article' }));
-    const result = 'https://apollorock.newspring.cc/news/cool-article';
-    expect(
-      dataSource.getShareUrl({ contentId: 'fakeId', channelId: 'fakeChannel' })
-    ).resolves.toEqual(result);
+    dataSource.resolveType = () => 'WeekendContentItem';
+    const url = await dataSource.getShareUrl({ content: { id: 1 } });
+    expect(url).toMatchSnapshot();
   });
 
   it('filters by content channel id', () => {

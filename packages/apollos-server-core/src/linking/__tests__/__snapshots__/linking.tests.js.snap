@@ -81,3 +81,9 @@ Array [
   ],
 ]
 `;
+
+exports[`Universal linking generates a deep content link 1`] = `"apolloschurchapp://app-link/content/1"`;
+
+exports[`Universal linking generates a universal nav link to home 1`] = `"https://apollos.api/app-link/nav/home"`;
+
+exports[`Universal linking generates a universal nav link to the connect screen 1`] = `"https://apollos.api/app-link/nav/connect"`;

@@ -9,11 +9,15 @@ import RockApolloDataSource, {
   parseKeyValueAttribute,
 } from '@apollosproject/rock-apollo-data-source';
 import ApollosConfig from '@apollosproject/config';
-import { createGlobalId, parseGlobalId } from '@apollosproject/server-core';
+import {
+  createGlobalId,
+  parseGlobalId,
+  generateAppLink,
+} from '@apollosproject/server-core';
 
 import { createImageUrlFromGuid } from '../utils';
 
-const { APP, ROCK, ROCK_MAPPINGS, ROCK_CONSTANTS } = ApollosConfig;
+const { ROCK, ROCK_MAPPINGS, ROCK_CONSTANTS } = ApollosConfig;
 
 export default class ContentItem extends RockApolloDataSource {
   resource = 'ContentChannelItems';
@@ -250,23 +254,11 @@ export default class ContentItem extends RockApolloDataSource {
       : tokens[0];
   };
 
-  getShareUrl = async ({ contentId, channelId }) => {
-    const contentChannel = await this.context.dataSources.ContentChannel.getFromId(
-      channelId
-    );
-
-    if (!contentChannel.itemUrl) return APP.ROOT_API_URL;
-
-    const slug = await this.request('ContentChannelItemSlugs')
-      .filter(`ContentChannelItemId eq ${contentId}`)
-      .cache({ ttl: 60 })
-      .first();
-
-    return [
-      APP.ROOT_API_URL,
-      contentChannel.itemUrl.replace(/^\//, ''),
-      slug ? slug.slug : '',
-    ].join('/');
+  getShareUrl = async (content) => {
+    const __typename = this.resolveType(content);
+    return generateAppLink('universal', 'content', {
+      contentID: createGlobalId(content.id, __typename),
+    });
   };
 
   getSermonFeed() {

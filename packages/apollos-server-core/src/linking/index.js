@@ -68,3 +68,36 @@ export function setupUniversalLinks({
     }
   });
 }
+
+export const generateAppLink = (
+  type = 'universal',
+  route = 'nav',
+  args = { screen: 'home' }
+) => {
+  const TYPES = ['universal', 'deep'];
+  const ROUTES = ['content', 'nav'];
+  const SCREENS = ['home', 'read', 'watch', 'pray', 'connect'];
+
+  if (!TYPES.includes(type))
+    throw new Error(`Must select link type from ${TYPES}`);
+  if (!ROUTES.includes(route))
+    throw new Error(`Must select link route from ${ROUTES}`);
+  if (route === 'content' && !args.contentID)
+    throw new Error('Must pass args.contentID with content route link');
+  if (route === 'nav' && !SCREENS.includes(args.screen))
+    throw new Error(`Must select screen from ${SCREENS} with nav route link`);
+
+  const host = {
+    universal: `${ApollosConfig.APP.UNIVERSAL_LINK_HOST}/app-link/`,
+    deep: `${ApollosConfig.APP.DEEP_LINK_HOST}://app-link/`,
+  };
+
+  const path = {
+    content: args.contentID,
+    nav: args.screen,
+  };
+
+  // path is arbitrary and is handled app side
+  // this just provides structure so the app can expect the same thing every time
+  return `${host[type]}${route}/${path[route]}`;
+};

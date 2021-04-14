@@ -10,6 +10,8 @@ Array [
 ]
 `;
 
+exports[`ContentItemsModel creates a sharing URL 1`] = `"https://apollos.api/app-link/content/WeekendContentItem:ae01c3f623e7f125f60cfcabd06e65cf"`;
+
 exports[`ContentItemsModel defaults to filtering content 1`] = `
 Array [
   Array [
