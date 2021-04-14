@@ -49,9 +49,19 @@ const TouchableChild = styled(
  * does feel broken either. Furthermore, this fix only seems to work if it lives in it's own
  * `.android` file 😢
  */
-const TouchableAvatar = ({ disabled, notification, onPress, source }) => (
+const TouchableAvatar = ({
+  disabled,
+  notification,
+  onPress,
+  source,
+  profile,
+}) => (
   <View>
-    <StyledAvatar source={source} notification={notification} />
+    <StyledAvatar
+      profile={profile}
+      source={source}
+      notification={notification}
+    />
     <AndroidTouchableRippleFix>
       <Touchable disabled={disabled} onPress={onPress}>
         <TouchableChild collapsable={false} />
@@ -65,6 +75,11 @@ TouchableAvatar.propTypes = {
   notification: PropTypes.bool,
   onPress: PropTypes.func,
   source: ImageSourceType,
+  profile: PropTypes.shape({
+    photo: ImageSourceType,
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
+  }),
 };
 
 export default TouchableAvatar;
