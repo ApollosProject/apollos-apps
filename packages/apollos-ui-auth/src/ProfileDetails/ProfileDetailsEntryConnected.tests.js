@@ -21,10 +21,7 @@ describe('ui-auth/Profile/ProfileDetailsEntryConnected', () => {
 
     const tree = renderer.create(
       <Providers>
-        <ProfileDetailsEntryConnected
-          navigation={navigation}
-          screenProps={{ defaultDate: '2019-02-14T05:00:00.000Z' }}
-        />
+        <ProfileDetailsEntryConnected navigation={navigation} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
