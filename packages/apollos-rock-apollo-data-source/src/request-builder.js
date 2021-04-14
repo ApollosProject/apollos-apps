@@ -150,8 +150,10 @@ you can return request.empty()
    */
   sort = (fields = [{ field: 'Id', direction: 'desc' }]) => {
     delete this.query.$orderby;
+    if (!fields.length) return this;
     this.query.$orderby = fields
-      .map(({ field, direction }) => `${field} ${direction}`)
+      .filter(({ field, direction }) => field && direction)
+      .map(({ field, direction }) => `${field} ${direction.toLowerCase()}`)
       .join(', ');
     return this;
   };
