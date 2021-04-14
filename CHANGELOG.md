@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.11.0](https://github.com/ApollosProject/apollos-apps/compare/v2.10.0...v2.11.0) (2021-04-12)
+
+
+### Features
+
+* add books of the bible to scripture references ([#1859](https://github.com/ApollosProject/apollos-apps/issues/1859)) ([87f6ded](https://github.com/ApollosProject/apollos-apps/commit/87f6dedc7dcd979c1aa96bdb2b308b2fc1288900))
+
+
+### Bug Fixes
+
+* Buttons hiding too soon in editing modal on Android ([#1864](https://github.com/ApollosProject/apollos-apps/issues/1864)) ([2734e39](https://github.com/ApollosProject/apollos-apps/commit/2734e398fdf375cc7d1d42d8afe1a7dbac362d05))
+* Onesignal Api change, make sure external_user_ids are strings ([#1862](https://github.com/ApollosProject/apollos-apps/issues/1862)) ([e97d739](https://github.com/ApollosProject/apollos-apps/commit/e97d73939d848e353f08db9db50f8667d78511f1))
+
+
+
+## [2.10.0](https://github.com/ApollosProject/apollos-apps/compare/v2.9.0...v2.10.0) (2021-04-06)
+
+
+### Features
+
+* Added analytics for new features - journal and following ([#1851](https://github.com/ApollosProject/apollos-apps/issues/1851)) ([1f307b0](https://github.com/ApollosProject/apollos-apps/commit/1f307b0c5719e2d42cead7ea411552f565389ff5))
+* Comment update and delete ([#1855](https://github.com/ApollosProject/apollos-apps/issues/1855)) ([6968b6c](https://github.com/ApollosProject/apollos-apps/commit/6968b6cae059adc4b810c18d2ed9e217166c48cb))
+* Edit / Delete journals UI ([#1856](https://github.com/ApollosProject/apollos-apps/issues/1856)) ([6dc0fdd](https://github.com/ApollosProject/apollos-apps/commit/6dc0fdda33fdba42969fa3a39449cb3e1a25dc15))
+
+
+### Bug Fixes
+
+* add safety check to prayer requestor ([#1857](https://github.com/ApollosProject/apollos-apps/issues/1857)) ([56cf8da](https://github.com/ApollosProject/apollos-apps/commit/56cf8da9c0a7bf93283669c85d9156a606a282f6))
+* component overrides for NodeSingleConnected ([#1858](https://github.com/ApollosProject/apollos-apps/issues/1858)) ([e57384e](https://github.com/ApollosProject/apollos-apps/commit/e57384ed415ba052b3cd5710a24013115d081191))
+* Optimize Cloudinary image settings ([#1854](https://github.com/ApollosProject/apollos-apps/issues/1854)) ([bd25e77](https://github.com/ApollosProject/apollos-apps/commit/bd25e77693fd6187dd74a54c8f89e3e27892027b))
+
+
+
 ## [2.9.0](https://github.com/ApollosProject/apollos-apps/compare/v2.8.0...v2.9.0) (2021-03-30)
 
 

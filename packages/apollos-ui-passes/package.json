@@ -2,9 +2,9 @@
   "name": "@apollosproject/ui-passes",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
   "engines": {
-    "node": ">=10.x.x"
+    "node": ">=12"
   },
-  "version": "2.9.0",
+  "version": "2.11.0",
   "main": "src/index.js",
   "files": [
     "src/**",

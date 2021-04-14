@@ -1,18 +1,43 @@
 import React from 'react';
-import { useMutation } from '@apollo/client';
+import { useMutation, useApolloClient, gql } from '@apollo/client';
 import PropTypes from 'prop-types';
+import { useTrack } from '@apollosproject/ui-analytics';
 
 import { FollowList } from '@apollosproject/ui-kit';
 import REQUEST_FOLLOW from './requestFollow';
 import ACCEPT_REQUEST from './acceptFollowRequest';
 import IGNORE_REQUEST from './ignoreFollowRequest';
 
+const usePersonName = () => {
+  const client = useApolloClient();
+  return ({ personId }) => {
+    const { firstName, lastName } = client.readFragment({
+      fragment: gql`
+        fragment PersonFragment on Person {
+          firstName
+          lastName
+        }
+      `,
+      id: client.cache.identify({ id: personId, __typename: 'Person' }),
+    });
+    return [firstName, lastName].join(' ');
+  };
+};
+
 const FollowListConnected = ({ Component, ...props }) => {
   const [requestFollowPerson] = useMutation(REQUEST_FOLLOW);
   const [acceptFollowRequest] = useMutation(ACCEPT_REQUEST);
   const [ignoreFollowRequest] = useMutation(IGNORE_REQUEST);
 
+  const track = useTrack();
+  const getPersonName = usePersonName();
+
   const handleFollow = ({ personId }) => {
+    const personName = getPersonName({ personId });
+    track({
+      eventName: 'User Requested Follow',
+      properties: { personName, personId },
+    });
     return requestFollowPerson({
       variables: { personId },
       optimisticResponse: {
@@ -43,6 +68,11 @@ const FollowListConnected = ({ Component, ...props }) => {
   };
 
   const handleAccept = ({ personId, requestId }) => {
+    const personName = getPersonName({ personId });
+    track({
+      eventName: 'User Accepted Follow Request',
+      properties: { personName, personId },
+    });
     return acceptFollowRequest({
       variables: { personId },
       optimisticResponse: {
@@ -57,6 +87,11 @@ const FollowListConnected = ({ Component, ...props }) => {
   };
 
   const handleIgnore = ({ personId, requestId }) => {
+    const personName = getPersonName({ personId });
+    track({
+      eventName: 'User Ignored Follow Request',
+      properties: { personName, personId },
+    });
     return ignoreFollowRequest({
       variables: { personId },
       optimisticResponse: {

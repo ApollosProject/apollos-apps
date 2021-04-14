@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OneSignal sends a push notification to a user 1`] = `
+Array [
+  Array [
+    "notifications",
+    Object {
+      "app_id": "some-app-id",
+      "contents": Object {
+        "en": "Welcome to the app!",
+      },
+      "headings": Object {
+        "en": "Welcome",
+      },
+      "include_external_user_ids": Array [
+        "123456",
+        "567",
+      ],
+      "subtitle": Object {
+        "en": "It will be fun!",
+      },
+    },
+  ],
+]
+`;

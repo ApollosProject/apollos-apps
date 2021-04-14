@@ -18,47 +18,53 @@ const Navigator = ({
   onSubmit,
   profile,
   prompt,
+  initialValue,
+  showCancel,
+  hiddenIndex,
   ...navigatorProps
-}) => {
-  return (
-    <NavigationContainer independent>
-      <Stack.Navigator {...navigatorProps}>
-        <Stack.Screen name="Editor">
-          {(props) => (
-            <Editor
-              bottomSheetModalRef={bottomSheetModalRef}
-              bottomSheetIndex={bottomSheetIndex}
-              image={profile?.photo}
-              prompt={prompt}
-              headerTitle={editorTitle}
-              {...props}
-            />
-          )}
-        </Stack.Screen>
-        <Stack.Screen
-          name="Confirmation"
-          options={{
-            headerShown: true,
-            headerTitle: confirmationTitle,
-            headerBackTitle: 'Edit',
-          }}
-        >
-          {(props) => (
-            <Confirmation
-              bottomSheetModalRef={bottomSheetModalRef}
-              profile={profile}
-              onSubmit={onSubmit}
-              {...props}
-            />
-          )}
-        </Stack.Screen>
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-};
+}) => (
+  <NavigationContainer independent>
+    <Stack.Navigator {...navigatorProps}>
+      <Stack.Screen name="Editor">
+        {(props) => (
+          <Editor
+            bottomSheetModalRef={bottomSheetModalRef}
+            bottomSheetIndex={bottomSheetIndex}
+            image={profile?.photo}
+            prompt={prompt}
+            headerTitle={editorTitle}
+            initialValue={initialValue}
+            showCancel={showCancel}
+            hiddenIndex={hiddenIndex}
+            profile={profile}
+            {...props}
+          />
+        )}
+      </Stack.Screen>
+      <Stack.Screen
+        name="Confirmation"
+        options={{
+          headerShown: true,
+          headerTitle: confirmationTitle,
+          headerBackTitle: 'Edit',
+        }}
+      >
+        {(props) => (
+          <Confirmation
+            bottomSheetModalRef={bottomSheetModalRef}
+            profile={profile}
+            onSubmit={onSubmit}
+            {...props}
+          />
+        )}
+      </Stack.Screen>
+    </Stack.Navigator>
+  </NavigationContainer>
+);
 
 Navigator.propTypes = {
   prompt: PropTypes.string,
+  initialValue: PropTypes.string,
   onSubmit: PropTypes.func.isRequired,
   profile: PropTypes.shape({
     photo: PropTypes.shape({ uri: PropTypes.string }),
@@ -70,6 +76,8 @@ Navigator.propTypes = {
   editorTitle: PropTypes.string,
   confirmationTitle: PropTypes.string,
   bottomSheetIndex: PropTypes.shape({}),
+  showCancel: PropTypes.bool,
+  hiddenIndex: PropTypes.number,
 };
 
 const EnhancedNavigator = withTheme(({ theme, ...props }) => ({
