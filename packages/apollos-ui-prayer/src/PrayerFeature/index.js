@@ -30,7 +30,7 @@ const getAvatars = (prayers) =>
   prayers.map((prayer) => ({
     id: prayer.id,
     notification: !prayer.isPrayed,
-    source: prayer.requestor?.photo,
+    profile: prayer.requestor,
   }));
 
 const Header = styled(

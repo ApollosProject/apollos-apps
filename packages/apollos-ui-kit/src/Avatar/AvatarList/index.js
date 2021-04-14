@@ -63,6 +63,8 @@ const renderItem = (onPressAvatar, isLoading) => ({ item }) => (
     onPress={() => onPressAvatar({ item })}
     /* eslint-disable-next-line */
     source={item?.source}
+    /* eslint-disable-next-line */
+    profile={item?.profile}
   />
 );
 
@@ -98,7 +100,11 @@ AvatarList.propTypes = {
   avatars: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
-      source: ImageSourceType,
+      profile: PropTypes.shape({
+        source: ImageSourceType,
+        firstName: PropTypes.string,
+        lastName: PropTypes.string,
+      }),
       notification: PropTypes.bool,
     })
   ).isRequired,

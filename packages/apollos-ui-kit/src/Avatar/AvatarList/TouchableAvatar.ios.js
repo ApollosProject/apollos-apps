@@ -17,9 +17,19 @@ const StyledAvatar = withTheme(
 )(Avatar);
 
 // See the `.android` verson of this component for an explination of what and why.
-const TouchableAvatar = ({ disabled, notification, onPress, source }) => (
+const TouchableAvatar = ({
+  disabled,
+  notification,
+  onPress,
+  profile,
+  source,
+}) => (
   <Touchable disabled={disabled} onPress={onPress}>
-    <StyledAvatar source={source} notification={notification} />
+    <StyledAvatar
+      profile={profile}
+      source={source}
+      notification={notification}
+    />
   </Touchable>
 );
 
@@ -28,6 +38,11 @@ TouchableAvatar.propTypes = {
   notification: PropTypes.bool,
   onPress: PropTypes.func,
   source: ImageSourceType,
+  profile: PropTypes.shape({
+    photo: ImageSourceType,
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
+  }),
 };
 
 export default TouchableAvatar;

@@ -5,6 +5,8 @@ export default gql`
     currentUser {
       id
       profile {
+        firstName
+        lastName
         id
         photo {
           uri

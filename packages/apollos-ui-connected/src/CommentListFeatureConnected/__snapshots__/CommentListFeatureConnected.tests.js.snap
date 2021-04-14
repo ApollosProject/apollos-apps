@@ -16,7 +16,9 @@ Array [
               "id": "Campus:123",
               "name": "Anderson Campus",
             },
+            "firstName": "Albert",
             "id": "Person:0",
+            "lastName": "Flores",
             "nickName": "Albert Flores",
             "photo": Object {
               "__typename": "ImageMediaSource",
@@ -36,7 +38,9 @@ Array [
               "id": "Campus:123",
               "name": "Anderson Campus",
             },
+            "firstName": "Albert",
             "id": "Person:1",
+            "lastName": "Flores",
             "nickName": "Albert Flores",
             "photo": Object {
               "__typename": "ImageMediaSource",
@@ -56,7 +60,9 @@ Array [
               "id": "Campus:123",
               "name": "Anderson Campus",
             },
+            "firstName": "Albert",
             "id": "Person:2",
+            "lastName": "Flores",
             "nickName": "Albert Flores",
             "photo": Object {
               "__typename": "ImageMediaSource",
@@ -76,7 +82,9 @@ Array [
               "id": "Campus:123",
               "name": "Anderson Campus",
             },
+            "firstName": "Albert",
             "id": "Person:3",
+            "lastName": "Flores",
             "nickName": "Albert Flores",
             "photo": Object {
               "__typename": "ImageMediaSource",
@@ -96,7 +104,9 @@ Array [
               "id": "Campus:123",
               "name": "Anderson Campus",
             },
+            "firstName": "Albert",
             "id": "Person:4",
+            "lastName": "Flores",
             "nickName": "Albert Flores",
             "photo": Object {
               "__typename": "ImageMediaSource",
@@ -116,7 +126,9 @@ Array [
               "id": "Campus:123",
               "name": "Anderson Campus",
             },
+            "firstName": "Albert",
             "id": "Person:5",
+            "lastName": "Flores",
             "nickName": "Albert Flores",
             "photo": Object {
               "__typename": "ImageMediaSource",
@@ -136,7 +148,9 @@ Array [
               "id": "Campus:123",
               "name": "Anderson Campus",
             },
+            "firstName": "Albert",
             "id": "Person:6",
+            "lastName": "Flores",
             "nickName": "Albert Flores",
             "photo": Object {
               "__typename": "ImageMediaSource",
@@ -156,7 +170,9 @@ Array [
               "id": "Campus:123",
               "name": "Anderson Campus",
             },
+            "firstName": "Albert",
             "id": "Person:7",
+            "lastName": "Flores",
             "nickName": "Albert Flores",
             "photo": Object {
               "__typename": "ImageMediaSource",
@@ -176,7 +192,9 @@ Array [
               "id": "Campus:123",
               "name": "Anderson Campus",
             },
+            "firstName": "Albert",
             "id": "Person:8",
+            "lastName": "Flores",
             "nickName": "Albert Flores",
             "photo": Object {
               "__typename": "ImageMediaSource",
@@ -196,7 +214,9 @@ Array [
               "id": "Campus:123",
               "name": "Anderson Campus",
             },
+            "firstName": "Albert",
             "id": "Person:9",
+            "lastName": "Flores",
             "nickName": "Albert Flores",
             "photo": Object {
               "__typename": "ImageMediaSource",

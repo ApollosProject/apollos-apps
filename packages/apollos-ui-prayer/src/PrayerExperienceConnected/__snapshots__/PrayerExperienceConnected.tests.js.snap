@@ -507,13 +507,19 @@ Array [
                       }
                     >
                       <PrayerCard
-                        avatar={
+                        onPrayerChangeText={[Function]}
+                        profile={
                           Object {
-                            "__typename": "ImageMediaSource",
-                            "uri": "https://1234.image.com",
+                            "__typename": "Person",
+                            "firstName": "Bob",
+                            "id": "Person:1234",
+                            "lastName": "Person",
+                            "photo": Object {
+                              "__typename": "ImageMediaSource",
+                              "uri": "https://1234.image.com",
+                            },
                           }
                         }
-                        onPrayerChangeText={[Function]}
                         title="Add your prayer"
                       />
                     </View>
@@ -676,13 +682,20 @@ Array [
                       }
                     >
                       <PrayerCard
-                        avatar={
+                        prayer="I pray for you."
+                        profile={
                           Object {
-                            "__typename": "ImageMediaSource",
-                            "uri": "https://123.image-url.com",
+                            "__typename": "Person",
+                            "firstName": "Father",
+                            "id": "Person:123",
+                            "lastName": "Brown",
+                            "nickName": "Father",
+                            "photo": Object {
+                              "__typename": "ImageMediaSource",
+                              "uri": "https://123.image-url.com",
+                            },
                           }
                         }
-                        prayer="I pray for you."
                         title="Pray for Father"
                       />
                     </View>
@@ -1763,13 +1776,19 @@ Array [
                       }
                     >
                       <PrayerCard
-                        avatar={
+                        onPrayerChangeText={[Function]}
+                        profile={
                           Object {
-                            "__typename": "ImageMediaSource",
-                            "uri": "https://1234.image.com",
+                            "__typename": "Person",
+                            "firstName": "Bob",
+                            "id": "Person:1234",
+                            "lastName": "Person",
+                            "photo": Object {
+                              "__typename": "ImageMediaSource",
+                              "uri": "https://1234.image.com",
+                            },
                           }
                         }
-                        onPrayerChangeText={[Function]}
                         title="Add your prayer"
                       />
                     </View>
@@ -1932,13 +1951,20 @@ Array [
                       }
                     >
                       <PrayerCard
-                        avatar={
+                        prayer="I pray for you."
+                        profile={
                           Object {
-                            "__typename": "ImageMediaSource",
-                            "uri": "https://123.image-url.com",
+                            "__typename": "Person",
+                            "firstName": "Father",
+                            "id": "Person:123",
+                            "lastName": "Brown",
+                            "nickName": "Father",
+                            "photo": Object {
+                              "__typename": "ImageMediaSource",
+                              "uri": "https://123.image-url.com",
+                            },
                           }
                         }
-                        prayer="I pray for you."
                         title="Pray for Father"
                       />
                     </View>
@@ -2665,13 +2691,19 @@ Array [
                       }
                     >
                       <PrayerCard
-                        avatar={
+                        onPrayerChangeText={[Function]}
+                        profile={
                           Object {
-                            "__typename": "ImageMediaSource",
-                            "uri": "https://1234.image.com",
+                            "__typename": "Person",
+                            "firstName": "Bob",
+                            "id": "Person:1234",
+                            "lastName": "Person",
+                            "photo": Object {
+                              "__typename": "ImageMediaSource",
+                              "uri": "https://1234.image.com",
+                            },
                           }
                         }
-                        onPrayerChangeText={[Function]}
                         title="Add your prayer"
                       />
                     </View>
@@ -2834,13 +2866,20 @@ Array [
                       }
                     >
                       <PrayerCard
-                        avatar={
+                        prayer="I pray for you."
+                        profile={
                           Object {
-                            "__typename": "ImageMediaSource",
-                            "uri": "https://123.image-url.com",
+                            "__typename": "Person",
+                            "firstName": "Father",
+                            "id": "Person:123",
+                            "lastName": "Brown",
+                            "nickName": "Father",
+                            "photo": Object {
+                              "__typename": "ImageMediaSource",
+                              "uri": "https://123.image-url.com",
+                            },
                           }
                         }
-                        prayer="I pray for you."
                         title="Pray for Father"
                       />
                     </View>
@@ -3921,13 +3960,19 @@ Array [
                       }
                     >
                       <PrayerCard
-                        avatar={
+                        onPrayerChangeText={[Function]}
+                        profile={
                           Object {
-                            "__typename": "ImageMediaSource",
-                            "uri": "https://1234.image.com",
+                            "__typename": "Person",
+                            "firstName": "Bob",
+                            "id": "Person:1234",
+                            "lastName": "Person",
+                            "photo": Object {
+                              "__typename": "ImageMediaSource",
+                              "uri": "https://1234.image.com",
+                            },
                           }
                         }
-                        onPrayerChangeText={[Function]}
                         title="Add your prayer"
                       />
                     </View>
@@ -4090,13 +4135,20 @@ Array [
                       }
                     >
                       <PrayerCard
-                        avatar={
+                        prayer="I pray for you."
+                        profile={
                           Object {
-                            "__typename": "ImageMediaSource",
-                            "uri": "https://123.image-url.com",
+                            "__typename": "Person",
+                            "firstName": "Father",
+                            "id": "Person:123",
+                            "lastName": "Brown",
+                            "nickName": "Father",
+                            "photo": Object {
+                              "__typename": "ImageMediaSource",
+                              "uri": "https://123.image-url.com",
+                            },
                           }
                         }
-                        prayer="I pray for you."
                         title="Pray for Father"
                       />
                     </View>

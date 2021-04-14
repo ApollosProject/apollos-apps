@@ -1329,20 +1329,45 @@ Array [
             }
           }
         >
-          <Image
-            fadeDuration={250}
-            onLoad={[Function]}
-            source={Array []}
+          <View
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
-                "borderRadius": 32,
+                "alignItems": "center",
                 "height": 64,
+                "justifyContent": "center",
                 "marginRight": 16,
                 "width": 64,
               }
             }
-          />
+            themeSize={64}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 64,
+                  "height": 64,
+                  "justifyContent": "center",
+                  "width": 64,
+                }
+              }
+              themeSize={64}
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#F8F7F4",
+                    "fontFamily": "InterUI-Bold",
+                    "fontSize": 32,
+                  }
+                }
+                themeSize={64}
+              >
+                JS
+              </Text>
+            </View>
+          </View>
           <View
             style={
               Object {

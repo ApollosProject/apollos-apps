@@ -72,7 +72,7 @@ const Comment = ({
   return (
     <CommentContainer>
       <HeaderContainer>
-        <CommentAvatar source={profile.photo} />
+        <CommentAvatar profile={profile} />
         <HeaderTextContainer>
           <H4>{profile.nickName}</H4>
           <Subtitle>{subtitle}</Subtitle>
@@ -90,6 +90,8 @@ const Comment = ({
 Comment.propTypes = {
   profile: PropTypes.shape({
     photo: PropTypes.shape({ uri: PropTypes.string }),
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
     nickName: PropTypes.string,
   }),
   subtitle: PropTypes.string,

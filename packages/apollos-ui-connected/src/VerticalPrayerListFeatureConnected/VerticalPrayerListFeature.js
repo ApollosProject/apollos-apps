@@ -48,7 +48,7 @@ const VerticalPrayerListFeature = ({ title, subtitle, prayers }) => {
             <Card>
               <CardContent>
                 <StyledAvatarView>
-                  <Avatar size="medium" source={prayer.requestor?.photo} />
+                  <Avatar size="medium" profile={prayer.requestor} />
                 </StyledAvatarView>
                 <H4>{`Pray for ${prayer.requestor?.firstName}`}</H4>
                 <Paragraph>

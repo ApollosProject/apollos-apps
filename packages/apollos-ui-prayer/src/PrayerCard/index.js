@@ -83,7 +83,7 @@ const Content = styled(
 )(CardContent);
 
 const PrayerCard = ({
-  avatar,
+  profile,
   cardColor,
   isLoading,
   onPrayerChangeText,
@@ -93,9 +93,9 @@ const PrayerCard = ({
 }) => (
   <StyledCard cardColor={cardColor} isLoading={isLoading}>
     <Content>
-      <AvatarPlacement hasAvatar={!!avatar}>
+      <AvatarPlacement hasAvatar={!!profile}>
         <AvatarWrapper>
-          {avatar ? <UserAvatar source={avatar} /> : <DefaultAvatar />}
+          {profile ? <UserAvatar profile={profile} /> : <DefaultAvatar />}
         </AvatarWrapper>
       </AvatarPlacement>
       {isLoading || prayer ? (
@@ -117,7 +117,11 @@ const PrayerCard = ({
 );
 
 PrayerCard.propTypes = {
-  avatar: PropTypes.shape({}),
+  profile: PropTypes.shape({
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
+    photo: PropTypes.string,
+  }),
   cardColor: PropTypes.string,
   isLoading: PropTypes.bool,
   completed: PropTypes.bool,

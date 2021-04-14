@@ -30,10 +30,11 @@ describe('VerticalPrayerListFeatureConnected component', () => {
                 id: 'PrayerRequest:123',
                 isPrayed: false,
                 requestor: {
-                  __typename: 'AuthenticatedUser',
-                  id: 'AuthenticatedUser:123',
+                  __typename: 'Person',
+                  id: 'Person:123',
                   firstName: 'Michael',
                   nickName: '',
+                  lastName: 'Neely',
                   photo: {
                     __typename: 'ImageMedia',
                     uri: '',
@@ -46,9 +47,10 @@ describe('VerticalPrayerListFeatureConnected component', () => {
                 id: 'PrayerRequest:456',
                 isPrayed: false,
                 requestor: {
-                  __typename: 'AuthenticatedUser',
-                  id: 'AuthenticatedUser:123',
+                  __typename: 'Person',
+                  id: 'Person:123',
                   firstName: 'Michael',
+                  lastName: 'Neely',
                   nickName: '',
                   photo: {
                     __typename: 'ImageMedia',
@@ -62,13 +64,14 @@ describe('VerticalPrayerListFeatureConnected component', () => {
         },
       },
     };
-
     const tree = await renderWithApolloData(
       <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <VerticalPrayerListFeatureConnected
           featureId={'VerticalPrayerListFeature:123'}
         />
-      </Providers>
+      </Providers>,
+      null,
+      { renderCount: 2 }
     );
     expect(tree).toMatchSnapshot();
   });
@@ -76,13 +79,13 @@ describe('VerticalPrayerListFeatureConnected component', () => {
     const mock = {
       request: {
         query: GET_VERTICAL_PRAYER_LIST_FEATURE,
-        variables: { featureId: 'VerticalPrayerListFeature:123' },
+        variables: { featureId: 'VerticalPrayerListFeature:456' },
       },
       result: {
         data: {
           node: {
             __typename: 'VerticalPrayerListFeature',
-            id: 'VerticalPrayerListFeature:123',
+            id: 'VerticalPrayerListFeature:456',
             title: 'title',
             subtitle: 'subtitle',
             prayers: [],
@@ -94,7 +97,7 @@ describe('VerticalPrayerListFeatureConnected component', () => {
     const tree = await renderWithApolloData(
       <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <VerticalPrayerListFeatureConnected
-          featureId={'VerticalPrayerListFeature:123'}
+          featureId={'VerticalPrayerListFeature:456'}
         />
       </Providers>
     );

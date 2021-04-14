@@ -111,7 +111,7 @@ class FollowList extends PureComponent {
                     .filter((name) => Boolean(name))
                     .join(' ') || ''
                 }
-                imageSource={person.photo}
+                profile={person}
                 onFollow={() => onFollow?.({ personId: person.id })}
                 onHide={() =>
                   onHide?.({

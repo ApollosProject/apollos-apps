@@ -36,6 +36,7 @@ const Navigator = ({
             initialValue={initialValue}
             showCancel={showCancel}
             hiddenIndex={hiddenIndex}
+            profile={profile}
             {...props}
           />
         )}
