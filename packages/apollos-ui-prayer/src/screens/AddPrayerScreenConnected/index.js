@@ -24,6 +24,8 @@ export const GET_USER_PHOTO = gql`
     currentUser {
       id
       profile {
+        firstName
+        lastName
         id
         photo {
           uri
@@ -45,6 +47,7 @@ const AddPrayerScreenConnected = ({
 }) => {
   const { data: userData } = useQuery(GET_USER_PHOTO);
   const photo = userData?.currentUser?.profile?.photo;
+  const profile = userData?.currentUser?.profile;
 
   const { track } = useContext(AnalyticsContext);
 
@@ -73,7 +76,7 @@ const AddPrayerScreenConnected = ({
         {...screenProps}
       >
         <PrayerCardComponent
-          avatar={photo || null}
+          profile={profile}
           title={title}
           onPrayerChangeText={setPrayer}
           completed={completed}

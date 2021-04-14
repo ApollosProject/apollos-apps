@@ -37,6 +37,7 @@ jest.mock('@apollosproject/config', () => {
               id
               nickName
               firstName
+              lastName
               photo {
                 uri
               }
@@ -62,6 +63,8 @@ const mocks = [
           __typename: 'AuthenticatedUser',
           profile: {
             id: 'Person:1234',
+            firstName: 'Bob',
+            lastName: 'Person',
             __typename: 'Person',
             photo: {
               __typename: 'ImageMediaSource',
@@ -160,6 +163,7 @@ const mocks = [
                 id: 'Person:123',
                 nickName: 'Father',
                 firstName: 'Father',
+                lastName: 'Brown',
                 photo: {
                   __typename: 'ImageMediaSource',
                   uri: 'https://123.image-url.com',
@@ -176,6 +180,7 @@ const mocks = [
                 id: 'Person:123',
                 nickName: 'Father',
                 firstName: 'Father',
+                lastName: 'Brown',
                 photo: {
                   __typename: 'ImageMediaSource',
                   uri: 'https://123.image-url.com',
@@ -192,6 +197,7 @@ const mocks = [
                 id: 'Person:123',
                 nickName: 'Father',
                 firstName: 'Father',
+                lastName: 'Brown',
                 photo: null,
               },
             },
