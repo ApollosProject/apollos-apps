@@ -42,7 +42,7 @@ exports[`UserAvatarConnected component renders UserAvatarConnected 1`] = `
 </View>
 `;
 
-exports[`UserAvatarConnected component renders UserAvatarConnected withou a photo 1`] = `
+exports[`UserAvatarConnected component renders UserAvatarConnected without a photo 1`] = `
 <View
   style={
     Object {
