@@ -80,7 +80,7 @@ export default class RockApolloDataSource extends RESTDataSource {
     });
   }
 
-  async paginate({ cursor, args: { after, first = 20 } = {} }) {
+  async paginate({ cursor, args: { after, first = 20, orderBy } = {} }) {
     let skip = 0;
     if (after) {
       const parsed = parseCursor(after);
@@ -90,6 +90,17 @@ export default class RockApolloDataSource extends RESTDataSource {
         throw new Error(`An invalid 'after' cursor was provided: ${after}`);
       }
     }
+    const sortMap = {
+      DATE: 'StartDateTime',
+    };
+    const sort = orderBy
+      ? [
+          {
+            field: sortMap[orderBy.field],
+            direction: orderBy.direction,
+          },
+        ]
+      : [];
 
     // temporarily store the select parameter to
     // put back after "Id" is selected for the count
@@ -97,6 +108,7 @@ export default class RockApolloDataSource extends RESTDataSource {
       ? cursor
           .top(first)
           .skip(skip)
+          .sort(sort)
           .transform((result) =>
             result.map((node, i) => ({
               node,

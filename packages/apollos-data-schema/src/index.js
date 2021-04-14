@@ -410,10 +410,12 @@ export const contentItemSchema = gql`
     childContentItemsConnection(
       first: Int
       after: String
+      orderBy: ContentItemsConnectionOrderInput
     ): ContentItemsConnection
     siblingContentItemsConnection(
       first: Int
       after: String
+      orderBy: ContentItemsConnectionOrderInput
     ): ContentItemsConnection
     parentChannel: ContentChannel
     theme: Theme
@@ -432,10 +434,12 @@ export const contentItemSchema = gql`
     childContentItemsConnection(
       first: Int
       after: String
+      orderBy: ContentItemsConnectionOrderInput
     ): ContentItemsConnection
     siblingContentItemsConnection(
       first: Int
       after: String
+      orderBy: ContentItemsConnectionOrderInput
     ): ContentItemsConnection
     parentChannel: ContentChannel
     theme: Theme
@@ -454,10 +458,12 @@ export const contentItemSchema = gql`
     childContentItemsConnection(
       first: Int
       after: String
+      orderBy: ContentItemsConnectionOrderInput
     ): ContentItemsConnection
     siblingContentItemsConnection(
       first: Int
       after: String
+      orderBy: ContentItemsConnectionOrderInput
     ): ContentItemsConnection
     parentChannel: ContentChannel
     theme: Theme
@@ -478,10 +484,12 @@ export const contentItemSchema = gql`
     childContentItemsConnection(
       first: Int
       after: String
+      orderBy: ContentItemsConnectionOrderInput
     ): ContentItemsConnection
     siblingContentItemsConnection(
       first: Int
       after: String
+      orderBy: ContentItemsConnectionOrderInput
     ): ContentItemsConnection
     parentChannel: ContentChannel
     theme: Theme
@@ -502,10 +510,12 @@ export const contentItemSchema = gql`
     childContentItemsConnection(
       first: Int
       after: String
+      orderBy: ContentItemsConnectionOrderInput
     ): ContentItemsConnection
     siblingContentItemsConnection(
       first: Int
       after: String
+      orderBy: ContentItemsConnectionOrderInput
     ): ContentItemsConnection
     parentChannel: ContentChannel
     theme: Theme
@@ -527,10 +537,12 @@ export const contentItemSchema = gql`
     childContentItemsConnection(
       first: Int
       after: String
+      orderBy: ContentItemsConnectionOrderInput
     ): ContentItemsConnection
     siblingContentItemsConnection(
       first: Int
       after: String
+      orderBy: ContentItemsConnectionOrderInput
     ): ContentItemsConnection
     parentChannel: ContentChannel
     theme: Theme
@@ -539,6 +551,21 @@ export const contentItemSchema = gql`
   input ContentItemsConnectionInput {
     first: Int
     after: String
+    orderBy: ContentItemsConnectionOrderInput
+  }
+
+  input ContentItemsConnectionOrderInput {
+    field: OrderField
+    direction: OrderDirection
+  }
+
+  enum OrderField {
+    DATE
+  }
+
+  enum OrderDirection {
+    DESC
+    ASC
   }
 
   type ContentItemsConnection {
@@ -570,6 +597,7 @@ export const contentChannelSchema = gql`
     childContentItemsConnection(
       first: Int
       after: String
+      orderBy: ContentItemsConnectionOrderInput
     ): ContentItemsConnection
 
     iconName: String

@@ -149,9 +149,11 @@ you can return request.empty()
    * by date in descending order
    */
   sort = (fields = [{ field: 'Id', direction: 'desc' }]) => {
+    if (!fields.length) return this;
     delete this.query.$orderby;
     this.query.$orderby = fields
-      .map(({ field, direction }) => `${field} ${direction}`)
+      .filter(({ field, direction }) => field && direction)
+      .map(({ field, direction }) => `${field} ${direction.toLowerCase()}`)
       .join(', ');
     return this;
   };
