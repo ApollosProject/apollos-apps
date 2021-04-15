@@ -72,6 +72,7 @@ class Provider extends PureComponent {
   }
 }
 
+// TODO deprecated
 export const PushConsumer = PushContext.Consumer;
 
 export default Provider;
