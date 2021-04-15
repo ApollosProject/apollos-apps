@@ -12,6 +12,7 @@ git clone git@github.com:ApollosProject/apollos-templates.git
 git checkout ${BRANCH:-master}
 
 cd apollos-templates
+git checkout ${BRANCH:-master}
 tput setaf 1
 echo "Please enter your .env password (typically stored in 1Password)"
 tput sgr0
