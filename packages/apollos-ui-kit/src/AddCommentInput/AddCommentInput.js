@@ -101,12 +101,13 @@ const AddCommentInput = ({
           editorTitle={editorTitle}
           confirmationTitle={confirmationTitle}
           showCancel={showCancel}
+          hiddenIndex={fullscreen ? -1 : 0}
         />
       </BottomSheetModal>
 
       {showInlinePrompt ? (
         <Touchable onPress={openModal}>
-          <Prompt image={profile?.photo} prompt={prompt} />
+          <Prompt profile={profile} prompt={prompt} />
         </Touchable>
       ) : null}
     </>
@@ -119,6 +120,8 @@ AddCommentInput.propTypes = {
   profile: PropTypes.shape({
     photo: PropTypes.shape({ uri: PropTypes.string }),
     nickName: PropTypes.string,
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
   }),
   bottomSheetModalRef: PropTypes.shape({
     current: PropTypes.shape({

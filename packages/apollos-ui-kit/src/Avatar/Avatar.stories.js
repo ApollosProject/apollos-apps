@@ -62,6 +62,55 @@ storiesOf('ui-kit/Avatar', module)
       />
     </>
   ))
+  .add('placeholder initals', () => (
+    <>
+      <Avatar
+        isLoading
+        size={'small'}
+        profile={{ firstName: 'Vincent', lastName: 'Wilson' }}
+      />
+      <Avatar
+        isLoading
+        size={'medium'}
+        profile={{ firstName: 'Vincent', lastName: 'Wilson' }}
+      />
+      <Avatar
+        isLoading
+        size={'large'}
+        profile={{ firstName: 'Vincent', lastName: 'Wilson' }}
+      />
+      <Avatar
+        isLoading
+        size={'small'}
+        profile={{ firstName: 'Conrad', lastName: 'VanLandingham' }}
+      />
+      <Avatar
+        isLoading
+        size={'medium'}
+        profile={{ firstName: 'Conrad', lastName: 'VanLandingham' }}
+      />
+      <Avatar
+        isLoading
+        size={'large'}
+        profile={{ firstName: 'Conrad', lastName: 'VanLandingham' }}
+      />
+      <Avatar
+        isLoading
+        size={'small'}
+        profile={{ firstName: 'michael', lastName: 'neeley' }}
+      />
+      <Avatar
+        isLoading
+        size={'medium'}
+        profile={{ firstName: 'michael', lastName: 'neeley' }}
+      />
+      <Avatar
+        isLoading
+        size={'large'}
+        profile={{ firstName: 'michael', lastName: 'neeley' }}
+      />
+    </>
+  ))
   .add('notification', () => (
     <>
       <Avatar

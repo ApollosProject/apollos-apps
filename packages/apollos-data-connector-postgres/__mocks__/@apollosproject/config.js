@@ -1,6 +1,6 @@
-const ApollosConfig = require.requireActual('@apollosproject/config').default;
+const ApollosConfig = jest.requireActual('@apollosproject/config').default;
 
-ApolloServer.loadJs({
+ApollosConfig.loadJs({
   APP: {
     DEEP_LINK_HOST: 'apolloschurchapp',
   },

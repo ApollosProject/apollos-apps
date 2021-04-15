@@ -100,7 +100,6 @@ export const defaultContentItemResolvers = {
   sharing: (root, args, { dataSources: { ContentItem } }) => ({
     url: ContentItem.getShareUrl({
       contentId: root.id,
-      channelId: root.contentChannelId,
     }),
     title: 'Share via ...',
     message: `${root.title} - ${ContentItem.createSummary(root)}`,

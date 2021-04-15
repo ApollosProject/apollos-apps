@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.11.0](https://github.com/apollosproject/apollos-apps/compare/v2.10.0...v2.11.0) (2021-04-12)
+
+
+### Features
+
+* add books of the bible to scripture references ([#1859](https://github.com/apollosproject/apollos-apps/issues/1859)) ([87f6ded](https://github.com/apollosproject/apollos-apps/commit/87f6dedc7dcd979c1aa96bdb2b308b2fc1288900))
+
+
+
 ## [2.10.0](https://github.com/apollosproject/apollos-apps/compare/v2.9.0...v2.10.0) (2021-04-06)
 
 

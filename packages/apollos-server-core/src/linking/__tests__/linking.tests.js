@@ -1,7 +1,11 @@
 import ApollosConfig from '@apollosproject/config';
-import { setupUniversalLinks } from '../index';
+import { setupUniversalLinks, generateAppLink } from '../index';
 
 ApollosConfig.loadJs({
+  APP: {
+    UNIVERSAL_LINK_HOST: 'https://apollos.api',
+    DEEP_LINK_HOST: 'apolloschurchapp',
+  },
   UNIVERSAL_LINKS: {
     APPLE_APP_ID: 'test_id',
     APPLE_TEAM_ID: 'test_team_id',
@@ -133,5 +137,19 @@ describe('Universal linking', () => {
 
     expect(res.redirect.mock.calls[0][0]).toBe('return-url');
     expect(createRedirectLink.mock.calls).toMatchSnapshot();
+  });
+
+  it('generates a universal nav link to home', () => {
+    expect(generateAppLink()).toMatchSnapshot();
+  });
+  it('generates a universal nav link to the connect screen', () => {
+    expect(
+      generateAppLink('universal', 'nav', { screen: 'connect' })
+    ).toMatchSnapshot();
+  });
+  it('generates a deep content link', () => {
+    expect(
+      generateAppLink('deep', 'content', { contentID: '1' })
+    ).toMatchSnapshot();
   });
 });
