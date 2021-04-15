@@ -9,7 +9,6 @@ BRANCH=$2
 
 cd tmp
 git clone git@github.com:ApollosProject/apollos-templates.git
-git checkout ${BRANCH:-master}
 
 cd apollos-templates
 git checkout ${BRANCH:-master}
