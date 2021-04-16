@@ -189,6 +189,23 @@ you can return request.empty()
     return this;
   };
 
+  loadAttributes = (loadAttributeKeys = []) => {
+    let { attributeKeys } = this.query;
+    if (!attributeKeys) {
+      attributeKeys = [];
+    } else {
+      attributeKeys = attributeKeys.split(',');
+    }
+    attributeKeys = attributeKeys.concat(loadAttributeKeys);
+
+    if (attributeKeys.length) {
+      this.query.attributeKeys = attributeKeys.join(',');
+      // if we are asking to load attribute keys, we should probally turn attribute loading on ;)
+      this.query.loadAttributes = 'expanded';
+    }
+    return this;
+  };
+
   /**
    * Fetches a count of all items that would be returned by the current cursor.
    * Warning: As of right now this could be computationally expensive.

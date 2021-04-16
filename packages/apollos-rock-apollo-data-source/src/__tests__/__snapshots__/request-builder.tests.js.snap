@@ -44,6 +44,14 @@ Array [
 ]
 `;
 
+exports[`RequestBuilder chains multiple load attribute keys 1`] = `
+Array [
+  "SomeResource?attributeKeys=Puppies%2CCats%2CDogs&loadAttributes=expanded",
+  Object {},
+  Object {},
+]
+`;
+
 exports[`RequestBuilder combines multiple filters with an and operator 1`] = `
 Array [
   "SomeResource?%24filter=%28Something%20eq%20SomethingElse%29%20and%20%28AnotherThing%20eq%20SomethingDifferent%29",
@@ -127,6 +135,14 @@ Array [
 `;
 
 exports[`RequestBuilder gets the first result 1`] = `"SomeResource?%24top=1"`;
+
+exports[`RequestBuilder loads specific attribute keys 1`] = `
+Array [
+  "SomeResource?attributeKeys=Puppies&loadAttributes=expanded",
+  Object {},
+  Object {},
+]
+`;
 
 exports[`RequestBuilder orders 1`] = `
 Array [
