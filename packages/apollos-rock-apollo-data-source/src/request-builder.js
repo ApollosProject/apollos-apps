@@ -189,7 +189,7 @@ you can return request.empty()
     return this;
   };
 
-  loadAttributes = (loadAttributeKeys = []) => {
+  attributes = (loadAttributeKeys = []) => {
     let { attributeKeys } = this.query;
     if (!attributeKeys) {
       attributeKeys = [];
