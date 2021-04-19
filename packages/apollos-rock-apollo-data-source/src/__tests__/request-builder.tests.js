@@ -88,16 +88,6 @@ describe('RequestBuilder', () => {
     ).resolves.toMatchSnapshot();
   });
 
-  it('loads specific attribute keys', () => {
-    expect(request.attributes(['Puppies']).get()).resolves.toMatchSnapshot();
-  });
-
-  it('chains multiple load attribute keys', () => {
-    expect(
-      request.attributes(['Puppies']).attributes(['Cats', 'Dogs']).get()
-    ).resolves.toMatchSnapshot();
-  });
-
   it('allows for pagination', () => {
     expect(request.top(2).skip(5).get()).resolves.toMatchSnapshot();
   });
