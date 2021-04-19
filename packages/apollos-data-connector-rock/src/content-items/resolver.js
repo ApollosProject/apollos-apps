@@ -98,9 +98,7 @@ export const defaultContentItemResolvers = {
   theme: () => null, // todo: integrate themes from Rock
 
   sharing: (root, args, { dataSources: { ContentItem } }) => ({
-    url: ContentItem.getShareUrl({
-      contentId: root.id,
-    }),
+    url: ContentItem.getShareUrl(root),
     title: 'Share via ...',
     message: `${root.title} - ${ContentItem.createSummary(root)}`,
   }),
