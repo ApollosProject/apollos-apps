@@ -87,7 +87,7 @@ describe('RestDataSource', () => {
       expect(defaultOptions).toEqual({});
     });
     it('sets default request options w/ rockAttributes', () => {
-      dataSource.rockAttributes = ['Dog', 'Cat'];
+      dataSource.attributesLoaded = ['Dog', 'Cat'];
       const defaultOptions = dataSource.buildDefaultOptions();
       expect(defaultOptions).toEqual({
         loadAttributes: 'expanded',

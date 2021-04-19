@@ -77,9 +77,9 @@ export default class RockApolloDataSource extends RESTDataSource {
 
   buildDefaultOptions() {
     const defaultOptions = {};
-    if (this.rockAttributes?.length)
-      defaultOptions.attributeKeys = this.rockAttributes.join(',');
-    if (this.expanded || this.rockAttributes?.length)
+    if (this.attributesLoaded?.length)
+      defaultOptions.attributeKeys = this.attributesLoaded.join(',');
+    if (this.expanded || this.attributesLoaded?.length)
       defaultOptions.loadAttributes = 'expanded';
 
     return defaultOptions;
