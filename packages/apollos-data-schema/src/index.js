@@ -44,6 +44,15 @@ export const interfacesSchema = gql`
     theme: Theme
   }
 
+  interface DetailsNode {
+    details: [Detail]
+  }
+
+  type Detail {
+    key: String
+    value: String
+  }
+
   interface ProgressNode {
     percentComplete: Float @cacheControl(maxAge: 0)
     upNext: ContentItem @cacheControl(maxAge: 0)
@@ -64,6 +73,7 @@ export const interfacesSchema = gql`
       'ContentChildNode',
       'ContentParentNode',
       'ThemedNode',
+      'DetailsNode',
     ],
     [
       'UniversalContentItem',
