@@ -1,6 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
-import { H6 } from '@apollosproject/ui-kit';
 
 import Entry from './Entry';
 
