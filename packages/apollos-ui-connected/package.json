@@ -83,7 +83,7 @@
     "react-native-image-picker": "^3.1.4",
     "react-native-inappbrowser-reborn": "3.3.4",
     "react-native-permissions": "2.0.5",
-    "react-native-webview": "^7.0.0",
+    "react-native-webview": "^11.0.0",
     "react-test-renderer": "16.13.1",
     "waait": "1.0.2"
   },
