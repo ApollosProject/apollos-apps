@@ -1,6 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
-import { H6 } from '@apollosproject/ui-kit';
 
 import Entry from './Entry';
 
@@ -35,20 +34,6 @@ storiesOf('ui-auth/Entry', module)
   ))
   .add('onPressNext', () => (
     <Entry setFieldValue={() => {}} onPressNext={() => {}} />
-  ))
-  .add('smsPolicyInfo', () => (
-    <Entry
-      setFieldValue={() => {}}
-      smsPolicyInfo={
-        <H6 style={{ color: 'salmon' }}>Boom custom legalese boom</H6> // eslint-disable-line react-native/no-inline-styles, react-native/no-color-literals
-      }
-    />
-  ))
-  .add('smsPromptText', () => (
-    <Entry
-      setFieldValue={() => {}}
-      smsPromptText={'Boom custom prompty text boom'}
-    />
   ))
   .add('values', () => (
     <Entry

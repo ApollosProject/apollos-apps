@@ -10,10 +10,6 @@ import Entry from '../Entry';
 class EmailEntryConnected extends Component {
   static propTypes = {
     alternateLoginText: PropTypes.string,
-    BackgroundComponent: PropTypes.oneOfType([
-      PropTypes.element,
-      PropTypes.elementType,
-    ]),
     // Custom component to be rendered. Defaults to Entry
     Component: PropTypes.oneOfType([
       PropTypes.node,
@@ -23,7 +19,6 @@ class EmailEntryConnected extends Component {
     client: PropTypes.shape({
       query: PropTypes.func,
     }),
-    screenProps: PropTypes.shape({}), // we'll funnel screenProps into props
     inputAutoComplete: PropTypes.string,
     inputLabel: PropTypes.string,
     inputType: PropTypes.string,
@@ -33,7 +28,6 @@ class EmailEntryConnected extends Component {
 
   static defaultProps = {
     Component: Entry,
-    screenProps: {},
     alternateLoginText: 'Phone',
     inputAutoComplete: 'email',
     inputLabel: 'Email',
@@ -47,8 +41,6 @@ class EmailEntryConnected extends Component {
       .email('Invalid email address')
       .required('Email is required!'),
   });
-
-  flatProps = { ...this.props, ...this.props.screenProps };
 
   handleOnSubmit = (handleCheckUserExists) => async (
     { email },
@@ -82,7 +74,6 @@ class EmailEntryConnected extends Component {
             onSubmit={this.handleOnSubmit(handleCheckUserExists)}
           >
             {({
-              BackgroundComponent,
               setFieldValue,
               handleSubmit,
               values,
@@ -92,7 +83,6 @@ class EmailEntryConnected extends Component {
               errors,
             }) => (
               <EmailEntryComponent
-                BackgroundComponent={BackgroundComponent}
                 disabled={isSubmitting || !isValid}
                 errors={touched.email && errors}
                 isLoading={isSubmitting}
@@ -101,7 +91,7 @@ class EmailEntryConnected extends Component {
                 setFieldValue={setFieldValue}
                 values={values}
                 alternateLogin
-                {...this.flatProps}
+                {...this.props}
               />
             )}
           </Formik>

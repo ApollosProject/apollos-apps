@@ -43,7 +43,7 @@ const AddPrayerScreenConnected = ({
   swipeForward,
   avatars = [],
   AddedPrayerComponent = ConfirmationDialogScreen,
-  ...screenProps
+  ...props
 }) => {
   const { data: userData } = useQuery(GET_USER_PHOTO);
   const photo = userData?.currentUser?.profile?.photo;
@@ -73,7 +73,7 @@ const AddPrayerScreenConnected = ({
             : () => addPrayer({ variables: { prayer } })
         }
         isLoading={loading}
-        {...screenProps}
+        {...props}
       >
         <PrayerCardComponent
           profile={profile}

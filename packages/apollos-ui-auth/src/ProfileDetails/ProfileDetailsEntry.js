@@ -78,7 +78,6 @@ ProfileDetailsEntry.propTypes = {
     phone: PropTypes.string,
     birthDate: PropTypes.instanceOf(Date),
   }),
-  BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   onPressBack: PropTypes.func.isRequired,
   genderList: PropTypes.arrayOf(
     PropTypes.oneOfType([
