@@ -1,9 +1,9 @@
 import { get, uniq } from 'lodash';
 import moment from 'moment-timezone';
 import natural from 'natural';
-import sanitizeHtmlNode from 'sanitize-html';
 import Hypher from 'hypher';
 import english from 'hyphenation.en-us';
+import sanitizeHtml from 'sanitize-html';
 
 import RockApolloDataSource, {
   parseKeyValueAttribute,
@@ -242,7 +242,7 @@ export default class ContentItem extends RockApolloDataSource {
 
     const tokenizer = new natural.SentenceTokenizer();
     const tokens = tokenizer.tokenize(
-      sanitizeHtmlNode(content, {
+      sanitizeHtml(content, {
         allowedTags: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
         allowedAttributes: [],
         exclusiveFilter: (frame) => frame.tag.match(/^(h1|h2|h3|h4|h5|h6)$/),
@@ -253,6 +253,47 @@ export default class ContentItem extends RockApolloDataSource {
       ? `${tokens[0]} ${tokens[1]}`
       : tokens[0];
   };
+
+  createHTMLContent = (content) =>
+    sanitizeHtml(content, {
+      allowedTags: [
+        'h1',
+        'h2',
+        'h3',
+        'h4',
+        'h5',
+        'h6',
+        'blockquote',
+        'p',
+        'a',
+        'ul',
+        'ol',
+        'li',
+        'b',
+        'i',
+        'strong',
+        'em',
+        'br',
+        'caption',
+        'img',
+        'div',
+      ],
+      allowedAttributes: {
+        a: ['href', 'target'],
+        img: ['src'],
+      },
+      transformTags: {
+        img: (tagName, { src }) => {
+          return {
+            tagName,
+            attribs: {
+              // adds Rock URL in the case of local image references in the CMS
+              src: src.startsWith('http') ? src : `${ROCK.URL || ''}${src}`,
+            },
+          };
+        },
+      },
+    });
 
   getShareUrl = async (content) => {
     const __typename = this.resolveType(content);
