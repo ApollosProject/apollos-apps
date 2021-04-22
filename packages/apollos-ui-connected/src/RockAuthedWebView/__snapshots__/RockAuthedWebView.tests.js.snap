@@ -14,6 +14,8 @@ exports[`the RockAuthedWebView component renders with a user 1`] = `
 >
   <RNCWebView
     cacheEnabled={true}
+    injectedJavaScriptBeforeContentLoadedForMainFrameOnly={true}
+    injectedJavaScriptForMainFrameOnly={true}
     javaScriptEnabled={true}
     messagingEnabled={false}
     onContentProcessDidTerminate={[Function]}
