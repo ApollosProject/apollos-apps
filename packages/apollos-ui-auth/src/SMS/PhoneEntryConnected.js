@@ -10,10 +10,6 @@ import Entry from '../Entry';
 class PhoneEntryConnected extends Component {
   static propTypes = {
     alternateLoginText: PropTypes.string,
-    BackgroundComponent: PropTypes.oneOfType([
-      PropTypes.element,
-      PropTypes.elementType,
-    ]),
     // Custom component to be rendered. Defaults to Entry
     Component: PropTypes.oneOfType([
       PropTypes.node,
@@ -27,7 +23,6 @@ class PhoneEntryConnected extends Component {
     inputLabel: PropTypes.string,
     inputType: PropTypes.string,
     policyInfo: PropTypes.string,
-    screenProps: PropTypes.shape({}), // we'll funnel screenProps into props
     tabTitle: PropTypes.string,
   };
 
@@ -38,7 +33,6 @@ class PhoneEntryConnected extends Component {
     inputLabel: 'Phone Number',
     inputType: 'phone',
     policyInfo: "We'll text you a code to make login super easy!",
-    screenProps: {},
     tabTitle: 'Phone',
   };
 
@@ -48,8 +42,6 @@ class PhoneEntryConnected extends Component {
       'Your phone number appears to be invalid'
     ),
   });
-
-  flatProps = { ...this.props, ...this.props.screenProps };
 
   handleOnSubmit = (handleCheckUserExists) => async (
     { phone },
@@ -84,7 +76,6 @@ class PhoneEntryConnected extends Component {
             onSubmit={this.handleOnSubmit(handleCheckUserExists)}
           >
             {({
-              BackgroundComponent,
               setFieldValue,
               handleSubmit,
               values,
@@ -94,7 +85,6 @@ class PhoneEntryConnected extends Component {
               errors,
             }) => (
               <PhoneEntryComponent
-                BackgroundComponent={BackgroundComponent}
                 disabled={isSubmitting || !isValid}
                 errors={touched.phone && errors}
                 isLoading={isSubmitting}
@@ -102,7 +92,7 @@ class PhoneEntryConnected extends Component {
                 onPressAlternateLogin={this.handleOnPressAlternateLogin}
                 setFieldValue={setFieldValue}
                 values={values}
-                {...this.flatProps}
+                {...this.props}
               />
             )}
           </Formik>

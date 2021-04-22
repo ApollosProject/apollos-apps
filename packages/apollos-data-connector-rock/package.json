@@ -31,7 +31,6 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@apollosproject/server-core": "^2.11.0",
     "awesome-phonenumber": "^2.4.2",
     "form-data": "^2.3.3",
     "hyphenation.en-us": "^0.2.1",
@@ -47,7 +46,8 @@
   "peerDependencies": {
     "@apollosproject/config": "*",
     "@apollosproject/data-schema": "*",
-    "@apollosproject/rock-apollo-data-source": "*"
+    "@apollosproject/rock-apollo-data-source": "*",
+    "@apollosproject/server-core": "*"
   },
   "devDependencies": {
     "@apollosproject/apollo-server-env-mock": "^2.11.0",

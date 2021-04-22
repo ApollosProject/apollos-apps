@@ -13,11 +13,7 @@ const ProfileDetailsSchema = Yup.object().shape({
   birthDate: Yup.date().required('Required'),
 });
 
-const ProfileDetailsEntryConnected = ({
-  screenProps,
-  navigation,
-  Component,
-}) => (
+const ProfileDetailsEntryConnected = ({ navigation, Component }) => (
   <LoginConsumer>
     {({ handleProfileComplete }) => (
       <Formik
@@ -32,7 +28,6 @@ const ProfileDetailsEntryConnected = ({
       >
         {(formikBag) => (
           <Component
-            {...screenProps}
             {...formikBag}
             errors={formikBag.errors}
             disabled={!formikBag.isValid}
@@ -49,7 +44,6 @@ const ProfileDetailsEntryConnected = ({
 ProfileDetailsEntryConnected.propTypes = {
   navigation: PropTypes.shape({ goBack: PropTypes.func.isRequired }).isRequired,
   emailRequired: PropTypes.bool,
-  screenProps: PropTypes.shape({}),
   Component: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.func,

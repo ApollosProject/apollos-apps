@@ -60,12 +60,16 @@ export {
 const AuthStack = createNativeStackNavigator();
 const IdentityStack = createNativeStackNavigator();
 
-const AuthNavigator = ({ forgotPasswordURL, ...props }) => (
-  <AuthStack.Navigator
-    initialRouteName="AuthIdentity"
-    headerMode="none"
-    {...props}
-  >
+const AuthNavigator = ({
+  alternateLoginText,
+  authTitleText,
+  confirmationPromptText,
+  confirmationTitleText,
+  forgotPasswordURL,
+  emailRequired,
+  passwordPromptText,
+}) => (
+  <AuthStack.Navigator initialRouteName="AuthIdentity" headerMode="none">
     <AuthStack.Screen name="Identity">
       {() => (
         <IdentityStack.Navigator
@@ -74,10 +78,12 @@ const AuthNavigator = ({ forgotPasswordURL, ...props }) => (
           <IdentityStack.Screen
             name="AuthSMSPhoneEntryConnected"
             component={AuthSMSPhoneEntryConnected}
+            initialParams={{ alternateLoginText, authTitleText }}
           />
           <IdentityStack.Screen
             name="AuthEmailEntryConnected"
             component={AuthEmailEntryConnected}
+            initialParams={{ alternateLoginText, authTitleText }}
           />
         </IdentityStack.Navigator>
       )}
@@ -86,20 +92,23 @@ const AuthNavigator = ({ forgotPasswordURL, ...props }) => (
       name="AuthSMSVerificationConnected"
       options={{ headerShown: true }}
       component={AuthSMSVerificationConnected}
+      initialParams={{ confirmationTitleText, confirmationPromptText }}
     />
     <AuthStack.Screen
       name="AuthPasswordEntryConnected"
       options={{ headerShown: true }}
       component={AuthPasswordEntryConnected}
-      initialParams={{ forgotPasswordURL }}
+      initialParams={{ forgotPasswordURL, passwordPromptText, emailRequired }}
     />
     <AuthStack.Screen
       name="AuthProfileEntryConnected"
       component={AuthProfileEntryConnected}
+      initialParams={{ emailRequired }}
     />
     <AuthStack.Screen
       name="AuthProfileDetailsEntryConnected"
       component={AuthProfileDetailsEntryConnected}
+      initialParams={{ emailRequired }}
     />
 
     {/* Redirects */}
@@ -138,14 +147,11 @@ const ThemedAuthNavigator = withTheme(({ theme, ...props }) => ({
 }))(AuthNavigator);
 
 AuthNavigator.propTypes = {
-  alternateLoginText: PropTypes.node,
+  alternateLoginText: PropTypes.string,
   authTitleText: PropTypes.string,
   confirmationTitleText: PropTypes.string,
   confirmationPromptText: PropTypes.string,
-  onFinishAuth: PropTypes.func,
   passwordPromptText: PropTypes.string,
-  smsPolicyInfo: PropTypes.node,
-  smsPromptText: PropTypes.string,
   emailRequired: PropTypes.bool,
   forgotPasswordURL: PropTypes.string,
 };
