@@ -255,7 +255,7 @@ export default class ContentItem extends RockApolloDataSource {
   };
 
   createHTMLContent = (content) =>
-    sanitizeHtml(content, {
+    sanitizeHtml(content || '', {
       allowedTags: [
         'h1',
         'h2',
