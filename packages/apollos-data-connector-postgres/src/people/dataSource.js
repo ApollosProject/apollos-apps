@@ -146,6 +146,12 @@ export default class Person extends PostgresDataSource {
     }
     const currentPersonWhere = await this.whereCurrentPerson();
     const person = await this.model.findOne({ where: currentPersonWhere });
+
+    if (!person) {
+      // We've seen this happen in a few instances related to deduping.
+      // Best bet is to log the user out and give them another chance to sign in.
+      throw new AuthenticationError('Invalid Credentials');
+    }
     // cache the current user on the context. avoids oft repeated n+1 queries.
     // this is a huge win, but we need to identify a more elegant way to do this in the future.
     this.context.currentPostgresPerson = person;
