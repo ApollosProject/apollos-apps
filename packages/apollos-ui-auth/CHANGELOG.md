@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.12.0](https://github.com/apollosproject/apollos-apps/compare/v2.11.0...v2.12.0) (2021-04-22)
+
+
+### Bug Fixes
+
+* correctly pass reset password URL to auth ([#1748](https://github.com/apollosproject/apollos-apps/issues/1748)) ([3ea9d4b](https://github.com/apollosproject/apollos-apps/commit/3ea9d4b1de4d5dd01f3b3caec4256e57e8ab8f84))
+* fix custom auth text ([#1869](https://github.com/apollosproject/apollos-apps/issues/1869)) ([49cc2fc](https://github.com/apollosproject/apollos-apps/commit/49cc2fc18a989c05d3ec2a78e2a09d519863080a))
+
+
+
 ## [2.11.0](https://github.com/apollosproject/apollos-apps/compare/v2.10.0...v2.11.0) (2021-04-12)
 
 **Note:** Version bump only for package @apollosproject/ui-auth

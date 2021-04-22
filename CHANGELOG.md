@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.12.0](https://github.com/ApollosProject/apollos-apps/compare/v2.11.0...v2.12.0) (2021-04-22)
+
+
+### Features
+
+* Allow requests to drill in on a specific attribute value ([#1871](https://github.com/ApollosProject/apollos-apps/issues/1871)) ([2e31957](https://github.com/ApollosProject/apollos-apps/commit/2e3195712a0c2c080fc671cbe8dc873f9ce01aaa))
+* allow sorting of paginated content ([#1868](https://github.com/ApollosProject/apollos-apps/issues/1868)) ([56c020a](https://github.com/ApollosProject/apollos-apps/commit/56c020a08ad3b6cfe8c4838ac3369878cb2999de))
+* Better Avatar Placeholder ([#1866](https://github.com/ApollosProject/apollos-apps/issues/1866)) ([d49ab8b](https://github.com/ApollosProject/apollos-apps/commit/d49ab8bff1fbb300d597bc3f13291eb429b283cd))
+
+
+### Bug Fixes
+
+* correctly build content sharing URL ([#1804](https://github.com/ApollosProject/apollos-apps/issues/1804)) ([cee52b1](https://github.com/ApollosProject/apollos-apps/commit/cee52b13ec4cad0e0f1bd2faa11bfdb6773e0e9c))
+* correctly gets content sharing url ([#1872](https://github.com/ApollosProject/apollos-apps/issues/1872)) ([2e3e329](https://github.com/ApollosProject/apollos-apps/commit/2e3e32958d37c5454609890a8fe82a90541b8785))
+* correctly pass reset password URL to auth ([#1748](https://github.com/ApollosProject/apollos-apps/issues/1748)) ([3ea9d4b](https://github.com/ApollosProject/apollos-apps/commit/3ea9d4b1de4d5dd01f3b3caec4256e57e8ab8f84))
+* fix custom auth text ([#1869](https://github.com/ApollosProject/apollos-apps/issues/1869)) ([49cc2fc](https://github.com/ApollosProject/apollos-apps/commit/49cc2fc18a989c05d3ec2a78e2a09d519863080a))
+* make server core package a peer dependency of rock data connector ([#1873](https://github.com/ApollosProject/apollos-apps/issues/1873)) ([8977cc0](https://github.com/ApollosProject/apollos-apps/commit/8977cc097eed84c78106f7774a9cd315805bdaa8))
+* prevents null in content body ([#1879](https://github.com/ApollosProject/apollos-apps/issues/1879)) ([4820d2f](https://github.com/ApollosProject/apollos-apps/commit/4820d2f81ae489e91990ec857f97ba640703dc42))
+
+
+
 ## [2.11.0](https://github.com/ApollosProject/apollos-apps/compare/v2.10.0...v2.11.0) (2021-04-12)
 
 

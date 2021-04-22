@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.12.0](https://github.com/apollosproject/apollos-apps/compare/v2.11.0...v2.12.0) (2021-04-22)
+
+
+### Features
+
+* Allow requests to drill in on a specific attribute value ([#1871](https://github.com/apollosproject/apollos-apps/issues/1871)) ([2e31957](https://github.com/apollosproject/apollos-apps/commit/2e3195712a0c2c080fc671cbe8dc873f9ce01aaa))
+* allow sorting of paginated content ([#1868](https://github.com/apollosproject/apollos-apps/issues/1868)) ([56c020a](https://github.com/apollosproject/apollos-apps/commit/56c020a08ad3b6cfe8c4838ac3369878cb2999de))
+
+
+
 ## [2.11.0](https://github.com/apollosproject/apollos-apps/compare/v2.10.0...v2.11.0) (2021-04-12)
 
 **Note:** Version bump only for package @apollosproject/rock-apollo-data-source
