@@ -81,5 +81,25 @@ describe('RestDataSource', () => {
       expect(result).toBeTruthy();
       expect(getFn.mock.calls[0][0]).toBe('TestResource?%24top=2&%24skip=0');
     });
+
+    it('sets default request options w/ no expansion', () => {
+      const defaultOptions = dataSource.buildDefaultOptions();
+      expect(defaultOptions).toEqual({});
+    });
+    it('sets default request options w/ rockAttributes', () => {
+      dataSource.attributesLoaded = ['Dog', 'Cat'];
+      const defaultOptions = dataSource.buildDefaultOptions();
+      expect(defaultOptions).toEqual({
+        loadAttributes: 'expanded',
+        attributeKeys: 'Dog,Cat',
+      });
+    });
+    it('sets default request options w/ expanded = true', () => {
+      dataSource.expanded = true;
+      const defaultOptions = dataSource.buildDefaultOptions();
+      expect(defaultOptions).toEqual({
+        loadAttributes: 'expanded',
+      });
+    });
   });
 });
