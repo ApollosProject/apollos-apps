@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.13.0](https://github.com/ApollosProject/apollos-apps/compare/v2.12.0...v2.13.0) (2021-04-23)
+
+
+### Features
+
+* allow styled content HTML ([#1881](https://github.com/ApollosProject/apollos-apps/issues/1881)) ([ad6b2f2](https://github.com/ApollosProject/apollos-apps/commit/ad6b2f2455d49042e6af6213d59a7f481d39fa62))
+
+
+
 ## [2.12.0](https://github.com/ApollosProject/apollos-apps/compare/v2.11.0...v2.12.0) (2021-04-22)
 
 
