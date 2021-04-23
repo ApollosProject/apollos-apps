@@ -63,6 +63,25 @@ describe('Apollos Postgres People DataSource', () => {
     expect(person.id).toBeDefined();
   });
 
+  it('should find a current user id', async () => {
+    const currentPerson = await peopleDataSource.model.create({
+      originId: '1',
+      originType: 'rock',
+      firstName: 'Vincent',
+      lastName: 'Wilson',
+    });
+
+    const fetchedId = await peopleDataSource.getCurrentPersonId();
+
+    expect(fetchedId).toBe(currentPerson.id);
+  });
+
+  it('should throw an error if current user isnt in the db', () => {
+    const getPerson = peopleDataSource.getCurrentPersonId();
+
+    expect(getPerson).rejects.toThrowErrorMatchingSnapshot();
+  });
+
   it('should find a user by postgres id', async () => {
     const newPerson = await peopleDataSource.model.create({
       originId: '1',
