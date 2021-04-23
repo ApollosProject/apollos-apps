@@ -9,7 +9,6 @@ const isDev =
 if (ApollosConfig.BUGSNAG && ApollosConfig.BUGSNAG.API_KEY) {
   Bugsnag.start({
     apiKey: ApollosConfig.BUGSNAG.API_KEY,
-    releaseStage: process.env.RELEASE_STAGE || 'development',
     ...ApollosConfig.BUGSNAG.OPTIONS,
   });
 } else {
