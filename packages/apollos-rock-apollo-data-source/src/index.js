@@ -33,7 +33,7 @@ export default class RockApolloDataSource extends RESTDataSource {
 
   calls = {};
 
-  baseURL = ROCK.API_URL;
+  baseURL = ROCK.API_URL || `${ROCK.URL}/api`;
 
   rockToken = ROCK.API_TOKEN;
 
