@@ -6,7 +6,10 @@ export const enforceProtocol = (uri) =>
 
 export const createImageUrlFromGuid = (uri) =>
   uri.split('-').length === 5
-    ? `${ApollosConfig.ROCK.IMAGE_URL}?guid=${uri}`
+    ? `${
+        ApollosConfig.ROCK.IMAGE_URL ||
+        `${ApollosConfig.ROCK.URL}/GetImage.ashx`
+      }?guid=${uri}`
     : enforceProtocol(uri);
 
 export const fieldsAsObject = (fields) =>
