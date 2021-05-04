@@ -5,7 +5,7 @@ import { get } from 'lodash';
 
 const CurrentLivestreamQuery = `
 query CurrentState {
-  currentService {
+  currentService(onEmpty: LOAD_NEXT) {
     ...ServiceFields
     __typename
   }

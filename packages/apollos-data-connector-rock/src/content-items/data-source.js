@@ -279,7 +279,8 @@ export default class ContentItem extends RockApolloDataSource {
         'div',
       ],
       allowedAttributes: {
-        '*': ['style'],
+        // these don't do anything in an app but will affect content on a website
+        '*': ['style', 'class'],
         a: ['href', 'target'],
         img: ['src'],
       },
