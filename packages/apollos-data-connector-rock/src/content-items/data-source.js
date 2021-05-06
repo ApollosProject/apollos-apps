@@ -23,6 +23,8 @@ export default class ContentItem extends RockApolloDataSource {
   resource = 'ContentChannelItems';
 
   activeChannelIds =
+    ROCK_MAPPINGS.ALL_CONTENT_CHANNELS ||
+    // TODO deprecated variables
     ROCK_MAPPINGS.ACTIVE_CONTENT_CHANNEL_IDS ||
     ROCK_MAPPINGS.FEED_CONTENT_CHANNEL_IDS;
 
