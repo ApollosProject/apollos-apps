@@ -22,7 +22,7 @@ export default class PersonalDevices extends RockApolloDataSource {
       PersonAliasId: currentUser.primaryAliasId,
       DeviceRegistrationId: pushId,
       PersonalDeviceTypeValueId:
-        ApollosConfig.ROCK_MAPPINGS.MOBILE_DEVICE_TYPE_ID,
+        ApollosConfig.ROCK_MAPPINGS.MOBILE_DEVICE_TYPE_ID || 671,
       NotificationsEnabled: 1,
       IsActive: 1,
     });

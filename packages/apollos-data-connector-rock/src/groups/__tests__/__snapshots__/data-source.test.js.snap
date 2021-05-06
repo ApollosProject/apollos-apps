@@ -2,6 +2,7 @@
 
 exports[`Groups should get a group by id 1`] = `
 Object {
+  "groupTypeId": 25,
   "id": 1,
   "isActive": true,
   "isArchived": false,
@@ -45,12 +46,14 @@ Array [
 exports[`Groups should get groups by person 1`] = `
 Array [
   Object {
+    "groupTypeId": 25,
     "id": 1,
     "isActive": true,
     "isArchived": false,
     "name": "franks beer group",
   },
   Object {
+    "groupTypeId": 25,
     "id": 1,
     "isActive": true,
     "isArchived": false,

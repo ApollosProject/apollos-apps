@@ -98,11 +98,6 @@ ApollosConfig.loadJs({
     IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
     TIMEZONE: 'America/New_York',
   },
-  ROCK_CONSTANTS: {
-    IMAGE: 10,
-    AUDIO_FILE: 77,
-    VIDEO_FILE: 79,
-  },
   ROCK_MAPPINGS: {
     FEED_CONTENT_CHANNEL_IDS: [1, 2, 3, 4, 6, 8],
     SERIES_CONTENT_CHANNEL_TYPE_IDS: [6, 7],

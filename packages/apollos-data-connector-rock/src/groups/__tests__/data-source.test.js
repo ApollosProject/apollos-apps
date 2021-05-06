@@ -10,6 +10,7 @@ describe('Groups', () => {
   const groupMock = Promise.resolve({
     id: 1,
     name: 'franks beer group',
+    groupTypeId: 25,
     isActive: true,
     isArchived: false,
   });
