@@ -59,7 +59,6 @@ describe('Auth', () => {
     context.dataSources.Auth.getAuthToken = jest.fn(() => 'some token');
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
-    expect(context.dataSources.Cache.set.mock.calls).toMatchSnapshot();
   });
 
   it('throws invalid credentials error on bad password', async () => {
