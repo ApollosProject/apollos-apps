@@ -41,7 +41,7 @@
     "moment": "^2.22.2",
     "moment-timezone": "^0.5.23",
     "natural": "^0.6.2",
-    "sanitize-html": "^1.19.3"
+    "sanitize-html": "^2.3.2"
   },
   "peerDependencies": {
     "@apollosproject/config": "*",
