@@ -8,19 +8,10 @@ import {
 } from 'react-native-permissions';
 
 const getPushPermissions = async () =>
-  new Promise((resolve) =>
-    OneSignal.getPermissionSubscriptionState((status) =>
-      // Ensure the client (notificationsEnabled) && OneSignal (subscriptionEnabled) are boolean values
-      resolve(!!status.notificationsEnabled)
-    )
-  );
+  (await OneSignal.getDeviceState()).hasNotificationPermission;
 
 const getHasPrompted = async () =>
-  new Promise((resolve) =>
-    OneSignal.getPermissionSubscriptionState((status) =>
-      resolve(status.hasPrompted)
-    )
-  );
+  (await OneSignal.getDeviceState()).notificationPermissionStatus !== 0;
 
 const GET_PUSH_ID = gql`
   query getPushId {
