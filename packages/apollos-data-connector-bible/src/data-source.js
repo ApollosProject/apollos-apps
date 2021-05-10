@@ -12,6 +12,12 @@ export default class Scripture extends RESTDataSource {
 
   token = BIBLE_API.KEY;
 
+  defaultVersion =
+    BIBLE_API.DEFAULT_VERSION ||
+    // TODO: BIBLE_IDS field is deprecated, remove this line once safe
+    Object.keys(BIBLE_API.BIBLE_IDS || { WEB: '' })[0] ||
+    'WEB';
+
   willSendRequest(request) {
     request.headers.set('api-key', `${this.token}`);
   }
@@ -39,7 +45,7 @@ export default class Scripture extends RESTDataSource {
   }
 
   getBook = async (bookId) => {
-    const bibleId = await this.getBibleId('WEB');
+    const bibleId = await this.getBibleId(this.defaultVersion);
     const {
       data: { name },
     } = await this.get(`${bibleId}/books/${bookId}`, null, {
@@ -48,7 +54,7 @@ export default class Scripture extends RESTDataSource {
     return name;
   };
 
-  getBibleId = async (version = 'WEB') => {
+  getBibleId = async (version) => {
     const { data } = await this.get(
       `?abbreviation=${version.toUpperCase()}`,
       null,
@@ -68,7 +74,7 @@ export default class Scripture extends RESTDataSource {
     return data[0].bibleId;
   };
 
-  async getScriptures(query, version = 'WEB') {
+  async getScriptures(query, version = this.defaultVersion) {
     if (query === '') return [];
     const bibleId = await this.getBibleId(version);
     const scriptures = await this.get(
