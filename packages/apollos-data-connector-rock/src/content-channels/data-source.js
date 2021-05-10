@@ -1,8 +1,6 @@
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import ApollosConfig from '@apollosproject/config';
 
-import { isEmpty } from 'lodash';
-
 const { ROCK_MAPPINGS } = ApollosConfig;
 
 export default class ContentChannel extends RockApolloDataSource {
@@ -11,23 +9,21 @@ export default class ContentChannel extends RockApolloDataSource {
   all = () => this.request().expand('ChildContentChannels').get();
 
   getRootChannels = async () => {
+    const ids =
+      ROCK_MAPPINGS.ALL_CONTENT_CHANNELS ||
+      // TODO deprecated name
+      ROCK_MAPPINGS.DISCOVER_CONTENT_CHANNEL_IDS ||
+      [];
+
+    if (!ids.length) return [];
     const channels = await this.request()
-      .filter(
-        ROCK_MAPPINGS.DISCOVER_CONTENT_CHANNEL_IDS.map(
-          (channelId) => `(Id eq ${channelId})`
-        ).join(' or ')
-      )
+      .filter(ids.map((channelId) => `(Id eq ${channelId})`).join(' or '))
       .cache({ ttl: 5 })
       .get();
 
-    const sortOrder = ROCK_MAPPINGS.DISCOVER_CONTENT_CHANNEL_IDS;
-    // Sort order could be undefined or have no ids. There's no reason to iterate in this case.
-    if (!sortOrder || isEmpty(sortOrder)) {
-      return channels;
-    }
-    // Setup a result array.
+    // sort
     const result = [];
-    sortOrder.forEach((configId) => {
+    ids.forEach((configId) => {
       // Remove the matched element from the channel list.
       const channel = channels.splice(
         channels.findIndex(({ id }) => id === configId),
