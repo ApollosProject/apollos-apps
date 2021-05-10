@@ -45,7 +45,7 @@ export default class Scripture extends RESTDataSource {
   }
 
   getBook = async (bookId) => {
-    const bibleId = await this.getBibleId(this.defaultVersion);
+    const bibleId = await this.getBibleId('WEB');
     const {
       data: { name },
     } = await this.get(`${bibleId}/books/${bookId}`, null, {
