@@ -1,11 +1,5 @@
 import { Sequelize, DataTypes } from 'sequelize';
 
-const Visibility = {
-  PUBLIC: 'PUBLIC',
-  PRIVATE: 'PRIVATE',
-  FOLLOWERS: 'FOLLOWERS',
-};
-
 async function up({ context: queryInterface }) {
   await queryInterface.createTable('notifications', {
     id: {
