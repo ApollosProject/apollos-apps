@@ -17,31 +17,33 @@ import {
 
 import { createImageUrlFromGuid } from '../utils';
 
-const { ROCK, ROCK_MAPPINGS, ROCK_CONSTANTS } = ApollosConfig;
+const { ROCK, ROCK_MAPPINGS } = ApollosConfig;
 
 export default class ContentItem extends RockApolloDataSource {
   resource = 'ContentChannelItems';
 
   activeChannelIds =
+    ROCK_MAPPINGS.ALL_CONTENT_CHANNELS ||
+    // TODO deprecated variables
     ROCK_MAPPINGS.ACTIVE_CONTENT_CHANNEL_IDS ||
     ROCK_MAPPINGS.FEED_CONTENT_CHANNEL_IDS;
 
   attributeIsImage = ({ key, attributeValues, attributes }) =>
-    attributes[key].fieldTypeId === ROCK_CONSTANTS.IMAGE ||
+    attributes[key].fieldTypeId === 10 || // Image
     (key.toLowerCase().includes('image') &&
       typeof attributeValues[key].value === 'string' &&
       attributeValues[key].value.startsWith('http')); // looks like an image url
 
   attributeIsVideo = ({ key, attributeValues, attributes }) =>
-    attributes[key].fieldTypeId === ROCK_CONSTANTS.VIDEO_FILE ||
-    attributes[key].fieldTypeId === ROCK_CONSTANTS.VIDEO_URL ||
+    attributes[key].fieldTypeId === 79 || // video file
+    attributes[key].fieldTypeId === 80 || // video url
     (key.toLowerCase().includes('video') &&
       typeof attributeValues[key].value === 'string' &&
       attributeValues[key].value.startsWith('http')); // looks like a video url
 
   attributeIsAudio = ({ key, attributeValues, attributes }) =>
-    attributes[key].fieldTypeId === ROCK_CONSTANTS.AUDIO_FILE ||
-    attributes[key].fieldTypeId === ROCK_CONSTANTS.AUDIO_URL ||
+    attributes[key].fieldTypeId === 77 || // audio file
+    attributes[key].fieldTypeId === 78 || // audio url
     (key.toLowerCase().includes('audio') &&
       typeof attributeValues[key].value === 'string' &&
       attributeValues[key].value.startsWith('http')); // looks like an audio url
