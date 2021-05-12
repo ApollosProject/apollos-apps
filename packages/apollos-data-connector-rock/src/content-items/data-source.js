@@ -1,9 +1,9 @@
 import { get, uniq } from 'lodash';
 import moment from 'moment-timezone';
 import natural from 'natural';
-import sanitizeHtmlNode from 'sanitize-html';
 import Hypher from 'hypher';
 import english from 'hyphenation.en-us';
+import sanitizeHtml from 'sanitize-html';
 
 import RockApolloDataSource, {
   parseKeyValueAttribute,
@@ -17,31 +17,33 @@ import {
 
 import { createImageUrlFromGuid } from '../utils';
 
-const { ROCK, ROCK_MAPPINGS, ROCK_CONSTANTS } = ApollosConfig;
+const { ROCK, ROCK_MAPPINGS } = ApollosConfig;
 
 export default class ContentItem extends RockApolloDataSource {
   resource = 'ContentChannelItems';
 
   activeChannelIds =
+    ROCK_MAPPINGS.ALL_CONTENT_CHANNELS ||
+    // TODO deprecated variables
     ROCK_MAPPINGS.ACTIVE_CONTENT_CHANNEL_IDS ||
     ROCK_MAPPINGS.FEED_CONTENT_CHANNEL_IDS;
 
   attributeIsImage = ({ key, attributeValues, attributes }) =>
-    attributes[key].fieldTypeId === ROCK_CONSTANTS.IMAGE ||
+    attributes[key].fieldTypeId === 10 || // Image
     (key.toLowerCase().includes('image') &&
       typeof attributeValues[key].value === 'string' &&
       attributeValues[key].value.startsWith('http')); // looks like an image url
 
   attributeIsVideo = ({ key, attributeValues, attributes }) =>
-    attributes[key].fieldTypeId === ROCK_CONSTANTS.VIDEO_FILE ||
-    attributes[key].fieldTypeId === ROCK_CONSTANTS.VIDEO_URL ||
+    attributes[key].fieldTypeId === 79 || // video file
+    attributes[key].fieldTypeId === 80 || // video url
     (key.toLowerCase().includes('video') &&
       typeof attributeValues[key].value === 'string' &&
       attributeValues[key].value.startsWith('http')); // looks like a video url
 
   attributeIsAudio = ({ key, attributeValues, attributes }) =>
-    attributes[key].fieldTypeId === ROCK_CONSTANTS.AUDIO_FILE ||
-    attributes[key].fieldTypeId === ROCK_CONSTANTS.AUDIO_URL ||
+    attributes[key].fieldTypeId === 77 || // audio file
+    attributes[key].fieldTypeId === 78 || // audio url
     (key.toLowerCase().includes('audio') &&
       typeof attributeValues[key].value === 'string' &&
       attributeValues[key].value.startsWith('http')); // looks like an audio url
@@ -242,7 +244,7 @@ export default class ContentItem extends RockApolloDataSource {
 
     const tokenizer = new natural.SentenceTokenizer();
     const tokens = tokenizer.tokenize(
-      sanitizeHtmlNode(content, {
+      sanitizeHtml(content, {
         allowedTags: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
         allowedAttributes: [],
         exclusiveFilter: (frame) => frame.tag.match(/^(h1|h2|h3|h4|h5|h6)$/),
@@ -253,6 +255,49 @@ export default class ContentItem extends RockApolloDataSource {
       ? `${tokens[0]} ${tokens[1]}`
       : tokens[0];
   };
+
+  createHTMLContent = (content) =>
+    sanitizeHtml(content || '', {
+      allowedTags: [
+        'h1',
+        'h2',
+        'h3',
+        'h4',
+        'h5',
+        'h6',
+        'blockquote',
+        'p',
+        'a',
+        'ul',
+        'ol',
+        'li',
+        'b',
+        'i',
+        'strong',
+        'em',
+        'br',
+        'caption',
+        'img',
+        'div',
+      ],
+      allowedAttributes: {
+        // these don't do anything in an app but will affect content on a website
+        '*': ['style', 'class'],
+        a: ['href', 'target'],
+        img: ['src'],
+      },
+      transformTags: {
+        img: (tagName, { src }) => {
+          return {
+            tagName,
+            attribs: {
+              // adds Rock URL in the case of local image references in the CMS
+              src: src.startsWith('http') ? src : `${ROCK.URL || ''}${src}`,
+            },
+          };
+        },
+      },
+    });
 
   getShareUrl = async (content) => {
     const __typename = this.resolveType(content);

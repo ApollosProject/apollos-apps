@@ -26,11 +26,14 @@ export default class RockApolloDataSource extends RESTDataSource {
   // Subclasses can set this to true to force all requests to turn extended responses.
   expanded = false;
 
+  // Sublasses can use this to load specific attributes.
+  rockAttributes = [];
+
   callCount = 0;
 
   calls = {};
 
-  baseURL = ROCK.API_URL;
+  baseURL = ROCK.API_URL || `${ROCK.URL}/api`;
 
   rockToken = ROCK.API_TOKEN;
 
@@ -72,11 +75,22 @@ export default class RockApolloDataSource extends RESTDataSource {
     return mapKeys(normalizedValues, (value, key) => camelCase(key));
   };
 
+  buildDefaultOptions() {
+    const defaultOptions = {};
+    if (this.attributesLoaded?.length)
+      defaultOptions.attributeKeys = this.attributesLoaded.join(',');
+    if (this.expanded || this.attributesLoaded?.length)
+      defaultOptions.loadAttributes = 'expanded';
+
+    return defaultOptions;
+  }
+
   request(resource = this.resource) {
+    const defaultOptions = this.buildDefaultOptions();
     return new RequestBuilder({
       resource,
       connector: this,
-      defaultOptions: this.expanded ? { loadAttributes: 'expanded' } : null,
+      defaultOptions,
     });
   }
 

@@ -5,7 +5,7 @@ import { get } from 'lodash';
 
 const CurrentLivestreamQuery = `
 query CurrentState {
-  currentService {
+  currentService(onEmpty: LOAD_NEXT) {
     ...ServiceFields
     __typename
   }
@@ -41,7 +41,7 @@ export default class LiveStream extends RESTDataSource {
   }
 
   get mediaUrls() {
-    return ApollosConfig.CHURCH_ONLINE.MEDIA_URLS;
+    return ApollosConfig.CHURCH_ONLINE.MEDIA_URLS || [];
   }
 
   get webViewUrl() {
@@ -99,6 +99,7 @@ export default class LiveStream extends RESTDataSource {
 
   async getLiveStreams() {
     const { ContentItem } = this.context.dataSources;
+    if (!ApollosConfig?.CHURCH_ONLINE?.URL) return [];
     // This logic is a little funky right now.
     // The follow method looks at the sermon feed and the `getLiveStream` on this module
     // If we have data in the sermon feed, and the `getLiveStream.isLive` is true

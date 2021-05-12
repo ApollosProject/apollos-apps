@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=12"
   },
-  "version": "2.11.0",
+  "version": "2.13.1",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -59,7 +59,7 @@
   "dependencies": {
     "formik": "1.5.1",
     "graphql-tag": "2.9.2",
-    "lodash": "4.17.19",
+    "lodash": "4.17.21",
     "react-is": "^16.9.0",
     "react-native-swiper": "^1.6.0",
     "yup": "0.26.6"

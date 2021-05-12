@@ -8,7 +8,6 @@ import { LoginConsumer } from '../LoginProvider';
 import PasswordEntry from './PasswordEntry';
 
 const PasswordEntryConnected = ({
-  screenProps,
   navigation,
   route: {
     params: { forgotPasswordURL },
@@ -46,7 +45,6 @@ const PasswordEntryConnected = ({
       >
         {(formikBag) => (
           <PasswordEntry
-            {...screenProps}
             {...formikBag}
             errors={formikBag.touched.password && formikBag.errors}
             isLoading={formikBag.isSubmitting}
@@ -67,7 +65,6 @@ PasswordEntryConnected.propTypes = {
     params: PropTypes.shape({ forgotPasswordURL: PropTypes.string }),
   }),
   emailRequired: PropTypes.bool,
-  screenProps: PropTypes.shape({}),
 };
 
 PasswordEntryConnected.defaultProps = {
