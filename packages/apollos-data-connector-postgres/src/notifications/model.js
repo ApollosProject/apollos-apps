@@ -13,6 +13,7 @@ const createModel = defineModel({
     data: DataTypes.JSON,
     notificationType: DataTypes.TEXT,
     deliveryMethod: DataTypes.TEXT,
+    externalNotificationId: DataTypes.TEXT,
   },
 });
 

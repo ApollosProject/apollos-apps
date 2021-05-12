@@ -44,6 +44,9 @@ async function up({ context: queryInterface }) {
         key: 'id',
       },
     },
+    externalNotificationId: {
+      type: DataTypes.TEXT,
+    },
     apollosId: {
       type: Sequelize.STRING,
       allowNull: true, // we set this value with an "afterCreate" hook if not set.
