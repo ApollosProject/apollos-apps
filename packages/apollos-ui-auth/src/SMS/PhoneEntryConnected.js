@@ -61,7 +61,7 @@ class PhoneEntryConnected extends Component {
   };
 
   handleOnPressAlternateLogin = () => {
-    this.props.navigation.replace('Identity');
+    this.props.navigation.replace('AuthEmailEntryConnected');
   };
 
   render() {
