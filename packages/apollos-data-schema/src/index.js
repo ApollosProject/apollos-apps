@@ -1034,7 +1034,7 @@ export const featuresSchema = gql`
   }
 
   extend type Query {
-    tabFeedFeatures(tab!: Tab, campusId: ID): FeatureFeed
+    tabFeedFeatures(tab: Tab!, campusId: ID): FeatureFeed
       @cacheControl(maxAge: 0)
     userFeedFeatures: [Feature]
       @cacheControl(maxAge: 0)
