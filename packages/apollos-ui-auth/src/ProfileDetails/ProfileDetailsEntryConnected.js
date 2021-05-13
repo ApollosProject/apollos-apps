@@ -43,7 +43,6 @@ const ProfileDetailsEntryConnected = ({ navigation, Component }) => (
 
 ProfileDetailsEntryConnected.propTypes = {
   navigation: PropTypes.shape({ goBack: PropTypes.func.isRequired }).isRequired,
-  emailRequired: PropTypes.bool,
   Component: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.func,
@@ -52,7 +51,6 @@ ProfileDetailsEntryConnected.propTypes = {
 };
 
 ProfileDetailsEntryConnected.defaultProps = {
-  emailRequired: true,
   Component: ProfileEntry,
 };
 

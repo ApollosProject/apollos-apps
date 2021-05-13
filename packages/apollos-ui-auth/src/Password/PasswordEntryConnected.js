@@ -3,14 +3,17 @@ import React from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import PropTypes from 'prop-types';
+import ApollosConfig from '@apollosproject/config';
 
 import { LoginConsumer } from '../LoginProvider';
 import PasswordEntry from './PasswordEntry';
 
+const { APP_DATA_URL } = ApollosConfig;
+
 const PasswordEntryConnected = ({
   navigation,
   route: {
-    params: { forgotPasswordURL },
+    params: { forgotPasswordURL = `${APP_DATA_URL}/forgot-password` },
   },
 }) => (
   <LoginConsumer>
@@ -64,11 +67,6 @@ PasswordEntryConnected.propTypes = {
   route: PropTypes.shape({
     params: PropTypes.shape({ forgotPasswordURL: PropTypes.string }),
   }),
-  emailRequired: PropTypes.bool,
-};
-
-PasswordEntryConnected.defaultProps = {
-  emailRequired: true,
 };
 
 export default PasswordEntryConnected;
