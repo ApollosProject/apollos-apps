@@ -1,6 +1,6 @@
-rm -rf ApollosApi
+rm -rf ApollosApp
 
-mkdir -p ApollosApi
+mkdir -p ApollosApp
 mkdir -p tmp
 
 echo $2
@@ -17,14 +17,14 @@ tput sgr0
 
 read SECRET
 ./scripts/secrets.sh -d $SECRET
-mv ./apollos-church-api/.env.shared ./apollos-church-api/.env
+mv ./apolloschurchapp/.env.shared ./apolloschurchapp/.env
 cd ..
 
 shopt -s dotglob
-mv apollos-templates/apollos-church-api/* ../ApollosApi
+mv apollos-templates/apolloschurchapp/* ../ApollosApp
 
 cd ..
 
-node scripts/swap-package-json-to-links.js ./ApollosApi
+node scripts/swap-package-json-to-links.js ./ApollosApp
 
 rm -rf tmp
