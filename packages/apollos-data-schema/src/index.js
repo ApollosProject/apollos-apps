@@ -1034,11 +1034,24 @@ export const featuresSchema = gql`
   }
 
   extend type Query {
+    tabFeedFeatures(tab: Tab!, campusId: ID): FeatureFeed
+      @cacheControl(maxAge: 0)
     userFeedFeatures: [Feature]
       @cacheControl(maxAge: 0)
       @deprecated(reason: "Use homeFeedFeatures or discoverFeedFeatures")
-    homeFeedFeatures(campusId: ID): FeatureFeed @cacheControl(maxAge: 0)
-    discoverFeedFeatures: FeatureFeed @cacheControl(maxAge: 0)
+    homeFeedFeatures(campusId: ID): FeatureFeed
+      @cacheControl(maxAge: 0)
+      @deprecated(reason: "Use tabFeedFeatures(tab: HOME)")
+    discoverFeedFeatures: FeatureFeed
+      @cacheControl(maxAge: 0)
+      @deprecated(reason: "Use tabFeedFeatures(tab: DISCOVER)")
+  }
+
+  enum Tab {
+    HOME
+    READ
+    WATCH
+    PRAY
   }
 `;
 
