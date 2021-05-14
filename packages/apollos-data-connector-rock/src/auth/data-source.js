@@ -22,13 +22,17 @@ export default class AuthDataSource extends RockApolloDataSource {
     }
 
     if (userCookie) {
-      const request = await this.request('People/GetCurrentPerson').get({
-        options: {
-          headers: { cookie: userCookie, 'Authorization-Token': null },
-        },
-      });
-      this.context.currentPerson = request;
-      return request;
+      try {
+        const request = await this.request('People/GetCurrentPerson').get({
+          options: {
+            headers: { cookie: userCookie, 'Authorization-Token': null },
+          },
+        });
+        this.context.currentPerson = request;
+        return request;
+      } catch (e) {
+        throw new AuthenticationError('Invalid user cookie');
+      }
     }
     throw new AuthenticationError('Must be logged in');
   };
