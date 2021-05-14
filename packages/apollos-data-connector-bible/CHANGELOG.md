@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.14.0](https://github.com/apollosproject/apollos-apps/compare/v2.13.1...v2.14.0) (2021-05-14)
+
+
+### Features
+
+* dynamically find bible ID ([#1934](https://github.com/apollosproject/apollos-apps/issues/1934)) ([d1b2e24](https://github.com/apollosproject/apollos-apps/commit/d1b2e241f2a9d73e9fce8696161f72014cd493b3))
+
+
+
 ### [2.13.1](https://github.com/apollosproject/apollos-apps/compare/v2.13.0...v2.13.1) (2021-04-28)
 
 **Note:** Version bump only for package @apollosproject/data-connector-bible

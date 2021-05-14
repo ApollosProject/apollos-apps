@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=12"
   },
-  "version": "2.13.1",
+  "version": "2.14.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -70,7 +70,7 @@
   },
   "devDependencies": {
     "@apollo/client": "3.3.0-rc.2",
-    "@apollosproject/ui-test-utils": "^2.13.1",
+    "@apollosproject/ui-test-utils": "^2.14.0",
     "@react-native-community/async-storage": "^1.5.1",
     "@react-navigation/compat": "^5.1.28",
     "@react-navigation/native": "^5.9.3",

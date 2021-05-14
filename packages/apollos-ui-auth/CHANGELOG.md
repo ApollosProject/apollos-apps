@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.14.0](https://github.com/apollosproject/apollos-apps/compare/v2.13.1...v2.14.0) (2021-05-14)
+
+
+### Bug Fixes
+
+* remove auth navigation headers ([#1937](https://github.com/apollosproject/apollos-apps/issues/1937)) ([ee054d3](https://github.com/apollosproject/apollos-apps/commit/ee054d318824da42f4659cf9eddcde719d3f1114))
+
+
+
 ### [2.13.1](https://github.com/apollosproject/apollos-apps/compare/v2.13.0...v2.13.1) (2021-04-28)
 
 **Note:** Version bump only for package @apollosproject/ui-auth

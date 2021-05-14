@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=12"
   },
-  "version": "2.13.1",
+  "version": "2.14.0",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
@@ -28,7 +28,7 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@apollosproject/server-core": "^2.13.1",
+    "@apollosproject/server-core": "^2.14.0",
     "apollo-datasource-rest": "^0.6.4",
     "lodash": "^4.17.11"
   },
@@ -37,8 +37,8 @@
     "@apollosproject/data-schema": "*"
   },
   "devDependencies": {
-    "@apollosproject/apollo-server-env-mock": "^2.13.1",
-    "@apollosproject/babel-preset-apollos": "^2.13.1",
+    "@apollosproject/apollo-server-env-mock": "^2.14.0",
+    "@apollosproject/babel-preset-apollos": "^2.14.0",
     "apollo-server-env": "^2.3.0",
     "graphql": "14.7.0",
     "jest": "^25.1.0"
