@@ -12,8 +12,11 @@ export default class Scripture extends RESTDataSource {
 
   token = BIBLE_API.KEY;
 
-  // default to the first one listed in the config
-  availableVersions = Object.keys(BIBLE_API.BIBLE_ID);
+  defaultVersion =
+    BIBLE_API.DEFAULT_VERSION ||
+    // TODO: BIBLE_IDS field is deprecated, remove this line once safe
+    Object.keys(BIBLE_API.BIBLE_IDS || { WEB: '' })[0] ||
+    'WEB';
 
   willSendRequest(request) {
     request.headers.set('api-key', `${this.token}`);
@@ -21,16 +24,18 @@ export default class Scripture extends RESTDataSource {
 
   async getFromId(id) {
     const { id: parsedID, bibleId } = JSON.parse(id);
-    const version = Object.keys(BIBLE_API.BIBLE_ID).find(
-      (key) => BIBLE_API.BIBLE_ID[key] === bibleId
-    );
+    const {
+      data: { abbreviation: version },
+    } = await this.get(`${bibleId}`, null, {
+      cacheOptions: { ttl: ONE_DAY },
+    });
     const { data } = await this.get(`${bibleId}/passages/${parsedID}`, null, {
       cacheOptions: { ttl: ONE_DAY },
     });
     return { ...data, version };
   }
 
-  // NOTE: deprecated
+  // TODO: deprecated
   async getScripture(query, version) {
     const scriptures = await this.getScriptures(query, version);
     if (scriptures[0]) {
@@ -40,29 +45,38 @@ export default class Scripture extends RESTDataSource {
   }
 
   getBook = async (bookId) => {
+    const bibleId = await this.getBibleId('WEB');
     const {
       data: { name },
-    } = await this.get(
-      // use the first version available, shouldn't matter
-      `${Object.values(BIBLE_API.BIBLE_ID)[0]}/books/${bookId}`,
+    } = await this.get(`${bibleId}/books/${bookId}`, null, {
+      cacheOptions: { ttl: ONE_DAY },
+    });
+    return name;
+  };
+
+  getBibleId = async (version) => {
+    const { data } = await this.get(
+      `?abbreviation=${version.toUpperCase()}`,
       null,
       {
         cacheOptions: { ttl: ONE_DAY },
       }
     );
-    return name;
+    if (!data.length) {
+      console.warn(
+        `${version.toUpperCase()} version unauthorized or invalid, using WEB version`
+      );
+      const res = await this.get(`?abbreviation=WEB`, null, {
+        cacheOptions: { ttl: ONE_DAY },
+      });
+      return res.data[0].bibleId;
+    }
+    return data[0].bibleId;
   };
 
-  async getScriptures(query, version) {
+  async getScriptures(query, version = this.defaultVersion) {
     if (query === '') return [];
-    let safeVersion = version ? version.toUpperCase() : null;
-    if (!this.availableVersions.includes(safeVersion)) {
-      console.warn(
-        `${safeVersion} version not available, using ${this.availableVersions[0]}`
-      );
-      [safeVersion] = this.availableVersions;
-    }
-    const bibleId = BIBLE_API.BIBLE_ID[safeVersion];
+    const bibleId = await this.getBibleId(version);
     const scriptures = await this.get(
       `${bibleId}/search?query=${query}`,
       null,
@@ -73,7 +87,7 @@ export default class Scripture extends RESTDataSource {
     if (get(scriptures, 'data.passages')) {
       return scriptures.data.passages.map((passage) => ({
         ...passage,
-        version: safeVersion,
+        version: version.toUpperCase(),
       }));
     }
     console.warn(`No scripture returned, query: ${query} may be invalid`);
