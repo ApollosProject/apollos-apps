@@ -122,7 +122,6 @@ export default class Feature extends RockApolloDataSource {
       }),
       links,
       title,
-      // Typename is required so GQL knows specifically what Feature is being created
       __typename: 'LinkTableFeature',
     };
   }
