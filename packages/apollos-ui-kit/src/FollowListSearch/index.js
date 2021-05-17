@@ -5,6 +5,7 @@ import Search from '../inputs/Search';
 import styled from '../styled';
 import { withTheme } from '../theme';
 import FollowList from '../FollowList';
+import FollowListSearchModal from './FollowListSearchModal';
 
 const SearchContainer = styled(({ theme }) => ({
   marginHorizontal: theme.sizing.baseUnit,
@@ -65,4 +66,5 @@ FollowListSearch.defaultProps = {
   FollowListComponent: FollowList,
 };
 
+export { FollowListSearchModal };
 export default FollowListSearch;

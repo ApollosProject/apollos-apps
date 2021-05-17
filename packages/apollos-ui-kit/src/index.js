@@ -29,7 +29,10 @@ export FeaturedCard from './FeaturedCard';
 export FeedView from './FeedView';
 export FlexedView from './FlexedView';
 export FollowList, { FollowListItem } from './FollowList';
-export { FollowListSearchModal, FollowListSearch } from './FollowListSearch';
+export {
+  FollowListSearchModal,
+  default as FollowListSearch,
+} from './FollowListSearch';
 export GradientOverlayImage from './GradientOverlayImage';
 export HighlightCard from './HighlightCard';
 export HorizontalHighlightCard from './HorizontalHighlightCard';
