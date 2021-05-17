@@ -112,6 +112,21 @@ export default class Feature extends RockApolloDataSource {
     };
   }
 
+  async createLinkTableFeature({ links = [], title }) {
+    return {
+      id: this.createFeatureId({
+        args: {
+          title,
+          links,
+        },
+      }),
+      links,
+      title,
+      // Typename is required so GQL knows specifically what Feature is being created
+      __typename: 'LinkTableFeature',
+    };
+  }
+
   async createHeroListFeature({
     algorithms = [],
     heroAlgorithms = [],
@@ -387,6 +402,8 @@ export default class Feature extends RockApolloDataSource {
         switch (featureConfig.type) {
           case 'ActionBar':
             return this.createActionBarFeature(finalConfig);
+          case 'LinkTable':
+            return this.createLinkTableFeature(finalConfig);
           case 'VerticalCardList':
             return this.createVerticalCardListFeature(finalConfig);
           case 'HorizontalCardList':

@@ -918,6 +918,19 @@ export const featuresSchema = gql`
     actions: [ActionBarAction]
   }
 
+  type Link {
+    url: String
+    text: String
+  }
+
+  type LinkTableFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    title: String
+    links: [Link]
+  }
+
   # A Hero Card with (essentially) an Action List attached to the bottom.
   # Also has a button at the very bottom.
   type HeroListFeature implements Feature & Node {
@@ -1052,6 +1065,7 @@ export const featuresSchema = gql`
     READ
     WATCH
     PRAY
+    CONNECT
   }
 `;
 

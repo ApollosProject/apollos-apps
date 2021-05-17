@@ -1,11 +1,10 @@
 rm -rf ApollosApi
 
-
 mkdir -p ApollosApi
 mkdir -p tmp
 
-echo $2
-BRANCH=$2
+echo $1
+BRANCH=$1
 
 cd tmp
 git clone git@github.com:ApollosProject/apollos-templates.git
@@ -21,12 +20,8 @@ read SECRET
 mv ./apollos-church-api/.env.shared ./apollos-church-api/.env
 cd ..
 
-
-
 shopt -s dotglob
 mv apollos-templates/apollos-church-api/* ../ApollosApi
-
-
 
 cd ..
 
