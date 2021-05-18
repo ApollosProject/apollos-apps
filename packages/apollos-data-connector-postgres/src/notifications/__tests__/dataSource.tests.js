@@ -7,7 +7,7 @@ let person1;
 
 const context = {};
 
-describe('Apollos Postgres Comment Flags DataSource', () => {
+describe('Apollos Postgres Notifications DataSource', () => {
   beforeEach(async () => {
     await createPeopleModel();
     await createModel();
