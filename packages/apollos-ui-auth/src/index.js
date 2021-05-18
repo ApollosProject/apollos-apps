@@ -23,8 +23,6 @@ import {
 } from './ProfileDetails';
 
 export { default as LoginButton } from './LoginButton';
-export { default as ProtectedAction } from './ProtectedAction';
-export { default as ProtectedTouchable } from './ProtectedTouchable';
 export { default as AuthProvider, AuthConsumer } from './Provider';
 export { default as ProtectedRoute } from './ProtectedRoute';
 

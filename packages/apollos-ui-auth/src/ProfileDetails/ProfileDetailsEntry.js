@@ -36,17 +36,7 @@ const ProfileDetailsEntry = (props) => (
     <DatePicker
       type={'DateInput'}
       placeholder={'Select a date...'}
-      value={
-        // If we have either a birthdate or a default date
-        get(props.values, 'birthdate') || props.defaultDate
-          ? // Pass it along to the datepicker
-            moment(
-              get(props.values, 'birthDate', props.defaultDate) ||
-                props.defaultDate
-            ).toDate()
-          : // Otherwise pass null. The datepicker has sane defaults
-            null
-      }
+      value={props.values?.birthDate}
       error={get(props.touched, 'birthDate') && get(props.errors, 'birthDate')}
       displayValue={
         // only show a birthday if we have one.
@@ -78,7 +68,6 @@ ProfileDetailsEntry.propTypes = {
     phone: PropTypes.string,
     birthDate: PropTypes.instanceOf(Date),
   }),
-  onPressBack: PropTypes.func.isRequired,
   genderList: PropTypes.arrayOf(
     PropTypes.oneOfType([
       PropTypes.string,
