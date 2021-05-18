@@ -99,3 +99,4 @@ packages/**/docs/generated/*
 testing*.db
 
 ApollosApi/
+ApollosApp/

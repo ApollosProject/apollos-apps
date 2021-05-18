@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { View } from 'react-native';
 import Modal, { ModalHeader } from '../Modal';
 import styled from '../styled';
-import FollowListSearch from '.';
+import FollowListSearch from './FollowListSearch';
 
 const SearchBackground = styled(
   ({ theme }) => ({
