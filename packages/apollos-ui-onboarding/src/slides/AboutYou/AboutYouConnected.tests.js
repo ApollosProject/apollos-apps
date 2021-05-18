@@ -12,7 +12,12 @@ let realDateNow;
 describe('AboutYouConnected component', () => {
   beforeAll(() => {
     realDateNow = Date.now.bind(global.Date);
-    const dateNowStub = jest.fn(() => 1530518207007);
+    const dateNowStub = jest.fn(() => ({
+      setFullYear: () => null,
+      getFullYear: () => 2021,
+      getMonth: () => 5,
+      getDate: () => 17,
+    }));
     global.Date.now = dateNowStub;
   });
   afterAll(() => {

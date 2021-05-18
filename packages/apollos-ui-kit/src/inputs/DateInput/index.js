@@ -60,6 +60,18 @@ class DateInput extends PureComponent {
     this.handleClose();
   };
 
+  yearsAgo = (yearsToSubtract) => {
+    const date = Date.now();
+    date.setFullYear(date.getFullYear() - yearsToSubtract);
+    // we want a date without a time (only has the TZ offset)
+    const cleanDate = new Date(
+      date.getFullYear(),
+      date.getMonth(),
+      date.getDate()
+    );
+    return cleanDate;
+  };
+
   render() {
     return (
       <InputWrapper>
@@ -72,18 +84,11 @@ class DateInput extends PureComponent {
           onPress={this.handleOpen}
         />
         <StyledDateTimePicker
-          date={
-            this.props.value
-              ? moment(this.props.value).toDate()
-              : moment(Date.now()).subtract(18, 'years').toDate() // 18 years in the past, to ensure you don't have to change the year first on iOS
-          } // Using Date.now so we have something to mock in the tests
+          // slightly higher than the max so you can adjust the day or month before the year
+          date={this.props.value || this.yearsAgo(17)}
           datePickerModeAndroid={'spinner'}
           isVisible={this.state.isVisible}
-          maximumDate={
-            this.props.maximumDate
-              ? moment(this.props.maximumDate).toDate()
-              : moment(Date.now()).subtract(16, 'years').toDate() // sixteen year in the past to limit signups for 16 > year olds
-          } // Using Date.now so we have something to mock in the tests
+          maximumDate={this.props.maximumDate || this.yearsAgo(16)}
           minimumDate={this.props.minimumDate}
           mode={'date'}
           display={Platform.OS === 'android' ? 'calendar' : 'spinner'}
