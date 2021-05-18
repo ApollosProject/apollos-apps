@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Icon, withTheme } from '@apollosproject/ui-kit';
-import { ProtectedTouchable } from '@apollosproject/ui-auth';
+import { Icon, withTheme, Touchable } from '@apollosproject/ui-kit';
 
 const LikeIcon = withTheme(
   ({ theme: { colors: { secondary } = {} } = {}, isLiked } = {}) => ({
@@ -17,7 +16,7 @@ LikeIcon.propTypes = {
 };
 
 const LikeButton = ({ isLiked, toggleLike, nodeId, itemId }) => (
-  <ProtectedTouchable
+  <Touchable
     onPress={() =>
       toggleLike({
         nodeId: nodeId || itemId,
@@ -26,7 +25,7 @@ const LikeButton = ({ isLiked, toggleLike, nodeId, itemId }) => (
     }
   >
     <LikeIcon isLiked={isLiked} />
-  </ProtectedTouchable>
+  </Touchable>
 );
 
 LikeButton.propTypes = {
