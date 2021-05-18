@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { View, Button, SafeAreaView } from 'react-native';
 
-import CenteredView from '../../CenteredView';
-import BackgroundView from '../../BackgroundView';
+import CenteredView from '../CenteredView';
+import BackgroundView from '../BackgroundView';
 
-import styled from '../../styled';
+import styled from '../styled';
 import FollowListSearchModal from './FollowListSearchModal';
-import FollowListSearch from '.';
+import FollowListSearch from './FollowListSearch';
 
 const followerRequests = [
   {

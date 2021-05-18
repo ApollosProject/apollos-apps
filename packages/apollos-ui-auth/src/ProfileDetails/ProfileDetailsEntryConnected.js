@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-handler-names */
 import React from 'react';
 import { Formik } from 'formik';
 import PropTypes from 'prop-types';
@@ -13,7 +12,7 @@ const ProfileDetailsSchema = Yup.object().shape({
   birthDate: Yup.date().required('Required'),
 });
 
-const ProfileDetailsEntryConnected = ({ navigation, Component }) => (
+const ProfileDetailsEntryConnected = ({ Component }) => (
   <LoginConsumer>
     {({ handleProfileComplete }) => (
       <Formik
@@ -33,7 +32,6 @@ const ProfileDetailsEntryConnected = ({ navigation, Component }) => (
             disabled={!formikBag.isValid}
             isLoading={formikBag.isSubmitting}
             onPressNext={formikBag.handleSubmit}
-            onPressBack={navigation.goBack}
           />
         )}
       </Formik>
@@ -43,7 +41,6 @@ const ProfileDetailsEntryConnected = ({ navigation, Component }) => (
 
 ProfileDetailsEntryConnected.propTypes = {
   navigation: PropTypes.shape({ goBack: PropTypes.func.isRequired }).isRequired,
-  emailRequired: PropTypes.bool,
   Component: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.func,
@@ -52,7 +49,6 @@ ProfileDetailsEntryConnected.propTypes = {
 };
 
 ProfileDetailsEntryConnected.defaultProps = {
-  emailRequired: true,
   Component: ProfileEntry,
 };
 
