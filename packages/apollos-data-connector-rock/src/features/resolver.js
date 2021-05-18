@@ -55,7 +55,7 @@ export default {
   },
   Query: {
     userFeedFeatures: async (root, args, { dataSources: { Feature } }) =>
-      console.warn('userFeedFeatures is deprecated. Use homeFeedFeatures.') ||
+      console.warn('userFeedFeatures is deprecated. Use tabFeedFeatures.') ||
       Feature.getHomeFeedFeatures(),
   },
   ActionListFeature: {
@@ -63,6 +63,9 @@ export default {
   },
   ActionBarFeature: {
     id: ({ id }) => createGlobalId(id, 'ActionBarFeature'),
+  },
+  ActionTableFeature: {
+    id: ({ id }) => createGlobalId(id, 'ActionTableFeature'),
   },
   HeroListFeature: {
     id: ({ id }) => createGlobalId(id, 'HeroListFeature'),
