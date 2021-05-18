@@ -6,7 +6,7 @@ import CenteredView from '../CenteredView';
 import BackgroundView from '../BackgroundView';
 import { H3, H4 } from '../typography';
 
-import FollowListSearchModal from './FollowListSearch/FollowListSearchModal';
+import FollowListSearchModal from '../FollowListSearch/FollowListSearchModal';
 import FollowList from '.';
 
 const followerRequests = [

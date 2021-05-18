@@ -9,8 +9,6 @@ import { withIsLoading } from '../isLoading';
 import Button from '../Button';
 
 import FollowListItem from './FollowListItem';
-import FollowListSearch from './FollowListSearch';
-import FollowListSearchModal from './FollowListSearch/FollowListSearchModal';
 
 const HeaderView = styled(
   ({ theme }) => ({
@@ -143,5 +141,5 @@ class FollowList extends PureComponent {
   }
 }
 
-export { FollowListItem, FollowListSearch, FollowListSearchModal };
+export { FollowListItem };
 export default withIsLoading(FollowList);
