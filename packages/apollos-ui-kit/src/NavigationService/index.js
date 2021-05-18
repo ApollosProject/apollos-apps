@@ -41,9 +41,7 @@ const dispatch = (...args) => {
 const resetToAuth = performWhenReady(() => {
   _navigator.reset({
     index: 0,
-    routes: [
-      { name: 'Auth', params: { screen: 'AuthSMSPhoneEntryConnected' } },
-    ],
+    routes: [{ name: 'Auth', params: { screen: 'Identity' } }],
   });
 });
 

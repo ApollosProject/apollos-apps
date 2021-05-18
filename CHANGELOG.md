@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.14.0](https://github.com/ApollosProject/apollos-apps/compare/v2.13.1...v2.14.0) (2021-05-14)
+
+
+### Features
+
+* add new tab feed query ([#1936](https://github.com/ApollosProject/apollos-apps/issues/1936)) ([844f677](https://github.com/ApollosProject/apollos-apps/commit/844f67786d9a2b0814c9096ea89af42150910e20))
+* dynamically find bible ID ([#1934](https://github.com/ApollosProject/apollos-apps/issues/1934)) ([d1b2e24](https://github.com/ApollosProject/apollos-apps/commit/d1b2e241f2a9d73e9fce8696161f72014cd493b3))
+
+
+### Bug Fixes
+
+* remove auth navigation headers ([#1937](https://github.com/ApollosProject/apollos-apps/issues/1937)) ([ee054d3](https://github.com/ApollosProject/apollos-apps/commit/ee054d318824da42f4659cf9eddcde719d3f1114))
+
+
+
 ### [2.13.1](https://github.com/ApollosProject/apollos-apps/compare/v2.13.0...v2.13.1) (2021-04-28)
 
 **Note:** Version bump only for package apollos
