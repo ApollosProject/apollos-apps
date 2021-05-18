@@ -918,17 +918,19 @@ export const featuresSchema = gql`
     actions: [ActionBarAction]
   }
 
-  type Link {
-    url: String
-    text: String
+  type ActionTableAction {
+    id: ID!
+    title: String
+    action: ACTION_FEATURE_ACTION
+    relatedNode: Node
   }
 
-  type LinkTableFeature implements Feature & Node {
+  type ActionTableFeature implements Feature & Node {
     id: ID!
     order: Int
 
     title: String
-    links: [Link]
+    actions: [ActionTableAction]
   }
 
   # A Hero Card with (essentially) an Action List attached to the bottom.

@@ -64,8 +64,8 @@ export default {
   ActionBarFeature: {
     id: ({ id }) => createGlobalId(id, 'ActionBarFeature'),
   },
-  LinkTableFeature: {
-    id: ({ id }) => createGlobalId(id, 'LinkTableFeature'),
+  ActionTableFeature: {
+    id: ({ id }) => createGlobalId(id, 'ActionTableFeature'),
   },
   HeroListFeature: {
     id: ({ id }) => createGlobalId(id, 'HeroListFeature'),

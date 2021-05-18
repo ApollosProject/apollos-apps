@@ -112,17 +112,34 @@ export default class Feature extends RockApolloDataSource {
     };
   }
 
-  async createLinkTableFeature({ links = [], title }) {
+  async createActionTableFeature({
+    actions = [],
+    title,
+    algorithms = [],
+    ...args
+  }) {
+    const { ActionAlgorithm } = this.context.dataSources;
+
+    // Run algorithms if we have them, otherwise pull from the config
+    const compiledActions = () =>
+      actions.length
+        ? actions.map((action) => this.attachRelatedNodeId(action))
+        : ActionAlgorithm.runAlgorithms({ algorithms, args });
+
     return {
+      // The Feature ID is based on all of the action ids, added together.
+      // This is naive, and could be improved.
       id: this.createFeatureId({
         args: {
           title,
-          links,
+          algorithms,
+          actions,
         },
       }),
-      links,
+      actions: compiledActions,
       title,
-      __typename: 'LinkTableFeature',
+      // Typename is required so GQL knows specifically what Feature is being created
+      __typename: 'ActionTableFeature',
     };
   }
 
@@ -401,8 +418,8 @@ export default class Feature extends RockApolloDataSource {
         switch (featureConfig.type) {
           case 'ActionBar':
             return this.createActionBarFeature(finalConfig);
-          case 'LinkTable':
-            return this.createLinkTableFeature(finalConfig);
+          case 'ActionTable':
+            return this.createActionTableFeature(finalConfig);
           case 'VerticalCardList':
             return this.createVerticalCardListFeature(finalConfig);
           case 'HorizontalCardList':
