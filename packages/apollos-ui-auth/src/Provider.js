@@ -4,7 +4,6 @@ import AsyncStorage from '@react-native-community/async-storage';
 import { ApolloConsumer } from '@apollo/client';
 import gql from 'graphql-tag';
 import { track } from '@apollosproject/ui-analytics';
-import { GET_PUSH_ID, updatePushId } from '@apollosproject/ui-notifications';
 import { LoginProvider } from './LoginProvider';
 import { GET_LOGIN_STATE } from './queries';
 
@@ -18,6 +17,14 @@ const AuthContext = React.createContext(defaultContext);
 export const GET_AUTH_TOKEN = gql`
   query authToken {
     authToken @client
+  }
+`;
+
+const UPDATE_PUSH_ID = gql`
+  mutation updateUserPushSettings($input: PushSettingsInput!) {
+    updateUserPushSettings(input: $input) {
+      id
+    }
   }
 `;
 
@@ -56,12 +63,22 @@ export const resolvers = {
           data: { isLoggedIn: true },
         });
 
+        // shouldn't import the client query or push mutations from
+        // ui-notifications because that package already depends on login
+        // state from this package
         const { data: { pushId } = { data: {} } } = await client.query({
-          query: GET_PUSH_ID,
+          query: gql`
+            query {
+              pushId @client
+            }
+          `,
         });
 
         if (pushId) {
-          updatePushId({ pushId, client });
+          client.mutate({
+            mutation: UPDATE_PUSH_ID,
+            variables: { input: { pushProviderUserId: pushId } },
+          });
         }
 
         track({ eventName: 'UserLogin', client });
