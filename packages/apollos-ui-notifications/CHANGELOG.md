@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.15.0](https://github.com/apollosproject/apollos-apps/compare/v2.14.0...v2.15.0) (2021-05-19)
+
+
+### Bug Fixes
+
+* sends birthdates with the correct date ([#1943](https://github.com/apollosproject/apollos-apps/issues/1943)) ([61bd00c](https://github.com/apollosproject/apollos-apps/commit/61bd00c2f75179fa234391867ef57d8dab6e6c4f))
+
+
+
 ## [2.14.0](https://github.com/apollosproject/apollos-apps/compare/v2.13.1...v2.14.0) (2021-05-14)
 
 **Note:** Version bump only for package @apollosproject/ui-notifications
