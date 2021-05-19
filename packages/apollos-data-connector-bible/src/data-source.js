@@ -8,14 +8,14 @@ const ONE_DAY = 60 * 60 * 24;
 export default class Scripture extends RESTDataSource {
   resource = 'Scripture';
 
-  baseURL = 'https://api.scripture.api.bible/v1/bibles/';
+  baseURL = 'https://api.scripture.api.bible/v1';
 
   token = BIBLE_API.KEY;
 
   defaultVersion =
     BIBLE_API.DEFAULT_VERSION ||
-    // TODO: BIBLE_IDS field is deprecated, remove this line once safe
-    Object.keys(BIBLE_API.BIBLE_IDS || { WEB: '' })[0] ||
+    // TODO: BIBLE_ID field is deprecated, remove this line once safe
+    Object.keys(BIBLE_API.BIBLE_ID || { WEB: '' })[0] ||
     'WEB';
 
   willSendRequest(request) {
@@ -26,12 +26,16 @@ export default class Scripture extends RESTDataSource {
     const { id: parsedID, bibleId } = JSON.parse(id);
     const {
       data: { abbreviation: version },
-    } = await this.get(`${bibleId}`, null, {
+    } = await this.get(`bibles/${bibleId}`, null, {
       cacheOptions: { ttl: ONE_DAY },
     });
-    const { data } = await this.get(`${bibleId}/passages/${parsedID}`, null, {
-      cacheOptions: { ttl: ONE_DAY },
-    });
+    const { data } = await this.get(
+      `bibles/${bibleId}/passages/${parsedID}`,
+      null,
+      {
+        cacheOptions: { ttl: ONE_DAY },
+      }
+    );
     return { ...data, version };
   }
 
@@ -48,7 +52,7 @@ export default class Scripture extends RESTDataSource {
     const bibleId = await this.getBibleId('WEB');
     const {
       data: { name },
-    } = await this.get(`${bibleId}/books/${bookId}`, null, {
+    } = await this.get(`bibles/${bibleId}/books/${bookId}`, null, {
       cacheOptions: { ttl: ONE_DAY },
     });
     return name;
@@ -56,8 +60,8 @@ export default class Scripture extends RESTDataSource {
 
   getBibleId = async (version) => {
     const { data } = await this.get(
-      `?abbreviation=${version.toUpperCase()}`,
-      null,
+      'bibles',
+      { abbreviation: version.toUpperCase() },
       {
         cacheOptions: { ttl: ONE_DAY },
       }
@@ -66,19 +70,23 @@ export default class Scripture extends RESTDataSource {
       console.warn(
         `${version.toUpperCase()} version unauthorized or invalid, using WEB version`
       );
-      const res = await this.get(`?abbreviation=WEB`, null, {
-        cacheOptions: { ttl: ONE_DAY },
-      });
-      return res.data[0].bibleId;
+      const res = await this.get(
+        'bibles',
+        { abbreviation: 'WEB' },
+        {
+          cacheOptions: { ttl: ONE_DAY },
+        }
+      );
+      return res.data[0].id;
     }
-    return data[0].bibleId;
+    return data[0].id;
   };
 
   async getScriptures(query, version = this.defaultVersion) {
     if (query === '') return [];
     const bibleId = await this.getBibleId(version);
     const scriptures = await this.get(
-      `${bibleId}/search?query=${query}`,
+      `bibles/${bibleId}/search?query=${query}`,
       null,
       {
         cacheOptions: { ttl: ONE_DAY },
