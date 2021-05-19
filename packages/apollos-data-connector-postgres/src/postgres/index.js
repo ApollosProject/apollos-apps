@@ -64,7 +64,7 @@ const sequelize = ApollosConfig?.DATABASE?.URL
         ? {}
         : {
             dialectOptions: {
-              ssl: { require: true, rejectUnauthorized: true },
+              ssl: { require: true, rejectUnauthorized: false },
             },
           }),
     })
