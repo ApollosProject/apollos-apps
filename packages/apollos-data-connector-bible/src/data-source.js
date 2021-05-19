@@ -8,7 +8,7 @@ const ONE_DAY = 60 * 60 * 24;
 export default class Scripture extends RESTDataSource {
   resource = 'Scripture';
 
-  baseURL = 'https://api.scripture.api.bible/v1/bibles/';
+  baseURL = 'https://api.scripture.api.bible/v1/bibles';
 
   token = BIBLE_API.KEY;
 
@@ -26,10 +26,10 @@ export default class Scripture extends RESTDataSource {
     const { id: parsedID, bibleId } = JSON.parse(id);
     const {
       data: { abbreviation: version },
-    } = await this.get(`${bibleId}`, null, {
+    } = await this.get(`/${bibleId}`, null, {
       cacheOptions: { ttl: ONE_DAY },
     });
-    const { data } = await this.get(`${bibleId}/passages/${parsedID}`, null, {
+    const { data } = await this.get(`/${bibleId}/passages/${parsedID}`, null, {
       cacheOptions: { ttl: ONE_DAY },
     });
     return { ...data, version };
@@ -48,7 +48,7 @@ export default class Scripture extends RESTDataSource {
     const bibleId = await this.getBibleId('WEB');
     const {
       data: { name },
-    } = await this.get(`${bibleId}/books/${bookId}`, null, {
+    } = await this.get(`/${bibleId}/books/${bookId}`, null, {
       cacheOptions: { ttl: ONE_DAY },
     });
     return name;
@@ -78,7 +78,7 @@ export default class Scripture extends RESTDataSource {
     if (query === '') return [];
     const bibleId = await this.getBibleId(version);
     const scriptures = await this.get(
-      `${bibleId}/search?query=${query}`,
+      `/${bibleId}/search?query=${query}`,
       null,
       {
         cacheOptions: { ttl: ONE_DAY },
