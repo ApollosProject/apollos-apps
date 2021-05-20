@@ -24,6 +24,7 @@ export ContentSingleFeaturesConnected, {
 export ContentChildFeedConnected, {
   GET_CONTENT_CHILD_SIBLINGS,
 } from './ContentChildFeedConnected';
+export ContentFeedConnected, { GET_CONTENT_FEED } from './ContentFeedConnected';
 export ContentParentFeedConnected, {
   GET_CONTENT_PARENT_CHILDREN,
 } from './ContentParentFeedConnected';
@@ -33,6 +34,10 @@ export FeaturesFeedConnected, {
   GET_FEATURE_FEED,
   FEATURE_FEED_ACTION_MAP,
 } from './FeaturesFeedConnected';
+export {
+  FeatureFeedTabConnected,
+  createFeatureFeedTab,
+} from './FeaturesFeedTabConnected';
 export FollowListConnected, {
   REQUEST_FOLLOW,
   ACCEPT_FOLLOW_REQUEST,
