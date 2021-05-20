@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.16.0](https://github.com/ApollosProject/apollos-apps/compare/v2.15.0...v2.16.0) (2021-05-20)
+
+
+### Features
+
+* Move FeatureFeed tabs to core packages ([#1953](https://github.com/ApollosProject/apollos-apps/issues/1953)) ([53bbd41](https://github.com/ApollosProject/apollos-apps/commit/53bbd416f62216b11dcd42fe1b7a896eca1b2087))
+
+
+### Bug Fixes
+
+* fix bible request URLs ([#1952](https://github.com/ApollosProject/apollos-apps/issues/1952)) ([153a830](https://github.com/ApollosProject/apollos-apps/commit/153a83032a8e070c4dd2f136ece05f491d994b8d))
+* search by abbreviation no longer returns 404 ([#1949](https://github.com/ApollosProject/apollos-apps/issues/1949)) ([befe1c3](https://github.com/ApollosProject/apollos-apps/commit/befe1c316cd1f4d2c773fda4afc30374630fc5e1))
+
+
+
 ## [2.15.0](https://github.com/ApollosProject/apollos-apps/compare/v2.14.0...v2.15.0) (2021-05-19)
 
 
