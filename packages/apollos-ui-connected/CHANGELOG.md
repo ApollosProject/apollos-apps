@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.16.0](https://github.com/apollosproject/apollos-apps/compare/v2.15.0...v2.16.0) (2021-05-20)
+
+
+### Features
+
+* Move FeatureFeed tabs to core packages ([#1953](https://github.com/apollosproject/apollos-apps/issues/1953)) ([53bbd41](https://github.com/apollosproject/apollos-apps/commit/53bbd416f62216b11dcd42fe1b7a896eca1b2087))
+
+
+
 ## [2.15.0](https://github.com/apollosproject/apollos-apps/compare/v2.14.0...v2.15.0) (2021-05-19)
 
 
