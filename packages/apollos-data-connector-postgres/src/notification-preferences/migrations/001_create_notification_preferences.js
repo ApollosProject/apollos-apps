@@ -16,6 +16,13 @@ async function up({ context: queryInterface }) {
     notificationProviderType: {
       type: DataTypes.TEXT,
     },
+    personId: {
+      type: Sequelize.UUID,
+      references: {
+        model: 'people',
+        key: 'id',
+      },
+    },
     apollosId: {
       type: Sequelize.STRING,
       allowNull: true, // we set this value with an "afterCreate" hook if not set.
@@ -34,6 +41,14 @@ async function up({ context: queryInterface }) {
       allowNull: false,
     },
   });
+
+  await queryInterface.addIndex(
+    'notificationPreferences',
+    ['personId', 'notificationProviderType', 'notificationProviderId'],
+    {
+      unique: true,
+    }
+  );
 }
 
 async function down({ context: queryInterface }) {

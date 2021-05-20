@@ -9,12 +9,13 @@ class NotificationPreferencesDataSource extends PostgresDataSource {
     notificationProviderId,
     enabled = true,
   }) {
-    return this.model.upsert({
+    const [model] = await this.model.upsert({
       personId,
       notificationProviderType,
       notificationProviderId,
       enabled,
     });
+    return model;
   }
 }
 

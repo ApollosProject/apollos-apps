@@ -9,6 +9,18 @@ const createModel = defineModel({
     notificationProviderId: DataTypes.TEXT,
     notificationProviderType: DataTypes.TEXT,
   },
+  sequelizeOptions: {
+    indexes: [
+      {
+        unique: true,
+        fields: [
+          'personId',
+          'notificationProviderType',
+          'notificationProviderId',
+        ],
+      },
+    ],
+  },
 });
 
 const setupModel = configureModel(({ sequelize }) => {

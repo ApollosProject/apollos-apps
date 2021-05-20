@@ -1,5 +1,5 @@
-import CreateNotifications001 from './001_create_notifications';
+import CreateNotificationPreferences001 from './001_create_notification_preferences';
 
-const migrations = [CreateNotifications001];
+const migrations = [CreateNotificationPreferences001];
 
 export default migrations;
