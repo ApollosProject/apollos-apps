@@ -61,7 +61,7 @@ class DateInput extends PureComponent {
   };
 
   yearsAgo = (yearsToSubtract) => {
-    const date = Date.now();
+    const date = new Date();
     date.setFullYear(date.getFullYear() - yearsToSubtract);
     // we want a date without a time (only has the TZ offset)
     const cleanDate = new Date(
