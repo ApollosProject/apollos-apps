@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Apollos Postgres Notifications DataSource throws an error with an invalid delivery method 1`] = `[Error: new-method is not a valid delivery method]`;
+
+exports[`Apollos Postgres Notifications DataSource throws an error with an invalid type 1`] = `[Error: Passing a valid notification type is required for sending a notification]`;
+
+exports[`Apollos Postgres Notifications DataSource throws an error without personId 1`] = `[Error: personId is required for sending a notification]`;
