@@ -3,9 +3,6 @@ rm -rf ApollosApp
 mkdir -p ApollosApp
 mkdir -p tmp
 
-echo $1
-BRANCH=$1
-
 cd tmp
 git clone git@github.com:ApollosProject/apollos-templates.git
 
