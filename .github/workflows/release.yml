@@ -4,32 +4,8 @@ on: workflow_dispatch
 
 jobs:
 
-  gpr:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0 # needs this to pull all tags and branches
-
-    - name: Setup Node for GPR
-      uses: actions/setup-node@v2
-      with:
-        registry-url: 'https://npm.pkg.github.com'
-        scope: '@apollosproject'
-
-    - name: Install Dependencies
-      run: yarn
-
-    - name: Release (No Push)
-      run: yarn release --registry "http://npm.pkg.github.com" --no-push --no-git-tag-version --yes
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
   npm:
 
-    needs: gpr
     runs-on: ubuntu-latest
 
     steps:

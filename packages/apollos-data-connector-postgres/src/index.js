@@ -12,5 +12,6 @@ export * as UserLike from './user-likes';
 export * as Follow from './follows';
 export * as Person from './people';
 export * as Campus from './campus';
+export * as Notification from './notifications';
 
 export createMigrationRunner from './postgres/performMigrations';
