@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.0](https://github.com/apollosproject/apollos-apps/compare/v2.16.0...v2.17.0) (2021-05-24)
+
+
+### Bug Fixes
+
+* Invalid type when subtracting default date in datepicker ([#1957](https://github.com/apollosproject/apollos-apps/issues/1957)) ([120dcc7](https://github.com/apollosproject/apollos-apps/commit/120dcc7922b95442ab5416fe366fadf84526b64f))
+
+
+
 ## [2.16.0](https://github.com/apollosproject/apollos-apps/compare/v2.15.0...v2.16.0) (2021-05-20)
 
 **Note:** Version bump only for package @apollosproject/ui-kit
