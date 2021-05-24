@@ -76,7 +76,7 @@ class RockConstants extends RockApolloDataSource {
         IsActive: true,
         ComponentEntityTypeId: entityTypeId,
         ChannelTypeMediumValueId:
-          ROCK_MAPPINGS.INTERACTIONS.CHANNEL_MEDIUM_TYPE_ID || 512, // 512 is mobile app
+          ROCK_MAPPINGS?.INTERACTIONS?.CHANNEL_MEDIUM_TYPE_ID || 512, // 512 is mobile app
       },
     });
   }
@@ -88,7 +88,7 @@ class RockConstants extends RockApolloDataSource {
     });
     return this.createOrFindInteractionComponent({
       componentName: `${
-        ROCK_MAPPINGS.INTERACTIONS.COMPONENT_NAME || 'Apollos App Component'
+        ROCK_MAPPINGS?.INTERACTIONS?.COMPONENT_NAME || 'Apollos App Component'
       } - ${entityId}`,
       channelId: channel.id,
       entityId: parseInt(entityId, 10),
@@ -98,7 +98,7 @@ class RockConstants extends RockApolloDataSource {
   async interactionChannel({ entityTypeId, entityTypeName }) {
     return this.createOrFindInteractionChannel({
       channelName: `${
-        ROCK_MAPPINGS.INTERACTIONS.CHANNEL_NAME || 'Apollos App'
+        ROCK_MAPPINGS?.INTERACTIONS?.CHANNEL_NAME || 'Apollos App'
       } - ${entityTypeName}`,
       entityTypeId,
     });
@@ -124,7 +124,7 @@ class RockConstants extends RockApolloDataSource {
   }
 
   mapApollosNameToRockName = (name) => {
-    if (ROCK_MAPPINGS.CONTENT_ITEM[name]) {
+    if (ROCK_MAPPINGS?.CONTENT_ITEM[name]) {
       return ROCK_MAPPINGS.CONTENT_ITEM[name].EntityType;
     }
     return get(ROCK_MAPPINGS, `ENTITY_TYPES.${name}`, name);
