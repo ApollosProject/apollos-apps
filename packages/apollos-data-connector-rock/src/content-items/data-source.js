@@ -119,7 +119,7 @@ export default class ContentItem extends RockApolloDataSource {
     }));
   };
 
-  getFeatures(item) {
+  async getFeatures(item) {
     const { attributeValues, id } = item;
     const { Feature } = this.context.dataSources;
     const features = [];
@@ -188,6 +188,7 @@ export default class ContentItem extends RockApolloDataSource {
       });
     }
 
+    // If we have comments enabled on the item itself.
     const commentFeatures = get(attributeValues, 'comments.value', 'False');
     if (commentFeatures === 'True') {
       const nodeType = item.__type || this.resolveType(item);
@@ -202,6 +203,45 @@ export default class ContentItem extends RockApolloDataSource {
         }),
         Feature.createCommentListFeature({ nodeId: id, nodeType, flagLimit })
       );
+      // If we have comments enabled on the item's parent.
+    } else {
+      const parents = await (
+        await this.getCursorByChildContentItemId(item.id)
+      ).get();
+
+      if (
+        parents.some(
+          (p) =>
+            get(p, 'attributeValues.childrenHaveComments.value', 'False') ===
+            'True'
+        )
+      ) {
+        const commentParent = parents.find(
+          (p) =>
+            get(p, 'attributeValues.childrenHaveComments.value', 'False') ===
+            'True'
+        );
+        const nodeType = item.__type || this.resolveType(item);
+        const flagLimit = get(ApollosConfig, 'APP.FLAG_LIMIT', 0);
+        features.push(
+          Feature.createAddCommentFeature({
+            nodeId: item.id,
+            nodeType,
+            relatedNode: item,
+            initialPrompt: this.getAddCommentInitialPrompt(
+              commentParent.attributeValues
+            ),
+            addPrompt: this.getAddCommentAddPrompt(
+              commentParent.attributeValues
+            ),
+          }),
+          Feature.createCommentListFeature({
+            nodeId: item.id,
+            nodeType,
+            flagLimit,
+          })
+        );
+      }
     }
 
     const buttonLink = attributeValues?.buttonLink?.value;
