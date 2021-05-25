@@ -237,11 +237,12 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
     }));
   }
 
-  async contentFeedAlgorithm({ channelIds = [], limit = 20 } = {}) {
+  async contentFeedAlgorithm({ channelIds = [], limit = 20, skip = 0 } = {}) {
     const { ContentItem } = this.context.dataSources;
 
     const items = await ContentItem.byContentChannelIds(channelIds)
       .top(limit)
+      .skip(skip)
       .get();
 
     return items.map((item, i) => ({
