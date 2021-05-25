@@ -350,6 +350,46 @@ describe('ContentItemsModel', () => {
     expect(createAddCommentFeature.mock.calls).toMatchSnapshot();
   });
 
+  it('returns comment features when a contentItem has a parent with a Comments field set to true', async () => {
+    const dataSource = new ContentItemsDataSource();
+    const createCommentListFeature = jest.fn(() => ({
+      id: 'CommentListFeature:123',
+      comments: [],
+      __typename: 'CommentListFeature',
+    }));
+    const createAddCommentFeature = jest.fn(() => ({
+      id: 'AddCommentFeature:123',
+      initialPrompt: 'Write Something...',
+      addPrompt: 'What stands out to you?',
+      __typename: 'AddCommentFeature',
+    }));
+    dataSource.context = {
+      dataSources: {
+        Feature: {
+          createCommentListFeature,
+          createAddCommentFeature,
+        },
+      },
+    };
+    dataSource.getCursorByChildContentItemId = () => ({
+      get: () =>
+        Promise.resolve([
+          {
+            attributeValues: { childrenHaveComments: { value: 'True' } },
+            attributes: {},
+          },
+        ]),
+    });
+    const result = await dataSource.getFeatures({
+      attributeValues: {},
+      attributes: {},
+      id: 'ContentItem:123Test',
+    });
+    expect(result).toMatchSnapshot();
+    expect(createCommentListFeature.mock.calls).toMatchSnapshot();
+    expect(createAddCommentFeature.mock.calls).toMatchSnapshot();
+  });
+
   it('returns a text feature when a contentItem has a TextFeature field', async () => {
     const dataSource = new ContentItemsDataSource();
     const createTextFeature = jest.fn(() => ({
