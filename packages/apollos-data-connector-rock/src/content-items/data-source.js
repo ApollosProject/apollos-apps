@@ -205,8 +205,8 @@ export default class ContentItem extends RockApolloDataSource {
       );
       // If we have comments enabled on the item's parent.
     } else {
-      const parents = await await this.getCursorByChildContentItemId(
-        item.id
+      const parents = await (
+        await this.getCursorByChildContentItemId(item.id)
       ).get();
 
       if (
