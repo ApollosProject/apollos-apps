@@ -55,9 +55,7 @@ export const createFeatureFeedTab = ({
   feedName,
   tabProps,
   TabComponent = DefaultTabComponent,
-  ...args
 }) => {
-  console.log(args);
   const TabComponentToRender = (props) => (
     <TabComponent {...props} feedName={feedName} {...tabProps} />
   );
@@ -90,7 +88,6 @@ const FeatureFeedTabConnected = ({
   navigation,
   ...props
 }) => {
-  console.log({ campusId });
   const { data } = useQuery(
     gql`
       query GetTabFeatures($tab: Tab!, $campusId: ID) {
