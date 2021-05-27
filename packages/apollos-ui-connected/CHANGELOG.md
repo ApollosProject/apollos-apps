@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.18.0](https://github.com/apollosproject/apollos-apps/compare/v2.17.0...v2.18.0) (2021-05-27)
+
+
+### Features
+
+* Add support for feeds using campusIds ([#1964](https://github.com/apollosproject/apollos-apps/issues/1964)) ([136d254](https://github.com/apollosproject/apollos-apps/commit/136d25497683c68295c0c447b7ad0e4b23422a41))
+
+
+
 ## [2.17.0](https://github.com/apollosproject/apollos-apps/compare/v2.16.0...v2.17.0) (2021-05-24)
 
 **Note:** Version bump only for package @apollosproject/ui-connected
