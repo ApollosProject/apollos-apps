@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { gql, useQuery } from '@apollo/client';
 
-import { BackgroundView } from '@apollosproject/ui-kit';
+import { BackgroundView, named } from '@apollosproject/ui-kit';
 
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import RockAuthedWebBrowser from '../RockAuthedWebBrowser';
@@ -18,16 +18,48 @@ function handleOnPress({ action, ...props }) {
   }
 }
 
+export const DefaultTabComponent = named(
+  'ui-connected.FeatureFeedTabConnected.DefaultTabComponent'
+)(({ feedName, ...props }) => (
+  <FeatureFeedTabConnected tab={feedName} {...props} />
+));
+
+export const CampusTabComponent = named(
+  'ui-connected.FeatureFeedTabConnected.CampusTabComponent'
+)(({ feedName, ...props }) => {
+  const { data } = useQuery(gql`
+    query currentUserCampus {
+      currentUser {
+        id
+        profile {
+          id
+          campus {
+            id
+          }
+        }
+      }
+    }
+  `);
+  return (
+    <FeatureFeedTabConnected
+      tab={feedName}
+      campusId={data?.currentUser?.profile?.campus?.id}
+      {...props}
+    />
+  );
+});
+
 export const createFeatureFeedTab = ({
   tabName,
   screenOptions,
   feedName,
   tabProps,
+  TabComponent = DefaultTabComponent,
 }) => {
-  const TabStack = createNativeStackNavigator();
-  const TabComponent = ({ ...props }) => (
-    <FeatureFeedTabConnected tab={feedName} {...props} {...tabProps} />
+  const TabComponentToRender = (props) => (
+    <TabComponent {...props} feedName={feedName} {...tabProps} />
   );
+  const TabStack = createNativeStackNavigator();
   const TabNav = () => (
     <TabStack.Navigator
       screenOptions={{
@@ -36,7 +68,7 @@ export const createFeatureFeedTab = ({
         ...screenOptions,
       }}
     >
-      <TabStack.Screen name={tabName} component={TabComponent} />
+      <TabStack.Screen name={tabName} component={TabComponentToRender} />
       <TabStack.Screen
         component={ContentFeed}
         name="ContentFeed"
@@ -50,16 +82,21 @@ export const createFeatureFeedTab = ({
   return TabNav;
 };
 
-const FeatureFeedTabConnected = ({ tab, navigation, ...props }) => {
+const FeatureFeedTabConnected = ({
+  tab,
+  campusId = null,
+  navigation,
+  ...props
+}) => {
   const { data } = useQuery(
     gql`
-      query GetTabFeatures($tab: Tab!) {
-        tabFeedFeatures(tab: $tab) {
+      query GetTabFeatures($tab: Tab!, $campusId: ID) {
+        tabFeedFeatures(tab: $tab, campusId: $campusId) {
           id
         }
       }
     `,
-    { variables: { tab }, fetchPolicy: 'cache-and-network' }
+    { variables: { tab, campusId }, fetchPolicy: 'cache-and-network' }
   );
 
   return (
@@ -81,6 +118,7 @@ const FeatureFeedTabConnected = ({ tab, navigation, ...props }) => {
 
 FeatureFeedTabConnected.propTypes = {
   tab: PropTypes.string.isRequired,
+  campusId: PropTypes.string,
 };
 
 export default FeatureFeedTabConnected;

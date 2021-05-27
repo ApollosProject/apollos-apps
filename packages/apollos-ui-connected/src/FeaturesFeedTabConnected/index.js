@@ -1,5 +1,12 @@
 import FeatureFeedTabConnected, {
   createFeatureFeedTab,
+  DefaultTabComponent,
+  CampusTabComponent,
 } from './FeaturesFeedTabConnected';
 
-export { FeatureFeedTabConnected, createFeatureFeedTab };
+export {
+  FeatureFeedTabConnected,
+  createFeatureFeedTab,
+  DefaultTabComponent,
+  CampusTabComponent,
+};
