@@ -11,11 +11,6 @@ import Geolocation from 'react-native-geolocation-service';
 
 // Taken almost verbatum from `react-native-geolocation-service`s example app.
 const hasLocationPermissionIOS = async () => {
-  const openSetting = () => {
-    Linking.openSettings().catch(() => {
-      Alert.alert('Unable to open settings');
-    });
-  };
   const status = await Geolocation.requestAuthorization('whenInUse');
 
   if (status === 'granted') {
