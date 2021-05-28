@@ -22,20 +22,6 @@ const hasLocationPermissionIOS = async () => {
     return true;
   }
 
-  if (status === 'denied') {
-    Alert.alert(`Turn on Location Services to determine your location.`, '', [
-      { text: 'Go to Settings', onPress: openSetting },
-      { text: "Don't Use Location", onPress: () => {} },
-    ]);
-  }
-
-  if (status === 'disabled') {
-    Alert.alert(`Turn on Location Services to determine your location.`, '', [
-      { text: 'Go to Settings', onPress: openSetting },
-      { text: "Don't Use Location", onPress: () => {} },
-    ]);
-  }
-
   return false;
 };
 
