@@ -1,9 +1,5 @@
 /* eslint-disable react-native/split-platform-components */
-import {
-  PermissionsAndroid,
-  ToastAndroid,
-  Platform,
-} from 'react-native';
+import { PermissionsAndroid, ToastAndroid, Platform } from 'react-native';
 
 import Geolocation from 'react-native-geolocation-service';
 
