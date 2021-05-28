@@ -1,4 +1,5 @@
 import { gql } from '@apollo/client';
+import ApollosConfig from '@apollosproject/config';
 
 export default gql`
   mutation addComment(
@@ -7,20 +8,8 @@ export default gql`
     $visibility: CommentVisibility
   ) {
     addComment(text: $text, parentId: $parentId, visibility: $visibility) {
-      id
-      text
-      isLiked
-      person {
-        id
-        nickName
-        photo {
-          uri
-        }
-        campus {
-          id
-          name
-        }
-      }
+      ...CommentFragment
     }
   }
+  ${ApollosConfig.FRAGMENTS.COMMENT_FRAGMENT}
 `;
