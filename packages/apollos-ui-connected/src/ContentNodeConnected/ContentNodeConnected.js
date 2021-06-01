@@ -65,12 +65,13 @@ const ContentNodeConnected = ({
 
             {/* fixes text/navigation spacing by adding vertical padding if we dont have an image */}
             <PaddedView vertical={!coverImageSources.length}>
-              <HeaderComponent padded isLoading={!title && loading}>
+              <HeaderComponent padded isLoading={!title && loading} nodeId>
                 {title}
               </HeaderComponent>
               <HtmlComponent
                 isLoading={!htmlContent && loading}
                 onPressAnchor={onPressAnchor}
+                nodeId
               >
                 {htmlContent}
               </HtmlComponent>
