@@ -250,26 +250,32 @@ const ADD_COMMENT_FEATURE_FRAGMENT = gql`
   }
 `;
 
+const COMMENT_FRAGMENT = gql`
+  fragment CommentFragment on Comment {
+    id
+    text
+    isLiked
+    person {
+      id
+      nickName
+      firstName
+      lastName
+      photo {
+        uri
+      }
+      campus {
+        id
+        name
+      }
+    }
+  }
+`;
+
 const COMMENT_LIST_FEATURE_FRAGMENT = gql`
   fragment CommentListFeatureFragment on CommentListFeature {
     id
     comments {
-      id
-      text
-      isLiked
-      person {
-        id
-        nickName
-        firstName
-        lastName
-        photo {
-          uri
-        }
-        campus {
-          id
-          name
-        }
-      }
+      ...CommentFragment
     }
   }
 `;
@@ -407,6 +413,7 @@ export {
   ACTION_LIST_FEATURE_FRAGMENT,
   ACTION_BAR_FEATURE_FRAGMENT,
   ADD_COMMENT_FEATURE_FRAGMENT,
+  COMMENT_FRAGMENT,
   COMMENT_LIST_FEATURE_FRAGMENT,
   HERO_LIST_FEATURE_FRAGMENT,
   HORIZONTAL_CARD_LIST_FEATURE_FRAGMENT,
