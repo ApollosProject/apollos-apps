@@ -376,16 +376,23 @@ export default class Feature extends RockApolloDataSource {
   }
 
   async createVerticalPrayerListFeature({ title, subtitle, ...args }) {
-    const { ActionAlgorithm, Auth } = this.context.dataSources;
+    const { ActionAlgorithm, Auth, Person } = this.context.dataSources;
     const { id } = await Auth.getCurrentPerson();
+
+    // maps the person id, which right now is always from rock
+    // into the correct person id. Postgres if using Postgres, and Rock if using rock.
+    const { id: personId } = await Person.getFromId(id, null, {
+      originType: 'rock',
+    });
+
     const prayers = () =>
       ActionAlgorithm.runAlgorithms({
         algorithms: ['DAILY_PRAYER'],
-        args: { personId: id, ...args },
+        args: { personId, ...args },
       });
     return {
       id: this.createFeatureId({
-        args: { personId: id, title, subtitle },
+        args: { personId, title, subtitle },
       }),
       prayers,
       title,
