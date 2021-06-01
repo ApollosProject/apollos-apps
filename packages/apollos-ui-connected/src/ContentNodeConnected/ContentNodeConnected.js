@@ -57,7 +57,7 @@ const ContentNodeConnected = ({
       variables={{ nodeId }}
       fetchPolicy={'cache-and-network'}
     >
-      {({ data: { node }, loading, error }) => {
+      {({ data: { node } = {}, loading, error }) => {
         if (!node?.htmlContent && error) return <ErrorCard error={error} />;
 
         const coverImageSources = node?.coverImage?.sources || [];
