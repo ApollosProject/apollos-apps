@@ -20,7 +20,19 @@ const ComponentPropType = PropTypes.oneOfType([
   PropTypes.object, // type check for React fragments
 ]);
 
+const DefaultHeader = ({ children, isLoading }) => (
+  <H2 padded isLoading={isLoading}>
+    {children}
+  </H2>
+);
+
+DefaultHeader.propTypes = {
+  children: ComponentPropType,
+  isLoading: PropTypes.bool,
+};
+
 const ContentNodeConnected = ({
+  HeaderComponent,
   HtmlComponent,
   nodeId,
   onPressAnchor,
@@ -53,9 +65,9 @@ const ContentNodeConnected = ({
 
             {/* fixes text/navigation spacing by adding vertical padding if we dont have an image */}
             <PaddedView vertical={!coverImageSources.length}>
-              <H2 padded isLoading={!title && loading}>
+              <HeaderComponent padded isLoading={!title && loading}>
                 {title}
-              </H2>
+              </HeaderComponent>
               <HtmlComponent
                 isLoading={!htmlContent && loading}
                 onPressAnchor={onPressAnchor}
@@ -72,12 +84,14 @@ const ContentNodeConnected = ({
 
 ContentNodeConnected.propTypes = {
   nodeId: PropTypes.string.isRequired,
+  HeaderComponent: ComponentPropType,
   HtmlComponent: ComponentPropType,
   ImageWrapperComponent: ComponentPropType,
   onPressAnchor: PropTypes.func,
 };
 
 ContentNodeConnected.defaultProps = {
+  HeaderComponent: DefaultHeader,
   HtmlComponent: HTMLView,
   ImageWrapperComponent: View,
   onPressAnchor: safeOpenUrl,
