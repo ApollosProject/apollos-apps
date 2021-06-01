@@ -8,4 +8,5 @@ export default gql`
     }
   }
   ${ApollosConfig.FRAGMENTS.COMMENT_LIST_FEATURE_FRAGMENT}
+  ${ApollosConfig.FRAGMENTS.COMMENT_FRAGMENT}
 `;
