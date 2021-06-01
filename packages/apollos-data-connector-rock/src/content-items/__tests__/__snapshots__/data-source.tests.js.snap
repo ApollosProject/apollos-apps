@@ -857,6 +857,52 @@ Array [
 ]
 `;
 
+exports[`ContentItemsModel returns comment features when a contentItem has a parent with a Comments field set to true 1`] = `
+Array [
+  Object {
+    "__typename": "AddCommentFeature",
+    "addPrompt": "What stands out to you?",
+    "id": "AddCommentFeature:123",
+    "initialPrompt": "Write Something...",
+  },
+  Object {
+    "__typename": "CommentListFeature",
+    "comments": Array [],
+    "id": "CommentListFeature:123",
+  },
+]
+`;
+
+exports[`ContentItemsModel returns comment features when a contentItem has a parent with a Comments field set to true 2`] = `
+Array [
+  Array [
+    Object {
+      "flagLimit": 0,
+      "nodeId": "ContentItem:123Test",
+      "nodeType": "UniversalContentItem",
+    },
+  ],
+]
+`;
+
+exports[`ContentItemsModel returns comment features when a contentItem has a parent with a Comments field set to true 3`] = `
+Array [
+  Array [
+    Object {
+      "addPrompt": "What stands out to you?",
+      "initialPrompt": "Write Something...",
+      "nodeId": "ContentItem:123Test",
+      "nodeType": "UniversalContentItem",
+      "relatedNode": Object {
+        "attributeValues": Object {},
+        "attributes": Object {},
+        "id": "ContentItem:123Test",
+      },
+    },
+  ],
+]
+`;
+
 exports[`ContentItemsModel returns features when a contentItem has a Features field 1`] = `
 Array [
   Object {

@@ -36,6 +36,8 @@ export FeaturesFeedConnected, {
 } from './FeaturesFeedConnected';
 export {
   FeatureFeedTabConnected,
+  CampusTabComponent,
+  DefaultTabComponent,
   createFeatureFeedTab,
 } from './FeaturesFeedTabConnected';
 export FollowListConnected, {
