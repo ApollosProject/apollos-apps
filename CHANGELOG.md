@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.18.1](https://github.com/ApollosProject/apollos-apps/compare/v2.18.0...v2.18.1) (2021-06-01)
+
+
+### Bug Fixes
+
+* Bug causing new comments to show up only after a refresh ([#1968](https://github.com/ApollosProject/apollos-apps/issues/1968)) ([6bf4d29](https://github.com/ApollosProject/apollos-apps/commit/6bf4d29c6de6a8dd78386f15241b4402ed4274be))
+* VerticalPrayerList not working when using Postgres ([#1970](https://github.com/ApollosProject/apollos-apps/issues/1970)) ([02e82d2](https://github.com/ApollosProject/apollos-apps/commit/02e82d2997360c2dd23dae4b3a37c8dcb544140a))
+
+
+
+## [2.18.0](https://github.com/ApollosProject/apollos-apps/compare/v2.17.0...v2.18.0) (2021-05-27)
+
+
+### Features
+
+* Add support for feeds using campusIds ([#1964](https://github.com/ApollosProject/apollos-apps/issues/1964)) ([136d254](https://github.com/ApollosProject/apollos-apps/commit/136d25497683c68295c0c447b7ad0e4b23422a41))
+* get comment feature from parents ([#1960](https://github.com/ApollosProject/apollos-apps/issues/1960)) ([5edd840](https://github.com/ApollosProject/apollos-apps/commit/5edd840786180956124f75903daf000da9d82ce1))
+
+
+
+## [2.17.0](https://github.com/ApollosProject/apollos-apps/compare/v2.16.0...v2.17.0) (2021-05-24)
+
+
+### Features
+
+* Initial Notifications Model ([#1938](https://github.com/ApollosProject/apollos-apps/issues/1938)) ([e35385d](https://github.com/ApollosProject/apollos-apps/commit/e35385dc294d20301dfc7ed3ab3d8f0f6bf6ee39))
+
+
+### Bug Fixes
+
+* Invalid type when subtracting default date in datepicker ([#1957](https://github.com/ApollosProject/apollos-apps/issues/1957)) ([120dcc7](https://github.com/ApollosProject/apollos-apps/commit/120dcc7922b95442ab5416fe366fadf84526b64f))
+
+
+
 ## [2.16.0](https://github.com/ApollosProject/apollos-apps/compare/v2.15.0...v2.16.0) (2021-05-20)
 
 
