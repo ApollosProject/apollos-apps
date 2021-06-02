@@ -8,13 +8,7 @@ git clone git@github.com:ApollosProject/apollos-templates.git
 
 cd apollos-templates
 git checkout ${BRANCH:-master}
-tput setaf 1
-echo "Please enter your .env password (typically stored in 1Password)"
-tput sgr0
-
-read SECRET
-./scripts/secrets.sh -d $SECRET
-mv ./apolloschurchapp/.env.shared ./apolloschurchapp/.env
+echo "APP_DATA_URL=https://apollos-church-api.herokuapp.com" >> ./apolloschurchapp/.env
 cd ..
 
 shopt -s dotglob
