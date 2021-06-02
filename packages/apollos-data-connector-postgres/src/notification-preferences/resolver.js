@@ -5,7 +5,7 @@ export default {
       { input: { enabled, pushProviderUserId } },
       { dataSources }
     ) =>
-      dataSources.NotificationPreference.updateNotificationPreferences({
+      dataSources.NotificationPreference.updateUserNotificationPreference({
         notificationProviderId: pushProviderUserId,
         notificationProviderType: 'one_signal', // hard coded for now
         enabled,

@@ -1,6 +1,7 @@
 import { sequelize, sync } from '../../postgres/index';
 import { createModel, setupModel } from '../model';
 import { createModel as createPeopleModel } from '../../people/model';
+import PersonDataSource from '../../people/dataSource';
 import NotificationPreferencesDataSource from '../dataSource';
 
 let person1;
@@ -28,7 +29,7 @@ describe('Apollos Postgres Notification Preferences DataSource', () => {
     const notificationPreferencesDataSource = new NotificationPreferencesDataSource();
     notificationPreferencesDataSource.initialize({ context });
 
-    const preference = await notificationPreferencesDataSource.updateNotificationPreferences(
+    const preference = await notificationPreferencesDataSource.updateNotificationPreference(
       {
         personId: person1.id,
         notificationProviderId: '123-123-123',
@@ -54,7 +55,7 @@ describe('Apollos Postgres Notification Preferences DataSource', () => {
 
     const {
       id,
-    } = await notificationPreferencesDataSource.updateNotificationPreferences({
+    } = await notificationPreferencesDataSource.updateNotificationPreference({
       personId: person1.id,
       notificationProviderId: '123-123-123',
       notificationProviderType: 'onesignal',
@@ -63,7 +64,7 @@ describe('Apollos Postgres Notification Preferences DataSource', () => {
     const {
       id: newId,
       enabled,
-    } = await notificationPreferencesDataSource.updateNotificationPreferences({
+    } = await notificationPreferencesDataSource.updateNotificationPreference({
       personId: person1.id,
       notificationProviderId: '123-123-123',
       notificationProviderType: 'onesignal',
@@ -76,16 +77,21 @@ describe('Apollos Postgres Notification Preferences DataSource', () => {
 
   it('should default to the current person', async () => {
     const notificationPreferencesDataSource = new NotificationPreferencesDataSource();
-    context.dataSources = { Person: { getCurrentPersonId: () => person1.id } };
+    const personDataSource = new PersonDataSource();
     notificationPreferencesDataSource.initialize({ context });
+    personDataSource.initialize({ context });
 
-    const {
-      personId,
-    } = await notificationPreferencesDataSource.updateNotificationPreferences({
+    context.dataSources = { Person: personDataSource };
+    context.dataSources.Person.getCurrentPersonId = () => person1.id;
+    // context.dataSources = { Person: { getCurrentPersonId: , model: sequelize.models.people } };
+
+    await notificationPreferencesDataSource.updateUserNotificationPreference({
       notificationProviderId: '123-123-123',
       notificationProviderType: 'onesignal',
     });
 
-    expect(personId).toEqual(person1.id);
+    const preferences = await notificationPreferencesDataSource.model.findAll({ where: { personId: person1.id } });
+
+    expect(preferences.length).toEqual(1);
   });
 });
