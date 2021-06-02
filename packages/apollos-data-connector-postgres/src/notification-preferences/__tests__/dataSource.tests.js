@@ -90,7 +90,9 @@ describe('Apollos Postgres Notification Preferences DataSource', () => {
       notificationProviderType: 'onesignal',
     });
 
-    const preferences = await notificationPreferencesDataSource.model.findAll({ where: { personId: person1.id } });
+    const preferences = await notificationPreferencesDataSource.model.findAll({
+      where: { personId: person1.id },
+    });
 
     expect(preferences.length).toEqual(1);
   });

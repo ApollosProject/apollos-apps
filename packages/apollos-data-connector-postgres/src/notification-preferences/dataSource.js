@@ -18,7 +18,7 @@ class NotificationPreferencesDataSource extends PostgresDataSource {
     return model;
   }
 
-  async updateUserNotificationPreference(input){
+  async updateUserNotificationPreference(input) {
     const personId = await this.context.dataSources.Person.getCurrentPersonId();
     await this.updateNotificationPreference({ ...input, personId });
     return this.context.dataSources.Person.getFromId(personId);
