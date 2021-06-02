@@ -73,4 +73,19 @@ describe('Apollos Postgres Notification Preferences DataSource', () => {
     expect(newId).toEqual(id);
     expect(enabled).toBe(false);
   });
+
+  it('should default to the current person', async () => {
+    const notificationPreferencesDataSource = new NotificationPreferencesDataSource();
+    context.dataSources = { Person: { getCurrentPersonId: () => person1.id } };
+    notificationPreferencesDataSource.initialize({ context });
+
+    const {
+      personId,
+    } = await notificationPreferencesDataSource.updateNotificationPreferences({
+      notificationProviderId: '123-123-123',
+      notificationProviderType: 'onesignal',
+    });
+
+    expect(personId).toEqual(person1.id);
+  });
 });

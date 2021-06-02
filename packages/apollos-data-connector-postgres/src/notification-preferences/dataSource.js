@@ -4,13 +4,18 @@ class NotificationPreferencesDataSource extends PostgresDataSource {
   modelName = 'notificationPreferences';
 
   async updateNotificationPreferences({
-    personId,
     notificationProviderType,
     notificationProviderId,
     enabled = true,
+    personId = null,
   }) {
+    let finalPersonId = personId;
+    if (!personId) {
+      finalPersonId = await this.context.dataSources.Person.getCurrentPersonId();
+    }
+
     const [model] = await this.model.upsert({
-      personId,
+      personId: finalPersonId,
       notificationProviderType,
       notificationProviderId,
       enabled,
