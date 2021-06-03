@@ -125,7 +125,7 @@ export const authSchema = gql`
     authCookie: String
   }
 
-  type AuthenticatedUser {
+  type AuthenticatedUser @cacheControl(scope: PRIVATE) {
     id: ID!
     profile: Person
     rock: RockPersonDetails
