@@ -21,7 +21,7 @@ const HeaderContainer = styled({
 
 const SearchContainer = styled({ height: '100%' })(View);
 
-function Search(props) {
+function SearchScreenConnected(props) {
   const [searchText, setSearchText] = useState('');
   const [isFocused, setIsFocused] = useState(true);
 
@@ -69,7 +69,7 @@ function Search(props) {
   );
 }
 
-Search.propTypes = {
+SearchScreenConnected.propTypes = {
   navigation: PropTypes.shape({
     getParam: PropTypes.func,
     setParams: PropTypes.func,
@@ -77,4 +77,4 @@ Search.propTypes = {
   }),
 };
 
-export default Search;
+export default SearchScreenConnected;
