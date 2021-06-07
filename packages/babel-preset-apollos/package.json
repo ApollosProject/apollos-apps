@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=12"
   },
-  "version": "2.18.1",
+  "version": "2.19.0",
   "main": "./index.js",
   "scripts": {
     "test": "echo \"No tests here!\""
