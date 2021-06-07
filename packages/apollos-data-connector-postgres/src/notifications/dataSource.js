@@ -20,6 +20,8 @@ class NotificationsDataSource extends PostgresDataSource {
     method = 'one_signal',
     type,
   }) {
+    const { NotificationPreference } = this.context.dataSources;
+
     if (!personId)
       throw new Error('personId is required for sending a notification');
     if (!type || !Object.values(this.NOTIFICATION_TYPES).includes(type))
@@ -28,6 +30,16 @@ class NotificationsDataSource extends PostgresDataSource {
       );
     if (!this.DELIVERY_METHODS[method])
       throw new Error(`${method} is not a valid delivery method`);
+
+    const notificationPreference = await NotificationPreference.model.findOne({
+      where: {
+        personId,
+        notificationProviderType: method,
+        enabled: true,
+      },
+    });
+
+    if (!notificationPreference) return null;
 
     const notification = await this.model.create({
       title,
@@ -40,12 +52,13 @@ class NotificationsDataSource extends PostgresDataSource {
       scheduledAt: Date.now(),
     });
 
-    const { notificationId } = await this.DELIVERY_METHODS[method](
-      notification
-    );
+    const { id } = await this.DELIVERY_METHODS[method]({
+      notification,
+      notificationPreference,
+    });
 
     await notification.update({
-      externalNotificationId: notificationId,
+      externalNotificationId: id,
       sentAt: Date.now(),
     });
 
@@ -53,8 +66,17 @@ class NotificationsDataSource extends PostgresDataSource {
   }
 
   // eslint-disable-next-line
-  async sendWithOneSignal({ title, subtitle, body, data, personId }) {
-    return { id: '123' };
+  async sendWithOneSignal({
+    notification: { title, subtitle, body, data },
+    notificationPreference: { notificationProviderId },
+  }) {
+    return this.context.dataSources.OneSignal.createNotification({
+      content: body,
+      heading: title,
+      subtitle,
+      include_player_ids: [notificationProviderId],
+      ...data,
+    });
   }
 }
 
