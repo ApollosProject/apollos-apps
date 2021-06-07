@@ -47,7 +47,7 @@
     "@apollosproject/config": "*",
     "@apollosproject/ui-analytics": "*",
     "@apollosproject/ui-auth": "*",
-    "@apollosproject/ui-fragments": "*",
+    "@apollosproject/ui-fragments": "^2.18.0",
     "@apollosproject/ui-htmlview": "*",
     "@apollosproject/ui-kit": "*",
     "@apollosproject/ui-media-player": "*",
