@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.19.0](https://github.com/apollosproject/apollos-apps/compare/v2.18.1...v2.19.0) (2021-06-07)
+
+
+### Features
+
+* Notification Preferences Model ([#1954](https://github.com/apollosproject/apollos-apps/issues/1954)) ([1cb2589](https://github.com/apollosproject/apollos-apps/commit/1cb2589d4a67c2c596c96ccffcdd095a08299dd5))
+* Send pushes from Notification Model ([#1972](https://github.com/apollosproject/apollos-apps/issues/1972)) ([58f64b9](https://github.com/apollosproject/apollos-apps/commit/58f64b916ea489fd44ec191fa266fd7bcf6f4fe3))
+
+
+
 ### [2.18.1](https://github.com/apollosproject/apollos-apps/compare/v2.18.0...v2.18.1) (2021-06-01)
 
 **Note:** Version bump only for package @apollosproject/data-connector-postgres
