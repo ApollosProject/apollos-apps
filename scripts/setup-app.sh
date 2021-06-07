@@ -3,24 +3,27 @@ rm -rf ApollosApp
 mkdir -p ApollosApp
 mkdir -p tmp
 
-cd tmp
+cd tmp || exit
 git clone git@github.com:ApollosProject/apollos-templates.git
 
-cd apollos-templates
-git checkout ${BRANCH:-master}
-tput setaf 1
-echo "Please enter your .env password (typically stored in 1Password)"
-tput sgr0
+cd apollos-templates || exit
+git checkout "${BRANCH:-master}"
+echo "Enter password to decrypt secrets (press enter to skip):"
+read -r SECRET
+if [ "$SECRET" = "" ]; then
+    echo "APP_DATA_URL=https://apollos-church-api.herokuapp.com" >>./apolloschurchapp/.env
+else
+    ./scripts/secrets.sh -d "$SECRET"
+    mv ./apolloschurchapp/.env.shared ./apolloschurchapp/.env
+fi
 
-read SECRET
-./scripts/secrets.sh -d $SECRET
-mv ./apolloschurchapp/.env.shared ./apolloschurchapp/.env
-cd ..
+cd .. || exit
 
 shopt -s dotglob
 mv apollos-templates/apolloschurchapp/* ../ApollosApp
+cp apollos-templates/yarn.lock ../ApollosApp
 
-cd ..
+cd .. || exit
 
 node scripts/swap-package-json-to-links.js ./ApollosApp
 

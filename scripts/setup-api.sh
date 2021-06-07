@@ -19,6 +19,7 @@ cd ..
 
 shopt -s dotglob
 mv apollos-templates/apollos-church-api/* ../ApollosApi
+cp apollos-templates/yarn.lock ../ApollosApi
 
 cd ..
 
