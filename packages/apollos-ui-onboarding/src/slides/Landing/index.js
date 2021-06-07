@@ -9,7 +9,6 @@ import {
   H4,
   PaddedView,
   BackgroundView,
-  named,
 } from '@apollosproject/ui-kit';
 
 import { Slide } from '@apollosproject/ui-onboarding';
@@ -77,7 +76,7 @@ LandingScreen.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
-  onPressPrimary: PropTypes.func,
+  onPressPrimary: PropTypes.func.isRequired,
   primaryNavText: PropTypes.string,
 };
 
@@ -89,4 +88,9 @@ LandingScreen.defaultProps = {
   primaryNavText: "Let's go!",
 };
 
-export default named('ui-onboarding.LandingScreen')(LandingScreen);
+export default withTheme(
+  ({ theme, textColor }) => ({
+    textColor: textColor || theme.colors.primary,
+  }),
+  'ui-onboarding.Landing'
+)(LandingScreen);

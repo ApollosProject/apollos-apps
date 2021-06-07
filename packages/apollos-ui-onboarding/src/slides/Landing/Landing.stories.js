@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { GradientOverlayImage } from '@apollosproject/ui-kit';
 
-import LandingScreen from './Landing';
+import LandingScreen from '.';
 
 storiesOf('LandingScreen', module)
   .add('default', () => <LandingScreen />)
