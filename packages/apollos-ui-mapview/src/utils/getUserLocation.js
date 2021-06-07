@@ -1,39 +1,14 @@
 /* eslint-disable react-native/split-platform-components */
-import {
-  Alert,
-  Linking,
-  PermissionsAndroid,
-  ToastAndroid,
-  Platform,
-} from 'react-native';
+import { PermissionsAndroid, ToastAndroid, Platform } from 'react-native';
 
 import Geolocation from 'react-native-geolocation-service';
 
 // Taken almost verbatum from `react-native-geolocation-service`s example app.
 const hasLocationPermissionIOS = async () => {
-  const openSetting = () => {
-    Linking.openSettings().catch(() => {
-      Alert.alert('Unable to open settings');
-    });
-  };
   const status = await Geolocation.requestAuthorization('whenInUse');
 
   if (status === 'granted') {
     return true;
-  }
-
-  if (status === 'denied') {
-    Alert.alert(`Turn on Location Services to determine your location.`, '', [
-      { text: 'Go to Settings', onPress: openSetting },
-      { text: "Don't Use Location", onPress: () => {} },
-    ]);
-  }
-
-  if (status === 'disabled') {
-    Alert.alert(`Turn on Location Services to determine your location.`, '', [
-      { text: 'Go to Settings', onPress: openSetting },
-      { text: "Don't Use Location", onPress: () => {} },
-    ]);
   }
 
   return false;
