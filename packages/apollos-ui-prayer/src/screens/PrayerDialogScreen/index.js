@@ -42,7 +42,10 @@ const PrayerDialogScreen = ({
   ...props
 }) => {
   const animation = useRef(new Animated.Value(visibleOnMount ? 1 : 0)).current;
-  Animated.spring(animation, { toValue: visible }).start();
+  Animated.spring(animation, {
+    toValue: visible,
+    useNativeDriver: true,
+  }).start();
 
   const window = Dimensions.get('window');
 

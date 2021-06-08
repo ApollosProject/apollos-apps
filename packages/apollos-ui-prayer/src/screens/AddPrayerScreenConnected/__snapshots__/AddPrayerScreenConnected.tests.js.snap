@@ -20,44 +20,35 @@ Array [
     }
   />,
   <View
-    onLayout={[Function]}
     style={
-      Array [
-        Object {
-          "flex": 1,
-        },
-        Object {
-          "paddingBottom": 0,
-        },
-      ]
+      Object {
+        "flex": 1,
+      }
     }
   >
-    <RCTScrollView
-      contentContainerStyle={
-        Object {
-          "flexGrow": 1,
-        }
-      }
-      keyboardDismissMode="on-drag"
-      keyboardShouldPersistTaps="never"
+    <View
+      onLayout={[Function]}
       style={
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
+        Array [
+          Object {
+            "flex": 1,
+          },
+          Object {
+            "paddingBottom": 0,
+          },
+        ]
       }
     >
-      <View>
-        <View
-          style={
-            Object {
-              "flex": 1,
-            }
+      <RCTScrollView
+        contentContainerStyle={
+          Object {
+            "flexGrow": 1,
           }
-        >
+        }
+        keyboardDismissMode="on-drag"
+        keyboardShouldPersistTaps="never"
+      >
+        <View>
           <View
             style={
               Object {
@@ -423,8 +414,8 @@ Array [
             </View>
           </View>
         </View>
-      </View>
-    </RCTScrollView>
+      </RCTScrollView>
+    </View>
   </View>,
 ]
 `;
@@ -449,44 +440,35 @@ Array [
     }
   />,
   <View
-    onLayout={[Function]}
     style={
-      Array [
-        Object {
-          "flex": 1,
-        },
-        Object {
-          "paddingBottom": 0,
-        },
-      ]
+      Object {
+        "flex": 1,
+      }
     }
   >
-    <RCTScrollView
-      contentContainerStyle={
-        Object {
-          "flexGrow": 1,
-        }
-      }
-      keyboardDismissMode="on-drag"
-      keyboardShouldPersistTaps="never"
+    <View
+      onLayout={[Function]}
       style={
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
+        Array [
+          Object {
+            "flex": 1,
+          },
+          Object {
+            "paddingBottom": 0,
+          },
+        ]
       }
     >
-      <View>
-        <View
-          style={
-            Object {
-              "flex": 1,
-            }
+      <RCTScrollView
+        contentContainerStyle={
+          Object {
+            "flexGrow": 1,
           }
-        >
+        }
+        keyboardDismissMode="on-drag"
+        keyboardShouldPersistTaps="never"
+      >
+        <View>
           <View
             style={
               Object {
@@ -852,8 +834,8 @@ Array [
             </View>
           </View>
         </View>
-      </View>
-    </RCTScrollView>
+      </RCTScrollView>
+    </View>
   </View>,
   <View
     style={
@@ -929,44 +911,35 @@ Array [
         }
       />
       <View
-        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "flex": 1,
-            },
-            Object {
-              "paddingBottom": 0,
-            },
-          ]
+          Object {
+            "flex": 1,
+          }
         }
       >
-        <RCTScrollView
-          contentContainerStyle={
-            Object {
-              "flexGrow": 1,
-            }
-          }
-          keyboardDismissMode="on-drag"
-          keyboardShouldPersistTaps="never"
+        <View
+          onLayout={[Function]}
           style={
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            }
+            Array [
+              Object {
+                "flex": 1,
+              },
+              Object {
+                "paddingBottom": 0,
+              },
+            ]
           }
         >
-          <View>
-            <View
-              style={
-                Object {
-                  "flex": 1,
-                }
+          <RCTScrollView
+            contentContainerStyle={
+              Object {
+                "flexGrow": 1,
               }
-            >
+            }
+            keyboardDismissMode="on-drag"
+            keyboardShouldPersistTaps="never"
+          >
+            <View>
               <View
                 style={
                   Object {
@@ -1152,8 +1125,8 @@ Array [
                 </View>
               </View>
             </View>
-          </View>
-        </RCTScrollView>
+          </RCTScrollView>
+        </View>
       </View>
     </BVLinearGradient>
   </View>,
@@ -1180,44 +1153,35 @@ Array [
     }
   />,
   <View
-    onLayout={[Function]}
     style={
-      Array [
-        Object {
-          "flex": 1,
-        },
-        Object {
-          "paddingBottom": 0,
-        },
-      ]
+      Object {
+        "flex": 1,
+      }
     }
   >
-    <RCTScrollView
-      contentContainerStyle={
-        Object {
-          "flexGrow": 1,
-        }
-      }
-      keyboardDismissMode="on-drag"
-      keyboardShouldPersistTaps="never"
+    <View
+      onLayout={[Function]}
       style={
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
+        Array [
+          Object {
+            "flex": 1,
+          },
+          Object {
+            "paddingBottom": 0,
+          },
+        ]
       }
     >
-      <View>
-        <View
-          style={
-            Object {
-              "flex": 1,
-            }
+      <RCTScrollView
+        contentContainerStyle={
+          Object {
+            "flexGrow": 1,
           }
-        >
+        }
+        keyboardDismissMode="on-drag"
+        keyboardShouldPersistTaps="never"
+      >
+        <View>
           <View
             style={
               Object {
@@ -1583,8 +1547,8 @@ Array [
             </View>
           </View>
         </View>
-      </View>
-    </RCTScrollView>
+      </RCTScrollView>
+    </View>
   </View>,
 ]
 `;
@@ -1609,44 +1573,35 @@ Array [
     }
   />,
   <View
-    onLayout={[Function]}
     style={
-      Array [
-        Object {
-          "flex": 1,
-        },
-        Object {
-          "paddingBottom": 0,
-        },
-      ]
+      Object {
+        "flex": 1,
+      }
     }
   >
-    <RCTScrollView
-      contentContainerStyle={
-        Object {
-          "flexGrow": 1,
-        }
-      }
-      keyboardDismissMode="on-drag"
-      keyboardShouldPersistTaps="never"
+    <View
+      onLayout={[Function]}
       style={
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
+        Array [
+          Object {
+            "flex": 1,
+          },
+          Object {
+            "paddingBottom": 0,
+          },
+        ]
       }
     >
-      <View>
-        <View
-          style={
-            Object {
-              "flex": 1,
-            }
+      <RCTScrollView
+        contentContainerStyle={
+          Object {
+            "flexGrow": 1,
           }
-        >
+        }
+        keyboardDismissMode="on-drag"
+        keyboardShouldPersistTaps="never"
+      >
+        <View>
           <View
             style={
               Object {
@@ -1701,8 +1656,8 @@ Array [
             </View>
           </View>
         </View>
-      </View>
-    </RCTScrollView>
+      </RCTScrollView>
+    </View>
   </View>,
 ]
 `;
@@ -1727,44 +1682,35 @@ Array [
     }
   />,
   <View
-    onLayout={[Function]}
     style={
-      Array [
-        Object {
-          "flex": 1,
-        },
-        Object {
-          "paddingBottom": 0,
-        },
-      ]
+      Object {
+        "flex": 1,
+      }
     }
   >
-    <RCTScrollView
-      contentContainerStyle={
-        Object {
-          "flexGrow": 1,
-        }
-      }
-      keyboardDismissMode="on-drag"
-      keyboardShouldPersistTaps="never"
+    <View
+      onLayout={[Function]}
       style={
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
+        Array [
+          Object {
+            "flex": 1,
+          },
+          Object {
+            "paddingBottom": 0,
+          },
+        ]
       }
     >
-      <View>
-        <View
-          style={
-            Object {
-              "flex": 1,
-            }
+      <RCTScrollView
+        contentContainerStyle={
+          Object {
+            "flexGrow": 1,
           }
-        >
+        }
+        keyboardDismissMode="on-drag"
+        keyboardShouldPersistTaps="never"
+      >
+        <View>
           <View
             style={
               Object {
@@ -2130,8 +2076,8 @@ Array [
             </View>
           </View>
         </View>
-      </View>
-    </RCTScrollView>
+      </RCTScrollView>
+    </View>
   </View>,
 ]
 `;
@@ -2156,44 +2102,35 @@ Array [
     }
   />,
   <View
-    onLayout={[Function]}
     style={
-      Array [
-        Object {
-          "flex": 1,
-        },
-        Object {
-          "paddingBottom": 0,
-        },
-      ]
+      Object {
+        "flex": 1,
+      }
     }
   >
-    <RCTScrollView
-      contentContainerStyle={
-        Object {
-          "flexGrow": 1,
-        }
-      }
-      keyboardDismissMode="on-drag"
-      keyboardShouldPersistTaps="never"
+    <View
+      onLayout={[Function]}
       style={
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
+        Array [
+          Object {
+            "flex": 1,
+          },
+          Object {
+            "paddingBottom": 0,
+          },
+        ]
       }
     >
-      <View>
-        <View
-          style={
-            Object {
-              "flex": 1,
-            }
+      <RCTScrollView
+        contentContainerStyle={
+          Object {
+            "flexGrow": 1,
           }
-        >
+        }
+        keyboardDismissMode="on-drag"
+        keyboardShouldPersistTaps="never"
+      >
+        <View>
           <View
             style={
               Object {
@@ -2559,8 +2496,8 @@ Array [
             </View>
           </View>
         </View>
-      </View>
-    </RCTScrollView>
+      </RCTScrollView>
+    </View>
   </View>,
 ]
 `;
@@ -2585,44 +2522,35 @@ Array [
     }
   />,
   <View
-    onLayout={[Function]}
     style={
-      Array [
-        Object {
-          "flex": 1,
-        },
-        Object {
-          "paddingBottom": 0,
-        },
-      ]
+      Object {
+        "flex": 1,
+      }
     }
   >
-    <RCTScrollView
-      contentContainerStyle={
-        Object {
-          "flexGrow": 1,
-        }
-      }
-      keyboardDismissMode="on-drag"
-      keyboardShouldPersistTaps="never"
+    <View
+      onLayout={[Function]}
       style={
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-        }
+        Array [
+          Object {
+            "flex": 1,
+          },
+          Object {
+            "paddingBottom": 0,
+          },
+        ]
       }
     >
-      <View>
-        <View
-          style={
-            Object {
-              "flex": 1,
-            }
+      <RCTScrollView
+        contentContainerStyle={
+          Object {
+            "flexGrow": 1,
           }
-        >
+        }
+        keyboardDismissMode="on-drag"
+        keyboardShouldPersistTaps="never"
+      >
+        <View>
           <View
             style={
               Object {
@@ -2988,8 +2916,8 @@ Array [
             </View>
           </View>
         </View>
-      </View>
-    </RCTScrollView>
+      </RCTScrollView>
+    </View>
   </View>,
 ]
 `;
