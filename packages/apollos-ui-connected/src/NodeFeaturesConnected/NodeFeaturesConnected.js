@@ -8,6 +8,7 @@ import FeaturesFeedConnected from '../FeaturesFeedConnected';
 import GET_NODE_FEATURES from './getNodeFeatures';
 
 const NodeFeaturesConnected = ({ Component, nodeId, ...props }) => {
+  console.warn(nodeId);
   if (!nodeId) return null;
 
   return (

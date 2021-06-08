@@ -1,4 +1,5 @@
 /* eslint-disable class-methods-use-this, no-unused-expressions, no-param-reassign */
+import OneSignal from 'react-native-onesignal';
 import ApollosConfig from '@apollosproject/config';
 import { get, fromPairs } from 'lodash';
 import Bugsnag from '@bugsnag/js';

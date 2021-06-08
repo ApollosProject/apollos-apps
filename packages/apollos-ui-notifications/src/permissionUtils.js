@@ -8,10 +8,14 @@ import {
 } from 'react-native-permissions';
 
 const getPushPermissions = async () =>
-  (await OneSignal.getDeviceState()).hasNotificationPermission;
+  console.warn(
+    'getPushPermissions is depricated. Use OneSignal.getDeviceState() '
+  ) || (await OneSignal.getDeviceState()).hasNotificationPermission;
 
 const getHasPrompted = async () =>
-  (await OneSignal.getDeviceState()).notificationPermissionStatus !== 0;
+  console.warn(
+    'getHasPrompted is depricated. Use OneSignal.getDeviceState() '
+  ) || (await OneSignal.getDeviceState()).notificationPermissionStatus !== 0;
 
 const GET_PUSH_ID = gql`
   query getPushId {
