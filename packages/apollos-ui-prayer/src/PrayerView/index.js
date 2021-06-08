@@ -62,13 +62,12 @@ const PrayerView = ({
   primaryActionText,
   secondaryActionText,
 }) => (
-  <FlexedKeyboardAvoidingView behavior={'padding'}>
-    <FlexedScrollView
-      style={StyleSheet.absoluteFill}
-      keyboardShouldPersistTaps={'never'}
-      keyboardDismissMode={'on-drag'}
-    >
-      <FlexedSafeAreaView>
+  <FlexedSafeAreaView>
+    <FlexedKeyboardAvoidingView behavior={'padding'}>
+      <FlexedScrollView
+        keyboardShouldPersistTaps={'never'}
+        keyboardDismissMode={'on-drag'}
+      >
         <Content>{children}</Content>
         <PaddedView>
           {onPressSecondary ? (
@@ -84,9 +83,9 @@ const PrayerView = ({
             disabled={!onPressPrimary}
           />
         </PaddedView>
-      </FlexedSafeAreaView>
-    </FlexedScrollView>
-  </FlexedKeyboardAvoidingView>
+      </FlexedScrollView>
+    </FlexedKeyboardAvoidingView>
+  </FlexedSafeAreaView>
 );
 
 PrayerView.propTypes = {
