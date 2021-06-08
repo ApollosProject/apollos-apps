@@ -66,7 +66,7 @@ const ConnectScreenConnected = (props) => {
               followListButtonTitle={'Find People to Follow'}
             />
 
-            <HorizontalLikedContentFeedConnected />
+            <HorizontalLikedContentFeedConnected refetchRef={refetchRef} />
             {ActionTable && <ActionTable />}
             {children}
           </ScrollView>
