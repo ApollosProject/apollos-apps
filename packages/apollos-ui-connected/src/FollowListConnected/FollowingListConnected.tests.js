@@ -27,7 +27,7 @@ const mock = {
             __typename: 'Follow',
             id: '02103',
             state: 'REQUESTED',
-          }
+          },
         },
       ],
     },
