@@ -166,7 +166,7 @@ export default class Person extends PostgresDataSource {
         {
           model: this.sequelize.models.follows,
           as: 'followingRequests',
-          where: { requestPersonId: currentPersonId }
+          where: { requestPersonId: currentPersonId },
         },
       ],
     });
