@@ -61,11 +61,7 @@ function Onboarding() {
               }}
             />
             <AskNotificationsConnected onPressPrimary={swipeForward} />
-            <FollowConnected
-              onPressPrimary={swipeForward}
-              primaryNavText={'Finish'}
-              version={2}
-            />
+            <FollowConnected onPressPrimary={swipeForward} version={2} />
           </>
         )}
       </OnboardingSwiper>
