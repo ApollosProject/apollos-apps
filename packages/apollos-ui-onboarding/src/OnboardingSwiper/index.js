@@ -31,11 +31,11 @@ const PaginationDotActive = styled(
 )(View);
 
 class OnboardingSwiper extends Component {
-  static navigationOptions = () => ({
-    title: 'Onboarding',
-    header: null,
-    gesturesEnabled: false,
-  });
+  // static navigationOptions = () => ({
+  // title: 'Onboarding',
+  // header: null,
+  // gesturesEnabled: false,
+  // });
 
   static propTypes = {
     children: PropTypes.func.isRequired,
