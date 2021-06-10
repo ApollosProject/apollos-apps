@@ -24,6 +24,8 @@ const getPushPermissions = async () => {
       )
     );
   } catch {}
+
+  return null;
 };
 
 const getHasPrompted = async () => {
@@ -43,6 +45,8 @@ const getHasPrompted = async () => {
       )
     );
   } catch {}
+
+  return null;
 };
 
 const GET_PUSH_ID = gql`

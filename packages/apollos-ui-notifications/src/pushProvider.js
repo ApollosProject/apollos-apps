@@ -1,4 +1,3 @@
-import OneSignal from 'react-native-onesignal';
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { getHasPrompted, getPushPermissions } from './permissionUtils';
