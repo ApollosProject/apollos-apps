@@ -14,7 +14,7 @@ export {
   FollowConnected,
 } from './slides';
 
-export { default as SlideContent } from './Slide';
+export { default as Slide, SlideContent } from './Slide';
 
 export {
   WITH_USER_ID,

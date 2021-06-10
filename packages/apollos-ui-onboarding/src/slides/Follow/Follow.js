@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
 import { FollowListConnected } from '@apollosproject/ui-connected';
+import { named } from '@apollosproject/ui-kit';
 import Slide, { SlideContent } from '../../Slide';
 
 const Follow = memo(
@@ -41,4 +42,4 @@ Follow.propTypes = {
   ]),
 };
 
-export default Follow;
+export default named('ui-onboarding.Follow')(Follow);

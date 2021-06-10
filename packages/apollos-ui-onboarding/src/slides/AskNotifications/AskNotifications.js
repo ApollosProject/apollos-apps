@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import { styled, PaddedView, Button } from '@apollosproject/ui-kit';
+import { styled, PaddedView, Button, named } from '@apollosproject/ui-kit';
 
 import Slide, { SlideContent } from '../../Slide';
 
@@ -69,4 +69,4 @@ AskNotifications.defaultProps = {
   buttonDisabled: false,
 };
 
-export default AskNotifications;
+export default named('ui-onboarding.AskNotifications')(AskNotifications);
