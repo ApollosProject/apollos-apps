@@ -60,7 +60,7 @@ class NotificationsInit extends Component {
 
   async componentDidMount() {
     // One Signal 4.x
-    if (OneSignal.setAppId) {
+    if (OneSignal.setAppId && this.props.oneSignalKey) {
       OneSignal.setAppId(this.props.oneSignalKey);
       OneSignal.setNotificationWillShowInForegroundHandler(this.onReceived);
       OneSignal.setNotificationOpenedHandler(this.onOpened);
