@@ -1,3 +1,5 @@
+/* eslint-disable no-empty */
+
 import OneSignal from 'react-native-onesignal';
 import gql from 'graphql-tag';
 import {
@@ -7,15 +9,41 @@ import {
   RESULTS,
 } from 'react-native-permissions';
 
-const getPushPermissions = async () =>
-  console.warn(
-    'getPushPermissions is depricated. Use OneSignal.getDeviceState() '
-  ) || (await OneSignal.getDeviceState()).hasNotificationPermission;
+const getPushPermissions = async () => {
+  // One Signal 4
+  try {
+    return (await OneSignal.getDeviceState()).hasNotificationPermission;
+  } catch (e) {
+    console.warn(e);
+  }
 
-const getHasPrompted = async () =>
-  console.warn(
-    'getHasPrompted is depricated. Use OneSignal.getDeviceState() '
-  ) || (await OneSignal.getDeviceState()).notificationPermissionStatus !== 0;
+  try {
+    return new Promise((resolve) =>
+      OneSignal.getPermissionSubscriptionState((status) =>
+        resolve(!!status.notificationsEnabled)
+      )
+    );
+  } catch {}
+};
+
+const getHasPrompted = async () => {
+  // One Signal 4
+  try {
+    return (
+      (await OneSignal.getDeviceState()).notificationPermissionStatus !== 0
+    );
+  } catch (e) {
+    console.warn(e);
+  }
+
+  try {
+    return new Promise((resolve) =>
+      OneSignal.getPermissionSubscriptionState((status) =>
+        resolve(status.hasPrompted)
+      )
+    );
+  } catch {}
+};
 
 const GET_PUSH_ID = gql`
   query getPushId {

@@ -1,6 +1,7 @@
 import OneSignal from 'react-native-onesignal';
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { getHasPrompted, getPushPermissions } from './permissionUtils';
 
 export const PushContext = React.createContext({
   hasPrompted: true,
@@ -28,9 +29,9 @@ class Provider extends PureComponent {
 
   async componentDidMount() {
     try {
-      const deviceState = await OneSignal.getDeviceState();
-      const permissionRes = deviceState.hasNotificationPermission;
-      const promptRes = deviceState.notificationPermissionStatus !== 0;
+      const permissionRes = await getPushPermissions();
+      const promptRes = await getHasPrompted();
+
       this.setState({
         hasPrompted: promptRes,
         hasPushPermission: permissionRes,
@@ -49,9 +50,8 @@ class Provider extends PureComponent {
         loading: true,
       },
       async () => {
-        const deviceState = await OneSignal.getDeviceState();
-        const permissionRes = deviceState.hasNotificationPermission;
-        const promptRes = deviceState.notificationPermissionStatus !== 0;
+        const permissionRes = await getPushPermissions();
+        const promptRes = await getHasPrompted();
         this.setState({
           hasPrompted: promptRes,
           hasPushPermission: permissionRes,

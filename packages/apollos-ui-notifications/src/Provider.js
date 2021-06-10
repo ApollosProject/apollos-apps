@@ -1,3 +1,5 @@
+/* eslint-disable no-empty */
+
 import URL from 'url';
 import querystring from 'querystring';
 import React, { Component } from 'react';
@@ -57,12 +59,31 @@ class NotificationsInit extends Component {
   }
 
   async componentDidMount() {
-    OneSignal.setAppId(this.props.oneSignalKey);
-    OneSignal.setNotificationWillShowInForegroundHandler(this.onReceived);
-    OneSignal.setNotificationOpenedHandler(this.onOpened);
+    // Default. One Signal 4.x
+    try {
+      OneSignal.setAppId(this.props.oneSignalKey);
+      OneSignal.setNotificationWillShowInForegroundHandler(this.onReceived);
+      OneSignal.setNotificationOpenedHandler(this.onOpened);
 
-    const deviceState = await OneSignal.getDeviceState();
-    this.onIds(deviceState);
+      const deviceState = await OneSignal.getDeviceState();
+      this.onIds(deviceState);
+    } catch (e) {
+      console.warn(
+        'Core has been updated to use OneSignal 4.x.x. It is recommended that you upgrade as well to access the latest functionality.'
+      );
+      console.warn(e);
+    }
+
+    // backup, for OneSignal 3.x
+    try {
+      OneSignal.init(this.props.oneSignalKey, {
+        kOSSettingsKeyAutoPrompt: false,
+      });
+      OneSignal.addEventListener('received', this.onReceived);
+      OneSignal.addEventListener('opened', this.onOpened);
+      OneSignal.addEventListener('ids', this.onIds);
+      OneSignal.setSubscription(true);
+    } catch {}
 
     Linking.getInitialURL().then((url) => {
       this.navigate(url);
@@ -72,7 +93,14 @@ class NotificationsInit extends Component {
 
   componentWillUnmount() {
     Linking.removeEventListener('url');
-    OneSignal.clearHandlers();
+    try {
+      OneSignal.removeEventListener('received');
+      OneSignal.removeEventListener('opened');
+      OneSignal.removeEventListener('ids');
+    } catch {}
+    try {
+      OneSignal.clearHandlers();
+    } catch {}
   }
 
   navigate = (rawUrl) => {
