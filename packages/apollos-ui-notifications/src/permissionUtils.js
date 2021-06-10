@@ -11,42 +11,30 @@ import {
 
 const getPushPermissions = async () => {
   // One Signal 4
-  try {
+  if (OneSignal.getDeviceState) {
     return (await OneSignal.getDeviceState()).hasNotificationPermission;
-  } catch (e) {
-    console.warn(e);
   }
-
-  try {
-    return new Promise((resolve) =>
-      OneSignal.getPermissionSubscriptionState((status) =>
-        resolve(!!status.notificationsEnabled)
-      )
-    );
-  } catch {}
-
-  return null;
+  // One Signal 3
+  return new Promise((resolve) =>
+    OneSignal.getPermissionSubscriptionState((status) =>
+      resolve(!!status.notificationsEnabled)
+    )
+  );
 };
 
 const getHasPrompted = async () => {
   // One Signal 4
-  try {
+  if (OneSignal.getDeviceState) {
     return (
       (await OneSignal.getDeviceState()).notificationPermissionStatus !== 0
     );
-  } catch (e) {
-    console.warn(e);
   }
-
-  try {
-    return new Promise((resolve) =>
-      OneSignal.getPermissionSubscriptionState((status) =>
-        resolve(status.hasPrompted)
-      )
-    );
-  } catch {}
-
-  return null;
+  // One Signal 3
+  return new Promise((resolve) =>
+    OneSignal.getPermissionSubscriptionState((status) =>
+      resolve(status.hasPrompted)
+    )
+  );
 };
 
 const GET_PUSH_ID = gql`

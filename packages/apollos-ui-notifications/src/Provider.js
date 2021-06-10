@@ -59,23 +59,16 @@ class NotificationsInit extends Component {
   }
 
   async componentDidMount() {
-    // Default. One Signal 4.x
-    try {
+    // One Signal 4.x
+    if (OneSignal.setAppId) {
       OneSignal.setAppId(this.props.oneSignalKey);
       OneSignal.setNotificationWillShowInForegroundHandler(this.onReceived);
       OneSignal.setNotificationOpenedHandler(this.onOpened);
 
       const deviceState = await OneSignal.getDeviceState();
       this.onIds(deviceState);
-    } catch (e) {
-      console.warn(
-        'Core has been updated to use OneSignal 4.x.x. It is recommended that you upgrade as well to access the latest functionality.'
-      );
-      console.warn(e);
-    }
-
-    // backup, for OneSignal 3.x
-    try {
+    } else {
+      // backup, for OneSignal 3.x
       OneSignal.init(this.props.oneSignalKey, {
         kOSSettingsKeyAutoPrompt: false,
       });
@@ -83,7 +76,7 @@ class NotificationsInit extends Component {
       OneSignal.addEventListener('opened', this.onOpened);
       OneSignal.addEventListener('ids', this.onIds);
       OneSignal.setSubscription(true);
-    } catch {}
+    }
 
     Linking.getInitialURL().then((url) => {
       this.navigate(url);
