@@ -1,60 +1,54 @@
-import React, { PureComponent } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Query } from '@apollo/client/react/components';
+import { useQuery } from '@apollo/client';
+import { useNavigation } from '@react-navigation/native';
 import { AnalyticsConsumer } from '@apollosproject/ui-analytics';
 import { hasLocationPermission } from '@apollosproject/ui-mapview';
 import GET_USER_CAMPUS from './getUserCampus';
 import LocationFinder from './LocationFinder';
 
-class LocationFinderConnected extends PureComponent {
-  state = { locationPermission: false };
+const LocationFinderConnected = ({ Component, onPressPrimary, ...props }) => {
+  const navigation = useNavigation();
+  const [locationPermission, setLocationPermission] = useState(false);
 
-  async checkPermission() {
-    const locationPermission = await hasLocationPermission();
-    this.setState({ locationPermission });
-  }
+  const checkPermission = async () => {
+    const permission = await hasLocationPermission();
+    setLocationPermission(permission);
+  };
 
-  render() {
-    return (
-      <Query query={GET_USER_CAMPUS} fetchPolicy="cache-and-network">
-        {({
-          data: { currentUser: { profile: { campus } = {} } = {} } = {},
-        }) => {
-          return (
-            <AnalyticsConsumer>
-              {({ track }) => {
-                const { onPressPrimary, ...otherProps } = this.props;
-                const showNextBtn = !!(campus && this.state.locationPermission);
+  const { data } = useQuery(GET_USER_CAMPUS, {
+    fetchPolicy: 'cache-and-network',
+  });
 
-                const { Component: MapViewComponent } = this.props;
+  return (
+    <AnalyticsConsumer>
+      {({ track }) => {
+        const showNextBtn = !!(
+          data?.currentUser?.profile?.campus && locationPermission
+        );
 
-                return (
-                  <MapViewComponent
-                    onPressButton={async () => {
-                      await this.checkPermission();
-                      this.props.onNavigate();
-
-                      track({ eventName: 'LocationFinder Opened MapView' });
-                    }}
-                    // next button
-                    onPressPrimary={showNextBtn ? onPressPrimary : null}
-                    // skip button
-                    onPressSecondary={!showNextBtn ? onPressPrimary : null}
-                    pressPrimaryEventName={'Ask Location Completed'}
-                    pressSecondaryEventName={'Ask Location Skipped'}
-                    buttonText={'Yes, find my local campus'}
-                    campus={campus}
-                    {...otherProps}
-                  />
-                );
-              }}
-            </AnalyticsConsumer>
-          );
-        }}
-      </Query>
-    );
-  }
-}
+        return (
+          <Component
+            onPressButton={async () => {
+              await checkPermission();
+              navigation.navigate('Location');
+              track({ eventName: 'LocationFinder Opened MapView' });
+            }}
+            // next button
+            onPressPrimary={showNextBtn ? onPressPrimary : null}
+            // skip button
+            onPressSecondary={!showNextBtn ? onPressPrimary : null}
+            pressPrimaryEventName={'Ask Location Completed'}
+            pressSecondaryEventName={'Ask Location Skipped'}
+            buttonText={'Yes, find my local campus'}
+            campus={data?.currentUser?.profile?.campus}
+            {...props}
+          />
+        );
+      }}
+    </AnalyticsConsumer>
+  );
+};
 
 LocationFinderConnected.propTypes = {
   Component: PropTypes.oneOfType([
@@ -63,7 +57,6 @@ LocationFinderConnected.propTypes = {
     PropTypes.object, // type check for React fragments
   ]),
   onPressPrimary: PropTypes.func,
-  onNavigate: PropTypes.func.isRequired,
 };
 
 LocationFinderConnected.defaultProps = {

@@ -667,34 +667,11 @@ exports[`the Onboarding component should render Onboarding 1`] = `
                           }
                         >
                           <RCTScrollView
-                            Component={
-                              Object {
-                                "$$typeof": Symbol(react.memo),
-                                "compare": null,
-                                "defaultProps": Object {
-                                  "buttonText": "Yes, find my local campus",
-                                  "description": "We'll use your location to connect you with your nearby campus and community",
-                                  "slideTitle": "Let's select your local campus",
-                                },
-                                "displayName": "LocationFinder",
-                                "propTypes": Object {
-                                  "BackgroundComponent": [Function],
-                                  "buttonText": [Function],
-                                  "campus": [Function],
-                                  "description": [Function],
-                                  "onPressButton": [Function],
-                                  "onPressPrimary": [Function],
-                                  "slideTitle": [Function],
-                                },
-                                "type": [Function],
-                              }
-                            }
                             contentContainerStyle={
                               Object {
                                 "minHeight": "100%",
                               }
                             }
-                            onNavigate={[Function]}
                             overScrollMode="auto"
                             style={
                               Object {

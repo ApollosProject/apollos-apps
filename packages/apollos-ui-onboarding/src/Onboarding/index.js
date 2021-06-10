@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/client';
 import { useRoute, useNavigation } from '@react-navigation/native';
 import {
   styled,
+  named,
   BackgroundView,
   NavigationService,
 } from '@apollosproject/ui-kit';
@@ -16,11 +17,15 @@ import {
 import OnboardingSwiper from '../OnboardingSwiper';
 import { onboardingComplete, WITH_USER_ID } from '../onboardingStatus';
 
+const OnboardingBackgroundView = named(
+  'ui-onboarding.Onboarding.OnboardingBackgroundView'
+)(BackgroundView);
+
 const FullscreenBackgroundView = styled({
   position: 'absolute',
   width: '100%',
   height: '100%',
-})(BackgroundView);
+})(OnboardingBackgroundView);
 
 // Represents the current version of onboarding.
 // Some slides will be "older", they shouldn't be shown to existing users.
@@ -31,7 +36,14 @@ export const ONBOARDING_VERSION = 2;
 function Onboarding() {
   const route = useRoute();
   const navigation = useNavigation();
+
   const userVersion = route?.params?.userVersion || 0;
+  const slides = route?.params?.slides || [
+    FeaturesConnected,
+    LocationFinderConnected,
+    AskNotificationsConnected,
+    FollowConnected,
+  ];
   const { data } = useQuery(WITH_USER_ID, { fetchPolicy: 'network-only' });
   return (
     <>
@@ -53,15 +65,9 @@ function Onboarding() {
       >
         {({ swipeForward }) => (
           <>
-            <FeaturesConnected onPressPrimary={swipeForward} />
-            <LocationFinderConnected
-              onPressPrimary={swipeForward}
-              onNavigate={() => {
-                navigation.navigate('Location');
-              }}
-            />
-            <AskNotificationsConnected onPressPrimary={swipeForward} />
-            <FollowConnected onPressPrimary={swipeForward} version={2} />
+            {slides.map((Slide) => (
+              <Slide key={Slide.displayName} onPressPrimary={swipeForward} />
+            ))}
           </>
         )}
       </OnboardingSwiper>
