@@ -1,3 +1,13 @@
+# if we have more than zero arguments
+if [ $# -ne 0 ]; then
+    # call yarn in ApollosApi and pass in the arguments
+    cd ApollosApi
+    yarn "$@"
+    exit
+fi
+
+yarn
+
 rm -rf ApollosApi
 
 mkdir -p ApollosApi
@@ -26,3 +36,9 @@ cd ..
 node scripts/swap-package-json-to-links.js ./ApollosApi
 
 rm -rf tmp
+
+cd ApollosApi
+
+yarn
+
+yarn start:dev

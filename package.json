@@ -26,8 +26,8 @@
     "generate-docs": "lerna run generate-docs",
     "generate-stories": "lerna run generate-stories",
     "storybook": "yarn && yarn generate-stories && (cd ApollosStorybook && yarn && yarn prestart && yarn ios)",
-    "api": "yarn && (./scripts/setup-api.sh && cd ApollosApi && yarn && yarn start:dev)",
-    "app": "yarn && yarn generate-stories && (./scripts/setup-app.sh && cd ApollosApp && yarn && yarn generate-stories && node ./scripts/get-introspection-data.js && yarn ios)"
+    "api": "./scripts/setup-api.sh",
+    "app": "./scripts/setup-app.sh"
   },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"
