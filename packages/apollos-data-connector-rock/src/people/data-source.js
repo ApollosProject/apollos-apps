@@ -73,9 +73,10 @@ export default class Person extends RockApolloDataSource {
       Gender: 0, // required by Rock. Listed first so it can be overridden.
       IsSystem: false, // required by rock
     });
-    return this.patch(`/People/${id}`, {
+    await this.patch(`/People/${id}`, {
       ...rockUpdateFields,
     });
+    return id;
   };
 
   mapGender = ({ gender }) => {
