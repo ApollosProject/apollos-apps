@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
+import { named } from '@apollosproject/ui-kit';
 
 import Slide, { SlideContent } from '../../Slide';
 
@@ -39,4 +40,4 @@ Features.defaultProps = {
     "We'd like to help personalize your mobile experience so we can help you with every step on your journey.",
 };
 
-export default Features;
+export default named('ui-onboarding.Features')(Features);

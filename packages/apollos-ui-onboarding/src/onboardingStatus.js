@@ -1,5 +1,6 @@
 import AsyncStorage from '@react-native-community/async-storage';
 import gql from 'graphql-tag';
+import { ONBOARDING_VERSION } from './Onboarding';
 
 export const WITH_USER_ID = gql`
   query currentUserId {
@@ -35,7 +36,6 @@ export const safeGetOnboardingStatus = async ({ userId }) => {
 export const checkOnboardingStatusAndNavigate = async ({
   client,
   navigation,
-  latestOnboardingVersion = 1, // represents the newest onboarding version. Helps us avoid showing the user an empty onboarding.
   navigateHome = true, // should we navigate home if we have already onboarded
 }) => {
   const { data } = await client.query({ query: WITH_USER_ID });
@@ -55,7 +55,7 @@ export const checkOnboardingStatusAndNavigate = async ({
   }
 
   // If the user has onboarded before, and they have seen the current version of onboarding.
-  if (onboardingVersion && onboardingVersion >= latestOnboardingVersion) {
+  if (onboardingVersion && onboardingVersion >= ONBOARDING_VERSION) {
     if (navigateHome) {
       navigation.dispatch(
         navigation.resetAction({

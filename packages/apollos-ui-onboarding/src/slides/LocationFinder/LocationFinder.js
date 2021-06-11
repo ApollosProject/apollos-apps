@@ -7,6 +7,7 @@ import {
   styled,
   Button,
   Touchable,
+  named,
 } from '@apollosproject/ui-kit';
 
 import Slide, { SlideContent } from '../../Slide';
@@ -95,4 +96,4 @@ LocationFinder.defaultProps = {
   buttonText: 'Yes, find my local campus',
 };
 
-export default LocationFinder;
+export default named('ui-onboarding.LocationFinder')(LocationFinder);
