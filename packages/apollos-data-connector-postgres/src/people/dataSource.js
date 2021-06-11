@@ -157,4 +157,18 @@ export default class Person extends PostgresDataSource {
     this.context.currentPostgresPerson = person;
     return person.id;
   }
+
+  async getUsersFollowing() {
+    const currentPersonId = await this.getCurrentPersonId();
+
+    return this.model.findAll({
+      include: [
+        {
+          model: this.sequelize.models.follows,
+          as: 'followingRequests',
+          where: { requestPersonId: currentPersonId },
+        },
+      ],
+    });
+  }
 }
