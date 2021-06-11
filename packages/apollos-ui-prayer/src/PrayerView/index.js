@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  KeyboardAvoidingView,
-  ScrollView,
-  View,
-  StyleSheet,
-} from 'react-native';
+import { KeyboardAvoidingView, ScrollView, View } from 'react-native';
 import PropTypes from 'prop-types';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -62,13 +57,12 @@ const PrayerView = ({
   primaryActionText,
   secondaryActionText,
 }) => (
-  <FlexedKeyboardAvoidingView behavior={'padding'}>
-    <FlexedScrollView
-      style={StyleSheet.absoluteFill}
-      keyboardShouldPersistTaps={'never'}
-      keyboardDismissMode={'on-drag'}
-    >
-      <FlexedSafeAreaView>
+  <FlexedSafeAreaView>
+    <FlexedKeyboardAvoidingView behavior={'padding'}>
+      <FlexedScrollView
+        keyboardShouldPersistTaps={'never'}
+        keyboardDismissMode={'on-drag'}
+      >
         <Content>{children}</Content>
         <PaddedView>
           {onPressSecondary ? (
@@ -84,9 +78,9 @@ const PrayerView = ({
             disabled={!onPressPrimary}
           />
         </PaddedView>
-      </FlexedSafeAreaView>
-    </FlexedScrollView>
-  </FlexedKeyboardAvoidingView>
+      </FlexedScrollView>
+    </FlexedKeyboardAvoidingView>
+  </FlexedSafeAreaView>
 );
 
 PrayerView.propTypes = {
