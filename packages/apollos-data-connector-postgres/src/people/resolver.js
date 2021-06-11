@@ -32,5 +32,7 @@ export default {
       Follow.getStaticSuggestedFollowsForCurrentPerson(),
     searchPeople: async (root, input, { dataSources }) =>
       dataSources.Person.byPaginatedQuery(input),
+    usersFollowing: async (root, input, { dataSources }) =>
+      dataSources.Person.getUsersFollowing(),
   },
 };

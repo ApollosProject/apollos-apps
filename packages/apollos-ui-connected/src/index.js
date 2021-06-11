@@ -46,6 +46,7 @@ export FollowListConnected, {
   IGNORE_FOLLOW_REQUEST,
   SuggestedFollowListConnected,
   RequestedFollowListConnected,
+  FollowingListConnected,
   GET_SUGGESTED_FOLLOWS,
 } from './FollowListConnected';
 export FollowListSearchModalConnected from './FollowListSearchModalConnected';

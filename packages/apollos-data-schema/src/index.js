@@ -1082,6 +1082,7 @@ export const followSchema = gql`
 
   extend type Query {
     followRequests: [Person] @cacheControl(scope: PRIVATE)
+    usersFollowing: [Person] @cacheControl(scope: PRIVATE)
   }
 
   enum FollowState {
