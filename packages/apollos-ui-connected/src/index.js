@@ -34,6 +34,7 @@ export FeaturesFeedConnected, {
   GET_FEATURE_FEED,
   FEATURE_FEED_ACTION_MAP,
 } from './FeaturesFeedConnected';
+export EventConnected from './EventConnected';
 export {
   FeatureFeedTabConnected,
   CampusTabComponent,
