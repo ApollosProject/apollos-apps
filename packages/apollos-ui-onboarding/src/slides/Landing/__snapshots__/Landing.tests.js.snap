@@ -75,6 +75,7 @@ Array [
             align="xMidYMid"
             bbHeight={48}
             bbWidth={48}
+            color="#00676D"
             height={48}
             meetOrSlice={0}
             minX={0}
@@ -96,6 +97,7 @@ Array [
                 },
               ]
             }
+            tintColor="#00676D"
             vbHeight={24}
             vbWidth={24}
             width={48}
@@ -146,7 +148,7 @@ Array [
                 fill={
                   Array [
                     0,
-                    4281348144,
+                    4278216557,
                   ]
                 }
                 fillOpacity={1}
@@ -189,9 +191,10 @@ Array [
             </RNSVGGroup>
           </RNSVGSvgView>
           <Text
+            color="#00676D"
             style={
               Object {
-                "color": "#303030",
+                "color": "#00676D",
                 "fontFamily": "InterUI-Black",
                 "fontSize": 43,
                 "lineHeight": 49.45,
@@ -202,9 +205,10 @@ Array [
             We're glad you're here.
           </Text>
           <Text
+            color="#00676D"
             style={
               Object {
-                "color": "#303030",
+                "color": "#00676D",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
                 "lineHeight": 24,
@@ -490,6 +494,7 @@ Array [
             align="xMidYMid"
             bbHeight={48}
             bbWidth={48}
+            color="#00676D"
             height={48}
             meetOrSlice={0}
             minX={0}
@@ -511,6 +516,7 @@ Array [
                 },
               ]
             }
+            tintColor="#00676D"
             vbHeight={24}
             vbWidth={24}
             width={48}
@@ -561,7 +567,7 @@ Array [
                 fill={
                   Array [
                     0,
-                    4281348144,
+                    4278216557,
                   ]
                 }
                 fillOpacity={1}
@@ -604,9 +610,10 @@ Array [
             </RNSVGGroup>
           </RNSVGSvgView>
           <Text
+            color="#00676D"
             style={
               Object {
-                "color": "#303030",
+                "color": "#00676D",
                 "fontFamily": "InterUI-Black",
                 "fontSize": 43,
                 "lineHeight": 49.45,
@@ -617,9 +624,10 @@ Array [
             We're glad you're here.
           </Text>
           <Text
+            color="#00676D"
             style={
               Object {
-                "color": "#303030",
+                "color": "#00676D",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
                 "lineHeight": 24,
@@ -710,6 +718,7 @@ Array [
             align="xMidYMid"
             bbHeight={48}
             bbWidth={48}
+            color="#00676D"
             height={48}
             meetOrSlice={0}
             minX={0}
@@ -731,6 +740,7 @@ Array [
                 },
               ]
             }
+            tintColor="#00676D"
             vbHeight={24}
             vbWidth={24}
             width={48}
@@ -781,7 +791,7 @@ Array [
                 fill={
                   Array [
                     0,
-                    4281348144,
+                    4278216557,
                   ]
                 }
                 fillOpacity={1}
@@ -824,9 +834,10 @@ Array [
             </RNSVGGroup>
           </RNSVGSvgView>
           <Text
+            color="#00676D"
             style={
               Object {
-                "color": "#303030",
+                "color": "#00676D",
                 "fontFamily": "InterUI-Black",
                 "fontSize": 43,
                 "lineHeight": 49.45,
@@ -837,9 +848,10 @@ Array [
             We're glad you're here.
           </Text>
           <Text
+            color="#00676D"
             style={
               Object {
-                "color": "#303030",
+                "color": "#00676D",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
                 "lineHeight": 24,
@@ -930,6 +942,7 @@ Array [
             align="xMidYMid"
             bbHeight={48}
             bbWidth={48}
+            color="#00676D"
             height={48}
             meetOrSlice={0}
             minX={0}
@@ -951,6 +964,7 @@ Array [
                 },
               ]
             }
+            tintColor="#00676D"
             vbHeight={24}
             vbWidth={24}
             width={48}
@@ -1001,7 +1015,7 @@ Array [
                 fill={
                   Array [
                     0,
-                    4281348144,
+                    4278216557,
                   ]
                 }
                 fillOpacity={1}
@@ -1044,9 +1058,10 @@ Array [
             </RNSVGGroup>
           </RNSVGSvgView>
           <Text
+            color="#00676D"
             style={
               Object {
-                "color": "#303030",
+                "color": "#00676D",
                 "fontFamily": "InterUI-Black",
                 "fontSize": 43,
                 "lineHeight": 49.45,
@@ -1057,9 +1072,10 @@ Array [
             Custom title text
           </Text>
           <Text
+            color="#00676D"
             style={
               Object {
-                "color": "#303030",
+                "color": "#00676D",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
                 "lineHeight": 24,
@@ -1405,6 +1421,7 @@ Array [
             align="xMidYMid"
             bbHeight={48}
             bbWidth={48}
+            color="#00676D"
             height={48}
             meetOrSlice={0}
             minX={0}
@@ -1426,6 +1443,7 @@ Array [
                 },
               ]
             }
+            tintColor="#00676D"
             vbHeight={24}
             vbWidth={24}
             width={48}
@@ -1476,7 +1494,7 @@ Array [
                 fill={
                   Array [
                     0,
-                    4281348144,
+                    4278216557,
                   ]
                 }
                 fillOpacity={1}
@@ -1519,9 +1537,10 @@ Array [
             </RNSVGGroup>
           </RNSVGSvgView>
           <Text
+            color="#00676D"
             style={
               Object {
-                "color": "#303030",
+                "color": "#00676D",
                 "fontFamily": "InterUI-Black",
                 "fontSize": 43,
                 "lineHeight": 49.45,
@@ -1532,9 +1551,10 @@ Array [
             We're glad you're here.
           </Text>
           <Text
+            color="#00676D"
             style={
               Object {
-                "color": "#303030",
+                "color": "#00676D",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
                 "lineHeight": 24,

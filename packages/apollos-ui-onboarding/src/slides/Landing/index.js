@@ -18,23 +18,32 @@ const Content = styled({
   justifyContent: 'center',
 })(PaddedView);
 
-const BrandIcon = withTheme(({ theme, color }) => ({
-  name: 'brand-icon',
-  size: theme.sizing.baseUnit * 3,
-  ...(color ? { fill: color } : {}),
-  style: {
+const BrandIcon = withTheme(
+  ({ theme, color }) => ({
+    name: 'brand-icon',
+    size: theme.sizing.baseUnit * 3,
+    ...(color ? { fill: color } : {}),
+    style: {
+      marginBottom: theme.sizing.baseUnit,
+    },
+  }),
+  'ui-onboarding.Landing.BrandIcon'
+)(Icon);
+
+const Title = styled(
+  ({ theme, color }) => ({
     marginBottom: theme.sizing.baseUnit,
-  },
-}))(Icon);
+    ...(color ? { color } : {}),
+  }),
+  'ui-onboarding.Landing.Title'
+)(H1);
 
-const Title = styled(({ theme, color }) => ({
-  marginBottom: theme.sizing.baseUnit,
-  ...(color ? { color } : {}),
-}))(H1);
-
-const StyledH4 = styled(({ color }) => ({
-  ...(color ? { color } : {}),
-}))(H4);
+const Subtitle = styled(
+  ({ color }) => ({
+    ...(color ? { color } : {}),
+  }),
+  'ui-onboarding.Landing.Subtitle'
+)(H4);
 
 const LandingScreen = ({
   slideTitle,
@@ -54,7 +63,7 @@ const LandingScreen = ({
       <Content>
         <BrandIcon color={textColor} />
         <Title color={textColor}>{slideTitle}</Title>
-        <StyledH4 color={textColor}>{description}</StyledH4>
+        <Subtitle color={textColor}>{description}</Subtitle>
       </Content>
     </Slide>
   </BackgroundView>
