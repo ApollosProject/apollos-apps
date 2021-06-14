@@ -22,10 +22,12 @@ FollowConnected.propTypes = {
     PropTypes.func,
     PropTypes.object,
   ]),
+  version: PropTypes.number,
 };
 
 FollowConnected.defaultProps = {
   Component: Follow,
+  version: 2,
 };
 
 FollowConnected.displayName = 'FollowConnected';

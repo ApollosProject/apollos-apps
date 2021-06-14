@@ -1,7 +1,11 @@
 import React from 'react';
 import { Text } from 'react-native';
 
-import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import {
+  Providers,
+  renderWithApolloData,
+  WithReactNavigator,
+} from '@apollosproject/ui-test-utils';
 import { MockedProvider } from '@apollo/client/testing';
 
 import LocationFinderConnected from './LocationFinderConnected';
@@ -27,7 +31,7 @@ describe('The Onboarding LocationFinderConnected component', () => {
       },
     ];
 
-    const component = (
+    const component = WithReactNavigator(
       <Providers MockedProvider={MockedProvider} mocks={mocks}>
         <LocationFinderConnected
           navigation={navigation}
@@ -84,12 +88,14 @@ describe('The Onboarding LocationFinderConnected component', () => {
     );
 
     const tree = await renderWithApolloData(
-      <Providers mocks={mocks} MockedProvider={MockedProvider}>
-        <LocationFinderConnected
-          Component={CustomComponent}
-          onNavigate={jest.fn()}
-        />
-      </Providers>
+      WithReactNavigator(
+        <Providers mocks={mocks} MockedProvider={MockedProvider}>
+          <LocationFinderConnected
+            Component={CustomComponent}
+            onNavigate={jest.fn()}
+          />
+        </Providers>
+      )
     );
     expect(tree).toMatchSnapshot();
   });
@@ -132,7 +138,7 @@ describe('The Onboarding LocationFinderConnected component', () => {
       },
     ];
 
-    const component = (
+    const component = WithReactNavigator(
       <Providers mocks={mocks} MockedProvider={MockedProvider}>
         <LocationFinderConnected onNavigate={jest.fn()} />
       </Providers>

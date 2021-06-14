@@ -1,3 +1,15 @@
+# if we have more than zero arguments
+if [ $# -ne 0 ]; then
+    # call yarn in ApollosApp and pass in the arguments
+    cd ApollosApp
+    yarn "$@"
+    exit
+fi
+
+yarn
+
+yarn generate-stories
+
 rm -rf ApollosApp
 
 mkdir -p ApollosApp
@@ -28,3 +40,9 @@ cd .. || exit
 node scripts/swap-package-json-to-links.js ./ApollosApp
 
 rm -rf tmp
+
+cd ApollosApp
+yarn
+yarn generate-stories
+node ./scripts/get-introspection-data.js
+yarn ios
