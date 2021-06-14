@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.20.0](https://github.com/ApollosProject/apollos-apps/compare/v2.19.0...v2.20.0) (2021-06-14)
+
+
+### Features
+
+* Following List ([#1982](https://github.com/ApollosProject/apollos-apps/issues/1982)) ([bc6ec1d](https://github.com/ApollosProject/apollos-apps/commit/bc6ec1db336a86a2ccd530ad3063aeb01b05ba3e))
+
+
+### Bug Fixes
+
+* Close search modal when tapping on an item ([#1978](https://github.com/ApollosProject/apollos-apps/issues/1978)) ([e9f771f](https://github.com/ApollosProject/apollos-apps/commit/e9f771fc909eec291b9c1ff2855a55354e990847))
+* forces prayer button to follow keyboard ([#1985](https://github.com/ApollosProject/apollos-apps/issues/1985)) ([a4a2de1](https://github.com/ApollosProject/apollos-apps/commit/a4a2de130d2cc2735277bffaced73116b5c48944))
+* properly refetch liked content list ([#1986](https://github.com/ApollosProject/apollos-apps/issues/1986)) ([4d899a2](https://github.com/ApollosProject/apollos-apps/commit/4d899a2e3b313058214a1848f1117186a07b2e62))
+* remove forced location permissions ([#1965](https://github.com/ApollosProject/apollos-apps/issues/1965)) ([cd1d555](https://github.com/ApollosProject/apollos-apps/commit/cd1d5552ec3391921c18690ee0b1b12e506631c3))
+* turns off automerging new people ([#1989](https://github.com/ApollosProject/apollos-apps/issues/1989)) ([cb5f8f1](https://github.com/ApollosProject/apollos-apps/commit/cb5f8f1c0b24f1b215b2bb5eb6f9a8e16d728ce2))
+
+
+
 ## [2.19.0](https://github.com/ApollosProject/apollos-apps/compare/v2.18.1...v2.19.0) (2021-06-07)
 
 
