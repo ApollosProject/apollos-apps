@@ -65,13 +65,18 @@ export default class Person extends RockApolloDataSource {
     return null;
   };
 
-  create = (profile) => {
+  create = async (profile) => {
     const rockUpdateFields = this.mapApollosFieldsToRock(profile);
-    return this.post('/People', {
+    // auto-merge functionality is compromised
+    // we are creating a new user and patching them with profile details
+    const id = await this.post('/People', {
       Gender: 0, // required by Rock. Listed first so it can be overridden.
-      ...rockUpdateFields,
       IsSystem: false, // required by rock
     });
+    await this.patch(`/People/${id}`, {
+      ...rockUpdateFields,
+    });
+    return id;
   };
 
   mapGender = ({ gender }) => {

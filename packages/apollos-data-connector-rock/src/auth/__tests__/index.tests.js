@@ -224,11 +224,12 @@ describe('Auth', () => {
     });
 
     it('creates user profile', async () => {
+      context.dataSources.Person.create = jest.fn(() => 35);
       const result = await context.dataSources.Auth.createUserProfile({
         email: 'isaac.hardy@newspring.cc',
       });
 
-      expect(result).toEqual('35');
+      expect(result).toEqual(35);
     });
 
     it('throws error in createUserProfile', async () => {
@@ -276,6 +277,7 @@ describe('Auth', () => {
           }
         }
       `;
+      context.dataSources.Person.create = jest.fn(() => 1);
 
       const rootValue = {};
 
