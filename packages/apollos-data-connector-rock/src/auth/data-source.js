@@ -64,9 +64,7 @@ export default class AuthDataSource extends RockApolloDataSource {
     if (!login || !login.personId) {
       throw new AuthenticationError('Invalid user cookie; no user login found');
     }
-    return this.request('/People')
-      .filter(`Id eq ${login.personId}`)
-      .first();
+    return this.request('/People').filter(`Id eq ${login.personId}`).first();
   };
 
   fetchUserCookie = async (Username, Password) => {
@@ -140,12 +138,15 @@ export default class AuthDataSource extends RockApolloDataSource {
 
   createUserProfile = async ({ email, ...otherFields }) => {
     try {
-      return await this.post('/People', {
+      const id = await this.post('/People', {
         Gender: 0, // Required by Rock. Listed first so it can be overridden by otherFields
-        ...otherFields,
-        Email: email,
         IsSystem: false, // Required by Rock
       });
+      await this.patch(`/People/${id}`, {
+        ...otherFields,
+        Email: email,
+      });
+      return id;
     } catch (err) {
       throw new Error('Unable to create profile!');
     }
