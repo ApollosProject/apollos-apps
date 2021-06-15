@@ -31,8 +31,10 @@ SECRETS=(
 
 for file in "${SECRETS[@]}"; do
   if [ "$1" = "-e" ] && [ -f "$file" ]; then
+    echo "Encrypting ${file}"
     encrypt "$file" "$2"
   elif [ "$1" = "-d" ] && [ -f "$file" ]; then
+    echo "Decrypting ${file}"
     decrypt "$file" "$2"
   elif [ "$1" = "-d" ] || [ "$1" = "-e" ]; then
     echo "Skipping ${file}"

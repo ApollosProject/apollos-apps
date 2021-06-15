@@ -15,7 +15,7 @@ const cmd = commander
   .action(function () {
     const passedOptions = this.opts();
     return exec(
-      `${process.env.PWD}/scripts/secrets.sh -${Object.keys(
+      `${__dirname}/scripts/secrets.sh -${Object.keys(
         passedOptions
       )} ${Object.values(passedOptions)}`
     ).then(({ stdout, stderr }) => {
