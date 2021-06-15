@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.20.0](https://github.com/apollosproject/apollos-apps/compare/v2.19.0...v2.20.0) (2021-06-14)
+
+
+### Bug Fixes
+
+* forces prayer button to follow keyboard ([#1985](https://github.com/apollosproject/apollos-apps/issues/1985)) ([a4a2de1](https://github.com/apollosproject/apollos-apps/commit/a4a2de130d2cc2735277bffaced73116b5c48944))
+
+
+
 ## [2.19.0](https://github.com/apollosproject/apollos-apps/compare/v2.18.1...v2.19.0) (2021-06-07)
 
 **Note:** Version bump only for package @apollosproject/ui-prayer

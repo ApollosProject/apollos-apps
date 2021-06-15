@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.20.0](https://github.com/apollosproject/apollos-apps/compare/v2.19.0...v2.20.0) (2021-06-14)
+
+
+### Bug Fixes
+
+* remove forced location permissions ([#1965](https://github.com/apollosproject/apollos-apps/issues/1965)) ([cd1d555](https://github.com/apollosproject/apollos-apps/commit/cd1d5552ec3391921c18690ee0b1b12e506631c3))
+
+
+
 ## [2.19.0](https://github.com/apollosproject/apollos-apps/compare/v2.18.1...v2.19.0) (2021-06-07)
 
 **Note:** Version bump only for package @apollosproject/ui-mapview
