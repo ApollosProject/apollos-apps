@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.20.0](https://github.com/apollosproject/apollos-apps/compare/v2.19.0...v2.20.0) (2021-06-14)
+
+
+### Features
+
+* Following List ([#1982](https://github.com/apollosproject/apollos-apps/issues/1982)) ([bc6ec1d](https://github.com/apollosproject/apollos-apps/commit/bc6ec1db336a86a2ccd530ad3063aeb01b05ba3e))
+
+
+### Bug Fixes
+
+* Close search modal when tapping on an item ([#1978](https://github.com/apollosproject/apollos-apps/issues/1978)) ([e9f771f](https://github.com/apollosproject/apollos-apps/commit/e9f771fc909eec291b9c1ff2855a55354e990847))
+* properly refetch liked content list ([#1986](https://github.com/apollosproject/apollos-apps/issues/1986)) ([4d899a2](https://github.com/apollosproject/apollos-apps/commit/4d899a2e3b313058214a1848f1117186a07b2e62))
+
+
+
 ## [2.19.0](https://github.com/apollosproject/apollos-apps/compare/v2.18.1...v2.19.0) (2021-06-07)
 
 **Note:** Version bump only for package @apollosproject/ui-connected
