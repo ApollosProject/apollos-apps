@@ -12,6 +12,7 @@ export {
   FeaturesConnected,
   Follow,
   FollowConnected,
+  Landing,
 } from './slides';
 
 export { default as Slide, SlideContent } from './Slide';
