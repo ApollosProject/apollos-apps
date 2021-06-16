@@ -150,6 +150,7 @@ export default class AuthDataSource extends RockApolloDataSource {
       });
       return id;
     } catch (err) {
+      console.error(err);
       throw new Error('Unable to create profile!');
     }
   };

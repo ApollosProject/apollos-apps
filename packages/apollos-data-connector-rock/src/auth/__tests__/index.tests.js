@@ -223,14 +223,6 @@ describe('Auth', () => {
       expect(result).toEqual(false);
     });
 
-    it('creates user profile', async () => {
-      const result = await context.dataSources.Auth.createUserProfile({
-        email: 'isaac.hardy@newspring.cc',
-      });
-
-      expect(result).toEqual('35');
-    });
-
     it('throws error in createUserProfile', async () => {
       try {
         await context.dataSources.Auth.createUserProfile({
@@ -278,6 +270,8 @@ describe('Auth', () => {
       `;
 
       const rootValue = {};
+      context.dataSources.Auth.post = () => 35;
+      context.dataSources.Auth.patch = () => null;
 
       const result = await graphql(schema, query, rootValue, context);
       expect(result).toMatchSnapshot();

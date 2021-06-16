@@ -24,7 +24,6 @@ Array [
   Array [
     "/People",
     Object {
-      "Email": "bob-jones@example.com",
       "Gender": 0,
       "IsSystem": false,
     },
@@ -39,11 +38,8 @@ Array [
   Array [
     "/People",
     Object {
-      "Email": "bob-jones@example.com",
-      "FirstName": "Burke",
       "Gender": 0,
       "IsSystem": false,
-      "LastName": "Shartsis",
     },
   ],
 ]
@@ -56,14 +52,8 @@ Array [
   Array [
     "/People",
     Object {
-      "BirthDay": 22,
-      "BirthMonth": 2,
-      "BirthYear": 1996,
-      "Email": "bob-jones@example.com",
-      "FirstName": "Burke",
-      "Gender": 2,
+      "Gender": 0,
       "IsSystem": false,
-      "LastName": "Shartsis",
     },
   ],
 ]
@@ -115,7 +105,6 @@ Array [
   Array [
     "/People",
     Object {
-      "Email": "bob-jones@example.com",
       "Gender": 0,
       "IsSystem": false,
     },

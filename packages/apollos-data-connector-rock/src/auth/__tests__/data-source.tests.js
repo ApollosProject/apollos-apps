@@ -37,6 +37,7 @@ describe('Auth', () => {
 
   it('should post when creating a new user', async () => {
     Auth.post = jest.fn(() => Promise.resolve());
+    Auth.patch = jest.fn(() => Promise.resolve());
     const result = await Auth.createUserProfile({
       email: 'bob-jones@example.com',
     });
@@ -46,6 +47,7 @@ describe('Auth', () => {
 
   it('should post with userProfile fields when creating a new user', async () => {
     Auth.post = jest.fn(() => Promise.resolve());
+    Auth.patch = jest.fn(() => Promise.resolve());
     Auth.createUserLogin = jest.fn(() => Promise.resolve());
     Auth.personExists = jest.fn(() => Promise.resolve(false));
     Auth.authenticate = jest.fn(() => Promise.resolve('some-cookie'));
@@ -128,6 +130,7 @@ describe('Auth', () => {
 
   it('should post with userProfile fields when creating a new user and map gender/birthdate', async () => {
     Auth.post = jest.fn(() => Promise.resolve());
+    Auth.patch = jest.fn(() => Promise.resolve());
     Auth.createUserLogin = jest.fn(() => Promise.resolve());
     Auth.personExists = jest.fn(() => Promise.resolve(false));
     Auth.authenticate = jest.fn(() => Promise.resolve('some-cookie'));
