@@ -1,0 +1,20 @@
+{
+  "name": "@apollosproject/apollos-cli",
+  "version": "2.20.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
+  "bin": {
+    "apollos": "./index.js"
+  },
+  "author": "",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^7.2.0"
+  }
+}
