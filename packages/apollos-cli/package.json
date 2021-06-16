@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\""
   },
   "bin": {
-    "apollos-cli": "./index.js"
+    "apollos": "./index.js"
   },
   "author": "",
   "publishConfig": {
