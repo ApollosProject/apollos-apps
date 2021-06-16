@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.21.0](https://github.com/ApollosProject/apollos-apps/compare/v2.20.0...v2.21.0) (2021-06-16)
+
+
+### Features
+
+* Update OneSignal to v4 ([#1935](https://github.com/ApollosProject/apollos-apps/issues/1935)) ([f5bf088](https://github.com/ApollosProject/apollos-apps/commit/f5bf088737e6a73861e40f67eaab2c5f723aea3e))
+
+
+
 ## [2.20.0](https://github.com/ApollosProject/apollos-apps/compare/v2.19.0...v2.20.0) (2021-06-14)
 
 
