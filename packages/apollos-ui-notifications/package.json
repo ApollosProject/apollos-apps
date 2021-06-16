@@ -47,7 +47,7 @@
     "@apollosproject/ui-auth": "*",
     "react": "*",
     "react-native": "*",
-    "react-native-onesignal": "*",
+    "react-native-onesignal": "4.x.x",
     "react-native-permissions": "^2.0.5"
   },
   "dependencies": {

@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-
 import { getHasPrompted, getPushPermissions } from './permissionUtils';
 
 export const PushContext = React.createContext({
@@ -31,6 +30,7 @@ class Provider extends PureComponent {
     try {
       const permissionRes = await getPushPermissions();
       const promptRes = await getHasPrompted();
+
       this.setState({
         hasPrompted: promptRes,
         hasPushPermission: permissionRes,
@@ -48,15 +48,13 @@ class Provider extends PureComponent {
       {
         loading: true,
       },
-      () => {
-        getPushPermissions().then((permissionRes) => {
-          getHasPrompted().then((promptRes) => {
-            this.setState({
-              hasPrompted: promptRes,
-              hasPushPermission: permissionRes,
-              loading: false,
-            });
-          });
+      async () => {
+        const permissionRes = await getPushPermissions();
+        const promptRes = await getHasPrompted();
+        this.setState({
+          hasPrompted: promptRes,
+          hasPushPermission: permissionRes,
+          loading: false,
         });
         onUpdate();
       }
