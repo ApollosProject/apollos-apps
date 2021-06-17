@@ -25,7 +25,7 @@ read -r SECRET
 if [ "$SECRET" = "" ]; then
     echo "APP_DATA_URL=https://apollos-church-api.herokuapp.com" >>./apolloschurchapp/.env
 else
-    ./scripts/secrets.sh -d "$SECRET"
+    (cd ./apolloschurchapp && npx @apollosproject/apollos-cli secrets -d "$SECRET")
     mv ./apolloschurchapp/.env.shared ./apolloschurchapp/.env
 fi
 

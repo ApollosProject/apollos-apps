@@ -23,7 +23,7 @@ echo "Please enter your .env password (typically stored in 1Password)"
 tput sgr0
 
 read SECRET
-./scripts/secrets.sh -d $SECRET
+(cd ./apollos-church-api/ && npx @apollosproject/apollos-cli secrets -d "$SECRET")
 mv ./apollos-church-api/.env.shared ./apollos-church-api/.env
 cd ..
 
