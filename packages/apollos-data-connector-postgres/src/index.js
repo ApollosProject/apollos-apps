@@ -7,6 +7,7 @@ export {
 } from './postgres';
 
 export * as Comment from './comments';
+export * as ContentItem from './content-items';
 export * as UserFlag from './user-flags';
 export * as UserLike from './user-likes';
 export * as Follow from './follows';
