@@ -8,8 +8,8 @@ const createModel = defineModel({
     type: DataTypes.ENUM(['IMAGE', 'VIDEO', 'AUDIO']),
     url: DataTypes.STRING,
     nodeId: DataTypes.UUID,
-    nodeType: DataTypes.STRING
-  }
+    nodeType: DataTypes.STRING,
+  },
 });
 
 export { createModel };

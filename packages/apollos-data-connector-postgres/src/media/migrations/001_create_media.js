@@ -4,8 +4,8 @@ async function up({ context: queryInterface }) {
   await queryInterface.createTable('media', {
     type: DataTypes.ENUM(['IMAGE', 'VIDEO', 'AUDIO']),
     url: DataTypes.STRING,
-    nodeId: DataTypes.UUIDV4,
-    nodeType: DataTypes.STRING
+    nodeId: DataTypes.UUID,
+    nodeType: DataTypes.STRING,
   });
 }
 
@@ -15,4 +15,4 @@ async function down({ context: queryInterface }) {
 
 const name = '001-create-media';
 
-module.exports = { up, down, name, order: 2 };
+module.exports = { up, down, name, order: 5 };
