@@ -42,6 +42,9 @@ async function up({ context: queryInterface }) {
       allowNull: false,
     },
   });
+  await queryInterface.addIndex('contentItems', ['originId', 'originType'], {
+    unique: true,
+  });
 }
 
 async function down({ context: queryInterface }) {
