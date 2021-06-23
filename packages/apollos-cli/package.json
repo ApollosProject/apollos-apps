@@ -1,6 +1,6 @@
 {
   "name": "@apollosproject/apollos-cli",
-  "version": "2.21.1",
+  "version": "2.21.2",
   "description": "",
   "main": "index.js",
   "scripts": {
