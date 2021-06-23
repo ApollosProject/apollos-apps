@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.21.2](https://github.com/apollosproject/apollos-apps/compare/v2.21.1...v2.21.2) (2021-06-18)
+
+**Note:** Version bump only for package @apollosproject/data-connector-postgres
+
+
+
+
+
+### [2.21.1](https://github.com/apollosproject/apollos-apps/compare/v2.21.0...v2.21.1) (2021-06-17)
+
+**Note:** Version bump only for package @apollosproject/data-connector-postgres
+
+
+
+
+
+## [2.21.0](https://github.com/apollosproject/apollos-apps/compare/v2.20.0...v2.21.0) (2021-06-16)
+
+**Note:** Version bump only for package @apollosproject/data-connector-postgres
+
+
+
+
+
+## [2.20.0](https://github.com/apollosproject/apollos-apps/compare/v2.19.0...v2.20.0) (2021-06-14)
+
+
+### Features
+
+* Following List ([#1982](https://github.com/apollosproject/apollos-apps/issues/1982)) ([bc6ec1d](https://github.com/apollosproject/apollos-apps/commit/bc6ec1db336a86a2ccd530ad3063aeb01b05ba3e))
+
+
+
 ## [2.19.0](https://github.com/apollosproject/apollos-apps/compare/v2.18.1...v2.19.0) (2021-06-07)
 
 

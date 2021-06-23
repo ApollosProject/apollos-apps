@@ -182,9 +182,9 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
       .first();
     if (!series) return [];
 
-    const cursor = (
-      await ContentItem.getCursorByParentContentItemId(series.id)
-    ).expand('ContentChannel');
+    const cursor = (await ContentItem.getCursorByParentContentItemId(series.id))
+      .expand('ContentChannel')
+      .orderBy('StartDateTime', 'desc');
     const items = limit ? await cursor.top(limit).get() : await cursor.get();
 
     return items.map((item, i) => ({

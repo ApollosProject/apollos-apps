@@ -51,8 +51,10 @@ jobs:
       run: |
         git config --global user.email "apps@apollos.app"
         git config --global user.name "Apollos Admin"
-        sleep 120 # this is to insure the tag has been uploaded to Github and the API call will work
+        sleep 10 # this is to insure the tag has been uploaded to Github and the API call will work
         yarn bump
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   upgrade-tool:
 
@@ -72,3 +74,5 @@ jobs:
         git config --global user.email "apps@apollos.app"
         git config --global user.name "Apollos Admin"
         yarn bump
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
