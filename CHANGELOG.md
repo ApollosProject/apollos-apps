@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.22.0](https://github.com/ApollosProject/apollos-apps/compare/v2.21.2...v2.22.0) (2021-06-23)
+
+
+### Features
+
+* Content Item Schema ([#2006](https://github.com/ApollosProject/apollos-apps/issues/2006)) ([0fc23a4](https://github.com/ApollosProject/apollos-apps/commit/0fc23a42e0ea974eb7fc9a51537ea46861c2fc1d))
+* Creates media model for postgres data connector ([#2005](https://github.com/ApollosProject/apollos-apps/issues/2005)) ([870aca5](https://github.com/ApollosProject/apollos-apps/commit/870aca5189e92b38d89b57b6e67417a6253d3206))
+
+
+
 ### [2.21.2](https://github.com/ApollosProject/apollos-apps/compare/v2.21.1...v2.21.2) (2021-06-18)
 
 
