@@ -41,6 +41,13 @@ const setupModel = configureModel(({ sequelize }) => {
     otherKey: 'requestPersonId',
     as: 'followers',
   });
+
+  sequelize.models.people.belongsToMany(sequelize.models.people, {
+    through: sequelize.models.follows,
+    foreignKey: 'requestPersonId',
+    otherKey: 'followedPersonId',
+    as: 'following',
+  });
 });
 
 export { createModel, setupModel, FollowState };

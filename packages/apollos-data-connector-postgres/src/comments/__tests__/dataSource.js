@@ -3,7 +3,10 @@ import { range } from 'lodash';
 import { sequelize, sync } from '../../postgres/index';
 import { createModel, setupModel } from '../model';
 import { createModel as createPersonModel } from '../../people/model';
-import { createModel as createFollowModel } from '../../follows/model';
+import {
+  createModel as createFollowModel,
+  setupModel as setupFollowModel,
+} from '../../follows/model';
 import {
   createModel as createFlagsModel,
   setupModel as setupFlagsModel,
@@ -39,6 +42,7 @@ describe('Apollos Postgres Comments DatSource', () => {
     await setupModel();
     await setupFlagsModel();
     await setupLikesModel();
+    await setupFollowModel();
     await sync({ force: true });
     person1 = await sequelize.models.people.create({
       originId: '1',
@@ -99,6 +103,32 @@ describe('Apollos Postgres Comments DatSource', () => {
       });
 
       expect(comments.length).toBe(1);
+    });
+
+    it('should send notifications about your comment to your followers', async () => {
+      const commentDataSource = new CommentDataSource();
+
+      commentDataSource.initialize({ context });
+      context.dataSources.Notification = { createAndSend: jest.fn() };
+
+      await sequelize.models.follows.create({
+        requestPersonId: person3.id,
+        followedPersonId: person1.id,
+        state: 'ACCEPTED',
+      });
+
+      await commentDataSource.addComment({
+        text: 'I am a fun comment!',
+        parentId: createGlobalId(123, 'UniversalContentItem'),
+      });
+
+      // changes with every snapshot
+      delete context.dataSources.Notification.createAndSend.mock.calls[0][0]
+        .personId;
+
+      expect(
+        context.dataSources.Notification.createAndSend.mock.calls
+      ).toMatchSnapshot();
     });
   });
 

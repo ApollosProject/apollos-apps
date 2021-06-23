@@ -4,11 +4,12 @@ class NotificationsDataSource extends PostgresDataSource {
   modelName = 'notifications';
 
   DELIVERY_METHODS = {
-    one_signal: this.sendWithOneSignal,
+    one_signal: this.sendWithOneSignal.bind(this),
   };
 
   NOTIFICATION_TYPES = {
     PRAYER: 'PRAYER',
+    COMMENT: 'COMMENT',
   };
 
   async createAndSend({
