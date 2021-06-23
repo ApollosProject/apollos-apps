@@ -1,6 +1,7 @@
 import React from 'react';
 import { Query } from '@apollo/client/react/components';
 import PropTypes from 'prop-types';
+import { named } from '@apollosproject/ui-kit';
 
 import GET_USER_FIRST_NAME from './getUserFirstName';
 import Features from './Features';
@@ -38,4 +39,4 @@ FeaturesConnected.defaultProps = {
 
 FeaturesConnected.displayName = 'FeaturesConnected';
 
-export default FeaturesConnected;
+export default named('ui-onboarding.FeaturesConnected')(FeaturesConnected);

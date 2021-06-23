@@ -4,6 +4,7 @@ import { useQuery } from '@apollo/client';
 import { useNavigation } from '@react-navigation/native';
 import { AnalyticsConsumer } from '@apollosproject/ui-analytics';
 import { hasLocationPermission } from '@apollosproject/ui-mapview';
+import { named } from '@apollosproject/ui-kit';
 import GET_USER_CAMPUS from './getUserCampus';
 import LocationFinder from './LocationFinder';
 
@@ -65,4 +66,6 @@ LocationFinderConnected.defaultProps = {
 
 LocationFinderConnected.displayName = 'LocationFinderConnected';
 
-export default LocationFinderConnected;
+export default named('ui-onboarding.LocationFinderConnected')(
+  LocationFinderConnected
+);
