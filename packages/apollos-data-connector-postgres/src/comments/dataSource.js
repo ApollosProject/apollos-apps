@@ -1,6 +1,5 @@
 import { Op } from 'sequelize';
-import { parseGlobalId } from '@apollosproject/server-core';
-import ApollosConfig from '@apollosproject/config';
+import { parseGlobalId, generateAppLink } from '@apollosproject/server-core';
 import { PostgresDataSource } from '../postgres';
 import { Visibility } from './model';
 
@@ -40,6 +39,9 @@ class CommentDataSource extends PostgresDataSource {
     const commentCreator = await comment.getPerson();
 
     const followers = await commentCreator.getFollowers();
+    const url = generateAppLink('deep', 'content', {
+      contentID: parentId,
+    });
 
     await Promise.all(
       followers.map(async (person) => {
@@ -50,7 +52,7 @@ class CommentDataSource extends PostgresDataSource {
           type: 'COMMENT',
           data: {
             data: {
-              url: `${ApollosConfig?.APP?.DEEP_LINK_HOST}://app-link/content/${parentId}`,
+              url,
             },
           },
         });
