@@ -5,6 +5,8 @@ import {
   requestPermissions,
 } from '@apollosproject/ui-notifications';
 
+import { named } from '@apollosproject/ui-kit';
+
 import AskNotifications from './AskNotifications';
 
 function defaultGetButtonText({ hasPushPermission, hasPrompted }) {
@@ -89,4 +91,6 @@ AskNotificationsWithStatus.defaultProps = {
 
 AskNotificationsConnected.displayName = 'AskNotificationsConnected';
 
-export default AskNotificationsConnected;
+export default named('ui-onboarding.AskNotificationsConnected')(
+  AskNotificationsConnected
+);
