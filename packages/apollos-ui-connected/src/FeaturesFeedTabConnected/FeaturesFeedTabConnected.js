@@ -52,6 +52,7 @@ export const CampusTabComponent = named(
 export const createFeatureFeedTab = ({
   tabName,
   screenOptions,
+  options,
   feedName,
   tabProps,
   TabComponent = DefaultTabComponent,
@@ -68,7 +69,11 @@ export const createFeatureFeedTab = ({
         ...screenOptions,
       }}
     >
-      <TabStack.Screen name={tabName} component={TabComponentToRender} />
+      <TabStack.Screen
+        name={tabName}
+        component={TabComponentToRender}
+        options={options}
+      />
       <TabStack.Screen
         component={ContentFeed}
         name="ContentFeed"
