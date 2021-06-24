@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.23.0](https://github.com/apollosproject/apollos-apps/compare/v2.22.0...v2.23.0) (2021-06-24)
+
+
+### Features
+
+* Content Items Connection Model ([#2017](https://github.com/apollosproject/apollos-apps/issues/2017)) ([511e3a1](https://github.com/apollosproject/apollos-apps/commit/511e3a19057e0f7955cf12976770726f4de7574a))
+* Send a push notification when adding a new comment ([#1983](https://github.com/apollosproject/apollos-apps/issues/1983)) ([f84b2b7](https://github.com/apollosproject/apollos-apps/commit/f84b2b7e50517cc5ef6c32a18f77546f41c85d9a))
+
+
+
 ## [2.22.0](https://github.com/apollosproject/apollos-apps/compare/v2.21.2...v2.22.0) (2021-06-23)
 
 
