@@ -1,7 +1,7 @@
 import { Sequelize } from 'sequelize';
 
 async function up({ context: queryInterface }) {
-  await queryInterface.createTable('contentItemConnections', {
+  await queryInterface.createTable('contentItemsConnections', {
     id: {
       primaryKey: true,
       type: Sequelize.UUID,
@@ -14,14 +14,14 @@ async function up({ context: queryInterface }) {
     childId: {
       type: Sequelize.UUID,
       references: {
-        model: 'contentItem',
+        model: 'contentItems',
         key: 'id',
       },
     },
     parentId: {
       type: Sequelize.UUID,
       references: {
-        model: 'contentItem',
+        model: 'contentItems',
         key: 'id',
       },
     },
@@ -46,7 +46,7 @@ async function up({ context: queryInterface }) {
     },
   });
   await queryInterface.addIndex(
-    'contentItemConnections',
+    'contentItemsConnections',
     ['originId', 'originType'],
     {
       unique: true,
@@ -55,9 +55,9 @@ async function up({ context: queryInterface }) {
 }
 
 async function down({ context: queryInterface }) {
-  await queryInterface.dropTable('contentItemConnections');
+  await queryInterface.dropTable('contentItemsConnections');
 }
 
-const name = '001-create-content-items-connection';
+const name = '001-create-content-items-connections';
 
 module.exports = { up, down, name, order: 4 };
