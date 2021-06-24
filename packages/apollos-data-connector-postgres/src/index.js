@@ -8,6 +8,7 @@ export {
 
 export * as Comment from './comments';
 export * as ContentItem from './content-items';
+export * as ContentItemsConnection from './content-items-connections';
 export * as UserFlag from './user-flags';
 export * as UserLike from './user-likes';
 export * as Follow from './follows';
