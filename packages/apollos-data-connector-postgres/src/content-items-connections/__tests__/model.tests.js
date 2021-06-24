@@ -2,7 +2,7 @@ import { sequelize, sync } from '../../postgres/index';
 import { createModel, setupModel } from '../model';
 import * as ContentItem from '../../content-items/model';
 
-describe('Campus model', () => {
+describe('ContentItemsConnection model', () => {
   beforeEach(async () => {
     await ContentItem.createModel();
     await createModel();
