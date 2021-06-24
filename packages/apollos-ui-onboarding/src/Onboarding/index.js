@@ -39,13 +39,12 @@ function Onboarding(props) {
   const navigation = useNavigation();
 
   const userVersion = route?.params?.userVersion || props?.userVersion || 0;
-  const slides = route?.params?.slides ||
-    props?.slides || [
-      FeaturesConnected,
-      LocationFinderConnected,
-      AskNotificationsConnected,
-      FollowConnected,
-    ];
+  const slides = props?.slides || [
+    FeaturesConnected,
+    LocationFinderConnected,
+    AskNotificationsConnected,
+    FollowConnected,
+  ];
   const { data } = useQuery(WITH_USER_ID, { fetchPolicy: 'network-only' });
   return (
     <>
