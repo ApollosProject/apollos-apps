@@ -69,7 +69,11 @@ export const createFeatureFeedTab = ({
         ...screenOptions,
       }}
     >
-      <TabStack.Screen name={tabName} component={TabComponentToRender} options={options} />
+      <TabStack.Screen
+        name={tabName}
+        component={TabComponentToRender}
+        options={options}
+      />
       <TabStack.Screen
         component={ContentFeed}
         name="ContentFeed"
