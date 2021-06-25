@@ -31,4 +31,4 @@ async function down({ context: queryInterface }) {
 
 const name = '002-update_media_primary_keys';
 
-module.exports = { up, down, name, order: 4 };
+module.exports = { up, down, name, order: 5 };
