@@ -1,7 +1,6 @@
 import { DataTypes, Sequelize } from 'sequelize';
 
 async function up({ context: queryInterface }) {
-
   await queryInterface.createTable('media', {
     originId: {
       primaryKey: true,
