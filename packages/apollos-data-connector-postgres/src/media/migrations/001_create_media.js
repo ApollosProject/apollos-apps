@@ -1,6 +1,7 @@
 import { DataTypes, Sequelize } from 'sequelize';
 
 async function up({ context: queryInterface }) {
+
   await queryInterface.createTable('media', {
     originId: {
       primaryKey: true,
@@ -24,4 +25,4 @@ async function down({ context: queryInterface }) {
 
 const name = '001-create-media';
 
-module.exports = { up, down, name, order: 5 };
+module.exports = { up, down, name, order: 4 };
