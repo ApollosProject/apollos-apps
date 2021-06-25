@@ -51,7 +51,10 @@ function Onboarding(props) {
             userId: data?.currentUser?.id,
             version: ONBOARDING_VERSION,
           });
-          navigation.navigate('Tabs');
+          navigation.reset({
+            index: 0,
+            routes: [{ name: 'Tabs' }],
+          });
         }}
       >
         {({ swipeForward }) => (
