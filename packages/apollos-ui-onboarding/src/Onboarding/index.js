@@ -2,12 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useQuery } from '@apollo/client';
 import { useRoute, useNavigation } from '@react-navigation/native';
-import {
-  styled,
-  named,
-  BackgroundView,
-  NavigationService,
-} from '@apollosproject/ui-kit';
+import { styled, named, BackgroundView } from '@apollosproject/ui-kit';
 
 import {
   AskNotificationsConnected,
@@ -56,12 +51,7 @@ function Onboarding(props) {
             userId: data?.currentUser?.id,
             version: ONBOARDING_VERSION,
           });
-          navigation.dispatch(
-            NavigationService.resetAction({
-              navigatorName: 'Tabs',
-              routeName: 'Home',
-            })
-          );
+          navigation.navigate('Tabs');
         }}
       >
         {({ swipeForward }) => (
