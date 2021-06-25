@@ -75,6 +75,9 @@ class OnboardingSwiper extends Component {
       return slideVersion > this.props.userVersion;
     });
 
+    // if there are no slides, we're done
+    if (!unseenSlides.length) this.props.onComplete();
+
     return unseenSlides;
   }
 
