@@ -35,6 +35,8 @@
   "dependencies": {
     "@apollosproject/data-schema": "^2.23.1",
     "@apollosproject/server-core": "^2.23.1",
+    "hyphenation.en-us": "^0.2.1",
+    "hypher": "^0.2.5",
     "lodash": "^4.17.11",
     "pg": "^8.5.1",
     "pg-hstore": "^2.3.3",
