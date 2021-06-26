@@ -6,7 +6,8 @@ import wait from 'waait';
 import { Providers } from '@apollosproject/ui-kit';
 import { InMemoryCache } from '@apollo/client/cache';
 import { MockedProvider } from '@apollo/client/testing';
-import AuthProvider, { GET_AUTH_TOKEN } from './Provider';
+import AuthProvider from './Provider';
+import { GET_AUTH_TOKEN } from './resolvers_OLD';
 
 import ProtectedRoute from './ProtectedRoute';
 import getLoginStateWithCacheLoaded from './getLoginStateWithCacheLoaded';
