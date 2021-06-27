@@ -8,11 +8,7 @@
     "nohoist": []
   },
   "scripts": {
-    "start": "lerna run build && yarn push-all && yarn build:watch",
-    "build:watch": "node ./scripts/watch.js",
-    "link-packages": "lerna exec -- yarn yalc publish",
-    "unlink-packages": "lerna exec -- yarn yalc installations clean",
-    "push-all": "lerna exec -- yarn yalc push",
+    "start": "lerna run build && node ./scripts/watch.js",
     "lint": "lerna run lint",
     "test": "TZ=utc lerna run test",
     "release": "lerna publish --conventional-commits --create-release github --force-publish",
@@ -47,7 +43,6 @@
     "eslint-plugin-prettier": "^3.1.4",
     "lerna": "^4.0.0",
     "prettier": "^2.1.2",
-    "react-native-storybook-loader": "^1.8.0",
-    "yalc": "^1.0.0-pre.35"
+    "react-native-storybook-loader": "^1.8.0"
   }
 }
