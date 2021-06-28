@@ -12,13 +12,6 @@ async function up({ context: queryInterface }) {
     },
     originId: { type: Sequelize.STRING, allowNull: false },
     originType: { type: Sequelize.STRING, allowNull: false },
-    contentItemId: {
-      type: Sequelize.UUID,
-      references: {
-        model: 'contentItems',
-        key: 'id',
-      },
-    },
     apollosId: {
       type: Sequelize.STRING,
       allowNull: true, // we set this value with an "afterCreate" hook if not set.
@@ -44,6 +37,23 @@ async function up({ context: queryInterface }) {
       unique: true,
     }
   );
+
+  await queryInterface.addColumn('contentItems', 'contentItemChannelId', {
+    type: Sequelize.UUID,
+    references: {
+      model: 'contentChannelItems',
+      key: 'id',
+    },
+  });
+
+  await queryInterface.addConstraint('contentItems', {
+    fields: ['contentItemChannelId'],
+    type: 'foreign key',
+    references: {
+      table: 'contentItemChannes',
+      field: 'id',
+    },
+  });
 }
 
 async function down({ context: queryInterface }) {
