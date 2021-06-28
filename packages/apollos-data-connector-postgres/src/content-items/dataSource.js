@@ -131,7 +131,7 @@ class ContentItemDataSource extends PostgresDataSource {
   getCursorByParentContentItemId = async (model) => {
     return {
       cursor: this.model.getChildren,
-    }
+    };
   };
 
   // A simple alias at this point.

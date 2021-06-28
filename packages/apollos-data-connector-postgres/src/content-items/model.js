@@ -12,15 +12,13 @@ const createModel = defineModel({
     publishAt: DataTypes.DATE,
     active: DataTypes.BOOLEAN,
   },
-  // sequelizeOptions: {
-  //   defaultScope: {
-  //     where: {
-  //       active: true,
-  //     },
-  //   },
-  // },
 });
 
-const setupModel = configureModel(() => {});
+const setupModel = configureModel(({ sequelize }) => {
+  sequelize.models.contentItem.addScope('defaultScope', {
+    include: [{ model: sequelize.models.media, as: 'images' }],
+    where: { active: true },
+  });
+});
 
 export { createModel, setupModel };

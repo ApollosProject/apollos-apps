@@ -29,14 +29,9 @@ export const defaultContentItemResolvers = {
   //     args,
   //   }),
 
-  //   images: (root, args, { dataSources: { ContentItem } }) =>
-  //     ContentItem.getImages(root),
-  //
-  //   videos: (root, args, { dataSources: { ContentItem } }) =>
-  //     ContentItem.getVideos(root),
-  //
-  //   audios: (root, args, { dataSources: { ContentItem } }) =>
-  //     ContentItem.getAudios(root),
+  images: (model) => model.images || model.getImages(),
+  videos: (model) => model.videos || model.getVideos(),
+  audios: (model) => model.audios || model.getAudios(),
   //
   //   coverImage: (root, args, { dataSources: { ContentItem } }) =>
   //     ContentItem.getCoverImage(root),
@@ -60,6 +55,13 @@ const resolver = {
       }),
     userFeed: (root, args, { dataSources }) =>
       dataSources.ContentItem.paginate({
+        // include: [
+        //   {
+        //     model: dataSources.ContentItem.model,
+        //     as: 'children',
+        //     required: false,
+        //   },
+        // ],
         ...args,
       }),
     // personaFeed: async (root, args, { dataSources }) => {
