@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.24.0](https://github.com/ApollosProject/apollos-apps/compare/v2.23.1...v2.24.0) (2021-06-28)
+
+
+### Features
+
+* add ability to pass options to FeaturesFeedTabConnected route ([#2020](https://github.com/ApollosProject/apollos-apps/issues/2020)) ([96dd90e](https://github.com/ApollosProject/apollos-apps/commit/96dd90ef9e68b53cd69a2c6d5b9b5489d3b427ea))
+
+
+### Bug Fixes
+
+* complete onboarding when there are no more slides ([#2022](https://github.com/ApollosProject/apollos-apps/issues/2022)) ([7e8a9e7](https://github.com/ApollosProject/apollos-apps/commit/7e8a9e7a80ce18d96bddda0a9197e59f68dca0ee))
+
+
+
 ### [2.23.1](https://github.com/ApollosProject/apollos-apps/compare/v2.23.0...v2.23.1) (2021-06-24)
 
 **Note:** Version bump only for package apollos
