@@ -1,4 +1,4 @@
-import { DataTypes, Sequelize } from 'sequelize';
+import { DataTypes } from 'sequelize';
 
 async function up({ context: queryInterface }) {
   await queryInterface.createTable('media', {

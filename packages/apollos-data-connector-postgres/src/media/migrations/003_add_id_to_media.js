@@ -15,6 +15,16 @@ async function up({ context: queryInterface }) {
     allowNull: false,
   });
 
+  await queryInterface.addColumn('media', 'createdAt', {
+    type: Sequelize.DATE,
+    allowNull: false,
+  });
+
+  await queryInterface.addColumn('media', 'updatedAt', {
+    type: Sequelize.DATE,
+    allowNull: false,
+  });
+
   await queryInterface.addConstraint('media', {
     fields: ['apollosId'],
     type: 'unique',
@@ -28,6 +38,10 @@ async function up({ context: queryInterface }) {
 
 async function down({ context: queryInterface }) {
   await queryInterface.removeColumn('media', 'id');
+  await queryInterface.removeColumn('apollosId', 'id');
+  await queryInterface.removeColumn('apollosType', 'id');
+  await queryInterface.removeColumn('createdAt', 'id');
+  await queryInterface.removeColumn('updatedAt', 'id');
 }
 
 const name = '003-add-id-to-media';
