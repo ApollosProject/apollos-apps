@@ -31,7 +31,7 @@ const setupModel = configureModel(({ sequelize }) => {
     constraints: false,
     scope: { nodeType: 'ContentItem', type: 'AUDIO' },
   });
-  sequelize.models.media.hasOne(sequelize.models.contentItem);
+  sequelize.models.media.belongsTo(sequelize.models.contentItem);
 });
 
 export { createModel, setupModel };
