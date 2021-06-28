@@ -1,37 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Binary files resolver returns a url if the person object has a id 1`] = `
-Object {
-  "uri": "https://example.com/1.jpg",
-}
-`;
-
-exports[`Binary files resolver returns a url if the person object has a id 2`] = `
-Array [
-  Array [
-    "BinaryFiles/123",
-    Object {},
-    Object {},
-  ],
-]
-`;
-
-exports[`Binary files resolver returns a url if the person object has a url 1`] = `
-Object {
-  "uri": "http://alreadyhere.com/1.jpg",
-}
-`;
-
-exports[`Binary files resolver returns a url if the person object has a url 2`] = `Array []`;
-
-exports[`Binary files resolver returns null with no image 1`] = `
-Object {
-  "uri": null,
-}
-`;
-
-exports[`Binary files resolver returns null with no image 2`] = `Array []`;
-
 exports[`BinaryFiles uploads a user's profile picture 1`] = `"245"`;
 
 exports[`BinaryFiles uploads a user's profile picture 2`] = `

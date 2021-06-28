@@ -15,7 +15,9 @@ export default {
   Person: {
     id: ({ id }, args, context, { parentType }) =>
       createGlobalId(id, parentType.name),
-    photo: ({ photo: { url } }) => (url ? { uri: url } : null),
+    photo: async ({ photo }, args, { dataSources: { BinaryFiles } }) => ({
+      uri: await BinaryFiles.findOrReturnImageUrl(photo), // protect against passing null photo
+    }),
     birthDate: enforceCurrentUser(({ birthDate }) =>
       birthDate
         ? moment.tz(birthDate, ApollosConfig.ROCK.TIMEZONE).toJSON()
