@@ -18,20 +18,22 @@ const setupModel = configureModel(({ sequelize }) => {
     sourceKey: 'id',
     constraints: false,
     scope: { nodeType: 'ContentItem', type: 'IMAGE' },
+    as: 'images',
   });
   sequelize.models.contentItem.hasMany(sequelize.models.media, {
     foreignKey: 'nodeId',
     sourceKey: 'id',
     constraints: false,
     scope: { nodeType: 'ContentItem', type: 'VIDEO' },
+    as: 'videos',
   });
   sequelize.models.contentItem.hasMany(sequelize.models.media, {
     foreignKey: 'nodeId',
     sourceKey: 'id',
     constraints: false,
     scope: { nodeType: 'ContentItem', type: 'AUDIO' },
+    as: 'audio',
   });
-  sequelize.models.media.hasOne(sequelize.models.contentItem);
 });
 
 export { createModel, setupModel };
