@@ -20,6 +20,7 @@ async function up({ context: queryInterface }) {
 
     await queryInterface.addIndex('media', ['originId', 'originType'], {
       unique: true,
+      transaction: t,
     });
   });
 }
