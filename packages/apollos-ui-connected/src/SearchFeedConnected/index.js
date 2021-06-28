@@ -20,18 +20,9 @@ const StyledFeedView = withProps(({ hasContent }) => ({
   },
 }))(FeedView);
 
-const handleOnPress = ({ navigation, item }) => {
-  const id = get(item, 'node.id', null);
-  return navigation.navigate('ContentSingle', {
-    itemId: id,
-    transitionKey: item.transitionKey,
-  });
-};
-
 const keyExtractor = (item) => item && get(item, 'node.id', null);
 
-const SearchFeedConnected = ({ searchText, ...props }) => {
-  const navigation = useNavigation();
+const SearchFeedConnected = ({ searchText, onPressItem, ...props }) => {
   return (
     <Query
       query={GET_SEARCH_RESULTS}
@@ -47,7 +38,7 @@ const SearchFeedConnected = ({ searchText, ...props }) => {
           isLoading={loading}
           error={error}
           refetch={refetch}
-          onPressItem={(item) => handleOnPress({ navigation, item })}
+          onPressItem={onPressItem}
           keyExtractor={keyExtractor}
           {...props}
         />
@@ -58,6 +49,7 @@ const SearchFeedConnected = ({ searchText, ...props }) => {
 
 SearchFeedConnected.propTypes = {
   searchText: PropTypes.string,
+  onPressItem: PropTypes.func,
 };
 
 export {
