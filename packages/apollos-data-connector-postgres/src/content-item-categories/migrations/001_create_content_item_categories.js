@@ -38,19 +38,15 @@ async function up({ context: queryInterface }) {
     }
   );
 
-  await queryInterface.addColumn('contentItems', 'contentItemChannelId', {
+  await queryInterface.addColumn('contentItems', 'contentItemCategoryId', {
     type: Sequelize.UUID,
-    references: {
-      model: 'contentChannelItems',
-      key: 'id',
-    },
   });
 
   await queryInterface.addConstraint('contentItems', {
-    fields: ['contentItemChannelId'],
+    fields: ['contentItemCategoryId'],
     type: 'foreign key',
     references: {
-      table: 'contentItemChannes',
+      table: 'contentItemCategories',
       field: 'id',
     },
   });
@@ -58,6 +54,8 @@ async function up({ context: queryInterface }) {
 
 async function down({ context: queryInterface }) {
   await queryInterface.dropTable('contentItemCategories');
+
+  await queryInterface.removeColumn('contentItems', 'contentItemCategoryId');
 }
 
 const name = '001-create-content-items-categories';
