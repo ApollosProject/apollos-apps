@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useQuery } from '@apollo/client';
 import { useRoute, useNavigation } from '@react-navigation/native';
 import {
@@ -33,12 +34,12 @@ const FullscreenBackgroundView = styled({
 // Those slides will be shown to any user with an older version than the version of those slides.
 export const ONBOARDING_VERSION = 2;
 
-function Onboarding() {
+function Onboarding(props) {
   const route = useRoute();
   const navigation = useNavigation();
 
-  const userVersion = route?.params?.userVersion || 0;
-  const slides = route?.params?.slides || [
+  const userVersion = route?.params?.userVersion || props?.userVersion || 0;
+  const slides = props?.slides || [
     FeaturesConnected,
     LocationFinderConnected,
     AskNotificationsConnected,
@@ -75,4 +76,9 @@ function Onboarding() {
   );
 }
 
-export default Onboarding;
+Onboarding.propTypes = {
+  userVersion: PropTypes.number,
+  slides: PropTypes.arrayOf(PropTypes.shape({})),
+};
+
+export default named('ui-onboarding.Onboarding')(Onboarding);

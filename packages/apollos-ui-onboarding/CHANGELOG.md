@@ -3,6 +3,64 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.24.0](https://github.com/apollosproject/apollos-apps/compare/v2.23.1...v2.24.0) (2021-06-28)
+
+
+### Bug Fixes
+
+* complete onboarding when there are no more slides ([#2022](https://github.com/apollosproject/apollos-apps/issues/2022)) ([7e8a9e7](https://github.com/apollosproject/apollos-apps/commit/7e8a9e7a80ce18d96bddda0a9197e59f68dca0ee))
+
+
+
+### [2.23.1](https://github.com/apollosproject/apollos-apps/compare/v2.23.0...v2.23.1) (2021-06-24)
+
+**Note:** Version bump only for package @apollosproject/ui-onboarding
+
+
+
+
+
+## [2.23.0](https://github.com/apollosproject/apollos-apps/compare/v2.22.0...v2.23.0) (2021-06-24)
+
+
+### Bug Fixes
+
+* remove ability to pass slides as route params ([#2016](https://github.com/apollosproject/apollos-apps/issues/2016)) ([5f23374](https://github.com/apollosproject/apollos-apps/commit/5f23374c7711c4bb456c545481f9f0e296a8f843))
+
+
+
+## [2.22.0](https://github.com/apollosproject/apollos-apps/compare/v2.21.2...v2.22.0) (2021-06-23)
+
+**Note:** Version bump only for package @apollosproject/ui-onboarding
+
+
+
+
+
+### [2.21.2](https://github.com/apollosproject/apollos-apps/compare/v2.21.1...v2.21.2) (2021-06-18)
+
+**Note:** Version bump only for package @apollosproject/ui-onboarding
+
+
+
+
+
+### [2.21.1](https://github.com/apollosproject/apollos-apps/compare/v2.21.0...v2.21.1) (2021-06-17)
+
+**Note:** Version bump only for package @apollosproject/ui-onboarding
+
+
+
+
+
+## [2.21.0](https://github.com/apollosproject/apollos-apps/compare/v2.20.0...v2.21.0) (2021-06-16)
+
+**Note:** Version bump only for package @apollosproject/ui-onboarding
+
+
+
+
+
 ## [2.20.0](https://github.com/apollosproject/apollos-apps/compare/v2.19.0...v2.20.0) (2021-06-14)
 
 **Note:** Version bump only for package @apollosproject/ui-onboarding
