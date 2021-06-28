@@ -1,5 +1,4 @@
 import { get } from 'lodash';
-import moment from 'moment-timezone';
 import { withEdgePagination } from '@apollosproject/server-core';
 import ApollosConfig from '@apollosproject/config';
 
@@ -7,11 +6,11 @@ const { ROCK, ROCK_MAPPINGS } = ApollosConfig;
 
 export const defaultContentItemResolvers = {
   id: ({ apollosId }) => apollosId,
-  // childContentItemsConnection: async ({ id }, args, { dataSources }) =>
-  //   dataSources.ContentItem.paginate({
-  //     cursor: await dataSources.ContentItem.getCursorByParentContentItemId(id),
-  //     args,
-  //   }),
+  childContentItemsConnection: async (model, args, { dataSources }) =>
+    dataSources.ContentItem.paginate({
+      ...args,
+      cursor: model.getChildren.bind(model),
+    }),
 
   title: ({ title }, { hyphenated }, { dataSources }) =>
     hyphenated
@@ -30,17 +29,17 @@ export const defaultContentItemResolvers = {
   //     args,
   //   }),
 
-//   images: (root, args, { dataSources: { ContentItem } }) =>
-//     ContentItem.getImages(root),
-// 
-//   videos: (root, args, { dataSources: { ContentItem } }) =>
-//     ContentItem.getVideos(root),
-// 
-//   audios: (root, args, { dataSources: { ContentItem } }) =>
-//     ContentItem.getAudios(root),
-// 
-//   coverImage: (root, args, { dataSources: { ContentItem } }) =>
-//     ContentItem.getCoverImage(root),
+  //   images: (root, args, { dataSources: { ContentItem } }) =>
+  //     ContentItem.getImages(root),
+  //
+  //   videos: (root, args, { dataSources: { ContentItem } }) =>
+  //     ContentItem.getVideos(root),
+  //
+  //   audios: (root, args, { dataSources: { ContentItem } }) =>
+  //     ContentItem.getAudios(root),
+  //
+  //   coverImage: (root, args, { dataSources: { ContentItem } }) =>
+  //     ContentItem.getCoverImage(root),
 
   publishDate: ({ publishAt }) => publishAt,
 
@@ -55,18 +54,14 @@ export const defaultContentItemResolvers = {
 
 const resolver = {
   Query: {
-    // campaigns: (root, args, { dataSources }) =>
-    //   dataSources.ContentItem.paginate({
-    //     cursor: dataSources.ContentItem.byContentChannelIds(
-    //       ROCK_MAPPINGS.CAMPAIGN_CHANNEL_IDS
-    //     ),
-    //     args,
-    //   }),
-    // userFeed: (root, args, { dataSources }) =>
-    //   dataSources.ContentItem.paginate({
-    //     cursor: dataSources.ContentItem.byUserFeed(),
-    //     args,
-    //   }),
+    campaigns: (root, args, { dataSources }) =>
+      dataSources.ContentItem.paginate({
+        ...args,
+      }),
+    userFeed: (root, args, { dataSources }) =>
+      dataSources.ContentItem.paginate({
+        ...args,
+      }),
     // personaFeed: async (root, args, { dataSources }) => {
     //   const personaFeed = await dataSources.ContentItem.byPersonaFeed(
     //     args.first
@@ -75,7 +70,6 @@ const resolver = {
     //     cursor: personaFeed,
     //     args,
     //   });
-    },
   },
   DevotionalContentItem: {
     ...defaultContentItemResolvers,
@@ -113,7 +107,7 @@ const resolver = {
   },
   ContentItem: {
     ...defaultContentItemResolvers,
-    __resolveType: (root) => root.apollosType
+    __resolveType: (root) => root.apollosType,
   },
   ContentItemsConnection: {
     totalCount: ({ getTotalCount }) => getTotalCount(),

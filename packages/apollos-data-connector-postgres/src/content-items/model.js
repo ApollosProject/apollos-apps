@@ -12,6 +12,13 @@ const createModel = defineModel({
     publishAt: DataTypes.DATE,
     active: DataTypes.BOOLEAN,
   },
+  // sequelizeOptions: {
+  //   defaultScope: {
+  //     where: {
+  //       active: true,
+  //     },
+  //   },
+  // },
 });
 
 const setupModel = configureModel(() => {});

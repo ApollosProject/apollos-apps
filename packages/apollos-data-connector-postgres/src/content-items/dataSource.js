@@ -4,12 +4,17 @@ import {
   createGlobalId,
   parseGlobalId,
   generateAppLink,
+  createCursor,
+  parseCursor,
 } from '@apollosproject/server-core';
 import { Op } from 'sequelize';
+import ApollosConfig from '@apollosproject/config';
 import { PostgresDataSource } from '../postgres';
 
+const { ROCK, ROCK_MAPPINGS } = ApollosConfig;
+
 class ContentItemDataSource extends PostgresDataSource {
-  resource = 'ContentChannelItems';
+  modelName = 'contentItem';
 
   activeChannelIds =
     ROCK_MAPPINGS.ALL_CONTENT_CHANNELS ||
@@ -40,6 +45,50 @@ class ContentItemDataSource extends PostgresDataSource {
   //
   //
   //   }
+
+  async paginate({ cursor, where = {}, limit = 20, after, ...args }) {
+    let skip = 0;
+    if (after) {
+      const parsed = parseCursor(after);
+      if (parsed && Object.hasOwnProperty.call(parsed, 'position')) {
+        skip = parsed.position + 1;
+      } else {
+        throw new Error(`An invalid 'after' cursor was provided: ${after}`);
+      }
+    }
+
+    const findFunc = cursor || this.model.findAndCountAll.bind(this.model);
+
+    const result = await findFunc({
+      where,
+      ...args,
+      offset: skip,
+      limit,
+    });
+
+    let getTotalCount;
+    let rows;
+
+    // If the cursor returned a straight up array
+    // For example, if `getAll` was called.
+    if (Array.isArray(result)) {
+      rows = result;
+      // solve this later.....
+      getTotalCount = () => 0;
+    } else {
+      // If the cursor was a `findAndCountAll`
+      getTotalCount = () => result.count;
+      rows = result.rows;
+    }
+
+    return {
+      edges: rows.map((node, i) => ({
+        node,
+        cursor: createCursor({ position: i + skip }),
+      })),
+      getTotalCount,
+    };
+  }
 
   getShareUrl = async (content) => {
     return generateAppLink('universal', 'content', {
@@ -79,7 +128,11 @@ class ContentItemDataSource extends PostgresDataSource {
     return model.getParents();
   }
 
-  getCursorByParentContentItemId = async (id) => {};
+  getCursorByParentContentItemId = async (model) => {
+    return {
+      cursor: this.model.getChildren,
+    }
+  };
 
   // A simple alias at this point.
   async getChildren(model) {
@@ -188,9 +241,9 @@ class ContentItemDataSource extends PostgresDataSource {
   //   .cache({ ttl: 60 })
   //   .orderBy('StartDateTime', 'desc');
 
-  getFromIds = (ids = [], { originType = null} = {}) => {
+  getFromIds = (ids = [], { originType = null } = {}) => {
     return this.model.findAll({
-      where: 
+      where: {},
     });
     // if (ids.length === 0) return this.request().empty();
     // if (get(ApollosConfig, 'ROCK.USE_PLUGIN', false)) {
