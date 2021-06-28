@@ -7,9 +7,6 @@ async function up({ context: queryInterface }) {
     nodeId: DataTypes.UUID,
     nodeType: DataTypes.STRING,
   });
-  await queryInterface.addIndex('media', ['originId', 'originType'], {
-    unique: true,
-  });
 }
 
 async function down({ context: queryInterface }) {
