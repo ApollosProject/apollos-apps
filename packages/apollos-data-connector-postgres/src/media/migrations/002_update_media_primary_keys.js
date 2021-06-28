@@ -6,7 +6,6 @@ async function up({ context: queryInterface }) {
       'media',
       'originId',
       {
-        primaryKey: true,
         type: Sequelize.STRING,
         allowNull: false,
       },
