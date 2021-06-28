@@ -6,6 +6,20 @@ async function up({ context: queryInterface }) {
     defaultValue: Sequelize.literal('uuid_generate_v4()'),
   });
 
+  await queryInterface.addColumn('media', 'apollosId', {
+    type: Sequelize.STRING,
+    allowNull: true,
+  });
+  await queryInterface.addColumn('media', 'apollosType', {
+    type: Sequelize.STRING,
+    allowNull: false,
+  });
+
+  await queryInterface.addConstraint('media', {
+    fields: ['apollosId'],
+    type: 'unique',
+  });
+
   await queryInterface.addConstraint('media', {
     fields: ['id'],
     type: 'primary key',
