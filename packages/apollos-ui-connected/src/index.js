@@ -75,6 +75,7 @@ export LikeButtonConnected, {
   getLikedNode,
   updateLikedContent,
   updateLikeNode,
+  useLike,
 } from './LikeButtonConnected';
 export LikedContentFeedConnected, {
   GET_LIKED_CONTENT,
@@ -99,6 +100,7 @@ export SearchFeedConnected, {
 export ShareButtonConnected, {
   GET_SHARE_CONTENT,
   ShareButton,
+  useShare,
 } from './ShareButtonConnected';
 export UpNextButtonConnected from './UpNextButtonConnected';
 export UserAvatarConnected, { UserAvatarUpdate } from './UserAvatarConnected';

@@ -1,6 +1,5 @@
 // experimental
 import React, { useMemo } from 'react';
-import { View, StyleSheet } from 'react-native';
 import {
   useSharedValue,
   useAnimatedScrollHandler,

@@ -24,6 +24,7 @@ export ChannelLabel from './ChannelLabel';
 export Chip, { ChipList } from './Chip';
 export ConnectedImage, { ImageSourceType } from './ConnectedImage';
 export ContentCard from './ContentCard';
+export ContentTitles from './ContentTitles';
 export DefaultCard from './DefaultCard';
 export FeaturedCard from './FeaturedCard';
 export FeedView from './FeedView';
@@ -69,6 +70,8 @@ export Comment, { CommentLikeButton, ActionMenu } from './Comment';
 export SideBySideView from './SideBySideView';
 export styled from './styled';
 export StretchyView from './StretchyView';
+export StretchyViewExperimental from './StretchyView/ReanimatedStretchyView';
+export SocialBar from './SocialBar';
 export TableView, {
   Cell,
   CellText,
