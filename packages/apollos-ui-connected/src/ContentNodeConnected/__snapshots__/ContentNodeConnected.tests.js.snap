@@ -49,7 +49,7 @@ Array [
       padded={true}
       style={
         Object {
-          "color": "#303030",
+          "color": "#27272E",
           "fontFamily": "InterUI-Black",
           "fontSize": 36,
           "lineHeight": 41.4,
@@ -80,7 +80,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,

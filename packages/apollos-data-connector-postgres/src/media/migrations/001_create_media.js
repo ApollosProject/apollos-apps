@@ -1,20 +1,11 @@
-import { DataTypes, Sequelize } from 'sequelize';
+import { DataTypes } from 'sequelize';
 
 async function up({ context: queryInterface }) {
   await queryInterface.createTable('media', {
-    originId: {
-      primaryKey: true,
-      type: Sequelize.STRING,
-      allowNull: false,
-    },
-    originType: { type: Sequelize.STRING, allowNull: false },
     type: DataTypes.ENUM(['IMAGE', 'VIDEO', 'AUDIO']),
     url: DataTypes.STRING,
     nodeId: DataTypes.UUID,
     nodeType: DataTypes.STRING,
-  });
-  await queryInterface.addIndex('media', ['originId', 'originType'], {
-    unique: true,
   });
 }
 

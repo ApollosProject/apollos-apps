@@ -23,7 +23,7 @@ Array [
     colors={
       Array [
         4294967295,
-        4294506484,
+        4294572539,
       ]
     }
     endPoint={
@@ -85,7 +85,7 @@ Array [
               padded={true}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
                   "lineHeight": 21,
@@ -160,7 +160,7 @@ Array [
                 <Text
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#27272E",
                       "fontFamily": "InterUI-Medium",
                       "fontSize": 14,
                       "lineHeight": 21,
@@ -209,7 +209,7 @@ Array [
                 <Text
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#27272E",
                       "fontFamily": "InterUI-Medium",
                       "fontSize": 14,
                       "lineHeight": 21,
@@ -258,7 +258,7 @@ Array [
                 <Text
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#27272E",
                       "fontFamily": "InterUI-Medium",
                       "fontSize": 14,
                       "lineHeight": 21,
@@ -332,7 +332,7 @@ Array [
                     style={
                       Object {
                         "alignItems": "center",
-                        "color": "#303030",
+                        "color": "#27272E",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
                         "justifyContent": "center",
@@ -406,7 +406,7 @@ Array [
                   style={
                     Object {
                       "backgroundColor": "transparent",
-                      "color": "#505050",
+                      "color": "rgba(39, 39, 46, 0.6)",
                       "fontFamily": "InterUI-Medium",
                       "fontSize": 14,
                       "lineHeight": 21,
