@@ -336,7 +336,7 @@ exports[`the Onboarding component should render Onboarding 1`] = `
                     <RCTScrollView
                       activeDot={
                         <View>
-                          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+                          <mapProps(Component) />
                         </View>
                       }
                       automaticallyAdjustContentInsets={false}
@@ -361,7 +361,7 @@ exports[`the Onboarding component should render Onboarding 1`] = `
                       disablePrevButton={false}
                       dot={
                         <View>
-                          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+                          <mapProps(Component) />
                         </View>
                       }
                       horizontal={true}

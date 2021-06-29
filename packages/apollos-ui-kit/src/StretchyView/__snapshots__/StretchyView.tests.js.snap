@@ -151,7 +151,7 @@ Array [
   />,
   <View
     StretchyComponent={
-      <mapProps(getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage)))))
+      <mapProps(Component)
         source={
           Object {
             "uri": "https://picsum.photos/600/600",
