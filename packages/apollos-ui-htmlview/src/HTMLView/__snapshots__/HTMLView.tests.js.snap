@@ -39,7 +39,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -80,7 +80,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -104,7 +104,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -128,7 +128,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -145,7 +145,7 @@ Array [
           Object {
             "alignSelf": "stretch",
             "borderBottomWidth": 0.5,
-            "borderColor": "#A5A5A5",
+            "borderColor": "rgba(39, 39, 46, 0.3)",
             "borderTopWidth": 0.5,
             "marginVertical": 48,
             "paddingHorizontal": 16,
@@ -165,7 +165,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Italic",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -191,7 +191,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -208,7 +208,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -223,7 +223,7 @@ Array [
         padded={true}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Black",
             "fontSize": 24,
             "lineHeight": 27.6,
@@ -243,7 +243,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -266,7 +266,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -307,7 +307,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -331,7 +331,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -348,7 +348,7 @@ Array [
           Object {
             "alignSelf": "stretch",
             "borderBottomWidth": 0.5,
-            "borderColor": "#A5A5A5",
+            "borderColor": "rgba(39, 39, 46, 0.3)",
             "borderTopWidth": 0.5,
             "marginVertical": 48,
             "paddingHorizontal": 16,
@@ -368,7 +368,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Italic",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -394,7 +394,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -411,7 +411,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -452,7 +452,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -474,7 +474,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -510,7 +510,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -532,7 +532,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -568,7 +568,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -590,7 +590,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -612,7 +612,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -635,7 +635,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -659,7 +659,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -676,7 +676,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -691,7 +691,7 @@ Array [
         padded={true}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Black",
             "fontSize": 24,
             "lineHeight": 27.6,
@@ -711,7 +711,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -734,7 +734,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -765,7 +765,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -799,7 +799,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -821,7 +821,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -839,7 +839,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -870,7 +870,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -892,7 +892,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -910,7 +910,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -941,7 +941,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -963,7 +963,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -981,7 +981,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -1012,7 +1012,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -1034,7 +1034,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -1052,7 +1052,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -1078,7 +1078,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -1102,7 +1102,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -1158,7 +1158,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -1209,7 +1209,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -1255,7 +1255,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -1267,7 +1267,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -1315,7 +1315,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -1375,7 +1375,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -1431,7 +1431,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -1448,7 +1448,7 @@ Array [
           Object {
             "alignSelf": "stretch",
             "borderBottomWidth": 0.5,
-            "borderColor": "#A5A5A5",
+            "borderColor": "rgba(39, 39, 46, 0.3)",
             "borderTopWidth": 0.5,
             "marginVertical": 48,
             "paddingHorizontal": 16,
@@ -1461,7 +1461,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Italic",
               "fontSize": 16,
               "lineHeight": 26,
@@ -1512,7 +1512,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -1568,7 +1568,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -1624,7 +1624,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -1641,7 +1641,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -1653,7 +1653,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -1676,7 +1676,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -1732,7 +1732,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -1817,7 +1817,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -1839,7 +1839,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -1872,7 +1872,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -1894,7 +1894,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -2078,7 +2078,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -2126,7 +2126,7 @@ Array [
         padded={true}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Black",
             "fontSize": 43,
             "lineHeight": 49.45,
@@ -2176,7 +2176,7 @@ Array [
         padded={true}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Black",
             "fontSize": 36,
             "lineHeight": 41.4,
@@ -2227,7 +2227,7 @@ Array [
         padded={true}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Black",
             "fontSize": 24,
             "lineHeight": 27.6,
@@ -2278,7 +2278,7 @@ Array [
         padded={true}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
             "lineHeight": 24,
@@ -2329,7 +2329,7 @@ Array [
         padded={true}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Medium",
             "fontSize": 14,
             "lineHeight": 21,
@@ -2380,7 +2380,7 @@ Array [
         padded={true}
         style={
           Object {
-            "color": "#505050",
+            "color": "rgba(39, 39, 46, 0.6)",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
             "lineHeight": 18,
@@ -2499,7 +2499,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -2521,7 +2521,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -2554,7 +2554,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -2576,7 +2576,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -2633,7 +2633,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -2645,7 +2645,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -2702,7 +2702,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -2714,7 +2714,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -2771,7 +2771,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -2812,7 +2812,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -2836,7 +2836,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -2860,7 +2860,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -2877,7 +2877,7 @@ Array [
           Object {
             "alignSelf": "stretch",
             "borderBottomWidth": 0.5,
-            "borderColor": "#A5A5A5",
+            "borderColor": "rgba(39, 39, 46, 0.3)",
             "borderTopWidth": 0.5,
             "marginVertical": 48,
             "paddingHorizontal": 16,
@@ -2897,7 +2897,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Italic",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -2923,7 +2923,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -2940,7 +2940,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -2955,7 +2955,7 @@ Array [
         padded={true}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Black",
             "fontSize": 24,
             "lineHeight": 27.6,
@@ -2975,7 +2975,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -2998,7 +2998,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -3039,7 +3039,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -3063,7 +3063,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -3080,7 +3080,7 @@ Array [
           Object {
             "alignSelf": "stretch",
             "borderBottomWidth": 0.5,
-            "borderColor": "#A5A5A5",
+            "borderColor": "rgba(39, 39, 46, 0.3)",
             "borderTopWidth": 0.5,
             "marginVertical": 48,
             "paddingHorizontal": 16,
@@ -3100,7 +3100,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Italic",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -3126,7 +3126,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -3143,7 +3143,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -3184,7 +3184,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -3206,7 +3206,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -3242,7 +3242,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -3264,7 +3264,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -3300,7 +3300,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -3322,7 +3322,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -3344,7 +3344,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -3367,7 +3367,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -3391,7 +3391,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -3408,7 +3408,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -3423,7 +3423,7 @@ Array [
         padded={true}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Black",
             "fontSize": 24,
             "lineHeight": 27.6,
@@ -3443,7 +3443,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -3466,7 +3466,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -3497,7 +3497,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -3531,7 +3531,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -3553,7 +3553,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -3571,7 +3571,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -3602,7 +3602,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -3624,7 +3624,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -3642,7 +3642,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -3673,7 +3673,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -3695,7 +3695,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -3713,7 +3713,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -3744,7 +3744,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -3766,7 +3766,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -3784,7 +3784,7 @@ Array [
         italic={false}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -3810,7 +3810,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -3834,7 +3834,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -3890,7 +3890,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -3960,7 +3960,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -3972,7 +3972,7 @@ Array [
             italic={true}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Italic",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -4029,7 +4029,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -4041,7 +4041,7 @@ Array [
             italic={true}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Italic",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -4098,7 +4098,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -4166,7 +4166,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,

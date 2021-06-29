@@ -112,7 +112,7 @@ exports[`The SearchCardConnected component should render 1`] = `
         numberOfLines={3}
         style={
           Object {
-            "color": "#F8F7F4",
+            "color": "#F4F7F8",
             "fontFamily": "InterUI-Black",
             "fontSize": 24,
             "lineHeight": 27.6,
@@ -145,7 +145,7 @@ exports[`The SearchCardConnected component should render 1`] = `
             numberOfLines={2}
             style={
               Object {
-                "color": "#F8F7F4",
+                "color": "#F4F7F8",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -261,7 +261,7 @@ exports[`The SearchCardConnected component should render without image 1`] = `
         numberOfLines={3}
         style={
           Object {
-            "color": "#F8F7F4",
+            "color": "#F4F7F8",
             "fontFamily": "InterUI-Black",
             "fontSize": 24,
             "lineHeight": 27.6,
@@ -294,7 +294,7 @@ exports[`The SearchCardConnected component should render without image 1`] = `
             numberOfLines={2}
             style={
               Object {
-                "color": "#F8F7F4",
+                "color": "#F4F7F8",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,

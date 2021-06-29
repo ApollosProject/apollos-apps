@@ -219,7 +219,7 @@ Array [
         <View
           style={
             Object {
-              "backgroundColor": "rgba(48, 48, 48, 0.09999999999999998)",
+              "backgroundColor": "rgba(39, 39, 46, 0.09999999999999998)",
               "borderRadius": 2,
               "height": 2,
               "marginHorizontal": 1,
@@ -232,7 +232,7 @@ Array [
         <View
           style={
             Object {
-              "backgroundColor": "rgba(48, 48, 48, 0.09999999999999998)",
+              "backgroundColor": "rgba(39, 39, 46, 0.09999999999999998)",
               "borderRadius": 2,
               "height": 2,
               "marginHorizontal": 1,
@@ -465,7 +465,7 @@ Array [
         <View
           style={
             Object {
-              "backgroundColor": "rgba(48, 48, 48, 0.09999999999999998)",
+              "backgroundColor": "rgba(39, 39, 46, 0.09999999999999998)",
               "borderRadius": 2,
               "height": 2,
               "marginHorizontal": 1,
@@ -478,7 +478,7 @@ Array [
         <View
           style={
             Object {
-              "backgroundColor": "rgba(48, 48, 48, 0.09999999999999998)",
+              "backgroundColor": "rgba(39, 39, 46, 0.09999999999999998)",
               "borderRadius": 2,
               "height": 2,
               "marginHorizontal": 1,

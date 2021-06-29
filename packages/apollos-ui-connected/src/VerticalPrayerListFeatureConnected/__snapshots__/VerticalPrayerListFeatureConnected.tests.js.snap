@@ -13,7 +13,7 @@ Array [
     <Text
       style={
         Object {
-          "color": "#505050",
+          "color": "rgba(39, 39, 46, 0.6)",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
           "lineHeight": 18,
@@ -25,7 +25,7 @@ Array [
     <Text
       style={
         Object {
-          "color": "#303030",
+          "color": "#27272E",
           "fontFamily": "InterUI-Black",
           "fontSize": 24,
           "lineHeight": 27.6,
@@ -105,7 +105,7 @@ Array [
                 <Text
                   style={
                     Object {
-                      "color": "#F8F7F4",
+                      "color": "rgb(249, 249, 251)",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 40,
                     }
@@ -120,7 +120,7 @@ Array [
           <Text
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
                 "lineHeight": 24,
@@ -141,7 +141,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -292,7 +292,7 @@ Array [
                 <Text
                   style={
                     Object {
-                      "color": "#F8F7F4",
+                      "color": "rgb(249, 249, 251)",
                       "fontFamily": "InterUI-Bold",
                       "fontSize": 40,
                     }
@@ -307,7 +307,7 @@ Array [
           <Text
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
                 "lineHeight": 24,
@@ -328,7 +328,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -425,7 +425,7 @@ Array [
     <Text
       style={
         Object {
-          "color": "#505050",
+          "color": "rgba(39, 39, 46, 0.6)",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
           "lineHeight": 18,
@@ -437,7 +437,7 @@ Array [
     <Text
       style={
         Object {
-          "color": "#303030",
+          "color": "#27272E",
           "fontFamily": "InterUI-Black",
           "fontSize": 24,
           "lineHeight": 27.6,
@@ -459,7 +459,7 @@ Array [
     <Text
       style={
         Object {
-          "color": "#303030",
+          "color": "#27272E",
           "fontFamily": "InterUI-Black",
           "fontSize": 24,
           "lineHeight": 27.6,

@@ -86,7 +86,7 @@ Array [
           Object {
             "backgroundColor": "transparent",
             "bottom": 16,
-            "color": "#F8F7F4",
+            "color": "#F4F7F8",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
             "left": 16,
@@ -226,7 +226,7 @@ Array [
           Object {
             "backgroundColor": "transparent",
             "bottom": 16,
-            "color": "#F8F7F4",
+            "color": "#F4F7F8",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
             "left": 16,
@@ -428,7 +428,7 @@ Array [
           Object {
             "backgroundColor": "transparent",
             "bottom": 16,
-            "color": "#F8F7F4",
+            "color": "#F4F7F8",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
             "left": 16,

@@ -21,7 +21,7 @@ exports[`The FollowingListConnected component should render with data 1`] = `
     <Text
       style={
         Object {
-          "color": "#303030",
+          "color": "#27272E",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
           "lineHeight": 24,
@@ -94,7 +94,7 @@ exports[`The FollowingListConnected component should render with data 1`] = `
         numberOfLines={1}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Medium",
             "fontSize": 14,
             "lineHeight": 21,

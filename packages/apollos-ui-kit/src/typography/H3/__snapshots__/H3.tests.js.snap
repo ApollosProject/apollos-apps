@@ -23,7 +23,7 @@ Array [
     accessible={false}
     style={
       Object {
-        "color": "#303030",
+        "color": "#27272E",
         "fontFamily": "InterUI-Black",
         "fontSize": 24,
         "lineHeight": 27.6,
@@ -161,7 +161,7 @@ Array [
   <Text
     style={
       Object {
-        "color": "#303030",
+        "color": "#27272E",
         "fontFamily": "InterUI-Black",
         "fontSize": 24,
         "lineHeight": 27.6,
@@ -196,7 +196,7 @@ Array [
     padded={true}
     style={
       Object {
-        "color": "#303030",
+        "color": "#27272E",
         "fontFamily": "InterUI-Black",
         "fontSize": 24,
         "lineHeight": 27.6,

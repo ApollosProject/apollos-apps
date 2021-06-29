@@ -244,7 +244,7 @@ Array [
         style={
           Object {
             "alignItems": "center",
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
             "justifyContent": "center",
@@ -381,7 +381,7 @@ Array [
             fill={
               Array [
                 0,
-                4281348144,
+                4280756014,
               ]
             }
             fillOpacity={1}
@@ -428,7 +428,7 @@ Array [
       style={
         Object {
           "alignItems": "center",
-          "color": "#303030",
+          "color": "#27272E",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
           "justifyContent": "center",
@@ -503,7 +503,7 @@ Array [
         style={
           Object {
             "alignItems": "center",
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Bold",
             "fontSize": 12,
             "justifyContent": "center",
@@ -565,7 +565,7 @@ Array [
       style={
         Object {
           "alignItems": "center",
-          "color": "#303030",
+          "color": "#27272E",
           "fontFamily": "InterUI-Bold",
           "fontSize": 12,
           "justifyContent": "center",

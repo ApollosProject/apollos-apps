@@ -23,7 +23,7 @@ exports[`ContentSingleFeatures should render 1`] = `
       padded={true}
       style={
         Object {
-          "color": "#303030",
+          "color": "#27272E",
           "fontFamily": "InterUI-Black",
           "fontSize": 24,
           "lineHeight": 27.6,
@@ -73,7 +73,7 @@ exports[`ContentSingleFeatures should render 1`] = `
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -268,7 +268,7 @@ exports[`ContentSingleFeatures should render 1`] = `
           <Text
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
                 "lineHeight": 24,
@@ -279,7 +279,7 @@ exports[`ContentSingleFeatures should render 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
                   "lineHeight": 24,
@@ -291,7 +291,7 @@ exports[`ContentSingleFeatures should render 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#505050",
+                  "color": "rgba(39, 39, 46, 0.6)",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
                   "lineHeight": 18,
@@ -322,7 +322,7 @@ exports[`ContentSingleFeatures should render 1`] = `
                   italic={false}
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#27272E",
                       "fontFamily": "DroidSerif",
                       "fontSize": 16,
                       "lineHeight": 26,
@@ -334,7 +334,7 @@ exports[`ContentSingleFeatures should render 1`] = `
                     italic={false}
                     style={
                       Object {
-                        "color": "#505050",
+                        "color": "rgba(39, 39, 46, 0.6)",
                         "fontFamily": "DroidSerif",
                         "fontSize": 9.6,
                         "lineHeight": 26,
@@ -363,7 +363,7 @@ exports[`ContentSingleFeatures should render 1`] = `
                     italic={false}
                     style={
                       Object {
-                        "color": "#303030",
+                        "color": "#27272E",
                         "fontFamily": "DroidSerif",
                         "fontSize": 16,
                         "lineHeight": 26,
@@ -383,7 +383,7 @@ exports[`ContentSingleFeatures should render 1`] = `
             italic={false}
             style={
               Object {
-                "color": "#505050",
+                "color": "rgba(39, 39, 46, 0.6)",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 9.6,
                 "lineHeight": 10.8,
@@ -579,7 +579,7 @@ exports[`ContentSingleFeatures should render 1`] = `
           <Text
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
                 "lineHeight": 24,
@@ -590,7 +590,7 @@ exports[`ContentSingleFeatures should render 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
                   "lineHeight": 24,
@@ -602,7 +602,7 @@ exports[`ContentSingleFeatures should render 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#505050",
+                  "color": "rgba(39, 39, 46, 0.6)",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
                   "lineHeight": 18,
@@ -633,7 +633,7 @@ exports[`ContentSingleFeatures should render 1`] = `
                   italic={false}
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#27272E",
                       "fontFamily": "DroidSerif",
                       "fontSize": 16,
                       "lineHeight": 26,
@@ -645,7 +645,7 @@ exports[`ContentSingleFeatures should render 1`] = `
                     italic={false}
                     style={
                       Object {
-                        "color": "#505050",
+                        "color": "rgba(39, 39, 46, 0.6)",
                         "fontFamily": "DroidSerif",
                         "fontSize": 9.6,
                         "lineHeight": 26,
@@ -674,7 +674,7 @@ exports[`ContentSingleFeatures should render 1`] = `
                     italic={false}
                     style={
                       Object {
-                        "color": "#303030",
+                        "color": "#27272E",
                         "fontFamily": "DroidSerif",
                         "fontSize": 16,
                         "lineHeight": 26,
@@ -701,7 +701,7 @@ exports[`ContentSingleFeatures should render 1`] = `
                     italic={false}
                     style={
                       Object {
-                        "color": "#303030",
+                        "color": "#27272E",
                         "fontFamily": "DroidSerif",
                         "fontSize": 16,
                         "lineHeight": 26,
@@ -941,7 +941,7 @@ exports[`ContentSingleFeatures should render a loading state 1`] = `
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -1613,7 +1613,7 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
       padded={true}
       style={
         Object {
-          "color": "#303030",
+          "color": "#27272E",
           "fontFamily": "InterUI-Black",
           "fontSize": 24,
           "lineHeight": 27.6,
@@ -1663,7 +1663,7 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -1858,7 +1858,7 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
           <Text
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
                 "lineHeight": 24,
@@ -1869,7 +1869,7 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
                   "lineHeight": 24,
@@ -1881,7 +1881,7 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#505050",
+                  "color": "rgba(39, 39, 46, 0.6)",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
                   "lineHeight": 18,
@@ -1912,7 +1912,7 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
                   italic={false}
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#27272E",
                       "fontFamily": "DroidSerif",
                       "fontSize": 16,
                       "lineHeight": 26,
@@ -1924,7 +1924,7 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
                     italic={false}
                     style={
                       Object {
-                        "color": "#505050",
+                        "color": "rgba(39, 39, 46, 0.6)",
                         "fontFamily": "DroidSerif",
                         "fontSize": 9.6,
                         "lineHeight": 26,
@@ -1953,7 +1953,7 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
                     italic={false}
                     style={
                       Object {
-                        "color": "#303030",
+                        "color": "#27272E",
                         "fontFamily": "DroidSerif",
                         "fontSize": 16,
                         "lineHeight": 26,
@@ -1973,7 +1973,7 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
             italic={false}
             style={
               Object {
-                "color": "#505050",
+                "color": "rgba(39, 39, 46, 0.6)",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 9.6,
                 "lineHeight": 10.8,
@@ -2169,7 +2169,7 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
           <Text
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 16,
                 "lineHeight": 24,
@@ -2180,7 +2180,7 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
                   "lineHeight": 24,
@@ -2192,7 +2192,7 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#505050",
+                  "color": "rgba(39, 39, 46, 0.6)",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
                   "lineHeight": 18,
@@ -2223,7 +2223,7 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
                   italic={false}
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#27272E",
                       "fontFamily": "DroidSerif",
                       "fontSize": 16,
                       "lineHeight": 26,
@@ -2235,7 +2235,7 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
                     italic={false}
                     style={
                       Object {
-                        "color": "#505050",
+                        "color": "rgba(39, 39, 46, 0.6)",
                         "fontFamily": "DroidSerif",
                         "fontSize": 9.6,
                         "lineHeight": 26,
@@ -2264,7 +2264,7 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
                     italic={false}
                     style={
                       Object {
-                        "color": "#303030",
+                        "color": "#27272E",
                         "fontFamily": "DroidSerif",
                         "fontSize": 16,
                         "lineHeight": 26,
@@ -2291,7 +2291,7 @@ exports[`ContentSingleFeatures should take a custom title 1`] = `
                     italic={false}
                     style={
                       Object {
-                        "color": "#303030",
+                        "color": "#27272E",
                         "fontFamily": "DroidSerif",
                         "fontSize": 16,
                         "lineHeight": 26,

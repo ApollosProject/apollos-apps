@@ -163,7 +163,7 @@ exports[`The VerticalCardListFeature component should render 1`] = `
                   numberOfLines={2}
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#27272E",
                       "fontFamily": "InterUI-Black",
                       "fontSize": 24,
                       "lineHeight": 27.6,
@@ -178,7 +178,7 @@ exports[`The VerticalCardListFeature component should render 1`] = `
                   numberOfLines={2}
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#27272E",
                       "fontFamily": "InterUI-Regular",
                       "fontSize": 16,
                       "lineHeight": 26,
@@ -1819,7 +1819,7 @@ exports[`The VerticalCardListFeature component should render a section title 1`]
       numberOfLines={1}
       style={
         Object {
-          "color": "#A5A5A5",
+          "color": "rgba(39, 39, 46, 0.3)",
           "fontFamily": "InterUI-Medium",
           "fontSize": 14,
           "lineHeight": 21,
@@ -1990,7 +1990,7 @@ exports[`The VerticalCardListFeature component should render a section title 1`]
                   numberOfLines={2}
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#27272E",
                       "fontFamily": "InterUI-Black",
                       "fontSize": 24,
                       "lineHeight": 27.6,
@@ -2005,7 +2005,7 @@ exports[`The VerticalCardListFeature component should render a section title 1`]
                   numberOfLines={2}
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#27272E",
                       "fontFamily": "InterUI-Regular",
                       "fontSize": 16,
                       "lineHeight": 26,
@@ -2041,7 +2041,7 @@ exports[`The VerticalCardListFeature component should render with a subtitle 1`]
     <Text
       style={
         Object {
-          "color": "#303030",
+          "color": "#27272E",
           "fontFamily": "InterUI-Black",
           "fontSize": 24,
           "lineHeight": 27.6,
@@ -2212,7 +2212,7 @@ exports[`The VerticalCardListFeature component should render with a subtitle 1`]
                   numberOfLines={2}
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#27272E",
                       "fontFamily": "InterUI-Black",
                       "fontSize": 24,
                       "lineHeight": 27.6,
@@ -2227,7 +2227,7 @@ exports[`The VerticalCardListFeature component should render with a subtitle 1`]
                   numberOfLines={2}
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#27272E",
                       "fontFamily": "InterUI-Regular",
                       "fontSize": 16,
                       "lineHeight": 26,

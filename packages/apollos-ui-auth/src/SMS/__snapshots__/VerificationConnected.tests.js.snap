@@ -23,7 +23,7 @@ Array [
     colors={
       Array [
         4294967295,
-        4294506484,
+        4294572539,
       ]
     }
     endPoint={
@@ -93,7 +93,7 @@ Stand by…
             padded={true}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
                 "lineHeight": 21,
@@ -155,13 +155,13 @@ Stand by…
                       onChangeText={[Function]}
                       onFocus={[Function]}
                       onSubmitEditing={[Function]}
-                      placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                      placeholderTextColor="rgba(39, 39, 46, 0.6)"
                       rejectResponderTermination={true}
                       returnKeyType="next"
                       style={
                         Array [
                           Object {
-                            "color": "#303030",
+                            "color": "#27272E",
                             "fontFamily": "InterUI-Bold",
                             "fontSize": 14,
                             "height": 38,
@@ -203,7 +203,7 @@ Stand by…
                       style={
                         Object {
                           "backgroundColor": "transparent",
-                          "color": "#505050",
+                          "color": "rgba(39, 39, 46, 0.6)",
                           "fontFamily": "InterUI-Medium",
                           "fontSize": 14,
                           "lineHeight": 21,

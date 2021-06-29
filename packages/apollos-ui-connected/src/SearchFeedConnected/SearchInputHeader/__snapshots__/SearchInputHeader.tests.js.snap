@@ -38,7 +38,7 @@ exports[`The Onboarding LandingScreen component should be stylable 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#F8F7F4",
+            "backgroundColor": "rgb(249, 249, 251)",
             "borderRadius": 16,
             "flexDirection": "row",
             "flexGrow": 1,
@@ -122,7 +122,7 @@ exports[`The Onboarding LandingScreen component should be stylable 1`] = `
               fill={
                 Array [
                   0,
-                  4289045925,
+                  1294411566,
                 ]
               }
               fillOpacity={1}
@@ -172,13 +172,13 @@ exports[`The Onboarding LandingScreen component should be stylable 1`] = `
           onChangeText={[Function]}
           onFocus={[Function]}
           placeholder="Search"
-          placeholderTextColor="#A5A5A5"
+          placeholderTextColor="rgba(39, 39, 46, 0.3)"
           rejectResponderTermination={true}
           returnKeyType="search"
           selectionColor="#17B582"
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "flexGrow": 1,
               "fontFamily": "System",
               "fontSize": 14,
@@ -219,9 +219,9 @@ exports[`The Onboarding LandingScreen component should be stylable 1`] = `
           <View
             style={
               Object {
-                "backgroundColor": "#F8F7F4",
+                "backgroundColor": "rgb(249, 249, 251)",
                 "borderBottomRightRadius": 16,
-                "borderColor": "#F8F7F4",
+                "borderColor": "rgb(249, 249, 251)",
                 "borderRightWidth": 1,
                 "borderTopRightRadius": 16,
                 "overflow": "hidden",
@@ -329,7 +329,7 @@ exports[`The Onboarding LandingScreen component should be stylable 1`] = `
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -432,7 +432,7 @@ exports[`The Onboarding LandingScreen component should render 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#F8F7F4",
+            "backgroundColor": "rgb(249, 249, 251)",
             "borderRadius": 16,
             "flexDirection": "row",
             "flexGrow": 1,
@@ -516,7 +516,7 @@ exports[`The Onboarding LandingScreen component should render 1`] = `
               fill={
                 Array [
                   0,
-                  4289045925,
+                  1294411566,
                 ]
               }
               fillOpacity={1}
@@ -566,13 +566,13 @@ exports[`The Onboarding LandingScreen component should render 1`] = `
           onChangeText={[Function]}
           onFocus={[Function]}
           placeholder="Search"
-          placeholderTextColor="#A5A5A5"
+          placeholderTextColor="rgba(39, 39, 46, 0.3)"
           rejectResponderTermination={true}
           returnKeyType="search"
           selectionColor="#17B582"
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "flexGrow": 1,
               "fontFamily": "System",
               "fontSize": 14,
@@ -613,9 +613,9 @@ exports[`The Onboarding LandingScreen component should render 1`] = `
           <View
             style={
               Object {
-                "backgroundColor": "#F8F7F4",
+                "backgroundColor": "rgb(249, 249, 251)",
                 "borderBottomRightRadius": 16,
-                "borderColor": "#F8F7F4",
+                "borderColor": "rgb(249, 249, 251)",
                 "borderRightWidth": 1,
                 "borderTopRightRadius": 16,
                 "overflow": "hidden",
@@ -723,7 +723,7 @@ exports[`The Onboarding LandingScreen component should render 1`] = `
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -826,7 +826,7 @@ exports[`The Onboarding LandingScreen component should render pass props to Sear
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#F8F7F4",
+            "backgroundColor": "rgb(249, 249, 251)",
             "borderRadius": 16,
             "flexDirection": "row",
             "flexGrow": 1,
@@ -910,7 +910,7 @@ exports[`The Onboarding LandingScreen component should render pass props to Sear
               fill={
                 Array [
                   0,
-                  4289045925,
+                  1294411566,
                 ]
               }
               fillOpacity={1}
@@ -960,13 +960,13 @@ exports[`The Onboarding LandingScreen component should render pass props to Sear
           onChangeText={[Function]}
           onFocus={[Function]}
           placeholder="Search"
-          placeholderTextColor="#A5A5A5"
+          placeholderTextColor="rgba(39, 39, 46, 0.3)"
           rejectResponderTermination={true}
           returnKeyType="search"
           selectionColor="#17B582"
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "flexGrow": 1,
               "fontFamily": "System",
               "fontSize": 14,
@@ -1007,9 +1007,9 @@ exports[`The Onboarding LandingScreen component should render pass props to Sear
           <View
             style={
               Object {
-                "backgroundColor": "#F8F7F4",
+                "backgroundColor": "rgb(249, 249, 251)",
                 "borderBottomRightRadius": 16,
-                "borderColor": "#F8F7F4",
+                "borderColor": "rgb(249, 249, 251)",
                 "borderRightWidth": 1,
                 "borderTopRightRadius": 16,
                 "overflow": "hidden",
@@ -1117,7 +1117,7 @@ exports[`The Onboarding LandingScreen component should render pass props to Sear
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}

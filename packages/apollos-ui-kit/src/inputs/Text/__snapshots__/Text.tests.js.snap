@@ -66,13 +66,13 @@ Array [
               onBlur={[Function]}
               onFocus={[Function]}
               placeholder="Some placeholder"
-              placeholderTextColor="rgba(48, 48, 48, 0.6)"
+              placeholderTextColor="rgba(39, 39, 46, 0.6)"
               rejectResponderTermination={true}
               returnKeyType="done"
               style={
                 Array [
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 14,
                     "height": 38,
@@ -113,7 +113,7 @@ Array [
               style={
                 Object {
                   "backgroundColor": "transparent",
-                  "color": "#505050",
+                  "color": "rgba(39, 39, 46, 0.6)",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
                   "lineHeight": 21,
@@ -250,14 +250,14 @@ Array [
               onBlur={[Function]}
               onFocus={[Function]}
               placeholder="Some placeholder"
-              placeholderTextColor="rgba(48, 48, 48, 0.6)"
+              placeholderTextColor="rgba(39, 39, 46, 0.6)"
               rejectResponderTermination={true}
               returnKeyType="done"
               secureTextEntry={true}
               style={
                 Array [
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 14,
                     "height": 38,
@@ -298,7 +298,7 @@ Array [
               style={
                 Object {
                   "backgroundColor": "transparent",
-                  "color": "#505050",
+                  "color": "rgba(39, 39, 46, 0.6)",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
                   "lineHeight": 21,
@@ -391,7 +391,7 @@ Array [
                 fill={
                   Array [
                     0,
-                    4281348144,
+                    4280756014,
                   ]
                 }
                 fillOpacity={1}
@@ -550,13 +550,13 @@ Array [
               onBlur={[Function]}
               onFocus={[Function]}
               placeholder="Some placeholder"
-              placeholderTextColor="rgba(48, 48, 48, 0.6)"
+              placeholderTextColor="rgba(39, 39, 46, 0.6)"
               rejectResponderTermination={true}
               returnKeyType="done"
               style={
                 Array [
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 14,
                     "height": 38,
@@ -597,7 +597,7 @@ Array [
               style={
                 Object {
                   "backgroundColor": "transparent",
-                  "color": "#505050",
+                  "color": "rgba(39, 39, 46, 0.6)",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
                   "lineHeight": 21,
@@ -735,13 +735,13 @@ Array [
               onBlur={[Function]}
               onFocus={[Function]}
               placeholder="Some placeholder"
-              placeholderTextColor="rgba(48, 48, 48, 0.6)"
+              placeholderTextColor="rgba(39, 39, 46, 0.6)"
               rejectResponderTermination={true}
               returnKeyType="done"
               style={
                 Array [
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 14,
                     "height": 38,
@@ -782,7 +782,7 @@ Array [
               style={
                 Object {
                   "backgroundColor": "transparent",
-                  "color": "#505050",
+                  "color": "rgba(39, 39, 46, 0.6)",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
                   "lineHeight": 21,
@@ -917,13 +917,13 @@ Array [
               onBlur={[Function]}
               onFocus={[Function]}
               placeholder="Some placeholder"
-              placeholderTextColor="rgba(48, 48, 48, 0.6)"
+              placeholderTextColor="rgba(39, 39, 46, 0.6)"
               rejectResponderTermination={true}
               returnKeyType="done"
               style={
                 Array [
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 14,
                     "height": 38,
@@ -963,7 +963,7 @@ Array [
               style={
                 Object {
                   "backgroundColor": "transparent",
-                  "color": "#505050",
+                  "color": "rgba(39, 39, 46, 0.6)",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
                   "lineHeight": 21,
@@ -1098,13 +1098,13 @@ Array [
               onBlur={[Function]}
               onFocus={[Function]}
               placeholder="Some placeholder"
-              placeholderTextColor="rgba(48, 48, 48, 0.6)"
+              placeholderTextColor="rgba(39, 39, 46, 0.6)"
               rejectResponderTermination={true}
               returnKeyType="done"
               style={
                 Array [
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 14,
                     "height": 38,
@@ -1144,7 +1144,7 @@ Array [
               style={
                 Object {
                   "backgroundColor": "transparent",
-                  "color": "#505050",
+                  "color": "rgba(39, 39, 46, 0.6)",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
                   "lineHeight": 21,

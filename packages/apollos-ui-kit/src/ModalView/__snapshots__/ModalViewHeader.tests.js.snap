@@ -38,7 +38,7 @@ Array [
       align="xMidYMid"
       bbHeight={32}
       bbWidth={32}
-      fill="#303030"
+      fill="#27272E"
       height={32}
       meetOrSlice={0}
       minX={0}
@@ -66,7 +66,7 @@ Array [
         fill={
           Array [
             0,
-            4281348144,
+            4280756014,
           ]
         }
         fillOpacity={1}
@@ -150,7 +150,7 @@ Array [
       align="xMidYMid"
       bbHeight={32}
       bbWidth={32}
-      fill="#303030"
+      fill="#27272E"
       height={32}
       meetOrSlice={0}
       minX={0}
@@ -178,7 +178,7 @@ Array [
         fill={
           Array [
             0,
-            4281348144,
+            4280756014,
           ]
         }
         fillOpacity={1}
@@ -241,7 +241,7 @@ Array [
         iconPadding={8}
         style={
           Object {
-            "backgroundColor": "rgba(48, 48, 48, 0.7)",
+            "backgroundColor": "rgba(39, 39, 46, 0.7)",
             "padding": 8,
           }
         }
@@ -407,7 +407,7 @@ Array [
       align="xMidYMid"
       bbHeight={32}
       bbWidth={32}
-      fill="#303030"
+      fill="#27272E"
       height={32}
       meetOrSlice={0}
       minX={0}
@@ -435,7 +435,7 @@ Array [
         fill={
           Array [
             0,
-            4281348144,
+            4280756014,
           ]
         }
         fillOpacity={1}
@@ -536,7 +536,7 @@ Array [
         iconPadding={8}
         style={
           Object {
-            "backgroundColor": "rgba(48, 48, 48, 0.7)",
+            "backgroundColor": "rgba(39, 39, 46, 0.7)",
             "padding": 8,
           }
         }

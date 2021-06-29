@@ -89,7 +89,7 @@ Array [
           numberOfLines={1}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
               "lineHeight": 21,
@@ -105,7 +105,7 @@ Array [
           numberOfLines={2}
           style={
             Object {
-              "color": "#A5A5A5",
+              "color": "rgba(39, 39, 46, 0.3)",
               "fontFamily": "InterUI-Regular",
               "fontSize": 12,
               "lineHeight": 18,
@@ -322,7 +322,7 @@ Array [
           numberOfLines={1}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
               "lineHeight": 21,
@@ -338,7 +338,7 @@ Array [
           numberOfLines={2}
           style={
             Object {
-              "color": "#A5A5A5",
+              "color": "rgba(39, 39, 46, 0.3)",
               "fontFamily": "InterUI-Regular",
               "fontSize": 12,
               "lineHeight": 18,

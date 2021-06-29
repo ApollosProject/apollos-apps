@@ -38,7 +38,7 @@ Array [
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#F8F7F4",
+            "backgroundColor": "rgb(249, 249, 251)",
             "borderRadius": 16,
             "flexDirection": "row",
             "flexGrow": 1,
@@ -122,7 +122,7 @@ Array [
               fill={
                 Array [
                   0,
-                  4289045925,
+                  1294411566,
                 ]
               }
               fillOpacity={1}
@@ -172,13 +172,13 @@ Array [
           onChangeText={[Function]}
           onFocus={[Function]}
           placeholder="Search"
-          placeholderTextColor="#A5A5A5"
+          placeholderTextColor="rgba(39, 39, 46, 0.3)"
           rejectResponderTermination={true}
           returnKeyType="search"
           selectionColor="#17B582"
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "flexGrow": 1,
               "fontFamily": "System",
               "fontSize": 14,
@@ -220,9 +220,9 @@ Array [
           <View
             style={
               Object {
-                "backgroundColor": "#F8F7F4",
+                "backgroundColor": "rgb(249, 249, 251)",
                 "borderBottomRightRadius": 16,
-                "borderColor": "#F8F7F4",
+                "borderColor": "rgb(249, 249, 251)",
                 "borderRightWidth": 1,
                 "borderTopRightRadius": 16,
                 "overflow": "hidden",
@@ -330,7 +330,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -420,7 +420,7 @@ Array [
       colors={
         Array [
           4294967295,
-          4294506484,
+          4294572539,
         ]
       }
       endPoint={
@@ -498,7 +498,7 @@ Array [
             <Text
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
                   "lineHeight": 24,
@@ -560,7 +560,7 @@ Array [
                 style={
                   Object {
                     "alignItems": "center",
-                    "backgroundColor": "#F8F7F4",
+                    "backgroundColor": "rgb(249, 249, 251)",
                     "borderRadius": 16,
                     "flexDirection": "row",
                     "flexGrow": 1,
@@ -644,7 +644,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -694,13 +694,13 @@ Array [
                   onChangeText={[Function]}
                   onFocus={[Function]}
                   placeholder="Search"
-                  placeholderTextColor="#A5A5A5"
+                  placeholderTextColor="rgba(39, 39, 46, 0.3)"
                   rejectResponderTermination={true}
                   returnKeyType="search"
                   selectionColor="#17B582"
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#27272E",
                       "flexGrow": 1,
                       "fontFamily": "System",
                       "fontSize": 14,
@@ -742,9 +742,9 @@ Array [
                   <View
                     style={
                       Object {
-                        "backgroundColor": "#F8F7F4",
+                        "backgroundColor": "rgb(249, 249, 251)",
                         "borderBottomRightRadius": 16,
-                        "borderColor": "#F8F7F4",
+                        "borderColor": "rgb(249, 249, 251)",
                         "borderRightWidth": 1,
                         "borderTopRightRadius": 16,
                         "overflow": "hidden",
@@ -852,7 +852,7 @@ Array [
                               fill={
                                 Array [
                                   0,
-                                  4289045925,
+                                  1294411566,
                                 ]
                               }
                               fillOpacity={1}
@@ -955,7 +955,7 @@ Array [
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#F8F7F4",
+            "backgroundColor": "rgb(249, 249, 251)",
             "borderRadius": 16,
             "flexDirection": "row",
             "flexGrow": 1,
@@ -1039,7 +1039,7 @@ Array [
               fill={
                 Array [
                   0,
-                  4289045925,
+                  1294411566,
                 ]
               }
               fillOpacity={1}
@@ -1089,13 +1089,13 @@ Array [
           onChangeText={[Function]}
           onFocus={[Function]}
           placeholder="Search"
-          placeholderTextColor="#A5A5A5"
+          placeholderTextColor="rgba(39, 39, 46, 0.3)"
           rejectResponderTermination={true}
           returnKeyType="search"
           selectionColor="#17B582"
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "flexGrow": 1,
               "fontFamily": "System",
               "fontSize": 14,
@@ -1137,9 +1137,9 @@ Array [
           <View
             style={
               Object {
-                "backgroundColor": "#F8F7F4",
+                "backgroundColor": "rgb(249, 249, 251)",
                 "borderBottomRightRadius": 16,
-                "borderColor": "#F8F7F4",
+                "borderColor": "rgb(249, 249, 251)",
                 "borderRightWidth": 1,
                 "borderTopRightRadius": 16,
                 "overflow": "hidden",
@@ -1247,7 +1247,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -1357,7 +1357,7 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#F8F7F4",
+                    "color": "rgb(249, 249, 251)",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 32,
                   }
@@ -1380,7 +1380,7 @@ Array [
               numberOfLines={1}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
                   "lineHeight": 21,
@@ -1487,7 +1487,7 @@ Array [
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#F8F7F4",
+            "backgroundColor": "rgb(249, 249, 251)",
             "borderRadius": 16,
             "flexDirection": "row",
             "flexGrow": 1,
@@ -1571,7 +1571,7 @@ Array [
               fill={
                 Array [
                   0,
-                  4289045925,
+                  1294411566,
                 ]
               }
               fillOpacity={1}
@@ -1621,13 +1621,13 @@ Array [
           onChangeText={[Function]}
           onFocus={[Function]}
           placeholder="Search"
-          placeholderTextColor="#A5A5A5"
+          placeholderTextColor="rgba(39, 39, 46, 0.3)"
           rejectResponderTermination={true}
           returnKeyType="search"
           selectionColor="#17B582"
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "flexGrow": 1,
               "fontFamily": "System",
               "fontSize": 14,
@@ -1669,9 +1669,9 @@ Array [
           <View
             style={
               Object {
-                "backgroundColor": "#F8F7F4",
+                "backgroundColor": "rgb(249, 249, 251)",
                 "borderBottomRightRadius": 16,
-                "borderColor": "#F8F7F4",
+                "borderColor": "rgb(249, 249, 251)",
                 "borderRightWidth": 1,
                 "borderTopRightRadius": 16,
                 "overflow": "hidden",
@@ -1779,7 +1779,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}

@@ -347,7 +347,7 @@ Array [
         onPress={[MockFunction]}
         style={
           Object {
-            "color": "#A5A5A5",
+            "color": "rgba(39, 39, 46, 0.3)",
             "marginLeft": -16,
             "paddingHorizontal": 16,
             "paddingVertical": 15,
@@ -704,7 +704,7 @@ Array [
         onPress={[MockFunction]}
         style={
           Object {
-            "color": "#A5A5A5",
+            "color": "rgba(39, 39, 46, 0.3)",
             "marginLeft": -16,
             "paddingHorizontal": 16,
             "paddingVertical": 15,
@@ -784,7 +784,7 @@ Array [
         onPress={[MockFunction]}
         style={
           Object {
-            "color": "#A5A5A5",
+            "color": "rgba(39, 39, 46, 0.3)",
             "marginLeft": -16,
             "paddingHorizontal": 16,
             "paddingVertical": 15,

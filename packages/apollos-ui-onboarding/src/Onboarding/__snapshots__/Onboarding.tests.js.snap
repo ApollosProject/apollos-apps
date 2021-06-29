@@ -295,7 +295,7 @@ exports[`the Onboarding component should render Onboarding 1`] = `
                     colors={
                       Array [
                         4294967295,
-                        4294506484,
+                        4294572539,
                       ]
                     }
                     endPoint={
@@ -444,7 +444,7 @@ exports[`the Onboarding component should render Onboarding 1`] = `
                                   <Text
                                     style={
                                       Object {
-                                        "color": "#505050",
+                                        "color": "rgba(39, 39, 46, 0.6)",
                                         "fontFamily": "InterUI-Medium",
                                         "fontSize": 14,
                                         "lineHeight": 21,
@@ -715,7 +715,7 @@ exports[`the Onboarding component should render Onboarding 1`] = `
                                   <Text
                                     style={
                                       Object {
-                                        "color": "#505050",
+                                        "color": "rgba(39, 39, 46, 0.6)",
                                         "fontFamily": "InterUI-Medium",
                                         "fontSize": 14,
                                         "lineHeight": 21,
@@ -817,7 +817,7 @@ exports[`the Onboarding component should render Onboarding 1`] = `
                                 onPress={[Function]}
                                 style={
                                   Object {
-                                    "color": "#A5A5A5",
+                                    "color": "rgba(39, 39, 46, 0.3)",
                                     "marginLeft": -16,
                                     "paddingHorizontal": 16,
                                     "paddingVertical": 15,

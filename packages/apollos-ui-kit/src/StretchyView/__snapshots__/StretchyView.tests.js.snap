@@ -67,7 +67,7 @@ Array [
             padded={true}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Black",
                 "fontSize": 43,
                 "lineHeight": 49.45,
@@ -81,7 +81,7 @@ Array [
             padded={true}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Black",
                 "fontSize": 36,
                 "lineHeight": 41.4,
@@ -98,7 +98,7 @@ Array [
             padded={true}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Black",
                 "fontSize": 24,
                 "lineHeight": 27.6,
@@ -113,7 +113,7 @@ Array [
             padded={true}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Black",
                 "fontSize": 43,
                 "lineHeight": 49.45,
@@ -192,7 +192,7 @@ Array [
           <Text
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Black",
                 "fontSize": 36,
                 "lineHeight": 41.4,
@@ -214,7 +214,7 @@ Array [
             padded={true}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Black",
                 "fontSize": 43,
                 "lineHeight": 49.45,
@@ -228,7 +228,7 @@ Array [
             padded={true}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Black",
                 "fontSize": 36,
                 "lineHeight": 41.4,
@@ -245,7 +245,7 @@ Array [
             padded={true}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Black",
                 "fontSize": 24,
                 "lineHeight": 27.6,
@@ -260,7 +260,7 @@ Array [
             padded={true}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Black",
                 "fontSize": 43,
                 "lineHeight": 49.45,

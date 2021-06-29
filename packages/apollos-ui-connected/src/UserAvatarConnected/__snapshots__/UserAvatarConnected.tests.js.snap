@@ -70,7 +70,7 @@ exports[`UserAvatarConnected component renders UserAvatarConnected without a pho
     <Text
       style={
         Object {
-          "color": "#F8F7F4",
+          "color": "rgb(249, 249, 251)",
           "fontFamily": "InterUI-Bold",
           "fontSize": 20,
         }

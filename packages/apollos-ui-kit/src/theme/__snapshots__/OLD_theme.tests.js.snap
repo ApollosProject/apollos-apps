@@ -4,7 +4,7 @@ exports[`ThemeProvider defaults to user settings 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "#F8F7F4",
+      "backgroundColor": "rgb(249, 249, 251)",
       "flex": 1,
     }
   }
@@ -12,7 +12,7 @@ exports[`ThemeProvider defaults to user settings 1`] = `
   <Text
     style={
       Object {
-        "color": "#303030",
+        "color": "#27272E",
         "fontFamily": "InterUI-Black",
         "fontSize": 24,
         "lineHeight": 27.6,
@@ -28,7 +28,7 @@ exports[`ThemeProvider renders in dark theme 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "#000000",
+      "backgroundColor": "rgb(249, 249, 251)",
       "flex": 1,
     }
   }
@@ -36,7 +36,7 @@ exports[`ThemeProvider renders in dark theme 1`] = `
   <Text
     style={
       Object {
-        "color": "#F8F7F4",
+        "color": "#F4F7F8",
         "fontFamily": "InterUI-Black",
         "fontSize": 24,
         "lineHeight": 27.6,
@@ -52,7 +52,7 @@ exports[`ThemeProvider renders in light theme 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "#F8F7F4",
+      "backgroundColor": "rgb(249, 249, 251)",
       "flex": 1,
     }
   }
@@ -60,7 +60,7 @@ exports[`ThemeProvider renders in light theme 1`] = `
   <Text
     style={
       Object {
-        "color": "#303030",
+        "color": "#27272E",
         "fontFamily": "InterUI-Black",
         "fontSize": 24,
         "lineHeight": 27.6,
@@ -277,7 +277,7 @@ exports[`withThemeMixin overrides styles without affecting siblings 1`] = `
       italic={false}
       style={
         Object {
-          "color": "#303030",
+          "color": "#27272E",
           "fontFamily": "InterUI-Regular",
           "fontSize": 16,
           "lineHeight": 26,
@@ -323,7 +323,7 @@ exports[`withThemeMixin overrides styles without affecting siblings 1`] = `
       italic={false}
       style={
         Object {
-          "color": "#F8F7F4",
+          "color": "#F4F7F8",
           "fontFamily": "InterUI-Regular",
           "fontSize": 16,
           "lineHeight": 26,
@@ -369,7 +369,7 @@ exports[`withThemeMixin overrides styles without affecting siblings 1`] = `
       italic={false}
       style={
         Object {
-          "color": "#303030",
+          "color": "#27272E",
           "fontFamily": "InterUI-Regular",
           "fontSize": 16,
           "lineHeight": 26,
@@ -426,7 +426,7 @@ exports[`withThemeMixin overrides themeInput with theme prop 1`] = `
       italic={false}
       style={
         Object {
-          "color": "#303030",
+          "color": "#27272E",
           "fontFamily": "InterUI-Regular",
           "fontSize": 16,
           "lineHeight": 26,
@@ -483,7 +483,7 @@ exports[`withThemeMixin prunes null inputs 1`] = `
       italic={false}
       style={
         Object {
-          "color": "#303030",
+          "color": "#27272E",
           "fontFamily": "InterUI-Regular",
           "fontSize": 16,
           "lineHeight": 26,
@@ -540,7 +540,7 @@ exports[`withThemeMixin reverts to themeInput when mixin has null values 1`] = `
       italic={false}
       style={
         Object {
-          "color": "#303030",
+          "color": "#27272E",
           "fontFamily": "InterUI-Regular",
           "fontSize": 16,
           "lineHeight": 26,
@@ -597,7 +597,7 @@ exports[`withThemeMixin works with dynamic props 1`] = `
       italic={false}
       style={
         Object {
-          "color": "#303030",
+          "color": "#27272E",
           "fontFamily": "InterUI-Regular",
           "fontSize": 16,
           "lineHeight": 26,
@@ -643,7 +643,7 @@ exports[`withThemeMixin works with dynamic props 1`] = `
       italic={false}
       style={
         Object {
-          "color": "#F8F7F4",
+          "color": "#F4F7F8",
           "fontFamily": "InterUI-Regular",
           "fontSize": 16,
           "lineHeight": 26,

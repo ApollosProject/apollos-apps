@@ -5,7 +5,7 @@ exports[`content feed query component renders a feedview after successful query 
   colors={
     Array [
       4294967295,
-      4294506484,
+      4294572539,
     ]
   }
   endPoint={
@@ -214,7 +214,7 @@ exports[`content feed query component renders a feedview after successful query 
                   numberOfLines={2}
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#27272E",
                       "fontFamily": "InterUI-Black",
                       "fontSize": 24,
                       "lineHeight": 27.6,
@@ -229,7 +229,7 @@ exports[`content feed query component renders a feedview after successful query 
                   numberOfLines={2}
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#27272E",
                       "fontFamily": "InterUI-Regular",
                       "fontSize": 16,
                       "lineHeight": 26,
@@ -499,7 +499,7 @@ exports[`content feed query component renders a feedview after successful query 
                   numberOfLines={2}
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#27272E",
                       "fontFamily": "InterUI-Black",
                       "fontSize": 24,
                       "lineHeight": 27.6,
@@ -514,7 +514,7 @@ exports[`content feed query component renders a feedview after successful query 
                   numberOfLines={2}
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#27272E",
                       "fontFamily": "InterUI-Regular",
                       "fontSize": 16,
                       "lineHeight": 26,

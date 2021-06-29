@@ -149,7 +149,7 @@ exports[`The CampaignItemListFeature component should render 1`] = `
         numberOfLines={3}
         style={
           Object {
-            "color": "#F8F7F4",
+            "color": "#F4F7F8",
             "fontFamily": "InterUI-Black",
             "fontSize": 24,
             "lineHeight": 27.6,
@@ -182,7 +182,7 @@ exports[`The CampaignItemListFeature component should render 1`] = `
             numberOfLines={2}
             style={
               Object {
-                "color": "#F8F7F4",
+                "color": "#F4F7F8",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -559,7 +559,7 @@ exports[`The CampaignItemListFeature component should render a Component prop 1`
         numberOfLines={3}
         style={
           Object {
-            "color": "#F8F7F4",
+            "color": "#F4F7F8",
             "fontFamily": "InterUI-Black",
             "fontSize": 36,
             "lineHeight": 41.4,
@@ -592,7 +592,7 @@ exports[`The CampaignItemListFeature component should render a Component prop 1`
             numberOfLines={2}
             style={
               Object {
-                "color": "#F8F7F4",
+                "color": "#F4F7F8",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -675,7 +675,7 @@ exports[`The CampaignItemListFeature component should render a Component prop 1`
               fill={
                 Array [
                   0,
-                  4294506484,
+                  4294244344,
                 ]
               }
               fillOpacity={1}
@@ -872,7 +872,7 @@ exports[`The CampaignItemListFeature component should render a HighlightCard 1`]
         numberOfLines={3}
         style={
           Object {
-            "color": "#F8F7F4",
+            "color": "#F4F7F8",
             "fontFamily": "InterUI-Black",
             "fontSize": 24,
             "lineHeight": 27.6,
@@ -905,7 +905,7 @@ exports[`The CampaignItemListFeature component should render a HighlightCard 1`]
             numberOfLines={2}
             style={
               Object {
-                "color": "#F8F7F4",
+                "color": "#F4F7F8",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,

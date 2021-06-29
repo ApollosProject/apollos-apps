@@ -93,7 +93,7 @@ Array [
           <Text
             style={
               Object {
-                "color": "#505050",
+                "color": "rgba(39, 39, 46, 0.6)",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
                 "lineHeight": 21,
@@ -433,7 +433,7 @@ Array [
           <Text
             style={
               Object {
-                "color": "#505050",
+                "color": "rgba(39, 39, 46, 0.6)",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
                 "lineHeight": 21,
@@ -535,7 +535,7 @@ Array [
         onPress={[MockFunction]}
         style={
           Object {
-            "color": "#A5A5A5",
+            "color": "rgba(39, 39, 46, 0.3)",
             "marginLeft": -16,
             "paddingHorizontal": 16,
             "paddingVertical": 15,
@@ -618,7 +618,7 @@ Array [
           <Text
             style={
               Object {
-                "color": "#505050",
+                "color": "rgba(39, 39, 46, 0.6)",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
                 "lineHeight": 21,

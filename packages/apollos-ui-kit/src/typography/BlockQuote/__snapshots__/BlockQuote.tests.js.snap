@@ -24,7 +24,7 @@ Array [
       Object {
         "alignSelf": "stretch",
         "borderBottomWidth": 0.5,
-        "borderColor": "#A5A5A5",
+        "borderColor": "rgba(39, 39, 46, 0.3)",
         "borderTopWidth": 0.5,
         "marginVertical": 48,
         "paddingHorizontal": 16,
@@ -72,7 +72,7 @@ Array [
       Object {
         "alignSelf": "stretch",
         "borderBottomWidth": 0.5,
-        "borderColor": "#A5A5A5",
+        "borderColor": "rgba(39, 39, 46, 0.3)",
         "borderTopWidth": 0.5,
         "marginVertical": 48,
         "paddingHorizontal": 16,
@@ -85,7 +85,7 @@ Array [
       italic={false}
       style={
         Object {
-          "color": "#303030",
+          "color": "#27272E",
           "fontFamily": "InterUI-Italic",
           "fontSize": 16,
           "lineHeight": 26,
@@ -123,7 +123,7 @@ Array [
       Object {
         "alignSelf": "stretch",
         "borderBottomWidth": 0.5,
-        "borderColor": "#A5A5A5",
+        "borderColor": "rgba(39, 39, 46, 0.3)",
         "borderTopWidth": 0.5,
         "marginVertical": 48,
         "paddingHorizontal": 16,
@@ -134,7 +134,7 @@ Array [
     <Text
       style={
         Object {
-          "color": "#303030",
+          "color": "#27272E",
           "fontFamily": "InterUI-Medium",
           "fontSize": 14,
           "lineHeight": 21,

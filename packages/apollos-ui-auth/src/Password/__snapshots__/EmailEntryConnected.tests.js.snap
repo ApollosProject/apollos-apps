@@ -23,7 +23,7 @@ Array [
     colors={
       Array [
         4294967295,
-        4294506484,
+        4294572539,
       ]
     }
     endPoint={
@@ -93,7 +93,7 @@ Array [
             padded={true}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
                 "lineHeight": 21,
@@ -182,7 +182,7 @@ Array [
                         isActive={true}
                         style={
                           Object {
-                            "color": "#303030",
+                            "color": "#27272E",
                             "fontFamily": "System",
                             "fontSize": 14,
                             "fontStyle": null,
@@ -223,7 +223,7 @@ Array [
                       style={
                         Object {
                           "alignItems": "center",
-                          "backgroundColor": "#F8F7F4",
+                          "backgroundColor": "rgb(249, 249, 251)",
                           "borderRadius": 0,
                           "borderWidth": 0,
                           "flexDirection": "row",
@@ -238,7 +238,7 @@ Array [
                       <Text
                         style={
                           Object {
-                            "color": "#A5A5A5",
+                            "color": "rgba(39, 39, 46, 0.3)",
                             "fontFamily": "System",
                             "fontSize": 14,
                             "fontStyle": null,
@@ -342,13 +342,13 @@ Array [
                                 onChangeText={[Function]}
                                 onFocus={[Function]}
                                 onSubmitEditing={[Function]}
-                                placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                                placeholderTextColor="rgba(39, 39, 46, 0.6)"
                                 rejectResponderTermination={true}
                                 returnKeyType="next"
                                 style={
                                   Array [
                                     Object {
-                                      "color": "#303030",
+                                      "color": "#27272E",
                                       "fontFamily": "InterUI-Bold",
                                       "fontSize": 14,
                                       "height": 38,
@@ -387,11 +387,11 @@ Array [
                               }
                             >
                               <Text
-                                color="#A5A5A5"
+                                color="rgba(39, 39, 46, 0.3)"
                                 style={
                                   Object {
                                     "backgroundColor": "transparent",
-                                    "color": "#A5A5A5",
+                                    "color": "rgba(39, 39, 46, 0.3)",
                                     "fontFamily": "InterUI-Medium",
                                     "fontSize": 14,
                                     "lineHeight": 21,
@@ -461,7 +461,7 @@ Array [
                     <Text
                       style={
                         Object {
-                          "color": "#A5A5A5",
+                          "color": "rgba(39, 39, 46, 0.3)",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
                           "fontWeight": "normal",

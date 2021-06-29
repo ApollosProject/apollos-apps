@@ -503,7 +503,7 @@ exports[`UserAvatarHeaderConnected component renders UserAvatarHeaderConnected 1
                     <Text
                       style={
                         Object {
-                          "color": "#303030",
+                          "color": "#27272E",
                           "fontFamily": "InterUI-Black",
                           "fontSize": 24,
                           "lineHeight": 27.6,
