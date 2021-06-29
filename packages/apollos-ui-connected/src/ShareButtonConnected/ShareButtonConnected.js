@@ -23,14 +23,14 @@ const ShareButtonConnected = ({
       <Query query={GET_SHARE_CONTENT} variables={{ nodeId: nodeId || itemId }}>
         {({ data, loading }) => {
           const sharing = get(data, 'node.sharing', {});
-          if (!loading && !sharing.title && !sharing.message && !sharing.url)
+          if (!loading && !sharing?.title && !sharing?.message && !sharing?.url)
             return null;
 
           const content = {
             id: itemId,
-            title: title || sharing.title,
-            message: message || sharing.message,
-            url: url || sharing.url,
+            title: title || sharing?.title,
+            message: message || sharing?.message,
+            url: url || sharing?.url,
           };
           const handleOnPress = () => {
             if (onPress) {
