@@ -74,7 +74,7 @@ Array [
       <View
         style={
           Object {
-            "backgroundColor": "#000000",
+            "backgroundColor": "rgb(249, 249, 251)",
             "bottom": 0,
             "left": 0,
             "opacity": 0.4,
@@ -170,7 +170,7 @@ Array [
               fill={
                 Array [
                   0,
-                  4294506484,
+                  4294244344,
                 ]
               }
               fillOpacity={1}
@@ -299,7 +299,7 @@ Array [
               fill={
                 Array [
                   0,
-                  4294506484,
+                  4294244344,
                 ]
               }
               fillOpacity={1}
@@ -428,7 +428,7 @@ Array [
               fill={
                 Array [
                   0,
-                  4294506484,
+                  4294244344,
                 ]
               }
               fillOpacity={1}
@@ -557,7 +557,7 @@ Array [
               fill={
                 Array [
                   0,
-                  4294506484,
+                  4294244344,
                 ]
               }
               fillOpacity={1}
@@ -687,7 +687,7 @@ Array [
               fill={
                 Array [
                   0,
-                  4294506484,
+                  4294244344,
                 ]
               }
               fillOpacity={1}
@@ -732,7 +732,7 @@ Array [
         <Text
           style={
             Object {
-              "color": "#F8F7F4",
+              "color": "#F4F7F8",
               "fontFamily": "InterUI-Medium",
               "fontSize": 14,
               "lineHeight": 21,
