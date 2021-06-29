@@ -19,38 +19,25 @@ Array [
       ]
     }
   />,
-  <BVLinearGradient
-    colors={
-      Array [
-        4294967295,
-        4294572539,
-      ]
-    }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
+  <View
     navigation={
       Object {
         "pop": [MockFunction],
       }
     }
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
     style={
-      Object {
-        "borderRadius": 0,
-        "flex": null,
-        "height": "100%",
-        "width": "100%",
-      }
+      Array [
+        Object {
+          "backgroundColor": "rgb(249, 249, 251)",
+          "flex": 1,
+        },
+        Object {
+          "borderRadius": 0,
+          "flex": null,
+          "height": "100%",
+          "width": "100%",
+        },
+      ]
     }
   >
     <View
@@ -217,7 +204,7 @@ Array [
         />
       </RNSVGSvgView>
     </View>
-  </BVLinearGradient>,
+  </View>,
 ]
 `;
 
@@ -240,38 +227,25 @@ Array [
       ]
     }
   />,
-  <BVLinearGradient
-    colors={
-      Array [
-        4294967295,
-        4294572539,
-      ]
-    }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
+  <View
     navigation={
       Object {
         "pop": [MockFunction],
       }
     }
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
     style={
-      Object {
-        "borderRadius": 0,
-        "flex": null,
-        "height": "100%",
-        "width": "100%",
-      }
+      Array [
+        Object {
+          "backgroundColor": "rgb(249, 249, 251)",
+          "flex": 1,
+        },
+        Object {
+          "borderRadius": 0,
+          "flex": null,
+          "height": "100%",
+          "width": "100%",
+        },
+      ]
     }
   >
     <View
@@ -509,7 +483,7 @@ Array [
         </View>
       </View>
     </View>
-  </BVLinearGradient>,
+  </View>,
 ]
 `;
 
@@ -532,38 +506,25 @@ Array [
       ]
     }
   />,
-  <BVLinearGradient
-    colors={
-      Array [
-        4294967295,
-        4294572539,
-      ]
-    }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
+  <View
     navigation={
       Object {
         "pop": [MockFunction],
       }
     }
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
     style={
-      Object {
-        "borderRadius": 0,
-        "flex": null,
-        "height": "100%",
-        "width": "100%",
-      }
+      Array [
+        Object {
+          "backgroundColor": "rgb(249, 249, 251)",
+          "flex": 1,
+        },
+        Object {
+          "borderRadius": 0,
+          "flex": null,
+          "height": "100%",
+          "width": "100%",
+        },
+      ]
     }
   >
     <Text>
@@ -733,6 +694,6 @@ Array [
         />
       </RNSVGSvgView>
     </View>
-  </BVLinearGradient>,
+  </View>,
 ]
 `;

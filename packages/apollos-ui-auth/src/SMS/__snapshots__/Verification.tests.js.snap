@@ -19,37 +19,22 @@ Array [
       ]
     }
   />,
-  <BVLinearGradient
-    colors={
-      Array [
-        4294967295,
-        4294572539,
-      ]
-    }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
+  <View
     style={
-      Object {
-        "bottom": 0,
-        "flex": 1,
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "resizeMode": "cover",
-        "right": 0,
-        "top": 0,
-      }
+      Array [
+        Object {
+          "backgroundColor": "rgb(249, 249, 251)",
+          "flex": 1,
+        },
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "resizeMode": "cover",
+          "right": 0,
+          "top": 0,
+        },
+      ]
     }
   />,
   <View
@@ -294,37 +279,22 @@ Array [
       ]
     }
   />,
-  <BVLinearGradient
-    colors={
-      Array [
-        4294967295,
-        4294572539,
-      ]
-    }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
+  <View
     style={
-      Object {
-        "bottom": 0,
-        "flex": 1,
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "resizeMode": "cover",
-        "right": 0,
-        "top": 0,
-      }
+      Array [
+        Object {
+          "backgroundColor": "rgb(249, 249, 251)",
+          "flex": 1,
+        },
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "resizeMode": "cover",
+          "right": 0,
+          "top": 0,
+        },
+      ]
     }
   />,
   <View
@@ -630,37 +600,22 @@ Array [
       ]
     }
   />,
-  <BVLinearGradient
-    colors={
-      Array [
-        4294967295,
-        4294572539,
-      ]
-    }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
+  <View
     style={
-      Object {
-        "bottom": 0,
-        "flex": 1,
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "resizeMode": "cover",
-        "right": 0,
-        "top": 0,
-      }
+      Array [
+        Object {
+          "backgroundColor": "rgb(249, 249, 251)",
+          "flex": 1,
+        },
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "resizeMode": "cover",
+          "right": 0,
+          "top": 0,
+        },
+      ]
     }
   />,
   <View
@@ -960,37 +915,22 @@ Array [
       ]
     }
   />,
-  <BVLinearGradient
-    colors={
-      Array [
-        4294967295,
-        4294572539,
-      ]
-    }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
+  <View
     style={
-      Object {
-        "bottom": 0,
-        "flex": 1,
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "resizeMode": "cover",
-        "right": 0,
-        "top": 0,
-      }
+      Array [
+        Object {
+          "backgroundColor": "rgb(249, 249, 251)",
+          "flex": 1,
+        },
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "resizeMode": "cover",
+          "right": 0,
+          "top": 0,
+        },
+      ]
     }
   />,
   <View
@@ -1296,37 +1236,22 @@ Array [
       ]
     }
   />,
-  <BVLinearGradient
-    colors={
-      Array [
-        4294967295,
-        4294572539,
-      ]
-    }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
+  <View
     style={
-      Object {
-        "bottom": 0,
-        "flex": 1,
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "resizeMode": "cover",
-        "right": 0,
-        "top": 0,
-      }
+      Array [
+        Object {
+          "backgroundColor": "rgb(249, 249, 251)",
+          "flex": 1,
+        },
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "resizeMode": "cover",
+          "right": 0,
+          "top": 0,
+        },
+      ]
     }
   />,
   <View
@@ -1584,37 +1509,22 @@ Array [
       ]
     }
   />,
-  <BVLinearGradient
-    colors={
-      Array [
-        4294967295,
-        4294572539,
-      ]
-    }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
+  <View
     style={
-      Object {
-        "bottom": 0,
-        "flex": 1,
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "resizeMode": "cover",
-        "right": 0,
-        "top": 0,
-      }
+      Array [
+        Object {
+          "backgroundColor": "rgb(249, 249, 251)",
+          "flex": 1,
+        },
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "resizeMode": "cover",
+          "right": 0,
+          "top": 0,
+        },
+      ]
     }
   />,
   <View
@@ -1859,37 +1769,22 @@ Array [
       ]
     }
   />,
-  <BVLinearGradient
-    colors={
-      Array [
-        4294967295,
-        4294572539,
-      ]
-    }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
+  <View
     style={
-      Object {
-        "bottom": 0,
-        "flex": 1,
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "resizeMode": "cover",
-        "right": 0,
-        "top": 0,
-      }
+      Array [
+        Object {
+          "backgroundColor": "rgb(249, 249, 251)",
+          "flex": 1,
+        },
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "resizeMode": "cover",
+          "right": 0,
+          "top": 0,
+        },
+      ]
     }
   />,
   <View
@@ -2135,37 +2030,22 @@ Array [
       ]
     }
   />,
-  <BVLinearGradient
-    colors={
-      Array [
-        4294967295,
-        4294572539,
-      ]
-    }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
+  <View
     style={
-      Object {
-        "bottom": 0,
-        "flex": 1,
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "resizeMode": "cover",
-        "right": 0,
-        "top": 0,
-      }
+      Array [
+        Object {
+          "backgroundColor": "rgb(249, 249, 251)",
+          "flex": 1,
+        },
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "resizeMode": "cover",
+          "right": 0,
+          "top": 0,
+        },
+      ]
     }
   />,
   <View

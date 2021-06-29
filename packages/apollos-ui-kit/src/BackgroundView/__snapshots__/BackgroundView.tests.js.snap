@@ -19,36 +19,17 @@ Array [
       ]
     }
   />,
-  <BVLinearGradient
-    colors={
-      Array [
-        4294967295,
-        4294572539,
-      ]
-    }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={
-      Array [
-        0,
-        0.5,
-      ]
-    }
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
+  <View
     style={
-      Object {
-        "flex": 1,
-        "height": "100%",
-      }
+      Array [
+        Object {
+          "backgroundColor": "rgb(249, 249, 251)",
+          "flex": 1,
+        },
+        Object {
+          "backgroundColor": "red",
+        },
+      ]
     }
   />,
 ]
@@ -73,37 +54,21 @@ Array [
       ]
     }
   />,
-  <BVLinearGradient
-    colors={
-      Array [
-        4294967295,
-        4294572539,
-      ]
-    }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
+  <View
     style={
-      Object {
-        "flex": 1,
-        "height": "100%",
-      }
+      Array [
+        Object {
+          "backgroundColor": "rgb(249, 249, 251)",
+          "flex": 1,
+        },
+        undefined,
+      ]
     }
   />,
 ]
 `;
 
-exports[`The BackgroundView component should render as a solid color 1`] = `
+exports[`The BackgroundView component should render as a system color 1`] = `
 Array [
   <View
     onLayout={[Function]}
@@ -122,37 +87,21 @@ Array [
       ]
     }
   />,
-  <BVLinearGradient
-    colors={
-      Array [
-        4294606962,
-        4294606962,
-      ]
-    }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
+  <View
     style={
-      Object {
-        "flex": 1,
-        "height": "100%",
-      }
+      Array [
+        Object {
+          "backgroundColor": "rgba(142, 142, 147, 0.2)",
+          "flex": 1,
+        },
+        undefined,
+      ]
     }
   />,
 ]
 `;
 
-exports[`The BackgroundView component should render with custom colors 1`] = `
+exports[`The BackgroundView component should render with paper color 1`] = `
 Array [
   <View
     onLayout={[Function]}
@@ -171,31 +120,15 @@ Array [
       ]
     }
   />,
-  <BVLinearGradient
-    colors={
-      Array [
-        4294901760,
-        4278190335,
-      ]
-    }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
+  <View
     style={
-      Object {
-        "flex": 1,
-        "height": "100%",
-      }
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "flex": 1,
+        },
+        undefined,
+      ]
     }
   />,
 ]
