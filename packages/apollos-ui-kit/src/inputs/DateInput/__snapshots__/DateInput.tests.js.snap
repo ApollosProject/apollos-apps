@@ -170,7 +170,7 @@ Array [
           style={
             Object {
               "alignItems": "center",
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
               "justifyContent": "center",
@@ -244,7 +244,7 @@ Array [
         style={
           Object {
             "backgroundColor": "transparent",
-            "color": "#505050",
+            "color": "rgba(39, 39, 46, 0.6)",
             "fontFamily": "InterUI-Medium",
             "fontSize": 14,
             "lineHeight": 21,
@@ -325,7 +325,7 @@ Array [
           style={
             Object {
               "alignItems": "center",
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
               "justifyContent": "center",
@@ -399,7 +399,7 @@ Array [
         style={
           Object {
             "backgroundColor": "transparent",
-            "color": "#505050",
+            "color": "rgba(39, 39, 46, 0.6)",
             "fontFamily": "InterUI-Medium",
             "fontSize": 14,
             "lineHeight": 21,
@@ -482,7 +482,7 @@ Array [
           style={
             Object {
               "alignItems": "center",
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
               "justifyContent": "center",
@@ -556,7 +556,7 @@ Array [
         style={
           Object {
             "backgroundColor": "transparent",
-            "color": "#505050",
+            "color": "rgba(39, 39, 46, 0.6)",
             "fontFamily": "InterUI-Medium",
             "fontSize": 14,
             "lineHeight": 21,
@@ -752,7 +752,7 @@ Array [
           style={
             Object {
               "alignItems": "center",
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
               "justifyContent": "center",
@@ -826,7 +826,7 @@ Array [
         style={
           Object {
             "backgroundColor": "transparent",
-            "color": "#505050",
+            "color": "rgba(39, 39, 46, 0.6)",
             "fontFamily": "InterUI-Medium",
             "fontSize": 14,
             "lineHeight": 21,

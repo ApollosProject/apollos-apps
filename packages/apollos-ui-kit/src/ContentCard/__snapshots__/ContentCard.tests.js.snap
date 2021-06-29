@@ -89,7 +89,7 @@ Array [
           numberOfLines={3}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Black",
               "fontSize": 24,
               "lineHeight": 27.6,
@@ -105,7 +105,7 @@ Array [
           numberOfLines={3}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -237,7 +237,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4289045925,
+                      1294411566,
                     ]
                   }
                   fillOpacity={1}
@@ -290,13 +290,13 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#A5A5A5",
+                    "color": "rgba(39, 39, 46, 0.3)",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 18,
                   }
                 }
-                tint="#A5A5A5"
+                tint="rgba(39, 39, 46, 0.3)"
               >
                 16.8k
               </Text>
@@ -742,7 +742,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4285440419,
+                      3427373719,
                     ]
                   }
                   fillOpacity={1}
@@ -795,13 +795,13 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "rgb(110, 161, 163)",
+                    "color": "rgba(73, 146, 151, 0.8)",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 18,
                   }
                 }
-                tint="rgb(110, 161, 163)"
+                tint="rgba(73, 146, 151, 0.8)"
               >
                 150
               </Text>
@@ -878,7 +878,7 @@ Array [
           numberOfLines={3}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Black",
               "fontSize": 24,
               "lineHeight": 27.6,
@@ -904,7 +904,7 @@ Array [
           numberOfLines={2}
           style={
             Object {
-              "color": "#505050",
+              "color": "rgba(39, 39, 46, 0.6)",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
               "lineHeight": 18,
@@ -1036,7 +1036,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4289045925,
+                      1294411566,
                     ]
                   }
                   fillOpacity={1}
@@ -1089,13 +1089,13 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#A5A5A5",
+                    "color": "rgba(39, 39, 46, 0.3)",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 18,
                   }
                 }
-                tint="#A5A5A5"
+                tint="rgba(39, 39, 46, 0.3)"
               >
                 150
               </Text>
@@ -1205,7 +1205,7 @@ Array [
           numberOfLines={1}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
               "lineHeight": 24,
@@ -1219,7 +1219,7 @@ Array [
           numberOfLines={2}
           style={
             Object {
-              "color": "#505050",
+              "color": "rgba(39, 39, 46, 0.6)",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
               "lineHeight": 18,
@@ -1351,7 +1351,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4289045925,
+                      1294411566,
                     ]
                   }
                   fillOpacity={1}
@@ -1404,13 +1404,13 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#A5A5A5",
+                    "color": "rgba(39, 39, 46, 0.3)",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 18,
                   }
                 }
-                tint="#A5A5A5"
+                tint="rgba(39, 39, 46, 0.3)"
               >
                 16.8k
               </Text>
@@ -1681,7 +1681,7 @@ Array [
           numberOfLines={3}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Black",
               "fontSize": 24,
               "lineHeight": 27.6,
@@ -1708,7 +1708,7 @@ Array [
           numberOfLines={3}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -1839,7 +1839,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4289045925,
+                      1294411566,
                     ]
                   }
                   fillOpacity={1}
@@ -1892,13 +1892,13 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#A5A5A5",
+                    "color": "rgba(39, 39, 46, 0.3)",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 18,
                   }
                 }
-                tint="#A5A5A5"
+                tint="rgba(39, 39, 46, 0.3)"
               >
                 150
               </Text>
@@ -2144,7 +2144,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4285440419,
+                      3427373719,
                     ]
                   }
                   fillOpacity={1}
@@ -2197,13 +2197,13 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "rgb(110, 161, 163)",
+                    "color": "rgba(73, 146, 151, 0.8)",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 18,
                   }
                 }
-                tint="rgb(110, 161, 163)"
+                tint="rgba(73, 146, 151, 0.8)"
               >
                 150
               </Text>

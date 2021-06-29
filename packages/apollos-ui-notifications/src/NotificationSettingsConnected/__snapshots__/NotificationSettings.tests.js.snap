@@ -23,7 +23,7 @@ Array [
     colors={
       Array [
         4294967295,
-        4294506484,
+        4294572539,
       ]
     }
     endPoint={
@@ -113,7 +113,7 @@ Array [
                   style={
                     Object {
                       "backgroundColor": "transparent",
-                      "color": "#505050",
+                      "color": "rgba(39, 39, 46, 0.6)",
                       "fontFamily": "InterUI-Medium",
                       "fontSize": 14,
                       "lineHeight": 21,

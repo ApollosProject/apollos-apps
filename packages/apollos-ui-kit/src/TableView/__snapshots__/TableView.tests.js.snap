@@ -127,7 +127,7 @@ Array [
               fill={
                 Array [
                   0,
-                  4281348144,
+                  4280756014,
                 ]
               }
               fillOpacity={1}
@@ -172,7 +172,7 @@ Array [
         <Text
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "flexGrow": 1,
               "flexShrink": 1,
               "fontFamily": "System",
@@ -284,7 +284,7 @@ Array [
               fill={
                 Array [
                   0,
-                  4281348144,
+                  4280756014,
                 ]
               }
               fillOpacity={1}
@@ -329,7 +329,7 @@ Array [
         <Text
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "flexGrow": 1,
               "flexShrink": 1,
               "fontFamily": "System",
@@ -403,7 +403,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "transparent",
-                        "color": "#505050",
+                        "color": "rgba(39, 39, 46, 0.6)",
                         "fontFamily": "InterUI-Medium",
                         "fontSize": 14,
                         "lineHeight": 21,
@@ -472,7 +472,7 @@ Array [
         <Text
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "flexGrow": 1,
               "flexShrink": 1,
               "fontFamily": "System",
@@ -512,7 +512,7 @@ Array [
         <Text
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "flexGrow": 1,
               "flexShrink": 1,
               "fontFamily": "System",
@@ -600,7 +600,7 @@ Array [
               fill={
                 Array [
                   0,
-                  4281348144,
+                  4280756014,
                 ]
               }
               fillOpacity={1}
