@@ -10,7 +10,12 @@ let realDateNow;
 describe('ui-auth/Profile/ProfileDetailsEntryConnected', () => {
   beforeAll(() => {
     realDateNow = Date.now.bind(global.Date);
-    const dateNowStub = jest.fn(() => 1530518207007);
+    const dateNowStub = jest.fn(() => ({
+      setFullYear: () => null,
+      getFullYear: () => 2021,
+      getMonth: () => 5,
+      getDate: () => 17,
+    }));
     global.Date.now = dateNowStub;
   });
   afterAll(() => {
@@ -21,10 +26,7 @@ describe('ui-auth/Profile/ProfileDetailsEntryConnected', () => {
 
     const tree = renderer.create(
       <Providers>
-        <ProfileDetailsEntryConnected
-          navigation={navigation}
-          screenProps={{ defaultDate: '2019-02-14T05:00:00.000Z' }}
-        />
+        <ProfileDetailsEntryConnected navigation={navigation} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

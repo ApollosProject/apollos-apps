@@ -7,10 +7,11 @@ export default class Group extends RockApolloDataSource {
 
   expanded = true;
 
+  // these are standard across rock
   groupTypeMap = {
-    Serving: ROCK_MAPPINGS.SERVING_GROUP_TYPE_ID,
-    Community: ROCK_MAPPINGS.COMMUNITY_GROUP_TYPE_ID,
-    Family: ROCK_MAPPINGS.FAMILY_GROUP_TYPE_ID,
+    Serving: ROCK_MAPPINGS.SERVING_GROUP_TYPE_ID || 23,
+    Community: ROCK_MAPPINGS.COMMUNITY_GROUP_TYPE_ID || 25,
+    Family: ROCK_MAPPINGS.FAMILY_GROUP_TYPE_ID || 10,
   };
 
   getFromId = ({ id }) => this.request().find(id).expand('Members').get();

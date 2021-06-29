@@ -1,5 +1,5 @@
 import { Op } from 'sequelize';
-import { parseGlobalId } from '@apollosproject/server-core';
+import { parseGlobalId, generateAppLink } from '@apollosproject/server-core';
 import { PostgresDataSource } from '../postgres';
 import { Visibility } from './model';
 
@@ -30,7 +30,75 @@ class CommentDataSource extends PostgresDataSource {
       );
     }
 
+    await this.sendNotificationForComment({ comment, parentId });
+
     return comment;
+  }
+
+  async sendNotificationForComment({ comment, parentId }) {
+    const commentCreator = await comment.getPerson();
+
+    const followers = await commentCreator.getFollowers();
+    const url = generateAppLink('deep', 'content', {
+      contentID: parentId,
+    });
+
+    await Promise.all(
+      followers.map(async (person) => {
+        return this.context.dataSources.Notification.createAndSend({
+          title: "New journal from someone you're following",
+          body: `${commentCreator.firstName} ${commentCreator.lastName} has just done a bit of journaling. Check it out!`,
+          personId: person.id,
+          type: 'COMMENT',
+          data: {
+            data: {
+              url,
+            },
+          },
+        });
+      })
+    );
+  }
+
+  async updateComment({ commentId, text, visibility }) {
+    const currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
+
+    const { id } = parseGlobalId(commentId);
+
+    const [count, results] = await this.model.update(
+      {
+        text,
+        visibility,
+      },
+      {
+        where: {
+          id,
+          personId: currentPersonId,
+        },
+        returning: true,
+      }
+    );
+
+    if (count < 1) {
+      throw new Error('Unable to update comment');
+    }
+
+    return results[0];
+  }
+
+  async deleteComment({ commentId }) {
+    const currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
+
+    const { id } = parseGlobalId(commentId);
+
+    const count = await this.model.destroy({
+      where: {
+        id,
+        personId: currentPersonId,
+      },
+    });
+
+    return count > 0;
   }
 
   async getForNode({ nodeId, nodeType, flagLimit = 0 }) {
@@ -59,7 +127,8 @@ class CommentDataSource extends PostgresDataSource {
       where.flagCount = { [Op.lt]: flagLimit };
     }
 
-    const { comments, follows } = this.sequelize.models;
+    // eslint-disable-next-line camelcase
+    const { comments, follows, people, user_likes } = this.sequelize.models;
 
     return comments.findAll({
       where,
@@ -70,6 +139,16 @@ class CommentDataSource extends PostgresDataSource {
           where: {
             requestPersonId: currentPersonId, // we look for people who you follows
             state: 'ACCEPTED', // and make sure they are accepted
+          },
+          required: false, // emulates a left outer join
+        },
+        {
+          model: people,
+        },
+        {
+          model: user_likes,
+          where: {
+            personId: currentPersonId,
           },
           required: false, // emulates a left outer join
         },

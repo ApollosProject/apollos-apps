@@ -16,19 +16,15 @@ class VerificationConnected extends Component {
       PropTypes.func,
       PropTypes.object, // type check for React fragments
     ]),
-    screenProps: PropTypes.shape({}), // we'll funnel screenProps into props
   };
 
   static defaultProps = {
     Component: Verification,
-    screenProps: {},
   };
 
   validationSchema = Yup.object().shape({
     phone: Yup.string().matches(/^[6-9]\d{9}$/),
   });
-
-  flatProps = { ...this.props, ...this.props.screenProps };
 
   handleOnSubmit = (handleSubmitLogin) => async (
     { code },
@@ -76,7 +72,7 @@ class VerificationConnected extends Component {
                 setFieldValue={setFieldValue}
                 touched={touched}
                 values={values}
-                {...this.flatProps}
+                {...this.props}
               />
             )}
           </Formik>

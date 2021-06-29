@@ -24,6 +24,7 @@ export ContentSingleFeaturesConnected, {
 export ContentChildFeedConnected, {
   GET_CONTENT_CHILD_SIBLINGS,
 } from './ContentChildFeedConnected';
+export ContentFeedConnected, { GET_CONTENT_FEED } from './ContentFeedConnected';
 export ContentParentFeedConnected, {
   GET_CONTENT_PARENT_CHILDREN,
 } from './ContentParentFeedConnected';
@@ -33,12 +34,19 @@ export FeaturesFeedConnected, {
   GET_FEATURE_FEED,
   FEATURE_FEED_ACTION_MAP,
 } from './FeaturesFeedConnected';
+export {
+  FeatureFeedTabConnected,
+  CampusTabComponent,
+  DefaultTabComponent,
+  createFeatureFeedTab,
+} from './FeaturesFeedTabConnected';
 export FollowListConnected, {
   REQUEST_FOLLOW,
   ACCEPT_FOLLOW_REQUEST,
   IGNORE_FOLLOW_REQUEST,
   SuggestedFollowListConnected,
   RequestedFollowListConnected,
+  FollowingListConnected,
   GET_SUGGESTED_FOLLOWS,
 } from './FollowListConnected';
 export FollowListSearchModalConnected from './FollowListSearchModalConnected';
@@ -82,6 +90,7 @@ export NodeSingleConnected, {
 export RockAuthedWebBrowser from './RockAuthedWebBrowser';
 export RockAuthedWebView from './RockAuthedWebView';
 export SearchCardConnected from './SearchCardConnected';
+export SearchScreenConnected from './SearchScreenConnected';
 export SearchFeedConnected, {
   SearchInputHeader,
   SearchFeedNoResults,

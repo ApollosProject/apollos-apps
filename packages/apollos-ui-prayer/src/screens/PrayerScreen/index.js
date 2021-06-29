@@ -26,7 +26,7 @@ const PrayerScreen = ({
   PrayerCardComponent = PrayerCard,
   onPressPrimary,
   prayer,
-  ...screenProps
+  ...props
 }) => {
   const { track } = useContext(AnalyticsContext);
 
@@ -57,11 +57,11 @@ const PrayerScreen = ({
       isLoding={loading}
       onPressPrimary={loading || hasPrayed ? null : handleOnPressPrimary}
       primaryActionText={hasPrayed ? 'Prayed!' : '🙏 Pray'}
-      {...screenProps}
+      {...props}
     >
       <PrayerCardComponent
         prayer={prayer.text}
-        avatar={prayer.requestor?.photo || null}
+        profile={prayer.requestor}
         title={`Pray for ${
           prayer.requestor?.nickName || prayer.requestor?.firstName
         }`}
@@ -81,6 +81,7 @@ PrayerScreen.propTypes = {
       photo: PropTypes.any,
       nickName: PropTypes.string,
       firstName: PropTypes.string,
+      lastName: PropTypes.string,
     }),
     text: PropTypes.string,
     __typename: PropTypes.string,

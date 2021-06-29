@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Universal linking apple-app-site-association should handle custom values 1`] = `
+Array [
+  Array [
+    "Content-Type",
+    "application/json",
+  ],
+]
+`;
+
+exports[`Universal linking apple-app-site-association should handle custom values 2`] = `
+Array [
+  Array [
+    "{\\"applinks\\":{\\"apps\\":[],\\"details\\":[{\\"appID\\":\\"test_team_id.test_id\\",\\"paths\\":[\\"/app-link/*\\"]}]},\\"someOtherKey\\":\\"value \\"}",
+  ],
+]
+`;
+
+exports[`Universal linking apple-app-site-association should return the correct values 1`] = `
+Array [
+  Array [
+    "Content-Type",
+    "application/json",
+  ],
+]
+`;
+
+exports[`Universal linking apple-app-site-association should return the correct values 2`] = `
+Array [
+  Array [
+    "{\\"applinks\\":{\\"apps\\":[],\\"details\\":[{\\"appID\\":\\"test_team_id.test_id\\",\\"paths\\":[\\"/app-link/*\\"]}]}}",
+  ],
+]
+`;
+
+exports[`Universal linking assetlinks.json should handle custom values 1`] = `
+Array [
+  Array [
+    "Content-Type",
+    "application/json",
+  ],
+]
+`;
+
+exports[`Universal linking assetlinks.json should handle custom values 2`] = `
+Array [
+  Array [
+    "[{\\"relation\\":[\\"delegate_permission/common.handle_all_urls\\"],\\"target\\":{\\"namespace\\":\\"android_app\\",\\"package_name\\":\\"some_app_id\\",\\"sha256_cert_fingerprints\\":[\\"some-google-keystore\\"]},\\"someOtherKey\\":\\"value\\"}]",
+  ],
+]
+`;
+
+exports[`Universal linking assetlinks.json should return the correct values 1`] = `
+Array [
+  Array [
+    "Content-Type",
+    "application/json",
+  ],
+]
+`;
+
+exports[`Universal linking assetlinks.json should return the correct values 2`] = `
+Array [
+  Array [
+    "[{\\"relation\\":[\\"delegate_permission/common.handle_all_urls\\"],\\"target\\":{\\"namespace\\":\\"android_app\\",\\"package_name\\":\\"some_app_id\\",\\"sha256_cert_fingerprints\\":[\\"some-google-keystore\\"]}}]",
+  ],
+]
+`;
+
+exports[`Universal linking can send users to a link determined by a custom function 1`] = `
+Array [
+  Array [
+    Object {
+      "platform": "ios",
+      "req": Object {
+        "headers": "",
+        "path": "some-path-value",
+      },
+    },
+  ],
+]
+`;
+
+exports[`Universal linking generates a deep content link 1`] = `"apolloschurchapp://app-link/content/1"`;
+
+exports[`Universal linking generates a universal nav link to home 1`] = `"https://apollos.api/app-link/nav/home"`;
+
+exports[`Universal linking generates a universal nav link to the connect screen 1`] = `"https://apollos.api/app-link/nav/connect"`;

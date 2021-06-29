@@ -3,6 +3,175 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.24.0](https://github.com/apollosproject/apollos-apps/compare/v2.23.1...v2.24.0) (2021-06-28)
+
+**Note:** Version bump only for package @apollosproject/data-connector-postgres
+
+
+
+
+
+### [2.23.1](https://github.com/apollosproject/apollos-apps/compare/v2.23.0...v2.23.1) (2021-06-24)
+
+**Note:** Version bump only for package @apollosproject/data-connector-postgres
+
+
+
+
+
+## [2.23.0](https://github.com/apollosproject/apollos-apps/compare/v2.22.0...v2.23.0) (2021-06-24)
+
+
+### Features
+
+* Content Items Connection Model ([#2017](https://github.com/apollosproject/apollos-apps/issues/2017)) ([511e3a1](https://github.com/apollosproject/apollos-apps/commit/511e3a19057e0f7955cf12976770726f4de7574a))
+* Send a push notification when adding a new comment ([#1983](https://github.com/apollosproject/apollos-apps/issues/1983)) ([f84b2b7](https://github.com/apollosproject/apollos-apps/commit/f84b2b7e50517cc5ef6c32a18f77546f41c85d9a))
+
+
+
+## [2.22.0](https://github.com/apollosproject/apollos-apps/compare/v2.21.2...v2.22.0) (2021-06-23)
+
+
+### Features
+
+* Content Item Schema ([#2006](https://github.com/apollosproject/apollos-apps/issues/2006)) ([0fc23a4](https://github.com/apollosproject/apollos-apps/commit/0fc23a42e0ea974eb7fc9a51537ea46861c2fc1d))
+* Creates media model for postgres data connector ([#2005](https://github.com/apollosproject/apollos-apps/issues/2005)) ([870aca5](https://github.com/apollosproject/apollos-apps/commit/870aca5189e92b38d89b57b6e67417a6253d3206))
+
+
+
+### [2.21.2](https://github.com/apollosproject/apollos-apps/compare/v2.21.1...v2.21.2) (2021-06-18)
+
+**Note:** Version bump only for package @apollosproject/data-connector-postgres
+
+
+
+
+
+### [2.21.1](https://github.com/apollosproject/apollos-apps/compare/v2.21.0...v2.21.1) (2021-06-17)
+
+**Note:** Version bump only for package @apollosproject/data-connector-postgres
+
+
+
+
+
+## [2.21.0](https://github.com/apollosproject/apollos-apps/compare/v2.20.0...v2.21.0) (2021-06-16)
+
+**Note:** Version bump only for package @apollosproject/data-connector-postgres
+
+
+
+
+
+## [2.20.0](https://github.com/apollosproject/apollos-apps/compare/v2.19.0...v2.20.0) (2021-06-14)
+
+
+### Features
+
+* Following List ([#1982](https://github.com/apollosproject/apollos-apps/issues/1982)) ([bc6ec1d](https://github.com/apollosproject/apollos-apps/commit/bc6ec1db336a86a2ccd530ad3063aeb01b05ba3e))
+
+
+
+## [2.19.0](https://github.com/apollosproject/apollos-apps/compare/v2.18.1...v2.19.0) (2021-06-07)
+
+
+### Features
+
+* Notification Preferences Model ([#1954](https://github.com/apollosproject/apollos-apps/issues/1954)) ([1cb2589](https://github.com/apollosproject/apollos-apps/commit/1cb2589d4a67c2c596c96ccffcdd095a08299dd5))
+* Send pushes from Notification Model ([#1972](https://github.com/apollosproject/apollos-apps/issues/1972)) ([58f64b9](https://github.com/apollosproject/apollos-apps/commit/58f64b916ea489fd44ec191fa266fd7bcf6f4fe3))
+
+
+
+### [2.18.1](https://github.com/apollosproject/apollos-apps/compare/v2.18.0...v2.18.1) (2021-06-01)
+
+**Note:** Version bump only for package @apollosproject/data-connector-postgres
+
+
+
+
+
+## [2.18.0](https://github.com/apollosproject/apollos-apps/compare/v2.17.0...v2.18.0) (2021-05-27)
+
+**Note:** Version bump only for package @apollosproject/data-connector-postgres
+
+
+
+
+
+## [2.17.0](https://github.com/apollosproject/apollos-apps/compare/v2.16.0...v2.17.0) (2021-05-24)
+
+
+### Features
+
+* Initial Notifications Model ([#1938](https://github.com/apollosproject/apollos-apps/issues/1938)) ([e35385d](https://github.com/apollosproject/apollos-apps/commit/e35385dc294d20301dfc7ed3ab3d8f0f6bf6ee39))
+
+
+
+## [2.16.0](https://github.com/apollosproject/apollos-apps/compare/v2.15.0...v2.16.0) (2021-05-20)
+
+**Note:** Version bump only for package @apollosproject/data-connector-postgres
+
+
+
+
+
+## [2.15.0](https://github.com/apollosproject/apollos-apps/compare/v2.14.0...v2.15.0) (2021-05-19)
+
+**Note:** Version bump only for package @apollosproject/data-connector-postgres
+
+
+
+
+
+## [2.14.0](https://github.com/apollosproject/apollos-apps/compare/v2.13.1...v2.14.0) (2021-05-14)
+
+**Note:** Version bump only for package @apollosproject/data-connector-postgres
+
+
+
+
+
+### [2.13.1](https://github.com/apollosproject/apollos-apps/compare/v2.13.0...v2.13.1) (2021-04-28)
+
+**Note:** Version bump only for package @apollosproject/data-connector-postgres
+
+
+
+
+
+## [2.13.0](https://github.com/apollosproject/apollos-apps/compare/v2.12.0...v2.13.0) (2021-04-23)
+
+**Note:** Version bump only for package @apollosproject/data-connector-postgres
+
+
+
+
+
+## [2.12.0](https://github.com/apollosproject/apollos-apps/compare/v2.11.0...v2.12.0) (2021-04-22)
+
+**Note:** Version bump only for package @apollosproject/data-connector-postgres
+
+
+
+
+
+## [2.11.0](https://github.com/apollosproject/apollos-apps/compare/v2.10.0...v2.11.0) (2021-04-12)
+
+**Note:** Version bump only for package @apollosproject/data-connector-postgres
+
+
+
+
+
+## [2.10.0](https://github.com/apollosproject/apollos-apps/compare/v2.9.0...v2.10.0) (2021-04-06)
+
+
+### Features
+
+* Comment update and delete ([#1855](https://github.com/apollosproject/apollos-apps/issues/1855)) ([6968b6c](https://github.com/apollosproject/apollos-apps/commit/6968b6cae059adc4b810c18d2ed9e217166c48cb))
+
+
+
 ## [2.9.0](https://github.com/apollosproject/apollos-apps/compare/v2.8.0...v2.9.0) (2021-03-30)
 
 **Note:** Version bump only for package @apollosproject/data-connector-postgres

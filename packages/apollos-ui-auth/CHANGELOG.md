@@ -3,6 +3,171 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.24.0](https://github.com/apollosproject/apollos-apps/compare/v2.23.1...v2.24.0) (2021-06-28)
+
+**Note:** Version bump only for package @apollosproject/ui-auth
+
+
+
+
+
+### [2.23.1](https://github.com/apollosproject/apollos-apps/compare/v2.23.0...v2.23.1) (2021-06-24)
+
+**Note:** Version bump only for package @apollosproject/ui-auth
+
+
+
+
+
+## [2.23.0](https://github.com/apollosproject/apollos-apps/compare/v2.22.0...v2.23.0) (2021-06-24)
+
+**Note:** Version bump only for package @apollosproject/ui-auth
+
+
+
+
+
+## [2.22.0](https://github.com/apollosproject/apollos-apps/compare/v2.21.2...v2.22.0) (2021-06-23)
+
+**Note:** Version bump only for package @apollosproject/ui-auth
+
+
+
+
+
+### [2.21.2](https://github.com/apollosproject/apollos-apps/compare/v2.21.1...v2.21.2) (2021-06-18)
+
+**Note:** Version bump only for package @apollosproject/ui-auth
+
+
+
+
+
+### [2.21.1](https://github.com/apollosproject/apollos-apps/compare/v2.21.0...v2.21.1) (2021-06-17)
+
+**Note:** Version bump only for package @apollosproject/ui-auth
+
+
+
+
+
+## [2.21.0](https://github.com/apollosproject/apollos-apps/compare/v2.20.0...v2.21.0) (2021-06-16)
+
+**Note:** Version bump only for package @apollosproject/ui-auth
+
+
+
+
+
+## [2.20.0](https://github.com/apollosproject/apollos-apps/compare/v2.19.0...v2.20.0) (2021-06-14)
+
+**Note:** Version bump only for package @apollosproject/ui-auth
+
+
+
+
+
+## [2.19.0](https://github.com/apollosproject/apollos-apps/compare/v2.18.1...v2.19.0) (2021-06-07)
+
+**Note:** Version bump only for package @apollosproject/ui-auth
+
+
+
+
+
+### [2.18.1](https://github.com/apollosproject/apollos-apps/compare/v2.18.0...v2.18.1) (2021-06-01)
+
+**Note:** Version bump only for package @apollosproject/ui-auth
+
+
+
+
+
+## [2.18.0](https://github.com/apollosproject/apollos-apps/compare/v2.17.0...v2.18.0) (2021-05-27)
+
+**Note:** Version bump only for package @apollosproject/ui-auth
+
+
+
+
+
+## [2.17.0](https://github.com/apollosproject/apollos-apps/compare/v2.16.0...v2.17.0) (2021-05-24)
+
+**Note:** Version bump only for package @apollosproject/ui-auth
+
+
+
+
+
+## [2.16.0](https://github.com/apollosproject/apollos-apps/compare/v2.15.0...v2.16.0) (2021-05-20)
+
+**Note:** Version bump only for package @apollosproject/ui-auth
+
+
+
+
+
+## [2.15.0](https://github.com/apollosproject/apollos-apps/compare/v2.14.0...v2.15.0) (2021-05-19)
+
+
+### Bug Fixes
+
+* cleans up circular dependencies ([#1942](https://github.com/apollosproject/apollos-apps/issues/1942)) ([2fcd458](https://github.com/apollosproject/apollos-apps/commit/2fcd45882e2b3ab88f7e1c815b139de5d57f436e))
+* sends birthdates with the correct date ([#1943](https://github.com/apollosproject/apollos-apps/issues/1943)) ([61bd00c](https://github.com/apollosproject/apollos-apps/commit/61bd00c2f75179fa234391867ef57d8dab6e6c4f))
+
+
+
+## [2.14.0](https://github.com/apollosproject/apollos-apps/compare/v2.13.1...v2.14.0) (2021-05-14)
+
+
+### Bug Fixes
+
+* remove auth navigation headers ([#1937](https://github.com/apollosproject/apollos-apps/issues/1937)) ([ee054d3](https://github.com/apollosproject/apollos-apps/commit/ee054d318824da42f4659cf9eddcde719d3f1114))
+
+
+
+### [2.13.1](https://github.com/apollosproject/apollos-apps/compare/v2.13.0...v2.13.1) (2021-04-28)
+
+**Note:** Version bump only for package @apollosproject/ui-auth
+
+
+
+
+
+## [2.13.0](https://github.com/apollosproject/apollos-apps/compare/v2.12.0...v2.13.0) (2021-04-23)
+
+**Note:** Version bump only for package @apollosproject/ui-auth
+
+
+
+
+
+## [2.12.0](https://github.com/apollosproject/apollos-apps/compare/v2.11.0...v2.12.0) (2021-04-22)
+
+
+### Bug Fixes
+
+* correctly pass reset password URL to auth ([#1748](https://github.com/apollosproject/apollos-apps/issues/1748)) ([3ea9d4b](https://github.com/apollosproject/apollos-apps/commit/3ea9d4b1de4d5dd01f3b3caec4256e57e8ab8f84))
+* fix custom auth text ([#1869](https://github.com/apollosproject/apollos-apps/issues/1869)) ([49cc2fc](https://github.com/apollosproject/apollos-apps/commit/49cc2fc18a989c05d3ec2a78e2a09d519863080a))
+
+
+
+## [2.11.0](https://github.com/apollosproject/apollos-apps/compare/v2.10.0...v2.11.0) (2021-04-12)
+
+**Note:** Version bump only for package @apollosproject/ui-auth
+
+
+
+
+
+## [2.10.0](https://github.com/apollosproject/apollos-apps/compare/v2.9.0...v2.10.0) (2021-04-06)
+
+**Note:** Version bump only for package @apollosproject/ui-auth
+
+
+
+
+
 ## [2.9.0](https://github.com/apollosproject/apollos-apps/compare/v2.8.0...v2.9.0) (2021-03-30)
 
 **Note:** Version bump only for package @apollosproject/ui-auth

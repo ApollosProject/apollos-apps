@@ -3,6 +3,173 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.24.0](https://github.com/apollosproject/apollos-apps/compare/v2.23.1...v2.24.0) (2021-06-28)
+
+**Note:** Version bump only for package @apollosproject/ui-kit
+
+
+
+
+
+### [2.23.1](https://github.com/apollosproject/apollos-apps/compare/v2.23.0...v2.23.1) (2021-06-24)
+
+**Note:** Version bump only for package @apollosproject/ui-kit
+
+
+
+
+
+## [2.23.0](https://github.com/apollosproject/apollos-apps/compare/v2.22.0...v2.23.0) (2021-06-24)
+
+**Note:** Version bump only for package @apollosproject/ui-kit
+
+
+
+
+
+## [2.22.0](https://github.com/apollosproject/apollos-apps/compare/v2.21.2...v2.22.0) (2021-06-23)
+
+**Note:** Version bump only for package @apollosproject/ui-kit
+
+
+
+
+
+### [2.21.2](https://github.com/apollosproject/apollos-apps/compare/v2.21.1...v2.21.2) (2021-06-18)
+
+**Note:** Version bump only for package @apollosproject/ui-kit
+
+
+
+
+
+### [2.21.1](https://github.com/apollosproject/apollos-apps/compare/v2.21.0...v2.21.1) (2021-06-17)
+
+**Note:** Version bump only for package @apollosproject/ui-kit
+
+
+
+
+
+## [2.21.0](https://github.com/apollosproject/apollos-apps/compare/v2.20.0...v2.21.0) (2021-06-16)
+
+**Note:** Version bump only for package @apollosproject/ui-kit
+
+
+
+
+
+## [2.20.0](https://github.com/apollosproject/apollos-apps/compare/v2.19.0...v2.20.0) (2021-06-14)
+
+**Note:** Version bump only for package @apollosproject/ui-kit
+
+
+
+
+
+## [2.19.0](https://github.com/apollosproject/apollos-apps/compare/v2.18.1...v2.19.0) (2021-06-07)
+
+**Note:** Version bump only for package @apollosproject/ui-kit
+
+
+
+
+
+### [2.18.1](https://github.com/apollosproject/apollos-apps/compare/v2.18.0...v2.18.1) (2021-06-01)
+
+**Note:** Version bump only for package @apollosproject/ui-kit
+
+
+
+
+
+## [2.18.0](https://github.com/apollosproject/apollos-apps/compare/v2.17.0...v2.18.0) (2021-05-27)
+
+**Note:** Version bump only for package @apollosproject/ui-kit
+
+
+
+
+
+## [2.17.0](https://github.com/apollosproject/apollos-apps/compare/v2.16.0...v2.17.0) (2021-05-24)
+
+
+### Bug Fixes
+
+* Invalid type when subtracting default date in datepicker ([#1957](https://github.com/apollosproject/apollos-apps/issues/1957)) ([120dcc7](https://github.com/apollosproject/apollos-apps/commit/120dcc7922b95442ab5416fe366fadf84526b64f))
+
+
+
+## [2.16.0](https://github.com/apollosproject/apollos-apps/compare/v2.15.0...v2.16.0) (2021-05-20)
+
+**Note:** Version bump only for package @apollosproject/ui-kit
+
+
+
+
+
+## [2.15.0](https://github.com/apollosproject/apollos-apps/compare/v2.14.0...v2.15.0) (2021-05-19)
+
+
+### Bug Fixes
+
+* cleans up circular dependencies ([#1942](https://github.com/apollosproject/apollos-apps/issues/1942)) ([2fcd458](https://github.com/apollosproject/apollos-apps/commit/2fcd45882e2b3ab88f7e1c815b139de5d57f436e))
+* sends birthdates with the correct date ([#1943](https://github.com/apollosproject/apollos-apps/issues/1943)) ([61bd00c](https://github.com/apollosproject/apollos-apps/commit/61bd00c2f75179fa234391867ef57d8dab6e6c4f))
+
+
+
+## [2.14.0](https://github.com/apollosproject/apollos-apps/compare/v2.13.1...v2.14.0) (2021-05-14)
+
+
+### Bug Fixes
+
+* remove auth navigation headers ([#1937](https://github.com/apollosproject/apollos-apps/issues/1937)) ([ee054d3](https://github.com/apollosproject/apollos-apps/commit/ee054d318824da42f4659cf9eddcde719d3f1114))
+
+
+
+### [2.13.1](https://github.com/apollosproject/apollos-apps/compare/v2.13.0...v2.13.1) (2021-04-28)
+
+**Note:** Version bump only for package @apollosproject/ui-kit
+
+
+
+
+
+## [2.13.0](https://github.com/apollosproject/apollos-apps/compare/v2.12.0...v2.13.0) (2021-04-23)
+
+**Note:** Version bump only for package @apollosproject/ui-kit
+
+
+
+
+
+## [2.12.0](https://github.com/apollosproject/apollos-apps/compare/v2.11.0...v2.12.0) (2021-04-22)
+
+
+### Features
+
+* Better Avatar Placeholder ([#1866](https://github.com/apollosproject/apollos-apps/issues/1866)) ([d49ab8b](https://github.com/apollosproject/apollos-apps/commit/d49ab8bff1fbb300d597bc3f13291eb429b283cd))
+
+
+
+## [2.11.0](https://github.com/apollosproject/apollos-apps/compare/v2.10.0...v2.11.0) (2021-04-12)
+
+
+### Bug Fixes
+
+* Buttons hiding too soon in editing modal on Android ([#1864](https://github.com/apollosproject/apollos-apps/issues/1864)) ([2734e39](https://github.com/apollosproject/apollos-apps/commit/2734e398fdf375cc7d1d42d8afe1a7dbac362d05))
+
+
+
+## [2.10.0](https://github.com/apollosproject/apollos-apps/compare/v2.9.0...v2.10.0) (2021-04-06)
+
+
+### Features
+
+* Edit / Delete journals UI ([#1856](https://github.com/apollosproject/apollos-apps/issues/1856)) ([6dc0fdd](https://github.com/apollosproject/apollos-apps/commit/6dc0fdda33fdba42969fa3a39449cb3e1a25dc15))
+
+
+
 ## [2.9.0](https://github.com/apollosproject/apollos-apps/compare/v2.8.0...v2.9.0) (2021-03-30)
 
 

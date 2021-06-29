@@ -1,4 +1,4 @@
-export OnboardingSwiper from './OnboardingSwiper';
+export { default as OnboardingSwiper } from './OnboardingSwiper';
 export {
   AboutYou,
   AboutYouConnected,
@@ -12,12 +12,15 @@ export {
   FeaturesConnected,
   Follow,
   FollowConnected,
+  Landing,
 } from './slides';
 
-export Slide, { SlideContent } from './Slide';
+export { default as Slide, SlideContent } from './Slide';
 
 export {
   WITH_USER_ID,
   onboardingComplete,
   checkOnboardingStatusAndNavigate,
 } from './onboardingStatus';
+
+export { default as Onboarding } from './Onboarding';

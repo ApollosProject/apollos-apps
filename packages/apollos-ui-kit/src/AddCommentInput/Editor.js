@@ -15,7 +15,6 @@ import { withTheme } from '../theme';
 import Avatar from '../Avatar';
 import styled from '../styled';
 import { H4 } from '../typography';
-import PaddedView from '../PaddedView';
 import Touchable from '../Touchable';
 import useKeyboardHeight from './useKeyboardHeight';
 
@@ -36,8 +35,17 @@ const CommentInputContainer = styled(
 )(View);
 
 const NextButton = styled(
-  ({ theme: { colors } }) => ({
+  ({ theme: { colors, sizing }, left = false }) => ({
     color: colors.action.secondary,
+    ...Platform.select({
+      ios: {},
+      android: {
+        alignSelf: left ? 'flex-start' : 'flex-end',
+        textAlign: left ? 'left' : 'right',
+        flex: 1,
+        paddingHorizontal: sizing.baseUnit,
+      },
+    }),
   }),
   'ui-kit.AddCommentInput.NextButton'
 )(H4);
@@ -81,12 +89,15 @@ const Editor = ({
   bottomSheetModalRef,
   navigation,
   headerTitle,
-  image,
   prompt,
+  initialValue,
+  showCancel,
   bottomSheetIndex,
+  hiddenIndex,
+  profile,
 }) => {
   const keyboardHeight = useKeyboardHeight();
-  const text = useSharedValue(null);
+  const text = useSharedValue(initialValue);
   const [isEditing, setIsEditing] = useState(false);
   const [headerShown, setHeaderShown] = useState(false);
 
@@ -100,6 +111,10 @@ const Editor = ({
     if (!text.value?.length) bottomSheetModalRef.current?.collapse();
   }, [bottomSheetModalRef, text]);
 
+  const handleDismiss = useCallback(() => {
+    bottomSheetModalRef.current?.dismiss();
+  }, [bottomSheetModalRef]);
+
   const onSubmit = useCallback(
     () => navigation.navigate('Confirmation', { value: text.value }),
     [navigation, text]
@@ -111,14 +126,24 @@ const Editor = ({
     [onSubmit]
   );
 
+  const HeaderLeft = useMemo(
+    // eslint-disable-next-line react/display-name
+    () => () => (
+      <NextButton left onPress={handleDismiss}>
+        Cancel
+      </NextButton>
+    ),
+    [handleDismiss]
+  );
+
   useDerivedValue(() => {
     const textHasLength = text.value?.length > 0;
 
     // hide header when compressed
     runOnJS(setHeaderShown)(
-      textHasLength && (isEditing || bottomSheetIndex > 0)
+      textHasLength && (isEditing || bottomSheetIndex > hiddenIndex)
     );
-  }, [isEditing, bottomSheetIndex, setHeaderShown, text]);
+  }, [isEditing, bottomSheetIndex, setHeaderShown, text, hiddenIndex]);
 
   useEffect(() => {
     // not working on android 😭
@@ -136,16 +161,31 @@ const Editor = ({
             headerRight: HeaderRight,
           }
         : {}),
+      ...(shouldShowHeader && showCancel
+        ? {
+            headerLeft: showCancel ? HeaderLeft : null,
+          }
+        : {}),
     });
-  }, [navigation, headerShown, headerTitle, HeaderRight]);
+  }, [
+    navigation,
+    headerShown,
+    headerTitle,
+    HeaderRight,
+    HeaderLeft,
+    showCancel,
+  ]);
 
   const androidHeaderOpacity = useDerivedValue(() =>
     withSpring(headerShown ? 1 : 0)
   );
+
   const androidHeaderStyles = useAnimatedStyle(() => ({
     position: 'absolute',
     top: 0,
     right: 0, // todo: replace with useTheme()
+    left: 0,
+    flexDirection: 'row',
     opacity: androidHeaderOpacity.value,
   }));
 
@@ -157,13 +197,20 @@ const Editor = ({
       focusHook={useFocusEffect}
       contentContainerStyle={flex}
     >
-      <CommentInputContainer>
+      <CommentInputContainer
+        style={Platform.select({
+          android: {
+            paddingTop: headerShown ? 32 : 0,
+          },
+        })}
+      >
         <TextInput
           prefix={
             <Touchable onPress={() => bottomSheetModalRef.current?.expand()}>
-              <EditorAvatar source={image} />
+              <EditorAvatar profile={profile} />
             </Touchable>
           }
+          defaultValue={initialValue}
           label={prompt}
           multiline
           onChangeText={(value) => {
@@ -189,9 +236,8 @@ const Editor = ({
 
       {Platform.OS === 'android' ? (
         <Animated.View style={androidHeaderStyles}>
-          <PaddedView vertical={false}>
-            <HeaderRight />
-          </PaddedView>
+          {showCancel && <HeaderLeft />}
+          <HeaderRight />
         </Animated.View>
       ) : null}
     </ContainerScrollView>
@@ -199,10 +245,12 @@ const Editor = ({
 };
 
 Editor.propTypes = {
+  showCancel: PropTypes.bool,
   bottomSheetModalRef: PropTypes.shape({
     current: PropTypes.shape({
       collapse: PropTypes.func,
       expand: PropTypes.func,
+      dismiss: PropTypes.func,
     }),
   }),
   image: PropTypes.shape({}),
@@ -211,10 +259,18 @@ Editor.propTypes = {
     value: PropTypes.string,
     setValue: PropTypes.func,
   }),
-  headerTitle: PropTypes.string,
-  bottomSheetIndex: PropTypes.shape({
-    value: PropTypes.number,
+  profile: PropTypes.shape({
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
   }),
+  initialValue: PropTypes.string,
+  headerTitle: PropTypes.string,
+  bottomSheetIndex: PropTypes.number,
+  hiddenIndex: PropTypes.number,
+};
+
+Editor.defaultProps = {
+  hiddenIndex: 0,
 };
 
 export default Editor;

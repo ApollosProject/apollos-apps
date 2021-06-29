@@ -7,18 +7,12 @@ Array [
   Array [
     "/People",
     Object {
-      "BirthDay": 1,
-      "BirthMonth": 2,
-      "BirthYear": 2020,
-      "FirstName": "Vincent",
-      "Gender": 1,
+      "Gender": 0,
       "IsSystem": false,
     },
   ],
 ]
 `;
-
-exports[`Person creates a profile 2`] = `Object {}`;
 
 exports[`Person gets person from aliasId: The call to fetch the alias id 1`] = `
 Array [

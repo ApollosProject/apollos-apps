@@ -59,7 +59,14 @@ const localConnect = () =>
 const sequelize = ApollosConfig?.DATABASE?.URL
   ? new Sequelize(ApollosConfig?.DATABASE?.URL, {
       ...sequelizeConfigOptions,
-      ...(ApollosConfig?.DATABASE?.OPTIONS || {}),
+      ...(ApollosConfig?.DATABASE?.OPTIONS ||
+      ApollosConfig.DATABASE.URL.includes('localhost')
+        ? {}
+        : {
+            dialectOptions: {
+              ssl: { require: true, rejectUnauthorized: false },
+            },
+          }),
     })
   : localConnect();
 

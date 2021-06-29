@@ -13,11 +13,7 @@ import * as Scripture from '../index';
 
 ApollosConfig.loadJs({
   BIBLE_API: {
-    KEY: '9879dbb7cfe39e4d-01',
-    BIBLE_ID: {
-      WEB: '9879dbb7cfe39e4d-01',
-      KJV: 'de4e12af7f28f599-02',
-    },
+    KEY: '123asdfasdfasdf',
   },
 });
 
@@ -85,6 +81,7 @@ describe('Scripture', () => {
           id
           html
           reference
+          book
           copyright
           version
         }
@@ -95,10 +92,15 @@ describe('Scripture', () => {
         passages: oneVerseMock,
       },
     }));
+    context.dataSources.Scripture.getBook = jest.fn(() => 'Song Of Soloman');
+    context.dataSources.Scripture.getBibleId = () => '9879dbb7cfe39e4d-01';
     const rootValue = {};
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
     expect(context.dataSources.Scripture.get.mock.calls[0]).toMatchSnapshot();
+    expect(
+      context.dataSources.Scripture.getBook.mock.calls[0]
+    ).toMatchSnapshot();
   });
 
   it('returns multiple verses', async () => {
@@ -113,6 +115,7 @@ describe('Scripture', () => {
         }
       }
     `;
+    context.dataSources.Scripture.getBibleId = () => '9879dbb7cfe39e4d-01';
     context.dataSources.Scripture.get = jest.fn(() => ({
       data: {
         passages: twoVerseMock,
@@ -140,6 +143,12 @@ describe('Scripture', () => {
         }
       }
     `;
+    context.dataSources.Scripture.get = jest.fn(() => ({
+      data: {
+        ...oneVerseMock[0],
+        abbreviation: 'WEB',
+      },
+    }));
     const rootValue = {};
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();

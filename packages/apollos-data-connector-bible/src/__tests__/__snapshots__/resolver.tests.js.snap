@@ -4,6 +4,7 @@ exports[`Scripture returns a single verse 1`] = `
 Object {
   "data": Object {
     "scripture": Object {
+      "book": "Song Of Soloman",
       "copyright": "PUBLIC DOMAIN",
       "html": "<p class=\\"p\\"><span data-number=\\"1\\" class=\\"v\\">1</span>The Song of songs, which is Solomon’s.</p>",
       "id": "Scripture:27ee1e80fe669dc64351715914e68dab417253a3558db00cd7edbaa6b058176e71ce3edec3df90cb5154ba4f0c0c06d70fcf6b35b9f96d7fe5eb6ebfd8902095",
@@ -16,13 +17,19 @@ Object {
 
 exports[`Scripture returns a single verse 2`] = `
 Array [
-  "9879dbb7cfe39e4d-01/search?query=SNG.1.1",
+  "bibles/9879dbb7cfe39e4d-01/search?query=SNG.1.1",
   null,
   Object {
     "cacheOptions": Object {
       "ttl": 86400,
     },
   },
+]
+`;
+
+exports[`Scripture returns a single verse 3`] = `
+Array [
+  "SNG",
 ]
 `;
 

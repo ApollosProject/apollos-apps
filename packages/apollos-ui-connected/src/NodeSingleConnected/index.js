@@ -95,14 +95,14 @@ const NodeSingleConnectedWithMedia = ({
 
       if (!hasMedia && !hasLivestream)
         return (
-          <NodeSingleConnected nodeId={nodeId} {...props}>
+          <NodeSingleConnected nodeId={nodeId} Component={Component} {...props}>
             {children}
           </NodeSingleConnected>
         );
 
       const mediaSource = hasLivestream
         ? data.node?.liveStream?.media?.sources[0]
-        : data.node?.videos[0]?.sources[0];
+        : data.node?.videos?.find(({ sources }) => sources.length)?.sources[0];
 
       return (
         <BackgroundView>

@@ -2,9 +2,9 @@
   "name": "@apollosproject/data-connector-twilio",
   "repository": "git://github.com/apollosproject/apollos-apps.git",
   "engines": {
-    "node": ">=10.x.x"
+    "node": ">=12"
   },
-  "version": "2.9.0",
+  "version": "2.24.0",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
@@ -35,8 +35,8 @@
     "@apollosproject/config": "*"
   },
   "devDependencies": {
-    "@apollosproject/apollo-server-env-mock": "^2.9.0",
-    "@apollosproject/babel-preset-apollos": "^2.9.0",
+    "@apollosproject/apollo-server-env-mock": "^2.24.0",
+    "@apollosproject/babel-preset-apollos": "^2.24.0",
     "jest": "^25.1.0"
   },
   "publishConfig": {
