@@ -142,7 +142,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -189,7 +189,7 @@ Array [
         <Text
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
               "lineHeight": 24,
@@ -299,7 +299,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -345,7 +345,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -392,7 +392,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -551,7 +551,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -598,7 +598,7 @@ Array [
         <Text
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
               "lineHeight": 24,
@@ -708,7 +708,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -754,7 +754,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -801,7 +801,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -1074,7 +1074,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -1122,7 +1122,7 @@ Array [
           padded={true}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
               "lineHeight": 24,
@@ -1138,7 +1138,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -1206,11 +1206,11 @@ Array [
         }
       >
         <View
-          hasAvatar={true}
+          hasAvatar={false}
           style={
             Object {
               "alignItems": "center",
-              "paddingBottom": 16,
+              "paddingBottom": 0,
             }
           }
         >
@@ -1222,51 +1222,127 @@ Array [
               }
             }
           >
-            <View
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={100}
+              bbWidth={100}
+              height={100}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
               style={
-                Object {
-                  "alignItems": "center",
-                  "height": 80,
-                  "justifyContent": "center",
-                  "width": 80,
-                }
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  undefined,
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 100,
+                    "width": 100,
+                  },
+                ]
               }
-              themeSize={80}
+              vbHeight={24}
+              vbWidth={24}
+              width={100}
             >
-              <Image
-                fadeDuration={250}
-                onLoad={[Function]}
-                size="medium"
-                source={
+              <RNSVGGroup
+                fill={
                   Array [
-                    Object {
-                      "cache": "force-cache",
-                      "uri": "https://picsum.photos/400/400",
-                    },
+                    0,
+                    4278190080,
                   ]
                 }
-                style={
-                  Object {
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 40,
-                    "bottom": 0,
-                    "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                    "width": "100%",
-                  }
+                fillOpacity={1}
+                fillRule={1}
+                font={Object {}}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
                 }
-                themeSize={80}
-              />
-            </View>
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={Array []}
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                x={0}
+                y={0}
+              >
+                <RNSVGPath
+                  d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-3.33 8.33C8.67 8.5 10.2 7 12 7s3.33 1.5 3.33 3.33v.84c0 1.84-1.53 3.33-3.33 3.33S8.67 13 8.67 11.17v-.84zm3.33 10c-2.03 0-3.9-.73-5.33-1.93.7-1.32 2.07-2.23 3.66-2.23h3.34c1.6 0 2.97.9 3.66 2.22-1.44 1.2-3.3 1.92-5.33 1.92z"
+                  fill={
+                    Array [
+                      0,
+                      4280756014,
+                    ]
+                  }
+                  fillOpacity={1}
+                  fillRule={1}
+                  matrix={
+                    Array [
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                    ]
+                  }
+                  opacity={1}
+                  originX={0}
+                  originY={0}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                  rotation={0}
+                  scaleX={1}
+                  scaleY={1}
+                  skewX={0}
+                  skewY={0}
+                  stroke={null}
+                  strokeDasharray={null}
+                  strokeDashoffset={null}
+                  strokeLinecap={0}
+                  strokeLinejoin={0}
+                  strokeMiterlimit={4}
+                  strokeOpacity={1}
+                  strokeWidth={1}
+                  vectorEffect={0}
+                  x={0}
+                  y={0}
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
           </View>
         </View>
         <Text
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
               "lineHeight": 24,
@@ -1376,7 +1452,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -1422,7 +1498,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -1469,7 +1545,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -1629,7 +1705,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -1676,7 +1752,7 @@ Array [
         <Text
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
               "lineHeight": 24,
@@ -1786,7 +1862,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -1832,7 +1908,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -1879,7 +1955,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,

@@ -3,6 +3,178 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.24.0](https://github.com/apollosproject/apollos-apps/compare/v2.23.1...v2.24.0) (2021-06-28)
+
+
+### Features
+
+* add ability to pass options to FeaturesFeedTabConnected route ([#2020](https://github.com/apollosproject/apollos-apps/issues/2020)) ([96dd90e](https://github.com/apollosproject/apollos-apps/commit/96dd90ef9e68b53cd69a2c6d5b9b5489d3b427ea))
+
+
+
+### [2.23.1](https://github.com/apollosproject/apollos-apps/compare/v2.23.0...v2.23.1) (2021-06-24)
+
+**Note:** Version bump only for package @apollosproject/ui-connected
+
+
+
+
+
+## [2.23.0](https://github.com/apollosproject/apollos-apps/compare/v2.22.0...v2.23.0) (2021-06-24)
+
+**Note:** Version bump only for package @apollosproject/ui-connected
+
+
+
+
+
+## [2.22.0](https://github.com/apollosproject/apollos-apps/compare/v2.21.2...v2.22.0) (2021-06-23)
+
+**Note:** Version bump only for package @apollosproject/ui-connected
+
+
+
+
+
+### [2.21.2](https://github.com/apollosproject/apollos-apps/compare/v2.21.1...v2.21.2) (2021-06-18)
+
+**Note:** Version bump only for package @apollosproject/ui-connected
+
+
+
+
+
+### [2.21.1](https://github.com/apollosproject/apollos-apps/compare/v2.21.0...v2.21.1) (2021-06-17)
+
+**Note:** Version bump only for package @apollosproject/ui-connected
+
+
+
+
+
+## [2.21.0](https://github.com/apollosproject/apollos-apps/compare/v2.20.0...v2.21.0) (2021-06-16)
+
+**Note:** Version bump only for package @apollosproject/ui-connected
+
+
+
+
+
+## [2.20.0](https://github.com/apollosproject/apollos-apps/compare/v2.19.0...v2.20.0) (2021-06-14)
+
+
+### Features
+
+* Following List ([#1982](https://github.com/apollosproject/apollos-apps/issues/1982)) ([bc6ec1d](https://github.com/apollosproject/apollos-apps/commit/bc6ec1db336a86a2ccd530ad3063aeb01b05ba3e))
+
+
+### Bug Fixes
+
+* Close search modal when tapping on an item ([#1978](https://github.com/apollosproject/apollos-apps/issues/1978)) ([e9f771f](https://github.com/apollosproject/apollos-apps/commit/e9f771fc909eec291b9c1ff2855a55354e990847))
+* properly refetch liked content list ([#1986](https://github.com/apollosproject/apollos-apps/issues/1986)) ([4d899a2](https://github.com/apollosproject/apollos-apps/commit/4d899a2e3b313058214a1848f1117186a07b2e62))
+
+
+
+## [2.19.0](https://github.com/apollosproject/apollos-apps/compare/v2.18.1...v2.19.0) (2021-06-07)
+
+**Note:** Version bump only for package @apollosproject/ui-connected
+
+
+
+
+
+### [2.18.1](https://github.com/apollosproject/apollos-apps/compare/v2.18.0...v2.18.1) (2021-06-01)
+
+
+### Bug Fixes
+
+* Bug causing new comments to show up only after a refresh ([#1968](https://github.com/apollosproject/apollos-apps/issues/1968)) ([6bf4d29](https://github.com/apollosproject/apollos-apps/commit/6bf4d29c6de6a8dd78386f15241b4402ed4274be))
+
+
+
+## [2.18.0](https://github.com/apollosproject/apollos-apps/compare/v2.17.0...v2.18.0) (2021-05-27)
+
+
+### Features
+
+* Add support for feeds using campusIds ([#1964](https://github.com/apollosproject/apollos-apps/issues/1964)) ([136d254](https://github.com/apollosproject/apollos-apps/commit/136d25497683c68295c0c447b7ad0e4b23422a41))
+
+
+
+## [2.17.0](https://github.com/apollosproject/apollos-apps/compare/v2.16.0...v2.17.0) (2021-05-24)
+
+**Note:** Version bump only for package @apollosproject/ui-connected
+
+
+
+
+
+## [2.16.0](https://github.com/apollosproject/apollos-apps/compare/v2.15.0...v2.16.0) (2021-05-20)
+
+
+### Features
+
+* Move FeatureFeed tabs to core packages ([#1953](https://github.com/apollosproject/apollos-apps/issues/1953)) ([53bbd41](https://github.com/apollosproject/apollos-apps/commit/53bbd416f62216b11dcd42fe1b7a896eca1b2087))
+
+
+
+## [2.15.0](https://github.com/apollosproject/apollos-apps/compare/v2.14.0...v2.15.0) (2021-05-19)
+
+
+### Bug Fixes
+
+* cleans up circular dependencies ([#1942](https://github.com/apollosproject/apollos-apps/issues/1942)) ([2fcd458](https://github.com/apollosproject/apollos-apps/commit/2fcd45882e2b3ab88f7e1c815b139de5d57f436e))
+* sends birthdates with the correct date ([#1943](https://github.com/apollosproject/apollos-apps/issues/1943)) ([61bd00c](https://github.com/apollosproject/apollos-apps/commit/61bd00c2f75179fa234391867ef57d8dab6e6c4f))
+
+
+
+## [2.14.0](https://github.com/apollosproject/apollos-apps/compare/v2.13.1...v2.14.0) (2021-05-14)
+
+**Note:** Version bump only for package @apollosproject/ui-connected
+
+
+
+
+
+### [2.13.1](https://github.com/apollosproject/apollos-apps/compare/v2.13.0...v2.13.1) (2021-04-28)
+
+**Note:** Version bump only for package @apollosproject/ui-connected
+
+
+
+
+
+## [2.13.0](https://github.com/apollosproject/apollos-apps/compare/v2.12.0...v2.13.0) (2021-04-23)
+
+**Note:** Version bump only for package @apollosproject/ui-connected
+
+
+
+
+
+## [2.12.0](https://github.com/apollosproject/apollos-apps/compare/v2.11.0...v2.12.0) (2021-04-22)
+
+
+### Features
+
+* Better Avatar Placeholder ([#1866](https://github.com/apollosproject/apollos-apps/issues/1866)) ([d49ab8b](https://github.com/apollosproject/apollos-apps/commit/d49ab8bff1fbb300d597bc3f13291eb429b283cd))
+
+
+### Bug Fixes
+
+* correctly pass reset password URL to auth ([#1748](https://github.com/apollosproject/apollos-apps/issues/1748)) ([3ea9d4b](https://github.com/apollosproject/apollos-apps/commit/3ea9d4b1de4d5dd01f3b3caec4256e57e8ab8f84))
+* fix custom auth text ([#1869](https://github.com/apollosproject/apollos-apps/issues/1869)) ([49cc2fc](https://github.com/apollosproject/apollos-apps/commit/49cc2fc18a989c05d3ec2a78e2a09d519863080a))
+
+
+
+## [2.11.0](https://github.com/apollosproject/apollos-apps/compare/v2.10.0...v2.11.0) (2021-04-12)
+
+**Note:** Version bump only for package @apollosproject/ui-connected
+
+
+
+
+
 ## [2.10.0](https://github.com/apollosproject/apollos-apps/compare/v2.9.0...v2.10.0) (2021-04-06)
 
 

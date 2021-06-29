@@ -7,7 +7,7 @@ import ContentItemsDataSource from '../data-source';
 
 ApollosConfig.loadJs({
   APP: {
-    ROOT_API_URL: 'https://apollos.api',
+    UNIVERSAL_LINK_HOST: 'https://apollos.api',
   },
   ROCK: {
     API_URL: 'https://apollosrock.newspring.cc/api',
@@ -57,22 +57,11 @@ describe('ContentItemsModel', () => {
     expect(new ContentItemsDataSource()).toBeTruthy();
   });
 
-  it('creates a sharing URL with channel url and item slug', async () => {
+  it('creates a sharing URL', async () => {
     const dataSource = new ContentItemsDataSource();
-    dataSource.context = {
-      dataSources: {
-        ContentChannel: {
-          getFromId: jest.fn(() => ({
-            itemUrl: '/news',
-          })),
-        },
-      },
-    };
-    dataSource.get = jest.fn(() => ({ slug: 'cool-article' }));
-    const result = 'https://apollorock.newspring.cc/news/cool-article';
-    expect(
-      dataSource.getShareUrl({ contentId: 'fakeId', channelId: 'fakeChannel' })
-    ).resolves.toEqual(result);
+    dataSource.resolveType = () => 'WeekendContentItem';
+    const url = await dataSource.getShareUrl({ content: { id: 1 } });
+    expect(url).toMatchSnapshot();
   });
 
   it('filters by content channel id', () => {
@@ -306,7 +295,10 @@ describe('ContentItemsModel', () => {
         },
       },
     };
-    const result = dataSource.getFeatures({
+    dataSource.getCursorByChildContentItemId = () => ({
+      get: () => Promise.resolve([{ attributeValues: {}, attributes: {} }]),
+    });
+    const result = await dataSource.getFeatures({
       attributeValues: {
         features: {
           id: 123,
@@ -340,13 +332,56 @@ describe('ContentItemsModel', () => {
         },
       },
     };
-    const result = dataSource.getFeatures({
+    dataSource.getCursorByChildContentItemId = () => ({
+      get: () => Promise.resolve([{ attributeValues: {}, attributes: {} }]),
+    });
+    const result = await dataSource.getFeatures({
       attributeValues: {
         comments: {
           id: 123,
           value: 'True',
         },
       },
+      attributes: {},
+      id: 'ContentItem:123Test',
+    });
+    expect(result).toMatchSnapshot();
+    expect(createCommentListFeature.mock.calls).toMatchSnapshot();
+    expect(createAddCommentFeature.mock.calls).toMatchSnapshot();
+  });
+
+  it('returns comment features when a contentItem has a parent with a Comments field set to true', async () => {
+    const dataSource = new ContentItemsDataSource();
+    const createCommentListFeature = jest.fn(() => ({
+      id: 'CommentListFeature:123',
+      comments: [],
+      __typename: 'CommentListFeature',
+    }));
+    const createAddCommentFeature = jest.fn(() => ({
+      id: 'AddCommentFeature:123',
+      initialPrompt: 'Write Something...',
+      addPrompt: 'What stands out to you?',
+      __typename: 'AddCommentFeature',
+    }));
+    dataSource.context = {
+      dataSources: {
+        Feature: {
+          createCommentListFeature,
+          createAddCommentFeature,
+        },
+      },
+    };
+    dataSource.getCursorByChildContentItemId = () => ({
+      get: () =>
+        Promise.resolve([
+          {
+            attributeValues: { childrenHaveComments: { value: 'True' } },
+            attributes: {},
+          },
+        ]),
+    });
+    const result = await dataSource.getFeatures({
+      attributeValues: {},
       attributes: {},
       id: 'ContentItem:123Test',
     });
@@ -362,7 +397,10 @@ describe('ContentItemsModel', () => {
       body: 'something',
     }));
     dataSource.context = { dataSources: { Feature: { createTextFeature } } };
-    const result = dataSource.getFeatures({
+    dataSource.getCursorByChildContentItemId = () => ({
+      get: () => Promise.resolve([{ attributeValues: {}, attributes: {} }]),
+    });
+    const result = await dataSource.getFeatures({
       attributeValues: { textFeature: { id: 123, value: 'something' } },
     });
     expect(result).toMatchSnapshot();
@@ -376,7 +414,10 @@ describe('ContentItemsModel', () => {
       body: 'something',
     }));
     dataSource.context = { dataSources: { Feature: { createTextFeature } } };
-    const result = dataSource.getFeatures({
+    dataSource.getCursorByChildContentItemId = () => ({
+      get: () => Promise.resolve([{ attributeValues: {}, attributes: {} }]),
+    });
+    const result = await dataSource.getFeatures({
       attributeValues: {
         textFeatures: {
           id: 123,
@@ -397,7 +438,10 @@ describe('ContentItemsModel', () => {
     dataSource.context = {
       dataSources: { Feature: { createScriptureFeature } },
     };
-    const result = dataSource.getFeatures({
+    dataSource.getCursorByChildContentItemId = () => ({
+      get: () => Promise.resolve([{ attributeValues: {}, attributes: {} }]),
+    });
+    const result = await dataSource.getFeatures({
       attributeValues: {
         scriptureFeatures: {
           id: 123,
@@ -418,7 +462,10 @@ describe('ContentItemsModel', () => {
     dataSource.context = {
       dataSources: { Feature: { createScriptureFeature } },
     };
-    const result = dataSource.getFeatures({
+    dataSource.getCursorByChildContentItemId = () => ({
+      get: () => Promise.resolve([{ attributeValues: {}, attributes: {} }]),
+    });
+    const result = await dataSource.getFeatures({
       attributeValues: {
         features: {
           id: 123,
@@ -439,7 +486,10 @@ describe('ContentItemsModel', () => {
       body: 'something',
     }));
     dataSource.context = { dataSources: { Feature: { createTextFeature } } };
-    const result = dataSource.getFeatures({
+    dataSource.getCursorByChildContentItemId = () => ({
+      get: () => Promise.resolve([{ attributeValues: {}, attributes: {} }]),
+    });
+    const result = await dataSource.getFeatures({
       attributeValues: {
         textFeatures: {
           id: 123,
@@ -462,8 +512,14 @@ describe('ContentItemsModel', () => {
       body: 'something',
     }));
     dataSource.context = { dataSources: { Feature: { createTextFeature } } };
-    const result = dataSource.getFeatures({
+    dataSource.getCursorByChildContentItemId = () => ({
+      get: () => Promise.resolve([{ attributeValues: {}, attributes: {} }]),
+    });
+    const result = await dataSource.getFeatures({
       attributeValues: { textFeature: { id: 123, value: '' } },
+    });
+    dataSource.getCursorByChildContentItemId = () => ({
+      get: () => Promise.resolve([{ attributeValues: {}, attributes: {} }]),
     });
     expect(result).toMatchSnapshot();
     expect(createTextFeature.mock.calls).toMatchSnapshot();

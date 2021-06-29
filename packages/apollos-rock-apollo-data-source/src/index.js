@@ -26,11 +26,14 @@ export default class RockApolloDataSource extends RESTDataSource {
   // Subclasses can set this to true to force all requests to turn extended responses.
   expanded = false;
 
+  // Sublasses can use this to load specific attributes.
+  rockAttributes = [];
+
   callCount = 0;
 
   calls = {};
 
-  baseURL = ROCK.API_URL;
+  baseURL = ROCK.API_URL || `${ROCK.URL}/api`;
 
   rockToken = ROCK.API_TOKEN;
 
@@ -72,15 +75,26 @@ export default class RockApolloDataSource extends RESTDataSource {
     return mapKeys(normalizedValues, (value, key) => camelCase(key));
   };
 
+  buildDefaultOptions() {
+    const defaultOptions = {};
+    if (this.attributesLoaded?.length)
+      defaultOptions.attributeKeys = this.attributesLoaded.join(',');
+    if (this.expanded || this.attributesLoaded?.length)
+      defaultOptions.loadAttributes = 'expanded';
+
+    return defaultOptions;
+  }
+
   request(resource = this.resource) {
+    const defaultOptions = this.buildDefaultOptions();
     return new RequestBuilder({
       resource,
       connector: this,
-      defaultOptions: this.expanded ? { loadAttributes: 'expanded' } : null,
+      defaultOptions,
     });
   }
 
-  async paginate({ cursor, args: { after, first = 20 } = {} }) {
+  async paginate({ cursor, args: { after, first = 20, orderBy } = {} }) {
     let skip = 0;
     if (after) {
       const parsed = parseCursor(after);
@@ -90,6 +104,17 @@ export default class RockApolloDataSource extends RESTDataSource {
         throw new Error(`An invalid 'after' cursor was provided: ${after}`);
       }
     }
+    const sortMap = {
+      DATE: 'StartDateTime',
+    };
+    const sort = orderBy
+      ? [
+          {
+            field: sortMap[orderBy.field],
+            direction: orderBy.direction,
+          },
+        ]
+      : [];
 
     // temporarily store the select parameter to
     // put back after "Id" is selected for the count
@@ -97,6 +122,7 @@ export default class RockApolloDataSource extends RESTDataSource {
       ? cursor
           .top(first)
           .skip(skip)
+          .sort(sort)
           .transform((result) =>
             result.map((node, i) => ({
               node,

@@ -15,6 +15,12 @@ jest.mock('react-native-onesignal', () => ({
   init: jest.fn(),
   addEventListener: jest.fn(),
   configure: jest.fn(),
+  getDeviceState: () => ({
+    notificationsEnabled: true,
+    subscriptionEnabled: true,
+    hasPrompted: true,
+    hasNotificationPermission: true,
+  }),
 }));
 
 NativeModules.RNGestureHandlerModule = {};

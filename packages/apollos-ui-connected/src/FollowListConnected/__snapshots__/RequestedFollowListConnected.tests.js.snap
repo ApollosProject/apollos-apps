@@ -21,7 +21,7 @@ exports[`The RequestedFollowListConnected component should render with data 1`] 
     <Text
       style={
         Object {
-          "color": "#303030",
+          "color": "#27272E",
           "fontFamily": "InterUI-Bold",
           "fontSize": 16,
           "lineHeight": 24,
@@ -41,28 +41,47 @@ exports[`The RequestedFollowListConnected component should render with data 1`] 
       }
     }
   >
-    <Image
-      fadeDuration={250}
-      onLoad={[Function]}
-      source={
-        Array [
-          Object {
-            "__typename": "ImageMediaSource",
-            "cache": "force-cache",
-            "uri": "https://example.com/photo.png",
-          },
-        ]
-      }
+    <View
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 32,
+          "alignItems": "center",
           "height": 64,
+          "justifyContent": "center",
           "marginRight": 16,
           "width": 64,
         }
       }
-    />
+      themeSize={64}
+    >
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        size="small"
+        source={
+          Array [
+            Object {
+              "__typename": "ImageMediaSource",
+              "cache": "force-cache",
+              "uri": "https://example.com/photo.png",
+            },
+          ]
+        }
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 32,
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+        themeSize={64}
+      />
+    </View>
     <View
       style={
         Object {
@@ -75,7 +94,7 @@ exports[`The RequestedFollowListConnected component should render with data 1`] 
         numberOfLines={1}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Medium",
             "fontSize": 14,
             "lineHeight": 21,
@@ -126,7 +145,7 @@ exports[`The RequestedFollowListConnected component should render with data 1`] 
         <Text
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
               "lineHeight": 18,

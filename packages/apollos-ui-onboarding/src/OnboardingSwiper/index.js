@@ -31,12 +31,6 @@ const PaginationDotActive = styled(
 )(View);
 
 class OnboardingSwiper extends Component {
-  static navigationOptions = () => ({
-    title: 'Onboarding',
-    header: null,
-    gesturesEnabled: false,
-  });
-
   static propTypes = {
     children: PropTypes.func.isRequired,
     userVersion: PropTypes.number,
@@ -80,6 +74,9 @@ class OnboardingSwiper extends Component {
       const slideVersion = slide.props.version || 1; // slides without a version are version 1. Consider version 0 "pre slides"
       return slideVersion > this.props.userVersion;
     });
+
+    // if there are no slides, we're done
+    if (!unseenSlides.length) this.props.onComplete();
 
     return unseenSlides;
   }

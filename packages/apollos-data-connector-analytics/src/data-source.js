@@ -16,11 +16,11 @@ const mapArrayToObject = (array = []) =>
 
 // Add interfaces to this function to get picked up automatically.
 export const getInterfaces = () => {
-  const interfaces = ANALYTICS.USE_ROCK ? [new RockInteractions()] : [];
-  if (ANALYTICS.SEGMENT_KEY) {
+  const interfaces = ANALYTICS?.USE_ROCK ? [new RockInteractions()] : [];
+  if (ANALYTICS?.SEGMENT_KEY) {
     interfaces.push(new SegmentInterface(ANALYTICS.SEGMENT_KEY));
   }
-  if (ANALYTICS.GA_ID) {
+  if (ANALYTICS?.GA_ID) {
     interfaces.push(new GAInterface(ANALYTICS.GA_ID));
   }
   return interfaces;

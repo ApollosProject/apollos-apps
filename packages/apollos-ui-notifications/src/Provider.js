@@ -1,3 +1,5 @@
+/* eslint-disable no-empty */
+
 import URL from 'url';
 import querystring from 'querystring';
 import React, { Component } from 'react';
@@ -37,6 +39,7 @@ class NotificationsInit extends Component {
       onClearStore: PropTypes.func,
     }).isRequired,
     actionMap: PropTypes.shape({}),
+    handleExternalLink: PropTypes.func,
   };
 
   static defaultProps = {
@@ -55,14 +58,26 @@ class NotificationsInit extends Component {
     );
   }
 
-  componentDidMount() {
-    OneSignal.init(this.props.oneSignalKey, {
-      kOSSettingsKeyAutoPrompt: false,
-    });
-    OneSignal.addEventListener('received', this.onReceived);
-    OneSignal.addEventListener('opened', this.onOpened);
-    OneSignal.addEventListener('ids', this.onIds);
-    OneSignal.setSubscription(true);
+  async componentDidMount() {
+    // One Signal 4.x
+    if (OneSignal.setAppId && this.props.oneSignalKey) {
+      OneSignal.setAppId(this.props.oneSignalKey);
+      OneSignal.setNotificationWillShowInForegroundHandler(this.onReceived);
+      OneSignal.setNotificationOpenedHandler(this.onOpened);
+
+      const deviceState = await OneSignal.getDeviceState();
+      this.onIds(deviceState);
+    } else {
+      // backup, for OneSignal 3.x
+      OneSignal.init(this.props.oneSignalKey, {
+        kOSSettingsKeyAutoPrompt: false,
+      });
+      OneSignal.addEventListener('received', this.onReceived);
+      OneSignal.addEventListener('opened', this.onOpened);
+      OneSignal.addEventListener('ids', this.onIds);
+      OneSignal.setSubscription(true);
+    }
+
     Linking.getInitialURL().then((url) => {
       this.navigate(url);
     });
@@ -71,13 +86,24 @@ class NotificationsInit extends Component {
 
   componentWillUnmount() {
     Linking.removeEventListener('url');
-    OneSignal.removeEventListener('received');
-    OneSignal.removeEventListener('opened');
-    OneSignal.removeEventListener('ids');
+    if (OneSignal.clearHandlers) {
+      OneSignal.clearHandlers();
+    } else {
+      OneSignal.removeEventListener('received');
+      OneSignal.removeEventListener('opened');
+      OneSignal.removeEventListener('ids');
+    }
   }
 
   navigate = (rawUrl) => {
     if (!rawUrl) return;
+    // this is the long term solution
+    if (this.props.handleExternalLink) {
+      this.props.handleExternalLink(rawUrl);
+      return;
+    }
+    // TODO, leave in for backwards compatibility but long term,
+    // should use the prop above
     const url = URL.parse(rawUrl);
     const route = url.pathname.substring(1);
     const cleanedRoute = route.includes('/app-link/')

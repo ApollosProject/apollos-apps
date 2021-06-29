@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Apollos Postgres Notification Preferences DataSource should create a new notification preference 1`] = `
+Object {
+  "apollosId": null,
+  "apollosType": "NotificationPreference",
+  "enabled": true,
+  "notificationProviderId": "123-123-123",
+  "notificationProviderType": "onesignal",
+}
+`;

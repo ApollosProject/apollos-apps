@@ -55,7 +55,6 @@ ProfileEntry.propTypes = {
   values: PropTypes.shape({
     phone: PropTypes.string,
   }),
-  BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   onPressBack: PropTypes.func.isRequired,
 };
 

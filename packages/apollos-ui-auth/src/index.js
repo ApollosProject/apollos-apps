@@ -2,7 +2,6 @@ import React from 'react';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import { withTheme } from '@apollosproject/ui-kit';
 import PropTypes from 'prop-types';
-import hoistNonReactStatic from 'hoist-non-react-statics';
 
 import {
   SMSPhoneEntryConnected as AuthSMSPhoneEntryConnected,
@@ -23,11 +22,9 @@ import {
   ProfileDetailsEntryConnected as AuthProfileDetailsEntryConnected,
 } from './ProfileDetails';
 
-export LoginButton from './LoginButton';
-export ProtectedAction from './ProtectedAction';
-export ProtectedTouchable from './ProtectedTouchable';
-export AuthProvider, { AuthConsumer } from './Provider';
-export ProtectedRoute from './ProtectedRoute';
+export { default as LoginButton } from './LoginButton';
+export { default as AuthProvider, AuthConsumer } from './Provider';
+export { default as ProtectedRoute } from './ProtectedRoute';
 
 export {
   AUTHENTICATE,
@@ -39,9 +36,10 @@ export {
   VERIFY_PIN,
 } from './mutations';
 export { GET_LOGIN_STATE, GET_USER_EXISTS } from './queries';
-export authLink from './authLink';
-export buildErrorLink from './buildErrorLink';
-export Entry from './Entry';
+export { default as authLink } from './authLink';
+export { default as buildErrorLink } from './buildErrorLink';
+export { default as Entry } from './Entry';
+
 export * from './LoginProvider';
 
 export {
@@ -60,12 +58,16 @@ export {
 const AuthStack = createNativeStackNavigator();
 const IdentityStack = createNativeStackNavigator();
 
-const AuthNavigator = (props) => (
-  <AuthStack.Navigator
-    initialRouteName="AuthIdentity"
-    headerMode="none"
-    {...props}
-  >
+const AuthNavigator = ({
+  alternateLoginText,
+  authTitleText,
+  confirmationPromptText,
+  confirmationTitleText,
+  forgotPasswordURL,
+  passwordPromptText,
+  screenOptions,
+}) => (
+  <AuthStack.Navigator screenOptions={screenOptions}>
     <AuthStack.Screen name="Identity">
       {() => (
         <IdentityStack.Navigator
@@ -74,23 +76,27 @@ const AuthNavigator = (props) => (
           <IdentityStack.Screen
             name="AuthSMSPhoneEntryConnected"
             component={AuthSMSPhoneEntryConnected}
+            initialParams={{ alternateLoginText, authTitleText }}
           />
           <IdentityStack.Screen
             name="AuthEmailEntryConnected"
             component={AuthEmailEntryConnected}
+            initialParams={{ alternateLoginText, authTitleText }}
           />
         </IdentityStack.Navigator>
       )}
     </AuthStack.Screen>
     <AuthStack.Screen
       name="AuthSMSVerificationConnected"
-      options={{ headerShown: true }}
       component={AuthSMSVerificationConnected}
+      options={{ headerShown: true }}
+      initialParams={{ confirmationTitleText, confirmationPromptText }}
     />
     <AuthStack.Screen
       name="AuthPasswordEntryConnected"
-      options={{ headerShown: true }}
       component={AuthPasswordEntryConnected}
+      options={{ headerShown: true }}
+      initialParams={{ forgotPasswordURL, passwordPromptText }}
     />
     <AuthStack.Screen
       name="AuthProfileEntryConnected"
@@ -100,27 +106,32 @@ const AuthNavigator = (props) => (
       name="AuthProfileDetailsEntryConnected"
       component={AuthProfileDetailsEntryConnected}
     />
-
-    {/* Redirects */}
-    <AuthStack.Screen name="AuthSMSPhoneEntryConnected">
-      {({ navigation }) =>
-        navigation.replace('Identity', {
-          screen: 'AuthSMSPhoneEntryConnected',
-        }) || null
-      }
-    </AuthStack.Screen>
-    <AuthStack.Screen name="AuthEmailEntryConnected">
-      {({ navigation }) =>
-        navigation.replace('Identity', {
-          screen: 'AuthEmailEntryConnected',
-        }) || null
-      }
-    </AuthStack.Screen>
   </AuthStack.Navigator>
 );
 
-const ThemedAuthNavigator = withTheme(({ theme, ...props }) => ({
-  ...props,
+AuthNavigator.propTypes = {
+  alternateLoginText: PropTypes.string,
+  authTitleText: PropTypes.string,
+  confirmationTitleText: PropTypes.string,
+  confirmationPromptText: PropTypes.string,
+  passwordPromptText: PropTypes.string,
+  forgotPasswordURL: PropTypes.string,
+  screenOptions: PropTypes.shape({
+    headerTintColor: PropTypes.string,
+    headerTitleStyle: PropTypes.shape({
+      color: PropTypes.string,
+    }),
+    headerStyle: PropTypes.shape({
+      backgroundColor: PropTypes.string,
+    }),
+    headerHideShadow: PropTypes.bool,
+    headerTitle: PropTypes.string,
+    headerBackTitle: PropTypes.string,
+    headerShown: PropTypes.bool,
+  }),
+};
+
+const ThemedAuthNavigator = withTheme(({ theme }) => ({
   screenOptions: {
     headerTintColor: theme.colors.action.secondary,
     headerTitleStyle: {
@@ -136,23 +147,4 @@ const ThemedAuthNavigator = withTheme(({ theme, ...props }) => ({
   },
 }))(AuthNavigator);
 
-ThemedAuthNavigator.propTypes = {
-  screenProps: PropTypes.shape({
-    alternateLoginText: PropTypes.node,
-    authTitleText: PropTypes.string,
-    confirmationTitleText: PropTypes.string,
-    confirmationPromptText: PropTypes.string,
-    onFinishAuth: PropTypes.func,
-    passwordPromptText: PropTypes.string,
-    smsPolicyInfo: PropTypes.node,
-    smsPromptText: PropTypes.string,
-    emailRequired: PropTypes.bool,
-    handleForgotPassword: PropTypes.func,
-  }),
-  BackgroundComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-};
-
-const Auth = (props) => <ThemedAuthNavigator {...props} />;
-hoistNonReactStatic(Auth, AuthNavigator);
-
-export default Auth;
+export default ThemedAuthNavigator;

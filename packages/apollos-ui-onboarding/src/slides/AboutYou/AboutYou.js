@@ -5,6 +5,7 @@ import { get } from 'lodash';
 
 import {
   styled,
+  named,
   H5,
   Radio,
   RadioButton,
@@ -153,4 +154,4 @@ AboutYou.defaultProps = {
 
 AboutYou.displayName = 'AboutYou';
 
-export default AboutYou;
+export default named('ui-onboarding.AboutYou')(AboutYou);

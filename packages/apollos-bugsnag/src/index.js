@@ -6,22 +6,11 @@ import Bugsnag from '@bugsnag/js';
 const isDev =
   process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test';
 
-if (ApollosConfig.BUGSNAG && ApollosConfig.BUGSNAG.API_KEY) {
+if (ApollosConfig.BUGSNAG && ApollosConfig.BUGSNAG.API_KEY)
   Bugsnag.start({
     apiKey: ApollosConfig.BUGSNAG.API_KEY,
-    releaseStage: process.env.RELEASE_STAGE || 'development',
     ...ApollosConfig.BUGSNAG.OPTIONS,
   });
-} else {
-  console.warn(`
-You are trying to use the bugsnag config without a bugsnag API key. Add the following to you config.yml
-\`\`\`
-BUGSNAG:
-  API_KEY: (api key here)
-  OPTIONS: {}
-\`\`\`
-`);
-}
 
 export const report = (error, metaData, beforeSend) => {
   Bugsnag.notify(error, (event) => {

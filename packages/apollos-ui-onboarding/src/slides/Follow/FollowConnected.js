@@ -2,6 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 import PropTypes from 'prop-types';
 
+import { named } from '@apollosproject/ui-kit';
 import GET_SUGGESTED_FOLLOWS from './getSuggestedFollows';
 import Follow from './Follow';
 
@@ -22,12 +23,14 @@ FollowConnected.propTypes = {
     PropTypes.func,
     PropTypes.object,
   ]),
+  version: PropTypes.number,
 };
 
 FollowConnected.defaultProps = {
   Component: Follow,
+  version: 2,
 };
 
 FollowConnected.displayName = 'FollowConnected';
 
-export default FollowConnected;
+export default named('ui-onboarding.FollowConnected')(FollowConnected);

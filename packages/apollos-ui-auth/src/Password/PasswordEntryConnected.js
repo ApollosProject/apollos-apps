@@ -3,14 +3,18 @@ import React from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import PropTypes from 'prop-types';
+import ApollosConfig from '@apollosproject/config';
 
 import { LoginConsumer } from '../LoginProvider';
 import PasswordEntry from './PasswordEntry';
 
+const { APP_DATA_URL } = ApollosConfig;
+
 const PasswordEntryConnected = ({
-  handleForgotPassword,
-  screenProps,
   navigation,
+  route: {
+    params: { forgotPasswordURL = `${APP_DATA_URL}/forgot-password` },
+  },
 }) => (
   <LoginConsumer>
     {({ handleSubmitLogin, newUser }) => (
@@ -44,13 +48,12 @@ const PasswordEntryConnected = ({
       >
         {(formikBag) => (
           <PasswordEntry
-            {...screenProps}
             {...formikBag}
             errors={formikBag.touched.password && formikBag.errors}
             isLoading={formikBag.isSubmitting}
             onPressNext={formikBag.handleSubmit}
             onPressBack={navigation.goBack}
-            handleForgotPassword={handleForgotPassword}
+            forgotPasswordURL={forgotPasswordURL}
             newUser={newUser}
           />
         )}
@@ -61,13 +64,9 @@ const PasswordEntryConnected = ({
 
 PasswordEntryConnected.propTypes = {
   navigation: PropTypes.shape({ goBack: PropTypes.func.isRequired }).isRequired,
-  emailRequired: PropTypes.bool,
-  handleForgotPassword: PropTypes.func,
-  screenProps: PropTypes.shape({}),
-};
-
-PasswordEntryConnected.defaultProps = {
-  emailRequired: true,
+  route: PropTypes.shape({
+    params: PropTypes.shape({ forgotPasswordURL: PropTypes.string }),
+  }),
 };
 
 export default PasswordEntryConnected;
