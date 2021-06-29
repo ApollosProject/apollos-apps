@@ -17,7 +17,7 @@ import SocialBar from '../SocialBar';
  * - [x] Title
  * - [x] Summary
  * - [ ] Social Engagement
- * - [ ] Social Bar
+ * - [x] Social Bar
  * - [x] Featured
  * - [x] Micro
  * - [x] Themeable
@@ -32,6 +32,13 @@ const SummaryText = styled(
   ({ theme }) => ({ color: theme.colors.text.secondary }),
   'ui-kit.ContentTitles.SummaryText'
 )(Text);
+
+const Container = styled(
+  {
+    width: '100%',
+  },
+  'ui-kit.ContentTitles.Container'
+)(PaddedView);
 
 const ContentTitles = ({
   title,
@@ -57,7 +64,7 @@ const ContentTitles = ({
   if (micro) Summary = BodySmall;
 
   return (
-    <PaddedView>
+    <Container>
       {title ? (
         <Title>
           <TitleText>{title}</TitleText>
@@ -70,7 +77,7 @@ const ContentTitles = ({
       ) : null}
 
       <SocialBar onPressLike={onPressLike} onPressShare={onPressShare} />
-    </PaddedView>
+    </Container>
   );
 };
 
@@ -78,7 +85,7 @@ ContentTitles.propTypes = {
   title: PropTypes.string,
   summary: PropTypes.string,
   featured: PropTypes.bool,
-  micro: PropTypes.string,
+  micro: PropTypes.bool,
   onPressLike: PropTypes.func,
   onPressShare: PropTypes.func,
 };
