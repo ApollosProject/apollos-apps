@@ -86,7 +86,6 @@ export NodeFeaturesConnected, {
 export NodeSingleConnected, {
   GET_MEDIA,
   GET_TITLE,
-  NodeSectionInner,
 } from './NodeSingleConnected';
 export RockAuthedWebBrowser from './RockAuthedWebBrowser';
 export RockAuthedWebView from './RockAuthedWebView';

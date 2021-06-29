@@ -97,9 +97,6 @@ ContentNodeConnected.propTypes = {
   HtmlComponent: ComponentPropType,
   ImageWrapperComponent: ComponentPropType,
   onPressAnchor: PropTypes.func,
-  showCoverImage: PropTypes.bool,
-  showTitle: PropTypes.bool,
-  showContent: PropTypes.bool,
 };
 
 ContentNodeConnected.defaultProps = {
@@ -107,9 +104,6 @@ ContentNodeConnected.defaultProps = {
   HtmlComponent: DefaultHTML,
   ImageWrapperComponent: View,
   onPressAnchor: safeOpenUrl,
-  showCoverImage: true,
-  showTitle: true,
-  showContent: true,
 };
 
 export default named('ui-connected.ContentNodeConnected')(ContentNodeConnected);

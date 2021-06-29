@@ -17,7 +17,6 @@ import ContentChildFeedConnected from '../ContentChildFeedConnected';
 import UpNextButtonConnected from '../UpNextButtonConnected';
 import NodeFeaturesConnected from '../NodeFeaturesConnected';
 import ScriptureNodeConnected from '../ScriptureNodeConnected';
-import NodeSectionInner from './NodeSectionInner';
 
 import GET_MEDIA from './getMedia';
 import GET_TITLE from './getTitle';
@@ -137,7 +136,7 @@ NodeSingleConnectedWithMedia.defaultProps = {
   Component: NodeSingleInner,
 };
 
-export { GET_MEDIA, GET_TITLE, NodeSectionInner };
+export { GET_MEDIA, GET_TITLE };
 
 export default named('ui-connected.NodeSingleConnected')(
   NodeSingleConnectedWithMedia
