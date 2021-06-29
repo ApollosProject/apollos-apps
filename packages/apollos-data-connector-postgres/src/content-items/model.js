@@ -19,6 +19,10 @@ const setupModel = configureModel(({ sequelize }) => {
     include: [{ model: sequelize.models.media, as: 'images' }],
     where: { active: true },
   });
+  sequelize.models.contentItem.belongsTo(sequelize.models.media, {
+    as: 'coverImage',
+    foreignKey: 'coverImageId',
+  });
 });
 
 export { createModel, setupModel };
