@@ -33,8 +33,7 @@ export const defaultContentItemResolvers = {
   videos: (model) => model.videos || model.getVideos(),
   audios: (model) => model.audios || model.getAudios(),
   //
-  //   coverImage: (root, args, { dataSources: { ContentItem } }) =>
-  //     ContentItem.getCoverImage(root),
+  coverImage: (model) => model.getCoverImage(),
 
   publishDate: ({ publishAt }) => publishAt,
 

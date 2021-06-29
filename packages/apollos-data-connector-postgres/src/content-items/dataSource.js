@@ -22,21 +22,11 @@ class ContentItemDataSource extends PostgresDataSource {
     ROCK_MAPPINGS.ACTIVE_CONTENT_CHANNEL_IDS ||
     ROCK_MAPPINGS.FEED_CONTENT_CHANNEL_IDS;
 
-  // hasMedia = ({ attributeValues, attributes }) =>
-  //   Object.keys(attributes).filter((key) =>
-  //     this.attributeIsVideo({
-  //       key,
-  //       attributeValues,
-  //       attributes,
-  //     })
-  //   ).length ||
-  //   Object.keys(attributes).filter((key) =>
-  //     this.attributeIsAudio({
-  //       key,
-  //       attributeValues,
-  //       attributes,
-  //     })
-  //   ).length;
+  async hasMedia(model) {
+    const videos = await model.getImages();
+    const audios = await model.getAudios();
+    return [...vidoes, ...audios].length > 0;
+  }
 
   //   async getFeatures(item) {
   //     const { attributeValues, id } = item;
@@ -96,10 +86,14 @@ class ContentItemDataSource extends PostgresDataSource {
     });
   };
 
-  getSermonFeed() {
-    // return this.byContentChannelId(ROCK_MAPPINGS.SERMON_CHANNEL_ID).andFilter(
-    //   this.LIVE_CONTENT()
-    // );
+  getSermons(...args) {
+    return this.model.findAll({
+      where: {
+        contentItemCategoryId: { [Op.in]: [CONTENT?.SERMON_CHANNEL_IDS] },
+        ...args?.where,
+      },
+      ...args,
+    });
   }
 
   async isContentActiveLiveStream({ id }) {
@@ -119,20 +113,14 @@ class ContentItemDataSource extends PostgresDataSource {
     //     return [mostRecentSermon];
   };
 
-  async getCoverImage(root) {}
-
-  expanded = true;
+  async getCoverImage(model) {
+    return model.getCoverImage();
+  }
 
   // A simple alias at this point.
   async getParents(model) {
     return model.getParents();
   }
-
-  getCursorByParentContentItemId = async (model) => {
-    return {
-      cursor: this.model.getChildren,
-    };
-  };
 
   // A simple alias at this point.
   async getChildren(model) {
@@ -140,11 +128,6 @@ class ContentItemDataSource extends PostgresDataSource {
   }
 
   getCursorByChildContentItemId = async (id) => {};
-
-  async getSiblings(model) {
-    // get parent (single)
-    // get parents children
-  }
 
   getCursorBySiblingContentItemId = async (id) => {};
 
@@ -185,16 +168,6 @@ class ContentItemDataSource extends PostgresDataSource {
     return this.model.findAll();
   };
 
-  getActive = () => {
-    return this.model.findAll();
-  };
-  // this.request()
-  // .filterOneOf(
-  //   this.activeChannelIds.map((id) => `ContentChannelId eq ${id}`)
-  // )
-  // .cache({ ttl: 60 })
-  // .andFilter(this.LIVE_CONTENT());
-
   getDateAndActive = async ({ datetime }) => {
     return this.model.findAll({
       where: {
@@ -213,49 +186,25 @@ class ContentItemDataSource extends PostgresDataSource {
       },
     });
   };
-  // this.request()
-  //   .filterOneOf(
-  //     this.activeChannelIds.map((id) => `ContentChannelId eq ${id}`)
-  //   )
-  //   .cache({ ttl: 60 })
-  //   .andFilter(
-  //     `(CreatedDateTime gt datetime'${datetime}') or (ModifiedDateTime gt datetime'${datetime}')`
-  //   )
-  //   .andFilter(this.LIVE_CONTENT());
 
-  byContentChannelId = (id) => {
-    return this.model.findAll();
-  };
-  // this.request()
-  //   .filter(`ContentChannelId eq ${id}`)
-  //   .andFilter(this.LIVE_CONTENT())
-  //   .cache({ ttl: 60 })
-  //   .orderBy('StartDateTime', 'desc');
-
-  byContentChannelIds = (ids = []) => {
-    return this.model.findAll();
-  };
-  // this.request()
-  //   .filterOneOf(ids.map((id) => `ContentChannelId eq ${id}`))
-  //   .andFilter(this.LIVE_CONTENT())
-  //   .cache({ ttl: 60 })
-  //   .orderBy('StartDateTime', 'desc');
-
-  getFromIds = (ids = [], { originType = null } = {}) => {
+  getFromCategoryIds = (ids = [], args = {}) => {
     return this.model.findAll({
-      where: {},
+      where: {
+        contentItemCategoryId: { [Op.in]: ids },
+        ...args?.where,
+      },
+      ...args,
     });
-    // if (ids.length === 0) return this.request().empty();
-    // if (get(ApollosConfig, 'ROCK.USE_PLUGIN', false)) {
-    //   // Avoids issue when fetching more than ~10 items
-    //   // Caused by an Odata node limit.
-    //   return this.request(
-    //     `Apollos/GetContentChannelItemsByIds?ids=${ids.join(',')}`
-    //   ).andFilter(this.LIVE_CONTENT());
-    // }
-    // return this.request()
-    //   .filterOneOf(ids.map((id) => `Id eq ${id}`))
-    //   .andFilter(this.LIVE_CONTENT());
+  };
+
+  getFromIds = (ids = [], args = {}) => {
+    return this.model.findAll({
+      where: {
+        id: { [Op.in]: ids },
+        ...args?.where,
+      },
+      ...args,
+    });
   };
 
   async getUpNext({ id }) {
