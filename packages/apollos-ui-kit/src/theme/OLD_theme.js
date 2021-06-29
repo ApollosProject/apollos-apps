@@ -1,12 +1,17 @@
 import React from 'react';
+import { useColorScheme } from 'react-native';
 import PropTypes from 'prop-types';
 import mergeStyles from '../styled/mergeStyles';
 import Themer, { useTheme } from './Themer';
 import createTheme from './createTheme';
 
-export const ThemeProvider = ({ themeInput, iconInput, ...props }) => (
-  <Themer theme={createTheme(themeInput)} icons={iconInput} {...props} />
-);
+export const ThemeProvider = ({ themeInput, iconInput, ...props }) => {
+  const type = useColorScheme();
+  const customTheme = { type, ...themeInput };
+  return (
+    <Themer theme={createTheme(customTheme)} icons={iconInput} {...props} />
+  );
+};
 
 ThemeProvider.propTypes = {
   themeInput: PropTypes.shape({}),
