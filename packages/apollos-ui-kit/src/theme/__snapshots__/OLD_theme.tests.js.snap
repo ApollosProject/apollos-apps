@@ -439,6 +439,63 @@ exports[`withThemeMixin overrides themeInput with theme prop 1`] = `
 </View>
 `;
 
+exports[`withThemeMixin overrides themeInput with theme prop 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "salmon",
+          "fontFamily": "InterUI-Black",
+          "fontSize": 24,
+          "lineHeight": 27.6,
+        }
+      }
+    >
+      Hi there!
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "yellow",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
+        }
+      }
+    >
+      Lorem ipsum dolor sit amet.
+    </Text>
+    <Text
+      bold={false}
+      italic={false}
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Regular",
+          "fontSize": 16,
+          "lineHeight": 26,
+        }
+      }
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sodales sit amet ante eu lobortis. In vitae faucibus lectus, at interdum nibh. Fusce suscipit tincidunt justo, vitae cursus mi fermentum eget.
+    </Text>
+  </View>
+</View>
+`;
+
 exports[`withThemeMixin prunes null inputs 1`] = `
 <View
   style={
