@@ -80,15 +80,15 @@ Array [
       >
         <RCTScrollView
           ListHeaderComponent={
-            <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))>
+            <mapProps(Component)>
               <Touchable
                 onPress={[Function]}
               >
-                <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))>
-                  <getContext(mapProps(Icon)) />
-                </mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))>
+                <mapProps(Component)>
+                  <Unknown />
+                </mapProps(Component)>
               </Touchable>
-            </mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))>
+            </mapProps(Component)>
           }
           contentContainerStyle={
             Object {

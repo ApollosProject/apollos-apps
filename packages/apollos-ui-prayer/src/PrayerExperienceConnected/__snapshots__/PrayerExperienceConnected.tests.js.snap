@@ -391,7 +391,7 @@ Array [
       <RCTScrollView
         activeDot={
           <View>
-            <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+            <mapProps(Component) />
           </View>
         }
         automaticallyAdjustContentInsets={false}
@@ -416,7 +416,7 @@ Array [
         disablePrevButton={false}
         dot={
           <View>
-            <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+            <mapProps(Component) />
           </View>
         }
         horizontal={true}
@@ -1633,7 +1633,7 @@ Array [
       <RCTScrollView
         activeDot={
           <View>
-            <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+            <mapProps(Component) />
           </View>
         }
         automaticallyAdjustContentInsets={false}
@@ -1658,7 +1658,7 @@ Array [
         disablePrevButton={false}
         dot={
           <View>
-            <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+            <mapProps(Component) />
           </View>
         }
         horizontal={true}
@@ -2530,7 +2530,7 @@ Array [
       <RCTScrollView
         activeDot={
           <View>
-            <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+            <mapProps(Component) />
           </View>
         }
         automaticallyAdjustContentInsets={false}
@@ -2555,7 +2555,7 @@ Array [
         disablePrevButton={false}
         dot={
           <View>
-            <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+            <mapProps(Component) />
           </View>
         }
         horizontal={true}
@@ -3772,7 +3772,7 @@ Array [
       <RCTScrollView
         activeDot={
           <View>
-            <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+            <mapProps(Component) />
           </View>
         }
         automaticallyAdjustContentInsets={false}
@@ -3797,7 +3797,7 @@ Array [
         disablePrevButton={false}
         dot={
           <View>
-            <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+            <mapProps(Component) />
           </View>
         }
         horizontal={true}

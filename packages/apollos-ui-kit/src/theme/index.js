@@ -1,4 +1,11 @@
-export { default as ThemeProvider } from './ThemeProvider';
-export { default as withTheme, named } from './withTheme';
-export { ThemeMixin, withThemeMixin } from './mixins';
-export { default as ThemeConsumer } from './ThemeConsumer';
+/* Deprecated */
+export {
+  ThemeProvider,
+  withTheme,
+  withThemeMixin,
+  ThemeMixin,
+  ThemeConsumer,
+} from './OLD_theme';
+/* ---------- */
+
+export { default as Themer, useTheme, Theme, useIcons, named } from './Themer';

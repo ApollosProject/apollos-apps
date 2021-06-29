@@ -79,11 +79,16 @@ export TableView, {
 } from './TableView';
 export TabView, { SceneMap as TabSceneMap, TabBar } from './TabView';
 export ThemeProvider, {
+  /* Deprecated */
   withTheme,
   ThemeMixin,
   withThemeMixin,
   ThemeConsumer,
+  /* ---------- */
   named,
+  useTheme,
+  Theme,
+  Themer,
 } from './theme';
 export ThumbnailCard from './ThumbnailCard';
 export TileImage from './TileImage';
