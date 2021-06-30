@@ -5,12 +5,13 @@ import PropTypes from 'prop-types';
 
 import { withTheme, ThemeMixin } from '../theme';
 import styled from '../styled';
-import Card, { CardContent, CardLabel, CardImage } from '../Card';
+import Card, { CardContent, CardLabel } from '../Card';
 import FlexedView from '../FlexedView';
 import { H3 } from '../typography';
 import Icon from '../Icon';
 import { withIsLoading } from '../isLoading';
 import { ImageSourceType } from '../ConnectedImage';
+import GradientOverlayImage from '../GradientOverlayImage';
 
 const SquareCard = styled(
   ({ disabled }) => ({
@@ -59,7 +60,7 @@ const Image = withTheme(
     overlayType: disabled ? 'medium' : 'gradient-bottom',
   }),
   'ui-kit.HorizontalHighlightCard.Image'
-)(CardImage);
+)(GradientOverlayImage);
 
 const Content = styled(
   ({ theme }) => ({

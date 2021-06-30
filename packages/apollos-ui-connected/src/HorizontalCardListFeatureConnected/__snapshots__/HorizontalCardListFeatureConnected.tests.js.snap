@@ -571,15 +571,11 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
           }
         >
           <View
-            __typename="MediaContentItem"
-            channelType=""
-            id="fakeId0"
             inHorizontalList={true}
-            isLive={false}
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#1C1C1E",
+                "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
@@ -603,72 +599,122 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
                 }
               }
             >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(249, 249, 251)",
+                      "flex": 1,
+                      "height": "100%",
+                    },
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ]
+                }
+              >
+                <Image
+                  blurRadius={128}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={Array []}
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                        "flex": 1,
+                        "height": "100%",
+                      },
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    ]
+                  }
+                />
+              </View>
               <Image
                 fadeDuration={250}
+                hasTitleAndSummary={false}
+                height={135}
                 isLoading={true}
                 onLoad={[Function]}
-                overlayColor="#000000"
-                overlayType="gradient-bottom"
                 source={Array []}
                 style={
                   Object {
-                    "aspectRatio": 1,
+                    "aspectRatio": 1.7777777777777777,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
+                width={240}
               />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "bottom": 0,
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
-                    "position": "absolute",
-                    "width": "100%",
+                    "height": 105,
+                    "justifyContent": "center",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "alignItems": "flex-end",
-                      "flexDirection": "row",
-                      "paddingTop": 16,
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                      "width": "100%",
                     }
                   }
                 >
-                  <View
-                    hasAction={true}
+                  <Text
+                    numberOfLines={2}
                     style={
                       Object {
-                        "flex": 1,
-                        "marginRight": 16,
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 16,
+                        "lineHeight": 24,
                       }
                     }
                   >
-                    <View
+                    <Text
                       style={
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "marginVertical": 1.8000000000000007,
-                          "width": "100%",
+                          "color": "#27272E",
                         }
                       }
-                    />
-                  </View>
+                    >
+                      Boom
+                    </Text>
+                  </Text>
                   <View
                     style={
                       Object {
+                        "alignSelf": "stretch",
                         "backgroundColor": "#A5A5A5",
                         "borderRadius": 16,
-                        "height": 32,
-                        "width": 32,
+                        "height": 12,
+                        "marginVertical": 3,
+                        "width": "100%",
                       }
                     }
                   />
@@ -710,15 +756,11 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
           }
         >
           <View
-            __typename="MediaContentItem"
-            channelType=""
-            id="fakeId1"
             inHorizontalList={true}
-            isLive={false}
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#1C1C1E",
+                "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
@@ -742,72 +784,122 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
                 }
               }
             >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(249, 249, 251)",
+                      "flex": 1,
+                      "height": "100%",
+                    },
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ]
+                }
+              >
+                <Image
+                  blurRadius={128}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={Array []}
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                        "flex": 1,
+                        "height": "100%",
+                      },
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    ]
+                  }
+                />
+              </View>
               <Image
                 fadeDuration={250}
+                hasTitleAndSummary={false}
+                height={135}
                 isLoading={true}
                 onLoad={[Function]}
-                overlayColor="#000000"
-                overlayType="gradient-bottom"
                 source={Array []}
                 style={
                   Object {
-                    "aspectRatio": 1,
+                    "aspectRatio": 1.7777777777777777,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
+                width={240}
               />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "bottom": 0,
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
-                    "position": "absolute",
-                    "width": "100%",
+                    "height": 105,
+                    "justifyContent": "center",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "alignItems": "flex-end",
-                      "flexDirection": "row",
-                      "paddingTop": 16,
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                      "width": "100%",
                     }
                   }
                 >
-                  <View
-                    hasAction={true}
+                  <Text
+                    numberOfLines={2}
                     style={
                       Object {
-                        "flex": 1,
-                        "marginRight": 16,
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 16,
+                        "lineHeight": 24,
                       }
                     }
                   >
-                    <View
+                    <Text
                       style={
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "marginVertical": 1.8000000000000007,
-                          "width": "100%",
+                          "color": "#27272E",
                         }
                       }
-                    />
-                  </View>
+                    >
+                      Boom
+                    </Text>
+                  </Text>
                   <View
                     style={
                       Object {
+                        "alignSelf": "stretch",
                         "backgroundColor": "#A5A5A5",
                         "borderRadius": 16,
-                        "height": 32,
-                        "width": 32,
+                        "height": 12,
+                        "marginVertical": 3,
+                        "width": "100%",
                       }
                     }
                   />
@@ -849,15 +941,11 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
           }
         >
           <View
-            __typename="MediaContentItem"
-            channelType=""
-            id="fakeId2"
             inHorizontalList={true}
-            isLive={false}
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#1C1C1E",
+                "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
@@ -881,72 +969,122 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
                 }
               }
             >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(249, 249, 251)",
+                      "flex": 1,
+                      "height": "100%",
+                    },
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ]
+                }
+              >
+                <Image
+                  blurRadius={128}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={Array []}
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                        "flex": 1,
+                        "height": "100%",
+                      },
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    ]
+                  }
+                />
+              </View>
               <Image
                 fadeDuration={250}
+                hasTitleAndSummary={false}
+                height={135}
                 isLoading={true}
                 onLoad={[Function]}
-                overlayColor="#000000"
-                overlayType="gradient-bottom"
                 source={Array []}
                 style={
                   Object {
-                    "aspectRatio": 1,
+                    "aspectRatio": 1.7777777777777777,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
+                width={240}
               />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "bottom": 0,
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
-                    "position": "absolute",
-                    "width": "100%",
+                    "height": 105,
+                    "justifyContent": "center",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "alignItems": "flex-end",
-                      "flexDirection": "row",
-                      "paddingTop": 16,
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                      "width": "100%",
                     }
                   }
                 >
-                  <View
-                    hasAction={true}
+                  <Text
+                    numberOfLines={2}
                     style={
                       Object {
-                        "flex": 1,
-                        "marginRight": 16,
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 16,
+                        "lineHeight": 24,
                       }
                     }
                   >
-                    <View
+                    <Text
                       style={
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "marginVertical": 1.8000000000000007,
-                          "width": "100%",
+                          "color": "#27272E",
                         }
                       }
-                    />
-                  </View>
+                    >
+                      Boom
+                    </Text>
+                  </Text>
                   <View
                     style={
                       Object {
+                        "alignSelf": "stretch",
                         "backgroundColor": "#A5A5A5",
                         "borderRadius": 16,
-                        "height": 32,
-                        "width": 32,
+                        "height": 12,
+                        "marginVertical": 3,
+                        "width": "100%",
                       }
                     }
                   />
@@ -988,15 +1126,11 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
           }
         >
           <View
-            __typename="MediaContentItem"
-            channelType=""
-            id="fakeId3"
             inHorizontalList={true}
-            isLive={false}
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#1C1C1E",
+                "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
@@ -1020,72 +1154,122 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
                 }
               }
             >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(249, 249, 251)",
+                      "flex": 1,
+                      "height": "100%",
+                    },
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ]
+                }
+              >
+                <Image
+                  blurRadius={128}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={Array []}
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                        "flex": 1,
+                        "height": "100%",
+                      },
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    ]
+                  }
+                />
+              </View>
               <Image
                 fadeDuration={250}
+                hasTitleAndSummary={false}
+                height={135}
                 isLoading={true}
                 onLoad={[Function]}
-                overlayColor="#000000"
-                overlayType="gradient-bottom"
                 source={Array []}
                 style={
                   Object {
-                    "aspectRatio": 1,
+                    "aspectRatio": 1.7777777777777777,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
+                width={240}
               />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "bottom": 0,
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
-                    "position": "absolute",
-                    "width": "100%",
+                    "height": 105,
+                    "justifyContent": "center",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "alignItems": "flex-end",
-                      "flexDirection": "row",
-                      "paddingTop": 16,
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                      "width": "100%",
                     }
                   }
                 >
-                  <View
-                    hasAction={true}
+                  <Text
+                    numberOfLines={2}
                     style={
                       Object {
-                        "flex": 1,
-                        "marginRight": 16,
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 16,
+                        "lineHeight": 24,
                       }
                     }
                   >
-                    <View
+                    <Text
                       style={
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "marginVertical": 1.8000000000000007,
-                          "width": "100%",
+                          "color": "#27272E",
                         }
                       }
-                    />
-                  </View>
+                    >
+                      Boom
+                    </Text>
+                  </Text>
                   <View
                     style={
                       Object {
+                        "alignSelf": "stretch",
                         "backgroundColor": "#A5A5A5",
                         "borderRadius": 16,
-                        "height": 32,
-                        "width": 32,
+                        "height": 12,
+                        "marginVertical": 3,
+                        "width": "100%",
                       }
                     }
                   />
@@ -1127,15 +1311,11 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
           }
         >
           <View
-            __typename="MediaContentItem"
-            channelType=""
-            id="fakeId4"
             inHorizontalList={true}
-            isLive={false}
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#1C1C1E",
+                "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
@@ -1159,72 +1339,122 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
                 }
               }
             >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(249, 249, 251)",
+                      "flex": 1,
+                      "height": "100%",
+                    },
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ]
+                }
+              >
+                <Image
+                  blurRadius={128}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={Array []}
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                        "flex": 1,
+                        "height": "100%",
+                      },
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    ]
+                  }
+                />
+              </View>
               <Image
                 fadeDuration={250}
+                hasTitleAndSummary={false}
+                height={135}
                 isLoading={true}
                 onLoad={[Function]}
-                overlayColor="#000000"
-                overlayType="gradient-bottom"
                 source={Array []}
                 style={
                   Object {
-                    "aspectRatio": 1,
+                    "aspectRatio": 1.7777777777777777,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
+                width={240}
               />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "bottom": 0,
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
-                    "position": "absolute",
-                    "width": "100%",
+                    "height": 105,
+                    "justifyContent": "center",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "alignItems": "flex-end",
-                      "flexDirection": "row",
-                      "paddingTop": 16,
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                      "width": "100%",
                     }
                   }
                 >
-                  <View
-                    hasAction={true}
+                  <Text
+                    numberOfLines={2}
                     style={
                       Object {
-                        "flex": 1,
-                        "marginRight": 16,
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 16,
+                        "lineHeight": 24,
                       }
                     }
                   >
-                    <View
+                    <Text
                       style={
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "marginVertical": 1.8000000000000007,
-                          "width": "100%",
+                          "color": "#27272E",
                         }
                       }
-                    />
-                  </View>
+                    >
+                      Boom
+                    </Text>
+                  </Text>
                   <View
                     style={
                       Object {
+                        "alignSelf": "stretch",
                         "backgroundColor": "#A5A5A5",
                         "borderRadius": 16,
-                        "height": 32,
-                        "width": 32,
+                        "height": 12,
+                        "marginVertical": 3,
+                        "width": "100%",
                       }
                     }
                   />

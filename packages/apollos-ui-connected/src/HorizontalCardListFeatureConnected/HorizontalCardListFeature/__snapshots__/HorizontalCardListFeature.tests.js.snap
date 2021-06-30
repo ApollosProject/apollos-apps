@@ -138,14 +138,10 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
           }
         >
           <View
-            __typename="WeekendContentItem"
-            action="READ_CONTENT"
-            id="WeekendContentItem:95ff79f60a028b1b506aaeedf8b4c6ae"
             inHorizontalList={true}
-            isLive={false}
             style={
               Object {
-                "backgroundColor": "#1C1C1E",
+                "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
@@ -160,7 +156,6 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                 "width": 240,
               }
             }
-            summary="Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer."
           >
             <View
               style={
@@ -170,11 +165,71 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                 }
               }
             >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(249, 249, 251)",
+                      "flex": 1,
+                      "height": "100%",
+                    },
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ]
+                }
+              >
+                <Image
+                  blurRadius={128}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/800",
+                      },
+                    ]
+                  }
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                        "flex": 1,
+                        "height": "100%",
+                      },
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    ]
+                  }
+                />
+              </View>
               <Image
                 fadeDuration={250}
+                hasTitleAndSummary={true}
+                height={135}
                 onLoad={[Function]}
-                overlayColor="#000000"
-                overlayType="gradient-bottom"
                 source={
                   Array [
                     Object {
@@ -185,194 +240,75 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                 }
                 style={
                   Object {
-                    "aspectRatio": 1,
+                    "aspectRatio": 1.7777777777777777,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
+                width={240}
               />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "bottom": 0,
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
-                    "position": "absolute",
-                    "width": "100%",
+                    "height": 105,
+                    "justifyContent": "center",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "alignItems": "center",
-                      "flex": null,
-                      "flexDirection": "row",
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                      "width": "100%",
                     }
                   }
                 >
+                  Stormy
                   <Text
+                    numberOfLines={1}
                     style={
                       Object {
-                        "color": "rgba(244, 247, 248, 0.6)",
+                        "color": "#27272E",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 16,
                         "lineHeight": 24,
                       }
                     }
                   >
-                    Stormy
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "alignItems": "flex-end",
-                      "flexDirection": "row",
-                      "paddingTop": 16,
-                    }
-                  }
-                >
-                  <View
-                    hasAction={true}
-                    style={
-                      Object {
-                        "flex": 1,
-                        "marginRight": 16,
-                      }
-                    }
-                  >
                     <Text
-                      numberOfLines={4}
                       style={
                         Object {
-                          "color": "#F4F7F8",
-                          "fontFamily": "InterUI-Black",
-                          "fontSize": 24,
-                          "lineHeight": 27.6,
+                          "color": "#27272E",
                         }
                       }
                     >
                       Live for Freedom Toolkit
                     </Text>
-                  </View>
-                  <RNSVGSvgView
-                    align="xMidYMid"
-                    bbHeight={32}
-                    bbWidth={32}
-                    height={32}
-                    meetOrSlice={0}
-                    minX={0}
-                    minY={0}
+                  </Text>
+                  <Text
+                    bold={false}
+                    italic={false}
+                    numberOfLines={2}
                     style={
-                      Array [
-                        Object {
-                          "backgroundColor": "transparent",
-                          "borderWidth": 0,
-                        },
-                        undefined,
-                        null,
-                        Object {
-                          "flex": 0,
-                          "height": 32,
-                          "width": 32,
-                        },
-                      ]
+                      Object {
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Regular",
+                        "fontSize": 12,
+                        "lineHeight": 18,
+                      }
                     }
-                    vbHeight={32}
-                    vbWidth={32}
-                    width={32}
                   >
-                    <RNSVGGroup
-                      fill={
-                        Array [
-                          0,
-                          4278190080,
-                        ]
+                    <Text
+                      style={
+                        Object {
+                          "color": "rgba(39, 39, 46, 0.6)",
+                        }
                       }
-                      fillOpacity={1}
-                      fillRule={1}
-                      font={Object {}}
-                      matrix={
-                        Array [
-                          1,
-                          0,
-                          0,
-                          1,
-                          0,
-                          0,
-                        ]
-                      }
-                      opacity={1}
-                      originX={0}
-                      originY={0}
-                      propList={Array []}
-                      rotation={0}
-                      scaleX={1}
-                      scaleY={1}
-                      skewX={0}
-                      skewY={0}
-                      stroke={null}
-                      strokeDasharray={null}
-                      strokeDashoffset={null}
-                      strokeLinecap={0}
-                      strokeLinejoin={0}
-                      strokeMiterlimit={4}
-                      strokeOpacity={1}
-                      strokeWidth={1}
-                      vectorEffect={0}
-                      x={0}
-                      y={0}
                     >
-                      <RNSVGPath
-                        d="M27 14h5c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0zM27 14c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0 14c0 1.112-0.895 2-2 2-1.112 0-2-0.896-2-2.001v-1.494c0-0.291 0.224-0.505 0.5-0.505 0.268 0 0.5 0.226 0.5 0.505v1.505c0 0.547 0.444 0.991 1 0.991 0.552 0 1-0.451 1-0.991v-14.009c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-5.415 6.671-9.825 15-9.995v-1.506c0-0.283 0.224-0.499 0.5-0.499 0.268 0 0.5 0.224 0.5 0.499v1.506c8.329 0.17 15 4.58 15 9.995h-5z"
-                        fill={
-                          Array [
-                            0,
-                            4294244344,
-                          ]
-                        }
-                        fillOpacity={1}
-                        fillRule={1}
-                        matrix={
-                          Array [
-                            1,
-                            0,
-                            0,
-                            1,
-                            0,
-                            0,
-                          ]
-                        }
-                        opacity={1}
-                        originX={0}
-                        originY={0}
-                        propList={
-                          Array [
-                            "fill",
-                          ]
-                        }
-                        rotation={0}
-                        scaleX={1}
-                        scaleY={1}
-                        skewX={0}
-                        skewY={0}
-                        stroke={null}
-                        strokeDasharray={null}
-                        strokeDashoffset={null}
-                        strokeLinecap={0}
-                        strokeLinejoin={0}
-                        strokeMiterlimit={4}
-                        strokeOpacity={1}
-                        strokeWidth={1}
-                        vectorEffect={0}
-                        x={0}
-                        y={0}
-                      />
-                    </RNSVGGroup>
-                  </RNSVGSvgView>
+                      Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.
+                    </Text>
+                  </Text>
                 </View>
               </View>
             </View>
@@ -619,14 +555,10 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
           }
         >
           <View
-            __typename="DevotionalContentItem"
-            action="READ_CONTENT"
-            id="DevotionalContentItem:95ff79f60a028b1b506aaeedf8b4c6ae"
             inHorizontalList={true}
-            isLive={false}
             style={
               Object {
-                "backgroundColor": "#1C1C1E",
+                "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
@@ -641,7 +573,6 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                 "width": 240,
               }
             }
-            summary="Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer."
           >
             <View
               style={
@@ -651,11 +582,71 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                 }
               }
             >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(249, 249, 251)",
+                      "flex": 1,
+                      "height": "100%",
+                    },
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ]
+                }
+              >
+                <Image
+                  blurRadius={128}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/800",
+                      },
+                    ]
+                  }
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                        "flex": 1,
+                        "height": "100%",
+                      },
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    ]
+                  }
+                />
+              </View>
               <Image
                 fadeDuration={250}
+                hasTitleAndSummary={true}
+                height={135}
                 onLoad={[Function]}
-                overlayColor="#000000"
-                overlayType="gradient-bottom"
                 source={
                   Array [
                     Object {
@@ -666,56 +657,74 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                 }
                 style={
                   Object {
-                    "aspectRatio": 1,
+                    "aspectRatio": 1.7777777777777777,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
+                width={240}
               />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "bottom": 0,
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
-                    "position": "absolute",
-                    "width": "100%",
+                    "height": 105,
+                    "justifyContent": "center",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "alignItems": "flex-end",
-                      "flexDirection": "row",
-                      "paddingTop": 16,
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                      "width": "100%",
                     }
                   }
                 >
-                  <View
-                    hasAction={null}
+                  <Text
+                    numberOfLines={2}
                     style={
                       Object {
-                        "flex": 1,
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 16,
+                        "lineHeight": 24,
                       }
                     }
                   >
                     <Text
-                      numberOfLines={4}
                       style={
                         Object {
-                          "color": "#F4F7F8",
-                          "fontFamily": "InterUI-Black",
-                          "fontSize": 24,
-                          "lineHeight": 27.6,
+                          "color": "#27272E",
                         }
                       }
                     >
                       Live for Freedom Toolkit
                     </Text>
-                  </View>
+                  </Text>
+                  <Text
+                    bold={false}
+                    italic={false}
+                    numberOfLines={2}
+                    style={
+                      Object {
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Regular",
+                        "fontSize": 12,
+                        "lineHeight": 18,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "rgba(39, 39, 46, 0.6)",
+                        }
+                      }
+                    >
+                      Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.
+                    </Text>
+                  </Text>
                 </View>
               </View>
             </View>
@@ -955,15 +964,11 @@ exports[`The HorizontalCardListFeature component should render a loading state f
           }
         >
           <View
-            __typename="MediaContentItem"
-            channelType=""
-            id="fakeId0"
             inHorizontalList={true}
-            isLive={false}
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#1C1C1E",
+                "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
@@ -987,72 +992,122 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                 }
               }
             >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(249, 249, 251)",
+                      "flex": 1,
+                      "height": "100%",
+                    },
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ]
+                }
+              >
+                <Image
+                  blurRadius={128}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={Array []}
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                        "flex": 1,
+                        "height": "100%",
+                      },
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    ]
+                  }
+                />
+              </View>
               <Image
                 fadeDuration={250}
+                hasTitleAndSummary={false}
+                height={135}
                 isLoading={true}
                 onLoad={[Function]}
-                overlayColor="#000000"
-                overlayType="gradient-bottom"
                 source={Array []}
                 style={
                   Object {
-                    "aspectRatio": 1,
+                    "aspectRatio": 1.7777777777777777,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
+                width={240}
               />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "bottom": 0,
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
-                    "position": "absolute",
-                    "width": "100%",
+                    "height": 105,
+                    "justifyContent": "center",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "alignItems": "flex-end",
-                      "flexDirection": "row",
-                      "paddingTop": 16,
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                      "width": "100%",
                     }
                   }
                 >
-                  <View
-                    hasAction={true}
+                  <Text
+                    numberOfLines={2}
                     style={
                       Object {
-                        "flex": 1,
-                        "marginRight": 16,
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 16,
+                        "lineHeight": 24,
                       }
                     }
                   >
-                    <View
+                    <Text
                       style={
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "marginVertical": 1.8000000000000007,
-                          "width": "100%",
+                          "color": "#27272E",
                         }
                       }
-                    />
-                  </View>
+                    >
+                      Boom
+                    </Text>
+                  </Text>
                   <View
                     style={
                       Object {
+                        "alignSelf": "stretch",
                         "backgroundColor": "#A5A5A5",
                         "borderRadius": 16,
-                        "height": 32,
-                        "width": 32,
+                        "height": 12,
+                        "marginVertical": 3,
+                        "width": "100%",
                       }
                     }
                   />
@@ -1094,15 +1149,11 @@ exports[`The HorizontalCardListFeature component should render a loading state f
           }
         >
           <View
-            __typename="MediaContentItem"
-            channelType=""
-            id="fakeId1"
             inHorizontalList={true}
-            isLive={false}
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#1C1C1E",
+                "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
@@ -1126,72 +1177,122 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                 }
               }
             >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(249, 249, 251)",
+                      "flex": 1,
+                      "height": "100%",
+                    },
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ]
+                }
+              >
+                <Image
+                  blurRadius={128}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={Array []}
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                        "flex": 1,
+                        "height": "100%",
+                      },
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    ]
+                  }
+                />
+              </View>
               <Image
                 fadeDuration={250}
+                hasTitleAndSummary={false}
+                height={135}
                 isLoading={true}
                 onLoad={[Function]}
-                overlayColor="#000000"
-                overlayType="gradient-bottom"
                 source={Array []}
                 style={
                   Object {
-                    "aspectRatio": 1,
+                    "aspectRatio": 1.7777777777777777,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
+                width={240}
               />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "bottom": 0,
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
-                    "position": "absolute",
-                    "width": "100%",
+                    "height": 105,
+                    "justifyContent": "center",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "alignItems": "flex-end",
-                      "flexDirection": "row",
-                      "paddingTop": 16,
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                      "width": "100%",
                     }
                   }
                 >
-                  <View
-                    hasAction={true}
+                  <Text
+                    numberOfLines={2}
                     style={
                       Object {
-                        "flex": 1,
-                        "marginRight": 16,
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 16,
+                        "lineHeight": 24,
                       }
                     }
                   >
-                    <View
+                    <Text
                       style={
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "marginVertical": 1.8000000000000007,
-                          "width": "100%",
+                          "color": "#27272E",
                         }
                       }
-                    />
-                  </View>
+                    >
+                      Boom
+                    </Text>
+                  </Text>
                   <View
                     style={
                       Object {
+                        "alignSelf": "stretch",
                         "backgroundColor": "#A5A5A5",
                         "borderRadius": 16,
-                        "height": 32,
-                        "width": 32,
+                        "height": 12,
+                        "marginVertical": 3,
+                        "width": "100%",
                       }
                     }
                   />
@@ -1233,15 +1334,11 @@ exports[`The HorizontalCardListFeature component should render a loading state f
           }
         >
           <View
-            __typename="MediaContentItem"
-            channelType=""
-            id="fakeId2"
             inHorizontalList={true}
-            isLive={false}
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#1C1C1E",
+                "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
@@ -1265,72 +1362,122 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                 }
               }
             >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(249, 249, 251)",
+                      "flex": 1,
+                      "height": "100%",
+                    },
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ]
+                }
+              >
+                <Image
+                  blurRadius={128}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={Array []}
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                        "flex": 1,
+                        "height": "100%",
+                      },
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    ]
+                  }
+                />
+              </View>
               <Image
                 fadeDuration={250}
+                hasTitleAndSummary={false}
+                height={135}
                 isLoading={true}
                 onLoad={[Function]}
-                overlayColor="#000000"
-                overlayType="gradient-bottom"
                 source={Array []}
                 style={
                   Object {
-                    "aspectRatio": 1,
+                    "aspectRatio": 1.7777777777777777,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
+                width={240}
               />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "bottom": 0,
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
-                    "position": "absolute",
-                    "width": "100%",
+                    "height": 105,
+                    "justifyContent": "center",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "alignItems": "flex-end",
-                      "flexDirection": "row",
-                      "paddingTop": 16,
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                      "width": "100%",
                     }
                   }
                 >
-                  <View
-                    hasAction={true}
+                  <Text
+                    numberOfLines={2}
                     style={
                       Object {
-                        "flex": 1,
-                        "marginRight": 16,
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 16,
+                        "lineHeight": 24,
                       }
                     }
                   >
-                    <View
+                    <Text
                       style={
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "marginVertical": 1.8000000000000007,
-                          "width": "100%",
+                          "color": "#27272E",
                         }
                       }
-                    />
-                  </View>
+                    >
+                      Boom
+                    </Text>
+                  </Text>
                   <View
                     style={
                       Object {
+                        "alignSelf": "stretch",
                         "backgroundColor": "#A5A5A5",
                         "borderRadius": 16,
-                        "height": 32,
-                        "width": 32,
+                        "height": 12,
+                        "marginVertical": 3,
+                        "width": "100%",
                       }
                     }
                   />
@@ -1372,15 +1519,11 @@ exports[`The HorizontalCardListFeature component should render a loading state f
           }
         >
           <View
-            __typename="MediaContentItem"
-            channelType=""
-            id="fakeId3"
             inHorizontalList={true}
-            isLive={false}
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#1C1C1E",
+                "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
@@ -1404,72 +1547,122 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                 }
               }
             >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(249, 249, 251)",
+                      "flex": 1,
+                      "height": "100%",
+                    },
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ]
+                }
+              >
+                <Image
+                  blurRadius={128}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={Array []}
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                        "flex": 1,
+                        "height": "100%",
+                      },
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    ]
+                  }
+                />
+              </View>
               <Image
                 fadeDuration={250}
+                hasTitleAndSummary={false}
+                height={135}
                 isLoading={true}
                 onLoad={[Function]}
-                overlayColor="#000000"
-                overlayType="gradient-bottom"
                 source={Array []}
                 style={
                   Object {
-                    "aspectRatio": 1,
+                    "aspectRatio": 1.7777777777777777,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
+                width={240}
               />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "bottom": 0,
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
-                    "position": "absolute",
-                    "width": "100%",
+                    "height": 105,
+                    "justifyContent": "center",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "alignItems": "flex-end",
-                      "flexDirection": "row",
-                      "paddingTop": 16,
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                      "width": "100%",
                     }
                   }
                 >
-                  <View
-                    hasAction={true}
+                  <Text
+                    numberOfLines={2}
                     style={
                       Object {
-                        "flex": 1,
-                        "marginRight": 16,
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 16,
+                        "lineHeight": 24,
                       }
                     }
                   >
-                    <View
+                    <Text
                       style={
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "marginVertical": 1.8000000000000007,
-                          "width": "100%",
+                          "color": "#27272E",
                         }
                       }
-                    />
-                  </View>
+                    >
+                      Boom
+                    </Text>
+                  </Text>
                   <View
                     style={
                       Object {
+                        "alignSelf": "stretch",
                         "backgroundColor": "#A5A5A5",
                         "borderRadius": 16,
-                        "height": 32,
-                        "width": 32,
+                        "height": 12,
+                        "marginVertical": 3,
+                        "width": "100%",
                       }
                     }
                   />
@@ -1511,15 +1704,11 @@ exports[`The HorizontalCardListFeature component should render a loading state f
           }
         >
           <View
-            __typename="MediaContentItem"
-            channelType=""
-            id="fakeId4"
             inHorizontalList={true}
-            isLive={false}
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#1C1C1E",
+                "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
@@ -1543,72 +1732,122 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                 }
               }
             >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(249, 249, 251)",
+                      "flex": 1,
+                      "height": "100%",
+                    },
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ]
+                }
+              >
+                <Image
+                  blurRadius={128}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={Array []}
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                        "flex": 1,
+                        "height": "100%",
+                      },
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    ]
+                  }
+                />
+              </View>
               <Image
                 fadeDuration={250}
+                hasTitleAndSummary={false}
+                height={135}
                 isLoading={true}
                 onLoad={[Function]}
-                overlayColor="#000000"
-                overlayType="gradient-bottom"
                 source={Array []}
                 style={
                   Object {
-                    "aspectRatio": 1,
+                    "aspectRatio": 1.7777777777777777,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
+                width={240}
               />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "bottom": 0,
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
-                    "position": "absolute",
-                    "width": "100%",
+                    "height": 105,
+                    "justifyContent": "center",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "alignItems": "flex-end",
-                      "flexDirection": "row",
-                      "paddingTop": 16,
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                      "width": "100%",
                     }
                   }
                 >
-                  <View
-                    hasAction={true}
+                  <Text
+                    numberOfLines={2}
                     style={
                       Object {
-                        "flex": 1,
-                        "marginRight": 16,
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 16,
+                        "lineHeight": 24,
                       }
                     }
                   >
-                    <View
+                    <Text
                       style={
                         Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 24,
-                          "marginVertical": 1.8000000000000007,
-                          "width": "100%",
+                          "color": "#27272E",
                         }
                       }
-                    />
-                  </View>
+                    >
+                      Boom
+                    </Text>
+                  </Text>
                   <View
                     style={
                       Object {
+                        "alignSelf": "stretch",
                         "backgroundColor": "#A5A5A5",
                         "borderRadius": 16,
-                        "height": 32,
-                        "width": 32,
+                        "height": 12,
+                        "marginVertical": 3,
+                        "width": "100%",
                       }
                     }
                   />
@@ -1796,14 +2035,10 @@ exports[`The HorizontalCardListFeature component should render a section title 1
           }
         >
           <View
-            __typename="WeekendContentItem"
-            action="READ_CONTENT"
-            id="WeekendContentItem:95ff79f60a028b1b506aaeedf8b4c6ae"
             inHorizontalList={true}
-            isLive={false}
             style={
               Object {
-                "backgroundColor": "#1C1C1E",
+                "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
@@ -1818,7 +2053,6 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                 "width": 240,
               }
             }
-            summary="Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer."
           >
             <View
               style={
@@ -1828,11 +2062,71 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                 }
               }
             >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(249, 249, 251)",
+                      "flex": 1,
+                      "height": "100%",
+                    },
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ]
+                }
+              >
+                <Image
+                  blurRadius={128}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/800",
+                      },
+                    ]
+                  }
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                        "flex": 1,
+                        "height": "100%",
+                      },
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    ]
+                  }
+                />
+              </View>
               <Image
                 fadeDuration={250}
+                hasTitleAndSummary={true}
+                height={135}
                 onLoad={[Function]}
-                overlayColor="#000000"
-                overlayType="gradient-bottom"
                 source={
                   Array [
                     Object {
@@ -1843,194 +2137,75 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                 }
                 style={
                   Object {
-                    "aspectRatio": 1,
+                    "aspectRatio": 1.7777777777777777,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
+                width={240}
               />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "bottom": 0,
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
-                    "position": "absolute",
-                    "width": "100%",
+                    "height": 105,
+                    "justifyContent": "center",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "alignItems": "center",
-                      "flex": null,
-                      "flexDirection": "row",
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                      "width": "100%",
                     }
                   }
                 >
+                  Stormy
                   <Text
+                    numberOfLines={1}
                     style={
                       Object {
-                        "color": "rgba(244, 247, 248, 0.6)",
+                        "color": "#27272E",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 16,
                         "lineHeight": 24,
                       }
                     }
                   >
-                    Stormy
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "alignItems": "flex-end",
-                      "flexDirection": "row",
-                      "paddingTop": 16,
-                    }
-                  }
-                >
-                  <View
-                    hasAction={true}
-                    style={
-                      Object {
-                        "flex": 1,
-                        "marginRight": 16,
-                      }
-                    }
-                  >
                     <Text
-                      numberOfLines={4}
                       style={
                         Object {
-                          "color": "#F4F7F8",
-                          "fontFamily": "InterUI-Black",
-                          "fontSize": 24,
-                          "lineHeight": 27.6,
+                          "color": "#27272E",
                         }
                       }
                     >
                       Live for Freedom Toolkit
                     </Text>
-                  </View>
-                  <RNSVGSvgView
-                    align="xMidYMid"
-                    bbHeight={32}
-                    bbWidth={32}
-                    height={32}
-                    meetOrSlice={0}
-                    minX={0}
-                    minY={0}
+                  </Text>
+                  <Text
+                    bold={false}
+                    italic={false}
+                    numberOfLines={2}
                     style={
-                      Array [
-                        Object {
-                          "backgroundColor": "transparent",
-                          "borderWidth": 0,
-                        },
-                        undefined,
-                        null,
-                        Object {
-                          "flex": 0,
-                          "height": 32,
-                          "width": 32,
-                        },
-                      ]
+                      Object {
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Regular",
+                        "fontSize": 12,
+                        "lineHeight": 18,
+                      }
                     }
-                    vbHeight={32}
-                    vbWidth={32}
-                    width={32}
                   >
-                    <RNSVGGroup
-                      fill={
-                        Array [
-                          0,
-                          4278190080,
-                        ]
+                    <Text
+                      style={
+                        Object {
+                          "color": "rgba(39, 39, 46, 0.6)",
+                        }
                       }
-                      fillOpacity={1}
-                      fillRule={1}
-                      font={Object {}}
-                      matrix={
-                        Array [
-                          1,
-                          0,
-                          0,
-                          1,
-                          0,
-                          0,
-                        ]
-                      }
-                      opacity={1}
-                      originX={0}
-                      originY={0}
-                      propList={Array []}
-                      rotation={0}
-                      scaleX={1}
-                      scaleY={1}
-                      skewX={0}
-                      skewY={0}
-                      stroke={null}
-                      strokeDasharray={null}
-                      strokeDashoffset={null}
-                      strokeLinecap={0}
-                      strokeLinejoin={0}
-                      strokeMiterlimit={4}
-                      strokeOpacity={1}
-                      strokeWidth={1}
-                      vectorEffect={0}
-                      x={0}
-                      y={0}
                     >
-                      <RNSVGPath
-                        d="M27 14h5c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0zM27 14c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0 14c0 1.112-0.895 2-2 2-1.112 0-2-0.896-2-2.001v-1.494c0-0.291 0.224-0.505 0.5-0.505 0.268 0 0.5 0.226 0.5 0.505v1.505c0 0.547 0.444 0.991 1 0.991 0.552 0 1-0.451 1-0.991v-14.009c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-5.415 6.671-9.825 15-9.995v-1.506c0-0.283 0.224-0.499 0.5-0.499 0.268 0 0.5 0.224 0.5 0.499v1.506c8.329 0.17 15 4.58 15 9.995h-5z"
-                        fill={
-                          Array [
-                            0,
-                            4294244344,
-                          ]
-                        }
-                        fillOpacity={1}
-                        fillRule={1}
-                        matrix={
-                          Array [
-                            1,
-                            0,
-                            0,
-                            1,
-                            0,
-                            0,
-                          ]
-                        }
-                        opacity={1}
-                        originX={0}
-                        originY={0}
-                        propList={
-                          Array [
-                            "fill",
-                          ]
-                        }
-                        rotation={0}
-                        scaleX={1}
-                        scaleY={1}
-                        skewX={0}
-                        skewY={0}
-                        stroke={null}
-                        strokeDasharray={null}
-                        strokeDashoffset={null}
-                        strokeLinecap={0}
-                        strokeLinejoin={0}
-                        strokeMiterlimit={4}
-                        strokeOpacity={1}
-                        strokeWidth={1}
-                        vectorEffect={0}
-                        x={0}
-                        y={0}
-                      />
-                    </RNSVGGroup>
-                  </RNSVGSvgView>
+                      Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.
+                    </Text>
+                  </Text>
                 </View>
               </View>
             </View>
@@ -2277,14 +2452,10 @@ exports[`The HorizontalCardListFeature component should render a section title 1
           }
         >
           <View
-            __typename="DevotionalContentItem"
-            action="READ_CONTENT"
-            id="DevotionalContentItem:95ff79f60a028b1b506aaeedf8b4c6ae"
             inHorizontalList={true}
-            isLive={false}
             style={
               Object {
-                "backgroundColor": "#1C1C1E",
+                "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
@@ -2299,7 +2470,6 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                 "width": 240,
               }
             }
-            summary="Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer."
           >
             <View
               style={
@@ -2309,11 +2479,71 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                 }
               }
             >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(249, 249, 251)",
+                      "flex": 1,
+                      "height": "100%",
+                    },
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ]
+                }
+              >
+                <Image
+                  blurRadius={128}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/800",
+                      },
+                    ]
+                  }
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                        "flex": 1,
+                        "height": "100%",
+                      },
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    ]
+                  }
+                />
+              </View>
               <Image
                 fadeDuration={250}
+                hasTitleAndSummary={true}
+                height={135}
                 onLoad={[Function]}
-                overlayColor="#000000"
-                overlayType="gradient-bottom"
                 source={
                   Array [
                     Object {
@@ -2324,56 +2554,74 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                 }
                 style={
                   Object {
-                    "aspectRatio": 1,
+                    "aspectRatio": 1.7777777777777777,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
+                width={240}
               />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "bottom": 0,
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
-                    "position": "absolute",
-                    "width": "100%",
+                    "height": 105,
+                    "justifyContent": "center",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "alignItems": "flex-end",
-                      "flexDirection": "row",
-                      "paddingTop": 16,
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                      "width": "100%",
                     }
                   }
                 >
-                  <View
-                    hasAction={null}
+                  <Text
+                    numberOfLines={2}
                     style={
                       Object {
-                        "flex": 1,
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 16,
+                        "lineHeight": 24,
                       }
                     }
                   >
                     <Text
-                      numberOfLines={4}
                       style={
                         Object {
-                          "color": "#F4F7F8",
-                          "fontFamily": "InterUI-Black",
-                          "fontSize": 24,
-                          "lineHeight": 27.6,
+                          "color": "#27272E",
                         }
                       }
                     >
                       Live for Freedom Toolkit
                     </Text>
-                  </View>
+                  </Text>
+                  <Text
+                    bold={false}
+                    italic={false}
+                    numberOfLines={2}
+                    style={
+                      Object {
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Regular",
+                        "fontSize": 12,
+                        "lineHeight": 18,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "rgba(39, 39, 46, 0.6)",
+                        }
+                      }
+                    >
+                      Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.
+                    </Text>
+                  </Text>
                 </View>
               </View>
             </View>
@@ -2557,14 +2805,10 @@ exports[`The HorizontalCardListFeature component should render with a section su
           }
         >
           <View
-            __typename="WeekendContentItem"
-            action="READ_CONTENT"
-            id="WeekendContentItem:95ff79f60a028b1b506aaeedf8b4c6ae"
             inHorizontalList={true}
-            isLive={false}
             style={
               Object {
-                "backgroundColor": "#1C1C1E",
+                "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
@@ -2579,7 +2823,6 @@ exports[`The HorizontalCardListFeature component should render with a section su
                 "width": 240,
               }
             }
-            summary="Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer."
           >
             <View
               style={
@@ -2589,11 +2832,71 @@ exports[`The HorizontalCardListFeature component should render with a section su
                 }
               }
             >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(249, 249, 251)",
+                      "flex": 1,
+                      "height": "100%",
+                    },
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ]
+                }
+              >
+                <Image
+                  blurRadius={128}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/800",
+                      },
+                    ]
+                  }
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                        "flex": 1,
+                        "height": "100%",
+                      },
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    ]
+                  }
+                />
+              </View>
               <Image
                 fadeDuration={250}
+                hasTitleAndSummary={true}
+                height={135}
                 onLoad={[Function]}
-                overlayColor="#000000"
-                overlayType="gradient-bottom"
                 source={
                   Array [
                     Object {
@@ -2604,194 +2907,75 @@ exports[`The HorizontalCardListFeature component should render with a section su
                 }
                 style={
                   Object {
-                    "aspectRatio": 1,
+                    "aspectRatio": 1.7777777777777777,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
+                width={240}
               />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "bottom": 0,
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
-                    "position": "absolute",
-                    "width": "100%",
+                    "height": 105,
+                    "justifyContent": "center",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "alignItems": "center",
-                      "flex": null,
-                      "flexDirection": "row",
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                      "width": "100%",
                     }
                   }
                 >
+                  Stormy
                   <Text
+                    numberOfLines={1}
                     style={
                       Object {
-                        "color": "rgba(244, 247, 248, 0.6)",
+                        "color": "#27272E",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 16,
                         "lineHeight": 24,
                       }
                     }
                   >
-                    Stormy
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "alignItems": "flex-end",
-                      "flexDirection": "row",
-                      "paddingTop": 16,
-                    }
-                  }
-                >
-                  <View
-                    hasAction={true}
-                    style={
-                      Object {
-                        "flex": 1,
-                        "marginRight": 16,
-                      }
-                    }
-                  >
                     <Text
-                      numberOfLines={4}
                       style={
                         Object {
-                          "color": "#F4F7F8",
-                          "fontFamily": "InterUI-Black",
-                          "fontSize": 24,
-                          "lineHeight": 27.6,
+                          "color": "#27272E",
                         }
                       }
                     >
                       Live for Freedom Toolkit
                     </Text>
-                  </View>
-                  <RNSVGSvgView
-                    align="xMidYMid"
-                    bbHeight={32}
-                    bbWidth={32}
-                    height={32}
-                    meetOrSlice={0}
-                    minX={0}
-                    minY={0}
+                  </Text>
+                  <Text
+                    bold={false}
+                    italic={false}
+                    numberOfLines={2}
                     style={
-                      Array [
-                        Object {
-                          "backgroundColor": "transparent",
-                          "borderWidth": 0,
-                        },
-                        undefined,
-                        null,
-                        Object {
-                          "flex": 0,
-                          "height": 32,
-                          "width": 32,
-                        },
-                      ]
+                      Object {
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Regular",
+                        "fontSize": 12,
+                        "lineHeight": 18,
+                      }
                     }
-                    vbHeight={32}
-                    vbWidth={32}
-                    width={32}
                   >
-                    <RNSVGGroup
-                      fill={
-                        Array [
-                          0,
-                          4278190080,
-                        ]
+                    <Text
+                      style={
+                        Object {
+                          "color": "rgba(39, 39, 46, 0.6)",
+                        }
                       }
-                      fillOpacity={1}
-                      fillRule={1}
-                      font={Object {}}
-                      matrix={
-                        Array [
-                          1,
-                          0,
-                          0,
-                          1,
-                          0,
-                          0,
-                        ]
-                      }
-                      opacity={1}
-                      originX={0}
-                      originY={0}
-                      propList={Array []}
-                      rotation={0}
-                      scaleX={1}
-                      scaleY={1}
-                      skewX={0}
-                      skewY={0}
-                      stroke={null}
-                      strokeDasharray={null}
-                      strokeDashoffset={null}
-                      strokeLinecap={0}
-                      strokeLinejoin={0}
-                      strokeMiterlimit={4}
-                      strokeOpacity={1}
-                      strokeWidth={1}
-                      vectorEffect={0}
-                      x={0}
-                      y={0}
                     >
-                      <RNSVGPath
-                        d="M27 14h5c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0zM27 14c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0 14c0 1.112-0.895 2-2 2-1.112 0-2-0.896-2-2.001v-1.494c0-0.291 0.224-0.505 0.5-0.505 0.268 0 0.5 0.226 0.5 0.505v1.505c0 0.547 0.444 0.991 1 0.991 0.552 0 1-0.451 1-0.991v-14.009c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-5.415 6.671-9.825 15-9.995v-1.506c0-0.283 0.224-0.499 0.5-0.499 0.268 0 0.5 0.224 0.5 0.499v1.506c8.329 0.17 15 4.58 15 9.995h-5z"
-                        fill={
-                          Array [
-                            0,
-                            4294244344,
-                          ]
-                        }
-                        fillOpacity={1}
-                        fillRule={1}
-                        matrix={
-                          Array [
-                            1,
-                            0,
-                            0,
-                            1,
-                            0,
-                            0,
-                          ]
-                        }
-                        opacity={1}
-                        originX={0}
-                        originY={0}
-                        propList={
-                          Array [
-                            "fill",
-                          ]
-                        }
-                        rotation={0}
-                        scaleX={1}
-                        scaleY={1}
-                        skewX={0}
-                        skewY={0}
-                        stroke={null}
-                        strokeDasharray={null}
-                        strokeDashoffset={null}
-                        strokeLinecap={0}
-                        strokeLinejoin={0}
-                        strokeMiterlimit={4}
-                        strokeOpacity={1}
-                        strokeWidth={1}
-                        vectorEffect={0}
-                        x={0}
-                        y={0}
-                      />
-                    </RNSVGGroup>
-                  </RNSVGSvgView>
+                      Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.
+                    </Text>
+                  </Text>
                 </View>
               </View>
             </View>
@@ -3038,14 +3222,10 @@ exports[`The HorizontalCardListFeature component should render with a section su
           }
         >
           <View
-            __typename="DevotionalContentItem"
-            action="READ_CONTENT"
-            id="DevotionalContentItem:95ff79f60a028b1b506aaeedf8b4c6ae"
             inHorizontalList={true}
-            isLive={false}
             style={
               Object {
-                "backgroundColor": "#1C1C1E",
+                "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
@@ -3060,7 +3240,6 @@ exports[`The HorizontalCardListFeature component should render with a section su
                 "width": 240,
               }
             }
-            summary="Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer."
           >
             <View
               style={
@@ -3070,11 +3249,71 @@ exports[`The HorizontalCardListFeature component should render with a section su
                 }
               }
             >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(249, 249, 251)",
+                      "flex": 1,
+                      "height": "100%",
+                    },
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ]
+                }
+              >
+                <Image
+                  blurRadius={128}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/800",
+                      },
+                    ]
+                  }
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                        "flex": 1,
+                        "height": "100%",
+                      },
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    ]
+                  }
+                />
+              </View>
               <Image
                 fadeDuration={250}
+                hasTitleAndSummary={true}
+                height={135}
                 onLoad={[Function]}
-                overlayColor="#000000"
-                overlayType="gradient-bottom"
                 source={
                   Array [
                     Object {
@@ -3085,56 +3324,74 @@ exports[`The HorizontalCardListFeature component should render with a section su
                 }
                 style={
                   Object {
-                    "aspectRatio": 1,
+                    "aspectRatio": 1.7777777777777777,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
+                width={240}
               />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "bottom": 0,
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
-                    "position": "absolute",
-                    "width": "100%",
+                    "height": 105,
+                    "justifyContent": "center",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "alignItems": "flex-end",
-                      "flexDirection": "row",
-                      "paddingTop": 16,
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                      "width": "100%",
                     }
                   }
                 >
-                  <View
-                    hasAction={null}
+                  <Text
+                    numberOfLines={2}
                     style={
                       Object {
-                        "flex": 1,
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 16,
+                        "lineHeight": 24,
                       }
                     }
                   >
                     <Text
-                      numberOfLines={4}
                       style={
                         Object {
-                          "color": "#F4F7F8",
-                          "fontFamily": "InterUI-Black",
-                          "fontSize": 24,
-                          "lineHeight": 27.6,
+                          "color": "#27272E",
                         }
                       }
                     >
                       Live for Freedom Toolkit
                     </Text>
-                  </View>
+                  </Text>
+                  <Text
+                    bold={false}
+                    italic={false}
+                    numberOfLines={2}
+                    style={
+                      Object {
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Regular",
+                        "fontSize": 12,
+                        "lineHeight": 18,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "rgba(39, 39, 46, 0.6)",
+                        }
+                      }
+                    >
+                      Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.
+                    </Text>
+                  </Text>
                 </View>
               </View>
             </View>

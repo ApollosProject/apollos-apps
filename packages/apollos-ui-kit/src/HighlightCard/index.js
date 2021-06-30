@@ -5,12 +5,13 @@ import PropTypes from 'prop-types';
 
 import { withTheme, ThemeMixin, named } from '../theme';
 import styled from '../styled';
-import Card, { CardContent, CardLabel, CardImage } from '../Card';
+import Card, { CardContent, CardLabel } from '../Card';
 import FlexedView from '../FlexedView';
 import { H3, BodyText } from '../typography';
 import Icon from '../Icon';
 import { withIsLoading } from '../isLoading';
 import { ImageSourceType } from '../ConnectedImage';
+import GradientOverlayImage from '../GradientOverlayImage';
 
 const StyledCard = withTheme(
   ({ theme }) => ({
@@ -46,7 +47,7 @@ const Image = withTheme(
     overlayColor: get(customTheme, 'colors.primary', theme.colors.black),
   }),
   'ui-kit.HighlightCard.Image'
-)(CardImage);
+)(GradientOverlayImage);
 
 const Content = styled(
   ({ theme }) => ({

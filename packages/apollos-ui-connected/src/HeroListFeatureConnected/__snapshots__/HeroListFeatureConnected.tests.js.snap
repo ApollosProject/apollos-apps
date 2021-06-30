@@ -61,10 +61,9 @@ Array [
     }
   >
     <View
-      cardColor="#00676D"
       style={
         Object {
-          "backgroundColor": "#00676D",
+          "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
           "marginHorizontal": 16,
           "marginVertical": 12,
@@ -86,11 +85,70 @@ Array [
           }
         }
       >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgb(249, 249, 251)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
+          }
+        >
+          <Image
+            blurRadius={128}
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "__typename": "ImageMediaSource",
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200/200",
+                },
+              ]
+            }
+            style={
+              Object {
+                "backgroundColor": "#A5A5A5",
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                  "flex": 1,
+                  "height": "100%",
+                },
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+              ]
+            }
+          />
+        </View>
         <Image
           fadeDuration={250}
           onLoad={[Function]}
-          overlayColor="#000000"
-          overlayType="gradient-bottom"
           source={
             Array [
               Object {
@@ -111,12 +169,8 @@ Array [
         <View
           style={
             Object {
-              "alignItems": "flex-start",
-              "bottom": 0,
-              "paddingBottom": 32,
-              "paddingHorizontal": 24,
+              "paddingHorizontal": 16,
               "paddingVertical": 16,
-              "position": "absolute",
               "width": "100%",
             }
           }
@@ -133,7 +187,7 @@ Array [
             <Text
               style={
                 Object {
-                  "color": "rgba(244, 247, 248, 0.6)",
+                  "color": "rgba(39, 39, 46, 0.6)",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
                   "lineHeight": 24,
@@ -144,53 +198,59 @@ Array [
             </Text>
           </View>
           <Text
-            numberOfLines={3}
+            numberOfLines={2}
             style={
               Object {
-                "color": "#F4F7F8",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Black",
                 "fontSize": 24,
                 "lineHeight": 27.6,
               }
             }
           >
-            Boom
-          </Text>
-          <View
-            hasSummary={true}
-            style={
-              Object {
-                "alignItems": "center",
-                "flexDirection": "row",
-                "paddingTop": 16,
-              }
-            }
-          >
-            <View
+            <Text
               style={
                 Object {
-                  "flex": 1,
-                  "marginRight": 16,
+                  "color": "#27272E",
                 }
               }
             >
-              <Text
-                bold={false}
-                italic={false}
-                numberOfLines={2}
-                style={
-                  Object {
-                    "color": "#F4F7F8",
-                    "fontFamily": "InterUI-Regular",
-                    "fontSize": 16,
-                    "lineHeight": 26,
-                  }
+              Boom
+            </Text>
+          </Text>
+          <Text
+            bold={false}
+            italic={false}
+            numberOfLines={3}
+            style={
+              Object {
+                "color": "#27272E",
+                "fontFamily": "InterUI-Regular",
+                "fontSize": 16,
+                "lineHeight": 26,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "rgba(39, 39, 46, 0.6)",
                 }
-              >
-                Read
-              </Text>
-            </View>
-          </View>
+              }
+            >
+              Read
+            </Text>
+          </Text>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "paddingTop": 8,
+                "width": "100%",
+              }
+            }
+          />
         </View>
       </View>
     </View>
@@ -388,11 +448,10 @@ Array [
     }
   >
     <View
-      cardColor="#00676D"
       isLoading={true}
       style={
         Object {
-          "backgroundColor": "#00676D",
+          "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
           "marginHorizontal": 16,
           "marginVertical": 12,
@@ -414,12 +473,63 @@ Array [
           }
         }
       >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgb(249, 249, 251)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
+          }
+        >
+          <Image
+            blurRadius={128}
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={Array []}
+            style={
+              Object {
+                "backgroundColor": "#A5A5A5",
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                  "flex": 1,
+                  "height": "100%",
+                },
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+              ]
+            }
+          />
+        </View>
         <Image
           fadeDuration={250}
           isLoading={true}
           onLoad={[Function]}
-          overlayColor="#000000"
-          overlayType="gradient-bottom"
           source={Array []}
           style={
             Object {
@@ -432,48 +542,55 @@ Array [
         <View
           style={
             Object {
-              "alignItems": "flex-start",
-              "bottom": 0,
-              "paddingBottom": 32,
-              "paddingHorizontal": 24,
+              "paddingHorizontal": 16,
               "paddingVertical": 16,
-              "position": "absolute",
               "width": "100%",
             }
           }
         >
           <View
-            hasSummary={false}
             style={
               Object {
-                "alignItems": "flex-end",
+                "alignItems": "center",
+                "flex": null,
                 "flexDirection": "row",
-                "paddingTop": 16,
               }
             }
-          >
-            <View
-              style={
-                Object {
-                  "flex": 1,
-                  "marginRight": 16,
-                }
+          />
+          <View
+            style={
+              Object {
+                "alignSelf": "stretch",
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 16,
+                "height": 24,
+                "marginVertical": 1.8000000000000007,
+                "width": "100%",
               }
-            >
-              <View
-                style={
-                  Object {
-                    "alignSelf": "stretch",
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 16,
-                    "height": 24,
-                    "marginVertical": 1.8000000000000007,
-                    "width": "100%",
-                  }
-                }
-              />
-            </View>
-          </View>
+            }
+          />
+          <View
+            style={
+              Object {
+                "alignSelf": "stretch",
+                "backgroundColor": "#A5A5A5",
+                "borderRadius": 16,
+                "height": 16,
+                "marginVertical": 5,
+                "width": "100%",
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "paddingTop": 8,
+                "width": "100%",
+              }
+            }
+          />
         </View>
       </View>
     </View>
@@ -979,10 +1096,9 @@ Array [
     }
   >
     <View
-      cardColor="#00676D"
       style={
         Object {
-          "backgroundColor": "#00676D",
+          "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
           "marginHorizontal": 16,
           "marginVertical": 12,
@@ -1004,11 +1120,70 @@ Array [
           }
         }
       >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgb(249, 249, 251)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
+          }
+        >
+          <Image
+            blurRadius={128}
+            fadeDuration={250}
+            onLoad={[Function]}
+            source={
+              Array [
+                Object {
+                  "__typename": "ImageMediaSource",
+                  "cache": "force-cache",
+                  "uri": "https://picsum.photos/200/200",
+                },
+              ]
+            }
+            style={
+              Object {
+                "backgroundColor": "#A5A5A5",
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                  "flex": 1,
+                  "height": "100%",
+                },
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+              ]
+            }
+          />
+        </View>
         <Image
           fadeDuration={250}
           onLoad={[Function]}
-          overlayColor="#000000"
-          overlayType="gradient-bottom"
           source={
             Array [
               Object {
@@ -1029,12 +1204,8 @@ Array [
         <View
           style={
             Object {
-              "alignItems": "flex-start",
-              "bottom": 0,
-              "paddingBottom": 32,
-              "paddingHorizontal": 24,
+              "paddingHorizontal": 16,
               "paddingVertical": 16,
-              "position": "absolute",
               "width": "100%",
             }
           }
@@ -1051,7 +1222,7 @@ Array [
             <Text
               style={
                 Object {
-                  "color": "rgba(244, 247, 248, 0.6)",
+                  "color": "rgba(39, 39, 46, 0.6)",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 16,
                   "lineHeight": 24,
@@ -1062,53 +1233,59 @@ Array [
             </Text>
           </View>
           <Text
-            numberOfLines={3}
+            numberOfLines={2}
             style={
               Object {
-                "color": "#F4F7F8",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Black",
                 "fontSize": 24,
                 "lineHeight": 27.6,
               }
             }
           >
-            Boom
-          </Text>
-          <View
-            hasSummary={true}
-            style={
-              Object {
-                "alignItems": "center",
-                "flexDirection": "row",
-                "paddingTop": 16,
-              }
-            }
-          >
-            <View
+            <Text
               style={
                 Object {
-                  "flex": 1,
-                  "marginRight": 16,
+                  "color": "#27272E",
                 }
               }
             >
-              <Text
-                bold={false}
-                italic={false}
-                numberOfLines={2}
-                style={
-                  Object {
-                    "color": "#F4F7F8",
-                    "fontFamily": "InterUI-Regular",
-                    "fontSize": 16,
-                    "lineHeight": 26,
-                  }
+              Boom
+            </Text>
+          </Text>
+          <Text
+            bold={false}
+            italic={false}
+            numberOfLines={3}
+            style={
+              Object {
+                "color": "#27272E",
+                "fontFamily": "InterUI-Regular",
+                "fontSize": 16,
+                "lineHeight": 26,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "rgba(39, 39, 46, 0.6)",
                 }
-              >
-                Read
-              </Text>
-            </View>
-          </View>
+              }
+            >
+              Read
+            </Text>
+          </Text>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "paddingTop": 8,
+                "width": "100%",
+              }
+            }
+          />
         </View>
       </View>
     </View>
