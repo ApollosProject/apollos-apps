@@ -3,7 +3,7 @@ import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { SafeAreaView } from 'react-native';
 
-import ActionBar, { ActionBarItem } from '.';
+import ActionBar, { ActionBarItem } from './index';
 
 storiesOf('ui-kit/ActionBar', module)
   .addDecorator((story) => <SafeAreaView>{story()}</SafeAreaView>)

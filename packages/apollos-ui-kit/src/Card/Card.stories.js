@@ -4,7 +4,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 import { H3, BodyText, Paragraph } from '../typography';
 import Button, { ButtonLink } from '../Button';
 
-import Card, { CardActions, CardContent, CardImage, CardLabel } from '.';
+import Card, { CardActions, CardContent, CardImage, CardLabel } from './index';
 
 storiesOf('ui-kit/Card', module)
   .add('simple', () => (

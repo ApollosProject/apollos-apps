@@ -6,7 +6,7 @@ import { ScrollView } from 'react-native';
 import { BodyText } from '..';
 import PaddedView from '../../PaddedView';
 
-import Paragraph from '.';
+import Paragraph from './index';
 
 storiesOf('ui-kit/typography/Paragraph', module)
   .addDecorator((story) => (

@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
-import ThumbnailCard from '.';
+import ThumbnailCard from './index';
 
 const containerStyles = {
   flex: 1,

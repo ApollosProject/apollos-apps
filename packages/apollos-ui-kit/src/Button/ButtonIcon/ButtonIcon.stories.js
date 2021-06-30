@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
 import CenteredView from '../../CenteredView';
-import ButtonIcon from '.';
+import ButtonIcon from './index';
 
 storiesOf('ui-kit/Buttons/Icon', module)
   .addDecorator((story) => (

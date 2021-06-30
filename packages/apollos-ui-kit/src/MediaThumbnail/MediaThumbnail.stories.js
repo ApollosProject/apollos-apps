@@ -5,7 +5,10 @@ import CenteredView from '../CenteredView';
 import BackgroundView from '../BackgroundView';
 
 import { H5 } from '../typography';
-import MediaThumbnail, { MediaThumbnailItem, MediaThumbnailIcon } from '.';
+import MediaThumbnail, {
+  MediaThumbnailItem,
+  MediaThumbnailIcon,
+} from './index';
 
 storiesOf('ui-kit/MediaThumbnail', module)
   .addDecorator((story) => (

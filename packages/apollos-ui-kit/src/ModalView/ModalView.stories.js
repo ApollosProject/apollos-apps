@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
-import ModalView from '.';
+import ModalView from './index';
 
 const navigation = {
   pop: () => {},

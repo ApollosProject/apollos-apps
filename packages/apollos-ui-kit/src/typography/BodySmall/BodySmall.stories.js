@@ -5,7 +5,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 import CenteredView from '../../CenteredView';
 import PaddedView from '../../PaddedView';
 
-import BodySmall from '.';
+import BodySmall from './index';
 
 storiesOf('ui-kit/typography/BodySmall', module)
   .addDecorator((story) => (

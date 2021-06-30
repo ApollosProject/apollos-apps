@@ -3,7 +3,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 
 import FlexedView from '../../FlexedView';
 
-import Switch from '.';
+import Switch from './index';
 
 storiesOf('ui-kit/Inputs', module).add('Switch', () => (
   <FlexedView>

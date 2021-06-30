@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { Text, Button } from 'react-native';
 import PaddedView from '../PaddedView';
-import Modal, { ModalHeader } from '.';
+import Modal, { ModalHeader } from './index';
 
 const OnPreviousStory = () => {
   const [open, setOpen] = useState(true);

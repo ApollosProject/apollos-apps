@@ -4,7 +4,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 
 import CenteredView from '../CenteredView';
 
-import CampusCard from '.';
+import CampusCard from './index';
 
 storiesOf('ui-kit/CampusCard', module)
   .addDecorator((story) => (

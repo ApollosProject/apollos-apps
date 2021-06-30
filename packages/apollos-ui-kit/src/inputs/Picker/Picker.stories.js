@@ -3,7 +3,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 
 import FlexedView from '../../FlexedView';
 
-import Picker, { Item } from '.';
+import Picker, { Item } from './index';
 
 storiesOf('ui-kit/Inputs', module).add('Picker', () => (
   <FlexedView>

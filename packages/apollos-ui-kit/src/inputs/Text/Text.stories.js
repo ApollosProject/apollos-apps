@@ -7,7 +7,7 @@ import FlexedView from '../../FlexedView';
 
 import styled from '../../styled';
 
-import Text from '.';
+import Text from './index';
 
 const PlaceholderBox = styled(() => ({
   width: 50,

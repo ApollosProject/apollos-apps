@@ -12,7 +12,7 @@ import {
   Button,
 } from '@apollosproject/ui-kit';
 
-import StretchyView from '.';
+import StretchyView from './index';
 
 const { ScrollView } = Animated;
 

@@ -5,7 +5,7 @@ import FlexedView from '../FlexedView';
 import Icon from '../Icon';
 import { Switch } from '../inputs';
 
-import TableView, { Cell, CellText, Divider } from '.';
+import TableView, { Cell, CellText, Divider } from './index';
 
 storiesOf('ui-kit/TableView', module).add('Examples', () => (
   <FlexedView>

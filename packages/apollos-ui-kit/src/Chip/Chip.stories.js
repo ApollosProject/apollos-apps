@@ -6,7 +6,7 @@ import CenteredView from '../CenteredView';
 import Icon from '../Icon';
 
 import ChipList from './List';
-import Chip from '.';
+import Chip from './index';
 
 storiesOf('ui-kit/Chip', module)
   .addDecorator((story) => <CenteredView>{story()}</CenteredView>)

@@ -5,7 +5,7 @@ import CenteredView from '../../CenteredView';
 import PaddedView from '../../PaddedView';
 import BackgroundView from '../../BackgroundView';
 
-import FollowListItem from '.';
+import FollowListItem from './index';
 
 const name = 'Joe Schmoe';
 

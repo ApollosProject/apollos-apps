@@ -21,12 +21,13 @@
     "react": "*",
     "react-native": "*",
     "react-native-linear-gradient": "*",
+    "@react-native-community/async-storage": "*",
     "react-native-svg": "*"
   },
   "dependencies": {
-    "@storybook/addon-actions": "6.0.28",
-    "@storybook/addon-links": "6.0.28",
-    "@storybook/addons": "6.0.28",
+    "@storybook/addon-actions": "6.3.1",
+    "@storybook/addon-links": "6.3.1",
+    "@storybook/addons": "6.3.1",
     "@storybook/react-native": "5.3.23"
   },
   "devDependencies": {

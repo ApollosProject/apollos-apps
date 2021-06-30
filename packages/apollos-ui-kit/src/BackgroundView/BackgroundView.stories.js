@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
-import BackgroundView from '.';
+import BackgroundView from './index';
 
 storiesOf('ui-kit/BackgroundView', module)
   .add('Default', () => <BackgroundView />)

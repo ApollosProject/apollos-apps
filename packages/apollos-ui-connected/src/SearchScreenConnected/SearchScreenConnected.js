@@ -6,10 +6,7 @@ import { throttle } from 'lodash';
 import { useNavigation } from '@react-navigation/core';
 
 import { styled } from '@apollosproject/ui-kit';
-import {
-  SearchFeedConnected,
-  SearchInputHeader,
-} from '@apollosproject/ui-connected';
+import SearchFeedConnected, { SearchInputHeader } from '../SearchFeedConnected';
 
 const SearchBackground = styled(({ theme }) => ({
   backgroundColor: theme.colors.background.paper,

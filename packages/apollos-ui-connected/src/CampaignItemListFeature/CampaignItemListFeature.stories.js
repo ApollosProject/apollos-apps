@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
 import { BackgroundView, CenteredView } from '@apollosproject/ui-kit';
-import CampaignItemListFeature from '.';
+import CampaignItemListFeature from './index';
 
 const cards = [
   {

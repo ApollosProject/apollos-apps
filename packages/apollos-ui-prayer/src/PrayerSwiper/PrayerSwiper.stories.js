@@ -5,7 +5,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 import PrayerCard from '../PrayerCard';
 import PrayerView from '../PrayerView';
 
-import PrayerSwiper from '.';
+import PrayerSwiper from './index';
 
 storiesOf('ui-prayer/PrayerSwiper', module).add('example', () => (
   <PrayerSwiper>

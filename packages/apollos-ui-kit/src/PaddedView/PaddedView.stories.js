@@ -3,7 +3,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 
 import { H1 } from '../typography';
 
-import PaddedView from '.';
+import PaddedView from './index';
 
 storiesOf('ui-kit/PaddedView', module).add('Example', () => (
   <PaddedView>

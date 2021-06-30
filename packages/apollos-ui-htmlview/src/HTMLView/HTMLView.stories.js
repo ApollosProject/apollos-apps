@@ -4,7 +4,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 import PropTypes from 'prop-types';
 import { BackgroundView } from '@apollosproject/ui-kit';
 
-import HTMLView from '.';
+import HTMLView from './index';
 
 class MagicChangingHtml extends React.Component {
   static propTypes = {

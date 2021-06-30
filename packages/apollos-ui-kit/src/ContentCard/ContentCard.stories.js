@@ -3,7 +3,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 
 import BackgroundView from '../BackgroundView';
 
-import ContentCard from '.';
+import ContentCard from './index';
 
 storiesOf('ui-kit/ContentCard', module)
   .addDecorator((story) => <BackgroundView>{story()}</BackgroundView>)

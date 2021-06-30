@@ -3,7 +3,7 @@ import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { ApolloStorybookDecorator } from '@apollosproject/ui-test-utils';
 
-import MapViewConnected from '.';
+import MapViewConnected from './index';
 
 const mocks = {
   Query: () => ({
