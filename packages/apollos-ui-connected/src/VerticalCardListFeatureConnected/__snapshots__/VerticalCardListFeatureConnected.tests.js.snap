@@ -550,8 +550,8 @@ exports[`The VerticalCardListFeatureConnected component should render a featured
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 16,
-                      "height": 36,
-                      "marginVertical": 2.6999999999999993,
+                      "height": 24,
+                      "marginVertical": 1.8000000000000007,
                       "width": "100%",
                     }
                   }
@@ -3037,8 +3037,8 @@ exports[`The VerticalCardListFeatureConnected component should render as a featu
                     Object {
                       "color": "#27272E",
                       "fontFamily": "InterUI-Black",
-                      "fontSize": 36,
-                      "lineHeight": 41.4,
+                      "fontSize": 24,
+                      "lineHeight": 27.6,
                     }
                   }
                 >

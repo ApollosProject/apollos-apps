@@ -10,6 +10,7 @@ import {
   PaddedView,
   ContentTitles,
   ConnectedImage,
+  styled,
   named,
 } from '@apollosproject/ui-kit';
 
@@ -24,6 +25,10 @@ const ComponentPropType = PropTypes.oneOfType([
   PropTypes.func,
   PropTypes.object, // type check for React fragments
 ]);
+
+const NoImageSpacer = styled(({ theme }) => ({
+  height: theme.sizing.baseUnit * 4,
+}))(View);
 
 const DefaultHeader = ({ node, isLoading }) => {
   const [isLiked, like] = useLike(node?.id);
@@ -93,7 +98,9 @@ const ContentNodeConnected = ({
               source={coverImageSources}
             />
           </ImageWrapperComponent>
-        ) : null}
+        ) : (
+          <NoImageSpacer />
+        )}
         <HeaderComponent isLoading={!node?.title && loading} node={node} />
       </View>
       <BackgroundView flex={false}>

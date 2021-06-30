@@ -47,7 +47,7 @@ export const TouchableText = styled(
 export const TouchableIcon = withTheme(
   ({ theme }) => ({
     size: theme.sizing.baseUnit * 1.25,
-    fill: theme.colors.text.primary,
+    fill: theme.colors.text.tertiary,
   }),
   'ui-kit.SocialBar.TouchableIcon'
 )(Icon);
