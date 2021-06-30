@@ -7,7 +7,7 @@ import BackgroundView from '../BackgroundView';
 import Chip from '../Chip';
 import Icon from '../Icon';
 import { BodyText } from '../typography';
-import ActionCard from '.';
+import ActionCard from './index';
 
 storiesOf('ui-kit/ActionCard', module)
   .addDecorator((story) => (

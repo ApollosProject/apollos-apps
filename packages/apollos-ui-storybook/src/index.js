@@ -1,4 +1,5 @@
 import React from 'react';
+import AsyncStorage from '@react-native-community/async-storage';
 import { getStorybookUI, addDecorator } from '@storybook/react-native';
 
 import { loadStories as loadAnalyticsStories } from '@apollosproject/ui-analytics/storybook/storyLoader';
@@ -44,6 +45,7 @@ const StorybookUIRoot = getStorybookUI({
   shouldDisableKeyboardAvoidingView: true,
   // Default to the UI hidden (what we want in most cases)
   isUIHidden: true,
+  asyncStorage: AsyncStorage,
 });
 
 export default StorybookUIRoot;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
-import AskName from '.';
+import AskName from './index';
 
 storiesOf('ui-onboarding/slides/AskName', module)
   .add('default', () => <AskName setFieldValue={() => {}} />)

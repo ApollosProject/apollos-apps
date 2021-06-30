@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
-import ScriptureText from '.';
+import ScriptureText from './index';
 
 storiesOf('Scripture/typography/ScriptureText', module)
   .add('Regular', () => (
