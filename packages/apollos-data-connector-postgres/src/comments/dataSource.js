@@ -30,7 +30,9 @@ class CommentDataSource extends PostgresDataSource {
       );
     }
 
-    await this.sendNotificationForComment({ comment, parentId });
+    if (visibility === Visibility.PUBLIC) {
+      await this.sendNotificationForComment({ comment, parentId });
+    }
 
     return comment;
   }
