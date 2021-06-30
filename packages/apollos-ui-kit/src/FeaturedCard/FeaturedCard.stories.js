@@ -9,12 +9,6 @@ import { CardLabel } from '../Card';
 import FeaturedCard from '.';
 
 storiesOf('ui-kit/FeaturedCard', module)
-  .addDecorator((story) => (
-    <BackgroundView>
-      {/* eslint-disable-next-line react-native/no-inline-styles */}
-      <CenteredView style={{ alignItems: 'stretch' }}>{story()}</CenteredView>
-    </BackgroundView>
-  ))
   .add('example', () => (
     <FeaturedCard
       title={

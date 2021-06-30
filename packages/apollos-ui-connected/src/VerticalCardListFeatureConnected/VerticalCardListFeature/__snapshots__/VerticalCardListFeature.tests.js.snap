@@ -119,48 +119,36 @@ exports[`The VerticalCardListFeature component should render 1`] = `
                 }
               }
             >
+              <Image
+                fadeDuration={250}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "https://picsum.photos/800",
+                    },
+                  ]
+                }
+                style={
+                  Object {
+                    "aspectRatio": 1.2,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
+                  }
+                }
+              />
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                     "width": "100%",
                   }
                 }
               >
-                <Image
-                  fadeDuration={250}
-                  onLoad={[Function]}
-                  source={
-                    Array [
-                      Object {
-                        "cache": "force-cache",
-                        "uri": "https://picsum.photos/800",
-                      },
-                    ]
-                  }
-                  style={
-                    Object {
-                      "aspectRatio": 1.2,
-                      "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
-                    }
-                  }
-                />
-              </View>
-              <View
-                style={
-                  Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
-                    "paddingVertical": 16,
-                  }
-                }
-              >
                 <Text
-                  numberOfLines={2}
+                  numberOfLines={3}
                   style={
                     Object {
                       "color": "#27272E",
@@ -170,24 +158,49 @@ exports[`The VerticalCardListFeature component should render 1`] = `
                     }
                   }
                 >
-                  Card Title
+                  <Text
+                    style={
+                      Object {
+                        "color": "#27272E",
+                      }
+                    }
+                  >
+                    Card Title
+                  </Text>
                 </Text>
                 <Text
                   bold={false}
                   italic={false}
-                  numberOfLines={2}
+                  numberOfLines={3}
                   style={
                     Object {
                       "color": "#27272E",
                       "fontFamily": "InterUI-Regular",
                       "fontSize": 16,
                       "lineHeight": 26,
-                      "paddingTop": 16,
                     }
                   }
                 >
-                  Card summary
+                  <Text
+                    style={
+                      Object {
+                        "color": "rgba(39, 39, 46, 0.6)",
+                      }
+                    }
+                  >
+                    Card summary
+                  </Text>
                 </Text>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
+                      "width": "100%",
+                    }
+                  }
+                />
               </View>
             </View>
           </View>
@@ -537,33 +550,44 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 }
               }
             >
-              <View
+              <Image
+                fadeDuration={250}
+                isLoading={true}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
                 style={
                   Object {
+                    "aspectRatio": 1.2,
                     "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
                     "width": "100%",
                   }
                 }
-              >
-                <Image
-                  fadeDuration={250}
-                  isLoading={true}
-                  onLoad={[Function]}
-                  source={
-                    Array [
-                      Object {
-                        "cache": "force-cache",
-                        "uri": "",
-                      },
-                    ]
+              />
+              <View
+                style={
+                  Object {
+                    "marginBottom": 16,
+                    "marginTop": -32,
                   }
+                }
+              >
+                <View
                   style={
                     Object {
-                      "aspectRatio": 1.2,
+                      "alignItems": "center",
+                      "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
+                      "borderRadius": 16,
+                      "height": 32,
+                      "paddingHorizontal": 12,
+                      "width": 64,
                     }
                   }
                 />
@@ -571,44 +595,41 @@ exports[`The VerticalCardListFeature component should render a loading state for
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 16,
+                    "width": "100%",
                   }
                 }
               >
-                <View
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={3}
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
                     }
                   }
                 >
-                  <View
+                  <Text
                     style={
                       Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
+                        "color": "rgba(39, 39, 46, 0.6)",
                       }
                     }
-                  />
-                </View>
+                  >
+                    boom
+                  </Text>
+                </Text>
                 <View
                   style={
                     Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
                       "width": "100%",
                     }
                   }
@@ -668,33 +689,44 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 }
               }
             >
-              <View
+              <Image
+                fadeDuration={250}
+                isLoading={true}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
                 style={
                   Object {
+                    "aspectRatio": 1.2,
                     "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
                     "width": "100%",
                   }
                 }
-              >
-                <Image
-                  fadeDuration={250}
-                  isLoading={true}
-                  onLoad={[Function]}
-                  source={
-                    Array [
-                      Object {
-                        "cache": "force-cache",
-                        "uri": "",
-                      },
-                    ]
+              />
+              <View
+                style={
+                  Object {
+                    "marginBottom": 16,
+                    "marginTop": -32,
                   }
+                }
+              >
+                <View
                   style={
                     Object {
-                      "aspectRatio": 1.2,
+                      "alignItems": "center",
+                      "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
+                      "borderRadius": 16,
+                      "height": 32,
+                      "paddingHorizontal": 12,
+                      "width": 64,
                     }
                   }
                 />
@@ -702,44 +734,41 @@ exports[`The VerticalCardListFeature component should render a loading state for
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 16,
+                    "width": "100%",
                   }
                 }
               >
-                <View
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={3}
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
                     }
                   }
                 >
-                  <View
+                  <Text
                     style={
                       Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
+                        "color": "rgba(39, 39, 46, 0.6)",
                       }
                     }
-                  />
-                </View>
+                  >
+                    boom
+                  </Text>
+                </Text>
                 <View
                   style={
                     Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
                       "width": "100%",
                     }
                   }
@@ -799,33 +828,44 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 }
               }
             >
-              <View
+              <Image
+                fadeDuration={250}
+                isLoading={true}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
                 style={
                   Object {
+                    "aspectRatio": 1.2,
                     "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
                     "width": "100%",
                   }
                 }
-              >
-                <Image
-                  fadeDuration={250}
-                  isLoading={true}
-                  onLoad={[Function]}
-                  source={
-                    Array [
-                      Object {
-                        "cache": "force-cache",
-                        "uri": "",
-                      },
-                    ]
+              />
+              <View
+                style={
+                  Object {
+                    "marginBottom": 16,
+                    "marginTop": -32,
                   }
+                }
+              >
+                <View
                   style={
                     Object {
-                      "aspectRatio": 1.2,
+                      "alignItems": "center",
+                      "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
+                      "borderRadius": 16,
+                      "height": 32,
+                      "paddingHorizontal": 12,
+                      "width": 64,
                     }
                   }
                 />
@@ -833,44 +873,41 @@ exports[`The VerticalCardListFeature component should render a loading state for
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 16,
+                    "width": "100%",
                   }
                 }
               >
-                <View
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={3}
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
                     }
                   }
                 >
-                  <View
+                  <Text
                     style={
                       Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
+                        "color": "rgba(39, 39, 46, 0.6)",
                       }
                     }
-                  />
-                </View>
+                  >
+                    boom
+                  </Text>
+                </Text>
                 <View
                   style={
                     Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
                       "width": "100%",
                     }
                   }
@@ -930,33 +967,44 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 }
               }
             >
-              <View
+              <Image
+                fadeDuration={250}
+                isLoading={true}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
                 style={
                   Object {
+                    "aspectRatio": 1.2,
                     "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
                     "width": "100%",
                   }
                 }
-              >
-                <Image
-                  fadeDuration={250}
-                  isLoading={true}
-                  onLoad={[Function]}
-                  source={
-                    Array [
-                      Object {
-                        "cache": "force-cache",
-                        "uri": "",
-                      },
-                    ]
+              />
+              <View
+                style={
+                  Object {
+                    "marginBottom": 16,
+                    "marginTop": -32,
                   }
+                }
+              >
+                <View
                   style={
                     Object {
-                      "aspectRatio": 1.2,
+                      "alignItems": "center",
+                      "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
+                      "borderRadius": 16,
+                      "height": 32,
+                      "paddingHorizontal": 12,
+                      "width": 64,
                     }
                   }
                 />
@@ -964,44 +1012,41 @@ exports[`The VerticalCardListFeature component should render a loading state for
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 16,
+                    "width": "100%",
                   }
                 }
               >
-                <View
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={3}
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
                     }
                   }
                 >
-                  <View
+                  <Text
                     style={
                       Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
+                        "color": "rgba(39, 39, 46, 0.6)",
                       }
                     }
-                  />
-                </View>
+                  >
+                    boom
+                  </Text>
+                </Text>
                 <View
                   style={
                     Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
                       "width": "100%",
                     }
                   }
@@ -1061,33 +1106,44 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 }
               }
             >
-              <View
+              <Image
+                fadeDuration={250}
+                isLoading={true}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
                 style={
                   Object {
+                    "aspectRatio": 1.2,
                     "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
                     "width": "100%",
                   }
                 }
-              >
-                <Image
-                  fadeDuration={250}
-                  isLoading={true}
-                  onLoad={[Function]}
-                  source={
-                    Array [
-                      Object {
-                        "cache": "force-cache",
-                        "uri": "",
-                      },
-                    ]
+              />
+              <View
+                style={
+                  Object {
+                    "marginBottom": 16,
+                    "marginTop": -32,
                   }
+                }
+              >
+                <View
                   style={
                     Object {
-                      "aspectRatio": 1.2,
+                      "alignItems": "center",
+                      "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
+                      "borderRadius": 16,
+                      "height": 32,
+                      "paddingHorizontal": 12,
+                      "width": 64,
                     }
                   }
                 />
@@ -1095,44 +1151,41 @@ exports[`The VerticalCardListFeature component should render a loading state for
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 16,
+                    "width": "100%",
                   }
                 }
               >
-                <View
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={3}
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
                     }
                   }
                 >
-                  <View
+                  <Text
                     style={
                       Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
+                        "color": "rgba(39, 39, 46, 0.6)",
                       }
                     }
-                  />
-                </View>
+                  >
+                    boom
+                  </Text>
+                </Text>
                 <View
                   style={
                     Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
                       "width": "100%",
                     }
                   }
@@ -1192,33 +1245,44 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 }
               }
             >
-              <View
+              <Image
+                fadeDuration={250}
+                isLoading={true}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
                 style={
                   Object {
+                    "aspectRatio": 1.2,
                     "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
                     "width": "100%",
                   }
                 }
-              >
-                <Image
-                  fadeDuration={250}
-                  isLoading={true}
-                  onLoad={[Function]}
-                  source={
-                    Array [
-                      Object {
-                        "cache": "force-cache",
-                        "uri": "",
-                      },
-                    ]
+              />
+              <View
+                style={
+                  Object {
+                    "marginBottom": 16,
+                    "marginTop": -32,
                   }
+                }
+              >
+                <View
                   style={
                     Object {
-                      "aspectRatio": 1.2,
+                      "alignItems": "center",
+                      "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
+                      "borderRadius": 16,
+                      "height": 32,
+                      "paddingHorizontal": 12,
+                      "width": 64,
                     }
                   }
                 />
@@ -1226,44 +1290,41 @@ exports[`The VerticalCardListFeature component should render a loading state for
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 16,
+                    "width": "100%",
                   }
                 }
               >
-                <View
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={3}
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
                     }
                   }
                 >
-                  <View
+                  <Text
                     style={
                       Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
+                        "color": "rgba(39, 39, 46, 0.6)",
                       }
                     }
-                  />
-                </View>
+                  >
+                    boom
+                  </Text>
+                </Text>
                 <View
                   style={
                     Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
                       "width": "100%",
                     }
                   }
@@ -1323,33 +1384,44 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 }
               }
             >
-              <View
+              <Image
+                fadeDuration={250}
+                isLoading={true}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
                 style={
                   Object {
+                    "aspectRatio": 1.2,
                     "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
                     "width": "100%",
                   }
                 }
-              >
-                <Image
-                  fadeDuration={250}
-                  isLoading={true}
-                  onLoad={[Function]}
-                  source={
-                    Array [
-                      Object {
-                        "cache": "force-cache",
-                        "uri": "",
-                      },
-                    ]
+              />
+              <View
+                style={
+                  Object {
+                    "marginBottom": 16,
+                    "marginTop": -32,
                   }
+                }
+              >
+                <View
                   style={
                     Object {
-                      "aspectRatio": 1.2,
+                      "alignItems": "center",
+                      "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
+                      "borderRadius": 16,
+                      "height": 32,
+                      "paddingHorizontal": 12,
+                      "width": 64,
                     }
                   }
                 />
@@ -1357,44 +1429,41 @@ exports[`The VerticalCardListFeature component should render a loading state for
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 16,
+                    "width": "100%",
                   }
                 }
               >
-                <View
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={3}
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
                     }
                   }
                 >
-                  <View
+                  <Text
                     style={
                       Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
+                        "color": "rgba(39, 39, 46, 0.6)",
                       }
                     }
-                  />
-                </View>
+                  >
+                    boom
+                  </Text>
+                </Text>
                 <View
                   style={
                     Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
                       "width": "100%",
                     }
                   }
@@ -1454,33 +1523,44 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 }
               }
             >
-              <View
+              <Image
+                fadeDuration={250}
+                isLoading={true}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
                 style={
                   Object {
+                    "aspectRatio": 1.2,
                     "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
                     "width": "100%",
                   }
                 }
-              >
-                <Image
-                  fadeDuration={250}
-                  isLoading={true}
-                  onLoad={[Function]}
-                  source={
-                    Array [
-                      Object {
-                        "cache": "force-cache",
-                        "uri": "",
-                      },
-                    ]
+              />
+              <View
+                style={
+                  Object {
+                    "marginBottom": 16,
+                    "marginTop": -32,
                   }
+                }
+              >
+                <View
                   style={
                     Object {
-                      "aspectRatio": 1.2,
+                      "alignItems": "center",
+                      "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
+                      "borderRadius": 16,
+                      "height": 32,
+                      "paddingHorizontal": 12,
+                      "width": 64,
                     }
                   }
                 />
@@ -1488,44 +1568,41 @@ exports[`The VerticalCardListFeature component should render a loading state for
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 16,
+                    "width": "100%",
                   }
                 }
               >
-                <View
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={3}
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
                     }
                   }
                 >
-                  <View
+                  <Text
                     style={
                       Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
+                        "color": "rgba(39, 39, 46, 0.6)",
                       }
                     }
-                  />
-                </View>
+                  >
+                    boom
+                  </Text>
+                </Text>
                 <View
                   style={
                     Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
                       "width": "100%",
                     }
                   }
@@ -1585,33 +1662,44 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 }
               }
             >
-              <View
+              <Image
+                fadeDuration={250}
+                isLoading={true}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
                 style={
                   Object {
+                    "aspectRatio": 1.2,
                     "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
                     "width": "100%",
                   }
                 }
-              >
-                <Image
-                  fadeDuration={250}
-                  isLoading={true}
-                  onLoad={[Function]}
-                  source={
-                    Array [
-                      Object {
-                        "cache": "force-cache",
-                        "uri": "",
-                      },
-                    ]
+              />
+              <View
+                style={
+                  Object {
+                    "marginBottom": 16,
+                    "marginTop": -32,
                   }
+                }
+              >
+                <View
                   style={
                     Object {
-                      "aspectRatio": 1.2,
+                      "alignItems": "center",
+                      "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
+                      "borderRadius": 16,
+                      "height": 32,
+                      "paddingHorizontal": 12,
+                      "width": 64,
                     }
                   }
                 />
@@ -1619,44 +1707,41 @@ exports[`The VerticalCardListFeature component should render a loading state for
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 16,
+                    "width": "100%",
                   }
                 }
               >
-                <View
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={3}
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
                     }
                   }
                 >
-                  <View
+                  <Text
                     style={
                       Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
+                        "color": "rgba(39, 39, 46, 0.6)",
                       }
                     }
-                  />
-                </View>
+                  >
+                    boom
+                  </Text>
+                </Text>
                 <View
                   style={
                     Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
                       "width": "100%",
                     }
                   }
@@ -1716,33 +1801,44 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 }
               }
             >
-              <View
+              <Image
+                fadeDuration={250}
+                isLoading={true}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
                 style={
                   Object {
+                    "aspectRatio": 1.2,
                     "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
                     "width": "100%",
                   }
                 }
-              >
-                <Image
-                  fadeDuration={250}
-                  isLoading={true}
-                  onLoad={[Function]}
-                  source={
-                    Array [
-                      Object {
-                        "cache": "force-cache",
-                        "uri": "",
-                      },
-                    ]
+              />
+              <View
+                style={
+                  Object {
+                    "marginBottom": 16,
+                    "marginTop": -32,
                   }
+                }
+              >
+                <View
                   style={
                     Object {
-                      "aspectRatio": 1.2,
+                      "alignItems": "center",
+                      "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
+                      "borderRadius": 16,
+                      "height": 32,
+                      "paddingHorizontal": 12,
+                      "width": 64,
                     }
                   }
                 />
@@ -1750,44 +1846,41 @@ exports[`The VerticalCardListFeature component should render a loading state for
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 16,
+                    "width": "100%",
                   }
                 }
               >
-                <View
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={3}
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
                     }
                   }
                 >
-                  <View
+                  <Text
                     style={
                       Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
+                        "color": "rgba(39, 39, 46, 0.6)",
                       }
                     }
-                  />
-                </View>
+                  >
+                    boom
+                  </Text>
+                </Text>
                 <View
                   style={
                     Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
                       "width": "100%",
                     }
                   }
@@ -1946,48 +2039,36 @@ exports[`The VerticalCardListFeature component should render a section title 1`]
                 }
               }
             >
+              <Image
+                fadeDuration={250}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "https://picsum.photos/800",
+                    },
+                  ]
+                }
+                style={
+                  Object {
+                    "aspectRatio": 1.2,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
+                  }
+                }
+              />
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                     "width": "100%",
                   }
                 }
               >
-                <Image
-                  fadeDuration={250}
-                  onLoad={[Function]}
-                  source={
-                    Array [
-                      Object {
-                        "cache": "force-cache",
-                        "uri": "https://picsum.photos/800",
-                      },
-                    ]
-                  }
-                  style={
-                    Object {
-                      "aspectRatio": 1.2,
-                      "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
-                    }
-                  }
-                />
-              </View>
-              <View
-                style={
-                  Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
-                    "paddingVertical": 16,
-                  }
-                }
-              >
                 <Text
-                  numberOfLines={2}
+                  numberOfLines={3}
                   style={
                     Object {
                       "color": "#27272E",
@@ -1997,24 +2078,49 @@ exports[`The VerticalCardListFeature component should render a section title 1`]
                     }
                   }
                 >
-                  Card Title
+                  <Text
+                    style={
+                      Object {
+                        "color": "#27272E",
+                      }
+                    }
+                  >
+                    Card Title
+                  </Text>
                 </Text>
                 <Text
                   bold={false}
                   italic={false}
-                  numberOfLines={2}
+                  numberOfLines={3}
                   style={
                     Object {
                       "color": "#27272E",
                       "fontFamily": "InterUI-Regular",
                       "fontSize": 16,
                       "lineHeight": 26,
-                      "paddingTop": 16,
                     }
                   }
                 >
-                  Card summary
+                  <Text
+                    style={
+                      Object {
+                        "color": "rgba(39, 39, 46, 0.6)",
+                      }
+                    }
+                  >
+                    Card summary
+                  </Text>
                 </Text>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
+                      "width": "100%",
+                    }
+                  }
+                />
               </View>
             </View>
           </View>
@@ -2168,48 +2274,36 @@ exports[`The VerticalCardListFeature component should render with a subtitle 1`]
                 }
               }
             >
+              <Image
+                fadeDuration={250}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "https://picsum.photos/800",
+                    },
+                  ]
+                }
+                style={
+                  Object {
+                    "aspectRatio": 1.2,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
+                  }
+                }
+              />
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                     "width": "100%",
                   }
                 }
               >
-                <Image
-                  fadeDuration={250}
-                  onLoad={[Function]}
-                  source={
-                    Array [
-                      Object {
-                        "cache": "force-cache",
-                        "uri": "https://picsum.photos/800",
-                      },
-                    ]
-                  }
-                  style={
-                    Object {
-                      "aspectRatio": 1.2,
-                      "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
-                    }
-                  }
-                />
-              </View>
-              <View
-                style={
-                  Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
-                    "paddingVertical": 16,
-                  }
-                }
-              >
                 <Text
-                  numberOfLines={2}
+                  numberOfLines={3}
                   style={
                     Object {
                       "color": "#27272E",
@@ -2219,24 +2313,49 @@ exports[`The VerticalCardListFeature component should render with a subtitle 1`]
                     }
                   }
                 >
-                  Card Title
+                  <Text
+                    style={
+                      Object {
+                        "color": "#27272E",
+                      }
+                    }
+                  >
+                    Card Title
+                  </Text>
                 </Text>
                 <Text
                   bold={false}
                   italic={false}
-                  numberOfLines={2}
+                  numberOfLines={3}
                   style={
                     Object {
                       "color": "#27272E",
                       "fontFamily": "InterUI-Regular",
                       "fontSize": 16,
                       "lineHeight": 26,
-                      "paddingTop": 16,
                     }
                   }
                 >
-                  Card summary
+                  <Text
+                    style={
+                      Object {
+                        "color": "rgba(39, 39, 46, 0.6)",
+                      }
+                    }
+                  >
+                    Card summary
+                  </Text>
                 </Text>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
+                      "width": "100%",
+                    }
+                  }
+                />
               </View>
             </View>
           </View>

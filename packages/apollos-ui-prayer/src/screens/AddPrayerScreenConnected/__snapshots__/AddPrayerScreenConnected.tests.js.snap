@@ -859,6 +859,7 @@ Array [
           Object {
             "backgroundColor": "rgb(249, 249, 251)",
             "flex": 1,
+            "height": "100%",
           },
           Object {
             "bottom": 0,

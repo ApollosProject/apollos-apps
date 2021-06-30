@@ -1,12 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
-import BackgroundView from '../BackgroundView';
-
 import ContentCard from '.';
 
 storiesOf('ui-kit/ContentCard', module)
-  .addDecorator((story) => <BackgroundView>{story()}</BackgroundView>)
   .add('Basic, with Image', () => (
     <ContentCard
       title="Acts: A 28-Day Devotional"

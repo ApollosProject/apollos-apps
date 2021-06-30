@@ -29,6 +29,7 @@ Array [
     }
   >
     <Text
+      numberOfLines={3}
       style={
         Object {
           "color": "#27272E",
@@ -51,6 +52,7 @@ Array [
     <Text
       bold={false}
       italic={false}
+      numberOfLines={3}
       style={
         Object {
           "color": "#27272E",
@@ -428,6 +430,7 @@ Array [
     }
   >
     <Text
+      numberOfLines={1}
       style={
         Object {
           "color": "#27272E",
@@ -450,6 +453,7 @@ Array [
     <Text
       bold={false}
       italic={false}
+      numberOfLines={2}
       style={
         Object {
           "color": "#27272E",
@@ -512,6 +516,7 @@ Array [
     }
   >
     <Text
+      numberOfLines={3}
       style={
         Object {
           "color": "#27272E",
@@ -534,6 +539,7 @@ Array [
     <Text
       bold={false}
       italic={false}
+      numberOfLines={3}
       style={
         Object {
           "color": "#27272E",
@@ -596,6 +602,7 @@ Array [
     }
   >
     <Text
+      numberOfLines={3}
       style={
         Object {
           "color": "#27272E",
@@ -618,6 +625,7 @@ Array [
     <Text
       bold={false}
       italic={false}
+      numberOfLines={3}
       style={
         Object {
           "color": "#27272E",

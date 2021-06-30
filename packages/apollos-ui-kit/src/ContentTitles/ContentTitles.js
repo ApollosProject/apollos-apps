@@ -21,6 +21,7 @@ import SocialBar from '../SocialBar';
  * - [x] Featured
  * - [x] Micro
  * - [x] Themeable
+ * - [ ] Loading state
  * */
 
 const TitleText = styled(
@@ -47,7 +48,7 @@ const ContentTitles = ({
   // channelIcon, TODO
   featured,
   micro,
-
+  isLoading = false,
   onPressLike,
   onPressShare,
 }) => {
@@ -66,12 +67,18 @@ const ContentTitles = ({
   return (
     <Container>
       {title ? (
-        <Title>
+        <Title
+          numberOfLines={micro && summary ? 1 : 3}
+          isLoading={!title && isLoading}
+        >
           <TitleText>{title}</TitleText>
         </Title>
       ) : null}
       {summary ? (
-        <Summary>
+        <Summary
+          numberOfLines={micro ? 2 : 3}
+          isLoading={!summary && isLoading}
+        >
           <SummaryText>{summary}</SummaryText>
         </Summary>
       ) : null}
@@ -88,6 +95,7 @@ ContentTitles.propTypes = {
   micro: PropTypes.bool,
   onPressLike: PropTypes.func,
   onPressShare: PropTypes.func,
+  isLoading: PropTypes.bool,
 };
 
 export default ContentTitles;

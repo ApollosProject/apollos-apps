@@ -24,7 +24,7 @@ const ComponentPropType = PropTypes.oneOfType([
   PropTypes.object, // type check for React fragments
 ]);
 
-const DefaultHeader = ({ node }) => {
+const DefaultHeader = ({ node, isLoading }) => {
   const [isLiked, like] = useLike(node?.id);
   const share = useShare(node?.id);
   return (
@@ -32,6 +32,7 @@ const DefaultHeader = ({ node }) => {
       <ContentTitles
         {...node}
         featured
+        isLoading={isLoading}
         isLiked={isLiked}
         onPressLike={like}
         onPressShare={share}

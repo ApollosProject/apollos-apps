@@ -35,4 +35,5 @@ storiesOf('ui-kit/ContentTitles', module)
       summary={'This is a short summary of this content.'}
       micro
     />
-  ));
+  ))
+  .add('loading', () => <ContentTitles isLoading />);

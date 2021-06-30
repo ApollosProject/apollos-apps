@@ -19,6 +19,7 @@ const BackgroundView = ({
       {
         backgroundColor,
         flex: flexed ? 1 : 0,
+        height: flexed ? '100%' : undefined,
       },
       styleProp,
     ],

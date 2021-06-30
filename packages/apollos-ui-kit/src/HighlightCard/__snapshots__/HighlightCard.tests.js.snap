@@ -46,74 +46,28 @@ Array [
         }
       }
     >
-      <View
+      <Image
+        fadeDuration={250}
+        isLoading={true}
+        onLoad={[Function]}
+        overlayColor="#000000"
+        overlayType="gradient-bottom"
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
+            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "overflow": "hidden",
             "width": "100%",
           }
         }
-      >
-        <Image
-          fadeDuration={250}
-          isLoading={true}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-        <BVLinearGradient
-          colors={
-            Array [
-              1711276032,
-              2147483648,
-            ]
-          }
-          endPoint={
-            Object {
-              "x": 0,
-              "y": 1,
-            }
-          }
-          locations={
-            Array [
-              0,
-              1,
-            ]
-          }
-          overlayColor="#000000"
-          overlayType="gradient-bottom"
-          startPoint={
-            Object {
-              "x": 0,
-              "y": 0,
-            }
-          }
-          style={
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            }
-          }
-        />
-      </View>
+      />
       <View
         style={
           Object {
@@ -246,73 +200,27 @@ Array [
         }
       }
     >
-      <View
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        overlayColor="#000000"
+        overlayType="gradient-bottom"
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
+            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "overflow": "hidden",
             "width": "100%",
           }
         }
-      >
-        <Image
-          fadeDuration={250}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-        <BVLinearGradient
-          colors={
-            Array [
-              1711276032,
-              2147483648,
-            ]
-          }
-          endPoint={
-            Object {
-              "x": 0,
-              "y": 1,
-            }
-          }
-          locations={
-            Array [
-              0,
-              1,
-            ]
-          }
-          overlayColor="#000000"
-          overlayType="gradient-bottom"
-          startPoint={
-            Object {
-              "x": 0,
-              "y": 0,
-            }
-          }
-          style={
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            }
-          }
-        />
-      </View>
+      />
       <View
         style={
           Object {
@@ -410,73 +318,27 @@ Array [
         }
       }
     >
-      <View
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        overlayColor="#000000"
+        overlayType="gradient-bottom"
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/1600/800/?random",
+            },
+          ]
+        }
         style={
           Object {
+            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "overflow": "hidden",
             "width": "100%",
           }
         }
-      >
-        <Image
-          fadeDuration={250}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/1600/800/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-        <BVLinearGradient
-          colors={
-            Array [
-              1711276032,
-              2147483648,
-            ]
-          }
-          endPoint={
-            Object {
-              "x": 0,
-              "y": 1,
-            }
-          }
-          locations={
-            Array [
-              0,
-              1,
-            ]
-          }
-          overlayColor="#000000"
-          overlayType="gradient-bottom"
-          startPoint={
-            Object {
-              "x": 0,
-              "y": 0,
-            }
-          }
-          style={
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            }
-          }
-        />
-      </View>
+      />
       <View
         style={
           Object {
@@ -574,73 +436,27 @@ Array [
         }
       }
     >
-      <View
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        overlayColor="#000000"
+        overlayType="gradient-bottom"
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
+            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "overflow": "hidden",
             "width": "100%",
           }
         }
-      >
-        <Image
-          fadeDuration={250}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-        <BVLinearGradient
-          colors={
-            Array [
-              1711276032,
-              2147483648,
-            ]
-          }
-          endPoint={
-            Object {
-              "x": 0,
-              "y": 1,
-            }
-          }
-          locations={
-            Array [
-              0,
-              1,
-            ]
-          }
-          overlayColor="#000000"
-          overlayType="gradient-bottom"
-          startPoint={
-            Object {
-              "x": 0,
-              "y": 0,
-            }
-          }
-          style={
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            }
-          }
-        />
-      </View>
+      />
       <View
         style={
           Object {
@@ -853,80 +669,34 @@ Array [
         }
       }
     >
-      <View
+      <Image
+        customTheme={
+          Object {
+            "colors": Object {
+              "primary": "salmon",
+            },
+          }
+        }
+        fadeDuration={250}
+        onLoad={[Function]}
+        overlayColor="salmon"
+        overlayType="gradient-bottom"
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
+            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "overflow": "hidden",
             "width": "100%",
           }
         }
-      >
-        <Image
-          customTheme={
-            Object {
-              "colors": Object {
-                "primary": "salmon",
-              },
-            }
-          }
-          fadeDuration={250}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-        <BVLinearGradient
-          colors={
-            Array [
-              1727692914,
-              2163900530,
-            ]
-          }
-          endPoint={
-            Object {
-              "x": 0,
-              "y": 1,
-            }
-          }
-          locations={
-            Array [
-              0,
-              1,
-            ]
-          }
-          overlayColor="salmon"
-          overlayType="gradient-bottom"
-          startPoint={
-            Object {
-              "x": 0,
-              "y": 0,
-            }
-          }
-          style={
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            }
-          }
-        />
-      </View>
+      />
       <View
         style={
           Object {
@@ -1024,73 +794,27 @@ Array [
         }
       }
     >
-      <View
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        overlayColor="#000000"
+        overlayType="gradient-bottom"
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
+            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "overflow": "hidden",
             "width": "100%",
           }
         }
-      >
-        <Image
-          fadeDuration={250}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-        <BVLinearGradient
-          colors={
-            Array [
-              1711276032,
-              2147483648,
-            ]
-          }
-          endPoint={
-            Object {
-              "x": 0,
-              "y": 1,
-            }
-          }
-          locations={
-            Array [
-              0,
-              1,
-            ]
-          }
-          overlayColor="#000000"
-          overlayType="gradient-bottom"
-          startPoint={
-            Object {
-              "x": 0,
-              "y": 0,
-            }
-          }
-          style={
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            }
-          }
-        />
-      </View>
+      />
       <View
         style={
           Object {
@@ -1203,73 +927,27 @@ Array [
         }
       }
     >
-      <View
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        overlayColor="#000000"
+        overlayType="gradient-bottom"
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
+            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "overflow": "hidden",
             "width": "100%",
           }
         }
-      >
-        <Image
-          fadeDuration={250}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-        <BVLinearGradient
-          colors={
-            Array [
-              1711276032,
-              2147483648,
-            ]
-          }
-          endPoint={
-            Object {
-              "x": 0,
-              "y": 1,
-            }
-          }
-          locations={
-            Array [
-              0,
-              1,
-            ]
-          }
-          overlayColor="#000000"
-          overlayType="gradient-bottom"
-          startPoint={
-            Object {
-              "x": 0,
-              "y": 0,
-            }
-          }
-          style={
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            }
-          }
-        />
-      </View>
+      />
       <View
         style={
           Object {
@@ -1404,73 +1082,27 @@ Array [
         }
       }
     >
-      <View
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        overlayColor="#000000"
+        overlayType="gradient-bottom"
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
+            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "overflow": "hidden",
             "width": "100%",
           }
         }
-      >
-        <Image
-          fadeDuration={250}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-        <BVLinearGradient
-          colors={
-            Array [
-              1711276032,
-              2147483648,
-            ]
-          }
-          endPoint={
-            Object {
-              "x": 0,
-              "y": 1,
-            }
-          }
-          locations={
-            Array [
-              0,
-              1,
-            ]
-          }
-          overlayColor="#000000"
-          overlayType="gradient-bottom"
-          startPoint={
-            Object {
-              "x": 0,
-              "y": 0,
-            }
-          }
-          style={
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            }
-          }
-        />
-      </View>
+      />
       <View
         style={
           Object {
@@ -1605,73 +1237,27 @@ Array [
         }
       }
     >
-      <View
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        overlayColor="#000000"
+        overlayType="gradient-bottom"
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
+            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "overflow": "hidden",
             "width": "100%",
           }
         }
-      >
-        <Image
-          fadeDuration={250}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-        <BVLinearGradient
-          colors={
-            Array [
-              1711276032,
-              2147483648,
-            ]
-          }
-          endPoint={
-            Object {
-              "x": 0,
-              "y": 1,
-            }
-          }
-          locations={
-            Array [
-              0,
-              1,
-            ]
-          }
-          overlayColor="#000000"
-          overlayType="gradient-bottom"
-          startPoint={
-            Object {
-              "x": 0,
-              "y": 0,
-            }
-          }
-          style={
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            }
-          }
-        />
-      </View>
+      />
       <View
         style={
           Object {
@@ -1925,73 +1511,27 @@ Array [
         }
       }
     >
-      <View
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        overlayColor="#000000"
+        overlayType="gradient-bottom"
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
+            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "overflow": "hidden",
             "width": "100%",
           }
         }
-      >
-        <Image
-          fadeDuration={250}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-        <BVLinearGradient
-          colors={
-            Array [
-              1711276032,
-              2147483648,
-            ]
-          }
-          endPoint={
-            Object {
-              "x": 0,
-              "y": 1,
-            }
-          }
-          locations={
-            Array [
-              0,
-              1,
-            ]
-          }
-          overlayColor="#000000"
-          overlayType="gradient-bottom"
-          startPoint={
-            Object {
-              "x": 0,
-              "y": 0,
-            }
-          }
-          style={
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            }
-          }
-        />
-      </View>
+      />
       <View
         style={
           Object {
@@ -2216,73 +1756,27 @@ Array [
         }
       }
     >
-      <View
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        overlayColor="#000000"
+        overlayType="gradient-bottom"
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
+            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "overflow": "hidden",
             "width": "100%",
           }
         }
-      >
-        <Image
-          fadeDuration={250}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-        <BVLinearGradient
-          colors={
-            Array [
-              1711276032,
-              2147483648,
-            ]
-          }
-          endPoint={
-            Object {
-              "x": 0,
-              "y": 1,
-            }
-          }
-          locations={
-            Array [
-              0,
-              1,
-            ]
-          }
-          overlayColor="#000000"
-          overlayType="gradient-bottom"
-          startPoint={
-            Object {
-              "x": 0,
-              "y": 0,
-            }
-          }
-          style={
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            }
-          }
-        />
-      </View>
+      />
       <View
         style={
           Object {
@@ -2507,73 +2001,27 @@ Array [
         }
       }
     >
-      <View
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        overlayColor="#000000"
+        overlayType="gradient-bottom"
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
+            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "overflow": "hidden",
             "width": "100%",
           }
         }
-      >
-        <Image
-          fadeDuration={250}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-        <BVLinearGradient
-          colors={
-            Array [
-              1711276032,
-              2147483648,
-            ]
-          }
-          endPoint={
-            Object {
-              "x": 0,
-              "y": 1,
-            }
-          }
-          locations={
-            Array [
-              0,
-              1,
-            ]
-          }
-          overlayColor="#000000"
-          overlayType="gradient-bottom"
-          startPoint={
-            Object {
-              "x": 0,
-              "y": 0,
-            }
-          }
-          style={
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            }
-          }
-        />
-      </View>
+      />
       <View
         style={
           Object {
@@ -2827,73 +2275,27 @@ Array [
         }
       }
     >
-      <View
+      <Image
+        fadeDuration={250}
+        onLoad={[Function]}
+        overlayColor="#000000"
+        overlayType="gradient-bottom"
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
         style={
           Object {
+            "aspectRatio": 1,
             "backgroundColor": "#A5A5A5",
-            "overflow": "hidden",
             "width": "100%",
           }
         }
-      >
-        <Image
-          fadeDuration={250}
-          onLoad={[Function]}
-          source={
-            Array [
-              Object {
-                "cache": "force-cache",
-                "uri": "https://picsum.photos/800/1600/?random",
-              },
-            ]
-          }
-          style={
-            Object {
-              "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
-              "resizeMode": "cover",
-              "width": "100%",
-            }
-          }
-        />
-        <BVLinearGradient
-          colors={
-            Array [
-              1711276032,
-              2147483648,
-            ]
-          }
-          endPoint={
-            Object {
-              "x": 0,
-              "y": 1,
-            }
-          }
-          locations={
-            Array [
-              0,
-              1,
-            ]
-          }
-          overlayColor="#000000"
-          overlayType="gradient-bottom"
-          startPoint={
-            Object {
-              "x": 0,
-              "y": 0,
-            }
-          }
-          style={
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            }
-          }
-        />
-      </View>
+      />
       <View
         style={
           Object {

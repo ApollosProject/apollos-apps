@@ -27,73 +27,27 @@ exports[`The CampaignItemListFeature component should render 1`] = `
       }
     }
   >
-    <View
+    <Image
+      fadeDuration={250}
+      onLoad={[Function]}
+      overlayColor="#000000"
+      overlayType="gradient-bottom"
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://picsum.photos/800/1600/?random",
+          },
+        ]
+      }
       style={
         Object {
+          "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
-          "overflow": "hidden",
           "width": "100%",
         }
       }
-    >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://picsum.photos/800/1600/?random",
-            },
-          ]
-        }
-        style={
-          Object {
-            "aspectRatio": 1,
-            "backgroundColor": "#A5A5A5",
-            "resizeMode": "cover",
-            "width": "100%",
-          }
-        }
-      />
-      <BVLinearGradient
-        colors={
-          Array [
-            1711276032,
-            2147483648,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            1,
-          ]
-        }
-        overlayColor="#000000"
-        overlayType="gradient-bottom"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      />
-    </View>
+    />
     <View
       style={
         Object {
@@ -225,33 +179,44 @@ exports[`The CampaignItemListFeature component should render 2`] = `
       }
     }
   >
-    <View
+    <Image
+      fadeDuration={250}
+      isLoading={true}
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "",
+          },
+        ]
+      }
       style={
         Object {
+          "aspectRatio": 1.2,
           "backgroundColor": "#A5A5A5",
-          "overflow": "hidden",
           "width": "100%",
         }
       }
-    >
-      <Image
-        fadeDuration={250}
-        isLoading={true}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "",
-            },
-          ]
+    />
+    <View
+      style={
+        Object {
+          "marginBottom": 16,
+          "marginTop": -32,
         }
+      }
+    >
+      <View
         style={
           Object {
-            "aspectRatio": 1.2,
+            "alignItems": "center",
+            "alignSelf": "stretch",
             "backgroundColor": "#A5A5A5",
-            "resizeMode": "cover",
-            "width": "100%",
+            "borderRadius": 16,
+            "height": 32,
+            "paddingHorizontal": 12,
+            "width": 64,
           }
         }
       />
@@ -259,35 +224,22 @@ exports[`The CampaignItemListFeature component should render 2`] = `
     <View
       style={
         Object {
-          "alignItems": "flex-start",
-          "paddingBottom": 32,
-          "paddingHorizontal": 24,
+          "paddingHorizontal": 16,
           "paddingVertical": 16,
+          "width": "100%",
         }
       }
     >
       <View
         style={
           Object {
-            "marginBottom": 16,
-            "marginTop": -32,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "paddingTop": 8,
+            "width": "100%",
           }
         }
-      >
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "alignSelf": "stretch",
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "height": 32,
-              "paddingHorizontal": 12,
-              "width": 64,
-            }
-          }
-        />
-      </View>
+      />
     </View>
   </View>
 </View>
@@ -320,145 +272,130 @@ exports[`The CampaignItemListFeature component should render a Component prop 1`
       }
     }
   >
-    <View
+    <Image
+      fadeDuration={250}
+      onLoad={[Function]}
+      overlayColor="#00676D"
+      overlayType="featured"
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://picsum.photos/800/1600/?random",
+          },
+        ]
+      }
       style={
         Object {
+          "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
-          "overflow": "hidden",
           "width": "100%",
         }
       }
-    >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://picsum.photos/800/1600/?random",
-            },
-          ]
-        }
-        style={
-          Object {
-            "aspectRatio": 1,
-            "backgroundColor": "#A5A5A5",
-            "resizeMode": "cover",
-            "width": "100%",
-          }
-        }
-      />
-      <BVLinearGradient
-        colors={
-          Array [
-            1711302509,
-            4278216557,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            0.8,
-          ]
-        }
-        overlayColor="#00676D"
-        overlayType="featured"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      />
-    </View>
+    />
     <View
+      bordered={false}
+      disabled={false}
+      pill={false}
       style={
         Object {
-          "alignItems": "flex-start",
-          "marginTop": "-40%",
-          "paddingBottom": 32,
-          "paddingHorizontal": 24,
-          "paddingVertical": 16,
+          "alignItems": "center",
+          "backgroundColor": "#17B582",
+          "borderColor": "#17B582",
+          "borderRadius": 16,
+          "borderWidth": 2,
+          "elevation": 2,
+          "flexDirection": "row",
+          "height": 32,
+          "justifyContent": "center",
+          "marginBottom": 16,
+          "opacity": 1,
+          "overflow": "hidden",
+          "paddingHorizontal": 12,
         }
       }
     >
-      <View
-        bordered={false}
-        disabled={false}
-        pill={false}
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight={7}
+        bbWidth={7}
+        height={7}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
         style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#17B582",
-            "borderColor": "#17B582",
-            "borderRadius": 16,
-            "borderWidth": 2,
-            "elevation": 2,
-            "flexDirection": "row",
-            "height": 32,
-            "justifyContent": "center",
-            "marginBottom": 16,
-            "opacity": 1,
-            "overflow": "hidden",
-            "paddingHorizontal": 12,
-          }
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            Object {
+              "marginRight": 8,
+            },
+            null,
+            Object {
+              "flex": 0,
+              "height": 7,
+              "width": 7,
+            },
+          ]
         }
+        vbHeight={24}
+        vbWidth={24}
+        width={7}
       >
-        <RNSVGSvgView
-          align="xMidYMid"
-          bbHeight={7}
-          bbWidth={7}
-          height={7}
-          meetOrSlice={0}
-          minX={0}
-          minY={0}
-          style={
+        <RNSVGGroup
+          fill={
             Array [
-              Object {
-                "backgroundColor": "transparent",
-                "borderWidth": 0,
-              },
-              Object {
-                "marginRight": 8,
-              },
-              null,
-              Object {
-                "flex": 0,
-                "height": 7,
-                "width": 7,
-              },
+              0,
+              4278190080,
             ]
           }
-          vbHeight={24}
-          vbWidth={24}
-          width={7}
+          fillOpacity={1}
+          fillRule={1}
+          font={Object {}}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          originX={0}
+          originY={0}
+          propList={Array []}
+          rotation={0}
+          scaleX={1}
+          scaleY={1}
+          skewX={0}
+          skewY={0}
+          stroke={null}
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+          vectorEffect={0}
+          x={0}
+          y={0}
         >
-          <RNSVGGroup
+          <RNSVGCircle
+            cx="12"
+            cy="12"
             fill={
               Array [
                 0,
-                4278190080,
+                4294967295,
               ]
             }
             fillOpacity={1}
             fillRule={1}
-            font={Object {}}
             matrix={
               Array [
                 1,
@@ -472,7 +409,12 @@ exports[`The CampaignItemListFeature component should render a Component prop 1`
             opacity={1}
             originX={0}
             originY={0}
-            propList={Array []}
+            propList={
+              Array [
+                "fill",
+              ]
+            }
+            r="12"
             rotation={0}
             scaleX={1}
             scaleY={1}
@@ -489,72 +431,34 @@ exports[`The CampaignItemListFeature component should render a Component prop 1`
             vectorEffect={0}
             x={0}
             y={0}
-          >
-            <RNSVGCircle
-              cx="12"
-              cy="12"
-              fill={
-                Array [
-                  0,
-                  4294967295,
-                ]
-              }
-              fillOpacity={1}
-              fillRule={1}
-              matrix={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-              opacity={1}
-              originX={0}
-              originY={0}
-              propList={
-                Array [
-                  "fill",
-                ]
-              }
-              r="12"
-              rotation={0}
-              scaleX={1}
-              scaleY={1}
-              skewX={0}
-              skewY={0}
-              stroke={null}
-              strokeDasharray={null}
-              strokeDashoffset={null}
-              strokeLinecap={0}
-              strokeLinejoin={0}
-              strokeMiterlimit={4}
-              strokeOpacity={1}
-              strokeWidth={1}
-              vectorEffect={0}
-              x={0}
-              y={0}
-            />
-          </RNSVGGroup>
-        </RNSVGSvgView>
-        <Text
-          style={
-            Object {
-              "alignItems": "center",
-              "color": "#FFFFFF",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "justifyContent": "center",
-              "lineHeight": 18,
-              "textAlign": "center",
-            }
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+      <Text
+        style={
+          Object {
+            "alignItems": "center",
+            "color": "#FFFFFF",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 12,
+            "justifyContent": "center",
+            "lineHeight": 18,
+            "textAlign": "center",
           }
-        >
-          Live
-        </Text>
-      </View>
+        }
+      >
+        Live
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 16,
+          "paddingVertical": 16,
+          "width": "100%",
+        }
+      }
+    >
       <Text
         numberOfLines={3}
         style={
@@ -566,158 +470,49 @@ exports[`The CampaignItemListFeature component should render a Component prop 1`
           }
         }
       >
-        Are you telling me that you built a time machine out of a DeLorean?
+        <Text
+          style={
+            Object {
+              "color": "#F4F7F8",
+            }
+          }
+        >
+          Are you telling me that you built a time machine out of a DeLorean?
+        </Text>
       </Text>
-      <View
-        hasSummary={true}
+      <Text
+        bold={false}
+        italic={false}
+        numberOfLines={3}
         style={
           Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-            "paddingTop": 16,
+            "color": "#F4F7F8",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 16,
+            "lineHeight": 26,
           }
         }
       >
-        <View
+        <Text
           style={
             Object {
-              "flex": 1,
-              "marginRight": 16,
+              "color": "rgba(244, 247, 248, 0.6)",
             }
           }
         >
-          <Text
-            bold={false}
-            italic={false}
-            numberOfLines={2}
-            style={
-              Object {
-                "color": "#F4F7F8",
-                "fontFamily": "InterUI-Regular",
-                "fontSize": 16,
-                "lineHeight": 26,
-              }
-            }
-          >
-            The way I see it, if you’re going to build a time machine into a car, why not do it with some style?
-          </Text>
-        </View>
-        <RNSVGSvgView
-          align="xMidYMid"
-          bbHeight={48}
-          bbWidth={48}
-          height={48}
-          meetOrSlice={0}
-          minX={0}
-          minY={0}
-          style={
-            Array [
-              Object {
-                "backgroundColor": "transparent",
-                "borderWidth": 0,
-              },
-              undefined,
-              null,
-              Object {
-                "flex": 0,
-                "height": 48,
-                "width": 48,
-              },
-            ]
+          The way I see it, if you’re going to build a time machine into a car, why not do it with some style?
+        </Text>
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "paddingTop": 8,
+            "width": "100%",
           }
-          vbHeight={32}
-          vbWidth={32}
-          width={48}
-        >
-          <RNSVGGroup
-            fill={
-              Array [
-                0,
-                4278190080,
-              ]
-            }
-            fillOpacity={1}
-            fillRule={1}
-            font={Object {}}
-            matrix={
-              Array [
-                1,
-                0,
-                0,
-                1,
-                0,
-                0,
-              ]
-            }
-            opacity={1}
-            originX={0}
-            originY={0}
-            propList={Array []}
-            rotation={0}
-            scaleX={1}
-            scaleY={1}
-            skewX={0}
-            skewY={0}
-            stroke={null}
-            strokeDasharray={null}
-            strokeDashoffset={null}
-            strokeLinecap={0}
-            strokeLinejoin={0}
-            strokeMiterlimit={4}
-            strokeOpacity={1}
-            strokeWidth={1}
-            vectorEffect={0}
-            x={0}
-            y={0}
-          >
-            <RNSVGPath
-              d="M27 14h5c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0zM27 14c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0 14c0 1.112-0.895 2-2 2-1.112 0-2-0.896-2-2.001v-1.494c0-0.291 0.224-0.505 0.5-0.505 0.268 0 0.5 0.226 0.5 0.505v1.505c0 0.547 0.444 0.991 1 0.991 0.552 0 1-0.451 1-0.991v-14.009c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-5.415 6.671-9.825 15-9.995v-1.506c0-0.283 0.224-0.499 0.5-0.499 0.268 0 0.5 0.224 0.5 0.499v1.506c8.329 0.17 15 4.58 15 9.995h-5z"
-              fill={
-                Array [
-                  0,
-                  4294244344,
-                ]
-              }
-              fillOpacity={1}
-              fillRule={1}
-              matrix={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-              opacity={1}
-              originX={0}
-              originY={0}
-              propList={
-                Array [
-                  "fill",
-                ]
-              }
-              rotation={0}
-              scaleX={1}
-              scaleY={1}
-              skewX={0}
-              skewY={0}
-              stroke={null}
-              strokeDasharray={null}
-              strokeDashoffset={null}
-              strokeLinecap={0}
-              strokeLinejoin={0}
-              strokeMiterlimit={4}
-              strokeOpacity={1}
-              strokeWidth={1}
-              vectorEffect={0}
-              x={0}
-              y={0}
-            />
-          </RNSVGGroup>
-        </RNSVGSvgView>
-      </View>
+        }
+      />
     </View>
   </View>
 </View>
@@ -750,73 +545,27 @@ exports[`The CampaignItemListFeature component should render a HighlightCard 1`]
       }
     }
   >
-    <View
+    <Image
+      fadeDuration={250}
+      onLoad={[Function]}
+      overlayColor="#000000"
+      overlayType="gradient-bottom"
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "https://picsum.photos/800/1600/?random",
+          },
+        ]
+      }
       style={
         Object {
+          "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
-          "overflow": "hidden",
           "width": "100%",
         }
       }
-    >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "https://picsum.photos/800/1600/?random",
-            },
-          ]
-        }
-        style={
-          Object {
-            "aspectRatio": 1,
-            "backgroundColor": "#A5A5A5",
-            "resizeMode": "cover",
-            "width": "100%",
-          }
-        }
-      />
-      <BVLinearGradient
-        colors={
-          Array [
-            1711276032,
-            2147483648,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0,
-            "y": 1,
-          }
-        }
-        locations={
-          Array [
-            0,
-            1,
-          ]
-        }
-        overlayColor="#000000"
-        overlayType="gradient-bottom"
-        startPoint={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
-        style={
-          Object {
-            "bottom": 0,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      />
-    </View>
+    />
     <View
       style={
         Object {

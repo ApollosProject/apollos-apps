@@ -30,6 +30,7 @@ Array [
         Object {
           "backgroundColor": "#FFFFFF",
           "flex": 0,
+          "height": undefined,
         },
         undefined,
       ]
@@ -45,6 +46,7 @@ Array [
       }
     >
       <Text
+        numberOfLines={3}
         style={
           Object {
             "color": "#27272E",
@@ -398,6 +400,7 @@ Array [
         Object {
           "backgroundColor": "rgb(249, 249, 251)",
           "flex": 1,
+          "height": "100%",
         },
         undefined,
       ]

@@ -1,16 +1,14 @@
 import React from 'react';
-import { View } from 'react-native';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
 import { withTheme, ThemeMixin, named } from '../theme';
-import styled from '../styled';
-import Card, { CardImage, CardLabel, CardContent } from '../Card';
-import FlexedView from '../FlexedView';
-import { H2, BodyText } from '../typography';
+import Card, { CardImage, CardLabel } from '../Card';
 import Icon from '../Icon';
 import { withIsLoading } from '../isLoading';
 import { ImageSourceType } from '../ConnectedImage';
+
+import ContentTitles from '../ContentTitles';
 
 const StyledCard = withTheme(
   ({ theme }) => ({
@@ -18,25 +16,6 @@ const StyledCard = withTheme(
   }),
   'ui-kit.FeaturedCard.StyledCard'
 )(Card);
-
-// We have to position `LikeIcon` in a `View` rather than `LikeIcon` directly so `LikeIcon`'s loading state is positioned correctly 💥
-const LikeIconPositioning = styled(
-  ({ theme }) => ({
-    position: 'absolute',
-    top: theme.sizing.baseUnit * 1.5,
-    right: theme.sizing.baseUnit * 1.5,
-  }),
-  'ui-kit.FeaturedCard.LikeIconPositioning'
-)(View);
-
-const LikeIcon = withTheme(
-  ({ theme, isLiked }) => ({
-    name: isLiked ? 'like-solid' : 'like',
-    size: theme.sizing.baseUnit * 1.5,
-    iconPadding: theme.sizing.baseUnit * 1.5,
-  }),
-  'ui-kit.FeaturedCard.LikeIcon'
-)(Icon);
 
 const Image = withTheme(
   ({ theme, isLoading }) => ({
@@ -48,43 +27,6 @@ const Image = withTheme(
   }),
   'ui-kit.FeaturedCard.Image'
 )(CardImage);
-
-const Content = styled(
-  ({ theme }) => ({
-    alignItems: 'flex-start', // needed to make `Label` display as an "inline" element
-    marginTop: '-40%',
-    paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
-    paddingBottom: theme.sizing.baseUnit * 2, // TODO: refactor CardContent to have this be the default
-  }),
-  'ui-kit.FeaturedCard.Content'
-)(CardContent);
-
-const ActionLayout = styled(
-  ({ theme, hasSummary }) => ({
-    flexDirection: 'row',
-    /* - `center` works in all situations including 1 line summaries
-     * - `flex-end` is needed only for when we have no summary
-     */
-    alignItems: hasSummary ? 'center' : 'flex-end',
-    paddingTop: theme.sizing.baseUnit,
-  }),
-  'ui-kit.FeaturedCard.ActionLayout'
-)(View);
-
-const FlexedActionLayoutText = styled(
-  ({ theme }) => ({
-    marginRight: theme.sizing.baseUnit, // spaces out text from `ActionIcon`. This has to live here for ActionIcon's loading state
-  }),
-  'ui-kit.FeaturedCard.FlexedActionLayoutText'
-)(FlexedView);
-
-const ActionIcon = withTheme(
-  ({ theme }) => ({
-    fill: theme.colors.text.primary,
-    size: theme.sizing.baseUnit * 3,
-  }),
-  'ui-kit.FeaturedCard.ActionIcon'
-)(Icon);
 
 const Label = withTheme(
   ({ customTheme, hasSummary, isLive, labelText, theme }) => ({
@@ -134,33 +76,10 @@ const renderLabel = (summary, LabelComponent, labelText, isLive, theme) => {
   return ComponentToRender;
 };
 
-const renderOnlyTitle = (title, actionIcon, hasAction) => (
-  <ActionLayout hasSummary={false}>
-    <FlexedActionLayoutText>
-      <H2 numberOfLines={4}>{title}</H2>
-    </FlexedActionLayoutText>
-    {hasAction ? <ActionIcon name={actionIcon} /> : null}
-  </ActionLayout>
-);
-
-const renderWithSummary = (title, actionIcon, summary, hasAction) => (
-  <>
-    <H2 numberOfLines={3}>{title}</H2>
-    <ActionLayout hasSummary>
-      <FlexedActionLayoutText>
-        <BodyText numberOfLines={2}>{summary}</BodyText>
-      </FlexedActionLayoutText>
-      {hasAction ? <ActionIcon name={actionIcon} /> : null}
-    </ActionLayout>
-  </>
-);
-
 const FeaturedCard = withIsLoading(
   ({
     coverImage,
     title,
-    actionIcon,
-    hasAction,
     isLiked,
     isLive,
     isLoading,
@@ -181,18 +100,13 @@ const FeaturedCard = withIsLoading(
           overlayType={'featured'}
           isLoading={isLoading}
         />
-
-        <Content>
-          {renderLabel(summary, LabelComponent, labelText, isLive, theme)}
-          {summary
-            ? renderWithSummary(title, actionIcon, summary, hasAction)
-            : renderOnlyTitle(title, actionIcon, hasAction)}
-        </Content>
-        {isLiked != null ? (
-          <LikeIconPositioning>
-            <LikeIcon isLiked={isLiked} />
-          </LikeIconPositioning>
-        ) : null}
+        {renderLabel(summary, LabelComponent, labelText, isLive, theme)}
+        <ContentTitles
+          isLiked={isLiked}
+          title={title}
+          summary={summary}
+          featured
+        />
       </StyledCard>
     </ThemeMixin>
   )

@@ -29,6 +29,7 @@ Array [
           Object {
             "backgroundColor": "rgb(249, 249, 251)",
             "flex": 1,
+            "height": "100%",
           },
           undefined,
         ]
@@ -71,6 +72,7 @@ Array [
           Object {
             "backgroundColor": "rgb(249, 249, 251)",
             "flex": 1,
+            "height": "100%",
           },
           undefined,
         ]
@@ -200,6 +202,7 @@ Array [
           Object {
             "backgroundColor": "rgb(249, 249, 251)",
             "flex": 1,
+            "height": "100%",
           },
           undefined,
         ]

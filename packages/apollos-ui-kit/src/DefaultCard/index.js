@@ -4,30 +4,12 @@ import PropTypes from 'prop-types';
 
 import { withTheme, named } from '../theme';
 import styled from '../styled';
-import Card, { CardImage, CardLabel, CardContent } from '../Card';
-import { H3, BodyText } from '../typography';
+import Card, { CardImage, CardLabel } from '../Card';
 import Icon from '../Icon';
 import { withIsLoading } from '../isLoading';
 import { ImageSourceType } from '../ConnectedImage';
 
-// We have to position `LikeIcon` in a `View` rather than `LikeIcon` directly so `LikeIcon`'s loading state is positioned correctly 💥
-const LikeIconPositioning = styled(
-  ({ theme }) => ({
-    position: 'absolute',
-    top: theme.sizing.baseUnit * 1.5,
-    right: theme.sizing.baseUnit * 1.5,
-  }),
-  'ui-kit.DefaultCard.LikeIconPositioning'
-)(View);
-
-const LikeIcon = withTheme(
-  ({ theme, isLiked }) => ({
-    fill: theme.colors.white,
-    name: isLiked ? 'like-solid' : 'like',
-    size: theme.sizing.baseUnit * 1.5,
-  }),
-  'ui-kit.DefaultCard.LikeIcon'
-)(Icon);
+import ContentTitles from '../ContentTitles';
 
 const Image = withTheme(
   () => ({
@@ -37,22 +19,6 @@ const Image = withTheme(
   }),
   'ui-kit.DefaultCard.Image'
 )(CardImage);
-
-const Content = styled(
-  ({ theme }) => ({
-    alignItems: 'flex-start', // needed to make `Label` display as an "inline" element
-    paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
-    paddingBottom: theme.sizing.baseUnit * 2, // TODO: refactor CardContent to have this be the default
-  }),
-  'ui-kit.DefaultCard.Content'
-)(CardContent);
-
-const Summary = styled(
-  ({ theme }) => ({
-    paddingTop: theme.sizing.baseUnit,
-  }),
-  'ui-kit.DefaultCard.Summary'
-)(BodyText);
 
 // We have to position `renderLabel/CardLabel/LabelComponent` in a `View` so `Label`s loading state is positioned correctly 💥
 // We also only render this component if we have a label.
@@ -108,16 +74,8 @@ const DefaultCard = withIsLoading(
     <Card isLoading={isLoading}>
       <Image source={coverImage} />
 
-      <Content>
-        {renderLabel(isLoading, LabelComponent, labelText, summary, isLive)}
-        {title ? <H3 numberOfLines={2}>{title}</H3> : null}
-        {summary ? <Summary numberOfLines={2}>{summary}</Summary> : null}
-      </Content>
-      {isLiked != null ? (
-        <LikeIconPositioning>
-          <LikeIcon isLiked={isLiked} />
-        </LikeIconPositioning>
-      ) : null}
+      {renderLabel(isLoading, LabelComponent, labelText, summary, isLive)}
+      <ContentTitles title={title} summary={summary} isLiked={isLiked} />
     </Card>
   )
 );
