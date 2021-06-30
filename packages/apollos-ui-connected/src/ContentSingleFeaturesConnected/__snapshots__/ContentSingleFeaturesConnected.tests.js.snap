@@ -196,37 +196,26 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
         }
       >
         <View
-          flexed={false}
           style={
             Object {
               "alignItems": "center",
               "flex": null,
               "flexDirection": "row",
-              "paddingBottom": 16,
             }
           }
         >
-          <View
+          <Text
             style={
               Object {
-                "paddingRight": 4,
+                "color": "rgba(39, 39, 46, 0.6)",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 16,
+                "lineHeight": 24,
               }
             }
           >
-            <Text
-              style={
-                Object {
-                  "color": "#00676D",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
-                }
-              }
-              tint="#00676D"
-            >
-              title
-            </Text>
-          </View>
+            title
+          </Text>
         </View>
         <Text
           bold={false}
@@ -826,37 +815,26 @@ exports[`ContentSingleFeaturesConnected should render with nodeId 1`] = `
         }
       >
         <View
-          flexed={false}
           style={
             Object {
               "alignItems": "center",
               "flex": null,
               "flexDirection": "row",
-              "paddingBottom": 16,
             }
           }
         >
-          <View
+          <Text
             style={
               Object {
-                "paddingRight": 4,
+                "color": "rgba(39, 39, 46, 0.6)",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 16,
+                "lineHeight": 24,
               }
             }
           >
-            <Text
-              style={
-                Object {
-                  "color": "#00676D",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
-                }
-              }
-              tint="#00676D"
-            >
-              title
-            </Text>
-          </View>
+            title
+          </Text>
         </View>
         <Text
           bold={false}

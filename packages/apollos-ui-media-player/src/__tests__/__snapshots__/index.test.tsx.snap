@@ -337,7 +337,7 @@ Array [
         <View
           style={
             Object {
-              "backgroundColor": "rgba(249, 249, 251, 0.4)",
+              "backgroundColor": "rgba(0, 0, 0, 0.4)",
               "bottom": 0,
               "left": 0,
               "opacity": 0,
@@ -2029,7 +2029,7 @@ Array [
           <View
             style={
               Object {
-                "backgroundColor": "rgba(249, 249, 251, 0.4)",
+                "backgroundColor": "rgba(0, 0, 0, 0.4)",
                 "bottom": 0,
                 "left": 0,
                 "opacity": 0,
@@ -3516,7 +3516,7 @@ Array [
         <View
           style={
             Object {
-              "backgroundColor": "rgba(249, 249, 251, 0.4)",
+              "backgroundColor": "rgba(0, 0, 0, 0.4)",
               "bottom": 0,
               "left": 0,
               "opacity": 0,
@@ -4409,7 +4409,7 @@ Array [
         <View
           style={
             Object {
-              "backgroundColor": "rgba(249, 249, 251, 0.4)",
+              "backgroundColor": "rgba(0, 0, 0, 0.4)",
               "bottom": 0,
               "left": 0,
               "opacity": 0,
@@ -5668,7 +5668,7 @@ Array [
         <View
           style={
             Object {
-              "backgroundColor": "rgba(249, 249, 251, 0.4)",
+              "backgroundColor": "rgba(0, 0, 0, 0.4)",
               "bottom": 0,
               "left": 0,
               "opacity": 1,
@@ -6996,7 +6996,7 @@ Array [
         <View
           style={
             Object {
-              "backgroundColor": "rgba(249, 249, 251, 0.4)",
+              "backgroundColor": "rgba(0, 0, 0, 0.4)",
               "bottom": 0,
               "left": 0,
               "opacity": 0,
@@ -8304,7 +8304,7 @@ Array [
         <View
           style={
             Object {
-              "backgroundColor": "rgba(249, 249, 251, 0.4)",
+              "backgroundColor": "rgba(0, 0, 0, 0.4)",
               "bottom": 0,
               "left": 0,
               "opacity": 0,
@@ -9628,7 +9628,7 @@ Array [
         <View
           style={
             Object {
-              "backgroundColor": "rgba(249, 249, 251, 0.4)",
+              "backgroundColor": "rgba(0, 0, 0, 0.4)",
               "bottom": 0,
               "left": 0,
               "opacity": 1,

@@ -34,28 +34,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294572539,
-            4294572539,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -67,7 +49,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -84,14 +66,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -105,28 +101,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294572539,
-            4294572539,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -138,7 +116,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -155,14 +133,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -176,28 +168,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294572539,
-            4294572539,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -209,7 +183,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -226,14 +200,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -247,28 +235,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294572539,
-            4294572539,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -280,7 +250,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -296,14 +266,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -317,28 +301,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294572539,
-            4294572539,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -350,7 +316,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -366,14 +332,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       onLayout={[Function]}
@@ -909,28 +889,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294572539,
-            4294572539,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -942,7 +904,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -959,7 +921,21 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
               "position": "absolute",
               "right": 0,
               "top": 0,
@@ -1236,7 +1212,7 @@ Array [
             </RCTScrollView>
           </View>
         </View>
-      </BVLinearGradient>
+      </View>
     </View>
   </View>,
 ]
@@ -1276,28 +1252,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294572539,
-            4294572539,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -1309,7 +1267,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -1326,14 +1284,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -1347,28 +1319,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294572539,
-            4294572539,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -1380,7 +1334,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -1397,14 +1351,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -1418,28 +1386,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294572539,
-            4294572539,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -1451,7 +1401,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -1468,14 +1418,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -1489,28 +1453,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294572539,
-            4294572539,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -1522,7 +1468,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -1538,14 +1484,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -1559,28 +1519,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294572539,
-            4294572539,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -1592,7 +1534,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -1608,14 +1550,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       onLayout={[Function]}
@@ -2173,28 +2129,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294572539,
-            4294572539,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -2206,7 +2144,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -2223,14 +2161,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -2244,28 +2196,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294572539,
-            4294572539,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -2277,7 +2211,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -2294,14 +2228,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -2315,28 +2263,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294572539,
-            4294572539,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -2348,7 +2278,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -2365,14 +2295,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -2386,28 +2330,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294572539,
-            4294572539,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -2419,7 +2345,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -2435,14 +2361,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -2456,28 +2396,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294572539,
-            4294572539,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -2489,7 +2411,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -2505,14 +2427,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       onLayout={[Function]}
@@ -3048,28 +2984,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294572539,
-            4294572539,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -3081,7 +2999,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -3098,7 +3016,21 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
               "position": "absolute",
               "right": 0,
               "top": 0,
@@ -3375,7 +3307,7 @@ Array [
             </RCTScrollView>
           </View>
         </View>
-      </BVLinearGradient>
+      </View>
     </View>
   </View>,
 ]
@@ -3415,28 +3347,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294572539,
-            4294572539,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -3448,7 +3362,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -3465,14 +3379,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -3486,28 +3414,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294572539,
-            4294572539,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -3519,7 +3429,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -3536,14 +3446,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -3557,28 +3481,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294572539,
-            4294572539,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -3590,7 +3496,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -3607,14 +3513,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -3628,28 +3548,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294572539,
-            4294572539,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -3661,7 +3563,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -3677,14 +3579,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -3698,28 +3614,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294572539,
-            4294572539,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -3731,7 +3629,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -3747,14 +3645,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       onLayout={[Function]}
@@ -4290,28 +4202,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4294572539,
-            4294572539,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -4323,7 +4217,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -4340,7 +4234,21 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
               "position": "absolute",
               "right": 0,
               "top": 0,
@@ -4617,7 +4525,7 @@ Array [
             </RCTScrollView>
           </View>
         </View>
-      </BVLinearGradient>
+      </View>
     </View>
   </View>,
 ]

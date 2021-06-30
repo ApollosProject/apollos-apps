@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { StyleSheet, Animated, View } from 'react-native';
+import Reanimated from 'react-native-reanimated';
 import {
   ConnectedImage,
   GradientOverlayImage,
@@ -12,6 +13,7 @@ import {
   Button,
 } from '@apollosproject/ui-kit';
 
+import StretchyViewReanimated from './ReanimatedStretchyView';
 import StretchyView from './index';
 
 const { ScrollView } = Animated;
@@ -136,4 +138,33 @@ storiesOf('StretchyView', module)
         </ScrollView>
       )}
     </StretchyView>
+  ))
+  .add('experimental reanimated rewrite', () => (
+    <StretchyViewReanimated>
+      {({ Stretchy, ...scrollViewProps }) => (
+        <Reanimated.ScrollView {...scrollViewProps}>
+          <Stretchy stretchyKey="header" stretchOn="top">
+            <ConnectedImage
+              style={imageStyle}
+              source={{ uri: 'https://picsum.photos/id/342/600/600' }}
+            />
+          </Stretchy>
+          <PaddedView>
+            <H1 padded>Well hello there!</H1>
+            <H2 padded>
+              Hello there!
+              {'\n'}
+            </H2>
+            <H3 padded>Hello there!</H3>
+            <H1 padded>Try to scroll me around.</H1>
+          </PaddedView>
+          <Stretchy stretchyKey="footer" stretchOn="bottom">
+            <ConnectedImage
+              style={imageStyle}
+              source={{ uri: 'https://picsum.photos/id/342/600/600' }}
+            />
+          </Stretchy>
+        </Reanimated.ScrollView>
+      )}
+    </StretchyViewReanimated>
   ));

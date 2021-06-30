@@ -14,26 +14,27 @@ describe('The BackgroundView component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render with custom colors', () => {
+  it('should render with paper color', () => {
     const tree = renderer.create(
       <Providers>
-        <BackgroundView colors={['#FF0000', '#0000FF']} />
+        <BackgroundView material="paper" />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render as a solid color', () => {
+  it('should render as a system color', () => {
     const tree = renderer.create(
       <Providers>
-        <BackgroundView colors={['#fa8072', '#fa8072']} />
+        <BackgroundView material="system" />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
   it('should accept extra props', () => {
+    const bg = { backgroundColor: 'red' };
     const tree = renderer.create(
       <Providers>
-        <BackgroundView locations={[0, 0.5, 0.6]} />
+        <BackgroundView style={bg} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

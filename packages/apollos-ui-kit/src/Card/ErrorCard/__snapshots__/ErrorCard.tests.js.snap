@@ -53,21 +53,19 @@ Array [
         }
       >
         <View
-          flexed={false}
           style={
             Object {
               "alignItems": "center",
               "flex": null,
               "flexDirection": "row",
-              "tintColor": "#6EC5B8",
             }
           }
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={19.2}
-            bbWidth={19.2}
-            height={19.2}
+            bbHeight={32}
+            bbWidth={32}
+            height={32}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -81,14 +79,14 @@ Array [
                 null,
                 Object {
                   "flex": 0,
-                  "height": 19,
-                  "width": 19,
+                  "height": 32,
+                  "width": 32,
                 },
               ]
             }
             vbHeight={24}
             vbWidth={24}
-            width={19.2}
+            width={32}
           >
             <RNSVGGroup
               fill={
@@ -178,28 +176,18 @@ Array [
               />
             </RNSVGGroup>
           </RNSVGSvgView>
-          <View
+          <Text
             style={
               Object {
-                "paddingHorizontal": 4,
+                "color": "rgba(39, 39, 46, 0.6)",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 16,
+                "lineHeight": 24,
               }
             }
-            withIcon="warning"
           >
-            <Text
-              style={
-                Object {
-                  "color": "rgba(39, 39, 46, 0.3)",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
-                }
-              }
-              tint="rgba(39, 39, 46, 0.3)"
-            >
-              Something went wrong
-            </Text>
-          </View>
+            Something went wrong
+          </Text>
         </View>
         <Text
           style={
@@ -284,21 +272,19 @@ Array [
         }
       >
         <View
-          flexed={false}
           style={
             Object {
               "alignItems": "center",
               "flex": null,
               "flexDirection": "row",
-              "tintColor": "#6EC5B8",
             }
           }
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={19.2}
-            bbWidth={19.2}
-            height={19.2}
+            bbHeight={32}
+            bbWidth={32}
+            height={32}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -312,14 +298,14 @@ Array [
                 null,
                 Object {
                   "flex": 0,
-                  "height": 19,
-                  "width": 19,
+                  "height": 32,
+                  "width": 32,
                 },
               ]
             }
             vbHeight={24}
             vbWidth={24}
-            width={19.2}
+            width={32}
           >
             <RNSVGGroup
               fill={
@@ -409,28 +395,18 @@ Array [
               />
             </RNSVGGroup>
           </RNSVGSvgView>
-          <View
+          <Text
             style={
               Object {
-                "paddingHorizontal": 4,
+                "color": "rgba(39, 39, 46, 0.6)",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 16,
+                "lineHeight": 24,
               }
             }
-            withIcon="warning"
           >
-            <Text
-              style={
-                Object {
-                  "color": "rgba(39, 39, 46, 0.3)",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
-                }
-              }
-              tint="rgba(39, 39, 46, 0.3)"
-            >
-              Something went wrong
-            </Text>
-          </View>
+            Something went wrong
+          </Text>
         </View>
         <Text
           style={
@@ -515,21 +491,19 @@ Array [
         }
       >
         <View
-          flexed={false}
           style={
             Object {
               "alignItems": "center",
               "flex": null,
               "flexDirection": "row",
-              "tintColor": "#6EC5B8",
             }
           }
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={19.2}
-            bbWidth={19.2}
-            height={19.2}
+            bbHeight={32}
+            bbWidth={32}
+            height={32}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -543,14 +517,14 @@ Array [
                 null,
                 Object {
                   "flex": 0,
-                  "height": 19,
-                  "width": 19,
+                  "height": 32,
+                  "width": 32,
                 },
               ]
             }
             vbHeight={24}
             vbWidth={24}
-            width={19.2}
+            width={32}
           >
             <RNSVGGroup
               fill={
@@ -640,28 +614,18 @@ Array [
               />
             </RNSVGGroup>
           </RNSVGSvgView>
-          <View
+          <Text
             style={
               Object {
-                "paddingHorizontal": 4,
+                "color": "rgba(39, 39, 46, 0.6)",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 16,
+                "lineHeight": 24,
               }
             }
-            withIcon="warning"
           >
-            <Text
-              style={
-                Object {
-                  "color": "rgba(39, 39, 46, 0.3)",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
-                }
-              }
-              tint="rgba(39, 39, 46, 0.3)"
-            >
-              Something went wrong
-            </Text>
-          </View>
+            Something went wrong
+          </Text>
         </View>
         <Text
           style={
@@ -746,21 +710,19 @@ Array [
         }
       >
         <View
-          flexed={false}
           style={
             Object {
               "alignItems": "center",
               "flex": null,
               "flexDirection": "row",
-              "tintColor": "#6EC5B8",
             }
           }
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={19.2}
-            bbWidth={19.2}
-            height={19.2}
+            bbHeight={32}
+            bbWidth={32}
+            height={32}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -774,14 +736,14 @@ Array [
                 null,
                 Object {
                   "flex": 0,
-                  "height": 19,
-                  "width": 19,
+                  "height": 32,
+                  "width": 32,
                 },
               ]
             }
             vbHeight={24}
             vbWidth={24}
-            width={19.2}
+            width={32}
           >
             <RNSVGGroup
               fill={
@@ -871,28 +833,18 @@ Array [
               />
             </RNSVGGroup>
           </RNSVGSvgView>
-          <View
+          <Text
             style={
               Object {
-                "paddingHorizontal": 4,
+                "color": "rgba(39, 39, 46, 0.6)",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 16,
+                "lineHeight": 24,
               }
             }
-            withIcon="warning"
           >
-            <Text
-              style={
-                Object {
-                  "color": "rgba(39, 39, 46, 0.3)",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
-                }
-              }
-              tint="rgba(39, 39, 46, 0.3)"
-            >
-              Something went wrong
-            </Text>
-          </View>
+            Something went wrong
+          </Text>
         </View>
         <Text
           style={
@@ -979,21 +931,19 @@ Array [
         }
       >
         <View
-          flexed={false}
           style={
             Object {
               "alignItems": "center",
               "flex": null,
               "flexDirection": "row",
-              "tintColor": "#6EC5B8",
             }
           }
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={19.2}
-            bbWidth={19.2}
-            height={19.2}
+            bbHeight={32}
+            bbWidth={32}
+            height={32}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -1007,14 +957,14 @@ Array [
                 null,
                 Object {
                   "flex": 0,
-                  "height": 19,
-                  "width": 19,
+                  "height": 32,
+                  "width": 32,
                 },
               ]
             }
             vbHeight={24}
             vbWidth={24}
-            width={19.2}
+            width={32}
           >
             <RNSVGGroup
               fill={
@@ -1104,28 +1054,18 @@ Array [
               />
             </RNSVGGroup>
           </RNSVGSvgView>
-          <View
+          <Text
             style={
               Object {
-                "paddingHorizontal": 4,
+                "color": "rgba(39, 39, 46, 0.6)",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 16,
+                "lineHeight": 24,
               }
             }
-            withIcon="warning"
           >
-            <Text
-              style={
-                Object {
-                  "color": "rgba(39, 39, 46, 0.3)",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
-                }
-              }
-              tint="rgba(39, 39, 46, 0.3)"
-            >
-              Something went wrong
-            </Text>
-          </View>
+            Something went wrong
+          </Text>
         </View>
         <Text
           style={

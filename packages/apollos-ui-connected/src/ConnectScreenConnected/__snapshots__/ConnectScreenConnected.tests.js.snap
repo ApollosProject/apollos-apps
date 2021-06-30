@@ -274,28 +274,10 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                     }
                   }
                 >
-                  <BVLinearGradient
-                    colors={
-                      Array [
-                        4294967295,
-                        4294572539,
-                      ]
-                    }
-                    endPoint={
-                      Object {
-                        "x": 0.5,
-                        "y": 1,
-                      }
-                    }
-                    locations={null}
-                    startPoint={
-                      Object {
-                        "x": 0.5,
-                        "y": 0,
-                      }
-                    }
+                  <View
                     style={
                       Object {
+                        "backgroundColor": "rgb(249, 249, 251)",
                         "flex": 1,
                         "height": "100%",
                       }
@@ -650,35 +632,17 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                         </View>
                       </RCTScrollView>
                     </View>
-                  </BVLinearGradient>
+                  </View>
                   <Modal
                     animationType="slide"
                     hardwareAccelerated={false}
                     onRequestClose={[Function]}
                     visible={false}
                   >
-                    <BVLinearGradient
-                      colors={
-                        Array [
-                          4294967295,
-                          4294572539,
-                        ]
-                      }
-                      endPoint={
-                        Object {
-                          "x": 0.5,
-                          "y": 1,
-                        }
-                      }
-                      locations={null}
-                      startPoint={
-                        Object {
-                          "x": 0.5,
-                          "y": 0,
-                        }
-                      }
+                    <View
                       style={
                         Object {
+                          "backgroundColor": "rgb(249, 249, 251)",
                           "flex": 1,
                           "height": "100%",
                         }
@@ -1153,7 +1117,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                           </RCTScrollView>
                         </View>
                       </RCTSafeAreaView>
-                    </BVLinearGradient>
+                    </View>
                   </Modal>
                 </View>
               </View>
@@ -1440,28 +1404,10 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                     }
                   }
                 >
-                  <BVLinearGradient
-                    colors={
-                      Array [
-                        4294967295,
-                        4294572539,
-                      ]
-                    }
-                    endPoint={
-                      Object {
-                        "x": 0.5,
-                        "y": 1,
-                      }
-                    }
-                    locations={null}
-                    startPoint={
-                      Object {
-                        "x": 0.5,
-                        "y": 0,
-                      }
-                    }
+                  <View
                     style={
                       Object {
+                        "backgroundColor": "rgb(249, 249, 251)",
                         "flex": 1,
                         "height": "100%",
                       }
@@ -1822,35 +1768,17 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                         </View>
                       </RCTScrollView>
                     </View>
-                  </BVLinearGradient>
+                  </View>
                   <Modal
                     animationType="slide"
                     hardwareAccelerated={false}
                     onRequestClose={[Function]}
                     visible={false}
                   >
-                    <BVLinearGradient
-                      colors={
-                        Array [
-                          4294967295,
-                          4294572539,
-                        ]
-                      }
-                      endPoint={
-                        Object {
-                          "x": 0.5,
-                          "y": 1,
-                        }
-                      }
-                      locations={null}
-                      startPoint={
-                        Object {
-                          "x": 0.5,
-                          "y": 0,
-                        }
-                      }
+                    <View
                       style={
                         Object {
+                          "backgroundColor": "rgb(249, 249, 251)",
                           "flex": 1,
                           "height": "100%",
                         }
@@ -2325,7 +2253,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                           </RCTScrollView>
                         </View>
                       </RCTSafeAreaView>
-                    </BVLinearGradient>
+                    </View>
                   </Modal>
                 </View>
               </View>

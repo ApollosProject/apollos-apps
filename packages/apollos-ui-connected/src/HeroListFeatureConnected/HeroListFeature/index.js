@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { get } from 'lodash';
 import {
   ActionList,
-  HighlightCard,
+  DefaultCard,
   H3,
   H5,
   PaddedView,
@@ -207,7 +207,7 @@ HeroListFeature.propTypes = {
 };
 
 HeroListFeature.defaultProps = {
-  HeroComponent: HighlightCard,
+  HeroComponent: DefaultCard,
   loadingStateObject: loadingStateArray,
 };
 

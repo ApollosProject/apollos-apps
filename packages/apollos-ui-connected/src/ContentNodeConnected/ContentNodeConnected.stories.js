@@ -22,9 +22,11 @@ const mocks = {
       title: 'Some title',
       htmlContent:
         '<p>Of Myths and Money, lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim euismod arcu, volutpat feugiat tortor luctus vitae. Suspendisse efficitur faucibus ante at facilisis. Phasellus in velit suscipit lectus tempus dapibus vitae eu quam. Fusce venenatis mauris non ante scelerisque, sit amet blandit odio ultricies. In sed lacinia dui, eu blandit metus. Ut ante enim, facilisis sed pretium et, posuere vitae felis. Phasellus ornare mauris mauris, eget pretium nibh imperdiet ac. Integer eleifend dui ut nisl sagittis mattis. Nunc consectetur consequat tristique. Pellentesque luctus tortor nec quam pulvinar iaculis.</p>',
-      coverImage: {
-        sources: [{ uri: 'https://picsum.photos/2000/200/?random' }],
-      },
+      coverImage: args.id.includes('noimage')
+        ? null
+        : {
+            sources: [{ uri: 'https://picsum.photos/2000/200/?random' }],
+          },
       ...(args.id.includes('Media')
         ? {
             videos: [
@@ -56,6 +58,9 @@ storiesOf('ui-connected/ContentNodeConnected', module)
   ))
   .add('with media', () => (
     <ContentNodeConnected nodeId={'MediaContentItem:123'} />
+  ))
+  .add('with nomedia', () => (
+    <ContentNodeConnected nodeId={'UniversalContentItem:noimage'} />
   ))
   .add('with stretchy', () => (
     <StretchyView>

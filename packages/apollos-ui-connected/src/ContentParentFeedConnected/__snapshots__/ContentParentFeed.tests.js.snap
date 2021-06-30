@@ -453,28 +453,8 @@ exports[`the ContentParentFeedConnected component should render 1`] = `
                           }
                         >
                           <View
-                            __typename="DevotionalContentItem"
-                            disabled={false}
-                            id="DevotionalContentItem:d395278cd4b68e074ca4e595c8feab6d"
                             inHorizontalList={true}
-                            isLive={false}
                             isLoading={false}
-                            parentChannel={
-                              Object {
-                                "__typename": "ContentChannel",
-                                "iconName": "text",
-                                "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
-                                "name": "Devotional",
-                              }
-                            }
-                            sharing={
-                              Object {
-                                "__typename": "SharableContentItem",
-                                "message": "God sees who you can be not who you are - Life is challenging enough.",
-                                "title": "Share via ...",
-                                "url": "https://apollosrock.newspring.cc/devotional/god-sees-who-you-can-be-not-who-you-are",
-                              }
-                            }
                             style={
                               Object {
                                 "backgroundColor": "#FFFFFF",
@@ -492,8 +472,6 @@ exports[`the ContentParentFeedConnected component should render 1`] = `
                                 "width": 240,
                               }
                             }
-                            summary="bla bla bla"
-                            videos={Array []}
                           >
                             <View
                               style={
@@ -506,17 +484,20 @@ exports[`the ContentParentFeedConnected component should render 1`] = `
                               <View
                                 style={
                                   Object {
-                                    "backgroundColor": "#A5A5A5",
-                                    "overflow": "hidden",
-                                    "width": "100%",
+                                    "backgroundColor": "rgb(249, 249, 251)",
+                                    "bottom": 0,
+                                    "flex": 1,
+                                    "height": "100%",
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
                                   }
                                 }
                               >
                                 <Image
-                                  customTheme={null}
-                                  disabled={false}
+                                  blurRadius={80}
                                   fadeDuration={250}
-                                  isLoading={false}
                                   onLoad={[Function]}
                                   source={
                                     Array [
@@ -529,42 +510,7 @@ exports[`the ContentParentFeedConnected component should render 1`] = `
                                   }
                                   style={
                                     Object {
-                                      "aspectRatio": 1,
                                       "backgroundColor": "#A5A5A5",
-                                      "resizeMode": "cover",
-                                      "width": "100%",
-                                    }
-                                  }
-                                />
-                                <BVLinearGradient
-                                  colors={
-                                    Array [
-                                      1711276032,
-                                      2147483648,
-                                    ]
-                                  }
-                                  endPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 1,
-                                    }
-                                  }
-                                  locations={
-                                    Array [
-                                      0,
-                                      1,
-                                    ]
-                                  }
-                                  overlayColor="#000000"
-                                  overlayType="gradient-bottom"
-                                  startPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 0,
-                                    }
-                                  }
-                                  style={
-                                    Object {
                                       "bottom": 0,
                                       "left": 0,
                                       "position": "absolute",
@@ -573,51 +519,107 @@ exports[`the ContentParentFeedConnected component should render 1`] = `
                                     }
                                   }
                                 />
+                                <View
+                                  material="regular"
+                                  style={
+                                    Object {
+                                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                                      "bottom": 0,
+                                      "flex": 1,
+                                      "height": "100%",
+                                      "left": 0,
+                                      "position": "absolute",
+                                      "right": 0,
+                                      "top": 0,
+                                    }
+                                  }
+                                />
                               </View>
+                              <Image
+                                fadeDuration={250}
+                                hasTitleAndSummary={true}
+                                height={135}
+                                isLoading={false}
+                                onLoad={[Function]}
+                                source={
+                                  Array [
+                                    Object {
+                                      "__typename": "ImageMediaSource",
+                                      "cache": "force-cache",
+                                      "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                                    },
+                                  ]
+                                }
+                                style={
+                                  Object {
+                                    "aspectRatio": 1.7777777777777777,
+                                    "backgroundColor": "#A5A5A5",
+                                    "width": "100%",
+                                  }
+                                }
+                                width={240}
+                              />
                               <View
                                 style={
                                   Object {
-                                    "alignItems": "flex-start",
-                                    "bottom": 0,
-                                    "paddingBottom": 24,
-                                    "paddingHorizontal": 16,
-                                    "paddingVertical": 16,
-                                    "position": "absolute",
-                                    "width": "100%",
+                                    "height": 105,
+                                    "justifyContent": "center",
                                   }
                                 }
                               >
                                 <View
                                   style={
                                     Object {
-                                      "alignItems": "flex-end",
-                                      "flexDirection": "row",
-                                      "paddingTop": 16,
+                                      "paddingHorizontal": 16,
+                                      "paddingVertical": 16,
+                                      "width": "100%",
                                     }
                                   }
                                 >
-                                  <View
-                                    hasAction={false}
+                                  <Text
+                                    numberOfLines={2}
                                     style={
                                       Object {
-                                        "flex": 1,
+                                        "color": "#27272E",
+                                        "fontFamily": "InterUI-Bold",
+                                        "fontSize": 16,
+                                        "lineHeight": 24,
                                       }
                                     }
                                   >
                                     <Text
-                                      numberOfLines={4}
                                       style={
                                         Object {
-                                          "color": "#F4F7F8",
-                                          "fontFamily": "InterUI-Black",
-                                          "fontSize": 24,
-                                          "lineHeight": 27.6,
+                                          "color": "#27272E",
                                         }
                                       }
                                     >
                                       God sees who you can be not who you are
                                     </Text>
-                                  </View>
+                                  </Text>
+                                  <Text
+                                    bold={false}
+                                    italic={false}
+                                    numberOfLines={2}
+                                    style={
+                                      Object {
+                                        "color": "#27272E",
+                                        "fontFamily": "InterUI-Regular",
+                                        "fontSize": 12,
+                                        "lineHeight": 18,
+                                      }
+                                    }
+                                  >
+                                    <Text
+                                      style={
+                                        Object {
+                                          "color": "rgba(39, 39, 46, 0.6)",
+                                        }
+                                      }
+                                    >
+                                      bla bla bla
+                                    </Text>
+                                  </Text>
                                 </View>
                               </View>
                             </View>
@@ -655,28 +657,8 @@ exports[`the ContentParentFeedConnected component should render 1`] = `
                           }
                         >
                           <View
-                            __typename="DevotionalContentItem"
-                            disabled={false}
-                            id="DevotionalContentItem:fbea6914a3e8877516cbd333d919075d"
                             inHorizontalList={true}
-                            isLive={false}
                             isLoading={false}
-                            parentChannel={
-                              Object {
-                                "__typename": "ContentChannel",
-                                "iconName": "text",
-                                "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
-                                "name": "Devotional",
-                              }
-                            }
-                            sharing={
-                              Object {
-                                "__typename": "SharableContentItem",
-                                "message": "Thank God for the friends who will tell it like it is - Some of us grew up in a sanitized church.",
-                                "title": "Share via ...",
-                                "url": "https://apollosrock.newspring.cc/devotional/thank-god-for-the-friends-who-will-tell-it-like-it-is",
-                              }
-                            }
                             style={
                               Object {
                                 "backgroundColor": "#FFFFFF",
@@ -694,8 +676,6 @@ exports[`the ContentParentFeedConnected component should render 1`] = `
                                 "width": 240,
                               }
                             }
-                            summary="bla bla bla"
-                            videos={Array []}
                           >
                             <View
                               style={
@@ -708,17 +688,20 @@ exports[`the ContentParentFeedConnected component should render 1`] = `
                               <View
                                 style={
                                   Object {
-                                    "backgroundColor": "#A5A5A5",
-                                    "overflow": "hidden",
-                                    "width": "100%",
+                                    "backgroundColor": "rgb(249, 249, 251)",
+                                    "bottom": 0,
+                                    "flex": 1,
+                                    "height": "100%",
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
                                   }
                                 }
                               >
                                 <Image
-                                  customTheme={null}
-                                  disabled={false}
+                                  blurRadius={80}
                                   fadeDuration={250}
-                                  isLoading={false}
                                   onLoad={[Function]}
                                   source={
                                     Array [
@@ -731,42 +714,7 @@ exports[`the ContentParentFeedConnected component should render 1`] = `
                                   }
                                   style={
                                     Object {
-                                      "aspectRatio": 1,
                                       "backgroundColor": "#A5A5A5",
-                                      "resizeMode": "cover",
-                                      "width": "100%",
-                                    }
-                                  }
-                                />
-                                <BVLinearGradient
-                                  colors={
-                                    Array [
-                                      1711276032,
-                                      2147483648,
-                                    ]
-                                  }
-                                  endPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 1,
-                                    }
-                                  }
-                                  locations={
-                                    Array [
-                                      0,
-                                      1,
-                                    ]
-                                  }
-                                  overlayColor="#000000"
-                                  overlayType="gradient-bottom"
-                                  startPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 0,
-                                    }
-                                  }
-                                  style={
-                                    Object {
                                       "bottom": 0,
                                       "left": 0,
                                       "position": "absolute",
@@ -775,51 +723,107 @@ exports[`the ContentParentFeedConnected component should render 1`] = `
                                     }
                                   }
                                 />
+                                <View
+                                  material="regular"
+                                  style={
+                                    Object {
+                                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                                      "bottom": 0,
+                                      "flex": 1,
+                                      "height": "100%",
+                                      "left": 0,
+                                      "position": "absolute",
+                                      "right": 0,
+                                      "top": 0,
+                                    }
+                                  }
+                                />
                               </View>
+                              <Image
+                                fadeDuration={250}
+                                hasTitleAndSummary={true}
+                                height={135}
+                                isLoading={false}
+                                onLoad={[Function]}
+                                source={
+                                  Array [
+                                    Object {
+                                      "__typename": "ImageMediaSource",
+                                      "cache": "force-cache",
+                                      "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                                    },
+                                  ]
+                                }
+                                style={
+                                  Object {
+                                    "aspectRatio": 1.7777777777777777,
+                                    "backgroundColor": "#A5A5A5",
+                                    "width": "100%",
+                                  }
+                                }
+                                width={240}
+                              />
                               <View
                                 style={
                                   Object {
-                                    "alignItems": "flex-start",
-                                    "bottom": 0,
-                                    "paddingBottom": 24,
-                                    "paddingHorizontal": 16,
-                                    "paddingVertical": 16,
-                                    "position": "absolute",
-                                    "width": "100%",
+                                    "height": 105,
+                                    "justifyContent": "center",
                                   }
                                 }
                               >
                                 <View
                                   style={
                                     Object {
-                                      "alignItems": "flex-end",
-                                      "flexDirection": "row",
-                                      "paddingTop": 16,
+                                      "paddingHorizontal": 16,
+                                      "paddingVertical": 16,
+                                      "width": "100%",
                                     }
                                   }
                                 >
-                                  <View
-                                    hasAction={false}
+                                  <Text
+                                    numberOfLines={2}
                                     style={
                                       Object {
-                                        "flex": 1,
+                                        "color": "#27272E",
+                                        "fontFamily": "InterUI-Bold",
+                                        "fontSize": 16,
+                                        "lineHeight": 24,
                                       }
                                     }
                                   >
                                     <Text
-                                      numberOfLines={4}
                                       style={
                                         Object {
-                                          "color": "#F4F7F8",
-                                          "fontFamily": "InterUI-Black",
-                                          "fontSize": 24,
-                                          "lineHeight": 27.6,
+                                          "color": "#27272E",
                                         }
                                       }
                                     >
                                       Thank God for the friends who will tell it like it is
                                     </Text>
-                                  </View>
+                                  </Text>
+                                  <Text
+                                    bold={false}
+                                    italic={false}
+                                    numberOfLines={2}
+                                    style={
+                                      Object {
+                                        "color": "#27272E",
+                                        "fontFamily": "InterUI-Regular",
+                                        "fontSize": 12,
+                                        "lineHeight": 18,
+                                      }
+                                    }
+                                  >
+                                    <Text
+                                      style={
+                                        Object {
+                                          "color": "rgba(39, 39, 46, 0.6)",
+                                        }
+                                      }
+                                    >
+                                      bla bla bla
+                                    </Text>
+                                  </Text>
                                 </View>
                               </View>
                             </View>
@@ -857,28 +861,8 @@ exports[`the ContentParentFeedConnected component should render 1`] = `
                           }
                         >
                           <View
-                            __typename="DevotionalContentItem"
-                            disabled={false}
-                            id="DevotionalContentItem:5e18250f586ab8de4d3d6292c919dcc4"
                             inHorizontalList={true}
-                            isLive={false}
                             isLoading={false}
-                            parentChannel={
-                              Object {
-                                "__typename": "ContentChannel",
-                                "iconName": "text",
-                                "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
-                                "name": "Devotional",
-                              }
-                            }
-                            sharing={
-                              Object {
-                                "__typename": "SharableContentItem",
-                                "message": "No sin is too bad - In Jeremiah 3, God’s people had really messed up.",
-                                "title": "Share via ...",
-                                "url": "https://apollosrock.newspring.cc/devotional/no-sin-is-too-bad",
-                              }
-                            }
                             style={
                               Object {
                                 "backgroundColor": "#FFFFFF",
@@ -896,8 +880,6 @@ exports[`the ContentParentFeedConnected component should render 1`] = `
                                 "width": 240,
                               }
                             }
-                            summary="bla bla bla"
-                            videos={Array []}
                           >
                             <View
                               style={
@@ -910,17 +892,20 @@ exports[`the ContentParentFeedConnected component should render 1`] = `
                               <View
                                 style={
                                   Object {
-                                    "backgroundColor": "#A5A5A5",
-                                    "overflow": "hidden",
-                                    "width": "100%",
+                                    "backgroundColor": "rgb(249, 249, 251)",
+                                    "bottom": 0,
+                                    "flex": 1,
+                                    "height": "100%",
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
                                   }
                                 }
                               >
                                 <Image
-                                  customTheme={null}
-                                  disabled={false}
+                                  blurRadius={80}
                                   fadeDuration={250}
-                                  isLoading={false}
                                   onLoad={[Function]}
                                   source={
                                     Array [
@@ -933,42 +918,7 @@ exports[`the ContentParentFeedConnected component should render 1`] = `
                                   }
                                   style={
                                     Object {
-                                      "aspectRatio": 1,
                                       "backgroundColor": "#A5A5A5",
-                                      "resizeMode": "cover",
-                                      "width": "100%",
-                                    }
-                                  }
-                                />
-                                <BVLinearGradient
-                                  colors={
-                                    Array [
-                                      1711276032,
-                                      2147483648,
-                                    ]
-                                  }
-                                  endPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 1,
-                                    }
-                                  }
-                                  locations={
-                                    Array [
-                                      0,
-                                      1,
-                                    ]
-                                  }
-                                  overlayColor="#000000"
-                                  overlayType="gradient-bottom"
-                                  startPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 0,
-                                    }
-                                  }
-                                  style={
-                                    Object {
                                       "bottom": 0,
                                       "left": 0,
                                       "position": "absolute",
@@ -977,51 +927,107 @@ exports[`the ContentParentFeedConnected component should render 1`] = `
                                     }
                                   }
                                 />
+                                <View
+                                  material="regular"
+                                  style={
+                                    Object {
+                                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                                      "bottom": 0,
+                                      "flex": 1,
+                                      "height": "100%",
+                                      "left": 0,
+                                      "position": "absolute",
+                                      "right": 0,
+                                      "top": 0,
+                                    }
+                                  }
+                                />
                               </View>
+                              <Image
+                                fadeDuration={250}
+                                hasTitleAndSummary={true}
+                                height={135}
+                                isLoading={false}
+                                onLoad={[Function]}
+                                source={
+                                  Array [
+                                    Object {
+                                      "__typename": "ImageMediaSource",
+                                      "cache": "force-cache",
+                                      "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                                    },
+                                  ]
+                                }
+                                style={
+                                  Object {
+                                    "aspectRatio": 1.7777777777777777,
+                                    "backgroundColor": "#A5A5A5",
+                                    "width": "100%",
+                                  }
+                                }
+                                width={240}
+                              />
                               <View
                                 style={
                                   Object {
-                                    "alignItems": "flex-start",
-                                    "bottom": 0,
-                                    "paddingBottom": 24,
-                                    "paddingHorizontal": 16,
-                                    "paddingVertical": 16,
-                                    "position": "absolute",
-                                    "width": "100%",
+                                    "height": 105,
+                                    "justifyContent": "center",
                                   }
                                 }
                               >
                                 <View
                                   style={
                                     Object {
-                                      "alignItems": "flex-end",
-                                      "flexDirection": "row",
-                                      "paddingTop": 16,
+                                      "paddingHorizontal": 16,
+                                      "paddingVertical": 16,
+                                      "width": "100%",
                                     }
                                   }
                                 >
-                                  <View
-                                    hasAction={false}
+                                  <Text
+                                    numberOfLines={2}
                                     style={
                                       Object {
-                                        "flex": 1,
+                                        "color": "#27272E",
+                                        "fontFamily": "InterUI-Bold",
+                                        "fontSize": 16,
+                                        "lineHeight": 24,
                                       }
                                     }
                                   >
                                     <Text
-                                      numberOfLines={4}
                                       style={
                                         Object {
-                                          "color": "#F4F7F8",
-                                          "fontFamily": "InterUI-Black",
-                                          "fontSize": 24,
-                                          "lineHeight": 27.6,
+                                          "color": "#27272E",
                                         }
                                       }
                                     >
                                       No sin is too bad
                                     </Text>
-                                  </View>
+                                  </Text>
+                                  <Text
+                                    bold={false}
+                                    italic={false}
+                                    numberOfLines={2}
+                                    style={
+                                      Object {
+                                        "color": "#27272E",
+                                        "fontFamily": "InterUI-Regular",
+                                        "fontSize": 12,
+                                        "lineHeight": 18,
+                                      }
+                                    }
+                                  >
+                                    <Text
+                                      style={
+                                        Object {
+                                          "color": "rgba(39, 39, 46, 0.6)",
+                                        }
+                                      }
+                                    >
+                                      bla bla bla
+                                    </Text>
+                                  </Text>
                                 </View>
                               </View>
                             </View>
@@ -1059,28 +1065,8 @@ exports[`the ContentParentFeedConnected component should render 1`] = `
                           }
                         >
                           <View
-                            __typename="DevotionalContentItem"
-                            disabled={false}
-                            id="DevotionalContentItem:bdc2c29b85949e4ca8232b373a07953d"
                             inHorizontalList={true}
-                            isLive={false}
                             isLoading={false}
-                            parentChannel={
-                              Object {
-                                "__typename": "ContentChannel",
-                                "iconName": "text",
-                                "id": "ContentChannel:559b23fd0aa90e81b1c023e72e230fa1",
-                                "name": "Devotional",
-                              }
-                            }
-                            sharing={
-                              Object {
-                                "__typename": "SharableContentItem",
-                                "message": "Change starts with a choice - Have you ever restored an old piece of furniture?",
-                                "title": "Share via ...",
-                                "url": "https://apollosrock.newspring.cc/devotional/change-starts-with-a-choice",
-                              }
-                            }
                             style={
                               Object {
                                 "backgroundColor": "#FFFFFF",
@@ -1098,8 +1084,6 @@ exports[`the ContentParentFeedConnected component should render 1`] = `
                                 "width": 240,
                               }
                             }
-                            summary="bla bla bla"
-                            videos={Array []}
                           >
                             <View
                               style={
@@ -1112,17 +1096,20 @@ exports[`the ContentParentFeedConnected component should render 1`] = `
                               <View
                                 style={
                                   Object {
-                                    "backgroundColor": "#A5A5A5",
-                                    "overflow": "hidden",
-                                    "width": "100%",
+                                    "backgroundColor": "rgb(249, 249, 251)",
+                                    "bottom": 0,
+                                    "flex": 1,
+                                    "height": "100%",
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
                                   }
                                 }
                               >
                                 <Image
-                                  customTheme={null}
-                                  disabled={false}
+                                  blurRadius={80}
                                   fadeDuration={250}
-                                  isLoading={false}
                                   onLoad={[Function]}
                                   source={
                                     Array [
@@ -1135,42 +1122,7 @@ exports[`the ContentParentFeedConnected component should render 1`] = `
                                   }
                                   style={
                                     Object {
-                                      "aspectRatio": 1,
                                       "backgroundColor": "#A5A5A5",
-                                      "resizeMode": "cover",
-                                      "width": "100%",
-                                    }
-                                  }
-                                />
-                                <BVLinearGradient
-                                  colors={
-                                    Array [
-                                      1711276032,
-                                      2147483648,
-                                    ]
-                                  }
-                                  endPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 1,
-                                    }
-                                  }
-                                  locations={
-                                    Array [
-                                      0,
-                                      1,
-                                    ]
-                                  }
-                                  overlayColor="#000000"
-                                  overlayType="gradient-bottom"
-                                  startPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 0,
-                                    }
-                                  }
-                                  style={
-                                    Object {
                                       "bottom": 0,
                                       "left": 0,
                                       "position": "absolute",
@@ -1179,51 +1131,107 @@ exports[`the ContentParentFeedConnected component should render 1`] = `
                                     }
                                   }
                                 />
+                                <View
+                                  material="regular"
+                                  style={
+                                    Object {
+                                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                                      "bottom": 0,
+                                      "flex": 1,
+                                      "height": "100%",
+                                      "left": 0,
+                                      "position": "absolute",
+                                      "right": 0,
+                                      "top": 0,
+                                    }
+                                  }
+                                />
                               </View>
+                              <Image
+                                fadeDuration={250}
+                                hasTitleAndSummary={true}
+                                height={135}
+                                isLoading={false}
+                                onLoad={[Function]}
+                                source={
+                                  Array [
+                                    Object {
+                                      "__typename": "ImageMediaSource",
+                                      "cache": "force-cache",
+                                      "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                                    },
+                                  ]
+                                }
+                                style={
+                                  Object {
+                                    "aspectRatio": 1.7777777777777777,
+                                    "backgroundColor": "#A5A5A5",
+                                    "width": "100%",
+                                  }
+                                }
+                                width={240}
+                              />
                               <View
                                 style={
                                   Object {
-                                    "alignItems": "flex-start",
-                                    "bottom": 0,
-                                    "paddingBottom": 24,
-                                    "paddingHorizontal": 16,
-                                    "paddingVertical": 16,
-                                    "position": "absolute",
-                                    "width": "100%",
+                                    "height": 105,
+                                    "justifyContent": "center",
                                   }
                                 }
                               >
                                 <View
                                   style={
                                     Object {
-                                      "alignItems": "flex-end",
-                                      "flexDirection": "row",
-                                      "paddingTop": 16,
+                                      "paddingHorizontal": 16,
+                                      "paddingVertical": 16,
+                                      "width": "100%",
                                     }
                                   }
                                 >
-                                  <View
-                                    hasAction={false}
+                                  <Text
+                                    numberOfLines={2}
                                     style={
                                       Object {
-                                        "flex": 1,
+                                        "color": "#27272E",
+                                        "fontFamily": "InterUI-Bold",
+                                        "fontSize": 16,
+                                        "lineHeight": 24,
                                       }
                                     }
                                   >
                                     <Text
-                                      numberOfLines={4}
                                       style={
                                         Object {
-                                          "color": "#F4F7F8",
-                                          "fontFamily": "InterUI-Black",
-                                          "fontSize": 24,
-                                          "lineHeight": 27.6,
+                                          "color": "#27272E",
                                         }
                                       }
                                     >
                                       Change starts with a choice
                                     </Text>
-                                  </View>
+                                  </Text>
+                                  <Text
+                                    bold={false}
+                                    italic={false}
+                                    numberOfLines={2}
+                                    style={
+                                      Object {
+                                        "color": "#27272E",
+                                        "fontFamily": "InterUI-Regular",
+                                        "fontSize": 12,
+                                        "lineHeight": 18,
+                                      }
+                                    }
+                                  >
+                                    <Text
+                                      style={
+                                        Object {
+                                          "color": "rgba(39, 39, 46, 0.6)",
+                                        }
+                                      }
+                                    >
+                                      bla bla bla
+                                    </Text>
+                                  </Text>
                                 </View>
                               </View>
                             </View>

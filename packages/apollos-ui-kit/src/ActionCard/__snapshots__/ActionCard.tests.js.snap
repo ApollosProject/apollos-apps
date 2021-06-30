@@ -126,21 +126,19 @@ Array [
         }
       >
         <View
-          flexed={false}
           style={
             Object {
               "alignItems": "center",
               "flex": null,
               "flexDirection": "row",
-              "paddingBottom": 16,
             }
           }
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={19.2}
-            bbWidth={19.2}
-            height={19.2}
+            bbHeight={32}
+            bbWidth={32}
+            height={32}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -154,14 +152,14 @@ Array [
                 null,
                 Object {
                   "flex": 0,
-                  "height": 19,
-                  "width": 19,
+                  "height": 32,
+                  "width": 32,
                 },
               ]
             }
             vbHeight={24}
             vbWidth={24}
-            width={19.2}
+            width={32}
           >
             <RNSVGGroup
               fill={
@@ -209,7 +207,7 @@ Array [
                 fill={
                   Array [
                     0,
-                    4278216557,
+                    1294411566,
                   ]
                 }
                 fillOpacity={1}
@@ -251,28 +249,18 @@ Array [
               />
             </RNSVGGroup>
           </RNSVGSvgView>
-          <View
+          <Text
             style={
               Object {
-                "paddingHorizontal": 4,
+                "color": "rgba(39, 39, 46, 0.6)",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 16,
+                "lineHeight": 24,
               }
             }
-            withIcon="text"
           >
-            <Text
-              style={
-                Object {
-                  "color": "#00676D",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
-                }
-              }
-              tint="#00676D"
-            >
-              Key Idea
-            </Text>
-          </View>
+            Key Idea
+          </Text>
         </View>
         <Text
           bold={false}
@@ -522,21 +510,19 @@ Array [
         }
       >
         <View
-          flexed={false}
           style={
             Object {
               "alignItems": "center",
               "flex": null,
               "flexDirection": "row",
-              "paddingBottom": 16,
             }
           }
         >
           <RNSVGSvgView
             align="xMidYMid"
-            bbHeight={19.2}
-            bbWidth={19.2}
-            height={19.2}
+            bbHeight={32}
+            bbWidth={32}
+            height={32}
             meetOrSlice={0}
             minX={0}
             minY={0}
@@ -550,14 +536,14 @@ Array [
                 null,
                 Object {
                   "flex": 0,
-                  "height": 19,
-                  "width": 19,
+                  "height": 32,
+                  "width": 32,
                 },
               ]
             }
             vbHeight={24}
             vbWidth={24}
-            width={19.2}
+            width={32}
           >
             <RNSVGGroup
               fill={
@@ -605,7 +591,7 @@ Array [
                 fill={
                   Array [
                     0,
-                    4278216557,
+                    1294411566,
                   ]
                 }
                 fillOpacity={1}
@@ -647,28 +633,18 @@ Array [
               />
             </RNSVGGroup>
           </RNSVGSvgView>
-          <View
+          <Text
             style={
               Object {
-                "paddingHorizontal": 4,
+                "color": "rgba(39, 39, 46, 0.6)",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 16,
+                "lineHeight": 24,
               }
             }
-            withIcon="text"
           >
-            <Text
-              style={
-                Object {
-                  "color": "#00676D",
-                  "fontFamily": "InterUI-Bold",
-                  "fontSize": 12,
-                  "lineHeight": 18,
-                }
-              }
-              tint="#00676D"
-            >
-              Key Idea
-            </Text>
-          </View>
+            Key Idea
+          </Text>
         </View>
         <Text
           bold={false}

@@ -8,24 +8,29 @@ import { withTheme } from '../theme';
 
 const BlurredImage = withTheme(
   () => ({
-    blurRadius: 200,
+    blurRadius: 80,
     style: {
       ...StyleSheet.absoluteFillObject,
-      opacity: 0.5,
     },
   }),
   'ui-kit.BackgroundImageBlur.BlurredImage'
 )(ConnectedImage);
 
-const BackgroundImageBlur = ({ children, ...imageProps }) => (
+const BackgroundImageBlur = ({
+  children,
+  material = 'regular',
+  ...imageProps
+}) => (
   <BackgroundView style={StyleSheet.absoluteFill}>
     <BlurredImage {...imageProps} />
+    <BackgroundView style={StyleSheet.absoluteFill} material={material} />
     {children}
   </BackgroundView>
 );
 
 BackgroundImageBlur.propTypes = {
   children: PropTypes.node,
+  material: PropTypes.string,
   source: ImageSourceType,
 };
 

@@ -28,7 +28,7 @@ exports[`ThemeProvider renders in dark theme 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "rgb(249, 249, 251)",
+      "backgroundColor": "#000000",
       "flex": 1,
     }
   }

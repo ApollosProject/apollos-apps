@@ -1,28 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LikedContentFeedConnected component renders LikedContentFeedConnected 1`] = `
-<BVLinearGradient
-  colors={
-    Array [
-      4294967295,
-      4294572539,
-    ]
-  }
-  endPoint={
-    Object {
-      "x": 0.5,
-      "y": 1,
-    }
-  }
-  locations={null}
-  startPoint={
-    Object {
-      "x": 0.5,
-      "y": 0,
-    }
-  }
+<View
   style={
     Object {
+      "backgroundColor": "rgb(249, 249, 251)",
       "flex": 1,
       "height": "100%",
     }
@@ -199,5 +181,5 @@ exports[`LikedContentFeedConnected component renders LikedContentFeedConnected 1
       </View>
     </View>
   </RCTScrollView>
-</BVLinearGradient>
+</View>
 `;
