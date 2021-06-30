@@ -65,4 +65,4 @@ const useLike = (nodeId) => {
   return [isLiked, like];
 };
 
-export default useLiked;
+export default useLike;
