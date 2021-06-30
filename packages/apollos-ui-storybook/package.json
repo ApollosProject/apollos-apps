@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"No tests here!\""
   },
-  "version": "2.24.0",
+  "version": "2.25.0",
   "main": "./src/index.js",
   "peerDependencies": {
     "@apollosproject/ui-analytics": "*",
@@ -18,10 +18,10 @@
     "@apollosproject/ui-onboarding": "*",
     "@apollosproject/ui-passes": "*",
     "@apollosproject/ui-scripture": "*",
+    "@react-native-community/async-storage": "*",
     "react": "*",
     "react-native": "*",
     "react-native-linear-gradient": "*",
-    "@react-native-community/async-storage": "*",
     "react-native-svg": "*"
   },
   "dependencies": {
