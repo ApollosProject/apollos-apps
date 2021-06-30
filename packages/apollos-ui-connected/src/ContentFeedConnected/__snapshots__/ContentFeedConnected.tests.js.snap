@@ -5,8 +5,8 @@ exports[`content feed query component renders a feedview after successful query 
   style={
     Object {
       "backgroundColor": "rgb(249, 249, 251)",
-      "flex": 0,
-      "height": undefined,
+      "flex": 1,
+      "height": "100%",
     }
   }
 >
@@ -122,8 +122,8 @@ exports[`content feed query component renders a feedview after successful query 
                   Object {
                     "backgroundColor": "rgb(249, 249, 251)",
                     "bottom": 0,
-                    "flex": 0,
-                    "height": undefined,
+                    "flex": 1,
+                    "height": "100%",
                     "left": 0,
                     "position": "absolute",
                     "right": 0,
@@ -153,8 +153,8 @@ exports[`content feed query component renders a feedview after successful query 
                     Object {
                       "backgroundColor": "rgba(242, 242, 247, 0.8)",
                       "bottom": 0,
-                      "flex": 0,
-                      "height": undefined,
+                      "flex": 1,
+                      "height": "100%",
                       "left": 0,
                       "position": "absolute",
                       "right": 0,
@@ -321,8 +321,8 @@ exports[`content feed query component renders a feedview after successful query 
                   Object {
                     "backgroundColor": "rgb(249, 249, 251)",
                     "bottom": 0,
-                    "flex": 0,
-                    "height": undefined,
+                    "flex": 1,
+                    "height": "100%",
                     "left": 0,
                     "position": "absolute",
                     "right": 0,
@@ -352,8 +352,8 @@ exports[`content feed query component renders a feedview after successful query 
                     Object {
                       "backgroundColor": "rgba(242, 242, 247, 0.8)",
                       "bottom": 0,
-                      "flex": 0,
-                      "height": undefined,
+                      "flex": 1,
+                      "height": "100%",
                       "left": 0,
                       "position": "absolute",
                       "right": 0,

@@ -23,8 +23,8 @@ Array [
     style={
       Object {
         "backgroundColor": "red",
-        "flex": 0,
-        "height": undefined,
+        "flex": 1,
+        "height": "100%",
       }
     }
   />,
@@ -54,8 +54,8 @@ Array [
     style={
       Object {
         "backgroundColor": "rgb(249, 249, 251)",
-        "flex": 0,
-        "height": undefined,
+        "flex": 1,
+        "height": "100%",
       }
     }
   />,
@@ -86,8 +86,8 @@ Array [
     style={
       Object {
         "backgroundColor": "rgba(142, 142, 147, 0.2)",
-        "flex": 0,
-        "height": undefined,
+        "flex": 1,
+        "height": "100%",
       }
     }
   />,
@@ -118,8 +118,8 @@ Array [
     style={
       Object {
         "backgroundColor": "#FFFFFF",
-        "flex": 0,
-        "height": undefined,
+        "flex": 1,
+        "height": "100%",
       }
     }
   />,

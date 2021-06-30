@@ -5,8 +5,8 @@ exports[`LikedContentFeedConnected component renders LikedContentFeedConnected 1
   style={
     Object {
       "backgroundColor": "rgb(249, 249, 251)",
-      "flex": 0,
-      "height": undefined,
+      "flex": 1,
+      "height": "100%",
     }
   }
 >

@@ -278,8 +278,8 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                     style={
                       Object {
                         "backgroundColor": "rgb(249, 249, 251)",
-                        "flex": 0,
-                        "height": undefined,
+                        "flex": 1,
+                        "height": "100%",
                       }
                     }
                   >
@@ -643,8 +643,8 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                       style={
                         Object {
                           "backgroundColor": "rgb(249, 249, 251)",
-                          "flex": 0,
-                          "height": undefined,
+                          "flex": 1,
+                          "height": "100%",
                         }
                       }
                     >
@@ -1408,8 +1408,8 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                     style={
                       Object {
                         "backgroundColor": "rgb(249, 249, 251)",
-                        "flex": 0,
-                        "height": undefined,
+                        "flex": 1,
+                        "height": "100%",
                       }
                     }
                   >
@@ -1779,8 +1779,8 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                       style={
                         Object {
                           "backgroundColor": "rgb(249, 249, 251)",
-                          "flex": 0,
-                          "height": undefined,
+                          "flex": 1,
+                          "height": "100%",
                         }
                       }
                     >

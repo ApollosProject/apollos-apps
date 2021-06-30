@@ -5,7 +5,7 @@ import { View } from 'react-native';
 import styled from '../styled';
 
 const BackgroundView = styled(
-  ({ theme, material, flexed }) => ({
+  ({ theme, material = 'screen', flexed = true }) => ({
     backgroundColor:
       theme?.colors?.background[material] || theme?.colors?.background?.screen,
     flex: flexed ? 1 : 0,
