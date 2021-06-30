@@ -39,20 +39,7 @@ storiesOf('ui-kit/FeaturedCard', module)
       ]}
     />
   ))
-  .add('actionIcon', () => (
-    <FeaturedCard
-      title={
-        'Are you telling me that you built a time machine out of a DeLorean?'
-      }
-      coverImage={[
-        {
-          uri: 'https://picsum.photos/800/1600/?random',
-        },
-      ]}
-      actionIcon={'umbrella'}
-      hasAction
-    />
-  ))
+
   .add('summary', () => (
     <FeaturedCard
       title={
@@ -68,19 +55,7 @@ storiesOf('ui-kit/FeaturedCard', module)
       }
     />
   ))
-  .add('hasAction', () => (
-    <FeaturedCard
-      title={
-        'Are you telling me that you built a time machine out of a DeLorean?'
-      }
-      coverImage={[
-        {
-          uri: 'https://picsum.photos/800/1600/?random',
-        },
-      ]}
-      hasAction
-    />
-  ))
+
   .add('isLiked/false', () => (
     <FeaturedCard
       title={
@@ -120,37 +95,7 @@ storiesOf('ui-kit/FeaturedCard', module)
       isLive
     />
   ))
-  .add('isLoading', () => (
-    <FeaturedCard
-      title={
-        'Are you telling me that you built a time machine out of a DeLorean?'
-      }
-      coverImage={[
-        {
-          uri: 'https://picsum.photos/800/1600/?random',
-        },
-      ]}
-      summary={
-        'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
-      }
-      hasAction
-      isLive
-      isLoading
-    />
-  ))
-  .add('LabelComponent', () => (
-    <FeaturedCard
-      title={
-        'Are you telling me that you built a time machine out of a DeLorean?'
-      }
-      coverImage={[
-        {
-          uri: 'https://picsum.photos/800/1600/?random',
-        },
-      ]}
-      LabelComponent={<CardLabel title={'Custom LabelComponent'} />}
-    />
-  ))
+  .add('isLoading', () => <FeaturedCard isLoading />)
   .add('labelText', () => (
     <FeaturedCard
       title={

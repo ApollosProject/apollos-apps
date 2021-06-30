@@ -186,7 +186,7 @@ const mocks = {
   Mutation: () => ({
     updateLikeNode: (root, { input }) => {
       likes[input.nodeId] = input.operation === 'Like';
-      console.log('likes', likes);
+
       return {
         __typename: input.nodeId.split(':')[0],
         id: input.nodeId,
@@ -198,13 +198,6 @@ const mocks = {
 };
 
 storiesOf('ui-connected/NodeSingleConnected', module)
-  .addDecorator((story) => (
-    <BackgroundView>
-      <Navigator>
-        <Screen name="story">{story}</Screen>
-      </Navigator>
-    </BackgroundView>
-  ))
   .addDecorator(ApolloStorybookDecorator({ mocks }))
   .add('example', () => (
     <NodeSingleConnected nodeId={'UniversalContentItem:123'} />

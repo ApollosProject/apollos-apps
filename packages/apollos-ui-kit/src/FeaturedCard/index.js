@@ -56,24 +56,19 @@ const LiveIcon = withTheme(
   'ui-kit.FeaturedCard.LiveIcon'
 )(Icon);
 
-const renderLabel = (summary, LabelComponent, labelText, isLive, theme) => {
-  let ComponentToRender = null;
+const renderLabel = (summary, labelText, isLive, theme) => {
+  if (!labelText && !isLive) return null;
 
-  if (LabelComponent) {
-    ComponentToRender = LabelComponent;
-  } else if (labelText || isLive) {
-    ComponentToRender = (
-      <Label
-        customTheme={theme}
-        hasSummary={summary}
-        isLive={isLive}
-        labelText={labelText}
-        IconComponent={isLive ? LiveIcon : null}
-      />
-    );
-  }
-
-  return ComponentToRender;
+  return (
+    <Label
+      customTheme={theme}
+      hasSummary={summary}
+      isLive={isLive}
+      labelText={labelText}
+      icon="live-dot"
+      IconComponent={isLive ? LiveIcon : null}
+    />
+  );
 };
 
 const FeaturedCard = withIsLoading(
@@ -100,12 +95,12 @@ const FeaturedCard = withIsLoading(
           overlayType={'featured'}
           isLoading={isLoading}
         />
-        {renderLabel(summary, LabelComponent, labelText, isLive, theme)}
         <ContentTitles
           isLiked={isLiked}
           title={title}
           summary={summary}
           featured
+          label={renderLabel(summary, LabelComponent, labelText, isLive, theme)}
         />
       </StyledCard>
     </ThemeMixin>

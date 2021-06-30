@@ -42,13 +42,13 @@ const Container = styled(
 )(PaddedView);
 
 const ContentTitles = ({
+  label,
   title,
   summary,
-  // channelLabel, TODO
-  // channelIcon, TODO
   featured,
   micro,
   isLoading = false,
+  isLiked,
   onPressLike,
   onPressShare,
 }) => {
@@ -66,7 +66,8 @@ const ContentTitles = ({
 
   return (
     <Container>
-      {title ? (
+      {label}
+      {title || isLoading ? (
         <Title
           numberOfLines={micro && summary ? 1 : 3}
           isLoading={!title && isLoading}
@@ -74,7 +75,7 @@ const ContentTitles = ({
           <TitleText>{title}</TitleText>
         </Title>
       ) : null}
-      {summary ? (
+      {summary || isLoading ? (
         <Summary
           numberOfLines={micro ? 2 : 3}
           isLoading={!summary && isLoading}
@@ -83,16 +84,22 @@ const ContentTitles = ({
         </Summary>
       ) : null}
 
-      <SocialBar onPressLike={onPressLike} onPressShare={onPressShare} />
+      <SocialBar
+        isLiked={isLiked}
+        onPressLike={onPressLike}
+        onPressShare={onPressShare}
+      />
     </Container>
   );
 };
 
 ContentTitles.propTypes = {
+  label: PropTypes.element,
   title: PropTypes.string,
   summary: PropTypes.string,
   featured: PropTypes.bool,
   micro: PropTypes.bool,
+  isLiked: PropTypes.bool,
   onPressLike: PropTypes.func,
   onPressShare: PropTypes.func,
   isLoading: PropTypes.bool,

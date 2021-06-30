@@ -70,11 +70,11 @@ const SocialBar = ({ onPressLike, onPressShare, isLiked, children, style }) => {
 
   return (
     <Container style={[containerStyle, style]}>
-      {onPressLike ? (
+      {onPressLike || isLiked !== undefined ? (
         <Touchable onPress={onPressLike}>
           <TouchableIcon name={isLiked ? 'like-solid' : 'like'} />
           <Spacer />
-          <TouchableText>Like</TouchableText>
+          <TouchableText>Like{isLiked ? 'd' : ''}</TouchableText>
         </Touchable>
       ) : null}
       {children}
