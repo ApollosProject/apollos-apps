@@ -19,6 +19,11 @@ const setupModel = configureModel(({ sequelize }) => {
     as: 'coverImage',
     foreignKey: 'coverImageId',
   });
+
+  sequelize.models.contentItem.belongsTo(sequelize.models.contentItem, {
+    as: 'parent',
+    foreignKey: 'parentId',
+  });
 });
 
 export { createModel, setupModel };
