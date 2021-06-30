@@ -9,7 +9,6 @@ export AddCommentFeatureConnected, {
 export ConnectScreenConnected from './ConnectScreenConnected';
 export ContentCardConnected, {
   ContentCardComponentMapper,
-  contentCardComponentMapper, // TODO: Update to `ContentCardComponentMapper` export below is for temporary backwards compatibility.
   GET_CONTENT_CARD,
 } from './ContentCardConnected';
 export ContentNodeConnected, { GET_CONTENT_NODE } from './ContentNodeConnected';
@@ -59,7 +58,6 @@ export HorizontalCardListFeatureConnected, {
   GET_HORIZONTAL_CARD_LIST_FEATURE,
 } from './HorizontalCardListFeatureConnected';
 export HorizontalContentCardConnected, {
-  horizontalContentCardComponentMapper,
   HorizontalContentCardComponentMapper,
 } from './HorizontalContentCardConnected';
 export HorizontalContentSeriesFeedConnected, {
