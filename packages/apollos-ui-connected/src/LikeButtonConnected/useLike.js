@@ -8,7 +8,7 @@ import UPDATE_LIKE_NODE from './updateLikeNode';
 import GET_LIKED_NODE from './getLikedNode';
 import updateLikedContent from './updateLikedContent';
 
-const useLiked = (nodeId) => {
+const useLike = (nodeId) => {
   const { data: { node = {} } = {}, loading } = useQuery(GET_LIKED_NODE, {
     variables: { nodeId },
   });
