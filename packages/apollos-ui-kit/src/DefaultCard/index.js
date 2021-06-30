@@ -37,8 +37,8 @@ const renderLabel = (isLoading, LabelComponent, labelText, summary, isLive) => {
         hasSummary={summary}
         title={labelText || (isLive ? 'Live' : null)}
         type={'secondary'}
-        icon={'live-dot'}
-        IconComponent={isLive ? LiveIcon : null}
+        icon={isLive ? 'live-dot' : undefined}
+        IconComponent={isLive ? LiveIcon : undefined}
       />
     );
   }
@@ -81,7 +81,7 @@ DefaultCard.propTypes = {
     PropTypes.arrayOf(ImageSourceType),
     ImageSourceType,
   ]),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   isLiked: PropTypes.bool,
   isLive: PropTypes.bool,
   LabelComponent: PropTypes.element,

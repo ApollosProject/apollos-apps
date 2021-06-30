@@ -2,12 +2,8 @@ import React from 'react';
 
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { times } from 'lodash';
-import { BackgroundView } from '@apollosproject/ui-kit';
 import { ApolloStorybookDecorator } from '@apollosproject/ui-test-utils';
-import { createStackNavigator } from '@react-navigation/stack';
 import NodeSingleConnected from './index';
-
-const { Navigator, Screen } = createStackNavigator();
 
 const likes = {};
 

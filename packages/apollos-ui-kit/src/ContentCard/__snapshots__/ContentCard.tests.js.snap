@@ -168,7 +168,6 @@ Array [
           }
         >
           <View
-            flexed={false}
             style={
               Object {
                 "alignItems": "center",
@@ -179,9 +178,9 @@ Array [
           >
             <RNSVGSvgView
               align="xMidYMid"
-              bbHeight={19.2}
-              bbWidth={19.2}
-              height={19.2}
+              bbHeight={32}
+              bbWidth={32}
+              height={32}
               meetOrSlice={0}
               minX={0}
               minY={0}
@@ -195,14 +194,14 @@ Array [
                   null,
                   Object {
                     "flex": 0,
-                    "height": 19,
-                    "width": 19,
+                    "height": 32,
+                    "width": 32,
                   },
                 ]
               }
               vbHeight={24}
               vbWidth={24}
-              width={19.2}
+              width={32}
             >
               <RNSVGGroup
                 fill={
@@ -292,28 +291,18 @@ Array [
                 />
               </RNSVGGroup>
             </RNSVGSvgView>
-            <View
+            <Text
               style={
                 Object {
-                  "paddingHorizontal": 4,
+                  "color": "rgba(39, 39, 46, 0.6)",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
                 }
               }
-              withIcon="like"
             >
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(39, 39, 46, 0.3)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
-                  }
-                }
-                tint="rgba(39, 39, 46, 0.3)"
-              >
-                16.8k
-              </Text>
-            </View>
+              16.8k
+            </Text>
           </View>
         </View>
       </View>
@@ -397,6 +386,30 @@ Array [
         <View
           style={
             Object {
+              "alignSelf": "stretch",
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 24,
+              "marginVertical": 1.8000000000000007,
+              "width": "100%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 16,
+              "marginVertical": 5,
+              "width": "100%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 8,
@@ -445,7 +458,6 @@ Array [
           }
         >
           <View
-            flexed={false}
             style={
               Object {
                 "alignItems": "center",
@@ -454,37 +466,92 @@ Array [
               }
             }
           >
-            <View
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={32}
+              bbWidth={32}
+              fill="rgba(39, 39, 46, 0.3)"
+              height={32}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
               style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 19.2,
-                  "width": 19.2,
-                }
-              }
-            />
-            <View
-              style={
-                Object {
-                  "paddingHorizontal": 4,
-                }
-              }
-              withIcon="empty"
-            >
-              <View
-                style={
+                Array [
                   Object {
-                    "alignSelf": "stretch",
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 16,
-                    "height": 12,
-                    "marginVertical": 3,
-                    "width": "50%",
-                  }
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  undefined,
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 32,
+                    "width": 32,
+                  },
+                ]
+              }
+              vbHeight={24}
+              vbWidth={24}
+              width={32}
+            >
+              <RNSVGGroup
+                fill={
+                  Array [
+                    0,
+                    1294411566,
+                  ]
                 }
+                fillOpacity={1}
+                fillRule={1}
+                font={Object {}}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                  ]
+                }
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                x={0}
+                y={0}
               />
-            </View>
+            </RNSVGSvgView>
+            <Text
+              style={
+                Object {
+                  "color": "rgba(39, 39, 46, 0.6)",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
+                }
+              }
+            >
+              empty
+            </Text>
           </View>
         </View>
       </View>
@@ -608,7 +675,6 @@ Array [
           }
         >
           <View
-            flexed={false}
             style={
               Object {
                 "alignItems": "center",
@@ -619,9 +685,9 @@ Array [
           >
             <RNSVGSvgView
               align="xMidYMid"
-              bbHeight={19.2}
-              bbWidth={19.2}
-              height={19.2}
+              bbHeight={32}
+              bbWidth={32}
+              height={32}
               meetOrSlice={0}
               minX={0}
               minY={0}
@@ -635,14 +701,14 @@ Array [
                   null,
                   Object {
                     "flex": 0,
-                    "height": 19,
-                    "width": 19,
+                    "height": 32,
+                    "width": 32,
                   },
                 ]
               }
               vbHeight={24}
               vbWidth={24}
-              width={19.2}
+              width={32}
             >
               <RNSVGGroup
                 fill={
@@ -690,7 +756,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      3427373719,
+                      1425340408,
                     ]
                   }
                   fillOpacity={1}
@@ -732,28 +798,18 @@ Array [
                 />
               </RNSVGGroup>
             </RNSVGSvgView>
-            <View
+            <Text
               style={
                 Object {
-                  "paddingHorizontal": 4,
+                  "color": "rgba(244, 247, 248, 0.6)",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
                 }
               }
-              withIcon="like"
             >
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(73, 146, 151, 0.8)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
-                  }
-                }
-                tint="rgba(73, 146, 151, 0.8)"
-              >
-                150
-              </Text>
-            </View>
+              150
+            </Text>
           </View>
         </View>
       </View>
@@ -919,7 +975,6 @@ Array [
           }
         >
           <View
-            flexed={false}
             style={
               Object {
                 "alignItems": "center",
@@ -930,9 +985,9 @@ Array [
           >
             <RNSVGSvgView
               align="xMidYMid"
-              bbHeight={19.2}
-              bbWidth={19.2}
-              height={19.2}
+              bbHeight={32}
+              bbWidth={32}
+              height={32}
               meetOrSlice={0}
               minX={0}
               minY={0}
@@ -946,14 +1001,14 @@ Array [
                   null,
                   Object {
                     "flex": 0,
-                    "height": 19,
-                    "width": 19,
+                    "height": 32,
+                    "width": 32,
                   },
                 ]
               }
               vbHeight={24}
               vbWidth={24}
-              width={19.2}
+              width={32}
             >
               <RNSVGGroup
                 fill={
@@ -1043,28 +1098,18 @@ Array [
                 />
               </RNSVGGroup>
             </RNSVGSvgView>
-            <View
+            <Text
               style={
                 Object {
-                  "paddingHorizontal": 4,
+                  "color": "rgba(39, 39, 46, 0.6)",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
                 }
               }
-              withIcon="like"
             >
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(39, 39, 46, 0.3)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
-                  }
-                }
-                tint="rgba(39, 39, 46, 0.3)"
-              >
-                150
-              </Text>
-            </View>
+              150
+            </Text>
           </View>
         </View>
       </View>
@@ -1251,7 +1296,6 @@ Array [
           }
         >
           <View
-            flexed={false}
             style={
               Object {
                 "alignItems": "center",
@@ -1262,9 +1306,9 @@ Array [
           >
             <RNSVGSvgView
               align="xMidYMid"
-              bbHeight={19.2}
-              bbWidth={19.2}
-              height={19.2}
+              bbHeight={32}
+              bbWidth={32}
+              height={32}
               meetOrSlice={0}
               minX={0}
               minY={0}
@@ -1278,14 +1322,14 @@ Array [
                   null,
                   Object {
                     "flex": 0,
-                    "height": 19,
-                    "width": 19,
+                    "height": 32,
+                    "width": 32,
                   },
                 ]
               }
               vbHeight={24}
               vbWidth={24}
-              width={19.2}
+              width={32}
             >
               <RNSVGGroup
                 fill={
@@ -1375,28 +1419,18 @@ Array [
                 />
               </RNSVGGroup>
             </RNSVGSvgView>
-            <View
+            <Text
               style={
                 Object {
-                  "paddingHorizontal": 4,
+                  "color": "rgba(39, 39, 46, 0.6)",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
                 }
               }
-              withIcon="like"
             >
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(39, 39, 46, 0.3)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
-                  }
-                }
-                tint="rgba(39, 39, 46, 0.3)"
-              >
-                16.8k
-              </Text>
-            </View>
+              16.8k
+            </Text>
           </View>
         </View>
       </View>
@@ -1486,6 +1520,30 @@ Array [
         <View
           style={
             Object {
+              "alignSelf": "stretch",
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 16,
+              "marginVertical": 4,
+              "width": "80%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "backgroundColor": "#A5A5A5",
+              "borderRadius": 16,
+              "height": 12,
+              "marginVertical": 3,
+              "width": "100%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 8,
@@ -1534,7 +1592,6 @@ Array [
           }
         >
           <View
-            flexed={false}
             style={
               Object {
                 "alignItems": "center",
@@ -1543,37 +1600,92 @@ Array [
               }
             }
           >
-            <View
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight={32}
+              bbWidth={32}
+              fill="rgba(39, 39, 46, 0.3)"
+              height={32}
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
               style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 19.2,
-                  "width": 19.2,
-                }
-              }
-            />
-            <View
-              style={
-                Object {
-                  "paddingHorizontal": 4,
-                }
-              }
-              withIcon="empty"
-            >
-              <View
-                style={
+                Array [
                   Object {
-                    "alignSelf": "stretch",
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 16,
-                    "height": 12,
-                    "marginVertical": 3,
-                    "width": "50%",
-                  }
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  undefined,
+                  null,
+                  Object {
+                    "flex": 0,
+                    "height": 32,
+                    "width": 32,
+                  },
+                ]
+              }
+              vbHeight={24}
+              vbWidth={24}
+              width={32}
+            >
+              <RNSVGGroup
+                fill={
+                  Array [
+                    0,
+                    1294411566,
+                  ]
                 }
+                fillOpacity={1}
+                fillRule={1}
+                font={Object {}}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                  ]
+                }
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={null}
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+                vectorEffect={0}
+                x={0}
+                y={0}
               />
-            </View>
+            </RNSVGSvgView>
+            <Text
+              style={
+                Object {
+                  "color": "rgba(39, 39, 46, 0.6)",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
+                }
+              }
+            >
+              empty
+            </Text>
           </View>
         </View>
       </View>
@@ -1732,7 +1844,6 @@ Array [
           }
         >
           <View
-            flexed={false}
             style={
               Object {
                 "alignItems": "center",
@@ -1743,9 +1854,9 @@ Array [
           >
             <RNSVGSvgView
               align="xMidYMid"
-              bbHeight={19.2}
-              bbWidth={19.2}
-              height={19.2}
+              bbHeight={32}
+              bbWidth={32}
+              height={32}
               meetOrSlice={0}
               minX={0}
               minY={0}
@@ -1759,14 +1870,14 @@ Array [
                   null,
                   Object {
                     "flex": 0,
-                    "height": 19,
-                    "width": 19,
+                    "height": 32,
+                    "width": 32,
                   },
                 ]
               }
               vbHeight={24}
               vbWidth={24}
-              width={19.2}
+              width={32}
             >
               <RNSVGGroup
                 fill={
@@ -1856,28 +1967,18 @@ Array [
                 />
               </RNSVGGroup>
             </RNSVGSvgView>
-            <View
+            <Text
               style={
                 Object {
-                  "paddingHorizontal": 4,
+                  "color": "rgba(39, 39, 46, 0.6)",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
                 }
               }
-              withIcon="like"
             >
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(39, 39, 46, 0.3)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
-                  }
-                }
-                tint="rgba(39, 39, 46, 0.3)"
-              >
-                150
-              </Text>
-            </View>
+              150
+            </Text>
           </View>
         </View>
       </View>
@@ -1991,7 +2092,6 @@ Array [
           }
         >
           <View
-            flexed={false}
             style={
               Object {
                 "alignItems": "center",
@@ -2002,9 +2102,9 @@ Array [
           >
             <RNSVGSvgView
               align="xMidYMid"
-              bbHeight={19.2}
-              bbWidth={19.2}
-              height={19.2}
+              bbHeight={32}
+              bbWidth={32}
+              height={32}
               meetOrSlice={0}
               minX={0}
               minY={0}
@@ -2018,14 +2118,14 @@ Array [
                   null,
                   Object {
                     "flex": 0,
-                    "height": 19,
-                    "width": 19,
+                    "height": 32,
+                    "width": 32,
                   },
                 ]
               }
               vbHeight={24}
               vbWidth={24}
-              width={19.2}
+              width={32}
             >
               <RNSVGGroup
                 fill={
@@ -2073,7 +2173,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      3427373719,
+                      1425340408,
                     ]
                   }
                   fillOpacity={1}
@@ -2115,28 +2215,18 @@ Array [
                 />
               </RNSVGGroup>
             </RNSVGSvgView>
-            <View
+            <Text
               style={
                 Object {
-                  "paddingHorizontal": 4,
+                  "color": "rgba(244, 247, 248, 0.6)",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
                 }
               }
-              withIcon="like"
             >
-              <Text
-                style={
-                  Object {
-                    "color": "rgba(73, 146, 151, 0.8)",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
-                  }
-                }
-                tint="rgba(73, 146, 151, 0.8)"
-              >
-                150
-              </Text>
-            </View>
+              150
+            </Text>
           </View>
         </View>
       </View>

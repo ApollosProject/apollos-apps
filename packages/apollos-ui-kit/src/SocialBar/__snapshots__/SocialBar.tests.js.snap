@@ -184,6 +184,7 @@ Array [
         }
       >
         Like
+        d
       </Text>
     </View>
     <View
@@ -531,6 +532,7 @@ Array [
         }
       >
         Like
+        
       </Text>
     </View>
   </View>,
@@ -889,6 +891,7 @@ Array [
         }
       >
         Like
+        
       </Text>
     </View>
     <View

@@ -205,16 +205,24 @@ Array [
           style={
             Object {
               "alignItems": "center",
-              "alignSelf": "stretch",
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "borderWidth": 0,
-              "height": 32,
-              "paddingHorizontal": 12,
-              "width": 64,
+              "flex": null,
+              "flexDirection": "row",
             }
           }
-        />
+        >
+          <Text
+            style={
+              Object {
+                "color": "rgba(244, 247, 248, 0.6)",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 16,
+                "lineHeight": 24,
+              }
+            }
+          >
+            Loading!
+          </Text>
+        </View>
         <View
           style={
             Object {
@@ -986,36 +994,21 @@ Array [
         }
       >
         <View
-          bordered={false}
-          disabled={false}
-          pill={false}
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.4)",
-              "borderColor": "rgba(255, 255, 255, 0.4)",
-              "borderRadius": 16,
-              "borderWidth": 0,
-              "elevation": 2,
+              "flex": null,
               "flexDirection": "row",
-              "height": 32,
-              "justifyContent": "center",
-              "opacity": 1,
-              "overflow": "hidden",
-              "paddingHorizontal": 12,
             }
           }
         >
           <Text
             style={
               Object {
-                "alignItems": "center",
-                "color": "#FFFFFF",
+                "color": "rgba(244, 247, 248, 0.6)",
                 "fontFamily": "InterUI-Bold",
-                "fontSize": 12,
-                "justifyContent": "center",
-                "lineHeight": 18,
-                "textAlign": "center",
+                "fontSize": 16,
+                "lineHeight": 24,
               }
             }
           >
@@ -1141,36 +1134,21 @@ Array [
         }
       >
         <View
-          bordered={false}
-          disabled={false}
-          pill={false}
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.4)",
-              "borderColor": "rgba(255, 255, 255, 0.4)",
-              "borderRadius": 16,
-              "borderWidth": 0,
-              "elevation": 2,
+              "flex": null,
               "flexDirection": "row",
-              "height": 32,
-              "justifyContent": "center",
-              "opacity": 1,
-              "overflow": "hidden",
-              "paddingHorizontal": 12,
             }
           }
         >
           <Text
             style={
               Object {
-                "alignItems": "center",
-                "color": "#FFFFFF",
+                "color": "rgba(244, 247, 248, 0.6)",
                 "fontFamily": "InterUI-Bold",
-                "fontSize": 12,
-                "justifyContent": "center",
-                "lineHeight": 18,
-                "textAlign": "center",
+                "fontSize": 16,
+                "lineHeight": 24,
               }
             }
           >

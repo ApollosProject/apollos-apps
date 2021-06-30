@@ -32,12 +32,13 @@ const LabelText = styled(({ theme }) => ({
   color: theme.colors.text.secondary,
 }))(H4);
 
-const ChannelLabel = ({ label, icon, IconComponent = Icon, isLoading }) => {
+const ChannelLabel = ({ label, icon, IconComponent, isLoading }) => {
   const theme = useTheme();
+  const ComponentForIcon = IconComponent || Icon;
   return (
     <Wrapper>
       {icon || isLoading ? (
-        <IconComponent
+        <ComponentForIcon
           name={icon}
           fill={theme.colors.text.tertiary}
           isLoading={!icon && isLoading}
@@ -53,7 +54,10 @@ const ChannelLabel = ({ label, icon, IconComponent = Icon, isLoading }) => {
 ChannelLabel.propTypes = {
   label: PropTypes.string,
   icon: PropTypes.string,
-  IconComponent: PropTypes.elementType,
+  IconComponent: PropTypes.oneOfType([
+    PropTypes.elementType,
+    PropTypes.element,
+  ]),
   isLoading: PropTypes.bool,
 };
 

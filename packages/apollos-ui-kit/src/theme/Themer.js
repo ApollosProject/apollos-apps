@@ -79,7 +79,7 @@ function NamedWithTheme({ name, Component, initialProps }) {
 
 NamedWithTheme.propTypes = {
   name: PropTypes.string.isRequired,
-  Component: PropTypes.shape({}),
+  Component: PropTypes.elementType,
   initialProps: PropTypes.shape({}),
 };
 
