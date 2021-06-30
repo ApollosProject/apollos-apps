@@ -318,6 +318,7 @@ export default class ContentItem extends RockApolloDataSource {
         'br',
         'caption',
         'img',
+        'video',
         'div',
       ],
       allowedAttributes: {
@@ -325,6 +326,7 @@ export default class ContentItem extends RockApolloDataSource {
         '*': ['style', 'class'],
         a: ['href', 'target'],
         img: ['src'],
+        video: ['src', 'type'],
       },
       transformTags: {
         img: (tagName, { src }) => {
