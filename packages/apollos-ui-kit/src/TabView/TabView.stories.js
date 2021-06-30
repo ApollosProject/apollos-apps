@@ -2,7 +2,7 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
-import TabView, { SceneMap } from '.';
+import TabView, { SceneMap } from './index';
 
 const styles = StyleSheet.create({
   firstRoute: { flex: 1, backgroundColor: '#ff4081' }, // eslint-disable-line

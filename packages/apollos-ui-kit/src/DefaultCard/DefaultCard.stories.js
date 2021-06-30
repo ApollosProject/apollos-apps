@@ -6,7 +6,7 @@ import BackgroundView from '../BackgroundView';
 import CenteredView from '../CenteredView';
 import { CardLabel } from '../Card';
 
-import DefaultCard from '.';
+import DefaultCard from './index';
 
 storiesOf('ui-kit/DefaultCard', module)
   .addDecorator((story) => (

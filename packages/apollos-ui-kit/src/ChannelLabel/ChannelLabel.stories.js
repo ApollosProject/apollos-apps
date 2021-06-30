@@ -6,7 +6,7 @@ import CenteredView from '../CenteredView';
 import BackgroundView from '../BackgroundView';
 import styled from '../styled';
 
-import ChannelLabel from '.';
+import ChannelLabel from './index';
 
 storiesOf('ui-kit/ChannelLabel', module)
   .addDecorator((getStory) => (

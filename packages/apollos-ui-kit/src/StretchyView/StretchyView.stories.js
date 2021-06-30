@@ -14,7 +14,7 @@ import {
 } from '@apollosproject/ui-kit';
 
 import StretchyViewReanimated from './ReanimatedStretchyView';
-import StretchyView from '.';
+import StretchyView from './index';
 
 const { ScrollView } = Animated;
 

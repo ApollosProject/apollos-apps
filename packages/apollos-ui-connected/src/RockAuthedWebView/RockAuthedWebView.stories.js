@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
-import RockAuthedWebView from '.';
+import RockAuthedWebView from './index';
 
 storiesOf('ui-connected/RockAuthedWebView', module).add('Example', () => (
   <RockAuthedWebView

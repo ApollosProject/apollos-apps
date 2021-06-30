@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-community/async-storage';
 import gql from 'graphql-tag';
-import { ONBOARDING_VERSION } from './Onboarding';
+import ONBOARDING_VERSION from './Onboarding/version';
 
 export const WITH_USER_ID = gql`
   query currentUserId {
