@@ -493,7 +493,7 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#FFFFFF",
+                "backgroundColor": "#1C1C1E",
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
@@ -632,7 +632,7 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#FFFFFF",
+                "backgroundColor": "#1C1C1E",
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
@@ -771,7 +771,7 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#FFFFFF",
+                "backgroundColor": "#1C1C1E",
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
@@ -910,7 +910,7 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#FFFFFF",
+                "backgroundColor": "#1C1C1E",
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
@@ -1049,7 +1049,7 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#FFFFFF",
+                "backgroundColor": "#1C1C1E",
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,

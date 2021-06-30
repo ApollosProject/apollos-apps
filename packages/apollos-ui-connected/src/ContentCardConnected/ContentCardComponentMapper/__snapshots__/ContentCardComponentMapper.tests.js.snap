@@ -163,6 +163,66 @@ exports[`The CampaignItemListFeature component should render 2`] = `
       }
     }
   >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgb(249, 249, 251)",
+            "flex": 1,
+            "height": "100%",
+          },
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+        ]
+      }
+    >
+      <Image
+        blurRadius={128}
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "",
+            },
+          ]
+        }
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(242, 242, 247, 0.8)",
+              "flex": 1,
+              "height": "100%",
+            },
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+          ]
+        }
+      />
+    </View>
     <Image
       fadeDuration={250}
       isLoading={true}
@@ -177,7 +237,7 @@ exports[`The CampaignItemListFeature component should render 2`] = `
       }
       style={
         Object {
-          "aspectRatio": 1.2,
+          "aspectRatio": 1,
           "backgroundColor": "#A5A5A5",
           "width": "100%",
         }
@@ -242,10 +302,9 @@ exports[`The CampaignItemListFeature component should render 2`] = `
 
 exports[`The CampaignItemListFeature component should render a Component prop 1`] = `
 <View
-  cardColor="#00676D"
   style={
     Object {
-      "backgroundColor": "#00676D",
+      "backgroundColor": "#FFFFFF",
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
@@ -267,11 +326,69 @@ exports[`The CampaignItemListFeature component should render a Component prop 1`
       }
     }
   >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgb(249, 249, 251)",
+            "flex": 1,
+            "height": "100%",
+          },
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+        ]
+      }
+    >
+      <Image
+        blurRadius={128}
+        fadeDuration={250}
+        onLoad={[Function]}
+        source={
+          Array [
+            Object {
+              "cache": "force-cache",
+              "uri": "https://picsum.photos/800/1600/?random",
+            },
+          ]
+        }
+        style={
+          Object {
+            "backgroundColor": "#A5A5A5",
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(242, 242, 247, 0.8)",
+              "flex": 1,
+              "height": "100%",
+            },
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+          ]
+        }
+      />
+    </View>
     <Image
       fadeDuration={250}
       onLoad={[Function]}
-      overlayColor="#00676D"
-      overlayType="featured"
       source={
         Array [
           Object {
@@ -297,11 +414,152 @@ exports[`The CampaignItemListFeature component should render a Component prop 1`
         }
       }
     >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": null,
+            "flexDirection": "row",
+          }
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight={7}
+          bbWidth={7}
+          height={7}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {
+                "marginRight": 8,
+              },
+              null,
+              Object {
+                "flex": 0,
+                "height": 7,
+                "width": 7,
+              },
+            ]
+          }
+          vbHeight={24}
+          vbWidth={24}
+          width={7}
+        >
+          <RNSVGGroup
+            fill={
+              Array [
+                0,
+                4278190080,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            font={Object {}}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            originX={0}
+            originY={0}
+            propList={Array []}
+            rotation={0}
+            scaleX={1}
+            scaleY={1}
+            skewX={0}
+            skewY={0}
+            stroke={null}
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+            vectorEffect={0}
+            x={0}
+            y={0}
+          >
+            <RNSVGCircle
+              cx="12"
+              cy="12"
+              fill={
+                Array [
+                  0,
+                  1294411566,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              originX={0}
+              originY={0}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              r="12"
+              rotation={0}
+              scaleX={1}
+              scaleY={1}
+              skewX={0}
+              skewY={0}
+              stroke={null}
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+              vectorEffect={0}
+              x={0}
+              y={0}
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+        <Text
+          style={
+            Object {
+              "color": "rgba(39, 39, 46, 0.6)",
+              "fontFamily": "InterUI-Bold",
+              "fontSize": 16,
+              "lineHeight": 24,
+            }
+          }
+        >
+          Live
+        </Text>
+      </View>
       <Text
         numberOfLines={3}
         style={
           Object {
-            "color": "#F4F7F8",
+            "color": "#27272E",
             "fontFamily": "InterUI-Black",
             "fontSize": 36,
             "lineHeight": 41.4,
@@ -311,7 +569,7 @@ exports[`The CampaignItemListFeature component should render a Component prop 1`
         <Text
           style={
             Object {
-              "color": "#F4F7F8",
+              "color": "#27272E",
             }
           }
         >
@@ -324,7 +582,7 @@ exports[`The CampaignItemListFeature component should render a Component prop 1`
         numberOfLines={3}
         style={
           Object {
-            "color": "#F4F7F8",
+            "color": "#27272E",
             "fontFamily": "InterUI-Regular",
             "fontSize": 16,
             "lineHeight": 26,
@@ -334,7 +592,7 @@ exports[`The CampaignItemListFeature component should render a Component prop 1`
         <Text
           style={
             Object {
-              "color": "rgba(244, 247, 248, 0.6)",
+              "color": "rgba(39, 39, 46, 0.6)",
             }
           }
         >

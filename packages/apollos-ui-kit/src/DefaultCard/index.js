@@ -6,12 +6,13 @@ import Card, { CardImage, CardLabel } from '../Card';
 import Icon from '../Icon';
 import { withIsLoading } from '../isLoading';
 import { ImageSourceType } from '../ConnectedImage';
+import BackgroundImageBlur from '../BackgroundImageBlur';
 
 import ContentTitles from '../ContentTitles';
 
-const Image = withTheme(
+const CoverImage = withTheme(
   () => ({
-    minAspectRatio: 1.2,
+    minAspectRatio: 1,
     maxAspectRatio: 1.78,
     maintainAspectRatio: true,
   }),
@@ -48,6 +49,7 @@ const renderLabel = (isLoading, LabelComponent, labelText, summary, isLive) => {
 
 const DefaultCard = withIsLoading(
   ({
+    featured,
     coverImage,
     title,
     isLiked,
@@ -58,8 +60,11 @@ const DefaultCard = withIsLoading(
     isLive,
   }) => (
     <Card isLoading={isLoading}>
-      <Image source={coverImage} />
+      <BackgroundImageBlur source={coverImage} />
+
+      <CoverImage source={coverImage} />
       <ContentTitles
+        featured={featured}
         title={title}
         summary={summary}
         isLiked={isLiked}
@@ -81,16 +86,13 @@ DefaultCard.propTypes = {
     PropTypes.arrayOf(ImageSourceType),
     ImageSourceType,
   ]),
+  featured: PropTypes.bool,
   title: PropTypes.string,
   isLiked: PropTypes.bool,
   isLive: PropTypes.bool,
   LabelComponent: PropTypes.element,
   labelText: PropTypes.string,
   summary: PropTypes.string,
-  theme: PropTypes.shape({
-    type: PropTypes.string,
-    colors: PropTypes.shape({}),
-  }),
 };
 
 DefaultCard.displayName = 'DefaultCard';

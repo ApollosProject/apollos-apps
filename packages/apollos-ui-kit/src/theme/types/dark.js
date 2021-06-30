@@ -4,9 +4,8 @@ const dark = ({ colors, alpha }) => ({
   colors: {
     // Screen and paper on the root theme are deprecated
     // These exist only for backwards compatibility.
-    paper: colors.paper || '#FFFFFF',
-    screen:
-      colors.screen || Color('#F2F2F7').mix(Color('#FFFFFF'), 0.5).string(),
+    paper: colors.paper || '#1C1C1E',
+    screen: colors.screen || colors.black || '#000000',
 
     neutral: {
       gray: colors.gray,
@@ -29,13 +28,28 @@ const dark = ({ colors, alpha }) => ({
       link: colors.secondary,
     },
     background: {
-      paper: colors.paper || '#FFFFFF',
-      screen:
-        colors.screen || Color('#F2F2F7').mix(Color('#FFFFFF'), 0.5).string(),
+      paper: colors.paper || '#1C1C1E',
+      screen: colors.screen || colors.black || '#000000',
       system: Color('#636366').alpha(0.36).string(),
       system2: Color('#636366').alpha(0.32).string(),
       system3: Color('#636366').alpha(0.24).string(),
       system4: Color('#636366').alpha(0.18).string(),
+
+      thick: Color(colors.gray6 || colors.neutral?.gray6 || '#1C1C1E')
+        .alpha(0.92)
+        .string(),
+      regular: Color(colors.gray6 || colors.neutral?.gray6 || '#1C1C1E')
+        .alpha(0.8)
+        .string(),
+      thin: Color(colors.gray6 || colors.neutral?.gray6 || '#1C1C1E')
+        .alpha(0.65)
+        .string(),
+      ultrathin: Color(colors.gray6 || colors.neutral?.gray6 || '#1C1C1E')
+        .alpha(0.4)
+        .string(),
+      chrome: Color(colors.gray6 || colors.paper || '#FFFFFF')
+        .alpha(0.92)
+        .string(),
 
       // deprecated
       secondary: Color(colors.darkTertiary).fade(alpha.medium).string(),

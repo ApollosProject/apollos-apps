@@ -164,33 +164,36 @@ const HighlightCard = withIsLoading(
     summary,
     isLive,
     theme,
-  }) => (
-    <ThemeMixin
-      mixin={{
-        type: get(theme, 'type', 'dark').toLowerCase(), // not sure why we need toLowerCase
-        colors: get(theme, 'colors', {}),
-      }}
-    >
-      <StyledCard isLoading={isLoading}>
-        <Image
-          overlayType={'gradient-bottom'}
-          customTheme={theme}
-          source={coverImage}
-        />
-        <Content>
-          {renderLabel(summary, LabelComponent, labelText, theme, isLive)}
-          {summary
-            ? renderWithSummary(title, actionIcon, summary, hasAction)
-            : renderOnlyTitle(title, actionIcon, hasAction)}
-        </Content>
-        {isLiked != null ? (
-          <LikeIconPositioning>
-            <LikeIcon isLiked={isLiked} />
-          </LikeIconPositioning>
-        ) : null}
-      </StyledCard>
-    </ThemeMixin>
-  )
+  }) =>
+    console.warn(
+      'HighlightCard has been deprecated. Consider replacing with DefaultCard'
+    ) || (
+      <ThemeMixin
+        mixin={{
+          type: get(theme, 'type', 'dark').toLowerCase(), // not sure why we need toLowerCase
+          colors: get(theme, 'colors', {}),
+        }}
+      >
+        <StyledCard isLoading={isLoading}>
+          <Image
+            overlayType={'gradient-bottom'}
+            customTheme={theme}
+            source={coverImage}
+          />
+          <Content>
+            {renderLabel(summary, LabelComponent, labelText, theme, isLive)}
+            {summary
+              ? renderWithSummary(title, actionIcon, summary, hasAction)
+              : renderOnlyTitle(title, actionIcon, hasAction)}
+          </Content>
+          {isLiked != null ? (
+            <LikeIconPositioning>
+              <LikeIcon isLiked={isLiked} />
+            </LikeIconPositioning>
+          ) : null}
+        </StyledCard>
+      </ThemeMixin>
+    )
 );
 
 HighlightCard.propTypes = {

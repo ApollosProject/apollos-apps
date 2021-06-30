@@ -23,7 +23,7 @@ Array [
     inHorizontalList={true}
     style={
       Object {
-        "backgroundColor": "#FFFFFF",
+        "backgroundColor": "#1C1C1E",
         "borderRadius": 16,
         "height": 240,
         "margin": 8,
@@ -142,7 +142,7 @@ Array [
     isLoading={true}
     style={
       Object {
-        "backgroundColor": "#FFFFFF",
+        "backgroundColor": "#1C1C1E",
         "borderRadius": 16,
         "height": 240,
         "margin": 8,
@@ -294,7 +294,7 @@ Array [
     inHorizontalList={true}
     style={
       Object {
-        "backgroundColor": "#FFFFFF",
+        "backgroundColor": "#1C1C1E",
         "borderRadius": 16,
         "height": 240,
         "margin": 8,
@@ -529,7 +529,7 @@ Array [
     inHorizontalList={true}
     style={
       Object {
-        "backgroundColor": "#FFFFFF",
+        "backgroundColor": "#1C1C1E",
         "borderRadius": 16,
         "height": 240,
         "margin": 8,
@@ -654,7 +654,7 @@ Array [
     inHorizontalList={true}
     style={
       Object {
-        "backgroundColor": "#FFFFFF",
+        "backgroundColor": "#1C1C1E",
         "borderRadius": 16,
         "height": 240,
         "margin": 8,
@@ -935,7 +935,7 @@ Array [
     inHorizontalList={true}
     style={
       Object {
-        "backgroundColor": "#FFFFFF",
+        "backgroundColor": "#1C1C1E",
         "borderRadius": 16,
         "height": 240,
         "margin": 8,
@@ -1075,7 +1075,7 @@ Array [
     inHorizontalList={true}
     style={
       Object {
-        "backgroundColor": "#FFFFFF",
+        "backgroundColor": "#1C1C1E",
         "borderRadius": 16,
         "height": 240,
         "margin": 8,
@@ -1215,7 +1215,7 @@ Array [
     inHorizontalList={true}
     style={
       Object {
-        "backgroundColor": "#FFFFFF",
+        "backgroundColor": "#1C1C1E",
         "borderRadius": 16,
         "height": 240,
         "margin": 8,
@@ -1460,7 +1460,7 @@ Array [
     inHorizontalList={true}
     style={
       Object {
-        "backgroundColor": "#FFFFFF",
+        "backgroundColor": "#1C1C1E",
         "borderRadius": 16,
         "height": 240,
         "margin": 8,
@@ -1579,7 +1579,7 @@ Array [
     inHorizontalList={true}
     style={
       Object {
-        "backgroundColor": "#FFFFFF",
+        "backgroundColor": "#1C1C1E",
         "borderRadius": 16,
         "height": 240,
         "margin": 8,

@@ -37,6 +37,22 @@ const light = ({ colors, alpha }) => ({
       system3: Color(colors.gray).alpha(0.12).string(),
       system4: Color(colors.gray).alpha(0.08).string(),
 
+      thick: Color(colors.gray6 || colors.neutral?.gray6 || '#F2F2F7')
+        .alpha(0.92)
+        .string(),
+      regular: Color(colors.gray6 || colors.neutral?.gray6 || '#F2F2F7')
+        .alpha(0.8)
+        .string(),
+      thin: Color(colors.gray6 || colors.neutral?.gray6 || '#F2F2F7')
+        .alpha(0.65)
+        .string(),
+      ultrathin: Color(colors.gray6 || colors.neutral?.gray6 || '#F2F2F7')
+        .alpha(0.4)
+        .string(),
+      chrome: Color(colors.paper || '#FFFFFF')
+        .alpha(0.92)
+        .string(),
+
       // deprecated
       secondary: colors.paper || '#FFFFFF',
       accent: Color(colors.lightTertiary).fade(alpha.medium).string(),

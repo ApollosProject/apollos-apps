@@ -38,7 +38,7 @@ Array [
         style={
           Array [
             Object {
-              "backgroundColor": "rgb(249, 249, 251)",
+              "backgroundColor": "#000000",
               "flex": 1,
               "height": "100%",
             },
@@ -53,7 +53,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={128}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -70,11 +70,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(28, 28, 30, 0.8)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
           }
         />
       </View>
@@ -95,7 +112,7 @@ Array [
         style={
           Array [
             Object {
-              "backgroundColor": "rgb(249, 249, 251)",
+              "backgroundColor": "#000000",
               "flex": 1,
               "height": "100%",
             },
@@ -110,7 +127,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={128}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -127,11 +144,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(28, 28, 30, 0.8)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
           }
         />
       </View>
@@ -152,7 +186,7 @@ Array [
         style={
           Array [
             Object {
-              "backgroundColor": "rgb(249, 249, 251)",
+              "backgroundColor": "#000000",
               "flex": 1,
               "height": "100%",
             },
@@ -167,7 +201,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={128}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -184,11 +218,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(28, 28, 30, 0.8)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
           }
         />
       </View>
@@ -209,7 +260,7 @@ Array [
         style={
           Array [
             Object {
-              "backgroundColor": "rgb(249, 249, 251)",
+              "backgroundColor": "#000000",
               "flex": 1,
               "height": "100%",
             },
@@ -224,7 +275,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={128}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -240,11 +291,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(28, 28, 30, 0.8)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
           }
         />
       </View>
@@ -265,7 +333,7 @@ Array [
         style={
           Array [
             Object {
-              "backgroundColor": "rgb(249, 249, 251)",
+              "backgroundColor": "#000000",
               "flex": 1,
               "height": "100%",
             },
@@ -280,7 +348,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={128}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -296,11 +364,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(28, 28, 30, 0.8)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
           }
         />
       </View>
@@ -843,7 +928,7 @@ Array [
         style={
           Array [
             Object {
-              "backgroundColor": "rgb(249, 249, 251)",
+              "backgroundColor": "#000000",
               "flex": 1,
               "height": "100%",
             },
@@ -858,7 +943,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={128}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -875,11 +960,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(28, 28, 30, 0.8)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
           }
         />
         <View
@@ -1196,7 +1298,7 @@ Array [
         style={
           Array [
             Object {
-              "backgroundColor": "rgb(249, 249, 251)",
+              "backgroundColor": "#000000",
               "flex": 1,
               "height": "100%",
             },
@@ -1211,7 +1313,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={128}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -1228,11 +1330,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(28, 28, 30, 0.8)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
           }
         />
       </View>
@@ -1253,7 +1372,7 @@ Array [
         style={
           Array [
             Object {
-              "backgroundColor": "rgb(249, 249, 251)",
+              "backgroundColor": "#000000",
               "flex": 1,
               "height": "100%",
             },
@@ -1268,7 +1387,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={128}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -1285,11 +1404,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(28, 28, 30, 0.8)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
           }
         />
       </View>
@@ -1310,7 +1446,7 @@ Array [
         style={
           Array [
             Object {
-              "backgroundColor": "rgb(249, 249, 251)",
+              "backgroundColor": "#000000",
               "flex": 1,
               "height": "100%",
             },
@@ -1325,7 +1461,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={128}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -1342,11 +1478,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(28, 28, 30, 0.8)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
           }
         />
       </View>
@@ -1367,7 +1520,7 @@ Array [
         style={
           Array [
             Object {
-              "backgroundColor": "rgb(249, 249, 251)",
+              "backgroundColor": "#000000",
               "flex": 1,
               "height": "100%",
             },
@@ -1382,7 +1535,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={128}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -1398,11 +1551,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(28, 28, 30, 0.8)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
           }
         />
       </View>
@@ -1423,7 +1593,7 @@ Array [
         style={
           Array [
             Object {
-              "backgroundColor": "rgb(249, 249, 251)",
+              "backgroundColor": "#000000",
               "flex": 1,
               "height": "100%",
             },
@@ -1438,7 +1608,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={128}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -1454,11 +1624,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(28, 28, 30, 0.8)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
           }
         />
       </View>
@@ -2023,7 +2210,7 @@ Array [
         style={
           Array [
             Object {
-              "backgroundColor": "rgb(249, 249, 251)",
+              "backgroundColor": "#000000",
               "flex": 1,
               "height": "100%",
             },
@@ -2038,7 +2225,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={128}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -2055,11 +2242,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(28, 28, 30, 0.8)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
           }
         />
       </View>
@@ -2080,7 +2284,7 @@ Array [
         style={
           Array [
             Object {
-              "backgroundColor": "rgb(249, 249, 251)",
+              "backgroundColor": "#000000",
               "flex": 1,
               "height": "100%",
             },
@@ -2095,7 +2299,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={128}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -2112,11 +2316,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(28, 28, 30, 0.8)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
           }
         />
       </View>
@@ -2137,7 +2358,7 @@ Array [
         style={
           Array [
             Object {
-              "backgroundColor": "rgb(249, 249, 251)",
+              "backgroundColor": "#000000",
               "flex": 1,
               "height": "100%",
             },
@@ -2152,7 +2373,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={128}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -2169,11 +2390,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(28, 28, 30, 0.8)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
           }
         />
       </View>
@@ -2194,7 +2432,7 @@ Array [
         style={
           Array [
             Object {
-              "backgroundColor": "rgb(249, 249, 251)",
+              "backgroundColor": "#000000",
               "flex": 1,
               "height": "100%",
             },
@@ -2209,7 +2447,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={128}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -2225,11 +2463,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(28, 28, 30, 0.8)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
           }
         />
       </View>
@@ -2250,7 +2505,7 @@ Array [
         style={
           Array [
             Object {
-              "backgroundColor": "rgb(249, 249, 251)",
+              "backgroundColor": "#000000",
               "flex": 1,
               "height": "100%",
             },
@@ -2265,7 +2520,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={128}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -2281,11 +2536,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(28, 28, 30, 0.8)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
           }
         />
       </View>
@@ -2828,7 +3100,7 @@ Array [
         style={
           Array [
             Object {
-              "backgroundColor": "rgb(249, 249, 251)",
+              "backgroundColor": "#000000",
               "flex": 1,
               "height": "100%",
             },
@@ -2843,7 +3115,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={128}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -2860,11 +3132,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(28, 28, 30, 0.8)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
           }
         />
         <View
@@ -3181,7 +3470,7 @@ Array [
         style={
           Array [
             Object {
-              "backgroundColor": "rgb(249, 249, 251)",
+              "backgroundColor": "#000000",
               "flex": 1,
               "height": "100%",
             },
@@ -3196,7 +3485,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={128}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -3213,11 +3502,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(28, 28, 30, 0.8)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
           }
         />
       </View>
@@ -3238,7 +3544,7 @@ Array [
         style={
           Array [
             Object {
-              "backgroundColor": "rgb(249, 249, 251)",
+              "backgroundColor": "#000000",
               "flex": 1,
               "height": "100%",
             },
@@ -3253,7 +3559,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={128}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -3270,11 +3576,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(28, 28, 30, 0.8)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
           }
         />
       </View>
@@ -3295,7 +3618,7 @@ Array [
         style={
           Array [
             Object {
-              "backgroundColor": "rgb(249, 249, 251)",
+              "backgroundColor": "#000000",
               "flex": 1,
               "height": "100%",
             },
@@ -3310,7 +3633,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={128}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -3327,11 +3650,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(28, 28, 30, 0.8)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
           }
         />
       </View>
@@ -3352,7 +3692,7 @@ Array [
         style={
           Array [
             Object {
-              "backgroundColor": "rgb(249, 249, 251)",
+              "backgroundColor": "#000000",
               "flex": 1,
               "height": "100%",
             },
@@ -3367,7 +3707,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={128}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -3383,11 +3723,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(28, 28, 30, 0.8)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
           }
         />
       </View>
@@ -3408,7 +3765,7 @@ Array [
         style={
           Array [
             Object {
-              "backgroundColor": "rgb(249, 249, 251)",
+              "backgroundColor": "#000000",
               "flex": 1,
               "height": "100%",
             },
@@ -3423,7 +3780,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={128}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -3439,11 +3796,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(28, 28, 30, 0.8)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
           }
         />
       </View>
@@ -3986,7 +4360,7 @@ Array [
         style={
           Array [
             Object {
-              "backgroundColor": "rgb(249, 249, 251)",
+              "backgroundColor": "#000000",
               "flex": 1,
               "height": "100%",
             },
@@ -4001,7 +4375,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={128}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -4018,11 +4392,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "rgba(28, 28, 30, 0.8)",
+                "flex": 1,
+                "height": "100%",
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+            ]
           }
         />
         <View

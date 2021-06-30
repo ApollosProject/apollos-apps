@@ -12,7 +12,7 @@ storiesOf('ui-kit/FeaturedCard', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/800/1600/?random',
+          uri: 'https://picsum.photos/id/1041/800/1600',
         },
       ]}
       summary={
@@ -30,7 +30,7 @@ storiesOf('ui-kit/FeaturedCard', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/800/1600/?random',
+          uri: 'https://picsum.photos/id/1040/800/1600',
         },
       ]}
     />
@@ -43,7 +43,7 @@ storiesOf('ui-kit/FeaturedCard', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/800/1600/?random',
+          uri: 'https://picsum.photos/id/1039/800/1600',
         },
       ]}
       summary={
@@ -59,7 +59,7 @@ storiesOf('ui-kit/FeaturedCard', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/800/1600/?random',
+          uri: 'https://picsum.photos/id/1042/800/1600',
         },
       ]}
       isLiked={false}
@@ -72,7 +72,7 @@ storiesOf('ui-kit/FeaturedCard', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/800/1600/?random',
+          uri: 'https://picsum.photos/id/1028/800/1600',
         },
       ]}
       isLiked
@@ -85,7 +85,7 @@ storiesOf('ui-kit/FeaturedCard', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/800/1600/?random',
+          uri: 'https://picsum.photos/id/1027/800/1600',
         },
       ]}
       isLive
@@ -99,69 +99,9 @@ storiesOf('ui-kit/FeaturedCard', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/800/1600/?random',
+          uri: 'https://picsum.photos/id/1026/800/1600',
         },
       ]}
       labelText={'Quote'}
     />
-  ))
-  .add('theme', () => (
-    <ScrollView>
-      <FeaturedCard
-        title={
-          'Are you telling me that you built a time machine out of a DeLorean?'
-        }
-        coverImage={[
-          {
-            uri: 'https://picsum.photos/800/1600/?random',
-          },
-        ]}
-        hasAction
-        theme={{
-          colors: {
-            primary: 'salmon',
-            secondary: 'salmon',
-          },
-        }}
-      />
-      <FeaturedCard
-        title={
-          'Are you telling me that you built a time machine out of a DeLorean?'
-        }
-        coverImage={[
-          {
-            uri: 'https://picsum.photos/800/1600/?random',
-          },
-        ]}
-        theme={{
-          type: 'light',
-        }}
-      />
-      <FeaturedCard
-        title={
-          'Are you telling me that you built a time machine out of a DeLorean?'
-        }
-        coverImage={[
-          {
-            uri: 'https://picsum.photos/800/1600/?random',
-          },
-        ]}
-        summary={
-          'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
-        }
-        isLive
-        isLiked
-        hasAction
-        theme={{
-          type: 'light',
-          colors: {
-            primary: 'yellow',
-            secondary: 'dodgerblue',
-            text: {
-              primary: 'dodgerblue',
-            },
-          },
-        }}
-      />
-    </ScrollView>
   ));
