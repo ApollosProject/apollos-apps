@@ -5,6 +5,7 @@ import { useQuery } from '@apollo/client';
 import HTMLView from '@apollosproject/ui-htmlview';
 import {
   BackgroundView,
+  BackgroundImageBlur,
   ErrorCard,
   PaddedView,
   ContentTitles,
@@ -28,21 +29,24 @@ const DefaultHeader = ({ node, isLoading }) => {
   const [isLiked, like] = useLike(node?.id);
   const share = useShare(node?.id);
   return (
-    <BackgroundView flexed={false} material="paper">
-      <ContentTitles
-        {...node}
-        featured
-        isLoading={isLoading}
-        isLiked={isLiked}
-        onPressLike={like}
-        onPressShare={share}
-      />
-    </BackgroundView>
+    <ContentTitles
+      title={node?.title}
+      summary={node?.summary}
+      featured
+      isLoading={isLoading}
+      isLiked={isLiked}
+      onPressLike={like}
+      onPressShare={share}
+    />
   );
 };
 
 DefaultHeader.propTypes = {
-  node: PropTypes.shape({ id: PropTypes.string }),
+  node: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    summary: PropTypes.string,
+  }),
   isLoading: PropTypes.bool,
 };
 
@@ -79,16 +83,19 @@ const ContentNodeConnected = ({
   const coverImageSources = node?.coverImage?.sources || [];
   return (
     <>
-      {coverImageSources.length || loading ? (
-        <ImageWrapperComponent>
-          <ConnectedImage
-            maintainAspectRatio
-            isLoading={!coverImageSources.length && loading}
-            source={coverImageSources}
-          />
-        </ImageWrapperComponent>
-      ) : null}
-      <HeaderComponent isLoading={!node?.title && loading} node={node} />
+      <View>
+        <BackgroundImageBlur source={coverImageSources} />
+        {coverImageSources.length || loading ? (
+          <ImageWrapperComponent>
+            <ConnectedImage
+              maintainAspectRatio
+              isLoading={!coverImageSources.length && loading}
+              source={coverImageSources}
+            />
+          </ImageWrapperComponent>
+        ) : null}
+        <HeaderComponent isLoading={!node?.title && loading} node={node} />
+      </View>
       <BackgroundView flex={false}>
         <PaddedView>
           <HtmlComponent

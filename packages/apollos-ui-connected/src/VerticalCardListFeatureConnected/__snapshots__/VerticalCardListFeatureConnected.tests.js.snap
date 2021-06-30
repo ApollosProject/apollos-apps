@@ -163,7 +163,7 @@ exports[`The VerticalCardListFeatureConnected component should render 1`] = `
                 }
               >
                 <Image
-                  blurRadius={128}
+                  blurRadius={80}
                   fadeDuration={250}
                   onLoad={[Function]}
                   source={
@@ -468,7 +468,7 @@ exports[`The VerticalCardListFeatureConnected component should render a featured
                 }
               >
                 <Image
-                  blurRadius={128}
+                  blurRadius={80}
                   fadeDuration={250}
                   onLoad={[Function]}
                   source={
@@ -953,7 +953,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 }
               >
                 <Image
-                  blurRadius={128}
+                  blurRadius={80}
                   fadeDuration={250}
                   onLoad={[Function]}
                   source={
@@ -1144,7 +1144,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 }
               >
                 <Image
-                  blurRadius={128}
+                  blurRadius={80}
                   fadeDuration={250}
                   onLoad={[Function]}
                   source={
@@ -1335,7 +1335,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 }
               >
                 <Image
-                  blurRadius={128}
+                  blurRadius={80}
                   fadeDuration={250}
                   onLoad={[Function]}
                   source={
@@ -1526,7 +1526,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 }
               >
                 <Image
-                  blurRadius={128}
+                  blurRadius={80}
                   fadeDuration={250}
                   onLoad={[Function]}
                   source={
@@ -1717,7 +1717,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 }
               >
                 <Image
-                  blurRadius={128}
+                  blurRadius={80}
                   fadeDuration={250}
                   onLoad={[Function]}
                   source={
@@ -1908,7 +1908,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 }
               >
                 <Image
-                  blurRadius={128}
+                  blurRadius={80}
                   fadeDuration={250}
                   onLoad={[Function]}
                   source={
@@ -2099,7 +2099,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 }
               >
                 <Image
-                  blurRadius={128}
+                  blurRadius={80}
                   fadeDuration={250}
                   onLoad={[Function]}
                   source={
@@ -2290,7 +2290,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 }
               >
                 <Image
-                  blurRadius={128}
+                  blurRadius={80}
                   fadeDuration={250}
                   onLoad={[Function]}
                   source={
@@ -2481,7 +2481,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 }
               >
                 <Image
-                  blurRadius={128}
+                  blurRadius={80}
                   fadeDuration={250}
                   onLoad={[Function]}
                   source={
@@ -2672,7 +2672,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 }
               >
                 <Image
-                  blurRadius={128}
+                  blurRadius={80}
                   fadeDuration={250}
                   onLoad={[Function]}
                   source={
@@ -2941,7 +2941,7 @@ exports[`The VerticalCardListFeatureConnected component should render as a featu
                 }
               >
                 <Image
-                  blurRadius={128}
+                  blurRadius={80}
                   fadeDuration={250}
                   onLoad={[Function]}
                   source={

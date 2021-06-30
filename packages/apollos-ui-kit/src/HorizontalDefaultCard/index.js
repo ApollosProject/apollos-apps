@@ -35,7 +35,7 @@ const Image = withTheme(
 )(CardImage);
 
 const HorizontalDefaultCard = withIsLoading(
-  ({ coverImage, isLiked, isLoading, summary, title, labelText }) => (
+  ({ coverImage, isLiked, isLoading, summary, title }) => (
     <SquareCard isLoading={isLoading} inHorizontalList>
       <BackgroundImageBlur source={coverImage} />
       <Image source={coverImage} hasTitleAndSummary={!!summary && !!title} />
@@ -46,7 +46,6 @@ const HorizontalDefaultCard = withIsLoading(
           summary={summary}
           isLiked={isLiked}
           isLoading={isLoading}
-          label={labelText}
         />
       </TitlesPositioner>
     </SquareCard>
@@ -58,7 +57,6 @@ HorizontalDefaultCard.propTypes = {
     PropTypes.arrayOf(ImageSourceType),
     ImageSourceType,
   ]),
-  labelText: PropTypes.string,
   isLiked: PropTypes.bool,
   summary: PropTypes.string,
   title: PropTypes.string,

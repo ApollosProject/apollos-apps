@@ -256,7 +256,7 @@ exports[`HorizontalLikedContentFeed renders a HorizontalLikedContentFeed 1`] = `
                 }
               >
                 <Image
-                  blurRadius={128}
+                  blurRadius={80}
                   fadeDuration={250}
                   onLoad={[Function]}
                   source={Array []}
@@ -320,7 +320,6 @@ exports[`HorizontalLikedContentFeed renders a HorizontalLikedContentFeed 1`] = `
                     }
                   }
                 >
-                  
                   <View
                     style={
                       Object {
@@ -426,7 +425,7 @@ exports[`HorizontalLikedContentFeed renders a HorizontalLikedContentFeed 1`] = `
                 }
               >
                 <Image
-                  blurRadius={128}
+                  blurRadius={80}
                   fadeDuration={250}
                   onLoad={[Function]}
                   source={Array []}
@@ -490,7 +489,6 @@ exports[`HorizontalLikedContentFeed renders a HorizontalLikedContentFeed 1`] = `
                     }
                   }
                 >
-                  
                   <View
                     style={
                       Object {
@@ -772,7 +770,7 @@ exports[`HorizontalLikedContentFeed renders a loading state 1`] = `
                 }
               >
                 <Image
-                  blurRadius={128}
+                  blurRadius={80}
                   fadeDuration={250}
                   onLoad={[Function]}
                   source={Array []}
@@ -836,7 +834,6 @@ exports[`HorizontalLikedContentFeed renders a loading state 1`] = `
                     }
                   }
                 >
-                  
                   <View
                     style={
                       Object {
@@ -942,7 +939,7 @@ exports[`HorizontalLikedContentFeed renders a loading state 1`] = `
                 }
               >
                 <Image
-                  blurRadius={128}
+                  blurRadius={80}
                   fadeDuration={250}
                   onLoad={[Function]}
                   source={Array []}
@@ -1006,7 +1003,6 @@ exports[`HorizontalLikedContentFeed renders a loading state 1`] = `
                     }
                   }
                 >
-                  
                   <View
                     style={
                       Object {

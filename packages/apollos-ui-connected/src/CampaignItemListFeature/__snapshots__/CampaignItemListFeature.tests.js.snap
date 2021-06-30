@@ -113,7 +113,7 @@ exports[`The CampaignItemListFeature component should render 1`] = `
                 }
               >
                 <Image
-                  blurRadius={128}
+                  blurRadius={80}
                   fadeDuration={250}
                   onLoad={[Function]}
                   source={
@@ -394,7 +394,7 @@ exports[`The CampaignItemListFeature component should render a loading state for
                 }
               >
                 <Image
-                  blurRadius={128}
+                  blurRadius={80}
                   fadeDuration={250}
                   onLoad={[Function]}
                   source={
@@ -663,7 +663,7 @@ exports[`The CampaignItemListFeature component should render a section title 1`]
                 }
               >
                 <Image
-                  blurRadius={128}
+                  blurRadius={80}
                   fadeDuration={250}
                   onLoad={[Function]}
                   source={
@@ -930,7 +930,7 @@ exports[`The CampaignItemListFeature component should render with a subtitle 1`]
                 }
               >
                 <Image
-                  blurRadius={128}
+                  blurRadius={80}
                   fadeDuration={250}
                   onLoad={[Function]}
                   source={

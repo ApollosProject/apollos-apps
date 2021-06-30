@@ -8,7 +8,7 @@ import { withTheme } from '../theme';
 
 const BlurredImage = withTheme(
   () => ({
-    blurRadius: 128,
+    blurRadius: 80,
     style: {
       ...StyleSheet.absoluteFillObject,
     },

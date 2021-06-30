@@ -100,7 +100,7 @@ Array [
           }
         >
           <Image
-            blurRadius={128}
+            blurRadius={80}
             fadeDuration={250}
             onLoad={[Function]}
             source={
@@ -481,7 +481,7 @@ Array [
           }
         >
           <Image
-            blurRadius={128}
+            blurRadius={80}
             fadeDuration={250}
             onLoad={[Function]}
             source={Array []}
@@ -1121,7 +1121,7 @@ Array [
           }
         >
           <Image
-            blurRadius={128}
+            blurRadius={80}
             fadeDuration={250}
             onLoad={[Function]}
             source={
