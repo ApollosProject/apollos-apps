@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.25.0](https://github.com/ApollosProject/apollos-apps/compare/v2.24.0...v2.25.0) (2021-06-30)
+
+
+### Features
+
+* Content Item Category model ([#2029](https://github.com/ApollosProject/apollos-apps/issues/2029)) ([cb4edbf](https://github.com/ApollosProject/apollos-apps/commit/cb4edbf02b6dac586f1e2438d58f9e67e261aa30))
+* Figma / 2.0 Theme Changes ([#1861](https://github.com/ApollosProject/apollos-apps/issues/1861)) ([1a93cc8](https://github.com/ApollosProject/apollos-apps/commit/1a93cc8364985739720ca53963f26711824683c5)), closes [#1814](https://github.com/ApollosProject/apollos-apps/issues/1814)
+* useTheme hook ([#1814](https://github.com/ApollosProject/apollos-apps/issues/1814)) ([e75d7a7](https://github.com/ApollosProject/apollos-apps/commit/e75d7a74067ed503d2fe899401acb7e59097f970))
+
+
+### Bug Fixes
+
+* Fix Storybook 🎉 ([#2037](https://github.com/ApollosProject/apollos-apps/issues/2037)) ([f0ef4f6](https://github.com/ApollosProject/apollos-apps/commit/f0ef4f6d5eac1d8df2db217f9f13495ad98ec676))
+* Only send notifications for public journals ([#2038](https://github.com/ApollosProject/apollos-apps/issues/2038)) ([e15a032](https://github.com/ApollosProject/apollos-apps/commit/e15a03212ee40787f8cd7ecf23358ef6997b9a92))
+* Postgres Media bugfixes ([#2026](https://github.com/ApollosProject/apollos-apps/issues/2026)) ([3d3b61d](https://github.com/ApollosProject/apollos-apps/commit/3d3b61de6582750ec4609b8b30a5add3475fabf8))
+* protect against null sharing field ([#2028](https://github.com/ApollosProject/apollos-apps/issues/2028)) ([032072e](https://github.com/ApollosProject/apollos-apps/commit/032072e5b11e1ca0f3dc0f50b0418b0195a5a88f))
+
+
+
 ## [2.24.0](https://github.com/ApollosProject/apollos-apps/compare/v2.23.1...v2.24.0) (2021-06-28)
 
 

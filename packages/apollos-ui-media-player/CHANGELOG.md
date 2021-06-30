@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.25.0](https://github.com/apollosproject/apollos-apps/compare/v2.24.0...v2.25.0) (2021-06-30)
+
+
+### Features
+
+* Figma / 2.0 Theme Changes ([#1861](https://github.com/apollosproject/apollos-apps/issues/1861)) ([1a93cc8](https://github.com/apollosproject/apollos-apps/commit/1a93cc8364985739720ca53963f26711824683c5)), closes [#1814](https://github.com/apollosproject/apollos-apps/issues/1814)
+
+
+
 ## [2.24.0](https://github.com/apollosproject/apollos-apps/compare/v2.23.1...v2.24.0) (2021-06-28)
 
 **Note:** Version bump only for package @apollosproject/ui-media-player
