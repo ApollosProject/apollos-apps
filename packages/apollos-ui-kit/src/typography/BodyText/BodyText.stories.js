@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
-import BodyText from '.';
+import BodyText from './index';
 
 storiesOf('ui-kit/typography/BodyText', module)
   .add('Regular', () => (

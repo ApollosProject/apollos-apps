@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
-import OverlayBackgroundImage from '.';
+import OverlayBackgroundImage from './index';
 
 storiesOf('OverlayBackgroundImage', module)
   .add('default', () => (

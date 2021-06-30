@@ -24,14 +24,14 @@ const {
 
 module.exports = applyConfigForLinkedDependencies(
     {
-        transformer: {
-            getTransformOptions: async () => ({
-                transform: {
-                    experimentalImportSupport: false,
-                    inlineRequires: false,
-                },
-            }),
-        },
+        // transformer: {
+        //     getTransformOptions: async () => ({
+        //         transform: {
+        //             experimentalImportSupport: false,
+        //             inlineRequires: false,
+        //         },
+        //     }),
+        // },
     },
     {
         projectRoot: __dirname,

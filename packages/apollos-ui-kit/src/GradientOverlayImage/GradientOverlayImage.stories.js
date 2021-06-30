@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
-import GradientOverlayImage from '.';
+import GradientOverlayImage from './index';
 
 storiesOf('ui-kit/GradientOverlayImage', module)
   .add('Default', () => (
