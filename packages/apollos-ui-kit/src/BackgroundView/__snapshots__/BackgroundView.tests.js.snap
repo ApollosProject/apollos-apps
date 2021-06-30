@@ -21,16 +21,11 @@ Array [
   />,
   <View
     style={
-      Array [
-        Object {
-          "backgroundColor": "rgb(249, 249, 251)",
-          "flex": 1,
-          "height": "100%",
-        },
-        Object {
-          "backgroundColor": "red",
-        },
-      ]
+      Object {
+        "backgroundColor": "red",
+        "flex": 0,
+        "height": undefined,
+      }
     }
   />,
 ]
@@ -57,14 +52,11 @@ Array [
   />,
   <View
     style={
-      Array [
-        Object {
-          "backgroundColor": "rgb(249, 249, 251)",
-          "flex": 1,
-          "height": "100%",
-        },
-        undefined,
-      ]
+      Object {
+        "backgroundColor": "rgb(249, 249, 251)",
+        "flex": 0,
+        "height": undefined,
+      }
     }
   />,
 ]
@@ -90,15 +82,13 @@ Array [
     }
   />,
   <View
+    material="system"
     style={
-      Array [
-        Object {
-          "backgroundColor": "rgba(142, 142, 147, 0.2)",
-          "flex": 1,
-          "height": "100%",
-        },
-        undefined,
-      ]
+      Object {
+        "backgroundColor": "rgba(142, 142, 147, 0.2)",
+        "flex": 0,
+        "height": undefined,
+      }
     }
   />,
 ]
@@ -124,15 +114,13 @@ Array [
     }
   />,
   <View
+    material="paper"
     style={
-      Array [
-        Object {
-          "backgroundColor": "#FFFFFF",
-          "flex": 1,
-          "height": "100%",
-        },
-        undefined,
-      ]
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "flex": 0,
+        "height": undefined,
+      }
     }
   />,
 ]

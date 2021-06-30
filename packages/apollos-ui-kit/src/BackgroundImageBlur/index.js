@@ -30,6 +30,7 @@ const BackgroundImageBlur = ({
 
 BackgroundImageBlur.propTypes = {
   children: PropTypes.node,
+  material: PropTypes.string,
   source: ImageSourceType,
 };
 

@@ -167,20 +167,16 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
             >
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "rgb(249, 249, 251)",
-                      "flex": 1,
-                      "height": "100%",
-                    },
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    },
-                  ]
+                  Object {
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 0,
+                    "height": undefined,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
                 }
               >
                 <Image
@@ -207,21 +203,18 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                   }
                 />
                 <View
+                  material="regular"
                   style={
-                    Array [
-                      Object {
-                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
-                        "flex": 1,
-                        "height": "100%",
-                      },
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                    ]
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 0,
+                      "height": undefined,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
                   }
                 />
               </View>
@@ -376,20 +369,16 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
             >
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "rgb(249, 249, 251)",
-                      "flex": 1,
-                      "height": "100%",
-                    },
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    },
-                  ]
+                  Object {
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 0,
+                    "height": undefined,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
                 }
               >
                 <Image
@@ -416,21 +405,18 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                   }
                 />
                 <View
+                  material="regular"
                   style={
-                    Array [
-                      Object {
-                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
-                        "flex": 1,
-                        "height": "100%",
-                      },
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                    ]
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 0,
+                      "height": undefined,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
                   }
                 />
               </View>
@@ -584,20 +570,16 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
             >
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "rgb(249, 249, 251)",
-                      "flex": 1,
-                      "height": "100%",
-                    },
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    },
-                  ]
+                  Object {
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 0,
+                    "height": undefined,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
                 }
               >
                 <Image
@@ -624,21 +606,18 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                   }
                 />
                 <View
+                  material="regular"
                   style={
-                    Array [
-                      Object {
-                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
-                        "flex": 1,
-                        "height": "100%",
-                      },
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                    ]
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 0,
+                      "height": undefined,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
                   }
                 />
               </View>
@@ -994,20 +973,16 @@ exports[`The HorizontalCardListFeature component should render a loading state f
             >
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "rgb(249, 249, 251)",
-                      "flex": 1,
-                      "height": "100%",
-                    },
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    },
-                  ]
+                  Object {
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 0,
+                    "height": undefined,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
                 }
               >
                 <Image
@@ -1027,21 +1002,18 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                   }
                 />
                 <View
+                  material="regular"
                   style={
-                    Array [
-                      Object {
-                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
-                        "flex": 1,
-                        "height": "100%",
-                      },
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                    ]
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 0,
+                      "height": undefined,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
                   }
                 />
               </View>
@@ -1179,20 +1151,16 @@ exports[`The HorizontalCardListFeature component should render a loading state f
             >
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "rgb(249, 249, 251)",
-                      "flex": 1,
-                      "height": "100%",
-                    },
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    },
-                  ]
+                  Object {
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 0,
+                    "height": undefined,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
                 }
               >
                 <Image
@@ -1212,21 +1180,18 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                   }
                 />
                 <View
+                  material="regular"
                   style={
-                    Array [
-                      Object {
-                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
-                        "flex": 1,
-                        "height": "100%",
-                      },
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                    ]
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 0,
+                      "height": undefined,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
                   }
                 />
               </View>
@@ -1364,20 +1329,16 @@ exports[`The HorizontalCardListFeature component should render a loading state f
             >
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "rgb(249, 249, 251)",
-                      "flex": 1,
-                      "height": "100%",
-                    },
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    },
-                  ]
+                  Object {
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 0,
+                    "height": undefined,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
                 }
               >
                 <Image
@@ -1397,21 +1358,18 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                   }
                 />
                 <View
+                  material="regular"
                   style={
-                    Array [
-                      Object {
-                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
-                        "flex": 1,
-                        "height": "100%",
-                      },
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                    ]
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 0,
+                      "height": undefined,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
                   }
                 />
               </View>
@@ -1549,20 +1507,16 @@ exports[`The HorizontalCardListFeature component should render a loading state f
             >
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "rgb(249, 249, 251)",
-                      "flex": 1,
-                      "height": "100%",
-                    },
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    },
-                  ]
+                  Object {
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 0,
+                    "height": undefined,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
                 }
               >
                 <Image
@@ -1582,21 +1536,18 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                   }
                 />
                 <View
+                  material="regular"
                   style={
-                    Array [
-                      Object {
-                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
-                        "flex": 1,
-                        "height": "100%",
-                      },
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                    ]
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 0,
+                      "height": undefined,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
                   }
                 />
               </View>
@@ -1734,20 +1685,16 @@ exports[`The HorizontalCardListFeature component should render a loading state f
             >
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "rgb(249, 249, 251)",
-                      "flex": 1,
-                      "height": "100%",
-                    },
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    },
-                  ]
+                  Object {
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 0,
+                    "height": undefined,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
                 }
               >
                 <Image
@@ -1767,21 +1714,18 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                   }
                 />
                 <View
+                  material="regular"
                   style={
-                    Array [
-                      Object {
-                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
-                        "flex": 1,
-                        "height": "100%",
-                      },
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                    ]
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 0,
+                      "height": undefined,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
                   }
                 />
               </View>
@@ -2064,20 +2008,16 @@ exports[`The HorizontalCardListFeature component should render a section title 1
             >
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "rgb(249, 249, 251)",
-                      "flex": 1,
-                      "height": "100%",
-                    },
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    },
-                  ]
+                  Object {
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 0,
+                    "height": undefined,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
                 }
               >
                 <Image
@@ -2104,21 +2044,18 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                   }
                 />
                 <View
+                  material="regular"
                   style={
-                    Array [
-                      Object {
-                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
-                        "flex": 1,
-                        "height": "100%",
-                      },
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                    ]
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 0,
+                      "height": undefined,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
                   }
                 />
               </View>
@@ -2273,20 +2210,16 @@ exports[`The HorizontalCardListFeature component should render a section title 1
             >
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "rgb(249, 249, 251)",
-                      "flex": 1,
-                      "height": "100%",
-                    },
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    },
-                  ]
+                  Object {
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 0,
+                    "height": undefined,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
                 }
               >
                 <Image
@@ -2313,21 +2246,18 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                   }
                 />
                 <View
+                  material="regular"
                   style={
-                    Array [
-                      Object {
-                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
-                        "flex": 1,
-                        "height": "100%",
-                      },
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                    ]
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 0,
+                      "height": undefined,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
                   }
                 />
               </View>
@@ -2481,20 +2411,16 @@ exports[`The HorizontalCardListFeature component should render a section title 1
             >
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "rgb(249, 249, 251)",
-                      "flex": 1,
-                      "height": "100%",
-                    },
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    },
-                  ]
+                  Object {
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 0,
+                    "height": undefined,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
                 }
               >
                 <Image
@@ -2521,21 +2447,18 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                   }
                 />
                 <View
+                  material="regular"
                   style={
-                    Array [
-                      Object {
-                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
-                        "flex": 1,
-                        "height": "100%",
-                      },
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                    ]
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 0,
+                      "height": undefined,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
                   }
                 />
               </View>
@@ -2834,20 +2757,16 @@ exports[`The HorizontalCardListFeature component should render with a section su
             >
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "rgb(249, 249, 251)",
-                      "flex": 1,
-                      "height": "100%",
-                    },
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    },
-                  ]
+                  Object {
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 0,
+                    "height": undefined,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
                 }
               >
                 <Image
@@ -2874,21 +2793,18 @@ exports[`The HorizontalCardListFeature component should render with a section su
                   }
                 />
                 <View
+                  material="regular"
                   style={
-                    Array [
-                      Object {
-                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
-                        "flex": 1,
-                        "height": "100%",
-                      },
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                    ]
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 0,
+                      "height": undefined,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
                   }
                 />
               </View>
@@ -3043,20 +2959,16 @@ exports[`The HorizontalCardListFeature component should render with a section su
             >
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "rgb(249, 249, 251)",
-                      "flex": 1,
-                      "height": "100%",
-                    },
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    },
-                  ]
+                  Object {
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 0,
+                    "height": undefined,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
                 }
               >
                 <Image
@@ -3083,21 +2995,18 @@ exports[`The HorizontalCardListFeature component should render with a section su
                   }
                 />
                 <View
+                  material="regular"
                   style={
-                    Array [
-                      Object {
-                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
-                        "flex": 1,
-                        "height": "100%",
-                      },
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                    ]
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 0,
+                      "height": undefined,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
                   }
                 />
               </View>
@@ -3251,20 +3160,16 @@ exports[`The HorizontalCardListFeature component should render with a section su
             >
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "rgb(249, 249, 251)",
-                      "flex": 1,
-                      "height": "100%",
-                    },
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    },
-                  ]
+                  Object {
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 0,
+                    "height": undefined,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
                 }
               >
                 <Image
@@ -3291,21 +3196,18 @@ exports[`The HorizontalCardListFeature component should render with a section su
                   }
                 />
                 <View
+                  material="regular"
                   style={
-                    Array [
-                      Object {
-                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
-                        "flex": 1,
-                        "height": "100%",
-                      },
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                    ]
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 0,
+                      "height": undefined,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
                   }
                 />
               </View>

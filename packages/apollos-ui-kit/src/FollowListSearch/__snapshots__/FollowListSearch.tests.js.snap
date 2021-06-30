@@ -418,14 +418,11 @@ Array [
   >
     <View
       style={
-        Array [
-          Object {
-            "backgroundColor": "rgb(249, 249, 251)",
-            "flex": 1,
-            "height": "100%",
-          },
-          undefined,
-        ]
+        Object {
+          "backgroundColor": "rgb(249, 249, 251)",
+          "flex": 0,
+          "height": undefined,
+        }
       }
     >
       <RCTSafeAreaView

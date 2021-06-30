@@ -4,7 +4,6 @@ import { ScrollView } from 'react-native';
 
 import BackgroundView from '../BackgroundView';
 import CenteredView from '../CenteredView';
-import { CardLabel } from '../Card';
 
 import HighlightCard from './index';
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
-import { ScrollView } from 'react-native';
 
 import FeaturedCard from './index';
 

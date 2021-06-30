@@ -1,33 +1,18 @@
-import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 
 import { View } from 'react-native';
 
-import { useTheme } from '../theme';
+import styled from '../styled';
 
-const BackgroundView = ({
-  material = 'screen',
-  flexed = true,
-  style: styleProp,
-  ...viewProps
-}) => {
-  const theme = useTheme();
-  const backgroundColor =
-    theme?.colors?.background[material] || theme?.colors?.background?.screen;
-  const style = useMemo(
-    () => [
-      {
-        backgroundColor,
-        flex: flexed ? 1 : 0,
-        height: flexed ? '100%' : undefined,
-      },
-      styleProp,
-    ],
-    [backgroundColor, styleProp, flexed]
-  );
-
-  return <View style={style} {...viewProps} />; // eslint-disable-line react/jsx-props-no-spreading
-};
+const BackgroundView = styled(
+  ({ theme, material, flexed }) => ({
+    backgroundColor:
+      theme?.colors?.background[material] || theme?.colors?.background?.screen,
+    flex: flexed ? 1 : 0,
+    height: flexed ? '100%' : undefined,
+  }),
+  'ui-kit.BackgroundView'
+)(View);
 
 BackgroundView.propTypes = {
   material: PropTypes.string,

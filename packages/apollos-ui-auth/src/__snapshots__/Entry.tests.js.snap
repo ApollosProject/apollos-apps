@@ -21,21 +21,17 @@ Array [
   />,
   <View
     style={
-      Array [
-        Object {
-          "backgroundColor": "rgb(249, 249, 251)",
-          "flex": 1,
-          "height": "100%",
-        },
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "resizeMode": "cover",
-          "right": 0,
-          "top": 0,
-        },
-      ]
+      Object {
+        "backgroundColor": "rgb(249, 249, 251)",
+        "bottom": 0,
+        "flex": 0,
+        "height": undefined,
+        "left": 0,
+        "position": "absolute",
+        "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
+      }
     }
   />,
   <View
@@ -421,21 +417,17 @@ Array [
   />,
   <View
     style={
-      Array [
-        Object {
-          "backgroundColor": "rgb(249, 249, 251)",
-          "flex": 1,
-          "height": "100%",
-        },
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "resizeMode": "cover",
-          "right": 0,
-          "top": 0,
-        },
-      ]
+      Object {
+        "backgroundColor": "rgb(249, 249, 251)",
+        "bottom": 0,
+        "flex": 0,
+        "height": undefined,
+        "left": 0,
+        "position": "absolute",
+        "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
+      }
     }
   />,
   <View
@@ -823,21 +815,17 @@ Array [
   />,
   <View
     style={
-      Array [
-        Object {
-          "backgroundColor": "rgb(249, 249, 251)",
-          "flex": 1,
-          "height": "100%",
-        },
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "resizeMode": "cover",
-          "right": 0,
-          "top": 0,
-        },
-      ]
+      Object {
+        "backgroundColor": "rgb(249, 249, 251)",
+        "bottom": 0,
+        "flex": 0,
+        "height": undefined,
+        "left": 0,
+        "position": "absolute",
+        "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
+      }
     }
   />,
   <View
@@ -1284,21 +1272,17 @@ Array [
   />,
   <View
     style={
-      Array [
-        Object {
-          "backgroundColor": "rgb(249, 249, 251)",
-          "flex": 1,
-          "height": "100%",
-        },
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "resizeMode": "cover",
-          "right": 0,
-          "top": 0,
-        },
-      ]
+      Object {
+        "backgroundColor": "rgb(249, 249, 251)",
+        "bottom": 0,
+        "flex": 0,
+        "height": undefined,
+        "left": 0,
+        "position": "absolute",
+        "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
+      }
     }
   />,
   <View
@@ -1739,21 +1723,17 @@ Array [
   />,
   <View
     style={
-      Array [
-        Object {
-          "backgroundColor": "rgb(249, 249, 251)",
-          "flex": 1,
-          "height": "100%",
-        },
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "resizeMode": "cover",
-          "right": 0,
-          "top": 0,
-        },
-      ]
+      Object {
+        "backgroundColor": "rgb(249, 249, 251)",
+        "bottom": 0,
+        "flex": 0,
+        "height": undefined,
+        "left": 0,
+        "position": "absolute",
+        "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
+      }
     }
   />,
   <View
@@ -2200,21 +2180,17 @@ Array [
   />,
   <View
     style={
-      Array [
-        Object {
-          "backgroundColor": "rgb(249, 249, 251)",
-          "flex": 1,
-          "height": "100%",
-        },
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "resizeMode": "cover",
-          "right": 0,
-          "top": 0,
-        },
-      ]
+      Object {
+        "backgroundColor": "rgb(249, 249, 251)",
+        "bottom": 0,
+        "flex": 0,
+        "height": undefined,
+        "left": 0,
+        "position": "absolute",
+        "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
+      }
     }
   />,
   <View
@@ -2600,21 +2576,17 @@ Array [
   />,
   <View
     style={
-      Array [
-        Object {
-          "backgroundColor": "rgb(249, 249, 251)",
-          "flex": 1,
-          "height": "100%",
-        },
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "resizeMode": "cover",
-          "right": 0,
-          "top": 0,
-        },
-      ]
+      Object {
+        "backgroundColor": "rgb(249, 249, 251)",
+        "bottom": 0,
+        "flex": 0,
+        "height": undefined,
+        "left": 0,
+        "position": "absolute",
+        "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
+      }
     }
   />,
   <View
@@ -3056,21 +3028,17 @@ Array [
   />,
   <View
     style={
-      Array [
-        Object {
-          "backgroundColor": "rgb(249, 249, 251)",
-          "flex": 1,
-          "height": "100%",
-        },
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "resizeMode": "cover",
-          "right": 0,
-          "top": 0,
-        },
-      ]
+      Object {
+        "backgroundColor": "rgb(249, 249, 251)",
+        "bottom": 0,
+        "flex": 0,
+        "height": undefined,
+        "left": 0,
+        "position": "absolute",
+        "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
+      }
     }
   />,
   <View
@@ -3456,21 +3424,17 @@ Array [
   />,
   <View
     style={
-      Array [
-        Object {
-          "backgroundColor": "rgb(249, 249, 251)",
-          "flex": 1,
-          "height": "100%",
-        },
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "resizeMode": "cover",
-          "right": 0,
-          "top": 0,
-        },
-      ]
+      Object {
+        "backgroundColor": "rgb(249, 249, 251)",
+        "bottom": 0,
+        "flex": 0,
+        "height": undefined,
+        "left": 0,
+        "position": "absolute",
+        "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
+      }
     }
   />,
   <View
@@ -3856,21 +3820,17 @@ Array [
   />,
   <View
     style={
-      Array [
-        Object {
-          "backgroundColor": "rgb(249, 249, 251)",
-          "flex": 1,
-          "height": "100%",
-        },
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "resizeMode": "cover",
-          "right": 0,
-          "top": 0,
-        },
-      ]
+      Object {
+        "backgroundColor": "rgb(249, 249, 251)",
+        "bottom": 0,
+        "flex": 0,
+        "height": undefined,
+        "left": 0,
+        "position": "absolute",
+        "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
+      }
     }
   />,
   <View
@@ -4258,21 +4218,17 @@ Array [
   />,
   <View
     style={
-      Array [
-        Object {
-          "backgroundColor": "rgb(249, 249, 251)",
-          "flex": 1,
-          "height": "100%",
-        },
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "resizeMode": "cover",
-          "right": 0,
-          "top": 0,
-        },
-      ]
+      Object {
+        "backgroundColor": "rgb(249, 249, 251)",
+        "bottom": 0,
+        "flex": 0,
+        "height": undefined,
+        "left": 0,
+        "position": "absolute",
+        "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
+      }
     }
   />,
   <View
@@ -4660,21 +4616,17 @@ Array [
   />,
   <View
     style={
-      Array [
-        Object {
-          "backgroundColor": "rgb(249, 249, 251)",
-          "flex": 1,
-          "height": "100%",
-        },
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "resizeMode": "cover",
-          "right": 0,
-          "top": 0,
-        },
-      ]
+      Object {
+        "backgroundColor": "rgb(249, 249, 251)",
+        "bottom": 0,
+        "flex": 0,
+        "height": undefined,
+        "left": 0,
+        "position": "absolute",
+        "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
+      }
     }
   />,
   <View
@@ -5062,21 +5014,17 @@ Array [
   />,
   <View
     style={
-      Array [
-        Object {
-          "backgroundColor": "rgb(249, 249, 251)",
-          "flex": 1,
-          "height": "100%",
-        },
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "resizeMode": "cover",
-          "right": 0,
-          "top": 0,
-        },
-      ]
+      Object {
+        "backgroundColor": "rgb(249, 249, 251)",
+        "bottom": 0,
+        "flex": 0,
+        "height": undefined,
+        "left": 0,
+        "position": "absolute",
+        "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
+      }
     }
   />,
   <View
@@ -5464,21 +5412,17 @@ Array [
   />,
   <View
     style={
-      Array [
-        Object {
-          "backgroundColor": "rgb(249, 249, 251)",
-          "flex": 1,
-          "height": "100%",
-        },
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "resizeMode": "cover",
-          "right": 0,
-          "top": 0,
-        },
-      ]
+      Object {
+        "backgroundColor": "rgb(249, 249, 251)",
+        "bottom": 0,
+        "flex": 0,
+        "height": undefined,
+        "left": 0,
+        "position": "absolute",
+        "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
+      }
     }
   />,
   <View
@@ -5864,21 +5808,17 @@ Array [
   />,
   <View
     style={
-      Array [
-        Object {
-          "backgroundColor": "rgb(249, 249, 251)",
-          "flex": 1,
-          "height": "100%",
-        },
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "resizeMode": "cover",
-          "right": 0,
-          "top": 0,
-        },
-      ]
+      Object {
+        "backgroundColor": "rgb(249, 249, 251)",
+        "bottom": 0,
+        "flex": 0,
+        "height": undefined,
+        "left": 0,
+        "position": "absolute",
+        "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
+      }
     }
   />,
   <View
@@ -6318,21 +6258,17 @@ Array [
   />,
   <View
     style={
-      Array [
-        Object {
-          "backgroundColor": "rgb(249, 249, 251)",
-          "flex": 1,
-          "height": "100%",
-        },
-        Object {
-          "bottom": 0,
-          "left": 0,
-          "position": "absolute",
-          "resizeMode": "cover",
-          "right": 0,
-          "top": 0,
-        },
-      ]
+      Object {
+        "backgroundColor": "rgb(249, 249, 251)",
+        "bottom": 0,
+        "flex": 0,
+        "height": undefined,
+        "left": 0,
+        "position": "absolute",
+        "resizeMode": "cover",
+        "right": 0,
+        "top": 0,
+      }
     }
   />,
   <View

@@ -26,19 +26,13 @@ Array [
       }
     }
     style={
-      Array [
-        Object {
-          "backgroundColor": "rgb(249, 249, 251)",
-          "flex": 1,
-          "height": "100%",
-        },
-        Object {
-          "borderRadius": 0,
-          "flex": null,
-          "height": "100%",
-          "width": "100%",
-        },
-      ]
+      Object {
+        "backgroundColor": "rgb(249, 249, 251)",
+        "borderRadius": 0,
+        "flex": null,
+        "height": "100%",
+        "width": "100%",
+      }
     }
   >
     <View
@@ -235,19 +229,13 @@ Array [
       }
     }
     style={
-      Array [
-        Object {
-          "backgroundColor": "rgb(249, 249, 251)",
-          "flex": 1,
-          "height": "100%",
-        },
-        Object {
-          "borderRadius": 0,
-          "flex": null,
-          "height": "100%",
-          "width": "100%",
-        },
-      ]
+      Object {
+        "backgroundColor": "rgb(249, 249, 251)",
+        "borderRadius": 0,
+        "flex": null,
+        "height": "100%",
+        "width": "100%",
+      }
     }
   >
     <View
@@ -515,19 +503,13 @@ Array [
       }
     }
     style={
-      Array [
-        Object {
-          "backgroundColor": "rgb(249, 249, 251)",
-          "flex": 1,
-          "height": "100%",
-        },
-        Object {
-          "borderRadius": 0,
-          "flex": null,
-          "height": "100%",
-          "width": "100%",
-        },
-      ]
+      Object {
+        "backgroundColor": "rgb(249, 249, 251)",
+        "borderRadius": 0,
+        "flex": null,
+        "height": "100%",
+        "width": "100%",
+      }
     }
   >
     <Text>
