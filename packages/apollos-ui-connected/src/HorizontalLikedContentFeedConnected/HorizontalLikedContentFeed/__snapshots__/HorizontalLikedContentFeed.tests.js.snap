@@ -241,30 +241,119 @@ exports[`HorizontalLikedContentFeed renders a HorizontalLikedContentFeed 1`] = `
                 }
               }
             >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(249, 249, 251)",
+                      "flex": 1,
+                      "height": "100%",
+                    },
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ]
+                }
+              >
+                <Image
+                  blurRadius={128}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={Array []}
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                        "flex": 1,
+                        "height": "100%",
+                      },
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    ]
+                  }
+                />
+              </View>
               <Image
                 fadeDuration={250}
                 hasTitleAndSummary={false}
+                height={135}
                 isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
                   Object {
-                    "aspectRatio": 1.5,
+                    "aspectRatio": 1.7777777777777777,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
+                width={240}
               />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
+                    "height": 105,
+                    "justifyContent": "center",
                   }
                 }
-              />
+              >
+                <View
+                  style={
+                    Object {
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 4,
+                        "width": "80%",
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 12,
+                        "marginVertical": 3,
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
         </View>
@@ -329,30 +418,119 @@ exports[`HorizontalLikedContentFeed renders a HorizontalLikedContentFeed 1`] = `
                 }
               }
             >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(249, 249, 251)",
+                      "flex": 1,
+                      "height": "100%",
+                    },
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ]
+                }
+              >
+                <Image
+                  blurRadius={128}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={Array []}
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                        "flex": 1,
+                        "height": "100%",
+                      },
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    ]
+                  }
+                />
+              </View>
               <Image
                 fadeDuration={250}
                 hasTitleAndSummary={false}
+                height={135}
                 isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
                   Object {
-                    "aspectRatio": 1.5,
+                    "aspectRatio": 1.7777777777777777,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
+                width={240}
               />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
+                    "height": 105,
+                    "justifyContent": "center",
                   }
                 }
-              />
+              >
+                <View
+                  style={
+                    Object {
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 4,
+                        "width": "80%",
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 12,
+                        "marginVertical": 3,
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
         </View>
@@ -593,30 +771,119 @@ exports[`HorizontalLikedContentFeed renders a loading state 1`] = `
                 }
               }
             >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(249, 249, 251)",
+                      "flex": 1,
+                      "height": "100%",
+                    },
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ]
+                }
+              >
+                <Image
+                  blurRadius={128}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={Array []}
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                        "flex": 1,
+                        "height": "100%",
+                      },
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    ]
+                  }
+                />
+              </View>
               <Image
                 fadeDuration={250}
                 hasTitleAndSummary={false}
+                height={135}
                 isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
                   Object {
-                    "aspectRatio": 1.5,
+                    "aspectRatio": 1.7777777777777777,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
+                width={240}
               />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
+                    "height": 105,
+                    "justifyContent": "center",
                   }
                 }
-              />
+              >
+                <View
+                  style={
+                    Object {
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 4,
+                        "width": "80%",
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 12,
+                        "marginVertical": 3,
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
         </View>
@@ -681,30 +948,119 @@ exports[`HorizontalLikedContentFeed renders a loading state 1`] = `
                 }
               }
             >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(249, 249, 251)",
+                      "flex": 1,
+                      "height": "100%",
+                    },
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ]
+                }
+              >
+                <Image
+                  blurRadius={128}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={Array []}
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                        "flex": 1,
+                        "height": "100%",
+                      },
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    ]
+                  }
+                />
+              </View>
               <Image
                 fadeDuration={250}
                 hasTitleAndSummary={false}
+                height={135}
                 isLoading={true}
                 onLoad={[Function]}
                 source={Array []}
                 style={
                   Object {
-                    "aspectRatio": 1.5,
+                    "aspectRatio": 1.7777777777777777,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
+                width={240}
               />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
+                    "height": 105,
+                    "justifyContent": "center",
                   }
                 }
-              />
+              >
+                <View
+                  style={
+                    Object {
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 4,
+                        "width": "80%",
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      Object {
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 12,
+                        "marginVertical": 3,
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+              </View>
             </View>
           </View>
         </View>

@@ -64,12 +64,16 @@ const ContentTitles = ({
   let Summary = BodyText;
   if (micro) Summary = BodySmall;
 
+  let numberOfTitleLines = 3;
+  if (summary || micro) numberOfTitleLines = 2;
+  if (micro && summary && label) numberOfTitleLines = 1;
+
   return (
     <Container>
       {label}
       {title || isLoading ? (
         <Title
-          numberOfLines={micro && summary ? 1 : 3}
+          numberOfLines={numberOfTitleLines}
           isLoading={!title && isLoading}
         >
           <TitleText>{title}</TitleText>
@@ -84,11 +88,13 @@ const ContentTitles = ({
         </Summary>
       ) : null}
 
-      <SocialBar
-        isLiked={isLiked}
-        onPressLike={onPressLike}
-        onPressShare={onPressShare}
-      />
+      {!micro ? (
+        <SocialBar
+          isLiked={isLiked}
+          onPressLike={onPressLike}
+          onPressShare={onPressShare}
+        />
+      ) : null}
     </Container>
   );
 };

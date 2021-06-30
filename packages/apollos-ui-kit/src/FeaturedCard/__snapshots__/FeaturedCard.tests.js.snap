@@ -640,7 +640,7 @@ Array [
         }
       >
         <Text
-          numberOfLines={3}
+          numberOfLines={2}
           style={
             Object {
               "color": "#27272E",

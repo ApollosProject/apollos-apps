@@ -438,9 +438,70 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                 }
               }
             >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(249, 249, 251)",
+                      "flex": 1,
+                      "height": "100%",
+                    },
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ]
+                }
+              >
+                <Image
+                  blurRadius={128}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/800",
+                      },
+                    ]
+                  }
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                        "flex": 1,
+                        "height": "100%",
+                      },
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    ]
+                  }
+                />
+              </View>
               <Image
                 fadeDuration={250}
                 hasTitleAndSummary={true}
+                height={135}
                 onLoad={[Function]}
                 source={
                   Array [
@@ -452,52 +513,75 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                 }
                 style={
                   Object {
-                    "aspectRatio": 2,
+                    "aspectRatio": 1.7777777777777777,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
+                width={240}
               />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
+                    "height": 105,
+                    "justifyContent": "center",
                   }
                 }
               >
-                <Text
-                  numberOfLines={2}
+                <View
                   style={
                     Object {
-                      "color": "#27272E",
-                      "fontFamily": "InterUI-Medium",
-                      "fontSize": 14,
-                      "lineHeight": 21,
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                      "width": "100%",
                     }
                   }
                 >
-                  Live for Freedom Toolkit
-                </Text>
-                <Text
-                  bold={false}
-                  hasTitle="Live for Freedom Toolkit"
-                  italic={false}
-                  numberOfLines={2}
-                  style={
-                    Object {
-                      "color": "rgba(39, 39, 46, 0.3)",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 12,
-                      "lineHeight": 18,
-                      "paddingTop": 8,
+                  <Text
+                    numberOfLines={2}
+                    style={
+                      Object {
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 16,
+                        "lineHeight": 24,
+                      }
                     }
-                  }
-                >
-                  Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.
-                </Text>
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#27272E",
+                        }
+                      }
+                    >
+                      Live for Freedom Toolkit
+                    </Text>
+                  </Text>
+                  <Text
+                    bold={false}
+                    italic={false}
+                    numberOfLines={2}
+                    style={
+                      Object {
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Regular",
+                        "fontSize": 12,
+                        "lineHeight": 18,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "rgba(39, 39, 46, 0.6)",
+                        }
+                      }
+                    >
+                      Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.
+                    </Text>
+                  </Text>
+                </View>
               </View>
             </View>
           </View>
@@ -2012,9 +2096,70 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                 }
               }
             >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(249, 249, 251)",
+                      "flex": 1,
+                      "height": "100%",
+                    },
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ]
+                }
+              >
+                <Image
+                  blurRadius={128}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/800",
+                      },
+                    ]
+                  }
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                        "flex": 1,
+                        "height": "100%",
+                      },
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    ]
+                  }
+                />
+              </View>
               <Image
                 fadeDuration={250}
                 hasTitleAndSummary={true}
+                height={135}
                 onLoad={[Function]}
                 source={
                   Array [
@@ -2026,52 +2171,75 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                 }
                 style={
                   Object {
-                    "aspectRatio": 2,
+                    "aspectRatio": 1.7777777777777777,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
+                width={240}
               />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
+                    "height": 105,
+                    "justifyContent": "center",
                   }
                 }
               >
-                <Text
-                  numberOfLines={2}
+                <View
                   style={
                     Object {
-                      "color": "#27272E",
-                      "fontFamily": "InterUI-Medium",
-                      "fontSize": 14,
-                      "lineHeight": 21,
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                      "width": "100%",
                     }
                   }
                 >
-                  Live for Freedom Toolkit
-                </Text>
-                <Text
-                  bold={false}
-                  hasTitle="Live for Freedom Toolkit"
-                  italic={false}
-                  numberOfLines={2}
-                  style={
-                    Object {
-                      "color": "rgba(39, 39, 46, 0.3)",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 12,
-                      "lineHeight": 18,
-                      "paddingTop": 8,
+                  <Text
+                    numberOfLines={2}
+                    style={
+                      Object {
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 16,
+                        "lineHeight": 24,
+                      }
                     }
-                  }
-                >
-                  Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.
-                </Text>
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#27272E",
+                        }
+                      }
+                    >
+                      Live for Freedom Toolkit
+                    </Text>
+                  </Text>
+                  <Text
+                    bold={false}
+                    italic={false}
+                    numberOfLines={2}
+                    style={
+                      Object {
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Regular",
+                        "fontSize": 12,
+                        "lineHeight": 18,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "rgba(39, 39, 46, 0.6)",
+                        }
+                      }
+                    >
+                      Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.
+                    </Text>
+                  </Text>
+                </View>
               </View>
             </View>
           </View>
@@ -2689,9 +2857,70 @@ exports[`The HorizontalCardListFeature component should render with a section su
                 }
               }
             >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "rgb(249, 249, 251)",
+                      "flex": 1,
+                      "height": "100%",
+                    },
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    },
+                  ]
+                }
+              >
+                <Image
+                  blurRadius={128}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={
+                    Array [
+                      Object {
+                        "cache": "force-cache",
+                        "uri": "https://picsum.photos/800",
+                      },
+                    ]
+                  }
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                        "flex": 1,
+                        "height": "100%",
+                      },
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    ]
+                  }
+                />
+              </View>
               <Image
                 fadeDuration={250}
                 hasTitleAndSummary={true}
+                height={135}
                 onLoad={[Function]}
                 source={
                   Array [
@@ -2703,52 +2932,75 @@ exports[`The HorizontalCardListFeature component should render with a section su
                 }
                 style={
                   Object {
-                    "aspectRatio": 2,
+                    "aspectRatio": 1.7777777777777777,
                     "backgroundColor": "#A5A5A5",
                     "width": "100%",
                   }
                 }
+                width={240}
               />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 24,
-                    "paddingHorizontal": 16,
-                    "paddingVertical": 16,
+                    "height": 105,
+                    "justifyContent": "center",
                   }
                 }
               >
-                <Text
-                  numberOfLines={2}
+                <View
                   style={
                     Object {
-                      "color": "#27272E",
-                      "fontFamily": "InterUI-Medium",
-                      "fontSize": 14,
-                      "lineHeight": 21,
+                      "paddingHorizontal": 16,
+                      "paddingVertical": 16,
+                      "width": "100%",
                     }
                   }
                 >
-                  Live for Freedom Toolkit
-                </Text>
-                <Text
-                  bold={false}
-                  hasTitle="Live for Freedom Toolkit"
-                  italic={false}
-                  numberOfLines={2}
-                  style={
-                    Object {
-                      "color": "rgba(39, 39, 46, 0.3)",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 12,
-                      "lineHeight": 18,
-                      "paddingTop": 8,
+                  <Text
+                    numberOfLines={2}
+                    style={
+                      Object {
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 16,
+                        "lineHeight": 24,
+                      }
                     }
-                  }
-                >
-                  Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.
-                </Text>
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#27272E",
+                        }
+                      }
+                    >
+                      Live for Freedom Toolkit
+                    </Text>
+                  </Text>
+                  <Text
+                    bold={false}
+                    italic={false}
+                    numberOfLines={2}
+                    style={
+                      Object {
+                        "color": "#27272E",
+                        "fontFamily": "InterUI-Regular",
+                        "fontSize": 12,
+                        "lineHeight": 18,
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "rgba(39, 39, 46, 0.6)",
+                        }
+                      }
+                    >
+                      Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.
+                    </Text>
+                  </Text>
+                </View>
               </View>
             </View>
           </View>

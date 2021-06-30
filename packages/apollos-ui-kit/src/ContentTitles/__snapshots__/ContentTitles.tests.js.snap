@@ -29,7 +29,7 @@ Array [
     }
   >
     <Text
-      numberOfLines={3}
+      numberOfLines={2}
       style={
         Object {
           "color": "#27272E",
@@ -431,7 +431,7 @@ Array [
     }
   >
     <Text
-      numberOfLines={1}
+      numberOfLines={2}
       style={
         Object {
           "color": "#27272E",
@@ -474,16 +474,6 @@ Array [
         This is a short summary of this content.
       </Text>
     </Text>
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-          "justifyContent": "space-between",
-          "paddingTop": 8,
-          "width": "100%",
-        }
-      }
-    />
   </View>,
 ]
 `;
@@ -517,7 +507,7 @@ Array [
     }
   >
     <Text
-      numberOfLines={3}
+      numberOfLines={2}
       style={
         Object {
           "color": "#27272E",
@@ -603,7 +593,7 @@ Array [
     }
   >
     <Text
-      numberOfLines={3}
+      numberOfLines={2}
       style={
         Object {
           "color": "#27272E",

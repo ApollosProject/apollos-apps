@@ -37,7 +37,7 @@ storiesOf('ui-kit/DefaultCard', module)
         }
         coverImage={[
           {
-            uri: 'https://picsum.photos/id/324/1400/800/?random',
+            uri: 'https://picsum.photos/id/324/1400/800',
           },
         ]}
         isLiked
@@ -51,7 +51,7 @@ storiesOf('ui-kit/DefaultCard', module)
         }
         coverImage={[
           {
-            uri: 'https://picsum.photos/id/100/800/800/?random',
+            uri: 'https://picsum.photos/id/100/800/800',
           },
         ]}
         isLiked={false}
@@ -81,7 +81,7 @@ storiesOf('ui-kit/DefaultCard', module)
           }
           coverImage={[
             {
-              uri: 'https://picsum.photos/id/324/1400/800/?random',
+              uri: 'https://picsum.photos/id/324/1400/800',
             },
           ]}
           isLiked
@@ -95,7 +95,7 @@ storiesOf('ui-kit/DefaultCard', module)
           }
           coverImage={[
             {
-              uri: 'https://picsum.photos/id/100/800/800/?random',
+              uri: 'https://picsum.photos/id/100/800/800',
             },
           ]}
           isLiked={false}
@@ -110,7 +110,7 @@ storiesOf('ui-kit/DefaultCard', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/1400/800/?random',
+          uri: 'https://picsum.photos/1400/800',
         },
       ]}
     />
@@ -122,7 +122,7 @@ storiesOf('ui-kit/DefaultCard', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/1400/800/?random',
+          uri: 'https://picsum.photos/1400/800',
         },
       ]}
       summary={
@@ -137,7 +137,7 @@ storiesOf('ui-kit/DefaultCard', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/1400/800/?random',
+          uri: 'https://picsum.photos/1400/800',
         },
       ]}
       isLiked={false}
@@ -150,7 +150,7 @@ storiesOf('ui-kit/DefaultCard', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/1400/800/?random',
+          uri: 'https://picsum.photos/1400/800',
         },
       ]}
       isLiked
@@ -163,7 +163,7 @@ storiesOf('ui-kit/DefaultCard', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/1400/800/?random',
+          uri: 'https://picsum.photos/1400/800',
         },
       ]}
       labelText={'Quote'}
@@ -177,7 +177,7 @@ storiesOf('ui-kit/DefaultCard', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/1400/800/?random',
+          uri: 'https://picsum.photos/1400/800',
         },
       ]}
       LabelComponent={
@@ -205,7 +205,7 @@ storiesOf('ui-kit/DefaultCard', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/1400/800/?random',
+          uri: 'https://picsum.photos/1400/800',
         },
       ]}
       isLive

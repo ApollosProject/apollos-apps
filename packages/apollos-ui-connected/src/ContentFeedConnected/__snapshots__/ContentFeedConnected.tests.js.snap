@@ -218,7 +218,7 @@ exports[`content feed query component renders a feedview after successful query 
                   </Text>
                 </View>
                 <Text
-                  numberOfLines={3}
+                  numberOfLines={2}
                   style={
                     Object {
                       "color": "#27272E",
@@ -424,7 +424,7 @@ exports[`content feed query component renders a feedview after successful query 
                   </Text>
                 </View>
                 <Text
-                  numberOfLines={3}
+                  numberOfLines={2}
                   style={
                     Object {
                       "color": "#27272E",

@@ -131,37 +131,40 @@ const HorizontalHighlightCard = withIsLoading(
     labelText,
     theme,
     ...props
-  }) => (
-    <ThemeMixin
-      mixin={{
-        type: get(theme, 'type', 'dark').toLowerCase(), // not sure why we need toLowerCase
-        colors: get(theme, 'colors', {}),
-      }}
-    >
-      <SquareCard
-        isLoading={isLoading}
-        inHorizontalList
-        disabled={disabled}
-        {...props}
+  }) =>
+    console.warn(
+      'HorizontalHighlightCard has been deprecated. Please use DefaultCards instead'
+    ) || (
+      <ThemeMixin
+        mixin={{
+          type: get(theme, 'type', 'dark').toLowerCase(), // not sure why we need toLowerCase
+          colors: get(theme, 'colors', {}),
+        }}
       >
-        <Image customTheme={theme} source={coverImage} disabled={disabled} />
-        <Content>
-          {renderLabel(LabelComponent, labelText, theme)}
-          <ActionLayout>
-            <FlexedActionLayoutText hasAction={hasAction}>
-              <H3 numberOfLines={4}>{title}</H3>
-            </FlexedActionLayoutText>
-            {hasAction ? <ActionIcon name={actionIcon} /> : null}
-          </ActionLayout>
-        </Content>
-        {isLiked != null ? (
-          <LikeIconPositioning>
-            <LikeIcon isLiked={isLiked} />
-          </LikeIconPositioning>
-        ) : null}
-      </SquareCard>
-    </ThemeMixin>
-  )
+        <SquareCard
+          isLoading={isLoading}
+          inHorizontalList
+          disabled={disabled}
+          {...props}
+        >
+          <Image customTheme={theme} source={coverImage} disabled={disabled} />
+          <Content>
+            {renderLabel(LabelComponent, labelText, theme)}
+            <ActionLayout>
+              <FlexedActionLayoutText hasAction={hasAction}>
+                <H3 numberOfLines={4}>{title}</H3>
+              </FlexedActionLayoutText>
+              {hasAction ? <ActionIcon name={actionIcon} /> : null}
+            </ActionLayout>
+          </Content>
+          {isLiked != null ? (
+            <LikeIconPositioning>
+              <LikeIcon isLiked={isLiked} />
+            </LikeIconPositioning>
+          ) : null}
+        </SquareCard>
+      </ThemeMixin>
+    )
 );
 
 HorizontalHighlightCard.propTypes = {
