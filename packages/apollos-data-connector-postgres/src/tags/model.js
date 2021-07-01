@@ -12,6 +12,23 @@ const createModel = defineModel({
   },
 });
 
-const setupModel = configureModel(() => {});
+const setupModel = configureModel(({ sequelize }) => {
+  sequelize.models.contentItem.belongsToMany(sequelize.models.tag, {
+    through: 'content_tag',
+    as: 'tags',
+  });
+  sequelize.models.tag.belongsToMany(sequelize.models.contentItem, {
+    through: 'content_tag',
+    as: 'contentItems',
+  });
+  sequelize.models.people.belongsToMany(sequelize.models.tag, {
+    through: 'people_tag',
+    as: 'tags',
+  });
+  sequelize.models.tag.belongsToMany(sequelize.models.people, {
+    through: 'people_tag',
+    as: 'people',
+  });
+});
 
 export { createModel, setupModel };

@@ -19,6 +19,5 @@ export * as Notification from './notifications';
 export * as NotificationPreference from './notification-preferences';
 export * as Media from './media';
 export * as Tag from './tags'
-export * as NodeTag from './node-tags'
 
 export createMigrationRunner from './postgres/performMigrations';
