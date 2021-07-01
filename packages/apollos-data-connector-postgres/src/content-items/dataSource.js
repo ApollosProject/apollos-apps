@@ -2,8 +2,6 @@
 import Hypher from 'hypher';
 import english from 'hyphenation.en-us';
 import {
-  createGlobalId,
-  parseGlobalId,
   generateAppLink,
   createCursor,
   parseCursor,
@@ -13,7 +11,7 @@ import ApollosConfig from '@apollosproject/config';
 import { uniq } from 'lodash';
 import { PostgresDataSource } from '../postgres';
 
-const { ROCK, ROCK_MAPPINGS } = ApollosConfig;
+const { ROCK, ROCK_MAPPINGS, CONTENT } = ApollosConfig;
 
 class ContentItemDataSource extends PostgresDataSource {
   modelName = 'contentItem';
@@ -136,10 +134,6 @@ class ContentItemDataSource extends PostgresDataSource {
     }
     return [];
   }
-
-  getCursorByChildContentItemId = async (id) => {};
-
-  getCursorBySiblingContentItemId = async (id) => {};
 
   // Generates feed based on persons dataview membership
   byPersonaFeed = async (first) => {
@@ -280,7 +274,7 @@ class ContentItemDataSource extends PostgresDataSource {
         ids.map(async (id) => ({
           id,
           percent: await this.getPercentComplete(
-            await this.model.findOne({ where: { apollosId } })
+            await this.model.findOne({ where: { apollosId: id } })
           ),
         }))
       )
