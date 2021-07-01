@@ -7,7 +7,7 @@ import CenteredView from '../CenteredView';
 import HorizontalTileFeed from '../HorizontalTileFeed';
 import { CardLabel } from '../Card';
 
-import HorizontalHighlightCard from '.';
+import HorizontalHighlightCard from './index';
 
 storiesOf('ui-kit/HorizontalHighlightCard', module)
   .addDecorator((story) => (

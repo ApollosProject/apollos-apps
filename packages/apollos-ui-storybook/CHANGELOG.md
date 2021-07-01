@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.25.0](https://github.com/apollosproject/apollos-apps/compare/v2.24.0...v2.25.0) (2021-06-30)
+
+
+### Bug Fixes
+
+* Fix Storybook 🎉 ([#2037](https://github.com/apollosproject/apollos-apps/issues/2037)) ([f0ef4f6](https://github.com/apollosproject/apollos-apps/commit/f0ef4f6d5eac1d8df2db217f9f13495ad98ec676))
+
+
+
 ## [2.24.0](https://github.com/apollosproject/apollos-apps/compare/v2.23.1...v2.24.0) (2021-06-28)
 
 **Note:** Version bump only for package @apollosproject/ui-storybook

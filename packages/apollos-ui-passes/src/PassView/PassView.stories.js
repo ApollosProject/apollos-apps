@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { BackgroundView, CenteredView } from '@apollosproject/ui-kit';
 
-import PassView from '.';
+import PassView from './index';
 
 const passData = {
   id: 'Pass:164410fae995cd5efe1cce582c912a5f',

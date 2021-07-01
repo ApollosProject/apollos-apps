@@ -7,7 +7,7 @@ import {
   FlexedView,
 } from '@apollosproject/ui-kit';
 
-import RockAuthedWebBrowser from '.';
+import RockAuthedWebBrowser from './index';
 
 storiesOf('ui-connected/RockAuthedWebBrowser', module)
   .add('Default', () => (

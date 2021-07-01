@@ -151,13 +151,19 @@ exports[`The VerticalCardListFeatureConnected component should render 1`] = `
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
-                    "width": "100%",
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 1,
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
                   }
                 }
               >
                 <Image
+                  blurRadius={80}
                   fadeDuration={250}
                   onLoad={[Function]}
                   source={
@@ -171,69 +177,81 @@ exports[`The VerticalCardListFeatureConnected component should render 1`] = `
                   }
                   style={
                     Object {
-                      "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  material="regular"
+                  style={
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 1,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
                     }
                   }
                 />
               </View>
+              <Image
+                fadeDuration={250}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "__typename": "ImageMediaSource",
+                      "cache": "force-cache",
+                      "uri": "https://picsum.photos/200/200",
+                    },
+                  ]
+                }
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
+                  }
+                }
+              />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 16,
+                    "width": "100%",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "alignItems": "center",
+                      "flex": null,
+                      "flexDirection": "row",
                     }
                   }
                 >
-                  <View
-                    bordered={false}
-                    disabled={false}
-                    pill={false}
+                  <Text
                     style={
                       Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#17B582",
-                        "borderColor": "#17B582",
-                        "borderRadius": 16,
-                        "borderWidth": 2,
-                        "elevation": 2,
-                        "flexDirection": "row",
-                        "height": 32,
-                        "justifyContent": "center",
-                        "opacity": 1,
-                        "overflow": "hidden",
-                        "paddingHorizontal": 12,
+                        "color": "rgba(39, 39, 46, 0.6)",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 16,
+                        "lineHeight": 24,
                       }
                     }
                   >
-                    <Text
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "color": "#FFFFFF",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "justifyContent": "center",
-                          "lineHeight": 18,
-                          "textAlign": "center",
-                        }
-                      }
-                    >
-                      What
-                    </Text>
-                  </View>
+                    What
+                  </Text>
                 </View>
                 <Text
                   numberOfLines={2}
@@ -246,24 +264,49 @@ exports[`The VerticalCardListFeatureConnected component should render 1`] = `
                     }
                   }
                 >
-                  Boom
+                  <Text
+                    style={
+                      Object {
+                        "color": "#27272E",
+                      }
+                    }
+                  >
+                    Boom
+                  </Text>
                 </Text>
                 <Text
                   bold={false}
                   italic={false}
-                  numberOfLines={2}
+                  numberOfLines={3}
                   style={
                     Object {
                       "color": "#27272E",
                       "fontFamily": "InterUI-Regular",
                       "fontSize": 16,
                       "lineHeight": 26,
-                      "paddingTop": 16,
                     }
                   }
                 >
-                  Read
+                  <Text
+                    style={
+                      Object {
+                        "color": "rgba(39, 39, 46, 0.6)",
+                      }
+                    }
+                  >
+                    Read
+                  </Text>
                 </Text>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
+                      "width": "100%",
+                    }
+                  }
+                />
               </View>
             </View>
           </View>
@@ -385,11 +428,10 @@ exports[`The VerticalCardListFeatureConnected component should render a featured
           }
         >
           <View
-            cardColor="#00676D"
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#00676D",
+                "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
@@ -414,15 +456,20 @@ exports[`The VerticalCardListFeatureConnected component should render a featured
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
-                    "width": "100%",
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 1,
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
                   }
                 }
               >
                 <Image
+                  blurRadius={80}
                   fadeDuration={250}
-                  isLoading={true}
                   onLoad={[Function]}
                   source={
                     Array [
@@ -434,42 +481,7 @@ exports[`The VerticalCardListFeatureConnected component should render a featured
                   }
                   style={
                     Object {
-                      "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
-                    }
-                  }
-                />
-                <BVLinearGradient
-                  colors={
-                    Array [
-                      1725684697,
-                      4292598745,
-                    ]
-                  }
-                  endPoint={
-                    Object {
-                      "x": 0,
-                      "y": 1,
-                    }
-                  }
-                  locations={
-                    Array [
-                      0,
-                      0.8,
-                    ]
-                  }
-                  overlayColor="#DBDBD9"
-                  overlayType="featured"
-                  startPoint={
-                    Object {
-                      "x": 0,
-                      "y": 0,
-                    }
-                  }
-                  style={
-                    Object {
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -478,72 +490,105 @@ exports[`The VerticalCardListFeatureConnected component should render a featured
                     }
                   }
                 />
+                <View
+                  material="regular"
+                  style={
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 1,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
               </View>
+              <Image
+                fadeDuration={250}
+                isLoading={true}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
+                  }
+                }
+              />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "marginTop": "-40%",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 16,
+                    "width": "100%",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
-                      "borderRadius": 16,
-                      "height": 36,
-                      "marginVertical": 2.6999999999999993,
-                      "width": "100%",
+                      "alignItems": "center",
+                      "flex": null,
+                      "flexDirection": "row",
                     }
                   }
                 />
                 <View
-                  hasSummary={true}
                   style={
                     Object {
-                      "alignItems": "center",
-                      "flexDirection": "row",
-                      "paddingTop": 16,
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 24,
+                      "marginVertical": 1.8000000000000007,
+                      "width": "100%",
+                    }
+                  }
+                />
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={3}
+                  style={
+                    Object {
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
                     }
                   }
                 >
-                  <View
+                  <Text
                     style={
                       Object {
-                        "flex": 1,
-                        "marginRight": 16,
+                        "color": "rgba(39, 39, 46, 0.6)",
                       }
                     }
                   >
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "stretch",
-                          "backgroundColor": "#A5A5A5",
-                          "borderRadius": 16,
-                          "height": 16,
-                          "marginVertical": 5,
-                          "width": "100%",
-                        }
-                      }
-                    />
-                  </View>
-                  <View
-                    style={
-                      Object {
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 48,
-                        "width": 48,
-                      }
+                    boom
+                  </Text>
+                </Text>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
+                      "width": "100%",
                     }
-                  />
-                </View>
+                  }
+                />
               </View>
             </View>
           </View>
@@ -896,15 +941,20 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
-                    "width": "100%",
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 1,
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
                   }
                 }
               >
                 <Image
+                  blurRadius={80}
                   fadeDuration={250}
-                  isLoading={true}
                   onLoad={[Function]}
                   source={
                     Array [
@@ -916,55 +966,110 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   style={
                     Object {
-                      "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  material="regular"
+                  style={
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 1,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
                     }
                   }
                 />
               </View>
+              <Image
+                fadeDuration={250}
+                isLoading={true}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
+                  }
+                }
+              />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 16,
+                    "width": "100%",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "alignItems": "center",
+                      "flex": null,
+                      "flexDirection": "row",
                     }
                   }
-                >
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
-                      }
-                    }
-                  />
-                </View>
+                />
                 <View
                   style={
                     Object {
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
+                      "height": 24,
+                      "marginVertical": 1.8000000000000007,
+                      "width": "100%",
+                    }
+                  }
+                />
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={3}
+                  style={
+                    Object {
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "rgba(39, 39, 46, 0.6)",
+                      }
+                    }
+                  >
+                    boom
+                  </Text>
+                </Text>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
                       "width": "100%",
                     }
                   }
@@ -1027,15 +1132,20 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
-                    "width": "100%",
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 1,
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
                   }
                 }
               >
                 <Image
+                  blurRadius={80}
                   fadeDuration={250}
-                  isLoading={true}
                   onLoad={[Function]}
                   source={
                     Array [
@@ -1047,55 +1157,110 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   style={
                     Object {
-                      "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  material="regular"
+                  style={
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 1,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
                     }
                   }
                 />
               </View>
+              <Image
+                fadeDuration={250}
+                isLoading={true}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
+                  }
+                }
+              />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 16,
+                    "width": "100%",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "alignItems": "center",
+                      "flex": null,
+                      "flexDirection": "row",
                     }
                   }
-                >
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
-                      }
-                    }
-                  />
-                </View>
+                />
                 <View
                   style={
                     Object {
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
+                      "height": 24,
+                      "marginVertical": 1.8000000000000007,
+                      "width": "100%",
+                    }
+                  }
+                />
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={3}
+                  style={
+                    Object {
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "rgba(39, 39, 46, 0.6)",
+                      }
+                    }
+                  >
+                    boom
+                  </Text>
+                </Text>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
                       "width": "100%",
                     }
                   }
@@ -1158,15 +1323,20 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
-                    "width": "100%",
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 1,
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
                   }
                 }
               >
                 <Image
+                  blurRadius={80}
                   fadeDuration={250}
-                  isLoading={true}
                   onLoad={[Function]}
                   source={
                     Array [
@@ -1178,55 +1348,110 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   style={
                     Object {
-                      "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  material="regular"
+                  style={
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 1,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
                     }
                   }
                 />
               </View>
+              <Image
+                fadeDuration={250}
+                isLoading={true}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
+                  }
+                }
+              />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 16,
+                    "width": "100%",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "alignItems": "center",
+                      "flex": null,
+                      "flexDirection": "row",
                     }
                   }
-                >
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
-                      }
-                    }
-                  />
-                </View>
+                />
                 <View
                   style={
                     Object {
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
+                      "height": 24,
+                      "marginVertical": 1.8000000000000007,
+                      "width": "100%",
+                    }
+                  }
+                />
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={3}
+                  style={
+                    Object {
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "rgba(39, 39, 46, 0.6)",
+                      }
+                    }
+                  >
+                    boom
+                  </Text>
+                </Text>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
                       "width": "100%",
                     }
                   }
@@ -1289,15 +1514,20 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
-                    "width": "100%",
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 1,
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
                   }
                 }
               >
                 <Image
+                  blurRadius={80}
                   fadeDuration={250}
-                  isLoading={true}
                   onLoad={[Function]}
                   source={
                     Array [
@@ -1309,55 +1539,110 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   style={
                     Object {
-                      "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  material="regular"
+                  style={
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 1,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
                     }
                   }
                 />
               </View>
+              <Image
+                fadeDuration={250}
+                isLoading={true}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
+                  }
+                }
+              />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 16,
+                    "width": "100%",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "alignItems": "center",
+                      "flex": null,
+                      "flexDirection": "row",
                     }
                   }
-                >
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
-                      }
-                    }
-                  />
-                </View>
+                />
                 <View
                   style={
                     Object {
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
+                      "height": 24,
+                      "marginVertical": 1.8000000000000007,
+                      "width": "100%",
+                    }
+                  }
+                />
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={3}
+                  style={
+                    Object {
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "rgba(39, 39, 46, 0.6)",
+                      }
+                    }
+                  >
+                    boom
+                  </Text>
+                </Text>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
                       "width": "100%",
                     }
                   }
@@ -1420,15 +1705,20 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
-                    "width": "100%",
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 1,
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
                   }
                 }
               >
                 <Image
+                  blurRadius={80}
                   fadeDuration={250}
-                  isLoading={true}
                   onLoad={[Function]}
                   source={
                     Array [
@@ -1440,55 +1730,110 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   style={
                     Object {
-                      "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  material="regular"
+                  style={
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 1,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
                     }
                   }
                 />
               </View>
+              <Image
+                fadeDuration={250}
+                isLoading={true}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
+                  }
+                }
+              />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 16,
+                    "width": "100%",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "alignItems": "center",
+                      "flex": null,
+                      "flexDirection": "row",
                     }
                   }
-                >
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
-                      }
-                    }
-                  />
-                </View>
+                />
                 <View
                   style={
                     Object {
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
+                      "height": 24,
+                      "marginVertical": 1.8000000000000007,
+                      "width": "100%",
+                    }
+                  }
+                />
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={3}
+                  style={
+                    Object {
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "rgba(39, 39, 46, 0.6)",
+                      }
+                    }
+                  >
+                    boom
+                  </Text>
+                </Text>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
                       "width": "100%",
                     }
                   }
@@ -1551,15 +1896,20 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
-                    "width": "100%",
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 1,
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
                   }
                 }
               >
                 <Image
+                  blurRadius={80}
                   fadeDuration={250}
-                  isLoading={true}
                   onLoad={[Function]}
                   source={
                     Array [
@@ -1571,55 +1921,110 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   style={
                     Object {
-                      "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  material="regular"
+                  style={
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 1,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
                     }
                   }
                 />
               </View>
+              <Image
+                fadeDuration={250}
+                isLoading={true}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
+                  }
+                }
+              />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 16,
+                    "width": "100%",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "alignItems": "center",
+                      "flex": null,
+                      "flexDirection": "row",
                     }
                   }
-                >
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
-                      }
-                    }
-                  />
-                </View>
+                />
                 <View
                   style={
                     Object {
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
+                      "height": 24,
+                      "marginVertical": 1.8000000000000007,
+                      "width": "100%",
+                    }
+                  }
+                />
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={3}
+                  style={
+                    Object {
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "rgba(39, 39, 46, 0.6)",
+                      }
+                    }
+                  >
+                    boom
+                  </Text>
+                </Text>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
                       "width": "100%",
                     }
                   }
@@ -1682,15 +2087,20 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
-                    "width": "100%",
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 1,
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
                   }
                 }
               >
                 <Image
+                  blurRadius={80}
                   fadeDuration={250}
-                  isLoading={true}
                   onLoad={[Function]}
                   source={
                     Array [
@@ -1702,55 +2112,110 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   style={
                     Object {
-                      "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  material="regular"
+                  style={
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 1,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
                     }
                   }
                 />
               </View>
+              <Image
+                fadeDuration={250}
+                isLoading={true}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
+                  }
+                }
+              />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 16,
+                    "width": "100%",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "alignItems": "center",
+                      "flex": null,
+                      "flexDirection": "row",
                     }
                   }
-                >
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
-                      }
-                    }
-                  />
-                </View>
+                />
                 <View
                   style={
                     Object {
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
+                      "height": 24,
+                      "marginVertical": 1.8000000000000007,
+                      "width": "100%",
+                    }
+                  }
+                />
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={3}
+                  style={
+                    Object {
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "rgba(39, 39, 46, 0.6)",
+                      }
+                    }
+                  >
+                    boom
+                  </Text>
+                </Text>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
                       "width": "100%",
                     }
                   }
@@ -1813,15 +2278,20 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
-                    "width": "100%",
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 1,
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
                   }
                 }
               >
                 <Image
+                  blurRadius={80}
                   fadeDuration={250}
-                  isLoading={true}
                   onLoad={[Function]}
                   source={
                     Array [
@@ -1833,55 +2303,110 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   style={
                     Object {
-                      "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  material="regular"
+                  style={
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 1,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
                     }
                   }
                 />
               </View>
+              <Image
+                fadeDuration={250}
+                isLoading={true}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
+                  }
+                }
+              />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 16,
+                    "width": "100%",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "alignItems": "center",
+                      "flex": null,
+                      "flexDirection": "row",
                     }
                   }
-                >
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
-                      }
-                    }
-                  />
-                </View>
+                />
                 <View
                   style={
                     Object {
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
+                      "height": 24,
+                      "marginVertical": 1.8000000000000007,
+                      "width": "100%",
+                    }
+                  }
+                />
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={3}
+                  style={
+                    Object {
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "rgba(39, 39, 46, 0.6)",
+                      }
+                    }
+                  >
+                    boom
+                  </Text>
+                </Text>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
                       "width": "100%",
                     }
                   }
@@ -1944,15 +2469,20 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
-                    "width": "100%",
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 1,
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
                   }
                 }
               >
                 <Image
+                  blurRadius={80}
                   fadeDuration={250}
-                  isLoading={true}
                   onLoad={[Function]}
                   source={
                     Array [
@@ -1964,55 +2494,110 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   style={
                     Object {
-                      "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  material="regular"
+                  style={
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 1,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
                     }
                   }
                 />
               </View>
+              <Image
+                fadeDuration={250}
+                isLoading={true}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
+                  }
+                }
+              />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 16,
+                    "width": "100%",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "alignItems": "center",
+                      "flex": null,
+                      "flexDirection": "row",
                     }
                   }
-                >
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
-                      }
-                    }
-                  />
-                </View>
+                />
                 <View
                   style={
                     Object {
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
+                      "height": 24,
+                      "marginVertical": 1.8000000000000007,
+                      "width": "100%",
+                    }
+                  }
+                />
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={3}
+                  style={
+                    Object {
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "rgba(39, 39, 46, 0.6)",
+                      }
+                    }
+                  >
+                    boom
+                  </Text>
+                </Text>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
                       "width": "100%",
                     }
                   }
@@ -2075,15 +2660,20 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
-                    "width": "100%",
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 1,
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
                   }
                 }
               >
                 <Image
+                  blurRadius={80}
                   fadeDuration={250}
-                  isLoading={true}
                   onLoad={[Function]}
                   source={
                     Array [
@@ -2095,55 +2685,110 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   style={
                     Object {
-                      "aspectRatio": 1.2,
                       "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  material="regular"
+                  style={
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 1,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
                     }
                   }
                 />
               </View>
+              <Image
+                fadeDuration={250}
+                isLoading={true}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "cache": "force-cache",
+                      "uri": "",
+                    },
+                  ]
+                }
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
+                  }
+                }
+              />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 16,
+                    "width": "100%",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "alignItems": "center",
+                      "flex": null,
+                      "flexDirection": "row",
                     }
                   }
-                >
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
-                      }
-                    }
-                  />
-                </View>
+                />
                 <View
                   style={
                     Object {
                       "alignSelf": "stretch",
                       "backgroundColor": "#A5A5A5",
                       "borderRadius": 16,
-                      "height": 16,
-                      "marginTop": 16,
-                      "marginVertical": 5,
+                      "height": 24,
+                      "marginVertical": 1.8000000000000007,
+                      "width": "100%",
+                    }
+                  }
+                />
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={3}
+                  style={
+                    Object {
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "rgba(39, 39, 46, 0.6)",
+                      }
+                    }
+                  >
+                    boom
+                  </Text>
+                </Text>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
                       "width": "100%",
                     }
                   }
@@ -2257,10 +2902,9 @@ exports[`The VerticalCardListFeatureConnected component should render as a featu
           }
         >
           <View
-            cardColor="#00676D"
             style={
               Object {
-                "backgroundColor": "#00676D",
+                "backgroundColor": "#FFFFFF",
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
@@ -2285,13 +2929,19 @@ exports[`The VerticalCardListFeatureConnected component should render as a featu
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
-                    "width": "100%",
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 1,
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
                   }
                 }
               >
                 <Image
+                  blurRadius={80}
                   fadeDuration={250}
                   onLoad={[Function]}
                   source={
@@ -2305,42 +2955,7 @@ exports[`The VerticalCardListFeatureConnected component should render as a featu
                   }
                   style={
                     Object {
-                      "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
-                      "width": "100%",
-                    }
-                  }
-                />
-                <BVLinearGradient
-                  colors={
-                    Array [
-                      1711302509,
-                      4278216557,
-                    ]
-                  }
-                  endPoint={
-                    Object {
-                      "x": 0,
-                      "y": 1,
-                    }
-                  }
-                  locations={
-                    Array [
-                      0,
-                      0.8,
-                    ]
-                  }
-                  overlayColor="#00676D"
-                  overlayType="featured"
-                  startPoint={
-                    Object {
-                      "x": 0,
-                      "y": 0,
-                    }
-                  }
-                  style={
-                    Object {
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -2349,50 +2964,67 @@ exports[`The VerticalCardListFeatureConnected component should render as a featu
                     }
                   }
                 />
+                <View
+                  material="regular"
+                  style={
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 1,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
               </View>
+              <Image
+                fadeDuration={250}
+                onLoad={[Function]}
+                source={
+                  Array [
+                    Object {
+                      "__typename": "ImageMediaSource",
+                      "cache": "force-cache",
+                      "uri": "https://picsum.photos/200/200",
+                    },
+                  ]
+                }
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "backgroundColor": "#A5A5A5",
+                    "width": "100%",
+                  }
+                }
+              />
               <View
                 style={
                   Object {
-                    "alignItems": "flex-start",
-                    "marginTop": "-40%",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
+                    "paddingHorizontal": 16,
                     "paddingVertical": 16,
+                    "width": "100%",
                   }
                 }
               >
                 <View
-                  bordered={false}
-                  disabled={false}
-                  pill={false}
                   style={
                     Object {
                       "alignItems": "center",
-                      "backgroundColor": "rgba(255, 255, 255, 0.4)",
-                      "borderColor": "rgba(255, 255, 255, 0.4)",
-                      "borderRadius": 16,
-                      "borderWidth": 0,
-                      "elevation": 2,
+                      "flex": null,
                       "flexDirection": "row",
-                      "height": 32,
-                      "justifyContent": "center",
-                      "marginBottom": 16,
-                      "opacity": 1,
-                      "overflow": "hidden",
-                      "paddingHorizontal": 12,
                     }
                   }
                 >
                   <Text
                     style={
                       Object {
-                        "alignItems": "center",
-                        "color": "#FFFFFF",
+                        "color": "rgba(39, 39, 46, 0.6)",
                         "fontFamily": "InterUI-Bold",
-                        "fontSize": 12,
-                        "justifyContent": "center",
-                        "lineHeight": 18,
-                        "textAlign": "center",
+                        "fontSize": 16,
+                        "lineHeight": 24,
                       }
                     }
                   >
@@ -2400,53 +3032,59 @@ exports[`The VerticalCardListFeatureConnected component should render as a featu
                   </Text>
                 </View>
                 <Text
-                  numberOfLines={3}
+                  numberOfLines={2}
                   style={
                     Object {
-                      "color": "#F4F7F8",
+                      "color": "#27272E",
                       "fontFamily": "InterUI-Black",
-                      "fontSize": 36,
-                      "lineHeight": 41.4,
+                      "fontSize": 24,
+                      "lineHeight": 27.6,
                     }
                   }
                 >
-                  Boom
-                </Text>
-                <View
-                  hasSummary={true}
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "flexDirection": "row",
-                      "paddingTop": 16,
-                    }
-                  }
-                >
-                  <View
+                  <Text
                     style={
                       Object {
-                        "flex": 1,
-                        "marginRight": 16,
+                        "color": "#27272E",
                       }
                     }
                   >
-                    <Text
-                      bold={false}
-                      italic={false}
-                      numberOfLines={2}
-                      style={
-                        Object {
-                          "color": "#F4F7F8",
-                          "fontFamily": "InterUI-Regular",
-                          "fontSize": 16,
-                          "lineHeight": 26,
-                        }
+                    Boom
+                  </Text>
+                </Text>
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={3}
+                  style={
+                    Object {
+                      "color": "#27272E",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "rgba(39, 39, 46, 0.6)",
                       }
-                    >
-                      Read
-                    </Text>
-                  </View>
-                </View>
+                    }
+                  >
+                    Read
+                  </Text>
+                </Text>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
+                      "width": "100%",
+                    }
+                  }
+                />
               </View>
             </View>
           </View>

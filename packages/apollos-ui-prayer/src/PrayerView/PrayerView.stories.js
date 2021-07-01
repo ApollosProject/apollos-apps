@@ -5,7 +5,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 
 import PrayerCard from '../PrayerCard';
 
-import PrayerView from '.';
+import PrayerView from './index';
 
 storiesOf('ui-prayer/PrayerView', module)
   .add('example', () => (
