@@ -10,6 +10,7 @@ import {
 } from '@apollosproject/server-core';
 import { Op } from 'sequelize';
 import ApollosConfig from '@apollosproject/config';
+import { uniq } from 'lodash';
 import { PostgresDataSource } from '../postgres';
 
 const { ROCK, ROCK_MAPPINGS } = ApollosConfig;
@@ -216,141 +217,115 @@ class ContentItemDataSource extends PostgresDataSource {
     });
   };
 
-  async getUpNext({ id }) {
-    //     const { Auth, Interactions } = this.context.dataSources;
-    //
-    //     // Safely exit if we don't have a current user.
-    //     try {
-    //       await Auth.getCurrentPerson();
-    //     } catch (e) {
-    //       return null;
-    //     }
-    //
-    //     const childItemsCursor = await this.getCursorByParentContentItemId(id);
-    //     const childItemsOldestFirst = await childItemsCursor
-    //       .orderBy()
-    //       .sort(this.DEFAULT_SORT())
-    //       .get();
-    //
-    //     const childItems = childItemsOldestFirst.reverse();
-    //     const childItemsWithApollosIds = childItems.map((childItem) => ({
-    //       ...childItem,
-    //       apollosId: createGlobalId(childItem.id, this.resolveType(childItem)),
-    //     }));
-    //
-    //     const interactions = await Interactions.getInteractionsForCurrentUserAndNodes(
-    //       {
-    //         nodeIds: childItemsWithApollosIds.map(({ apollosId }) => apollosId),
-    //         actions: ['COMPLETE'],
-    //       }
-    //     );
-    //     const apollosIdsWithInteractions = interactions.map(
-    //       ({ foreignKey }) => foreignKey
-    //     );
-    //
-    //     const firstInteractedIndex = childItemsWithApollosIds.findIndex(
-    //       ({ apollosId }) => apollosIdsWithInteractions.includes(apollosId)
-    //     );
-    //
-    //     if (firstInteractedIndex === -1) {
-    //       // If you haven't completede anything, return the first (last in reversed array) item;
-    //       return childItemsWithApollosIds[childItemsWithApollosIds.length - 1];
-    //     }
-    //     if (firstInteractedIndex === 0) {
-    //       // If you have completed the last item, return null (no items left to read)
-    //       return null;
-    //     }
-    //     // otherwise, return the item immediately following (before) the item you have already read
-    //     return childItemsWithApollosIds[firstInteractedIndex - 1];
+  async getUpNext(model) {
+    const { Auth, Interactions } = this.context.dataSources;
+
+    // Safely exit if we don't have a current user.
+    try {
+      await Auth.getCurrentPerson();
+    } catch (e) {
+      return null;
+    }
+
+    const childItemsOldestFirst = await model.getChildren({
+      order: ['publishAt', 'ASC'],
+    });
+
+    const childItems = childItemsOldestFirst.reverse();
+
+    const interactions = await Interactions.getInteractionsForCurrentUserAndNodes(
+      {
+        nodeIds: childItems.map(({ apollosId }) => apollosId),
+        actions: ['COMPLETE'],
+      }
+    );
+    const apollosIdsWithInteractions = interactions.map(
+      ({ foreignKey }) => foreignKey
+    );
+
+    const firstInteractedIndex = childItems.findIndex(({ apollosId }) =>
+      apollosIdsWithInteractions.includes(apollosId)
+    );
+
+    if (firstInteractedIndex === -1) {
+      // If you haven't completede anything, return the first (last in reversed array) item;
+      return childItems[childItems.length - 1];
+    }
+    if (firstInteractedIndex === 0) {
+      // If you have completed the last item, return null (no items left to read)
+      return null;
+    }
+    // otherwise, return the item immediately following (before) the item you have already read
+    return childItems[firstInteractedIndex - 1];
   }
 
   async getSeriesWithUserProgress({ channelIds = [] } = {}) {
-    //     const { Auth, Interactions } = this.context.dataSources;
-    //
-    //     // Safely exit if we don't have a current user.
-    //     try {
-    //       await Auth.getCurrentPerson();
-    //     } catch (e) {
-    //       return this.request().empty();
-    //     }
-    //
-    //     const interactions = await Interactions.getInteractionsForCurrentUser({
-    //       actions: ['SERIES_START'],
-    //     });
-    //
-    //     const ids = uniq(
-    //       interactions.map(({ foreignKey }) => {
-    //         const { id } = parseGlobalId(foreignKey);
-    //         return id;
-    //       })
-    //     );
-    //
-    //     const completedIds = (
-    //       await Promise.all(
-    //         ids.map(async (id) => ({
-    //           id,
-    //           percent: await this.getPercentComplete({ id }),
-    //         }))
-    //       )
-    //     )
-    //       .filter(({ percent }) => percent === 100)
-    //       .map(({ id }) => id);
-    //
-    //     const inProgressIds = ids.filter((id) => ![...completedIds].includes(id));
-    //     let cursor = this.getFromIds(inProgressIds);
-    //
-    //     // only search through allowed channels
-    //     channelIds.forEach((id) => {
-    //       cursor = cursor.andFilter(`ContentChannelId eq ${id}`);
-    //     });
-    //
-    //     // exclude campaign channels
-    //     ROCK_MAPPINGS.CAMPAIGN_CHANNEL_IDS.forEach((id) => {
-    //       cursor = cursor.andFilter(`ContentChannelId ne ${id}`);
-    //     });
-    //
-    //     return cursor;
+    const { Auth, Interactions } = this.context.dataSources;
+
+    // Safely exit if we don't have a current user.
+    try {
+      await Auth.getCurrentPerson();
+    } catch (e) {
+      return this.request().empty();
+    }
+
+    const interactions = await Interactions.getInteractionsForCurrentUser({
+      actions: ['SERIES_START'],
+    });
+
+    const ids = uniq(interactions.map(({ foreignKey }) => foreignKey));
+
+    const completedIds = (
+      await Promise.all(
+        ids.map(async (id) => ({
+          id,
+          percent: await this.getPercentComplete(
+            await this.model.findOne({ where: { apollosId } })
+          ),
+        }))
+      )
+    )
+      .filter(({ percent }) => percent === 100)
+      .map(({ id }) => id);
+
+    const inProgressIds = ids.filter((id) => ![...completedIds].includes(id));
+
+    return this.getFromIds(inProgressIds);
   }
 
-  async getPercentComplete({ id }) {
-    //     const { Auth, Interactions } = this.context.dataSources;
-    //     // This can, and should, be cached in redis or some other system at some point
-    //
-    //     // Safely exit if we don't have a current user.
-    //     try {
-    //       await Auth.getCurrentPerson();
-    //     } catch (e) {
-    //       return null;
-    //     }
-    //
-    //     const childItemsCursor = await this.getCursorByParentContentItemId(id);
-    //     const childItems = await childItemsCursor.get();
-    //
-    //     if (childItems.length === 0) {
-    //       return 0;
-    //     }
-    //
-    //     const childItemsWithApollosIds = childItems.map((childItem) => ({
-    //       ...childItem,
-    //       apollosId: createGlobalId(childItem.id, this.resolveType(childItem)),
-    //     }));
-    //
-    //     const interactions = await Interactions.getInteractionsForCurrentUserAndNodes(
-    //       {
-    //         nodeIds: childItemsWithApollosIds.map(({ apollosId }) => apollosId),
-    //         actions: ['COMPLETE'],
-    //       }
-    //     );
-    //
-    //     const apollosIdsWithInteractions = interactions.map(
-    //       ({ foreignKey }) => foreignKey
-    //     );
-    //
-    //     const totalItemsWithInteractions = childItemsWithApollosIds.filter(
-    //       ({ apollosId }) => apollosIdsWithInteractions.includes(apollosId)
-    //     ).length;
-    //
-    //     return (totalItemsWithInteractions / childItems.length) * 100;
+  async getPercentComplete(model) {
+    const { Auth, Interactions } = this.context.dataSources;
+    // This can, and should, be cached in redis or some other system at some point
+
+    // Safely exit if we don't have a current user.
+    try {
+      await Auth.getCurrentPerson();
+    } catch (e) {
+      return null;
+    }
+
+    const childItems = await model.getChildren();
+
+    if (childItems.length === 0) {
+      return 0;
+    }
+
+    const interactions = await Interactions.getInteractionsForCurrentUserAndNodes(
+      {
+        nodeIds: childItems.map(({ apollosId }) => apollosId),
+        actions: ['COMPLETE'],
+      }
+    );
+
+    const apollosIdsWithInteractions = interactions.map(
+      ({ foreignKey }) => foreignKey
+    );
+
+    const totalItemsWithInteractions = childItems.filter(({ apollosId }) =>
+      apollosIdsWithInteractions.includes(apollosId)
+    ).length;
+
+    return (totalItemsWithInteractions / childItems.length) * 100;
   }
 
   // eslint-disable-next-line class-methods-use-this
