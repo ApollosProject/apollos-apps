@@ -113,7 +113,7 @@ const VerticalCardListFeature = memo(
     )
 );
 
-VerticalCardListFeature.displayName = 'Features';
+VerticalCardListFeature.displayName = 'VerticalCardListFeature';
 
 VerticalCardListFeature.propTypes = {
   cards: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
