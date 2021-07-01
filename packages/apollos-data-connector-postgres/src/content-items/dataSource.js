@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 import Hypher from 'hypher';
 import english from 'hyphenation.en-us';
 import {
@@ -25,7 +26,7 @@ class ContentItemDataSource extends PostgresDataSource {
   async hasMedia(model) {
     const videos = await model.getImages();
     const audios = await model.getAudios();
-    return [...vidoes, ...audios].length > 0;
+    return [...videos, ...audios].length > 0;
   }
 
   //   async getFeatures(item) {
@@ -118,13 +119,21 @@ class ContentItemDataSource extends PostgresDataSource {
   }
 
   // A simple alias at this point.
-  async getParents(model) {
-    return model.getParents();
+  async getParents(model, queryArgs = {}) {
+    return model.getParents(queryArgs);
   }
 
   // A simple alias at this point.
   async getChildren(model) {
     return model.getChildren();
+  }
+
+  async getSiblings(model, queryArgs = {}) {
+    const parent = await model.getParent();
+    if (parent) {
+      return parent.getChildren(queryArgs);
+    }
+    return [];
   }
 
   getCursorByChildContentItemId = async (id) => {};
@@ -343,8 +352,6 @@ class ContentItemDataSource extends PostgresDataSource {
     //
     //     return (totalItemsWithInteractions / childItems.length) * 100;
   }
-
-  getFromId = (id) => this.request().find(id).get();
 
   // eslint-disable-next-line class-methods-use-this
   createHyphenatedString({ text }) {

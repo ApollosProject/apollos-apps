@@ -1,6 +1,7 @@
 {
   "packages": [
-    "packages/*"
+    "packages/*",
+    "ApollosApi"
   ],
   "version": "2.25.0",
   "npmClient": "yarn",

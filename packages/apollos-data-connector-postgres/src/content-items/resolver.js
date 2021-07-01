@@ -23,11 +23,11 @@ export const defaultContentItemResolvers = {
   //   { dataSources }
   // ) => contentChannel || dataSources.ContentChannel.getFromId(contentChannelId),
 
-  // siblingContentItemsConnection: async ({ id }, args, { dataSources }) =>
-  //   dataSources.ContentItem.paginate({
-  //     cursor: await dataSources.ContentItem.getCursorBySiblingContentItemId(id),
-  //     args,
-  //   }),
+  siblingContentItemsConnection: async (model, args, { dataSources }) =>
+    dataSources.ContentItem.paginate({
+      cursor: () => dataSources.ContentItem.getSiblings(model, args),
+      args,
+    }),
 
   images: (model) => model.images || model.getImages(),
   videos: (model) => model.videos || model.getVideos(),
