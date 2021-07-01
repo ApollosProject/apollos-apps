@@ -4,7 +4,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 import { withIsLoading } from '../../isLoading';
 import PaddedView from '../../PaddedView';
 
-import OrderedListItem from '.';
+import OrderedListItem from './index';
 
 storiesOf('ui-kit/typography/OrderedListItem', module)
   .add('Default', () => (

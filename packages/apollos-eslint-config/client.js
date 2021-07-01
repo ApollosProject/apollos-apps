@@ -68,6 +68,11 @@ module.exports = {
     'function-paren-newline': 0,
     'no-underscore-dangle': 0,
     'max-classes-per-file': 1,
+    'no-use-before-define': [
+      // react-native convention declares styles after the component declaration
+      'error',
+      { functions: true, classes: true, variables: false },
+    ],
   },
   parserOptions: {
     ecmaVersion: 7,

@@ -77,7 +77,7 @@ Array [
           <Text
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
                 "lineHeight": 21,
@@ -181,7 +181,6 @@ Array [
             }
           />
           <View
-            flexed={false}
             style={
               Object {
                 "alignItems": "center",
@@ -193,23 +192,25 @@ Array [
             <View
               style={
                 Object {
-                  "paddingRight": 4,
+                  "backgroundColor": "#A5A5A5",
+                  "borderRadius": 16,
+                  "height": 32,
+                  "width": 32,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "rgba(39, 39, 46, 0.6)",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
                 }
               }
             >
-              <View
-                style={
-                  Object {
-                    "alignSelf": "stretch",
-                    "backgroundColor": "#A5A5A5",
-                    "borderRadius": 16,
-                    "height": 12,
-                    "marginVertical": 3,
-                    "width": "50%",
-                  }
-                }
-              />
-            </View>
+              Time Travel
+            </Text>
           </View>
         </View>
         <View
@@ -332,7 +333,7 @@ Array [
           <Text
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
                 "lineHeight": 21,
@@ -342,7 +343,6 @@ Array [
             Why Jesus is Timeless
           </Text>
           <View
-            flexed={false}
             style={
               Object {
                 "alignItems": "center",
@@ -351,27 +351,18 @@ Array [
               }
             }
           >
-            <View
+            <Text
               style={
                 Object {
-                  "paddingRight": 4,
+                  "color": "rgba(39, 39, 46, 0.6)",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
                 }
               }
             >
-              <Text
-                style={
-                  Object {
-                    "color": "#A5A5A5",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
-                  }
-                }
-                tint="#A5A5A5"
-              >
-                Time Travel
-              </Text>
-            </View>
+              Time Travel
+            </Text>
           </View>
         </View>
       </View>
@@ -457,7 +448,7 @@ Array [
           <Text
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
                 "lineHeight": 21,
@@ -467,7 +458,6 @@ Array [
             Why Jesus is Timeless
           </Text>
           <View
-            flexed={false}
             style={
               Object {
                 "alignItems": "center",
@@ -476,27 +466,18 @@ Array [
               }
             }
           >
-            <View
+            <Text
               style={
                 Object {
-                  "paddingRight": 4,
+                  "color": "rgba(39, 39, 46, 0.6)",
+                  "fontFamily": "InterUI-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 24,
                 }
               }
             >
-              <Text
-                style={
-                  Object {
-                    "color": "#A5A5A5",
-                    "fontFamily": "InterUI-Bold",
-                    "fontSize": 12,
-                    "lineHeight": 18,
-                  }
-                }
-                tint="#A5A5A5"
-              >
-                Time Travel
-              </Text>
-            </View>
+              Time Travel
+            </Text>
           </View>
         </View>
         <View
@@ -618,7 +599,7 @@ Array [
           <Text
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
                 "lineHeight": 21,
@@ -639,7 +620,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -733,7 +714,7 @@ Array [
           <Text
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Medium",
                 "fontSize": 14,
                 "lineHeight": 21,

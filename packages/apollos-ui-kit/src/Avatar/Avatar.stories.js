@@ -3,7 +3,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 
 import CenteredView from '../CenteredView';
 
-import Avatar from '.';
+import Avatar from './index';
 
 /* eslint-disable react-native/no-inline-styles */
 storiesOf('ui-kit/Avatar', module)

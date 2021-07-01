@@ -6,7 +6,7 @@ import moment from 'moment';
 import CenteredView from '../../CenteredView';
 import PaddedView from '../../PaddedView';
 
-import DateInput from '.';
+import DateInput from './index';
 
 storiesOf('ui-kit/Inputs/DateInput', module)
   .addDecorator((story) => (

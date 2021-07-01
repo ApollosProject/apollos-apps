@@ -1,12 +1,13 @@
 import React from 'react';
-import { Animated, View } from 'react-native';
+import { View } from 'react-native';
+import Reanimated from 'react-native-reanimated';
 import PropTypes from 'prop-types';
-import { Query } from '@apollo/client/react/components';
+import { useQuery } from '@apollo/client';
 
 import {
   styled,
   BackgroundView,
-  StretchyView,
+  StretchyViewExperimental as StretchyView,
   named,
 } from '@apollosproject/ui-kit';
 import { ApollosPlayerContainer } from '@apollosproject/ui-media-player';
@@ -23,7 +24,7 @@ import GET_TITLE from './getTitle';
 
 const Noop = () => null;
 
-const FlexedScrollView = styled({ flex: 1 })(Animated.ScrollView);
+const FlexedScrollView = styled({ flex: 1 })(Reanimated.ScrollView);
 
 const NodeSingleInner = ({ nodeId, ImageWrapperComponent, ...props }) => (
   <View {...props}>
@@ -78,53 +79,46 @@ const NodeSingleConnectedWithMedia = ({
   children,
   Component,
   ...props
-}) => (
-  <Query
-    query={GET_MEDIA}
-    variables={{ nodeId }}
-    fetchPolicy={'cache-and-network'}
-  >
-    {({ data = {} }) => {
-      const hasMedia =
-        data?.node?.videos?.length &&
-        data.node.videos.some(({ sources }) => sources.length);
+}) => {
+  const { data } = useQuery(GET_MEDIA, {
+    variables: { nodeId },
+    fetchPolicy: 'cache-and-network',
+  });
 
-      const hasLivestream =
-        data?.node?.liveStream?.isLive &&
-        data?.node?.liveStream?.media?.sources?.length;
+  const hasMedia =
+    data?.node?.videos?.length &&
+    data.node.videos.some(({ sources }) => sources.length);
 
-      if (!hasMedia && !hasLivestream)
-        return (
-          <NodeSingleConnected nodeId={nodeId} Component={Component} {...props}>
-            {children}
-          </NodeSingleConnected>
-        );
+  const hasLivestream =
+    data?.node?.liveStream?.isLive &&
+    data?.node?.liveStream?.media?.sources?.length;
 
-      const mediaSource = hasLivestream
-        ? data.node?.liveStream?.media?.sources[0]
-        : data.node?.videos?.find(({ sources }) => sources.length)?.sources[0];
+  if (!hasMedia && !hasLivestream)
+    return (
+      <NodeSingleConnected nodeId={nodeId} Component={Component} {...props}>
+        {children}
+      </NodeSingleConnected>
+    );
 
-      return (
-        <BackgroundView>
-          <ApollosPlayerContainer
-            source={mediaSource}
-            coverImage={data.node?.coverImage?.sources}
-            presentationProps={{
-              title: data.node.title,
-            }}
-          >
-            <Component
-              nodeId={nodeId}
-              ImageWrapperComponent={Noop}
-              {...props}
-            />
-          </ApollosPlayerContainer>
-          {children}
-        </BackgroundView>
-      );
-    }}
-  </Query>
-);
+  const mediaSource = hasLivestream
+    ? data.node?.liveStream?.media?.sources[0]
+    : data.node?.videos?.find(({ sources }) => sources.length)?.sources[0];
+
+  return (
+    <BackgroundView>
+      <ApollosPlayerContainer
+        source={mediaSource}
+        coverImage={data.node?.coverImage?.sources}
+        presentationProps={{
+          title: data.node.title,
+        }}
+      >
+        <Component nodeId={nodeId} ImageWrapperComponent={Noop} {...props} />
+      </ApollosPlayerContainer>
+      {children}
+    </BackgroundView>
+  );
+};
 
 NodeSingleConnectedWithMedia.propTypes = {
   nodeId: PropTypes.string,

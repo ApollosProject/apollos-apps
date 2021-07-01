@@ -5,7 +5,7 @@ import CenteredView from '../../CenteredView';
 import PaddedView from '../../PaddedView';
 import BackgroundView from '../../BackgroundView';
 
-import ActionListItem from '.';
+import ActionListItem from './index';
 
 storiesOf('ActionListItem', module)
   .addDecorator((story) => (

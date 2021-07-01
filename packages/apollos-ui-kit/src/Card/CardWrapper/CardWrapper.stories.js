@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
-import CardWrapper from '.';
+import CardWrapper from './index';
 
 storiesOf('ui-kit/Card/CardWrapper', module)
   .add('Default', () => {
