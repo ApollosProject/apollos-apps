@@ -39,7 +39,6 @@ export const createSchema = (data) => [
 ];
 
 export const createResolvers = (data) =>
-  console.log(values({ ...builtInData, ...data })) ||
   merge(
     ...compact(
       values({ ...builtInData, ...data }).map((datum) => datum.resolver)
