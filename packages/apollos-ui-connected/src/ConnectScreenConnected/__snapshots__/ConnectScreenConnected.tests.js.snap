@@ -563,18 +563,23 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                 }
                               }
                             >
-                              <Text
-                                style={
-                                  Object {
-                                    "color": "#27272E",
-                                    "fontFamily": "InterUI-Bold",
-                                    "fontSize": 16,
-                                    "lineHeight": 24,
-                                  }
-                                }
+                              <View
+                                style={Object {}}
                               >
-                                Suggested Followers
-                              </Text>
+                                <Text
+                                  secondary={true}
+                                  style={
+                                    Object {
+                                      "color": "rgba(39, 39, 46, 0.6)",
+                                      "fontFamily": "InterUI-Bold",
+                                      "fontSize": 16,
+                                      "lineHeight": 24,
+                                    }
+                                  }
+                                >
+                                  Suggested Followers
+                                </Text>
+                              </View>
                             </View>
                             <View
                               accessible={true}
@@ -1696,18 +1701,23 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                 }
                               }
                             >
-                              <Text
-                                style={
-                                  Object {
-                                    "color": "#27272E",
-                                    "fontFamily": "InterUI-Bold",
-                                    "fontSize": 16,
-                                    "lineHeight": 24,
-                                  }
-                                }
+                              <View
+                                style={Object {}}
                               >
-                                Suggested Followers
-                              </Text>
+                                <Text
+                                  secondary={true}
+                                  style={
+                                    Object {
+                                      "color": "rgba(39, 39, 46, 0.6)",
+                                      "fontFamily": "InterUI-Bold",
+                                      "fontSize": 16,
+                                      "lineHeight": 24,
+                                    }
+                                  }
+                                >
+                                  Suggested Followers
+                                </Text>
+                              </View>
                             </View>
                             <View
                               accessible={true}

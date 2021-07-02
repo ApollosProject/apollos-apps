@@ -7,6 +7,16 @@ import styled from '../styled';
 
 const Container = styled({}, 'ui-kit.FeatureTitles.Container')(View);
 
+/**
+ * FeatureTitles
+ * Implements https://www.figma.com/file/YHJLj8pdFxWG9npF2YmB3r/UI-Kit-2.0?node-id=27%3A373
+ *
+ * Status:
+ * - [x] Title
+ * - [x] Subtitle
+ * - [x] Loading state
+ * */
+
 const FeatureTitles = ({ title, subtitle, isLoading }) => (
   <Container>
     {subtitle ? (
