@@ -58,8 +58,9 @@ const DefaultCard = withIsLoading(
     labelText,
     summary,
     isLive,
+    style,
   }) => (
-    <Card isLoading={isLoading}>
+    <Card isLoading={isLoading} style={style}>
       <BackgroundImageBlur source={coverImage} />
 
       <CoverImage source={coverImage} />
@@ -93,6 +94,7 @@ DefaultCard.propTypes = {
   LabelComponent: PropTypes.element,
   labelText: PropTypes.string,
   summary: PropTypes.string,
+  style: PropTypes.shape({}),
 };
 
 DefaultCard.displayName = 'DefaultCard';
