@@ -34,12 +34,12 @@ const ActionTableFeature = ({ actions, title, onPressItem }) => {
         </Name>
       </RowHeader>
       <TableView>
-        {actions.map(({ label, url }) => (
+        {actions.map((action) => (
           <>
             <Divider />
-            <Touchable onPress={() => onPressItem(url)}>
+            <Touchable onPress={() => onPressItem(action)}>
               <Cell>
-                <CellText>{label}</CellText>
+                <CellText>{action.title}</CellText>
                 <CellIcon name="arrow-next" />
               </Cell>
             </Touchable>

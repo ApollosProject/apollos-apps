@@ -26,10 +26,11 @@ export default class Feature extends RockApolloDataSource {
   }
 
   // eslint-disable-next-line class-methods-use-this
-  attachRelatedNodeId({ relatedNode, ...action } = {}) {
+  attachActionIds({ relatedNode, ...action } = {}) {
     if (relatedNode && !relatedNode.id) {
       return {
         ...action,
+        id: createGlobalId(JSON.stringify(action), action.__typename),
         relatedNode: {
           ...relatedNode,
           id: createGlobalId(
@@ -57,7 +58,7 @@ export default class Feature extends RockApolloDataSource {
     // Ensures that we have a generated ID for the Primary Action related node, if not provided.
     if (primaryAction) {
       // eslint-disable-next-line no-param-reassign
-      primaryAction = this.attachRelatedNodeId(primaryAction);
+      primaryAction = this.attachActionIds(primaryAction);
     }
 
     return {
@@ -92,7 +93,7 @@ export default class Feature extends RockApolloDataSource {
     // Run algorithms if we have them, otherwise pull from the config
     const compiledActions = () =>
       actions.length
-        ? actions.map((action) => this.attachRelatedNodeId(action))
+        ? actions.map((action) => this.attachActionIds(action))
         : ActionAlgorithm.runAlgorithms({ algorithms, args });
 
     return {
@@ -123,7 +124,7 @@ export default class Feature extends RockApolloDataSource {
     // Run algorithms if we have them, otherwise pull from the config
     const compiledActions = () =>
       actions.length
-        ? actions.map((action) => this.attachRelatedNodeId(action))
+        ? actions.map((action) => this.attachActionIds(action))
         : ActionAlgorithm.runAlgorithms({ algorithms, args });
 
     return {
@@ -184,7 +185,7 @@ export default class Feature extends RockApolloDataSource {
     // Ensures that we have a generated ID for the Primary Action related node, if not provided.
     if (primaryAction) {
       // eslint-disable-next-line no-param-reassign
-      primaryAction = this.attachRelatedNodeId(primaryAction);
+      primaryAction = this.attachActionIds(primaryAction);
     }
 
     return {
@@ -256,7 +257,7 @@ export default class Feature extends RockApolloDataSource {
     // Ensures that we have a generated ID for the Primary Action related node, if not provided.
     if (primaryAction) {
       // eslint-disable-next-line no-param-reassign
-      primaryAction = this.attachRelatedNodeId(primaryAction);
+      primaryAction = this.attachActionIds(primaryAction);
     }
 
     return {
