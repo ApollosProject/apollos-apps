@@ -1267,20 +1267,6 @@ Array [
         }
       }
     >
-      <Text
-        ellipsizeMode="tail"
-        numberOfLines={3}
-        style={
-          Object {
-            "color": "#27272E",
-            "fontFamily": "InterUI-Black",
-            "fontSize": 24,
-            "lineHeight": 27.6,
-          }
-        }
-      >
-        Custom Header Element
-      </Text>
       <View
         cardPadding={true}
         style={
@@ -1290,6 +1276,20 @@ Array [
           }
         }
       >
+        <Text
+          ellipsizeMode="tail"
+          numberOfLines={3}
+          style={
+            Object {
+              "color": "#27272E",
+              "fontFamily": "InterUI-Black",
+              "fontSize": 24,
+              "lineHeight": 27.6,
+            }
+          }
+        >
+          Custom Header Element
+        </Text>
         <View
           style={
             Object {

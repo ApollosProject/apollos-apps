@@ -206,3 +206,103 @@ Array [
   </Text>,
 ]
 `;
+
+exports[`the H1 component should render with other color states 1`] = `
+Array [
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />,
+  <Text
+    primary={true}
+    style={
+      Object {
+        "color": "#27272E",
+        "fontFamily": "InterUI-Black",
+        "fontSize": 43,
+        "lineHeight": 49.45,
+      }
+    }
+  >
+    H1
+  </Text>,
+  <Text
+    secondary={true}
+    style={
+      Object {
+        "color": "rgba(39, 39, 46, 0.6)",
+        "fontFamily": "InterUI-Black",
+        "fontSize": 43,
+        "lineHeight": 49.45,
+      }
+    }
+  >
+    H1
+  </Text>,
+  <Text
+    style={
+      Object {
+        "color": "rgba(39, 39, 46, 0.3)",
+        "fontFamily": "InterUI-Black",
+        "fontSize": 43,
+        "lineHeight": 49.45,
+      }
+    }
+    tertiary={true}
+  >
+    H1
+  </Text>,
+  <Text
+    quaternary={true}
+    style={
+      Object {
+        "color": "rgba(39, 39, 46, 0.18)",
+        "fontFamily": "InterUI-Black",
+        "fontSize": 43,
+        "lineHeight": 49.45,
+      }
+    }
+  >
+    H1
+  </Text>,
+  <Text
+    placeholder={true}
+    style={
+      Object {
+        "color": "rgba(229, 229, 234, 0.3)",
+        "fontFamily": "InterUI-Black",
+        "fontSize": 43,
+        "lineHeight": 49.45,
+      }
+    }
+  >
+    H1
+  </Text>,
+  <Text
+    action={true}
+    style={
+      Object {
+        "color": "#17B582",
+        "fontFamily": "InterUI-Black",
+        "fontSize": 43,
+        "lineHeight": 49.45,
+      }
+    }
+  >
+    H1
+  </Text>,
+]
+`;
