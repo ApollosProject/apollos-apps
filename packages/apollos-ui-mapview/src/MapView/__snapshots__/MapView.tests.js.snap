@@ -152,7 +152,7 @@ Array [
                       <Text
                         style={
                           Object {
-                            "color": "#303030",
+                            "color": "#27272E",
                             "fontFamily": "InterUI-Medium",
                             "fontSize": 14,
                             "lineHeight": 21,
@@ -165,7 +165,7 @@ Array [
                     <Text
                       style={
                         Object {
-                          "color": "#505050",
+                          "color": "rgba(39, 39, 46, 0.6)",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
                           "lineHeight": 18,
@@ -280,7 +280,7 @@ Richardson, TX 75080-5525
                       <Text
                         style={
                           Object {
-                            "color": "#303030",
+                            "color": "#27272E",
                             "fontFamily": "InterUI-Medium",
                             "fontSize": 14,
                             "lineHeight": 21,
@@ -301,7 +301,7 @@ Richardson, TX 75080-5525
                         <Text
                           style={
                             Object {
-                              "color": "#505050",
+                              "color": "rgba(39, 39, 46, 0.6)",
                               "fontFamily": "InterUI-Bold",
                               "fontSize": 12,
                               "lineHeight": 18,
@@ -316,7 +316,7 @@ Richardson, TX 75080-5525
                     <Text
                       style={
                         Object {
-                          "color": "#505050",
+                          "color": "rgba(39, 39, 46, 0.6)",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
                           "lineHeight": 18,
@@ -550,7 +550,7 @@ Array [
                       <Text
                         style={
                           Object {
-                            "color": "#303030",
+                            "color": "#27272E",
                             "fontFamily": "InterUI-Medium",
                             "fontSize": 14,
                             "lineHeight": 21,
@@ -563,7 +563,7 @@ Array [
                     <Text
                       style={
                         Object {
-                          "color": "#505050",
+                          "color": "rgba(39, 39, 46, 0.6)",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
                           "lineHeight": 18,
@@ -678,7 +678,7 @@ Richardson, TX 75080-5525
                       <Text
                         style={
                           Object {
-                            "color": "#303030",
+                            "color": "#27272E",
                             "fontFamily": "InterUI-Medium",
                             "fontSize": 14,
                             "lineHeight": 21,
@@ -699,7 +699,7 @@ Richardson, TX 75080-5525
                         <Text
                           style={
                             Object {
-                              "color": "#505050",
+                              "color": "rgba(39, 39, 46, 0.6)",
                               "fontFamily": "InterUI-Bold",
                               "fontSize": 12,
                               "lineHeight": 18,
@@ -714,7 +714,7 @@ Richardson, TX 75080-5525
                     <Text
                       style={
                         Object {
-                          "color": "#505050",
+                          "color": "rgba(39, 39, 46, 0.6)",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
                           "lineHeight": 18,
@@ -948,7 +948,7 @@ Array [
                       <Text
                         style={
                           Object {
-                            "color": "#303030",
+                            "color": "#27272E",
                             "fontFamily": "InterUI-Medium",
                             "fontSize": 14,
                             "lineHeight": 21,
@@ -961,7 +961,7 @@ Array [
                     <Text
                       style={
                         Object {
-                          "color": "#505050",
+                          "color": "rgba(39, 39, 46, 0.6)",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
                           "lineHeight": 18,
@@ -1076,7 +1076,7 @@ Richardson, TX 75080-5525
                       <Text
                         style={
                           Object {
-                            "color": "#303030",
+                            "color": "#27272E",
                             "fontFamily": "InterUI-Medium",
                             "fontSize": 14,
                             "lineHeight": 21,
@@ -1097,7 +1097,7 @@ Richardson, TX 75080-5525
                         <Text
                           style={
                             Object {
-                              "color": "#505050",
+                              "color": "rgba(39, 39, 46, 0.6)",
                               "fontFamily": "InterUI-Bold",
                               "fontSize": 12,
                               "lineHeight": 18,
@@ -1112,7 +1112,7 @@ Richardson, TX 75080-5525
                     <Text
                       style={
                         Object {
-                          "color": "#505050",
+                          "color": "rgba(39, 39, 46, 0.6)",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
                           "lineHeight": 18,
@@ -1227,7 +1227,7 @@ Cincinnati, OH 45202-2118
                       <Text
                         style={
                           Object {
-                            "color": "#303030",
+                            "color": "#27272E",
                             "fontFamily": "InterUI-Medium",
                             "fontSize": 14,
                             "lineHeight": 21,
@@ -1240,7 +1240,7 @@ Cincinnati, OH 45202-2118
                     <Text
                       style={
                         Object {
-                          "color": "#505050",
+                          "color": "rgba(39, 39, 46, 0.6)",
                           "fontFamily": "InterUI-Bold",
                           "fontSize": 12,
                           "lineHeight": 18,

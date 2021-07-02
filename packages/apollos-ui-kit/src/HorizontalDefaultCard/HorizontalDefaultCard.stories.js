@@ -6,7 +6,7 @@ import BackgroundView from '../BackgroundView';
 import CenteredView from '../CenteredView';
 import HorizontalTileFeed from '../HorizontalTileFeed';
 
-import HorizontalDefaultCard from '.';
+import HorizontalDefaultCard from './index';
 
 storiesOf('ui-kit/HorizontalDefaultCard', module)
   .addDecorator((story) => (

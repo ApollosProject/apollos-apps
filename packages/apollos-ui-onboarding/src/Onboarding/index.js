@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useQuery } from '@apollo/client';
 import { useRoute, useNavigation } from '@react-navigation/native';
 import {
@@ -16,6 +17,7 @@ import {
 } from '../slides';
 import OnboardingSwiper from '../OnboardingSwiper';
 import { onboardingComplete, WITH_USER_ID } from '../onboardingStatus';
+import ONBOARDING_VERSION from './version';
 
 const OnboardingBackgroundView = named(
   'ui-onboarding.Onboarding.OnboardingBackgroundView'
@@ -27,18 +29,14 @@ const FullscreenBackgroundView = styled({
   height: '100%',
 })(OnboardingBackgroundView);
 
-// Represents the current version of onboarding.
-// Some slides will be "older", they shouldn't be shown to existing users.
-// Some slides will be the same version as teh current onboarding version.
-// Those slides will be shown to any user with an older version than the version of those slides.
-export const ONBOARDING_VERSION = 2;
+export { ONBOARDING_VERSION };
 
-function Onboarding() {
+function Onboarding(props) {
   const route = useRoute();
   const navigation = useNavigation();
 
-  const userVersion = route?.params?.userVersion || 0;
-  const slides = route?.params?.slides || [
+  const userVersion = route?.params?.userVersion || props?.userVersion || 0;
+  const slides = props?.slides || [
     FeaturesConnected,
     LocationFinderConnected,
     AskNotificationsConnected,
@@ -75,4 +73,9 @@ function Onboarding() {
   );
 }
 
-export default Onboarding;
+Onboarding.propTypes = {
+  userVersion: PropTypes.number,
+  slides: PropTypes.arrayOf(PropTypes.shape({})),
+};
+
+export default named('ui-onboarding.Onboarding')(Onboarding);

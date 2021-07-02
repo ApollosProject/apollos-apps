@@ -1,3 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Apollos Postgres Comments DatSource addComment should send notifications about your comment to your followers 1`] = `
+Array [
+  Array [
+    Object {
+      "body": "null null has just done a bit of journaling. Check it out!",
+      "data": Object {
+        "data": Object {
+          "url": "apolloschurchapp://app-link/content/UniversalContentItem:2cc8f539e345e8f479a55e2fdc9743c0",
+        },
+      },
+      "title": "New journal from someone you're following",
+      "type": "COMMENT",
+    },
+  ],
+]
+`;
+
 exports[`Apollos Postgres Comments DatSource updateComment user can only update own comment 1`] = `[Error: Unable to update comment]`;

@@ -56,7 +56,7 @@ Array [
     italic={false}
     style={
       Object {
-        "color": "#303030",
+        "color": "#27272E",
         "fontFamily": "InterUI-Regular",
         "fontSize": 16,
         "lineHeight": 26,

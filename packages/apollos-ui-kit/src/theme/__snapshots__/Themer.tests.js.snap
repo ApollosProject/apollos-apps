@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Themer has a backwards compatible consumer for class components 1`] = `
+<Text>
+  #FFFFFF
+</Text>
+`;
+
+exports[`Themer should allow for overrides 1`] = `
+<View
+  prop="hello"
+/>
+`;
+
+exports[`Themer should allow for updating the theme provider 1`] = `
+<Text>
+  red
+</Text>
+`;
+
+exports[`Themer should pass theme down through useTheme hook 1`] = `
+<Text>
+  #FFFFFF
+</Text>
+`;

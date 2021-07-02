@@ -3,7 +3,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 
 import { H1 } from '../typography';
 
-import CenteredView from '.';
+import CenteredView from './index';
 
 storiesOf('ui-kit/CenteredView', module).add('Example', () => (
   <CenteredView>

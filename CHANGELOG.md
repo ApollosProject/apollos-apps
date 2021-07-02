@@ -3,6 +3,98 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.25.0](https://github.com/ApollosProject/apollos-apps/compare/v2.24.0...v2.25.0) (2021-06-30)
+
+
+### Features
+
+* Content Item Category model ([#2029](https://github.com/ApollosProject/apollos-apps/issues/2029)) ([cb4edbf](https://github.com/ApollosProject/apollos-apps/commit/cb4edbf02b6dac586f1e2438d58f9e67e261aa30))
+* Figma / 2.0 Theme Changes ([#1861](https://github.com/ApollosProject/apollos-apps/issues/1861)) ([1a93cc8](https://github.com/ApollosProject/apollos-apps/commit/1a93cc8364985739720ca53963f26711824683c5)), closes [#1814](https://github.com/ApollosProject/apollos-apps/issues/1814)
+* useTheme hook ([#1814](https://github.com/ApollosProject/apollos-apps/issues/1814)) ([e75d7a7](https://github.com/ApollosProject/apollos-apps/commit/e75d7a74067ed503d2fe899401acb7e59097f970))
+
+
+### Bug Fixes
+
+* Fix Storybook 🎉 ([#2037](https://github.com/ApollosProject/apollos-apps/issues/2037)) ([f0ef4f6](https://github.com/ApollosProject/apollos-apps/commit/f0ef4f6d5eac1d8df2db217f9f13495ad98ec676))
+* Only send notifications for public journals ([#2038](https://github.com/ApollosProject/apollos-apps/issues/2038)) ([e15a032](https://github.com/ApollosProject/apollos-apps/commit/e15a03212ee40787f8cd7ecf23358ef6997b9a92))
+* Postgres Media bugfixes ([#2026](https://github.com/ApollosProject/apollos-apps/issues/2026)) ([3d3b61d](https://github.com/ApollosProject/apollos-apps/commit/3d3b61de6582750ec4609b8b30a5add3475fabf8))
+* protect against null sharing field ([#2028](https://github.com/ApollosProject/apollos-apps/issues/2028)) ([032072e](https://github.com/ApollosProject/apollos-apps/commit/032072e5b11e1ca0f3dc0f50b0418b0195a5a88f))
+
+
+
+## [2.24.0](https://github.com/ApollosProject/apollos-apps/compare/v2.23.1...v2.24.0) (2021-06-28)
+
+
+### Features
+
+* add ability to pass options to FeaturesFeedTabConnected route ([#2020](https://github.com/ApollosProject/apollos-apps/issues/2020)) ([96dd90e](https://github.com/ApollosProject/apollos-apps/commit/96dd90ef9e68b53cd69a2c6d5b9b5489d3b427ea))
+
+
+### Bug Fixes
+
+* complete onboarding when there are no more slides ([#2022](https://github.com/ApollosProject/apollos-apps/issues/2022)) ([7e8a9e7](https://github.com/ApollosProject/apollos-apps/commit/7e8a9e7a80ce18d96bddda0a9197e59f68dca0ee))
+
+
+
+### [2.23.1](https://github.com/ApollosProject/apollos-apps/compare/v2.23.0...v2.23.1) (2021-06-24)
+
+**Note:** Version bump only for package apollos
+
+
+
+
+
+## [2.23.0](https://github.com/ApollosProject/apollos-apps/compare/v2.22.0...v2.23.0) (2021-06-24)
+
+
+### Features
+
+* Content Items Connection Model ([#2017](https://github.com/ApollosProject/apollos-apps/issues/2017)) ([511e3a1](https://github.com/ApollosProject/apollos-apps/commit/511e3a19057e0f7955cf12976770726f4de7574a))
+* Send a push notification when adding a new comment ([#1983](https://github.com/ApollosProject/apollos-apps/issues/1983)) ([f84b2b7](https://github.com/ApollosProject/apollos-apps/commit/f84b2b7e50517cc5ef6c32a18f77546f41c85d9a))
+
+
+### Bug Fixes
+
+* remove ability to pass slides as route params ([#2016](https://github.com/ApollosProject/apollos-apps/issues/2016)) ([5f23374](https://github.com/ApollosProject/apollos-apps/commit/5f23374c7711c4bb456c545481f9f0e296a8f843))
+
+
+
+## [2.22.0](https://github.com/ApollosProject/apollos-apps/compare/v2.21.2...v2.22.0) (2021-06-23)
+
+
+### Features
+
+* Content Item Schema ([#2006](https://github.com/ApollosProject/apollos-apps/issues/2006)) ([0fc23a4](https://github.com/ApollosProject/apollos-apps/commit/0fc23a42e0ea974eb7fc9a51537ea46861c2fc1d))
+* Creates media model for postgres data connector ([#2005](https://github.com/ApollosProject/apollos-apps/issues/2005)) ([870aca5](https://github.com/ApollosProject/apollos-apps/commit/870aca5189e92b38d89b57b6e67417a6253d3206))
+
+
+
+### [2.21.2](https://github.com/ApollosProject/apollos-apps/compare/v2.21.1...v2.21.2) (2021-06-18)
+
+
+### Bug Fixes
+
+* correctly sorts latest series children ([#2001](https://github.com/ApollosProject/apollos-apps/issues/2001)) ([0de8ca3](https://github.com/ApollosProject/apollos-apps/commit/0de8ca3e013e81d097264f8809abca596ec3ebe1))
+
+
+
+### [2.21.1](https://github.com/ApollosProject/apollos-apps/compare/v2.21.0...v2.21.1) (2021-06-17)
+
+**Note:** Version bump only for package apollos
+
+
+
+
+
+## [2.21.0](https://github.com/ApollosProject/apollos-apps/compare/v2.20.0...v2.21.0) (2021-06-16)
+
+
+### Features
+
+* Update OneSignal to v4 ([#1935](https://github.com/ApollosProject/apollos-apps/issues/1935)) ([f5bf088](https://github.com/ApollosProject/apollos-apps/commit/f5bf088737e6a73861e40f67eaab2c5f723aea3e))
+
+
+
 ## [2.20.0](https://github.com/ApollosProject/apollos-apps/compare/v2.19.0...v2.20.0) (2021-06-14)
 
 

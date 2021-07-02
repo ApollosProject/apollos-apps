@@ -19,33 +19,15 @@ Array [
       ]
     }
   />,
-  <BVLinearGradient
-    colors={
-      Array [
-        4294967295,
-        4294506484,
-      ]
-    }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
+  <View
     navigation={
       Object {
         "pop": [MockFunction],
       }
     }
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
     style={
       Object {
+        "backgroundColor": "rgb(249, 249, 251)",
         "borderRadius": 0,
         "flex": null,
         "height": "100%",
@@ -72,7 +54,7 @@ Array [
         align="xMidYMid"
         bbHeight={32}
         bbWidth={32}
-        fill="#303030"
+        fill="#27272E"
         height={32}
         meetOrSlice={0}
         minX={0}
@@ -100,7 +82,7 @@ Array [
           fill={
             Array [
               0,
-              4281348144,
+              4280756014,
             ]
           }
           fillOpacity={1}
@@ -146,7 +128,7 @@ Array [
         align="xMidYMid"
         bbHeight={32}
         bbWidth={32}
-        fill="#303030"
+        fill="#27272E"
         height={32}
         meetOrSlice={0}
         minX={0}
@@ -174,7 +156,7 @@ Array [
           fill={
             Array [
               0,
-              4281348144,
+              4280756014,
             ]
           }
           fillOpacity={1}
@@ -217,7 +199,7 @@ Array [
         />
       </RNSVGSvgView>
     </View>
-  </BVLinearGradient>,
+  </View>,
 ]
 `;
 
@@ -240,33 +222,15 @@ Array [
       ]
     }
   />,
-  <BVLinearGradient
-    colors={
-      Array [
-        4294967295,
-        4294506484,
-      ]
-    }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
+  <View
     navigation={
       Object {
         "pop": [MockFunction],
       }
     }
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
     style={
       Object {
+        "backgroundColor": "rgb(249, 249, 251)",
         "borderRadius": 0,
         "flex": null,
         "height": "100%",
@@ -293,7 +257,7 @@ Array [
         align="xMidYMid"
         bbHeight={32}
         bbWidth={32}
-        fill="#303030"
+        fill="#27272E"
         height={32}
         meetOrSlice={0}
         minX={0}
@@ -321,7 +285,7 @@ Array [
           fill={
             Array [
               0,
-              4281348144,
+              4280756014,
             ]
           }
           fillOpacity={1}
@@ -384,7 +348,7 @@ Array [
           iconPadding={8}
           style={
             Object {
-              "backgroundColor": "rgba(48, 48, 48, 0.7)",
+              "backgroundColor": "rgba(39, 39, 46, 0.7)",
               "padding": 8,
             }
           }
@@ -509,7 +473,7 @@ Array [
         </View>
       </View>
     </View>
-  </BVLinearGradient>,
+  </View>,
 ]
 `;
 
@@ -532,33 +496,15 @@ Array [
       ]
     }
   />,
-  <BVLinearGradient
-    colors={
-      Array [
-        4294967295,
-        4294506484,
-      ]
-    }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
+  <View
     navigation={
       Object {
         "pop": [MockFunction],
       }
     }
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
     style={
       Object {
+        "backgroundColor": "rgb(249, 249, 251)",
         "borderRadius": 0,
         "flex": null,
         "height": "100%",
@@ -588,7 +534,7 @@ Array [
         align="xMidYMid"
         bbHeight={32}
         bbWidth={32}
-        fill="#303030"
+        fill="#27272E"
         height={32}
         meetOrSlice={0}
         minX={0}
@@ -616,7 +562,7 @@ Array [
           fill={
             Array [
               0,
-              4281348144,
+              4280756014,
             ]
           }
           fillOpacity={1}
@@ -662,7 +608,7 @@ Array [
         align="xMidYMid"
         bbHeight={32}
         bbWidth={32}
-        fill="#303030"
+        fill="#27272E"
         height={32}
         meetOrSlice={0}
         minX={0}
@@ -690,7 +636,7 @@ Array [
           fill={
             Array [
               0,
-              4281348144,
+              4280756014,
             ]
           }
           fillOpacity={1}
@@ -733,6 +679,6 @@ Array [
         />
       </RNSVGSvgView>
     </View>
-  </BVLinearGradient>,
+  </View>,
 ]
 `;

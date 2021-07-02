@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"No tests here!\""
   },
-  "version": "2.20.0",
+  "version": "2.25.0",
   "main": "./src/index.js",
   "peerDependencies": {
     "@apollosproject/ui-analytics": "*",
@@ -18,15 +18,16 @@
     "@apollosproject/ui-onboarding": "*",
     "@apollosproject/ui-passes": "*",
     "@apollosproject/ui-scripture": "*",
+    "@react-native-community/async-storage": "*",
     "react": "*",
     "react-native": "*",
     "react-native-linear-gradient": "*",
     "react-native-svg": "*"
   },
   "dependencies": {
-    "@storybook/addon-actions": "6.0.28",
-    "@storybook/addon-links": "6.0.28",
-    "@storybook/addons": "6.0.28",
+    "@storybook/addon-actions": "6.3.1",
+    "@storybook/addon-links": "6.3.1",
+    "@storybook/addons": "6.3.1",
     "@storybook/react-native": "5.3.23"
   },
   "devDependencies": {

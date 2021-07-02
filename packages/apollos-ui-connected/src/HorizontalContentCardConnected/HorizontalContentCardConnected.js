@@ -1,9 +1,8 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
+import { HorizontalDefaultCard } from '@apollosproject/ui-kit';
 
 import ContentCardConnected from '../ContentCardConnected';
-
-import HorizontalContentCardComponentMapper from './HorizontalContentCardComponentMapper';
 
 const HorizontalContentCardConnected = memo(
   ({ Component, isLoading, ...otherProps }) => (
@@ -21,7 +20,7 @@ HorizontalContentCardConnected.propTypes = {
 };
 
 HorizontalContentCardConnected.defaultProps = {
-  Component: HorizontalContentCardComponentMapper,
+  Component: HorizontalDefaultCard,
 };
 
 HorizontalContentCardConnected.displayName = 'HorizontalContentCardConnected';

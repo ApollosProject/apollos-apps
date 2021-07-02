@@ -3,7 +3,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 
 import FlexedView from '../../FlexedView';
 
-import Radio, { RadioButton } from '.';
+import Radio, { RadioButton } from './index';
 
 storiesOf('ui-kit/inputs/Radio', module)
   .add('default', () => (

@@ -61,7 +61,7 @@ Array [
           <Text
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 14,
                 "height": 38,
@@ -73,7 +73,7 @@ Array [
             <Text
               style={
                 Object {
-                  "color": "#A5A5A5",
+                  "color": "rgba(39, 39, 46, 0.3)",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
                   "lineHeight": 18,
@@ -174,7 +174,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -312,7 +312,7 @@ Array [
         style={
           Object {
             "backgroundColor": "transparent",
-            "color": "#505050",
+            "color": "rgba(39, 39, 46, 0.6)",
             "fontFamily": "InterUI-Medium",
             "fontSize": 14,
             "lineHeight": 21,
@@ -430,7 +430,7 @@ Array [
           <Text
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 14,
                 "height": 38,
@@ -442,7 +442,7 @@ Array [
             <Text
               style={
                 Object {
-                  "color": "#A5A5A5",
+                  "color": "rgba(39, 39, 46, 0.3)",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
                   "lineHeight": 18,
@@ -543,7 +543,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -681,7 +681,7 @@ Array [
         style={
           Object {
             "backgroundColor": "transparent",
-            "color": "#505050",
+            "color": "rgba(39, 39, 46, 0.6)",
             "fontFamily": "InterUI-Medium",
             "fontSize": 14,
             "lineHeight": 21,
@@ -799,7 +799,7 @@ Array [
           <Text
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 14,
                 "height": 38,
@@ -811,7 +811,7 @@ Array [
             <Text
               style={
                 Object {
-                  "color": "#A5A5A5",
+                  "color": "rgba(39, 39, 46, 0.3)",
                   "fontFamily": "InterUI-Bold",
                   "fontSize": 12,
                   "lineHeight": 18,
@@ -912,7 +912,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -1050,7 +1050,7 @@ Array [
         style={
           Object {
             "backgroundColor": "transparent",
-            "color": "#505050",
+            "color": "rgba(39, 39, 46, 0.6)",
             "fontFamily": "InterUI-Medium",
             "fontSize": 14,
             "lineHeight": 21,
@@ -1168,7 +1168,7 @@ Array [
           <Text
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Bold",
                 "fontSize": 14,
                 "height": 38,
@@ -1272,7 +1272,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -1423,7 +1423,7 @@ Array [
         style={
           Object {
             "backgroundColor": "transparent",
-            "color": "#505050",
+            "color": "rgba(39, 39, 46, 0.6)",
             "fontFamily": "InterUI-Medium",
             "fontSize": 14,
             "lineHeight": 21,
