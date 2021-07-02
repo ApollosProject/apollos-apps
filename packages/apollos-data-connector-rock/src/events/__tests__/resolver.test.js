@@ -1,7 +1,15 @@
 import { graphql } from 'graphql';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
 
-import { campusSchema, peopleSchema } from '@apollosproject/data-schema';
+import {
+  campusSchema,
+  peopleSchema,
+  interfacesSchema,
+  contentItemSchema,
+  contentChannelSchema,
+  themeSchema,
+  scriptureSchema,
+} from '@apollosproject/data-schema';
 import * as Event from '../index';
 import { Campus } from '../../index';
 
@@ -15,7 +23,15 @@ describe('Events resolver', () => {
   let context;
   let rootValue;
   beforeEach(() => {
-    schema = getSchema([campusSchema, peopleSchema]);
+    schema = getSchema([
+      campusSchema,
+      peopleSchema,
+      interfacesSchema,
+      contentItemSchema,
+      contentChannelSchema,
+      themeSchema,
+      scriptureSchema,
+    ]);
     context = getContext();
     rootValue = {};
   });
