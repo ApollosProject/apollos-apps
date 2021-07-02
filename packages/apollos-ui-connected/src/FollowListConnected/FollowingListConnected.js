@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import PropTypes from 'prop-types';
-import { named, H4 } from '@apollosproject/ui-kit';
+import { named, FeatureTitles } from '@apollosproject/ui-kit';
 import GET_USERS_FOLLOWING from './getFollowing';
 import FollowListConnected from './FollowListConnected';
 
@@ -23,7 +23,7 @@ const FollowingListConnected = ({
 
   return (
     <Component
-      header={Header}
+      header={<Header />}
       loading={loading}
       followers={suggestedFollows}
       {...props}
@@ -48,7 +48,7 @@ FollowingListConnected.propTypes = {
 
 FollowingListConnected.defaultProps = {
   Component: FollowListConnected,
-  Header: <H4>{'Following'}</H4>,
+  Header: () => <FeatureTitles subtitle="Following" />, // eslint-disable-line react/display-name
 };
 
 FollowingListConnected.displayName = 'FollowingListConnected';

@@ -27,7 +27,7 @@ const ComponentPropType = PropTypes.oneOfType([
 ]);
 
 const NoImageSpacer = styled(({ theme }) => ({
-  height: theme.sizing.baseUnit * 4,
+  height: theme.sizing.baseUnit * 5,
 }))(View);
 
 const DefaultHeader = ({ node, isLoading }) => {

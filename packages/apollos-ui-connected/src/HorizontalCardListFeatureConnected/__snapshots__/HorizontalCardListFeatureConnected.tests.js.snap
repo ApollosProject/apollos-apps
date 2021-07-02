@@ -10,34 +10,28 @@ exports[`The HorizontalCardListFeatureConnected component should render 1`] = `
         "alignItems": "center",
         "flexDirection": "row",
         "justifyContent": "space-between",
-        "paddingBottom": 8,
-        "paddingLeft": 16,
-        "paddingTop": 48,
+        "paddingHorizontal": 16,
+        "paddingTop": 16,
         "zIndex": 2,
       }
     }
   >
-    <View
-      style={
-        Object {
-          "flex": 1,
-        }
-      }
-    >
+    <View>
       <Text
-        numberOfLines={1}
+        secondary={true}
         style={
           Object {
-            "color": "rgba(39, 39, 46, 0.3)",
-            "fontFamily": "InterUI-Medium",
-            "fontSize": 14,
-            "lineHeight": 21,
+            "color": "rgba(39, 39, 46, 0.6)",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
           }
         }
       >
-        Some cool list
+        Check it out
       </Text>
       <Text
+        primary={true}
         style={
           Object {
             "color": "#27272E",
@@ -47,7 +41,7 @@ exports[`The HorizontalCardListFeatureConnected component should render 1`] = `
           }
         }
       >
-        Check it out
+        Some cool list
       </Text>
     </View>
   </View>
@@ -141,6 +135,14 @@ exports[`The HorizontalCardListFeatureConnected component should render 1`] = `
         <View
           accessible={true}
           focusable={true}
+          hitSlop={
+            Object {
+              "bottom": 12,
+              "left": 24,
+              "right": 24,
+              "top": 16,
+            }
+          }
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -343,45 +345,13 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
         "alignItems": "center",
         "flexDirection": "row",
         "justifyContent": "space-between",
-        "paddingBottom": 8,
-        "paddingLeft": 16,
-        "paddingTop": 48,
+        "paddingHorizontal": 16,
+        "paddingTop": 16,
         "zIndex": 2,
       }
     }
   >
-    <View
-      style={
-        Object {
-          "flex": 1,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 14,
-            "marginVertical": 3.5,
-            "width": "60%",
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 24,
-            "marginVertical": 1.8000000000000007,
-            "width": "100%",
-          }
-        }
-      />
-    </View>
+    <View />
     <View
       accessible={true}
       focusable={true}
@@ -405,7 +375,6 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
             "alignItems": "flex-end",
             "flexDirection": "row",
             "justifyContent": "flex-end",
-            "padding": 16,
           }
         }
       >
@@ -415,9 +384,9 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
               "alignSelf": "stretch",
               "backgroundColor": "#A5A5A5",
               "borderRadius": 16,
-              "height": 12,
-              "marginVertical": 3,
-              "width": "50%",
+              "height": 14,
+              "marginVertical": 3.5,
+              "width": "60%",
             }
           }
         />
@@ -545,6 +514,14 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
         <View
           accessible={true}
           focusable={true}
+          hitSlop={
+            Object {
+              "bottom": 12,
+              "left": 24,
+              "right": 24,
+              "top": 16,
+            }
+          }
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -723,6 +700,14 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
         <View
           accessible={true}
           focusable={true}
+          hitSlop={
+            Object {
+              "bottom": 12,
+              "left": 24,
+              "right": 24,
+              "top": 16,
+            }
+          }
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -901,6 +886,14 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
         <View
           accessible={true}
           focusable={true}
+          hitSlop={
+            Object {
+              "bottom": 12,
+              "left": 24,
+              "right": 24,
+              "top": 16,
+            }
+          }
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1079,6 +1072,14 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
         <View
           accessible={true}
           focusable={true}
+          hitSlop={
+            Object {
+              "bottom": 12,
+              "left": 24,
+              "right": 24,
+              "top": 16,
+            }
+          }
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1257,6 +1258,14 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
         <View
           accessible={true}
           focusable={true}
+          hitSlop={
+            Object {
+              "bottom": 12,
+              "left": 24,
+              "right": 24,
+              "top": 16,
+            }
+          }
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}

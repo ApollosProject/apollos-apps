@@ -72,8 +72,8 @@ class ActionList extends PureComponent {
 
     return (
       <RenderAsCard>
-        {header || null}
         <Content cardPadding={this.props.isCard}>
+          {header || null}
           {actions.map((item) => (
             <ActionListItem
               {...get(item, 'relatedNode', {})}

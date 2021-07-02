@@ -4,9 +4,11 @@ import { compose, setDisplayName, pure } from 'recompose';
 
 import styled from '../../styled';
 import { withPlaceholder, Typography } from '../../Placeholder';
+import withThemeColor from '../withThemeColor';
 
 const UIText = compose(
   setDisplayName('ui-kit.UIText'),
+  withThemeColor,
   styled(
     ({ theme, bold, italic }) => ({
       fontSize: theme.helpers.rem(0.875),

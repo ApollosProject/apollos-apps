@@ -48,7 +48,7 @@ Array [
         style={
           Object {
             "paddingHorizontal": 16,
-            "paddingVertical": 16,
+            "paddingVertical": 8,
           }
         }
       />
@@ -597,7 +597,7 @@ Array [
         style={
           Object {
             "paddingHorizontal": 16,
-            "paddingVertical": 16,
+            "paddingVertical": 8,
           }
         }
       />
@@ -1709,7 +1709,7 @@ Array [
         style={
           Object {
             "paddingHorizontal": 16,
-            "paddingVertical": 16,
+            "paddingVertical": 8,
           }
         }
       />

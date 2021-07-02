@@ -18,18 +18,21 @@ exports[`The SuggestedFollowListConnected component should render with data 1`] 
       }
     }
   >
-    <Text
-      style={
-        Object {
-          "color": "#27272E",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 16,
-          "lineHeight": 24,
+    <View>
+      <Text
+        secondary={true}
+        style={
+          Object {
+            "color": "rgba(39, 39, 46, 0.6)",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
+          }
         }
-      }
-    >
-      Suggested Followers
-    </Text>
+      >
+        Suggested Followers
+      </Text>
+    </View>
   </View>
   <View
     style={

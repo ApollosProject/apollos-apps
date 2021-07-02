@@ -39,6 +39,19 @@ describe('the H1 component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render with other color states', () => {
+    const tree = renderer.create(
+      <Providers>
+        <H1 primary>H1</H1>
+        <H1 secondary>H1</H1>
+        <H1 tertiary>H1</H1>
+        <H1 quaternary>H1</H1>
+        <H1 placeholder>H1</H1>
+        <H1 action>H1</H1>
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('should render a loading state with correct positioning (margins)', () => {
     const tree = renderer.create(
       <Providers>

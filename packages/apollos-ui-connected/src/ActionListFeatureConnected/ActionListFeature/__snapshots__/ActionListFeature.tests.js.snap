@@ -28,7 +28,6 @@ exports[`The ActionListFeatures component should render 1`] = `
       }
     }
   >
-    <View />
     <View
       cardPadding={true}
       style={
@@ -38,6 +37,15 @@ exports[`The ActionListFeatures component should render 1`] = `
         }
       }
     >
+      <View />
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 16,
+            "paddingVertical": 8,
+          }
+        }
+      />
       <View
         style={
           Object {
@@ -345,7 +353,6 @@ exports[`The ActionListFeatures component should render a button for onPressActi
       }
     }
   >
-    <View />
     <View
       cardPadding={true}
       style={
@@ -355,6 +362,15 @@ exports[`The ActionListFeatures component should render a button for onPressActi
         }
       }
     >
+      <View />
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 16,
+            "paddingVertical": 8,
+          }
+        }
+      />
       <View
         style={
           Object {
@@ -716,39 +732,6 @@ exports[`The ActionListFeatures component should render a loading state for isLo
     }
   >
     <View
-      style={
-        Object {
-          "paddingHorizontal": 16,
-          "paddingTop": 16,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 14,
-            "marginVertical": 3.5,
-            "width": "60%",
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 24,
-            "marginVertical": 1.8000000000000007,
-            "width": "100%",
-          }
-        }
-      />
-    </View>
-    <View
       cardPadding={true}
       style={
         Object {
@@ -757,6 +740,15 @@ exports[`The ActionListFeatures component should render a loading state for isLo
         }
       }
     >
+      <View />
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 16,
+            "paddingVertical": 8,
+          }
+        }
+      />
       <View
         style={
           Object {
@@ -945,27 +937,6 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
     }
   >
     <View
-      style={
-        Object {
-          "paddingHorizontal": 16,
-          "paddingTop": 16,
-        }
-      }
-    >
-      <Text
-        style={
-          Object {
-            "color": "#27272E",
-            "fontFamily": "InterUI-Black",
-            "fontSize": 24,
-            "lineHeight": 27.6,
-          }
-        }
-      >
-        This renders larger than you might expect
-      </Text>
-    </View>
-    <View
       cardPadding={true}
       style={
         Object {
@@ -974,6 +945,29 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
         }
       }
     >
+      <View>
+        <Text
+          secondary={true}
+          style={
+            Object {
+              "color": "rgba(39, 39, 46, 0.6)",
+              "fontFamily": "InterUI-Bold",
+              "fontSize": 16,
+              "lineHeight": 24,
+            }
+          }
+        >
+          This renders larger than you might expect
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 16,
+            "paddingVertical": 8,
+          }
+        }
+      />
       <View
         style={
           Object {
@@ -1282,28 +1276,6 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
     }
   >
     <View
-      style={
-        Object {
-          "paddingHorizontal": 16,
-          "paddingTop": 16,
-        }
-      }
-    >
-      <Text
-        numberOfLines={1}
-        style={
-          Object {
-            "color": "rgba(39, 39, 46, 0.3)",
-            "fontFamily": "InterUI-Medium",
-            "fontSize": 14,
-            "lineHeight": 21,
-          }
-        }
-      >
-        This renders smaller than its name would suggest
-      </Text>
-    </View>
-    <View
       cardPadding={true}
       style={
         Object {
@@ -1312,6 +1284,29 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
         }
       }
     >
+      <View>
+        <Text
+          primary={true}
+          style={
+            Object {
+              "color": "#27272E",
+              "fontFamily": "InterUI-Black",
+              "fontSize": 24,
+              "lineHeight": 27.6,
+            }
+          }
+        >
+          This renders smaller than its name would suggest
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingHorizontal": 16,
+            "paddingVertical": 8,
+          }
+        }
+      />
       <View
         style={
           Object {

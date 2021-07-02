@@ -1,34 +1,8 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
 
-import { styled, ActionList, H3, H5 } from '@apollosproject/ui-kit';
+import { FeatureTitles, ActionList, PaddedView } from '@apollosproject/ui-kit';
 import { get } from 'lodash';
-
-const Title = styled(
-  ({ theme }) => ({
-    color: theme.colors.text.tertiary,
-  }),
-  'ui-connected.ActionListFeatureConnected.ActionListFeature.Title'
-)(H5);
-
-const Subtitle = styled(
-  {},
-  'ui-connected.ActionListFeatureConnected.ActionListFeature.Subtitle'
-)(H3);
-
-const ActionListHeader = styled(
-  ({
-    theme: {
-      sizing: { baseUnit },
-    },
-  }) => ({
-    paddingHorizontal: baseUnit,
-    paddingTop: baseUnit,
-    // Padding Bottom is baked into the card content
-  }),
-  'ui-connected.ActionListFeatureConnected.ActionListFeature.ActionListHeader'
-)(View);
 
 const loadingStateArray = [
   {
@@ -110,8 +84,6 @@ const ActionListFeature = memo(
     primaryAction,
   }) => {
     const onPressActionListButton = onPressActionListButtonProp || onPressItem;
-    const HeaderWrapper =
-      isLoading || title || subtitle ? ActionListHeader : View;
 
     // Only render if loading or if you have actions
     return (
@@ -120,12 +92,14 @@ const ActionListFeature = memo(
           isLoading={isLoading}
           key={id}
           header={
-            <HeaderWrapper>
-              {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
-                <Title numberOfLines={1}>{title}</Title>
-              ) : null}
-              {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
-            </HeaderWrapper>
+            <>
+              <FeatureTitles
+                title={title}
+                subtitle={subtitle}
+                isLoading={isLoading}
+              />
+              <PaddedView />
+            </>
           }
           actions={isLoading && !actions.length ? loadingStateObject : actions}
           onPressActionItem={onPressItem}

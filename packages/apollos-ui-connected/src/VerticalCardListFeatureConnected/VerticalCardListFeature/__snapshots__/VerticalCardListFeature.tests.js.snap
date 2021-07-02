@@ -269,38 +269,14 @@ exports[`The VerticalCardListFeature component should render a loading state for
   <View
     style={
       Object {
-        "paddingBottom": 8,
+        "paddingBottom": 0,
         "paddingHorizontal": 16,
-        "paddingTop": 48,
-        "paddingVertical": 0,
+        "paddingTop": 16,
+        "paddingVertical": 16,
       }
     }
-    vertical={false}
   >
-    <View
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 16,
-          "height": 14,
-          "marginVertical": 3.5,
-          "width": "60%",
-        }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 16,
-          "height": 24,
-          "marginVertical": 1.8000000000000007,
-          "width": "100%",
-        }
-      }
-    />
+    <View />
   </View>
   <RCTScrollView
     data={
@@ -2473,27 +2449,28 @@ exports[`The VerticalCardListFeature component should render a section title 1`]
   <View
     style={
       Object {
-        "paddingBottom": 8,
+        "paddingBottom": 0,
         "paddingHorizontal": 16,
-        "paddingTop": 48,
-        "paddingVertical": 0,
+        "paddingTop": 16,
+        "paddingVertical": 16,
       }
     }
-    vertical={false}
   >
-    <Text
-      numberOfLines={1}
-      style={
-        Object {
-          "color": "rgba(39, 39, 46, 0.3)",
-          "fontFamily": "InterUI-Medium",
-          "fontSize": 14,
-          "lineHeight": 21,
+    <View>
+      <Text
+        primary={true}
+        style={
+          Object {
+            "color": "#27272E",
+            "fontFamily": "InterUI-Black",
+            "fontSize": 24,
+            "lineHeight": 27.6,
+          }
         }
-      }
-    >
-      This renders smaller than its name would suggest
-    </Text>
+      >
+        This renders smaller than its name would suggest
+      </Text>
+    </View>
   </View>
   <RCTScrollView
     data={
@@ -2762,26 +2739,28 @@ exports[`The VerticalCardListFeature component should render with a subtitle 1`]
   <View
     style={
       Object {
-        "paddingBottom": 8,
+        "paddingBottom": 0,
         "paddingHorizontal": 16,
-        "paddingTop": 48,
-        "paddingVertical": 0,
+        "paddingTop": 16,
+        "paddingVertical": 16,
       }
     }
-    vertical={false}
   >
-    <Text
-      style={
-        Object {
-          "color": "#27272E",
-          "fontFamily": "InterUI-Black",
-          "fontSize": 24,
-          "lineHeight": 27.6,
+    <View>
+      <Text
+        secondary={true}
+        style={
+          Object {
+            "color": "rgba(39, 39, 46, 0.6)",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
+          }
         }
-      }
-    >
-      This renders larger than you might expect
-    </Text>
+      >
+        This renders larger than you might expect
+      </Text>
+    </View>
   </View>
   <RCTScrollView
     data={
