@@ -1,11 +1,6 @@
 import PaddedView from '../PaddedView';
-import styled from '../styled';
+import { named } from '../theme';
 
-const Content = styled(
-  ({ theme }) => ({
-    paddingVertical: theme.sizing.baseUnit,
-  }),
-  'ui-kit.Card.Content.Content'
-)(PaddedView);
+const Content = named('ui-kit.Card.Content.Content')(PaddedView);
 
 export default Content;

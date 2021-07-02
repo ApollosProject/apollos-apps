@@ -117,14 +117,7 @@ storiesOf('ui-prayer/PrayerFeature', module)
         source: { uri: '' },
       },
     ];
-    return (
-      <PrayerFeature
-        prayers={emptyData}
-        isLoading
-        title={'Example title'}
-        isCard={false}
-      />
-    );
+    return <PrayerFeature prayers={emptyData} isLoading isCard={false} />;
   })
   .add('onPressAdd', () => (
     <PrayerFeature prayers={prayers} onPressAdd={() => {}} />

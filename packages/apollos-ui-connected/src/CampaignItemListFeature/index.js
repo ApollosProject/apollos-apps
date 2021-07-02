@@ -1,31 +1,17 @@
 import React, { memo } from 'react';
-import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import {
   FeaturedCard,
   FeedView,
-  H3,
-  H5,
   PaddedView,
   styled,
   withIsLoading,
+  FeatureTitles,
 } from '@apollosproject/ui-kit';
 
 import { ContentCardComponentMapper } from '../ContentCardConnected';
 import { LiveConsumer } from '../live';
-
-const Title = styled(
-  ({ theme }) => ({
-    color: theme.colors.text.tertiary,
-  }),
-  'ui-connected.CampaignListFeature.Title'
-)(H5);
-
-const Subtitle = styled(
-  {},
-  'ui-connected.CampaignItemListFeature.Subtitle'
-)(H3);
 
 const Header = styled(
   ({ theme }) => ({
@@ -83,23 +69,24 @@ const loadingStateData = {
 const CampaignItemListFeature = memo(
   ({ cards, isLoading, listKey, onPressItem, subtitle, title }) =>
     !!(isLoading || cards.length) && (
-      <View>
-        {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
-          <Header vertical={false}>
-            {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
-              <Title numberOfLines={1}>{title}</Title>
-            ) : null}
-            {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
-          </Header>
-        ) : null}
-        <FeedView
-          onPressItem={onPressItem}
-          ListItemComponent={ListItemComponent}
-          content={isLoading ? [loadingStateData] : cards}
-          isLoading={isLoading}
-          listKey={listKey}
-        />
-      </View>
+      <FeedView
+        onPressItem={onPressItem}
+        ListItemComponent={ListItemComponent}
+        ListHeaderComponent={
+          isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
+            <Header vertical={false}>
+              <FeatureTitles
+                isLoading={isLoading}
+                subtitle={subtitle}
+                title={title}
+              />
+            </Header>
+          ) : null
+        }
+        content={isLoading ? [loadingStateData] : cards}
+        isLoading={isLoading}
+        listKey={listKey}
+      />
     )
 );
 

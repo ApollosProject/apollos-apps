@@ -1,36 +1,15 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
+import { StyleSheet } from 'react-native';
 import { get } from 'lodash';
 import {
   ActionList,
   DefaultCard,
-  H3,
-  H5,
   PaddedView,
-  styled,
   TouchableScale,
+  FeatureTitles,
 } from '@apollosproject/ui-kit';
 import { LiveConsumer } from '../../live';
-
-const Header = styled(
-  ({ theme }) => ({
-    paddingTop: theme.sizing.baseUnit * 3,
-    paddingBottom: 0,
-  }),
-  'ui-connected.HeroListFeatureConnected.HeroListFeature.Header'
-)(PaddedView);
-
-const Title = styled(
-  ({ theme }) => ({
-    color: theme.colors.text.tertiary,
-  }),
-  'ui-connected.HeroListFeatureConnected.HeroListFeature.Title'
-)(H5);
-
-const Subtitle = styled(
-  {},
-  'ui-connected.HeroListFeatureConnected.HeroListFeature.Subtitle'
-)(H3);
 
 const loadingStateArray = [
   {
@@ -99,13 +78,30 @@ const loadingStateArray = [
   },
 ];
 
+// we use a stylesheet instead of styled here so that we can just
+// pass DefaultCard as the HeroComponent below, and then pass style
+// into it - that way it's easier to swap out for other cards.
+const styles = StyleSheet.create({
+  heroItemComponent: {
+    marginHorizontal: 0,
+    marginTop: 0,
+  },
+});
+
 // TODO: Conrad is making this reusuable.
 const HeroItemComponent = ({ Component, ...item }) => (
   <LiveConsumer contentId={item.id}>
     {(liveStream) => {
       const isLive = !!(liveStream && liveStream.isLive);
       const labelText = isLive ? 'Live' : item.labelText;
-      return <Component isLive={isLive} {...item} labelText={labelText} />;
+      return (
+        <Component
+          isLive={isLive}
+          {...item}
+          labelText={labelText}
+          style={styles.heroItemComponent}
+        />
+      );
     }}
   </LiveConsumer>
 );
@@ -144,14 +140,14 @@ const HeroListFeature = memo(
           header={
             <>
               {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
-                <Header>
-                  {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
-                    <Title numberOfLines={1}>{title}</Title>
-                  ) : null}
-                  {isLoading || subtitle ? (
-                    <Subtitle>{subtitle}</Subtitle>
-                  ) : null}
-                </Header>
+                <>
+                  <FeatureTitles
+                    title={title}
+                    subtitle={subtitle}
+                    isLoading={isLoading}
+                  />
+                  <PaddedView />
+                </>
               ) : null}
               {isLoading || heroCard ? (
                 <TouchableScale onPress={() => onPressHero(heroCard)}>
@@ -207,8 +203,8 @@ HeroListFeature.propTypes = {
 };
 
 HeroListFeature.defaultProps = {
-  HeroComponent: DefaultCard,
   loadingStateObject: loadingStateArray,
+  HeroComponent: DefaultCard,
 };
 
 export default HeroListFeature;
