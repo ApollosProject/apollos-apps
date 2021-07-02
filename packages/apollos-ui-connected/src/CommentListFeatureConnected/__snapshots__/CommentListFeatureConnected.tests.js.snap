@@ -322,7 +322,7 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -334,7 +334,7 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#A5A5A5",
+                    "color": "rgba(39, 39, 46, 0.3)",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 18,
@@ -442,7 +442,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -487,7 +487,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -532,7 +532,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -582,7 +582,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -690,7 +690,7 @@ Array [
                     fill={
                       Array [
                         0,
-                        4283453520,
+                        2569479982,
                       ]
                     }
                     fillOpacity={1}
@@ -737,7 +737,7 @@ Array [
                 italic={false}
                 style={
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Regular",
                     "fontSize": 16,
                     "lineHeight": 26,
@@ -822,7 +822,7 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -834,7 +834,7 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#A5A5A5",
+                    "color": "rgba(39, 39, 46, 0.3)",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 18,
@@ -942,7 +942,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -987,7 +987,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -1032,7 +1032,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -1082,7 +1082,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -1190,7 +1190,7 @@ Array [
                     fill={
                       Array [
                         0,
-                        4283453520,
+                        2569479982,
                       ]
                     }
                     fillOpacity={1}
@@ -1237,7 +1237,7 @@ Array [
                 italic={false}
                 style={
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Regular",
                     "fontSize": 16,
                     "lineHeight": 26,
@@ -1322,7 +1322,7 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -1334,7 +1334,7 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#A5A5A5",
+                    "color": "rgba(39, 39, 46, 0.3)",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 18,
@@ -1442,7 +1442,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -1487,7 +1487,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -1532,7 +1532,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -1582,7 +1582,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -1690,7 +1690,7 @@ Array [
                     fill={
                       Array [
                         0,
-                        4283453520,
+                        2569479982,
                       ]
                     }
                     fillOpacity={1}
@@ -1737,7 +1737,7 @@ Array [
                 italic={false}
                 style={
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Regular",
                     "fontSize": 16,
                     "lineHeight": 26,
@@ -1822,7 +1822,7 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -1834,7 +1834,7 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#A5A5A5",
+                    "color": "rgba(39, 39, 46, 0.3)",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 18,
@@ -1942,7 +1942,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -1987,7 +1987,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -2032,7 +2032,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -2082,7 +2082,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -2190,7 +2190,7 @@ Array [
                     fill={
                       Array [
                         0,
-                        4283453520,
+                        2569479982,
                       ]
                     }
                     fillOpacity={1}
@@ -2237,7 +2237,7 @@ Array [
                 italic={false}
                 style={
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Regular",
                     "fontSize": 16,
                     "lineHeight": 26,
@@ -2322,7 +2322,7 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -2334,7 +2334,7 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#A5A5A5",
+                    "color": "rgba(39, 39, 46, 0.3)",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 18,
@@ -2442,7 +2442,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -2487,7 +2487,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -2532,7 +2532,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -2582,7 +2582,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -2690,7 +2690,7 @@ Array [
                     fill={
                       Array [
                         0,
-                        4283453520,
+                        2569479982,
                       ]
                     }
                     fillOpacity={1}
@@ -2737,7 +2737,7 @@ Array [
                 italic={false}
                 style={
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Regular",
                     "fontSize": 16,
                     "lineHeight": 26,
@@ -2822,7 +2822,7 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -2834,7 +2834,7 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#A5A5A5",
+                    "color": "rgba(39, 39, 46, 0.3)",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 18,
@@ -2942,7 +2942,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -2987,7 +2987,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -3032,7 +3032,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -3082,7 +3082,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -3190,7 +3190,7 @@ Array [
                     fill={
                       Array [
                         0,
-                        4283453520,
+                        2569479982,
                       ]
                     }
                     fillOpacity={1}
@@ -3237,7 +3237,7 @@ Array [
                 italic={false}
                 style={
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Regular",
                     "fontSize": 16,
                     "lineHeight": 26,
@@ -3322,7 +3322,7 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -3334,7 +3334,7 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#A5A5A5",
+                    "color": "rgba(39, 39, 46, 0.3)",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 18,
@@ -3442,7 +3442,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -3487,7 +3487,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -3532,7 +3532,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -3582,7 +3582,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -3690,7 +3690,7 @@ Array [
                     fill={
                       Array [
                         0,
-                        4283453520,
+                        2569479982,
                       ]
                     }
                     fillOpacity={1}
@@ -3737,7 +3737,7 @@ Array [
                 italic={false}
                 style={
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Regular",
                     "fontSize": 16,
                     "lineHeight": 26,
@@ -3822,7 +3822,7 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -3834,7 +3834,7 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#A5A5A5",
+                    "color": "rgba(39, 39, 46, 0.3)",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 18,
@@ -3942,7 +3942,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -3987,7 +3987,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -4032,7 +4032,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -4082,7 +4082,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -4190,7 +4190,7 @@ Array [
                     fill={
                       Array [
                         0,
-                        4283453520,
+                        2569479982,
                       ]
                     }
                     fillOpacity={1}
@@ -4237,7 +4237,7 @@ Array [
                 italic={false}
                 style={
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Regular",
                     "fontSize": 16,
                     "lineHeight": 26,
@@ -4322,7 +4322,7 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -4334,7 +4334,7 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#A5A5A5",
+                    "color": "rgba(39, 39, 46, 0.3)",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 18,
@@ -4442,7 +4442,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -4487,7 +4487,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -4532,7 +4532,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -4582,7 +4582,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -4690,7 +4690,7 @@ Array [
                     fill={
                       Array [
                         0,
-                        4283453520,
+                        2569479982,
                       ]
                     }
                     fillOpacity={1}
@@ -4737,7 +4737,7 @@ Array [
                 italic={false}
                 style={
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Regular",
                     "fontSize": 16,
                     "lineHeight": 26,
@@ -4822,7 +4822,7 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -4834,7 +4834,7 @@ Array [
               <Text
                 style={
                   Object {
-                    "color": "#A5A5A5",
+                    "color": "rgba(39, 39, 46, 0.3)",
                     "fontFamily": "InterUI-Bold",
                     "fontSize": 12,
                     "lineHeight": 18,
@@ -4942,7 +4942,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -4987,7 +4987,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -5032,7 +5032,7 @@ Array [
                       fill={
                         Array [
                           0,
-                          4289045925,
+                          1294411566,
                         ]
                       }
                       fillOpacity={1}
@@ -5082,7 +5082,7 @@ Array [
             italic={false}
             style={
               Object {
-                "color": "#303030",
+                "color": "#27272E",
                 "fontFamily": "InterUI-Regular",
                 "fontSize": 16,
                 "lineHeight": 26,
@@ -5190,7 +5190,7 @@ Array [
                     fill={
                       Array [
                         0,
-                        4283453520,
+                        2569479982,
                       ]
                     }
                     fillOpacity={1}
@@ -5237,7 +5237,7 @@ Array [
                 italic={false}
                 style={
                   Object {
-                    "color": "#303030",
+                    "color": "#27272E",
                     "fontFamily": "InterUI-Regular",
                     "fontSize": 16,
                     "lineHeight": 26,

@@ -34,28 +34,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4278190080,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -67,7 +49,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -84,14 +66,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -105,28 +101,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4278190080,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -138,7 +116,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -155,14 +133,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -176,28 +168,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4278190080,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -209,7 +183,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -226,14 +200,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -247,28 +235,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4278190080,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -280,7 +250,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -296,14 +266,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -317,28 +301,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4278190080,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -350,7 +316,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -366,14 +332,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       onLayout={[Function]}
@@ -391,7 +371,7 @@ Array [
       <RCTScrollView
         activeDot={
           <View>
-            <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+            <mapProps(Component) />
           </View>
         }
         automaticallyAdjustContentInsets={false}
@@ -416,7 +396,7 @@ Array [
         disablePrevButton={false}
         dot={
           <View>
-            <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+            <mapProps(Component) />
           </View>
         }
         horizontal={true}
@@ -460,44 +440,35 @@ Array [
             }
           >
             <View
-              onLayout={[Function]}
               style={
-                Array [
-                  Object {
-                    "flex": 1,
-                  },
-                  Object {
-                    "paddingBottom": 0,
-                  },
-                ]
+                Object {
+                  "flex": 1,
+                }
               }
             >
-              <RCTScrollView
-                contentContainerStyle={
-                  Object {
-                    "flexGrow": 1,
-                  }
-                }
-                keyboardDismissMode="on-drag"
-                keyboardShouldPersistTaps="never"
+              <View
+                onLayout={[Function]}
                 style={
-                  Object {
-                    "bottom": 0,
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  }
+                  Array [
+                    Object {
+                      "flex": 1,
+                    },
+                    Object {
+                      "paddingBottom": 0,
+                    },
+                  ]
                 }
               >
-                <View>
-                  <View
-                    style={
-                      Object {
-                        "flex": 1,
-                      }
+                <RCTScrollView
+                  contentContainerStyle={
+                    Object {
+                      "flexGrow": 1,
                     }
-                  >
+                  }
+                  keyboardDismissMode="on-drag"
+                  keyboardShouldPersistTaps="never"
+                >
+                  <View>
                     <View
                       style={
                         Object {
@@ -617,8 +588,8 @@ Array [
                       </View>
                     </View>
                   </View>
-                </View>
-              </RCTScrollView>
+                </RCTScrollView>
+              </View>
             </View>
           </View>
           <View
@@ -635,44 +606,35 @@ Array [
             }
           >
             <View
-              onLayout={[Function]}
               style={
-                Array [
-                  Object {
-                    "flex": 1,
-                  },
-                  Object {
-                    "paddingBottom": 0,
-                  },
-                ]
+                Object {
+                  "flex": 1,
+                }
               }
             >
-              <RCTScrollView
-                contentContainerStyle={
-                  Object {
-                    "flexGrow": 1,
-                  }
-                }
-                keyboardDismissMode="on-drag"
-                keyboardShouldPersistTaps="never"
+              <View
+                onLayout={[Function]}
                 style={
-                  Object {
-                    "bottom": 0,
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  }
+                  Array [
+                    Object {
+                      "flex": 1,
+                    },
+                    Object {
+                      "paddingBottom": 0,
+                    },
+                  ]
                 }
               >
-                <View>
-                  <View
-                    style={
-                      Object {
-                        "flex": 1,
-                      }
+                <RCTScrollView
+                  contentContainerStyle={
+                    Object {
+                      "flexGrow": 1,
                     }
-                  >
+                  }
+                  keyboardDismissMode="on-drag"
+                  keyboardShouldPersistTaps="never"
+                >
+                  <View>
                     <View
                       style={
                         Object {
@@ -760,8 +722,8 @@ Array [
                       </View>
                     </View>
                   </View>
-                </View>
-              </RCTScrollView>
+                </RCTScrollView>
+              </View>
             </View>
           </View>
           <View
@@ -861,7 +823,7 @@ Array [
           <View
             style={
               Object {
-                "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
+                "backgroundColor": "rgba(244, 247, 248, 0.09999999999999998)",
                 "borderRadius": 2,
                 "height": 2,
                 "marginHorizontal": 1,
@@ -874,7 +836,7 @@ Array [
           <View
             style={
               Object {
-                "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
+                "backgroundColor": "rgba(244, 247, 248, 0.09999999999999998)",
                 "borderRadius": 2,
                 "height": 2,
                 "marginHorizontal": 1,
@@ -887,7 +849,7 @@ Array [
           <View
             style={
               Object {
-                "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
+                "backgroundColor": "rgba(244, 247, 248, 0.09999999999999998)",
                 "borderRadius": 2,
                 "height": 2,
                 "marginHorizontal": 1,
@@ -900,7 +862,7 @@ Array [
           <View
             style={
               Object {
-                "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
+                "backgroundColor": "rgba(244, 247, 248, 0.09999999999999998)",
                 "borderRadius": 2,
                 "height": 2,
                 "marginHorizontal": 1,
@@ -927,28 +889,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4278190080,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -960,7 +904,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -977,7 +921,6 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
@@ -985,44 +928,50 @@ Array [
           }
         />
         <View
-          onLayout={[Function]}
+          material="regular"
           style={
-            Array [
-              Object {
-                "flex": 1,
-              },
-              Object {
-                "paddingBottom": 0,
-              },
-            ]
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
           }
         >
-          <RCTScrollView
-            contentContainerStyle={
-              Object {
-                "flexGrow": 1,
-              }
-            }
-            keyboardDismissMode="on-drag"
-            keyboardShouldPersistTaps="never"
+          <View
+            onLayout={[Function]}
             style={
-              Object {
-                "bottom": 0,
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-              }
+              Array [
+                Object {
+                  "flex": 1,
+                },
+                Object {
+                  "paddingBottom": 0,
+                },
+              ]
             }
           >
-            <View>
-              <View
-                style={
-                  Object {
-                    "flex": 1,
-                  }
+            <RCTScrollView
+              contentContainerStyle={
+                Object {
+                  "flexGrow": 1,
                 }
-              >
+              }
+              keyboardDismissMode="on-drag"
+              keyboardShouldPersistTaps="never"
+            >
+              <View>
                 <View
                   style={
                     Object {
@@ -1163,7 +1112,7 @@ Array [
                     <Text
                       style={
                         Object {
-                          "color": "#F8F7F4",
+                          "color": "#F4F7F8",
                           "fontFamily": "InterUI-Black",
                           "fontSize": 24,
                           "lineHeight": 27.6,
@@ -1186,7 +1135,7 @@ Array [
                         italic={false}
                         style={
                           Object {
-                            "color": "#F8F7F4",
+                            "color": "#F4F7F8",
                             "fontFamily": "InterUI-Regular",
                             "fontSize": 16,
                             "lineHeight": 26,
@@ -1260,10 +1209,10 @@ Array [
                   </View>
                 </View>
               </View>
-            </View>
-          </RCTScrollView>
+            </RCTScrollView>
+          </View>
         </View>
-      </BVLinearGradient>
+      </View>
     </View>
   </View>,
 ]
@@ -1303,28 +1252,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4278190080,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -1336,7 +1267,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -1353,14 +1284,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -1374,28 +1319,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4278190080,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -1407,7 +1334,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -1424,14 +1351,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -1445,28 +1386,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4278190080,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -1478,7 +1401,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -1495,14 +1418,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -1516,28 +1453,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4278190080,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -1549,7 +1468,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -1565,14 +1484,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -1586,28 +1519,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4278190080,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -1619,7 +1534,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -1635,14 +1550,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       onLayout={[Function]}
@@ -1660,7 +1589,7 @@ Array [
       <RCTScrollView
         activeDot={
           <View>
-            <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+            <mapProps(Component) />
           </View>
         }
         automaticallyAdjustContentInsets={false}
@@ -1685,7 +1614,7 @@ Array [
         disablePrevButton={false}
         dot={
           <View>
-            <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+            <mapProps(Component) />
           </View>
         }
         horizontal={true}
@@ -1729,44 +1658,35 @@ Array [
             }
           >
             <View
-              onLayout={[Function]}
               style={
-                Array [
-                  Object {
-                    "flex": 1,
-                  },
-                  Object {
-                    "paddingBottom": 0,
-                  },
-                ]
+                Object {
+                  "flex": 1,
+                }
               }
             >
-              <RCTScrollView
-                contentContainerStyle={
-                  Object {
-                    "flexGrow": 1,
-                  }
-                }
-                keyboardDismissMode="on-drag"
-                keyboardShouldPersistTaps="never"
+              <View
+                onLayout={[Function]}
                 style={
-                  Object {
-                    "bottom": 0,
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  }
+                  Array [
+                    Object {
+                      "flex": 1,
+                    },
+                    Object {
+                      "paddingBottom": 0,
+                    },
+                  ]
                 }
               >
-                <View>
-                  <View
-                    style={
-                      Object {
-                        "flex": 1,
-                      }
+                <RCTScrollView
+                  contentContainerStyle={
+                    Object {
+                      "flexGrow": 1,
                     }
-                  >
+                  }
+                  keyboardDismissMode="on-drag"
+                  keyboardShouldPersistTaps="never"
+                >
+                  <View>
                     <View
                       style={
                         Object {
@@ -1886,8 +1806,8 @@ Array [
                       </View>
                     </View>
                   </View>
-                </View>
-              </RCTScrollView>
+                </RCTScrollView>
+              </View>
             </View>
           </View>
           <View
@@ -1904,44 +1824,35 @@ Array [
             }
           >
             <View
-              onLayout={[Function]}
               style={
-                Array [
-                  Object {
-                    "flex": 1,
-                  },
-                  Object {
-                    "paddingBottom": 0,
-                  },
-                ]
+                Object {
+                  "flex": 1,
+                }
               }
             >
-              <RCTScrollView
-                contentContainerStyle={
-                  Object {
-                    "flexGrow": 1,
-                  }
-                }
-                keyboardDismissMode="on-drag"
-                keyboardShouldPersistTaps="never"
+              <View
+                onLayout={[Function]}
                 style={
-                  Object {
-                    "bottom": 0,
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  }
+                  Array [
+                    Object {
+                      "flex": 1,
+                    },
+                    Object {
+                      "paddingBottom": 0,
+                    },
+                  ]
                 }
               >
-                <View>
-                  <View
-                    style={
-                      Object {
-                        "flex": 1,
-                      }
+                <RCTScrollView
+                  contentContainerStyle={
+                    Object {
+                      "flexGrow": 1,
                     }
-                  >
+                  }
+                  keyboardDismissMode="on-drag"
+                  keyboardShouldPersistTaps="never"
+                >
+                  <View>
                     <View
                       style={
                         Object {
@@ -2029,8 +1940,8 @@ Array [
                       </View>
                     </View>
                   </View>
-                </View>
-              </RCTScrollView>
+                </RCTScrollView>
+              </View>
             </View>
           </View>
           <View
@@ -2130,7 +2041,7 @@ Array [
           <View
             style={
               Object {
-                "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
+                "backgroundColor": "rgba(244, 247, 248, 0.09999999999999998)",
                 "borderRadius": 2,
                 "height": 2,
                 "marginHorizontal": 1,
@@ -2143,7 +2054,7 @@ Array [
           <View
             style={
               Object {
-                "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
+                "backgroundColor": "rgba(244, 247, 248, 0.09999999999999998)",
                 "borderRadius": 2,
                 "height": 2,
                 "marginHorizontal": 1,
@@ -2156,7 +2067,7 @@ Array [
           <View
             style={
               Object {
-                "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
+                "backgroundColor": "rgba(244, 247, 248, 0.09999999999999998)",
                 "borderRadius": 2,
                 "height": 2,
                 "marginHorizontal": 1,
@@ -2169,7 +2080,7 @@ Array [
           <View
             style={
               Object {
-                "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
+                "backgroundColor": "rgba(244, 247, 248, 0.09999999999999998)",
                 "borderRadius": 2,
                 "height": 2,
                 "marginHorizontal": 1,
@@ -2218,28 +2129,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4278190080,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -2251,7 +2144,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -2268,14 +2161,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -2289,28 +2196,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4278190080,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -2322,7 +2211,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -2339,14 +2228,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -2360,28 +2263,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4278190080,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -2393,7 +2278,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -2410,14 +2295,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -2431,28 +2330,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4278190080,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -2464,7 +2345,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -2480,14 +2361,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -2501,28 +2396,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4278190080,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -2534,7 +2411,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -2550,14 +2427,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       onLayout={[Function]}
@@ -2575,7 +2466,7 @@ Array [
       <RCTScrollView
         activeDot={
           <View>
-            <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+            <mapProps(Component) />
           </View>
         }
         automaticallyAdjustContentInsets={false}
@@ -2600,7 +2491,7 @@ Array [
         disablePrevButton={false}
         dot={
           <View>
-            <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+            <mapProps(Component) />
           </View>
         }
         horizontal={true}
@@ -2644,44 +2535,35 @@ Array [
             }
           >
             <View
-              onLayout={[Function]}
               style={
-                Array [
-                  Object {
-                    "flex": 1,
-                  },
-                  Object {
-                    "paddingBottom": 0,
-                  },
-                ]
+                Object {
+                  "flex": 1,
+                }
               }
             >
-              <RCTScrollView
-                contentContainerStyle={
-                  Object {
-                    "flexGrow": 1,
-                  }
-                }
-                keyboardDismissMode="on-drag"
-                keyboardShouldPersistTaps="never"
+              <View
+                onLayout={[Function]}
                 style={
-                  Object {
-                    "bottom": 0,
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  }
+                  Array [
+                    Object {
+                      "flex": 1,
+                    },
+                    Object {
+                      "paddingBottom": 0,
+                    },
+                  ]
                 }
               >
-                <View>
-                  <View
-                    style={
-                      Object {
-                        "flex": 1,
-                      }
+                <RCTScrollView
+                  contentContainerStyle={
+                    Object {
+                      "flexGrow": 1,
                     }
-                  >
+                  }
+                  keyboardDismissMode="on-drag"
+                  keyboardShouldPersistTaps="never"
+                >
+                  <View>
                     <View
                       style={
                         Object {
@@ -2801,8 +2683,8 @@ Array [
                       </View>
                     </View>
                   </View>
-                </View>
-              </RCTScrollView>
+                </RCTScrollView>
+              </View>
             </View>
           </View>
           <View
@@ -2819,44 +2701,35 @@ Array [
             }
           >
             <View
-              onLayout={[Function]}
               style={
-                Array [
-                  Object {
-                    "flex": 1,
-                  },
-                  Object {
-                    "paddingBottom": 0,
-                  },
-                ]
+                Object {
+                  "flex": 1,
+                }
               }
             >
-              <RCTScrollView
-                contentContainerStyle={
-                  Object {
-                    "flexGrow": 1,
-                  }
-                }
-                keyboardDismissMode="on-drag"
-                keyboardShouldPersistTaps="never"
+              <View
+                onLayout={[Function]}
                 style={
-                  Object {
-                    "bottom": 0,
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  }
+                  Array [
+                    Object {
+                      "flex": 1,
+                    },
+                    Object {
+                      "paddingBottom": 0,
+                    },
+                  ]
                 }
               >
-                <View>
-                  <View
-                    style={
-                      Object {
-                        "flex": 1,
-                      }
+                <RCTScrollView
+                  contentContainerStyle={
+                    Object {
+                      "flexGrow": 1,
                     }
-                  >
+                  }
+                  keyboardDismissMode="on-drag"
+                  keyboardShouldPersistTaps="never"
+                >
+                  <View>
                     <View
                       style={
                         Object {
@@ -2944,8 +2817,8 @@ Array [
                       </View>
                     </View>
                   </View>
-                </View>
-              </RCTScrollView>
+                </RCTScrollView>
+              </View>
             </View>
           </View>
           <View
@@ -3045,7 +2918,7 @@ Array [
           <View
             style={
               Object {
-                "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
+                "backgroundColor": "rgba(244, 247, 248, 0.09999999999999998)",
                 "borderRadius": 2,
                 "height": 2,
                 "marginHorizontal": 1,
@@ -3058,7 +2931,7 @@ Array [
           <View
             style={
               Object {
-                "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
+                "backgroundColor": "rgba(244, 247, 248, 0.09999999999999998)",
                 "borderRadius": 2,
                 "height": 2,
                 "marginHorizontal": 1,
@@ -3071,7 +2944,7 @@ Array [
           <View
             style={
               Object {
-                "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
+                "backgroundColor": "rgba(244, 247, 248, 0.09999999999999998)",
                 "borderRadius": 2,
                 "height": 2,
                 "marginHorizontal": 1,
@@ -3084,7 +2957,7 @@ Array [
           <View
             style={
               Object {
-                "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
+                "backgroundColor": "rgba(244, 247, 248, 0.09999999999999998)",
                 "borderRadius": 2,
                 "height": 2,
                 "marginHorizontal": 1,
@@ -3111,28 +2984,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4278190080,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -3144,7 +2999,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -3161,7 +3016,6 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
@@ -3169,44 +3023,50 @@ Array [
           }
         />
         <View
-          onLayout={[Function]}
+          material="regular"
           style={
-            Array [
-              Object {
-                "flex": 1,
-              },
-              Object {
-                "paddingBottom": 0,
-              },
-            ]
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
           }
         >
-          <RCTScrollView
-            contentContainerStyle={
-              Object {
-                "flexGrow": 1,
-              }
-            }
-            keyboardDismissMode="on-drag"
-            keyboardShouldPersistTaps="never"
+          <View
+            onLayout={[Function]}
             style={
-              Object {
-                "bottom": 0,
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-              }
+              Array [
+                Object {
+                  "flex": 1,
+                },
+                Object {
+                  "paddingBottom": 0,
+                },
+              ]
             }
           >
-            <View>
-              <View
-                style={
-                  Object {
-                    "flex": 1,
-                  }
+            <RCTScrollView
+              contentContainerStyle={
+                Object {
+                  "flexGrow": 1,
                 }
-              >
+              }
+              keyboardDismissMode="on-drag"
+              keyboardShouldPersistTaps="never"
+            >
+              <View>
                 <View
                   style={
                     Object {
@@ -3347,7 +3207,7 @@ Array [
                     <Text
                       style={
                         Object {
-                          "color": "#F8F7F4",
+                          "color": "#F4F7F8",
                           "fontFamily": "InterUI-Black",
                           "fontSize": 24,
                           "lineHeight": 27.6,
@@ -3370,7 +3230,7 @@ Array [
                         italic={false}
                         style={
                           Object {
-                            "color": "#F8F7F4",
+                            "color": "#F4F7F8",
                             "fontFamily": "InterUI-Regular",
                             "fontSize": 16,
                             "lineHeight": 26,
@@ -3444,10 +3304,10 @@ Array [
                   </View>
                 </View>
               </View>
-            </View>
-          </RCTScrollView>
+            </RCTScrollView>
+          </View>
         </View>
-      </BVLinearGradient>
+      </View>
     </View>
   </View>,
 ]
@@ -3487,28 +3347,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4278190080,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -3520,7 +3362,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -3537,14 +3379,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -3558,28 +3414,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4278190080,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -3591,7 +3429,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -3608,14 +3446,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -3629,28 +3481,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4278190080,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -3662,7 +3496,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -3679,14 +3513,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -3700,28 +3548,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4278190080,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -3733,7 +3563,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -3749,14 +3579,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
@@ -3770,28 +3614,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4278190080,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -3803,7 +3629,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -3819,14 +3645,28 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
             }
           }
         />
-      </BVLinearGradient>
+        <View
+          material="regular"
+          style={
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       onLayout={[Function]}
@@ -3844,7 +3684,7 @@ Array [
       <RCTScrollView
         activeDot={
           <View>
-            <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+            <mapProps(Component) />
           </View>
         }
         automaticallyAdjustContentInsets={false}
@@ -3869,7 +3709,7 @@ Array [
         disablePrevButton={false}
         dot={
           <View>
-            <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+            <mapProps(Component) />
           </View>
         }
         horizontal={true}
@@ -3913,44 +3753,35 @@ Array [
             }
           >
             <View
-              onLayout={[Function]}
               style={
-                Array [
-                  Object {
-                    "flex": 1,
-                  },
-                  Object {
-                    "paddingBottom": 0,
-                  },
-                ]
+                Object {
+                  "flex": 1,
+                }
               }
             >
-              <RCTScrollView
-                contentContainerStyle={
-                  Object {
-                    "flexGrow": 1,
-                  }
-                }
-                keyboardDismissMode="on-drag"
-                keyboardShouldPersistTaps="never"
+              <View
+                onLayout={[Function]}
                 style={
-                  Object {
-                    "bottom": 0,
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  }
+                  Array [
+                    Object {
+                      "flex": 1,
+                    },
+                    Object {
+                      "paddingBottom": 0,
+                    },
+                  ]
                 }
               >
-                <View>
-                  <View
-                    style={
-                      Object {
-                        "flex": 1,
-                      }
+                <RCTScrollView
+                  contentContainerStyle={
+                    Object {
+                      "flexGrow": 1,
                     }
-                  >
+                  }
+                  keyboardDismissMode="on-drag"
+                  keyboardShouldPersistTaps="never"
+                >
+                  <View>
                     <View
                       style={
                         Object {
@@ -4070,8 +3901,8 @@ Array [
                       </View>
                     </View>
                   </View>
-                </View>
-              </RCTScrollView>
+                </RCTScrollView>
+              </View>
             </View>
           </View>
           <View
@@ -4088,44 +3919,35 @@ Array [
             }
           >
             <View
-              onLayout={[Function]}
               style={
-                Array [
-                  Object {
-                    "flex": 1,
-                  },
-                  Object {
-                    "paddingBottom": 0,
-                  },
-                ]
+                Object {
+                  "flex": 1,
+                }
               }
             >
-              <RCTScrollView
-                contentContainerStyle={
-                  Object {
-                    "flexGrow": 1,
-                  }
-                }
-                keyboardDismissMode="on-drag"
-                keyboardShouldPersistTaps="never"
+              <View
+                onLayout={[Function]}
                 style={
-                  Object {
-                    "bottom": 0,
-                    "left": 0,
-                    "position": "absolute",
-                    "right": 0,
-                    "top": 0,
-                  }
+                  Array [
+                    Object {
+                      "flex": 1,
+                    },
+                    Object {
+                      "paddingBottom": 0,
+                    },
+                  ]
                 }
               >
-                <View>
-                  <View
-                    style={
-                      Object {
-                        "flex": 1,
-                      }
+                <RCTScrollView
+                  contentContainerStyle={
+                    Object {
+                      "flexGrow": 1,
                     }
-                  >
+                  }
+                  keyboardDismissMode="on-drag"
+                  keyboardShouldPersistTaps="never"
+                >
+                  <View>
                     <View
                       style={
                         Object {
@@ -4213,8 +4035,8 @@ Array [
                       </View>
                     </View>
                   </View>
-                </View>
-              </RCTScrollView>
+                </RCTScrollView>
+              </View>
             </View>
           </View>
           <View
@@ -4314,7 +4136,7 @@ Array [
           <View
             style={
               Object {
-                "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
+                "backgroundColor": "rgba(244, 247, 248, 0.09999999999999998)",
                 "borderRadius": 2,
                 "height": 2,
                 "marginHorizontal": 1,
@@ -4327,7 +4149,7 @@ Array [
           <View
             style={
               Object {
-                "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
+                "backgroundColor": "rgba(244, 247, 248, 0.09999999999999998)",
                 "borderRadius": 2,
                 "height": 2,
                 "marginHorizontal": 1,
@@ -4340,7 +4162,7 @@ Array [
           <View
             style={
               Object {
-                "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
+                "backgroundColor": "rgba(244, 247, 248, 0.09999999999999998)",
                 "borderRadius": 2,
                 "height": 2,
                 "marginHorizontal": 1,
@@ -4353,7 +4175,7 @@ Array [
           <View
             style={
               Object {
-                "backgroundColor": "rgba(248, 247, 244, 0.09999999999999998)",
+                "backgroundColor": "rgba(244, 247, 248, 0.09999999999999998)",
                 "borderRadius": 2,
                 "height": 2,
                 "marginHorizontal": 1,
@@ -4380,28 +4202,10 @@ Array [
         }
       }
     >
-      <BVLinearGradient
-        colors={
-          Array [
-            4278190080,
-            4278190080,
-          ]
-        }
-        endPoint={
-          Object {
-            "x": 0.5,
-            "y": 1,
-          }
-        }
-        locations={null}
-        startPoint={
-          Object {
-            "x": 0.5,
-            "y": 0,
-          }
-        }
+      <View
         style={
           Object {
+            "backgroundColor": "#000000",
             "bottom": 0,
             "flex": 1,
             "height": "100%",
@@ -4413,7 +4217,7 @@ Array [
         }
       >
         <Image
-          blurRadius={200}
+          blurRadius={80}
           fadeDuration={250}
           onLoad={[Function]}
           source={
@@ -4430,7 +4234,6 @@ Array [
               "backgroundColor": "#A5A5A5",
               "bottom": 0,
               "left": 0,
-              "opacity": 0.5,
               "position": "absolute",
               "right": 0,
               "top": 0,
@@ -4438,44 +4241,50 @@ Array [
           }
         />
         <View
-          onLayout={[Function]}
+          material="regular"
           style={
-            Array [
-              Object {
-                "flex": 1,
-              },
-              Object {
-                "paddingBottom": 0,
-              },
-            ]
+            Object {
+              "backgroundColor": "rgba(28, 28, 30, 0.8)",
+              "bottom": 0,
+              "flex": 1,
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
           }
         >
-          <RCTScrollView
-            contentContainerStyle={
-              Object {
-                "flexGrow": 1,
-              }
-            }
-            keyboardDismissMode="on-drag"
-            keyboardShouldPersistTaps="never"
+          <View
+            onLayout={[Function]}
             style={
-              Object {
-                "bottom": 0,
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-              }
+              Array [
+                Object {
+                  "flex": 1,
+                },
+                Object {
+                  "paddingBottom": 0,
+                },
+              ]
             }
           >
-            <View>
-              <View
-                style={
-                  Object {
-                    "flex": 1,
-                  }
+            <RCTScrollView
+              contentContainerStyle={
+                Object {
+                  "flexGrow": 1,
                 }
-              >
+              }
+              keyboardDismissMode="on-drag"
+              keyboardShouldPersistTaps="never"
+            >
+              <View>
                 <View
                   style={
                     Object {
@@ -4616,7 +4425,7 @@ Array [
                     <Text
                       style={
                         Object {
-                          "color": "#F8F7F4",
+                          "color": "#F4F7F8",
                           "fontFamily": "InterUI-Black",
                           "fontSize": 24,
                           "lineHeight": 27.6,
@@ -4639,7 +4448,7 @@ Array [
                         italic={false}
                         style={
                           Object {
-                            "color": "#F8F7F4",
+                            "color": "#F4F7F8",
                             "fontFamily": "InterUI-Regular",
                             "fontSize": 16,
                             "lineHeight": 26,
@@ -4713,10 +4522,10 @@ Array [
                   </View>
                 </View>
               </View>
-            </View>
-          </RCTScrollView>
+            </RCTScrollView>
+          </View>
         </View>
-      </BVLinearGradient>
+      </View>
     </View>
   </View>,
 ]

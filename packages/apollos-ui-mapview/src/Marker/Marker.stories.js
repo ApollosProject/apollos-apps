@@ -4,7 +4,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 
 import { FlexedMapView } from '../MapView';
 
-import Marker from '.';
+import Marker from './index';
 
 const initialRegion = {
   latitude: 39.809734,

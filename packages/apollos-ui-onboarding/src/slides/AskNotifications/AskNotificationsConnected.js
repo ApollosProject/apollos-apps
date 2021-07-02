@@ -1,6 +1,11 @@
 import React, { useEffect, memo } from 'react';
 import PropTypes from 'prop-types';
-import { PushContext } from '@apollosproject/ui-notifications';
+import {
+  PushContext,
+  requestPermissions,
+} from '@apollosproject/ui-notifications';
+
+import { named } from '@apollosproject/ui-kit';
 
 import AskNotifications from './AskNotifications';
 
@@ -35,9 +40,7 @@ const AskNotificationsWithStatus = ({
   return (
     <Component
       isLoading={status.loading}
-      onPressButton={() =>
-        onRequestPushPermissions(status.updatePermissionStatus)
-      }
+      onPressButton={() => requestPermissions(status.updatePermissionStatus)}
       buttonDisabled={status.hasPushPermission}
       buttonText={getButtonText({
         hasPrompted: status.hasPrompted,
@@ -88,4 +91,6 @@ AskNotificationsWithStatus.defaultProps = {
 
 AskNotificationsConnected.displayName = 'AskNotificationsConnected';
 
-export default AskNotificationsConnected;
+export default named('ui-onboarding.AskNotificationsConnected')(
+  AskNotificationsConnected
+);

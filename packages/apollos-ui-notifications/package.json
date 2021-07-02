@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=12"
   },
-  "version": "2.14.0",
+  "version": "2.25.0",
   "main": "src/index.js",
   "files": [
     "src/**",
@@ -47,7 +47,7 @@
     "@apollosproject/ui-auth": "*",
     "react": "*",
     "react-native": "*",
-    "react-native-onesignal": "*",
+    "react-native-onesignal": "4.x.x",
     "react-native-permissions": "^2.0.5"
   },
   "dependencies": {
@@ -59,7 +59,7 @@
   "devDependencies": {
     "@apollo/client": "3.3.0-rc.2",
     "jest": "^25.1.0",
-    "prop-types": "15.6.1",
+    "prop-types": "15.7.2",
     "react": "16.13.1",
     "react-native": "0.63.2",
     "react-native-onesignal": "3.9.1",

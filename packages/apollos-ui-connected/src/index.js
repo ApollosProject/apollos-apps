@@ -9,7 +9,6 @@ export AddCommentFeatureConnected, {
 export ConnectScreenConnected from './ConnectScreenConnected';
 export ContentCardConnected, {
   ContentCardComponentMapper,
-  contentCardComponentMapper, // TODO: Update to `ContentCardComponentMapper` export below is for temporary backwards compatibility.
   GET_CONTENT_CARD,
 } from './ContentCardConnected';
 export ContentNodeConnected, { GET_CONTENT_NODE } from './ContentNodeConnected';
@@ -24,6 +23,7 @@ export ContentSingleFeaturesConnected, {
 export ContentChildFeedConnected, {
   GET_CONTENT_CHILD_SIBLINGS,
 } from './ContentChildFeedConnected';
+export ContentFeedConnected, { GET_CONTENT_FEED } from './ContentFeedConnected';
 export ContentParentFeedConnected, {
   GET_CONTENT_PARENT_CHILDREN,
 } from './ContentParentFeedConnected';
@@ -33,12 +33,19 @@ export FeaturesFeedConnected, {
   GET_FEATURE_FEED,
   FEATURE_FEED_ACTION_MAP,
 } from './FeaturesFeedConnected';
+export {
+  FeatureFeedTabConnected,
+  CampusTabComponent,
+  DefaultTabComponent,
+  createFeatureFeedTab,
+} from './FeaturesFeedTabConnected';
 export FollowListConnected, {
   REQUEST_FOLLOW,
   ACCEPT_FOLLOW_REQUEST,
   IGNORE_FOLLOW_REQUEST,
   SuggestedFollowListConnected,
   RequestedFollowListConnected,
+  FollowingListConnected,
   GET_SUGGESTED_FOLLOWS,
 } from './FollowListConnected';
 export FollowListSearchModalConnected from './FollowListSearchModalConnected';
@@ -51,7 +58,6 @@ export HorizontalCardListFeatureConnected, {
   GET_HORIZONTAL_CARD_LIST_FEATURE,
 } from './HorizontalCardListFeatureConnected';
 export HorizontalContentCardConnected, {
-  horizontalContentCardComponentMapper,
   HorizontalContentCardComponentMapper,
 } from './HorizontalContentCardConnected';
 export HorizontalContentSeriesFeedConnected, {
@@ -67,6 +73,7 @@ export LikeButtonConnected, {
   getLikedNode,
   updateLikedContent,
   updateLikeNode,
+  useLike,
 } from './LikeButtonConnected';
 export LikedContentFeedConnected, {
   GET_LIKED_CONTENT,
@@ -82,6 +89,7 @@ export NodeSingleConnected, {
 export RockAuthedWebBrowser from './RockAuthedWebBrowser';
 export RockAuthedWebView from './RockAuthedWebView';
 export SearchCardConnected from './SearchCardConnected';
+export SearchScreenConnected from './SearchScreenConnected';
 export SearchFeedConnected, {
   SearchInputHeader,
   SearchFeedNoResults,
@@ -90,6 +98,7 @@ export SearchFeedConnected, {
 export ShareButtonConnected, {
   GET_SHARE_CONTENT,
   ShareButton,
+  useShare,
 } from './ShareButtonConnected';
 export UpNextButtonConnected from './UpNextButtonConnected';
 export UserAvatarConnected, { UserAvatarUpdate } from './UserAvatarConnected';

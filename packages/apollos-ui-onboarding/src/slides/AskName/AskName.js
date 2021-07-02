@@ -4,7 +4,7 @@ import { get } from 'lodash';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { PaddedView, TextInput } from '@apollosproject/ui-kit';
+import { PaddedView, TextInput, named } from '@apollosproject/ui-kit';
 
 import Slide, { SlideContent } from '../../Slide';
 
@@ -94,4 +94,4 @@ AskName.defaultProps = {
 
 AskName.displayName = 'AskName';
 
-export default AskName;
+export default named('ui-onboarding.AskName')(AskName);

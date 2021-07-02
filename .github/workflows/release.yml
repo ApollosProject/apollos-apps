@@ -4,32 +4,8 @@ on: workflow_dispatch
 
 jobs:
 
-  gpr:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0 # needs this to pull all tags and branches
-
-    - name: Setup Node for GPR
-      uses: actions/setup-node@v2
-      with:
-        registry-url: 'https://npm.pkg.github.com'
-        scope: '@apollosproject'
-
-    - name: Install Dependencies
-      run: yarn
-
-    - name: Release (No Push)
-      run: yarn release --registry "http://npm.pkg.github.com" --no-push --no-git-tag-version --yes
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
   npm:
 
-    needs: gpr
     runs-on: ubuntu-latest
 
     steps:
@@ -41,6 +17,7 @@ jobs:
     - name: Setup Node for npmjs.org
       uses: actions/setup-node@v2
       with:
+        node-version: 12
         registry-url: 'https://registry.npmjs.org'
         scope: '@apollosproject'
 
@@ -70,13 +47,17 @@ jobs:
         token: ${{ secrets.APOLLOS_ADMIN_TOKEN }}
 
     - uses: actions/setup-node@v2
+      with:
+        node-version: 12
 
     - name: Bump
       run: |
         git config --global user.email "apps@apollos.app"
         git config --global user.name "Apollos Admin"
-        sleep 120 # this is to insure the tag has been uploaded to Github and the API call will work
+        sleep 10 # this is to insure the tag has been uploaded to Github and the API call will work
         yarn bump
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   upgrade-tool:
 
@@ -86,6 +67,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
+        node-version: 12
         repository: apollosproject/apollos-upgrade
         token: ${{ secrets.APOLLOS_ADMIN_TOKEN }}
 
@@ -96,3 +78,5 @@ jobs:
         git config --global user.email "apps@apollos.app"
         git config --global user.name "Apollos Admin"
         yarn bump
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

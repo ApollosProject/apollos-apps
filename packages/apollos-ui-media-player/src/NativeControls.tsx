@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Platform } from 'react-native';
-import MusicControl from 'react-native-music-control';
+import MusicControl, { Command } from 'react-native-music-control';
 
 import { useNowPlaying, usePlayerControls, usePlayhead } from './context';
 
@@ -52,26 +52,20 @@ export default () => {
 
   // configure listeners
   useEffect(() => {
-    // @ts-ignore
-    MusicControl.on('play', play);
-    // @ts-ignore
-    MusicControl.on('pause', pause);
-    // @ts-ignore
-    MusicControl.on('skipBackward', () => {
+    MusicControl.on(Command.play, play);
+    MusicControl.on(Command.pause, pause);
+    MusicControl.on(Command.skipBackward, () => {
       skip(-30);
     });
-    // @ts-ignore
-    MusicControl.on('skipForward', () => {
+    MusicControl.on(Command.skipForward, () => {
       skip(30);
     });
-    // @ts-ignore
-    MusicControl.on('togglePlayPause', () => (isPlaying ? pause() : play()));
-    // @ts-ignore
-    MusicControl.on('changePlaybackPosition', (pos) => seek(pos));
-    // @ts-ignore
-    MusicControl.on('seek', (pos) => seek(pos));
-    // @ts-ignore
-    MusicControl.on('closeNotification', () => {
+    MusicControl.on(Command.togglePlayPause, () =>
+      isPlaying ? pause() : play()
+    );
+    MusicControl.on(Command.changePlaybackPosition, (pos) => seek(pos));
+    MusicControl.on(Command.seek, (pos) => seek(pos));
+    MusicControl.on(Command.closeNotification, () => {
       pause();
       seek(0);
     });

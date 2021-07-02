@@ -17,6 +17,7 @@ jobs:
     - name: Setup Node for npmjs.org
       uses: actions/setup-node@v2
       with:
+        node-version: 12
         registry-url: 'https://registry.npmjs.org'
         scope: '@apollosproject'
 
@@ -27,14 +28,3 @@ jobs:
       run: yarn release:canary --yes
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-    - name: Setup Node for GPR
-      uses: actions/setup-node@v2
-      with:
-        registry-url: 'https://npm.pkg.github.com'
-        scope: '@apollosproject'
-
-    - name: Canary Release
-      run: yarn release:canary --yes --registry "http://npm.pkg.github.com"
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

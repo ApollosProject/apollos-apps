@@ -57,7 +57,7 @@ Array [
         <Text
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Black",
               "fontSize": 24,
               "lineHeight": 27.6,
@@ -80,15 +80,15 @@ Array [
       >
         <RCTScrollView
           ListHeaderComponent={
-            <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))>
+            <mapProps(Component)>
               <Touchable
                 onPress={[Function]}
               >
-                <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))>
-                  <getContext(mapProps(Icon)) />
-                </mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))>
+                <mapProps(Component)>
+                  <Unknown />
+                </mapProps(Component)>
               </Touchable>
-            </mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))>
+            </mapProps(Component)>
           }
           contentContainerStyle={
             Object {
@@ -1004,7 +1004,7 @@ Array [
         <Text
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Black",
               "fontSize": 24,
               "lineHeight": 27.6,
@@ -1786,7 +1786,7 @@ Array [
         <Text
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Black",
               "fontSize": 24,
               "lineHeight": 27.6,
@@ -4543,7 +4543,7 @@ Array [
         <Text
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Black",
               "fontSize": 24,
               "lineHeight": 27.6,
@@ -5326,7 +5326,7 @@ Array [
           numberOfLines={1}
           style={
             Object {
-              "color": "#A5A5A5",
+              "color": "rgba(39, 39, 46, 0.3)",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
               "lineHeight": 18,
@@ -5338,7 +5338,7 @@ Array [
         <Text
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Black",
               "fontSize": 24,
               "lineHeight": 27.6,
@@ -6096,7 +6096,7 @@ Array [
     <Text
       style={
         Object {
-          "color": "#303030",
+          "color": "#27272E",
           "fontFamily": "InterUI-Black",
           "fontSize": 24,
           "lineHeight": 27.6,

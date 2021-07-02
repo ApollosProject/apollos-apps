@@ -7,7 +7,7 @@ import BackgroundView from '../BackgroundView';
 import { H3, H6 } from '../typography';
 import styled from '../styled';
 
-import ActionList from '.';
+import ActionList from './index';
 
 const actions = [
   {

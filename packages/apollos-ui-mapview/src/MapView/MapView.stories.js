@@ -2,7 +2,7 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
-import MapView from '.';
+import MapView from './index';
 
 const campuses = [
   {

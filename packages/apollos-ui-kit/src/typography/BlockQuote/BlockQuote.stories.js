@@ -4,7 +4,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 import { withIsLoading } from '../../isLoading';
 import PaddedView from '../../PaddedView';
 
-import BlockQuote from '.';
+import BlockQuote from './index';
 
 storiesOf('ui-kit/typography/BlockQuote', module)
   .add('Default', () => (

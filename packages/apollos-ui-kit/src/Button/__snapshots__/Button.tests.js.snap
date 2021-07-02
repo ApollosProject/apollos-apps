@@ -334,7 +334,7 @@ Array [
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderColor": "#303030",
+          "borderColor": "#27272E",
           "borderRadius": 48,
           "borderWidth": 2,
           "flexDirection": "row",
@@ -349,7 +349,7 @@ Array [
       <Text
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
             "lineHeight": 24,
@@ -406,7 +406,7 @@ Array [
         Object {
           "alignItems": "center",
           "backgroundColor": "transparent",
-          "borderColor": "#303030",
+          "borderColor": "#27272E",
           "borderRadius": 48,
           "borderWidth": 2,
           "flexDirection": "row",
@@ -421,7 +421,7 @@ Array [
       <Text
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
             "lineHeight": 24,
@@ -780,7 +780,7 @@ Array [
       <Text
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Bold",
             "fontSize": 16,
             "lineHeight": 24,

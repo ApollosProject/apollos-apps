@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { GradientOverlayImage } from '@apollosproject/ui-kit';
 
-import AboutYou from '.';
+import AboutYou from './index';
 
 storiesOf('ui-onboarding/slides/AboutYou', module)
   .add('default', () => <AboutYou />)

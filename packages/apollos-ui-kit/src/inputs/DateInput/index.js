@@ -16,16 +16,6 @@ const StyledChip = styled(
   { marginTop: 5 },
   'ui-kit.inputs.DateInput.StyledChip'
 )(Chip);
-const StyledDateTimePicker = withTheme(
-  ({
-    theme: {
-      colors: { text },
-    },
-  }) => ({
-    textColor: text.primary,
-  }),
-  'ui-kit.inputs.DateInput.StyledDateTimePicker'
-)(DateTimePicker);
 
 class DateInput extends PureComponent {
   static propTypes = {
@@ -61,7 +51,7 @@ class DateInput extends PureComponent {
   };
 
   yearsAgo = (yearsToSubtract) => {
-    const date = Date.now();
+    const date = new Date();
     date.setFullYear(date.getFullYear() - yearsToSubtract);
     // we want a date without a time (only has the TZ offset)
     const cleanDate = new Date(
@@ -83,7 +73,7 @@ class DateInput extends PureComponent {
           }
           onPress={this.handleOpen}
         />
-        <StyledDateTimePicker
+        <DateTimePicker
           // slightly higher than the max so you can adjust the day or month before the year
           date={this.props.value || this.yearsAgo(17)}
           datePickerModeAndroid={'spinner'}

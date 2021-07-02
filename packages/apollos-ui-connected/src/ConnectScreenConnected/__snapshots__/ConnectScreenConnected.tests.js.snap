@@ -274,28 +274,10 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                     }
                   }
                 >
-                  <BVLinearGradient
-                    colors={
-                      Array [
-                        4294967295,
-                        4294506484,
-                      ]
-                    }
-                    endPoint={
-                      Object {
-                        "x": 0.5,
-                        "y": 1,
-                      }
-                    }
-                    locations={null}
-                    startPoint={
-                      Object {
-                        "x": 0.5,
-                        "y": 0,
-                      }
-                    }
+                  <View
                     style={
                       Object {
+                        "backgroundColor": "rgb(249, 249, 251)",
                         "flex": 1,
                         "height": "100%",
                       }
@@ -554,7 +536,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                             <Text
                               style={
                                 Object {
-                                  "color": "#303030",
+                                  "color": "#27272E",
                                   "fontFamily": "InterUI-Black",
                                   "fontSize": 24,
                                   "lineHeight": 27.6,
@@ -584,7 +566,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                               <Text
                                 style={
                                   Object {
-                                    "color": "#303030",
+                                    "color": "#27272E",
                                     "fontFamily": "InterUI-Bold",
                                     "fontSize": 16,
                                     "lineHeight": 24,
@@ -650,35 +632,17 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                         </View>
                       </RCTScrollView>
                     </View>
-                  </BVLinearGradient>
+                  </View>
                   <Modal
                     animationType="slide"
                     hardwareAccelerated={false}
                     onRequestClose={[Function]}
                     visible={false}
                   >
-                    <BVLinearGradient
-                      colors={
-                        Array [
-                          4294967295,
-                          4294506484,
-                        ]
-                      }
-                      endPoint={
-                        Object {
-                          "x": 0.5,
-                          "y": 1,
-                        }
-                      }
-                      locations={null}
-                      startPoint={
-                        Object {
-                          "x": 0.5,
-                          "y": 0,
-                        }
-                      }
+                    <View
                       style={
                         Object {
+                          "backgroundColor": "rgb(249, 249, 251)",
                           "flex": 1,
                           "height": "100%",
                         }
@@ -739,7 +703,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                             <Text
                               style={
                                 Object {
-                                  "color": "#303030",
+                                  "color": "#27272E",
                                   "fontFamily": "InterUI-Bold",
                                   "fontSize": 16,
                                   "lineHeight": 24,
@@ -801,7 +765,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                 style={
                                   Object {
                                     "alignItems": "center",
-                                    "backgroundColor": "#F8F7F4",
+                                    "backgroundColor": "rgb(249, 249, 251)",
                                     "borderRadius": 16,
                                     "flexDirection": "row",
                                     "flexGrow": 1,
@@ -885,7 +849,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                       fill={
                                         Array [
                                           0,
-                                          4289045925,
+                                          1294411566,
                                         ]
                                       }
                                       fillOpacity={1}
@@ -935,13 +899,13 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                   onChangeText={[Function]}
                                   onFocus={[Function]}
                                   placeholder="Search"
-                                  placeholderTextColor="#A5A5A5"
+                                  placeholderTextColor="rgba(39, 39, 46, 0.3)"
                                   rejectResponderTermination={true}
                                   returnKeyType="search"
                                   selectionColor="#17B582"
                                   style={
                                     Object {
-                                      "color": "#303030",
+                                      "color": "#27272E",
                                       "flexGrow": 1,
                                       "fontFamily": "System",
                                       "fontSize": 14,
@@ -983,9 +947,9 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                   <View
                                     style={
                                       Object {
-                                        "backgroundColor": "#F8F7F4",
+                                        "backgroundColor": "rgb(249, 249, 251)",
                                         "borderBottomRightRadius": 16,
-                                        "borderColor": "#F8F7F4",
+                                        "borderColor": "rgb(249, 249, 251)",
                                         "borderRightWidth": 1,
                                         "borderTopRightRadius": 16,
                                         "overflow": "hidden",
@@ -1093,7 +1057,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                               fill={
                                                 Array [
                                                   0,
-                                                  4289045925,
+                                                  1294411566,
                                                 ]
                                               }
                                               fillOpacity={1}
@@ -1153,7 +1117,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                           </RCTScrollView>
                         </View>
                       </RCTSafeAreaView>
-                    </BVLinearGradient>
+                    </View>
                   </Modal>
                 </View>
               </View>
@@ -1440,28 +1404,10 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                     }
                   }
                 >
-                  <BVLinearGradient
-                    colors={
-                      Array [
-                        4294967295,
-                        4294506484,
-                      ]
-                    }
-                    endPoint={
-                      Object {
-                        "x": 0.5,
-                        "y": 1,
-                      }
-                    }
-                    locations={null}
-                    startPoint={
-                      Object {
-                        "x": 0.5,
-                        "y": 0,
-                      }
-                    }
+                  <View
                     style={
                       Object {
+                        "backgroundColor": "rgb(249, 249, 251)",
                         "flex": 1,
                         "height": "100%",
                       }
@@ -1720,7 +1666,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                             <Text
                               style={
                                 Object {
-                                  "color": "#303030",
+                                  "color": "#27272E",
                                   "fontFamily": "InterUI-Black",
                                   "fontSize": 24,
                                   "lineHeight": 27.6,
@@ -1753,7 +1699,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                               <Text
                                 style={
                                   Object {
-                                    "color": "#303030",
+                                    "color": "#27272E",
                                     "fontFamily": "InterUI-Bold",
                                     "fontSize": 16,
                                     "lineHeight": 24,
@@ -1822,35 +1768,17 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                         </View>
                       </RCTScrollView>
                     </View>
-                  </BVLinearGradient>
+                  </View>
                   <Modal
                     animationType="slide"
                     hardwareAccelerated={false}
                     onRequestClose={[Function]}
                     visible={false}
                   >
-                    <BVLinearGradient
-                      colors={
-                        Array [
-                          4294967295,
-                          4294506484,
-                        ]
-                      }
-                      endPoint={
-                        Object {
-                          "x": 0.5,
-                          "y": 1,
-                        }
-                      }
-                      locations={null}
-                      startPoint={
-                        Object {
-                          "x": 0.5,
-                          "y": 0,
-                        }
-                      }
+                    <View
                       style={
                         Object {
+                          "backgroundColor": "rgb(249, 249, 251)",
                           "flex": 1,
                           "height": "100%",
                         }
@@ -1911,7 +1839,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                             <Text
                               style={
                                 Object {
-                                  "color": "#303030",
+                                  "color": "#27272E",
                                   "fontFamily": "InterUI-Bold",
                                   "fontSize": 16,
                                   "lineHeight": 24,
@@ -1973,7 +1901,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                 style={
                                   Object {
                                     "alignItems": "center",
-                                    "backgroundColor": "#F8F7F4",
+                                    "backgroundColor": "rgb(249, 249, 251)",
                                     "borderRadius": 16,
                                     "flexDirection": "row",
                                     "flexGrow": 1,
@@ -2057,7 +1985,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                       fill={
                                         Array [
                                           0,
-                                          4289045925,
+                                          1294411566,
                                         ]
                                       }
                                       fillOpacity={1}
@@ -2107,13 +2035,13 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                   onChangeText={[Function]}
                                   onFocus={[Function]}
                                   placeholder="Search"
-                                  placeholderTextColor="#A5A5A5"
+                                  placeholderTextColor="rgba(39, 39, 46, 0.3)"
                                   rejectResponderTermination={true}
                                   returnKeyType="search"
                                   selectionColor="#17B582"
                                   style={
                                     Object {
-                                      "color": "#303030",
+                                      "color": "#27272E",
                                       "flexGrow": 1,
                                       "fontFamily": "System",
                                       "fontSize": 14,
@@ -2155,9 +2083,9 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                   <View
                                     style={
                                       Object {
-                                        "backgroundColor": "#F8F7F4",
+                                        "backgroundColor": "rgb(249, 249, 251)",
                                         "borderBottomRightRadius": 16,
-                                        "borderColor": "#F8F7F4",
+                                        "borderColor": "rgb(249, 249, 251)",
                                         "borderRightWidth": 1,
                                         "borderTopRightRadius": 16,
                                         "overflow": "hidden",
@@ -2265,7 +2193,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                               fill={
                                                 Array [
                                                   0,
-                                                  4289045925,
+                                                  1294411566,
                                                 ]
                                               }
                                               fillOpacity={1}
@@ -2325,7 +2253,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                           </RCTScrollView>
                         </View>
                       </RCTSafeAreaView>
-                    </BVLinearGradient>
+                    </View>
                   </Modal>
                 </View>
               </View>

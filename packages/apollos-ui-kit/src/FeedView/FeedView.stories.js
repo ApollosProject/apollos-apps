@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
-import FeedView from '.';
+import FeedView from './index';
 
 storiesOf('ui-kit/FeedView', module).add('Example', () => (
   <FeedView

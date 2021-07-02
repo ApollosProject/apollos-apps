@@ -45,8 +45,8 @@ export const interfacesSchema = gql`
   }
 
   interface ProgressNode {
-    percentComplete: Float @cacheControl(maxAge: 0)
-    upNext: ContentItem @cacheControl(maxAge: 0)
+    percentComplete: Float @cacheControl(scope: PRIVATE)
+    upNext: ContentItem @cacheControl(scope: PRIVATE)
   }
 
   interface ScriptureNode {
@@ -115,7 +115,7 @@ export const authSmsSchema = gql`
   }
 
   extend type Query {
-    userExists(identity: String): USER_AUTH_STATUS @cacheControl(maxAge: 0)
+    userExists(identity: String): USER_AUTH_STATUS @cacheControl(scope: PRIVATE)
   }
 `;
 
@@ -125,7 +125,7 @@ export const authSchema = gql`
     authCookie: String
   }
 
-  type AuthenticatedUser @cacheControl(maxAge: 0) {
+  type AuthenticatedUser @cacheControl(scope: PRIVATE) {
     id: ID!
     profile: Person
     rock: RockPersonDetails
@@ -172,7 +172,7 @@ export const peopleSchema = gql`
     value: String!
   }
 
-  type Person implements Node @cacheControl(maxAge: 0) {
+  type Person implements Node {
     id: ID!
     firstName: String
     lastName: String
@@ -200,7 +200,7 @@ export const peopleSchema = gql`
   }
 
   extend type Query {
-    suggestedFollows: [Person] @cacheControl(maxAge: 0)
+    suggestedFollows: [Person] @cacheControl(scope: PRIVATE)
     searchPeople(
       name: String
       first: Int
@@ -519,8 +519,8 @@ export const contentItemSchema = gql`
     ): ContentItemsConnection
     parentChannel: ContentChannel
     theme: Theme
-    percentComplete: Float @cacheControl(maxAge: 0)
-    upNext: ContentItem @cacheControl(maxAge: 0)
+    percentComplete: Float @cacheControl(scope: PRIVATE)
+    upNext: ContentItem @cacheControl(scope: PRIVATE)
     scriptures: [Scripture]
   }
 
@@ -583,7 +583,7 @@ export const contentItemSchema = gql`
     campaigns: ContentItemsConnection
     userFeed(first: Int, after: String): ContentItemsConnection
     personaFeed(first: Int, after: String): ContentItemsConnection
-      @cacheControl(maxAge: 0)
+      @cacheControl(scope: PRIVATE)
   }
 `;
 
@@ -783,8 +783,8 @@ export const followingsSchema = gql`
   }
 
   ${extendForEachContentItemType(`
-    isLiked: Boolean @cacheControl(maxAge: 0)
-    likedCount: Int @cacheControl(maxAge: 0)
+    isLiked: Boolean @cacheControl(scope: PRIVATE)
+    likedCount: Int @cacheControl(scope: PRIVATE)
 `)}
 
   interface LikableNode {
@@ -805,7 +805,7 @@ export const followingsSchema = gql`
 
   extend type Query {
     likedContent(first: Int, after: String): ContentItemsConnection
-      @cacheControl(maxAge: 0)
+      @cacheControl(scope: PRIVATE)
   }
 `;
 
@@ -1050,15 +1050,15 @@ export const featuresSchema = gql`
 
   extend type Query {
     tabFeedFeatures(tab: Tab!, campusId: ID): FeatureFeed
-      @cacheControl(maxAge: 0)
+      @cacheControl(scope: PRIVATE)
     userFeedFeatures: [Feature]
-      @cacheControl(maxAge: 0)
+      @cacheControl(scope: PRIVATE)
       @deprecated(reason: "Use homeFeedFeatures or discoverFeedFeatures")
     homeFeedFeatures(campusId: ID): FeatureFeed
-      @cacheControl(maxAge: 0)
+      @cacheControl(scope: PRIVATE)
       @deprecated(reason: "Use tabFeedFeatures(tab: HOME)")
     discoverFeedFeatures: FeatureFeed
-      @cacheControl(maxAge: 0)
+      @cacheControl(scope: PRIVATE)
       @deprecated(reason: "Use tabFeedFeatures(tab: DISCOVER)")
   }
 
@@ -1081,7 +1081,8 @@ export const followSchema = gql`
   }
 
   extend type Query {
-    followRequests: [Person] @cacheControl(maxAge: 0)
+    followRequests: [Person] @cacheControl(scope: PRIVATE)
+    usersFollowing: [Person] @cacheControl(scope: PRIVATE)
   }
 
   enum FollowState {
@@ -1096,8 +1097,8 @@ export const followSchema = gql`
   }
 
   extend type Person {
-    currentUserFollowing: Follow @cacheControl(maxAge: 0)
-    followingCurrentUser: Follow @cacheControl(maxAge: 0)
+    currentUserFollowing: Follow @cacheControl(scope: PRIVATE)
+    followingCurrentUser: Follow @cacheControl(scope: PRIVATE)
   }
 `;
 
@@ -1128,7 +1129,7 @@ export const commentSchema = gql`
     id: ID!
     order: Int
 
-    comments: [Comment] @cacheControl(maxAge: 0)
+    comments: [Comment] @cacheControl(maxAge: 10)
   }
 
   type AddCommentFeature implements Feature & Node {
@@ -1152,7 +1153,7 @@ export const commentSchema = gql`
     person: Person
     text: String
     visibility: CommentVisibility
-    isLiked: Boolean @cacheControl(maxAge: 0)
+    isLiked: Boolean @cacheControl(scope: PRIVATE)
     likedCount: Int
   }
 `;

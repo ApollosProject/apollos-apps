@@ -4,7 +4,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 import { H1 } from '../typography';
 import styled from '../styled';
 
-import FlexedView from '.';
+import FlexedView from './index';
 
 storiesOf('ui-kit/FlexedView', module).add('Example', () => {
   const FlexedSalmonView = styled({
