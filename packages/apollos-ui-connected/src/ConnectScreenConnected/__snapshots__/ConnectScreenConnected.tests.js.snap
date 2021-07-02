@@ -563,9 +563,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                 }
                               }
                             >
-                              <View
-                                style={Object {}}
-                              >
+                              <View>
                                 <Text
                                   secondary={true}
                                   style={
@@ -1701,9 +1699,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                 }
                               }
                             >
-                              <View
-                                style={Object {}}
-                              >
+                              <View>
                                 <Text
                                   secondary={true}
                                   style={

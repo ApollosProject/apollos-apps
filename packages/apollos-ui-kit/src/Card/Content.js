@@ -1,5 +1,5 @@
 import PaddedView from '../PaddedView';
-import styled from '../styled';
+import { named } from '../theme';
 
 const Content = named('ui-kit.Card.Content.Content')(PaddedView);
 

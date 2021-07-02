@@ -276,9 +276,7 @@ exports[`The VerticalCardListFeature component should render a loading state for
       }
     }
   >
-    <View
-      style={Object {}}
-    />
+    <View />
   </View>
   <RCTScrollView
     data={
@@ -2458,9 +2456,7 @@ exports[`The VerticalCardListFeature component should render a section title 1`]
       }
     }
   >
-    <View
-      style={Object {}}
-    >
+    <View>
       <Text
         primary={true}
         style={
@@ -2750,9 +2746,7 @@ exports[`The VerticalCardListFeature component should render with a subtitle 1`]
       }
     }
   >
-    <View
-      style={Object {}}
-    >
+    <View>
       <Text
         secondary={true}
         style={

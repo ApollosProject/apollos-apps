@@ -16,9 +16,7 @@ exports[`The VerticalCardListFeatureConnected component should render 1`] = `
       }
     }
   >
-    <View
-      style={Object {}}
-    >
+    <View>
       <Text
         secondary={true}
         style={
@@ -393,9 +391,7 @@ exports[`The VerticalCardListFeatureConnected component should render a featured
         }
         vertical={false}
       >
-        <View
-          style={Object {}}
-        />
+        <View />
       </View>
     </View>
     <View
@@ -605,9 +601,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
       }
     }
   >
-    <View
-      style={Object {}}
-    />
+    <View />
   </View>
   <RCTScrollView
     data={
@@ -2848,9 +2842,7 @@ exports[`The VerticalCardListFeatureConnected component should render as a featu
         }
         vertical={false}
       >
-        <View
-          style={Object {}}
-        >
+        <View>
           <Text
             secondary={true}
             style={

@@ -13,15 +13,11 @@ import {
 } from '@apollosproject/ui-kit';
 
 const AvatarWrapper = styled(
-  ({ theme }) => ({
+  {
     flexDirection: 'row',
-    paddingBottom: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
-    // paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
     paddingHorizontal: 0,
-    /* Because `CardContent` is passing `paddingVertical` to `PaddedView` we can't set
-     * `PaddedView`'s `vertical` prop to false. So we have to define out own padding value here. */
     paddingTop: 0,
-  }),
+  },
   'ui-prayer.PrayerFeature.AvatarWrapper'
 )(CardContent);
 

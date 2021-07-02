@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { View } from 'react-native';
 
 import { H3, H4 } from '../typography';
-import styled from '../styled';
+import { named } from '../theme';
 
 const Container = named('ui-kit.FeatureTitles.Container')(View);
 
@@ -18,8 +18,8 @@ const Container = named('ui-kit.FeatureTitles.Container')(View);
  *
  * */
 
-const FeatureTitles = ({ title, subtitle, isLoading }) => (
-  <Container>
+const FeatureTitles = ({ title, subtitle, isLoading, style }) => (
+  <Container style={style}>
     {subtitle ? (
       <H4 secondary isLoading={isLoading && !subtitle}>
         {subtitle}
@@ -37,6 +37,7 @@ FeatureTitles.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
   isLoading: PropTypes.bool,
+  style: PropTypes.oneOfType([PropTypes.number, PropTypes.shape({})]),
 };
 
 export default FeatureTitles;

@@ -21,9 +21,7 @@ exports[`HorizontalLikedContentFeed renders a HorizontalLikedContentFeed 1`] = `
       }
     }
   >
-    <View
-      style={Object {}}
-    >
+    <View>
       <Text
         secondary={true}
         style={
@@ -541,9 +539,7 @@ exports[`HorizontalLikedContentFeed renders a loading state 1`] = `
       }
     }
   >
-    <View
-      style={Object {}}
-    >
+    <View>
       <Text
         secondary={true}
         style={

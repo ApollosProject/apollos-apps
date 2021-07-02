@@ -18,9 +18,7 @@ exports[`The RequestedFollowListConnected component should render with data 1`] 
       }
     }
   >
-    <View
-      style={Object {}}
-    >
+    <View>
       <Text
         secondary={true}
         style={

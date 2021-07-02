@@ -314,9 +314,7 @@ exports[`The CampaignItemListFeature component should render a loading state for
         }
         vertical={false}
       >
-        <View
-          style={Object {}}
-        />
+        <View />
       </View>
     </View>
     <View
@@ -585,9 +583,7 @@ exports[`The CampaignItemListFeature component should render a section title 1`]
         }
         vertical={false}
       >
-        <View
-          style={Object {}}
-        >
+        <View>
           <Text
             primary={true}
             style={
@@ -868,9 +864,7 @@ exports[`The CampaignItemListFeature component should render with a subtitle 1`]
         }
         vertical={false}
       >
-        <View
-          style={Object {}}
-        >
+        <View>
           <Text
             secondary={true}
             style={

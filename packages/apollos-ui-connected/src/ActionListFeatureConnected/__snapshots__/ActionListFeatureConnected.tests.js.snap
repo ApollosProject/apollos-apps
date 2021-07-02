@@ -35,9 +35,7 @@ exports[`The ActionListFeatureConnected component should render 1`] = `
         }
       }
     >
-      <View
-        style={Object {}}
-      >
+      <View>
         <Text
           secondary={true}
           style={
@@ -236,9 +234,7 @@ exports[`The ActionListFeatureConnected component should render a loading state 
         }
       }
     >
-      <View
-        style={Object {}}
-      />
+      <View />
       <View
         style={
           Object {

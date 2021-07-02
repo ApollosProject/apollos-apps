@@ -12,6 +12,7 @@ storiesOf('ui-kit/FeatureTitles', module)
       <CenteredView style={{ alignItems: 'stretch' }}>{story()}</CenteredView>
     </BackgroundView>
   ))
-  .add('examples', () => (
+  .add('default', () => (
     <FeatureTitles title="Grow with God" subtitle="Today" />
-  ));
+  ))
+  .add('loading', () => <FeatureTitles isLoading />);

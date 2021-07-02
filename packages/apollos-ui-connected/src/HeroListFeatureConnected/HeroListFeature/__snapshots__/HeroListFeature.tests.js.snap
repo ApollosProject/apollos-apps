@@ -588,9 +588,7 @@ exports[`The HeroListFeatures component should render a loading state for isLoad
     }
   }
 >
-  <View
-    style={Object {}}
-  />
+  <View />
   <View
     style={
       Object {
@@ -1030,9 +1028,7 @@ exports[`The HeroListFeatures component should render with a subtitle 1`] = `
     }
   }
 >
-  <View
-    style={Object {}}
-  >
+  <View>
     <Text
       secondary={true}
       style={
@@ -1344,9 +1340,7 @@ exports[`The HeroListFeatures component should render with a title 1`] = `
     }
   }
 >
-  <View
-    style={Object {}}
-  >
+  <View>
     <Text
       primary={true}
       style={

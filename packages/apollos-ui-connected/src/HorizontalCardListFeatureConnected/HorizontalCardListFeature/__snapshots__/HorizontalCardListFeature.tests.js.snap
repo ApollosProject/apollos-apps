@@ -752,9 +752,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
       }
     }
   >
-    <View
-      style={Object {}}
-    />
+    <View />
     <View
       accessible={true}
       focusable={true}
@@ -1852,9 +1850,7 @@ exports[`The HorizontalCardListFeature component should render a section title 1
       }
     }
   >
-    <View
-      style={Object {}}
-    >
+    <View>
       <Text
         primary={true}
         style={
@@ -2620,9 +2616,7 @@ exports[`The HorizontalCardListFeature component should render with a section su
       }
     }
   >
-    <View
-      style={Object {}}
-    >
+    <View>
       <Text
         secondary={true}
         style={

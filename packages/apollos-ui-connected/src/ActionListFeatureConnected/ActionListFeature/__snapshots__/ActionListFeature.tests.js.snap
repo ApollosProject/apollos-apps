@@ -37,9 +37,7 @@ exports[`The ActionListFeatures component should render 1`] = `
         }
       }
     >
-      <View
-        style={Object {}}
-      />
+      <View />
       <View
         style={
           Object {
@@ -364,9 +362,7 @@ exports[`The ActionListFeatures component should render a button for onPressActi
         }
       }
     >
-      <View
-        style={Object {}}
-      />
+      <View />
       <View
         style={
           Object {
@@ -744,9 +740,7 @@ exports[`The ActionListFeatures component should render a loading state for isLo
         }
       }
     >
-      <View
-        style={Object {}}
-      />
+      <View />
       <View
         style={
           Object {
@@ -951,9 +945,7 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
         }
       }
     >
-      <View
-        style={Object {}}
-      >
+      <View>
         <Text
           secondary={true}
           style={
@@ -1292,9 +1284,7 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
         }
       }
     >
-      <View
-        style={Object {}}
-      >
+      <View>
         <Text
           primary={true}
           style={
