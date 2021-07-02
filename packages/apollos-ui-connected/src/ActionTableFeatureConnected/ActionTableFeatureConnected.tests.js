@@ -48,15 +48,4 @@ describe('The ActionTableFeatureConnected component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('should render a loading state when isLoading', async () => {
-    const tree = renderer.create(
-      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
-        <ActionTableFeatureConnected
-          refetchRef={jest.fn()}
-          featureId={'ActionTableFeature:123'}
-        />
-      </Providers>
-    );
-    expect(tree).toMatchSnapshot();
-  });
 });
