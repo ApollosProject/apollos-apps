@@ -27,6 +27,7 @@ export ContentCard from './ContentCard';
 export ContentTitles from './ContentTitles';
 export DefaultCard from './DefaultCard';
 export FeaturedCard from './FeaturedCard';
+export FeatureTitles from './FeatureTitles';
 export FeedView from './FeedView';
 export FlexedView from './FlexedView';
 export FollowList, { FollowListItem } from './FollowList';
