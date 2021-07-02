@@ -18,18 +18,21 @@ exports[`The RequestedFollowListConnected component should render with data 1`] 
       }
     }
   >
-    <Text
-      style={
-        Object {
-          "color": "#303030",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 16,
-          "lineHeight": 24,
+    <View>
+      <Text
+        secondary={true}
+        style={
+          Object {
+            "color": "rgba(39, 39, 46, 0.6)",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
+          }
         }
-      }
-    >
-      Follow Requests
-    </Text>
+      >
+        Follow Requests
+      </Text>
+    </View>
   </View>
   <View
     style={
@@ -94,7 +97,7 @@ exports[`The RequestedFollowListConnected component should render with data 1`] 
         numberOfLines={1}
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Medium",
             "fontSize": 14,
             "lineHeight": 21,
@@ -145,7 +148,7 @@ exports[`The RequestedFollowListConnected component should render with data 1`] 
         <Text
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Bold",
               "fontSize": 12,
               "lineHeight": 18,

@@ -1,24 +1,23 @@
 import React from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
-import { compose, pure } from 'recompose';
-import { kebabCase } from 'lodash';
 
-import { withIsLoading } from '../isLoading';
-import { withTheme } from '../theme';
+import { useTheme } from '../theme';
 import styled from '../styled';
-import { H6 } from '../typography';
+import { H4 } from '../typography';
 import Icon from '../Icon';
-import * as Icons from '../theme/icons';
 
-const enhance = compose(
-  withIsLoading,
-  pure,
-  withTheme(({ theme, tint, iconSize }) => ({
-    tint: tint || theme.colors.text.tertiary,
-    iconSize: iconSize || theme.helpers.rem(1.2),
-  }))
-);
+/**
+ * ChannelLabel
+ * Implements https://www.figma.com/file/YHJLj8pdFxWG9npF2YmB3r/UI-Kit-2.0?node-id=9%3A415
+ *
+ * Status:
+ * - [x] label
+ * - [ ] micro
+ * - [ ] image thumbnail
+ * - [ ] loading state
+ * - [x] icon
+ * */
 
 const Wrapper = styled(
   ({ flexed }) => ({
@@ -29,45 +28,37 @@ const Wrapper = styled(
   'ui-kit.ChannelLabel.Wrapper'
 )(View);
 
-const PlaceholderWrapper = styled(
-  ({ theme, withIcon }) => ({
-    ...(withIcon
-      ? { paddingHorizontal: theme.sizing.baseUnit / 4 }
-      : { paddingRight: theme.sizing.baseUnit / 4 }),
-  }),
-  'ui-kit.ChannelLabel.PlaceholderWrapper'
-)(View);
+const LabelText = styled(({ theme }) => ({
+  color: theme.colors.text.secondary,
+}))(H4);
 
-const StyledH6 = styled(
-  ({ tint }) => ({
-    color: tint,
-  }),
-  'ui-kit.ChannelLabel.StyledH6'
-)(H6);
-
-const ChannelLabel = enhance(
-  ({ label, tint, icon, withFlex, isLoading, iconSize, ...wrapperProps }) => (
-    <Wrapper flexed={withFlex} {...wrapperProps}>
-      {icon ? (
-        <Icon name={icon} size={iconSize} fill={tint} isLoading={isLoading} />
+const ChannelLabel = ({ label, icon, IconComponent, isLoading }) => {
+  const theme = useTheme();
+  const ComponentForIcon = IconComponent || Icon;
+  return (
+    <Wrapper>
+      {icon || isLoading ? (
+        <ComponentForIcon
+          name={icon}
+          fill={theme.colors.text.tertiary}
+          isLoading={!icon && isLoading}
+        />
       ) : null}
-      <PlaceholderWrapper withIcon={icon}>
-        <StyledH6 tint={tint}>{label}</StyledH6>
-      </PlaceholderWrapper>
+      {label || isLoading ? (
+        <LabelText isLoading={!label && isLoading}>{label}</LabelText>
+      ) : null}
     </Wrapper>
-  )
-);
-
-ChannelLabel.propTypes = {
-  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
-  icon: PropTypes.oneOf(Object.keys(Icons).map(kebabCase)),
-  isLoading: PropTypes.bool,
-  withFlex: PropTypes.bool,
-  color: PropTypes.string,
+  );
 };
 
-ChannelLabel.defaultProps = {
-  withFlex: false,
+ChannelLabel.propTypes = {
+  label: PropTypes.string,
+  icon: PropTypes.string,
+  IconComponent: PropTypes.oneOfType([
+    PropTypes.elementType,
+    PropTypes.element,
+  ]),
+  isLoading: PropTypes.bool,
 };
 
 export default ChannelLabel;

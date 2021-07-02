@@ -1,5 +1,5 @@
 import { DataTypes } from 'sequelize';
-import { defineModel } from '../postgres';
+import { defineModel, configureModel } from '../postgres';
 
 const createModel = defineModel({
   modelName: 'media',
@@ -12,4 +12,28 @@ const createModel = defineModel({
   },
 });
 
-export { createModel };
+const setupModel = configureModel(({ sequelize }) => {
+  sequelize.models.contentItem.hasMany(sequelize.models.media, {
+    foreignKey: 'nodeId',
+    sourceKey: 'id',
+    constraints: false,
+    scope: { nodeType: 'ContentItem', type: 'IMAGE' },
+    as: 'images',
+  });
+  sequelize.models.contentItem.hasMany(sequelize.models.media, {
+    foreignKey: 'nodeId',
+    sourceKey: 'id',
+    constraints: false,
+    scope: { nodeType: 'ContentItem', type: 'VIDEO' },
+    as: 'videos',
+  });
+  sequelize.models.contentItem.hasMany(sequelize.models.media, {
+    foreignKey: 'nodeId',
+    sourceKey: 'id',
+    constraints: false,
+    scope: { nodeType: 'ContentItem', type: 'AUDIO' },
+    as: 'audio',
+  });
+});
+
+export { createModel, setupModel };

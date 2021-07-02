@@ -213,7 +213,7 @@ exports[`the ConnectedImage component should throw an error if maxAspectRatio is
 Array [
   Array [
     "Warning: Failed prop type:  Prop maintainAspectRatio is required for use with maxAspectRatio
-    in mapProps(getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage)))))",
+    in mapProps(Component)",
   ],
 ]
 `;
@@ -222,7 +222,7 @@ exports[`the ConnectedImage component should throw an error if minAspectRatio is
 Array [
   Array [
     "Warning: Failed prop type:  Prop maintainAspectRatio is required for use with minAspectRatio
-    in mapProps(getContext(mapProps(withPropsOnChange(mapProps(ConnectedImage)))))",
+    in mapProps(Component)",
   ],
 ]
 `;

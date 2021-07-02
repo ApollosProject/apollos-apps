@@ -21,15 +21,15 @@ Array [
   />,
   <RCTScrollView
     ListHeaderComponent={
-      <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))>
+      <mapProps(Component)>
         <Touchable
           onPress={[Function]}
         >
-          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))>
-            <getContext(mapProps(Icon)) />
-          </mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))>
+          <mapProps(Component)>
+            <Unknown />
+          </mapProps(Component)>
         </Touchable>
-      </mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))>
+      </mapProps(Component)>
     }
     data={
       Array [
@@ -2274,20 +2274,20 @@ Array [
   />,
   <RCTScrollView
     ListHeaderComponent={
-      <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))>
+      <mapProps(Component)>
         <Touchable
           disabled={true}
           onPress={[Function]}
         >
-          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))
+          <mapProps(Component)
             isLoading={true}
           >
-            <getContext(mapProps(Icon))
+            <Unknown
               isLoading={true}
             />
-          </mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))>
+          </mapProps(Component)>
         </Touchable>
-      </mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))>
+      </mapProps(Component)>
     }
     data={
       Array [

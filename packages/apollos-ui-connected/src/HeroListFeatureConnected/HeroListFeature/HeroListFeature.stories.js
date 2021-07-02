@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
 import { BackgroundView, CenteredView } from '@apollosproject/ui-kit';
-import ActionListFeature from '.';
+import ActionListFeature from './index';
 
 const actions = [
   {
@@ -81,6 +81,7 @@ storiesOf('ui-connected/HeroListFeature', module)
   .add('example', () => (
     <ActionListFeature
       actions={actions}
+      heroCard={actions[0]}
       title={'Title'}
       subtitle={'Subtitle'}
       onPressActionListButton={() => {}}

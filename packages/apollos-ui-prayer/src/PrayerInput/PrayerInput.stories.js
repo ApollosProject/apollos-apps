@@ -3,7 +3,7 @@ import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 import { CenteredView, PaddedView } from '@apollosproject/ui-kit';
 
-import PrayerInput from '.';
+import PrayerInput from './index';
 
 storiesOf('ui-prayer/PrayerInput', module)
   .addDecorator((story) => (

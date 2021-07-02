@@ -2,7 +2,7 @@ import React from 'react';
 import { Text } from 'react-native';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
-import SlideContent from '.';
+import SlideContent from './index';
 
 storiesOf('ui-onboarding/Slide/SlideContent', module)
   .add('example', () => (

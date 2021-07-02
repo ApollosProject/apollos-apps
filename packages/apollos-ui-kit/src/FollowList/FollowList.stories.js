@@ -7,7 +7,7 @@ import BackgroundView from '../BackgroundView';
 import { H3, H4 } from '../typography';
 
 import FollowListSearchModal from '../FollowListSearch/FollowListSearchModal';
-import FollowList from '.';
+import FollowList from './index';
 
 const followerRequests = [
   {

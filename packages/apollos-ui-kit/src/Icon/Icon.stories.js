@@ -9,7 +9,7 @@ import CenteredView from '../CenteredView';
 import BackgroundView from '../BackgroundView';
 import * as icons from '../theme/icons';
 
-import Icon from '.';
+import Icon from './index';
 
 const stories = storiesOf('ui-kit/Icon', module).addDecorator((getStory) => (
   <BackgroundView>
