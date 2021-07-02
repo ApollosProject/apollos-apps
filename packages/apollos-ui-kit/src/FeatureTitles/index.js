@@ -15,6 +15,7 @@ const Container = styled({}, 'ui-kit.FeatureTitles.Container')(View);
  * - [x] Title
  * - [x] Subtitle
  * - [x] Loading state
+ *
  * */
 
 const FeatureTitles = ({ title, subtitle, isLoading }) => (
