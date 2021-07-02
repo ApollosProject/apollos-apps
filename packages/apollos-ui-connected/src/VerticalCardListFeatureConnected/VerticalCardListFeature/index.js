@@ -4,62 +4,21 @@ import PropTypes from 'prop-types';
 
 import {
   FeedView,
-  H3,
-  H5,
   PaddedView,
   styled,
   withIsLoading,
+  FeatureTitles,
 } from '@apollosproject/ui-kit';
 
 import { ContentCardComponentMapper } from '../../ContentCardConnected';
 
-const Title = styled(
-  ({ theme }) => ({
-    color: theme.colors.text.tertiary,
-  }),
-  'ui-connected.VerticalCardListFeatureConnected.VerticalCardListFeature.Title'
-)(H5);
-
-const Subtitle = styled(
-  {},
-  'ui-connected.VerticalCardListFeatureConnected.VerticalCardListFeature.Subtitle'
-)(H3);
-
 const Header = styled(
   ({ theme }) => ({
-    paddingTop: theme.sizing.baseUnit * 3,
-    paddingBottom: theme.sizing.baseUnit * 0.5,
+    paddingTop: theme.sizing.baseUnit,
+    paddingBottom: 0,
   }),
   'ui-connected.VerticalCardListFeatureConnected.VerticalCardListFeature.Header'
 )(PaddedView);
-
-// const getContent = ({ cards, isLoading }) => {
-//   let content = [];
-//   if (isLoading && !cards.length) {
-//     content = [
-//       {
-//         id: 'fakeId0',
-//         isLoading: true,
-//         title: 'Test',
-//         summary: 'Boom',
-//         channelType: '',
-//         coverImage: [],
-//         parentChannel: {
-//           id: '',
-//           name: '',
-//         },
-//       },
-//     ];
-//   } else {
-//     content = cards.map((card) => ({
-//       ...card,
-//       coverImage: get(card, 'coverImage.sources', undefined),
-//       __typename: card.relatedNode.__typename,
-//     }));
-//   }
-//
-//   return content;
-// };
 
 const loadingStateData = {
   action: '',
@@ -94,11 +53,12 @@ const VerticalCardListFeature = memo(
     !!(isLoading || cards.length) && (
       <View>
         {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
-          <Header vertical={false}>
-            {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
-              <Title numberOfLines={1}>{title}</Title>
-            ) : null}
-            {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
+          <Header>
+            <FeatureTitles
+              title={title}
+              subtitle={subtitle}
+              isLoading={isLoading}
+            />
           </Header>
         ) : null}
         <FeedView

@@ -6,7 +6,7 @@ import {
   styled,
   withTheme,
   PaddedView,
-  H5,
+  FeatureTitles,
   H6,
   HorizontalTileFeed,
   ButtonLink,
@@ -23,17 +23,9 @@ const RowHeader = styled(
     justifyContent: 'space-between',
     alignItems: 'center',
     zIndex: 2, // UX hack to improve tapability. Positions RowHeader above StyledHorizontalTileFeed
-    paddingTop: theme.sizing.baseUnit * 0.5,
-    paddingLeft: theme.sizing.baseUnit,
+    paddingHorizontal: theme.sizing.baseUnit,
   }),
   'ui-connected.HorizontalLikedContentFeedConnected.HorizontalLikedContentFeed.RowHeader'
-)(View);
-
-const Name = styled(
-  {
-    flexGrow: 2,
-  },
-  'ui-connected.HorizontalLikedContentFeedConnected.HorizontalLikedContentFeed.Name'
 )(View);
 
 const ButtonLinkSpacing = styled(
@@ -111,9 +103,7 @@ class HorizontalLikedContentFeed extends Component {
     return (
       <PaddedView horizontal={false}>
         <RowHeader>
-          <Name>
-            <H5>{name}</H5>
-          </Name>
+          <FeatureTitles subtitle={name} />
 
           <AndroidTouchableFix
             onPress={() => {

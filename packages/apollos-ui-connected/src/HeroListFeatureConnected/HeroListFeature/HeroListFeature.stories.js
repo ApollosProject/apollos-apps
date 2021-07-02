@@ -81,6 +81,7 @@ storiesOf('ui-connected/HeroListFeature', module)
   .add('example', () => (
     <ActionListFeature
       actions={actions}
+      heroCard={actions[0]}
       title={'Title'}
       subtitle={'Subtitle'}
       onPressActionListButton={() => {}}
