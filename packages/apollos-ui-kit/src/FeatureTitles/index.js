@@ -5,7 +5,7 @@ import { View } from 'react-native';
 import { H3, H4 } from '../typography';
 import styled from '../styled';
 
-const Container = styled({}, 'ui-kit.FeatureTitles.Container')(View);
+const Container = named('ui-kit.FeatureTitles.Container')(View);
 
 /**
  * FeatureTitles
