@@ -39,6 +39,7 @@ Object {
     Object {
       "action": "OPEN_URL",
       "icon": "Check",
+      "id": "Action:c050bfb47f82cd6ff155fb7ee1f053ff9ab550d5d23c9547b08be6da7d3f7d73d6b18ca0a64cce4b4ea1158426f7992966c9c27e1add2ba7ba52eabefc6d8635",
       "relatedNode": Object {
         "__typename": "Url",
         "id": "Url:f4974a223763b3a06ea2cd73ff30952be89d6281e05bc41f7ee423cd227a2b00721f5531d36e54dd64bc05eda4a94cbf1fbaf45384b4e924ae0fe47ee8d4e792",
@@ -226,9 +227,10 @@ Object {
       "title": "third item by content channel id",
     },
   ],
-  "id": "{\\"algorithms\\":[{\\"type\\":\\"CONTENT_CHANNEL\\",\\"arguments\\":{\\"contentChannelId\\":13}}],\\"title\\":\\"Test Action List\\",\\"subtitle\\":\\"It's great!\\",\\"primaryAction\\":{\\"action\\":\\"OPEN_URL\\",\\"title\\":\\"Open this url\\",\\"relatedNode\\":{\\"__typename\\":\\"Url\\",\\"url\\":\\"https://www.google.com\\",\\"id\\":\\"Url:f4974a223763b3a06ea2cd73ff30952be89d6281e05bc41f7ee423cd227a2b00721f5531d36e54dd64bc05eda4a94cbf1fbaf45384b4e924ae0fe47ee8d4e792\\"}}}",
+  "id": "{\\"algorithms\\":[{\\"type\\":\\"CONTENT_CHANNEL\\",\\"arguments\\":{\\"contentChannelId\\":13}}],\\"title\\":\\"Test Action List\\",\\"subtitle\\":\\"It's great!\\",\\"primaryAction\\":{\\"action\\":\\"OPEN_URL\\",\\"title\\":\\"Open this url\\",\\"id\\":\\"Action:7353adf03a348f566ef4c875071c3fbc5ecc099129a1c356839a56e052c950ba3c91e29806c91212cab35dd5884db8a3\\",\\"relatedNode\\":{\\"__typename\\":\\"Url\\",\\"url\\":\\"https://www.google.com\\",\\"id\\":\\"Url:f4974a223763b3a06ea2cd73ff30952be89d6281e05bc41f7ee423cd227a2b00721f5531d36e54dd64bc05eda4a94cbf1fbaf45384b4e924ae0fe47ee8d4e792\\"}}}",
   "primaryAction": Object {
     "action": "OPEN_URL",
+    "id": "Action:7353adf03a348f566ef4c875071c3fbc5ecc099129a1c356839a56e052c950ba3c91e29806c91212cab35dd5884db8a3",
     "relatedNode": Object {
       "__typename": "Url",
       "id": "Url:f4974a223763b3a06ea2cd73ff30952be89d6281e05bc41f7ee423cd227a2b00721f5531d36e54dd64bc05eda4a94cbf1fbaf45384b4e924ae0fe47ee8d4e792",
@@ -975,9 +977,10 @@ Object {
     "summary": "summary data",
     "title": "first item by content channel id",
   },
-  "id": "{\\"algorithms\\":[{\\"type\\":\\"USER_FEED\\"}],\\"heroAlgorithms\\":[],\\"title\\":\\"Test HeroListFeature\\",\\"subtitle\\":\\"It's a hero list feature!\\",\\"primaryAction\\":{\\"action\\":\\"OPEN_URL\\",\\"title\\":\\"Open this url\\",\\"relatedNode\\":{\\"__typename\\":\\"Url\\",\\"url\\":\\"https://www.google.com\\",\\"id\\":\\"Url:f4974a223763b3a06ea2cd73ff30952be89d6281e05bc41f7ee423cd227a2b00721f5531d36e54dd64bc05eda4a94cbf1fbaf45384b4e924ae0fe47ee8d4e792\\"}}}",
+  "id": "{\\"algorithms\\":[{\\"type\\":\\"USER_FEED\\"}],\\"heroAlgorithms\\":[],\\"title\\":\\"Test HeroListFeature\\",\\"subtitle\\":\\"It's a hero list feature!\\",\\"primaryAction\\":{\\"action\\":\\"OPEN_URL\\",\\"title\\":\\"Open this url\\",\\"id\\":\\"Action:7353adf03a348f566ef4c875071c3fbc5ecc099129a1c356839a56e052c950ba3c91e29806c91212cab35dd5884db8a3\\",\\"relatedNode\\":{\\"__typename\\":\\"Url\\",\\"url\\":\\"https://www.google.com\\",\\"id\\":\\"Url:f4974a223763b3a06ea2cd73ff30952be89d6281e05bc41f7ee423cd227a2b00721f5531d36e54dd64bc05eda4a94cbf1fbaf45384b4e924ae0fe47ee8d4e792\\"}}}",
   "primaryAction": Object {
     "action": "OPEN_URL",
+    "id": "Action:7353adf03a348f566ef4c875071c3fbc5ecc099129a1c356839a56e052c950ba3c91e29806c91212cab35dd5884db8a3",
     "relatedNode": Object {
       "__typename": "Url",
       "id": "Url:f4974a223763b3a06ea2cd73ff30952be89d6281e05bc41f7ee423cd227a2b00721f5531d36e54dd64bc05eda4a94cbf1fbaf45384b4e924ae0fe47ee8d4e792",

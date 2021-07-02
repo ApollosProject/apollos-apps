@@ -30,7 +30,10 @@ export default class Feature extends RockApolloDataSource {
     if (relatedNode && !relatedNode.id) {
       return {
         ...action,
-        id: createGlobalId(JSON.stringify(action), action.__typename),
+        id: createGlobalId(
+          JSON.stringify(action),
+          action.__typename || 'Action'
+        ),
         relatedNode: {
           ...relatedNode,
           id: createGlobalId(
