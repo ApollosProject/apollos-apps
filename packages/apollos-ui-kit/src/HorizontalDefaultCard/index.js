@@ -1,14 +1,15 @@
 import React from 'react';
-import { View } from 'react-native';
 import PropTypes from 'prop-types';
+import { View } from 'react-native';
 
 import { withTheme } from '../theme';
 import styled from '../styled';
-import Card, { CardImage, CardContent } from '../Card';
-import { H5, BodySmall } from '../typography';
-import Icon from '../Icon';
+import Card, { CardImage } from '../Card';
 import { withIsLoading } from '../isLoading';
 import { ImageSourceType } from '../ConnectedImage';
+import BackgroundImageBlur from '../BackgroundImageBlur';
+
+import ContentTitles from '../ContentTitles';
 
 const SquareCard = styled(
   {
@@ -18,70 +19,35 @@ const SquareCard = styled(
   'ui-kit.HorizontalDefaultCard.SquareCard'
 )(Card);
 
-// We have to position `LikeIcon` in a `View` rather than `LikeIcon` directly so `LikeIcon`'s loading state is positioned correctly 💥
-const LikeIconPositioning = styled(
-  ({ theme }) => ({
-    position: 'absolute',
-    top: theme.sizing.baseUnit,
-    right: theme.sizing.baseUnit,
-  }),
-  'ui-kit.HorizontalDefaultCard.LikeIconPositioning'
-)(View);
-
-const LikeIcon = withTheme(
-  ({ theme, isLiked }) => ({
-    fill: theme.colors.white,
-    name: isLiked ? 'like-solid' : 'like',
-    size: theme.sizing.baseUnit * 1.5,
-  }),
-  'ui-kit.HorizontalDefaultCard.LikeIcon'
-)(Icon);
+const TitlesPositioner = styled({
+  height: 240 - 135,
+  justifyContent: 'center',
+})(View);
 
 const Image = withTheme(
-  ({ hasTitleAndSummary }) => ({
-    minAspectRatio: hasTitleAndSummary ? 2 : 1.5, // adjusts `Image` height to fill available `Card` whitespace if there is no `Title` or `Summary`
-    maxAspectRatio: hasTitleAndSummary ? 2 : 1.5, // adjusts `Image` height to fill available `Card` whitespace if there is no `Title` or `Summary`
-    forceRatio: hasTitleAndSummary ? 2 : 1.5, // forces the placeholder to use the same ratio as above.
-    maintainAspectRatio: true,
+  () => ({
+    width: 240,
+    height: 135,
+    minAspectRatio: 240 / 135,
+    maxAspectRatio: 240 / 135,
   }),
   'ui-kit.HorizontalDefaultCard.Image'
 )(CardImage);
 
-const Content = styled(
-  ({ theme }) => ({
-    alignItems: 'flex-start', // needed to make `Label` display as an "inline" element
-    paddingHorizontal: theme.sizing.baseUnit, // TODO: refactor CardContent to have this be the default
-    paddingBottom: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
-  }),
-  'ui-kit.HorizontalDefaultCard.Content'
-)(CardContent);
-
-const Summary = styled(
-  ({ theme, hasTitle }) => ({
-    color: theme.colors.text.tertiary,
-    ...(hasTitle ? { paddingTop: theme.sizing.baseUnit / 2 } : {}),
-  }),
-  'ui-kit.HorizontalDefaultCard.Summary'
-)(BodySmall);
-
 const HorizontalDefaultCard = withIsLoading(
   ({ coverImage, isLiked, isLoading, summary, title }) => (
     <SquareCard isLoading={isLoading} inHorizontalList>
+      <BackgroundImageBlur source={coverImage} />
       <Image source={coverImage} hasTitleAndSummary={!!summary && !!title} />
-
-      <Content>
-        {title ? <H5 numberOfLines={2}>{title}</H5> : null}
-        {summary ? (
-          <Summary hasTitle={title} numberOfLines={2}>
-            {summary}
-          </Summary>
-        ) : null}
-      </Content>
-      {isLiked != null ? (
-        <LikeIconPositioning>
-          <LikeIcon isLiked={isLiked} />
-        </LikeIconPositioning>
-      ) : null}
+      <TitlesPositioner>
+        <ContentTitles
+          micro
+          title={title}
+          summary={summary}
+          isLiked={isLiked}
+          isLoading={isLoading}
+        />
+      </TitlesPositioner>
     </SquareCard>
   )
 );
@@ -94,6 +60,7 @@ HorizontalDefaultCard.propTypes = {
   isLiked: PropTypes.bool,
   summary: PropTypes.string,
   title: PropTypes.string,
+  isLoading: PropTypes.bool,
 };
 
 HorizontalDefaultCard.displayName = 'HorizontalDefaultCard';

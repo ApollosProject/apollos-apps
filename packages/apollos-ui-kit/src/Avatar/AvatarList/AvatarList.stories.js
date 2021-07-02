@@ -4,7 +4,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 
 import CenteredView from '../../CenteredView';
 
-import AvatarList from '.';
+import AvatarList from './index';
 
 const avatars = [
   {

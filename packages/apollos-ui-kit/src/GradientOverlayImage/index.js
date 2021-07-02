@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { pure } from 'recompose';
 
 import styled from '../styled';
-import withTheme from '../theme/withTheme';
+import { withTheme } from '../theme/OLD_theme';
 import ConnectedImage from '../ConnectedImage';
 
 const Overlay = styled(StyleSheet.absoluteFillObject)(LinearGradient);

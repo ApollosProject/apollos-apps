@@ -1,7 +1,7 @@
 import { createGlobalId } from '@apollosproject/server-core';
 import { range } from 'lodash';
 import { sequelize, sync } from '../../postgres/index';
-import { createModel, setupModel } from '../model';
+import { createModel, setupModel, Visibility } from '../model';
 import { createModel as createPersonModel } from '../../people/model';
 import {
   createModel as createFollowModel,
@@ -129,6 +129,29 @@ describe('Apollos Postgres Comments DatSource', () => {
       expect(
         context.dataSources.Notification.createAndSend.mock.calls
       ).toMatchSnapshot();
+    });
+
+    it('should not send notifications about your private comment to your followers', async () => {
+      const commentDataSource = new CommentDataSource();
+
+      commentDataSource.initialize({ context });
+      context.dataSources.Notification = { createAndSend: jest.fn() };
+
+      await sequelize.models.follows.create({
+        requestPersonId: person3.id,
+        followedPersonId: person1.id,
+        state: 'ACCEPTED',
+      });
+
+      await commentDataSource.addComment({
+        text: 'I am a fun comment!',
+        parentId: createGlobalId(123, 'UniversalContentItem'),
+        visibility: Visibility.PRIVATE,
+      });
+
+      expect(
+        context.dataSources.Notification.createAndSend.mock.calls.length
+      ).toBe(0);
     });
   });
 

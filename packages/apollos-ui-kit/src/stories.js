@@ -32,7 +32,6 @@ function loadStories() {
   require('./inputs/Radio/Radio.stories');
   require('./inputs/Switch/Switch.stories');
   require('./inputs/Text/Text.stories');
-  require('./theme/theme.stories');
   require('./typography/BlockQuote/BlockQuote.stories');
   require('./typography/BodyText/BodyText.stories');
   require('./typography/BulletListItem/BulletListItem.stories');

@@ -5,7 +5,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 import { times } from 'lodash';
 
 import { Button } from '../..';
-import AvatarCloud from '.';
+import AvatarCloud from './index';
 
 const generateAvatars = (count = 10) => {
   const seed = Math.abs(Math.random() * 100);

@@ -4,7 +4,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 import { withIsLoading } from '../../isLoading';
 import PaddedView from '../../PaddedView';
 
-import BulletListItem from '.';
+import BulletListItem from './index';
 
 storiesOf('ui-kit/typography/BulletListItem', module)
   .add('Default', () => (

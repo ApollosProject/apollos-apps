@@ -19,28 +19,10 @@ Array [
       ]
     }
   />,
-  <BVLinearGradient
-    colors={
-      Array [
-        4294967295,
-        4294506484,
-      ]
-    }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
+  <View
     style={
       Object {
+        "backgroundColor": "rgb(249, 249, 251)",
         "flex": 1,
         "height": "100%",
       }
@@ -85,7 +67,7 @@ Array [
               padded={true}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Medium",
                   "fontSize": 14,
                   "lineHeight": 21,
@@ -160,7 +142,7 @@ Array [
                 <Text
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#27272E",
                       "fontFamily": "InterUI-Medium",
                       "fontSize": 14,
                       "lineHeight": 21,
@@ -209,7 +191,7 @@ Array [
                 <Text
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#27272E",
                       "fontFamily": "InterUI-Medium",
                       "fontSize": 14,
                       "lineHeight": 21,
@@ -258,7 +240,7 @@ Array [
                 <Text
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#27272E",
                       "fontFamily": "InterUI-Medium",
                       "fontSize": 14,
                       "lineHeight": 21,
@@ -332,7 +314,7 @@ Array [
                     style={
                       Object {
                         "alignItems": "center",
-                        "color": "#303030",
+                        "color": "#27272E",
                         "fontFamily": "InterUI-Bold",
                         "fontSize": 12,
                         "justifyContent": "center",
@@ -406,7 +388,7 @@ Array [
                   style={
                     Object {
                       "backgroundColor": "transparent",
-                      "color": "#505050",
+                      "color": "rgba(39, 39, 46, 0.6)",
                       "fontFamily": "InterUI-Medium",
                       "fontSize": 14,
                       "lineHeight": 21,
@@ -480,6 +462,6 @@ Array [
         </View>
       </View>
     </View>
-  </BVLinearGradient>,
+  </View>,
 ]
 `;

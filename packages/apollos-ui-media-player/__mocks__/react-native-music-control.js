@@ -1,3 +1,5 @@
+export const Command = {};
+
 export default {
   enableBackgroundMode: jest.fn(),
   enableControl: jest.fn(),

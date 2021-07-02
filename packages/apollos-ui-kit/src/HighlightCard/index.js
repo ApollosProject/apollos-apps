@@ -5,12 +5,13 @@ import PropTypes from 'prop-types';
 
 import { withTheme, ThemeMixin, named } from '../theme';
 import styled from '../styled';
-import Card, { CardContent, CardLabel, CardImage } from '../Card';
+import Card, { CardContent, CardLabel } from '../Card';
 import FlexedView from '../FlexedView';
 import { H3, BodyText } from '../typography';
 import Icon from '../Icon';
 import { withIsLoading } from '../isLoading';
 import { ImageSourceType } from '../ConnectedImage';
+import GradientOverlayImage from '../GradientOverlayImage';
 
 const StyledCard = withTheme(
   ({ theme }) => ({
@@ -46,7 +47,7 @@ const Image = withTheme(
     overlayColor: get(customTheme, 'colors.primary', theme.colors.black),
   }),
   'ui-kit.HighlightCard.Image'
-)(CardImage);
+)(GradientOverlayImage);
 
 const Content = styled(
   ({ theme }) => ({
@@ -164,33 +165,36 @@ const HighlightCard = withIsLoading(
     summary,
     isLive,
     theme,
-  }) => (
-    <ThemeMixin
-      mixin={{
-        type: get(theme, 'type', 'dark').toLowerCase(), // not sure why we need toLowerCase
-        colors: get(theme, 'colors', {}),
-      }}
-    >
-      <StyledCard isLoading={isLoading}>
-        <Image
-          overlayType={'gradient-bottom'}
-          customTheme={theme}
-          source={coverImage}
-        />
-        <Content>
-          {renderLabel(summary, LabelComponent, labelText, theme, isLive)}
-          {summary
-            ? renderWithSummary(title, actionIcon, summary, hasAction)
-            : renderOnlyTitle(title, actionIcon, hasAction)}
-        </Content>
-        {isLiked != null ? (
-          <LikeIconPositioning>
-            <LikeIcon isLiked={isLiked} />
-          </LikeIconPositioning>
-        ) : null}
-      </StyledCard>
-    </ThemeMixin>
-  )
+  }) =>
+    console.warn(
+      'HighlightCard has been deprecated. Consider replacing with DefaultCard'
+    ) || (
+      <ThemeMixin
+        mixin={{
+          type: get(theme, 'type', 'dark').toLowerCase(), // not sure why we need toLowerCase
+          colors: get(theme, 'colors', {}),
+        }}
+      >
+        <StyledCard isLoading={isLoading}>
+          <Image
+            overlayType={'gradient-bottom'}
+            customTheme={theme}
+            source={coverImage}
+          />
+          <Content>
+            {renderLabel(summary, LabelComponent, labelText, theme, isLive)}
+            {summary
+              ? renderWithSummary(title, actionIcon, summary, hasAction)
+              : renderOnlyTitle(title, actionIcon, hasAction)}
+          </Content>
+          {isLiked != null ? (
+            <LikeIconPositioning>
+              <LikeIcon isLiked={isLiked} />
+            </LikeIconPositioning>
+          ) : null}
+        </StyledCard>
+      </ThemeMixin>
+    )
 );
 
 HighlightCard.propTypes = {
