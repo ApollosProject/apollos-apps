@@ -1159,14 +1159,19 @@ export const commentSchema = gql`
 `;
 
 export const eventSchema = gql`
-  type Event implements Node {
+  type Event implements Node & ContentNode {
     id: ID!
-    name: String
-    description: String
+    title(hyphenated: Boolean): String
+    htmlContent: String
+    coverImage: ImageMedia
+
     location: String
     start: String
     end: String
-    image: ImageMedia
+
+    name: String @deprecated(reason: "Use title")
+    description: String @deprecated(reason: "Use htmlContent")
+    image: ImageMedia @deprecated(reason: "Use coverImage")
   }
 
   extend type Campus {
