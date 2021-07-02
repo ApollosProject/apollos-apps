@@ -339,7 +339,7 @@ Array [
                           <View
                             style={
                               Object {
-                                "backgroundColor": "#A5A5A5",
+                                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                 "bottom": -0.5,
                                 "height": 0.5,
                               }
@@ -735,7 +735,7 @@ Array [
                           <View
                             style={
                               Object {
-                                "backgroundColor": "#A5A5A5",
+                                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                 "bottom": -0.5,
                                 "height": 0.5,
                               }
@@ -1134,7 +1134,7 @@ Array [
                           <View
                             style={
                               Object {
-                                "backgroundColor": "#A5A5A5",
+                                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                 "bottom": -0.5,
                                 "height": 0.5,
                               }
@@ -1591,7 +1591,7 @@ Array [
                           <View
                             style={
                               Object {
-                                "backgroundColor": "#A5A5A5",
+                                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                 "bottom": -0.5,
                                 "height": 0.5,
                               }
@@ -2042,7 +2042,7 @@ Array [
                           <View
                             style={
                               Object {
-                                "backgroundColor": "#A5A5A5",
+                                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                 "bottom": -0.5,
                                 "height": 0.5,
                               }
@@ -2498,7 +2498,7 @@ Array [
                           <View
                             style={
                               Object {
-                                "backgroundColor": "#A5A5A5",
+                                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                 "bottom": -0.5,
                                 "height": 0.5,
                               }
@@ -2950,7 +2950,7 @@ Array [
                           <View
                             style={
                               Object {
-                                "backgroundColor": "#A5A5A5",
+                                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                 "bottom": -0.5,
                                 "height": 0.5,
                               }
@@ -3346,7 +3346,7 @@ Array [
                           <View
                             style={
                               Object {
-                                "backgroundColor": "#A5A5A5",
+                                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                 "bottom": -0.5,
                                 "height": 0.5,
                               }
@@ -3742,7 +3742,7 @@ Array [
                           <View
                             style={
                               Object {
-                                "backgroundColor": "#A5A5A5",
+                                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                 "bottom": -0.5,
                                 "height": 0.5,
                               }
@@ -4140,7 +4140,7 @@ Array [
                           <View
                             style={
                               Object {
-                                "backgroundColor": "#A5A5A5",
+                                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                 "bottom": -0.5,
                                 "height": 0.5,
                               }
@@ -4538,7 +4538,7 @@ Array [
                           <View
                             style={
                               Object {
-                                "backgroundColor": "#A5A5A5",
+                                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                 "bottom": -0.5,
                                 "height": 0.5,
                               }
@@ -4936,7 +4936,7 @@ Array [
                           <View
                             style={
                               Object {
-                                "backgroundColor": "#A5A5A5",
+                                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                 "bottom": -0.5,
                                 "height": 0.5,
                               }
@@ -5334,7 +5334,7 @@ Array [
                           <View
                             style={
                               Object {
-                                "backgroundColor": "#A5A5A5",
+                                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                 "bottom": -0.5,
                                 "height": 0.5,
                               }
@@ -5730,7 +5730,7 @@ Array [
                           <View
                             style={
                               Object {
-                                "backgroundColor": "#A5A5A5",
+                                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                 "bottom": -0.5,
                                 "height": 0.5,
                               }
@@ -6180,7 +6180,7 @@ Array [
                           <View
                             style={
                               Object {
-                                "backgroundColor": "#A5A5A5",
+                                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                 "bottom": -0.5,
                                 "height": 0.5,
                               }
@@ -6588,7 +6588,7 @@ Array [
                           <View
                             style={
                               Object {
-                                "backgroundColor": "#A5A5A5",
+                                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                 "bottom": -0.5,
                                 "height": 0.5,
                               }

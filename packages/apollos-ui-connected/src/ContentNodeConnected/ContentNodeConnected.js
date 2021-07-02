@@ -93,6 +93,7 @@ const ContentNodeConnected = ({
         {coverImageSources.length || loading ? (
           <ImageWrapperComponent>
             <ConnectedImage
+              resizeMode={'contain'}
               maintainAspectRatio
               isLoading={!coverImageSources.length && loading}
               source={coverImageSources}

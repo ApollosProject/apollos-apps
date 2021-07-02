@@ -26,7 +26,7 @@ exports[`UserAvatarConnected component renders UserAvatarConnected 1`] = `
     }
     style={
       Object {
-        "backgroundColor": "#A5A5A5",
+        "backgroundColor": "rgba(142, 142, 147, 0.12)",
         "borderRadius": 20,
         "bottom": 0,
         "height": "100%",
@@ -58,7 +58,7 @@ exports[`UserAvatarConnected component renders UserAvatarConnected without a pho
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "#A5A5A5",
+        "backgroundColor": "rgba(142, 142, 147, 0.12)",
         "borderRadius": 40,
         "height": 40,
         "justifyContent": "center",

@@ -56,7 +56,7 @@ const light = ({ colors, alpha }) => ({
       // deprecated
       secondary: colors.paper || '#FFFFFF',
       accent: Color(colors.lightTertiary).fade(alpha.medium).string(),
-      inactive: colors.lightTertiary,
+      inactive: Color(colors.gray).alpha(0.12).string(),
     },
     shadows: {
       // deprecated

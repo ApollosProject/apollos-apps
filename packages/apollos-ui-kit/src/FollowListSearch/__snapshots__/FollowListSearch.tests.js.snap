@@ -1327,7 +1327,7 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "rgba(142, 142, 147, 0.12)",
                   "borderRadius": 64,
                   "height": 64,
                   "justifyContent": "center",

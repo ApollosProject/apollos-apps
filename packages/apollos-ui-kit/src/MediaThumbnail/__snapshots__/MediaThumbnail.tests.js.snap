@@ -62,7 +62,7 @@ Array [
         }
         style={
           Object {
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.24)",
             "bottom": 0,
             "left": 0,
             "position": "absolute",

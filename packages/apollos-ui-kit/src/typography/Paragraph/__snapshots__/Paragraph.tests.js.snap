@@ -30,7 +30,7 @@ Array [
       style={
         Object {
           "alignSelf": "stretch",
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 16,
           "height": 16,
           "marginVertical": 5,
@@ -42,7 +42,7 @@ Array [
       style={
         Object {
           "alignSelf": "stretch",
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 16,
           "height": 16,
           "marginVertical": 5,
@@ -54,7 +54,7 @@ Array [
       style={
         Object {
           "alignSelf": "stretch",
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 16,
           "height": 16,
           "marginVertical": 5,

@@ -501,7 +501,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                   style={
                                     Object {
-                                      "backgroundColor": "#A5A5A5",
+                                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                       "bottom": 0,
                                       "left": 0,
                                       "position": "absolute",
@@ -541,7 +541,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 style={
                                   Object {
                                     "aspectRatio": 1,
-                                    "backgroundColor": "#A5A5A5",
+                                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                     "width": "100%",
                                   }
                                 }
@@ -684,7 +684,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   source={Array []}
                                   style={
                                     Object {
-                                      "backgroundColor": "#A5A5A5",
+                                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                       "bottom": 0,
                                       "left": 0,
                                       "position": "absolute",
@@ -716,7 +716,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 style={
                                   Object {
                                     "aspectRatio": 1,
-                                    "backgroundColor": "#A5A5A5",
+                                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                     "width": "100%",
                                   }
                                 }
@@ -868,7 +868,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                   style={
                                     Object {
-                                      "backgroundColor": "#A5A5A5",
+                                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                       "bottom": 0,
                                       "left": 0,
                                       "position": "absolute",
@@ -908,7 +908,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 style={
                                   Object {
                                     "aspectRatio": 1,
-                                    "backgroundColor": "#A5A5A5",
+                                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                     "width": "100%",
                                   }
                                 }
@@ -1059,7 +1059,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                   style={
                                     Object {
-                                      "backgroundColor": "#A5A5A5",
+                                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                       "bottom": 0,
                                       "left": 0,
                                       "position": "absolute",
@@ -1099,7 +1099,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 style={
                                   Object {
                                     "aspectRatio": 1,
-                                    "backgroundColor": "#A5A5A5",
+                                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                     "width": "100%",
                                   }
                                 }
@@ -1242,7 +1242,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   source={Array []}
                                   style={
                                     Object {
-                                      "backgroundColor": "#A5A5A5",
+                                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                       "bottom": 0,
                                       "left": 0,
                                       "position": "absolute",
@@ -1274,7 +1274,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 style={
                                   Object {
                                     "aspectRatio": 1,
-                                    "backgroundColor": "#A5A5A5",
+                                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                     "width": "100%",
                                   }
                                 }
@@ -1425,7 +1425,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                   style={
                                     Object {
-                                      "backgroundColor": "#A5A5A5",
+                                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                       "bottom": 0,
                                       "left": 0,
                                       "position": "absolute",
@@ -1465,7 +1465,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 style={
                                   Object {
                                     "aspectRatio": 1,
-                                    "backgroundColor": "#A5A5A5",
+                                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                     "width": "100%",
                                   }
                                 }

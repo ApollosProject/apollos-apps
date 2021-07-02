@@ -124,7 +124,7 @@ Array [
                     style={
                       Object {
                         "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
+                        "backgroundColor": "rgba(142, 142, 147, 0.12)",
                         "height": "100%",
                         "resizeMode": "cover",
                       }
@@ -276,7 +276,7 @@ South Barrington, IL 60010-6143
                     style={
                       Object {
                         "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
+                        "backgroundColor": "rgba(142, 142, 147, 0.12)",
                         "height": "100%",
                         "resizeMode": "cover",
                       }
@@ -428,7 +428,7 @@ Anderson, SC 29621-3619
                     style={
                       Object {
                         "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
+                        "backgroundColor": "rgba(142, 142, 147, 0.12)",
                         "height": "100%",
                         "resizeMode": "cover",
                       }
@@ -580,7 +580,7 @@ Richardson, TX 75080-5525
                     style={
                       Object {
                         "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
+                        "backgroundColor": "rgba(142, 142, 147, 0.12)",
                         "height": "100%",
                         "resizeMode": "cover",
                       }

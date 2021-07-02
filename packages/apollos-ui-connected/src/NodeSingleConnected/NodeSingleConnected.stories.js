@@ -89,7 +89,11 @@ const nodeMock = (root, args) => ({
   htmlContent:
     '<p>Of Myths and Money, lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim euismod arcu, volutpat feugiat tortor luctus vitae. Suspendisse efficitur faucibus ante at facilisis. Phasellus in velit suscipit lectus tempus dapibus vitae eu quam. Fusce venenatis mauris non ante scelerisque, sit amet blandit odio ultricies. In sed lacinia dui, eu blandit metus. Ut ante enim, facilisis sed pretium et, posuere vitae felis. Phasellus ornare mauris mauris, eget pretium nibh imperdiet ac. Integer eleifend dui ut nisl sagittis mattis. Nunc consectetur consequat tristique. Pellentesque luctus tortor nec quam pulvinar iaculis.</p>',
   coverImage: {
-    sources: [{ uri: 'https://picsum.photos/id/200/400/600' }],
+    sources: [
+      {
+        uri: `https://res.cloudinary.com/hkfv720wu/image/fetch/c_limit,f_jpg,q_auto,w_750/https://rock.rivervalley.org/GetImage.ashx%3Fguid%3D722e9b81-e128-45ce-9095-113325fc12b0?cachebreaker=${Math.random()}`,
+      },
+    ],
   },
   isLiked: !!likes[args.id],
   features: null,

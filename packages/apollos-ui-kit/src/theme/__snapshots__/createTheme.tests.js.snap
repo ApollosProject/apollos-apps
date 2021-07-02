@@ -55,7 +55,7 @@ Object {
     "background": Object {
       "accent": "rgba(165, 165, 165, 0.5)",
       "chrome": "rgba(255, 255, 255, 0.92)",
-      "inactive": "#A5A5A5",
+      "inactive": "rgba(142, 142, 147, 0.12)",
       "paper": "#FFFFFF",
       "regular": "rgba(242, 242, 247, 0.8)",
       "screen": "rgb(249, 249, 251)",
@@ -173,7 +173,7 @@ Object {
         "background": Object {
           "accent": "rgba(165, 165, 165, 0.5)",
           "chrome": "rgba(255, 255, 255, 0.92)",
-          "inactive": "#A5A5A5",
+          "inactive": "rgba(142, 142, 147, 0.24)",
           "paper": "#1C1C1E",
           "regular": "rgba(28, 28, 30, 0.8)",
           "screen": "#000000",
@@ -222,7 +222,7 @@ Object {
         "background": Object {
           "accent": "rgba(165, 165, 165, 0.5)",
           "chrome": "rgba(255, 255, 255, 0.92)",
-          "inactive": "#A5A5A5",
+          "inactive": "rgba(142, 142, 147, 0.12)",
           "paper": "#FFFFFF",
           "regular": "rgba(242, 242, 247, 0.8)",
           "screen": "rgb(249, 249, 251)",
@@ -310,7 +310,7 @@ Object {
   "background": Object {
     "accent": "rgba(165, 165, 165, 0.5)",
     "chrome": "rgba(255, 255, 255, 0.92)",
-    "inactive": "#A5A5A5",
+    "inactive": "rgba(142, 142, 147, 0.12)",
     "paper": "#FFFFFF",
     "regular": "rgba(242, 242, 247, 0.8)",
     "screen": "rgb(249, 249, 251)",
@@ -459,7 +459,7 @@ Object {
     "background": Object {
       "accent": "rgba(165, 165, 165, 0.5)",
       "chrome": "rgba(255, 255, 255, 0.92)",
-      "inactive": "#A5A5A5",
+      "inactive": "rgba(142, 142, 147, 0.24)",
       "paper": "#1C1C1E",
       "regular": "rgba(28, 28, 30, 0.8)",
       "screen": "#000000",
@@ -573,7 +573,7 @@ Object {
         "background": Object {
           "accent": "rgba(165, 165, 165, 0.5)",
           "chrome": "rgba(255, 255, 255, 0.92)",
-          "inactive": "#A5A5A5",
+          "inactive": "rgba(142, 142, 147, 0.24)",
           "paper": "#1C1C1E",
           "regular": "rgba(28, 28, 30, 0.8)",
           "screen": "#000000",
@@ -622,7 +622,7 @@ Object {
         "background": Object {
           "accent": "rgba(165, 165, 165, 0.5)",
           "chrome": "rgba(255, 255, 255, 0.92)",
-          "inactive": "#A5A5A5",
+          "inactive": "rgba(142, 142, 147, 0.12)",
           "paper": "#FFFFFF",
           "regular": "rgba(242, 242, 247, 0.8)",
           "screen": "rgb(249, 249, 251)",

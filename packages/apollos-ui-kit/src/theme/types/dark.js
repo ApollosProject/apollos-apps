@@ -54,7 +54,7 @@ const dark = ({ colors, alpha }) => ({
       // deprecated
       secondary: Color(colors.darkTertiary).fade(alpha.medium).string(),
       accent: Color(colors.darkTertiary).fade(alpha.medium).string(),
-      inactive: colors.darkTertiary,
+      inactive: Color(colors.gray).alpha(0.24).string(),
     },
     shadows: {
       default: Color(colors.black).fade(alpha.high).string(),

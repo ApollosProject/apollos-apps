@@ -133,7 +133,7 @@ Array [
                           }
                           style={
                             Object {
-                              "backgroundColor": "#A5A5A5",
+                              "backgroundColor": "rgba(142, 142, 147, 0.12)",
                               "borderRadius": 40,
                               "bottom": 0,
                               "height": "100%",
@@ -553,7 +553,7 @@ Array [
                           }
                           style={
                             Object {
-                              "backgroundColor": "#A5A5A5",
+                              "backgroundColor": "rgba(142, 142, 147, 0.12)",
                               "borderRadius": 40,
                               "bottom": 0,
                               "height": "100%",
@@ -882,7 +882,7 @@ Array [
         }
         style={
           Object {
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.12)",
             "bottom": 0,
             "left": 0,
             "position": "absolute",
@@ -969,7 +969,7 @@ Array [
                     style={
                       Object {
                         "aspectRatio": 1,
-                        "backgroundColor": "#A5A5A5",
+                        "backgroundColor": "rgba(142, 142, 147, 0.12)",
                         "borderRadius": 1000,
                         "width": "40%",
                         "zIndex": 100,
@@ -1262,7 +1262,7 @@ Array [
                           }
                           style={
                             Object {
-                              "backgroundColor": "#A5A5A5",
+                              "backgroundColor": "rgba(142, 142, 147, 0.12)",
                               "borderRadius": 40,
                               "bottom": 0,
                               "height": "100%",
@@ -1791,7 +1791,7 @@ Array [
                           }
                           style={
                             Object {
-                              "backgroundColor": "#A5A5A5",
+                              "backgroundColor": "rgba(142, 142, 147, 0.12)",
                               "borderRadius": 40,
                               "bottom": 0,
                               "height": "100%",
@@ -2211,7 +2211,7 @@ Array [
                           }
                           style={
                             Object {
-                              "backgroundColor": "#A5A5A5",
+                              "backgroundColor": "rgba(142, 142, 147, 0.12)",
                               "borderRadius": 40,
                               "bottom": 0,
                               "height": "100%",
@@ -2631,7 +2631,7 @@ Array [
                           }
                           style={
                             Object {
-                              "backgroundColor": "#A5A5A5",
+                              "backgroundColor": "rgba(142, 142, 147, 0.12)",
                               "borderRadius": 40,
                               "bottom": 0,
                               "height": "100%",

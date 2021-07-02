@@ -886,7 +886,7 @@ exports[`the Onboarding component should render Onboarding 1`] = `
                         <View
                           style={
                             Object {
-                              "backgroundColor": "#A5A5A5",
+                              "backgroundColor": "rgba(142, 142, 147, 0.12)",
                               "borderRadius": 4,
                               "height": 8,
                               "margin": 4,
@@ -899,7 +899,7 @@ exports[`the Onboarding component should render Onboarding 1`] = `
                         <View
                           style={
                             Object {
-                              "backgroundColor": "#A5A5A5",
+                              "backgroundColor": "rgba(142, 142, 147, 0.12)",
                               "borderRadius": 4,
                               "height": 8,
                               "margin": 4,
@@ -912,7 +912,7 @@ exports[`the Onboarding component should render Onboarding 1`] = `
                         <View
                           style={
                             Object {
-                              "backgroundColor": "#A5A5A5",
+                              "backgroundColor": "rgba(142, 142, 147, 0.12)",
                               "borderRadius": 4,
                               "height": 8,
                               "margin": 4,

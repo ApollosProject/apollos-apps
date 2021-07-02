@@ -92,7 +92,7 @@ exports[`The ActionListFeatureConnected component should render 1`] = `
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
@@ -235,7 +235,7 @@ exports[`The ActionListFeatureConnected component should render a loading state 
         style={
           Object {
             "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.12)",
             "borderRadius": 16,
             "height": 14,
             "marginVertical": 3.5,
@@ -247,7 +247,7 @@ exports[`The ActionListFeatureConnected component should render a loading state 
         style={
           Object {
             "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.12)",
             "borderRadius": 16,
             "height": 24,
             "marginVertical": 1.8000000000000007,
@@ -287,7 +287,7 @@ exports[`The ActionListFeatureConnected component should render a loading state 
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
@@ -326,7 +326,7 @@ exports[`The ActionListFeatureConnected component should render a loading state 
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
@@ -365,7 +365,7 @@ exports[`The ActionListFeatureConnected component should render a loading state 
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
@@ -404,7 +404,7 @@ exports[`The ActionListFeatureConnected component should render a loading state 
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,

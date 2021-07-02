@@ -54,7 +54,7 @@ Array [
   <View
     style={
       Object {
-        "backgroundColor": "#A5A5A5",
+        "backgroundColor": "rgba(142, 142, 147, 0.12)",
         "borderRadius": 16,
         "height": "50%",
         "width": "50%",
@@ -86,7 +86,7 @@ Array [
   <View
     style={
       Object {
-        "backgroundColor": "#A5A5A5",
+        "backgroundColor": "rgba(142, 142, 147, 0.12)",
         "borderRadius": 16,
         "height": "100%",
         "width": "100%",

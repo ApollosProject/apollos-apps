@@ -395,7 +395,7 @@ Array [
       <View
         style={
           Object {
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.12)",
             "overflow": "hidden",
             "width": "100%",
           }
@@ -416,7 +416,7 @@ Array [
           style={
             Object {
               "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "resizeMode": "cover",
               "width": "100%",
             }

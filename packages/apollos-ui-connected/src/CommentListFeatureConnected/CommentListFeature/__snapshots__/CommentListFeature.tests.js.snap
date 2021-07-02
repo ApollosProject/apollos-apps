@@ -225,7 +225,7 @@ exports[`CommentListFeature must render 1`] = `
               }
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "rgba(142, 142, 147, 0.12)",
                   "borderRadius": 24,
                   "bottom": 0,
                   "height": "100%",
@@ -336,7 +336,7 @@ exports[`CommentListFeature must render 1`] = `
               }
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "rgba(142, 142, 147, 0.12)",
                   "borderRadius": 24,
                   "bottom": 0,
                   "height": "100%",
@@ -447,7 +447,7 @@ exports[`CommentListFeature must render 1`] = `
               }
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "rgba(142, 142, 147, 0.12)",
                   "borderRadius": 24,
                   "bottom": 0,
                   "height": "100%",
@@ -558,7 +558,7 @@ exports[`CommentListFeature must render 1`] = `
               }
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "rgba(142, 142, 147, 0.12)",
                   "borderRadius": 24,
                   "bottom": 0,
                   "height": "100%",
@@ -669,7 +669,7 @@ exports[`CommentListFeature must render 1`] = `
               }
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "rgba(142, 142, 147, 0.12)",
                   "borderRadius": 24,
                   "bottom": 0,
                   "height": "100%",
@@ -780,7 +780,7 @@ exports[`CommentListFeature must render 1`] = `
               }
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "rgba(142, 142, 147, 0.12)",
                   "borderRadius": 24,
                   "bottom": 0,
                   "height": "100%",
@@ -891,7 +891,7 @@ exports[`CommentListFeature must render 1`] = `
               }
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "rgba(142, 142, 147, 0.12)",
                   "borderRadius": 24,
                   "bottom": 0,
                   "height": "100%",
@@ -1002,7 +1002,7 @@ exports[`CommentListFeature must render 1`] = `
               }
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "rgba(142, 142, 147, 0.12)",
                   "borderRadius": 24,
                   "bottom": 0,
                   "height": "100%",
@@ -1113,7 +1113,7 @@ exports[`CommentListFeature must render 1`] = `
               }
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "rgba(142, 142, 147, 0.12)",
                   "borderRadius": 24,
                   "bottom": 0,
                   "height": "100%",
@@ -1224,7 +1224,7 @@ exports[`CommentListFeature must render 1`] = `
               }
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "rgba(142, 142, 147, 0.12)",
                   "borderRadius": 24,
                   "bottom": 0,
                   "height": "100%",

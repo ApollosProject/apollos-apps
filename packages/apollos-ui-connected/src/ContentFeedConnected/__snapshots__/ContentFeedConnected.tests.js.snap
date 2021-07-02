@@ -138,7 +138,7 @@ exports[`content feed query component renders a feedview after successful query 
                   source={Array []}
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -171,7 +171,7 @@ exports[`content feed query component renders a feedview after successful query 
                 style={
                   Object {
                     "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -337,7 +337,7 @@ exports[`content feed query component renders a feedview after successful query 
                   source={Array []}
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -370,7 +370,7 @@ exports[`content feed query component renders a feedview after successful query 
                 style={
                   Object {
                     "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }

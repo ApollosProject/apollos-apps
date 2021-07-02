@@ -172,7 +172,7 @@ Array [
             style={
               Object {
                 "alignSelf": "stretch",
-                "backgroundColor": "#A5A5A5",
+                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                 "borderRadius": 16,
                 "height": 14,
                 "marginVertical": 3.5,
@@ -192,7 +192,7 @@ Array [
             <View
               style={
                 Object {
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "rgba(142, 142, 147, 0.12)",
                   "borderRadius": 16,
                   "height": 32,
                   "width": 32,
@@ -237,7 +237,7 @@ Array [
             style={
               Object {
                 "alignItems": "center",
-                "backgroundColor": "#A5A5A5",
+                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                 "bottom": 0,
                 "height": "100%",
                 "justifyContent": "center",
@@ -503,7 +503,7 @@ Array [
             style={
               Object {
                 "alignItems": "center",
-                "backgroundColor": "#A5A5A5",
+                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                 "bottom": 0,
                 "height": "100%",
                 "justifyContent": "center",
@@ -747,7 +747,7 @@ Array [
             style={
               Object {
                 "alignItems": "center",
-                "backgroundColor": "#A5A5A5",
+                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                 "bottom": 0,
                 "height": "100%",
                 "justifyContent": "center",
