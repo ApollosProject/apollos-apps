@@ -51,12 +51,6 @@ const Themer = ({ theme: newThemeInput, icons: customIcons, ...props }) => {
     stripNullLeaves({ ...newThemeInput })
   );
 
-  console.log({
-    themeInput,
-    newThemeInput,
-    mergedThemeInput,
-  });
-
   const newTheme = createTheme(mergedThemeInput);
 
   let icons = useIcons();
