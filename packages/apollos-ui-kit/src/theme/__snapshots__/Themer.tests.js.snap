@@ -18,6 +18,304 @@ exports[`Themer should allow for updating the theme provider 1`] = `
 </Text>
 `;
 
+exports[`Themer should generate entirely new themes based on overrides 1`] = `
+<View
+  theme={
+    Object {
+      "alpha": Object {
+        "high": 0.9,
+        "low": 0.4,
+        "medium": 0.5,
+      },
+      "barStyle": "dark-content",
+      "breakpoints": Object {
+        "lg": 1200,
+        "md": 800,
+        "sm": 496,
+        "xs": 320,
+      },
+      "buttons": Object {
+        "alert": Object {
+          "accent": "#FFFFFF",
+          "fill": "#c64f55",
+        },
+        "default": Object {
+          "accent": "#27272E",
+          "fill": "#A5A5A5",
+        },
+        "ghost": Object {
+          "accent": "#27272E",
+          "fill": "#27272E",
+        },
+        "overlay": Object {
+          "accent": "#FFFFFF",
+          "fill": "rgba(255, 255, 255, 0.4)",
+        },
+        "primary": Object {
+          "accent": "#FFFFFF",
+          "fill": "red",
+        },
+        "secondary": Object {
+          "accent": "#FFFFFF",
+          "fill": "green",
+        },
+        "tertiary": Object {
+          "accent": "#FFFFFF",
+          "fill": "salmon",
+        },
+      },
+      "colors": Object {
+        "action": Object {
+          "default": "#A5A5A5",
+          "primary": "red",
+          "secondary": "green",
+          "tertiary": "salmon",
+        },
+        "alert": "#c64f55",
+        "background": Object {
+          "accent": "rgba(165, 165, 165, 0.5)",
+          "chrome": "rgba(255, 255, 255, 0.92)",
+          "inactive": "#A5A5A5",
+          "paper": "#FFFFFF",
+          "regular": "rgba(242, 242, 247, 0.8)",
+          "screen": "rgb(249, 249, 251)",
+          "secondary": "#FFFFFF",
+          "system": "rgba(142, 142, 147, 0.2)",
+          "system2": "rgba(142, 142, 147, 0.16)",
+          "system3": "rgba(142, 142, 147, 0.12)",
+          "system4": "rgba(142, 142, 147, 0.08)",
+          "thick": "rgba(242, 242, 247, 0.92)",
+          "thin": "rgba(242, 242, 247, 0.65)",
+          "ultrathin": "rgba(242, 242, 247, 0.4)",
+        },
+        "black": "#000000",
+        "darkPrimary": "#27272E",
+        "darkSecondary": "#505050",
+        "darkTertiary": "#A5A5A5",
+        "gray": "#8E8E93",
+        "lightPrimary": "#F4F7F8",
+        "lightSecondary": "#DBDBD9",
+        "lightTertiary": "#A5A5A5",
+        "neutral": Object {
+          "gray": "#8E8E93",
+          "gray2": "#AFAFB3",
+          "gray3": "#C7C7CC",
+          "gray4": "#D1D1D6",
+          "gray5": "#E5E5EA",
+          "gray6": "#F2F2F7",
+        },
+        "paper": "#FFFFFF",
+        "primary": "red",
+        "screen": "rgb(249, 249, 251)",
+        "secondary": "green",
+        "shadows": Object {
+          "default": "rgba(0, 0, 0, 0.09999999999999998)",
+        },
+        "success": "#17B569",
+        "tertiary": "salmon",
+        "text": Object {
+          "action": "green",
+          "link": "green",
+          "placeholder": "rgba(229, 229, 234, 0.3)",
+          "primary": "#27272E",
+          "quaternary": "rgba(39, 39, 46, 0.18)",
+          "secondary": "rgba(39, 39, 46, 0.6)",
+          "tertiary": "rgba(39, 39, 46, 0.3)",
+        },
+        "transparent": "transparent",
+        "warning": "#F4B740",
+        "white": "#FFFFFF",
+        "wordOfChrist": "#8b0000",
+      },
+      "helpers": Object {
+        "rem": [Function],
+        "verticalRhythm": [Function],
+      },
+      "overlays": Object {
+        "background-gradient": [Function],
+        "default": [Function],
+        "featured": [Function],
+        "gradient-bottom": [Function],
+        "gradient-top": [Function],
+        "high": [Function],
+        "low": [Function],
+        "medium": [Function],
+      },
+      "overrides": Object {},
+      "shadows": Object {
+        "default": Object {
+          "android": Object {
+            "elevation": 5,
+          },
+          "ios": Object {
+            "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 8,
+          },
+        },
+        "none": Object {
+          "android": Object {
+            "elevation": 0,
+          },
+          "ios": Object {
+            "shadowOpacity": 0,
+          },
+        },
+      },
+      "sizing": Object {
+        "avatar": Object {
+          "large": 120,
+          "medium": 80,
+          "small": 40,
+        },
+        "baseBorderRadius": 16,
+        "baseUnit": 16,
+      },
+      "type": "light",
+      "types": Object {
+        "dark": Object {
+          "barStyle": "light-content",
+          "colors": Object {
+            "action": Object {
+              "default": "#A5A5A5",
+              "primary": "red",
+              "secondary": "green",
+              "tertiary": "salmon",
+            },
+            "background": Object {
+              "accent": "rgba(165, 165, 165, 0.5)",
+              "chrome": "rgba(255, 255, 255, 0.92)",
+              "inactive": "#A5A5A5",
+              "paper": "#1C1C1E",
+              "regular": "rgba(28, 28, 30, 0.8)",
+              "screen": "#000000",
+              "secondary": "rgba(165, 165, 165, 0.5)",
+              "system": "rgba(99, 99, 102, 0.36)",
+              "system2": "rgba(99, 99, 102, 0.32)",
+              "system3": "rgba(99, 99, 102, 0.24)",
+              "system4": "rgba(99, 99, 102, 0.18)",
+              "thick": "rgba(28, 28, 30, 0.92)",
+              "thin": "rgba(28, 28, 30, 0.65)",
+              "ultrathin": "rgba(28, 28, 30, 0.4)",
+            },
+            "neutral": Object {
+              "gray": "#8E8E93",
+              "gray2": "#636366",
+              "gray3": "#636366",
+              "gray4": "#3A3A3C",
+              "gray5": "#2C2C2E",
+              "gray6": "#1C1C1E",
+            },
+            "paper": "#1C1C1E",
+            "screen": "#000000",
+            "shadows": Object {
+              "default": "rgba(0, 0, 0, 0.09999999999999998)",
+            },
+            "text": Object {
+              "action": "green",
+              "link": "green",
+              "placeholder": "rgba(244, 247, 248, 0.3)",
+              "primary": "#F4F7F8",
+              "quaternary": "rgba(244, 247, 248, 0.18)",
+              "secondary": "rgba(244, 247, 248, 0.6)",
+              "tertiary": "rgba(244, 247, 248, 0.33)",
+            },
+          },
+        },
+        "light": Object {
+          "barStyle": "dark-content",
+          "colors": Object {
+            "action": Object {
+              "default": "#A5A5A5",
+              "primary": "red",
+              "secondary": "green",
+              "tertiary": "salmon",
+            },
+            "background": Object {
+              "accent": "rgba(165, 165, 165, 0.5)",
+              "chrome": "rgba(255, 255, 255, 0.92)",
+              "inactive": "#A5A5A5",
+              "paper": "#FFFFFF",
+              "regular": "rgba(242, 242, 247, 0.8)",
+              "screen": "rgb(249, 249, 251)",
+              "secondary": "#FFFFFF",
+              "system": "rgba(142, 142, 147, 0.2)",
+              "system2": "rgba(142, 142, 147, 0.16)",
+              "system3": "rgba(142, 142, 147, 0.12)",
+              "system4": "rgba(142, 142, 147, 0.08)",
+              "thick": "rgba(242, 242, 247, 0.92)",
+              "thin": "rgba(242, 242, 247, 0.65)",
+              "ultrathin": "rgba(242, 242, 247, 0.4)",
+            },
+            "neutral": Object {
+              "gray": "#8E8E93",
+              "gray2": "#AFAFB3",
+              "gray3": "#C7C7CC",
+              "gray4": "#D1D1D6",
+              "gray5": "#E5E5EA",
+              "gray6": "#F2F2F7",
+            },
+            "paper": "#FFFFFF",
+            "screen": "rgb(249, 249, 251)",
+            "shadows": Object {
+              "default": "rgba(0, 0, 0, 0.09999999999999998)",
+            },
+            "text": Object {
+              "action": "green",
+              "link": "green",
+              "placeholder": "rgba(229, 229, 234, 0.3)",
+              "primary": "#27272E",
+              "quaternary": "rgba(39, 39, 46, 0.18)",
+              "secondary": "rgba(39, 39, 46, 0.6)",
+              "tertiary": "rgba(39, 39, 46, 0.3)",
+            },
+          },
+        },
+      },
+      "typography": Object {
+        "baseFontSize": 16,
+        "baseLineHeight": 24,
+        "sans": Object {
+          "black": Object {
+            "default": "InterUI-Black",
+            "italic": "InterUI-BlackItalic",
+          },
+          "bold": Object {
+            "default": "InterUI-Bold",
+            "italic": "InterUI-BoldItalic",
+          },
+          "medium": Object {
+            "default": "InterUI-Medium",
+            "italic": "InterUI-MediumItalic",
+          },
+          "regular": Object {
+            "default": "InterUI-Regular",
+            "italic": "InterUI-Italic",
+          },
+        },
+        "serif": Object {
+          "bold": Object {
+            "default": "DroidSerif-Bold",
+            "italic": "DroidSerif-BoldItalic",
+          },
+          "regular": Object {
+            "default": "DroidSerif",
+            "italic": "DroidSerif-Italic",
+          },
+        },
+        "ui": Object {
+          "regular": "System",
+        },
+      },
+    }
+  }
+/>
+`;
+
 exports[`Themer should pass theme down through useTheme hook 1`] = `
 <Text>
   #FFFFFF

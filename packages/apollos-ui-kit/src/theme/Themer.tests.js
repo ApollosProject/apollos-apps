@@ -77,4 +77,30 @@ describe('Themer', () => {
     const tree = renderer.create(<App />);
     expect(tree).toMatchSnapshot();
   });
+
+  it('should generate entirely new themes based on overrides', () => {
+    const outerTheme = {
+      type: 'dark',
+      colors: { primary: 'red', secondary: 'green', tertiary: 'salmon' },
+    };
+    const innerTheme = { type: 'light' };
+
+    // We expect the new inner theme to be a light theme, with a red primary.
+
+    const PrintThemeInSnapshot = () => {
+      const theme = useTheme();
+      return <View theme={theme} />;
+    };
+
+    const App = () => (
+      <Themer theme={outerTheme}>
+        <Themer theme={innerTheme}>
+          <PrintThemeInSnapshot />
+        </Themer>
+      </Themer>
+    );
+
+    const tree = renderer.create(<App />);
+    expect(tree).toMatchSnapshot();
+  });
 });

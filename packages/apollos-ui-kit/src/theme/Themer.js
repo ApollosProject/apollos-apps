@@ -11,6 +11,9 @@ const useTheme = () => useContext(ThemeContext);
 const IconContext = createContext();
 const useIcons = () => useContext(IconContext);
 
+const ThemeInputContext = createContext({});
+const useThemeInput = () => useContext(ThemeInputContext);
+
 // for backward compatibility with class based components
 const Theme = ThemeContext.Consumer;
 
@@ -33,26 +36,40 @@ const stripNullLeaves = (obj, cb) => {
   return out;
 };
 
-const Themer = ({ theme: customTheme, icons: customIcons, ...props }) => {
-  let theme = useTheme();
+const Themer = ({ theme: newThemeInput, icons: customIcons, ...props }) => {
+  // themeInput is an object used to create a theme - it's the input to the
+  // createTheme function. We hang on to the given themeInput in context as it
+  // is what's used to merge nested themes - really we don't want to merge the
+  // theme object itself, but the inputs used to generate each theme.
+  const themeInput = useThemeInput();
   const type = useColorScheme();
-  if (!theme) theme = createTheme({ type });
+
+  const mergedThemeInput = merge(
+    {},
+    { type },
+    { ...themeInput },
+    stripNullLeaves({ ...newThemeInput })
+  );
+
+  const newTheme = createTheme(mergedThemeInput);
 
   let icons = useIcons();
   if (!icons) icons = coreIcons;
 
   return (
     <IconContext.Provider value={{ ...icons, ...customIcons }}>
-      <ThemeContext.Provider
-        // this allows us to overwrite another provider somewhere up the chain.
-        // <Themer theme={theme}> can be used at the top level and then
-        // further down the tree <Themer theme={theme}> can be called to further
-        // customize the the theme
-        value={merge({}, theme, stripNullLeaves({ type, ...customTheme }))}
-        // prop spreading shouldn't be necessary, currently we are passing through
-        // the one signal key on the app template, need to find a way around
-        {...props}
-      />
+      <ThemeInputContext.Provider value={mergedThemeInput}>
+        <ThemeContext.Provider
+          // this allows us to overwrite another provider somewhere up the chain.
+          // <Themer theme={theme}> can be used at the top level and then
+          // further down the tree <Themer theme={theme}> can be called to further
+          // customize the the theme
+          value={newTheme}
+          // prop spreading shouldn't be necessary, currently we are passing through
+          // the one signal key on the app template, need to find a way around
+          {...props}
+        />
+      </ThemeInputContext.Provider>
     </IconContext.Provider>
   );
 };
