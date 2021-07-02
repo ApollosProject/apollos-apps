@@ -5,24 +5,19 @@ import {
   AvatarList,
   Card,
   CardContent,
-  H3,
-  H6,
   ImageSourceType,
   styled,
   withIsLoading,
   withTheme,
+  FeatureTitles,
 } from '@apollosproject/ui-kit';
 
 const AvatarWrapper = styled(
-  ({ theme }) => ({
+  {
     flexDirection: 'row',
-    paddingBottom: theme.sizing.baseUnit * 2, // TODO: refactor CardContent to have this be the default
-    // paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
     paddingHorizontal: 0,
-    /* Because `CardContent` is passing `paddingVertical` to `PaddedView` we can't set
-     * `PaddedView`'s `vertical` prop to false. So we have to define out own padding value here. */
-    paddingTop: theme.sizing.baseUnit,
-  }),
+    paddingTop: 0,
+  },
   'ui-prayer.PrayerFeature.AvatarWrapper'
 )(CardContent);
 
@@ -32,22 +27,6 @@ const getAvatars = (prayers) =>
     notification: !prayer.isPrayed,
     profile: prayer.requestor,
   }));
-
-const Header = styled(
-  ({ isCard, theme }) => ({
-    ...(isCard
-      ? {
-          paddingHorizontal: theme.sizing.baseUnit * 1.5, // TODO: refactor CardContent to have this be the default
-        }
-      : {
-          paddingTop: theme.sizing.baseUnit * 3, // // TODO: refactor CardContent to have this be the default
-        }),
-    /* Because `CardContent` is passing `paddingVertical` to `PaddedView` we can't set
-     * `PaddedView`'s `vertical` prop to false. So we have to define out own padding value here. */
-    paddingBottom: 0,
-  }),
-  'ui-prayer.PrayerFeature.Header'
-)(CardContent);
 
 const StyledAvatarList = withTheme(
   ({ isCard, theme }) => ({
@@ -61,17 +40,6 @@ const StyledAvatarList = withTheme(
   }),
   'ui-prayer.PrayerFeature.StyledAvatarList'
 )(AvatarList);
-
-/* TODO: Change to H5 and add appropriate padding. We are using H6 here to be consistant with other
- * "card titles" (`ActionListFeature`). */
-const Title = styled(
-  ({ theme }) => ({
-    color: theme.colors.text.tertiary,
-  }),
-  'ui-prayer.PrayerFeature.Title'
-)(H6);
-
-const Subtitle = styled({}, 'ui-prayer.PrayerFeature.Subtitle')(H3);
 
 const RenderAsCard = ({ children, isCard, isLoading }) =>
   isCard ? <Card isLoading={isLoading}>{children}</Card> : children;
@@ -93,12 +61,13 @@ const PrayerFeature = ({
 }) => (
   <RenderAsCard isCard={isCard} isLoading={isLoading}>
     {isLoading || title || subtitle ? ( // only display the Header if we are loading or have a title/subtitle
-      <Header isCard={isCard}>
-        {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
-          <Title numberOfLines={1}>{title}</Title>
-        ) : null}
-        {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
-      </Header>
+      <CardContent>
+        <FeatureTitles
+          isLoading={isLoading}
+          title={title}
+          subtitle={subtitle}
+        />
+      </CardContent>
     ) : null}
     <AvatarWrapper>
       <StyledAvatarList

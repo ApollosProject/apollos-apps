@@ -5,7 +5,7 @@ import { ScrollView } from 'react-native';
 import BackgroundView from '../BackgroundView';
 import CenteredView from '../CenteredView';
 import { CardLabel } from '../Card';
-
+import { ThemeMixin } from '../theme';
 import DefaultCard from './index';
 
 storiesOf('ui-kit/DefaultCard', module)
@@ -23,7 +23,7 @@ storiesOf('ui-kit/DefaultCard', module)
         }
         coverImage={[
           {
-            uri: 'https://picsum.photos/800/1600/?random',
+            uri: 'https://picsum.photos/id/857/800/1600',
           },
         ]}
         summary={
@@ -37,7 +37,7 @@ storiesOf('ui-kit/DefaultCard', module)
         }
         coverImage={[
           {
-            uri: 'https://picsum.photos/1400/800/?random',
+            uri: 'https://picsum.photos/id/324/1400/800',
           },
         ]}
         isLiked
@@ -51,12 +51,57 @@ storiesOf('ui-kit/DefaultCard', module)
         }
         coverImage={[
           {
-            uri: 'https://picsum.photos/800/800/?random',
+            uri: 'https://picsum.photos/id/100/800/800',
           },
         ]}
         isLiked={false}
       />
     </ScrollView>
+  ))
+  .add('dark examples', () => (
+    <ThemeMixin mixin={{ type: 'dark' }}>
+      <ScrollView>
+        <DefaultCard
+          title={
+            'Are you telling me that you built a time machine out of a DeLorean?'
+          }
+          coverImage={[
+            {
+              uri: 'https://picsum.photos/id/857/800/1600',
+            },
+          ]}
+          summary={
+            'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
+          }
+          labelText={'Quote'}
+        />
+        <DefaultCard
+          title={
+            'Are you telling me that you built a time machine out of a DeLorean?'
+          }
+          coverImage={[
+            {
+              uri: 'https://picsum.photos/id/324/1400/800',
+            },
+          ]}
+          isLiked
+          summary={
+            'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
+          }
+        />
+        <DefaultCard
+          title={
+            'Are you telling me that you built a time machine out of a DeLorean?'
+          }
+          coverImage={[
+            {
+              uri: 'https://picsum.photos/id/100/800/800',
+            },
+          ]}
+          isLiked={false}
+        />
+      </ScrollView>
+    </ThemeMixin>
   ))
   .add('default', () => (
     <DefaultCard
@@ -65,7 +110,7 @@ storiesOf('ui-kit/DefaultCard', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/1400/800/?random',
+          uri: 'https://picsum.photos/1400/800',
         },
       ]}
     />
@@ -77,7 +122,7 @@ storiesOf('ui-kit/DefaultCard', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/1400/800/?random',
+          uri: 'https://picsum.photos/1400/800',
         },
       ]}
       summary={
@@ -92,7 +137,7 @@ storiesOf('ui-kit/DefaultCard', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/1400/800/?random',
+          uri: 'https://picsum.photos/1400/800',
         },
       ]}
       isLiked={false}
@@ -105,7 +150,7 @@ storiesOf('ui-kit/DefaultCard', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/1400/800/?random',
+          uri: 'https://picsum.photos/1400/800',
         },
       ]}
       isLiked
@@ -118,29 +163,13 @@ storiesOf('ui-kit/DefaultCard', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/1400/800/?random',
+          uri: 'https://picsum.photos/1400/800',
         },
       ]}
       labelText={'Quote'}
     />
   ))
-  .add('isLoading', () => (
-    <DefaultCard
-      title={
-        'Are you telling me that you built a time machine out of a DeLorean?'
-      }
-      coverImage={[
-        {
-          uri: 'https://picsum.photos/1400/800/?random',
-        },
-      ]}
-      summary={
-        'The way I see it, if you’re going to build a time machine into a car, why not do it with some style?'
-      }
-      labelText={'Quote'}
-      isLoading
-    />
-  ))
+  .add('isLoading', () => <DefaultCard isLoading />)
   .add('LabelComponent', () => (
     <DefaultCard
       title={
@@ -148,7 +177,7 @@ storiesOf('ui-kit/DefaultCard', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/1400/800/?random',
+          uri: 'https://picsum.photos/1400/800',
         },
       ]}
       LabelComponent={
@@ -176,7 +205,7 @@ storiesOf('ui-kit/DefaultCard', module)
       }
       coverImage={[
         {
-          uri: 'https://picsum.photos/1400/800/?random',
+          uri: 'https://picsum.photos/1400/800',
         },
       ]}
       isLive

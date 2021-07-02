@@ -57,7 +57,6 @@ Array [
       >
         <Image
           fadeDuration={250}
-          isLoading={true}
           onLoad={[Function]}
           source={
             Array [
@@ -131,16 +130,24 @@ Array [
           style={
             Object {
               "alignItems": "center",
-              "alignSelf": "stretch",
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "height": 32,
-              "marginBottom": 16,
-              "paddingHorizontal": 12,
-              "width": 64,
+              "flex": null,
+              "flexDirection": "row",
             }
           }
-        />
+        >
+          <Text
+            style={
+              Object {
+                "color": "rgba(244, 247, 248, 0.6)",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 16,
+                "lineHeight": 24,
+              }
+            }
+          >
+            Live
+          </Text>
+        </View>
         <View
           style={
             Object {
@@ -1284,36 +1291,21 @@ Array [
         }
       >
         <View
-          bordered={false}
-          disabled={false}
-          pill={false}
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.4)",
-              "borderColor": "rgba(255, 255, 255, 0.4)",
-              "borderRadius": 16,
-              "borderWidth": 0,
-              "elevation": 2,
+              "flex": null,
               "flexDirection": "row",
-              "height": 32,
-              "justifyContent": "center",
-              "opacity": 1,
-              "overflow": "hidden",
-              "paddingHorizontal": 12,
             }
           }
         >
           <Text
             style={
               Object {
-                "alignItems": "center",
-                "color": "#FFFFFF",
+                "color": "rgba(244, 247, 248, 0.6)",
                 "fontFamily": "InterUI-Bold",
-                "fontSize": 12,
-                "justifyContent": "center",
-                "lineHeight": 18,
-                "textAlign": "center",
+                "fontSize": 16,
+                "lineHeight": 24,
               }
             }
           >
@@ -1485,36 +1477,21 @@ Array [
         }
       >
         <View
-          bordered={false}
-          disabled={false}
-          pill={false}
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "rgba(255, 255, 255, 0.4)",
-              "borderColor": "rgba(255, 255, 255, 0.4)",
-              "borderRadius": 16,
-              "borderWidth": 0,
-              "elevation": 2,
+              "flex": null,
               "flexDirection": "row",
-              "height": 32,
-              "justifyContent": "center",
-              "opacity": 1,
-              "overflow": "hidden",
-              "paddingHorizontal": 12,
             }
           }
         >
           <Text
             style={
               Object {
-                "alignItems": "center",
-                "color": "#FFFFFF",
+                "color": "rgba(244, 247, 248, 0.6)",
                 "fontFamily": "InterUI-Bold",
-                "fontSize": 12,
-                "justifyContent": "center",
-                "lineHeight": 18,
-                "textAlign": "center",
+                "fontSize": 16,
+                "lineHeight": 24,
               }
             }
           >
@@ -1686,155 +1663,21 @@ Array [
         }
       >
         <View
-          bordered={false}
-          disabled={false}
-          pill={false}
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#17B582",
-              "borderColor": "#17B582",
-              "borderRadius": 16,
-              "borderWidth": 2,
-              "elevation": 2,
+              "flex": null,
               "flexDirection": "row",
-              "height": 32,
-              "justifyContent": "center",
-              "opacity": 1,
-              "overflow": "hidden",
-              "paddingHorizontal": 12,
             }
           }
         >
-          <RNSVGSvgView
-            align="xMidYMid"
-            bbHeight={7}
-            bbWidth={7}
-            height={7}
-            meetOrSlice={0}
-            minX={0}
-            minY={0}
-            style={
-              Array [
-                Object {
-                  "backgroundColor": "transparent",
-                  "borderWidth": 0,
-                },
-                Object {
-                  "marginRight": 8,
-                },
-                null,
-                Object {
-                  "flex": 0,
-                  "height": 7,
-                  "width": 7,
-                },
-              ]
-            }
-            vbHeight={24}
-            vbWidth={24}
-            width={7}
-          >
-            <RNSVGGroup
-              fill={
-                Array [
-                  0,
-                  4278190080,
-                ]
-              }
-              fillOpacity={1}
-              fillRule={1}
-              font={Object {}}
-              matrix={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-              opacity={1}
-              originX={0}
-              originY={0}
-              propList={Array []}
-              rotation={0}
-              scaleX={1}
-              scaleY={1}
-              skewX={0}
-              skewY={0}
-              stroke={null}
-              strokeDasharray={null}
-              strokeDashoffset={null}
-              strokeLinecap={0}
-              strokeLinejoin={0}
-              strokeMiterlimit={4}
-              strokeOpacity={1}
-              strokeWidth={1}
-              vectorEffect={0}
-              x={0}
-              y={0}
-            >
-              <RNSVGCircle
-                cx="12"
-                cy="12"
-                fill={
-                  Array [
-                    0,
-                    4294967295,
-                  ]
-                }
-                fillOpacity={1}
-                fillRule={1}
-                matrix={
-                  Array [
-                    1,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                  ]
-                }
-                opacity={1}
-                originX={0}
-                originY={0}
-                propList={
-                  Array [
-                    "fill",
-                  ]
-                }
-                r="12"
-                rotation={0}
-                scaleX={1}
-                scaleY={1}
-                skewX={0}
-                skewY={0}
-                stroke={null}
-                strokeDasharray={null}
-                strokeDashoffset={null}
-                strokeLinecap={0}
-                strokeLinejoin={0}
-                strokeMiterlimit={4}
-                strokeOpacity={1}
-                strokeWidth={1}
-                vectorEffect={0}
-                x={0}
-                y={0}
-              />
-            </RNSVGGroup>
-          </RNSVGSvgView>
           <Text
             style={
               Object {
-                "alignItems": "center",
-                "color": "#FFFFFF",
+                "color": "rgba(244, 247, 248, 0.6)",
                 "fontFamily": "InterUI-Bold",
-                "fontSize": 12,
-                "justifyContent": "center",
-                "lineHeight": 18,
-                "textAlign": "center",
+                "fontSize": 16,
+                "lineHeight": 24,
               }
             }
           >
@@ -2588,155 +2431,21 @@ Array [
         }
       >
         <View
-          bordered={false}
-          disabled={false}
-          pill={false}
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#17B582",
-              "borderColor": "#17B582",
-              "borderRadius": 16,
-              "borderWidth": 2,
-              "elevation": 2,
+              "flex": null,
               "flexDirection": "row",
-              "height": 32,
-              "justifyContent": "center",
-              "opacity": 1,
-              "overflow": "hidden",
-              "paddingHorizontal": 12,
             }
           }
         >
-          <RNSVGSvgView
-            align="xMidYMid"
-            bbHeight={7}
-            bbWidth={7}
-            height={7}
-            meetOrSlice={0}
-            minX={0}
-            minY={0}
-            style={
-              Array [
-                Object {
-                  "backgroundColor": "transparent",
-                  "borderWidth": 0,
-                },
-                Object {
-                  "marginRight": 8,
-                },
-                null,
-                Object {
-                  "flex": 0,
-                  "height": 7,
-                  "width": 7,
-                },
-              ]
-            }
-            vbHeight={24}
-            vbWidth={24}
-            width={7}
-          >
-            <RNSVGGroup
-              fill={
-                Array [
-                  0,
-                  4278190080,
-                ]
-              }
-              fillOpacity={1}
-              fillRule={1}
-              font={Object {}}
-              matrix={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-              opacity={1}
-              originX={0}
-              originY={0}
-              propList={Array []}
-              rotation={0}
-              scaleX={1}
-              scaleY={1}
-              skewX={0}
-              skewY={0}
-              stroke={null}
-              strokeDasharray={null}
-              strokeDashoffset={null}
-              strokeLinecap={0}
-              strokeLinejoin={0}
-              strokeMiterlimit={4}
-              strokeOpacity={1}
-              strokeWidth={1}
-              vectorEffect={0}
-              x={0}
-              y={0}
-            >
-              <RNSVGCircle
-                cx="12"
-                cy="12"
-                fill={
-                  Array [
-                    0,
-                    4294967295,
-                  ]
-                }
-                fillOpacity={1}
-                fillRule={1}
-                matrix={
-                  Array [
-                    1,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                  ]
-                }
-                opacity={1}
-                originX={0}
-                originY={0}
-                propList={
-                  Array [
-                    "fill",
-                  ]
-                }
-                r="12"
-                rotation={0}
-                scaleX={1}
-                scaleY={1}
-                skewX={0}
-                skewY={0}
-                stroke={null}
-                strokeDasharray={null}
-                strokeDashoffset={null}
-                strokeLinecap={0}
-                strokeLinejoin={0}
-                strokeMiterlimit={4}
-                strokeOpacity={1}
-                strokeWidth={1}
-                vectorEffect={0}
-                x={0}
-                y={0}
-              />
-            </RNSVGGroup>
-          </RNSVGSvgView>
           <Text
             style={
               Object {
-                "alignItems": "center",
-                "color": "#FFFFFF",
+                "color": "rgba(244, 247, 248, 0.6)",
                 "fontFamily": "InterUI-Bold",
-                "fontSize": 12,
-                "justifyContent": "center",
-                "lineHeight": 18,
-                "textAlign": "center",
+                "fontSize": 16,
+                "lineHeight": 24,
               }
             }
           >

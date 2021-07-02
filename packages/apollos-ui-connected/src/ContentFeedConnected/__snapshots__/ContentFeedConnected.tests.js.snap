@@ -1,28 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`content feed query component renders a feedview after successful query 1`] = `
-<BVLinearGradient
-  colors={
-    Array [
-      4294967295,
-      4294572539,
-    ]
-  }
-  endPoint={
-    Object {
-      "x": 0.5,
-      "y": 1,
-    }
-  }
-  locations={null}
-  startPoint={
-    Object {
-      "x": 0.5,
-      "y": 0,
-    }
-  }
+<View
   style={
     Object {
+      "backgroundColor": "rgb(249, 249, 251)",
       "flex": 1,
       "height": "100%",
     }
@@ -138,8 +120,67 @@ exports[`content feed query component renders a feedview after successful query 
               <View
                 style={
                   Object {
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 1,
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
+                }
+              >
+                <Image
+                  blurRadius={80}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={Array []}
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  material="regular"
+                  style={
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 1,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <Image
+                fadeDuration={250}
+                isLoading={false}
+                onLoad={[Function]}
+                source={Array []}
+                style={
+                  Object {
+                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              />
+              <View
+                style={
+                  Object {
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                     "width": "100%",
                   }
                 }
@@ -147,68 +188,24 @@ exports[`content feed query component renders a feedview after successful query 
                 <View
                   style={
                     Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#A5A5A5",
-                      "width": "100%",
-                    }
-                  }
-                />
-              </View>
-              <View
-                style={
-                  Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
-                    "paddingVertical": 16,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "alignItems": "center",
+                      "flex": null,
+                      "flexDirection": "row",
                     }
                   }
                 >
-                  <View
-                    bordered={false}
-                    disabled={false}
-                    pill={false}
+                  <Text
                     style={
                       Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#17B582",
-                        "borderColor": "#17B582",
-                        "borderRadius": 16,
-                        "borderWidth": 2,
-                        "elevation": 2,
-                        "flexDirection": "row",
-                        "height": 32,
-                        "justifyContent": "center",
-                        "opacity": 1,
-                        "overflow": "hidden",
-                        "paddingHorizontal": 12,
+                        "color": "rgba(39, 39, 46, 0.6)",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 16,
+                        "lineHeight": 24,
                       }
                     }
                   >
-                    <Text
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "color": "#FFFFFF",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "justifyContent": "center",
-                          "lineHeight": 18,
-                          "textAlign": "center",
-                        }
-                      }
-                    >
-                      Editorial
-                    </Text>
-                  </View>
+                    Editorial
+                  </Text>
                 </View>
                 <Text
                   numberOfLines={2}
@@ -221,150 +218,49 @@ exports[`content feed query component renders a feedview after successful query 
                     }
                   }
                 >
-                  Mea Animal Aperiam Ornatus Eu
+                  <Text
+                    style={
+                      Object {
+                        "color": "#27272E",
+                      }
+                    }
+                  >
+                    Mea Animal Aperiam Ornatus Eu
+                  </Text>
                 </Text>
                 <Text
                   bold={false}
                   italic={false}
-                  numberOfLines={2}
+                  numberOfLines={3}
                   style={
                     Object {
                       "color": "#27272E",
                       "fontFamily": "InterUI-Regular",
                       "fontSize": 16,
                       "lineHeight": 26,
-                      "paddingTop": 16,
                     }
                   }
                 >
-                  Bla bla bla
-                </Text>
-              </View>
-              <View
-                style={
-                  Object {
-                    "position": "absolute",
-                    "right": 24,
-                    "top": 24,
-                  }
-                }
-              >
-                <RNSVGSvgView
-                  align="xMidYMid"
-                  bbHeight={24}
-                  bbWidth={24}
-                  height={24}
-                  isLiked={false}
-                  meetOrSlice={0}
-                  minX={0}
-                  minY={0}
-                  style={
-                    Array [
+                  <Text
+                    style={
                       Object {
-                        "backgroundColor": "transparent",
-                        "borderWidth": 0,
-                      },
-                      undefined,
-                      null,
-                      Object {
-                        "flex": 0,
-                        "height": 24,
-                        "width": 24,
-                      },
-                    ]
-                  }
-                  vbHeight={24}
-                  vbWidth={24}
-                  width={24}
-                >
-                  <RNSVGGroup
-                    fill={
-                      Array [
-                        0,
-                        4278190080,
-                      ]
+                        "color": "rgba(39, 39, 46, 0.6)",
+                      }
                     }
-                    fillOpacity={1}
-                    fillRule={1}
-                    font={Object {}}
-                    matrix={
-                      Array [
-                        1,
-                        0,
-                        0,
-                        1,
-                        0,
-                        0,
-                      ]
-                    }
-                    opacity={1}
-                    originX={0}
-                    originY={0}
-                    propList={Array []}
-                    rotation={0}
-                    scaleX={1}
-                    scaleY={1}
-                    skewX={0}
-                    skewY={0}
-                    stroke={null}
-                    strokeDasharray={null}
-                    strokeDashoffset={null}
-                    strokeLinecap={0}
-                    strokeLinejoin={0}
-                    strokeMiterlimit={4}
-                    strokeOpacity={1}
-                    strokeWidth={1}
-                    vectorEffect={0}
-                    x={0}
-                    y={0}
                   >
-                    <RNSVGPath
-                      d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
-                      fill={
-                        Array [
-                          0,
-                          4294967295,
-                        ]
-                      }
-                      fillOpacity={1}
-                      fillRule={1}
-                      matrix={
-                        Array [
-                          1,
-                          0,
-                          0,
-                          1,
-                          0,
-                          0,
-                        ]
-                      }
-                      opacity={1}
-                      originX={0}
-                      originY={0}
-                      propList={
-                        Array [
-                          "fill",
-                        ]
-                      }
-                      rotation={0}
-                      scaleX={1}
-                      scaleY={1}
-                      skewX={0}
-                      skewY={0}
-                      stroke={null}
-                      strokeDasharray={null}
-                      strokeDashoffset={null}
-                      strokeLinecap={0}
-                      strokeLinejoin={0}
-                      strokeMiterlimit={4}
-                      strokeOpacity={1}
-                      strokeWidth={1}
-                      vectorEffect={0}
-                      x={0}
-                      y={0}
-                    />
-                  </RNSVGGroup>
-                </RNSVGSvgView>
+                    Bla bla bla
+                  </Text>
+                </Text>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
+                      "width": "100%",
+                    }
+                  }
+                />
               </View>
             </View>
           </View>
@@ -423,8 +319,67 @@ exports[`content feed query component renders a feedview after successful query 
               <View
                 style={
                   Object {
+                    "backgroundColor": "rgb(249, 249, 251)",
+                    "bottom": 0,
+                    "flex": 1,
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
+                }
+              >
+                <Image
+                  blurRadius={80}
+                  fadeDuration={250}
+                  onLoad={[Function]}
+                  source={Array []}
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+                <View
+                  material="regular"
+                  style={
+                    Object {
+                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                      "bottom": 0,
+                      "flex": 1,
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <Image
+                fadeDuration={250}
+                isLoading={false}
+                onLoad={[Function]}
+                source={Array []}
+                style={
+                  Object {
+                    "aspectRatio": 1,
                     "backgroundColor": "#A5A5A5",
-                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              />
+              <View
+                style={
+                  Object {
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
                     "width": "100%",
                   }
                 }
@@ -432,68 +387,24 @@ exports[`content feed query component renders a feedview after successful query 
                 <View
                   style={
                     Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#A5A5A5",
-                      "width": "100%",
-                    }
-                  }
-                />
-              </View>
-              <View
-                style={
-                  Object {
-                    "alignItems": "flex-start",
-                    "paddingBottom": 32,
-                    "paddingHorizontal": 24,
-                    "paddingVertical": 16,
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "alignItems": "center",
+                      "flex": null,
+                      "flexDirection": "row",
                     }
                   }
                 >
-                  <View
-                    bordered={false}
-                    disabled={false}
-                    pill={false}
+                  <Text
                     style={
                       Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#17B582",
-                        "borderColor": "#17B582",
-                        "borderRadius": 16,
-                        "borderWidth": 2,
-                        "elevation": 2,
-                        "flexDirection": "row",
-                        "height": 32,
-                        "justifyContent": "center",
-                        "opacity": 1,
-                        "overflow": "hidden",
-                        "paddingHorizontal": 12,
+                        "color": "rgba(39, 39, 46, 0.6)",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 16,
+                        "lineHeight": 24,
                       }
                     }
                   >
-                    <Text
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "color": "#FFFFFF",
-                          "fontFamily": "InterUI-Bold",
-                          "fontSize": 12,
-                          "justifyContent": "center",
-                          "lineHeight": 18,
-                          "textAlign": "center",
-                        }
-                      }
-                    >
-                      Editorial
-                    </Text>
-                  </View>
+                    Editorial
+                  </Text>
                 </View>
                 <Text
                   numberOfLines={2}
@@ -506,150 +417,49 @@ exports[`content feed query component renders a feedview after successful query 
                     }
                   }
                 >
-                  Probo Senserit Id Mea, Ut Sed Malis Postea,
+                  <Text
+                    style={
+                      Object {
+                        "color": "#27272E",
+                      }
+                    }
+                  >
+                    Probo Senserit Id Mea, Ut Sed Malis Postea,
+                  </Text>
                 </Text>
                 <Text
                   bold={false}
                   italic={false}
-                  numberOfLines={2}
+                  numberOfLines={3}
                   style={
                     Object {
                       "color": "#27272E",
                       "fontFamily": "InterUI-Regular",
                       "fontSize": 16,
                       "lineHeight": 26,
-                      "paddingTop": 16,
                     }
                   }
                 >
-                  Bla bla bla
-                </Text>
-              </View>
-              <View
-                style={
-                  Object {
-                    "position": "absolute",
-                    "right": 24,
-                    "top": 24,
-                  }
-                }
-              >
-                <RNSVGSvgView
-                  align="xMidYMid"
-                  bbHeight={24}
-                  bbWidth={24}
-                  height={24}
-                  isLiked={false}
-                  meetOrSlice={0}
-                  minX={0}
-                  minY={0}
-                  style={
-                    Array [
+                  <Text
+                    style={
                       Object {
-                        "backgroundColor": "transparent",
-                        "borderWidth": 0,
-                      },
-                      undefined,
-                      null,
-                      Object {
-                        "flex": 0,
-                        "height": 24,
-                        "width": 24,
-                      },
-                    ]
-                  }
-                  vbHeight={24}
-                  vbWidth={24}
-                  width={24}
-                >
-                  <RNSVGGroup
-                    fill={
-                      Array [
-                        0,
-                        4278190080,
-                      ]
+                        "color": "rgba(39, 39, 46, 0.6)",
+                      }
                     }
-                    fillOpacity={1}
-                    fillRule={1}
-                    font={Object {}}
-                    matrix={
-                      Array [
-                        1,
-                        0,
-                        0,
-                        1,
-                        0,
-                        0,
-                      ]
-                    }
-                    opacity={1}
-                    originX={0}
-                    originY={0}
-                    propList={Array []}
-                    rotation={0}
-                    scaleX={1}
-                    scaleY={1}
-                    skewX={0}
-                    skewY={0}
-                    stroke={null}
-                    strokeDasharray={null}
-                    strokeDashoffset={null}
-                    strokeLinecap={0}
-                    strokeLinejoin={0}
-                    strokeMiterlimit={4}
-                    strokeOpacity={1}
-                    strokeWidth={1}
-                    vectorEffect={0}
-                    x={0}
-                    y={0}
                   >
-                    <RNSVGPath
-                      d="M13.13 20.2h-2.26l1.4-1.4.03-.02.03-.03c6.37-5.6 8.06-7.67 8.06-10.27 0-2.2-1.7-3.9-3.9-3.9-1.23 0-2.48.6-3.28 1.54L12 7.57l-1.23-1.45C9.97 5.18 8.72 4.6 7.5 4.6c-2.2 0-3.9 1.67-3.9 3.88 0 2.6 1.7 4.66 8.07 10.27l.03.03.04.03 1.4 1.4zM10.8 4.03l-.03.03h.1c.4.3.8.64 1.13 1.03.33-.4.72-.75 1.14-1.05h.1c-.02 0-.03-.02-.04-.03.97-.66 2.13-1.03 3.3-1.03C19.6 3 22 5.4 22 8.47c0 3.8-3.4 6.88-8.6 11.46l-1.4 1.4-1.4-1.4C5.4 15.36 2 12.27 2 8.48 2 5.38 4.4 3 7.5 3c1.17 0 2.33.37 3.3 1.03z"
-                      fill={
-                        Array [
-                          0,
-                          4294967295,
-                        ]
-                      }
-                      fillOpacity={1}
-                      fillRule={1}
-                      matrix={
-                        Array [
-                          1,
-                          0,
-                          0,
-                          1,
-                          0,
-                          0,
-                        ]
-                      }
-                      opacity={1}
-                      originX={0}
-                      originY={0}
-                      propList={
-                        Array [
-                          "fill",
-                        ]
-                      }
-                      rotation={0}
-                      scaleX={1}
-                      scaleY={1}
-                      skewX={0}
-                      skewY={0}
-                      stroke={null}
-                      strokeDasharray={null}
-                      strokeDashoffset={null}
-                      strokeLinecap={0}
-                      strokeLinejoin={0}
-                      strokeMiterlimit={4}
-                      strokeOpacity={1}
-                      strokeWidth={1}
-                      vectorEffect={0}
-                      x={0}
-                      y={0}
-                    />
-                  </RNSVGGroup>
-                </RNSVGSvgView>
+                    Bla bla bla
+                  </Text>
+                </Text>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingTop": 8,
+                      "width": "100%",
+                    }
+                  }
+                />
               </View>
             </View>
           </View>
@@ -657,5 +467,5 @@ exports[`content feed query component renders a feedview after successful query 
       </View>
     </View>
   </RCTScrollView>
-</BVLinearGradient>
+</View>
 `;

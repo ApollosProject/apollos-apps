@@ -4,6 +4,7 @@ import { compose, pure, setDisplayName } from 'recompose';
 
 import styled from '../../styled';
 import { withPlaceholder, Typography } from '../../Placeholder';
+import withThemeColor from '../withThemeColor';
 
 const styles = styled(({ theme, bold, italic }) => {
   let fontStack = theme.typography.sans.regular.default;
@@ -26,6 +27,7 @@ const styles = styled(({ theme, bold, italic }) => {
 
 const BodySmall = compose(
   setDisplayName('BodySmall'),
+  withThemeColor,
   styles,
   withPlaceholder(Typography),
   pure

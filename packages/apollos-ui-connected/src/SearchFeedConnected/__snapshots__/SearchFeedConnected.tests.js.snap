@@ -448,10 +448,9 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           }
                         >
                           <View
-                            cardColor="#00676D"
                             style={
                               Object {
-                                "backgroundColor": "#00676D",
+                                "backgroundColor": "#FFFFFF",
                                 "borderRadius": 16,
                                 "marginHorizontal": 16,
                                 "marginVertical": 12,
@@ -476,13 +475,19 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               <View
                                 style={
                                   Object {
-                                    "backgroundColor": "#A5A5A5",
-                                    "overflow": "hidden",
-                                    "width": "100%",
+                                    "backgroundColor": "rgb(249, 249, 251)",
+                                    "bottom": 0,
+                                    "flex": 1,
+                                    "height": "100%",
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
                                   }
                                 }
                               >
                                 <Image
+                                  blurRadius={80}
                                   fadeDuration={250}
                                   onLoad={[Function]}
                                   source={
@@ -496,42 +501,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                   style={
                                     Object {
-                                      "aspectRatio": 1,
                                       "backgroundColor": "#A5A5A5",
-                                      "resizeMode": "cover",
-                                      "width": "100%",
-                                    }
-                                  }
-                                />
-                                <BVLinearGradient
-                                  colors={
-                                    Array [
-                                      1711276032,
-                                      2147483648,
-                                    ]
-                                  }
-                                  endPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 1,
-                                    }
-                                  }
-                                  locations={
-                                    Array [
-                                      0,
-                                      1,
-                                    ]
-                                  }
-                                  overlayColor="#000000"
-                                  overlayType="gradient-bottom"
-                                  startPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 0,
-                                    }
-                                  }
-                                  style={
-                                    Object {
                                       "bottom": 0,
                                       "left": 0,
                                       "position": "absolute",
@@ -540,148 +510,48 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                     }
                                   }
                                 />
-                              </View>
-                              <View
-                                style={
-                                  Object {
-                                    "alignItems": "flex-start",
-                                    "bottom": 0,
-                                    "paddingBottom": 32,
-                                    "paddingHorizontal": 24,
-                                    "paddingVertical": 16,
-                                    "position": "absolute",
-                                    "width": "100%",
-                                  }
-                                }
-                              >
-                                <Text
-                                  numberOfLines={3}
-                                  style={
-                                    Object {
-                                      "color": "#F4F7F8",
-                                      "fontFamily": "InterUI-Black",
-                                      "fontSize": 24,
-                                      "lineHeight": 27.6,
-                                    }
-                                  }
-                                >
-                                  How to lead people to Jesus
-                                </Text>
                                 <View
-                                  hasSummary={true}
+                                  material="regular"
                                   style={
                                     Object {
-                                      "alignItems": "center",
-                                      "flexDirection": "row",
-                                      "paddingTop": 16,
-                                    }
-                                  }
-                                >
-                                  <View
-                                    style={
-                                      Object {
-                                        "flex": 1,
-                                        "marginRight": 16,
-                                      }
-                                    }
-                                  >
-                                    <Text
-                                      bold={false}
-                                      italic={false}
-                                      numberOfLines={2}
-                                      style={
-                                        Object {
-                                          "color": "#F4F7F8",
-                                          "fontFamily": "InterUI-Regular",
-                                          "fontSize": 16,
-                                          "lineHeight": 26,
-                                        }
-                                      }
-                                    >
-                                      Love compels a mother to lose all dignity in public as she screams the name of her lost child.
-                                    </Text>
-                                  </View>
-                                </View>
-                              </View>
-                            </View>
-                          </View>
-                        </View>
-                      </View>
-                      <View
-                        onLayout={[Function]}
-                        style={null}
-                      >
-                        <View
-                          accessible={true}
-                          focusable={true}
-                          onClick={[Function]}
-                          onResponderGrant={[Function]}
-                          onResponderMove={[Function]}
-                          onResponderRelease={[Function]}
-                          onResponderTerminate={[Function]}
-                          onResponderTerminationRequest={[Function]}
-                          onStartShouldSetResponder={[Function]}
-                          style={
-                            Object {
-                              "transform": Array [
-                                Object {
-                                  "scale": 1,
-                                },
-                              ],
-                            }
-                          }
-                        >
-                          <View
-                            style={
-                              Object {
-                                "backgroundColor": "#FFFFFF",
-                                "borderRadius": 16,
-                                "marginHorizontal": 16,
-                                "marginVertical": 12,
-                                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-                                "shadowOffset": Object {
-                                  "height": 2,
-                                  "width": 0,
-                                },
-                                "shadowOpacity": 1,
-                                "shadowRadius": 8,
-                              }
-                            }
-                          >
-                            <View
-                              style={
-                                Object {
-                                  "borderRadius": 16,
-                                  "overflow": "hidden",
-                                }
-                              }
-                            >
-                              <View
-                                style={
-                                  Object {
-                                    "backgroundColor": "#A5A5A5",
-                                    "overflow": "hidden",
-                                    "width": "100%",
-                                  }
-                                }
-                              >
-                                <View
-                                  style={
-                                    Object {
-                                      "aspectRatio": 1,
-                                      "backgroundColor": "#A5A5A5",
-                                      "width": "100%",
+                                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                                      "bottom": 0,
+                                      "flex": 1,
+                                      "height": "100%",
+                                      "left": 0,
+                                      "position": "absolute",
+                                      "right": 0,
+                                      "top": 0,
                                     }
                                   }
                                 />
                               </View>
+                              <Image
+                                fadeDuration={250}
+                                onLoad={[Function]}
+                                source={
+                                  Array [
+                                    Object {
+                                      "__typename": "ImageMediaSource",
+                                      "cache": "force-cache",
+                                      "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dd3a96243-2558-4c04-bf41-3aadcf41771f",
+                                    },
+                                  ]
+                                }
+                                style={
+                                  Object {
+                                    "aspectRatio": 1,
+                                    "backgroundColor": "#A5A5A5",
+                                    "width": "100%",
+                                  }
+                                }
+                              />
                               <View
                                 style={
                                   Object {
-                                    "alignItems": "flex-start",
-                                    "paddingBottom": 32,
-                                    "paddingHorizontal": 24,
+                                    "paddingHorizontal": 16,
                                     "paddingVertical": 16,
+                                    "width": "100%",
                                   }
                                 }
                               >
@@ -696,25 +566,49 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                     }
                                   }
                                 >
-                                  Live for Freedom Toolkit
+                                  <Text
+                                    style={
+                                      Object {
+                                        "color": "#27272E",
+                                      }
+                                    }
+                                  >
+                                    How to lead people to Jesus
+                                  </Text>
                                 </Text>
                                 <Text
                                   bold={false}
                                   italic={false}
-                                  numberOfLines={2}
+                                  numberOfLines={3}
                                   style={
                                     Object {
                                       "color": "#27272E",
                                       "fontFamily": "InterUI-Regular",
                                       "fontSize": 16,
                                       "lineHeight": 26,
-                                      "paddingTop": 16,
                                     }
                                   }
                                 >
-                                  Get in the Groove
-Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.
+                                  <Text
+                                    style={
+                                      Object {
+                                        "color": "rgba(39, 39, 46, 0.6)",
+                                      }
+                                    }
+                                  >
+                                    Love compels a mother to lose all dignity in public as she screams the name of her lost child.
+                                  </Text>
                                 </Text>
+                                <View
+                                  style={
+                                    Object {
+                                      "flexDirection": "row",
+                                      "justifyContent": "space-between",
+                                      "paddingTop": 8,
+                                      "width": "100%",
+                                    }
+                                  }
+                                />
                               </View>
                             </View>
                           </View>
@@ -772,13 +666,195 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               <View
                                 style={
                                   Object {
-                                    "backgroundColor": "#A5A5A5",
-                                    "overflow": "hidden",
-                                    "width": "100%",
+                                    "backgroundColor": "rgb(249, 249, 251)",
+                                    "bottom": 0,
+                                    "flex": 1,
+                                    "height": "100%",
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
                                   }
                                 }
                               >
                                 <Image
+                                  blurRadius={80}
+                                  fadeDuration={250}
+                                  onLoad={[Function]}
+                                  source={Array []}
+                                  style={
+                                    Object {
+                                      "backgroundColor": "#A5A5A5",
+                                      "bottom": 0,
+                                      "left": 0,
+                                      "position": "absolute",
+                                      "right": 0,
+                                      "top": 0,
+                                    }
+                                  }
+                                />
+                                <View
+                                  material="regular"
+                                  style={
+                                    Object {
+                                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                                      "bottom": 0,
+                                      "flex": 1,
+                                      "height": "100%",
+                                      "left": 0,
+                                      "position": "absolute",
+                                      "right": 0,
+                                      "top": 0,
+                                    }
+                                  }
+                                />
+                              </View>
+                              <Image
+                                fadeDuration={250}
+                                onLoad={[Function]}
+                                source={Array []}
+                                style={
+                                  Object {
+                                    "aspectRatio": 1,
+                                    "backgroundColor": "#A5A5A5",
+                                    "width": "100%",
+                                  }
+                                }
+                              />
+                              <View
+                                style={
+                                  Object {
+                                    "paddingHorizontal": 16,
+                                    "paddingVertical": 16,
+                                    "width": "100%",
+                                  }
+                                }
+                              >
+                                <Text
+                                  numberOfLines={2}
+                                  style={
+                                    Object {
+                                      "color": "#27272E",
+                                      "fontFamily": "InterUI-Black",
+                                      "fontSize": 24,
+                                      "lineHeight": 27.6,
+                                    }
+                                  }
+                                >
+                                  <Text
+                                    style={
+                                      Object {
+                                        "color": "#27272E",
+                                      }
+                                    }
+                                  >
+                                    Live for Freedom Toolkit
+                                  </Text>
+                                </Text>
+                                <Text
+                                  bold={false}
+                                  italic={false}
+                                  numberOfLines={3}
+                                  style={
+                                    Object {
+                                      "color": "#27272E",
+                                      "fontFamily": "InterUI-Regular",
+                                      "fontSize": 16,
+                                      "lineHeight": 26,
+                                    }
+                                  }
+                                >
+                                  <Text
+                                    style={
+                                      Object {
+                                        "color": "rgba(39, 39, 46, 0.6)",
+                                      }
+                                    }
+                                  >
+                                    Get in the Groove
+Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.
+                                  </Text>
+                                </Text>
+                                <View
+                                  style={
+                                    Object {
+                                      "flexDirection": "row",
+                                      "justifyContent": "space-between",
+                                      "paddingTop": 8,
+                                      "width": "100%",
+                                    }
+                                  }
+                                />
+                              </View>
+                            </View>
+                          </View>
+                        </View>
+                      </View>
+                      <View
+                        onLayout={[Function]}
+                        style={null}
+                      >
+                        <View
+                          accessible={true}
+                          focusable={true}
+                          onClick={[Function]}
+                          onResponderGrant={[Function]}
+                          onResponderMove={[Function]}
+                          onResponderRelease={[Function]}
+                          onResponderTerminate={[Function]}
+                          onResponderTerminationRequest={[Function]}
+                          onStartShouldSetResponder={[Function]}
+                          style={
+                            Object {
+                              "transform": Array [
+                                Object {
+                                  "scale": 1,
+                                },
+                              ],
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "backgroundColor": "#FFFFFF",
+                                "borderRadius": 16,
+                                "marginHorizontal": 16,
+                                "marginVertical": 12,
+                                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                                "shadowOffset": Object {
+                                  "height": 2,
+                                  "width": 0,
+                                },
+                                "shadowOpacity": 1,
+                                "shadowRadius": 8,
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "borderRadius": 16,
+                                  "overflow": "hidden",
+                                }
+                              }
+                            >
+                              <View
+                                style={
+                                  Object {
+                                    "backgroundColor": "rgb(249, 249, 251)",
+                                    "bottom": 0,
+                                    "flex": 1,
+                                    "height": "100%",
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
+                                  }
+                                }
+                              >
+                                <Image
+                                  blurRadius={80}
                                   fadeDuration={250}
                                   onLoad={[Function]}
                                   source={
@@ -792,21 +868,57 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                   style={
                                     Object {
-                                      "aspectRatio": 1.2,
                                       "backgroundColor": "#A5A5A5",
-                                      "resizeMode": "cover",
-                                      "width": "100%",
+                                      "bottom": 0,
+                                      "left": 0,
+                                      "position": "absolute",
+                                      "right": 0,
+                                      "top": 0,
+                                    }
+                                  }
+                                />
+                                <View
+                                  material="regular"
+                                  style={
+                                    Object {
+                                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                                      "bottom": 0,
+                                      "flex": 1,
+                                      "height": "100%",
+                                      "left": 0,
+                                      "position": "absolute",
+                                      "right": 0,
+                                      "top": 0,
                                     }
                                   }
                                 />
                               </View>
+                              <Image
+                                fadeDuration={250}
+                                onLoad={[Function]}
+                                source={
+                                  Array [
+                                    Object {
+                                      "__typename": "ImageMediaSource",
+                                      "cache": "force-cache",
+                                      "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Db08e4d69-0acf-40ff-920a-4517de086175",
+                                    },
+                                  ]
+                                }
+                                style={
+                                  Object {
+                                    "aspectRatio": 1,
+                                    "backgroundColor": "#A5A5A5",
+                                    "width": "100%",
+                                  }
+                                }
+                              />
                               <View
                                 style={
                                   Object {
-                                    "alignItems": "flex-start",
-                                    "paddingBottom": 32,
-                                    "paddingHorizontal": 24,
+                                    "paddingHorizontal": 16,
                                     "paddingVertical": 16,
+                                    "width": "100%",
                                   }
                                 }
                               >
@@ -821,24 +933,49 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                     }
                                   }
                                 >
-                                  Should your 20-something live at home?
+                                  <Text
+                                    style={
+                                      Object {
+                                        "color": "#27272E",
+                                      }
+                                    }
+                                  >
+                                    Should your 20-something live at home?
+                                  </Text>
                                 </Text>
                                 <Text
                                   bold={false}
                                   italic={false}
-                                  numberOfLines={2}
+                                  numberOfLines={3}
                                   style={
                                     Object {
                                       "color": "#27272E",
                                       "fontFamily": "InterUI-Regular",
                                       "fontSize": 16,
                                       "lineHeight": 26,
-                                      "paddingTop": 16,
                                     }
                                   }
                                 >
-                                  Daughter: “Mom, can I bring some friends from college over for dinner Sunday?
+                                  <Text
+                                    style={
+                                      Object {
+                                        "color": "rgba(39, 39, 46, 0.6)",
+                                      }
+                                    }
+                                  >
+                                    Daughter: “Mom, can I bring some friends from college over for dinner Sunday?
+                                  </Text>
                                 </Text>
+                                <View
+                                  style={
+                                    Object {
+                                      "flexDirection": "row",
+                                      "justifyContent": "space-between",
+                                      "paddingTop": 8,
+                                      "width": "100%",
+                                    }
+                                  }
+                                />
                               </View>
                             </View>
                           </View>
@@ -896,13 +1033,19 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               <View
                                 style={
                                   Object {
-                                    "backgroundColor": "#A5A5A5",
-                                    "overflow": "hidden",
-                                    "width": "100%",
+                                    "backgroundColor": "rgb(249, 249, 251)",
+                                    "bottom": 0,
+                                    "flex": 1,
+                                    "height": "100%",
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
                                   }
                                 }
                               >
                                 <Image
+                                  blurRadius={80}
                                   fadeDuration={250}
                                   onLoad={[Function]}
                                   source={
@@ -916,21 +1059,57 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                   style={
                                     Object {
-                                      "aspectRatio": 1.2,
                                       "backgroundColor": "#A5A5A5",
-                                      "resizeMode": "cover",
-                                      "width": "100%",
+                                      "bottom": 0,
+                                      "left": 0,
+                                      "position": "absolute",
+                                      "right": 0,
+                                      "top": 0,
+                                    }
+                                  }
+                                />
+                                <View
+                                  material="regular"
+                                  style={
+                                    Object {
+                                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                                      "bottom": 0,
+                                      "flex": 1,
+                                      "height": "100%",
+                                      "left": 0,
+                                      "position": "absolute",
+                                      "right": 0,
+                                      "top": 0,
                                     }
                                   }
                                 />
                               </View>
+                              <Image
+                                fadeDuration={250}
+                                onLoad={[Function]}
+                                source={
+                                  Array [
+                                    Object {
+                                      "__typename": "ImageMediaSource",
+                                      "cache": "force-cache",
+                                      "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D58c037fa-cc7f-4d72-9571-a0cc0558e346",
+                                    },
+                                  ]
+                                }
+                                style={
+                                  Object {
+                                    "aspectRatio": 1,
+                                    "backgroundColor": "#A5A5A5",
+                                    "width": "100%",
+                                  }
+                                }
+                              />
                               <View
                                 style={
                                   Object {
-                                    "alignItems": "flex-start",
-                                    "paddingBottom": 32,
-                                    "paddingHorizontal": 24,
+                                    "paddingHorizontal": 16,
                                     "paddingVertical": 16,
+                                    "width": "100%",
                                   }
                                 }
                               >
@@ -945,24 +1124,49 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                     }
                                   }
                                 >
-                                  Guys Night!
+                                  <Text
+                                    style={
+                                      Object {
+                                        "color": "#27272E",
+                                      }
+                                    }
+                                  >
+                                    Guys Night!
+                                  </Text>
                                 </Text>
                                 <Text
                                   bold={false}
                                   italic={false}
-                                  numberOfLines={2}
+                                  numberOfLines={3}
                                   style={
                                     Object {
                                       "color": "#27272E",
                                       "fontFamily": "InterUI-Regular",
                                       "fontSize": 16,
                                       "lineHeight": 26,
-                                      "paddingTop": 16,
                                     }
                                   }
                                 >
-                                  A time to connect with other guys who live nearby.
+                                  <Text
+                                    style={
+                                      Object {
+                                        "color": "rgba(39, 39, 46, 0.6)",
+                                      }
+                                    }
+                                  >
+                                    A time to connect with other guys who live nearby.
+                                  </Text>
                                 </Text>
+                                <View
+                                  style={
+                                    Object {
+                                      "flexDirection": "row",
+                                      "justifyContent": "space-between",
+                                      "paddingTop": 8,
+                                      "width": "100%",
+                                    }
+                                  }
+                                />
                               </View>
                             </View>
                           </View>
@@ -1020,29 +1224,67 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               <View
                                 style={
                                   Object {
-                                    "backgroundColor": "#A5A5A5",
-                                    "overflow": "hidden",
-                                    "width": "100%",
+                                    "backgroundColor": "rgb(249, 249, 251)",
+                                    "bottom": 0,
+                                    "flex": 1,
+                                    "height": "100%",
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
                                   }
                                 }
                               >
-                                <View
+                                <Image
+                                  blurRadius={80}
+                                  fadeDuration={250}
+                                  onLoad={[Function]}
+                                  source={Array []}
                                   style={
                                     Object {
-                                      "aspectRatio": 1,
                                       "backgroundColor": "#A5A5A5",
-                                      "width": "100%",
+                                      "bottom": 0,
+                                      "left": 0,
+                                      "position": "absolute",
+                                      "right": 0,
+                                      "top": 0,
+                                    }
+                                  }
+                                />
+                                <View
+                                  material="regular"
+                                  style={
+                                    Object {
+                                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                                      "bottom": 0,
+                                      "flex": 1,
+                                      "height": "100%",
+                                      "left": 0,
+                                      "position": "absolute",
+                                      "right": 0,
+                                      "top": 0,
                                     }
                                   }
                                 />
                               </View>
+                              <Image
+                                fadeDuration={250}
+                                onLoad={[Function]}
+                                source={Array []}
+                                style={
+                                  Object {
+                                    "aspectRatio": 1,
+                                    "backgroundColor": "#A5A5A5",
+                                    "width": "100%",
+                                  }
+                                }
+                              />
                               <View
                                 style={
                                   Object {
-                                    "alignItems": "flex-start",
-                                    "paddingBottom": 32,
-                                    "paddingHorizontal": 24,
+                                    "paddingHorizontal": 16,
                                     "paddingVertical": 16,
+                                    "width": "100%",
                                   }
                                 }
                               >
@@ -1057,24 +1299,49 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                     }
                                   }
                                 >
-                                  10 ways to refresh your spirit every day
+                                  <Text
+                                    style={
+                                      Object {
+                                        "color": "#27272E",
+                                      }
+                                    }
+                                  >
+                                    10 ways to refresh your spirit every day
+                                  </Text>
                                 </Text>
                                 <Text
                                   bold={false}
                                   italic={false}
-                                  numberOfLines={2}
+                                  numberOfLines={3}
                                   style={
                                     Object {
                                       "color": "#27272E",
                                       "fontFamily": "InterUI-Regular",
                                       "fontSize": 16,
                                       "lineHeight": 26,
-                                      "paddingTop": 16,
                                     }
                                   }
                                 >
-                                  1. Be slow What would it look like to live your life at half-speed?
+                                  <Text
+                                    style={
+                                      Object {
+                                        "color": "rgba(39, 39, 46, 0.6)",
+                                      }
+                                    }
+                                  >
+                                    1. Be slow What would it look like to live your life at half-speed?
+                                  </Text>
                                 </Text>
+                                <View
+                                  style={
+                                    Object {
+                                      "flexDirection": "row",
+                                      "justifyContent": "space-between",
+                                      "paddingTop": 8,
+                                      "width": "100%",
+                                    }
+                                  }
+                                />
                               </View>
                             </View>
                           </View>
@@ -1105,10 +1372,9 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                           }
                         >
                           <View
-                            cardColor="#00676D"
                             style={
                               Object {
-                                "backgroundColor": "#00676D",
+                                "backgroundColor": "#FFFFFF",
                                 "borderRadius": 16,
                                 "marginHorizontal": 16,
                                 "marginVertical": 12,
@@ -1133,13 +1399,19 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               <View
                                 style={
                                   Object {
-                                    "backgroundColor": "#A5A5A5",
-                                    "overflow": "hidden",
-                                    "width": "100%",
+                                    "backgroundColor": "rgb(249, 249, 251)",
+                                    "bottom": 0,
+                                    "flex": 1,
+                                    "height": "100%",
+                                    "left": 0,
+                                    "position": "absolute",
+                                    "right": 0,
+                                    "top": 0,
                                   }
                                 }
                               >
                                 <Image
+                                  blurRadius={80}
                                   fadeDuration={250}
                                   onLoad={[Function]}
                                   source={
@@ -1153,42 +1425,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                   style={
                                     Object {
-                                      "aspectRatio": 1,
                                       "backgroundColor": "#A5A5A5",
-                                      "resizeMode": "cover",
-                                      "width": "100%",
-                                    }
-                                  }
-                                />
-                                <BVLinearGradient
-                                  colors={
-                                    Array [
-                                      1711276032,
-                                      2147483648,
-                                    ]
-                                  }
-                                  endPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 1,
-                                    }
-                                  }
-                                  locations={
-                                    Array [
-                                      0,
-                                      1,
-                                    ]
-                                  }
-                                  overlayColor="#000000"
-                                  overlayType="gradient-bottom"
-                                  startPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 0,
-                                    }
-                                  }
-                                  style={
-                                    Object {
                                       "bottom": 0,
                                       "left": 0,
                                       "position": "absolute",
@@ -1197,68 +1434,105 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                     }
                                   }
                                 />
+                                <View
+                                  material="regular"
+                                  style={
+                                    Object {
+                                      "backgroundColor": "rgba(242, 242, 247, 0.8)",
+                                      "bottom": 0,
+                                      "flex": 1,
+                                      "height": "100%",
+                                      "left": 0,
+                                      "position": "absolute",
+                                      "right": 0,
+                                      "top": 0,
+                                    }
+                                  }
+                                />
                               </View>
+                              <Image
+                                fadeDuration={250}
+                                onLoad={[Function]}
+                                source={
+                                  Array [
+                                    Object {
+                                      "__typename": "ImageMediaSource",
+                                      "cache": "force-cache",
+                                      "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dd3a96243-2558-4c04-bf41-3aadcf41771f",
+                                    },
+                                  ]
+                                }
+                                style={
+                                  Object {
+                                    "aspectRatio": 1,
+                                    "backgroundColor": "#A5A5A5",
+                                    "width": "100%",
+                                  }
+                                }
+                              />
                               <View
                                 style={
                                   Object {
-                                    "alignItems": "flex-start",
-                                    "bottom": 0,
-                                    "paddingBottom": 32,
-                                    "paddingHorizontal": 24,
+                                    "paddingHorizontal": 16,
                                     "paddingVertical": 16,
-                                    "position": "absolute",
                                     "width": "100%",
                                   }
                                 }
                               >
                                 <Text
-                                  numberOfLines={3}
+                                  numberOfLines={2}
                                   style={
                                     Object {
-                                      "color": "#F4F7F8",
+                                      "color": "#27272E",
                                       "fontFamily": "InterUI-Black",
                                       "fontSize": 24,
                                       "lineHeight": 27.6,
                                     }
                                   }
                                 >
-                                  Why leadership isn’t all about the title
-                                </Text>
-                                <View
-                                  hasSummary={true}
-                                  style={
-                                    Object {
-                                      "alignItems": "center",
-                                      "flexDirection": "row",
-                                      "paddingTop": 16,
-                                    }
-                                  }
-                                >
-                                  <View
+                                  <Text
                                     style={
                                       Object {
-                                        "flex": 1,
-                                        "marginRight": 16,
+                                        "color": "#27272E",
                                       }
                                     }
                                   >
-                                    <Text
-                                      bold={false}
-                                      italic={false}
-                                      numberOfLines={2}
-                                      style={
-                                        Object {
-                                          "color": "#F4F7F8",
-                                          "fontFamily": "InterUI-Regular",
-                                          "fontSize": 16,
-                                          "lineHeight": 26,
-                                        }
+                                    Why leadership isn’t all about the title
+                                  </Text>
+                                </Text>
+                                <Text
+                                  bold={false}
+                                  italic={false}
+                                  numberOfLines={3}
+                                  style={
+                                    Object {
+                                      "color": "#27272E",
+                                      "fontFamily": "InterUI-Regular",
+                                      "fontSize": 16,
+                                      "lineHeight": 26,
+                                    }
+                                  }
+                                >
+                                  <Text
+                                    style={
+                                      Object {
+                                        "color": "rgba(39, 39, 46, 0.6)",
                                       }
-                                    >
-                                      We all like to know that our boss or the authority over us is pleased, and it means even more when they take the time to share that in front of other people.
-                                    </Text>
-                                  </View>
-                                </View>
+                                    }
+                                  >
+                                    We all like to know that our boss or the authority over us is pleased, and it means even more when they take the time to share that in front of other people.
+                                  </Text>
+                                </Text>
+                                <View
+                                  style={
+                                    Object {
+                                      "flexDirection": "row",
+                                      "justifyContent": "space-between",
+                                      "paddingTop": 8,
+                                      "width": "100%",
+                                    }
+                                  }
+                                />
                               </View>
                             </View>
                           </View>

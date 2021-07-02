@@ -45,35 +45,35 @@ Array [
       }
     >
       <View
-        isCard={true}
         style={
           Object {
-            "paddingBottom": 0,
-            "paddingHorizontal": 24,
+            "paddingHorizontal": 16,
             "paddingVertical": 16,
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#27272E",
-              "fontFamily": "InterUI-Black",
-              "fontSize": 24,
-              "lineHeight": 27.6,
+        <View>
+          <Text
+            secondary={true}
+            style={
+              Object {
+                "color": "rgba(39, 39, 46, 0.6)",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 16,
+                "lineHeight": 24,
+              }
             }
-          }
-        >
-          Prayer
-        </Text>
+          >
+            Prayer
+          </Text>
+        </View>
       </View>
       <View
         style={
           Object {
             "flexDirection": "row",
-            "paddingBottom": 32,
             "paddingHorizontal": 0,
-            "paddingTop": 16,
+            "paddingTop": 0,
             "paddingVertical": 16,
           }
         }
@@ -992,35 +992,35 @@ Array [
       }
     >
       <View
-        isCard={true}
         style={
           Object {
-            "paddingBottom": 0,
-            "paddingHorizontal": 24,
+            "paddingHorizontal": 16,
             "paddingVertical": 16,
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#27272E",
-              "fontFamily": "InterUI-Black",
-              "fontSize": 24,
-              "lineHeight": 27.6,
+        <View>
+          <Text
+            secondary={true}
+            style={
+              Object {
+                "color": "rgba(39, 39, 46, 0.6)",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 16,
+                "lineHeight": 24,
+              }
             }
-          }
-        >
-          Prayer
-        </Text>
+          >
+            Prayer
+          </Text>
+        </View>
       </View>
       <View
         style={
           Object {
             "flexDirection": "row",
-            "paddingBottom": 32,
             "paddingHorizontal": 0,
-            "paddingTop": 16,
+            "paddingTop": 0,
             "paddingVertical": 16,
           }
         }
@@ -1774,35 +1774,35 @@ Array [
       }
     >
       <View
-        isCard={true}
         style={
           Object {
-            "paddingBottom": 0,
-            "paddingHorizontal": 24,
+            "paddingHorizontal": 16,
             "paddingVertical": 16,
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#27272E",
-              "fontFamily": "InterUI-Black",
-              "fontSize": 24,
-              "lineHeight": 27.6,
+        <View>
+          <Text
+            secondary={true}
+            style={
+              Object {
+                "color": "rgba(39, 39, 46, 0.6)",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 16,
+                "lineHeight": 24,
+              }
             }
-          }
-        >
-          Prayer
-        </Text>
+          >
+            Prayer
+          </Text>
+        </View>
       </View>
       <View
         style={
           Object {
             "flexDirection": "row",
-            "paddingBottom": 32,
             "paddingHorizontal": 0,
-            "paddingTop": 16,
+            "paddingTop": 0,
             "paddingVertical": 16,
           }
         }
@@ -2557,47 +2557,48 @@ Array [
       }
     >
       <View
-        isCard={true}
         style={
           Object {
-            "paddingBottom": 0,
-            "paddingHorizontal": 24,
+            "paddingHorizontal": 16,
             "paddingVertical": 16,
           }
         }
       >
-        <View
-          style={
-            Object {
-              "alignSelf": "stretch",
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "height": 12,
-              "marginVertical": 3,
-              "width": "50%",
+        <View>
+          <Text
+            secondary={true}
+            style={
+              Object {
+                "color": "rgba(39, 39, 46, 0.6)",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 16,
+                "lineHeight": 24,
+              }
             }
-          }
-        />
-        <View
-          style={
-            Object {
-              "alignSelf": "stretch",
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "height": 24,
-              "marginVertical": 1.8000000000000007,
-              "width": "100%",
+          >
+            Prayer
+          </Text>
+          <Text
+            primary={true}
+            style={
+              Object {
+                "color": "#27272E",
+                "fontFamily": "InterUI-Black",
+                "fontSize": 24,
+                "lineHeight": 27.6,
+              }
             }
-          }
-        />
+          >
+            Example title
+          </Text>
+        </View>
       </View>
       <View
         style={
           Object {
             "flexDirection": "row",
-            "paddingBottom": 32,
             "paddingHorizontal": 0,
-            "paddingTop": 16,
+            "paddingTop": 0,
             "paddingVertical": 16,
           }
         }
@@ -3326,48 +3327,48 @@ Array [
     }
   />,
   <View
-    isCard={false}
     style={
       Object {
-        "paddingBottom": 0,
         "paddingHorizontal": 16,
-        "paddingTop": 48,
         "paddingVertical": 16,
       }
     }
   >
-    <View
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 16,
-          "height": 12,
-          "marginVertical": 3,
-          "width": "50%",
+    <View>
+      <Text
+        secondary={true}
+        style={
+          Object {
+            "color": "rgba(39, 39, 46, 0.6)",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
+          }
         }
-      }
-    />
-    <View
-      style={
-        Object {
-          "alignSelf": "stretch",
-          "backgroundColor": "#A5A5A5",
-          "borderRadius": 16,
-          "height": 24,
-          "marginVertical": 1.8000000000000007,
-          "width": "100%",
+      >
+        Prayer
+      </Text>
+      <Text
+        primary={true}
+        style={
+          Object {
+            "color": "#27272E",
+            "fontFamily": "InterUI-Black",
+            "fontSize": 24,
+            "lineHeight": 27.6,
+          }
         }
-      }
-    />
+      >
+        Example title
+      </Text>
+    </View>
   </View>,
   <View
     style={
       Object {
         "flexDirection": "row",
-        "paddingBottom": 32,
         "paddingHorizontal": 0,
-        "paddingTop": 16,
+        "paddingTop": 0,
         "paddingVertical": 16,
       }
     }
@@ -4531,35 +4532,35 @@ Array [
       }
     >
       <View
-        isCard={true}
         style={
           Object {
-            "paddingBottom": 0,
-            "paddingHorizontal": 24,
+            "paddingHorizontal": 16,
             "paddingVertical": 16,
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#27272E",
-              "fontFamily": "InterUI-Black",
-              "fontSize": 24,
-              "lineHeight": 27.6,
+        <View>
+          <Text
+            secondary={true}
+            style={
+              Object {
+                "color": "rgba(39, 39, 46, 0.6)",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 16,
+                "lineHeight": 24,
+              }
             }
-          }
-        >
-          Custom subtitle
-        </Text>
+          >
+            Custom subtitle
+          </Text>
+        </View>
       </View>
       <View
         style={
           Object {
             "flexDirection": "row",
-            "paddingBottom": 32,
             "paddingHorizontal": 0,
-            "paddingTop": 16,
+            "paddingTop": 0,
             "paddingVertical": 16,
           }
         }
@@ -5313,48 +5314,48 @@ Array [
       }
     >
       <View
-        isCard={true}
         style={
           Object {
-            "paddingBottom": 0,
-            "paddingHorizontal": 24,
+            "paddingHorizontal": 16,
             "paddingVertical": 16,
           }
         }
       >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "rgba(39, 39, 46, 0.3)",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 12,
-              "lineHeight": 18,
+        <View>
+          <Text
+            secondary={true}
+            style={
+              Object {
+                "color": "rgba(39, 39, 46, 0.6)",
+                "fontFamily": "InterUI-Bold",
+                "fontSize": 16,
+                "lineHeight": 24,
+              }
             }
-          }
-        >
-          Example title
-        </Text>
-        <Text
-          style={
-            Object {
-              "color": "#27272E",
-              "fontFamily": "InterUI-Black",
-              "fontSize": 24,
-              "lineHeight": 27.6,
+          >
+            Prayer
+          </Text>
+          <Text
+            primary={true}
+            style={
+              Object {
+                "color": "#27272E",
+                "fontFamily": "InterUI-Black",
+                "fontSize": 24,
+                "lineHeight": 27.6,
+              }
             }
-          }
-        >
-          Prayer
-        </Text>
+          >
+            Example title
+          </Text>
+        </View>
       </View>
       <View
         style={
           Object {
             "flexDirection": "row",
-            "paddingBottom": 32,
             "paddingHorizontal": 0,
-            "paddingTop": 16,
+            "paddingTop": 0,
             "paddingVertical": 16,
           }
         }
@@ -6083,36 +6084,35 @@ Array [
     }
   />,
   <View
-    isCard={false}
     style={
       Object {
-        "paddingBottom": 0,
         "paddingHorizontal": 16,
-        "paddingTop": 48,
         "paddingVertical": 16,
       }
     }
   >
-    <Text
-      style={
-        Object {
-          "color": "#27272E",
-          "fontFamily": "InterUI-Black",
-          "fontSize": 24,
-          "lineHeight": 27.6,
+    <View>
+      <Text
+        secondary={true}
+        style={
+          Object {
+            "color": "rgba(39, 39, 46, 0.6)",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
+          }
         }
-      }
-    >
-      Prayer
-    </Text>
+      >
+        Prayer
+      </Text>
+    </View>
   </View>,
   <View
     style={
       Object {
         "flexDirection": "row",
-        "paddingBottom": 32,
         "paddingHorizontal": 0,
-        "paddingTop": 16,
+        "paddingTop": 0,
         "paddingVertical": 16,
       }
     }

@@ -74,7 +74,7 @@ Array [
       <View
         style={
           Object {
-            "backgroundColor": "rgb(249, 249, 251)",
+            "backgroundColor": "#000000",
             "bottom": 0,
             "left": 0,
             "opacity": 0.4,

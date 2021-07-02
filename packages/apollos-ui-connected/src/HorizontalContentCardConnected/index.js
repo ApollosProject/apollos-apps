@@ -1,7 +1,6 @@
+import { HorizontalDefaultCard } from '@apollosproject/ui-kit';
 import HorizontalContentCardConnected from './HorizontalContentCardConnected';
 
-export HorizontalContentCardComponentMapper from './HorizontalContentCardComponentMapper';
-// TODO: Update to `HorizontalContentCardComponentMapper` export below is for temporary backwards compatibility.
-export horizontalContentCardComponentMapper from './HorizontalContentCardComponentMapper/horizontalContentCardComponentMapper';
+export const HorizontalContentCardComponentMapper = HorizontalDefaultCard;
 
 export default HorizontalContentCardConnected;
