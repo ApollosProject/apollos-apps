@@ -35,14 +35,16 @@ cd ..
 
 node scripts/swap-package-json-to-links.js ./ApollosApi
 
-# Needed.
-# Otherwise there will be two different versions of GraphQL on the filesystem
-sed -i '' -e '/graphql/d' ./ApollosApi/package.json
-
 rm -rf tmp
 
 cd ApollosApi
 
 yarn
+
+# Needed.
+# Otherwise there will be two different versions of GraphQL on the filesystem
+# it will find the one from apps
+# not great because we're not actually testing with the proper version of gql
+rm -rf node_modules/graphql
 
 yarn start:dev
