@@ -39,7 +39,7 @@ async function up({ context: queryInterface }) {
 }
 
 async function down({ context: queryInterface }) {
-  await queryInterface.dropTable('tag');
+  await queryInterface.dropTable('tags');
 }
 
 const name = '001-create-tags';
