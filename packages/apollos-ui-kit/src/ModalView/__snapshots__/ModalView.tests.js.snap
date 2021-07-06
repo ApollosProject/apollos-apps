@@ -19,33 +19,15 @@ Array [
       ]
     }
   />,
-  <BVLinearGradient
-    colors={
-      Array [
-        4294967295,
-        4294572539,
-      ]
-    }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
+  <View
     navigation={
       Object {
         "pop": [MockFunction],
       }
     }
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
     style={
       Object {
+        "backgroundColor": "rgb(249, 249, 251)",
         "borderRadius": 0,
         "flex": null,
         "height": "100%",
@@ -217,7 +199,7 @@ Array [
         />
       </RNSVGSvgView>
     </View>
-  </BVLinearGradient>,
+  </View>,
 ]
 `;
 
@@ -240,33 +222,15 @@ Array [
       ]
     }
   />,
-  <BVLinearGradient
-    colors={
-      Array [
-        4294967295,
-        4294572539,
-      ]
-    }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
+  <View
     navigation={
       Object {
         "pop": [MockFunction],
       }
     }
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
     style={
       Object {
+        "backgroundColor": "rgb(249, 249, 251)",
         "borderRadius": 0,
         "flex": null,
         "height": "100%",
@@ -509,7 +473,7 @@ Array [
         </View>
       </View>
     </View>
-  </BVLinearGradient>,
+  </View>,
 ]
 `;
 
@@ -532,33 +496,15 @@ Array [
       ]
     }
   />,
-  <BVLinearGradient
-    colors={
-      Array [
-        4294967295,
-        4294572539,
-      ]
-    }
-    endPoint={
-      Object {
-        "x": 0.5,
-        "y": 1,
-      }
-    }
-    locations={null}
+  <View
     navigation={
       Object {
         "pop": [MockFunction],
       }
     }
-    startPoint={
-      Object {
-        "x": 0.5,
-        "y": 0,
-      }
-    }
     style={
       Object {
+        "backgroundColor": "rgb(249, 249, 251)",
         "borderRadius": 0,
         "flex": null,
         "height": "100%",
@@ -733,6 +679,6 @@ Array [
         />
       </RNSVGSvgView>
     </View>
-  </BVLinearGradient>,
+  </View>,
 ]
 `;

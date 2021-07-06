@@ -1,12 +1,13 @@
 import { Platform } from 'react-native';
-import { compose } from 'recompose';
+import { compose, withProps } from 'recompose';
 
-import GradientOverlayImage from '../GradientOverlayImage';
+import ConnectedImage from '../ConnectedImage';
 import styled from '../styled';
 import { getIsLoading } from '../isLoading';
 
 const Image = compose(
   getIsLoading,
+  withProps({ maintainAspectRatio: true }),
   styled(
     ({ theme }) => ({
       width: '100%',
@@ -20,8 +21,8 @@ const Image = compose(
     }),
     'ui-kit.Card.Image.Image'
   )
-)(GradientOverlayImage);
+)(ConnectedImage);
 
-Image.propTypes = GradientOverlayImage.propTypes;
+Image.propTypes = ConnectedImage.propTypes;
 
 export default Image;

@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import {
-  H3,
+  FeatureTitles,
   H5,
   HorizontalTileFeed,
   styled,
@@ -12,30 +12,15 @@ import {
   withTheme,
   Touchable,
   ButtonLink,
-  FlexedView,
-  H6,
 } from '@apollosproject/ui-kit';
 
 import { LiveConsumer } from '../../live';
 import { HorizontalContentCardComponentMapper } from '../../HorizontalContentCardConnected';
 
-const Title = styled(
-  ({ theme }) => ({
-    color: theme.colors.text.tertiary,
-  }),
-  'ui-connected.HorizontalCardListFeatureConnected.HorizontalCardListFeature.Title'
-)(H5);
-
-const Subtitle = styled(
-  {},
-  'ui-connected.HorizontalCardListFeatureConnected.HorizontalCardListFeature.Subtitle'
-)(H3);
-
 const Header = styled(
   ({ theme }) => ({
-    paddingTop: theme.sizing.baseUnit * 3,
-    paddingBottom: theme.sizing.baseUnit * 0.5,
-    paddingLeft: theme.sizing.baseUnit,
+    paddingTop: theme.sizing.baseUnit,
+    paddingHorizontal: theme.sizing.baseUnit,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -53,13 +38,12 @@ const AndroidTouchableFix = withTheme(
 )(Touchable);
 
 const ButtonLinkSpacing = styled(
-  ({ theme }) => ({
+  {
     flexDirection: 'row', // correctly positions the loading state
     justifyContent: 'flex-end', // correctly positions the loading state
-    padding: theme.sizing.baseUnit, // UX hack to improve tapability.
     // paddingBottom: titleAndSubtitle ? theme.sizing.baseUnit / 2 : 0,
     alignItems: 'flex-end',
-  }),
+  },
   'ui-connected.HorizontalCardListFeatureConnected.HorizontalCardListFeature.ButtonLinkSpacing'
 )(View);
 
@@ -100,7 +84,10 @@ class HorizontalCardListFeature extends PureComponent {
         const isLive = !!(liveStream && liveStream.isLive);
         const labelText = isLive ? 'Live' : item.labelText;
         return (
-          <TouchableScale onPress={() => this.props.onPressItem(item)}>
+          <TouchableScale
+            hitSlop={{ bottom: 12, left: 24, right: 24, top: 16 }}
+            onPress={() => this.props.onPressItem(item)}
+          >
             <HorizontalContentCardComponentMapper
               isLive={isLive}
               {...item}
@@ -130,20 +117,19 @@ class HorizontalCardListFeature extends PureComponent {
         <View>
           {isLoading || title || subtitle || primaryAction ? (
             <Header>
-              <FlexedView>
-                {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
-                  <Title numberOfLines={1}>{title}</Title>
-                ) : null}
-                {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
-              </FlexedView>
+              <FeatureTitles
+                title={title}
+                subtitle={subtitle}
+                isLoading={isLoading}
+              />
               {isLoading || primaryAction ? (
                 <AndroidTouchableFix
                   onPress={() => onPressAction(primaryAction)}
                 >
                   <ButtonLinkSpacing>
-                    <H6>
+                    <H5>
                       <ButtonLink>{primaryAction?.title}</ButtonLink>
-                    </H6>
+                    </H5>
                   </ButtonLinkSpacing>
                 </AndroidTouchableFix>
               ) : null}
