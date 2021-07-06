@@ -6,9 +6,17 @@ async function up({ context: queryInterface }) {
       primaryKey: true,
       type: Sequelize.UUID,
     },
-    contentId: {
+    contentItemId: {
       primaryKey: true,
       type: Sequelize.UUID,
+    },
+    createdAt: {
+      type: Sequelize.DATE,
+      allowNull: false,
+    },
+    updatedAt: {
+      type: Sequelize.DATE,
+      allowNull: false,
     },
   });
   await queryInterface.createTable('people_tag', {
@@ -19,6 +27,14 @@ async function up({ context: queryInterface }) {
     personId: {
       primaryKey: true,
       type: Sequelize.UUID,
+    },
+    createdAt: {
+      type: Sequelize.DATE,
+      allowNull: false,
+    },
+    updatedAt: {
+      type: Sequelize.DATE,
+      allowNull: false,
     },
   });
 }

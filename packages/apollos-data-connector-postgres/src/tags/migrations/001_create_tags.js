@@ -16,6 +16,8 @@ async function up({ context: queryInterface }) {
     data: {
       type: DataTypes.JSONB,
     },
+    originId: { type: Sequelize.STRING, allowNull: false },
+    originType: { type: Sequelize.STRING, allowNull: false },
     apollosId: {
       type: Sequelize.STRING,
       allowNull: true, // we set this value with an "afterCreate" hook if not set.

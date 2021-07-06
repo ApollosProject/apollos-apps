@@ -1,4 +1,4 @@
-import { sequelize, sync } from '../../postgres/index';
+import { sequelize } from '../../postgres/index';
 import { createModel, setupModel } from '../model';
 import * as ContentItem from '../../content-items/model';
 import * as People from '../../people/model';
@@ -49,8 +49,8 @@ describe('Tag model', () => {
       data: {
         message: 'This is a test tag :)',
       },
-      /* originId: '2',
-      originType: 'rock', */
+      originId: '2',
+      originType: 'rock',
     });
 
     await content.addTag(tag);
@@ -69,16 +69,15 @@ describe('Tag model', () => {
       originId: '1',
     });
 
-    const tag = await sequelize.models.tag
-      .create({
-        name: 'Test Tag',
-        type: 'ContentTag',
-        data: {
-          message: 'This is a test tag :)',
-        },
-        originId: '4',
-        originType: 'rock',
-      })
+    const tag = await sequelize.models.tag.create({
+      name: 'Test Tag',
+      type: 'ContentTag',
+      data: {
+        message: 'This is a test tag :)',
+      },
+      originId: '4',
+      originType: 'rock',
+    });
 
     await person.addTag(tag);
     await person.reload();
