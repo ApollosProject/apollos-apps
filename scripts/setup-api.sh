@@ -41,4 +41,11 @@ cd ApollosApi
 
 yarn
 
+# Needed.
+# Otherwise there will be two different versions of GraphQL on the filesystem
+# it will find the one from apps
+# not great because we're not actually testing with the proper version of gql
+# to remove, test with this query: https://github.com/ApollosProject/apollos-apps/pull/2046
+rm -rf node_modules/graphql
+
 yarn start:dev

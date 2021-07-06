@@ -28,7 +28,7 @@ const ModalView = ({
     <Container {...props}>
       {children}
       <ModalViewHeader
-        onClose={onClose || navigation.pop}
+        onClose={onClose || navigation.goBack}
         onBack={onBack}
         navigationHeader={navigationHeader}
       />
