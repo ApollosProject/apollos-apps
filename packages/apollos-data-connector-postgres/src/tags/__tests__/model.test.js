@@ -2,14 +2,36 @@ import { sequelize, sync } from '../../postgres/index';
 import { createModel, setupModel } from '../model';
 import * as ContentItem from '../../content-items/model';
 import * as People from '../../people/model';
+import * as Campus from '../../campus/model';
+import * as Media from '../../media/model';
+import migrations from '../migrations';
+import ContentItemMigrations from '../../content-items/migrations';
+import PeopleMigrations from '../../people/migrations';
+import CampusMigrations from '../../campus/migrations';
+import MediaMigrations from '../../media/migrations';
+import createMigrationRunner from '../../postgres/performMigrations';
 
 describe('Tag model', () => {
   beforeEach(async () => {
     await ContentItem.createModel();
     await People.createModel();
+    await Campus.createModel();
+    await Media.createModel();
     await createModel();
+
+    const migrationRunner = await createMigrationRunner({
+      migrations: [
+        ...migrations,
+        ...ContentItemMigrations,
+        ...PeopleMigrations,
+        ...CampusMigrations,
+        ...MediaMigrations,
+      ],
+    });
+    await migrationRunner.up();
+    await ContentItem.setupModel();
     await setupModel();
-    await sync();
+    //await sync();
   });
   afterEach(async () => {
     await sequelize.dropAllSchemas();
