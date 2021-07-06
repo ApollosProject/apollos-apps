@@ -1,7 +1,7 @@
 import { Sequelize, DataTypes } from 'sequelize';
 
 async function up({ context: queryInterface }) {
-  await queryInterface.createTable('tag', {
+  await queryInterface.createTable('tags', {
     id: {
       primaryKey: true,
       type: Sequelize.UUID,

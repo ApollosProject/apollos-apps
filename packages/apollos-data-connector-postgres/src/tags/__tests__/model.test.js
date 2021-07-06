@@ -31,7 +31,6 @@ describe('Tag model', () => {
     await migrationRunner.up();
     await ContentItem.setupModel();
     await setupModel();
-    //await sync();
   });
   afterEach(async () => {
     await sequelize.dropAllSchemas();
@@ -50,8 +49,8 @@ describe('Tag model', () => {
       data: {
         message: 'This is a test tag :)',
       },
-      originId: '2',
-      originType: 'rock',
+      /* originId: '2',
+      originType: 'rock', */
     });
 
     await content.addTag(tag);
@@ -80,7 +79,6 @@ describe('Tag model', () => {
         originId: '4',
         originType: 'rock',
       })
-      .catch(console.log);
 
     await person.addTag(tag);
     await person.reload();

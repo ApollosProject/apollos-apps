@@ -16,7 +16,7 @@ async function up({ context: queryInterface }) {
       primaryKey: true,
       type: Sequelize.UUID,
     },
-    peopleId: {
+    personId: {
       primaryKey: true,
       type: Sequelize.UUID,
     },
