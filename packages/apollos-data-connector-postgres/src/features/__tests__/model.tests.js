@@ -1,4 +1,4 @@
-import { sequelize, sync } from '../../postgres/index';
+import { sequelize } from '../../postgres/index';
 import { createModel, setupModel } from '../model';
 import migrations from '../migrations';
 import * as ContentItem from '../../content-items/model';
