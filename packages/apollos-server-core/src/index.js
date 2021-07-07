@@ -1,4 +1,4 @@
-import { compact, mapValues, merge, values, flatten } from 'lodash';
+import { compact, mapValues, merge, flatten } from 'lodash';
 import gql from 'graphql-tag';
 import { InMemoryLRUCache } from 'apollo-server-caching';
 import { makeExecutableSchema } from 'apollo-server';
@@ -22,6 +22,19 @@ export { resolverMerge, schemaMerge } from './utils';
 export { setupUniversalLinks, generateAppLink } from './linking';
 export { Interfaces };
 
+const safeGetWithWarning = (name) => (data, key) => {
+  if (data == null) {
+    console.warn(
+      `The ${key} data object is null.
+      Check to make sure you are importing ${key} from the correct package
+      or that your packages are up to date.
+      `
+    );
+    return null;
+  }
+  return data[name];
+};
+
 // Types that all apollos-church servers will use.
 const builtInData = { Node, Pagination, Media, Message };
 
@@ -35,37 +48,50 @@ export const createSchema = (data) => [
       _placeholder: Boolean # needed, empty schema defs aren't supported
     }
   `,
-  ...compact(values({ ...builtInData, ...data }).map((datum) => datum.schema)),
+  ...compact(
+    Object.values(
+      mapValues({ ...builtInData, ...data }, safeGetWithWarning('schema'))
+    )
+  ),
 ];
 
 export const createResolvers = (data) =>
   merge(
     ...compact(
-      values({ ...builtInData, ...data }).map((datum) => datum.resolver)
+      Object.values(
+        mapValues({ ...builtInData, ...data }, safeGetWithWarning('resolver'))
+      )
     )
   );
 
 const getDbModels = (data) =>
-  mapValues({ ...builtInData, ...data }, (datum) => datum.models);
+  mapValues({ ...builtInData, ...data }, safeGetWithWarning('models'));
 
 const getMigrations = (data) =>
   compact(
     flatten(
-      values({ ...builtInData, ...data }).map((datum) => datum.migrations)
+      Object.values(
+        mapValues({ ...builtInData, ...data }, safeGetWithWarning('migrations'))
+      )
     )
   );
 
 const getDataSources = (data) =>
-  mapValues({ ...builtInData, ...data }, (datum) => datum.dataSource);
+  mapValues({ ...builtInData, ...data }, safeGetWithWarning('dataSource'));
 
 // Deprecated - we won't be using this models paradigm going forward.
 // All models should be renamed as DataSources.
 const getModels = (data) =>
-  mapValues({ ...builtInData, ...data }, (datum) => datum.model);
+  mapValues({ ...builtInData, ...data }, safeGetWithWarning('model'));
 
 const getContextMiddlewares = (data) =>
   compact(
-    values({ ...builtInData, ...data }).map((datum) => datum.contextMiddleware)
+    Object.values(
+      mapValues(
+        { ...builtInData, ...data },
+        safeGetWithWarning('contextMiddleware')
+      )
+    )
   );
 
 export const createDataSources = (data) => {
@@ -170,7 +196,10 @@ export const createContextGetter = (serverConfig) => (data) => {
 
 export const createMiddleware = (data) => ({ app, context, dataSources }) => {
   const middlewares = compact(
-    values({ ...builtInData, ...data }).map((datum) => datum.serverMiddleware)
+    mapValues(
+      { ...builtInData, ...data },
+      safeGetWithWarning('serverMiddleware')
+    )
   );
 
   const getContext = createContextGetter({ context, dataSources });
@@ -180,7 +209,7 @@ export const createMiddleware = (data) => ({ app, context, dataSources }) => {
 
 export const createJobs = (data) => ({ app, context, dataSources }) => {
   const jobs = compact(
-    values({ ...builtInData, ...data }).map((datum) => datum.jobs)
+    mapValues({ ...builtInData, ...data }, safeGetWithWarning('jobs'))
   );
 
   const getContext = createContextGetter({ context, dataSources });
