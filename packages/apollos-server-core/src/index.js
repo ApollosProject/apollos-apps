@@ -1,4 +1,4 @@
-import { compact, mapValues, merge, values, flatten } from 'lodash';
+import { compact, mapValues, merge, flatten } from 'lodash';
 import gql from 'graphql-tag';
 import { InMemoryLRUCache } from 'apollo-server-caching';
 import { makeExecutableSchema } from 'apollo-server';
@@ -49,24 +49,30 @@ export const createSchema = (data) => [
     }
   `,
   ...compact(
-    mapValues({ ...builtInData, ...data }, safeGetWithWarning('schema'))
+    Object.values(
+      mapValues({ ...builtInData, ...data }, safeGetWithWarning('schema'))
+    )
   ),
 ];
 
 export const createResolvers = (data) =>
   merge(
     ...compact(
-      mapValues({ ...builtInData, ...data }, safeGetWithWarning('resolver'))
+      Object.values(
+        mapValues({ ...builtInData, ...data }, safeGetWithWarning('resolver'))
+      )
     )
   );
 
 const getDbModels = (data) =>
-  compact(mapValues({ ...builtInData, ...data }, safeGetWithWarning('models')));
+  mapValues({ ...builtInData, ...data }, safeGetWithWarning('models'));
 
 const getMigrations = (data) =>
   compact(
     flatten(
-      mapValues({ ...builtInData, ...data }, safeGetWithWarning('migrations'))
+      Object.values(
+        mapValues({ ...builtInData, ...data }, safeGetWithWarning('migrations'))
+      )
     )
   );
 
@@ -80,9 +86,11 @@ const getModels = (data) =>
 
 const getContextMiddlewares = (data) =>
   compact(
-    mapValues(
-      { ...builtInData, ...data },
-      safeGetWithWarning('contextMiddleware')
+    Object.values(
+      mapValues(
+        { ...builtInData, ...data },
+        safeGetWithWarning('contextMiddleware')
+      )
     )
   );
 
