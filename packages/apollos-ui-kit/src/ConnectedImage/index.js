@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Animated } from 'react-native';
 import PropTypes from 'prop-types';
-import { every } from 'lodash';
 
 import styled from '../styled';
 
