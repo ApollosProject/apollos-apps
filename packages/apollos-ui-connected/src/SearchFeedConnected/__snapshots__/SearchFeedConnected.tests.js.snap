@@ -401,7 +401,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                     onEndReachedThreshold={0.7}
                     onLayout={[Function]}
                     onMomentumScrollEnd={[Function]}
-                    onPressItem={[Function]}
                     onRefresh={[Function]}
                     onScroll={[Function]}
                     onScrollBeginDrag={[Function]}
