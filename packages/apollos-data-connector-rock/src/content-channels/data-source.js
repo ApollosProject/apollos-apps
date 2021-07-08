@@ -6,6 +6,8 @@ const { ROCK_MAPPINGS } = ApollosConfig;
 export default class ContentChannel extends RockApolloDataSource {
   resource = 'ContentChannels';
 
+  expanded = true;
+
   all = () => this.request().expand('ChildContentChannels').get();
 
   getRootChannels = async () => {
