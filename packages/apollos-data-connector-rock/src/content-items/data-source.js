@@ -380,7 +380,7 @@ export default class ContentItem extends RockApolloDataSource {
   }
 
   async getCoverImage(root) {
-    const { Cache, ContentChannel } = this.context.dataSources;
+    const { Cache } = this.context.dataSources;
     const cachedValue = await Cache.get({
       key: `contentItem:coverImage:${root.id}`,
     });
@@ -400,7 +400,10 @@ export default class ContentItem extends RockApolloDataSource {
       image = this.pickBestImage({ images: ourImages });
     } else {
       // check channel
-      const channel = await ContentChannel.getFromId(root.contentChannelId);
+      const channel = await this.request(
+        `ContentChannels/${root.contentChannelId}?loadAttributes=expanded`
+      ).get();
+
       const channelImages = this.getImages(channel).filter(
         ({ sources }) => sources.length
       );
