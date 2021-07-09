@@ -404,11 +404,9 @@ export default class ContentItem extends RockApolloDataSource {
         `ContentChannels/${root.contentChannelId}?loadAttributes=expanded`
       ).get();
 
-      let channelImages = [];
-      if (channel)
-        channelImages = this.getImages(channel).filter(
-          ({ sources }) => sources.length
-        );
+      const channelImages = this.getImages(channel).filter(
+        ({ sources }) => sources.length
+      );
       if (channelImages.length)
         image = this.pickBestImage({ images: channelImages });
     }

@@ -392,7 +392,7 @@ describe('UniversalContentItem', () => {
 
     context.dataSources.ContentItem.request = (path) =>
       path.includes('ContentChannels')
-        ? { get: () => null }
+        ? { get: () => ({ attributeValues: {}, attributes: {} }) }
         : { ...context.dataSources.ContentItem.request(path) };
 
     const rootValue = {};
