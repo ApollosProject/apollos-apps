@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Animated } from 'react-native';
 import PropTypes from 'prop-types';
-import { every } from 'lodash';
 
 import styled from '../styled';
 
@@ -63,17 +62,17 @@ const ConnectedImage = ({
   ...imageProps
 }) => {
   const cachedSource = getCachedSources(source);
-  const imageInCache = every(
-    cachedSource,
-    (image) => image.width && image.height
-  );
 
   // Aspect Ratio Calculations
-  const [[width, height], setImageSize] = useState([
+  const [[loadedWidth, loadedHeight], setImageSize] = useState([
     cachedSource[0]?.width,
     cachedSource[0]?.height,
   ]);
   const aspectRatioStyle = {};
+  const [width, height] = [
+    loadedWidth || cachedSource[0]?.width,
+    loadedHeight || cachedSource[0]?.height,
+  ];
 
   if (maintainAspectRatio) {
     aspectRatioStyle.aspectRatio = width && height ? width / height : 1;
@@ -95,11 +94,14 @@ const ConnectedImage = ({
 
   const handleOnLoad = (e) => {
     if (onLoad) onLoad(e);
-    if (!imageInCache) {
-      const {
-        nativeEvent: { source: loadedSource },
-      } = e;
-      updateCache(loadedSource);
+    const {
+      nativeEvent: { source: loadedSource },
+    } = e;
+    updateCache(loadedSource);
+    if (
+      loadedWidth !== loadedSource.width ||
+      loadedHeight !== loadedSource.height
+    ) {
       setImageSize([loadedSource.width, loadedSource.height]);
     }
   };

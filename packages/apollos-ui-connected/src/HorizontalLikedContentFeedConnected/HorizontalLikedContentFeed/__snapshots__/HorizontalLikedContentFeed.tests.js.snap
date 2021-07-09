@@ -16,26 +16,20 @@ exports[`HorizontalLikedContentFeed renders a HorizontalLikedContentFeed 1`] = `
         "alignItems": "center",
         "flexDirection": "row",
         "justifyContent": "space-between",
-        "paddingLeft": 16,
-        "paddingTop": 8,
+        "paddingHorizontal": 16,
         "zIndex": 2,
       }
     }
   >
-    <View
-      style={
-        Object {
-          "flexGrow": 2,
-        }
-      }
-    >
+    <View>
       <Text
+        secondary={true}
         style={
           Object {
-            "color": "#27272E",
-            "fontFamily": "InterUI-Medium",
-            "fontSize": 14,
-            "lineHeight": 21,
+            "color": "rgba(39, 39, 46, 0.6)",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
           }
         }
       >
@@ -540,31 +534,25 @@ exports[`HorizontalLikedContentFeed renders a loading state 1`] = `
         "alignItems": "center",
         "flexDirection": "row",
         "justifyContent": "space-between",
-        "paddingLeft": 16,
-        "paddingTop": 8,
+        "paddingHorizontal": 16,
         "zIndex": 2,
       }
     }
   >
-    <View
-      style={
-        Object {
-          "flexGrow": 2,
-        }
-      }
-    >
-      <View
+    <View>
+      <Text
+        secondary={true}
         style={
           Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 14,
-            "marginVertical": 3.5,
-            "width": "60%",
+            "color": "rgba(39, 39, 46, 0.6)",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
           }
         }
-      />
+      >
+        Liked Content
+      </Text>
     </View>
     <View
       accessible={true}

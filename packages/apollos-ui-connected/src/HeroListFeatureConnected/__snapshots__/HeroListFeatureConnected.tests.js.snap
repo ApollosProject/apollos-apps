@@ -3,31 +3,31 @@
 exports[`The HeroListFeatureConnected component should not render without actions or hero 1`] = `null`;
 
 exports[`The HeroListFeatureConnected component should render 1`] = `
-Array [
-  <View
-    style={
-      Object {
-        "paddingBottom": 0,
-        "paddingHorizontal": 16,
-        "paddingTop": 48,
-        "paddingVertical": 16,
-      }
+<View
+  cardPadding={false}
+  style={
+    Object {
+      "paddingHorizontal": 16,
+      "paddingVertical": 16,
     }
-  >
+  }
+>
+  <View>
     <Text
-      numberOfLines={1}
+      secondary={true}
       style={
         Object {
-          "color": "rgba(39, 39, 46, 0.3)",
-          "fontFamily": "InterUI-Medium",
-          "fontSize": 14,
-          "lineHeight": 21,
+          "color": "rgba(39, 39, 46, 0.6)",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 16,
+          "lineHeight": 24,
         }
       }
     >
-      Some cool list
+      Check it out
     </Text>
     <Text
+      primary={true}
       style={
         Object {
           "color": "#27272E",
@@ -37,9 +37,17 @@ Array [
         }
       }
     >
-      Check it out
+      Some cool list
     </Text>
-  </View>,
+  </View>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 16,
+        "paddingVertical": 8,
+      }
+    }
+  />
   <View
     accessible={true}
     focusable={true}
@@ -65,7 +73,8 @@ Array [
         Object {
           "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
-          "marginHorizontal": 16,
+          "marginHorizontal": 0,
+          "marginTop": 0,
           "marginVertical": 12,
           "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
           "shadowOffset": Object {
@@ -247,179 +256,151 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-  <View
-    cardPadding={false}
-    style={
-      Object {
-        "paddingHorizontal": 16,
-        "paddingVertical": 16,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-          "justifyContent": "flex-start",
-          "paddingBottom": 8,
-        }
-      }
-    >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "__typename": "ImageMediaSource",
-              "cache": "force-cache",
-              "uri": "https://picsum.photos/200/200",
-            },
-          ]
-        }
-        style={
-          Object {
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 64,
-            "marginRight": 16,
-            "width": 64,
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "flex": 1,
-            "justifyContent": "center",
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#27272E",
-              "fontFamily": "InterUI-Medium",
-              "fontSize": 14,
-              "lineHeight": 21,
-            }
-          }
-        >
-          Boom
-        </Text>
-        <Text
-          bold={false}
-          ellipsizeMode="tail"
-          italic={false}
-          numberOfLines={2}
-          style={
-            Object {
-              "color": "rgba(39, 39, 46, 0.3)",
-              "fontFamily": "InterUI-Regular",
-              "fontSize": 12,
-              "lineHeight": 18,
-            }
-          }
-        >
-          What
-        </Text>
-      </View>
-    </View>
-    <View
-      accessible={true}
-      focusable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <View
-        bordered={true}
-        disabled={false}
-        pill={false}
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "transparent",
-            "borderColor": "#A5A5A5",
-            "borderRadius": 16,
-            "borderWidth": 2,
-            "flexDirection": "row",
-            "height": 48,
-            "justifyContent": "center",
-            "marginTop": 8,
-            "opacity": 1,
-            "overflow": "hidden",
-            "paddingHorizontal": 16,
-            "width": "100%",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#A5A5A5",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 16,
-              "lineHeight": 24,
-            }
-          }
-        >
-          Check this out
-        </Text>
-      </View>
-    </View>
-  </View>,
-]
-`;
-
-exports[`The HeroListFeatureConnected component should render a loading state when isLoading 1`] = `
-Array [
+  </View>
   <View
     style={
       Object {
-        "paddingBottom": 0,
-        "paddingHorizontal": 16,
-        "paddingTop": 48,
-        "paddingVertical": 16,
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "paddingBottom": 8,
       }
     }
   >
-    <View
+    <Image
+      fadeDuration={250}
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "__typename": "ImageMediaSource",
+            "cache": "force-cache",
+            "uri": "https://picsum.photos/200/200",
+          },
+        ]
+      }
       style={
         Object {
-          "alignSelf": "stretch",
           "backgroundColor": "#A5A5A5",
           "borderRadius": 16,
-          "height": 14,
-          "marginVertical": 3.5,
-          "width": "60%",
+          "height": 64,
+          "marginRight": 16,
+          "width": 64,
         }
       }
     />
     <View
       style={
         Object {
-          "alignSelf": "stretch",
-          "backgroundColor": "#A5A5A5",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "#27272E",
+            "fontFamily": "InterUI-Medium",
+            "fontSize": 14,
+            "lineHeight": 21,
+          }
+        }
+      >
+        Boom
+      </Text>
+      <Text
+        bold={false}
+        ellipsizeMode="tail"
+        italic={false}
+        numberOfLines={2}
+        style={
+          Object {
+            "color": "rgba(39, 39, 46, 0.3)",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 12,
+            "lineHeight": 18,
+          }
+        }
+      >
+        What
+      </Text>
+    </View>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      bordered={true}
+      disabled={false}
+      pill={false}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderColor": "#A5A5A5",
           "borderRadius": 16,
-          "height": 24,
-          "marginVertical": 1.8000000000000007,
+          "borderWidth": 2,
+          "flexDirection": "row",
+          "height": 48,
+          "justifyContent": "center",
+          "marginTop": 8,
+          "opacity": 1,
+          "overflow": "hidden",
+          "paddingHorizontal": 16,
           "width": "100%",
         }
       }
-    />
-  </View>,
+    >
+      <Text
+        style={
+          Object {
+            "color": "#A5A5A5",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
+          }
+        }
+      >
+        Check this out
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`The HeroListFeatureConnected component should render a loading state when isLoading 1`] = `
+<View
+  cardPadding={false}
+  style={
+    Object {
+      "paddingHorizontal": 16,
+      "paddingVertical": 16,
+    }
+  }
+>
+  <View />
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 16,
+        "paddingVertical": 8,
+      }
+    }
+  />
   <View
     accessible={true}
     focusable={true}
@@ -446,7 +427,8 @@ Array [
         Object {
           "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
-          "marginHorizontal": 16,
+          "marginHorizontal": 0,
+          "marginTop": 0,
           "marginVertical": 12,
           "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
           "shadowOffset": Object {
@@ -580,475 +562,292 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-  <View
-    cardPadding={false}
-    style={
-      Object {
-        "paddingHorizontal": 16,
-        "paddingVertical": 16,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-          "justifyContent": "flex-start",
-          "paddingBottom": 8,
-        }
-      }
-    >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "",
-            },
-          ]
-        }
-        style={
-          Object {
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 64,
-            "marginRight": 16,
-            "width": 64,
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "flex": 1,
-            "justifyContent": "center",
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "alignSelf": "stretch",
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "height": 14,
-              "marginVertical": 3.5,
-              "width": "60%",
-            }
-          }
-        />
-        <View
-          style={
-            Object {
-              "alignSelf": "stretch",
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "height": 12,
-              "marginVertical": 3,
-              "width": "100%",
-            }
-          }
-        />
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-          "justifyContent": "flex-start",
-          "paddingBottom": 8,
-        }
-      }
-    >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "",
-            },
-          ]
-        }
-        style={
-          Object {
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 64,
-            "marginRight": 16,
-            "width": 64,
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "flex": 1,
-            "justifyContent": "center",
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "alignSelf": "stretch",
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "height": 14,
-              "marginVertical": 3.5,
-              "width": "60%",
-            }
-          }
-        />
-        <View
-          style={
-            Object {
-              "alignSelf": "stretch",
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "height": 12,
-              "marginVertical": 3,
-              "width": "100%",
-            }
-          }
-        />
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-          "justifyContent": "flex-start",
-          "paddingBottom": 8,
-        }
-      }
-    >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "",
-            },
-          ]
-        }
-        style={
-          Object {
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 64,
-            "marginRight": 16,
-            "width": 64,
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "flex": 1,
-            "justifyContent": "center",
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "alignSelf": "stretch",
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "height": 14,
-              "marginVertical": 3.5,
-              "width": "60%",
-            }
-          }
-        />
-        <View
-          style={
-            Object {
-              "alignSelf": "stretch",
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "height": 12,
-              "marginVertical": 3,
-              "width": "100%",
-            }
-          }
-        />
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-          "justifyContent": "flex-start",
-          "paddingBottom": 8,
-        }
-      }
-    >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "cache": "force-cache",
-              "uri": "",
-            },
-          ]
-        }
-        style={
-          Object {
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 64,
-            "marginRight": 16,
-            "width": 64,
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "flex": 1,
-            "justifyContent": "center",
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "alignSelf": "stretch",
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "height": 14,
-              "marginVertical": 3.5,
-              "width": "60%",
-            }
-          }
-        />
-        <View
-          style={
-            Object {
-              "alignSelf": "stretch",
-              "backgroundColor": "#A5A5A5",
-              "borderRadius": 16,
-              "height": 12,
-              "marginVertical": 3,
-              "width": "100%",
-            }
-          }
-        />
-      </View>
-    </View>
-  </View>,
-]
-`;
-
-exports[`The HeroListFeatureConnected component should render without a hero card 1`] = `
-Array [
+  </View>
   <View
     style={
       Object {
-        "paddingBottom": 0,
-        "paddingHorizontal": 16,
-        "paddingTop": 48,
-        "paddingVertical": 16,
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "paddingBottom": 8,
       }
     }
   >
-    <Text
-      numberOfLines={1}
+    <Image
+      fadeDuration={250}
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "",
+          },
+        ]
+      }
       style={
         Object {
-          "color": "rgba(39, 39, 46, 0.3)",
-          "fontFamily": "InterUI-Medium",
-          "fontSize": 14,
-          "lineHeight": 21,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 64,
+          "marginRight": 16,
+          "width": 64,
         }
       }
-    >
-      Some cool list
-    </Text>
-    <Text
-      style={
-        Object {
-          "color": "#27272E",
-          "fontFamily": "InterUI-Black",
-          "fontSize": 24,
-          "lineHeight": 27.6,
-        }
-      }
-    >
-      Check it out
-    </Text>
-  </View>,
-  <View
-    cardPadding={false}
-    style={
-      Object {
-        "paddingHorizontal": 16,
-        "paddingVertical": 16,
-      }
-    }
-  >
+    />
     <View
       style={
         Object {
-          "flexDirection": "row",
-          "justifyContent": "flex-start",
-          "paddingBottom": 8,
+          "flex": 1,
+          "justifyContent": "center",
         }
       }
     >
-      <Image
-        fadeDuration={250}
-        onLoad={[Function]}
-        source={
-          Array [
-            Object {
-              "__typename": "ImageMediaSource",
-              "cache": "force-cache",
-              "uri": "https://picsum.photos/200/200",
-            },
-          ]
-        }
+      <View
         style={
           Object {
+            "alignSelf": "stretch",
             "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
-            "height": 64,
-            "marginRight": 16,
-            "width": 64,
+            "height": 14,
+            "marginVertical": 3.5,
+            "width": "60%",
           }
         }
       />
       <View
         style={
           Object {
-            "flex": 1,
-            "justifyContent": "center",
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#27272E",
-              "fontFamily": "InterUI-Medium",
-              "fontSize": 14,
-              "lineHeight": 21,
-            }
-          }
-        >
-          Boom
-        </Text>
-        <Text
-          bold={false}
-          ellipsizeMode="tail"
-          italic={false}
-          numberOfLines={2}
-          style={
-            Object {
-              "color": "rgba(39, 39, 46, 0.3)",
-              "fontFamily": "InterUI-Regular",
-              "fontSize": 12,
-              "lineHeight": 18,
-            }
-          }
-        >
-          What
-        </Text>
-      </View>
-    </View>
-    <View
-      accessible={true}
-      focusable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <View
-        bordered={true}
-        disabled={false}
-        pill={false}
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "transparent",
-            "borderColor": "#A5A5A5",
+            "alignSelf": "stretch",
+            "backgroundColor": "#A5A5A5",
             "borderRadius": 16,
-            "borderWidth": 2,
-            "flexDirection": "row",
-            "height": 48,
-            "justifyContent": "center",
-            "marginTop": 8,
-            "opacity": 1,
-            "overflow": "hidden",
-            "paddingHorizontal": 16,
+            "height": 12,
+            "marginVertical": 3,
             "width": "100%",
           }
         }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#A5A5A5",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 16,
-              "lineHeight": 24,
-            }
-          }
-        >
-          Check this out
-        </Text>
-      </View>
+      />
     </View>
-  </View>,
-]
-`;
-
-exports[`The HeroListFeatureConnected component should render without actions 1`] = `
-Array [
+  </View>
   <View
     style={
       Object {
-        "paddingBottom": 0,
-        "paddingHorizontal": 16,
-        "paddingTop": 48,
-        "paddingVertical": 16,
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "paddingBottom": 8,
       }
     }
   >
-    <Text
-      numberOfLines={1}
+    <Image
+      fadeDuration={250}
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "",
+          },
+        ]
+      }
       style={
         Object {
-          "color": "rgba(39, 39, 46, 0.3)",
-          "fontFamily": "InterUI-Medium",
-          "fontSize": 14,
-          "lineHeight": 21,
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 64,
+          "marginRight": 16,
+          "width": 64,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
         }
       }
     >
-      Some cool list
+      <View
+        style={
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 16,
+            "height": 14,
+            "marginVertical": 3.5,
+            "width": "60%",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 16,
+            "height": 12,
+            "marginVertical": 3,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "paddingBottom": 8,
+      }
+    }
+  >
+    <Image
+      fadeDuration={250}
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "",
+          },
+        ]
+      }
+      style={
+        Object {
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 64,
+          "marginRight": 16,
+          "width": 64,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 16,
+            "height": 14,
+            "marginVertical": 3.5,
+            "width": "60%",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 16,
+            "height": 12,
+            "marginVertical": 3,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "paddingBottom": 8,
+      }
+    }
+  >
+    <Image
+      fadeDuration={250}
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "cache": "force-cache",
+            "uri": "",
+          },
+        ]
+      }
+      style={
+        Object {
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 64,
+          "marginRight": 16,
+          "width": 64,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 16,
+            "height": 14,
+            "marginVertical": 3.5,
+            "width": "60%",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#A5A5A5",
+            "borderRadius": 16,
+            "height": 12,
+            "marginVertical": 3,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`The HeroListFeatureConnected component should render without a hero card 1`] = `
+<View
+  cardPadding={false}
+  style={
+    Object {
+      "paddingHorizontal": 16,
+      "paddingVertical": 16,
+    }
+  }
+>
+  <View>
+    <Text
+      secondary={true}
+      style={
+        Object {
+          "color": "rgba(39, 39, 46, 0.6)",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 16,
+          "lineHeight": 24,
+        }
+      }
+    >
+      Check it out
     </Text>
     <Text
+      primary={true}
       style={
         Object {
           "color": "#27272E",
@@ -1058,9 +857,188 @@ Array [
         }
       }
     >
+      Some cool list
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 16,
+        "paddingVertical": 8,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "paddingBottom": 8,
+      }
+    }
+  >
+    <Image
+      fadeDuration={250}
+      onLoad={[Function]}
+      source={
+        Array [
+          Object {
+            "__typename": "ImageMediaSource",
+            "cache": "force-cache",
+            "uri": "https://picsum.photos/200/200",
+          },
+        ]
+      }
+      style={
+        Object {
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 64,
+          "marginRight": 16,
+          "width": 64,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "#27272E",
+            "fontFamily": "InterUI-Medium",
+            "fontSize": 14,
+            "lineHeight": 21,
+          }
+        }
+      >
+        Boom
+      </Text>
+      <Text
+        bold={false}
+        ellipsizeMode="tail"
+        italic={false}
+        numberOfLines={2}
+        style={
+          Object {
+            "color": "rgba(39, 39, 46, 0.3)",
+            "fontFamily": "InterUI-Regular",
+            "fontSize": 12,
+            "lineHeight": 18,
+          }
+        }
+      >
+        What
+      </Text>
+    </View>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      bordered={true}
+      disabled={false}
+      pill={false}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderColor": "#A5A5A5",
+          "borderRadius": 16,
+          "borderWidth": 2,
+          "flexDirection": "row",
+          "height": 48,
+          "justifyContent": "center",
+          "marginTop": 8,
+          "opacity": 1,
+          "overflow": "hidden",
+          "paddingHorizontal": 16,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#A5A5A5",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
+          }
+        }
+      >
+        Check this out
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`The HeroListFeatureConnected component should render without actions 1`] = `
+<View
+  cardPadding={false}
+  style={
+    Object {
+      "paddingHorizontal": 16,
+      "paddingVertical": 16,
+    }
+  }
+>
+  <View>
+    <Text
+      secondary={true}
+      style={
+        Object {
+          "color": "rgba(39, 39, 46, 0.6)",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 16,
+          "lineHeight": 24,
+        }
+      }
+    >
       Check it out
     </Text>
-  </View>,
+    <Text
+      primary={true}
+      style={
+        Object {
+          "color": "#27272E",
+          "fontFamily": "InterUI-Black",
+          "fontSize": 24,
+          "lineHeight": 27.6,
+        }
+      }
+    >
+      Some cool list
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 16,
+        "paddingVertical": 8,
+      }
+    }
+  />
   <View
     accessible={true}
     focusable={true}
@@ -1086,7 +1064,8 @@ Array [
         Object {
           "backgroundColor": "#FFFFFF",
           "borderRadius": 16,
-          "marginHorizontal": 16,
+          "marginHorizontal": 0,
+          "marginTop": 0,
           "marginVertical": 12,
           "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
           "shadowOffset": Object {
@@ -1268,68 +1247,58 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
+  </View>
   <View
-    cardPadding={false}
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "paddingHorizontal": 16,
-        "paddingVertical": 16,
+        "opacity": 1,
       }
     }
   >
     <View
-      accessible={true}
-      focusable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
+      bordered={true}
+      disabled={false}
+      pill={false}
       style={
         Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderColor": "#A5A5A5",
+          "borderRadius": 16,
+          "borderWidth": 2,
+          "flexDirection": "row",
+          "height": 48,
+          "justifyContent": "center",
+          "marginTop": 8,
           "opacity": 1,
+          "overflow": "hidden",
+          "paddingHorizontal": 16,
+          "width": "100%",
         }
       }
     >
-      <View
-        bordered={true}
-        disabled={false}
-        pill={false}
+      <Text
         style={
           Object {
-            "alignItems": "center",
-            "backgroundColor": "transparent",
-            "borderColor": "#A5A5A5",
-            "borderRadius": 16,
-            "borderWidth": 2,
-            "flexDirection": "row",
-            "height": 48,
-            "justifyContent": "center",
-            "marginTop": 8,
-            "opacity": 1,
-            "overflow": "hidden",
-            "paddingHorizontal": 16,
-            "width": "100%",
+            "color": "#A5A5A5",
+            "fontFamily": "InterUI-Bold",
+            "fontSize": 16,
+            "lineHeight": 24,
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#A5A5A5",
-              "fontFamily": "InterUI-Bold",
-              "fontSize": 16,
-              "lineHeight": 24,
-            }
-          }
-        >
-          Check this out
-        </Text>
-      </View>
+        Check this out
+      </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
