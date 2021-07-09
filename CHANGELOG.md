@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.26.0](https://github.com/ApollosProject/apollos-apps/compare/v2.25.0...v2.26.0) (2021-07-09)
+
+
+### Features
+
+* <ContentTitles /> and other new components ([#1838](https://github.com/ApollosProject/apollos-apps/issues/1838)) ([3bc3a0c](https://github.com/ApollosProject/apollos-apps/commit/3bc3a0c9bb98514ccb47f9c2d0f3af5da8de1cd2))
+* Create tags and node tags model ([#2043](https://github.com/ApollosProject/apollos-apps/issues/2043)) ([662c6d9](https://github.com/ApollosProject/apollos-apps/commit/662c6d9a1fd5d6c8e9a002749636e6c9394b0e41))
+* Feature Schema/Model ([#2048](https://github.com/ApollosProject/apollos-apps/issues/2048)) ([2208441](https://github.com/ApollosProject/apollos-apps/commit/22084416bb375cfbd8e9bd05d14956f890972882))
+
+
+### Bug Fixes
+
+* bump graphql version ([#2046](https://github.com/ApollosProject/apollos-apps/issues/2046)) ([6c11d75](https://github.com/ApollosProject/apollos-apps/commit/6c11d75269352ec3a3aaad8aee5ff9f70a7a7254))
+* Feature titles spacing ([#2045](https://github.com/ApollosProject/apollos-apps/issues/2045)) ([88f651e](https://github.com/ApollosProject/apollos-apps/commit/88f651e6fc750e53e654128460294127b61f48f8))
+* Fix theme merging ([#2044](https://github.com/ApollosProject/apollos-apps/issues/2044)) ([97dd3d6](https://github.com/ApollosProject/apollos-apps/commit/97dd3d634e287a7b7829b52af1ac7f696d9c12f9))
+* race condition in ConnectedImage loading ([#2052](https://github.com/ApollosProject/apollos-apps/issues/2052)) ([d9de459](https://github.com/ApollosProject/apollos-apps/commit/d9de4593a8033a62fbd7a45a38c5dcb299a7150e))
+
+
+
 ## [2.25.0](https://github.com/ApollosProject/apollos-apps/compare/v2.24.0...v2.25.0) (2021-06-30)
 
 

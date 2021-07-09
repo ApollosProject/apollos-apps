@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.26.0](https://github.com/apollosproject/apollos-apps/compare/v2.25.0...v2.26.0) (2021-07-09)
+
+
+### Features
+
+* <ContentTitles /> and other new components ([#1838](https://github.com/apollosproject/apollos-apps/issues/1838)) ([3bc3a0c](https://github.com/apollosproject/apollos-apps/commit/3bc3a0c9bb98514ccb47f9c2d0f3af5da8de1cd2))
+
+
+
 ## [2.25.0](https://github.com/apollosproject/apollos-apps/compare/v2.24.0...v2.25.0) (2021-06-30)
 
 **Note:** Version bump only for package @apollosproject/ui-analytics
