@@ -1203,7 +1203,7 @@ Object {
   },
   "errors": Array [
     [GraphQLError: Maximum call stack size exceeded],
-    [GraphQLError: Cannot destructure property 'attributeValues' of 'object null' as it is null.],
+    [GraphQLError: Maximum call stack size exceeded],
   ],
 }
 `;
