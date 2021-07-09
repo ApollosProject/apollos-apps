@@ -1202,8 +1202,8 @@ Object {
     },
   },
   "errors": Array [
-    [GraphQLError: Maximum call stack size exceeded],
-    [GraphQLError: Maximum call stack size exceeded],
+    [GraphQLError: Cannot read property 'buildDefaultOptions' of undefined],
+    [GraphQLError: Cannot read property 'buildDefaultOptions' of undefined],
   ],
 }
 `;
