@@ -14,4 +14,4 @@ async function down({ context: queryInterface }) {
 
 const name = '004-add_metadata_column';
 
-module.exports = { up, down, name, order: 6 };
+module.exports = { up, down, name, order: 7 };
