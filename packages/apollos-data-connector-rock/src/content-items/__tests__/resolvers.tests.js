@@ -376,6 +376,29 @@ describe('UniversalContentItem', () => {
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
   });
+
+  it('properly handles empty attribute values', async () => {
+    const query = `
+      query {
+        node(id: "${createGlobalId(
+          'test-case-no-attributes',
+          'UniversalContentItem'
+        )}") {
+          ...ContentItemFragment
+        }
+      }
+      ${contentItemFragment}
+    `;
+
+    context.dataSources.ContentItem.request = (path) =>
+      path.includes('ContentChannels')
+        ? { get: () => null }
+        : { ...context.dataSources.ContentItem.request(path) };
+
+    const rootValue = {};
+    const result = await graphql(schema, query, rootValue, context);
+    expect(result).toMatchSnapshot();
+  });
 });
 
 const {

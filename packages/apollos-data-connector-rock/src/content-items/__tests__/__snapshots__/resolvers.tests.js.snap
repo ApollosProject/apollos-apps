@@ -1167,3 +1167,43 @@ Object {
   },
 }
 `;
+
+exports[`UniversalContentItem properly handles empty attribute values 1`] = `
+Object {
+  "data": Object {
+    "node": Object {
+      "__typename": "UniversalContentItem",
+      "audios": Array [],
+      "childContentItemsConnection": null,
+      "coverImage": null,
+      "htmlContent": "<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sollicitudin condimentum aliquet. In est nulla, lacinia ac dictum et, laoreet vitae elit. Proin tempus tellus ligula, a consequat diam consectetur a. Phasellus luctus velit sed lorem mollis commodo. Nunc sit amet blandit velit. Donec tincidunt congue facilisis. Sed iaculis at neque non porttitor. Phasellus ultrices egestas erat feugiat pellentesque. Duis venenatis, dolor quis fringilla tempus, sem lorem euismod lectus, sed egestas felis magna at felis. Pellentesque ut rhoncus erat, a pulvinar purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut sit amet consequat est. Maecenas et porta dui, non condimentum lectus.</p>
+<p>
+	Suspendisse vel nibh odio. Pellentesque porta sapien ligula, in laoreet diam tempus sed. Morbi nunc erat, mattis eu pulvinar blandit, adipiscing quis magna. Ut quis dui lobortis velit suscipit consectetur. Nulla iaculis fermentum egestas. Aenean venenatis sagittis mauris, sed rhoncus purus accumsan ac. Suspendisse potenti. Sed sed tempor turpis. Duis sit amet nisi nec purus fringilla condimentum. Phasellus non lacus arcu. Donec scelerisque, erat sed tempor elementum, nulla risus scelerisque ante, ac imperdiet velit magna ut quam. Nam tristique orci auctor consequat laoreet. Quisque malesuada metus sed sodales eleifend. Aenean rhoncus, mi sit amet ullamcorper tincidunt, sem sem rutrum felis, in semper enim massa ut sem.</p>
+<p>
+	Vivamus diam urna, cursus in sapien in, porta gravida enim. Cras non fringilla arcu, tincidunt laoreet lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam volutpat felis quis augue faucibus ultrices. Morbi lobortis vestibulum sodales. Sed tincidunt urna vitae felis ultrices, pharetra placerat quam dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel adipiscing tellus. In vitae sodales diam. Aliquam pharetra orci a porta molestie. In et neque bibendum, viverra leo sit amet, auctor magna. Morbi posuere massa sed metus euismod, et adipiscing sem dictum. Cras eget elementum risus, non imperdiet ligula.</p>
+",
+      "id": "UniversalContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+      "images": Array [],
+      "parentChannel": Object {
+        "__typename": "ContentChannel",
+        "id": "ContentChannel:744e1011cfa6a90bb2fbfeb3ecdc1451",
+      },
+      "publishDate": "2013-08-01T00:00:00-04:00",
+      "sharing": Object {
+        "__typename": "SharableContentItem",
+        "message": "SAMPLE: Easter - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "title": "Share via ...",
+        "url": "fakeurl.com",
+      },
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "title": "SAMPLE: Easter",
+      "videos": Array [],
+    },
+  },
+  "errors": Array [
+    [GraphQLError: Maximum call stack size exceeded],
+    [GraphQLError: Cannot destructure property 'attributeValues' of 'object null' as it is null.],
+  ],
+}
+`;
