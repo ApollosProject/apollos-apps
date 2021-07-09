@@ -390,11 +390,11 @@ describe('UniversalContentItem', () => {
       ${contentItemFragment}
     `;
 
-    const baseRequest = context.dataSources.ContentItem.request;
-    context.dataSources.ContentItem.request = (path) =>
+    const baseRequest = await context.dataSources.ContentItem.request();
+    context.dataSources.ContentItem.request = (path = 'ContentChannelItem') =>
       path.includes('ContentChannels')
         ? { get: () => ({ attributeValues: {}, attributes: {} }) }
-        : { ...baseRequest(path) };
+        : { ...baseRequest };
 
     const rootValue = {};
     const result = await graphql(schema, query, rootValue, context);

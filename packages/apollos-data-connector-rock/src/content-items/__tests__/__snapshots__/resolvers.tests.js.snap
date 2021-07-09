@@ -1174,7 +1174,21 @@ Object {
     "node": Object {
       "__typename": "UniversalContentItem",
       "audios": Array [],
-      "childContentItemsConnection": null,
+      "childContentItemsConnection": Object {
+        "edges": Array [
+          Object {
+            "cursor": "b487224762b030f470967f45d7205823",
+            "node": Object {
+              "__typename": "MediaContentItem",
+              "id": "MediaContentItem:559b23fd0aa90e81b1c023e72e230fa1",
+            },
+          },
+        ],
+        "pageInfo": Object {
+          "endCursor": "b487224762b030f470967f45d7205823",
+          "startCursor": "b487224762b030f470967f45d7205823",
+        },
+      },
       "coverImage": null,
       "htmlContent": "<p>
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sollicitudin condimentum aliquet. In est nulla, lacinia ac dictum et, laoreet vitae elit. Proin tempus tellus ligula, a consequat diam consectetur a. Phasellus luctus velit sed lorem mollis commodo. Nunc sit amet blandit velit. Donec tincidunt congue facilisis. Sed iaculis at neque non porttitor. Phasellus ultrices egestas erat feugiat pellentesque. Duis venenatis, dolor quis fringilla tempus, sem lorem euismod lectus, sed egestas felis magna at felis. Pellentesque ut rhoncus erat, a pulvinar purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut sit amet consequat est. Maecenas et porta dui, non condimentum lectus.</p>
@@ -1202,8 +1216,7 @@ Object {
     },
   },
   "errors": Array [
-    [GraphQLError: Cannot read property 'buildDefaultOptions' of undefined],
-    [GraphQLError: Cannot read property 'buildDefaultOptions' of undefined],
+    [GraphQLError: Cannot convert undefined or null to object],
   ],
 }
 `;
