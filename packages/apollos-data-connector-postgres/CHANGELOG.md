@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.26.0](https://github.com/apollosproject/apollos-apps/compare/v2.25.0...v2.26.0) (2021-07-09)
+
+
+### Features
+
+* Create tags and node tags model ([#2043](https://github.com/apollosproject/apollos-apps/issues/2043)) ([662c6d9](https://github.com/apollosproject/apollos-apps/commit/662c6d9a1fd5d6c8e9a002749636e6c9394b0e41))
+* Feature Schema/Model ([#2048](https://github.com/apollosproject/apollos-apps/issues/2048)) ([2208441](https://github.com/apollosproject/apollos-apps/commit/22084416bb375cfbd8e9bd05d14956f890972882))
+
+
+
 ## [2.25.0](https://github.com/apollosproject/apollos-apps/compare/v2.24.0...v2.25.0) (2021-06-30)
 
 
