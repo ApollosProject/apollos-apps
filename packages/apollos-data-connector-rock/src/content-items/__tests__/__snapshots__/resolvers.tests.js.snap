@@ -1215,8 +1215,5 @@ Object {
       "videos": Array [],
     },
   },
-  "errors": Array [
-    [GraphQLError: Cannot convert undefined or null to object],
-  ],
 }
 `;

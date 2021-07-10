@@ -403,7 +403,6 @@ export default class ContentItem extends RockApolloDataSource {
       const channel = await this.request(
         `ContentChannels/${root.contentChannelId}?loadAttributes=expanded`
       ).get();
-
       const channelImages = this.getImages(channel).filter(
         ({ sources }) => sources.length
       );
