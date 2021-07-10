@@ -693,6 +693,9 @@ describe('ContentItemsModel', () => {
     dataSource.getCursorByChildContentItemId = () => ({
       get: () => Promise.resolve([{ attributeValues: {}, attributes: {} }]),
     });
+    dataSource.request = () => ({
+      get: () => ({ attributeValues: {}, attributes: {} }),
+    });
 
     dataSource.context = {
       dataSources: {

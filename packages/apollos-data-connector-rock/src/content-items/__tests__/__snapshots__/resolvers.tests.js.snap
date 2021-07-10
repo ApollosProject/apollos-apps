@@ -1189,15 +1189,7 @@ Object {
           "startCursor": "b487224762b030f470967f45d7205823",
         },
       },
-      "coverImage": Object {
-        "key": "image",
-        "name": "Image",
-        "sources": Array [
-          Object {
-            "uri": "https://apollosrock.newspring.cc/GetImage.ashx?guid=0241ED2F-B527-424C-917C-1142A398711F",
-          },
-        ],
-      },
+      "coverImage": null,
       "htmlContent": "<p>
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sollicitudin condimentum aliquet. In est nulla, lacinia ac dictum et, laoreet vitae elit. Proin tempus tellus ligula, a consequat diam consectetur a. Phasellus luctus velit sed lorem mollis commodo. Nunc sit amet blandit velit. Donec tincidunt congue facilisis. Sed iaculis at neque non porttitor. Phasellus ultrices egestas erat feugiat pellentesque. Duis venenatis, dolor quis fringilla tempus, sem lorem euismod lectus, sed egestas felis magna at felis. Pellentesque ut rhoncus erat, a pulvinar purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut sit amet consequat est. Maecenas et porta dui, non condimentum lectus.</p>
 <p>

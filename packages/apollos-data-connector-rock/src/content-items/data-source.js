@@ -398,6 +398,16 @@ export default class ContentItem extends RockApolloDataSource {
 
     if (ourImages.length) {
       image = this.pickBestImage({ images: ourImages });
+    } else {
+      // check channel
+      const channel = await this.request(
+        `ContentChannels/${root.contentChannelId}?loadAttributes=expanded`
+      ).get();
+      const channelImages = this.getImages(channel).filter(
+        ({ sources }) => sources.length
+      );
+      if (channelImages.length)
+        image = this.pickBestImage({ images: channelImages });
     }
 
     // If no image, check parent for image:
