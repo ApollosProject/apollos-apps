@@ -27,7 +27,7 @@ export default class RockApolloDataSource extends RESTDataSource {
   expanded = false;
 
   // Sublasses can use this to load specific attributes.
-  rockAttributes = [];
+  attributesLoaded = [];
 
   callCount = 0;
 
