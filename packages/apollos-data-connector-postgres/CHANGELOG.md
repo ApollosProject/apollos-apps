@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.26.0](https://github.com/apollosproject/apollos-apps/compare/v2.25.0...v2.26.0) (2021-07-09)
+
+
+### Features
+
+* Create tags and node tags model ([#2043](https://github.com/apollosproject/apollos-apps/issues/2043)) ([662c6d9](https://github.com/apollosproject/apollos-apps/commit/662c6d9a1fd5d6c8e9a002749636e6c9394b0e41))
+* Feature Schema/Model ([#2048](https://github.com/apollosproject/apollos-apps/issues/2048)) ([2208441](https://github.com/apollosproject/apollos-apps/commit/22084416bb375cfbd8e9bd05d14956f890972882))
+
+
+
+## [2.25.0](https://github.com/apollosproject/apollos-apps/compare/v2.24.0...v2.25.0) (2021-06-30)
+
+
+### Features
+
+* Content Item Category model ([#2029](https://github.com/apollosproject/apollos-apps/issues/2029)) ([cb4edbf](https://github.com/apollosproject/apollos-apps/commit/cb4edbf02b6dac586f1e2438d58f9e67e261aa30))
+
+
+### Bug Fixes
+
+* Only send notifications for public journals ([#2038](https://github.com/apollosproject/apollos-apps/issues/2038)) ([e15a032](https://github.com/apollosproject/apollos-apps/commit/e15a03212ee40787f8cd7ecf23358ef6997b9a92))
+* Postgres Media bugfixes ([#2026](https://github.com/apollosproject/apollos-apps/issues/2026)) ([3d3b61d](https://github.com/apollosproject/apollos-apps/commit/3d3b61de6582750ec4609b8b30a5add3475fabf8))
+
+
+
+## [2.24.0](https://github.com/apollosproject/apollos-apps/compare/v2.23.1...v2.24.0) (2021-06-28)
+
+**Note:** Version bump only for package @apollosproject/data-connector-postgres
+
+
+
+
+
 ### [2.23.1](https://github.com/apollosproject/apollos-apps/compare/v2.23.0...v2.23.1) (2021-06-24)
 
 **Note:** Version bump only for package @apollosproject/data-connector-postgres

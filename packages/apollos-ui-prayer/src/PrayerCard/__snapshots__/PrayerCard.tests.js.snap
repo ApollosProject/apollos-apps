@@ -142,7 +142,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -189,7 +189,7 @@ Array [
         <Text
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
               "lineHeight": 24,
@@ -299,7 +299,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -345,7 +345,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -392,7 +392,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -551,7 +551,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -598,7 +598,7 @@ Array [
         <Text
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
               "lineHeight": 24,
@@ -708,7 +708,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -754,7 +754,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -801,7 +801,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -1074,7 +1074,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -1122,7 +1122,7 @@ Array [
           padded={true}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
               "lineHeight": 24,
@@ -1138,7 +1138,7 @@ Array [
           italic={false}
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Regular",
               "fontSize": 16,
               "lineHeight": 26,
@@ -1295,7 +1295,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -1342,7 +1342,7 @@ Array [
         <Text
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
               "lineHeight": 24,
@@ -1452,7 +1452,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -1498,7 +1498,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -1545,7 +1545,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,
@@ -1705,7 +1705,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -1752,7 +1752,7 @@ Array [
         <Text
           style={
             Object {
-              "color": "#303030",
+              "color": "#27272E",
               "fontFamily": "InterUI-Bold",
               "fontSize": 16,
               "lineHeight": 24,
@@ -1862,7 +1862,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -1908,7 +1908,7 @@ Array [
                   fill={
                     Array [
                       0,
-                      4281348144,
+                      4280756014,
                     ]
                   }
                   fillOpacity={1}
@@ -1955,7 +1955,7 @@ Array [
               italic={false}
               style={
                 Object {
-                  "color": "#303030",
+                  "color": "#27272E",
                   "fontFamily": "InterUI-Regular",
                   "fontSize": 16,
                   "lineHeight": 26,

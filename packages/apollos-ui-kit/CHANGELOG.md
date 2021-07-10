@@ -3,6 +3,45 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.26.0](https://github.com/apollosproject/apollos-apps/compare/v2.25.0...v2.26.0) (2021-07-09)
+
+
+### Features
+
+* <ContentTitles /> and other new components ([#1838](https://github.com/apollosproject/apollos-apps/issues/1838)) ([3bc3a0c](https://github.com/apollosproject/apollos-apps/commit/3bc3a0c9bb98514ccb47f9c2d0f3af5da8de1cd2))
+
+
+### Bug Fixes
+
+* Feature titles spacing ([#2045](https://github.com/apollosproject/apollos-apps/issues/2045)) ([88f651e](https://github.com/apollosproject/apollos-apps/commit/88f651e6fc750e53e654128460294127b61f48f8))
+* Fix theme merging ([#2044](https://github.com/apollosproject/apollos-apps/issues/2044)) ([97dd3d6](https://github.com/apollosproject/apollos-apps/commit/97dd3d634e287a7b7829b52af1ac7f696d9c12f9))
+* race condition in ConnectedImage loading ([#2052](https://github.com/apollosproject/apollos-apps/issues/2052)) ([d9de459](https://github.com/apollosproject/apollos-apps/commit/d9de4593a8033a62fbd7a45a38c5dcb299a7150e))
+
+
+
+## [2.25.0](https://github.com/apollosproject/apollos-apps/compare/v2.24.0...v2.25.0) (2021-06-30)
+
+
+### Features
+
+* Figma / 2.0 Theme Changes ([#1861](https://github.com/apollosproject/apollos-apps/issues/1861)) ([1a93cc8](https://github.com/apollosproject/apollos-apps/commit/1a93cc8364985739720ca53963f26711824683c5)), closes [#1814](https://github.com/apollosproject/apollos-apps/issues/1814)
+* useTheme hook ([#1814](https://github.com/apollosproject/apollos-apps/issues/1814)) ([e75d7a7](https://github.com/apollosproject/apollos-apps/commit/e75d7a74067ed503d2fe899401acb7e59097f970))
+
+
+### Bug Fixes
+
+* Fix Storybook 🎉 ([#2037](https://github.com/apollosproject/apollos-apps/issues/2037)) ([f0ef4f6](https://github.com/apollosproject/apollos-apps/commit/f0ef4f6d5eac1d8df2db217f9f13495ad98ec676))
+
+
+
+## [2.24.0](https://github.com/apollosproject/apollos-apps/compare/v2.23.1...v2.24.0) (2021-06-28)
+
+**Note:** Version bump only for package @apollosproject/ui-kit
+
+
+
+
+
 ### [2.23.1](https://github.com/apollosproject/apollos-apps/compare/v2.23.0...v2.23.1) (2021-06-24)
 
 **Note:** Version bump only for package @apollosproject/ui-kit

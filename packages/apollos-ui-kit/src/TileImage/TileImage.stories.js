@@ -5,7 +5,7 @@ import { View } from 'react-native';
 
 import styled from '../styled';
 
-import TileImage from '.';
+import TileImage from './index';
 
 const Square = styled({ aspectRatio: 1 })(View);
 

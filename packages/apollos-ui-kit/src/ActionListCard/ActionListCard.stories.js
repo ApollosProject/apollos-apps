@@ -6,7 +6,7 @@ import CenteredView from '../CenteredView';
 import BackgroundView from '../BackgroundView';
 import { H3 } from '../typography';
 
-import ActionListCard from '.';
+import ActionListCard from './index';
 
 const actions = [
   {

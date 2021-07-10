@@ -5,7 +5,7 @@ import { View } from 'react-native';
 import CenteredView from '../../CenteredView';
 import PaddedView from '../../PaddedView';
 
-import Search from '.';
+import Search from './index';
 
 storiesOf('ui-kit/Inputs/Search', module)
   .addDecorator((story) => (

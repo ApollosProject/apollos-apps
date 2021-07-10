@@ -23,7 +23,7 @@ Array [
     accessible={false}
     style={
       Object {
-        "color": "#303030",
+        "color": "#27272E",
         "fontFamily": "System",
         "fontSize": 14,
         "fontStyle": null,
@@ -130,7 +130,7 @@ Array [
     bold={true}
     style={
       Object {
-        "color": "#303030",
+        "color": "#27272E",
         "fontFamily": "System",
         "fontSize": 14,
         "fontStyle": null,
@@ -168,7 +168,7 @@ Array [
     italic={true}
     style={
       Object {
-        "color": "#303030",
+        "color": "#27272E",
         "fontFamily": "System",
         "fontSize": 14,
         "fontStyle": "italic",
@@ -205,7 +205,7 @@ Array [
     italic={true}
     style={
       Object {
-        "color": "#303030",
+        "color": "#27272E",
         "fontFamily": "System",
         "fontSize": 14,
         "fontStyle": "italic",
@@ -241,7 +241,7 @@ Array [
   <Text
     style={
       Object {
-        "color": "#303030",
+        "color": "#27272E",
         "fontFamily": "System",
         "fontSize": 14,
         "fontStyle": null,

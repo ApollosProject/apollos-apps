@@ -3,6 +3,58 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.26.0](https://github.com/ApollosProject/apollos-apps/compare/v2.25.0...v2.26.0) (2021-07-09)
+
+
+### Features
+
+* <ContentTitles /> and other new components ([#1838](https://github.com/ApollosProject/apollos-apps/issues/1838)) ([3bc3a0c](https://github.com/ApollosProject/apollos-apps/commit/3bc3a0c9bb98514ccb47f9c2d0f3af5da8de1cd2))
+* Create tags and node tags model ([#2043](https://github.com/ApollosProject/apollos-apps/issues/2043)) ([662c6d9](https://github.com/ApollosProject/apollos-apps/commit/662c6d9a1fd5d6c8e9a002749636e6c9394b0e41))
+* Feature Schema/Model ([#2048](https://github.com/ApollosProject/apollos-apps/issues/2048)) ([2208441](https://github.com/ApollosProject/apollos-apps/commit/22084416bb375cfbd8e9bd05d14956f890972882))
+
+
+### Bug Fixes
+
+* bump graphql version ([#2046](https://github.com/ApollosProject/apollos-apps/issues/2046)) ([6c11d75](https://github.com/ApollosProject/apollos-apps/commit/6c11d75269352ec3a3aaad8aee5ff9f70a7a7254))
+* Feature titles spacing ([#2045](https://github.com/ApollosProject/apollos-apps/issues/2045)) ([88f651e](https://github.com/ApollosProject/apollos-apps/commit/88f651e6fc750e53e654128460294127b61f48f8))
+* Fix theme merging ([#2044](https://github.com/ApollosProject/apollos-apps/issues/2044)) ([97dd3d6](https://github.com/ApollosProject/apollos-apps/commit/97dd3d634e287a7b7829b52af1ac7f696d9c12f9))
+* race condition in ConnectedImage loading ([#2052](https://github.com/ApollosProject/apollos-apps/issues/2052)) ([d9de459](https://github.com/ApollosProject/apollos-apps/commit/d9de4593a8033a62fbd7a45a38c5dcb299a7150e))
+
+
+
+## [2.25.0](https://github.com/ApollosProject/apollos-apps/compare/v2.24.0...v2.25.0) (2021-06-30)
+
+
+### Features
+
+* Content Item Category model ([#2029](https://github.com/ApollosProject/apollos-apps/issues/2029)) ([cb4edbf](https://github.com/ApollosProject/apollos-apps/commit/cb4edbf02b6dac586f1e2438d58f9e67e261aa30))
+* Figma / 2.0 Theme Changes ([#1861](https://github.com/ApollosProject/apollos-apps/issues/1861)) ([1a93cc8](https://github.com/ApollosProject/apollos-apps/commit/1a93cc8364985739720ca53963f26711824683c5)), closes [#1814](https://github.com/ApollosProject/apollos-apps/issues/1814)
+* useTheme hook ([#1814](https://github.com/ApollosProject/apollos-apps/issues/1814)) ([e75d7a7](https://github.com/ApollosProject/apollos-apps/commit/e75d7a74067ed503d2fe899401acb7e59097f970))
+
+
+### Bug Fixes
+
+* Fix Storybook 🎉 ([#2037](https://github.com/ApollosProject/apollos-apps/issues/2037)) ([f0ef4f6](https://github.com/ApollosProject/apollos-apps/commit/f0ef4f6d5eac1d8df2db217f9f13495ad98ec676))
+* Only send notifications for public journals ([#2038](https://github.com/ApollosProject/apollos-apps/issues/2038)) ([e15a032](https://github.com/ApollosProject/apollos-apps/commit/e15a03212ee40787f8cd7ecf23358ef6997b9a92))
+* Postgres Media bugfixes ([#2026](https://github.com/ApollosProject/apollos-apps/issues/2026)) ([3d3b61d](https://github.com/ApollosProject/apollos-apps/commit/3d3b61de6582750ec4609b8b30a5add3475fabf8))
+* protect against null sharing field ([#2028](https://github.com/ApollosProject/apollos-apps/issues/2028)) ([032072e](https://github.com/ApollosProject/apollos-apps/commit/032072e5b11e1ca0f3dc0f50b0418b0195a5a88f))
+
+
+
+## [2.24.0](https://github.com/ApollosProject/apollos-apps/compare/v2.23.1...v2.24.0) (2021-06-28)
+
+
+### Features
+
+* add ability to pass options to FeaturesFeedTabConnected route ([#2020](https://github.com/ApollosProject/apollos-apps/issues/2020)) ([96dd90e](https://github.com/ApollosProject/apollos-apps/commit/96dd90ef9e68b53cd69a2c6d5b9b5489d3b427ea))
+
+
+### Bug Fixes
+
+* complete onboarding when there are no more slides ([#2022](https://github.com/ApollosProject/apollos-apps/issues/2022)) ([7e8a9e7](https://github.com/ApollosProject/apollos-apps/commit/7e8a9e7a80ce18d96bddda0a9197e59f68dca0ee))
+
+
+
 ### [2.23.1](https://github.com/ApollosProject/apollos-apps/compare/v2.23.0...v2.23.1) (2021-06-24)
 
 **Note:** Version bump only for package apollos

@@ -324,7 +324,7 @@ Array [
       <Text
         style={
           Object {
-            "color": "#303030",
+            "color": "#27272E",
             "fontFamily": "InterUI-Medium",
             "fontSize": 14,
             "lineHeight": 21,

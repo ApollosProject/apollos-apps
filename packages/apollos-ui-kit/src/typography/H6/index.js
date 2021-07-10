@@ -4,9 +4,11 @@ import { compose, setDisplayName, pure } from 'recompose';
 
 import styled from '../../styled';
 import { withPlaceholder, Typography } from '../../Placeholder';
+import withThemeColor from '../withThemeColor';
 
 const H6 = compose(
   setDisplayName('ui-kit.Typography.H6'),
+  withThemeColor,
   styled(
     ({ theme, padded }) => ({
       fontSize: theme.helpers.rem(0.75),

@@ -4,6 +4,21 @@ import fontStack from './fontStack';
 import * as types from './types';
 
 /**
+ * These theme values implement
+ * https://www.figma.com/file/YHJLj8pdFxWG9npF2YmB3r/?node-id=0%3A1
+ *
+ * Status:
+ * - [ ] Typography
+ * - [ ] Colors/base
+ * - [ ] Colors/light
+ * - [ ] Colors/dark
+ * - [ ] Shadows/light
+ * - [ ] Shadows/dark
+ * - [ ] Materials/light
+ * - [ ] Materials/dark
+ */
+
+/**
  * There are two parts to a theme:
  * 1. The `input` that is used to generate a theme,
  * 2. The generated `theme` that is consumed by components
@@ -30,25 +45,30 @@ export const colors = {
   primary: '#00676D',
   secondary: '#17B582',
   tertiary: '#6EC5B8',
-  screen: '#F8F7F4',
-  paper: '#FFFFFF',
   alert: '#c64f55',
+  warning: '#F4B740',
+  success: '#17B569',
 
-  // Dark shades
-  darkPrimary: '#303030',
-  darkSecondary: '#505050',
-  darkTertiary: '#A5A5A5',
+  gray: '#8E8E93',
+  darkPrimary: '#27272E',
+  lightPrimary: '#F4F7F8',
 
-  // Light shades
-  lightPrimary: '#F8F7F4',
-  lightSecondary: '#DBDBD9',
-  lightTertiary: '#A5A5A5',
+  wordOfChrist: '#8b0000', // only used in Scripture.
 
-  // Statics
   black: '#000000',
   white: '#FFFFFF',
   transparent: 'transparent',
-  wordOfChrist: '#8b0000', // only used in Scripture.
+
+  // Below colors are deprecated.
+  // Dark shades
+  darkSecondary: '#505050',
+  darkTertiary: '#A5A5A5',
+  // Light shades
+  lightSecondary: '#DBDBD9',
+  lightTertiary: '#A5A5A5',
+  // (note: paper and screen are now set within the theme type directly)
+  // screen: '#F8F7F4',
+  // paper: '#FFFFFF',
 };
 
 /* Base Typography sizing and fonts.

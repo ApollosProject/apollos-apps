@@ -5,7 +5,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 import { Paragraph, BodyText } from '..';
 import PaddedView from '../../PaddedView';
 
-import H4 from '.';
+import H4 from './index';
 
 storiesOf('ui-kit/typography/H4', module)
   .add('Default', () => (
