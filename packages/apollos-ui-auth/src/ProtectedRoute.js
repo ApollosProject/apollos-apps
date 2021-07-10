@@ -23,7 +23,6 @@ const ProtectedRoute = ({
 
   const handleLoginDataChanged = useCallback(() => {
     const shouldNavigate = !isLoading;
-    // console.warn(shouldNavigate, isLoading);
     if (shouldNavigate && onRouteChange) onRouteChange({ isLoggedIn });
     if (shouldNavigate && isLoggedIn) {
       navigation.replace(loggedInRouteName);
@@ -38,6 +37,7 @@ const ProtectedRoute = ({
     loggedInRouteName,
     loggedOutRouteName,
   ]);
+
   useEffect(() => {
     handleLoginDataChanged();
   }, [handleLoginDataChanged]);
