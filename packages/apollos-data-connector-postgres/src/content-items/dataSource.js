@@ -136,36 +136,25 @@ class ContentItemDataSource extends PostgresDataSource {
   }
 
   // Generates feed based on persons dataview membership
-  byPersonaFeed = async (first) => {
-    //     const {
-    //       dataSources: { Persona },
-    //     } = this.context;
-    //
-    //     // Grabs the guids associated with all dataviews user is memeber
-    //     const getPersonaGuidsForUser = await Persona.getPersonas({
-    //       categoryId: ROCK_MAPPINGS.DATAVIEW_CATEGORIES.PersonaId,
-    //     });
-    //
-    //     if (getPersonaGuidsForUser.length === 0) {
-    //       return this.request().empty();
-    //     }
-    //
-    //     // Rely on custom code without the plugin.
-    //     // Use plugin, if the user has set USE_PLUGIN to true.
-    //     // In general, you should ALWAYS use the plugin if possible.
-    //     const endpoint = get(ApollosConfig, 'ROCK.USE_PLUGIN', false)
-    //       ? 'Apollos/ContentChannelItemsByDataViewGuids'
-    //       : 'ContentChannelItems/GetFromPersonDataView';
-    //
-    //     // Grabs content items based on personas
-    //     return this.request(
-    //       `${endpoint}?guids=${getPersonaGuidsForUser
-    //         .map((obj) => obj.guid)
-    //         .join()}`
-    //     )
-    //       .andFilter(this.LIVE_CONTENT())
-    //       .top(first)
-    //       .orderBy('StartDateTime', 'desc');
+  getPersonaFeed = async ({ args }) => {
+    const {
+      dataSources: { Person },
+    } = this.context;
+    const personId = await Person.getCurrentPersonId();
+
+    return this.model.findAll({
+      include: {
+        model: this.sequelize.models.tag,
+        as: 'tags',
+        where: { type: 'Persona' },
+        include: {
+          model: this.sequelize.models.people,
+          where: { id: personId },
+          as: 'people',
+        },
+      },
+      ...args,
+    });
   };
 
   getUserFeed = () => {
@@ -196,7 +185,6 @@ class ContentItemDataSource extends PostgresDataSource {
       console.warn(
         'You are passing rock ids IDS to ContentItem.getFromCategoryIds. This is supported, but we recommend using Postgres IDS in your config.yml long term'
       );
-      console.log(this.sequelize.models);
       return this.model.findAll({
         include: [
           {
