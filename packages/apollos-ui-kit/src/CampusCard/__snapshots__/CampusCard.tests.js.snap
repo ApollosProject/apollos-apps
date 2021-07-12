@@ -73,7 +73,7 @@ Array [
           style={
             Object {
               "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "height": "100%",
               "resizeMode": "cover",
             }
@@ -227,7 +227,7 @@ Array [
           style={
             Object {
               "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "height": "100%",
               "resizeMode": "cover",
             }
@@ -257,7 +257,7 @@ Array [
               style={
                 Object {
                   "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "rgba(142, 142, 147, 0.12)",
                   "borderRadius": 16,
                   "height": 14,
                   "marginVertical": 3.5,
@@ -278,7 +278,7 @@ Array [
                 style={
                   Object {
                     "alignSelf": "stretch",
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "borderRadius": 16,
                     "height": 12,
                     "marginVertical": 3,
@@ -292,7 +292,7 @@ Array [
             style={
               Object {
                 "alignSelf": "stretch",
-                "backgroundColor": "#A5A5A5",
+                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                 "borderRadius": 16,
                 "height": 12,
                 "marginVertical": 3,
@@ -608,7 +608,7 @@ Array [
           style={
             Object {
               "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "height": "100%",
               "resizeMode": "cover",
             }
@@ -824,7 +824,7 @@ Array [
           style={
             Object {
               "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "height": "100%",
               "resizeMode": "cover",
             }
@@ -966,7 +966,7 @@ Array [
           style={
             Object {
               "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "height": "100%",
               "resizeMode": "cover",
             }

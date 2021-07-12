@@ -32,7 +32,7 @@ exports[`The HeroListFeatures component should render 1`] = `
       }
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
@@ -101,7 +101,7 @@ exports[`The HeroListFeatures component should render 1`] = `
       }
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
@@ -170,7 +170,7 @@ exports[`The HeroListFeatures component should render 1`] = `
       }
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
@@ -239,7 +239,7 @@ exports[`The HeroListFeatures component should render 1`] = `
       }
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
@@ -321,7 +321,7 @@ exports[`The HeroListFeatures component should render a button for onPressAction
       }
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
@@ -390,7 +390,7 @@ exports[`The HeroListFeatures component should render a button for onPressAction
       }
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
@@ -459,7 +459,7 @@ exports[`The HeroListFeatures component should render a button for onPressAction
       }
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
@@ -528,7 +528,7 @@ exports[`The HeroListFeatures component should render a button for onPressAction
       }
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
@@ -665,7 +665,7 @@ exports[`The HeroListFeatures component should render a loading state for isLoad
             source={Array []}
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
+                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                 "bottom": 0,
                 "left": 0,
                 "position": "absolute",
@@ -698,7 +698,7 @@ exports[`The HeroListFeatures component should render a loading state for isLoad
           style={
             Object {
               "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "width": "100%",
             }
           }
@@ -725,7 +725,7 @@ exports[`The HeroListFeatures component should render a loading state for isLoad
             style={
               Object {
                 "alignSelf": "stretch",
-                "backgroundColor": "#A5A5A5",
+                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                 "borderRadius": 16,
                 "height": 24,
                 "marginVertical": 1.8000000000000007,
@@ -737,7 +737,7 @@ exports[`The HeroListFeatures component should render a loading state for isLoad
             style={
               Object {
                 "alignSelf": "stretch",
-                "backgroundColor": "#A5A5A5",
+                "backgroundColor": "rgba(142, 142, 147, 0.12)",
                 "borderRadius": 16,
                 "height": 16,
                 "marginVertical": 5,
@@ -781,7 +781,7 @@ exports[`The HeroListFeatures component should render a loading state for isLoad
       }
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
@@ -801,7 +801,7 @@ exports[`The HeroListFeatures component should render a loading state for isLoad
         style={
           Object {
             "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.12)",
             "borderRadius": 16,
             "height": 14,
             "marginVertical": 3.5,
@@ -813,7 +813,7 @@ exports[`The HeroListFeatures component should render a loading state for isLoad
         style={
           Object {
             "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.12)",
             "borderRadius": 16,
             "height": 12,
             "marginVertical": 3,
@@ -845,7 +845,7 @@ exports[`The HeroListFeatures component should render a loading state for isLoad
       }
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
@@ -865,7 +865,7 @@ exports[`The HeroListFeatures component should render a loading state for isLoad
         style={
           Object {
             "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.12)",
             "borderRadius": 16,
             "height": 14,
             "marginVertical": 3.5,
@@ -877,7 +877,7 @@ exports[`The HeroListFeatures component should render a loading state for isLoad
         style={
           Object {
             "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.12)",
             "borderRadius": 16,
             "height": 12,
             "marginVertical": 3,
@@ -909,7 +909,7 @@ exports[`The HeroListFeatures component should render a loading state for isLoad
       }
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
@@ -929,7 +929,7 @@ exports[`The HeroListFeatures component should render a loading state for isLoad
         style={
           Object {
             "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.12)",
             "borderRadius": 16,
             "height": 14,
             "marginVertical": 3.5,
@@ -941,7 +941,7 @@ exports[`The HeroListFeatures component should render a loading state for isLoad
         style={
           Object {
             "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.12)",
             "borderRadius": 16,
             "height": 12,
             "marginVertical": 3,
@@ -973,7 +973,7 @@ exports[`The HeroListFeatures component should render a loading state for isLoad
       }
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
@@ -993,7 +993,7 @@ exports[`The HeroListFeatures component should render a loading state for isLoad
         style={
           Object {
             "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.12)",
             "borderRadius": 16,
             "height": 14,
             "marginVertical": 3.5,
@@ -1005,7 +1005,7 @@ exports[`The HeroListFeatures component should render a loading state for isLoad
         style={
           Object {
             "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.12)",
             "borderRadius": 16,
             "height": 12,
             "marginVertical": 3,
@@ -1073,7 +1073,7 @@ exports[`The HeroListFeatures component should render with a subtitle 1`] = `
       }
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
@@ -1142,7 +1142,7 @@ exports[`The HeroListFeatures component should render with a subtitle 1`] = `
       }
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
@@ -1211,7 +1211,7 @@ exports[`The HeroListFeatures component should render with a subtitle 1`] = `
       }
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
@@ -1280,7 +1280,7 @@ exports[`The HeroListFeatures component should render with a subtitle 1`] = `
       }
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
@@ -1385,7 +1385,7 @@ exports[`The HeroListFeatures component should render with a title 1`] = `
       }
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
@@ -1454,7 +1454,7 @@ exports[`The HeroListFeatures component should render with a title 1`] = `
       }
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
@@ -1523,7 +1523,7 @@ exports[`The HeroListFeatures component should render with a title 1`] = `
       }
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,
@@ -1592,7 +1592,7 @@ exports[`The HeroListFeatures component should render with a title 1`] = `
       }
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 16,
           "height": 64,
           "marginRight": 16,

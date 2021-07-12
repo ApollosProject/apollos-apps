@@ -201,7 +201,7 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                   }
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -242,7 +242,7 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                 style={
                   Object {
                     "aspectRatio": 1.7777777777777777,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -410,7 +410,7 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                   }
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -451,7 +451,7 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                 style={
                   Object {
                     "aspectRatio": 1.7777777777777777,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -619,7 +619,7 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                   }
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -660,7 +660,7 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                 style={
                   Object {
                     "aspectRatio": 1.7777777777777777,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -783,7 +783,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
           style={
             Object {
               "alignSelf": "stretch",
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 14,
               "marginVertical": 3.5,
@@ -990,7 +990,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                   source={Array []}
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -1025,7 +1025,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                 style={
                   Object {
                     "aspectRatio": 1.7777777777777777,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -1073,7 +1073,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                     style={
                       Object {
                         "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
+                        "backgroundColor": "rgba(142, 142, 147, 0.12)",
                         "borderRadius": 16,
                         "height": 12,
                         "marginVertical": 3,
@@ -1176,7 +1176,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                   source={Array []}
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -1211,7 +1211,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                 style={
                   Object {
                     "aspectRatio": 1.7777777777777777,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -1259,7 +1259,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                     style={
                       Object {
                         "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
+                        "backgroundColor": "rgba(142, 142, 147, 0.12)",
                         "borderRadius": 16,
                         "height": 12,
                         "marginVertical": 3,
@@ -1362,7 +1362,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                   source={Array []}
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -1397,7 +1397,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                 style={
                   Object {
                     "aspectRatio": 1.7777777777777777,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -1445,7 +1445,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                     style={
                       Object {
                         "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
+                        "backgroundColor": "rgba(142, 142, 147, 0.12)",
                         "borderRadius": 16,
                         "height": 12,
                         "marginVertical": 3,
@@ -1548,7 +1548,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                   source={Array []}
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -1583,7 +1583,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                 style={
                   Object {
                     "aspectRatio": 1.7777777777777777,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -1631,7 +1631,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                     style={
                       Object {
                         "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
+                        "backgroundColor": "rgba(142, 142, 147, 0.12)",
                         "borderRadius": 16,
                         "height": 12,
                         "marginVertical": 3,
@@ -1734,7 +1734,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                   source={Array []}
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -1769,7 +1769,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                 style={
                   Object {
                     "aspectRatio": 1.7777777777777777,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -1817,7 +1817,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                     style={
                       Object {
                         "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
+                        "backgroundColor": "rgba(142, 142, 147, 0.12)",
                         "borderRadius": 16,
                         "height": 12,
                         "marginVertical": 3,
@@ -2065,7 +2065,7 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                   }
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -2106,7 +2106,7 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                 style={
                   Object {
                     "aspectRatio": 1.7777777777777777,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -2274,7 +2274,7 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                   }
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -2315,7 +2315,7 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                 style={
                   Object {
                     "aspectRatio": 1.7777777777777777,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -2483,7 +2483,7 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                   }
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -2524,7 +2524,7 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                 style={
                   Object {
                     "aspectRatio": 1.7777777777777777,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -2831,7 +2831,7 @@ exports[`The HorizontalCardListFeature component should render with a section su
                   }
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -2872,7 +2872,7 @@ exports[`The HorizontalCardListFeature component should render with a section su
                 style={
                   Object {
                     "aspectRatio": 1.7777777777777777,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -3040,7 +3040,7 @@ exports[`The HorizontalCardListFeature component should render with a section su
                   }
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -3081,7 +3081,7 @@ exports[`The HorizontalCardListFeature component should render with a section su
                 style={
                   Object {
                     "aspectRatio": 1.7777777777777777,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -3249,7 +3249,7 @@ exports[`The HorizontalCardListFeature component should render with a section su
                   }
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -3290,7 +3290,7 @@ exports[`The HorizontalCardListFeature component should render with a section su
                 style={
                   Object {
                     "aspectRatio": 1.7777777777777777,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }

@@ -32,7 +32,7 @@ Array [
         }
         style={
           Object {
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.12)",
             "bottom": 0,
             "left": 0,
             "position": "absolute",
@@ -62,6 +62,7 @@ Array [
         fadeDuration={250}
         isLoading={false}
         onLoad={[Function]}
+        resizeMode="contain"
         source={
           Array [
             Object {
@@ -74,7 +75,7 @@ Array [
         style={
           Object {
             "aspectRatio": 1,
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.12)",
           }
         }
       />

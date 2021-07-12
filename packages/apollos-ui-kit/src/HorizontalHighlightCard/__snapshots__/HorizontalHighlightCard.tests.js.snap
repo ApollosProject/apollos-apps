@@ -50,7 +50,7 @@ Array [
       <View
         style={
           Object {
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.24)",
             "overflow": "hidden",
             "width": "100%",
           }
@@ -70,7 +70,7 @@ Array [
           style={
             Object {
               "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.24)",
               "resizeMode": "cover",
               "width": "100%",
             }
@@ -215,7 +215,7 @@ Array [
       <View
         style={
           Object {
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.24)",
             "overflow": "hidden",
             "width": "100%",
           }
@@ -235,7 +235,7 @@ Array [
           style={
             Object {
               "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.24)",
               "resizeMode": "cover",
               "width": "100%",
             }
@@ -336,7 +336,7 @@ Array [
               style={
                 Object {
                   "alignSelf": "stretch",
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "rgba(142, 142, 147, 0.24)",
                   "borderRadius": 16,
                   "height": 24,
                   "marginVertical": 1.8000000000000007,
@@ -348,7 +348,7 @@ Array [
           <View
             style={
               Object {
-                "backgroundColor": "#A5A5A5",
+                "backgroundColor": "rgba(142, 142, 147, 0.24)",
                 "borderRadius": 16,
                 "height": 32,
                 "width": 32,
@@ -412,7 +412,7 @@ Array [
       <View
         style={
           Object {
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.24)",
             "overflow": "hidden",
             "width": "100%",
           }
@@ -432,7 +432,7 @@ Array [
           style={
             Object {
               "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.24)",
               "resizeMode": "cover",
               "width": "100%",
             }
@@ -693,7 +693,7 @@ Array [
       <View
         style={
           Object {
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.24)",
             "overflow": "hidden",
             "width": "100%",
           }
@@ -720,7 +720,7 @@ Array [
           style={
             Object {
               "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.24)",
               "resizeMode": "cover",
               "width": "100%",
             }
@@ -864,7 +864,7 @@ Array [
       <View
         style={
           Object {
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.24)",
             "overflow": "hidden",
             "width": "100%",
           }
@@ -884,7 +884,7 @@ Array [
           style={
             Object {
               "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.24)",
               "resizeMode": "cover",
               "width": "100%",
             }
@@ -1191,7 +1191,7 @@ Array [
       <View
         style={
           Object {
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.24)",
             "overflow": "hidden",
             "width": "100%",
           }
@@ -1211,7 +1211,7 @@ Array [
           style={
             Object {
               "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.24)",
               "resizeMode": "cover",
               "width": "100%",
             }
@@ -1377,7 +1377,7 @@ Array [
       <View
         style={
           Object {
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.24)",
             "overflow": "hidden",
             "width": "100%",
           }
@@ -1397,7 +1397,7 @@ Array [
           style={
             Object {
               "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.24)",
               "resizeMode": "cover",
               "width": "100%",
             }
@@ -1563,7 +1563,7 @@ Array [
       <View
         style={
           Object {
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.24)",
             "overflow": "hidden",
             "width": "100%",
           }
@@ -1583,7 +1583,7 @@ Array [
           style={
             Object {
               "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.24)",
               "resizeMode": "cover",
               "width": "100%",
             }
@@ -1854,7 +1854,7 @@ Array [
       <View
         style={
           Object {
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.24)",
             "overflow": "hidden",
             "width": "100%",
           }
@@ -1875,7 +1875,7 @@ Array [
           style={
             Object {
               "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.24)",
               "resizeMode": "cover",
               "width": "100%",
             }
@@ -2019,7 +2019,7 @@ Array [
       <View
         style={
           Object {
-            "backgroundColor": "#A5A5A5",
+            "backgroundColor": "rgba(142, 142, 147, 0.24)",
             "overflow": "hidden",
             "width": "100%",
           }
@@ -2039,7 +2039,7 @@ Array [
           style={
             Object {
               "aspectRatio": 1,
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.24)",
               "resizeMode": "cover",
               "width": "100%",
             }

@@ -179,7 +179,7 @@ exports[`The VerticalCardListFeatureConnected component should render 1`] = `
                   }
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -219,7 +219,7 @@ exports[`The VerticalCardListFeatureConnected component should render 1`] = `
                 style={
                   Object {
                     "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -472,7 +472,7 @@ exports[`The VerticalCardListFeatureConnected component should render a featured
                 }
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "bottom": 0,
                     "left": 0,
                     "position": "absolute",
@@ -512,7 +512,7 @@ exports[`The VerticalCardListFeatureConnected component should render a featured
               style={
                 Object {
                   "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "rgba(142, 142, 147, 0.12)",
                   "width": "100%",
                 }
               }
@@ -539,7 +539,7 @@ exports[`The VerticalCardListFeatureConnected component should render a featured
                 style={
                   Object {
                     "alignSelf": "stretch",
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "borderRadius": 16,
                     "height": 24,
                     "marginVertical": 1.8000000000000007,
@@ -932,7 +932,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -972,7 +972,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 style={
                   Object {
                     "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -999,7 +999,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -1123,7 +1123,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -1163,7 +1163,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 style={
                   Object {
                     "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -1190,7 +1190,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -1314,7 +1314,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -1354,7 +1354,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 style={
                   Object {
                     "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -1381,7 +1381,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -1505,7 +1505,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -1545,7 +1545,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 style={
                   Object {
                     "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -1572,7 +1572,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -1696,7 +1696,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -1736,7 +1736,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 style={
                   Object {
                     "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -1763,7 +1763,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -1887,7 +1887,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -1927,7 +1927,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 style={
                   Object {
                     "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -1954,7 +1954,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -2078,7 +2078,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -2118,7 +2118,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 style={
                   Object {
                     "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -2145,7 +2145,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -2269,7 +2269,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -2309,7 +2309,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 style={
                   Object {
                     "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -2336,7 +2336,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -2460,7 +2460,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -2500,7 +2500,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 style={
                   Object {
                     "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -2527,7 +2527,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -2651,7 +2651,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   }
                   style={
                     Object {
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "bottom": 0,
                       "left": 0,
                       "position": "absolute",
@@ -2691,7 +2691,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                 style={
                   Object {
                     "aspectRatio": 1,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -2718,7 +2718,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -2937,7 +2937,7 @@ exports[`The VerticalCardListFeatureConnected component should render as a featu
                 }
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "bottom": 0,
                     "left": 0,
                     "position": "absolute",
@@ -2977,7 +2977,7 @@ exports[`The VerticalCardListFeatureConnected component should render as a featu
               style={
                 Object {
                   "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "rgba(142, 142, 147, 0.12)",
                   "width": "100%",
                 }
               }

@@ -68,7 +68,7 @@ exports[`The ActionListFeatures component should render 1`] = `
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
@@ -137,7 +137,7 @@ exports[`The ActionListFeatures component should render 1`] = `
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
@@ -206,7 +206,7 @@ exports[`The ActionListFeatures component should render 1`] = `
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
@@ -275,7 +275,7 @@ exports[`The ActionListFeatures component should render 1`] = `
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
@@ -393,7 +393,7 @@ exports[`The ActionListFeatures component should render a button for onPressActi
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
@@ -462,7 +462,7 @@ exports[`The ActionListFeatures component should render a button for onPressActi
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
@@ -531,7 +531,7 @@ exports[`The ActionListFeatures component should render a button for onPressActi
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
@@ -600,7 +600,7 @@ exports[`The ActionListFeatures component should render a button for onPressActi
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
@@ -771,7 +771,7 @@ exports[`The ActionListFeatures component should render a loading state for isLo
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
@@ -810,7 +810,7 @@ exports[`The ActionListFeatures component should render a loading state for isLo
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
@@ -849,7 +849,7 @@ exports[`The ActionListFeatures component should render a loading state for isLo
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
@@ -888,7 +888,7 @@ exports[`The ActionListFeatures component should render a loading state for isLo
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
@@ -990,7 +990,7 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
@@ -1059,7 +1059,7 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
@@ -1128,7 +1128,7 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
@@ -1197,7 +1197,7 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
@@ -1329,7 +1329,7 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
@@ -1398,7 +1398,7 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
@@ -1467,7 +1467,7 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,
@@ -1536,7 +1536,7 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
           }
           style={
             Object {
-              "backgroundColor": "#A5A5A5",
+              "backgroundColor": "rgba(142, 142, 147, 0.12)",
               "borderRadius": 16,
               "height": 64,
               "marginRight": 16,

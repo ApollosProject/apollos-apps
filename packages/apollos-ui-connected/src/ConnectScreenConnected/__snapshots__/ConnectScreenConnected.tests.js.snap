@@ -352,7 +352,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                   }
                                   style={
                                     Object {
-                                      "backgroundColor": "#A5A5A5",
+                                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                       "borderRadius": 60,
                                       "bottom": 0,
                                       "height": "100%",
@@ -1485,7 +1485,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                   }
                                   style={
                                     Object {
-                                      "backgroundColor": "#A5A5A5",
+                                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                       "borderRadius": 60,
                                       "bottom": 0,
                                       "height": "100%",

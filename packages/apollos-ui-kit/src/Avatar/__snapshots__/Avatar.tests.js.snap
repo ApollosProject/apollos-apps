@@ -27,7 +27,7 @@ Array [
       }
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 20,
           "bottom": 0,
           "height": "100%",
@@ -67,7 +67,7 @@ Array [
       }
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 40,
           "bottom": 0,
           "height": "100%",
@@ -107,7 +107,7 @@ Array [
       }
       style={
         Object {
-          "backgroundColor": "#A5A5A5",
+          "backgroundColor": "rgba(142, 142, 147, 0.12)",
           "borderRadius": 60,
           "bottom": 0,
           "height": "100%",
@@ -150,7 +150,7 @@ exports[`The Avatar component should render icon button 1`] = `
     }
     style={
       Object {
-        "backgroundColor": "#A5A5A5",
+        "backgroundColor": "rgba(142, 142, 147, 0.12)",
         "borderRadius": 20,
         "bottom": 0,
         "height": "100%",
@@ -418,7 +418,7 @@ exports[`The Avatar component should render icon button 2`] = `
         fill={
           Array [
             0,
-            4289045925,
+            529436307,
           ]
         }
         fillOpacity={1}
@@ -537,7 +537,7 @@ exports[`The Avatar component should render large 1`] = `
     }
     style={
       Object {
-        "backgroundColor": "#A5A5A5",
+        "backgroundColor": "rgba(142, 142, 147, 0.12)",
         "borderRadius": 60,
         "bottom": 0,
         "height": "100%",
@@ -579,7 +579,7 @@ exports[`The Avatar component should render medium 1`] = `
     }
     style={
       Object {
-        "backgroundColor": "#A5A5A5",
+        "backgroundColor": "rgba(142, 142, 147, 0.12)",
         "borderRadius": 40,
         "bottom": 0,
         "height": "100%",
@@ -621,7 +621,7 @@ exports[`The Avatar component should render small 1`] = `
     }
     style={
       Object {
-        "backgroundColor": "#A5A5A5",
+        "backgroundColor": "rgba(142, 142, 147, 0.12)",
         "borderRadius": 20,
         "bottom": 0,
         "height": "100%",
@@ -662,7 +662,7 @@ exports[`The Avatar component should render with a themeSize 1`] = `
     }
     style={
       Object {
-        "backgroundColor": "#A5A5A5",
+        "backgroundColor": "rgba(142, 142, 147, 0.12)",
         "borderRadius": 40,
         "bottom": 0,
         "height": "100%",

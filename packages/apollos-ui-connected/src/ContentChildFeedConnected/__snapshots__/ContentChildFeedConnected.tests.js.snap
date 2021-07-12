@@ -510,7 +510,7 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                   }
                                   style={
                                     Object {
-                                      "backgroundColor": "#A5A5A5",
+                                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                       "bottom": 0,
                                       "left": 0,
                                       "position": "absolute",
@@ -553,7 +553,7 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                 style={
                                   Object {
                                     "aspectRatio": 1.7777777777777777,
-                                    "backgroundColor": "#A5A5A5",
+                                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                     "width": "100%",
                                   }
                                 }
@@ -714,7 +714,7 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                   }
                                   style={
                                     Object {
-                                      "backgroundColor": "#A5A5A5",
+                                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                       "bottom": 0,
                                       "left": 0,
                                       "position": "absolute",
@@ -757,7 +757,7 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                 style={
                                   Object {
                                     "aspectRatio": 1.7777777777777777,
-                                    "backgroundColor": "#A5A5A5",
+                                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                     "width": "100%",
                                   }
                                 }
@@ -918,7 +918,7 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                   }
                                   style={
                                     Object {
-                                      "backgroundColor": "#A5A5A5",
+                                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                       "bottom": 0,
                                       "left": 0,
                                       "position": "absolute",
@@ -961,7 +961,7 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                 style={
                                   Object {
                                     "aspectRatio": 1.7777777777777777,
-                                    "backgroundColor": "#A5A5A5",
+                                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                     "width": "100%",
                                   }
                                 }
@@ -1122,7 +1122,7 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                   }
                                   style={
                                     Object {
-                                      "backgroundColor": "#A5A5A5",
+                                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                       "bottom": 0,
                                       "left": 0,
                                       "position": "absolute",
@@ -1165,7 +1165,7 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                                 style={
                                   Object {
                                     "aspectRatio": 1.7777777777777777,
-                                    "backgroundColor": "#A5A5A5",
+                                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                                     "width": "100%",
                                   }
                                 }

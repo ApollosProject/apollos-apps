@@ -111,13 +111,13 @@ Array [
                   "width": 51,
                 },
                 Object {
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "rgba(142, 142, 147, 0.12)",
                   "borderRadius": 16,
                 },
               ]
             }
             thumbTintColor="#FFFFFF"
-            tintColor="#A5A5A5"
+            tintColor="rgba(142, 142, 147, 0.12)"
             value={false}
           />
         </View>

@@ -126,7 +126,7 @@ exports[`The CampaignItemListFeature component should render 1`] = `
                 }
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "bottom": 0,
                     "left": 0,
                     "position": "absolute",
@@ -165,7 +165,7 @@ exports[`The CampaignItemListFeature component should render 1`] = `
               style={
                 Object {
                   "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "rgba(142, 142, 147, 0.12)",
                   "width": "100%",
                 }
               }
@@ -395,7 +395,7 @@ exports[`The CampaignItemListFeature component should render a loading state for
                 }
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "bottom": 0,
                     "left": 0,
                     "position": "absolute",
@@ -435,7 +435,7 @@ exports[`The CampaignItemListFeature component should render a loading state for
               style={
                 Object {
                   "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "rgba(142, 142, 147, 0.12)",
                   "width": "100%",
                 }
               }
@@ -462,7 +462,7 @@ exports[`The CampaignItemListFeature component should render a loading state for
                 style={
                   Object {
                     "alignSelf": "stretch",
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "borderRadius": 16,
                     "height": 24,
                     "marginVertical": 1.8000000000000007,
@@ -677,7 +677,7 @@ exports[`The CampaignItemListFeature component should render a section title 1`]
                 }
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "bottom": 0,
                     "left": 0,
                     "position": "absolute",
@@ -716,7 +716,7 @@ exports[`The CampaignItemListFeature component should render a section title 1`]
               style={
                 Object {
                   "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "rgba(142, 142, 147, 0.12)",
                   "width": "100%",
                 }
               }
@@ -958,7 +958,7 @@ exports[`The CampaignItemListFeature component should render with a subtitle 1`]
                 }
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "bottom": 0,
                     "left": 0,
                     "position": "absolute",
@@ -997,7 +997,7 @@ exports[`The CampaignItemListFeature component should render with a subtitle 1`]
               style={
                 Object {
                   "aspectRatio": 1,
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "rgba(142, 142, 147, 0.12)",
                   "width": "100%",
                 }
               }

@@ -122,7 +122,7 @@ Array [
               style={
                 Object {
                   "aspectRatio": 1.5,
-                  "backgroundColor": "#A5A5A5",
+                  "backgroundColor": "rgba(142, 142, 147, 0.12)",
                   "width": "100%",
                 }
               }
@@ -408,7 +408,7 @@ Array [
                 style={
                   Object {
                     "aspectRatio": 2,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -426,7 +426,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -438,7 +438,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 16,
                       "marginVertical": 5,
@@ -670,7 +670,7 @@ Array [
                 style={
                   Object {
                     "aspectRatio": 2,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -688,7 +688,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -700,7 +700,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 16,
                       "marginVertical": 5,
@@ -932,7 +932,7 @@ Array [
                 style={
                   Object {
                     "aspectRatio": 2,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -950,7 +950,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -962,7 +962,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 16,
                       "marginVertical": 5,
@@ -1194,7 +1194,7 @@ Array [
                 style={
                   Object {
                     "aspectRatio": 2,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -1212,7 +1212,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -1224,7 +1224,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 16,
                       "marginVertical": 5,
@@ -1456,7 +1456,7 @@ Array [
                 style={
                   Object {
                     "aspectRatio": 2,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -1474,7 +1474,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -1486,7 +1486,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 16,
                       "marginVertical": 5,
@@ -1718,7 +1718,7 @@ Array [
                 style={
                   Object {
                     "aspectRatio": 2,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -1736,7 +1736,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -1748,7 +1748,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 16,
                       "marginVertical": 5,
@@ -1980,7 +1980,7 @@ Array [
                 style={
                   Object {
                     "aspectRatio": 2,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -1998,7 +1998,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -2010,7 +2010,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 16,
                       "marginVertical": 5,
@@ -2242,7 +2242,7 @@ Array [
                 style={
                   Object {
                     "aspectRatio": 2,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -2260,7 +2260,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -2272,7 +2272,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 16,
                       "marginVertical": 5,
@@ -2504,7 +2504,7 @@ Array [
                 style={
                   Object {
                     "aspectRatio": 2,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -2522,7 +2522,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -2534,7 +2534,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 16,
                       "marginVertical": 5,
@@ -2766,7 +2766,7 @@ Array [
                 style={
                   Object {
                     "aspectRatio": 2,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -2784,7 +2784,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -2796,7 +2796,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 16,
                       "marginVertical": 5,
@@ -3612,7 +3612,7 @@ Array [
                 style={
                   Object {
                     "aspectRatio": 2,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -3630,7 +3630,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -3642,7 +3642,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 16,
                       "marginVertical": 5,
@@ -3874,7 +3874,7 @@ Array [
                 style={
                   Object {
                     "aspectRatio": 2,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -3892,7 +3892,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -3904,7 +3904,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 16,
                       "marginVertical": 5,
@@ -4136,7 +4136,7 @@ Array [
                 style={
                   Object {
                     "aspectRatio": 2,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -4154,7 +4154,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -4166,7 +4166,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 16,
                       "marginVertical": 5,
@@ -4398,7 +4398,7 @@ Array [
                 style={
                   Object {
                     "aspectRatio": 2,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -4416,7 +4416,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -4428,7 +4428,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 16,
                       "marginVertical": 5,
@@ -4660,7 +4660,7 @@ Array [
                 style={
                   Object {
                     "aspectRatio": 2,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -4678,7 +4678,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -4690,7 +4690,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 16,
                       "marginVertical": 5,
@@ -4922,7 +4922,7 @@ Array [
                 style={
                   Object {
                     "aspectRatio": 2,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -4940,7 +4940,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -4952,7 +4952,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 16,
                       "marginVertical": 5,
@@ -5184,7 +5184,7 @@ Array [
                 style={
                   Object {
                     "aspectRatio": 2,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -5202,7 +5202,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -5214,7 +5214,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 16,
                       "marginVertical": 5,
@@ -5446,7 +5446,7 @@ Array [
                 style={
                   Object {
                     "aspectRatio": 2,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -5464,7 +5464,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -5476,7 +5476,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 16,
                       "marginVertical": 5,
@@ -5708,7 +5708,7 @@ Array [
                 style={
                   Object {
                     "aspectRatio": 2,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -5726,7 +5726,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -5738,7 +5738,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 16,
                       "marginVertical": 5,
@@ -5970,7 +5970,7 @@ Array [
                 style={
                   Object {
                     "aspectRatio": 2,
-                    "backgroundColor": "#A5A5A5",
+                    "backgroundColor": "rgba(142, 142, 147, 0.12)",
                     "width": "100%",
                   }
                 }
@@ -5988,7 +5988,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 24,
                       "marginVertical": 1.8000000000000007,
@@ -6000,7 +6000,7 @@ Array [
                   style={
                     Object {
                       "alignSelf": "stretch",
-                      "backgroundColor": "#A5A5A5",
+                      "backgroundColor": "rgba(142, 142, 147, 0.12)",
                       "borderRadius": 16,
                       "height": 16,
                       "marginVertical": 5,
