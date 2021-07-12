@@ -269,22 +269,21 @@ class ContentItemDataSource extends PostgresDataSource {
 
     const ids = uniq(interactions.map(({ foreignKey }) => foreignKey));
 
-    const completedIds = (
+    const inProgressItems = (
       await Promise.all(
-        ids.map(async (id) => ({
-          id,
-          percent: await this.getPercentComplete(
-            await this.model.findOne({ where: { apollosId: id } })
-          ),
-        }))
+        ids.map(async (id) => {
+          const model = await this.model.findOne({ where: { apollosId: id } });
+          return {
+            model,
+            percent: await this.getPercentComplete(model),
+          };
+        })
       )
-    )
-      .filter(({ percent }) => percent === 100)
-      .map(({ id }) => id);
+    ).filter(
+      ({ percent, model }) => percent !== 100 && percent != null && model
+    );
 
-    const inProgressIds = ids.filter((id) => ![...completedIds].includes(id));
-
-    return this.getFromIds(inProgressIds);
+    return inProgressItems.map(({ model }) => model);
   }
 
   async getPercentComplete(model) {
@@ -295,6 +294,10 @@ class ContentItemDataSource extends PostgresDataSource {
     try {
       await Auth.getCurrentPerson();
     } catch (e) {
+      return null;
+    }
+
+    if (!model) {
       return null;
     }
 

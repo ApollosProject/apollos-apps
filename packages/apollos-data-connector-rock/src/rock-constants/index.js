@@ -62,7 +62,7 @@ class RockConstants extends RockApolloDataSource {
         ...(ApollosConfig?.ROCK?.VERSION < 11.0
           ? { ChannelId: channelId }
           : { InteractionChannelId: channelId }),
-        EntityId: entityId,
+        ...(entityId ? { EntityId: entityId } : {}),
       },
     });
   }
@@ -91,7 +91,9 @@ class RockConstants extends RockApolloDataSource {
         ROCK_MAPPINGS?.INTERACTIONS?.COMPONENT_NAME || 'Apollos App Component'
       } - ${entityId}`,
       channelId: channel.id,
-      entityId: parseInt(entityId, 10),
+      ...(Number.isNaN(parseInt(entityId, 10))
+        ? {}
+        : { entityId: parseInt(entityId, 10) }),
     });
   }
 
