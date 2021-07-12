@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-community/async-storage';
-import { ApolloConsumer } from '@apollo/client';
+import { ApolloConsumer, useApolloClient } from '@apollo/client';
 import gql from 'graphql-tag';
 import { track } from '@apollosproject/ui-analytics';
 import { LoginProvider } from './LoginProvider';
 import { GET_LOGIN_STATE } from './queries';
+import { resolvers } from './resolvers_OLD';
 
 const defaultContext = {
   navigateToAuth: () => {},
@@ -14,81 +16,56 @@ const defaultContext = {
 
 const AuthContext = React.createContext(defaultContext);
 
-export const GET_AUTH_TOKEN = gql`
-  query authToken {
-    authToken @client
-  }
-`;
+// TODO convert into useLogin hook once LoginProvider has been made a functional component
+// so we can drop the client parameter
+export const login = async (client, authToken) => {
+  AsyncStorage.setItem('authToken', authToken);
+  client.writeQuery({
+    query: GET_LOGIN_STATE,
+    data: { isLoggedIn: true },
+  });
 
-const UPDATE_PUSH_ID = gql`
-  mutation updateUserPushSettings($input: PushSettingsInput!) {
-    updateUserPushSettings(input: $input) {
-      id
-    }
-  }
-`;
-
-export const resolvers = {
-  Query: {
-    authToken: () => AsyncStorage.getItem('authToken'),
-    isLoggedIn: async (_root, _args, { client }) => {
-      // When logging out, this query returns an error.
-      // Rescue the error, and return false.
-      try {
-        const { data } = await client.query({ query: GET_AUTH_TOKEN });
-        return !!data.authToken;
-      } catch (e) {
-        return false;
+  // update push notification user ID
+  //
+  // shouldn't import the client query or push mutations from
+  // ui-notifications because that package already depends on login
+  // state from this package
+  const { data } = await client.query({
+    query: gql`
+      query {
+        pushId @client
       }
-    },
-  },
-  Mutation: {
-    logout: async (_root, _args, { client }) => {
-      client.clearStore();
-      AsyncStorage.removeItem('authToken');
-      track({ eventName: 'UserLogout', client });
-      return null;
-    },
+    `,
+  });
 
-    handleLogin: async (root, { authToken }, { cache, client }) => {
-      try {
-        await AsyncStorage.setItem('authToken', authToken);
-
-        await cache.writeQuery({
-          query: GET_AUTH_TOKEN,
-          data: { authToken },
-        });
-        await cache.writeQuery({
-          query: GET_LOGIN_STATE,
-          data: { isLoggedIn: true },
-        });
-
-        // shouldn't import the client query or push mutations from
-        // ui-notifications because that package already depends on login
-        // state from this package
-        const { data: { pushId } = { data: {} } } = await client.query({
-          query: gql`
-            query {
-              pushId @client
-            }
-          `,
-        });
-
-        if (pushId) {
-          client.mutate({
-            mutation: UPDATE_PUSH_ID,
-            variables: { input: { pushProviderUserId: pushId } },
-          });
+  if (data?.pushId) {
+    client.mutate({
+      mutation: gql`
+        mutation updateUserPushSettings($input: PushSettingsInput!) {
+          updateUserPushSettings(input: $input) {
+            id
+          }
         }
+      `,
+      variables: { input: { pushProviderUserId: data?.pushId } },
+    });
+  }
 
-        track({ eventName: 'UserLogin', client });
-      } catch (e) {
-        throw e.message;
-      }
+  track({ eventName: 'UserLogin', client });
+};
 
-      return null;
-    },
-  },
+export const useLogout = () => {
+  const client = useApolloClient();
+  const navigation = useNavigation();
+  return () => {
+    client.clearStore();
+    AsyncStorage.removeItem('authToken');
+    track({ eventName: 'UserLogout', client });
+    navigation.reset({
+      index: 0,
+      routes: [{ name: 'Auth', params: { screen: 'Identity' } }],
+    });
+  };
 };
 
 const Provider = ({ children, ...authContext }) => (

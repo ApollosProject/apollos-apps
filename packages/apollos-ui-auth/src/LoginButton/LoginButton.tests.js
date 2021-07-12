@@ -3,7 +3,8 @@ import React from 'react';
 import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
 import { MockedProvider } from '@apollo/client/testing';
 import { InMemoryCache } from '@apollo/client/cache';
-import AuthProvider, { GET_AUTH_TOKEN } from '../Provider';
+import AuthProvider from '../Provider';
+import { GET_AUTH_TOKEN } from '../resolvers_OLD';
 
 import LoginButton from '.';
 

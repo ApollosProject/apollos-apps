@@ -23,13 +23,20 @@ import {
 } from './ProfileDetails';
 
 export { default as LoginButton } from './LoginButton';
-export { default as AuthProvider, AuthConsumer } from './Provider';
+export {
+  default as AuthProvider,
+  AuthConsumer,
+  useLogout,
+  login,
+} from './Provider';
+
+// deprecated
+export { LOGOUT, HANDLE_LOGIN } from './resolvers_OLD';
+
 export { default as ProtectedRoute } from './ProtectedRoute';
 
 export {
   AUTHENTICATE,
-  HANDLE_LOGIN,
-  LOGOUT,
   REGISTER_WITH_SMS,
   REGISTER_WITH_EMAIL,
   REQUEST_SMS_PIN,

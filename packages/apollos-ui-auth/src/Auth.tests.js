@@ -3,7 +3,7 @@
 import { createHttpLink, ApolloClient } from '@apollo/client';
 import { InMemoryCache } from '@apollo/client/cache';
 
-import { resolvers, GET_AUTH_TOKEN } from './Provider';
+import { resolvers, GET_AUTH_TOKEN } from './resolvers_OLD';
 
 const cache = new InMemoryCache();
 

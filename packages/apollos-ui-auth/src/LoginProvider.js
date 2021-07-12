@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import { ApolloConsumer } from '@apollo/client';
 import { GET_USER_EXISTS } from './queries';
+import { login } from './Provider';
 
 import {
   VERIFY_PIN,
-  HANDLE_LOGIN,
   AUTHENTICATE,
   REGISTER_WITH_SMS,
   REGISTER_WITH_EMAIL,
@@ -77,12 +77,7 @@ class LoginProvider extends React.Component {
       token = data.authenticate.token; // eslint-disable-line prefer-destructuring
     }
 
-    await client.mutate({
-      mutation: HANDLE_LOGIN,
-      variables: {
-        authToken: token,
-      },
-    });
+    await login(client, token);
     closeAuth();
   };
 
@@ -118,12 +113,7 @@ class LoginProvider extends React.Component {
       token = data.registerPerson.token; // eslint-disable-line prefer-destructuring
     }
 
-    await client.mutate({
-      mutation: HANDLE_LOGIN,
-      variables: {
-        authToken: token,
-      },
-    });
+    await login(client, token);
     closeAuth();
   };
 
