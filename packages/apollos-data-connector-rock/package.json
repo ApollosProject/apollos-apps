@@ -45,7 +45,7 @@
   },
   "peerDependencies": {
     "@apollosproject/config": "*",
-    "@apollosproject/data-schema": "*",
+    "@apollosproject/data-schema": ">=2.26.0",
     "@apollosproject/rock-apollo-data-source": "*",
     "@apollosproject/server-core": "*"
   },
