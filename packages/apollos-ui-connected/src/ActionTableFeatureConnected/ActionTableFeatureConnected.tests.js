@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
 import { MockedProvider } from '@apollo/client/testing';
