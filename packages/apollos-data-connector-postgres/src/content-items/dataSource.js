@@ -87,13 +87,7 @@ class ContentItemDataSource extends PostgresDataSource {
   };
 
   getSermons(...args) {
-    return this.model.findAll({
-      where: {
-        contentItemCategoryId: { [Op.in]: [CONTENT?.SERMON_CHANNEL_IDS] },
-        ...args?.where,
-      },
-      ...args,
-    });
+    return this.getFromCategoryIds(CONTENT?.SERMON_CHANNEL_IDS, args);
   }
 
   async isContentActiveLiveStream({ id }) {
