@@ -389,6 +389,29 @@ describe('UniversalContentItem', () => {
       }
       ${contentItemFragment}
     `;
+
+    const baseRequest = await context.dataSources.ContentItem.request();
+    context.dataSources.ContentItem.request = (path = '') =>
+      path.includes('ContentChannels')
+        ? {
+            get: () => ({
+              attributeValues: {},
+              attributes: {},
+            }),
+          }
+        : {
+            ...baseRequest,
+            get: () => [
+              {
+                attributeValues: {},
+                attributes: {},
+              },
+            ],
+          };
+    context.dataSources.ContentItem.getCursorByChildContentItemId = () => ({
+      get: () => [],
+    });
+
     const rootValue = {};
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
