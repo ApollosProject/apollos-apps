@@ -43,9 +43,21 @@ const GET_PUSH_ID = gql`
   }
 `;
 
-const requestPermissions = (updateStatus) => {
+const requestPermissions = (
+  updateStatus,
+  { hasPrompted, hasPushPermission }
+) => {
   checkNotifications().then((checkRes) => {
+    console.log('CheckRes is: ', checkRes);
     if (checkRes.status === RESULTS.DENIED) {
+      requestNotifications(['alert', 'badge', 'sound']).then(() => {
+        updateStatus();
+      });
+    } else if (
+      checkRes.status === RESULTS.GRANTED &&
+      !hasPrompted &&
+      !hasPushPermission
+    ) {
       requestNotifications(['alert', 'badge', 'sound']).then(() => {
         updateStatus();
       });
