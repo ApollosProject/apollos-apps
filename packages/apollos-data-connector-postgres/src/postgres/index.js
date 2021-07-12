@@ -1,77 +1,30 @@
 /* eslint-disable no-param-reassign */
-/* eslint-disable no-console */
-
 import './pgEnum-fix';
 import { Sequelize, DataTypes } from 'sequelize';
-import { Client } from 'pg';
 import ApollosConfig from '@apollosproject/config';
 import connectJest from './test-connect';
-import { ensureLocalDb } from './local-db';
 
-const sequelizeConfigOptions =
-  process.env.NODE_ENV === 'test' ? { logging: false } : {};
-
-const name = `${process.env.NODE_ENV || 'development'}`;
-
-// Create a local database if it doesn't exist
-// FIXME: Because the main thread here doesn't wait for this process to complete,
-// the database doesn't exist on first run, and the sequelize instance below is undefined
-// until you quit and restart.
-if (!ApollosConfig?.DATABASE?.URL && process.env.NODE_ENV !== 'test') {
-  const client = new Client({
-    host: 'localhost',
-    database: 'postgres',
-  });
-
-  console.log('creating db');
-  (async () => {
-    try {
-      await client.connect();
-    } catch (e) {
-      console.error('Failed to connect to local postgres instance');
-      console.error(e);
-    }
-
-    try {
-      await ensureLocalDb(client, name);
-    } catch (e) {
-      console.error('Failed to ensure local database');
-      console.error(e);
-    }
-
-    await client.end();
-  })();
-  console.log('created!');
-}
-
-const connectDev = () => {
-  return new Sequelize(`postgres:localhost/${name}`, {
-    ...(ApollosConfig?.DATABASE?.OPTIONS || {}),
-    dialectOptions: {},
-  });
-};
-
-const localConnect = () =>
-  process.env.NODE_ENV === 'test' ? connectJest() : connectDev();
-
-// Use the DB url from the apollos config if provided.
-// Otherwise, connect to the proper test database
-const sequelize = ApollosConfig?.DATABASE?.URL
-  ? new Sequelize(ApollosConfig?.DATABASE?.URL, {
-      ...sequelizeConfigOptions,
-      ...(ApollosConfig?.DATABASE?.OPTIONS ||
-      ApollosConfig.DATABASE.URL.includes('localhost')
-        ? {}
-        : {
-            dialectOptions: {
-              ssl: { require: true, rejectUnauthorized: false },
-            },
-          }),
-    })
-  : localConnect();
+const sequelize =
+  process.env.NODE_ENV !== 'test'
+    ? // this extra && is required because the file is still compiled by the server
+      // even when it's not imported. not sure why.
+      ApollosConfig.DATABASE?.URL &&
+      new Sequelize(ApollosConfig.DATABASE.URL, {
+        ...(ApollosConfig?.DATABASE?.OPTIONS ||
+        ApollosConfig.DATABASE.URL.includes('localhost')
+          ? {}
+          : {
+              dialectOptions: {
+                ssl: { require: true, rejectUnauthorized: false },
+              },
+            }),
+      })
+    : connectJest();
 
 class PostgresDataSource {
   initialize(config) {
+    if (!ApollosConfig?.DATABASE?.URL && process.env.NODE_ENV !== 'test')
+      throw new Error('Must specify DATABASE_URL variable!');
     this.context = config.context;
     this.sequelize = sequelize;
     this.model = sequelize.models[this.modelName];

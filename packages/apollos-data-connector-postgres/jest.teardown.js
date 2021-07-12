@@ -8,7 +8,6 @@ export default async ({ maxWorkers }) => {
     host: 'localhost',
     database: 'postgres',
   });
-
   await client.connect();
 
   while (count <= maxWorkers) {
