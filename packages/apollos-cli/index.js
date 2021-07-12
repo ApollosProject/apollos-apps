@@ -1,48 +1,47 @@
 #! /usr/bin/env node
+
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 
-const commander = require('commander');
+const { program } = require('commander');
 
-commander.on('command:*', () => {
-  console.log(`${commander.args.join(' ')} is not a valid command`);
-  process.exit(1);
-});
+program.version('1.0.0');
 
-const cmd = commander
+// secrets
+program
+  .name('apollos')
   .command('secrets')
-  .description("Decrypt or encyrpt your app's secrets")
-  .action(function () {
-    const passedOptions = this.opts();
-    return exec(
-      `${__dirname}/scripts/secrets.sh -${Object.keys(
-        passedOptions
-      )} ${Object.values(passedOptions)}`
-    ).then(({ stdout, stderr }) => {
-      if (stdout) {
-        console.log(stdout);
-      }
-      if (stderr) {
-        console.log(stderr);
-      }
-    });
+  .description("Decrypt or encrypt your app's secrets")
+  .argument('<password>')
+  .option('-d', 'decrypt shared files')
+  .option('-e', 'encrypt shared files')
+  .action((password, options) => {
+    if ((options.d && options.e) || (!options.d && !options.e))
+      console.error('Must use either -e or -d, not both');
+    if (options.d) {
+      exec(`${__dirname}/scripts/secrets.sh -d ${password}`).then(
+        ({ stdout, stderr }) => {
+          if (stdout) {
+            console.log(stdout);
+          }
+          if (stderr) {
+            console.log(stderr);
+          }
+        }
+      );
+    }
+    if (options.e) {
+      exec(`${__dirname}/scripts/secrets.sh -e ${password}`).then(
+        ({ stdout, stderr }) => {
+          if (stdout) {
+            console.log(stdout);
+          }
+          if (stderr) {
+            console.log(stderr);
+          }
+        }
+      );
+    }
   });
 
-const options = [
-  {
-    command: '-d <secret>',
-  },
-  {
-    command: '-e <secret>',
-  },
-];
-
-options.forEach((opt) => {
-  cmd.option(opt.command);
-});
-
-function setupAndRun() {
-  commander.parse(process.argv);
-}
-
-setupAndRun();
+program.parse(process.argv);
