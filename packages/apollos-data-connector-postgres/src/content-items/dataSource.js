@@ -192,6 +192,24 @@ class ContentItemDataSource extends PostgresDataSource {
   };
 
   getFromCategoryIds = (ids = [], args = {}) => {
+    if (ids.some((id) => typeof id === 'number')) {
+      console.warn(
+        'You are passing rock ids IDS to ContentItem.getFromCategoryIds. This is supported, but we recommend using Postgres IDS in your config.yml long term'
+      );
+      console.log(this.sequelize.models);
+      return this.model.findAll({
+        include: [
+          {
+            model: this.sequelize.models.contentItemCategory,
+            where: {
+              originId: { [Op.in]: ids.map(String) },
+            },
+          },
+          ...(args?.include || []),
+        ],
+        ...args,
+      });
+    }
     return this.model.findAll({
       where: {
         contentItemCategoryId: { [Op.in]: ids },
