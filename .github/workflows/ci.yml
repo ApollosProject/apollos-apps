@@ -34,6 +34,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - run: pg_isready
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
       with:
