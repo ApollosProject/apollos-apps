@@ -41,6 +41,9 @@ export default {
   ActionBarAction: {
     id: ({ id }) => createGlobalId(id, 'ActionBarAction'),
   },
+  ActionTableAction: {
+    id: ({ id }) => createGlobalId(id, 'ActionTableAction'),
+  },
   ScriptureFeature: {
     scriptures: (
       { reference, version },
