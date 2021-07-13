@@ -28,7 +28,7 @@ class ContentItemDataSource extends PostgresDataSource {
   //
   //   }
 
-  async paginate({ cursor, where = {}, limit = 20, after, ...args }) {
+  async paginate({ cursor, where = {}, limit = 20, after, ...args } = {}) {
     let skip = 0;
     if (after) {
       const parsed = parseCursor(after);
@@ -39,7 +39,8 @@ class ContentItemDataSource extends PostgresDataSource {
       }
     }
 
-    const findFunc = cursor || this.model.findAndCountAll.bind(this.model);
+    const findFunc =
+      cursor?.bind(this) || this.model.findAndCountAll.bind(this.model);
 
     const result = await findFunc({
       where,
@@ -125,7 +126,7 @@ class ContentItemDataSource extends PostgresDataSource {
   }
 
   // Generates feed based on persons dataview membership
-  getPersonaFeed = async ({ args } = {}) => {
+  async getPersonaFeed(args = {}) {
     const {
       dataSources: { Person },
     } = this.context;
@@ -144,10 +145,10 @@ class ContentItemDataSource extends PostgresDataSource {
       },
       ...args,
     });
-  };
+  }
 
-  getUserFeed = () => {
-    return this.model.findAll();
+  getUserFeed = (args = {}) => {
+    return this.model.findAll((args = {}));
   };
 
   getFromCategoryIds = (ids = [], args = {}) => {
@@ -161,6 +162,7 @@ class ContentItemDataSource extends PostgresDataSource {
             model: this.sequelize.models.contentItemCategory,
             where: {
               originId: { [Op.in]: ids.map(String) },
+              originType: 'rock',
             },
           },
           ...(args?.include || []),

@@ -1,5 +1,6 @@
 /* eslint-disable import/named, new-cap */
 import ApollosConfig from '@apollosproject/config';
+import { times, uniq } from 'lodash';
 import { sequelize } from '../../postgres/index';
 import {
   Media,
@@ -104,6 +105,25 @@ describe('Apollos Postgres ContentItem DataSource', () => {
     expect(sermons.map(({ id }) => id)).toContain(sermon.id);
     expect(sermons.map(({ id }) => id)).not.toContain(contentItem1);
   });
+  it('gets items by rock content channel id', async () => {
+    const category = await sequelize.models.contentItemCategory.create({
+      originType: 'rock',
+      originId: '1',
+      title: 'Sermons',
+    });
+
+    const categoryItem = await sequelize.models.contentItem.create({
+      originId: '3',
+      originType: 'rock',
+      apollosType: 'ContentSeriesContentItem',
+      active: true,
+      contentItemCategoryId: category.id,
+    });
+
+    const items = await ContentItem.getFromCategoryIds([1]);
+
+    expect(items.map(({ id }) => id)).toEqual([categoryItem.id]);
+  });
   it('gets cover images', async () => {
     const coverImage = await sequelize.models.media.create({
       type: 'IMAGE',
@@ -183,5 +203,128 @@ describe('Apollos Postgres ContentItem DataSource', () => {
 
     const personaItems = await ContentItem.getPersonaFeed();
     expect(personaItems.map(({ id }) => id)).toEqual([personaItem.id]);
+  });
+  it('gets active items by default', async () => {
+    await sequelize.models.contentItem.create({
+      originId: '2',
+      originType: 'rock',
+      apollosType: 'ContentSeriesContentItem',
+      active: false,
+    });
+
+    const activeItem = await sequelize.models.contentItem.create({
+      originId: '3',
+      originType: 'rock',
+      apollosType: 'ContentSeriesContentItem',
+      active: true,
+    });
+
+    const items = await ContentItem.getUserFeed();
+
+    expect(items.map(({ id }) => id)).toEqual([contentItem1.id, activeItem.id]);
+  });
+  it('paginates', async () => {
+    await Promise.all(
+      times(30, async (i) => {
+        return sequelize.models.contentItem.create({
+          originId: `${i + 2}`,
+          originType: 'rock',
+          apollosType: 'UniversalContentItem',
+          active: true,
+        });
+      })
+    );
+
+    const initialItems = await ContentItem.paginate();
+
+    const lastItems = await ContentItem.paginate({
+      after: initialItems.edges[19].cursor,
+    });
+
+    expect(initialItems.edges[0].node.id).toEqual(contentItem1.id);
+    expect(initialItems.edges.length).toEqual(20);
+    expect(lastItems.edges[lastItems.edges.length - 1].node.id).toEqual(
+      (await ContentItem.getFromId('31', null, { originType: 'rock' })).id
+    );
+    // 10 remaining items + the initial seed item.
+    expect(lastItems.edges.length).toEqual(11);
+
+    expect(initialItems.getTotalCount()).toEqual(31);
+  });
+  it('paginates a custom cursor', async () => {
+    currentPerson = await sequelize.models.people.create({
+      originId: '1',
+      originType: 'rock',
+      firstName: 'Vincent',
+      gender: 'MALE',
+    });
+
+    const validTag = await sequelize.models.tag.create({
+      type: 'Persona',
+      data: { guid: '123' },
+      originId: '1',
+      originType: 'rock',
+      name: 'Men',
+    });
+
+    const invalidTag = await sequelize.models.tag.create({
+      type: 'Persona',
+      data: { guid: '456' },
+      originId: '2',
+      originType: 'rock',
+      name: 'Women',
+    });
+
+    const invalidItems = [];
+    await Promise.all(
+      times(30, async (i) => {
+        const invalidItem = await sequelize.models.contentItem.create({
+          originId: `${i + 2}`,
+          originType: 'rock',
+          apollosType: 'UniversalContentItem',
+          active: true,
+        });
+        await invalidItem.addTag(invalidTag);
+        invalidItems.push(invalidItem);
+      })
+    );
+
+    const validItems = [];
+    await Promise.all(
+      times(30, async (i) => {
+        const validItem = await sequelize.models.contentItem.create({
+          originId: `${i + 32}`,
+          originType: 'rock',
+          apollosType: 'UniversalContentItem',
+          active: true,
+        });
+        await validItem.addTag(validTag);
+        validItems.push(validItem);
+      })
+    );
+
+    await currentPerson.addTag(validTag);
+
+    const initialItems = await ContentItem.paginate({
+      cursor: ContentItem.getPersonaFeed,
+    });
+
+    const lastItems = await ContentItem.paginate({
+      after: initialItems.edges[19].cursor,
+      cursor: ContentItem.getPersonaFeed,
+    });
+
+    const allItemIds = [...initialItems.edges, ...lastItems.edges].map(
+      ({ node }) => node.id
+    );
+
+    // uniqe, to make sure we aren't cheating,.
+    expect(uniq(allItemIds).length).toEqual(30);
+    expect(initialItems.edges.length).toEqual(20);
+    expect(lastItems.edges.length).toEqual(10);
+    expect(
+      invalidItems.every(({ id }) => !allItemIds.includes(id))
+    ).toBeTruthy();
+    expect(validItems.every(({ id }) => allItemIds.includes(id))).toBeTruthy();
   });
 });
