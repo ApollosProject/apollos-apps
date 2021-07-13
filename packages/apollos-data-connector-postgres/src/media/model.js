@@ -4,6 +4,7 @@ import { defineModel, configureModel } from '../postgres';
 const createModel = defineModel({
   modelName: 'media',
   resolveType: () => 'Media',
+  external: true,
   attributes: {
     type: DataTypes.ENUM(['IMAGE', 'VIDEO', 'AUDIO']),
     url: DataTypes.STRING,

@@ -11,16 +11,8 @@ import ApollosConfig from '@apollosproject/config';
 import { uniq } from 'lodash';
 import { PostgresDataSource } from '../postgres';
 
-const { ROCK, ROCK_MAPPINGS, CONTENT } = ApollosConfig;
-
 class ContentItemDataSource extends PostgresDataSource {
   modelName = 'contentItem';
-
-  activeChannelIds =
-    ROCK_MAPPINGS.ALL_CONTENT_CHANNELS ||
-    // TODO deprecated variables
-    ROCK_MAPPINGS.ACTIVE_CONTENT_CHANNEL_IDS ||
-    ROCK_MAPPINGS.FEED_CONTENT_CHANNEL_IDS;
 
   async hasMedia(model) {
     const videos = await model.getImages();
@@ -87,7 +79,10 @@ class ContentItemDataSource extends PostgresDataSource {
   };
 
   getSermons(...args) {
-    return this.getFromCategoryIds(CONTENT?.SERMON_CHANNEL_IDS, args);
+    return this.getFromCategoryIds(
+      ApollosConfig?.CONTENT?.SERMON_CHANNEL_IDS,
+      args
+    );
   }
 
   async isContentActiveLiveStream({ id }) {
@@ -117,20 +112,20 @@ class ContentItemDataSource extends PostgresDataSource {
   }
 
   // A simple alias at this point.
-  async getChildren(model) {
-    return model.getChildren();
+  async getChildren(model, queryArgs = {}) {
+    return model.getChildren(queryArgs);
   }
 
   async getSiblings(model, queryArgs = {}) {
     const parent = await model.getParent();
     if (parent) {
-      return parent.getChildren(queryArgs);
+      return parent.getDirectChildren(queryArgs);
     }
     return [];
   }
 
   // Generates feed based on persons dataview membership
-  getPersonaFeed = async ({ args }) => {
+  getPersonaFeed = async ({ args } = {}) => {
     const {
       dataSources: { Person },
     } = this.context;
@@ -155,25 +150,6 @@ class ContentItemDataSource extends PostgresDataSource {
     return this.model.findAll();
   };
 
-  getDateAndActive = async ({ datetime }) => {
-    return this.model.findAll({
-      where: {
-        [Op.or]: [
-          {
-            createdAt: {
-              [Op.gt]: datetime,
-            },
-          },
-          {
-            updatedAt: {
-              [Op.gt]: datetime,
-            },
-          },
-        ],
-      },
-    });
-  };
-
   getFromCategoryIds = (ids = [], args = {}) => {
     if (ids.some((id) => typeof id === 'number')) {
       console.warn(
@@ -192,6 +168,7 @@ class ContentItemDataSource extends PostgresDataSource {
         ...args,
       });
     }
+
     return this.model.findAll({
       where: {
         contentItemCategoryId: { [Op.in]: ids },

@@ -28,6 +28,11 @@ const setupModel = configureModel(({ sequelize }) => {
     as: 'parent',
     foreignKey: 'parentId',
   });
+
+  sequelize.models.contentItem.hasMany(sequelize.models.contentItem, {
+    as: 'directChildren',
+    foreignKey: 'parentId',
+  });
 });
 
 export { createModel, setupModel };
