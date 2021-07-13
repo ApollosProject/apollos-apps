@@ -39,7 +39,9 @@
     "pg": "^8.5.1",
     "pg-hstore": "^2.3.3",
     "sequelize": "^6.3.5",
-    "umzug": "^3.0.0-beta.15"
+    "umzug": "^3.0.0-beta.15",
+    "hyphenation.en-us": "^0.2.1",
+    "hypher": "^0.2.5"    
   },
   "peerDependencies": {
     "@apollosproject/config": "*"
