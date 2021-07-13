@@ -5,7 +5,7 @@ if [ $# -ne 2 ]; then
 fi
 
 function encrypt() {
-  if [[ `uname -m` == 'arm64' ]]; 
+  if [[ `uname -m` == 'x86_64' ]]; 
   then
     /opt/homebrew/Cellar/openssl@1.1/1.1.1k/bin/openssl enc -aes-256-cbc -pbkdf2 -iter 20000 -in "$1" -out "$1".enc -k "$2"
   else 
@@ -14,7 +14,7 @@ function encrypt() {
 }
 
 function decrypt() {
-  if [[ `uname -m` == 'arm64' ]]; 
+  if [[ `uname -m` == 'x86_64' ]]; 
   then
     /opt/homebrew/Cellar/openssl@1.1/1.1.1k/bin/openssl enc -d -aes-256-cbc -pbkdf2 -iter 20000 -in "$1".enc -out "$1" -k "$2"
   else 
