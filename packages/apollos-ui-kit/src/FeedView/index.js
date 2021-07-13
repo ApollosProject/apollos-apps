@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { pure, compose, branch, withProps, defaultProps } from 'recompose';
 import { get } from 'lodash';
 
-import ContentCard from '../ContentCard';
+import DefaultCard from '../DefaultCard';
 import { enhancer as mediaQuery } from '../MediaQuery';
 import { ErrorCard } from '../Card';
 import TouchableScale from '../TouchableScale';
@@ -32,7 +32,7 @@ class FeedView extends Component {
 
   static defaultProps = {
     isLoading: false,
-    ListItemComponent: ContentCard,
+    ListItemComponent: DefaultCard,
     onEndReachedThreshold: 0.7,
     keyExtractor: (item) => item && item.id,
     content: [],
