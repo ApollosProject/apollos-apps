@@ -1,3 +1,4 @@
+/* eslint-disable import/named, new-cap */
 import ApollosConfig from '@apollosproject/config';
 import { sequelize } from '../../postgres/index';
 import {
@@ -102,19 +103,6 @@ describe('Apollos Postgres ContentItem DataSource', () => {
 
     expect(sermons.map(({ id }) => id)).toContain(sermon.id);
     expect(sermons.map(({ id }) => id)).not.toContain(contentItem1);
-  });
-  it('gets cover images', async () => {
-    const coverImage = await sequelize.models.media.create({
-      type: 'IMAGE',
-      originType: 'rock',
-      originId: '1',
-    });
-
-    await contentItem1.setCoverImage(coverImage);
-
-    expect(await ContentItem.getCoverImage(contentItem1)).toEqual(
-      await coverImage.reload()
-    );
   });
   it('gets cover images', async () => {
     const coverImage = await sequelize.models.media.create({
