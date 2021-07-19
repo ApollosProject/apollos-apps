@@ -14,10 +14,8 @@ import {
   named,
 } from '@apollosproject/ui-kit';
 
-import { useLike } from '../LikeButtonConnected';
-import { useShare } from '../ShareButtonConnected';
-
 import safeOpenUrl from '../safeOpenUrl';
+import ContentTitlesConnected from './ContentTitlesConnected';
 import GET_CONTENT_ITEM_CONTENT from './getContentNode';
 
 const ComponentPropType = PropTypes.oneOfType([
@@ -31,18 +29,10 @@ const NoImageSpacer = styled(({ theme }) => ({
 }))(View);
 
 const DefaultHeader = ({ node, isLoading }) => {
-  const [isLiked, like] = useLike(node?.id);
-  const share = useShare(node?.id);
-  return (
-    <ContentTitles
-      title={node?.title}
-      summary={node?.summary}
-      featured
-      isLoading={isLoading}
-      isLiked={isLiked}
-      onPressLike={like}
-      onPressShare={share}
-    />
+  return isLoading ? (
+    <ContentTitles featured isLoading />
+  ) : (
+    <ContentTitlesConnected node={node} />
   );
 };
 
