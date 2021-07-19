@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.27.0](https://github.com/apollosproject/apollos-apps/compare/v2.26.0...v2.27.0) (2021-07-19)
+
+
+### Features
+
+* Postgres content item datasource ([#2032](https://github.com/apollosproject/apollos-apps/issues/2032)) ([51c297e](https://github.com/apollosproject/apollos-apps/commit/51c297e60a8fc8aa409d0288ab534111eba208d7))
+
+
+
 ## [2.26.0](https://github.com/apollosproject/apollos-apps/compare/v2.25.0...v2.26.0) (2021-07-09)
 
 **Note:** Version bump only for package @apollosproject/data-schema

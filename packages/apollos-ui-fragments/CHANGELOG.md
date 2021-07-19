@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.27.0](https://github.com/apollosproject/apollos-apps/compare/v2.26.0...v2.27.0) (2021-07-19)
+
+
+### Features
+
+* add action table feature to client ([#1947](https://github.com/apollosproject/apollos-apps/issues/1947)) ([55fda54](https://github.com/apollosproject/apollos-apps/commit/55fda54af7c622d92af76975e1496dc70068d00f))
+
+
+
 ## [2.26.0](https://github.com/apollosproject/apollos-apps/compare/v2.25.0...v2.26.0) (2021-07-09)
 
 **Note:** Version bump only for package @apollosproject/ui-fragments

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.27.0](https://github.com/apollosproject/apollos-apps/compare/v2.26.0...v2.27.0) (2021-07-19)
+
+
+### Features
+
+* adds content channel images ([#2053](https://github.com/apollosproject/apollos-apps/issues/2053)) ([8475c36](https://github.com/apollosproject/apollos-apps/commit/8475c3602670706f76df978811c8c68dfb2f7ac9))
+
+
+
 ## [2.26.0](https://github.com/apollosproject/apollos-apps/compare/v2.25.0...v2.26.0) (2021-07-09)
 
 **Note:** Version bump only for package @apollosproject/rock-apollo-data-source

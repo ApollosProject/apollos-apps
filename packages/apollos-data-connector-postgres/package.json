@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=12"
   },
-  "version": "2.26.0",
+  "version": "2.27.0",
   "main": "lib/index.js",
   "scripts": {
     "test": "TZ=UTC jest",
@@ -33,21 +33,21 @@
     "globalTeardown": "./jest.teardown.js"
   },
   "dependencies": {
-    "@apollosproject/data-schema": "^2.26.0",
-    "@apollosproject/server-core": "^2.26.0",
+    "@apollosproject/data-schema": "^2.27.0",
+    "@apollosproject/server-core": "^2.27.0",
+    "hyphenation.en-us": "^0.2.1",
+    "hypher": "^0.2.5",
     "lodash": "^4.17.11",
     "pg": "^8.5.1",
     "pg-hstore": "^2.3.3",
     "sequelize": "^6.3.5",
-    "umzug": "^3.0.0-beta.15",
-    "hyphenation.en-us": "^0.2.1",
-    "hypher": "^0.2.5"    
+    "umzug": "^3.0.0-beta.15"
   },
   "peerDependencies": {
     "@apollosproject/config": "*"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^2.26.0",
+    "@apollosproject/babel-preset-apollos": "^2.27.0",
     "jest": "^25.1.0",
     "sequelize-mock": "^0.10.2"
   },

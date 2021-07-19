@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.27.0](https://github.com/ApollosProject/apollos-apps/compare/v2.26.0...v2.27.0) (2021-07-19)
+
+
+### Features
+
+* add action table feature to client ([#1947](https://github.com/ApollosProject/apollos-apps/issues/1947)) ([55fda54](https://github.com/ApollosProject/apollos-apps/commit/55fda54af7c622d92af76975e1496dc70068d00f))
+* adds content channel images ([#2053](https://github.com/ApollosProject/apollos-apps/issues/2053)) ([8475c36](https://github.com/ApollosProject/apollos-apps/commit/8475c3602670706f76df978811c8c68dfb2f7ac9))
+* Postgres content item datasource ([#2032](https://github.com/ApollosProject/apollos-apps/issues/2032)) ([51c297e](https://github.com/ApollosProject/apollos-apps/commit/51c297e60a8fc8aa409d0288ab534111eba208d7))
+
+
+### Bug Fixes
+
+* removes query hooks from loading state ([#2065](https://github.com/ApollosProject/apollos-apps/issues/2065)) ([ad18e53](https://github.com/ApollosProject/apollos-apps/commit/ad18e53ddacf565e8318a7e7e7807906bc93e22e))
+
+
+
 ## [2.26.0](https://github.com/ApollosProject/apollos-apps/compare/v2.25.0...v2.26.0) (2021-07-09)
 
 
