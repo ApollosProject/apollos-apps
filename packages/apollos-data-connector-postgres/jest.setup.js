@@ -1,4 +1,5 @@
 import { Client } from 'pg';
+import { times } from 'lodash';
 import { ensureLocalDb } from './src/postgres/local-db';
 import { dbName } from './src/postgres/test-connect';
 
@@ -15,16 +16,12 @@ export default async ({ maxWorkers }) => {
     console.error(e);
   }
 
-  let count = 1;
-
-  while (count <= maxWorkers) {
-    const name = dbName(count);
-
-    // eslint-disable-next-line no-await-in-loop
-    await ensureLocalDb(client, name, true);
-
-    count += 1;
-  }
+  await Promise.all(
+    times(maxWorkers, (i) => {
+      const name = dbName(i + 1);
+      return ensureLocalDb(client, name, true);
+    })
+  );
 
   await client.end();
 };

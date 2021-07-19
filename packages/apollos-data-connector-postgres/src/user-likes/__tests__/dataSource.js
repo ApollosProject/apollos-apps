@@ -6,7 +6,10 @@ import {
   setupModel as setupCommentModel,
 } from '../../comments/model';
 import { createModel as createPeopleModel } from '../../people/model';
-import { createModel as createFollowModel } from '../../follows/model';
+import {
+  createModel as createFollowModel,
+  setupModel as setupFollowModel,
+} from '../../follows/model';
 import CommentDataSource from '../../comments/dataSource';
 import UserLike from '../dataSource';
 
@@ -32,6 +35,7 @@ describe('Apollos Postgres User Likes DataSource', () => {
     await createModel();
     await setupModel();
     await setupCommentModel();
+    await setupFollowModel();
     await sync();
 
     person1 = await sequelize.models.people.create({

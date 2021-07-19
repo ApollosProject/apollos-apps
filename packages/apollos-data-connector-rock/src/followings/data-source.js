@@ -5,23 +5,24 @@ import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 export default class Followings extends RockApolloDataSource {
   resource = 'Followings';
 
-  async updateLikeNode({ nodeId, operation, resolveInfo }) {
+  async updateLikeNode({ nodeId, operation, resolveInfo, originId }) {
     const {
       dataSources,
       models: { Node },
     } = this.context;
     if (operation === 'Like') {
-      await this.followNode({ nodeId });
+      await this.followNode({ nodeId, originId });
     } else {
-      await this.unFollowNode({ nodeId });
+      await this.unFollowNode({ nodeId, originId });
     }
     const item = await Node.get(nodeId, dataSources, resolveInfo);
-    return { ...item, isLiked: operation === 'Like' };
+    item.isLiked = operation === 'Like';
+    return item;
   }
 
   updateLikeContentItem = this.updateLikeNode.bind(this);
 
-  async followNode({ nodeId }) {
+  async followNode({ nodeId, originId }) {
     const {
       dataSources: { RockConstants, Auth, Cache },
     } = this.context;
@@ -30,25 +31,27 @@ export default class Followings extends RockApolloDataSource {
     const currentUser = await Auth.getCurrentPerson();
     const nodeType = await RockConstants.modelType(__type);
 
+    const rockId = originId || id;
+
     const followingsId = await this.post('/Followings', {
       PersonAliasId: currentUser.primaryAliasId,
       EntityTypeId: nodeType.id,
-      EntityId: id,
+      EntityId: rockId, // sometimes the originId may be a Rock ID, while the id itself is from Postgres
     });
 
     await Cache.set({
-      key: ['userLiked', currentUser.id, nodeType.id, id],
+      key: ['userLiked', currentUser.id, nodeType.id, rockId],
       data: true,
     });
 
     await Cache.increment({
-      key: ['likedCount', nodeType.id, id],
+      key: ['likedCount', nodeType.id, rockId],
     });
 
     return this.get(`/Followings/${followingsId}`);
   }
 
-  async unFollowNode({ nodeId }) {
+  async unFollowNode({ nodeId, originId }) {
     const {
       dataSources: { RockConstants, Auth, Cache },
     } = this.context;
@@ -58,19 +61,24 @@ export default class Followings extends RockApolloDataSource {
     const currentUser = await Auth.getCurrentPerson();
     // currentUser.id is correct, this path does not use aliasId
 
+    const rockId = originId || id;
+
     await Cache.set({
-      key: ['userLiked', currentUser.id, nodeType.id, id],
+      key: ['userLiked', currentUser.id, nodeType.id, rockId],
       data: false,
     });
 
     await Cache.decrement({
-      key: ['likedCount', nodeType.id, id],
+      key: ['likedCount', nodeType.id, rockId],
     });
 
-    return this.delete(`/Followings/${nodeType.id}/${id}/${currentUser.id}`);
+    return this.delete(
+      `/Followings/${nodeType.id}/${rockId}/${currentUser.id}`
+    );
   }
 
-  async getFollowingsCountByNodeId({ nodeId }) {
+  async getFollowingsCountByNodeId({ nodeId, originId }) {
+    console.log({ nodeId, originId });
     const {
       dataSources: { RockConstants, Cache },
     } = this.context;
@@ -78,8 +86,10 @@ export default class Followings extends RockApolloDataSource {
     const { id, __type } = parseGlobalId(nodeId);
     const nodeType = await RockConstants.modelType(__type);
 
+    const rockId = originId || id;
+
     const cachedCount = await Cache.get({
-      key: ['likedCount', nodeType.id, id],
+      key: ['likedCount', nodeType.id, rockId],
     });
 
     if (cachedCount != null) return cachedCount;
@@ -88,7 +98,7 @@ export default class Followings extends RockApolloDataSource {
       await this.request('Followings')
         .filter(
           // eslint-disable-next-line prettier/prettier
-          `(EntityId eq ${id}) and (EntityTypeId eq ${nodeType.id})`
+          `(EntityId eq ${rockId}) and (EntityTypeId eq ${nodeType.id})`
         )
         .select('Id') // $count not supported, next best thing to make efficient
         .cache({ ttl: 1800 }) // TODO: whats the right way to do this?
@@ -96,14 +106,14 @@ export default class Followings extends RockApolloDataSource {
     ).length;
 
     await Cache.set({
-      key: ['likedCount', nodeType.id, id],
+      key: ['likedCount', nodeType.id, rockId],
       data: count,
     });
 
     return count;
   }
 
-  async getFollowingsForCurrentUserAndNode({ nodeId }) {
+  async getFollowingsForCurrentUserAndNode({ nodeId, originId }) {
     const {
       dataSources: { RockConstants, Auth },
     } = this.context;
@@ -121,15 +131,17 @@ export default class Followings extends RockApolloDataSource {
     const { id, __type } = parseGlobalId(nodeId);
     const nodeType = await RockConstants.modelType(__type);
 
+    const rockId = originId || id;
+
     return this.request('Followings')
       .filter(
         // eslint-disable-next-line prettier/prettier
-          `(EntityId eq ${id}) and (EntityTypeId eq ${nodeType.id}) and (PersonAliasId eq ${currentUser.primaryAliasId})`
+          `(EntityId eq ${rockId}) and (EntityTypeId eq ${nodeType.id}) and (PersonAliasId eq ${currentUser.primaryAliasId})`
       )
       .get();
   }
 
-  async getIsLikedForCurrentUserAndNode({ nodeId, isLiked }) {
+  async getIsLikedForCurrentUserAndNode({ nodeId, isLiked, originId }) {
     const {
       dataSources: { Cache, Auth, RockConstants },
     } = this.context;
@@ -150,20 +162,23 @@ export default class Followings extends RockApolloDataSource {
     const { id, __type } = parseGlobalId(nodeId);
     const nodeType = await RockConstants.modelType(__type);
 
+    const rockId = originId || id;
+
     const cachedIsFollowing = await Cache.get({
-      key: ['userLiked', currentUser.id, nodeType.id, id],
+      key: ['userLiked', currentUser.id, nodeType.id, rockId],
     });
 
     if (cachedIsFollowing != null) return cachedIsFollowing;
 
     const followings = await this.getFollowingsForCurrentUserAndNode({
       nodeId,
+      originId,
     });
 
     const userLikedNode = followings.length > 0;
 
     await Cache.set({
-      key: ['userLiked', currentUser.id, nodeType.id, id],
+      key: ['userLiked', currentUser.id, nodeType.id, rockId],
       data: userLikedNode,
     });
 

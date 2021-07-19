@@ -6,6 +6,7 @@ export {
   PostgresDataSource,
 } from './postgres';
 
+export * as ActionAlgorithm from './action-algorithms';
 export * as Comment from './comments';
 export * as ContentItem from './content-items';
 export * as ContentItemCategory from './content-item-categories';

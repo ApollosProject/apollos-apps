@@ -156,7 +156,9 @@ describe('Node', () => {
     };
 
     const node = new Node();
-    const result = await node.get(globalId, dataSources, { schema });
+    const result = await node.get(globalId, dataSources, {
+      schema,
+    });
 
     expect(result.test).toEqual(data.test);
   });
@@ -165,6 +167,16 @@ describe('Node', () => {
     const id = '123';
     const __type = 'Test';
     const globalId = createGlobalId(id, __type);
+
+    const schemaWithDetails = {
+      getTypeMap: () => ({
+        Test: {
+          astNode: {
+            kind: 'ObjectTypeDefinition',
+          },
+        },
+      }),
+    };
 
     set({
       fieldsByTypeName: {
@@ -181,7 +193,9 @@ describe('Node', () => {
     };
 
     const node = new Node();
-    const result = await node.get(globalId, dataSources, { schema });
+    const result = await node.get(globalId, dataSources, {
+      schema: schemaWithDetails,
+    });
 
     expect(result).toMatchSnapshot();
     expect(dataSources.Test.getFromId.mock.calls).toMatchSnapshot();
@@ -193,6 +207,16 @@ describe('Node', () => {
     const __type = 'Test';
     const globalId = createGlobalId(id, __type);
 
+    const schemaWithDetails = {
+      getTypeMap: () => ({
+        Test: {
+          astNode: {
+            kind: 'ObjectTypeDefinition',
+          },
+        },
+      }),
+    };
+
     set({
       fieldsByTypeName: {
         ContentItem: {
@@ -208,13 +232,54 @@ describe('Node', () => {
     };
 
     const node = new Node();
-    const result = await node.get(globalId, dataSources, { schema });
+    const result = await node.get(globalId, dataSources, {
+      schema: schemaWithDetails,
+    });
 
     expect(result.id).toBe(id);
     reset();
   });
 
   it('Node class should call getFromId the id if we are asking for more than id', async () => {
+    const id = '456';
+    const __type = 'Test';
+    const globalId = createGlobalId(id, __type);
+
+    set({
+      fieldsByTypeName: {
+        ContentItem: {
+          id: { name: 'id' },
+        },
+      },
+    });
+
+    const schemaWithDetails = {
+      getTypeMap: () => ({
+        Test: {
+          astNode: {
+            kind: 'Interface',
+          },
+        },
+      }),
+    };
+
+    const dataSources = {
+      Test: {
+        getFromId: jest.fn(() => ({ id: '123' })),
+      },
+    };
+
+    const node = new Node();
+    const result = await node.get(globalId, dataSources, {
+      schema: schemaWithDetails,
+    });
+
+    expect(result).toMatchSnapshot();
+    expect(dataSources.Test.getFromId.mock.calls).toMatchSnapshot();
+    reset();
+  });
+
+  it('Node class should call getFromId if the provided type is an interface', async () => {
     const id = '456';
     const __type = 'Test';
     const globalId = createGlobalId(id, __type);

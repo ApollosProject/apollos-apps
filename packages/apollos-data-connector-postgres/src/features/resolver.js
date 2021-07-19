@@ -1,7 +1,14 @@
 import { get } from 'lodash';
 import { createGlobalId } from '@apollosproject/server-core';
 
-export default {
+const id = (type) => ({ apollosId, id: rootId }) =>
+  apollosId || createGlobalId(rootId, type);
+
+const resolver = {
+  Feature: {
+    // Implementors must attach __typename to root.
+    __resolveType: ({ __typename, apollosType }) => __typename || apollosType,
+  },
   // deprecated
   WeekendContentItem: {
     features: (root, args, { dataSources: { ContentItem } }) =>
@@ -12,17 +19,13 @@ export default {
     features: (root, args, { dataSources: { ContentItem } }) =>
       ContentItem.getFeatures(root),
   },
-  Feature: {
-    // Implementors must attach __typename to root.
-    __resolveType: ({ __typename }) => __typename,
-  },
   TextFeature: {
-    sharing: ({ body }) => ({
+    sharing: ({ data }) => ({
       title: 'Share text via...',
-      message: body,
+      message: data?.text,
     }),
-    body: ({ body, data }) => body || data?.text,
-    id: ({ id }) => createGlobalId(id, 'TextFeature'),
+    body: ({ data }) => data.text,
+    id: ({ apollosId }) => apollosId,
   },
   CardListItem: {
     coverImage: ({ image }) => image,
@@ -34,16 +37,13 @@ export default {
       root.attributes &&
       !!get(ContentItem.getVideos(root.relatedNode), '[0].sources[0]', null),
     labelText: ({ subtitle }) => subtitle,
-    id: ({ id }) => createGlobalId(id, 'CardListItem'),
+    id: id('CardListItem'),
   },
   ActionListAction: {
-    id: ({ id }) => createGlobalId(id, 'ActionListAction'),
+    id: id('ActionListAction'),
   },
   ActionBarAction: {
-    id: ({ id }) => createGlobalId(id, 'ActionBarAction'),
-  },
-  ActionTableAction: {
-    id: ({ id }) => createGlobalId(id, 'ActionTableAction'),
+    id: id('ActionBarAction'),
   },
   ScriptureFeature: {
     scriptures: (
@@ -55,38 +55,47 @@ export default {
       title: 'Share scripture via...',
       message: Feature.getScriptureShareMessage(reference),
     }),
-    id: ({ id }) => createGlobalId(id, 'ScriptureFeature'),
+    id: id('ScriptureFeature'),
   },
   Query: {
-    userFeedFeatures: async (root, args, { dataSources: { Feature } }) =>
-      console.warn('userFeedFeatures is deprecated. Use tabFeedFeatures.') ||
-      Feature.getHomeFeedFeatures(),
+    userFeedFeatures: async () =>
+      console.warn(
+        'userFeedFeatures is deprecated and removed. Use tabFeedFeatures.'
+      ),
   },
   ActionListFeature: {
-    id: ({ id }) => createGlobalId(id, 'ActionListFeature'),
+    id: id('ActionListFeature'),
   },
   ActionBarFeature: {
-    id: ({ id }) => createGlobalId(id, 'ActionBarFeature'),
+    id: id('ActionBarFeature'),
   },
   ActionTableFeature: {
-    id: ({ id }) => createGlobalId(id, 'ActionTableFeature'),
+    id: id('ActiontableFeature'),
   },
   HeroListFeature: {
-    id: ({ id }) => createGlobalId(id, 'HeroListFeature'),
+    id: id('HeroListFeature'),
   },
   VerticalCardListFeature: {
-    id: ({ id }) => createGlobalId(id, 'VerticalCardListFeature'),
+    id: id('VerticalCardListFeature'),
   },
   HorizontalCardListFeature: {
-    id: ({ id }) => createGlobalId(id, 'HorizontalCardListFeature'),
+    id: id('HorizontalCardListFeature'),
   },
   PrayerListFeature: {
-    id: ({ id }) => createGlobalId(id, 'PrayerListFeature'),
+    id: id('PrayerListFeature'),
   },
   VerticalPrayerListFeature: {
-    id: ({ id }) => createGlobalId(id, 'VerticalPrayerListFeature'),
+    id: id('VerticalPrayerListFeature'),
   },
   ButtonFeature: {
-    id: ({ id }) => createGlobalId(id, 'ButtonFeature'),
+    id: id('ButtonFeature'),
+  },
+  CommentListFeature: {
+    id: id('CommentListFeature'),
+  },
+  AddCommentFeature: {
+    id: id('AddCommentFeature'),
   },
 };
+
+export default resolver;

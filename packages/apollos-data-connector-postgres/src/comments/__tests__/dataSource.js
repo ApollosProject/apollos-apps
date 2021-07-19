@@ -1,23 +1,18 @@
+/* eslint-disable new-cap, import/named */
 import { createGlobalId } from '@apollosproject/server-core';
 import { range } from 'lodash';
-import { sequelize, sync } from '../../postgres/index';
-import { createModel, setupModel, Visibility } from '../model';
-import { createModel as createPersonModel } from '../../people/model';
+import { sequelize } from '../../postgres/index';
+import { setupPostgresTestEnv } from '../../utils/testUtils';
 import {
-  createModel as createFollowModel,
-  setupModel as setupFollowModel,
-} from '../../follows/model';
-import {
-  createModel as createFlagsModel,
-  setupModel as setupFlagsModel,
-} from '../../user-flags/model';
-import {
-  createModel as createLikesModel,
-  setupModel as setupLikesModel,
-} from '../../user-likes/model';
-import CommentDataSource from '../dataSource';
-import UserFlagDataSource from '../../user-flags/dataSource';
-import UserLikeDataSource from '../../user-likes/dataSource';
+  Comment,
+  Person,
+  Follow,
+  UserFlag,
+  UserLike,
+  Campus,
+  ContentItem,
+  Media,
+} from '../../index';
 
 let person1;
 let person2;
@@ -32,18 +27,20 @@ const context = {
   },
 };
 
+const CommentDataSource = Comment.dataSource;
+
 describe('Apollos Postgres Comments DatSource', () => {
   beforeEach(async () => {
-    await createModel();
-    await createFlagsModel();
-    await createLikesModel();
-    await createPersonModel();
-    await createFollowModel();
-    await setupModel();
-    await setupFlagsModel();
-    await setupLikesModel();
-    await setupFollowModel();
-    await sync({ force: true });
+    await setupPostgresTestEnv([
+      Campus,
+      Comment,
+      Person,
+      Follow,
+      UserFlag,
+      UserLike,
+      ContentItem,
+      Media,
+    ]);
     person1 = await sequelize.models.people.create({
       originId: '1',
       originType: 'rock',
@@ -75,6 +72,32 @@ describe('Apollos Postgres Comments DatSource', () => {
 
       expect(comment.text).toBe('I am a fun comment!');
       expect(comment.apollosId).toBe(`Comment:${comment.id}`);
+    });
+
+    it('should support creating new comments for a postgres item', async () => {
+      const commentDataSource = new CommentDataSource();
+      const contentItemDataSource = new ContentItem.dataSource();
+      contentItemDataSource.initialize({ context });
+
+      context.dataSources.ContentItem = contentItemDataSource;
+
+      commentDataSource.initialize({ context });
+
+      const contentItem = await sequelize.models.contentItem.create({
+        originId: '123',
+        originType: 'rock',
+        name: 'Content Item With Comments',
+        active: true,
+      });
+
+      const comment = await commentDataSource.addComment({
+        text: 'I am a fun comment!',
+        parentId: contentItem.apollosId,
+      });
+
+      expect(comment.text).toBe('I am a fun comment!');
+      expect(comment.apollosId).toBe(`Comment:${comment.id}`);
+      expect(comment.externalParentId).toBe(contentItem.originId);
     });
 
     it('should prevent creating duplicate comments', async () => {
@@ -120,7 +143,10 @@ describe('Apollos Postgres Comments DatSource', () => {
       await commentDataSource.addComment({
         text: 'I am a fun comment!',
         parentId: createGlobalId(123, 'UniversalContentItem'),
+        sendNotificationsSync: true,
       });
+
+      await new Promise(setImmediate);
 
       // changes with every snapshot
       delete context.dataSources.Notification.createAndSend.mock.calls[0][0]
@@ -146,7 +172,7 @@ describe('Apollos Postgres Comments DatSource', () => {
       await commentDataSource.addComment({
         text: 'I am a fun comment!',
         parentId: createGlobalId(123, 'UniversalContentItem'),
-        visibility: Visibility.PRIVATE,
+        visibility: Comment.models.Visibility.PRIVATE,
       });
 
       expect(
@@ -340,7 +366,7 @@ describe('Apollos Postgres Comments DatSource', () => {
       const commentDataSource = new CommentDataSource();
       commentDataSource.initialize({ context });
 
-      const flagDataSource = new UserFlagDataSource();
+      const flagDataSource = new UserFlag.dataSource();
       flagDataSource.initialize({ context });
 
       await commentDataSource.addComment({
@@ -367,7 +393,7 @@ describe('Apollos Postgres Comments DatSource', () => {
       const commentDataSource = new CommentDataSource();
       commentDataSource.initialize({ context });
 
-      const flagDataSource = new UserFlagDataSource();
+      const flagDataSource = new UserFlag.dataSource();
       flagDataSource.initialize({ context });
 
       await commentDataSource.addComment({
@@ -436,7 +462,7 @@ describe('Apollos Postgres Comments DatSource', () => {
     it('should sort by likes', async () => {
       const commentDataSource = new CommentDataSource();
       commentDataSource.initialize({ context });
-      const userLikeDataSource = new UserLikeDataSource();
+      const userLikeDataSource = new UserLike.dataSource();
       userLikeDataSource.initialize({ context });
 
       currentPerson = person2;
@@ -478,7 +504,7 @@ describe('Apollos Postgres Comments DatSource', () => {
     it('should include follows before high like counts', async () => {
       const commentDataSource = new CommentDataSource();
       commentDataSource.initialize({ context });
-      const userLikeDataSource = new UserLikeDataSource();
+      const userLikeDataSource = new UserLike.dataSource();
       userLikeDataSource.initialize({ context });
 
       currentPerson = person2;

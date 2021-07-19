@@ -57,17 +57,25 @@ export default class Node {
       (typeInfo) => Object.values(typeInfo).map(({ name }) => name)
     );
 
-    // If we only have __typename or/and 'id' in the request
-    // Then we can shortcut the need to fetch the entire document.
-    // This helps us keep a clean schema but also minimize uneeded requests.
-    if (uniq([...siblingFields, '__typename', 'id']).length === 2) {
-      return { id, __typename: __type, __type };
-    }
-
     const possibleModels = this.getPossibleDataModels({
       __type,
       schema: resolveInfo.schema,
     });
+
+    // If we only have __typename or/and 'id' in the request
+    // Then we can shortcut the need to fetch the entire document.
+    // This helps us keep a clean schema but also minimize uneeded requests.
+    if (
+      uniq([...siblingFields, '__typename', 'id']).length === 2 &&
+      // We can't early return if the __type is an interface rather than a typename
+      this.isValidType({
+        __type,
+        schema: resolveInfo.schema,
+      })
+    ) {
+      return { id, __typename: __type, __type };
+    }
+
     // check to see if any of those models have a dataSource wtih a getFromId method and return's it's name
     // (if it exists)
     const modelName = possibleModels.find((type) =>
@@ -85,12 +93,19 @@ export default class Node {
     const data = await dataSources[modelName].getFromId(id, encodedId, {
       info: resolveInfo,
     });
-    if (data) data.__type = __type;
+    if (data && !data.apollosType) data.__type = __type;
     return data;
   }
 
+  isValidType = ({ schema, __type }) => {
+    const originalType = schema.getTypeMap()[__type];
+    // We can only return types in the schema.
+    // We can't return interfaces
+    return originalType && originalType.astNode.kind === 'ObjectTypeDefinition';
+  };
+
   getPossibleDataModels = ({ schema, __type }) => {
-    // The ast representation of the that we're resolving `__type`
+    // The ast representation of the `__type` that we're resolving
     const originalType = schema.getTypeMap()[__type];
     if (!originalType || !originalType.astNode.interfaces) {
       // if the type doesn't exist, or doesn't have any interfaces, exit early

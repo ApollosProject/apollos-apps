@@ -1,6 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Node Node class should call getFromId the id if we are asking for more than id 1`] = `undefined`;
+exports[`Node Node class should call getFromId if the provided type is an interface 1`] = `undefined`;
+
+exports[`Node Node class should call getFromId if the provided type is an interface 2`] = `
+Array [
+  Array [
+    "456",
+    "Test:fb344cb78f7b3f41416ffcbdc457e30c",
+    Object {
+      "info": Object {
+        "schema": Object {
+          "getTypeMap": [Function],
+        },
+      },
+    },
+  ],
+]
+`;
+
+exports[`Node Node class should call getFromId the id if we are asking for more than id 1`] = `
+Object {
+  "__type": "Test",
+  "id": "123",
+}
+`;
 
 exports[`Node Node class should call getFromId the id if we are asking for more than id 2`] = `
 Array [

@@ -2,7 +2,7 @@ import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import ApollosConfig from '@apollosproject/config';
 import { get } from 'lodash';
 
-const { ROCK_MAPPINGS } = ApollosConfig;
+const { ROCK_MAPPINGS, CONTENT } = ApollosConfig;
 
 class RockConstants extends RockApolloDataSource {
   async findOrCreate({ model, objectAttributes }) {
@@ -62,7 +62,7 @@ class RockConstants extends RockApolloDataSource {
         ...(ApollosConfig?.ROCK?.VERSION < 11.0
           ? { ChannelId: channelId }
           : { InteractionChannelId: channelId }),
-        EntityId: entityId,
+        ...(entityId ? { EntityId: entityId } : {}),
       },
     });
   }
@@ -91,7 +91,9 @@ class RockConstants extends RockApolloDataSource {
         ROCK_MAPPINGS?.INTERACTIONS?.COMPONENT_NAME || 'Apollos App Component'
       } - ${entityId}`,
       channelId: channel.id,
-      entityId: parseInt(entityId, 10),
+      ...(Number.isNaN(parseInt(entityId, 10))
+        ? {}
+        : { entityId: parseInt(entityId, 10) }),
     });
   }
 
@@ -126,6 +128,10 @@ class RockConstants extends RockApolloDataSource {
   mapApollosNameToRockName = (name) => {
     if (ROCK_MAPPINGS?.CONTENT_ITEM[name]) {
       return ROCK_MAPPINGS.CONTENT_ITEM[name].EntityType;
+    }
+    // Hack to get us through the Postgres/Rock days.
+    if (CONTENT?.TYPES?.includes(name)) {
+      return 'ContentChannelItem';
     }
     return get(ROCK_MAPPINGS, `ENTITY_TYPES.${name}`, name);
   };

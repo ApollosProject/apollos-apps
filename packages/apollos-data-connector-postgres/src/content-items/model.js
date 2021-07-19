@@ -15,6 +15,10 @@ const createModel = defineModel({
 });
 
 const setupModel = configureModel(({ sequelize }) => {
+  sequelize.models.contentItem.addScope('defaultScope', {
+    include: [{ model: sequelize.models.media, as: 'coverImage' }],
+    where: { active: true },
+  });
   sequelize.models.contentItem.belongsTo(sequelize.models.media, {
     as: 'coverImage',
     foreignKey: 'coverImageId',
@@ -22,6 +26,11 @@ const setupModel = configureModel(({ sequelize }) => {
 
   sequelize.models.contentItem.belongsTo(sequelize.models.contentItem, {
     as: 'parent',
+    foreignKey: 'parentId',
+  });
+
+  sequelize.models.contentItem.hasMany(sequelize.models.contentItem, {
+    as: 'directChildren',
     foreignKey: 'parentId',
   });
 });

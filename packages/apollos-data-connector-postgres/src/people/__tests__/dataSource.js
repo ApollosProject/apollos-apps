@@ -30,6 +30,7 @@ describe('Apollos Postgres People DataSource', () => {
 
   beforeEach(async () => {
     personId = 1;
+    context.currentPostgresPerson = null;
 
     await createModel();
     await createCampusModel();
@@ -76,10 +77,14 @@ describe('Apollos Postgres People DataSource', () => {
     expect(fetchedId).toBe(currentPerson.id);
   });
 
-  it('should throw an error if current user isnt in the db', () => {
-    const getPerson = peopleDataSource.getCurrentPersonId();
-
-    expect(getPerson).rejects.toThrowErrorMatchingSnapshot();
+  it('should throw an error if current user isnt in the db', async () => {
+    personId = 2;
+    expect.assertions(1);
+    try {
+      await peopleDataSource.getCurrentPersonId();
+    } catch (e) {
+      expect(e).toMatchSnapshot();
+    }
   });
 
   it('should find a user by postgres id', async () => {

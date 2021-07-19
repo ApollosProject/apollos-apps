@@ -13,13 +13,14 @@ describe('Features model', () => {
 
     const migrationRunner = await createMigrationRunner({
       migrations: [...migrations, ...ContentItemMigrations, ...MediaMigrations],
+      logger: null,
     });
     await migrationRunner.up();
 
     await setupModel();
   });
   afterEach(async () => {
-    await sequelize.dropAllSchemas();
+    await sequelize.drop({ cascade: true });
   });
 
   it('constructs without issues', async () => {

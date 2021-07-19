@@ -27,13 +27,14 @@ describe('Tag model', () => {
         ...CampusMigrations,
         ...MediaMigrations,
       ],
+      logger: null,
     });
     await migrationRunner.up();
     await ContentItem.setupModel();
     await setupModel();
   });
   afterEach(async () => {
-    await sequelize.dropAllSchemas();
+    await sequelize.drop({ cascade: true });
   });
 
   it('adds tag to content item', async () => {
@@ -54,7 +55,6 @@ describe('Tag model', () => {
     });
 
     await content.addTag(tag);
-    await content.reload();
     const contentTags = await content.getTags();
 
     expect(contentTags[0].get('id')).toEqual(tag.get('id'));
@@ -80,7 +80,6 @@ describe('Tag model', () => {
     });
 
     await person.addTag(tag);
-    await person.reload();
     const personTags = await person.getTags();
 
     expect(personTags[0].get('id')).toEqual(tag.get('id'));

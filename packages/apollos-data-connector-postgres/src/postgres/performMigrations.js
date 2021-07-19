@@ -3,7 +3,7 @@ import { Umzug, SequelizeStorage } from 'umzug';
 import systemMigrations from './migrations';
 import { sequelize } from './index';
 
-const createMigrationRunner = async ({ migrations }) => {
+const createMigrationRunner = async ({ migrations, logger = console }) => {
   const migrationsToRun = flatten([...systemMigrations, ...migrations]);
 
   migrationsToRun.sort((a, b) => (a.order < b.order ? -1 : 1));
@@ -12,7 +12,7 @@ const createMigrationRunner = async ({ migrations }) => {
     migrations: migrationsToRun,
     context: sequelize.getQueryInterface(),
     storage: new SequelizeStorage({ sequelize }),
-    logger: console,
+    logger,
   });
 
   // Checks migrations and run them if they are not already applied. To keep

@@ -23,14 +23,26 @@ export default class Interactions extends RockApolloDataSource {
   async updateSeriesStarted({ id }) {
     const { ContentItem } = this.context.dataSources;
     // Get all the parents
-    const seriesParents = await (
-      await ContentItem.getCursorByChildContentItemId(id)
-    ).get();
+    let seriesParents = [];
+    try {
+      // The Rock Way
+      seriesParents = await (
+        await ContentItem.getCursorByChildContentItemId(id)
+      ).get();
+    } catch (e) {
+      console.log(e);
+      // The postgres way
+      const model = await ContentItem.getFromId(id);
+      const parent = await model.getParent();
+      if (parent) seriesParents = [parent];
+    }
     return Promise.all(
       seriesParents.map(async (seriesParent) => {
         // Check to see if we have started the series before
-        const parentType = ContentItem.resolveType(seriesParent);
-        const nodeId = createGlobalId(seriesParent.id, parentType);
+        const parentType =
+          seriesParent.apollosType || ContentItem.resolveType(seriesParent);
+        const nodeId =
+          seriesParent.apollosId || createGlobalId(seriesParent.id, parentType);
         const otherInteractions = await this.getInteractionsForCurrentUserAndNodes(
           {
             nodeIds: [nodeId],

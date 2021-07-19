@@ -1,11 +1,14 @@
 /* eslint-disable import/prefer-default-export */
 import ApollosConfig from '@apollosproject/config';
 
-const { ROCK_MAPPINGS = { CONTENT_ITEM: {} } } = ApollosConfig;
+const {
+  ROCK_MAPPINGS = { CONTENT_ITEM: {} },
+  CONTENT = { TYPES: [] },
+} = ApollosConfig;
 
 const extendForEachContentItemType = (schema) =>
   [
-    ...Object.keys(ROCK_MAPPINGS.CONTENT_ITEM)
+    ...[...Object.keys(ROCK_MAPPINGS.CONTENT_ITEM), ...CONTENT?.TYPES]
       .filter((type) => type !== 'ContentItem')
       .map(
         (type) => `extend type ${type} {

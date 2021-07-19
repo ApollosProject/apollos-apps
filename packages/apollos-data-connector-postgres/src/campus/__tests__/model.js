@@ -10,7 +10,7 @@ describe('Campus model', () => {
     await sync();
   });
   afterEach(async () => {
-    await sequelize.dropAllSchemas();
+    await sequelize.drop({ cascade: true });
   });
 
   it('constructs without issues', async () => {

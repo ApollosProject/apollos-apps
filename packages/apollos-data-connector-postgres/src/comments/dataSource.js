@@ -1,15 +1,27 @@
 import { Op } from 'sequelize';
 import { parseGlobalId, generateAppLink } from '@apollosproject/server-core';
-import { PostgresDataSource } from '../postgres';
+import { PostgresDataSource, isUuid } from '../postgres';
 import { Visibility } from './model';
 
 class CommentDataSource extends PostgresDataSource {
   modelName = 'comments';
 
-  async addComment({ text, parentId, visibility = Visibility.PUBLIC }) {
+  async addComment({
+    text,
+    parentId,
+    visibility = Visibility.PUBLIC,
+    sendNotificationsSync = false,
+  }) {
     const currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
 
-    const { id, __type } = parseGlobalId(parentId);
+    // eslint-disable-next-line prefer-const
+    let { id, __type } = parseGlobalId(parentId);
+
+    if (isUuid(id)) {
+      // we have a postgres id.
+      const item = await this.context.dataSources.ContentItem.getFromId(id);
+      id = item.originId;
+    }
 
     const [comment, created] = await this.model.findOrCreate({
       where: {
@@ -31,7 +43,15 @@ class CommentDataSource extends PostgresDataSource {
     }
 
     if (visibility === Visibility.PUBLIC) {
-      this.sendNotificationForComment({ comment, parentId });
+      const sendingNotifications = this.sendNotificationForComment({
+        comment,
+        parentId,
+      });
+      if (sendNotificationsSync) {
+        // mostly used in the test environment.
+        // waits to send notfications before returning comment
+        await sendingNotifications;
+      }
     }
 
     return comment;
@@ -103,11 +123,11 @@ class CommentDataSource extends PostgresDataSource {
     return count > 0;
   }
 
-  async getForNode({ nodeId, nodeType, flagLimit = 0 }) {
+  async getForNode({ nodeId, nodeType, parentId, parentType, flagLimit = 0 }) {
     let currentPersonId;
     try {
       currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
-    } catch {
+    } catch (e) {
       // no user signed in, that's fine. We'll just return an empty array.
       return [];
     }
@@ -115,8 +135,6 @@ class CommentDataSource extends PostgresDataSource {
     // select comments.*, follows.id as follow_id from comments left join follows on follows."followedPersonId" = comments."personId" and follows."requestPersonId" = '05c032d6-94a9-4e43-89c6-aa777f68d682' and follows.state = 'ACCEPTED' order by follow_id nulls last;
 
     const where = {
-      externalParentId: String(nodeId),
-      externalParentType: nodeType,
       [Op.or]: [
         { visibility: Visibility.PUBLIC }, // Show public journals
         {
@@ -124,6 +142,20 @@ class CommentDataSource extends PostgresDataSource {
         },
       ],
     };
+
+    if (nodeId && nodeType) {
+      where.externalParentId = String(nodeId);
+      where.externalParentType = nodeType;
+    } else if (parentId && parentType) {
+      // todo - we should start storing this data on the comment model itself.
+      if (parentType === 'ContentItem') {
+        const contentItem = await this.context.dataSources.ContentItem.getFromId(
+          parentId
+        );
+        where.externalParentId = contentItem.originId;
+        where.externalParentType = contentItem.apollosType;
+      }
+    }
 
     if (flagLimit > 0) {
       where.flagCount = { [Op.lt]: flagLimit };

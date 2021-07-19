@@ -313,15 +313,10 @@ export default class Feature extends RockApolloDataSource {
     };
   }
 
+  // eslint-disable-next-line class-methods-use-this
   createCommentListFeature({ nodeId, nodeType, flagLimit }) {
     return {
       id: JSON.stringify({ nodeId, nodeType, flagLimit }),
-      comments: () =>
-        this.context.dataSources.Comment.getForNode({
-          nodeId,
-          nodeType,
-          flagLimit,
-        }),
       __typename: 'CommentListFeature',
     };
   }

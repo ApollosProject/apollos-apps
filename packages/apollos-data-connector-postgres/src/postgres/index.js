@@ -99,6 +99,8 @@ export const assertUuid = (uuid, caller = '') => {
   }
 };
 
+export const isUuid = (uuid) => UUID_V4_REGEXP.test(uuid);
+
 // Define model is used to define the base attributes of a model
 // as well as any pre/post hooks.
 const defineModel = ({
