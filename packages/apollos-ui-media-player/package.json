@@ -10,7 +10,7 @@
   "engines": {
     "node": ">=12"
   },
-  "version": "2.27.1",
+  "version": "2.27.2",
   "files": [
     "src",
     "lib",
