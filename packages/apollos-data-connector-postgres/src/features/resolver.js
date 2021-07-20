@@ -27,6 +27,19 @@ const resolver = {
     body: ({ data }) => data.text,
     id: ({ apollosId }) => apollosId,
   },
+  ButtonFeature: {
+    id: ({ apollosId }) => apollosId,
+    action: ({ data }, args, { dataSources: { Feature } }) =>
+      Feature.attachActionIds({
+        relatedNode: {
+          __typename: 'Url',
+          url: data.url,
+          ...data.relatedNode,
+        },
+        action: data.action,
+        title: data.text,
+      }),
+  },
   CardListItem: {
     coverImage: ({ image }) => image,
     title: ({ title }, { hyphenated }, { dataSources: { ContentItem } }) =>
@@ -86,9 +99,6 @@ const resolver = {
   },
   VerticalPrayerListFeature: {
     id: id('VerticalPrayerListFeature'),
-  },
-  ButtonFeature: {
-    id: id('ButtonFeature'),
   },
   CommentListFeature: {
     id: id('CommentListFeature'),
