@@ -28,7 +28,7 @@ const resolver = {
     id: ({ apollosId }) => apollosId,
   },
   ButtonFeature: {
-    id: ({ apollosId }) => apollosId,
+    id: id('ScriptureFeature'),
     action: ({ data }, args, { dataSources: { Feature } }) =>
       Feature.attachActionIds({
         relatedNode: {
@@ -59,14 +59,11 @@ const resolver = {
     id: id('ActionBarAction'),
   },
   ScriptureFeature: {
-    scriptures: (
-      { reference, version },
-      args,
-      { dataSources: { Scripture } }
-    ) => Scripture.getScriptures(reference, version),
-    sharing: ({ reference }, args, { dataSources: { Feature } }) => ({
+    scriptures: ({ data }, args, { dataSources: { Scripture } }) =>
+      Scripture.getScriptures(data.reference, data.version),
+    sharing: ({ data }, args, { dataSources: { Feature } }) => ({
       title: 'Share scripture via...',
-      message: Feature.getScriptureShareMessage(reference),
+      message: Feature.getScriptureShareMessage(data.reference),
     }),
     id: id('ScriptureFeature'),
   },
