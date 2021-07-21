@@ -46,6 +46,7 @@ jobs:
 
     - name: Jest
       run: ./scripts/test-all.sh
+      env:
         PGUSER: postgres
         PGPASSWORD: pg_password      
 
