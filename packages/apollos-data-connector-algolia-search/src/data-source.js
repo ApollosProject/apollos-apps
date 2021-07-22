@@ -22,6 +22,7 @@ if (ApollosConfig.ALGOLIA.APPLICATION_ID && ApollosConfig.ALGOLIA.API_KEY) {
   INDEX.setSettings(
     ApollosConfig.ALGOLIA.CONFIGURATION || {
       searchableAttributes: ['title', 'unordered(summary)'],
+      customRanking: ['desc(publishDate)'],
     }
   );
 } else {
@@ -71,6 +72,7 @@ query getItem {
       id
       title
       summary
+      publishDate
       objectID: id
       __typename
       coverImage { sources { uri } }

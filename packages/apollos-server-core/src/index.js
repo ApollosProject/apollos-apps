@@ -196,9 +196,11 @@ export const createContextGetter = (serverConfig) => (data) => {
 
 export const createMiddleware = (data) => ({ app, context, dataSources }) => {
   const middlewares = compact(
-    mapValues(
-      { ...builtInData, ...data },
-      safeGetWithWarning('serverMiddleware')
+    Object.values(
+      mapValues(
+        { ...builtInData, ...data },
+        safeGetWithWarning('serverMiddleware')
+      )
     )
   );
 
@@ -209,7 +211,9 @@ export const createMiddleware = (data) => ({ app, context, dataSources }) => {
 
 export const createJobs = (data) => ({ app, context, dataSources }) => {
   const jobs = compact(
-    mapValues({ ...builtInData, ...data }, safeGetWithWarning('jobs'))
+    Object.values(
+      mapValues({ ...builtInData, ...data }, safeGetWithWarning('jobs'))
+    )
   );
 
   const getContext = createContextGetter({ context, dataSources });
