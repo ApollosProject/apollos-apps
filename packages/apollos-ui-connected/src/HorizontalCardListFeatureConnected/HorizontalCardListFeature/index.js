@@ -52,7 +52,7 @@ class HorizontalCardListFeature extends PureComponent {
     loadingStateObject: {
       id: 'fakeId0',
       isLoading: true,
-      title: 'Boom',
+      title: '',
       hasAction: true,
       actionIcon: 'umbrella',
       channelType: '',

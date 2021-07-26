@@ -79,7 +79,7 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
         "hasAction": true,
         "id": "fakeId0",
         "isLoading": true,
-        "title": "Boom",
+        "title": "",
       }
     }
     maxToRenderPerBatch={10}
@@ -812,7 +812,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
           "hasAction": true,
           "id": "fakeId0",
           "isLoading": true,
-          "title": "Boom",
+          "title": "",
         },
         Object {
           "__typename": "MediaContentItem",
@@ -822,7 +822,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
           "hasAction": true,
           "id": "fakeId1",
           "isLoading": true,
-          "title": "Boom",
+          "title": "",
         },
         Object {
           "__typename": "MediaContentItem",
@@ -832,7 +832,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
           "hasAction": true,
           "id": "fakeId2",
           "isLoading": true,
-          "title": "Boom",
+          "title": "",
         },
         Object {
           "__typename": "MediaContentItem",
@@ -842,7 +842,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
           "hasAction": true,
           "id": "fakeId3",
           "isLoading": true,
-          "title": "Boom",
+          "title": "",
         },
         Object {
           "__typename": "MediaContentItem",
@@ -852,7 +852,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
           "hasAction": true,
           "id": "fakeId4",
           "isLoading": true,
-          "title": "Boom",
+          "title": "",
         },
       ]
     }
@@ -874,7 +874,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
         "hasAction": true,
         "id": "fakeId0",
         "isLoading": true,
-        "title": "Boom",
+        "title": "",
       }
     }
     maxToRenderPerBatch={10}
@@ -1048,27 +1048,18 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                     }
                   }
                 >
-                  <Text
-                    numberOfLines={2}
+                  <View
                     style={
                       Object {
-                        "color": "#27272E",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 16,
-                        "lineHeight": 24,
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 4,
+                        "width": "80%",
                       }
                     }
-                  >
-                    <Text
-                      style={
-                        Object {
-                          "color": "#27272E",
-                        }
-                      }
-                    >
-                      Boom
-                    </Text>
-                  </Text>
+                  />
                   <View
                     style={
                       Object {
@@ -1234,27 +1225,18 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                     }
                   }
                 >
-                  <Text
-                    numberOfLines={2}
+                  <View
                     style={
                       Object {
-                        "color": "#27272E",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 16,
-                        "lineHeight": 24,
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 4,
+                        "width": "80%",
                       }
                     }
-                  >
-                    <Text
-                      style={
-                        Object {
-                          "color": "#27272E",
-                        }
-                      }
-                    >
-                      Boom
-                    </Text>
-                  </Text>
+                  />
                   <View
                     style={
                       Object {
@@ -1420,27 +1402,18 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                     }
                   }
                 >
-                  <Text
-                    numberOfLines={2}
+                  <View
                     style={
                       Object {
-                        "color": "#27272E",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 16,
-                        "lineHeight": 24,
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 4,
+                        "width": "80%",
                       }
                     }
-                  >
-                    <Text
-                      style={
-                        Object {
-                          "color": "#27272E",
-                        }
-                      }
-                    >
-                      Boom
-                    </Text>
-                  </Text>
+                  />
                   <View
                     style={
                       Object {
@@ -1606,27 +1579,18 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                     }
                   }
                 >
-                  <Text
-                    numberOfLines={2}
+                  <View
                     style={
                       Object {
-                        "color": "#27272E",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 16,
-                        "lineHeight": 24,
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 4,
+                        "width": "80%",
                       }
                     }
-                  >
-                    <Text
-                      style={
-                        Object {
-                          "color": "#27272E",
-                        }
-                      }
-                    >
-                      Boom
-                    </Text>
-                  </Text>
+                  />
                   <View
                     style={
                       Object {
@@ -1792,27 +1756,18 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                     }
                   }
                 >
-                  <Text
-                    numberOfLines={2}
+                  <View
                     style={
                       Object {
-                        "color": "#27272E",
-                        "fontFamily": "InterUI-Bold",
-                        "fontSize": 16,
-                        "lineHeight": 24,
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 16,
+                        "marginVertical": 4,
+                        "width": "80%",
                       }
                     }
-                  >
-                    <Text
-                      style={
-                        Object {
-                          "color": "#27272E",
-                        }
-                      }
-                    >
-                      Boom
-                    </Text>
-                  </Text>
+                  />
                   <View
                     style={
                       Object {
@@ -1943,7 +1898,7 @@ exports[`The HorizontalCardListFeature component should render a section title 1
         "hasAction": true,
         "id": "fakeId0",
         "isLoading": true,
-        "title": "Boom",
+        "title": "",
       }
     }
     maxToRenderPerBatch={10}
@@ -2709,7 +2664,7 @@ exports[`The HorizontalCardListFeature component should render with a section su
         "hasAction": true,
         "id": "fakeId0",
         "isLoading": true,
-        "title": "Boom",
+        "title": "",
       }
     }
     maxToRenderPerBatch={10}

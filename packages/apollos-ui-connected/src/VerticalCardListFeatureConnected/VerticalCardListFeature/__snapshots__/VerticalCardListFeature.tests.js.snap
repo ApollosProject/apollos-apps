@@ -48,7 +48,7 @@ exports[`The VerticalCardListFeature component should render 1`] = `
           "__typename": "",
           "id": "",
         },
-        "summary": "boom",
+        "summary": "",
         "title": "",
       }
     }
@@ -298,7 +298,7 @@ exports[`The VerticalCardListFeature component should render a loading state for
             "__typename": "",
             "id": "",
           },
-          "summary": "boom",
+          "summary": "",
           "title": "",
         },
         Object {
@@ -318,7 +318,7 @@ exports[`The VerticalCardListFeature component should render a loading state for
             "__typename": "",
             "id": "",
           },
-          "summary": "boom",
+          "summary": "",
           "title": "",
         },
         Object {
@@ -338,7 +338,7 @@ exports[`The VerticalCardListFeature component should render a loading state for
             "__typename": "",
             "id": "",
           },
-          "summary": "boom",
+          "summary": "",
           "title": "",
         },
         Object {
@@ -358,7 +358,7 @@ exports[`The VerticalCardListFeature component should render a loading state for
             "__typename": "",
             "id": "",
           },
-          "summary": "boom",
+          "summary": "",
           "title": "",
         },
         Object {
@@ -378,7 +378,7 @@ exports[`The VerticalCardListFeature component should render a loading state for
             "__typename": "",
             "id": "",
           },
-          "summary": "boom",
+          "summary": "",
           "title": "",
         },
         Object {
@@ -398,7 +398,7 @@ exports[`The VerticalCardListFeature component should render a loading state for
             "__typename": "",
             "id": "",
           },
-          "summary": "boom",
+          "summary": "",
           "title": "",
         },
         Object {
@@ -418,7 +418,7 @@ exports[`The VerticalCardListFeature component should render a loading state for
             "__typename": "",
             "id": "",
           },
-          "summary": "boom",
+          "summary": "",
           "title": "",
         },
         Object {
@@ -438,7 +438,7 @@ exports[`The VerticalCardListFeature component should render a loading state for
             "__typename": "",
             "id": "",
           },
-          "summary": "boom",
+          "summary": "",
           "title": "",
         },
         Object {
@@ -458,7 +458,7 @@ exports[`The VerticalCardListFeature component should render a loading state for
             "__typename": "",
             "id": "",
           },
-          "summary": "boom",
+          "summary": "",
           "title": "",
         },
         Object {
@@ -478,7 +478,7 @@ exports[`The VerticalCardListFeature component should render a loading state for
             "__typename": "",
             "id": "",
           },
-          "summary": "boom",
+          "summary": "",
           "title": "",
         },
       ]
@@ -506,7 +506,7 @@ exports[`The VerticalCardListFeature component should render a loading state for
           "__typename": "",
           "id": "",
         },
-        "summary": "boom",
+        "summary": "",
         "title": "",
       }
     }
@@ -682,29 +682,18 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   }
                 />
-                <Text
-                  bold={false}
-                  italic={false}
-                  numberOfLines={3}
+                <View
                   style={
                     Object {
-                      "color": "#27272E",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 16,
+                      "marginVertical": 5,
+                      "width": "100%",
                     }
                   }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgba(39, 39, 46, 0.6)",
-                      }
-                    }
-                  >
-                    boom
-                  </Text>
-                </Text>
+                />
                 <View
                   style={
                     Object {
@@ -873,29 +862,18 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   }
                 />
-                <Text
-                  bold={false}
-                  italic={false}
-                  numberOfLines={3}
+                <View
                   style={
                     Object {
-                      "color": "#27272E",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 16,
+                      "marginVertical": 5,
+                      "width": "100%",
                     }
                   }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgba(39, 39, 46, 0.6)",
-                      }
-                    }
-                  >
-                    boom
-                  </Text>
-                </Text>
+                />
                 <View
                   style={
                     Object {
@@ -1064,29 +1042,18 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   }
                 />
-                <Text
-                  bold={false}
-                  italic={false}
-                  numberOfLines={3}
+                <View
                   style={
                     Object {
-                      "color": "#27272E",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 16,
+                      "marginVertical": 5,
+                      "width": "100%",
                     }
                   }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgba(39, 39, 46, 0.6)",
-                      }
-                    }
-                  >
-                    boom
-                  </Text>
-                </Text>
+                />
                 <View
                   style={
                     Object {
@@ -1255,29 +1222,18 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   }
                 />
-                <Text
-                  bold={false}
-                  italic={false}
-                  numberOfLines={3}
+                <View
                   style={
                     Object {
-                      "color": "#27272E",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 16,
+                      "marginVertical": 5,
+                      "width": "100%",
                     }
                   }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgba(39, 39, 46, 0.6)",
-                      }
-                    }
-                  >
-                    boom
-                  </Text>
-                </Text>
+                />
                 <View
                   style={
                     Object {
@@ -1446,29 +1402,18 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   }
                 />
-                <Text
-                  bold={false}
-                  italic={false}
-                  numberOfLines={3}
+                <View
                   style={
                     Object {
-                      "color": "#27272E",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 16,
+                      "marginVertical": 5,
+                      "width": "100%",
                     }
                   }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgba(39, 39, 46, 0.6)",
-                      }
-                    }
-                  >
-                    boom
-                  </Text>
-                </Text>
+                />
                 <View
                   style={
                     Object {
@@ -1637,29 +1582,18 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   }
                 />
-                <Text
-                  bold={false}
-                  italic={false}
-                  numberOfLines={3}
+                <View
                   style={
                     Object {
-                      "color": "#27272E",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 16,
+                      "marginVertical": 5,
+                      "width": "100%",
                     }
                   }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgba(39, 39, 46, 0.6)",
-                      }
-                    }
-                  >
-                    boom
-                  </Text>
-                </Text>
+                />
                 <View
                   style={
                     Object {
@@ -1828,29 +1762,18 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   }
                 />
-                <Text
-                  bold={false}
-                  italic={false}
-                  numberOfLines={3}
+                <View
                   style={
                     Object {
-                      "color": "#27272E",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 16,
+                      "marginVertical": 5,
+                      "width": "100%",
                     }
                   }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgba(39, 39, 46, 0.6)",
-                      }
-                    }
-                  >
-                    boom
-                  </Text>
-                </Text>
+                />
                 <View
                   style={
                     Object {
@@ -2019,29 +1942,18 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   }
                 />
-                <Text
-                  bold={false}
-                  italic={false}
-                  numberOfLines={3}
+                <View
                   style={
                     Object {
-                      "color": "#27272E",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 16,
+                      "marginVertical": 5,
+                      "width": "100%",
                     }
                   }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgba(39, 39, 46, 0.6)",
-                      }
-                    }
-                  >
-                    boom
-                  </Text>
-                </Text>
+                />
                 <View
                   style={
                     Object {
@@ -2210,29 +2122,18 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   }
                 />
-                <Text
-                  bold={false}
-                  italic={false}
-                  numberOfLines={3}
+                <View
                   style={
                     Object {
-                      "color": "#27272E",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 16,
+                      "marginVertical": 5,
+                      "width": "100%",
                     }
                   }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgba(39, 39, 46, 0.6)",
-                      }
-                    }
-                  >
-                    boom
-                  </Text>
-                </Text>
+                />
                 <View
                   style={
                     Object {
@@ -2401,29 +2302,18 @@ exports[`The VerticalCardListFeature component should render a loading state for
                     }
                   }
                 />
-                <Text
-                  bold={false}
-                  italic={false}
-                  numberOfLines={3}
+                <View
                   style={
                     Object {
-                      "color": "#27272E",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 16,
+                      "marginVertical": 5,
+                      "width": "100%",
                     }
                   }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "rgba(39, 39, 46, 0.6)",
-                      }
-                    }
-                  >
-                    boom
-                  </Text>
-                </Text>
+                />
                 <View
                   style={
                     Object {
@@ -2518,7 +2408,7 @@ exports[`The VerticalCardListFeature component should render a section title 1`]
           "__typename": "",
           "id": "",
         },
-        "summary": "boom",
+        "summary": "",
         "title": "",
       }
     }
@@ -2808,7 +2698,7 @@ exports[`The VerticalCardListFeature component should render with a subtitle 1`]
           "__typename": "",
           "id": "",
         },
-        "summary": "boom",
+        "summary": "",
         "title": "",
       }
     }

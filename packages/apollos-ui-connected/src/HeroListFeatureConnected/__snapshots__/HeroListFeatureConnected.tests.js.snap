@@ -600,32 +600,7 @@ exports[`The HeroListFeatureConnected component should render a loading state wh
           "justifyContent": "center",
         }
       }
-    >
-      <View
-        style={
-          Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 14,
-            "marginVertical": 3.5,
-            "width": "60%",
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 12,
-            "marginVertical": 3,
-            "width": "100%",
-          }
-        }
-      />
-    </View>
+    />
   </View>
   <View
     style={
@@ -664,32 +639,7 @@ exports[`The HeroListFeatureConnected component should render a loading state wh
           "justifyContent": "center",
         }
       }
-    >
-      <View
-        style={
-          Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 14,
-            "marginVertical": 3.5,
-            "width": "60%",
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 12,
-            "marginVertical": 3,
-            "width": "100%",
-          }
-        }
-      />
-    </View>
+    />
   </View>
   <View
     style={
@@ -728,32 +678,7 @@ exports[`The HeroListFeatureConnected component should render a loading state wh
           "justifyContent": "center",
         }
       }
-    >
-      <View
-        style={
-          Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 14,
-            "marginVertical": 3.5,
-            "width": "60%",
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 12,
-            "marginVertical": 3,
-            "width": "100%",
-          }
-        }
-      />
-    </View>
+    />
   </View>
   <View
     style={
@@ -792,32 +717,7 @@ exports[`The HeroListFeatureConnected component should render a loading state wh
           "justifyContent": "center",
         }
       }
-    >
-      <View
-        style={
-          Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 14,
-            "marginVertical": 3.5,
-            "width": "60%",
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "alignSelf": "stretch",
-            "backgroundColor": "#A5A5A5",
-            "borderRadius": 16,
-            "height": 12,
-            "marginVertical": 3,
-            "width": "100%",
-          }
-        }
-      />
-    </View>
+    />
   </View>
 </View>
 `;

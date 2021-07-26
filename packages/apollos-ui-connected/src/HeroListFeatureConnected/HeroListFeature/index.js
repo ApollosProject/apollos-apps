@@ -14,8 +14,8 @@ import { LiveConsumer } from '../../live';
 const loadingStateArray = [
   {
     id: 'fakeId1',
-    title: 'Boom',
-    subtitle: 'What',
+    title: '',
+    subtitle: '',
     parentChannel: {
       id: '',
       name: '',
@@ -30,8 +30,8 @@ const loadingStateArray = [
   },
   {
     id: 'fakeId2',
-    title: 'Boom',
-    subtitle: 'What',
+    title: '',
+    subtitle: '',
     parentChannel: {
       id: '',
       name: '',
@@ -46,8 +46,8 @@ const loadingStateArray = [
   },
   {
     id: 'fakeId3',
-    title: 'Boom',
-    subtitle: 'What',
+    title: '',
+    subtitle: '',
     parentChannel: {
       id: '',
       name: '',
@@ -62,8 +62,8 @@ const loadingStateArray = [
   },
   {
     id: 'fakeId4',
-    title: 'Boom',
-    subtitle: 'What',
+    title: '',
+    subtitle: '',
     parentChannel: {
       id: '',
       name: '',

@@ -27,7 +27,7 @@ const loadingStateData = {
   actionIcon: 'umbrella',
   isLoading: true,
   labelText: '',
-  summary: 'boom',
+  summary: '',
   coverImage: [
     {
       uri: '',
