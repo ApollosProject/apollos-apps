@@ -1,5 +1,5 @@
 import ApollosConfig from '@apollosproject/config';
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 
 export default gql`
   query getFeatureFeed($featureFeedId: ID!) {

@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-community/async-storage';
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 import ONBOARDING_VERSION from './Onboarding/version';
 
 export const WITH_USER_ID = gql`

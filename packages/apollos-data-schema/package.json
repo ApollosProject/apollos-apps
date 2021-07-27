@@ -28,7 +28,7 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "graphql-tag": "^2.10.0"
+    "@apollo/client": "3.3.20"
   },
   "devDependencies": {
     "@apollosproject/babel-preset-apollos": "^2.27.2",

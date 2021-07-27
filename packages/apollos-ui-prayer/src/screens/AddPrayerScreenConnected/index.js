@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react';
-import gql from 'graphql-tag';
-import { useQuery, useMutation } from '@apollo/client';
+import { gql, useQuery, useMutation } from '@apollo/client';
 import PropTypes from 'prop-types';
 
 import { named } from '@apollosproject/ui-kit';

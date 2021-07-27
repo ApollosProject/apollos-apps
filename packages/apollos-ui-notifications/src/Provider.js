@@ -5,7 +5,7 @@ import querystring from 'querystring';
 import React, { Component } from 'react';
 import { Linking } from 'react-native';
 import PropTypes from 'prop-types';
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 import { withApollo } from '@apollo/client/react/hoc';
 import { get } from 'lodash';
 import OneSignal from 'react-native-onesignal';

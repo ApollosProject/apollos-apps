@@ -1,6 +1,5 @@
-import gql from 'graphql-tag';
 import fetch from 'jest-fetch-mock';
-import { ApolloClient, createHttpLink } from '@apollo/client';
+import { ApolloClient, createHttpLink, gql } from '@apollo/client';
 import { InMemoryCache } from '@apollo/client/cache';
 import { getPushPermissions, getHasPrompted } from './permissionUtils';
 import { resolvers, defaults } from './store';

@@ -58,7 +58,7 @@ https://documentation.onesignal.com/docs/react-native-sdk-setup
 Next, you should mimic the config we wrote which sends PlayerID's to our API once they are received OneSignal gets them from the client.
 
 ```
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 import { Component } from 'react';
 import OneSignal from 'react-native-onesignal';
 import { client } from '../client';

@@ -1,7 +1,7 @@
 /* eslint-disable no-empty */
 
 import OneSignal from 'react-native-onesignal';
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 import {
   checkNotifications,
   openSettings,

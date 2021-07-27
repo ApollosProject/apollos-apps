@@ -1,5 +1,5 @@
 import { ReactNativeFile } from 'apollo-upload-client';
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 import { launchImageLibrary } from 'react-native-image-picker';
 
 import GET_USER_PHOTO from '../../UserAvatarConnected/getUserPhoto';

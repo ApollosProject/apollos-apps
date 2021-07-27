@@ -1,5 +1,5 @@
 import { fetch } from 'apollo-server-env';
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 import { graphql } from 'graphql';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
 import ApollosConfig from '@apollosproject/config';

@@ -1,5 +1,5 @@
 import { createGlobalId } from '@apollosproject/server-core';
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 
 const schema = gql`
   type Message implements Node {

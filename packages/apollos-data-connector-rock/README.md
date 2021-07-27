@@ -22,7 +22,6 @@ None, right now. This module is 100% standalone. However, modules within the `da
 - `People` and `Family` modules rely on the `Auth` module.
 - `Followings` and `Interactions` relies on `RockConstants`.
 
-
 ## Usage
 
 In your `src/data/index`,
@@ -78,7 +77,7 @@ Adding new fields to the schema is a three part process. The process differs dep
 Inside the `src/data/` directory of the API, create a new folder named after your new model. For this example, will pretend we are adding a new query to find ContentItems that have groups attached, so we will create a folder named `group-content-item` and a file called `index.js` within that folder. For now, that file will look something like this.
 
 ```
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 import { ContentItem } from '@apollosproject/data-connector-rock';
 
 const ContentItemDataSource = ContentItem.dataSource;
@@ -117,6 +116,7 @@ const resolver = {
 #### 4. Define your data source.
 
 Finally, you'll want to extend the existing ContentItem dataSource, and add your new method to it. The body below is just pseudo-code, and is not guaranteed to work.
+
 ```
 class GroupContentItem extends ContentItemDataSource {
   // because I am extending the ContentItem's data source, I have access to all the methods defined on that class.
@@ -151,13 +151,12 @@ Now your schema will have access to your new `contentItemsWithGroups` query. Con
 
 Sometimes you may want to change the behavior of existing fields. For this example, we will override the firstName field of person so it always displays as all capital letters.
 
-
 #### 1. Create a new module.
+
 As before, this first thing you should do is create a new module, create a file/folder called `apollos-person/index.js`
 
-
 ```
-import gql from graphql-tag;
+import { gql } from '@apollo/client';
 import { People } from '@apollosproject/data-connector-rock';
 
 const resolver = {};
@@ -168,7 +167,7 @@ const resolver = {};
 We have a helper to enable safely overriding. You can import if from `@apollos/server-core`.
 
 ```
-import gql from graphql-tag;
+import { gql } from '@apollo/client';
 import { People } from '@apollosproject/data-connector-rock';
 import { resolverMerge } from '@apollosproject/server-core';
 

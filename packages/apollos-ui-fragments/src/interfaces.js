@@ -1,4 +1,4 @@
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 
 const VIDEO_NODE_FRAGMENT = gql`
   fragment VideoNodeFragment on VideoNode {

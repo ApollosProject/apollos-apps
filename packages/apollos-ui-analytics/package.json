@@ -50,7 +50,6 @@
     "react-native": "*"
   },
   "dependencies": {
-    "graphql-tag": "2.9.2",
     "react-native-device-info": "^4.0.1"
   },
   "devDependencies": {

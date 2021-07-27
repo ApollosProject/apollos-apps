@@ -1,4 +1,4 @@
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 
 // When querying for isLoggedIn before the app is finished mounting
 // isLoggedIn will flip from false to true, before the cache is loaded.

@@ -1,5 +1,5 @@
 import { compact, mapValues, merge, flatten } from 'lodash';
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 import { InMemoryLRUCache } from 'apollo-server-caching';
 import { makeExecutableSchema } from 'apollo-server';
 import { createQueues, UI } from 'bull-board';

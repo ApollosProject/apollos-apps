@@ -1,4 +1,4 @@
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 
 const CAMPUS_PARTS_FRAGMENT = gql`
   fragment CampusParts on Campus {

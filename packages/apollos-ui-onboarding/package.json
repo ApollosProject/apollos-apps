@@ -61,7 +61,6 @@
   "dependencies": {
     "@react-native-community/async-storage": "^1.5.1",
     "formik": "1.5.1",
-    "graphql-tag": "2.9.2",
     "lodash": "4.17.21",
     "moment": "2.22.2",
     "react-is": "^16.9.0",

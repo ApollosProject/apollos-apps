@@ -1,4 +1,4 @@
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 
 const PASS_FRAGMENT = gql`
   fragment PassFragment on Pass {

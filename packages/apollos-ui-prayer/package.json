@@ -58,7 +58,6 @@
   },
   "dependencies": {
     "formik": "1.5.1",
-    "graphql-tag": "2.9.2",
     "lodash": "4.17.21",
     "react-is": "^16.9.0",
     "react-native-swiper": "^1.6.0",

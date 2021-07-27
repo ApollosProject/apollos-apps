@@ -1,4 +1,4 @@
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 
 const SEARCH_RESULT_FRAGMENT = gql`
   fragment SearchResultFragment on SearchResult {

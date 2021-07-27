@@ -41,7 +41,7 @@
     ]
   },
   "dependencies": {
-    "graphql-tag": "2.9.2"
+    "@apollo/client": "3.3.20"
   },
   "devDependencies": {
     "jest": "^25.1.0",

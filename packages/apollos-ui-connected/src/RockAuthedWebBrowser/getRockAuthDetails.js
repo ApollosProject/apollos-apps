@@ -1,4 +1,4 @@
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 
 export const GET_ROCK_AUTH_DETAILS = gql`
   query RockAuthDetails {

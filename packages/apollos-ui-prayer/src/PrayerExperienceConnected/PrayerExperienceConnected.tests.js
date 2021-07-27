@@ -19,7 +19,8 @@ jest.mock('react-native-device-info', () => ({
 }));
 
 jest.mock('@apollosproject/config', () => {
-  const gql = jest.requireActual('graphql-tag');
+  const { gql } = jest.requireActual('@apollo/client');
+
   return {
     FRAGMENTS: {
       PRAYER_LIST_FEATURE_FRAGMENT: gql`

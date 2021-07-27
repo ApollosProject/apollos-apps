@@ -1,4 +1,4 @@
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 import { GET_LOGIN_STATE } from '@apollosproject/ui-auth';
 import updatePushId from './updatePushId';
 

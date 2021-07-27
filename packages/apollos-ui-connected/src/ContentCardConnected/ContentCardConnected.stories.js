@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@apollosproject/ui-storybook';
 
 import { BackgroundView, CenteredView } from '@apollosproject/ui-kit';
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 import { ApolloStorybookDecorator } from '@apollosproject/ui-test-utils';
 
 import ContentCardConnected from './ContentCardConnected';

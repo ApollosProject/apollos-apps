@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AsyncStorage from '@react-native-community/async-storage';
-import { ApolloConsumer } from '@apollo/client';
-import gql from 'graphql-tag';
+import { gql, ApolloConsumer } from '@apollo/client';
 import { track } from '@apollosproject/ui-analytics';
 import { LoginProvider } from './LoginProvider';
 import { GET_LOGIN_STATE } from './queries';

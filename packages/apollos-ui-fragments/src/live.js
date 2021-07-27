@@ -1,4 +1,4 @@
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 
 const LIVE_STREAM_FRAGMENT = gql`
   fragment LiveStreamFragment on LiveStream {

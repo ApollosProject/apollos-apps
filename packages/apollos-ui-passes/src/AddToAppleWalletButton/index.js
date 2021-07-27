@@ -3,7 +3,7 @@ import { View, Image, ActivityIndicator } from 'react-native';
 import { Button, styled, H5 } from '@apollosproject/ui-kit';
 import PropTypes from 'prop-types';
 import PassKit from 'react-native-passkit-wallet';
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 import RNFetchBlob from 'rn-fetch-blob';
 
 import { withApollo } from '@apollo/client/react/hoc';
