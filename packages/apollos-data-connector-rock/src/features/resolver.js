@@ -89,4 +89,10 @@ export default {
   ButtonFeature: {
     id: ({ id }) => createGlobalId(id, 'ButtonFeature'),
   },
+  AddCommentFeature: {
+    id: ({ id }) => createGlobalId(id, 'AddCommentFeature'),
+  },
+  CommentListFeature: {
+    id: ({ id }) => createGlobalId(id, 'CommentListFeature'),
+  },
 };

@@ -12,6 +12,8 @@ import {
   peopleSchema,
   campusSchema,
   interactionsSchema,
+  commentSchema,
+  followingsSchema,
 } from '@apollosproject/data-schema';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
 
@@ -38,6 +40,8 @@ describe('FeatureFeed', () => {
       peopleSchema,
       campusSchema,
       interactionsSchema,
+      commentSchema,
+      followingsSchema,
     ]);
     context = getContext();
     rootValue = {};
