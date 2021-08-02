@@ -8,6 +8,10 @@ const createModel = defineModel({
   attributes: {
     title: DataTypes.TEXT,
   },
+  sequelizeOptions: {
+    tableName: 'content_item_category',
+    underscored: true,
+  },
 });
 
 const setupModel = configureModel(({ sequelize }) => {

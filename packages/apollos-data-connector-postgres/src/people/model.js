@@ -24,6 +24,8 @@ const createModel = defineModel({
     },
   },
   sequelizeOptions: {
+    tableName: 'people',
+    underscored: true,
     hooks: {
       beforeValidate: (person) => {
         if (person.gender) {

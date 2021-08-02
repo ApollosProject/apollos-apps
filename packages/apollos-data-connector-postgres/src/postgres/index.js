@@ -65,7 +65,7 @@ const defineModel = ({
 }) => () => {
   if (attributes.originId || attributes.originType) {
     console.error(
-      `originId and originType are reserved attribute names. Use 'external = true' or pick other attributes.`
+      `origin_id and origin_type are reserved attribute names. Use 'external = true' or pick other attributes.`
     );
   }
   const model = sequelize.define(
@@ -94,6 +94,7 @@ const defineModel = ({
         : {}),
     },
     {
+      underscored: true,
       ...sequelizeOptions,
       hooks: {
         ...(sequelizeOptions?.hooks || {}),
@@ -113,9 +114,9 @@ const defineModel = ({
         },
       },
       indexes: [
-        { unique: true, fields: ['apollosId'] },
+        { unique: true, fields: ['apollos_id'] },
         ...(external
-          ? [{ unique: true, fields: ['originId', 'originType'] }]
+          ? [{ unique: true, fields: ['origin_id', 'origin_type'] }]
           : []),
         ...(sequelizeOptions?.indexes || []),
       ],

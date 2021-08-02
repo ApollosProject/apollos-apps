@@ -14,13 +14,13 @@ let queueOpts;
 if (REDIS_URL) {
   client = new Redis(REDIS_URL, {
     tls: {
-        rejectUnauthorized: false
-    }
+      rejectUnauthorized: false,
+    },
   });
   subscriber = new Redis(REDIS_URL, {
     tls: {
-        rejectUnauthorized: false
-    }
+      rejectUnauthorized: false,
+    },
   });
 
   // Used to ensure that N+3 redis connections are not created per queue.

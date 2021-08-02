@@ -10,13 +10,15 @@ const createModel = defineModel({
     notificationProviderType: DataTypes.TEXT,
   },
   sequelizeOptions: {
+    tableName: 'notification_preference',
+    underscored: true,
     indexes: [
       {
         unique: true,
         fields: [
-          'personId',
-          'notificationProviderType',
-          'notificationProviderId',
+          'person_id',
+          'notification_provider_type',
+          'notification_provider_id',
         ],
       },
     ],

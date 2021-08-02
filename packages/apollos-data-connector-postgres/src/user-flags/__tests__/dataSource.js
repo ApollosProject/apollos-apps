@@ -1,21 +1,14 @@
 import { createGlobalId } from '@apollosproject/server-core';
-import { sequelize, sync } from '../../postgres/index';
-import { createModel, setupModel } from '../model';
-import {
-  createModel as createCommentModel,
-  setupModel as setupCommentModel,
-} from '../../comments/model';
-import { createModel as createPeopleModel } from '../../people/model';
-import {
-  createModel as createFollowModel,
-  setupModel as setupFollowModel,
-} from '../../follows/model';
-import {
-  createModel as createLikesModel,
-  setupModel as setupLikesModel,
-} from '../../user-likes/model';
+import { sequelize } from '../../postgres/index';
 import CommentDataSource from '../../comments/dataSource';
 import UserFlagDataSource from '../dataSource';
+import * as People from '../../people';
+import * as Comments from '../../comments';
+import * as Campus from '../../campus';
+import * as Follows from '../../follows';
+import * as UserLikes from '../../user-likes';
+import * as UserFlags from '../index';
+import { setupPostgresTestEnv } from '../../utils/testUtils';
 
 let person1;
 let person2;
@@ -33,16 +26,14 @@ describe('Apollos Postgres Comment Flags DataSource', () => {
   let commentDataSource;
 
   beforeEach(async () => {
-    await createCommentModel();
-    await createPeopleModel();
-    await createFollowModel();
-    await createLikesModel();
-    await createModel();
-    await setupModel();
-    await setupFollowModel();
-    await setupLikesModel();
-    await setupCommentModel();
-    await sync();
+    await setupPostgresTestEnv([
+      People,
+      Comments,
+      Campus,
+      Follows,
+      UserFlags,
+      UserLikes,
+    ]);
 
     person1 = await sequelize.models.people.create({
       originId: '1',
@@ -64,7 +55,7 @@ describe('Apollos Postgres Comment Flags DataSource', () => {
   });
 
   afterEach(async () => {
-    await sequelize.drop({});
+    await sequelize.drop({ cascade: true });
   });
 
   it('should support flagging comment', async () => {

@@ -1,10 +1,11 @@
-import { sequelize, sync } from '../../postgres/index';
-import { createModel } from '../model';
+import { sequelize } from '../../postgres/index';
+import * as People from '../index';
+import * as Campus from '../../campus';
+import { setupPostgresTestEnv } from '../../utils/testUtils';
 
 describe('People model', () => {
   beforeEach(async () => {
-    await createModel();
-    await sync();
+    await setupPostgresTestEnv([People, Campus]);
   });
   afterEach(async () => {
     await sequelize.drop({ cascade: true });

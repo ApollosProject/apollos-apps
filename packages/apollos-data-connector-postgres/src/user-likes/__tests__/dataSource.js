@@ -1,17 +1,13 @@
 import { createGlobalId } from '@apollosproject/server-core';
-import { sequelize, sync } from '../../postgres/index';
-import { createModel, setupModel } from '../model';
-import {
-  createModel as createCommentModel,
-  setupModel as setupCommentModel,
-} from '../../comments/model';
-import { createModel as createPeopleModel } from '../../people/model';
-import {
-  createModel as createFollowModel,
-  setupModel as setupFollowModel,
-} from '../../follows/model';
+import { sequelize } from '../../postgres/index';
 import CommentDataSource from '../../comments/dataSource';
 import UserLike from '../dataSource';
+import * as People from '../../people';
+import * as Comments from '../../comments';
+import * as Campus from '../../campus';
+import * as Follows from '../../follows';
+import * as UserLikes from '../index';
+import { setupPostgresTestEnv } from '../../utils/testUtils';
 
 let person1;
 let person2;
@@ -29,14 +25,7 @@ describe('Apollos Postgres User Likes DataSource', () => {
   let commentDataSource;
 
   beforeEach(async () => {
-    await createCommentModel();
-    await createPeopleModel();
-    await createFollowModel();
-    await createModel();
-    await setupModel();
-    await setupCommentModel();
-    await setupFollowModel();
-    await sync();
+    await setupPostgresTestEnv([People, Comments, Campus, Follows, UserLikes]);
 
     person1 = await sequelize.models.people.create({
       originId: '1',
@@ -58,7 +47,7 @@ describe('Apollos Postgres User Likes DataSource', () => {
   });
 
   afterEach(async () => {
-    await sequelize.drop({});
+    await sequelize.drop({ cascade: true });
   });
 
   it('should support liking comment', async () => {

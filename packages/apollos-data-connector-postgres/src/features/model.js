@@ -10,6 +10,10 @@ const createModel = defineModel({
     data: DataTypes.JSONB,
     type: DataTypes.TEXT,
   },
+  sequelizeOptions: {
+    tableName: 'feature',
+    underscored: true,
+  },
 });
 
 const setupModel = configureModel(({ sequelize }) => {

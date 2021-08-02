@@ -15,6 +15,10 @@ const createModel = defineModel({
     deliveryMethod: DataTypes.TEXT,
     externalNotificationId: DataTypes.TEXT,
   },
+  sequelizeOptions: {
+    tableName: 'notification',
+    underscored: true,
+  },
 });
 
 const setupModel = configureModel(({ sequelize }) => {

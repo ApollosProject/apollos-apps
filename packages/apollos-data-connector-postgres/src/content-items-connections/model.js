@@ -8,6 +8,10 @@ const createModel = defineModel({
   attributes: {
     order: DataTypes.INTEGER,
   },
+  sequelizeOptions: {
+    tableName: 'content_item_connection',
+    underscored: true,
+  },
 });
 
 const setupModel = configureModel(({ sequelize }) => {

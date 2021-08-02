@@ -1,13 +1,12 @@
-import { sequelize, sync } from '../../postgres/index';
-import { createModel, setupModel } from '../model';
-import * as ContentItem from '../../content-items/model';
+import { sequelize } from '../../postgres/index';
+import { setupPostgresTestEnv } from '../../utils/testUtils';
+import * as ContentItem from '../../content-items';
+import * as ContentItemCategory from '../index';
+import * as Media from '../../media';
 
 describe('ContentItemCategory model', () => {
   beforeEach(async () => {
-    await ContentItem.createModel();
-    await createModel();
-    await setupModel();
-    await sync();
+    await setupPostgresTestEnv([ContentItem, ContentItemCategory, Media]);
   });
   afterEach(async () => {
     await sequelize.drop({ cascade: true });
@@ -27,8 +26,6 @@ describe('ContentItemCategory model', () => {
     });
 
     await content.setContentItemCategory(category);
-
-    await content.reload();
 
     expect((await content.getContentItemCategory()).id).toEqual(category.id);
   });

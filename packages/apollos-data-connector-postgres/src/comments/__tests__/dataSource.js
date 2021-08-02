@@ -12,6 +12,7 @@ import {
   Campus,
   ContentItem,
   Media,
+  ContentItemCategory,
 } from '../../index';
 
 let person1;
@@ -39,6 +40,7 @@ describe('Apollos Postgres Comments DatSource', () => {
       UserFlag,
       UserLike,
       ContentItem,
+      ContentItemCategory,
       Media,
     ]);
     person1 = await sequelize.models.people.create({
@@ -56,7 +58,7 @@ describe('Apollos Postgres Comments DatSource', () => {
     currentPerson = person1;
   });
   afterEach(async () => {
-    await sequelize.drop({});
+    await sequelize.drop({ cascade: true });
   });
 
   describe('addComment', () => {

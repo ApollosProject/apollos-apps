@@ -54,7 +54,7 @@ describe('Apollos Postgres ContentItem DataSource', () => {
     ContentItem.initialize({ context });
   });
   afterEach(async () => {
-    await sequelize.drop({});
+    await sequelize.drop({ cascade: true });
     currentPerson = null;
   });
 
@@ -198,7 +198,6 @@ describe('Apollos Postgres ContentItem DataSource', () => {
 
     await personaItem.addTag(validTag);
     await contentItem1.addTag(invalidTag);
-
     await currentPerson.addTag(validTag);
 
     const personaItems = await ContentItem.getPersonaFeed();

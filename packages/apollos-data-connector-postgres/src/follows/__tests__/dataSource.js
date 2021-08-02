@@ -1,13 +1,12 @@
 import ApollosConfig from '@apollosproject/config';
-import { sequelize, sync } from '../../postgres/index';
-import { createModel, FollowState, setupModel } from '../model';
-import { createModel as createPeopleModel } from '../../people/model';
-import {
-  createModel as createCampusModel,
-  setupModel as setupCampusModel,
-} from '../../campus/model';
+import { sequelize } from '../../postgres/index';
 import FollowDataSource from '../dataSource';
 import PeopleDataSource from '../../people/dataSource';
+import * as People from '../../people';
+import * as Campus from '../../campus';
+import * as Follows from '../index';
+import { setupPostgresTestEnv } from '../../utils/testUtils';
+import { FollowState } from '../model';
 
 let currentPersonId;
 const notificationMock = jest.fn();
@@ -32,13 +31,7 @@ let person4;
 
 describe('Apollos Postgres FollowRequest DataSource', () => {
   beforeEach(async () => {
-    await createPeopleModel();
-    await createModel();
-    await setupModel();
-    await createCampusModel();
-    await setupCampusModel();
-    await sync({ force: true });
-
+    await setupPostgresTestEnv([People, Campus, Follows]);
     // Make sure people exist for all of our test ids
     const peopleDataSource = new PeopleDataSource();
     peopleDataSource.initialize({ context });

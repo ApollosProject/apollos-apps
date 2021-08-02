@@ -11,6 +11,10 @@ const createModel = defineModel({
     nodeId: DataTypes.UUID,
     nodeType: DataTypes.STRING,
   },
+  sequelizeOptions: {
+    tableName: 'media',
+    underscored: true,
+  },
 });
 
 const setupModel = configureModel(({ sequelize }) => {

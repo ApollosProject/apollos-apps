@@ -1,13 +1,18 @@
-import { sequelize, sync } from '../../postgres/index';
-import { createModel, setupModel } from '../model';
-import * as ContentItem from '../../content-items/model';
+import { sequelize } from '../../postgres/index';
+import { setupPostgresTestEnv } from '../../utils/testUtils';
+import * as ContentItem from '../../content-items';
+import * as ContentItemCategory from '../../content-item-categories';
+import * as ContentItemsConnection from '../index';
+import * as Media from '../../media';
 
 describe('ContentItemsConnection model', () => {
   beforeEach(async () => {
-    await ContentItem.createModel();
-    await createModel();
-    await setupModel();
-    await sync();
+    await setupPostgresTestEnv([
+      ContentItem,
+      ContentItemCategory,
+      ContentItemsConnection,
+      Media,
+    ]);
   });
   afterEach(async () => {
     await sequelize.drop({ cascade: true });
@@ -18,12 +23,14 @@ describe('ContentItemsConnection model', () => {
       title: 'Parent Item',
       originType: 'rock',
       originId: '1',
+      active: true,
     });
 
     const child = await sequelize.models.contentItem.create({
       title: 'Child Item',
       originType: 'rock',
       originId: '2',
+      active: true,
     });
 
     await child.addParent(parent, {
@@ -34,8 +41,7 @@ describe('ContentItemsConnection model', () => {
       },
     });
 
-    await parent.reload();
-    await child.reload();
+    // const newParent = sequelize.models.contentItem.
 
     expect((await parent.getChildren())[0].id).toEqual(child.id);
     expect((await child.getParents())[0].id).toEqual(parent.id);

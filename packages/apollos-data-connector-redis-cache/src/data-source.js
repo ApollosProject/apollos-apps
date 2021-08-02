@@ -19,8 +19,8 @@ export default class Cache extends DataSource {
       REDIS = new Redis(process.env.REDIS_URL, {
         keyPrefix: `apollos-cache-${process.env.NODE_ENV}`,
         tls: {
-          rejectUnauthorized: false
-         } 
+          rejectUnauthorized: false,
+        },
       });
     }
     this.redis = REDIS;

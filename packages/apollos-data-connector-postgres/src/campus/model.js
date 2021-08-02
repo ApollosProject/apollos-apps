@@ -17,6 +17,10 @@ const createModel = defineModel({
     imageUrl: DataTypes.TEXT,
     digital: DataTypes.BOOLEAN,
   },
+  sequelizeOptions: {
+    tableName: 'campus',
+    underscored: true,
+  },
 });
 
 const setupModel = configureModel(({ sequelize }) => {

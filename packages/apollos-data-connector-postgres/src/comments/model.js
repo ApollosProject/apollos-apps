@@ -25,6 +25,10 @@ const createModel = defineModel({
       defaultValue: 0,
     },
   },
+  sequelizeOptions: {
+    tableName: 'comment',
+    underscored: true,
+  },
 });
 
 const setupModel = configureModel(({ sequelize }) => {

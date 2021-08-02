@@ -12,6 +12,10 @@ const createModel = defineModel({
     publishAt: DataTypes.DATE,
     active: DataTypes.BOOLEAN,
   },
+  sequelizeOptions: {
+    tableName: 'content_item',
+    underscored: true,
+  },
 });
 
 const setupModel = configureModel(({ sequelize }) => {

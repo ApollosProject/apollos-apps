@@ -1,14 +1,9 @@
-import { sequelize, sync } from '../../postgres/index';
-import { createModel } from '../model';
-import {
-  createModel as createCampusModel,
-  setupModel as setupCampusModel,
-} from '../../campus/model';
-import {
-  createModel as createFollowsModel,
-  setupModel as setupFollowsModel,
-} from '../../follows/model';
+import { sequelize } from '../../postgres/index';
 import PeopleDataSource from '../dataSource';
+import * as People from '../index';
+import * as Campus from '../../campus';
+import * as Follows from '../../follows';
+import { setupPostgresTestEnv } from '../../utils/testUtils';
 
 let personId;
 
@@ -32,19 +27,14 @@ describe('Apollos Postgres People DataSource', () => {
     personId = 1;
     context.currentPostgresPerson = null;
 
-    await createModel();
-    await createCampusModel();
-    await createFollowsModel();
-    await setupCampusModel();
-    await setupFollowsModel();
-    await sync();
+    await setupPostgresTestEnv([People, Campus, Follows]);
 
     peopleDataSource = new PeopleDataSource();
     peopleDataSource.initialize({ context });
   });
 
   afterEach(async () => {
-    await sequelize.drop({});
+    await sequelize.drop({ cascade: true });
   });
 
   it('should find a user by a rock id', async () => {

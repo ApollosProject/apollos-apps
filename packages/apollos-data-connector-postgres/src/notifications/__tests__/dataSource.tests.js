@@ -1,9 +1,11 @@
-import { sequelize, sync } from '../../postgres/index';
-import { createModel, setupModel } from '../model';
-import { createModel as createPeopleModel } from '../../people/model';
-import * as notificationPreferenceModel from '../../notification-preferences/model';
+import { sequelize } from '../../postgres/index';
 import NotificationPreferenceDataSource from '../../notification-preferences/dataSource';
 import NotificationsDataSource from '../dataSource';
+import * as People from '../../people';
+import * as Campus from '../../campus';
+import * as NotificationPreferences from '../../notification-preferences';
+import * as Notifications from '../index';
+import { setupPostgresTestEnv } from '../../utils/testUtils';
 
 let person1;
 
@@ -11,12 +13,12 @@ const context = {};
 
 describe('Apollos Postgres Notifications DataSource', () => {
   beforeEach(async () => {
-    await createPeopleModel();
-    await createModel();
-    await notificationPreferenceModel.createModel();
-    await setupModel();
-    await notificationPreferenceModel.setupModel();
-    await sync();
+    await setupPostgresTestEnv([
+      People,
+      Campus,
+      NotificationPreferences,
+      Notifications,
+    ]);
 
     person1 = await sequelize.models.people.create({
       originId: '1',
@@ -38,7 +40,7 @@ describe('Apollos Postgres Notifications DataSource', () => {
   });
 
   afterEach(async () => {
-    await sequelize.drop({});
+    await sequelize.drop({ cascade: true });
   });
 
   it('should create and send notification', async () => {

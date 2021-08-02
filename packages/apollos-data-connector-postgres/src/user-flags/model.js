@@ -8,6 +8,10 @@ const createModel = defineModel({
     nodeId: DataTypes.TEXT,
     nodeType: DataTypes.TEXT,
   },
+  sequelizeOptions: {
+    tableName: 'user_flag',
+    underscored: true,
+  },
 });
 
 const setupModel = configureModel(({ sequelize }) => {

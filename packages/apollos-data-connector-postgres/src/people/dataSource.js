@@ -87,7 +87,7 @@ export default class Person extends PostgresDataSource {
         [Op.and]: [
           Sequelize.literal(
             // using op.and here is weird, but there's not another good way to use a literal as a where statement
-            `lower("firstName" || ' ' || "lastName") LIKE ${this.sequelize.escape(
+            `lower("first_name" || ' ' || "last_name") LIKE ${this.sequelize.escape(
               `%${name.toLowerCase().trim()}%`
             )}`
           ),

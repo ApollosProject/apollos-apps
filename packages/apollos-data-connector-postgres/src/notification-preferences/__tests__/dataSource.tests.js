@@ -1,8 +1,10 @@
-import { sequelize, sync } from '../../postgres/index';
-import { createModel, setupModel } from '../model';
-import { createModel as createPeopleModel } from '../../people/model';
+import { sequelize } from '../../postgres/index';
 import PersonDataSource from '../../people/dataSource';
 import NotificationPreferencesDataSource from '../dataSource';
+import * as People from '../../people';
+import * as Campus from '../../campus';
+import * as NotificationPreferences from '../index';
+import { setupPostgresTestEnv } from '../../utils/testUtils';
 
 let person1;
 
@@ -10,10 +12,7 @@ const context = {};
 
 describe('Apollos Postgres Notification Preferences DataSource', () => {
   beforeEach(async () => {
-    await createPeopleModel();
-    await createModel();
-    await setupModel();
-    await sync();
+    await setupPostgresTestEnv([People, Campus, NotificationPreferences]);
 
     person1 = await sequelize.models.people.create({
       originId: '1',
@@ -22,7 +21,7 @@ describe('Apollos Postgres Notification Preferences DataSource', () => {
   });
 
   afterEach(async () => {
-    await sequelize.drop({});
+    await sequelize.drop({ cascade: true });
   });
 
   it('should create a new notification preference', async () => {

@@ -9,6 +9,10 @@ const createModel = defineModel({
     nodeType: DataTypes.TEXT,
     personId: DataTypes.UUID,
   },
+  sequelizeOptions: {
+    tableName: 'user_like',
+    underscored: true,
+  },
 });
 
 const setupModel = configureModel(({ sequelize }) => {

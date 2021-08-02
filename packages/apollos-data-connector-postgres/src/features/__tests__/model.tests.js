@@ -1,23 +1,19 @@
 import { sequelize } from '../../postgres/index';
-import { createModel, setupModel } from '../model';
-import migrations from '../migrations';
-import * as ContentItem from '../../content-items/model';
-import ContentItemMigrations from '../../content-items/migrations';
-import MediaMigrations from '../../media/migrations';
-import createMigrationRunner from '../../postgres/performMigrations';
+import * as ContentItem from '../../content-items';
+import * as Feature from '../index';
+import * as Media from '../../media';
+import * as ContentItemCategory from '../../content-item-categories';
+
+import { setupPostgresTestEnv } from '../../utils/testUtils';
 
 describe('Features model', () => {
   beforeEach(async () => {
-    await ContentItem.createModel();
-    await createModel();
-
-    const migrationRunner = await createMigrationRunner({
-      migrations: [...migrations, ...ContentItemMigrations, ...MediaMigrations],
-      logger: null,
-    });
-    await migrationRunner.up();
-
-    await setupModel();
+    await setupPostgresTestEnv([
+      ContentItem,
+      ContentItemCategory,
+      Media,
+      Feature,
+    ]);
   });
   afterEach(async () => {
     await sequelize.drop({ cascade: true });
@@ -28,6 +24,7 @@ describe('Features model', () => {
       title: 'Parent Item',
       originType: 'rock',
       originId: '1',
+      parentType: 'ContentItem',
     });
 
     const featureData = { someData: 123, someOtherData: 'hello' };
@@ -40,8 +37,6 @@ describe('Features model', () => {
     });
 
     await content.addFeature(feature);
-
-    await content.reload();
 
     expect((await content.getFeatures())[0].id).toEqual(feature.id);
     expect((await content.getFeatures())[0].data).toEqual(featureData);

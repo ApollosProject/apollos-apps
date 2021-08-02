@@ -15,6 +15,10 @@ const createModel = defineModel({
     followedPersonId: DataTypes.UUID,
     state: DataTypes.ENUM(Object.values(FollowState)),
   },
+  sequelizeOptions: {
+    tableName: 'follow',
+    underscored: true,
+  },
 });
 
 const setupModel = configureModel(({ sequelize }) => {
