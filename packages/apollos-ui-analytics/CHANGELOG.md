@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.28.0](https://github.com/apollosproject/apollos-apps/compare/v2.27.2...v2.28.0) (2021-08-04)
+
+
+### Bug Fixes
+
+* replace graphql-tag with @apollo/client > gql ([#2083](https://github.com/apollosproject/apollos-apps/issues/2083)) ([4946de9](https://github.com/apollosproject/apollos-apps/commit/4946de9242b21919af8538c204943ebd5bac8ec5))
+
+
+
 ### [2.27.2](https://github.com/apollosproject/apollos-apps/compare/v2.27.1...v2.27.2) (2021-07-20)
 
 **Note:** Version bump only for package @apollosproject/ui-analytics

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.28.0](https://github.com/apollosproject/apollos-apps/compare/v2.27.2...v2.28.0) (2021-08-04)
+
+
+### Bug Fixes
+
+* new Heroku redis ([#2090](https://github.com/apollosproject/apollos-apps/issues/2090)) ([f72ee33](https://github.com/apollosproject/apollos-apps/commit/f72ee33d837bb3b414189ecfe4ee0294b2054b72))
+
+
+
 ### [2.27.2](https://github.com/apollosproject/apollos-apps/compare/v2.27.1...v2.27.2) (2021-07-20)
 
 **Note:** Version bump only for package @apollosproject/data-connector-redis-cache

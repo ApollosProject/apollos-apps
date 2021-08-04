@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=12"
   },
-  "version": "2.27.2",
+  "version": "2.28.0",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
@@ -39,7 +39,7 @@
     "apollo-server": "^2.11.0"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^2.27.2"
+    "@apollosproject/babel-preset-apollos": "^2.28.0"
   },
   "publishConfig": {
     "access": "public"
