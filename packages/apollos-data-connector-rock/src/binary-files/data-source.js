@@ -9,10 +9,10 @@ export default class BinaryFiles extends RockApolloDataSource {
     return this.request().find(id).get();
   }
 
-  async uploadFile({ stream }) {
+  async uploadFile({ stream, filename }) {
     const data = new FormData();
 
-    data.append('file', stream);
+    data.append('file', stream, { filename });
 
     const response = await this.nodeFetch(
       `${this.baseURL}/BinaryFiles/Upload?binaryFileTypeId=5`,
@@ -21,6 +21,8 @@ export default class BinaryFiles extends RockApolloDataSource {
         body: data,
         headers: {
           'Authorization-Token': this.rockToken,
+          connection: 'keep-alive',
+          'transfer-encoding': 'chunked',
           ...data.getHeaders(),
         },
       }

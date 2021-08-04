@@ -17,7 +17,7 @@ jobs:
     - name: Setup Node for npmjs.org
       uses: actions/setup-node@v2
       with:
-        node-version: 12
+        node-version: 14
         registry-url: 'https://registry.npmjs.org'
         scope: '@apollosproject'
 
@@ -47,7 +47,7 @@ jobs:
 
     - uses: actions/setup-node@v2
       with:
-        node-version: 12
+        node-version: 14
 
     - name: Bump
       run: |
@@ -66,7 +66,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        node-version: 12
+        node-version: 14
         repository: apollosproject/apollos-upgrade
         token: ${{ secrets.APOLLOS_ADMIN_TOKEN }}
 

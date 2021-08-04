@@ -206,6 +206,7 @@ describe('Apollos Postgres Comments DatSource', () => {
     });
 
     it('user can only update own comment', async () => {
+      expect.assertions(3);
       const commentDataSource = new CommentDataSource();
       commentDataSource.initialize({ context });
 
@@ -219,17 +220,20 @@ describe('Apollos Postgres Comments DatSource', () => {
       currentPerson = person2;
 
       // Try to update the other user's comment
-      const updatedComment = commentDataSource.updateComment({
-        commentId: comment.apollosId,
-        text: 'This comment has been updated',
-        visibility: 'PUBLIC',
-      });
+      try {
+        await commentDataSource.updateComment({
+          commentId: comment.apollosId,
+          text: 'This comment has been updated',
+          visibility: 'PUBLIC',
+        });
+      } catch (e) {
+        expect(e).toMatchSnapshot();
+      }
 
       const unchangedComment = await commentDataSource.model.findOne({
         where: { id: comment.id },
       });
 
-      await expect(updatedComment).rejects.toMatchSnapshot();
       expect(unchangedComment.text).toBe('I am a fun comment!');
       expect(unchangedComment.visibility).toBe('PRIVATE');
     });

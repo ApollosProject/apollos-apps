@@ -11,6 +11,7 @@ import * as Interfaces from './interfaces';
 import * as Pagination from './pagination';
 import * as Media from './media';
 import * as Message from './message';
+import * as Upload from './upload';
 
 export { createGlobalId, parseGlobalId, isUuid } from './node';
 export {
@@ -36,7 +37,7 @@ const safeGetWithWarning = (name) => (data, key) => {
 };
 
 // Types that all apollos-church servers will use.
-const builtInData = { Node, Pagination, Media, Message };
+const builtInData = { Node, Pagination, Media, Message, Upload };
 
 export const createSchema = (data) => [
   gql`
@@ -153,7 +154,6 @@ export const createContext = (data) => ({ req = {} } = {}) => {
       typeDefs: [
         ...createSchema(data),
         `
-      scalar Upload
       enum CacheControlScope {
         PUBLIC
         PRIVATE

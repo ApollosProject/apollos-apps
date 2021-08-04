@@ -37,7 +37,7 @@ node scripts/swap-package-json-to-links.js ./ApollosApi
 
 # Needed.
 # Otherwise there will be two different versions of GraphQL on the filesystem
-sed -i '' -e '/graphql/d' ./ApollosApi/package.json
+sed -i '' -e '/\"graphql\"/d' ./ApollosApi/package.json
 
 rm -rf tmp
 

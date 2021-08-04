@@ -43,12 +43,13 @@ Array [
         "_boundary": "--------------------------",
         "_currentStream": null,
         "_insideLoop": false,
-        "_overheadLength": 103,
+        "_overheadLength": 155,
         "_pendingNext": false,
         "_released": false,
         "_streams": Array [
           "----------------------------
-Content-Disposition: form-data; name=\\"file\\"
+Content-Disposition: form-data; name=\\"file\\"; filename=\\"something.jpg\\"
+Content-Type: image/jpeg
 
 ",
           "123",
@@ -64,7 +65,9 @@ Content-Disposition: form-data; name=\\"file\\"
       },
       "headers": Object {
         "Authorization-Token": "some-rock-token",
+        "connection": "keep-alive",
         "content-type": "multipart/form-data; boundary=--------------------------",
+        "transfer-encoding": "chunked",
       },
       "method": "POST",
     },

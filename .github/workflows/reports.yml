@@ -32,14 +32,14 @@ jobs:
           --health-cmd pg_isready
           --health-interval 10s
           --health-timeout 5s
-          --health-retries 5    
+          --health-retries 5
 
     steps:
     - uses: actions/checkout@v2
     - name: Use Node
       uses: actions/setup-node@v2
       with:
-        node-version: 12
+        node-version: 14
 
     - name: Install Dependencies
       run: yarn
@@ -48,7 +48,7 @@ jobs:
       run: ./scripts/test-all.sh
       env:
         PGUSER: postgres
-        PGPASSWORD: pg_password      
+        PGPASSWORD: pg_password
 
     - name: Codecov
       uses: codecov/codecov-action@v1

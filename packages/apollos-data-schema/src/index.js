@@ -80,8 +80,6 @@ export const interfacesSchema = gql`
 `;
 
 export const testSchema = gql`
-  scalar Upload
-
   enum CacheControlScope {
     PUBLIC
     PRIVATE
