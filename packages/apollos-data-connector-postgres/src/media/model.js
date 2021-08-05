@@ -7,7 +7,7 @@ const createModel = defineModel({
   external: true,
   attributes: {
     type: DataTypes.ENUM(['IMAGE', 'VIDEO', 'AUDIO']),
-    url: DataTypes.STRING,
+    url: DataTypes.TEXT,
     nodeId: DataTypes.UUID,
     nodeType: DataTypes.STRING,
   },
