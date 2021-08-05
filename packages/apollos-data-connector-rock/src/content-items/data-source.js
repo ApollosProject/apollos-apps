@@ -252,7 +252,7 @@ export default class ContentItem extends RockApolloDataSource {
           id: attributeValues.buttonLink.id,
           // NOTE: right now only URLs are implemented
           // could optionally parse Rock IDs for OPEN_NODE action?
-          action: Feature.attachRelatedNodeId({
+          action: Feature.attachActionIds({
             relatedNode: {
               __typename: 'Url',
               url: buttonLink,
