@@ -14,7 +14,7 @@ const StyledSearch = withTheme(({ theme }) => ({
   screenBackgroundColor: theme.colors.background.paper,
 }))(Search);
 
-const FullHeightScrollView = styled({ height: '100%' })(ScrollView);
+const FullHeightScrollView = styled({ height: '90%' })(ScrollView);
 
 function FollowListSearch({ onSearch, FollowListComponent, ...props }) {
   const [searchTimeout, setSearchTimeout] = useState();

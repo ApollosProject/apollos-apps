@@ -382,7 +382,7 @@ Array [
   <RCTScrollView
     style={
       Object {
-        "height": "100%",
+        "height": "90%",
       }
     }
   >
@@ -886,7 +886,7 @@ Array [
           <RCTScrollView
             style={
               Object {
-                "height": "100%",
+                "height": "90%",
               }
             }
           >
@@ -1281,7 +1281,7 @@ Array [
   <RCTScrollView
     style={
       Object {
-        "height": "100%",
+        "height": "90%",
       }
     }
   >
@@ -1813,7 +1813,7 @@ Array [
   <RCTScrollView
     style={
       Object {
-        "height": "100%",
+        "height": "90%",
       }
     }
   >
