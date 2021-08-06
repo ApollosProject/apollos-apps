@@ -241,6 +241,7 @@ Array [
     onScroll={[Function]}
     onScrollBeginDrag={[Function]}
     onScrollEndDrag={[Function]}
+    paddingBottom={16}
     removeClippedSubviews={false}
     renderItem={[Function]}
     scrollEventThrottle={50}
