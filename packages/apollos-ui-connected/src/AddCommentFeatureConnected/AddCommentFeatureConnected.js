@@ -90,7 +90,7 @@ const AddCommentFeatureConnected = ({
     fetchPolicy: 'cache-only',
   })?.data?.node?.title;
 
-  return (
+  return currentPerson ? (
     <Component
       {...node}
       {...props}
@@ -115,7 +115,7 @@ const AddCommentFeatureConnected = ({
       }}
       profile={currentPerson?.profile}
     />
-  );
+  ) : null;
 };
 
 AddCommentFeatureConnected.propTypes = {
