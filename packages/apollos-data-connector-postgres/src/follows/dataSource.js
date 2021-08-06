@@ -1,6 +1,7 @@
 import ApollosConfig from '@apollosproject/config';
 import { Op } from 'sequelize';
 import { parseGlobalId } from '@apollosproject/server-core/lib/node';
+import { generateAppLink } from '@apollosproject/server-core';
 import { get, partition } from 'lodash';
 import { PostgresDataSource, assertUuid } from '../postgres';
 import { FollowState } from './model';
@@ -115,7 +116,7 @@ class Follow extends PostgresDataSource {
       to: followedPerson,
       data: {
         requestPersonId: requestPerson.apollosId,
-        url: `${ApollosConfig?.APP?.DEEP_LINK_HOST}://nav/Tabs?screen=Connect`,
+        url: generateAppLink('deep', 'nav', { screen: 'connect' }),
       },
       buttons: [
         {
