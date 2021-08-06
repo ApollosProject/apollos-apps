@@ -1,5 +1,5 @@
 import ApollosConfig from '@apollosproject/config';
-import { dataSource as BinaryFilesDataSource, resolver } from '../index';
+import { dataSource as BinaryFilesDataSource } from '../index';
 
 ApollosConfig.loadJs({
   ROCK: {
@@ -35,58 +35,5 @@ describe('BinaryFiles', () => {
       'content-type'
     ].replace(/\d+/, '');
     expect(nodeFetchCalls).toMatchSnapshot();
-  });
-});
-
-describe('Binary files resolver', () => {
-  it('returns a url if the person object has a url', async () => {
-    const BinaryFiles = new BinaryFilesDataSource();
-    BinaryFiles.get = jest.fn(() =>
-      Promise.resolve({ url: 'https://example.com/1.jpg' })
-    );
-    const result = await resolver.Person.photo(
-      {
-        photo: {
-          id: 123,
-          url: 'http://alreadyhere.com/1.jpg',
-        },
-      },
-      null,
-      { dataSources: { BinaryFiles } }
-    );
-    expect(result).toMatchSnapshot();
-    expect(BinaryFiles.get.mock.calls).toMatchSnapshot();
-  });
-  it('returns a url if the person object has a id', async () => {
-    const BinaryFiles = new BinaryFilesDataSource();
-    BinaryFiles.get = jest.fn(() =>
-      Promise.resolve({ url: 'https://example.com/1.jpg' })
-    );
-    const result = await resolver.Person.photo(
-      {
-        photo: {
-          id: 123,
-        },
-      },
-      null,
-      { dataSources: { BinaryFiles } }
-    );
-    expect(result).toMatchSnapshot();
-    expect(BinaryFiles.get.mock.calls).toMatchSnapshot();
-  });
-  it('returns null with no image', async () => {
-    const BinaryFiles = new BinaryFilesDataSource();
-    BinaryFiles.get = jest.fn(() =>
-      Promise.resolve({ url: 'https://example.com/1.jpg' })
-    );
-    const result = await resolver.Person.photo(
-      {
-        photo: {},
-      },
-      null,
-      { dataSources: { BinaryFiles } }
-    );
-    expect(result).toMatchSnapshot();
-    expect(BinaryFiles.get.mock.calls).toMatchSnapshot();
   });
 });

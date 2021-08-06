@@ -1,4 +1,4 @@
-import resolver from './resolver';
 import dataSource from './data-source';
 
-export { resolver, dataSource };
+// eslint-disable-next-line import/prefer-default-export
+export { dataSource };

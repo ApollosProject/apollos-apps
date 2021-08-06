@@ -13,7 +13,7 @@ import {
 import { generateToken, registerToken } from '../../auth';
 // we import the root-level schema and resolver so we test the entire integration:
 import * as Person from '../index';
-import { PersonalDevice } from '../../index';
+import { PersonalDevice, BinaryFiles } from '../../index';
 import authMock from '../../authMock';
 import { enforceCurrentUser } from '../../utils';
 
@@ -22,6 +22,7 @@ const { getContext, getSchema } = createTestHelpers({
   Person,
   Auth,
   PersonalDevice,
+  BinaryFiles,
 });
 
 ApollosConfig.loadJs({
