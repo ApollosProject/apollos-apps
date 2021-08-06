@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.29.2](https://github.com/ApollosProject/apollos-apps/compare/v2.29.1...v2.29.2) (2021-08-06)
+
+
+### Bug Fixes
+
+* fixes servers that use the new Redis TLS syntax ([#2105](https://github.com/ApollosProject/apollos-apps/issues/2105)) ([c3bfb0a](https://github.com/ApollosProject/apollos-apps/commit/c3bfb0a91db5cfc7858fa612799a11be44de65d1))
+
+
+
 ### [2.29.1](https://github.com/ApollosProject/apollos-apps/compare/v2.29.0...v2.29.1) (2021-08-06)
 
 **Note:** Version bump only for package apollos
