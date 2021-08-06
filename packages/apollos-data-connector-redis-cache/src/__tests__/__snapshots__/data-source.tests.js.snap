@@ -56,9 +56,6 @@ Cache {
         "sentinels": null,
         "showFriendlyErrorStack": false,
         "stringNumbers": false,
-        "tls": Object {
-          "rejectUnauthorized": false,
-        },
         "updateSentinels": true,
       },
     },
@@ -103,9 +100,6 @@ Cache {
       "sentinels": null,
       "showFriendlyErrorStack": false,
       "stringNumbers": false,
-      "tls": Object {
-        "rejectUnauthorized": false,
-      },
       "updateSentinels": true,
     },
     "retryAttempts": 0,

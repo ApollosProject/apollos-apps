@@ -10,17 +10,18 @@ const { REDIS_URL } = process.env;
 let client;
 let subscriber;
 let queueOpts;
+const tlsOptions = {
+  tls: {
+    rejectUnauthorized: false,
+  },
+};
 
 if (REDIS_URL) {
   client = new Redis(REDIS_URL, {
-    tls: {
-      rejectUnauthorized: false,
-    },
+    ...(REDIS_URL.includes('rediss') ? tlsOptions : {}),
   });
   subscriber = new Redis(REDIS_URL, {
-    tls: {
-      rejectUnauthorized: false,
-    },
+    ...(REDIS_URL.includes('rediss') ? tlsOptions : {}),
   });
 
   // Used to ensure that N+3 redis connections are not created per queue.
