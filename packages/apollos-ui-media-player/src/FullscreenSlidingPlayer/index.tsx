@@ -122,6 +122,7 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
         zIndex: 99999,
         top: window.height - layout.height,
         left: window.width - layout.width,
+        marginTop: 0,
       },
     ],
     [layout.height, layout.width, window.height, window.width]
@@ -135,6 +136,7 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
       left: 0,
       right: 0,
       top: 0,
+      marginTop: top,
       transform: [
         {
           translateY: presentationAnimation.interpolate({
@@ -172,6 +174,7 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
       presentationAnimation,
       layout.height,
       layout.width,
+      top,
       window.width,
       window.height,
     ]
@@ -184,6 +187,7 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
       right: 0,
       bottom: 0,
       top: 0,
+      marginTop: top,
       transform: [
         {
           translateY: fullscreenAnimation.interpolate({
@@ -194,7 +198,7 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
         },
       ],
     }),
-    [fullscreenAnimation, window.height]
+    [fullscreenAnimation, top, window.height]
   );
 
   return (
@@ -271,11 +275,7 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
         </Modal>
       ) : null}
 
-      <StatusBar
-        hidden={isFullscreen}
-        showHideTransition="slide"
-        barStyle="light-content"
-      />
+      <StatusBar hidden={isFullscreen} showHideTransition="slide" />
     </View>
   );
 };
