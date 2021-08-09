@@ -10,14 +10,16 @@ import SearchFeedConnected, { SearchInputHeader } from '../SearchFeedConnected';
 
 const SearchBackground = styled(({ theme }) => ({
   backgroundColor: theme.colors.background.paper,
+  flex: 1,
 }))(View);
 
 const HeaderContainer = styled({
   paddingTop: 8,
 })(View);
 
-const SearchContainer = styled({ height: '100%' })(View);
+const SearchContainer = styled({ height: '100%', flex: 1 })(View);
 
+const StyledSafeAreaView = styled({ flex: 1 })(SafeAreaView);
 function SearchScreenConnected(props) {
   const [searchText, setSearchText] = useState('');
   const [isFocused, setIsFocused] = useState(true);
@@ -47,7 +49,7 @@ function SearchScreenConnected(props) {
 
   return (
     <SearchBackground>
-      <SafeAreaView edges={['right', 'left']}>
+      <StyledSafeAreaView edges={['right', 'left']}>
         <HeaderContainer>
           <SearchInputHeader
             onChangeText={throttle(setSearchText, 300)}
@@ -61,7 +63,7 @@ function SearchScreenConnected(props) {
             onPressItem={(item) => handleOnPressItem({ item })}
           />
         </SearchContainer>
-      </SafeAreaView>
+      </StyledSafeAreaView>
     </SearchBackground>
   );
 }
