@@ -5,6 +5,7 @@ import { get } from 'lodash';
 import {
   BackgroundView,
   Button,
+  named,
   PaddedView,
   TextInput,
   styled,
@@ -33,6 +34,13 @@ const FullScreenGradientBackground = styled(
   'ui-auth.Entry.FullScreenGradientBackground'
 )(BackgroundView);
 
+const StyledTextInput = withTheme(
+  ({ theme }) => ({
+    labelColor: theme.colors.text.tertiary,
+  }),
+  'ui-auth.StyledTextInput'
+)(TextInput);
+
 const FlexedKeyboardAvoidingView = styled({ flex: 1 })(KeyboardAvoidingView);
 
 const Entry = ({
@@ -50,7 +58,6 @@ const Entry = ({
   promptText,
   setFieldValue,
   tabTitle,
-  theme,
   values,
   inputAutoComplete,
   alternateLogin,
@@ -95,13 +102,12 @@ const Entry = ({
                 </TabContainer>
                 <TabCard>
                   <PaddedView>
-                    <TextInput
+                    <StyledTextInput
                       autoComplete={inputAutoComplete}
                       autoFocus
                       enablesReturnKeyAutomatically
                       error={get(errors, inputType)}
                       label={inputLabel}
-                      labelColor={theme.colors.text.tertiary}
                       onChangeText={handleOnChangeText}
                       onSubmitEditing={onPressNext}
                       returnKeyType={'next'}
@@ -172,4 +178,4 @@ Entry.defaultProps = {
 
 Entry.displayName = 'Entry';
 
-export default withTheme()(Entry);
+export default named('ui-auth.Entry')(Entry);
