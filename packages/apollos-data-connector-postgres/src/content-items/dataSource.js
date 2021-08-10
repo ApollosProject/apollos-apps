@@ -173,6 +173,7 @@ class ContentItemDataSource extends PostgresDataSource {
         contentItemCategoryId: { [Op.in]: ids },
         ...args?.where,
       },
+      order: [['publish_at', 'DESC']],
     });
   };
 
