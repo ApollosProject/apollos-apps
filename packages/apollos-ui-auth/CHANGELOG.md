@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.29.3](https://github.com/apollosproject/apollos-apps/compare/v2.29.2...v2.29.3) (2021-08-11)
+
+
+### Bug Fixes
+
+* Entry is named ([#2086](https://github.com/apollosproject/apollos-apps/issues/2086)) ([21732f8](https://github.com/apollosproject/apollos-apps/commit/21732f83c774bbb02830d37a186032ded772d42b))
+
+
+
 ### [2.29.2](https://github.com/apollosproject/apollos-apps/compare/v2.29.1...v2.29.2) (2021-08-06)
 
 **Note:** Version bump only for package @apollosproject/ui-auth

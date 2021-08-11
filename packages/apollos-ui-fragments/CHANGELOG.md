@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.29.3](https://github.com/apollosproject/apollos-apps/compare/v2.29.2...v2.29.3) (2021-08-11)
+
+**Note:** Version bump only for package @apollosproject/ui-fragments
+
+
+
+
+
 ### [2.29.2](https://github.com/apollosproject/apollos-apps/compare/v2.29.1...v2.29.2) (2021-08-06)
 
 **Note:** Version bump only for package @apollosproject/ui-fragments

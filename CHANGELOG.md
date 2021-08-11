@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.29.3](https://github.com/ApollosProject/apollos-apps/compare/v2.29.2...v2.29.3) (2021-08-11)
+
+
+### Bug Fixes
+
+* added margin for top notch on videos ([#2103](https://github.com/ApollosProject/apollos-apps/issues/2103)) ([d67ee2a](https://github.com/ApollosProject/apollos-apps/commit/d67ee2a23196e21eaf2a1b5105bd3381defae1ae))
+* adds padding to the last comment item ([#2098](https://github.com/ApollosProject/apollos-apps/issues/2098)) ([d4fe150](https://github.com/ApollosProject/apollos-apps/commit/d4fe1504772b89f0db2b34c7ea5ef1cdc154b64f))
+* correctly build follow notification deep links ([#2076](https://github.com/ApollosProject/apollos-apps/issues/2076)) ([896e442](https://github.com/ApollosProject/apollos-apps/commit/896e442de095c228b4604dd6053a4bf0639c0e9f))
+* Entry is named ([#2086](https://github.com/ApollosProject/apollos-apps/issues/2086)) ([21732f8](https://github.com/ApollosProject/apollos-apps/commit/21732f83c774bbb02830d37a186032ded772d42b))
+
+
+
 ### [2.29.2](https://github.com/ApollosProject/apollos-apps/compare/v2.29.1...v2.29.2) (2021-08-06)
 
 
