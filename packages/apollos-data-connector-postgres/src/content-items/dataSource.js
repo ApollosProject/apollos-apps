@@ -239,7 +239,7 @@ class ContentItemDataSource extends PostgresDataSource {
     return childItems[firstInteractedIndex - 1];
   }
 
-  async getSeriesWithUserProgress() {
+  async getSeriesWithUserProgress({ categoryIds = [] }) {
     const { Auth, Interactions } = this.context.dataSources;
 
     // Safely exit if we don't have a current user.
@@ -252,13 +252,17 @@ class ContentItemDataSource extends PostgresDataSource {
     const interactions = await Interactions.getInteractionsForCurrentUser({
       actions: ['SERIES_START'],
     });
-
     const ids = uniq(interactions.map(({ foreignKey }) => foreignKey));
 
     const inProgressItems = (
       await Promise.all(
         ids.map(async (id) => {
-          const model = await this.model.findOne({ where: { apollosId: id } });
+          const model = await this.model.findOne({
+            where:
+              categoryIds.length > 0
+                ? { apollosId: id, contentItemCategoryId: categoryIds }
+                : { apollosId: id },
+          });
           return {
             model,
             percent: await this.getPercentComplete(model),
