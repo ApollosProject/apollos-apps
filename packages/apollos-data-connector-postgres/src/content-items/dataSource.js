@@ -242,12 +242,7 @@ class ContentItemDataSource extends PostgresDataSource {
   async getSeriesWithUserProgress({ categoryIds = [] }) {
     const { Auth, Interactions } = this.context.dataSources;
 
-    // Safely exit if we don't have a current user.
-    try {
-      await Auth.getCurrentPerson();
-    } catch (e) {
-      return this.request().empty();
-    }
+    await Auth.getCurrentPerson();
 
     const interactions = await Interactions.getInteractionsForCurrentUser({
       actions: ['SERIES_START'],

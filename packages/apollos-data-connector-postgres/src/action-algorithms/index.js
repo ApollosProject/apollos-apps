@@ -250,7 +250,7 @@ class ActionAlgorithm extends PostgresDataSource {
 
     const items = await ContentItem.getSeriesWithUserProgress(
       {
-        channelIds,
+        categoryIds: channelIds,
       },
       { limit }
     );
