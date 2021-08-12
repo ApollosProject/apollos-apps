@@ -9,6 +9,7 @@ import { FeedView } from '@apollosproject/ui-kit';
 import SearchCardConnected from '../SearchCardConnected';
 import GET_SEARCH_RESULTS from './getSearchResults';
 import NoResults from './NoResults';
+import EmptySearch from './EmptySearch';
 
 import SearchInputHeader from './SearchInputHeader';
 
@@ -28,20 +29,23 @@ const SearchFeedConnected = ({ searchText, onPressItem, ...props }) => {
       variables={{ searchText }}
       fetchPolicy="cache-and-network"
     >
-      {({ loading, error, data, refetch }) => (
-        <StyledFeedView
-          ListItemComponent={SearchCardConnected}
-          content={get(data, 'search.edges', [])}
-          ListEmptyComponent={() => <NoResults searchText={searchText} />}
-          hasContent={get(data, 'search.edges', []).length}
-          isLoading={loading}
-          error={error}
-          refetch={refetch}
-          onPressItem={onPressItem}
-          keyExtractor={keyExtractor}
-          {...props}
-        />
-      )}
+      {searchText
+        ? ({ loading, error, data, refetch }) => (
+            <StyledFeedView
+              ListItemComponent={SearchCardConnected}
+              content={get(data, 'search.edges', [])}
+              ListEmptyComponent={() => <NoResults searchText={searchText} />}
+              hasContent={get(data, 'search.edges', []).length}
+              isLoading={loading}
+              error={error}
+              refetch={refetch}
+              onPressItem={onPressItem}
+              keyExtractor={keyExtractor}
+              {...props}
+            />
+          )
+        : // If there is no search content, this will render an empty feed prompting the user to use the search input
+          () => <EmptySearch />}
     </Query>
   );
 };
