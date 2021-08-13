@@ -1,3 +1,4 @@
+import { Sequelize } from 'sequelize';
 import { get } from 'lodash';
 import { withEdgePagination } from '@apollosproject/server-core';
 
@@ -7,7 +8,13 @@ export const defaultContentItemResolvers = {
   childContentItemsConnection: async (model, args, { dataSources }) =>
     dataSources.ContentItem.paginate({
       cursor: (fetchArgs) =>
-        dataSources.ContentItem.getChildren(model, fetchArgs),
+        dataSources.ContentItem.getChildren(model, {
+          order: [
+            [Sequelize.literal('"contentItemsConnection".order'), 'ASC'],
+            ['publishAt', 'ASC'],
+          ],
+          ...fetchArgs,
+        }),
       ...args,
     }),
 
@@ -21,7 +28,13 @@ export const defaultContentItemResolvers = {
   siblingContentItemsConnection: async (model, args, { dataSources }) =>
     dataSources.ContentItem.paginate({
       cursor: (fetchArgs) =>
-        dataSources.ContentItem.getSiblings(model, fetchArgs),
+        dataSources.ContentItem.getSiblings(model, {
+          order: [
+            [Sequelize.literal('"contentItemsConnection".order'), 'ASC'],
+            ['publishAt', 'ASC'],
+          ],
+          ...fetchArgs,
+        }),
       ...args,
     }),
 
