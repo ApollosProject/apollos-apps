@@ -117,6 +117,7 @@ const Provider = ({
   children,
   trackFunctions,
   identifyFunctions,
+  notifyFunctions,
   useServerAnalytics,
 }) => (
   <ApolloConsumer>
@@ -133,6 +134,7 @@ const Provider = ({
           value={{
             track: createTrack({ client }),
             identify: createIdentify({ client }),
+            notify: (error) => notifyFunctions.forEach((fn) => fn(error)),
           }}
         >
           {children}
@@ -151,6 +153,7 @@ Provider.propTypes = {
   children: PropTypes.node,
   trackFunctions: PropTypes.arrayOf(PropTypes.func),
   identifyFunctions: PropTypes.arrayOf(PropTypes.func),
+  notifyFunctions: PropTypes.arrayOf(PropTypes.func),
   useServerAnalytics: PropTypes.bool,
 };
 

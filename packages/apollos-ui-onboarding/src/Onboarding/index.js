@@ -8,6 +8,7 @@ import {
   BackgroundView,
   NavigationService,
 } from '@apollosproject/ui-kit';
+import { AnalyticsConsumer } from '@apollosproject/ui-analytics';
 
 import {
   AskNotificationsConnected,
@@ -44,32 +45,40 @@ function Onboarding(props) {
   ];
   const { data } = useQuery(WITH_USER_ID, { fetchPolicy: 'network-only' });
   return (
-    <>
-      <FullscreenBackgroundView />
-      <OnboardingSwiper
-        userVersion={userVersion}
-        onComplete={() => {
-          onboardingComplete({
-            userId: data?.currentUser?.id,
-            version: ONBOARDING_VERSION,
-          });
-          navigation.dispatch(
-            NavigationService.resetAction({
-              navigatorName: 'Tabs',
-              routeName: 'Home',
-            })
-          );
-        }}
-      >
-        {({ swipeForward }) => (
-          <>
-            {slides.map((Slide) => (
-              <Slide key={Slide.displayName} onPressPrimary={swipeForward} />
-            ))}
-          </>
-        )}
-      </OnboardingSwiper>
-    </>
+    <AnalyticsConsumer>
+      {({ notify }) => (
+        <>
+          <FullscreenBackgroundView />
+          <OnboardingSwiper
+            userVersion={userVersion}
+            onComplete={() => {
+              onboardingComplete({
+                userId: data?.currentUser?.id,
+                version: ONBOARDING_VERSION,
+                notify,
+              });
+              navigation.dispatch(
+                NavigationService.resetAction({
+                  navigatorName: 'Tabs',
+                  routeName: 'Home',
+                })
+              );
+            }}
+          >
+            {({ swipeForward }) => (
+              <>
+                {slides.map((Slide) => (
+                  <Slide
+                    key={Slide.displayName}
+                    onPressPrimary={swipeForward}
+                  />
+                ))}
+              </>
+            )}
+          </OnboardingSwiper>
+        </>
+      )}
+    </AnalyticsConsumer>
   );
 }
 
