@@ -2,7 +2,7 @@
 // Otherwise, return the URL or URI field. Add in the typename provided to the source.
 const addTypenameToSources = (__typename) => ({ sources, url, uri }) => {
   const dirtyURI = url || uri;
-  const cleanURI = dirtyURI?.startswith('http') ? dirtyURI : '';
+  const cleanURI = dirtyURI?.startsWith('http') ? dirtyURI : '';
   return sources || [{ __typename, uri: cleanURI }];
 };
 
