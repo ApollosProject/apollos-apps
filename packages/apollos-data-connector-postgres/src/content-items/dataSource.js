@@ -219,7 +219,7 @@ class ContentItemDataSource extends PostgresDataSource {
       return null;
     }
 
-    const childItemsOldestFirst = await model.getChildren();
+    const childItemsOldestFirst = await this.getChildren(model);
 
     const childItems = childItemsOldestFirst.reverse();
 
