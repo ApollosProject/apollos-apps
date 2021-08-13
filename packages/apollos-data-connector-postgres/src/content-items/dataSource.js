@@ -115,7 +115,7 @@ class ContentItemDataSource extends PostgresDataSource {
         // Sequelize doesn't support sorting on the join table any other way.
         // https://github.com/sequelize/sequelize/issues/3173
         [Sequelize.literal('"contentItemsConnection".order'), 'ASC'],
-        ['publishAt', 'DESC'],
+        ['publishAt', 'ASC'],
       ],
       ...queryArgs,
     });

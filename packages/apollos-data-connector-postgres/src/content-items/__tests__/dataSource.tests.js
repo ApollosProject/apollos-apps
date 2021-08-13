@@ -239,7 +239,7 @@ describe('Apollos Postgres ContentItem DataSource', () => {
           apollosType: 'UniversalContentItem',
           title: 'Sibling Item',
           active: true,
-          publishAt: new Date(new Date().valueOf() + i * 10000), // items are getting newer
+          publishAt: new Date(new Date().valueOf() - i * 10000), // items are getting older
         });
         await parent.addChild(child, {
           through: {
