@@ -154,14 +154,112 @@ describe('Apollos Postgres ContentItem DataSource', () => {
       active: true,
     });
 
-    await contentItem1.setParent(parent);
-    await sibiling.setParent(parent);
+    await contentItem1.setParent(parent); // parentId
+    await sibiling.setParent(parent); // parentId
+
+    await parent.addChild(contentItem1, {
+      through: {
+        order: 0,
+        originId: '12',
+        originType: 'rock',
+        apollosType: 'ContentChannel',
+      },
+    });
+
+    await parent.addChild(sibiling, {
+      through: {
+        order: 1,
+        originId: '13',
+        originType: 'rock',
+        apollosType: 'ContentChannel',
+      },
+    });
 
     const siblings = await ContentItem.getSiblings(contentItem1);
 
     expect(siblings.map(({ id }) => id)).toEqual([
       contentItem1.id,
       sibiling.id,
+    ]);
+  });
+  it('gets children items, sorted by order', async () => {
+    const parent = await sequelize.models.contentItem.create({
+      originId: '2',
+      originType: 'rock',
+      apollosType: 'ContentSeriesContentItem',
+      title: 'Sermon Item',
+      active: true,
+    });
+
+    const createdChildren = await Promise.all(
+      [1, 0, 2, 3].map(async (order, i) => {
+        const child = await sequelize.models.contentItem.create({
+          originId: `${i}${order}`,
+          originType: 'rock',
+          apollosType: 'UniversalContentItem',
+          title: 'Sibling Item',
+          active: true,
+          publishAt: new Date(),
+        });
+        await parent.addChild(child, {
+          through: {
+            order,
+            originId: order,
+            originType: 'rock',
+            apollosType: 'ContentChannel',
+          },
+        });
+        return child;
+      })
+    );
+
+    const children = await ContentItem.getChildren(parent);
+
+    expect(children.map(({ id }) => id)).toEqual([
+      createdChildren[1].id, // Sorting by order, check the order array above
+      createdChildren[0].id,
+      createdChildren[2].id,
+      createdChildren[3].id,
+    ]);
+  });
+  it('gets children items, sorted by publishAt', async () => {
+    const parent = await sequelize.models.contentItem.create({
+      originId: '2',
+      originType: 'rock',
+      apollosType: 'ContentSeriesContentItem',
+      title: 'Sermon Item',
+      active: true,
+    });
+
+    const createdChildren = await Promise.all(
+      [0, 1, 2, 3].map(async (order, i) => {
+        const child = await sequelize.models.contentItem.create({
+          originId: `${i}${order}`,
+          originType: 'rock',
+          apollosType: 'UniversalContentItem',
+          title: 'Sibling Item',
+          active: true,
+          publishAt: new Date(new Date().valueOf() + i * 10000), // items are getting newer
+        });
+        await parent.addChild(child, {
+          through: {
+            order: 0, // same order every time
+            originId: order,
+            originType: 'rock',
+            apollosType: 'ContentChannel',
+          },
+        });
+        return child;
+      })
+    );
+
+    const children = await ContentItem.getChildren(parent);
+
+    expect(children.map(({ id }) => id)).toEqual([
+      createdChildren[3].id, // Sorting by order, check the order array above
+      createdChildren[2].id,
+      createdChildren[1].id,
+      createdChildren[0].id,
     ]);
   });
   it('gets from persona feed', async () => {

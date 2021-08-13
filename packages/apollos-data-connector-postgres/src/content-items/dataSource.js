@@ -6,7 +6,7 @@ import {
   createCursor,
   parseCursor,
 } from '@apollosproject/server-core';
-import { Op } from 'sequelize';
+import { Sequelize, Op } from 'sequelize';
 import ApollosConfig from '@apollosproject/config';
 import { uniq } from 'lodash';
 import { PostgresDataSource } from '../postgres';
@@ -110,13 +110,25 @@ class ContentItemDataSource extends PostgresDataSource {
 
   // A simple alias at this point.
   async getChildren(model, queryArgs = {}) {
-    return model.getChildren(queryArgs);
+    return model.getChildren({
+      order: [
+        // Sequelize doesn't support sorting on the join table any other way.
+        // https://github.com/sequelize/sequelize/issues/3173
+        [Sequelize.literal('"contentItemsConnection".order'), 'ASC'],
+        ['publishAt', 'DESC'],
+      ],
+      ...queryArgs,
+    });
   }
 
   async getSiblings(model, queryArgs = {}) {
     const parent = await model.getParent();
     if (parent) {
-      return parent.getDirectChildren(queryArgs);
+      return this.getChildren(parent, {
+        // Calling `getChildren` ensures we have access to the ordering on the join table.
+        where: { parentId: parent.id, ...queryArgs?.where },
+        ...queryArgs,
+      });
     }
     return [];
   }
@@ -173,7 +185,7 @@ class ContentItemDataSource extends PostgresDataSource {
         contentItemCategoryId: { [Op.in]: ids },
         ...args?.where,
       },
-      order: [['publish_at', 'DESC']],
+      order: [['publishAt', 'DESC']],
     });
   };
 
@@ -207,9 +219,7 @@ class ContentItemDataSource extends PostgresDataSource {
       return null;
     }
 
-    const childItemsOldestFirst = await model.getChildren({
-      order: [['publishAt', 'ASC']],
-    });
+    const childItemsOldestFirst = await model.getChildren();
 
     const childItems = childItemsOldestFirst.reverse();
 

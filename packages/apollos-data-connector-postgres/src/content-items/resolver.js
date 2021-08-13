@@ -6,8 +6,9 @@ export const defaultContentItemResolvers = {
     apollosId || [__typename, id].join(':'),
   childContentItemsConnection: async (model, args, { dataSources }) =>
     dataSources.ContentItem.paginate({
+      cursor: (fetchArgs) =>
+        dataSources.ContentItem.getChildren(model, fetchArgs),
       ...args,
-      cursor: model.getChildren.bind(model),
     }),
 
   title: ({ title }, { hyphenated }, { dataSources }) =>
