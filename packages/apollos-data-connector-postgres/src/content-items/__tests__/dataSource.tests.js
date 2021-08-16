@@ -70,6 +70,35 @@ describe('Apollos Postgres ContentItem DataSource', () => {
     expect(itemFromRock.id).toBe(contentItem1.id);
   });
 
+  it('will fetch newly published items', async () => {
+    const contentItemPublished = await sequelize.models.contentItem.create({
+      originId: '2',
+      originType: 'rock',
+      apollosType: 'UniversalContentItem',
+      title: 'The First Content Item',
+      active: false,
+      publishAt: new Date(new Date().getTime() - 10000),
+    });
+    const item = await ContentItem.getFromId(contentItemPublished.id);
+
+    expect(item.id).toBe(contentItemPublished.id);
+
+    const contentItemNotPublished = await sequelize.models.contentItem.create({
+      originId: '3',
+      originType: 'rock',
+      apollosType: 'UniversalContentItem',
+      title: 'The First Content Item',
+      active: false,
+      publishAt: new Date(new Date().getTime() + 10000),
+    });
+
+    const notFoundItem = await ContentItem.getFromId(
+      contentItemNotPublished.id
+    );
+
+    expect(notFoundItem).toBe(null);
+  });
+
   it('returns a share url', async () => {
     const shareUrl = await ContentItem.getShareUrl(contentItem1);
 

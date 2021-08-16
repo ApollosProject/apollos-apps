@@ -1,4 +1,4 @@
-import { DataTypes } from 'sequelize';
+import { DataTypes, Op, Sequelize } from 'sequelize';
 import { defineModel, configureModel } from '../postgres';
 
 const createModel = defineModel({
@@ -21,7 +21,13 @@ const createModel = defineModel({
 const setupModel = configureModel(({ sequelize }) => {
   sequelize.models.contentItem.addScope('defaultScope', {
     include: [{ model: sequelize.models.media, as: 'coverImage' }],
-    where: { active: true },
+    where: {
+      [Op.or]: [
+        // this will need to be an `and`. However, we need to tweak the shovel to not update this field based on publishAt first.
+        { active: true },
+        { publishAt: { [Op.lte]: Sequelize.literal('NOW()') } },
+      ],
+    },
   });
   sequelize.models.contentItem.belongsTo(sequelize.models.media, {
     as: 'coverImage',
