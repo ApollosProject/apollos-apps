@@ -76,7 +76,7 @@ describe('Apollos Postgres ContentItem DataSource', () => {
       originType: 'rock',
       apollosType: 'UniversalContentItem',
       title: 'The First Content Item',
-      active: false,
+      active: true,
       publishAt: new Date(new Date().getTime() - 10000),
     });
     const item = await ContentItem.getFromId(contentItemPublished.id);
@@ -88,7 +88,7 @@ describe('Apollos Postgres ContentItem DataSource', () => {
       originType: 'rock',
       apollosType: 'UniversalContentItem',
       title: 'The First Content Item',
-      active: false,
+      active: true,
       publishAt: new Date(new Date().getTime() + 10000),
     });
 
@@ -97,6 +97,21 @@ describe('Apollos Postgres ContentItem DataSource', () => {
     );
 
     expect(notFoundItem).toBe(null);
+  });
+
+  it('will not fetch expired items', async () => {
+    const contentItemExpired = await sequelize.models.contentItem.create({
+      originId: '2',
+      originType: 'rock',
+      apollosType: 'UniversalContentItem',
+      title: 'The First Content Item',
+      active: true,
+      publishAt: new Date(new Date().getTime() - 10000),
+      expireAt: new Date(new Date().getTime() - 100),
+    });
+    const item = await ContentItem.getFromId(contentItemExpired.id);
+
+    expect(item).toBe(null);
   });
 
   it('returns a share url', async () => {

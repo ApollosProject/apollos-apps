@@ -10,6 +10,7 @@ const createModel = defineModel({
     summary: DataTypes.TEXT,
     htmlContent: DataTypes.TEXT,
     publishAt: DataTypes.DATE,
+    expireAt: DataTypes.DATE,
     active: DataTypes.BOOLEAN,
   },
   sequelizeOptions: {
@@ -22,10 +23,18 @@ const setupModel = configureModel(({ sequelize }) => {
   sequelize.models.contentItem.addScope('defaultScope', {
     include: [{ model: sequelize.models.media, as: 'coverImage' }],
     where: {
-      [Op.or]: [
-        // this will need to be an `and`. However, we need to tweak the shovel to not update this field based on publishAt first.
+      [Op.and]: [
         { active: true },
-        { publishAt: { [Op.lte]: Sequelize.literal('NOW()') } },
+        {
+          publishAt: {
+            [Op.or]: [{ [Op.lte]: Sequelize.literal('NOW()') }, null],
+          },
+        },
+        {
+          expireAt: {
+            [Op.or]: [{ [Op.gte]: Sequelize.literal('NOW()') }, null],
+          },
+        },
       ],
     },
   });
