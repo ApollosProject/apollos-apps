@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.30.0](https://github.com/apollosproject/apollos-apps/compare/v2.29.3...v2.30.0) (2021-08-17)
+
+
+### Bug Fixes
+
+* android prayer onboarding crash ([#2130](https://github.com/apollosproject/apollos-apps/issues/2130)) ([cb44b84](https://github.com/apollosproject/apollos-apps/commit/cb44b841a9478a3287fbe8c6f56de91ca2203942))
+
+
+
 ### [2.29.3](https://github.com/apollosproject/apollos-apps/compare/v2.29.2...v2.29.3) (2021-08-11)
 
 **Note:** Version bump only for package @apollosproject/ui-prayer

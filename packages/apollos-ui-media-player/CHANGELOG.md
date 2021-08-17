@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.30.0](https://github.com/apollosproject/apollos-apps/compare/v2.29.3...v2.30.0) (2021-08-17)
+
+
+### Bug Fixes
+
+* adds peer dep for rn-music-control ([#2057](https://github.com/apollosproject/apollos-apps/issues/2057)) ([688f28f](https://github.com/apollosproject/apollos-apps/commit/688f28fa2008c3fb2d98e4fd8e44932998e2b6fb))
+
+
+
 ### [2.29.3](https://github.com/apollosproject/apollos-apps/compare/v2.29.2...v2.29.3) (2021-08-11)
 
 

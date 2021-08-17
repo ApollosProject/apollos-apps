@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.30.0](https://github.com/apollosproject/apollos-apps/compare/v2.29.3...v2.30.0) (2021-08-17)
+
+
+### Features
+
+* add event details to content items ([#2063](https://github.com/apollosproject/apollos-apps/issues/2063)) ([47a9910](https://github.com/apollosproject/apollos-apps/commit/47a9910545c79f4d37477d7716f4a275f7bfe320))
+
+
+### Bug Fixes
+
+* change updateSeriesProgress to use content channel ids ([#2107](https://github.com/apollosproject/apollos-apps/issues/2107)) ([cd9e8ec](https://github.com/apollosproject/apollos-apps/commit/cd9e8ecb4f7f6504e08cadb06e6169ed9bc830a2))
+* check for string ([#2121](https://github.com/apollosproject/apollos-apps/issues/2121)) ([cf44b98](https://github.com/apollosproject/apollos-apps/commit/cf44b98999bd168d3982f9c57ddfed97a593615a))
+* fixes next up series algorithm ([#2116](https://github.com/apollosproject/apollos-apps/issues/2116)) ([f05790a](https://github.com/apollosproject/apollos-apps/commit/f05790a0e38104dcebb340d96ab99ea9e54ab227))
+* Made postgres child/sibling item sorting consistent ([#2119](https://github.com/apollosproject/apollos-apps/issues/2119)) ([3064982](https://github.com/apollosproject/apollos-apps/commit/3064982cb8639521faf783a7cde02a79193e4514))
+* order children by publish at asc ([#2123](https://github.com/apollosproject/apollos-apps/issues/2123)) ([bf3575d](https://github.com/apollosproject/apollos-apps/commit/bf3575d02547a1f1d21b322c48a20ed42dda38ec))
+* starts with function casing ([#2122](https://github.com/apollosproject/apollos-apps/issues/2122)) ([bc0de38](https://github.com/apollosproject/apollos-apps/commit/bc0de38d0574669069b13e563a88a306e102b8de))
+* Unify children sorting ([#2124](https://github.com/apollosproject/apollos-apps/issues/2124)) ([18bd527](https://github.com/apollosproject/apollos-apps/commit/18bd527260b89802d05fbf4c6ca5d8d9b2892475))
+
+
+
 ### [2.29.3](https://github.com/apollosproject/apollos-apps/compare/v2.29.2...v2.29.3) (2021-08-11)
 
 

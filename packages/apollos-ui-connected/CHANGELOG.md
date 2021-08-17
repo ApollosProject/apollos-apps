@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.30.0](https://github.com/apollosproject/apollos-apps/compare/v2.29.3...v2.30.0) (2021-08-17)
+
+
+### Features
+
+* add event details to content items ([#2063](https://github.com/apollosproject/apollos-apps/issues/2063)) ([47a9910](https://github.com/apollosproject/apollos-apps/commit/47a9910545c79f4d37477d7716f4a275f7bfe320))
+
+
+### Bug Fixes
+
+* added a landing screen for search feed ([#2115](https://github.com/apollosproject/apollos-apps/issues/2115)) ([f40eba9](https://github.com/apollosproject/apollos-apps/commit/f40eba96e65426908908dab8fb83a21e0e768022))
+
+
+
 ### [2.29.3](https://github.com/apollosproject/apollos-apps/compare/v2.29.2...v2.29.3) (2021-08-11)
 
 
