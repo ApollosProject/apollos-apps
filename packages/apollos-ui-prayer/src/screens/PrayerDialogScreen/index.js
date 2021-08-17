@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Animated, Dimensions, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 import {
@@ -42,10 +42,13 @@ const PrayerDialogScreen = ({
   ...props
 }) => {
   const animation = useRef(new Animated.Value(visibleOnMount ? 1 : 0)).current;
-  Animated.spring(animation, {
-    toValue: visible,
-    useNativeDriver: true,
-  }).start();
+
+  useEffect(() => {
+    Animated.spring(animation, {
+      toValue: visible ? 1 : 0,
+      useNativeDriver: true,
+    }).start();
+  }, [visible]);
 
   const window = Dimensions.get('window');
 
