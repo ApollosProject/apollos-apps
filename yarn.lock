@@ -8808,6 +8808,11 @@ graphql-subscriptions@^1.0.0:
   dependencies:
     iterall "^1.2.1"
 
+graphql-tag@2.9.2:
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.9.2.tgz#2f60a5a981375f430bf1e6e95992427dc18af686"
+  integrity sha512-qnNmof9pAqj/LUzs3lStP0Gw1qhdVCUS7Ab7+SUB6KD5aX1uqxWQRwMnOGTkhKuLvLNIs1TvNz+iS9kUGl1MhA==
+
 graphql-tag@^2.11.0, graphql-tag@^2.9.2:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.11.0.tgz#1deb53a01c46a7eb401d6cb59dec86fa1cccbffd"
@@ -11850,7 +11855,7 @@ moment@2.22.2:
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
   integrity sha1-PCV/mDn8DpP/UxSWMiOeuQeD/2Y=
 
-"moment@>= 2.9.0", moment@^2.15.2, moment@^2.22.2, moment@^2.24.0, moment@^2.26.0:
+"moment@>= 2.9.0", moment@^2.15.2, moment@^2.22.2, moment@^2.24.0, moment@^2.26.0, moment@^2.29.1:
   version "2.29.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
   integrity sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==

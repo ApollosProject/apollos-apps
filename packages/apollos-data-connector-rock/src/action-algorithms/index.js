@@ -93,7 +93,7 @@ class ActionAlgorithm extends RockApolloDataSource {
       subtitle: Event.getDateTime(event.schedule).start,
       relatedNode: { ...event, __type: 'Event' },
       image: Event.getImage(event),
-      action: 'READ_EVENT',
+      action: 'READ_CONTENT',
       summary: '',
     }));
   }

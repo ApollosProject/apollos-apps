@@ -560,7 +560,7 @@ Object {
   "__typename": "ActionListFeature",
   "actions": Array [
     Object {
-      "action": "READ_EVENT",
+      "action": "READ_CONTENT",
       "id": "1230",
       "image": Promise {},
       "relatedNode": Object {

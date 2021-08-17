@@ -16,8 +16,9 @@ export const ACTION_MAP = {
     });
   },
   READ_EVENT: ({ navigation, relatedNode }) => {
-    navigation.navigate('Event', {
-      eventId: relatedNode.id,
+    console.warn('READ_EVENT action deprecated, use READ_CONTENT');
+    navigation.navigate('ContentSingle', {
+      itemId: relatedNode.id,
       transitionKey: 2,
     });
   },

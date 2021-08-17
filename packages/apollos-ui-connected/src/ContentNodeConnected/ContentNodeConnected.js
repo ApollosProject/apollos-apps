@@ -13,6 +13,7 @@ import {
   styled,
   named,
 } from '@apollosproject/ui-kit';
+import EventDetailsConnected from '../EventDetailsConnected';
 
 import safeOpenUrl from '../safeOpenUrl';
 import ContentTitlesConnected from './ContentTitlesConnected';
@@ -95,6 +96,7 @@ const ContentNodeConnected = ({
       </View>
       <BackgroundView flex={false}>
         <PaddedView>
+          <EventDetailsConnected nodeId={nodeId} />
           <HtmlComponent
             isLoading={!node?.htmlContent && loading}
             onPressAnchor={onPressAnchor}
