@@ -1,15 +1,15 @@
-import React, { memo } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Query } from '@apollo/client/react/components';
 import { get } from 'lodash';
 
-import { ErrorCard, DefaultCard } from '@apollosproject/ui-kit';
+import { ErrorCard, DefaultCard, named } from '@apollosproject/ui-kit';
 
 import { LiveConsumer } from '../live';
 
 import GET_CONTENT_CARD from './getContentCard';
 
-const ContentCardConnected = memo(
+const ContentCardConnected = named('ContentCardConnected')(
   ({ Component, contentId, isLoading, tile, mapProps, ...otherProps }) => {
     if (!contentId || isLoading)
       return <Component {...otherProps} isLoading tile={tile} />;

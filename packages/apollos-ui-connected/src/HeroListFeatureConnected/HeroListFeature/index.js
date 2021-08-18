@@ -8,6 +8,7 @@ import {
   PaddedView,
   TouchableScale,
   FeatureTitles,
+  named,
 } from '@apollosproject/ui-kit';
 import { LiveConsumer } from '../../live';
 
@@ -89,21 +90,23 @@ const styles = StyleSheet.create({
 });
 
 // TODO: Conrad is making this reusuable.
-const HeroItemComponent = ({ Component, ...item }) => (
-  <LiveConsumer contentId={item.id}>
-    {(liveStream) => {
-      const isLive = !!(liveStream && liveStream.isLive);
-      const labelText = isLive ? 'Live' : item.labelText;
-      return (
-        <Component
-          isLive={isLive}
-          {...item}
-          labelText={labelText}
-          style={styles.heroItemComponent}
-        />
-      );
-    }}
-  </LiveConsumer>
+const HeroItemComponent = named('HeroItemComponent')(
+  ({ Component, ...item }) => (
+    <LiveConsumer contentId={item.id}>
+      {(liveStream) => {
+        const isLive = !!(liveStream && liveStream.isLive);
+        const labelText = isLive ? 'Live' : item.labelText;
+        return (
+          <Component
+            isLive={isLive}
+            {...item}
+            labelText={labelText}
+            style={styles.heroItemComponent}
+          />
+        );
+      }}
+    </LiveConsumer>
+  )
 );
 
 HeroItemComponent.propTypes = {
