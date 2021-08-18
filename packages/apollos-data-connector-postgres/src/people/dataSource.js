@@ -127,7 +127,8 @@ export default class Person extends PostgresDataSource {
 
     const currentPerson = await Auth.getCurrentPerson();
 
-    if (!currentPerson) throw new AuthenticationError('Invalid Credentials');
+    if (!currentPerson)
+      throw new AuthenticationError('No person in current context');
 
     let where = { id: currentPerson.id };
     if (Auth.ORIGIN_TYPE) {
@@ -150,7 +151,7 @@ export default class Person extends PostgresDataSource {
     if (!person) {
       // We've seen this happen in a few instances related to deduping.
       // Best bet is to log the user out and give them another chance to sign in.
-      throw new AuthenticationError('Invalid Credentials');
+      throw new AuthenticationError('Person not found in the database');
     }
     // cache the current user on the context. avoids oft repeated n+1 queries.
     // this is a huge win, but we need to identify a more elegant way to do this in the future.
