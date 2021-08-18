@@ -30,7 +30,7 @@ exports[`The SuggestedFollowListConnected component should render with data 1`] 
           }
         }
       >
-        Suggested Followers
+        People to Follow
       </Text>
     </View>
   </View>

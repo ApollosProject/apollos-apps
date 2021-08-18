@@ -49,7 +49,7 @@ SuggestedFollowListConnected.propTypes = {
 
 SuggestedFollowListConnected.defaultProps = {
   Component: FollowListConnected,
-  Header: () => <FeatureTitles subtitle={'Suggested Followers'} />, // eslint-disable-line react/display-name
+  Header: () => <FeatureTitles subtitle={'People to Follow'} />, // eslint-disable-line react/display-name
 };
 
 SuggestedFollowListConnected.displayName = 'SuggestedFollowListConnected';

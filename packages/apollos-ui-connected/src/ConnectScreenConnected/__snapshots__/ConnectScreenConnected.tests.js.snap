@@ -575,7 +575,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                     }
                                   }
                                 >
-                                  Suggested Followers
+                                  People to Follow
                                 </Text>
                               </View>
                             </View>
@@ -1711,7 +1711,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                                     }
                                   }
                                 >
-                                  Suggested Followers
+                                  People to Follow
                                 </Text>
                               </View>
                             </View>
