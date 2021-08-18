@@ -122,6 +122,7 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
         zIndex: 99999,
         top: window.height - layout.height,
         left: window.width - layout.width,
+        height: window.height,
         marginTop: 0,
       },
     ],
