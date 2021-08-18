@@ -9,6 +9,7 @@ const createModel = defineModel({
     parentType: DataTypes.TEXT,
     data: DataTypes.JSONB,
     type: DataTypes.TEXT,
+    priority: DataTypes.INTEGER,
   },
   sequelizeOptions: {
     tableName: 'feature',

@@ -10,6 +10,7 @@ import {
   Tag,
   Person,
   Campus,
+  Feature,
 } from '../../index';
 
 import { setupPostgresTestEnv } from '../../utils/testUtils';
@@ -40,6 +41,7 @@ describe('Apollos Postgres ContentItem DataSource', () => {
       Tag,
       Person,
       Campus,
+      Feature,
     ]);
 
     contentItem1 = await sequelize.models.contentItem.create({
@@ -56,6 +58,29 @@ describe('Apollos Postgres ContentItem DataSource', () => {
   afterEach(async () => {
     await sequelize.drop({ cascade: true });
     currentPerson = null;
+  });
+
+  it('fetches features in order of priority', async () => {
+    const contentItemId = contentItem1.get('id');
+    const featureTypes = ['Scripture', 'AddComment', 'CommentList'];
+    const features = await Promise.all(
+      new Array(5).fill('').map((_, index) =>
+        sequelize.models.feature.create({
+          parentType: 'ContentItem',
+          parentId: contentItemId,
+          type: featureTypes[Math.floor(Math.random() * featureTypes.length)],
+          data: { featureIndex: index },
+          priority: index,
+        })
+      )
+    );
+    const contentItemFeatures = await ContentItem.getFeatures(contentItem1);
+    const featureIndexes = features.map((_, i) => i);
+    const contentItemFeaturePriorities = await Promise.all(
+      contentItemFeatures.map(async (feature) => feature.get('priority'))
+    );
+
+    expect(featureIndexes).toEqual(contentItemFeaturePriorities);
   });
 
   it('fetches a ContentItem by id', async () => {

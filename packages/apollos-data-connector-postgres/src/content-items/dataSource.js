@@ -100,7 +100,9 @@ class ContentItemDataSource extends PostgresDataSource {
   }
 
   async getFeatures(model) {
-    return model.getFeatures();
+    return model.getFeatures({
+      order: [['priority', 'ASC']],
+    });
   }
 
   // A simple alias at this point.
