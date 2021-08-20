@@ -5129,6 +5129,26 @@ Array [
 ]
 `;
 
+exports[`The Icon component return null for a missing icon 1`] = `
+<View
+  onLayout={[Function]}
+  pointerEvents="box-none"
+  style={
+    Array [
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "overflow": "hidden",
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      },
+      Object {},
+    ]
+  }
+/>
+`;
+
 exports[`The Information icon renders correctly 1`] = `
 Array [
   <View

@@ -24,6 +24,14 @@ Object.keys(icons).forEach((iconName) => {
 });
 
 describe(`The Icon component`, () => {
+  it('return null for a missing icon', () => {
+    const tree = renderer.create(
+      <Providers>
+        <Icon name={'invalid-icon'} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   it('accepts an iconInput object (custom icons)', () => {
     // Bible icon by Royyan Wijaya from the Noun Project
     const SalmonBible = makeIcon(

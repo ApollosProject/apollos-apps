@@ -189,16 +189,6 @@ Array [
               }
             }
           >
-            <View
-              style={
-                Object {
-                  "backgroundColor": "#A5A5A5",
-                  "borderRadius": 16,
-                  "height": 32,
-                  "width": 32,
-                }
-              }
-            />
             <Text
               style={
                 Object {

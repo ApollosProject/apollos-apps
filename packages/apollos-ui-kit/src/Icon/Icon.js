@@ -23,12 +23,14 @@ const Icon = ({ name, size, fill, isLoading = false, ...otherProps }) => {
   const theme = useTheme();
   const Icons = useIcons();
   const kebabNames = Object.keys(Icons).map(kebabCase);
-  if (!kebabNames.includes(name))
+  if (!kebabNames.includes(name)) {
     console.warn(
       `Invalid prop "name" of value \`${name}\` supplied to <Icon />, expected one of ${JSON.stringify(
         kebabNames
       )}`
     );
+    return null;
+  }
   const IconComponent = Icons[pascalCase(name)];
   return (
     <Placeholder.Media size={size} hasRadius onReady={!isLoading}>
