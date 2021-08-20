@@ -2,8 +2,12 @@
 
 exports[`The algolia search dataSource must be able to perform a full index of data from the ContentItem dataSource 1`] = `
 Array [
-  Array [],
-  Array [],
+  Array [
+    1,
+  ],
+  Array [
+    1,
+  ],
 ]
 `;
 
@@ -15,7 +19,7 @@ Array [
         "after": "99-cursor",
         "first": 100,
       },
-      "cursor": "by-active-cursor",
+      "cursor": "by-content-channel-cursor",
     },
   ],
   Array [
@@ -24,7 +28,7 @@ Array [
         "after": "99-cursor",
         "first": 100,
       },
-      "cursor": "by-active-cursor",
+      "cursor": "by-content-channel-cursor",
     },
   ],
 ]

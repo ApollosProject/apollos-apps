@@ -6,6 +6,7 @@ describe('The algolia search dataSource', () => {
     const search = new Search();
 
     const ContentItem = {
+      activeChannelIds: [1],
       paginate: jest
         .fn()
         .mockImplementationOnce(() =>
@@ -24,7 +25,7 @@ describe('The algolia search dataSource', () => {
             })),
           })
         ),
-      byActive: jest.fn(() => 'by-active-cursor'),
+      byContentChannelId: jest.fn(() => 'by-content-channel-cursor'),
     };
     search.context = { dataSources: { ContentItem } };
     search.mapItemToAlgolia = jest.fn(() => [
@@ -32,7 +33,7 @@ describe('The algolia search dataSource', () => {
     ]);
 
     await search.indexAll();
-    expect(ContentItem.byActive.mock.calls).toMatchSnapshot();
+    expect(ContentItem.byContentChannelId.mock.calls).toMatchSnapshot();
     expect(ContentItem.paginate.mock.calls).toMatchSnapshot();
     expect(search.mapItemToAlgolia.mock.calls).toMatchSnapshot();
     expect(search.index.clearIndex.mock.calls).toMatchSnapshot();
@@ -42,6 +43,7 @@ describe('The algolia search dataSource', () => {
     const search = new Search();
 
     const ContentItem = {
+      activeChannelIds: [1],
       paginate: jest
         .fn()
         .mockImplementationOnce(() =>
@@ -60,7 +62,7 @@ describe('The algolia search dataSource', () => {
             })),
           })
         ),
-      byActive: jest.fn(() => 'by-active-cursor'),
+      byContentChannelId: jest.fn(() => 'by-content-channel-cursor'),
     };
     search.context = { dataSources: { ContentItem } };
     search.mapItemToAlgolia = jest.fn(() => [

@@ -87,26 +87,34 @@ query getItem {
 
   async deltaIndex({ datetime }) {
     const { ContentItem } = this.context.dataSources;
-    let itemsLeft = true;
-    const args = { after: null, first: 100 };
 
-    while (itemsLeft) {
-      const { edges } = await ContentItem.paginate({
-        cursor: await ContentItem.byDateAndActive({ datetime }),
-        args,
-      });
+    // loop through each active channel
+    await Promise.all(
+      ContentItem.activeChannelIds.map(async (channelId) => {
+        let itemsLeft = true;
+        const args = { after: null, first: 100 };
 
-      const result = await edges;
-      const items = result.map(({ node }) => node);
-      itemsLeft = items.length === 100;
+        while (itemsLeft) {
+          const { edges } = await ContentItem.paginate({
+            cursor: await ContentItem.byContentChannelId(channelId).andFilter(
+              `(CreatedDateTime gt datetime'${datetime}') or (ModifiedDateTime gt datetime'${datetime}')`
+            ),
+            args,
+          });
 
-      if (itemsLeft) args.after = result[result.length - 1].cursor;
-      const indexableItems = await Promise.all(
-        items.map((item) => this.mapItemToAlgolia(item))
-      );
+          const result = await edges;
+          const items = result.map(({ node }) => node);
+          itemsLeft = items.length === 100;
 
-      await this.addObjects(indexableItems);
-    }
+          if (itemsLeft) args.after = result[result.length - 1].cursor;
+          const indexableItems = await Promise.all(
+            items.map((item) => this.mapItemToAlgolia(item))
+          );
+
+          await this.addObjects(indexableItems);
+        }
+      })
+    );
   }
 
   async indexAll() {
@@ -119,27 +127,33 @@ query getItem {
       })
     );
     const { ContentItem } = this.context.dataSources;
-    let itemsLeft = true;
-    const args = { after: null, first: 100 };
 
-    while (itemsLeft) {
-      const { edges } = await ContentItem.paginate({
-        cursor: ContentItem.byActive(),
-        args,
-      });
+    // loop through each active channel
+    await Promise.all(
+      ContentItem.activeChannelIds.map(async (channelId) => {
+        let itemsLeft = true;
+        const args = { after: null, first: 100 };
 
-      const result = await edges;
-      const items = result.map(({ node }) => node);
-      itemsLeft = items.length === 100;
+        while (itemsLeft) {
+          const { edges } = await ContentItem.paginate({
+            cursor: await ContentItem.byContentChannelId(channelId),
+            args,
+          });
 
-      if (itemsLeft) args.after = result[result.length - 1].cursor;
+          const result = await edges;
+          const items = result.map(({ node }) => node);
+          itemsLeft = items.length === 100;
 
-      const indexableItems = await Promise.all(
-        items.map((item) => this.mapItemToAlgolia(item))
-      );
+          if (itemsLeft) args.after = result[result.length - 1].cursor;
 
-      await this.addObjects(indexableItems);
-    }
+          const indexableItems = await Promise.all(
+            items.map((item) => this.mapItemToAlgolia(item))
+          );
+
+          await this.addObjects(indexableItems);
+        }
+      })
+    );
   }
 
   async byPaginatedQuery({ query, after, first = 20 }) {

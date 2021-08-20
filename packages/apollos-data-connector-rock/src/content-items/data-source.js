@@ -549,9 +549,11 @@ export default class ContentItem extends RockApolloDataSource {
   };
 
   byUserFeed = () =>
+    console.warn('ContentItem.byUserFeed is deprecated') ||
     this.byActive().orderBy('StartDateTime', 'desc').expand('ContentChannel');
 
   byActive = () =>
+    console.warn('ContentItem.byActive is deprecated') ||
     this.request()
       .filterOneOf(
         this.activeChannelIds.map((id) => `ContentChannelId eq ${id}`)
@@ -560,6 +562,7 @@ export default class ContentItem extends RockApolloDataSource {
       .andFilter(this.LIVE_CONTENT());
 
   byDateAndActive = async ({ datetime }) =>
+    console.warn('ContentItem.byDateAndActive is deprecated') ||
     this.request()
       .filterOneOf(
         this.activeChannelIds.map((id) => `ContentChannelId eq ${id}`)
