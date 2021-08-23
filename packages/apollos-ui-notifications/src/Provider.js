@@ -1,5 +1,3 @@
-/* eslint-disable no-empty */
-
 import URL from 'url';
 import querystring from 'querystring';
 import React, { Component } from 'react';
@@ -9,8 +7,12 @@ import { gql } from '@apollo/client';
 import { withApollo } from '@apollo/client/react/hoc';
 import { get } from 'lodash';
 import OneSignal from 'react-native-onesignal';
+import ApollosConfig from '@apollosproject/config';
+
 import { resolvers, defaults } from './store';
 import PushProvider from './pushProvider';
+
+const APP_ID = ApollosConfig.ONESIGNAL_APP_ID || ApollosConfig.ONE_SIGNAL_KEY;
 
 const UPDATE_DEVICE_PUSH_ID = gql`
   mutation updateDevicePushId($pushId: String!) {
@@ -30,7 +32,6 @@ class NotificationsInit extends Component {
       PropTypes.arrayOf(PropTypes.node),
       PropTypes.node,
     ]).isRequired,
-    oneSignalKey: PropTypes.string.isRequired,
     navigate: PropTypes.func.isRequired,
     client: PropTypes.shape({
       mutate: PropTypes.func,
@@ -60,16 +61,16 @@ class NotificationsInit extends Component {
 
   async componentDidMount() {
     // One Signal 4.x
-    if (OneSignal.setAppId && this.props.oneSignalKey) {
-      OneSignal.setAppId(this.props.oneSignalKey);
+    if (OneSignal.setAppId && APP_ID) {
+      OneSignal.setAppId(APP_ID);
       OneSignal.setNotificationWillShowInForegroundHandler(this.onReceived);
       OneSignal.setNotificationOpenedHandler(this.onOpened);
 
       const deviceState = await OneSignal.getDeviceState();
       this.onIds(deviceState);
-    } else {
+    } else if (APP_ID) {
       // backup, for OneSignal 3.x
-      OneSignal.init(this.props.oneSignalKey, {
+      OneSignal.init(APP_ID, {
         kOSSettingsKeyAutoPrompt: false,
       });
       OneSignal.addEventListener('received', this.onReceived);
@@ -86,12 +87,16 @@ class NotificationsInit extends Component {
 
   componentWillUnmount() {
     Linking.removeEventListener('url');
-    if (OneSignal.clearHandlers) {
-      OneSignal.clearHandlers();
-    } else {
-      OneSignal.removeEventListener('received');
-      OneSignal.removeEventListener('opened');
-      OneSignal.removeEventListener('ids');
+    if (APP_ID) {
+      // v4
+      if (OneSignal.clearHandlers) {
+        OneSignal.clearHandlers();
+        // v3
+      } else {
+        OneSignal.removeEventListener('received');
+        OneSignal.removeEventListener('opened');
+        OneSignal.removeEventListener('ids');
+      }
     }
   }
 
