@@ -24,6 +24,7 @@ export ContentChildFeedConnected, {
   GET_CONTENT_CHILD_SIBLINGS,
 } from './ContentChildFeedConnected';
 export ContentFeedConnected, { GET_CONTENT_FEED } from './ContentFeedConnected';
+export { default as ContentSingleConnected } from './ContentSingleConnected';
 export ContentParentFeedConnected, {
   GET_CONTENT_PARENT_CHILDREN,
 } from './ContentParentFeedConnected';
