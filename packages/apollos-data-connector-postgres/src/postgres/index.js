@@ -71,7 +71,6 @@ const defineModel = ({
   const model = sequelize.define(
     modelName,
     {
-      ...attributes,
       id: {
         primaryKey: true,
         type: DataTypes.UUID,
@@ -92,6 +91,7 @@ const defineModel = ({
             originType: { type: DataTypes.STRING, allowNull: false },
           }
         : {}),
+      ...attributes,
     },
     {
       underscored: true,

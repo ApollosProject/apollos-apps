@@ -21,7 +21,7 @@ export {
 } from './pagination/utils';
 export { resolverMerge, schemaMerge } from './utils';
 export { setupUniversalLinks, generateAppLink } from './linking';
-export { Interfaces };
+export { Interfaces, Node };
 
 const safeGetWithWarning = (name) => (data, key) => {
   if (data == null) {

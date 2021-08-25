@@ -23,7 +23,6 @@ export default async ({ maxWorkers }) => {
   });
   await client.connect();
 
-
   await Promise.all(
     times(maxWorkers, (i) => {
       const name = dbName(i + 1);
