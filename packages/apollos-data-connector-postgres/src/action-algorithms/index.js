@@ -75,11 +75,12 @@ class ActionAlgorithm extends PostgresDataSource {
   } = {}) {
     const { PrayerRequest, Feature } = this.context.dataSources;
     Feature.setCacheHint({ maxAge: 0, scope: 'PRIVATE' });
-    const cursor = await PrayerRequest.byDailyPrayerFeed({
+
+    return PrayerRequest.byDailyPrayerFeed({
       numberDaysSincePrayer,
       personId,
+      limit,
     });
-    return cursor.top(limit).get();
   }
 
   // Gets the first 3 upcoming events

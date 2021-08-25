@@ -198,14 +198,21 @@ export default class Interactions extends RockApolloDataSource {
     });
 
     const currentUser = await Auth.getCurrentPerson();
-    await this.post('/Interactions', {
-      PersonAliasId: currentUser.primaryAliasId,
-      InteractionComponentId: interactionComponent.id,
-      Operation: action,
-      InteractionDateTime: new Date().toJSON(),
-      InteractionSummary: `${action}`,
-      ForeignKey: nodeId,
-    });
+
+    // Currently it throws an error for a postgres created prayer, this will be fixed once they are shoveled back
+    // into Rock or on command during the prayer creation
+    try {
+      await this.post('/Interactions', {
+        PersonAliasId: currentUser.primaryAliasId,
+        InteractionComponentId: interactionComponent.id,
+        Operation: action,
+        InteractionDateTime: new Date().toJSON(),
+        InteractionSummary: `${action}`,
+        ForeignKey: nodeId,
+      });
+    } catch (e) {
+      console.warn(e);
+    }
 
     if (additional) {
       this.createAdditionalInteractions({ id, __type, action });

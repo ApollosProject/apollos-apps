@@ -141,9 +141,9 @@ export default class Person extends PostgresDataSource {
     return where;
   };
 
-  async getCurrentPersonId() {
+  async getCurrentPerson() {
     if (this.context.currentPostgresPerson) {
-      return this.context.currentPostgresPerson.id;
+      return this.context.currentPostgresPerson;
     }
     const currentPersonWhere = await this.whereCurrentPerson();
     const person = await this.model.findOne({ where: currentPersonWhere });
@@ -156,6 +156,15 @@ export default class Person extends PostgresDataSource {
     // cache the current user on the context. avoids oft repeated n+1 queries.
     // this is a huge win, but we need to identify a more elegant way to do this in the future.
     this.context.currentPostgresPerson = person;
+
+    return person;
+  }
+
+  async getCurrentPersonId() {
+    if (this.context.currentPostgresPerson) {
+      return this.context.currentPostgresPerson.id;
+    }
+    const person = await this.getCurrentPerson();
     return person.id;
   }
 

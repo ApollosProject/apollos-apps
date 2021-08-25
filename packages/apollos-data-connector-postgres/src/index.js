@@ -22,5 +22,6 @@ export * as Notification from './notifications';
 export * as NotificationPreference from './notification-preferences';
 export * as Media from './media';
 export * as Tag from './tags';
+export * as PrayerRequest from './prayers';
 
 export createMigrationRunner from './postgres/performMigrations';
