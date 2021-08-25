@@ -26,8 +26,8 @@ describe('UserAvatarHeaderConnected component', () => {
               profile: {
                 __typename: 'Person',
                 id: 'Person:123',
-                firstName: 'George',
-                lastName: 'Costanaza',
+                firstName: 'Vincent',
+                lastName: 'Wilson',
                 photo: {
                   uri:
                     'https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2',
@@ -85,7 +85,9 @@ describe('UserAvatarHeaderConnected component', () => {
         <Providers MockedProvider={MockedProvider} mocks={mocks}>
           <UserAvatarHeaderConnected />
         </Providers>
-      )
+      ),
+      null,
+      { renderCount: 2 }
     );
     expect(tree).toMatchSnapshot();
   });

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Query } from '@apollo/client/react/components';
+import React, { useEffect } from 'react';
+import { useQuery } from '@apollo/client';
 import PropTypes from 'prop-types';
 import { useNavigation } from '@react-navigation/native';
 import { get } from 'lodash';
@@ -8,44 +8,45 @@ import { H3, styled, PaddedView } from '@apollosproject/ui-kit';
 import UserAvatarConnected from '../UserAvatarConnected';
 import GET_USER_PROFILE from './getUserProfile';
 
-const GetUserProfile = ({ children }) => (
-  <Query query={GET_USER_PROFILE}>
-    {({ data: { currentUser = {} } = {} }) => {
-      const firstName = get(currentUser, 'profile.firstName');
-      return children({ firstName });
-    }}
-  </Query>
-);
-
-GetUserProfile.propTypes = {
-  children: PropTypes.func.isRequired,
-};
-
 const Container = styled({
   alignItems: 'center',
   justifyContent: 'center',
 })(PaddedView);
 
-const UserAvatarHeader = ({ buttonIcon, message, size, ...props }) => {
+const UserAvatarHeader = ({
+  buttonIcon,
+  message,
+  size,
+  refetchRef,
+  ...props
+}) => {
   const navigation = useNavigation();
+
+  const { data, refetch } = useQuery(GET_USER_PROFILE, {
+    fetchPolicy: 'cache-and-network',
+  });
+
+  useEffect(() => {
+    if (refetch && refetchRef) refetchRef({ refetch, id: 'user-profile' });
+  }, []);
+
+  const firstName = get(data, 'currentUser.profile.firstName');
+
   return (
     <Container>
       <PaddedView horizontal={false}>
         <UserAvatarConnected
           size={size}
+          refetchRef={refetchRef}
           buttonIcon={buttonIcon}
           onPressIcon={() => navigation.navigate('UserSettings')}
           {...props}
         />
       </PaddedView>
-      <GetUserProfile>
-        {({ firstName }) => (
-          <H3>
-            {message}
-            {firstName ? ` ${firstName}` : ''}!
-          </H3>
-        )}
-      </GetUserProfile>
+      <H3>
+        {message}
+        {firstName ? ` ${firstName}` : ''}!
+      </H3>
     </Container>
   );
 };
@@ -55,6 +56,7 @@ UserAvatarHeader.propTypes = {
   message: PropTypes.string,
   onPressIcon: PropTypes.func,
   size: PropTypes.string,
+  refetchRef: PropTypes.func,
 };
 
 UserAvatarHeader.defaultProps = {

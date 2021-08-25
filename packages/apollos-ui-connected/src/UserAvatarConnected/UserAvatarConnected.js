@@ -1,23 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { get } from 'lodash';
-import { Query } from '@apollo/client/react/components';
+import { useQuery } from '@apollo/client';
 
 import { Avatar } from '@apollosproject/ui-kit';
 import GET_USER_PHOTO from './getUserPhoto';
-
-const GetPhotoData = ({ children }) => (
-  <Query query={GET_USER_PHOTO} fetchPolicy={'cache-and-network'}>
-    {({ data: { currentUser = {} } = {} }) => {
-      const profile = get(currentUser, 'profile', {});
-      return children(profile);
-    }}
-  </Query>
-);
-
-GetPhotoData.propTypes = {
-  children: PropTypes.func.isRequired,
-};
 
 const UserAvatarConnected = ({
   buttonIcon,
@@ -25,22 +11,31 @@ const UserAvatarConnected = ({
   iconFill,
   isLoading,
   onPressIcon,
+  refetchRef,
   size,
-}) => (
-  <GetPhotoData>
-    {(profile) => (
-      <Avatar
-        buttonIcon={buttonIcon}
-        containerStyle={containerStyle}
-        iconFill={iconFill}
-        isLoading={isLoading}
-        onPressIcon={onPressIcon}
-        size={size}
-        profile={profile}
-      />
-    )}
-  </GetPhotoData>
-);
+}) => {
+  const { data, refetch } = useQuery(GET_USER_PHOTO, {
+    fetchPolicy: 'cache-and-network',
+  });
+
+  useEffect(() => {
+    if (refetch && refetchRef)
+      refetchRef({ refetch, id: 'user-profile-image' });
+  }, []);
+
+  const profile = data?.currentUser?.profile || {};
+  return (
+    <Avatar
+      buttonIcon={buttonIcon}
+      containerStyle={containerStyle}
+      iconFill={iconFill}
+      isLoading={isLoading}
+      onPressIcon={onPressIcon}
+      size={size}
+      profile={profile}
+    />
+  );
+};
 
 UserAvatarConnected.propTypes = {
   buttonIcon: PropTypes.string,
@@ -48,6 +43,7 @@ UserAvatarConnected.propTypes = {
   iconFill: PropTypes.string,
   isLoading: PropTypes.bool,
   onPressIcon: PropTypes.func,
+  refetchRef: PropTypes.func,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
 };
 

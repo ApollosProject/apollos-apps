@@ -1677,7 +1677,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                               }
                             >
                               Hello
-                               Vincent
+                               George
                               !
                             </Text>
                           </View>

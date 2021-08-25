@@ -57,7 +57,7 @@ const ConnectScreenConnected = (props) => {
               />
             }
           >
-            <UserAvatarHeaderConnected />
+            <UserAvatarHeaderConnected refetchRef={refetchRef} />
             {ActionBar && <ActionBar />}
             <RequestedFollowListConnected refetchRef={refetchRef} />
             <SuggestedFollowListConnected
