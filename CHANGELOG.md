@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.31.0](https://github.com/ApollosProject/apollos-apps/compare/v2.30.0...v2.31.0) (2021-08-26)
+
+
+### Features
+
+* adds content single ([#2141](https://github.com/ApollosProject/apollos-apps/issues/2141)) ([06d70e9](https://github.com/ApollosProject/apollos-apps/commit/06d70e9423c7148c85434acffa2437e5efd49d8c))
+* Adds Expires at field ([#2127](https://github.com/ApollosProject/apollos-apps/issues/2127)) ([a059b3f](https://github.com/ApollosProject/apollos-apps/commit/a059b3f77cdb94a4bd1a616be6e99ed240ab5602))
+* Postgres interaction table ([#2144](https://github.com/ApollosProject/apollos-apps/issues/2144)) ([51ca3cf](https://github.com/ApollosProject/apollos-apps/commit/51ca3cfe128c7af859f0933415e4f66f2633783e))
+* Postgres Prayers ([#2138](https://github.com/ApollosProject/apollos-apps/issues/2138)) ([96adbec](https://github.com/ApollosProject/apollos-apps/commit/96adbecbff44ebd00d9674756c2b5f0e4d79eb1d))
+* Pull to refetch user avatar ([#2149](https://github.com/ApollosProject/apollos-apps/issues/2149)) ([fb109c4](https://github.com/ApollosProject/apollos-apps/commit/fb109c4b88202d6c0d34dd0d32a90233c041c0ef))
+
+
+### Bug Fixes
+
+* adds openurl and on press handler to node features ([#2147](https://github.com/ApollosProject/apollos-apps/issues/2147)) ([634ba83](https://github.com/ApollosProject/apollos-apps/commit/634ba8352b6213f0dfce3c984b7c87f37acb3a22))
+* ensures onesignal config error wont causes problems ([#2148](https://github.com/ApollosProject/apollos-apps/issues/2148)) ([3553e09](https://github.com/ApollosProject/apollos-apps/commit/3553e090bc7e9fbc285e53b0f628f97bf9b2b7b7))
+* Fullscreen video bug ([#2137](https://github.com/ApollosProject/apollos-apps/issues/2137)) ([82b8854](https://github.com/ApollosProject/apollos-apps/commit/82b8854679f5d7b8a458d7918e9d1f5ba2375768))
+* missing icon will not crash the app ([#2139](https://github.com/ApollosProject/apollos-apps/issues/2139)) ([250cd9b](https://github.com/ApollosProject/apollos-apps/commit/250cd9b57142a47b419e1fd97fa6127d77948930))
+* rename 'Suggested Followers' to 'People to Follow' ([#2135](https://github.com/ApollosProject/apollos-apps/issues/2135)) ([fac910b](https://github.com/ApollosProject/apollos-apps/commit/fac910b90ae61182353331d9941cc9e10d4cc27c))
+
+
+
 ## [2.30.0](https://github.com/ApollosProject/apollos-apps/compare/v2.29.3...v2.30.0) (2021-08-17)
 
 

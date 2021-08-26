@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.31.0](https://github.com/apollosproject/apollos-apps/compare/v2.30.0...v2.31.0) (2021-08-26)
+
+
+### Bug Fixes
+
+* ensures onesignal config error wont causes problems ([#2148](https://github.com/apollosproject/apollos-apps/issues/2148)) ([3553e09](https://github.com/apollosproject/apollos-apps/commit/3553e090bc7e9fbc285e53b0f628f97bf9b2b7b7))
+
+
+
 ## [2.30.0](https://github.com/apollosproject/apollos-apps/compare/v2.29.3...v2.30.0) (2021-08-17)
 
 **Note:** Version bump only for package @apollosproject/data-connector-onesignal

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.31.0](https://github.com/apollosproject/apollos-apps/compare/v2.30.0...v2.31.0) (2021-08-26)
+
+
+### Features
+
+* Adds Expires at field ([#2127](https://github.com/apollosproject/apollos-apps/issues/2127)) ([a059b3f](https://github.com/apollosproject/apollos-apps/commit/a059b3f77cdb94a4bd1a616be6e99ed240ab5602))
+* Postgres interaction table ([#2144](https://github.com/apollosproject/apollos-apps/issues/2144)) ([51ca3cf](https://github.com/apollosproject/apollos-apps/commit/51ca3cfe128c7af859f0933415e4f66f2633783e))
+* Postgres Prayers ([#2138](https://github.com/apollosproject/apollos-apps/issues/2138)) ([96adbec](https://github.com/apollosproject/apollos-apps/commit/96adbecbff44ebd00d9674756c2b5f0e4d79eb1d))
+
+
+
 ## [2.30.0](https://github.com/apollosproject/apollos-apps/compare/v2.29.3...v2.30.0) (2021-08-17)
 
 

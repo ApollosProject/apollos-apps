@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.31.0](https://github.com/apollosproject/apollos-apps/compare/v2.30.0...v2.31.0) (2021-08-26)
+
+
+### Features
+
+* Postgres interaction table ([#2144](https://github.com/apollosproject/apollos-apps/issues/2144)) ([51ca3cf](https://github.com/apollosproject/apollos-apps/commit/51ca3cfe128c7af859f0933415e4f66f2633783e))
+
+
+
 ## [2.30.0](https://github.com/apollosproject/apollos-apps/compare/v2.29.3...v2.30.0) (2021-08-17)
 
 **Note:** Version bump only for package @apollosproject/server-core

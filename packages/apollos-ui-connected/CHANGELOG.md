@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.31.0](https://github.com/apollosproject/apollos-apps/compare/v2.30.0...v2.31.0) (2021-08-26)
+
+
+### Features
+
+* adds content single ([#2141](https://github.com/apollosproject/apollos-apps/issues/2141)) ([06d70e9](https://github.com/apollosproject/apollos-apps/commit/06d70e9423c7148c85434acffa2437e5efd49d8c))
+* Pull to refetch user avatar ([#2149](https://github.com/apollosproject/apollos-apps/issues/2149)) ([fb109c4](https://github.com/apollosproject/apollos-apps/commit/fb109c4b88202d6c0d34dd0d32a90233c041c0ef))
+
+
+### Bug Fixes
+
+* adds openurl and on press handler to node features ([#2147](https://github.com/apollosproject/apollos-apps/issues/2147)) ([634ba83](https://github.com/apollosproject/apollos-apps/commit/634ba8352b6213f0dfce3c984b7c87f37acb3a22))
+* rename 'Suggested Followers' to 'People to Follow' ([#2135](https://github.com/apollosproject/apollos-apps/issues/2135)) ([fac910b](https://github.com/apollosproject/apollos-apps/commit/fac910b90ae61182353331d9941cc9e10d4cc27c))
+
+
+
 ## [2.30.0](https://github.com/apollosproject/apollos-apps/compare/v2.29.3...v2.30.0) (2021-08-17)
 
 
