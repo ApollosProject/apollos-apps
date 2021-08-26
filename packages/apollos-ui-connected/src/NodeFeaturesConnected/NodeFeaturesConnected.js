@@ -4,8 +4,17 @@ import { Query } from '@apollo/client/react/components';
 import { ErrorCard, named } from '@apollosproject/ui-kit';
 import { get } from 'lodash';
 
-import FeaturesFeedConnected from '../FeaturesFeedConnected';
+import FeaturesFeedConnected, {
+  FEATURE_FEED_ACTION_MAP,
+} from '../FeaturesFeedConnected';
+import RockAuthedWebBrowser from '../RockAuthedWebBrowser';
 import GET_NODE_FEATURES from './getNodeFeatures';
+
+function handleOnPress({ action, ...props }) {
+  if (FEATURE_FEED_ACTION_MAP[action]) {
+    FEATURE_FEED_ACTION_MAP[action]({ action, ...props });
+  }
+}
 
 const NodeFeaturesConnected = ({ Component, nodeId, ...props }) => {
   if (!nodeId) return null;
@@ -25,7 +34,18 @@ const NodeFeaturesConnected = ({ Component, nodeId, ...props }) => {
 
         if (!featureFeedId) return null;
 
-        return <Component featureFeedId={featureFeedId} {...props} />;
+        return (
+          <RockAuthedWebBrowser>
+            {(openUrl) => (
+              <Component
+                openUrl={openUrl}
+                featureFeedId={featureFeedId}
+                onPressActionItem={handleOnPress}
+                {...props}
+              />
+            )}
+          </RockAuthedWebBrowser>
+        );
       }}
     </Query>
   );

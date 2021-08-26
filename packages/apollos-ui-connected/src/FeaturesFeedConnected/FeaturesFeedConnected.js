@@ -129,7 +129,8 @@ class FeaturesFeedConnected extends PureComponent {
 
 FeaturesFeedConnected.propTypes = {
   featureFeedId: PropTypes.string,
-  onPressActionItem: PropTypes.func,
+  onPressActionItem: PropTypes.func.isRequired,
+  openUrl: PropTypes.func.isRequired,
   additionalFeatures: PropTypes.shape({}),
 };
 

@@ -3,5 +3,7 @@
 exports[`NodeFeaturesConnected should render 1`] = `
 <FeaturesFeedConnected
   featureFeedId="FeatureFeed:123"
+  onPressActionItem={[Function]}
+  openUrl={[Function]}
 />
 `;
