@@ -165,7 +165,8 @@ class MapView extends Component {
     return [
       campuses.find(({ id }) => id === currentCampus.id),
       ...campuses.filter(({ id }) => id !== currentCampus.id),
-    ];
+      // filter undefined in case they are members of an inactive campus
+    ].filter((campus) => !!campus);
   }
 
   get mappableCampuses() {
