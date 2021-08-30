@@ -14,6 +14,7 @@ export * as ContentItemsConnection from './content-items-connections';
 export * as Feature from './features';
 export * as UserFlag from './user-flags';
 export * as UserLike from './user-likes';
+export * as Likes from './likes';
 export * as Follow from './follows';
 export * as Interactions from './interactions';
 export * as Person from './people';
