@@ -8,7 +8,6 @@ import {
 } from '@apollosproject/server-core';
 import { Sequelize, Op } from 'sequelize';
 import ApollosConfig from '@apollosproject/config';
-import { uniq } from 'lodash';
 import { PostgresDataSource } from '../postgres';
 
 class ContentItemDataSource extends PostgresDataSource {
@@ -212,84 +211,153 @@ class ContentItemDataSource extends PostgresDataSource {
   };
 
   async getUpNext(model) {
-    const { Auth, Interactions } = this.context.dataSources;
+    const { Person } = this.context.dataSources;
 
     // Safely exit if we don't have a current user.
+    let currentPersonId;
+
     try {
-      await Auth.getCurrentPerson();
+      currentPersonId = await Person.getCurrentPersonId();
     } catch (e) {
       return null;
     }
 
-    const childItemsOldestFirst = await this.getChildren(model);
+    const childItemsByOldestPublishDate = await this.getChildren(model, {
+      include: [
+        {
+          model: this.sequelize.models.interaction,
+          where: {
+            personId: currentPersonId,
+            action: 'COMPLETE',
+          },
+          required: false,
+        },
+      ],
+    });
 
-    const childItems = childItemsOldestFirst.reverse();
+    const childItems = childItemsByOldestPublishDate.reverse();
 
-    const interactions = await Interactions.getInteractionsForCurrentUserAndNodes(
-      {
-        nodeIds: childItems.map(({ apollosId }) => apollosId),
-        actions: ['COMPLETE'],
-      }
-    );
-    const apollosIdsWithInteractions = interactions.map(
-      ({ foreignKey }) => foreignKey
-    );
+    const lastItemInteractedIndex = childItems.findIndex((contentItem) => {
+      return contentItem.interactions.length > 0;
+    });
 
-    const firstInteractedIndex = childItems.findIndex(({ apollosId }) =>
-      apollosIdsWithInteractions.includes(apollosId)
-    );
-
-    if (firstInteractedIndex === -1) {
-      // If you haven't completede anything, return the first (last in reversed array) item;
+    // If no item in the series has been interacted with
+    if (lastItemInteractedIndex === -1) {
+      // return the oldest item in the series
       return childItems[childItems.length - 1];
     }
-    if (firstInteractedIndex === 0) {
-      // If you have completed the last item, return null (no items left to read)
+
+    // If the last item in the series has been interacted with
+    if (lastItemInteractedIndex === 0) {
       return null;
     }
-    // otherwise, return the item immediately following (before) the item you have already read
-    return childItems[firstInteractedIndex - 1];
+    // return the item before the last interacted index
+    return childItems[lastItemInteractedIndex - 1];
   }
 
   async getSeriesWithUserProgress({ categoryIds = [] }) {
-    const { Auth, Interactions } = this.context.dataSources;
+    const { Person } = this.context.dataSources;
 
-    await Auth.getCurrentPerson();
+    const currentPersonId = await Person.getCurrentPersonId();
 
-    const interactions = await Interactions.getInteractionsForCurrentUser({
-      actions: ['SERIES_START'],
-    });
-    const ids = uniq(interactions.map(({ foreignKey }) => foreignKey));
-
-    const inProgressItems = (
-      await Promise.all(
-        ids.map(async (id) => {
-          const model = await this.model.findOne({
-            where:
-              categoryIds.length > 0
-                ? { apollosId: id, contentItemCategoryId: categoryIds }
-                : { apollosId: id },
-          });
-          return {
-            model,
-            percent: await this.getPercentComplete(model),
-          };
-        })
-      )
-    ).filter(
-      ({ percent, model }) => percent !== 100 && percent != null && model
+    const inProgressItems = await this.sequelize.query(
+      `
+      SELECT content_item.*
+      FROM
+         content_item 
+         INNER JOIN
+            (
+               SELECT
+                  count(children_with_interactions.id) AS total_children_interactions,
+                  content_item.id,
+                  total_children.count AS total_children_count,
+                  children_with_interactions.person_id
+               FROM
+                  content_item 
+                  INNER JOIN
+                     (
+                        SELECT
+                           content_item.*,
+                           interaction.id AS interaction_id,
+                           interaction.person_id
+                        FROM
+                           content_item 
+                           LEFT JOIN
+                              interaction 
+                              ON node_id = content_item.id 
+                        WHERE
+                           parent_id IS NOT NULL
+                           AND active = true
+                           AND publish_at < now()
+                           AND (
+                             expire_at IS NULL OR expire_at > now()
+                           )
+                           AND interaction.person_id = :personId
+                           AND interaction.id IS NOT NULL
+                     )
+                     AS children_with_interactions 
+                     ON content_item.id = children_with_interactions.parent_id 
+                  INNER JOIN
+                     (
+                        SELECT
+                           Count(id),
+                           parent_id 
+                        FROM
+                           content_item 
+                        WHERE
+                           parent_id IS NOT NULL
+                           AND active = true
+                           AND publish_at < now()
+                           AND (
+                             expire_at IS NULL OR expire_at > now()
+                           )
+                        GROUP BY
+                           content_item.parent_id
+                     )
+                     AS total_children 
+                     ON total_children.parent_id = content_item.id 
+               GROUP BY
+                  content_item.id,
+                  total_children.count,
+                  children_with_interactions.person_id
+            )
+            AS parents_with_counts 
+            ON parents_with_counts.id = content_item.id 
+      WHERE
+         content_item.active = true
+         ${
+           categoryIds.length > 0
+             ? `AND content_item.content_item_category_id IN(:categoryIds)`
+             : ''
+         }
+         AND content_item.publish_at < now()
+         AND (
+            content_item.expire_at IS NULL OR content_item.expire_at > now()
+         )   
+         AND total_children_interactions != total_children_count;
+         
+    `,
+      {
+        replacements: {
+          personId: currentPersonId,
+          categoryIds,
+        },
+        model: this.sequelize.models.contentItem,
+        mapToModel: true,
+      }
     );
 
-    return inProgressItems.map(({ model }) => model);
+    return inProgressItems;
   }
 
   async getPercentComplete(model) {
-    const { Auth, Interactions } = this.context.dataSources;
-    // This can, and should, be cached in redis or some other system at some point
+    const { Person } = this.context.dataSources;
 
     // Safely exit if we don't have a current user.
+    let currentPersonId;
+
     try {
-      await Auth.getCurrentPerson();
+      currentPersonId = await Person.getCurrentPersonId();
     } catch (e) {
       return null;
     }
@@ -298,28 +366,28 @@ class ContentItemDataSource extends PostgresDataSource {
       return null;
     }
 
-    const childItems = await model.getChildren();
+    const childItems = await this.getChildren(model, {
+      include: [
+        {
+          model: this.sequelize.models.interaction,
+          where: {
+            personId: currentPersonId,
+            action: 'COMPLETE',
+          },
+          required: false,
+        },
+      ],
+    });
 
     if (childItems.length === 0) {
       return 0;
     }
 
-    const interactions = await Interactions.getInteractionsForCurrentUserAndNodes(
-      {
-        nodeIds: childItems.map(({ apollosId }) => apollosId),
-        actions: ['COMPLETE'],
-      }
+    const childItemsWithInteractions = childItems.filter(
+      ({ interactions }) => interactions.length > 0
     );
 
-    const apollosIdsWithInteractions = interactions.map(
-      ({ foreignKey }) => foreignKey
-    );
-
-    const totalItemsWithInteractions = childItems.filter(({ apollosId }) =>
-      apollosIdsWithInteractions.includes(apollosId)
-    ).length;
-
-    return (totalItemsWithInteractions / childItems.length) * 100;
+    return (childItemsWithInteractions.length / childItems.length) * 100;
   }
 
   // eslint-disable-next-line class-methods-use-this

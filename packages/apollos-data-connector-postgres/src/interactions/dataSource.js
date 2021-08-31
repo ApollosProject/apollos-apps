@@ -53,6 +53,7 @@ export default class Interactions extends PostgresDataSource {
       schema: this.context.schema,
       __type,
     });
+
     // For each of this types
     return Promise.all(
       normalizedTypeNames.map(async (normalizedType) => {
@@ -97,7 +98,7 @@ export default class Interactions extends PostgresDataSource {
     });
   }
 
-  async getInteractionsForCurrentUser({ actions = [] } = {}) {
+  async getInteractionsForCurrentUser({ actions = [], queryArgs = {} } = {}) {
     let currentPersonId;
     try {
       currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
@@ -107,7 +108,9 @@ export default class Interactions extends PostgresDataSource {
     }
 
     return this.model.findAll({
+      ...queryArgs,
       where: {
+        ...(queryArgs.where ?? {}),
         personId: currentPersonId,
         ...(actions.length ? { action: actions } : {}),
       },

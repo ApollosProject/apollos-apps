@@ -31,6 +31,10 @@ const setupModel = configureModel(({ sequelize }) => {
     foreignKey: 'nodeId',
     constraints: false,
   });
+  sequelize.models.contentItem.hasMany(sequelize.models.interaction, {
+    foreignKey: 'nodeId',
+    sourceKey: 'id',
+  });
 });
 
 export { createModel, setupModel };

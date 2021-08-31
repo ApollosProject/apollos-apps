@@ -11,6 +11,7 @@ import {
   Person,
   Campus,
   Feature,
+  Interactions,
 } from '../../index';
 
 import { setupPostgresTestEnv } from '../../utils/testUtils';
@@ -25,10 +26,22 @@ const context = {
       getCurrentPersonId: () => currentPerson.id,
     },
   },
+  models: {
+    Node: {
+      getPossibleDataModels: () => [
+        'UniversalContentItem',
+        'ContentItem',
+        'ContentSeriesContentItem',
+      ],
+      get: jest.fn(() => ({})),
+    },
+  },
 };
 
 ApollosConfig.loadJs({
-  CONTENT: {},
+  CONTENT: {
+    TYPES: ['UniversalContentItem', 'ContentSeriesContentItem'],
+  },
 });
 
 describe('Apollos Postgres ContentItem DataSource', () => {
@@ -42,6 +55,7 @@ describe('Apollos Postgres ContentItem DataSource', () => {
       Person,
       Campus,
       Feature,
+      Interactions,
     ]);
 
     contentItem1 = await sequelize.models.contentItem.create({
@@ -82,7 +96,6 @@ describe('Apollos Postgres ContentItem DataSource', () => {
 
     expect(featureIndexes).toEqual(contentItemFeaturePriorities);
   });
-
   it('fetches a ContentItem by id', async () => {
     const item = await ContentItem.getFromId(contentItem1.id);
 
@@ -94,7 +107,6 @@ describe('Apollos Postgres ContentItem DataSource', () => {
 
     expect(itemFromRock.id).toBe(contentItem1.id);
   });
-
   it('will fetch newly published items', async () => {
     const contentItemPublished = await sequelize.models.contentItem.create({
       originId: '2',
@@ -123,7 +135,6 @@ describe('Apollos Postgres ContentItem DataSource', () => {
 
     expect(notFoundItem).toBe(null);
   });
-
   it('will not fetch expired items', async () => {
     const contentItemExpired = await sequelize.models.contentItem.create({
       originId: '2',
@@ -138,7 +149,6 @@ describe('Apollos Postgres ContentItem DataSource', () => {
 
     expect(item).toBe(null);
   });
-
   it('returns a share url', async () => {
     const shareUrl = await ContentItem.getShareUrl(contentItem1);
 
@@ -146,7 +156,6 @@ describe('Apollos Postgres ContentItem DataSource', () => {
       `undefined/app-link/content/UniversalContentItem:${contentItem1.id}`
     );
   });
-
   it('fetches sermons', async () => {
     const sermonCategory = await sequelize.models.contentItemCategory.create({
       originType: 'rock',
@@ -492,5 +501,199 @@ describe('Apollos Postgres ContentItem DataSource', () => {
       invalidItems.every(({ id }) => !allItemIds.includes(id))
     ).toBeTruthy();
     expect(validItems.every(({ id }) => allItemIds.includes(id))).toBeTruthy();
+  });
+
+  it('fetches series in progress by category IDs', async () => {
+    const InteractionDataSource = new Interactions.dataSource();
+    InteractionDataSource.initialize({ context });
+
+    currentPerson = await sequelize.models.people.create({
+      originId: '1',
+      originType: 'rock',
+      firstName: 'John',
+      lastName: 'Doe',
+      gender: 'MALE',
+    });
+
+    const contentItemCategory = await sequelize.models.contentItemCategory.create(
+      {
+        title: 'Test Category',
+        originId: '6',
+        originType: 'rock',
+      }
+    );
+
+    const seriesContentItem = await sequelize.models.contentItem.create({
+      originId: '2',
+      originType: 'rock',
+      apollosType: 'ContentSeriesContentItem',
+      title: 'Content Series Parent Item',
+      publishAt: new Date(),
+      active: true,
+      contentItemCategoryId: contentItemCategory.id,
+    });
+
+    contentItem1.parentId = seriesContentItem.id;
+    contentItem1.publishAt = new Date();
+    await contentItem1.save();
+
+    await sequelize.models.contentItem.create({
+      originId: '3',
+      originType: 'rock',
+      apollosType: 'UniversalContentItem',
+      title: 'The Second Content Item',
+      active: true,
+      parentId: seriesContentItem.id,
+      publishAt: new Date(),
+    });
+
+    await InteractionDataSource.createNodeInteraction({
+      nodeId: contentItem1.apollosId,
+      action: 'COMPLETE',
+      additional: false,
+    });
+
+    const seriesWithUserProgress = await ContentItem.getSeriesWithUserProgress({
+      categoryIds: [contentItemCategory.id],
+    });
+
+    expect(seriesWithUserProgress.length).toBe(1);
+    expect(seriesWithUserProgress[0].id).toEqual(seriesContentItem.id);
+  });
+
+  it('fetches the completion percentage of a Series Content Item', async () => {
+    const InteractionDataSource = new Interactions.dataSource();
+    InteractionDataSource.initialize({ context });
+
+    currentPerson = await sequelize.models.people.create({
+      originId: '1',
+      originType: 'rock',
+      firstName: 'John',
+      lastName: 'Doe',
+      gender: 'MALE',
+    });
+
+    const seriesContentItem = await sequelize.models.contentItem.create({
+      originId: '2',
+      originType: 'rock',
+      apollosType: 'ContentSeriesContentItem',
+      title: 'Content Series Parent Item',
+      publishAt: new Date(),
+      active: true,
+    });
+
+    contentItem1.parentId = seriesContentItem.id;
+    contentItem1.publishAt = new Date();
+    await contentItem1.save();
+
+    const contentItem2 = await sequelize.models.contentItem.create({
+      originId: '3',
+      originType: 'rock',
+      apollosType: 'UniversalContentItem',
+      title: 'The Second Content Item',
+      active: true,
+      parentId: seriesContentItem.id,
+      publishAt: new Date(),
+    });
+
+    // Create content item connections
+    await Promise.all(
+      [contentItem1, contentItem2].map(async ({ id: childId }, index) =>
+        sequelize.models.contentItemsConnection.create({
+          parentId: seriesContentItem.id,
+          childId,
+          originId: `${4 + index}`,
+          originType: 'rock',
+        })
+      )
+    );
+
+    await InteractionDataSource.createNodeInteraction({
+      nodeId: contentItem1.apollosId,
+      action: 'COMPLETE',
+      additional: false,
+    });
+
+    const percentComplete = await ContentItem.getPercentComplete(
+      seriesContentItem
+    );
+
+    expect(percentComplete).toEqual(50);
+  });
+
+  it('gets the next incomplete item in a series', async () => {
+    const InteractionDataSource = new Interactions.dataSource();
+    InteractionDataSource.initialize({ context });
+
+    currentPerson = await sequelize.models.people.create({
+      originId: '1',
+      originType: 'rock',
+      firstName: 'John',
+      lastName: 'Doe',
+      gender: 'MALE',
+    });
+
+    const seriesContentItem = await sequelize.models.contentItem.create({
+      originId: '2',
+      originType: 'rock',
+      apollosType: 'ContentSeriesContentItem',
+      title: 'Content Series Parent Item',
+      publishAt: new Date(),
+      active: true,
+    });
+
+    const childItemCount = 5;
+
+    const childItems = await Promise.all(
+      new Array(childItemCount).fill('').map(async (_, index) => {
+        const contentItem = await sequelize.models.contentItem.create({
+          originId: `${3 + index}`,
+          originType: 'rock',
+          apollosType: 'UniversalContentItem',
+          title: `Content Item ${index + 1}`,
+          active: true,
+          parentId: seriesContentItem.id,
+          publishAt: new Date(),
+        });
+
+        await sequelize.models.contentItemsConnection.create({
+          parentId: seriesContentItem.id,
+          childId: contentItem.id,
+          originId: `${3 + childItemCount + index}`,
+          originType: 'rock',
+          order: index,
+        });
+
+        return contentItem;
+      })
+    );
+
+    // Next up should be the first item
+    let nextUp = await ContentItem.getUpNext(seriesContentItem);
+    expect(nextUp.id).toEqual(childItems[0].id);
+
+    // View the first child item
+    await InteractionDataSource.createNodeInteraction({
+      nodeId: childItems[0].apollosId,
+      action: 'COMPLETE',
+      additional: false,
+    });
+
+    nextUp = await ContentItem.getUpNext(seriesContentItem);
+
+    // Next Up should be the second item
+    expect(nextUp.id).toEqual(childItems[1].id);
+
+    // View the last child item
+    await InteractionDataSource.createNodeInteraction({
+      nodeId: childItems[childItems.length - 1].apollosId,
+      action: 'COMPLETE',
+      additional: false,
+    });
+
+    nextUp = await ContentItem.getUpNext(seriesContentItem);
+
+    // Next Up should be null
+    expect(nextUp).toBeNull();
   });
 });
