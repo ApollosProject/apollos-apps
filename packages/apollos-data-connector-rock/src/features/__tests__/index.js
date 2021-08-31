@@ -340,6 +340,7 @@ describe('features', () => {
     });
 
     it('should throw an error when creating a ActionListFeature from a CONTENT_CHANNEL with no contentChannelId', async () => {
+      expect.assertions(1);
       const result = await feature.createActionListFeature({
         algorithms: [
           {
@@ -350,8 +351,11 @@ describe('features', () => {
         title: 'Test Action List',
         subtitle: "It's great!",
       });
-
-      expect(expandResult(result)).rejects.toThrowErrorMatchingSnapshot();
+      try {
+        await expandResult(result);
+      } catch (e) {
+        expect(e).toMatchSnapshot();
+      }
     });
 
     it('should create an ActionListFeature from no algorithms', async () => {

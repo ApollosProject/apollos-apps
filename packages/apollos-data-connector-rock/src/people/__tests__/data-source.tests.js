@@ -128,6 +128,7 @@ describe('Person', () => {
   });
 
   it('throws an error setting an invalid birth date', () => {
+    expect.assertions(1);
     const dataSource = new Person();
     const Auth = auth(dataSource);
     dataSource.context = {
@@ -145,6 +146,7 @@ describe('Person', () => {
   });
 
   it('Throws an error if trying to set an invalid gender', () => {
+    expect.assertions(1);
     const dataSource = new Person();
     const Auth = auth(dataSource);
     dataSource.context = {

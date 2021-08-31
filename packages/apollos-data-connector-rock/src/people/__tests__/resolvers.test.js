@@ -229,6 +229,7 @@ describe('enforceCurrentUser', () => {
   });
 
   it("won't swallow non-auth errors", () => {
+    expect.assertions(1);
     const context = {
       dataSources: {
         Auth: { getCurrentPerson: () => throw new Error('Random Error') },

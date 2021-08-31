@@ -494,6 +494,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
   it('should throw an error when passing a non-uuid to getStaticSuggestedFollowsFor', async () => {
     const followDataSource = new FollowDataSource();
+    expect.assertions(2);
 
     followDataSource.initialize({ context });
     const invalidCampus = followDataSource.getStaticSuggestedFollowsFor({
