@@ -13,7 +13,9 @@ const { APP_DATA_URL } = ApollosConfig;
 const PasswordEntryConnected = ({
   navigation,
   route: {
-    params: { forgotPasswordURL = `${APP_DATA_URL}/forgot-password` },
+    params: {
+      forgotPasswordURL = `${new URL('/forgot-password', APP_DATA_URL)}`,
+    },
   },
 }) => (
   <LoginConsumer>
