@@ -6,6 +6,9 @@ if [ $# -ne 0 ]; then
     exit
 fi
 
+echo "Enter password to decrypt secrets (press enter to skip):"
+read -r SECRET
+
 yarn
 
 yarn generate-stories
@@ -20,8 +23,7 @@ git clone git@github.com:ApollosProject/apollos-templates.git
 
 cd apollos-templates || exit
 git checkout "${BRANCH:-master}"
-echo "Enter password to decrypt secrets (press enter to skip):"
-read -r SECRET
+
 if [ "$SECRET" = "" ]; then
     echo "APP_DATA_URL=https://apollos-church-api.herokuapp.com" >>./apolloschurchapp/.env
 else
