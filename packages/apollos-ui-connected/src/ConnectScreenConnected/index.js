@@ -4,12 +4,10 @@ import PropTypes from 'prop-types';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { BackgroundView, styled } from '@apollosproject/ui-kit';
-import { HorizontalLikedContentFeedConnected } from '../HorizontalLikedContentFeedConnected';
 import {
   SuggestedFollowListConnected,
   RequestedFollowListConnected,
 } from '../FollowListConnected';
-import UserAvatarHeaderConnected from '../UserAvatarHeaderConnected';
 import FollowListSearchModalConnected from '../FollowListSearchModalConnected';
 
 const FlexedSafeAreaView = styled(
@@ -48,7 +46,7 @@ const ConnectScreenConnected = (props) => {
   return (
     <>
       <BackgroundView>
-        <FlexedSafeAreaView edges={['top', 'left', 'right']}>
+        <FlexedSafeAreaView edges={['left', 'right']}>
           <ScrollView
             refreshControl={
               <RefreshControl
@@ -57,7 +55,6 @@ const ConnectScreenConnected = (props) => {
               />
             }
           >
-            <UserAvatarHeaderConnected refetchRef={refetchRef} />
             {ActionBar && <ActionBar />}
             <RequestedFollowListConnected refetchRef={refetchRef} />
             <SuggestedFollowListConnected
@@ -66,7 +63,6 @@ const ConnectScreenConnected = (props) => {
               followListButtonTitle={'Find People to Follow'}
             />
 
-            <HorizontalLikedContentFeedConnected refetchRef={refetchRef} />
             {ActionTable && <ActionTable />}
             {children}
           </ScrollView>
