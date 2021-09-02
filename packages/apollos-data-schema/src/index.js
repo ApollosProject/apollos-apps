@@ -373,6 +373,7 @@ export const interactionsSchema = gql`
   enum InteractionAction {
     VIEW
     COMPLETE
+    SERIES_START
   }
 
   input InteractionDataField {
@@ -383,6 +384,23 @@ export const interactionsSchema = gql`
   type InteractionResult {
     success: Boolean
     node: Node
+  }
+
+  type Interaction implements Node {
+    id: ID!
+    action: InteractionAction
+    node: Node
+  }
+
+  extend type Query {
+    interactions(
+      # personId is assumed to be current user
+      # any other personID will return zero results.
+      # ID is included since it provides for a level of built in cachability.
+      personId: ID!
+      nodeId: ID
+      action: InteractionAction
+    ): [Interaction]
   }
 
   extend type Mutation {

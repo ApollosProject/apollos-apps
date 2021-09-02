@@ -29,12 +29,10 @@ export default class Interactions extends PostgresDataSource {
     if (parent) {
       // Check to see if we have started the series before
       const nodeId = parent.apollosId;
-      const otherInteractions = await this.getInteractionsForCurrentUserAndNodes(
-        {
-          nodeIds: [nodeId],
-          actions: ['SERIES_START'],
-        }
-      );
+      const otherInteractions = await this.getInteractionsForCurrentUser({
+        nodeIds: [nodeId],
+        actions: ['SERIES_START'],
+      });
       // If we haven't, mark it as started
       if (!otherInteractions.length) {
         await this.createNodeInteraction({
@@ -71,49 +69,37 @@ export default class Interactions extends PostgresDataSource {
     );
   }
 
+  // Kept for backwards compat.
   async getInteractionsForCurrentUserAndNodes({ nodeIds, actions = [] } = {}) {
-    let currentPersonId;
-    try {
-      currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
-    } catch (e) {
-      return [];
-    }
-
-    if (nodeIds.length === 0) {
-      return [];
-    }
-
-    return this.model.findAll({
-      where: {
-        personId: currentPersonId,
-        ...(actions.length ? { action: actions } : {}),
-      },
-      include: [
-        {
-          model: this.sequelize.models.contentItem,
-          where: { apollosId: nodeIds },
-          required: true,
-        },
-      ],
-    });
+    return this.getInteractionsForCurrentUser({ actions, nodeIds });
   }
 
-  async getInteractionsForCurrentUser({ actions = [], queryArgs = {} } = {}) {
+  async getInteractionsForCurrentUser(
+    { actions = [], nodeIds = [] } = {},
+    queryArgs = {}
+  ) {
     let currentPersonId;
     try {
       currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
     } catch (e) {
-      console.log(e, { currentPersonId });
       return [];
     }
 
     return this.model.findAll({
       ...queryArgs,
       where: {
-        ...(queryArgs.where ?? {}),
         personId: currentPersonId,
         ...(actions.length ? { action: actions } : {}),
+        ...(queryArgs?.where || {}),
       },
+      include: [
+        {
+          model: this.sequelize.models.contentItem,
+          ...(nodeIds.length ? { where: { apollosId: nodeIds } } : {}),
+          required: !!nodeIds.length,
+        },
+        ...(queryArgs?.include || []),
+      ],
     });
   }
 
