@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.32.0](https://github.com/apollosproject/apollos-apps/compare/v2.31.0...v2.32.0) (2021-09-03)
+
+
+### Features
+
+* 100% Campus postgres ([#2167](https://github.com/apollosproject/apollos-apps/issues/2167)) ([40584ac](https://github.com/apollosproject/apollos-apps/commit/40584acda3839973f69c0f6131b86324cf59fbca))
+* Interactions queries ([#2164](https://github.com/apollosproject/apollos-apps/issues/2164)) ([2398bfb](https://github.com/apollosproject/apollos-apps/commit/2398bfb8fb95bb501c25b0351f0d92708b8867d9))
+* user likes based on interaction table ([#2150](https://github.com/apollosproject/apollos-apps/issues/2150)) ([5626b96](https://github.com/apollosproject/apollos-apps/commit/5626b966164318306ff228e532323f0e78f44a5e))
+* User progress from Postgres ([#2151](https://github.com/apollosproject/apollos-apps/issues/2151)) ([807d001](https://github.com/apollosproject/apollos-apps/commit/807d001b44ca599126b809cc5c98c1e3b7b6aa4b))
+
+
+
 ## [2.31.0](https://github.com/apollosproject/apollos-apps/compare/v2.30.0...v2.31.0) (2021-08-26)
 
 

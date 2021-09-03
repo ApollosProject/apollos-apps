@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.32.0](https://github.com/apollosproject/apollos-apps/compare/v2.31.0...v2.32.0) (2021-09-03)
+
+
+### Bug Fixes
+
+* removed UserAvatar and Recently Liked from Connect Tab ([#2165](https://github.com/apollosproject/apollos-apps/issues/2165)) ([0b6deae](https://github.com/apollosproject/apollos-apps/commit/0b6deae8449928101cf99c7f66168b190fa23c2d))
+
+
+
 ## [2.31.0](https://github.com/apollosproject/apollos-apps/compare/v2.30.0...v2.31.0) (2021-08-26)
 
 

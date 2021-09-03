@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.32.0](https://github.com/apollosproject/apollos-apps/compare/v2.31.0...v2.32.0) (2021-09-03)
+
+
+### Features
+
+* Interactions queries ([#2164](https://github.com/apollosproject/apollos-apps/issues/2164)) ([2398bfb](https://github.com/apollosproject/apollos-apps/commit/2398bfb8fb95bb501c25b0351f0d92708b8867d9))
+
+
+
 ## [2.31.0](https://github.com/apollosproject/apollos-apps/compare/v2.30.0...v2.31.0) (2021-08-26)
 
 **Note:** Version bump only for package @apollosproject/data-schema

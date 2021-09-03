@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.32.0](https://github.com/apollosproject/apollos-apps/compare/v2.31.0...v2.32.0) (2021-09-03)
+
+
+### Bug Fixes
+
+* prevents crash when users are members of inactive campuses ([#2152](https://github.com/apollosproject/apollos-apps/issues/2152)) ([2ea3df3](https://github.com/apollosproject/apollos-apps/commit/2ea3df37eed6940321b11b6bd5219299a38a5704))
+
+
+
 ## [2.31.0](https://github.com/apollosproject/apollos-apps/compare/v2.30.0...v2.31.0) (2021-08-26)
 
 **Note:** Version bump only for package @apollosproject/ui-mapview
