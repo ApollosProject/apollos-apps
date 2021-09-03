@@ -1,12 +1,18 @@
+/* eslint-disable import/named */
 import ApollosConfig from '@apollosproject/config';
 import { sequelize } from '../../postgres/index';
 import FollowDataSource from '../dataSource';
 import PeopleDataSource from '../../people/dataSource';
-import * as People from '../../people';
-import * as Campus from '../../campus';
 import * as Follows from '../index';
 import { setupPostgresTestEnv } from '../../utils/testUtils';
 import { FollowState } from '../model';
+import {
+  Person,
+  ContentItem,
+  Media,
+  ContentItemCategory,
+  Campus,
+} from '../../index';
 
 let currentPersonId;
 const notificationMock = jest.fn();
@@ -31,7 +37,14 @@ let person4;
 
 describe('Apollos Postgres FollowRequest DataSource', () => {
   beforeEach(async () => {
-    await setupPostgresTestEnv([People, Campus, Follows]);
+    await setupPostgresTestEnv([
+      Person,
+      Campus,
+      Follows,
+      ContentItem,
+      ContentItemCategory,
+      Media,
+    ]);
     // Make sure people exist for all of our test ids
     const peopleDataSource = new PeopleDataSource();
     peopleDataSource.initialize({ context });

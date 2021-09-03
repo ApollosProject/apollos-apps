@@ -1,10 +1,16 @@
+/* eslint-disable import/named */
 import { sequelize } from '../../postgres/index';
 import NotificationPreferenceDataSource from '../../notification-preferences/dataSource';
 import NotificationsDataSource from '../dataSource';
-import * as People from '../../people';
-import * as Campus from '../../campus';
-import * as NotificationPreferences from '../../notification-preferences';
 import * as Notifications from '../index';
+import {
+  Person,
+  ContentItem,
+  Media,
+  ContentItemCategory,
+  NotificationPreference,
+  Campus,
+} from '../../index';
 import { setupPostgresTestEnv } from '../../utils/testUtils';
 
 let person1;
@@ -14,10 +20,13 @@ const context = {};
 describe('Apollos Postgres Notifications DataSource', () => {
   beforeEach(async () => {
     await setupPostgresTestEnv([
-      People,
+      Person,
       Campus,
-      NotificationPreferences,
+      NotificationPreference,
       Notifications,
+      ContentItemCategory,
+      Media,
+      ContentItem,
     ]);
 
     person1 = await sequelize.models.people.create({

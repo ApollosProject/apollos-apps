@@ -1,11 +1,27 @@
+/* eslint-disable import/named */
+
 import { sequelize } from '../../postgres/index';
 import * as People from '../index';
-import * as Campus from '../../campus';
+import {
+  ContentItem,
+  Media,
+  ContentItemCategory,
+  Campus,
+  Follow,
+} from '../../index';
+
 import { setupPostgresTestEnv } from '../../utils/testUtils';
 
 describe('People model', () => {
   beforeEach(async () => {
-    await setupPostgresTestEnv([People, Campus]);
+    await setupPostgresTestEnv([
+      People,
+      ContentItem,
+      ContentItemCategory,
+      Campus,
+      Media,
+      Follow,
+    ]);
   });
   afterEach(async () => {
     await sequelize.drop({ cascade: true });

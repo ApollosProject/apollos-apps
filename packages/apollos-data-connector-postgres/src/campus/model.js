@@ -16,6 +16,8 @@ const createModel = defineModel({
     longitude: DataTypes.FLOAT,
     imageUrl: DataTypes.TEXT,
     digital: DataTypes.BOOLEAN,
+    active: DataTypes.BOOLEAN,
+    distanceFromLocation: DataTypes.VIRTUAL,
   },
   sequelizeOptions: {
     tableName: 'campus',
@@ -26,6 +28,15 @@ const createModel = defineModel({
 const setupModel = configureModel(({ sequelize }) => {
   sequelize.models.campus.hasMany(sequelize.models.people);
   sequelize.models.people.belongsTo(sequelize.models.campus);
+
+  sequelize.models.campus.addScope('defaultScope', {
+    where: { active: true },
+  });
+
+  sequelize.models.campus.belongsTo(sequelize.models.media, {
+    as: 'image',
+    foreignKey: 'imageId',
+  });
 });
 
 export { createModel, setupModel };

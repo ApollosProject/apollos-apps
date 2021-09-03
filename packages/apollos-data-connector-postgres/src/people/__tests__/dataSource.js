@@ -1,8 +1,14 @@
+/* eslint-disable import/named */
 import { sequelize } from '../../postgres/index';
 import PeopleDataSource from '../dataSource';
 import * as People from '../index';
-import * as Campus from '../../campus';
-import * as Follows from '../../follows';
+import {
+  ContentItem,
+  Media,
+  ContentItemCategory,
+  Campus,
+  Follow,
+} from '../../index';
 import { setupPostgresTestEnv } from '../../utils/testUtils';
 
 let personId;
@@ -27,7 +33,14 @@ describe('Apollos Postgres People DataSource', () => {
     personId = 1;
     context.currentPostgresPerson = null;
 
-    await setupPostgresTestEnv([People, Campus, Follows]);
+    await setupPostgresTestEnv([
+      People,
+      ContentItem,
+      Media,
+      ContentItemCategory,
+      Campus,
+      Follow,
+    ]);
 
     peopleDataSource = new PeopleDataSource();
     peopleDataSource.initialize({ context });

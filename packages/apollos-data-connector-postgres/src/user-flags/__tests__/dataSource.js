@@ -1,13 +1,20 @@
+/* eslint-disable import/named */
 import { createGlobalId } from '@apollosproject/server-core';
 import { sequelize } from '../../postgres/index';
 import CommentDataSource from '../../comments/dataSource';
 import UserFlagDataSource from '../dataSource';
-import * as People from '../../people';
-import * as Comments from '../../comments';
-import * as Campus from '../../campus';
-import * as Follows from '../../follows';
-import * as UserLikes from '../../user-likes';
 import * as UserFlags from '../index';
+import {
+  Person,
+  ContentItem,
+  Media,
+  ContentItemCategory,
+  NotificationPreference,
+  Campus,
+  Follow,
+  UserLike,
+  Comment,
+} from '../../index';
 import { setupPostgresTestEnv } from '../../utils/testUtils';
 
 let person1;
@@ -27,12 +34,16 @@ describe('Apollos Postgres Comment Flags DataSource', () => {
 
   beforeEach(async () => {
     await setupPostgresTestEnv([
-      People,
-      Comments,
+      Person,
+      ContentItem,
+      Media,
+      ContentItemCategory,
+      NotificationPreference,
       Campus,
-      Follows,
+      Follow,
+      UserLike,
+      Comment,
       UserFlags,
-      UserLikes,
     ]);
 
     person1 = await sequelize.models.people.create({
