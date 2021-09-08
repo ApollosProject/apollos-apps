@@ -5,7 +5,7 @@ async function up({ context: queryInterface }) {
 }
 
 async function down({ context: queryInterface }) {
-  await queryInterface.dropIndex('features_parent_id_type_data');
+  await queryInterface.removeIndex('features', 'features_parent_id_type_data');
 }
 
 const name = '002-add-unique_index_for_features';

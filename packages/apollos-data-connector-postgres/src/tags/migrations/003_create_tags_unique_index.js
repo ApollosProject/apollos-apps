@@ -5,7 +5,7 @@ async function up({ context: queryInterface }) {
 }
 
 async function down({ context: queryInterface }) {
-  await queryInterface.dropIndex('tags_origin_id_origin_type');
+  await queryInterface.removeIndex('tags', 'tags_origin_id_origin_type');
 }
 
 const name = '003-create-tags-unique_index';
