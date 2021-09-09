@@ -163,6 +163,7 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
       EntityTypeId: 27, // A default setting we use in Rock-person-creation-flow
       UserName: phoneNumber,
       PlainTextPassword: password,
+      IsConfirmed: true,
       ...personOptions, // { PersonId: ID } OR null
     });
 

@@ -158,6 +158,8 @@ export default class AuthDataSource extends RockApolloDataSource {
         UserName: email,
         PlainTextPassword: password,
         LastLoginDateTime: `${moment().toISOString()}`,
+        // If this value is false, logging in is impossible.
+        IsConfirmed: true,
       });
     } catch (err) {
       throw new Error('Unable to create user login!');

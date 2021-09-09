@@ -470,6 +470,7 @@ Array [
     "/UserLogins",
     Object {
       "EntityTypeId": 27,
+      "IsConfirmed": true,
       "PlainTextPassword": undefined,
       "UserName": "5133061126",
     },
@@ -512,6 +513,7 @@ Array [
     "/UserLogins",
     Object {
       "EntityTypeId": 27,
+      "IsConfirmed": true,
       "PersonId": 123,
       "PlainTextPassword": undefined,
       "UserName": "5133061126",
@@ -566,6 +568,7 @@ Array [
     "/UserLogins",
     Object {
       "EntityTypeId": 27,
+      "IsConfirmed": true,
       "PlainTextPassword": undefined,
       "UserName": "5133061126",
     },
