@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.32.2](https://github.com/ApollosProject/apollos-apps/compare/v2.32.1...v2.32.2) (2021-09-09)
+
+
+### Bug Fixes
+
+* Confirm users when creating user logins ([#2170](https://github.com/ApollosProject/apollos-apps/issues/2170)) ([c04b6f2](https://github.com/ApollosProject/apollos-apps/commit/c04b6f24b0e0075e7df6283fe36aef1d0820caf7))
+
+
+
 ### [2.32.1](https://github.com/ApollosProject/apollos-apps/compare/v2.32.0...v2.32.1) (2021-09-07)
 
 **Note:** Version bump only for package apollos
