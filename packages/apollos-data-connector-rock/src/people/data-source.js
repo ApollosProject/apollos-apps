@@ -72,6 +72,8 @@ export default class Person extends RockApolloDataSource {
     const id = await this.post('/People', {
       Gender: 0, // required by Rock. Listed first so it can be overridden.
       IsSystem: false, // required by rock
+      // in case anyone wants to DANGEROUSLY turn on auto-merge
+      ...(process.env.AUTOMERGE === 'true' ? rockUpdateFields : {}),
     });
     await this.patch(`/People/${id}`, {
       ...rockUpdateFields,
