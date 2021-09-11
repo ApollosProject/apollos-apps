@@ -1201,7 +1201,7 @@ export const prayerSchema = gql`
     text: String!
     requestor: Person
     isAnonymous: Boolean
-    isPrayed: Boolean
+    isPrayed: Boolean @cacheControl(scope: PRIVATE)
   }
 
   type PrayerListFeature implements Feature & Node {

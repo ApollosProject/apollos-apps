@@ -74,7 +74,7 @@ class ActionAlgorithm extends PostgresDataSource {
     personId,
   } = {}) {
     const { PrayerRequest, Feature } = this.context.dataSources;
-    Feature.setCacheHint({ maxAge: 0, scope: 'PRIVATE' });
+    Feature.setCacheHint({ scope: 'PRIVATE' });
 
     return PrayerRequest.byDailyPrayerFeed({
       numberDaysSincePrayer,
@@ -104,7 +104,7 @@ class ActionAlgorithm extends PostgresDataSource {
   // Gets the first 3 items for a user, based on their personas.
   async personaFeedAlgorithm({ limit = 3 } = {}) {
     const { ContentItem, Feature } = this.context.dataSources;
-    Feature.setCacheHint({ maxAge: 0, scope: 'PRIVATE' });
+    Feature.setCacheHint({ scope: 'PRIVATE' });
 
     // Get the first three persona items.
     const items = await ContentItem.getPersonaFeed({ limit });
@@ -247,7 +247,7 @@ class ActionAlgorithm extends PostgresDataSource {
     emptyMessage = 'All caught up!',
   } = {}) {
     const { ContentItem, Feature } = this.context.dataSources;
-    Feature.setCacheHint({ maxAge: 0, scope: 'PRIVATE' });
+    Feature.setCacheHint({ scope: 'PRIVATE' });
 
     const items = await ContentItem.getSeriesWithUserProgress(
       {

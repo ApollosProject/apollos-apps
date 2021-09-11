@@ -72,7 +72,7 @@ class ActionAlgorithm extends RockApolloDataSource {
     personId,
   } = {}) {
     const { PrayerRequest, Feature } = this.context.dataSources;
-    Feature.setCacheHint({ maxAge: 0, scope: 'PRIVATE' });
+    Feature.setCacheHint({ scope: 'PRIVATE' });
     const cursor = await PrayerRequest.byDailyPrayerFeed({
       numberDaysSincePrayer,
       personId,
@@ -101,7 +101,7 @@ class ActionAlgorithm extends RockApolloDataSource {
   // Gets the first 3 items for a user, based on their personas.
   async personaFeedAlgorithm() {
     const { ContentItem, Feature } = this.context.dataSources;
-    Feature.setCacheHint({ maxAge: 0, scope: 'PRIVATE' });
+    Feature.setCacheHint({ scope: 'PRIVATE' });
 
     // Get the first three persona items.
     const personaFeed = await ContentItem.byPersonaFeed(3);
@@ -280,7 +280,7 @@ Make sure you structure your algorithm entry as \`{ type: 'CONTENT_CHANNEL', aru
     emptyMessage = 'All caught up!',
   } = {}) {
     const { ContentItem, Feature } = this.context.dataSources;
-    Feature.setCacheHint({ maxAge: 0, scope: 'PRIVATE' });
+    Feature.setCacheHint({ scope: 'PRIVATE' });
 
     const items = await (
       await ContentItem.getSeriesWithUserProgress({
