@@ -165,7 +165,7 @@ class ActionAlgorithm extends PostgresDataSource {
 
     const series = seriesList[0];
 
-    const items = await series.getChildren({ limit });
+    const items = await ContentItem.getChildren(series, { limit });
 
     return items.map((item, i) => ({
       id: `${item.id}${i}`,
@@ -200,7 +200,9 @@ class ActionAlgorithm extends PostgresDataSource {
 
     const items = flatten(
       await Promise.all(
-        campaignList.map(async (campaign) => campaign.getChildren({ limit }))
+        campaignList.map(async (campaign) =>
+          ContentItem.getChildren(campaign, { limit })
+        )
       )
     );
 
