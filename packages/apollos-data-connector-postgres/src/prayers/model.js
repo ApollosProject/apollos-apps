@@ -6,6 +6,8 @@ const createModel = defineModel({
   resolveType: () => 'PrayerRequest',
   attributes: {
     text: DataTypes.TEXT,
+    originId: DataTypes.TEXT,
+    originType: DataTypes.TEXT,
   },
   sequelizeOptions: {
     tableName: 'prayer_request',
@@ -21,7 +23,7 @@ const setupModel = configureModel(({ sequelize }) => {
     foreignKey: 'personId',
   });
   sequelize.models.prayerRequest.belongsTo(sequelize.models.people, {
-    foreignKey: 'person_id',
+    foreignKey: 'personId',
     as: 'requestor',
   });
 

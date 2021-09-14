@@ -9,11 +9,15 @@ export default {
     id: ({ id }, args, context, { parentType }) =>
       createGlobalId(id, parentType.name),
     isAnonymous: ({ isPublic }) => !isPublic,
+    requestor: async (root) => {
+      return root.getRequestor();
+    },
     isPrayed: async (
-      { prayedUsers },
+      root,
       args,
       { currentPostgresPerson: { id: currentPersonId } }
     ) => {
+      const prayedUsers = root.prayedUsers ?? (await root.getPrayedUsers());
       return (
         prayedUsers.filter(({ id }) => currentPersonId === id).length !== 0
       );

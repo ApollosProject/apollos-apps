@@ -6,12 +6,13 @@ import { PostgresDataSource } from '../postgres';
 class Prayer extends PostgresDataSource {
   modelName = 'prayerRequest';
 
-  async addPrayer({ text }) {
+  async addPrayer({ text, ...args }) {
     const currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
     const newPrayer = await this.model.findOrCreate({
       where: {
         personId: currentPersonId,
         text,
+        ...args,
       },
     });
 
