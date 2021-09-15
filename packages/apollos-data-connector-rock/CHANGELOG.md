@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.33.1](https://github.com/apollosproject/apollos-apps/compare/v2.33.0...v2.33.1) (2021-09-15)
+
+
+### Bug Fixes
+
+* write campuses back to Rock correctly ([#2179](https://github.com/apollosproject/apollos-apps/issues/2179)) ([8a9a9b9](https://github.com/apollosproject/apollos-apps/commit/8a9a9b9c08c0780671ab04001ed0984ba86429f0))
+
+
+
 ## [2.33.0](https://github.com/apollosproject/apollos-apps/compare/v2.32.2...v2.33.0) (2021-09-15)
 
 

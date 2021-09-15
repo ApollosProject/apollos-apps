@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.33.1](https://github.com/ApollosProject/apollos-apps/compare/v2.33.0...v2.33.1) (2021-09-15)
+
+
+### Bug Fixes
+
+* correctly gets notification information on v4 ([#2178](https://github.com/ApollosProject/apollos-apps/issues/2178)) ([b4d7e3f](https://github.com/ApollosProject/apollos-apps/commit/b4d7e3f9f969fe10f235ed08654e504209fef8a3))
+* write campuses back to Rock correctly ([#2179](https://github.com/ApollosProject/apollos-apps/issues/2179)) ([8a9a9b9](https://github.com/ApollosProject/apollos-apps/commit/8a9a9b9c08c0780671ab04001ed0984ba86429f0))
+
+
+
 ## [2.33.0](https://github.com/ApollosProject/apollos-apps/compare/v2.32.2...v2.33.0) (2021-09-15)
 
 
