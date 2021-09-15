@@ -74,7 +74,7 @@ class NotificationsInit extends Component {
         kOSSettingsKeyAutoPrompt: false,
       });
       OneSignal.addEventListener('received', this.onReceived);
-      OneSignal.addEventListener('opened', this.onOpened);
+      OneSignal.addEventListener('opened', this.onOpenedV3);
       OneSignal.addEventListener('ids', this.onIds);
       OneSignal.setSubscription(true);
     }
@@ -123,6 +123,20 @@ class NotificationsInit extends Component {
   };
 
   onOpened = (openResult) => {
+    const url = openResult.notification.additionalData?.url;
+    if (
+      openResult.action.actionID &&
+      this.props.actionMap[openResult.action.actionID]
+    ) {
+      this.props.actionMap[openResult.action.actionID](
+        openResult.notification.additionalData
+      );
+    } else if (url) {
+      this.navigate(url);
+    }
+  };
+
+  onOpenedV3 = (openResult) => {
     console.log('Message: ', openResult.notification.payload.body);
     console.log('Data: ', openResult.notification.payload.additionalData);
     console.log('isActive: ', openResult.notification.isAppInFocus);
