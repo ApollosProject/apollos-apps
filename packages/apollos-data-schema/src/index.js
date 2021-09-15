@@ -878,6 +878,7 @@ export const featuresSchema = gql`
     OPEN_AUTHENTICATED_URL
     OPEN_NODE
     OPEN_CHANNEL
+    COMPLETE_NODE
   }
 
   type Url implements Node {

@@ -124,8 +124,6 @@ export default class ContentItem extends RockApolloDataSource {
     const { Feature } = this.context.dataSources;
     const features = [];
 
-    // TODO this should replace all other methods
-    // TODO this should be written in a more extendable way for partners
     const genericFeatures = get(attributeValues, 'features.value', '');
     const keyValuePairs = parseKeyValueAttribute(genericFeatures);
     keyValuePairs.forEach(({ key, value }, i) => {
@@ -263,6 +261,19 @@ export default class ContentItem extends RockApolloDataSource {
         })
       );
     }
+
+    const completeButtonText = attributeValues?.completeButtonText?.value;
+    if (completeButtonText)
+      features.push(
+        Feature.createButtonFeature({
+          id: attributeValues.completeButtonText.id,
+          action: Feature.attachActionIds({
+            relatedNode: item,
+            action: 'COMPLETE_NODE',
+            title: completeButtonText,
+          }),
+        })
+      );
 
     return features;
   }
