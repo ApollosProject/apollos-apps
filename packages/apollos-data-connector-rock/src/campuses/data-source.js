@@ -105,7 +105,8 @@ export default class Campus extends RockApolloDataSource {
     return root.location[field];
   };
 
-  updateCurrentUserCampus = async ({ campusId }) => {
+  updateCurrentUserCampus = async ({ rockId, campusId }) => {
+    if (!rockId && !campusId) return null;
     const { Auth } = this.context.dataSources;
 
     const currentUser = await Auth.getCurrentPerson();
@@ -114,9 +115,9 @@ export default class Campus extends RockApolloDataSource {
     ).first();
 
     if (!personGroup) return null;
-    const { id: rockCampusId } = parseGlobalId(campusId);
-
-    await this.patch(`/Groups/${personGroup.id}`, { CampusId: rockCampusId });
+    await this.patch(`/Groups/${personGroup.id}`, {
+      CampusId: campusId ? parseGlobalId(campusId).id : rockId,
+    });
 
     return currentUser;
   };
