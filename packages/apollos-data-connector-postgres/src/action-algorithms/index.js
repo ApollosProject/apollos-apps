@@ -210,7 +210,7 @@ class ActionAlgorithm extends PostgresDataSource {
       id: `${item.id}${i}`,
       title: item.title,
       subtitle: get(item, 'contentChannel.name'),
-      relatedNode: { ...item, __type: item.apollosType },
+      relatedNode: item,
       image: item.getCoverImage(),
       action: 'READ_CONTENT',
       summary: item.summary,
