@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=14"
   },
-  "version": "2.33.1",
+  "version": "2.33.2",
   "main": "lib/index.js",
   "scripts": {
     "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
@@ -31,7 +31,7 @@
     "@apollo/client": "3.3.20"
   },
   "devDependencies": {
-    "@apollosproject/babel-preset-apollos": "^2.33.1",
+    "@apollosproject/babel-preset-apollos": "^2.33.2",
     "jest": "^25.1.0"
   },
   "peerDependencies": {
