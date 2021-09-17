@@ -33,10 +33,12 @@ const setupModel = configureModel(({ sequelize }) => {
     where: { active: true },
   });
 
-  sequelize.models.campus.belongsTo(sequelize.models.media, {
-    as: 'image',
-    foreignKey: 'imageId',
-  });
+  // Campus relationship to media is optional and contingent on media being loaded.
+  if (sequelize.models.media)
+    sequelize.models.campus.belongsTo(sequelize.models.media, {
+      as: 'image',
+      foreignKey: 'imageId',
+    });
 });
 
 export { createModel, setupModel };
