@@ -8,6 +8,8 @@ const createModel = defineModel({
     text: DataTypes.TEXT,
     originId: DataTypes.TEXT,
     originType: DataTypes.TEXT,
+    approved: DataTypes.BOOLEAN,
+    flagCount: DataTypes.INTEGER,
   },
   sequelizeOptions: {
     tableName: 'prayer_request',
@@ -17,6 +19,9 @@ const createModel = defineModel({
 
 const setupModel = configureModel(({ sequelize }) => {
   sequelize.models.prayerRequest.addScope('defaultScope', {
+    where: {
+      approved: true,
+    },
     include: [{ model: sequelize.models.people, as: 'prayedUsers' }],
   });
   sequelize.models.people.hasMany(sequelize.models.prayerRequest, {
