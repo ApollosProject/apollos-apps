@@ -1,5 +1,6 @@
 export ArrowBack from './ArrowBack';
 export ArrowDown from './ArrowDown';
+export ArrowDownRight from './ArrowDownRight';
 export ArrowNext from './ArrowNext';
 export ArrowUp from './ArrowUp';
 export ArrowOut from './ArrowOut';
