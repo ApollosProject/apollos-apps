@@ -29,16 +29,19 @@ const resolver = {
   },
   ButtonFeature: {
     id: id('ScriptureFeature'),
-    action: ({ data }, args, { dataSources: { Feature } }) =>
-      Feature.attachActionIds({
-        relatedNode: {
-          __typename: 'Url',
-          url: data.url,
-          ...data.relatedNode,
-        },
+    action: ({ data }, args, { dataSources: { Feature } }) => {
+      return Feature.attachActionIds({
+        relatedNode: data.relatedNode
+          ? {
+              __typename: 'Url',
+              url: data.url,
+              ...data.relatedNode,
+            }
+          : null,
         action: data.action,
-        title: data.text,
-      }),
+        title: data.title,
+      });
+    },
   },
   CardListItem: {
     coverImage: ({ image }) => image,
