@@ -246,7 +246,7 @@ exports[`HorizontalLikedContentFeed renders a HorizontalLikedContentFeed 1`] = `
                 <View
                   style={
                     Object {
-                      "paddingHorizontal": 16,
+                      "paddingHorizontal": 20,
                       "paddingVertical": 16,
                       "width": "100%",
                     }
@@ -353,7 +353,7 @@ exports[`HorizontalLikedContentFeed renders a HorizontalLikedContentFeed 1`] = `
                 <View
                   style={
                     Object {
-                      "paddingHorizontal": 16,
+                      "paddingHorizontal": 20,
                       "paddingVertical": 16,
                       "width": "100%",
                     }
@@ -630,7 +630,7 @@ exports[`HorizontalLikedContentFeed renders a loading state 1`] = `
                 <View
                   style={
                     Object {
-                      "paddingHorizontal": 16,
+                      "paddingHorizontal": 20,
                       "paddingVertical": 16,
                       "width": "100%",
                     }
@@ -737,7 +737,7 @@ exports[`HorizontalLikedContentFeed renders a loading state 1`] = `
                 <View
                   style={
                     Object {
-                      "paddingHorizontal": 16,
+                      "paddingHorizontal": 20,
                       "paddingVertical": 16,
                       "width": "100%",
                     }

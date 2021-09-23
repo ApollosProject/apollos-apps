@@ -37,6 +37,7 @@ const SummaryText = styled(
 const Container = styled(
   {
     width: '100%',
+    paddingHorizontal: 20,
   },
   'ui-kit.ContentTitles.Container'
 )(PaddedView);

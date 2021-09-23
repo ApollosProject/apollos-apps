@@ -227,7 +227,7 @@ exports[`The VerticalCardListFeatureConnected component should render 1`] = `
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 16,
+                    "paddingHorizontal": 20,
                     "paddingVertical": 16,
                     "width": "100%",
                   }
@@ -520,7 +520,7 @@ exports[`The VerticalCardListFeatureConnected component should render a featured
             <View
               style={
                 Object {
-                  "paddingHorizontal": 16,
+                  "paddingHorizontal": 20,
                   "paddingVertical": 16,
                   "width": "100%",
                 }
@@ -969,7 +969,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 16,
+                    "paddingHorizontal": 20,
                     "paddingVertical": 16,
                     "width": "100%",
                   }
@@ -1149,7 +1149,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 16,
+                    "paddingHorizontal": 20,
                     "paddingVertical": 16,
                     "width": "100%",
                   }
@@ -1329,7 +1329,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 16,
+                    "paddingHorizontal": 20,
                     "paddingVertical": 16,
                     "width": "100%",
                   }
@@ -1509,7 +1509,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 16,
+                    "paddingHorizontal": 20,
                     "paddingVertical": 16,
                     "width": "100%",
                   }
@@ -1689,7 +1689,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 16,
+                    "paddingHorizontal": 20,
                     "paddingVertical": 16,
                     "width": "100%",
                   }
@@ -1869,7 +1869,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 16,
+                    "paddingHorizontal": 20,
                     "paddingVertical": 16,
                     "width": "100%",
                   }
@@ -2049,7 +2049,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 16,
+                    "paddingHorizontal": 20,
                     "paddingVertical": 16,
                     "width": "100%",
                   }
@@ -2229,7 +2229,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 16,
+                    "paddingHorizontal": 20,
                     "paddingVertical": 16,
                     "width": "100%",
                   }
@@ -2409,7 +2409,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 16,
+                    "paddingHorizontal": 20,
                     "paddingVertical": 16,
                     "width": "100%",
                   }
@@ -2589,7 +2589,7 @@ exports[`The VerticalCardListFeatureConnected component should render a loading 
               <View
                 style={
                   Object {
-                    "paddingHorizontal": 16,
+                    "paddingHorizontal": 20,
                     "paddingVertical": 16,
                     "width": "100%",
                   }
@@ -2864,7 +2864,7 @@ exports[`The VerticalCardListFeatureConnected component should render as a featu
             <View
               style={
                 Object {
-                  "paddingHorizontal": 16,
+                  "paddingHorizontal": 20,
                   "paddingVertical": 16,
                   "width": "100%",
                 }

@@ -654,7 +654,7 @@ exports[`HorizontalLikedContentFeedConnected renders a HorizontalLikedContentFee
                         <View
                           style={
                             Object {
-                              "paddingHorizontal": 16,
+                              "paddingHorizontal": 20,
                               "paddingVertical": 16,
                               "width": "100%",
                             }

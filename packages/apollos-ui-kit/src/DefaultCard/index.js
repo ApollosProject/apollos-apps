@@ -61,9 +61,12 @@ const DefaultCard = withIsLoading(
     style,
   }) => (
     <Card isLoading={isLoading} style={style}>
-      <BackgroundImageBlur source={coverImage} />
-
-      <CoverImage source={coverImage} />
+      {coverImage ? (
+        <>
+          <BackgroundImageBlur source={coverImage} />
+          <CoverImage source={coverImage} />
+        </>
+      ) : null}
       <ContentTitles
         featured={featured}
         title={title}

@@ -173,7 +173,7 @@ exports[`The CampaignItemListFeature component should render 1`] = `
             <View
               style={
                 Object {
-                  "paddingHorizontal": 16,
+                  "paddingHorizontal": 20,
                   "paddingVertical": 16,
                   "width": "100%",
                 }
@@ -443,7 +443,7 @@ exports[`The CampaignItemListFeature component should render a loading state for
             <View
               style={
                 Object {
-                  "paddingHorizontal": 16,
+                  "paddingHorizontal": 20,
                   "paddingVertical": 16,
                   "width": "100%",
                 }
@@ -713,7 +713,7 @@ exports[`The CampaignItemListFeature component should render a section title 1`]
             <View
               style={
                 Object {
-                  "paddingHorizontal": 16,
+                  "paddingHorizontal": 20,
                   "paddingVertical": 16,
                   "width": "100%",
                 }
@@ -994,7 +994,7 @@ exports[`The CampaignItemListFeature component should render with a subtitle 1`]
             <View
               style={
                 Object {
-                  "paddingHorizontal": 16,
+                  "paddingHorizontal": 20,
                   "paddingVertical": 16,
                   "width": "100%",
                 }

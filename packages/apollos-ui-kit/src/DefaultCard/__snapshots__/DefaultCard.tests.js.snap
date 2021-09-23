@@ -48,66 +48,7 @@ Array [
       <View
         style={
           Object {
-            "backgroundColor": "rgb(249, 249, 251)",
-            "bottom": 0,
-            "flex": 1,
-            "height": "100%",
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }
-      >
-        <Image
-          blurRadius={80}
-          fadeDuration={250}
-          onLoad={[Function]}
-          source={Array []}
-          style={
-            Object {
-              "backgroundColor": "#A5A5A5",
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            }
-          }
-        />
-        <View
-          material="regular"
-          style={
-            Object {
-              "backgroundColor": "rgba(242, 242, 247, 0.8)",
-              "bottom": 0,
-              "flex": 1,
-              "height": "100%",
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            }
-          }
-        />
-      </View>
-      <Image
-        fadeDuration={250}
-        isLoading={true}
-        onLoad={[Function]}
-        source={Array []}
-        style={
-          Object {
-            "aspectRatio": 1,
-            "backgroundColor": "#A5A5A5",
-            "width": "100%",
-          }
-        }
-      />
-      <View
-        style={
-          Object {
-            "paddingHorizontal": 16,
+            "paddingHorizontal": 20,
             "paddingVertical": 16,
             "width": "100%",
           }
@@ -281,7 +222,7 @@ Array [
       <View
         style={
           Object {
-            "paddingHorizontal": 16,
+            "paddingHorizontal": 20,
             "paddingVertical": 16,
             "width": "100%",
           }
@@ -443,7 +384,7 @@ Array [
       <View
         style={
           Object {
-            "paddingHorizontal": 16,
+            "paddingHorizontal": 20,
             "paddingVertical": 16,
             "width": "100%",
           }
@@ -605,7 +546,7 @@ Array [
       <View
         style={
           Object {
-            "paddingHorizontal": 16,
+            "paddingHorizontal": 20,
             "paddingVertical": 16,
             "width": "100%",
           }
@@ -767,7 +708,7 @@ Array [
       <View
         style={
           Object {
-            "paddingHorizontal": 16,
+            "paddingHorizontal": 20,
             "paddingVertical": 16,
             "width": "100%",
           }
@@ -952,7 +893,7 @@ Array [
       <View
         style={
           Object {
-            "paddingHorizontal": 16,
+            "paddingHorizontal": 20,
             "paddingVertical": 16,
             "width": "100%",
           }
@@ -1136,7 +1077,7 @@ Array [
       <View
         style={
           Object {
-            "paddingHorizontal": 16,
+            "paddingHorizontal": 20,
             "paddingVertical": 16,
             "width": "100%",
           }
@@ -1320,7 +1261,7 @@ Array [
       <View
         style={
           Object {
-            "paddingHorizontal": 16,
+            "paddingHorizontal": 20,
             "paddingVertical": 16,
             "width": "100%",
           }
@@ -1623,7 +1564,7 @@ Array [
       <View
         style={
           Object {
-            "paddingHorizontal": 16,
+            "paddingHorizontal": 20,
             "paddingVertical": 16,
             "width": "100%",
           }
@@ -1785,7 +1726,7 @@ Array [
       <View
         style={
           Object {
-            "paddingHorizontal": 16,
+            "paddingHorizontal": 20,
             "paddingVertical": 16,
             "width": "100%",
           }

@@ -22,7 +22,7 @@ Array [
   <View
     style={
       Object {
-        "paddingHorizontal": 16,
+        "paddingHorizontal": 20,
         "paddingVertical": 16,
         "width": "100%",
       }
@@ -424,7 +424,7 @@ Array [
   <View
     style={
       Object {
-        "paddingHorizontal": 16,
+        "paddingHorizontal": 20,
         "paddingVertical": 16,
         "width": "100%",
       }
@@ -500,7 +500,7 @@ Array [
   <View
     style={
       Object {
-        "paddingHorizontal": 16,
+        "paddingHorizontal": 20,
         "paddingVertical": 16,
         "width": "100%",
       }
@@ -586,7 +586,7 @@ Array [
   <View
     style={
       Object {
-        "paddingHorizontal": 16,
+        "paddingHorizontal": 20,
         "paddingVertical": 16,
         "width": "100%",
       }

@@ -276,7 +276,7 @@ exports[`The HorizontalCardListFeatureConnected component should render 1`] = `
                 <View
                   style={
                     Object {
-                      "paddingHorizontal": 16,
+                      "paddingHorizontal": 20,
                       "paddingVertical": 16,
                       "width": "100%",
                     }
@@ -641,7 +641,7 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
                 <View
                   style={
                     Object {
-                      "paddingHorizontal": 16,
+                      "paddingHorizontal": 20,
                       "paddingVertical": 16,
                       "width": "100%",
                     }
@@ -818,7 +818,7 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
                 <View
                   style={
                     Object {
-                      "paddingHorizontal": 16,
+                      "paddingHorizontal": 20,
                       "paddingVertical": 16,
                       "width": "100%",
                     }
@@ -995,7 +995,7 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
                 <View
                   style={
                     Object {
-                      "paddingHorizontal": 16,
+                      "paddingHorizontal": 20,
                       "paddingVertical": 16,
                       "width": "100%",
                     }
@@ -1172,7 +1172,7 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
                 <View
                   style={
                     Object {
-                      "paddingHorizontal": 16,
+                      "paddingHorizontal": 20,
                       "paddingVertical": 16,
                       "width": "100%",
                     }
@@ -1349,7 +1349,7 @@ exports[`The HorizontalCardListFeatureConnected component should render a loadin
                 <View
                   style={
                     Object {
-                      "paddingHorizontal": 16,
+                      "paddingHorizontal": 20,
                       "paddingVertical": 16,
                       "width": "100%",
                     }
