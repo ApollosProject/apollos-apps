@@ -24,6 +24,11 @@ const TitlesPositioner = styled({
   justifyContent: 'center',
 })(View);
 
+const NoImageTitlesPositioner = styled({
+  height: 240,
+  justifyContent: 'center',
+})(View);
+
 const Image = withTheme(
   () => ({
     width: 240,
@@ -37,17 +42,34 @@ const Image = withTheme(
 const HorizontalDefaultCard = withIsLoading(
   ({ coverImage, isLiked, isLoading, summary, title }) => (
     <SquareCard isLoading={isLoading} inHorizontalList>
-      <BackgroundImageBlur source={coverImage} />
-      <Image source={coverImage} hasTitleAndSummary={!!summary && !!title} />
-      <TitlesPositioner>
-        <ContentTitles
-          micro
-          title={title}
-          summary={summary}
-          isLiked={isLiked}
-          isLoading={isLoading}
-        />
-      </TitlesPositioner>
+      {coverImage ? (
+        <>
+          <BackgroundImageBlur source={coverImage} />
+          <Image
+            source={coverImage}
+            hasTitleAndSummary={!!summary && !!title}
+          />
+          <TitlesPositioner>
+            <ContentTitles
+              micro
+              title={title}
+              summary={summary}
+              isLiked={isLiked}
+              isLoading={isLoading}
+            />
+          </TitlesPositioner>
+        </>
+      ) : (
+        <NoImageTitlesPositioner>
+          <ContentTitles
+            micro
+            title={title}
+            summary={summary}
+            isLiked={isLiked}
+            isLoading={isLoading}
+          />
+        </NoImageTitlesPositioner>
+      )}
     </SquareCard>
   )
 );

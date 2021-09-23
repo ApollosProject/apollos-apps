@@ -646,69 +646,7 @@ exports[`HorizontalLikedContentFeedConnected renders a HorizontalLikedContentFee
                       <View
                         style={
                           Object {
-                            "backgroundColor": "rgb(249, 249, 251)",
-                            "bottom": 0,
-                            "flex": 1,
-                            "height": "100%",
-                            "left": 0,
-                            "position": "absolute",
-                            "right": 0,
-                            "top": 0,
-                          }
-                        }
-                      >
-                        <Image
-                          blurRadius={80}
-                          fadeDuration={250}
-                          onLoad={[Function]}
-                          source={Array []}
-                          style={
-                            Object {
-                              "backgroundColor": "#A5A5A5",
-                              "bottom": 0,
-                              "left": 0,
-                              "position": "absolute",
-                              "right": 0,
-                              "top": 0,
-                            }
-                          }
-                        />
-                        <View
-                          material="regular"
-                          style={
-                            Object {
-                              "backgroundColor": "rgba(242, 242, 247, 0.8)",
-                              "bottom": 0,
-                              "flex": 1,
-                              "height": "100%",
-                              "left": 0,
-                              "position": "absolute",
-                              "right": 0,
-                              "top": 0,
-                            }
-                          }
-                        />
-                      </View>
-                      <Image
-                        fadeDuration={250}
-                        hasTitleAndSummary={false}
-                        height={135}
-                        isLoading={true}
-                        onLoad={[Function]}
-                        source={Array []}
-                        style={
-                          Object {
-                            "aspectRatio": 1.7777777777777777,
-                            "backgroundColor": "#A5A5A5",
-                            "width": "100%",
-                          }
-                        }
-                        width={240}
-                      />
-                      <View
-                        style={
-                          Object {
-                            "height": 105,
+                            "height": 240,
                             "justifyContent": "center",
                           }
                         }
