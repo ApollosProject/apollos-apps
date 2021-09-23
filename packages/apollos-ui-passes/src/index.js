@@ -30,10 +30,10 @@ class Passes extends Component {
                 <ErrorCard error={error} />
               ) : (
                 <>
-                  <PassView isLoading={loading} {...(data.userPass || {})} />
-                  {Platform.OS === 'ios' ? (
+                  <PassView isLoading={loading} {...(data?.userPass || {})} />
+                  {Platform.OS === 'ios' && data?.userPass?.passkitFileUrl ? (
                     <AddToAppleWalletButton
-                      url={(data.userPass || {}).passkitFileUrl}
+                      url={data?.userPass?.passkitFileUrl}
                     />
                   ) : null}
                 </>
