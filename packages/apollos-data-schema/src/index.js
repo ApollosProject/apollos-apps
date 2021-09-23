@@ -393,14 +393,7 @@ export const interactionsSchema = gql`
   }
 
   extend type Query {
-    interactions(
-      # personId is assumed to be current user
-      # any other personID will return zero results.
-      # ID is included since it provides for a level of built in cachability.
-      personId: ID!
-      nodeId: ID
-      action: InteractionAction
-    ): [Interaction]
+    interactions(nodeId: ID, action: InteractionAction): [Interaction]
   }
 
   extend type Mutation {
