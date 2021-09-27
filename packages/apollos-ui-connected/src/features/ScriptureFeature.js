@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { ActionCard } from '@apollosproject/ui-kit';
+import { ActionCard, PaddedView } from '@apollosproject/ui-kit';
 import { ScriptureItem } from '@apollosproject/ui-scripture';
 import ShareButtonConnected from '../ShareButtonConnected';
 
@@ -13,31 +13,50 @@ const ScriptureFeature = ({
   contentId,
   nodeId,
   featureId,
-}) => (
-  <ActionCard
-    label={title}
-    icon={'text'}
-    action={
-      <ShareButtonConnected
-        message={message}
-        itemId={nodeId || contentId || featureId}
-      />
-    }
-  >
-    {scriptures.map(({ copyright, reference, html, id, version }) => (
-      <ScriptureItem
-        key={id}
-        reference={reference}
-        html={html}
-        isLoading={isLoading}
-        copyright={copyright}
-        version={version}
-      />
-    ))}
-  </ActionCard>
-);
+  isCard,
+}) => {
+  const Wrapper = (
+    { children } // eslint-disable-line react/prop-types
+  ) =>
+    isCard ? (
+      <ActionCard
+        label={title}
+        icon={'text'}
+        action={
+          <ShareButtonConnected
+            message={message}
+            itemId={nodeId || contentId || featureId}
+          />
+        }
+      >
+        {children}
+      </ActionCard>
+    ) : (
+      <PaddedView>{children}</PaddedView>
+    );
+
+  return (
+    <Wrapper>
+      {scriptures.map(({ copyright, reference, html, id, version }) => (
+        <ScriptureItem
+          key={id}
+          reference={reference}
+          html={html}
+          isLoading={isLoading}
+          copyright={copyright}
+          version={version}
+        />
+      ))}
+    </Wrapper>
+  );
+};
+
+ScriptureFeature.defaultProps = {
+  isCard: true,
+};
 
 ScriptureFeature.propTypes = {
+  isCard: PropTypes.bool,
   isLoading: PropTypes.bool,
   scriptures: PropTypes.arrayOf(
     PropTypes.shape({
