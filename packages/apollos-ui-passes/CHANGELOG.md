@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.33.4](https://github.com/apollosproject/apollos-apps/compare/v2.33.3...v2.33.4) (2021-09-27)
+
+
+### Bug Fixes
+
+*  passview loading and hiding wallet button ([#2193](https://github.com/apollosproject/apollos-apps/issues/2193)) ([30ff112](https://github.com/apollosproject/apollos-apps/commit/30ff1128f0264cb673511a0b67a8c6963bf4c023))
+
+
+
 ### [2.33.3](https://github.com/apollosproject/apollos-apps/compare/v2.33.2...v2.33.3) (2021-09-22)
 
 **Note:** Version bump only for package @apollosproject/ui-passes

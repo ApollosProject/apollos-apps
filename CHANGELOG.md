@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.33.4](https://github.com/ApollosProject/apollos-apps/compare/v2.33.3...v2.33.4) (2021-09-27)
+
+
+### Bug Fixes
+
+*  passview loading and hiding wallet button ([#2193](https://github.com/ApollosProject/apollos-apps/issues/2193)) ([30ff112](https://github.com/ApollosProject/apollos-apps/commit/30ff1128f0264cb673511a0b67a8c6963bf4c023))
+* Fix postgres button feature resolver ([#2186](https://github.com/ApollosProject/apollos-apps/issues/2186)) ([b1ade53](https://github.com/ApollosProject/apollos-apps/commit/b1ade53b2e29a13d3aa2b5456564cb3dca7f5eee))
+* Remove Image Placeholder for No Image ([#2188](https://github.com/ApollosProject/apollos-apps/issues/2188)) ([ac3d694](https://github.com/ApollosProject/apollos-apps/commit/ac3d6948e9055de843f6faaad78cc0cf961ad28d))
+* remove image placeholder from horizontal default cards if there is no image ([#2191](https://github.com/ApollosProject/apollos-apps/issues/2191)) ([6a1b9da](https://github.com/ApollosProject/apollos-apps/commit/6a1b9da26e55928fafe8d64b01d48d0bcdfb4e50))
+
+
+
 ### [2.33.3](https://github.com/ApollosProject/apollos-apps/compare/v2.33.2...v2.33.3) (2021-09-22)
 
 **Note:** Version bump only for package apollos
