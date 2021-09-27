@@ -284,12 +284,6 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                     }
                   >
                     <View
-                      edges={
-                        Array [
-                          "left",
-                          "right",
-                        ]
-                      }
                       style={
                         Object {
                           "flex": 1,
@@ -1175,12 +1169,6 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                     }
                   >
                     <View
-                      edges={
-                        Array [
-                          "left",
-                          "right",
-                        ]
-                      }
                       style={
                         Object {
                           "flex": 1,
