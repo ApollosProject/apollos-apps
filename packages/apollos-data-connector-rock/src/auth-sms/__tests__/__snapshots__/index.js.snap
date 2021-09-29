@@ -500,7 +500,7 @@ exports[`AuthSms schema requests an SMS pin with an existing user login without 
 Array [
   Array [
     Object {
-      "body": "Your login code is undefined",
+      "body": "Thanks for logging in! Your code is undefined",
       "to": "+15133061126",
     },
   ],
@@ -544,7 +544,7 @@ exports[`AuthSms schema requests an SMS pin with an existing user login: send sm
 Array [
   Array [
     Object {
-      "body": "Your login code is undefined",
+      "body": "Thanks for logging in! Your code is undefined",
       "to": "+15133061126",
     },
   ],
@@ -592,7 +592,7 @@ exports[`AuthSms schema requests an SMS pin without an existing user login: send
 Array [
   Array [
     Object {
-      "body": "Your login code is undefined",
+      "body": "Thanks for logging in! Your code is undefined",
       "to": "+15133061126",
     },
   ],
