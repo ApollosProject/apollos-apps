@@ -64,16 +64,16 @@ Array [
           <View
             style={
               Object {
-                "borderRadius": 80,
+                "borderRadius": 72,
                 "overflow": "hidden",
               }
             }
           >
             <RNSVGSvgView
               align="xMidYMid"
-              bbHeight={100}
-              bbWidth={100}
-              height={100}
+              bbHeight={90}
+              bbWidth={90}
+              height={90}
               meetOrSlice={0}
               minX={0}
               minY={0}
@@ -87,14 +87,14 @@ Array [
                   null,
                   Object {
                     "flex": 0,
-                    "height": 100,
-                    "width": 100,
+                    "height": 90,
+                    "width": 90,
                   },
                 ]
               }
               vbHeight={24}
               vbWidth={24}
-              width={100}
+              width={90}
             >
               <RNSVGGroup
                 fill={
@@ -473,16 +473,16 @@ Array [
           <View
             style={
               Object {
-                "borderRadius": 80,
+                "borderRadius": 72,
                 "overflow": "hidden",
               }
             }
           >
             <RNSVGSvgView
               align="xMidYMid"
-              bbHeight={100}
-              bbWidth={100}
-              height={100}
+              bbHeight={90}
+              bbWidth={90}
+              height={90}
               meetOrSlice={0}
               minX={0}
               minY={0}
@@ -496,14 +496,14 @@ Array [
                   null,
                   Object {
                     "flex": 0,
-                    "height": 100,
-                    "width": 100,
+                    "height": 90,
+                    "width": 90,
                   },
                 ]
               }
               vbHeight={24}
               vbWidth={24}
-              width={100}
+              width={90}
             >
               <RNSVGGroup
                 fill={
@@ -883,7 +883,7 @@ Array [
           <View
             style={
               Object {
-                "borderRadius": 80,
+                "borderRadius": 72,
                 "overflow": "hidden",
               }
             }
@@ -893,8 +893,8 @@ Array [
                 Object {
                   "backgroundColor": "#A5A5A5",
                   "borderRadius": 16,
-                  "height": 100,
-                  "width": 100,
+                  "height": 90,
+                  "width": 90,
                 }
               }
             />
@@ -996,16 +996,16 @@ Array [
           <View
             style={
               Object {
-                "borderRadius": 80,
+                "borderRadius": 72,
                 "overflow": "hidden",
               }
             }
           >
             <RNSVGSvgView
               align="xMidYMid"
-              bbHeight={100}
-              bbWidth={100}
-              height={100}
+              bbHeight={90}
+              bbWidth={90}
+              height={90}
               meetOrSlice={0}
               minX={0}
               minY={0}
@@ -1019,14 +1019,14 @@ Array [
                   null,
                   Object {
                     "flex": 0,
-                    "height": 100,
-                    "width": 100,
+                    "height": 90,
+                    "width": 90,
                   },
                 ]
               }
               vbHeight={24}
               vbWidth={24}
-              width={100}
+              width={90}
             >
               <RNSVGGroup
                 fill={
@@ -1217,16 +1217,16 @@ Array [
           <View
             style={
               Object {
-                "borderRadius": 80,
+                "borderRadius": 72,
                 "overflow": "hidden",
               }
             }
           >
             <RNSVGSvgView
               align="xMidYMid"
-              bbHeight={100}
-              bbWidth={100}
-              height={100}
+              bbHeight={90}
+              bbWidth={90}
+              height={90}
               meetOrSlice={0}
               minX={0}
               minY={0}
@@ -1240,14 +1240,14 @@ Array [
                   null,
                   Object {
                     "flex": 0,
-                    "height": 100,
-                    "width": 100,
+                    "height": 90,
+                    "width": 90,
                   },
                 ]
               }
               vbHeight={24}
               vbWidth={24}
-              width={100}
+              width={90}
             >
               <RNSVGGroup
                 fill={
@@ -1627,16 +1627,16 @@ Array [
           <View
             style={
               Object {
-                "borderRadius": 80,
+                "borderRadius": 72,
                 "overflow": "hidden",
               }
             }
           >
             <RNSVGSvgView
               align="xMidYMid"
-              bbHeight={100}
-              bbWidth={100}
-              height={100}
+              bbHeight={90}
+              bbWidth={90}
+              height={90}
               meetOrSlice={0}
               minX={0}
               minY={0}
@@ -1650,14 +1650,14 @@ Array [
                   null,
                   Object {
                     "flex": 0,
-                    "height": 100,
-                    "width": 100,
+                    "height": 90,
+                    "width": 90,
                   },
                 ]
               }
               vbHeight={24}
               vbWidth={24}
-              width={100}
+              width={90}
             >
               <RNSVGGroup
                 fill={

@@ -153,8 +153,9 @@ Object {
   "sizing": Object {
     "avatar": Object {
       "large": 120,
-      "medium": 80,
-      "small": 40,
+      "medium": 72,
+      "small": 48,
+      "xsmall": 24,
     },
     "baseBorderRadius": 16,
     "baseUnit": 16,
@@ -553,8 +554,9 @@ Object {
   "sizing": Object {
     "avatar": Object {
       "large": 120,
-      "medium": 80,
-      "small": 40,
+      "medium": 72,
+      "small": 48,
+      "xsmall": 24,
     },
     "baseBorderRadius": 16,
     "baseUnit": 16,

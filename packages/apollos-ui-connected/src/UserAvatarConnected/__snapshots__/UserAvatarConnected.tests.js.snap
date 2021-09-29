@@ -5,12 +5,12 @@ exports[`UserAvatarConnected component renders UserAvatarConnected 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "height": 40,
+      "height": 48,
       "justifyContent": "center",
-      "width": 40,
+      "width": 48,
     }
   }
-  themeSize={40}
+  themeSize={48}
 >
   <Image
     fadeDuration={250}
@@ -27,7 +27,7 @@ exports[`UserAvatarConnected component renders UserAvatarConnected 1`] = `
     style={
       Object {
         "backgroundColor": "#A5A5A5",
-        "borderRadius": 20,
+        "borderRadius": 24,
         "bottom": 0,
         "height": "100%",
         "left": 0,
@@ -37,7 +37,7 @@ exports[`UserAvatarConnected component renders UserAvatarConnected 1`] = `
         "width": "100%",
       }
     }
-    themeSize={40}
+    themeSize={48}
   />
 </View>
 `;
@@ -47,35 +47,35 @@ exports[`UserAvatarConnected component renders UserAvatarConnected without a pho
   style={
     Object {
       "alignItems": "center",
-      "height": 40,
+      "height": 48,
       "justifyContent": "center",
-      "width": 40,
+      "width": 48,
     }
   }
-  themeSize={40}
+  themeSize={48}
 >
   <View
     style={
       Object {
         "alignItems": "center",
         "backgroundColor": "#A5A5A5",
-        "borderRadius": 40,
-        "height": 40,
+        "borderRadius": 48,
+        "height": 48,
         "justifyContent": "center",
-        "width": 40,
+        "width": 48,
       }
     }
-    themeSize={40}
+    themeSize={48}
   >
     <Text
       style={
         Object {
           "color": "rgb(249, 249, 251)",
           "fontFamily": "InterUI-Bold",
-          "fontSize": 20,
+          "fontSize": 24,
         }
       }
-      themeSize={40}
+      themeSize={48}
     >
       GC
     </Text>

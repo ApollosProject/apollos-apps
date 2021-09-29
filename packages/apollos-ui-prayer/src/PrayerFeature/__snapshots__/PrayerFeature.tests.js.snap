@@ -206,7 +206,7 @@ Array [
               <View
                 style={
                   Object {
-                    "borderRadius": 32,
+                    "borderRadius": 28.8,
                     "marginRight": 8,
                     "overflow": "hidden",
                   }
@@ -232,15 +232,15 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#00676D",
-                        "padding": 13,
+                        "padding": 11.700000000000001,
                       }
                     }
                   >
                     <RNSVGSvgView
                       align="xMidYMid"
-                      bbHeight={38}
-                      bbWidth={38}
-                      height={38}
+                      bbHeight={34.199999999999996}
+                      bbWidth={34.199999999999996}
+                      height={34.199999999999996}
                       meetOrSlice={0}
                       minX={0}
                       minY={0}
@@ -254,14 +254,14 @@ Array [
                           null,
                           Object {
                             "flex": 0,
-                            "height": 38,
-                            "width": 38,
+                            "height": 34,
+                            "width": 34,
                           },
                         ]
                       }
                       vbHeight={26}
                       vbWidth={24}
-                      width={38}
+                      width={34.199999999999996}
                     >
                       <RNSVGGroup
                         fill={
@@ -385,13 +385,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -407,7 +407,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -417,21 +417,21 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                   <View
-                    avatarSize={64}
+                    avatarSize={57.6}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginRight": 2,
-                        "marginTop": 2,
+                        "borderRadius": 14.4,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
-                        "width": 16,
+                        "width": 14.4,
                       }
                     }
                   />
@@ -468,13 +468,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -490,7 +490,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -500,21 +500,21 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                   <View
-                    avatarSize={64}
+                    avatarSize={57.6}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginRight": 2,
-                        "marginTop": 2,
+                        "borderRadius": 14.4,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
-                        "width": 16,
+                        "width": 14.4,
                       }
                     }
                   />
@@ -551,13 +551,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -573,7 +573,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -583,21 +583,21 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                   <View
-                    avatarSize={64}
+                    avatarSize={57.6}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginRight": 2,
-                        "marginTop": 2,
+                        "borderRadius": 14.4,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
-                        "width": 16,
+                        "width": 14.4,
                       }
                     }
                   />
@@ -634,13 +634,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -656,7 +656,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -666,7 +666,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -701,13 +701,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -723,7 +723,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -733,7 +733,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -768,13 +768,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -790,7 +790,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -800,7 +800,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -835,13 +835,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -857,7 +857,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -867,7 +867,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -902,13 +902,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -924,7 +924,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -934,7 +934,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -1167,13 +1167,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -1189,7 +1189,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -1199,21 +1199,21 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                   <View
-                    avatarSize={64}
+                    avatarSize={57.6}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginRight": 2,
-                        "marginTop": 2,
+                        "borderRadius": 14.4,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
-                        "width": 16,
+                        "width": 14.4,
                       }
                     }
                   />
@@ -1250,13 +1250,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -1272,7 +1272,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -1282,21 +1282,21 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                   <View
-                    avatarSize={64}
+                    avatarSize={57.6}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginRight": 2,
-                        "marginTop": 2,
+                        "borderRadius": 14.4,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
-                        "width": 16,
+                        "width": 14.4,
                       }
                     }
                   />
@@ -1333,13 +1333,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -1355,7 +1355,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -1365,21 +1365,21 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                   <View
-                    avatarSize={64}
+                    avatarSize={57.6}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginRight": 2,
-                        "marginTop": 2,
+                        "borderRadius": 14.4,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
-                        "width": 16,
+                        "width": 14.4,
                       }
                     }
                   />
@@ -1416,13 +1416,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -1438,7 +1438,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -1448,7 +1448,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -1483,13 +1483,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -1505,7 +1505,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -1515,7 +1515,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -1550,13 +1550,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -1572,7 +1572,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -1582,7 +1582,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -1617,13 +1617,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -1639,7 +1639,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -1649,7 +1649,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -1684,13 +1684,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -1706,7 +1706,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -1716,7 +1716,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -1949,13 +1949,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -1971,7 +1971,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -1981,21 +1981,21 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                   <View
-                    avatarSize={64}
+                    avatarSize={57.6}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginRight": 2,
-                        "marginTop": 2,
+                        "borderRadius": 14.4,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
-                        "width": 16,
+                        "width": 14.4,
                       }
                     }
                   />
@@ -2032,13 +2032,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -2054,7 +2054,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -2064,21 +2064,21 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                   <View
-                    avatarSize={64}
+                    avatarSize={57.6}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginRight": 2,
-                        "marginTop": 2,
+                        "borderRadius": 14.4,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
-                        "width": 16,
+                        "width": 14.4,
                       }
                     }
                   />
@@ -2115,13 +2115,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -2137,7 +2137,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -2147,21 +2147,21 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                   <View
-                    avatarSize={64}
+                    avatarSize={57.6}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginRight": 2,
-                        "marginTop": 2,
+                        "borderRadius": 14.4,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
-                        "width": 16,
+                        "width": 14.4,
                       }
                     }
                   />
@@ -2198,13 +2198,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -2220,7 +2220,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -2230,7 +2230,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -2265,13 +2265,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -2287,7 +2287,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -2297,7 +2297,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -2332,13 +2332,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -2354,7 +2354,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -2364,7 +2364,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -2399,13 +2399,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -2421,7 +2421,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -2431,7 +2431,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -2466,13 +2466,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -2488,7 +2488,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -2498,7 +2498,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -2745,13 +2745,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -2767,7 +2767,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -2777,21 +2777,21 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                   <View
-                    avatarSize={64}
+                    avatarSize={57.6}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginRight": 2,
-                        "marginTop": 2,
+                        "borderRadius": 14.4,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
-                        "width": 16,
+                        "width": 14.4,
                       }
                     }
                   />
@@ -2828,13 +2828,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -2850,7 +2850,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -2860,21 +2860,21 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                   <View
-                    avatarSize={64}
+                    avatarSize={57.6}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginRight": 2,
-                        "marginTop": 2,
+                        "borderRadius": 14.4,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
-                        "width": 16,
+                        "width": 14.4,
                       }
                     }
                   />
@@ -2911,13 +2911,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -2933,7 +2933,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -2943,21 +2943,21 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                   <View
-                    avatarSize={64}
+                    avatarSize={57.6}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginRight": 2,
-                        "marginTop": 2,
+                        "borderRadius": 14.4,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
-                        "width": 16,
+                        "width": 14.4,
                       }
                     }
                   />
@@ -2994,13 +2994,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -3016,7 +3016,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -3026,7 +3026,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -3061,13 +3061,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -3083,7 +3083,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -3093,7 +3093,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -3128,13 +3128,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -3150,7 +3150,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -3160,7 +3160,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -3195,13 +3195,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -3217,7 +3217,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -3227,7 +3227,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -3262,13 +3262,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -3284,7 +3284,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -3294,7 +3294,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -3473,19 +3473,19 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 64,
+                  "height": 57.6,
                   "justifyContent": "center",
                   "marginRight": 8,
-                  "width": 64,
+                  "width": 57.6,
                 }
               }
-              themeSize={64}
+              themeSize={57.6}
             >
               <RNSVGSvgView
                 align="xMidYMid"
-                bbHeight={70}
-                bbWidth={70}
-                height={70}
+                bbHeight={63}
+                bbWidth={63}
+                height={63}
                 meetOrSlice={0}
                 minX={0}
                 minY={0}
@@ -3499,15 +3499,15 @@ Array [
                     null,
                     Object {
                       "flex": 0,
-                      "height": 70,
-                      "width": 70,
+                      "height": 63,
+                      "width": 63,
                     },
                   ]
                 }
-                themeSize={64}
+                themeSize={57.6}
                 vbHeight={24}
                 vbWidth={24}
-                width={70}
+                width={63}
               >
                 <RNSVGGroup
                   fill={
@@ -3598,18 +3598,18 @@ Array [
                 </RNSVGGroup>
               </RNSVGSvgView>
               <View
-                avatarSize={64}
+                avatarSize={57.6}
                 style={
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#17B582",
-                    "borderRadius": 16,
-                    "marginRight": 2,
-                    "marginTop": 2,
+                    "borderRadius": 14.4,
+                    "marginRight": 1.8,
+                    "marginTop": 1.8,
                     "position": "absolute",
                     "right": 0,
                     "top": 0,
-                    "width": 16,
+                    "width": 14.4,
                   }
                 }
               />
@@ -3646,19 +3646,19 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 64,
+                  "height": 57.6,
                   "justifyContent": "center",
                   "marginRight": 8,
-                  "width": 64,
+                  "width": 57.6,
                 }
               }
-              themeSize={64}
+              themeSize={57.6}
             >
               <RNSVGSvgView
                 align="xMidYMid"
-                bbHeight={70}
-                bbWidth={70}
-                height={70}
+                bbHeight={63}
+                bbWidth={63}
+                height={63}
                 meetOrSlice={0}
                 minX={0}
                 minY={0}
@@ -3672,15 +3672,15 @@ Array [
                     null,
                     Object {
                       "flex": 0,
-                      "height": 70,
-                      "width": 70,
+                      "height": 63,
+                      "width": 63,
                     },
                   ]
                 }
-                themeSize={64}
+                themeSize={57.6}
                 vbHeight={24}
                 vbWidth={24}
-                width={70}
+                width={63}
               >
                 <RNSVGGroup
                   fill={
@@ -3771,18 +3771,18 @@ Array [
                 </RNSVGGroup>
               </RNSVGSvgView>
               <View
-                avatarSize={64}
+                avatarSize={57.6}
                 style={
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#17B582",
-                    "borderRadius": 16,
-                    "marginRight": 2,
-                    "marginTop": 2,
+                    "borderRadius": 14.4,
+                    "marginRight": 1.8,
+                    "marginTop": 1.8,
                     "position": "absolute",
                     "right": 0,
                     "top": 0,
-                    "width": 16,
+                    "width": 14.4,
                   }
                 }
               />
@@ -3819,19 +3819,19 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 64,
+                  "height": 57.6,
                   "justifyContent": "center",
                   "marginRight": 8,
-                  "width": 64,
+                  "width": 57.6,
                 }
               }
-              themeSize={64}
+              themeSize={57.6}
             >
               <RNSVGSvgView
                 align="xMidYMid"
-                bbHeight={70}
-                bbWidth={70}
-                height={70}
+                bbHeight={63}
+                bbWidth={63}
+                height={63}
                 meetOrSlice={0}
                 minX={0}
                 minY={0}
@@ -3845,15 +3845,15 @@ Array [
                     null,
                     Object {
                       "flex": 0,
-                      "height": 70,
-                      "width": 70,
+                      "height": 63,
+                      "width": 63,
                     },
                   ]
                 }
-                themeSize={64}
+                themeSize={57.6}
                 vbHeight={24}
                 vbWidth={24}
-                width={70}
+                width={63}
               >
                 <RNSVGGroup
                   fill={
@@ -3944,18 +3944,18 @@ Array [
                 </RNSVGGroup>
               </RNSVGSvgView>
               <View
-                avatarSize={64}
+                avatarSize={57.6}
                 style={
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#17B582",
-                    "borderRadius": 16,
-                    "marginRight": 2,
-                    "marginTop": 2,
+                    "borderRadius": 14.4,
+                    "marginRight": 1.8,
+                    "marginTop": 1.8,
                     "position": "absolute",
                     "right": 0,
                     "top": 0,
-                    "width": 16,
+                    "width": 14.4,
                   }
                 }
               />
@@ -3992,19 +3992,19 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 64,
+                  "height": 57.6,
                   "justifyContent": "center",
                   "marginRight": 8,
-                  "width": 64,
+                  "width": 57.6,
                 }
               }
-              themeSize={64}
+              themeSize={57.6}
             >
               <RNSVGSvgView
                 align="xMidYMid"
-                bbHeight={70}
-                bbWidth={70}
-                height={70}
+                bbHeight={63}
+                bbWidth={63}
+                height={63}
                 meetOrSlice={0}
                 minX={0}
                 minY={0}
@@ -4018,15 +4018,15 @@ Array [
                     null,
                     Object {
                       "flex": 0,
-                      "height": 70,
-                      "width": 70,
+                      "height": 63,
+                      "width": 63,
                     },
                   ]
                 }
-                themeSize={64}
+                themeSize={57.6}
                 vbHeight={24}
                 vbWidth={24}
-                width={70}
+                width={63}
               >
                 <RNSVGGroup
                   fill={
@@ -4117,18 +4117,18 @@ Array [
                 </RNSVGGroup>
               </RNSVGSvgView>
               <View
-                avatarSize={64}
+                avatarSize={57.6}
                 style={
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#17B582",
-                    "borderRadius": 16,
-                    "marginRight": 2,
-                    "marginTop": 2,
+                    "borderRadius": 14.4,
+                    "marginRight": 1.8,
+                    "marginTop": 1.8,
                     "position": "absolute",
                     "right": 0,
                     "top": 0,
-                    "width": 16,
+                    "width": 14.4,
                   }
                 }
               />
@@ -4165,19 +4165,19 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 64,
+                  "height": 57.6,
                   "justifyContent": "center",
                   "marginRight": 8,
-                  "width": 64,
+                  "width": 57.6,
                 }
               }
-              themeSize={64}
+              themeSize={57.6}
             >
               <RNSVGSvgView
                 align="xMidYMid"
-                bbHeight={70}
-                bbWidth={70}
-                height={70}
+                bbHeight={63}
+                bbWidth={63}
+                height={63}
                 meetOrSlice={0}
                 minX={0}
                 minY={0}
@@ -4191,15 +4191,15 @@ Array [
                     null,
                     Object {
                       "flex": 0,
-                      "height": 70,
-                      "width": 70,
+                      "height": 63,
+                      "width": 63,
                     },
                   ]
                 }
-                themeSize={64}
+                themeSize={57.6}
                 vbHeight={24}
                 vbWidth={24}
-                width={70}
+                width={63}
               >
                 <RNSVGGroup
                   fill={
@@ -4290,18 +4290,18 @@ Array [
                 </RNSVGGroup>
               </RNSVGSvgView>
               <View
-                avatarSize={64}
+                avatarSize={57.6}
                 style={
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#17B582",
-                    "borderRadius": 16,
-                    "marginRight": 2,
-                    "marginTop": 2,
+                    "borderRadius": 14.4,
+                    "marginRight": 1.8,
+                    "marginTop": 1.8,
                     "position": "absolute",
                     "right": 0,
                     "top": 0,
-                    "width": 16,
+                    "width": 14.4,
                   }
                 }
               />
@@ -4338,19 +4338,19 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 64,
+                  "height": 57.6,
                   "justifyContent": "center",
                   "marginRight": 8,
-                  "width": 64,
+                  "width": 57.6,
                 }
               }
-              themeSize={64}
+              themeSize={57.6}
             >
               <RNSVGSvgView
                 align="xMidYMid"
-                bbHeight={70}
-                bbWidth={70}
-                height={70}
+                bbHeight={63}
+                bbWidth={63}
+                height={63}
                 meetOrSlice={0}
                 minX={0}
                 minY={0}
@@ -4364,15 +4364,15 @@ Array [
                     null,
                     Object {
                       "flex": 0,
-                      "height": 70,
-                      "width": 70,
+                      "height": 63,
+                      "width": 63,
                     },
                   ]
                 }
-                themeSize={64}
+                themeSize={57.6}
                 vbHeight={24}
                 vbWidth={24}
-                width={70}
+                width={63}
               >
                 <RNSVGGroup
                   fill={
@@ -4463,18 +4463,18 @@ Array [
                 </RNSVGGroup>
               </RNSVGSvgView>
               <View
-                avatarSize={64}
+                avatarSize={57.6}
                 style={
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#17B582",
-                    "borderRadius": 16,
-                    "marginRight": 2,
-                    "marginTop": 2,
+                    "borderRadius": 14.4,
+                    "marginRight": 1.8,
+                    "marginTop": 1.8,
                     "position": "absolute",
                     "right": 0,
                     "top": 0,
-                    "width": 16,
+                    "width": 14.4,
                   }
                 }
               />
@@ -4707,13 +4707,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -4729,7 +4729,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -4739,21 +4739,21 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                   <View
-                    avatarSize={64}
+                    avatarSize={57.6}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginRight": 2,
-                        "marginTop": 2,
+                        "borderRadius": 14.4,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
-                        "width": 16,
+                        "width": 14.4,
                       }
                     }
                   />
@@ -4790,13 +4790,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -4812,7 +4812,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -4822,21 +4822,21 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                   <View
-                    avatarSize={64}
+                    avatarSize={57.6}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginRight": 2,
-                        "marginTop": 2,
+                        "borderRadius": 14.4,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
-                        "width": 16,
+                        "width": 14.4,
                       }
                     }
                   />
@@ -4873,13 +4873,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -4895,7 +4895,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -4905,21 +4905,21 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                   <View
-                    avatarSize={64}
+                    avatarSize={57.6}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginRight": 2,
-                        "marginTop": 2,
+                        "borderRadius": 14.4,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
-                        "width": 16,
+                        "width": 14.4,
                       }
                     }
                   />
@@ -4956,13 +4956,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -4978,7 +4978,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -4988,7 +4988,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -5023,13 +5023,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -5045,7 +5045,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -5055,7 +5055,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -5090,13 +5090,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -5112,7 +5112,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -5122,7 +5122,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -5157,13 +5157,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -5179,7 +5179,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -5189,7 +5189,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -5224,13 +5224,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -5246,7 +5246,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -5256,7 +5256,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -5502,13 +5502,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -5524,7 +5524,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -5534,21 +5534,21 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                   <View
-                    avatarSize={64}
+                    avatarSize={57.6}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginRight": 2,
-                        "marginTop": 2,
+                        "borderRadius": 14.4,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
-                        "width": 16,
+                        "width": 14.4,
                       }
                     }
                   />
@@ -5585,13 +5585,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -5607,7 +5607,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -5617,21 +5617,21 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                   <View
-                    avatarSize={64}
+                    avatarSize={57.6}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginRight": 2,
-                        "marginTop": 2,
+                        "borderRadius": 14.4,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
-                        "width": 16,
+                        "width": 14.4,
                       }
                     }
                   />
@@ -5668,13 +5668,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -5690,7 +5690,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -5700,21 +5700,21 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                   <View
-                    avatarSize={64}
+                    avatarSize={57.6}
                     style={
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
-                        "borderRadius": 16,
-                        "marginRight": 2,
-                        "marginTop": 2,
+                        "borderRadius": 14.4,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
                         "position": "absolute",
                         "right": 0,
                         "top": 0,
-                        "width": 16,
+                        "width": 14.4,
                       }
                     }
                   />
@@ -5751,13 +5751,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -5773,7 +5773,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -5783,7 +5783,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -5818,13 +5818,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -5840,7 +5840,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -5850,7 +5850,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -5885,13 +5885,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -5907,7 +5907,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -5917,7 +5917,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -5952,13 +5952,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -5974,7 +5974,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -5984,7 +5984,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -6019,13 +6019,13 @@ Array [
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 64,
+                      "height": 57.6,
                       "justifyContent": "center",
                       "marginRight": 8,
-                      "width": 64,
+                      "width": 57.6,
                     }
                   }
-                  themeSize={64}
+                  themeSize={57.6}
                 >
                   <Image
                     fadeDuration={250}
@@ -6041,7 +6041,7 @@ Array [
                     style={
                       Object {
                         "backgroundColor": "#A5A5A5",
-                        "borderRadius": 32,
+                        "borderRadius": 28.8,
                         "bottom": 0,
                         "height": "100%",
                         "left": 0,
@@ -6051,7 +6051,7 @@ Array [
                         "width": "100%",
                       }
                     }
-                    themeSize={64}
+                    themeSize={57.6}
                   />
                 </View>
               </View>
@@ -6259,13 +6259,13 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 64,
+                  "height": 57.6,
                   "justifyContent": "center",
                   "marginRight": 8,
-                  "width": 64,
+                  "width": 57.6,
                 }
               }
-              themeSize={64}
+              themeSize={57.6}
             >
               <Image
                 fadeDuration={250}
@@ -6281,7 +6281,7 @@ Array [
                 style={
                   Object {
                     "backgroundColor": "#A5A5A5",
-                    "borderRadius": 32,
+                    "borderRadius": 28.8,
                     "bottom": 0,
                     "height": "100%",
                     "left": 0,
@@ -6291,21 +6291,21 @@ Array [
                     "width": "100%",
                   }
                 }
-                themeSize={64}
+                themeSize={57.6}
               />
               <View
-                avatarSize={64}
+                avatarSize={57.6}
                 style={
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#17B582",
-                    "borderRadius": 16,
-                    "marginRight": 2,
-                    "marginTop": 2,
+                    "borderRadius": 14.4,
+                    "marginRight": 1.8,
+                    "marginTop": 1.8,
                     "position": "absolute",
                     "right": 0,
                     "top": 0,
-                    "width": 16,
+                    "width": 14.4,
                   }
                 }
               />
@@ -6342,13 +6342,13 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 64,
+                  "height": 57.6,
                   "justifyContent": "center",
                   "marginRight": 8,
-                  "width": 64,
+                  "width": 57.6,
                 }
               }
-              themeSize={64}
+              themeSize={57.6}
             >
               <Image
                 fadeDuration={250}
@@ -6364,7 +6364,7 @@ Array [
                 style={
                   Object {
                     "backgroundColor": "#A5A5A5",
-                    "borderRadius": 32,
+                    "borderRadius": 28.8,
                     "bottom": 0,
                     "height": "100%",
                     "left": 0,
@@ -6374,21 +6374,21 @@ Array [
                     "width": "100%",
                   }
                 }
-                themeSize={64}
+                themeSize={57.6}
               />
               <View
-                avatarSize={64}
+                avatarSize={57.6}
                 style={
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#17B582",
-                    "borderRadius": 16,
-                    "marginRight": 2,
-                    "marginTop": 2,
+                    "borderRadius": 14.4,
+                    "marginRight": 1.8,
+                    "marginTop": 1.8,
                     "position": "absolute",
                     "right": 0,
                     "top": 0,
-                    "width": 16,
+                    "width": 14.4,
                   }
                 }
               />
@@ -6425,13 +6425,13 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 64,
+                  "height": 57.6,
                   "justifyContent": "center",
                   "marginRight": 8,
-                  "width": 64,
+                  "width": 57.6,
                 }
               }
-              themeSize={64}
+              themeSize={57.6}
             >
               <Image
                 fadeDuration={250}
@@ -6447,7 +6447,7 @@ Array [
                 style={
                   Object {
                     "backgroundColor": "#A5A5A5",
-                    "borderRadius": 32,
+                    "borderRadius": 28.8,
                     "bottom": 0,
                     "height": "100%",
                     "left": 0,
@@ -6457,21 +6457,21 @@ Array [
                     "width": "100%",
                   }
                 }
-                themeSize={64}
+                themeSize={57.6}
               />
               <View
-                avatarSize={64}
+                avatarSize={57.6}
                 style={
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#17B582",
-                    "borderRadius": 16,
-                    "marginRight": 2,
-                    "marginTop": 2,
+                    "borderRadius": 14.4,
+                    "marginRight": 1.8,
+                    "marginTop": 1.8,
                     "position": "absolute",
                     "right": 0,
                     "top": 0,
-                    "width": 16,
+                    "width": 14.4,
                   }
                 }
               />
@@ -6508,13 +6508,13 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 64,
+                  "height": 57.6,
                   "justifyContent": "center",
                   "marginRight": 8,
-                  "width": 64,
+                  "width": 57.6,
                 }
               }
-              themeSize={64}
+              themeSize={57.6}
             >
               <Image
                 fadeDuration={250}
@@ -6530,7 +6530,7 @@ Array [
                 style={
                   Object {
                     "backgroundColor": "#A5A5A5",
-                    "borderRadius": 32,
+                    "borderRadius": 28.8,
                     "bottom": 0,
                     "height": "100%",
                     "left": 0,
@@ -6540,7 +6540,7 @@ Array [
                     "width": "100%",
                   }
                 }
-                themeSize={64}
+                themeSize={57.6}
               />
             </View>
           </View>
@@ -6575,13 +6575,13 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 64,
+                  "height": 57.6,
                   "justifyContent": "center",
                   "marginRight": 8,
-                  "width": 64,
+                  "width": 57.6,
                 }
               }
-              themeSize={64}
+              themeSize={57.6}
             >
               <Image
                 fadeDuration={250}
@@ -6597,7 +6597,7 @@ Array [
                 style={
                   Object {
                     "backgroundColor": "#A5A5A5",
-                    "borderRadius": 32,
+                    "borderRadius": 28.8,
                     "bottom": 0,
                     "height": "100%",
                     "left": 0,
@@ -6607,7 +6607,7 @@ Array [
                     "width": "100%",
                   }
                 }
-                themeSize={64}
+                themeSize={57.6}
               />
             </View>
           </View>
@@ -6642,13 +6642,13 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 64,
+                  "height": 57.6,
                   "justifyContent": "center",
                   "marginRight": 8,
-                  "width": 64,
+                  "width": 57.6,
                 }
               }
-              themeSize={64}
+              themeSize={57.6}
             >
               <Image
                 fadeDuration={250}
@@ -6664,7 +6664,7 @@ Array [
                 style={
                   Object {
                     "backgroundColor": "#A5A5A5",
-                    "borderRadius": 32,
+                    "borderRadius": 28.8,
                     "bottom": 0,
                     "height": "100%",
                     "left": 0,
@@ -6674,7 +6674,7 @@ Array [
                     "width": "100%",
                   }
                 }
-                themeSize={64}
+                themeSize={57.6}
               />
             </View>
           </View>
@@ -6709,13 +6709,13 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 64,
+                  "height": 57.6,
                   "justifyContent": "center",
                   "marginRight": 8,
-                  "width": 64,
+                  "width": 57.6,
                 }
               }
-              themeSize={64}
+              themeSize={57.6}
             >
               <Image
                 fadeDuration={250}
@@ -6731,7 +6731,7 @@ Array [
                 style={
                   Object {
                     "backgroundColor": "#A5A5A5",
-                    "borderRadius": 32,
+                    "borderRadius": 28.8,
                     "bottom": 0,
                     "height": "100%",
                     "left": 0,
@@ -6741,7 +6741,7 @@ Array [
                     "width": "100%",
                   }
                 }
-                themeSize={64}
+                themeSize={57.6}
               />
             </View>
           </View>
@@ -6776,13 +6776,13 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 64,
+                  "height": 57.6,
                   "justifyContent": "center",
                   "marginRight": 8,
-                  "width": 64,
+                  "width": 57.6,
                 }
               }
-              themeSize={64}
+              themeSize={57.6}
             >
               <Image
                 fadeDuration={250}
@@ -6798,7 +6798,7 @@ Array [
                 style={
                   Object {
                     "backgroundColor": "#A5A5A5",
-                    "borderRadius": 32,
+                    "borderRadius": 28.8,
                     "bottom": 0,
                     "height": "100%",
                     "left": 0,
@@ -6808,7 +6808,7 @@ Array [
                     "width": "100%",
                   }
                 }
-                themeSize={64}
+                themeSize={57.6}
               />
             </View>
           </View>

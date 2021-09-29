@@ -95,8 +95,9 @@ export const sizing = {
   baseUnit: 16,
   baseBorderRadius: 16,
   avatar: {
-    small: 40,
-    medium: 80,
+    xsmall: 24,
+    small: 48,
+    medium: 72,
     large: 120,
   },
 };

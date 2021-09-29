@@ -44,7 +44,7 @@ UserAvatarConnected.propTypes = {
   isLoading: PropTypes.bool,
   onPressIcon: PropTypes.func,
   refetchRef: PropTypes.func,
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large']),
 };
 
 export default UserAvatarConnected;

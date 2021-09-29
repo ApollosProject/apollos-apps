@@ -102,7 +102,7 @@ Array [
                     <View
                       style={
                         Object {
-                          "borderRadius": 80,
+                          "borderRadius": 72,
                           "overflow": "hidden",
                         }
                       }
@@ -111,12 +111,12 @@ Array [
                         style={
                           Object {
                             "alignItems": "center",
-                            "height": 80,
+                            "height": 72,
                             "justifyContent": "center",
-                            "width": 80,
+                            "width": 72,
                           }
                         }
-                        themeSize={80}
+                        themeSize={72}
                       >
                         <Image
                           fadeDuration={250}
@@ -134,7 +134,7 @@ Array [
                           style={
                             Object {
                               "backgroundColor": "#A5A5A5",
-                              "borderRadius": 40,
+                              "borderRadius": 36,
                               "bottom": 0,
                               "height": "100%",
                               "left": 0,
@@ -144,7 +144,7 @@ Array [
                               "width": "100%",
                             }
                           }
-                          themeSize={80}
+                          themeSize={72}
                         />
                       </View>
                     </View>
@@ -522,7 +522,7 @@ Array [
                     <View
                       style={
                         Object {
-                          "borderRadius": 80,
+                          "borderRadius": 72,
                           "overflow": "hidden",
                         }
                       }
@@ -531,12 +531,12 @@ Array [
                         style={
                           Object {
                             "alignItems": "center",
-                            "height": 80,
+                            "height": 72,
                             "justifyContent": "center",
-                            "width": 80,
+                            "width": 72,
                           }
                         }
-                        themeSize={80}
+                        themeSize={72}
                       >
                         <Image
                           fadeDuration={250}
@@ -554,7 +554,7 @@ Array [
                           style={
                             Object {
                               "backgroundColor": "#A5A5A5",
-                              "borderRadius": 40,
+                              "borderRadius": 36,
                               "bottom": 0,
                               "height": "100%",
                               "left": 0,
@@ -564,7 +564,7 @@ Array [
                               "width": "100%",
                             }
                           }
-                          themeSize={80}
+                          themeSize={72}
                         />
                       </View>
                     </View>
@@ -1231,7 +1231,7 @@ Array [
                     <View
                       style={
                         Object {
-                          "borderRadius": 80,
+                          "borderRadius": 72,
                           "overflow": "hidden",
                         }
                       }
@@ -1240,12 +1240,12 @@ Array [
                         style={
                           Object {
                             "alignItems": "center",
-                            "height": 80,
+                            "height": 72,
                             "justifyContent": "center",
-                            "width": 80,
+                            "width": 72,
                           }
                         }
-                        themeSize={80}
+                        themeSize={72}
                       >
                         <Image
                           fadeDuration={250}
@@ -1263,7 +1263,7 @@ Array [
                           style={
                             Object {
                               "backgroundColor": "#A5A5A5",
-                              "borderRadius": 40,
+                              "borderRadius": 36,
                               "bottom": 0,
                               "height": "100%",
                               "left": 0,
@@ -1273,7 +1273,7 @@ Array [
                               "width": "100%",
                             }
                           }
-                          themeSize={80}
+                          themeSize={72}
                         />
                       </View>
                     </View>
@@ -1760,7 +1760,7 @@ Array [
                     <View
                       style={
                         Object {
-                          "borderRadius": 80,
+                          "borderRadius": 72,
                           "overflow": "hidden",
                         }
                       }
@@ -1769,12 +1769,12 @@ Array [
                         style={
                           Object {
                             "alignItems": "center",
-                            "height": 80,
+                            "height": 72,
                             "justifyContent": "center",
-                            "width": 80,
+                            "width": 72,
                           }
                         }
-                        themeSize={80}
+                        themeSize={72}
                       >
                         <Image
                           fadeDuration={250}
@@ -1792,7 +1792,7 @@ Array [
                           style={
                             Object {
                               "backgroundColor": "#A5A5A5",
-                              "borderRadius": 40,
+                              "borderRadius": 36,
                               "bottom": 0,
                               "height": "100%",
                               "left": 0,
@@ -1802,7 +1802,7 @@ Array [
                               "width": "100%",
                             }
                           }
-                          themeSize={80}
+                          themeSize={72}
                         />
                       </View>
                     </View>
@@ -2180,7 +2180,7 @@ Array [
                     <View
                       style={
                         Object {
-                          "borderRadius": 80,
+                          "borderRadius": 72,
                           "overflow": "hidden",
                         }
                       }
@@ -2189,12 +2189,12 @@ Array [
                         style={
                           Object {
                             "alignItems": "center",
-                            "height": 80,
+                            "height": 72,
                             "justifyContent": "center",
-                            "width": 80,
+                            "width": 72,
                           }
                         }
-                        themeSize={80}
+                        themeSize={72}
                       >
                         <Image
                           fadeDuration={250}
@@ -2212,7 +2212,7 @@ Array [
                           style={
                             Object {
                               "backgroundColor": "#A5A5A5",
-                              "borderRadius": 40,
+                              "borderRadius": 36,
                               "bottom": 0,
                               "height": "100%",
                               "left": 0,
@@ -2222,7 +2222,7 @@ Array [
                               "width": "100%",
                             }
                           }
-                          themeSize={80}
+                          themeSize={72}
                         />
                       </View>
                     </View>
@@ -2600,7 +2600,7 @@ Array [
                     <View
                       style={
                         Object {
-                          "borderRadius": 80,
+                          "borderRadius": 72,
                           "overflow": "hidden",
                         }
                       }
@@ -2609,12 +2609,12 @@ Array [
                         style={
                           Object {
                             "alignItems": "center",
-                            "height": 80,
+                            "height": 72,
                             "justifyContent": "center",
-                            "width": 80,
+                            "width": 72,
                           }
                         }
-                        themeSize={80}
+                        themeSize={72}
                       >
                         <Image
                           fadeDuration={250}
@@ -2632,7 +2632,7 @@ Array [
                           style={
                             Object {
                               "backgroundColor": "#A5A5A5",
-                              "borderRadius": 40,
+                              "borderRadius": 36,
                               "bottom": 0,
                               "height": "100%",
                               "left": 0,
@@ -2642,7 +2642,7 @@ Array [
                               "width": "100%",
                             }
                           }
-                          themeSize={80}
+                          themeSize={72}
                         />
                       </View>
                     </View>

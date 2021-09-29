@@ -163,7 +163,7 @@ Avatar.propTypes = {
   onPressIcon: PropTypes.func,
   themeSize: PropTypes.number,
   notification: PropTypes.bool,
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large']),
   profile: PropTypes.shape({
     firstName: PropTypes.string,
     lastName: PropTypes.string,

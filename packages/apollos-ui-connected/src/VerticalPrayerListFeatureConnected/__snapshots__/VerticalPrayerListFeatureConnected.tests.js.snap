@@ -82,35 +82,35 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 80,
+                  "height": 72,
                   "justifyContent": "center",
-                  "width": 80,
+                  "width": 72,
                 }
               }
-              themeSize={80}
+              themeSize={72}
             >
               <View
                 style={
                   Object {
                     "alignItems": "center",
                     "backgroundColor": "#A5A5A5",
-                    "borderRadius": 80,
-                    "height": 80,
+                    "borderRadius": 72,
+                    "height": 72,
                     "justifyContent": "center",
-                    "width": 80,
+                    "width": 72,
                   }
                 }
-                themeSize={80}
+                themeSize={72}
               >
                 <Text
                   style={
                     Object {
                       "color": "rgb(249, 249, 251)",
                       "fontFamily": "InterUI-Bold",
-                      "fontSize": 40,
+                      "fontSize": 36,
                     }
                   }
-                  themeSize={80}
+                  themeSize={72}
                 >
                   MN
                 </Text>
@@ -269,35 +269,35 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "height": 80,
+                  "height": 72,
                   "justifyContent": "center",
-                  "width": 80,
+                  "width": 72,
                 }
               }
-              themeSize={80}
+              themeSize={72}
             >
               <View
                 style={
                   Object {
                     "alignItems": "center",
                     "backgroundColor": "#A5A5A5",
-                    "borderRadius": 80,
-                    "height": 80,
+                    "borderRadius": 72,
+                    "height": 72,
                     "justifyContent": "center",
-                    "width": 80,
+                    "width": 72,
                   }
                 }
-                themeSize={80}
+                themeSize={72}
               >
                 <Text
                   style={
                     Object {
                       "color": "rgb(249, 249, 251)",
                       "fontFamily": "InterUI-Bold",
-                      "fontSize": 40,
+                      "fontSize": 36,
                     }
                   }
-                  themeSize={80}
+                  themeSize={72}
                 >
                   MN
                 </Text>

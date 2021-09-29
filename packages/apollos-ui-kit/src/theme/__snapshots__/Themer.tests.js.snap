@@ -169,8 +169,9 @@ exports[`Themer should generate entirely new themes based on overrides 1`] = `
       "sizing": Object {
         "avatar": Object {
           "large": 120,
-          "medium": 80,
-          "small": 40,
+          "medium": 72,
+          "small": 48,
+          "xsmall": 24,
         },
         "baseBorderRadius": 16,
         "baseUnit": 16,

@@ -6,12 +6,12 @@ Array [
     style={
       Object {
         "alignItems": "center",
-        "height": 40,
+        "height": 48,
         "justifyContent": "center",
-        "width": 40,
+        "width": 48,
       }
     }
-    themeSize={40}
+    themeSize={48}
   >
     <Image
       fadeDuration={250}
@@ -28,7 +28,7 @@ Array [
       style={
         Object {
           "backgroundColor": "#A5A5A5",
-          "borderRadius": 20,
+          "borderRadius": 24,
           "bottom": 0,
           "height": "100%",
           "left": 0,
@@ -38,7 +38,7 @@ Array [
           "width": "100%",
         }
       }
-      themeSize={40}
+      themeSize={48}
       unread={true}
     />
   </View>,
@@ -46,12 +46,12 @@ Array [
     style={
       Object {
         "alignItems": "center",
-        "height": 80,
+        "height": 72,
         "justifyContent": "center",
-        "width": 80,
+        "width": 72,
       }
     }
-    themeSize={80}
+    themeSize={72}
   >
     <Image
       fadeDuration={250}
@@ -68,7 +68,7 @@ Array [
       style={
         Object {
           "backgroundColor": "#A5A5A5",
-          "borderRadius": 40,
+          "borderRadius": 36,
           "bottom": 0,
           "height": "100%",
           "left": 0,
@@ -78,7 +78,7 @@ Array [
           "width": "100%",
         }
       }
-      themeSize={80}
+      themeSize={72}
       unread={true}
     />
   </View>,
@@ -130,12 +130,12 @@ exports[`The Avatar component should render icon button 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "height": 40,
+      "height": 48,
       "justifyContent": "center",
-      "width": 40,
+      "width": 48,
     }
   }
-  themeSize={40}
+  themeSize={48}
 >
   <Image
     fadeDuration={250}
@@ -151,7 +151,7 @@ exports[`The Avatar component should render icon button 1`] = `
     style={
       Object {
         "backgroundColor": "#A5A5A5",
-        "borderRadius": 20,
+        "borderRadius": 24,
         "bottom": 0,
         "height": "100%",
         "left": 0,
@@ -161,7 +161,7 @@ exports[`The Avatar component should render icon button 1`] = `
         "width": "100%",
       }
     }
-    themeSize={40}
+    themeSize={48}
   />
   <View
     style={
@@ -193,12 +193,12 @@ exports[`The Avatar component should render icon button 1`] = `
       }
     >
       <View
-        borderRadius={16}
-        iconPadding={3.2}
+        borderRadius={19.2}
+        iconPadding={3.84}
         style={
           Object {
             "backgroundColor": "#FFFFFF",
-            "padding": 3.2,
+            "padding": 3.84,
             "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
             "shadowOffset": Object {
               "height": 2,
@@ -211,9 +211,9 @@ exports[`The Avatar component should render icon button 1`] = `
       >
         <RNSVGSvgView
           align="xMidYMid"
-          bbHeight={8}
-          bbWidth={8}
-          height={8}
+          bbHeight={9.6}
+          bbWidth={9.6}
+          height={9.6}
           meetOrSlice={0}
           minX={0}
           minY={0}
@@ -229,14 +229,14 @@ exports[`The Avatar component should render icon button 1`] = `
               },
               Object {
                 "flex": 0,
-                "height": 8,
-                "width": 8,
+                "height": 9,
+                "width": 9,
               },
             ]
           }
           vbHeight={24}
           vbWidth={24}
-          width={8}
+          width={9.6}
         >
           <RNSVGGroup
             fill={
@@ -337,18 +337,18 @@ exports[`The Avatar component should render icon button 2`] = `
   style={
     Object {
       "alignItems": "center",
-      "height": 40,
+      "height": 48,
       "justifyContent": "center",
-      "width": 40,
+      "width": 48,
     }
   }
-  themeSize={40}
+  themeSize={48}
 >
   <RNSVGSvgView
     align="xMidYMid"
-    bbHeight={43.75}
-    bbWidth={43.75}
-    height={43.75}
+    bbHeight={52.5}
+    bbWidth={52.5}
+    height={52.5}
     meetOrSlice={0}
     minX={0}
     minY={0}
@@ -362,15 +362,15 @@ exports[`The Avatar component should render icon button 2`] = `
         null,
         Object {
           "flex": 0,
-          "height": 43,
-          "width": 43,
+          "height": 52,
+          "width": 52,
         },
       ]
     }
-    themeSize={40}
+    themeSize={48}
     vbHeight={24}
     vbWidth={24}
-    width={43.75}
+    width={52.5}
   >
     <RNSVGGroup
       fill={
@@ -493,7 +493,7 @@ exports[`The Avatar component should render icon button 2`] = `
         animating={true}
         color="#999999"
         hidesWhenStopped={true}
-        size={8}
+        size={9.6}
         style={
           Object {
             "alignSelf": "center",
@@ -558,12 +558,12 @@ exports[`The Avatar component should render medium 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "height": 80,
+      "height": 72,
       "justifyContent": "center",
-      "width": 80,
+      "width": 72,
     }
   }
-  themeSize={80}
+  themeSize={72}
 >
   <Image
     fadeDuration={250}
@@ -580,7 +580,7 @@ exports[`The Avatar component should render medium 1`] = `
     style={
       Object {
         "backgroundColor": "#A5A5A5",
-        "borderRadius": 40,
+        "borderRadius": 36,
         "bottom": 0,
         "height": "100%",
         "left": 0,
@@ -590,7 +590,7 @@ exports[`The Avatar component should render medium 1`] = `
         "width": "100%",
       }
     }
-    themeSize={80}
+    themeSize={72}
   />
 </View>
 `;
@@ -600,12 +600,12 @@ exports[`The Avatar component should render small 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "height": 40,
+      "height": 48,
       "justifyContent": "center",
-      "width": 40,
+      "width": 48,
     }
   }
-  themeSize={40}
+  themeSize={48}
 >
   <Image
     fadeDuration={250}
@@ -622,7 +622,7 @@ exports[`The Avatar component should render small 1`] = `
     style={
       Object {
         "backgroundColor": "#A5A5A5",
-        "borderRadius": 20,
+        "borderRadius": 24,
         "bottom": 0,
         "height": "100%",
         "left": 0,
@@ -632,7 +632,7 @@ exports[`The Avatar component should render small 1`] = `
         "width": "100%",
       }
     }
-    themeSize={40}
+    themeSize={48}
   />
 </View>
 `;
