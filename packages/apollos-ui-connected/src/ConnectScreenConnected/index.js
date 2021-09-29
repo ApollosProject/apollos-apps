@@ -46,7 +46,7 @@ const ConnectScreenConnected = (props) => {
   return (
     <>
       <BackgroundView>
-        <FlexedSafeAreaView>
+        <FlexedSafeAreaView edges={['left', 'right']}>
           <ScrollView
             refreshControl={
               <RefreshControl
