@@ -1,7 +1,5 @@
 import React from 'react';
-import ApollosConfig from '@apollosproject/config';
 import PropTypes from 'prop-types';
-import analytics from '@metarouter/analytics-react-native';
 import { isEqual, last } from 'lodash';
 import { AnalyticsConsumer } from './Provider';
 
@@ -36,19 +34,9 @@ const onNavigationStateChange = (track) => (prevState, currentState) => {
   );
 
   if (prevScreen !== currentScreen || !isEqual(currentParams, prevParams)) {
-    analytics.track(`Viewed Screen ${currentScreen}`);
     track({ eventName: `Viewed Screen ${currentScreen}` });
-    // Not tracking for now.
-    // analytics.screen(currentScreen);
   }
 };
-
-analytics.setup(ApollosConfig.ASTRONOMER_KEY || 'a27aHBJqZgkDDfvZ4Q3Zr', {
-  // Record screen views automatically!
-  recordScreenViews: false,
-  // Record certain application events automatically!
-  trackAppLifecycleEvents: true,
-});
 
 const CoreNavigationAnalytics = ({ children }) => (
   <AnalyticsConsumer>
@@ -62,4 +50,4 @@ CoreNavigationAnalytics.propTypes = {
   children: PropTypes.func.isRequired,
 };
 
-export { CoreNavigationAnalytics as default, analytics as coreAnalytics };
+export { CoreNavigationAnalytics as default };

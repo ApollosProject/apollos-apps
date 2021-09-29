@@ -2773,11 +2773,6 @@
     npmlog "^4.1.2"
     write-file-atomic "^3.0.3"
 
-"@metarouter/analytics-react-native@^1.1.5":
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/@metarouter/analytics-react-native/-/analytics-react-native-1.1.5.tgz#a2e4f7679793be21eb7a396588ee0e09420a95e6"
-  integrity sha512-xEyazUyK/Dm7jthSRms/CGWJ5RGmYfyBLT93Uv4snb78xVgsBLF7I6pp4fa5j6Eo/LBWFMtp59k1CObCwt9ySQ==
-
 "@nicolo-ribaudo/chokidar-2@2.1.8-no-fsevents.2":
   version "2.1.8-no-fsevents.2"
   resolved "https://registry.yarnpkg.com/@nicolo-ribaudo/chokidar-2/-/chokidar-2-2.1.8-no-fsevents.2.tgz#e324c0a247a5567192dd7180647709d7e2faf94b"

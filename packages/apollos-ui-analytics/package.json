@@ -45,7 +45,6 @@
   "peerDependencies": {
     "@apollo/client": "*",
     "@apollosproject/ui-kit": "*",
-    "@metarouter/analytics-react-native": "*",
     "react": "*",
     "react-native": "*"
   },
@@ -54,7 +53,6 @@
   },
   "devDependencies": {
     "@apollo/client": "3.3.0-rc.2",
-    "@metarouter/analytics-react-native": "^1.1.5",
     "jest": "^25.1.0",
     "jest-fetch-mock": "^2.1.2",
     "prop-types": "15.7.2",
