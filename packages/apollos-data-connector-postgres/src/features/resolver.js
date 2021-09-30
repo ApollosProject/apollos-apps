@@ -28,20 +28,19 @@ const resolver = {
     id: ({ apollosId }) => apollosId,
   },
   ButtonFeature: {
-    id: id('ScriptureFeature'),
-    action: ({ data }, args, { dataSources: { Feature } }) => {
-      return Feature.attachActionIds({
-        relatedNode: data.relatedNode
-          ? {
+    id: id('ButtonFeature'),
+    action: ({ data, parentId }, args, { dataSources: { ContentItem } }) => ({
+      relatedNode:
+        data.action === 'COMPLETE_NODE'
+          ? ContentItem.getFromId(parentId)
+          : {
+              id: createGlobalId(JSON.stringify({ url: data.url }), 'Url'),
               __typename: 'Url',
               url: data.url,
-              ...data.relatedNode,
-            }
-          : null,
-        action: data.action,
-        title: data.title,
-      });
-    },
+            },
+      action: data.action,
+      title: data.title,
+    }),
   },
   CardListItem: {
     coverImage: ({ image }) => image,
