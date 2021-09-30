@@ -36,7 +36,7 @@ const stripNullLeaves = (obj, cb) => {
   return out;
 };
 
-const Themer = ({ theme: newThemeInput, icons: customIcons, ...props }) => {
+const Themer = ({ theme: newThemeInput, icons: customIcons, children }) => {
   // themeInput is an object used to create a theme - it's the input to the
   // createTheme function. We hang on to the given themeInput in context as it
   // is what's used to merge nested themes - really we don't want to merge the
@@ -65,10 +65,9 @@ const Themer = ({ theme: newThemeInput, icons: customIcons, ...props }) => {
           // further down the tree <Themer theme={theme}> can be called to further
           // customize the the theme
           value={newTheme}
-          // prop spreading shouldn't be necessary, currently we are passing through
-          // the one signal key on the app template, need to find a way around
-          {...props}
-        />
+        >
+          {children}
+        </ThemeContext.Provider>
       </ThemeInputContext.Provider>
     </IconContext.Provider>
   );
@@ -77,6 +76,7 @@ const Themer = ({ theme: newThemeInput, icons: customIcons, ...props }) => {
 Themer.propTypes = {
   theme: PropTypes.shape({}),
   icons: PropTypes.shape({}),
+  children: PropTypes.shape({}),
 };
 
 Themer.defaultProps = {
