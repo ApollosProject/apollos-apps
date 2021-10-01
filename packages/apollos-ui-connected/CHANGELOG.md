@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.34.0](https://github.com/apollosproject/apollos-apps/compare/v2.33.4...v2.34.0) (2021-10-01)
+
+
+### Bug Fixes
+
+* adds padding to connect screen action bar ([#2197](https://github.com/apollosproject/apollos-apps/issues/2197)) ([d2b3355](https://github.com/apollosproject/apollos-apps/commit/d2b33553dd00b7e3fcbeeec020d9f531792357e6))
+
+
+### Reverts
+
+* Revert "fix: adds padding to connect screen action bar (#2197)" (#2199) ([3c8960a](https://github.com/apollosproject/apollos-apps/commit/3c8960a777eae33e08bfa2957fcbc0338e36d0dc)), closes [#2197](https://github.com/apollosproject/apollos-apps/issues/2197) [#2199](https://github.com/apollosproject/apollos-apps/issues/2199)
+
+
+
 ### [2.33.4](https://github.com/apollosproject/apollos-apps/compare/v2.33.3...v2.33.4) (2021-09-27)
 
 

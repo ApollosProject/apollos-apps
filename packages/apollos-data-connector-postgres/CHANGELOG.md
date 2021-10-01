@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.34.0](https://github.com/apollosproject/apollos-apps/compare/v2.33.4...v2.34.0) (2021-10-01)
+
+
+### Bug Fixes
+
+* adds related node to button feature ([#2213](https://github.com/apollosproject/apollos-apps/issues/2213)) ([9f2fda1](https://github.com/apollosproject/apollos-apps/commit/9f2fda16f77dfbdcf80834029020a774d9e7a8d2))
+
+
+
 ### [2.33.4](https://github.com/apollosproject/apollos-apps/compare/v2.33.3...v2.33.4) (2021-09-27)
 
 
