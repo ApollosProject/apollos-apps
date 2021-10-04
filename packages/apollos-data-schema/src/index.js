@@ -394,6 +394,7 @@ export const interactionsSchema = gql`
 
   extend type Query {
     interactions(nodeId: ID, action: InteractionAction): [Interaction]
+      @cacheControl(scope: PRIVATE)
   }
 
   extend type Mutation {
