@@ -268,7 +268,10 @@ export default class ContentItem extends RockApolloDataSource {
         Feature.createButtonFeature({
           id: attributeValues.completeButtonText.id,
           action: Feature.attachActionIds({
-            relatedNode: item,
+            relatedNode: {
+              __type: this.resolveType(item),
+              ...item,
+            },
             action: 'COMPLETE_NODE',
             title: completeButtonText,
           }),
