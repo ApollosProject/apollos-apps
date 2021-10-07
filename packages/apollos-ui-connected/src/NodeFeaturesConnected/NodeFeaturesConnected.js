@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Query } from '@apollo/client/react/components';
+import { useQuery } from '@apollo/client';
 import { ErrorCard, named } from '@apollosproject/ui-kit';
-import { get } from 'lodash';
 
 import FeaturesFeedConnected, {
   FEATURE_FEED_ACTION_MAP,
@@ -17,43 +16,32 @@ function handleOnPress({ action, ...props }) {
 }
 
 const NodeFeaturesConnected = ({ Component, nodeId, ...props }) => {
-  if (!nodeId) return null;
+  const { data, loading, error } = useQuery(GET_NODE_FEATURES, {
+    fetchPolicy: 'cache-and-network',
+    variables: { nodeId },
+  });
+
+  if (error) return <ErrorCard error={error} />;
+  if (loading) return null;
+  if (!data?.node?.featureFeed?.id) return null;
 
   return (
-    <Query
-      query={GET_NODE_FEATURES}
-      fetchPolicy="cache-and-network"
-      variables={{ nodeId }}
-    >
-      {({ data: { node } = {}, loading, error }) => {
-        if (error) return <ErrorCard error={error} />;
-        // TODO: set an optimistic response for this query to return a visually appeallying empty query so we can enable loading states
-        if (loading) return null;
-
-        const featureFeedId = get(node, 'featureFeed.id');
-
-        if (!featureFeedId) return null;
-
-        return (
-          <RockAuthedWebBrowser>
-            {(openUrl) => (
-              <Component
-                openUrl={openUrl}
-                featureFeedId={featureFeedId}
-                onPressActionItem={handleOnPress}
-                {...props}
-              />
-            )}
-          </RockAuthedWebBrowser>
-        );
-      }}
-    </Query>
+    <RockAuthedWebBrowser>
+      {(openUrl) => (
+        <Component
+          openUrl={openUrl}
+          featureFeedId={data?.node?.featureFeed?.id}
+          onPressActionItem={handleOnPress}
+          {...props}
+        />
+      )}
+    </RockAuthedWebBrowser>
   );
 };
 
 NodeFeaturesConnected.propTypes = {
   Component: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-  nodeId: PropTypes.string,
+  nodeId: PropTypes.string.isRequired,
 };
 
 NodeFeaturesConnected.defaultProps = {

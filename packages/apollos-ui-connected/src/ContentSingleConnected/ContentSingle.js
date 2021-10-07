@@ -3,7 +3,7 @@ import { gql, useQuery } from '@apollo/client';
 import PropTypes from 'prop-types';
 
 import { TrackEventWhenLoaded } from '@apollosproject/ui-analytics';
-import { styled } from '@apollosproject/ui-kit';
+import { styled, named } from '@apollosproject/ui-kit';
 
 import InteractWhenLoadedConnected from '../InteractWhenLoadedConnected';
 import NodeSingleConnected from '../NodeSingleConnected';
@@ -30,11 +30,13 @@ const ContentSingle = (props) => {
   );
   return (
     <ThemeMixinConnected nodeId={nodeId}>
-      <InteractWhenLoadedConnected
-        isLoading={loading}
-        nodeId={nodeId}
-        action={'COMPLETE'}
-      />
+      {props.autoComplete ? (
+        <InteractWhenLoadedConnected
+          isLoading={loading}
+          nodeId={nodeId}
+          action={'COMPLETE'}
+        />
+      ) : null}
       <TrackEventWhenLoaded
         isLoading={loading}
         eventName={'View Content'}
@@ -57,6 +59,11 @@ ContentSingle.propTypes = {
       itemId: PropTypes.string,
     }),
   }),
+  autoComplete: PropTypes.bool,
 };
 
-export default ContentSingle;
+ContentSingle.defaultProps = {
+  autoComplete: true,
+};
+
+export default named('ContentSingle')(ContentSingle);

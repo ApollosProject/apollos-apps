@@ -51,11 +51,13 @@ const NodeSingleConnected = ({ nodeId, children, Component, ...props }) => (
       <StretchyView>
         {({ Stretchy, ...scrollViewProps }) => (
           <FlexedScrollView {...scrollViewProps}>
-            <Component
-              nodeId={nodeId}
-              ImageWrapperComponent={Stretchy}
-              {...props}
-            />
+            {nodeId ? (
+              <Component
+                nodeId={nodeId}
+                ImageWrapperComponent={Stretchy}
+                {...props}
+              />
+            ) : null}
           </FlexedScrollView>
         )}
       </StretchyView>
