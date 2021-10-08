@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { FlatList } from 'react-native';
 import PropTypes from 'prop-types';
-import { pure, compose, branch, withProps, defaultProps } from 'recompose';
+import { pure, compose, branch, withProps } from 'recompose';
 import { get } from 'lodash';
 
 import DefaultCard from '../DefaultCard';
-import { enhancer as mediaQuery } from '../MediaQuery';
 import { ErrorCard } from '../Card';
 import TouchableScale from '../TouchableScale';
 
@@ -141,11 +140,6 @@ const enhance = compose(
         loadingStateData || generateLoadingStateData(10, loadingStateObject),
       fetchMore: () => {},
     }))
-  ),
-  mediaQuery(
-    ({ md }) => ({ maxWidth: md }),
-    defaultProps({ numColumns: 1 }),
-    defaultProps({ numColumns: 2 })
   )
 );
 

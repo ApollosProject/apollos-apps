@@ -46,7 +46,9 @@ Array [
         <View
           style={
             Object {
-              "flex": 1,
+              "alignSelf": "center",
+              "flex": 0,
+              "height": "100%",
               "justifyContent": "center",
               "paddingHorizontal": 16,
               "paddingVertical": 16,
@@ -447,7 +449,9 @@ Array [
         <View
           style={
             Object {
-              "flex": 1,
+              "alignSelf": "center",
+              "flex": 0,
+              "height": "100%",
               "justifyContent": "center",
               "paddingHorizontal": 16,
               "paddingVertical": 16,
@@ -653,7 +657,9 @@ Array [
         <View
           style={
             Object {
-              "flex": 1,
+              "alignSelf": "center",
+              "flex": 0,
+              "height": "100%",
               "justifyContent": "center",
               "paddingHorizontal": 16,
               "paddingVertical": 16,
@@ -859,7 +865,9 @@ Array [
         <View
           style={
             Object {
-              "flex": 1,
+              "alignSelf": "center",
+              "flex": 0,
+              "height": "100%",
               "justifyContent": "center",
               "paddingHorizontal": 16,
               "paddingVertical": 16,
@@ -1065,7 +1073,9 @@ Array [
         <View
           style={
             Object {
-              "flex": 1,
+              "alignSelf": "center",
+              "flex": 0,
+              "height": "100%",
               "justifyContent": "center",
               "paddingHorizontal": 16,
               "paddingVertical": 16,
@@ -1302,7 +1312,9 @@ Array [
         <View
           style={
             Object {
-              "flex": 1,
+              "alignSelf": "center",
+              "flex": 0,
+              "height": "100%",
               "justifyContent": "center",
               "paddingHorizontal": 16,
               "paddingVertical": 16,

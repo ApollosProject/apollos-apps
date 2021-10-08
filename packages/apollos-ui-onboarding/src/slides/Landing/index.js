@@ -14,8 +14,10 @@ import {
 import Slide from '../../Slide';
 
 const Content = styled({
-  flex: 1,
+  flex: 0,
   justifyContent: 'center',
+  alignSelf: 'center',
+  height: '100%',
 })(PaddedView);
 
 const BrandIcon = withTheme(
