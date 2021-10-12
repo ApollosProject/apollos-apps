@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.35.0](https://github.com/ApollosProject/apollos-apps/compare/v2.34.0...v2.35.0) (2021-10-12)
+
+
+### Features
+
+* adds complete button to content items ([#2189](https://github.com/ApollosProject/apollos-apps/issues/2189)) ([b8c820c](https://github.com/ApollosProject/apollos-apps/commit/b8c820c9100e1db1a825cdc81e917650125a627b))
+
+
+### Bug Fixes
+
+* correctly finds node type on Rock button feature ([#2223](https://github.com/ApollosProject/apollos-apps/issues/2223)) ([cc748c1](https://github.com/ApollosProject/apollos-apps/commit/cc748c16664a2c7ecd7789e837d44c8fdfeae636))
+* Fix Feed View for iPad ([#2211](https://github.com/ApollosProject/apollos-apps/issues/2211)) ([98ed431](https://github.com/ApollosProject/apollos-apps/commit/98ed431b69ac7355b8a0d047a2384a02fa52f5df))
+
+
+
 ## [2.34.0](https://github.com/ApollosProject/apollos-apps/compare/v2.33.4...v2.34.0) (2021-10-01)
 
 

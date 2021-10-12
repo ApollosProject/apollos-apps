@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.35.0](https://github.com/apollosproject/apollos-apps/compare/v2.34.0...v2.35.0) (2021-10-12)
+
+
+### Bug Fixes
+
+* Fix Feed View for iPad ([#2211](https://github.com/apollosproject/apollos-apps/issues/2211)) ([98ed431](https://github.com/apollosproject/apollos-apps/commit/98ed431b69ac7355b8a0d047a2384a02fa52f5df))
+
+
+
 ## [2.34.0](https://github.com/apollosproject/apollos-apps/compare/v2.33.4...v2.34.0) (2021-10-01)
 
 **Note:** Version bump only for package @apollosproject/ui-kit

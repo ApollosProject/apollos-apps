@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.35.0](https://github.com/apollosproject/apollos-apps/compare/v2.34.0...v2.35.0) (2021-10-12)
+
+
+### Bug Fixes
+
+* correctly finds node type on Rock button feature ([#2223](https://github.com/apollosproject/apollos-apps/issues/2223)) ([cc748c1](https://github.com/apollosproject/apollos-apps/commit/cc748c16664a2c7ecd7789e837d44c8fdfeae636))
+
+
+
 ## [2.34.0](https://github.com/apollosproject/apollos-apps/compare/v2.33.4...v2.34.0) (2021-10-01)
 
 

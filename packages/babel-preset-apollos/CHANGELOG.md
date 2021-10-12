@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.35.0](https://github.com/apollosproject/apollos-apps/compare/v2.34.0...v2.35.0) (2021-10-12)
+
+**Note:** Version bump only for package @apollosproject/babel-preset-apollos
+
+
+
+
+
 ## [2.34.0](https://github.com/apollosproject/apollos-apps/compare/v2.33.4...v2.34.0) (2021-10-01)
 
 **Note:** Version bump only for package @apollosproject/babel-preset-apollos

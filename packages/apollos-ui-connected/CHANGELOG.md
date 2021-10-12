@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.35.0](https://github.com/apollosproject/apollos-apps/compare/v2.34.0...v2.35.0) (2021-10-12)
+
+
+### Features
+
+* adds complete button to content items ([#2189](https://github.com/apollosproject/apollos-apps/issues/2189)) ([b8c820c](https://github.com/apollosproject/apollos-apps/commit/b8c820c9100e1db1a825cdc81e917650125a627b))
+
+
+
 ## [2.34.0](https://github.com/apollosproject/apollos-apps/compare/v2.33.4...v2.34.0) (2021-10-01)
 
 
