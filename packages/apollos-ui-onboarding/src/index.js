@@ -1,4 +1,5 @@
 export { default as OnboardingSwiper } from './OnboardingSwiper';
+export { default as LandingSwiper } from './LandingSwiper';
 export {
   AboutYou,
   AboutYouConnected,
