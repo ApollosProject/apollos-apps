@@ -59,6 +59,7 @@ const DefaultCard = withIsLoading(
     summary,
     isLive,
     style,
+    actionIcon,
   }) => (
     <Card isLoading={isLoading} style={style}>
       {coverImage ? (
@@ -69,6 +70,7 @@ const DefaultCard = withIsLoading(
       ) : null}
       <ContentTitles
         featured={featured}
+        actionIcon={actionIcon}
         title={title}
         summary={summary}
         isLiked={isLiked}
@@ -92,6 +94,7 @@ DefaultCard.propTypes = {
   ]),
   featured: PropTypes.bool,
   title: PropTypes.string,
+  actionIcon: PropTypes.string,
   isLiked: PropTypes.bool,
   isLive: PropTypes.bool,
   LabelComponent: PropTypes.element,

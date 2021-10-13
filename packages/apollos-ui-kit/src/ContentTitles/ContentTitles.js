@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
+import Icon from '../Icon';
 
+import { withTheme } from '../theme';
 import { H2, H3, H4, BodyText, BodySmall } from '../typography';
 import PaddedView from '../PaddedView';
+import FlexedView from '../FlexedView';
 import styled from '../styled';
 
 import SocialBar from '../SocialBar';
@@ -24,6 +27,30 @@ import SocialBar from '../SocialBar';
  * - [ ] Loading state
  * */
 
+const ActionLayout = styled(
+  () => ({
+    flexDirection: 'row',
+    alignItems: 'center',
+  }),
+  'ui-kit.HighlightCard.ActionLayout'
+)(View);
+
+const FlexedActionLayout = styled(
+  ({ theme }) => ({
+    marginRight: theme.sizing.baseUnit * 0.5, // spaces out text from `ActionIcon`. This has to live here for ActionIcon's loading state
+    flex: 0,
+  }),
+  'ui-kit.HighlightCard.FlexedActionLayout'
+)(FlexedView);
+
+const ActionIcon = withTheme(
+  ({ theme }) => ({
+    fill: theme.colors.text.primary,
+    size: theme.sizing.baseUnit * 2,
+  }),
+  'ui-kit.ContentTitles.ActionIcon'
+)(Icon);
+
 const TitleText = styled(
   ({ theme }) => ({ color: theme.colors.text.primary }),
   'ui-kit.ContentTitles.TitleText'
@@ -42,6 +69,18 @@ const Container = styled(
   'ui-kit.ContentTitles.Container'
 )(PaddedView);
 
+const renderWithIcon = (actionIcon, label) =>
+  actionIcon ? (
+    <ActionLayout>
+      <FlexedActionLayout>
+        <ActionIcon name={actionIcon} />
+      </FlexedActionLayout>
+      {label}
+    </ActionLayout>
+  ) : (
+    <>{label}</>
+  );
+
 const ContentTitles = ({
   label,
   title,
@@ -52,6 +91,7 @@ const ContentTitles = ({
   isLiked,
   onPressLike,
   onPressShare,
+  actionIcon,
 }) => {
   if (featured && micro)
     console.warn(
@@ -71,7 +111,7 @@ const ContentTitles = ({
 
   return (
     <Container>
-      {label}
+      {actionIcon || label ? renderWithIcon(actionIcon, label) : null}
       {title || isLoading ? (
         <Title
           numberOfLines={numberOfTitleLines}
@@ -103,6 +143,7 @@ const ContentTitles = ({
 ContentTitles.propTypes = {
   label: PropTypes.element,
   title: PropTypes.string,
+  actionIcon: PropTypes.string,
   summary: PropTypes.string,
   featured: PropTypes.bool,
   micro: PropTypes.bool,

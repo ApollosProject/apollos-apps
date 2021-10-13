@@ -169,6 +169,33 @@ storiesOf('ui-kit/DefaultCard', module)
       labelText={'Quote'}
     />
   ))
+  .add('actionIcon', () => (
+    <DefaultCard
+      title={
+        'Are you telling me that you built a time machine out of a DeLorean?'
+      }
+      coverImage={[
+        {
+          uri: 'https://picsum.photos/1400/800',
+        },
+      ]}
+      actionIcon={'umbrella'}
+    />
+  ))
+  .add('actionIcon and label', () => (
+    <DefaultCard
+      title={
+        'Are you telling me that you built a time machine out of a DeLorean?'
+      }
+      coverImage={[
+        {
+          uri: 'https://picsum.photos/1400/800',
+        },
+      ]}
+      actionIcon={'umbrella'}
+      labelText={'Quote'}
+    />
+  ))
   .add('isLoading', () => <DefaultCard isLoading />)
   .add('LabelComponent', () => (
     <DefaultCard

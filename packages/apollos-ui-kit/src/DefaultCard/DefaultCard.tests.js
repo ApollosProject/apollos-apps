@@ -179,4 +179,41 @@ describe('DefaultCard', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render with an actionIcon', () => {
+    const tree = renderer.create(
+      <Providers>
+        <DefaultCard
+          title={
+            'Are you telling me that you built a time machine out of a DeLorean?'
+          }
+          coverImage={[
+            {
+              uri: 'https://picsum.photos/800/1600/?random',
+            },
+          ]}
+          actionIcon={'umbrella'}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with an actionIcon and subtitle', () => {
+    const tree = renderer.create(
+      <Providers>
+        <DefaultCard
+          title={
+            'Are you telling me that you built a time machine out of a DeLorean?'
+          }
+          coverImage={[
+            {
+              uri: 'https://picsum.photos/800/1600/?random',
+            },
+          ]}
+          actionIcon={'umbrella'}
+          labelText={'Quote'}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });

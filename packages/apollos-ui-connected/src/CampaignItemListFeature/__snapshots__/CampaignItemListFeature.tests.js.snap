@@ -453,11 +453,39 @@ exports[`The CampaignItemListFeature component should render a loading state for
                 style={
                   Object {
                     "alignItems": "center",
-                    "flex": null,
                     "flexDirection": "row",
                   }
                 }
-              />
+              >
+                <View
+                  style={
+                    Object {
+                      "flex": 0,
+                      "marginRight": 8,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 32,
+                        "width": 32,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flex": null,
+                      "flexDirection": "row",
+                    }
+                  }
+                />
+              </View>
               <View
                 style={
                   Object {
