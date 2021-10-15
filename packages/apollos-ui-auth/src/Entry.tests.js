@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Platform } from 'react-native';
+import { Text, Platform } from 'react-native';
 
 import { Providers } from './testUtils';
 
@@ -152,6 +152,18 @@ describe('The Auth Entry component', () => {
     const tree = renderer.create(
       <Providers>
         <Entry setFieldValue={jest.fn()} inputLabel={'Phone Number'} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with a custom additionalText', () => {
+    const tree = renderer.create(
+      <Providers>
+        <Entry
+          setFieldValue={jest.fn()}
+          promptText={'Boom custom prompty text boom'}
+          footerComponent={<Text>Boom custom footer component</Text>}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

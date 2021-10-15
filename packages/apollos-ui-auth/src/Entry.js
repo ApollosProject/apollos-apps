@@ -56,6 +56,7 @@ const Entry = ({
   onPressNext,
   policyInfo,
   promptText,
+  footerComponent,
   setFieldValue,
   tabTitle,
   values,
@@ -118,6 +119,9 @@ const Entry = ({
                   </PaddedView>
                 </TabCard>
               </TabWrapper>
+              {footerComponent ? (
+                <PromptText padded>{footerComponent}</PromptText>
+              ) : null}
             </PaddedView>
           </ScrollView>
 
@@ -153,6 +157,7 @@ Entry.propTypes = {
   setFieldValue: PropTypes.func.isRequired,
   policyInfo: PropTypes.string,
   promptText: PropTypes.string,
+  footerComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   values: PropTypes.shape({
     phone: PropTypes.string,
   }),
