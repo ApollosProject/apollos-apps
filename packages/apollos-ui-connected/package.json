@@ -70,7 +70,7 @@
     "moment": "^2.29.1"
   },
   "devDependencies": {
-    "@apollo/client": "3.3.0-rc.2",
+    "@apollo/client": "3.3.20",
     "@apollosproject/ui-test-utils": "^2.35.0",
     "@react-native-community/async-storage": "^1.5.1",
     "@react-navigation/compat": "^5.1.28",

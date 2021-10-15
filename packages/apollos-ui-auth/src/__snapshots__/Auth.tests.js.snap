@@ -21,7 +21,7 @@ InMemoryCache {
     "group": CacheGroup {
       "caching": true,
       "d": [Function],
-      "keyMaker": KeyTrie {
+      "keyMaker": Trie {
         "makeData": [Function],
         "weakness": true,
       },
@@ -61,12 +61,12 @@ InMemoryCache {
     "sharedLayerGroup": CacheGroup {
       "caching": true,
       "d": [Function],
-      "keyMaker": KeyTrie {
+      "keyMaker": Trie {
         "makeData": [Function],
         "weakness": true,
       },
     },
-    "storageTrie": KeyTrie {
+    "storageTrie": Trie {
       "makeData": [Function],
       "weakness": true,
     },
@@ -87,7 +87,7 @@ InMemoryCache {
     "group": CacheGroup {
       "caching": true,
       "d": [Function],
-      "keyMaker": KeyTrie {
+      "keyMaker": Trie {
         "makeData": [Function],
         "weakness": true,
       },
@@ -127,12 +127,12 @@ InMemoryCache {
     "sharedLayerGroup": CacheGroup {
       "caching": true,
       "d": [Function],
-      "keyMaker": KeyTrie {
+      "keyMaker": Trie {
         "makeData": [Function],
         "weakness": true,
       },
     },
-    "storageTrie": KeyTrie {
+    "storageTrie": Trie {
       "makeData": [Function],
       "weakness": true,
     },
