@@ -12,6 +12,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import Touchable from '../Touchable';
 import styled from '../styled';
+import { named } from '../theme';
 import Navigator from './Navigator';
 import Prompt from './Prompt';
 
@@ -28,7 +29,7 @@ const AddCommentInput = ({
   confirmationTitle = 'Post Journal',
   initialValue = '',
   openBottomSheetOnMount = true,
-  showInlinePrompt = true,
+  showInlinePrompt = false,
   dismissOnPanDown = false,
   fullscreen = false,
   showCancel = false,
@@ -138,4 +139,4 @@ AddCommentInput.propTypes = {
   initialValue: PropTypes.string,
 };
 
-export default AddCommentInput;
+export default named('AddCommentInput')(AddCommentInput);
