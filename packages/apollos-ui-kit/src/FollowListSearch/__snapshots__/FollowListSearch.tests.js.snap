@@ -22,6 +22,7 @@ Array [
   <View
     style={
       Object {
+        "marginBottom": 16,
         "marginHorizontal": 16,
       }
     }
@@ -386,7 +387,15 @@ Array [
       }
     }
   >
-    <View />
+    <View>
+      <View
+        style={
+          Object {
+            "paddingVertical": 64,
+          }
+        }
+      />
+    </View>
   </RCTScrollView>,
 ]
 `;
@@ -526,6 +535,7 @@ Array [
           <View
             style={
               Object {
+                "marginBottom": 16,
                 "marginHorizontal": 16,
               }
             }
@@ -890,7 +900,15 @@ Array [
               }
             }
           >
-            <View />
+            <View>
+              <View
+                style={
+                  Object {
+                    "paddingVertical": 64,
+                  }
+                }
+              />
+            </View>
           </RCTScrollView>
         </View>
       </RCTSafeAreaView>
@@ -921,6 +939,7 @@ Array [
   <View
     style={
       Object {
+        "marginBottom": 16,
         "marginHorizontal": 16,
       }
     }
@@ -1426,6 +1445,13 @@ Array [
           </View>
         </View>
       </View>
+      <View
+        style={
+          Object {
+            "paddingVertical": 64,
+          }
+        }
+      />
     </View>
   </RCTScrollView>,
 ]
@@ -1453,6 +1479,7 @@ Array [
   <View
     style={
       Object {
+        "marginBottom": 16,
         "marginHorizontal": 16,
       }
     }
@@ -1817,7 +1844,15 @@ Array [
       }
     }
   >
-    <View />
+    <View>
+      <View
+        style={
+          Object {
+            "paddingVertical": 64,
+          }
+        }
+      />
+    </View>
   </RCTScrollView>,
 ]
 `;

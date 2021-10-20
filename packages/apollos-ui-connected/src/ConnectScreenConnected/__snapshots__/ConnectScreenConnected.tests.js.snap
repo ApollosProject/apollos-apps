@@ -510,6 +510,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                           <View
                             style={
                               Object {
+                                "marginBottom": 16,
                                 "marginHorizontal": 16,
                               }
                             }
@@ -874,7 +875,15 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                               }
                             }
                           >
-                            <View />
+                            <View>
+                              <View
+                                style={
+                                  Object {
+                                    "paddingVertical": 64,
+                                  }
+                                }
+                              />
+                            </View>
                           </RCTScrollView>
                         </View>
                       </RCTSafeAreaView>
@@ -1407,6 +1416,7 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                           <View
                             style={
                               Object {
+                                "marginBottom": 16,
                                 "marginHorizontal": 16,
                               }
                             }
@@ -1771,7 +1781,15 @@ exports[`import ConnectScreenConnected component renders ConnectScreenConnected 
                               }
                             }
                           >
-                            <View />
+                            <View>
+                              <View
+                                style={
+                                  Object {
+                                    "paddingVertical": 64,
+                                  }
+                                }
+                              />
+                            </View>
                           </RCTScrollView>
                         </View>
                       </RCTSafeAreaView>

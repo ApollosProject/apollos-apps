@@ -8,13 +8,18 @@ import FollowList from '../FollowList';
 
 const SearchContainer = styled(({ theme }) => ({
   marginHorizontal: theme.sizing.baseUnit,
+  marginBottom: theme.sizing.baseUnit,
 }))(View);
 
 const StyledSearch = withTheme(({ theme }) => ({
   screenBackgroundColor: theme.colors.background.paper,
 }))(Search);
 
+// These two views need to be addressed. We need to figure out how to pass down flex appropriately to the ScrollView
 const FullHeightScrollView = styled({ height: '90%' })(ScrollView);
+const PaddedView = styled(({ theme }) => ({
+  paddingVertical: theme.sizing.baseUnit * 4,
+}))(View);
 
 function FollowListSearch({ onSearch, FollowListComponent, ...props }) {
   const [searchTimeout, setSearchTimeout] = useState();
@@ -47,6 +52,7 @@ function FollowListSearch({ onSearch, FollowListComponent, ...props }) {
       </SearchContainer>
       <FullHeightScrollView>
         <FollowListComponent {...props} />
+        <PaddedView />
       </FullHeightScrollView>
     </>
   );
