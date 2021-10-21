@@ -82,6 +82,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     const followDataSource = new FollowDataSource();
 
     followDataSource.initialize({ context });
+    followDataSource.sendRequestFollowNotification = jest.fn();
 
     await followDataSource.requestFollow({
       followedPersonId: `Person:${person2.id}`,
@@ -95,7 +96,9 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     expect(follows.length).toBe(1);
     expect(follows[0].state).toBe(FollowState.REQUESTED);
-    expect(notificationMock.mock.calls.length).toBe(1);
+    expect(
+      followDataSource.sendRequestFollowNotification.mock.calls.length
+    ).toBe(1);
   });
 
   it('should send a push when creating new follow request', async () => {
