@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.36.0](https://github.com/ApollosProject/apollos-apps/compare/v2.35.0...v2.36.0) (2021-10-21)
+
+
+### Features
+
+* added a text prop to Auth Entry ([#2227](https://github.com/ApollosProject/apollos-apps/issues/2227)) ([fd7d96e](https://github.com/ApollosProject/apollos-apps/commit/fd7d96e13f92635d4b90999cf7529ba3b8f3b8f8))
+* adds user settings ([#2228](https://github.com/ApollosProject/apollos-apps/issues/2228)) ([3e9d939](https://github.com/ApollosProject/apollos-apps/commit/3e9d9399767ef4245f3799324aefbea825bfe60b))
+* Landing swiper ([#2224](https://github.com/ApollosProject/apollos-apps/issues/2224)) ([e1173c9](https://github.com/ApollosProject/apollos-apps/commit/e1173c9fad5f47ab6aa823413f4ec7c6b2d65334))
+
+
+### Bug Fixes
+
+* add padding to Find People to Follow ([#2233](https://github.com/ApollosProject/apollos-apps/issues/2233)) ([921090b](https://github.com/ApollosProject/apollos-apps/commit/921090b24600ca9a8de0f4af4ce5f1b1edc724b9))
+* Display Action Icon if it is provided ([#2226](https://github.com/ApollosProject/apollos-apps/issues/2226)) ([3edc777](https://github.com/ApollosProject/apollos-apps/commit/3edc777a58863aef7765d8a1e65c7dd65f222765))
+* makes follow datasource test more stable ([#2231](https://github.com/ApollosProject/apollos-apps/issues/2231)) ([55cd1ae](https://github.com/ApollosProject/apollos-apps/commit/55cd1aeddea515b7688bd4d210133f4f668664fb))
+
+
+
 ## [2.35.0](https://github.com/ApollosProject/apollos-apps/compare/v2.34.0...v2.35.0) (2021-10-12)
 
 

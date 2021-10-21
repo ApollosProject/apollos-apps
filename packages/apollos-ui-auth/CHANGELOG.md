@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.36.0](https://github.com/apollosproject/apollos-apps/compare/v2.35.0...v2.36.0) (2021-10-21)
+
+
+### Features
+
+* added a text prop to Auth Entry ([#2227](https://github.com/apollosproject/apollos-apps/issues/2227)) ([fd7d96e](https://github.com/apollosproject/apollos-apps/commit/fd7d96e13f92635d4b90999cf7529ba3b8f3b8f8))
+
+
+
 ## [2.35.0](https://github.com/apollosproject/apollos-apps/compare/v2.34.0...v2.35.0) (2021-10-12)
 
 **Note:** Version bump only for package @apollosproject/ui-auth
