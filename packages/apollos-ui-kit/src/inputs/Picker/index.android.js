@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Animated, Picker as NativePicker } from 'react-native';
+import { Animated } from 'react-native';
+import { Picker as NativePicker } from '@react-native-picker/picker';
 import { mapProps } from 'recompose';
 
 import InputUnderline from '../InputUnderline';

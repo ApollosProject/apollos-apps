@@ -1371,11 +1371,13 @@ Array [
               Array [
                 Object {
                   "label": "Java",
+                  "testID": undefined,
                   "textColor": undefined,
                   "value": "java",
                 },
                 Object {
                   "label": "JavaScript",
+                  "testID": undefined,
                   "textColor": undefined,
                   "value": "js",
                 },
