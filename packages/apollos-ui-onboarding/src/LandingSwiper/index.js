@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
+import PropTypes from 'prop-types';
 import Swiper from 'react-native-swiper';
 import { named } from '@apollosproject/ui-kit';
 import LandingSlide from './LandingSlide';
-import defaultSlides from './defaultSlides';
 
-function LandingSwiper({ slides = defaultSlides }) {
+function LandingSwiper({ slides }) {
   const swiperRef = useRef();
 
   function swipeForward() {
@@ -35,5 +35,15 @@ function LandingSwiper({ slides = defaultSlides }) {
     </Swiper>
   );
 }
+
+LandingSwiper.propTypes = {
+  slides: PropTypes.arrayOf(
+    PropTypes.shape({ title: PropTypes.string, description: PropTypes.string })
+  ),
+};
+
+LandingSwiper.defaultProps = {
+  slides: [],
+};
 
 export default named('ui-onboarding.LandingSwiper')(LandingSwiper);
