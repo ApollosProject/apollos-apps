@@ -9,7 +9,7 @@ import ProfileEntry from './ProfileDetailsEntry';
 
 const ProfileDetailsSchema = Yup.object().shape({
   gender: Yup.string().required('Required'),
-  birthDate: Yup.date().required('Required'),
+  birthDate: Yup.date(),
 });
 
 const ProfileDetailsEntryConnected = ({ Component }) => (
@@ -19,7 +19,10 @@ const ProfileDetailsEntryConnected = ({ Component }) => (
         onSubmit={async ({ gender, birthDate }, { setSubmitting }) => {
           setSubmitting(true);
           await handleProfileComplete({
-            userProfile: { Gender: gender, BirthDate: birthDate },
+            userProfile: {
+              Gender: gender,
+              ...(birthDate ? { BirthDate: birthDate } : {}),
+            },
           });
           setSubmitting(false);
         }}
