@@ -254,10 +254,7 @@ const ACTION_TABLE_FEATURE_FRAGMENT = gql`
 const ADD_COMMENT_FEATURE_FRAGMENT = gql`
   fragment AddCommentFeatureFragment on AddCommentFeature {
     id
-
-    addPrompt
-    initialPrompt
-
+    prompt
     relatedNode {
       id
       __typename

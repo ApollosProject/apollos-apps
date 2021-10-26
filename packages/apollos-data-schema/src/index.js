@@ -1139,7 +1139,6 @@ export const commentSchema = gql`
   type CommentListFeature implements Feature & Node {
     id: ID!
     order: Int
-
     comments: [Comment] @cacheControl(maxAge: 10)
   }
 
@@ -1147,9 +1146,7 @@ export const commentSchema = gql`
     id: ID!
     order: Int
     relatedNode: Node!
-
-    addPrompt: String
-    initialPrompt: String
+    prompt: String
   }
 
   enum CommentVisibility {

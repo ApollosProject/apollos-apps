@@ -95,6 +95,7 @@ const AddCommentFeatureConnected = ({
       {...node}
       {...props}
       openBottomSheetOnMount
+      showInlinePrompt={false}
       loading={isLoading || loading}
       onSubmit={(text, visibility) => {
         track({
