@@ -45,6 +45,5 @@ rm -rf tmp
 
 cd ApollosApp
 yarn
-yarn generate-stories
 node ./scripts/get-introspection-data.js
 yarn ios

@@ -1,5 +1,9 @@
 import React from 'react';
-import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import {
+  Providers,
+  renderWithApolloData,
+  WithReactNavigator,
+} from '@apollosproject/ui-test-utils';
 import { MockedProvider } from '@apollo/client/testing';
 import GET_CAMPUS_LOCATIONS from './getCampusLocations';
 import MapViewConnected from './MapViewConnected';
@@ -79,51 +83,38 @@ const campuses = [
   },
 ];
 
+const mock = {
+  request: {
+    query: GET_CAMPUS_LOCATIONS,
+    variables: {
+      latitude: undefined,
+      longitude: undefined,
+    },
+  },
+  result: {
+    data: {
+      campuses,
+      currentUser: {
+        id: 'AuthenticatedUser:123',
+        __typename: 'AuthenticatedUser',
+        profile: {
+          id: 'Person:123',
+          __typename: 'Person',
+          campus: campuses[3],
+        },
+      },
+    },
+  },
+};
+
 describe('The MapViewConnected component', () => {
-  const initialRegion = {
-    // roughly show the entire USA by default
-    latitude: 39.809734,
-    longitude: -98.555618,
-    latitudeDelta: 100,
-    longitudeDelta: 10,
-  };
   it('should render', async () => {
-    const navigation = {
-      navigate: jest.fn(),
-      goBack: jest.fn(),
-    };
-
-    const mock = {
-      request: {
-        query: GET_CAMPUS_LOCATIONS,
-        variables: {
-          latitude: undefined,
-          longitude: undefined,
-        },
-      },
-      result: {
-        data: {
-          campuses,
-          currentUser: {
-            id: 'AuthenticatedUser:123',
-            __typename: 'AuthenticatedUser',
-            profile: {
-              id: 'Person:123',
-              __typename: 'Person',
-              campus: campuses[3],
-            },
-          },
-        },
-      },
-    };
-
     const tree = await renderWithApolloData(
-      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
-        <MapViewConnected
-          navigation={navigation}
-          initialRegion={initialRegion}
-        />
-      </Providers>
+      WithReactNavigator(
+        <Providers MockedProvider={MockedProvider} mocks={[mock]}>
+          <MapViewConnected />
+        </Providers>
+      )
     );
     expect(tree).toMatchSnapshot();
   });
