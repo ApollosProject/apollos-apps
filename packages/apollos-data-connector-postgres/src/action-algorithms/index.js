@@ -223,6 +223,7 @@ class ActionAlgorithm extends PostgresDataSource {
     const items = await ContentItem.getFromCategoryIds(channelIds, {
       limit,
       skip,
+      order: [['publishAt', 'DESC']],
     });
 
     return items.map((item, i) => ({
