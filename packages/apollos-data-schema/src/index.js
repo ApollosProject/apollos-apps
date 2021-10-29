@@ -1146,6 +1146,8 @@ export const commentSchema = gql`
     id: ID!
     order: Int
     relatedNode: Node!
+    addPrompt: String @deprecated(reason: "Use prompt")
+    initialPrompt: String @deprecated(reason: "Use prompt")
     prompt: String
   }
 
