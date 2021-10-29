@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.36.3](https://github.com/apollosproject/apollos-apps/compare/v2.36.2...v2.36.3) (2021-10-29)
+
+
+### Bug Fixes
+
+* puts back deprecated fields ([#2246](https://github.com/apollosproject/apollos-apps/issues/2246)) ([abc51a9](https://github.com/apollosproject/apollos-apps/commit/abc51a988e988053d8757a0808ca9a51d6d22724))
+
+
+
 ### [2.36.2](https://github.com/apollosproject/apollos-apps/compare/v2.36.1...v2.36.2) (2021-10-28)
 
 
