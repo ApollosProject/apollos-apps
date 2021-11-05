@@ -590,6 +590,7 @@ export const contentItemSchema = gql`
   }
 
   extend type Query {
+    contentItemTags: [String]
     campaigns: ContentItemsConnection
     userFeed(first: Int, after: String): ContentItemsConnection
     personaFeed(first: Int, after: String): ContentItemsConnection
@@ -978,7 +979,6 @@ export const featuresSchema = gql`
   type VerticalCardListFeature implements Feature & Node {
     id: ID!
     order: Int
-
     title: String
     subtitle: String
     isFeatured: Boolean
@@ -1060,7 +1060,7 @@ export const featuresSchema = gql`
   }
 
   extend type Query {
-    tabFeedFeatures(tab: Tab!, campusId: ID): FeatureFeed
+    tabFeedFeatures(tab: Tab!, campusId: ID, tags: [String]): FeatureFeed
       @cacheControl(scope: PRIVATE)
     userFeedFeatures: [Feature]
       @cacheControl(scope: PRIVATE)

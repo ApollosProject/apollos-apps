@@ -57,6 +57,8 @@ export const defaultContentItemResolvers = {
 
 const resolver = {
   Query: {
+    contentItemTags: (root, args, { dataSources }) =>
+      dataSources.ContentItem.getContentItemTags(),
     campaigns: (root, args, { dataSources }) =>
       dataSources.ContentItem.paginate({
         ...args,

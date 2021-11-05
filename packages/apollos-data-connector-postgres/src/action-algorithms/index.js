@@ -217,13 +217,28 @@ class ActionAlgorithm extends PostgresDataSource {
     }));
   }
 
-  async contentFeedAlgorithm({ channelIds = [], limit = 20, skip = 0 } = {}) {
+  async contentFeedAlgorithm({
+    channelIds = [],
+    limit = 20,
+    skip = 0,
+    tags = [],
+  } = {}) {
     const { ContentItem } = this.context.dataSources;
 
     const items = await ContentItem.getFromCategoryIds(channelIds, {
       limit,
       skip,
       order: [['publishAt', 'DESC']],
+      include: [
+        {
+          model: this.sequelize.models.tag,
+          as: 'tags',
+          where: tags.length > 0 && {
+            name: tags,
+          },
+          required: tags.length > 0,
+        },
+      ],
     });
 
     return items.map((item, i) => ({

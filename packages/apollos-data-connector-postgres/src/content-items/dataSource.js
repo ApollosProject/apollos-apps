@@ -390,6 +390,18 @@ class ContentItemDataSource extends PostgresDataSource {
     return (childItemsWithInteractions.length / childItems.length) * 100;
   }
 
+  async getContentItemTags() {
+    const tags = await this.sequelize.models.tag.findAll({
+      attributes: ['name'],
+      where: {
+        type: 'ContentItem',
+      },
+      order: [['name', 'ASC']],
+    });
+
+    return tags.map(({ name }) => name);
+  }
+
   // eslint-disable-next-line class-methods-use-this
   createHyphenatedString({ text }) {
     const hypher = new Hypher(english);
