@@ -6,6 +6,7 @@ import {
   BackgroundImageBlur,
   BodyText,
   H3,
+  named,
   PaddedView,
   styled,
 } from '@apollosproject/ui-kit';
@@ -113,4 +114,4 @@ PrayerDialogScreen.defaultProps = {
     'Each day we ask the community for prayer. These prayers last for only 24 hours so that you can reach out to our community and ask for what you need today, and every day.',
 };
 
-export default PrayerDialogScreen;
+export default named('ui-prayer.PrayerDialogScreen')(PrayerDialogScreen);
