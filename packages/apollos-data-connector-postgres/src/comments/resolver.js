@@ -36,9 +36,9 @@ const resolvers = {
     },
   },
   AddCommentFeature: {
-    initialPrompt: ({ id, data }) =>
-      data?.initialPrompt || JSON.parse(id).initialPrompt,
-    addPrompt: ({ id, data }) => data?.addPrompt || JSON.parse(id).addPrompt,
+    initialPrompt: ({ data }) =>
+      data?.initialPrompt ?? 'What stands out to you?',
+    addPrompt: ({ data }) => data?.addPrompt ?? 'Write something...',
     prompt: ({ data }) => data.prompt ?? 'What stands out to you?',
     relatedNode: async (
       { id, parentType, parentId },
