@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { gql, useQuery } from '@apollo/client';
 
@@ -11,6 +11,7 @@ import FeaturesFeedConnected, {
 } from '../FeaturesFeedConnected';
 
 import ContentFeed from '../ContentFeedConnected';
+import TagFilterConnected from '../TagFilterConnected';
 
 function handleOnPress({ action, ...props }) {
   if (FEATURE_FEED_ACTION_MAP[action]) {
@@ -91,39 +92,53 @@ const FeatureFeedTabConnected = ({
   tab,
   campusId = null,
   navigation,
+  useTagFilter = false,
   ...props
 }) => {
+  const [filteredTags, setFilteredTags] = useState([]);
   const { data } = useQuery(
     gql`
-      query GetTabFeatures($tab: Tab!, $campusId: ID) {
-        tabFeedFeatures(tab: $tab, campusId: $campusId) {
+      query GetTabFeatures($tab: Tab!, $campusId: ID, $tags: [String]) {
+        tabFeedFeatures(tab: $tab, campusId: $campusId, tags: $tags) {
           id
         }
       }
     `,
-    { variables: { tab, campusId }, fetchPolicy: 'cache-and-network' }
+    {
+      variables: { tab, campusId, tags: useTagFilter ? filteredTags : [] },
+      fetchPolicy: 'cache-and-network',
+    }
   );
 
   return (
-    <RockAuthedWebBrowser>
-      {(openUrl) => (
-        <BackgroundView>
-          <FeaturesFeedConnected
-            openUrl={openUrl}
-            featureFeedId={data?.tabFeedFeatures?.id}
-            onPressActionItem={handleOnPress}
-            navigation={navigation}
-            {...props}
-          />
-        </BackgroundView>
-      )}
-    </RockAuthedWebBrowser>
+    <>
+      {useTagFilter ? (
+        <TagFilterConnected
+          filteredTags={filteredTags}
+          setFilteredTags={setFilteredTags}
+        />
+      ) : null}
+      <RockAuthedWebBrowser>
+        {(openUrl) => (
+          <BackgroundView>
+            <FeaturesFeedConnected
+              openUrl={openUrl}
+              featureFeedId={data?.tabFeedFeatures?.id}
+              onPressActionItem={handleOnPress}
+              navigation={navigation}
+              {...props}
+            />
+          </BackgroundView>
+        )}
+      </RockAuthedWebBrowser>
+    </>
   );
 };
 
 FeatureFeedTabConnected.propTypes = {
   tab: PropTypes.string.isRequired,
   campusId: PropTypes.string,
+  useTagFilter: PropTypes.bool,
 };
 
 export default FeatureFeedTabConnected;

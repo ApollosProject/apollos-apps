@@ -117,4 +117,5 @@ export ScriptureNodeConnected, {
 } from './ScriptureNodeConnected';
 export { ScriptureFeature, TextFeature, WebviewFeature } from './features';
 export ThemeMixinConnected, { GET_NODE_THEME } from './ThemeMixinConnected';
+export TagFilterConnected from './TagFilterConnected';
 export { default as UserSettingsConnected } from './UserSettingsConnected';
