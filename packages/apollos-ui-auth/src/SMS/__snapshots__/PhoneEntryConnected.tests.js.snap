@@ -347,7 +347,6 @@ Array [
                               pointerEvents="none"
                               style={
                                 Object {
-                                  "bottom": 0,
                                   "justifyContent": "center",
                                   "opacity": 1,
                                   "position": "absolute",
@@ -368,6 +367,7 @@ Array [
                             >
                               <Text
                                 color="rgba(39, 39, 46, 0.3)"
+                                numberOfLines={0}
                                 style={
                                   Object {
                                     "backgroundColor": "transparent",

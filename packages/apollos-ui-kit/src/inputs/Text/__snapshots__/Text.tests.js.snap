@@ -90,7 +90,6 @@ Array [
             pointerEvents="none"
             style={
               Object {
-                "bottom": 0,
                 "justifyContent": "center",
                 "opacity": 1,
                 "position": "absolute",
@@ -110,6 +109,7 @@ Array [
             }
           >
             <Text
+              numberOfLines={0}
               style={
                 Object {
                   "backgroundColor": "transparent",
@@ -275,7 +275,6 @@ Array [
             pointerEvents="none"
             style={
               Object {
-                "bottom": 0,
                 "justifyContent": "center",
                 "opacity": 1,
                 "position": "absolute",
@@ -295,6 +294,7 @@ Array [
             }
           >
             <Text
+              numberOfLines={0}
               style={
                 Object {
                   "backgroundColor": "transparent",
@@ -574,7 +574,6 @@ Array [
             pointerEvents="none"
             style={
               Object {
-                "bottom": 0,
                 "justifyContent": "center",
                 "opacity": 1,
                 "position": "absolute",
@@ -594,6 +593,7 @@ Array [
             }
           >
             <Text
+              numberOfLines={0}
               style={
                 Object {
                   "backgroundColor": "transparent",
@@ -759,7 +759,6 @@ Array [
             pointerEvents="none"
             style={
               Object {
-                "bottom": 0,
                 "justifyContent": "center",
                 "opacity": 1,
                 "position": "absolute",
@@ -779,6 +778,7 @@ Array [
             }
           >
             <Text
+              numberOfLines={0}
               style={
                 Object {
                   "backgroundColor": "transparent",
@@ -940,7 +940,6 @@ Array [
             pointerEvents="none"
             style={
               Object {
-                "bottom": 0,
                 "justifyContent": "center",
                 "opacity": 1,
                 "position": "absolute",
@@ -960,6 +959,7 @@ Array [
             }
           >
             <Text
+              numberOfLines={0}
               style={
                 Object {
                   "backgroundColor": "transparent",
@@ -1121,7 +1121,6 @@ Array [
             pointerEvents="none"
             style={
               Object {
-                "bottom": 0,
                 "justifyContent": "center",
                 "opacity": 1,
                 "position": "absolute",
@@ -1141,6 +1140,7 @@ Array [
             }
           >
             <Text
+              numberOfLines={0}
               style={
                 Object {
                   "backgroundColor": "transparent",

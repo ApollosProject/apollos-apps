@@ -365,7 +365,6 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                                 pointerEvents="none"
                                 style={
                                   Object {
-                                    "bottom": 0,
                                     "justifyContent": "center",
                                     "opacity": 1,
                                     "position": "absolute",
@@ -385,6 +384,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                                 }
                               >
                                 <Text
+                                  numberOfLines={0}
                                   style={
                                     Object {
                                       "backgroundColor": "transparent",
@@ -525,7 +525,6 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                                 pointerEvents="none"
                                 style={
                                   Object {
-                                    "bottom": 0,
                                     "justifyContent": "center",
                                     "opacity": 1,
                                     "position": "absolute",
@@ -545,6 +544,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                                 }
                               >
                                 <Text
+                                  numberOfLines={0}
                                   style={
                                     Object {
                                       "backgroundColor": "transparent",
@@ -688,7 +688,6 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                                 pointerEvents="none"
                                 style={
                                   Object {
-                                    "bottom": 0,
                                     "justifyContent": "center",
                                     "opacity": 1,
                                     "position": "absolute",
@@ -708,6 +707,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                                 }
                               >
                                 <Text
+                                  numberOfLines={0}
                                   style={
                                     Object {
                                       "backgroundColor": "transparent",

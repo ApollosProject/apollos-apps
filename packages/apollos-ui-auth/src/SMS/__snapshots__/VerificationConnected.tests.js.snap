@@ -162,7 +162,6 @@ Stand by…
                     pointerEvents="none"
                     style={
                       Object {
-                        "bottom": 0,
                         "justifyContent": "center",
                         "opacity": 1,
                         "position": "absolute",
@@ -182,6 +181,7 @@ Stand by…
                     }
                   >
                     <Text
+                      numberOfLines={0}
                       style={
                         Object {
                           "backgroundColor": "transparent",

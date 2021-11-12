@@ -221,7 +221,6 @@ Array [
       pointerEvents="none"
       style={
         Object {
-          "bottom": 0,
           "justifyContent": "center",
           "opacity": 0.8,
           "position": "absolute",
@@ -241,6 +240,7 @@ Array [
       }
     >
       <Text
+        numberOfLines={0}
         style={
           Object {
             "backgroundColor": "transparent",
@@ -376,7 +376,6 @@ Array [
       pointerEvents="none"
       style={
         Object {
-          "bottom": 0,
           "justifyContent": "center",
           "opacity": 0.8,
           "position": "absolute",
@@ -396,6 +395,7 @@ Array [
       }
     >
       <Text
+        numberOfLines={0}
         style={
           Object {
             "backgroundColor": "transparent",
@@ -533,7 +533,6 @@ Array [
       pointerEvents="none"
       style={
         Object {
-          "bottom": 0,
           "justifyContent": "center",
           "opacity": 0.8,
           "position": "absolute",
@@ -553,6 +552,7 @@ Array [
       }
     >
       <Text
+        numberOfLines={0}
         style={
           Object {
             "backgroundColor": "transparent",
@@ -803,7 +803,6 @@ Array [
       pointerEvents="none"
       style={
         Object {
-          "bottom": 0,
           "justifyContent": "center",
           "opacity": 0.8,
           "position": "absolute",
@@ -823,6 +822,7 @@ Array [
       }
     >
       <Text
+        numberOfLines={0}
         style={
           Object {
             "backgroundColor": "transparent",

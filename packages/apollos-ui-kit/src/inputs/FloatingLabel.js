@@ -18,7 +18,6 @@ export const LabelText = styled(
 const styles = StyleSheet.create({
   floatLabelView: {
     position: 'absolute',
-    bottom: 0,
     top: 0,
     justifyContent: 'center',
   },
@@ -34,12 +33,14 @@ class FloatingLabel extends PureComponent {
     floatingOpacity: PropTypes.number,
     color: PropTypes.string,
     style: PropTypes.any, // eslint-disable-line
+    labelShrunk: PropTypes.bool,
   };
 
   static defaultProps = {
     animation: new Animated.Value(0),
     scaleSize: 0.8,
     floatingOpacity: 0.8,
+    labelShrunk: false,
   };
 
   state = {
@@ -84,7 +85,12 @@ class FloatingLabel extends PureComponent {
         onLayout={this.handleLayout}
         style={[styles.floatLabelView, wrapperStyles, this.props.style]}
       >
-        <LabelText color={this.props.color}>{this.props.children}</LabelText>
+        <LabelText
+          numberOfLines={this.props.labelShrunk ? 1 : 0}
+          color={this.props.color}
+        >
+          {this.props.children}
+        </LabelText>
       </Animated.View>
     );
   }

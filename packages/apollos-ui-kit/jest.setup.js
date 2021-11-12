@@ -18,6 +18,11 @@ jest.mock('react-native-reanimated', () => {
   Reanimated.default.call = () => {};
   Reanimated.Easing = Easing;
   Reanimated.EasingNode = Easing;
+  Reanimated.useDerivedValue = jest.fn();
+  Reanimated.useSharedValue = jest.fn(() => ({ value: '' }));
+  Reanimated.useAnimatedStyle = jest.fn();
+  Reanimated.withSpring = jest.fn();
+  Reanimated.useAnimatedRef = jest.fn();
 
   return Reanimated;
 });

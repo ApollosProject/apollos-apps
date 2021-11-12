@@ -65,7 +65,7 @@ const TextInput = withTheme(({ theme }) => ({
     marginBottom: theme.sizing.baseUnit / 2,
   },
   floatingLabelStyle: {
-    height: 30, // magic value from Text Input component
+    paddingRight: theme.sizing.baseUnit / 2,
   },
 }))(Text);
 
@@ -221,6 +221,7 @@ const Editor = ({
           enablesReturnKeyAutomatically
           underline={false}
           returnKeyType={Platform.OS === 'ios' ? 'default' : 'none'}
+          labelShrunk={isEditing || (text.value && text.value.length > 0)}
           focusAnimation={
             headerShown || text.value ? new RNAnimated.Value(1) : undefined
           }

@@ -77,6 +77,7 @@ const Text = enhance(
     style,
     component,
     TextInputComponent = TextInput,
+    labelShrunk,
     ...textInputProps
   }) => {
     const focusAnimation =
@@ -105,6 +106,7 @@ const Text = enhance(
                 style={floatingLabelStyle}
                 color={labelColor}
                 animation={focusAnimation}
+                labelShrunk={labelShrunk}
               >
                 {label}
               </FloatingLabel>
@@ -143,6 +145,7 @@ Text.propTypes = {
   wrapperStyle: PropTypes.any, // eslint-disable-line
   inputAddonStyle: PropTypes.any, // eslint-disable-line
   floatingLabelStyle: PropTypes.any, // eslint-disable-line
+  labelShrunk: PropTypes.bool,
   style: PropTypes.any, // eslint-disable-line
   returnKeyType: PropTypes.string,
   error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
