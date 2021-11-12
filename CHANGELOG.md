@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.37.0](https://github.com/ApollosProject/apollos-apps/compare/v2.36.3...v2.37.0) (2021-11-12)
+
+
+### Features
+
+* Tag filter - API ([#2248](https://github.com/ApollosProject/apollos-apps/issues/2248)) ([cb9d94f](https://github.com/ApollosProject/apollos-apps/commit/cb9d94f8c89a46eda023d6ec3fe6d48ba695a618))
+
+
+### Bug Fixes
+
+* Error handling for initialPrompt and addPrompt resolver ([#2252](https://github.com/ApollosProject/apollos-apps/issues/2252)) ([4259aa5](https://github.com/ApollosProject/apollos-apps/commit/4259aa57e701708c83b3e9ae71e1641c0e6cc2fa))
+* Journal prompt floating label can have multiple lines ([#2250](https://github.com/ApollosProject/apollos-apps/issues/2250)) ([fa0a2d9](https://github.com/ApollosProject/apollos-apps/commit/fa0a2d9dfcbb79f75911ead7dce99fe854333e4d))
+
+
+
 ### [2.36.3](https://github.com/ApollosProject/apollos-apps/compare/v2.36.2...v2.36.3) (2021-10-29)
 
 
