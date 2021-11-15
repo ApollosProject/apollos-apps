@@ -102,6 +102,8 @@ export default class ContentItem extends RockApolloDataSource {
   };
 
   getAudios = ({ attributeValues, attributes }) => {
+    // This is regex for a valid Guid
+    const regex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/;
     const audioKeys = Object.keys(attributes).filter((key) =>
       this.attributeIsAudio({
         key,
@@ -109,15 +111,31 @@ export default class ContentItem extends RockApolloDataSource {
         attributes,
       })
     );
-    return audioKeys.map((key) => ({
-      __typename: 'AudioMedia',
-      key,
-      name: attributes[key].name,
-      sources: attributeValues[key].value
-        ? [{ uri: attributeValues[key].value }]
-        : [],
-    }));
+
+    return Promise.all(
+      audioKeys.map(async (key) => {
+        const uri = regex.exec(attributeValues[key].value)
+          ? await this.getBinaryFileUrl(attributeValues[key].value)
+          : attributeValues[key].value;
+
+        return {
+          __typename: 'AudioMedia',
+          key,
+          name: attributes[key].name,
+          sources: uri ? [{ uri }] : [],
+        };
+      })
+    );
   };
+
+  async getBinaryFileUrl(id) {
+    const files = await this.request('BinaryFiles')
+      .filter(`Guid eq guid'${id}'`)
+      .cache({ ttl: 60 })
+      .get();
+
+    return files.length ? files[0].url : '';
+  }
 
   async getFeatures(item) {
     const { attributeValues, id } = item;
