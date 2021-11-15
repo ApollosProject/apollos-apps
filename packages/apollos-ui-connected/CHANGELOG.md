@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.38.0](https://github.com/apollosproject/apollos-apps/compare/v2.37.0...v2.38.0) (2021-11-15)
+
+
+### Features
+
+* Tag filter UI ([#2249](https://github.com/apollosproject/apollos-apps/issues/2249)) ([df4fdae](https://github.com/apollosproject/apollos-apps/commit/df4fdae5e07d5eea05fea716277df61e26c6f11d))
+
+
+
 ## [2.37.0](https://github.com/apollosproject/apollos-apps/compare/v2.36.3...v2.37.0) (2021-11-12)
 
 
