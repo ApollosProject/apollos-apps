@@ -9,9 +9,11 @@ export default gql`
       ...VideoNodeFragment
       ...ContentNodeFragment
       ...LiveNodeFragment
+      ...AudioNodeFragment
     }
   }
   ${ApollosConfig.FRAGMENTS.VIDEO_NODE_FRAGMENT}
   ${ApollosConfig.FRAGMENTS.CONTENT_NODE_FRAGMENT}
   ${ApollosConfig.FRAGMENTS.LIVE_NODE_FRAGMENT}
+  ${ApollosConfig.FRAGMENTS.AUDIO_NODE_FRAGMENT}
 `;

@@ -87,24 +87,35 @@ const NodeSingleConnectedWithMedia = ({
     fetchPolicy: 'cache-and-network',
   });
 
-  const hasMedia =
+  const hasVideo =
     data?.node?.videos?.length &&
     data.node.videos.some(({ sources }) => sources.length);
+
+  const hasAudio =
+    data?.node?.audios?.length &&
+    data.node.audios.some(({ sources }) => sources.length);
 
   const hasLivestream =
     data?.node?.liveStream?.isLive &&
     data?.node?.liveStream?.media?.sources?.length;
 
-  if (!hasMedia && !hasLivestream)
+  if (!hasVideo && !hasLivestream && !hasAudio)
     return (
       <NodeSingleConnected nodeId={nodeId} Component={Component} {...props}>
         {children}
       </NodeSingleConnected>
     );
 
-  const mediaSource = hasLivestream
-    ? data.node?.liveStream?.media?.sources[0]
-    : data.node?.videos?.find(({ sources }) => sources.length)?.sources[0];
+  const mediaSource = (() => {
+    if (hasLivestream) return data.node?.liveStream?.media?.sources[0];
+
+    if (hasVideo)
+      return data.node?.videos?.find(({ sources }) => sources?.length)
+        ?.sources[0];
+
+    return data.node?.audios?.find(({ sources }) => sources?.length)
+      ?.sources[0];
+  })();
 
   return (
     <BackgroundView>
@@ -114,6 +125,7 @@ const NodeSingleConnectedWithMedia = ({
         presentationProps={{
           title: data.node.title,
         }}
+        audioOnly={!hasLivestream && !hasVideo && hasAudio}
       >
         <Component nodeId={nodeId} ImageWrapperComponent={Noop} {...props} />
       </ApollosPlayerContainer>

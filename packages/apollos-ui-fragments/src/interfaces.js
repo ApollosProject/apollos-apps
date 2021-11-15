@@ -1,5 +1,15 @@
 import { gql } from '@apollo/client';
 
+const AUDIO_NODE_FRAGMENT = gql`
+  fragment AudioNodeFragment on AudioNode {
+    audios {
+      sources {
+        uri
+      }
+    }
+  }
+`;
+
 const VIDEO_NODE_FRAGMENT = gql`
   fragment VideoNodeFragment on VideoNode {
     videos {
@@ -79,6 +89,7 @@ const THEMED_NODE_FRAGMENT = gql`
 `;
 
 export {
+  AUDIO_NODE_FRAGMENT,
   VIDEO_NODE_FRAGMENT,
   LIVE_NODE_FRAGMENT,
   SCRIPTURE_NODE_FRAGMENT,
