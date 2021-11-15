@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useNavigation } from '@react-navigation/native';
 
 import {
   styled,
@@ -54,22 +55,25 @@ const LandingScreen = ({
   BackgroundComponent,
   onPressPrimary,
   primaryNavText,
-}) => (
-  <BackgroundView>
-    <Slide
-      onPressPrimary={onPressPrimary}
-      primaryNavText={primaryNavText}
-      scrollEnabled={false}
-    >
-      {BackgroundComponent}
-      <Content>
-        <BrandIcon color={textColor} />
-        <Title color={textColor}>{slideTitle}</Title>
-        <Subtitle color={textColor}>{description}</Subtitle>
-      </Content>
-    </Slide>
-  </BackgroundView>
-);
+}) => {
+  const navigation = useNavigation();
+  return (
+    <BackgroundView>
+      <Slide
+        onPressPrimary={onPressPrimary || (() => navigation.navigate('Auth'))}
+        primaryNavText={primaryNavText}
+        scrollEnabled={false}
+      >
+        {BackgroundComponent}
+        <Content>
+          <BrandIcon color={textColor} />
+          <Title color={textColor}>{slideTitle}</Title>
+          <Subtitle color={textColor}>{description}</Subtitle>
+        </Content>
+      </Slide>
+    </BackgroundView>
+  );
+};
 
 LandingScreen.propTypes = {
   /* The `Swiper` component used in `<onBoarding>` looks for and hijacks the title prop of it's
