@@ -5,7 +5,7 @@ import { useMutation, useQuery, gql } from '@apollo/client';
 import { Button, PaddedView } from '@apollosproject/ui-kit';
 
 const ButtonFeature = ({ action }) => {
-  const { data: { interactions = [] } = {} } = useQuery(
+  const { data } = useQuery(
     gql`
       query GetNodeInteractions($nodeId: ID) {
         interactions(nodeId: $nodeId) {
@@ -16,6 +16,9 @@ const ButtonFeature = ({ action }) => {
     `,
     { variables: { nodeId: action.relatedNode.id } }
   );
+
+  const interactions = data?.interactions ?? [];
+
   const isCompleted = interactions.some(
     (interaction) => interaction.action === 'COMPLETE'
   );
