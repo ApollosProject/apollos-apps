@@ -17,6 +17,9 @@ const resolvers = {
     followRequests: (root, args, { dataSources: { Follow } }) =>
       Follow.followRequests(args),
   },
+  Follow: {
+    id: ({ apollosId }) => apollosId,
+  },
 };
 
 export default resolvers;
