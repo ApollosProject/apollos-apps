@@ -848,37 +848,7 @@ exports[`the UpNextButtonConnected doesn't render loading state state with a dev
                       "flex": 1,
                     }
                   }
-                >
-                  <View
-                    bordered={false}
-                    disabled={true}
-                    pill={true}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#00676D",
-                        "borderColor": "#00676D",
-                        "borderRadius": 48,
-                        "borderWidth": 2,
-                        "elevation": 2,
-                        "flexDirection": "row",
-                        "height": 48,
-                        "justifyContent": "center",
-                        "marginHorizontal": 16,
-                        "opacity": 0.5,
-                        "overflow": "hidden",
-                        "paddingHorizontal": 16,
-                      }
-                    }
-                  >
-                    <ActivityIndicator
-                      animating={true}
-                      color="#FFFFFF"
-                      hidesWhenStopped={true}
-                      size="small"
-                    />
-                  </View>
-                </View>
+                />
               </View>
             </View>
           </View>

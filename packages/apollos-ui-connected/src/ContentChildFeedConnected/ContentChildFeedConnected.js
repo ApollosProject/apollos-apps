@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
-import nodeImplementsType from '../utils/nodeImplementsType';
+import { named } from '@apollosproject/ui-kit';
 
 import HorizontalFeedConnected from '../HorizontalFeedConnected';
 import GET_CONTENT_CHILD_SIBLINGS from './getContentChildSiblings';
 
-const ContentChildNodeConnected = ({ nodeId, ...props }) => {
-  const loadingEnabled = nodeImplementsType(nodeId, 'ContentChildNode');
-
+const ContentChildNodeConnected = ({ nodeId, loadingStateTypes, ...props }) => {
+  const loadingEnabled = loadingStateTypes.includes(nodeId.split(':')[0]);
   if (!nodeId && !loadingEnabled) return null;
 
   return (
@@ -51,6 +50,11 @@ const ContentChildNodeConnected = ({ nodeId, ...props }) => {
 
 ContentChildNodeConnected.propTypes = {
   nodeId: PropTypes.string,
+  loadingStateTypes: PropTypes.arrayOf(PropTypes.string),
 };
 
-export default ContentChildNodeConnected;
+ContentChildNodeConnected.defaultProps = {
+  loadingStateTypes: ['WeekendContentItem', 'DevotionalContentItem'],
+};
+
+export default named('ContentChildNodeConnected')(ContentChildNodeConnected);
