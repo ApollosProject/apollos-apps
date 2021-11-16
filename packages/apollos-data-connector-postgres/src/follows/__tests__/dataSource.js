@@ -19,7 +19,9 @@ const notificationMock = jest.fn();
 
 const context = {
   dataSources: {
-    Auth: {},
+    Auth: {
+      getCurrentPerson: () => ({ id: currentPersonId }),
+    },
     Person: {
       whereCurrentPerson: () => ({ id: currentPersonId }),
       getCurrentPersonId: () => currentPersonId,
@@ -105,17 +107,18 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     const followDataSource = new FollowDataSource();
 
     followDataSource.initialize({ context });
+    followDataSource.sendRequestFollowNotification = jest.fn();
 
     await followDataSource.requestFollow({
       followedPersonId: `Person:${person2.id}`,
     });
-    expect(notificationMock.mock.calls[0][0].data).toEqual({
-      requestPersonId: person1.apollosId,
-      url: 'apolloschurchapp://app-link/nav/connect',
+
+    expect(
+      followDataSource.sendRequestFollowNotification.mock.calls[0][0]
+    ).toEqual({
+      followedPersonId: person2.id,
+      requestPersonId: currentPersonId,
     });
-    expect(notificationMock.mock.calls[0][0].buttons).toMatchSnapshot();
-    expect(notificationMock.mock.calls[0][0].content).toMatchSnapshot();
-    expect(notificationMock.mock.calls[0][0].to.id).toBe(person2.id);
   });
 
   it('should ignore existing unaccepted request', async () => {
@@ -662,5 +665,40 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     // Should be one fewer request
     expect(follows.length).toBe(followRange.length - 1);
+  });
+
+  it('should unfollow a followed user', async () => {
+    const followDataSource = new FollowDataSource();
+    const peopleDataSource = new PeopleDataSource();
+
+    followDataSource.initialize({ context });
+    peopleDataSource.initialize({ context });
+
+    // Create follow request
+    await followDataSource.requestFollow({
+      followedPersonId: `Person:${person2.id}`,
+    });
+
+    currentPersonId = person2.id;
+
+    // Create follow request
+    await followDataSource.acceptFollowRequest({
+      requestPersonId: `Person:${person1.id}`,
+    });
+
+    currentPersonId = person1.id;
+
+    let usersFollowing = await peopleDataSource.getUsersFollowing();
+
+    expect(usersFollowing.length).toBe(1);
+
+    // Unfollow person
+    await followDataSource.unfollowPerson({
+      followedPersonId: `Person:${person2.id}`,
+    });
+
+    usersFollowing = await peopleDataSource.getUsersFollowing();
+
+    expect(usersFollowing.length).toBe(0);
   });
 });

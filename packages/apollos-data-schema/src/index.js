@@ -1089,6 +1089,8 @@ export const followSchema = gql`
     ignoreFollowRequest(requestPersonId: ID!): Follow
 
     acceptFollowRequest(requestPersonId: ID!): Follow
+
+    unfollowPerson(followedPersonId: ID!): Follow
   }
 
   extend type Query {

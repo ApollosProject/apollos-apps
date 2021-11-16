@@ -175,6 +175,19 @@ class Follow extends PostgresDataSource {
     return updatedModel;
   }
 
+  async unfollowPerson({ followedPersonId }) {
+    const { Person } = this.context.dataSources;
+    const currentPersonId = await Person.getCurrentPersonId();
+    const { id } = parseGlobalId(followedPersonId);
+
+    return this.model.destroy({
+      where: {
+        followedPersonId: id,
+        requestPersonId: currentPersonId,
+      },
+    });
+  }
+
   getStaticSuggestedFollowsForCurrentPerson = async () => {
     const { Person } = this.context.dataSources;
     const where = await Person.whereCurrentPerson();

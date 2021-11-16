@@ -6,6 +6,8 @@ const resolvers = {
       Follow.acceptFollowRequest(args),
     ignoreFollowRequest: (root, args, { dataSources: { Follow } }) =>
       Follow.ignoreFollowRequest(args),
+    unfollowPerson: (root, args, { dataSources: { Follow } }) =>
+      Follow.unfollowPerson(args),
   },
   Person: {
     currentUserFollowing: (root, args, { dataSources: { Follow } }) =>
