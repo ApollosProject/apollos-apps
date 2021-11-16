@@ -75,10 +75,10 @@ class DateInput extends PureComponent {
         />
         <DateTimePicker
           // slightly higher than the max so you can adjust the day or month before the year
-          date={this.props.value || this.yearsAgo(17)}
+          date={this.props.value || this.yearsAgo(14)}
           datePickerModeAndroid={'spinner'}
           isVisible={this.state.isVisible}
-          maximumDate={this.props.maximumDate || this.yearsAgo(16)}
+          maximumDate={this.props.maximumDate || this.yearsAgo(13)}
           minimumDate={this.props.minimumDate}
           mode={'date'}
           display={Platform.OS === 'android' ? 'calendar' : 'spinner'}
