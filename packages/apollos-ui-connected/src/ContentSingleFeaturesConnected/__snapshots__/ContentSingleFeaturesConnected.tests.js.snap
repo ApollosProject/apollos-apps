@@ -341,7 +341,7 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
                       "color": "#27272E",
                       "fontFamily": "DroidSerif",
                       "fontSize": 16,
-                      "lineHeight": 26,
+                      "lineHeight": 32,
                     }
                   }
                 >
@@ -353,7 +353,7 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
                         "color": "rgba(39, 39, 46, 0.6)",
                         "fontFamily": "DroidSerif",
                         "fontSize": 9.6,
-                        "lineHeight": 26,
+                        "lineHeight": 32,
                       }
                     }
                   >
@@ -382,7 +382,7 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
                         "color": "#27272E",
                         "fontFamily": "DroidSerif",
                         "fontSize": 16,
-                        "lineHeight": 26,
+                        "lineHeight": 32,
                       }
                     }
                   >
@@ -519,7 +519,7 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
                       "color": "#27272E",
                       "fontFamily": "DroidSerif",
                       "fontSize": 16,
-                      "lineHeight": 26,
+                      "lineHeight": 32,
                     }
                   }
                 >
@@ -531,7 +531,7 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
                         "color": "rgba(39, 39, 46, 0.6)",
                         "fontFamily": "DroidSerif",
                         "fontSize": 9.6,
-                        "lineHeight": 26,
+                        "lineHeight": 32,
                       }
                     }
                   >
@@ -560,7 +560,7 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
                         "color": "#27272E",
                         "fontFamily": "DroidSerif",
                         "fontSize": 16,
-                        "lineHeight": 26,
+                        "lineHeight": 32,
                       }
                     }
                   >
@@ -587,7 +587,7 @@ exports[`ContentSingleFeaturesConnected should render 1`] = `
                         "color": "#27272E",
                         "fontFamily": "DroidSerif",
                         "fontSize": 16,
-                        "lineHeight": 26,
+                        "lineHeight": 32,
                       }
                     }
                   >
@@ -1093,7 +1093,7 @@ exports[`ContentSingleFeaturesConnected should render with nodeId 1`] = `
                       "color": "#27272E",
                       "fontFamily": "DroidSerif",
                       "fontSize": 16,
-                      "lineHeight": 26,
+                      "lineHeight": 32,
                     }
                   }
                 >
@@ -1105,7 +1105,7 @@ exports[`ContentSingleFeaturesConnected should render with nodeId 1`] = `
                         "color": "rgba(39, 39, 46, 0.6)",
                         "fontFamily": "DroidSerif",
                         "fontSize": 9.6,
-                        "lineHeight": 26,
+                        "lineHeight": 32,
                       }
                     }
                   >
@@ -1134,7 +1134,7 @@ exports[`ContentSingleFeaturesConnected should render with nodeId 1`] = `
                         "color": "#27272E",
                         "fontFamily": "DroidSerif",
                         "fontSize": 16,
-                        "lineHeight": 26,
+                        "lineHeight": 32,
                       }
                     }
                   >
@@ -1404,7 +1404,7 @@ exports[`ContentSingleFeaturesConnected should render with nodeId 1`] = `
                       "color": "#27272E",
                       "fontFamily": "DroidSerif",
                       "fontSize": 16,
-                      "lineHeight": 26,
+                      "lineHeight": 32,
                     }
                   }
                 >
@@ -1416,7 +1416,7 @@ exports[`ContentSingleFeaturesConnected should render with nodeId 1`] = `
                         "color": "rgba(39, 39, 46, 0.6)",
                         "fontFamily": "DroidSerif",
                         "fontSize": 9.6,
-                        "lineHeight": 26,
+                        "lineHeight": 32,
                       }
                     }
                   >
@@ -1445,7 +1445,7 @@ exports[`ContentSingleFeaturesConnected should render with nodeId 1`] = `
                         "color": "#27272E",
                         "fontFamily": "DroidSerif",
                         "fontSize": 16,
-                        "lineHeight": 26,
+                        "lineHeight": 32,
                       }
                     }
                   >
@@ -1472,7 +1472,7 @@ exports[`ContentSingleFeaturesConnected should render with nodeId 1`] = `
                         "color": "#27272E",
                         "fontFamily": "DroidSerif",
                         "fontSize": 16,
-                        "lineHeight": 26,
+                        "lineHeight": 32,
                       }
                     }
                   >

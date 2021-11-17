@@ -19,7 +19,8 @@ const styles = styled(({ theme, bold, italic }) => {
 
   return {
     fontSize: theme.helpers.rem(1),
-    lineHeight: theme.helpers.verticalRhythm(1, 1.625),
+    // sets the line height to be double the font size
+    lineHeight: theme.helpers.verticalRhythm(1, 2),
     fontFamily: fontStack,
     color: theme.colors.text.primary,
   };

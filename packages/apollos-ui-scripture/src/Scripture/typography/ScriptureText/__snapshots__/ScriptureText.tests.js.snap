@@ -28,7 +28,7 @@ Array [
         "color": "#27272E",
         "fontFamily": "DroidSerif",
         "fontSize": 16,
-        "lineHeight": 26,
+        "lineHeight": 32,
       }
     }
   >
@@ -64,7 +64,7 @@ Array [
         "color": "salmon",
         "fontFamily": "DroidSerif",
         "fontSize": 16,
-        "lineHeight": 26,
+        "lineHeight": 32,
       }
     }
   >
@@ -99,7 +99,7 @@ Array [
         "backgroundColor": "#A5A5A5",
         "borderRadius": 16,
         "height": 16,
-        "marginVertical": 5,
+        "marginVertical": 8,
         "width": "100%",
       }
     }
@@ -134,7 +134,7 @@ Array [
         "color": "#27272E",
         "fontFamily": "DroidSerif-Bold",
         "fontSize": 16,
-        "lineHeight": 26,
+        "lineHeight": 32,
       }
     }
   >
@@ -170,7 +170,7 @@ Array [
         "color": "#27272E",
         "fontFamily": "DroidSerif-BoldItalic",
         "fontSize": 16,
-        "lineHeight": 26,
+        "lineHeight": 32,
       }
     }
   >
@@ -206,7 +206,7 @@ Array [
         "color": "#27272E",
         "fontFamily": "DroidSerif-Italic",
         "fontSize": 16,
-        "lineHeight": 26,
+        "lineHeight": 32,
       }
     }
   >
@@ -242,7 +242,7 @@ Array [
         "color": "#27272E",
         "fontFamily": "DroidSerif",
         "fontSize": 16,
-        "lineHeight": 26,
+        "lineHeight": 32,
       }
     }
   >
