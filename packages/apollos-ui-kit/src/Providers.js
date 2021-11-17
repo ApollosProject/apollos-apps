@@ -5,13 +5,11 @@ import { Themer } from './theme';
 import { LayoutProvider } from './LayoutContext';
 
 const Providers = ({ theme, themeInput, icons, iconInput, children }) => (
-  <BottomSheetModalProvider>
-    <LayoutProvider>
-      <Themer theme={theme || themeInput} icons={icons || iconInput}>
-        {children}
-      </Themer>
-    </LayoutProvider>
-  </BottomSheetModalProvider>
+  <LayoutProvider>
+    <Themer theme={theme || themeInput} icons={icons || iconInput}>
+      <BottomSheetModalProvider>{children}</BottomSheetModalProvider>
+    </Themer>
+  </LayoutProvider>
 );
 
 Providers.propTypes = {
