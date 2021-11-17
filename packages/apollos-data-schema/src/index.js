@@ -1113,6 +1113,13 @@ export const followSchema = gql`
     currentUserFollowing: Follow @cacheControl(scope: PRIVATE)
     followingCurrentUser: Follow @cacheControl(scope: PRIVATE)
   }
+
+  type FollowPeopleFeature implements Feature & Node {
+    id: ID!
+    order: Int
+
+    suggestedPeople: [Person]
+  }
 `;
 
 export const commentSchema = gql`
