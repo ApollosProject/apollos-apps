@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.39.0](https://github.com/ApollosProject/apollos-apps/compare/v2.38.0...v2.39.0) (2021-11-22)
+
+
+### Features
+
+* adds unfollowing to API ([#2217](https://github.com/ApollosProject/apollos-apps/issues/2217)) ([3c6a875](https://github.com/ApollosProject/apollos-apps/commit/3c6a875d745105af027901623bed2e483e565da1))
+* adjust date picker to allow 13+ yr olds ([#2259](https://github.com/ApollosProject/apollos-apps/issues/2259)) ([2930e14](https://github.com/ApollosProject/apollos-apps/commit/2930e1416ad92f304f3e7e52638d0e8a2820a342))
+* Audio as a backup media ([#2237](https://github.com/ApollosProject/apollos-apps/issues/2237)) ([4786f35](https://github.com/ApollosProject/apollos-apps/commit/4786f356dcd9df384f3cb3dd638e43300b394283))
+* make scripture easier to read ([#2260](https://github.com/ApollosProject/apollos-apps/issues/2260)) ([9f49b44](https://github.com/ApollosProject/apollos-apps/commit/9f49b4458e791ff6405c14eb7a752e79205cfb8d))
+* parse audio source as guid or url ([#2258](https://github.com/ApollosProject/apollos-apps/issues/2258)) ([45f537a](https://github.com/ApollosProject/apollos-apps/commit/45f537a5f83631fc56e89aab1f7bb2b6a4fa9a6d))
+
+
+### Bug Fixes
+
+* Nest BottomSheetModalProvider ([#2262](https://github.com/ApollosProject/apollos-apps/issues/2262)) ([8b6044d](https://github.com/ApollosProject/apollos-apps/commit/8b6044d9f9466cab1040f442978fc0a14c04c69d))
+
+
+
 ## [2.38.0](https://github.com/ApollosProject/apollos-apps/compare/v2.37.0...v2.38.0) (2021-11-15)
 
 

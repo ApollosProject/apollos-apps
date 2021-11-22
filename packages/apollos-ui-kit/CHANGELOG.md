@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.39.0](https://github.com/apollosproject/apollos-apps/compare/v2.38.0...v2.39.0) (2021-11-22)
+
+
+### Features
+
+* adjust date picker to allow 13+ yr olds ([#2259](https://github.com/apollosproject/apollos-apps/issues/2259)) ([2930e14](https://github.com/apollosproject/apollos-apps/commit/2930e1416ad92f304f3e7e52638d0e8a2820a342))
+
+
+### Bug Fixes
+
+* Nest BottomSheetModalProvider ([#2262](https://github.com/apollosproject/apollos-apps/issues/2262)) ([8b6044d](https://github.com/apollosproject/apollos-apps/commit/8b6044d9f9466cab1040f442978fc0a14c04c69d))
+
+
+
 ## [2.38.0](https://github.com/apollosproject/apollos-apps/compare/v2.37.0...v2.38.0) (2021-11-15)
 
 **Note:** Version bump only for package @apollosproject/ui-kit

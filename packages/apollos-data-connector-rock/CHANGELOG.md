@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.39.0](https://github.com/apollosproject/apollos-apps/compare/v2.38.0...v2.39.0) (2021-11-22)
+
+
+### Features
+
+* parse audio source as guid or url ([#2258](https://github.com/apollosproject/apollos-apps/issues/2258)) ([45f537a](https://github.com/apollosproject/apollos-apps/commit/45f537a5f83631fc56e89aab1f7bb2b6a4fa9a6d))
+
+
+
 ## [2.38.0](https://github.com/apollosproject/apollos-apps/compare/v2.37.0...v2.38.0) (2021-11-15)
 
 **Note:** Version bump only for package @apollosproject/data-connector-rock

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.39.0](https://github.com/apollosproject/apollos-apps/compare/v2.38.0...v2.39.0) (2021-11-22)
+
+
+### Features
+
+* adds unfollowing to API ([#2217](https://github.com/apollosproject/apollos-apps/issues/2217)) ([3c6a875](https://github.com/apollosproject/apollos-apps/commit/3c6a875d745105af027901623bed2e483e565da1))
+
+
+
 ## [2.38.0](https://github.com/apollosproject/apollos-apps/compare/v2.37.0...v2.38.0) (2021-11-15)
 
 **Note:** Version bump only for package @apollosproject/data-schema

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.39.0](https://github.com/apollosproject/apollos-apps/compare/v2.38.0...v2.39.0) (2021-11-22)
+
+
+### Features
+
+* Audio as a backup media ([#2237](https://github.com/apollosproject/apollos-apps/issues/2237)) ([4786f35](https://github.com/apollosproject/apollos-apps/commit/4786f356dcd9df384f3cb3dd638e43300b394283))
+* make scripture easier to read ([#2260](https://github.com/apollosproject/apollos-apps/issues/2260)) ([9f49b44](https://github.com/apollosproject/apollos-apps/commit/9f49b4458e791ff6405c14eb7a752e79205cfb8d))
+
+
+
 ## [2.38.0](https://github.com/apollosproject/apollos-apps/compare/v2.37.0...v2.38.0) (2021-11-15)
 
 
