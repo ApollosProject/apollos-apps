@@ -39,7 +39,7 @@ const resolvers = {
     initialPrompt: ({ data }) =>
       data?.initialPrompt ?? 'What stands out to you?',
     addPrompt: ({ data }) => data?.addPrompt ?? 'Write something...',
-    prompt: ({ data }) => data.prompt ?? 'What stands out to you?',
+    prompt: ({ data }) => data?.prompt ?? 'What stands out to you?',
     relatedNode: async (
       { id, parentType, parentId },
       args,
