@@ -1059,6 +1059,11 @@ export const featuresSchema = gql`
     featureFeed: FeatureFeed
   }
 
+  extend type MediaContentItem implements FeaturesNode {
+    features: [Feature] @deprecated(reason: "Use featureFeed")
+    featureFeed: FeatureFeed
+  }
+
   extend type Query {
     tabFeedFeatures(tab: Tab!, campusId: ID, tags: [String]): FeatureFeed
       @cacheControl(scope: PRIVATE)
