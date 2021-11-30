@@ -82,7 +82,7 @@ const resolver = {
     id: id('ActionBarFeature'),
   },
   ActionTableFeature: {
-    id: id('ActiontableFeature'),
+    id: id('ActionTableFeature'),
   },
   HeroListFeature: {
     id: id('HeroListFeature'),
