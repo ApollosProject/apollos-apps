@@ -36,6 +36,10 @@ const resolver = {
     featureFeed: ({ id }, args, { dataSources: { FeatureFeed } }) =>
       FeatureFeed.getFeed({ type: 'contentItem', args: { id } }),
   },
+  MediaContentItem: {
+    featureFeed: ({ id }, args, { dataSources: { FeatureFeed } }) =>
+      FeatureFeed.getFeed({ type: 'contentItem', args: { id } }),
+  },
   FeatureFeed: {
     // lazy-loaded
     features: ({ getFeatures }) => getFeatures(),
