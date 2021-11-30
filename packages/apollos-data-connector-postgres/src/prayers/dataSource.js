@@ -32,32 +32,43 @@ class Prayer extends PostgresDataSource {
           },
     };
 
-    const prayerRequests = await this.model.findAll({
-      where: {
-        createdAt: {
-          [Op.gt]: daysSincePosted,
-        },
-      },
-      include: [
-        {
-          model: this.sequelize.models.people,
-          as: 'requestor',
-          where,
-          include: {
-            model: this.sequelize.models.people,
-            as: 'followers',
-            where: {
-              id: {
-                [Op.eq]: currentPersonId,
-              },
-            },
-            required: false,
+    // Filters out multiple prayers from the same user
+    function removePrayerDuplicates(prayers) {
+      return prayers.filter(
+        (prayer, index, self) =>
+          index ===
+          self.findIndex((t) => prayer.requestor.id === t.requestor.id)
+      );
+    }
+
+    const prayerRequests = await this.model
+      .findAll({
+        where: {
+          createdAt: {
+            [Op.gt]: daysSincePosted,
           },
         },
-      ],
-      order: [['createdAt', 'DESC']],
-      limit,
-    });
+        include: [
+          {
+            model: this.sequelize.models.people,
+            as: 'requestor',
+            where,
+            include: {
+              model: this.sequelize.models.people,
+              as: 'followers',
+              where: {
+                id: {
+                  [Op.eq]: currentPersonId,
+                },
+              },
+              required: false,
+            },
+          },
+        ],
+        order: [['createdAt', 'DESC']],
+        limit,
+      })
+      .then(removePrayerDuplicates);
 
     // Sorts prayer requests by users following who the current user is following
     function isFollowingPrayerRequestor(prayer) {
