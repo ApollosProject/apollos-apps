@@ -7,13 +7,34 @@ class Prayer extends PostgresDataSource {
   modelName = 'prayerRequest';
 
   async addPrayer({ text, ...args }) {
-    const currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
+    const {
+      id,
+      firstName,
+      lastName,
+    } = await this.context.dataSources.Person.getCurrentPerson();
+
     const newPrayer = await this.model.findOrCreate({
       where: {
-        personId: currentPersonId,
+        personId: id,
         text,
         ...args,
       },
+    });
+
+    const { Notification } = this.context.dataSources;
+
+    const followers = await this.sequelize.models.follows.findAll({
+      where: {
+        followedPersonId: id,
+      },
+    });
+
+    followers.forEach((follow) => {
+      Notification.createAndSend({
+        title: `${firstName} ${lastName} is asking for prayer. Will you pray for them?`,
+        personId: follow.requestPersonId,
+        type: 'PRAYER',
+      });
     });
 
     return newPrayer[0];

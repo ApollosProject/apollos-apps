@@ -10,6 +10,8 @@ import {
   Follow,
   ContentItem,
   ContentItemCategory,
+  NotificationPreference,
+  Notification,
 } from '../../index';
 
 import { setupPostgresTestEnv } from '../../utils/testUtils';
@@ -46,6 +48,8 @@ describe('Apollos Postgres Prayer Request DataSource', () => {
       Person,
       Campus,
       PrayerRequest,
+      Notification,
+      NotificationPreference,
     ]);
     person1 = await sequelize.models.people.create({
       originId: '1',
@@ -76,6 +80,58 @@ describe('Apollos Postgres Prayer Request DataSource', () => {
     const currentPersonPrayers = await currentPerson.getPrayerRequests();
 
     expect(currentPersonPrayers[0].id).toEqual(prayer1.id);
+  });
+
+  it('sends a notification to followers of the user who prayed', async () => {
+    const notificationPreferenceDataSource = new NotificationPreference.dataSource();
+    notificationPreferenceDataSource.initialize({ context: {} });
+    const notificationDataSource = new Notification.dataSource();
+    notificationDataSource.initialize({
+      context: {
+        dataSources: {
+          NotificationPreference: notificationPreferenceDataSource,
+        },
+      },
+    });
+    notificationDataSource.DELIVERY_METHODS.one_signal = jest.fn(async () => ({
+      id: '123-123-123',
+    }));
+
+    const prayerRequestDatasource = new PrayerRequestDataSource();
+    prayerRequestDatasource.initialize({
+      context: {
+        dataSources: {
+          ...context.dataSources,
+          Notification: notificationDataSource,
+        },
+      },
+    });
+
+    await sequelize.models.follows.create({
+      followedPersonId: currentPerson.id,
+      requestPersonId: person2.id,
+      state: 'ACCEPTED',
+    });
+
+    await sequelize.models.notificationPreferences.create({
+      personId: person2.id,
+      notificationProviderId: '111-bbb-ccc',
+      notificationProviderType: 'one_signal',
+      enabled: true,
+    });
+
+    const prayer1 = await prayerRequestDatasource.addPrayer({
+      text: 'Test prayer!',
+    });
+
+    const currentPersonPrayers = await currentPerson.getPrayerRequests();
+
+    expect(currentPersonPrayers[0].id).toEqual(prayer1.id);
+
+    const notifications = await sequelize.models.notifications.findAll();
+
+    expect(notifications.length).toEqual(1);
+    expect(notifications[0].personId).toEqual(person2.id);
   });
 
   it('fetches a DailyPrayerFeed', async () => {
