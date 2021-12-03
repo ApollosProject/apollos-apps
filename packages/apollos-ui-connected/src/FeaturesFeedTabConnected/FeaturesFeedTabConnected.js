@@ -6,18 +6,10 @@ import { BackgroundView, named } from '@apollosproject/ui-kit';
 
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import RockAuthedWebBrowser from '../RockAuthedWebBrowser';
-import FeaturesFeedConnected, {
-  FEATURE_FEED_ACTION_MAP,
-} from '../FeaturesFeedConnected';
+import FeaturesFeedConnected from '../FeaturesFeedConnected';
 
 import ContentFeed from '../ContentFeedConnected';
 import TagFilterConnected from '../TagFilterConnected';
-
-function handleOnPress({ action, ...props }) {
-  if (FEATURE_FEED_ACTION_MAP[action]) {
-    FEATURE_FEED_ACTION_MAP[action]({ action, ...props });
-  }
-}
 
 export const DefaultTabComponent = named(
   'ui-connected.FeatureFeedTabConnected.DefaultTabComponent'
@@ -80,7 +72,13 @@ export const createFeatureFeedTab = ({
         name="ContentFeed"
         options={({ route }) => ({
           title: route?.params?.itemTitle || 'Content Feed',
-          stackPresentation: 'push',
+        })}
+      />
+      <TabStack.Screen
+        component={FeaturesFeedConnected}
+        name="FeatureFeed"
+        options={({ route }) => ({
+          title: route?.params?.title || 'Feed',
         })}
       />
     </TabStack.Navigator>
@@ -90,13 +88,12 @@ export const createFeatureFeedTab = ({
 
 const FeatureFeedTabConnected = ({
   tab,
-  campusId = null,
+  campusId,
   navigation,
-  useTagFilter = false,
-  ...props
+  useTagFilter,
 }) => {
   const [filteredTags, setFilteredTags] = useState([]);
-  const { data } = useQuery(
+  const { data, loading, error } = useQuery(
     gql`
       query GetTabFeatures($tab: Tab!, $campusId: ID, $tags: [String]) {
         tabFeedFeatures(tab: $tab, campusId: $campusId, tags: $tags) {
@@ -110,6 +107,7 @@ const FeatureFeedTabConnected = ({
     }
   );
 
+  if (loading || error) return null;
   return (
     <>
       {useTagFilter ? (
@@ -124,9 +122,7 @@ const FeatureFeedTabConnected = ({
             <FeaturesFeedConnected
               openUrl={openUrl}
               featureFeedId={data?.tabFeedFeatures?.id}
-              onPressActionItem={handleOnPress}
               navigation={navigation}
-              {...props}
             />
           </BackgroundView>
         )}
@@ -139,6 +135,11 @@ FeatureFeedTabConnected.propTypes = {
   tab: PropTypes.string.isRequired,
   campusId: PropTypes.string,
   useTagFilter: PropTypes.bool,
+};
+
+FeatureFeedTabConnected.defaultProps = {
+  campusId: null,
+  useTagFilter: false,
 };
 
 export default FeatureFeedTabConnected;

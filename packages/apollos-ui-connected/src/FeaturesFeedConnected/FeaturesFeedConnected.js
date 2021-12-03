@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { Linking } from 'react-native';
 import PropTypes from 'prop-types';
 import { Query } from '@apollo/client/react/components';
 import { get } from 'lodash';
@@ -43,6 +44,18 @@ export const ACTION_MAP = {
       itemTitle: relatedNode.name,
     });
   },
+  OPEN_FEED: ({ relatedNode, navigation, title }) => {
+    navigation.navigate('FeatureFeed', {
+      id: relatedNode.id,
+      title,
+    });
+  },
+};
+
+const handleOnPress = ({ action, ...args }) => {
+  if (ACTION_MAP[action]) {
+    ACTION_MAP[action]({ action, ...args });
+  }
 };
 
 class FeaturesFeedConnected extends PureComponent {
@@ -64,17 +77,24 @@ class FeaturesFeedConnected extends PureComponent {
     { isLoading: true, __typename: 'VerticalCardListFeature', id: 'feature4' },
   ];
 
-  renderFeatures = ({ item }) =>
-    featuresFeedComponentMapper({
+  renderFeatures = ({ item }) => {
+    const { openUrl, navigation } = this.props;
+    return featuresFeedComponentMapper({
       feature: item,
       refetchRef: this.refetchRef,
-      onPressActionItem: (args) =>
-        this.props.onPressActionItem({ ...this.props, ...args }),
+      onPressActionItem: (feature) =>
+        this.props.onPressActionItem({
+          openUrl,
+          navigation,
+          ...feature,
+        }),
       additionalFeatures: this.props.additionalFeatures,
     });
+  };
 
-  // eslint-disable-next-line
-  refetchRef = ({ refetch, id }) => (this.refetchFunctions[id] = refetch);
+  refetchRef = ({ refetch, id }) => {
+    this.refetchFunctions[id] = refetch;
+  };
 
   refetch = async () => {
     // refetch the feed
@@ -89,19 +109,8 @@ class FeaturesFeedConnected extends PureComponent {
   };
 
   render() {
-    const { onPressActionItem, featureFeedId, ...props } = this.props;
-    // Early return if we don't have a featureFeedId.
-    if (!featureFeedId) {
-      return (
-        <FeedView
-          loadingStateData={this.loadingStateData}
-          renderItem={this.renderFeatures}
-          loading
-          refetch={this.refetch}
-          {...props}
-        />
-      );
-    }
+    const featureFeedId =
+      this.props.route?.params.id || this.props.featureFeedId;
     return (
       <Query
         query={GET_FEATURE_FEED}
@@ -119,7 +128,6 @@ class FeaturesFeedConnected extends PureComponent {
               renderItem={this.renderFeatures}
               loading={loading}
               refetch={this.refetch}
-              {...props}
             />
           );
         }}
@@ -129,10 +137,16 @@ class FeaturesFeedConnected extends PureComponent {
 }
 
 FeaturesFeedConnected.propTypes = {
-  featureFeedId: PropTypes.string,
-  onPressActionItem: PropTypes.func.isRequired,
-  openUrl: PropTypes.func.isRequired,
+  featureFeedId: PropTypes.string.isRequired,
+  onPressActionItem: PropTypes.func,
+  openUrl: PropTypes.func,
   additionalFeatures: PropTypes.shape({}),
+  route: PropTypes.shape({ params: PropTypes.shape({ id: PropTypes.string }) }),
+};
+
+FeaturesFeedConnected.defaultProps = {
+  onPressActionItem: handleOnPress,
+  openUrl: Linking.openURL,
 };
 
 export default named('ui-connected.FeaturesFeedConnected')(

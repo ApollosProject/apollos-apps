@@ -40,7 +40,7 @@ const MAPPINGS = {
 const featuresFeedComponentMapper = ({
   feature,
   onPressActionItem,
-  additionalFeatures = {},
+  additionalFeatures,
   refetchRef,
 }) => {
   const { id, __typename, ...featureData } = feature;
@@ -72,6 +72,10 @@ featuresFeedComponentMapper.propTypes = {
   onPressActionItem: PropTypes.func,
   additionalFeatures: PropTypes.shape({}),
   refetchRef: PropTypes.func.isRequired,
+};
+
+featuresFeedComponentMapper.defaultProps = {
+  additionalFeatures: {},
 };
 
 export default named('ui-connected.FeaturesFeed.FeatureFeedComponentMapper')(
