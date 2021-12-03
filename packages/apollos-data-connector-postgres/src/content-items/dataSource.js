@@ -70,10 +70,10 @@ class ContentItemDataSource extends PostgresDataSource {
     });
   };
 
-  getSermons(...args) {
+  getSermons(queryArgs) {
     return this.getFromCategoryIds(
       ApollosConfig?.CONTENT?.SERMON_CHANNEL_IDS,
-      args
+      queryArgs
     );
   }
 
