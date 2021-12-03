@@ -2,10 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Linking } from 'react-native';
 import { useMutation, useQuery, gql } from '@apollo/client';
-import { Button, PaddedView } from '@apollosproject/ui-kit';
+import { withTrackOnPress } from '@apollosproject/ui-analytics';
+import { Button, PaddedView, styled } from '@apollosproject/ui-kit';
 
 const ButtonFeature = ({ action }) => {
-  const { data } = useQuery(
+  const ButtonWithAnalytics = styled(
+    {},
+    'ui-connected.features.ButtonFeature'
+  )(withTrackOnPress(Button));
+
+  const { data: { interactions = [] } = {} } = useQuery(
     gql`
       query GetNodeInteractions($nodeId: ID) {
         interactions(nodeId: $nodeId) {
@@ -16,9 +22,6 @@ const ButtonFeature = ({ action }) => {
     `,
     { variables: { nodeId: action.relatedNode.id } }
   );
-
-  const interactions = data?.interactions ?? [];
-
   const isCompleted = interactions.some(
     (interaction) => interaction.action === 'COMPLETE'
   );
@@ -48,10 +51,12 @@ const ButtonFeature = ({ action }) => {
 
   return (
     <PaddedView>
-      <Button
+      <ButtonWithAnalytics
         title={action?.title || 'Go!'}
         onPress={handlePress}
         disabled={isDisabled}
+        trackEventName={action?.title || 'Button Clicked'}
+        trackProperties={{ itemId: action?.relatedNode?.id }}
       />
     </PaddedView>
   );

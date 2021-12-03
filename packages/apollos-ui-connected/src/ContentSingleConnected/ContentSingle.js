@@ -43,6 +43,8 @@ const ContentSingle = (props) => {
         properties={{
           title: data?.node?.title,
           itemId: nodeId,
+          parentId: data?.node?.parentChannel?.id,
+          parentName: data?.node?.parentChannel?.name,
         }}
       />
       <PaddedNodeSingleConnected nodeId={nodeId} />
