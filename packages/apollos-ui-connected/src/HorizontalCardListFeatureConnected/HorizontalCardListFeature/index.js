@@ -12,10 +12,10 @@ import {
   withTheme,
   Touchable,
   ButtonLink,
+  HorizontalDefaultCard,
 } from '@apollosproject/ui-kit';
 
 import { LiveConsumer } from '../../live';
-import { HorizontalContentCardComponentMapper } from '../../HorizontalContentCardConnected';
 
 const Header = styled(
   ({ theme }) => ({
@@ -88,7 +88,7 @@ class HorizontalCardListFeature extends PureComponent {
             hitSlop={{ bottom: 12, left: 24, right: 24, top: 16 }}
             onPress={() => this.props.onPressItem(item)}
           >
-            <HorizontalContentCardComponentMapper
+            <HorizontalDefaultCard
               isLive={isLive}
               {...item}
               labelText={labelText}

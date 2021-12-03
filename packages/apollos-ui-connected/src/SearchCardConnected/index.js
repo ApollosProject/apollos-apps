@@ -1,8 +1,7 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
-
-import { ContentCardComponentMapper } from '../ContentCardConnected';
+import { DefaultCard, named } from '@apollosproject/ui-kit';
 
 const SearchCardConnected = memo(
   ({
@@ -52,9 +51,9 @@ SearchCardConnected.propTypes = {
 };
 
 SearchCardConnected.defaultProps = {
-  Component: ContentCardComponentMapper,
+  Component: DefaultCard,
 };
 
 SearchCardConnected.displayName = 'SearchCardConnected';
 
-export default SearchCardConnected;
+export default named('SearchCardConnected')(SearchCardConnected);

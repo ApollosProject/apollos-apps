@@ -1,16 +1,15 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-
 import {
-  FeaturedCard,
+  DefaultCard,
   FeedView,
   PaddedView,
   styled,
   withIsLoading,
   FeatureTitles,
+  named,
 } from '@apollosproject/ui-kit';
 
-import { ContentCardComponentMapper } from '../ContentCardConnected';
 import { LiveConsumer } from '../live';
 
 const Header = styled(
@@ -21,29 +20,35 @@ const Header = styled(
   'ui-connected.CampaignItemListFeature.Header'
 )(PaddedView);
 
-const ListItemComponent = ({ contentId, labelText, ...item }) => (
-  <LiveConsumer contentId={contentId}>
-    {(liveStream) => {
-      const isLive = !!(liveStream && liveStream.isLive);
-      return (
-        <ContentCardComponentMapper
-          Component={FeaturedCard}
-          {...(isLive
-            ? {
-                isLive,
-              }
-            : { isLive, labelText })} // we only want to pass `labelText` if we are NOT live. If we do we will override the default logic in the FeaturedCard
-          {...item}
-          isFeatured
-        />
-      );
-    }}
-  </LiveConsumer>
+const ListItemComponent = named('CampaignItemListFeature.ListItemComponent')(
+  ({ Component, contentId, labelText, ...item }) => (
+    <LiveConsumer contentId={contentId}>
+      {(liveStream) => {
+        const isLive = !!(liveStream && liveStream.isLive);
+        return (
+          <Component
+            {...(isLive
+              ? {
+                  isLive,
+                }
+              : { isLive, labelText })} // we only want to pass `labelText` if we are NOT live. If we do we will override the default logic in the FeaturedCard
+            {...item}
+            isFeatured
+          />
+        );
+      }}
+    </LiveConsumer>
+  )
 );
 
 ListItemComponent.propTypes = {
   contentId: PropTypes.string,
   labelText: PropTypes.string,
+  Component: PropTypes.func,
+};
+
+ListItemComponent.defaultProps = {
+  Component: DefaultCard,
 };
 
 const loadingStateData = {

@@ -1,16 +1,14 @@
 import React, { memo } from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
-
 import {
+  DefaultCard,
   FeedView,
   PaddedView,
   styled,
   withIsLoading,
   FeatureTitles,
 } from '@apollosproject/ui-kit';
-
-import { ContentCardComponentMapper } from '../../ContentCardConnected';
 
 const Header = styled(
   ({ theme }) => ({
@@ -63,7 +61,7 @@ const VerticalCardListFeature = memo(
         ) : null}
         <FeedView
           onPressItem={onPressItem}
-          ListItemComponent={ContentCardComponentMapper}
+          ListItemComponent={DefaultCard}
           loadingStateObject={loadingStateObject}
           content={cards} // {getContent({ cards, isLoading })}
           isLoading={isLoading}
