@@ -83,26 +83,12 @@ describe('Apollos Postgres Prayer Request DataSource', () => {
   });
 
   it('sends a notification to followers of the user who prayed', async () => {
-    const notificationPreferenceDataSource = new NotificationPreference.dataSource();
-    notificationPreferenceDataSource.initialize({ context: {} });
-    const notificationDataSource = new Notification.dataSource();
-    notificationDataSource.initialize({
-      context: {
-        dataSources: {
-          NotificationPreference: notificationPreferenceDataSource,
-        },
-      },
-    });
-    notificationDataSource.DELIVERY_METHODS.one_signal = jest.fn(async () => ({
-      id: '123-123-123',
-    }));
-
-    const prayerRequestDatasource = new PrayerRequestDataSource();
-    prayerRequestDatasource.initialize({
+    const Prayer = new PrayerRequestDataSource();
+    Prayer.initialize({
       context: {
         dataSources: {
           ...context.dataSources,
-          Notification: notificationDataSource,
+          Notification: { createAndSend: jest.fn() },
         },
       },
     });
@@ -120,7 +106,7 @@ describe('Apollos Postgres Prayer Request DataSource', () => {
       enabled: true,
     });
 
-    const prayer1 = await prayerRequestDatasource.addPrayer({
+    const prayer1 = await Prayer.addPrayer({
       text: 'Test prayer!',
     });
 
@@ -128,10 +114,9 @@ describe('Apollos Postgres Prayer Request DataSource', () => {
 
     expect(currentPersonPrayers[0].id).toEqual(prayer1.id);
 
-    const notifications = await sequelize.models.notifications.findAll();
-
-    expect(notifications.length).toEqual(1);
-    expect(notifications[0].personId).toEqual(person2.id);
+    expect(
+      Prayer.context.dataSources.Notification.createAndSend.mock.calls.length
+    ).toBe(1);
   });
 
   it('fetches a DailyPrayerFeed', async () => {
