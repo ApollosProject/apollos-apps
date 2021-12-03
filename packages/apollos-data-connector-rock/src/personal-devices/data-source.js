@@ -3,6 +3,25 @@ import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 export default class PersonalDevices extends RockApolloDataSource {
   resource = 'PersonalDevices';
 
+  async createApollosDeviceType() {
+    const mobileType = await this.request('DefinedTypes')
+      .filter(`Name eq 'Personal Device Type'`)
+      .first();
+
+    await this.post('/DefinedValues', {
+      Description: 'Personal Device Type Apollos App',
+      Value: 'Mobile (Apollos)',
+      DefinedTypeId: mobileType.id,
+      IsSystem: false,
+      Order: 0,
+      IsActive: true,
+    });
+
+    return this.request('DefinedValues')
+      .filter(`Description eq 'Personal Device Type Apollos App'`)
+      .first();
+  }
+
   async addPersonalDevice({ pushId }) {
     if (!pushId) {
       throw new Error(
@@ -18,15 +37,22 @@ export default class PersonalDevices extends RockApolloDataSource {
 
     if (existing) return currentUser;
 
-    // Get the Rock instance's personal device type value id
-    const personalDeviceTypeDefinedValue = await this.request('DefinedValues')
-      .filter(`Description eq 'Personal Device Type Mobile'`)
+    // Get the Rock instance's apollos device type value id
+    let personalDeviceTypeDefinedValue = await this.request('DefinedValues')
+      .filter(`Description eq 'Personal Device Type Apollos App'`)
       .first();
+
+    console.log(personalDeviceTypeDefinedValue);
+
+    // If our server hasn't created the defined value yet, do so.
+    if (!personalDeviceTypeDefinedValue) {
+      personalDeviceTypeDefinedValue = await this.createApollosDeviceType();
+    }
 
     await this.post('/PersonalDevices', {
       PersonAliasId: currentUser.primaryAliasId,
       DeviceRegistrationId: pushId,
-      PersonalDeviceTypeValueId: personalDeviceTypeDefinedValue?.id || 671,
+      PersonalDeviceTypeValueId: personalDeviceTypeDefinedValue?.id,
       NotificationsEnabled: 1,
       IsActive: 1,
     });

@@ -57,17 +57,32 @@ exports[`Personal device data source must post a user's device to Rock 2`] = `
 [MockFunction] {
   "calls": Array [
     Array [
+      "/DefinedValues",
+      Object {
+        "DefinedTypeId": "123",
+        "Description": "Personal Device Type Apollos App",
+        "IsActive": true,
+        "IsSystem": false,
+        "Order": 0,
+        "Value": "Mobile (Apollos)",
+      },
+    ],
+    Array [
       "/PersonalDevices",
       Object {
         "DeviceRegistrationId": "somepushid",
         "IsActive": 1,
         "NotificationsEnabled": 1,
         "PersonAliasId": 123,
-        "PersonalDeviceTypeValueId": 671,
+        "PersonalDeviceTypeValueId": undefined,
       },
     ],
   ],
   "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {},
+    },
     Object {
       "type": "return",
       "value": Promise {},

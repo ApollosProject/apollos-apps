@@ -25,7 +25,10 @@ const AuthMock = { getCurrentPerson: () => ({ primaryAliasId: 123 }) };
 describe('Personal device data source', () => {
   it("must post a user's device to Rock", async () => {
     const dataSource = buildDataSource(AuthMock);
-    dataSource.get = buildGetMock([], dataSource);
+    dataSource.get = buildGetMock(
+      [[null], [null], [{ Id: '123' }]],
+      dataSource
+    );
     dataSource.post = buildGetMock('123', dataSource);
 
     const result = await dataSource.addPersonalDevice({ pushId: 'somepushid' });
