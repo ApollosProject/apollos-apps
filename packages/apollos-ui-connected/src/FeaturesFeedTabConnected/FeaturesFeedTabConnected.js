@@ -91,6 +91,7 @@ const FeatureFeedTabConnected = ({
   campusId,
   navigation,
   useTagFilter,
+  feedViewProps,
 }) => {
   const [filteredTags, setFilteredTags] = useState([]);
   const { data, loading, error } = useQuery(
@@ -123,6 +124,7 @@ const FeatureFeedTabConnected = ({
               openUrl={openUrl}
               featureFeedId={data?.tabFeedFeatures?.id}
               navigation={navigation}
+              feedViewProps={feedViewProps}
             />
           </BackgroundView>
         )}
@@ -135,11 +137,13 @@ FeatureFeedTabConnected.propTypes = {
   tab: PropTypes.string.isRequired,
   campusId: PropTypes.string,
   useTagFilter: PropTypes.bool,
+  feedViewProps: PropTypes.shape({}),
 };
 
 FeatureFeedTabConnected.defaultProps = {
   campusId: null,
   useTagFilter: false,
+  feedViewProps: {},
 };
 
 export default FeatureFeedTabConnected;

@@ -128,6 +128,7 @@ class FeaturesFeedConnected extends PureComponent {
               renderItem={this.renderFeatures}
               loading={loading}
               refetch={this.refetch}
+              {...this.props.feedViewProps}
             />
           );
         }}
@@ -142,11 +143,13 @@ FeaturesFeedConnected.propTypes = {
   openUrl: PropTypes.func,
   additionalFeatures: PropTypes.shape({}),
   route: PropTypes.shape({ params: PropTypes.shape({ id: PropTypes.string }) }),
+  feedViewProps: PropTypes.shape({}),
 };
 
 FeaturesFeedConnected.defaultProps = {
   onPressActionItem: handleOnPress,
   openUrl: Linking.openURL,
+  feedViewProps: {},
 };
 
 export default named('ui-connected.FeaturesFeedConnected')(
