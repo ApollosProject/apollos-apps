@@ -90,6 +90,10 @@ class Feature extends PostgresDataSource {
     return RockFeatureDataSource.createPrayerListFeature.call(this, ...args);
   }
 
+  async createFollowPeopleFeature(...args) {
+    return RockFeatureDataSource.createFollowPeopleFeature.call(this, ...args);
+  }
+
   async createVerticalPrayerListFeature(...args) {
     return RockFeatureDataSource.createVerticalPrayerListFeature.call(
       this,
@@ -138,6 +142,8 @@ class Feature extends PostgresDataSource {
             return this.createPrayerListFeature(finalConfig);
           case 'VerticalPrayerList':
             return this.createVerticalPrayerListFeature(finalConfig);
+          case 'FollowPeople':
+            return this.createFollowPeopleFeature(finalConfig);
           case 'ActionList':
           default:
             // Action list was the default in 1.3.0 and prior.

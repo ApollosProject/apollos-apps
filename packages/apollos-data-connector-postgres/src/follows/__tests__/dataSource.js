@@ -327,7 +327,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     });
     ApollosConfig.loadJs({
       SUGGESTED_FOLLOWS: [
-        'nick@offer.man',
+        { email: 'nick@offer.man' },
         {
           email: 'vin@wil.com',
           campusId: mainCampus.id,
@@ -348,7 +348,8 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     });
 
     const suggestedFollowers = await followDataSource.getStaticSuggestedFollowsFor(
-      me
+      me,
+      ApollosConfig.SUGGESTED_FOLLOWS
     );
 
     expect(suggestedFollowers.map(({ email }) => email)).toEqual([
@@ -391,7 +392,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     });
     ApollosConfig.loadJs({
       SUGGESTED_FOLLOWS: [
-        'nick@offer.man',
+        { email: 'nick@offer.man' },
         {
           id: dupe.id,
           email: 'vin@wil.com',
@@ -410,7 +411,8 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     });
 
     const suggestedFollowers = await followDataSource.getStaticSuggestedFollowsFor(
-      me
+      me,
+      ApollosConfig.SUGGESTED_FOLLOWS
     );
 
     expect(suggestedFollowers.map(({ firstName }) => firstName)).toEqual([
@@ -459,7 +461,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     });
     ApollosConfig.loadJs({
       SUGGESTED_FOLLOWS: [
-        'nick@offer.man',
+        { email: 'nick@offer.man' },
         {
           email: 'vin@wil.com',
           campusId: mainCampus.id,
@@ -480,7 +482,8 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     });
 
     const suggestedFollowers = await followDataSource.getStaticSuggestedFollowsFor(
-      me
+      me,
+      ApollosConfig.SUGGESTED_FOLLOWS
     );
 
     expect(suggestedFollowers.map(({ email }) => email)).toEqual([
@@ -556,7 +559,8 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     currentPersonId = me.id;
 
     const suggestedFollowers = await followDataSource.getStaticSuggestedFollowsFor(
-      me
+      me,
+      ApollosConfig.SUGGESTED_FOLLOWS
     );
 
     expect(suggestedFollowers).toEqual([]);
@@ -575,7 +579,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
       email: 'nick@offer.man',
     });
     ApollosConfig.loadJs({
-      SUGGESTED_FOLLOWS: ['nick@offer.man'],
+      SUGGESTED_FOLLOWS: [{ email: 'nick@offer.man' }],
     });
 
     await followDataSource.requestFollow({
@@ -605,7 +609,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
       email: 'nick@offer.man',
     });
     ApollosConfig.loadJs({
-      SUGGESTED_FOLLOWS: ['nick@offer.man'],
+      SUGGESTED_FOLLOWS: [{ email: 'nick@offer.man' }],
     });
 
     await followDataSource.requestFollow({

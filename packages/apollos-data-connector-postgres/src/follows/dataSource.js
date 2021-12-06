@@ -1,8 +1,8 @@
-import ApollosConfig from '@apollosproject/config';
 import { Op } from 'sequelize';
 import { parseGlobalId } from '@apollosproject/server-core/lib/node';
 import { generateAppLink } from '@apollosproject/server-core';
-import { get, partition } from 'lodash';
+import ApollosConfig from '@apollosproject/config';
+import { partition } from 'lodash';
 import { PostgresDataSource, assertUuid } from '../postgres';
 import { FollowState } from './model';
 
@@ -195,16 +195,18 @@ class Follow extends PostgresDataSource {
     return this.getStaticSuggestedFollowsFor(currentPerson);
   };
 
-  getStaticSuggestedFollowsFor = async ({ campusId, id } = {}) => {
-    assertUuid(campusId, 'getStaticSuggestedFollowsFor');
-    assertUuid(id, 'getStaticSuggestedFollowsFor');
+  getStaticSuggestedFollowsFor = async (currentPerson) => {
+    assertUuid(currentPerson.campusId, 'getStaticSuggestedFollowsFor');
+    assertUuid(currentPerson.id, 'getStaticSuggestedFollowsFor');
 
-    const suggestedFollowers = get(ApollosConfig, 'SUGGESTED_FOLLOWS', []);
-    const suggestedFollowersForCampus = suggestedFollowers.filter((p) => {
+    const suggestions = ApollosConfig.SUGGESTED_FOLLOWS ?? [];
+    if (!suggestions.length) return [];
+
+    const suggestionsByCampus = suggestions.filter(({ campusId }) => {
       // if the suggested follower has a specific campus.
-      if (p.campusId) {
+      if (campusId) {
         // match it against the user's campus, if they have a campus
-        return !!campusId && p.campusId === campusId;
+        return !!currentPerson.campusId && campusId === currentPerson.campusId;
       }
       // If not, return true.
       return true;
@@ -212,20 +214,13 @@ class Follow extends PostgresDataSource {
 
     // Put suggestions with an id into a separate list; we don't want to match them by email
     const [suggestedPeopleById, remainingSuggested] = partition(
-      suggestedFollowersForCampus,
-      (f) => !!f.id
+      suggestionsByCampus,
+      ({ id }) => !!id
     );
-    const suggestedIds = suggestedPeopleById.map((p) => p.id);
+    const suggestedIds = suggestedPeopleById.map(({ id }) => id);
 
     // Suggested followers is a list of mixed emails strings and objects with an email key.
-    const suggestedEmails = remainingSuggested.map((p) =>
-      p.email ? p.email : p
-    );
-
-    // select people.*, follows.state
-    // as follow_id from people
-    // left outer join follows on (follows."requestPersonId" = 'current user id' and follows."followedPersonId" = people.id)
-    // where (people.email in ('email list') or people.id in ('id list')) and (follows.state != 'ACCEPTED' or follows.state is null);
+    const suggestedEmails = remainingSuggested.map(({ email }) => email);
 
     return this.sequelize.models.people.findAll({
       where: {
@@ -233,7 +228,7 @@ class Follow extends PostgresDataSource {
           { email: { [Op.in]: suggestedEmails } },
           { id: { [Op.in]: suggestedIds } },
         ],
-        id: { [Op.ne]: id },
+        id: { [Op.ne]: currentPerson.id },
         '$followingRequests.state$': { [Op.or]: [null, FollowState.REQUESTED] },
       },
       include: [
@@ -241,7 +236,7 @@ class Follow extends PostgresDataSource {
           model: this.model,
           as: 'followingRequests',
           required: false,
-          where: { requestPersonId: id },
+          where: { requestPersonId: currentPerson.id },
         },
       ],
     });

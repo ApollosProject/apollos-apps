@@ -374,6 +374,20 @@ export default class Feature extends RockApolloDataSource {
     };
   }
 
+  createFollowPeopleFeature(args) {
+    const { Follow } = this.context.dataSources;
+    return {
+      // The Feature ID is based on all of the action ids, added together.
+      // This is naive, and could be improved.
+      id: this.createFeatureId({
+        args,
+      }),
+      suggestedPeople: Follow.getStaticSuggestedFollowsForCurrentPerson(),
+      // Typename is required so GQL knows specifically what Feature is being created
+      __typename: 'FollowPeopleFeature',
+    };
+  }
+
   async createVerticalPrayerListFeature({ title, subtitle, ...args }) {
     const { ActionAlgorithm, Auth, Person } = this.context.dataSources;
     const { id } = await Auth.getCurrentPerson();

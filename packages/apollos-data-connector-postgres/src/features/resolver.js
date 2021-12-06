@@ -105,6 +105,9 @@ const resolver = {
   AddCommentFeature: {
     id: id('AddCommentFeature'),
   },
+  FollowPeopleFeature: {
+    id: id('FollowPeopleFeature'),
+  },
 };
 
 export default resolver;
