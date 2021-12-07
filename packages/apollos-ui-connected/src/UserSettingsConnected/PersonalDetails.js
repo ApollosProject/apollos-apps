@@ -58,7 +58,7 @@ class PersonalDetails extends PureComponent {
       <Footer>
         <PaddedView>
           <Button
-            disabled={!props.isValid || props.isSubmitting}
+            disabled={props.isSubmitting}
             onPress={props.handleSubmit}
             title="Save"
             loading={props.isSubmitting}
@@ -71,73 +71,82 @@ class PersonalDetails extends PureComponent {
   render() {
     return (
       <Query query={GET_USER_PROFILE} fetchPolicy="cache-and-network">
-        {({ data: { currentUser = { profile: {} } } = {} }) => {
-          const { firstName, lastName, email } = currentUser.profile;
+        {({ data }) => {
+          if (data) {
+            const { currentUser } = data;
+            const { firstName, lastName, email } = data.currentUser.profile;
 
-          return (
-            <Mutation
-              mutation={UPDATE_CURRENT_USER}
-              update={async (cache, { data: { updateProfileFields } }) => {
-                await cache.writeQuery({
-                  query: GET_USER_PROFILE,
-                  data: {
-                    currentUser: {
-                      ...currentUser,
-                      profile: {
-                        ...currentUser.profile,
-                        firstName: updateProfileFields.firstName,
-                        lastName: updateProfileFields.lastName,
-                        email: updateProfileFields.email,
+            return (
+              <Mutation
+                mutation={UPDATE_CURRENT_USER}
+                update={async (cache, { data: { updateProfileFields } }) => {
+                  await cache.writeQuery({
+                    query: GET_USER_PROFILE,
+                    data: {
+                      currentUser: {
+                        ...currentUser,
+                        profile: {
+                          ...currentUser.profile,
+                          firstName: updateProfileFields.firstName,
+                          lastName: updateProfileFields.lastName,
+                          email: updateProfileFields.email,
+                        },
                       },
                     },
-                  },
-                });
-              }}
-            >
-              {(updateDetails) => (
-                <Formik
-                  initialValues={{ firstName, lastName, email }}
-                  validationSchema={Yup.object().shape({
-                    firstName: Yup.string().required('First Name is required!'),
-                    lastName: Yup.string().required('Last Name is required!'),
-                    email: Yup.string()
-                      .email('Invalid email address')
-                      .required('Email is required!'),
-                  })}
-                  onSubmit={async (
-                    variables,
-                    { setSubmitting, setFieldError }
-                  ) => {
-                    try {
-                      await updateDetails({ variables });
-                      await this.props.navigation.goBack();
-                    } catch (e) {
-                      const { graphQLErrors } = e;
-                      if (
-                        graphQLErrors.length &&
-                        graphQLErrors.find(({ message }) =>
-                          message.includes('User already exists')
-                        )
-                      ) {
-                        setFieldError(
-                          'email',
-                          'There is already a user with this email'
-                        );
-                      } else {
-                        setFieldError(
-                          'email',
-                          'Unknown error. Please try again later.'
-                        );
+                  });
+                }}
+              >
+                {(updateDetails) => (
+                  <Formik
+                    initialValues={{ firstName, lastName, email }}
+                    validationSchema={Yup.object().shape({
+                      firstName: Yup.string()
+                        .required('First Name is required!')
+                        .nullable(),
+                      lastName: Yup.string()
+                        .required('Last Name is required!')
+                        .nullable(),
+                      email: Yup.string()
+                        .email('Invalid email address')
+                        .required('Email is required!')
+                        .nullable(),
+                    })}
+                    onSubmit={async (
+                      variables,
+                      { setSubmitting, setFieldError }
+                    ) => {
+                      try {
+                        await updateDetails({ variables });
+                        await this.props.navigation.goBack();
+                      } catch (e) {
+                        const { graphQLErrors } = e;
+                        if (
+                          graphQLErrors.length &&
+                          graphQLErrors.find(({ message }) =>
+                            message.includes('User already exists')
+                          )
+                        ) {
+                          setFieldError(
+                            'email',
+                            'There is already a user with this email'
+                          );
+                        } else {
+                          setFieldError(
+                            'email',
+                            'Unknown error. Please try again later.'
+                          );
+                        }
                       }
-                    }
-                    setSubmitting(false);
-                  }}
-                >
-                  {this.renderForm}
-                </Formik>
-              )}
-            </Mutation>
-          );
+                      setSubmitting(false);
+                    }}
+                  >
+                    {this.renderForm}
+                  </Formik>
+                )}
+              </Mutation>
+            );
+          }
+          return null;
         }}
       </Query>
     );
