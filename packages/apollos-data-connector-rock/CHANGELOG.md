@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.40.0](https://github.com/apollosproject/apollos-apps/compare/v2.39.0...v2.40.0) (2021-12-07)
+
+
+### Features
+
+* adds FollowPeopleFeature to the API ([#2261](https://github.com/apollosproject/apollos-apps/issues/2261)) ([c5079ce](https://github.com/apollosproject/apollos-apps/commit/c5079ce9e599c12683c3e636e187763cd69da866))
+* Setup apollos devices as their own defined type ([#2280](https://github.com/apollosproject/apollos-apps/issues/2280)) ([0202351](https://github.com/apollosproject/apollos-apps/commit/020235160381272ee3cd2328aba6e5a8edd26146))
+
+
+### Bug Fixes
+
+* Media node supports comments ([#2276](https://github.com/apollosproject/apollos-apps/issues/2276)) ([92c7760](https://github.com/apollosproject/apollos-apps/commit/92c77605778184b9402f2b5e2e5acff4f51b8f22))
+* sanitizes summary on content items ([#2270](https://github.com/apollosproject/apollos-apps/issues/2270)) ([f46127e](https://github.com/apollosproject/apollos-apps/commit/f46127e4c52b03078afead416d33abd9961cf5e0))
+
+
+
 ## [2.39.0](https://github.com/apollosproject/apollos-apps/compare/v2.38.0...v2.39.0) (2021-11-22)
 
 

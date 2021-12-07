@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.40.0](https://github.com/apollosproject/apollos-apps/compare/v2.39.0...v2.40.0) (2021-12-07)
+
+
+### Features
+
+* adds FollowPeopleFeature to the API ([#2261](https://github.com/apollosproject/apollos-apps/issues/2261)) ([c5079ce](https://github.com/apollosproject/apollos-apps/commit/c5079ce9e599c12683c3e636e187763cd69da866))
+* Following Prayer Request Notification ([#2269](https://github.com/apollosproject/apollos-apps/issues/2269)) ([aabea76](https://github.com/apollosproject/apollos-apps/commit/aabea76e03909a242d2d56dc267ec9bc080e18dd))
+
+
+### Bug Fixes
+
+* names actiontable feature correctly ([#2277](https://github.com/apollosproject/apollos-apps/issues/2277)) ([c0c620b](https://github.com/apollosproject/apollos-apps/commit/c0c620bb56f28d31d79b61b81b6c56f08ab0d13d))
+* writes prayer tests differently ([#2282](https://github.com/apollosproject/apollos-apps/issues/2282)) ([19efb12](https://github.com/apollosproject/apollos-apps/commit/19efb1231c3f851b0bc309a419c932481bf83d46))
+
+
+
 ## [2.39.0](https://github.com/apollosproject/apollos-apps/compare/v2.38.0...v2.39.0) (2021-11-22)
 
 

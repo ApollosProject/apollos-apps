@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.40.0](https://github.com/apollosproject/apollos-apps/compare/v2.39.0...v2.40.0) (2021-12-07)
+
+
+### Features
+
+* added more info to content single and analytics for buttons ([#2279](https://github.com/apollosproject/apollos-apps/issues/2279)) ([240cda9](https://github.com/apollosproject/apollos-apps/commit/240cda95ffccfe8293eff60606e22bd3deb523a0))
+* adds feature feeds as a nav destination ([#2274](https://github.com/apollosproject/apollos-apps/issues/2274)) ([e779744](https://github.com/apollosproject/apollos-apps/commit/e779744ec1403eb82f5adbf884126abdfb7d4903))
+
+
+### Bug Fixes
+
+* added feed view props so that tab components can pass info ([#2286](https://github.com/apollosproject/apollos-apps/issues/2286)) ([ebc5387](https://github.com/apollosproject/apollos-apps/commit/ebc538742c1b063f31b6a7846d4236f2672a781f))
+* Personal Details - Save Button ([#2244](https://github.com/apollosproject/apollos-apps/issues/2244)) ([c72eeea](https://github.com/apollosproject/apollos-apps/commit/c72eeea9108144d996a9a9a9424f361a357a955d))
+
+
+
 ## [2.39.0](https://github.com/apollosproject/apollos-apps/compare/v2.38.0...v2.39.0) (2021-11-22)
 
 

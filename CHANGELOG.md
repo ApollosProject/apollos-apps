@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.40.0](https://github.com/ApollosProject/apollos-apps/compare/v2.39.0...v2.40.0) (2021-12-07)
+
+
+### Features
+
+* added more info to content single and analytics for buttons ([#2279](https://github.com/ApollosProject/apollos-apps/issues/2279)) ([240cda9](https://github.com/ApollosProject/apollos-apps/commit/240cda95ffccfe8293eff60606e22bd3deb523a0))
+* adds feature feeds as a nav destination ([#2274](https://github.com/ApollosProject/apollos-apps/issues/2274)) ([e779744](https://github.com/ApollosProject/apollos-apps/commit/e779744ec1403eb82f5adbf884126abdfb7d4903))
+* adds FollowPeopleFeature to the API ([#2261](https://github.com/ApollosProject/apollos-apps/issues/2261)) ([c5079ce](https://github.com/ApollosProject/apollos-apps/commit/c5079ce9e599c12683c3e636e187763cd69da866))
+* Following Prayer Request Notification ([#2269](https://github.com/ApollosProject/apollos-apps/issues/2269)) ([aabea76](https://github.com/ApollosProject/apollos-apps/commit/aabea76e03909a242d2d56dc267ec9bc080e18dd))
+* Setup apollos devices as their own defined type ([#2280](https://github.com/ApollosProject/apollos-apps/issues/2280)) ([0202351](https://github.com/ApollosProject/apollos-apps/commit/020235160381272ee3cd2328aba6e5a8edd26146))
+
+
+### Bug Fixes
+
+* added feed view props so that tab components can pass info ([#2286](https://github.com/ApollosProject/apollos-apps/issues/2286)) ([ebc5387](https://github.com/ApollosProject/apollos-apps/commit/ebc538742c1b063f31b6a7846d4236f2672a781f))
+* Media node supports comments ([#2276](https://github.com/ApollosProject/apollos-apps/issues/2276)) ([92c7760](https://github.com/ApollosProject/apollos-apps/commit/92c77605778184b9402f2b5e2e5acff4f51b8f22))
+* names actiontable feature correctly ([#2277](https://github.com/ApollosProject/apollos-apps/issues/2277)) ([c0c620b](https://github.com/ApollosProject/apollos-apps/commit/c0c620bb56f28d31d79b61b81b6c56f08ab0d13d))
+* Personal Details - Save Button ([#2244](https://github.com/ApollosProject/apollos-apps/issues/2244)) ([c72eeea](https://github.com/ApollosProject/apollos-apps/commit/c72eeea9108144d996a9a9a9424f361a357a955d))
+* sanitizes summary on content items ([#2270](https://github.com/ApollosProject/apollos-apps/issues/2270)) ([f46127e](https://github.com/ApollosProject/apollos-apps/commit/f46127e4c52b03078afead416d33abd9961cf5e0))
+* writes prayer tests differently ([#2282](https://github.com/ApollosProject/apollos-apps/issues/2282)) ([19efb12](https://github.com/ApollosProject/apollos-apps/commit/19efb1231c3f851b0bc309a419c932481bf83d46))
+
+
+
 ## [2.39.0](https://github.com/ApollosProject/apollos-apps/compare/v2.38.0...v2.39.0) (2021-11-22)
 
 
