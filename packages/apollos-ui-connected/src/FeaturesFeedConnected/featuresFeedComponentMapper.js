@@ -16,6 +16,7 @@ import WebviewFeature from '../features/WebviewFeature';
 import ButtonFeature from '../features/ButtonFeature';
 import CommentListFeatureConnected from '../CommentListFeatureConnected';
 import AddCommentFeatureConnected from '../AddCommentFeatureConnected';
+import FollowPeopleFeature from '../FollowPeopleFeature';
 
 const MAPPINGS = {
   ActionListFeature: ActionListFeatureConnected,
@@ -31,6 +32,7 @@ const MAPPINGS = {
   VerticalPrayerListFeature: VerticalPrayerListFeatureConnected,
   CommentListFeature: CommentListFeatureConnected,
   AddCommentFeature: AddCommentFeatureConnected,
+  FollowPeopleFeature,
   ScriptureFeature,
   TextFeature,
   WebviewFeature,
