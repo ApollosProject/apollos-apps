@@ -13,6 +13,7 @@ const AUDIO_NODE_FRAGMENT = gql`
 const VIDEO_NODE_FRAGMENT = gql`
   fragment VideoNodeFragment on VideoNode {
     videos {
+      name
       sources {
         uri
       }

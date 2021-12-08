@@ -327,4 +327,48 @@ describe('The media player', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+
+  it('can render a VideoSelect', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ApollosPlayerContainer
+          source={{
+            uri:
+              'https://rockrms.blob.core.windows.net/sampledata/podcasting/money-wise.mp4',
+          }}
+          presentationProps={{
+            title: 'Video Title',
+            description: 'Video Description',
+          }}
+          coverImage={{
+            uri: `https://picsum.photos/seed/123/100/100`,
+          }}
+          videos={[
+            {
+              name: 'Full Sermon',
+              sources: [
+                {
+                  uri:
+                    'https://rockrms.blob.core.windows.net/sampledata/podcasting/money-wise.mp4',
+                },
+              ],
+              __typename: 'VideoMedia',
+            },
+            {
+              name: 'Message Only',
+              sources: [
+                {
+                  uri:
+                    'https://rockrms.blob.core.windows.net/sampledata/podcasting/hosea.mp4',
+                },
+              ],
+              __typename: 'VideoMedia',
+            },
+          ]}
+        />
+      </Providers>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
 });

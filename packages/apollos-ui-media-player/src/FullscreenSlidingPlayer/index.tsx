@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as React from 'react';
 import {
   Animated,
@@ -37,6 +38,7 @@ export interface FullScreenSlidingPlayerProps {
   scrollViewRef?:
     | ((instance: ScrollView | null) => void)
     | React.RefObject<ScrollView>;
+  videos?: Array<{}>;
 }
 
 const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerProps> = ({
@@ -46,6 +48,7 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
   collapseOnScroll = false,
   useNativeFullscreeniOS = false,
   scrollViewRef: scrollViewRefProp,
+  videos,
 }) => {
   // Setup layout and window objects for size references inside of computed
   // styles that are below.
@@ -247,7 +250,10 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
           useNativeFullscreeniOS={useNativeFullscreeniOS}
         />
         {(!isFullscreen || Platform.OS === 'android') && ControlsComponent ? (
-          <ControlsComponent collapsedAnimation={collapsedAnimation} />
+          <ControlsComponent
+            collapsedAnimation={collapsedAnimation}
+            videos={videos}
+          />
         ) : null}
       </Animated.View>
 
@@ -271,7 +277,9 @@ const FullscreenSlidingPlayer: React.FunctionComponent<FullScreenSlidingPlayerPr
             style={[presentationStyles, fullscreenPresentationStyles]}
           >
             {isFullscreen ? <VideoOutlet /> : null}
-            {isFullscreen && ControlsComponent ? <ControlsComponent /> : null}
+            {isFullscreen && ControlsComponent ? (
+              <ControlsComponent videos={videos} />
+            ) : null}
           </Animated.View>
         </Modal>
       ) : null}

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as React from 'react';
 import {
   SafeAreaView,
@@ -23,6 +24,7 @@ import Seeker from './Seeker';
 import AirPlayButton from '../AirPlayButton';
 import { PictureMode } from '../types';
 import CollapsedHeader from './CollapsedHeader';
+import VideoSelect from './VideoSelect';
 
 const FooterWrapper = styled(
   {
@@ -89,8 +91,10 @@ const StyledAirPlayButton = withTheme(
 
 const Controls = ({
   collapsedAnimation,
+  videos,
 }: {
   collapsedAnimation?: Animated.Value;
+  videos?: Array<{}>;
 }) => {
   const {
     pictureMode,
@@ -132,6 +136,7 @@ const Controls = ({
           <FadeoutOverlay>
             {isFullscreen ? <Header /> : null}
             <FooterWrapper>
+              <VideoSelect videos={videos} />
               <FooterControls>
                 <IconWrapper>
                   <StyledAirPlayButton />

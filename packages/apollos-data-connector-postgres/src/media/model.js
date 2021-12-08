@@ -8,6 +8,7 @@ const createModel = defineModel({
   attributes: {
     type: DataTypes.ENUM(['IMAGE', 'VIDEO', 'AUDIO']),
     url: DataTypes.TEXT,
+    metadata: DataTypes.JSON,
     nodeId: DataTypes.UUID,
     nodeType: DataTypes.STRING,
   },

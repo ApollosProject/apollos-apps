@@ -126,6 +126,7 @@ const NodeSingleConnectedWithMedia = ({
           title: data.node.title,
         }}
         audioOnly={!hasLivestream && !hasVideo && hasAudio}
+        videos={data?.node?.videos}
       >
         <Component nodeId={nodeId} ImageWrapperComponent={Noop} {...props} />
       </ApollosPlayerContainer>

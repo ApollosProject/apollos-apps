@@ -17,6 +17,9 @@ export default {
     sources: addTypenameToSources('AudioMediaSource'),
   },
   VideoMedia: {
+    name: (root) => {
+      return root?.metadata?.name;
+    },
     sources: addTypenameToSources('VideoMediaSource'),
   },
 };
