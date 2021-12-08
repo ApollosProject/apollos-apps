@@ -77,7 +77,19 @@ class ActionAlgorithm extends RockApolloDataSource {
       numberDaysSincePrayer,
       personId,
     });
-    return cursor.top(limit).get();
+
+    function removePrayerDuplicates(prayers) {
+      return prayers.filter(
+        (prayer, index, self) =>
+          index ===
+          self.findIndex(
+            (t) =>
+              prayer.requestedByPersonAliasId === t.requestedByPersonAliasId
+          )
+      );
+    }
+
+    return cursor.top(limit).get().then(removePrayerDuplicates);
   }
 
   // Gets the first 3 upcoming events
