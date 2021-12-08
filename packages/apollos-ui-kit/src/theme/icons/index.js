@@ -1,73 +1,319 @@
-export ArrowBack from './ArrowBack';
-export ArrowDown from './ArrowDown';
-export ArrowDownRight from './ArrowDownRight';
-export ArrowNext from './ArrowNext';
-export ArrowUp from './ArrowUp';
-export ArrowOut from './ArrowOut';
-export ArrowIn from './ArrowIn';
-export Audio from './Audio';
-export Avatar from './Avatar';
-export Bank from './Bank';
-export BrandIcon from './BrandIcon';
-export Building from './Building';
-export Calendar from './Calendar';
-export Camera from './Camera';
-export Check from './Check';
-export CheckboxChecked from './CheckboxChecked';
-export CheckboxUnchecked from './CheckboxUnchecked';
-export CircleOutlineCheckMark from './CircleOutlineCheckMark';
-export CircleOutlineXMark from './CircleOutlineXMark';
-export CircleOutlinePlus from './CircleOutlinePlus';
-export Close from './Close';
-export Credit from './Credit';
-export DotsThreeVertical from './DotsThreeVertical';
-export Chromecast from './Chromecast';
-export ChunkyPlus from './ChunkyPlus';
-export Download from './Download';
-export Dropdown from './Dropdown';
-export Empty from './Empty';
-export Failed from './Failed';
-export Filter from './Filter';
-export Fullscreen from './Fullscreen';
-export Groups from './Groups';
-export Home from './Home';
-export Information from './Information';
-export Like from './Like';
-export LikeSolid from './LikeSolid';
-export LiveDot from './LiveDot';
-export Locate from './Locate';
-export Lock from './Lock';
-export Mute from './Mute';
-export Pause from './Pause';
-export Pin from './Pin';
-export Play from './Play';
-export PlayOpaque from './PlayOpaque';
-export PlaySolid from './PlaySolid';
-export Plus from './Plus';
-export Pray from './Pray';
-export Print from './Print';
-export PictureInPicture from './PictureInPicture';
-export Profile from './Profile';
-export RadioChecked from './RadioChecked';
-export RadioUnchecked from './RadioUnchecked';
-export Repeat from './Repeat';
-export RepeatAll from './RepeatAll';
-export RepeatOne from './RepeatOne';
-export Search from './Search';
-export Sections from './Sections';
-export Settings from './Settings';
-export Share from './Share';
-export Shuffle from './Shuffle';
-export SkipForwardThirty from './SkipForwardThirty';
-export SkipBackThirty from './SkipBackThirty';
-export SkipNext from './SkipNext';
-export SkipPrevious from './SkipPrevious';
-export Text from './Text';
-export ThumbsUp from './ThumbsUp';
-export ThumbsUpFilled from './ThumbsUpFilled';
-export Time from './Time';
-export Umbrella from './Umbrella';
-export Video from './Video';
-export VideoOff from './VideoOff';
-export Volume from './Volume';
-export Warning from './Warning';
+import React from 'react';
+import * as PhosphorIcons from 'phosphor-react-native';
+import PropTypes from 'prop-types';
+import * as CoreIcons from './core';
+
+function withPhosphorIcon(PhosphorIcon, defaultWeight) {
+  function OriginalPhosphorIcon({ size, fill, weight }) {
+    return (
+      <PhosphorIcon size={size} color={fill} weight={weight || defaultWeight} />
+    );
+  }
+
+  OriginalPhosphorIcon.propTypes = {
+    size: PropTypes.number,
+    fill: PropTypes.string,
+    weight: PropTypes.string,
+  };
+
+  return OriginalPhosphorIcon;
+}
+
+const phosphorIconMap = {
+  ArrowBack: {
+    name: 'ArrowLeft',
+    weight: 'regular',
+  },
+  ArrowDown: {
+    name: 'ArrowDown',
+    weight: 'regular',
+  },
+  ArrowDownRight: {
+    name: 'ArrowDownRight',
+    weight: 'regular',
+  },
+  ArrowNext: {
+    name: 'ArrowRight',
+    weight: 'regular',
+  },
+  ArrowUp: {
+    name: 'ArrowUp',
+    weight: 'regular',
+  },
+  ArrowOut: {
+    name: 'ArrowsOutSimple',
+    weight: 'regular',
+  },
+  ArrowIn: {
+    name: 'ArrowsInSimple',
+    weight: 'regular',
+  },
+  Audio: {
+    name: 'SpeakerHigh',
+    weight: 'regular',
+  },
+  Avatar: {
+    name: 'User',
+    weight: 'regular',
+  },
+  Bank: {
+    name: 'Bank',
+    weight: 'regular',
+  },
+  Building: {
+    name: 'Buildings',
+    weight: 'regular',
+  },
+  Calendar: {
+    name: 'CalendarBlank',
+    weight: 'regular',
+  },
+  Camera: {
+    name: 'Camera',
+    weight: 'regular',
+  },
+  Check: {
+    name: 'Check',
+    weight: 'regular',
+  },
+  CheckboxChecked: {
+    name: 'CheckSquare',
+    weight: 'regular',
+  },
+  CheckboxUnchecked: {
+    name: 'Square',
+    weight: 'regular',
+  },
+  CircleOutlineCheckMark: {
+    name: 'CheckCircle',
+    weight: 'regular',
+  },
+  CircleOutlineXMark: {
+    name: 'XCircle',
+    weight: 'regular',
+  },
+  CircleOutlinePlus: {
+    name: 'PlusCircle',
+    weight: 'regular',
+  },
+  Close: {
+    name: 'XCircle',
+    weight: 'fill',
+  },
+  Credit: {
+    name: 'CreditCard',
+    weight: 'regular',
+  },
+  DotsThreeVertical: {
+    name: 'DotsThree',
+    weight: 'regular',
+  },
+  Chromecast: {
+    name: 'Screencast',
+    weight: 'regular',
+  },
+  ChunkyPlus: {
+    name: 'Plus',
+    weight: 'bold',
+  },
+  Download: {
+    name: 'DownloadSimple',
+    weight: 'regular',
+  },
+  Dropdown: {
+    name: 'CaretDown',
+    weight: 'regular',
+  },
+  Failed: {
+    name: 'WarningCircle',
+    weight: 'regular',
+  },
+  Filter: {
+    name: 'Faders',
+    weight: 'regular',
+  },
+  Fullscreen: {
+    name: 'ArrowsOutSimple',
+    weight: 'regular',
+  },
+  Groups: {
+    name: 'Users',
+    weight: 'regular',
+  },
+  Home: {
+    name: 'House',
+    weight: 'regular',
+  },
+  Information: {
+    name: 'Info',
+    weight: 'regular',
+  },
+  Like: {
+    name: 'Heart',
+    weight: 'regular',
+  },
+  LikeSolid: {
+    name: 'Heart',
+    weight: 'fill',
+  },
+  Locate: {
+    name: 'NavigationArrow',
+    weight: 'regular',
+  },
+  Lock: {
+    name: 'Lock',
+    weight: 'regular',
+  },
+  Mute: {
+    name: 'SpeakerSlash',
+    weight: 'regular',
+  },
+  Pause: {
+    name: 'Pause',
+    weight: 'fill',
+  },
+  Pin: {
+    name: 'PushPin',
+    weight: 'regular',
+  },
+  Play: {
+    name: 'Play',
+    weight: 'fill',
+  },
+  PlayOpaque: {
+    name: 'Play',
+    weight: 'fill',
+  },
+  PlaySolid: {
+    name: 'Play',
+    weight: 'fill',
+  },
+  Plus: {
+    name: 'Plus',
+    weight: 'regular',
+  },
+  Print: {
+    name: 'Printer',
+    weight: 'regular',
+  },
+  PictureInPicture: {
+    name: 'PictureInPicture',
+    weight: 'regular',
+  },
+  Profile: {
+    name: 'UserCircle',
+    weight: 'regular',
+  },
+  RadioChecked: {
+    name: 'CheckCircle',
+    weight: 'regular',
+  },
+  RadioUnchecked: {
+    name: 'Circle',
+    weight: 'regular',
+  },
+  Repeat: {
+    name: 'Repeat',
+    weight: 'regular',
+  },
+  RepeatAll: {
+    name: 'Repeat',
+    weight: 'regular',
+  },
+  RepeatOne: {
+    name: 'RepeatOnce',
+    weight: 'regular',
+  },
+  Search: {
+    name: 'MagnifyingGlass',
+    weight: 'regular',
+  },
+  Sections: {
+    name: 'List',
+    weight: 'regular',
+  },
+  Settings: {
+    name: 'Gear',
+    weight: 'regular',
+  },
+  Share: {
+    name: 'Share',
+    weight: 'regular',
+  },
+  Shuffle: {
+    name: 'Shuffle',
+    weight: 'regular',
+  },
+  SkipForwardThirty: {
+    name: 'ArrowClockwise',
+    weight: 'regular',
+  },
+  SkipBackThirty: {
+    name: 'ArrowCounterClockwise',
+    weight: 'regular',
+  },
+  SkipNext: {
+    name: 'SkipForward',
+    weight: 'regular',
+  },
+  SkipPrevious: {
+    name: 'SkipBack',
+    weight: 'regular',
+  },
+  Text: {
+    name: 'TextT',
+    weight: 'regular',
+  },
+  ThumbsUp: {
+    name: 'ThumbsUp',
+    weight: 'regular',
+  },
+  ThumbsUpFilled: {
+    name: 'ThumbsUp',
+    weight: 'fill',
+  },
+  Time: {
+    name: 'Clock',
+    weight: 'regular',
+  },
+  Umbrella: {
+    name: 'Umbrella',
+    weight: 'regular',
+  },
+  Video: {
+    name: 'VideoCamera',
+    weight: 'regular',
+  },
+  VideoOff: {
+    name: 'VideoCameraSlash',
+    weight: 'regular',
+  },
+  Volume: {
+    name: 'SpeakerHigh',
+    weight: 'regular',
+  },
+  Warning: {
+    name: 'Warning',
+    weight: 'regular',
+  },
+};
+
+const AllIcons = Object.fromEntries(
+  Object.entries(CoreIcons).map(([name, Icon]) => {
+    const phosphorIconMapping = phosphorIconMap[name];
+    if (phosphorIconMapping) {
+      return [
+        name,
+        withPhosphorIcon(
+          PhosphorIcons[phosphorIconMapping.name],
+          phosphorIconMapping.weight
+        ),
+      ];
+    }
+
+    return [name, Icon];
+  })
+);
+
+export { CoreIcons, PhosphorIcons };
+export default AllIcons;

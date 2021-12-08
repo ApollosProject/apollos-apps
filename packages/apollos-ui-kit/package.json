@@ -68,6 +68,7 @@
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "numeral": "^2.0.6",
+    "phosphor-react-native": "^0.4.0",
     "react-native-keyboard-avoiding-scroll-view": "1.0.1",
     "react-native-modal-datetime-picker": "^9.0.0",
     "react-native-tab-view": "1.0.2",

@@ -2,7 +2,7 @@ import React, { createContext, useContext } from 'react';
 import { useColorScheme } from 'react-native';
 import PropTypes from 'prop-types';
 import { merge, isPlainObject } from 'lodash';
-import * as coreIcons from './icons';
+import Icons from './icons';
 import createTheme from './createTheme';
 
 const ThemeContext = createContext();
@@ -54,7 +54,7 @@ const Themer = ({ theme: newThemeInput, icons: customIcons, children }) => {
   const newTheme = createTheme(mergedThemeInput);
 
   let icons = useIcons();
-  if (!icons) icons = coreIcons;
+  if (!icons) icons = Icons;
 
   return (
     <IconContext.Provider value={{ ...icons, ...customIcons }}>

@@ -620,20 +620,20 @@ Array [
             align="xMidYMid"
             bbHeight={20}
             bbWidth={20}
+            color="#FFFFFF"
             height={20}
+            id="Raw"
             meetOrSlice={0}
             minX={0}
             minY={0}
+            size={20}
             style={
               Array [
                 Object {
                   "backgroundColor": "transparent",
                   "borderWidth": 0,
                 },
-                Object {
-                  "marginLeft": 8,
-                  "marginRight": -8,
-                },
+                Object {},
                 null,
                 Object {
                   "flex": 0,
@@ -642,8 +642,9 @@ Array [
                 },
               ]
             }
-            vbHeight={24}
-            vbWidth={24}
+            tintColor="#FFFFFF"
+            vbHeight={256}
+            vbWidth={256}
             width={20}
           >
             <RNSVGGroup
@@ -687,16 +688,11 @@ Array [
               x={0}
               y={0}
             >
-              <RNSVGPath
-                d="M9.65 21L8 20.1l7.72-8.1L8 3.9 9.65 3l8.16 8.54c.27.28.27.64 0 .92L9.67 21z"
-                fill={
-                  Array [
-                    0,
-                    4294967295,
-                  ]
-                }
+              <RNSVGRect
+                fill={null}
                 fillOpacity={1}
                 fillRule={1}
+                height={256}
                 matrix={
                   Array [
                     1,
@@ -716,6 +712,8 @@ Array [
                   ]
                 }
                 rotation={0}
+                rx={0}
+                ry={0}
                 scaleX={1}
                 scaleY={1}
                 skewX={0}
@@ -728,6 +726,108 @@ Array [
                 strokeMiterlimit={4}
                 strokeOpacity={1}
                 strokeWidth={1}
+                vectorEffect={0}
+                width={256}
+                x={0}
+                y={0}
+              />
+              <RNSVGLine
+                fill={null}
+                fillOpacity={1}
+                fillRule={1}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                    "stroke",
+                    "strokeWidth",
+                    "strokeLinecap",
+                    "strokeLinejoin",
+                  ]
+                }
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={
+                  Array [
+                    0,
+                    4294967295,
+                  ]
+                }
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={1}
+                strokeLinejoin={1}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={16}
+                vectorEffect={0}
+                x={0}
+                x1={40}
+                x2={216}
+                y={0}
+                y1={128}
+                y2={128}
+              />
+              <RNSVGPath
+                d="M144 56 216 128 144 200"
+                fill={null}
+                fillOpacity={1}
+                fillRule={1}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                originX={0}
+                originY={0}
+                propList={
+                  Array [
+                    "fill",
+                    "stroke",
+                    "strokeWidth",
+                    "strokeLinecap",
+                    "strokeLinejoin",
+                  ]
+                }
+                rotation={0}
+                scaleX={1}
+                scaleY={1}
+                skewX={0}
+                skewY={0}
+                stroke={
+                  Array [
+                    0,
+                    4294967295,
+                  ]
+                }
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={1}
+                strokeLinejoin={1}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={16}
                 vectorEffect={0}
                 x={0}
                 y={0}

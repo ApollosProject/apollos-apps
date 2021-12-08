@@ -12841,6 +12841,11 @@ pgpass@1.x:
   dependencies:
     split2 "^3.1.1"
 
+phosphor-react-native@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/phosphor-react-native/-/phosphor-react-native-0.4.0.tgz#b843bd39a8970a53fd5b7729baa39fa3a9c0bf1b"
+  integrity sha512-FsNbV9agH+AZCqEvlAAguK1giRSgEOWIYjjtwrhQj+mcUbZz5WuZgMw9KPjumY4W0f16qkrq1ohsnCX2tu24Qg==
+
 picomatch@^2.0.4, picomatch@^2.0.5, picomatch@^2.2.1:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.2.2.tgz#21f333e9b6b8eaff02468f5146ea406d345f4dad"
