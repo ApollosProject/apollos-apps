@@ -23,7 +23,7 @@ Object {
   "id": "{\\"algorithms\\":[{\\"type\\":\\"DAILY_PRAYER\\"}],\\"title\\":\\"Test Action List\\",\\"subtitle\\":\\"It's great!\\",\\"isCard\\":true}",
   "isCard": true,
   "prayers": Array [
-    Object {},
+    null,
   ],
   "subtitle": "It's great!",
   "title": "Test Action List",

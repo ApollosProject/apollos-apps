@@ -61,6 +61,7 @@ describe('Person', () => {
   it('creates a profile', () => {
     const dataSource = new Person();
     dataSource.post = buildGetMock({}, dataSource);
+    dataSource.patch = buildGetMock({}, dataSource);
     const result = dataSource.create({
       FirstName: 'Vincent',
       Gender: 'Male',

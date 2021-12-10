@@ -186,15 +186,6 @@ describe('RockConstants', () => {
     expect(result).toMatchSnapshot();
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
-  it('Throws when finding an unknown model ', () => {
-    const dataSource = new RockConstants();
-    dataSource.context = context;
-    dataSource.get = buildGetMock([{ Id: 1 }], dataSource);
-    const prom = dataSource.modelType('IDontExist');
-    expect(prom).rejects.toEqual(
-      new Error('IDontExist has not been mapped into a Rock type!')
-    );
-  });
   it('Returns null if model type not found ', async () => {
     const dataSource = new RockConstants();
     dataSource.context = context;

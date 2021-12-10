@@ -159,6 +159,7 @@ describe('Prayer', () => {
     expect(result).toMatchSnapshot();
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
+
   it('gets by id', () => {
     const dataSource = new Prayer();
     dataSource.get = buildGetMock({ Id: 1 }, dataSource);
@@ -175,9 +176,13 @@ describe('Prayer', () => {
     expect(dataSource.put.mock.calls).toMatchSnapshot();
   });
 
-  it('incremenet prayed by id', () => {
+  it('increment prayed by id', () => {
     const dataSource = new Prayer();
+    dataSource.context = {
+      dataSources: { Cache: { get: () => null, set: () => null } },
+    };
     dataSource.put = buildGetMock({ Id: 1 }, dataSource);
+    dataSource.getFromId = () => ({ prayerCount: 0 });
     const result = dataSource.incrementPrayed(1);
     expect(result).resolves.toMatchSnapshot();
     expect(dataSource.put.mock.calls).toMatchSnapshot();

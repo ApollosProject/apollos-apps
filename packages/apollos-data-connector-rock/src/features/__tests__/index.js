@@ -125,7 +125,7 @@ describe('features', () => {
         PrayerRequest: {
           byDailyPrayerFeed: () => ({
             top: () => ({
-              get: () => ({}),
+              get: () => ({ then: () => null }),
             }),
           }),
         },

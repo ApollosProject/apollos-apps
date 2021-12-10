@@ -320,7 +320,7 @@ Array [
 ]
 `;
 
-exports[`Prayer incremenet prayed by id 1`] = `
+exports[`Prayer increment prayed by id 1`] = `
 Array [
   Array [
     "PrayerRequests/Prayed/1",
@@ -328,3 +328,5 @@ Array [
   ],
 ]
 `;
+
+exports[`Prayer increment prayed by id 2`] = `undefined`;
