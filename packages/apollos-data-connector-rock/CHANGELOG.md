@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.41.0](https://github.com/apollosproject/apollos-apps/compare/v2.40.0...v2.41.0) (2021-12-10)
+
+
+### Bug Fixes
+
+* cleans up tests ([#2291](https://github.com/apollosproject/apollos-apps/issues/2291)) ([65cd17b](https://github.com/apollosproject/apollos-apps/commit/65cd17b3a80804b0ee1396f2ff1753118f5f359e))
+
+
+
 ## [2.40.0](https://github.com/apollosproject/apollos-apps/compare/v2.39.0...v2.40.0) (2021-12-07)
 
 

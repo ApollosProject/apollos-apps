@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.41.0](https://github.com/ApollosProject/apollos-apps/compare/v2.40.0...v2.41.0) (2021-12-10)
+
+
+### Features
+
+* adds follow people feature ([#2288](https://github.com/ApollosProject/apollos-apps/issues/2288)) ([67d0e56](https://github.com/ApollosProject/apollos-apps/commit/67d0e56dfb1a51d3460430b403b06ef2276ed3c4))
+* Multiple videos support ([#2272](https://github.com/ApollosProject/apollos-apps/issues/2272)) ([449e870](https://github.com/ApollosProject/apollos-apps/commit/449e87020cb28277a3fe95568d4f6964b4b835f0))
+
+
+### Bug Fixes
+
+* additionalFeatures back to tabfeedconnected ([#2289](https://github.com/ApollosProject/apollos-apps/issues/2289)) ([a5a0b80](https://github.com/ApollosProject/apollos-apps/commit/a5a0b80f477f29c55c3cea8db2466f54e585c55b))
+* cleans up tests ([#2291](https://github.com/ApollosProject/apollos-apps/issues/2291)) ([65cd17b](https://github.com/ApollosProject/apollos-apps/commit/65cd17b3a80804b0ee1396f2ff1753118f5f359e))
+
+
+
 ## [2.40.0](https://github.com/ApollosProject/apollos-apps/compare/v2.39.0...v2.40.0) (2021-12-07)
 
 
