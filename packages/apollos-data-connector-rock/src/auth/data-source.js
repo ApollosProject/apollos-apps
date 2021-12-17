@@ -85,7 +85,11 @@ export default class AuthDataSource extends RockApolloDataSource {
         })
       );
       if (response.status >= 400) throw new AuthenticationError();
-      const cookie = response.headers.get('set-cookie');
+      const rawCookies = response.headers.raw()['set-cookie'];
+      // mmmmm let's bake the cookies 🍪
+      // Cookies might have extra data in them past the ';', so we need to strip them out.
+      // This is a simplification of the function found in https://stackoverflow.com/a/55680330
+      const cookie = rawCookies.map((c) => c.split(';')[0]).join(';');
       return cookie;
     } catch (err) {
       throw new AuthenticationError('Invalid Credentials');
