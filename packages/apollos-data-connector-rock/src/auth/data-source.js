@@ -228,6 +228,7 @@ export default class AuthDataSource extends RockApolloDataSource {
           headers: { cookie: rockCookie, 'Authorization-Token': null },
         },
       });
+      if (!token) throw new Error('No Token');
       return token;
     } catch (e) {
       console.warn(
