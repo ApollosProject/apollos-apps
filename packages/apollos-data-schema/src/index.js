@@ -1016,7 +1016,7 @@ export const featuresSchema = gql`
   type WebviewFeature implements Feature & Node {
     id: ID!
     order: Int
-
+    height: Int
     title: String
     linkText: String
     url: String

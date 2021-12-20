@@ -414,6 +414,18 @@ export default class Feature extends RockApolloDataSource {
     };
   }
 
+  async createWebViewFeature({ url, title, height = 500 }) {
+    return {
+      id: this.createFeatureId({
+        args: { url, title },
+      }),
+      url,
+      title,
+      height,
+      __typename: 'WebviewFeature',
+    };
+  }
+
   async getScriptureShareMessage(ref) {
     const { Scripture } = this.context.dataSources;
     const scriptures = await Scripture.getScriptures(ref);

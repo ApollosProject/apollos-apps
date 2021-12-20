@@ -1389,6 +1389,16 @@ Object {
 }
 `;
 
+exports[`features dataSource should render a WebView feature 1`] = `
+Object {
+  "__typename": "WebviewFeature",
+  "height": 500,
+  "id": "{\\"url\\":\\"https://https://apollosapp.io/\\",\\"title\\":\\"Test WebView\\"}",
+  "title": "Test WebView",
+  "url": "https://https://apollosapp.io/",
+}
+`;
+
 exports[`features dataSource should render the HeroListFeature type from getHomeFeedFeatures 1`] = `
 Array [
   Object {

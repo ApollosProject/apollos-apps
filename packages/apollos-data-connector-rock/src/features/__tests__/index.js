@@ -682,5 +682,14 @@ describe('features', () => {
       expect(result).toMatchSnapshot('default (cards not loaded)');
       expect(await expandResult(result)).toMatchSnapshot('with cards loaded');
     });
+
+    it('should render a WebView feature', async () => {
+      const result = await feature.createWebViewFeature({
+        url: 'https://https://apollosapp.io/',
+        title: 'Test WebView',
+      });
+
+      expect(result).toMatchSnapshot();
+    });
   });
 });

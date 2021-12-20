@@ -105,6 +105,9 @@ const resolver = {
   AddCommentFeature: {
     id: id('AddCommentFeature'),
   },
+  WebviewFeature: {
+    id: id('WebviewFeature'),
+  },
   FollowPeopleFeature: {
     id: id('FollowPeopleFeature'),
   },

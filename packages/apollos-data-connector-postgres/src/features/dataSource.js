@@ -101,6 +101,10 @@ class Feature extends PostgresDataSource {
     );
   }
 
+  async createWebViewFeature(...args) {
+    return RockFeatureDataSource.createWebViewFeature.call(this, ...args);
+  }
+
   async getScriptureShareMessage(ref) {
     const { Scripture } = this.context.dataSources;
     const scriptures = await Scripture.getScriptures(ref);
@@ -142,6 +146,8 @@ class Feature extends PostgresDataSource {
             return this.createPrayerListFeature(finalConfig);
           case 'VerticalPrayerList':
             return this.createVerticalPrayerListFeature(finalConfig);
+          case 'WebView':
+            return this.createWebViewFeature(finalConfig);
           case 'FollowPeople':
             return this.createFollowPeopleFeature(finalConfig);
           case 'ActionList':

@@ -114,6 +114,7 @@ const LITE_FEATURES_FRAGMENT = gql`
       linkText
       title
       url
+      height
     }
     ... on ButtonFeature {
       # The whole fragment is currently included b/c these nodes don't fetch their own content.
