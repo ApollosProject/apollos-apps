@@ -296,8 +296,8 @@ Array [
                 y={0}
               />
               <RNSVGCircle
-                cx={192}
-                cy={128}
+                cx={128}
+                cy={64}
                 fill={
                   Array [
                     0,
@@ -343,8 +343,8 @@ Array [
                 y={0}
               />
               <RNSVGCircle
-                cx={64}
-                cy={128}
+                cx={128}
+                cy={192}
                 fill={
                   Array [
                     0,
@@ -915,8 +915,8 @@ Array [
                 y={0}
               />
               <RNSVGCircle
-                cx={192}
-                cy={128}
+                cx={128}
+                cy={64}
                 fill={
                   Array [
                     0,
@@ -962,8 +962,8 @@ Array [
                 y={0}
               />
               <RNSVGCircle
-                cx={64}
-                cy={128}
+                cx={128}
+                cy={192}
                 fill={
                   Array [
                     0,
@@ -1531,8 +1531,8 @@ Array [
                 y={0}
               />
               <RNSVGCircle
-                cx={192}
-                cy={128}
+                cx={128}
+                cy={64}
                 fill={
                   Array [
                     0,
@@ -1578,8 +1578,8 @@ Array [
                 y={0}
               />
               <RNSVGCircle
-                cx={64}
-                cy={128}
+                cx={128}
+                cy={192}
                 fill={
                   Array [
                     0,

@@ -298,7 +298,7 @@ const phosphorIconMap = {
   },
 };
 
-const AllIcons = Object.fromEntries(
+const mappedIcons = Object.fromEntries(
   Object.entries(CoreIcons).map(([name, Icon]) => {
     const phosphorIconMapping = phosphorIconMap[name];
     if (phosphorIconMapping) {
@@ -314,6 +314,17 @@ const AllIcons = Object.fromEntries(
     return [name, Icon];
   })
 );
+
+const allPhosphorIcons = Object.fromEntries(
+  Object.entries(PhosphorIcons).map(([name, Icon]) => {
+    return [name, withPhosphorIcon(Icon)];
+  })
+);
+
+const AllIcons = {
+  ...mappedIcons,
+  ...allPhosphorIcons,
+};
 
 export { CoreIcons, PhosphorIcons };
 export default AllIcons;
