@@ -1083,6 +1083,7 @@ export const featuresSchema = gql`
     READ
     WATCH
     PRAY
+    GIVE
     CONNECT
   }
 `;

@@ -467,6 +467,8 @@ export default class Feature extends RockApolloDataSource {
             return this.createPrayerListFeature(finalConfig);
           case 'VerticalPrayerList':
             return this.createVerticalPrayerListFeature(finalConfig);
+          case 'WebView':
+            return this.createWebViewFeature(finalConfig);
           case 'ActionList':
           default:
             // Action list was the default in 1.3.0 and prior.
