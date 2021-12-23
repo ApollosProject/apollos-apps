@@ -22,7 +22,7 @@ const ButtonFeature = ({ action }) => {
     `,
     { variables: { nodeId: action.relatedNode.id } }
   );
-  const isCompleted = interactions.some(
+  const isCompleted = interactions?.some(
     (interaction) => interaction.action === 'COMPLETE'
   );
   const isDisabled = action.action === 'COMPLETE_NODE' && isCompleted;
