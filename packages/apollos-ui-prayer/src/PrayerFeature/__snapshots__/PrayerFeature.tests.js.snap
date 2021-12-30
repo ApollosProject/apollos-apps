@@ -531,13 +531,33 @@ Array [
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 14.4,
+                        "borderWidth": 3,
                         "marginRight": 1.8,
                         "marginTop": 1.8,
                         "position": "absolute",
-                        "right": 0,
-                        "top": 0,
+                        "right": 0.5,
+                        "top": -1.5,
                         "width": 14.4,
+                      }
+                    }
+                  />
+                  <View
+                    avatarSize={57.6}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "transparent",
+                        "borderColor": "rgb(249, 249, 251)",
+                        "borderRadius": 14.4,
+                        "borderWidth": 3,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
+                        "position": "absolute",
+                        "right": -2,
+                        "top": -4,
+                        "width": 19.2,
                       }
                     }
                   />
@@ -614,13 +634,33 @@ Array [
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 14.4,
+                        "borderWidth": 3,
                         "marginRight": 1.8,
                         "marginTop": 1.8,
                         "position": "absolute",
-                        "right": 0,
-                        "top": 0,
+                        "right": 0.5,
+                        "top": -1.5,
                         "width": 14.4,
+                      }
+                    }
+                  />
+                  <View
+                    avatarSize={57.6}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "transparent",
+                        "borderColor": "rgb(249, 249, 251)",
+                        "borderRadius": 14.4,
+                        "borderWidth": 3,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
+                        "position": "absolute",
+                        "right": -2,
+                        "top": -4,
+                        "width": 19.2,
                       }
                     }
                   />
@@ -697,13 +737,33 @@ Array [
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 14.4,
+                        "borderWidth": 3,
                         "marginRight": 1.8,
                         "marginTop": 1.8,
                         "position": "absolute",
-                        "right": 0,
-                        "top": 0,
+                        "right": 0.5,
+                        "top": -1.5,
                         "width": 14.4,
+                      }
+                    }
+                  />
+                  <View
+                    avatarSize={57.6}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "transparent",
+                        "borderColor": "rgb(249, 249, 251)",
+                        "borderRadius": 14.4,
+                        "borderWidth": 3,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
+                        "position": "absolute",
+                        "right": -2,
+                        "top": -4,
+                        "width": 19.2,
                       }
                     }
                   />
@@ -1313,13 +1373,33 @@ Array [
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 14.4,
+                        "borderWidth": 3,
                         "marginRight": 1.8,
                         "marginTop": 1.8,
                         "position": "absolute",
-                        "right": 0,
-                        "top": 0,
+                        "right": 0.5,
+                        "top": -1.5,
                         "width": 14.4,
+                      }
+                    }
+                  />
+                  <View
+                    avatarSize={57.6}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "transparent",
+                        "borderColor": "rgb(249, 249, 251)",
+                        "borderRadius": 14.4,
+                        "borderWidth": 3,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
+                        "position": "absolute",
+                        "right": -2,
+                        "top": -4,
+                        "width": 19.2,
                       }
                     }
                   />
@@ -1396,13 +1476,33 @@ Array [
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 14.4,
+                        "borderWidth": 3,
                         "marginRight": 1.8,
                         "marginTop": 1.8,
                         "position": "absolute",
-                        "right": 0,
-                        "top": 0,
+                        "right": 0.5,
+                        "top": -1.5,
                         "width": 14.4,
+                      }
+                    }
+                  />
+                  <View
+                    avatarSize={57.6}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "transparent",
+                        "borderColor": "rgb(249, 249, 251)",
+                        "borderRadius": 14.4,
+                        "borderWidth": 3,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
+                        "position": "absolute",
+                        "right": -2,
+                        "top": -4,
+                        "width": 19.2,
                       }
                     }
                   />
@@ -1479,13 +1579,33 @@ Array [
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 14.4,
+                        "borderWidth": 3,
                         "marginRight": 1.8,
                         "marginTop": 1.8,
                         "position": "absolute",
-                        "right": 0,
-                        "top": 0,
+                        "right": 0.5,
+                        "top": -1.5,
                         "width": 14.4,
+                      }
+                    }
+                  />
+                  <View
+                    avatarSize={57.6}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "transparent",
+                        "borderColor": "rgb(249, 249, 251)",
+                        "borderRadius": 14.4,
+                        "borderWidth": 3,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
+                        "position": "absolute",
+                        "right": -2,
+                        "top": -4,
+                        "width": 19.2,
                       }
                     }
                   />
@@ -2095,13 +2215,33 @@ Array [
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 14.4,
+                        "borderWidth": 3,
                         "marginRight": 1.8,
                         "marginTop": 1.8,
                         "position": "absolute",
-                        "right": 0,
-                        "top": 0,
+                        "right": 0.5,
+                        "top": -1.5,
                         "width": 14.4,
+                      }
+                    }
+                  />
+                  <View
+                    avatarSize={57.6}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "transparent",
+                        "borderColor": "rgb(249, 249, 251)",
+                        "borderRadius": 14.4,
+                        "borderWidth": 3,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
+                        "position": "absolute",
+                        "right": -2,
+                        "top": -4,
+                        "width": 19.2,
                       }
                     }
                   />
@@ -2178,13 +2318,33 @@ Array [
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 14.4,
+                        "borderWidth": 3,
                         "marginRight": 1.8,
                         "marginTop": 1.8,
                         "position": "absolute",
-                        "right": 0,
-                        "top": 0,
+                        "right": 0.5,
+                        "top": -1.5,
                         "width": 14.4,
+                      }
+                    }
+                  />
+                  <View
+                    avatarSize={57.6}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "transparent",
+                        "borderColor": "rgb(249, 249, 251)",
+                        "borderRadius": 14.4,
+                        "borderWidth": 3,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
+                        "position": "absolute",
+                        "right": -2,
+                        "top": -4,
+                        "width": 19.2,
                       }
                     }
                   />
@@ -2261,13 +2421,33 @@ Array [
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 14.4,
+                        "borderWidth": 3,
                         "marginRight": 1.8,
                         "marginTop": 1.8,
                         "position": "absolute",
-                        "right": 0,
-                        "top": 0,
+                        "right": 0.5,
+                        "top": -1.5,
                         "width": 14.4,
+                      }
+                    }
+                  />
+                  <View
+                    avatarSize={57.6}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "transparent",
+                        "borderColor": "rgb(249, 249, 251)",
+                        "borderRadius": 14.4,
+                        "borderWidth": 3,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
+                        "position": "absolute",
+                        "right": -2,
+                        "top": -4,
+                        "width": 19.2,
                       }
                     }
                   />
@@ -2891,13 +3071,33 @@ Array [
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 14.4,
+                        "borderWidth": 3,
                         "marginRight": 1.8,
                         "marginTop": 1.8,
                         "position": "absolute",
-                        "right": 0,
-                        "top": 0,
+                        "right": 0.5,
+                        "top": -1.5,
                         "width": 14.4,
+                      }
+                    }
+                  />
+                  <View
+                    avatarSize={57.6}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "transparent",
+                        "borderColor": "rgb(249, 249, 251)",
+                        "borderRadius": 14.4,
+                        "borderWidth": 3,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
+                        "position": "absolute",
+                        "right": -2,
+                        "top": -4,
+                        "width": 19.2,
                       }
                     }
                   />
@@ -2974,13 +3174,33 @@ Array [
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 14.4,
+                        "borderWidth": 3,
                         "marginRight": 1.8,
                         "marginTop": 1.8,
                         "position": "absolute",
-                        "right": 0,
-                        "top": 0,
+                        "right": 0.5,
+                        "top": -1.5,
                         "width": 14.4,
+                      }
+                    }
+                  />
+                  <View
+                    avatarSize={57.6}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "transparent",
+                        "borderColor": "rgb(249, 249, 251)",
+                        "borderRadius": 14.4,
+                        "borderWidth": 3,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
+                        "position": "absolute",
+                        "right": -2,
+                        "top": -4,
+                        "width": 19.2,
                       }
                     }
                   />
@@ -3057,13 +3277,33 @@ Array [
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 14.4,
+                        "borderWidth": 3,
                         "marginRight": 1.8,
                         "marginTop": 1.8,
                         "position": "absolute",
-                        "right": 0,
-                        "top": 0,
+                        "right": 0.5,
+                        "top": -1.5,
                         "width": 14.4,
+                      }
+                    }
+                  />
+                  <View
+                    avatarSize={57.6}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "transparent",
+                        "borderColor": "rgb(249, 249, 251)",
+                        "borderRadius": 14.4,
+                        "borderWidth": 3,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
+                        "position": "absolute",
+                        "right": -2,
+                        "top": -4,
+                        "width": 19.2,
                       }
                     }
                   />
@@ -3809,13 +4049,33 @@ Array [
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#17B582",
+                    "borderColor": "#17B582",
                     "borderRadius": 14.4,
+                    "borderWidth": 3,
                     "marginRight": 1.8,
                     "marginTop": 1.8,
                     "position": "absolute",
-                    "right": 0,
-                    "top": 0,
+                    "right": 0.5,
+                    "top": -1.5,
                     "width": 14.4,
+                  }
+                }
+              />
+              <View
+                avatarSize={57.6}
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "backgroundColor": "transparent",
+                    "borderColor": "rgb(249, 249, 251)",
+                    "borderRadius": 14.4,
+                    "borderWidth": 3,
+                    "marginRight": 1.8,
+                    "marginTop": 1.8,
+                    "position": "absolute",
+                    "right": -2,
+                    "top": -4,
+                    "width": 19.2,
                   }
                 }
               />
@@ -4082,13 +4342,33 @@ Array [
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#17B582",
+                    "borderColor": "#17B582",
                     "borderRadius": 14.4,
+                    "borderWidth": 3,
                     "marginRight": 1.8,
                     "marginTop": 1.8,
                     "position": "absolute",
-                    "right": 0,
-                    "top": 0,
+                    "right": 0.5,
+                    "top": -1.5,
                     "width": 14.4,
+                  }
+                }
+              />
+              <View
+                avatarSize={57.6}
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "backgroundColor": "transparent",
+                    "borderColor": "rgb(249, 249, 251)",
+                    "borderRadius": 14.4,
+                    "borderWidth": 3,
+                    "marginRight": 1.8,
+                    "marginTop": 1.8,
+                    "position": "absolute",
+                    "right": -2,
+                    "top": -4,
+                    "width": 19.2,
                   }
                 }
               />
@@ -4355,13 +4635,33 @@ Array [
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#17B582",
+                    "borderColor": "#17B582",
                     "borderRadius": 14.4,
+                    "borderWidth": 3,
                     "marginRight": 1.8,
                     "marginTop": 1.8,
                     "position": "absolute",
-                    "right": 0,
-                    "top": 0,
+                    "right": 0.5,
+                    "top": -1.5,
                     "width": 14.4,
+                  }
+                }
+              />
+              <View
+                avatarSize={57.6}
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "backgroundColor": "transparent",
+                    "borderColor": "rgb(249, 249, 251)",
+                    "borderRadius": 14.4,
+                    "borderWidth": 3,
+                    "marginRight": 1.8,
+                    "marginTop": 1.8,
+                    "position": "absolute",
+                    "right": -2,
+                    "top": -4,
+                    "width": 19.2,
                   }
                 }
               />
@@ -4628,13 +4928,33 @@ Array [
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#17B582",
+                    "borderColor": "#17B582",
                     "borderRadius": 14.4,
+                    "borderWidth": 3,
                     "marginRight": 1.8,
                     "marginTop": 1.8,
                     "position": "absolute",
-                    "right": 0,
-                    "top": 0,
+                    "right": 0.5,
+                    "top": -1.5,
                     "width": 14.4,
+                  }
+                }
+              />
+              <View
+                avatarSize={57.6}
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "backgroundColor": "transparent",
+                    "borderColor": "rgb(249, 249, 251)",
+                    "borderRadius": 14.4,
+                    "borderWidth": 3,
+                    "marginRight": 1.8,
+                    "marginTop": 1.8,
+                    "position": "absolute",
+                    "right": -2,
+                    "top": -4,
+                    "width": 19.2,
                   }
                 }
               />
@@ -4901,13 +5221,33 @@ Array [
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#17B582",
+                    "borderColor": "#17B582",
                     "borderRadius": 14.4,
+                    "borderWidth": 3,
                     "marginRight": 1.8,
                     "marginTop": 1.8,
                     "position": "absolute",
-                    "right": 0,
-                    "top": 0,
+                    "right": 0.5,
+                    "top": -1.5,
                     "width": 14.4,
+                  }
+                }
+              />
+              <View
+                avatarSize={57.6}
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "backgroundColor": "transparent",
+                    "borderColor": "rgb(249, 249, 251)",
+                    "borderRadius": 14.4,
+                    "borderWidth": 3,
+                    "marginRight": 1.8,
+                    "marginTop": 1.8,
+                    "position": "absolute",
+                    "right": -2,
+                    "top": -4,
+                    "width": 19.2,
                   }
                 }
               />
@@ -5174,13 +5514,33 @@ Array [
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#17B582",
+                    "borderColor": "#17B582",
                     "borderRadius": 14.4,
+                    "borderWidth": 3,
                     "marginRight": 1.8,
                     "marginTop": 1.8,
                     "position": "absolute",
-                    "right": 0,
-                    "top": 0,
+                    "right": 0.5,
+                    "top": -1.5,
                     "width": 14.4,
+                  }
+                }
+              />
+              <View
+                avatarSize={57.6}
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "backgroundColor": "transparent",
+                    "borderColor": "rgb(249, 249, 251)",
+                    "borderRadius": 14.4,
+                    "borderWidth": 3,
+                    "marginRight": 1.8,
+                    "marginTop": 1.8,
+                    "position": "absolute",
+                    "right": -2,
+                    "top": -4,
+                    "width": 19.2,
                   }
                 }
               />
@@ -5453,13 +5813,33 @@ Array [
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 14.4,
+                        "borderWidth": 3,
                         "marginRight": 1.8,
                         "marginTop": 1.8,
                         "position": "absolute",
-                        "right": 0,
-                        "top": 0,
+                        "right": 0.5,
+                        "top": -1.5,
                         "width": 14.4,
+                      }
+                    }
+                  />
+                  <View
+                    avatarSize={57.6}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "transparent",
+                        "borderColor": "rgb(249, 249, 251)",
+                        "borderRadius": 14.4,
+                        "borderWidth": 3,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
+                        "position": "absolute",
+                        "right": -2,
+                        "top": -4,
+                        "width": 19.2,
                       }
                     }
                   />
@@ -5536,13 +5916,33 @@ Array [
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 14.4,
+                        "borderWidth": 3,
                         "marginRight": 1.8,
                         "marginTop": 1.8,
                         "position": "absolute",
-                        "right": 0,
-                        "top": 0,
+                        "right": 0.5,
+                        "top": -1.5,
                         "width": 14.4,
+                      }
+                    }
+                  />
+                  <View
+                    avatarSize={57.6}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "transparent",
+                        "borderColor": "rgb(249, 249, 251)",
+                        "borderRadius": 14.4,
+                        "borderWidth": 3,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
+                        "position": "absolute",
+                        "right": -2,
+                        "top": -4,
+                        "width": 19.2,
                       }
                     }
                   />
@@ -5619,13 +6019,33 @@ Array [
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 14.4,
+                        "borderWidth": 3,
                         "marginRight": 1.8,
                         "marginTop": 1.8,
                         "position": "absolute",
-                        "right": 0,
-                        "top": 0,
+                        "right": 0.5,
+                        "top": -1.5,
                         "width": 14.4,
+                      }
+                    }
+                  />
+                  <View
+                    avatarSize={57.6}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "transparent",
+                        "borderColor": "rgb(249, 249, 251)",
+                        "borderRadius": 14.4,
+                        "borderWidth": 3,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
+                        "position": "absolute",
+                        "right": -2,
+                        "top": -4,
+                        "width": 19.2,
                       }
                     }
                   />
@@ -6248,13 +6668,33 @@ Array [
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 14.4,
+                        "borderWidth": 3,
                         "marginRight": 1.8,
                         "marginTop": 1.8,
                         "position": "absolute",
-                        "right": 0,
-                        "top": 0,
+                        "right": 0.5,
+                        "top": -1.5,
                         "width": 14.4,
+                      }
+                    }
+                  />
+                  <View
+                    avatarSize={57.6}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "transparent",
+                        "borderColor": "rgb(249, 249, 251)",
+                        "borderRadius": 14.4,
+                        "borderWidth": 3,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
+                        "position": "absolute",
+                        "right": -2,
+                        "top": -4,
+                        "width": 19.2,
                       }
                     }
                   />
@@ -6331,13 +6771,33 @@ Array [
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 14.4,
+                        "borderWidth": 3,
                         "marginRight": 1.8,
                         "marginTop": 1.8,
                         "position": "absolute",
-                        "right": 0,
-                        "top": 0,
+                        "right": 0.5,
+                        "top": -1.5,
                         "width": 14.4,
+                      }
+                    }
+                  />
+                  <View
+                    avatarSize={57.6}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "transparent",
+                        "borderColor": "rgb(249, 249, 251)",
+                        "borderRadius": 14.4,
+                        "borderWidth": 3,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
+                        "position": "absolute",
+                        "right": -2,
+                        "top": -4,
+                        "width": 19.2,
                       }
                     }
                   />
@@ -6414,13 +6874,33 @@ Array [
                       Object {
                         "aspectRatio": 1,
                         "backgroundColor": "#17B582",
+                        "borderColor": "#17B582",
                         "borderRadius": 14.4,
+                        "borderWidth": 3,
                         "marginRight": 1.8,
                         "marginTop": 1.8,
                         "position": "absolute",
-                        "right": 0,
-                        "top": 0,
+                        "right": 0.5,
+                        "top": -1.5,
                         "width": 14.4,
+                      }
+                    }
+                  />
+                  <View
+                    avatarSize={57.6}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "transparent",
+                        "borderColor": "rgb(249, 249, 251)",
+                        "borderRadius": 14.4,
+                        "borderWidth": 3,
+                        "marginRight": 1.8,
+                        "marginTop": 1.8,
+                        "position": "absolute",
+                        "right": -2,
+                        "top": -4,
+                        "width": 19.2,
                       }
                     }
                   />
@@ -7005,13 +7485,33 @@ Array [
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#17B582",
+                    "borderColor": "#17B582",
                     "borderRadius": 14.4,
+                    "borderWidth": 3,
                     "marginRight": 1.8,
                     "marginTop": 1.8,
                     "position": "absolute",
-                    "right": 0,
-                    "top": 0,
+                    "right": 0.5,
+                    "top": -1.5,
                     "width": 14.4,
+                  }
+                }
+              />
+              <View
+                avatarSize={57.6}
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "backgroundColor": "transparent",
+                    "borderColor": "rgb(249, 249, 251)",
+                    "borderRadius": 14.4,
+                    "borderWidth": 3,
+                    "marginRight": 1.8,
+                    "marginTop": 1.8,
+                    "position": "absolute",
+                    "right": -2,
+                    "top": -4,
+                    "width": 19.2,
                   }
                 }
               />
@@ -7088,13 +7588,33 @@ Array [
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#17B582",
+                    "borderColor": "#17B582",
                     "borderRadius": 14.4,
+                    "borderWidth": 3,
                     "marginRight": 1.8,
                     "marginTop": 1.8,
                     "position": "absolute",
-                    "right": 0,
-                    "top": 0,
+                    "right": 0.5,
+                    "top": -1.5,
                     "width": 14.4,
+                  }
+                }
+              />
+              <View
+                avatarSize={57.6}
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "backgroundColor": "transparent",
+                    "borderColor": "rgb(249, 249, 251)",
+                    "borderRadius": 14.4,
+                    "borderWidth": 3,
+                    "marginRight": 1.8,
+                    "marginTop": 1.8,
+                    "position": "absolute",
+                    "right": -2,
+                    "top": -4,
+                    "width": 19.2,
                   }
                 }
               />
@@ -7171,13 +7691,33 @@ Array [
                   Object {
                     "aspectRatio": 1,
                     "backgroundColor": "#17B582",
+                    "borderColor": "#17B582",
                     "borderRadius": 14.4,
+                    "borderWidth": 3,
                     "marginRight": 1.8,
                     "marginTop": 1.8,
                     "position": "absolute",
-                    "right": 0,
-                    "top": 0,
+                    "right": 0.5,
+                    "top": -1.5,
                     "width": 14.4,
+                  }
+                }
+              />
+              <View
+                avatarSize={57.6}
+                style={
+                  Object {
+                    "aspectRatio": 1,
+                    "backgroundColor": "transparent",
+                    "borderColor": "rgb(249, 249, 251)",
+                    "borderRadius": 14.4,
+                    "borderWidth": 3,
+                    "marginRight": 1.8,
+                    "marginTop": 1.8,
+                    "position": "absolute",
+                    "right": -2,
+                    "top": -4,
+                    "width": 19.2,
                   }
                 }
               />

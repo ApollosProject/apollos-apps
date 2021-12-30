@@ -60,16 +60,38 @@ const StyledButtonIcon = styled(
 const NotificationDot = styled(
   ({ avatarSize, theme }) => ({
     aspectRatio: 1,
+    borderWidth: 3,
+    borderColor: theme.colors.secondary,
     backgroundColor: theme.colors.secondary,
     borderRadius: avatarSize / 4,
     marginTop: avatarSize / 32,
     marginRight: avatarSize / 32,
     position: 'absolute',
-    right: 0,
-    top: 0,
+    right: 0.5,
+    top: -1.5,
     width: avatarSize / 4,
   }),
   'ui-kit.Avatar.Avatar.NotificationDot'
+)(View);
+
+// There is a RN bug that causes bleeding around the edge of views with
+// border radius. This solution avoids that bug by placing a larger view
+// with a transparent center on top of the themed NotificationDot.
+const NotificationDotBorder = styled(
+  ({ avatarSize, theme }) => ({
+    aspectRatio: 1,
+    borderWidth: 3,
+    borderColor: theme.colors.background.screen,
+    backgroundColor: theme.colors.transparent,
+    borderRadius: avatarSize / 4,
+    position: 'absolute',
+    marginTop: avatarSize / 32,
+    marginRight: avatarSize / 32,
+    right: -2,
+    top: -4,
+    width: avatarSize / 3,
+  }),
+  'ui-kit.Avatar.Avatar.NotificationDotBorder'
 )(View);
 
 const ButtonIconPositioner = styled(
@@ -133,7 +155,10 @@ const Avatar = ({
       <PlaceholderIcon themeSize={themeSize} isLoading={false} />
     )}
     {!isLoading && notification ? ( // sometimes isLoading can be infered by context. This forces it to hide.
-      <NotificationDot avatarSize={themeSize} />
+      <>
+        <NotificationDot avatarSize={themeSize} />
+        <NotificationDotBorder avatarSize={themeSize} />
+      </>
     ) : null}
     {buttonIcon ? (
       <ButtonIconPositioner>
