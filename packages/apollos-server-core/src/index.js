@@ -234,8 +234,10 @@ export const createJobs = (data) => ({ app, context, dataSources }) => {
         url: process.env.REDIS_URL,
         ...(process.env.REDIS_URL.includes('rediss')
           ? {
-              tls: {
-                rejectUnauthorized: false,
+              options: {
+                tls: {
+                  rejectUnauthorized: false,
+                },
               },
             }
           : {}),
