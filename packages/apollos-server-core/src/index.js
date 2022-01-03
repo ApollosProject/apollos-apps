@@ -229,7 +229,15 @@ export const createJobs = (data) => ({ app, context, dataSources }) => {
   };
 
   if (process.env.REDIS_URL) {
-    queues = createQueues(process.env.REDIS_URL);
+    queues = createQueues(process.env.REDIS_URL, {
+      ...(process.env.REDIS_URL.includes('rediss')
+        ? {
+            tls: {
+              rejectUnauthorized: false,
+            },
+          }
+        : {}),
+    });
   }
 
   const jobsPath = '/admin/queues';
