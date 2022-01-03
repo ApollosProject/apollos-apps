@@ -1,3 +1,4 @@
+import url from 'url';
 import { compact, mapValues, merge, flatten } from 'lodash';
 import { gql } from '@apollo/client';
 import { InMemoryLRUCache } from 'apollo-server-caching';
@@ -228,16 +229,31 @@ export const createJobs = (data) => ({ app, context, dataSources }) => {
     },
   };
 
+  const redisOptsFromUrl = (urlString) => {
+    const redisOpts = {};
+    try {
+      const redisUrl = url.parse(urlString);
+      redisOpts.port = redisUrl.port || 6379;
+      redisOpts.host = redisUrl.hostname;
+      redisOpts.db = redisUrl.pathname ? redisUrl.pathname.split('/')[1] : 0;
+      if (redisUrl.auth) {
+        const password = redisUrl.auth.split(':')[1];
+        redisOpts.password = password;
+      }
+    } catch (e) {
+      throw new Error(e.message);
+    }
+    return redisOpts;
+  };
+
   if (process.env.REDIS_URL) {
     queues = createQueues({
       redis: {
-        url: process.env.REDIS_URL,
+        ...redisOptsFromUrl(process.env.REDIS_URL),
         ...(process.env.REDIS_URL.includes('rediss')
           ? {
-              options: {
-                tls: {
-                  rejectUnauthorized: false,
-                },
+              tls: {
+                rejectUnauthorized: false,
               },
             }
           : {}),
