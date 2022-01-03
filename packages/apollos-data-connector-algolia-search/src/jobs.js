@@ -34,7 +34,9 @@ if (REDIS_URL) {
         case 'subscriber':
           return subscriber;
         default:
-          return new Redis(REDIS_URL);
+          return new Redis(REDIS_URL, {
+            ...(REDIS_URL.includes('rediss') ? tlsOptions : {}),
+          });
       }
     },
   };

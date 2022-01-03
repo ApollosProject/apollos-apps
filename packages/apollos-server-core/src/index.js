@@ -229,14 +229,17 @@ export const createJobs = (data) => ({ app, context, dataSources }) => {
   };
 
   if (process.env.REDIS_URL) {
-    queues = createQueues(process.env.REDIS_URL, {
-      ...(process.env.REDIS_URL.includes('rediss')
-        ? {
-            tls: {
-              rejectUnauthorized: false,
-            },
-          }
-        : {}),
+    queues = createQueues({
+      redis: {
+        url: process.env.REDIS_URL,
+        ...(process.env.REDIS_URL.includes('rediss')
+          ? {
+              tls: {
+                rejectUnauthorized: false,
+              },
+            }
+          : {}),
+      },
     });
   }
 
