@@ -64,6 +64,7 @@
     "react-native-permissions": "*"
   },
   "dependencies": {
+    "@gorhom/bottom-sheet": "3.4.1",
     "apollo-upload-client": "14.1.3",
     "graphql-tag": "2.9.2",
     "lodash": "^4.17.11",

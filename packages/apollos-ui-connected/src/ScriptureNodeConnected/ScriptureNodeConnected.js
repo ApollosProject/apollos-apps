@@ -13,11 +13,8 @@ const ScriptureNodeConnected = ({ nodeId }) => {
       variables={{ nodeId }}
       fetchPolicy={'cache-and-network'}
     >
-      {({
-        data: { node: { scriptures = [] } = { scriptures: [] } } = {},
-        loading,
-        error,
-      }) => {
+      {({ data, loading, error }) => {
+        const scriptures = data?.node?.scriptures ?? [];
         // We don't want to show a loading state since this is an optional component.
         // However, if we know there are scriptures (from cached data) we should go ahead and show scripture
         if (!scriptures?.length || (!scriptures?.length && loading) || error) {
