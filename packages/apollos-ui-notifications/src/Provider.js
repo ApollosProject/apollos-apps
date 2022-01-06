@@ -9,16 +9,10 @@ import { get } from 'lodash';
 import OneSignal from 'react-native-onesignal';
 import ApollosConfig from '@apollosproject/config';
 
-import { resolvers, defaults } from './store';
 import PushProvider from './pushProvider';
+import updatePushId from './updatePushId';
 
 const APP_ID = ApollosConfig.ONESIGNAL_APP_ID || ApollosConfig.ONE_SIGNAL_KEY;
-
-const UPDATE_DEVICE_PUSH_ID = gql`
-  mutation updateDevicePushId($pushId: String!) {
-    updateDevicePushId(pushId: $pushId) @client
-  }
-`;
 
 const GET_PUSH_ID = gql`
   query {
@@ -37,6 +31,7 @@ class NotificationsInit extends Component {
       mutate: PropTypes.func,
       addResolvers: PropTypes.func,
       writeQuery: PropTypes.func,
+      readQuery: PropTypes.func,
       onClearStore: PropTypes.func,
     }).isRequired,
     actionMap: PropTypes.shape({}),
@@ -52,10 +47,19 @@ class NotificationsInit extends Component {
   constructor(props) {
     super(props);
     const { client } = props;
-    client.addResolvers(resolvers);
-    client.writeQuery({ query: GET_PUSH_ID, data: defaults });
+    client.writeQuery({
+      query: GET_PUSH_ID,
+      data: {
+        pushId: null,
+      },
+    });
     client.onClearStore(() =>
-      client.writeQuery({ query: GET_PUSH_ID, data: defaults })
+      client.writeQuery({
+        query: GET_PUSH_ID,
+        data: {
+          pushId: null,
+        },
+      })
     );
   }
 
@@ -159,10 +163,26 @@ class NotificationsInit extends Component {
   };
 
   onIds = (device) => {
-    this.props.client.mutate({
-      mutation: UPDATE_DEVICE_PUSH_ID,
-      variables: { pushId: device.userId },
+    this.props.client.writeQuery({
+      query: gql`
+        query {
+          pushId @client
+        }
+      `,
+      data: {
+        pushId: device.userId,
+      },
     });
+    const { isLoggedIn } = this.props.client.readQuery({
+      query: gql`
+        query {
+          isLoggedIn @client
+        }
+      `,
+    });
+    if (isLoggedIn) {
+      updatePushId({ pushId: device.userId, client: this.props.client });
+    }
   };
 
   render() {
