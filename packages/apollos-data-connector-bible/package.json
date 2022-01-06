@@ -28,13 +28,13 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@apollosproject/server-core": "^2.41.0",
     "apollo-datasource-rest": "^0.6.4",
     "lodash": "^4.17.11"
   },
   "peerDependencies": {
     "@apollosproject/config": "*",
-    "@apollosproject/data-schema": "*"
+    "@apollosproject/data-schema": "*",
+    "@apollosproject/server-core": "*"
   },
   "devDependencies": {
     "@apollosproject/apollo-server-env-mock": "^2.41.0",

@@ -33,8 +33,6 @@
     "globalTeardown": "./jest.teardown.js"
   },
   "dependencies": {
-    "@apollosproject/data-schema": "^2.41.0",
-    "@apollosproject/server-core": "^2.41.0",
     "hyphenation.en-us": "^0.2.1",
     "hypher": "^0.2.5",
     "lodash": "^4.17.11",
@@ -44,7 +42,9 @@
     "umzug": "^3.0.0-beta.15"
   },
   "peerDependencies": {
-    "@apollosproject/config": "*"
+    "@apollosproject/config": "*",
+    "@apollosproject/data-schema": "*",
+    "@apollosproject/server-core": "*"
   },
   "devDependencies": {
     "@apollosproject/babel-preset-apollos": "^2.41.0",
