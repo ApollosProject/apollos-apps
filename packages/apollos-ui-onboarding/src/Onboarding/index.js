@@ -43,7 +43,10 @@ function Onboarding(props) {
     AskNotificationsConnected,
     FollowConnected,
   ];
-  const { data } = useQuery(WITH_USER_ID, { fetchPolicy: 'network-only' });
+  const { data, loading } = useQuery(WITH_USER_ID, {
+    fetchPolicy: 'network-only',
+  });
+  if (loading) return null;
   return (
     <AnalyticsConsumer>
       {({ notify }) => (
