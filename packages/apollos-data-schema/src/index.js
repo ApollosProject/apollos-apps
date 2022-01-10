@@ -1064,9 +1064,17 @@ export const featuresSchema = gql`
     featureFeed: FeatureFeed
   }
 
+  type AppTab {
+    title: String
+    icon: String
+    feed: FeatureFeed
+  }
+
   extend type Query {
+    tabs(campusId: ID, tags: [String]): [AppTab] @cacheControl(scope: PRIVATE)
     tabFeedFeatures(tab: Tab!, campusId: ID, tags: [String]): FeatureFeed
       @cacheControl(scope: PRIVATE)
+      @deprecated(reason: "Use tabs")
     userFeedFeatures: [Feature]
       @cacheControl(scope: PRIVATE)
       @deprecated(reason: "Use homeFeedFeatures or discoverFeedFeatures")
