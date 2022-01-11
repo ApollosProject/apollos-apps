@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.42.0](https://github.com/apollosproject/apollos-apps/compare/v2.41.0...v2.42.0) (2022-01-11)
+
+
+### Bug Fixes
+
+* one more REDIS TLS integration ([#2305](https://github.com/apollosproject/apollos-apps/issues/2305)) ([2539cf7](https://github.com/apollosproject/apollos-apps/commit/2539cf76a241351dc8a87de8b643c5cb3649ad6d))
+
+
+
 ## [2.41.0](https://github.com/apollosproject/apollos-apps/compare/v2.40.0...v2.41.0) (2021-12-10)
 
 **Note:** Version bump only for package @apollosproject/data-connector-algolia-search

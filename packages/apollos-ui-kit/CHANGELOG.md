@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.42.0](https://github.com/apollosproject/apollos-apps/compare/v2.41.0...v2.42.0) (2022-01-11)
+
+
+### Features
+
+* added a border to avatar notification dot ([#2303](https://github.com/apollosproject/apollos-apps/issues/2303)) ([7ee4d13](https://github.com/apollosproject/apollos-apps/commit/7ee4d137d81d8f2819b36017df9b32ff143926c8))
+
+
+### Bug Fixes
+
+* Add all phosphor icons ([#2293](https://github.com/apollosproject/apollos-apps/issues/2293)) ([8d567d1](https://github.com/apollosproject/apollos-apps/commit/8d567d1e38cdcab7394731ce7518831b35938df3))
+* add badge icon to export and alphabetize exports ([#2292](https://github.com/apollosproject/apollos-apps/issues/2292)) ([fa61539](https://github.com/apollosproject/apollos-apps/commit/fa615396b6c6f973956cc3fa0cd99b35961e2ecc))
+
+
+
 ## [2.41.0](https://github.com/apollosproject/apollos-apps/compare/v2.40.0...v2.41.0) (2021-12-10)
 
 **Note:** Version bump only for package @apollosproject/ui-kit

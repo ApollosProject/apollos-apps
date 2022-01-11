@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.42.0](https://github.com/apollosproject/apollos-apps/compare/v2.41.0...v2.42.0) (2022-01-11)
+
+
+### Features
+
+* Simple Donation Giving Tab ([#2264](https://github.com/apollosproject/apollos-apps/issues/2264)) ([f225756](https://github.com/apollosproject/apollos-apps/commit/f225756d4359df00abac5e724708199e9caf7540))
+
+
+### Bug Fixes
+
+* cookie parsing 🍪 ([#2297](https://github.com/apollosproject/apollos-apps/issues/2297)) ([12b678b](https://github.com/apollosproject/apollos-apps/commit/12b678b45e82e671440c4e546d69fbcdc3ee0f8a))
+* throw error if no Impersonation Token found ([#2299](https://github.com/apollosproject/apollos-apps/issues/2299)) ([534211f](https://github.com/apollosproject/apollos-apps/commit/534211f4a2d10f5cacd178cc0601c7800aa4fee6))
+
+
+
 ## [2.41.0](https://github.com/apollosproject/apollos-apps/compare/v2.40.0...v2.41.0) (2021-12-10)
 
 

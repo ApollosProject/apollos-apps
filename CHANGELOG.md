@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.42.0](https://github.com/ApollosProject/apollos-apps/compare/v2.41.0...v2.42.0) (2022-01-11)
+
+
+### Features
+
+* added a border to avatar notification dot ([#2303](https://github.com/ApollosProject/apollos-apps/issues/2303)) ([7ee4d13](https://github.com/ApollosProject/apollos-apps/commit/7ee4d137d81d8f2819b36017df9b32ff143926c8))
+* Simple Donation Giving Tab ([#2264](https://github.com/ApollosProject/apollos-apps/issues/2264)) ([f225756](https://github.com/ApollosProject/apollos-apps/commit/f225756d4359df00abac5e724708199e9caf7540))
+* tabs query ([#2309](https://github.com/ApollosProject/apollos-apps/issues/2309)) ([d84c9e0](https://github.com/ApollosProject/apollos-apps/commit/d84c9e057a1fa39e63d195b8a52954461de98b63))
+
+
+### Bug Fixes
+
+* Add all phosphor icons ([#2293](https://github.com/ApollosProject/apollos-apps/issues/2293)) ([8d567d1](https://github.com/ApollosProject/apollos-apps/commit/8d567d1e38cdcab7394731ce7518831b35938df3))
+* add badge icon to export and alphabetize exports ([#2292](https://github.com/ApollosProject/apollos-apps/issues/2292)) ([fa61539](https://github.com/ApollosProject/apollos-apps/commit/fa615396b6c6f973956cc3fa0cd99b35961e2ecc))
+* added optional chaining to button features ([#2301](https://github.com/ApollosProject/apollos-apps/issues/2301)) ([c377616](https://github.com/ApollosProject/apollos-apps/commit/c37761680dee6b6b6e5f245c658c4465f9c00560))
+* adds TLS redis for bull jobs ([#2304](https://github.com/ApollosProject/apollos-apps/issues/2304)) ([c0260a3](https://github.com/ApollosProject/apollos-apps/commit/c0260a3f306948787d311d0e67c0fce12a3f30a1))
+* cookie parsing 🍪 ([#2297](https://github.com/ApollosProject/apollos-apps/issues/2297)) ([12b678b](https://github.com/ApollosProject/apollos-apps/commit/12b678b45e82e671440c4e546d69fbcdc3ee0f8a))
+* correctly spreads REDIS options ([#2308](https://github.com/ApollosProject/apollos-apps/issues/2308)) ([cf12232](https://github.com/ApollosProject/apollos-apps/commit/cf122326da59f017cb4055571b1a2fc333bc8f60))
+* onboarding shouldn't load without currrent user ([#2315](https://github.com/ApollosProject/apollos-apps/issues/2315)) ([178d4c2](https://github.com/ApollosProject/apollos-apps/commit/178d4c226665cd4b9ead63acd21989f77d3324fd))
+* one more REDIS TLS integration ([#2305](https://github.com/ApollosProject/apollos-apps/issues/2305)) ([2539cf7](https://github.com/ApollosProject/apollos-apps/commit/2539cf76a241351dc8a87de8b643c5cb3649ad6d))
+* redis fix...third time ([#2307](https://github.com/ApollosProject/apollos-apps/issues/2307)) ([73228c8](https://github.com/ApollosProject/apollos-apps/commit/73228c81de825a9c93af9860a815e762005087cd))
+* throw error if no Impersonation Token found ([#2299](https://github.com/ApollosProject/apollos-apps/issues/2299)) ([534211f](https://github.com/ApollosProject/apollos-apps/commit/534211f4a2d10f5cacd178cc0601c7800aa4fee6))
+
+
+
 ## [2.41.0](https://github.com/ApollosProject/apollos-apps/compare/v2.40.0...v2.41.0) (2021-12-10)
 
 

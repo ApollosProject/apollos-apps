@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.42.0](https://github.com/apollosproject/apollos-apps/compare/v2.41.0...v2.42.0) (2022-01-11)
+
+
+### Bug Fixes
+
+* onboarding shouldn't load without currrent user ([#2315](https://github.com/apollosproject/apollos-apps/issues/2315)) ([178d4c2](https://github.com/apollosproject/apollos-apps/commit/178d4c226665cd4b9ead63acd21989f77d3324fd))
+
+
+
 ## [2.41.0](https://github.com/apollosproject/apollos-apps/compare/v2.40.0...v2.41.0) (2021-12-10)
 
 **Note:** Version bump only for package @apollosproject/ui-onboarding

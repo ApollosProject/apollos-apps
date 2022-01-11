@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.42.0](https://github.com/apollosproject/apollos-apps/compare/v2.41.0...v2.42.0) (2022-01-11)
+
+
+### Features
+
+* Simple Donation Giving Tab ([#2264](https://github.com/apollosproject/apollos-apps/issues/2264)) ([f225756](https://github.com/apollosproject/apollos-apps/commit/f225756d4359df00abac5e724708199e9caf7540))
+
+
+### Bug Fixes
+
+* adds TLS redis for bull jobs ([#2304](https://github.com/apollosproject/apollos-apps/issues/2304)) ([c0260a3](https://github.com/apollosproject/apollos-apps/commit/c0260a3f306948787d311d0e67c0fce12a3f30a1))
+* correctly spreads REDIS options ([#2308](https://github.com/apollosproject/apollos-apps/issues/2308)) ([cf12232](https://github.com/apollosproject/apollos-apps/commit/cf122326da59f017cb4055571b1a2fc333bc8f60))
+* one more REDIS TLS integration ([#2305](https://github.com/apollosproject/apollos-apps/issues/2305)) ([2539cf7](https://github.com/apollosproject/apollos-apps/commit/2539cf76a241351dc8a87de8b643c5cb3649ad6d))
+* redis fix...third time ([#2307](https://github.com/apollosproject/apollos-apps/issues/2307)) ([73228c8](https://github.com/apollosproject/apollos-apps/commit/73228c81de825a9c93af9860a815e762005087cd))
+
+
+
 ## [2.41.0](https://github.com/apollosproject/apollos-apps/compare/v2.40.0...v2.41.0) (2021-12-10)
 
 **Note:** Version bump only for package @apollosproject/server-core
