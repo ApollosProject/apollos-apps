@@ -106,7 +106,9 @@ const resolver = {
     id: id('AddCommentFeature'),
   },
   WebviewFeature: {
+    height: ({ data }) => data.height || 400,
     id: id('WebviewFeature'),
+    url: ({ data }) => data.url,
   },
   FollowPeopleFeature: {
     id: id('FollowPeopleFeature'),
