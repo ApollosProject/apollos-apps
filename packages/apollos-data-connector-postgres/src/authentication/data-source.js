@@ -4,15 +4,31 @@ import { isNil, mapValues, omit, toLower, toUpper } from 'lodash';
 import { Op } from 'sequelize';
 
 import { PostgresDataSource } from '../postgres';
+import { phoneToDB } from '../utils/phone';
 import { generateToken } from './token';
 
 export default class AuthenticationDataSource extends PostgresDataSource {
-  async requestRegister({ identity }) {
+  // eslint-disable-next-line class-methods-use-this
+  parseIdentity(identity) {
     const identityFieldSelect = mapValues(omit(identity, isNil), (v) =>
       toLower(v)
     );
+
+    // Cleans the phone number, if it's present
+    if (identityFieldSelect.phone) {
+      identityFieldSelect.phone = phoneToDB({
+        number: identityFieldSelect.phone,
+      });
+    }
+
     const identityKey = Object.keys(identityFieldSelect)[0];
     const identityValue = Object.values(identityFieldSelect)[0];
+
+    return { identityKey, identityValue };
+  }
+
+  async requestRegister({ identity }) {
+    const { identityKey, identityValue } = this.parseIdentity(identity);
 
     const existingPerson = await this.sequelize.models.people.findOne({
       where: {
@@ -37,11 +53,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
   }
 
   async requestLogin({ identity }) {
-    const identityFieldSelect = mapValues(omit(identity, isNil), (v) =>
-      toLower(v)
-    );
-    const identityKey = Object.keys(identityFieldSelect)[0];
-    const identityValue = Object.values(identityFieldSelect)[0];
+    const { identityKey, identityValue } = this.parseIdentity(identity);
 
     const person = await this.sequelize.models.people.findOne({
       where: {
@@ -93,11 +105,8 @@ export default class AuthenticationDataSource extends PostgresDataSource {
   async validateLogin({ identity, otp }) {
     const { OTP, RefreshToken } = this.context.dataSources;
 
-    const identityFieldSelect = mapValues(omit(identity, isNil), (v) =>
-      toLower(v)
-    );
-    const identityKey = Object.keys(identityFieldSelect)[0];
-    const identityValue = Object.values(identityFieldSelect)[0];
+    const { identityKey, identityValue } = this.parseIdentity(identity);
+
     const isValid = await OTP.validateOTP({
       identity: identityValue,
       otp,

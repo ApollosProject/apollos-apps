@@ -2,6 +2,7 @@ import moment from 'moment-timezone';
 import { withEdgePagination } from '@apollosproject/server-core';
 import { startCase, toLower } from 'lodash';
 import { enforceCurrentUser } from '../utils';
+import { phoneForDisplay } from '../utils/phone';
 
 export default {
   Mutation: {
@@ -20,7 +21,7 @@ export default {
       birthDate ? moment(birthDate).toJSON() : null
     ),
     email: enforceCurrentUser(({ email }) => email),
-    phone: enforceCurrentUser(({ phone }) => phone),
+    phone: enforceCurrentUser(({ phone }) => phone && phoneForDisplay(phone)),
     nickName: ({ firstName }) => `${firstName}`,
     gender: ({ gender }) => startCase(toLower(gender)),
   },

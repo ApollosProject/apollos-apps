@@ -41,6 +41,7 @@
     "openid-client": "^5.1.0",
     "pg": "^8.5.1",
     "pg-hstore": "^2.3.3",
+    "phone": "^3.1.11",
     "sequelize": "^6.3.5",
     "umzug": "^3.0.0-beta.15"
   },

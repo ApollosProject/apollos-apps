@@ -35,8 +35,6 @@ const getSequelize = ({ churchSlug }) => {
 };
 class PostgresDataSource {
   initialize(config) {
-    if (!ApollosConfig?.DATABASE?.URL && process.env.NODE_ENV !== 'test')
-      throw new Error('Must specify DATABASE_URL variable!');
     this.context = config.context;
     this.sequelize = getSequelize({
       churchSlug: config.context?.church?.slug,

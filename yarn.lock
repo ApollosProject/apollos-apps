@@ -12766,6 +12766,11 @@ pgpass@1.x:
   dependencies:
     split2 "^3.1.1"
 
+phone@^3.1.11:
+  version "3.1.11"
+  resolved "https://registry.yarnpkg.com/phone/-/phone-3.1.11.tgz#24271beb0692689f51aef810a952725cce44a403"
+  integrity sha512-12SaNY/lG/sVHvy1NJ4wEKth/O0uoobMVUJjA3r1rTneZhswOS5NzDPSMr/tUj63XguAdhzis83AbQSmuJGf8g==
+
 phosphor-react-native@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/phosphor-react-native/-/phosphor-react-native-0.4.0.tgz#b843bd39a8970a53fd5b7729baa39fa3a9c0bf1b"
