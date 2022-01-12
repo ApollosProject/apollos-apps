@@ -1,6 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 import { DataTypes } from 'sequelize';
 import { defineModel } from '../postgres';
+import { phoneToDB } from '../utils/phone';
 
 const Gender = {
   MALE: 'MALE',
@@ -35,6 +36,10 @@ const createModel = defineModel({
         if (person.gender) {
           // eslint-disable-next-line no-param-reassign
           person.gender = person.gender.toUpperCase();
+        }
+        if (person.phone) {
+          // eslint-disable-next-line no-param-reassign
+          person.phone = phoneToDB({ number: person.phone });
         }
       },
     },
