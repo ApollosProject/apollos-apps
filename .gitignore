@@ -100,3 +100,4 @@ testing*.db
 
 ApollosApi/
 ApollosApp/
+ApollosCluster/

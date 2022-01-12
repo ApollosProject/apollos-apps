@@ -23,7 +23,8 @@
     "generate-stories": "lerna run generate-stories",
     "storybook": "yarn && yarn generate-stories && (cd ApollosStorybook && yarn && yarn prestart && yarn ios)",
     "api": "./scripts/setup-api.sh",
-    "app": "./scripts/setup-app.sh"
+    "app": "./scripts/setup-app.sh",
+    "cluster": "./scripts/setup-cluster.sh"
   },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"
@@ -42,7 +43,8 @@
     "eslint-plugin-prettier": "^3.1.4",
     "lerna": "^4.0.0",
     "prettier": "^2.1.2",
-    "react-native-storybook-loader": "^1.8.0"
+    "react-native-storybook-loader": "^1.8.0",
+    "apollo-server": "^2.11.0"
   },
   "dependencies": {}
 }
