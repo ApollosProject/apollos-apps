@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Apollos Postgres Prayer Request DataSource refreshes a token if it expires when fetching a user identity 1`] = `
+Object {
+  "email": "vincent@differential.com",
+  "name": "Vincent Wilson",
+}
+`;
+
+exports[`Apollos Postgres Prayer Request DataSource refreshes a token if it expires when fetching a user identity 2`] = `
+Array [
+  Array [
+    "refresh-token-456",
+  ],
+]
+`;
+
+exports[`Apollos Postgres Prayer Request DataSource registers a rock openid code 1`] = `
+Array [
+  Array [
+    "https://rock.apollos.app/api/AuthClients?$filter=Name eq 'Apollos'",
+    Object {
+      "headers": Object {
+        "Authorization-Token": undefined,
+      },
+    },
+  ],
+]
+`;
+
+exports[`Apollos Postgres Prayer Request DataSource registers a rock openid code 2`] = `
+Array [
+  Array [
+    "https://rock.apollos.app",
+  ],
+]
+`;
+
+exports[`Apollos Postgres Prayer Request DataSource registers a rock openid code 3`] = `
+Array [
+  Array [
+    "http://rock.apollos.app/123",
+    Object {
+      "code": "123",
+    },
+  ],
+]
+`;
+
+exports[`Apollos Postgres Prayer Request DataSource return's a user's identity using their openid credentials 1`] = `
+Object {
+  "email": "vincent@differential.com",
+  "name": "Vincent Wilson",
+}
+`;
+
+exports[`Apollos Postgres Prayer Request DataSource return's a user's identity using their openid credentials 2`] = `
+Array [
+  Array [
+    "access-token-456",
+  ],
+]
+`;

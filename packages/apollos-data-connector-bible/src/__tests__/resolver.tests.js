@@ -2,7 +2,7 @@ import { graphql } from 'graphql';
 import { fetch } from 'apollo-server-env';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
 import { createGlobalId } from '@apollosproject/server-core';
-import ApollosConfig from '@apollosproject/config';
+import { dataSource as ConfigDataSource } from '@apollosproject/config';
 import {
   themeSchema,
   contentChannelSchema,
@@ -10,12 +10,6 @@ import {
   featuresSchema,
 } from '@apollosproject/data-schema';
 import * as Scripture from '../index';
-
-ApollosConfig.loadJs({
-  BIBLE_API: {
-    KEY: '123asdfasdfasdf',
-  },
-});
 
 const oneVerseMock = [
   {
@@ -56,19 +50,25 @@ const twoVerseMock = [
   },
 ];
 
-const { getContext, getSchema } = createTestHelpers({ Scripture });
+const { getContext, getSchema } = createTestHelpers({
+  Config: { dataSource: ConfigDataSource },
+  Scripture,
+});
 
 describe('Scripture', () => {
   let schema;
   let context;
-  beforeEach(() => {
+  beforeEach(async () => {
     schema = getSchema([
       themeSchema,
       contentChannelSchema,
       contentItemSchema,
       featuresSchema,
     ]);
-    context = getContext();
+    context = await getContext(
+      { req: { headers: { 'x-church': 'apollos_demo' } } },
+      { church: { slug: 'apollos_demo' } }
+    );
 
     fetch.resetMocks();
     fetch.mockLiveDataSourceApis();

@@ -1,19 +1,12 @@
 import { graphql } from 'graphql';
 import { fetch } from 'apollo-server-env';
-import ApollosConfig from '@apollosproject/config';
+import { dataSource as ConfigDataSource } from '@apollosproject/config';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
 import { peopleSchema } from '@apollosproject/data-schema';
 
 import * as AuthSms from '../index';
 import * as Auth from '../../auth/index';
 import * as Person from '../../people/index';
-
-ApollosConfig.loadJs({
-  ROCK: {
-    API_URL: 'https://apollosrock.newspring.cc/api',
-    API_TOKEN: 'some-rock-token',
-  },
-});
 
 const sendSms = jest.fn();
 
@@ -35,16 +28,20 @@ const { getContext, getSchema } = createTestHelpers({
   AuthSms,
   Sms,
   Person,
+  Config: { dataSource: ConfigDataSource },
 });
 
 describe('AuthSms schema', () => {
   let schema;
   let context;
-  beforeEach(() => {
+  beforeEach(async () => {
     fetch.resetMocks();
     fetch.mockRockDataSourceAPI();
     schema = getSchema([peopleSchema]);
-    context = getContext();
+    context = await getContext(
+      { req: { headers: { 'x-church': 'apollos_demo' } } },
+      { church: { slug: 'apollos_demo' } }
+    );
     sendSms.mockClear();
   });
 
@@ -183,14 +180,10 @@ describe('AuthSms schema', () => {
   });
 
   it('generates a new password each time', () => {
-    const {
-      pin: pin1,
-      password: password1,
-    } = context.dataSources.AuthSms.generateSmsPinAndPassword();
-    const {
-      pin: pin2,
-      password: password2,
-    } = context.dataSources.AuthSms.generateSmsPinAndPassword();
+    const { pin: pin1, password: password1 } =
+      context.dataSources.AuthSms.generateSmsPinAndPassword();
+    const { pin: pin2, password: password2 } =
+      context.dataSources.AuthSms.generateSmsPinAndPassword();
     expect(pin1).not.toBe(pin2);
     expect(pin1.length).toBe(6);
     expect(typeof pin1).toBe('string');

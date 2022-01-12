@@ -1,5 +1,5 @@
 import path from 'path';
-import ApollosConfig from '../index';
+import Config from '../index';
 
 describe('the yaml loader', () => {
   it('must load variables from a yaml', () => {
@@ -9,18 +9,16 @@ describe('the yaml loader', () => {
     process.env.CONTENT_ID_FROM_ENV = 10;
     process.env.AN_ARRAY_OF_STRINGS = '["APPROVED", "DENIED"]';
 
-    ApollosConfig.loadYaml({
+    Config.loadYaml({
       configPath: path.join(__dirname, 'test.yml'),
     });
-    expect(ApollosConfig.ROCK.API_TOKEN).toEqual(process.env.ROCK_TOKEN);
-    expect(ApollosConfig.config).toMatchSnapshot();
+    expect(Config.ROCK.API_TOKEN).toEqual(process.env.ROCK_TOKEN);
+    expect(Config.config).toMatchSnapshot();
   });
   it('must fail if no config is present', () => {
-    expect(() => ApollosConfig.loadYaml({})).toThrow(Error);
+    expect(() => Config.loadYaml({})).toThrow(Error);
   });
   it('must fail if config path is invalid', () => {
-    expect(() => ApollosConfig.loadYaml({ configPath: './fake.yml' })).toThrow(
-      Error
-    );
+    expect(() => Config.loadYaml({ configPath: './fake.yml' })).toThrow(Error);
   });
 });

@@ -20,7 +20,7 @@ export default class BinaryFiles extends RockApolloDataSource {
         method: 'POST',
         body: data,
         headers: {
-          'Authorization-Token': this.rockToken,
+          'Authorization-Token': this.Config.ROCK.API_TOKEN,
           connection: 'keep-alive',
           'transfer-encoding': 'chunked',
           ...data.getHeaders(),

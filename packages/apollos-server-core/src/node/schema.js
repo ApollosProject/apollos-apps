@@ -1,11 +1,3 @@
-import { gql } from '@apollo/client';
+import { nodeSchema } from '@apollosproject/data-schema';
 
-export default gql`
-  extend type Query {
-    node(id: ID!): Node
-  }
-
-  interface Node {
-    id: ID!
-  }
-`;
+export default nodeSchema;

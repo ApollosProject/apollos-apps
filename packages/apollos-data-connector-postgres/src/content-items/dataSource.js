@@ -1,4 +1,4 @@
-/* eslint-disable class-methods-use-this */
+/* eslint-disable class-methods-use-this, no-console */
 import Hypher from 'hypher';
 import english from 'hyphenation.en-us';
 import {
@@ -7,7 +7,6 @@ import {
   parseCursor,
 } from '@apollosproject/server-core';
 import { Sequelize, Op } from 'sequelize';
-import ApollosConfig from '@apollosproject/config';
 import { PostgresDataSource } from '../postgres';
 
 class ContentItemDataSource extends PostgresDataSource {
@@ -64,15 +63,19 @@ class ContentItemDataSource extends PostgresDataSource {
     };
   }
 
-  getShareUrl = async (content) => {
-    return generateAppLink('universal', 'content', {
-      contentID: content.apollosId,
-    });
-  };
+  getShareUrl = async (content) =>
+    generateAppLink(
+      'universal',
+      'content',
+      {
+        contentID: content.apollosId,
+      },
+      this.context.dataSources.Config
+    );
 
   getSermons(queryArgs) {
     return this.getFromCategoryIds(
-      ApollosConfig?.CONTENT?.SERMON_CHANNEL_IDS,
+      this.context.dataSources.Config.CONTENT?.SERMON_CHANNEL_IDS,
       queryArgs
     );
   }
@@ -93,10 +96,6 @@ class ContentItemDataSource extends PostgresDataSource {
     const mostRecentSermons = await this.getSermons({ limit: 1 });
     return mostRecentSermons;
   };
-
-  async getCoverImage(model) {
-    return model.getCoverImage();
-  }
 
   async getFeatures(model) {
     return model.getFeatures({
@@ -143,6 +142,14 @@ class ContentItemDataSource extends PostgresDataSource {
 
     return this.model.findAll({
       ...args,
+      ...(args.categoryIDs && args.categoryIDs.length
+        ? {
+            where: {
+              contentItemCategoryId: { [Op.in]: args.categoryIDs },
+              ...args?.where,
+            },
+          }
+        : {}),
       include: {
         model: this.sequelize.models.tag,
         as: 'tags',
@@ -156,9 +163,7 @@ class ContentItemDataSource extends PostgresDataSource {
     });
   }
 
-  getUserFeed = (args = {}) => {
-    return this.model.findAll(args);
-  };
+  getUserFeed = (args = {}) => this.model.findAll(args);
 
   getFromCategoryIds = (ids = [], args = {}) => {
     if (ids.some((id) => typeof id === 'number')) {
@@ -190,25 +195,23 @@ class ContentItemDataSource extends PostgresDataSource {
     });
   };
 
-  getFromIds = (ids = [], args = {}) => {
-    return this.model.findAll({
+  getFromIds = (ids = [], args = {}) =>
+    this.model.findAll({
       ...args,
       where: {
         id: { [Op.in]: ids },
         ...args?.where,
       },
     });
-  };
 
-  getFromOriginIds = (ids = [], args = {}) => {
-    return this.model.findAll({
+  getFromOriginIds = (ids = [], args = {}) =>
+    this.model.findAll({
       where: {
         originId: { [Op.in]: ids.map(String) },
         ...args?.where,
       },
       ...args,
     });
-  };
 
   async getUpNext(model) {
     const { Person } = this.context.dataSources;
@@ -237,9 +240,9 @@ class ContentItemDataSource extends PostgresDataSource {
 
     const childItems = childItemsByOldestPublishDate.reverse();
 
-    const lastItemInteractedIndex = childItems.findIndex((contentItem) => {
-      return contentItem.interactions.length > 0;
-    });
+    const lastItemInteractedIndex = childItems.findIndex(
+      (contentItem) => contentItem.interactions.length > 0
+    );
 
     // If no item in the series has been interacted with
     if (lastItemInteractedIndex === -1) {

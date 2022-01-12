@@ -4,11 +4,12 @@ import Redis from 'ioredis';
 
 let REDIS;
 
-const parseKey = (key) => {
+const parseKey = (key, prefix = '') => {
   if (Array.isArray(key)) {
     return key.join(':');
   }
-  return key;
+  const prefixWithSeparator = prefix ? `${prefix}:` : '';
+  return `${prefixWithSeparator}${key}`;
 };
 
 export default class Cache extends DataSource {
@@ -30,6 +31,10 @@ export default class Cache extends DataSource {
     this.redis = REDIS;
   }
 
+  initialize({ context }) {
+    this.context = context;
+  }
+
   // 24 hours in seconds.
   DEFAULT_TIMEOUT = 86400;
 
@@ -47,22 +52,33 @@ export default class Cache extends DataSource {
 
   async set({ key, data, expiresIn = this.DEFAULT_TIMEOUT }) {
     return this.safely(() =>
-      this.redis.set(parseKey(key), JSON.stringify(data), 'EX', expiresIn)
+      this.redis.set(
+        parseKey(key, this.context.church?.slug),
+        JSON.stringify(data),
+        'EX',
+        expiresIn
+      )
     );
   }
 
   async get({ key }) {
     return this.safely(async () => {
-      const data = await this.redis.get(parseKey(key));
+      const data = await this.redis.get(
+        parseKey(key, this.context.church?.slug)
+      );
       return JSON.parse(data);
     });
   }
 
   async increment({ key }) {
-    return this.safely(() => this.redis.incr({ key: parseKey(key) }));
+    return this.safely(() =>
+      this.redis.incr({ key: parseKey(key, this.context.church?.slug) })
+    );
   }
 
   async decrement({ key }) {
-    return this.safely(() => this.redis.decr({ key: parseKey(key) }));
+    return this.safely(() =>
+      this.redis.decr({ key: parseKey(key, this.context.church?.slug) })
+    );
   }
 }

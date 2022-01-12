@@ -2,7 +2,7 @@ import { fetch } from 'apollo-server-env';
 
 import { graphql } from 'graphql';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
-import ApollosConfig from '@apollosproject/config';
+import { Config } from '@apollosproject/config';
 import {
   contentItemSchema,
   themeSchema,
@@ -11,12 +11,12 @@ import {
 } from '@apollosproject/data-schema';
 import * as LiveStream from '../index';
 
-ApollosConfig.loadJs({
+const defaults = {
   CHURCH_ONLINE: {
     URL: 'https://apollos.churchonline.org/api/v1/',
     MEDIA_URLS: ['https://example.org/video.mp4'],
   },
-});
+};
 // we import the root-level schema and resolver so we test the entire integration:
 
 const { getSchema, getContext } = createTestHelpers({
@@ -25,16 +25,23 @@ const { getSchema, getContext } = createTestHelpers({
 describe('LiveStream', () => {
   let schema;
   let context;
-  beforeEach(() => {
+  let config;
+  beforeEach(async () => {
+    fetch.resetMocks();
     schema = getSchema([
       contentItemSchema,
       themeSchema,
       scriptureSchema,
       contentChannelSchema,
     ]);
-    context = getContext();
+    context = await getContext({
+      req: { headers: { 'x-church': 'apollos_demo' } },
+    });
 
-    fetch.resetMocks();
+    config = new Config();
+    config.loadJs(defaults);
+    context.dataSources.Config = config;
+
     fetch.mockLiveDataSourceApis();
   });
 
@@ -51,6 +58,7 @@ describe('LiveStream', () => {
         }
       }
     `;
+
     const rootValue = {};
     context.dataSources = {
       ...context.dataSources,

@@ -1,5 +1,6 @@
 import { graphql } from 'graphql';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
+import { dataSource as ConfigDataSource } from '@apollosproject/config';
 
 import {
   commentSchema,
@@ -23,13 +24,14 @@ const { getSchema, getContext } = createTestHelpers({
   UserLike,
   Person,
   Follow,
+  Config: { dataSource: ConfigDataSource },
 });
 
 describe('Apollos Postgres Comment Flags Resolver', () => {
   let schema;
   let context;
   let rootValue;
-  beforeEach(() => {
+  beforeEach(async () => {
     schema = getSchema([
       commentSchema,
       peopleSchema,
@@ -40,7 +42,10 @@ describe('Apollos Postgres Comment Flags Resolver', () => {
       themeSchema,
       followingsSchema,
     ]);
-    context = getContext();
+    context = await getContext(
+      { req: { headers: { 'x-church': 'apollos_demo' } } },
+      { church: { slug: 'global' } }
+    );
     rootValue = {};
   });
 

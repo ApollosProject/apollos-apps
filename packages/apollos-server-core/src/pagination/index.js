@@ -1,11 +1,6 @@
-import { gql } from 'apollo-server';
+import { paginationSchema } from '@apollosproject/data-schema';
 
-export const schema = gql`
-  type PaginationInfo {
-    startCursor: String
-    endCursor: String
-  }
-`;
+export { paginationSchema as schema };
 
 export const resolver = {
   PaginationInfo: {},

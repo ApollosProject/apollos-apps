@@ -1,13 +1,15 @@
 import { fetch } from 'apollo-server-env';
-import { gql } from '@apollo/client';
+import { gql } from 'apollo-server';
 import { graphql } from 'graphql';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
-import ApollosConfig from '@apollosproject/config';
+import ApollosConfig, {
+  dataSource as ConfigDataSource,
+} from '@apollosproject/config';
 import { createCursor } from '@apollosproject/server-core';
 // import { searchSchema } from '@apollosproject/data-schema';
 import * as Search from '../index';
 
-ApollosConfig.loadJs({
+ApollosConfig.default.loadJs({
   ALGOLIA: {
     APPLICATION_ID: 'test',
     API_KEY: 'test',
@@ -17,6 +19,7 @@ ApollosConfig.loadJs({
 // we import the root-level schema and resolver so we test the entire integration:
 
 const { getSchema, getContext } = createTestHelpers({
+  Config: { dataSource: ConfigDataSource },
   Search,
   ContentItem: {
     schema: gql`
@@ -34,17 +37,21 @@ const { getSchema, getContext } = createTestHelpers({
     },
   },
 });
+
+let context;
+
 describe('Algolia Search', () => {
   let schema;
-  let context;
   beforeEach(() => {
     schema = getSchema();
-    context = getContext();
-
     fetch.resetMocks();
   });
 
   it('returns', async () => {
+    context = await getContext(
+      { req: { headers: { 'x-church': 'apollos_demo' } } },
+      { church: { slug: 'apollos_demo' } }
+    );
     const query = `
       query {
         search(query: "test") {
@@ -71,6 +78,10 @@ describe('Algolia Search', () => {
   });
 
   it('paginates', async () => {
+    context = await getContext(
+      { req: { headers: { 'x-church': 'apollos_demo' } } },
+      { church: { slug: 'apollos_demo' } }
+    );
     const query = `
       query {
         search(query: "test", after: "${createCursor({ position: 1 })}") {
@@ -97,6 +108,10 @@ describe('Algolia Search', () => {
   });
 
   it('throws error on invalid cursor', async () => {
+    context = await getContext(
+      { req: { headers: { 'x-church': 'apollos_demo' } } },
+      { church: { slug: 'apollos_demo' } }
+    );
     const query = `
       query {
         search(query: "test", after: "${createCursor({ '🐛': 1 })}") {
@@ -123,6 +138,10 @@ describe('Algolia Search', () => {
   });
 
   it('safely captures invalid node', async () => {
+    context = await getContext(
+      { req: { headers: { 'x-church': 'apollos_demo' } } },
+      { church: { slug: 'apollos_demo' } }
+    );
     const query = `
       query {
         search(query: "test", after: "${createCursor({ position: 1 })}") {

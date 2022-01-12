@@ -1,18 +1,18 @@
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
-import ApollosConfig from '@apollosproject/config';
 
-const { ROCK_MAPPINGS } = ApollosConfig;
 export default class Group extends RockApolloDataSource {
   resource = 'Groups';
 
   expanded = true;
 
   // these are standard across rock
-  groupTypeMap = {
-    Serving: ROCK_MAPPINGS.SERVING_GROUP_TYPE_ID || 23,
-    Community: ROCK_MAPPINGS.COMMUNITY_GROUP_TYPE_ID || 25,
-    Family: ROCK_MAPPINGS.FAMILY_GROUP_TYPE_ID || 10,
-  };
+  get groupTypeMap() {
+    return {
+      Serving: this.Config.ROCK_MAPPINGS.SERVING_GROUP_TYPE_ID || 23,
+      Community: this.Config.ROCK_MAPPINGS.COMMUNITY_GROUP_TYPE_ID || 25,
+      Family: this.Config.ROCK_MAPPINGS.FAMILY_GROUP_TYPE_ID || 10,
+    };
+  }
 
   getFromId = ({ id }) => this.request().find(id).expand('Members').get();
 

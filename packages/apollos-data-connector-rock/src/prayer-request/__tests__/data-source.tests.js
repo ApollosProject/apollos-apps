@@ -1,17 +1,7 @@
-import ApollosConfig from '@apollosproject/config';
 import { advanceTo } from 'jest-date-mock';
+import { dataSource as ConfigDataSource } from '@apollosproject/config';
 import Prayer from '../data-source';
 import { buildGetMock } from '../../test-utils';
-
-ApollosConfig.loadJs({
-  ROCK: {
-    API_URL: 'https://apollosrock.newspring.cc/api',
-    API_TOKEN: 'some-rock-token',
-    IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
-    WEB_CAMPUS_ID: 'WEB_CAMPUS_ID',
-    GENERAL_PRAYER_CATEGORY_ID: 'GENERAL_PRAYER_CATEGORY_ID',
-  },
-});
 
 const auth = (dataSource, other = {}) => ({
   getCurrentPerson: buildGetMock(
@@ -34,8 +24,7 @@ const prayersMock = [
     Email: 'hi@convan.me',
     RequestedByPersonAliasId: null,
     CategoryId: 2,
-    Text:
-      'Our Father, Who art in heaven, \nHallowed be Thy Name. \nThy Kingdom come. \nThy Will be done, \non earth as it is in Heaven.\n\nGive us this day our daily bread. \nAnd forgive us our trespasses, \nas we forgive those who trespass against us. \nAnd lead us not into temptation, \nbut deliver us from evil. Amen.',
+    Text: 'Our Father, Who art in heaven, \nHallowed be Thy Name. \nThy Kingdom come. \nThy Will be done, \non earth as it is in Heaven.\n\nGive us this day our daily bread. \nAnd forgive us our trespasses, \nas we forgive those who trespass against us. \nAnd lead us not into temptation, \nbut deliver us from evil. Amen.',
     Answer: '',
     EnteredDateTime: '2020-05-15T12:42:29.227',
     ExpirationDate: '2020-05-29T00:00:00',
@@ -119,11 +108,13 @@ describe('Prayer', () => {
   it('gets daily prayer feed', async () => {
     advanceTo(new Date(2020, 1, 20, 0, 0, 0));
     const dataSource = new Prayer();
+    const Config = new ConfigDataSource();
+    Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
     const Auth = auth(dataSource);
 
     dataSource.context = {
       rockCookie: 'fakeCookie',
-      dataSources: { Auth },
+      dataSources: { Auth, Config },
     };
     dataSource.get = buildGetMock([prayersMock[0]], dataSource);
 
@@ -139,11 +130,13 @@ describe('Prayer', () => {
   it('gets daily prayer feed by person', async () => {
     advanceTo(new Date(2020, 1, 20, 0, 0, 0));
     const dataSource = new Prayer();
+    const Config = new ConfigDataSource();
+    Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
     const Auth = auth(dataSource);
 
     dataSource.context = {
       rockCookie: 'fakeCookie',
-      dataSources: { Auth, Person },
+      dataSources: { Auth, Person, Config },
     };
     dataSource.get = buildGetMock(
       [{ PrimaryAliasId: 1 }, prayersMock[1]],
@@ -162,6 +155,11 @@ describe('Prayer', () => {
 
   it('gets by id', () => {
     const dataSource = new Prayer();
+    const Config = new ConfigDataSource();
+    Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
+    dataSource.context = {
+      dataSources: { Config },
+    };
     dataSource.get = buildGetMock({ Id: 1 }, dataSource);
     const result = dataSource.getFromId(1);
     expect(result).resolves.toMatchSnapshot();
@@ -170,6 +168,11 @@ describe('Prayer', () => {
 
   it('flags by id', () => {
     const dataSource = new Prayer();
+    const Config = new ConfigDataSource();
+    Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
+    dataSource.context = {
+      dataSources: { Config },
+    };
     dataSource.put = buildGetMock({ Id: 1 }, dataSource);
     const result = dataSource.flag(1);
     expect(result).resolves.toMatchSnapshot();
@@ -178,8 +181,10 @@ describe('Prayer', () => {
 
   it('increment prayed by id', () => {
     const dataSource = new Prayer();
+    const Config = new ConfigDataSource();
+    Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
     dataSource.context = {
-      dataSources: { Cache: { get: () => null, set: () => null } },
+      dataSources: { Config, Cache: { get: () => null, set: () => null } },
     };
     dataSource.put = buildGetMock({ Id: 1 }, dataSource);
     dataSource.getFromId = () => ({ prayerCount: 0 });
@@ -193,10 +198,11 @@ describe('Prayer', () => {
     it('adds prayer', async () => {
       const dataSource = new Prayer();
       const Auth = auth(dataSource);
-
+      const Config = new ConfigDataSource();
+      Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
       dataSource.context = {
         rockCookie: 'fakeCookie',
-        dataSources: { Auth },
+        dataSources: { Auth, Config },
       };
       dataSource.post = buildGetMock({ Id: 15 }, dataSource);
       dataSource.get = buildGetMock({ Id: 15 }, dataSource);
@@ -210,10 +216,11 @@ describe('Prayer', () => {
     it('adds anonymous prayer', async () => {
       const dataSource = new Prayer();
       const Auth = auth(dataSource);
-
+      const Config = new ConfigDataSource();
+      Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
       dataSource.context = {
         rockCookie: 'fakeCookie',
-        dataSources: { Auth },
+        dataSources: { Auth, Config },
       };
       dataSource.post = buildGetMock({ Id: 15 }, dataSource);
       dataSource.get = buildGetMock({ Id: 15 }, dataSource);
@@ -230,10 +237,11 @@ describe('Prayer', () => {
     it('uses nickname', async () => {
       const dataSource = new Prayer();
       const Auth = auth(dataSource, { NickName: 'Vinny' });
-
+      const Config = new ConfigDataSource();
+      Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
       dataSource.context = {
         rockCookie: 'fakeCookie',
-        dataSources: { Auth },
+        dataSources: { Auth, Config },
       };
       dataSource.post = buildGetMock({ Id: 15 }, dataSource);
       dataSource.get = buildGetMock({ Id: 15 }, dataSource);
@@ -250,10 +258,12 @@ describe('Prayer', () => {
     it('uses user campus', async () => {
       const dataSource = new Prayer();
       const Auth = auth(dataSource, { PrimaryCampusId: 1 });
+      const Config = new ConfigDataSource();
+      Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
 
       dataSource.context = {
         rockCookie: 'fakeCookie',
-        dataSources: { Auth },
+        dataSources: { Auth, Config },
       };
       dataSource.post = buildGetMock({ Id: 15 }, dataSource);
       dataSource.get = buildGetMock({ Id: 15 }, dataSource);

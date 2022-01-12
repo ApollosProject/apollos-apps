@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { withEdgePagination } from '@apollosproject/server-core';
 
 const resolver = {

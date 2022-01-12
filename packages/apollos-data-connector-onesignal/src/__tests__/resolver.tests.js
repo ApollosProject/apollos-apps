@@ -25,21 +25,33 @@ describe('OneSignal', () => {
 
     context.dataSources = {
       ...context.dataSources,
-      Auth: {
-        getCurrentPerson: jest.fn(() =>
-          Promise.resolve({ primaryAliasId: 'user123', id: 'user123' })
-        ),
+      Config: {
+        ONE_SIGNAL: {
+          APP_ID: '123-xyz',
+          REST_KEY: 'abcabcabc',
+        },
       },
-      Person: { getFromId: () => Promise.resolve({ id: 'user123' }) },
-      PersonalDevice: { updateNotificationsEnabled: jest.fn() },
+      Person: {
+        getFromId: () => Promise.resolve({ id: 'user123' }),
+        getCurrentPerson: jest.fn(() => Promise.resolve({ id: 'user123' })),
+      },
+      PersonalDevice: {
+        updateNotificationsEnabled: jest.fn(),
+        request: () => ({
+          filter: () => ({
+            first: () => ({
+              primaryAliasId: 'user123',
+            }),
+          }),
+        }),
+      },
+      OneSignal: {
+        put: jest.fn(),
+        updatePushSettings: () => ({ id: 'Person:123' }),
+      },
     };
-    context.dataSources.OneSignal.put = jest.fn();
 
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
-    expect(context.dataSources.OneSignal.put).toMatchSnapshot();
-    expect(
-      context.dataSources.PersonalDevice.updateNotificationsEnabled
-    ).toMatchSnapshot();
   });
 });

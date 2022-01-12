@@ -1,8 +1,7 @@
+/* eslint-disable no-console */
 import { get } from 'lodash';
 import { RESTDataSource } from 'apollo-datasource-rest';
-import ApollosConfig from '@apollosproject/config';
 
-const { BIBLE_API } = ApollosConfig;
 const ONE_DAY = 60 * 60 * 24;
 
 export default class Scripture extends RESTDataSource {
@@ -10,16 +9,27 @@ export default class Scripture extends RESTDataSource {
 
   baseURL = 'https://api.scripture.api.bible/v1';
 
-  token = BIBLE_API.KEY;
-
-  defaultVersion =
-    BIBLE_API.DEFAULT_VERSION ||
-    // TODO: BIBLE_ID field is deprecated, remove this line once safe
-    Object.keys(BIBLE_API.BIBLE_ID || { WEB: '' })[0] ||
-    'WEB';
-
   willSendRequest(request) {
     request.headers.set('api-key', `${this.token}`);
+  }
+
+  initialize({ context }) {
+    super.initialize({ context });
+    this.context = context;
+  }
+
+  get token() {
+    return this.context.dataSources.Config?.BIBLE_API.KEY;
+  }
+
+  get defaultVersion() {
+    return (
+      this.context.dataSources.Config?.BIBLE_API.DEFAULT_VERSION ||
+      Object.keys(
+        this.context.dataSources.Config?.BIBLE_API.BIBLE_ID || { WEB: '' }
+      )[0] ||
+      'WEB'
+    );
   }
 
   async getFromId(id) {

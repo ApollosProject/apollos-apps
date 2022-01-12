@@ -9,9 +9,7 @@ export default {
     id: ({ id }, args, context, { parentType }) =>
       createGlobalId(id, parentType.name),
     isAnonymous: ({ isPublic }) => !isPublic,
-    requestor: async (root) => {
-      return root.getRequestor();
-    },
+    requestor: async (root) => root.getRequestor(),
     isPrayed: async (
       root,
       args,

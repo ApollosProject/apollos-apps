@@ -1,5 +1,5 @@
 /* eslint-disable import/named */
-import { sequelize } from '../../postgres/index';
+import { getSequelize } from '../../postgres/index';
 import NotificationPreferenceDataSource from '../../notification-preferences/dataSource';
 import NotificationsDataSource from '../dataSource';
 import * as Notifications from '../index';
@@ -15,19 +15,28 @@ import { setupPostgresTestEnv } from '../../utils/testUtils';
 
 let person1;
 
-const context = {};
+const context = {
+  church: { slug: 'apollos_demo' },
+};
 
 describe('Apollos Postgres Notifications DataSource', () => {
+  let sequelize;
+  let globalSequelize;
   beforeEach(async () => {
-    await setupPostgresTestEnv([
-      Person,
-      Campus,
-      NotificationPreference,
-      Notifications,
-      ContentItemCategory,
-      Media,
-      ContentItem,
-    ]);
+    sequelize = getSequelize({ churchSlug: 'apollos_demo' });
+    globalSequelize = getSequelize({ churchSlug: 'global' });
+    await setupPostgresTestEnv(
+      [
+        Person,
+        Campus,
+        NotificationPreference,
+        Notifications,
+        ContentItemCategory,
+        Media,
+        ContentItem,
+      ],
+      { church: { slug: 'apollos_demo' } }
+    );
 
     person1 = await sequelize.models.people.create({
       originId: '1',
@@ -41,7 +50,8 @@ describe('Apollos Postgres Notifications DataSource', () => {
       enabled: true,
     });
 
-    const notificationPreferenceDataSource = new NotificationPreferenceDataSource();
+    const notificationPreferenceDataSource =
+      new NotificationPreferenceDataSource();
     notificationPreferenceDataSource.initialize({ context });
     context.dataSources = {
       NotificationPreference: notificationPreferenceDataSource,
@@ -50,6 +60,7 @@ describe('Apollos Postgres Notifications DataSource', () => {
 
   afterEach(async () => {
     await sequelize.drop({ cascade: true });
+    await globalSequelize.drop({ cascade: true });
   });
 
   it('should create and send notification', async () => {

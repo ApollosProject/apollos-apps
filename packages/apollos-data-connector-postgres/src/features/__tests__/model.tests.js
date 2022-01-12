@@ -1,4 +1,4 @@
-import { sequelize } from '../../postgres/index';
+import { getSequelize } from '../../postgres/index';
 import * as ContentItem from '../../content-items';
 import * as Feature from '../index';
 import * as Media from '../../media';
@@ -7,16 +7,19 @@ import * as ContentItemCategory from '../../content-item-categories';
 import { setupPostgresTestEnv } from '../../utils/testUtils';
 
 describe('Features model', () => {
+  let sequelize;
+  let globalSequelize;
   beforeEach(async () => {
-    await setupPostgresTestEnv([
-      ContentItem,
-      ContentItemCategory,
-      Media,
-      Feature,
-    ]);
+    sequelize = getSequelize({ churchSlug: 'apollos_demo' });
+    globalSequelize = getSequelize({ churchSlug: 'global' });
+    await setupPostgresTestEnv(
+      [ContentItem, ContentItemCategory, Media, Feature],
+      { church: { slug: 'apollos_demo' } }
+    );
   });
   afterEach(async () => {
     await sequelize.drop({ cascade: true });
+    await globalSequelize.drop({ cascade: true });
   });
 
   it('constructs without issues', async () => {

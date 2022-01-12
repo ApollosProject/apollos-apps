@@ -11,6 +11,7 @@ Object {
     5,
     "10",
   ],
+  "DATABASE_URL": null,
   "ROCK": Object {
     "API_TOKEN": "some-rock-token",
     "API_URI": "https://apollosrock.newspring.cc/api",

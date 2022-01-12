@@ -1,4 +1,4 @@
-import { sequelize } from '../../postgres/index';
+import { getSequelize } from '../../postgres/index';
 import * as People from '../../people';
 import * as Campuses from '../../campus';
 import * as Interaction from '../index';
@@ -8,18 +8,19 @@ import * as ContentItemCategory from '../../content-item-categories';
 import { setupPostgresTestEnv } from '../../utils/testUtils';
 
 describe('Interaction model', () => {
+  let sequelize;
+  let globalSequelize;
   beforeEach(async () => {
-    await setupPostgresTestEnv([
-      Interaction,
-      People,
-      Campuses,
-      ContentItem,
-      Media,
-      ContentItemCategory,
-    ]);
+    sequelize = getSequelize({ churchSlug: 'apollos_demo' });
+    globalSequelize = getSequelize({ churchSlug: 'global' });
+    await setupPostgresTestEnv(
+      [Interaction, People, Campuses, ContentItem, Media, ContentItemCategory],
+      { church: { slug: 'apollos_demo' } }
+    );
   });
   afterEach(async () => {
     await sequelize.drop({ cascade: true });
+    await globalSequelize.drop({ cascade: true });
   });
 
   it('constructs without issues', async () => {

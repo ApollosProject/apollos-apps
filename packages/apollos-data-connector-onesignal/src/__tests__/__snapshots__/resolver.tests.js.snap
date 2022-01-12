@@ -4,45 +4,8 @@ exports[`OneSignal updates an external push id with a valid user 1`] = `
 Object {
   "data": Object {
     "updateUserPushSettings": Object {
-      "id": "user123",
+      "id": "Person:123",
     },
   },
-}
-`;
-
-exports[`OneSignal updates an external push id with a valid user 2`] = `
-[MockFunction] {
-  "calls": Array [
-    Array [
-      "players/some-push-id",
-      Object {
-        "app_id": "some-app-id",
-        "external_user_id": "user123",
-      },
-    ],
-  ],
-  "results": Array [
-    Object {
-      "type": "return",
-      "value": undefined,
-    },
-  ],
-}
-`;
-
-exports[`OneSignal updates an external push id with a valid user 3`] = `
-[MockFunction] {
-  "calls": Array [
-    Array [
-      "some-push-id",
-      false,
-    ],
-  ],
-  "results": Array [
-    Object {
-      "type": "return",
-      "value": undefined,
-    },
-  ],
 }
 `;

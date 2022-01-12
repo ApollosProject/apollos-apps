@@ -1,18 +1,17 @@
 import { RESTDataSource } from 'apollo-datasource-rest';
-import ApollosConfig from '@apollosproject/config';
-
-const { ONE_SIGNAL } = ApollosConfig;
 
 export default class OneSignal extends RESTDataSource {
   baseURL = 'https://onesignal.com/api/v1/';
 
   willSendRequest = (request) => {
-    request.headers.set('Authorization', `Basic ${ONE_SIGNAL.REST_KEY}`);
+    const { Config } = this.context.dataSources;
+    request.headers.set('Authorization', `Basic ${Config.ONE_SIGNAL.REST_KEY}`);
   };
 
   async updateExternalUserId({ playerId, userId }) {
+    const { Config } = this.context.dataSources;
     return this.put(`players/${playerId}`, {
-      app_id: ONE_SIGNAL.APP_ID,
+      app_id: Config.ONE_SIGNAL.APP_ID,
       external_user_id: userId,
     });
   }
@@ -24,9 +23,9 @@ export default class OneSignal extends RESTDataSource {
     subtitle,
     ...args
   }) {
-    if (!ONE_SIGNAL?.APP_ID) return null;
+    const { Config } = this.context.dataSources;
     return this.post('notifications', {
-      app_id: ONE_SIGNAL.APP_ID,
+      app_id: Config.ONE_SIGNAL.APP_ID,
       include_external_user_ids: toUserIds.map(String),
       contents: { en: content },
       headings: { en: heading },
@@ -36,8 +35,13 @@ export default class OneSignal extends RESTDataSource {
   }
 
   async updatePushSettings({ enabled, pushProviderUserId }) {
-    const { Auth, PersonalDevice, Person } = this.context.dataSources;
-    const { id, primaryAliasId } = await Auth.getCurrentPerson();
+    const { PersonalDevice, Person } = this.context.dataSources;
+    const person = await Person.getCurrentPerson();
+
+    // using the Rock PersonalDevice model to use the Rock request builder.
+    const { primaryAliasId } = await PersonalDevice.request('People')
+      .filter(`Id eq ${person.originId}`)
+      .first();
 
     if (enabled != null && pushProviderUserId != null)
       await PersonalDevice.updateNotificationsEnabled(
@@ -51,6 +55,6 @@ export default class OneSignal extends RESTDataSource {
         userId: primaryAliasId,
       });
     }
-    return Person.getFromId(id, null, { originType: 'rock' });
+    return person;
   }
 }

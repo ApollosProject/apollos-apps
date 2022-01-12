@@ -1,11 +1,9 @@
 import { AuthenticationError } from 'apollo-server';
 import { DataSource } from 'apollo-datasource';
-import ApollosConfig from '@apollosproject/config';
 import GAInterface from './interfaces/ga';
 import SegmentInterface from './interfaces/segment';
 import RockInteractions from './interfaces/rock_interactions';
 
-const { ANALYTICS } = ApollosConfig;
 // Utility function to convert GQL array of key/values to Object.
 const mapArrayToObject = (array = []) =>
   array.reduce((accum, { field, value }) => {
@@ -13,18 +11,6 @@ const mapArrayToObject = (array = []) =>
     accum[field] = value;
     return accum;
   }, {});
-
-// Add interfaces to this function to get picked up automatically.
-export const getInterfaces = () => {
-  const interfaces = ANALYTICS?.USE_ROCK ? [new RockInteractions()] : [];
-  if (ANALYTICS?.SEGMENT_KEY) {
-    interfaces.push(new SegmentInterface(ANALYTICS.SEGMENT_KEY));
-  }
-  if (ANALYTICS?.GA_ID) {
-    interfaces.push(new GAInterface(ANALYTICS.GA_ID));
-  }
-  return interfaces;
-};
 
 export default class Analytics extends DataSource {
   // Interfaces should extend BaseInterface in the interfaces folder.
@@ -34,15 +20,39 @@ export default class Analytics extends DataSource {
   // track({ event: String, anonymousId: String, userId: String, traits: Obj, context: Obj })
   constructor(interfaces = []) {
     super();
-    this.interfaces = interfaces.length ? interfaces : getInterfaces();
+    this.initialInterfaces = interfaces;
   }
 
   // Called automatically b/c extends DataSource.
   initialize({ context }) {
     this.context = context;
-    this.interfaces.forEach((iface) => {
-      iface.initialize({ context });
+  }
+
+  get analyticsConfig() {
+    return this.context.dataSources.Config?.ANALYTICS;
+  }
+
+  get interfaces() {
+    if (this._interfaces) return this._interfaces;
+    if (this.initialInterfaces.length) {
+      this._interfaces = this.initialInterfaces;
+    } else {
+      this._interfaces = this.analyticsConfig.USE_ROCK
+        ? [new RockInteractions()]
+        : [];
+      if (this.analyticsConfig.SEGMENT_KEY) {
+        this._interfaces.push(
+          new SegmentInterface(this.analyticsConfigSEGMENT_KEY)
+        );
+      }
+      if (this.analyticsConfig.GA_ID) {
+        this._interfaces.push(new GAInterface(this.analyticsConfigGA_ID));
+      }
+    }
+    this._interfaces.forEach((iface) => {
+      iface.initialize({ context: this.context });
     });
+    return this._interfaces;
   }
 
   get identifyInterfaces() {
@@ -61,7 +71,7 @@ export default class Analytics extends DataSource {
   async getCurrentPerson() {
     let user;
     try {
-      user = await this.Auth.getCurrentPerson();
+      user = await this.context.dataSources.Person.getCurrentPerson();
     } catch (e) {
       if (!(e instanceof AuthenticationError)) {
         throw e;

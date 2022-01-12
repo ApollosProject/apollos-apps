@@ -1,6 +1,6 @@
 /* eslint-disable import/named */
-import ApollosConfig from '@apollosproject/config';
-import { sequelize } from '../../postgres/index';
+import { dataSource as ConfigDataSource } from '@apollosproject/config';
+import { getSequelize } from '../../postgres/index';
 import FollowDataSource from '../dataSource';
 import PeopleDataSource from '../../people/dataSource';
 import * as Follows from '../index';
@@ -15,13 +15,14 @@ import {
 } from '../../index';
 
 let currentPersonId;
+const Config = new ConfigDataSource();
+Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
+
 const notificationMock = jest.fn();
 
 const context = {
   dataSources: {
-    Auth: {
-      getCurrentPerson: () => ({ id: currentPersonId }),
-    },
+    Auth: {},
     Person: {
       whereCurrentPerson: () => ({ id: currentPersonId }),
       getCurrentPersonId: () => currentPersonId,
@@ -29,7 +30,9 @@ const context = {
     OneSignal: {
       createNotification: notificationMock,
     },
+    Config,
   },
+  church: { slug: 'apollos_demo' },
 };
 
 let person1;
@@ -38,15 +41,15 @@ let person3;
 let person4;
 
 describe('Apollos Postgres FollowRequest DataSource', () => {
+  let sequelize;
+  let globalSequelize;
   beforeEach(async () => {
-    await setupPostgresTestEnv([
-      Person,
-      Campus,
-      Follows,
-      ContentItem,
-      ContentItemCategory,
-      Media,
-    ]);
+    sequelize = getSequelize({ churchSlug: 'apollos_demo' });
+    globalSequelize = getSequelize({ churchSlug: 'global' });
+    await setupPostgresTestEnv(
+      [Person, Campus, Follows, ContentItem, ContentItemCategory, Media],
+      { church: { slug: 'apollos_demo' } }
+    );
     // Make sure people exist for all of our test ids
     const peopleDataSource = new PeopleDataSource();
     peopleDataSource.initialize({ context });
@@ -75,7 +78,8 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     currentPersonId = person1.id;
   });
   afterEach(async () => {
-    await sequelize.drop({});
+    await sequelize.drop({ cascade: true });
+    await globalSequelize.drop({ cascade: true });
     currentPersonId = 1;
     notificationMock.mockReset();
   });
@@ -84,7 +88,6 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
     const followDataSource = new FollowDataSource();
 
     followDataSource.initialize({ context });
-    followDataSource.sendRequestFollowNotification = jest.fn();
 
     await followDataSource.requestFollow({
       followedPersonId: `Person:${person2.id}`,
@@ -98,27 +101,24 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     expect(follows.length).toBe(1);
     expect(follows[0].state).toBe(FollowState.REQUESTED);
-    expect(
-      followDataSource.sendRequestFollowNotification.mock.calls.length
-    ).toBe(1);
+    expect(notificationMock.mock.calls.length).toBe(1);
   });
 
   it('should send a push when creating new follow request', async () => {
     const followDataSource = new FollowDataSource();
 
     followDataSource.initialize({ context });
-    followDataSource.sendRequestFollowNotification = jest.fn();
 
     await followDataSource.requestFollow({
       followedPersonId: `Person:${person2.id}`,
     });
-
-    expect(
-      followDataSource.sendRequestFollowNotification.mock.calls[0][0]
-    ).toEqual({
-      followedPersonId: person2.id,
-      requestPersonId: currentPersonId,
+    expect(notificationMock.mock.calls[0][0].data).toEqual({
+      requestPersonId: person1.apollosId,
+      url: 'apolloschurchapp://app-link/nav/connect',
     });
+    expect(notificationMock.mock.calls[0][0].buttons).toMatchSnapshot();
+    expect(notificationMock.mock.calls[0][0].content).toMatchSnapshot();
+    expect(notificationMock.mock.calls[0][0].to.id).toBe(person2.id);
   });
 
   it('should ignore existing unaccepted request', async () => {
@@ -325,7 +325,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
       lastName: 'Offerman',
       email: 'nick@offer.man',
     });
-    ApollosConfig.loadJs({
+    Config.loadJs({
       SUGGESTED_FOLLOWS: [
         { email: 'nick@offer.man' },
         {
@@ -347,10 +347,8 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
       campusId: satCampus.id,
     });
 
-    const suggestedFollowers = await followDataSource.getStaticSuggestedFollowsFor(
-      me,
-      ApollosConfig.SUGGESTED_FOLLOWS
-    );
+    const suggestedFollowers =
+      await followDataSource.getStaticSuggestedFollowsFor(me);
 
     expect(suggestedFollowers.map(({ email }) => email)).toEqual([
       'jim@bob.com',
@@ -390,9 +388,10 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
       lastName: "T'Include",
       email: 'vin@wil.com', // same email as user 2
     });
-    ApollosConfig.loadJs({
+    Config.loadJs({
       SUGGESTED_FOLLOWS: [
         { email: 'nick@offer.man' },
+
         {
           id: dupe.id,
           email: 'vin@wil.com',
@@ -410,10 +409,8 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
       lastName: 'Myself',
     });
 
-    const suggestedFollowers = await followDataSource.getStaticSuggestedFollowsFor(
-      me,
-      ApollosConfig.SUGGESTED_FOLLOWS
-    );
+    const suggestedFollowers =
+      await followDataSource.getStaticSuggestedFollowsFor(me);
 
     expect(suggestedFollowers.map(({ firstName }) => firstName)).toEqual([
       'Jim',
@@ -459,9 +456,10 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
       lastName: 'Offerman',
       email: 'nick@offer.man',
     });
-    ApollosConfig.loadJs({
+    Config.loadJs({
       SUGGESTED_FOLLOWS: [
         { email: 'nick@offer.man' },
+
         {
           email: 'vin@wil.com',
           campusId: mainCampus.id,
@@ -481,10 +479,8 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
       campusId: null,
     });
 
-    const suggestedFollowers = await followDataSource.getStaticSuggestedFollowsFor(
-      me,
-      ApollosConfig.SUGGESTED_FOLLOWS
-    );
+    const suggestedFollowers =
+      await followDataSource.getStaticSuggestedFollowsFor(me);
 
     expect(suggestedFollowers.map(({ email }) => email)).toEqual([
       'nick@offer.man',
@@ -501,15 +497,14 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
       lastName: 'Myself',
       email: 'me@me.com',
     });
-    ApollosConfig.loadJs({
-      SUGGESTED_FOLLOWS: ['me@me.com'],
+    Config.loadJs({
+      SUGGESTED_FOLLOWS: [{ email: 'me@me.com' }],
     });
 
     currentPersonId = me.id;
 
-    const suggestedFollowers = await followDataSource.getStaticSuggestedFollowsFor(
-      me
-    );
+    const suggestedFollowers =
+      await followDataSource.getStaticSuggestedFollowsFor(me);
 
     expect(suggestedFollowers.map(({ email }) => email)).toEqual([]);
   });
@@ -552,16 +547,14 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
       state: 'ACCEPTED',
     });
 
-    ApollosConfig.loadJs({
-      SUGGESTED_FOLLOWS: ['followed@already.com'],
+    Config.loadJs({
+      SUGGESTED_FOLLOWS: [{ email: 'followed@already.com' }],
     });
 
     currentPersonId = me.id;
 
-    const suggestedFollowers = await followDataSource.getStaticSuggestedFollowsFor(
-      me,
-      ApollosConfig.SUGGESTED_FOLLOWS
-    );
+    const suggestedFollowers =
+      await followDataSource.getStaticSuggestedFollowsFor(me);
 
     expect(suggestedFollowers).toEqual([]);
   });
@@ -578,7 +571,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
       lastName: 'Offerman',
       email: 'nick@offer.man',
     });
-    ApollosConfig.loadJs({
+    Config.loadJs({
       SUGGESTED_FOLLOWS: [{ email: 'nick@offer.man' }],
     });
 
@@ -608,7 +601,7 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
       lastName: 'Offerman',
       email: 'nick@offer.man',
     });
-    ApollosConfig.loadJs({
+    Config.loadJs({
       SUGGESTED_FOLLOWS: [{ email: 'nick@offer.man' }],
     });
 
@@ -669,40 +662,5 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     // Should be one fewer request
     expect(follows.length).toBe(followRange.length - 1);
-  });
-
-  it('should unfollow a followed user', async () => {
-    const followDataSource = new FollowDataSource();
-    const peopleDataSource = new PeopleDataSource();
-
-    followDataSource.initialize({ context });
-    peopleDataSource.initialize({ context });
-
-    // Create follow request
-    await followDataSource.requestFollow({
-      followedPersonId: `Person:${person2.id}`,
-    });
-
-    currentPersonId = person2.id;
-
-    // Create follow request
-    await followDataSource.acceptFollowRequest({
-      requestPersonId: `Person:${person1.id}`,
-    });
-
-    currentPersonId = person1.id;
-
-    let usersFollowing = await peopleDataSource.getUsersFollowing();
-
-    expect(usersFollowing.length).toBe(1);
-
-    // Unfollow person
-    await followDataSource.unfollowPerson({
-      followedPersonId: `Person:${person2.id}`,
-    });
-
-    usersFollowing = await peopleDataSource.getUsersFollowing();
-
-    expect(usersFollowing.length).toBe(0);
   });
 });

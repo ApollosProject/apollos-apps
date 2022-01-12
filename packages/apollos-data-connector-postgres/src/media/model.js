@@ -8,7 +8,6 @@ const createModel = defineModel({
   attributes: {
     type: DataTypes.ENUM(['IMAGE', 'VIDEO', 'AUDIO']),
     url: DataTypes.TEXT,
-    metadata: DataTypes.JSON,
     nodeId: DataTypes.UUID,
     nodeType: DataTypes.STRING,
   },
@@ -38,7 +37,7 @@ const setupModel = configureModel(({ sequelize }) => {
     sourceKey: 'id',
     constraints: false,
     scope: { nodeType: 'ContentItem', type: 'AUDIO' },
-    as: 'audio',
+    as: 'audios',
   });
 });
 

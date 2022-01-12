@@ -1,8 +1,8 @@
-import ApollosConfig from '../index';
+import Config from '../index';
 
-describe('the yaml loader', () => {
+describe('the js loader', () => {
   it('must load variables from a js object', () => {
-    ApollosConfig.loadJs({
+    Config.loadJs({
       ROCK: {
         API_URL: 'https://some-url.com',
       },
@@ -13,14 +13,14 @@ describe('the yaml loader', () => {
         FOO: 'bar',
       },
     });
-    expect(ApollosConfig.config).toMatchSnapshot();
+    expect(Config.config).toMatchSnapshot();
   });
   it('must load empty config', () => {
-    ApollosConfig.loadJs({});
-    expect(ApollosConfig.config).toMatchSnapshot();
+    Config.loadJs({});
+    expect(Config.config).toMatchSnapshot();
   });
   it('must load empty config with no arguments', () => {
-    ApollosConfig.loadJs();
-    expect(ApollosConfig.config).toMatchSnapshot();
+    Config.loadJs();
+    expect(Config.config).toMatchSnapshot();
   });
 });

@@ -1,11 +1,7 @@
-import url from 'url';
+/* eslint-disable no-console */
 import { compact, mapValues, merge, flatten } from 'lodash';
-import { gql } from '@apollo/client';
+import { gql, makeExecutableSchema } from 'apollo-server';
 import { InMemoryLRUCache } from 'apollo-server-caching';
-import { makeExecutableSchema } from 'apollo-server';
-import { createQueues, UI } from 'bull-board';
-import ApollosConfig from '@apollosproject/config';
-import basicAuth from 'express-basic-auth';
 
 import * as Node from './node';
 import * as Interfaces from './interfaces';
@@ -13,7 +9,11 @@ import * as Pagination from './pagination';
 import * as Media from './media';
 import * as Message from './message';
 import * as Upload from './upload';
+import * as Sharable from './sharable';
+import * as Linking from './linking';
+import * as Theme from './theme';
 
+export { useSimpleDonationRoute } from './giving';
 export { createGlobalId, parseGlobalId, isUuid } from './node';
 export {
   createCursor,
@@ -22,8 +22,27 @@ export {
 } from './pagination/utils';
 export { resolverMerge, schemaMerge } from './utils';
 export { setupUniversalLinks, generateAppLink } from './linking';
-export { useSimpleDonationRoute } from './giving';
-export { Interfaces, Node };
+export {
+  Node,
+  Interfaces,
+  Pagination,
+  Media,
+  Message,
+  Upload,
+  Sharable,
+  Linking,
+  Theme,
+};
+
+// Pulls the subdomain out of a domain.
+export const parseOrigin = (origin) => {
+  const originRegex = /https?:\/\/([\w-]+)\..*/i;
+  const matches = origin.match(originRegex);
+  if (matches && matches[1]) {
+    return matches[1];
+  }
+  return null;
+};
 
 const safeGetWithWarning = (name) => (data, key) => {
   if (data == null) {
@@ -38,9 +57,6 @@ const safeGetWithWarning = (name) => (data, key) => {
   return data[name];
 };
 
-// Types that all apollos-church servers will use.
-const builtInData = { Node, Pagination, Media, Message, Upload };
-
 export const createSchema = (data) => [
   gql`
     type Query {
@@ -51,54 +67,16 @@ export const createSchema = (data) => [
       _placeholder: Boolean # needed, empty schema defs aren't supported
     }
   `,
-  ...compact(
-    Object.values(
-      mapValues({ ...builtInData, ...data }, safeGetWithWarning('schema'))
-    )
-  ),
+  ...compact(Object.values(mapValues(data, safeGetWithWarning('schema')))),
 ];
 
 export const createResolvers = (data) =>
   merge(
-    ...compact(
-      Object.values(
-        mapValues({ ...builtInData, ...data }, safeGetWithWarning('resolver'))
-      )
-    )
-  );
-
-const getDbModels = (data) =>
-  mapValues({ ...builtInData, ...data }, safeGetWithWarning('models'));
-
-const getMigrations = (data) =>
-  compact(
-    flatten(
-      Object.values(
-        mapValues({ ...builtInData, ...data }, safeGetWithWarning('migrations'))
-      )
-    )
-  );
-
-const getDataSources = (data) =>
-  mapValues({ ...builtInData, ...data }, safeGetWithWarning('dataSource'));
-
-// Deprecated - we won't be using this models paradigm going forward.
-// All models should be renamed as DataSources.
-const getModels = (data) =>
-  mapValues({ ...builtInData, ...data }, safeGetWithWarning('model'));
-
-const getContextMiddlewares = (data) =>
-  compact(
-    Object.values(
-      mapValues(
-        { ...builtInData, ...data },
-        safeGetWithWarning('contextMiddleware')
-      )
-    )
+    ...compact(Object.values(mapValues(data, safeGetWithWarning('resolver'))))
   );
 
 export const createDataSources = (data) => {
-  const dataSources = getDataSources(data);
+  const dataSources = mapValues(data, safeGetWithWarning('dataSource'));
   return () => {
     const sources = {};
     Object.keys(dataSources).forEach((dataSourceName) => {
@@ -110,13 +88,13 @@ export const createDataSources = (data) => {
   };
 };
 
-export const setupSequelize = (data) => {
-  const models = getDbModels(data);
+export const setupSequelize = (data, context) => {
+  const models = mapValues(data, safeGetWithWarning('models'));
   // Create all the models first.
   // This ensures they exist in the global model list.
   Object.values(models).forEach(({ createModel } = {}) => {
     if (createModel) {
-      createModel();
+      createModel(context);
     }
   });
   // Now setup all the models.
@@ -124,38 +102,46 @@ export const setupSequelize = (data) => {
   // and do other things that would otherwise cause problems with circular imports.
   Object.values(models).forEach(({ setupModel } = {}) => {
     if (setupModel) {
-      setupModel();
+      setupModel(context);
     }
   });
 };
 
-export const createContext = (data) => ({ req = {} } = {}) => {
-  const initiatedModels = {};
+export const createContext =
+  (data) =>
+  async ({ req = {} } = {}) => {
+    const initiatedModels = {};
 
-  // For all non-datasource connectors. Right now only `Node`.
-  const models = getModels(data);
-  let context = {
-    models: initiatedModels,
-  };
+    // For all non-datasource connectors. Right now only `Node`.
+    const models = mapValues(data, safeGetWithWarning('model'));
+    let context = {
+      models: initiatedModels,
+    };
 
-  Object.keys(models).forEach((modelName) => {
-    if (models[modelName]) {
-      initiatedModels[modelName] = new models[modelName](context);
+    Object.keys(models).forEach((modelName) => {
+      if (models[modelName]) {
+        initiatedModels[modelName] = new models[modelName](context);
+      }
+    });
+
+    const contextMiddlewares = compact(
+      Object.values(mapValues(data, safeGetWithWarning('contextMiddleware')))
+    );
+    // disabling the linter here because it's warning about performance
+    // but these are async anyway so it's negligible
+    // eslint-disable-next-line
+    for (const middleware of contextMiddlewares) {
+      // eslint-disable-next-line
+      context = await middleware({ req, context });
     }
-  });
 
-  const contextMiddleware = getContextMiddlewares(data);
-  contextMiddleware.forEach((middleware) => {
-    context = middleware({ req, context });
-  });
-
-  // Used to execute graphql queries from within the schema itself. #meta
-  // You probally should avoid using this.
-  try {
-    const schema = makeExecutableSchema({
-      typeDefs: [
-        ...createSchema(data),
-        `
+    // Used to execute graphql queries from within the schema itself. #meta
+    // You probally should avoid using this.
+    try {
+      const schema = makeExecutableSchema({
+        typeDefs: [
+          ...createSchema(data),
+          `
       enum CacheControlScope {
         PUBLIC
         PRIVATE
@@ -165,147 +151,70 @@ export const createContext = (data) => ({ req = {} } = {}) => {
         scope: CacheControlScope
       ) on FIELD_DEFINITION | OBJECT | INTERFACE
       `,
-      ],
-      resolvers: createResolvers(data),
-    });
-    context.schema = schema;
-  } catch (e) {
-    // Not compatible with our test environment under certain conditions
-    // Hence, we need to swallow errors.
-    console.warn(e);
-  }
-
-  return context;
-};
-
-export const createContextGetter = (serverConfig) => (data) => {
-  const testContext = serverConfig.context(data);
-  const testDataSources = serverConfig.dataSources();
-
-  // Apollo Server does this internally.
-  const cache = new InMemoryLRUCache();
-  Object.values(testDataSources).forEach((dataSource) => {
-    if (dataSource.initialize) {
-      dataSource.initialize({
-        context: testContext,
-        cache,
+        ],
+        resolvers: createResolvers(data),
       });
-    }
-  });
-  testContext.dataSources = testDataSources;
-  return testContext;
-};
-
-export const createMiddleware = (data) => ({ app, context, dataSources }) => {
-  const middlewares = compact(
-    Object.values(
-      mapValues(
-        { ...builtInData, ...data },
-        safeGetWithWarning('serverMiddleware')
-      )
-    )
-  );
-
-  const getContext = createContextGetter({ context, dataSources });
-
-  return middlewares.forEach((middleware) => middleware({ app, getContext }));
-};
-
-export const createJobs = (data) => ({ app, context, dataSources }) => {
-  const jobs = compact(
-    Object.values(
-      mapValues({ ...builtInData, ...data }, safeGetWithWarning('jobs'))
-    )
-  );
-
-  const getContext = createContextGetter({ context, dataSources });
-
-  let queues = {
-    add: () => {
-      console.log(
-        `process.env.REDIS_URL is undefined. Working with job queues/bull is a no-op`
-      );
-      return { process: () => ({}), add: () => ({}) };
-    },
-  };
-
-  const redisOptsFromUrl = (urlString) => {
-    const redisOpts = {};
-    try {
-      const redisUrl = url.parse(urlString);
-      redisOpts.port = redisUrl.port || 6379;
-      redisOpts.host = redisUrl.hostname;
-      redisOpts.db = redisUrl.pathname ? redisUrl.pathname.split('/')[1] : 0;
-      if (redisUrl.auth) {
-        const password = redisUrl.auth.split(':')[1];
-        redisOpts.password = password;
-      }
+      context.schema = schema;
     } catch (e) {
-      throw new Error(e.message);
+      // Not compatible with our test environment under certain conditions
+      // Hence, we need to swallow errors.
+      console.warn(e);
     }
-    return redisOpts;
+
+    setupSequelize(data, context);
+
+    return context;
   };
 
-  if (process.env.REDIS_URL) {
-    queues = createQueues({
-      redis: {
-        ...redisOptsFromUrl(process.env.REDIS_URL),
-        ...(process.env.REDIS_URL.includes('rediss')
-          ? {
-              tls: {
-                rejectUnauthorized: false,
-              },
-            }
-          : {}),
-      },
+export const createContextGetter =
+  (serverConfig) =>
+  async (data, initialContext = {}) => {
+    const builtContext = await serverConfig.context(data);
+    const testContext = { ...initialContext, ...builtContext };
+    const testDataSources = serverConfig.dataSources();
+
+    // Apollo Server does this internally.
+    const cache = new InMemoryLRUCache();
+    Object.values(testDataSources).forEach((dataSource) => {
+      if (dataSource.initialize) {
+        dataSource.initialize({
+          context: testContext,
+          cache,
+        });
+      }
     });
-  }
+    testContext.dataSources = testDataSources;
+    return testContext;
+  };
 
-  const jobsPath = '/admin/queues';
-  let trigger = () => null;
-  if (ApollosConfig.APP.JOBS_USERNAME && ApollosConfig.APP.JOBS_PASSWORD) {
-    const auth = basicAuth({
-      users: {
-        [ApollosConfig.APP.JOBS_USERNAME]: ApollosConfig.APP.JOBS_PASSWORD,
-      },
-      challenge: true,
-    });
+export const createMiddleware =
+  (data) =>
+  ({ app, context, dataSources }) => {
+    const middlewares = compact(
+      Object.values(mapValues(data, safeGetWithWarning('serverMiddleware')))
+    );
 
-    app.use(jobsPath, auth, UI);
+    const getContext = createContextGetter({ context, dataSources });
 
-    // callback to define a manually triggered job
-    trigger = (path, job) => {
-      app.post(`${jobsPath}${path}`, auth, (req, res) => {
-        job.add(null);
-        res.sendStatus(201);
-      });
-    };
-  } else {
-    app.get(jobsPath, (req, res) => {
-      res.send('Must specify a username and password in the server config');
-    });
-  }
-
-  return jobs.forEach((create) => create({ app, getContext, queues, trigger }));
-};
+    return middlewares.forEach((middleware) => middleware({ app, getContext }));
+  };
 
 export const createApolloServerConfig = (data) => {
-  // Setup all the DB models
-  setupSequelize(data);
   const dataSources = createDataSources(data);
+  setupSequelize(data, { church: { slug: 'global' } });
   const schema = createSchema(data);
   const resolvers = createResolvers(data);
   const context = createContext(data);
   const applyServerMiddleware = createMiddleware(data);
-  const setupJobs = createJobs(data);
-  const migrations = getMigrations(data);
+  const migrations = compact(
+    flatten(Object.values(mapValues(data, safeGetWithWarning('migrations'))))
+  );
   return {
     context,
     dataSources,
     schema,
     resolvers,
     applyServerMiddleware,
-    setupJobs,
     migrations,
   };
 };

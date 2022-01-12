@@ -1,9 +1,9 @@
+/* eslint-disable no-console */
 import fs from 'fs';
 import util from 'util';
 import { DataSource } from 'apollo-datasource';
 import { UserInputError } from 'apollo-server';
 import { promise as DataURI } from 'datauri';
-import ApollosConfig from '@apollosproject/config';
 
 const readFile = util.promisify(fs.readFile);
 
@@ -14,7 +14,7 @@ export default class Pass extends DataSource {
   }
 
   getPassPathFromTemplateName = (templateName) =>
-    ApollosConfig.PASS.TEMPLATES[templateName];
+    this.context.dataSources.Config.PASS.TEMPLATES[templateName];
 
   async getRawPassTemplate(templateFile) {
     // try to use cache:

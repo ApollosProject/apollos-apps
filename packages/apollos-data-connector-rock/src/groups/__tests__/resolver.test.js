@@ -1,6 +1,6 @@
 import { graphql } from 'graphql';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
-
+import { dataSource as ConfigDataSource } from '@apollosproject/config';
 import { peopleSchema, authSchema } from '@apollosproject/data-schema';
 import * as Group from '../index';
 import { Auth, Person } from '../../index';
@@ -9,15 +9,20 @@ const { getSchema, getContext } = createTestHelpers({
   Group,
   Auth,
   Person,
+  Config: { dataSource: ConfigDataSource },
 });
 
 describe('Groups resolver', () => {
   let schema;
   let context;
   let rootValue;
-  beforeEach(() => {
+  beforeEach(async () => {
     schema = getSchema([authSchema, peopleSchema]);
-    context = getContext();
+    context = await getContext(
+      { req: { headers: { 'x-church': 'apollos_demo' } } },
+      { church: { slug: 'apollos_demo' } }
+    );
+    context.personId = 3;
     rootValue = {};
   });
 
@@ -42,9 +47,11 @@ describe('Groups resolver', () => {
         }
       }
     `;
-
     context.dataSources.Auth.getCurrentPerson = jest.fn(() =>
       Promise.resolve({ id: 3 })
+    );
+    context.dataSources.Person.getCurrentPerson = jest.fn(() =>
+      Promise.resolve({ id: 3, originId: 3 })
     );
     context.dataSources.Person.getFromId = jest.fn(() =>
       Promise.resolve({ id: 3 })

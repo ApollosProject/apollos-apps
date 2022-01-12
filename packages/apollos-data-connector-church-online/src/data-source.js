@@ -1,6 +1,5 @@
 /* eslint-disable class-methods-use-this */
 import { RESTDataSource } from 'apollo-datasource-rest';
-import ApollosConfig from '@apollosproject/config';
 import { get } from 'lodash';
 
 const CurrentLivestreamQuery = `
@@ -36,19 +35,20 @@ fragment ServiceFields on Service {
 export default class LiveStream extends RESTDataSource {
   resource = 'LiveStream';
 
+  get chopConfig() {
+    return this.context.dataSources.Config.CHURCH_ONLINE || {};
+  }
+
   get baseURL() {
-    return ApollosConfig.CHURCH_ONLINE.URL;
+    return this.chopConfig.URL;
   }
 
   get mediaUrls() {
-    return ApollosConfig.CHURCH_ONLINE.MEDIA_URLS || [];
+    return this.chopConfig.MEDIA_URLS || [];
   }
 
   get webViewUrl() {
-    return (
-      ApollosConfig.CHURCH_ONLINE.WEB_VIEW_URL ||
-      ApollosConfig.CHURCH_ONLINE.URL
-    );
+    return this.chopConfig.WEB_VIEW_URL || this.chopConfig.URL;
   }
 
   async getAccessToken() {
@@ -99,7 +99,7 @@ export default class LiveStream extends RESTDataSource {
 
   async getLiveStreams() {
     const { ContentItem } = this.context.dataSources;
-    if (!ApollosConfig?.CHURCH_ONLINE?.URL) return [];
+    if (!this.chopConfig?.URL) return [];
     // This logic is a little funky right now.
     // The follow method looks at the sermon feed and the `getLiveStream` on this module
     // If we have data in the sermon feed, and the `getLiveStream.isLive` is true

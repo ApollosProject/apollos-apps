@@ -1,7 +1,7 @@
 /* eslint-disable import/named, new-cap */
-import ApollosConfig from '@apollosproject/config';
+import { dataSource as ConfigDataSource } from '@apollosproject/config';
 import { times, uniq } from 'lodash';
-import { sequelize } from '../../postgres/index';
+import { getSequelize } from '../../postgres/index';
 import {
   Media,
   ContentItemCategory,
@@ -19,13 +19,18 @@ import { setupPostgresTestEnv } from '../../utils/testUtils';
 let contentItem1;
 let ContentItem;
 
+const Config = new ConfigDataSource();
+Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
+
 let currentPerson;
 const context = {
   dataSources: {
     Person: {
       getCurrentPersonId: () => currentPerson.id,
     },
+    Config,
   },
+  church: { slug: 'apollos_demo' },
   models: {
     Node: {
       getPossibleDataModels: () => [
@@ -38,28 +43,29 @@ const context = {
   },
 };
 
-ApollosConfig.loadJs({
-  CONTENT: {
-    TYPES: ['UniversalContentItem', 'ContentSeriesContentItem'],
-  },
-});
-
 describe('Apollos Postgres ContentItem DataSource', () => {
+  let sequelize;
+  let globalSequelize;
   beforeEach(async () => {
-    await setupPostgresTestEnv([
-      ContentItemDataObject,
-      Media,
-      ContentItemCategory,
-      ContentItemsConnection,
-      Tag,
-      Person,
-      Campus,
-      Feature,
-      Interactions,
-    ]);
+    sequelize = getSequelize({ churchSlug: 'apollos_demo' });
+    globalSequelize = getSequelize({ churchSlug: 'global' });
+    await setupPostgresTestEnv(
+      [
+        ContentItemDataObject,
+        Media,
+        ContentItemCategory,
+        ContentItemsConnection,
+        Tag,
+        Person,
+        Campus,
+        Feature,
+        Interactions,
+      ],
+      { church: { slug: 'apollos_demo' } }
+    );
 
     contentItem1 = await sequelize.models.contentItem.create({
-      originId: '1',
+      originId: `1`,
       originType: 'rock',
       apollosType: 'UniversalContentItem',
       title: 'The First Content Item',
@@ -71,6 +77,7 @@ describe('Apollos Postgres ContentItem DataSource', () => {
   });
   afterEach(async () => {
     await sequelize.drop({ cascade: true });
+    await globalSequelize.drop({ cascade: true });
     currentPerson = null;
   });
 
@@ -153,7 +160,7 @@ describe('Apollos Postgres ContentItem DataSource', () => {
     const shareUrl = await ContentItem.getShareUrl(contentItem1);
 
     expect(shareUrl).toEqual(
-      `undefined/app-link/content/UniversalContentItem:${contentItem1.id}`
+      `https://apollos.api/app-link/content/UniversalContentItem:${contentItem1.id}`
     );
   });
   it('fetches sermons', async () => {
@@ -163,7 +170,7 @@ describe('Apollos Postgres ContentItem DataSource', () => {
       title: 'Sermons',
     });
 
-    ApollosConfig.loadJs({
+    Config.loadJs({
       CONTENT: {
         SERMON_CHANNEL_IDS: [sermonCategory.id],
       },
@@ -211,7 +218,7 @@ describe('Apollos Postgres ContentItem DataSource', () => {
 
     await contentItem1.setCoverImage(coverImage);
 
-    expect(await ContentItem.getCoverImage(contentItem1)).toEqual(
+    expect(await contentItem1.getCoverImage()).toEqual(
       await coverImage.reload()
     );
   });
@@ -400,14 +407,14 @@ describe('Apollos Postgres ContentItem DataSource', () => {
   });
   it('paginates', async () => {
     await Promise.all(
-      times(30, async (i) => {
-        return sequelize.models.contentItem.create({
+      times(30, async (i) =>
+        sequelize.models.contentItem.create({
           originId: `${i + 2}`,
           originType: 'rock',
           apollosType: 'UniversalContentItem',
           active: true,
-        });
-      })
+        })
+      )
     );
 
     const initialItems = await ContentItem.paginate({
@@ -515,13 +522,12 @@ describe('Apollos Postgres ContentItem DataSource', () => {
       gender: 'MALE',
     });
 
-    const contentItemCategory = await sequelize.models.contentItemCategory.create(
-      {
+    const contentItemCategory =
+      await sequelize.models.contentItemCategory.create({
         title: 'Test Category',
         originId: '6',
         originType: 'rock',
-      }
-    );
+      });
 
     const seriesContentItem = await sequelize.models.contentItem.create({
       originId: '2',

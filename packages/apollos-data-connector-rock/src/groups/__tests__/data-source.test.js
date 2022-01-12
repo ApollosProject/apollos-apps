@@ -1,3 +1,4 @@
+import { dataSource as ConfigDataSource } from '@apollosproject/config';
 import GroupsDataSource from '../data-source';
 
 describe('Groups', () => {
@@ -15,12 +16,16 @@ describe('Groups', () => {
     isArchived: false,
   });
 
+  const Config = new ConfigDataSource();
+  Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
+
   class GroupsWithContext extends GroupsDataSource {
     context = {
       dataSources: {
         Person: {
           getFromId: jest.fn(() => ({ id: 1, firstName: 'Frank' })),
         },
+        Config,
       },
     };
   }

@@ -40,7 +40,7 @@ export const defaultContentItemResolvers = {
 
   images: (model) => model.images || model.getImages(),
   videos: (model) => model.videos || model.getVideos(),
-  audios: (model) => model.audios || model.getAudio(),
+  audios: (model) => model.audios || model.getAudios(),
   //
   coverImage: (model) => model.getCoverImage(),
 

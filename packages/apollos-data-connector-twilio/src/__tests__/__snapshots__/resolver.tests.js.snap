@@ -1,176 +1,129 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OneSignal constructs with Twilio 1`] = `
+exports[`Twilio constructs with Twilio 1`] = `
 TwilioSms {
-  "twilio": Twilio {
-    "_accounts": Accounts {
-      "_v1": undefined,
-      "baseUrl": "https://accounts.twilio.com",
-      "twilio": [Circular],
+  "context": Object {
+    "church": Object {
+      "slug": "apollos_demo",
     },
-    "_api": Api {
-      "_v2010": undefined,
-      "baseUrl": "https://api.twilio.com",
-      "twilio": [Circular],
+    "dataSources": Object {
+      "Config": dataSource {
+        "ANALYTICS": Object {},
+        "BIBLE_API": Object {},
+        "CLOUDINARY": Object {},
+        "ROCK": Object {},
+        "ROCK_CONSTANTS": Object {},
+        "ROCK_MAPPINGS": Object {
+          "CONTENT_ITEM": Object {},
+        },
+        "TWILIO": Object {
+          "ACCOUNT_SID": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+          "AUTH_TOKEN": "SOME_AUTH_TOKEN",
+          "FROM_NUMBER": "+15133112113",
+        },
+        "config": Config {
+          "ANALYTICS": Object {},
+          "BIBLE_API": Object {},
+          "CLOUDINARY": Object {},
+          "ROCK": Object {},
+          "ROCK_CONSTANTS": Object {},
+          "ROCK_MAPPINGS": Object {
+            "CONTENT_ITEM": Object {},
+          },
+          "TWILIO": Object {
+            "ACCOUNT_SID": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+            "AUTH_TOKEN": "SOME_AUTH_TOKEN",
+            "FROM_NUMBER": "+15133112113",
+          },
+          "config": Object {
+            "ANALYTICS": Object {},
+            "BIBLE_API": Object {},
+            "CLOUDINARY": Object {},
+            "ROCK": Object {},
+            "ROCK_CONSTANTS": Object {},
+            "ROCK_MAPPINGS": Object {
+              "CONTENT_ITEM": Object {},
+            },
+            "TWILIO": Object {
+              "ACCOUNT_SID": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+              "AUTH_TOKEN": "SOME_AUTH_TOKEN",
+              "FROM_NUMBER": "+15133112113",
+            },
+          },
+        },
+        "loadJs": [Function],
+      },
+      "Sms": [Circular],
     },
-    "_autopilot": Autopilot {
-      "_v1": undefined,
-      "baseUrl": "https://autopilot.twilio.com",
-      "twilio": [Circular],
+    "models": Object {
+      "Node": Node {
+        "getPossibleDataModels": [Function],
+        "isValidType": [Function],
+      },
     },
-    "_bulkexports": Bulkexports {
-      "_v1": undefined,
-      "baseUrl": "https://bulkexports.twilio.com",
-      "twilio": [Circular],
+    "schema": GraphQLSchema {
+      "__allowedLegacyNames": Array [],
+      "__validationErrors": undefined,
+      "_directives": Array [
+        "@cacheControl",
+        "@skip",
+        "@include",
+        "@deprecated",
+      ],
+      "_implementations": Object {
+        "Media": Array [
+          "ImageMedia",
+          "VideoMedia",
+          "AudioMedia",
+        ],
+        "MediaSource": Array [
+          "ImageMediaSource",
+          "VideoMediaSource",
+          "AudioMediaSource",
+        ],
+      },
+      "_mutationType": "Mutation",
+      "_possibleTypeMap": Object {},
+      "_queryType": "Query",
+      "_subscriptionType": null,
+      "_typeMap": Object {
+        "AudioMedia": "AudioMedia",
+        "AudioMediaSource": "AudioMediaSource",
+        "Boolean": "Boolean",
+        "CacheControlScope": "CacheControlScope",
+        "ID": "ID",
+        "ImageMedia": "ImageMedia",
+        "ImageMediaSource": "ImageMediaSource",
+        "Int": "Int",
+        "Media": "Media",
+        "MediaInputType": "MediaInputType",
+        "MediaSource": "MediaSource",
+        "Mutation": "Mutation",
+        "Node": "Node",
+        "PaginationInfo": "PaginationInfo",
+        "Query": "Query",
+        "String": "String",
+        "Upload": "Upload",
+        "VideoMedia": "VideoMedia",
+        "VideoMediaSource": "VideoMediaSource",
+        "__Directive": "__Directive",
+        "__DirectiveLocation": "__DirectiveLocation",
+        "__EnumValue": "__EnumValue",
+        "__Field": "__Field",
+        "__InputValue": "__InputValue",
+        "__Schema": "__Schema",
+        "__Type": "__Type",
+        "__TypeKind": "__TypeKind",
+      },
+      "astNode": undefined,
+      "extensionASTNodes": Array [],
+      "extensions": undefined,
     },
-    "_chat": Chat {
-      "_v1": undefined,
-      "_v2": undefined,
-      "baseUrl": "https://chat.twilio.com",
-      "twilio": [Circular],
-    },
-    "_conversations": Conversations {
-      "_v1": undefined,
-      "baseUrl": "https://conversations.twilio.com",
-      "twilio": [Circular],
-    },
-    "_events": Events {
-      "_v1": undefined,
-      "baseUrl": "https://events.twilio.com",
-      "twilio": [Circular],
-    },
-    "_fax": Fax {
-      "_v1": undefined,
-      "baseUrl": "https://fax.twilio.com",
-      "twilio": [Circular],
-    },
-    "_flexApi": FlexApi {
-      "_v1": undefined,
-      "baseUrl": "https://flex-api.twilio.com",
-      "twilio": [Circular],
-    },
-    "_httpClient": RequestClient {},
-    "_insights": Insights {
-      "_v1": undefined,
-      "baseUrl": "https://insights.twilio.com",
-      "twilio": [Circular],
-    },
-    "_ipMessaging": IpMessaging {
-      "_v1": undefined,
-      "_v2": undefined,
-      "baseUrl": "https://ip-messaging.twilio.com",
-      "twilio": [Circular],
-    },
-    "_lookups": Lookups {
-      "_v1": undefined,
-      "baseUrl": "https://lookups.twilio.com",
-      "twilio": [Circular],
-    },
-    "_messaging": Messaging {
-      "_v1": undefined,
-      "baseUrl": "https://messaging.twilio.com",
-      "twilio": [Circular],
-    },
-    "_monitor": Monitor {
-      "_v1": undefined,
-      "baseUrl": "https://monitor.twilio.com",
-      "twilio": [Circular],
-    },
-    "_notify": Notify {
-      "_v1": undefined,
-      "baseUrl": "https://notify.twilio.com",
-      "twilio": [Circular],
-    },
-    "_numbers": Numbers {
-      "_v2": undefined,
-      "baseUrl": "https://numbers.twilio.com",
-      "twilio": [Circular],
-    },
-    "_preview": Preview {
-      "_bulk_exports": undefined,
-      "_deployed_devices": undefined,
-      "_hosted_numbers": undefined,
-      "_marketplace": undefined,
-      "_sync": undefined,
-      "_trusted_comms": undefined,
-      "_understand": undefined,
-      "_wireless": undefined,
-      "baseUrl": "https://preview.twilio.com",
-      "twilio": [Circular],
-    },
-    "_pricing": Pricing {
-      "_v1": undefined,
-      "_v2": undefined,
-      "baseUrl": "https://pricing.twilio.com",
-      "twilio": [Circular],
-    },
-    "_proxy": Proxy {
-      "_v1": undefined,
-      "baseUrl": "https://proxy.twilio.com",
-      "twilio": [Circular],
-    },
-    "_serverless": Serverless {
-      "_v1": undefined,
-      "baseUrl": "https://serverless.twilio.com",
-      "twilio": [Circular],
-    },
-    "_studio": Studio {
-      "_v1": undefined,
-      "_v2": undefined,
-      "baseUrl": "https://studio.twilio.com",
-      "twilio": [Circular],
-    },
-    "_supersim": Supersim {
-      "_v1": undefined,
-      "baseUrl": "https://supersim.twilio.com",
-      "twilio": [Circular],
-    },
-    "_sync": Sync {
-      "_v1": undefined,
-      "baseUrl": "https://sync.twilio.com",
-      "twilio": [Circular],
-    },
-    "_taskrouter": Taskrouter {
-      "_v1": undefined,
-      "baseUrl": "https://taskrouter.twilio.com",
-      "twilio": [Circular],
-    },
-    "_trunking": Trunking {
-      "_v1": undefined,
-      "baseUrl": "https://trunking.twilio.com",
-      "twilio": [Circular],
-    },
-    "_verify": Verify {
-      "_v2": undefined,
-      "baseUrl": "https://verify.twilio.com",
-      "twilio": [Circular],
-    },
-    "_video": Video {
-      "_v1": undefined,
-      "baseUrl": "https://video.twilio.com",
-      "twilio": [Circular],
-    },
-    "_voice": Voice {
-      "_v1": undefined,
-      "baseUrl": "https://voice.twilio.com",
-      "twilio": [Circular],
-    },
-    "_wireless": Wireless {
-      "_v1": undefined,
-      "baseUrl": "https://wireless.twilio.com",
-      "twilio": [Circular],
-    },
-    "accountSid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    "edge": undefined,
-    "logLevel": undefined,
-    "password": "SOME_AUTH_TOKEN",
-    "region": undefined,
-    "username": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
   },
 }
 `;
 
-exports[`OneSignal sends an sms passing along args 1`] = `
+exports[`Twilio sends an sms passing along args 1`] = `
 Array [
   Array [
     Object {

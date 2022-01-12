@@ -1,6 +1,6 @@
 import { graphql } from 'graphql';
 import { fetch } from 'apollo-server-env';
-import ApollosConfig from '@apollosproject/config';
+import { dataSource as ConfigDataSource } from '@apollosproject/config';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
 import { peopleSchema, mediaSchema } from '@apollosproject/data-schema';
 
@@ -8,13 +8,6 @@ import * as Auth from '../index';
 import * as Person from '../../people/index';
 
 import { generateToken, registerToken } from '../token';
-
-ApollosConfig.loadJs({
-  ROCK: {
-    API_URL: 'https://apollosrock.newspring.cc/api',
-    API_TOKEN: 'some-rock-token',
-  },
-});
 
 class CacheMock {
   get = jest.fn();
@@ -24,16 +17,24 @@ class CacheMock {
 
 const Cache = { dataSource: CacheMock };
 
-const { getContext, getSchema } = createTestHelpers({ Auth, Person, Cache });
+const { getContext, getSchema } = createTestHelpers({
+  Auth,
+  Person,
+  Cache,
+  Config: { dataSource: ConfigDataSource },
+});
 
 describe('Auth', () => {
   let schema;
   let context;
-  beforeEach(() => {
+  beforeEach(async () => {
     fetch.resetMocks();
     fetch.mockRockDataSourceAPI();
     schema = getSchema([peopleSchema, mediaSchema]);
-    context = getContext();
+    context = await getContext(
+      { req: { headers: { 'x-church': 'apollos_demo' } } },
+      { church: { slug: 'apollos_demo' } }
+    );
   });
 
   it('logs in a user', async () => {
@@ -100,11 +101,16 @@ describe('Auth', () => {
       const rootValue = {};
       const token = generateToken({ cookie: 'some-cookie', sessionId: 123 });
 
-      context = getContext({
-        req: {
-          headers: { authorization: token },
+      context = await getContext(
+        {
+          req: {
+            headers: { authorization: token, 'x-church': 'apollos_demo' },
+          },
         },
-      });
+        {
+          church: { slug: 'apollos_demo' },
+        }
+      );
 
       const result = await graphql(schema, query, rootValue, context);
       expect(result).toMatchSnapshot();
@@ -114,11 +120,16 @@ describe('Auth', () => {
       const rootValue = {};
       const token = generateToken({ cookie: 'some-cookie', sessionId: 123 });
 
-      context = getContext({
-        req: {
-          headers: { authorization: token },
+      context = await getContext(
+        {
+          req: {
+            headers: { authorization: token, 'x-church': 'apollos_demo' },
+          },
         },
-      });
+        {
+          church: { slug: 'apollos_demo' },
+        }
+      );
 
       context.dataSources.Auth.get = jest.fn(() => ({}));
 
@@ -135,11 +146,14 @@ describe('Auth', () => {
     it('logs a user out without a sessionId', async () => {
       const rootValue = {};
       const token = generateToken({ cookie: 'some-cookie' });
-      context = getContext({
-        req: {
-          headers: { authorization: token },
+      context = await getContext(
+        {
+          req: {
+            headers: { authorization: token, 'x-church': 'apollos_demo' },
+          },
         },
-      });
+        { church: { slug: 'apollos_demo' } }
+      );
 
       const result = await graphql(schema, query, rootValue, context);
       expect(result).toMatchSnapshot();
@@ -161,11 +175,16 @@ describe('Auth', () => {
 
   it('registers an auth token and passes the cookie on requests to rock', async () => {
     const token = generateToken({ cookie: 'some-cookie', sessionId: 123 });
-    const secondContext = getContext({
-      req: {
-        headers: { authorization: token },
+    const secondContext = await getContext(
+      {
+        req: {
+          headers: { authorization: token, 'x-church': 'apollos_demo' },
+        },
       },
-    });
+      {
+        church: { slug: 'apollos_demo' },
+      }
+    );
     const query = `
       query {
         currentUser {
@@ -195,12 +214,10 @@ describe('Auth', () => {
       );
       context.userToken = userToken;
       context.rockCookie = rockCookie;
-      const {
-        rockCookie: newCookie,
-        token: newToken,
-      } = await context.dataSources.Auth.changePassword({
-        password: 'good',
-      });
+      const { rockCookie: newCookie, token: newToken } =
+        await context.dataSources.Auth.changePassword({
+          password: 'good',
+        });
       expect(newCookie).toEqual('some cookie');
       expect(typeof newToken).toEqual('string');
     });

@@ -1,5 +1,6 @@
 /* eslint-disable import/named */
-import { sequelize } from '../../postgres/index';
+import { dataSource as ConfigDataSource } from '@apollosproject/config';
+import { getSequelize } from '../../postgres/index';
 import PeopleDataSource from '../dataSource';
 import * as People from '../index';
 import {
@@ -13,6 +14,9 @@ import { setupPostgresTestEnv } from '../../utils/testUtils';
 
 let personId;
 
+const Config = new ConfigDataSource();
+Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
+
 const context = {
   dataSources: {
     Auth: {
@@ -23,24 +27,26 @@ const context = {
       uploadFile: jest.fn(() => Promise.resolve('456')),
       findOrReturnImageUrl: () => 'https://the.image.com/bop.jaz',
     },
+    Config,
   },
+  church: { slug: 'apollos_demo' },
 };
 
 describe('Apollos Postgres People DataSource', () => {
   let peopleDataSource;
+  let sequelize;
+  let globalSequelize;
 
   beforeEach(async () => {
     personId = 1;
+    sequelize = getSequelize({ churchSlug: 'apollos_demo' });
+    globalSequelize = getSequelize({ churchSlug: 'global' });
     context.currentPostgresPerson = null;
 
-    await setupPostgresTestEnv([
-      People,
-      ContentItem,
-      Media,
-      ContentItemCategory,
-      Campus,
-      Follow,
-    ]);
+    await setupPostgresTestEnv(
+      [People, ContentItem, Media, ContentItemCategory, Campus, Follow],
+      { church: { slug: 'apollos_demo' } }
+    );
 
     peopleDataSource = new PeopleDataSource();
     peopleDataSource.initialize({ context });
@@ -48,6 +54,7 @@ describe('Apollos Postgres People DataSource', () => {
 
   afterEach(async () => {
     await sequelize.drop({ cascade: true });
+    await globalSequelize.drop({ cascade: true });
   });
 
   it('should find a user by a rock id', async () => {

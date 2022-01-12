@@ -1,5 +1,5 @@
-import ApollosConfig from '@apollosproject/config';
-import { sequelize } from '../../postgres/index';
+import { dataSource as ConfigDataSource } from '@apollosproject/config';
+import { getSequelize } from '../../postgres/index';
 import * as People from '../../people';
 import * as Campuses from '../../campus';
 import * as ContentItem from '../../content-items';
@@ -10,11 +10,8 @@ import { setupPostgresTestEnv } from '../../utils/testUtils';
 
 let currentPerson;
 
-ApollosConfig.loadJs({
-  CONTENT: {
-    TYPES: ['UniversalContentItem'],
-  },
-});
+const Config = new ConfigDataSource();
+Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
 
 const defaultContext = {
   dataSources: {
@@ -22,12 +19,14 @@ const defaultContext = {
       getCurrentPersonId: () => currentPerson.id,
       getFromId: (id) => ({ id }),
     },
+    Config,
   },
   models: {
     Node: {
       getPossibleDataModels: () => ['UniversalContentItem', 'ContentItem'],
     },
   },
+  church: { slug: 'apollos_demo' },
 };
 
 let context = defaultContext;
@@ -35,16 +34,16 @@ let context = defaultContext;
 let Interaction;
 
 describe('Interaction model', () => {
+  let sequelize;
+  let globalSequelize;
   beforeEach(async () => {
+    sequelize = getSequelize({ churchSlug: 'apollos_demo' });
+    globalSequelize = getSequelize({ churchSlug: 'global' });
     context = defaultContext;
-    await setupPostgresTestEnv([
-      Int,
-      People,
-      Campuses,
-      ContentItem,
-      Media,
-      ContentItemCategory,
-    ]);
+    await setupPostgresTestEnv(
+      [Int, People, Campuses, ContentItem, Media, ContentItemCategory],
+      { church: { slug: 'apollos_demo' } }
+    );
 
     // eslint-disable-next-line new-cap
     Interaction = new Int.dataSource();
@@ -59,6 +58,7 @@ describe('Interaction model', () => {
   });
   afterEach(async () => {
     await sequelize.drop({ cascade: true });
+    await globalSequelize.drop({ cascade: true });
   });
 
   it('creates an interaction for a user and content item', async () => {

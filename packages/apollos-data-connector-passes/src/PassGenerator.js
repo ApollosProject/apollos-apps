@@ -1,15 +1,15 @@
 import { Pass } from 'passkit-generator';
-import ApollosConfig from '@apollosproject/config';
 
 class ApollosPassGenerator extends Pass {
-  constructor(options) {
+  constructor({ context, ...options }) {
     super({
       certificates: {
-        wwdr: ApollosConfig.PASS.CERTIFICATES.WWDR,
-        signerCert: ApollosConfig.PASS.CERTIFICATES.SIGNER_CERT,
+        wwdr: context.dataSources.Config?.PASS.CERTIFICATES.WWDR,
+        signerCert: context.dataSources.Config?.PASS.CERTIFICATES.SIGNER_CERT,
         signerKey: {
-          keyFile: ApollosConfig.PASS.CERTIFICATES.SIGNER_KEY,
-          passphrase: ApollosConfig.PASS.CERTIFICATES.SIGNER_KEY_PASSPHRASE,
+          keyFile: context.dataSources.Config?.PASS.CERTIFICATES.SIGNER_KEY,
+          passphrase:
+            context.dataSources.Config?.PASS.CERTIFICATES.SIGNER_KEY_PASSPHRASE,
         },
       },
       ...options,

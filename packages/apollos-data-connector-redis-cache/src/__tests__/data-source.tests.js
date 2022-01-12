@@ -1,20 +1,26 @@
 /* eslint-disable no-console */
 import { dataSource as Cache } from '../index';
 
+const buildCache = () => {
+  const cache = new Cache();
+  cache.initialize({ context: { church: { slug: 'apollos_demo' } } });
+  return cache;
+};
+
 describe('Redis Cache', () => {
   it("doesn't constructs with Redis env url", () => {
-    const cache = new Cache();
+    const cache = buildCache();
     expect(cache).toMatchSnapshot();
   });
   it('constructs with Redis env url', () => {
     process.env.REDIS_URL = 'localhost';
-    const cache = new Cache();
+    const cache = buildCache();
     expect(cache).toMatchSnapshot();
     cache.redis.disconnect();
     delete process.env.REDIS_URL;
   });
   it('gets data from redis', async () => {
-    const cache = new Cache();
+    const cache = buildCache();
     cache.redis = {};
     cache.redis.get = jest.fn(() =>
       Promise.resolve(JSON.stringify({ foo: 'bar' }))
@@ -26,7 +32,7 @@ describe('Redis Cache', () => {
     expect(cache.redis.get.mock.calls).toMatchSnapshot();
   });
   it('safely handle thrown errors in get', async () => {
-    const cache = new Cache();
+    const cache = buildCache();
     cache.redis = {};
     cache.redis.get = jest.fn(() => {
       throw new Error('Some Error');
@@ -37,13 +43,13 @@ describe('Redis Cache', () => {
     expect(result).toMatchSnapshot();
   });
   it('safely handles no redis instance', async () => {
-    const cache = new Cache();
+    const cache = buildCache();
     delete cache.redis;
     const result = await cache.get({ key: 'someKey' });
     expect(result).toMatchSnapshot();
   });
   it('sets data in redis', async () => {
-    const cache = new Cache();
+    const cache = buildCache();
     cache.redis = {};
     cache.redis.set = jest.fn(() => Promise.resolve());
 
@@ -53,7 +59,7 @@ describe('Redis Cache', () => {
     expect(cache.redis.set.mock.calls).toMatchSnapshot();
   });
   it('sets data in redis using an array key', async () => {
-    const cache = new Cache();
+    const cache = buildCache();
     cache.redis = {};
     cache.redis.set = jest.fn(() => Promise.resolve());
 
@@ -66,7 +72,7 @@ describe('Redis Cache', () => {
     expect(cache.redis.set.mock.calls).toMatchSnapshot();
   });
   it('safely handle thrown errors in set', async () => {
-    const cache = new Cache();
+    const cache = buildCache();
     cache.redis = {};
     cache.redis.set = jest.fn(() => {
       throw new Error('Some Error');
@@ -77,7 +83,7 @@ describe('Redis Cache', () => {
     expect(result).toMatchSnapshot();
   });
   it('increments integers in redis', async () => {
-    const cache = new Cache();
+    const cache = buildCache();
     cache.redis = {};
     cache.redis.incr = jest.fn(() => Promise.resolve(2));
 
@@ -88,7 +94,7 @@ describe('Redis Cache', () => {
   });
 
   it('safely swallows errors when incrementing', async () => {
-    const cache = new Cache();
+    const cache = buildCache();
     cache.redis = {};
     cache.redis.incr = jest.fn(() => {
       throw new Error('Some Error');
@@ -100,7 +106,7 @@ describe('Redis Cache', () => {
   });
 
   it('decrements integers in redis', async () => {
-    const cache = new Cache();
+    const cache = buildCache();
     cache.redis = {};
     cache.redis.decr = jest.fn(() => Promise.resolve(2));
 
@@ -111,7 +117,7 @@ describe('Redis Cache', () => {
   });
 
   it('safely swallows errors when decrementing', async () => {
-    const cache = new Cache();
+    const cache = buildCache();
     cache.redis = {};
     cache.redis.decr = jest.fn(() => {
       throw new Error('Some Error');

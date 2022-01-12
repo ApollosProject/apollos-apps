@@ -1,33 +1,47 @@
+/* eslint-disable no-console */
 /* eslint-disable no-param-reassign */
 import './pgEnum-fix';
 import { Sequelize, DataTypes } from 'sequelize';
-import ApollosConfig from '@apollosproject/config';
+import ApollosConfig, { fetchChurchConfig } from '@apollosproject/config';
+
 import connectJest from './test-connect';
 
-const sequelize =
-  process.env.NODE_ENV !== 'test'
-    ? // this extra && is required because the file is still compiled by the server
-      // even when it's not imported. not sure why.
-      ApollosConfig.DATABASE?.URL &&
-      new Sequelize(ApollosConfig.DATABASE.URL, {
-        ...(ApollosConfig?.DATABASE?.OPTIONS ||
-        ApollosConfig.DATABASE.URL.includes('localhost')
-          ? {}
-          : {
-              dialectOptions: {
-                ssl: { require: true, rejectUnauthorized: false },
-              },
-            }),
-      })
-    : connectJest();
+const sequelizes = {};
 
+const getSequelize = ({ churchSlug }) => {
+  if (sequelizes[churchSlug]) {
+    return sequelizes[churchSlug];
+  }
+  if (process.env.NODE_ENV === 'test') {
+    const sequelize = connectJest();
+    sequelizes[churchSlug] = sequelize;
+    return sequelizes[churchSlug];
+  }
+  const churchConfig = fetchChurchConfig({ churchSlug });
+  const sequelize =
+    churchConfig.DATABASE?.URL &&
+    new Sequelize(churchConfig.DATABASE.URL, {
+      ...(churchConfig?.DATABASE?.OPTIONS ||
+      churchConfig.DATABASE.URL.includes('localhost')
+        ? {}
+        : {
+            dialectOptions: {
+              ssl: { require: true, rejectUnauthorized: false },
+            },
+          }),
+    });
+  sequelizes[churchSlug] = sequelize;
+  return sequelizes[churchSlug];
+};
 class PostgresDataSource {
   initialize(config) {
     if (!ApollosConfig?.DATABASE?.URL && process.env.NODE_ENV !== 'test')
       throw new Error('Must specify DATABASE_URL variable!');
     this.context = config.context;
-    this.sequelize = sequelize;
-    this.model = sequelize.models[this.modelName];
+    this.sequelize = getSequelize({
+      churchSlug: config.context?.church?.slug,
+    });
+    this.model = this.sequelize.models[this.modelName];
   }
 
   getFromId(id, encodedId, { originType = null } = {}) {
@@ -56,75 +70,74 @@ export const isUuid = (uuid) => UUID_V4_REGEXP.test(uuid);
 
 // Define model is used to define the base attributes of a model
 // as well as any pre/post hooks.
-const defineModel = ({
-  modelName,
-  attributes,
-  resolveType,
-  sequelizeOptions = {},
-  external = false,
-}) => () => {
-  if (attributes.originId || attributes.originType) {
-    console.error(
-      `origin_id and origin_type are reserved attribute names. Use 'external = true' or pick other attributes.`
-    );
-  }
-  const model = sequelize.define(
+const defineModel =
+  ({
     modelName,
-    {
-      id: {
-        primaryKey: true,
-        type: DataTypes.UUID,
-        defaultValue: Sequelize.literal('uuid_generate_v4()'),
-      },
-      apollosId: {
-        type: DataTypes.STRING,
-        allowNull: true, // we set this value with an "afterCreate" hook if not set.
-        unique: true,
-      },
-      apollosType: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      ...(external
-        ? {
-            originId: { type: DataTypes.STRING, allowNull: false },
-            originType: { type: DataTypes.STRING, allowNull: false },
-          }
-        : {}),
-      ...attributes,
-    },
-    {
-      underscored: true,
-      ...sequelizeOptions,
-      hooks: {
-        ...(sequelizeOptions?.hooks || {}),
-        beforeValidate: (instance, options) => {
-          if (resolveType && !instance.apollosType) {
-            instance.apollosType = resolveType(instance);
-          }
-          sequelizeOptions?.hooks?.beforeValidate?.(instance, options);
+    attributes,
+    resolveType,
+    sequelizeOptions = {},
+    external = false,
+  }) =>
+  (context) => {
+    const sequelize = getSequelize({ churchSlug: context?.church?.slug });
+    const model = sequelize.define(
+      modelName,
+      {
+        id: {
+          primaryKey: true,
+          type: DataTypes.UUID,
+          defaultValue: Sequelize.literal('uuid_generate_v4()'),
         },
-        afterCreate: async (instance, options) => {
-          if (!instance.apollosId) {
-            instance.apollosId = `${instance.apollosType}:${instance.id}`;
-            await instance.save({
-              transaction: options.transaction,
-            });
-          }
+        apollosId: {
+          type: DataTypes.STRING,
+          allowNull: true, // we set this value with an "afterCreate" hook if not set.
+          unique: true,
         },
-      },
-      indexes: [
-        { unique: true, fields: ['apollos_id'] },
+        apollosType: {
+          type: DataTypes.STRING,
+          allowNull: false,
+        },
         ...(external
-          ? [{ unique: true, fields: ['origin_id', 'origin_type'] }]
-          : []),
-        ...(sequelizeOptions?.indexes || []),
-      ],
-    }
-  );
+          ? {
+              originId: { type: DataTypes.STRING, allowNull: false },
+              originType: { type: DataTypes.STRING, allowNull: false },
+            }
+          : {}),
+        ...attributes,
+      },
+      {
+        underscored: true,
+        ...sequelizeOptions,
+        hooks: {
+          ...(sequelizeOptions?.hooks || {}),
+          beforeValidate: (instance, options) => {
+            if (resolveType && !instance.apollosType) {
+              instance.apollosType = resolveType(instance);
+            }
+            // eslint-disable-next-line no-unused-expressions
+            sequelizeOptions?.hooks?.beforeValidate?.(instance, options);
+          },
+          afterCreate: async (instance, options) => {
+            if (!instance.apollosId) {
+              instance.apollosId = `${instance.apollosType}:${instance.id}`;
+              await instance.save({
+                transaction: options.transaction,
+              });
+            }
+          },
+        },
+        indexes: [
+          { unique: true, fields: ['apollos_id'] },
+          ...(external
+            ? [{ unique: true, fields: ['origin_id', 'origin_type'] }]
+            : []),
+          ...(sequelizeOptions?.indexes || []),
+        ],
+      }
+    );
 
-  return model;
-};
+    return model;
+  };
 
 /**
  * @callback ConfigureModelCallback
@@ -138,10 +151,19 @@ const defineModel = ({
  *
  * @param {ConfigureModelCallback} callback
  */
-const configureModel = (callback) => () => callback({ sequelize });
+const configureModel = (callback) => (context) => {
+  const sequelize = sequelizes[context?.church?.slug];
+  return callback({ sequelize });
+};
 
-// Replaces DB migrations - alters the tables so they match the structure defined in code.
-// Potentially harmful - will clober columns and tables that no longer exist - so use with caution.
-const sync = async (options) => sequelize.sync({ ...options, alter: true });
+const sequelize = getSequelize({
+  churchSlug: 'global',
+});
 
-export { defineModel, configureModel, sequelize, sync, PostgresDataSource };
+export {
+  defineModel,
+  configureModel,
+  sequelize,
+  PostgresDataSource,
+  getSequelize,
+};

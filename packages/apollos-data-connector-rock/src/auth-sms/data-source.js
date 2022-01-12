@@ -1,7 +1,6 @@
 import crypto from 'crypto';
 import { AuthenticationError, UserInputError } from 'apollo-server';
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
-import ApollosConfig from '@apollosproject/config';
 import PhoneNumber from 'awesome-phonenumber';
 import { fieldsAsObject } from '../utils';
 
@@ -171,7 +170,8 @@ export default class AuthSmsDataSource extends RockApolloDataSource {
     await this.context.dataSources.Sms.sendSms({
       to: e164,
       body: `${
-        ApollosConfig?.SMS_LOGIN_MESSAGE || 'Thanks for logging in!'
+        this.context.dataSources.Config?.SMS_LOGIN_MESSAGE ||
+        'Thanks for logging in!'
       } Your code is ${pin}`,
     });
 

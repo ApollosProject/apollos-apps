@@ -1,8 +1,7 @@
+import { uploadSchema } from '@apollosproject/data-schema';
 import { GraphQLUpload, graphqlUploadExpress } from 'graphql-upload';
 
-export const schema = `
-  scalar Upload
-`;
+export { uploadSchema as schema };
 
 export const resolver = {
   Upload: GraphQLUpload,

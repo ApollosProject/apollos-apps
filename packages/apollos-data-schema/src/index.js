@@ -1,8 +1,29 @@
-import { gql } from '@apollo/client';
+import { gql } from 'apollo-server';
 import {
   extendForEachContentItemType,
   addInterfacesForEachContentItemType,
 } from './utils';
+
+export const nodeSchema = gql`
+  extend type Query {
+    node(id: ID!): Node
+  }
+
+  interface Node {
+    id: ID!
+  }
+`;
+
+export const paginationSchema = gql`
+  type PaginationInfo {
+    startCursor: String
+    endCursor: String
+  }
+`;
+
+export const uploadSchema = gql`
+  scalar Upload
+`;
 
 export const interfacesSchema = gql`
   interface ContentNode {
@@ -150,6 +171,39 @@ export const authSchema = gql`
   }
 `;
 
+export const authenticationSchema = gql`
+  type AuthenticatedPerson {
+    person: Person
+    accessToken: String
+    refreshToken: String
+  }
+
+  extend type Mutation {
+    requestLogin(identity: AuthenticationIdentityInput!): LoginAttempt
+    requestRegister(identity: AuthenticationIdentityInput!): LoginAttempt
+    validateLogin(
+      identity: AuthenticationIdentityInput!
+      otp: String!
+    ): AuthenticatedPerson
+    refreshSession(refreshToken: String!): AuthenticatedPerson
+  }
+
+  enum LoginAttemptResult {
+    SUCCESS
+    NO_USER
+    EXISTING_USER
+  }
+
+  type LoginAttempt {
+    result: LoginAttemptResult
+  }
+
+  input AuthenticationIdentityInput {
+    email: String
+    phone: String
+  }
+`;
+
 export const peopleSchema = gql`
   enum GENDER {
     Male
@@ -163,6 +217,7 @@ export const peopleSchema = gql`
     NickName
     Gender
     BirthDate
+    Phone
   }
 
   input UpdateProfileInput {
@@ -179,6 +234,7 @@ export const peopleSchema = gql`
     gender: GENDER
     birthDate: String
     photo: ImageMediaSource
+    phone: String
   }
 
   extend type Mutation {
@@ -873,6 +929,7 @@ export const featuresSchema = gql`
     OPEN_AUTHENTICATED_URL
     OPEN_NODE
     OPEN_CHANNEL
+    OPEN_FEED
     COMPLETE_NODE
   }
 
@@ -1059,22 +1116,9 @@ export const featuresSchema = gql`
     featureFeed: FeatureFeed
   }
 
-  extend type MediaContentItem implements FeaturesNode {
-    features: [Feature] @deprecated(reason: "Use featureFeed")
-    featureFeed: FeatureFeed
-  }
-
-  type AppTab {
-    title: String
-    icon: String
-    feed: FeatureFeed
-  }
-
   extend type Query {
-    tabs(campusId: ID, tags: [String]): [AppTab] @cacheControl(scope: PRIVATE)
     tabFeedFeatures(tab: Tab!, campusId: ID, tags: [String]): FeatureFeed
       @cacheControl(scope: PRIVATE)
-      @deprecated(reason: "Use tabs")
     userFeedFeatures: [Feature]
       @cacheControl(scope: PRIVATE)
       @deprecated(reason: "Use homeFeedFeatures or discoverFeedFeatures")
@@ -1091,7 +1135,6 @@ export const featuresSchema = gql`
     READ
     WATCH
     PRAY
-    GIVE
     CONNECT
   }
 `;
@@ -1103,8 +1146,6 @@ export const followSchema = gql`
     ignoreFollowRequest(requestPersonId: ID!): Follow
 
     acceptFollowRequest(requestPersonId: ID!): Follow
-
-    unfollowPerson(followedPersonId: ID!): Follow
   }
 
   extend type Query {

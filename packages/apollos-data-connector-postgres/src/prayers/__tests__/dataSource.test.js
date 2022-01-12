@@ -1,6 +1,6 @@
 /* eslint-disable import/named, new-cap */
-import ApollosConfig from '@apollosproject/config';
-import { sequelize } from '../../postgres/index';
+import { dataSource as ConfigDataSource } from '@apollosproject/config';
+import { getSequelize } from '../../postgres/index';
 import {
   Media,
   Tag,
@@ -22,35 +22,44 @@ let person3;
 
 let currentPerson;
 
+const Config = new ConfigDataSource();
+Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
+
 const context = {
   dataSources: {
     Person: {
       getCurrentPerson: () => currentPerson,
       getCurrentPersonId: () => currentPerson.id,
     },
+    Config,
   },
+  church: { slug: 'apollos_demo' },
 };
-
-ApollosConfig.loadJs({
-  CONTENT: {},
-});
 
 const PrayerRequestDataSource = PrayerRequest.dataSource;
 
 describe('Apollos Postgres Prayer Request DataSource', () => {
+  let sequelize;
+  let globalSequelize;
+
   beforeEach(async () => {
-    await setupPostgresTestEnv([
-      Media,
-      ContentItem,
-      ContentItemCategory,
-      Follow,
-      Tag,
-      Person,
-      Campus,
-      PrayerRequest,
-      Notification,
-      NotificationPreference,
-    ]);
+    sequelize = getSequelize({ churchSlug: 'apollos_demo' });
+    globalSequelize = getSequelize({ churchSlug: 'global' });
+    await setupPostgresTestEnv(
+      [
+        Media,
+        ContentItem,
+        ContentItemCategory,
+        Follow,
+        Tag,
+        Person,
+        Campus,
+        PrayerRequest,
+        Notification,
+        NotificationPreference,
+      ],
+      { church: { slug: 'apollos_demo' } }
+    );
     person1 = await sequelize.models.people.create({
       originId: '1',
       originType: 'rock',
@@ -67,6 +76,7 @@ describe('Apollos Postgres Prayer Request DataSource', () => {
   });
   afterEach(async () => {
     await sequelize.drop({ cascade: true });
+    await globalSequelize.drop({ cascade: true });
   });
 
   it('adds a PrayerRequest', async () => {
@@ -86,6 +96,7 @@ describe('Apollos Postgres Prayer Request DataSource', () => {
     const Prayer = new PrayerRequestDataSource();
     Prayer.initialize({
       context: {
+        ...context,
         dataSources: {
           ...context.dataSources,
           Notification: { createAndSend: jest.fn() },

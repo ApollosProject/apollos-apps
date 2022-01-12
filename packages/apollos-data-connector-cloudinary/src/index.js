@@ -1,14 +1,4 @@
-/* eslint-disable import/prefer-default-export */
-import withCloudinary from './cloudinary';
+import dataSource from './data-source';
+import resolver from './resolver';
 
-export const resolver = {
-  ImageMediaSource: {
-    uri: ({ uri = '' }) => {
-      if (!uri || typeof uri !== 'string') return null;
-      if (uri.startsWith('http')) return withCloudinary(uri);
-      if (uri.startsWith('//')) return withCloudinary(`https:${uri}`);
-
-      return uri;
-    },
-  },
-};
+export { dataSource, resolver };

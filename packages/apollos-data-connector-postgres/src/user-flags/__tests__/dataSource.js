@@ -1,6 +1,7 @@
 /* eslint-disable import/named */
+import { dataSource as ConfigDataSource } from '@apollosproject/config';
 import { createGlobalId } from '@apollosproject/server-core';
-import { sequelize } from '../../postgres/index';
+import { getSequelize } from '../../postgres/index';
 import CommentDataSource from '../../comments/dataSource';
 import UserFlagDataSource from '../dataSource';
 import * as UserFlags from '../index';
@@ -20,31 +21,44 @@ import { setupPostgresTestEnv } from '../../utils/testUtils';
 let person1;
 let person2;
 let currentPerson;
+
+const Config = new ConfigDataSource();
+Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
+
 const context = {
   dataSources: {
     Person: {
       getCurrentPersonId: () => currentPerson.id,
     },
+    Config,
   },
+  church: { slug: 'apollos_demo' },
 };
 
 describe('Apollos Postgres Comment Flags DataSource', () => {
   let comment;
   let commentDataSource;
+  let sequelize;
+  let globalSequelize;
 
   beforeEach(async () => {
-    await setupPostgresTestEnv([
-      Person,
-      ContentItem,
-      Media,
-      ContentItemCategory,
-      NotificationPreference,
-      Campus,
-      Follow,
-      UserLike,
-      Comment,
-      UserFlags,
-    ]);
+    sequelize = getSequelize({ churchSlug: 'apollos_demo' });
+    globalSequelize = getSequelize({ churchSlug: 'global' });
+    await setupPostgresTestEnv(
+      [
+        Person,
+        ContentItem,
+        Media,
+        ContentItemCategory,
+        NotificationPreference,
+        Campus,
+        Follow,
+        UserLike,
+        Comment,
+        UserFlags,
+      ],
+      { church: { slug: 'apollos_demo' } }
+    );
 
     person1 = await sequelize.models.people.create({
       originId: '1',
@@ -67,6 +81,7 @@ describe('Apollos Postgres Comment Flags DataSource', () => {
 
   afterEach(async () => {
     await sequelize.drop({ cascade: true });
+    await globalSequelize.drop({ cascade: true });
   });
 
   it('should support flagging comment', async () => {

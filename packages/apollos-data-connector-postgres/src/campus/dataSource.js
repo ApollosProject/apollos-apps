@@ -1,4 +1,3 @@
-import ApollosConfig from '@apollosproject/config';
 import { get } from 'lodash';
 import { parseGlobalId } from '@apollosproject/server-core';
 import { PostgresDataSource } from '../postgres';
@@ -61,7 +60,7 @@ export default class Campus extends PostgresDataSource {
   getAddressField = ({ field, root }) => {
     if (root.digital) {
       return (
-        get(ApollosConfig, `ONLINE_CAMPUS.FIELDS.${field}`) ||
+        get(this.context.dataSources.Config, `ONLINE_CAMPUS.FIELDS.${field}`) ||
         this.ONLINE_CAMPUS_FIELDS[field]
       );
     }

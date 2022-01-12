@@ -1,13 +1,20 @@
+/* eslint-disable no-console */
 import { get } from 'lodash';
 import { createGlobalId } from '@apollosproject/server-core';
 
-const id = (type) => ({ apollosId, id: rootId }) =>
-  apollosId || createGlobalId(rootId, type);
+const id =
+  (type) =>
+  ({ apollosId, id: rootId }) =>
+    apollosId || createGlobalId(rootId, type);
 
 const resolver = {
   Feature: {
     // Implementors must attach __typename to root.
     __resolveType: ({ __typename, apollosType }) => __typename || apollosType,
+  },
+  FeatureAction: {
+    relatedNode: (root, args, { dataSources: { Feature } }) =>
+      root.relatedNode || Feature.getRelatedNode(root),
   },
   // deprecated
   WeekendContentItem: {
@@ -60,6 +67,9 @@ const resolver = {
   ActionBarAction: {
     id: id('ActionBarAction'),
   },
+  ActionTableAction: {
+    id: id('ActionTableAction'),
+  },
   ScriptureFeature: {
     scriptures: ({ data }, args, { dataSources: { Scripture } }) =>
       Scripture.getScriptures(data.reference, data.version),
@@ -75,14 +85,11 @@ const resolver = {
         'userFeedFeatures is deprecated and removed. Use tabFeedFeatures.'
       ),
   },
-  ActionListFeature: {
-    id: id('ActionListFeature'),
-  },
-  ActionBarFeature: {
-    id: id('ActionBarFeature'),
-  },
   ActionTableFeature: {
-    id: id('ActionTableFeature'),
+    actions: ({ actions, data }, args, { dataSources: { Feature } }) =>
+      actions ||
+      data?.actions?.map((action) => Feature.attachActionIds(action)),
+    id: id('ActiontableFeature'),
   },
   HeroListFeature: {
     id: id('HeroListFeature'),
@@ -105,10 +112,14 @@ const resolver = {
   AddCommentFeature: {
     id: id('AddCommentFeature'),
   },
+  ActionListFeature: {
+    id: id('ActionListFeature'),
+  },
+  ActionBarFeature: {
+    id: id('ActionBarFeature'),
+  },
   WebviewFeature: {
-    height: ({ data }) => data.height || 400,
     id: id('WebviewFeature'),
-    url: ({ data }) => data.url,
   },
   FollowPeopleFeature: {
     id: id('FollowPeopleFeature'),

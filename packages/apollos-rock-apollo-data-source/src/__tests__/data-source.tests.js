@@ -68,13 +68,6 @@ describe('RestDataSource', () => {
       expect(getFn.mock.calls[0][0]).toBe('TestResource?%24top=20&%24skip=26');
     });
 
-    it('throws on an invalid `after` cursor', () => {
-      const cursor = dataSource.request('TestResource');
-      const after = createCursor({ position: 25 });
-      const result = dataSource.paginate({ cursor, args: { after } });
-      expect(result).rejects.toThrow();
-    });
-
     it('sets page size', () => {
       const cursor = dataSource.request('TestResource');
       const result = dataSource.paginate({ cursor, args: { first: 2 } });

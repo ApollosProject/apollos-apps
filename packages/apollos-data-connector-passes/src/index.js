@@ -9,7 +9,7 @@ export { passSchema as schema } from '@apollosproject/data-schema';
 
 const serverMiddleware = ({ app, getContext }) => {
   app.get('/pass/:template', async (req, res) => {
-    const context = getContext({ req });
+    const context = await getContext({ req });
     let passData;
 
     try {
@@ -26,6 +26,7 @@ const serverMiddleware = ({ app, getContext }) => {
     );
     const pass = new PassGenerator({
       model: templatePath,
+      context,
     });
 
     // Attach pass images if provided in template

@@ -1,6 +1,6 @@
+/* eslint-disable no-console */
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
 import moment from 'moment-timezone';
-import ApollosConfig from '@apollosproject/config';
 import { get } from 'lodash';
 
 export default class Event extends RockApolloDataSource {
@@ -16,7 +16,7 @@ export default class Event extends RockApolloDataSource {
 
   findRecent = () => {
     let request = this.request();
-    if (!get(ApollosConfig, 'ROCK.USE_PLUGIN', false)) {
+    if (!get(this.Config, 'ROCK.USE_PLUGIN', false)) {
       console.warn(
         'Fetching public campuses is not possible without the Apollos Plugin\n\nReturning all campuses.'
       );
@@ -53,9 +53,10 @@ export default class Event extends RockApolloDataSource {
       .cache({ ttl: 60 })
       .find(eventItemId)
       .get();
-    const imageUrl = await this.context.dataSources.BinaryFiles.findOrReturnImageUrl(
-      { id: event.photoId }
-    );
+    const imageUrl =
+      await this.context.dataSources.BinaryFiles.findOrReturnImageUrl({
+        id: event.photoId,
+      });
     if (imageUrl) {
       return {
         sources: [{ uri: imageUrl }],
@@ -68,11 +69,8 @@ export default class Event extends RockApolloDataSource {
     const iCal = schedule.iCalendarContent;
     const dateTimes = iCal.match(/DTEND:(\w+).*DTSTART:(\w+)/s);
     return {
-      start: moment
-        .tz(dateTimes[2], ApollosConfig.ROCK.TIMEZONE)
-        .utc()
-        .format(),
-      end: moment.tz(dateTimes[1], ApollosConfig.ROCK.TIMEZONE).utc().format(),
+      start: moment.tz(dateTimes[2], this.Config.ROCK.TIMEZONE).utc().format(),
+      end: moment.tz(dateTimes[1], this.Config.ROCK.TIMEZONE).utc().format(),
     };
   };
 }

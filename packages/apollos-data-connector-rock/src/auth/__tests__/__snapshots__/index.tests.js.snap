@@ -78,7 +78,7 @@ Object {
     "currentUser": Object {
       "id": "AuthenticatedUser:820e872a1e13865c139d7cae82e71ac7",
       "profile": Object {
-        "email": null,
+        "email": "isaac.hardy@newspring.cc",
       },
     },
   },

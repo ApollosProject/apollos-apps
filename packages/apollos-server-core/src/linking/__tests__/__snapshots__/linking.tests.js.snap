@@ -1,80 +1,74 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Universal linking apple-app-site-association should handle custom values 1`] = `
-Array [
-  Array [
-    "Content-Type",
-    "application/json",
-  ],
-]
-`;
+exports[`Universal linking apple-app-site-association should handle custom values 1`] = `Array []`;
 
-exports[`Universal linking apple-app-site-association should handle custom values 2`] = `
-Array [
-  Array [
-    "{\\"applinks\\":{\\"apps\\":[],\\"details\\":[{\\"appID\\":\\"test_team_id.test_id\\",\\"paths\\":[\\"/app-link/*\\"]}]},\\"someOtherKey\\":\\"value \\"}",
-  ],
-]
-`;
+exports[`Universal linking apple-app-site-association should handle custom values 2`] = `Array []`;
 
-exports[`Universal linking apple-app-site-association should return the correct values 1`] = `
-Array [
-  Array [
-    "Content-Type",
-    "application/json",
-  ],
-]
-`;
+exports[`Universal linking apple-app-site-association should return the correct values 1`] = `Array []`;
 
-exports[`Universal linking apple-app-site-association should return the correct values 2`] = `
-Array [
-  Array [
-    "{\\"applinks\\":{\\"apps\\":[],\\"details\\":[{\\"appID\\":\\"test_team_id.test_id\\",\\"paths\\":[\\"/app-link/*\\"]}]}}",
-  ],
-]
-`;
+exports[`Universal linking apple-app-site-association should return the correct values 2`] = `Array []`;
 
-exports[`Universal linking assetlinks.json should handle custom values 1`] = `
-Array [
-  Array [
-    "Content-Type",
-    "application/json",
-  ],
-]
-`;
+exports[`Universal linking assetlinks.json should handle custom values 1`] = `Array []`;
 
-exports[`Universal linking assetlinks.json should handle custom values 2`] = `
-Array [
-  Array [
-    "[{\\"relation\\":[\\"delegate_permission/common.handle_all_urls\\"],\\"target\\":{\\"namespace\\":\\"android_app\\",\\"package_name\\":\\"some_app_id\\",\\"sha256_cert_fingerprints\\":[\\"some-google-keystore\\"]},\\"someOtherKey\\":\\"value\\"}]",
-  ],
-]
-`;
+exports[`Universal linking assetlinks.json should handle custom values 2`] = `Array []`;
 
-exports[`Universal linking assetlinks.json should return the correct values 1`] = `
-Array [
-  Array [
-    "Content-Type",
-    "application/json",
-  ],
-]
-`;
+exports[`Universal linking assetlinks.json should return the correct values 1`] = `Array []`;
 
-exports[`Universal linking assetlinks.json should return the correct values 2`] = `
-Array [
-  Array [
-    "[{\\"relation\\":[\\"delegate_permission/common.handle_all_urls\\"],\\"target\\":{\\"namespace\\":\\"android_app\\",\\"package_name\\":\\"some_app_id\\",\\"sha256_cert_fingerprints\\":[\\"some-google-keystore\\"]}}]",
-  ],
-]
-`;
+exports[`Universal linking assetlinks.json should return the correct values 2`] = `Array []`;
 
 exports[`Universal linking can send users to a link determined by a custom function 1`] = `
 Array [
   Array [
     Object {
+      "Config": Config {
+        "ANALYTICS": Object {},
+        "APP": Object {
+          "DEEP_LINK_HOST": "apolloschurchapp",
+          "UNIVERSAL_LINK_HOST": "https://apollos.api",
+        },
+        "BIBLE_API": Object {},
+        "CLOUDINARY": Object {},
+        "ROCK": Object {},
+        "ROCK_CONSTANTS": Object {},
+        "ROCK_MAPPINGS": Object {
+          "CONTENT_ITEM": Object {},
+        },
+        "UNIVERSAL_LINKS": Object {
+          "APPLE_APP_ID": "test_id",
+          "APPLE_TEAM_ID": "test_team_id",
+          "APP_STORE_LINK": "app-store-link",
+          "GOOGLE_APP_ID": "some_app_id",
+          "GOOGLE_KEYSTORE_SHA256": "some-google-keystore",
+          "PLAY_STORE_LINK": "play-store-link",
+        },
+        "config": Object {
+          "ANALYTICS": Object {},
+          "APP": Object {
+            "DEEP_LINK_HOST": "apolloschurchapp",
+            "UNIVERSAL_LINK_HOST": "https://apollos.api",
+          },
+          "BIBLE_API": Object {},
+          "CLOUDINARY": Object {},
+          "ROCK": Object {},
+          "ROCK_CONSTANTS": Object {},
+          "ROCK_MAPPINGS": Object {
+            "CONTENT_ITEM": Object {},
+          },
+          "UNIVERSAL_LINKS": Object {
+            "APPLE_APP_ID": "test_id",
+            "APPLE_TEAM_ID": "test_team_id",
+            "APP_STORE_LINK": "app-store-link",
+            "GOOGLE_APP_ID": "some_app_id",
+            "GOOGLE_KEYSTORE_SHA256": "some-google-keystore",
+            "PLAY_STORE_LINK": "play-store-link",
+          },
+        },
+      },
       "platform": "ios",
       "req": Object {
-        "headers": "",
+        "headers": Object {
+          "x-church": "apollos_demo",
+        },
         "path": "some-path-value",
       },
     },

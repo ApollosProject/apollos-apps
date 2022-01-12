@@ -50,21 +50,6 @@ export default class Person extends RockApolloDataSource {
   getFromId = (id) =>
     this.request().filter(`Id eq ${id}`).expand('Photo').first();
 
-  getFromAliasId = async (id) => {
-    // Fetch the PersonAlias, selecting only the PersonId.
-    const personAlias = await this.request('/PersonAlias')
-      .filter(`Id eq ${id}`)
-      .select('PersonId')
-      .first();
-
-    // If we have a personAlias, return him.
-    if (personAlias) {
-      return this.getFromId(personAlias.personId);
-    }
-    // Otherwise, return null.
-    return null;
-  };
-
   create = async (profile) => {
     const rockUpdateFields = this.mapApollosFieldsToRock(profile);
     if (process.env.AUTOMERGE === 'true') {
@@ -87,25 +72,13 @@ export default class Person extends RockApolloDataSource {
     return id;
   };
 
-  mapGender = ({ gender }) => {
-    // If the gender is coming from Rock (an int) map into the string value.
-    if (typeof gender === 'number') {
-      return Object.keys(RockGenderMap).find(
-        (key) => RockGenderMap[key] === gender
-      );
-    }
-    // Otherwise return the string value.
-    return gender;
-  };
-
-  mapApollosFieldsToRock = (fields) => {
-    return mapApollosFieldsToRock(fields);
-  };
+  mapApollosFieldsToRock = (fields) => mapApollosFieldsToRock(fields);
 
   // fields is an array of objects matching the pattern
   // [{ field: String, value: String }]
   updateProfile = async (fields) => {
-    const currentPerson = await this.context.dataSources.Auth.getCurrentPerson();
+    const currentPerson =
+      await this.context.dataSources.Person.getCurrentPerson();
 
     if (!currentPerson) throw new AuthenticationError('Invalid Credentials');
 
@@ -114,7 +87,7 @@ export default class Person extends RockApolloDataSource {
 
     // Because we have a custom enum for Gender, we do this transform prior to creating our "update object"
     // i.e. our schema will send Gender: 1 as Gender: Male
-    await this.patch(`/People/${currentPerson.id}`, rockUpdateFields);
+    await this.patch(`/People/${currentPerson.originId}`, rockUpdateFields);
 
     return {
       ...currentPerson,
@@ -124,10 +97,11 @@ export default class Person extends RockApolloDataSource {
 
   uploadProfileImage = async (file, length) => {
     const {
-      dataSources: { Auth, BinaryFiles },
+      dataSources: { BinaryFiles },
     } = this.context;
 
-    const currentPerson = await Auth.getCurrentPerson();
+    const currentPerson =
+      await this.context.dataSources.Person.getCurrentPerson();
 
     if (!currentPerson) throw new AuthenticationError('Invalid Credentials');
 

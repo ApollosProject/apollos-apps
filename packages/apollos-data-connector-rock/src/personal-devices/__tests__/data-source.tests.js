@@ -1,32 +1,23 @@
-import ApollosConfig from '@apollosproject/config';
+import { dataSource as ConfigDataSource } from '@apollosproject/config';
 import { AuthenticationError } from 'apollo-server';
 import DataSource from '../data-source';
 import { buildGetMock } from '../../test-utils';
 
-ApollosConfig.loadJs({
-  ROCK: {
-    API_URL: 'https://apollosrock.newspring.cc/api',
-    API_TOKEN: 'some-rock-token',
-    IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
-  },
-  ROCK_MAPPINGS: {
-    MOBILE_DEVICE_TYPE_ID: 671,
-  },
-});
-
-const buildDataSource = (Auth) => {
+const buildDataSource = (Person) => {
   const dataSource = new DataSource();
-  dataSource.context = { dataSources: { Auth } };
+  const Config = new ConfigDataSource();
+  Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
+  dataSource.context = { dataSources: { Person, Config } };
   return dataSource;
 };
 
-const AuthMock = { getCurrentPerson: () => ({ primaryAliasId: 123 }) };
+const AuthMock = { getCurrentPerson: () => ({ originId: 123 }) };
 
 describe('Personal device data source', () => {
   it("must post a user's device to Rock", async () => {
     const dataSource = buildDataSource(AuthMock);
     dataSource.get = buildGetMock(
-      [[null], [null], [{ Id: '123' }]],
+      [[null], [{ PersonAliasId: '123' }], [{ Id: '123' }]],
       dataSource
     );
     dataSource.post = buildGetMock('123', dataSource);
@@ -55,7 +46,9 @@ describe('Personal device data source', () => {
   });
   it('raise an error without a logged in user', async () => {
     const dataSource = buildDataSource({
-      getCurrentPerson: () => throw new AuthenticationError(),
+      getCurrentPerson: () => {
+        throw new AuthenticationError();
+      },
     });
     dataSource.get = buildGetMock([], dataSource);
     await expect(

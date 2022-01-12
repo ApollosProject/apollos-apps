@@ -1,18 +1,10 @@
-import ApollosConfig from '@apollosproject/config';
+import { dataSource as ConfigDataSource } from '@apollosproject/config';
 import Person from '../data-source';
 import { buildGetMock } from '../../test-utils';
 
-ApollosConfig.loadJs({
-  ROCK: {
-    API_URL: 'https://apollosrock.newspring.cc/api',
-    API_TOKEN: 'some-rock-token',
-    IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
-  },
-});
-
 const auth = (dataSource) => ({
   getCurrentPerson: buildGetMock(
-    { Id: 51, FirstName: 'Vincent', LastName: 'Wilson' },
+    { id: 51, FirstName: 'Vincent', LastName: 'Wilson', originId: 51 },
     dataSource
   ),
 });
@@ -24,42 +16,22 @@ describe('Person', () => {
 
   it('gets person from id', () => {
     const dataSource = new Person();
+    const Config = new ConfigDataSource();
+    Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
+    dataSource.context = { dataSources: { Config } };
+
     dataSource.get = buildGetMock([{ Id: 51 }], dataSource);
     const result = dataSource.getFromId(51);
     expect(result).resolves.toMatchSnapshot();
     expect(dataSource.get.mock.calls).toMatchSnapshot();
   });
 
-  it('gets person from aliasId', async () => {
-    const dataSource = new Person();
-    dataSource.get = jest.fn(() => Promise.resolve([{ personId: 123 }]));
-    dataSource.getFromId = jest.fn(() =>
-      Promise.resolve({ id: 321, firstName: 'John' })
-    );
-
-    const result = await dataSource.getFromAliasId(51);
-    expect(result).toMatchSnapshot('The result from getAliasId');
-    expect(dataSource.get.mock.calls).toMatchSnapshot(
-      'The call to fetch the alias id'
-    );
-    expect(dataSource.getFromId.mock.calls).toMatchSnapshot(
-      'The call to fetch the person by id'
-    );
-  });
-
-  it('returns null when getPersonByAliasId is not valid', async () => {
-    const dataSource = new Person();
-    dataSource.get = jest.fn(() => Promise.resolve([]));
-
-    const result = await dataSource.getFromAliasId(51);
-    expect(result).toMatchSnapshot('The result from getAliasId');
-    expect(dataSource.get.mock.calls).toMatchSnapshot(
-      'The call to fetch the alias id'
-    );
-  });
-
   it('creates a profile', () => {
     const dataSource = new Person();
+    const Config = new ConfigDataSource();
+    Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
+    dataSource.context = { dataSources: { Config } };
+
     dataSource.post = buildGetMock({}, dataSource);
     dataSource.patch = buildGetMock({}, dataSource);
     const result = dataSource.create({
@@ -73,10 +45,14 @@ describe('Person', () => {
 
   it("updates a user's profile attributes", () => {
     const dataSource = new Person();
-    const Auth = auth(dataSource);
+    // Postgres Person
+    const PGPerson = auth(dataSource);
+    const Config = new ConfigDataSource();
+    Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
+
     dataSource.context = {
       rockCookie: 'fakeCookie',
-      dataSources: { Auth },
+      dataSources: { Config, Person: PGPerson },
     };
     dataSource.patch = buildGetMock({}, dataSource);
     const result = dataSource.updateProfile([
@@ -86,16 +62,20 @@ describe('Person', () => {
       },
     ]);
     expect(result).resolves.toMatchSnapshot();
-    expect(Auth.getCurrentPerson.mock.calls).toMatchSnapshot();
+    expect(PGPerson.getCurrentPerson.mock.calls).toMatchSnapshot();
     expect(dataSource.patch.mock.calls).toMatchSnapshot();
   });
 
   it("updates a user's gender attributes", () => {
     const dataSource = new Person();
-    const Auth = auth(dataSource);
+    // Postgres Person
+    const PGPerson = auth(dataSource);
+    const Config = new ConfigDataSource();
+    Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
+
     dataSource.context = {
       rockCookie: 'fakeCookie',
-      dataSources: { Auth },
+      dataSources: { Config, Person: PGPerson },
     };
     dataSource.patch = buildGetMock({}, dataSource);
     const result = dataSource.updateProfile([
@@ -105,16 +85,21 @@ describe('Person', () => {
       },
     ]);
     expect(result).resolves.toMatchSnapshot('result');
-    expect(Auth.getCurrentPerson.mock.calls).toMatchSnapshot('current person');
+    expect(PGPerson.getCurrentPerson.mock.calls).toMatchSnapshot(
+      'current person'
+    );
     expect(dataSource.patch.mock.calls).toMatchSnapshot('rock patch');
   });
 
   it("updates a user's birth date attributes", async () => {
     const dataSource = new Person();
-    const Auth = auth(dataSource);
+    const PGPerson = auth(dataSource);
+    const Config = new ConfigDataSource();
+    Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
+
     dataSource.context = {
       rockCookie: 'fakeCookie',
-      dataSources: { Auth },
+      dataSources: { Person: PGPerson, Config },
     };
     dataSource.patch = buildGetMock({}, dataSource);
     const result = await dataSource.updateProfile([
@@ -124,17 +109,20 @@ describe('Person', () => {
       },
     ]);
     expect(result).toMatchSnapshot();
-    expect(Auth.getCurrentPerson.mock.calls).toMatchSnapshot();
+    expect(PGPerson.getCurrentPerson.mock.calls).toMatchSnapshot();
     expect(dataSource.patch.mock.calls).toMatchSnapshot();
   });
 
   it('throws an error setting an invalid birth date', () => {
     expect.assertions(1);
     const dataSource = new Person();
-    const Auth = auth(dataSource);
+    const PGPerson = auth(dataSource);
+    const Config = new ConfigDataSource();
+    Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
+
     dataSource.context = {
       rockCookie: 'fakeCookie',
-      dataSources: { Auth },
+      dataSources: { Person: PGPerson, Config },
     };
     dataSource.patch = buildGetMock({}, dataSource);
     const result = dataSource.updateProfile([
@@ -149,10 +137,13 @@ describe('Person', () => {
   it('Throws an error if trying to set an invalid gender', () => {
     expect.assertions(1);
     const dataSource = new Person();
-    const Auth = auth(dataSource);
+    const PGPerson = auth(dataSource);
+    const Config = new ConfigDataSource();
+    Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
+
     dataSource.context = {
       rockCookie: 'fakeCookie',
-      dataSources: { Auth },
+      dataSources: { Person: PGPerson, Config },
     };
     dataSource.patch = buildGetMock({}, dataSource);
     const result = dataSource.updateProfile([
@@ -166,6 +157,9 @@ describe('Person', () => {
 
   it("uploads a user's profile picture", async () => {
     const dataSource = new Person();
+    const Config = new ConfigDataSource();
+    Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
+
     const uploadMock = jest.fn(() => Promise.resolve('456'));
     const binaryGetMock = jest.fn(() =>
       Promise.resolve({ id: 123, url: 'http://imageurl.....' })
@@ -173,8 +167,9 @@ describe('Person', () => {
     dataSource.context = {
       rockCookie: 'fakeCookie',
       dataSources: {
-        Auth: { getCurrentPerson: () => Promise.resolve({ id: 123 }) },
+        Person: { getCurrentPerson: () => Promise.resolve({ id: 123 }) },
         BinaryFiles: { uploadFile: uploadMock, getFromId: binaryGetMock },
+        Config,
       },
     };
     dataSource.updateProfile = buildGetMock(

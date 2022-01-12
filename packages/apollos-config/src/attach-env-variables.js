@@ -1,21 +1,18 @@
 const envVariableRegex = /\${(.*?)}/g;
 
-function deepObjectMap(object) {
+function deepObjectMap(object, env) {
   const newObject = {};
   Object.keys(object).forEach((key) => {
     const value = object[key];
     // eslint-disable-next-line no-use-before-define
-    newObject[key] = handleValue(value);
+    newObject[key] = handleValue(value, env);
   });
   return newObject;
 }
 
-function handleValue(value) {
+function handleValue(value, env = process.env) {
   if (typeof value === 'string' && envVariableRegex.test(value)) {
-    const envVariable = value.replace(
-      envVariableRegex,
-      (match, p1) => process.env[p1]
-    );
+    const envVariable = value.replace(envVariableRegex, (match, p1) => env[p1]);
     // set undefined variables to null so they eval falsy
     if (envVariable === 'undefined') return null;
     try {
@@ -29,10 +26,10 @@ function handleValue(value) {
     }
   }
   if (Array.isArray(value)) {
-    return value.map(handleValue);
+    return value.map((v) => handleValue(v, env));
   }
   if (value != null && typeof value === 'object') {
-    return deepObjectMap(value);
+    return deepObjectMap(value, env);
   }
   return value;
 }

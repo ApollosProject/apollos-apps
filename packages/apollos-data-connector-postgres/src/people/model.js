@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import { DataTypes } from 'sequelize';
 import { defineModel } from '../postgres';
 
@@ -15,6 +16,7 @@ const createModel = defineModel({
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
     email: DataTypes.STRING,
+    phone: DataTypes.STRING,
     birthDate: DataTypes.DATE,
     profileImageUrl: DataTypes.TEXT,
     gender: DataTypes.ENUM(Object.values(Gender)),
@@ -22,6 +24,8 @@ const createModel = defineModel({
       type: DataTypes.BOOLEAN,
       defaultValue: false,
     },
+    originId: { type: DataTypes.STRING, allowNull: true },
+    originType: { type: DataTypes.STRING, allowNull: true },
   },
   sequelizeOptions: {
     tableName: 'people',

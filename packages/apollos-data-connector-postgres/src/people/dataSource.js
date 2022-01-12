@@ -14,13 +14,12 @@ export const fieldsAsObject = (fields) =>
     {}
   );
 
-export const camelCaseKeys = (obj) => {
-  return Object.keys(obj).reduce((accum, curr) => {
+export const camelCaseKeys = (obj) =>
+  Object.keys(obj).reduce((accum, curr) => {
     // eslint-disable-next-line no-param-reassign
     accum[camelCase(curr)] = obj[curr];
     return accum;
   }, {});
-};
 
 export default class Person extends PostgresDataSource {
   modelName = 'people';
@@ -124,6 +123,15 @@ export default class Person extends PostgresDataSource {
   // Smart enough to work even if the Auth dataSource pulls from a different database than postgres
   whereCurrentPerson = async () => {
     const { Auth } = this.context.dataSources;
+    const { personId } = this.context;
+
+    if (personId) {
+      // If we have a personId, that means we have a postgres user / postgres login.
+      // Let's fasttrack.
+      return {
+        id: personId,
+      };
+    }
 
     const currentPerson = await Auth.getCurrentPerson();
 
@@ -145,6 +153,9 @@ export default class Person extends PostgresDataSource {
     if (this.context.currentPostgresPerson) {
       return this.context.currentPostgresPerson;
     }
+
+    // The following method is a little complicated since it also handles Rock people / rock logins
+    // We can simplify once we remove support for logging in via Rock Cookies.
     const currentPersonWhere = await this.whereCurrentPerson();
     const person = await this.model.findOne({ where: currentPersonWhere });
 
@@ -161,6 +172,11 @@ export default class Person extends PostgresDataSource {
   }
 
   async getCurrentPersonId() {
+    if (this.context.personId) {
+      return this.context.personId;
+    }
+
+    // This is the old school (rock) way. We can remove once we ditch rock auth.
     if (this.context.currentPostgresPerson) {
       return this.context.currentPostgresPerson.id;
     }

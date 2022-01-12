@@ -1,3 +1,5 @@
+/* eslint-disable max-classes-per-file */
+import { dataSource as Config } from '@apollosproject/config';
 import AuthDataSource from '../data-source';
 import * as Person from '../../people';
 
@@ -17,9 +19,11 @@ describe('Auth', () => {
   class AuthWithContext extends AuthDataSource {
     context = {
       rockCookie: 'some cookie',
+      church: { slug: 'apollos_demo' },
       dataSources: {
         Person: new PersonDataSource(),
         Cache: new CacheDataSource(),
+        Config: new Config(),
       },
     };
   }

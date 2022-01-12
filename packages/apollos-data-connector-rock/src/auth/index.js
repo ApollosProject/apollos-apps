@@ -7,7 +7,10 @@ export { default as dataSource } from './data-source';
 export { default as resolver } from './resolver';
 
 export const contextMiddleware = ({ req, context: ctx }) => {
-  if (get(req, 'headers.authorization')) {
+  if (
+    get(req, 'headers.authorization') &&
+    !req.headers.authorization.includes('Bearer')
+  ) {
     const { userToken, rockCookie, sessionId } = registerToken(
       req.headers.authorization
     );

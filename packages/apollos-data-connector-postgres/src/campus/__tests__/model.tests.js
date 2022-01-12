@@ -1,5 +1,5 @@
 /* eslint-disable import/named */
-import { sequelize } from '../../postgres/index';
+import { getSequelize } from '../../postgres/index';
 import {
   Person,
   ContentItem,
@@ -11,18 +11,19 @@ import * as Campus from '../index';
 import { setupPostgresTestEnv } from '../../utils/testUtils';
 
 describe('Campus model', () => {
+  let sequelize;
+  let globalSequelize;
   beforeEach(async () => {
-    await setupPostgresTestEnv([
-      Campus,
-      Person,
-      ContentItem,
-      Media,
-      Follow,
-      ContentItemCategory,
-    ]);
+    sequelize = getSequelize({ churchSlug: 'apollos_demo' });
+    globalSequelize = getSequelize({ churchSlug: 'global' });
+    await setupPostgresTestEnv(
+      [Campus, Person, ContentItem, Media, Follow, ContentItemCategory],
+      { church: { slug: 'apollos_demo' } }
+    );
   });
   afterEach(async () => {
     await sequelize.drop({ cascade: true });
+    await globalSequelize.drop({ cascade: true });
   });
 
   it('constructs without issues', async () => {

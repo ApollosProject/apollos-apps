@@ -1,11 +1,11 @@
 /* eslint-disable import/prefer-default-export */
-import ApollosConfig from '@apollosproject/config';
+import { fetchChurchConfig } from '@apollosproject/config';
 
-const defaultCreateRedirectLink = ({ platform }) => {
+const defaultCreateRedirectLink = ({ platform, Config }) => {
   if (platform === 'android') {
-    return ApollosConfig.UNIVERSAL_LINKS.PLAY_STORE_LINK;
+    return Config.UNIVERSAL_LINKS.PLAY_STORE_LINK;
   }
-  return ApollosConfig.UNIVERSAL_LINKS.APP_STORE_LINK;
+  return Config.UNIVERSAL_LINKS.APP_STORE_LINK;
 };
 
 export function setupUniversalLinks({
@@ -15,15 +15,14 @@ export function setupUniversalLinks({
   // Rather than redirecting to the app store, clients can override this function
   // to redirect to their content on the web.
   createRedirectLink = defaultCreateRedirectLink,
+  getContext,
 }) {
-  const {
-    APPLE_TEAM_ID,
-    APPLE_APP_ID,
-    GOOGLE_APP_ID,
-    GOOGLE_KEYSTORE_SHA256,
-  } = ApollosConfig.UNIVERSAL_LINKS;
-
-  app.get('/.well-known/apple-app-site-association', (req, res) => {
+  app.get('/.well-known/apple-app-site-association', async (req, res) => {
+    const context = await getContext({ req });
+    const Config = await fetchChurchConfig({
+      churchSlug: context.church?.slug,
+    });
+    const { APPLE_TEAM_ID, APPLE_APP_ID } = Config.UNIVERSAL_LINKS;
     res.setHeader('Content-Type', 'application/json');
     res.send(
       JSON.stringify({
@@ -41,7 +40,12 @@ export function setupUniversalLinks({
     );
   });
 
-  app.get('/.well-known/assetlinks.json', (req, res) => {
+  app.get('/.well-known/assetlinks.json', async (req, res) => {
+    const context = await getContext({ req });
+    const Config = await fetchChurchConfig({
+      churchSlug: context.church?.slug,
+    });
+    const { GOOGLE_APP_ID, GOOGLE_KEYSTORE_SHA256 } = Config.UNIVERSAL_LINKS;
     res.setHeader('Content-Type', 'application/json');
     res.send(
       JSON.stringify([
@@ -59,11 +63,19 @@ export function setupUniversalLinks({
   });
 
   app.get('/app-link/*', async (req, res) => {
+    const context = await getContext({ req });
+    const Config = await fetchChurchConfig({
+      churchSlug: context.church?.slug,
+    });
     if (/Android/.test(req.headers['user-agent'])) {
-      const link = await createRedirectLink({ platform: 'android', req });
+      const link = await createRedirectLink({
+        platform: 'android',
+        req,
+        Config,
+      });
       res.redirect(link);
     } else {
-      const link = await createRedirectLink({ platform: 'ios', req });
+      const link = await createRedirectLink({ platform: 'ios', req, Config });
       res.redirect(link);
     }
   });
@@ -72,7 +84,8 @@ export function setupUniversalLinks({
 export const generateAppLink = (
   type = 'universal',
   route = 'nav',
-  args = { screen: 'home' }
+  args = { screen: 'home' },
+  Config
 ) => {
   const TYPES = ['universal', 'deep'];
   const ROUTES = ['content', 'nav'];
@@ -88,8 +101,8 @@ export const generateAppLink = (
     throw new Error(`Must select screen from ${SCREENS} with nav route link`);
 
   const host = {
-    universal: `${ApollosConfig.APP.UNIVERSAL_LINK_HOST}/app-link/`,
-    deep: `${ApollosConfig.APP.DEEP_LINK_HOST}://app-link/`,
+    universal: `${Config.APP.UNIVERSAL_LINK_HOST}/app-link/`,
+    deep: `${Config.APP.DEEP_LINK_HOST}://app-link/`,
   };
 
   const path = {
@@ -101,3 +114,5 @@ export const generateAppLink = (
   // this just provides structure so the app can expect the same thing every time
   return `${host[type]}${route}/${path[route]}`;
 };
+
+export { setupUniversalLinks as serverMiddleware };

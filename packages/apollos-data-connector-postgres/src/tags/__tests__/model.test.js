@@ -1,4 +1,4 @@
-import { sequelize } from '../../postgres/index';
+import { getSequelize } from '../../postgres/index';
 import * as ContentItem from '../../content-items';
 import * as Media from '../../media';
 import * as Tag from '../index';
@@ -9,18 +9,19 @@ import * as ContentItemCategory from '../../content-item-categories';
 import { setupPostgresTestEnv } from '../../utils/testUtils';
 
 describe('Tag model', () => {
+  let sequelize;
+  let globalSequelize;
   beforeEach(async () => {
-    await setupPostgresTestEnv([
-      ContentItem,
-      ContentItemCategory,
-      Media,
-      People,
-      Campus,
-      Tag,
-    ]);
+    sequelize = getSequelize({ churchSlug: 'apollos_demo' });
+    globalSequelize = getSequelize({ churchSlug: 'global' });
+    await setupPostgresTestEnv(
+      [ContentItem, ContentItemCategory, Media, People, Campus, Tag],
+      { church: { slug: 'apollos_demo' } }
+    );
   });
   afterEach(async () => {
     await sequelize.drop({ cascade: true });
+    await globalSequelize.drop({ cascade: true });
   });
 
   it('adds tag to content item', async () => {

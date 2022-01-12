@@ -1,5 +1,4 @@
 import url from 'url';
-import ApollosConfig from '@apollosproject/config';
 import { createGlobalId } from '@apollosproject/server-core';
 import { camelCase } from 'lodash';
 import QRCode from 'qrcode';
@@ -26,7 +25,7 @@ const getPassStyleFields = ({ pass, schema }) => {
 export default {
   Query: {
     userPass: async (a, b, context) => {
-      const templates = Object.keys(ApollosConfig.PASS.TEMPLATES);
+      const templates = Object.keys(context.dataSources.Config.PASS.TEMPLATES);
       if (!templates.length) return [];
 
       const defaultPassTemplate = templates[0];
@@ -63,8 +62,11 @@ export default {
       const styleFields = getPassStyleFields({ pass, schema }) || {};
       return styleFields.secondaryFields;
     },
-    passkitFileUrl: ({ template }) =>
-      url.resolve(ApollosConfig.APP.ROOT_API_URL, `pass/${template}`),
+    passkitFileUrl: ({ template }, args, context) =>
+      url.resolve(
+        context.dataSources.Config.APP.ROOT_API_URL,
+        `pass/${template}`
+      ),
   },
   PassField: {
     textAlignment: ({ textAlignment }) => {

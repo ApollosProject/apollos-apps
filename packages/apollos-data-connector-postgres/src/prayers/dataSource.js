@@ -1,4 +1,3 @@
-import ApollosConfig from '@apollosproject/config';
 import { Op } from 'sequelize';
 import { get } from 'lodash';
 import { PostgresDataSource } from '../postgres';
@@ -7,11 +6,8 @@ class Prayer extends PostgresDataSource {
   modelName = 'prayerRequest';
 
   async addPrayer({ text, ...args }) {
-    const {
-      id,
-      firstName,
-      lastName,
-    } = await this.context.dataSources.Person.getCurrentPerson();
+    const { id, firstName, lastName } =
+      await this.context.dataSources.Person.getCurrentPerson();
 
     const newPrayer = await this.model.findOrCreate({
       where: {
@@ -41,7 +37,8 @@ class Prayer extends PostgresDataSource {
   }
 
   async byDailyPrayerFeed({ personId, numberDaysSincePrayer = 3, limit = 10 }) {
-    const currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
+    const currentPersonId =
+      await this.context.dataSources.Person.getCurrentPersonId();
     const daysSincePosted = new Date();
     daysSincePosted.setDate(daysSincePosted.getDate() - numberDaysSincePrayer);
 
@@ -110,7 +107,8 @@ class Prayer extends PostgresDataSource {
   }
 
   async incrementPrayed(prayerId) {
-    const currentPerson = await this.context.dataSources.Person.getCurrentPerson();
+    const currentPerson =
+      await this.context.dataSources.Person.getCurrentPerson();
     const prayerRequest = await this.getFromId(prayerId);
     await prayerRequest.addPrayedUser(currentPerson);
     const usersPrayed = await prayerRequest.getPrayedUsers();
@@ -122,7 +120,7 @@ class Prayer extends PostgresDataSource {
 
   sendPrayingNotification = async (personId) => {
     const notificationText = get(
-      ApollosConfig,
+      this.context.dataSources.Config,
       'NOTIFICATIONS.PRAYING',
       'The community is praying for you right now.'
     );

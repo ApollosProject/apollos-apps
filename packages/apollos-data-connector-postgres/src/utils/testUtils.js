@@ -1,10 +1,12 @@
+/* eslint-disable import/prefer-default-export */
 import createMigrationRunner from '../postgres/performMigrations';
 
-export const setupPostgresTestEnv = async (models = []) => {
+export const setupPostgresTestEnv = async (models = [], context) => {
+  if (context.church.slug !== 'global') {
+    await setupPostgresTestEnv(models, { church: { slug: 'global' } });
+  }
   await Promise.all(
-    models.map((m) => {
-      return m.models.createModel && m.models.createModel();
-    })
+    models.map((m) => m.models.createModel && m.models.createModel(context))
   );
 
   const migrationRunner = await createMigrationRunner({
@@ -14,8 +16,6 @@ export const setupPostgresTestEnv = async (models = []) => {
   await migrationRunner.up();
 
   await Promise.all(
-    models.map((m) => {
-      return m.models.setupModel && m.models.setupModel();
-    })
+    models.map((m) => m.models.setupModel && m.models.setupModel(context))
   );
 };

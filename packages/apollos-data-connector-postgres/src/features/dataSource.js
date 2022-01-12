@@ -1,4 +1,4 @@
-import { Feature as RockFeature } from '@apollosproject/data-connector-rock';
+/* eslint-disable no-console */
 import { createGlobalId } from '@apollosproject/server-core';
 import { PostgresDataSource, isUuid } from '../postgres';
 
@@ -8,7 +8,6 @@ import { PostgresDataSource, isUuid } from '../postgres';
 // In the future, these methods will no longer be needed, since Feeds
 // Will be stored in Postgres. In the meantime though, we need to pull
 // these methods in as a mixin.
-const RockFeatureDataSource = RockFeature.dataSource.prototype;
 
 class Feature extends PostgresDataSource {
   modelName = 'feature';
@@ -56,53 +55,336 @@ class Feature extends PostgresDataSource {
     return { relatedNode, ...action };
   }
 
-  async createActionListFeature(...args) {
-    return RockFeatureDataSource.createActionListFeature.call(this, ...args);
+  getRelatedNode = async ({ action, ...args }) => {
+    const { FeatureFeed } = this.context.dataSources;
+    if (action === 'OPEN_FEED') {
+      if (!args.features)
+        throw new Error(
+          'Must supply "features" argument with OPEN_FEED action'
+        );
+      return FeatureFeed.getFeed({ features: args.features });
+    }
+    return null;
+  };
+
+  async createActionListFeature({
+    algorithms = [],
+    title,
+    subtitle,
+    primaryAction,
+    ...args
+  }) {
+    // Generate a list of actions.
+    const { ActionAlgorithm } = this.context.dataSources;
+    const actions = () => ActionAlgorithm.runAlgorithms({ algorithms, args });
+
+    // Ensures that we have a generated ID for the Primary Action related node, if not provided.
+    if (primaryAction) {
+      // eslint-disable-next-line no-param-reassign
+      primaryAction = this.attachActionIds(primaryAction);
+    }
+
+    return {
+      // The Feature ID is based on all of the action ids, added together.
+      // This is naive, and could be improved.
+      id: this.createFeatureId({
+        args: {
+          algorithms,
+          title,
+          subtitle,
+          primaryAction,
+          ...args,
+        },
+      }),
+      actions,
+      title,
+      subtitle,
+      primaryAction,
+      // Typanme is required so GQL knows specifically what Feature is being created
+      __typename: 'ActionListFeature',
+    };
   }
 
-  async createActionBarFeature(...args) {
-    return RockFeatureDataSource.createActionBarFeature.call(this, ...args);
+  async createActionBarFeature({
+    actions = [],
+    title,
+    algorithms = [],
+    ...args
+  }) {
+    const { ActionAlgorithm } = this.context.dataSources;
+
+    // Run algorithms if we have them, otherwise pull from the config
+    const compiledActions = () =>
+      actions.length
+        ? actions.map((action) => this.attachActionIds(action))
+        : ActionAlgorithm.runAlgorithms({ algorithms, args });
+
+    return {
+      // The Feature ID is based on all of the action ids, added together.
+      // This is naive, and could be improved.
+      id: this.createFeatureId({
+        args: {
+          title,
+          algorithms,
+          actions,
+        },
+      }),
+      actions: compiledActions,
+      title,
+      // Typename is required so GQL knows specifically what Feature is being created
+      __typename: 'ActionBarFeature',
+    };
   }
 
-  async createActionTableFeature(...args) {
-    return RockFeatureDataSource.createActionTableFeature.call(this, ...args);
+  async createActionTableFeature({
+    actions = [],
+    title,
+    algorithms = [],
+    ...args
+  }) {
+    const { ActionAlgorithm } = this.context.dataSources;
+
+    // Run algorithms if we have them, otherwise pull from the config
+    const compiledActions = () =>
+      actions.length
+        ? actions.map((action) => this.attachActionIds(action))
+        : ActionAlgorithm.runAlgorithms({ algorithms, args });
+
+    return {
+      // The Feature ID is based on all of the action ids, added together.
+      // This is naive, and could be improved.
+      id: this.createFeatureId({
+        args: {
+          title,
+          algorithms,
+          actions,
+        },
+      }),
+      actions: compiledActions,
+      title,
+      // Typename is required so GQL knows specifically what Feature is being created
+      __typename: 'ActionTableFeature',
+    };
   }
 
-  async createHeroListFeature(...args) {
-    return RockFeatureDataSource.createHeroListFeature.call(this, ...args);
+  async createHeroListFeature({
+    algorithms = [],
+    heroAlgorithms = [],
+    title,
+    subtitle,
+    primaryAction,
+    ...args
+  }) {
+    // Generate a list of actions.
+    let actions;
+    let heroCard;
+    const { ActionAlgorithm } = this.context.dataSources;
+
+    // If we have a strategy for selecting the hero card.
+    if (heroAlgorithms && heroAlgorithms.length) {
+      // The actions come from the action algorithms
+      actions = () => ActionAlgorithm.runAlgorithms({ algorithms, args });
+      // and the hero comes from the hero algorithms
+      heroCard = async () => {
+        const cards = await ActionAlgorithm.runAlgorithms({
+          algorithms: heroAlgorithms,
+          args,
+        });
+        return cards.length ? cards[0] : null;
+      };
+      // Otherwise, if we don't have a strategy
+    } else {
+      // Get all the cards (sorry, no lazy loading here)
+      const allActions = await ActionAlgorithm.runAlgorithms({
+        algorithms,
+        args,
+      });
+      // The actions are all actions after the first
+      actions = allActions.slice(1);
+      // And the hero is the first action.
+      heroCard = allActions.length ? allActions[0] : null;
+    }
+
+    // Ensures that we have a generated ID for the Primary Action related node, if not provided.
+    if (primaryAction) {
+      // eslint-disable-next-line no-param-reassign
+      primaryAction = this.attachActionIds(primaryAction);
+    }
+
+    return {
+      // The Feature ID is based on all of the action ids, added together.
+      // This is naive, and could be improved.
+      id: this.createFeatureId({
+        args: {
+          algorithms,
+          heroAlgorithms,
+          title,
+          subtitle,
+          primaryAction,
+          ...args,
+        },
+      }),
+      actions,
+      heroCard,
+      title,
+      subtitle,
+      primaryAction,
+      // Typanme is required so GQL knows specifically what Feature is being created
+      __typename: 'HeroListFeature',
+    };
   }
 
-  async createVerticalCardListFeature(...args) {
-    return RockFeatureDataSource.createVerticalCardListFeature.call(
-      this,
-      ...args
-    );
+  async createVerticalCardListFeature({
+    algorithms = [],
+    title,
+    subtitle,
+    isFeatured = false,
+    ...args
+  }) {
+    // Generate a list of cards.
+    const { ActionAlgorithm } = this.context.dataSources;
+    const cards = () => ActionAlgorithm.runAlgorithms({ algorithms, args });
+    return {
+      // The Feature ID is based on all of the action ids, added together.
+      // This is naive, and could be improved.
+      id: this.createFeatureId({
+        args: {
+          algorithms,
+          title,
+          subtitle,
+          isFeatured,
+          ...args,
+        },
+      }),
+      cards,
+      isFeatured,
+      title,
+      subtitle,
+      // Typename is required so GQL knows specifically what Feature is being created
+      __typename: 'VerticalCardListFeature',
+    };
   }
 
-  async createHorizontalCardListFeature(...args) {
-    return RockFeatureDataSource.createHorizontalCardListFeature.call(
-      this,
-      ...args
-    );
+  async createHorizontalCardListFeature({
+    algorithms = [],
+    hyphenatedTitle,
+    title,
+    subtitle,
+    primaryAction,
+    ...args
+  }) {
+    // Generate a list of horizontal cards.
+    const { ActionAlgorithm } = this.context.dataSources;
+    const cards = () => ActionAlgorithm.runAlgorithms({ algorithms, args });
+    // Ensures that we have a generated ID for the Primary Action related node, if not provided.
+    // Ensures that we have a generated ID for the Primary Action related node, if not provided.
+    if (primaryAction) {
+      // eslint-disable-next-line no-param-reassign
+      primaryAction = this.attachActionIds(primaryAction);
+    }
+
+    return {
+      // The Feature ID is based on all of the action ids, added together.
+      // This is naive, and could be improved.
+      id: this.createFeatureId({
+        args: {
+          algorithms,
+          title,
+          subtitle,
+          primaryAction,
+          ...args,
+        },
+      }),
+      cards,
+      hyphenatedTitle,
+      title,
+      subtitle,
+      primaryAction,
+      // Typename is required so GQL knows specifically what Feature is being created
+      __typename: 'HorizontalCardListFeature',
+    };
   }
 
-  async createPrayerListFeature(...args) {
-    return RockFeatureDataSource.createPrayerListFeature.call(this, ...args);
+  createPrayerListFeature({
+    algorithms = ['DAILY_PRAYER'],
+    title,
+    subtitle = 'Daily Prayer',
+    isCard = true,
+    ...args
+  }) {
+    const { ActionAlgorithm } = this.context.dataSources;
+    const prayers = () => ActionAlgorithm.runAlgorithms({ algorithms, args });
+    return {
+      // The Feature ID is based on all of the action ids, added together.
+      // This is naive, and could be improved.
+      id: this.createFeatureId({
+        args: {
+          algorithms,
+          title,
+          subtitle,
+          isCard,
+          ...args,
+        },
+      }),
+      prayers,
+      title,
+      subtitle,
+      isCard,
+      // Typename is required so GQL knows specifically what Feature is being created
+      __typename: 'PrayerListFeature',
+    };
   }
 
-  async createFollowPeopleFeature(...args) {
-    return RockFeatureDataSource.createFollowPeopleFeature.call(this, ...args);
+  async createVerticalPrayerListFeature({ title, subtitle, ...args }) {
+    const { ActionAlgorithm, Auth, Person } = this.context.dataSources;
+    const { id } = await Auth.getCurrentPerson();
+
+    // maps the person id, which right now is always from rock
+    // into the correct person id. Postgres if using Postgres, and Rock if using rock.
+    const { id: personId } = await Person.getFromId(id, null, {
+      originType: 'rock',
+    });
+
+    const prayers = () =>
+      ActionAlgorithm.runAlgorithms({
+        algorithms: ['DAILY_PRAYER'],
+        args: { personId, ...args },
+      });
+    return {
+      id: this.createFeatureId({
+        args: { personId, title, subtitle },
+      }),
+      prayers,
+      title,
+      subtitle,
+      __typename: 'VerticalPrayerListFeature',
+    };
   }
 
-  async createVerticalPrayerListFeature(...args) {
-    return RockFeatureDataSource.createVerticalPrayerListFeature.call(
-      this,
-      ...args
-    );
+  createFollowPeopleFeature(args) {
+    const { Follow } = this.context.dataSources;
+    return {
+      // The Feature ID is based on all of the action ids, added together.
+      // This is naive, and could be improved.
+      id: this.createFeatureId({
+        args,
+      }),
+      suggestedPeople: Follow.getStaticSuggestedFollowsForCurrentPerson(),
+      // Typename is required so GQL knows specifically what Feature is being created
+      __typename: 'FollowPeopleFeature',
+    };
   }
 
-  async createWebViewFeature(...args) {
-    return RockFeatureDataSource.createWebViewFeature.call(this, ...args);
+  createWebViewFeature({ url, title, height = 500 }) {
+    return {
+      id: this.createFeatureId({
+        args: { url, title },
+      }),
+      url,
+      title,
+      height,
+      __typename: 'WebviewFeature',
+    };
   }
 
   async getScriptureShareMessage(ref) {
@@ -122,8 +404,8 @@ class Feature extends PostgresDataSource {
       'getHomeFeedFeatures is deprecated, please use FeatureFeed.getFeed({type: "apollosConfig", args: {"section": "home"}})'
     );
 
-  getFeatures = async (featuresConfig = [], args = {}) => {
-    return Promise.all(
+  getFeatures = async (featuresConfig = [], args = {}) =>
+    Promise.all(
       featuresConfig.map((featureConfig) => {
         const finalConfig = { ...featureConfig, ...args };
         switch (featureConfig.type) {
@@ -157,7 +439,6 @@ class Feature extends PostgresDataSource {
         }
       })
     );
-  };
 }
 
 export { Feature as default };

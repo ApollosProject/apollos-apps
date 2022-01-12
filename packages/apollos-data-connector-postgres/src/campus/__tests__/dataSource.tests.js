@@ -1,5 +1,5 @@
 /* eslint-disable import/named */
-import { sequelize } from '../../postgres/index';
+import { getSequelize } from '../../postgres/index';
 import CampusDataSource from '../dataSource';
 import * as Campus from '..';
 import {
@@ -21,6 +21,7 @@ const context = {
       getCurrentPerson: () => ({ id: personId, setCampus: setCampusMock }),
     },
   },
+  church: { slug: 'apollos_demo' },
 };
 
 let close;
@@ -30,19 +31,19 @@ let inactive;
 
 describe('Apollos Postgres Campus DataSource', () => {
   let campusDataSource;
+  let sequelize;
+  let globalSequelize;
 
   beforeEach(async () => {
+    sequelize = getSequelize({ churchSlug: 'apollos_demo' });
+    globalSequelize = getSequelize({ churchSlug: 'global' });
     personId = 1;
     context.currentPostgresPerson = null;
 
-    await setupPostgresTestEnv([
-      Person,
-      Campus,
-      Follow,
-      Media,
-      ContentItem,
-      ContentItemCategory,
-    ]);
+    await setupPostgresTestEnv(
+      [Person, Campus, Follow, Media, ContentItem, ContentItemCategory],
+      { church: { slug: 'apollos_demo' } }
+    );
 
     campusDataSource = new CampusDataSource();
     campusDataSource.initialize({ context });
@@ -87,6 +88,7 @@ describe('Apollos Postgres Campus DataSource', () => {
 
   afterEach(async () => {
     await sequelize.drop({ cascade: true });
+    await globalSequelize.drop({ cascade: true });
   });
 
   it('should return a list of campuses', async () => {

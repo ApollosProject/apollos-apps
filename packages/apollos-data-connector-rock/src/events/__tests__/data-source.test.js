@@ -1,24 +1,12 @@
-import ApollosConfig from '@apollosproject/config';
+import { dataSource as ConfigDataSource } from '@apollosproject/config';
 import EventsDataSource from '../data-source';
-
-ApollosConfig.loadJs({
-  APP: {
-    ROOT_API_URL: 'https://apollos.api',
-  },
-  ROCK: {
-    API_URL: 'https://apollosrock.newspring.cc/api',
-    API_TOKEN: 'some-rock-token',
-    IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
-    TIMEZONE: 'America/New_York',
-  },
-  ROCK_MAPPINGS: {
-    SERMON_CHANNEL_ID: 'TEST_ID',
-  },
-});
 
 describe('Events', () => {
   it('should return start and end based on a schedule', async () => {
     const Event = new EventsDataSource();
+    const Config = new ConfigDataSource();
+    Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
+    Event.context = { dataSources: { Config } };
 
     const result = await Event.getDateTime({
       iCalendarContent:
@@ -78,6 +66,9 @@ describe('Events', () => {
 
   it('should get by Campus', async () => {
     const Event = new EventsDataSource();
+    const Config = new ConfigDataSource();
+    Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
+    Event.context = { dataSources: { Config } };
 
     Event.get = jest.fn(() =>
       Promise.resolve([
@@ -95,6 +86,9 @@ describe('Events', () => {
 
   it('should get all recent events', async () => {
     const Event = new EventsDataSource();
+    const Config = new ConfigDataSource();
+    Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
+    Event.context = { dataSources: { Config } };
 
     Event.get = jest.fn(() =>
       Promise.resolve([
@@ -111,10 +105,13 @@ describe('Events', () => {
   });
 
   it('should get all recent events using the plugin', async () => {
-    ApollosConfig.loadJs({
+    const Event = new EventsDataSource();
+    const Config = new ConfigDataSource();
+    Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
+    Config.config.loadJs({
       ROCK: { USE_PLUGIN: true },
     });
-    const Event = new EventsDataSource();
+    Event.context = { dataSources: { Config } };
 
     Event.get = jest.fn(() =>
       Promise.resolve([
@@ -128,7 +125,7 @@ describe('Events', () => {
     const result = await Event.findRecent().get();
     expect(result).toMatchSnapshot();
     expect(Event.get.mock.calls).toMatchSnapshot();
-    ApollosConfig.loadJs({
+    Config.config.loadJs({
       ROCK: { USE_PLUGIN: false },
     });
   });

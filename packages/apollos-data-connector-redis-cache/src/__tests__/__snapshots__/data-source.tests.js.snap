@@ -3,11 +3,17 @@
 exports[`Redis Cache constructs with Redis env url 1`] = `
 Cache {
   "DEFAULT_TIMEOUT": 86400,
+  "context": Object {
+    "church": Object {
+      "slug": "apollos_demo",
+    },
+  },
   "redis": Redis {
     "_events": Object {},
     "_eventsCount": 0,
     "_maxListeners": undefined,
     "commandQueue": Denque {
+      "_capacity": undefined,
       "_capacityMask": 3,
       "_head": 0,
       "_list": Array [
@@ -60,6 +66,7 @@ Cache {
       },
     },
     "offlineQueue": Denque {
+      "_capacity": undefined,
       "_capacityMask": 3,
       "_head": 0,
       "_list": Array [
@@ -117,7 +124,7 @@ exports[`Redis Cache decrements integers in redis 2`] = `
 Array [
   Array [
     Object {
-      "key": "someKey",
+      "key": "apollos_demo:someKey",
     },
   ],
 ]
@@ -126,6 +133,11 @@ Array [
 exports[`Redis Cache doesn't constructs with Redis env url 1`] = `
 Cache {
   "DEFAULT_TIMEOUT": 86400,
+  "context": Object {
+    "church": Object {
+      "slug": "apollos_demo",
+    },
+  },
   "redis": undefined,
   "safely": [Function],
 }
@@ -140,7 +152,7 @@ Object {
 exports[`Redis Cache gets data from redis 2`] = `
 Array [
   Array [
-    "someKey",
+    "apollos_demo:someKey",
   ],
 ]
 `;
@@ -151,7 +163,7 @@ exports[`Redis Cache increments integers in redis 2`] = `
 Array [
   Array [
     Object {
-      "key": "someKey",
+      "key": "apollos_demo:someKey",
     },
   ],
 ]
@@ -172,7 +184,7 @@ exports[`Redis Cache sets data in redis 1`] = `undefined`;
 exports[`Redis Cache sets data in redis 2`] = `
 Array [
   Array [
-    "someKey",
+    "apollos_demo:someKey",
     "true",
     "EX",
     86400,

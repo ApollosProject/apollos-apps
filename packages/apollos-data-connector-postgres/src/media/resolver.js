@@ -1,25 +1,14 @@
-// If we have a sources array, return that.
-// Otherwise, return the URL or URI field. Add in the typename provided to the source.
-const addTypenameToSources = (__typename) => ({ sources, url, uri }) => {
-  const dirtyURI = url || uri;
-  const cleanURI = dirtyURI?.startsWith('http') ? dirtyURI : '';
-  return sources || [{ __typename, uri: cleanURI }];
-};
-
 export default {
   Media: {
     __resolveType: ({ apollosType }) => apollosType,
   },
   ImageMedia: {
-    sources: addTypenameToSources('ImageMediaSource'),
+    sources: ({ url }) => [{ __typename: 'ImageMediaSource', uri: url }],
   },
   AudioMedia: {
-    sources: addTypenameToSources('AudioMediaSource'),
+    sources: ({ url }) => [{ __typename: 'AudioMediaSource', uri: url }],
   },
   VideoMedia: {
-    name: (root) => {
-      return root?.metadata?.name;
-    },
-    sources: addTypenameToSources('VideoMediaSource'),
+    sources: ({ url }) => [{ __typename: 'VideoMediaSource', uri: url }],
   },
 };

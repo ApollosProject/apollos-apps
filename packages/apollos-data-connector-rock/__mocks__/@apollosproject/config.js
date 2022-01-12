@@ -1,6 +1,6 @@
-const ApolloServer = require.requireActual('@apollosproject/config').default;
+const ApollosConfig = require.requireActual('@apollosproject/config');
 
-ApolloServer.loadJs({
+const defaults = {
   ROCK_MAPPINGS: {
     CONTENT_ITEM: {
       ContentSeriesContentItem: {
@@ -26,13 +26,23 @@ ApolloServer.loadJs({
       PersonaId: 123,
     },
     HOME_FEATURE_CHANNEL_ID: 13,
+    INTERACTIONS: {
+      CHANNEL_NAME: 'Apollos App',
+      COMPONENT_NAME: 'Apollos Content Item',
+      CHANNEL_MEDIUM_TYPE_ID: 512,
+    },
+    ENTITY_TYPES: {
+      ApollosGroup: 'Group',
+    },
   },
   ROCK: {
     TIMEZONE: 'America/New_York',
     API_URL: 'https://apollosrock.newspring.cc/api',
+    URL: 'https://apollosrock.newspring.cc',
     API_TOKEN: 'some-rock-token',
     IMAGE_URL: 'https://apollosrock.newspring.cc/GetImage.ashx',
     USE_AGENT: false,
+    VERSION: 9.4,
   },
   HOME_FEATURES: [
     {
@@ -53,6 +63,43 @@ ApolloServer.loadJs({
       title: 'BULLETIN',
     },
   ],
-});
+};
 
-export default ApolloServer;
+ApollosConfig.default.loadJs(defaults);
+
+class dataSource {
+  constructor() {
+    this.config = null;
+    this.loadJs = this.loadJs.bind(this);
+  }
+
+  initialize({ context }) {
+    if (context?.church?.slug) {
+      const config = new ApollosConfig.Config();
+      config.loadJs(defaults);
+      this.config = config;
+      this.attachConfigToClass(this.config);
+    }
+  }
+
+  loadJs(input) {
+    this.config.loadJs(input);
+    this.attachConfigToClass(this.config);
+  }
+
+  attachConfigToClass(config) {
+    Object.keys({ ...config }).forEach((key) => {
+      if (key !== 'config') {
+        Object.defineProperty(this, key, {
+          enumerable: true,
+          configurable: true,
+          writable: true,
+          value: config[key],
+        });
+      }
+    });
+  }
+}
+
+export { dataSource };
+export default ApollosConfig;

@@ -1,19 +1,26 @@
+import { dataSource as ConfigDataSource } from '@apollosproject/config';
 import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
 import * as Sms from '../index';
 
-const { getContext } = createTestHelpers({ Sms });
+const { getContext } = createTestHelpers({
+  Config: { dataSource: ConfigDataSource },
+  Sms,
+});
 let context;
 
-describe('OneSignal', () => {
-  beforeEach(() => {
-    context = getContext();
+describe('Twilio', () => {
+  beforeEach(async () => {
+    context = await getContext(
+      { req: { headers: { 'x-church': 'apollos_demo' } } },
+      { church: { slug: 'apollos_demo' } }
+    );
   });
 
-  it('constructs with Twilio', () => {
+  it('constructs with Twilio', async () => {
     expect(context.dataSources.Sms).toMatchSnapshot();
   });
 
-  it('sends an sms passing along args', () => {
+  it('sends an sms passing along args', async () => {
     const mockCreate = jest.fn();
     context.dataSources.Sms.twilio.messages.create = mockCreate;
     context.dataSources.Sms.sendSms({

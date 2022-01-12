@@ -1,7 +1,5 @@
 import { Op } from 'sequelize';
-import { parseGlobalId } from '@apollosproject/server-core/lib/node';
-import { generateAppLink } from '@apollosproject/server-core';
-import ApollosConfig from '@apollosproject/config';
+import { generateAppLink, parseGlobalId } from '@apollosproject/server-core';
 import { partition } from 'lodash';
 import { PostgresDataSource, assertUuid } from '../postgres';
 import { FollowState } from './model';
@@ -116,7 +114,12 @@ class Follow extends PostgresDataSource {
       to: followedPerson,
       data: {
         requestPersonId: requestPerson.apollosId,
-        url: generateAppLink('deep', 'nav', { screen: 'connect' }),
+        url: generateAppLink(
+          'deep',
+          'nav',
+          { screen: 'connect' },
+          this.context.dataSources.Config
+        ),
       },
       buttons: [
         {
@@ -175,19 +178,6 @@ class Follow extends PostgresDataSource {
     return updatedModel;
   }
 
-  async unfollowPerson({ followedPersonId }) {
-    const { Person } = this.context.dataSources;
-    const currentPersonId = await Person.getCurrentPersonId();
-    const { id } = parseGlobalId(followedPersonId);
-
-    return this.model.destroy({
-      where: {
-        followedPersonId: id,
-        requestPersonId: currentPersonId,
-      },
-    });
-  }
-
   getStaticSuggestedFollowsForCurrentPerson = async () => {
     const { Person } = this.context.dataSources;
     const where = await Person.whereCurrentPerson();
@@ -199,7 +189,8 @@ class Follow extends PostgresDataSource {
     assertUuid(currentPerson.campusId, 'getStaticSuggestedFollowsFor');
     assertUuid(currentPerson.id, 'getStaticSuggestedFollowsFor');
 
-    const suggestions = ApollosConfig.SUGGESTED_FOLLOWS ?? [];
+    const { Config } = this.context.dataSources;
+    const suggestions = Config.SUGGESTED_FOLLOWS ?? [];
     if (!suggestions.length) return [];
 
     const suggestionsByCampus = suggestions.filter(({ campusId }) => {

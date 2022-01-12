@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import BaseAnalytics from './base';
 
 export default class RockInteractionAnalytics extends BaseAnalytics {

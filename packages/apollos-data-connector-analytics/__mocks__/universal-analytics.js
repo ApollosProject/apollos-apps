@@ -7,7 +7,7 @@ function event(...args) {
   return { send: mockSend };
 }
 
-export default function(...args) {
+export default function (...args) {
   mockUA(args);
   return {
     event,

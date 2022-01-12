@@ -12,23 +12,21 @@ export default {
     requestor: (root, args, { dataSources }) =>
       dataSources.PrayerRequest.getRequestor(root),
     isPrayed: async ({ id }, args, { dataSources }, { parentType }) => {
-      const interactions = await dataSources.Interactions.getInteractionsForCurrentUserAndNodes(
-        {
+      const interactions =
+        await dataSources.Interactions.getInteractionsForCurrentUserAndNodes({
           nodeIds: [createGlobalId(id, parentType.name)],
           actions: ['PRAY'],
-        }
-      );
+        });
       return interactions.length;
     },
   },
   Person: {
-    prayers: async ({ id }, args, { dataSources }) => {
-      return (
+    prayers: async ({ id }, args, { dataSources }) =>
+      (
         await dataSources.PrayerRequest.byDailyPrayerFeed({
           personId: id,
         })
-      ).get();
-    },
+      ).get(),
   },
   PrayerListFeature: {
     // id: ID!

@@ -1,4 +1,4 @@
-const ApolloServer = require.requireActual('@apollosproject/config').default;
+const ApollosConfig = require.requireActual('@apollosproject/config');
 
 // These example certs and private key were taken from easily found public examples on the web.
 // I know not what they actaully represent!
@@ -9,7 +9,7 @@ const examplePrivateKey =
 
 const privateKeyPassword = 'password';
 
-ApolloServer.loadJs({
+const defaults = {
   APP: {
     ROOT_API_URL: 'http://localhost:4000',
   },
@@ -28,6 +28,43 @@ ApolloServer.loadJs({
     API_URL: 'https://apollosrock.newspring.cc/api',
     API_TOKEN: 'some-rock-token',
   },
-});
+};
 
-export default ApolloServer;
+ApollosConfig.default.loadJs(defaults);
+
+class dataSource {
+  constructor() {
+    this.config = null;
+    this.loadJs = this.loadJs.bind(this);
+  }
+
+  initialize({ context }) {
+    if (context?.church?.slug) {
+      const config = new ApollosConfig.Config();
+      config.loadJs(defaults);
+      this.config = config;
+      this.attachConfigToClass(this.config);
+    }
+  }
+
+  loadJs(input) {
+    this.config.loadJs(input);
+    this.attachConfigToClass(this.config);
+  }
+
+  attachConfigToClass(config) {
+    Object.keys({ ...config }).forEach((key) => {
+      if (key !== 'config') {
+        Object.defineProperty(this, key, {
+          enumerable: true,
+          configurable: true,
+          writable: true,
+          value: config[key],
+        });
+      }
+    });
+  }
+}
+
+export { dataSource };
+export default ApollosConfig;

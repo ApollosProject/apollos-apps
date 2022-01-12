@@ -1,4 +1,4 @@
-/* eslint-disable class-methods-use-this */
+/* eslint-disable class-methods-use-this, no-console */
 import { flatten, get } from 'lodash';
 import { PostgresDataSource } from '../postgres';
 
@@ -20,8 +20,8 @@ class ActionAlgorithm extends PostgresDataSource {
     UPCOMING_EVENTS: this.upcomingEventsAlgorithm,
     SERIES_IN_PROGRESS: this.seriesInProgressAlgorithm,
     DAILY_PRAYER: this.dailyPrayerAlgorithm,
-    CHILDREN_OF_PARENTS_BY_CATEGORIES: this
-      .childrenOfParentsByCategoriesAlgoritm,
+    CHILDREN_OF_PARENTS_BY_CATEGORIES:
+      this.childrenOfParentsByCategoriesAlgoritm,
   }).reduce((accum, [key, value]) => {
     // convenciance code to make sure all methods are bound to the Features dataSource
     // eslint-disable-next-line
@@ -30,39 +30,20 @@ class ActionAlgorithm extends PostgresDataSource {
   }, {});
 
   async runAlgorithms({ algorithms, args }) {
-    const { Feature } = this.context.dataSources;
     // We should flatten just in case a single algorithm generates multiple actions
     return flatten(
       await Promise.all(
         algorithms.map(async (algorithm) => {
-          const featureAlgorithims = Feature.ACTION_ALGORITHIMS || {};
           // Lookup the algorithm function, based on the name, and run it.
           if (typeof algorithm === 'object') {
             // NOTE this is in for backwards compatibility
             // should remove reference to Feature.ACTION_ALGORITHIMS eventually
-            if (featureAlgorithims[algorithm.type]) {
-              console.warn(
-                'Please move action algorithms from Feature to ActionAlgorithm data source.'
-              );
-              return featureAlgorithims[algorithm.type]({
-                ...algorithm.arguments,
-                ...args,
-              });
-            }
-
             return this.ACTION_ALGORITHMS[algorithm.type]({
               ...algorithm.arguments,
               ...args,
             });
           }
-          // NOTE this is in for backwards compatibility
-          // should remove reference to Feature.ACTION_ALGORITHIMS eventually
-          // return this.ACTION_ALGORITHMS[algorithm]();
-          const allAlgos = {
-            ...this.ACTION_ALGORITHMS,
-            ...featureAlgorithims,
-          };
-          return allAlgos[algorithm](args);
+          return this.ACTION_ALGORITHMS[algorithm](args);
         })
       )
     );
@@ -91,7 +72,7 @@ class ActionAlgorithm extends PostgresDataSource {
     const events = await Event.findRecent().top(3).get();
     // Map them into specific actions.
     return events.map((event, i) => ({
-      id: `${event.id}${i}`,
+      id: `${event.id}-${i}`,
       title: Event.getName(event),
       subtitle: Event.getDateTime(event.schedule).start,
       relatedNode: { ...event, __type: 'Event' },
@@ -102,16 +83,16 @@ class ActionAlgorithm extends PostgresDataSource {
   }
 
   // Gets the first 3 items for a user, based on their personas.
-  async personaFeedAlgorithm({ limit = 3 } = {}) {
+  async personaFeedAlgorithm({ limit = 3, categoryIDs = [] }) {
     const { ContentItem, Feature } = this.context.dataSources;
     Feature.setCacheHint({ scope: 'PRIVATE' });
 
     // Get the first three persona items.
-    const items = await ContentItem.getPersonaFeed({ limit });
+    const items = await ContentItem.getPersonaFeed({ limit, categoryIDs });
 
     // Map them into specific actions.
     return items.map((item, i) => ({
-      id: `${item.id}${i}`,
+      id: `${item.id}-${i}`,
       title: item.title,
       subtitle: get(item, 'contentChannel.name'),
       relatedNode: item,
@@ -144,7 +125,7 @@ class ActionAlgorithm extends PostgresDataSource {
     const items = await sermon.getChildren({ limit });
 
     return items.map((item, i) => ({
-      id: `${item.id}${i}`,
+      id: `${item.id}-${i}`,
       title: item.title,
       subtitle: get(item, 'contentChannel.name'),
       relatedNode: item,
@@ -154,11 +135,11 @@ class ActionAlgorithm extends PostgresDataSource {
     }));
   }
 
-  async latestSeriesChildrenAlgorithm({ limit = null, channelId } = {}) {
+  async latestSeriesChildrenAlgorithm({ limit = null, categoryID } = {}) {
     const { ContentItem } = this.context.dataSources;
 
-    if (!channelId) return console.warn('Must provide channelId') || [];
-    const seriesList = await ContentItem.getFromCategoryIds([channelId], {
+    if (!categoryID) return console.warn('Must provide categoryID') || [];
+    const seriesList = await ContentItem.getFromCategoryIds([categoryID], {
       limit: 1,
     });
     if (!seriesList.length === 0) return [];
@@ -168,7 +149,7 @@ class ActionAlgorithm extends PostgresDataSource {
     const items = await ContentItem.getChildren(series, { limit });
 
     return items.map((item, i) => ({
-      id: `${item.id}${i}`,
+      id: `${item.id}-${i}`,
       title: item.title,
       subtitle: get(item, 'contentChannel.name'),
       relatedNode: item,
@@ -179,22 +160,22 @@ class ActionAlgorithm extends PostgresDataSource {
   }
 
   // Gets a configurable amount of content items from each of the configured campaigns
-  async campaignItemsAlgorithm({ channelIds = [], limit = 1 } = {}) {
+  async campaignItemsAlgorithm({ categoryIDs = [], limit = 1 } = {}) {
     console.warn('CAMPAIGN_ITEMS has been renamed');
     console.warn('Use CHILDREN_OF_PARENTS_BY_CATEGORY instead');
     return this.childrenOfParentsByCategoriesAlgoritm({
-      categoryIds: channelIds,
+      categoryIDs,
       limit,
     });
   }
 
   async childrenOfParentsByCategoriesAlgoritm({
-    categoryIds = [],
+    categoryIDs = [],
     limit = 1,
   } = {}) {
     const { ContentItem } = this.context.dataSources;
 
-    const campaignList = await ContentItem.getFromCategoryIds(categoryIds, {
+    const campaignList = await ContentItem.getFromCategoryIds(categoryIDs, {
       limit: 1,
     });
 
@@ -207,7 +188,7 @@ class ActionAlgorithm extends PostgresDataSource {
     );
 
     return items.map((item, i) => ({
-      id: `${item.id}${i}`,
+      id: `${item.id}-${i}`,
       title: item.title,
       subtitle: get(item, 'contentChannel.name'),
       relatedNode: item,
@@ -218,14 +199,14 @@ class ActionAlgorithm extends PostgresDataSource {
   }
 
   async contentFeedAlgorithm({
-    channelIds = [],
+    categoryIDs = [],
     limit = 20,
     skip = 0,
     tags = [],
   } = {}) {
     const { ContentItem } = this.context.dataSources;
 
-    const items = await ContentItem.getFromCategoryIds(channelIds, {
+    const items = await ContentItem.getFromCategoryIds(categoryIDs, {
       limit,
       skip,
       order: [['publishAt', 'DESC']],
@@ -242,7 +223,7 @@ class ActionAlgorithm extends PostgresDataSource {
     });
 
     return items.map((item, i) => ({
-      id: `${item.id}${i}`,
+      id: `${item.id}-${i}`,
       title: item.title,
       subtitle: get(item, 'contentChannel.name'),
       relatedNode: item,
@@ -261,7 +242,7 @@ class ActionAlgorithm extends PostgresDataSource {
 
   async seriesInProgressAlgorithm({
     limit = 3,
-    channelIds = [],
+    categoryIDs = [],
     emptyMessage = 'All caught up!',
   } = {}) {
     const { ContentItem, Feature } = this.context.dataSources;
@@ -269,14 +250,14 @@ class ActionAlgorithm extends PostgresDataSource {
 
     const items = await ContentItem.getSeriesWithUserProgress(
       {
-        categoryIds: channelIds,
+        categoryIds: categoryIDs,
       },
       { limit }
     );
 
     return items.length
       ? items.map((item, i) => ({
-          id: `${item.id}${i}`,
+          id: `${item.id}-${i}`,
           title: item.title,
           subtitle: get(item, 'contentChannel.name'),
           relatedNode: item,

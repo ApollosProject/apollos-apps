@@ -33,16 +33,19 @@ export default class PersonalDevices extends RockApolloDataSource {
       .first();
 
     // if we already have a device, shortcut the function;
-    const currentUser = await this.context.dataSources.Auth.getCurrentPerson();
+    const currentUser =
+      await this.context.dataSources.Person.getCurrentPerson();
+
+    const { primaryAliasId } = await this.request('People')
+      .filter(`Id eq ${currentUser.originId}`)
+      .first();
 
     if (existing) return currentUser;
 
-    // Get the Rock instance's apollos device type value id
+    // Get the Rock instance's personal device type value id
     let personalDeviceTypeDefinedValue = await this.request('DefinedValues')
       .filter(`Description eq 'Personal Device Type Apollos App'`)
       .first();
-
-    console.log(personalDeviceTypeDefinedValue);
 
     // If our server hasn't created the defined value yet, do so.
     if (!personalDeviceTypeDefinedValue) {
@@ -50,7 +53,7 @@ export default class PersonalDevices extends RockApolloDataSource {
     }
 
     await this.post('/PersonalDevices', {
-      PersonAliasId: currentUser.primaryAliasId,
+      PersonAliasId: primaryAliasId,
       DeviceRegistrationId: pushId,
       PersonalDeviceTypeValueId: personalDeviceTypeDefinedValue?.id,
       NotificationsEnabled: 1,
@@ -68,17 +71,20 @@ export default class PersonalDevices extends RockApolloDataSource {
     if (pushId === null || enabled === null)
       throw new Error("Device ID and 'enabled' required.");
 
-    const {
-      primaryAliasId,
-    } = await this.context.dataSources.Auth.getCurrentPerson();
+    const { originId } =
+      await this.context.dataSources.Person.getCurrentPerson();
 
-    const { id } = await this.request()
+    const { primaryAliasId } = await this.request('People')
+      .filter(`Id eq ${originId}`)
+      .first();
+
+    const device = await this.request()
       .filter(`PersonAliasId eq ${primaryAliasId}`)
       .andFilter(`DeviceRegistrationId eq '${pushId}'`)
       .first();
-    if (!id) throw new Error(`Device doesn't exist`);
+    if (!device) throw new Error(`Device doesn't exist`);
 
-    return this.patch(`/PersonalDevices/${id}`, {
+    return this.patch(`/PersonalDevices/${device.id}`, {
       NotificationsEnabled: enabled,
     });
   };

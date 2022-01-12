@@ -1,7 +1,8 @@
 /* eslint-disable new-cap, import/named */
+import { dataSource as ConfigDataSource } from '@apollosproject/config';
 import { createGlobalId } from '@apollosproject/server-core';
 import { range } from 'lodash';
-import { sequelize } from '../../postgres/index';
+import { getSequelize } from '../../postgres/index';
 import { setupPostgresTestEnv } from '../../utils/testUtils';
 import {
   Comment,
@@ -19,30 +20,43 @@ let person1;
 let person2;
 let person3;
 let currentPerson;
+
+const Config = new ConfigDataSource();
+Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
+
 const context = {
   dataSources: {
     Person: {
       getCurrentPersonId: () => currentPerson.id,
       getFromId: (id) => ({ id }),
     },
+    Config,
   },
+  church: { slug: 'apollos_demo' },
 };
 
 const CommentDataSource = Comment.dataSource;
 
 describe('Apollos Postgres Comments DatSource', () => {
+  let sequelize;
+  let globalSequelize;
   beforeEach(async () => {
-    await setupPostgresTestEnv([
-      Campus,
-      Comment,
-      Person,
-      Follow,
-      UserFlag,
-      UserLike,
-      ContentItem,
-      ContentItemCategory,
-      Media,
-    ]);
+    sequelize = getSequelize({ churchSlug: 'apollos_demo' });
+    globalSequelize = getSequelize({ churchSlug: 'global' });
+    await setupPostgresTestEnv(
+      [
+        Campus,
+        Comment,
+        Person,
+        Follow,
+        UserFlag,
+        UserLike,
+        ContentItem,
+        ContentItemCategory,
+        Media,
+      ],
+      { church: { slug: 'apollos_demo' } }
+    );
     person1 = await sequelize.models.people.create({
       originId: '1',
       originType: 'rock',
@@ -59,6 +73,7 @@ describe('Apollos Postgres Comments DatSource', () => {
   });
   afterEach(async () => {
     await sequelize.drop({ cascade: true });
+    await globalSequelize.drop({ cascade: true });
   });
 
   describe('addComment', () => {

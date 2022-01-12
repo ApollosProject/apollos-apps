@@ -1,9 +1,8 @@
 /* eslint-disable class-methods-use-this */
 import https from 'https';
 import { RESTDataSource } from 'apollo-datasource-rest';
-import ApollosConfig from '@apollosproject/config';
 
-import { get, mapKeys, mapValues, camelCase } from 'lodash';
+import { mapKeys, mapValues, camelCase } from 'lodash';
 import { fetch } from 'apollo-server-env';
 import { createCursor, parseCursor } from './cursor';
 
@@ -11,16 +10,11 @@ import RequestBuilder from './request-builder';
 
 export { RockLoggingExtension, parseKeyValueAttribute } from './utils';
 
-const { ROCK } = ApollosConfig;
-
-let ROCK_AGENT;
-if (get(ROCK, 'USE_AGENT', true)) {
-  ROCK_AGENT = new https.Agent({
-    keepAlive: true,
-    keepAliveMsecs: 1500,
-    maxSockets: 70,
-  });
-}
+const ROCK_AGENT = new https.Agent({
+  keepAlive: true,
+  keepAliveMsecs: 1500,
+  maxSockets: 70,
+});
 
 export default class RockApolloDataSource extends RESTDataSource {
   // Subclasses can set this to true to force all requests to turn extended responses.
@@ -33,15 +27,20 @@ export default class RockApolloDataSource extends RESTDataSource {
 
   calls = {};
 
-  baseURL = ROCK.API_URL || `${ROCK.URL}/api`;
-
-  rockToken = ROCK.API_TOKEN;
-
   nodeFetch = fetch;
 
   agent = ROCK_AGENT;
 
   ORIGIN_TYPE = 'rock';
+
+  // Helper method :)
+  get Config() {
+    return this.context.dataSources.Config;
+  }
+
+  get baseURL() {
+    return `${this.Config.ROCK.URL}/api`;
+  }
 
   didReceiveResponse(response, request) {
     // Can't use await b/c of `super` keyword
@@ -58,14 +57,12 @@ export default class RockApolloDataSource extends RESTDataSource {
     this.calls[request.path] += 1;
 
     if (!request.headers.has('Authorization-Token')) {
-      request.headers.set('Authorization-Token', this.rockToken);
+      request.headers.set('Authorization-Token', this.Config.ROCK.API_TOKEN);
     }
     request.headers.set('user-agent', 'Apollos');
     request.headers.set('Content-Type', 'application/json');
     // Use an HTTP agent for keepAlive
-    if (get(ROCK, 'USE_AGENT', true)) {
-      request.agent = ROCK_AGENT;
-    }
+    request.agent = ROCK_AGENT;
   }
 
   normalize = (data) => {

@@ -1,9 +1,7 @@
 import RockApolloDataSource from '@apollosproject/rock-apollo-data-source';
-import ApollosConfig from '@apollosproject/config';
 import moment from 'moment-timezone';
 import { get } from 'lodash';
 
-const { ROCK, ROCK_MAPPINGS } = ApollosConfig;
 export default class PrayerRequest extends RockApolloDataSource {
   resource = 'PrayerRequests';
 
@@ -59,13 +57,13 @@ export default class PrayerRequest extends RockApolloDataSource {
       .andFilter(
         // prayers that aren't expired
         `ExpirationDate gt datetime'${moment
-          .tz(ROCK.TIMEZONE)
+          .tz(this.Config.ROCK.TIMEZONE)
           .format()}' or ExpirationDate eq null`
       )
       .andFilter(
         // prayers that were entered less then x days ago
         `EnteredDateTime gt datetime'${moment
-          .tz(ROCK.TIMEZONE)
+          .tz(this.Config.ROCK.TIMEZONE)
           .subtract(numberDaysSincePrayer, 'day')
           .format()}' or PrayerCount eq null` // include prayers that haven't prayed yet and within x number of days old
       )
@@ -113,7 +111,7 @@ export default class PrayerRequest extends RockApolloDataSource {
 
   sendPrayingNotification = async ({ requestedByPersonAliasId }) => {
     const notificationText = get(
-      ApollosConfig,
+      this.Config,
       'NOTIFICATIONS.PRAYING',
       'The community is praying for you right now.'
     );
@@ -129,16 +127,18 @@ export default class PrayerRequest extends RockApolloDataSource {
 
   addPrayer = async ({ text, isAnonymous }) => {
     const {
-      dataSources: { Auth },
+      dataSources: { Person },
     } = this.context;
-    const {
-      primaryAliasId,
-      nickName,
-      firstName,
-      lastName,
-      email,
-      primaryCampusId,
-    } = await Auth.getCurrentPerson();
+    const { originId, nickName, firstName, lastName, email, primaryCampusId } =
+      await Person.getCurrentPerson();
+
+    if (!originId) {
+      return null;
+    }
+
+    const { primaryAliasId } = await this.request('People')
+      .filter(`Id eq ${originId}`)
+      .first();
 
     const prayerId = await this.post('/PrayerRequests', {
       FirstName: nickName || firstName,
@@ -146,8 +146,8 @@ export default class PrayerRequest extends RockApolloDataSource {
       Email: email,
       Text: text,
       Answer: '',
-      CategoryId: ROCK_MAPPINGS.GENERAL_PRAYER_CATEGORY_ID,
-      CampusId: primaryCampusId || ROCK_MAPPINGS.WEB_CAMPUS_ID,
+      CategoryId: this.Config.ROCK_MAPPINGS.GENERAL_PRAYER_CATEGORY_ID,
+      CampusId: primaryCampusId || this.Config.ROCK_MAPPINGS.WEB_CAMPUS_ID,
       IsPublic: !isAnonymous,
       RequestedByPersonAliasId: primaryAliasId,
       CreatedByPersonAliasId: primaryAliasId,
@@ -155,9 +155,12 @@ export default class PrayerRequest extends RockApolloDataSource {
       IsActive: true,
       AllowComments: false,
       IsUrgent: false,
-      EnteredDateTime: moment().tz(ROCK.TIMEZONE).format(),
-      ApprovedOnDateTime: moment().tz(ROCK.TIMEZONE).format(),
-      ExpirationDate: moment().tz(ROCK.TIMEZONE).add(2, 'weeks').format(),
+      EnteredDateTime: moment().tz(this.Config.ROCK.TIMEZONE).format(),
+      ApprovedOnDateTime: moment().tz(this.Config.ROCK.TIMEZONE).format(),
+      ExpirationDate: moment()
+        .tz(this.Config.ROCK.TIMEZONE)
+        .add(2, 'weeks')
+        .format(),
     });
     return this.getFromId(prayerId);
   };

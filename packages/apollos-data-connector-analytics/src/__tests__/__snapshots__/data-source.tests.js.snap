@@ -1,80 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Analytics Data Source identify must identify a user with device info 1`] = `
-Object {
-  "success": true,
-}
-`;
-
-exports[`Analytics Data Source identify must identify a user with device info 2`] = `
-Array [
-  Array [
-    Object {
-      "anonymousId": "deviceId5",
-      "context": Object {
-        "appVersion": "72.0.1",
-        "deviceId": "gibberish",
-        "deviceMode": "Latest iPhone",
-        "platform": "iOS",
-      },
-      "traits": Object {
-        "email": "test@test.com",
-        "firstName": "Rick",
-        "lastName": "Hampton",
-      },
-      "userId": 5,
-    },
-  ],
-]
-`;
-
-exports[`Analytics Data Source identify must identify a user with traits 1`] = `
-Object {
-  "success": true,
-}
-`;
-
-exports[`Analytics Data Source identify must identify a user with traits 2`] = `
-Array [
-  Array [
-    Object {
-      "anonymousId": "deviceId5",
-      "context": undefined,
-      "traits": Object {
-        "ChurchRole": "Pastor",
-        "email": "test@test.com",
-        "firstName": "Rick",
-        "lastName": "Hampton",
-      },
-      "userId": 5,
-    },
-  ],
-]
-`;
-
-exports[`Analytics Data Source identify must identify a user without traits 1`] = `
-Object {
-  "success": true,
-}
-`;
-
-exports[`Analytics Data Source identify must identify a user without traits 2`] = `
-Array [
-  Array [
-    Object {
-      "anonymousId": "deviceId5",
-      "context": undefined,
-      "traits": Object {
-        "email": "test@test.com",
-        "firstName": "Rick",
-        "lastName": "Hampton",
-      },
-      "userId": 5,
-    },
-  ],
-]
-`;
-
 exports[`Analytics Data Source must accept arbitrary interfaces 1`] = `
 Object {
   "success": true,
@@ -135,6 +60,81 @@ exports[`Analytics Data Source must accept arbitrary interfaces 4`] = `
 }
 `;
 
+exports[`Analytics Data Source track identify must identify a user with device info 1`] = `
+Object {
+  "success": true,
+}
+`;
+
+exports[`Analytics Data Source track identify must identify a user with device info 2`] = `
+Array [
+  Array [
+    Object {
+      "anonymousId": "deviceId5",
+      "context": Object {
+        "appVersion": "72.0.1",
+        "deviceId": "gibberish",
+        "deviceMode": "Latest iPhone",
+        "platform": "iOS",
+      },
+      "traits": Object {
+        "email": "test@test.com",
+        "firstName": "Rick",
+        "lastName": "Hampton",
+      },
+      "userId": 5,
+    },
+  ],
+]
+`;
+
+exports[`Analytics Data Source track identify must identify a user with traits 1`] = `
+Object {
+  "success": true,
+}
+`;
+
+exports[`Analytics Data Source track identify must identify a user with traits 2`] = `
+Array [
+  Array [
+    Object {
+      "anonymousId": "deviceId5",
+      "context": undefined,
+      "traits": Object {
+        "ChurchRole": "Pastor",
+        "email": "test@test.com",
+        "firstName": "Rick",
+        "lastName": "Hampton",
+      },
+      "userId": 5,
+    },
+  ],
+]
+`;
+
+exports[`Analytics Data Source track identify must identify a user without traits 1`] = `
+Object {
+  "success": true,
+}
+`;
+
+exports[`Analytics Data Source track identify must identify a user without traits 2`] = `
+Array [
+  Array [
+    Object {
+      "anonymousId": "deviceId5",
+      "context": undefined,
+      "traits": Object {
+        "email": "test@test.com",
+        "firstName": "Rick",
+        "lastName": "Hampton",
+      },
+      "userId": 5,
+    },
+  ],
+]
+`;
+
 exports[`Analytics Data Source track must not track google analytics without a key 1`] = `
 Object {
   "success": true,
@@ -151,7 +151,7 @@ exports[`Analytics Data Source track must not track segment without a key 2`] = 
 Array [
   Array [
     Array [
-      "something-else",
+      undefined,
       undefined,
       Object {
         "strictCidFormat": false,
@@ -185,7 +185,7 @@ exports[`Analytics Data Source track must track an event with a name and no prop
 Array [
   Array [
     Array [
-      "something-else",
+      undefined,
       "deviceId5",
       Object {
         "strictCidFormat": false,
@@ -221,7 +221,7 @@ exports[`Analytics Data Source track must track an event with a name and propert
 Array [
   Array [
     Array [
-      "something-else",
+      undefined,
       "deviceId5",
       Object {
         "strictCidFormat": false,
@@ -274,7 +274,7 @@ exports[`Analytics Data Source track must track without a user 3`] = `
 Array [
   Array [
     Array [
-      "something-else",
+      undefined,
       undefined,
       Object {
         "strictCidFormat": false,

@@ -1,7 +1,8 @@
 import { mockUA, mockSend, mockEvent } from 'universal-analytics';
 import Analytics, { mockTrack, mockIdentify } from 'analytics-node';
 import { AuthenticationError } from 'apollo-server';
-import ApollosConfig from '@apollosproject/config';
+import { dataSource as ConfigDataSource } from '@apollosproject/config';
+
 import DataSource from '../data-source';
 import RockAnalytics from '../interfaces/rock_interactions';
 
@@ -35,20 +36,27 @@ const AuthWithoutUser = {
   getCurrentPerson: mockNoPerson,
 };
 
-const buildDataSource = (Auth = AuthWithUser) => {
+const defaults = {
+  ANALYTICS: { SEGMENT_KEY: 'something', GA_ID: 'something-else' },
+};
+
+const buildDataSourceAndConfig = (
+  Person = AuthWithUser,
+  configDefaults = defaults
+) => {
+  const Config = new ConfigDataSource();
+  Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
+  Config.loadJs(configDefaults);
   const dataSource = new DataSource();
-  dataSource.initialize({ context: { dataSources: { Auth } } });
+  dataSource.initialize({
+    context: { dataSources: { Person, Config } },
+  });
   return dataSource;
 };
 
 describe('Analytics Data Source', () => {
   beforeEach(() => {
     clearMocks();
-    const ANALYTICS = { SEGMENT_KEY: 'something', GA_ID: 'something-else' };
-    ApollosConfig.loadJs({ ANALYTICS });
-  });
-  afterEach(() => {
-    ApollosConfig.loadJs({ ANALYTICS: { SEGMENT_KEY: null, GA_ID: null } });
   });
 
   it('must accept arbitrary interfaces', async () => {
@@ -63,7 +71,9 @@ describe('Analytics Data Source', () => {
       initialize: () => ({}),
     };
     const dataSource = new DataSource([fakeClient]);
-    dataSource.initialize({ context: { dataSources: { Auth: AuthWithUser } } });
+    dataSource.initialize({
+      context: { dataSources: { Person: AuthWithUser } },
+    });
 
     const resultTrack = await dataSource.track({
       anonymousId: 'deviceId5',
@@ -92,7 +102,7 @@ describe('Analytics Data Source', () => {
         context: {
           sessionId: 'Session:123',
           dataSources: {
-            Auth: AuthWithUser,
+            Person: AuthWithUser,
             Interactions: {
               createContentItemInteraction: mockCreateInteraction,
             },
@@ -119,7 +129,7 @@ describe('Analytics Data Source', () => {
       dataSource.initialize({
         context: {
           dataSources: {
-            Auth: AuthWithUser,
+            Person: AuthWithUser,
             Interactions: {
               createInteraction: mockCreateInteraction,
             },
@@ -144,7 +154,7 @@ describe('Analytics Data Source', () => {
       expect(mockCreateInteraction).toHaveBeenCalledTimes(0);
 
       // without a current user
-      dataSource.context.dataSources.Auth = AuthWithoutUser;
+      dataSource.context.dataSources.Person = AuthWithoutUser;
       await dataSource.track({
         eventName: 'View Content',
         properties: [
@@ -154,7 +164,7 @@ describe('Analytics Data Source', () => {
       });
 
       expect(mockCreateInteraction).toHaveBeenCalledTimes(0);
-      dataSource.context.dataSources.Auth = AuthWithUser;
+      dataSource.context.dataSources.Person = AuthWithUser;
 
       // With an unhandled event
       rockAnalytics.eventWhitelist = ['Some Event'];
@@ -170,7 +180,7 @@ describe('Analytics Data Source', () => {
       expect(mockCreateInteraction).toHaveBeenCalledTimes(0);
     });
     it('must track an event with a name and no properties', async () => {
-      const analytics = buildDataSource();
+      const analytics = buildDataSourceAndConfig();
       const result = await analytics.track({
         eventName: 'View Content',
         anonymousId: 'deviceId5',
@@ -185,10 +195,11 @@ describe('Analytics Data Source', () => {
     });
 
     it('must not track segment without a key', async () => {
-      ApollosConfig.loadJs({
+      const configDefaults = {
         ANALYTICS: { GA_ID: 'something-else', SEGMENT_KEY: null },
-      });
-      const analytics = buildDataSource();
+      };
+      const analytics = buildDataSourceAndConfig(AuthWithUser, configDefaults);
+
       const result = await analytics.track({
         eventName: 'View Content',
       });
@@ -201,10 +212,11 @@ describe('Analytics Data Source', () => {
     });
 
     it('must not track google analytics without a key', async () => {
-      ApollosConfig.loadJs({
+      const configDefaults = {
         ANALYTICS: { SEGMENT_KEY: 'something', GA_ID: null },
-      });
-      const analytics = buildDataSource();
+      };
+      const analytics = buildDataSourceAndConfig(AuthWithUser, configDefaults);
+
       const result = await analytics.track({
         eventName: 'View Content',
       });
@@ -216,7 +228,7 @@ describe('Analytics Data Source', () => {
     });
 
     it('must track an event with a name and properties', async () => {
-      const analytics = buildDataSource();
+      const analytics = buildDataSourceAndConfig();
       const result = await analytics.track({
         eventName: 'View Content',
         anonymousId: 'deviceId5',
@@ -232,7 +244,7 @@ describe('Analytics Data Source', () => {
     });
 
     it('must track without a user', async () => {
-      const analytics = buildDataSource(AuthWithoutUser);
+      const analytics = buildDataSourceAndConfig(AuthWithoutUser);
       const result = await analytics.track({
         eventName: 'View Content',
       });
@@ -246,7 +258,9 @@ describe('Analytics Data Source', () => {
     });
 
     it('must reraise a non-auth Error', () => {
-      const analytics = buildDataSource({ getCurrentPerson: mockOtherError });
+      const analytics = buildDataSourceAndConfig({
+        getCurrentPerson: mockOtherError,
+      });
       const result = analytics.track({
         eventName: 'View Content',
       });
@@ -255,48 +269,48 @@ describe('Analytics Data Source', () => {
       expect(mockSend).toHaveBeenCalledTimes(0);
       expect(mockTrack).toHaveBeenCalledTimes(0);
     });
-  });
 
-  describe('identify', () => {
-    it('must identify a user without traits', async () => {
-      const analytics = buildDataSource();
-      const result = await analytics.identify({
-        anonymousId: 'deviceId5',
+    describe('identify', () => {
+      it('must identify a user without traits', async () => {
+        const analytics = buildDataSourceAndConfig();
+        const result = await analytics.identify({
+          anonymousId: 'deviceId5',
+        });
+        expect(result).toMatchSnapshot();
+        expect(mockIdentify).toHaveBeenCalledTimes(1);
+        expect(mockIdentify.mock.calls).toMatchSnapshot();
+
+        expect(mockUA).toHaveBeenCalledTimes(0);
       });
-      expect(result).toMatchSnapshot();
-      expect(mockIdentify).toHaveBeenCalledTimes(1);
-      expect(mockIdentify.mock.calls).toMatchSnapshot();
+      it('must identify a user with traits', async () => {
+        const analytics = buildDataSourceAndConfig();
+        const result = await analytics.identify({
+          anonymousId: 'deviceId5',
+          traits: [{ field: 'ChurchRole', value: 'Pastor' }],
+        });
+        expect(result).toMatchSnapshot();
+        expect(mockIdentify).toHaveBeenCalledTimes(1);
+        expect(mockIdentify.mock.calls).toMatchSnapshot();
 
-      expect(mockUA).toHaveBeenCalledTimes(0);
-    });
-    it('must identify a user with traits', async () => {
-      const analytics = buildDataSource();
-      const result = await analytics.identify({
-        anonymousId: 'deviceId5',
-        traits: [{ field: 'ChurchRole', value: 'Pastor' }],
+        expect(mockUA).toHaveBeenCalledTimes(0);
       });
-      expect(result).toMatchSnapshot();
-      expect(mockIdentify).toHaveBeenCalledTimes(1);
-      expect(mockIdentify.mock.calls).toMatchSnapshot();
+      it('must identify a user with device info', async () => {
+        const analytics = buildDataSourceAndConfig();
+        const result = await analytics.identify({
+          anonymousId: 'deviceId5',
+          deviceInfo: {
+            platform: 'iOS',
+            deviceId: 'gibberish',
+            deviceMode: 'Latest iPhone',
+            appVersion: '72.0.1',
+          },
+        });
+        expect(result).toMatchSnapshot();
+        expect(mockIdentify).toHaveBeenCalledTimes(1);
+        expect(mockIdentify.mock.calls).toMatchSnapshot();
 
-      expect(mockUA).toHaveBeenCalledTimes(0);
-    });
-    it('must identify a user with device info', async () => {
-      const analytics = buildDataSource();
-      const result = await analytics.identify({
-        anonymousId: 'deviceId5',
-        deviceInfo: {
-          platform: 'iOS',
-          deviceId: 'gibberish',
-          deviceMode: 'Latest iPhone',
-          appVersion: '72.0.1',
-        },
+        expect(mockUA).toHaveBeenCalledTimes(0);
       });
-      expect(result).toMatchSnapshot();
-      expect(mockIdentify).toHaveBeenCalledTimes(1);
-      expect(mockIdentify.mock.calls).toMatchSnapshot();
-
-      expect(mockUA).toHaveBeenCalledTimes(0);
     });
   });
 });

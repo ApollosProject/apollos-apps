@@ -5,7 +5,7 @@ Array [
   Array [
     "notifications",
     Object {
-      "app_id": "some-app-id",
+      "app_id": "123-xyz",
       "contents": Object {
         "en": "Welcome to the app!",
       },
@@ -23,3 +23,7 @@ Array [
   ],
 ]
 `;
+
+exports[`OneSignal updates push settings 1`] = `1`;
+
+exports[`OneSignal updates push settings 2`] = `1`;

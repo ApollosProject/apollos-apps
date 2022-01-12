@@ -1,20 +1,20 @@
-import ApollosConfig from '@apollosproject/config';
+// import { dataSource as ConfigDataSource } from '@apollosproject/config';
+import {
+  dataSource as ConfigDataSource,
+  fetchChurchConfig,
+} from '@apollosproject/config';
 import { setupUniversalLinks, generateAppLink } from '../index';
+import { createTestHelpers } from '../../testUtils';
 
-ApollosConfig.loadJs({
-  APP: {
-    UNIVERSAL_LINK_HOST: 'https://apollos.api',
-    DEEP_LINK_HOST: 'apolloschurchapp',
-  },
-  UNIVERSAL_LINKS: {
-    APPLE_APP_ID: 'test_id',
-    APPLE_TEAM_ID: 'test_team_id',
-    APP_STORE_LINK: 'app-store-link',
-    PLAY_STORE_LINK: 'play-store-link',
-    GOOGLE_APP_ID: 'some_app_id',
-    GOOGLE_KEYSTORE_SHA256: 'some-google-keystore',
-  },
+const { getContext } = createTestHelpers({
+  Config: { dataSource: ConfigDataSource },
 });
+
+const req = {
+  headers: {
+    'x-church': 'apollos-demo',
+  },
+};
 
 describe('Universal linking', () => {
   it('apple-app-site-association should return the correct values', () => {
@@ -26,8 +26,8 @@ describe('Universal linking', () => {
     };
     const res = { setHeader: jest.fn(), send: jest.fn() };
 
-    setupUniversalLinks({ app });
-    fns['/.well-known/apple-app-site-association'](null, res);
+    setupUniversalLinks({ app, getContext });
+    fns['/.well-known/apple-app-site-association'](req, res);
 
     expect(res.setHeader.mock.calls).toMatchSnapshot();
     expect(res.send.mock.calls).toMatchSnapshot();
@@ -44,8 +44,9 @@ describe('Universal linking', () => {
     setupUniversalLinks({
       app,
       appleAppSiteAssociation: { someOtherKey: 'value ' },
+      getContext,
     });
-    fns['/.well-known/apple-app-site-association'](null, res);
+    fns['/.well-known/apple-app-site-association'](req, res);
 
     expect(res.setHeader.mock.calls).toMatchSnapshot();
     expect(res.send.mock.calls).toMatchSnapshot();
@@ -60,8 +61,8 @@ describe('Universal linking', () => {
     };
     const res = { setHeader: jest.fn(), send: jest.fn() };
 
-    setupUniversalLinks({ app });
-    fns['/.well-known/assetlinks.json'](null, res);
+    setupUniversalLinks({ app, getContext });
+    fns['/.well-known/assetlinks.json'](req, res);
 
     expect(res.setHeader.mock.calls).toMatchSnapshot();
     expect(res.send.mock.calls).toMatchSnapshot();
@@ -76,8 +77,12 @@ describe('Universal linking', () => {
     };
     const res = { setHeader: jest.fn(), send: jest.fn() };
 
-    setupUniversalLinks({ app, assetLinks: { someOtherKey: 'value' } });
-    fns['/.well-known/assetlinks.json'](null, res);
+    setupUniversalLinks({
+      app,
+      assetLinks: { someOtherKey: 'value' },
+      getContext,
+    });
+    fns['/.well-known/assetlinks.json'](req, res);
 
     expect(res.setHeader.mock.calls).toMatchSnapshot();
     expect(res.send.mock.calls).toMatchSnapshot();
@@ -92,8 +97,8 @@ describe('Universal linking', () => {
     };
     const res = { redirect: jest.fn() };
 
-    setupUniversalLinks({ app });
-    await fns['/app-link/*']({ headers: '' }, res);
+    setupUniversalLinks({ app, getContext });
+    await fns['/app-link/*'](req, res);
 
     expect(res.redirect.mock.calls[0][0]).toBe('app-store-link');
   });
@@ -107,10 +112,11 @@ describe('Universal linking', () => {
     };
     const res = { redirect: jest.fn() };
 
-    setupUniversalLinks({ app });
+    setupUniversalLinks({ app, getContext });
     await fns['/app-link/*'](
       {
         headers: {
+          'x-church': 'apollos_demo',
           'user-agent':
             'Mozilla/5.0 (Linux; U; Android 2.2) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1',
         },
@@ -132,24 +138,37 @@ describe('Universal linking', () => {
 
     const createRedirectLink = jest.fn(() => 'return-url');
 
-    setupUniversalLinks({ app, createRedirectLink });
-    await fns['/app-link/*']({ headers: '', path: 'some-path-value' }, res);
+    setupUniversalLinks({ app, createRedirectLink, getContext });
+    await fns['/app-link/*'](
+      {
+        headers: {
+          'x-church': 'apollos_demo',
+        },
+        path: 'some-path-value',
+      },
+      res
+    );
 
     expect(res.redirect.mock.calls[0][0]).toBe('return-url');
     expect(createRedirectLink.mock.calls).toMatchSnapshot();
   });
 
   it('generates a universal nav link to home', () => {
-    expect(generateAppLink()).toMatchSnapshot();
+    const Config = fetchChurchConfig();
+    expect(
+      generateAppLink('universal', 'nav', { screen: 'home' }, Config)
+    ).toMatchSnapshot();
   });
   it('generates a universal nav link to the connect screen', () => {
+    const Config = fetchChurchConfig();
     expect(
-      generateAppLink('universal', 'nav', { screen: 'connect' })
+      generateAppLink('universal', 'nav', { screen: 'connect' }, Config)
     ).toMatchSnapshot();
   });
   it('generates a deep content link', () => {
+    const Config = fetchChurchConfig();
     expect(
-      generateAppLink('deep', 'content', { contentID: '1' })
+      generateAppLink('deep', 'content', { contentID: '1' }, Config)
     ).toMatchSnapshot();
   });
 });
