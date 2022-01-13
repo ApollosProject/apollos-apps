@@ -1,5 +1,5 @@
 import { AuthenticationError } from 'apollo-server';
-
+import { generateAppLink } from '@apollosproject/server-core';
 import { isNil, mapValues, omit, toLower, toUpper } from 'lodash';
 import { Op } from 'sequelize';
 
@@ -86,13 +86,23 @@ export default class AuthenticationDataSource extends PostgresDataSource {
         to: identityValue,
       });
     } else {
+
+      const url = generateAppLink(
+        'deep',
+        'auth',
+        {
+          query: `?identity=${identityValue}&authType=${identityKey}&code=${otp}`
+        },
+        this.context.dataSources.Config
+      );
       await this.context.dataSources.Email.sendEmail({
         toEmail: identityValue,
         subject: 'Your One Time Login Password',
         html: `
           <p>Hi${person.firstName ? `, ${person.firstName}` : ''}!</p>
           <br>
-          <p>Your church would like to help you login. Your code is: ${otp}</p>
+          <p>Your church would like to help you login</p>
+          <p>Your code is: <strong>${otp}</strong>, or you can <strong><a href="${url}">click here</a></strong> with the app installed</p>
         `,
       });
     }

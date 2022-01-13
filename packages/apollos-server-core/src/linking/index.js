@@ -84,11 +84,11 @@ export function setupUniversalLinks({
 export const generateAppLink = (
   type = 'universal',
   route = 'nav',
-  args = { screen: 'home' },
+  args = { screen: 'home', },
   Config
 ) => {
   const TYPES = ['universal', 'deep'];
-  const ROUTES = ['content', 'nav'];
+  const ROUTES = ['content', 'nav', 'auth'];
   const SCREENS = ['home', 'read', 'watch', 'pray', 'connect'];
 
   if (!TYPES.includes(type))
@@ -108,6 +108,7 @@ export const generateAppLink = (
   const path = {
     content: args.contentID,
     nav: args.screen,
+    auth: args.query
   };
 
   // path is arbitrary and is handled app side
