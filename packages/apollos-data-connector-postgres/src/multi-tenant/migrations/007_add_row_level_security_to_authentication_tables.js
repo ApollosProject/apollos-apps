@@ -11,7 +11,7 @@ async function up({ context: queryInterface }) {
     tables.map(async (t) => {
       await queryInterface.addColumn(
         t, // table name
-        'church_id', // new field name
+        'church_slug', // new field name
         {
           type: Sequelize.STRING,
           allowNull: true,
@@ -21,13 +21,28 @@ async function up({ context: queryInterface }) {
         `ALTER TABLE ${t} ENABLE ROW LEVEL SECURITY;`
       );
       await queryInterface.sequelize.query(
-        `CREATE POLICY church_tenant_${t} ON ${t} USING (church_id = current_user);`
+        `CREATE POLICY church_tenant_${t} ON ${t} USING (church_slug = current_user);`
       );
       await queryInterface.sequelize.query(
-        `ALTER TABLE ${t} ALTER COLUMN church_id SET DEFAULT current_user;`
+        `ALTER TABLE ${t} ALTER COLUMN church_slug SET DEFAULT current_user;`
       );      
     })
   );  
+
+  await queryInterface.removeConstraint('otp', 'otp_code_key', {})
+  await queryInterface.removeIndex('otp', 'otp_code_key');
+  await queryInterface.removeConstraint('otp', 'otp_identity_key', {})
+  await queryInterface.removeIndex('otp', 'otp_identity_key');
+
+  await queryInterface.addIndex('otp', {
+    fields: ['church_slug', 'code'],
+    unique: true,
+  });  
+
+  await queryInterface.addIndex('otp', {
+    fields: ['church_slug', 'identity'],
+    unique: true,
+  });    
 }
 
 async function down({ context: queryInterface }) {
@@ -37,7 +52,7 @@ async function down({ context: queryInterface }) {
     );
     await queryInterface.removeColumn(
       t, // table name
-      'church_id' // new field name
+      'church_slug' // new field name
     );
   }));
 }
