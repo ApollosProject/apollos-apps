@@ -30,7 +30,7 @@ const resolver = {
       console.log('🟧 requestDeviceOTP');
       console.log('identity:', identity);
 
-      return Authentication.requestDeviceOtp({ identity });
+      return Authentication.requestDeviceOTP({ identity });
     },
     refreshSession: (root, args, { dataSources: { Authentication } }) => {
       return Authentication.refreshSession(args);

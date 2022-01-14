@@ -10,6 +10,12 @@ import { generateToken } from './token';
 export default class AuthenticationDataSource extends PostgresDataSource {
   // eslint-disable-next-line class-methods-use-this
   parseIdentity(identity) {
+    // Device OTP Case
+    if (identity.deviceId) {
+      return { identityKey: 'device_otp', identityValue: identity.deviceId };
+    }
+
+    // Phone and Email case
     const identityFieldSelect = mapValues(omit(identity, isNil), (v) =>
       toLower(v)
     );
@@ -77,21 +83,22 @@ export default class AuthenticationDataSource extends PostgresDataSource {
       identity: identityValue,
       type: toUpper(identityKey),
     });
+    const { code } = otp;
+    console.log('🔢 otp:', otp);
 
     if (identityKey === 'phone') {
       await this.context.dataSources.Sms.sendSms({
         body: `Hi${
           person.firstName ? `, ${person.firstName}` : ''
-        }!\n\nYour church would like to help you login. Your code is: ${otp}`,
+        }!\n\nYour church would like to help you login. Your code is: ${code}`,
         to: identityValue,
       });
-    } else {
-
+    } else if (identityKey === 'email') {
       const url = generateAppLink(
         'deep',
         'auth',
         {
-          query: `?identity=${identityValue}&authType=${identityKey}&code=${otp}`
+          query: `?identity=${identityValue}&authType=${identityKey}&code=${code}`,
         },
         this.context.dataSources.Config
       );
@@ -102,9 +109,12 @@ export default class AuthenticationDataSource extends PostgresDataSource {
           <p>Hi${person.firstName ? `, ${person.firstName}` : ''}!</p>
           <br>
           <p>Your church would like to help you login</p>
-          <p>Your code is: <strong>${otp}</strong>, or you can <strong><a href="${url}">click here</a></strong> with the app installed</p>
+          <p>Your code is: <strong>${code}</strong>, or you can <strong><a href="${url}">click here</a></strong> with the app installed</p>
         `,
       });
+    } else if (identityKey === 'device_otp') {
+      // Placeholder
+      console.log('🔢 otp:', otp);
     }
 
     return {
@@ -152,14 +162,26 @@ export default class AuthenticationDataSource extends PostgresDataSource {
     };
   }
 
-  requestDeviceOtp = async ({ identity }) => {
-    console.log('🟧 🔐 Authentication.requestDeviceOtp() ');
-    console.log('identity:', identity);
+  // requestDeviceOTP = async ({ identity }) => {
+  //   const { OTP } = this.context.dataSources;
+  //   console.log('🟧 🔐 Authentication.requestDeviceOTP() ');
+  //   console.log('identity:', identity);
 
-    return {
-      result: 'SUCCESS',
-    };
-  };
+  //   const deviceOtp = await OTP.generateDeviceOTP({ deviceId });
+
+  //   return {
+  //     result: 'SUCCESS',
+  //   };
+  // };
+
+  async requestDeviceOTP({ identity }) {
+    console.log('🟧 🔐 Authentication.requestDeviceOTP() ');
+    console.log('identity:', identity);
+    const { identityKey, identityValue } = this.parseIdentity(identity);
+    console.log('identityKey:', identityKey);
+    console.log('identityValue:', identityValue);
+    return this.sendOtpForRequest({ identityValue, identityKey });
+  }
 
   refreshSession = async ({ refreshToken }) => {
     // Find and validate refresh token
