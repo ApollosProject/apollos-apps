@@ -152,6 +152,15 @@ export default class AuthenticationDataSource extends PostgresDataSource {
     };
   }
 
+  requestDeviceOtp = async ({ identity }) => {
+    console.log('🟧 🔐 Authentication.requestDeviceOtp() ');
+    console.log('identity:', identity);
+
+    return {
+      result: 'SUCCESS',
+    };
+  };
+
   refreshSession = async ({ refreshToken }) => {
     // Find and validate refresh token
     const token = await this.context.dataSources.RefreshToken.getValidToken({

@@ -22,6 +22,16 @@ const resolver = {
     ) => {
       return Authentication.validateLogin({ identity, otp });
     },
+    requestDeviceOtp: (
+      root,
+      { identity },
+      { dataSources: { Authentication } }
+    ) => {
+      console.log('🟧 requestDeviceOTP');
+      console.log('identity:', identity);
+
+      return Authentication.requestDeviceOtp({ identity });
+    },
     refreshSession: (root, args, { dataSources: { Authentication } }) => {
       return Authentication.refreshSession(args);
     },
