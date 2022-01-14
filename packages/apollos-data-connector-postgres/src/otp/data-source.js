@@ -49,45 +49,7 @@ export default class OTPDataSource extends PostgresDataSource {
 
     await this.model.create(otpShape);
 
-    return code;
-  };
-
-  generateDeviceOTP = async ({ deviceId }) => {
-    if (!deviceId) {
-      throw new Error('Invalid deviceId');
-    }
-
-    const type = 'DEVICE_OTP';
-
-    const existingCode = await this.model.findOne({
-      where: {
-        identity,
-      },
-    });
-    if (existingCode) {
-      if (moment().isBefore(moment(existingCode.expiresAt))) {
-        return existingCode.code;
-      }
-      this.model.destroy({
-        where: {
-          identity,
-        },
-      });
-    }
-
-    const tomorrow = moment().add(1, 'day').toDate();
-    const code = cryptoRandomString({ length: 6, type: 'numeric' });
-    const otpShape = {
-      code,
-      identity,
-      type,
-      expiresAt: tomorrow,
-      apollosType: 'OTP',
-    };
-
-    await this.model.create(otpShape);
-
-    return code;
+    return { code };
   };
 
   validateOTP = async ({ identity, otp }) => {
