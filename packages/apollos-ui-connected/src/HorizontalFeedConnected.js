@@ -1,132 +1,122 @@
-import React, { Component } from 'react';
-import { get } from 'lodash';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { withNavigation } from '@react-navigation/compat';
-import { Query } from '@apollo/client/react/components';
+import { useNavigation } from '@react-navigation/native';
+import { useQuery } from '@apollo/client';
 
-import { HorizontalTileFeed, TouchableScale } from '@apollosproject/ui-kit';
+import {
+  HorizontalTileFeed,
+  TouchableScale,
+  named,
+} from '@apollosproject/ui-kit';
 
 import HorizontalContentCardConnected from './HorizontalContentCardConnected';
 
-const loadingStateObject = {
-  node: {
-    id: 'fakeId0',
-    title: '',
-    coverImage: '',
-    isLoading: true,
-    parentChannel: {
-      name: '',
-    },
-    // We need to assume a typename so HorizontalContentCardConnected knows what "type" to render
-    __typename: 'MediaContentItem',
-  },
-};
-
-class HorizontalFeedConnected extends Component {
-  static propTypes = {
-    // eslint-disable-next-line react/no-unused-prop-types
-    Component: PropTypes.oneOfType([
-      PropTypes.node,
-      PropTypes.func,
-      PropTypes.object, // type check for React fragments
-    ]),
-    navigation: PropTypes.shape({
-      push: PropTypes.func,
-    }),
-    query: PropTypes.shape({}),
-    renderItem: PropTypes.func,
-    variables: PropTypes.shape({}),
-    loadingStateObject: PropTypes.shape({}),
-    isItemDisabled: PropTypes.func,
-    mapContentFromData: PropTypes.func,
-    updateQuery: PropTypes.func,
-    onPressItem: PropTypes.func,
-    isLoading: PropTypes.bool,
-  };
-
-  static defaultProps = {
-    Component: HorizontalTileFeed,
-  };
-
-  renderItem = ({ item }) => {
-    const disabled =
-      this.props.isItemDisabled && this.props.isItemDisabled({ item });
-    const isLoading = get(item.node, 'isLoading');
-
-    const onPressItem = this.props.onPressItem || this.handleOnPressItem;
-
+const HorizontalFeedConnected = ({
+  isLoading,
+  updateQuery,
+  query,
+  variables,
+  mapContentFromData,
+  Component,
+}) => {
+  const navigation = useNavigation();
+  const { data, loading, error, fetchMore } = useQuery(query, {
+    variables,
+    fetchPolicy: 'cache-and-network',
+  });
+  if (error) return null;
+  if (isLoading || loading)
     return (
-      <TouchableScale
-        onPress={() => onPressItem(item)}
-        disabled={isLoading || disabled}
-      >
-        <HorizontalContentCardConnected
-          labelText={get(item.node, 'parentChannel.name', null)}
-          contentId={get(item, 'id', '')}
-          disabled={disabled}
-          isLoading={isLoading}
-          __typename={get(item, '__typename')}
-        />
-      </TouchableScale>
-    );
-  };
-
-  handleOnPressItem = (item) => {
-    this.props.navigation.push('ContentSingle', {
-      itemId: item.id,
-    });
-  };
-
-  renderFeed = ({ data, loading, error, fetchMore }) => {
-    if (error) return null;
-
-    const { content, nextCursor, currentIndex } = this.props.mapContentFromData(
-      {
-        data,
-      }
-    );
-    const initialScrollIndex = currentIndex === -1 ? 0 : currentIndex;
-
-    const { Component: FeedComponent } = this.props;
-
-    return (
-      <FeedComponent
-        isLoading={loading}
-        content={content}
-        loadingStateObject={this.props.loadingStateObject || loadingStateObject}
-        renderItem={this.props.renderItem || this.renderItem}
-        initialScrollIndex={initialScrollIndex}
-        getItemLayout={(itemData, index) => ({
-          // We need to pass this function so that initialScrollIndex will work.
-          length: 240,
-          offset: 240 * index,
-          index,
-        })}
-        onEndReached={() =>
-          !loading &&
-          fetchMore({
-            variables: { cursor: nextCursor, ...this.props.variables },
-            updateQuery: this.props.updateQuery,
-          })
-        }
+      <Component
+        isLoading
+        loadingStateObject={{
+          node: {
+            id: 'fakeId0',
+            title: '',
+            coverImage: '',
+            isLoading: true,
+            parentChannel: {
+              name: '',
+            },
+            // We need to assume a typename so HorizontalContentCardConnected knows what "type" to render
+            __typename: 'MediaContentItem',
+          },
+        }}
+        renderItem={() => <HorizontalContentCardConnected />}
+        initialScrollIndex={0}
       />
     );
-  };
 
-  render() {
-    if (this.props.isLoading) return this.renderFeed({ loading: true });
+  const { content, nextCursor, currentIndex } = mapContentFromData({
+    data,
+  });
+  const initialScrollIndex = currentIndex === -1 ? 0 : currentIndex;
 
-    return (
-      <Query
-        query={this.props.query}
-        variables={this.props.variables}
-        fetchPolicy={'cache-and-network'}
-        notifyOnNetworkStatusChange
-      >
-        {this.renderFeed}
-      </Query>
-    );
-  }
-}
+  return (
+    <Component
+      content={content.map((item) => ({
+        ...item,
+        disabled: variables.nodeId
+          ? item.id === variables.nodeId
+          : item.id === variables.contentId,
+      }))}
+      renderItem={({ item }) => {
+        const disabled = item?.node?.isLoading || item.disabled;
 
-export default withNavigation(HorizontalFeedConnected);
+        return (
+          <TouchableScale
+            onPress={() =>
+              navigation.push('ContentSingle', { itemId: item.id })
+            }
+            disabled={disabled}
+          >
+            <HorizontalContentCardConnected
+              labelText={item?.node?.parentChannel?.name ?? ''}
+              contentId={item?.id ?? ''}
+              disabled={disabled}
+              isLoading={item?.node?.isLoading}
+              __typename={item?.__typename}
+            />
+          </TouchableScale>
+        );
+      }}
+      initialScrollIndex={initialScrollIndex}
+      getItemLayout={(itemData, index) => ({
+        // We need to pass this function so that initialScrollIndex will work.
+        length: 240,
+        offset: 240 * index,
+        index,
+      })}
+      onEndReached={() =>
+        !loading &&
+        fetchMore({
+          variables: { cursor: nextCursor, ...variables },
+          updateQuery,
+        })
+      }
+    />
+  );
+};
+
+HorizontalFeedConnected.propTypes = {
+  Component: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.func,
+    PropTypes.object, // type check for React fragments
+  ]),
+  query: PropTypes.shape({}),
+  variables: PropTypes.shape({
+    nodeId: PropTypes.string,
+    contentId: PropTypes.string,
+  }),
+  loadingStateObject: PropTypes.shape({}),
+  mapContentFromData: PropTypes.func,
+  updateQuery: PropTypes.func,
+  isLoading: PropTypes.bool,
+};
+
+HorizontalFeedConnected.defaultProps = {
+  Component: HorizontalTileFeed,
+};
+
+export default named('HorizontalFeedConnected')(HorizontalFeedConnected);
