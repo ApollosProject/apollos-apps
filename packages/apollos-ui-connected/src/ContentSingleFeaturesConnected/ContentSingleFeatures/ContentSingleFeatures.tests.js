@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer, { act } from 'react-test-renderer';
+import renderer from 'react-test-renderer';
 
 import { Providers } from '@apollosproject/ui-test-utils';
 import { MockedProvider } from '@apollo/client/testing';
@@ -88,20 +88,18 @@ describe('ContentSingleFeatures', () => {
     expect(tree).toMatchSnapshot();
   });
   it('should take a custom title', async () => {
-    await act(async () => {
-      const tree = renderer.create(
-        <Providers MockedProvider={MockedProvider}>
-          <ContentSingleFeatures
-            contentId={'WeekendContentItem:1'}
-            features={mockFeaturesData}
-            title={'Custom Title'}
-          />
-        </Providers>
-      );
+    const tree = renderer.create(
+      <Providers MockedProvider={MockedProvider}>
+        <ContentSingleFeatures
+          contentId={'WeekendContentItem:1'}
+          features={mockFeaturesData}
+          title={'Custom Title'}
+        />
+      </Providers>
+    );
 
-      await new Promise((resolve) => setTimeout(resolve, 300));
-      expect(tree).toMatchSnapshot();
-    });
+    await new Promise((resolve) => setTimeout(resolve, 300));
+    expect(tree).toMatchSnapshot();
   });
   it('should render a loading state', () => {
     const tree = renderer.create(
