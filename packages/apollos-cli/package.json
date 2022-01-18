@@ -2,6 +2,7 @@
   "name": "@apollosproject/apollos-cli",
   "version": "2.42.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\""
@@ -15,6 +16,8 @@
   },
   "license": "ISC",
   "dependencies": {
-    "commander": "^8.0.0"
+    "commander": "^8.0.0",
+    "execa": "^6.0.0",
+    "prompts": "^2.4.2"
   }
 }
