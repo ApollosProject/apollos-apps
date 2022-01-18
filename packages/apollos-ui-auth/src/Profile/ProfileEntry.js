@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
-import { TextInput } from '@apollosproject/ui-kit';
+import { named, TextInput } from '@apollosproject/ui-kit';
 
 import { LegalText, ProfileEntryFieldContainer } from '../styles';
 
@@ -68,4 +68,4 @@ ProfileEntry.LegalText = LegalText;
 
 ProfileEntry.displayName = 'ProfileEntry';
 
-export default ProfileEntry;
+export default named('ui-auth.ProfileEntry')(ProfileEntry);
