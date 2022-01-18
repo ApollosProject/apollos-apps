@@ -28,26 +28,27 @@ export default class PersonalDevices extends RockApolloDataSource {
         'You must supply a `pushId` to the addPersonalDevice function'
       );
     }
-    const existing = await this.request()
-      .filter(`DeviceRegistrationId eq '${pushId}'`)
-      .first();
-
-    // if we already have a device, shortcut the function;
-    const currentUser = await this.context.dataSources.Auth.getCurrentPerson();
-
-    if (existing) return currentUser;
 
     // Get the Rock instance's apollos device type value id
     let personalDeviceTypeDefinedValue = await this.request('DefinedValues')
       .filter(`Description eq 'Personal Device Type Apollos App'`)
       .first();
 
-    console.log(personalDeviceTypeDefinedValue);
-
     // If our server hasn't created the defined value yet, do so.
     if (!personalDeviceTypeDefinedValue) {
       personalDeviceTypeDefinedValue = await this.createApollosDeviceType();
     }
+
+    const existing = await this.request()
+      .filter(
+        `DeviceRegistrationId eq '${pushId}' and PersonalDeviceTypeValueId eq ${personalDeviceTypeDefinedValue?.id}`
+      )
+      .first();
+
+    // if we already have a device, shortcut the function;
+    const currentUser = await this.context.dataSources.Auth.getCurrentPerson();
+
+    if (existing) return currentUser;
 
     await this.post('/PersonalDevices', {
       PersonAliasId: currentUser.primaryAliasId,
