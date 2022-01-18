@@ -4,22 +4,45 @@ if [ $# -ne 2 ]; then
   exit 1
 fi
 
-function encrypt() {
-  if [[ `uname -m` == 'arm64' ]]; 
-  then
-    /opt/homebrew/Cellar/openssl@1.1/1.1.1k/bin/openssl enc -aes-256-cbc -pbkdf2 -iter 20000 -in "$1" -out "$1".enc -k "$2"
-  else 
-    /usr/local/opt/openssl@1.1/bin/openssl enc -aes-256-cbc -pbkdf2 -iter 20000 -in "$1" -out "$1".enc -k "$2"
+POSSIBLE_PATHS=(
+    $(brew --prefix openssl)/bin/openssl
+    $(brew --prefix openssl@1.1)/bin/openssl
+    $(which openssl)
+)
+
+for DIR in "${POSSIBLE_PATHS[@]}" ; do
+  if [[ -e "$DIR" ]] ; then
+    OPENSSL=$DIR
+    break
   fi
+done
+
+if [ -z ${OPENSSL+x} ]; then 
+  echo "No OpenSSL found."
+  echo "brew install openssl"
+  exit 1
+else 
+  echo
+  $OPENSSL version
+  echo
+fi
+
+if $OPENSSL version | grep -q 'LibreSSL'; then
+  echo "No OpenSSL found. Please install OpenSSL through Homebrew"
+  echo "brew install openssl"
+  echo
+  $OPENSSL version
+  echo  
+  exit 1
+fi
+
+
+function encrypt() {
+  $OPENSSL enc -aes-256-cbc -pbkdf2 -iter 20000 -in "$1" -out "$1".enc -k "$2"
 }
 
 function decrypt() {
-  if [[ `uname -m` == 'arm64' ]]; 
-  then
-    /opt/homebrew/Cellar/openssl@1.1/1.1.1k/bin/openssl enc -d -aes-256-cbc -pbkdf2 -iter 20000 -in "$1".enc -out "$1" -k "$2"
-  else 
-    /usr/local/opt/openssl@1.1/bin/openssl enc -d -aes-256-cbc -pbkdf2 -iter 20000 -in "$1".enc -out "$1" -k "$2"
-  fi
+  $OPENSSL enc -d -aes-256-cbc -pbkdf2 -iter 20000 -in "$1".enc -out "$1" -k "$2"
 }
 
 SECRETS=(
