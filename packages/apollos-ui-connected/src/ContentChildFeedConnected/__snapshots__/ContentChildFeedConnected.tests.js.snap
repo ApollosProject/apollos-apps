@@ -295,6 +295,7 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                               },
                             ],
                           },
+                          "disabled": false,
                           "hyphenatedTitle": "God sees who you can be not who you are",
                           "id": "DevotionalContentItem:d395278cd4b68e074ca4e595c8feab6d",
                           "parentChannel": Object {
@@ -317,6 +318,7 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                               },
                             ],
                           },
+                          "disabled": false,
                           "hyphenatedTitle": "Thank God for the friends who will tell it like it is",
                           "id": "DevotionalContentItem:fbea6914a3e8877516cbd333d919075d",
                           "parentChannel": Object {
@@ -339,6 +341,7 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                               },
                             ],
                           },
+                          "disabled": false,
                           "hyphenatedTitle": "No sin is too bad",
                           "id": "DevotionalContentItem:5e18250f586ab8de4d3d6292c919dcc4",
                           "parentChannel": Object {
@@ -361,6 +364,7 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                               },
                             ],
                           },
+                          "disabled": false,
                           "hyphenatedTitle": "Change starts with a choice",
                           "id": "DevotionalContentItem:bdc2c29b85949e4ca8232b373a07953d",
                           "parentChannel": Object {
@@ -383,20 +387,6 @@ exports[`the ContentChildFeedConnected component should render 1`] = `
                     initialNumToRender={10}
                     initialScrollIndex={0}
                     keyExtractor={[Function]}
-                    loadingStateObject={
-                      Object {
-                        "node": Object {
-                          "__typename": "MediaContentItem",
-                          "coverImage": "",
-                          "id": "fakeId0",
-                          "isLoading": true,
-                          "parentChannel": Object {
-                            "name": "",
-                          },
-                          "title": "",
-                        },
-                      }
-                    }
                     maxToRenderPerBatch={10}
                     onContentSizeChange={[Function]}
                     onEndReached={[Function]}

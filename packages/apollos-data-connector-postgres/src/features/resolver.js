@@ -119,9 +119,11 @@ const resolver = {
     id: id('ActionBarFeature'),
   },
   WebviewFeature: {
-    height: ({ data }) => data?.height || 400,
+    height: ({ data, args, height }) =>
+      data?.height || args?.height || height || 400,
     id: id('WebviewFeature'),
-    url: ({ data, url }) => data?.url || url || '',
+    url: ({ data, args, url }) => data?.url || args?.url || url || '',
+    title: ({ data, args, title }) => data?.title || args?.title || title || '',
   },
   FollowPeopleFeature: {
     id: id('FollowPeopleFeature'),
