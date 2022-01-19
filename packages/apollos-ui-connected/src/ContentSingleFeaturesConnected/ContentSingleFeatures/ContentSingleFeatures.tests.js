@@ -84,6 +84,7 @@ describe('ContentSingleFeatures', () => {
       </Providers>
     );
 
+    await new Promise((resolve) => setTimeout(resolve, 300));
     expect(tree).toMatchSnapshot();
   });
   it('should take a custom title', async () => {
@@ -97,9 +98,10 @@ describe('ContentSingleFeatures', () => {
       </Providers>
     );
 
+    await new Promise((resolve) => setTimeout(resolve, 300));
     expect(tree).toMatchSnapshot();
   });
-  it('should render a loading state', async () => {
+  it('should render a loading state', () => {
     const tree = renderer.create(
       <Providers MockedProvider={MockedProvider}>
         <ContentSingleFeatures
