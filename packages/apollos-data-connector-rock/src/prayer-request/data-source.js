@@ -129,8 +129,14 @@ export default class PrayerRequest extends RockApolloDataSource {
     const {
       dataSources: { Person },
     } = this.context;
-    const { originId, nickName, firstName, lastName, email, primaryCampusId } =
-      await Person.getCurrentPerson();
+    const {
+      originId,
+      nickName,
+      firstName,
+      lastName,
+      email,
+      primaryCampusId,
+    } = await Person.getCurrentPerson();
 
     if (!originId) {
       return null;

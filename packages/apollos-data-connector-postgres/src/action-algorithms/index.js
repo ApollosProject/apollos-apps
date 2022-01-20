@@ -20,8 +20,8 @@ class ActionAlgorithm extends PostgresDataSource {
     UPCOMING_EVENTS: this.upcomingEventsAlgorithm,
     SERIES_IN_PROGRESS: this.seriesInProgressAlgorithm,
     DAILY_PRAYER: this.dailyPrayerAlgorithm,
-    CHILDREN_OF_PARENTS_BY_CATEGORIES:
-      this.childrenOfParentsByCategoriesAlgoritm,
+    CHILDREN_OF_PARENTS_BY_CATEGORIES: this
+      .childrenOfParentsByCategoriesAlgoritm,
   }).reduce((accum, [key, value]) => {
     // convenciance code to make sure all methods are bound to the Features dataSource
     // eslint-disable-next-line

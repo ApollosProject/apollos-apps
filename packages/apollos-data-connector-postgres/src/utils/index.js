@@ -1,22 +1,26 @@
 import { AuthenticationError } from 'apollo-server';
 
-export const enforceCurrentUser =
-  (func) => async (root, args, context, info) => {
-    try {
-      const currentPerson = await context.dataSources.Person.getCurrentPerson();
-      // If the root is a postgres person
-      // And the auth datasource is not
-      if (root.id !== currentPerson.id) {
-        return null;
-      }
-    } catch (e) {
-      if (!(e instanceof AuthenticationError)) {
-        throw e;
-      }
+export const enforceCurrentUser = (func) => async (
+  root,
+  args,
+  context,
+  info
+) => {
+  try {
+    const currentPerson = await context.dataSources.Person.getCurrentPerson();
+    // If the root is a postgres person
+    // And the auth datasource is not
+    if (root.id !== currentPerson.id) {
       return null;
     }
-    return func(root, args, context, info);
-  };
+  } catch (e) {
+    if (!(e instanceof AuthenticationError)) {
+      throw e;
+    }
+    return null;
+  }
+  return func(root, args, context, info);
+};
 
 export const latLonDistance = (lat1, lon1, lat2, lon2) => {
   if (lat1 === lat2 && lon1 === lon2) {

@@ -21,10 +21,14 @@ describe('BinaryFiles', () => {
     expect(result).toMatchSnapshot();
     const nodeFetchCalls = dataSource.nodeFetch.mock.calls;
     // Remove randomly generated multipart boundary.
-    nodeFetchCalls[0][1].body._boundary =
-      nodeFetchCalls[0][1].body._boundary.replace(/\d+/, '');
-    nodeFetchCalls[0][1].body._streams[0] =
-      nodeFetchCalls[0][1].body._streams[0].replace(/\d+/, '');
+    nodeFetchCalls[0][1].body._boundary = nodeFetchCalls[0][1].body._boundary.replace(
+      /\d+/,
+      ''
+    );
+    nodeFetchCalls[0][1].body._streams[0] = nodeFetchCalls[0][1].body._streams[0].replace(
+      /\d+/,
+      ''
+    );
     nodeFetchCalls[0][1].headers['content-type'] = nodeFetchCalls[0][1].headers[
       'content-type'
     ].replace(/\d+/, '');

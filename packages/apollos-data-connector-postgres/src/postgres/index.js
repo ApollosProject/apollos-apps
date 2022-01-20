@@ -2,7 +2,7 @@
 /* eslint-disable no-param-reassign */
 import './pgEnum-fix';
 import { Sequelize, DataTypes } from 'sequelize';
-import ApollosConfig, { fetchChurchConfig } from '@apollosproject/config';
+import { fetchChurchConfig } from '@apollosproject/config';
 
 import connectJest from './test-connect';
 
@@ -68,74 +68,72 @@ export const isUuid = (uuid) => UUID_V4_REGEXP.test(uuid);
 
 // Define model is used to define the base attributes of a model
 // as well as any pre/post hooks.
-const defineModel =
-  ({
+const defineModel = ({
+  modelName,
+  attributes,
+  resolveType,
+  sequelizeOptions = {},
+  external = false,
+}) => (context) => {
+  const sequelize = getSequelize({ churchSlug: context?.church?.slug });
+  const model = sequelize.define(
     modelName,
-    attributes,
-    resolveType,
-    sequelizeOptions = {},
-    external = false,
-  }) =>
-  (context) => {
-    const sequelize = getSequelize({ churchSlug: context?.church?.slug });
-    const model = sequelize.define(
-      modelName,
-      {
-        id: {
-          primaryKey: true,
-          type: DataTypes.UUID,
-          defaultValue: Sequelize.literal('uuid_generate_v4()'),
-        },
-        apollosId: {
-          type: DataTypes.STRING,
-          allowNull: true, // we set this value with an "afterCreate" hook if not set.
-          unique: true,
-        },
-        apollosType: {
-          type: DataTypes.STRING,
-          allowNull: false,
-        },
-        ...(external
-          ? {
-              originId: { type: DataTypes.STRING, allowNull: false },
-              originType: { type: DataTypes.STRING, allowNull: false },
-            }
-          : {}),
-        ...attributes,
+    {
+      id: {
+        primaryKey: true,
+        type: DataTypes.UUID,
+        defaultValue: Sequelize.literal('uuid_generate_v4()'),
       },
-      {
-        underscored: true,
-        ...sequelizeOptions,
-        hooks: {
-          ...(sequelizeOptions?.hooks || {}),
-          beforeValidate: (instance, options) => {
-            if (resolveType && !instance.apollosType) {
-              instance.apollosType = resolveType(instance);
-            }
-            // eslint-disable-next-line no-unused-expressions
-            sequelizeOptions?.hooks?.beforeValidate?.(instance, options);
-          },
-          afterCreate: async (instance, options) => {
-            if (!instance.apollosId) {
-              instance.apollosId = `${instance.apollosType}:${instance.id}`;
-              await instance.save({
-                transaction: options.transaction,
-              });
-            }
-          },
+      apollosId: {
+        type: DataTypes.STRING,
+        allowNull: true, // we set this value with an "afterCreate" hook if not set.
+        unique: true,
+      },
+      apollosType: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      ...(external
+        ? {
+            originId: { type: DataTypes.STRING, allowNull: false },
+            originType: { type: DataTypes.STRING, allowNull: false },
+          }
+        : {}),
+      ...attributes,
+    },
+    {
+      underscored: true,
+      ...sequelizeOptions,
+      hooks: {
+        ...(sequelizeOptions?.hooks || {}),
+        beforeValidate: (instance, options) => {
+          if (resolveType && !instance.apollosType) {
+            instance.apollosType = resolveType(instance);
+          }
+          // eslint-disable-next-line no-unused-expressions
+          sequelizeOptions?.hooks?.beforeValidate?.(instance, options);
         },
-        indexes: [
-          { unique: true, fields: ['apollos_id'] },
-          ...(external
-            ? [{ unique: true, fields: ['origin_id', 'origin_type'] }]
-            : []),
-          ...(sequelizeOptions?.indexes || []),
-        ],
-      }
-    );
+        afterCreate: async (instance, options) => {
+          if (!instance.apollosId) {
+            instance.apollosId = `${instance.apollosType}:${instance.id}`;
+            await instance.save({
+              transaction: options.transaction,
+            });
+          }
+        },
+      },
+      indexes: [
+        { unique: true, fields: ['apollos_id'] },
+        ...(external
+          ? [{ unique: true, fields: ['origin_id', 'origin_type'] }]
+          : []),
+        ...(sequelizeOptions?.indexes || []),
+      ],
+    }
+  );
 
-    return model;
-  };
+  return model;
+};
 
 /**
  * @callback ConfigureModelCallback

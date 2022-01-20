@@ -19,18 +19,22 @@ export const fieldsAsObject = (fields) =>
     {}
   );
 
-export const enforceCurrentUser =
-  (func) => async (root, args, context, info) => {
-    try {
-      const currentPerson = await context.dataSources.Person.getCurrentPerson();
-      if (root.id !== currentPerson.originId) {
-        return null;
-      }
-    } catch (e) {
-      if (!(e instanceof AuthenticationError)) {
-        throw e;
-      }
+export const enforceCurrentUser = (func) => async (
+  root,
+  args,
+  context,
+  info
+) => {
+  try {
+    const currentPerson = await context.dataSources.Person.getCurrentPerson();
+    if (root.id !== currentPerson.originId) {
       return null;
     }
-    return func(root, args, context, info);
-  };
+  } catch (e) {
+    if (!(e instanceof AuthenticationError)) {
+      throw e;
+    }
+    return null;
+  }
+  return func(root, args, context, info);
+};

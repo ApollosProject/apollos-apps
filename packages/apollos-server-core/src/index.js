@@ -107,41 +107,39 @@ export const setupSequelize = (data, context) => {
   });
 };
 
-export const createContext =
-  (data) =>
-  async ({ req = {} } = {}) => {
-    const initiatedModels = {};
+export const createContext = (data) => async ({ req = {} } = {}) => {
+  const initiatedModels = {};
 
-    // For all non-datasource connectors. Right now only `Node`.
-    const models = mapValues(data, safeGetWithWarning('model'));
-    let context = {
-      models: initiatedModels,
-    };
+  // For all non-datasource connectors. Right now only `Node`.
+  const models = mapValues(data, safeGetWithWarning('model'));
+  let context = {
+    models: initiatedModels,
+  };
 
-    Object.keys(models).forEach((modelName) => {
-      if (models[modelName]) {
-        initiatedModels[modelName] = new models[modelName](context);
-      }
-    });
-
-    const contextMiddlewares = compact(
-      Object.values(mapValues(data, safeGetWithWarning('contextMiddleware')))
-    );
-    // disabling the linter here because it's warning about performance
-    // but these are async anyway so it's negligible
-    // eslint-disable-next-line
-    for (const middleware of contextMiddlewares) {
-      // eslint-disable-next-line
-      context = await middleware({ req, context });
+  Object.keys(models).forEach((modelName) => {
+    if (models[modelName]) {
+      initiatedModels[modelName] = new models[modelName](context);
     }
+  });
 
-    // Used to execute graphql queries from within the schema itself. #meta
-    // You probally should avoid using this.
-    try {
-      const schema = makeExecutableSchema({
-        typeDefs: [
-          ...createSchema(data),
-          `
+  const contextMiddlewares = compact(
+    Object.values(mapValues(data, safeGetWithWarning('contextMiddleware')))
+  );
+  // disabling the linter here because it's warning about performance
+  // but these are async anyway so it's negligible
+  // eslint-disable-next-line
+    for (const middleware of contextMiddlewares) {
+    // eslint-disable-next-line
+      context = await middleware({ req, context });
+  }
+
+  // Used to execute graphql queries from within the schema itself. #meta
+  // You probally should avoid using this.
+  try {
+    const schema = makeExecutableSchema({
+      typeDefs: [
+        ...createSchema(data),
+        `
       enum CacheControlScope {
         PUBLIC
         PRIVATE
@@ -151,53 +149,52 @@ export const createContext =
         scope: CacheControlScope
       ) on FIELD_DEFINITION | OBJECT | INTERFACE
       `,
-        ],
-        resolvers: createResolvers(data),
-      });
-      context.schema = schema;
-    } catch (e) {
-      // Not compatible with our test environment under certain conditions
-      // Hence, we need to swallow errors.
-      console.warn(e);
-    }
-
-    setupSequelize(data, context);
-
-    return context;
-  };
-
-export const createContextGetter =
-  (serverConfig) =>
-  async (data, initialContext = {}) => {
-    const builtContext = await serverConfig.context(data);
-    const testContext = { ...initialContext, ...builtContext };
-    const testDataSources = serverConfig.dataSources();
-
-    // Apollo Server does this internally.
-    const cache = new InMemoryLRUCache();
-    Object.values(testDataSources).forEach((dataSource) => {
-      if (dataSource.initialize) {
-        dataSource.initialize({
-          context: testContext,
-          cache,
-        });
-      }
+      ],
+      resolvers: createResolvers(data),
     });
-    testContext.dataSources = testDataSources;
-    return testContext;
-  };
+    context.schema = schema;
+  } catch (e) {
+    // Not compatible with our test environment under certain conditions
+    // Hence, we need to swallow errors.
+    console.warn(e);
+  }
 
-export const createMiddleware =
-  (data) =>
-  ({ app, context, dataSources }) => {
-    const middlewares = compact(
-      Object.values(mapValues(data, safeGetWithWarning('serverMiddleware')))
-    );
+  setupSequelize(data, context);
 
-    const getContext = createContextGetter({ context, dataSources });
+  return context;
+};
 
-    return middlewares.forEach((middleware) => middleware({ app, getContext }));
-  };
+export const createContextGetter = (serverConfig) => async (
+  data,
+  initialContext = {}
+) => {
+  const builtContext = await serverConfig.context(data);
+  const testContext = { ...initialContext, ...builtContext };
+  const testDataSources = serverConfig.dataSources();
+
+  // Apollo Server does this internally.
+  const cache = new InMemoryLRUCache();
+  Object.values(testDataSources).forEach((dataSource) => {
+    if (dataSource.initialize) {
+      dataSource.initialize({
+        context: testContext,
+        cache,
+      });
+    }
+  });
+  testContext.dataSources = testDataSources;
+  return testContext;
+};
+
+export const createMiddleware = (data) => ({ app, context, dataSources }) => {
+  const middlewares = compact(
+    Object.values(mapValues(data, safeGetWithWarning('serverMiddleware')))
+  );
+
+  const getContext = createContextGetter({ context, dataSources });
+
+  return middlewares.forEach((middleware) => middleware({ app, getContext }));
+};
 
 export const createApolloServerConfig = (data) => {
   const dataSources = createDataSources(data);

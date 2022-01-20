@@ -50,8 +50,7 @@ describe('Apollos Postgres Notifications DataSource', () => {
       enabled: true,
     });
 
-    const notificationPreferenceDataSource =
-      new NotificationPreferenceDataSource();
+    const notificationPreferenceDataSource = new NotificationPreferenceDataSource();
     notificationPreferenceDataSource.initialize({ context });
     context.dataSources = {
       NotificationPreference: notificationPreferenceDataSource,

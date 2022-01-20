@@ -12,8 +12,7 @@ class CommentDataSource extends PostgresDataSource {
     visibility = Visibility.PUBLIC,
     sendNotificationsSync = false,
   }) {
-    const currentPersonId =
-      await this.context.dataSources.Person.getCurrentPersonId();
+    const currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
 
     // eslint-disable-next-line prefer-const
     let { id, __type } = parseGlobalId(parentId);
@@ -89,8 +88,7 @@ class CommentDataSource extends PostgresDataSource {
   }
 
   async updateComment({ commentId, text, visibility }) {
-    const currentPersonId =
-      await this.context.dataSources.Person.getCurrentPersonId();
+    const currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
 
     const { id } = parseGlobalId(commentId);
 
@@ -116,8 +114,7 @@ class CommentDataSource extends PostgresDataSource {
   }
 
   async deleteComment({ commentId }) {
-    const currentPersonId =
-      await this.context.dataSources.Person.getCurrentPersonId();
+    const currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
 
     const { id } = parseGlobalId(commentId);
 
@@ -134,8 +131,7 @@ class CommentDataSource extends PostgresDataSource {
   async getForNode({ nodeId, nodeType, parentId, parentType, flagLimit = 0 }) {
     let currentPersonId;
     try {
-      currentPersonId =
-        await this.context.dataSources.Person.getCurrentPersonId();
+      currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
     } catch (e) {
       // no user signed in, that's fine. We'll just return an empty array.
       return [];
@@ -158,8 +154,9 @@ class CommentDataSource extends PostgresDataSource {
     } else if (parentId && parentType) {
       // todo - we should start storing this data on the comment model itself.
       if (parentType === 'ContentItem') {
-        const contentItem =
-          await this.context.dataSources.ContentItem.getFromId(parentId);
+        const contentItem = await this.context.dataSources.ContentItem.getFromId(
+          parentId
+        );
         where.externalParentId = contentItem.originId;
         where.externalParentType = contentItem.apollosType;
       }

@@ -1,7 +1,7 @@
 // import ApollosConfig from '@apollosproject/config';
 
 // NEEDS TO BE UPDATED TO USE dataSources.Config
-export default function useSimpleDonationRoute({ app }) {
+export default function useSimpleDonationRoute() {
   // Give Screen
   // app.get('/simpledonation', (req, res) => {
   //   res.send(`

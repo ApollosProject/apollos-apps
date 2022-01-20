@@ -2,10 +2,8 @@
 import { get } from 'lodash';
 import { createGlobalId } from '@apollosproject/server-core';
 
-const id =
-  (type) =>
-  ({ apollosId, id: rootId }) =>
-    apollosId || createGlobalId(rootId, type);
+const id = (type) => ({ apollosId, id: rootId }) =>
+  apollosId || createGlobalId(rootId, type);
 
 const resolver = {
   Feature: {
