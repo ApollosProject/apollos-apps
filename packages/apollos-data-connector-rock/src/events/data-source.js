@@ -53,10 +53,11 @@ export default class Event extends RockApolloDataSource {
       .cache({ ttl: 60 })
       .find(eventItemId)
       .get();
-    const imageUrl =
-      await this.context.dataSources.BinaryFiles.findOrReturnImageUrl({
+    const imageUrl = await this.context.dataSources.BinaryFiles.findOrReturnImageUrl(
+      {
         id: event.photoId,
-      });
+      }
+    );
     if (imageUrl) {
       return {
         sources: [{ uri: imageUrl }],

@@ -2,13 +2,6 @@
 import { createGlobalId } from '@apollosproject/server-core';
 import { PostgresDataSource, isUuid } from '../postgres';
 
-// We have to do something unfortunate in this file for the time being.
-// We essentially are incorperating methods from the Rock datasource
-// (that don't rely on Rock) into the Postgres datasource.
-// In the future, these methods will no longer be needed, since Feeds
-// Will be stored in Postgres. In the meantime though, we need to pull
-// these methods in as a mixin.
-
 class Feature extends PostgresDataSource {
   modelName = 'feature';
 

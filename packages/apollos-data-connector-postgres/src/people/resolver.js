@@ -21,7 +21,9 @@ export default {
       birthDate ? moment(birthDate).toJSON() : null
     ),
     email: enforceCurrentUser(({ email }) => email),
-    phone: enforceCurrentUser(({ phone }) => phone && phoneForDisplay({ number: phone })),
+    phone: enforceCurrentUser(
+      ({ phone }) => phone && phoneForDisplay({ number: phone })
+    ),
     nickName: ({ firstName }) => `${firstName}`,
     gender: ({ gender }) => startCase(toLower(gender)),
   },

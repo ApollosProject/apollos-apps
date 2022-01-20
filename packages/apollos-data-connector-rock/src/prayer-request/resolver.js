@@ -12,11 +12,12 @@ export default {
     requestor: (root, args, { dataSources }) =>
       dataSources.PrayerRequest.getRequestor(root),
     isPrayed: async ({ id }, args, { dataSources }, { parentType }) => {
-      const interactions =
-        await dataSources.Interactions.getInteractionsForCurrentUserAndNodes({
+      const interactions = await dataSources.Interactions.getInteractionsForCurrentUserAndNodes(
+        {
           nodeIds: [createGlobalId(id, parentType.name)],
           actions: ['PRAY'],
-        });
+        }
+      );
       return interactions.length;
     },
   },

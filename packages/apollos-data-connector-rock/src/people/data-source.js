@@ -77,8 +77,7 @@ export default class Person extends RockApolloDataSource {
   // fields is an array of objects matching the pattern
   // [{ field: String, value: String }]
   updateProfile = async (fields) => {
-    const currentPerson =
-      await this.context.dataSources.Person.getCurrentPerson();
+    const currentPerson = await this.context.dataSources.Person.getCurrentPerson();
 
     if (!currentPerson) throw new AuthenticationError('Invalid Credentials');
 
@@ -100,8 +99,7 @@ export default class Person extends RockApolloDataSource {
       dataSources: { BinaryFiles },
     } = this.context;
 
-    const currentPerson =
-      await this.context.dataSources.Person.getCurrentPerson();
+    const currentPerson = await this.context.dataSources.Person.getCurrentPerson();
 
     if (!currentPerson) throw new AuthenticationError('Invalid Credentials');
 

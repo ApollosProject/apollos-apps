@@ -214,10 +214,12 @@ describe('Auth', () => {
       );
       context.userToken = userToken;
       context.rockCookie = rockCookie;
-      const { rockCookie: newCookie, token: newToken } =
-        await context.dataSources.Auth.changePassword({
-          password: 'good',
-        });
+      const {
+        rockCookie: newCookie,
+        token: newToken,
+      } = await context.dataSources.Auth.changePassword({
+        password: 'good',
+      });
       expect(newCookie).toEqual('some cookie');
       expect(typeof newToken).toEqual('string');
     });

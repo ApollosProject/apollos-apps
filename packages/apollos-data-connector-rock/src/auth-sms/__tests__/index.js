@@ -180,10 +180,14 @@ describe('AuthSms schema', () => {
   });
 
   it('generates a new password each time', () => {
-    const { pin: pin1, password: password1 } =
-      context.dataSources.AuthSms.generateSmsPinAndPassword();
-    const { pin: pin2, password: password2 } =
-      context.dataSources.AuthSms.generateSmsPinAndPassword();
+    const {
+      pin: pin1,
+      password: password1,
+    } = context.dataSources.AuthSms.generateSmsPinAndPassword();
+    const {
+      pin: pin2,
+      password: password2,
+    } = context.dataSources.AuthSms.generateSmsPinAndPassword();
     expect(pin1).not.toBe(pin2);
     expect(pin1.length).toBe(6);
     expect(typeof pin1).toBe('string');

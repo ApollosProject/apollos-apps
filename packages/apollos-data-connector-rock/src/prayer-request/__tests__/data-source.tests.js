@@ -24,7 +24,8 @@ const prayersMock = [
     Email: 'hi@convan.me',
     RequestedByPersonAliasId: null,
     CategoryId: 2,
-    Text: 'Our Father, Who art in heaven, \nHallowed be Thy Name. \nThy Kingdom come. \nThy Will be done, \non earth as it is in Heaven.\n\nGive us this day our daily bread. \nAnd forgive us our trespasses, \nas we forgive those who trespass against us. \nAnd lead us not into temptation, \nbut deliver us from evil. Amen.',
+    Text:
+      'Our Father, Who art in heaven, \nHallowed be Thy Name. \nThy Kingdom come. \nThy Will be done, \non earth as it is in Heaven.\n\nGive us this day our daily bread. \nAnd forgive us our trespasses, \nas we forgive those who trespass against us. \nAnd lead us not into temptation, \nbut deliver us from evil. Amen.',
     Answer: '',
     EnteredDateTime: '2020-05-15T12:42:29.227',
     ExpirationDate: '2020-05-29T00:00:00',

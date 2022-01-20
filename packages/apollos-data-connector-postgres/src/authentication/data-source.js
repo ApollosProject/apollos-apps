@@ -86,12 +86,11 @@ export default class AuthenticationDataSource extends PostgresDataSource {
         to: identityValue,
       });
     } else {
-
       const url = generateAppLink(
         'deep',
         'auth',
         {
-          query: `?identity=${identityValue}&authType=${identityKey}&code=${otp}`
+          query: `?identity=${identityValue}&authType=${identityKey}&code=${otp}`,
         },
         this.context.dataSources.Config
       );

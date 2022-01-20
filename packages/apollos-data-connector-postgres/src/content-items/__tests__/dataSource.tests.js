@@ -522,12 +522,13 @@ describe('Apollos Postgres ContentItem DataSource', () => {
       gender: 'MALE',
     });
 
-    const contentItemCategory =
-      await sequelize.models.contentItemCategory.create({
+    const contentItemCategory = await sequelize.models.contentItemCategory.create(
+      {
         title: 'Test Category',
         originId: '6',
         originType: 'rock',
-      });
+      }
+    );
 
     const seriesContentItem = await sequelize.models.contentItem.create({
       originId: '2',

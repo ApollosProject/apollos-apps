@@ -79,8 +79,7 @@ export default class Interactions extends PostgresDataSource {
   ) {
     let currentPersonId;
     try {
-      currentPersonId =
-        await this.context.dataSources.Person.getCurrentPersonId();
+      currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
     } catch (e) {
       return [];
     }
@@ -111,8 +110,7 @@ export default class Interactions extends PostgresDataSource {
   }) {
     const { id, __type } = parseGlobalId(nodeId);
 
-    const currentPersonId =
-      await this.context.dataSources.Person.getCurrentPersonId();
+    const currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
 
     let entityType = __type;
     if (this.context.dataSources.Config.CONTENT?.TYPES?.includes(__type)) {

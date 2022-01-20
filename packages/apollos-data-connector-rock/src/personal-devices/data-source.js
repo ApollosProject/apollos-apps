@@ -33,8 +33,7 @@ export default class PersonalDevices extends RockApolloDataSource {
       .first();
 
     // if we already have a device, shortcut the function;
-    const currentUser =
-      await this.context.dataSources.Person.getCurrentPerson();
+    const currentUser = await this.context.dataSources.Person.getCurrentPerson();
 
     const { primaryAliasId } = await this.request('People')
       .filter(`Id eq ${currentUser.originId}`)
@@ -71,8 +70,9 @@ export default class PersonalDevices extends RockApolloDataSource {
     if (pushId === null || enabled === null)
       throw new Error("Device ID and 'enabled' required.");
 
-    const { originId } =
-      await this.context.dataSources.Person.getCurrentPerson();
+    const {
+      originId,
+    } = await this.context.dataSources.Person.getCurrentPerson();
 
     const { primaryAliasId } = await this.request('People')
       .filter(`Id eq ${originId}`)

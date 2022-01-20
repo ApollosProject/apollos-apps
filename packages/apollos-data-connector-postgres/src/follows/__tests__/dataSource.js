@@ -347,8 +347,9 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
       campusId: satCampus.id,
     });
 
-    const suggestedFollowers =
-      await followDataSource.getStaticSuggestedFollowsFor(me);
+    const suggestedFollowers = await followDataSource.getStaticSuggestedFollowsFor(
+      me
+    );
 
     expect(suggestedFollowers.map(({ email }) => email)).toEqual([
       'jim@bob.com',
@@ -409,8 +410,9 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
       lastName: 'Myself',
     });
 
-    const suggestedFollowers =
-      await followDataSource.getStaticSuggestedFollowsFor(me);
+    const suggestedFollowers = await followDataSource.getStaticSuggestedFollowsFor(
+      me
+    );
 
     expect(suggestedFollowers.map(({ firstName }) => firstName)).toEqual([
       'Jim',
@@ -479,8 +481,9 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
       campusId: null,
     });
 
-    const suggestedFollowers =
-      await followDataSource.getStaticSuggestedFollowsFor(me);
+    const suggestedFollowers = await followDataSource.getStaticSuggestedFollowsFor(
+      me
+    );
 
     expect(suggestedFollowers.map(({ email }) => email)).toEqual([
       'nick@offer.man',
@@ -503,8 +506,9 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     currentPersonId = me.id;
 
-    const suggestedFollowers =
-      await followDataSource.getStaticSuggestedFollowsFor(me);
+    const suggestedFollowers = await followDataSource.getStaticSuggestedFollowsFor(
+      me
+    );
 
     expect(suggestedFollowers.map(({ email }) => email)).toEqual([]);
   });
@@ -553,8 +557,9 @@ describe('Apollos Postgres FollowRequest DataSource', () => {
 
     currentPersonId = me.id;
 
-    const suggestedFollowers =
-      await followDataSource.getStaticSuggestedFollowsFor(me);
+    const suggestedFollowers = await followDataSource.getStaticSuggestedFollowsFor(
+      me
+    );
 
     expect(suggestedFollowers).toEqual([]);
   });

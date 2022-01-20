@@ -5,8 +5,7 @@ class UserFlagDataSource extends PostgresDataSource {
   modelName = 'user_flags';
 
   async flagComment({ commentId }) {
-    const currentPersonId =
-      await this.context.dataSources.Person.getCurrentPersonId();
+    const currentPersonId = await this.context.dataSources.Person.getCurrentPersonId();
 
     const { id, __type } = parseGlobalId(commentId);
 

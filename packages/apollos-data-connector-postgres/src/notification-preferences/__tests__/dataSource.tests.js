@@ -50,51 +50,57 @@ describe('Apollos Postgres Notification Preferences DataSource', () => {
   });
 
   it('should create a new notification preference', async () => {
-    const notificationPreferencesDataSource =
-      new NotificationPreferencesDataSource();
+    const notificationPreferencesDataSource = new NotificationPreferencesDataSource();
     notificationPreferencesDataSource.initialize({ context });
 
-    const preference =
-      await notificationPreferencesDataSource.updateNotificationPreference({
+    const preference = await notificationPreferencesDataSource.updateNotificationPreference(
+      {
         personId: person1.id,
         notificationProviderId: '123-123-123',
         notificationProviderType: 'onesignal',
-      });
+      }
+    );
 
-    const { createdAt, updatedAt, id, personId, ...preferenceParts } =
-      preference.dataValues;
+    const {
+      createdAt,
+      updatedAt,
+      id,
+      personId,
+      ...preferenceParts
+    } = preference.dataValues;
 
     expect(preferenceParts).toMatchSnapshot();
     expect(personId).toBe(person1.id);
   });
 
   it('should update an existing notification preference', async () => {
-    const notificationPreferencesDataSource =
-      new NotificationPreferencesDataSource();
+    const notificationPreferencesDataSource = new NotificationPreferencesDataSource();
     notificationPreferencesDataSource.initialize({ context });
 
-    const { id } =
-      await notificationPreferencesDataSource.updateNotificationPreference({
-        personId: person1.id,
-        notificationProviderId: '123-123-123',
-        notificationProviderType: 'onesignal',
-      });
+    const {
+      id,
+    } = await notificationPreferencesDataSource.updateNotificationPreference({
+      personId: person1.id,
+      notificationProviderId: '123-123-123',
+      notificationProviderType: 'onesignal',
+    });
 
-    const { id: newId, enabled } =
-      await notificationPreferencesDataSource.updateNotificationPreference({
-        personId: person1.id,
-        notificationProviderId: '123-123-123',
-        notificationProviderType: 'onesignal',
-        enabled: false,
-      });
+    const {
+      id: newId,
+      enabled,
+    } = await notificationPreferencesDataSource.updateNotificationPreference({
+      personId: person1.id,
+      notificationProviderId: '123-123-123',
+      notificationProviderType: 'onesignal',
+      enabled: false,
+    });
 
     expect(newId).toEqual(id);
     expect(enabled).toBe(false);
   });
 
   it('should default to the current person', async () => {
-    const notificationPreferencesDataSource =
-      new NotificationPreferencesDataSource();
+    const notificationPreferencesDataSource = new NotificationPreferencesDataSource();
     const personDataSource = new PersonDataSource();
     notificationPreferencesDataSource.initialize({ context });
     personDataSource.initialize({ context });
