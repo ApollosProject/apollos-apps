@@ -26,9 +26,23 @@ const getSharedConfig = () => {
 
 export const buildChurchConfig = ({ churchSlug, sharedConfig, configDir }) => {
   const envStage = process.env.ENV_STAGE ? `.${process.env.ENV_STAGE}` : '';
+  let envFile;
 
-  const envFile = readFileSync(`${configDir}${churchSlug}${envStage}.env`);
-  const secrets = dotenv.parse(envFile);
+  try {
+    envFile = readFileSync(`${configDir}${churchSlug}${envStage}.env`);
+  } catch (err) {
+    if (err.code === 'ENOENT') {
+      const missingFile = `"${churchSlug}${envStage}.env"`;
+      // eslint-disable-next-line no-console
+      console.warn(`Warning: No environment config found for ${missingFile}`);
+    }
+
+    envFile = null;
+  }
+
+  // Use `undefined` for secrets if we couldn't find a config file for this church + stage.
+  // The Config data source handles what to fall back on.
+  const secrets = envFile === null ? undefined : dotenv.parse(envFile);
   const config = new Config();
   config.loadYaml({
     configPath: `${configDir + churchSlug}.config.yml`,
