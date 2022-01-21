@@ -5,6 +5,7 @@ import OriginIdChurchIdUniquenessConstraint004 from './004_origin_id_church_id_u
 import RenameChurchIdToChurchSlug005 from './005_rename_church_id_to_church_slug';
 import AddRowLevelSecurityToChurchTable006 from './006_add_row_level_security_to_church_table';
 import AddRowLevelSecurityToAuthenticationTables007 from './007_add_row_level_security_to_authentication_tables';
+import RemoveIncorrectPrayerIndex008 from './008_remove_incorrect_prayer_index';
 
 const migrations = [
   CreateChurchTable001,
@@ -14,6 +15,7 @@ const migrations = [
   RenameChurchIdToChurchSlug005,
   AddRowLevelSecurityToChurchTable006,
   AddRowLevelSecurityToAuthenticationTables007,
+  RemoveIncorrectPrayerIndex008,
 ];
 
 export default migrations;
