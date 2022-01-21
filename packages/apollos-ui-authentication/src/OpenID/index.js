@@ -1,0 +1,1 @@
+export OpenIDConnected from './OpenIDConnected';

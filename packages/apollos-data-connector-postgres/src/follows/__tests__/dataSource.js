@@ -1,18 +1,16 @@
-/* eslint-disable import/named */
 import { dataSource as ConfigDataSource } from '@apollosproject/config';
 import { getSequelize } from '../../postgres/index';
+
 import FollowDataSource from '../dataSource';
 import PeopleDataSource from '../../people/dataSource';
 import * as Follows from '../index';
 import { setupPostgresTestEnv } from '../../utils/testUtils';
 import { FollowState } from '../model';
-import {
-  Person,
-  ContentItem,
-  Media,
-  ContentItemCategory,
-  Campus,
-} from '../../index';
+import * as Person from '../../people';
+import * as ContentItem from '../../content-items';
+import * as Media from '../../media';
+import * as ContentItemCategory from '../../content-item-categories';
+import * as Campus from '../../campus';
 
 let currentPersonId;
 const Config = new ConfigDataSource();
