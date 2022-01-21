@@ -64,6 +64,12 @@ describe('Apollos Postgres Authentication DataSource', () => {
       RefreshToken: refreshTokenDataSource,
       Sms: { sendSms: () => {} },
       Email: { sendEmail: () => {} },
+      Config: {
+        APP: {
+          UNIVERSAL_LINK_HOST: 'https://server.app',
+          DEEP_LINK_HOST: 'apollosapp://a',
+        },
+      },
     };
   });
 

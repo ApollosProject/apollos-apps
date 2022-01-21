@@ -1,5 +1,5 @@
 import { graphql } from 'graphql';
-import { createTestHelpers } from '@apollosproject/server-core/lib/testUtils';
+import { createTestHelpers } from '@apollosproject/server-core';
 
 import {
   campusSchema,
@@ -11,18 +11,19 @@ import {
   scriptureSchema,
 } from '@apollosproject/data-schema';
 import * as Event from '../index';
-import { Campus } from '../../index';
 
 const { getSchema, getContext } = createTestHelpers({
   Event,
-  Campus,
+  Campus: {
+    resolver: { Query: { campuses: () => [{ events: [{ id: 1 }] }] } },
+  },
 });
 
 describe('Events resolver', () => {
   let schema;
   let context;
   let rootValue;
-  beforeEach(() => {
+  beforeEach(async () => {
     schema = getSchema([
       campusSchema,
       peopleSchema,
@@ -32,7 +33,7 @@ describe('Events resolver', () => {
       themeSchema,
       scriptureSchema,
     ]);
-    context = getContext();
+    context = await getContext();
     rootValue = {};
   });
 
@@ -50,29 +51,21 @@ describe('Events resolver', () => {
         }
       }
     `;
+    context.dataSources.Config = { ROCK: { TIMEZONE: 'America/New_York' } };
+    context.dataSources.Event.getByCampus = () => [
+      {
+        id: 1,
+        campusId: 1,
+        scheduleId: 1,
+        location: '123 Main St',
+        schedule: {
+          iCalendarContent:
+            'BEGIN:VCALENDAR\r\nBEGIN:VEVENT\r\nDTEND:20130501T190000\r\nDTSTART:20130501T180000\r\nRRULE:FREQ=WEEKLY;BYDAY=SA\r\nEND:VEVENT\r\nEND:VCALENDAR',
+        },
+      },
+    ];
 
-    context.dataSources.Campus.getByLocation = jest.fn(() =>
-      Promise.resolve([{ id: 1 }])
-    );
-    context.dataSources.Event.getByCampus = jest.fn(() =>
-      Promise.resolve([
-        { id: 1, campusId: 1, scheduleId: 1, location: '123 Main St' },
-      ])
-    );
-    context.dataSources.Event.getName = jest.fn(() =>
-      Promise.resolve('Cookout')
-    );
-    // for testing the getDateTime datasource function...
-    context.dataSources.Event.request = () => ({
-      filter: () => ({
-        first: () =>
-          Promise.resolve({
-            iCalendarContent:
-              'BEGIN:VCALENDAR\r\nBEGIN:VEVENT\r\nDTEND:20130501T190000\r\nDTSTART:20130501T180000\r\nRRULE:FREQ=WEEKLY;BYDAY=SA\r\nEND:VEVENT\r\nEND:VCALENDAR',
-          }),
-      }),
-    });
-
+    context.dataSources.Event.getName = () => 'Cookout';
     const result = await graphql(schema, query, rootValue, context);
     expect(result).toMatchSnapshot();
   });

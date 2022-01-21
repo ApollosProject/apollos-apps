@@ -1,4 +1,4 @@
-/* eslint-disable class-methods-use-this, no-unused-expressions, no-param-reassign */
+/* eslint-disable class-methods-use-this, no-unused-expressions, no-console */
 import ApollosConfig from '@apollosproject/config';
 import { get, fromPairs } from 'lodash';
 import Bugsnag from '@bugsnag/js';

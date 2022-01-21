@@ -257,14 +257,14 @@ describe('Analytics Data Source', () => {
       expect(mockUA.mock.calls).toMatchSnapshot();
     });
 
-    it('must reraise a non-auth Error', () => {
+    it('must reraise a non-auth Error', async () => {
       const analytics = buildDataSourceAndConfig({
         getCurrentPerson: mockOtherError,
       });
       const result = analytics.track({
         eventName: 'View Content',
       });
-      expect(result).rejects.toThrow();
+      await expect(result).rejects.toThrow();
 
       expect(mockSend).toHaveBeenCalledTimes(0);
       expect(mockTrack).toHaveBeenCalledTimes(0);
