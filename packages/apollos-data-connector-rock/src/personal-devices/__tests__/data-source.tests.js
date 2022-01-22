@@ -17,7 +17,7 @@ describe('Personal device data source', () => {
   it("must post a user's device to Rock", async () => {
     const dataSource = buildDataSource(AuthMock);
     dataSource.get = buildGetMock(
-      [[null], [{ PersonAliasId: '123' }], [{ Id: '123' }]],
+      [[{ Id: '456' }], [null], [null], [{ Id: '123' }]],
       dataSource
     );
     dataSource.post = buildGetMock('123', dataSource);

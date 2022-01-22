@@ -1,15 +1,75 @@
-#! /usr/bin/env node
+#!/usr/bin/env node
 
-const util = require('util');
-const exec = util.promisify(require('child_process').exec);
+import { dirname } from 'path';
 
-const { program } = require('commander');
+import { fileURLToPath } from 'url';
+
+import util from 'util';
+import { exec as baseExec } from 'child_process';
+import prompts from 'prompts';
+import { execa } from 'execa';
+import { program } from 'commander';
+
+const exec = util.promisify(baseExec);
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 program.version('1.0.0');
 
-// secrets
+// create
 program
   .name('apollos')
+  .command('create')
+  .description('Generate new Apollos projects')
+  .command('mobile')
+  .description('Generate new Apollos mobile app')
+  .action(() => {
+    const questions = [
+      {
+        type: 'text',
+        name: 'appName',
+        message: 'App name?',
+      },
+      {
+        type: 'text',
+        name: 'iosID',
+        message: 'iOS Bundle Identifier?',
+        initial: (prev) =>
+          `com.apollos.${prev.toLowerCase().replace(/ /g, '_')}`,
+        validate: (value) =>
+          value.match(/[a-zA-z_.]+/)[0] === value
+            ? true
+            : `Alphanumeric and underscores only!`,
+      },
+      {
+        type: 'text',
+        name: 'androidID',
+        message: 'Android App ID?',
+        initial: (prev) => prev,
+        validate: (value) =>
+          value.match(/[a-zA-z_.]+/)[0] === value
+            ? true
+            : `Alphanumeric and underscores only!`,
+      },
+    ];
+
+    (async () => {
+      const response = await prompts(questions);
+      if (Object.keys(response).length === 3) {
+        try {
+          execa(`${__dirname}/scripts/create-mobile.sh`, [
+            response.appName,
+            response.iosID,
+            response.androidID,
+          ]).stdout.pipe(process.stdout);
+        } catch (e) {
+          console.log(e);
+        }
+      }
+    })();
+  });
+
+program
   .command('secrets')
   .description("Decrypt or encrypt your app's secrets")
   .argument('<password>')
@@ -44,4 +104,4 @@ program
     }
   });
 
-program.parse(process.argv);
+program.parse();
