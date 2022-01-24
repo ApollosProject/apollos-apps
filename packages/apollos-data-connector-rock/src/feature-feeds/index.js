@@ -40,10 +40,6 @@ const resolver = {
     featureFeed: ({ id }, args, { dataSources: { FeatureFeed } }) =>
       FeatureFeed.getFeed({ type: 'contentItem', args: { id } }),
   },
-  FeatureFeed: {
-    // lazy-loaded
-    features: ({ getFeatures }) => getFeatures(),
-  },
 };
 
 class FeatureFeed extends RockApolloDataSource {
@@ -55,6 +51,7 @@ class FeatureFeed extends RockApolloDataSource {
     let getFeatures = () => [];
     const { Feature, ContentItem } = this.context.dataSources;
 
+    // TODO deprecated
     if (type === 'tab') {
       getFeatures = () =>
         Feature.getFeatures(ApollosConfig.TABS[args.tab] || [], args);
@@ -74,7 +71,8 @@ class FeatureFeed extends RockApolloDataSource {
     return {
       __typename: 'FeatureFeed',
       id: createGlobalId(JSON.stringify({ type, args }), 'FeatureFeed'),
-      getFeatures,
+      // lazy-loaded
+      features: getFeatures,
     };
   };
 }

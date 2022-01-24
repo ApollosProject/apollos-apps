@@ -20,7 +20,7 @@ Object {
 exports[`FeatureFeed should handle a config source with an invalid section 1`] = `
 Object {
   "__typename": "FeatureFeed",
-  "getFeatures": [Function],
+  "features": [Function],
   "id": "FeatureFeed:c7035fd9677aa209cd4613df53e9c83a0fb3b9ecd853808383d135407161a17b1b36788b9ba3c93bfba11684fa4d78c8caa9b3afa88f86162e7e200eabaae1b4",
 }
 `;
@@ -28,7 +28,7 @@ Object {
 exports[`FeatureFeed should handle a config source with no section 1`] = `
 Object {
   "__typename": "FeatureFeed",
-  "getFeatures": [Function],
+  "features": [Function],
   "id": "FeatureFeed:c7035fd9677aa209cd4613df53e9c83a0fb3b9ecd853808383d135407161a17b287da00bddfd676b90fb1b8e34fdaacf",
 }
 `;
@@ -36,7 +36,7 @@ Object {
 exports[`FeatureFeed should handle sources other than the config 1`] = `
 Object {
   "__typename": "FeatureFeed",
-  "getFeatures": [Function],
+  "features": [Function],
   "id": "FeatureFeed:181f4628454e81fb3db65ce53f56d6b6159ae40334a816afee4b0e3aacdf70d0ac4c6070d07c141c24858d03c0a5e5a3",
 }
 `;
