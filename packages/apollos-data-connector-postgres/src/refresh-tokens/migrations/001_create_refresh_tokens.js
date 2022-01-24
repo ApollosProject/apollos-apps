@@ -49,4 +49,4 @@ async function down({ context: queryInterface }) {
 
 const name = '001-create-refresh-tokens';
 
-module.exports = { up, down, name, order: 15 };
+module.exports = { up, down, name, order: 3 };

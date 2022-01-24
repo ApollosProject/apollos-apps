@@ -28,18 +28,6 @@ export default class PersonalDevices extends RockApolloDataSource {
         'You must supply a `pushId` to the addPersonalDevice function'
       );
     }
-    const existing = await this.request()
-      .filter(`DeviceRegistrationId eq '${pushId}'`)
-      .first();
-
-    // if we already have a device, shortcut the function;
-    const currentUser = await this.context.dataSources.Person.getCurrentPerson();
-
-    const { primaryAliasId } = await this.request('People')
-      .filter(`Id eq ${currentUser.originId}`)
-      .first();
-
-    if (existing) return currentUser;
 
     // Get the Rock instance's personal device type value id
     let personalDeviceTypeDefinedValue = await this.request('DefinedValues')
@@ -51,8 +39,19 @@ export default class PersonalDevices extends RockApolloDataSource {
       personalDeviceTypeDefinedValue = await this.createApollosDeviceType();
     }
 
+    const existing = await this.request()
+      .filter(
+        `DeviceRegistrationId eq '${pushId}' and PersonalDeviceTypeValueId eq ${personalDeviceTypeDefinedValue?.id}`
+      )
+      .first();
+
+    // if we already have a device, shortcut the function;
+    const currentUser = await this.context.dataSources.Person.getCurrentPerson();
+
+    if (existing) return currentUser;
+
     await this.post('/PersonalDevices', {
-      PersonAliasId: primaryAliasId,
+      PersonAliasId: currentUser.primaryAliasId,
       DeviceRegistrationId: pushId,
       PersonalDeviceTypeValueId: personalDeviceTypeDefinedValue?.id,
       NotificationsEnabled: 1,

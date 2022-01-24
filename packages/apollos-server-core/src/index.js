@@ -21,6 +21,7 @@ export {
   withEdgePagination,
 } from './pagination/utils';
 export { resolverMerge, schemaMerge } from './utils';
+export { createTestHelpers } from './testUtils';
 export { setupUniversalLinks, generateAppLink } from './linking';
 export {
   Node,
@@ -128,14 +129,12 @@ export const createContext = (data) => async ({ req = {} } = {}) => {
   // disabling the linter here because it's warning about performance
   // but these are async anyway so it's negligible
   // eslint-disable-next-line
-    for (const middleware of contextMiddlewares) {
+  for (const middleware of contextMiddlewares) {
     // eslint-disable-next-line
-      context = await middleware({ req, context });
+    context = await middleware({ req, context });
   }
 
-  // Used to execute graphql queries from within the schema itself. #meta
-  // You probally should avoid using this.
-  try {
+  if (!process.env.NODE_ENV === 'test') {
     const schema = makeExecutableSchema({
       typeDefs: [
         ...createSchema(data),
@@ -153,10 +152,6 @@ export const createContext = (data) => async ({ req = {} } = {}) => {
       resolvers: createResolvers(data),
     });
     context.schema = schema;
-  } catch (e) {
-    // Not compatible with our test environment under certain conditions
-    // Hence, we need to swallow errors.
-    console.warn(e);
   }
 
   setupSequelize(data, context);

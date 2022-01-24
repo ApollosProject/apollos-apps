@@ -16,8 +16,7 @@ function handleValue(value, env = process.env) {
     // set undefined variables to null so they eval falsy
     if (envVariable === 'undefined') return null;
     try {
-      // eslint-disable-next-line
-      if (!isNaN(Number(envVariable))) {
+      if (!Number.isNaN(Number(envVariable))) {
         return envVariable;
       }
       return JSON.parse(envVariable);

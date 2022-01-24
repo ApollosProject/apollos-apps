@@ -21,11 +21,12 @@ export default {
       );
     },
   },
-  PrayerListFeature: {
-    // id: ID!
-    // order: Int
-    // title: String
-    // subtitle: String
-    // prayers: [Prayer]
+  Person: {
+    prayers: async ({ id }, args, { dataSources }) =>
+      (
+        await dataSources.PrayerRequest.byDailyPrayerFeed({
+          personId: id,
+        })
+      ).get(),
   },
 };

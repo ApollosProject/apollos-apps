@@ -3,7 +3,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 import { getStorybookUI, addDecorator } from '@storybook/react-native';
 
 import { loadStories as loadAnalyticsStories } from '@apollosproject/ui-analytics/storybook/storyLoader';
-import { loadStories as loadAuthStories } from '@apollosproject/ui-auth/storybook/storyLoader';
+import { loadStories as loadAuthStories } from '@apollosproject/ui-authentication/storybook/storyLoader';
 import { loadStories as loadHTMLViewStories } from '@apollosproject/ui-htmlview/storybook/storyLoader';
 import { loadStories as loadUiKitStories } from '@apollosproject/ui-kit/storybook/storyLoader';
 import { loadStories as loadPassesStories } from '@apollosproject/ui-passes/storybook/storyLoader';

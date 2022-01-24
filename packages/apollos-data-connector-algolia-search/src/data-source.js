@@ -1,4 +1,3 @@
-/* eslint-disable no-await-in-loop, no-console */
 import algoliasearch from 'algoliasearch';
 import { parseCursor, createCursor } from '@apollosproject/server-core';
 
