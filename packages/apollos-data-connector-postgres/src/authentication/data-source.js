@@ -79,7 +79,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
   }
 
   async sendOtpForRequest({ identityValue, identityKey, person }) {
-    console.log('🔑 sendOtpForRequest');
+    console.log('\n🔑 sendOtpForRequest');
     const otp = await this.context.dataSources.OTP.generateOTP({
       identity: identityValue,
       type: toUpper(identityKey),
@@ -113,7 +113,6 @@ export default class AuthenticationDataSource extends PostgresDataSource {
         `,
       });
     } else if (identityKey === 'link_code') {
-      // Placeholder
       console.log('🔢 Link Code otp:', otp);
       return {
         result: 'SUCCESS',
@@ -181,7 +180,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
   // };
 
   async requestLinkCode({ input }) {
-    console.log('🟧 🔐 Authentication.requestLinkCode() ');
+    console.log('\n🟧 🔐 Authentication.requestLinkCode() ');
     console.log('input:', input);
 
     console.log('👤 Parsing identity...');
@@ -205,6 +204,17 @@ export default class AuthenticationDataSource extends PostgresDataSource {
       refreshToken,
     };
   };
+
+  async claimLinkCode({ input }) {
+    console.log('\n🟪 🔐 Authentication.claimLinkCode() ');
+    console.log('input:', input);
+
+    // Did
+
+    return {
+      result: 'SUCCESS',
+    };
+  }
 
   getCurrentPerson = async () => {
     const { personId } = this.context;

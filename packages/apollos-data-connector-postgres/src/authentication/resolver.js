@@ -28,6 +28,12 @@ const resolver = {
 
       return Authentication.requestLinkCode({ input });
     },
+    claimLinkCode: (root, { input }, { dataSources: { Authentication } }) => {
+      console.log('🟧 claimLinkCode');
+      console.log('input:', input);
+
+      return Authentication.claimLinkCode({ input });
+    },
     refreshSession: (root, args, { dataSources: { Authentication } }) => {
       return Authentication.refreshSession(args);
     },
