@@ -18,9 +18,8 @@ const createMigrationRunner = async ({ migrations, logger = console }) => {
     console.log(sortedMigrations.map(({ name }) => `•  ${name}`).join('\n'));
   });
 
-  console.log('\nPausing for review (2s)...');
-
   if (process.env.NODE_ENV !== 'test') {
+    console.log('\nPausing for review (2s)...');
     await new Promise((resolve) => setTimeout(resolve, 2000));
   }
 
