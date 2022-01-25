@@ -9,10 +9,10 @@ import { LoginContext } from '../LoginProvider';
 import ProfileEntry from './ProfileEntry';
 
 const ProfileSchema = Yup.object().shape({
-  firstName: Yup.string().required('Required'),
-  lastName: Yup.string().required('Required'),
-  phone: Yup.string().min(10).max(11),
-  email: Yup.string(),
+  firstName: Yup.string().required('Required').nullable(),
+  lastName: Yup.string().required('Required').nullable(),
+  phone: Yup.string().nullable(true).min(10).max(11),
+  email: Yup.string().nullable(true),
 });
 
 const ProfileEntryConnected = ({ navigation, profileSchema, Component }) => {
@@ -48,11 +48,12 @@ const ProfileEntryConnected = ({ navigation, profileSchema, Component }) => {
   return (
     <Formik
       initialValues={data?.currentUser?.profile}
+      initialTouched={{ phone: true, email: true }}
       onSubmit={async (fields, { setSubmitting }) => {
         setSubmitting(true);
         const validKeys = ['firstName', 'lastName', 'phone', 'email'];
         const mapUserInput = Object.keys(fields)
-          .filter((key) => validKeys.includes(key))
+          .filter((key) => validKeys.includes(key) && !!fields[key])
           .map((key) => ({
             field: startCase(key).split(' ').join(''),
             value: fields[key],
@@ -65,6 +66,7 @@ const ProfileEntryConnected = ({ navigation, profileSchema, Component }) => {
         closeAuth();
       }}
       validationSchema={profileSchema}
+      validateOnMount
     >
       {(formikBag) => (
         <Component
