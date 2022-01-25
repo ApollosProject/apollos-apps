@@ -22,15 +22,11 @@ const resolver = {
     ) => {
       return Authentication.validateLogin({ identity, otp });
     },
-    requestDeviceOtp: (
-      root,
-      { identity },
-      { dataSources: { Authentication } }
-    ) => {
-      console.log('🟧 requestDeviceOTP');
-      console.log('identity:', identity);
+    requestLinkCode: (root, { input }, { dataSources: { Authentication } }) => {
+      console.log('🟧 requestLinkCode');
+      console.log('input:', input);
 
-      return Authentication.requestDeviceOTP({ identity });
+      return Authentication.requestLinkCode({ input });
     },
     refreshSession: (root, args, { dataSources: { Authentication } }) => {
       return Authentication.refreshSession(args);

@@ -8,14 +8,16 @@ export default class OTPDataSource extends PostgresDataSource {
   modelName = 'otp';
 
   generateOTP = async ({ identity, type }) => {
-    if (type === 'PHONE' || type === 'EMAIL') {
-      const matches = identity.match(
-        /(^1[0-9]{10})|([^@\s]+@[^@\s.]+\.[^@\s.]+)$/
-      );
+    if (type === 'LINK_CODE') {
+      return this.generateLinkCode({ identity, type });
+    }
 
-      if (!matches) {
-        throw new Error('Invalid identity');
-      }
+    const matches = identity.match(
+      /(^1[0-9]{10})|([^@\s]+@[^@\s.]+\.[^@\s.]+)$/
+    );
+
+    if (!matches) {
+      throw new Error('Invalid identity');
     }
 
     const existingCode = await this.model.findOne({
@@ -50,6 +52,55 @@ export default class OTPDataSource extends PostgresDataSource {
     await this.model.create(otpShape);
 
     return { code };
+  };
+
+  generateLinkCode = async ({ identity, type }) => {
+    console.log('\ngenerateLinkCode()');
+    console.log('identity:', identity);
+    console.log('type:', type);
+
+    // Is there already a linkCode for this clientId?
+    // --> Has the link code already been claimed?
+    //    --> LINK_CODE_CLAIMED
+    // --> Has the link code expired?
+    //    --> YES: Generate a new one
+    //    --> NO: Return the existing one
+
+    const existingCode = await this.model.findOne({
+      where: {
+        identity,
+        type,
+      },
+    });
+
+    // console.log('existingCode:', existingCode);
+
+    if (existingCode) {
+      if (moment().isBefore(moment(existingCode.expiresAt))) {
+        return existingCode;
+      }
+
+      this.model.destroy({
+        where: {
+          identity,
+          type,
+        },
+      });
+    }
+
+    const fiveMinutesFromNow = moment().add(5, 'minutes').toDate();
+    const code = cryptoRandomString({ length: 4, type: 'numeric' });
+    const otpShape = {
+      code,
+      identity,
+      type,
+      expiresAt: fiveMinutesFromNow,
+      apollosType: 'OTP',
+    };
+
+    await this.model.create(otpShape);
+
+    return otpShape;
   };
 
   validateOTP = async ({ identity, otp }) => {

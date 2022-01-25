@@ -185,8 +185,8 @@ export const authenticationSchema = gql`
       identity: AuthenticationIdentityInput!
       otp: String!
     ): AuthenticatedPerson
-    requestDeviceOtp(identity: AuthenticationDeviceOtpInput!): DeviceOtpAttempt
-    validateDeviceOtp(identity: AuthenticationDeviceOtpInput!): DeviceOtpAttempt
+    requestLinkCode(input: AuthenticationRequestLinkCodeInput!): LinkCodeAttempt
+    claimLinkCode(input: AuthenticationClaimLinkCodeInput!): LinkCodeAttempt
     refreshSession(refreshToken: String!): AuthenticatedPerson
   }
 
@@ -205,25 +205,29 @@ export const authenticationSchema = gql`
     phone: String
   }
 
-  input AuthenticationDeviceOtpInput {
-    deviceId: String
+  input AuthenticationRequestLinkCodeInput {
+    clientId: String
+  }
+
+  input AuthenticationClaimLinkCodeInput {
+    clientId: String
     otp: String
-    personId: String
+    person: UpdateProfileInput
   }
 
-  enum DeviceOtpAttemptResult {
-    SUCCESS
-    NO_OTP
+  enum LinkCodeAttemptResult {
+    LINK_CODE_CLAIMED
+    LINK_CODE_EXPIRED
+    NO_LINK_CODE
     NO_USER
-    OTP_EXPIRED
-    DEVICE_ALREADY_LINKED
+    SUCCESS
   }
 
-  type DeviceOtpAttempt {
-    result: DeviceOtpAttemptResult
+  type LinkCodeAttempt {
+    result: LinkCodeAttemptResult
     otp: String
     expiresAt: String
-    authToken: String
+    authenticatedPerson: AuthenticatedPerson
   }
 `;
 
