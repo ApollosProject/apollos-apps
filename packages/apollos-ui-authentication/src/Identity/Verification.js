@@ -11,14 +11,23 @@ const FlexedKeyboardAvoidingView = styled({ flex: 1 })(KeyboardAvoidingView);
 
 const Verification = ({
   confirmationTitleText,
-  confirmationPromptText,
   disabled,
   errors,
   isLoading,
   onPressNext,
   setFieldValue,
   values,
+  formType,
 }) => {
+  const config = {
+    email: {
+      promptText: 'We just sent you a code. Check your email.',
+    },
+    phone: {
+      promptText: 'We just sent you a code. Enter it below when it comes.',
+    },
+  };
+
   return (
     <FlexedSafeAreaView
       style={StyleSheet.absoluteFillObject}
@@ -28,7 +37,7 @@ const Verification = ({
         <ScrollView contentInsetAdjustmentBehavior={'automatic'}>
           <PaddedView vertical={false}>
             <TitleText>{confirmationTitleText}</TitleText>
-            <PromptText padded>{confirmationPromptText}</PromptText>
+            <PromptText padded>{config[formType].promptText}</PromptText>
 
             <TextInput
               autoFocus
@@ -64,7 +73,6 @@ const Verification = ({
 
 Verification.propTypes = {
   confirmationTitleText: PropTypes.string,
-  confirmationPromptText: PropTypes.string,
   disabled: PropTypes.bool,
   errors: PropTypes.shape({
     code: PropTypes.string,
@@ -75,12 +83,12 @@ Verification.propTypes = {
   values: PropTypes.shape({
     code: PropTypes.string,
   }),
+  formType: PropTypes.string,
 };
 
 Verification.defaultProps = {
   confirmationTitleText: 'Thanks!\nStand by…',
-  confirmationPromptText:
-    'We just sent you a code. Enter it below when it comes.',
+  formType: 'phone',
 };
 
 export default Verification;

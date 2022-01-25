@@ -1481,7 +1481,7 @@ Stand by…
               }
             }
           >
-            Boom custom prompty text boom
+            We just sent you a code. Enter it below when it comes.
           </Text>
           <View
             disabled={false}

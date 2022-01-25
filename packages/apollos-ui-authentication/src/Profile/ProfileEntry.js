@@ -6,9 +6,9 @@ import { TextInput } from '@apollosproject/ui-kit';
 import { LegalText, ProfileEntryFieldContainer } from '../styles';
 
 const ProfileEntry = (props) => {
-  let LastNameInput = null;
-  let EmailInput = null;
-  let PhoneInput = null;
+  const LastNameInput = null;
+  // const EmailInput = null;
+  // const PhoneInput = null;
   return (
     <ProfileEntryFieldContainer {...props}>
       <TextInput
@@ -17,7 +17,7 @@ const ProfileEntry = (props) => {
         type={'text'}
         textContentType={'givenName'} // ios autofill
         returnKeyType={'next'}
-        value={get(props.values, 'firstName')}
+        value={get(props.values, 'firstName') || ''}
         error={get(props.errors, 'firstName', null)}
         onChangeText={(text) => props.setFieldValue('firstName', text)}
         onSubmitEditing={() => LastNameInput.focus()}
@@ -30,15 +30,16 @@ const ProfileEntry = (props) => {
         type={'text'}
         textContentType={'familyName'} // ios autofill
         returnKeyType={'next'}
-        value={get(props.values, 'lastName')}
+        value={get(props.values, 'lastName', '') || ''}
         error={get(props.errors, 'lastName', null)}
         onChangeText={(text) => props.setFieldValue('lastName', text)}
-        onSubmitEditing={() => EmailInput.focus()}
+        // onSubmitEditing={() => EmailInput.focus()}
+        onSubmitEditing={props.onPressNext}
         disabled={props.isLoading}
         enablesReturnKeyAutomatically
-        inputRef={(r) => {
-          LastNameInput = r;
-        }}
+        // inputRef={(r) => {
+        //   LastNameInput = r;
+        // }}
       />
       <TextInput
         name="email"
@@ -49,12 +50,12 @@ const ProfileEntry = (props) => {
         value={get(props.values, 'email')}
         error={get(props.errors, 'email', null)}
         onChangeText={(text) => props.setFieldValue('email', text)}
-        onSubmitEditing={() => PhoneInput.focus()}
-        disabled={props.isLoading}
+        // onSubmitEditing={() => PhoneInput.focus()}
+        disabled
         enablesReturnKeyAutomatically
-        inputRef={(r) => {
-          EmailInput = r;
-        }}
+        // inputRef={(r) => {
+        //   EmailInput = r;
+        // }}
       />
       <TextInput
         name="phone"
@@ -65,12 +66,12 @@ const ProfileEntry = (props) => {
         value={get(props.values, 'phone')}
         error={get(props.errors, 'phone', null)}
         onChangeText={(text) => props.setFieldValue('phone', text)}
-        onSubmitEditing={props.onPressNext}
-        disabled={props.isLoading}
+        // onSubmitEditing={props.onPressNext}
+        disabled
         enablesReturnKeyAutomatically
-        inputRef={(r) => {
-          PhoneInput = r;
-        }}
+        //   inputRef={(r) => {
+        //     PhoneInput = r;
+        //   }}
       />
     </ProfileEntryFieldContainer>
   );

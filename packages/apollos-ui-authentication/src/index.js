@@ -19,7 +19,6 @@ export { default as ProtectedRoute } from './ProtectedRoute';
 
 export { default as authLink } from './authLink';
 export { default as buildErrorLink } from './buildErrorLink';
-export { default as Entry } from './Entry';
 
 export * from './LoginProvider';
 export { useIsLoggedIn, useLogout } from './Provider';

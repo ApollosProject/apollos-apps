@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import AsyncStorage from '@react-native-community/async-storage';
-import { gql, useQuery, useMutation } from '@apollo/client';
+import { gql, useQuery, useMutation, useApolloClient } from '@apollo/client';
 // import { track } from '@apollosproject/ui-analytics';
 import { LoginProvider } from './LoginProvider';
 
@@ -56,6 +56,8 @@ const AuthContextProvider = ({ children }) => {
   `);
   const [updatePushId] = useMutation(UPDATE_PUSH_ID);
 
+  const client = useApolloClient();
+
   // This effect handles initial login.
   useEffect(() => {
     const setInitialTokens = async () => {
@@ -93,6 +95,7 @@ const AuthContextProvider = ({ children }) => {
 
   // Callback used for logging out.
   const logout = React.useCallback(async () => {
+    await client.clearStore();
     await AsyncStorage.removeItem('accessToken');
     setAccessToken(null);
 
