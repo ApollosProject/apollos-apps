@@ -7,7 +7,7 @@ export const phoneToDB = ({ number }) => {
   if (isValid) {
     return phoneNumber.slice(1);
   }
-  throw UserInputError('Phone number invalid');
+  throw new UserInputError('Phone number invalid');
 };
 
 export const phoneForDisplay = ({ number }) => {

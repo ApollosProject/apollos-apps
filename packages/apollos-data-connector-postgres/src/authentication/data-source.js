@@ -1,6 +1,6 @@
 import { AuthenticationError } from 'apollo-server';
 import { generateAppLink } from '@apollosproject/server-core';
-import { isNil, mapValues, omit, toLower, toUpper } from 'lodash';
+import { isNil, mapValues, omit, startCase, toLower, toUpper } from 'lodash';
 import { Op } from 'sequelize';
 
 import { PostgresDataSource } from '../postgres';
@@ -72,7 +72,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
     return this.sendOtpForRequest({ identityValue, identityKey, person });
   }
 
-  async sendOtpForRequest({ identityValue, identityKey, person }) {
+  async sendOtpForRequest({ identityValue, identityKey }) {
     const otp = await this.context.dataSources.OTP.generateOTP({
       identity: identityValue,
       type: toUpper(identityKey),
@@ -80,9 +80,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
 
     if (identityKey === 'phone') {
       await this.context.dataSources.Sms.sendSms({
-        body: `Hi${
-          person.firstName ? `, ${person.firstName}` : ''
-        }!\n\nYour church would like to help you login. Your code is: ${otp}`,
+        body: `Your code to login is: ${otp}`,
         to: identityValue,
       });
     } else {
@@ -94,14 +92,16 @@ export default class AuthenticationDataSource extends PostgresDataSource {
         },
         this.context.dataSources.Config
       );
+
+      const churchName = startCase(this.context.church.slug);
       await this.context.dataSources.Email.sendEmail({
         toEmail: identityValue,
-        subject: 'Your One Time Login Password',
+        fromName: `${churchName} App`,
+        subject: `${churchName}: Login Code: ${otp}`,
         html: `
-          <p>Hi${person.firstName ? `, ${person.firstName}` : ''}!</p>
-          <br>
-          <p>Your church would like to help you login</p>
-          <p>Your code is: <strong>${otp}</strong>, or you can <strong><a href="${url}">click here</a></strong> with the app installed</p>
+          <p>Your login code for ${churchName} is below.</p>
+          <p>Want to skip the typing? If you're viewing this email on the same device you are trying to login on, <strong><a href="${url}">tap here to login automatically.</a></strong></p>
+          <p>Your code is: <strong>${otp}</strong></p>
         `,
       });
     }

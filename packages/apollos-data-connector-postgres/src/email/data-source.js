@@ -10,7 +10,13 @@ export default class EmailDataSource extends PostgresDataSource {
     return null;
   }
 
-  sendEmail = async ({ toEmail, subject, text, html }) => {
+  sendEmail = async ({
+    toEmail,
+    subject,
+    text,
+    html,
+    fromName = 'Apollos by Apollos',
+  }) => {
     if (!toEmail || !subject || (!text && !html)) {
       throw new Error(
         'Must pass toEmail, subject, and either text or html to sendEmail'
@@ -23,7 +29,10 @@ export default class EmailDataSource extends PostgresDataSource {
 
     const email = {
       to: toEmail,
-      from: 'apps@apollos.app',
+      from: {
+        email: 'apps@apollos.app',
+        name: fromName,
+      },
       subject,
       ...(text && { text }),
       ...(html && { html }),
