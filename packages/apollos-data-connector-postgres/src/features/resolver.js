@@ -78,6 +78,7 @@ const resolver = {
     id: id('ScriptureFeature'),
   },
   Query: {
+    tabs: (_, args, { dataSources: { Feature } }) => Feature.getTabs(args),
     userFeedFeatures: async () =>
       console.warn(
         'userFeedFeatures is deprecated and removed. Use tabFeedFeatures.'

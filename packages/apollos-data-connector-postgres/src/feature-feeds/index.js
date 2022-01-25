@@ -34,9 +34,9 @@ const resolver = {
     featureFeed: ({ id }, args, { dataSources: { FeatureFeed } }) =>
       FeatureFeed.getFeed({ type: 'contentItem', args: { id } }),
   },
-  FeatureFeed: {
-    // lazy-loaded
-    features: ({ getFeatures }) => getFeatures(),
+  MediaContentItem: {
+    featureFeed: ({ id }, args, { dataSources: { FeatureFeed } }) =>
+      FeatureFeed.getFeed({ type: 'contentItem', args: { id } }),
   },
 };
 
@@ -54,6 +54,7 @@ class FeatureFeed {
     if (features) {
       getFeatures = () => Feature.getFeatures(features);
     } else {
+      // TODO deprecated
       if (type === 'tab') {
         getFeatures = () =>
           Feature.getFeatures(Config.TABS[args.tab] || [], args);
@@ -73,11 +74,9 @@ class FeatureFeed {
 
     return {
       __typename: 'FeatureFeed',
-      id: createGlobalId(
-        JSON.stringify({ type, args, features }),
-        'FeatureFeed'
-      ),
-      getFeatures,
+      id: createGlobalId(JSON.stringify({ type, args }), 'FeatureFeed'),
+      // lazy-loaded
+      features: getFeatures,
     };
   };
 }
