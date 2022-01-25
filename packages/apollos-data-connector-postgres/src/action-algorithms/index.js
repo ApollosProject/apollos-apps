@@ -1,4 +1,4 @@
-/* eslint-disable class-methods-use-this, no-console */
+/* eslint-disable class-methods-use-this, no-console, no-param-reassign */
 import { flatten, get } from 'lodash';
 import { PostgresDataSource } from '../postgres';
 
@@ -24,7 +24,6 @@ class ActionAlgorithm extends PostgresDataSource {
       .childrenOfParentsByCategoriesAlgoritm,
   }).reduce((accum, [key, value]) => {
     // convenciance code to make sure all methods are bound to the Features dataSource
-    // eslint-disable-next-line
     accum[key] = value.bind(this);
     return accum;
   }, {});
