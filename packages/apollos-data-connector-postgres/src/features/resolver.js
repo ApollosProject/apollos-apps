@@ -88,7 +88,7 @@ const resolver = {
     actions: ({ actions, data }, args, { dataSources: { Feature } }) =>
       actions ||
       data?.actions?.map((action) => Feature.attachActionIds(action)),
-    id: id('ActiontableFeature'),
+    id: id('ActionTableFeature'),
   },
   HeroListFeature: {
     id: id('HeroListFeature'),
