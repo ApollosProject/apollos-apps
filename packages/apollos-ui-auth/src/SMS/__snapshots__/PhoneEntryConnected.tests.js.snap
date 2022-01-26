@@ -485,7 +485,7 @@ Array [
       >
         <View
           bordered={false}
-          disabled={true}
+          disabled={false}
           pill={false}
           style={
             Object {
@@ -498,7 +498,7 @@ Array [
               "flexDirection": "row",
               "height": 48,
               "justifyContent": "center",
-              "opacity": 0.5,
+              "opacity": 1,
               "overflow": "hidden",
               "paddingHorizontal": 16,
             }

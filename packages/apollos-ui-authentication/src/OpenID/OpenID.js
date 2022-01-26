@@ -21,7 +21,13 @@ const OpenID = ({ providerFriendlyName, onRequestOpenIdConnect, error }) => {
               providerFriendlyName || 'online'
             } account.`}
           </PromptText>
-          {error && <ErrorCard message={'Something went wrong authenticating you. You can skip, or try again.'}/>}
+          {error && (
+            <ErrorCard
+              message={
+                'Something went wrong authenticating you. You can skip, or try again.'
+              }
+            />
+          )}
         </PaddedView>
       </ScrollView>
       <PaddedView>

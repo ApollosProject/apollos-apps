@@ -65,7 +65,7 @@ const OpenIDConnected = ({ provider = 'rock', navigation }) => {
         if (connectResult.connectOpenId.success) {
           closeAuth();
         }
-        throw new Error('Failed to connect via OpenID')        
+        throw new Error('Failed to connect via OpenID');
       } catch {
         setError(true);
       }
@@ -85,7 +85,9 @@ const OpenIDConnected = ({ provider = 'rock', navigation }) => {
     });
   }, [navigation]);
 
-  return <OpenID onRequestOpenIdConnect={handleRequestOpenIdConnect} error={error} />;
+  return (
+    <OpenID onRequestOpenIdConnect={handleRequestOpenIdConnect} error={error} />
+  );
 };
 
 OpenIDConnected.propTypes = {

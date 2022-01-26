@@ -48,7 +48,6 @@ const ProfileEntryConnected = ({ navigation, profileSchema, Component }) => {
   return (
     <Formik
       initialValues={data?.currentUser?.profile}
-      initialTouched={{ phone: true, email: true }}
       onSubmit={async (fields, { setSubmitting }) => {
         setSubmitting(true);
         const validKeys = ['firstName', 'lastName', 'phone', 'email'];
