@@ -9,14 +9,20 @@ import ApollosConfig from '@apollosproject/config';
 const SCHEMA_VERSION = `${ApollosConfig.SCHEMA_VERSION}-1`; // Must be a string.
 const SCHEMA_VERSION_KEY = 'apollo-schema-version';
 
-const nodeCacheRedirect = (_, { id }, { getCacheKey }) =>
-  id ? getCacheKey({ __typename: id.split(':')[0], id }) : null;
-
 const cache = new InMemoryCache({
   possibleTypes: ApollosConfig.TYPEMAP,
   cacheRedirects: {
     Query: {
-      node: nodeCacheRedirect,
+      fields: {
+        node: {
+          read(_, { args, toReference }) {
+            return toReference({
+              __typename: args.id.split(':')[0],
+              id: args.id,
+            });
+          },
+        },
+      },
     },
   },
 });
