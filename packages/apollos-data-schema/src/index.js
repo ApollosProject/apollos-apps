@@ -178,17 +178,6 @@ export const authenticationSchema = gql`
     refreshToken: String
   }
 
-  input PersonInput {
-    firstName: String
-    lastName: String
-  }
-
-  input AuthenticatedPersonInput {
-    person: PersonInput
-    accessToken: String
-    refreshToken: String
-  }
-
   extend type Mutation {
     requestLogin(identity: AuthenticationIdentityInput!): LoginAttempt
     requestRegister(identity: AuthenticationIdentityInput!): LoginAttempt
@@ -221,9 +210,24 @@ export const authenticationSchema = gql`
   }
 
   input AuthenticationClaimLinkCodeInput {
-    clientId: String
-    otp: String
-    authenticatedPerson: AuthenticatedPersonInput
+    otp: String!
+    authenticatedPerson: OpenIdIdentityInput!
+  }
+
+  input OpenIdIdentityInput {
+    accessToken: String
+    refreshToken: String
+    externalAuthProviderData: String
+  }
+
+  input PersonInput {
+    originId: String
+    originType: String
+    firstName: String!
+    lastName: String!
+    email: String
+    phone: String
+    profileImageUrl: String
   }
 
   enum LinkCodeAttemptResult {
