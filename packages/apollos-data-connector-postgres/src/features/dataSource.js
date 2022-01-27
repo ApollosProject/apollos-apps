@@ -1,6 +1,5 @@
 import { Feature as RockFeature } from '@apollosproject/data-connector-rock';
 import { createGlobalId } from '@apollosproject/server-core';
-import ApollosConfig from '@apollosproject/config';
 import { PostgresDataSource, isUuid } from '../postgres';
 
 // We have to do something unfortunate in this file for the time being.
@@ -158,18 +157,6 @@ class Feature extends PostgresDataSource {
         }
       })
     );
-  };
-
-  getTabs = (args) => {
-    return ApollosConfig.APP_TABS.map(({ title, icon, features }) => ({
-      title,
-      icon,
-      feed: {
-        __typename: 'FeatureFeed',
-        id: createGlobalId(JSON.stringify({ features, args }), 'FeatureFeed'),
-        features: () => this.getFeatures(features, args),
-      },
-    }));
   };
 }
 

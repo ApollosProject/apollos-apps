@@ -3,7 +3,12 @@ import { createGlobalId } from '@apollosproject/server-core';
 import ApollosConfig from '@apollosproject/config';
 
 const resolver = {
+  FeatureFeed: {
+    id: ({ id }) => createGlobalId(id, 'FeatureFeed'),
+  },
   Query: {
+    tabs: (_, args, { dataSources: { FeatureFeed } }) =>
+      FeatureFeed.getTabs(args),
     tabFeedFeatures: (root, args, { dataSources: { FeatureFeed } }) =>
       FeatureFeed.getFeed({
         type: 'tab',
@@ -47,33 +52,45 @@ class FeatureFeed extends RockApolloDataSource {
     return this.getFeed(JSON.parse(id));
   };
 
-  getFeed = async ({ type = '', args = {} }) => {
+  getFeed = async ({ type = '', args = {}, features }) => {
     let getFeatures = () => [];
     const { Feature, ContentItem } = this.context.dataSources;
 
-    // TODO deprecated
-    if (type === 'tab') {
-      getFeatures = () =>
-        Feature.getFeatures(ApollosConfig.TABS[args.tab] || [], args);
-    }
+    if (features) {
+      getFeatures = () => Feature.getFeatures(features);
+    } else {
+      // TODO deprecated
+      if (type === 'tab') {
+        getFeatures = () =>
+          Feature.getFeatures(ApollosConfig.TABS[args.tab] || [], args);
+      }
 
-    // TODO deprecated
-    if (type === 'apollosConfig') {
-      getFeatures = () =>
-        Feature.getFeatures(ApollosConfig[args.section] || [], args);
-    }
+      // TODO deprecated
+      if (type === 'apollosConfig') {
+        getFeatures = () =>
+          Feature.getFeatures(ApollosConfig[args.section] || [], args);
+      }
 
-    if (type === 'contentItem' && args.id) {
-      const contentItem = await ContentItem.getFromId(args.id);
-      getFeatures = () => ContentItem.getFeatures(contentItem);
+      if (type === 'contentItem' && args.id) {
+        const contentItem = await ContentItem.getFromId(args.id);
+        getFeatures = () => ContentItem.getFeatures(contentItem);
+      }
     }
 
     return {
       __typename: 'FeatureFeed',
-      id: createGlobalId(JSON.stringify({ type, args }), 'FeatureFeed'),
+      id: JSON.stringify({ type, args, features }),
       // lazy-loaded
       features: getFeatures,
     };
+  };
+
+  getTabs = (args) => {
+    return ApollosConfig.APP_TABS.map(({ title, icon, features }) => ({
+      title,
+      icon,
+      feed: () => this.getFeed({ type: 'apptabs', args, features }),
+    }));
   };
 }
 
