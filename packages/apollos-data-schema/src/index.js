@@ -185,8 +185,12 @@ export const authenticationSchema = gql`
       identity: AuthenticationIdentityInput!
       otp: String!
     ): AuthenticatedPerson
-    requestLinkCode(input: AuthenticationRequestLinkCodeInput!): LinkCodeAttempt
-    claimLinkCode(input: AuthenticationClaimLinkCodeInput!): LinkCodeAttempt
+    requestLinkCode(
+      input: AuthenticationRequestLinkCodeInput!
+    ): RequestLinkCodeAttempt
+    claimLinkCode(
+      input: AuthenticationClaimLinkCodeInput!
+    ): ClaimLinkCodeAttempt
     refreshSession(refreshToken: String!): AuthenticatedPerson
   }
 
@@ -206,18 +210,20 @@ export const authenticationSchema = gql`
   }
 
   input AuthenticationRequestLinkCodeInput {
-    clientId: String
+    clientId: String!
   }
 
   input AuthenticationClaimLinkCodeInput {
     otp: String!
-    authenticatedPerson: OpenIdIdentityInput!
+    originPerson: PersonInput!
+    openIdIdentity: OpenIdIdentityInput!
   }
 
   input OpenIdIdentityInput {
-    accessToken: String
+    accessToken: String!
     refreshToken: String
-    externalAuthProviderData: String
+    providerSessionId: String
+    providerType: String!
   }
 
   input PersonInput {
@@ -231,17 +237,20 @@ export const authenticationSchema = gql`
   }
 
   enum LinkCodeAttemptResult {
-    LINK_CODE_CLAIMED
-    LINK_CODE_EXPIRED
-    NO_LINK_CODE
-    NO_USER
+    INVALID_LINK_CODE
+    ERROR
     SUCCESS
   }
 
-  type LinkCodeAttempt {
+  type RequestLinkCodeAttempt {
     result: LinkCodeAttemptResult
     otp: String
     expiresAt: String
+    authenticatedPerson: AuthenticatedPerson
+  }
+
+  type ClaimLinkCodeAttempt {
+    result: LinkCodeAttemptResult
     authenticatedPerson: AuthenticatedPerson
   }
 `;

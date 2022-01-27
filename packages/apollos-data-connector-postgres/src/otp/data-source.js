@@ -54,6 +54,21 @@ export default class OTPDataSource extends PostgresDataSource {
     return { code };
   };
 
+  validateOTP = async ({ identity, type, otp }) => {
+    const validOTP = await this.model.findOne({
+      where: {
+        code: otp,
+        identity,
+        type,
+        expiresAt: {
+          [Op.gt]: new Date(),
+        },
+      },
+    });
+
+    return !!validOTP;
+  };
+
   generateLinkCode = async ({ identity, type }) => {
     console.log('\ngenerateLinkCode()');
     console.log('identity:', identity);
@@ -103,17 +118,41 @@ export default class OTPDataSource extends PostgresDataSource {
     return otpShape;
   };
 
-  validateOTP = async ({ identity, otp }) => {
-    const validOTP = await this.model.findOne({
+  getLinkCodeByOtp = async ({ otp }) => {
+    return this.model.findOne({
       where: {
         code: otp,
-        identity,
+        type: 'LINK_CODE',
         expiresAt: {
           [Op.gt]: new Date(),
         },
       },
     });
+  };
 
-    return !!validOTP;
+  claimLinkCode = async ({ otp, openIdIdentity }) => {
+    console.log('openIdIdentity.id:', openIdIdentity.id);
+    const rkd = await this.model.findOne({
+      otp,
+    });
+    console.log('rkd:', rkd);
+    const [count, results] = await this.model.update(
+      {
+        openIdIdentityId: openIdIdentity.id,
+      },
+      {
+        where: {
+          otp,
+        },
+        returning: true,
+      }
+    );
+
+    console.log('results:', results);
+    if (count < 1) {
+      throw new Error('Unable to claim link code');
+    }
+
+    return results[0];
   };
 }

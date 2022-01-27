@@ -57,4 +57,4 @@ async function down({ context: queryInterface }) {
 
 const name = '002_support_link_codes_and_external_provider_tokens';
 
-module.exports = { up, down, name, order: 4 };
+module.exports = { up, down, name, order: 9 };

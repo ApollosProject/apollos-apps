@@ -134,7 +134,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
 
     const isValid = await OTP.validateOTP({
       identity: identityValue,
-      otp,
+      type: toUpper(identityKey),
     });
 
     if (!isValid) {
@@ -167,18 +167,6 @@ export default class AuthenticationDataSource extends PostgresDataSource {
     };
   }
 
-  // requestLinkCode = async ({ identity }) => {
-  //   const { OTP } = this.context.dataSources;
-  //   console.log('🟧 🔐 Authentication.requestLinkCode() ');
-  //   console.log('identity:', identity);
-
-  //   const deviceOtp = await OTP.generateDeviceOTP({ deviceId });
-
-  //   return {
-  //     result: 'SUCCESS',
-  //   };
-  // };
-
   async requestLinkCode({ input }) {
     console.log('\n🟧 🔐 Authentication.requestLinkCode() ');
     console.log('input:', input);
@@ -190,6 +178,94 @@ export default class AuthenticationDataSource extends PostgresDataSource {
 
     return this.sendOtpForRequest({ identityValue, identityKey });
   }
+
+  claimLinkCode = async ({ input }) => {
+    console.log('\n🟪 🔐 Authentication.claimLinkCode()');
+    console.log('input:', input);
+    const { OTP } = this.context.dataSources;
+
+    // Make sure it's a valid code first
+    const linkCode = await OTP.getLinkCodeByOtp({
+      otp: input.otp,
+    });
+    const isValid = !!linkCode;
+    const isClaimed = !!linkCode?.dataValues.open_id_identity_id;
+
+    console.log('🔢 linkCode:', linkCode);
+    if (!isValid || isClaimed) {
+      return {
+        result: 'INVALID_LINK_CODE',
+      };
+    }
+
+    // Ensure a Person exists
+    const { originPerson } = input;
+
+    let person = await this.sequelize.models.people.findOne({
+      where: {
+        originId: originPerson.originId,
+      },
+    });
+
+    if (!person) {
+      console.log('🟪 👤 Creating new Person entry...', originPerson);
+
+      const personAttributes = {
+        originId: originPerson.originId,
+        originType: originPerson.originType,
+        firstName: originPerson.firstName,
+        lastName: originPerson.lastName,
+        email: originPerson.email,
+        phone: originPerson.phone,
+      };
+
+      console.log('personAttributes:', personAttributes);
+      person = await this.sequelize.models.people.create(personAttributes);
+    }
+    console.log('👤 person:', person);
+
+    // Ensure an OpenIdIdentity exists
+    let openIdIdentity = await this.sequelize.models.openIdIdentity.findOne({
+      where: {
+        personId: person.id,
+      },
+    });
+
+    if (!openIdIdentity) {
+      const openIdAttributes = {
+        personId: person.id,
+        accessToken: input.openIdIdentity.accessToken,
+        refreshToken: input.openIdIdentity.refreshToken,
+        providerType: input.openIdIdentity.providerType,
+        providerSessionId: input.openIdIdentity.providerSessionId,
+      };
+
+      console.log('openIdAttributes:', openIdAttributes);
+      openIdIdentity = await this.sequelize.models.openIdIdentity.create(
+        openIdAttributes
+      );
+    }
+
+    console.log('💳 openIdIdentity:', openIdIdentity);
+
+    // Associated it to this OTP
+    try {
+      const result = await OTP.claimLinkCode({
+        otp: input.otp,
+        openIdIdentity,
+      });
+      console.log('(update OTP) result:', result);
+    } catch (otpUpdateError) {
+      console.error(otpUpdateError);
+      return {
+        result: 'ERROR',
+      };
+    }
+
+    return {
+      result: 'SUCCESS',
+    };
+  };
 
   refreshSession = async ({ refreshToken }) => {
     // Find and validate refresh token
@@ -204,17 +280,6 @@ export default class AuthenticationDataSource extends PostgresDataSource {
       refreshToken,
     };
   };
-
-  async claimLinkCode({ input }) {
-    console.log('\n🟪 🔐 Authentication.claimLinkCode() ');
-    console.log('input:', input);
-
-    // Did
-
-    return {
-      result: 'SUCCESS',
-    };
-  }
 
   getCurrentPerson = async () => {
     const { personId } = this.context;
