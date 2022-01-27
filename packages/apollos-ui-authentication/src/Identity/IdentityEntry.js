@@ -69,8 +69,6 @@ const IdentityEntry = ({
     },
   };
 
-  console.log(get(errors, formType))
-
   return (
     <FlexedSafeAreaView
       style={StyleSheet.absoluteFill}
@@ -175,7 +173,7 @@ IdentityEntry.propTypes = {
   onChangeNewUser: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
   errors: PropTypes.shape({
-    phone: PropTypes.any,
+    phone: PropTypes.shape({}),
   }),
   isLoading: PropTypes.bool,
   onPressAlternateLogin: PropTypes.func,

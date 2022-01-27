@@ -1,7 +1,13 @@
 import { createGlobalId } from '@apollosproject/server-core';
 
 const resolver = {
+  FeatureFeed: {
+    id: ({ id }) => createGlobalId(id, 'FeatureFeed'),
+  },
   Query: {
+    tabs: (_, args, { dataSources: { FeatureFeed } }) =>
+      FeatureFeed.getTabs(args),
+
     tabFeedFeatures: (root, args, { dataSources: { FeatureFeed } }) =>
       FeatureFeed.getFeed({
         type: 'tab',
@@ -74,10 +80,19 @@ class FeatureFeed {
 
     return {
       __typename: 'FeatureFeed',
-      id: createGlobalId(JSON.stringify({ type, args }), 'FeatureFeed'),
+      id: JSON.stringify({ type, args, features }),
       // lazy-loaded
       features: getFeatures,
     };
+  };
+
+  getTabs = (args) => {
+    const { Config } = this.context.dataSources;
+    return Config.APP_TABS.map(({ title, icon, features }) => ({
+      title,
+      icon,
+      feed: () => this.getFeed({ type: 'apptabs', args, features }),
+    }));
   };
 }
 

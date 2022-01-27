@@ -432,19 +432,6 @@ class Feature extends PostgresDataSource {
         }
       })
     );
-
-  getTabs = (args) => {
-    const { Config } = this.context.dataSources;
-    return Config.APP_TABS.map(({ title, icon, features }) => ({
-      title,
-      icon,
-      feed: {
-        __typename: 'FeatureFeed',
-        id: createGlobalId(JSON.stringify({ features, args }), 'FeatureFeed'),
-        features: () => this.getFeatures(features, args),
-      },
-    }));
-  };
 }
 
 export { Feature as default };
