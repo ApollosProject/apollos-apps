@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.43.0](https://github.com/apollosproject/apollos-apps/compare/v2.42.0...v2.43.0) (2022-01-27)
+
+
+### Features
+
+* adds app tabs query to API ([#2316](https://github.com/apollosproject/apollos-apps/issues/2316)) ([76f05b6](https://github.com/apollosproject/apollos-apps/commit/76f05b65e7794fc9a63069b70573e4b202980580))
+
+
+### Bug Fixes
+
+* sets defaults for webview feature ([#2320](https://github.com/apollosproject/apollos-apps/issues/2320)) ([43e8d50](https://github.com/apollosproject/apollos-apps/commit/43e8d506e94948372d3643ba97ca533cb7ae6f28))
+* Webview props ([#2321](https://github.com/apollosproject/apollos-apps/issues/2321)) ([e46872f](https://github.com/apollosproject/apollos-apps/commit/e46872f9a5bafdac25b7e891eeea237294fd3044))
+
+
+
 ## [2.42.0](https://github.com/apollosproject/apollos-apps/compare/v2.41.0...v2.42.0) (2022-01-11)
 
 

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.43.0](https://github.com/ApollosProject/apollos-apps/compare/v2.42.0...v2.43.0) (2022-01-27)
+
+
+### Bug Fixes
+
+* Try and improve secrets compatibility ([#2327](https://github.com/ApollosProject/apollos-apps/issues/2327)) ([4ba15d8](https://github.com/ApollosProject/apollos-apps/commit/4ba15d8d283157d8ceb769fdf407c8bea6922872))
+
+
+
 ## [2.42.0](https://github.com/ApollosProject/apollos-apps/compare/v2.41.0...v2.42.0) (2022-01-11)
 
 **Note:** Version bump only for package @apollosproject/apollos-cli

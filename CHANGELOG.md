@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.43.0](https://github.com/ApollosProject/apollos-apps/compare/v2.42.0...v2.43.0) (2022-01-27)
+
+
+### Features
+
+* adds app tabs query to API ([#2316](https://github.com/ApollosProject/apollos-apps/issues/2316)) ([76f05b6](https://github.com/ApollosProject/apollos-apps/commit/76f05b65e7794fc9a63069b70573e4b202980580))
+* allow profile entry to be overriden via theme ([#2328](https://github.com/ApollosProject/apollos-apps/issues/2328)) ([6d77a6a](https://github.com/ApollosProject/apollos-apps/commit/6d77a6a7391c80498277a1a5524f8c9d7f927f98))
+* Check specifically for apollos devices when looking for existing devices ([#2306](https://github.com/ApollosProject/apollos-apps/issues/2306)) ([a91e0f7](https://github.com/ApollosProject/apollos-apps/commit/a91e0f7f938f136fa442030be06fe47f863c6776))
+
+
+### Bug Fixes
+
+* correctly does cache lookups on node queries ([#2349](https://github.com/ApollosProject/apollos-apps/issues/2349)) ([911905a](https://github.com/ApollosProject/apollos-apps/commit/911905aecc7296f00eee2b720e9f479a31564819))
+* sets defaults for webview feature ([#2320](https://github.com/ApollosProject/apollos-apps/issues/2320)) ([43e8d50](https://github.com/ApollosProject/apollos-apps/commit/43e8d506e94948372d3643ba97ca533cb7ae6f28))
+* Try and improve secrets compatibility ([#2327](https://github.com/ApollosProject/apollos-apps/issues/2327)) ([4ba15d8](https://github.com/ApollosProject/apollos-apps/commit/4ba15d8d283157d8ceb769fdf407c8bea6922872))
+* Webview props ([#2321](https://github.com/ApollosProject/apollos-apps/issues/2321)) ([e46872f](https://github.com/ApollosProject/apollos-apps/commit/e46872f9a5bafdac25b7e891eeea237294fd3044))
+
+
+
 ## [2.42.0](https://github.com/ApollosProject/apollos-apps/compare/v2.41.0...v2.42.0) (2022-01-11)
 
 
