@@ -52,9 +52,14 @@ class ActionAlgorithm extends PostgresDataSource {
     limit = 10,
     numberDaysSincePrayer,
     personId,
+    useCurrentPerson = false,
   } = {}) {
-    const { PrayerRequest, Feature } = this.context.dataSources;
+    const { PrayerRequest, Feature, Person } = this.context.dataSources;
     Feature.setCacheHint({ scope: 'PRIVATE' });
+
+    if (useCurrentPerson) {
+      personId = await Person.getCurrentPersonId();
+    }
 
     return PrayerRequest.byDailyPrayerFeed({
       numberDaysSincePrayer,
