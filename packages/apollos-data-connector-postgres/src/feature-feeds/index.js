@@ -7,7 +7,6 @@ const resolver = {
   Query: {
     tabs: (_, args, { dataSources: { FeatureFeed } }) =>
       FeatureFeed.getTabs(args),
-
     tabFeedFeatures: (root, args, { dataSources: { FeatureFeed } }) =>
       FeatureFeed.getFeed({
         type: 'tab',
