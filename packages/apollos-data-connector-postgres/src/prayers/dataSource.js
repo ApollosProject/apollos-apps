@@ -31,8 +31,9 @@ class Prayer extends PostgresDataSource {
 
     followers.forEach((follow) => {
       Notification.createAndSend({
-        title: `${firstName} ${lastName} is asking for prayer. Will you pray for them?`,
+        title: `${firstName} ${lastName} is asking for prayer.`,
         personId: follow.requestPersonId,
+        body: 'Will you pray for them?',
         type: 'PRAYER',
       });
     });
