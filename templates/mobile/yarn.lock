@@ -7659,10 +7659,10 @@ react-native-device-info@^4.0.1:
   resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-4.0.1.tgz#bade972e7a995ac187a82745a458cba98b72dea0"
   integrity sha512-a0Q/gwy1oQhu17CeMq9xMZ3Sl9foaj8hFwVuy9jieqkkoQwkHnPDI+R7bEW0MNMgUCPPrzzXvka+FLGOWVqacg==
 
-react-native-geolocation-service@^5.1.1:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/react-native-geolocation-service/-/react-native-geolocation-service-5.2.0.tgz#eeb1c70cf842e612d68bc3d8706c0fdd917efaf5"
-  integrity sha512-ai7xd6QbLl6WMyEbPfXSaXyYQ/L6CDcPjOZAJYboqwNPclAqxGkzJHJQyvBNy9J410EIrDJg0p9KyaciXmxyCw==
+react-native-geolocation-service@5.3.0-beta.4:
+  version "5.3.0-beta.4"
+  resolved "https://registry.yarnpkg.com/react-native-geolocation-service/-/react-native-geolocation-service-5.3.0-beta.4.tgz#8061396f734028b0ecbf8316a2cda9179df19210"
+  integrity sha512-8Z/FP1ls02fnvqXCII+dDS329lP3UigNR4eIHUjPQdHu/DRGMRCpJJuj05hcq37UJL/zVVsXnPFdLA9lCOWYCQ==
 
 react-native-gesture-handler@^1.10.3:
   version "1.10.3"
@@ -7720,10 +7720,10 @@ react-native-music-control@^1.3.0:
   resolved "https://registry.yarnpkg.com/react-native-music-control/-/react-native-music-control-1.4.0.tgz#8c1793e3899a327b6f74fada4f8d04b9f2b3d0c7"
   integrity sha512-fyljEq3h8gXo5zzQyGP/x3cFhyMvruoaLZFJRxM79+M0WajjFKXLbhhofbGHsA78wnGW+IQ+BbJQf9qUTTsXjg==
 
-react-native-onesignal@4.0.8:
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/react-native-onesignal/-/react-native-onesignal-4.0.8.tgz#258d8f0e394257c6368b19bd77e0677b6a1f9433"
-  integrity sha512-N80+WopFz/ztclF+a0RpSGEu+hArlWLOKSSLv/YvYvIttcXUSIr9CpRj9a4Zq6Sc75ns97HHJZ28xXGY88JFTg==
+react-native-onesignal@4.3.5:
+  version "4.3.5"
+  resolved "https://registry.yarnpkg.com/react-native-onesignal/-/react-native-onesignal-4.3.5.tgz#f17e4e67dcd9cff12986d3a558beafc552399830"
+  integrity sha512-X4SqbrRDX09yM92dAxlS5/19Bb6FGO5xw6Omvg+XyCDxx3eQh0yv3DoTxPEOJGW9bKBVKl1h5VBtkkFrqKWlYg==
   dependencies:
     invariant "^2.2.2"
 
