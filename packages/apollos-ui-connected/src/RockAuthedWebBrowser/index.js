@@ -14,7 +14,7 @@ const RockAuthedWebBrowserWithClient = ({ children, client, paper, primary }) =>
         client,
         ...Platform.select({
           ios: {
-            dismissButtonStyle: 'cancel',
+            dismissButtonStyle: 'close',
             preferredBarTintColor: paper,
             preferredControlTintColor: primary,
             readerMode: false,
