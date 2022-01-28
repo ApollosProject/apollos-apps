@@ -37,7 +37,7 @@ program
         initial: (prev) =>
           `com.apollos.${prev.toLowerCase().replace(/ /g, '_')}`,
         validate: (value) =>
-          value.match(/[a-zA-z_.]+/)[0] === value
+          value.match(/\w.]+/)[0] === value
             ? true
             : `Alphanumeric and underscores only!`,
       },
@@ -47,7 +47,7 @@ program
         message: 'Android App ID?',
         initial: (prev) => prev,
         validate: (value) =>
-          value.match(/[a-zA-z_.]+/)[0] === value
+          value.match(/[\w.]+/)[0] === value
             ? true
             : `Alphanumeric and underscores only!`,
       },
