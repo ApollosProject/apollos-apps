@@ -40,72 +40,112 @@
     tslib "^1.10.0"
 
 "@apollosproject/config@link:../../packages/apollos-config":
-  version "0.0.0"
-  uid ""
+  version "2.43.0"
+  dependencies:
+    js-yaml "^3.12.0"
 
 "@apollosproject/eslint-config@link:../../packages/apollos-eslint-config":
-  version "0.0.0"
-  uid ""
+  version "2.43.0"
 
 "@apollosproject/react-native-airplay-btn@link:../../packages/apollos-react-native-airplay-btn":
   version "0.0.0"
-  uid ""
 
 "@apollosproject/ui-analytics@link:../../packages/apollos-ui-analytics":
-  version "0.0.0"
-  uid ""
+  version "2.43.0"
+  dependencies:
+    react-native-device-info "^4.0.1"
 
 "@apollosproject/ui-auth@link:../../packages/apollos-ui-auth":
-  version "0.0.0"
-  uid ""
+  version "2.43.0"
+  dependencies:
+    formik "1.5.1"
+    yup "^0.27.0"
 
 "@apollosproject/ui-connected@link:../../packages/apollos-ui-connected":
-  version "0.0.0"
-  uid ""
+  version "2.43.0"
+  dependencies:
+    "@gorhom/bottom-sheet" "3.4.1"
+    apollo-upload-client "^17.0.0"
+    graphql-tag "2.9.2"
+    lodash "^4.17.11"
+    moment "^2.29.1"
 
 "@apollosproject/ui-fragments@link:../../packages/apollos-ui-fragments":
-  version "0.0.0"
-  uid ""
+  version "2.43.0"
+  dependencies:
+    "@apollo/client" "3.3.20"
 
 "@apollosproject/ui-htmlview@link:../../packages/apollos-ui-htmlview":
-  version "0.0.0"
-  uid ""
+  version "2.43.0"
+  dependencies:
+    entities "^1.1.2"
+    htmlparser2 "3.9.2"
 
 "@apollosproject/ui-kit@link:../../packages/apollos-ui-kit":
-  version "0.0.0"
-  uid ""
+  version "2.43.0"
+  dependencies:
+    "@react-native-community/blur" "^3.6.0"
+    "@react-native-picker/picker" "^1.9.4"
+    color "^3.1.0"
+    lodash "^4.17.11"
+    moment "^2.24.0"
+    numeral "^2.0.6"
+    phosphor-react-native "^0.4.0"
+    react-native-keyboard-avoiding-scroll-view "1.0.1"
+    react-native-modal-datetime-picker "^9.0.0"
+    react-native-tab-view "1.0.2"
+    recompose "^0.30.0"
+    rn-placeholder "1.2.0"
 
 "@apollosproject/ui-mapview@link:../../packages/apollos-ui-mapview":
-  version "0.0.0"
-  uid ""
+  version "2.43.0"
+  dependencies:
+    "@apollo/client" "3.3.20"
 
 "@apollosproject/ui-media-player@link:../../packages/apollos-ui-media-player":
-  version "0.0.0"
-  uid ""
+  version "2.43.0"
+  dependencies:
+    "@types/color" "^3.0.1"
+    color "^3.1.2"
+    use-debounce "5.1.0"
 
 "@apollosproject/ui-notifications@link:../../packages/apollos-ui-notifications":
-  version "0.0.0"
-  uid ""
+  version "2.43.0"
+  dependencies:
+    lodash "^4.17.11"
+    react-native-permissions "^2.0.5"
+    url "^0.11.0"
 
 "@apollosproject/ui-onboarding@link:../../packages/apollos-ui-onboarding":
-  version "0.0.0"
-  uid ""
+  version "2.43.0"
+  dependencies:
+    "@react-native-community/async-storage" "^1.5.1"
+    formik "1.5.1"
+    lodash "4.17.21"
+    moment "2.22.2"
+    react-is "^16.9.0"
+    react-native-swiper "^1.5.14"
+    yup "0.26.6"
 
 "@apollosproject/ui-passes@link:../../packages/apollos-ui-passes":
-  version "0.0.0"
-  uid ""
+  version "2.43.0"
+  dependencies:
+    "@apollo/client" "3.3.20"
 
 "@apollosproject/ui-prayer@link:../../packages/apollos-ui-prayer":
-  version "0.0.0"
-  uid ""
+  version "2.43.0"
+  dependencies:
+    formik "1.5.1"
+    lodash "4.17.21"
+    react-is "^16.9.0"
+    react-native-swiper "^1.6.0"
+    yup "0.26.6"
 
 "@apollosproject/ui-scripture@link:../../packages/apollos-ui-scripture":
-  version "0.0.0"
-  uid ""
+  version "2.43.0"
 
 "@apollosproject/ui-test-utils@link:../../packages/apollos-ui-test-utils":
-  version "0.0.0"
-  uid ""
+  version "2.43.0"
 
 "@babel/code-frame@7.12.11":
   version "7.12.11"
@@ -6795,6 +6835,13 @@ node-fetch@2.6.1:
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
   integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
 
+node-fetch@2.6.7, node-fetch@^2.2.0, node-fetch@^2.6.0:
+  version "2.6.7"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.7.tgz#24de9fba827e3b4ae44dc8b20256a379160052ad"
+  integrity sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
+  dependencies:
+    whatwg-url "^5.0.0"
+
 node-fetch@^1.0.1:
   version "1.7.3"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
@@ -6802,13 +6849,6 @@ node-fetch@^1.0.1:
   dependencies:
     encoding "^0.1.11"
     is-stream "^1.0.1"
-
-node-fetch@^2.2.0, node-fetch@^2.6.0:
-  version "2.6.6"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.6.tgz#1751a7c01834e8e1697758732e9efb6eeadfaf89"
-  integrity sha512-Z8/6vRlTUChSdIgMa51jxQ4lrw/Jy5SOW10ObaA47/RElsAN2c5Pn8bTgFGWn/ibwzXTE8qwr1Yzx28vsecXEA==
-  dependencies:
-    whatwg-url "^5.0.0"
 
 node-int64@^0.4.0:
   version "0.4.0"
