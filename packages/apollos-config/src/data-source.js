@@ -37,7 +37,19 @@ const getSharedConfig = () => {
 };
 
 export const buildChurchConfig = ({ churchSlug, sharedConfig, configDir }) => {
-  const envStage = process.env.ENV_STAGE ? `.${process.env.ENV_STAGE}` : '';
+  let envStage = process.env.ENV_STAGE;
+
+  if (!envStage) {
+    throw new Error('You must specify an env stage');
+  }
+
+  if (envStage === 'production') {
+    // The default config is the production config.
+    // If we are using production, we should remove the prefix.
+    // This is non optimal, long term we need a secret manager.
+    envStage = '';
+  }
+
   let envFile;
 
   try {
