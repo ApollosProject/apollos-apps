@@ -100,8 +100,7 @@ function IdentityEntryConnected(props) {
       initialValues={{ phone: '', email: '', ...identity }}
       validationSchema={validationSchema}
       onSubmit={handleOnSubmit}
-      isInitialValid={() => !!identity}
-      validateOnMount
+      // validateOnMount
     >
       {({
         setFieldValue,

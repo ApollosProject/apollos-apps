@@ -1,18 +1,18 @@
-import { AuthenticationError } from 'apollo-server';
-import { generateAppLink } from '@apollosproject/server-core';
-import { isNil, mapValues, omit, toLower, toUpper } from 'lodash';
-import { Op } from 'sequelize';
+import { AuthenticationError } from "apollo-server";
+import { generateAppLink } from "@apollosproject/server-core";
+import { isNil, mapValues, omit, startCase, toLower, toUpper } from "lodash";
+import { Op } from "sequelize";
 
-import { PostgresDataSource } from '../postgres';
-import { phoneToDB } from '../utils/phone';
-import { generateToken } from './token';
+import { PostgresDataSource } from "../postgres";
+import { phoneToDB } from "../utils/phone";
+import { generateToken } from "./token";
 
 export default class AuthenticationDataSource extends PostgresDataSource {
   // eslint-disable-next-line class-methods-use-this
   parseIdentity(identity) {
     // Link Code for connecting a device
     if (identity.clientId) {
-      return { identityKey: 'link_code', identityValue: identity.clientId };
+      return { identityKey: "link_code", identityValue: identity.clientId };
     }
 
     // Phone and Email
@@ -46,7 +46,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
 
     if (existingPerson) {
       return {
-        result: 'EXISTING_USER',
+        result: "EXISTING_USER",
       };
     }
 
@@ -71,7 +71,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
 
     if (!person) {
       return {
-        result: 'NO_USER',
+        result: "NO_USER",
       };
     }
 
@@ -79,43 +79,43 @@ export default class AuthenticationDataSource extends PostgresDataSource {
   }
 
   async sendOtpForRequest({ identityValue, identityKey, person }) {
-    console.log('\n🔑 sendOtpForRequest');
+    console.log("\n🔑 sendOtpForRequest");
     const otp = await this.context.dataSources.OTP.generateOTP({
       identity: identityValue,
       type: toUpper(identityKey),
     });
     const { code } = otp;
 
-    if (identityKey === 'phone') {
+    if (identityKey === "phone") {
       await this.context.dataSources.Sms.sendSms({
-        body: `Hi${
-          person.firstName ? `, ${person.firstName}` : ''
-        }!\n\nYour church would like to help you login. Your code is: ${code}`,
+        body: `Your code to login is: ${otp}`,
         to: identityValue,
       });
-    } else if (identityKey === 'email') {
+    } else if (identityKey === "email") {
       const url = generateAppLink(
-        'deep',
-        'auth',
+        "deep",
+        "auth",
         {
           query: `?identity=${identityValue}&authType=${identityKey}&code=${code}`,
         },
         this.context.dataSources.Config
       );
+
+      const churchName = startCase(this.context.church.slug);
       await this.context.dataSources.Email.sendEmail({
         toEmail: identityValue,
-        subject: 'Your One Time Login Password',
+        fromName: `${churchName} App`,
+        subject: `${churchName}: Login Code: ${otp}`,
         html: `
-          <p>Hi${person.firstName ? `, ${person.firstName}` : ''}!</p>
-          <br>
-          <p>Your church would like to help you login</p>
-          <p>Your code is: <strong>${code}</strong>, or you can <strong><a href="${url}">click here</a></strong> with the app installed</p>
+          <p>Your login code for ${churchName} is below.</p>
+          <p>Want to skip the typing? If you're viewing this email on the same device you are trying to login on, <strong><a href="${url}">tap here to login automatically.</a></strong></p>
+          <p>Your code is: <strong>${otp}</strong></p>
         `,
       });
-    } else if (identityKey === 'link_code') {
-      console.log('🔢 Link Code otp:', otp);
+    } else if (identityKey === "link_code") {
+      console.log("🔢 Link Code otp:", otp);
       return {
-        result: 'SUCCESS',
+        result: "SUCCESS",
         otp: otp.code,
         expiresAt: otp.expiresAt,
         authenticatedPerson: null,
@@ -123,7 +123,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
     }
 
     return {
-      result: 'SUCCESS',
+      result: "SUCCESS",
     };
   }
 
@@ -138,7 +138,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
     });
 
     if (!isValid) {
-      console.error('Invalid OTP');
+      console.error("Invalid OTP");
       return null;
     }
 
@@ -151,7 +151,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
     });
 
     if (!person) {
-      console.error('No user found');
+      console.error("No user found");
       return null;
     }
 
@@ -168,20 +168,20 @@ export default class AuthenticationDataSource extends PostgresDataSource {
   }
 
   async requestLinkCode({ input }) {
-    console.log('\n🟧 🔐 Authentication.requestLinkCode() ');
-    console.log('input:', input);
+    console.log("\n🟧 🔐 Authentication.requestLinkCode() ");
+    console.log("input:", input);
 
-    console.log('👤 Parsing identity...');
+    console.log("👤 Parsing identity...");
     const { identityKey, identityValue } = this.parseIdentity(input);
-    console.log('identityKey:', identityKey);
-    console.log('identityValue:', identityValue);
+    console.log("identityKey:", identityKey);
+    console.log("identityValue:", identityValue);
 
     return this.sendOtpForRequest({ identityValue, identityKey });
   }
 
   claimLinkCode = async ({ input }) => {
-    console.log('\n🟪 🔐 Authentication.claimLinkCode()');
-    console.log('input:', input);
+    console.log("\n🟪 🔐 Authentication.claimLinkCode()");
+    console.log("input:", input);
     const { OTP } = this.context.dataSources;
 
     // Make sure it's a valid code first
@@ -191,10 +191,10 @@ export default class AuthenticationDataSource extends PostgresDataSource {
     const isValid = !!linkCode;
     const isClaimed = !!linkCode?.dataValues.open_id_identity_id;
 
-    console.log('🔢 linkCode:', linkCode);
+    console.log("🔢 linkCode:", linkCode);
     if (!isValid || isClaimed) {
       return {
-        result: 'INVALID_LINK_CODE',
+        result: "INVALID_LINK_CODE",
       };
     }
 
@@ -208,7 +208,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
     });
 
     if (!person) {
-      console.log('🟪 👤 Creating new Person entry...', originPerson);
+      console.log("🟪 👤 Creating new Person entry...", originPerson);
 
       const personAttributes = {
         originId: originPerson.originId,
@@ -219,10 +219,10 @@ export default class AuthenticationDataSource extends PostgresDataSource {
         phone: originPerson.phone,
       };
 
-      console.log('personAttributes:', personAttributes);
+      console.log("personAttributes:", personAttributes);
       person = await this.sequelize.models.people.create(personAttributes);
     }
-    console.log('👤 person:', person);
+    console.log("👤 person:", person);
 
     // Ensure an OpenIdIdentity exists
     let openIdIdentity = await this.sequelize.models.openIdIdentity.findOne({
@@ -240,13 +240,13 @@ export default class AuthenticationDataSource extends PostgresDataSource {
         providerSessionId: input.openIdIdentity.providerSessionId,
       };
 
-      console.log('openIdAttributes:', openIdAttributes);
+      console.log("openIdAttributes:", openIdAttributes);
       openIdIdentity = await this.sequelize.models.openIdIdentity.create(
         openIdAttributes
       );
     }
 
-    console.log('💳 openIdIdentity:', openIdIdentity);
+    console.log("💳 openIdIdentity:", openIdIdentity);
 
     // Associated it to this OTP
     try {
@@ -254,16 +254,16 @@ export default class AuthenticationDataSource extends PostgresDataSource {
         otp: input.otp,
         openIdIdentity,
       });
-      console.log('(update OTP) result:', result);
+      console.log("(update OTP) result:", result);
     } catch (otpUpdateError) {
       console.error(otpUpdateError);
       return {
-        result: 'ERROR',
+        result: "ERROR",
       };
     }
 
     return {
-      result: 'SUCCESS',
+      result: "SUCCESS",
     };
   };
 
@@ -288,6 +288,6 @@ export default class AuthenticationDataSource extends PostgresDataSource {
       // Delegate to Person model.
       return { profile: this.context.dataSources.Person.getCurrentPerson() };
     }
-    throw new AuthenticationError('Must be logged in');
+    throw new AuthenticationError("Must be logged in");
   };
 }

@@ -63,6 +63,11 @@ const link = ApolloLink.from([
   createUploadLink({
     uri,
     headers: {
+      // Stops Fetch (and the underlying HTTP stack) from caching on our behalf.
+      // Caching should be managed by our server and apollo-client
+      // Fetch handles the `cache-control: private` option in a way that
+      // causes issues when logging in as a different user.
+      'Cache-Control': 'no-cache, no-store',
       ...(ApollosConfig.CHURCH_HEADER
         ? { 'x-church': ApollosConfig.CHURCH_HEADER }
         : {}),

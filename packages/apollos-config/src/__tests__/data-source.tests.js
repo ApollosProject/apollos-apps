@@ -6,6 +6,7 @@ describe('Config Data Source', () => {
     process.env.NODE_ENV = 'not-test';
   });
   it('must load global variables', () => {
+    process.env.ENV_STAGE = 'production';
     const Config = new ConfigDataSource();
     Config.initialize({ context: { church: { slug: 'apollos_demo' } } });
     expect(Config.BIBLE_API.KEY).toEqual('123456abc');

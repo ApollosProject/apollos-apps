@@ -1,4 +1,4 @@
-import { AuthenticationError } from 'apollo-server';
+import { AuthenticationError, UserInputError } from 'apollo-server';
 import { camelCase } from 'lodash';
 import Sequelize, { Op } from 'sequelize';
 import { parseCursor, createCursor } from '@apollosproject/server-core';
@@ -43,7 +43,23 @@ export default class Person extends PostgresDataSource {
 
     const profileFields = fieldsAsObject(fields);
 
-    await this.model.update(profileFields, { where });
+    try {
+      await this.model.update(profileFields, { where });
+    } catch (e) {
+      const errors = { base: e };
+      if (
+        e.message.includes(
+          'duplicate key value violates unique constraint "people_phone_key"'
+        )
+      ) {
+        errors.phone = 'Already in use';
+      }
+      if (e.message.includes('Phone number invalid')) {
+        errors.phone = 'Invalid phone number format. Should be xxx-xxx-xxxx';
+      }
+
+      throw new UserInputError('Invalid user input', errors);
+    }
 
     return this.model.findOne({ where });
   };

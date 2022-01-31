@@ -173,7 +173,7 @@ IdentityEntry.propTypes = {
   onChangeNewUser: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
   errors: PropTypes.shape({
-    phone: PropTypes.string,
+    phone: PropTypes.shape({}),
   }),
   isLoading: PropTypes.bool,
   onPressAlternateLogin: PropTypes.func,

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Linking, View } from 'react-native';
 import { Parser, DomHandler } from 'htmlparser2';
 
-import { Paragraph } from '@apollosproject/ui-kit';
+import { Paragraph, named } from '@apollosproject/ui-kit';
 
 import defaultRenderer, { wrapTextChildren } from './defaultRenderer';
 
@@ -102,4 +102,4 @@ class HTMLView extends PureComponent {
   }
 }
 
-export default HTMLView;
+export default named('HTMLView')(HTMLView);

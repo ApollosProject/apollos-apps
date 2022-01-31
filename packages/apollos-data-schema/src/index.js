@@ -118,13 +118,14 @@ export const authSmsSchema = gql`
   }
 
   extend type Mutation {
-    requestSmsLoginPin(phoneNumber: String!): SmsPinResult
+    requestSmsLoginPin(phoneNumber: String!): SmsPinResult @deprecated
     authenticateWithSms(phoneNumber: String!, pin: String!): Authentication
+      @deprecated
     registerWithSms(
       phoneNumber: String!
       pin: String!
       userProfile: [UpdateProfileInput]
-    ): Authentication
+    ): Authentication @deprecated
   }
 
   enum USER_AUTH_STATUS {
@@ -134,7 +135,9 @@ export const authSmsSchema = gql`
   }
 
   extend type Query {
-    userExists(identity: String): USER_AUTH_STATUS @cacheControl(scope: PRIVATE)
+    userExists(identity: String): USER_AUTH_STATUS
+      @cacheControl(scope: PRIVATE)
+      @deprecated
   }
 `;
 
@@ -158,12 +161,13 @@ export const authSchema = gql`
 
   extend type Mutation {
     authenticate(identity: String!, password: String!): Authentication
+      @deprecated
     changePassword(password: String!): Authentication
     registerPerson(
       email: String!
       password: String!
       userProfile: [UpdateProfileInput]
-    ): Authentication
+    ): Authentication @deprecated
   }
 
   extend type Query {

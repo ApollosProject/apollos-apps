@@ -35,14 +35,14 @@ class ChangePassword extends PureComponent {
         <TextInput
           label="New Password"
           type="password"
-          value={props.values.password}
+          value={props?.values.password}
           error={props.touched.password && props.errors.password}
           onChangeText={(text) => props.setFieldValue('password', text)}
         />
         <TextInput
           label="Confirm Password"
           type="password"
-          value={props.values.confirmPassword}
+          value={props?.values.confirmPassword}
           error={props.touched.confirmPassword && props.errors.confirmPassword}
           onChangeText={(text) => props.setFieldValue('confirmPassword', text)}
         />
@@ -86,6 +86,7 @@ class ChangePassword extends PureComponent {
                 .oneOf([Yup.ref('password')], 'Passwords must match.')
                 .required('Password confirm is required'),
             })}
+            initialValues={{ password: '', confirmPassword: '' }}
             onSubmit={async (variables, { setSubmitting, setFieldError }) => {
               try {
                 await updatePassword({ variables });

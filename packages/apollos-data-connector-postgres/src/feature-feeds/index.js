@@ -1,7 +1,12 @@
 import { createGlobalId } from '@apollosproject/server-core';
 
 const resolver = {
+  FeatureFeed: {
+    id: ({ id }) => createGlobalId(id, 'FeatureFeed'),
+  },
   Query: {
+    tabs: (_, args, { dataSources: { FeatureFeed } }) =>
+      FeatureFeed.getTabs(args),
     tabFeedFeatures: (root, args, { dataSources: { FeatureFeed } }) =>
       FeatureFeed.getFeed({
         type: 'tab',
@@ -34,9 +39,9 @@ const resolver = {
     featureFeed: ({ id }, args, { dataSources: { FeatureFeed } }) =>
       FeatureFeed.getFeed({ type: 'contentItem', args: { id } }),
   },
-  FeatureFeed: {
-    // lazy-loaded
-    features: ({ getFeatures }) => getFeatures(),
+  MediaContentItem: {
+    featureFeed: ({ id }, args, { dataSources: { FeatureFeed } }) =>
+      FeatureFeed.getFeed({ type: 'contentItem', args: { id } }),
   },
 };
 
@@ -54,6 +59,7 @@ class FeatureFeed {
     if (features) {
       getFeatures = () => Feature.getFeatures(features);
     } else {
+      // TODO deprecated
       if (type === 'tab') {
         getFeatures = () =>
           Feature.getFeatures(Config.TABS[args.tab] || [], args);
@@ -73,12 +79,19 @@ class FeatureFeed {
 
     return {
       __typename: 'FeatureFeed',
-      id: createGlobalId(
-        JSON.stringify({ type, args, features }),
-        'FeatureFeed'
-      ),
-      getFeatures,
+      id: JSON.stringify({ type, args, features }),
+      // lazy-loaded
+      features: getFeatures,
     };
+  };
+
+  getTabs = (args) => {
+    const { Config } = this.context.dataSources;
+    return Config.APP_TABS.map(({ title, icon, features }) => ({
+      title,
+      icon,
+      feed: () => this.getFeed({ type: 'apptabs', args, features }),
+    }));
   };
 }
 

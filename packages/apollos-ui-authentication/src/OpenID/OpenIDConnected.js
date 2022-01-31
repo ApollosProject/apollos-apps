@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useMutation, useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
@@ -44,6 +44,8 @@ const OpenIDConnected = ({ provider = 'rock', navigation }) => {
     fetchPolicy: 'cache-and-network',
   });
 
+  const [error, setError] = useState(false);
+
   const [connectOpenId] = useMutation(CONNECT_OPENID);
 
   const openIdProvider = (data?.openIdProviders || []).find(
@@ -51,18 +53,22 @@ const OpenIDConnected = ({ provider = 'rock', navigation }) => {
   );
 
   const handleRequestOpenIdConnect = async () => {
+    setError(false);
     const result = await InAppBrowser.openAuth(openIdProvider.authorizationUrl);
     if (result.type === 'success') {
       const code = getSearchParamFromURL(result.url, 'code');
 
-      const { data: connectResult } = await connectOpenId({
-        variables: { code, providerType: openIdProvider.providerType },
-      });
-
-      if (connectResult.connectOpenId.success) {
-        closeAuth();
+      try {
+        const { data: connectResult } = await connectOpenId({
+          variables: { code, providerType: openIdProvider.providerType },
+        });
+        if (connectResult.connectOpenId.success) {
+          closeAuth();
+        }
+        throw new Error('Failed to connect via OpenID');
+      } catch {
+        setError(true);
       }
-      // TODO: handle open id failed
     }
   };
 
@@ -79,7 +85,9 @@ const OpenIDConnected = ({ provider = 'rock', navigation }) => {
     });
   }, [navigation]);
 
-  return <OpenID onRequestOpenIdConnect={handleRequestOpenIdConnect} />;
+  return (
+    <OpenID onRequestOpenIdConnect={handleRequestOpenIdConnect} error={error} />
+  );
 };
 
 OpenIDConnected.propTypes = {

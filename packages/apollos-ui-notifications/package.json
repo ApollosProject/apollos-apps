@@ -61,7 +61,7 @@
     "prop-types": "15.7.2",
     "react": "16.13.1",
     "react-native": "0.63.2",
-    "react-native-onesignal": "3.9.1",
+    "react-native-onesignal": "4.3.5",
     "react-test-renderer": "16.13.1",
     "waait": "^1.0.4"
   },

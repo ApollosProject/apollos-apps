@@ -328,24 +328,19 @@ class Feature extends PostgresDataSource {
     };
   }
 
-  async createVerticalPrayerListFeature({ title, subtitle, ...args }) {
-    const { ActionAlgorithm, Auth, Person } = this.context.dataSources;
-    const { id } = await Auth.getCurrentPerson();
+  async createVerticalPrayerListFeature({
+    title,
+    subtitle,
+    algorithms,
+    ...args
+  }) {
+    const { ActionAlgorithm } = this.context.dataSources;
 
-    // maps the person id, which right now is always from rock
-    // into the correct person id. Postgres if using Postgres, and Rock if using rock.
-    const { id: personId } = await Person.getFromId(id, null, {
-      originType: 'rock',
-    });
+    const prayers = () => ActionAlgorithm.runAlgorithms({ algorithms, args });
 
-    const prayers = () =>
-      ActionAlgorithm.runAlgorithms({
-        algorithms: ['DAILY_PRAYER'],
-        args: { personId, ...args },
-      });
     return {
       id: this.createFeatureId({
-        args: { personId, title, subtitle },
+        args: { title, subtitle, algorithms, ...args },
       }),
       prayers,
       title,

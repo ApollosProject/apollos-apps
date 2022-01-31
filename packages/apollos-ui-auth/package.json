@@ -58,7 +58,7 @@
     "react-native-screens": "*"
   },
   "dependencies": {
-    "formik": "1.5.1",
+    "formik": "2.2.9",
     "yup": "^0.27.0"
   },
   "devDependencies": {

@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, ScrollView } from 'react-native';
 
-import { PaddedView, Button, H1, H5 } from '@apollosproject/ui-kit';
+import { PaddedView, Button, H1, H5, ErrorCard } from '@apollosproject/ui-kit';
 
 import { FlexedSafeAreaView, TitleText, PromptText } from '../styles';
 
-const OpenID = ({ providerFriendlyName, onRequestOpenIdConnect }) => {
+const OpenID = ({ providerFriendlyName, onRequestOpenIdConnect, error }) => {
   return (
     <FlexedSafeAreaView
       style={StyleSheet.absoluteFill}
@@ -21,6 +21,13 @@ const OpenID = ({ providerFriendlyName, onRequestOpenIdConnect }) => {
               providerFriendlyName || 'online'
             } account.`}
           </PromptText>
+          {error && (
+            <ErrorCard
+              message={
+                'Something went wrong authenticating you. You can skip, or try again.'
+              }
+            />
+          )}
         </PaddedView>
       </ScrollView>
       <PaddedView>
@@ -36,6 +43,7 @@ OpenID.propTypes = {
   values: PropTypes.shape({
     code: PropTypes.string,
   }),
+  error: PropTypes.bool.isRequired,
   onRequestOpenIdConnect: PropTypes.func.isRequired,
   providerFriendlyName: PropTypes.string,
 };

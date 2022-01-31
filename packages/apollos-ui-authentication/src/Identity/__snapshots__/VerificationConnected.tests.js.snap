@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ui-auth/SMS/VerificationConnected should render 1`] = `
+exports[`ui-authentication VerificationConnected should render 1`] = `
 Array [
   <View
     onLayout={[Function]}
