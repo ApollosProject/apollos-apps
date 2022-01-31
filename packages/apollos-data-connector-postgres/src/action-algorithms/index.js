@@ -45,8 +45,8 @@ class ActionAlgorithm extends PostgresDataSource {
                 'Please move action algorithms from Feature to ActionAlgorithm data source.'
               );
               return featureAlgorithims[algorithm.type]({
-                ...algorithm.arguments,
                 ...args,
+                ...algorithm.arguments,
               });
             }
 
