@@ -22,18 +22,22 @@
     "react": "*",
     "react-native": "*",
     "react-native-linear-gradient": "*",
-    "react-native-svg": "*"
+    "react-native-svg": "*",
+    "@storybook/addon-actions": "*",
+    "@storybook/addon-links": "*",
+    "@storybook/addons": "*",
+    "@storybook/react-native": "*"
   },
   "dependencies": {
-    "@storybook/addon-actions": "6.3.1",
-    "@storybook/addon-links": "6.3.1",
-    "@storybook/addons": "6.3.1",
-    "@storybook/react-native": "5.3.23"
   },
   "devDependencies": {
     "metro-react-native-babel-preset": "^0.56.0",
     "react": "16.13.1",
-    "react-native": "0.63.2"
+    "react-native": "0.63.2",
+    "@storybook/addon-actions": "6.3.1",
+    "@storybook/addon-links": "6.3.1",
+    "@storybook/addons": "6.3.1",
+    "@storybook/react-native": "5.3.23"
   },
   "publishConfig": {
     "access": "public"
