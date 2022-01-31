@@ -10,6 +10,7 @@ import SplashScreen from 'react-native-splash-screen';
 import 'react-native-gesture-handler'; // required for react-navigation
 import { enableScreens } from 'react-native-screens';
 
+import ApollosConfig from '@apollosproject/config';
 import {
   BackgroundView,
   withTheme,
@@ -29,7 +30,6 @@ import {
 } from '@apollosproject/ui-connected';
 import Providers from './Providers';
 import Tabs from './tabs';
-import customTheme, { customIcons } from './theme';
 
 enableScreens(); // improves performance for react-navigation
 
@@ -69,7 +69,7 @@ const ThemedNavigationContainer = withTheme(({ theme, ...props }) => ({
 const { Navigator, Screen } = createNativeStackNavigator();
 
 const App = () => (
-  <ThemeProvider themeInput={customTheme} iconInput={customIcons}>
+  <ThemeProvider theme={ApollosConfig.THEME} icons={ApollosConfig.ICONS}>
     <BackgroundView>
       <AppStatusBar />
       <ThemedNavigationContainer

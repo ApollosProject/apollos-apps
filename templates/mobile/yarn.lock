@@ -40,112 +40,68 @@
     tslib "^1.10.0"
 
 "@apollosproject/config@link:../../packages/apollos-config":
-  version "2.43.0"
-  dependencies:
-    js-yaml "^3.12.0"
+  version "0.0.0"
+  uid ""
 
 "@apollosproject/eslint-config@link:../../packages/apollos-eslint-config":
-  version "2.43.0"
-
-"@apollosproject/react-native-airplay-btn@link:../../packages/apollos-react-native-airplay-btn":
   version "0.0.0"
+  uid ""
 
 "@apollosproject/ui-analytics@link:../../packages/apollos-ui-analytics":
-  version "2.43.0"
-  dependencies:
-    react-native-device-info "^4.0.1"
+  version "0.0.0"
+  uid ""
 
 "@apollosproject/ui-auth@link:../../packages/apollos-ui-auth":
-  version "2.43.0"
-  dependencies:
-    formik "1.5.1"
-    yup "^0.27.0"
+  version "0.0.0"
+  uid ""
 
 "@apollosproject/ui-connected@link:../../packages/apollos-ui-connected":
-  version "2.43.0"
-  dependencies:
-    "@gorhom/bottom-sheet" "3.4.1"
-    apollo-upload-client "^17.0.0"
-    graphql-tag "2.9.2"
-    lodash "^4.17.11"
-    moment "^2.29.1"
+  version "0.0.0"
+  uid ""
 
 "@apollosproject/ui-fragments@link:../../packages/apollos-ui-fragments":
-  version "2.43.0"
-  dependencies:
-    "@apollo/client" "3.3.20"
+  version "0.0.0"
+  uid ""
 
 "@apollosproject/ui-htmlview@link:../../packages/apollos-ui-htmlview":
-  version "2.43.0"
-  dependencies:
-    entities "^1.1.2"
-    htmlparser2 "3.9.2"
+  version "0.0.0"
+  uid ""
 
 "@apollosproject/ui-kit@link:../../packages/apollos-ui-kit":
-  version "2.43.0"
-  dependencies:
-    "@react-native-community/blur" "^3.6.0"
-    "@react-native-picker/picker" "^1.9.4"
-    color "^3.1.0"
-    lodash "^4.17.11"
-    moment "^2.24.0"
-    numeral "^2.0.6"
-    phosphor-react-native "^0.4.0"
-    react-native-keyboard-avoiding-scroll-view "1.0.1"
-    react-native-modal-datetime-picker "^9.0.0"
-    react-native-tab-view "1.0.2"
-    recompose "^0.30.0"
-    rn-placeholder "1.2.0"
+  version "0.0.0"
+  uid ""
 
 "@apollosproject/ui-mapview@link:../../packages/apollos-ui-mapview":
-  version "2.43.0"
-  dependencies:
-    "@apollo/client" "3.3.20"
+  version "0.0.0"
+  uid ""
 
 "@apollosproject/ui-media-player@link:../../packages/apollos-ui-media-player":
-  version "2.43.0"
-  dependencies:
-    "@types/color" "^3.0.1"
-    color "^3.1.2"
-    use-debounce "5.1.0"
+  version "0.0.0"
+  uid ""
 
 "@apollosproject/ui-notifications@link:../../packages/apollos-ui-notifications":
-  version "2.43.0"
-  dependencies:
-    lodash "^4.17.11"
-    react-native-permissions "^2.0.5"
-    url "^0.11.0"
+  version "0.0.0"
+  uid ""
 
 "@apollosproject/ui-onboarding@link:../../packages/apollos-ui-onboarding":
-  version "2.43.0"
-  dependencies:
-    "@react-native-community/async-storage" "^1.5.1"
-    formik "1.5.1"
-    lodash "4.17.21"
-    moment "2.22.2"
-    react-is "^16.9.0"
-    react-native-swiper "^1.5.14"
-    yup "0.26.6"
+  version "0.0.0"
+  uid ""
 
 "@apollosproject/ui-passes@link:../../packages/apollos-ui-passes":
-  version "2.43.0"
-  dependencies:
-    "@apollo/client" "3.3.20"
+  version "0.0.0"
+  uid ""
 
 "@apollosproject/ui-prayer@link:../../packages/apollos-ui-prayer":
-  version "2.43.0"
-  dependencies:
-    formik "1.5.1"
-    lodash "4.17.21"
-    react-is "^16.9.0"
-    react-native-swiper "^1.6.0"
-    yup "0.26.6"
+  version "0.0.0"
+  uid ""
 
 "@apollosproject/ui-scripture@link:../../packages/apollos-ui-scripture":
-  version "2.43.0"
+  version "0.0.0"
+  uid ""
 
 "@apollosproject/ui-test-utils@link:../../packages/apollos-ui-test-utils":
-  version "2.43.0"
+  version "0.0.0"
+  uid ""
 
 "@babel/code-frame@7.12.11":
   version "7.12.11"
