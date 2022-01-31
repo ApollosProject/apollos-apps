@@ -42,5 +42,11 @@ sed -i "" -E "s/com\.differential\.apollos/$IOS_BUNDLE/g" ios/OneSignalNotificat
 sed -i "" -E "s/com\.differential\.apollos/$IOS_BUNDLE/g" ios/$CLEAN_APP.xcodeproj/project.pbxproj
 sed -i "" -E "s/com\.differential\.apollos/$ANDROID_BUNDLE/g" android/app/_BUCK.txt
 
+rm "ios/$CLEAN_APP.xcworkspace/xcshareddata/xcschemes/apolloschurchapp.xcscheme"
+
+echo "APP_DATA_URL=
+CHURCH_HEADER=
+GOOGLE_MAPS_API_KEY=" >.env
+
 mv $TMP_DIR/$PROJ $DIR/$PROJ
 rm -rf $TMP_DIR

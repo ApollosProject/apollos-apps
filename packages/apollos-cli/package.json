@@ -16,8 +16,11 @@
   },
   "license": "ISC",
   "dependencies": {
+    "@bam.tech/react-native-make": "^3.0.3",
+    "canvas": "^2.9.0",
     "commander": "^8.0.0",
     "execa": "^6.0.0",
-    "prompts": "^2.4.2"
+    "prompts": "^2.4.2",
+    "tmp": "^0.2.1"
   }
 }

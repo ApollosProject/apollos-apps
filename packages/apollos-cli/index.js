@@ -10,19 +10,23 @@ import prompts from 'prompts';
 import { execa } from 'execa';
 import { program } from 'commander';
 
+/* eslint-disable import/extensions */
+import logo from './commands/logo.js';
+
 const exec = util.promisify(baseExec);
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
+program.name('apollos');
 program.version('1.0.0');
 
-// create
-program
-  .name('apollos')
-  .command('create')
-  .description('Generate new Apollos projects')
+const mobile = program
   .command('mobile')
-  .description('Generate new Apollos mobile app')
+  .description('Manage Apollos mobile apps');
+
+mobile
+  .command('init')
+  .description('Create new mobile app')
   .action(() => {
     const questions = [
       {
@@ -68,6 +72,13 @@ program
       }
     })();
   });
+
+mobile
+  .command('theme')
+  .description('Manage mobile app theme')
+  .command('logo')
+  .description('Edit app icons and splash screen')
+  .action(() => logo());
 
 program
   .command('secrets')
