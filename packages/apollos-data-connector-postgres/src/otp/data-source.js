@@ -7,11 +7,8 @@ import { PostgresDataSource } from '../postgres';
 export default class OTPDataSource extends PostgresDataSource {
   modelName = 'otp';
 
+  // Handles PHONE and EMAIL types
   generateOTP = async ({ identity, type }) => {
-    if (type === 'LINK_CODE') {
-      return this.generateLinkCode({ identity, type });
-    }
-
     const matches = identity.match(
       /(^1[0-9]{10})|([^@\s]+@[^@\s.]+\.[^@\s.]+)$/
     );
@@ -69,17 +66,9 @@ export default class OTPDataSource extends PostgresDataSource {
     return !!validOTP;
   };
 
-  generateLinkCode = async ({ identity, type }) => {
-    console.log('\ngenerateLinkCode()');
-    console.log('identity:', identity);
-    console.log('type:', type);
-
-    // Is there already a linkCode for this clientId?
-    // --> Has the link code already been claimed?
-    //    --> LINK_CODE_CLAIMED
-    // --> Has the link code expired?
-    //    --> YES: Generate a new one
-    //    --> NO: Return the existing one
+  generateLinkCode = async ({ identity }) => {
+    console.log('\n🟧 generateLinkCode()');
+    const type = 'LINK_CODE';
 
     const existingCode = await this.model.findOne({
       where: {
@@ -88,10 +77,11 @@ export default class OTPDataSource extends PostgresDataSource {
       },
     });
 
-    // console.log('existingCode:', existingCode);
-
     if (existingCode) {
-      if (moment().isBefore(moment(existingCode.expiresAt))) {
+      const alreadyClaimed = existingCode.openIdIdentityId;
+      const expired = moment().isAfter(moment(existingCode.expiresAt));
+
+      if (alreadyClaimed || !expired) {
         return existingCode;
       }
 
@@ -113,9 +103,9 @@ export default class OTPDataSource extends PostgresDataSource {
       apollosType: 'OTP',
     };
 
-    await this.model.create(otpShape);
+    const newOtp = await this.model.create(otpShape);
 
-    return otpShape;
+    return newOtp;
   };
 
   getLinkCodeByOtp = async ({ otp }) => {
@@ -131,28 +121,19 @@ export default class OTPDataSource extends PostgresDataSource {
   };
 
   claimLinkCode = async ({ otp, openIdIdentity }) => {
-    console.log('openIdIdentity.id:', openIdIdentity.id);
-    const rkd = await this.model.findOne({
+    console.log('\n🟧 claimLinkCode() ', otp, openIdIdentity);
+    const otpRow = await this.model.findOne({
       otp,
     });
-    console.log('rkd:', rkd);
-    const [count, results] = await this.model.update(
-      {
-        openIdIdentityId: openIdIdentity.id,
-      },
-      {
-        where: {
-          otp,
-        },
-        returning: true,
-      }
-    );
 
-    console.log('results:', results);
-    if (count < 1) {
+    try {
+      const updatedOtpRow = await otpRow.update({
+        openIdIdentityId: openIdIdentity.id,
+      });
+
+      return updatedOtpRow;
+    } catch (err) {
       throw new Error('Unable to claim link code');
     }
-
-    return results[0];
   };
 }
