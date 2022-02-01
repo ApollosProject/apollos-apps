@@ -242,6 +242,7 @@ export const authenticationSchema = gql`
 
   enum LinkCodeAttemptResult {
     INVALID_LINK_CODE
+    USER_NOT_FOUND
     ERROR
     SUCCESS
   }

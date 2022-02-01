@@ -30,6 +30,11 @@ const createModel = defineModel({
       unique: false,
       allowNull: false,
     },
+    openIdIdentityId: {
+      type: DataTypes.UUID,
+      unique: false,
+      allowNull: true,
+    },
   },
   sequelizeOptions: {
     tableName: 'otp',

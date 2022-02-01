@@ -21,6 +21,9 @@ const createModel = defineModel({
     idToken: {
       type: DataTypes.TEXT,
     },
+    providerSessionId: {
+      type: DataTypes.TEXT,
+    },
   },
   sequelizeOptions: {
     underscored: true,
