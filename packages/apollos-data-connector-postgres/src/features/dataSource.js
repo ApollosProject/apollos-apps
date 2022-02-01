@@ -35,6 +35,7 @@ class Feature extends PostgresDataSource {
     if (relatedNode && !relatedNode.id) {
       return {
         ...action,
+        id: JSON.stringify(action),
         relatedNode: {
           ...relatedNode,
           id: createGlobalId(
