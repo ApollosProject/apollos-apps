@@ -8,19 +8,20 @@ const createMigrationRunner = async ({ migrations, logger = console }) => {
 
   migrationsToRun.sort((a, b) => (a.order < b.order ? -1 : 1));
 
-  console.log('📋 Migrations to be run:');
-  const migrationsGroupedByOrder = Object.entries(
-    groupBy(migrationsToRun, 'order')
-  );
-  migrationsGroupedByOrder.forEach(([order, migs]) => {
-    const sortedMigrations = migs.sort((a, b) => (a.name < b.name ? -1 : 1));
-    console.log(`\nOrder #${order}`);
-    console.log(sortedMigrations.map(({ name }) => `•  ${name}`).join('\n'));
-  });
-
-  console.log('\nPausing for review (2s)...');
-
   if (process.env.NODE_ENV !== 'test') {
+    console.log('📋 Migrations to be run:');
+    const migrationsGroupedByOrder = Object.entries(
+      groupBy(migrationsToRun, 'order')
+    );
+
+    migrationsGroupedByOrder.forEach(([order, migs]) => {
+      const sortedMigrations = migs.sort((a, b) => (a.name < b.name ? -1 : 1));
+      console.log(`\nOrder #${order}`);
+      console.log(sortedMigrations.map(({ name }) => `•  ${name}`).join('\n'));
+    });
+
+    console.log('\nPausing for review (2s)...');
+
     await new Promise((resolve) => setTimeout(resolve, 2000));
   }
 

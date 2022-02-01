@@ -17,6 +17,10 @@ const schema = gql`
 
   extend type Mutation {
     connectOpenId(code: String!, providerType: String!): ConnectOpenIdResult
+    requestOpenIdRegister(
+      code: String!
+      providerType: String!
+    ): AuthenticatedPerson
   }
 `;
 

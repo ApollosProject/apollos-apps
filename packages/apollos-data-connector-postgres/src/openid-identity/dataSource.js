@@ -3,6 +3,7 @@ import { pickBy } from 'lodash';
 import { Issuer } from 'openid-client';
 import jwt from 'jsonwebtoken';
 import { PostgresDataSource } from '../postgres';
+import { generateToken } from '../authentication/token';
 
 export default class OpenIdIdentity extends PostgresDataSource {
   modelName = 'openIdIdentity';
@@ -56,10 +57,8 @@ export default class OpenIdIdentity extends PostgresDataSource {
     });
   }
 
-  // eslint-disable-next-line class-methods-use-this
-  async updatePersonFromIdToken({ person, idToken }) {
+  async fieldsFromIdToken({ idToken }) {
     const identity = jwt.decode(idToken);
-
     const updateMap = pickBy(
       {
         email: identity.email,
@@ -82,7 +81,7 @@ export default class OpenIdIdentity extends PostgresDataSource {
       if (campus) updateMap.campusId = campus.id;
     }
 
-    await person.update(updateMap);
+    return updateMap;
   }
 
   async getCurrentPersonIdentity({ type }) {
@@ -134,13 +133,59 @@ export default class OpenIdIdentity extends PostgresDataSource {
       providerType: type,
     });
 
-    await this.updatePersonFromIdToken({
-      person: currentPerson,
+    const updateMap = await this.fieldsFromIdToken({
       idToken: result.id_token,
     });
+    await currentPerson.update(updateMap);
 
     return {
       success: !!result,
+    };
+  }
+
+  async registerWithCode({ code, type }) {
+    const client = await this.getClient({ type });
+
+    const result = await client.callback(client.redirect_uris[0], {
+      code,
+    });
+
+    const personFields = await this.fieldsFromIdToken({
+      idToken: result.id_token,
+    });
+
+    const [person, created] = await this.sequelize.models.people.findOrCreate({
+      where: { originId: personFields.originId, originType: type },
+      defaults: {
+        apollosUser: true,
+        ...personFields,
+      },
+    });
+
+    // If we had an existing user
+    // Update their record with new details from the provider.
+    if (!created) {
+      await person.update(personFields);
+    }
+
+    await person.createOpenIdIdentity({
+      accessToken: result.access_token,
+      refreshToken: result.refresh_token,
+      idToken: result.id_token,
+      providerType: type,
+    });
+
+    const accessToken = generateToken({ personId: person.id });
+    const refreshToken = await this.context.dataSources.RefreshToken.createToken(
+      {
+        personId: person.id,
+      }
+    );
+
+    return {
+      person,
+      accessToken,
+      refreshToken,
     };
   }
 
