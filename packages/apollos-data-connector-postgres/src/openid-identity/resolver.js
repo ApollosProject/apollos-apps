@@ -6,6 +6,8 @@ const resolvers = {
   Mutation: {
     connectOpenId: (root, { code, providerType }, { dataSources }) =>
       dataSources.OpenIdIdentity.registerCode({ code, type: providerType }),
+    requestOpenIdRegister: (root, { code, providerType }, { dataSources }) =>
+      dataSources.OpenIdIdentity.registerWithCode({ code, type: providerType }),
   },
   OpenIdProvider: {
     authorizationUrl: (root) =>

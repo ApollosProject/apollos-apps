@@ -1,9 +1,7 @@
 /* eslint-disable import/named, new-cap */
 import { dataSource as ConfigDataSource } from '@apollosproject/config';
-// import fetch, { setResponse } from 'node-fetch';
-// import { Issuer, callback, userinfo, refresh } from 'openid-client';
-import { setResponse } from 'node-fetch';
-import { userinfo, refresh } from 'openid-client';
+import fetch, { setResponse } from 'node-fetch';
+import { Issuer, callback, userinfo, refresh } from 'openid-client';
 import { getSequelize } from '../../postgres/index';
 import * as OpenIdIdentity from '..';
 import {
@@ -12,6 +10,7 @@ import {
   Campus,
   ContentItem,
   ContentItemCategory,
+  RefreshToken,
 } from '../../index';
 
 import { setupPostgresTestEnv } from '../../utils/testUtils';
@@ -51,7 +50,15 @@ describe('openid datasource', () => {
     sequelize = getSequelize({ churchSlug: 'apollos_demo' });
     globalSequelize = getSequelize({ churchSlug: 'global' });
     await setupPostgresTestEnv(
-      [Media, ContentItem, ContentItemCategory, Person, Campus, OpenIdIdentity],
+      [
+        Media,
+        ContentItem,
+        ContentItemCategory,
+        Person,
+        Campus,
+        OpenIdIdentity,
+        RefreshToken,
+      ],
       { church: { slug: 'apollos_demo' } }
     );
     currentPerson = await sequelize.models.people.create({
@@ -66,29 +73,77 @@ describe('openid datasource', () => {
     await globalSequelize.drop({ cascade: true });
     jest.clearAllMocks();
   });
+  it('registers a rock openid code', async () => {
+    setResponse([
+      { ClientId: 'client-id-123', RedirectUri: 'http://apollos.app/redirect' },
+    ]);
+    const openIdDataSource = new OpenIdIdentityDataSource();
+    openIdDataSource.initialize({ context });
+    const { success } = await openIdDataSource.registerCode({
+      type: 'rock',
+      code: '123',
+    });
+    const dbIdentity = (
+      await currentPerson.getOpenIdIdentities({
+        where: { providerType: 'rock' },
+      })
+    )?.[0];
+    expect(success).toBe(true);
+    expect(fetch.mock.calls).toMatchSnapshot();
+    expect(Issuer.discover.mock.calls).toMatchSnapshot();
+    expect(callback.mock.calls).toMatchSnapshot();
+    expect(dbIdentity.idToken).toMatchSnapshot();
+  });
+  it('registers a new user in our postgres database', async () => {
+    setResponse([
+      { ClientId: 'client-id-123', RedirectUri: 'http://apollos.app/redirect' },
+    ]);
 
-  // TODO fix
-  // it('registers a rock openid code', async () => {
-  // setResponse([
-  // { ClientId: 'client-id-123', RedirectUri: 'http://apollos.app/redirect' },
-  // ]);
-  // const openIdDataSource = new OpenIdIdentityDataSource();
-  // openIdDataSource.initialize({ context });
-  // const { success } = await openIdDataSource.registerCode({
-  // type: 'rock',
-  // code: '123',
-  // });
-  // const dbIdentity = (
-  // await currentPerson.getOpenIdIdentities({
-  // where: { providerType: 'rock' },
-  // })
-  // )?.[0];
-  // expect(success).toBe(true);
-  // expect(fetch.mock.calls).toMatchSnapshot();
-  // expect(Issuer.discover.mock.calls).toMatchSnapshot();
-  // expect(callback.mock.calls).toMatchSnapshot();
-  // expect(dbIdentity.idToken).toBe('id-token-123');
-  // });
+    const openIdDataSource = new OpenIdIdentityDataSource();
+    context.dataSources.RefreshToken = new RefreshToken.dataSource();
+    openIdDataSource.initialize({ context });
+    context.dataSources.RefreshToken.initialize({ context });
+
+    const {
+      accessToken,
+      refreshToken,
+    } = await openIdDataSource.registerWithCode({
+      type: 'rock',
+      code: '123',
+    });
+    const newPerson = await sequelize.models.people.findOne({
+      where: { originId: '81' },
+    });
+    expect(newPerson.firstName).toBe('Conrad');
+    expect(accessToken).toBeDefined();
+    expect(refreshToken).toBeDefined();
+  });
+  it('updates an existing in our postgres database', async () => {
+    setResponse([
+      { ClientId: 'client-id-123', RedirectUri: 'http://apollos.app/redirect' },
+    ]);
+
+    const openIdDataSource = new OpenIdIdentityDataSource();
+    context.dataSources.RefreshToken = new RefreshToken.dataSource();
+    openIdDataSource.initialize({ context });
+    context.dataSources.RefreshToken.initialize({ context });
+
+    const existingPerson = await sequelize.models.people.create({
+      originId: '81',
+      originType: 'rock',
+      firstName: 'Jeff',
+    });
+
+    const { person } = await openIdDataSource.registerWithCode({
+      type: 'rock',
+      code: '123',
+    });
+    const newPerson = await sequelize.models.people.findOne({
+      where: { originId: '81' },
+    });
+    expect(newPerson.firstName).toBe('Conrad');
+    expect(person.id).toBe(existingPerson.id);
+  });
   it("return's a user's identity using their openid credentials", async () => {
     setResponse([
       { ClientId: 'client-id-123', RedirectUri: 'http://apollos.app/redirect' },

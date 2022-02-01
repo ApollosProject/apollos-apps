@@ -19,6 +19,8 @@ const getSharedConfig = () => {
     // If we are using production, we should remove the prefix.
     // This is non optimal, long term we need a secret manager.
     envStage = '';
+  } else {
+    envStage = `.${envStage}`;
   }
 
   const globalEnvFile = readFileSync(
@@ -48,6 +50,8 @@ export const buildChurchConfig = ({ churchSlug, sharedConfig, configDir }) => {
     // If we are using production, we should remove the prefix.
     // This is non optimal, long term we need a secret manager.
     envStage = '';
+  } else {
+    envStage = `.${envStage}`;
   }
 
   let envFile;
