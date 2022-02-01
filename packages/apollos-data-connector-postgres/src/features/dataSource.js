@@ -138,7 +138,7 @@ class Feature extends PostgresDataSource {
     const { ActionAlgorithm } = this.context.dataSources;
 
     // Run algorithms if we have them, otherwise pull from the config
-    const compiledActions = () =>
+    const getActions = () =>
       actions.length
         ? actions.map((action) => this.attachActionIds(action))
         : ActionAlgorithm.runAlgorithms({ algorithms, args });
@@ -153,7 +153,7 @@ class Feature extends PostgresDataSource {
           actions,
         },
       }),
-      actions: compiledActions,
+      getActions,
       title,
       // Typename is required so GQL knows specifically what Feature is being created
       __typename: 'ActionTableFeature',
