@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.43.1](https://github.com/apollosproject/apollos-apps/compare/v2.43.0...v2.43.1) (2022-02-01)
+
+**Note:** Version bump only for package @apollosproject/ui-auth
+
+
+
+
+
+## [2.43.0](https://github.com/apollosproject/apollos-apps/compare/v2.42.0...v2.43.0) (2022-01-27)
+
+
+### Features
+
+* allow profile entry to be overriden via theme ([#2328](https://github.com/apollosproject/apollos-apps/issues/2328)) ([6d77a6a](https://github.com/apollosproject/apollos-apps/commit/6d77a6a7391c80498277a1a5524f8c9d7f927f98))
+
+
+
 ## [2.42.0](https://github.com/apollosproject/apollos-apps/compare/v2.41.0...v2.42.0) (2022-01-11)
 
 **Note:** Version bump only for package @apollosproject/ui-auth

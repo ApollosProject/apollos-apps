@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.43.1](https://github.com/apollosproject/apollos-apps/compare/v2.43.0...v2.43.1) (2022-02-01)
+
+**Note:** Version bump only for package @apollosproject/data-connector-rock
+
+
+
+
+
+## [2.43.0](https://github.com/apollosproject/apollos-apps/compare/v2.42.0...v2.43.0) (2022-01-27)
+
+
+### Features
+
+* adds app tabs query to API ([#2316](https://github.com/apollosproject/apollos-apps/issues/2316)) ([76f05b6](https://github.com/apollosproject/apollos-apps/commit/76f05b65e7794fc9a63069b70573e4b202980580))
+* Check specifically for apollos devices when looking for existing devices ([#2306](https://github.com/apollosproject/apollos-apps/issues/2306)) ([a91e0f7](https://github.com/apollosproject/apollos-apps/commit/a91e0f7f938f136fa442030be06fe47f863c6776))
+
+
+
 ## [2.42.0](https://github.com/apollosproject/apollos-apps/compare/v2.41.0...v2.42.0) (2022-01-11)
 
 

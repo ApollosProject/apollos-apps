@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=14"
   },
-  "version": "2.33.4",
+  "version": "2.43.1",
   "main": "lib/index.js",
   "scripts": {
     "test": "TZ=UTC jest",
@@ -50,8 +50,8 @@
     "@apollosproject/server-core": "*"
   },
   "devDependencies": {
-    "@apollosproject/apollo-server-env-mock": "^2.33.4",
-    "@apollosproject/babel-preset-apollos": "^2.33.4",
+    "@apollosproject/apollo-server-env-mock": "^2.43.1",
+    "@apollosproject/babel-preset-apollos": "^2.43.1",
     "jest": "^25.1.0",
     "jest-date-mock": "^1.0.8",
     "jest-fetch-mock": "^3.0.3"

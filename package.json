@@ -22,6 +22,7 @@
     "generate-docs": "lerna run generate-docs",
     "generate-stories": "lerna run generate-stories",
     "storybook": "yarn && yarn generate-stories && (cd ApollosStorybook && yarn && yarn prestart && yarn ios)",
+    "app": "yarn && (cd templates/mobile && yarn && yarn prestart && yarn ios)",
     "cluster": "./scripts/setup-cluster.sh"
   },
   "resolutions": {

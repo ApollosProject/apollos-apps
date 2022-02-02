@@ -26,8 +26,6 @@
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
 			<key>localhost</key>
@@ -38,25 +36,10 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>DroidSerif-Bold.ttf</string>
-		<string>DroidSerif-BoldItalic.ttf</string>
-		<string>DroidSerif-Italic.ttf</string>
-		<string>DroidSerif-Regular.ttf</string>
-		<string>Inter-UI-Black.otf</string>
-		<string>Inter-UI-BlackItalic.otf</string>
-		<string>Inter-UI-Bold.otf</string>
-		<string>Inter-UI-BoldItalic.otf</string>
-		<string>Inter-UI-Italic.otf</string>
-		<string>Inter-UI-Medium.otf</string>
-		<string>Inter-UI-MediumItalic.otf</string>
-		<string>Inter-UI-Regular.otf</string>
-	</array>
+	<string/>
 	<key>UIBackgroundModes</key>
 	<array>
-		<string>audio</string>
+		<string>remote-notification</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
@@ -72,5 +55,20 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>DroidSerif-Bold.ttf</string>
+		<string>DroidSerif-BoldItalic.ttf</string>
+		<string>DroidSerif-Italic.ttf</string>
+		<string>DroidSerif-Regular.ttf</string>
+		<string>Inter-UI-Black.otf</string>
+		<string>Inter-UI-BlackItalic.otf</string>
+		<string>Inter-UI-Bold.otf</string>
+		<string>Inter-UI-BoldItalic.otf</string>
+		<string>Inter-UI-Italic.otf</string>
+		<string>Inter-UI-Medium.otf</string>
+		<string>Inter-UI-MediumItalic.otf</string>
+		<string>Inter-UI-Regular.otf</string>
+	</array>
 </dict>
 </plist>

@@ -38,8 +38,8 @@ class ActionAlgorithm extends PostgresDataSource {
             // NOTE this is in for backwards compatibility
             // should remove reference to Feature.ACTION_ALGORITHIMS eventually
             return this.ACTION_ALGORITHMS[algorithm.type]({
-              ...algorithm.arguments,
               ...args,
+              ...algorithm.arguments,
             });
           }
           return this.ACTION_ALGORITHMS[algorithm](args);

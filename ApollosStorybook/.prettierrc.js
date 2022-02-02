@@ -1,6 +1,7 @@
 module.exports = {
-  bracketSpacing: false,
-  jsxBracketSameLine: true,
+  bracketSpacing: true, // custom for Apollos, RN defaults to 'false'
+  jsxBracketSameLine: false, // custom for Apollos, RN defaults to 'true'
   singleQuote: true,
-  trailingComma: 'all',
+  trailingComma: 'es5', // custom for Apollos, RN defaults to 'all'
+  arrowParens: 'always', // custom for Apollos, RN defaults to 'avoid'
 };
