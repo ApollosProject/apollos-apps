@@ -933,7 +933,9 @@ export const featuresSchema = gql`
 
   type ActionTableAction {
     id: ID!
+    icon: String
     title: String
+    subtitle: String
     action: ACTION_FEATURE_ACTION
     relatedNode: Node
   }
