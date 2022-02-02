@@ -43,6 +43,10 @@ export default class Person extends PostgresDataSource {
 
     const profileFields = fieldsAsObject(fields);
 
+    // Don't allow users to update their phone number of email
+    delete profileFields.phone;
+    delete profileFields.email;
+
     try {
       await this.model.update(profileFields, { where });
     } catch (e) {

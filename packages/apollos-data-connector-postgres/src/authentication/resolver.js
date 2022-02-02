@@ -12,7 +12,6 @@ const resolver = {
       { identity },
       { dataSources: { Authentication } }
     ) => {
-      console.log('request register');
       return Authentication.requestRegister({ identity });
     },
     validateLogin: (
@@ -24,6 +23,16 @@ const resolver = {
     },
     refreshSession: (root, args, { dataSources: { Authentication } }) => {
       return Authentication.refreshSession(args);
+    },
+    requestConnectIdentity: (
+      root,
+      args,
+      { dataSources: { Authentication } }
+    ) => {
+      return Authentication.requestConnectIdentity(args);
+    },
+    connectIdentity: (root, args, { dataSources: { Authentication } }) => {
+      return Authentication.connectIdentity(args);
     },
   },
 };

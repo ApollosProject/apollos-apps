@@ -1,4 +1,4 @@
-import { AuthenticationError } from 'apollo-server';
+import { AuthenticationError, UserInputError } from 'apollo-server';
 import { generateAppLink } from '@apollosproject/server-core';
 import { isNil, mapValues, omit, startCase, toLower, toUpper } from 'lodash';
 import { Op } from 'sequelize';
@@ -122,8 +122,7 @@ export default class AuthenticationDataSource extends PostgresDataSource {
     });
 
     if (!isValid) {
-      console.error('Invalid OTP');
-      return null;
+      throw new UserInputError('Invalid OTP');
     }
 
     const person = await this.sequelize.models.people.findOne({
@@ -148,6 +147,39 @@ export default class AuthenticationDataSource extends PostgresDataSource {
       person,
       accessToken,
       refreshToken,
+    };
+  }
+
+  async requestConnectIdentity({ identity }) {
+    const { identityKey, identityValue } = this.parseIdentity(identity);
+
+    const person = await this.context.dataSources.Person.getCurrentPerson();
+
+    return this.sendOtpForRequest({ identityValue, identityKey, person });
+  }
+
+  async connectIdentity({ identity, otp }) {
+    const { OTP, Person } = this.context.dataSources;
+
+    const { identityKey, identityValue } = this.parseIdentity(identity);
+
+    const isValid = await OTP.validateOTP({
+      identity: identityValue,
+      otp,
+    });
+
+    if (!isValid) {
+      throw new UserInputError('Invalid OTP');
+    }
+
+    const person = await Person.getCurrentPerson();
+
+    await person.update({
+      [identityKey]: identityValue,
+    });
+
+    return {
+      person,
     };
   }
 
