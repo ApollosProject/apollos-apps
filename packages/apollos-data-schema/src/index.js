@@ -952,6 +952,7 @@ export const featuresSchema = gql`
     READ_CONTENT
     READ_EVENT
     OPEN_URL
+    OPEN_URL_EXTERNALLY
     OPEN_AUTHENTICATED_URL
     OPEN_NODE
     OPEN_CHANNEL
@@ -1015,7 +1016,9 @@ export const featuresSchema = gql`
 
   type ActionTableAction {
     id: ID!
+    icon: String
     title: String
+    subtitle: String
     action: ACTION_FEATURE_ACTION
     relatedNode: Node
   }
